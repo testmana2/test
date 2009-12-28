@@ -39,7 +39,7 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         for exporter in exporters:
             self.exportersCombo.addItem(exporter, QVariant(self.pageIds[exporter]))
         
-        self.pdfFontCombo.addItem(self.trUtf8("Courier"), QVariant("QVariant"))
+        self.pdfFontCombo.addItem(self.trUtf8("Courier"), QVariant("Courier"))
         self.pdfFontCombo.addItem(self.trUtf8("Helvetica"), QVariant("Helvetica"))
         self.pdfFontCombo.addItem(self.trUtf8("Times"), QVariant("Times"))
         

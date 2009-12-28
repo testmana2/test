@@ -106,14 +106,14 @@ class ProjectHandler(XMLHandlerBase):
         """
         Handler method for the "ProjectWordList" end tag.
         """
-        path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+        path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         self.project.pdata["SPELLWORDS"] = [path]
         
     def endProjectExcludeList(self):
         """
         Handler method for the "ProjectExcludeList" end tag.
         """
-        path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+        path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         self.project.pdata["SPELLEXCLUDES"] = [path]
         
     def startProgLanguage(self, attrs):
@@ -323,7 +323,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "TranslationPattern" end tag.
         """
         self.project.pdata["TRANSLATIONPATTERN"].append(
-            unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))))
+            Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
         
     def startTranslationsBinPath(self, attrs):
         """
@@ -339,7 +339,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "TranslationsBinPath" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         self.project.pdata["TRANSLATIONSBINPATH"].append(path)
@@ -358,7 +358,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "Source" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         self.project.pdata["SOURCES"].append(path)
@@ -377,7 +377,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "Form" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         self.project.pdata["FORMS"].append(path)
@@ -396,7 +396,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "Translation" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         self.project.pdata["TRANSLATIONS"].append(path)
@@ -415,7 +415,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "TranslationException" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         self.project.pdata["TRANSLATIONEXCEPTIONS"].append(path)
@@ -434,7 +434,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "Resource" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         self.project.pdata["RESOURCES"].append(path)
@@ -453,7 +453,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "Interface" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         self.project.pdata["INTERFACES"].append(path)
@@ -472,7 +472,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "Other" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         self.project.pdata["OTHERS"].append(path)
@@ -491,7 +491,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "MainScript" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         self.project.pdata["MAINSCRIPT"] = [path]
@@ -572,7 +572,7 @@ class ProjectHandler(XMLHandlerBase):
         Handler method for the "TranslationPrefix" end tag.
         """
         if self.version >= '4.3':
-            path = unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+            path = Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             path = self.__buildPath()
         if not path.endswith("_"):
