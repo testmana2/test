@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric4.Helpviewer.DownloadDialog</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric4.Helpviewer.DownloadDialog</h1>
+<p>
+Module implementing the download dialog.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#DownloadDialog">DownloadDialog</a></td>
+<td>Class implementing the download dialog.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="DownloadDialog" ID="DownloadDialog"></a>
+<h2>DownloadDialog</h2>
+<p>
+    Class implementing the download dialog.
+</p><h4>Signals</h4>
+<dl>
+<dt>done()</dt>
+<dd>
+emitted just before the dialog is closed
+</dd>
+</dl>
+<h3>Derived from</h3>
+QWidget, Ui_DownloadDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>done</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#DownloadDialog.__init__">DownloadDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__dataString">__dataString</a></td>
+<td>Private method to generate a formatted data string.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__downloadProgress">__downloadProgress</a></td>
+<td>Private method show the download progress.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__downloadedSuccessfully">__downloadedSuccessfully</a></td>
+<td>Private method to determine the download status.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__downloading">__downloading</a></td>
+<td>Private method to determine, if a download is in progress.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__finished">__finished</a></td>
+<td>Private slot to handle the download finished.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__getFileName">__getFileName</a></td>
+<td>Private method to get the filename to save to from the user.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__initialize">__initialize</a></td>
+<td>Private method to (re)initialize the dialog.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__metaDataChanged">__metaDataChanged</a></td>
+<td>Private slot to handle a change of the meta data.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__networkError">__networkError</a></td>
+<td>Private slot to handle a network error.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__open">__open</a></td>
+<td>Private slot to open the downloaded file.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__readyRead">__readyRead</a></td>
+<td>Private slot to read the available data.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__saveFileName">__saveFileName</a></td>
+<td>Private method to calculate a name for the file to download.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__stop">__stop</a></td>
+<td>Private slot to stop the download.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__tryAgain">__tryAgain</a></td>
+<td>Private slot to retry the download.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.__updateInfoLabel">__updateInfoLabel</a></td>
+<td>Private method to update the info label.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.closeEvent">closeEvent</a></td>
+<td>Protected method called when the dialog is closed.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
+<td>Private slot called by a button of the button box clicked.</td>
+</tr>
+</table>
+<a NAME="DownloadDialog.__init__" ID="DownloadDialog.__init__"></a>
+<h4>DownloadDialog (Constructor)</h4>
+<b>DownloadDialog</b>(<i>reply = None, requestFilename = False, webPage = None, download = False, parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>reply</i></dt>
+<dd>
+reference to the network reply object (QNetworkReply)
+</dd><dt><i>requestFilename</i></dt>
+<dd>
+flag indicating to ask the user for a filename (boolean)
+</dd><dt><i>webPage</i></dt>
+<dd>
+reference to the web page object the download originated
+            from (QWebPage)
+</dd><dt><i>download</i></dt>
+<dd>
+flag indicating a download operation (boolean)
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="DownloadDialog.__dataString" ID="DownloadDialog.__dataString"></a>
+<h4>DownloadDialog.__dataString</h4>
+<b>__dataString</b>(<i>size</i>)
+<p>
+        Private method to generate a formatted data string.
+</p><dl>
+<dt><i>size</i></dt>
+<dd>
+size to be formatted (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+formatted data string (QString)
+</dd>
+</dl><a NAME="DownloadDialog.__downloadProgress" ID="DownloadDialog.__downloadProgress"></a>
+<h4>DownloadDialog.__downloadProgress</h4>
+<b>__downloadProgress</b>(<i>received, total</i>)
+<p>
+        Private method show the download progress.
+</p><dl>
+<dt><i>received</i></dt>
+<dd>
+number of bytes received (integer)
+</dd><dt><i>total</i></dt>
+<dd>
+number of total bytes (integer)
+</dd>
+</dl><a NAME="DownloadDialog.__downloadedSuccessfully" ID="DownloadDialog.__downloadedSuccessfully"></a>
+<h4>DownloadDialog.__downloadedSuccessfully</h4>
+<b>__downloadedSuccessfully</b>(<i></i>)
+<p>
+        Private method to determine the download status.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+download status (boolean)
+</dd>
+</dl><a NAME="DownloadDialog.__downloading" ID="DownloadDialog.__downloading"></a>
+<h4>DownloadDialog.__downloading</h4>
+<b>__downloading</b>(<i></i>)
+<p>
+        Private method to determine, if a download is in progress.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a download is in progress (boolean)
+</dd>
+</dl><a NAME="DownloadDialog.__finished" ID="DownloadDialog.__finished"></a>
+<h4>DownloadDialog.__finished</h4>
+<b>__finished</b>(<i></i>)
+<p>
+        Private slot to handle the download finished.
+</p><a NAME="DownloadDialog.__getFileName" ID="DownloadDialog.__getFileName"></a>
+<h4>DownloadDialog.__getFileName</h4>
+<b>__getFileName</b>(<i></i>)
+<p>
+        Private method to get the filename to save to from the user.
+</p><a NAME="DownloadDialog.__initialize" ID="DownloadDialog.__initialize"></a>
+<h4>DownloadDialog.__initialize</h4>
+<b>__initialize</b>(<i></i>)
+<p>
+        Private method to (re)initialize the dialog.
+</p><a NAME="DownloadDialog.__metaDataChanged" ID="DownloadDialog.__metaDataChanged"></a>
+<h4>DownloadDialog.__metaDataChanged</h4>
+<b>__metaDataChanged</b>(<i></i>)
+<p>
+        Private slot to handle a change of the meta data.
+</p><a NAME="DownloadDialog.__networkError" ID="DownloadDialog.__networkError"></a>
+<h4>DownloadDialog.__networkError</h4>
+<b>__networkError</b>(<i></i>)
+<p>
+        Private slot to handle a network error.
+</p><a NAME="DownloadDialog.__open" ID="DownloadDialog.__open"></a>
+<h4>DownloadDialog.__open</h4>
+<b>__open</b>(<i></i>)
+<p>
+        Private slot to open the downloaded file.
+</p><a NAME="DownloadDialog.__readyRead" ID="DownloadDialog.__readyRead"></a>
+<h4>DownloadDialog.__readyRead</h4>
+<b>__readyRead</b>(<i></i>)
+<p>
+        Private slot to read the available data.
+</p><a NAME="DownloadDialog.__saveFileName" ID="DownloadDialog.__saveFileName"></a>
+<h4>DownloadDialog.__saveFileName</h4>
+<b>__saveFileName</b>(<i>directory</i>)
+<p>
+        Private method to calculate a name for the file to download.
+</p><dl>
+<dt><i>directory</i></dt>
+<dd>
+name of the directory to store the file into (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+proposed filename (string)
+</dd>
+</dl><a NAME="DownloadDialog.__stop" ID="DownloadDialog.__stop"></a>
+<h4>DownloadDialog.__stop</h4>
+<b>__stop</b>(<i></i>)
+<p>
+        Private slot to stop the download.
+</p><a NAME="DownloadDialog.__tryAgain" ID="DownloadDialog.__tryAgain"></a>
+<h4>DownloadDialog.__tryAgain</h4>
+<b>__tryAgain</b>(<i></i>)
+<p>
+        Private slot to retry the download.
+</p><a NAME="DownloadDialog.__updateInfoLabel" ID="DownloadDialog.__updateInfoLabel"></a>
+<h4>DownloadDialog.__updateInfoLabel</h4>
+<b>__updateInfoLabel</b>(<i></i>)
+<p>
+        Private method to update the info label.
+</p><a NAME="DownloadDialog.closeEvent" ID="DownloadDialog.closeEvent"></a>
+<h4>DownloadDialog.closeEvent</h4>
+<b>closeEvent</b>(<i>evt</i>)
+<p>
+        Protected method called when the dialog is closed.
+</p><a NAME="DownloadDialog.on_buttonBox_clicked" ID="DownloadDialog.on_buttonBox_clicked"></a>
+<h4>DownloadDialog.on_buttonBox_clicked</h4>
+<b>on_buttonBox_clicked</b>(<i>button</i>)
+<p>
+        Private slot called by a button of the button box clicked.
+</p><dl>
+<dt><i>button</i></dt>
+<dd>
+button that was clicked (QAbstractButton)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric4.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric4.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog</h1>
+<p>
+Module implementing the file dialog wizard dialog.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#FileDialogWizardDialog">FileDialogWizardDialog</a></td>
+<td>Class implementing the color dialog wizard dialog.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="FileDialogWizardDialog" ID="FileDialogWizardDialog"></a>
+<h2>FileDialogWizardDialog</h2>
+<p>
+    Class implementing the color dialog wizard dialog.
+</p><p>
+    It displays a dialog for entering the parameters
+    for the QFileDialog code generator.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_FileDialogWizardDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#FileDialogWizardDialog.__init__">FileDialogWizardDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#FileDialogWizardDialog.__getCode4">__getCode4</a></td>
+<td>Private method to get the source code for Qt4.</td>
+</tr><tr>
+<td><a href="#FileDialogWizardDialog.__toggleConfirmCheckBox">__toggleConfirmCheckBox</a></td>
+<td>Private slot to enable/disable the confirmation check box.</td>
+</tr><tr>
+<td><a href="#FileDialogWizardDialog.__toggleGroupsAndTest">__toggleGroupsAndTest</a></td>
+<td>Private slot to enable/disable certain groups and the test button.</td>
+</tr><tr>
+<td><a href="#FileDialogWizardDialog.getCode">getCode</a></td>
+<td>Public method to get the source code.</td>
+</tr><tr>
+<td><a href="#FileDialogWizardDialog.on_bTest_clicked">on_bTest_clicked</a></td>
+<td>Private method to test the selected options.</td>
+</tr><tr>
+<td><a href="#FileDialogWizardDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
+<td>Private slot called by a button of the button box clicked.</td>
+</tr>
+</table>
+<a NAME="FileDialogWizardDialog.__init__" ID="FileDialogWizardDialog.__init__"></a>
+<h4>FileDialogWizardDialog (Constructor)</h4>
+<b>FileDialogWizardDialog</b>(<i>parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="FileDialogWizardDialog.__getCode4" ID="FileDialogWizardDialog.__getCode4"></a>
+<h4>FileDialogWizardDialog.__getCode4</h4>
+<b>__getCode4</b>(<i>indLevel, indString</i>)
+<p>
+        Private method to get the source code for Qt4.
+</p><dl>
+<dt><i>indLevel</i></dt>
+<dd>
+indentation level (int)
+</dd><dt><i>indString</i></dt>
+<dd>
+string used for indentation (space or tab) (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+generated code (string)
+</dd>
+</dl><a NAME="FileDialogWizardDialog.__toggleConfirmCheckBox" ID="FileDialogWizardDialog.__toggleConfirmCheckBox"></a>
+<h4>FileDialogWizardDialog.__toggleConfirmCheckBox</h4>
+<b>__toggleConfirmCheckBox</b>(<i></i>)
+<p>
+        Private slot to enable/disable the confirmation check box.
+</p><a NAME="FileDialogWizardDialog.__toggleGroupsAndTest" ID="FileDialogWizardDialog.__toggleGroupsAndTest"></a>
+<h4>FileDialogWizardDialog.__toggleGroupsAndTest</h4>
+<b>__toggleGroupsAndTest</b>(<i></i>)
+<p>
+        Private slot to enable/disable certain groups and the test button.
+</p><a NAME="FileDialogWizardDialog.getCode" ID="FileDialogWizardDialog.getCode"></a>
+<h4>FileDialogWizardDialog.getCode</h4>
+<b>getCode</b>(<i>indLevel, indString</i>)
+<p>
+        Public method to get the source code.
+</p><dl>
+<dt><i>indLevel</i></dt>
+<dd>
+indentation level (int)
+</dd><dt><i>indString</i></dt>
+<dd>
+string used for indentation (space or tab) (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+generated code (string)
+</dd>
+</dl><a NAME="FileDialogWizardDialog.on_bTest_clicked" ID="FileDialogWizardDialog.on_bTest_clicked"></a>
+<h4>FileDialogWizardDialog.on_bTest_clicked</h4>
+<b>on_bTest_clicked</b>(<i></i>)
+<p>
+        Private method to test the selected options.
+</p><a NAME="FileDialogWizardDialog.on_buttonBox_clicked" ID="FileDialogWizardDialog.on_buttonBox_clicked"></a>
+<h4>FileDialogWizardDialog.on_buttonBox_clicked</h4>
+<b>on_buttonBox_clicked</b>(<i>button</i>)
+<p>
+        Private slot called by a button of the button box clicked.
+</p><dl>
+<dt><i>button</i></dt>
+<dd>
+button that was clicked (QAbstractButton)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

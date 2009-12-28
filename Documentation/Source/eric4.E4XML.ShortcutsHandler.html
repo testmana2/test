@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric4.E4XML.ShortcutsHandler</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric4.E4XML.ShortcutsHandler</h1>
+<p>
+Module implementing the handler class for reading a keyboard shortcuts file.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#ShortcutsHandler">ShortcutsHandler</a></td>
+<td>Class implementing a sax handler to read a keyboard shortcuts file.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="ShortcutsHandler" ID="ShortcutsHandler"></a>
+<h2>ShortcutsHandler</h2>
+<p>
+    Class implementing a sax handler to read a keyboard shortcuts file.
+</p>
+<h3>Derived from</h3>
+XMLHandlerBase
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#ShortcutsHandler.__init__">ShortcutsHandler</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#ShortcutsHandler.endAccel">endAccel</a></td>
+<td>Handler method for the "Accel" end tag.</td>
+</tr><tr>
+<td><a href="#ShortcutsHandler.endAltAccel">endAltAccel</a></td>
+<td>Handler method for the "AltAccel" end tag.</td>
+</tr><tr>
+<td><a href="#ShortcutsHandler.endName">endName</a></td>
+<td>Handler method for the "Name" end tag.</td>
+</tr><tr>
+<td><a href="#ShortcutsHandler.endShortcut">endShortcut</a></td>
+<td>Handler method for the "Shortcut" end tag.</td>
+</tr><tr>
+<td><a href="#ShortcutsHandler.getShortcuts">getShortcuts</a></td>
+<td>Public method to retrieve the shortcuts.</td>
+</tr><tr>
+<td><a href="#ShortcutsHandler.getVersion">getVersion</a></td>
+<td>Public method to retrieve the version of the shortcuts.</td>
+</tr><tr>
+<td><a href="#ShortcutsHandler.startDocumentShortcuts">startDocumentShortcuts</a></td>
+<td>Handler called, when the document parsing is started.</td>
+</tr><tr>
+<td><a href="#ShortcutsHandler.startShortcut">startShortcut</a></td>
+<td>Handler method for the "Shortcut" start tag.</td>
+</tr><tr>
+<td><a href="#ShortcutsHandler.startShortcuts">startShortcuts</a></td>
+<td>Handler method for the "Shortcuts" start tag.</td>
+</tr>
+</table>
+<a NAME="ShortcutsHandler.__init__" ID="ShortcutsHandler.__init__"></a>
+<h4>ShortcutsHandler (Constructor)</h4>
+<b>ShortcutsHandler</b>(<i></i>)
+<p>
+        Constructor
+</p><a NAME="ShortcutsHandler.endAccel" ID="ShortcutsHandler.endAccel"></a>
+<h4>ShortcutsHandler.endAccel</h4>
+<b>endAccel</b>(<i></i>)
+<p>
+        Handler method for the "Accel" end tag.
+</p><a NAME="ShortcutsHandler.endAltAccel" ID="ShortcutsHandler.endAltAccel"></a>
+<h4>ShortcutsHandler.endAltAccel</h4>
+<b>endAltAccel</b>(<i></i>)
+<p>
+        Handler method for the "AltAccel" end tag.
+</p><a NAME="ShortcutsHandler.endName" ID="ShortcutsHandler.endName"></a>
+<h4>ShortcutsHandler.endName</h4>
+<b>endName</b>(<i></i>)
+<p>
+        Handler method for the "Name" end tag.
+</p><a NAME="ShortcutsHandler.endShortcut" ID="ShortcutsHandler.endShortcut"></a>
+<h4>ShortcutsHandler.endShortcut</h4>
+<b>endShortcut</b>(<i></i>)
+<p>
+        Handler method for the "Shortcut" end tag.
+</p><a NAME="ShortcutsHandler.getShortcuts" ID="ShortcutsHandler.getShortcuts"></a>
+<h4>ShortcutsHandler.getShortcuts</h4>
+<b>getShortcuts</b>(<i></i>)
+<p>
+        Public method to retrieve the shortcuts.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+Dictionary of dictionaries of shortcuts. The keys of the
+            dictionary are the categories, the values are dictionaries.
+            These dictionaries have the shortcut name as their key and
+            a tuple of accelerators as their value.
+</dd>
+</dl><a NAME="ShortcutsHandler.getVersion" ID="ShortcutsHandler.getVersion"></a>
+<h4>ShortcutsHandler.getVersion</h4>
+<b>getVersion</b>(<i></i>)
+<p>
+        Public method to retrieve the version of the shortcuts.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+String containing the version number.
+</dd>
+</dl><a NAME="ShortcutsHandler.startDocumentShortcuts" ID="ShortcutsHandler.startDocumentShortcuts"></a>
+<h4>ShortcutsHandler.startDocumentShortcuts</h4>
+<b>startDocumentShortcuts</b>(<i></i>)
+<p>
+        Handler called, when the document parsing is started.
+</p><a NAME="ShortcutsHandler.startShortcut" ID="ShortcutsHandler.startShortcut"></a>
+<h4>ShortcutsHandler.startShortcut</h4>
+<b>startShortcut</b>(<i>attrs</i>)
+<p>
+        Handler method for the "Shortcut" start tag.
+</p><dl>
+<dt><i>attrs</i></dt>
+<dd>
+list of tag attributes
+</dd>
+</dl><a NAME="ShortcutsHandler.startShortcuts" ID="ShortcutsHandler.startShortcuts"></a>
+<h4>ShortcutsHandler.startShortcuts</h4>
+<b>startShortcuts</b>(<i>attrs</i>)
+<p>
+        Handler method for the "Shortcuts" start tag.
+</p><dl>
+<dt><i>attrs</i></dt>
+<dd>
+list of tag attributes
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

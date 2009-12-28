@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric4.Preferences</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body>
+<h1>eric4.Preferences</h1>
+<p>
+Package implementing the preferences interface.
+</p><p>
+The preferences interface consists of a class, which defines the default
+values for all configuration items and stores the actual values. These
+values are read and written to the eric4 preferences file by module
+functions. On Windows the data is located in the registry, everywhere 
+else it is stored in a file in a subdirectory of the users home directory.
+The individual configuration data is accessed by accessor functions defined
+on the module level. The module is simply imported wherever it is needed
+with the statement 'import Preferences'. Do not use 'from Preferences import *'
+to import it.
+</p>
+
+<h3>Packages</h3>
+<table>
+<tr>
+<td><a href="index-eric4.Preferences.ConfigurationPages.html">ConfigurationPages</a></td>
+<td>Package implementing the various pages of the configuration dialog.</td>
+</tr>
+</table>
+
+<h3>Modules</h3>
+<table>
+<tr>
+<td><a href="eric4.Preferences.ConfigurationDialog.html">ConfigurationDialog</a></td>
+<td>Module implementing a dialog for the configuration of eric4.</td>
+</tr><tr>
+<td><a href="eric4.Preferences.PreferencesLexer.html">PreferencesLexer</a></td>
+<td>Module implementing a special QextScintilla lexer to handle the preferences.</td>
+</tr><tr>
+<td><a href="eric4.Preferences.ProgramsDialog.html">ProgramsDialog</a></td>
+<td>Module implementing the Programs page.</td>
+</tr><tr>
+<td><a href="eric4.Preferences.ShortcutDialog.html">ShortcutDialog</a></td>
+<td>Module implementing a dialog for the configuration of a keyboard shortcut.</td>
+</tr><tr>
+<td><a href="eric4.Preferences.Shortcuts.html">Shortcuts</a></td>
+<td>Module implementing functions dealing with keyboard shortcuts.</td>
+</tr><tr>
+<td><a href="eric4.Preferences.ShortcutsDialog.html">ShortcutsDialog</a></td>
+<td>Module implementing a dialog for the configuration of eric4s keyboard shortcuts.</td>
+</tr><tr>
+<td><a href="eric4.Preferences.ToolConfigurationDialog.html">ToolConfigurationDialog</a></td>
+<td>Module implementing a configuration dialog for the tools menu.</td>
+</tr><tr>
+<td><a href="eric4.Preferences.ToolGroupConfigurationDialog.html">ToolGroupConfigurationDialog</a></td>
+<td>Module implementing a configuration dialog for the tools menu.</td>
+</tr><tr>
+<td><a href="eric4.Preferences.ViewProfileDialog.html">ViewProfileDialog</a></td>
+<td>Module implementing a dialog to configure the various view profiles.</td>
+</tr><tr>
+<td><a href="eric4.Preferences.__init__.html">Preferences</a></td>
+<td>Package implementing the preferences interface.</td>
+</tr>
+</table>
+</body></html>

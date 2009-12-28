@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric4.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric4.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog</h1>
+<p>
+Module implementing a dialog to enter the data for a copy operation.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#SvnCopyDialog">SvnCopyDialog</a></td>
+<td>Class implementing a dialog to enter the data for a copy operation.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="SvnCopyDialog" ID="SvnCopyDialog"></a>
+<h2>SvnCopyDialog</h2>
+<p>
+    Class implementing a dialog to enter the data for a copy operation.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_SvnCopyDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#SvnCopyDialog.__init__">SvnCopyDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#SvnCopyDialog.getData">getData</a></td>
+<td>Public method to retrieve the copy data.</td>
+</tr><tr>
+<td><a href="#SvnCopyDialog.on_dirButton_clicked">on_dirButton_clicked</a></td>
+<td>Private slot to handle the button press for selecting the target via a selection dialog.</td>
+</tr>
+</table>
+<a NAME="SvnCopyDialog.__init__" ID="SvnCopyDialog.__init__"></a>
+<h4>SvnCopyDialog (Constructor)</h4>
+<b>SvnCopyDialog</b>(<i>source, parent = None, move = False, force = False</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>source</i></dt>
+<dd>
+name of the source file/directory (string)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd><dt><i>move</i></dt>
+<dd>
+flag indicating a move operation (boolean)
+</dd><dt><i>force</i></dt>
+<dd>
+flag indicating a forced operation (boolean)
+</dd>
+</dl><a NAME="SvnCopyDialog.getData" ID="SvnCopyDialog.getData"></a>
+<h4>SvnCopyDialog.getData</h4>
+<b>getData</b>(<i></i>)
+<p>
+        Public method to retrieve the copy data.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+the target name (string) and a flag indicating
+            the operation should be enforced (boolean)
+</dd>
+</dl><a NAME="SvnCopyDialog.on_dirButton_clicked" ID="SvnCopyDialog.on_dirButton_clicked"></a>
+<h4>SvnCopyDialog.on_dirButton_clicked</h4>
+<b>on_dirButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the button press for selecting the target via a 
+        selection dialog.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

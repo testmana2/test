@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric4.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric4.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog</h1>
+<p>
+Module implementing a dialog to enter options used to start a project in the VCS.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#SvnOptionsDialog">SvnOptionsDialog</a></td>
+<td>Class implementing a dialog to enter options used to start a project in the repository.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="SvnOptionsDialog" ID="SvnOptionsDialog"></a>
+<h2>SvnOptionsDialog</h2>
+<p>
+    Class implementing a dialog to enter options used to start a project in the
+    repository.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_SvnOptionsDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#SvnOptionsDialog.__init__">SvnOptionsDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#SvnOptionsDialog.getData">getData</a></td>
+<td>Public slot to retrieve the data entered into the dialog.</td>
+</tr><tr>
+<td><a href="#SvnOptionsDialog.on_protocolCombo_activated">on_protocolCombo_activated</a></td>
+<td>Private slot to switch the status of the directory selection button.</td>
+</tr><tr>
+<td><a href="#SvnOptionsDialog.on_vcsUrlButton_clicked">on_vcsUrlButton_clicked</a></td>
+<td>Private slot to display a selection dialog.</td>
+</tr>
+</table>
+<a NAME="SvnOptionsDialog.__init__" ID="SvnOptionsDialog.__init__"></a>
+<h4>SvnOptionsDialog (Constructor)</h4>
+<b>SvnOptionsDialog</b>(<i>vcs, project, parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>vcs</i></dt>
+<dd>
+reference to the version control object
+</dd><dt><i>project</i></dt>
+<dd>
+reference to the project object
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="SvnOptionsDialog.getData" ID="SvnOptionsDialog.getData"></a>
+<h4>SvnOptionsDialog.getData</h4>
+<b>getData</b>(<i></i>)
+<p>
+        Public slot to retrieve the data entered into the dialog.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+a dictionary containing the data entered
+</dd>
+</dl><a NAME="SvnOptionsDialog.on_protocolCombo_activated" ID="SvnOptionsDialog.on_protocolCombo_activated"></a>
+<h4>SvnOptionsDialog.on_protocolCombo_activated</h4>
+<b>on_protocolCombo_activated</b>(<i>protocol</i>)
+<p>
+        Private slot to switch the status of the directory selection button.
+</p><a NAME="SvnOptionsDialog.on_vcsUrlButton_clicked" ID="SvnOptionsDialog.on_vcsUrlButton_clicked"></a>
+<h4>SvnOptionsDialog.on_vcsUrlButton_clicked</h4>
+<b>on_vcsUrlButton_clicked</b>(<i></i>)
+<p>
+        Private slot to display a selection dialog.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

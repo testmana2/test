@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric4.E4Gui.E4Application</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric4.E4Gui.E4Application</h1>
+<p>
+Class implementing a specialized application class.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>e4App</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#E4Application">E4Application</a></td>
+<td>Eric application class with an object registry.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="E4Application" ID="E4Application"></a>
+<h2>E4Application</h2>
+<p>
+    Eric application class with an object registry.
+</p>
+<h3>Derived from</h3>
+QApplication
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#E4Application.__init__">E4Application</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#E4Application.getObject">getObject</a></td>
+<td>Public method to get a reference to a registered object.</td>
+</tr><tr>
+<td><a href="#E4Application.getPluginObject">getPluginObject</a></td>
+<td>Public method to get a reference to a registered plugin object.</td>
+</tr><tr>
+<td><a href="#E4Application.getPluginObjectType">getPluginObjectType</a></td>
+<td>Public method to get the type of a registered plugin object.</td>
+</tr><tr>
+<td><a href="#E4Application.getPluginObjects">getPluginObjects</a></td>
+<td>Public method to get a list of (name, reference) pairs of all registered plugin objects.</td>
+</tr><tr>
+<td><a href="#E4Application.registerObject">registerObject</a></td>
+<td>Public method to register an object in the object registry.</td>
+</tr><tr>
+<td><a href="#E4Application.registerPluginObject">registerPluginObject</a></td>
+<td>Public method to register a plugin object in the object registry.</td>
+</tr><tr>
+<td><a href="#E4Application.unregisterPluginObject">unregisterPluginObject</a></td>
+<td>Public method to unregister a plugin object in the object registry.</td>
+</tr>
+</table>
+<a NAME="E4Application.__init__" ID="E4Application.__init__"></a>
+<h4>E4Application (Constructor)</h4>
+<b>E4Application</b>(<i>argv</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>argv</i></dt>
+<dd>
+command line arguments
+</dd>
+</dl><a NAME="E4Application.getObject" ID="E4Application.getObject"></a>
+<h4>E4Application.getObject</h4>
+<b>getObject</b>(<i>name</i>)
+<p>
+        Public method to get a reference to a registered object.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the object (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the registered object
+</dd>
+</dl><dl>
+<dt>Raises <b>KeyError</b>:</dt>
+<dd>
+raised when the given name is not known
+</dd>
+</dl><a NAME="E4Application.getPluginObject" ID="E4Application.getPluginObject"></a>
+<h4>E4Application.getPluginObject</h4>
+<b>getPluginObject</b>(<i>name</i>)
+<p>
+        Public method to get a reference to a registered plugin object.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the plugin object (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the registered plugin object
+</dd>
+</dl><dl>
+<dt>Raises <b>KeyError</b>:</dt>
+<dd>
+raised when the given name is not known
+</dd>
+</dl><a NAME="E4Application.getPluginObjectType" ID="E4Application.getPluginObjectType"></a>
+<h4>E4Application.getPluginObjectType</h4>
+<b>getPluginObjectType</b>(<i>name</i>)
+<p>
+        Public method to get the type of a registered plugin object.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the plugin object (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+type of the plugin object (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>KeyError</b>:</dt>
+<dd>
+raised when the given name is not known
+</dd>
+</dl><a NAME="E4Application.getPluginObjects" ID="E4Application.getPluginObjects"></a>
+<h4>E4Application.getPluginObjects</h4>
+<b>getPluginObjects</b>(<i></i>)
+<p>
+        Public method to get a list of (name, reference) pairs of all
+        registered plugin objects.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of (name, reference) pairs
+</dd>
+</dl><a NAME="E4Application.registerObject" ID="E4Application.registerObject"></a>
+<h4>E4Application.registerObject</h4>
+<b>registerObject</b>(<i>name, object</i>)
+<p>
+        Public method to register an object in the object registry.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the object (string)
+</dd><dt><i>object</i></dt>
+<dd>
+reference to the object
+</dd>
+</dl><dl>
+<dt>Raises <b>KeyError</b>:</dt>
+<dd>
+raised when the given name is already in use
+</dd>
+</dl><a NAME="E4Application.registerPluginObject" ID="E4Application.registerPluginObject"></a>
+<h4>E4Application.registerPluginObject</h4>
+<b>registerPluginObject</b>(<i>name, object, pluginType = None</i>)
+<p>
+        Public method to register a plugin object in the object registry.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the plugin object (string)
+</dd><dt><i>object</i></dt>
+<dd>
+reference to the plugin object
+</dd><dt><i>pluginType=</i></dt>
+<dd>
+type of the plugin object (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>KeyError</b>:</dt>
+<dd>
+raised when the given name is already in use
+</dd>
+</dl><a NAME="E4Application.unregisterPluginObject" ID="E4Application.unregisterPluginObject"></a>
+<h4>E4Application.unregisterPluginObject</h4>
+<b>unregisterPluginObject</b>(<i>name</i>)
+<p>
+        Public method to unregister a plugin object in the object registry.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the plugin object (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
