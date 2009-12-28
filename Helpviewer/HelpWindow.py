@@ -1403,7 +1403,7 @@ class HelpWindow(QMainWindow):
         idx = 0
         for hist in self.mHistory:
             act = self.historyMenu.addAction(
-                Utilities.compactPath(unicode(hist), self.maxMenuFilePathLen))
+                Utilities.compactPath(hist, self.maxMenuFilePathLen))
             act.setData(QVariant(idx))
             idx += 1
             act.setIcon(HelpWindow.__getWebIcon(QUrl(hist)))

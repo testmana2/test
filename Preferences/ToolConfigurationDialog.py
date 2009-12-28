@@ -126,10 +126,10 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         
         self.toolsList.addItem(menutext)
         tool = {
-            'menutext' : unicode(menutext),
-            'icon' : unicode(icon),
+            'menutext' : menutext,
+            'icon' : icon,
             'executable' : executable,
-            'arguments' : unicode(arguments),
+            'arguments' : arguments,
             'redirect' : redirect,
         }
         self.toollist.append(tool)

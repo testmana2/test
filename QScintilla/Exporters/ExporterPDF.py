@@ -419,7 +419,7 @@ class ExporterPDF(ExporterBase):
             self.pr.fontSize = Preferences.getEditorExporter("PDF/Magnification")
             
             # set font family according to face name
-            fontName = unicode(Preferences.getEditorExporter("PDF/Font"))
+            fontName = Preferences.getEditorExporter("PDF/Font")
             self.pr.fontSet = PDF_FONT_DEFAULT
             if fontName == "Courier":
                 self.pr.fontSet = 0

@@ -44,7 +44,7 @@ class TemplatesPage(ConfigurationPageBase, Ui_TemplatesPage):
             int(self.templatesAutoOpenGroupsCheckBox.isChecked()))
         sepChar = self.templatesSeparatorCharEdit.text()
         if sepChar:
-            Preferences.setTemplates("SeparatorChar", unicode(sepChar))
+            Preferences.setTemplates("SeparatorChar", sepChar)
         Preferences.setTemplates("SingleDialog",
             int(self.templatesSingleDialogButton.isChecked()))
         Preferences.setTemplates("ShowTooltip",

@@ -99,7 +99,7 @@ def excepthook(excType, excValue, tracebackobj):
     @param tracebackobj traceback object
     """
     separator = '-' * 80
-    logFile = os.path.join(unicode(Utilities.getConfigDir()), "eric4_error.log")
+    logFile = os.path.join(Utilities.getConfigDir(), "eric4_error.log")
     notice = \
         """An unhandled exception occurred. Please report the problem\n"""\
         """using the error reporting dialog or via email to <%s>.\n"""\

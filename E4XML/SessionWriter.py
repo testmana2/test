@@ -72,7 +72,7 @@ class SessionWriter(XMLWriterBase):
         allOpenFiles = self.vm.getOpenFilenames()
         self._write("  <Filenames>")
         for of in allOpenFiles:
-            if isGlobal or unicode(of).startswith(self.project.ppath):
+            if isGlobal or of.startswith(self.project.ppath):
                 ed = self.vm.getOpenEditor(of)
                 if ed is not None:
                     line, index = ed.getCursorPosition()
@@ -85,7 +85,7 @@ class SessionWriter(XMLWriterBase):
         self._write("  </Filenames>")
         
         aw = self.vm.getActiveName()
-        if aw and unicode(aw).startswith(self.project.ppath):
+        if aw and aw.startswith(self.project.ppath):
             ed = self.vm.getOpenEditor(aw)
             if ed is not None:
                 line, index = ed.getCursorPosition()
@@ -189,7 +189,7 @@ class SessionWriter(XMLWriterBase):
         # step 4: save bookmarks of all open (project) files
         self._write("  <Bookmarks>")
         for of in allOpenFiles:
-            if isGlobal or unicode(of).startswith(self.project.ppath):
+            if isGlobal or of.startswith(self.project.ppath):
                 editor = self.vm.getOpenEditor(of)
                 for bookmark in editor.getBookmarks():
                     self._write("    <Bookmark>")

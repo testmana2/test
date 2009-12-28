@@ -393,7 +393,7 @@ class Subversion(VersionControl):
                         0, False)
                     if not ok:
                         return False
-                    tag = '%s/%s' % (unicode(type), tag)
+                    tag = '%s/%s' % (type, tag)
                 svnUrl = '%s/%s' % (vcsDir, tag)
         else:
             svnUrl = vcsDir

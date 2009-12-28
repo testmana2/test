@@ -93,6 +93,6 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         
         @return tuple giving the classname (string) and the file name (string)
         """
-        return unicode(self.classnameEdit.text()), \
+        return self.classnameEdit.text(), \
             os.path.join(self.pathnameEdit.text(), \
                          self.filenameEdit.text())

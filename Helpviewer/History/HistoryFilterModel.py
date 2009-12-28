@@ -220,7 +220,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         @return proxy model index (QModelIndex)
         """
         self.__load()
-        url = unicode(sourceIndex.data(HistoryModel.UrlStringRole).toString())
+        url = sourceIndex.data(HistoryModel.UrlStringRole).toString()
         if url not in self.__historyDict:
             return QModelIndex()
         
@@ -271,7 +271,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         
         for sourceRow in range(self.sourceModel().rowCount()):
             idx = self.sourceModel().index(sourceRow, 0)
-            url = unicode(idx.data(HistoryModel.UrlStringRole).toString())
+            url = idx.data(HistoryModel.UrlStringRole).toString()
             if url not in self.__historyDict:
                 sourceOffset = self.sourceModel().rowCount() - sourceRow
                 self.__filteredRows.append(

@@ -950,7 +950,7 @@ class Subversion(VersionControl):
             elif tagOp in [2, 8]:
                 url = '%s/branches/%s' % (reposRoot, urllib.quote(tag))
         else:
-            url = self.__svnURL(unicode(tag))
+            url = self.__svnURL(tag)
         
         self.tagName = tag
         client = self.getClient()
@@ -1206,7 +1206,7 @@ class Subversion(VersionControl):
             else:
                 return self.canBeAdded
         
-        name = os.path.normcase(unicode(name))
+        name = os.path.normcase(name)
         states = { name : 0 }
         states = self.vcsAllRegisteredStates(states, dname, False)
         if states[name] == self.canBeCommitted:

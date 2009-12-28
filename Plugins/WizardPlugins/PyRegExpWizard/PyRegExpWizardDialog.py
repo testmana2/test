@@ -589,11 +589,11 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         i1string = (indLevel + 1) * indString
         
         # now generate the code
-        reVar = unicode(self.variableLineEdit.text())
+        reVar = self.variableLineEdit.text()
         if not reVar:
             reVar = "regexp"
             
-        regexp = unicode(self.regexpTextEdit.toPlainText())
+        regexp = self.regexpTextEdit.toPlainText()
         
         flags = []
         if not self.caseSensitiveCheckBox.isChecked():

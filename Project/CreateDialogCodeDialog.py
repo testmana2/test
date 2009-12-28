@@ -383,7 +383,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     QMessageBox.Ok))
             return
         
-        self.project.appendFile(unicode(self.filenameEdit.text()))
+        self.project.appendFile(self.filenameEdit.text())
         
     @pyqtSlot(int)
     def on_classNameCombo_activated(self, index):

@@ -36,4 +36,4 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         """
         Public method to store the entered/modified data.
         """
-        self.multiProject.description = unicode(self.descriptionEdit.toPlainText())
+        self.multiProject.description = self.descriptionEdit.toPlainText()

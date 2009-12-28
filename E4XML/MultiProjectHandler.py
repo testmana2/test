@@ -90,7 +90,7 @@ class MultiProjectHandler(XMLHandlerBase):
         Handler method for the "ProjectFile" end tag.
         """
         filename = self.utf8_to_code(self.buffer)
-        self.project["file"] = unicode(Utilities.toNativeSeparators(filename))
+        self.project["file"] = Utilities.toNativeSeparators(filename)
     
     def endProjectDescription(self):
         """

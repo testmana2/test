@@ -404,7 +404,7 @@ class Listspace(QSplitter, ViewManager):
         itm.setText(txt)
         itm.setToolTip(newName)
         self.viewlist.setCurrentRow(currentRow)
-        self.emit(SIGNAL('changeCaption'), unicode(newName))
+        self.emit(SIGNAL('changeCaption'), newName)
         
     def _modificationStatusChanged(self, m, editor):
         """

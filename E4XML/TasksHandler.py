@@ -166,7 +166,7 @@ class TasksHandler(XMLHandlerBase):
         """
         if self.version >= '4.2':
             self.task["filename"] = \
-                unicode(Utilities.toNativeSeparators(self.utf8_to_code(self.buffer)))
+                Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
         else:
             self.task["filename"] = self.__buildPath()
         

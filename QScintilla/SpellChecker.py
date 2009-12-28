@@ -92,7 +92,7 @@ class SpellChecker(QObject):
         @return reference to the dictionary (enchant.Dict)
         """
         if not pwl:
-            pwl = unicode(Preferences.getEditor("SpellCheckingPersonalWordList"))
+            pwl = Preferences.getEditor("SpellCheckingPersonalWordList")
             if not pwl:
                 pwl = os.path.join(Utilities.getConfigDir(), "spelling", "pwl.dic")
             d = os.path.dirname(pwl)
@@ -100,7 +100,7 @@ class SpellChecker(QObject):
                 os.makedirs(d)
         
         if not pel:
-            pel = unicode(Preferences.getEditor("SpellCheckingPersonalExcludeList"))
+            pel = Preferences.getEditor("SpellCheckingPersonalExcludeList")
             if not pel:
                 pel = os.path.join(Utilities.getConfigDir(), "spelling", "pel.dic")
             d = os.path.dirname(pel)

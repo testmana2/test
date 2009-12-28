@@ -91,7 +91,7 @@ class StatusMonitorLed(E4Led):
         @param status status of the monitoring thread (string, ok, nok or off)
         @param statusMsg explanotory text for the signaled status (string)
         """
-        self.setColor(self.vcsMonitorLedColors[unicode(status)])
+        self.setColor(self.vcsMonitorLedColors[status])
         self.setToolTip(statusMsg)
         
         self.__on = status != 'off'

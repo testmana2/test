@@ -147,7 +147,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         
         # 6. do the CORBA programs
         # 6a. omniORB
-        exe = unicode(Preferences.getCorba("omniidl"))
+        exe = Preferences.getCorba("omniidl")
         if Utilities.isWindowsPlatform():
             exe += ".exe"
         self.__createProgramEntry(self.trUtf8("CORBA IDL Compiler"), exe,

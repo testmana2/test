@@ -424,7 +424,7 @@ class OpenSearchManager(QObject):
         @return search URL (QUrl)
         """
         try:
-            keyword, term = unicode(keywordSearch).split(" ", 1)
+            keyword, term = keywordSearch.split(" ", 1)
         except ValueError:
             return QUrl()
         

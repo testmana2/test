@@ -183,9 +183,9 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         Preferences.setDebugger("PathTranslation", 
             int(self.dbgPathTranslationCheckBox.isChecked()))
         Preferences.setDebugger("PathTranslationRemote",
-            unicode(self.dbgTranslationRemoteEdit.text()))
+            self.dbgTranslationRemoteEdit.text())
         Preferences.setDebugger("PathTranslationLocal",
-            unicode(self.dbgTranslationLocalEdit.text()))
+            self.dbgTranslationLocalEdit.text())
         Preferences.setDebugger("ThreeStateBreakPoints",
             int(self.debugThreeStateBreakPoint.isChecked()))
         Preferences.setDebugger("SuppressClientExit",

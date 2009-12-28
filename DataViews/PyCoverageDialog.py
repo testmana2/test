@@ -259,7 +259,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         selected file.
         """
         itm = self.resultList.currentItem()
-        fn = unicode(itm.text(0))
+        fn = itm.text(0)
         
         cover = coverage(data_file = self.cfn)
         cover.use_cache(True)

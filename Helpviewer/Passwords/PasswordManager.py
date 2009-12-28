@@ -384,7 +384,7 @@ class PasswordManager(QObject):
             yesButton = mb.addButton(QMessageBox.Yes)
             mb.exec_()
             if mb.clickedButton() == neverButton:
-                self.__never.append(unicode(url.toString()))
+                self.__never.append(url.toString())
                 return
             elif mb.clickedButton() == noButton:
                 return

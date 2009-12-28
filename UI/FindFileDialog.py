@@ -321,7 +321,18 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         flags = re.UNICODE | re.LOCALE
         if not cs:
             flags |= re.IGNORECASE
-        search = re.compile(txt, flags)
+        try:
+            search = re.compile(txt, flags)
+        except re.error, why:
+            QMessageBox.critical(None,
+                self.trUtf8("Invalid search expression"),
+                self.trUtf8("""<p>The search expression is not valid.</p>"""
+                            """<p>Error: {0}</p>""").format(unicode(why)))
+            self.stopButton.setEnabled(False)
+            self.findButton.setEnabled(True)
+            self.findButton.setDefault(True)
+            return
+
         
         # reset the findtextCombo
         if ct in self.searchHistory:

@@ -78,8 +78,8 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         
         @param index index of selected workspace view type (integer)
         """
-        workspace = unicode(\
-            self.windowComboBox.itemData(self.windowComboBox.currentIndex()).toString())
+        workspace = \
+            self.windowComboBox.itemData(self.windowComboBox.currentIndex()).toString()
         pixmap = self.pluginManager.getPluginPreviewPixmap("viewmanager", workspace)
         
         self.previewPixmap.setPixmap(pixmap)

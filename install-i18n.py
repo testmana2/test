@@ -38,9 +38,9 @@ def getConfigDir():
     dn.mkdir(cdn)
     hp.append("/").append(cdn)
     try:
-        return unicode(QDir.toNativeSeparators(hp))
+        return QDir.toNativeSeparators(hp)
     except AttributeError:
-        return unicode(QDir.convertSeparators(hp))
+        return QDir.convertSeparators(hp)
     
 # Define the globals.
 progName = None

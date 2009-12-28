@@ -83,7 +83,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             int(self.createBackupFileCheckBox.isChecked()))
         Preferences.setEditor("AutoCheckSyntax",
             int(self.automaticSyntaxCheckCheckBox.isChecked()))
-        enc = unicode(self.defaultEncodingComboBox.currentText())
+        enc = self.defaultEncodingComboBox.currentText()
         if not enc:
             enc = "utf-8"
         Preferences.setEditor("DefaultEncoding", enc)

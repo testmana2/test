@@ -97,7 +97,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         if repopath == "/":
             path = url
         else:
-            path = unicode(url).split("/")[-1]
+            path = url.split("/")[-1]
         
         if revision == "":
             rev = ""

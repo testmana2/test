@@ -250,4 +250,4 @@ class SyntaxCheckerPlugin(QObject):
             self.__editorSyntaxCheckerDialog = SyntaxCheckerDialog()
             self.__editorSyntaxCheckerDialog.show()
             self.__editorSyntaxCheckerDialog.start(editor.getFileName(), 
-                                                   unicode(editor.text()))
+                                                   editor.text())
