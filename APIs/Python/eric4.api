@@ -1017,7 +1017,7 @@ eric4.E4Gui.E4Led.E4LedRectangular?7
 eric4.E4Gui.E4LineEdit.E4LineEdit.inactiveText?4()
 eric4.E4Gui.E4LineEdit.E4LineEdit.paintEvent?4(evt)
 eric4.E4Gui.E4LineEdit.E4LineEdit.setInactiveText?4(inactiveText)
-eric4.E4Gui.E4LineEdit.E4LineEdit?1(parent = None, inactiveText = QString())
+eric4.E4Gui.E4LineEdit.E4LineEdit?1(parent = None, inactiveText = "")
 eric4.E4Gui.E4ListView.E4ListView.keyPressEvent?4(evt)
 eric4.E4Gui.E4ListView.E4ListView.removeAll?4()
 eric4.E4Gui.E4ListView.E4ListView.removeSelected?4()
@@ -1284,8 +1284,6 @@ eric4.E4XML.ProjectHandler.ProjectHandler.endDescription?4()
 eric4.E4XML.ProjectHandler.ProjectHandler.endDir?4()
 eric4.E4XML.ProjectHandler.ProjectHandler.endDocumentationParams?4()
 eric4.E4XML.ProjectHandler.ProjectHandler.endEmail?4()
-eric4.E4XML.ProjectHandler.ProjectHandler.endEric3ApiParams?4()
-eric4.E4XML.ProjectHandler.ProjectHandler.endEric3DocParams?4()
 eric4.E4XML.ProjectHandler.ProjectHandler.endEric4ApiParams?4()
 eric4.E4XML.ProjectHandler.ProjectHandler.endEric4DocParams?4()
 eric4.E4XML.ProjectHandler.ProjectHandler.endForm?4()
@@ -1615,7 +1613,7 @@ eric4.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.setEnabled?4(enabled)
 eric4.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.setException?4(exception)
 eric4.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.setFilter?4(filter)
 eric4.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.setPattern?4(pattern, isRegExp)
-eric4.Helpviewer.AdBlock.AdBlockRule.AdBlockRule?1(filter = QString())
+eric4.Helpviewer.AdBlock.AdBlockRule.AdBlockRule?1(filter = "")
 eric4.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.addRule?4(rule)
 eric4.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.allRules?4()
 eric4.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.allow?4(urlString)
@@ -1794,6 +1792,7 @@ eric4.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.on_do
 eric4.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.setDomainName?4(domain)
 eric4.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog?1(cookieJar, parent = None)
 eric4.Helpviewer.DownloadDialog.DownloadDialog.closeEvent?4(evt)
+eric4.Helpviewer.DownloadDialog.DownloadDialog.done?7
 eric4.Helpviewer.DownloadDialog.DownloadDialog.on_buttonBox_clicked?4(button)
 eric4.Helpviewer.DownloadDialog.DownloadDialog?1(reply = None, requestFilename = False, webPage = None, download = False, parent = None)
 eric4.Helpviewer.HTMLResources.notFoundPage_html?7
@@ -1813,7 +1812,7 @@ eric4.Helpviewer.HelpBrowserWV.HelpBrowser.isForwardAvailable?4()
 eric4.Helpviewer.HelpBrowserWV.HelpBrowser.isLoading?4()
 eric4.Helpviewer.HelpBrowserWV.HelpBrowser.keyPressEvent?4(evt)
 eric4.Helpviewer.HelpBrowserWV.HelpBrowser.keyReleaseEvent?4(evt)
-eric4.Helpviewer.HelpBrowserWV.HelpBrowser.linkedResources?4(relation = QString())
+eric4.Helpviewer.HelpBrowserWV.HelpBrowser.linkedResources?4(relation = "")
 eric4.Helpviewer.HelpBrowserWV.HelpBrowser.preferencesChanged?4()
 eric4.Helpviewer.HelpBrowserWV.HelpBrowser.reload?4()
 eric4.Helpviewer.HelpBrowserWV.HelpBrowser.saveAs?4()
@@ -1823,7 +1822,7 @@ eric4.Helpviewer.HelpBrowserWV.HelpBrowser.wheelEvent?4(evt)
 eric4.Helpviewer.HelpBrowserWV.HelpBrowser.zoomIn?4()
 eric4.Helpviewer.HelpBrowserWV.HelpBrowser.zoomOut?4()
 eric4.Helpviewer.HelpBrowserWV.HelpBrowser.zoomReset?4()
-eric4.Helpviewer.HelpBrowserWV.HelpBrowser?1(parent = None, name = QString(""))
+eric4.Helpviewer.HelpBrowserWV.HelpBrowser?1(parent = None, name = "")
 eric4.Helpviewer.HelpBrowserWV.HelpWebPage.acceptNavigationRequest?4(frame, request, type_)
 eric4.Helpviewer.HelpBrowserWV.HelpWebPage.pageAttributeId?4()
 eric4.Helpviewer.HelpBrowserWV.HelpWebPage.populateNetworkRequest?4(request)
@@ -1952,7 +1951,7 @@ eric4.Helpviewer.History.HistoryManager.HistoryManager.historyFilterModel?4()
 eric4.Helpviewer.History.HistoryManager.HistoryManager.historyModel?4()
 eric4.Helpviewer.History.HistoryManager.HistoryManager.historyTreeModel?4()
 eric4.Helpviewer.History.HistoryManager.HistoryManager.preferencesChanged?4()
-eric4.Helpviewer.History.HistoryManager.HistoryManager.removeHistoryEntry?4(url, title = QString())
+eric4.Helpviewer.History.HistoryManager.HistoryManager.removeHistoryEntry?4(url, title = "")
 eric4.Helpviewer.History.HistoryManager.HistoryManager.save?4()
 eric4.Helpviewer.History.HistoryManager.HistoryManager.setDaysToExpire?4(limit)
 eric4.Helpviewer.History.HistoryManager.HistoryManager.setHistory?4(history, loadedAndSorted = False)
@@ -2402,6 +2401,7 @@ eric4.Plugins.PluginAbout.error?7
 eric4.Plugins.PluginAbout.longDescription?7
 eric4.Plugins.PluginAbout.name?7
 eric4.Plugins.PluginAbout.packageName?7
+eric4.Plugins.PluginAbout.pyqtApi?7
 eric4.Plugins.PluginAbout.shortDescription?7
 eric4.Plugins.PluginAbout.version?7
 eric4.Plugins.PluginEricapi.EricapiPlugin.activate?4()
@@ -2416,6 +2416,7 @@ eric4.Plugins.PluginEricapi.exeDisplayData?4()
 eric4.Plugins.PluginEricapi.longDescription?7
 eric4.Plugins.PluginEricapi.name?7
 eric4.Plugins.PluginEricapi.packageName?7
+eric4.Plugins.PluginEricapi.pyqtApi?7
 eric4.Plugins.PluginEricapi.shortDescription?7
 eric4.Plugins.PluginEricapi.version?7
 eric4.Plugins.PluginEricdoc.EricdocPlugin.activate?4()
@@ -2430,6 +2431,7 @@ eric4.Plugins.PluginEricdoc.exeDisplayData?4()
 eric4.Plugins.PluginEricdoc.longDescription?7
 eric4.Plugins.PluginEricdoc.name?7
 eric4.Plugins.PluginEricdoc.packageName?7
+eric4.Plugins.PluginEricdoc.pyqtApi?7
 eric4.Plugins.PluginEricdoc.shortDescription?7
 eric4.Plugins.PluginEricdoc.version?7
 eric4.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.activate?4()
@@ -2443,6 +2445,7 @@ eric4.Plugins.PluginSyntaxChecker.error?7
 eric4.Plugins.PluginSyntaxChecker.longDescription?7
 eric4.Plugins.PluginSyntaxChecker.name?7
 eric4.Plugins.PluginSyntaxChecker.packageName?7
+eric4.Plugins.PluginSyntaxChecker.pyqtApi?7
 eric4.Plugins.PluginSyntaxChecker.shortDescription?7
 eric4.Plugins.PluginSyntaxChecker.version?7
 eric4.Plugins.PluginTabnanny.TabnannyPlugin.activate?4()
@@ -2456,6 +2459,7 @@ eric4.Plugins.PluginTabnanny.error?7
 eric4.Plugins.PluginTabnanny.longDescription?7
 eric4.Plugins.PluginTabnanny.name?7
 eric4.Plugins.PluginTabnanny.packageName?7
+eric4.Plugins.PluginTabnanny.pyqtApi?7
 eric4.Plugins.PluginTabnanny.shortDescription?7
 eric4.Plugins.PluginTabnanny.version?7
 eric4.Plugins.PluginVcsPySvn.VcsPySvnPlugin.activate?4()
@@ -2483,6 +2487,7 @@ eric4.Plugins.PluginVcsPySvn.packageName?7
 eric4.Plugins.PluginVcsPySvn.pluginType?7
 eric4.Plugins.PluginVcsPySvn.pluginTypename?7
 eric4.Plugins.PluginVcsPySvn.prepareUninstall?4()
+eric4.Plugins.PluginVcsPySvn.pyqtApi?7
 eric4.Plugins.PluginVcsPySvn.shortDescription?7
 eric4.Plugins.PluginVcsPySvn.subversionCfgPluginObject?7
 eric4.Plugins.PluginVcsPySvn.version?7
@@ -2511,6 +2516,7 @@ eric4.Plugins.PluginVcsSubversion.packageName?7
 eric4.Plugins.PluginVcsSubversion.pluginType?7
 eric4.Plugins.PluginVcsSubversion.pluginTypename?7
 eric4.Plugins.PluginVcsSubversion.prepareUninstall?4()
+eric4.Plugins.PluginVcsSubversion.pyqtApi?7
 eric4.Plugins.PluginVcsSubversion.shortDescription?7
 eric4.Plugins.PluginVcsSubversion.subversionCfgPluginObject?7
 eric4.Plugins.PluginVcsSubversion.version?7
@@ -2529,6 +2535,7 @@ eric4.Plugins.PluginVmListspace.packageName?7
 eric4.Plugins.PluginVmListspace.pluginType?7
 eric4.Plugins.PluginVmListspace.pluginTypename?7
 eric4.Plugins.PluginVmListspace.previewPix?4()
+eric4.Plugins.PluginVmListspace.pyqtApi?7
 eric4.Plugins.PluginVmListspace.shortDescription?7
 eric4.Plugins.PluginVmListspace.version?7
 eric4.Plugins.PluginVmMdiArea.VmMdiAreaPlugin.activate?4()
@@ -2546,6 +2553,7 @@ eric4.Plugins.PluginVmMdiArea.packageName?7
 eric4.Plugins.PluginVmMdiArea.pluginType?7
 eric4.Plugins.PluginVmMdiArea.pluginTypename?7
 eric4.Plugins.PluginVmMdiArea.previewPix?4()
+eric4.Plugins.PluginVmMdiArea.pyqtApi?7
 eric4.Plugins.PluginVmMdiArea.shortDescription?7
 eric4.Plugins.PluginVmMdiArea.version?7
 eric4.Plugins.PluginVmTabview.VmTabviewPlugin.activate?4()
@@ -2563,25 +2571,9 @@ eric4.Plugins.PluginVmTabview.packageName?7
 eric4.Plugins.PluginVmTabview.pluginType?7
 eric4.Plugins.PluginVmTabview.pluginTypename?7
 eric4.Plugins.PluginVmTabview.previewPix?4()
+eric4.Plugins.PluginVmTabview.pyqtApi?7
 eric4.Plugins.PluginVmTabview.shortDescription?7
 eric4.Plugins.PluginVmTabview.version?7
-eric4.Plugins.PluginVmWorkspace.VmWorkspacePlugin.activate?4()
-eric4.Plugins.PluginVmWorkspace.VmWorkspacePlugin.deactivate?4()
-eric4.Plugins.PluginVmWorkspace.VmWorkspacePlugin?1(ui)
-eric4.Plugins.PluginVmWorkspace.author?7
-eric4.Plugins.PluginVmWorkspace.autoactivate?7
-eric4.Plugins.PluginVmWorkspace.className?7
-eric4.Plugins.PluginVmWorkspace.deactivateable?7
-eric4.Plugins.PluginVmWorkspace.displayString?7
-eric4.Plugins.PluginVmWorkspace.error?7
-eric4.Plugins.PluginVmWorkspace.longDescription?7
-eric4.Plugins.PluginVmWorkspace.name?7
-eric4.Plugins.PluginVmWorkspace.packageName?7
-eric4.Plugins.PluginVmWorkspace.pluginType?7
-eric4.Plugins.PluginVmWorkspace.pluginTypename?7
-eric4.Plugins.PluginVmWorkspace.previewPix?4()
-eric4.Plugins.PluginVmWorkspace.shortDescription?7
-eric4.Plugins.PluginVmWorkspace.version?7
 eric4.Plugins.PluginWizardPyRegExp.PyRegExpWizard.activate?4()
 eric4.Plugins.PluginWizardPyRegExp.PyRegExpWizard.deactivate?4()
 eric4.Plugins.PluginWizardPyRegExp.PyRegExpWizard?1(ui)
@@ -2593,6 +2585,7 @@ eric4.Plugins.PluginWizardPyRegExp.error?7
 eric4.Plugins.PluginWizardPyRegExp.longDescription?7
 eric4.Plugins.PluginWizardPyRegExp.name?7
 eric4.Plugins.PluginWizardPyRegExp.packageName?7
+eric4.Plugins.PluginWizardPyRegExp.pyqtApi?7
 eric4.Plugins.PluginWizardPyRegExp.shortDescription?7
 eric4.Plugins.PluginWizardPyRegExp.version?7
 eric4.Plugins.PluginWizardQColorDialog.ColorDialogWizard.activate?4()
@@ -2606,6 +2599,7 @@ eric4.Plugins.PluginWizardQColorDialog.error?7
 eric4.Plugins.PluginWizardQColorDialog.longDescription?7
 eric4.Plugins.PluginWizardQColorDialog.name?7
 eric4.Plugins.PluginWizardQColorDialog.packageName?7
+eric4.Plugins.PluginWizardQColorDialog.pyqtApi?7
 eric4.Plugins.PluginWizardQColorDialog.shortDescription?7
 eric4.Plugins.PluginWizardQColorDialog.version?7
 eric4.Plugins.PluginWizardQFileDialog.FileDialogWizard.activate?4()
@@ -2619,6 +2613,7 @@ eric4.Plugins.PluginWizardQFileDialog.error?7
 eric4.Plugins.PluginWizardQFileDialog.longDescription?7
 eric4.Plugins.PluginWizardQFileDialog.name?7
 eric4.Plugins.PluginWizardQFileDialog.packageName?7
+eric4.Plugins.PluginWizardQFileDialog.pyqtApi?7
 eric4.Plugins.PluginWizardQFileDialog.shortDescription?7
 eric4.Plugins.PluginWizardQFileDialog.version?7
 eric4.Plugins.PluginWizardQFontDialog.FontDialogWizard.activate?4()
@@ -2632,6 +2627,7 @@ eric4.Plugins.PluginWizardQFontDialog.error?7
 eric4.Plugins.PluginWizardQFontDialog.longDescription?7
 eric4.Plugins.PluginWizardQFontDialog.name?7
 eric4.Plugins.PluginWizardQFontDialog.packageName?7
+eric4.Plugins.PluginWizardQFontDialog.pyqtApi?7
 eric4.Plugins.PluginWizardQFontDialog.shortDescription?7
 eric4.Plugins.PluginWizardQFontDialog.version?7
 eric4.Plugins.PluginWizardQInputDialog.InputDialogWizard.activate?4()
@@ -2645,6 +2641,7 @@ eric4.Plugins.PluginWizardQInputDialog.error?7
 eric4.Plugins.PluginWizardQInputDialog.longDescription?7
 eric4.Plugins.PluginWizardQInputDialog.name?7
 eric4.Plugins.PluginWizardQInputDialog.packageName?7
+eric4.Plugins.PluginWizardQInputDialog.pyqtApi?7
 eric4.Plugins.PluginWizardQInputDialog.shortDescription?7
 eric4.Plugins.PluginWizardQInputDialog.version?7
 eric4.Plugins.PluginWizardQMessageBox.MessageBoxWizard.activate?4()
@@ -2658,6 +2655,7 @@ eric4.Plugins.PluginWizardQMessageBox.error?7
 eric4.Plugins.PluginWizardQMessageBox.longDescription?7
 eric4.Plugins.PluginWizardQMessageBox.name?7
 eric4.Plugins.PluginWizardQMessageBox.packageName?7
+eric4.Plugins.PluginWizardQMessageBox.pyqtApi?7
 eric4.Plugins.PluginWizardQMessageBox.shortDescription?7
 eric4.Plugins.PluginWizardQMessageBox.version?7
 eric4.Plugins.PluginWizardQRegExp.QRegExpWizard.activate?4()
@@ -2671,6 +2669,7 @@ eric4.Plugins.PluginWizardQRegExp.error?7
 eric4.Plugins.PluginWizardQRegExp.longDescription?7
 eric4.Plugins.PluginWizardQRegExp.name?7
 eric4.Plugins.PluginWizardQRegExp.packageName?7
+eric4.Plugins.PluginWizardQRegExp.pyqtApi?7
 eric4.Plugins.PluginWizardQRegExp.shortDescription?7
 eric4.Plugins.PluginWizardQRegExp.version?7
 eric4.Plugins.VcsPlugins.vcsPySvn.Config.ConfigSvnProtocols?7
@@ -3165,23 +3164,6 @@ eric4.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.setSplitOrientation?4(o
 eric4.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.showWindowMenu?4(windowMenu)
 eric4.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.tile?4()
 eric4.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview?1(parent)
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace._addView?5(win, fn = None, noName = "")
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace._initWindowActions?5()
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace._modificationStatusChanged?5(m, editor)
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace._removeAllViews?5()
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace._removeView?5(win)
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace._showView?5(win, fn = None)
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace._syntaxErrorToggled?5(editor)
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace.activeWindow?4()
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace.canCascade?4()
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace.canSplit?4()
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace.canTile?4()
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace.cascade?4()
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace.eventFilter?4(watched, event)
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace.setEditorName?4(editor, newName)
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace.showWindowMenu?4(windowMenu)
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace.tile?4()
-eric4.Plugins.ViewManagerPlugins.Workspace.Workspace.Workspace?1(parent)
 eric4.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.getCode?4(indLevel, indString)
 eric4.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.on_bTest_clicked?4()
 eric4.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.on_buttonBox_clicked?4(button)
@@ -3207,12 +3189,8 @@ eric4.Plugins.WizardPlugins.InputDialogWizard.InputDialogWizardDialog.InputDialo
 eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog.getCode?4(indLevel, indString)
 eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog.on_bTest_clicked?4()
 eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog.on_buttonBox_clicked?4(button)
-eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog.on_cButton0_editTextChanged?4(text)
-eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog.on_cButton1_editTextChanged?4(text)
-eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog.on_cButton2_editTextChanged?4(text)
 eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog.on_rAboutQt_toggled?4(on)
 eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog.on_rAbout_toggled?4(on)
-eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog.on_rQt42_toggled?4(on)
 eric4.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.MessageBoxWizardDialog?1(parent=None)
 eric4.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardCharactersDialog.PyRegExpWizardCharactersDialog.getCharacters?4()
 eric4.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardCharactersDialog.PyRegExpWizardCharactersDialog.predefinedClasses?7
@@ -3627,7 +3605,6 @@ eric4.Preferences.Shortcuts.importShortcuts?4(fn)
 eric4.Preferences.Shortcuts.readShortcuts?4(prefClass = Prefs, helpViewer = None, pluginName = None)
 eric4.Preferences.Shortcuts.saveShortcuts?4(prefClass = Prefs)
 eric4.Preferences.Shortcuts.setActions?4(shortcuts)
-eric4.Preferences.Shortcuts.setActions_35?4(shortcuts)
 eric4.Preferences.ShortcutsDialog.ShortcutsDialog.noCheckRole?7
 eric4.Preferences.ShortcutsDialog.ShortcutsDialog.objectNameRole?7
 eric4.Preferences.ShortcutsDialog.ShortcutsDialog.objectTypeRole?7
@@ -3824,7 +3801,6 @@ eric4.Project.Project.Project.addUiFiles?4()
 eric4.Project.Project.Project.appendFile?4(fn, isSourceFile = False, updateModel = True)
 eric4.Project.Project.Project.checkDirty?4()
 eric4.Project.Project.Project.checkLanguageFiles?4()
-eric4.Project.Project.Project.checkSecurityString?4(stringToCheck, tag)
 eric4.Project.Project.Project.checkVCSStatus?4()
 eric4.Project.Project.Project.clearStatusMonitorCachedState?4(name)
 eric4.Project.Project.Project.closeProject?4(reopen = False)
@@ -3891,7 +3867,6 @@ eric4.Project.Project.Project.repopulateItem?4(fullname)
 eric4.Project.Project.Project.saveAllScripts?4(reportSyntaxErrors = False)
 eric4.Project.Project.Project.saveProject?4()
 eric4.Project.Project.Project.saveProjectAs?4()
-eric4.Project.Project.Project.securityCheckPatterns?7
 eric4.Project.Project.Project.setData?4(category, key, data)
 eric4.Project.Project.Project.setDbgInfo?4(argv, wd, env, excReporting, excList, excIgnoreList, autoClearShell, tracePython = None, autoContinue = None)
 eric4.Project.Project.Project.setDirty?4(b)
@@ -4586,7 +4561,7 @@ eric4.QScintilla.Shell.Shell.focusOutEvent?4(event)
 eric4.QScintilla.Shell.Shell.getClientType?4()
 eric4.QScintilla.Shell.Shell.getHistory?4(clientType)
 eric4.QScintilla.Shell.Shell.handlePreferencesChanged?4()
-eric4.QScintilla.Shell.Shell.insert?4(text)
+eric4.QScintilla.Shell.Shell.insert?4(txt)
 eric4.QScintilla.Shell.Shell.keyPressEvent?4(ev)
 eric4.QScintilla.Shell.Shell.loadHistory?4(clientType)
 eric4.QScintilla.Shell.Shell.mousePressEvent?4(event)
@@ -4647,7 +4622,7 @@ eric4.QScintilla.Terminal.Terminal.focusInEvent?4(event)
 eric4.QScintilla.Terminal.Terminal.focusOutEvent?4(event)
 eric4.QScintilla.Terminal.Terminal.getHistory?4()
 eric4.QScintilla.Terminal.Terminal.handlePreferencesChanged?4()
-eric4.QScintilla.Terminal.Terminal.insert?4(text)
+eric4.QScintilla.Terminal.Terminal.insert?4(txt)
 eric4.QScintilla.Terminal.Terminal.keyPressEvent?4(ev)
 eric4.QScintilla.Terminal.Terminal.loadHistory?4()
 eric4.QScintilla.Terminal.Terminal.mousePressEvent?4(event)
@@ -4781,7 +4756,7 @@ eric4.Tools.TRPreviewer.TRPreviewer.setTranslation?4(name)
 eric4.Tools.TRPreviewer.TRPreviewer.show?4()
 eric4.Tools.TRPreviewer.TRPreviewer?1(filenames = [], parent = None, name = None)
 eric4.Tools.TRPreviewer.Translation?1()
-eric4.Tools.TRPreviewer.TranslationsDict.add?4(transFileName, setTranslation = True)
+eric4.Tools.TRPreviewer.TranslationsDict.add?4(fileName, setTranslation = True)
 eric4.Tools.TRPreviewer.TranslationsDict.hasTranslations?4()
 eric4.Tools.TRPreviewer.TranslationsDict.loadTransFile?4(transFileName)
 eric4.Tools.TRPreviewer.TranslationsDict.reload?4()
@@ -4799,7 +4774,6 @@ eric4.Tools.TRPreviewer.WidgetWorkspace.loadWidget?4(uiFileName)
 eric4.Tools.TRPreviewer.WidgetWorkspace.showWindowMenu?4(windowMenu)
 eric4.Tools.TRPreviewer.WidgetWorkspace.toggleSelectedWidget?4(act)
 eric4.Tools.TRPreviewer.WidgetWorkspace?1(parent = None)
-eric4.Tools.TRPreviewer._filename?5(path)
 eric4.Tools.TRPreviewer.noTranslationName?7
 eric4.Tools.TRSingleApplication.SAFile?7
 eric4.Tools.TRSingleApplication.SALoadForm?7
@@ -4860,7 +4834,6 @@ eric4.UI.BrowserModel.BrowserFileItem.fileExt?4()
 eric4.UI.BrowserModel.BrowserFileItem.fileName?4()
 eric4.UI.BrowserModel.BrowserFileItem.isDFile?4()
 eric4.UI.BrowserModel.BrowserFileItem.isDesignerFile?4()
-eric4.UI.BrowserModel.BrowserFileItem.isDesignerHeaderFile?4()
 eric4.UI.BrowserModel.BrowserFileItem.isIdlFile?4()
 eric4.UI.BrowserModel.BrowserFileItem.isLinguistFile?4()
 eric4.UI.BrowserModel.BrowserFileItem.isMultiProjectFile?4()
@@ -5183,18 +5156,15 @@ eric4.Utilities.ModuleParser.find_module?4(name, path, extensions)
 eric4.Utilities.ModuleParser.readModule?4(module, path = [], inpackage = False, basename = "", extensions = None, caching = True)
 eric4.Utilities.ModuleParser.resetParsedModule?4(module, basename = "")
 eric4.Utilities.ModuleParser.resetParsedModules?4()
-eric4.Utilities.SingleApplication.SAAddress?7
-eric4.Utilities.SingleApplication.SALckPID?7
-eric4.Utilities.SingleApplication.SALckSocket?7
 eric4.Utilities.SingleApplication.SingleApplicationClient.connect?4()
 eric4.Utilities.SingleApplication.SingleApplicationClient.disconnect?4()
 eric4.Utilities.SingleApplication.SingleApplicationClient.errstr?4()
 eric4.Utilities.SingleApplication.SingleApplicationClient.processArgs?4(args)
 eric4.Utilities.SingleApplication.SingleApplicationClient.sendCommand?4(cmd)
-eric4.Utilities.SingleApplication.SingleApplicationClient?1(pidFile)
+eric4.Utilities.SingleApplication.SingleApplicationClient?1(name)
 eric4.Utilities.SingleApplication.SingleApplicationServer.handleCommand?4(cmd, params)
 eric4.Utilities.SingleApplication.SingleApplicationServer.shutdown?4()
-eric4.Utilities.SingleApplication.SingleApplicationServer?1(pidFile)
+eric4.Utilities.SingleApplication.SingleApplicationServer?1(name)
 eric4.Utilities.Startup.handleArgs?4(argv, appinfo)
 eric4.Utilities.Startup.initializeResourceSearchPath?4()
 eric4.Utilities.Startup.loadTranslatorForLocale?4(dirs, tn)
