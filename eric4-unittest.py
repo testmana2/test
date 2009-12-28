@@ -15,6 +15,9 @@ version of the integrated unittest module.
 import sys
 import os
 
+import sip
+sip.setapi("QString", 2)
+
 for arg in sys.argv:
     if arg.startswith("--config="):
         import Utilities
