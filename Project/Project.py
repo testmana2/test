@@ -2695,6 +2695,11 @@ class Project(QObject):
                     QApplication.restoreOverrideCursor()
                     QApplication.processEvents()
                     
+                    # create the management directory if not present
+                    mgmtDir = self.getProjectManagementDir()
+                    if not os.path.exists(mgmtDir):
+                        os.mkdir(mgmtDir)
+                    
                     # read a user specific project file
                     self.__readUserProperties()
                     
