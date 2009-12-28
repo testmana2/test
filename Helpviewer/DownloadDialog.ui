@@ -1,0 +1,69 @@
+<ui version="4.0" >
+ <class>DownloadDialog</class>
+ <widget class="QWidget" name="DownloadDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>148</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Eric4 Download</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2" >
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" >
+     <item>
+      <widget class="QLabel" name="fileIcon" >
+       <property name="text" >
+        <string>Icon</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout" >
+       <item>
+        <widget class="QLabel" name="filenameLabel" >
+         <property name="text" >
+          <string>Filename</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar" />
+       </item>
+       <item>
+        <widget class="QLabel" name="infoLabel" >
+         <property name="text" >
+          <string>Info</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="keepOpenCheckBox" >
+     <property name="toolTip" >
+      <string>Select to keep the dialog open when finished</string>
+     </property>
+     <property name="text" >
+      <string>Keep open when finished</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Close|QDialogButtonBox::Open</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

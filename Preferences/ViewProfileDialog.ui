@@ -1,0 +1,282 @@
+<ui version="4.0" >
+ <class>ViewProfileDialog</class>
+ <widget class="QDialog" name="ViewProfileDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>608</width>
+    <height>370</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Configure View Profiles</string>
+  </property>
+  <property name="sizeGripEnabled" >
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item row="0" column="0" colspan="2" >
+    <widget class="QLabel" name="textLabel1" >
+     <property name="text" >
+      <string>Select the windows, that should be visible, when the different profiles are active.</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QGroupBox" name="editGroup" >
+     <property name="title" >
+      <string>&amp;Edit Profile</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout" >
+      <item>
+       <widget class="QCheckBox" name="epmpbCheckBox" >
+        <property name="text" >
+         <string>Multiproject-Viewer</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="eppbCheckBox" >
+        <property name="text" >
+         <string>Project-Viewer</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="epfbCheckBox" >
+        <property name="text" >
+         <string>File-Browser</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="epdbCheckBox" >
+        <property name="text" >
+         <string>Debug-Viewer</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="eppsCheckBox" >
+        <property name="text" >
+         <string>Shell</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="eptwCheckBox" >
+        <property name="text" >
+         <string>Terminal</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="eplvCheckBox" >
+        <property name="text" >
+         <string>Log-Viewer</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="eptvCheckBox" >
+        <property name="text" >
+         <string>Task-Viewer</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="eptevCheckBox" >
+        <property name="text" >
+         <string>Templates-Viewer</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QGroupBox" name="debugGroup" >
+     <property name="title" >
+      <string>&amp;Debug Profile</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2" >
+      <item>
+       <widget class="QCheckBox" name="dpmpbCheckBox" >
+        <property name="text" >
+         <string>Multiproject-Viewer</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dppbCheckBox" >
+        <property name="text" >
+         <string>Project-Viewer</string>
+        </property>
+        <property name="checked" >
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dpfbCheckBox" >
+        <property name="text" >
+         <string>File-Browser</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dpdbCheckBox" >
+        <property name="text" >
+         <string>Debug-Viewer</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dppsCheckBox" >
+        <property name="text" >
+         <string>Shell</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dptwCheckBox" >
+        <property name="text" >
+         <string>Terminal</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dplvCheckBox" >
+        <property name="text" >
+         <string>Log-Viewer</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dptvCheckBox" >
+        <property name="text" >
+         <string>Task-Viewer</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dptevCheckBox" >
+        <property name="text" >
+         <string>Templates-Viewer</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="6" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <tabstops>
+  <tabstop>epmpbCheckBox</tabstop>
+  <tabstop>eppbCheckBox</tabstop>
+  <tabstop>epfbCheckBox</tabstop>
+  <tabstop>epdbCheckBox</tabstop>
+  <tabstop>eppsCheckBox</tabstop>
+  <tabstop>eptwCheckBox</tabstop>
+  <tabstop>eplvCheckBox</tabstop>
+  <tabstop>eptvCheckBox</tabstop>
+  <tabstop>eptevCheckBox</tabstop>
+  <tabstop>dpmpbCheckBox</tabstop>
+  <tabstop>dppbCheckBox</tabstop>
+  <tabstop>dpfbCheckBox</tabstop>
+  <tabstop>dpdbCheckBox</tabstop>
+  <tabstop>dppsCheckBox</tabstop>
+  <tabstop>dptwCheckBox</tabstop>
+  <tabstop>dplvCheckBox</tabstop>
+  <tabstop>dptvCheckBox</tabstop>
+  <tabstop>dptevCheckBox</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ViewProfileDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>56</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>56</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ViewProfileDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>146</x>
+     <y>215</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>146</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
