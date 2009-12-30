@@ -33,7 +33,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
             SIGNAL("currentChanged(const QModelIndex&, const QModelIndex&)"), 
             self.__currentChanged)
         
-        languages = Preferences.Prefs.settings.value(Preferences.toList(
+        languages = Preferences.toList(Preferences.Prefs.settings.value(
             "Help/AcceptLanguages", self.defaultAcceptLanguages()))
         self.__model.setStringList(languages)
         

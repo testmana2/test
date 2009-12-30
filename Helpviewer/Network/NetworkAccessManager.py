@@ -336,9 +336,9 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         Public slot to (re-)load the list of accepted languages.
         """
-        languages = Preferences.Prefs.settings.value(Preferences.toList(
-            "Help/AcceptLanguages", 
-            HelpLanguagesDialog.defaultAcceptLanguages()))
+        languages = Preferences.toList(
+            Preferences.Prefs.settings.value("Help/AcceptLanguages", 
+                HelpLanguagesDialog.defaultAcceptLanguages()))
         self.__acceptLanguage = HelpLanguagesDialog.httpString(languages)
     
     def __setDiskCache(self):

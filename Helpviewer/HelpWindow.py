@@ -234,6 +234,7 @@ class HelpWindow(QMainWindow):
             self.__class__.helpwindows.append(self)
             
             QDesktopServices.setUrlHandler("http", self.__linkActivated)
+            QDesktopServices.setUrlHandler("https", self.__linkActivated)
             
             # setup connections
             # TOC window

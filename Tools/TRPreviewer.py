@@ -837,9 +837,8 @@ class WidgetWorkspace(QWorkspace):
         
         @param act reference to the action that triggered (QAction)
         """
-        idx, ok = act.data()
-        if ok:
-            self.__toggleWidget(self.widgets[idx])
+        idx = act.data()
+        self.__toggleWidget(self.widgets[idx])
     
     def __toggleWidget(self, w):
         """

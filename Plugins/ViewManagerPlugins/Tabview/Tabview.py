@@ -292,8 +292,8 @@ class TabWidget(E4TabWidget):
         
         @param act reference to the selected action (QAction)
         """
-        index, ok = act.data()
-        if ok:
+        index = act.data()
+        if index is not None:
             self.setCurrentIndex(index)
         
     def showIndicator(self, on):
