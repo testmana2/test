@@ -63,7 +63,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         Preferences.setHelp("FixedFont", self.fixedFont)
         
         Preferences.setHelp("AutoLoadImages",
-            int(self.autoLoadImagesCheckBox.isChecked()))
+            self.autoLoadImagesCheckBox.isChecked())
         
         Preferences.setHelp("UserStyleSheet", self.styleSheetEdit.text())
         

@@ -23,20 +23,20 @@ class BreakPointModel(QAbstractItemModel):
         
         self.breakpoints = []
         self.header = [
-            QVariant(self.trUtf8("Filename")),
-            QVariant(self.trUtf8("Line")),
-            QVariant(self.trUtf8('Condition')),
-            QVariant(self.trUtf8('Temporary')),
-            QVariant(self.trUtf8('Enabled')),
-            QVariant(self.trUtf8('Ignore Count')),
+            self.trUtf8("Filename"),
+            self.trUtf8("Line"),
+            self.trUtf8('Condition'),
+            self.trUtf8('Temporary'),
+            self.trUtf8('Enabled'),
+            self.trUtf8('Ignore Count'),
         ]
-        self.alignments = [QVariant(Qt.Alignment(Qt.AlignLeft)),
-                           QVariant(Qt.Alignment(Qt.AlignRight)),
-                           QVariant(Qt.Alignment(Qt.AlignLeft)),
-                           QVariant(Qt.Alignment(Qt.AlignHCenter)),
-                           QVariant(Qt.Alignment(Qt.AlignHCenter)),
-                           QVariant(Qt.Alignment(Qt.AlignRight)),
-                           QVariant(Qt.Alignment(Qt.AlignHCenter)),
+        self.alignments = [Qt.Alignment(Qt.AlignLeft),
+                           Qt.Alignment(Qt.AlignRight),
+                           Qt.Alignment(Qt.AlignLeft),
+                           Qt.Alignment(Qt.AlignHCenter),
+                           Qt.Alignment(Qt.AlignHCenter),
+                           Qt.Alignment(Qt.AlignRight),
+                           Qt.Alignment(Qt.AlignHCenter),
         ]
 
     def columnCount(self, parent = QModelIndex()):
@@ -65,20 +65,20 @@ class BreakPointModel(QAbstractItemModel):
         
         @param index index of the requested data (QModelIndex)
         @param role role of the requested data (Qt.ItemDataRole)
-        @return the requested data (QVariant)
+        @return the requested data
         """
         if not index.isValid():
-            return QVariant()
+            return None
         
         if role == Qt.DisplayRole or role == Qt.ToolTipRole:
             if index.column() < len(self.header):
-                return QVariant(self.breakpoints[index.row()][index.column()])
+                return self.breakpoints[index.row()][index.column()]
         
         if role == Qt.TextAlignmentRole:
             if index.column() < len(self.alignments):
                 return self.alignments[index.column()]
         
-        return QVariant()
+        return None
     
     def flags(self, index):
         """
@@ -99,15 +99,15 @@ class BreakPointModel(QAbstractItemModel):
         @param section section number of the requested header data (integer)
         @param orientation orientation of the header (Qt.Orientation)
         @param role role of the requested data (Qt.ItemDataRole)
-        @return header data (QVariant)
+        @return header data
         """
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             if section >= len(self.header):
-                return QVariant("")
+                return ""
             else:
                 return self.header[section]
         
-        return QVariant()
+        return None
     
     def index(self, row, column, parent = QModelIndex()):
         """

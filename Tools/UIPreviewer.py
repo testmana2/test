@@ -69,7 +69,7 @@ class UIPreviewer(QMainWindow):
         self.styleLayout.addWidget(self.styleCombo)
         self.styleCombo.addItems(QStyleFactory().keys())
         self.styleCombo.setCurrentIndex(\
-            Preferences.Prefs.settings.value('UIPreviewer/style').toInt()[0])
+            int(Preferences.Prefs.settings.value('UIPreviewer/style')))
         
         styleSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         self.styleLayout.addItem(styleSpacer)
@@ -360,7 +360,7 @@ class UIPreviewer(QMainWindow):
         self.lastQStyle = qstyle
         self.lastStyle = sstyle
         Preferences.Prefs.settings.setValue('UIPreviewer/style', 
-            QVariant(self.styleCombo.currentIndex()))
+            self.styleCombo.currentIndex())
         QApplication.restoreOverrideCursor()
     
     def __updateActions(self):
@@ -478,28 +478,26 @@ class UIPreviewer(QMainWindow):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setFullPage(True)
         
-        printer.setPrinterName(settings.value("UIPreviewer/printername").toString())
+        printer.setPrinterName(settings.value("UIPreviewer/printername"))
         printer.setPageSize(
-            QPrinter.PageSize(settings.value("UIPreviewer/pagesize").toInt()[0]))
+            QPrinter.PageSize(int(settings.value("UIPreviewer/pagesize"))))
         printer.setPageOrder(
-            QPrinter.PageOrder(settings.value("UIPreviewer/pageorder").toInt()[0]))
+            QPrinter.PageOrder(int(settings.value("UIPreviewer/pageorder"))))
         printer.setOrientation(
-            QPrinter.Orientation(settings.value("UIPreviewer/orientation").toInt()[0]))
+            QPrinter.Orientation(int(settings.value("UIPreviewer/orientation"))))
         printer.setColorMode(
-            QPrinter.ColorMode(settings.value("UIPreviewer/colormode").toInt()[0]))
+            QPrinter.ColorMode(int(settings.value("UIPreviewer/colormode"))))
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_() == QDialog.Accepted:
             self.statusBar().showMessage(self.trUtf8("Printing the image..."))
             self.__print(printer)
             
-            settings.setValue("UIPreviewer/printername", 
-                QVariant(printer.printerName()))
-            settings.setValue("UIPreviewer/pagesize", QVariant(printer.pageSize()))
-            settings.setValue("UIPreviewer/pageorder", QVariant(printer.pageOrder()))
-            settings.setValue("UIPreviewer/orientation", 
-                QVariant(printer.orientation()))
-            settings.setValue("UIPreviewer/colormode", QVariant(printer.colorMode()))
+            settings.setValue("UIPreviewer/printername", printer.printerName())
+            settings.setValue("UIPreviewer/pagesize", printer.pageSize())
+            settings.setValue("UIPreviewer/pageorder", printer.pageOrder())
+            settings.setValue("UIPreviewer/orientation", printer.orientation())
+            settings.setValue("UIPreviewer/colormode", printer.colorMode())
         
         self.statusBar().showMessage(self.trUtf8("Image sent to printer..."), 2000)
 
@@ -519,15 +517,15 @@ class UIPreviewer(QMainWindow):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setFullPage(True)
         
-        printer.setPrinterName(settings.value("UIPreviewer/printername").toString())
+        printer.setPrinterName(settings.value("UIPreviewer/printername"))
         printer.setPageSize(
-            QPrinter.PageSize(settings.value("UIPreviewer/pagesize").toInt()[0]))
+            QPrinter.PageSize(int(settings.value("UIPreviewer/pagesize"))))
         printer.setPageOrder(
-            QPrinter.PageOrder(settings.value("UIPreviewer/pageorder").toInt()[0]))
+            QPrinter.PageOrder(int(settings.value("UIPreviewer/pageorder"))))
         printer.setOrientation(
-            QPrinter.Orientation(settings.value("UIPreviewer/orientation").toInt()[0]))
+            QPrinter.Orientation(int(settings.value("UIPreviewer/orientation"))))
         printer.setColorMode(
-            QPrinter.ColorMode(settings.value("UIPreviewer/colormode").toInt()[0]))
+            QPrinter.ColorMode(int(settings.value("UIPreviewer/colormode"))))
         
         preview = QPrintPreviewDialog(printer, self)
         self.connect(preview, SIGNAL("paintRequested(QPrinter*)"), self.__print)

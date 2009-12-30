@@ -94,10 +94,10 @@ class E4DnDTabBar(E4WheelTabBar):
         """
         mimeData = event.mimeData()
         formats = mimeData.formats()
-        if formats.contains("action") and \
+        if "action" in formats and \
            mimeData.data("action") == "tab-reordering" and \
-           formats.contains("tabbar-id") and \
-           mimeData.data("tabbar-id").toLong()[0] == id(self):
+           "tabbar-id" in formats and \
+           mimeData.data("tabbar-id") == id(self):
             event.acceptProposedAction()
         E4WheelTabBar.dragEnterEvent(self, event)
     

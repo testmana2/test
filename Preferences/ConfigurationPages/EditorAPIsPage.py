@@ -63,7 +63,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         Public slot to save the Editor APIs configuration.
         """
         Preferences.setEditor("AutoPrepareAPIs",
-            int(self.apiAutoPrepareCheckBox.isChecked()))
+            self.apiAutoPrepareCheckBox.isChecked())
         
         lang = self.apiLanguageComboBox.currentText()
         self.apis[lang] = self.__editorGetApisFromApiList()

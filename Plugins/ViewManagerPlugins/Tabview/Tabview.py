@@ -96,11 +96,11 @@ class TabBar(E4WheelTabBar):
         """
         mimeData = event.mimeData()
         formats = mimeData.formats()
-        if formats.contains("action") and \
+        if "action" in formats and \
            mimeData.data("action") == "tab-reordering" and \
-           formats.contains("tabbar-id") and \
-           formats.contains("source-index") and \
-           formats.contains("tabwidget-id"):
+           "tabbar-id" in formats and \
+           "source-index" in formats and \
+           "tabwidget-id" in formats:
             event.acceptProposedAction()
         E4WheelTabBar.dragEnterEvent(self, event)
     
@@ -111,11 +111,11 @@ class TabBar(E4WheelTabBar):
         @param event reference to the drop event (QDropEvent)
         """
         mimeData = event.mimeData()
-        oldID = mimeData.data("tabbar-id").toLong()[0]
-        fromIndex = mimeData.data("source-index").toInt()[0]
+        oldID = mimeData.data("tabbar-id")
+        fromIndex = mimeData.data("source-index")
         toIndex = self.tabAt(event.pos())
         if oldID != id(self):
-            parentID = mimeData.data("tabwidget-id").toLong()[0]
+            parentID = mimeData.data("tabwidget-id")
             if event.proposedAction() == Qt.MoveAction:
                 self.emit(SIGNAL("tabRelocateRequested(long, int, int)"), 
                           parentID, fromIndex, toIndex)
@@ -284,7 +284,7 @@ class TabWidget(E4TabWidget):
         for index in range(self.count()):
             act = self.__navigationMenu.addAction(self.tabIcon(index), 
                                                   self.tabText(index))
-            act.setData(QVariant(index))
+            act.setData(index)
         
     def __navigationMenuTriggered(self, act):
         """
@@ -292,7 +292,7 @@ class TabWidget(E4TabWidget):
         
         @param act reference to the selected action (QAction)
         """
-        index, ok = act.data().toInt()
+        index, ok = act.data()
         if ok:
             self.setCurrentIndex(index)
         

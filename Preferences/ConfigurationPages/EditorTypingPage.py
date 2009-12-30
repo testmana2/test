@@ -7,7 +7,7 @@
 Module implementing the Editor Typing configuration page.
 """
 
-from PyQt4.QtCore import QVariant, pyqtSlot
+from PyQt4.QtCore import pyqtSlot
 
 from ConfigurationPageBase import ConfigurationPageBase
 from Ui_EditorTypingPage import Ui_EditorTypingPage
@@ -34,7 +34,7 @@ class EditorTypingPage(ConfigurationPageBase, Ui_EditorTypingPage):
         languages = self.pageIds.keys()
         languages.sort()
         for language in languages:
-            self.languageCombo.addItem(language, QVariant(self.pageIds[language]))
+            self.languageCombo.addItem(language, self.pageIds[language])
         
         # Python
         self.pythonGroup.setChecked(\
@@ -90,49 +90,49 @@ class EditorTypingPage(ConfigurationPageBase, Ui_EditorTypingPage):
         """
         # Python
         Preferences.setEditorTyping("Python/EnabledTypingAids",
-            int(self.pythonGroup.isChecked()))
+            self.pythonGroup.isChecked())
         Preferences.setEditorTyping("Python/InsertClosingBrace",
-            int(self.pythonInsertClosingBraceCheckBox.isChecked()))
+            self.pythonInsertClosingBraceCheckBox.isChecked())
         Preferences.setEditorTyping("Python/SkipBrace",
-            int(self.pythonSkipBraceCheckBox.isChecked()))
+            self.pythonSkipBraceCheckBox.isChecked())
         Preferences.setEditorTyping("Python/IndentBrace",
-            int(self.pythonIndentBraceCheckBox.isChecked()))
+            self.pythonIndentBraceCheckBox.isChecked())
         Preferences.setEditorTyping("Python/InsertQuote",
-            int(self.pythonInsertQuoteCheckBox.isChecked()))
+            self.pythonInsertQuoteCheckBox.isChecked())
         Preferences.setEditorTyping("Python/DedentElse",
-            int(self.pythonDedentElseCheckBox.isChecked()))
+            self.pythonDedentElseCheckBox.isChecked())
         Preferences.setEditorTyping("Python/DedentExcept",
-            int(self.pythonDedentExceptCheckBox.isChecked()))
+            self.pythonDedentExceptCheckBox.isChecked())
         Preferences.setEditorTyping("Python/Py24StyleTry",
-            int(self.pythonDedentExceptPy24CheckBox.isChecked()))
+            self.pythonDedentExceptPy24CheckBox.isChecked())
         Preferences.setEditorTyping("Python/InsertImport",
-            int(self.pythonInsertImportCheckBox.isChecked()))
+            self.pythonInsertImportCheckBox.isChecked())
         Preferences.setEditorTyping("Python/InsertSelf",
-            int(self.pythonInsertSelfCheckBox.isChecked()))
+            self.pythonInsertSelfCheckBox.isChecked())
         Preferences.setEditorTyping("Python/InsertBlank",
-            int(self.pythonInsertBlankCheckBox.isChecked()))
+            self.pythonInsertBlankCheckBox.isChecked())
         Preferences.setEditorTyping("Python/ColonDetection",
-            int(self.pythonColonDetectionCheckBox.isChecked()))
+            self.pythonColonDetectionCheckBox.isChecked())
         Preferences.setEditorTyping("Python/DedentDef",
-            int(self.pythonDedentDefCheckBox.isChecked()))
+            self.pythonDedentDefCheckBox.isChecked())
         
         # Ruby
         Preferences.setEditorTyping("Ruby/EnabledTypingAids",
-            int(self.rubyGroup.isChecked()))
+            self.rubyGroup.isChecked())
         Preferences.setEditorTyping("Ruby/InsertClosingBrace",
-            int(self.rubyInsertClosingBraceCheckBox.isChecked()))
+            self.rubyInsertClosingBraceCheckBox.isChecked())
         Preferences.setEditorTyping("Ruby/SkipBrace",
-            int(self.rubySkipBraceCheckBox.isChecked()))
+            self.rubySkipBraceCheckBox.isChecked())
         Preferences.setEditorTyping("Ruby/IndentBrace",
-            int(self.rubyIndentBraceCheckBox.isChecked()))
+            self.rubyIndentBraceCheckBox.isChecked())
         Preferences.setEditorTyping("Ruby/InsertQuote",
-            int(self.rubyInsertQuoteCheckBox.isChecked()))
+            self.rubyInsertQuoteCheckBox.isChecked())
         Preferences.setEditorTyping("Ruby/InsertBlank",
-            int(self.rubyInsertBlankCheckBox.isChecked()))
+            self.rubyInsertBlankCheckBox.isChecked())
         Preferences.setEditorTyping("Ruby/InsertHereDoc",
-            int(self.rubyInsertHereDocCheckBox.isChecked()))
+            self.rubyInsertHereDocCheckBox.isChecked())
         Preferences.setEditorTyping("Ruby/InsertInlineDoc",
-            int(self.rubyInsertInlineDocCheckBox.isChecked()))
+            self.rubyInsertInlineDocCheckBox.isChecked())
         
     @pyqtSlot(str)
     def on_languageCombo_activated(self, language):

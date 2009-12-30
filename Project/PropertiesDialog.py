@@ -57,8 +57,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         
         projectTypes = project.getProjectTypes()
         for projectTypeKey in sorted(projectTypes.keys()):
-            self.projectTypeComboBox.addItem(projectTypes[projectTypeKey], 
-                                        QVariant(projectTypeKey))
+            self.projectTypeComboBox.addItem(projectTypes[projectTypeKey], projectTypeKey)
         
         if not new:
             name = os.path.splitext(self.project.pfile)[0]
@@ -208,8 +207,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         
         @return selected UI type (string)
         """
-        data = self.projectTypeComboBox.itemData(self.projectTypeComboBox.currentIndex())
-        return data.toString()
+        return self.projectTypeComboBox.itemData(self.projectTypeComboBox.currentIndex())
         
     def getPPath(self):
         """

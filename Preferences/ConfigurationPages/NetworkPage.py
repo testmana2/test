@@ -9,7 +9,7 @@ Module implementing the Network configuration page.
 
 import os
 
-from PyQt4.QtCore import QVariant, pyqtSlot
+from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
 from E4Gui.E4Completers import E4DirCompleter
@@ -34,9 +34,9 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         
         self.downloadDirCompleter = E4DirCompleter(self.downloadDirEdit)
         
-        self.proxyTypeCombo.addItem(self.trUtf8("Transparent HTTP"), QVariant(0))
-        self.proxyTypeCombo.addItem(self.trUtf8("Caching HTTP"), QVariant(1))
-        self.proxyTypeCombo.addItem(self.trUtf8("Socks5"), QVariant(2))
+        self.proxyTypeCombo.addItem(self.trUtf8("Transparent HTTP"), 0)
+        self.proxyTypeCombo.addItem(self.trUtf8("Caching HTTP"), 1)
+        self.proxyTypeCombo.addItem(self.trUtf8("Socks5"), 2)
         
         # set initial values
         self.downloadDirEdit.setText(Preferences.getUI("DownloadPath"))
@@ -46,7 +46,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.proxyGroup.setChecked(\
             Preferences.getUI("UseProxy"))
         self.proxyTypeCombo.setCurrentIndex(self.proxyTypeCombo.findData(\
-            QVariant(Preferences.getUI("ProxyType"))))
+            Preferences.getUI("ProxyType")))
         self.proxyHostEdit.setText(\
             Preferences.getUI("ProxyHost"))
         self.proxyUserEdit.setText(\
@@ -63,12 +63,12 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         Preferences.setUI("DownloadPath", 
             self.downloadDirEdit.text())
         Preferences.setUI("RequestDownloadFilename", 
-            int(self.requestFilenameCheckBox.isChecked()))
+            self.requestFilenameCheckBox.isChecked())
         
         Preferences.setUI("UseProxy",
-            int(self.proxyGroup.isChecked()))
+            self.proxyGroup.isChecked())
         Preferences.setUI("ProxyType", 
-            self.proxyTypeCombo.itemData(self.proxyTypeCombo.currentIndex()).toInt()[0])
+            self.proxyTypeCombo.itemData(self.proxyTypeCombo.currentIndex()))
         Preferences.setUI("ProxyHost",
             self.proxyHostEdit.text())
         Preferences.setUI("ProxyUser",

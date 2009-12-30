@@ -161,9 +161,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             " ".join(msg), 
         ])
         
-        itm.setData(0, self.__messageRole, QVariant(message))
-        # TODO: change this to simply store the list for QVariant v2
-        itm.setData(0, self.__changesRole, QVariant(repr(changedPaths)))
+        itm.setData(0, self.__messageRole, message)
+        itm.setData(0, self.__changesRole, changedPaths)
         
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignLeft)
@@ -434,12 +433,11 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         @param previous reference to the old current item (QTreeWidgetItem)
         """
         self.messageEdit.clear()
-        for line in current.data(0, self.__messageRole).toStringList():
+        for line in current.data(0, self.__messageRole):
             self.messageEdit.append(line.strip())
         
         self.filesTree.clear()
-        # TODO: change this for QVariant v2 to not use eval
-        changes = eval(current.data(0, self.__changesRole).toString())
+        changes = current.data(0, self.__changesRole)
         if len(changes) > 0:
             for change in changes:
                 self.__generateFileItem(change["action"], change["path"], 

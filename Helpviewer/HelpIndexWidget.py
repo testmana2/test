@@ -136,7 +136,7 @@ class HelpIndexWidget(QWidget):
                 elif act == newTab:
                     model = self.__index.model()
                     if model is not None:
-                        keyword = model.data(idx, Qt.DisplayRole).toString()
+                        keyword = model.data(idx, Qt.DisplayRole)
                         links = model.linksForKeyword(keyword)
                         if len(links) == 1:
                             self.__mw.newTab(links.values()[0])
@@ -150,7 +150,7 @@ class HelpIndexWidget(QWidget):
             if idx.isValid() and event.button() == Qt.MidButton:
                 model = self.__index.model()
                 if model is not None:
-                    keyword = model.data(idx, Qt.DisplayRole).toString()
+                    keyword = model.data(idx, Qt.DisplayRole)
                     links = model.linksForKeyword(keyword)
                     if len(links) == 1:
                         self.__mw.newTab(links.values()[0])

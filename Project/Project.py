@@ -436,8 +436,8 @@ class Project(QObject):
         self.recent = []
         Preferences.Prefs.rsettings.sync()
         rp = Preferences.Prefs.rsettings.value(recentNameProject)
-        if rp.isValid():
-            for f in rp.toStringList():
+        if rp is not None:
+            for f in rp:
                 if QFileInfo(f).exists():
                     self.recent.append(f)
     
@@ -445,7 +445,7 @@ class Project(QObject):
         """
         Private method to save the list of recently opened filenames.
         """
-        Preferences.Prefs.rsettings.setValue(recentNameProject, QVariant(self.recent))
+        Preferences.Prefs.rsettings.setValue(recentNameProject, self.recent)
         Preferences.Prefs.rsettings.sync()
         
     def getMostRecent(self):
@@ -3793,7 +3793,7 @@ class Project(QObject):
             act = self.recentMenu.addAction(\
                 formatStr % (idx, 
                     Utilities.compactPath(rp, self.ui.maxMenuFilePathLen)))
-            act.setData(QVariant(rp))
+            act.setData(rp)
             act.setEnabled(QFileInfo(rp).exists())
             idx += 1
         
@@ -3806,7 +3806,7 @@ class Project(QObject):
         
         @param act reference to the action that triggered (QAction)
         """
-        file = act.data().toString()
+        file = act.data()
         if file:
             self.openProject(file)
         

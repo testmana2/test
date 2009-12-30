@@ -250,7 +250,7 @@ class AdBlockSubscription(QObject):
         reply = self.sender()
         
         response = reply.readAll()
-        redirect = reply.attribute(QNetworkRequest.RedirectionTargetAttribute).toUrl()
+        redirect = reply.attribute(QNetworkRequest.RedirectionTargetAttribute)
         reply.close()
         reply.deleteLater()
         

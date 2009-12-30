@@ -48,17 +48,17 @@ class CookieModel(QAbstractTableModel):
             fm = QFontMetrics(QFont())
             height = fm.height() + fm.height() / 3
             width = \
-                fm.width(self.headerData(section, orientation, Qt.DisplayRole).toString())
-            return QVariant(QSize(width, height))
+                fm.width(self.headerData(section, orientation, Qt.DisplayRole))
+            return QSize(width, height)
         
         if orientation == Qt.Horizontal:
             if role == Qt.DisplayRole:
                 try:
-                    return QVariant(self.__headers[section])
+                    return self.__headers[section]
                 except IndexError:
-                    return QVariant()
+                    return None
             
-            return QVariant()
+            return None
         
         return QAbstractTableModel.headerData(self, section, orientation, role)
     
@@ -68,33 +68,33 @@ class CookieModel(QAbstractTableModel):
         
         @param index index to get data for (QModelIndex)
         @param role role of the data to retrieve (integer)
-        @return requested data (QVariant)
+        @return requested data
         """
         lst = []
         if self.__cookieJar is not None:
             lst = self.__cookieJar.cookies()
         if index.row() < 0 or index.row() >= len(lst):
-            return QVariant()
+            return None
         
         if role in (Qt.DisplayRole, Qt.EditRole):
             cookie = lst[index.row()]
             col = index.column()
             if col == 0:
-                return QVariant(cookie.domain())
+                return cookie.domain()
             elif col == 1:
-                return QVariant(cookie.name())
+                return cookie.name()
             elif col == 2:
-                return QVariant(cookie.path())
+                return cookie.path()
             elif col == 3:
-                return QVariant(cookie.isSecure())
+                return cookie.isSecure()
             elif col == 4:
-                return QVariant(cookie.expirationDate())
+                return cookie.expirationDate()
             elif col == 5:
-                return QVariant(cookie.value())
+                return cookie.value()
             else:
-                return QVariant()
+                return None
         
-        return QVariant()
+        return None
     
     def columnCount(self, parent = QModelIndex()):
         """

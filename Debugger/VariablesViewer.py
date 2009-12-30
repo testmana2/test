@@ -62,7 +62,7 @@ class VariableItem(QTreeWidgetItem):
         
         @param column column number (integer)
         @param role data role (Qt.ItemDataRole)
-        @return requested data (QVariant)
+        @return requested data
         """
         if column == 1 and role == Qt.ToolTipRole:
             role = Qt.DisplayRole

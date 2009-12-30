@@ -2648,6 +2648,8 @@
       <keyword name="setViewManager" id="setViewManager" ref="eric4.Preferences.__init__.html#setViewManager" />
       <keyword name="shouldResetLayout" id="shouldResetLayout" ref="eric4.Preferences.__init__.html#shouldResetLayout" />
       <keyword name="syncPreferences" id="syncPreferences" ref="eric4.Preferences.__init__.html#syncPreferences" />
+      <keyword name="toBool" id="toBool" ref="eric4.Preferences.__init__.html#toBool" />
+      <keyword name="toList" id="toList" ref="eric4.Preferences.__init__.html#toList" />
       <keyword name="PreferencesLexer (Module)" id="PreferencesLexer (Module)" ref="eric4.Preferences.PreferencesLexer.html" />
       <keyword name="PreferencesLexer" id="PreferencesLexer" ref="eric4.Preferences.PreferencesLexer.html#PreferencesLexer" />
       <keyword name="PreferencesLexerError" id="PreferencesLexerError" ref="eric4.Preferences.PreferencesLexer.html#PreferencesLexerError" />

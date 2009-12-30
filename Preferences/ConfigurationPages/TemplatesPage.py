@@ -41,14 +41,14 @@ class TemplatesPage(ConfigurationPageBase, Ui_TemplatesPage):
         Public slot to save the Templates configuration.
         """
         Preferences.setTemplates("AutoOpenGroups",
-            int(self.templatesAutoOpenGroupsCheckBox.isChecked()))
+            self.templatesAutoOpenGroupsCheckBox.isChecked())
         sepChar = self.templatesSeparatorCharEdit.text()
         if sepChar:
             Preferences.setTemplates("SeparatorChar", sepChar)
         Preferences.setTemplates("SingleDialog",
-            int(self.templatesSingleDialogButton.isChecked()))
+            self.templatesSingleDialogButton.isChecked())
         Preferences.setTemplates("ShowTooltip",
-            int(self.templatesToolTipCheckBox.isChecked()))
+            self.templatesToolTipCheckBox.isChecked())
     
 def create(dlg):
     """

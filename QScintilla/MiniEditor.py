@@ -301,12 +301,12 @@ class MiniEditor(QMainWindow):
         if act.objectName():
             accel = Preferences.Prefs.settings.value(\
                 "Shortcuts/{0}/{1}/Accel".format(category, act.objectName()))
-            if accel.isValid():
-                act.setShortcut(QKeySequence(accel.toString()))
+            if accel is not None:
+                act.setShortcut(QKeySequence(accel))
             accel = Preferences.Prefs.settings.value(\
                 "Shortcuts/{0}/{1}/AltAccel".format(category, act.objectName()))
-            if accel.isValid():
-                act.setAlternateShortcut(QKeySequence(accel.toString()))
+            if accel is not None:
+                act.setAlternateShortcut(QKeySequence(accel))
     
     def __createActions(self):
         """
@@ -1455,8 +1455,8 @@ class MiniEditor(QMainWindow):
         Private method to read the settings remembered last time.
         """
         settings = Preferences.Prefs.settings
-        pos = settings.value("MiniEditor/Position", QVariant(QPoint(0, 0))).toPoint()
-        size = settings.value("MiniEditor/Size", QVariant(QSize(800, 600))).toSize()
+        pos = settings.value("MiniEditor/Position", QPoint(0, 0))
+        size = settings.value("MiniEditor/Size", QSize(800, 600))
         self.resize(size)
         self.move(pos)
     
@@ -1465,8 +1465,8 @@ class MiniEditor(QMainWindow):
         Private method to write the settings for reuse.
         """
         settings = Preferences.Prefs.settings
-        settings.setValue("MiniEditor/Position", QVariant(self.pos()))
-        settings.setValue("MiniEditor/Size", QVariant(self.size()))
+        settings.setValue("MiniEditor/Position", self.pos())
+        settings.setValue("MiniEditor/Size", self.size())
     
     def __maybeSave(self):
         """
@@ -1881,7 +1881,7 @@ class MiniEditor(QMainWindow):
         self.languagesActGrp = QActionGroup(self)
         self.noLanguageAct = menu.addAction(self.trUtf8("No Language"))
         self.noLanguageAct.setCheckable(True)
-        self.noLanguageAct.setData(QVariant("None"))
+        self.noLanguageAct.setData("None")
         self.languagesActGrp.addAction(self.noLanguageAct)
         menu.addSeparator()
         
@@ -1894,17 +1894,17 @@ class MiniEditor(QMainWindow):
                 self.supportedLanguages[language] = supportedLanguages[language][:]
                 act = menu.addAction(self.supportedLanguages[language][0])
                 act.setCheckable(True)
-                act.setData(QVariant(language))
+                act.setData(language)
                 self.supportedLanguages[language].append(act)
                 self.languagesActGrp.addAction(act)
         
         menu.addSeparator()
         self.pygmentsAct = menu.addAction(self.trUtf8("Guessed"))
         self.pygmentsAct.setCheckable(True)
-        self.pygmentsAct.setData(QVariant("Guessed"))
+        self.pygmentsAct.setData("Guessed")
         self.languagesActGrp.addAction(self.pygmentsAct)
         self.pygmentsSelAct = menu.addAction(self.trUtf8("Alternatives"))
-        self.pygmentsSelAct.setData(QVariant("Alternatives"))
+        self.pygmentsSelAct.setData("Alternatives")
         
         self.connect(menu, SIGNAL('triggered(QAction *)'), self.__languageMenuTriggered)
         self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuLanguages)
@@ -1960,7 +1960,7 @@ class MiniEditor(QMainWindow):
             if language:
                 self.setLanguage("dummy.pygments", pyname = language)
         else:
-            language = act.data().toString()
+            language = act.data()
             if language:
                 self.setLanguage(self.supportedLanguages[language][1])
         
@@ -2058,9 +2058,8 @@ class MiniEditor(QMainWindow):
         
         # get the font for style 0 and set it as the default font
         key = 'Scintilla/%s/style0/font' % self.lexer_.language()
-        fontVariant = Preferences.Prefs.settings.value(key)
-        if fontVariant.isValid():
-            fdesc = fontVariant.toStringList()
+        fdesc = Preferences.Prefs.settings.value(key)
+        if fdesc is not None:
             font = QFont(fdesc[0], int(str(fdesc[1])))
             self.lexer_.setDefaultFont(font)
         self.lexer_.readSettings(Preferences.Prefs.settings, "Scintilla")

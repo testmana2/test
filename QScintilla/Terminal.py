@@ -253,9 +253,8 @@ class Terminal(QsciScintillaCompat):
         
         # get the font for style 0 and set it as the default font
         key = 'Scintilla/%s/style0/font' % self.lexer_.language()
-        fontVariant = Preferences.Prefs.settings.value(key)
-        if fontVariant.isValid():
-            fdesc = fontVariant.toStringList()
+        fdesc = Preferences.Prefs.settings.value(key)
+        if fdesc is not None:
             font = QFont(fdesc[0], int(fdesc[1]))
             self.lexer_.setDefaultFont(font)
         self.setLexer(self.lexer_)
@@ -351,9 +350,8 @@ class Terminal(QsciScintillaCompat):
         """
         Public method to load the history.
         """
-        hVariant = Preferences.Prefs.settings.value("Terminal/History")
-        if hVariant.isValid():
-            hl = hVariant.toStringList()
+        hl = Preferences.Prefs.settings.value("Terminal/History")
+        if hl is not None:
             self.history = hl[-self.maxHistoryEntries:]
         else:
             self.history = []
@@ -370,8 +368,7 @@ class Terminal(QsciScintillaCompat):
         """
         Public method to save the history.
         """
-        Preferences.Prefs.settings.setValue(\
-            "Terminal/History", QVariant(self.history))
+        Preferences.Prefs.settings.setValue("Terminal/History", self.history)
         
     def getHistory(self):
         """

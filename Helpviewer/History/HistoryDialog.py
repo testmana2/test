@@ -123,12 +123,12 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         idx = self.historyTree.currentIndex()
         if newTab:
             self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                      idx.data(HistoryModel.UrlRole).toUrl(), 
-                      idx.data(HistoryModel.TitleRole).toString())
+                      idx.data(HistoryModel.UrlRole), 
+                      idx.data(HistoryModel.TitleRole))
         else:
             self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                      idx.data(HistoryModel.UrlRole).toUrl(), 
-                      idx.data(HistoryModel.TitleRole).toString())
+                      idx.data(HistoryModel.UrlRole), 
+                      idx.data(HistoryModel.TitleRole))
     
     def __copyHistory(self):
         """
@@ -138,7 +138,7 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         if not idx.parent().isValid():
             return
         
-        url = idx.data(HistoryModel.UrlStringRole).toString()
+        url = idx.data(HistoryModel.UrlStringRole)
         
         clipboard = QApplication.clipboard()
         clipboard.setText(url)

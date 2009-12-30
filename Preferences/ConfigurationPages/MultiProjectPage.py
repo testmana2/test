@@ -37,9 +37,9 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
         Public slot to save the Project configuration.
         """
         Preferences.setMultiProject("OpenMasterAutomatically",
-            int(self.openMasterAutomaticallyCheckBox.isChecked()))
+            self.openMasterAutomaticallyCheckBox.isChecked())
         Preferences.setMultiProject("XMLTimestamp",
-            int(self.multiProjectTimestampCheckBox.isChecked()))
+            self.multiProjectTimestampCheckBox.isChecked())
         Preferences.setMultiProject("RecentNumber", 
             self.multiProjectRecentSpinBox.value())
     

@@ -46,9 +46,9 @@ class EditorAutocompletionQScintillaPage(ConfigurationPageBase,
         Public slot to save the Editor Autocompletion configuration.
         """
         Preferences.setEditor("AutoCompletionShowSingle",
-            int(self.acShowSingleCheckBox.isChecked()))
+            self.acShowSingleCheckBox.isChecked())
         Preferences.setEditor("AutoCompletionFillups",
-            int(self.acFillupsCheckBox.isChecked()))
+            self.acFillupsCheckBox.isChecked())
         if self.acSourceDocumentRadioButton.isChecked():
             Preferences.setEditor("AutoCompletionSource", QsciScintilla.AcsDocument)
         elif self.acSourceAPIsRadioButton.isChecked():

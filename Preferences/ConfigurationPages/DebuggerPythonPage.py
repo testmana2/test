@@ -59,7 +59,7 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         Public slot to save the Debugger Python configuration.
         """
         Preferences.setDebugger("CustomPythonInterpreter", 
-            int(self.customPyCheckBox.isChecked()))
+            self.customPyCheckBox.isChecked())
         Preferences.setDebugger("PythonInterpreter", 
             self.interpreterEdit.text())
         if self.standardButton.isChecked():
@@ -72,9 +72,9 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         Preferences.setDebugger("DebugClient", 
             self.debugClientEdit.text())
         Preferences.setDebugger("PythonRedirect", 
-            int(self.pyRedirectCheckBox.isChecked()))
+            self.pyRedirectCheckBox.isChecked())
         Preferences.setDebugger("PythonNoEncoding", 
-            int(self.pyNoEncodingCheckBox.isChecked()))
+            self.pyNoEncodingCheckBox.isChecked())
         Preferences.setDebugger("PythonExtensions", 
             self.sourceExtensionsEdit.text())
         

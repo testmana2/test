@@ -150,45 +150,45 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         Preferences.setEditorOtherFonts("DefaultFont", self.defaultFont)
         Preferences.setEditorOtherFonts("MonospacedFont", self.monospacedFont)
         Preferences.setEditor("UseMonospacedFont",
-            int(self.monospacedCheckBox.isChecked()))
+            self.monospacedCheckBox.isChecked())
         
         Preferences.setEditor("LinenoWidth", 
             self.linenowidthSlider.value())
         Preferences.setEditor("LinenoMargin", 
-            int(self.linenoCheckBox.isChecked()))
+            self.linenoCheckBox.isChecked())
         Preferences.setEditor("FoldingMargin", 
-            int(self.foldingCheckBox.isChecked()))
+            self.foldingCheckBox.isChecked())
         Preferences.setEditor("UnifiedMargins", 
-            int(self.unifiedMarginsCheckBox.isChecked()))
+            self.unifiedMarginsCheckBox.isChecked())
         
         Preferences.setEditor("CaretLineVisible",
-            int(self.caretlineVisibleCheckBox.isChecked()))
+            self.caretlineVisibleCheckBox.isChecked())
         Preferences.setEditor("ColourizeSelText",
-            int(self.colourizeSelTextCheckBox.isChecked()))
+            self.colourizeSelTextCheckBox.isChecked())
         Preferences.setEditor("CustomSelectionColours", 
-            int(self.customSelColourCheckBox.isChecked()))
+            self.customSelColourCheckBox.isChecked())
         Preferences.setEditor("ExtendSelectionToEol", 
-            int(self.extentSelEolCheckBox.isChecked()))
+            self.extentSelEolCheckBox.isChecked())
         
         Preferences.setEditor("CaretWidth", 
             self.caretWidthSpinBox.value())
         
         Preferences.setEditor("ShowEOL", 
-            int(self.eolCheckBox.isChecked()))
+            self.eolCheckBox.isChecked())
         Preferences.setEditor("WrapLongLines",
-            int(self.wrapLongLinesCheckBox.isChecked()))
+            self.wrapLongLinesCheckBox.isChecked())
         Preferences.setEditor("EdgeMode",
             self.edgeModes[self.edgeModeCombo.currentIndex()])
         Preferences.setEditor("EdgeColumn",
             self.edgeLineColumnSlider.value())
         
         Preferences.setEditor("BraceHighlighting",
-            int(self.bracehighlightingCheckBox.isChecked()))
+            self.bracehighlightingCheckBox.isChecked())
         
         Preferences.setEditor("ShowWhitespace", 
-            int(self.whitespaceCheckBox.isChecked()))
+            self.whitespaceCheckBox.isChecked())
         Preferences.setEditor("MiniContextMenu",
-            int(self.miniMenuCheckBox.isChecked()))
+            self.miniMenuCheckBox.isChecked())
         
         for key in self.editorColours.keys():
             Preferences.setEditorColour(key, self.editorColours[key])

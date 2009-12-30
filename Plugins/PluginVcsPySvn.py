@@ -10,7 +10,6 @@ Module implementing the PySvn version control plugin.
 import os
 import sys
 
-from PyQt4.QtCore import QVariant
 from PyQt4.QtGui import QApplication
 
 from E4Gui.E4Application import e4App
@@ -189,11 +188,17 @@ class VcsPySvnPlugin(object):
         @param prefClass preferences class used as the storage area
         @return the requested refactoring setting
         """
-        if key in ["Commits"]:
-            return Preferences.Prefs.settings.value("Subversion/" + key).toStringList()
-        else:
-            return Preferences.Prefs.settings.value("Subversion/" + key,
-                QVariant(self.__subversionDefaults[key])).toInt()[0]
+        if key in ["StopLogOnCopy"]:
+            return Preferences.toBool(Preferences.Prefs.settings.value(
+                "Subversion/" + key, self.__subversionDefaults[key]))
+        elif key in ["LogLimit", "CommitMessages"]:
+            return int(Preferences.Prefs.settings.value("Subversion/" + key,
+                self.__subversionDefaults[key]))
+        elif key in ["Commits"]:
+            return Preferences.toList(Preferences.Prefs.settings.value(
+                "Subversion/" + key))
+        else: 
+            return Preferences.Prefs.settings.value("Subversion/" + key)
     
     def setPreferences(self, key, value):
         """
@@ -203,7 +208,7 @@ class VcsPySvnPlugin(object):
         @param value the value to be set
         @param prefClass preferences class used as the storage area
         """
-        Preferences.Prefs.settings.setValue("Subversion/" + key, QVariant(value))
+        Preferences.Prefs.settings.setValue("Subversion/" + key, value)
     
     def getServersPath(self):
         """

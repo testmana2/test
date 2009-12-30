@@ -48,14 +48,14 @@ class CookieExceptionsModel(QAbstractTableModel):
             fm = QFontMetrics(QFont())
             height = fm.height() + fm.height() / 3
             width = \
-                fm.width(self.headerData(section, orientation, Qt.DisplayRole).toString())
-            return QVariant(QSize(width, height))
+                fm.width(self.headerData(section, orientation, Qt.DisplayRole))
+            return QSize(width, height)
         
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             try:
-                return QVariant(self.__headers[section])
+                return self.__headers[section]
             except IndexError:
-                return QVariant()
+                return None
         
         return QAbstractTableModel.headerData(self, section, orientation, role)
     
@@ -68,39 +68,39 @@ class CookieExceptionsModel(QAbstractTableModel):
         @return requested data
         """
         if index.row() < 0 or index.row() >= self.rowCount():
-            return QVariant()
+            return None
         
         if role in (Qt.DisplayRole, Qt.EditRole):
             row = index.row()
             if row < len(self.__allowedCookies):
                 if index.column() == 0:
-                    return QVariant(self.__allowedCookies[row])
+                    return self.__allowedCookies[row]
                 elif index.column() == 1:
-                    return QVariant(self.trUtf8("Allow"))
+                    return self.trUtf8("Allow")
                 else:
-                    return QVariant()
+                    return None
             
             row -= len(self.__allowedCookies)
             if row < len(self.__blockedCookies):
                 if index.column() == 0:
-                    return QVariant(self.__blockedCookies[row])
+                    return self.__blockedCookies[row]
                 elif index.column() == 1:
-                    return QVariant(self.trUtf8("Block"))
+                    return self.trUtf8("Block")
                 else:
-                    return QVariant()
+                    return None
             
             row -= len(self.__blockedCookies)
             if row < len(self.__sessionCookies):
                 if index.column() == 0:
-                    return QVariant(self.__sessionCookies[row])
+                    return self.__sessionCookies[row]
                 elif index.column() == 1:
-                    return QVariant(self.trUtf8("Allow For Session"))
+                    return self.trUtf8("Allow For Session")
                 else:
-                    return QVariant()
+                    return None
             
-            return QVariant()
+            return None
         
-        return QVariant()
+        return None
     
     def columnCount(self, parent = QModelIndex()):
         """

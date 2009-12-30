@@ -42,7 +42,7 @@ class BrowserModel(QAbstractItemModel):
         """
         QAbstractItemModel.__init__(self, parent)
         
-        rootData = QVariant(QApplication.translate("BrowserModel", "Name"))
+        rootData = QApplication.translate("BrowserModel", "Name")
         self.rootItem = BrowserItem(None, rootData)
         
         self.progDir = None
@@ -69,25 +69,25 @@ class BrowserModel(QAbstractItemModel):
         
         @param index index of the data to retrieve (QModelIndex)
         @param role role of data (Qt.ItemDataRole)
-        @return requested data (QVariant)
+        @return requested data
         """
         if not index.isValid():
-            return QVariant()
+            return None
         
         if role == Qt.DisplayRole:
             item = index.internalPointer()
             if index.column() < item.columnCount():
-                return QVariant(item.data(index.column()))
+                return item.data(index.column())
             elif index.column() == item.columnCount() and \
                  index.column() < self.columnCount(self.parent(index)):
                 # This is for the case where an item under a multi-column parent
                 # doesn't have a value for all the columns
-                return QVariant("")
+                return ""
         elif role == Qt.DecorationRole:
             if index.column() == 0:
-                return QVariant(index.internalPointer().getIcon())
+                return index.internalPointer().getIcon()
         
-        return QVariant()
+        return None
     
     def flags(self, index):
         """
@@ -108,15 +108,15 @@ class BrowserModel(QAbstractItemModel):
         @param section number of section to get data for (integer)
         @param orientation header orientation (Qt.Orientation)
         @param role role of data (Qt.ItemDataRole)
-        @return requested header data (QVariant)
+        @return requested header data
         """
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             if section >= self.rootItem.columnCount():
-                return QVariant("")
+                return ""
             else:
                 return self.rootItem.data(section)
         
-        return QVariant()
+        return None
     
     def index(self, row, column, parent = QModelIndex()):
         """
@@ -236,7 +236,7 @@ class BrowserModel(QAbstractItemModel):
         self._addItem(BrowserSysPathItem(self.rootItem), self.rootItem)
         
         self.toplevelDirs = []
-        tdp = Preferences.Prefs.settings.value('BrowserModel/ToplevelDirs').toStringList()
+        tdp = Preferences.Prefs.settings.value('BrowserModel/ToplevelDirs')
         if tdp:
             self.toplevelDirs = tdp
         else:
@@ -300,7 +300,7 @@ class BrowserModel(QAbstractItemModel):
         Public slot to save the toplevel directories.
         """
         Preferences.Prefs.settings.setValue('BrowserModel/ToplevelDirs', 
-            QVariant(self.toplevelDirs))
+            self.toplevelDirs)
     
     def _addItem(self, itm, parentItem):
         """

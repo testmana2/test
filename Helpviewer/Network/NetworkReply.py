@@ -29,9 +29,9 @@ class NetworkReply(QNetworkReply):
         self.setRequest(request)
         self.setOpenMode(QIODevice.ReadOnly)
         
-        self.setHeader(QNetworkRequest.ContentTypeHeader, QVariant(mimeType))
+        self.setHeader(QNetworkRequest.ContentTypeHeader, mimeType)
         self.setHeader(QNetworkRequest.ContentLengthHeader, 
-                       QVariant(QByteArray.number(fileData.length())))
+                       QByteArray.number(fileData.length()))
         QTimer.singleShot(0, self, SIGNAL("metaDataChanged()"))
         QTimer.singleShot(0, self, SIGNAL("readyRead()"))
     

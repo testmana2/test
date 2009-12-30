@@ -196,7 +196,7 @@ class HelpWebSearchWidget(QWidget):
            self.__recentSearchesItem.index().row() == index.row():
             return False
         
-        self.__searchEdit.setText(index.data().toString())
+        self.__searchEdit.setText(index.data())
         return True
     
     def __textEdited(self, txt):
@@ -248,7 +248,7 @@ class HelpWebSearchWidget(QWidget):
         for engineName in engineNames:
             engine = osm.engine(engineName)
             action = OpenSearchEngineAction(engine, self.__enginesMenu)
-            action.setData(QVariant(engineName))
+            action.setData(engineName)
             self.connect(action, SIGNAL("triggered()"), self.__changeCurrentEngine)
             self.__enginesMenu.addAction(action)
             
@@ -283,7 +283,7 @@ class HelpWebSearchWidget(QWidget):
             
             action = self.__enginesMenu.addAction(self.trUtf8("Add '{0}'").format(title), 
                                                   self.__addEngineFromUrl)
-            action.setData(QVariant(url))
+            action.setData(url)
             action.setIcon(ct.icon())
         
         self.__enginesMenu.addSeparator()
@@ -299,7 +299,7 @@ class HelpWebSearchWidget(QWidget):
         """
         action = self.sender()
         if action is not None:
-            name = action.data().toString()
+            name = action.data()
             HelpWebSearchWidget.openSearchManager().setCurrentEngineName(name)
     
     def __addEngineFromUrl(self):
@@ -308,10 +308,9 @@ class HelpWebSearchWidget(QWidget):
         """
         action = self.sender()
         if action is not None:
-            variant = action.data()
-            if not variant.canConvert(QVariant.Url):
-                return
-            url = variant.toUrl()
+            url = action.data()
+            if not isinstance(url, QUrl):
+                return 
             
             HelpWebSearchWidget.openSearchManager().addEngine(url)
     
@@ -345,15 +344,15 @@ class HelpWebSearchWidget(QWidget):
         Public method to save the recently performed web searches.
         """
         Preferences.Prefs.settings.setValue('Help/WebSearches',
-            QVariant(self.__recentSearches))
+            self.__recentSearches)
     
     def __loadSearches(self):
         """
         Public method to load the recently performed web searches.
         """
         searches = Preferences.Prefs.settings.value('Help/WebSearches')
-        if searches.isValid():
-            self.__recentSearches = searches.toStringList()
+        if searches is not None:
+            self.__recentSearches = searches
     
     @classmethod
     def openSearchManager(cls):

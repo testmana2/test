@@ -94,14 +94,13 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         model = cookiesTable.model()
         row = index.row()
         
-        domain = model.data(model.index(row, 0)).toString()
-        name = model.data(model.index(row, 1)).toString()
-        path = model.data(model.index(row, 2)).toString()
-        secure = model.data(model.index(row, 3)).toBool()
-        expires = model.data(model.index(row, 4)).toDateTime()\
-            .toString("yyyy-MM-dd hh:mm")
+        domain = model.data(model.index(row, 0))
+        name = model.data(model.index(row, 1))
+        path = model.data(model.index(row, 2))
+        secure = model.data(model.index(row, 3))
+        expires = model.data(model.index(row, 4)).toString("yyyy-MM-dd hh:mm")
         value = unicode(
-            QByteArray.fromPercentEncoding(model.data(model.index(row, 5)).toByteArray()))
+            QByteArray.fromPercentEncoding(model.data(model.index(row, 5))))
         
         if self.__detailsDialog is None:
             self.__detailsDialog = CookieDetailsDialog(self)
@@ -119,7 +118,7 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         
         firstSelected = selection[0]
         domainSelection = firstSelected.sibling(firstSelected.row(), 0)
-        domain = self.__proxyModel.data(domainSelection, Qt.DisplayRole).toString()
+        domain = self.__proxyModel.data(domainSelection, Qt.DisplayRole)
         dlg = CookiesExceptionsDialog(self.__cookieJar, self)
         dlg.setDomainName(domain)
         dlg.exec_()

@@ -68,9 +68,9 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         Preferences.setDebugger("DebugClient3", 
             self.debugClientEdit.text())
         Preferences.setDebugger("Python3Redirect", 
-            int(self.pyRedirectCheckBox.isChecked()))
+            self.pyRedirectCheckBox.isChecked())
         Preferences.setDebugger("Python3NoEncoding", 
-            int(self.pyNoEncodingCheckBox.isChecked()))
+            self.pyNoEncodingCheckBox.isChecked())
         Preferences.setDebugger("Python3Extensions", 
             self.sourceExtensionsEdit.text())
         

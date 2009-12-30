@@ -113,8 +113,8 @@ class UMLItem(QGraphicsRectItem):
         Protected method called when an items state changes.
         
         @param change the item's change (QGraphicsItem.GraphicsItemChange)
-        @param value the value of the change (QVariant)
-        @return adjusted values (QVariant)
+        @param value the value of the change
+        @return adjusted values
         """
         if change == QGraphicsItem.ItemPositionChange:
             self.shouldAdjustAssociations = True

@@ -131,10 +131,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
         itm = QTreeWidgetItem(self.__lastFileItem, [' %5d ' % line, text])
         itm.setTextAlignment(0,  Qt.AlignRight)
-        itm.setData(0, self.lineRole, QVariant(line))
-        itm.setData(0, self.startRole, QVariant(start))
-        itm.setData(0, self.endRole, QVariant(end))
-        itm.setData(0, self.replaceRole, QVariant(replTxt))
+        itm.setData(0, self.lineRole, line)
+        itm.setData(0, self.startRole, start)
+        itm.setData(0, self.endRole, end)
+        itm.setData(0, self.replaceRole, replTxt)
         if self.__replaceMode:
             itm.setFlags(itm.flags() | Qt.ItemFlags(Qt.ItemIsUserCheckable))
             itm.setCheckState(0, Qt.Checked)
@@ -440,9 +440,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         if itm.parent():
             file = itm.parent().text(0)
-            line = itm.data(0, self.lineRole).toInt()[0]
-            start = itm.data(0, self.startRole).toInt()[0]
-            end = itm.data(0, self.endRole).toInt()[0]
+            line = itm.data(0, self.lineRole)
+            start = itm.data(0, self.startRole)
+            end = itm.data(0, self.endRole)
         else:
             file = itm.text(0)
             line = 1
@@ -540,8 +540,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 for cindex in range(itm.childCount()):
                     citm = itm.child(cindex)
                     if citm.checkState(0) == Qt.Checked:
-                        line = citm.data(0, self.lineRole).toInt()[0]
-                        rline = citm.data(0, self.replaceRole).toString()
+                        line = citm.data(0, self.lineRole)
+                        rline = citm.data(0, self.replaceRole)
                         lines[line - 1] = rline
                 
                 # write the file

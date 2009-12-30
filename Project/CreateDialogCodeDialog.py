@@ -227,8 +227,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                 (name, 
                                  metaMethod.signature().split("(")[0]
                                 )
-                        itm2.setData(QVariant(pyqtSignature), pyqtSignatureRole)
-                        itm2.setData(QVariant(pythonSignature), pythonSignatureRole)
+                        itm2.setData(pyqtSignature, pyqtSignatureRole)
+                        itm2.setData(pythonSignature, pythonSignatureRole)
                         
                         itm2.setFlags(Qt.ItemFlags(\
                             Qt.ItemIsUserCheckable | \
@@ -352,9 +352,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     slotsCode.append('%s\n' % indentStr)
                     # TODO: adjust to new signal/slot mechanism
                     slotsCode.append('%s@pyqtSlot(%s)\n' % \
-                        (indentStr, child.data(pyqtSignatureRole).toString()))
+                        (indentStr, child.data(pyqtSignatureRole)))
                     slotsCode.append('%sdef %s:\n' % \
-                        (indentStr, child.data(pythonSignatureRole).toString()))
+                        (indentStr, child.data(pythonSignatureRole)))
                     slotsCode.append('%s"""\n' % (indentStr * 2,))
                     slotsCode.append('%sSlot documentation goes here.\n' % \
                         (indentStr * 2,))

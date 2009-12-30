@@ -103,19 +103,19 @@ class OpenSearchEngineModel(QAbstractTableModel):
         
         @param index index to get data for (QModelIndex)
         @param role role of the data to retrieve (integer)
-        @return requested data (QVariant)
+        @return requested data
         """
         if index.row() >= self.__manager.enginesCount() or index.row() < 0:
-            return QVariant()
+            return None
         
         engine = self.__manager.engine(self.__manager.allEnginesNames()[index.row()])
         
         if engine is None:
-            return QVariant()
+            return None
         
         if index.column() == 0:
             if role == Qt.DisplayRole:
-                return QVariant(engine.name())
+                return engine.name()
                 
             elif role == Qt.DecorationRole:
                 image = engine.image()
@@ -124,7 +124,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
                     icon = HelpWindow.icon(QUrl(engine.imageUrl()))
                 else:
                     icon = QIcon(QPixmap.fromImage(image))
-                return QVariant(icon)
+                return icon
                 
             elif role == Qt.ToolTipRole:
                 description = self.trUtf8("<strong>Description:</strong> {0}")\
@@ -134,24 +134,23 @@ class OpenSearchEngineModel(QAbstractTableModel):
                     description.append(
                         self.trUtf8("<strong>Provides contextual suggestions</strong>"))
                 
-                return QVariant(description)
+                return description
         elif index.column() == 1:
             if role in [Qt.EditRole, Qt.DisplayRole]:
-                return QVariant(
-                    ",".join(self.__manager.keywordsForEngine(engine)))
+                return ",".join(self.__manager.keywordsForEngine(engine))
             elif role == Qt.ToolTipRole:
-                return QVariant(self.trUtf8("Comma-separated list of keywords that may"
+                return self.trUtf8("Comma-separated list of keywords that may"
                     " be entered in the location bar followed by search terms to search"
-                    " with this engine"))
+                    " with this engine")
         
-        return QVariant()
+        return None
     
     def setData(self, index, value, role = Qt.EditRole):
         """
         Public method to set the data of a model cell.
         
         @param index index of the model cell (QModelIndex)
-        @param value value to be set (QVariant)
+        @param value value to be set
         @param role role of the data (integer)
         @return flag indicating success (boolean)
         """
@@ -165,7 +164,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
             return False
         
         engineName = self.__manager.allEnginesNames()[index.row()]
-        keywords = re.split("[ ,]+", value.toString())
+        keywords = re.split("[ ,]+", value)
         self.__manager.setKeywordsForEngine(self.__manager.engine(engineName), keywords)
         
         return True
@@ -177,15 +176,15 @@ class OpenSearchEngineModel(QAbstractTableModel):
         @param section section number (integer)
         @param orientation header orientation (Qt.Orientation)
         @param role data role (integer)
-        @return header data (QVariant)
+        @return header data
         """
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             try:
-                return QVariant(self.__headers[section])
+                return self.__headers[section]
             except IndexError:
                 pass
         
-        return QVariant()
+        return None
     
     def __enginesChanged(self):
         """

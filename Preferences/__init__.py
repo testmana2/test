@@ -9,10 +9,9 @@ Package implementing the preferences interface.
 The preferences interface consists of a class, which defines the default
 values for all configuration items and stores the actual values. These
 values are read and written to the eric4 preferences file by module
-functions. On Windows the data is located in the registry, everywhere 
-else it is stored in a file in a subdirectory of the users home directory.
-The individual configuration data is accessed by accessor functions defined
-on the module level. The module is simply imported wherever it is needed
+functions. The data is stored in a file in a subdirectory of the users home 
+directory. The individual configuration data is accessed by accessor functions 
+defined on the module level. The module is simply imported wherever it is needed
 with the statement 'import Preferences'. Do not use 'from Preferences import *'
 to import it.
 """
@@ -47,18 +46,18 @@ class Prefs(object):
     
     # defaults for the debugger
     debuggerDefaults = {
-        "RemoteDbgEnabled" : 0,
+        "RemoteDbgEnabled" : False,
         "RemoteHost" : "",
         "RemoteExecution" : "",
-        "PassiveDbgEnabled" : 0,
+        "PassiveDbgEnabled" : False,
         "PassiveDbgPort" : 42424,
         "PassiveDbgType" : "Python", 
-        "AutomaticReset" : 0,
-        "Autosave" : 0,
-        "ThreeStateBreakPoints": 0,
-        "SuppressClientExit" : 0, 
-        "BreakAlways" : 0, 
-        "CustomPythonInterpreter" : 0,
+        "AutomaticReset" : False,
+        "Autosave" : False,
+        "ThreeStateBreakPoints": False,
+        "SuppressClientExit" : False, 
+        "BreakAlways" : False, 
+        "CustomPythonInterpreter" : False,
         "PythonInterpreter" : "",
         "Python3Interpreter" : "",
         "RubyInterpreter" : "/usr/bin/ruby",
@@ -68,21 +67,21 @@ class Prefs(object):
         "DebugClient3" : "",
         "PythonExtensions" : ".py .pyw .ptl", # space separated list of Python extensions
         "Python3Extensions" : ".py3 .pyw3",   # space separated list of Python3 extensions
-        "DebugEnvironmentReplace" : 0,
+        "DebugEnvironmentReplace" : False,
         "DebugEnvironment" : "",
-        "PythonRedirect" : 1,
-        "PythonNoEncoding" : 0,
-        "Python3Redirect" : 1,
-        "Python3NoEncoding" : 0,
-        "RubyRedirect" : 1,
-        "ConsoleDbgEnabled" : 0,
+        "PythonRedirect" : True,
+        "PythonNoEncoding" : False,
+        "Python3Redirect" : True,
+        "Python3NoEncoding" : False,
+        "RubyRedirect" : True,
+        "ConsoleDbgEnabled" : False,
         "ConsoleDbgCommand" : "",
-        "PathTranslation" : 0,
+        "PathTranslation" : False,
         "PathTranslationRemote" : "",
         "PathTranslationLocal" : "",
         "NetworkInterface" : "127.0.0.1",
     }
-    debuggerDefaults["AllowedHosts"] = ["127.0.0.1", "0:0:0:0:0:0:0:1%0"]
+    debuggerDefaults["AllowedHosts"] = ["127.0.0.1", "::1%0"]
     
     uiDefaults = {
         "Language" : "System",
@@ -96,27 +95,27 @@ class Prefs(object):
         "LayoutFileBrowserEmbedded" : 1,    # 0 = separate
                                             # 1 = embedded in debug browser
                                             # 2 = embedded in project browser
-        "BrowsersListFoldersFirst" : 1,
-        "BrowsersHideNonPublic" : 0,
-        "BrowsersListContentsByOccurrence" : 0, 
-        "LogViewerAutoRaise" : 1, 
-        "SingleApplicationMode" : 0,
-        "CaptionShowsFilename" : 1,
+        "BrowsersListFoldersFirst" : True,
+        "BrowsersHideNonPublic" : False,
+        "BrowsersListContentsByOccurrence" : False, 
+        "LogViewerAutoRaise" : True, 
+        "SingleApplicationMode" : False,
+        "CaptionShowsFilename" : True,
         "CaptionFilenameLength" : 100,
         "RecentNumber" : 9, 
-        "TopLeftByLeft" : 1, 
-        "BottomLeftByLeft" : 0, 
-        "TopRightByRight" : 1, 
-        "BottomRightByRight" : 0, 
+        "TopLeftByLeft" : True, 
+        "BottomLeftByLeft" : False, 
+        "TopRightByRight" : True, 
+        "BottomRightByRight" : False, 
         "TabViewManagerFilenameLength" : 40,
-        "TabViewManagerFilenameOnly" : 1, 
+        "TabViewManagerFilenameOnly" : True, 
         # the order in ViewProfiles is Project-Viewer, File-Browser,
         # Debug-Viewer, Python-Shell, Log-Viewer, Task-Viewer,
         # Templates-Viewer, Multiproject-Viewer, Terminal
         "ViewProfiles" : {
             "edit"  : [
                         # visibility (0)
-                        [ 1,  0,  0,  1,  1,  1,  1,  1, 1],
+                        [ True,  False,  False,  True,  True,  True,  True,  True, True],
                         # saved state main window with dock windows (1)
                         "",
                         # saved states floating windows (2)
@@ -126,14 +125,14 @@ class Prefs(object):
                         # saved state main window with toolbox windows (4)
                         "", 
                         # visibility of the toolboxes (5)
-                        [ 1,  1], 
+                        [ True,  True], 
                         # saved states of the splitters and sidebars of the 
                         # sidebars layout (6)
                         ["", "", "", ""], 
                       ],
             "debug" : [
                         # visibility (0)
-                        [ 0,  0,  1,  1,  1,  1,  0,  0, 1], 
+                        [ False,  False,  True,  True,  True,  True,  False,  False, True], 
                         # saved state main window with dock windows (1)
                         "",
                         # saved states floating windows (2)
@@ -143,22 +142,22 @@ class Prefs(object):
                         # saved state main window with toolbox windows (4)
                         "", 
                         # visibility of the toolboxes (5)
-                        [ 0,  1], 
+                        [ False,  True], 
                         # saved states of the splitters and sidebars of the 
                         # sidebars layout (6)
                         ["", "", "", ""], 
                       ],
         },
         "ToolbarManagerState" : QtCore.QByteArray(), 
-        "ShowSplash" : 1,
-        "SingleCloseButton" : 1, 
+        "ShowSplash" : True,
+        "SingleCloseButton" : True, 
         
         "PerformVersionCheck" : 4,      # 0 = off
                                         # 1 = at startup
                                         # 2 = daily
                                         # 3 = weekly
                                         # 4 = monthly
-        "UseProxy" : 0,
+        "UseProxy" : False,
         "ProxyHost" : "",
         "ProxyPort" : 80,
         "ProxyUser" : "",
@@ -181,8 +180,8 @@ class Prefs(object):
                                     # 4 = last global session
         
         "DownloadPath" : "", 
-        "RequestDownloadFilename" : 1, 
-        "CheckErrorLog" : 1, 
+        "RequestDownloadFilename" : True, 
+        "CheckErrorLog" : True, 
         
         "LogStdErrColour" : QtGui.QColor(QtCore.Qt.red),
     }
@@ -198,66 +197,66 @@ class Prefs(object):
         "TabWidth" : 4,
         "IndentWidth" : 4,
         "LinenoWidth" : 4,
-        "IndentationGuides" : 1,
-        "UnifiedMargins" : 0, 
-        "LinenoMargin" : 1,
-        "FoldingMargin" : 1,
+        "IndentationGuides" : True,
+        "UnifiedMargins" : False, 
+        "LinenoMargin" : True,
+        "FoldingMargin" : True,
         "FoldingStyle" : 1,
-        "TabForIndentation" : 0,
-        "TabIndents" : 1,
-        "ConvertTabsOnLoad" : 0,
-        "AutomaticEOLConversion" : 1,
-        "ShowWhitespace" : 0,
-        "ShowEOL" : 0,
-        "UseMonospacedFont" : 0,
-        "WrapLongLines" : 0,
+        "TabForIndentation" : False,
+        "TabIndents" : True,
+        "ConvertTabsOnLoad" : False,
+        "AutomaticEOLConversion" : True,
+        "ShowWhitespace" : False,
+        "ShowEOL" : False,
+        "UseMonospacedFont" : False,
+        "WrapLongLines" : False,
         "WarnFilesize" : 512,
-        "ClearBreaksOnClose" : 1,
-        "StripTrailingWhitespace" : 0, 
-        "CommentColumn0" : 1, 
+        "ClearBreaksOnClose" : True,
+        "StripTrailingWhitespace" : False, 
+        "CommentColumn0" : True, 
         
         "EdgeMode" : Qsci.QsciScintilla.EdgeNone,
         "EdgeColumn" : 80,
         
-        "AutoIndentation" : 1,
-        "BraceHighlighting" : 1,
-        "CreateBackupFile" : 0,
-        "CaretLineVisible" : 0,
+        "AutoIndentation" : True,
+        "BraceHighlighting" : True,
+        "CreateBackupFile" : False,
+        "CaretLineVisible" : False,
         "CaretWidth" : 1,
-        "ColourizeSelText" : 0,
-        "CustomSelectionColours" : 0,
-        "ExtendSelectionToEol" : 0,
+        "ColourizeSelText" : False,
+        "CustomSelectionColours" : False,
+        "ExtendSelectionToEol" : False,
         
-        "AutoPrepareAPIs" : 0,
+        "AutoPrepareAPIs" : False,
         
-        "AutoCompletionEnabled" : 0,
-        "AutoCompletionCaseSensitivity" : 1,
-        "AutoCompletionReplaceWord" : 0,
-        "AutoCompletionShowSingle" : 0,
+        "AutoCompletionEnabled" : False,
+        "AutoCompletionCaseSensitivity" : True,
+        "AutoCompletionReplaceWord" : False,
+        "AutoCompletionShowSingle" : False,
         "AutoCompletionSource" : Qsci.QsciScintilla.AcsDocument,
         "AutoCompletionThreshold" : 2,
-        "AutoCompletionFillups" : 0,
+        "AutoCompletionFillups" : False,
         
-        "CallTipsEnabled" : 0,
+        "CallTipsEnabled" : False,
         "CallTipsVisible" : 0,
         "CallTipsStyle"   : Qsci.QsciScintilla.CallTipsNoContext,
-        "CallTipsScintillaOnFail" : 0,  # show QScintilla calltips, if plugin fails
+        "CallTipsScintillaOnFail" : False,  # show QScintilla calltips, if plugin fails
         
-        "AutoCheckSyntax" : 1,
-        "AutoReopen" : 0,
+        "AutoCheckSyntax" : True,
+        "AutoReopen" : False,
         
-        "MiniContextMenu" : 0,
+        "MiniContextMenu" : False,
         
-        "SearchMarkersEnabled" : 1, 
-        "QuickSearchMarkersEnabled" : 1, 
-        "MarkOccurrencesEnabled" : 1, 
+        "SearchMarkersEnabled" : True, 
+        "QuickSearchMarkersEnabled" : True, 
+        "MarkOccurrencesEnabled" : True, 
         "MarkOccurrencesTimeout" : 500,     # 500 milliseconds
-        "AdvancedEncodingDetection" : 1, 
+        "AdvancedEncodingDetection" : True, 
         
-        "SpellCheckingEnabled" : 1, 
-        "AutoSpellCheckingEnabled" : 1, 
+        "SpellCheckingEnabled" : True, 
+        "AutoSpellCheckingEnabled" : True, 
         "AutoSpellCheckChunkSize" : 30, 
-        "SpellCheckStringsOnly" : 1, 
+        "SpellCheckStringsOnly" : True, 
         "SpellCheckingMinWordSize" : 3, 
         "SpellCheckingDefaultLanguage" : "en", 
         "SpellCheckingPersonalWordList" : "", 
@@ -268,81 +267,81 @@ class Prefs(object):
         "DefaultSaveFilter" : "",
         
         # All (most) lexers
-        "AllFoldCompact" : 1,
+        "AllFoldCompact" : True,
         
         # Bash specifics
-        "BashFoldComment" : 1,
+        "BashFoldComment" : True,
         
         # CMake specifics
-        "CMakeFoldAtElse" : 0,
+        "CMakeFoldAtElse" : False,
         
         # C++ specifics
-        "CppCaseInsensitiveKeywords" : 0, 
-        "CppFoldComment" : 1,
-        "CppFoldPreprocessor" : 0,
-        "CppFoldAtElse" : 0,
-        "CppIndentOpeningBrace" : 0,
-        "CppIndentClosingBrace" : 0,
-        "CppDollarsAllowed" : 1, 
+        "CppCaseInsensitiveKeywords" : False, 
+        "CppFoldComment" : True,
+        "CppFoldPreprocessor" : False,
+        "CppFoldAtElse" : False,
+        "CppIndentOpeningBrace" : False,
+        "CppIndentClosingBrace" : False,
+        "CppDollarsAllowed" : True, 
         
         # CSS specifics
-        "CssFoldComment" : 1,
+        "CssFoldComment" : True,
         
         # D specifics
-        "DFoldComment" : 1,
-        "DFoldAtElse" : 0,
-        "DIndentOpeningBrace" : 0,
-        "DIndentClosingBrace" : 0,
+        "DFoldComment" : True,
+        "DFoldAtElse" : False,
+        "DIndentOpeningBrace" : False,
+        "DIndentClosingBrace" : False,
         
         # HTML specifics
-        "HtmlFoldPreprocessor" : 0,
-        "HtmlFoldScriptComments" : 0, 
-        "HtmlFoldScriptHeredocs" : 0, 
-        "HtmlCaseSensitiveTags" : 0,
+        "HtmlFoldPreprocessor" : False,
+        "HtmlFoldScriptComments" : False, 
+        "HtmlFoldScriptHeredocs" : False, 
+        "HtmlCaseSensitiveTags" : False,
         
         # Pascal specifics
-        "PascalFoldComment" : 1, 
-        "PascalFoldPreprocessor" : 0, 
-        "PascalSmartHighlighting" : 1, 
+        "PascalFoldComment" : True, 
+        "PascalFoldPreprocessor" : False, 
+        "PascalSmartHighlighting" : True, 
         
         # Perl specifics
-        "PerlFoldComment" : 1,
-        "PerlFoldPackages" : 1, 
-        "PerlFoldPODBlocks" : 1, 
+        "PerlFoldComment" : True,
+        "PerlFoldPackages" : True, 
+        "PerlFoldPODBlocks" : True, 
         
         # PostScript specifics
-        "PostScriptTokenize" : 0, 
+        "PostScriptTokenize" : False, 
         "PostScriptLevel" : 3, 
-        "PostScriptFoldAtElse" : 0, 
+        "PostScriptFoldAtElse" : False, 
         
         # Povray specifics
-        "PovFoldComment" : 1,
-        "PovFoldDirectives" : 0,
+        "PovFoldComment" : True,
+        "PovFoldDirectives" : False,
         
         # Python specifics
-        "PythonBadIndentation" : 1,
-        "PythonFoldComment" : 1,
-        "PythonFoldString" : 1,
-        "PythonAutoIndent" : 1,
-        "PythonAllowV2Unicode" : 1, 
-        "PythonAllowV3Binary" : 1, 
-        "PythonAllowV3Bytes" : 1, 
+        "PythonBadIndentation" : True,
+        "PythonFoldComment" : True,
+        "PythonFoldString" : True,
+        "PythonAutoIndent" : True,
+        "PythonAllowV2Unicode" : True, 
+        "PythonAllowV3Binary" : True, 
+        "PythonAllowV3Bytes" : True, 
         
         # SQL specifics
-        "SqlFoldComment" : 1,
-        "SqlBackslashEscapes" : 0,
+        "SqlFoldComment" : True,
+        "SqlBackslashEscapes" : False,
         
         # VHDL specifics
-        "VHDLFoldComment" : 1,
-        "VHDLFoldAtElse" : 1,
-        "VHDLFoldAtBegin" : 1, 
-        "VHDLFoldAtParenthesis" : 1, 
+        "VHDLFoldComment" : True,
+        "VHDLFoldAtElse" : True,
+        "VHDLFoldAtBegin" : True, 
+        "VHDLFoldAtParenthesis" : True, 
         
         # XML specifics
-        "XMLStyleScripts" : 1, 
+        "XMLStyleScripts" : True, 
         
         # YAML specifics
-        "YAMLFoldComment" : 0, 
+        "YAMLFoldComment" : False, 
     }
     
     if isWindowsPlatform():
@@ -377,39 +376,39 @@ class Prefs(object):
     }
     
     editorTypingDefaults = {
-        "Python/EnabledTypingAids"  : 1, 
-        "Python/InsertClosingBrace" : 1,
-        "Python/IndentBrace"        : 1,
-        "Python/SkipBrace"          : 1,
-        "Python/InsertQuote"        : 1,
-        "Python/DedentElse"         : 1,
-        "Python/DedentExcept"       : 1,
-        "Python/Py24StyleTry"       : 1, 
-        "Python/InsertImport"       : 1,
-        "Python/InsertSelf"         : 1,
-        "Python/InsertBlank"        : 1,
-        "Python/ColonDetection"     : 1,
-        "Python/DedentDef"          : 0, 
+        "Python/EnabledTypingAids"  : True, 
+        "Python/InsertClosingBrace" : True,
+        "Python/IndentBrace"        : True,
+        "Python/SkipBrace"          : True,
+        "Python/InsertQuote"        : True,
+        "Python/DedentElse"         : True,
+        "Python/DedentExcept"       : True,
+        "Python/Py24StyleTry"       : True, 
+        "Python/InsertImport"       : True,
+        "Python/InsertSelf"         : True,
+        "Python/InsertBlank"        : True,
+        "Python/ColonDetection"     : True,
+        "Python/DedentDef"          : False, 
         
-        "Ruby/EnabledTypingAids"    : 1, 
-        "Ruby/InsertClosingBrace"   : 1,
-        "Ruby/IndentBrace"          : 1,
-        "Ruby/SkipBrace"            : 1,
-        "Ruby/InsertQuote"          : 1,
-        "Ruby/InsertBlank"          : 1,
-        "Ruby/InsertHereDoc"        : 1, 
-        "Ruby/InsertInlineDoc"      : 1, 
+        "Ruby/EnabledTypingAids"    : True, 
+        "Ruby/InsertClosingBrace"   : True,
+        "Ruby/IndentBrace"          : True,
+        "Ruby/SkipBrace"            : True,
+        "Ruby/InsertQuote"          : True,
+        "Ruby/InsertBlank"          : True,
+        "Ruby/InsertHereDoc"        : True, 
+        "Ruby/InsertInlineDoc"      : True, 
     }
     
     editorExporterDefaults = {
-        "HTML/WYSIWYG"          : 1, 
-        "HTML/Folding"          : 0, 
-        "HTML/OnlyStylesUsed"   : 0, 
-        "HTML/FullPathAsTitle"  : 0, 
-        "HTML/UseTabs"          : 0, 
+        "HTML/WYSIWYG"          : True, 
+        "HTML/Folding"          : False, 
+        "HTML/OnlyStylesUsed"   : False, 
+        "HTML/FullPathAsTitle"  : False, 
+        "HTML/UseTabs"          : False, 
         
-        "RTF/WYSIWYG"           : 1, 
-        "RTF/UseTabs"           : 0, 
+        "RTF/WYSIWYG"           : True, 
+        "RTF/UseTabs"           : False, 
         "RTF/Font"              : "Courier New,10,-1,5,50,0,0,0,0,0", 
         
         "PDF/Magnification"     : 0, 
@@ -420,15 +419,15 @@ class Prefs(object):
         "PDF/MarginTop"         : 36, 
         "PDF/MarginBottom"      : 36, 
         
-        "TeX/OnlyStylesUsed"    : 0, 
-        "TeX/FullPathAsTitle"   : 0, 
+        "TeX/OnlyStylesUsed"    : False, 
+        "TeX/FullPathAsTitle"   : False, 
     }
     
     # defaults for the printer settings
     printerDefaults = {
         "PrinterName" : "",
-        "ColorMode" : 1,
-        "FirstPageFirst" : 1,
+        "ColorMode" : True,
+        "FirstPageFirst" : True,
         "Magnification" : -3,
         "Orientation" : 0,
         "PageSize": 0,
@@ -441,27 +440,27 @@ class Prefs(object):
     
     # defaults for the project settings
     projectDefaults = {
-        "SearchNewFiles" : 0,
-        "SearchNewFilesRecursively" : 0,
-        "AutoIncludeNewFiles" : 0,
-        "AutoLoadSession" : 0,
-        "AutoSaveSession" : 0,
-        "SessionAllBreakpoints" : 0,
-        "CompressedProjectFiles" : 0,
-        "XMLTimestamp" : 1,
-        "AutoCompileForms" : 0,
-        "AutoCompileResources" : 0,
-        "AutoLoadDbgProperties" : 0,
-        "AutoSaveDbgProperties" : 0,
-        "HideGeneratedForms" : 0,
-        "FollowEditor" : 1, 
+        "SearchNewFiles" : False,
+        "SearchNewFilesRecursively" : False,
+        "AutoIncludeNewFiles" : False,
+        "AutoLoadSession" : False,
+        "AutoSaveSession" : False,
+        "SessionAllBreakpoints" : False,
+        "CompressedProjectFiles" : False,
+        "XMLTimestamp" : True,
+        "AutoCompileForms" : False,
+        "AutoCompileResources" : False,
+        "AutoLoadDbgProperties" : False,
+        "AutoSaveDbgProperties" : False,
+        "HideGeneratedForms" : False,
+        "FollowEditor" : True, 
         "RecentNumber" : 9, 
     }
     
     # defaults for the multi project settings
     multiProjectDefaults = {
-        "OpenMasterAutomatically" : 1, 
-        "XMLTimestamp" : 1,
+        "OpenMasterAutomatically" : True, 
+        "XMLTimestamp" : True,
         "RecentNumber" : 9, 
     }
     
@@ -530,24 +529,24 @@ class Prefs(object):
         "Qt4DocDir" : "",
         "PyQt4DocDir" : "",
         "PySideDocDir" : "", 
-        "SingleHelpWindow" : 1,
-        "SaveGeometry" : 1,
+        "SingleHelpWindow" : True,
+        "SaveGeometry" : True,
         "HelpViewerState" : QtCore.QByteArray(), 
-        "WebSearchSuggestions" : 1, 
+        "WebSearchSuggestions" : True, 
         "WebSearchEngine" : "Google", 
         "WebSearchKeywords" : [],   # array of two tuples (keyword, search engine name)
-        "DiskCacheEnabled" : 1, 
+        "DiskCacheEnabled" : True, 
         "DiskCacheSize" : 50,       # 50 MB
         "AcceptCookies" : 2,        # CookieJar.AcceptOnlyFromSitesNavigatedTo
         "KeepCookiesUntil" : 0,     # CookieJar.KeepUntilExpire
-        "FilterTrackingCookies" : 1, 
-        "PrintBackgrounds" : 0, 
+        "FilterTrackingCookies" : True, 
+        "PrintBackgrounds" : False, 
         "StartupBehavior" : 0,      # show home page
         "HomePage": "pyrc:home",
         "HistoryLimit" : 30, 
         "DefaultScheme" : "file://", 
-        "SavePasswords" : 0, 
-        "AdBlockEnabled" : 0, 
+        "SavePasswords" : False, 
+        "AdBlockEnabled" : False, 
         "AdBlockSubscriptions" : [], 
     }
     
@@ -584,14 +583,14 @@ class Prefs(object):
     # defaults for the shell settings
     shellDefaults = {
         "LinenoWidth" : 4,
-        "LinenoMargin" : 1,
-        "AutoCompletionEnabled" : 1,
-        "CallTipsEnabled" : 1,
-        "WrapEnabled" : 1,
+        "LinenoMargin" : True,
+        "AutoCompletionEnabled" : True,
+        "CallTipsEnabled" : True,
+        "WrapEnabled" : True,
         "MaxHistoryEntries" : 100,
-        "SyntaxHighlightingEnabled" : 1,
-        "ShowStdOutErr" : 1, 
-        "UseMonospacedFont" : 0,
+        "SyntaxHighlightingEnabled" : True,
+        "ShowStdOutErr" : True, 
+        "UseMonospacedFont" : False,
         "MonospacedFont" : "Courier,10,-1,5,50,0,0,0,0,0", 
         "MarginsFont" : "Sans Serif,10,-1,5,50,0,0,0,0,0",
     }
@@ -599,12 +598,12 @@ class Prefs(object):
     # defaults for the terminal settings
     terminalDefaults = {
         "LinenoWidth" : 4,
-        "LinenoMargin" : 1,
+        "LinenoMargin" : True,
         "MaxHistoryEntries" : 100,
-        "SyntaxHighlightingEnabled" : 1,
+        "SyntaxHighlightingEnabled" : True,
         "Shell" : "", 
-        "ShellInteractive" : 1, 
-        "UseMonospacedFont" : 0,
+        "ShellInteractive" : True, 
+        "UseMonospacedFont" : False,
         "MonospacedFont" : "Courier,10,-1,5,50,0,0,0,0,0", 
         "MarginsFont" : "Sans Serif,10,-1,5,50,0,0,0,0,0",
     }
@@ -629,22 +628,22 @@ class Prefs(object):
         "Email" : "",
         "MailServer" : "",
         "Signature" : "",
-        "MailServerAuthentication" : 0,
+        "MailServerAuthentication" : False,
         "MailServerUser" : "",
         "MailServerPassword" : "",
-        "MailServerUseTLS" : 0, 
+        "MailServerUseTLS" : False, 
         "MailServerPort" : 25, 
-        "UseSystemEmailClient" : 0, 
+        "UseSystemEmailClient" : False, 
     }
     
     # defaults for vcs related stuff
     vcsDefaults = {
-        "AutoClose" : 0,
-        "AutoSaveFiles" : 1,
-        "AutoSaveProject" : 1,
-        "AutoUpdate" : 0, 
+        "AutoClose" : False,
+        "AutoSaveFiles" : True,
+        "AutoSaveProject" : True,
+        "AutoUpdate" : False, 
         "StatusMonitorInterval" : 30,
-        "MonitorLocalStatus" : 0, 
+        "MonitorLocalStatus" : False, 
     }
     
     # defaults for tasks related stuff
@@ -660,15 +659,15 @@ class Prefs(object):
     
     # defaults for templates related stuff
     templatesDefaults = {
-        "AutoOpenGroups" : 1,
-        "SingleDialog"   : 0,
-        "ShowTooltip"    : 0,
+        "AutoOpenGroups" : True,
+        "SingleDialog"   : False,
+        "ShowTooltip"    : False,
         "SeparatorChar"  : "$",
     }
     
     # defaults for plugin manager related stuff
     pluginManagerDefaults = {
-        "ActivateExternal" : 1,
+        "ActivateExternal" : True,
         "DownloadPath" : ""
     }
     
@@ -687,7 +686,7 @@ class Prefs(object):
         "HelpViewerGeometry" : QtCore.QByteArray(),
         "IconEditorGeometry" : QtCore.QByteArray(),
         "MainGeometry"       : QtCore.QByteArray(),
-        "MainMaximized"      : 0, 
+        "MainMaximized"      : False, 
     }
 
     # if true, revert layouts to factory defaults
@@ -701,25 +700,23 @@ def readToolGroups(prefClass = Prefs):
     @return list of tuples defing the tool groups
     """
     toolGroups = []
-    groups = prefClass.settings.value("Toolgroups/Groups", 
-        QtCore.QVariant(0)).toInt()[0]
+    groups = int(prefClass.settings.value("Toolgroups/Groups", 0))
     for groupIndex in range(groups):
         groupName = \
-            prefClass.settings.value("Toolgroups/%02d/Name" % groupIndex).toString()
+            prefClass.settings.value("Toolgroups/%02d/Name" % groupIndex)
         group = [groupName, []]
-        items = prefClass.settings.value("Toolgroups/%02d/Items" % groupIndex, 
-            QtCore.QVariant(0)).toInt()[0]
+        items = int(prefClass.settings.value("Toolgroups/%02d/Items" % groupIndex, 0))
         for ind in range(items):
             menutext = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Menutext" % (groupIndex, ind)).toString()
+                "Toolgroups/%02d/%02d/Menutext" % (groupIndex, ind))
             icon = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Icon" % (groupIndex, ind)).toString()
+                "Toolgroups/%02d/%02d/Icon" % (groupIndex, ind))
             executable = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Executable" % (groupIndex, ind)).toString()
+                "Toolgroups/%02d/%02d/Executable" % (groupIndex, ind))
             arguments = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Arguments" % (groupIndex, ind)).toString()
+                "Toolgroups/%02d/%02d/Arguments" % (groupIndex, ind))
             redirect = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Redirect" % (groupIndex, ind)).toString()
+                "Toolgroups/%02d/%02d/Redirect" % (groupIndex, ind))
             
             if menutext:
                 if menutext == '--':
@@ -741,8 +738,7 @@ def readToolGroups(prefClass = Prefs):
                     }
                     group[1].append(tool)
         toolGroups.append(group)
-    currentGroup = prefClass.settings.value("Toolgroups/Current Group", 
-        QtCore.QVariant(-1)).toInt()[0]
+    currentGroup = int(prefClass.settings.value("Toolgroups/Current Group", -1))
     return toolGroups, currentGroup
     
 def saveToolGroups(toolGroups, currentGroup, prefClass = Prefs):
@@ -757,34 +753,26 @@ def saveToolGroups(toolGroups, currentGroup, prefClass = Prefs):
     prefClass.settings.remove("Toolgroups")
     
     # second step, write the tool group entries
-    prefClass.settings.setValue("Toolgroups/Groups", QtCore.QVariant(len(toolGroups)))
+    prefClass.settings.setValue("Toolgroups/Groups", len(toolGroups))
     groupIndex = 0
     for group in toolGroups:
-        prefClass.settings.setValue("Toolgroups/%02d/Name" % groupIndex,
-            QtCore.QVariant(group[0]))
-        prefClass.settings.setValue("Toolgroups/%02d/Items" % groupIndex,
-            QtCore.QVariant(len(group[1])))
+        prefClass.settings.setValue("Toolgroups/%02d/Name" % groupIndex, group[0])
+        prefClass.settings.setValue("Toolgroups/%02d/Items" % groupIndex, len(group[1]))
         ind = 0
         for tool in group[1]:
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Menutext" % (groupIndex, ind), 
-                QtCore.QVariant(tool['menutext']))
+                "Toolgroups/%02d/%02d/Menutext" % (groupIndex, ind), tool['menutext'])
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Icon" % (groupIndex, ind), 
-                QtCore.QVariant(tool['icon']))
+                "Toolgroups/%02d/%02d/Icon" % (groupIndex, ind), tool['icon'])
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Executable" % (groupIndex, ind), 
-                QtCore.QVariant(tool['executable']))
+                "Toolgroups/%02d/%02d/Executable" % (groupIndex, ind), tool['executable'])
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Arguments" % (groupIndex, ind), 
-                QtCore.QVariant(tool['arguments']))
+                "Toolgroups/%02d/%02d/Arguments" % (groupIndex, ind), tool['arguments'])
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Redirect" % (groupIndex, ind), 
-                QtCore.QVariant(tool['redirect']))
+                "Toolgroups/%02d/%02d/Redirect" % (groupIndex, ind), tool['redirect'])
             ind += 1
         groupIndex += 1
-    prefClass.settings.setValue(\
-        "Toolgroups/Current Group", QtCore.QVariant(currentGroup))
+    prefClass.settings.setValue("Toolgroups/Current Group", currentGroup)
     
 def initPreferences():
     """
@@ -808,7 +796,7 @@ def syncPreferences(prefClass = Prefs):
     
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("General/Configured", QtCore.QVariant(1))
+    prefClass.settings.setValue("General/Configured", True)
     initPreferences()
     
 def exportPreferences(prefClass = Prefs):
@@ -853,7 +841,7 @@ def isConfigured(prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return flag indicating the configured status (boolean)
     """
-    return prefClass.settings.value("General/Configured", QtCore.QVariant(0)).toInt()[0]
+    return toBool(prefClass.settings.value("General/Configured", False))
     
 def initRecentSettings():
     """
@@ -874,9 +862,9 @@ def getVarFilters(prefClass = Prefs):
     @return a tuple defing the variables filter
     """
     localsFilter = eval(prefClass.settings.value("Variables/LocalsFilter", 
-        QtCore.QVariant(prefClass.varDefaults["LocalsFilter"])).toString())
+        prefClass.varDefaults["LocalsFilter"]))
     globalsFilter = eval(prefClass.settings.value("Variables/GlobalsFilter", 
-        QtCore.QVariant(prefClass.varDefaults["GlobalsFilter"])).toString())
+        prefClass.varDefaults["GlobalsFilter"]))
     return (localsFilter, globalsFilter)
     
 def setVarFilters(filters, prefClass = Prefs):
@@ -885,10 +873,8 @@ def setVarFilters(filters, prefClass = Prefs):
     
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Variables/LocalsFilter",
-        QtCore.QVariant(filters[0]))
-    prefClass.settings.setValue("Variables/GlobalsFilter",
-        QtCore.QVariant(filters[1]))
+    prefClass.settings.setValue("Variables/LocalsFilter", unicode(filters[0]))
+    prefClass.settings.setValue("Variables/GlobalsFilter", unicode(filters[1]))
     
 def getDebugger(key, prefClass = Prefs):
     """
@@ -899,7 +885,7 @@ def getDebugger(key, prefClass = Prefs):
     @return the requested debugger setting
     """
     if key in ["RemoteDbgEnabled", "PassiveDbgEnabled",
-                "PassiveDbgPort", "CustomPythonInterpreter",
+                "CustomPythonInterpreter",
                 "AutomaticReset", "DebugEnvironmentReplace",
                 "PythonRedirect", "PythonNoEncoding", 
                 "Python3Redirect", "Python3NoEncoding", 
@@ -908,23 +894,17 @@ def getDebugger(key, prefClass = Prefs):
                 "Autosave", "ThreeStateBreakPoints", 
                 "SuppressClientExit", "BreakAlways", 
               ]:
-        return prefClass.settings.value("Debugger/" + key,
-            QtCore.QVariant(prefClass.debuggerDefaults[key])).toInt()[0]
-    
-    if key in ["RemoteHost", "RemoteExecution", "PythonInterpreter",
-                "Python3Interpreter", "RubyInterpreter", 
-                "DebugClient", "DebugClientType",
-                "DebugClient3", "DebugClientType3",
-                "DebugEnvironment", "ConsoleDbgCommand",
-                "PathTranslationRemote", "PathTranslationLocal",
-                "NetworkInterface", "PassiveDbgType", 
-                "PythonExtensions", "Python3Extensions"]:
-        return prefClass.settings.value("Debugger/" + key,
-            QtCore.QVariant(prefClass.debuggerDefaults[key])).toString()
-    
-    if key in ["AllowedHosts"]:
-        return prefClass.settings.value("Debugger/" + key,
-            QtCore.QVariant(prefClass.debuggerDefaults[key])).toStringList()
+        return toBool(prefClass.settings.value("Debugger/" + key,
+            prefClass.debuggerDefaults[key]))
+    elif key in ["PassiveDbgPort"]:
+        return int(
+            prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key]))
+    elif key in ["AllowedHosts"]:
+        return toList(
+            prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key]))
+    else:
+        return \
+            prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key])
     
 def setDebugger(key, value, prefClass = Prefs):
     """
@@ -934,7 +914,7 @@ def setDebugger(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Debugger/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("Debugger/" + key, value)
 
 def getPython(key, prefClass = Prefs):
     """
@@ -972,8 +952,7 @@ def getUILanguage(prefClass = Prefs):
     @return the language for the UI
     """
     lang = \
-        prefClass.settings.value("UI/Language",
-            QtCore.QVariant(prefClass.uiDefaults["Language"])).toString()
+        prefClass.settings.value("UI/Language", prefClass.uiDefaults["Language"])
     if lang == "None" or lang == "" or lang is None:
         return None
     else:
@@ -987,9 +966,9 @@ def setUILanguage(lang, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if lang is None:
-        prefClass.settings.setValue("UI/Language", QtCore.QVariant("None"))
+        prefClass.settings.setValue("UI/Language", "None")
     else:
-        prefClass.settings.setValue("UI/Language", QtCore.QVariant(lang))
+        prefClass.settings.setValue("UI/Language", lang)
 
 def getUILayout(prefClass = Prefs):
     """
@@ -1001,13 +980,11 @@ def getUILayout(prefClass = Prefs):
     """
     layout = (\
         prefClass.settings.value("UI/LayoutType", 
-            QtCore.QVariant(prefClass.uiDefaults["LayoutType"])).toString(), 
-        prefClass.settings.value("UI/LayoutShellEmbedded", 
-            QtCore.QVariant(prefClass.uiDefaults["LayoutShellEmbedded"]))\
-            .toInt()[0], 
-        prefClass.settings.value("UI/LayoutFileBrowserEmbedded", 
-            QtCore.QVariant(prefClass.uiDefaults["LayoutFileBrowserEmbedded"]))\
-            .toInt()[0], 
+            prefClass.uiDefaults["LayoutType"]), 
+        toBool(prefClass.settings.value("UI/LayoutShellEmbedded", 
+            prefClass.uiDefaults["LayoutShellEmbedded"])), 
+        toBool(prefClass.settings.value("UI/LayoutFileBrowserEmbedded", 
+            prefClass.uiDefaults["LayoutFileBrowserEmbedded"])), 
     )
     return layout
     
@@ -1018,12 +995,9 @@ def setUILayout(layout, prefClass = Prefs):
     @param layout the layout type
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("UI/LayoutType", 
-        QtCore.QVariant(layout[0]))
-    prefClass.settings.setValue("UI/LayoutShellEmbedded", 
-        QtCore.QVariant(layout[1]))
-    prefClass.settings.setValue("UI/LayoutFileBrowserEmbedded", 
-        QtCore.QVariant(layout[2]))
+    prefClass.settings.setValue("UI/LayoutType", layout[0])
+    prefClass.settings.setValue("UI/LayoutShellEmbedded", layout[1])
+    prefClass.settings.setValue("UI/LayoutFileBrowserEmbedded", layout[2])
 
 def getViewManager(prefClass = Prefs):
     """
@@ -1033,7 +1007,7 @@ def getViewManager(prefClass = Prefs):
     @return the viewmanager type
     """
     return prefClass.settings.value("UI/ViewManager",
-        QtCore.QVariant(prefClass.uiDefaults["ViewManager"])).toString()
+        prefClass.uiDefaults["ViewManager"])
     
 def setViewManager(vm, prefClass = Prefs):
     """
@@ -1042,7 +1016,7 @@ def setViewManager(vm, prefClass = Prefs):
     @param vm the viewmanager type
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("UI/ViewManager", QtCore.QVariant(vm))
+    prefClass.settings.setValue("UI/ViewManager", vm)
 
 def getUI(key, prefClass = Prefs):
     """
@@ -1054,41 +1028,34 @@ def getUI(key, prefClass = Prefs):
     """
     if key in ["BrowsersListFoldersFirst", "BrowsersHideNonPublic",
                 "BrowsersListContentsByOccurrence", "LogViewerAutoRaise", 
-                "SingleApplicationMode", "TabViewManagerFilenameLength",
-                "TabViewManagerFilenameOnly", 
-                "CaptionShowsFilename", "CaptionFilenameLength",
-                "RecentNumber", "ShowSplash", 
-                "PerformVersionCheck", "SingleCloseButton", 
-                "UseProxy", "ProxyPort", "ProxyType", 
+                "SingleApplicationMode", "TabViewManagerFilenameOnly", 
+                "CaptionShowsFilename", "RecentNumber", "ShowSplash", 
+                "SingleCloseButton", "UseProxy", 
                 "TopLeftByLeft", "BottomLeftByLeft", 
                 "TopRightByRight", "BottomRightByRight", 
-                "OpenOnStartup", "RequestDownloadFilename", 
+                "RequestDownloadFilename", 
                 "LayoutShellEmbedded", "LayoutFileBrowserEmbedded", 
                 "CheckErrorLog"]:
-        return prefClass.settings.value("UI/" + key,
-            QtCore.QVariant(prefClass.uiDefaults[key])).toInt()[0]
-    if key in ["Style", "StyleSheet", 
-                "ProxyHost", "ProxyUser", 
-                "PluginRepositoryUrl5", "DownloadPath"]:
-        return prefClass.settings.value("UI/" + key,
-            QtCore.QVariant(prefClass.uiDefaults[key])).toString()
-    if key == "ProxyPassword":
+        return toBool(prefClass.settings.value("UI/" + key,
+            prefClass.uiDefaults[key]))
+    elif key in ["TabViewManagerFilenameLength", "CaptionFilenameLength",
+                 "ProxyPort", "ProxyType", "OpenOnStartup", 
+                 "PerformVersionCheck", ]:
+        return int(prefClass.settings.value("UI/" + key,
+            prefClass.uiDefaults[key]))
+    elif key == "ProxyPassword":
         from Utilities import pwDecode
-        return pwDecode(prefClass.settings.value("UI/" + key,
-            QtCore.QVariant(prefClass.uiDefaults[key])).toString())
-    if key in ["VersionsUrls5"]:
-        return prefClass.settings.value("UI/" + key, 
-            QtCore.QVariant(prefClass.uiDefaults[key])).toStringList()
-    if key in ["LogStdErrColour"]:
+        return pwDecode(prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
+    elif key in ["LogStdErrColour"]:
         col = prefClass.settings.value("UI/" + key)
-        if col.isValid():
-            return QtGui.QColor(col.toString())
+        if col is not None:
+            return QtGui.QColor(col)
         else:
             return prefClass.uiDefaults[key]
-    if key == "ViewProfiles":
-        v = prefClass.settings.value("UI/ViewProfiles")
-        if v.isValid():
-            viewProfiles = eval(v.toString())
+    elif key == "ViewProfiles":
+        profiles = prefClass.settings.value("UI/ViewProfiles")
+        if profiles is not None:
+            viewProfiles = eval(profiles)
             for name in ["edit", "debug"]:
                 # adjust entries for individual windows
                 vpLength = len(viewProfiles[name][0])
@@ -1109,12 +1076,16 @@ def getUI(key, prefClass = Prefs):
         else:
             viewProfiles = prefClass.uiDefaults["ViewProfiles"]
         return viewProfiles
-    if key == "ToolbarManagerState":
-        v = prefClass.settings.value("UI/ToolbarManagerState")
-        if v.isValid():
-            return v.toByteArray()
+    elif key == "ToolbarManagerState":
+        toolbarManagerState = prefClass.settings.value("UI/ToolbarManagerState")
+        if toolbarManagerState is not None:
+            return toolbarManagerState
         else:
             return prefClass.uiDefaults["ToolbarManagerState"]
+    elif key in ["VersionsUrls5"]:
+        return toList(prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
+    else:
+        return prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key])
     
 def setUI(key, value, prefClass = Prefs):
     """
@@ -1125,15 +1096,14 @@ def setUI(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key == "ViewProfiles":
-        prefClass.settings.setValue("UI/" + key, QtCore.QVariant(unicode(value)))
+        prefClass.settings.setValue("UI/" + key, unicode(value))
     elif key == "LogStdErrColour":
-        prefClass.settings.setValue("UI/" + key, QtCore.QVariant(value.name()))
+        prefClass.settings.setValue("UI/" + key, value.name())
     elif key == "ProxyPassword":
         from Utilities import pwEncode
-        prefClass.settings.setValue(
-            "UI/" + key, QtCore.QVariant(pwEncode(value)))
+        prefClass.settings.setValue("UI/" + key, pwEncode(value))
     else:
-        prefClass.settings.setValue("UI/" + key, QtCore.QVariant(value))
+        prefClass.settings.setValue("UI/" + key, value)
     
 def getIcons(key, prefClass = Prefs):
     """
@@ -1144,8 +1114,8 @@ def getIcons(key, prefClass = Prefs):
     @return the requested Icons setting
     """
     dirlist = prefClass.settings.value("UI/Icons/" + key)
-    if dirlist.isValid():
-        return dirlist.toStringList()
+    if dirlist is not None:
+        return dirlist
     else:
         return prefClass.iconsDefaults[key]
     
@@ -1157,7 +1127,7 @@ def setIcons(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("UI/Icons/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("UI/Icons/" + key, value)
     
 def getEditor(key, prefClass = Prefs):
     """
@@ -1170,11 +1140,18 @@ def getEditor(key, prefClass = Prefs):
     if key in ["DefaultEncoding", "DefaultOpenFilter", "DefaultSaveFilter", 
                "SpellCheckingDefaultLanguage", "SpellCheckingPersonalWordList", 
                "SpellCheckingPersonalExcludeList"]:
-        return prefClass.settings.value("Editor/" + key,
-            QtCore.QVariant(prefClass.editorDefaults[key])).toString()
+        return prefClass.settings.value("Editor/" + key, prefClass.editorDefaults[key])
+    elif key in ["AutosaveInterval", "TabWidth", "IndentWidth", "LinenoWidth", 
+                 "FoldingStyle", "WarnFilesize", "EdgeMode", "EdgeColumn", 
+                 "CaretWidth", "AutoCompletionSource", "AutoCompletionThreshold", 
+                 "CallTipsVisible", "CallTipsStyle", "MarkOccurrencesTimeout", 
+                 "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize", 
+                 "PostScriptLevel", "EOLMode"]:
+        return int(prefClass.settings.value("Editor/" + key, 
+            prefClass.editorDefaults[key]))
     else:
-        return prefClass.settings.value("Editor/" + key,
-            QtCore.QVariant(prefClass.editorDefaults[key])).toInt()[0]
+        return toBool(prefClass.settings.value("Editor/" + key, 
+            prefClass.editorDefaults[key]))
     
 def setEditor(key, value, prefClass = Prefs):
     """
@@ -1184,7 +1161,7 @@ def setEditor(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Editor/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("Editor/" + key, value)
     
 def getEditorColour(key, prefClass = Prefs):
     """
@@ -1195,8 +1172,8 @@ def getEditorColour(key, prefClass = Prefs):
     @return the requested editor colour
     """
     col = prefClass.settings.value("Editor/Colour/" + key)
-    if col.isValid():
-        return QtGui.QColor(col.toString())
+    if col is not None:
+        return QtGui.QColor(col)
     else:
         return prefClass.editorColourDefaults[key]
     
@@ -1208,7 +1185,7 @@ def setEditorColour(key, value, prefClass = Prefs):
     @param value the colour to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Editor/Colour/" + key, QtCore.QVariant(value.name()))
+    prefClass.settings.setValue("Editor/Colour/" + key, value.name())
     
 def getEditorOtherFonts(key, prefClass = Prefs):
     """
@@ -1220,7 +1197,7 @@ def getEditorOtherFonts(key, prefClass = Prefs):
     """
     f = QtGui.QFont()
     f.fromString(prefClass.settings.value("Editor/Other Fonts/" + key,
-        QtCore.QVariant(prefClass.editorOtherFontsDefaults[key])).toString())
+        prefClass.editorOtherFontsDefaults[key]))
     return f
     
 def setEditorOtherFonts(key, font, prefClass = Prefs):
@@ -1231,8 +1208,7 @@ def setEditorOtherFonts(key, font, prefClass = Prefs):
     @param font the font to be set (QFont)
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Editor/Other Fonts/" + key,
-        QtCore.QVariant(font.toString()))
+    prefClass.settings.setValue("Editor/Other Fonts/" + key, font.toString())
     
 def getEditorAPI(key, prefClass = Prefs):
     """
@@ -1242,9 +1218,8 @@ def getEditorAPI(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested list of api files (list of strings)
     """
-    ap = prefClass.settings.value("Editor/APIs/" + key)
-    if ap.isValid():
-        apis = ap.toStringList()
+    apis = prefClass.settings.value("Editor/APIs/" + key)
+    if apis is not None:
         if len(apis) and apis[0] == "":
             return []
         else:
@@ -1260,7 +1235,7 @@ def setEditorAPI(key, apilist, prefClass = Prefs):
     @param apilist the list of api files (list of strings)
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Editor/APIs/" + key, QtCore.QVariant(apilist))
+    prefClass.settings.setValue("Editor/APIs/" + key, apilist)
     
 def getEditorLexerAssocs(prefClass = Prefs):
     """
@@ -1287,8 +1262,7 @@ def getEditorLexerAssocs(prefClass = Prefs):
             else:
                 defaultValue = ""
             editorLexerAssoc[key] = \
-                prefClass.settings.value("Editor/LexerAssociations/" + key,
-                    QtCore.QVariant(defaultValue)).toString()
+                prefClass.settings.value("Editor/LexerAssociations/" + key, defaultValue)
         if len(editorLexerAssoc.keys()) < len(editorLexerAssocDefaults.keys()):
             # new default lexer associations
             for key in editorLexerAssocDefaults.keys():
@@ -1311,8 +1285,7 @@ def setEditorLexerAssocs(assocs, prefClass = Prefs):
         if key not in assocs:
             prefClass.settings.remove("Editor/LexerAssociations/" + key)
     for key in assocs:
-        prefClass.settings.setValue("Editor/LexerAssociations/" + key,
-            QtCore.QVariant(assocs[key]))
+        prefClass.settings.setValue("Editor/LexerAssociations/" + key, assocs[key])
     
 def getEditorLexerAssoc(filename, prefClass = Prefs):
     """
@@ -1336,8 +1309,8 @@ def getEditorTyping(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested editor setting
     """
-    return prefClass.settings.value("Editor/Typing/" + key,
-        QtCore.QVariant(prefClass.editorTypingDefaults[key])).toInt()[0]
+    return toBool(prefClass.settings.value("Editor/Typing/" + key,
+        prefClass.editorTypingDefaults[key]))
     
 def setEditorTyping(key, value, prefClass = Prefs):
     """
@@ -1347,7 +1320,7 @@ def setEditorTyping(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Editor/Typing/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("Editor/Typing/" + key, value)
     
 def getEditorExporter(key, prefClass = Prefs):
     """
@@ -1360,14 +1333,20 @@ def getEditorExporter(key, prefClass = Prefs):
     if key in ["RTF/Font"]:
         f = QtGui.QFont()
         f.fromString(prefClass.settings.value("Editor/Exporters/" + key,
-            QtCore.QVariant(prefClass.editorExporterDefaults[key])).toString())
+            prefClass.editorExporterDefaults[key]))
         return f
-    elif key in ["PDF/Font", "PDF/PageSize"]:
-        return prefClass.settings.value("Editor/Exporters/" + key, 
-            QtCore.QVariant(prefClass.editorExporterDefaults[key])).toString()
+    elif key in ["HTML/WYSIWYG", "HTML/Folding", "HTML/OnlyStylesUsed", 
+                 "HTML/FullPathAsTitle", "HTML/UseTabs", "RTF/WYSIWYG", 
+                 "RTF/UseTabs", "TeX/OnlyStylesUsed", "TeX/FullPathAsTitle"]:
+        return toBool(prefClass.settings.value("Editor/Exporters/" + key,
+            prefClass.editorExporterDefaults[key]))
+    elif key in ["PDF/Magnification", "PDF/MarginLeft", "PDF/MarginRight", 
+                 "PDF/MarginTop", "PDF/MarginBottom"]:
+        return int(prefClass.settings.value("Editor/Exporters/" + key,
+            prefClass.editorExporterDefaults[key]))
     else:
         return prefClass.settings.value("Editor/Exporters/" + key,
-            QtCore.QVariant(prefClass.editorExporterDefaults[key])).toInt()[0]
+            prefClass.editorExporterDefaults[key])
 
 def setEditorExporter(key, value, prefClass = Prefs):
     """
@@ -1378,10 +1357,9 @@ def setEditorExporter(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key in ["RTF/Font"]:
-        v = value.toString()
+        prefClass.settings.setValue("Editor/Exporters/" + key, value.toString())
     else:
-        v = value
-    prefClass.settings.setValue("Editor/Exporters/" + key, QtCore.QVariant(v))
+        prefClass.settings.setValue("Editor/Exporters/" + key, value)
     
 def getPrinter(key, prefClass = Prefs):
     """
@@ -1391,21 +1369,23 @@ def getPrinter(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested printer setting
     """
-    if key in ["ColorMode", "FirstPageFirst", "Magnification", 
-                "Orientation", "PageSize"]:
-        return prefClass.settings.value("Printer/" + key,
-            QtCore.QVariant(prefClass.printerDefaults[key])).toInt()[0]
-    if key in ["LeftMargin", "RightMargin", "TopMargin", "BottomMargin"]:
-        return prefClass.settings.value("Printer/" + key,
-            QtCore.QVariant(prefClass.printerDefaults[key])).toDouble()[0]
-    if key in ["PrinterName"]:
-        return prefClass.settings.value("Printer/" + key,
-            QtCore.QVariant(prefClass.printerDefaults[key])).toString()
-    if key in ["HeaderFont"]:
+    if key in ["ColorMode", "FirstPageFirst"]:
+        return toBool(prefClass.settings.value("Printer/" + key,
+            prefClass.printerDefaults[key]))
+    elif key in ["Magnification", "Orientation", "PageSize"]:
+        return int(prefClass.settings.value("Printer/" + key,
+            prefClass.printerDefaults[key]))
+    elif key in ["LeftMargin", "RightMargin", "TopMargin", "BottomMargin"]:
+        return float(prefClass.settings.value("Printer/" + key,
+            prefClass.printerDefaults[key]))
+    elif key in ["HeaderFont"]:
         f = QtGui.QFont()
         f.fromString(prefClass.settings.value("Printer/" + key,
-            QtCore.QVariant(prefClass.printerDefaults[key])).toString())
+            prefClass.printerDefaults[key]))
         return f
+    else:
+        return prefClass.settings.value("Printer/" + key,
+            prefClass.printerDefaults[key])
 
 def setPrinter(key, value, prefClass = Prefs):
     """
@@ -1416,10 +1396,9 @@ def setPrinter(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key in ["HeaderFont"]:
-        v = value.toString()
+        prefClass.settings.setValue("Printer/" + key, value.toString())
     else:
-        v = value
-    prefClass.settings.setValue("Printer/" + key, QtCore.QVariant(v))
+        prefClass.settings.setValue("Printer/" + key, value)
 
 def getShell(key, prefClass = Prefs):
     """
@@ -1432,11 +1411,14 @@ def getShell(key, prefClass = Prefs):
     if key in ["MonospacedFont", "MarginsFont"]:
         f = QtGui.QFont()
         f.fromString(prefClass.settings.value("Shell/" + key,
-            QtCore.QVariant(prefClass.shellDefaults[key])).toString())
+            prefClass.shellDefaults[key]))
         return f
+    elif key in ["LinenoWidth", "MaxHistoryEntries"]:
+        return int(prefClass.settings.value("Shell/" + key,
+            prefClass.shellDefaults[key]))
     else:
-        return prefClass.settings.value("Shell/" + key,
-            QtCore.QVariant(prefClass.shellDefaults[key])).toInt()[0]
+        return toBool(prefClass.settings.value("Shell/" + key,
+            prefClass.shellDefaults[key]))
 
 def setShell(key, value, prefClass = Prefs):
     """
@@ -1447,10 +1429,9 @@ def setShell(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key in ["MonospacedFont", "MarginsFont"]:
-        prefClass.settings.setValue("Shell/" + key,
-            QtCore.QVariant(value.toString()))
+        prefClass.settings.setValue("Shell/" + key, value.toString())
     else:
-        prefClass.settings.setValue("Shell/" + key, QtCore.QVariant(value))
+        prefClass.settings.setValue("Shell/" + key, value)
 
 def getTerminal(key, prefClass = Prefs):
     """
@@ -1462,15 +1443,18 @@ def getTerminal(key, prefClass = Prefs):
     """
     if key in ["Shell"]:
         return prefClass.settings.value("Terminal/" + key,
-            QtCore.QVariant(prefClass.terminalDefaults[key])).toString()
+            prefClass.terminalDefaults[key])
     elif key in ["MonospacedFont", "MarginsFont"]:
         f = QtGui.QFont()
         f.fromString(prefClass.settings.value("Terminal/" + key,
-            QtCore.QVariant(prefClass.terminalDefaults[key])).toString())
+            prefClass.terminalDefaults[key]))
         return f
+    elif key in ["LinenoWidth", "MaxHistoryEntries"]:
+        return int(prefClass.settings.value("Terminal/" + key,
+            prefClass.terminalDefaults[key]))
     else:
-        return prefClass.settings.value("Terminal/" + key,
-            QtCore.QVariant(prefClass.terminalDefaults[key])).toInt()[0]
+        return toBool(prefClass.settings.value("Terminal/" + key,
+            prefClass.terminalDefaults[key]))
 
 def setTerminal(key, value, prefClass = Prefs):
     """
@@ -1481,10 +1465,9 @@ def setTerminal(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key in ["MonospacedFont", "MarginsFont"]:
-        prefClass.settings.setValue("Terminal/" + key,
-            QtCore.QVariant(value.toString()))
+        prefClass.settings.setValue("Terminal/" + key, value.toString())
     else:
-        prefClass.settings.setValue("Terminal/" + key, QtCore.QVariant(value))
+        prefClass.settings.setValue("Terminal/" + key, value)
 
 def getProject(key, prefClass = Prefs):
     """
@@ -1494,8 +1477,12 @@ def getProject(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested project setting
     """
-    return prefClass.settings.value("Project/" + key,
-        QtCore.QVariant(prefClass.projectDefaults[key])).toInt()[0]
+    if key in ["RecentNumber"]:
+        return int(prefClass.settings.value("Project/" + key,
+            prefClass.projectDefaults[key]))
+    else:
+        return toBool(prefClass.settings.value("Project/" + key,
+            prefClass.projectDefaults[key]))
     
 def setProject(key, value, prefClass = Prefs):
     """
@@ -1505,7 +1492,7 @@ def setProject(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Project/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("Project/" + key, value)
     
 def getProjectBrowserFlags(key, prefClass = Prefs):
     """
@@ -1520,8 +1507,7 @@ def getProjectBrowserFlags(key, prefClass = Prefs):
     except KeyError:
         default = AllBrowsersFlag
     
-    return prefClass.settings.value("Project/BrowserFlags/" + key,
-        QtCore.QVariant(default)).toInt()[0]
+    return int(prefClass.settings.value("Project/BrowserFlags/" + key, default))
     
 def setProjectBrowserFlags(key, value, prefClass = Prefs):
     """
@@ -1531,7 +1517,7 @@ def setProjectBrowserFlags(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Project/BrowserFlags/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("Project/BrowserFlags/" + key, value)
     
 def setProjectBrowserFlagsDefault(key, value, prefClass = Prefs):
     """
@@ -1561,8 +1547,8 @@ def getProjectBrowserColour(key, prefClass = Prefs):
     @return the requested project browser colour
     """
     col = prefClass.settings.value("Project/Colour/" + key)
-    if col.isValid():
-        return QtGui.QColor(col.toString())
+    if col is not None:
+        return QtGui.QColor(col)
     else:
         return prefClass.projectBrowserColourDefaults[key]
     
@@ -1574,7 +1560,7 @@ def setProjectBrowserColour(key, value, prefClass = Prefs):
     @param value the colour to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Project/Colour/" + key, QtCore.QVariant(value.name()))
+    prefClass.settings.setValue("Project/Colour/" + key, value.name())
     
 def getMultiProject(key, prefClass = Prefs):
     """
@@ -1584,8 +1570,12 @@ def getMultiProject(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested project setting
     """
-    return prefClass.settings.value("MultiProject/" + key,
-        QtCore.QVariant(prefClass.multiProjectDefaults[key])).toInt()[0]
+    if key in ["RecentNumber"]:
+        return int(prefClass.settings.value("MultiProject/" + key,
+            prefClass.multiProjectDefaults[key]))
+    else:
+        return toBool(prefClass.settings.value("MultiProject/" + key,
+            prefClass.multiProjectDefaults[key]))
     
 def setMultiProject(key, value, prefClass = Prefs):
     """
@@ -1595,7 +1585,7 @@ def setMultiProject(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("MultiProject/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("MultiProject/" + key, value)
     
 def getQt4DocDir(prefClass = Prefs):
     """
@@ -1605,7 +1595,7 @@ def getQt4DocDir(prefClass = Prefs):
     @return the requested Qt4DocDir setting (string)
     """
     s = prefClass.settings.value("Help/Qt4DocDir",
-        QtCore.QVariant(prefClass.helpDefaults["Qt4DocDir"])).toString()
+        prefClass.helpDefaults["Qt4DocDir"])
     if s == "":
         return os.getenv("QT4DOCDIR", "")
     else:
@@ -1619,44 +1609,44 @@ def getHelp(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested help setting
     """
-    if key in ["CustomViewer", \
-               "PythonDocDir", "QtDocDir", "Qt4DocDir", "PyQt4DocDir", 
-               "UserStyleSheet", "WebSearchEngine", "HomePage", "PySideDocDir", 
-               "DefaultScheme"]:
-        return prefClass.settings.value("Help/" + key,
-            QtCore.QVariant(prefClass.helpDefaults[key])).toString()
-    elif key in ["AdBlockSubscriptions"]:
-        return prefClass.settings.value("Help/" + key,
-            QtCore.QVariant(prefClass.helpDefaults[key])).toStringList()
-    elif key in ["StandardFont", "FixedFont"]:
+    if key in ["StandardFont", "FixedFont"]:
         f = QtGui.QFont()
         f.fromString(prefClass.settings.value("Help/" + key,
-            QtCore.QVariant(prefClass.helpDefaults[key])).toString())
+            prefClass.helpDefaults[key]))
         return f
     elif key in ["SaveUrlColor"]:
         col = prefClass.settings.value("Help/" + key)
-        if col.isValid():
-            return QtGui.QColor(col.toString())
+        if col is not None:
+            return QtGui.QColor(col)
         else:
             return prefClass.helpDefaults[key]
-    elif key in ["HelpViewerState"]:
-        return prefClass.settings.value("Help/" + key,
-            QtCore.QVariant(prefClass.helpDefaults[key])).toByteArray()
     elif key in ["WebSearchKeywords"]:
         # return a list of tuples of (keyword, engine name)
         keywords = []
         size = prefClass.settings.beginReadArray("Help/" + key);
         for index in range(size):
             prefClass.settings.setArrayIndex(index)
-            keyword = prefClass.settings.value("Keyword").toString()
-            engineName = prefClass.settings.value("Engine").toString()
+            keyword = prefClass.settings.value("Keyword")
+            engineName = prefClass.settings.value("Engine")
             keywords.append((keyword, engineName))
         prefClass.settings.endArray()
         return keywords
+    elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies", 
+                 "KeepCookiesUntil", "StartupBehavior", "HistoryLimit"]:
+        return int(prefClass.settings.value("Help/" + key, 
+            prefClass.helpDefaults[key]))
+    elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions", 
+                 "DiskCacheEnabled", "FilterTrackingCookies", "PrintBackgrounds", 
+                 "SavePasswords", "AdBlockEnabled", "AutoLoadImages", 
+                 "JavaEnabled", "JavaScriptEnabled", "JavaScriptCanOpenWindows", 
+                 "JavaScriptCanAccessClipboard", "PluginsEnabled"]:
+        return toBool(prefClass.settings.value("Help/" + key, 
+            prefClass.helpDefaults[key]))
+    elif key in ["AdBlockSubscriptions"]:
+        return toList(prefClass.settings.value("Help/" + key, 
+            prefClass.helpDefaults[key]))
     else:
-        # default is integer value
-        return prefClass.settings.value("Help/" + key,
-            QtCore.QVariant(prefClass.helpDefaults[key])).toInt()[0]
+        return prefClass.settings.value("Help/" + key, prefClass.helpDefaults[key])
     
 def setHelp(key, value, prefClass = Prefs):
     """
@@ -1667,22 +1657,21 @@ def setHelp(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key in ["StandardFont", "FixedFont"]:
-        prefClass.settings.setValue("Help/" + key,
-            QtCore.QVariant(value.toString()))
+        prefClass.settings.setValue("Help/" + key, value.toString())
     elif key == "SaveUrlColor":
-        prefClass.settings.setValue("Help/" + key, QtCore.QVariant(value.name()))
+        prefClass.settings.setValue("Help/" + key, value.name())
     elif key == "WebSearchKeywords":
         # value is list of tuples of (keyword, engine name)
         prefClass.settings.beginWriteArray("Help/" + key, len(value))
         index = 0
         for v in value:
             prefClass.settings.setArrayIndex(index)
-            prefClass.settings.setValue("Keyword", QtCore.QVariant(v[0]))
-            prefClass.settings.setValue("Engine", QtCore.QVariant(v[1]))
+            prefClass.settings.setValue("Keyword", v[0])
+            prefClass.settings.setValue("Engine", v[1])
             index += 1
         prefClass.settings.endArray()
     else:
-        prefClass.settings.setValue("Help/" + key, QtCore.QVariant(value))
+        prefClass.settings.setValue("Help/" + key, value)
     
 def getSystem(key, prefClass = Prefs):
     """
@@ -1695,7 +1684,7 @@ def getSystem(key, prefClass = Prefs):
     from Utilities import supportedCodecs
     if key in ["StringEncoding", "IOEncoding"]:
         encoding = prefClass.settings.value("System/" + key, 
-            QtCore.QVariant(prefClass.sysDefaults[key])).toString()
+            prefClass.sysDefaults[key])
         if encoding not in supportedCodecs:
             encoding = prefClass.sysDefaults[key]
         return encoding
@@ -1708,7 +1697,7 @@ def setSystem(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("System/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("System/" + key, value)
     
 def getQt4TranslationsDir(prefClass = Prefs):
     """
@@ -1718,7 +1707,7 @@ def getQt4TranslationsDir(prefClass = Prefs):
     @return the requested Qt4TranslationsDir setting (string)
     """
     s = prefClass.settings.value("Qt/Qt4TranslationsDir", 
-        QtCore.QVariant(prefClass.qtDefaults["Qt4TranslationsDir"])).toString()
+        prefClass.qtDefaults["Qt4TranslationsDir"])
     if s == "":
         return os.getenv("QT4TRANSLATIONSDIR", "")
     else:
@@ -1734,15 +1723,8 @@ def getQt(key, prefClass = Prefs):
     """
     if key == "Qt4TranslationsDir":
         return getQt4TranslationsDir(prefClass)
-    elif key in ["QtToolsPrefix4", "QtToolsPostfix4"]: 
-        return prefClass.settings.value("Qt/" + key, 
-            QtCore.QVariant(prefClass.qtDefaults[key])).toString()
-    elif key in ["Qt4Dir"]:
-        return prefClass.settings.value("Qt/" + key, 
-            QtCore.QVariant(prefClass.qtDefaults[key])).toString()
     else: 
-        return prefClass.settings.value("Qt/" + key, 
-            QtCore.QVariant(prefClass.qtDefaults[key])).toInt()[0]
+        return prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
     
 def setQt(key, value, prefClass = Prefs):
     """
@@ -1752,7 +1734,7 @@ def setQt(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Qt/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("Qt/" + key, value)
     
 def getCorba(key, prefClass = Prefs):
     """
@@ -1762,8 +1744,7 @@ def getCorba(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested corba setting
     """
-    return prefClass.settings.value("Corba/" + key,
-        QtCore.QVariant(prefClass.corbaDefaults[key])).toString()
+    return prefClass.settings.value("Corba/" + key, prefClass.corbaDefaults[key])
     
 def setCorba(key, value, prefClass = Prefs):
     """
@@ -1773,7 +1754,7 @@ def setCorba(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Corba/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("Corba/" + key, value)
     
 def getUser(key, prefClass = Prefs):
     """
@@ -1783,17 +1764,19 @@ def getUser(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested user setting
     """
-    if key in ["MailServerAuthentication", "MailServerUseTLS", 
-               "MailServerPort", "UseSystemEmailClient"]:
-        return prefClass.settings.value("User/" + key,
-            QtCore.QVariant(prefClass.userDefaults[key])).toInt()[0]
-    elif key == "MailServerPassword":
+    if key == "MailServerPassword":
         from Utilities import pwDecode
         return pwDecode(prefClass.settings.value("User/" + key,
-            QtCore.QVariant(prefClass.userDefaults[key])).toString())
+            prefClass.userDefaults[key]))
+    elif key in ["MailServerPort"]:
+        return int(prefClass.settings.value("User/" + key, 
+            prefClass.userDefaults[key]))
+    elif key in ["MailServerAuthentication", "MailServerUseTLS", 
+                 "UseSystemEmailClient"]:
+        return toBool(prefClass.settings.value("User/" + key, 
+            prefClass.userDefaults[key]))
     else:
-        return prefClass.settings.value("User/" + key,
-            QtCore.QVariant(prefClass.userDefaults[key])).toString()
+        return prefClass.settings.value("User/" + key, prefClass.userDefaults[key])
     
 def setUser(key, value, prefClass = Prefs):
     """
@@ -1806,9 +1789,9 @@ def setUser(key, value, prefClass = Prefs):
     if key == "MailServerPassword":
         from Utilities import pwEncode
         prefClass.settings.setValue(
-            "User/" + key, QtCore.QVariant(pwEncode(value)))
+            "User/" + key, pwEncode(value))
     else:
-        prefClass.settings.setValue("User/" + key, QtCore.QVariant(value))
+        prefClass.settings.setValue("User/" + key, value)
     
 def getVCS(key, prefClass = Prefs):
     """
@@ -1818,8 +1801,10 @@ def getVCS(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested user setting
     """
-    return prefClass.settings.value("VCS/" + key,
-        QtCore.QVariant(prefClass.vcsDefaults[key])).toInt()[0]
+    if key in ["StatusMonitorInterval"]:
+        return int(prefClass.settings.value("VCS/" + key, prefClass.vcsDefaults[key]))
+    else:
+        return toBool(prefClass.settings.value("VCS/" + key, prefClass.vcsDefaults[key]))
     
 def setVCS(key, value, prefClass = Prefs):
     """
@@ -1829,7 +1814,7 @@ def setVCS(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("VCS/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("VCS/" + key, value)
     
 def getTasks(key, prefClass = Prefs):
     """
@@ -1842,13 +1827,13 @@ def getTasks(key, prefClass = Prefs):
     if key in ["TasksColour", "TasksBugfixColour", 
                "TasksBgColour", "TasksProjectBgColour"]:
         col = prefClass.settings.value("Tasks/" + key)
-        if col.isValid():
-            return QtGui.QColor(col.toString())
+        if col is not None:
+            return QtGui.QColor(col)
         else:
             return prefClass.tasksDefaults[key]
     else:
         return prefClass.settings.value("Tasks/" + key,
-            QtCore.QVariant(prefClass.tasksDefaults[key])).toString()
+            prefClass.tasksDefaults[key])
     
 def setTasks(key, value, prefClass = Prefs):
     """
@@ -1860,9 +1845,9 @@ def setTasks(key, value, prefClass = Prefs):
     """
     if key in ["TasksColour", "TasksBugfixColour",
                "TasksBgColour", "TasksProjectBgColour"]:
-        prefClass.settings.setValue("Tasks/" + key, QtCore.QVariant(value.name()))
+        prefClass.settings.setValue("Tasks/" + key, value.name())
     else:
-        prefClass.settings.setValue("Tasks/" + key, QtCore.QVariant(value))
+        prefClass.settings.setValue("Tasks/" + key, value)
     
 def getTemplates(key, prefClass = Prefs):
     """
@@ -1874,10 +1859,10 @@ def getTemplates(key, prefClass = Prefs):
     """
     if key in ["SeparatorChar"]:
         return prefClass.settings.value("Templates/" + key,
-            QtCore.QVariant(prefClass.templatesDefaults[key])).toString()
+            prefClass.templatesDefaults[key])
     else:
-        return prefClass.settings.value("Templates/" + key,
-            QtCore.QVariant(prefClass.templatesDefaults[key])).toInt()[0]
+        return toBool(prefClass.settings.value("Templates/" + key,
+            prefClass.templatesDefaults[key]))
     
 def setTemplates(key, value, prefClass = Prefs):
     """
@@ -1887,7 +1872,7 @@ def setTemplates(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Templates/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("Templates/" + key, value)
     
 def getPluginManager(key, prefClass = Prefs):
     """
@@ -1897,12 +1882,12 @@ def getPluginManager(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested user setting
     """
-    if key in ["ActivateExternal"]:
+    if key in ["DownloadPath"]:
         return prefClass.settings.value("PluginManager/" + key,
-            QtCore.QVariant(prefClass.pluginManagerDefaults[key])).toInt()[0]
+            prefClass.pluginManagerDefaults[key])
     else:
-        return prefClass.settings.value("PluginManager/" + key,
-            QtCore.QVariant(prefClass.pluginManagerDefaults[key])).toString()
+        return toBool(prefClass.settings.value("PluginManager/" + key,
+            prefClass.pluginManagerDefaults[key]))
     
 def setPluginManager(key, value, prefClass = Prefs):
     """
@@ -1912,7 +1897,7 @@ def setPluginManager(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("PluginManager/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("PluginManager/" + key, value)
     
 def getGraphics(key, prefClass = Prefs):
     """
@@ -1923,13 +1908,18 @@ def getGraphics(key, prefClass = Prefs):
     @return the requested user setting
     """
     if key in ["Font"]:
-        f = QtGui.QFont()
-        f.fromString(prefClass.settings.value("Graphics/" + key,
-            QtCore.QVariant(prefClass.graphicsDefaults[key])).toString())
-        return f
+        font = prefClass.settings.value("Graphics/" + key,
+            prefClass.graphicsDefaults[key])
+        if isinstance(font, QtGui.QFont):
+            # workaround for an old bug in eric4 < 4.4
+            return font
+        else:
+            f = QtGui.QFont()
+            f.fromString(font)
+            return f
     else:
         return prefClass.settings.value("Graphics/" + key,
-            QtCore.QVariant(prefClass.graphicsDefaults[key])).toString()
+            prefClass.graphicsDefaults[key])
     
 def setGraphics(key, value, prefClass = Prefs):
     """
@@ -1939,7 +1929,10 @@ def setGraphics(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Graphics/" + key, QtCore.QVariant(value))
+    if key in ["Font"]:
+        prefClass.settings.setValue("Graphics/" + key, value.toString())
+    else:
+        prefClass.settings.setValue("Graphics/" + key, value)
     
 def getIconEditor(key, prefClass = Prefs):
     """
@@ -1949,12 +1942,8 @@ def getIconEditor(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested user setting
     """
-    if key in ["IconEditorState"]:
-        return prefClass.settings.value("IconEditor/" + key,
-            QtCore.QVariant(prefClass.iconEditorDefaults[key])).toByteArray()
-    else:
-        return prefClass.settings.value("IconEditor/" + key,
-            QtCore.QVariant(prefClass.iconEditorDefaults[key])).toString()
+    return prefClass.settings.value("IconEditor/" + key,
+        prefClass.iconEditorDefaults[key])
     
 def setIconEditor(key, value, prefClass = Prefs):
     """
@@ -1964,7 +1953,7 @@ def setIconEditor(key, value, prefClass = Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("IconEditor/" + key, QtCore.QVariant(value))
+    prefClass.settings.setValue("IconEditor/" + key, value)
     
 def getGeometry(key, prefClass = Prefs):
     """
@@ -1975,12 +1964,12 @@ def getGeometry(key, prefClass = Prefs):
     @return the requested geometry setting
     """
     if key in ["MainMaximized"]:
-        return prefClass.settings.value("Geometry/" + key,
-            QtCore.QVariant(prefClass.geometryDefaults[key])).toInt()[0]
+        return toBool(prefClass.settings.value("Geometry/" + key,
+            prefClass.geometryDefaults[key]))
     else:
         v = prefClass.settings.value("Geometry/" + key)
-        if v.isValid():
-            return v.toByteArray()
+        if v is not None:
+            return v
         else:
             return prefClass.geometryDefaults[key]
 
@@ -1993,13 +1982,13 @@ def setGeometry(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key in ["MainMaximized"]:
-        prefClass.settings.setValue("Geometry/" + key, QtCore.QVariant(value))
+        prefClass.settings.setValue("Geometry/" + key, value)
     else:
         if prefClass.resetLayout:
             v = prefClass.geometryDefaults[key]
         else:
             v = value
-        prefClass.settings.setValue("Geometry/" + key, QtCore.QVariant(v))
+        prefClass.settings.setValue("Geometry/" + key, v)
 
 def resetLayout(prefClass = Prefs):
     """
@@ -2025,7 +2014,33 @@ def saveResetLayout(prefClass = Prefs):
     if prefClass.resetLayout:
         for key in prefClass.geometryDefaults.keys():
             prefClass.settings.setValue("Geometry/" + key, 
-                QtCore.QVariant(prefClass.geometryDefaults[key]))
+                prefClass.geometryDefaults[key])
+
+def toBool(value):
+    """
+    Module function to convert a value to bool.
+    
+    @param value value to be converted
+    @return converted data
+    """
+    if value in ["true", "1", "True"]:
+        return True
+    elif value in ["false", "0", "False"]:
+        return False
+    else:
+        return bool(value)
+
+def toList(value):
+    """
+    Module function to convert a value to a list.
+    
+    @param value value to be converted
+    @return converted data
+    """
+    if value is None:
+        return []
+    else:
+        return value
     
 initPreferences()
 initRecentSettings()

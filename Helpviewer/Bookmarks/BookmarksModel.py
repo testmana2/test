@@ -149,11 +149,11 @@ class BookmarksModel(QAbstractItemModel):
         @param section section number (integer)
         @param orientation header orientation (Qt.Orientation)
         @param role data role (integer)
-        @return header data (QVariant)
+        @return header data
         """
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             try:
-                return QVariant(self.__headers[section])
+                return self.__headers[section]
             except IndexError:
                 pass
         return QAbstractItemModel.headerData(self, section, orientation, role)
@@ -164,44 +164,44 @@ class BookmarksModel(QAbstractItemModel):
         
         @param index index of bookmark to get data for (QModelIndex)
         @param role data role (integer)
-        @return bookmark data (QVariant)
+        @return bookmark data
         """
         if not index.isValid() or index.model() != self:
-            return QVariant()
+            return None
         
         bookmarkNode = self.node(index)
         if role in [Qt.EditRole, Qt.DisplayRole]:
             if bookmarkNode.type() == BookmarkNode.Separator:
                 if index.column() == 0:
-                    return QVariant(50 * '\xB7')
+                    return 50 * '\xB7'
                 elif index.column() == 1:
-                    return QVariant("")
+                    return ""
             
             if index.column() == 0:
-                return QVariant(bookmarkNode.title)
+                return bookmarkNode.title
             elif index.column() == 1:
-                return QVariant(bookmarkNode.url)
+                return bookmarkNode.url
         
         elif role == self.UrlRole:
-            return QVariant(QUrl(bookmarkNode.url))
+            return QUrl(bookmarkNode.url)
         
         elif role == self.UrlStringRole:
-            return QVariant(bookmarkNode.url)
+            return bookmarkNode.url
         
         elif role == self.TypeRole:
-            return QVariant(bookmarkNode.type())
+            return bookmarkNode.type()
         
         elif role == self.SeparatorRole:
-            return QVariant(bookmarkNode.type() == BookmarkNode.Separator)
+            return bookmarkNode.type() == BookmarkNode.Separator
         
         elif role == Qt.DecorationRole:
             if index.column() == 0:
                 if bookmarkNode.type() == BookmarkNode.Folder:
-                    return QVariant(UI.PixmapCache.getIcon("dirOpen.png"))
-                return QVariant(Helpviewer.HelpWindow.HelpWindow.icon(
-                                QUrl(bookmarkNode.url)))
+                    return UI.PixmapCache.getIcon("dirOpen.png")
+                return Helpviewer.HelpWindow.HelpWindow.icon(
+                        QUrl(bookmarkNode.url))
         
-        return QVariant()
+        return None
     
     def columnCount(self, parent = QModelIndex()):
         """
@@ -351,7 +351,7 @@ class BookmarksModel(QAbstractItemModel):
             parentNode = self.node(index)
             writer.write(buffer, parentNode)
             stream << encodedData
-            urls.append(index.data(self.UrlRole).toUrl())
+            urls.append(index.data(self.UrlRole))
         
         mdata = QMimeData()
         mdata.setData(self.MIMETYPE, data)
@@ -421,7 +421,7 @@ class BookmarksModel(QAbstractItemModel):
         Public method to set the data of a node cell.
         
         @param index index of the node cell (QModelIndex)
-        @param value value to be set (QVariant)
+        @param value value to be set
         @param role role of the data (integer)
         @return flag indicating success (boolean)
         """
@@ -432,17 +432,17 @@ class BookmarksModel(QAbstractItemModel):
         
         if role in (Qt.EditRole, Qt.DisplayRole):
             if index.column() == 0:
-                self.__bookmarksManager.setTitle(item, value.toString())
+                self.__bookmarksManager.setTitle(item, value)
             elif index.column() == 1:
-                self.__bookmarksManager.setUrl(item, value.toString())
+                self.__bookmarksManager.setUrl(item, value)
             else:
                 return False
         
         elif role == BookmarksModel.UrlRole:
-            self.__bookmarksManager.setUrl(item, value.toUrl().toString())
+            self.__bookmarksManager.setUrl(item, value.toString())
         
         elif role == BookmarksModel.UrlStringRole:
-            self.__bookmarksManager.setUrl(item, value.toString())
+            self.__bookmarksManager.setUrl(item, value)
         
         else:
             return False

@@ -52,7 +52,7 @@ class ProjectBrowserSortFilterProxyModel(BrowserSortFilterProxyModel):
                 return False
             if self.hideGeneratedForms and \
                self.__filterType == ProjectBrowserSourceType and \
-               sitem.data(0).toString().startswith("Ui_"):
+               sitem.data(0).startswith("Ui_"):
                 return False
         except AttributeError:
             pass

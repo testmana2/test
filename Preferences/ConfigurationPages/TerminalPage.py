@@ -63,21 +63,21 @@ class TerminalPage(ConfigurationPageBase, Ui_TerminalPage):
         Preferences.setTerminal("LinenoWidth",
             self.linenowidthSlider.value())
         Preferences.setTerminal("LinenoMargin",
-            int(self.linenoCheckBox.isChecked()))
+            self.linenoCheckBox.isChecked())
         Preferences.setTerminal("SyntaxHighlightingEnabled",
-            int(self.syntaxHighlightingCheckBox.isChecked()))
+            self.syntaxHighlightingCheckBox.isChecked())
         Preferences.setTerminal("MaxHistoryEntries",
             self.historySpinBox.value())
         
         Preferences.setTerminal("MonospacedFont", self.monospacedFont)
         Preferences.setTerminal("UseMonospacedFont",
-            int(self.monospacedCheckBox.isChecked()))
+            self.monospacedCheckBox.isChecked())
         Preferences.setTerminal("MarginsFont", self.marginsFont)
         
         Preferences.setTerminal("Shell", 
             self.shellCombo.currentText())
         Preferences.setTerminal("ShellInteractive", 
-            int(self.interactiveCheckBox.isChecked()))
+            self.interactiveCheckBox.isChecked())
         
     @pyqtSlot()
     def on_monospacedFontButton_clicked(self):

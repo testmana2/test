@@ -55,12 +55,12 @@ class ProjectBrowserItemMixin(object):
         """
         Public method to get the items text color.
         
-        @return text color (QVariant(QColor))
+        @return text color (QColor)
         """
         if self.bold:
-            return QVariant(Preferences.getProjectBrowserColour("Highlighted"))
+            return Preferences.getProjectBrowserColour("Highlighted")
         else:
-            return QVariant()
+            return None
     
     def setVcsState(self, state):
         """
@@ -202,9 +202,9 @@ class ProjectBrowserModel(BrowserModel):
         """
         QAbstractItemModel.__init__(self, parent)
         
-        rootData = QVariant(self.trUtf8("Name"))
+        rootData = self.trUtf8("Name")
         self.rootItem = BrowserItem(None, rootData)
-        self.rootItem.itemData.append(QVariant(self.trUtf8("VCS Status")))
+        self.rootItem.itemData.append(self.trUtf8("VCS Status"))
         
         self.progDir = None
         self.project = parent
@@ -247,28 +247,28 @@ class ProjectBrowserModel(BrowserModel):
         
         @param index index of the data to retrieve (QModelIndex)
         @param role role of data (Qt.ItemDataRole)
-        @return requested data (QVariant)
+        @return requested data
         """
         if not index.isValid():
-            return QVariant()
+            return None
         
         if role == Qt.TextColorRole:
             if index.column() == 0:
                 try:
                     return index.internalPointer().getTextColor()
                 except AttributeError:
-                    return QVariant()
+                    return None
         elif role == Qt.BackgroundColorRole:
             try:
                 col = self.itemBackgroundColors[index.internalPointer().vcsState]
                 if col.isValid():
-                    return QVariant(col)
+                    return col
                 else:
-                    return QVariant()
+                    return None
             except AttributeError:
-                return QVariant()
+                return None
             except KeyError:
-                return QVariant()
+                return None
         
         return BrowserModel.data(self, index, role)
     

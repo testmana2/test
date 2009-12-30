@@ -85,7 +85,7 @@ class HelpDocsInstaller(QThread):
         @return flag indicating success (boolean)
         """
         versionKey = "qt_version_{0}@@{1}".format(qVersion(), name)
-        info = engine.customValue(versionKey, QVariant("")).toString()
+        info = engine.customValue(versionKey, "")
         lst = info.split('|')
         
         dt = QDateTime()
@@ -102,7 +102,7 @@ class HelpDocsInstaller(QThread):
         files = docsPath.entryList(["*.qch"])
         if not files:
             engine.setCustomValue(versionKey, 
-                QVariant(QDateTime().toString(Qt.ISODate) + '|'))
+                QDateTime().toString(Qt.ISODate) + '|')
             return False
         
         for f in files:
@@ -130,8 +130,8 @@ class HelpDocsInstaller(QThread):
                     return False
                 
                 engine.setCustomValue(versionKey, 
-                    QVariant(fi.lastModified().toString(Qt.ISODate) + '|' + \
-                    fi.absoluteFilePath()))
+                    fi.lastModified().toString(Qt.ISODate) + '|' + \
+                    fi.absoluteFilePath())
                 return True
         
         return False
@@ -144,7 +144,7 @@ class HelpDocsInstaller(QThread):
         @return flag indicating success (boolean)
         """
         versionKey = "eric4_ide"
-        info = engine.customValue(versionKey, QVariant("")).toString()
+        info = engine.customValue(versionKey, "")
         lst = info.split('|')
         
         dt = QDateTime()
@@ -160,7 +160,7 @@ class HelpDocsInstaller(QThread):
         files = docsPath.entryList(["*.qch"])
         if not files:
             engine.setCustomValue(versionKey, 
-                QVariant(QDateTime().toString(Qt.ISODate) + '|'))
+                QDateTime().toString(Qt.ISODate) + '|')
             return False
         
         for f in files:
@@ -187,8 +187,8 @@ class HelpDocsInstaller(QThread):
                     return False
                 
                 engine.setCustomValue(versionKey, 
-                    QVariant(fi.lastModified().toString(Qt.ISODate) + '|' + \
-                    fi.absoluteFilePath()))
+                    fi.lastModified().toString(Qt.ISODate) + '|' + \
+                    fi.absoluteFilePath())
                 return True
         
         return False

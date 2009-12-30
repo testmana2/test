@@ -421,11 +421,7 @@ class PluginManager(QObject):
         Public method to activate all plugins having the "autoactivate" attribute
         set to True.
         """
-        ial = Preferences.Prefs.settings.value(self.__inactivePluginsKey)
-        if ial.isValid():
-            savedInactiveList = ial.toStringList()
-        else:
-            savedInactiveList = None
+        savedInactiveList = Preferences.Prefs.settings.value(self.__inactivePluginsKey)
         if self.__develPluginName is not None and \
            savedInactiveList is not None and \
            self.__develPluginName in savedInactiveList:
@@ -712,7 +708,7 @@ class PluginManager(QObject):
         names = []
         for name in self.__inactiveModules.keys():
             names.append(name)
-        Preferences.Prefs.settings.setValue(self.__inactivePluginsKey, QVariant(names))
+        Preferences.Prefs.settings.setValue(self.__inactivePluginsKey, names)
         
         self.emit(SIGNAL("shutdown()"))
 

@@ -33,9 +33,8 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
             SIGNAL("currentChanged(const QModelIndex&, const QModelIndex&)"), 
             self.__currentChanged)
         
-        languages = Preferences.Prefs.settings.value(
-            "Help/AcceptLanguages", QVariant(self.defaultAcceptLanguages()))\
-            .toStringList()
+        languages = Preferences.Prefs.settings.value(Preferences.toList(
+            "Help/AcceptLanguages", self.defaultAcceptLanguages()))
         self.__model.setStringList(languages)
         
         allLanguages = []
@@ -100,7 +99,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
         
         self.__model.insertRow(self.__model.rowCount())
         self.__model.setData(self.__model.index(self.__model.rowCount() - 1), 
-                             QVariant(language))
+                             language)
         self.languagesList.setCurrentIndex(
             self.__model.index(self.__model.rowCount() - 1))
     
@@ -112,7 +111,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
         if result == self.defaultAcceptLanguages():
             Preferences.Prefs.settings.remove("Help/AcceptLanguages")
         else:
-            Preferences.Prefs.settings.setValue("Help/AcceptLanguages", QVariant(result))
+            Preferences.Prefs.settings.setValue("Help/AcceptLanguages", result)
         QDialog.accept(self)
     
     @classmethod

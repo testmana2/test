@@ -80,11 +80,11 @@ class AdBlockModel(QAbstractItemModel):
         @param section section number (integer)
         @param orientation header orientation (Qt.Orientation)
         @param role data role (integer)
-        @return header data (QVariant)
+        @return header data
         """
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             if section == 0:
-                return QVariant(self.trUtf8("Rule"))
+                return self.trUtf8("Rule")
         return QAbstractItemModel.headerData(self, section, orientation, role)
     
     def data(self, index, role = Qt.DisplayRole):
@@ -93,36 +93,36 @@ class AdBlockModel(QAbstractItemModel):
         
         @param index index of bookmark to get data for (QModelIndex)
         @param role data role (integer)
-        @return bookmark data (QVariant)
+        @return bookmark data
         """
         if not index.isValid() or index.model() != self or index.column() != 0:
-            return QVariant()
+            return None
         
         if role in [Qt.EditRole, Qt.DisplayRole]:
             if index.parent().isValid():
                 r = self.rule(index)
-                return QVariant(r.filter())
+                return r.filter()
             else:
                 sub = self.subscription(index)
                 if sub is not None:
-                    return QVariant(sub.title())
+                    return sub.title()
         
         elif role == Qt.CheckStateRole:
             if index.parent().isValid():
                 r = self.rule(index)
                 if r.isEnabled():
-                    return QVariant(Qt.Checked)
+                    return Qt.Checked
                 else:
-                    return QVariant(Qt.Unchecked)
+                    return Qt.Unchecked
             else:
                 sub = self.subscription(index)
                 if sub is not None:
                     if sub.isEnabled():
-                        return QVariant(Qt.Checked)
+                        return Qt.Checked
                     else:
-                        return QVariant(Qt.Unchecked)
+                        return Qt.Unchecked
         
-        return QVariant()
+        return None
     
     def columnCount(self, parent = QModelIndex()):
         """
@@ -259,7 +259,7 @@ class AdBlockModel(QAbstractItemModel):
         Public method to set the data of a node cell.
         
         @param index index of the node cell (QModelIndex)
-        @param value value to be set (QVariant)
+        @param value value to be set
         @param role role of the data (integer)
         @return flag indicating success (boolean)
         """
@@ -277,7 +277,7 @@ class AdBlockModel(QAbstractItemModel):
                 sub = self.subscription(index.parent())
                 if sub is not None:
                     r = self.rule(index)
-                    r.setFilter(value.toString())
+                    r.setFilter(value)
                     sub.replaceRule(r, index.row())
                     self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
                         index, index)
@@ -285,7 +285,7 @@ class AdBlockModel(QAbstractItemModel):
             else:
                 sub = self.subscription(index)
                 if sub is not None:
-                    sub.setTitle(value.toString())
+                    sub.setTitle(value)
                     self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
                         index, index)
                     changed = True

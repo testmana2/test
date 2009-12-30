@@ -113,10 +113,10 @@ class E4ModelToolBar(QToolBar):
         
         for i in range(self.__model.rowCount(self.__root)):
             idx = self.__model.index(i, 0, self.__root)
-            v = QVariant(idx)
+            v = idx
             
-            title = idx.data(Qt.DisplayRole).toString()
-            icon = idx.data(Qt.DecorationRole).toPyObject()
+            title = idx.data(Qt.DisplayRole)
+            icon = idx.data(Qt.DecorationRole)
             if icon == NotImplemented or icon is None:
                 icon = QIcon()
             folder = self.__model.hasChildren(idx)
@@ -145,11 +145,10 @@ class E4ModelToolBar(QToolBar):
         if action is None:
             return QModelIndex()
         
-        v = action.data()
-        if not v.isValid():
+        idx = action.data()
+        if idx is None:
             return QModelIndex()
         
-        idx = v.toPyObject()
         if not isinstance(idx, QModelIndex):
             return QModelIndex()
         

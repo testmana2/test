@@ -44,14 +44,14 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         Public slot to save the EditorCalltips configuration.
         """
         Preferences.setEditor("CallTipsEnabled",
-            int(self.ctEnabledCheckBox.isChecked()))
+            self.ctEnabledCheckBox.isChecked())
         
         Preferences.setEditor("CallTipsVisible",
             self.ctVisibleSlider.value())
         Preferences.setEditorColour("CallTipsBackground", self.callTipsBackgroundColour)
         
         Preferences.setEditor("CallTipsScintillaOnFail", 
-            int(self.ctScintillaCheckBox.isChecked()))
+            self.ctScintillaCheckBox.isChecked())
         
     @pyqtSlot()
     def on_calltipsBackgroundButton_clicked(self):

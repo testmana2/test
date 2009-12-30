@@ -10,7 +10,7 @@ Module implementing the Interface configuration page.
 import glob
 import os
 
-from PyQt4.QtCore import pyqtSlot, QVariant, QTranslator, qVersion
+from PyQt4.QtCore import pyqtSlot, QTranslator, qVersion
 from PyQt4.QtGui import QStyleFactory, QFileDialog
 
 from E4Gui.E4Completers import E4FileCompleter
@@ -117,20 +117,20 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         """
         # save the style settings
         styleIndex = self.styleComboBox.currentIndex()
-        style = self.styleComboBox.itemData(styleIndex).toString()
+        style = self.styleComboBox.itemData(styleIndex)
         Preferences.setUI("Style", style)
         
         # save the other UI related settings
         Preferences.setUI("BrowsersListFoldersFirst",
-            int(self.uiBrowsersListFoldersFirstCheckBox.isChecked()))
+            self.uiBrowsersListFoldersFirstCheckBox.isChecked())
         Preferences.setUI("BrowsersHideNonPublic",
-            int(self.uiBrowsersHideNonPublicCheckBox.isChecked()))
+            self.uiBrowsersHideNonPublicCheckBox.isChecked())
         Preferences.setUI("BrowsersListContentsByOccurrence", 
-            int(self.uiBrowsersSortByOccurrenceCheckBox.isChecked()))
+            self.uiBrowsersSortByOccurrenceCheckBox.isChecked())
         Preferences.setUI("LogViewerAutoRaise", 
-            int(self.lvAutoRaiseCheckBox.isChecked()))
+            self.lvAutoRaiseCheckBox.isChecked())
         Preferences.setUI("CaptionShowsFilename",
-            int(self.uiCaptionShowsFilenameGroupBox.isChecked()))
+            self.uiCaptionShowsFilenameGroupBox.isChecked())
         Preferences.setUI("CaptionFilenameLength",
             self.filenameLengthSpinBox.value())
         Preferences.setUI("StyleSheet",
@@ -138,19 +138,19 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         
         # save the dockarea corner settings
         Preferences.setUI("TopLeftByLeft", 
-            int(self.tlLeftButton.isChecked()))
+            self.tlLeftButton.isChecked())
         Preferences.setUI("BottomLeftByLeft", 
-            int(self.blLeftButton.isChecked()))
+            self.blLeftButton.isChecked())
         Preferences.setUI("TopRightByRight", 
-            int(self.trRightButton.isChecked()))
+            self.trRightButton.isChecked())
         Preferences.setUI("BottomRightByRight", 
-            int(self.brRightButton.isChecked()))
+            self.brRightButton.isChecked())
         
         # save the language settings
         uiLanguageIndex = self.languageComboBox.currentIndex()
         if uiLanguageIndex:
             uiLanguage = \
-                self.languageComboBox.itemData(uiLanguageIndex).toString()
+                self.languageComboBox.itemData(uiLanguageIndex)
         else:
             uiLanguage = None
         Preferences.setUILanguage(uiLanguage)
@@ -180,7 +180,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         Preferences.setUILayout(layout)
         
         Preferences.setUI("SingleCloseButton", 
-            int(self.tabsCloseButtonCheckBox.isChecked()))
+            self.tabsCloseButtonCheckBox.isChecked())
         
         for key in self.uiColours.keys():
             Preferences.setUI(key, self.uiColours[key])
@@ -192,10 +192,10 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         curStyle = Preferences.getUI("Style")
         styles = QStyleFactory.keys()
         styles.sort()
-        self.styleComboBox.addItem(self.trUtf8('System'), QVariant("System"))
+        self.styleComboBox.addItem(self.trUtf8('System'), "System")
         for style in styles:
-            self.styleComboBox.addItem(style, QVariant(style))
-        currentIndex = self.styleComboBox.findData(QVariant(curStyle))
+            self.styleComboBox.addItem(style, style)
+        currentIndex = self.styleComboBox.findData(curStyle)
         if currentIndex == -1:
             currentIndex = 0
         self.styleComboBox.setCurrentIndex(currentIndex)
@@ -235,10 +235,10 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             currentIndex = 0
         self.languageComboBox.clear()
         
-        self.languageComboBox.addItem("English (default)", QVariant("None"))
-        self.languageComboBox.addItem(self.trUtf8('System'), QVariant("System"))
+        self.languageComboBox.addItem("English (default)", "None")
+        self.languageComboBox.addItem(self.trUtf8('System'), "System")
         for locale in localeList:
-            self.languageComboBox.addItem(locales[locale], QVariant(locale))
+            self.languageComboBox.addItem(locales[locale], locale)
         self.languageComboBox.setCurrentIndex(currentIndex)
         
     @pyqtSlot()

@@ -126,8 +126,7 @@ class DebugServer(QTcpServer):
         self.debugging = False
         self.clientProcess = None
         self.clientType = \
-            Preferences.Prefs.settings.value('DebugClient/Type', 
-                QVariant('Python')).toString()
+            Preferences.Prefs.settings.value('DebugClient/Type', 'Python')
         self.lastClientType = ''
         self.__autoClearShell = False
         
@@ -281,7 +280,7 @@ class DebugServer(QTcpServer):
         if clType is not None and clType in self.getSupportedLanguages():
             self.clientType = clType
             ok = Preferences.Prefs.settings.setValue('DebugClient/Type', 
-                QVariant(self.clientType))
+                self.clientType)
         
     def startClient(self, unplanned = True, clType = None, forProject = False, 
                     runInConsole = False):

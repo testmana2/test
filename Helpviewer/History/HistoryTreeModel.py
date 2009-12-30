@@ -41,7 +41,7 @@ class HistoryTreeModel(QAbstractProxyModel):
         @param section section number (integer)
         @param orientation header orientation (Qt.Orientation)
         @param role data role (integer)
-        @return header data (QVariant)
+        @return header data
         """
         return self.sourceModel().headerData(section, orientation, role)
     
@@ -51,7 +51,7 @@ class HistoryTreeModel(QAbstractProxyModel):
         
         @param index index of history entry to get data for (QModelIndex)
         @param role data role (integer)
-        @return history entry data (QVariant)
+        @return history entry data
         """
         if role in [Qt.DisplayRole, Qt.EditRole]:
             start = index.internalId()
@@ -59,17 +59,17 @@ class HistoryTreeModel(QAbstractProxyModel):
                 offset = self.__sourceDateRow(index.row())
                 if index.column() == 0:
                     idx = self.sourceModel().index(offset, 0)
-                    date = idx.data(HistoryModel.DateRole).toDate()
+                    date = idx.data(HistoryModel.DateRole)
                     if date == QDate.currentDate():
-                        return QVariant(self.trUtf8("Earlier Today"))
-                    return QVariant(date.toString("yyyy-MM-dd"))
+                        return self.trUtf8("Earlier Today")
+                    return date.toString("yyyy-MM-dd")
                 if index.column() == 1:
-                    return QVariant(self.trUtf8(
-                        "%n item(s)", "", self.rowCount(index.sibling(index.row(), 0))))
+                    return self.trUtf8(
+                        "%n item(s)", "", self.rowCount(index.sibling(index.row(), 0)))
         
         elif role == Qt.DecorationRole:
             if index.column() == 0 and not index.parent().isValid():
-                return QVariant(UI.PixmapCache.getIcon("history.png"))
+                return UI.PixmapCache.getIcon("history.png")
         
         elif role == HistoryModel.DateRole:
             if index.column() == 0 and index.internalId() == 0:
@@ -111,7 +111,7 @@ class HistoryTreeModel(QAbstractProxyModel):
             
             for row in range(totalRows):
                 rowDate = \
-                    self.sourceModel().index(row, 0).data(HistoryModel.DateRole).toDate()
+                    self.sourceModel().index(row, 0).data(HistoryModel.DateRole)
                 if rowDate != currentDate:
                     self.__sourceRowCache.append(row)
                     currentDate = rowDate

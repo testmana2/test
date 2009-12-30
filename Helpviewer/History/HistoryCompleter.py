@@ -84,15 +84,15 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         
         @param index index of history entry to get data for (QModelIndex)
         @param role data role (integer)
-        @return history entry data (QVariant)
+        @return history entry data
         """
         # If the model is valid, tell QCompleter that everything we have filtered
         # matches what the user typed; if not, nothing matches
         if role == self.HistoryCompletionRole and index.isValid():
             if self.isValid():
-                return QVariant("t")
+                return "t"
             else:
-                return QVariant("f")
+                return "f"
         
         if role == Qt.DisplayRole:
             if index.column() == 0:
@@ -160,11 +160,11 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         # metacharacters (s. setSearchString()).
         idx = self.sourceModel().index(sourceRow, 0, sourceParent)
         
-        url = self.sourceModel().data(idx, HistoryModel.UrlStringRole).toString()
+        url = self.sourceModel().data(idx, HistoryModel.UrlStringRole)
         if self.__searchMatcher.indexIn(url) != -1:
             return True
         
-        title = self.sourceModel().data(idx, HistoryModel.TitleRole).toString()
+        title = self.sourceModel().data(idx, HistoryModel.TitleRole)
         if self.__searchMatcher.indexIn(title) != -1:
             return True
         
@@ -187,18 +187,18 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         @return true, if left is less than right (boolean)
         """
         frequency_L = \
-            self.sourceModel().data(left, HistoryFilterModel.FrequencyRole).toInt()[0]
-        url_L = self.sourceModel().data(left, HistoryModel.UrlRole).toUrl().host()
-        title_L = self.sourceModel().data(left, HistoryModel.TitleRole).toString()
+            self.sourceModel().data(left, HistoryFilterModel.FrequencyRole)
+        url_L = self.sourceModel().data(left, HistoryModel.UrlRole).host()
+        title_L = self.sourceModel().data(left, HistoryModel.TitleRole)
         
         if self.__wordMatcher.indexIn(url_L) != -1 or \
            self.__wordMatcher.indexIn(title_L) != -1:
             frequency_L *= 2
         
         frequency_R = \
-            self.sourceModel().data(right, HistoryFilterModel.FrequencyRole).toInt()[0]
-        url_R = self.sourceModel().data(right, HistoryModel.UrlRole).toUrl().host()
-        title_R = self.sourceModel().data(right, HistoryModel.TitleRole).toString()
+            self.sourceModel().data(right, HistoryFilterModel.FrequencyRole)
+        url_R = self.sourceModel().data(right, HistoryModel.UrlRole).host()
+        title_R = self.sourceModel().data(right, HistoryModel.TitleRole)
         
         if self.__wordMatcher.indexIn(url_R) != -1 or \
            self.__wordMatcher.indexIn(title_R) != -1:
@@ -239,7 +239,7 @@ class HistoryCompleter(QCompleter):
         @param idx reference to the index (QModelIndex)
         @return the actual URL from the history (string)
         """
-        return self.model().data(idx, HistoryModel.UrlStringRole).toString()
+        return self.model().data(idx, HistoryModel.UrlStringRole)
     
     def splitPath(self, path):
         """

@@ -189,12 +189,12 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
             return
         if newTab:
             self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                      idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole).toUrl(), 
-                      idx.sibling(idx.row(), 0).data(Qt.DisplayRole).toString())
+                      idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole), 
+                      idx.sibling(idx.row(), 0).data(Qt.DisplayRole))
         else:
             self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                      idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole).toUrl(), 
-                      idx.sibling(idx.row(), 0).data(Qt.DisplayRole).toString())
+                      idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole), 
+                      idx.sibling(idx.row(), 0).data(Qt.DisplayRole))
     
     def __editName(self):
         """

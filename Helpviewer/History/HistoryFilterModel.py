@@ -102,10 +102,10 @@ class HistoryFilterModel(QAbstractProxyModel):
         
         @param index index of history entry to get data for (QModelIndex)
         @param role data role (integer)
-        @return history entry data (QVariant)
+        @return history entry data
         """
         if role == self.FrequencyRole and index.isValid():
-            return QVariant(self.__filteredRows[index.row()].frequency)
+            return self.__filteredRows[index.row()].frequency
         
         return QAbstractProxyModel.data(self, index, role)
     
@@ -163,7 +163,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         @param section section number (integer)
         @param orientation header orientation (Qt.Orientation)
         @param role data role (integer)
-        @return header data (QVariant)
+        @return header data
         """
         return self.sourceModel().headerData(section, orientation, role)
     
@@ -220,7 +220,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         @return proxy model index (QModelIndex)
         """
         self.__load()
-        url = sourceIndex.data(HistoryModel.UrlStringRole).toString()
+        url = sourceIndex.data(HistoryModel.UrlStringRole)
         if url not in self.__historyDict:
             return QModelIndex()
         
@@ -271,7 +271,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         
         for sourceRow in range(self.sourceModel().rowCount()):
             idx = self.sourceModel().index(sourceRow, 0)
-            url = idx.data(HistoryModel.UrlStringRole).toString()
+            url = idx.data(HistoryModel.UrlStringRole)
             if url not in self.__historyDict:
                 sourceOffset = self.sourceModel().rowCount() - sourceRow
                 self.__filteredRows.append(
@@ -297,7 +297,7 @@ class HistoryFilterModel(QAbstractProxyModel):
                 return
             
             idx = self.sourceModel().index(start, 0, parent)
-            url = idx.data(HistoryModel.UrlStringRole).toString()
+            url = idx.data(HistoryModel.UrlStringRole)
             currentFrequency = 0
             if url in self.__historyDict:
                 row = self.__filteredRows.index(HistoryData(self.__historyDict[url], -1))
@@ -364,7 +364,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         @return frequency score (integer)
         """
         loadTime = \
-            self.sourceModel().data(sourceIndex, HistoryModel.DateTimeRole).toDateTime()
+            self.sourceModel().data(sourceIndex, HistoryModel.DateTimeRole)
         days = loadTime.daysTo(self.__scaleTime)
         
         if days <= 1:

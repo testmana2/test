@@ -108,33 +108,33 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         Public slot to save the Help Viewers configuration.
         """
         Preferences.setHelp("SingleHelpWindow",
-            int(self.singleHelpWindowCheckBox.isChecked()))
+            self.singleHelpWindowCheckBox.isChecked())
         Preferences.setHelp("SaveGeometry",
-            int(self.saveGeometryCheckBox.isChecked()))
+            self.saveGeometryCheckBox.isChecked())
         Preferences.setHelp("WebSearchSuggestions",
-            int(self.webSuggestionsCheckBox.isChecked()))
+            self.webSuggestionsCheckBox.isChecked())
         
         Preferences.setHelp("JavaEnabled",
-            int(self.javaCheckBox.isChecked()))
+            self.javaCheckBox.isChecked())
         Preferences.setHelp("JavaScriptEnabled",
-            int(self.javaScriptCheckBox.isChecked()))
+            self.javaScriptCheckBox.isChecked())
         Preferences.setHelp("JavaScriptCanOpenWindows",
-            int(self.jsOpenWindowsCheckBox.isChecked()))
+            self.jsOpenWindowsCheckBox.isChecked())
         Preferences.setHelp("JavaScriptCanAccessClipboard",
-            int(self.jsClipboardCheckBox.isChecked()))
+            self.jsClipboardCheckBox.isChecked())
         Preferences.setHelp("PluginsEnabled", 
-            int(self.pluginsCheckBox.isChecked()))
+            self.pluginsCheckBox.isChecked())
         
         Preferences.setHelp("SavePasswords", 
-            int(self.savePasswordsCheckBox.isChecked()))
+            self.savePasswordsCheckBox.isChecked())
         
         if qVersion() >= '4.5.0':
             Preferences.setHelp("DiskCacheEnabled",
-                int(self.diskCacheCheckBox.isChecked()))
+                self.diskCacheCheckBox.isChecked())
             Preferences.setHelp("DiskCacheSize",
                 self.cacheSizeSpinBox.value())
             Preferences.setHelp("PrintBackgrounds",
-                int(self.printBackgroundsCheckBox.isChecked()))
+                self.printBackgroundsCheckBox.isChecked())
         
         Preferences.setHelp("StartupBehavior", 
             self.startupCombo.currentIndex())

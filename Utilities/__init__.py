@@ -980,7 +980,7 @@ def getConfigDir():
         hp = QDir.homePath()
         dn = QDir(hp)
         dn.mkdir(cdn)
-        hp.append("/").append(cdn)
+        hp += "/" + cdn
     return toNativeSeparators(hp)
 
 def setConfigDir(d):

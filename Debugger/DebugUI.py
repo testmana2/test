@@ -66,34 +66,28 @@ class DebugUI(QObject):
         self.dbgFilterDialog = VariablesFilterDialog(self.ui, 'Filter Dialog', True)
 
         # read the saved debug info values
-        self.argvHistory = \
-            Preferences.Prefs.settings \
-            .value('DebugInfo/ArgumentsHistory').toStringList()
-        self.wdHistory = \
-            Preferences.Prefs.settings \
-            .value('DebugInfo/WorkingDirectoryHistory').toStringList()
-        self.envHistory = \
-            Preferences.Prefs.settings \
-            .value('DebugInfo/EnvironmentHistory').toStringList()
-        self.excList = \
-            Preferences.Prefs.settings \
-            .value('DebugInfo/Exceptions').toStringList()
-        self.excIgnoreList = \
-            Preferences.Prefs.settings \
-            .value('DebugInfo/IgnoredExceptions').toStringList()
-        self.exceptions = \
-            Preferences.Prefs.settings.value('DebugInfo/ReportExceptions', 
-            QVariant(True)).toBool()
-        self.autoClearShell = Preferences.Prefs.settings.value('DebugInfo/AutoClearShell',
-            QVariant(True)).toBool()
-        self.tracePython = Preferences.Prefs.settings.value('DebugInfo/TracePython', 
-            QVariant(False)).toBool()
-        self.autoContinue = Preferences.Prefs.settings.value('DebugInfo/AutoContinue', 
-            QVariant(True)).toBool()
-        self.forkAutomatically = Preferences.Prefs.settings.value(
-            'DebugInfo/ForkAutomatically', QVariant(False)).toBool()
-        self.forkIntoChild = Preferences.Prefs.settings.value('DebugInfo/ForkIntoChild', 
-            QVariant(False)).toBool()
+        self.argvHistory = Preferences.toList(
+            Preferences.Prefs.settings.value('DebugInfo/ArgumentsHistory'))
+        self.wdHistory = Preferences.toList(
+            Preferences.Prefs.settings.value('DebugInfo/WorkingDirectoryHistory'))
+        self.envHistory = Preferences.toList(
+            Preferences.Prefs.settings.value('DebugInfo/EnvironmentHistory'))
+        self.excList = Preferences.toList(
+            Preferences.Prefs.settings.value('DebugInfo/Exceptions'))
+        self.excIgnoreList = Preferences.toList(
+            Preferences.Prefs.settings.value('DebugInfo/IgnoredExceptions'))
+        self.exceptions = Preferences.toBool(
+            Preferences.Prefs.settings.value('DebugInfo/ReportExceptions', True))
+        self.autoClearShell = Preferences.toBool(
+            Preferences.Prefs.settings.value('DebugInfo/AutoClearShell', True))
+        self.tracePython = Preferences.toBool(
+            Preferences.Prefs.settings.value('DebugInfo/TracePython', False))
+        self.autoContinue = Preferences.toBool(
+            Preferences.Prefs.settings.value('DebugInfo/AutoContinue', True))
+        self.forkAutomatically = Preferences.toBool(
+            Preferences.Prefs.settings.value('DebugInfo/ForkAutomatically', False))
+        self.forkIntoChild = Preferences.toBool(
+            Preferences.Prefs.settings.value('DebugInfo/ForkIntoChild', False))
         
         self.evalHistory = []
         self.execHistory = []
@@ -871,27 +865,27 @@ class DebugUI(QObject):
         del self.envHistory[10:]
         
         Preferences.Prefs.settings.setValue('DebugInfo/ArgumentsHistory', 
-            QVariant(self.argvHistory))
+            self.argvHistory)
         Preferences.Prefs.settings.setValue('DebugInfo/WorkingDirectoryHistory', 
-            QVariant(self.wdHistory))
+            self.wdHistory)
         Preferences.Prefs.settings.setValue('DebugInfo/EnvironmentHistory', 
-            QVariant(self.envHistory))
+            self.envHistory)
         Preferences.Prefs.settings.setValue('DebugInfo/Exceptions', 
-            QVariant(self.excList))
+            self.excList)
         Preferences.Prefs.settings.setValue('DebugInfo/IgnoredExceptions', 
-            QVariant(self.excIgnoreList))
+            self.excIgnoreList)
         Preferences.Prefs.settings.setValue('DebugInfo/ReportExceptions', 
-            QVariant(self.exceptions))
+            self.exceptions)
         Preferences.Prefs.settings.setValue('DebugInfo/AutoClearShell', 
-            QVariant(self.autoClearShell))
+            self.autoClearShell)
         Preferences.Prefs.settings.setValue('DebugInfo/TracePython', 
-            QVariant(self.tracePython))
+            self.tracePython)
         Preferences.Prefs.settings.setValue('DebugInfo/AutoContinue', 
-            QVariant(self.autoContinue))
+            self.autoContinue)
         Preferences.Prefs.settings.setValue('DebugInfo/ForkAutomatically', 
-            QVariant(self.forkAutomatically))
+            self.forkAutomatically)
         Preferences.Prefs.settings.setValue('DebugInfo/ForkIntoChild', 
-            QVariant(self.forkIntoChild))
+            self.forkIntoChild)
         
     def shutdownServer(self):
         """
@@ -1305,7 +1299,7 @@ class DebugUI(QObject):
                         filename,
                         self.ui.maxMenuFilePathLen - len(bpSuffix)), 
                     bpSuffix))
-            act.setData(QVariant([QVariant(filename), QVariant(line)]))
+            act.setData([filename, line])
     
     def __breakpointSelected(self, act):
         """
@@ -1313,14 +1307,9 @@ class DebugUI(QObject):
         
         @param act reference to the action that triggered (QAction)
         """
-        try:
-            qvList = act.data().toPyObject()
-            filename = qvList[0]
-            line = qvList[1]
-        except AttributeError:
-            qvList = act.data().toList()
-            filename = qvList[0].toString()
-            line = qvList[1].toInt()[0]
+        qvList = act.data()
+        filename = qvList[0]
+        line = qvList[1]
         self.viewmanager.openSourceFile(filename, line)
         
     def __compileChangedProjectFiles(self):

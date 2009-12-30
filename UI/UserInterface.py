@@ -2937,11 +2937,11 @@ class UserInterface(QMainWindow):
         self.__menus["tools"].addMenu(self.toolGroupsMenu)
         act = self.__menus["tools"].addAction(self.trUtf8("Configure Tool Groups ..."),
             self.__toolGroupsConfiguration)
-        act.setData(QVariant(-1))
+        act.setData(-1)
         act = self.__menus["tools"].addAction(\
             self.trUtf8("Configure current Tool Group ..."), 
             self.__toolsConfiguration)
-        act.setData(QVariant(-2))
+        act.setData(-2)
         self.__menus["tools"].addSeparator()
         
         if self.currentToolGroup == -1:
@@ -2973,7 +2973,7 @@ class UserInterface(QMainWindow):
                     else:
                         act = self.__menus["tools"].addAction(\
                             UI.PixmapCache.getIcon(tool['icon']), tool['menutext'])
-                        act.setData(QVariant(idx))
+                        act.setData(idx)
                     idx += 1
             except IndexError:
                 # the current tool group might have been deleted
@@ -2987,7 +2987,7 @@ class UserInterface(QMainWindow):
         
         # add the default entry
         act = self.toolGroupsMenu.addAction(self.trUtf8("&Builtin Tools"))
-        act.setData(QVariant(-1))
+        act.setData(-1)
         if self.currentToolGroup == -1:
             font = act.font()
             font.setBold(True)
@@ -2995,7 +2995,7 @@ class UserInterface(QMainWindow):
         
         # add the plugins entry
         act = self.toolGroupsMenu.addAction(self.trUtf8("&Plugin Tools"))
-        act.setData(QVariant(-2))
+        act.setData(-2)
         if self.currentToolGroup == -2:
             font = act.font()
             font.setBold(True)
@@ -3005,7 +3005,7 @@ class UserInterface(QMainWindow):
         idx = 0
         for toolGroup in self.toolGroups:
             act = self.toolGroupsMenu.addAction(toolGroup[0])
-            act.setData(QVariant(idx))
+            act.setData(idx)
             if self.currentToolGroup == idx:
                 font = act.font()
                 font.setBold(True)
@@ -3019,8 +3019,8 @@ class UserInterface(QMainWindow):
         @param act reference to the action that was triggered (QAction)
         """
         self.toolGroupsMenuTriggered = True
-        idx, ok = act.data().toInt()
-        if ok:
+        idx = act.data()
+        if idx is not None:
             self.currentToolGroup = idx
         
     def __showWindowMenu(self):
@@ -3127,7 +3127,7 @@ class UserInterface(QMainWindow):
         for text, tb, name in tbList:
             act = self.__menus["toolbars"].addAction(text)
             act.setCheckable(True)
-            act.setData(QVariant(name))
+            act.setData(name)
             act.setChecked(not tb.isHidden())
         self.__menus["toolbars"].addSeparator()
         self.__toolbarsShowAllAct = \
@@ -3152,7 +3152,7 @@ class UserInterface(QMainWindow):
             if self.__menus["toolbars"].isTearOffMenuVisible():
                 self.__showToolbarsMenu()
         else:
-            name = act.data().toString()
+            name = act.data()
             if name:
                 tb = self.__toolbars[name][1]
                 if act.isChecked():
@@ -4170,8 +4170,8 @@ class UserInterface(QMainWindow):
             # it was a built in or plugin tool, don't handle it here
             return
         
-        idx, ok = act.data().toInt()
-        if ok and idx >= 0:
+        idx = act.data()
+        if idx is not None and idx >= 0:
             tool = self.toolGroups[self.currentToolGroup][1][idx]
             self.__startToolProcess(tool)
     
@@ -5195,7 +5195,7 @@ class UserInterface(QMainWindow):
                     return
                 elif period in [2, 3, 4]:
                     lastCheck = Preferences.Prefs.settings.value(\
-                        "Updates/LastCheckDate", QVariant(QDate(1970, 1, 1))).toDate()
+                        "Updates/LastCheckDate", QDate(1970, 1, 1))
                     if lastCheck.isValid():
                         now = QDate.currentDate()
                         if period == 2 and lastCheck.day() == now.day():
@@ -5301,7 +5301,7 @@ class UserInterface(QMainWindow):
             self.__showAvailableVersionInfos(versions)
         else:
             Preferences.Prefs.settings.setValue(\
-                "Updates/LastCheckDate", QVariant(QDate.currentDate()))
+                "Updates/LastCheckDate", QDate.currentDate())
             self.__versionCheckResult(versions)
         
     def __updateVersionsUrls(self, versions):

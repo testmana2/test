@@ -341,27 +341,20 @@ class HistoryManager(QWebHistoryInterface):
             return
         
         history = []
-        historyStream = QDataStream(historyFile)
         
         # double check, that the history file is sorted as it is read
         needToSort = False
         lastInsertedItem = HistoryEntry()
-        data = QByteArray()
-        stream = QDataStream()
-        buffer = QBuffer()
-        stream.setDevice(buffer)
-        while not historyFile.atEnd():
-            historyStream >> data
-            buffer.close()
-            buffer.setBuffer(data)
-            buffer.open(QIODevice.ReadOnly)
+        data = QByteArray(historyFile.readAll())
+        stream = QDataStream(data, QIODevice.ReadOnly)
+        while not stream.atEnd():
             ver = stream.readUInt32()
             if ver != HISTORY_VERSION:
                 continue
             itm = HistoryEntry()
-            stream.readString(itm.url)
-            stream.readString(itm.dateTime)
-            stream.readString(itm.title)
+            itm.url = stream.readString()
+            stream >> itm.dateTime
+            itm.title = stream.readString()
             
             if not itm.dateTime.isValid():
                 continue
@@ -395,7 +388,7 @@ class HistoryManager(QWebHistoryInterface):
         if not historyFile.exists():
             self.__lastSavedUrl = ""
         
-        saveAll = self.__lastSavedUrl = ""
+        saveAll = self.__lastSavedUrl == ""
         first = len(self.__history) - 1
         if not saveAll:
             # find the first one to save
@@ -406,29 +399,22 @@ class HistoryManager(QWebHistoryInterface):
         if first == len(self.__history) - 1:
             saveAll = True
         
-        # use a temporary file when saving everything
-        tempFile = QTemporaryFile()
         if saveAll:
-            opened = tempFile.open()
+            # use a temporary file when saving everything
+            f = QTemporaryFile()
+            opened = f.open()
         else:
-            opened = historyFile.open(QIODevice.Append)
+            f = historyFile
+            opened = f.open(QIODevice.Append)
         
         if not opened:
-            if saveAll:
-                f = tempFile
-            else:
-                f = historyFile
             QMessageBox.warning(None,
                 self.trUtf8("Saving History"),
                 self.trUtf8("""Unable to open history file <b>{0}</b>.<br/>"""
                             """Reason: {1}""")\
-                    .format(f.fileName, f.errorString()))
+                    .format(f.fileName(), f.errorString()))
             return
         
-        if saveAll:
-            historyStream = QDataStream(tempFile)
-        else:
-            historyStream = QDataStream(historyFile)
         for index in range(first, -1, -1):
             data = QByteArray()
             stream = QDataStream(data, QIODevice.WriteOnly)
@@ -437,24 +423,22 @@ class HistoryManager(QWebHistoryInterface):
             stream.writeString(itm.url)
             stream << itm.dateTime
             stream.writeString(itm.title)
-            historyStream << data
+            f.write(data)
         
+        f.close()
         if saveAll:
-            tempFile.close()
             if historyFile.exists() and not historyFile.remove():
                 QMessageBox.warning(None,
                     self.trUtf8("Saving History"),
                     self.trUtf8("""Error removing old history file <b>{0}</b>."""
                                 """<br/>Reason: {1}""")\
-                        .format(historyFile.fileName, historyFile.errorString()))
-            if not tempFile.copy(historyFile.fileName()):
+                        .format(historyFile.fileName(), historyFile.errorString()))
+            if not f.copy(historyFile.fileName()):
                 QMessageBox.warning(None,
                     self.trUtf8("Saving History"),
                     self.trUtf8("""Error moving new history file over old one """
                                 """(<b>{0}</b>).<br/>Reason: {1}""")\
                         .format(historyFile.fileName(), tempFile.errorString()))
-        else:
-            historyFile.close()
         
         try:
             self.__lastSavedUrl = self.__history[0].url

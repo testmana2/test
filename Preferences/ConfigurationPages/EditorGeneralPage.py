@@ -53,17 +53,17 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
         Preferences.setEditor("IndentWidth", 
             self.indentwidthSlider.value())
         Preferences.setEditor("IndentationGuides",
-            int(self.indentguidesCheckBox.isChecked()))
+            self.indentguidesCheckBox.isChecked())
         Preferences.setEditor("TabForIndentation", 
-            int(self.tabforindentationCheckBox.isChecked()))
+            self.tabforindentationCheckBox.isChecked())
         Preferences.setEditor("TabIndents", 
-            int(self.tabindentsCheckBox.isChecked()))
+            self.tabindentsCheckBox.isChecked())
         Preferences.setEditor("ConvertTabsOnLoad",
-            int(self.converttabsCheckBox.isChecked()))
+            self.converttabsCheckBox.isChecked())
         Preferences.setEditor("AutoIndentation", 
-            int(self.autoindentCheckBox.isChecked()))
+            self.autoindentCheckBox.isChecked())
         Preferences.setEditor("CommentColumn0", 
-            int(self.comment0CheckBox.isChecked()))
+            self.comment0CheckBox.isChecked())
         
     def on_tabforindentationCheckBox_toggled(self, checked):
         """

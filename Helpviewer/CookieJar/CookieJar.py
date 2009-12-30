@@ -128,19 +128,19 @@ class CookieJar(QNetworkCookieJar):
         
         # load cookies
         cookies = cookieSettings.value("Cookies")
-        if cookies.isValid():
-            cookiesList = self.loadCookies(cookies.toByteArray())
+        if cookies:
+            cookiesList = self.loadCookies(cookies)
         else:
             cookiesList = []
         self.setAllCookies(cookiesList)
         
         # load exceptions
-        self.__exceptionsBlock = \
-            cookieSettings.value("Exceptions/block").toStringList()
-        self.__exceptionsAllow = \
-            cookieSettings.value("Exceptions/allow").toStringList()
-        self.__exceptionsAllowForSession = \
-            cookieSettings.value("Exceptions/allowForSession").toStringList()
+        self.__exceptionsBlock = Preferences.toList(
+            cookieSettings.value("Exceptions/block"))
+        self.__exceptionsAllow = Preferences.toList(
+            cookieSettings.value("Exceptions/allow"))
+        self.__exceptionsAllowForSession = Preferences.toList(
+            cookieSettings.value("Exceptions/allowForSession"))
         self.__exceptionsBlock.sort()
         self.__exceptionsAllow.sort()
         self.__exceptionsAllowForSession.sort()
@@ -172,14 +172,11 @@ class CookieJar(QNetworkCookieJar):
                 del cookiesList[index]
         cookies = self.saveCookies(cookiesList)
         
-        cookieSettings.setValue("Cookies", 
-                                QVariant(cookies))
-        cookieSettings.setValue("Exceptions/block", 
-                                QVariant(self.__exceptionsBlock))
-        cookieSettings.setValue("Exceptions/allow", 
-                                QVariant(self.__exceptionsAllow))
+        cookieSettings.setValue("Cookies", cookies)
+        cookieSettings.setValue("Exceptions/block", self.__exceptionsBlock)
+        cookieSettings.setValue("Exceptions/allow", self.__exceptionsAllow)
         cookieSettings.setValue("Exceptions/allowForSession", 
-                                QVariant(self.__exceptionsAllowForSession))
+                                self.__exceptionsAllowForSession)
         
         Preferences.setHelp("AcceptCookies", self.__acceptCookies)
         Preferences.setHelp("KeepCookiesUntil", self.__keepCookies)

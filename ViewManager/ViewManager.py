@@ -128,8 +128,8 @@ class ViewManager(QObject):
         
         self.bookmarked = []
         bs = Preferences.Prefs.settings.value("Bookmarked/Sources")
-        if bs.isValid():
-            self.bookmarked = bs.toStringList()
+        if bs is not None:
+            self.bookmarked = bs
         
         # initialize the autosave timer
         self.autosaveInterval = Preferences.getEditor("AutosaveInterval")
@@ -166,8 +166,8 @@ class ViewManager(QObject):
         self.recent = []
         Preferences.Prefs.rsettings.sync()
         rs = Preferences.Prefs.rsettings.value(recentNameFiles)
-        if rs.isValid():
-            for f in rs.toStringList():
+        if rs is not None:
+            for f in rs:
                 if QFileInfo(f).exists():
                     self.recent.append(f)
         
@@ -175,7 +175,7 @@ class ViewManager(QObject):
         """
         Private method to save the list of recently opened filenames.
         """
-        Preferences.Prefs.rsettings.setValue(recentNameFiles, QVariant(self.recent))
+        Preferences.Prefs.rsettings.setValue(recentNameFiles, self.recent)
         Preferences.Prefs.rsettings.sync()
         
     def getMostRecent(self):
@@ -701,7 +701,7 @@ class ViewManager(QObject):
         exporters.sort()
         for exporter in exporters:
             act = menu.addAction(supportedExporters[exporter])
-            act.setData(QVariant(exporter))
+            act.setData(exporter)
         
         self.connect(menu, SIGNAL('triggered(QAction *)'), self.__exportMenuTriggered)
         
@@ -3475,7 +3475,7 @@ class ViewManager(QObject):
         """
         aw = self.activeWindow()
         if aw:
-            exporterFormat = act.data().toString()
+            exporterFormat = act.data()
             aw.exportFile(exporterFormat)
         
     def newEditor(self):
@@ -3540,7 +3540,7 @@ class ViewManager(QObject):
             act = self.recentMenu.addAction(\
                 formatStr % (idx, 
                     Utilities.compactPath(rs, self.ui.maxMenuFilePathLen)))
-            act.setData(QVariant(rs))
+            act.setData(rs)
             act.setEnabled(QFileInfo(rs).exists())
             idx += 1
         
@@ -3554,7 +3554,7 @@ class ViewManager(QObject):
         
         @param act reference to the action that triggered (QAction)
         """
-        file = act.data().toString()
+        file = act.data()
         if file:
             self.openSourceFile(file)
         
@@ -3573,7 +3573,7 @@ class ViewManager(QObject):
         for rp in self.bookmarked:
             act = self.bookmarkedMenu.addAction(\
                 Utilities.compactPath(rp, self.ui.maxMenuFilePathLen))
-            act.setData(QVariant(rp))
+            act.setData(rp)
             act.setEnabled(QFileInfo(rp).exists())
         
         if len(self.bookmarked):
@@ -4282,7 +4282,7 @@ class ViewManager(QObject):
                             filename,
                             self.ui.maxMenuFilePathLen - len(bmSuffix)), 
                         bmSuffix))
-                act.setData(QVariant([QVariant(filename), QVariant(bookmark)]))
+                act.setData([filename, bookmark])
         
     def __bookmarkSelected(self, act):
         """
@@ -4290,14 +4290,9 @@ class ViewManager(QObject):
         
         @param act reference to the action that triggered (QAction)
         """
-        try:
-            qvList = act.data().toPyObject()
-            filename = qvList[0]
-            line = qvList[1]
-        except AttributeError:
-            qvList = act.data().toList()
-            filename = qvList[0].toString()
-            line = qvList[1].toInt()[0]
+        bmList = act.data()
+        filename = bmList[0]
+        line = bmList[1]
         self.openSourceFile(filename, line)
         
     def __bookmarkToggled(self, editor):
@@ -4452,8 +4447,7 @@ class ViewManager(QObject):
         self.__saveRecent()
         
         # save the list of recently opened projects
-        Preferences.Prefs.settings.setValue('Bookmarked/Sources', 
-                QVariant(self.bookmarked))
+        Preferences.Prefs.settings.setValue('Bookmarked/Sources', self.bookmarked)
         
         if len(self.editors):
             return False

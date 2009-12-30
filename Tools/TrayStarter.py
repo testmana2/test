@@ -10,7 +10,7 @@ Module implementing a starter for the system tray.
 import sys
 import os
 
-from PyQt4.QtCore import SIGNAL, QProcess, QSettings, QFileInfo, QVariant
+from PyQt4.QtCore import SIGNAL, QProcess, QSettings, QFileInfo
 from PyQt4.QtGui  import QSystemTrayIcon, QMenu, qApp, QCursor, QMessageBox
 
 import Globals
@@ -131,8 +131,8 @@ class TrayStarter(QSystemTrayIcon):
         Private method to load the recently opened project filenames.
         """
         rp = self.rsettings.value(Globals.recentNameProject)
-        if rp.isValid():
-            for f in rp.toStringList():
+        if rp is not None:
+            for f in rp:
                 if QFileInfo(f).exists():
                     self.recentProjects.append(f)
     
@@ -141,8 +141,8 @@ class TrayStarter(QSystemTrayIcon):
         Private method to load the recently opened multi project filenames.
         """
         rmp = self.rsettings.value(Globals.recentNameMultiProject)
-        if rmp.isValid():
-            for f in rmp.toStringList():
+        if rmp is not None:
+            for f in rmp:
                 if QFileInfo(f).exists():
                     self.recentMultiProjects.append(f)
     
@@ -151,8 +151,8 @@ class TrayStarter(QSystemTrayIcon):
         Private method to load the recently opened filenames.
         """
         rf = self.rsettings.value(Globals.recentNameFiles)
-        if rf.isValid():
-            for f in rf.toStringList():
+        if rf is not None:
+            for f in rf:
                 if QFileInfo(f).exists():
                     self.recentFiles.append(f)
     
@@ -319,7 +319,7 @@ class TrayStarter(QSystemTrayIcon):
             act = self.recentProjectsMenu.addAction(
                 formatStr % (idx, 
                     Utilities.compactPath(rp, self.maxMenuFilePathLen)))
-            act.setData(QVariant(rp))
+            act.setData(rp)
             idx += 1
     
     def __showRecentMultiProjectsMenu(self):
@@ -341,7 +341,7 @@ class TrayStarter(QSystemTrayIcon):
             act = self.recentMultiProjectsMenu.addAction(
                 formatStr % (idx, 
                     Utilities.compactPath(rmp, self.maxMenuFilePathLen)))
-            act.setData(QVariant(rmp))
+            act.setData(rmp)
             idx += 1
     
     def __showRecentFilesMenu(self):
@@ -363,7 +363,7 @@ class TrayStarter(QSystemTrayIcon):
             act = self.recentFilesMenu.addAction(\
                 formatStr % (idx, 
                     Utilities.compactPath(rf, self.maxMenuFilePathLen)))
-            act.setData(QVariant(rf))
+            act.setData(rf)
             idx += 1
     
     def __openRecent(self, act):
@@ -373,6 +373,6 @@ class TrayStarter(QSystemTrayIcon):
         
         @param act reference to the action that triggered (QAction)
         """
-        filename = act.data().toString()
+        filename = act.data()
         if filename:
             self.__startProc("eric4.py", filename)

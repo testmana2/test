@@ -77,11 +77,11 @@ class HistoryModel(QAbstractTableModel):
         @param section section number (integer)
         @param orientation header orientation (Qt.Orientation)
         @param role data role (integer)
-        @return header data (QVariant)
+        @return header data
         """
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             try:
-                return QVariant(self.__headers[section])
+                return self.__headers[section]
             except IndexError:
                 pass
         return QAbstractTableModel.headerData(self, section, orientation, role)
@@ -92,33 +92,33 @@ class HistoryModel(QAbstractTableModel):
         
         @param index index of history entry to get data for (QModelIndex)
         @param role data role (integer)
-        @return history entry data (QVariant)
+        @return history entry data
         """
         lst = self.__historyManager.history()
         if index.row() < 0 or index.row() > len(lst):
-            return QVariant()
+            return None
         
         itm = lst[index.row()]
         if role == self.DateTimeRole:
-            return QVariant(itm.dateTime)
+            return itm.dateTime
         elif role == self.DateRole:
-            return QVariant(itm.dateTime.date())
+            return itm.dateTime.date()
         elif role == self.UrlRole:
-            return QVariant(QUrl(itm.url))
+            return QUrl(itm.url)
         elif role == self.UrlStringRole:
-            return QVariant(itm.url)
+            return itm.url
         elif role == self.TitleRole:
-            return QVariant(itm.userTitle())
+            return itm.userTitle()
         elif role in [Qt.DisplayRole, Qt.EditRole]:
             if index.column() == 0:
-                return QVariant(itm.userTitle())
+                return itm.userTitle()
             elif index.column() == 1:
-                return QVariant(itm.url)
+                return itm.url
         elif role == Qt.DecorationRole:
             if index.column() == 0:
-                return QVariant(Helpviewer.HelpWindow.HelpWindow.icon(QUrl(itm.url)))
+                return Helpviewer.HelpWindow.HelpWindow.icon(QUrl(itm.url))
         
-        return QVariant()
+        return None
     
     def columnCount(self, parent = QModelIndex()):
         """

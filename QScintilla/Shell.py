@@ -143,7 +143,7 @@ class Shell(QsciScintillaCompat):
         self.clientLanguages.sort()
         for language in self.clientLanguages:
             act = self.lmenu.addAction(language)
-            act.setData(QVariant(language))
+            act.setData(language)
         self.connect(self.lmenu, SIGNAL("triggered(QAction *)"), self.__startDebugClient)
         
         # Create the history context menu
@@ -241,9 +241,8 @@ class Shell(QsciScintillaCompat):
         
         # get the font for style 0 and set it as the default font
         key = 'Scintilla/%s/style0/font' % self.lexer_.language()
-        fontVariant = Preferences.Prefs.settings.value(key)
-        if fontVariant.isValid():
-            fdesc = fontVariant.toStringList()
+        fdesc = Preferences.Prefs.settings.value(key)
+        if fdesc is not None:
             font = QFont(fdesc[0], int(fdesc[1]))
             self.lexer_.setDefaultFont(font)
         self.setLexer(self.lexer_)
@@ -424,9 +423,8 @@ class Shell(QsciScintillaCompat):
         
         @param clientType type of the debug client (string)
         """
-        hVariant = Preferences.Prefs.settings.value("Shell/Histories/" + clientType)
-        if hVariant.isValid():
-            hl = hVariant.toStringList()
+        hl = Preferences.Prefs.settings.value("Shell/Histories/" + clientType)
+        if hl is not None:
             self.historyLists[clientType] = hl[-self.maxHistoryEntries:]
         else:
             self.historyLists[clientType] = []
@@ -447,7 +445,7 @@ class Shell(QsciScintillaCompat):
         """
         if self.historyLists.has_key(clientType):
             Preferences.Prefs.settings.setValue(\
-                "Shell/Histories/" + clientType, QVariant(self.historyLists[clientType]))
+                "Shell/Histories/" + clientType, self.historyLists[clientType])
         
     def getHistory(self, clientType):
         """
@@ -1237,7 +1235,7 @@ class Shell(QsciScintillaCompat):
         
         @param action context menu action that was triggered (QAction)
         """
-        language = action.data().toString()
+        language = action.data()
         self.dbs.startClient(False, language)
         
     def handlePreferencesChanged(self):

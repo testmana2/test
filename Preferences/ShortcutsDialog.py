@@ -92,12 +92,12 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
             [action.iconText(), action.shortcut().toString(), 
              action.alternateShortcut().toString()])
         itm.setIcon(0, action.icon())
-        itm.setData(0, self.objectNameRole, QVariant(action.objectName()))
-        itm.setData(0, self.noCheckRole, QVariant(noCheck))
+        itm.setData(0, self.objectNameRole, action.objectName())
+        itm.setData(0, self.noCheckRole, noCheck)
         if objectType:
-            itm.setData(0, self.objectTypeRole, QVariant(objectType))
+            itm.setData(0, self.objectTypeRole, objectType)
         else:
-            itm.setData(0, self.objectTypeRole, QVariant())
+            itm.setData(0, self.objectTypeRole, None)
         
     def populate(self):
         """
@@ -195,8 +195,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         self.__editTopItem = itm.parent()
         
         self.shortcutDialog.setKeys(QKeySequence(itm.text(1)), QKeySequence(itm.text(2)), 
-            itm.data(0, self.noCheckRole).toBool(), 
-            itm.data(0, self.objectTypeRole).toString())
+            itm.data(0, self.noCheckRole), 
+            itm.data(0, self.objectTypeRole))
         self.shortcutDialog.show()
         
     def on_shortcutsList_itemClicked(self, itm, column):
@@ -220,9 +220,9 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         """
         if column != 0:
             keystr = itm.text(column).title()
-            if not itm.data(0, self.noCheckRole).toBool() and \
+            if not itm.data(0, self.noCheckRole) and \
                not self.__checkShortcut(QKeySequence(keystr), 
-                                        itm.data(0, self.objectTypeRole).toString(), 
+                                        itm.data(0, self.objectTypeRole), 
                                         itm.parent()):
                 itm.setText(column, "")
             else:
@@ -273,11 +273,11 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                 itm = topItem.child(index)
                 
                 # 1. shall a check be performed?
-                if itm.data(0, self.noCheckRole).toBool():
+                if itm.data(0, self.noCheckRole):
                     continue
                 
                 # 2. check object type
-                itmObjectType = itm.data(0, self.objectTypeRole).toString()
+                itmObjectType = itm.data(0, self.objectTypeRole)
                 if itmObjectType and \
                    itmObjectType == objectType and \
                    topItem != origTopItem:
@@ -357,8 +357,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         """
         for index in range(category.childCount()):
             itm = category.child(index)
-##            txt = itm.text(4) # this is one more due to empty last section
-            txt = itm.data(0, self.objectNameRole).toString()
+            txt = itm.data(0, self.objectNameRole)
             for act in actions:
                 if txt == act.objectName():
                     act.setShortcut(QKeySequence(itm.text(1)))

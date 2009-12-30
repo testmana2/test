@@ -20,6 +20,7 @@ import logging
 
 import sip
 sip.setapi("QString", 2)
+sip.setapi("QVariant", 2)
 
 from PyQt4.QtCore import QTextCodec, SIGNAL, SLOT, qWarning, \
     QLibraryInfo, QTimer

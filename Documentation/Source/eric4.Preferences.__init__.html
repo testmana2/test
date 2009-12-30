@@ -27,10 +27,9 @@ Package implementing the preferences interface.
 The preferences interface consists of a class, which defines the default
 values for all configuration items and stores the actual values. These
 values are read and written to the eric4 preferences file by module
-functions. On Windows the data is located in the registry, everywhere 
-else it is stored in a file in a subdirectory of the users home directory.
-The individual configuration data is accessed by accessor functions defined
-on the module level. The module is simply imported wherever it is needed
+functions. The data is stored in a file in a subdirectory of the users home 
+directory. The individual configuration data is accessed by accessor functions 
+defined on the module level. The module is simply imported wherever it is needed
 with the statement 'import Preferences'. Do not use 'from Preferences import *'
 to import it.
 </p>
@@ -299,6 +298,12 @@ to import it.
 </tr><tr>
 <td><a href="#syncPreferences">syncPreferences</a></td>
 <td>Module function to sync the preferences to disk.</td>
+</tr><tr>
+<td><a href="#toBool">toBool</a></td>
+<td>Module function to convert a value to bool.</td>
+</tr><tr>
+<td><a href="#toList">toList</a></td>
+<td>Module function to convert a value to a list.</td>
 </tr>
 </table>
 <hr /><hr />
@@ -1892,6 +1897,42 @@ flag indicating a reset of the layout (boolean)
 <dt><i>prefClass</i></dt>
 <dd>
 preferences class used as the storage area
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="toBool" ID="toBool"></a>
+<h2>toBool</h2>
+<b>toBool</b>(<i>value</i>)
+<p>
+    Module function to convert a value to bool.
+</p><dl>
+<dt><i>value</i></dt>
+<dd>
+value to be converted
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+converted data
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="toList" ID="toList"></a>
+<h2>toList</h2>
+<b>toList</b>(<i>value</i>)
+<p>
+    Module function to convert a value to a list.
+</p><dl>
+<dt><i>value</i></dt>
+<dd>
+value to be converted
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+converted data
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

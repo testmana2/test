@@ -64,17 +64,17 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         Public slot to save the VCS configuration.
         """
         Preferences.setVCS("AutoClose",
-            int(self.vcsAutoCloseCheckBox.isChecked()))
+            self.vcsAutoCloseCheckBox.isChecked())
         Preferences.setVCS("AutoSaveFiles",
-            int(self.vcsAutoSaveCheckBox.isChecked()))
+            self.vcsAutoSaveCheckBox.isChecked())
         Preferences.setVCS("AutoSaveProject",
-            int(self.vcsAutoSaveProjectCheckBox.isChecked()))
+            self.vcsAutoSaveProjectCheckBox.isChecked())
         Preferences.setVCS("StatusMonitorInterval",
             self.vcsStatusMonitorIntervalSpinBox.value())
         Preferences.setVCS("MonitorLocalStatus", 
-            int(self.vcsMonitorLocalStatusCheckBox.isChecked()))
+            self.vcsMonitorLocalStatusCheckBox.isChecked())
         Preferences.setVCS("AutoUpdate", 
-            int(self.autoUpdateCheckBox.isChecked()))
+            self.autoUpdateCheckBox.isChecked())
     
         for key in self.projectBrowserColours.keys():
             Preferences.setProjectBrowserColour(key, self.projectBrowserColours[key])

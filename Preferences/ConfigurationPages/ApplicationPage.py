@@ -9,7 +9,7 @@ Module implementing the Application configuration page.
 
 import os
 
-from PyQt4.QtCore import QVariant, pyqtSlot
+from PyQt4.QtCore import pyqtSlot
 
 from ConfigurationPageBase import ConfigurationPageBase
 from Ui_ApplicationPage import Ui_ApplicationPage
@@ -69,9 +69,9 @@ class ApplicationPage(ConfigurationPageBase, Ui_ApplicationPage):
         Public slot to save the Application configuration.
         """
         Preferences.setUI("SingleApplicationMode",
-            int(self.singleApplicationCheckBox.isChecked()))
+            self.singleApplicationCheckBox.isChecked())
         Preferences.setUI("ShowSplash",
-            int(self.splashScreenCheckBox.isChecked()))
+            self.splashScreenCheckBox.isChecked())
         
         if self.noOpenRadioButton.isChecked():
             openOnStartup = 0
@@ -98,10 +98,10 @@ class ApplicationPage(ConfigurationPageBase, Ui_ApplicationPage):
         Preferences.setUI("PerformVersionCheck", period)
         
         Preferences.setUser("UseSystemEmailClient", 
-            int(self.systemEmailClientCheckBox.isChecked()))
+            self.systemEmailClientCheckBox.isChecked())
         
         Preferences.setUI("CheckErrorLog", 
-            int(self.errorlogCheckBox.isChecked()))
+            self.errorlogCheckBox.isChecked())
     
 def create(dlg):
     """

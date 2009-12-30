@@ -148,7 +148,7 @@ class MultiProjectBrowser(QListWidget):
             if itm is None:
                 return
         
-        filename = itm.data(Qt.UserRole).toString()
+        filename = itm.data(Qt.UserRole)
         if filename:
             self.multiProject.openProject(filename)
     
@@ -178,7 +178,7 @@ class MultiProjectBrowser(QListWidget):
         else:
             itm.setIcon(UI.PixmapCache.getIcon("empty.png"))
         itm.setToolTip(project['file'])
-        itm.setData(Qt.UserRole, QVariant(project['file']))
+        itm.setData(Qt.UserRole, project['file'])
     
     def __findProjectItem(self, project):
         """
@@ -190,7 +190,7 @@ class MultiProjectBrowser(QListWidget):
         row = 0
         while row < self.count():
             itm = self.item(row)
-            data = itm.data(Qt.UserRole).toString()
+            data = itm.data(Qt.UserRole)
             if data == project['file']:
                 return row
             row += 1
@@ -203,7 +203,7 @@ class MultiProjectBrowser(QListWidget):
         """
         itm = self.currentItem()
         if itm is not None:
-            filename = itm.data(Qt.UserRole).toString()
+            filename = itm.data(Qt.UserRole)
             if filename:
                 self.multiProject.removeProject(filename)
     
@@ -213,7 +213,7 @@ class MultiProjectBrowser(QListWidget):
         """
         itm = self.currentItem()
         if itm is not None:
-            filename = itm.data(Qt.UserRole).toString()
+            filename = itm.data(Qt.UserRole)
             if filename:
                 project = self.multiProject.getProject(filename)
                 if project is not None:

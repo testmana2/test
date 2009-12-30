@@ -39,11 +39,11 @@ class EditorAutocompletionPage(ConfigurationPageBase, Ui_EditorAutocompletionPag
         Public slot to save the Editor Autocompletion configuration.
         """
         Preferences.setEditor("AutoCompletionEnabled",
-            int(self.acEnabledCheckBox.isChecked()))
+            self.acEnabledCheckBox.isChecked())
         Preferences.setEditor("AutoCompletionCaseSensitivity",
-            int(self.acCaseSensitivityCheckBox.isChecked()))
+            self.acCaseSensitivityCheckBox.isChecked())
         Preferences.setEditor("AutoCompletionReplaceWord",
-            int(self.acReplaceWordCheckBox.isChecked()))
+            self.acReplaceWordCheckBox.isChecked())
         Preferences.setEditor("AutoCompletionThreshold",
             self.acThresholdSlider.value())
     

@@ -10,7 +10,6 @@ Module implementing the Subversion version control plugin.
 import os
 import sys
 
-from PyQt4.QtCore import QVariant
 from PyQt4.QtGui import QApplication
 
 from E4Gui.E4Application import e4App
@@ -144,7 +143,7 @@ class VcsSubversionPlugin(object):
         self.__ui = ui
         
         self.__subversionDefaults = {
-            "StopLogOnCopy"  : 1, 
+            "StopLogOnCopy"  : True, 
             "LogLimit"       : 100, 
             "CommitMessages" : 20, 
         }
@@ -191,11 +190,17 @@ class VcsSubversionPlugin(object):
         @param prefClass preferences class used as the storage area
         @return the requested refactoring setting
         """
-        if key in ["Commits"]:
-            return Preferences.Prefs.settings.value("Subversion/" + key).toStringList()
-        else:
-            return Preferences.Prefs.settings.value("Subversion/" + key,
-                QVariant(self.__subversionDefaults[key])).toInt()[0]
+        if key in ["StopLogOnCopy"]:
+            return Preferences.toBool(Preferences.Prefs.settings.value(
+                "Subversion/" + key, self.__subversionDefaults[key]))
+        elif key in ["LogLimit", "CommitMessages"]:
+            return int(Preferences.Prefs.settings.value("Subversion/" + key,
+                self.__subversionDefaults[key]))
+        elif key in ["Commits"]:
+            return Preferences.toList(Preferences.Prefs.settings.value(
+                "Subversion/" + key))
+        else: 
+            return Preferences.Prefs.settings.value("Subversion/" + key)
     
     def setPreferences(self, key, value):
         """
@@ -205,7 +210,7 @@ class VcsSubversionPlugin(object):
         @param value the value to be set
         @param prefClass preferences class used as the storage area
         """
-        Preferences.Prefs.settings.setValue("Subversion/" + key, QVariant(value))
+        Preferences.Prefs.settings.setValue("Subversion/" + key, value)
     
     def getServersPath(self):
         """

@@ -155,9 +155,8 @@ class HelpWebPage(QWebPage):
         
         @param request reference to the network request object (QNetworkRequest)
         """
-        request.setAttribute(QNetworkRequest.User + 100, QVariant(self))
-        request.setAttribute(QNetworkRequest.User + 101, 
-                             QVariant(self.__lastRequestType))
+        request.setAttribute(QNetworkRequest.User + 100, self)
+        request.setAttribute(QNetworkRequest.User + 101, self.__lastRequestType)
     
     def pageAttributeId(self):
         """
@@ -277,13 +276,12 @@ class HelpBrowser(QWebView):
         """
         resources = []
         
-        lst = self.page().mainFrame().evaluateJavaScript(fetchLinks_js).toList()
-        for variant in lst:
-            m = variant.toMap()
-            rel = m["rel"].toString()
-            type_ = m["type"].toString()
-            href = m["href"].toString()
-            title =  m["title"].toString()
+        lst = self.page().mainFrame().evaluateJavaScript(fetchLinks_js)
+        for m in lst:
+            rel = m["rel"]
+            type_ = m["type"]
+            href = m["href"]
+            title =  m["title"]
             
             if href == "" or type_ == "":
                 continue
@@ -362,7 +360,7 @@ class HelpBrowser(QWebView):
             return
         elif name.scheme() == "javascript":
             scriptSource = name.toString()[11:]
-            res = self.page().mainFrame().evaluateJavaScript(scriptSource).toString()
+            res = self.page().mainFrame().evaluateJavaScript(scriptSource)
             if res:
                 self.setHtml(res)
             return
@@ -554,11 +552,11 @@ class HelpBrowser(QWebView):
         if not hit.linkUrl().isEmpty():
             act = menu.addAction(self.trUtf8("Open Link in New Tab\tCtrl+LMB"),
                 self.__openLinkInNewTab)
-            act.setData(QVariant(hit.linkUrl()))
+            act.setData(hit.linkUrl())
             menu.addSeparator()
             menu.addAction(self.trUtf8("Save Lin&k"), self.__downloadLink)
             act = menu.addAction(self.trUtf8("Bookmark this Link"), self.__bookmarkLink)
-            act.setData(QVariant(hit.linkUrl()))
+            act.setData(hit.linkUrl())
             menu.addSeparator()
             menu.addAction(self.trUtf8("Copy Link to Clipboard"), self.__copyLink)
         
@@ -567,16 +565,16 @@ class HelpBrowser(QWebView):
                 menu.addSeparator()
             act = menu.addAction(self.trUtf8("Open Image in New Tab"), 
                 self.__openLinkInNewTab)
-            act.setData(QVariant(hit.imageUrl()))
+            act.setData(hit.imageUrl())
             menu.addSeparator()
             menu.addAction(self.trUtf8("Save Image"), self.__downloadImage)
             menu.addAction(self.trUtf8("Copy Image to Clipboard"), self.__copyImage)
             act = menu.addAction(self.trUtf8("Copy Image Location to Clipboard"), 
                 self.__copyImageLocation)
-            act.setData(QVariant(hit.imageUrl().toString()))
+            act.setData(hit.imageUrl().toString())
             menu.addSeparator()
             act = menu.addAction(self.trUtf8("Block Image"), self.__blockImage)
-            act.setData(QVariant(hit.imageUrl().toString()))
+            act.setData(hit.imageUrl().toString())
         
         if not menu.isEmpty():
             menu.addSeparator()
@@ -606,7 +604,7 @@ class HelpBrowser(QWebView):
                 engine = HelpWebSearchWidget.openSearchManager().engine(engineName)
                 act = OpenSearchEngineAction(engine, self.__searchMenu)
                 self.__searchMenu.addAction(act)
-                act.setData(QVariant(engineName))
+                act.setData(engineName)
             self.connect(self.__searchMenu, SIGNAL("triggered(QAction *)"), 
                          self.__searchRequested)
             
@@ -620,7 +618,7 @@ class HelpBrowser(QWebView):
         Private method called by the context menu to open a link in a new window.
         """
         act = self.sender()
-        url = act.data().toUrl()
+        url = act.data()
         if url.isEmpty():
             return
         
@@ -634,7 +632,7 @@ class HelpBrowser(QWebView):
         Private slot to bookmark a link via the context menu.
         """
         act = self.sender()
-        url = act.data().toUrl()
+        url = act.data()
         if url.isEmpty():
             return
         
@@ -671,7 +669,7 @@ class HelpBrowser(QWebView):
         Private slot to copy an image location to the clipboard.
         """
         act = self.sender()
-        url = act.data().toString()
+        url = act.data()
         QApplication.clipboard().setText(url)
     
     def __blockImage(self):
@@ -679,7 +677,7 @@ class HelpBrowser(QWebView):
         Private slot to add a block rule for an image URL.
         """
         act = self.sender()
-        url = act.data().toString()
+        url = act.data()
         dlg = Helpviewer.HelpWindow.HelpWindow.adblockManager().showDialog()
         dlg.addCustomRule(url)
     
@@ -694,7 +692,7 @@ class HelpBrowser(QWebView):
         if not searchText:
             return
         
-        engineName = act.data().toString()
+        engineName = act.data()
         if engineName:
             engine = HelpWebSearchWidget.openSearchManager().engine(engineName)
             self.emit(SIGNAL("search(const QUrl &)"), engine.searchUrl(searchText))
@@ -852,7 +850,7 @@ class HelpBrowser(QWebView):
             if reply.url().isEmpty():
                 return
             header = reply.header(QNetworkRequest.ContentLengthHeader)
-            size, ok = header.toInt()
+            size = header
             if ok and size == 0:
                 return
             

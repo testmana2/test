@@ -129,10 +129,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if self.__repositoryMissing or current is None:
             return
         
-        self.urlEdit.setText(current.data(0, urlRole).toString())
+        self.urlEdit.setText(current.data(0, urlRole))
         self.descriptionEdit.setPlainText(
-            self.__formatDescription(current.data(0, descrRole).toStringList()))
-        self.authorEdit.setText(current.data(0, authorRole).toString())
+            self.__formatDescription(current.data(0, descrRole)))
+        self.authorEdit.setText(current.data(0, authorRole))
     
     def __selectedItems(self):
         """
@@ -206,10 +206,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__installButton.setEnabled(False)
         for itm in self.repositoryList.selectedItems():
             if itm not in [self.__stableItem, self.__unstableItem, self.__unknownItem]:
-                url = itm.data(0, urlRole).toString()
+                url = itm.data(0, urlRole)
                 filename = os.path.join(
                     Preferences.getPluginManager("DownloadPath"),
-                    itm.data(0, filenameRole).toString())
+                    itm.data(0, filenameRole))
                 self.__pluginsToDownload.append((url, filename))
         self.__downloadPlugin()
     
@@ -473,10 +473,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             parent = self.__unknownItem
         itm = QTreeWidgetItem(parent, [name, version, short])
         
-        itm.setData(0, urlRole, QVariant(url))
-        itm.setData(0, filenameRole, QVariant(filename))
-        itm.setData(0, authorRole, QVariant(author))
-        itm.setData(0, descrRole, QVariant(description))
+        itm.setData(0, urlRole, url)
+        itm.setData(0, filenameRole, filename)
+        itm.setData(0, authorRole, author)
+        itm.setData(0, descrRole, description)
         
         if self.__isUpToDate(filename, version):
             itm.setIcon(1, UI.PixmapCache.getIcon("empty.png"))

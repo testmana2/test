@@ -45,7 +45,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         Public slot to save the Viewmanager configuration.
         """
         Preferences.setPluginManager("ActivateExternal", 
-            int(self.activateExternalPluginsCheckBox.isChecked()))
+            self.activateExternalPluginsCheckBox.isChecked())
         Preferences.setPluginManager("DownloadPath", 
             self.downloadDirEdit.text())
     

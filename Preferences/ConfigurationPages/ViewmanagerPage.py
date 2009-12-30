@@ -9,7 +9,7 @@ Module implementing the Viewmanager configuration page.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot,  QVariant
+from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QPixmap
 
 from E4Gui.E4Application import e4App
@@ -41,8 +41,7 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         
         keys = sorted(self.viewmanagers.keys())
         for key in keys:
-            self.windowComboBox.addItem(self.trUtf8(self.viewmanagers[key]), 
-                                        QVariant(key))
+            self.windowComboBox.addItem(self.trUtf8(self.viewmanagers[key]), key)
         currentIndex = self.windowComboBox.findText(\
             self.trUtf8(self.viewmanagers[currentVm]))
         self.windowComboBox.setCurrentIndex(currentIndex)
@@ -62,12 +61,12 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         Public slot to save the Viewmanager configuration.
         """
         vm = \
-            self.windowComboBox.itemData(self.windowComboBox.currentIndex()).toString()
+            self.windowComboBox.itemData(self.windowComboBox.currentIndex())
         Preferences.setViewManager(vm)
         Preferences.setUI("TabViewManagerFilenameLength",
             self.filenameLengthSpinBox.value())
         Preferences.setUI("TabViewManagerFilenameOnly",
-            int(self.filenameOnlyCheckBox.isChecked()))
+            self.filenameOnlyCheckBox.isChecked())
         Preferences.setUI("RecentNumber", 
             self.recentFilesSpinBox.value())
         
@@ -79,7 +78,7 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         @param index index of selected workspace view type (integer)
         """
         workspace = \
-            self.windowComboBox.itemData(self.windowComboBox.currentIndex()).toString()
+            self.windowComboBox.itemData(self.windowComboBox.currentIndex())
         pixmap = self.pluginManager.getPluginPreviewPixmap("viewmanager", workspace)
         
         self.previewPixmap.setPixmap(pixmap)

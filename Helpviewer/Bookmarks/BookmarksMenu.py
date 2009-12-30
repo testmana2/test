@@ -62,12 +62,12 @@ class BookmarksMenu(E4ModelMenu):
         """
         if self._keyboardModifiers & Qt.ControlModifier:
             self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                      idx.data(BookmarksModel.UrlRole).toUrl(), 
-                      idx.data(Qt.DisplayRole).toString())
+                      idx.data(BookmarksModel.UrlRole), 
+                      idx.data(Qt.DisplayRole))
         else:
             self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                      idx.data(BookmarksModel.UrlRole).toUrl(), 
-                      idx.data(Qt.DisplayRole).toString())
+                      idx.data(BookmarksModel.UrlRole), 
+                      idx.data(Qt.DisplayRole))
         self.resetFlags()
     
     def postPopulated(self):
@@ -84,7 +84,7 @@ class BookmarksMenu(E4ModelMenu):
         for i in range(parent.model().rowCount(parent)):
             child = parent.model().index(i, 0, parent)
             
-            if child.data(BookmarksModel.TypeRole).toInt()[0] == BookmarkNode.Bookmark:
+            if child.data(BookmarksModel.TypeRole) == BookmarkNode.Bookmark:
                 hasBookmarks = True
                 break
         
@@ -110,17 +110,17 @@ class BookmarksMenu(E4ModelMenu):
         for i in range(parent.model().rowCount(parent)):
             child = parent.model().index(i, 0, parent)
             
-            if child.data(BookmarksModel.TypeRole).toInt()[0] != BookmarkNode.Bookmark:
+            if child.data(BookmarksModel.TypeRole) != BookmarkNode.Bookmark:
                 continue
             
             if i == 0:
                 self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"),
-                          child.data(BookmarksModel.UrlRole).toUrl(), 
-                          child.data(Qt.DisplayRole).toString())
+                          child.data(BookmarksModel.UrlRole), 
+                          child.data(Qt.DisplayRole))
             else:
                 self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"),
-                          child.data(BookmarksModel.UrlRole).toUrl(), 
-                          child.data(Qt.DisplayRole).toString())
+                          child.data(BookmarksModel.UrlRole), 
+                          child.data(Qt.DisplayRole))
     
     def __contextMenuRequested(self, pos):
         """
@@ -161,8 +161,8 @@ class BookmarksMenu(E4ModelMenu):
         idx = self.index(self.sender())
         
         self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                  idx.data(BookmarksModel.UrlRole).toUrl(), 
-                  idx.data(Qt.DisplayRole).toString())
+                  idx.data(BookmarksModel.UrlRole), 
+                  idx.data(Qt.DisplayRole))
     
     def __openBookmarkInNewTab(self):
         """
@@ -171,8 +171,8 @@ class BookmarksMenu(E4ModelMenu):
         idx = self.index(self.sender())
         
         self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                  idx.data(BookmarksModel.UrlRole).toUrl(), 
-                  idx.data(Qt.DisplayRole).toString())
+                  idx.data(BookmarksModel.UrlRole), 
+                  idx.data(Qt.DisplayRole))
     
     def __removeBookmark(self):
         """

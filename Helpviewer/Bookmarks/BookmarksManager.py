@@ -349,7 +349,7 @@ class BookmarksManager(QObject):
             
             webpage = QWebPage()
             webpage.mainFrame().setHtml(unicode(inFile.readAll()))
-            result = webpage.mainFrame().evaluateJavaScript(extract_js).toByteArray()
+            result = webpage.mainFrame().evaluateJavaScript(extract_js)
             buffer_ = QBuffer(result)
             buffer_.open(QIODevice.ReadOnly)
             importRootNode = reader.read(buffer_)
@@ -397,9 +397,7 @@ class BookmarksManager(QObject):
         bmNames = Preferences.Prefs.settings.value('Bookmarks/Names')
         bmFiles = Preferences.Prefs.settings.value('Bookmarks/Files')
         
-        if bmNames.isValid() and bmFiles.isValid():
-            bmNames = bmNames.toStringList()
-            bmFiles = bmFiles.toStringList()
+        if bmNames is not None and bmFiles is not None:
             if len(bmNames) == len(bmFiles):
                 convertedRootNode = BookmarkNode(BookmarkNode.Folder)
                 convertedRootNode.title = self.trUtf8("Converted {0}")\

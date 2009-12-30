@@ -336,17 +336,15 @@ class PasswordManager(QObject):
             return
         
         # check the request type
-        v = request.attribute(QNetworkRequest.User + 101)
-        if not v.isValid():
+        navType = request.attribute(QNetworkRequest.User + 101)
+        if navType is None:
             return
-        navType = v.toInt()[0]
         if navType != QWebPage.NavigationTypeFormSubmitted:
             return
         
         # determine the QWebPage
-        v = request.attribute(QNetworkRequest.User + 100)
-        webPage = v.toPyObject()
-        if webPage == NotImplemented or webPage is None:
+        webPage = request.attribute(QNetworkRequest.User + 100)
+        if  webPage is None:
             return
         
         # determine the requests content type
@@ -444,26 +442,24 @@ class PasswordManager(QObject):
                 args.add((key, value))
         
         # extract the forms
-        lst = webPage.mainFrame().evaluateJavaScript(parseForms_js).toList()
-        for formVariant in lst:
-            map = formVariant.toMap()
+        lst = webPage.mainFrame().evaluateJavaScript(parseForms_js)
+        for map in lst:
             formHasPasswords = False
-            formName = map["name"].toString()
-            formIndex = map["index"].toInt()[0]
-            elements = map["elements"].toList()
+            formName = map["name"]
+            formIndex = map["index"]
+            elements = map["elements"]
             formElements = set()
             formElementTypes = {}
             deadElements = set()
-            for element in elements:
-                elementMap = element.toMap()
-                name = elementMap["name"].toString()
-                value = elementMap["value"].toString()
-                type_ = elementMap["type"].toString()
+            for elementMap in elements:
+                name = elementMap["name"]
+                value = elementMap["value"]
+                type_ = elementMap["type"]
                 if type_ == "password":
                     formHasPasswords = True
                 t = (name, value)
                 try:
-                    if elementMap["autocomplete"].toString() == "off":
+                    if elementMap["autocomplete"] == "off":
                         deadElements.add(t)
                 except KeyError:
                     pass
@@ -544,17 +540,17 @@ class PasswordManager(QObject):
             value = element[1]
             
             disabled = page.mainFrame().evaluateJavaScript(
-                'document.forms[%s].elements["%s"].disabled' % (formName, name)).toBool()
+                'document.forms[%s].elements["%s"].disabled' % (formName, name))
             if disabled:
                 continue
             
             readOnly = page.mainFrame().evaluateJavaScript(
-                'document.forms[%s].elements["%s"].readOnly' % (formName, name)).toBool()
+                'document.forms[%s].elements["%s"].readOnly' % (formName, name))
             if readOnly:
                 continue
             
             type_ = page.mainFrame().evaluateJavaScript(
-                'document.forms[%s].elements["%s"].type' % (formName, name)).toString()
+                'document.forms[%s].elements["%s"].type' % (formName, name))
             if type_ == "" or \
                type_ in ["hidden", "reset", "submit"]:
                 continue

@@ -1398,13 +1398,13 @@ class HelpWindow(QMainWindow):
         """
         self.historyMenu.clear()
         self.historyMenu.addAction(self.clearHistoryAct)
-        self.clearHistoryAct.setData(QVariant(-1))
+        self.clearHistoryAct.setData(-1)
         self.historyMenu.addSeparator()
         idx = 0
         for hist in self.mHistory:
             act = self.historyMenu.addAction(
                 Utilities.compactPath(hist, self.maxMenuFilePathLen))
-            act.setData(QVariant(idx))
+            act.setData(idx)
             idx += 1
             act.setIcon(HelpWindow.__getWebIcon(QUrl(hist)))
         
@@ -2577,7 +2577,7 @@ class HelpWindow(QMainWindow):
         for index in range(self.tabWidget.count()):
             act = self.__navigationMenu.addAction(self.tabWidget.tabIcon(index), 
                                               self.tabWidget.tabText(index))
-            act.setData(QVariant(index))
+            act.setData(index)
         
     def __navigationMenuTriggered(self, act):
         """
@@ -2585,7 +2585,7 @@ class HelpWindow(QMainWindow):
         
         @param act reference to the selected action (QAction)
         """
-        index, ok = act.data().toInt()
+        index = act.data()
         if ok:
             self.tabWidget.setCurrentIndex(index)
         
@@ -2600,7 +2600,7 @@ class HelpWindow(QMainWindow):
         for index in range(len(backItems) - 1, -1, -1):
             item = backItems[index]
             act = QAction(self)
-            act.setData(QVariant(-1 * (index + 1)))
+            act.setData(-1 * (index + 1))
             icon = HelpWindow.__getWebIcon(item.url())
             act.setIcon(icon)
             act.setText(item.title())
@@ -2617,7 +2617,7 @@ class HelpWindow(QMainWindow):
         for index in range(len(forwardItems)):
             item = forwardItems[index]
             act = QAction(self)
-            act.setData(QVariant(index + 1))
+            act.setData(index + 1)
             icon = HelpWindow.__getWebIcon(item.url())
             act.setIcon(icon)
             act.setText(item.title())
@@ -2629,7 +2629,7 @@ class HelpWindow(QMainWindow):
         
         @param act reference to the action selected in the navigation menu (QAction)
         """
-        offset = act.data().toInt()[0]
+        offset = act.data()
         history = self.currentBrowser().history()
         historyCount = history.count()
         if offset < 0:

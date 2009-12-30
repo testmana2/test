@@ -41,8 +41,8 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         
         @param evt the event (QShowEvent)
         """
-        self.recentCommitMessages = \
-            Preferences.Prefs.settings.value('Subversion/Commits').toStringList()
+        self.recentCommitMessages = Preferences.toList(
+            Preferences.Prefs.settings.value('Subversion/Commits'))
         self.recentComboBox.clear()
         self.recentComboBox.addItem("")
         self.recentComboBox.addItems(self.recentCommitMessages)
@@ -62,10 +62,10 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
                 self.recentCommitMessages.remove(msg)
             self.recentCommitMessages.insert(0, msg)
             no = Preferences.Prefs.settings\
-                .value('Subversion/CommitMessages', QVariant(20)).toInt()[0]
+                .value('Subversion/CommitMessages', 20)
             del self.recentCommitMessages[no:]
             Preferences.Prefs.settings.setValue('Subversion/Commits', 
-                QVariant(self.recentCommitMessages))
+                self.recentCommitMessages)
         return msg
         
     def hasChangelists(self):

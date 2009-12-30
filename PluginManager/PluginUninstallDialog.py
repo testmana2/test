@@ -41,12 +41,12 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             self.__external = False
         
         self.pluginDirectoryCombo.addItem(self.trUtf8("User plugins directory"), 
-            QVariant(self.__pluginManager.getPluginDir("user")))
+            self.__pluginManager.getPluginDir("user"))
         
         globalDir = self.__pluginManager.getPluginDir("global")
         if globalDir is not None and os.access(globalDir, os.W_OK):
             self.pluginDirectoryCombo.addItem(self.trUtf8("Global plugins directory"), 
-                QVariant(globalDir))
+                globalDir)
     
     @pyqtSlot(int)
     def on_pluginDirectoryCombo_currentIndexChanged(self, index):
@@ -57,13 +57,13 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         @param index index of the selected item (integer)
         """
         pluginDirectory = self.pluginDirectoryCombo\
-                .itemData(index).toString()
+                .itemData(index)
         pluginNames = self.__pluginManager.getPluginModules(pluginDirectory)
         pluginNames.sort()
         self.pluginNameCombo.clear()
         for pluginName in pluginNames:
             fname = "%s.py" % os.path.join(pluginDirectory, pluginName)
-            self.pluginNameCombo.addItem(pluginName, QVariant(fname))
+            self.pluginNameCombo.addItem(pluginName, fname)
         self.buttonBox.button(QDialogButtonBox.Ok)\
             .setEnabled(self.pluginNameCombo.currentText() != "")
     
@@ -82,12 +82,10 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         @return flag indicating success (boolean)
         """
         pluginDirectory = self.pluginDirectoryCombo\
-                .itemData(self.pluginDirectoryCombo.currentIndex())\
-                .toString()
+                .itemData(self.pluginDirectoryCombo.currentIndex())
         pluginName = self.pluginNameCombo.currentText()
         pluginFile = self.pluginNameCombo\
-                .itemData(self.pluginNameCombo.currentIndex())\
-                .toString()
+                .itemData(self.pluginNameCombo.currentIndex())
         
         if not self.__pluginManager.unloadPlugin(pluginName, pluginDirectory):
             QMessageBox.critical(None,

@@ -57,29 +57,29 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
         Public slot to save the Project configuration.
         """
         Preferences.setProject("CompressedProjectFiles",
-            int(self.projectCompressedProjectFilesCheckBox.isChecked()))
+            self.projectCompressedProjectFilesCheckBox.isChecked())
         Preferences.setProject("SearchNewFilesRecursively",
-            int(self.projectSearchNewFilesRecursiveCheckBox.isChecked()))
+            self.projectSearchNewFilesRecursiveCheckBox.isChecked())
         Preferences.setProject("SearchNewFiles",
-            int(self.projectSearchNewFilesCheckBox.isChecked()))
+            self.projectSearchNewFilesCheckBox.isChecked())
         Preferences.setProject("AutoIncludeNewFiles",
-            int(self.projectAutoIncludeNewFilesCheckBox.isChecked()))
+            self.projectAutoIncludeNewFilesCheckBox.isChecked())
         Preferences.setProject("AutoLoadSession",
-            int(self.projectLoadSessionCheckBox.isChecked()))
+            self.projectLoadSessionCheckBox.isChecked())
         Preferences.setProject("AutoSaveSession",
-            int(self.projectSaveSessionCheckBox.isChecked()))
+            self.projectSaveSessionCheckBox.isChecked())
         Preferences.setProject("SessionAllBreakpoints",
-            int(self.projectSessionAllBpCheckBox.isChecked()))
+            self.projectSessionAllBpCheckBox.isChecked())
         Preferences.setProject("AutoLoadDbgProperties",
-            int(self.projectLoadDebugPropertiesCheckBox.isChecked()))
+            self.projectLoadDebugPropertiesCheckBox.isChecked())
         Preferences.setProject("AutoSaveDbgProperties",
-            int(self.projectSaveDebugPropertiesCheckBox.isChecked()))
+            self.projectSaveDebugPropertiesCheckBox.isChecked())
         Preferences.setProject("AutoCompileForms",
-            int(self.projectAutoCompileFormsCheckBox.isChecked()))
+            self.projectAutoCompileFormsCheckBox.isChecked())
         Preferences.setProject("AutoCompileResources",
-            int(self.projectAutoCompileResourcesCheckBox.isChecked()))
+            self.projectAutoCompileResourcesCheckBox.isChecked())
         Preferences.setProject("XMLTimestamp",
-            int(self.projectTimestampCheckBox.isChecked()))
+            self.projectTimestampCheckBox.isChecked())
         Preferences.setProject("RecentNumber", 
             self.projectRecentSpinBox.value())
     

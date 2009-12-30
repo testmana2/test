@@ -826,7 +826,7 @@ class WidgetWorkspace(QWorkspace):
         idx = 0
         for wid in self.widgets:
             act = windowMenu.addAction(wid.windowTitle())
-            act.setData(QVariant(idx))
+            act.setData(idx)
             act.setCheckable(True)
             act.setChecked(not wid.isHidden())
             idx = idx + 1
@@ -837,7 +837,7 @@ class WidgetWorkspace(QWorkspace):
         
         @param act reference to the action that triggered (QAction)
         """
-        idx, ok = act.data().toInt()
+        idx, ok = act.data()
         if ok:
             self.__toggleWidget(self.widgets[idx])
     

@@ -188,38 +188,38 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         model.insertRows(0, rec.count())
         model.insertColumns(0, 7)
         
-        model.setHeaderData(0, Qt.Horizontal, QVariant("Fieldname"))
-        model.setHeaderData(1, Qt.Horizontal, QVariant("Type"))
-        model.setHeaderData(2, Qt.Horizontal, QVariant("Length"))
-        model.setHeaderData(3, Qt.Horizontal, QVariant("Precision"))
-        model.setHeaderData(4, Qt.Horizontal, QVariant("Required"))
-        model.setHeaderData(5, Qt.Horizontal, QVariant("Auto Value"))
-        model.setHeaderData(6, Qt.Horizontal, QVariant("Default Value"))
+        model.setHeaderData(0, Qt.Horizontal, "Fieldname")
+        model.setHeaderData(1, Qt.Horizontal, "Type")
+        model.setHeaderData(2, Qt.Horizontal, "Length")
+        model.setHeaderData(3, Qt.Horizontal, "Precision")
+        model.setHeaderData(4, Qt.Horizontal, "Required")
+        model.setHeaderData(5, Qt.Horizontal, "Auto Value")
+        model.setHeaderData(6, Qt.Horizontal, "Default Value")
         
         for i in range(rec.count()):
             fld = rec.field(i)
-            model.setData(model.index(i, 0), QVariant(fld.name()))
+            model.setData(model.index(i, 0), fld.name())
             if fld.typeID() == -1:
                 model.setData(model.index(i, 1), 
-                              QVariant(QVariant.typeToName(fld.type())))
+                              QVariant.typeToName(fld.type()))
             else:
-                model.setData(model.index(i, 1), QVariant("%s1 (%s)" % (\
+                model.setData(model.index(i, 1), "%s1 (%s)" % (\
                                                  QVariant.typeToName(fld.type()), 
-                                                 fld.typeID())))
+                                                 fld.typeID()))
             if fld.length() < 0:
-                model.setData(model.index(i, 2), QVariant("?"))
+                model.setData(model.index(i, 2), "?")
             else:
-                model.setData(model.index(i, 2), QVariant(fld.length()))
+                model.setData(model.index(i, 2), fld.length())
             if fld.precision() < 0:
-                model.setData(model.index(i, 3), QVariant("?"))
+                model.setData(model.index(i, 3), "?")
             else:
-                model.setData(model.index(i, 3), QVariant(fld.precision()))
+                model.setData(model.index(i, 3), fld.precision())
             if fld.requiredStatus() == -1:
-                model.setData(model.index(i, 4), QVariant("?"))
+                model.setData(model.index(i, 4), "?")
             else:
-                model.setData(model.index(i, 4), QVariant(bool(fld.requiredStatus())))
-            model.setData(model.index(i, 5), QVariant(fld.isAutoValue()))
-            model.setData(model.index(i, 6), QVariant(fld.defaultValue()))
+                model.setData(model.index(i, 4), bool(fld.requiredStatus()))
+            model.setData(model.index(i, 5), fld.isAutoValue())
+            model.setData(model.index(i, 6), fld.defaultValue())
         
         self.table.setModel(model)
         self.table.setEditTriggers(QAbstractItemView.NoEditTriggers)

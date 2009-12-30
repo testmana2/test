@@ -55,13 +55,13 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         Preferences.setUser("Signature",
             self.signatureEdit.toPlainText())
         Preferences.setUser("MailServerAuthentication",
-            int(self.mailAuthenticationCheckBox.isChecked()))
+            self.mailAuthenticationCheckBox.isChecked())
         Preferences.setUser("MailServerUser",
             self.mailUserEdit.text())
         Preferences.setUser("MailServerPassword",
             self.mailPasswordEdit.text())
         Preferences.setUser("MailServerUseTLS",
-            int(self.useTlsCheckBox.isChecked()))
+            self.useTlsCheckBox.isChecked())
     
 def create(dlg):
     """

@@ -176,128 +176,128 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         """
         # All
         Preferences.setEditor("AllFoldCompact",
-            int(self.allFoldCompactCheckBox.isChecked()))
+            self.allFoldCompactCheckBox.isChecked())
         
         # Bash
         Preferences.setEditor("BashFoldComment",
-            int(self.foldBashCommentCheckBox.isChecked()))
+            self.foldBashCommentCheckBox.isChecked())
         
         # CMake
         Preferences.setEditor("CMakeFoldAtElse",
-            int(self.cmakeFoldAtElseCheckBox.isChecked()))
+            self.cmakeFoldAtElseCheckBox.isChecked())
         
         # C++
         Preferences.setEditor("CppFoldComment",
-            int(self.foldCppCommentCheckBox.isChecked()))
+            self.foldCppCommentCheckBox.isChecked())
         Preferences.setEditor("CppFoldPreprocessor",
-            int(self.foldCppPreprocessorCheckBox.isChecked()))
+            self.foldCppPreprocessorCheckBox.isChecked())
         Preferences.setEditor("CppFoldAtElse",
-            int(self.foldCppAtElseCheckBox.isChecked()))
+            self.foldCppAtElseCheckBox.isChecked())
         Preferences.setEditor("CppIndentOpeningBrace",
-            int(self.cppIndentOpeningBraceCheckBox.isChecked()))
+            self.cppIndentOpeningBraceCheckBox.isChecked())
         Preferences.setEditor("CppIndentClosingBrace",
-            int(self.cppIndentClosingBraceCheckBox.isChecked()))
+            self.cppIndentClosingBraceCheckBox.isChecked())
         Preferences.setEditor("CppCaseInsensitiveKeywords",
-            int(self.cppCaseInsensitiveCheckBox.isChecked()))
+            self.cppCaseInsensitiveCheckBox.isChecked())
         Preferences.setEditor("CppDollarsAllowed",
-            int(self.cppDollarAllowedCheckBox.isChecked()))
+            self.cppDollarAllowedCheckBox.isChecked())
         
         # CSS
         Preferences.setEditor("CssFoldComment",
-            int(self.foldCssCommentCheckBox.isChecked()))
+            self.foldCssCommentCheckBox.isChecked())
         
         # D
         Preferences.setEditor("DFoldComment",
-            int(self.foldDCommentCheckBox.isChecked()))
+            self.foldDCommentCheckBox.isChecked())
         Preferences.setEditor("DFoldAtElse",
-            int(self.foldDAtElseCheckBox.isChecked()))
+            self.foldDAtElseCheckBox.isChecked())
         Preferences.setEditor("DIndentOpeningBrace",
-            int(self.dIndentOpeningBraceCheckBox.isChecked()))
+            self.dIndentOpeningBraceCheckBox.isChecked())
         Preferences.setEditor("DIndentClosingBrace",
-            int(self.dIndentClosingBraceCheckBox.isChecked()))
+            self.dIndentClosingBraceCheckBox.isChecked())
         
         # HTML
         Preferences.setEditor("HtmlFoldPreprocessor",
-            int(self.foldHtmlPreprocessorCheckBox.isChecked()))
+            self.foldHtmlPreprocessorCheckBox.isChecked())
         Preferences.setEditor("HtmlCaseSensitiveTags",
-            int(self.htmlCaseSensitiveTagsCheckBox.isChecked()))
+            self.htmlCaseSensitiveTagsCheckBox.isChecked())
         Preferences.setEditor("HtmlFoldScriptComments",
-            int(self.foldHtmlScriptCommentsCheckBox.isChecked()))
+            self.foldHtmlScriptCommentsCheckBox.isChecked())
         Preferences.setEditor("HtmlFoldScriptHeredocs",
-            int(self.foldHtmlScriptHereDocsCheckBox.isChecked()))
+            self.foldHtmlScriptHereDocsCheckBox.isChecked())
         
         # Pascal
         if "Pascal" in self.languages:
             Preferences.setEditor("PascalFoldComment",
-                int(self.foldPascalCommentCheckBox.isChecked()))
+                self.foldPascalCommentCheckBox.isChecked())
             Preferences.setEditor("PascalFoldPreprocessor",
-                int(self.foldPascalPreprocessorCheckBox.isChecked()))
+                self.foldPascalPreprocessorCheckBox.isChecked())
             Preferences.setEditor("PascalSmartHighlighting",
-                int(self.pascalSmartHighlightingCheckBox.isChecked()))
+                self.pascalSmartHighlightingCheckBox.isChecked())
         
         # Perl
         Preferences.setEditor("PerlFoldComment",
-            int(self.foldPerlCommentCheckBox.isChecked()))
+            self.foldPerlCommentCheckBox.isChecked())
         Preferences.setEditor("PerlFoldPackages",
-            int(self.foldPerlPackagesCheckBox.isChecked()))
+            self.foldPerlPackagesCheckBox.isChecked())
         Preferences.setEditor("PerlFoldPODBlocks",
-            int(self.foldPerlPODBlocksCheckBox.isChecked()))
+            self.foldPerlPODBlocksCheckBox.isChecked())
         
         # PostScript
         if "PostScript" in self.languages:
             Preferences.setEditor("PostScriptFoldAtElse",
-                int(self.psFoldAtElseCheckBox.isChecked()))
+                self.psFoldAtElseCheckBox.isChecked())
             Preferences.setEditor("PostScriptTokenize",
-                int(self.psMarkTokensCheckBox.isChecked()))
+                self.psMarkTokensCheckBox.isChecked())
             Preferences.setEditor("PostScriptLevel", 
                 self.psLevelSpinBox.value())
         
         # Povray
         Preferences.setEditor("PovFoldComment",
-            int(self.foldPovrayCommentCheckBox.isChecked()))
+            self.foldPovrayCommentCheckBox.isChecked())
         Preferences.setEditor("PovFoldDirectives",
-            int(self.foldPovrayDirectivesCheckBox.isChecked()))
+            self.foldPovrayDirectivesCheckBox.isChecked())
         
         # Python
         Preferences.setEditor("PythonFoldComment",
-            int(self.foldPythonCommentCheckBox.isChecked()))
+            self.foldPythonCommentCheckBox.isChecked())
         Preferences.setEditor("PythonFoldString",
-            int(self.foldPythonStringCheckBox.isChecked()))
+            self.foldPythonStringCheckBox.isChecked())
         Preferences.setEditor("PythonBadIndentation",
-            int(self.pythonBadIndentationCheckBox.isChecked()))
+            self.pythonBadIndentationCheckBox.isChecked())
         Preferences.setEditor("PythonAutoIndent",
-            int(self.pythonAutoindentCheckBox.isChecked()))
+            self.pythonAutoindentCheckBox.isChecked())
         Preferences.setEditor("PythonAllowV2Unicode",
-            int(self.pythonV2UnicodeAllowedCheckBox.isChecked()))
+            self.pythonV2UnicodeAllowedCheckBox.isChecked())
         Preferences.setEditor("PythonAllowV3Binary",
-            int(self.pythonV3BinaryAllowedCheckBox.isChecked()))
+            self.pythonV3BinaryAllowedCheckBox.isChecked())
         Preferences.setEditor("PythonAllowV3Bytes",
-            int(self.pythonV3BytesAllowedCheckBox.isChecked()))
+            self.pythonV3BytesAllowedCheckBox.isChecked())
         
         # SQL
         Preferences.setEditor("SqlFoldComment",
-            int(self.foldSqlCommentCheckBox.isChecked()))
+            self.foldSqlCommentCheckBox.isChecked())
         Preferences.setEditor("SqlBackslashEscapes",
-            int(self.sqlBackslashEscapesCheckBox.isChecked()))
+            self.sqlBackslashEscapesCheckBox.isChecked())
         
         # VHDL
         Preferences.setEditor("VHDLFoldComment",
-            int(self.vhdlFoldCommentCheckBox.isChecked()))
+            self.vhdlFoldCommentCheckBox.isChecked())
         Preferences.setEditor("VHDLFoldAtElse",
-            int(self.vhdlFoldAtElseCheckBox.isChecked()))
+            self.vhdlFoldAtElseCheckBox.isChecked())
         Preferences.setEditor("VHDLFoldAtBegin",
-            int(self.vhdlFoldAtBeginCheckBox.isChecked()))
+            self.vhdlFoldAtBeginCheckBox.isChecked())
         Preferences.setEditor("VHDLFoldAtParenthesis",
-            int(self.vhdlFoldAtParenthesisCheckBox.isChecked()))
+            self.vhdlFoldAtParenthesisCheckBox.isChecked())
         
         # XML
         Preferences.setEditor("XMLStyleScripts",
-            int(self.xmlSyleScriptsCheckBox.isChecked()))
+            self.xmlSyleScriptsCheckBox.isChecked())
         
         # YAML
         if "YAML" in self.languages:
             Preferences.setEditor("YAMLFoldComment", 
-                int(self.foldYamlCommentCheckBox.isChecked()))
+                self.foldYamlCommentCheckBox.isChecked())
 
 def create(dlg):
     """

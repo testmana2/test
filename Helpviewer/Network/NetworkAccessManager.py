@@ -66,7 +66,7 @@ class NetworkAccessManager(QNetworkAccessManager):
             sslCfg = QSslConfiguration.defaultConfiguration()
             caList = sslCfg.caCertificates()
             caNew = QSslCertificate.fromData(Preferences.Prefs.settings\
-                .value("Help/CaCertificates").toByteArray())
+                .value("Help/CaCertificates"))
             for cert in caNew:
                 caList.append(cert)
             sslCfg.setCaCertificates(caList)
@@ -238,7 +238,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         @param errors list of SSL errors (list of QSslError)
         """
         caMerge = QSslCertificate.fromData(Preferences.Prefs.settings\
-            .value("Help/CaCertificates").toByteArray())
+            .value("Help/CaCertificates"))
         caNew = []
         
         errorStrings = []
@@ -293,8 +293,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                     pems = QByteArray()
                     for cert in caMerge:
                         pems.append(cert.toPem() + '\n')
-                    Preferences.Prefs.settings.setValue("Help/CaCertificates", 
-                                                        QVariant(pems))
+                    Preferences.Prefs.settings.setValue("Help/CaCertificates", pems)
             
             reply.ignoreSslErrors()
     
@@ -337,10 +336,9 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         Public slot to (re-)load the list of accepted languages.
         """
-        languages = Preferences.Prefs.settings.value(
+        languages = Preferences.Prefs.settings.value(Preferences.toList(
             "Help/AcceptLanguages", 
-            QVariant(HelpLanguagesDialog.defaultAcceptLanguages()))\
-            .toStringList()
+            HelpLanguagesDialog.defaultAcceptLanguages()))
         self.__acceptLanguage = HelpLanguagesDialog.httpString(languages)
     
     def __setDiskCache(self):

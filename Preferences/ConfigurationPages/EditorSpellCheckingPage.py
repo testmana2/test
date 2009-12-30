@@ -76,13 +76,13 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         Public slot to save the Editor Search configuration.
         """
         Preferences.setEditor("SpellCheckingEnabled", 
-            int(self.checkingEnabledCheckBox.isChecked()))
+            self.checkingEnabledCheckBox.isChecked())
         
         Preferences.setEditor("SpellCheckingDefaultLanguage", 
             self.defaultLanguageCombo.currentText())
         
         Preferences.setEditor("SpellCheckStringsOnly", 
-            int(self.stringsOnlyCheckBox.isChecked()))
+            self.stringsOnlyCheckBox.isChecked())
         Preferences.setEditor("SpellCheckingMinWordSize", 
             self.minimumWordSizeSlider.value())
         
@@ -93,7 +93,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         Preferences.setEditor("SpellCheckingPersonalExcludeList", self.pelEdit.text())
         
         Preferences.setEditor("AutoSpellCheckingEnabled", 
-            int(self.enabledCheckBox.isChecked()))
+            self.enabledCheckBox.isChecked())
         Preferences.setEditor("AutoSpellCheckChunkSize", self.chunkSizeSpinBox.value())
         
     @pyqtSlot()

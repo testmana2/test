@@ -100,8 +100,8 @@ class MultiProject(QObject):
         self.recent = []
         Preferences.Prefs.rsettings.sync()
         rp = Preferences.Prefs.rsettings.value(recentNameMultiProject)
-        if rp.isValid():
-            for f in rp.toStringList():
+        if rp is not None:
+            for f in rp:
                 if QFileInfo(f).exists():
                     self.recent.append(f)
     
@@ -109,8 +109,7 @@ class MultiProject(QObject):
         """
         Private method to save the list of recently opened filenames.
         """
-        Preferences.Prefs.rsettings.setValue(recentNameMultiProject, 
-                                             QVariant(self.recent))
+        Preferences.Prefs.rsettings.setValue(recentNameMultiProject, self.recent)
         Preferences.Prefs.rsettings.sync()
     
     def getMostRecent(self):
@@ -862,7 +861,7 @@ class MultiProject(QObject):
             act = self.recentMenu.addAction(\
                 formatStr % (idx, 
                     Utilities.compactPath(rp, self.ui.maxMenuFilePathLen)))
-            act.setData(QVariant(rp))
+            act.setData(rp)
             act.setEnabled(QFileInfo(rp).exists())
             idx += 1
         
@@ -876,7 +875,7 @@ class MultiProject(QObject):
         
         @param act reference to the action that triggered (QAction)
         """
-        file = act.data().toString()
+        file = act.data()
         if file:
             self.openMultiProject(file)
     

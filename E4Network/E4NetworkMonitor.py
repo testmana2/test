@@ -161,10 +161,10 @@ class E4NetworkMonitor(QDialog, Ui_E4NetworkMonitor):
             self.__requestHeaders.insertRows(0, 1, QModelIndex())
             self.__requestHeaders.setData(
                 self.__requestHeaders.index(0, 0), 
-                QVariant(header))
+                header)
             self.__requestHeaders.setData(
                 self.__requestHeaders.index(0, 1), 
-                QVariant(req.rawHeader(header)))
+                req.rawHeader(header))
             self.__requestHeaders.item(0, 0).setFlags(
                 Qt.ItemIsSelectable | Qt.ItemIsEnabled)
             self.__requestHeaders.item(0, 1).setFlags(
@@ -174,10 +174,10 @@ class E4NetworkMonitor(QDialog, Ui_E4NetworkMonitor):
             self.__replyHeaders.insertRows(0, 1, QModelIndex())
             self.__replyHeaders.setData(
                 self.__replyHeaders.index(0, 0), 
-                QVariant(header[0]))
+                header[0])
             self.__replyHeaders.setData(
                 self.__replyHeaders.index(0, 1), 
-                QVariant(header[1]))
+                header[1])
             self.__replyHeaders.item(0, 0).setFlags(
                 Qt.ItemIsSelectable | Qt.ItemIsEnabled)
             self.__replyHeaders.item(0, 1).setFlags(
@@ -197,8 +197,8 @@ class E4NetworkMonitor(QDialog, Ui_E4NetworkMonitor):
             return
         
         row = index.row()
-        name = headerList.model().data(headerList.model().index(row, 0)).toString()
-        value = headerList.model().data(headerList.model().index(row, 1)).toString()
+        name = headerList.model().data(headerList.model().index(row, 0))
+        value = headerList.model().data(headerList.model().index(row, 1))
         if self.__headersDlg is None:
             self.__headersDlg = E4NetworkHeaderDetailsDialog(self)
         self.__headersDlg.setData(name, value)
@@ -285,16 +285,14 @@ class E4RequestModel(QAbstractTableModel):
             self.requests[offset].replyHeaders.append((header, reply.rawHeader(header)))
         
         # save reply info to be displayed
-        status = reply.attribute(QNetworkRequest.HttpStatusCodeAttribute).toInt()[0]
-        reason = reply.attribute(QNetworkRequest.HttpReasonPhraseAttribute).toString()
+        status = reply.attribute(QNetworkRequest.HttpStatusCodeAttribute)
+        reason = reply.attribute(QNetworkRequest.HttpReasonPhraseAttribute)
         self.requests[offset].response = "%d %s" % (status, reason)
-        self.requests[offset].length = \
-            reply.header(QNetworkRequest.ContentLengthHeader).toInt()[0]
-        self.requests[offset].contentType = \
-            reply.header(QNetworkRequest.ContentTypeHeader).toString()
+        self.requests[offset].length = reply.header(QNetworkRequest.ContentLengthHeader)
+        self.requests[offset].contentType = reply.header(QNetworkRequest.ContentTypeHeader)
         
         if status == 302:
-            target = reply.attribute(QNetworkRequest.RedirectionTargetAttribute).toUrl()
+            target = reply.attribute(QNetworkRequest.RedirectionTargetAttribute)
             self.requests[offset].info = \
                 self.trUtf8("Redirect: {0}").format(target.toString())
     
@@ -308,7 +306,7 @@ class E4RequestModel(QAbstractTableModel):
         @return requested data
         """
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
-            return QVariant(self.__headerData[section])
+            return self.__headerData[section]
         
         return QAbstractTableModel.headerData(self, section, orientation, role)
     
@@ -321,27 +319,27 @@ class E4RequestModel(QAbstractTableModel):
         @return requested data
         """
         if index.row() < 0 or index.row() >= len(self.requests):
-            return QVariant()
+            return None
         
         if role == Qt.DisplayRole or role == Qt.EditRole:
             col = index.column()
             if col == 0:
                 try:
-                    return QVariant(self.__operations[self.requests[index.row()].op])
+                    return self.__operations[self.requests[index.row()].op]
                 except KeyError:
-                    return QVariant(self.trUtf8("Unknown"))
+                    return self.trUtf8("Unknown")
             elif col == 1:
-                return QVariant(self.requests[index.row()].request.url().toEncoded())
+                return self.requests[index.row()].request.url().toEncoded()
             elif col == 2:
-                return QVariant(self.requests[index.row()].response)
+                return self.requests[index.row()].response
             elif col == 3:
-                return QVariant(self.requests[index.row()].length)
+                return self.requests[index.row()].length
             elif col == 4:
-                return QVariant(self.requests[index.row()].contentType)
+                return self.requests[index.row()].contentType
             elif col == 5:
-                return QVariant(self.requests[index.row()].info)
+                return self.requests[index.row()].info
         
-        return QVariant()
+        return None
     
     def columnCount(self, parent):
         """

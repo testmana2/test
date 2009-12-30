@@ -64,12 +64,12 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         userDir = self.__pluginManager.getPluginDir("user")
         if userDir is not None:
             self.destinationCombo.addItem(self.trUtf8("User plugins directory"), 
-                QVariant(userDir))
+                userDir)
         
         globalDir = self.__pluginManager.getPluginDir("global")
         if globalDir is not None and os.access(globalDir, os.W_OK):
             self.destinationCombo.addItem(self.trUtf8("Global plugins directory"), 
-                QVariant(globalDir))
+                globalDir)
         
         self.__installedDirs = []
         self.__installedFiles = []
@@ -134,7 +134,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 .format("\n".join(self.__createArchivesList()), 
                         self.destinationCombo.currentText(), 
                         self.destinationCombo.itemData(
-                            self.destinationCombo.currentIndex()).toString()
+                            self.destinationCombo.currentIndex())
                 )
             self.summaryEdit.setPlainText(msg)
     

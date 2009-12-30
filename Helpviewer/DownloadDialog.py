@@ -262,7 +262,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
                 .format(self.__output.errorString()))
             self.__stopButton.click()
         else:
-            size = self.__reply.header(QNetworkRequest.ContentLengthHeader).toInt()[0]
+            size = self.__reply.header(QNetworkRequest.ContentLengthHeader)
             if size == bytesWritten:
                 self.__downloadProgress(size, size)
                 self.__downloadFinished = True
@@ -287,7 +287,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         """
         locationHeader = self.__reply.header(QNetworkRequest.LocationHeader)
         if locationHeader.isValid():
-            self.__url = locationHeader.toUrl()
+            self.__url = locationHeader
             self.__reply.deleteLater()
             self.__reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(
                            QNetworkRequest(self.__url))

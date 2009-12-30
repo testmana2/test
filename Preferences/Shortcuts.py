@@ -33,12 +33,12 @@ def __readShortcut(act, category, prefClass):
     if act.objectName():
         accel = prefClass.settings.value(
             "Shortcuts/{0}/{1}/Accel".format(category, act.objectName()))
-        if accel.isValid():
-            act.setShortcut(QKeySequence(accel.toString()))
+        if accel is not None:
+            act.setShortcut(QKeySequence(accel))
         accel = prefClass.settings.value(
             "Shortcuts/{0}/{1}/AltAccel".format(category, act.objectName()))
-        if accel.isValid():
-            act.setAlternateShortcut(QKeySequence(accel.toString()))
+        if accel is not None:
+            act.setAlternateShortcut(QKeySequence(accel))
 
 def readShortcuts(prefClass = Prefs, helpViewer = None, pluginName = None):
     """
@@ -119,10 +119,10 @@ def __saveShortcut(act, category, prefClass):
     if act.objectName():
         prefClass.settings.setValue(
             "Shortcuts/{0}/{1}/Accel".format(category, act.objectName()), 
-            QVariant(act.shortcut()))
+            act.shortcut())
         prefClass.settings.setValue(
             "Shortcuts/{0}/{1}/AltAccel".format(category, act.objectName()), 
-            QVariant(act.alternateShortcut()))
+            act.alternateShortcut())
 
 def saveShortcuts(prefClass = Prefs):
     """

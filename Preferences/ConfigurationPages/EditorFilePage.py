@@ -80,29 +80,29 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         Preferences.setEditor("AutosaveInterval", 
             self.autosaveSlider.value())
         Preferences.setEditor("CreateBackupFile",
-            int(self.createBackupFileCheckBox.isChecked()))
+            self.createBackupFileCheckBox.isChecked())
         Preferences.setEditor("AutoCheckSyntax",
-            int(self.automaticSyntaxCheckCheckBox.isChecked()))
+            self.automaticSyntaxCheckCheckBox.isChecked())
         enc = self.defaultEncodingComboBox.currentText()
         if not enc:
             enc = "utf-8"
         Preferences.setEditor("DefaultEncoding", enc)
         Preferences.setEditor("AdvancedEncodingDetection", 
-            int(self.advEncodingCheckBox.isChecked()))
+            self.advEncodingCheckBox.isChecked())
         Preferences.setEditor("WarnFilesize",
             self.warnFilesizeSpinBox.value())
         Preferences.setEditor("ClearBreaksOnClose",
-            int(self.clearBreakpointsCheckBox.isChecked()))
+            self.clearBreakpointsCheckBox.isChecked())
         Preferences.setEditor("AutoReopen",
-            int(self.automaticReopenCheckBox.isChecked()))
+            self.automaticReopenCheckBox.isChecked())
         Preferences.setEditor("StripTrailingWhitespace", 
-            int(self.stripWhitespaceCheckBox.isChecked()))
+            self.stripWhitespaceCheckBox.isChecked())
         Preferences.setEditor("DefaultOpenFilter",
             self.openFilesFilterComboBox.currentText())
         Preferences.setEditor("DefaultSaveFilter",
             self.saveFilesFilterComboBox.currentText())
         Preferences.setEditor("AutomaticEOLConversion",
-            int(self.automaticEolConversionCheckBox.isChecked()))
+            self.automaticEolConversionCheckBox.isChecked())
         
         if self.crlfRadioButton.isChecked():
             Preferences.setEditor("EOLMode", QsciScintilla.EolWindows)

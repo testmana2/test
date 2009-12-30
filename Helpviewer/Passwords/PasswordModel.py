@@ -114,24 +114,24 @@ class PasswordModel(QAbstractTableModel):
         
         @param index index to get data for (QModelIndex)
         @param role role of the data to retrieve (integer)
-        @return requested data (QVariant)
+        @return requested data
         """
         if index.row() >= self.__manager.sitesCount() or index.row() < 0:
-            return QVariant()
+            return None
         
         site = self.__manager.allSiteNames()[index.row()]
         siteInfo = self.__manager.siteInfo(site)
         
         if siteInfo is None:
-            return QVariant()
+            return None
         
         if role == Qt.DisplayRole:
             if index.column() == 0:
-                return QVariant(site)
+                return site
             elif index.column() in [1, 2]:
-                return QVariant(siteInfo[index.column() - 1])
+                return siteInfo[index.column() - 1]
         
-        return QVariant()
+        return None
     
     def headerData(self, section, orientation, role = Qt.DisplayRole):
         """
@@ -140,12 +140,12 @@ class PasswordModel(QAbstractTableModel):
         @param section section number (integer)
         @param orientation header orientation (Qt.Orientation)
         @param role data role (integer)
-        @return header data (QVariant)
+        @return header data
         """
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             try:
-                return QVariant(self.__headers[section])
+                return self.__headers[section]
             except IndexError:
                 pass
         
-        return QVariant()
+        return None

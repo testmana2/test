@@ -58,23 +58,23 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
         Preferences.setShell("LinenoWidth",
             self.shellLinenowidthSlider.value())
         Preferences.setShell("LinenoMargin",
-            int(self.shellLinenoCheckBox.isChecked()))
+            self.shellLinenoCheckBox.isChecked())
         Preferences.setShell("WrapEnabled",
-            int(self.shellWordWrapCheckBox.isChecked()))
+            self.shellWordWrapCheckBox.isChecked())
         Preferences.setShell("AutoCompletionEnabled",
-            int(self.shellACEnabledCheckBox.isChecked()))
+            self.shellACEnabledCheckBox.isChecked())
         Preferences.setShell("CallTipsEnabled",
-            int(self.shellCTEnabledCheckBox.isChecked()))
+            self.shellCTEnabledCheckBox.isChecked())
         Preferences.setShell("SyntaxHighlightingEnabled",
-            int(self.shellSyntaxHighlightingCheckBox.isChecked()))
+            self.shellSyntaxHighlightingCheckBox.isChecked())
         Preferences.setShell("MaxHistoryEntries",
             self.shellHistorySpinBox.value())
         Preferences.setShell("ShowStdOutErr", 
-            int(self.stdOutErrCheckBox.isChecked()))
+            self.stdOutErrCheckBox.isChecked())
         
         Preferences.setShell("MonospacedFont", self.monospacedFont)
         Preferences.setShell("UseMonospacedFont",
-            int(self.monospacedCheckBox.isChecked()))
+            self.monospacedCheckBox.isChecked())
         Preferences.setShell("MarginsFont", self.marginsFont)
         
     @pyqtSlot()

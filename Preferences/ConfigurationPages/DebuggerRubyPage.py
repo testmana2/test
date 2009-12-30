@@ -45,7 +45,7 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         Preferences.setDebugger("RubyInterpreter", 
             self.rubyInterpreterEdit.text())
         Preferences.setDebugger("RubyRedirect", 
-            int(self.rbRedirectCheckBox.isChecked()))
+            self.rbRedirectCheckBox.isChecked())
         
     @pyqtSlot()
     def on_rubyInterpreterButton_clicked(self):

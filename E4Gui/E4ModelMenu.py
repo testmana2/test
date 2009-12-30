@@ -187,16 +187,16 @@ class E4ModelMenu(QMenu):
         @param menu reference to the menu to be populated (QMenu)
         """
         if menu is None:
-            v = QVariant(parent)
+            v = parent
             
-            title = parent.data().toString()
+            title = parent.data()
             modelMenu = self.createBaseMenu()
             # triggered goes all the way up the menu structure
             self.disconnect(modelMenu, SIGNAL("triggered(QAction*)"), 
                             modelMenu.__actionTriggered)
             modelMenu.setTitle(title)
             
-            icon = parent.data(Qt.DecorationRole).toPyObject()
+            icon = parent.data(Qt.DecorationRole)
             if icon == NotImplemented or icon is None:
                 icon = UI.PixmapCache.getIcon("defaultIcon.png")
             modelMenu.setIcon(icon)
@@ -218,7 +218,7 @@ class E4ModelMenu(QMenu):
             if self.__model.hasChildren(idx):
                 self.createMenu(idx, -1, menu)
             else:
-                if self.__separatorRole != 0 and idx.data(self.__separatorRole).toBool():
+                if self.__separatorRole != 0 and idx.data(self.__separatorRole):
                     self.addSeparator()
                 else:
                     menu.addAction(self.__makeAction(idx))
@@ -233,13 +233,13 @@ class E4ModelMenu(QMenu):
         @param idx index of the item to create an action for (QModelIndex)
         @return reference to the created action (QAction)
         """
-        icon = idx.data(Qt.DecorationRole).toPyObject()
+        icon = idx.data(Qt.DecorationRole)
         if icon == NotImplemented or icon is None:
             icon = UI.PixmapCache.getIcon("defaultIcon.png")
-        action = self.makeAction(icon, idx.data().toString(), self)
-        action.setStatusTip(idx.data(self.__statusBarTextRole).toString())
+        action = self.makeAction(icon, idx.data(), self)
+        action.setStatusTip(idx.data(self.__statusBarTextRole))
         
-        v = QVariant(idx)
+        v = idx
         action.setData(v)
         
         return action
@@ -280,11 +280,10 @@ class E4ModelMenu(QMenu):
         if action is None:
             return QModelIndex()
         
-        v = action.data()
-        if not v.isValid():
+        idx = action.data()
+        if idx is None:
             return QModelIndex()
         
-        idx = v.toPyObject()
         if not isinstance(idx, QModelIndex):
             return QModelIndex()
         

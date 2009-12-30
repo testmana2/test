@@ -138,14 +138,14 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         Public slot to save the Debugger General (1) configuration.
         """
         Preferences.setDebugger("RemoteDbgEnabled", 
-            int(self.remoteCheckBox.isChecked()))
+            self.remoteCheckBox.isChecked())
         Preferences.setDebugger("RemoteHost", 
             self.hostLineEdit.text())
         Preferences.setDebugger("RemoteExecution", 
             self.execLineEdit.text())
         
         Preferences.setDebugger("PassiveDbgEnabled", 
-            int(self.passiveDbgCheckBox.isChecked()))
+            self.passiveDbgCheckBox.isChecked())
         Preferences.setDebugger("PassiveDbgPort", 
             self.passiveDbgPortSpinBox.value())
         Preferences.setDebugger("PassiveDbgType", 
@@ -169,29 +169,29 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         Preferences.setDebugger("AllowedHosts", allowedHosts)
         
         Preferences.setDebugger("DebugEnvironmentReplace", 
-            int(self.debugEnvironReplaceCheckBox.isChecked()))
+            self.debugEnvironReplaceCheckBox.isChecked())
         Preferences.setDebugger("DebugEnvironment", 
             self.debugEnvironEdit.text())
         Preferences.setDebugger("AutomaticReset", 
-            int(self.automaticResetCheckBox.isChecked()))
+            self.automaticResetCheckBox.isChecked())
         Preferences.setDebugger("Autosave", 
-            int(self.debugAutoSaveScriptsCheckBox.isChecked()))
+            self.debugAutoSaveScriptsCheckBox.isChecked())
         Preferences.setDebugger("ConsoleDbgEnabled", 
-            int(self.consoleDbgCheckBox.isChecked()))
+            self.consoleDbgCheckBox.isChecked())
         Preferences.setDebugger("ConsoleDbgCommand", 
             self.consoleDbgEdit.text())
         Preferences.setDebugger("PathTranslation", 
-            int(self.dbgPathTranslationCheckBox.isChecked()))
+            self.dbgPathTranslationCheckBox.isChecked())
         Preferences.setDebugger("PathTranslationRemote",
             self.dbgTranslationRemoteEdit.text())
         Preferences.setDebugger("PathTranslationLocal",
             self.dbgTranslationLocalEdit.text())
         Preferences.setDebugger("ThreeStateBreakPoints",
-            int(self.debugThreeStateBreakPoint.isChecked()))
+            self.debugThreeStateBreakPoint.isChecked())
         Preferences.setDebugger("SuppressClientExit",
-            int(self.dontShowClientExitCheckBox.isChecked()))
+            self.dontShowClientExitCheckBox.isChecked())
         Preferences.setDebugger("BreakAlways",
-            int(self.exceptionBreakCheckBox.isChecked()))
+            self.exceptionBreakCheckBox.isChecked())
         
     def on_allowedHostsList_currentItemChanged(self, current, previous):
         """

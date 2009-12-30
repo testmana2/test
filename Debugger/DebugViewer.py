@@ -432,6 +432,6 @@ class DebugViewer(QWidget):
         @param previous reference to the previous current item (QTreeWidgetItem)
         """
         if current is not None and self.__doThreadListUpdate:
-            tid, ok = current.text(0).toLong()
+            tid, ok = int(current.text(0))
             if ok:
                 self.debugServer.remoteSetThread(tid)

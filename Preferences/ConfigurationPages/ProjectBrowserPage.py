@@ -7,7 +7,7 @@
 Module implementing the Project Browser configuration page.
 """
 
-from PyQt4.QtCore import pyqtSlot, QVariant
+from PyQt4.QtCore import pyqtSlot
 
 from E4Gui.E4Application import e4App
 
@@ -36,13 +36,13 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         self.__currentProjectTypeIndex = 0
         
         # set initial values
-        self.projectTypeCombo.addItem('', QVariant(''))
+        self.projectTypeCombo.addItem('', '')
         self.__projectBrowserFlags = {'' : 0}
         try:
             projectTypes = e4App().getObject("Project").getProjectTypes()
             for projectType in sorted(projectTypes.keys()):
                 self.projectTypeCombo.addItem(projectTypes[projectType], 
-                                              QVariant(projectType))
+                                              projectType)
                 self.__projectBrowserFlags[projectType] = \
                     Preferences.getProjectBrowserFlags(projectType)
         except KeyError:
@@ -65,13 +65,13 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
             Preferences.setProjectBrowserColour(key, self.projectBrowserColours[key])
         
         Preferences.setProject("FollowEditor", 
-            int(self.followEditorCheckBox.isChecked()))
+            self.followEditorCheckBox.isChecked())
         Preferences.setProject("HideGeneratedForms", 
-            int(self.hideGeneratedCheckBox.isChecked()))
+            self.hideGeneratedCheckBox.isChecked())
         
         if self.pbGroup.isEnabled():
             self.__storeProjectBrowserFlags(\
-                self.projectTypeCombo.itemData(self.__currentProjectTypeIndex).toString())
+                self.projectTypeCombo.itemData(self.__currentProjectTypeIndex))
             for projectType, flags in self.__projectBrowserFlags.items():
                 if projectType != '':
                     Preferences.setProjectBrowserFlags(projectType, flags)
@@ -135,9 +135,9 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
            return
         
         self.__storeProjectBrowserFlags(\
-            self.projectTypeCombo.itemData(self.__currentProjectTypeIndex).toString())
+            self.projectTypeCombo.itemData(self.__currentProjectTypeIndex))
         self.__setProjectBrowsersCheckBoxes(\
-            self.projectTypeCombo.itemData(index).toString())
+            self.projectTypeCombo.itemData(index))
         self.__currentProjectTypeIndex = index
     
 def create(dlg):

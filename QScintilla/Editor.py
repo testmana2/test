@@ -734,7 +734,7 @@ class Editor(QsciScintillaCompat):
         self.languagesActGrp = QActionGroup(self)
         self.noLanguageAct = menu.addAction(self.trUtf8("No Language"))
         self.noLanguageAct.setCheckable(True)
-        self.noLanguageAct.setData(QVariant("None"))
+        self.noLanguageAct.setData("None")
         self.languagesActGrp.addAction(self.noLanguageAct)
         menu.addSeparator()
         
@@ -747,17 +747,17 @@ class Editor(QsciScintillaCompat):
                 self.supportedLanguages[language] = supportedLanguages[language][:]
                 act = menu.addAction(self.supportedLanguages[language][0])
                 act.setCheckable(True)
-                act.setData(QVariant(language))
+                act.setData(language)
                 self.supportedLanguages[language].append(act)
                 self.languagesActGrp.addAction(act)
         
         menu.addSeparator()
         self.pygmentsAct = menu.addAction(self.trUtf8("Guessed"))
         self.pygmentsAct.setCheckable(True)
-        self.pygmentsAct.setData(QVariant("Guessed"))
+        self.pygmentsAct.setData("Guessed")
         self.languagesActGrp.addAction(self.pygmentsAct)
         self.pygmentsSelAct = menu.addAction(self.trUtf8("Alternatives"))
-        self.pygmentsSelAct.setData(QVariant("Alternatives"))
+        self.pygmentsSelAct.setData("Alternatives")
         
         self.connect(menu, SIGNAL('triggered(QAction *)'), self.__languageMenuTriggered)
         self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuLanguages)
@@ -777,7 +777,7 @@ class Editor(QsciScintillaCompat):
         for encoding in sorted(Utilities.supportedCodecs):
             act = menu.addAction(encoding)
             act.setCheckable(True)
-            act.setData(QVariant(encoding))
+            act.setData(encoding)
             self.supportedEncodings[encoding] = act
             self.encodingsActGrp.addAction(act)
         
@@ -798,19 +798,19 @@ class Editor(QsciScintillaCompat):
         
         act = menu.addAction(self.trUtf8("Unix"))
         act.setCheckable(True)
-        act.setData(QVariant('\n'))
+        act.setData('\n')
         self.supportedEols['\n'] = act
         self.eolActGrp.addAction(act)
         
         act = menu.addAction(self.trUtf8("Windows"))
         act.setCheckable(True)
-        act.setData(QVariant('\r\n'))
+        act.setData('\r\n')
         self.supportedEols['\r\n'] = act
         self.eolActGrp.addAction(act)
         
         act = menu.addAction(self.trUtf8("Macintosh"))
         act.setCheckable(True)
-        act.setData(QVariant('\r'))
+        act.setData('\r')
         self.supportedEols['\r'] = act
         self.eolActGrp.addAction(act)
         
@@ -830,7 +830,7 @@ class Editor(QsciScintillaCompat):
         exporters.sort()
         for exporter in exporters:
             act = menu.addAction(supportedExporters[exporter])
-            act.setData(QVariant(exporter))
+            act.setData(exporter)
         
         self.connect(menu, SIGNAL('triggered(QAction *)'), self.__exportMenuTriggered)
         
@@ -1011,7 +1011,7 @@ class Editor(QsciScintillaCompat):
         
         @param act reference to the action that was triggered (QAction)
         """
-        exporterFormat = act.data().toString()
+        exporterFormat = act.data()
         self.exportFile(exporterFormat)
         
     def exportFile(self, exporterFormat):
@@ -1089,7 +1089,7 @@ class Editor(QsciScintillaCompat):
             if language:
                 self.setLanguage("dummy.pygments", pyname = language)
         else:
-            language = act.data().toString()
+            language = act.data()
             if language:
                 self.setLanguage(self.supportedLanguages[language][1])
         
@@ -1198,7 +1198,7 @@ class Editor(QsciScintillaCompat):
         
         @param act reference to the action that was triggered (QAction)
         """
-        encoding = act.data().toString()
+        encoding = act.data()
         self.__encodingChanged("%s-selected" % encoding)
         
     def __checkEncoding(self):
@@ -1246,7 +1246,7 @@ class Editor(QsciScintillaCompat):
         
         @param act reference to the action that was triggered (QAction)
         """
-        eol = act.data().toString()
+        eol = act.data()
         self.setEolModeByEolString(eol)
         self.convertEols(self.eolMode())
         
@@ -1313,9 +1313,8 @@ class Editor(QsciScintillaCompat):
         
         # get the font for style 0 and set it as the default font
         key = 'Scintilla/%s/style0/font' % self.lexer_.language()
-        fontVariant = Preferences.Prefs.settings.value(key)
-        if fontVariant.isValid():
-            fdesc = fontVariant.toStringList()
+        fdesc = Preferences.Prefs.settings.value(key)
+        if fdesc is not None:
             font = QFont(fdesc[0], int(fdesc[1]))
             self.lexer_.setDefaultFont(font)
         self.lexer_.readSettings(Preferences.Prefs.settings, "Scintilla")
@@ -5157,7 +5156,9 @@ class Editor(QsciScintillaCompat):
         to the current project.
         """
         project = e4App().getObject("Project")
-        if project.isOpen() and project.isProjectSource(self.fileName):
+        if self.fileName and \
+           project.isOpen() and \
+           project.isProjectSource(self.fileName):
             pwl, pel = project.getProjectDictionaries()
             self.__setSpellingLanguage(project.getProjectSpellLanguage(), 
                                        pwl = pwl, pel = pel)

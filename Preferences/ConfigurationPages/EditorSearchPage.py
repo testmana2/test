@@ -49,11 +49,11 @@ class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
         Public slot to save the Editor Search configuration.
         """
         Preferences.setEditor("SearchMarkersEnabled", 
-            int(self.searchMarkersEnabledCheckBox.isChecked()))
+            self.searchMarkersEnabledCheckBox.isChecked())
         Preferences.setEditor("QuickSearchMarkersEnabled", 
-            int(self.quicksearchMarkersEnabledCheckBox.isChecked()))
+            self.quicksearchMarkersEnabledCheckBox.isChecked())
         Preferences.setEditor("MarkOccurrencesEnabled", 
-            int(self.occurrencesMarkersEnabledCheckBox.isChecked()))
+            self.occurrencesMarkersEnabledCheckBox.isChecked())
         
         Preferences.setEditor("MarkOccurrencesTimeout", 
             self.markOccurrencesTimeoutSpinBox.value())

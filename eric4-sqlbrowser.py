@@ -16,6 +16,7 @@ import os
 
 import sip
 sip.setapi('QString', 2)
+sip.setapi("QVariant", 2)
 
 for arg in sys.argv:
     if arg.startswith("--config="):

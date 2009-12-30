@@ -14,6 +14,10 @@ import os
 import shutil
 import glob
 
+import sip
+sip.setapi("QString", 2)
+sip.setapi("QVariant", 2)
+
 from PyQt4.QtCore import QDir
 
 try:
@@ -36,7 +40,7 @@ def getConfigDir():
     hp = QDir.homePath()
     dn = QDir(hp)
     dn.mkdir(cdn)
-    hp.append("/").append(cdn)
+    hp += "/" + cdn
     try:
         return QDir.toNativeSeparators(hp)
     except AttributeError:

@@ -118,7 +118,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         elif nodekind == "file":
             itm.setIcon(0, self.__fileIcon)
         
-        itm.setData(0, self.__urlRole, QVariant(url))
+        itm.setData(0, self.__urlRole, url)
         
         itm.setTextAlignment(0, Qt.AlignLeft)
         itm.setTextAlignment(1, Qt.AlignRight)
@@ -288,7 +288,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         @param item reference to the item to be expanded (QTreeWidgetItem)
         """
         if not self.__ignoreExpand:
-            url = item.data(0, self.__urlRole).toString()
+            url = item.data(0, self.__urlRole)
             self.__listRepo(url, item)
     
     @pyqtSlot(QTreeWidgetItem)
@@ -326,7 +326,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         """
         items = self.repoTree.selectedItems()
         if len(items) == 1:
-            return items[0].data(0, self.__urlRole).toString()
+            return items[0].data(0, self.__urlRole)
         else:
             return ""
     

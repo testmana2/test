@@ -54,8 +54,7 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
                 
                 if found:
                     for vcsSystem, vcsSystemDisplay in vcsData:
-                        self.vcsInterfaceCombo.addItem(vcsSystemDisplay, 
-                                                       QVariant(vcsSystem))
+                        self.vcsInterfaceCombo.addItem(vcsSystemDisplay, vcsSystem)
                     enableVcsGroup = len(vcsData) > 1
                     break
         self.vcsGroup.setEnabled(enableVcsGroup)
@@ -65,7 +64,7 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
                 vcsSystem = self.project.pudata["VCSOVERRIDE"][0]
             else:
                 vcsSystem = self.project.pdata["VCS"][0]
-            index = self.vcsInterfaceCombo.findData(QVariant(vcsSystem))
+            index = self.vcsInterfaceCombo.findData(vcsSystem)
             if index == -1:
                 index = 0
             self.vcsInterfaceCombo.setCurrentIndex(index)
@@ -82,7 +81,7 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
         
         if self.vcsGroup.isEnabled():
             vcsSystem = self.vcsInterfaceCombo\
-                .itemData(self.vcsInterfaceCombo.currentIndex()).toString()
+                .itemData(self.vcsInterfaceCombo.currentIndex())
             if self.vcsInterfaceDefaultCheckBox.isChecked():
                 if vcsSystem != self.project.pdata["VCS"][0]:
                     self.project.pdata["VCS"] = [vcsSystem]

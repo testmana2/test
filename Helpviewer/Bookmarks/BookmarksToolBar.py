@@ -98,12 +98,12 @@ class BookmarksToolBar(E4ModelToolBar):
         
         if self._keyboardModifiers & Qt.ControlModifier:
             self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                      idx.data(BookmarksModel.UrlRole).toUrl(), 
-                      idx.data(Qt.DisplayRole).toString())
+                      idx.data(BookmarksModel.UrlRole), 
+                      idx.data(Qt.DisplayRole))
         else:
             self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                      idx.data(BookmarksModel.UrlRole).toUrl(), 
-                      idx.data(Qt.DisplayRole).toString())
+                      idx.data(BookmarksModel.UrlRole), 
+                      idx.data(Qt.DisplayRole))
     
     def __openToolBarBookmark(self):
         """
@@ -113,12 +113,12 @@ class BookmarksToolBar(E4ModelToolBar):
         
         if self._keyboardModifiers & Qt.ControlModifier:
             self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                      idx.data(BookmarksModel.UrlRole).toUrl(), 
-                      idx.data(Qt.DisplayRole).toString())
+                      idx.data(BookmarksModel.UrlRole), 
+                      idx.data(Qt.DisplayRole))
         else:
             self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                      idx.data(BookmarksModel.UrlRole).toUrl(), 
-                      idx.data(Qt.DisplayRole).toString())
+                      idx.data(BookmarksModel.UrlRole), 
+                      idx.data(Qt.DisplayRole))
         self.resetFlags()
     
     def __openBookmark(self):
@@ -128,8 +128,8 @@ class BookmarksToolBar(E4ModelToolBar):
         idx = self.index(self.sender())
         
         self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                  idx.data(BookmarksModel.UrlRole).toUrl(), 
-                  idx.data(Qt.DisplayRole).toString())
+                  idx.data(BookmarksModel.UrlRole), 
+                  idx.data(Qt.DisplayRole))
     
     def __openBookmarkInNewTab(self):
         """
@@ -138,8 +138,8 @@ class BookmarksToolBar(E4ModelToolBar):
         idx = self.index(self.sender())
         
         self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                  idx.data(BookmarksModel.UrlRole).toUrl(), 
-                  idx.data(Qt.DisplayRole).toString())
+                  idx.data(BookmarksModel.UrlRole), 
+                  idx.data(Qt.DisplayRole))
     
     def __removeBookmark(self):
         """

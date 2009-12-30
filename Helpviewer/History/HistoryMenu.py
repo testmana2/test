@@ -192,7 +192,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         """
         urls = []
         for index in indexes:
-            url = index.data(HistoryModel.UrlRole).toUrl()
+            url = index.data(HistoryModel.UrlRole)
             urls.append(url)
         
         mdata = QMimeData()
@@ -232,12 +232,12 @@ class HistoryMenu(E4ModelMenu):
         """
         if self._keyboardModifiers & Qt.ControlModifier:
             self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                      idx.data(HistoryModel.UrlRole).toUrl(), 
-                      idx.data(HistoryModel.TitleRole).toString())
+                      idx.data(HistoryModel.UrlRole), 
+                      idx.data(HistoryModel.TitleRole))
         else:
             self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                      idx.data(HistoryModel.UrlRole).toUrl(), 
-                      idx.data(HistoryModel.TitleRole).toString())
+                      idx.data(HistoryModel.UrlRole), 
+                      idx.data(HistoryModel.TitleRole))
     
     def prePopulated(self):
         """

@@ -312,7 +312,6 @@ class ConfigurationWidget(QWidget):
         """
         self.setObjectName("ConfigurationDialog")
         self.resize(900, 650)
-        self.setProperty("sizeGripEnabled", QVariant(True))
         self.verticalLayout_2 = QVBoxLayout(self)
         self.verticalLayout_2.setSpacing(6)
         self.verticalLayout_2.setMargin(6)

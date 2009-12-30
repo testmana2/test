@@ -7,7 +7,7 @@
 Module implementing the Editor Exporters configuration page.
 """
 
-from PyQt4.QtCore import QVariant, pyqtSlot
+from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QFontDialog
 
 from ConfigurationPageBase import ConfigurationPageBase
@@ -37,14 +37,14 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         exporters = self.pageIds.keys()
         exporters.sort()
         for exporter in exporters:
-            self.exportersCombo.addItem(exporter, QVariant(self.pageIds[exporter]))
+            self.exportersCombo.addItem(exporter, self.pageIds[exporter])
         
-        self.pdfFontCombo.addItem(self.trUtf8("Courier"), QVariant("Courier"))
-        self.pdfFontCombo.addItem(self.trUtf8("Helvetica"), QVariant("Helvetica"))
-        self.pdfFontCombo.addItem(self.trUtf8("Times"), QVariant("Times"))
+        self.pdfFontCombo.addItem(self.trUtf8("Courier"), "Courier")
+        self.pdfFontCombo.addItem(self.trUtf8("Helvetica"), "Helvetica")
+        self.pdfFontCombo.addItem(self.trUtf8("Times"), "Times")
         
-        self.pdfPageSizeCombo.addItem(self.trUtf8("A4"), QVariant("A4"))
-        self.pdfPageSizeCombo.addItem(self.trUtf8("Letter"), QVariant("Letter"))
+        self.pdfPageSizeCombo.addItem(self.trUtf8("A4"), "A4")
+        self.pdfPageSizeCombo.addItem(self.trUtf8("Letter"), "Letter")
         
         # HTML
         self.htmlWysiwygCheckBox.setChecked(\
@@ -61,11 +61,11 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         # PDF
         self.pdfMagnificationSlider.setValue(\
             Preferences.getEditorExporter("PDF/Magnification"))
-        ind = self.pdfFontCombo.findData(QVariant(\
-            Preferences.getEditorExporter("PDF/Font")))
+        ind = self.pdfFontCombo.findData(\
+            Preferences.getEditorExporter("PDF/Font"))
         self.pdfFontCombo.setCurrentIndex(ind)
-        ind = self.pdfPageSizeCombo.findData(QVariant(\
-            Preferences.getEditorExporter("PDF/PageSize")))
+        ind = self.pdfPageSizeCombo.findData(\
+            Preferences.getEditorExporter("PDF/PageSize"))
         self.pdfPageSizeCombo.setCurrentIndex(ind)
         self.pdfMarginTopSpin.setValue(\
             Preferences.getEditorExporter("PDF/MarginTop"))
@@ -98,25 +98,23 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         """
         # HTML
         Preferences.setEditorExporter("HTML/WYSIWYG",
-            int(self.htmlWysiwygCheckBox.isChecked()))
+            self.htmlWysiwygCheckBox.isChecked())
         Preferences.setEditorExporter("HTML/Folding",
-            int(self.htmlFoldingCheckBox.isChecked()))
+            self.htmlFoldingCheckBox.isChecked())
         Preferences.setEditorExporter("HTML/OnlyStylesUsed",
-            int(self.htmlStylesCheckBox.isChecked()))
+            self.htmlStylesCheckBox.isChecked())
         Preferences.setEditorExporter("HTML/FullPathAsTitle",
-            int(self.htmlTitleCheckBox.isChecked()))
+            self.htmlTitleCheckBox.isChecked())
         Preferences.setEditorExporter("HTML/UseTabs",
-            int(self.htmlTabsCheckBox.isChecked()))
+            self.htmlTabsCheckBox.isChecked())
         
         # PDF
         Preferences.setEditorExporter("PDF/Magnification", 
             self.pdfMagnificationSlider.value())
         Preferences.setEditorExporter("PDF/Font", 
-            self.pdfFontCombo.itemData(self.pdfFontCombo.currentIndex())\
-                             .toString())
+            self.pdfFontCombo.itemData(self.pdfFontCombo.currentIndex()))
         Preferences.setEditorExporter("PDF/PageSize", 
-            self.pdfPageSizeCombo.itemData(self.pdfPageSizeCombo.currentIndex())\
-                                 .toString())
+            self.pdfPageSizeCombo.itemData(self.pdfPageSizeCombo.currentIndex()))
         Preferences.setEditorExporter("PDF/MarginTop", 
             self.pdfMarginTopSpin.value())
         Preferences.setEditorExporter("PDF/MarginBottom", 
@@ -128,16 +126,16 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         
         # RTF
         Preferences.setEditorExporter("RTF/WYSIWYG",
-            int(self.rtfWysiwygCheckBox.isChecked()))
+            self.rtfWysiwygCheckBox.isChecked())
         Preferences.setEditorExporter("RTF/UseTabs",
-            int(self.rtfTabsCheckBox.isChecked()))
+            self.rtfTabsCheckBox.isChecked())
         Preferences.setEditorExporter("RTF/Font", self.rtfFont)
         
         # TeX
         Preferences.setEditorExporter("TeX/OnlyStylesUsed",
-            int(self.texStylesCheckBox.isChecked()))
+            self.texStylesCheckBox.isChecked())
         Preferences.setEditorExporter("TeX/FullPathAsTitle",
-            int(self.texTitleCheckBox.isChecked()))
+            self.texTitleCheckBox.isChecked())
     
     @pyqtSlot(str)
     def on_exportersCombo_activated(self, exporter):
