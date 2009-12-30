@@ -283,6 +283,7 @@ class HistoryManager(QWebHistoryInterface):
             itm = self.__history.pop(-1)
             self.__lastSavedUrl = ""
             self.emit(SIGNAL("entryRemoved"), itm)
+        self.__saveTimer.saveIfNeccessary()
         
         if nextTimeout > 0:
             self.__expiredTimer.start(nextTimeout * 1000)
@@ -402,6 +403,7 @@ class HistoryManager(QWebHistoryInterface):
         if saveAll:
             # use a temporary file when saving everything
             f = QTemporaryFile()
+            f.setAutoRemove(False)
             opened = f.open()
         else:
             f = historyFile
