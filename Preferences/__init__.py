@@ -2039,6 +2039,8 @@ def toList(value):
     """
     if value is None:
         return []
+    elif type(value) != type([]):
+        return [value]
     else:
         return value
     
