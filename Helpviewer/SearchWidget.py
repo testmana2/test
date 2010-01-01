@@ -53,8 +53,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         
         @param txt text of the combobox (string)
         """
-        self.findPrevButton.setEnabled(txt)
-        self.findNextButton.setEnabled(txt)
+        self.findPrevButton.setEnabled(txt != "")
+        self.findNextButton.setEnabled(txt != "")
 
     def __findNextPrev(self):
         """
