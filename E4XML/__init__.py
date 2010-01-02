@@ -4,7 +4,7 @@
 #
 
 """
-Package implementing the XML handling module of eric4.
+Package implementing the XML handling module of eric5.
 
 This module includes XML handlers and writers for
 <ul>

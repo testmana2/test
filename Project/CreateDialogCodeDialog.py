@@ -23,7 +23,7 @@ from Utilities import ModuleParser
 
 import UI.PixmapCache
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 pyqtSignatureRole   = Qt.UserRole + 1
 pythonSignatureRole = Qt.UserRole + 2

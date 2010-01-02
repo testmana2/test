@@ -4809,6 +4809,6 @@ class ViewManager(QObject):
     def getAPIsManager(self):
         """
         Public method to get a reference to the APIs manager.
-        @return the APIs manager object (eric4.QScintilla.APIsManager)
+        @return the APIs manager object (eric5.QScintilla.APIsManager)
         """
         return self.apisManager

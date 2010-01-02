@@ -5,7 +5,7 @@
 #
 
 """
-Script for eric4 to compile all .ui files to Python source.
+Script for eric5 to compile all .ui files to Python source.
 """
 
 import sys

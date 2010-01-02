@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a base class for all of eric4s XML handlers.
+Module implementing a base class for all of eric5s XML handlers.
 """
 
 import sys
@@ -15,7 +15,7 @@ from xml.sax.handler import ContentHandler
 
 class XMLHandlerBase(ContentHandler):
     """
-    Class implementing the base class for al of eric4s XML handlers.
+    Class implementing the base class for al of eric5s XML handlers.
     """
     def __init__(self):
         """

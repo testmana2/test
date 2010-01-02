@@ -4,5 +4,5 @@
 #
 
 """
-Package containing third party packages used by eric4.
+Package containing third party packages used by eric5.
 """ 

@@ -17,7 +17,7 @@ from PyQt4.QtGui import *
 from .Ui_PyProfileDialog import Ui_PyProfileDialog
 import Utilities
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class ProfileTreeWidgetItem(QTreeWidgetItem):
     """

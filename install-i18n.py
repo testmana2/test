@@ -3,10 +3,10 @@
 
 # Copyright (c) 2004 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# This is the install script for eric4's translation files.
+# This is the install script for eric5's translation files.
 
 """
-Installation script for the eric4 IDE translation files.
+Installation script for the eric5 IDE translation files.
 """
 
 import sys
@@ -17,9 +17,9 @@ import glob
 from PyQt4.QtCore import QDir
 
 try:
-    from .eric4config import getConfig
+    from .eric5config import getConfig
 except ImportError:
-    print("The eric4 IDE doesn't seem to be installed. Aborting.")
+    print("The eric5 IDE doesn't seem to be installed. Aborting.")
     sys.exit(1)
     
 def getConfigDir():

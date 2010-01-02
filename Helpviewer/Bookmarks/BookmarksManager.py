@@ -378,7 +378,7 @@ class BookmarksManager(QObject):
         fileName = QFileDialog.getSaveFileName(
             None,
             self.trUtf8("Export Bookmarks"),
-            "eric4_bookmarks.xbel",
+            "eric5_bookmarks.xbel",
             self.trUtf8("XBEL bookmarks") + " (*.xbel, *.xml)")
         if not fileName:
             return

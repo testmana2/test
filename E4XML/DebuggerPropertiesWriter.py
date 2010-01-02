@@ -44,7 +44,7 @@ class DebuggerPropertiesWriter(XMLWriterBase):
             debuggerPropertiesFileFormatVersion)
         
         # add some generation comments
-        self._write("<!-- eric4 debugger properties file for project %s -->" % self.name)
+        self._write("<!-- eric5 debugger properties file for project %s -->" % self.name)
         self._write("<!-- This file was generated automatically, do not edit. -->")
         if Preferences.getProject("XMLTimestamp"):
             self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))

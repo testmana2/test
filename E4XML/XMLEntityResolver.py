@@ -12,7 +12,7 @@ from xml.sax.handler import EntityResolver
 
 import Utilities
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class XMLEntityResolver(EntityResolver):
     """

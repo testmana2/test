@@ -22,7 +22,7 @@ from UI.Info import Version
 
 import UI.PixmapCache
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 
 def makeAppInfo(argv, name, arg, description, options = []):
@@ -154,7 +154,7 @@ def loadTranslators(qtTransDir, app, translationFiles = ()):
         be loaded (tuple of strings)
     @return the requested locale (string)
     """
-    translations = ("qt", "eric4") + translationFiles
+    translations = ("qt", "eric5") + translationFiles
     loc = Preferences.getUILanguage()
     if loc is None:
         return
@@ -173,7 +173,7 @@ def loadTranslators(qtTransDir, app, translationFiles = ()):
             if ok:
                 app.installTranslator(translator)
             else:
-                if tf.startswith("eric4"):
+                if tf.startswith("eric5"):
                     loca = None
         loc = loca
     else:
@@ -184,7 +184,7 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True):
     """
     Module function to start up an application that doesn't need a specialized start up.
     
-    This function is used by all of eric4's helper programs.
+    This function is used by all of eric5's helper programs.
     
     @param argv list of commandline parameters (list of strings)
     @param appinfo dictionary describing the application

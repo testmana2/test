@@ -4,7 +4,7 @@
 #
 
 """
-Package implementing various functions/classes needed everywhere within eric4. 
+Package implementing various functions/classes needed everywhere within eric5. 
 """
 
 import os
@@ -32,7 +32,7 @@ from E4Gui.E4Application import e4App
 
 from UI.Info import Program, Version
 
-from eric4config import getConfig
+from eric5config import getConfig
 import Preferences
 
 configDir = None

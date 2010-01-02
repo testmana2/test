@@ -84,7 +84,7 @@ def handleSingleApplication(ddindex):
             client.processArgs(sys.argv[1:])
         sys.exit(0)
     elif res < 0:
-        print("eric4: %s" % client.errstr())
+        print("eric5: %s" % client.errstr())
         sys.exit(res)
 
 def excepthook(excType, excValue, tracebackobj):
@@ -96,7 +96,7 @@ def excepthook(excType, excValue, tracebackobj):
     @param tracebackobj traceback object
     """
     separator = '-' * 80
-    logFile = os.path.join(Utilities.getConfigDir(), "eric4_error.log")
+    logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
     notice = \
         """An unhandled exception occurred. Please report the problem\n"""\
         """using the error reporting dialog or via email to <%s>.\n"""\
@@ -224,12 +224,12 @@ def main():
     QTextCodec.setCodecForCStrings(QTextCodec.codecForName(\
         str(Preferences.getSystem("StringEncoding"))))
     
-    splash.showMessage(QApplication.translate("eric4", "Importing packages..."))
+    splash.showMessage(QApplication.translate("eric5", "Importing packages..."))
     # We can only import these after creating the E4Application because they
     # make Qt calls that need the E4Application to exist.
     from UI.UserInterface import UserInterface
 
-    splash.showMessage(QApplication.translate("eric4", "Generating Main Window..."))
+    splash.showMessage(QApplication.translate("eric5", "Generating Main Window..."))
     try:
         mainWindow = UserInterface(loc, splash, pluginFile, noopen, restartArgs)
         app.connect(app, SIGNAL("lastWindowClosed()"), app, SLOT("quit()"))

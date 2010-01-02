@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog to enter the parameters for eric4-doc.
+Module implementing a dialog to enter the parameters for eric5-doc.
 """
 
 import sys
@@ -17,14 +17,14 @@ from PyQt4.QtGui import *
 from E4Gui.E4Completers import E4DirCompleter
 
 from .Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
-from DocumentationTools.Config import eric4docDefaultColors, eric4docColorParameterNames
+from DocumentationTools.Config import eric5docDefaultColors, eric5docColorParameterNames
 import Utilities
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
     """
-    Class implementing a dialog to enter the parameters for eric4-doc.
+    Class implementing a dialog to enter the parameters for eric5-doc.
     """
     def __init__(self, ppath, parms = None, parent = None):
         """
@@ -62,7 +62,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         
         # get a copy of the defaults to store the user settings
         self.parameters = copy.deepcopy(self.defaults)
-        self.colors = eric4docDefaultColors.copy()
+        self.colors = eric5docDefaultColors.copy()
         
         # combine it with the values of parms
         if parms is not None:
@@ -145,7 +145,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         
         # 1. the program name
         args.append(sys.executable)
-        args.append(Utilities.normabsjoinpath(getConfig('ericDir'), "eric4-doc.py"))
+        args.append(Utilities.normabsjoinpath(getConfig('ericDir'), "eric5-doc.py"))
         
         # 2. the commandline options
         # 2a. general commandline options
@@ -189,10 +189,10 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             else:
                 args.append(os.path.join(self.ppath, self.parameters['cssFile']))
         for key, value in list(self.colors.items()):
-            if self.colors[key] != eric4docDefaultColors[key]:
+            if self.colors[key] != eric5docDefaultColors[key]:
                 parms[key] = self.colors[key]
                 args.append("--%s=%s" % \
-                            (eric4docColorParameterNames[key], self.colors[key]))
+                            (eric5docColorParameterNames[key], self.colors[key]))
         
         # 2c. QtHelp commandline options
         parms['qtHelpEnabled'] = self.parameters['qtHelpEnabled']

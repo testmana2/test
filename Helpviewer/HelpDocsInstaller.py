@@ -12,7 +12,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtHelp import QHelpEngineCore
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class HelpDocsInstaller(QThread):
     """
@@ -138,12 +138,12 @@ class HelpDocsInstaller(QThread):
     
     def __installEric4Doc(self, engine):
         """
-        Private method to install/update the eric4 help documentation.
+        Private method to install/update the eric5 help documentation.
         
         @param engine reference to the help engine (QHelpEngineCore)
         @return flag indicating success (boolean)
         """
-        versionKey = "eric4_ide"
+        versionKey = "eric5_ide"
         info = engine.customValue(versionKey, "")
         lst = info.split('|')
         

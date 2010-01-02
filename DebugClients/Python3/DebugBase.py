@@ -467,7 +467,7 @@ class DebugBase(bdb.Bdb):
         """
         Reimplemented from bdb.py to get the first breakpoint of a particular line.
         
-        Because eric4 supports only one breakpoint per line, this overwritten
+        Because eric5 supports only one breakpoint per line, this overwritten
         method will return this one and only breakpoint.
         
         @param filename the filename of the bp to retrieve (string)

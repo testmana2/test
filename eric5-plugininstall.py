@@ -7,7 +7,7 @@
 """
 Eric4 Plugin Installer
 
-This is the main Python script to install eric4 plugins from outside of the IDE.
+This is the main Python script to install eric5 plugins from outside of the IDE.
 """
 
 import sys
@@ -30,8 +30,8 @@ def createMainWidget(argv):
     @param argv list of commandline parameters (list of strings)
     @return reference to the main widget (QWidget)
     """
-    from PluginManager.PluginRepositoryDialog import PluginRepositoryWindow
-    return PluginRepositoryWindow(None)
+    from PluginManager.PluginInstallDialog import PluginInstallWindow
+    return PluginInstallWindow(argv[1:])
 
 def main():
     """
@@ -40,12 +40,12 @@ def main():
     options = [\
         ("--config=configDir", 
          "use the given directory as the one containing the config files"), 
+        ("", "names of plugins to install")
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Plugin Repository",
+                                  "Eric4 Plugin Installer",
                                   "",
-                                  "Utility to show the contents of the eric4"
-                                  " Plugin repository.",
+                                  "Plugin installation utility for eric5",
                                   options)
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,

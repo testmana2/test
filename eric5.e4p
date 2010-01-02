@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
-<!-- eric4 project file for project eric4 -->
+<!-- eric5 project file for project eric5 -->
 <Project version="4.6">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
   <ProjectExcludeList>Dictionaries/excludes.dic</ProjectExcludeList>
   <ProgLanguage mixed="1">Python3</ProgLanguage>
   <ProjectType>Qt4</ProjectType>
-  <Description>eric4 is an integrated development environment for the Python and Ruby language. It uses the PyQt4 bindings and the QScintilla2 editor widget.</Description>
+  <Description>eric5 is an integrated development environment for the Python and Ruby language. It uses the PyQt4 bindings and the QScintilla2 editor widget.</Description>
   <Version>5.0.0</Version>
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
-  <TranslationPattern>i18n/eric4_%language%.ts</TranslationPattern>
+  <TranslationPattern>i18n/eric5_%language%.ts</TranslationPattern>
   <Sources>
     <Source>__init__.py</Source>
     <Source>Preferences/__init__.py</Source>
@@ -22,24 +22,16 @@
     <Source>UI/__init__.py</Source>
     <Source>Utilities/Startup.py</Source>
     <Source>Utilities/__init__.py</Source>
-    <Source>eric4config.py</Source>
     <Source>UI/Info.py</Source>
-    <Source>eric4-uipreviewer.py</Source>
     <Source>Tools/UIPreviewer.py</Source>
     <Source>Tools/__init__.py</Source>
     <Source>Utilities/SingleApplication.py</Source>
     <Source>Tools/TRSingleApplication.py</Source>
     <Source>Tools/TRPreviewer.py</Source>
-    <Source>eric4-trpreviewer.py</Source>
-    <Source>eric4-qregexp.py</Source>
-    <Source>eric4-re.py</Source>
-    <Source>eric4-unittest.py</Source>
     <Source>PyUnit/UnittestDialog.py</Source>
     <Source>PyUnit/__init__.py</Source>
     <Source>DebugClients/Python/__init__.py</Source>
     <Source>DebugClients/__init__.py</Source>
-    <Source>eric4-doc.py</Source>
-    <Source>eric4-api.py</Source>
     <Source>Utilities/ModuleParser.py</Source>
     <Source>Utilities/ClassBrowsers/idlclbr.py</Source>
     <Source>Utilities/ClassBrowsers/pyclbr.py</Source>
@@ -68,11 +60,8 @@
     <Source>Examples/rhallo.py</Source>
     <Source>Examples/modpython_dbg.py</Source>
     <Source>patch_modpython.py</Source>
-    <Source>eric4.pyw</Source>
     <Source>UI/DiffDialog.py</Source>
-    <Source>eric4-diff.py</Source>
     <Source>UI/CompareDialog.py</Source>
-    <Source>eric4-compare.py</Source>
     <Source>DebugClients/Python/DebugProtocol.py</Source>
     <Source>DebugClients/Python/eric4dbgstub.py</Source>
     <Source>DebugClients/Python/PyProfile.py</Source>
@@ -112,7 +101,6 @@
     <Source>Preferences/ShortcutsDialog.py</Source>
     <Source>Preferences/Shortcuts.py</Source>
     <Source>Preferences/ShortcutDialog.py</Source>
-    <Source>eric4-configure.py</Source>
     <Source>UI/Browser.py</Source>
     <Source>Preferences/ToolConfigurationDialog.py</Source>
     <Source>UI/DeleteFilesConfirmationDialog.py</Source>
@@ -150,7 +138,6 @@
     <Source>VCS/__init__.py</Source>
     <Source>Project/Project.py</Source>
     <Source>UI/UserInterface.py</Source>
-    <Source>eric4.py</Source>
     <Source>ViewManager/ViewManager.py</Source>
     <Source>Project/ProjectBrowserModel.py</Source>
     <Source>Project/ProjectBrowserSortFilterProxyModel.py</Source>
@@ -217,7 +204,6 @@
     <Source>QScintilla/QsciScintillaCompat.py</Source>
     <Source>QScintilla/Editor.py</Source>
     <Source>QScintilla/Shell.py</Source>
-    <Source>eric4-tray.py</Source>
     <Source>Tools/TrayStarter.py</Source>
     <Source>Globals/__init__.py</Source>
     <Source>Preferences/ConfigurationPages/ConfigurationPageBase.py</Source>
@@ -297,9 +283,7 @@
     <Source>Plugins/DocumentationPlugins/Ericapi/EricapiExecDialog.py</Source>
     <Source>Plugins/DocumentationPlugins/Ericdoc/EricdocExecDialog.py</Source>
     <Source>PluginManager/PluginInstallDialog.py</Source>
-    <Source>eric4-plugininstall.py</Source>
     <Source>PluginManager/PluginUninstallDialog.py</Source>
-    <Source>eric4-pluginuninstall.py</Source>
     <Source>Plugins/VcsPlugins/__init__.py</Source>
     <Source>Plugins/PluginVcsSubversion.py</Source>
     <Source>Plugins/PluginVcsPySvn.py</Source>
@@ -418,8 +402,6 @@
     <Source>Plugins/VcsPlugins/vcsSubversion/ConfigurationPage/SubversionPage.py</Source>
     <Source>Plugins/VcsPlugins/vcsSubversion/SvnUtilities.py</Source>
     <Source>QScintilla/MiniEditor.py</Source>
-    <Source>eric4-editor.py</Source>
-    <Source>eric4-pluginrepository.py</Source>
     <Source>E4Gui/E4ToolBarManager.py</Source>
     <Source>E4Gui/E4ToolBarDialog.py</Source>
     <Source>MultiProject/__init__.py</Source>
@@ -663,7 +645,6 @@
     <Source>SqlBrowser/SqlConnectionWidget.py</Source>
     <Source>SqlBrowser/SqlBrowserWidget.py</Source>
     <Source>SqlBrowser/SqlBrowser.py</Source>
-    <Source>eric4-sqlbrowser.py</Source>
     <Source>SqlBrowser/SqlConnectionDialog.py</Source>
     <Source>Helpviewer/Bookmarks/__init__.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarkNode.py</Source>
@@ -697,7 +678,6 @@
     <Source>IconEditor/cursors/__init__.py</Source>
     <Source>IconEditor/IconEditorGrid.py</Source>
     <Source>IconEditor/IconEditorWindow.py</Source>
-    <Source>eric4-iconeditor.py</Source>
     <Source>IconEditor/IconZoomDialog.py</Source>
     <Source>IconEditor/IconEditorPalette.py</Source>
     <Source>DebugClients/Python/coverage/backward.py</Source>
@@ -720,7 +700,6 @@
     <Source>E4Gui/E4ModelToolBar.py</Source>
     <Source>E4Gui/E4TreeSortFilterProxyModel.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/parsers.py</Source>
-    <Source>eric4-webbrowser.py</Source>
     <Source>Helpviewer/Passwords/__init__.py</Source>
     <Source>Helpviewer/Passwords/PasswordManager.py</Source>
     <Source>Helpviewer/Passwords/PasswordModel.py</Source>
@@ -761,6 +740,27 @@
     <Source>ThirdParty/Pygments/token.py</Source>
     <Source>ThirdParty/Pygments/scanner.py</Source>
     <Source>ThirdParty/Pygments/lexer.py</Source>
+    <Source>eric5config.py</Source>
+    <Source>eric5.py</Source>
+    <Source>eric5.pyw</Source>
+    <Source>eric5-webbrowser.py</Source>
+    <Source>eric5-unittest.py</Source>
+    <Source>eric5-uipreviewer.py</Source>
+    <Source>eric5-trpreviewer.py</Source>
+    <Source>eric5-tray.py</Source>
+    <Source>eric5-sqlbrowser.py</Source>
+    <Source>eric5-re.py</Source>
+    <Source>eric5-qregexp.py</Source>
+    <Source>eric5-pluginuninstall.py</Source>
+    <Source>eric5-pluginrepository.py</Source>
+    <Source>eric5-plugininstall.py</Source>
+    <Source>eric5-iconeditor.py</Source>
+    <Source>eric5-editor.py</Source>
+    <Source>eric5-doc.py</Source>
+    <Source>eric5-diff.py</Source>
+    <Source>eric5-configure.py</Source>
+    <Source>eric5-compare.py</Source>
+    <Source>eric5-api.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -964,22 +964,22 @@
     <Form>Helpviewer/OpenSearch/OpenSearchEditDialog.ui</Form>
   </Forms>
   <Translations>
-    <Translation>i18n/eric4_de.qm</Translation>
-    <Translation>i18n/eric4_de.ts</Translation>
-    <Translation>i18n/eric4_fr.qm</Translation>
-    <Translation>i18n/eric4_fr.ts</Translation>
-    <Translation>i18n/eric4_ru.qm</Translation>
-    <Translation>i18n/eric4_ru.ts</Translation>
-    <Translation>i18n/eric4_cs.qm</Translation>
-    <Translation>i18n/eric4_cs.ts</Translation>
-    <Translation>i18n/eric4_es.ts</Translation>
-    <Translation>i18n/eric4_es.qm</Translation>
-    <Translation>i18n/eric4_tr.ts</Translation>
-    <Translation>i18n/eric4_tr.qm</Translation>
-    <Translation>i18n/eric4_zh_CN.GB2312.ts</Translation>
-    <Translation>i18n/eric4_zh_CN.GB2312.qm</Translation>
-    <Translation>i18n/eric4_it.ts</Translation>
-    <Translation>i18n/eric4_it.qm</Translation>
+    <Translation>i18n/eric5_cs.qm</Translation>
+    <Translation>i18n/eric5_cs.ts</Translation>
+    <Translation>i18n/eric5_de.qm</Translation>
+    <Translation>i18n/eric5_de.ts</Translation>
+    <Translation>i18n/eric5_es.qm</Translation>
+    <Translation>i18n/eric5_es.ts</Translation>
+    <Translation>i18n/eric5_fr.qm</Translation>
+    <Translation>i18n/eric5_fr.ts</Translation>
+    <Translation>i18n/eric5_it.qm</Translation>
+    <Translation>i18n/eric5_it.ts</Translation>
+    <Translation>i18n/eric5_ru.qm</Translation>
+    <Translation>i18n/eric5_ru.ts</Translation>
+    <Translation>i18n/eric5_tr.qm</Translation>
+    <Translation>i18n/eric5_tr.ts</Translation>
+    <Translation>i18n/eric5_zh_CN.GB2312.qm</Translation>
+    <Translation>i18n/eric5_zh_CN.GB2312.ts</Translation>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
@@ -993,24 +993,19 @@
     <Other>Documentation/mod_python.pdf</Other>
     <Other>DesignerTemplates</Other>
     <Other>pixmaps</Other>
-    <Other>README-eric4-doc.txt</Other>
     <Other>README-PyXML.txt</Other>
     <Other>THANKS</Other>
-    <Other>eric4config.linux</Other>
     <Other>pylint.rc</Other>
     <Other>README-i18n.txt</Other>
     <Other>README-passive-debugging.txt</Other>
     <Other>README</Other>
     <Other>Documentation/Source</Other>
     <Other>Documentation/mod_python.odt</Other>
-    <Other>eric4.e4p</Other>
     <Other>default.e4k</Other>
     <Other>Styles</Other>
     <Other>CodeTemplates</Other>
     <Other>Plugins/ViewManagerPlugins/Listspace/preview.png</Other>
     <Other>Plugins/ViewManagerPlugins/Tabview/preview.png</Other>
-    <Other>Documentation/eric4-plugin.odt</Other>
-    <Other>Documentation/eric4-plugin.pdf</Other>
     <Other>Plugins/ViewManagerPlugins/MdiArea/preview.png</Other>
     <Other>Plugins/VcsPlugins/vcsPySvn/icons/pysvn.png</Other>
     <Other>Plugins/VcsPlugins/vcsSubversion/icons/subversion.png</Other>
@@ -1019,12 +1014,9 @@
     <Other>changelog</Other>
     <Other>APIs/Ruby/Ruby-1.8.7.api</Other>
     <Other>APIs/Python/zope-3.3.1.api</Other>
-    <Other>APIs/Python/eric4.api</Other>
-    <Other>APIs/Ruby/eric4.api</Other>
     <Other>LICENSE.GPL3</Other>
     <Other>ThirdParty/CharDet/docs</Other>
     <Other>ThirdParty/CharDet/COPYING</Other>
-    <Other>eric4.pth</Other>
     <Other>Dictionaries</Other>
     <Other>APIs/Python/zope-2.11.2.api</Other>
     <Other>APIs/Python/zope-2.10.7.api</Other>
@@ -1042,8 +1034,16 @@
     <Other>DebugClients/Python/coverage/doc</Other>
     <Other>DebugClients/Python3/coverage/doc</Other>
     <Other>DebugClients/Python3/coverage/htmlfiles</Other>
+    <Other>eric5.pth</Other>
+    <Other>eric5config.linux</Other>
+    <Other>eric5.e4p</Other>
+    <Other>README-eric5-doc.txt</Other>
+    <Other>Documentation/eric5-plugin.odt</Other>
+    <Other>Documentation/eric5-plugin.pdf</Other>
+    <Other>APIs/Python/eric5.api</Other>
+    <Other>APIs/Ruby/eric5.api</Other>
   </Others>
-  <MainScript>eric4.py</MainScript>
+  <MainScript>eric5.py</MainScript>
   <Vcs>
     <VcsType>PySvn</VcsType>
     <VcsOptions>

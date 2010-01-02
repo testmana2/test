@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a base class for all of eric4s XML writers.
+Module implementing a base class for all of eric5s XML writers.
 """
 
 import os
@@ -12,7 +12,7 @@ import pickle
 
 class XMLWriterBase(object):
     """
-    Class implementing a base class for all of eric4s XML writers.
+    Class implementing a base class for all of eric5s XML writers.
     """
     def __init__(self, file):
         """

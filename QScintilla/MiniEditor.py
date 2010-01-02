@@ -234,8 +234,8 @@ class MiniEditor(QMainWindow):
         """
         Private slot to show a little About message.
         """
-        QMessageBox.about(self, self.trUtf8("About eric4 Mini Editor"),
-            self.trUtf8("The eric4 Mini Editor is an editor component"
+        QMessageBox.about(self, self.trUtf8("About eric5 Mini Editor"),
+            self.trUtf8("The eric5 Mini Editor is an editor component"
                 " based on QScintilla. It may be used for simple"
                 " editing tasks, that don't need the power of"
                 " a full blown editor."))
@@ -244,7 +244,7 @@ class MiniEditor(QMainWindow):
         """
         Private slot to handle the About Qt dialog.
         """
-        QMessageBox.aboutQt(self, "eric4 Mini Editor")
+        QMessageBox.aboutQt(self, "eric5 Mini Editor")
     
     def __whatsThis(self):
         """
@@ -332,7 +332,7 @@ class MiniEditor(QMainWindow):
         self.__createSearchActions()
         
         # read the keyboard shortcuts and make them identical to the main
-        # eric4 shortcuts
+        # eric5 shortcuts
         for act in self.helpActions:
             self.__readShortcut(act, "General")
         for act in self.editActions:
@@ -1485,7 +1485,7 @@ class MiniEditor(QMainWindow):
         """
         if self.__textEdit.isModified():
             ret = QMessageBox.warning(self, 
-                    self.trUtf8("eric4 Mini Editor"),
+                    self.trUtf8("eric5 Mini Editor"),
                     self.trUtf8("The document has been modified.\n"
                             "Do you want to save your changes?"),
                     QMessageBox.StandardButtons(\
@@ -1549,7 +1549,7 @@ class MiniEditor(QMainWindow):
         """
         file = QFile(fileName)
         if not file.open(QFile.WriteOnly):
-            QMessageBox.warning(self, self.trUtf8("eric4 Mini Editor"),
+            QMessageBox.warning(self, self.trUtf8("eric5 Mini Editor"),
                                  self.trUtf8("Cannot write file {0}:\n{1}.")\
                                  .format(fileName, file.errorString()))
         

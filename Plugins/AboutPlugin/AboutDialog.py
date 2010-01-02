@@ -88,7 +88,7 @@ Ralf Ahlbrink
 Stefan Jaensch
 Martin v. Löwis
 Thorsten Kohnhorst
-for providing patches to improve eric3 and eric4.
+for providing patches to improve eric3, eric4 and eric5.
 
 And all the people who reported bugs and made suggestions."""
 

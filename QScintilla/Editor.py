@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing the editor component of the eric4 IDE.
+Module implementing the editor component of the eric5 IDE.
 """
 
 import os
@@ -44,7 +44,7 @@ TemplateCompletionListID = 2
 
 class Editor(QsciScintillaCompat):
     """
-    Class implementing the editor component of the eric4 IDE.
+    Class implementing the editor component of the eric5 IDE.
     
     @signal modificationStatusChanged(boolean, editor) emitted when the
             modification status has changed
@@ -4644,7 +4644,7 @@ class Editor(QsciScintillaCompat):
                 self.inReopenPrompt = True
                 msg = self.trUtf8(\
                     """<p>The file <b>{0}</b> has been changed while it was opened in"""
-                    """ eric4. Reread it?</p>""").format(self.fileName)
+                    """ eric5. Reread it?</p>""").format(self.fileName)
                 default = QMessageBox.No
                 if self.isModified():
                     msg += self.trUtf8(\

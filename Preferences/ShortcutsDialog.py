@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog for the configuration of eric4s keyboard shortcuts.
+Module implementing a dialog for the configuration of eric5s keyboard shortcuts.
 """
 
 from PyQt4.QtCore import *
@@ -23,7 +23,7 @@ from Preferences import Shortcuts
 
 class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
     """
-    Class implementing a dialog for the configuration of eric4s keyboard shortcuts.
+    Class implementing a dialog for the configuration of eric5s keyboard shortcuts.
     """
     objectNameRole = Qt.UserRole
     noCheckRole    = Qt.UserRole + 1

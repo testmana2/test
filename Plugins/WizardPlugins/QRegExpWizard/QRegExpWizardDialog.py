@@ -33,7 +33,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         Constructor
         
         @param parent parent widget (QWidget)
-        @param fromEric flag indicating a call from within eric4
+        @param fromEric flag indicating a call from within eric5
         """
         QWidget.__init__(self,parent)
         self.setupUi(self)
@@ -275,7 +275,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         """
         Private slot to copy the regexp string into the clipboard.
         
-        This slot is only available, if not called from within eric4.
+        This slot is only available, if not called from within eric5.
         """
         escaped = self.regexpLineEdit.text()
         if escaped:
@@ -484,7 +484,7 @@ class QRegExpWizardDialog(QDialog):
         Constructor
         
         @param parent parent widget (QWidget)
-        @param fromEric flag indicating a call from within eric4
+        @param fromEric flag indicating a call from within eric5
         """
         QDialog.__init__(self, parent)
         self.setModal(fromEric)

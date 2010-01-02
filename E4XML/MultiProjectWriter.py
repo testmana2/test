@@ -45,7 +45,7 @@ class MultiProjectWriter(XMLWriterBase):
             multiProjectFileFormatVersion)
         
         # add some generation comments
-        self._write("<!-- eric4 multi project file for multi project %s -->" % self.name)
+        self._write("<!-- eric5 multi project file for multi project %s -->" % self.name)
         if Preferences.getMultiProject("XMLTimestamp"):
             self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
             self._write("<!-- Copyright (C) %s -->" % time.strftime('%Y'))

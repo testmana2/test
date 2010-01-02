@@ -536,7 +536,7 @@ class TemplateViewer(QTreeWidget):
             self,
             self.trUtf8("Import Templates"),
             "",
-            self.trUtf8("Templates Files (*.e3c *.e4c);; All Files (*)"))
+            self.trUtf8("Templates Files (*.e4c);; All Files (*)"))
         
         if fn:
             self.readTemplates(fn)
@@ -576,7 +576,7 @@ class TemplateViewer(QTreeWidget):
                         """ They are grouped by the template groups. Help about"""
                         """ how to define them is available in the template edit"""
                         """ dialog. There is an example template available in the"""
-                        """ Examples subdirectory of the eric4 distribution.</p>"""))
+                        """ Examples subdirectory of the eric5 distribution.</p>"""))
 
     def __getPredefinedVars(self):
         """
@@ -800,7 +800,7 @@ class TemplateViewer(QTreeWidget):
         """
         try:
             if filename is None:
-                filename = os.path.join(Utilities.getConfigDir(), "eric4templates.e4c")
+                filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
             f = open(filename, "w")
             
             TemplatesWriter(f, self).writeXML()
@@ -820,7 +820,7 @@ class TemplateViewer(QTreeWidget):
         """
         try:
             if filename is None:
-                filename = os.path.join(Utilities.getConfigDir(), "eric4templates.e4c")
+                filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
                 if not os.path.exists(filename):
                     return
             f = open(filename, "r")

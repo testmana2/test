@@ -11,7 +11,7 @@ import os
 import sys
 import distutils.sysconfig
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 debugger = None
 __scriptname = None

@@ -37,8 +37,8 @@ class Browser(QTreeView):
     @signal designerFile(string) emitted to open a Qt-Designer file
     @signal linguistFile(string) emitted to open a Qt-Linguist (*.ts) file
     @signal trpreview(string list) emitted to preview a Qt-Linguist (*.qm) file
-    @signal projectFile(string) emitted to open an eric4 project file
-    @signal multiProjectFile(string) emitted to open an eric4 multi project file
+    @signal projectFile(string) emitted to open an eric4/5 project file
+    @signal multiProjectFile(string) emitted to open an eric4/5 multi project file
     @signal pixmapFile(string) emitted to open a pixmap file
     @signal pixmapEditFile(string) emitted to edit a pixmap file
     @signal svgFile(string) emitted to open a SVG file

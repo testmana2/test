@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """
-Word completion for the eric4 shell
+Word completion for the eric5 shell
 
-<h4>NOTE for eric4 variant</h4>
+<h4>NOTE for eric5 variant</h4>
 
     This version is a re-implementation of rlcompleter 
-    as found in the Python3 library. It is modified to work with the eric4 
+    as found in the Python3 library. It is modified to work with the eric5 
     debug clients.
 
 <h4>Original rlcompleter documentation</h4>

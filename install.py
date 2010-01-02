@@ -3,10 +3,10 @@
 
 # Copyright (c) 2002-2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# This is the install script for eric4.
+# This is the install script for eric5.
 
 """
-Installation script for the eric4 IDE and all eric4 related tools.
+Installation script for the eric5 IDE and all eric5 related tools.
 """
 
 import sys
@@ -51,7 +51,7 @@ def usage(rcode = 2):
         print("              (no default value)")
     print("    -b dir    where the binaries will be installed")
     print("              (default: %s)" % (platBinDir))
-    print("    -d dir    where eric4 python files will be installed")
+    print("    -d dir    where eric5 python files will be installed")
     print("              (default: %s)" % (modDir))
     print("    -f file   configuration file naming the various installation paths")
     if not sys.platform.startswith("win"):
@@ -67,7 +67,7 @@ def usage(rcode = 2):
     print("'ericTranslationsDir', 'ericTemplatesDir', 'ericCodeTemplatesDir',")
     print("'ericOthersDir','bindir', 'mdir' and 'apidir.")
     print("These define the directories for the installation of the various parts of"\
-          " eric4.")
+          " eric5.")
 
     sys.exit(rcode)
 
@@ -202,7 +202,7 @@ def createGlobalPluginsDir():
     """
     global cfg, distDir
     
-    pdir = os.path.join(cfg['mdir'], "eric4plugins")
+    pdir = os.path.join(cfg['mdir'], "eric5plugins")
     fname = os.path.join(pdir, "__init__.py")
     if not os.path.exists(fname):
         if not os.path.exists(pdir):
@@ -224,25 +224,25 @@ def cleanUp():
     Uninstall the old eric files.
     """
     try:
-        from .eric4config import getConfig
+        from eric5config import getConfig
     except ImportError:
-        # eric4 wasn't installed previously
+        # eric5 wasn't installed previously
         return
     
     global pyModDir, progLanguages
     
     # Remove the wrapper scripts
     rem_wnames = [
-        "eric4-api", "eric4-compare",
-        "eric4-configure", "eric4-diff",
-        "eric4-doc", "eric4-helpviewer",
-        "eric4-qregexp", "eric4-re", 
-        "eric4-trpreviewer", "eric4-uipreviewer",
-        "eric4-unittest", "eric4",
-        "eric4-tray", "eric4-editor", 
-        "eric4-plugininstall", "eric4-pluginuninstall", 
-        "eric4-pluginrepository", "eric4-sqlbrowser", 
-        "eric4-webbrowser", 
+        "eric5-api", "eric5-compare",
+        "eric5-configure", "eric5-diff",
+        "eric5-doc", "eric5-helpviewer",
+        "eric5-qregexp", "eric5-re", 
+        "eric5-trpreviewer", "eric5-uipreviewer",
+        "eric5-unittest", "eric5",
+        "eric5-tray", "eric5-editor", 
+        "eric5-plugininstall", "eric5-pluginuninstall", 
+        "eric5-pluginrepository", "eric5-sqlbrowser", 
+        "eric5-webbrowser", 
     ]
     for rem_wname in rem_wnames:
         rwname = wrapperName(getConfig('bindir'), rem_wname)
@@ -250,7 +250,7 @@ def cleanUp():
             os.remove(rwname)
     
     # Cleanup our config file
-    for name in ['eric4config.py', 'eric4config.pyc']:
+    for name in ['eric5config.py', 'eric5config.pyc']:
         e4cfile = os.path.join(pyModDir, name)
         if os.path.exists(e4cfile):
             os.remove(e4cfile)
@@ -263,7 +263,7 @@ def cleanUp():
             shutil.rmtree(getConfig(name), True)
     
     # Cleanup translations
-    for name in glob.glob(os.path.join(getConfig('ericTranslationsDir'), 'eric4_*.qm')):
+    for name in glob.glob(os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
         if os.path.exists(name):
             os.remove(name)
     
@@ -287,24 +287,24 @@ def installEric():
     
     # Create the platform specific wrappers.
     wnames = []
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-api"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-compare"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-configure"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-diff"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-doc"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-webbrowser"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-qregexp"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-re"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-trpreviewer"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-uipreviewer"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-unittest"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-tray"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-editor"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-plugininstall"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-pluginuninstall"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-pluginrepository"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4-sqlbrowser"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric4"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-api"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-compare"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-configure"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-diff"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-doc"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-webbrowser"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-qregexp"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-re"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-trpreviewer"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-uipreviewer"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-unittest"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-tray"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-editor"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-plugininstall"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-pluginuninstall"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-pluginrepository"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-sqlbrowser"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5"))
     
     # set install prefix, if not None
     if distDir:
@@ -318,23 +318,23 @@ def installEric():
             if not os.path.isdir(cfg[key]):
                 os.makedirs(cfg[key])
         
-        # copy the eric4 config file
+        # copy the eric5 config file
         if distDir:
-            shutil.copy('eric4config.py', cfg['mdir'])
-            if os.path.exists('eric4config.pyc'):
-                shutil.copy('eric4config.pyc', cfg['mdir'])
+            shutil.copy('eric5config.py', cfg['mdir'])
+            if os.path.exists('eric5config.pyc'):
+                shutil.copy('eric5config.pyc', cfg['mdir'])
         else:
-            shutil.copy('eric4config.py', modDir)
-            if os.path.exists('eric4config.pyc'):
-                shutil.copy('eric4config.pyc', modDir)
+            shutil.copy('eric5config.py', modDir)
+            if os.path.exists('eric5config.pyc'):
+                shutil.copy('eric5config.pyc', modDir)
         
-        # copy the eric4.pth file
+        # copy the eric5.pth file
         if distDir:
-            shutil.copy('eric%seric4.pth' % os.sep, cfg['mdir'])
+            shutil.copy('eric%seric5.pth' % os.sep, cfg['mdir'])
         else:
-            shutil.copy('eric%seric4.pth' % os.sep, modDir)
+            shutil.copy('eric%seric5.pth' % os.sep, modDir)
         
-        # copy the various parts of eric4
+        # copy the various parts of eric5
         copyTree('eric', cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'], 
             ['eric%sExamples' % os.sep])
         copyTree('eric', cfg['ericDir'], ['*.rb'], 
@@ -404,7 +404,7 @@ def createInstallConfig():
     """
     global modDir, platBinDir, cfg, apisDir
         
-    ericdir = os.path.join(modDir, "eric4")
+    ericdir = os.path.join(modDir, "eric5")
     cfg = {
         'ericDir'              : ericdir,
         'ericPixDir'           : os.path.join(ericdir, "pixmaps"),
@@ -438,11 +438,11 @@ def createConfig():
         for apiName in glob.glob(os.path.join("eric", "APIs", progLanguage, "*.api")):
             apis.append(os.path.basename(apiName))
     
-    fn = 'eric4config.py'
+    fn = 'eric5config.py'
     config = \
 """# -*- coding: utf-8 -*-
 #
-# This module contains the configuration of the individual eric4 installation
+# This module contains the configuration of the individual eric5 installation
 #
 
 _pkg_config = {
@@ -493,11 +493,11 @@ def doDependancyChecks():
     print('Checking dependencies')
     
     # perform dependency checks
-    if sys.version_info < (2, 6, 0):
-        print('Sorry, you must have Python 2.6.0 or higher.')
+    if sys.version_info < (3, 1, 0):
+        print('Sorry, you must have Python 3.1.0 or higher.')
         sys.exit(5)
-    if sys.version_info > (2, 9, 9):
-        print('Sorry, eric4 requires Python 2 for running.')
+    if sys.version_info > (3, 9, 9):
+        print('Sorry, eric5 requires Python 3 for running.')
         sys.exit(5)
     print("Python Version: %d.%d.%d" % sys.version_info[:3])
     
@@ -707,7 +707,7 @@ def main(argv):
     
     # get rid of development config file, if it exists
     try:
-        os.remove(os.path.join("eric", "eric4config.py"))
+        os.remove(os.path.join("eric", "eric5config.py"))
     except EnvironmentError:
         pass
     
@@ -735,16 +735,16 @@ def main(argv):
                                    ddir = os.path.join(distDir, modDir, cfg['ericDir']), 
                                    rx = re.compile("Python3"), 
                                    quiet = True)
-            py_compile.compile("eric4config.py", 
-                               dfile = os.path.join(distDir, modDir, "eric4config.py"))
+            py_compile.compile("eric5config.py", 
+                               dfile = os.path.join(distDir, modDir, "eric5config.py"))
         else:
             compileall.compile_dir("eric", 
                                    ddir = os.path.join(modDir, cfg['ericDir']), 
                                    rx = re.compile("Python3"), 
                                    quiet = True)
-            py_compile.compile("eric4config.py", 
-                               dfile = os.path.join(modDir, "eric4config.py"))
-    print("\nInstalling eric4 ...")
+            py_compile.compile("eric5config.py", 
+                               dfile = os.path.join(modDir, "eric5config.py"))
+    print("\nInstalling eric5 ...")
     installEric()
     print("\nInstallation complete.")
     print()
@@ -754,7 +754,7 @@ def main(argv):
         import _xmlplus
         v = _xmlplus.version_info
         if v < (0, 8, 6):
-            from .eric4.patch_pyxml import isPatched, patchPyXML
+            from eric5.patch_pyxml import isPatched, patchPyXML
             if not isPatched():
                 print("NOTE:")
                 print("    Found PyXML %d.%d.%d, which needs a patch to work correctly" % \

@@ -37,7 +37,7 @@ class TemplatesWriter(XMLWriterBase):
             templatesFileFormatVersion)
         
         # add some generation comments
-        self._write("<!-- eric4 templates file -->")
+        self._write("<!-- eric5 templates file -->")
         self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
         
         # add the main tag

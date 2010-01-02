@@ -31,7 +31,7 @@ import Preferences
 
 import UI.PixmapCache
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 descrRole    = Qt.UserRole
 urlRole      = Qt.UserRole + 1
@@ -626,10 +626,10 @@ class PluginRepositoryWindow(QMainWindow):
     
     def __startPluginInstall(self):
         """
-        Private slot to start the eric4 plugin installation dialog.
+        Private slot to start the eric5 plugin installation dialog.
         """
         proc = QProcess()
-        applPath = os.path.join(getConfig("ericDir"), "eric4-plugininstall.py")
+        applPath = os.path.join(getConfig("ericDir"), "eric5-plugininstall.py")
         
         args = []
         args.append(applPath)

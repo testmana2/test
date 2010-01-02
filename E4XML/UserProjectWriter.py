@@ -43,7 +43,7 @@ class UserProjectWriter(XMLWriterBase):
             userProjectFileFormatVersion)
         
         # add some generation comments
-        self._write("<!-- eric4 user project file for project %s -->" % self.name)
+        self._write("<!-- eric5 user project file for project %s -->" % self.name)
         if Preferences.getProject("XMLTimestamp"):
             self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
             self._write("<!-- Copyright (C) %s %s, %s -->" % \

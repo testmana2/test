@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a TestResult derivative for the eric4 debugger.
+Module implementing a TestResult derivative for the eric5 debugger.
 """
 
 import select
@@ -17,7 +17,7 @@ from DebugProtocol import *
 
 class DCTestResult(TestResult):
     """
-    A TestResult derivative to work with eric4's debug client.
+    A TestResult derivative to work with eric5's debug client.
     
     For more details see unittest.py of the standard python distribution.
     """

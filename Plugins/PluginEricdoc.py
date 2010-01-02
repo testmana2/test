@@ -47,7 +47,7 @@ def exeDisplayData():
     @return dictionary containing the data to query the presence of
         the executable
     """
-    exe = 'eric4-doc'
+    exe = 'eric5-doc'
     if Utilities.isWindowsPlatform():
         exe += '.bat'
     
@@ -57,7 +57,7 @@ def exeDisplayData():
                                 "Eric4 Documentation Generator"), 
         "exe"               : exe, 
         "versionCommand"    : '--version', 
-        "versionStartsWith" : 'eric4-', 
+        "versionStartsWith" : 'eric5-', 
         "versionPosition"   : -2, 
         "version"           : "", 
         "versionCleanup"    : None, 
@@ -94,14 +94,14 @@ class EricdocPlugin(QObject):
         menu = e4App().getObject("Project").getMenu("Apidoc")
         if menu:
             self.__projectAct = \
-                E4Action(self.trUtf8('Generate documentation (eric4-doc)'),
-                    self.trUtf8('Generate &documentation (eric4-doc)'), 0, 0,
-                    self, 'doc_eric4_doc')
+                E4Action(self.trUtf8('Generate documentation (eric5-doc)'),
+                    self.trUtf8('Generate &documentation (eric5-doc)'), 0, 0,
+                    self, 'doc_eric5_doc')
             self.__projectAct.setStatusTip(\
-                self.trUtf8('Generate API documentation using eric4-doc'))
+                self.trUtf8('Generate API documentation using eric5-doc'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Generate documentation</b>"""
-                """<p>Generate API documentation using eric4-doc.</p>"""
+                """<p>Generate API documentation using eric5-doc.</p>"""
             ))
             self.connect(self.__projectAct, SIGNAL('triggered()'), self.__doEricdoc)
             e4App().getObject("Project").addE4Actions([self.__projectAct])
@@ -141,7 +141,7 @@ class EricdocPlugin(QObject):
     
     def __doEricdoc(self):
         """
-        Private slot to perform the eric4-doc api documentation generation.
+        Private slot to perform the eric5-doc api documentation generation.
         """
         project = e4App().getObject("Project")
         parms = project.getData('DOCUMENTATIONPARMS', "ERIC4DOC")
@@ -158,7 +158,7 @@ class EricdocPlugin(QObject):
             
             outdir = parms['outputDirectory']
             if outdir == '':
-                outdir = 'doc'      # that is eric4-docs default output dir
+                outdir = 'doc'      # that is eric5-docs default output dir
                 
             # add it to the project data, if it isn't in already
             outdir = outdir.replace(project.ppath+os.sep, '')
@@ -170,7 +170,7 @@ class EricdocPlugin(QObject):
             if parms['qtHelpEnabled']:
                 outdir = parms['qtHelpOutputDirectory']
                 if outdir == '':
-                    outdir = 'help'      # that is eric4-docs default QtHelp output dir
+                    outdir = 'help'      # that is eric5-docs default QtHelp output dir
                     
                 # add it to the project data, if it isn't in already
                 outdir = outdir.replace(project.ppath+os.sep, '')

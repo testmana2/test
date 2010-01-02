@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2007 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2006 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 """
-Eric4 Editor
+Eric4 Configure
 
-This is the main Python script that performs the necessary initialization
-of the MiniEditor module and starts the Qt event loop. This is a standalone 
-version of the integrated MiniEditor module.
+This is the main Python script to configure the eric5 IDE from the outside.
 """
 
 import sys
@@ -31,6 +29,8 @@ except ImportError:
 
 from Utilities import Startup
 
+import Preferences
+
 
 def createMainWidget(argv):
     """
@@ -39,11 +39,11 @@ def createMainWidget(argv):
     @param argv list of commandline parameters (list of strings)
     @return reference to the main widget (QWidget)
     """
-    from QScintilla.MiniEditor import MiniEditor
-    if len(argv) > 1:
-        return MiniEditor(argv[1])
-    else:
-        return MiniEditor()
+    from Preferences.ConfigurationDialog import ConfigurationWindow
+    w = ConfigurationWindow()
+    w.show()
+    w.showConfigurationPageByName("empty")
+    return w
 
 def main():
     """
@@ -52,12 +52,11 @@ def main():
     options = [\
         ("--config=configDir", 
          "use the given directory as the one containing the config files"), 
-        ("", "name of file to edit")
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Editor",
+                                  "Eric4 Configure",
                                   "",
-                                  "Simplified version of the eric4 editor",
+                                  "Configuration editor for eric5",
                                   options)
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,

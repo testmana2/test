@@ -4,7 +4,7 @@
 #
 
 """
-Module containing the default configuration of the eric4 installation
+Module containing the default configuration of the eric5 installation
 """
 
 import sys

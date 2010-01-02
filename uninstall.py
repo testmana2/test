@@ -3,10 +3,10 @@
 
 # Copyright (c) 2002-2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# This is the uninstall script for eric4.
+# This is the uninstall script for eric5.
 
 """
-Uninstallation script for the eric4 IDE and all eric4 related tools.
+Uninstallation script for the eric5 IDE and all eric5 related tools.
 """
 
 import sys
@@ -15,7 +15,7 @@ import shutil
 import glob
 import distutils.sysconfig
 
-from .eric4config import getConfig
+from eric5config import getConfig
 
 # Define the globals.
 progName = None
@@ -64,16 +64,16 @@ def uninstallEric():
     
     # Remove the wrapper scripts
     rem_wnames = [
-        "eric4-api", "eric4-compare",
-        "eric4-configure", "eric4-diff",
-        "eric4-doc", "eric4-helpviewer",
-        "eric4-qregexp", "eric4-re", 
-        "eric4-trpreviewer", "eric4-uipreviewer",
-        "eric4-unittest", "eric4",
-        "eric4-tray", "eric4-editor", 
-        "eric4-plugininstall", "eric4-pluginuninstall", 
-        "eric4-pluginrepository", "eric4-sqlbrowser", 
-        "eric4-webbrowser", 
+        "eric5-api", "eric5-compare",
+        "eric5-configure", "eric5-diff",
+        "eric5-doc", "eric5-helpviewer",
+        "eric5-qregexp", "eric5-re", 
+        "eric5-trpreviewer", "eric5-uipreviewer",
+        "eric5-unittest", "eric5",
+        "eric5-tray", "eric5-editor", 
+        "eric5-plugininstall", "eric5-pluginuninstall", 
+        "eric5-pluginrepository", "eric5-sqlbrowser", 
+        "eric5-webbrowser", 
     ]
     for rem_wname in rem_wnames:
         rwname = wrapperName(getConfig('bindir'),rem_wname)
@@ -81,7 +81,7 @@ def uninstallEric():
             os.remove(rwname)
     
     # Cleanup our config file
-    for name in ['eric4config.py', 'eric4config.pyc']:
+    for name in ['eric5config.py', 'eric5config.pyc']:
         e4cfile = os.path.join(pyModDir, name)
         if os.path.exists(e4cfile):
             os.remove(e4cfile)
@@ -95,7 +95,7 @@ def uninstallEric():
             shutil.rmtree(dirpath, True)
     
     # Cleanup translations
-    for name in glob.glob(os.path.join(getConfig('ericTranslationsDir'), 'eric4_*.qm')):
+    for name in glob.glob(os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
         if os.path.exists(name):
             os.remove(name)
     

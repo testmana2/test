@@ -9,7 +9,7 @@ Eric4 Tray
 
 This is the main Python script that performs the necessary initialization
 of the system-tray application. This acts as a quickstarter by providing a
-context menu to start the eric4 IDE and the eric4 tools.
+context menu to start the eric5 IDE and the eric5 tools.
 """
 
 import sys
@@ -46,7 +46,7 @@ def main():
     appinfo = Startup.makeAppInfo(sys.argv,
                                   "Eric4 Tray",
                                   "",
-                                  "Traystarter for eric4",
+                                  "Traystarter for eric5",
                                   options)
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,

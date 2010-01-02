@@ -22,7 +22,7 @@ import Utilities.ModuleParser
 from DocumentationTools.ModuleDocumentor import ModuleDocument
 from DocumentationTools.IndexGenerator import IndexGenerator
 from DocumentationTools.QtHelpGenerator import QtHelpGenerator
-from DocumentationTools.Config import eric4docDefaultColors
+from DocumentationTools.Config import eric5docDefaultColors
 from UI.Info import Version
 import Utilities
 import Preferences
@@ -37,13 +37,13 @@ def usage():
     It prints a reference of all commandline parameters that may
     be used and ends the application.
     """
-    print("eric4-doc")
+    print("eric5-doc")
     print()
     print("Copyright (c) 2003 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>.")
     print()
     print("Usage:")
     print()
-    print("  eric4-doc [options] files...")
+    print("  eric5-doc [options] files...")
     print()
     print("where files can be either python modules, package")
     print("directories or ordinary directories.")
@@ -117,7 +117,7 @@ def version():
     """
     Function to show the version information.
     """
-    print("""eric4-doc  %s
+    print("""eric5-doc  %s
 
 Eric4 API documentation generator.
 
@@ -152,14 +152,14 @@ def main():
         usage()
 
     excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject", 
-                   ".eric4project", "_eric4project", "dist", "build", "doc", "docs"]
+                   ".eric5project", "_eric5project", "dist", "build", "doc", "docs"]
     excludePatterns = []
     outputDir = "doc"
     recursive = False
     doIndex = True
     noempty = False
     stylesheetFile = ""
-    colors = eric4docDefaultColors.copy()
+    colors = eric5docDefaultColors.copy()
     
     qtHelpCreation = False
     qtHelpOutputDir = "help"

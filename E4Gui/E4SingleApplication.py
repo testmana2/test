@@ -20,7 +20,7 @@ import Utilities
 # define some module global stuff
 ###########################################################################
 
-SAFile = "eric4"
+SAFile = "eric5"
 
 # define the protocol tokens
 SAOpenFile =        '>OpenFile<'
@@ -125,7 +125,7 @@ class E4SingleApplicationClient(SingleApplicationClient):
             ext = os.path.splitext(arg)[1]
             ext = os.path.normcase(ext)
             
-            if ext in ['.e3p', '.e3pz', '.e4p', '.e4pz']:
+            if ext in ['.e4p', '.e4pz']:
                 self.__openProject(arg)
             else:
                 self.__openFile(arg)

@@ -51,7 +51,7 @@ class SessionWriter(XMLWriterBase):
         
         # add some generation comments
         if not isGlobal:
-            self._write("<!-- eric4 session file for project %s -->" % self.name)
+            self._write("<!-- eric5 session file for project %s -->" % self.name)
         self._write("<!-- This file was generated automatically, do not edit. -->")
         if Preferences.getProject("XMLTimestamp") or isGlobal:
             self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))

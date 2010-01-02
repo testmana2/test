@@ -100,7 +100,7 @@ from E4XML.SessionHandler import SessionHandler
 
 from IconEditor.IconEditorWindow import IconEditorWindow
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 
 class Redirector(QObject):
@@ -1117,7 +1117,7 @@ class UserInterface(QMainWindow):
             '--' option are considered debug arguments to the program 
             for the debugger. All files named before the '--' option
             are opened in a text editor, unless the argument ends in 
-            .e3p, .e3pz, .e4p or .e4pz, then it is opened as a project file.
+            .e4p or .e4pz, then it is opened as a project file.
             If it ends in .e4m or .e4mz, it is opened as a multiproject.
         """
         # no args, return
@@ -1159,7 +1159,7 @@ class UserInterface(QMainWindow):
             ext = os.path.splitext(arg)[1]
             ext = os.path.normcase(ext)
 
-            if ext in ['.e4p', '.e4pz', '.e3p', '.e3pz']:
+            if ext in ['.e4p', '.e4pz']:
                 self.project.openProject(arg)
                 opens += 1
             elif ext in ['.e4m', '.e4mz']:
@@ -1562,7 +1562,7 @@ class UserInterface(QMainWindow):
         self.helpviewerAct.setStatusTip(self.trUtf8('Open the helpviewer window'))
         self.helpviewerAct.setWhatsThis(self.trUtf8(
             """<b>Helpviewer</b>"""
-            """<p>Display the eric4 web browser. This window will show"""
+            """<p>Display the eric5 web browser. This window will show"""
             """ HTML help files and help from Qt help collections. It has the"""
             """ capability to navigate to links, set bookmarks, print the displayed"""
             """ help and some more features. You may use it to browse the internet"""
@@ -1592,7 +1592,7 @@ class UserInterface(QMainWindow):
         self.checkUpdateAct.setStatusTip(self.trUtf8('Check for Updates'))
         self.checkUpdateAct.setWhatsThis(self.trUtf8(
             """<b>Check for Updates...</b>"""
-            """<p>Checks the internet for updates of eric4.</p>"""
+            """<p>Checks the internet for updates of eric5.</p>"""
                              ))
         self.connect(self.checkUpdateAct, SIGNAL('triggered()'), self.performVersionCheck)
         self.actions.append(self.checkUpdateAct)
@@ -1604,7 +1604,7 @@ class UserInterface(QMainWindow):
             self.trUtf8('Show the versions available for download'))
         self.showVersionsAct.setWhatsThis(self.trUtf8(
             """<b>Show downloadable versions...</b>"""
-            """<p>Shows the eric4 versions available for download """
+            """<p>Shows the eric5 versions available for download """
             """from the internet.</p>"""
                              ))
         self.connect(self.showVersionsAct, SIGNAL('triggered()'), 
@@ -1794,10 +1794,10 @@ class UserInterface(QMainWindow):
                 UI.PixmapCache.getIcon("ericWeb.png"),
                 self.trUtf8('&Web Browser...'), 
                 0, 0, self, 'web_browser')
-        self.webBrowserAct.setStatusTip(self.trUtf8('Start the eric4 Web Browser'))
+        self.webBrowserAct.setStatusTip(self.trUtf8('Start the eric5 Web Browser'))
         self.webBrowserAct.setWhatsThis(self.trUtf8(
             """<b>Web Browser</b>"""
-            """<p>Browse the Internet with the eric4 Web Browser.</p>"""
+            """<p>Browse the Internet with the eric5 Web Browser.</p>"""
         ))
         self.connect(self.webBrowserAct, SIGNAL('triggered()'), self.__webBrowser)
         self.actions.append(self.webBrowserAct)
@@ -1806,10 +1806,10 @@ class UserInterface(QMainWindow):
                 UI.PixmapCache.getIcon("iconEditor.png"),
                 self.trUtf8('&Icon Editor...'), 
                 0, 0, self, 'icon_editor')
-        self.iconEditorAct.setStatusTip(self.trUtf8('Start the eric4 Icon Editor'))
+        self.iconEditorAct.setStatusTip(self.trUtf8('Start the eric5 Icon Editor'))
         self.iconEditorAct.setWhatsThis(self.trUtf8(
             """<b>Icon Editor</b>"""
-            """<p>Starts the eric4 Icon Editor for editing simple icons.</p>"""
+            """<p>Starts the eric5 Icon Editor for editing simple icons.</p>"""
         ))
         self.connect(self.iconEditorAct, SIGNAL('triggered()'), self.__editPixmap)
         self.actions.append(self.iconEditorAct)
@@ -1866,7 +1866,7 @@ class UserInterface(QMainWindow):
         self.showExternalToolsAct.setWhatsThis(self.trUtf8(
             """<b>Show external tools</b>"""
             """<p>Opens a dialog to show the path and versions of all"""
-            """ extenal tools used by eric4.</p>"""
+            """ extenal tools used by eric5.</p>"""
         ))
         self.connect(self.showExternalToolsAct, SIGNAL('triggered()'), 
                 self.__showExternalTools)
@@ -2081,7 +2081,7 @@ class UserInterface(QMainWindow):
         
     def __initEricDocAction(self):
         """
-        Private slot to initialize the action to show the eric4 documentation.
+        Private slot to initialize the action to show the eric5 documentation.
         """
         self.ericDocAct = E4Action(self.trUtf8("Eric API Documentation"),
             self.trUtf8('&Eric API Documentation'), 0, 0, self, 'eric_documentation')
@@ -2090,7 +2090,7 @@ class UserInterface(QMainWindow):
             """<b>Eric API Documentation</b>"""
             """<p>Display the Eric API documentation."""
             """ The location for the documentation is the Documentation/Source"""
-            """ subdirectory of the eric4 installation directory.</p>"""
+            """ subdirectory of the eric5 installation directory.</p>"""
         ))
         self.connect(self.ericDocAct, SIGNAL('triggered()'), self.__showEricDoc)
         self.actions.append(self.ericDocAct)
@@ -2694,7 +2694,7 @@ class UserInterface(QMainWindow):
         what to do with it.
         """
         if Preferences.getUI("CheckErrorLog"):
-            logFile = os.path.join(Utilities.getConfigDir(), "eric4_error.log")
+            logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
             if os.path.exists(logFile):
                 dlg = QMessageBox(QMessageBox.Question, self.trUtf8("Error log found"), 
                     self.trUtf8("An error log file was found. "
@@ -2922,8 +2922,8 @@ class UserInterface(QMainWindow):
         if res == QMessageBox.Yes and self.__shutdown():
             e4App().closeAllWindows()
             program = sys.executable
-            eric4 = os.path.join(getConfig("ericDir"), "eric4.py")
-            args = [eric4]
+            eric5 = os.path.join(getConfig("ericDir"), "eric5.py")
+            args = [eric5]
             args.append("--start-session")
             args.extend(self.__restartArgs)
             QProcess.startDetached(program, args)
@@ -3795,7 +3795,7 @@ class UserInterface(QMainWindow):
         if version == 3:
             QMessageBox.information(None,
                 self.trUtf8("Qt 3 support"),
-                self.trUtf8("""Qt v.3 is not supported by eric4."""))
+                self.trUtf8("""Qt v.3 is not supported by eric5."""))
             return
 
         args = []
@@ -3851,7 +3851,7 @@ class UserInterface(QMainWindow):
         if version < 4:
             QMessageBox.information(None,
                 self.trUtf8("Qt 3 support"),
-                self.trUtf8("""Qt v.3 is not supported by eric4."""))
+                self.trUtf8("""Qt v.3 is not supported by eric5."""))
             return
 
         args = []
@@ -3910,7 +3910,7 @@ class UserInterface(QMainWindow):
         if version < 4:
             QMessageBox.information(None,
                 self.trUtf8("Qt 3 support"),
-                self.trUtf8("""Qt v.3 is not supported by eric4."""))
+                self.trUtf8("""Qt v.3 is not supported by eric5."""))
             return
 
         args = []
@@ -4008,7 +4008,7 @@ class UserInterface(QMainWindow):
         """
         proc = QProcess()
         
-        viewer = os.path.join(getConfig("ericDir"), "eric4-uipreviewer.py")
+        viewer = os.path.join(getConfig("ericDir"), "eric5-uipreviewer.py")
         
         args = []
         args.append(viewer)
@@ -4050,7 +4050,7 @@ class UserInterface(QMainWindow):
         """
         proc = QProcess()
         
-        viewer = os.path.join(getConfig("ericDir"), "eric4-trpreviewer.py")
+        viewer = os.path.join(getConfig("ericDir"), "eric5-trpreviewer.py")
         
         args = []
         args.append(viewer)
@@ -4091,7 +4091,7 @@ class UserInterface(QMainWindow):
         """
         proc = QProcess()
         
-        browser = os.path.join(getConfig("ericDir"), "eric4-sqlbrowser.py")
+        browser = os.path.join(getConfig("ericDir"), "eric5-sqlbrowser.py")
         
         args = []
         args.append(browser)
@@ -4546,7 +4546,7 @@ class UserInterface(QMainWindow):
     
     def __webBrowser(self):
         """
-        Private slot to start the eric4 web browser.
+        Private slot to start the eric5 web browser.
         """
         self.launchHelpViewer("")
 
@@ -4628,7 +4628,7 @@ class UserInterface(QMainWindow):
         
     def __showExternalTools(self):
         """
-        Private slot to display a dialog show a list of external tools used by eric4.
+        Private slot to display a dialog show a list of external tools used by eric5.
         """
         self.programsDialog.show()
         
@@ -4669,8 +4669,8 @@ class UserInterface(QMainWindow):
             None,
             self.trUtf8("Export Keyboard Shortcuts"),
             "",
-            self.trUtf8("eric4 keyboard shortcut file (*.e4k);;"
-                "Compressed eric4 keyboard shortcut file (*.e4kz)"),
+            self.trUtf8("Keyboard shortcut file (*.e4k);;"
+                "Compressed keyboard shortcut file (*.e4kz)"),
             "",
             QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
         
@@ -4698,8 +4698,7 @@ class UserInterface(QMainWindow):
             None,
             self.trUtf8("Import Keyboard Shortcuts"),
             "",
-            self.trUtf8("eric4 keyboard shortcut file (*.e4k *.e4kz);;"
-                "eric3 keyboard shortcut file (*.e3k *.e3kz)"))
+            self.trUtf8("Keyboard shortcut file (*.e4k *.e4kz)"))
         
         if fn:
             Shortcuts.importShortcuts(fn)
@@ -4811,7 +4810,7 @@ class UserInterface(QMainWindow):
         Private slot to write the tasks data to an XML file (.e4t).
         """
         try:
-            fn = os.path.join(Utilities.getConfigDir(), "eric4tasks.e4t")
+            fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
             f = open(fn, "w")
             
             TasksWriter(f, False).writeXML()
@@ -4829,7 +4828,7 @@ class UserInterface(QMainWindow):
         Private slot to read in the tasks file (.e4t)
         """
         try:
-            fn = os.path.join(Utilities.getConfigDir(), "eric4tasks.e4t")
+            fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
             if not os.path.exists(fn):
                 return
             f = open(fn, "r")
@@ -4886,7 +4885,7 @@ class UserInterface(QMainWindow):
         Private slot to write the session data to an XML file (.e4s).
         """
         try:
-            fn = os.path.join(Utilities.getConfigDir(), "eric4session.e4s")
+            fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
             f = open(fn, "w")
             
             SessionWriter(f, None).writeXML()
@@ -4904,7 +4903,7 @@ class UserInterface(QMainWindow):
         Private slot to read in the session file (.e4s)
         """
         try:
-            fn = os.path.join(Utilities.getConfigDir(), "eric4session.e4s")
+            fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
             if not os.path.exists(fn):
                 QMessageBox.critical(None,
                     self.trUtf8("Read session"),
@@ -5174,13 +5173,13 @@ class UserInterface(QMainWindow):
 
     def showAvailableVersionsInfo(self):
         """
-        Public method to show the eric4 versions available for download.
+        Public method to show the eric5 versions available for download.
         """
         self.performVersionCheck(manual = True, showVersions = True)
         
     def performVersionCheck(self, manual = True,  alternative = 0, showVersions = False):
         """
-        Public method to check the internet for an eric4 update.
+        Public method to check the internet for an eric5 update.
         
         @param manual flag indicating an invocation via the menu (boolean)
         @param alternative index of server to download from (integer)
@@ -5332,7 +5331,7 @@ class UserInterface(QMainWindow):
                 if versions[2] > Version:
                     res = QMessageBox.information(None,
                         self.trUtf8("Update available"),
-                        self.trUtf8("""The update to <b>{0}</b> of eric4 is available"""
+                        self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
                             .format(versions[2], versions[3]),
                         QMessageBox.StandardButtons(\
@@ -5343,7 +5342,7 @@ class UserInterface(QMainWindow):
                 elif versions[0] > Version:
                     res = QMessageBox.information(None,
                         self.trUtf8("Update available"),
-                        self.trUtf8("""The update to <b>{0}</b> of eric4 is available"""
+                        self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
                             .format(versions[0], versions[1]),
                         QMessageBox.StandardButtons(\
@@ -5355,13 +5354,13 @@ class UserInterface(QMainWindow):
                     if self.manualUpdatesCheck:
                         QMessageBox.information(None,
                             self.trUtf8("Eric4 is up to date"),
-                            self.trUtf8("""You are using the latest version of eric4"""))
+                            self.trUtf8("""You are using the latest version of eric5"""))
             else:
                 # check release version
                 if versions[0] > Version:
                     res = QMessageBox.information(None,
                         self.trUtf8("Update available"),
-                        self.trUtf8("""The update to <b>{0}</b> of eric4 is available"""
+                        self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
                             .format(versions[0], versions[1]),
                         QMessageBox.StandardButtons(\
@@ -5373,7 +5372,7 @@ class UserInterface(QMainWindow):
                     if self.manualUpdatesCheck:
                         QMessageBox.information(None,
                             self.trUtf8("Eric4 is up to date"),
-                            self.trUtf8("""You are using the latest version of eric4"""))
+                            self.trUtf8("""You are using the latest version of eric5"""))
         except IndexError:
             QMessageBox.warning(None,
                 self.trUtf8("Error during updates check"),
@@ -5464,13 +5463,13 @@ class UserInterface(QMainWindow):
 
     def checkConfigurationStatus(self):
         """
-        Public method to check, if eric4 has been configured. If it is not, 
+        Public method to check, if eric5 has been configured. If it is not, 
         the configuration dialog is shown.
         """
         if not Preferences.isConfigured():
             QMessageBox.information(None,
                 self.trUtf8("First time usage"),
-                self.trUtf8("""eric4 has not been configured yet. """
+                self.trUtf8("""eric5 has not been configured yet. """
                             """The configuration dialog will be started."""),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
@@ -5478,7 +5477,7 @@ class UserInterface(QMainWindow):
     
     def versionIsNewer(self, required, snapshot = None):
         """
-        Public method to check, if the eric4 version is good compared to
+        Public method to check, if the eric5 version is good compared to
         the required version.
         
         @param required required version (string)

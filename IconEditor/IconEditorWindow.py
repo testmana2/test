@@ -21,7 +21,7 @@ import UI.Config
 
 import Preferences
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class IconEditorWindow(QMainWindow):
     """
@@ -38,12 +38,12 @@ class IconEditorWindow(QMainWindow):
         
         @param fileName name of a file to load on startup (string)
         @param parent parent widget of this window (QWidget)
-        @keyparam fromEric flag indicating whether it was called from within eric4 (boolean)
+        @keyparam fromEric flag indicating whether it was called from within eric5 (boolean)
         @keyparam initShortcutsOnly flag indicating to just initialize the keyboard
             shortcuts (boolean)
         """
         QMainWindow.__init__(self, parent)
-        self.setObjectName("eric4_icon_editor")
+        self.setObjectName("eric5_icon_editor")
         self.setAttribute(Qt.WA_DeleteOnClose)
         
         self.fromEric = fromEric
@@ -1053,13 +1053,13 @@ class IconEditorWindow(QMainWindow):
         """
         file= QFile(fileName)
         if not file.exists():
-            QMessageBox.warning(self, self.trUtf8("eric4 Icon Editor"),
+            QMessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
                                 self.trUtf8("The file '{0}' does not exist.")\
                                     .format(fileName))
             return
         
         if not file.open(QFile.ReadOnly):
-            QMessageBox.warning(self, self.trUtf8("eric4 Icon Editor"),
+            QMessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
                                 self.trUtf8("Cannot read file '{0}:\n{1}.")\
                                     .format(fileName, file.errorString()))
             return
@@ -1078,7 +1078,7 @@ class IconEditorWindow(QMainWindow):
         """
         file = QFile(fileName)
         if not file.open(QFile.WriteOnly):
-            QMessageBox.warning(self, self.trUtf8("eric4 Icon Editor"),
+            QMessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
                                 self.trUtf8("Cannot write file '{0}:\n{1}.")\
                                     .format(fileName, file.errorString()))
         
@@ -1091,7 +1091,7 @@ class IconEditorWindow(QMainWindow):
         file.close()
         
         if not res:
-            QMessageBox.warning(self, self.trUtf8("eric4 Icon Editor"),
+            QMessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
                                 self.trUtf8("Cannot write file '{0}:\n{1}.")\
                                     .format(fileName, file.errorString()))
         
@@ -1143,7 +1143,7 @@ class IconEditorWindow(QMainWindow):
         """
         if self.__editor.isDirty():
             ret = QMessageBox.warning(self,
-                self.trUtf8("eric4 Icon Editor"),
+                self.trUtf8("eric5 Icon Editor"),
                 self.trUtf8("""The icon image has been modified.\n"""
                             """Do you want to save your changes?"""),
                 QMessageBox.StandardButtons(\
@@ -1232,15 +1232,15 @@ class IconEditorWindow(QMainWindow):
         """
         Private slot to show a little About message.
         """
-        QMessageBox.about(self, self.trUtf8("About eric4 Icon Editor"),
-            self.trUtf8("The eric4 Icon Editor is a simple editor component"
+        QMessageBox.about(self, self.trUtf8("About eric5 Icon Editor"),
+            self.trUtf8("The eric5 Icon Editor is a simple editor component"
                         " to perform icon drawing tasks."))
     
     def __aboutQt(self):
         """
         Private slot to handle the About Qt dialog.
         """
-        QMessageBox.aboutQt(self, "eric4 Icon Editor")
+        QMessageBox.aboutQt(self, "eric5 Icon Editor")
     
     def __whatsThis(self):
         """

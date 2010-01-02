@@ -19,7 +19,7 @@ from .Ui_DebuggerPropertiesDialog import Ui_DebuggerPropertiesDialog
 
 import Utilities
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 
 class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):

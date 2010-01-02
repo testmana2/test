@@ -31,13 +31,13 @@ def usage():
     It prints a reference of all commandline parameters that may
     be used and ends the application.
     """
-    print("eric4-api")
+    print("eric5-api")
     print()
     print("Copyright (c) 2004 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>.")
     print()
     print("Usage:")
     print()
-    print("  eric4-api [options] files...")
+    print("  eric5-api [options] files...")
     print()
     print("where files can be either python modules, package")
     print("directories or ordinary directories.")
@@ -81,7 +81,7 @@ def version():
     """
     Function to show the version information.
     """
-    print("""eric4-api  %s
+    print("""eric5-api  %s
 
 Eric4 API generator.
 
@@ -108,7 +108,7 @@ def main():
         usage()
 
     excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject", 
-                   ".eric4project", "_eric4project", "dist", "build", "doc", "docs"]
+                   ".eric5project", "_eric5project", "dist", "build", "doc", "docs"]
     excludePatterns = []
     outputFileName = ""
     recursive = False

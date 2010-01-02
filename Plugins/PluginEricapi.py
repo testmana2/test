@@ -46,7 +46,7 @@ def exeDisplayData():
     @return dictionary containing the data to query the presence of
         the executable
     """
-    exe = 'eric4-api'
+    exe = 'eric5-api'
     if Utilities.isWindowsPlatform():
         exe += '.bat'
     
@@ -56,7 +56,7 @@ def exeDisplayData():
                                 "Eric4 API File Generator"), 
         "exe"               : exe, 
         "versionCommand"    : '--version', 
-        "versionStartsWith" : 'eric4-', 
+        "versionStartsWith" : 'eric5-', 
         "versionPosition"   : -2, 
         "version"           : "", 
         "versionCleanup"    : None, 
@@ -92,14 +92,14 @@ class EricapiPlugin(QObject):
         """
         menu = e4App().getObject("Project").getMenu("Apidoc")
         if menu:
-            self.__projectAct = E4Action(self.trUtf8('Generate API file (eric4-api)'),
-                    self.trUtf8('Generate &API file (eric4-api)'), 0, 0,
-                    self, 'doc_eric4_api')
+            self.__projectAct = E4Action(self.trUtf8('Generate API file (eric5-api)'),
+                    self.trUtf8('Generate &API file (eric5-api)'), 0, 0,
+                    self, 'doc_eric5_api')
             self.__projectAct.setStatusTip(\
-                self.trUtf8('Generate an API file using eric4-api'))
+                self.trUtf8('Generate an API file using eric5-api'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Generate API file</b>"""
-                """<p>Generate an API file using eric4-api.</p>"""
+                """<p>Generate an API file using eric5-api.</p>"""
             ))
             self.connect(self.__projectAct, SIGNAL('triggered()'), self.__doEricapi)
             e4App().getObject("Project").addE4Actions([self.__projectAct])
@@ -139,7 +139,7 @@ class EricapiPlugin(QObject):
     
     def __doEricapi(self):
         """
-        Private slot to perform the eric4-api api generation.
+        Private slot to perform the eric5-api api generation.
         """
         project = e4App().getObject("Project")
         parms = project.getData('DOCUMENTATIONPARMS', "ERIC4API")

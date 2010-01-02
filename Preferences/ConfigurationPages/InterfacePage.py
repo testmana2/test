@@ -21,7 +21,7 @@ from .Ui_InterfacePage import Ui_InterfacePage
 import Preferences
 import Utilities
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
     """
@@ -206,9 +206,9 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         """
         self.languageComboBox.clear()
         
-        fnlist = glob.glob("eric4_*.qm") + \
-            glob.glob(os.path.join(getConfig('ericTranslationsDir'), "eric4_*.qm")) + \
-            glob.glob(os.path.join(Utilities.getConfigDir(), "eric4_*.qm"))
+        fnlist = glob.glob("eric5_*.qm") + \
+            glob.glob(os.path.join(getConfig('ericTranslationsDir'), "eric5_*.qm")) + \
+            glob.glob(os.path.join(Utilities.getConfigDir(), "eric5_*.qm"))
         locales = {}
         for fn in fnlist:
             locale = os.path.basename(fn)[6:-3]

@@ -281,7 +281,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self,
             self.trUtf8("Export Highlighting Styles"),
             "",
-            self.trUtf8("eric4 highlighting styles file (*.e4h)"),
+            self.trUtf8("Highlighting styles file (*.e4h)"),
             "",
             QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
         
@@ -316,7 +316,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self,
             self.trUtf8("Import Highlighting Styles"),
             "",
-            self.trUtf8("eric4 highlighting styles file (*.e4h)"))
+            self.trUtf8("Highlighting styles file (*.e4h)"))
         
         if not fn:
             return

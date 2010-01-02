@@ -138,11 +138,11 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         # 5. do the Eric4 programs
         # 5a. Translation Previewer
         self.__createProgramEntry(self.trUtf8("Eric4 Translation Previewer"), 
-            Utilities.isWindowsPlatform() and "eric4-trpreviewer.bat" or "eric4-trpreviewer", 
+            Utilities.isWindowsPlatform() and "eric5-trpreviewer.bat" or "eric5-trpreviewer", 
             '--version', 'Eric4', -2)
         # 5b. Forms Previewer
         self.__createProgramEntry(self.trUtf8("Eric4 Forms Previewer"), 
-            Utilities.isWindowsPlatform() and "eric4-uipreviewer.bat" or "eric4-uipreviewer", 
+            Utilities.isWindowsPlatform() and "eric5-uipreviewer.bat" or "eric5-uipreviewer", 
             '--version', 'Eric4', -2)
         
         # 6. do the CORBA programs

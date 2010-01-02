@@ -69,7 +69,7 @@ from E4Gui.E4Action import E4Action, createActionGroup
 import Preferences
 import Utilities
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class Project(QObject):
     """
@@ -540,13 +540,13 @@ class Project(QObject):
         
     def __readProject(self, fn):
         """
-        Private method to read in a project (.e4p, .e4pz, .e3p, .e3pz) file.
+        Private method to read in a project (.e4p, .e4pz) file.
         
         @param fn filename of the project file to be read (string)
         @return flag indicating success
         """
         try:
-            if fn.lower().endswith("e4pz") or fn.lower().endswith("e3pz"):
+            if fn.lower().endswith("e4pz"):
                 try:
                     import gzip
                 except ImportError:
@@ -625,10 +625,6 @@ class Project(QObject):
                 if dn not in self.otherssubdirs:
                     self.otherssubdirs.append(dn)
             
-            if self.pfile.endswith('e3p') or self.pfile.endswith('e3pz'):
-                # needs conversion to new format
-                self.setDirty(True)
-            
         return res
 
     def __readXMLProject(self, fn, validating):
@@ -640,7 +636,7 @@ class Project(QObject):
             requested (boolean)
         @return flag indicating success (boolean)
         """
-        if fn.lower().endswith("e4pz") or fn.lower().endswith("e3pz"):
+        if fn.lower().endswith("e4pz"):
             # work around for a bug in xmlproc
             validating = False
         
@@ -654,7 +650,7 @@ class Project(QObject):
         parser.setErrorHandler(eh)
         
         try:
-            if fn.lower().endswith("e4pz") or fn.lower().endswith("e3pz"):
+            if fn.lower().endswith("e4pz"):
                 try:
                     import gzip
                 except ImportError:
@@ -810,9 +806,7 @@ class Project(QObject):
         """
         Private method to write the project data to an XML file.
         """
-        if self.pfile is None or \
-           self.pfile.endswith('e3p') or \
-           self.pfile.endswith('e3pz'):
+        if self.pfile is None:
             return
         
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
@@ -833,7 +827,7 @@ class Project(QObject):
         
     def __readSession(self, quiet = False, indicator = ""):
         """
-        Private method to read in the project session file (.e4s, .e3s)
+        Private method to read in the project session file (.e4s)
         
         @param quiet flag indicating quiet operations.
                 If this flag is true, no errors are reported.
@@ -849,12 +843,9 @@ class Project(QObject):
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
         
         try:
-            if ext.lower() in [".e4pz", ".e3pz"]:
-                if ext.lower() == ".e3pz":
-                    fn = os.path.join(self.ppath, '%s.e3sz' % fn)
-                else:
-                    fn = os.path.join(self.getProjectManagementDir(), 
-                                      '%s%s.e4sz' % (fn, indicator))
+            if ext.lower() in [".e4pz"]:
+                fn = os.path.join(self.getProjectManagementDir(), 
+                                  '%s%s.e4sz' % (fn, indicator))
                 try:
                     import gzip
                 except ImportError:
@@ -866,11 +857,8 @@ class Project(QObject):
                     return
                 f = gzip.open(fn, "r")
             else:
-                if ext.lower() == ".e3p":
-                    fn = os.path.join(self.ppath, '%s.e3s' % fn)
-                else:
-                    fn = os.path.join(self.getProjectManagementDir(), 
-                                      '%s%s.e4s' % (fn, indicator))
+                fn = os.path.join(self.getProjectManagementDir(), 
+                                  '%s%s.e4s' % (fn, indicator))
                 f = open(fn, "r")
             line = f.readline()
             dtdLine = f.readline()
@@ -916,7 +904,7 @@ class Project(QObject):
         @param quiet flag indicating quiet operations.
             If this flag is true, no errors are reported.
         """
-        if fn.lower().endswith("e4sz") or fn.lower().endswith("e3sz"):
+        if fn.lower().endswith("e4sz"):
             # work around for a bug in xmlproc
             validating = False
         
@@ -930,7 +918,7 @@ class Project(QObject):
         parser.setErrorHandler(eh)
         
         try:
-            if fn.lower().endswith("e4sz") or fn.lower().endswith("e3sz"):
+            if fn.lower().endswith("e4sz"):
                 try:
                     import gzip
                 except ImportError:
@@ -985,9 +973,7 @@ class Project(QObject):
                 If this flag is true, no errors are reported.
         @keyparam indicator indicator string (string)
         """
-        if self.pfile is None or \
-           self.pfile.endswith('e3p') or \
-           self.pfile.endswith('e3pz'):
+        if self.pfile is None:
             if not quiet:
                 QMessageBox.critical(None,
                     self.trUtf8("Save project session"),
@@ -1040,9 +1026,7 @@ class Project(QObject):
         fname, ext = os.path.splitext(os.path.basename(self.pfile))
         
         for fn in [os.path.join(self.getProjectManagementDir(), "%s.e4sz" % fname), 
-                   os.path.join(self.getProjectManagementDir(), "%s.e4s" % fname), 
-                   os.path.join(self.ppath, "%s.e3sz" % fname), 
-                   os.path.join(self.ppath, "%s.e3s" % fname)]:
+                   os.path.join(self.getProjectManagementDir(), "%s.e4s" % fname)]:
             if os.path.exists(fn):
                 try:
                     os.remove(fn)
@@ -1054,7 +1038,7 @@ class Project(QObject):
         
     def __readTasks(self):
         """
-        Private method to read in the project tasks file (.e4t, .e3t)
+        Private method to read in the project tasks file (.e4t)
         """
         if self.pfile is None:
             QMessageBox.critical(None,
@@ -1065,11 +1049,8 @@ class Project(QObject):
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
         
         try:
-            if ext.lower() in [".e4pz", "*.e3pz"]:
-                if ext.lower() == ".e3pz":
-                    fn = os.path.join(self.ppath, '%s.e3tz' % fn)
-                else:
-                    fn = os.path.join(self.getProjectManagementDir(), '%s.e4tz' % fn)
+            if ext.lower() in [".e4pz"]:
+                fn = os.path.join(self.getProjectManagementDir(), '%s.e4tz' % fn)
                 if not os.path.exists(fn):
                     return
                 try:
@@ -1082,10 +1063,7 @@ class Project(QObject):
                     return
                 f = gzip.open(fn, "r")
             else:
-                if ext.lower() == ".e3p":
-                    fn = os.path.join(self.ppath, '%s.e3t' % fn)
-                else:
-                    fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
                 if not os.path.exists(fn):
                     return
                 f = open(fn, "r")
@@ -1117,7 +1095,7 @@ class Project(QObject):
         @param validating flag indicating a validation of the XML file is
             requested (boolean)
         """
-        if fn.lower().endswith("e4tz") or fn.lower().endswith("e3tz"):
+        if fn.lower().endswith("e4tz"):
             # work around for a bug in xmlproc
             validating = False
         
@@ -1131,7 +1109,7 @@ class Project(QObject):
         parser.setErrorHandler(eh)
         
         try:
-            if fn.lower().endswith("e4tz") or fn.lower().endswith("e3tz"):
+            if fn.lower().endswith("e4tz"):
                 try:
                     import gzip
                 except ImportError:
@@ -1200,7 +1178,7 @@ class Project(QObject):
         
     def __readDebugProperties(self, quiet = False):
         """
-        Private method to read in the project debugger properties file (.e4d, .e3d)
+        Private method to read in the project debugger properties file (.e4d)
         
         @param quiet flag indicating quiet operations.
                 If this flag is true, no errors are reported.
@@ -1215,11 +1193,8 @@ class Project(QObject):
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
         
         try:
-            if ext.lower() in [".e4pz", "*.e3pz"]:
-                if ext.lower() == ".e3pz":
-                    fn = os.path.join(self.ppath, '%s.e3dz' % fn)
-                else:
-                    fn = os.path.join(self.getProjectManagementDir(), '%s.e4dz' % fn)
+            if ext.lower() in [".e4pz"]:
+                fn = os.path.join(self.getProjectManagementDir(), '%s.e4dz' % fn)
                 try:
                     import gzip
                 except ImportError:
@@ -1232,10 +1207,7 @@ class Project(QObject):
                     return
                 f = gzip.open(fn, "r")
             else:
-                if ext.lower() == ".e3p":
-                    fn = os.path.join(self.ppath, '%s.e3d' % fn)
-                else:
-                    fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
                 f = open(fn, "r")
             line = f.readline()
             dtdLine = f.readline()
@@ -1269,7 +1241,7 @@ class Project(QObject):
         @param quiet flag indicating quiet operations.
             If this flag is true, no errors are reported.
         """
-        if fn.lower().endswith("e4dz") or fn.lower().endswith("e3dz"):
+        if fn.lower().endswith("e4dz"):
             # work around for a bug in xmlproc
             validating = False
         
@@ -1283,7 +1255,7 @@ class Project(QObject):
         parser.setErrorHandler(eh)
         
         try:
-            if fn.lower().endswith("e4dz") or fn.lower().endswith("e3dz"):
+            if fn.lower().endswith("e4dz"):
                 try:
                     import gzip
                 except ImportError:
@@ -1330,9 +1302,7 @@ class Project(QObject):
         @param quiet flag indicating quiet operations.
                 If this flag is true, no errors are reported.
         """
-        if self.pfile is None or \
-           self.pfile.endswith('e3p') or \
-           self.pfile.endswith('e3pz'):
+        if self.pfile is None:
             if not quiet:
                 QMessageBox.critical(None,
                     self.trUtf8("Save debugger properties"),
@@ -1374,7 +1344,7 @@ class Project(QObject):
         
     def __deleteDebugProperties(self):
         """
-        Private method to delete the project debugger properties file (.e3d)
+        Private method to delete the project debugger properties file (.e4d)
         """
         if self.pfile is None:
             if not quiet:
@@ -1386,9 +1356,7 @@ class Project(QObject):
         fname, ext = os.path.splitext(os.path.basename(self.pfile))
         
         for fn in [os.path.join(self.getProjectManagementDir(), "%s.e4dz" % fname), 
-                   os.path.join(self.getProjectManagementDir(), "%s.e4d" % fname), 
-                   os.path.join(self.ppath, "%s.e3dz" % fname), 
-                   os.path.join(self.ppath, "%s.e3d" % fname)]:
+                   os.path.join(self.getProjectManagementDir(), "%s.e4d" % fname)]:
             if os.path.exists(fn):
                 try:
                     os.remove(fn)
@@ -2677,7 +2645,7 @@ class Project(QObject):
                 self.parent(),
                 self.trUtf8("Open project"),
                 "",
-                self.trUtf8("Project Files (*.e4p *.e4pz *.e3p *.e3pz)"))
+                self.trUtf8("Project Files (*.e4p *.e4pz)"))
         
         QApplication.processEvents()
         
@@ -2820,10 +2788,7 @@ class Project(QObject):
         """
         if self.isDirty():
             if len(self.pfile) > 0:
-                if self.pfile.endswith("e3pz") or self.pfile.endswith("e3p"):
-                    ok = self.saveProjectAs()
-                else:
-                    ok = self.__writeProject()
+                ok = self.__writeProject()
             else:
                 ok = self.saveProjectAs()
         else:
@@ -3142,9 +3107,9 @@ class Project(QObject):
         @return path of the management directory (string)
         """
         if Utilities.isWindowsPlatform():
-            return os.path.join(self.ppath, "_eric4project")
+            return os.path.join(self.ppath, "_eric5project")
         else:
-            return os.path.join(self.ppath, ".eric4project")
+            return os.path.join(self.ppath, ".eric5project")
         
     def isProjectFile(self, fn):
         """
@@ -3556,10 +3521,10 @@ class Project(QObject):
                 self.trUtf8('Create &Package List'), 0, 0,
                 self.pluginGrp,'project_plugin_pkglist')
         self.pluginPkgListAct.setStatusTip(\
-            self.trUtf8('Create an initial PKGLIST file for an eric4 plugin.'))
+            self.trUtf8('Create an initial PKGLIST file for an eric5 plugin.'))
         self.pluginPkgListAct.setWhatsThis(self.trUtf8(
             """<b>Create Package List</b>"""
-            """<p>This creates an initial list of files to include in an eric4 """
+            """<p>This creates an initial list of files to include in an eric5 """
             """plugin archive. The list is created from the project file.</p>"""
         ))
         self.connect(self.pluginPkgListAct, SIGNAL('triggered()'), 
@@ -3571,10 +3536,10 @@ class Project(QObject):
                 self.trUtf8('Create Plugin &Archive'), 0, 0,
                 self.pluginGrp,'project_plugin_archive')
         self.pluginArchiveAct.setStatusTip(\
-            self.trUtf8('Create an eric4 plugin archive file.'))
+            self.trUtf8('Create an eric5 plugin archive file.'))
         self.pluginArchiveAct.setWhatsThis(self.trUtf8(
             """<b>Create Plugin Archive</b>"""
-            """<p>This creates an eric4 plugin archive file using the list of files """
+            """<p>This creates an eric5 plugin archive file using the list of files """
             """given in the PKGLIST file. The archive name is built from the main """
             """script name.</p>"""
         ))
@@ -3587,10 +3552,10 @@ class Project(QObject):
                 self.trUtf8('Create Plugin Archive (&Snapshot)'), 0, 0,
                 self.pluginGrp,'project_plugin_sarchive')
         self.pluginSArchiveAct.setStatusTip(\
-            self.trUtf8('Create an eric4 plugin archive file (snapshot release).'))
+            self.trUtf8('Create an eric5 plugin archive file (snapshot release).'))
         self.pluginSArchiveAct.setWhatsThis(self.trUtf8(
             """<b>Create Plugin Archive (Snapshot)</b>"""
-            """<p>This creates an eric4 plugin archive file using the list of files """
+            """<p>This creates an eric5 plugin archive file using the list of files """
             """given in the PKGLIST file. The archive name is built from the main """
             """script name. The version entry of the main script is modified to """
             """reflect a snapshot release.</p>"""
@@ -4403,7 +4368,7 @@ class Project(QObject):
         
     def __pluginCreateArchive(self, snapshot = False):
         """
-        Private slot to create an eric4 plugin archive.
+        Private slot to create an eric5 plugin archive.
         
         @param snapshot flag indicating a snapshot archive (boolean)
         """
@@ -4451,7 +4416,7 @@ class Project(QObject):
         except IOError as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
-                self.trUtf8("""<p>The eric4 plugin archive file <b>{0}</b> could """
+                self.trUtf8("""<p>The eric5 plugin archive file <b>{0}</b> could """
                             """not be created.</p>"""
                             """<p>Reason: {1}</p>""").format(archive, str(why)),
                 QMessageBox.StandardButtons(\
@@ -4487,14 +4452,14 @@ class Project(QObject):
         
         QMessageBox.information(None,
             self.trUtf8("Create Plugin Archive"),
-            self.trUtf8("""<p>The eric4 plugin archive file <b>{0}</b> was """
+            self.trUtf8("""<p>The eric5 plugin archive file <b>{0}</b> was """
                         """created successfully.</p>""").format(archive),
             QMessageBox.StandardButtons(\
                 QMessageBox.Ok))
     
     def __pluginCreateSnapshotArchive(self):
         """
-        Private slot to create an eric4 plugin archive snapshot release.
+        Private slot to create an eric5 plugin archive snapshot release.
         """
         self.__pluginCreateArchive(True)
     

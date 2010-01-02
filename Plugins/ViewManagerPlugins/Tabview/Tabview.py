@@ -25,7 +25,7 @@ from E4Gui.E4Led import E4Led
 
 import Preferences
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class TabBar(E4WheelTabBar):
     """

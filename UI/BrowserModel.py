@@ -954,17 +954,17 @@ class BrowserFileItem(BrowserItem):
     
     def isProjectFile(self):
         """
-        Public method to check, if this file is an eric4 project file.
+        Public method to check, if this file is an eric project file.
         
-        @return flag indicating an eric4 project file (boolean)
+        @return flag indicating an eric project file (boolean)
         """
-        return self.fileext in ['.e3p', '.e3pz', '.e4p', '.e4pz']
+        return self.fileext in ['.e4p', '.e4pz']
     
     def isMultiProjectFile(self):
         """
-        Public method to check, if this file is an eric4 multi project file.
+        Public method to check, if this file is an eric multi project file.
         
-        @return flag indicating an eric4 project file (boolean)
+        @return flag indicating an eric project file (boolean)
         """
         return self.fileext in ['.e4m', '.e4mz']
     

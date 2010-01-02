@@ -27,7 +27,7 @@ import UI.PixmapCache
 import Preferences
 import Utilities
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class ProjectFormsBrowser(ProjectBaseBrowser):
     """

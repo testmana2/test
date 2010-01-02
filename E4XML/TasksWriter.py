@@ -45,11 +45,11 @@ class TasksWriter(XMLWriterBase):
         
         # add some generation comments
         if self.forProject:
-            self._write("<!-- eric4 tasks file for project %s -->" % self.name)
+            self._write("<!-- eric5 tasks file for project %s -->" % self.name)
             if Preferences.getProject("XMLTimestamp"):
                 self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
         else:
-            self._write("<!-- eric4 tasks file -->")
+            self._write("<!-- eric5 tasks file -->")
             self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
         
         # add the main tag

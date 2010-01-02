@@ -8,7 +8,7 @@ Package implementing the preferences interface.
 
 The preferences interface consists of a class, which defines the default
 values for all configuration items and stores the actual values. These
-values are read and written to the eric4 preferences file by module
+values are read and written to the eric5 preferences file by module
 functions. The data is stored in a file in a subdirectory of the users home 
 directory. The individual configuration data is accessed by accessor functions 
 defined on the module level. The module is simply imported wherever it is needed
@@ -784,7 +784,7 @@ def initPreferences():
     if not isWindowsPlatform():
         hp = QtCore.QDir.homePath()
         dn = QtCore.QDir(hp)
-        dn.mkdir(".eric4")
+        dn.mkdir(".eric5")
     QtCore.QCoreApplication.setOrganizationName(settingsNameOrganization)
     QtCore.QCoreApplication.setApplicationName(settingsNameGlobal)
     
@@ -1915,7 +1915,7 @@ def getGraphics(key, prefClass = Prefs):
         font = prefClass.settings.value("Graphics/" + key,
             prefClass.graphicsDefaults[key])
         if isinstance(font, QtGui.QFont):
-            # workaround for an old bug in eric4 < 4.4
+            # workaround for an old bug in eric < 4.4
             return font
         else:
             f = QtGui.QFont()

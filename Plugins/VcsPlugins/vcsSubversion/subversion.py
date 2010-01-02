@@ -185,7 +185,7 @@ class Subversion(VersionControl):
         """
         Public method used to initialize the subversion repository.
         
-        The subversion repository has to be initialized from outside eric4
+        The subversion repository has to be initialized from outside eric5
         because the respective command always works locally. Therefore we
         always return TRUE without doing anything.
         

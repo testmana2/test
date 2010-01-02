@@ -7,8 +7,8 @@
 Module defining different default values for the documentation tools package.
 """
 
-# the default colors for the eric4 documentation generator
-eric4docDefaultColors = { \
+# the default colors for the eric5 documentation generator
+eric5docDefaultColors = { \
     'BodyColor'           : '#000000',
     'BodyBgColor'         : '#FFFFFF',
     'Level1HeaderColor'   : '#0000FF',
@@ -20,7 +20,7 @@ eric4docDefaultColors = { \
     'LinkColor'           : '#0000FF',
 }
 
-eric4docColorParameterNames = { \
+eric5docColorParameterNames = { \
     'BodyColor'           : 'body-color', 
     'BodyBgColor'         : 'body-background-color', 
     'Level1HeaderColor'   : 'l1header-color', 

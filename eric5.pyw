@@ -3,6 +3,6 @@
 # Copyright (c) 2005 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
-from eric4 import main
+from eric5 import main
 
 main()

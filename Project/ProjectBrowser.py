@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing the project browser part of the eric4 UI.
+Module implementing the project browser part of the eric5 UI.
 """
 
 import os
@@ -34,7 +34,7 @@ from .ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
 
 class ProjectBrowser(E4TabWidget):
     """
-    Class implementing the project browser part of the eric4 UI.
+    Class implementing the project browser part of the eric5 UI.
     
     It generates a widget with up to seven tabs. The individual tabs contain
     the project sources browser, the project forms browser,

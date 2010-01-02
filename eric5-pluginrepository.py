@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2006 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2007 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 """
-Eric4 Configure
+Eric4 Plugin Installer
 
-This is the main Python script to configure the eric4 IDE from the outside.
+This is the main Python script to install eric5 plugins from outside of the IDE.
 """
 
 import sys
@@ -21,16 +21,7 @@ for arg in sys.argv:
         sys.argv.remove(arg)
         break
 
-# make ThirdParty package available as a packages repository
-try:
-    import pygments
-except ImportError:
-    sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
-
 from Utilities import Startup
-
-import Preferences
-
 
 def createMainWidget(argv):
     """
@@ -39,11 +30,8 @@ def createMainWidget(argv):
     @param argv list of commandline parameters (list of strings)
     @return reference to the main widget (QWidget)
     """
-    from Preferences.ConfigurationDialog import ConfigurationWindow
-    w = ConfigurationWindow()
-    w.show()
-    w.showConfigurationPageByName("empty")
-    return w
+    from PluginManager.PluginRepositoryDialog import PluginRepositoryWindow
+    return PluginRepositoryWindow(None)
 
 def main():
     """
@@ -54,9 +42,10 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Configure",
+                                  "Eric4 Plugin Repository",
                                   "",
-                                  "Configuration editor for eric4",
+                                  "Utility to show the contents of the eric5"
+                                  " Plugin repository.",
                                   options)
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,

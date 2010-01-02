@@ -19,7 +19,7 @@ from .Ui_ViewmanagerPage import Ui_ViewmanagerPage
 
 import Preferences
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
     """

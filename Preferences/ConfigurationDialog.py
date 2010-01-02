@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog for the configuration of eric4.
+Module implementing a dialog for the configuration of eric5.
 """
 
 import os
@@ -22,7 +22,7 @@ import Preferences
 from .PreferencesLexer import PreferencesLexer, PreferencesLexerLanguageError
 import UI.PixmapCache
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class ConfigurationPageItem(QTreeWidgetItem):
     """
@@ -52,7 +52,7 @@ class ConfigurationPageItem(QTreeWidgetItem):
 
 class ConfigurationWidget(QWidget):
     """
-    Class implementing a dialog for the configuration of eric4.
+    Class implementing a dialog for the configuration of eric5.
     
     @signal preferencesChanged emitted after settings have been changed
     """
@@ -62,7 +62,7 @@ class ConfigurationWidget(QWidget):
         
         @param parent The parent widget of this dialog. (QWidget)
         @keyparam fromEric flag indicating a dialog generation from within the 
-            eric4 ide (boolean)
+            eric5 ide (boolean)
         @keyparam helpBrowserMode flag indicating to show only help pages
             for entries related to the help browser (boolean)
         """
@@ -585,7 +585,7 @@ class ConfigurationDialog(QDialog):
         @param name The name of this dialog. string
         @param modal Flag indicating a modal dialog. (boolean)
         @keyparam fromEric flag indicating a dialog generation from within the 
-            eric4 ide (boolean)
+            eric5 ide (boolean)
         @keyparam helpBrowserMode flag indicating to show only help pages
             for entries related to the help browser (boolean)
         """

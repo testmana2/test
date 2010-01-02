@@ -26,7 +26,7 @@ import UI.Config
 
 from E4Gui.E4Action import E4Action, createActionGroup
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class DebugUI(QObject):
     """
@@ -1417,7 +1417,7 @@ class DebugUI(QObject):
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
                     argv.insert(0, "--plugin=%s " % fn)
-                    fn = os.path.join(getConfig('ericDir'), "eric4.py")
+                    fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
                 # Ask the client to open the new program.
                 self.debugServer.remoteCoverage(fn, argv, wd, env, 
@@ -1521,7 +1521,7 @@ class DebugUI(QObject):
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
                     argv.insert(0, "--plugin=%s " % fn)
-                    fn = os.path.join(getConfig('ericDir'), "eric4.py")
+                    fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
                 # Ask the client to open the new program.
                 self.debugServer.remoteProfile(fn, argv, wd, env,
@@ -1621,7 +1621,7 @@ class DebugUI(QObject):
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
                     argv.insert(0, "--plugin=%s " % fn)
-                    fn = os.path.join(getConfig('ericDir'), "eric4.py")
+                    fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
                 # Ask the client to open the new program.
                 self.debugServer.remoteRun(fn, argv, wd, env,
@@ -1735,7 +1735,7 @@ class DebugUI(QObject):
             if not doNotStart:
                 if debugProject and self.project.getProjectType() == "E4Plugin":
                     argv.insert(0, "--plugin=%s " % fn)
-                    fn = os.path.join(getConfig('ericDir'), "eric4.py")
+                    fn = os.path.join(getConfig('ericDir'), "eric5.py")
                     tracePython = True # override flag because it must be true
                 
                 # Ask the client to open the new program.
@@ -1786,7 +1786,7 @@ class DebugUI(QObject):
         if not doNotStart:
             if forProject and self.project.getProjectType() == "E4Plugin":
                 argv.insert(0, "--plugin=%s " % fn)
-                fn = os.path.join(getConfig('ericDir'), "eric4.py")
+                fn = os.path.join(getConfig('ericDir'), "eric5.py")
             
             if self.lastStartAction in [1, 2]:
                 # Ask the client to debug the new program.

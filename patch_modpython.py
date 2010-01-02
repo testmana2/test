@@ -2,10 +2,10 @@
 
 # Copyright (c) 2003-2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# This is a  script to patch mod_python for eric4. 
+# This is a  script to patch mod_python for eric5. 
 
 """
-Script to patch mod_python for usage with the eric4 IDE.
+Script to patch mod_python for usage with the eric5 IDE.
 """
 
 import sys
@@ -34,7 +34,7 @@ def usage(rcode = 2):
         (modDir))
     print()
     print("This script patches the file apache.py of the Mod_python distribution")
-    print("so that it will work with the eric4 debugger instead of pdb.")
+    print("so that it will work with the eric5 debugger instead of pdb.")
     print("Please see mod_python.html for more details.")
     print()
 
@@ -91,11 +91,11 @@ def main(argv):
     s = open(sn, "w")
     for line in lines:
         if not pdbFound and line.startswith("import pdb"):
-            s.write("import eric4.DebugClients.Python.eric4dbgstub as pdb\n")
+            s.write("import eric5.DebugClients.Python.eric5dbgstub as pdb\n")
             pdbFound = True
         else:
             s.write(line)
-            if line.startswith("import eric4"):
+            if line.startswith("import eric5"):
                 ericFound = True
     
     if not ericFound:
@@ -103,7 +103,7 @@ def main(argv):
         s.write('def initDebugger(name):\n')
         s.write('    """\n')
         s.write('    Initialize the debugger and set the script name to be reported \n')
-        s.write('    by the debugger. This is a patch for eric4.\n')
+        s.write('    by the debugger. This is a patch for eric5.\n')
         s.write('    """\n')
         s.write('    if not pdb.initDebugger("standard"):\n')
         s.write('        raise ImportError("Could not initialize debugger")\n')
@@ -112,7 +112,7 @@ def main(argv):
     s.close()
     
     if ericFound:
-        print("Mod_python is already patched for eric4.")
+        print("Mod_python is already patched for eric5.")
         os.remove(sn)
     else:
         try:
@@ -153,4 +153,3 @@ if __name__ == "__main__":
 including the following traceback, to eric-bugs@die-offenbachs.de.
 """)
         raise
-

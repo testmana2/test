@@ -56,7 +56,7 @@ import Utilities
 import UI.PixmapCache
 import UI.Config
 
-from eric4config import getConfig
+from eric5config import getConfig
 
 class HelpWindow(QMainWindow):
     """
@@ -87,7 +87,7 @@ class HelpWindow(QMainWindow):
         @param path the path of the working dir (usually '.') (string)
         @param parent parent widget of this window (QWidget)
         @param name name of this window (string)
-        @param fromEric flag indicating whether it was called from within eric4 (boolean)
+        @param fromEric flag indicating whether it was called from within eric5 (boolean)
         @keyparam initShortcutsOnly flag indicating to just initialize the keyboard
             shortcuts (boolean)
         @keyparam searchWord word to search for (string)
@@ -95,7 +95,7 @@ class HelpWindow(QMainWindow):
         QMainWindow.__init__(self, parent)
         self.setObjectName(name)
         self.setAttribute(Qt.WA_DeleteOnClose)
-        self.setWindowTitle(self.trUtf8("eric4 Web Browser"))
+        self.setWindowTitle(self.trUtf8("eric5 Web Browser"))
         
         self.fromEric = fromEric
         self.initShortcutsOnly = initShortcutsOnly
@@ -109,7 +109,7 @@ class HelpWindow(QMainWindow):
         else:
             self.__helpEngine = \
                 QHelpEngine(os.path.join(Utilities.getConfigDir(), 
-                                         "browser", "eric4help.qhc"), self)
+                                         "browser", "eric5help.qhc"), self)
             self.connect(self.__helpEngine, SIGNAL("warning(const QString&)"), 
                          self.__warning)
             self.__helpInstaller = None
@@ -2271,7 +2271,7 @@ class HelpWindow(QMainWindow):
         if cls._helpEngine is None:
             cls._helpEngine = \
                 QHelpEngine(os.path.join(Utilities.getConfigDir(), 
-                                         "browser", "eric4help.qhc"))
+                                         "browser", "eric5help.qhc"))
         return cls._helpEngine
         
     @classmethod
@@ -2528,7 +2528,7 @@ class HelpWindow(QMainWindow):
         @param message message to be shown (QString)
         """
         QMessageBox.warning(self,
-            self.trUtf8("eric4 Web Browser"),
+            self.trUtf8("eric5 Web Browser"),
             message)
         
     def __docsInstalled(self, installed):

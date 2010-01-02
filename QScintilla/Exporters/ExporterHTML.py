@@ -87,7 +87,7 @@ class ExporterHTML(ExporterBase):
                 else:
                     f.write('''<title>%s</title>\n''' % \
                         os.path.basename(self.editor.getFileName()))
-                f.write('''<meta name="Generator" content="eric4" />\n''')
+                f.write('''<meta name="Generator" content="eric5" />\n''')
                 f.write('''<meta http-equiv="Content-Type" '''
                         '''content="text/html; charset=utf-8" />\n''')
                 if folding:
