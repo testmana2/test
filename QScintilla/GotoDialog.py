@@ -9,7 +9,7 @@ Module implementing the Goto dialog.
 
 from PyQt4.QtGui import QDialog
 
-from Ui_GotoDialog import Ui_GotoDialog
+from .Ui_GotoDialog import Ui_GotoDialog
 
 class GotoDialog(QDialog, Ui_GotoDialog):
     """

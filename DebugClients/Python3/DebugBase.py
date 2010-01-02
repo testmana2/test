@@ -577,12 +577,15 @@ class DebugBase(bdb.Bdb):
         exctype, excval, exctb = excinfo
         if exctype in [SystemExit, bdb.BdbQuit]:
             atexit._run_exitfuncs()
-            self._dbgClient.progTerminated(excval)
+            if isinstance(excval, int):
+                self._dbgClient.progTerminated(excval)
+            else:
+                self._dbgClient.progTerminated(excval.code)
             return
         
         elif exctype in [SyntaxError, IndentationError]:
             try:
-                message, (filename, linenr, charnr, text) = excval.args
+                message, (filename, linenr, charnr, text) = excval[0], excval[1]
             except ValueError:
                 exclist = []
             else:
@@ -601,9 +604,7 @@ class DebugBase(bdb.Bdb):
             else:
                 exctypetxt = str(exctype)
             try:
-                exclist = [exctypetxt, 
-                           str(excval).encode(
-                                self._dbgClient.getCoding(), 'backslashreplace')]
+                exclist = [exctypetxt, str(excval)]
             except TypeError:
                 exclist = [exctypetxt, str(excval)]
             

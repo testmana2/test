@@ -12,9 +12,9 @@ from PyQt4.QtGui import QListWidgetItem, QFileDialog
 
 from E4Gui.E4Completers import E4DirCompleter
 
-from ConfigurationPageBase import ConfigurationPageBase
-from IconsPreviewDialog import IconsPreviewDialog
-from Ui_IconsPage import Ui_IconsPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .IconsPreviewDialog import IconsPreviewDialog
+from .Ui_IconsPage import Ui_IconsPage
 
 import Preferences
 import Utilities

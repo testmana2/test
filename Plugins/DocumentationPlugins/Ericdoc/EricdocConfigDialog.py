@@ -16,7 +16,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4DirCompleter
 
-from Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
+from .Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
 from DocumentationTools.Config import eric4docDefaultColors, eric4docColorParameterNames
 import Utilities
 
@@ -66,7 +66,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         
         # combine it with the values of parms
         if parms is not None:
-            for key, value in parms.items():
+            for key, value in list(parms.items()):
                 if key.endswith("Color"):
                     self.colors[key] = parms[key]
                 else:
@@ -188,7 +188,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
                 args.append(self.parameters['cssFile'])
             else:
                 args.append(os.path.join(self.ppath, self.parameters['cssFile']))
-        for key, value in self.colors.items():
+        for key, value in list(self.colors.items()):
             if self.colors[key] != eric4docDefaultColors[key]:
                 parms[key] = self.colors[key]
                 args.append("--%s=%s" % \

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2004 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -14,16 +14,12 @@ import os
 import shutil
 import glob
 
-import sip
-sip.setapi("QString", 2)
-sip.setapi("QVariant", 2)
-
 from PyQt4.QtCore import QDir
 
 try:
-    from eric4config import getConfig
+    from .eric4config import getConfig
 except ImportError:
-    print "The eric4 IDE doesn't seem to be installed. Aborting."
+    print("The eric4 IDE doesn't seem to be installed. Aborting.")
     sys.exit(1)
     
 def getConfigDir():
@@ -59,12 +55,12 @@ def usage(rcode = 2):
     """
     global progName, configDir
 
-    print
-    print "Usage:"
-    print "    %s [-hp]" % (progName)
-    print "where:"
-    print "    -h        display this help message"
-    print "    -p        install into the private area (%s)" % (configDir)
+    print()
+    print("Usage:")
+    print("    %s [-hp]" % (progName))
+    print("where:")
+    print("    -h        display this help message")
+    print("    -p        install into the private area (%s)" % (configDir))
 
     sys.exit(rcode)
 
@@ -82,7 +78,7 @@ def installTranslations():
     try:
         for fn in glob.glob(os.path.join('eric', 'i18n', '*.qm')):
             shutil.copy2(fn, targetDir)
-    except IOError, msg:
+    except IOError as msg:
         sys.stderr.write('IOError: %s\nTry install-i18n as root.\n' % msg)
     
 def main(argv):
@@ -120,8 +116,7 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print \
-"""An internal error occured.  Please report all the output of the program,
+        print("""An internal error occured.  Please report all the output of the program,
 including the following traceback, to eric5-bugs@eric-ide.python-projects.org.
-"""
+""")
         raise

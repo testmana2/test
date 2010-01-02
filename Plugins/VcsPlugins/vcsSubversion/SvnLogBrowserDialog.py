@@ -12,9 +12,9 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from SvnDiffDialog import SvnDiffDialog
+from .SvnDiffDialog import SvnDiffDialog
 
-from Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
+from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
 
 import UI.PixmapCache
 
@@ -313,20 +313,20 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             elif self.rx_flags1.exactMatch(s):
                 changedPaths.append({\
                     "action"            : 
-                        unicode(self.rx_flags1.cap(1).strip(), ioEncoding, 'replace'), 
+                        str(self.rx_flags1.cap(1).strip(), ioEncoding, 'replace'), 
                     "path"              : 
-                        unicode(self.rx_flags1.cap(2).strip(), ioEncoding, 'replace'), 
+                        str(self.rx_flags1.cap(2).strip(), ioEncoding, 'replace'), 
                     "copyfrom_path"     : 
-                        unicode(self.rx_flags1.cap(3).strip(), ioEncoding, 'replace'), 
+                        str(self.rx_flags1.cap(3).strip(), ioEncoding, 'replace'), 
                     "copyfrom_revision" : 
-                        unicode(self.rx_flags1.cap(4).strip(), ioEncoding, 'replace'), 
+                        str(self.rx_flags1.cap(4).strip(), ioEncoding, 'replace'), 
                 })
             elif self.rx_flags2.exactMatch(s):
                 changedPaths.append({\
                     "action"            : 
-                        unicode(self.rx_flags2.cap(1).strip(), ioEncoding, 'replace'), 
+                        str(self.rx_flags2.cap(1).strip(), ioEncoding, 'replace'), 
                     "path"              : 
-                        unicode(self.rx_flags2.cap(2).strip(), ioEncoding, 'replace'), 
+                        str(self.rx_flags2.cap(2).strip(), ioEncoding, 'replace'), 
                     "copyfrom_path"     : "", 
                     "copyfrom_revision" : "", 
                 })
@@ -383,7 +383,9 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = unicode(self.process.readLine())
+            line = str(self.process.readLine(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace')
             self.buf.append(line)
     
     def __readStderr(self):
@@ -394,7 +396,9 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         error pane.
         """
         if self.process is not None:
-            s = unicode(self.process.readAllStandardError())
+            s = str(self.process.readAllStandardError(), 
+                     Preferences.getSystem("IOEncoding"), 
+                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
     

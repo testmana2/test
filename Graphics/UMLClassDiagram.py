@@ -12,10 +12,10 @@ from PyQt4.QtGui import *
 
 import Utilities.ModuleParser
 
-from UMLDialog import UMLDialog
-from ClassItem import ClassItem, ClassModel
-from AssociationItem import AssociationItem, Generalisation
-import GraphicsUtilities
+from .UMLDialog import UMLDialog
+from .ClassItem import ClassItem, ClassModel
+from .AssociationItem import AssociationItem, Generalisation
+from . import GraphicsUtilities
 
 class UMLClassDiagram(UMLDialog):
     """
@@ -69,7 +69,7 @@ class UMLClassDiagram(UMLDialog):
                     .format(self.file))
             return
         
-        if not self.allModules.has_key(self.file):
+        if self.file not in self.allModules:
             self.allModules[self.file] = []
         
         routes = []
@@ -113,7 +113,7 @@ class UMLClassDiagram(UMLDialog):
                 
                 if hierarchy.get(className):
                     todo.append(hierarchy.get(className))
-                    children = hierarchy.get(className).keys()
+                    children = list(hierarchy.get(className).keys())
                     for child in children:
                         if (className, child) not in routes:
                             routes.append((className, child))

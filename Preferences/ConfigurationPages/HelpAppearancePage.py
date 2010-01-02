@@ -12,8 +12,8 @@ from PyQt4.QtGui import QFileDialog
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_HelpAppearancePage import Ui_HelpAppearancePage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_HelpAppearancePage import Ui_HelpAppearancePage
 
 import Preferences
 import Utilities
@@ -67,7 +67,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         
         Preferences.setHelp("UserStyleSheet", self.styleSheetEdit.text())
         
-        for key in self.helpColours.keys():
+        for key in list(self.helpColours.keys()):
             Preferences.setHelp(key, self.helpColours[key])
     
     @pyqtSlot()

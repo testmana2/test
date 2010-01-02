@@ -15,8 +15,8 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from SvnDialogMixin import SvnDialogMixin
-from Ui_SvnPropListDialog import Ui_SvnPropListDialog
+from .SvnDialogMixin import SvnDialogMixin
+from .Ui_SvnPropListDialog import Ui_SvnPropListDialog
 
 class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
     """
@@ -84,7 +84,7 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         
         QApplication.processEvents()
         self.propsFound = False
-        if type(fn) is types.ListType:
+        if isinstance(fn, list):
             dname, fnames = self.vcs.splitPathList(fn)
         else:
             dname, fname = self.vcs.splitPath(fn)
@@ -98,7 +98,7 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
                 proplist = self.client.proplist(name, recurse = recursive)
                 counter = 0
                 for path, prop in proplist:
-                    for propName, propVal in prop.items():
+                    for propName, propVal in list(prop.items()):
                         self.__generateItem(path, propName, propVal)
                         self.propsFound = True
                     counter += 1
@@ -109,7 +109,7 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
                             break
                 if self._clientCancelCallback():
                     break
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             self.__showError(e.args[0])
         locker.unlock()
         self.__finish()

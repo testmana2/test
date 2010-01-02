@@ -12,9 +12,9 @@ from PyQt4.QtGui import *
 
 import Helpviewer.HelpWindow
 
-from PasswordModel import PasswordModel
+from .PasswordModel import PasswordModel
 
-from Ui_PasswordsDialog import Ui_PasswordsDialog
+from .Ui_PasswordsDialog import Ui_PasswordsDialog
 
 import UI.PixmapCache
 
@@ -52,7 +52,7 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         self.passwordsTable.setModel(self.__proxyModel)
         
         fm = QFontMetrics(QFont())
-        height = fm.height() + fm.height() / 3
+        height = fm.height() + fm.height() // 3
         self.passwordsTable.verticalHeader().setDefaultSectionSize(height)
         self.passwordsTable.verticalHeader().setMinimumSectionSize(-1)
         

@@ -9,7 +9,7 @@ Module implementing a class to read XBEL bookmark files.
 
 from PyQt4.QtCore import *
 
-from BookmarkNode import BookmarkNode
+from .BookmarkNode import BookmarkNode
 
 class XmlEntityResolver(QXmlStreamEntityResolver):
     """

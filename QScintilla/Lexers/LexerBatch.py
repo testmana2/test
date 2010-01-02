@@ -9,7 +9,7 @@ Module implementing a Batch file lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerBatch
 
-from Lexer import Lexer
+from .Lexer import Lexer
 
 class LexerBatch(QsciLexerBatch, Lexer):
     """ 

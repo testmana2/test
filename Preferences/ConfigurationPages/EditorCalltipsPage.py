@@ -9,8 +9,8 @@ Module implementing the Editor Calltips configuration page.
 
 from PyQt4.QtCore import pyqtSlot
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorCalltipsPage import Ui_EditorCalltipsPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorCalltipsPage import Ui_EditorCalltipsPage
 
 import Preferences
 

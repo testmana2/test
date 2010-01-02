@@ -17,7 +17,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from Ui_FindFileDialog import Ui_FindFileDialog
+from .Ui_FindFileDialog import Ui_FindFileDialog
 
 import Utilities
 import Preferences
@@ -287,7 +287,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 if self.sourcesCheckBox.isChecked():
                     filters.extend(
                         ["^%s$" % assoc.replace(".", "\.").replace("*", ".*") \
-                         for assoc in Preferences.getEditorLexerAssocs().keys() \
+                         for assoc in list(Preferences.getEditorLexerAssocs().keys()) \
                          if assoc not in self.formsExt + self.interfacesExt])
                 if self.formsCheckBox.isChecked():
                     filters.append(self.filterForms)
@@ -323,11 +323,11 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             flags |= re.IGNORECASE
         try:
             search = re.compile(txt, flags)
-        except re.error, why:
+        except re.error as why:
             QMessageBox.critical(None,
                 self.trUtf8("Invalid search expression"),
                 self.trUtf8("""<p>The search expression is not valid.</p>"""
-                            """<p>Error: {0}</p>""").format(unicode(why)))
+                            """<p>Error: {0}</p>""").format(str(why)))
             self.stopButton.setEnabled(False)
             self.findButton.setEnabled(True)
             self.findButton.setDefault(True)
@@ -366,8 +366,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 fn = file
             # read the file and split it into textlines
             try:
-                f = open(fn, 'rb')
-                text, encoding = Utilities.decode(f.read())
+                f = open(fn, 'r')
+                text = f.read()
                 lines = text.splitlines()
                 f.close()
             except IOError:
@@ -521,16 +521,16 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 
                 # read the file and split it into textlines
                 try:
-                    f = open(fn, 'rb')
-                    text, encoding = Utilities.decode(f.read())
+                    f = open(fn, 'r')
+                    text = f.read()
                     lines = text.splitlines()
                     f.close()
-                except IOError, err:
+                except IOError as err:
                     QMessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8("""<p>Could not read the file <b>{0}</b>."""
                                     """ Skipping it.</p><p>Reason: {1}</p>""")\
-                            .format(fn, unicode(err))
+                            .format(fn, str(err))
                     )
                     progress += 1
                     self.findProgress.setValue(progress)
@@ -546,17 +546,16 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 
                 # write the file
                 txt = Utilities.linesep().join(lines)
-                txt, encoding = Utilities.encode(txt, encoding)
                 try:
-                    f = open(fn, 'wb')
+                    f = open(fn, 'w')
                     f.write(txt)
                     f.close()
-                except IOError, err:
+                except IOError as err:
                     QMessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8("""<p>Could not save the file <b>{0}</b>."""
                                     """ Skipping it.</p><p>Reason: {1}</p>""")\
-                            .format(fn, unicode(err))
+                            .format(fn, str(err))
                     )
             
             progress += 1

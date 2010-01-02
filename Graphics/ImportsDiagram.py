@@ -14,10 +14,10 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from UMLDialog import UMLDialog
-from ModuleItem import ModuleItem, ModuleModel
-from AssociationItem import AssociationItem, Imports
-import GraphicsUtilities
+from .UMLDialog import UMLDialog
+from .ModuleItem import ModuleItem, ModuleModel
+from .AssociationItem import AssociationItem, Imports
+from . import GraphicsUtilities
 
 import Utilities.ModuleParser
 import Utilities
@@ -130,7 +130,7 @@ class ImportsDiagram(UMLDialog):
                     impLst.append(n)
                     if not n in externalMods:
                         externalMods.append(n)
-            for i in modules[module].from_imports.keys():
+            for i in list(modules[module].from_imports.keys()):
                 if i.startswith('.'):
                     dots = len(i) - len(i.lstrip('.'))
                     if dots == 1:
@@ -153,7 +153,7 @@ class ImportsDiagram(UMLDialog):
                     if not n in externalMods:
                         externalMods.append(n)
             classNames = []
-            for cls in modules[module].classes.keys():
+            for cls in list(modules[module].classes.keys()):
                 className = modules[module].classes[cls].name
                 if className not in classNames:
                     classNames.append(className)
@@ -219,7 +219,7 @@ class ImportsDiagram(UMLDialog):
         
         @param shapes list of shapes
         """
-        for module in shapes.keys():
+        for module in list(shapes.keys()):
             for rel in shapes[module][1]:
                 assoc = AssociationItem(\
                         shapes[module][0], shapes[rel][0],

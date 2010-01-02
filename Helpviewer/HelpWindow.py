@@ -15,32 +15,32 @@ from PyQt4.QtNetwork import QNetworkProxy
 from PyQt4.QtWebKit import QWebSettings
 from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
 
-from SearchWidget import SearchWidget
-from HelpBrowserWV import HelpBrowser
-from HelpTocWidget import HelpTocWidget
-from HelpIndexWidget import HelpIndexWidget
-from HelpSearchWidget import HelpSearchWidget
-from HelpTopicDialog import HelpTopicDialog
-from QtHelpDocumentationDialog import QtHelpDocumentationDialog
-from QtHelpFiltersDialog import QtHelpFiltersDialog
-from HelpDocsInstaller import HelpDocsInstaller
-from HelpWebSearchWidget import HelpWebSearchWidget
-from HelpClearPrivateDataDialog import HelpClearPrivateDataDialog
-from HelpLanguagesDialog import HelpLanguagesDialog
-from CookieJar.CookieJar import CookieJar
-from CookieJar.CookiesConfigurationDialog import CookiesConfigurationDialog
-from Bookmarks.BookmarksManager import BookmarksManager
-from Bookmarks.BookmarksMenu import BookmarksMenuBarMenu
-from Bookmarks.BookmarksToolBar import BookmarksToolBar
-from Bookmarks.BookmarkNode import BookmarkNode
-from Bookmarks.AddBookmarkDialog import AddBookmarkDialog
-from Bookmarks.BookmarksDialog import BookmarksDialog
-from History.HistoryManager import HistoryManager
-from History.HistoryMenu import HistoryMenu
-from History.HistoryCompleter import HistoryCompletionModel, HistoryCompleter
-from Passwords.PasswordManager import PasswordManager
-from Network.NetworkAccessManager import NetworkAccessManager
-from AdBlock.AdBlockManager import AdBlockManager
+from .SearchWidget import SearchWidget
+from .HelpBrowserWV import HelpBrowser
+from .HelpTocWidget import HelpTocWidget
+from .HelpIndexWidget import HelpIndexWidget
+from .HelpSearchWidget import HelpSearchWidget
+from .HelpTopicDialog import HelpTopicDialog
+from .QtHelpDocumentationDialog import QtHelpDocumentationDialog
+from .QtHelpFiltersDialog import QtHelpFiltersDialog
+from .HelpDocsInstaller import HelpDocsInstaller
+from .HelpWebSearchWidget import HelpWebSearchWidget
+from .HelpClearPrivateDataDialog import HelpClearPrivateDataDialog
+from .HelpLanguagesDialog import HelpLanguagesDialog
+from .CookieJar.CookieJar import CookieJar
+from .CookieJar.CookiesConfigurationDialog import CookiesConfigurationDialog
+from .Bookmarks.BookmarksManager import BookmarksManager
+from .Bookmarks.BookmarksMenu import BookmarksMenuBarMenu
+from .Bookmarks.BookmarksToolBar import BookmarksToolBar
+from .Bookmarks.BookmarkNode import BookmarkNode
+from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
+from .Bookmarks.BookmarksDialog import BookmarksDialog
+from .History.HistoryManager import HistoryManager
+from .History.HistoryMenu import HistoryMenu
+from .History.HistoryCompleter import HistoryCompletionModel, HistoryCompleter
+from .Passwords.PasswordManager import PasswordManager
+from .Network.NetworkAccessManager import NetworkAccessManager
+from .AdBlock.AdBlockManager import AdBlockManager
 
 from E4Gui.E4TabWidget import E4TabWidget
 from E4Gui.E4Action import E4Action
@@ -1468,7 +1468,7 @@ class HelpWindow(QMainWindow):
         elif mode == Qt.ElideLeft:
             return "...{0}".format(txt[-length:])
         elif mode == Qt.ElideMiddle:
-            return "{0}...{1}".format(txt[:length / 2], txt[-(length / 2):])
+            return "{0}...{1}".format(txt[:length // 2], txt[-(length // 2):])
         elif mode == Qt.ElideRight:
             return "{0}...".format(txt[:length])
         else:
@@ -1711,7 +1711,7 @@ class HelpWindow(QMainWindow):
         Private slot called to add the displayed file to the bookmarks.
         """
         view = self.currentBrowser()
-        url = unicode(view.url().toEncoded())
+        url = bytes(view.url().toEncoded()).decode()
         title = view.title()
         
         dlg = AddBookmarkDialog()
@@ -1766,7 +1766,7 @@ class HelpWindow(QMainWindow):
                 continue
             
             bookmark = BookmarkNode(BookmarkNode.Bookmark)
-            bookmark.url = unicode(tab.url().toEncoded())
+            bookmark.url = bytes(tab.url().toEncoded()).decode()
             bookmark.title = tab.title()
             
             self.bookmarksManager().addBookmark(folder, bookmark)
@@ -2145,7 +2145,7 @@ class HelpWindow(QMainWindow):
         Private slot to close all other tabs.
         """
         index = self.tabContextMenuIndex
-        for i in range(self.tabWidget.count() - 1, index, -1) + range(index - 1, -1, -1):
+        for i in list(range(self.tabWidget.count() - 1, index, -1)) + list(range(index - 1, -1, -1)):
             self.__closeAt(i)
     
     def __tabContextMenuPrint(self):
@@ -2587,7 +2587,7 @@ class HelpWindow(QMainWindow):
         @param act reference to the selected action (QAction)
         """
         index = act.data()
-        if ok:
+        if index is not None:
             self.tabWidget.setCurrentIndex(index)
         
     def __showBackMenu(self):

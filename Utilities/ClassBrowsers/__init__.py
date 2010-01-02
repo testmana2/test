@@ -48,22 +48,22 @@ def readmodule(module, path=[], isPyFile = False):
     ext = os.path.splitext(module)[1].lower()
     
     if ext in __extensions["IDL"]:
-        import idlclbr
+        from . import idlclbr
         dict = idlclbr.readmodule_ex(module, path)
         idlclbr._modules.clear()
     elif ext in __extensions["Ruby"]:
-        import rbclbr
+        from . import rbclbr
         dict = rbclbr.readmodule_ex(module, path)
         rbclbr._modules.clear()
     elif ext in Preferences.getPython("PythonExtensions") or \
          ext in Preferences.getPython("Python3Extensions") or \
          isPyFile:
-        import pyclbr
+        from . import pyclbr
         dict = pyclbr.readmodule_ex(module, path, isPyFile = isPyFile)
         pyclbr._modules.clear()
     else:
         # try Python if it is without extension
-        import pyclbr
+        from . import pyclbr
         dict = pyclbr.readmodule_ex(module, path)
         pyclbr._modules.clear()
     
@@ -109,8 +109,8 @@ def find_module(name, path, isPyFile = False):
     
     if name.lower().endswith('.py'):
         name = name[:-3]
-    if type(name) == type(u""):
-        name = name.encode('utf-8')
+##    if isinstance(name, type("")):
+##        name = name.encode('utf-8')
     
     try:
         return imp.find_module(name, path)

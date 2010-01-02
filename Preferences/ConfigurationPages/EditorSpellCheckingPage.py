@@ -12,8 +12,8 @@ from PyQt4.QtGui import QPixmap, QIcon, QFileDialog
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorSpellCheckingPage import Ui_EditorSpellCheckingPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorSpellCheckingPage import Ui_EditorSpellCheckingPage
 
 import Preferences
 import Utilities
@@ -86,7 +86,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         Preferences.setEditor("SpellCheckingMinWordSize", 
             self.minimumWordSizeSlider.value())
         
-        for key in self.editorColours.keys():
+        for key in list(self.editorColours.keys()):
             Preferences.setEditorColour(key, self.editorColours[key])
         
         Preferences.setEditor("SpellCheckingPersonalWordList", self.pwlEdit.text())

@@ -10,7 +10,7 @@ Module implementing the search bar for the web browser.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SearchWidget import Ui_SearchWidget
+from .Ui_SearchWidget import Ui_SearchWidget
 
 import UI.PixmapCache
 

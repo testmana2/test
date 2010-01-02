@@ -13,10 +13,10 @@ from PyQt4.QtGui import *
 from E4Gui.E4TreeSortFilterProxyModel import E4TreeSortFilterProxyModel
 
 import Helpviewer.HelpWindow
-from BookmarkNode import BookmarkNode
-from BookmarksModel import BookmarksModel
+from .BookmarkNode import BookmarkNode
+from .BookmarksModel import BookmarksModel
 
-from Ui_BookmarksDialog import Ui_BookmarksDialog
+from .Ui_BookmarksDialog import Ui_BookmarksDialog
 
 import UI.PixmapCache
 

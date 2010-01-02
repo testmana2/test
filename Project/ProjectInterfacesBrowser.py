@@ -16,10 +16,10 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from ProjectBrowserModel import ProjectBrowserFileItem, \
+from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserInterfaceType
-from ProjectBaseBrowser import ProjectBaseBrowser
+from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.BrowserModel import BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem
@@ -251,10 +251,10 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                          BrowserMethodItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
             
-            bfcnt = categories[unicode(ProjectBrowserFileItem)]
-            cmcnt = categories[unicode(BrowserClassItem)] + \
-                    categories[unicode(BrowserMethodItem)]
-            sdcnt = categories[unicode(ProjectBrowserSimpleDirectoryItem)]
+            bfcnt = categories[str(ProjectBrowserFileItem)]
+            cmcnt = categories[str(BrowserClassItem)] + \
+                    categories[str(BrowserMethodItem)]
+            sdcnt = categories[str(ProjectBrowserSimpleDirectoryItem)]
             if cnt > 1 and cnt == bfcnt:
                 self.multiMenu.popup(self.mapToGlobal(coord))
             elif cnt > 1 and cnt == sdcnt:
@@ -409,13 +409,12 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         if self.compileProc is None:
             return
         
-        ioEncoding = str(Preferences.getSystem("IOEncoding"))
+        ioEncoding = Preferences.getSystem("IOEncoding")
         
         self.compileProc.setReadChannel(QProcess.StandardOutput)
         while self.compileProc and self.compileProc.canReadLine():
             s = 'omniidl: '
-            output = unicode(self.compileProc.readLine(), 
-                             ioEncoding, 'replace')
+            output = str(self.compileProc.readLine(), ioEncoding, 'replace')
             s += output
             self.emit(SIGNAL('appendStdout'), s)
         
@@ -426,13 +425,12 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         if self.compileProc is None:
             return
         
-        ioEncoding = str(Preferences.getSystem("IOEncoding"))
+        ioEncoding = Preferences.getSystem("IOEncoding")
         
         self.compileProc.setReadChannel(QProcess.StandardError)
         while self.compileProc and self.compileProc.canReadLine():
             s = 'omniidl: '
-            error = unicode(self.compileProc.readLine(), 
-                            ioEncoding, 'replace')
+            error = str(self.compileProc.readLine(), ioEncoding, 'replace')
             s += error
             self.emit(SIGNAL('appendStderr'), s)
         

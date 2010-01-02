@@ -12,7 +12,7 @@ import os.path
 from PyQt4.QtGui import QListWidgetItem, QDialog, QIcon
 from PyQt4.QtCore import QDir
 
-from Ui_IconsPreviewDialog import Ui_IconsPreviewDialog
+from .Ui_IconsPreviewDialog import Ui_IconsPreviewDialog
 
 
 class IconsPreviewDialog(QDialog, Ui_IconsPreviewDialog):

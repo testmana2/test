@@ -11,10 +11,10 @@ from PyQt4.QtCore import QBuffer, QIODevice, QByteArray
 
 from Helpviewer.HTMLResources import startPage_html
 
-from SchemeAccessHandler import SchemeAccessHandler
+from .SchemeAccessHandler import SchemeAccessHandler
 
-from NetworkReply import NetworkReply
-from NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
+from .NetworkReply import NetworkReply
+from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
 
 import UI.PixmapCache
 
@@ -39,7 +39,7 @@ class PyrcAccessHandler(SchemeAccessHandler):
             imageBuffer.open(QIODevice.ReadWrite)
             if pixmap.save(imageBuffer, "PNG"):
                 html.replace("IMAGE_BINARY_DATA_HERE", 
-                             unicode(imageBuffer.buffer().toBase64()))
+                             str(imageBuffer.buffer().toBase64()))
             return NetworkReply(request, QByteArray(html), "text/html")
         
         return NetworkProtocolUnknownErrorReply("pyrc")

@@ -5,10 +5,10 @@
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
   <ProjectExcludeList>Dictionaries/excludes.dic</ProjectExcludeList>
-  <ProgLanguage mixed="1">Python</ProgLanguage>
+  <ProgLanguage mixed="1">Python3</ProgLanguage>
   <ProjectType>Qt4</ProjectType>
   <Description>eric4 is an integrated development environment for the Python and Ruby language. It uses the PyQt4 bindings and the QScintilla2 editor widget.</Description>
-  <Version>4.4.0</Version>
+  <Version>5.0.0</Version>
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
   <TranslationPattern>i18n/eric4_%language%.ts</TranslationPattern>
@@ -750,6 +750,17 @@
     <Source>ThirdParty/CharDet/chardet/test.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEditDialog.py</Source>
     <Source>E4Gui/E4Application.py</Source>
+    <Source>ThirdParty/Pygments/style.py</Source>
+    <Source>ThirdParty/Pygments/plugin.py</Source>
+    <Source>ThirdParty/Pygments/formatter.py</Source>
+    <Source>ThirdParty/Pygments/cmdline.py</Source>
+    <Source>ThirdParty/Pygments/unistring.py</Source>
+    <Source>ThirdParty/Pygments/filter.py</Source>
+    <Source>ThirdParty/Pygments/console.py</Source>
+    <Source>ThirdParty/Pygments/util.py</Source>
+    <Source>ThirdParty/Pygments/token.py</Source>
+    <Source>ThirdParty/Pygments/scanner.py</Source>
+    <Source>ThirdParty/Pygments/lexer.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

@@ -18,10 +18,10 @@ def getCompleter(language, editor, parent = None):
     """
     try:
         if language == "Python":
-            from CompleterPython import CompleterPython
+            from .CompleterPython import CompleterPython
             return CompleterPython(editor, parent)
         elif language == "Ruby":
-            from CompleterRuby import CompleterRuby
+            from .CompleterRuby import CompleterRuby
             return CompleterRuby(editor, parent)
         else:
             return None

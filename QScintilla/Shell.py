@@ -16,8 +16,8 @@ from PyQt4.Qsci import QsciScintilla
 
 from E4Gui.E4Application import e4App
 
-import Lexers
-from QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+from . import Lexers
+from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
 
 import Preferences
 import UI.PixmapCache
@@ -25,7 +25,7 @@ from Utilities import toUnicode
 
 from Debugger.DebugClientCapabilities import HasShell, HasCompleter
 
-from ShellHistoryDialog import ShellHistoryDialog
+from .ShellHistoryDialog import ShellHistoryDialog
 
 class Shell(QsciScintillaCompat):
     """
@@ -218,7 +218,7 @@ class Shell(QsciScintillaCompat):
         """
         Public method to shutdown the shell. 
         """
-        for key in self.historyLists.keys():
+        for key in list(self.historyLists.keys()):
             self.saveHistory(key)
         
     def __bindLexer(self, language = 'Python'):
@@ -411,7 +411,7 @@ class Shell(QsciScintillaCompat):
             self.racEnabled = Preferences.getShell("AutoCompletionEnabled") and \
                               (cap & HasCompleter) > 0
             
-            if not self.historyLists.has_key(clType):
+            if clType not in self.historyLists:
                 # load history list
                 self.loadHistory(clType)
             self.history = self.historyLists[clType]
@@ -443,7 +443,7 @@ class Shell(QsciScintillaCompat):
         
         @param clientType type of the debug client (string)
         """
-        if self.historyLists.has_key(clientType):
+        if clientType in self.historyLists:
             Preferences.Prefs.settings.setValue(\
                 "Shell/Histories/" + clientType, self.historyLists[clientType])
         
@@ -1256,7 +1256,7 @@ class Shell(QsciScintillaCompat):
         
         # do the history related stuff
         self.maxHistoryEntries = Preferences.getShell("MaxHistoryEntries")
-        for key in self.historyLists.keys():
+        for key in list(self.historyLists.keys()):
             self.historyLists[key] = \
                 self.historyLists[key][-self.maxHistoryEntries:]
         

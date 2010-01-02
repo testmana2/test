@@ -9,7 +9,7 @@ Module implementing a TCL/Tk lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerTCL
 
-from Lexer import Lexer
+from .Lexer import Lexer
 
 import Preferences
 

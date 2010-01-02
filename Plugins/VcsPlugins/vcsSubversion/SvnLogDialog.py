@@ -13,10 +13,11 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnLogDialog import Ui_SvnLogDialog
-from SvnDiffDialog import SvnDiffDialog
+from .Ui_SvnLogDialog import Ui_SvnLogDialog
+from .SvnDiffDialog import SvnDiffDialog
 
 import Utilities
+import Preferences
 
 class SvnLogDialog(QWidget, Ui_SvnLogDialog):
     """
@@ -221,7 +222,9 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = unicode(self.process.readLine())
+            line = str(self.process.readLine(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace')
             self.buf.append(line)
             if self.rx_rev.exactMatch(line):
                 ver = self.rx_rev.cap(1)
@@ -241,7 +244,9 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = unicode(self.process.readAllStandardError())
+            s = str(self.process.readAllStandardError(), 
+                     Preferences.getSystem("IOEncoding"), 
+                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
         
@@ -256,7 +261,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         if Utilities.isWindowsPlatform():
             if filename.startswith("/"):
                 filename = filename[1:]
-        ver = unicode(url.encodedQuery())
+        ver = str(url.encodedQuery())
         v1 = ver.split('_')[0]
         v2 = ver.split('_')[1]
         if v1 == "" or v2 == "":

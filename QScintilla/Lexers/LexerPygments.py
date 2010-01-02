@@ -50,7 +50,7 @@ PYGMENTS_NUMBER, \
 PYGMENTS_HEADING, \
 PYGMENTS_SUBHEADING, \
 PYGMENTS_DELETED, \
-PYGMENTS_INSERTED           = range(32)
+PYGMENTS_INSERTED           = list(range(32))
 # 32 to 39 are reserved for QScintilla internal styles
 PYGMENTS_GENERIC_ERROR, \
 PYGMENTS_EMPHASIZE, \
@@ -58,7 +58,7 @@ PYGMENTS_STRONG, \
 PYGMENTS_PROMPT, \
 PYGMENTS_OUTPUT, \
 PYGMENTS_TRACEBACK, \
-PYGMENTS_ERROR              = range(40, 47)
+PYGMENTS_ERROR              = list(range(40, 47))
 
 #-----------------------------------------------------------------------------#
 
@@ -343,7 +343,8 @@ class LexerPygments(LexerContainer):
         if self.editor is None:
             return True
         
-        text = self.editor.text().encode('utf-8')
+##        text = self.editor.text().encode('utf-8')
+        text = self.editor.text()
         self.__lexer = self.__guessLexer(text)
         
         return self.__lexer is not None
@@ -366,7 +367,8 @@ class LexerPygments(LexerContainer):
         @param start position of first character to be styled (integer)
         @param end position of last character to be styled (integer)
         """
-        text = self.editor.text()[:end + 1].encode('utf-8')
+##        text = self.editor.text()[:end + 1].encode('utf-8')
+        text = self.editor.text()[:end + 1]
         self.__lexer = self.__guessLexer(text)
         
         cpos = 0

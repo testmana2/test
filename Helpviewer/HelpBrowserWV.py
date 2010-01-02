@@ -20,16 +20,16 @@ import Preferences
 import Utilities
 import UI.PixmapCache
 
-from DownloadDialog import DownloadDialog
-from HelpWebSearchWidget import HelpWebSearchWidget
-from Bookmarks.AddBookmarkDialog import AddBookmarkDialog
-from JavaScriptResources import fetchLinks_js
-from HTMLResources import notFoundPage_html
+from .DownloadDialog import DownloadDialog
+from .HelpWebSearchWidget import HelpWebSearchWidget
+from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
+from .JavaScriptResources import fetchLinks_js
+from .HTMLResources import notFoundPage_html
 import Helpviewer.HelpWindow
 
-from Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
+from .Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
 
-from OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
+from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
 
 ##########################################################################################
 
@@ -108,9 +108,9 @@ class JavaScriptEricObject(QObject):
         @param searchStr search term (string)
         @return search URL (string)
         """
-        return unicode(
+        return bytes(
             HelpWebSearchWidget.openSearchManager().currentEngine()\
-            .searchUrl(searchStr).toEncoded())
+            .searchUrl(searchStr).toEncoded()).decode()
 
 ##########################################################################################
 
@@ -501,8 +501,8 @@ class HelpBrowser(QWebView):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            degrees = evt.delta() / 8
-            steps = degrees / 15
+            degrees = evt.delta() // 8
+            steps = degrees // 15
             self.__currentZoom += steps * 10
             self.__applyZoom()
             evt.accept()
@@ -637,7 +637,7 @@ class HelpBrowser(QWebView):
             return
         
         dlg = AddBookmarkDialog()
-        dlg.setUrl(unicode(url.toEncoded()))
+        dlg.setUrl(bytes(url.toEncoded()).decode())
         dlg.exec_()
     
     def __downloadLink(self):
@@ -708,7 +708,7 @@ class HelpBrowser(QWebView):
         Private slot to bookmark the current link.
         """
         dlg = AddBookmarkDialog()
-        dlg.setUrl(unicode(self.url().toEncoded()))
+        dlg.setUrl(bytes(self.url().toEncoded()).decode())
         dlg.setTitle(self.title())
         dlg.exec_()
     
@@ -851,7 +851,7 @@ class HelpBrowser(QWebView):
                 return
             header = reply.header(QNetworkRequest.ContentLengthHeader)
             size = header
-            if ok and size == 0:
+            if size == 0:
                 return
             
             if requestFilename is None:
@@ -866,7 +866,7 @@ class HelpBrowser(QWebView):
                 return
             
             html = notFoundPage_html
-            urlString = unicode(replyUrl.toEncoded())
+            urlString = bytes(replyUrl.toEncoded()).decode()
             title = self.trUtf8("Error loading page: {0}").format(urlString)
             pixmap = qApp.style()\
                      .standardIcon(QStyle.SP_MessageBoxWarning, None, self)\
@@ -875,7 +875,7 @@ class HelpBrowser(QWebView):
             imageBuffer.open(QIODevice.ReadWrite)
             if pixmap.save(imageBuffer, "PNG"):
                 html.replace("IMAGE_BINARY_DATA_HERE", 
-                             unicode(imageBuffer.buffer().toBase64()))
+                             str(imageBuffer.buffer().toBase64()))
             html = html.format(
                 title, 
                 reply.errorString(), 

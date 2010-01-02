@@ -13,10 +13,10 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
-from OpenSearchDefaultEngines import OpenSearchDefaultEngines
-from OpenSearchEngine import OpenSearchEngine
-from OpenSearchReader import OpenSearchReader
-from OpenSearchWriter import OpenSearchWriter
+from .OpenSearchDefaultEngines import OpenSearchDefaultEngines
+from .OpenSearchEngine import OpenSearchEngine
+from .OpenSearchReader import OpenSearchReader
+from .OpenSearchWriter import OpenSearchWriter
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -232,7 +232,7 @@ class OpenSearchManager(QObject):
         QFile.remove(file_)
         
         if name == self.__current:
-            self.setCurrentEngineName(self.__engines.keys()[0])
+            self.setCurrentEngineName(list(self.__engines.keys())[0])
         
         self.emit(SIGNAL("changed()"))
     
@@ -271,7 +271,7 @@ class OpenSearchManager(QObject):
         
         writer = OpenSearchWriter()
         
-        for engine in self.__engines.values():
+        for engine in list(self.__engines.values()):
             name = self.generateEngineFileName(engine.name())
             fileName = dir.filePath(name)
             
@@ -333,7 +333,7 @@ class OpenSearchManager(QObject):
         
         if self.__current not in self.__engines and \
            len(self.__engines) > 0:
-            self.__current = self.__engines.keys()[0]
+            self.__current = list(self.__engines.keys())[0]
         
         self.__loading = False
         self.emit(SIGNAL("currentEngineChanged()"))

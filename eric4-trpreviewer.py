@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2004 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -14,10 +14,6 @@ of the integrated tr previewer.
 
 import sys
 import os
-
-import sip
-sip.setapi("QString", 2)
-sip.setapi("QVariant", 2)
 
 for arg in sys.argv:
     if arg.startswith("--config="):
@@ -68,7 +64,7 @@ def main():
             client.processArgs(sys.argv[1:])
         sys.exit(0)
     elif res < 0:
-        print "eric4-trpreviewer: %s" % client.errstr()
+        print("eric4-trpreviewer: %s" % client.errstr())
         sys.exit(res)
     else:
         res = Startup.simpleAppStartup(sys.argv,

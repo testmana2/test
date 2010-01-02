@@ -14,10 +14,10 @@ from E4Gui.E4ModelToolBar import E4ModelToolBar
 
 import Helpviewer.HelpWindow
 
-from BookmarksModel import BookmarksModel
-from BookmarkNode import BookmarkNode
-from BookmarksMenu import BookmarksMenu
-from AddBookmarkDialog import AddBookmarkDialog
+from .BookmarksModel import BookmarksModel
+from .BookmarkNode import BookmarkNode
+from .BookmarksMenu import BookmarksMenu
+from .AddBookmarkDialog import AddBookmarkDialog
 
 import UI.PixmapCache
 

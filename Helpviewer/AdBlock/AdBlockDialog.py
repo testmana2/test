@@ -14,10 +14,10 @@ from E4Gui.E4TreeSortFilterProxyModel import E4TreeSortFilterProxyModel
 
 import Helpviewer.HelpWindow
 
-from Ui_AdBlockDialog import Ui_AdBlockDialog
+from .Ui_AdBlockDialog import Ui_AdBlockDialog
 
-from AdBlockModel import AdBlockModel
-from AdBlockRule import AdBlockRule
+from .AdBlockModel import AdBlockModel
+from .AdBlockRule import AdBlockRule
 
 import UI.PixmapCache
 

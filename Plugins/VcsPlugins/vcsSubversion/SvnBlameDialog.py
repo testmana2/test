@@ -12,7 +12,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnBlameDialog import Ui_SvnBlameDialog
+from .Ui_SvnBlameDialog import Ui_SvnBlameDialog
 
 import Preferences
 import Utilities
@@ -177,7 +177,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = unicode(self.process.readLine(), self.__ioEncoding, 'replace').strip()
+            s = str(self.process.readLine(), self.__ioEncoding, 'replace').strip()
             rev, s = s.split(None, 1)
             try:
                 author, text = s.split(' ', 1)
@@ -195,7 +195,9 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = unicode(self.process.readAllStandardError())
+            s = str(self.process.readAllStandardError(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
         

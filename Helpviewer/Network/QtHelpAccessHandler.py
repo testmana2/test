@@ -7,9 +7,9 @@
 Module implementing a scheme access handler for QtHelp.
 """
 
-from SchemeAccessHandler import SchemeAccessHandler
+from .SchemeAccessHandler import SchemeAccessHandler
 
-from NetworkReply import NetworkReply
+from .NetworkReply import NetworkReply
 
 class QtHelpAccessHandler(SchemeAccessHandler):
     """

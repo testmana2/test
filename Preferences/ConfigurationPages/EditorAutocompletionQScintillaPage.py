@@ -9,8 +9,8 @@ Module implementing the QScintilla Autocompletion configuration page.
 
 from PyQt4.Qsci import QsciScintilla
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorAutocompletionQScintillaPage import Ui_EditorAutocompletionQScintillaPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorAutocompletionQScintillaPage import Ui_EditorAutocompletionQScintillaPage
 
 import Preferences
 

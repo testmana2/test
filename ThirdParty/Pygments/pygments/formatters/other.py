@@ -103,7 +103,7 @@ class RawTokenFormatter(Formatter):
             flush = outfile.flush
 
         lasttype = None
-        lastval = u''
+        lastval = ''
         if self.error_color:
             for ttype, value in tokensource:
                 line = "%s\t%r\n" % (ttype, value)

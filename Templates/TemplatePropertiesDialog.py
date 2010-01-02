@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 import QScintilla.Lexers
 
-from Ui_TemplatePropertiesDialog import Ui_TemplatePropertiesDialog
+from .Ui_TemplatePropertiesDialog import Ui_TemplatePropertiesDialog
 
 
 class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):

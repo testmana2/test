@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from AddProjectDialog import AddProjectDialog
+from .AddProjectDialog import AddProjectDialog
 
 import UI.PixmapCache
 

@@ -133,11 +133,11 @@ class E4GraphicsView(QGraphicsView):
         @param border border width to include in the calculation (integer)
         @return the minimum rectangle (QRectF)
         """
-        startx = sys.maxint
-        starty = sys.maxint
+        startx = sys.maxsize
+        starty = sys.maxsize
         endx = 0
         endy = 0
-        items = self.filteredItems(self.scene().items())
+        items = self.filteredItems(list(self.scene().items()))
         for itm in items:
             rect = itm.sceneBoundingRect()
             itmEndX = rect.x() + rect.width()
@@ -169,7 +169,7 @@ class E4GraphicsView(QGraphicsView):
         """
         endx = 0
         endy = 0
-        items = self.filteredItems(self.scene().items())
+        items = self.filteredItems(list(self.scene().items()))
         for itm in items:
             rect = itm.sceneBoundingRect()
             itmEndX = rect.x() + rect.width()

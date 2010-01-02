@@ -14,8 +14,8 @@ from E4Gui.E4ModelMenu import E4ModelMenu
 
 import Helpviewer.HelpWindow
 
-from BookmarksModel import BookmarksModel
-from BookmarkNode import BookmarkNode
+from .BookmarksModel import BookmarksModel
+from .BookmarkNode import BookmarkNode
 
 class BookmarksMenu(E4ModelMenu):
     """

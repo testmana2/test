@@ -10,9 +10,9 @@ Module implementing the icon editor grid.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-import cursors.cursors_rc
+from .cursors import cursors_rc
 
-from IconSizeDialog import IconSizeDialog
+from .IconSizeDialog import IconSizeDialog
 
 class IconEditCommand(QUndoCommand):
     """

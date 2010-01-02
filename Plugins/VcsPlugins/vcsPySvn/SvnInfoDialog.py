@@ -14,8 +14,8 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from SvnUtilities import formatTime
-from SvnDialogMixin import SvnDialogMixin
+from .SvnUtilities import formatTime
+from .SvnDialogMixin import SvnDialogMixin
 from VCS.Ui_RepositoryInfoDialog import Ui_VcsRepositoryInfoDialog
 
 class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
@@ -159,7 +159,7 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
                             .format(wcInfo['checksum'])
             infoStr += "</table>"
             self.infoBrowser.setHtml(infoStr)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             self.__showError(e.args[0])
         locker.unlock()
         os.chdir(cwd)

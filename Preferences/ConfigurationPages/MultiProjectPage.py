@@ -7,8 +7,8 @@
 Module implementing the Multi Project configuration page.
 """
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_MultiProjectPage import Ui_MultiProjectPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_MultiProjectPage import Ui_MultiProjectPage
 
 import Preferences
 

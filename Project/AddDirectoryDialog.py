@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4DirCompleter
 
-from Ui_AddDirectoryDialog import Ui_AddDirectoryDialog
+from .Ui_AddDirectoryDialog import Ui_AddDirectoryDialog
 
 import Utilities
 

@@ -10,7 +10,7 @@ Module implementing a dialog to enter the data for a switch operation.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnSwitchDialog import Ui_SvnSwitchDialog
+from .Ui_SvnSwitchDialog import Ui_SvnSwitchDialog
 
 class SvnSwitchDialog(QDialog, Ui_SvnSwitchDialog):
     """

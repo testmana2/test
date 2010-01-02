@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2006 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -12,10 +12,6 @@ This is the main Python script to configure the eric4 IDE from the outside.
 
 import sys
 import os
-
-import sip
-sip.setapi("QString", 2)
-sip.setapi("QVariant", 2)
 
 for arg in sys.argv:
     if arg.startswith("--config="):

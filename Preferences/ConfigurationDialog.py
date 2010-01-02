@@ -19,7 +19,7 @@ import QScintilla.Lexers
 
 import Preferences
 
-from PreferencesLexer import PreferencesLexer, PreferencesLexerLanguageError
+from .PreferencesLexer import PreferencesLexer, PreferencesLexerLanguageError
 import UI.PixmapCache
 
 from eric4config import getConfig
@@ -437,7 +437,7 @@ class ConfigurationWidget(QWidget):
         @return reference to the initialized page
         """
         page = None
-        if type(pageData[2] ) is types.FunctionType:
+        if isinstance(pageData[2], types.FunctionType):
             page = pageData[2](self)
         else:
             mod = self.__importConfigurationPage(pageData[2])
@@ -521,7 +521,7 @@ class ConfigurationWidget(QWidget):
         """
         Public method called to store the selected values into the preferences storage.
         """
-        for key, pageData in self.configItems.items():
+        for key, pageData in list(self.configItems.items()):
             if pageData[-1]:
                 pageData[-1].save()
                 # page was loaded (and possibly modified)

@@ -14,7 +14,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from Ui_EditBreakpointDialog import Ui_EditBreakpointDialog
+from .Ui_EditBreakpointDialog import Ui_EditBreakpointDialog
 
 import Utilities
 

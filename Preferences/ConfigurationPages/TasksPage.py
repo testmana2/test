@@ -10,8 +10,8 @@ Module implementing the Tasks configuration page.
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QPixmap, QIcon
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_TasksPage import Ui_TasksPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_TasksPage import Ui_TasksPage
 
 import Preferences
 
@@ -53,7 +53,7 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         Preferences.setTasks("TasksMarkers", self.tasksMarkerEdit.text())
         Preferences.setTasks("TasksMarkersBugfix",
             self.tasksMarkerBugfixEdit.text())
-        for key in self.tasksColours.keys():
+        for key in list(self.tasksColours.keys()):
             Preferences.setTasks(key, self.tasksColours[key])
         
     @pyqtSlot()

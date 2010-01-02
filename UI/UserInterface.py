@@ -9,7 +9,7 @@ Module implementing the main user interface.
 
 import os
 import sys
-import cStringIO
+import io
 import logging
 
 from PyQt4.QtCore import *
@@ -57,16 +57,16 @@ from Tasks.TaskViewer import TaskViewer
 
 from Templates.TemplateViewer import TemplateViewer
 
-from Browser import Browser
-from Info import *
-import Config
-from EmailDialog import EmailDialog
-from DiffDialog import DiffDialog
-from CompareDialog import CompareDialog
-from LogView import LogViewer
-from FindFileDialog import FindFileDialog
-from FindFileNameDialog import FindFileNameDialog
-from AuthenticationDialog import AuthenticationDialog
+from .Browser import Browser
+from .Info import *
+from . import Config
+from .EmailDialog import EmailDialog
+from .DiffDialog import DiffDialog
+from .CompareDialog import CompareDialog
+from .LogView import LogViewer
+from .FindFileDialog import FindFileDialog
+from .FindFileNameDialog import FindFileNameDialog
+from .AuthenticationDialog import AuthenticationDialog
 
 from E4Gui.E4SingleApplication import E4SingleApplicationServer
 from E4Gui.E4Action import E4Action, createActionGroup
@@ -154,7 +154,7 @@ class Redirector(QObject):
         
         @param s data to be written (it must support the str-method)
         """
-        self.buffer += unicode(s)
+        self.buffer += str(s)
         self.__nWrite(self.__bufferedWrite())
 
 class UserInterface(QMainWindow):
@@ -611,7 +611,7 @@ class UserInterface(QMainWindow):
         # step 1: set the style
         style = None
         styleName = Preferences.getUI("Style")
-        if styleName != "System" and styleName in QStyleFactory.keys():
+        if styleName != "System" and styleName in list(QStyleFactory.keys()):
             style = QStyleFactory.create(styleName)
         if style is None:
             style = QStyleFactory.create(self.defaultStyleName)
@@ -622,15 +622,15 @@ class UserInterface(QMainWindow):
         styleSheetFile = Preferences.getUI("StyleSheet")
         if styleSheetFile:
             try:
-                f = open(styleSheetFile, "rb")
+                f = open(styleSheetFile, "r")
                 styleSheet = f.read()
                 f.close()
-            except IOError, msg:
+            except IOError as msg:
                 QMessageBox.warning(None,
                     self.trUtf8("Loading Style Sheet"),
                     self.trUtf8("""<p>The Qt Style Sheet file <b>{0}</b> could"""
                                 """ not be read.<br>Reason: {1}</p>""")
-                        .format(styleSheetFile, unicode(msg)),
+                        .format(styleSheetFile, str(msg)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Ok))
                 return
@@ -3120,7 +3120,7 @@ class UserInterface(QMainWindow):
         self.__menus["toolbars"].clear()
         
         tbList = []
-        for name, (text, tb) in self.__toolbars.items():
+        for name, (text, tb) in list(self.__toolbars.items()):
             tbList.append((text, tb, name))
         
         tbList.sort()
@@ -3142,12 +3142,12 @@ class UserInterface(QMainWindow):
         @param act reference to the action that was triggered (QAction)
         """
         if act == self.__toolbarsShowAllAct:
-            for text, tb in self.__toolbars.values():
+            for text, tb in list(self.__toolbars.values()):
                 tb.show()
             if self.__menus["toolbars"].isTearOffMenuVisible():
                 self.__showToolbarsMenu()
         elif act == self.__toolbarsHideAllAct:
-            for text, tb in self.__toolbars.values():
+            for text, tb in list(self.__toolbars.values()):
                 tb.hide()
             if self.__menus["toolbars"].isTearOffMenuVisible():
                 self.__showToolbarsMenu()
@@ -3171,28 +3171,28 @@ class UserInterface(QMainWindow):
             # step 1: save the window geometries of the active profile
             if self.layout == "DockWindows":
                 state = self.saveState()
-                self.profiles[self.currentProfile][1] = str(state)
+                self.profiles[self.currentProfile][1] = bytes(state)
             elif self.layout in ["Toolboxes", "Sidebars"]:
                 state = self.saveState()
-                self.profiles[self.currentProfile][4] = str(state)
+                self.profiles[self.currentProfile][4] = bytes(state)
                 if self.layout == "Sidebars":
                     state = self.horizontalSplitter.saveState()
-                    self.profiles[self.currentProfile][6][0] = str(state)
+                    self.profiles[self.currentProfile][6][0] = bytes(state)
                     state = self.verticalSplitter.saveState()
-                    self.profiles[self.currentProfile][6][1] = str(state)
+                    self.profiles[self.currentProfile][6][1] = bytes(state)
                     state = self.leftSidebar.saveState()
-                    self.profiles[self.currentProfile][6][2] = str(state)
+                    self.profiles[self.currentProfile][6][2] = bytes(state)
                     state = self.bottomSidebar.saveState()
-                    self.profiles[self.currentProfile][6][3] = str(state)
+                    self.profiles[self.currentProfile][6][3] = bytes(state)
             elif self.layout == "FloatingWindows":
                 state = self.saveState()
-                self.profiles[self.currentProfile][3] = str(state)
-                for window, i in zip(self.windows, range(len(self.windows))):
+                self.profiles[self.currentProfile][3] = bytes(state)
+                for window, i in zip(self.windows, list(range(len(self.windows)))):
                     if window is not None:
                         self.profiles[self.currentProfile][2][i] = \
-                            str(window.saveGeometry())
+                            bytes(window.saveGeometry())
             # step 2: save the visibility of the windows of the active profile
-            for window, i in zip(self.windows, range(len(self.windows))):
+            for window, i in zip(self.windows, list(range(len(self.windows)))):
                 if window is not None:
                     self.profiles[self.currentProfile][0][i] = window.isVisible()
             Preferences.setUI("ViewProfiles", self.profiles)
@@ -3237,7 +3237,7 @@ class UserInterface(QMainWindow):
                 state = QByteArray(self.profiles[name][3])
                 if not state.isEmpty():
                     self.restoreState(state)
-                for window, i in zip(self.windows, range(len(self.windows))):
+                for window, i in zip(self.windows, list(range(len(self.windows)))):
                     if window is not None:
                         geo = QByteArray(self.profiles[name][2][i])
                         if not geo.isEmpty():
@@ -3775,7 +3775,7 @@ class UserInterface(QMainWindow):
         if fn is not None and version == 0:
             # determine version from file, if not specified
             try:
-                f = open(fn, "rb")
+                f = open(fn, "r")
                 found = False
                 while not found:
                     uiLine = f.readline()
@@ -4234,15 +4234,15 @@ class UserInterface(QMainWindow):
                 # not connected to an editor or wrong mode
                 while toolProc.canReadLine():
                     s = "%s - " % program
-                    output = unicode(toolProc.readLine(), ioEncoding, 'replace')
+                    output = str(toolProc.readLine(), ioEncoding, 'replace')
                     s.append(output)
                     self.appendToStdout(s)
             else:
                 if toolProcData[1] == "insert":
-                    text = unicode(toolProc.readAll(), ioEncoding, 'replace')
+                    text = str(toolProc.readAll(), ioEncoding, 'replace')
                     toolProcData[0].insert(text)
                 elif toolProcData[1] == "replaceSelection":
-                    text = unicode(toolProc.readAll(), ioEncoding, 'replace')
+                    text = str(toolProc.readAll(), ioEncoding, 'replace')
                     toolProcData[2].append(text)
         
     def __processToolStderr(self):
@@ -4257,7 +4257,7 @@ class UserInterface(QMainWindow):
             
             while toolProc.canReadLine():
                 s = "%s - " % program
-                error = unicode(toolProc.readLine(), ioEncoding, 'replace')
+                error = str(toolProc.readLine(), ioEncoding, 'replace')
                 s.append(error)
                 self.appendToStderr(s)
         
@@ -4763,7 +4763,7 @@ class UserInterface(QMainWindow):
         """
         self.wizardsMenuAct.setEnabled(len(self.__menus["wizards"].actions()) > 0)
         
-        if fn and unicode(fn) != "None":
+        if fn and str(fn) != "None":
             dbs = e4App().getObject("DebugServer")
             for language in dbs.getSupportedLanguages():
                 exts = dbs.getExtensions(language)
@@ -4812,7 +4812,7 @@ class UserInterface(QMainWindow):
         """
         try:
             fn = os.path.join(Utilities.getConfigDir(), "eric4tasks.e4t")
-            f = open(fn, "wb")
+            f = open(fn, "w")
             
             TasksWriter(f, False).writeXML()
             
@@ -4832,7 +4832,7 @@ class UserInterface(QMainWindow):
             fn = os.path.join(Utilities.getConfigDir(), "eric4tasks.e4t")
             if not os.path.exists(fn):
                 return
-            f = open(fn, "rb")
+            f = open(fn, "r")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -4855,13 +4855,13 @@ class UserInterface(QMainWindow):
             parser.setErrorHandler(eh)
             
             try:
-                f = open(fn, "rb")
+                f = open(fn, "r")
                 try:
                     try:
                         parser.parse(f)
                     except UnicodeEncodeError:
                         f.seek(0)
-                        buf = cStringIO.StringIO(f.read())
+                        buf = io.StringIO(f.read())
                         parser.parse(buf)
                 finally:
                     f.close()
@@ -4887,7 +4887,7 @@ class UserInterface(QMainWindow):
         """
         try:
             fn = os.path.join(Utilities.getConfigDir(), "eric4session.e4s")
-            f = open(fn, "wb")
+            f = open(fn, "w")
             
             SessionWriter(f, None).writeXML()
             
@@ -4911,7 +4911,7 @@ class UserInterface(QMainWindow):
                     self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
                         .format(fn))
                 return
-            f = open(fn, "rb")
+            f = open(fn, "r")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -4934,13 +4934,13 @@ class UserInterface(QMainWindow):
             parser.setErrorHandler(eh)
             
             try:
-                f = open(fn, "rb")
+                f = open(fn, "r")
                 try:
                     try:
                         parser.parse(f)
                     except UnicodeEncodeError:
                         f.seek(0)
-                        buf = cStringIO.StringIO(f.read())
+                        buf = io.StringIO(f.read())
                         parser.parse(buf)
                 finally:
                     f.close()
@@ -5154,7 +5154,7 @@ class UserInterface(QMainWindow):
                 del windows["Shell"]
             if self.embeddedFileBrowser:
                 del windows["FileBrowser"]
-            for window, i in zip(self.windows, range(len(self.windows))):
+            for window, i in zip(self.windows, list(range(len(self.windows)))):
                 if window is not None:
                     self.profiles[self.currentProfile][2][i] = \
                         str(window.saveGeometry())
@@ -5295,7 +5295,7 @@ class UserInterface(QMainWindow):
             self.__versionCheckProgress.reset()
             self.__versionCheckProgress = None
         ioEncoding = Preferences.getSystem("IOEncoding")
-        versions = unicode(self.http.readAll(), ioEncoding, 'replace').splitlines()
+        versions = str(self.http.readAll(), ioEncoding, 'replace').splitlines()
         self.__updateVersionsUrls(versions)
         if self.showAvailableVersions:
             self.__showAvailableVersionInfos(versions)

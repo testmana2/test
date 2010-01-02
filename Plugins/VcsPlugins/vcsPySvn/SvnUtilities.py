@@ -21,7 +21,7 @@ def formatTime(seconds):
     @param seconds time in seconds since epoch to be formatted (float or long)
     @return formatted time string (string)
     """
-    return QDateTime.fromTime_t(long(seconds))\
+    return QDateTime.fromTime_t(int(seconds))\
                     .toTimeSpec(Qt.LocalTime)\
                     .toString("yyyy-MM-dd hh:mm:ss")
 
@@ -32,7 +32,7 @@ def dateFromTime_t(seconds):
     @param seconds time in seconds since epoch to be formatted (float or long)
     @return date (QDate)
     """
-    return QDateTime.fromTime_t(long(seconds)).toTimeSpec(Qt.LocalTime).date()
+    return QDateTime.fromTime_t(int(seconds)).toTimeSpec(Qt.LocalTime).date()
 
 def getServersPath():
     """

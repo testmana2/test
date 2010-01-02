@@ -7,7 +7,7 @@
 Module implementing functions dealing with keyboard shortcuts.
 """
 
-import cStringIO
+import io
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -201,9 +201,9 @@ def exportShortcuts(fn):
                         """Compressed keyboard shortcut files"""
                         """ not supported. The compression library is missing."""))
                 return 0
-            f = gzip.open(fn, "wb")
+            f = gzip.open(fn, "w")
         else:
-            f = open(fn, "wb")
+            f = open(fn, "w")
         
         ShortcutsWriter(f).writeXML()
         
@@ -230,9 +230,9 @@ def importShortcuts(fn):
                         """Compressed keyboard shortcut files"""
                         """ not supported. The compression library is missing."""))
                 return False
-            f = gzip.open(fn, "rb")
+            f = gzip.open(fn, "r")
         else:
-            f = open(fn, "rb")
+            f = open(fn, "r")
         try:
             line = f.readline()
             dtdLine = f.readline()
@@ -271,15 +271,15 @@ def importShortcuts(fn):
                         """Compressed keyboard shortcut files"""
                         """ not supported. The compression library is missing."""))
                 return False
-            f = gzip.open(fn, "rb")
+            f = gzip.open(fn, "r")
         else:
-            f = open(fn, "rb")
+            f = open(fn, "r")
         try:
             try:
                 parser.parse(f)
             except UnicodeEncodeError:
                 f.seek(0)
-                buf = cStringIO.StringIO(f.read())
+                buf = io.StringIO(f.read())
                 parser.parse(buf)
         finally:
             f.close()
@@ -334,60 +334,60 @@ def setActions(shortcuts):
     @param shortcuts dictionary containing the accelerator information 
         read from a XML file
     """
-    if shortcuts.has_key("Project"):
+    if "Project" in shortcuts:
         __setAction(e4App().getObject("Project").getActions(), 
             shortcuts["Project"])
     
-    if shortcuts.has_key("General"):
+    if "General" in shortcuts:
         __setAction(e4App().getObject("UserInterface").getActions('ui'), 
             shortcuts["General"])
     
-    if shortcuts.has_key("Wizards"):
+    if "Wizards" in shortcuts:
         __setAction(e4App().getObject("UserInterface").getActions('wizards'), 
             shortcuts["Wizards"])
     
-    if shortcuts.has_key("Debug"):
+    if "Debug" in shortcuts:
         __setAction(e4App().getObject("DebugUI").getActions(), 
             shortcuts["Debug"])
     
-    if shortcuts.has_key("Edit"):
+    if "Edit" in shortcuts:
         __setAction(e4App().getObject("ViewManager").getActions('edit'), 
             shortcuts["Edit"])
     
-    if shortcuts.has_key("File"):
+    if "File" in shortcuts:
         __setAction(e4App().getObject("ViewManager").getActions('file'), 
             shortcuts["File"])
     
-    if shortcuts.has_key("Search"):
+    if "Search" in shortcuts:
         __setAction(e4App().getObject("ViewManager").getActions('search'), 
             shortcuts["Search"])
     
-    if shortcuts.has_key("View"):
+    if "View" in shortcuts:
         __setAction(e4App().getObject("ViewManager").getActions('view'), 
             shortcuts["View"])
     
-    if shortcuts.has_key("Macro"):
+    if "Macro" in shortcuts:
         __setAction(e4App().getObject("ViewManager").getActions('macro'), 
             shortcuts["Macro"])
     
-    if shortcuts.has_key("Bookmarks"):
+    if "Bookmarks" in shortcuts:
         __setAction(e4App().getObject("ViewManager").getActions('bookmark'), 
             shortcuts["Bookmarks"])
     
-    if shortcuts.has_key("Spelling"):
+    if "Spelling" in shortcuts:
         __setAction(e4App().getObject("ViewManager").getActions('spelling'), 
             shortcuts["Spelling"])
     
-    if shortcuts.has_key("Window"):
+    if "Window" in shortcuts:
         actions = e4App().getObject("ViewManager").getActions('window')
         if actions:
             __setAction(actions, shortcuts["Window"])
     
     for category, ref in e4App().getPluginObjects():
-        if shortcuts.has_key(category) and hasattr(ref, "getActions"):
+        if category in shortcuts and hasattr(ref, "getActions"):
             actions = ref.getActions()
             __setAction(actions, shortcuts[category])
     
-    if shortcuts.has_key("HelpViewer"):
+    if "HelpViewer" in shortcuts:
         __setAction(e4App().getObject("DummyHelpViewer").getActions(), 
             shortcuts["HelpViewer"])

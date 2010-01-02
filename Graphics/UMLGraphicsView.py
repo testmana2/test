@@ -14,9 +14,9 @@ from PyQt4.QtGui import *
 
 from E4Graphics.E4GraphicsView import E4GraphicsView
 
-from UMLItem import UMLItem
-from UMLSceneSizeDialog import UMLSceneSizeDialog
-from ZoomDialog import ZoomDialog
+from .UMLItem import UMLItem
+from .UMLSceneSizeDialog import UMLSceneSizeDialog
+from .ZoomDialog import ZoomDialog
 
 import UI.Config
 import UI.PixmapCache
@@ -356,7 +356,7 @@ class UMLGraphicsView(E4GraphicsView):
         Private method to handle the re-layout context menu entry.
         """
         scene = self.scene()
-        for itm in scene.items()[:]:
+        for itm in list(scene.items())[:]:
             if itm.scene() == scene:
                 scene.removeItem(itm)
         self.emit(SIGNAL("relayout()"))
@@ -473,16 +473,16 @@ class UMLGraphicsView(E4GraphicsView):
                 xOffset = (rect.x() + rect.width()) - \
                           (itemrect.x() + itemrect.width())
             elif alignment == Qt.AlignHCenter:
-                xOffset = (rect.x() + rect.width() / 2) - \
-                          (itemrect.x() + itemrect.width() / 2)
+                xOffset = (rect.x() + rect.width() // 2) - \
+                          (itemrect.x() + itemrect.width() // 2)
             elif alignment == Qt.AlignTop:
                 yOffset = rect.y() - itemrect.y()
             elif alignment == Qt.AlignBottom:
                 yOffset = (rect.y() + rect.height()) - \
                           (itemrect.y() + itemrect.height())
             elif alignment == Qt.AlignVCenter:
-                yOffset = (rect.y() + rect.height() / 2) - \
-                          (itemrect.y() + itemrect.height() / 2)
+                yOffset = (rect.y() + rect.height() // 2) - \
+                          (itemrect.y() + itemrect.height() // 2)
             item.moveBy(xOffset, yOffset)
         
         self.scene().update()

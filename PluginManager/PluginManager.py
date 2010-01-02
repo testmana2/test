@@ -14,7 +14,7 @@ import imp
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QPixmap, QMessageBox
 
-from PluginExceptions import *
+from .PluginExceptions import *
 
 import UI.PixmapCache
 
@@ -108,8 +108,8 @@ class PluginManager(QObject):
         """
         Public method to finalize the setup of the plugin manager.
         """
-        for module in self.__onDemandInactiveModules.values() + \
-                      self.__onDemandActiveModules.values():
+        for module in list(self.__onDemandInactiveModules.values()) + \
+                      list(self.__onDemandActiveModules.values()):
             if hasattr(module, "moduleSetup"):
                 module.moduleSetup()
         
@@ -141,7 +141,7 @@ class PluginManager(QObject):
             fname = os.path.join(path, "__init__.py")
             if not os.path.exists(fname):
                 try:
-                    f = open(fname, "wb")
+                    f = open(fname, "w")
                     f.close()
                 except IOError:
                     return (False, 
@@ -152,9 +152,9 @@ class PluginManager(QObject):
             fname = os.path.join(self.pluginDirs["user"], "__init__.py")
             if not os.path.exists(fname):
                 if not os.path.exists(self.pluginDirs["user"]):
-                    os.mkdir(self.pluginDirs["user"],  0755)
+                    os.mkdir(self.pluginDirs["user"],  0o755)
                 try:
-                    f = open(fname, "wb")
+                    f = open(fname, "w")
                     f.close()
                 except IOError:
                     del self.pluginDirs["user"]
@@ -162,7 +162,7 @@ class PluginManager(QObject):
             if not os.path.exists(self.pluginDirs["global"]) and \
                os.access(Utilities.getPythonModulesDirectory(), os.W_OK):
                 # create the global plugins directory
-                os.mkdir(self.pluginDirs["global"], 0755)
+                os.mkdir(self.pluginDirs["global"], 0o755)
                 fname = os.path.join(self.pluginDirs["global"], "__init__.py")
                 f = open()
                 f.write('# -*- coding: utf-8 -*-' + os.linesep)
@@ -313,14 +313,14 @@ class PluginManager(QObject):
             if reload_:
                 reload(module)
         except PluginLoadError:
-            print "Error loading plugin module:", name
-        except StandardError, err:
+            print("Error loading plugin module:", name)
+        except Exception as err:
             module = imp.new_module(name)
             module.error = \
-                self.trUtf8("Module failed to load. Error: {0}").format(unicode(err))
+                self.trUtf8("Module failed to load. Error: {0}").format(str(err))
             self.__failedModules[name] = module
-            print "Error loading plugin module:",  name
-            print unicode(err)
+            print("Error loading plugin module:",  name)
+            print(str(err))
     
     def unloadPlugin(self, name, directory):
         """
@@ -373,7 +373,7 @@ class PluginManager(QObject):
         found = False
         if not package:
             package = "__None__"
-        for moduleName in sys.modules.keys()[:]:
+        for moduleName in list(sys.modules.keys())[:]:
             if moduleName == pluginName or moduleName.split(".")[0] in packages:
                 found = True
                 del sys.modules[moduleName]
@@ -469,8 +469,8 @@ class PluginManager(QObject):
                 module.error = self.trUtf8("Incompatible plugin activation method.")
                 obj = None
                 ok = True
-            except StandardError, err:
-                module.error = unicode(err)
+            except Exception as err:
+                module.error = str(err)
                 obj = None
                 ok = False
             if not ok:
@@ -528,11 +528,11 @@ class PluginManager(QObject):
                 raise PluginClassFormatError(module.eric4PluginModuleName, 
                     className, "deactivate")
             return True
-        except PluginModuleFormatError, e:
-            print repr(e)
+        except PluginModuleFormatError as e:
+            print(repr(e))
             return False
-        except PluginClassFormatError, e:
-            print repr(e)
+        except PluginClassFormatError as e:
+            print(repr(e))
             return False
     
     def deactivatePlugin(self, name, onDemand = False):
@@ -596,13 +596,13 @@ class PluginManager(QObject):
             already (boolean)
         @return reference to the initialized plugin object
         """
-        for name, module in self.__onDemandInactiveModules.items():
+        for name, module in list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == type_ and \
                getattr(module, "pluginTypename") == typename:
                 return self.activatePlugin(name, onDemand = True)
         
         if maybeActive:
-            for name, module in self.__onDemandActiveModules.items():
+            for name, module in list(self.__onDemandActiveModules.items()):
                 if getattr(module, "pluginType") == type_ and \
                    getattr(module, "pluginTypename") == typename:
                     self.deactivatePlugin(name, onDemand = True)
@@ -620,23 +620,23 @@ class PluginManager(QObject):
         """
         infos = []
         
-        for name in self.__activeModules.keys():
+        for name in list(self.__activeModules.keys()):
             pname,  shortDesc, error, version = \
                 self.__getShortInfo(self.__activeModules[name])
             infos.append((name,  pname, version, True, True, shortDesc, error))
-        for name in self.__inactiveModules.keys():
+        for name in list(self.__inactiveModules.keys()):
             pname,  shortDesc, error, version = \
                 self.__getShortInfo(self.__inactiveModules[name])
             infos.append((name,  pname, version, True, False, shortDesc, error))
-        for name in self.__onDemandActiveModules.keys():
+        for name in list(self.__onDemandActiveModules.keys()):
             pname,  shortDesc, error, version = \
                 self.__getShortInfo(self.__onDemandActiveModules[name])
             infos.append((name,  pname, version, False, True, shortDesc, error))
-        for name in self.__onDemandInactiveModules.keys():
+        for name in list(self.__onDemandInactiveModules.keys()):
             pname,  shortDesc, error, version = \
                 self.__getShortInfo(self.__onDemandInactiveModules[name])
             infos.append((name,  pname, version, False, False, shortDesc, error))
-        for name in self.__failedModules.keys():
+        for name in list(self.__failedModules.keys()):
             pname,  shortDesc, error, version = \
                 self.__getShortInfo(self.__failedModules[name])
             infos.append((name,  pname, version, False, False, shortDesc, error))
@@ -706,7 +706,7 @@ class PluginManager(QObject):
         Public method called to perform actions upon shutdown of the IDE.
         """
         names = []
-        for name in self.__inactiveModules.keys():
+        for name in list(self.__inactiveModules.keys()):
             names.append(name)
         Preferences.Prefs.settings.setValue(self.__inactivePluginsKey, names)
         
@@ -723,7 +723,7 @@ class PluginManager(QObject):
         pluginDict = {}
         
         for name, module in \
-            self.__onDemandActiveModules.items() + self.__onDemandInactiveModules.items():
+            list(self.__onDemandActiveModules.items()) + list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == type_ and \
                getattr(module, "error", "") == "":
                 plugin_name = getattr(module, "pluginTypename")
@@ -748,7 +748,7 @@ class PluginManager(QObject):
         @return preview pixmap (QPixmap)
         """
         for modname, module in \
-            self.__onDemandActiveModules.items() + self.__onDemandInactiveModules.items():
+            list(self.__onDemandActiveModules.items()) + list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == type_ and \
                getattr(module, "pluginTypename") == name:
                 if hasattr(module, "previewPix"):
@@ -767,8 +767,8 @@ class PluginManager(QObject):
         """
         apis = []
         
-        for module in self.__activeModules.values() + \
-                      self.__onDemandActiveModules.values():
+        for module in list(self.__activeModules.values()) + \
+                      list(self.__onDemandActiveModules.values()):
             if hasattr(module, "apiFiles"):
                 apis.extend(module.apiFiles(language))
         
@@ -807,12 +807,12 @@ class PluginManager(QObject):
         """
         infos = []
         
-        for module in self.__activeModules.values() + \
-                      self.__inactiveModules.values():
+        for module in list(self.__activeModules.values()) + \
+                      list(self.__inactiveModules.values()):
             if hasattr(module, "exeDisplayData"):
                 infos.append(module.exeDisplayData())
-        for module in self.__onDemandActiveModules.values() + \
-                      self.__onDemandInactiveModules.values():
+        for module in list(self.__onDemandActiveModules.values()) + \
+                      list(self.__onDemandInactiveModules.values()):
             if hasattr(module, "exeDisplayData"):
                 infos.append(module.exeDisplayData())
         
@@ -846,9 +846,9 @@ class PluginManager(QObject):
         </dl>
         """
         configData = {}
-        for module in self.__activeModules.values() + \
-                      self.__onDemandActiveModules.values() + \
-                      self.__onDemandInactiveModules.values():
+        for module in list(self.__activeModules.values()) + \
+                      list(self.__onDemandActiveModules.values()) + \
+                      list(self.__onDemandInactiveModules.values()):
             if hasattr(module, 'getConfigData'):
                 configData.update(module.getConfigData())
         return configData
@@ -897,11 +897,11 @@ class PluginManager(QObject):
         vcsDict = {}
         
         for name, module in \
-            self.__onDemandActiveModules.items() + self.__onDemandInactiveModules.items():
+            list(self.__onDemandActiveModules.items()) + list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == "version_control":
                 if hasattr(module, "getVcsSystemIndicator"):
                     res = module.getVcsSystemIndicator()
-                    for indicator, vcsData in res.items():
+                    for indicator, vcsData in list(res.items()):
                         if indicator in vcsDict:
                             vcsDict[indicator].append(vcsData)
                         else:
@@ -913,7 +913,7 @@ class PluginManager(QObject):
         """
         Public method to deactivated all activated VCS plugins.
         """
-        for name, module in self.__onDemandActiveModules.items():
+        for name, module in list(self.__onDemandActiveModules.items()):
             if getattr(module, "pluginType") == "version_control":
                 self.deactivatePlugin(name, True)
 
@@ -927,21 +927,21 @@ class PluginManager(QObject):
         
         if not os.path.exists(downloadDir):
             try:
-                os.mkdir(downloadDir, 0755)
-            except (OSError, IOError), err:
+                os.mkdir(downloadDir, 0o755)
+            except (OSError, IOError) as err:
                 # try again with (possibly) new default
                 downloadDir = self.__defaultDownloadDir
                 if not os.path.exists(downloadDir):
                     try:
-                        os.mkdir(downloadDir, 0755)
-                    except (OSError, IOError), err:
+                        os.mkdir(downloadDir, 0o755)
+                    except (OSError, IOError) as err:
                         QMessageBox.critical(self.__ui,
                             self.trUtf8("Plugin Manager Error"),
                             self.trUtf8("""<p>The plugin download directory <b>{0}</b> """
                                         """could not be created. Please configure it """
                                         """via the configuration dialog.</p>"""
                                         """<p>Reason: {1}</p>""")\
-                                .format(downloadDir, unicode(err)))
+                                .format(downloadDir, str(err)))
                         downloadDir = ""
         
         Preferences.setPluginManager("DownloadPath", downloadDir)

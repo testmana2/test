@@ -18,17 +18,17 @@ from UI.Browser import Browser
 from E4Gui.E4TabWidget import E4TabWidget
 from E4Gui.E4Led import E4Led
 
-from ProjectSourcesBrowser import ProjectSourcesBrowser
-from ProjectFormsBrowser import ProjectFormsBrowser
-from ProjectTranslationsBrowser import ProjectTranslationsBrowser
-from ProjectResourcesBrowser import ProjectResourcesBrowser
-from ProjectInterfacesBrowser import ProjectInterfacesBrowser
-from ProjectOthersBrowser import ProjectOthersBrowser
+from .ProjectSourcesBrowser import ProjectSourcesBrowser
+from .ProjectFormsBrowser import ProjectFormsBrowser
+from .ProjectTranslationsBrowser import ProjectTranslationsBrowser
+from .ProjectResourcesBrowser import ProjectResourcesBrowser
+from .ProjectInterfacesBrowser import ProjectInterfacesBrowser
+from .ProjectOthersBrowser import ProjectOthersBrowser
 
 import UI.PixmapCache
 import Preferences
 
-from ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
+from .ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
     OthersBrowserFlag, AllBrowsersFlag
 

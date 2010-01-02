@@ -9,7 +9,7 @@ Module implementing a Properties lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerProperties
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerProperties(QsciLexerProperties, Lexer):

@@ -25,10 +25,10 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from QScintilla.Shell import Shell
-from VariablesViewer import VariablesViewer
-from ExceptionLogger import ExceptionLogger
-from BreakPointViewer import BreakPointViewer
-from WatchPointViewer import WatchPointViewer
+from .VariablesViewer import VariablesViewer
+from .ExceptionLogger import ExceptionLogger
+from .BreakPointViewer import BreakPointViewer
+from .WatchPointViewer import WatchPointViewer
 
 import Utilities
 import UI.PixmapCache

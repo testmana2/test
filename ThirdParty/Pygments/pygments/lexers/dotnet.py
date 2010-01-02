@@ -23,8 +23,8 @@ __all__ = ['CSharpLexer', 'BooLexer', 'VbNetLexer', 'CSharpAspxLexer',
 
 
 def _escape(st):
-    return st.replace(u'\\', ur'\\').replace(u'-', ur'\-').\
-           replace(u'[', ur'\[').replace(u']', ur'\]')
+    return st.replace('\\', r'\\').replace('-', r'\-').\
+           replace('[', r'\[').replace(']', r'\]')
 
 class CSharpLexer(RegexLexer):
     """
@@ -75,7 +75,7 @@ class CSharpLexer(RegexLexer):
     tokens = {}
     token_variants = True
 
-    for levelname, cs_ident in levels.items():
+    for levelname, cs_ident in list(levels.items()):
         tokens[levelname] = {
             'root': [
                 # method names
@@ -128,7 +128,7 @@ class CSharpLexer(RegexLexer):
         }
 
     def __init__(self, **options):
-        level = get_choice_opt(options, 'unicodelevel', self.tokens.keys(), 'basic')
+        level = get_choice_opt(options, 'unicodelevel', list(self.tokens.keys()), 'basic')
         if level not in self._all_tokens:
             # compile the regexes now
             self._tokens = self.__class__.process_tokendef(level)

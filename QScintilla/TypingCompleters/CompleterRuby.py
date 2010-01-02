@@ -10,7 +10,7 @@ Module implementing a typing completer for Ruby.
 from PyQt4.QtCore import QObject, SIGNAL, QRegExp
 from PyQt4.Qsci import QsciLexerRuby
 
-from CompleterBase import CompleterBase
+from .CompleterBase import CompleterBase
 
 import Preferences
 
@@ -59,7 +59,7 @@ class CompleterRuby(CompleterBase):
         
         @param charNumber value of the character entered (integer)
         """
-        char = unichr(charNumber)
+        char = chr(charNumber)
         if char not in ['(', ')', '{', '}', '[', ']', ',', "'", '"', '\n', ' ']:
             return  # take the short route
         

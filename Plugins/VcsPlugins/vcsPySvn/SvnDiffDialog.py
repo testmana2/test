@@ -18,8 +18,8 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from SvnDialogMixin import SvnDialogMixin
-from Ui_SvnDiffDialog import Ui_SvnDiffDialog
+from .SvnDialogMixin import SvnDialogMixin
+from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
 
 import Utilities
 
@@ -72,7 +72,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         @param version revision (integer or string)
         @return revision object (pysvn.Revision)
         """
-        if type(version) == type(1) or type(version) == type(1L):
+        if isinstance(version, int):
             return pysvn.Revision(pysvn.opt_revision_kind.number, version)
         elif version.startswith("{"):
             dateStr = version[1:-1]
@@ -176,7 +176,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
             rev1 = self.__getVersionArg("HEAD")
             rev2 = self.__getVersionArg("HEAD")
         
-        if type(fn) is types.ListType:
+        if isinstance(fn, list):
             dname, fnames = self.vcs.splitPathList(fn)
         else:
             dname, fname = self.vcs.splitPath(fn)
@@ -230,7 +230,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                             break
                 if self._clientCancelCallback():
                     break
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             self.__showError(e.args[0])
         locker.unlock()
         os.chdir(cwd)
@@ -303,7 +303,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         It saves the diff shown in the dialog to a file in the local
         filesystem.
         """
-        if type(self.filename) is types.ListType:
+        if isinstance(self.filename, list):
             if len(self.filename) > 1:
                 fname = self.vcs.splitPathList(self.filename)[0]
             else:
@@ -345,14 +345,14 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "wb")
+            f = open(fname, "w")
             f.write(self.contents.toPlainText())
             f.close()
-        except IOError, why:
+        except IOError as why:
             QMessageBox.critical(self, self.trUtf8('Save Diff'),
                 self.trUtf8('<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
-                    .format(fname, unicode(why)))
+                    .format(fname, str(why)))
         
     def __showError(self, msg):
         """

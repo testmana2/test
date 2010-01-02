@@ -9,8 +9,8 @@ Module implementing the Editor Typing configuration page.
 
 from PyQt4.QtCore import pyqtSlot
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorTypingPage import Ui_EditorTypingPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorTypingPage import Ui_EditorTypingPage
 
 import Preferences
 
@@ -31,8 +31,7 @@ class EditorTypingPage(ConfigurationPageBase, Ui_EditorTypingPage):
         self.pageIds[' '] = self.stackedWidget.indexOf(self.emptyPage)
         self.pageIds['Python'] = self.stackedWidget.indexOf(self.pythonPage)
         self.pageIds['Ruby'] = self.stackedWidget.indexOf(self.rubyPage)
-        languages = self.pageIds.keys()
-        languages.sort()
+        languages = sorted(list(self.pageIds.keys()))
         for language in languages:
             self.languageCombo.addItem(language, self.pageIds[language])
         

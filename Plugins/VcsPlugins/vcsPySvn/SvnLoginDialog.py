@@ -9,7 +9,7 @@ Module implementing the login dialog for pysvn.
 
 from PyQt4.QtGui import QDialog
 
-from Ui_SvnLoginDialog import Ui_SvnLoginDialog
+from .Ui_SvnLoginDialog import Ui_SvnLoginDialog
 
 class SvnLoginDialog(QDialog, Ui_SvnLoginDialog):
     """

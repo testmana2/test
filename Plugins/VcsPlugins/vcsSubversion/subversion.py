@@ -10,7 +10,7 @@ Module implementing the version control systems interface to Subversion.
 import os
 import shutil
 import types
-import urllib
+import urllib.request, urllib.parse, urllib.error
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -19,31 +19,31 @@ from E4Gui.E4Application import e4App
 
 from VCS.VersionControl import VersionControl
 
-from SvnDialog import SvnDialog
-from SvnCommitDialog import SvnCommitDialog
-from SvnLogDialog import SvnLogDialog
-from SvnLogBrowserDialog import SvnLogBrowserDialog
-from SvnDiffDialog import SvnDiffDialog
-from SvnRevisionSelectionDialog import SvnRevisionSelectionDialog
-from SvnStatusDialog import SvnStatusDialog
-from SvnTagDialog import SvnTagDialog
-from SvnTagBranchListDialog import SvnTagBranchListDialog
-from SvnCopyDialog import SvnCopyDialog
-from SvnCommandDialog import SvnCommandDialog
-from SvnSwitchDialog import SvnSwitchDialog
-from SvnMergeDialog import SvnMergeDialog
-from SvnPropListDialog import SvnPropListDialog
-from SvnPropSetDialog import SvnPropSetDialog
-from SvnOptionsDialog import SvnOptionsDialog
-from SvnNewProjectOptionsDialog import SvnNewProjectOptionsDialog
-from SvnBlameDialog import SvnBlameDialog
-from SvnRelocateDialog import SvnRelocateDialog
-from SvnUrlSelectionDialog import SvnUrlSelectionDialog
-from SvnRepoBrowserDialog import SvnRepoBrowserDialog
-from SvnStatusMonitorThread import SvnStatusMonitorThread
+from .SvnDialog import SvnDialog
+from .SvnCommitDialog import SvnCommitDialog
+from .SvnLogDialog import SvnLogDialog
+from .SvnLogBrowserDialog import SvnLogBrowserDialog
+from .SvnDiffDialog import SvnDiffDialog
+from .SvnRevisionSelectionDialog import SvnRevisionSelectionDialog
+from .SvnStatusDialog import SvnStatusDialog
+from .SvnTagDialog import SvnTagDialog
+from .SvnTagBranchListDialog import SvnTagBranchListDialog
+from .SvnCopyDialog import SvnCopyDialog
+from .SvnCommandDialog import SvnCommandDialog
+from .SvnSwitchDialog import SvnSwitchDialog
+from .SvnMergeDialog import SvnMergeDialog
+from .SvnPropListDialog import SvnPropListDialog
+from .SvnPropSetDialog import SvnPropSetDialog
+from .SvnOptionsDialog import SvnOptionsDialog
+from .SvnNewProjectOptionsDialog import SvnNewProjectOptionsDialog
+from .SvnBlameDialog import SvnBlameDialog
+from .SvnRelocateDialog import SvnRelocateDialog
+from .SvnUrlSelectionDialog import SvnUrlSelectionDialog
+from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
+from .SvnStatusMonitorThread import SvnStatusMonitorThread
 
-from ProjectBrowserHelper import SvnProjectBrowserHelper
-from ProjectHelper import SvnProjectHelper
+from .ProjectBrowserHelper import SvnProjectBrowserHelper
+from .ProjectHelper import SvnProjectHelper
 
 import Preferences
 import Utilities
@@ -101,7 +101,7 @@ class Subversion(VersionControl):
         self.commandHistory = []
         self.wdHistory = []
         
-        if os.environ.has_key("SVN_ASP_DOT_NET_HACK"):
+        if "SVN_ASP_DOT_NET_HACK" in os.environ:
             self.adminDir = '_svn'
         else:
             self.adminDir = '.svn'
@@ -166,7 +166,7 @@ class Subversion(VersionControl):
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
                 output = \
-                    unicode(process.readAllStandardOutput(), ioEncoding, 'replace')
+                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
                 self.versionStr = output.split()[2]
                 return True, errMsg
             else:
@@ -281,7 +281,7 @@ class Subversion(VersionControl):
                 shutil.copytree(projectDir, os.path.join(tmpDir, project, 'trunk'))
             else:
                 shutil.copytree(projectDir, os.path.join(tmpDir, project))
-        except OSError, e:
+        except OSError as e:
             if os.path.isdir(tmpDir):
                 shutil.rmtree(tmpDir, True)            
             return False, False
@@ -473,7 +473,7 @@ class Subversion(VersionControl):
             args.append(changelist)
         args.append("-m")
         args.append(msg)
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
             self.addArguments(args, fnames)
         else:
@@ -510,7 +510,7 @@ class Subversion(VersionControl):
         if self.versionStr >= '1.5.0':
             args.append('--accept')
             args.append('postpone')
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
             self.addArguments(args, fnames)
         else:
@@ -545,7 +545,7 @@ class Subversion(VersionControl):
         if noDialog and '--force' not in args:
             args.append('--force')
         
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             if isDir:
                 dname, fname = os.path.split(name[0])
             else:
@@ -564,7 +564,7 @@ class Subversion(VersionControl):
             wdir = dname
         self.addArguments(args, tree)
         
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             tree2 = []
             for n in name:
                 d = os.path.split(n)[0]
@@ -610,7 +610,7 @@ class Subversion(VersionControl):
         self.addArguments(args, self.options['add'])
         
         tree = []
-        if type(path) is types.ListType:
+        if isinstance(path, list):
             dname, fnames = self.splitPathList(path)
             for n in path:
                 d = os.path.split(n)[0]
@@ -632,7 +632,7 @@ class Subversion(VersionControl):
         if tree:
             self.vcsAdd(tree, True)
         
-        if type(path) is types.ListType:
+        if isinstance(path, list):
             self.addArguments(args, path)
         else:
             args.append(path)
@@ -661,7 +661,7 @@ class Subversion(VersionControl):
         if noDialog and '--force' not in args:
             args.append('--force')
         
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             self.addArguments(args, name)
         else:
             args.append(name)
@@ -718,7 +718,7 @@ class Subversion(VersionControl):
                 args.append('Moving {0} to {1}'.format(name, target))
                 target = self.__svnURL(target)
             else:
-                target = unicode(target)
+                target = str(target)
             args.append(name)
             args.append(target)
             
@@ -766,7 +766,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to be diffed (string)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             names = name[:]
         else:
             names = [name]
@@ -840,9 +840,9 @@ class Subversion(VersionControl):
             
             reposRoot = rx_base.cap(1)
             if tagOp in [1, 4]:
-                url = '%s/tags/%s' % (reposRoot, urllib.quote(tag))
+                url = '%s/tags/%s' % (reposRoot, urllib.parse.quote(tag))
             elif tagOp in [2, 8]:
-                url = '%s/branches/%s' % (reposRoot, urllib.quote(tag))
+                url = '%s/branches/%s' % (reposRoot, urllib.parse.quote(tag))
         else:
             url = self.__svnURL(tag)
         
@@ -878,7 +878,7 @@ class Subversion(VersionControl):
         args = []
         args.append('revert')
         self.addArguments(args, self.options['global'])
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             self.addArguments(args, name)
         else:
             if os.path.isdir(name):
@@ -935,9 +935,9 @@ class Subversion(VersionControl):
             reposRoot = rx_base.cap(1)
             tn = tag
             if tagType == 1:
-                url = '%s/tags/%s' % (reposRoot, urllib.quote(tag))
+                url = '%s/tags/%s' % (reposRoot, urllib.parse.quote(tag))
             elif tagType == 2:
-                url = '%s/branches/%s' % (reposRoot, urllib.quote(tag))
+                url = '%s/branches/%s' % (reposRoot, urllib.parse.quote(tag))
             elif tagType == 4:
                 url = '%s/trunk' % (reposRoot)
                 tn = 'HEAD'
@@ -1061,7 +1061,7 @@ class Subversion(VersionControl):
             return names
         
         found = False
-        for name in self.statusCache.keys():
+        for name in list(self.statusCache.keys()):
             if os.path.dirname(name) == dname:
                 if shortcut:
                     found = True
@@ -1084,7 +1084,7 @@ class Subversion(VersionControl):
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
                     output = \
-                        unicode(process.readAllStandardOutput(), ioEncoding, 'replace')
+                        str(process.readAllStandardOutput(), ioEncoding, 'replace')
                     for line in output.splitlines():
                         if self.rx_status1.exactMatch(line):
                             flags = str(self.rx_status1.cap(1))
@@ -1211,7 +1211,7 @@ class Subversion(VersionControl):
         if procStarted:
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
-                output = unicode(process.readAllStandardOutput(), ioEncoding, 'replace')
+                output = str(process.readAllStandardOutput(), ioEncoding, 'replace')
                 entryFound = False
                 commitFound = False
                 for line in output.splitlines():
@@ -1285,7 +1285,7 @@ class Subversion(VersionControl):
         if procStarted:
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
-                output = unicode(process.readAllStandardOutput(), ioEncoding, 'replace')
+                output = str(process.readAllStandardOutput(), ioEncoding, 'replace')
                 for line in output.splitlines():
                     line = line.strip()
                     if line.startswith('<url>'):
@@ -1308,7 +1308,7 @@ class Subversion(VersionControl):
         else:
             args.append('resolved')
         self.addArguments(args, self.options['global'])
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             self.addArguments(args, name)
         else:
             if os.path.isdir(name):
@@ -1396,7 +1396,7 @@ class Subversion(VersionControl):
             if fileFlag:
                 args.append('--file')
             args.append(propValue)
-            if type(name) is types.ListType:
+            if isinstance(name, list):
                 dname, fnames = self.splitPathList(name)
                 self.addArguments(args, fnames)
             else:
@@ -1436,7 +1436,7 @@ class Subversion(VersionControl):
         if recursive:
             args.append('--recursive')
         args.append(propName)
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
             self.addArguments(args, fnames)
         else:
@@ -1500,7 +1500,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to be diffed (string)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             names = name[:]
         else:
             names = [name]
@@ -1533,7 +1533,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to be diffed (string)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             names = name[:]
         else:
             names = [name]
@@ -1598,7 +1598,7 @@ class Subversion(VersionControl):
         self.addArguments(args, self.options['global'])
         if stealIt:
             args.append('--force')
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
             self.addArguments(args, fnames)
         else:
@@ -1623,7 +1623,7 @@ class Subversion(VersionControl):
         self.addArguments(args, self.options['global'])
         if breakIt:
             args.append('--force')
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
             self.addArguments(args, fnames)
         else:
@@ -1696,7 +1696,7 @@ class Subversion(VersionControl):
         self.addArguments(args, self.options['global'])
         args.append('--remove')
         args.append('--recursive')
-        if type(names) is types.ListType:
+        if isinstance(names, list):
             dname, fnames = self.splitPathList(names)
             self.addArguments(args, fnames)
         else:
@@ -1730,7 +1730,7 @@ class Subversion(VersionControl):
         self.addArguments(args, self.options['global'])
         args.append('--recursive')
         args.append(clname)
-        if type(names) is types.ListType:
+        if isinstance(names, list):
             dname, fnames = self.splitPathList(names)
             self.addArguments(args, fnames)
         else:
@@ -1759,14 +1759,14 @@ class Subversion(VersionControl):
             scheme = url[0]
             host = url[1]
             port, path = url[2].split("/",1)
-            return "%s:%s:%s/%s" % (scheme, host, port, urllib.quote(path))
+            return "%s:%s:%s/%s" % (scheme, host, port, urllib.parse.quote(path))
         else:
             scheme = url[0]
             if scheme == "file":
-                return "%s:%s" % (scheme, urllib.quote(url[1]))
+                return "%s:%s" % (scheme, urllib.parse.quote(url[1]))
             else:
                 host, path = url[1][2:].split("/",1)
-                return "%s://%s/%s" % (scheme, host, urllib.quote(path))
+                return "%s://%s/%s" % (scheme, host, urllib.parse.quote(path))
 
     def svnNormalizeURL(self, url):
         """

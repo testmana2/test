@@ -24,7 +24,7 @@ from pygments.util import ClassNotFound, bytes
 
 
 __all__ = ['get_lexer_by_name', 'get_lexer_for_filename', 'find_lexer_class',
-           'guess_lexer'] + LEXERS.keys()
+           'guess_lexer'] + list(LEXERS.keys())
 
 _lexer_cache = {}
 
@@ -44,7 +44,7 @@ def get_all_lexers():
     Return a generator of tuples in the form ``(name, aliases,
     filenames, mimetypes)`` of all know lexers.
     """
-    for item in LEXERS.itervalues():
+    for item in LEXERS.values():
         yield item[1:]
     for lexer in find_plugin_lexers():
         yield lexer.name, lexer.aliases, lexer.filenames, lexer.mimetypes
@@ -57,7 +57,7 @@ def find_lexer_class(name):
     if name in _lexer_cache:
         return _lexer_cache[name]
     # lookup builtin lexers
-    for module_name, lname, aliases, _, _ in LEXERS.itervalues():
+    for module_name, lname, aliases, _, _ in LEXERS.values():
         if name == lname:
             _load_lexers(module_name)
             return _lexer_cache[name]
@@ -72,7 +72,7 @@ def get_lexer_by_name(_alias, **options):
     Get a lexer by an alias.
     """
     # lookup builtin lexers
-    for module_name, name, aliases, _, _ in LEXERS.itervalues():
+    for module_name, name, aliases, _, _ in LEXERS.values():
         if _alias in aliases:
             if name not in _lexer_cache:
                 _load_lexers(module_name)
@@ -92,7 +92,7 @@ def get_lexer_for_filename(_fn, code=None, **options):
     """
     matches = []
     fn = basename(_fn)
-    for modname, name, _, filenames, _ in LEXERS.itervalues():
+    for modname, name, _, filenames, _ in LEXERS.values():
         for filename in filenames:
             if fnmatch.fnmatch(fn, filename):
                 if name not in _lexer_cache:
@@ -128,7 +128,7 @@ def get_lexer_for_mimetype(_mime, **options):
     """
     Get a lexer for a mimetype.
     """
-    for modname, name, _, _, mimetypes in LEXERS.itervalues():
+    for modname, name, _, _, mimetypes in LEXERS.values():
         if _mime in mimetypes:
             if name not in _lexer_cache:
                 _load_lexers(modname)
@@ -143,7 +143,7 @@ def _iter_lexerclasses():
     """
     Return an iterator over all lexer classes.
     """
-    for module_name, name, _, _, _ in LEXERS.itervalues():
+    for module_name, name, _, _, _ in LEXERS.values():
         if name not in _lexer_cache:
             _load_lexers(module_name)
         yield _lexer_cache[name]

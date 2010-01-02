@@ -11,8 +11,8 @@ from PyQt4.Qsci import QsciScintilla
 
 import QScintilla.Lexers
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorFilePage import Ui_EditorFilePage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorFilePage import Ui_EditorFilePage
 
 from Utilities import supportedCodecs
 import Preferences

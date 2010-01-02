@@ -14,10 +14,10 @@ import re
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_PyRegExpWizardDialog import Ui_PyRegExpWizardDialog
+from .Ui_PyRegExpWizardDialog import Ui_PyRegExpWizardDialog
 
-from PyRegExpWizardRepeatDialog import PyRegExpWizardRepeatDialog
-from PyRegExpWizardCharactersDialog import PyRegExpWizardCharactersDialog
+from .PyRegExpWizardRepeatDialog import PyRegExpWizardRepeatDialog
+from .PyRegExpWizardCharactersDialog import PyRegExpWizardCharactersDialog
 
 import UI.PixmapCache
 
@@ -322,14 +322,14 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     return
             
             try:
-                f=open(Utilities.toNativeSeparators(fname), "wb")
+                f=open(Utilities.toNativeSeparators(fname), "w")
                 f.write(self.regexpTextEdit.toPlainText())
                 f.close()
-            except IOError, err:
+            except IOError as err:
                 QMessageBox.information(self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(unicode(err)))
+                                """<p>Reason: {0}</p>""").format(str(err)))
     
     @pyqtSlot()
     def on_loadButton_clicked(self):
@@ -343,15 +343,15 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
-                f=open(Utilities.toNativeSeparators(fname), "rb")
+                f=open(Utilities.toNativeSeparators(fname), "r")
                 regexp = f.read()
                 f.close()
                 self.regexpTextEdit.setPlainText(regexp)
-            except IOError, err:
+            except IOError as err:
                 QMessageBox.information(self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(unicode(err)))
+                                """<p>Reason: {0}</p>""").format(str(err)))
 
     @pyqtSlot()
     def on_copyButton_clicked(self):
@@ -394,11 +394,11 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 QMessageBox.information(None,
                     self.trUtf8(""),
                     self.trUtf8("""The regular expression is valid."""))
-            except re.error, e:
+            except re.error as e:
                 QMessageBox.critical(None,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
-                        .format(unicode(e)))
+                        .format(str(e)))
                 return
             except IndexError:
                 QMessageBox.critical(None,
@@ -521,11 +521,11 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 self.resultTable.resizeRowsToContents()
                 self.resultTable.verticalHeader().hide()
                 self.resultTable.horizontalHeader().hide()
-            except re.error, e:
+            except re.error as e:
                 QMessageBox.critical(None,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
-                        .format(unicode(e)))
+                        .format(str(e)))
                 return
             except IndexError:
                 QMessageBox.critical(None,

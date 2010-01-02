@@ -10,8 +10,8 @@ Module implementing the Editor Exporters configuration page.
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QFontDialog
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorExportersPage import Ui_EditorExportersPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorExportersPage import Ui_EditorExportersPage
 
 import Preferences
 
@@ -34,8 +34,7 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         self.pageIds['PDF'] = self.stackedWidget.indexOf(self.pdfPage)
         self.pageIds['RTF'] = self.stackedWidget.indexOf(self.rtfPage)
         self.pageIds['TeX'] = self.stackedWidget.indexOf(self.texPage)
-        exporters = self.pageIds.keys()
-        exporters.sort()
+        exporters = sorted(list(self.pageIds.keys()))
         for exporter in exporters:
             self.exportersCombo.addItem(exporter, self.pageIds[exporter])
         

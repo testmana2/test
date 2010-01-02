@@ -117,35 +117,35 @@ class Prefs(object):
                         # visibility (0)
                         [ True,  False,  False,  True,  True,  True,  True,  True, True],
                         # saved state main window with dock windows (1)
-                        "",
+                        b"",
                         # saved states floating windows (2)
-                        ["", "", "", "", "", "", "", "", ""],
+                        [b"", b"", b"", b"", b"", b"", b"", b"", b""],
                         # saved state main window with floating windows (3)
-                        "", 
+                        b"", 
                         # saved state main window with toolbox windows (4)
-                        "", 
+                        b"", 
                         # visibility of the toolboxes (5)
                         [ True,  True], 
                         # saved states of the splitters and sidebars of the 
                         # sidebars layout (6)
-                        ["", "", "", ""], 
+                        [b"", b"", b"", b""], 
                       ],
             "debug" : [
                         # visibility (0)
                         [ False,  False,  True,  True,  True,  True,  False,  False, True], 
                         # saved state main window with dock windows (1)
-                        "",
+                        b"",
                         # saved states floating windows (2)
-                        ["", "", "", "", "", "", "", "", ""],
+                        [b"", b"", b"", b"", b"", b"", b"", b"", b""],
                         # saved state main window with floating windows (3)
-                        "", 
+                        b"", 
                         # saved state main window with toolbox windows (4)
-                        "", 
+                        b"", 
                         # visibility of the toolboxes (5)
                         [ False,  True], 
                         # saved states of the splitters and sidebars of the 
                         # sidebars layout (6)
-                        ["", "", "", ""], 
+                        [b"", b"", b"", b""], 
                       ],
         },
         "ToolbarManagerState" : QtCore.QByteArray(), 
@@ -873,8 +873,8 @@ def setVarFilters(filters, prefClass = Prefs):
     
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Variables/LocalsFilter", unicode(filters[0]))
-    prefClass.settings.setValue("Variables/GlobalsFilter", unicode(filters[1]))
+    prefClass.settings.setValue("Variables/LocalsFilter", str(filters[0]))
+    prefClass.settings.setValue("Variables/GlobalsFilter", str(filters[1]))
     
 def getDebugger(key, prefClass = Prefs):
     """
@@ -1029,7 +1029,7 @@ def getUI(key, prefClass = Prefs):
     if key in ["BrowsersListFoldersFirst", "BrowsersHideNonPublic",
                 "BrowsersListContentsByOccurrence", "LogViewerAutoRaise", 
                 "SingleApplicationMode", "TabViewManagerFilenameOnly", 
-                "CaptionShowsFilename", "RecentNumber", "ShowSplash", 
+                "CaptionShowsFilename", "ShowSplash", 
                 "SingleCloseButton", "UseProxy", 
                 "TopLeftByLeft", "BottomLeftByLeft", 
                 "TopRightByRight", "BottomRightByRight", 
@@ -1040,7 +1040,7 @@ def getUI(key, prefClass = Prefs):
             prefClass.uiDefaults[key]))
     elif key in ["TabViewManagerFilenameLength", "CaptionFilenameLength",
                  "ProxyPort", "ProxyType", "OpenOnStartup", 
-                 "PerformVersionCheck", ]:
+                 "PerformVersionCheck", "RecentNumber", ]:
         return int(prefClass.settings.value("UI/" + key,
             prefClass.uiDefaults[key]))
     elif key == "ProxyPassword":
@@ -1055,7 +1055,11 @@ def getUI(key, prefClass = Prefs):
     elif key == "ViewProfiles":
         profiles = prefClass.settings.value("UI/ViewProfiles")
         if profiles is not None:
-            viewProfiles = eval(profiles)
+            if isinstance(profiles, str):
+                # just in case of an old structure
+                viewProfiles = eval(profiles)
+            else:
+                viewProfiles = profiles
             for name in ["edit", "debug"]:
                 # adjust entries for individual windows
                 vpLength = len(viewProfiles[name][0])
@@ -1096,7 +1100,7 @@ def setUI(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key == "ViewProfiles":
-        prefClass.settings.setValue("UI/" + key, unicode(value))
+        prefClass.settings.setValue("UI/" + key, value)#str(value))
     elif key == "LogStdErrColour":
         prefClass.settings.setValue("UI/" + key, value.name())
     elif key == "ProxyPassword":
@@ -1253,7 +1257,7 @@ def getEditorLexerAssocs(prefClass = Prefs):
     
     if len(keyList) == 0:
         # build from scratch
-        for key in editorLexerAssocDefaults.keys():
+        for key in list(editorLexerAssocDefaults.keys()):
             editorLexerAssoc[key] = editorLexerAssocDefaults[key]
     else:
         for key in keyList:
@@ -1263,9 +1267,9 @@ def getEditorLexerAssocs(prefClass = Prefs):
                 defaultValue = ""
             editorLexerAssoc[key] = \
                 prefClass.settings.value("Editor/LexerAssociations/" + key, defaultValue)
-        if len(editorLexerAssoc.keys()) < len(editorLexerAssocDefaults.keys()):
+        if len(list(editorLexerAssoc.keys())) < len(list(editorLexerAssocDefaults.keys())):
             # new default lexer associations
-            for key in editorLexerAssocDefaults.keys():
+            for key in list(editorLexerAssocDefaults.keys()):
                 if key not in editorLexerAssoc:
                     editorLexerAssoc[key] = editorLexerAssocDefaults[key]
     return editorLexerAssoc
@@ -1295,7 +1299,7 @@ def getEditorLexerAssoc(filename, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested lexer language (string)
     """
-    for pattern, language in getEditorLexerAssocs().items():
+    for pattern, language in list(getEditorLexerAssocs().items()):
         if fnmatch.fnmatch(filename, pattern):
             return language
     
@@ -2012,7 +2016,7 @@ def saveResetLayout(prefClass = Prefs):
     Module function to save the reset layout.
     """
     if prefClass.resetLayout:
-        for key in prefClass.geometryDefaults.keys():
+        for key in list(prefClass.geometryDefaults.keys()):
             prefClass.settings.setValue("Geometry/" + key, 
                 prefClass.geometryDefaults[key])
 
@@ -2039,7 +2043,7 @@ def toList(value):
     """
     if value is None:
         return []
-    elif type(value) != type([]):
+    elif not isinstance(value, list):
         return [value]
     else:
         return value

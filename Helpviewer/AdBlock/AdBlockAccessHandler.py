@@ -10,7 +10,7 @@ Module implementing a scheme access handler for AdBlock URLs.
 from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QNetworkAccessManager
 
-from AdBlockSubscription import AdBlockSubscription
+from .AdBlockSubscription import AdBlockSubscription
 
 import Helpviewer.HelpWindow
 from Helpviewer.Network.SchemeAccessHandler import SchemeAccessHandler

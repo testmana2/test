@@ -20,7 +20,8 @@ import re
 
 import Utilities
 import Utilities.ClassBrowsers as ClassBrowsers
-import ClbrBaseClasses
+from . import ClbrBaseClasses
+from functools import reduce
 
 TABWIDTH = 4
 
@@ -247,12 +248,12 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
     deltastack = []
     deltaindent = 0
     deltaindentcalculated = 0
-    src = Utilities.decode(f.read())[0]
+    src = f.read()
     f.close()
 
     lineno, last_lineno_pos = 1, 0
     i = 0
-    while 1:
+    while True:
         m = _getnext(src, i)
         if not m:
             break
@@ -298,7 +299,7 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
                 # it's a function
                 f = Function(module, meth_name,
                              file, lineno, meth_sig)
-                if dict_counts.has_key(meth_name):
+                if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
                     meth_name = "%s_%d" % (meth_name, dict_counts[meth_name])
                 else:
@@ -327,7 +328,7 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
                 names = []
                 for n in inherit.split(','):
                     n = n.strip()
-                    if dict.has_key(n):
+                    if n in dict:
                         # we know this super class
                         n = dict[n]
                     else:
@@ -340,9 +341,9 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
                             # module for class
                             m = c[-2]
                             c = c[-1]
-                            if _modules.has_key(m):
+                            if m in _modules:
                                 d = _modules[m]
-                                if d.has_key(c):
+                                if c in d:
                                     n = d[c]
                     names.append(n)
                 inherit = names
@@ -350,7 +351,7 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
             cur_class = Class(module, class_name, inherit,
                               file, lineno)
             if not classstack:
-                if dict_counts.has_key(class_name):
+                if class_name in dict_counts:
                     dict_counts[class_name] += 1
                     class_name = "%s_%d" % (class_name, dict_counts[class_name])
                 else:
@@ -380,7 +381,7 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
             last_lineno_pos = start
             if thisindent == 0:
                 # global variable
-                if not dict.has_key("@@Globals@@"):
+                if "@@Globals@@" not in dict:
                     dict["@@Globals@@"] = \
                         ClbrBaseClasses.ClbrBase(module, "Globals", file, lineno)
                 dict["@@Globals@@"]._addglobal(
@@ -419,16 +420,16 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
             coding = m.group("Coding")
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start
-            if not dict.has_key("@@Coding@@"):
+            if "@@Coding@@" not in dict:
                 dict["@@Coding@@"] = ClbrBaseClasses.Coding(module, file, lineno, coding)
         
         else:
             assert 0, "regexp _getnext found something unexpected"
 
-    if dict.has_key('__all__'):
+    if '__all__' in dict:
         # set visibility of all top level elements
         pubs = dict['__all__']
-        for key in dict.keys():
+        for key in list(list(dict.keys())):
             if key == '__all__' or key.startswith("@@"):
                 continue
             if key in pubs.identifiers:

@@ -9,7 +9,7 @@ Module implementing a HTML lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerHTML
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerHTML(QsciLexerHTML, Lexer):

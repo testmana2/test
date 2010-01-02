@@ -79,7 +79,7 @@ class OpenSearchEngine(QObject):
         result = result.replace("{inputEncoding}", "UTF-8")
         result = result.replace("{outputEncoding}", "UTF-8")
         result = result.replace("{searchTerms}", 
-                                unicode(QUrl.toPercentEncoding(searchTerm)))
+                                str(QUrl.toPercentEncoding(searchTerm)))
         result = re.sub(r"""\{([^\}]*:|)source\??\}""", Program, result)
 
         return result
@@ -352,7 +352,7 @@ class OpenSearchEngine(QObject):
             imageBuffer.open(QIODevice.ReadWrite)
             if image.save(imageBuffer, "PNG"):
                 self._imageUrl = "data:image/png;base64,{0}"\
-                                .format(unicode(imageBuffer.buffer().toBase64()))
+                                .format(str(imageBuffer.buffer().toBase64()))
         
         self.__image = QImage(image)
         self.emit(SIGNAL("imageChanged()"))
@@ -433,7 +433,7 @@ class OpenSearchEngine(QObject):
         """
         Private slot to receive the suggestions.
         """
-        response = unicode(self.__suggestionsReply.readAll(), "utf-8")
+        response = str(self.__suggestionsReply.readAll(), "utf-8")
         response = response.strip()
         
         self.__suggestionsReply.close()

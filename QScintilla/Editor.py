@@ -17,22 +17,22 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-import Exporters
-import Lexers
-import TypingCompleters
-from QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
-from SpellChecker import SpellChecker
-from SpellCheckingDialog import SpellCheckingDialog
+from . import Exporters
+from . import Lexers
+from . import TypingCompleters
+from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+from .SpellChecker import SpellChecker
+from .SpellCheckingDialog import SpellCheckingDialog
 
 from Debugger.EditBreakpointDialog import EditBreakpointDialog
 
-from DebugClients.Python.coverage import coverage
+from DebugClients.Python3.coverage import coverage
 
 from DataViews.CodeMetricsDialog import CodeMetricsDialog
 from DataViews.PyCoverageDialog import PyCoverageDialog
 from DataViews.PyProfileDialog import PyProfileDialog
 
-from Printer import Printer
+from .Printer import Printer
 
 import Preferences
 import Utilities
@@ -237,7 +237,7 @@ class Editor(QsciScintillaCompat):
         self.isResourcesFile = False
         if editor is None:
             if self.fileName is not None:
-                if (QFileInfo(self.fileName).size() / 1024) > \
+                if (QFileInfo(self.fileName).size() // 1024) > \
                    Preferences.getEditor("WarnFilesize"):
                     res = QMessageBox.warning(None,
                         self.trUtf8("Open File"),
@@ -245,7 +245,7 @@ class Editor(QsciScintillaCompat):
                                     """ is <b>{1} KB</b>."""
                                     """ Do you really want to load it?</p>""")\
                                     .format(self.fileName, 
-                                            QFileInfo(self.fileName).size() / 1024),
+                                            QFileInfo(self.fileName).size() // 1024),
                         QMessageBox.StandardButtons(\
                             QMessageBox.No | \
                             QMessageBox.Yes),
@@ -740,8 +740,7 @@ class Editor(QsciScintillaCompat):
         
         self.supportedLanguages = {}
         supportedLanguages = Lexers.getSupportedLanguages()
-        languages = supportedLanguages.keys()
-        languages.sort()
+        languages = sorted(list(supportedLanguages.keys()))
         for language in languages:
             if language != "Guessed":
                 self.supportedLanguages[language] = supportedLanguages[language][:]
@@ -826,8 +825,7 @@ class Editor(QsciScintillaCompat):
         menu = QMenu(self.trUtf8("Export as"))
         
         supportedExporters = Exporters.getSupportedFormats()
-        exporters = supportedExporters.keys()
-        exporters.sort()
+        exporters = sorted(list(supportedExporters.keys()))
         for exporter in exporters:
             act = menu.addAction(supportedExporters[exporter])
             act.setData(exporter)
@@ -1587,7 +1585,7 @@ class Editor(QsciScintillaCompat):
         """
         if self.breaks:
             bps = []    # list of breakpoints
-            for handle, (ln, cond, temp, enabled, ignorecount) in self.breaks.items():
+            for handle, (ln, cond, temp, enabled, ignorecount) in list(self.breaks.items()):
                 line = self.markerLine(handle) + 1
                 bps.append((ln, line, (cond, temp, enabled, ignorecount)))
                 self.markerDeleteHandle(handle)
@@ -1601,7 +1599,7 @@ class Editor(QsciScintillaCompat):
         """
         Private method to restore the breakpoints.
         """
-        for handle in self.breaks.keys():
+        for handle in list(self.breaks.keys()):
             self.markerDeleteHandle(handle)
         self.__addBreakPoints(QModelIndex(), 0, self.breakpointModel.rowCount() - 1)
         
@@ -1660,7 +1658,7 @@ class Editor(QsciScintillaCompat):
         
         @param line linenumber of the breakpoint (integer)
         """
-        for handle, (ln, _, _, _, _) in self.breaks.items():
+        for handle, (ln, _, _, _, _) in list(self.breaks.items()):
             if self.markerLine(handle) == line-1:
                 break
         else:
@@ -1696,7 +1694,7 @@ class Editor(QsciScintillaCompat):
         @param line line number of the breakpoint (integer)
         @param temporary flag indicating a temporary breakpoint (boolean)
         """
-        for handle, (ln, _, _, _, _) in self.breaks.items():
+        for handle, (ln, _, _, _, _) in list(self.breaks.items()):
             if self.markerLine(handle) == line - 1:
                 # delete breakpoint or toggle it to the next state
                 index = self.breakpointModel.getBreakPointIndex(self.fileName, line)
@@ -1730,7 +1728,7 @@ class Editor(QsciScintillaCompat):
         
         @param line line number of the breakpoint (integer)
         """
-        for handle, (ln, cond, temp, enabled, ignorecount) in self.breaks.items():
+        for handle, (ln, cond, temp, enabled, ignorecount) in list(self.breaks.items()):
             if self.markerLine(handle) == line - 1:
                 break
         else:
@@ -1798,7 +1796,7 @@ class Editor(QsciScintillaCompat):
         if self.line < 0:
             self.line, index = self.getCursorPosition()
         found = False
-        for handle, (ln, cond, temp, enabled, ignorecount) in self.breaks.items():
+        for handle, (ln, cond, temp, enabled, ignorecount) in list(self.breaks.items()):
             if self.markerLine(handle) == self.line:
                 found = True
                 break
@@ -1863,7 +1861,7 @@ class Editor(QsciScintillaCompat):
         Private slot to clear all breakpoints.
         """
         idxList = []
-        for handle, (ln, _, _, _, _) in self.breaks.items():
+        for handle, (ln, _, _, _, _) in list(self.breaks.items()):
             index = self.breakpointModel.getBreakPointIndex(fileName, ln)
             if index.isValid():
                 idxList.append(index)
@@ -2184,16 +2182,24 @@ class Editor(QsciScintillaCompat):
         """
         try:
             if createIt and not os.path.exists(fn):
-                f = open(fn, "wb")
+                f = open(fn, "w")
                 f.close()
-            f = open(fn, 'rb')
-        except IOError:
+            f = open(fn, 'r')
+        except IOError as why:
             QMessageBox.critical(self.vm, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>')
-                    .format(fn))
+                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
+                            '<p>Reason: {1}</p>')
+                    .format(fn, str(why)))
             raise
         
-        txt = f.readline()
+        try:
+            txt = f.readline()
+        except UnicodeDecodeError as why:
+            QMessageBox.critical(self.vm, self.trUtf8('Open File'),
+                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
+                            '<p>Reason: {1}</p>')
+                    .format(fn, str(why)))
+            raise
         f.close()
         return txt
         
@@ -2207,23 +2213,35 @@ class Editor(QsciScintillaCompat):
         """
         try:
             if createIt and not os.path.exists(fn):
-                f = open(fn, "wb")
+                f = open(fn, "w")
                 f.close()
-            f = open(fn, 'rb')
-        except IOError:
+            f = open(fn, 'r')
+        except IOError as why:
             QMessageBox.critical(self.vm, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>')
-                    .format(fn))
+                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
+                            '<p>Reason: {1}</p>')
+                    .format(fn, str(why)))
             raise
         
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         
-        if fn.endswith('.ts') or fn.endswith('.ui'):
-            # special treatment for Qt-Linguist and Qt-Designer files
+##        if fn.endswith('.ts') or fn.endswith('.ui'):
+##            # special treatment for Qt-Linguist and Qt-Designer files
+##            txt = f.read()
+##            self.encoding = 'latin-1'
+##        else:
+##            txt, self.encoding = f.read(), "utf-8" #Utilities.decode(f.read())
+        try:
             txt = f.read()
-            self.encoding = 'latin-1'
-        else:
-            txt, self.encoding = Utilities.decode(f.read())
+        except UnicodeDecodeError as why:
+            QApplication.restoreOverrideCursor()
+            QMessageBox.critical(self.vm, self.trUtf8('Open File'),
+                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
+                            '<p>Reason: {1}</p>')
+                    .format(fn, str(why)))
+            QApplication.restoreOverrideCursor()
+            raise
+        self.encoding = f.encoding.lower()
         f.close()
         fileEol = self.detectEolString(txt)
         
@@ -2300,15 +2318,15 @@ class Editor(QsciScintillaCompat):
                     txt += eol
             else:
                 txt += eol
-        try:
-            txt, self.encoding = Utilities.encode(txt, self.encoding)
-        except Utilities.CodingError, e:
-            QMessageBox.critical(self, self.trUtf8('Save File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
-                            'Reason: {1}</p>')
-                    .format(fn, unicode(e)))
-            return False
-        
+##        try:
+##            txt, self.encoding = Utilities.encode(txt, self.encoding)
+##        except Utilities.CodingError as e:
+##            QMessageBox.critical(self, self.trUtf8('Save File'),
+##                self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
+##                            'Reason: {1}</p>')
+##                    .format(fn, str(e)))
+##            return False
+##        
         # create a backup file, if the option is set
         createBackup = Preferences.getEditor("CreateBackupFile")
         if createBackup:
@@ -2334,17 +2352,17 @@ class Editor(QsciScintillaCompat):
         
         # now write text to the file fn
         try:
-            f = open(fn, 'wb')
+            f = open(fn, 'w', encoding = self.encoding)
             f.write(txt)
             f.close()
             if createBackup and perms_valid:
                 os.chmod(fn, permissions)
             return True
-        except IOError, why:
+        except IOError as why:
             QMessageBox.critical(self, self.trUtf8('Save File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
                             'Reason: {1}</p>')
-                    .format(fn, unicode(why)))
+                    .format(fn, str(why)))
             return False
         
     def saveFile(self, saveas = False, path = None):
@@ -3469,7 +3487,7 @@ class Editor(QsciScintillaCompat):
         @param charNumber value of the character entered (integer)
         """
         if self.isListActive():
-            char = unichr(charNumber)
+            char = chr(charNumber)
             if self.__isStartChar(char):
                 self.cancelList()
                 self.autoComplete(auto = True, context = True)
@@ -3478,11 +3496,11 @@ class Editor(QsciScintillaCompat):
                 self.cancelList()
         
         if self.callTipsStyle() != QsciScintilla.CallTipsNone and \
-           self.lexer_ is not None and unichr(charNumber) in '()':
+           self.lexer_ is not None and chr(charNumber) in '()':
             self.callTip()
         
         if not self.isCallTipActive():
-            char = unichr(charNumber)
+            char = chr(charNumber)
             if self.__isStartChar(char):
                 self.autoComplete(auto = True, context = True)
                 return
@@ -4035,7 +4053,7 @@ class Editor(QsciScintillaCompat):
         """
         if Preferences.getEditor("AutoCheckSyntax"):
             self.clearSyntaxError()
-            if self.isPyFile():
+            if self.isPy3File():
                 syntaxError, _fn, errorline, _code, _error = \
                     Utilities.compile(self.fileName, self.text())
                 if syntaxError:
@@ -4287,7 +4305,7 @@ class Editor(QsciScintillaCompat):
                 self.syntaxerrors[handle] = msg
                 self.emit(SIGNAL('syntaxerrorToggled'), self)
         else:
-            for handle in self.syntaxerrors.keys():
+            for handle in list(self.syntaxerrors.keys()):
                 if self.markerLine(handle) == line - 1:
                     del self.syntaxerrors[handle]
                     self.markerDeleteHandle(handle)
@@ -4301,7 +4319,7 @@ class Editor(QsciScintillaCompat):
             (list of integer)
         """
         selist = []
-        for handle in self.syntaxerrors.keys():
+        for handle in list(self.syntaxerrors.keys()):
             selist.append(self.markerLine(handle) + 1)
         
         selist.sort()
@@ -4328,7 +4346,7 @@ class Editor(QsciScintillaCompat):
         """
         Public slot to handle the 'Clear all syntax error' context menu action.
         """
-        for handle in self.syntaxerrors.keys():
+        for handle in list(self.syntaxerrors.keys()):
             line = self.markerLine(handle) + 1
             self.toggleSyntaxError(line, False)
         
@@ -4341,7 +4359,7 @@ class Editor(QsciScintillaCompat):
         if line == -1:
             line = self.line
         
-        for handle in self.syntaxerrors.keys():
+        for handle in list(self.syntaxerrors.keys()):
             if self.markerLine(handle) == line:
                 QMessageBox.critical(None,
                     self.trUtf8("Syntax Error"),
@@ -4364,7 +4382,7 @@ class Editor(QsciScintillaCompat):
             canceled the operation. (string, boolean)
         """
         qs = []
-        for s in self.macros.keys():
+        for s in list(self.macros.keys()):
             qs.append(s)
         qs.sort()
         return QInputDialog.getItem(\
@@ -4405,7 +4423,7 @@ class Editor(QsciScintillaCompat):
             return  # user aborted
         
         try:
-            f = open(fname, "rb")
+            f = open(fname, "r")
             lines = f.readlines()
             f.close()
         except IOError:
@@ -4465,7 +4483,7 @@ class Editor(QsciScintillaCompat):
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "wb")
+            f = open(fname, "w")
             f.write("%s%s" % (name, os.linesep))
             f.write(self.macros[name].save())
             f.close()
@@ -4732,7 +4750,7 @@ class Editor(QsciScintillaCompat):
         self.clearSyntaxError()
         
         # clear breakpoint markers
-        for handle in self.breaks.keys():
+        for handle in list(self.breaks.keys()):
             self.markerDeleteHandle(handle)
         self.breaks = {}
         
@@ -5196,7 +5214,7 @@ class Editor(QsciScintillaCompat):
         @param charNumber value of the character entered (integer)
         """
         if self.spell:
-            if not unichr(charNumber).isalnum():
+            if not chr(charNumber).isalnum():
                 self.spell.checkWord(self.positionBefore(self.currentPosition()), True)
             elif self.hasIndicator(self.spellingIndicator, self.currentPosition()):
                 self.spell.checkWord(self.currentPosition())

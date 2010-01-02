@@ -15,7 +15,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
 
-from Ui_DebuggerPropertiesDialog import Ui_DebuggerPropertiesDialog
+from .Ui_DebuggerPropertiesDialog import Ui_DebuggerPropertiesDialog
 
 import Utilities
 

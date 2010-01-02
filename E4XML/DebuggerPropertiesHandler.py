@@ -7,8 +7,8 @@
 Module implementing the handler class for reading an XML project debugger properties file.
 """
 
-from Config import debuggerPropertiesFileFormatVersion
-from XMLHandlerBase import XMLHandlerBase
+from .Config import debuggerPropertiesFileFormatVersion
+from .XMLHandlerBase import XMLHandlerBase
 
 class DebuggerPropertiesHandler(XMLHandlerBase):
     """

@@ -19,7 +19,7 @@ from E4Gui.E4Completers import E4FileCompleter
 
 import UI.PixmapCache
 
-from Ui_CompareDialog import Ui_CompareDialog
+from .Ui_CompareDialog import Ui_CompareDialog
 
 import Utilities
 

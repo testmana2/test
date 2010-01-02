@@ -9,7 +9,7 @@ Module implementing the multi project management functionality.
 
 import os
 import sys
-import cStringIO
+import io
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -18,8 +18,8 @@ from E4Gui.E4Application import e4App
 
 from Globals import recentNameMultiProject
 
-from PropertiesDialog import PropertiesDialog
-from AddProjectDialog import AddProjectDialog
+from .PropertiesDialog import PropertiesDialog
+from .AddProjectDialog import AddProjectDialog
 
 from E4XML.XMLUtilities import make_parser
 from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
@@ -203,9 +203,9 @@ class MultiProject(QObject):
                         self.trUtf8("""Compressed multiproject files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
-                f = open(fn, "rb")
+                f = open(fn, "r")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -274,15 +274,15 @@ class MultiProject(QObject):
                         self.trUtf8("""Compressed multiproject files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
-                f = open(fn, "rb")
+                f = open(fn, "r")
             try:
                 try:
                     parser.parse(f)
                 except UnicodeEncodeError:
                     f.seek(0)
-                    buf = cStringIO.StringIO(f.read())
+                    buf = io.StringIO(f.read())
                     parser.parse(buf)
             finally:
                 f.close()
@@ -351,9 +351,9 @@ class MultiProject(QObject):
                         self.trUtf8("""Compressed multiproject files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "wb")
+                f = gzip.open(fn, "w")
             else:
-                f = open(fn, "wb")
+                f = open(fn, "w")
             
             MultiProjectWriter(self, f, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()

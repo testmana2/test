@@ -411,7 +411,7 @@ class BrowserModel(QAbstractItemModel):
         except ImportError:
             return
         
-        keys = dict.keys()
+        keys = list(dict.keys())
         if len(keys) > 0:
             if repopulate:
                 self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),
@@ -455,9 +455,9 @@ class BrowserModel(QAbstractItemModel):
         
         # build sorted list of names
         keys = []
-        for name in cl.classes.keys():
+        for name in list(cl.classes.keys()):
             keys.append((name, 'c'))
-        for name in cl.methods.keys():
+        for name in list(cl.methods.keys()):
             keys.append((name, 'm'))
         
         if len(keys) > 0:
@@ -508,9 +508,9 @@ class BrowserModel(QAbstractItemModel):
         
         # build sorted list of names
         keys = []
-        for name in fn.classes.keys():
+        for name in list(fn.classes.keys()):
             keys.append((name, 'c'))
-        for name in fn.methods.keys():
+        for name in list(fn.methods.keys()):
             keys.append((name, 'm'))
         
         if len(keys) > 0:
@@ -537,7 +537,7 @@ class BrowserModel(QAbstractItemModel):
         if not attributes:
             return
         
-        keys = attributes.keys()
+        keys = list(attributes.keys())
         if len(keys) > 0:
             if repopulate:
                 self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),

@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from Ui_SvnUrlSelectionDialog import Ui_SvnUrlSelectionDialog
+from .Ui_SvnUrlSelectionDialog import Ui_SvnUrlSelectionDialog
 
 
 class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):

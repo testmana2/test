@@ -14,7 +14,7 @@ import pickle
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_PyProfileDialog import Ui_PyProfileDialog
+from .Ui_PyProfileDialog import Ui_PyProfileDialog
 import Utilities
 
 from eric4config import getConfig
@@ -157,7 +157,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
             self.resultList.setSortingEnabled(False)
             
             # now go through all the files
-            for func, (cc, nc, tt, ct, callers) in self.stats.items():
+            for func, (cc, nc, tt, ct, callers) in list(self.stats.items()):
                 if self.cancelled:
                     return
                 

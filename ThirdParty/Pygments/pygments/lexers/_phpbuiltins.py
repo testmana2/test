@@ -3328,11 +3328,11 @@ MODULES = {'.NET': ['dotnet_load'],
 if __name__ == '__main__':
     import pprint
     import re
-    import urllib
+    import urllib.request, urllib.parse, urllib.error
     _function_re = re.compile('<B\s+CLASS="function"\s*>(.*?)\(\)</B\s*>(?uism)')
 
     def get_php_functions():
-        uf = urllib.urlopen('http://de.php.net/manual/en/index.functions.php')
+        uf = urllib.request.urlopen('http://de.php.net/manual/en/index.functions.php')
         data = uf.read()
         uf.close()
         results = set()
@@ -3347,7 +3347,7 @@ if __name__ == '__main__':
 
     def get_function_module(func_name):
         fn = func_name.replace('_', '-')
-        uf = urllib.urlopen('http://de.php.net/manual/en/function.%s.php' % fn)
+        uf = urllib.request.urlopen('http://de.php.net/manual/en/function.%s.php' % fn)
         regex = re.compile('<li class="header up">'
                            '<a href="ref\..*?\.php">([a-zA-Z0-9\s]+)</a></li>')
         for line in uf:
@@ -3355,20 +3355,20 @@ if __name__ == '__main__':
             if match:
                 return match.group(1)
 
-    print '>> Downloading Function Index'
+    print('>> Downloading Function Index')
     functions = get_php_functions()
     total = len(functions)
-    print '%d functions found' % total
+    print('%d functions found' % total)
     modules = {}
     idx = 1
     for function_name in get_php_functions():
-        print '>> %r (%d/%d)' % (function_name, idx, total)
+        print('>> %r (%d/%d)' % (function_name, idx, total))
         m = get_function_module(function_name)
         if m is None:
-            print 'NOT_FOUND'
+            print('NOT_FOUND')
             m = 'unknown'
         else:
-            print repr(m)
+            print(repr(m))
         modules.setdefault(m, []).append(function_name)
         idx += 1
 

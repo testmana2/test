@@ -16,7 +16,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from Ui_SyntaxCheckerDialog import Ui_SyntaxCheckerDialog
+from .Ui_SyntaxCheckerDialog import Ui_SyntaxCheckerDialog
 
 import Utilities
 
@@ -74,7 +74,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param codestring string containing the code to be checked (string).
             If this is given, file must be a single file name.
         """
-        if type(fn) is types.ListType:
+        if isinstance(fn, list):
             files = fn
         elif os.path.isdir(fn):
             files = Utilities.direntries(fn, 1, '*.py', 0)

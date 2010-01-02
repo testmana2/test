@@ -26,7 +26,7 @@ class PluginError(Exception):
         
         @return string representing the error message
         """
-        return unicode(self._errorMessage)
+        return str(self._errorMessage)
         
     def __str__(self):
         """

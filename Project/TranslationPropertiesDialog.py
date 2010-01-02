@@ -14,7 +14,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
 
-from Ui_TranslationPropertiesDialog import Ui_TranslationPropertiesDialog
+from .Ui_TranslationPropertiesDialog import Ui_TranslationPropertiesDialog
 
 import Utilities
 
@@ -52,7 +52,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
             "SOURCES"    : [], 
             "FORMS"      : [], 
         }
-        for pattern, filetype in self.project.pdata["FILETYPES"].items():
+        for pattern, filetype in list(self.project.pdata["FILETYPES"].items()):
             if filetype in patterns:
                 patterns[filetype].append(pattern)
         self.filters = self.trUtf8("Source Files ({0});;")\

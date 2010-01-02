@@ -14,9 +14,9 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4DirCompleter
 
-from SvnRepoBrowserDialog import SvnRepoBrowserDialog
-from Ui_SvnNewProjectOptionsDialog import Ui_SvnNewProjectOptionsDialog
-from Config import ConfigSvnProtocols
+from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
+from .Ui_SvnNewProjectOptionsDialog import Ui_SvnNewProjectOptionsDialog
+from .Config import ConfigSvnProtocols
 
 import Utilities
 

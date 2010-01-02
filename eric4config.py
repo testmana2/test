@@ -40,4 +40,4 @@ def getConfig(name):
     except KeyError:
         pass
 
-    raise AttributeError, '"%s" is not a valid configuration value' % name
+    raise AttributeError('"%s" is not a valid configuration value' % name)

@@ -7,8 +7,8 @@
 Module implementing the Templates configuration page.
 """
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_TemplatesPage import Ui_TemplatesPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_TemplatesPage import Ui_TemplatesPage
 
 import Preferences
 

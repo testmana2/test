@@ -15,10 +15,10 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from Ui_QRegExpWizardDialog import Ui_QRegExpWizardDialog
+from .Ui_QRegExpWizardDialog import Ui_QRegExpWizardDialog
 
-from QRegExpWizardRepeatDialog import QRegExpWizardRepeatDialog
-from QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
+from .QRegExpWizardRepeatDialog import QRegExpWizardRepeatDialog
+from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
 
 import UI.PixmapCache
 
@@ -239,14 +239,14 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                     return
             
             try:
-                f=open(Utilities.toNativeSeparators(fname), "wb")
+                f=open(Utilities.toNativeSeparators(fname), "w")
                 f.write(self.regexpLineEdit.text())
                 f.close()
-            except IOError, err:
+            except IOError as err:
                 QMessageBox.information(self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(unicode(err)))
+                                """<p>Reason: {0}</p>""").format(str(err)))
     
     @pyqtSlot()
     def on_loadButton_clicked(self):
@@ -260,15 +260,15 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
-                f=open(Utilities.toNativeSeparators(fname), "rb")
+                f=open(Utilities.toNativeSeparators(fname), "r")
                 regexp = f.read()
                 f.close()
                 self.regexpLineEdit.setText(regexp)
-            except IOError, err:
+            except IOError as err:
                 QMessageBox.information(self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("""<p>The regular expression could not be saved.</p>"""
-                                """<p>Reason: {0}</p>""").format(unicode(err)))
+                                """<p>Reason: {0}</p>""").format(str(err)))
 
     @pyqtSlot()
     def on_copyButton_clicked(self):

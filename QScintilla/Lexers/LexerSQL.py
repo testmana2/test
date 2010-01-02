@@ -9,7 +9,7 @@ Module implementing a SQL lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerSQL
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerSQL(QsciLexerSQL, Lexer):

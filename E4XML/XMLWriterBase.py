@@ -8,11 +8,7 @@ Module implementing a base class for all of eric4s XML writers.
 """
 
 import os
-from types import *
-try:
-    import cPickle as pickle
-except ImportError:
-    import pickle
+import pickle
 
 class XMLWriterBase(object):
     """
@@ -27,21 +23,21 @@ class XMLWriterBase(object):
         self.pf = file
         
         self.basics = {
-            NoneType    : self._write_none,
-            IntType     : self._write_int,
-            LongType    : self._write_long,
-            FloatType   : self._write_float,
-            ComplexType : self._write_complex,
-            BooleanType : self._write_bool,
-            StringType  : self._write_string,
-            UnicodeType : self._write_unicode,
-            TupleType   : self._write_tuple,
-            ListType    : self._write_list,
-            DictType    : self._write_dictionary,
+            type(None) : self._write_none,
+            type(1)    : self._write_int,
+            type(1.1)  : self._write_float,
+            type(1+1j) : self._write_complex,
+            type(True) : self._write_bool,
+            type("")   : self._write_string,
+##            UnicodeType : self._write_unicode,  # should be bytes
+            type((1,)) : self._write_tuple,
+            type([])   : self._write_list,
+            type({})   : self._write_dictionary,
+            # TODO: add set
         }
         
-        self.NEWPARA = unichr(0x2029)
-        self.NEWLINE = unichr(0x2028)
+        self.NEWPARA = chr(0x2029)
+        self.NEWLINE = chr(0x2028)
         
     def _write(self, s, newline = True):
         """
@@ -50,7 +46,8 @@ class XMLWriterBase(object):
         @param s string to be written to the XML file
         @param newline flag indicating a linebreak
         """
-        self.pf.write("%s%s" % (s.encode('utf-8'), 
+##        self.pf.write("%s%s" % (s.encode('utf-8'), 
+        self.pf.write("%s%s" % (s, 
             newline and os.linesep or ""))
         
     def writeXML(self):
@@ -163,6 +160,7 @@ class XMLWriterBase(object):
         """
         self._write('%s<string>%s</string>' % ("  " * indent, self.escape(value)))
         
+    # TODO: add method for writing bytes
     def _write_unicode(self, value, indent):
         """
         Protected method to dump an UnicodeType object.
@@ -208,8 +206,7 @@ class XMLWriterBase(object):
         self._write('%s<dict>' % ("  " * indent))
         nindent1 = indent + 1
         nindent2 = indent + 2
-        keys = value.keys()
-        keys.sort()
+        keys = sorted(list(value.keys()))
         for key in keys:
             self._write('%s<key>' % ("  " * nindent1))
             self._writeBasics(key, nindent2)

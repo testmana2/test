@@ -16,7 +16,7 @@ from E4Gui.E4Application import e4App
 
 from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
 
-from Ui_FileDialogWizardDialog import Ui_FileDialogWizardDialog
+from .Ui_FileDialogWizardDialog import Ui_FileDialogWizardDialog
 
 class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
     """

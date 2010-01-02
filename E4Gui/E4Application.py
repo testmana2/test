@@ -33,7 +33,7 @@ class E4Application(QApplication):
         @param object reference to the object
         @exception KeyError raised when the given name is already in use
         """
-        if self.__objectRegistry.has_key(name):
+        if name in self.__objectRegistry:
             raise KeyError('Object "%s" already registered.' % name)
         else:
             self.__objectRegistry[name] = object
@@ -46,7 +46,7 @@ class E4Application(QApplication):
         @return reference to the registered object
         @exception KeyError raised when the given name is not known
         """
-        if self.__objectRegistry.has_key(name):
+        if name in self.__objectRegistry:
             return self.__objectRegistry[name]
         else:
             raise KeyError('Object "%s" is not registered.' % name)
@@ -60,7 +60,7 @@ class E4Application(QApplication):
         @keyparam pluginType type of the plugin object (string)
         @exception KeyError raised when the given name is already in use
         """
-        if self.__pluginObjectRegistry.has_key(name):
+        if name in self.__pluginObjectRegistry:
             raise KeyError('Pluginobject "%s" already registered.' % name)
         else:
             self.__pluginObjectRegistry[name] = (object, pluginType)
@@ -71,7 +71,7 @@ class E4Application(QApplication):
         
         @param name name of the plugin object (string)
         """
-        if self.__pluginObjectRegistry.has_key(name):
+        if name in self.__pluginObjectRegistry:
             del self.__pluginObjectRegistry[name]
         
     def getPluginObject(self, name):
@@ -82,7 +82,7 @@ class E4Application(QApplication):
         @return reference to the registered plugin object
         @exception KeyError raised when the given name is not known
         """
-        if self.__pluginObjectRegistry.has_key(name):
+        if name in self.__pluginObjectRegistry:
             return self.__pluginObjectRegistry[name][0]
         else:
             raise KeyError('Pluginobject "%s" is not registered.' % name)
@@ -107,7 +107,7 @@ class E4Application(QApplication):
         @return type of the plugin object (string)
         @exception KeyError raised when the given name is not known
         """
-        if self.__pluginObjectRegistry.has_key(name):
+        if name in self.__pluginObjectRegistry:
             return self.__pluginObjectRegistry[name][1]
         else:
             raise KeyError('Pluginobject "%s" is not registered.' % name)

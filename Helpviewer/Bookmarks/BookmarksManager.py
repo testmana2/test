@@ -13,11 +13,11 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtWebKit import QWebPage
 
-from BookmarkNode import BookmarkNode
-from BookmarksModel import BookmarksModel
-from DefaultBookmarks import DefaultBookmarks
-from XbelReader import XbelReader
-from XbelWriter import XbelWriter
+from .BookmarkNode import BookmarkNode
+from .BookmarksModel import BookmarksModel
+from .DefaultBookmarks import DefaultBookmarks
+from .XbelReader import XbelReader
+from .XbelWriter import XbelWriter
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -348,7 +348,7 @@ class BookmarksManager(QObject):
                 return
             
             webpage = QWebPage()
-            webpage.mainFrame().setHtml(unicode(inFile.readAll()))
+            webpage.mainFrame().setHtml(inFile.readAll())
             result = webpage.mainFrame().evaluateJavaScript(extract_js)
             buffer_ = QBuffer(result)
             buffer_.open(QIODevice.ReadOnly)

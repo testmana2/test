@@ -10,7 +10,7 @@ Module implementing a dialog for the configuration of a keyboard shortcut.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_ShortcutDialog import Ui_ShortcutDialog
+from .Ui_ShortcutDialog import Ui_ShortcutDialog
 
 class ShortcutDialog(QDialog, Ui_ShortcutDialog):
     """

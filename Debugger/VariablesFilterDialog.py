@@ -13,7 +13,7 @@ from PyQt4.QtGui import *
 from Debugger.Config import ConfigVarTypeDispStrings
 import Preferences
 
-from Ui_VariablesFilterDialog import Ui_VariablesFilterDialog
+from .Ui_VariablesFilterDialog import Ui_VariablesFilterDialog
 
 
 class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):

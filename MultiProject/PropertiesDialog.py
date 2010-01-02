@@ -9,7 +9,7 @@ Module implementing the multi project properties dialog.
 
 from PyQt4.QtGui import QDialog
 
-from Ui_PropertiesDialog import Ui_PropertiesDialog
+from .Ui_PropertiesDialog import Ui_PropertiesDialog
 
 class PropertiesDialog(QDialog, Ui_PropertiesDialog):
     """

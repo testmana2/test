@@ -12,8 +12,8 @@ import time
 
 from E4Gui.E4Application import e4App
 
-from XMLWriterBase import XMLWriterBase
-from Config import multiProjectFileFormatVersion
+from .XMLWriterBase import XMLWriterBase
+from .Config import multiProjectFileFormatVersion
 
 import Preferences
 import Utilities

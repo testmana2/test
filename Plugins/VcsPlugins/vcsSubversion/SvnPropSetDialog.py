@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from Ui_SvnPropSetDialog import Ui_SvnPropSetDialog
+from .Ui_SvnPropSetDialog import Ui_SvnPropSetDialog
 
 import Utilities
 

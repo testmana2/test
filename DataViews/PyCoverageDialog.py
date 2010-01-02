@@ -14,10 +14,10 @@ import types
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_PyCoverageDialog import Ui_PyCoverageDialog
+from .Ui_PyCoverageDialog import Ui_PyCoverageDialog
 
 import Utilities
-from DebugClients.Python.coverage import coverage
+from DebugClients.Python3.coverage import coverage
 
 class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
     """
@@ -137,7 +137,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         
         self.cfn = "%s.coverage" % self.basename
         
-        if type(fn) is types.ListType:
+        if isinstance(fn, list):
             files = fn
             self.path = os.path.dirname(cfn)
         elif os.path.isdir(fn):

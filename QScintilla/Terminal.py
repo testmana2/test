@@ -17,8 +17,8 @@ from PyQt4.Qsci import QsciScintilla
 
 from E4Gui.E4Application import e4App
 
-import Lexers
-from QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+from . import Lexers
+from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
 
 import Preferences
 import Utilities
@@ -26,7 +26,7 @@ import Utilities
 import UI.PixmapCache
 from Utilities import toUnicode
 
-from ShellHistoryDialog import ShellHistoryDialog
+from .ShellHistoryDialog import ShellHistoryDialog
 
 class Terminal(QsciScintillaCompat):
     """
@@ -179,7 +179,7 @@ class Terminal(QsciScintillaCompat):
         """
         Private method to process the output of the shell.
         """
-        output = unicode(self.__process.readAllStandardOutput(), 
+        output = str(self.__process.readAllStandardOutput(), 
                          self.__ioEncoding, 'replace')
         self.__write(self.ansi_re.sub("", output))
         self.__lastPos = self.__getEndPos()

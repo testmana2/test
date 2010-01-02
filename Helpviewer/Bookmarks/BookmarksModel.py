@@ -9,9 +9,9 @@ Module implementing the bookmark model class.
 
 from PyQt4.QtCore import *
 
-from BookmarkNode import BookmarkNode
-from XbelWriter import XbelWriter
-from XbelReader import XbelReader
+from .BookmarkNode import BookmarkNode
+from .XbelWriter import XbelWriter
+from .XbelReader import XbelReader
 
 import Helpviewer.HelpWindow
 
@@ -382,7 +382,7 @@ class BookmarksModel(QAbstractItemModel):
                 return False
             
             node = BookmarkNode(BookmarkNode.Bookmark, parentNode)
-            node.url = unicode(data.urls()[0].toEncoded())
+            node.url = bytes(data.urls()[0].toEncoded()).decode()
             
             if data.hasText():
                 node.title = data.text()

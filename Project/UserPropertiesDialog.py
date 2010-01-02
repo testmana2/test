@@ -14,7 +14,7 @@ from E4Gui.E4Application import e4App
 
 import Preferences
 
-from Ui_UserPropertiesDialog import Ui_UserPropertiesDialog
+from .Ui_UserPropertiesDialog import Ui_UserPropertiesDialog
 
 class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
     """
@@ -45,8 +45,8 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
         enableVcsGroup = False
         if self.project.pdata["VCS"]:
             found = False
-            for indicator, vcsData in e4App().getObject("PluginManager")\
-                                             .getVcsSystemIndicators().items():
+            for indicator, vcsData in list(e4App().getObject("PluginManager")\
+                                             .getVcsSystemIndicators().items()):
                 for vcsSystem, vcsSystemDisplay in vcsData:
                     if vcsSystem == self.project.pdata["VCS"][0]:
                         found = True

@@ -9,7 +9,7 @@ Module implementing a Fortran lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerFortran, QsciScintilla
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerFortran(QsciLexerFortran, Lexer):

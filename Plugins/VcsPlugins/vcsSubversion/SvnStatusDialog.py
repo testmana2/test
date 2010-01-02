@@ -15,7 +15,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from Ui_SvnStatusDialog import Ui_SvnStatusDialog
+from .Ui_SvnStatusDialog import Ui_SvnStatusDialog
 
 import Preferences
 
@@ -292,7 +292,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
            '-u' in self.vcs.options['status']:
             self.activateWindow()
             self.raise_()
-        if type(fn) is types.ListType:
+        if isinstance(fn, list):
             self.dname, fnames = self.vcs.splitPathList(fn)
             self.vcs.addArguments(args, fnames)
         else:
@@ -376,7 +376,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                s = unicode(self.process.readLine())
+                s = str(self.process.readLine(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace')
                 if self.rx_status.exactMatch(s):
                     flags = self.rx_status.cap(1)
                     rev = self.rx_status.cap(2)
@@ -405,7 +407,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = unicode(self.process.readAllStandardError())
+            s = str(self.process.readAllStandardError(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
         

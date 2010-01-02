@@ -20,8 +20,8 @@ import Preferences
 
 from E4Gui.E4LineEdit import E4LineEdit
 
-from OpenSearch.OpenSearchManager import OpenSearchManager
-from OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
+from .OpenSearch.OpenSearchManager import OpenSearchManager
+from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
 
 class HelpWebSearchWidget(QWidget):
     """

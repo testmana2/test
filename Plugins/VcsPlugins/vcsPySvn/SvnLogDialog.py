@@ -15,11 +15,11 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from SvnUtilities import formatTime
+from .SvnUtilities import formatTime
 
-from SvnDialogMixin import SvnDialogMixin
-from Ui_SvnLogDialog import Ui_SvnLogDialog
-from SvnDiffDialog import SvnDiffDialog
+from .SvnDialogMixin import SvnDialogMixin
+from .Ui_SvnLogDialog import Ui_SvnLogDialog
+from .SvnDiffDialog import SvnDiffDialog
 
 import Utilities
 
@@ -170,7 +170,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                         self.contents.insertHtml(dstr)
                 
                 self.contents.insertHtml('<hr /><br />\n')
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             locker.unlock()
             self.__showError(e.args[0])
         os.chdir(cwd)
@@ -215,7 +215,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         if Utilities.isWindowsPlatform():
             if filename.startswith("/"):
                 filename = filename[1:]
-        ver = unicode(url.encodedQuery())
+        ver = str(url.encodedQuery())
         v1 = ver.split('_')[0]
         v2 = ver.split('_')[1]
         if not v1 or not v2:

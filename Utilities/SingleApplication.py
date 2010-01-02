@@ -55,9 +55,9 @@ class SingleApplicationServer(QLocalServer):
         Private method to handle data from the client.
         """
         while self.qsock and self.qsock.canReadLine():
-            line = unicode(self.qsock.readLine())
+            line = bytes(self.qsock.readLine()).decode()
             
-##            print line          ##debug
+##            print(line)          ##debug
             
             eoc = line.find('<') + 1
             

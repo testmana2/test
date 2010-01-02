@@ -16,7 +16,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
 
-from Ui_EricapiConfigDialog import Ui_EricapiConfigDialog
+from .Ui_EricapiConfigDialog import Ui_EricapiConfigDialog
 import Utilities
 import DocumentationTools
 
@@ -51,7 +51,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         
         # combine it with the values of parms
         if parms is not None:
-            for key, value in parms.items():
+            for key, value in list(parms.items()):
                 self.parameters[key] = parms[key]
         
         self.outputFileCompleter = E4FileCompleter(self.outputFileEdit)

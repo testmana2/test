@@ -10,7 +10,7 @@ Module implementing the spell checking dialog.
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import *
 
-from Ui_SpellCheckingDialog import Ui_SpellCheckingDialog
+from .Ui_SpellCheckingDialog import Ui_SpellCheckingDialog
 
 import Utilities
 
@@ -47,7 +47,7 @@ class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
         Private method to advance to the next error.
         """
         try:
-            self.__spell.next()
+            next(self.__spell)
         except StopIteration:
             self.__enableButtons(False)
             self.contextLabel.setText("")

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2003 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -31,65 +31,64 @@ def usage():
     It prints a reference of all commandline parameters that may
     be used and ends the application.
     """
-    print "eric4-api"
-    print
-    print "Copyright (c) 2004 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>."
-    print
-    print "Usage:"
-    print
-    print "  eric4-api [options] files..."
-    print
-    print "where files can be either python modules, package"
-    print "directories or ordinary directories."
-    print
-    print "Options:"
-    print
-    print "  -b name or --base name"
-    print "        Use the given name as the name of the base package."
-    print "  -h or --help"
-    print "        Show this help and exit."
-    print "  -o filename or --output=filename"
-    print "        Write the API information to the named file. A '%L' placeholder"
-    print "        is replaced by the language of the API file (see --language)."
-    print "  --oldstyle"
-    print "        Generate API files for QScintilla prior to 1.7."
-    print "  -p or --private"
-    print "        Include private methods and functions."
-    print "  -R, -r or --recursive"
-    print "        Perform a recursive search for source files."
-    print "  -t ext or --extension=ext"
-    print "        Add the given extension to the list of file extensions."
-    print "        This option may be given multiple times."
-    print "  -V or --version"
-    print "        Show version information and exit."
-    print "  -x directory or --exclude=directory"
-    print "        Specify a directory basename to be excluded."
-    print "        This option may be repeated multiple times."
-    print "  --exclude-file=pattern"
-    print "        Specify a filename pattern of files to be excluded."
-    print "        This option may be repeated multiple times."
-    print "  -l language or --language=language"
-    print "        Generate an API file for the given programming language."
-    print "        Supported programming languages are:"
+    print("eric4-api")
+    print()
+    print("Copyright (c) 2004 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>.")
+    print()
+    print("Usage:")
+    print()
+    print("  eric4-api [options] files...")
+    print()
+    print("where files can be either python modules, package")
+    print("directories or ordinary directories.")
+    print()
+    print("Options:")
+    print()
+    print("  -b name or --base name")
+    print("        Use the given name as the name of the base package.")
+    print("  -h or --help")
+    print("        Show this help and exit.")
+    print("  -o filename or --output=filename")
+    print("        Write the API information to the named file. A '%L' placeholder")
+    print("        is replaced by the language of the API file (see --language).")
+    print("  --oldstyle")
+    print("        Generate API files for QScintilla prior to 1.7.")
+    print("  -p or --private")
+    print("        Include private methods and functions.")
+    print("  -R, -r or --recursive")
+    print("        Perform a recursive search for source files.")
+    print("  -t ext or --extension=ext")
+    print("        Add the given extension to the list of file extensions.")
+    print("        This option may be given multiple times.")
+    print("  -V or --version")
+    print("        Show version information and exit.")
+    print("  -x directory or --exclude=directory")
+    print("        Specify a directory basename to be excluded.")
+    print("        This option may be repeated multiple times.")
+    print("  --exclude-file=pattern")
+    print("        Specify a filename pattern of files to be excluded.")
+    print("        This option may be repeated multiple times.")
+    print("  -l language or --language=language")
+    print("        Generate an API file for the given programming language.")
+    print("        Supported programming languages are:")
     for lang in sorted(DocumentationTools.supportedExtensionsDictForApis.keys()):
-        print "            * %s" % lang
-    print "        The default is 'Python'."
-    print "        This option may be repeated multiple times."
+        print("            * %s" % lang)
+    print("        The default is 'Python'.")
+    print("        This option may be repeated multiple times.")
     sys.exit(1)
 
 def version():
     """
     Function to show the version information.
     """
-    print \
-"""eric4-api  %s
+    print("""eric4-api  %s
 
 Eric4 API generator.
 
 Copyright (c) 2004 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see the LICENSE.GPL3 for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.""" % Version
+PARTICULAR PURPOSE.""" % Version)
     sys.exit(1)
 
 def main():
@@ -150,7 +149,7 @@ def main():
             includePrivate = True
         elif k in ["-l", "--language"]:
             if v not in progLanguages:
-                if v not in DocumentationTools.supportedExtensionsDictForApis.keys():
+                if v not in list(DocumentationTools.supportedExtensionsDictForApis.keys()):
                     sys.stderr.write("Wrong language given: %s. Aborting\n" % v)
                     sys.exit(1)
                 else:
@@ -241,10 +240,10 @@ def main():
                             basename = basename, inpackage = inpackage)
                         apiGenerator = APIGenerator(module)
                         api = apiGenerator.genAPI(newStyle, basePackage, includePrivate)
-                    except IOError, v:
+                    except IOError as v:
                         sys.stderr.write("%s error: %s\n" % (file, v[1]))
                         continue
-                    except ImportError, v:
+                    except ImportError as v:
                         sys.stderr.write("%s error: %s\n" % (file, v))
                         continue
                     
@@ -257,10 +256,10 @@ def main():
         if outdir and not os.path.exists(outdir):
             os.makedirs(outdir)
         try:
-            out = open(outputFile, "wb")
+            out = open(outputFile, "w")
             out.write(os.linesep.join(sorted(apis)))
             out.close()
-        except IOError, v:
+        except IOError as v:
             sys.stderr.write("%s error: %s\n" % (outputFile, v[1]))
             sys.exit(3)
     

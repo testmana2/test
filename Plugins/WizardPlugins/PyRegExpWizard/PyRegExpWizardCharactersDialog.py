@@ -10,7 +10,7 @@ Module implementing a dialog for entering character classes.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_PyRegExpWizardCharactersDialog import Ui_PyRegExpWizardCharactersDialog
+from .Ui_PyRegExpWizardCharactersDialog import Ui_PyRegExpWizardCharactersDialog
 
 
 class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog):

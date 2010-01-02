@@ -17,8 +17,8 @@ from E4Gui.E4Application import e4App
 
 from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_DebuggerGeneralPage import Ui_DebuggerGeneralPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_DebuggerGeneralPage import Ui_DebuggerGeneralPage
 
 import Preferences
 import Utilities

@@ -12,9 +12,9 @@ from PyQt4.QtGui import *
 
 import Helpviewer.HelpWindow
 
-from BookmarkNode import BookmarkNode
+from .BookmarkNode import BookmarkNode
 
-from Ui_AddBookmarkDialog import Ui_AddBookmarkDialog
+from .Ui_AddBookmarkDialog import Ui_AddBookmarkDialog
 
 class AddBookmarkProxyModel(QSortFilterProxyModel):
     """

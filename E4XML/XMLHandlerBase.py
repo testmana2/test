@@ -8,11 +8,8 @@ Module implementing a base class for all of eric4s XML handlers.
 """
 
 import sys
-from types import UnicodeType
-try:
-    import cPickle as pickle
-except ImportError:
-    import pickle
+##from types import UnicodeType
+import pickle as pickle
 
 from xml.sax.handler import ContentHandler
 
@@ -45,8 +42,8 @@ class XMLHandlerBase(ContentHandler):
         self.stack = []
         self._marker = '__MARKER__'
         
-        self.NEWPARA = unichr(0x2029)
-        self.NEWLINE = unichr(0x2028)
+        self.NEWPARA = chr(0x2029)
+        self.NEWLINE = chr(0x2028)
         
     def utf8_to_code(self, text):
         """
@@ -54,8 +51,9 @@ class XMLHandlerBase(ContentHandler):
         
         @param text the text to encode (string)
         """
-        if type(text) is not UnicodeType:
-            text = unicode(text, "utf-8")
+        # TODO: convert calls to this method to not use it anymore
+##        if not isinstance(text, UnicodeType):
+##            text = str(text, "utf-8")
         return text
         
     def unescape(self, text, attribute = False):
@@ -158,7 +156,7 @@ class XMLHandlerBase(ContentHandler):
         """
         Handler method for the "long" end tag.
         """
-        self.stack.append(long(self.buffer.strip()))
+        self.stack.append(int(self.buffer.strip()))
         
     def endBool(self):
         """
@@ -193,7 +191,7 @@ class XMLHandlerBase(ContentHandler):
         """
         Handler method for the "unicode" end tag.
         """
-        u = unicode(self.utf8_to_code(self.unescape(self.buffer)))
+        u = str(self.utf8_to_code(self.unescape(self.buffer)))
         self.stack.append(u)
         
     def startList(self, attrs):

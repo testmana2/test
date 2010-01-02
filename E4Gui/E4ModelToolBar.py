@@ -10,7 +10,7 @@ Module implementing a tool bar populated from a QAbstractItemModel.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4ModelMenu import E4ModelMenu
+from .E4ModelMenu import E4ModelMenu
 
 class E4ModelToolBar(QToolBar):
     """

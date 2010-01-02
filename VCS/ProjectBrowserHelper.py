@@ -19,7 +19,7 @@ from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 from Project.ProjectBrowserModel import ProjectBrowserSimpleDirectoryItem, \
     ProjectBrowserFileItem, ProjectBrowserDirectoryItem
 
-from RepositoryInfoDialog import VcsRepositoryInfoDialog
+from .RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 import Preferences
 

@@ -12,8 +12,8 @@ import time
 
 from E4Gui.E4Application import e4App
 
-from XMLWriterBase import XMLWriterBase
-from Config import projectFileFormatVersion
+from .XMLWriterBase import XMLWriterBase
+from .Config import projectFileFormatVersion
 
 import Preferences
 import Utilities
@@ -164,7 +164,7 @@ class ProjectWriter(XMLWriterBase):
         
         # do the filetype associations
         self._write("  <FiletypeAssociations>")
-        for pattern, filetype in self.pdata["FILETYPES"].items():
+        for pattern, filetype in list(self.pdata["FILETYPES"].items()):
             self._write('    <FiletypeAssociation pattern="%s" type="%s" />' % \
                 (pattern, filetype))
         self._write("  </FiletypeAssociations>")
@@ -172,7 +172,7 @@ class ProjectWriter(XMLWriterBase):
         # do the lexer associations
         if self.pdata["LEXERASSOCS"]:
             self._write("  <LexerAssociations>")
-            for pattern, lexer in self.pdata["LEXERASSOCS"].items():
+            for pattern, lexer in list(self.pdata["LEXERASSOCS"].items()):
                 self._write('    <LexerAssociation pattern="%s" lexer="%s" />' % \
                     (pattern, lexer))
             self._write("  </LexerAssociations>")

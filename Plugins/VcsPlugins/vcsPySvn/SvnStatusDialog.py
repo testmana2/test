@@ -17,9 +17,9 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from SvnConst import svnStatusMap
-from SvnDialogMixin import SvnDialogMixin
-from Ui_SvnStatusDialog import Ui_SvnStatusDialog
+from .SvnConst import svnStatusMap
+from .SvnDialogMixin import SvnDialogMixin
+from .Ui_SvnStatusDialog import Ui_SvnStatusDialog
 
 import Preferences
 
@@ -221,7 +221,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         self.activateWindow()
         self.raise_()
         
-        if type(fn) is types.ListType:
+        if isinstance(fn, list):
             self.dname, fnames = self.vcs.splitPathList(fn)
         else:
             self.dname, fname = self.vcs.splitPath(fn)
@@ -303,7 +303,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                             break
                 if self._clientCancelCallback():
                     break
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             self.__showError(e.args[0]+'\n')
         locker.unlock()
         self.__finish()

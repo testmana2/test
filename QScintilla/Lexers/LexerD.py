@@ -9,7 +9,7 @@ Module implementing a D lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerD, QsciScintilla
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerD(QsciLexerD, Lexer):

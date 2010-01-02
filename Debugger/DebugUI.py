@@ -13,12 +13,12 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from UI.Info import *
-from VariablesFilterDialog import *
-from ExceptionsFilterDialog import *
-from StartDialog import *
-from EditBreakpointDialog import EditBreakpointDialog
+from .VariablesFilterDialog import *
+from .ExceptionsFilterDialog import *
+from .StartDialog import *
+from .EditBreakpointDialog import EditBreakpointDialog
 
-from DebugClientCapabilities import *
+from .DebugClientCapabilities import *
 import Preferences
 import Utilities
 import UI.PixmapCache

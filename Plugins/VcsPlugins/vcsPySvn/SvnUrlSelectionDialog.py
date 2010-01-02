@@ -14,7 +14,7 @@ from E4Gui.E4Application import e4App
 
 import pysvn
 
-from Ui_SvnUrlSelectionDialog import Ui_SvnUrlSelectionDialog
+from .Ui_SvnUrlSelectionDialog import Ui_SvnUrlSelectionDialog
 
 
 class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):

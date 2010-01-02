@@ -10,7 +10,7 @@ Module implementing an UML like class item.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from UMLItem import UMLItem
+from .UMLItem import UMLItem
 
 class ClassModel(object):
     """

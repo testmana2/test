@@ -11,7 +11,7 @@ from PyQt4.QtCore import *
 
 import Helpviewer.HelpWindow
 
-from AdBlockBlockedNetworkReply import AdBlockBlockedNetworkReply
+from .AdBlockBlockedNetworkReply import AdBlockBlockedNetworkReply
 
 class AdBlockNetwork(QObject):
     """
@@ -32,7 +32,7 @@ class AdBlockNetwork(QObject):
         if not manager.isEnabled():
             return None
         
-        urlString = unicode(url.toEncoded())
+        urlString = bytes(url.toEncoded()).decode()
         blockedRule = None
         blockingSubscription = None
         

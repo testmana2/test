@@ -9,7 +9,7 @@ Module implementing a dialog for entering a single template variable.
 
 from PyQt4.QtGui import QDialog
 
-from Ui_TemplateSingleVariableDialog import Ui_TemplateSingleVariableDialog
+from .Ui_TemplateSingleVariableDialog import Ui_TemplateSingleVariableDialog
 
 
 class TemplateSingleVariableDialog(QDialog, Ui_TemplateSingleVariableDialog):

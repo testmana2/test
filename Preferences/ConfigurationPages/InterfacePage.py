@@ -15,8 +15,8 @@ from PyQt4.QtGui import QStyleFactory, QFileDialog
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_InterfacePage import Ui_InterfacePage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_InterfacePage import Ui_InterfacePage
 
 import Preferences
 import Utilities
@@ -182,7 +182,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         Preferences.setUI("SingleCloseButton", 
             self.tabsCloseButtonCheckBox.isChecked())
         
-        for key in self.uiColours.keys():
+        for key in list(self.uiColours.keys()):
             Preferences.setUI(key, self.uiColours[key])
         
     def __populateStyleCombo(self):
@@ -190,8 +190,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         Private method to populate the style combo box.
         """
         curStyle = Preferences.getUI("Style")
-        styles = QStyleFactory.keys()
-        styles.sort()
+        styles = sorted(list(QStyleFactory.keys()))
         self.styleComboBox.addItem(self.trUtf8('System'), "System")
         for style in styles:
             self.styleComboBox.addItem(style, style)
@@ -213,16 +212,14 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         locales = {}
         for fn in fnlist:
             locale = os.path.basename(fn)[6:-3]
-            if not locales.has_key(locale):
+            if locale not in locales:
                 translator = QTranslator()
                 translator.load(fn)
                 locales[locale] = \
                     translator.translate("InterfacePage", "English", 
                                          "Translate this with your language") + \
                     " ({0})".format(locale)
-        localeList = locales.keys()
-        localeList.sort()
-        
+        localeList = sorted(list(locales.keys()))
         try:
             uiLanguage = Preferences.getUILanguage()
             if uiLanguage == "None" or uiLanguage is None:

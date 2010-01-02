@@ -56,7 +56,7 @@ def compileUiFiles(dir, recurse = False):
                     # Allow the caller to change the name of the .py file or generate
                     # it in a different directory.
                     if map is not None:
-                        py_dir, py_file = map(py_dir, py_file)
+                        py_dir, py_file = list(map(py_dir, py_file))
 
                     # Make sure the destination directory exists.
                     try:

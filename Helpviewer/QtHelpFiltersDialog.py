@@ -11,7 +11,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from PyQt4.QtHelp import QHelpEngineCore
 
-from Ui_QtHelpFiltersDialog import Ui_QtHelpFiltersDialog
+from .Ui_QtHelpFiltersDialog import Ui_QtHelpFiltersDialog
 
 class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
     """

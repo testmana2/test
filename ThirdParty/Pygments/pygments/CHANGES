@@ -3,6 +3,19 @@ Pygments changelog
 
 Issue numbers refer to the tracker at http://dev.pocoo.org/projects/pygments/.
 
+Version 1.1.1
+-------------
+(bugfix release, released Sep 15, 2009)
+
+- Fixed the BBCode lexer (#435).
+
+- Added support for new Jinja2 keywords.
+
+- Fixed test suite failures.
+
+- Added Gentoo-specific suffixes to Bash lexer.
+
+
 Version 1.1
 -----------
 (codename Brillouin, released Sep 11, 2009)

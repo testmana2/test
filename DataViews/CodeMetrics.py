@@ -15,12 +15,10 @@ Module implementing a simple Python code metrics analyzer.
 """
 
 import os
-import cStringIO
+import io
 import keyword
 import token
 import tokenize
-if not hasattr(tokenize, 'NL'):
-    raise ValueError("tokenize.NL doesn't exist -- tokenize module too old")
     
 import Utilities
 
@@ -63,11 +61,23 @@ class Parser(object):
             
         self.lines = text.count(os.linesep)
         
-        source = cStringIO.StringIO(text)
+        source = io.BytesIO(text.encode("utf-8"))
         try:
-            tokenize.tokenize(source.readline, self.__tokeneater)
-        except tokenize.TokenError, msg:
-            print "Token Error: %s" % str(msg)
+            gen = tokenize.tokenize(source.readline)
+            for toktype, toktext, start, end, line in gen:
+                (srow, scol) = start
+                (erow, ecol) = end
+                if toktype in [token.NEWLINE, tokenize.NL]:
+                    self.__addToken(toktype, os.linesep, srow, scol, line)
+                elif toktype in [token.INDENT, token.DEDENT]:
+                    self.__addToken(toktype, '', srow, scol, line)
+                elif toktype == token.NAME and keyword.iskeyword(toktext):
+                    toktype = KEYWORD
+                    self.__addToken(toktype, toktext, srow, scol, line)
+                else:
+                    self.__addToken(toktype, toktext, srow, scol, line)
+        except tokenize.TokenError as msg:
+            print("Token Error: %s" % str(msg))
             return
         
         return
@@ -84,31 +94,6 @@ class Parser(object):
         """
         self.tokenlist.append(Token(type=toktype, text=toktext, row=srow, 
                                     col=scol, line=line))
-        
-    def __tokeneater(self, toktype, toktext, (srow, scol), (erow, ecol), line):
-        """
-        Private method called by tokenize.tokenize.
-        
-        @param toktype the type of the token (int)
-        @param toktext the text of the token (string)
-        @param srow starting row of the token (int)
-        @param scol starting column of the token (int)
-        @param erow ending row of the token (int)
-        @param ecol ending column of the token (int)
-        @param line logical line the token was found (string)
-        """
-        if toktype in [token.NEWLINE, tokenize.NL]:
-            self.__addToken(toktype, os.linesep, srow, scol, line)
-            return
-            
-        if toktype in [token.INDENT, token.DEDENT]:
-            self.__addToken(toktype, '', srow, scol, line)
-            return
-            
-        if toktype == token.NAME and keyword.iskeyword(toktext):
-            toktype = KEYWORD
-            
-        self.__addToken(toktype, toktext, srow, scol, line)
 
 spacer = ' '
 
@@ -181,8 +166,8 @@ class SourceStat(object):
         Public method used to format and print the collected statistics.
         """
         label_len = 79 - len(spacer) - 6 * 6
-        print spacer + "FUNCTION / CLASS".ljust(label_len) + \
-            " START   END LINES  NLOC  COMM EMPTY"
+        print(spacer + "FUNCTION / CLASS".ljust(label_len) + \
+            " START   END LINES  NLOC  COMM EMPTY")
         for id in self.identifiers + ['TOTAL ']:
             label = id
             counters = self.counters.get(id, {})
@@ -194,7 +179,7 @@ class SourceStat(object):
                 else:
                     msg += " " * 6
 
-            print msg
+            print(msg)
 
     def getCounter(self, id, key):
         """
@@ -226,9 +211,9 @@ def analyze(filename, total):
     @param total dictionary receiving the overall code statistics
     @return a statistics object with the collected code statistics (SourceStat)
     """
-    file = open(filename, 'rb')
+    file = open(filename, 'r')
     try:
-        text = Utilities.decode(file.read())[0].encode('utf-8')
+        text = file.read()
     finally:
         file.close()
 
@@ -245,18 +230,18 @@ def analyze(filename, total):
         # counting
         if tok.type == NEWLINE:
             stats.inc('nloc')
-        if tok.type == COMMENT:
+        elif tok.type == COMMENT:
             stats.inc('comments')
-        if tok.type == EMPTY:
+        elif tok.type == EMPTY:
             if parser.tokenlist[idx-1].type == token.OP:
                 stats.inc('nloc')
             else:
                 stats.inc('empty')
-
-        if tok.type == INDENT: stats.indent(tok)
-        if tok.type == DEDENT: stats.dedent(tok)
-
-        if tok.type == KEYWORD:
+        elif tok.type == INDENT: 
+            stats.indent(tok)
+        elif tok.type == DEDENT: 
+            stats.dedent(tok)
+        elif tok.type == KEYWORD:
             if tok.text in ("class", "def"):
                 stats.push(parser.tokenlist[idx+1].text, tok.row)
 
@@ -287,14 +272,14 @@ def main():
     
     summarize(total, 'files', len(files))
     for file in files:
-        print file
+        print(file)
         stats = analyze(file, total)
         stats.dump()
         
-    print "\nSummary"
+    print("\nSummary")
     for key in ['files', 'lines', 'bytes', 'comments',
                 'empty lines', 'non-commentary lines']:
-        print key.ljust(20) + "%6d" % total[key]
+        print(key.ljust(20) + "%6d" % total[key])
     
     sys.exit(0)
 

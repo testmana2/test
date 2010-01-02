@@ -18,7 +18,7 @@ import re
 
 import Utilities
 import Utilities.ClassBrowsers as ClassBrowsers
-import ClbrBaseClasses
+from . import ClbrBaseClasses
 
 SUPPORTED_TYPES = [ClassBrowsers.RB_SOURCE]
     
@@ -267,12 +267,12 @@ def readmodule_ex(module, path=[]):
     classstack = [] # stack of (class, indent) pairs
     acstack = []    # stack of (access control, indent) pairs
     indent = 0
-    src = Utilities.decode(f.read())[0]
+    src = f.read()
     f.close()
 
     lineno, last_lineno_pos = 1, 0
     i = 0
-    while 1:
+    while True:
         m = _getnext(src, i)
         if not m:
             break
@@ -325,7 +325,7 @@ def readmodule_ex(module, path=[]):
                 # it's a function
                 f = Function(module, meth_name,
                              file, lineno, meth_sig)
-                if dict_counts.has_key(meth_name):
+                if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
                     meth_name = "%s_%d" % (meth_name, dict_counts[meth_name])
                 else:
@@ -362,13 +362,13 @@ def readmodule_ex(module, path=[]):
             cur_class = Class(module, class_name, inherit,
                               file, lineno)
             if not classstack:
-                if dict.has_key(class_name):
+                if class_name in dict:
                     cur_class = dict[class_name]
                 else:
                     dict[class_name] = cur_class
             else:
                 cls = classstack[-1][0]
-                if cls.classes.has_key(class_name):
+                if class_name in cls.classes:
                     cur_class = cls.classes[class_name]
                 elif cls.name == class_name or class_name == "self":
                     cur_class = cls
@@ -394,13 +394,13 @@ def readmodule_ex(module, path=[]):
             # remember this class
             cur_class = Module(module, module_name, file, lineno)
             if not classstack:
-                if dict.has_key(module_name):
+                if module_name in dict:
                     cur_class = dict[module_name]
                 else:
                     dict[module_name] = cur_class
             else:
                 cls = classstack[-1][0]
-                if cls.classes.has_key(module_name):
+                if module_name in cls.classes:
                     cur_class = cls.classes[module_name]
                 elif cls.name == module_name:
                     cur_class = cls
@@ -527,7 +527,7 @@ def readmodule_ex(module, path=[]):
             coding = m.group("Coding")
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start
-            if not dict.has_key("@@Coding@@"):
+            if "@@Coding@@" not in dict:
                 dict["@@Coding@@"] = ClbrBaseClasses.Coding(module, file, lineno, coding)
 
         else:

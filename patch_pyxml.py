@@ -26,17 +26,17 @@ def usage(rcode = 2):
     """
     global progName, pyxmlModDir
     
-    print "Usage:"
-    print "    %s [-h] [-d dir]" % (progName)
-    print "where:"
-    print "    -h             display this help message"
-    print "    -d dir         where pyXML is installed [default %s]" % \
-        (pyxmlModDir)
-    print
-    print "This script patches the file _xmlplus/parsers/xmlproc/xmlutils.py"
-    print "of the pyXML distribution to fix a bug causing it to fail"
-    print "for XML files containing non ASCII characters."
-    print
+    print("Usage:")
+    print("    %s [-h] [-d dir]" % (progName))
+    print("where:")
+    print("    -h             display this help message")
+    print("    -d dir         where pyXML is installed [default %s]" % \
+        (pyxmlModDir))
+    print()
+    print("This script patches the file _xmlplus/parsers/xmlproc/xmlutils.py")
+    print("of the pyXML distribution to fix a bug causing it to fail")
+    print("for XML files containing non ASCII characters.")
+    print()
 
     sys.exit(rcode)
 
@@ -64,9 +64,9 @@ def isPatched():
             os.path.join(pyxmlModDir, "parsers", "xmlproc", "xmlutils.py")
         f = open(filename, "r")
     except EnvironmentError:
-        print "Could not find the pyXML distribution. Please use the patch_pyxml.py"
-        print "script to apply a patch needed to fix a bug causing it to fail for"
-        print "XML files containing non ASCII characters."
+        print("Could not find the pyXML distribution. Please use the patch_pyxml.py")
+        print("script to apply a patch needed to fix a bug causing it to fail for")
+        print("XML files containing non ASCII characters.")
         return True # fake a found patch
     
     lines = f.readlines()
@@ -101,7 +101,7 @@ def patchPyXML():
             os.path.join(pyxmlModDir, "parsers", "xmlproc", "xmlutils.py")
         f = open(filename, "r")
     except EnvironmentError:
-        print "The file %s does not exist. Aborting." % filename
+        print("The file %s does not exist. Aborting." % filename)
         sys.exit(1)
     
     lines = f.readlines()
@@ -130,19 +130,19 @@ def patchPyXML():
     s.close()
     
     if not patched:
-        print "xmlutils.py is already patched."
+        print("xmlutils.py is already patched.")
         os.remove(sn)
     else:
         try:
             py_compile.compile(sn)
-        except py_compile.PyCompileError, e:
-            print "Error compiling %s. Aborting" % sn
-            print e
+        except py_compile.PyCompileError as e:
+            print("Error compiling %s. Aborting" % sn)
+            print(e)
             os.remove(sn)
             sys.exit(1)
-        except SyntaxError, e:
-            print "Error compiling %s. Aborting" % sn
-            print e
+        except SyntaxError as e:
+            print("Error compiling %s. Aborting" % sn)
+            print(e)
             os.remove(sn)
             sys.exit(1)
         
@@ -156,8 +156,8 @@ def patchPyXML():
             shutil.copy("%so" % sn, "%so" % filename)
             os.remove("%so" % sn)
             
-        print "xmlutils.py patched successfully."
-        print "Unpatched file copied to %s.orig." % filename
+        print("xmlutils.py patched successfully.")
+        print("Unpatched file copied to %s.orig." % filename)
     
 def main(argv):
     """

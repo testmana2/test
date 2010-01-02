@@ -12,8 +12,8 @@ from PyQt4.QtGui import QButtonGroup, QFileDialog
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_HelpViewersPage import Ui_HelpViewersPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_HelpViewersPage import Ui_HelpViewersPage
 
 import Preferences
 import Utilities

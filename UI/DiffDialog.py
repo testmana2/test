@@ -16,7 +16,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from Ui_DiffDialog import Ui_DiffDialog
+from .Ui_DiffDialog import Ui_DiffDialog
 import Utilities
 
 from difflib import SequenceMatcher
@@ -300,18 +300,18 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "wb")
+            f = open(fname, "w")
             txt = self.contents.toPlainText()
             try:
                 f.write(txt)
             except UnicodeError:
                 pass
             f.close()
-        except IOError, why:
+        except IOError as why:
             QMessageBox.critical(self, self.trUtf8('Save Diff'),
                 self.trUtf8('<p>The patch file <b>{0}</b> could not be saved.<br />'
                             'Reason: {1}</p>')
-                    .format(fname, unicode(why)))
+                    .format(fname, str(why)))
 
     @pyqtSlot()
     def on_diffButton_clicked(self):

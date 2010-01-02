@@ -50,7 +50,7 @@ def get_bool_opt(options, optname, default=None):
         return string
     elif isinstance(string, int):
         return bool(string)
-    elif not isinstance(string, basestring):
+    elif not isinstance(string, str):
         raise OptionError('Invalid type %r for option %s; use '
                           '1/0, yes/no, true/false, on/off' % (
                           string, optname))
@@ -80,7 +80,7 @@ def get_int_opt(options, optname, default=None):
 
 def get_list_opt(options, optname, default=None):
     val = options.get(optname, default)
-    if isinstance(val, basestring):
+    if isinstance(val, str):
         return val.split()
     elif isinstance(val, (list, tuple)):
         return list(val)
@@ -203,16 +203,16 @@ def looks_like_xml(text):
 if sys.version_info < (3,0):
     b = bytes = str
     u_prefix = 'u'
-    import StringIO, cStringIO
-    BytesIO = cStringIO.StringIO
-    StringIO = StringIO.StringIO
+    import io, io
+    BytesIO = io.StringIO
+    StringIO = io.StringIO
 else:
     import builtins
     bytes = builtins.bytes
     u_prefix = ''
     def b(s):
         if isinstance(s, str):
-            return bytes(map(ord, s))
+            return bytes(list(map(ord, s)))
         elif isinstance(s, bytes):
             return s
         else:

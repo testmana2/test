@@ -16,8 +16,8 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from Config import ConfigVarTypeDispStrings, ConfigVarTypeStrings
-from VariableDetailDialog import VariableDetailDialog
+from .Config import ConfigVarTypeDispStrings, ConfigVarTypeStrings
+from .VariableDetailDialog import VariableDetailDialog
 from Utilities import toUnicode
 
 import Preferences
@@ -401,8 +401,7 @@ class VariablesViewer(QTreeWidget):
                 self.__addItem(None, vtype, var, value)
             
             # reexpand tree
-            openItems = self.openItems[:]
-            openItems.sort()
+            openItems = sorted(self.openItems[:])
             self.openItems = []
             for itemPath in openItems:
                 itm = self.__findItem(itemPath, 0)
@@ -451,8 +450,7 @@ class VariablesViewer(QTreeWidget):
             subelementsAdded = True
 
         # reexpand tree
-        openItems = self.openItems[:]
-        openItems.sort()
+        openItems = sorted(self.openItems[:])
         self.openItems = []
         for itemPath in openItems:
             itm = self.__findItem(itemPath, 0)
@@ -524,10 +522,11 @@ class VariablesViewer(QTreeWidget):
         @param s the string to be converted (string)
         @return unicode representation of s (unicode object)
         """
-        if type(s) is type(u""):
+        # TODO: remove me
+        if isinstance(s, type("")):
             return s
         try:
-            u = unicode(s, self.loc)
+            u = str(s, self.loc)
         except TypeError:
             u = str(s)
         except UnicodeError:

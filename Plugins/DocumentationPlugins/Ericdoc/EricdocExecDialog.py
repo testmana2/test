@@ -12,7 +12,9 @@ import os.path
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_EricdocExecDialog import Ui_EricdocExecDialog
+from .Ui_EricdocExecDialog import Ui_EricdocExecDialog
+
+import Preferences
 
 class EricdocExecDialog(QDialog, Ui_EricdocExecDialog):
     """
@@ -132,7 +134,9 @@ class EricdocExecDialog(QDialog, Ui_EricdocExecDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = unicode(self.process.readLine())
+            s = str(self.process.readLine(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.contents.insertPlainText(s)
             self.contents.ensureCursorVisible()
         
@@ -147,6 +151,8 @@ class EricdocExecDialog(QDialog, Ui_EricdocExecDialog):
         
         while self.process.canReadLine():
             self.errorGroup.show()
-            s = unicode(self.process.readLine())
+            s = str(self.process.readLine(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

@@ -14,7 +14,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from Ui_InputDialogWizardDialog import Ui_InputDialogWizardDialog
+from .Ui_InputDialogWizardDialog import Ui_InputDialogWizardDialog
 
 class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
     """

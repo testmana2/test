@@ -14,10 +14,10 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from SvnConst import svnNotifyActionMap
+from .SvnConst import svnNotifyActionMap
 
-from SvnDialogMixin import SvnDialogMixin
-from Ui_SvnDialog import Ui_SvnDialog
+from .SvnDialogMixin import SvnDialogMixin
+from .Ui_SvnDialog import Ui_SvnDialog
 
 import Preferences
 

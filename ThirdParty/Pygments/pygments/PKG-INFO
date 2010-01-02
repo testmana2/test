@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: Pygments
-Version: 1.1
+Version: 1.1.1
 Summary: Pygments is a syntax highlighting package written in Python.
 Home-page: http://pygments.org/
 Author: Georg Brandl
@@ -39,4 +39,6 @@ Classifier: Intended Audience :: End Users/Desktop
 Classifier: Intended Audience :: System Administrators
 Classifier: Development Status :: 5 - Production/Stable
 Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: OS Independent

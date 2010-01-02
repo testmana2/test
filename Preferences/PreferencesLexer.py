@@ -248,7 +248,7 @@ class PreferencesLexer(QsciLexer):
         @param style the style number (int)
         @return description of the style (string)
         """
-        if self.descriptions.has_key(style):
+        if style in self.descriptions:
             return self.descriptions[style]
         else:
             return ""

@@ -19,7 +19,7 @@ from Globals import recentNameFiles
 
 import Preferences
 
-from BookmarkedFilesDialog import BookmarkedFilesDialog
+from .BookmarkedFilesDialog import BookmarkedFilesDialog
 
 from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 from QScintilla.Editor import Editor
@@ -167,7 +167,7 @@ class ViewManager(QObject):
         Preferences.Prefs.rsettings.sync()
         rs = Preferences.Prefs.rsettings.value(recentNameFiles)
         if rs is not None:
-            for f in rs:
+            for f in Preferences.toList(rs):
                 if QFileInfo(f).exists():
                     self.recent.append(f)
         
@@ -424,6 +424,17 @@ class ViewManager(QObject):
         
         # list containing all spell checking actions
         self.spellingActions = []
+        
+        self.__actions = {
+            "bookmark"  : self.bookmarkActions, 
+            "edit"      : self.editActions, 
+            "file"      : self.fileActions, 
+            "macro"     : self.macroActions, 
+            "search"    : self.searchActions, 
+            "spelling"  : self.spellingActions, 
+            "view"      : self.viewActions, 
+            "window"    : self.windowActions, 
+        }
         
         self._initWindowActions()
         self.__initFileActions()
@@ -697,8 +708,7 @@ class ViewManager(QObject):
         menu = QMenu(QApplication.translate('ViewManager', "Export as"))
         
         supportedExporters = QScintilla.Exporters.getSupportedFormats()
-        exporters = supportedExporters.keys()
-        exporters.sort()
+        exporters = sorted(list(supportedExporters.keys()))
         for exporter in exporters:
             act = menu.addAction(supportedExporters[exporter])
             act.setData(exporter)
@@ -3064,7 +3074,7 @@ class ViewManager(QObject):
         """
         try:
             newWin, editor = self.getEditor(fn, filetype = filetype)
-        except IOError:
+        except (IOError, UnicodeDecodeError):
             return
         
         if newWin:
@@ -3178,7 +3188,7 @@ class ViewManager(QObject):
         """
         try:
             newWin, self.currentEditor = self.getEditor(fn)
-        except IOError:
+        except (IOError, UnicodeDecodeError):
             return
         
         enc = self.currentEditor.getEncoding()
@@ -4683,15 +4693,14 @@ class ViewManager(QObject):
         
         @param type string denoting the action set to get.
                 It must be one of "edit", "file", "search",
-                "view", "window", "macro" or "bookmark"
+                "view", "window", "macro", "bookmark" or
+                "spelling".
         @return list of all actions (list of E4Action)
         """
         try:
-            exec 'actionList = self.%sActions[:]' % type
-        except AttributeError:
-            actionList = []
-        
-        return actionList
+            return self.__actions[type][:]
+        except KeyError:
+            return []
         
     def __editorCommand(self, cmd):
         """

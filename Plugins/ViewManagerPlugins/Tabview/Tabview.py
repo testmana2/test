@@ -111,11 +111,11 @@ class TabBar(E4WheelTabBar):
         @param event reference to the drop event (QDropEvent)
         """
         mimeData = event.mimeData()
-        oldID = mimeData.data("tabbar-id")
-        fromIndex = mimeData.data("source-index")
+        oldID = mimeData.data("tabbar-id").toLong()[0]
+        fromIndex = mimeData.data("source-index").toInt()[0]
         toIndex = self.tabAt(event.pos())
         if oldID != id(self):
-            parentID = mimeData.data("tabwidget-id")
+            parentID = mimeData.data("tabwidget-id").toLong()[0]
             if event.proposedAction() == Qt.MoveAction:
                 self.emit(SIGNAL("tabRelocateRequested(long, int, int)"), 
                           parentID, fromIndex, toIndex)
@@ -513,7 +513,7 @@ class TabWidget(E4TabWidget):
         Private method to close the other tabs.
         """
         index = self.contextMenuIndex
-        for i in range(self.count() - 1, index, -1) + range(index - 1, -1, -1):
+        for i in list(range(self.count() - 1, index, -1)) + list(range(index - 1, -1, -1)):
             editor = self.widget(i)
             self.vm.closeEditorWindow(editor)
         
@@ -699,8 +699,8 @@ class Tabview(QSplitter, ViewManager):
         
         # if this was the last editor in this view, switch to the next, that
         # still has open editors
-        for i in range(self.tabWidgets.index(tw), -1, -1) + \
-                 range(self.tabWidgets.index(tw) + 1, len(self.tabWidgets)):
+        for i in list(range(self.tabWidgets.index(tw), -1, -1)) + \
+                 list(range(self.tabWidgets.index(tw) + 1, len(self.tabWidgets))):
             if self.tabWidgets[i].hasEditors():
                 self.currentTabWidget.showIndicator(False)
                 self.currentTabWidget = self.tabWidgets[i]

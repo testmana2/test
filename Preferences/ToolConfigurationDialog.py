@@ -16,7 +16,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from Ui_ToolConfigurationDialog import Ui_ToolConfigurationDialog
+from .Ui_ToolConfigurationDialog import Ui_ToolConfigurationDialog
 import Utilities
 
 class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):

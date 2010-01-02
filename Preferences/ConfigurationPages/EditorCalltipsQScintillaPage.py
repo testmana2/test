@@ -9,8 +9,8 @@ Module implementing the QScintilla Calltips configuration page.
 
 from PyQt4.Qsci import QsciScintilla
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorCalltipsQScintillaPage import Ui_EditorCalltipsQScintillaPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorCalltipsQScintillaPage import Ui_EditorCalltipsQScintillaPage
 
 import Preferences
 

@@ -245,7 +245,7 @@ class AdBlockModel(QAbstractItemModel):
                 self.disconnect(self.__manager, SIGNAL("rulesChanged()"), 
                                 self.__rulesChanged)
                 self.beginRemoveRows(parent, row, row + count - 1)
-                for i in reversed(range(row, row + count)):
+                for i in reversed(list(range(row, row + count))):
                     sub.removeRule(i)
                 self.endRemoveRows()
                 self.connect(self.__manager, SIGNAL("rulesChanged()"), 

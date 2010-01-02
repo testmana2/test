@@ -9,8 +9,8 @@ Module implementing the handler class for reading an XML project session file.
 
 from E4Gui.E4Application import e4App
 
-from Config import sessionFileFormatVersion
-from XMLHandlerBase import XMLHandlerBase
+from .Config import sessionFileFormatVersion
+from .XMLHandlerBase import XMLHandlerBase
 
 class SessionHandler(XMLHandlerBase):
     """

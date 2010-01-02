@@ -10,7 +10,7 @@ Module implementing the exceptions filter dialog.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_ExceptionsFilterDialog import Ui_ExceptionsFilterDialog
+from .Ui_ExceptionsFilterDialog import Ui_ExceptionsFilterDialog
 
 class ExceptionsFilterDialog(QDialog, Ui_ExceptionsFilterDialog):
     """

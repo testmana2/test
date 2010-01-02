@@ -13,9 +13,9 @@ from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
 import UI.PixmapCache
 
-from E4NetworkHeaderDetailsDialog import E4NetworkHeaderDetailsDialog
+from .E4NetworkHeaderDetailsDialog import E4NetworkHeaderDetailsDialog
 
-from Ui_E4NetworkMonitor import Ui_E4NetworkMonitor
+from .Ui_E4NetworkMonitor import Ui_E4NetworkMonitor
 
 class E4NetworkRequest(object):
     """
@@ -292,7 +292,7 @@ class E4RequestModel(QAbstractTableModel):
         self.requests[offset].contentType = reply.header(QNetworkRequest.ContentTypeHeader)
         
         if status == 302:
-            target = reply.attribute(QNetworkRequest.RedirectionTargetAttribute)
+            target = reply.attribute(QNetworkRequest.RedirectionTargetAttribute) or QUrl()
             self.requests[offset].info = \
                 self.trUtf8("Redirect: {0}").format(target.toString())
     

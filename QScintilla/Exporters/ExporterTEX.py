@@ -16,7 +16,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
-from ExporterBase import ExporterBase
+from .ExporterBase import ExporterBase
 
 import Preferences
 
@@ -52,7 +52,7 @@ class ExporterTEX(ExporterBase):
         g = int(gf * 10 + 0.5)
         b = int(bf * 10 + 0.5)
         
-        return "%d.%d, %d.%d, %d.%d" % (r / 10, r % 10, g / 10, g % 10, b / 10, b % 10)
+        return "%d.%d, %d.%d, %d.%d" % (r // 10, r % 10, g // 10, g % 10, b // 10, b % 10)
     
     def __texStyle(self, style):
         """
@@ -145,7 +145,7 @@ class ExporterTEX(ExporterBase):
             styleIsUsed[QsciScintilla.STYLE_DEFAULT] = True
             
             try:
-                f = open(filename, "wb")
+                f = open(filename, "w")
                 
                 f.write("\\documentclass[a4paper]{article}\n")
                 f.write("\\usepackage[a4paper,margin=1.5cm]{geometry}\n")
@@ -231,14 +231,14 @@ class ExporterTEX(ExporterBase):
                 # close last empty style macros and document too
                 f.write("}\n} %end tiny\n\n\\end{document}\n")
                 f.close()
-            except IOError, err:
+            except IOError as err:
                 QApplication.restoreOverrideCursor()
                 QMessageBox.critical(self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8(\
                         """<p>The source could not be exported to <b>{0}</b>.</p>"""
                         """<p>Reason: {1}</p>""")\
-                        .format(filename, unicode(err)),
+                        .format(filename, str(err)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Ok))
         finally:

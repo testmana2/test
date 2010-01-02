@@ -10,9 +10,9 @@ Module implementing a dialog to configure the various view profiles.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_ViewProfileDialog import Ui_ViewProfileDialog
-from Ui_ViewProfileToolboxesDialog import Ui_ViewProfileToolboxesDialog
-from Ui_ViewProfileSidebarsDialog import Ui_ViewProfileSidebarsDialog
+from .Ui_ViewProfileDialog import Ui_ViewProfileDialog
+from .Ui_ViewProfileToolboxesDialog import Ui_ViewProfileToolboxesDialog
+from .Ui_ViewProfileSidebarsDialog import Ui_ViewProfileSidebarsDialog
 
 class ViewProfileDialog(QDialog):
     """

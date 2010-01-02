@@ -16,7 +16,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
-from ExporterBase import ExporterBase
+from .ExporterBase import ExporterBase
 
 import Preferences
 
@@ -145,7 +145,7 @@ class ExporterRTF(ExporterBase):
                 bgColour = self.editor.paper()
             
             try:
-                f = open(filename, "wb")
+                f = open(filename, "w")
                 
                 styles = {}
                 fonts = {}
@@ -169,7 +169,7 @@ class ExporterRTF(ExporterBase):
                                 font = lex.font(istyle)
                                 if wysiwyg:
                                     fontKey = None
-                                    for key, value in fonts.items():
+                                    for key, value in list(fonts.items()):
                                         if value.lower() == font.family().lower():
                                             fontKey = key
                                             break
@@ -192,7 +192,7 @@ class ExporterRTF(ExporterBase):
                                 
                                 sColour = lex.color(istyle)
                                 sColourKey = None
-                                for key, value in colors.items():
+                                for key, value in list(colors.items()):
                                     if value == sColour:
                                         sColourKey = key
                                         break
@@ -204,7 +204,7 @@ class ExporterRTF(ExporterBase):
                                 
                                 sColour = lex.paper(istyle)
                                 sColourKey = None
-                                for key, value in colors.items():
+                                for key, value in list(colors.items()):
                                     if value == sColour:
                                         sColourKey = key
                                         break
@@ -240,7 +240,7 @@ class ExporterRTF(ExporterBase):
                                 self.RTF_BOLD_OFF + self.RTF_ITALIC_OFF
                 
                 f.write(self.RTF_FONTDEFCLOSE + self.RTF_COLORDEFOPEN)
-                for value in colors.values():
+                for value in list(colors.values()):
                     f.write(self.RTF_COLORDEF % \
                             (value.red(), value.green(), value.blue()))
                 f.write(self.RTF_COLORDEFCLOSE)
@@ -327,14 +327,14 @@ class ExporterRTF(ExporterBase):
                 
                 f.write(self.RTF_BODYCLOSE)
                 f.close()
-            except IOError, err:
+            except IOError as err:
                 QApplication.restoreOverrideCursor()
                 QMessageBox.critical(self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8(
                         """<p>The source could not be exported to <b>{0}</b>.</p>"""
                         """<p>Reason: {1}</p>""")\
-                        .format(filename, unicode(err)),
+                        .format(filename, str(err)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Ok))
         finally:

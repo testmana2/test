@@ -14,7 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4 import uic
 
-from TRSingleApplication import TRSingleApplicationServer
+from .TRSingleApplication import TRSingleApplicationServer
 
 import Preferences
 import UI.PixmapCache

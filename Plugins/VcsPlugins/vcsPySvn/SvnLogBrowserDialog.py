@@ -14,11 +14,11 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from SvnUtilities import formatTime, dateFromTime_t
-from SvnDialogMixin import SvnDialogMixin
-from SvnDiffDialog import SvnDiffDialog
+from .SvnUtilities import formatTime, dateFromTime_t
+from .SvnDialogMixin import SvnDialogMixin
+from .SvnDiffDialog import SvnDiffDialog
 
-from Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
+from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
 
 import UI.PixmapCache
 
@@ -167,7 +167,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             }
             changes.append(change)
         itm.setData(0, self.__messageRole, message)
-        itm.setData(0, self.__changesRole, unicode(changes))
+        itm.setData(0, self.__changesRole, str(changes))
         
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignLeft)
@@ -270,7 +270,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             self.__resizeColumnsLog()
             self.__resortLog()
             self.__filterLogs()
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             locker.unlock()
             self.__showError(e.args[0])
         os.chdir(cwd)

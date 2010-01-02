@@ -9,7 +9,7 @@ Module implementing a Pascal lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerPascal, QsciScintilla
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerPascal(QsciLexerPascal, Lexer):

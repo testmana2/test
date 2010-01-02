@@ -11,16 +11,16 @@ import datetime
 import os
 import sys
 import re
-import cStringIO
+import io
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from TemplatePropertiesDialog import TemplatePropertiesDialog
-from TemplateMultipleVariablesDialog import TemplateMultipleVariablesDialog
-from TemplateSingleVariableDialog import TemplateSingleVariableDialog
+from .TemplatePropertiesDialog import TemplatePropertiesDialog
+from .TemplateMultipleVariablesDialog import TemplateMultipleVariablesDialog
+from .TemplateSingleVariableDialog import TemplateSingleVariableDialog
 
 import Preferences
 
@@ -134,7 +134,7 @@ class TemplateGroup(QTreeWidgetItem):
         """
         Public method to remove all template entries of this group.
         """
-        for name in self.entries.keys()[:]:
+        for name in list(self.entries.keys())[:]:
             self.removeEntry(name)
 
     def hasEntry(self, name):
@@ -180,7 +180,7 @@ class TemplateGroup(QTreeWidgetItem):
         
         @return list of all entries (list of TemplateEntry)
         """
-        return self.entries.values()
+        return list(self.entries.values())
 
 class TemplateEntry(QTreeWidgetItem):
     """
@@ -289,7 +289,7 @@ class TemplateEntry(QTreeWidgetItem):
             number of lines (integer) and the length of the last line (integer)
         """
         txt = self.template
-        for var, val in varDict.items():
+        for var, val in list(varDict.items()):
             if var in self.formatedVariables:
                 txt = self.__expandFormattedVariable(var, val, txt)
             else:
@@ -628,7 +628,7 @@ class TemplateViewer(QTreeWidget):
         
         # Remove predefined variables from list so user doesn't have to fill
         # these values out in the dialog.
-        for v in varValues.keys():
+        for v in list(varValues.keys()):
             if v in vars:
                 vars.remove(v)
         
@@ -672,7 +672,7 @@ class TemplateViewer(QTreeWidget):
         
         @param templateName name of the template item to apply (string)
         """
-        for group in self.groups.values():
+        for group in list(self.groups.values()):
             template = group.getEntry(templateName)
             if template is not None:
                 self.applyTemplate(template)
@@ -732,7 +732,7 @@ class TemplateViewer(QTreeWidget):
         
         @return list of all groups (list of TemplateGroup)
         """
-        return self.groups.values()
+        return list(self.groups.values())
     
     def getGroupNames(self):
         """
@@ -740,7 +740,7 @@ class TemplateViewer(QTreeWidget):
         
         @return list of all group names (list of strings)
         """
-        groups = sorted(self.groups.keys()[:])
+        groups = sorted(list(self.groups.keys())[:])
         return groups
 
     def removeGroup(self, itm):
@@ -801,7 +801,7 @@ class TemplateViewer(QTreeWidget):
         try:
             if filename is None:
                 filename = os.path.join(Utilities.getConfigDir(), "eric4templates.e4c")
-            f = open(filename, "wb")
+            f = open(filename, "w")
             
             TemplatesWriter(f, self).writeXML()
             
@@ -823,7 +823,7 @@ class TemplateViewer(QTreeWidget):
                 filename = os.path.join(Utilities.getConfigDir(), "eric4templates.e4c")
                 if not os.path.exists(filename):
                     return
-            f = open(filename, "rb")
+            f = open(filename, "r")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -846,13 +846,13 @@ class TemplateViewer(QTreeWidget):
             parser.setErrorHandler(eh)
             
             try:
-                f = open(filename, "rb")
+                f = open(filename, "r")
                 try:
                     try:
                         parser.parse(f)
                     except UnicodeEncodeError:
                         f.seek(0)
-                        buf = cStringIO.StringIO(f.read())
+                        buf = io.StringIO(f.read())
                         parser.parse(buf)
                 finally:
                     f.close()
@@ -886,7 +886,7 @@ class TemplateViewer(QTreeWidget):
         @param entryName name of the entry to check for (string)
         @return flag indicating the existence (boolean)
         """
-        for group in self.groups.values():
+        for group in list(self.groups.values()):
             if group.hasEntry(entryName):
                 return True
         
@@ -900,6 +900,6 @@ class TemplateViewer(QTreeWidget):
         @return sorted list of matching template names (list of strings)
         """
         names = []
-        for group in self.groups.values():
+        for group in list(self.groups.values()):
             names.extend(group.getEntryNames(start))
         return sorted(names)

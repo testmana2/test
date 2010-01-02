@@ -10,7 +10,7 @@ Module implementing a dialog to edit watch expression properties.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_EditWatchpointDialog import Ui_EditWatchpointDialog
+from .Ui_EditWatchpointDialog import Ui_EditWatchpointDialog
 
 
 class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):

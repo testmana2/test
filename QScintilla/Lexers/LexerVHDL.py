@@ -9,7 +9,7 @@ Module implementing a VHDL lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerVHDL
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerVHDL(QsciLexerVHDL, Lexer):

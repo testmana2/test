@@ -10,7 +10,7 @@ Module implementing the version control systems interface to Subversion.
 import os
 import shutil
 import types
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import time
 
 from PyQt4.QtCore import *
@@ -22,33 +22,33 @@ from VCS.VersionControl import VersionControl
 
 import pysvn
 
-from SvnDialog import SvnDialog
-from SvnCommitDialog import SvnCommitDialog
-from SvnLogDialog import SvnLogDialog
-from SvnLogBrowserDialog import SvnLogBrowserDialog
-from SvnDiffDialog import SvnDiffDialog
-from SvnRevisionSelectionDialog import SvnRevisionSelectionDialog
-from SvnStatusDialog import SvnStatusDialog
-from SvnTagDialog import SvnTagDialog
-from SvnTagBranchListDialog import SvnTagBranchListDialog
-from SvnCopyDialog import SvnCopyDialog
-from SvnCommandDialog import SvnCommandDialog
-from SvnSwitchDialog import SvnSwitchDialog
-from SvnMergeDialog import SvnMergeDialog
-from SvnPropListDialog import SvnPropListDialog
-from SvnPropSetDialog import SvnPropSetDialog
-from SvnPropDelDialog import SvnPropDelDialog
-from SvnOptionsDialog import SvnOptionsDialog
-from SvnNewProjectOptionsDialog import SvnNewProjectOptionsDialog
-from SvnBlameDialog import SvnBlameDialog
-from SvnInfoDialog import SvnInfoDialog
-from SvnRelocateDialog import SvnRelocateDialog
-from SvnUrlSelectionDialog import SvnUrlSelectionDialog
-from SvnRepoBrowserDialog import SvnRepoBrowserDialog
-from SvnStatusMonitorThread import SvnStatusMonitorThread
+from .SvnDialog import SvnDialog
+from .SvnCommitDialog import SvnCommitDialog
+from .SvnLogDialog import SvnLogDialog
+from .SvnLogBrowserDialog import SvnLogBrowserDialog
+from .SvnDiffDialog import SvnDiffDialog
+from .SvnRevisionSelectionDialog import SvnRevisionSelectionDialog
+from .SvnStatusDialog import SvnStatusDialog
+from .SvnTagDialog import SvnTagDialog
+from .SvnTagBranchListDialog import SvnTagBranchListDialog
+from .SvnCopyDialog import SvnCopyDialog
+from .SvnCommandDialog import SvnCommandDialog
+from .SvnSwitchDialog import SvnSwitchDialog
+from .SvnMergeDialog import SvnMergeDialog
+from .SvnPropListDialog import SvnPropListDialog
+from .SvnPropSetDialog import SvnPropSetDialog
+from .SvnPropDelDialog import SvnPropDelDialog
+from .SvnOptionsDialog import SvnOptionsDialog
+from .SvnNewProjectOptionsDialog import SvnNewProjectOptionsDialog
+from .SvnBlameDialog import SvnBlameDialog
+from .SvnInfoDialog import SvnInfoDialog
+from .SvnRelocateDialog import SvnRelocateDialog
+from .SvnUrlSelectionDialog import SvnUrlSelectionDialog
+from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
+from .SvnStatusMonitorThread import SvnStatusMonitorThread
 
-from ProjectBrowserHelper import SvnProjectBrowserHelper
-from ProjectHelper import SvnProjectHelper
+from .ProjectBrowserHelper import SvnProjectBrowserHelper
+from .ProjectHelper import SvnProjectHelper
 
 from Plugins.VcsPlugins.vcsSubversion.SvnDialog import SvnDialog as SvnProcessDialog
 
@@ -107,7 +107,7 @@ class Subversion(VersionControl):
         self.commandHistory = []
         self.wdHistory = []
         
-        if pysvn.version >= (1, 4, 3, 0) and os.environ.has_key("SVN_ASP_DOT_NET_HACK"):
+        if pysvn.version >= (1, 4, 3, 0) and "SVN_ASP_DOT_NET_HACK" in os.environ:
             self.adminDir = '_svn'
         else:
             self.adminDir = '.svn'
@@ -288,7 +288,7 @@ class Subversion(VersionControl):
                 shutil.copytree(projectDir, os.path.join(tmpDir, project, 'trunk'))
             else:
                 shutil.copytree(projectDir, os.path.join(tmpDir, project))
-        except OSError, e:
+        except OSError as e:
             if os.path.isdir(tmpDir):
                 shutil.rmtree(tmpDir, True)            
             return False, False
@@ -313,7 +313,7 @@ class Subversion(VersionControl):
         try:
             rev = client.import_(".", url, msg, recurse, ignore)
             status = True
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             status = False
             rev = None
             if not noDialog:
@@ -385,7 +385,7 @@ class Subversion(VersionControl):
         try:
             rev = client.checkout(url, projectDir, recurse)
             status = True
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             status = False
             if not noDialog:
                 dlg.showError(e.args[0])
@@ -446,7 +446,7 @@ class Subversion(VersionControl):
         try:
             rev = client.export(url, projectDir, force = True, recurse = recurse)
             status = True
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             status = False
             dlg.showError(e.args[0])
         locker.unlock()
@@ -503,7 +503,7 @@ class Subversion(VersionControl):
         if not msg:
             msg = '***'
         
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
         else:
             dname, fname = self.splitPath(name)
@@ -541,7 +541,7 @@ class Subversion(VersionControl):
             else:
                 rev = client.checkin(fnames, msg, 
                                      recurse = recurse, keep_locks = keeplocks)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             rev = None
             if not noDialog:
                 dlg.showError(e.args[0])
@@ -564,7 +564,7 @@ class Subversion(VersionControl):
         @return flag indicating, that the update contained an add
             or delete (boolean)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
         else:
             dname, fname = self.splitPath(name)
@@ -585,7 +585,7 @@ class Subversion(VersionControl):
         QApplication.processEvents()
         try:
             revlist = client.update(fnames, recurse)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
         if not noDialog:
@@ -606,7 +606,7 @@ class Subversion(VersionControl):
         @param isDir flag indicating name is a directory (boolean)
         @param noDialog flag indicating quiet operations (boolean)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             if isDir:
                 dname, fname = os.path.split(name[0])
             else:
@@ -626,7 +626,7 @@ class Subversion(VersionControl):
             wdir = dname
         names.extend(tree)
         
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             tree2 = []
             for n in name:
                 d = os.path.split(n)[0]
@@ -661,7 +661,7 @@ class Subversion(VersionControl):
             QApplication.processEvents()
         try:
             client.add(names, recurse = recurse, force = force, ignore = ignore)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             if not noDialog:
                 dlg.showError(e.args[0])
         locker.unlock()
@@ -687,7 +687,7 @@ class Subversion(VersionControl):
         @param path root directory of the tree to be added (string or list of strings))
         """
         tree = []
-        if type(path) is types.ListType:
+        if isinstance(path, list):
             dname, fnames = self.splitPathList(path)
             for n in path:
                 d = os.path.split(n)[0]
@@ -710,7 +710,7 @@ class Subversion(VersionControl):
             self.vcsAdd(tree, True)
         
         names = []
-        if type(path) is types.ListType:
+        if isinstance(path, list):
             names.extend(path)
         else:
             names.append(path)
@@ -734,7 +734,7 @@ class Subversion(VersionControl):
         QApplication.processEvents()
         try:
             client.add(names, recurse = recurse, force = force, ignore = ignore)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
         dlg.finish()
@@ -752,7 +752,7 @@ class Subversion(VersionControl):
         @param noDialog flag indicating quiet operations
         @return flag indicating successfull operation (boolean)
         """
-        if type(name) is not types.ListType:
+        if not isinstance(name, list):
             name = [name]
         opts = self.options['global'] + self.options['remove']
         force = "--force" in opts or noDialog
@@ -770,7 +770,7 @@ class Subversion(VersionControl):
         try:
             client.remove(name, force = force)
             res = True
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             res = False
             if not noDialog:
                 dlg.showError(e.args[0])
@@ -827,7 +827,7 @@ class Subversion(VersionControl):
             try:
                 client.move(name, target, force = force)
                 res = True
-            except pysvn.ClientError, e:
+            except pysvn.ClientError as e:
                 res = False
                 if not noDialog:
                     dlg.showError(e.args[0])
@@ -871,7 +871,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to be diffed (string)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             names = name[:]
         else:
             names = [name]
@@ -946,9 +946,9 @@ class Subversion(VersionControl):
             
             reposRoot = rx_base.cap(1)
             if tagOp in [1, 4]:
-                url = '%s/tags/%s' % (reposRoot, urllib.quote(tag))
+                url = '%s/tags/%s' % (reposRoot, urllib.parse.quote(tag))
             elif tagOp in [2, 8]:
-                url = '%s/branches/%s' % (reposRoot, urllib.quote(tag))
+                url = '%s/branches/%s' % (reposRoot, urllib.parse.quote(tag))
         else:
             url = self.__svnURL(tag)
         
@@ -966,7 +966,7 @@ class Subversion(VersionControl):
             locker = QMutexLocker(self.vcsExecutionMutex)
             try:
                 rev = client.copy(reposURL, url)
-            except pysvn.ClientError, e:
+            except pysvn.ClientError as e:
                 dlg.showError(e.args[0])
             locker.unlock()
         else:
@@ -980,7 +980,7 @@ class Subversion(VersionControl):
             locker = QMutexLocker(self.vcsExecutionMutex)
             try:
                 rev = client.remove(url)
-            except pysvn.ClientError, e:
+            except pysvn.ClientError as e:
                 dlg.showError(e.args[0])
             locker.unlock()
         rev and dlg.showMessage(\
@@ -995,7 +995,7 @@ class Subversion(VersionControl):
         @param name file/directory name to be reverted (string)
         """
         recurse = False
-        if type(name) is not types.ListType:
+        if not isinstance(name, list):
             name = [name]
             if os.path.isdir(name[0]):
                 recurse = True
@@ -1009,7 +1009,7 @@ class Subversion(VersionControl):
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
             client.revert(name, recurse)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
         dlg.finish()
@@ -1060,9 +1060,9 @@ class Subversion(VersionControl):
             reposRoot = rx_base.cap(1)
             tn = tag
             if tagType == 1:
-                url = '%s/tags/%s' % (reposRoot, urllib.quote(tag))
+                url = '%s/tags/%s' % (reposRoot, urllib.parse.quote(tag))
             elif tagType == 2:
-                url = '%s/branches/%s' % (reposRoot, urllib.quote(tag))
+                url = '%s/branches/%s' % (reposRoot, urllib.parse.quote(tag))
             elif tagType == 4:
                 url = '%s/trunk' % (reposRoot)
                 tn = QString('HEAD')
@@ -1080,7 +1080,7 @@ class Subversion(VersionControl):
         try:
             rev = client.switch(name, url)
             dlg.showMessage(self.trUtf8("Revision {0}.\n").format(rev.number))
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
         dlg.finish()
@@ -1184,7 +1184,7 @@ class Subversion(VersionControl):
         try:
             client.merge(url1, revision1, url2, revision2, fname, 
                          recurse = recurse, force = force)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
         dlg.finish()
@@ -1243,7 +1243,7 @@ class Subversion(VersionControl):
                     names[name] = self.statusCache[name]
         
         if not found:
-            from SvnDialogMixin import SvnDialogMixin
+            from .SvnDialogMixin import SvnDialogMixin
             mixin = SvnDialogMixin()
             client = self.getClient()
             client.callback_get_login = \
@@ -1264,7 +1264,7 @@ class Subversion(VersionControl):
                         self.statusCache[name] = self.canBeCommitted
                     else:
                         self.statusCache[name] = self.canBeAdded
-            except pysvn.ClientError, e:
+            except pysvn.ClientError as e:
                 locker.unlock()    # ignore pysvn errors
         
         return names
@@ -1298,7 +1298,7 @@ class Subversion(VersionControl):
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
             rev = client.cleanup(name)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
         dlg.finish()
@@ -1360,7 +1360,7 @@ class Subversion(VersionControl):
         """
         try:
             entry = self.getClient().info(ppath)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             return e.args[0]
         
         if hasattr(pysvn, 'svn_api_version'):
@@ -1419,7 +1419,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to be resolved (string)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
         else:
             dname, fname = self.splitPath(name)
@@ -1441,7 +1441,7 @@ class Subversion(VersionControl):
         try:
             for name in fnames:
                 rev = client.resolved(name, recurse = recurse)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
         dlg.finish()
@@ -1482,7 +1482,7 @@ class Subversion(VersionControl):
             try:
                 client.copy(name, target)
                 res = True
-            except pysvn.ClientError, e:
+            except pysvn.ClientError as e:
                 res = False
                 dlg.showError(e.args[0])
             locker.unlock()
@@ -1525,7 +1525,7 @@ class Subversion(VersionControl):
                     self.trUtf8("""You have to supply a property name. Aborting."""))
                 return
             
-            if type(name) is types.ListType:
+            if isinstance(name, list):
                 dname, fnames = self.splitPathList(name)
             else:
                 dname, fname = self.splitPath(name)
@@ -1551,7 +1551,7 @@ class Subversion(VersionControl):
                 for name in fnames:
                     client.propset(propName, propValue, name, 
                                    recurse = recurse, skip_checks = skipchecks)
-            except pysvn.ClientError, e:
+            except pysvn.ClientError as e:
                 dlg.showError(e.args[0])
             locker.unlock()
             dlg.showMessage(self.trUtf8("Property set."))
@@ -1576,7 +1576,7 @@ class Subversion(VersionControl):
                     self.trUtf8("""You have to supply a property name. Aborting."""))
                 return
             
-            if type(name) is types.ListType:
+            if isinstance(name, list):
                 dname, fnames = self.splitPathList(name)
             else:
                 dname, fname = self.splitPath(name)
@@ -1601,7 +1601,7 @@ class Subversion(VersionControl):
                 for name in fnames:
                     client.propdel(propName, name, 
                                    recurse = recurse, skip_checks = skipchecks)
-            except pysvn.ClientError, e:
+            except pysvn.ClientError as e:
                 dlg.showError(e.args[0])
             locker.unlock()
             dlg.showMessage(self.trUtf8("Property deleted."))
@@ -1657,7 +1657,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to be diffed (string)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             names = name[:]
         else:
             names = [name]
@@ -1691,7 +1691,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to be diffed (string)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             names = name[:]
         else:
             names = [name]
@@ -1762,7 +1762,7 @@ class Subversion(VersionControl):
         if not ok:
             return
         
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
         else:
             dname, fname = self.splitPath(name)
@@ -1783,10 +1783,10 @@ class Subversion(VersionControl):
         QApplication.processEvents()
         try:
             client.lock(fnames, comment, force = stealIt)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
-        except AttributeError, e:
-            dlg.showError(unicode(e))
+        except AttributeError as e:
+            dlg.showError(str(e))
         locker.unlock()
         dlg.finish()
         dlg.exec_()
@@ -1800,7 +1800,7 @@ class Subversion(VersionControl):
         @param breakIt flag indicating a forced operation (boolean)
         @param parent reference to the parent object of the subversion dialog (QWidget)
         """
-        if type(name) is types.ListType:
+        if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
         else:
             dname, fname = self.splitPath(name)
@@ -1820,10 +1820,10 @@ class Subversion(VersionControl):
         QApplication.processEvents()
         try:
             client.unlock(fnames, force = breakIt)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
-        except AttributeError, e:
-            dlg.showError(unicode(e))
+        except AttributeError as e:
+            dlg.showError(str(e))
         locker.unlock()
         dlg.finish()
         dlg.exec_()
@@ -1864,7 +1864,7 @@ class Subversion(VersionControl):
                     client.switch(projectPath, newUrl)
                 else:
                     client.relocate(currUrl, newUrl, projectPath, recurse = True)
-            except pysvn.ClientError, e:
+            except pysvn.ClientError as e:
                 dlg.showError(e.args[0])
             locker.unlock()
             dlg.finish()
@@ -1902,7 +1902,7 @@ class Subversion(VersionControl):
         @param names name or list of names of file or directory to remove
             (string)
         """
-        if type(names) is not types.ListType:
+        if not isinstance(names, list):
             names = [names]
         client = self.getClient()
         dlg = \
@@ -1914,7 +1914,7 @@ class Subversion(VersionControl):
         try:
             for name in names:
                 client.remove_from_changelists(name)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
         dlg.finish()
@@ -1929,7 +1929,7 @@ class Subversion(VersionControl):
         @param names name or list of names of file or directory to add
             (string)
         """
-        if type(names) is not types.ListType:
+        if not isinstance(names, list):
             names = [names]
         
         clname, ok = QInputDialog.getText(\
@@ -1950,7 +1950,7 @@ class Subversion(VersionControl):
         try:
             for name in names:
                 client.add_to_changelist(name, clname, depth = pysvn.depth.infinity)
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
         dlg.finish()
@@ -1973,14 +1973,14 @@ class Subversion(VersionControl):
             scheme = url[0]
             host = url[1]
             port, path = url[2].split("/",1)
-            return "%s:%s:%s/%s" % (scheme, host, port, urllib.quote(path))
+            return "%s:%s:%s/%s" % (scheme, host, port, urllib.parse.quote(path))
         else:
             scheme = url[0]
             if scheme == "file":
-                return "%s:%s" % (scheme, urllib.quote(url[1]))
+                return "%s:%s" % (scheme, urllib.parse.quote(url[1]))
             else:
                 host, path = url[1][2:].split("/",1)
-                return "%s://%s/%s" % (scheme, host, urllib.quote(path))
+                return "%s://%s/%s" % (scheme, host, urllib.parse.quote(path))
 
     def svnNormalizeURL(self, url):
         """

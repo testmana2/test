@@ -55,7 +55,7 @@ class E4ToolBarManager(QObject):
         @param name object name of the toolbar (string)
         @return reference to the toolbar (QToolBar)
         """
-        for toolBar in self.__allToolBars.values():
+        for toolBar in list(self.__allToolBars.values()):
             if toolBar.objectName() == name:
                 return toolBar
         return None
@@ -68,12 +68,12 @@ class E4ToolBarManager(QObject):
         @return reference to the action (QAction)
         """
         # check objectName() first
-        for action in self.__allActions.values():
+        for action in list(self.__allActions.values()):
             if action.objectName() == name:
                 return action
         
         # check text() next
-        for action in self.__allActions.values():
+        for action in list(self.__allActions.values()):
             if action.text() == name:
                 return action
         
@@ -188,7 +188,7 @@ class E4ToolBarManager(QObject):
         @param toolBars dictionary with toolbar id as key and
             a list of actions as value
         """
-        for key, actions in toolBars.items():
+        for key, actions in list(toolBars.items()):
             tb = self.__allToolBars[key]
             self.setToolBar(tb, actions)
     
@@ -278,7 +278,7 @@ class E4ToolBarManager(QObject):
         
         @return list of all default toolbars (list of QToolBar)
         """
-        return self.__defaultToolBars.values()
+        return list(self.__defaultToolBars.values())
     
     def isDefaultToolBar(self, toolBar):
         """
@@ -370,7 +370,7 @@ class E4ToolBarManager(QObject):
         
         @return list of all toolbars (list of QToolBar)
         """
-        return self.__allToolBars.values()
+        return list(self.__allToolBars.values())
     
     def addAction(self, action, category):
         """
@@ -450,18 +450,18 @@ class E4ToolBarManager(QObject):
         for tbID in self.__defaultToolBars:
             tb = self.__allToolBars[tbID]
             if tb.objectName():
-                stream.writeString(tb.objectName())
+                stream.writeString(tb.objectName().encode())
             else:
-                stream.writeString(tb.windowTitle())
+                stream.writeString(tb.windowTitle().encode())
             stream.writeUInt16(len(self.__toolBars[tbID]))
             for action in self.__toolBars[tbID]:
                 if action is not None:
                     if action.objectName():
-                        stream.writeString(action.objectName())
+                        stream.writeString(action.objectName().encode())
                     else:
-                        stream.writeString(action.text())
+                        stream.writeString(action.text().encode())
                 else:
-                    stream.writeString("")
+                    stream.writeString("".encode())
         
         # save the custom toolbars
         stream.writeUInt16(E4ToolBarManager.CustomToolBarMarker)
@@ -469,17 +469,17 @@ class E4ToolBarManager(QObject):
         for tbID in self.__toolBars:
             if tbID not in self.__defaultToolBars:
                 tb = self.__allToolBars[tbID]
-                stream.writeString(tb.objectName())
-                stream.writeString(tb.windowTitle())
+                stream.writeString(tb.objectName().encode())
+                stream.writeString(tb.windowTitle().encode())
                 stream.writeUInt16(len(self.__toolBars[tbID]))
                 for action in self.__toolBars[tbID]:
                     if action is not None:
                         if action.objectName():
-                            stream.writeString(action.objectName())
+                            stream.writeString(action.objectName().encode())
                         else:
-                            stream.writeString(action.text())
+                            stream.writeString(action.text().encode())
                     else:
-                        stream.writeString("")
+                        stream.writeString("".encode())
         
         return data
     
@@ -507,11 +507,11 @@ class E4ToolBarManager(QObject):
         
         toolBarCount = stream.readUInt16()
         for i in range(toolBarCount):
-            objectName = stream.readString()
+            objectName = stream.readString().decode()
             actionCount = stream.readUInt16()
             actions = []
             for j in range(actionCount):
-                actionName = stream.readString()
+                actionName = stream.readString().decode()
                 if actionName:
                     action = self.__findAction(actionName)
                     if action is not None:
@@ -530,12 +530,12 @@ class E4ToolBarManager(QObject):
         
         toolBarCount = stream.readUInt16()
         for i in range(toolBarCount):
-            objectName = stream.readString()
-            toolBarTitle = stream.readString()
+            objectName = stream.readString().decode()
+            toolBarTitle = stream.readString().decode()
             actionCount = stream.readUInt16()
             actions = []
             for j in range(actionCount):
-                actionName = stream.readString()
+                actionName = stream.readString().decode()
                 if actionName:
                     action = self.__findAction(actionName)
                     if action is not None:
@@ -576,7 +576,7 @@ class E4ToolBarManager(QObject):
         @param actions dictionary with toolbar id as key and
             a list of widget actions as value
         """
-        for tbID in actions.keys()[:]:
+        for tbID in list(actions.keys())[:]:
             toolBar = self.__allToolBars[tbID]
             newActions = self.__toolBars[tbID][:]
             newActionsWithSeparators = self.__toolBarsWithSeparators[tbID][:]
@@ -611,7 +611,7 @@ class E4ToolBarManager(QObject):
         
         @return list of categories (list of string)
         """
-        return self.__categoryToActions.keys()
+        return list(self.__categoryToActions.keys())
     
     def categoryActions(self, category):
         """

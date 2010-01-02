@@ -120,92 +120,92 @@ def getLexer(language, parent = None, pyname = ""):
     if not pyname:
         try:
             if language in ["Python", "Python3"]:
-                from LexerPython import LexerPython
+                from .LexerPython import LexerPython
                 return LexerPython(parent)
             elif language == "C++":
-                from LexerCPP import LexerCPP
+                from .LexerCPP import LexerCPP
                 return LexerCPP(parent, 
                     Preferences.getEditor("CppCaseInsensitiveKeywords"))
             elif language == "C#":
-                from LexerCSharp import LexerCSharp
+                from .LexerCSharp import LexerCSharp
                 return LexerCSharp(parent)
             elif language == "IDL":
-                from LexerIDL import LexerIDL
+                from .LexerIDL import LexerIDL
                 return LexerIDL(parent)
             elif language == "Java":
-                from LexerJava import LexerJava
+                from .LexerJava import LexerJava
                 return LexerJava(parent)
             elif language == "JavaScript":
-                from LexerJavaScript import LexerJavaScript
+                from .LexerJavaScript import LexerJavaScript
                 return LexerJavaScript(parent)
             elif language == "SQL":
-                from LexerSQL import LexerSQL
+                from .LexerSQL import LexerSQL
                 return LexerSQL(parent)
             elif language == "HTML":
-                from LexerHTML import LexerHTML
+                from .LexerHTML import LexerHTML
                 return LexerHTML(parent)
             elif language == "Perl":
-                from LexerPerl import LexerPerl
+                from .LexerPerl import LexerPerl
                 return LexerPerl(parent)
             elif language == "Bash":
-                from LexerBash import LexerBash
+                from .LexerBash import LexerBash
                 return LexerBash(parent)
             elif language == "Ruby":
-                from LexerRuby import LexerRuby
+                from .LexerRuby import LexerRuby
                 return LexerRuby(parent)
             elif language == "Lua":
-                from LexerLua import LexerLua
+                from .LexerLua import LexerLua
                 return LexerLua(parent)
             elif language == "CSS":
-                from LexerCSS import LexerCSS
+                from .LexerCSS import LexerCSS
                 return LexerCSS(parent)
             elif language == "TeX":
-                from LexerTeX import LexerTeX
+                from .LexerTeX import LexerTeX
                 return LexerTeX(parent)
             elif language == "Diff":
-                from LexerDiff import LexerDiff
+                from .LexerDiff import LexerDiff
                 return LexerDiff(parent)
             elif language == "Makefile":
-                from LexerMakefile import LexerMakefile
+                from .LexerMakefile import LexerMakefile
                 return LexerMakefile(parent)
             elif language == "Properties":
-                from LexerProperties import LexerProperties
+                from .LexerProperties import LexerProperties
                 return LexerProperties(parent)
             elif language == "Batch":
-                from LexerBatch import LexerBatch
+                from .LexerBatch import LexerBatch
                 return LexerBatch(parent)
             elif language == "D":
-                from LexerD import LexerD
+                from .LexerD import LexerD
                 return LexerD(parent)
             elif language == "Povray":
-                from LexerPOV import LexerPOV
+                from .LexerPOV import LexerPOV
                 return LexerPOV(parent)
             elif language == "CMake":
-                from LexerCMake import LexerCMake
+                from .LexerCMake import LexerCMake
                 return LexerCMake(parent)
             elif language == "VHDL":
-                from LexerVHDL import LexerVHDL
+                from .LexerVHDL import LexerVHDL
                 return LexerVHDL(parent)
             elif language == "TCL":
-                from LexerTCL import LexerTCL
+                from .LexerTCL import LexerTCL
                 return LexerTCL(parent)
             elif language == "Fortran":
-                from LexerFortran import LexerFortran
+                from .LexerFortran import LexerFortran
                 return LexerFortran(parent)
             elif language == "Fortran77":
-                from LexerFortran77 import LexerFortran77
+                from .LexerFortran77 import LexerFortran77
                 return LexerFortran77(parent)
             elif language == "Pascal":
-                from LexerPascal import LexerPascal
+                from .LexerPascal import LexerPascal
                 return LexerPascal(parent)
             elif language == "PostScript":
-                from LexerPostScript import LexerPostScript
+                from .LexerPostScript import LexerPostScript
                 return LexerPostScript(parent)
             elif language == "XML":
-                from LexerXML import LexerXML
+                from .LexerXML import LexerXML
                 return LexerXML(parent)
             elif language == "YAML":
-                from LexerYAML import LexerYAML
+                from .LexerYAML import LexerYAML
                 return LexerYAML(parent)
             
             elif language in LexerRegistry:
@@ -226,7 +226,7 @@ def __getPygmentsLexer(parent, name = ""):
     @keyparam name name of the pygments lexer to use (string)
     @return reference to the lexer (LexerPygments) or None
     """
-    from LexerPygments import LexerPygments
+    from .LexerPygments import LexerPygments
     lexer = LexerPygments(parent, name = name)
     if lexer.canStyle():
         return lexer

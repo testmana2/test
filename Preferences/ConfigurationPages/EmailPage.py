@@ -9,8 +9,8 @@ Module implementing the Email configuration page.
 
 from PyQt4.QtGui import QIntValidator
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EmailPage import Ui_EmailPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EmailPage import Ui_EmailPage
 
 import Preferences
 

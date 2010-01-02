@@ -10,7 +10,7 @@ Module implementing a dialog to enter the data to relocate the workspace.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnRelocateDialog import Ui_SvnRelocateDialog
+from .Ui_SvnRelocateDialog import Ui_SvnRelocateDialog
 
 class SvnRelocateDialog(QDialog, Ui_SvnRelocateDialog):
     """

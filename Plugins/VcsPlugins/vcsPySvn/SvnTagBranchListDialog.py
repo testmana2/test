@@ -14,10 +14,10 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from SvnUtilities import formatTime
+from .SvnUtilities import formatTime
 
-from SvnDialogMixin import SvnDialogMixin
-from Ui_SvnTagBranchListDialog import Ui_SvnTagBranchListDialog
+from .SvnDialogMixin import SvnDialogMixin
+from .Ui_SvnTagBranchListDialog import Ui_SvnTagBranchListDialog
 
 class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog):
     """
@@ -132,7 +132,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
                     if self._clientCancelCallback():
                         break
             res = True
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             self.__showError(e.args[0])
             res = False
         except AttributeError:

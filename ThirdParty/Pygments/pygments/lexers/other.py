@@ -328,7 +328,7 @@ class BashLexer(RegexLexer):
 
     name = 'Bash'
     aliases = ['bash', 'sh']
-    filenames = ['*.sh']
+    filenames = ['*.sh', '*.ebuild', '*.eclass']
     mimetypes = ['application/x-sh', 'application/x-shellscript']
 
     tokens = {
@@ -1498,18 +1498,18 @@ class AppleScriptLexer(RegexLexer):
     tokens = {
         'root': [
             (r'\s+', Text),
-            (ur'¬\n', String.Escape),
+            (r'¬\n', String.Escape),
             (r"'s\s+", Text), # This is a possessive, consider moving
             (r'(--|#).*?$', Comment),
             (r'\(\*', Comment.Multiline, 'comment'),
             (r'[\(\){}!,.:]', Punctuation),
-            (ur'(«)([^»]+)(»)',
+            (r'(«)([^»]+)(»)',
              bygroups(Text, Name.Builtin, Text)),
             (r'\b((?:considering|ignoring)\s*)'
              r'(application responses|case|diacriticals|hyphens|'
              r'numeric strings|punctuation|white space)',
              bygroups(Keyword, Name.Builtin)),
-            (ur'(-|\*|\+|&|≠|>=?|<=?|=|≥|≤|/|÷|\^)', Operator),
+            (r'(-|\*|\+|&|≠|>=?|<=?|=|≥|≤|/|÷|\^)', Operator),
             (r"\b(%s)\b" % '|'.join(Operators), Operator.Word),
             (r'^(\s*(?:on|end)\s+)'
              r'(%s)' % '|'.join(StudioEvents),
@@ -1589,7 +1589,7 @@ class ModelicaLexer(RegexLexer):
             r'end|equation|exit|expandable|extends|'
             r'external|false|final|flow|for|if|import|in|inner|input|'
             r'loop|nondiscrete|outer|output|parameter|partial|'
-            r'protected|public|redeclare|replaceable|time|then|true|'
+            r'protected|public|redeclare|replaceable|stream|time|then|true|'
             r'when|while|within)\b', Keyword)
         ],
         'functions': [

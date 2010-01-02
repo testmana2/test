@@ -9,8 +9,8 @@ Module implementing the Shell configuration page.
 
 from PyQt4.QtCore import pyqtSlot
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_ShellPage import Ui_ShellPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_ShellPage import Ui_ShellPage
 
 import Preferences
 

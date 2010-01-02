@@ -13,7 +13,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_FiletypeAssociationDialog import Ui_FiletypeAssociationDialog
+from .Ui_FiletypeAssociationDialog import Ui_FiletypeAssociationDialog
 
 class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
     """
@@ -43,7 +43,7 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         self.filetypeCombo.addItems(self.filetypeStrings)
         
         self.project = project
-        for pattern, filetype in self.project.pdata["FILETYPES"].items():
+        for pattern, filetype in list(self.project.pdata["FILETYPES"].items()):
             try:
                 index = self.filetypes.index(filetype)
                 itm = self.__createItem(pattern, self.filetypeStrings[index])

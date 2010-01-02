@@ -10,7 +10,7 @@ Module implementing a window for showing the QtHelp index.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from HelpTopicDialog import HelpTopicDialog
+from .HelpTopicDialog import HelpTopicDialog
 
 class HelpIndexWidget(QWidget):
     """
@@ -139,7 +139,7 @@ class HelpIndexWidget(QWidget):
                         keyword = model.data(idx, Qt.DisplayRole)
                         links = model.linksForKeyword(keyword)
                         if len(links) == 1:
-                            self.__mw.newTab(links.values()[0])
+                            self.__mw.newTab(list(links.values())[0])
                         elif len(links) > 1:
                             dlg = HelpTopicDialog(self, keyword, links)
                             if dlg.exec_() == QDialog.Accepted:
@@ -153,7 +153,7 @@ class HelpIndexWidget(QWidget):
                     keyword = model.data(idx, Qt.DisplayRole)
                     links = model.linksForKeyword(keyword)
                     if len(links) == 1:
-                        self.__mw.newTab(links.values()[0])
+                        self.__mw.newTab(list(links.values())[0])
                     elif len(links) > 1:
                         dlg = HelpTopicDialog(self, keyword, links)
                         if dlg.exec_() == QDialog.Accepted:

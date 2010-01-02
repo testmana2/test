@@ -12,7 +12,7 @@ import os
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-from Ui_SvnRepoBrowserDialog import Ui_SvnRepoBrowserDialog
+from .Ui_SvnRepoBrowserDialog import Ui_SvnRepoBrowserDialog
 
 import UI.PixmapCache
 
@@ -152,15 +152,16 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
             finished = process.waitForFinished(30000)
             if finished:
                 if process.exitCode() == 0:
-                    output = unicode(process.readAllStandardOutput(), 
-                                     ioEncoding, 'replace')
+                    output = str(process.readAllStandardOutput(), ioEncoding, 'replace')
                     for line in output.splitlines():
                         line = line.strip()
                         if line.startswith('<root>'):
                             repoRoot = line.replace('<root>', '').replace('</root>', '')
                             break
                 else:
-                    error = unicode(process.readAllStandardError())
+                    error = str(process.readAllStandardError(), 
+                                Preferences.getSystem("IOEncoding"), 
+                                'replace')
                     self.errors.insertPlainText(error)
                     self.errors.ensureCursorVisible()
         else:
@@ -367,7 +368,9 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                s = unicode(self.process.readLine())
+                s = str(self.process.readLine(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace')
                 if self.__rx_dir.exactMatch(s):
                     revision = self.__rx_dir.cap(1)
                     author = self.__rx_dir.cap(2)
@@ -397,7 +400,9 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         error pane.
         """
         if self.process is not None:
-            s = unicode(self.process.readAllStandardError())
+            s = str(self.process.readAllStandardError(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
     

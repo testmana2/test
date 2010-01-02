@@ -17,10 +17,10 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from ProjectBrowserModel import ProjectBrowserFileItem, \
+from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserTranslationType
-from ProjectBaseBrowser import ProjectBaseBrowser
+from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import UI.PixmapCache
@@ -414,8 +414,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                         [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
                         
-            bfcnt = categories[unicode(ProjectBrowserFileItem)]
-            sdcnt = categories[unicode(ProjectBrowserSimpleDirectoryItem)]
+            bfcnt = categories[str(ProjectBrowserFileItem)]
+            sdcnt = categories[str(ProjectBrowserSimpleDirectoryItem)]
             if cnt > 1 and cnt == bfcnt:
                 self.multiMenu.popup(self.mapToGlobal(coord))
             else:
@@ -622,8 +622,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             for itm in itmList:
                 if isinstance(itm, ProjectBrowserSimpleDirectoryItem):
                     dname = itm.dirName().replace(self.project.ppath+os.sep, '')
-                    trfiles = self.project.pdata["TRANSLATIONS"][:]
-                    trfiles.sort()
+                    trfiles = sorted(self.project.pdata["TRANSLATIONS"][:])
                     for trfile in trfiles:
                         if trfile.startswith(dname):
                             if trfile not in fileNames:
@@ -633,8 +632,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     if fn not in fileNames:
                         fileNames.append(os.path.join(self.project.ppath, fn))
         else:
-            trfiles = self.project.pdata["TRANSLATIONS"][:]
-            trfiles.sort()
+            trfiles = sorted(self.project.pdata["TRANSLATIONS"][:])
             fileNames.extend([os.path.join(self.project.ppath, trfile) \
                               for trfile in trfiles \
                               if trfile.endswith('.qm')])
@@ -713,7 +711,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             return False
         
         try:
-            pf = open(pfile, "wb")
+            pf = open(pfile, "w")
             for key, list in sections:
                 if len(list) > 0:
                     pf.write('%s = ' % key)
@@ -770,12 +768,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         @param proc process to read from (QProcess)
         @param ps prompt string (string)
         """
-        ioEncoding = str(Preferences.getSystem("IOEncoding"))
+        ioEncoding = Preferences.getSystem("IOEncoding")
         
         proc.setReadChannel(QProcess.StandardOutput)
         while proc and proc.canReadLine():
             s = ps
-            output = unicode(proc.readLine(), ioEncoding, 'replace')
+            output = str(proc.readLine(), ioEncoding, 'replace')
             s += output
             self.emit(SIGNAL('appendStdout'), s)
         
@@ -806,12 +804,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         @param proc process to read from (QProcess)
         @param ps propmt string (string)
         """
-        ioEncoding = str(Preferences.getSystem("IOEncoding"))
+        ioEncoding = Preferences.getSystem("IOEncoding")
         
         proc.setReadChannel(QProcess.StandardError)
         while proc and proc.canReadLine():
             s = ps
-            error = unicode(proc.readLine(), ioEncoding, 'replace')
+            error = str(proc.readLine(), ioEncoding, 'replace')
             s += error
             self.emit(SIGNAL('appendStderr'), s)
     

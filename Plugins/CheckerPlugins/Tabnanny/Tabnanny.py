@@ -43,7 +43,7 @@ __version__ = "6_eric"
 import os
 import sys
 import tokenize
-import cStringIO
+import io
 
 import Utilities
 
@@ -106,39 +106,39 @@ def check(file):
     check_equal = 0
 
     try:
-        f = open(file)
-    except IOError, msg:
-        return (True, file, "1", "I/O Error: %s" % unicode(msg))
+        f = open(file, "r")
+    except IOError as msg:
+        return (True, file, "1", "I/O Error: %s" % str(msg))
 
     try:
-        text = Utilities.decode(f.read())[0].encode('utf-8')
+        text = f.read()
     finally:
         f.close()
         
     # convert eols
     text = Utilities.convertLineEnds(text, os.linesep)
     
-    source = cStringIO.StringIO(text)
+    source = io.StringIO(text)
     try:
         process_tokens(tokenize.generate_tokens(source.readline))
     
-    except tokenize.TokenError, msg:
+    except tokenize.TokenError as msg:
         f.close()
-        return (True, file, "1", "Token Error: %s" % unicode(msg))
+        return (True, file, "1", "Token Error: %s" % str(msg))
     
-    except IndentationError, err:
+    except IndentationError as err:
         f.close()
-        return (True, file, err.lineno, "Indentation Error: %s" % unicode(err.msg))
+        return (True, file, err.lineno, "Indentation Error: %s" % str(err.msg))
     
-    except NannyNag, nag:
+    except NannyNag as nag:
         badline = nag.get_lineno()
         line = nag.get_line()
         f.close()
         return (True, file, str(badline), line)
     
-    except Exception, err:
+    except Exception as err:
         f.close()
-        return (True, file, "1", "Unspecific Error: %s" % unicode(err))
+        return (True, file, "1", "Unspecific Error: %s" % str(err))
     
     f.close()
     return (False, None, None, None)
@@ -337,7 +337,7 @@ def format_witnesses(w):
     @param w A list of witnesses
     @return A formated string of the witnesses.
     """
-    firsts = map(lambda tup: str(tup[0]), w)
+    firsts = [str(tup[0]) for tup in w]
     prefix = "at tab size"
     if len(w) > 1:
         prefix = prefix + "s"

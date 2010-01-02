@@ -10,8 +10,8 @@ Module implementing the index generator for the builtin documentation generator.
 import sys
 import os
 
-import TemplatesListsStyle
-import TemplatesListsStyleCSS
+from . import TemplatesListsStyle
+from . import TemplatesListsStyleCSS
 
 from Utilities import joinext
 
@@ -131,8 +131,7 @@ class IndexGenerator(object):
         # 1) subpackages
         if package["subpackages"]:
             subpacks = package["subpackages"]
-            names = subpacks.keys()
-            names.sort()
+            names = sorted(list(subpacks.keys()))
             lst = []
             for name in names:
                 link = joinext("index-%s" % name, ".html")
@@ -148,8 +147,7 @@ class IndexGenerator(object):
         # 2) modules
         if package["modules"]:
             mods = package["modules"]
-            names = mods.keys()
-            names.sort()
+            names = sorted(list(mods.keys()))
             lst = []
             for name in names:
                 link = joinext(name, ".html")
@@ -176,7 +174,7 @@ class IndexGenerator(object):
               } + \
               self.footerTemplate
     
-        f = open(filename, "wb")
+        f = open(filename, "w")
         f.write(doc)
         f.close()
     
@@ -198,12 +196,12 @@ class IndexGenerator(object):
             basename = basename.replace(os.sep, ".")
             if not basename.endswith("."):
                 basename = "%s." % basename
-        for package, element in self.packages.items():
+        for package, element in list(self.packages.items()):
             try:
                 if basename:
                     package = package.replace(basename,"")
                 out = self.__writeIndex(package, element)
-            except IOError, v:
+            except IOError as v:
                 sys.stderr.write("%s error: %s\n" % (package, v[1]))
             else:
                 if out:

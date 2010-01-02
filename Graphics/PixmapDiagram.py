@@ -10,7 +10,7 @@ Module implementing a dialog showing a pixmap.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from ZoomDialog import ZoomDialog
+from .ZoomDialog import ZoomDialog
 
 import UI.Config
 

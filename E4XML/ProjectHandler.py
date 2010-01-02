@@ -9,8 +9,8 @@ Module implementing the handler class for reading an XML project file.
 
 import os
 
-from Config import projectFileFormatVersion
-from XMLHandlerBase import XMLHandlerBase
+from .Config import projectFileFormatVersion
+from .XMLHandlerBase import XMLHandlerBase
 
 import Utilities
 

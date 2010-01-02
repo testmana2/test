@@ -11,13 +11,13 @@ Module implementing a dialog showing the available plugins.
 import sys
 import os
 import zipfile
-import cStringIO
+import io
 
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from PyQt4.QtNetwork import QHttp, QNetworkProxy
 
-from Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
+from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
 from UI.AuthenticationDialog import AuthenticationDialog
 
@@ -250,7 +250,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if os.path.exists(self.pluginRepositoryFile):
             self.__repositoryMissing = False
             try:
-                f = open(self.pluginRepositoryFile, "rb")
+                f = open(self.pluginRepositoryFile, "r")
                 line = f.readline()
                 dtdLine = f.readline()
                 f.close()
@@ -274,13 +274,13 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 parser.setErrorHandler(eh)
                 
                 try:
-                    f = open(self.pluginRepositoryFile, "rb")
+                    f = open(self.pluginRepositoryFile, "r")
                     try:
                         try:
                             parser.parse(f)
                         except UnicodeEncodeError:
                             f.seek(0)
-                            buf = cStringIO.StringIO(f.read())
+                            buf = io.StringIO(f.read())
                             parser.parse(buf)
                     finally:
                         f.close()

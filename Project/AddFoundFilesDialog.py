@@ -10,7 +10,7 @@ Module implementing a dialog to show the found files to the user.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_AddFoundFilesDialog import Ui_AddFoundFilesDialog
+from .Ui_AddFoundFilesDialog import Ui_AddFoundFilesDialog
 
 class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
     """

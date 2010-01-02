@@ -13,8 +13,8 @@ from PyQt4.Qsci import QsciScintilla
 
 from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorStylesPage import Ui_EditorStylesPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorStylesPage import Ui_EditorStylesPage
 
 import Preferences
 
@@ -190,7 +190,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         Preferences.setEditor("MiniContextMenu",
             self.miniMenuCheckBox.isChecked())
         
-        for key in self.editorColours.keys():
+        for key in list(self.editorColours.keys()):
             Preferences.setEditorColour(key, self.editorColours[key])
         
     @pyqtSlot()

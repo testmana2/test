@@ -16,18 +16,18 @@ import socket
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_EmailDialog import Ui_EmailDialog
+from .Ui_EmailDialog import Ui_EmailDialog
 
-from Info import Program, Version, BugAddress, FeatureAddress
+from .Info import Program, Version, BugAddress, FeatureAddress
 import Preferences
 import Utilities
 
-from email import Encoders
-from email.MIMEBase import MIMEBase
-from email.MIMEText import MIMEText
-from email.MIMEImage import MIMEImage
-from email.MIMEAudio import MIMEAudio
-from email.MIMEMultipart import MIMEMultipart
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.audio import MIMEAudio
+from email.mime.multipart import MIMEMultipart
 
 class EmailDialog(QDialog, Ui_EmailDialog):
     """
@@ -215,7 +215,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             else:
                 att = MIMEBase(maintype, subtype)
                 att.set_payload(open(fname, 'rb').read())
-                Encoders.encode_base64(att)
+                encoders.encode_base64(att)
             att.add_header('Content-Disposition', 'attachment', filename = fname)
             msg.attach(att)
             
@@ -248,11 +248,11 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 try:
                     server.login(Preferences.getUser("MailServerUser"),
                                  password)
-                except (smtplib.SMTPException, socket.error), e:
+                except (smtplib.SMTPException, socket.error) as e:
                     res = QMessageBox.critical(self,
                         self.trUtf8("Send bug report"),
                         self.trUtf8("""<p>Authentication failed.<br>Reason: {0}</p>""")
-                            .format(unicode(e)),
+                            .format(str(e)),
                         QMessageBox.StandardButtons(\
                             QMessageBox.Abort | \
                             QMessageBox.Retry),
@@ -268,12 +268,12 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 self.__toAddress, msg)
             server.quit()
             QApplication.restoreOverrideCursor()
-        except (smtplib.SMTPException, socket.error), e:
+        except (smtplib.SMTPException, socket.error) as e:
             QApplication.restoreOverrideCursor()
             res = QMessageBox.critical(self,
                 self.trUtf8("Send bug report"),
                 self.trUtf8("""<p>Message could not be sent.<br>Reason: {0}</p>""")
-                    .format(unicode(e)),
+                    .format(str(e)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Abort | \
                     QMessageBox.Retry),

@@ -16,9 +16,9 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from Ui_TabnannyDialog import Ui_TabnannyDialog
+from .Ui_TabnannyDialog import Ui_TabnannyDialog
 
-import Tabnanny
+from . import Tabnanny
 import Utilities
 
 class TabnannyDialog(QDialog, Ui_TabnannyDialog):
@@ -68,7 +68,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         @param fn File or list of files or directory to be checked
                 (string or list of strings)
         """
-        if type(fn) is types.ListType:
+        if isinstance(fn, list):
             files = fn
         elif os.path.isdir(fn):
             files = Utilities.direntries(fn, 1, '*.py', 0)

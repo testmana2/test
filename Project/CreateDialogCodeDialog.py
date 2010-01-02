@@ -16,8 +16,8 @@ from PyQt4 import uic
 
 from E4Gui.E4Application import e4App
 
-from NewDialogClassDialog import NewDialogClassDialog
-from Ui_CreateDialogCodeDialog import Ui_CreateDialogCodeDialog
+from .NewDialogClassDialog import NewDialogClassDialog
+from .Ui_CreateDialogCodeDialog import Ui_CreateDialogCodeDialog
 
 from Utilities import ModuleParser
 
@@ -79,7 +79,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             self.filenameEdit.setText(self.srcFile)
             
             classesList = []
-            for cls in self.__module.classes.values():
+            for cls in list(self.__module.classes.values()):
                 classesList.append(cls.name)
             classesList.sort()
             self.classNameCombo.addItems(classesList)
@@ -114,11 +114,11 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         try:
             dlg = uic.loadUi(self.formFile)
             return dlg.objectName()
-        except AttributeError, err:
+        except AttributeError as err:
             QMessageBox.critical(self,
                 self.trUtf8("uic error"),
                 self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
-                            """<p>{1}</p>""").format(self.formFile, unicode(err)),
+                            """<p>{1}</p>""").format(self.formFile, str(err)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
             return ""
@@ -132,11 +132,11 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         try:
             dlg = uic.loadUi(self.formFile)
             return dlg.metaObject().className()
-        except AttributeError, err:
+        except AttributeError as err:
             QMessageBox.critical(self,
                 self.trUtf8("uic error"),
                 self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
-                            """<p>{1}</p>""").format(self.formFile, unicode(err)),
+                            """<p>{1}</p>""").format(self.formFile, str(err)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
             return ""
@@ -154,7 +154,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         clsName = self.classNameCombo.currentText()
         if clsName:
             cls = self.__module.classes[clsName]
-            for meth in cls.methods.values():
+            for meth in list(cls.methods.values()):
                 if meth.name.startswith("on_"):
                     if meth.pyqtSignature is not None:
                         sig = ", ".join([str(QMetaObject.normalizedType(t)) \
@@ -238,11 +238,11 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         itm2.setCheckState(Qt.Unchecked)
             
             self.slotsView.sortByColumn(0, Qt.AscendingOrder)
-        except (AttributeError, ImportError), err:
+        except (AttributeError, ImportError) as err:
             QMessageBox.critical(self,
                 self.trUtf8("uic error"),
                 self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
-                            """<p>{1}</p>""").format(self.formFile, unicode(err)),
+                            """<p>{1}</p>""").format(self.formFile, str(err)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
         
@@ -279,15 +279,15 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             # new file
             try:
                 tmplName = os.path.join(getConfig('ericCodeTemplatesDir'), "impl.py.tmpl")
-                tmplFile = open(tmplName, 'rb')
+                tmplFile = open(tmplName, 'r')
                 template = tmplFile.read()
                 tmplFile.close()
-            except IOError, why:
+            except IOError as why:
                 QMessageBox.critical(self,
                     self.trUtf8("Code Generation"),
                     self.trUtf8("""<p>Could not open the code template file "{0}".</p>"""
                                 """<p>Reason: {1}</p>""")\
-                        .format(tmplName, unicode(why)),
+                        .format(tmplName, str(why)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Ok))
                 return
@@ -312,17 +312,17 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         else:
             # extend existing file
             try:
-                srcFile = open(self.srcFile, 'rb')
+                srcFile = open(self.srcFile, 'r')
                 sourceImpl = srcFile.readlines()
                 srcFile.close()
                 if not sourceImpl[-1].endswith(os.linesep):
                     sourceImpl[-1] = "%s%s" % (sourceImpl[-1], os.linesep)
-            except IOError, why:
+            except IOError as why:
                 QMessageBox.critical(self,
                     self.trUtf8("Code Generation"),
                     self.trUtf8("""<p>Could not open the source file "{0}".</p>"""
                                 """<p>Reason: {1}</p>""")\
-                        .format(self.srcFile, unicode(why)),
+                        .format(self.srcFile, str(why)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Ok))
                 return
@@ -370,15 +370,15 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         
         # write the new code
         try:
-            srcFile = open(self.filenameEdit.text(), 'wb')
+            srcFile = open(self.filenameEdit.text(), 'w')
             srcFile.write("".join(sourceImpl))
             srcFile.close()
-        except IOError, why:
+        except IOError as why:
             QMessageBox.critical(self,
                 self.trUtf8("Code Generation"),
                 self.trUtf8("""<p>Could not write the source file "{0}".</p>"""
                             """<p>Reason: {1}</p>""")\
-                    .format(self.filenameEdit.text(), unicode(why)),
+                    .format(self.filenameEdit.text(), str(why)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
             return

@@ -22,6 +22,7 @@ import imp
 import re
 
 import Utilities
+from functools import reduce
 
 __all__ = ["Module", "Class", "Function", "RbModule", "readModule"]
 
@@ -382,7 +383,7 @@ class Module(object):
         @param name name of class to be added (string)
         @param _class Class object to be added
         """
-        if self.classes.has_key(name):
+        if name in self.classes:
             self.classes_counts[name] += 1
             name = "%s_%d" % (name, self.classes_counts[name])
         else:
@@ -396,7 +397,7 @@ class Module(object):
         @param name name of module to be added (string)
         @param module Module object to be added
         """
-        if self.modules.has_key(name):
+        if name in self.modules:
             self.modules_counts[name] += 1
             name = "%s_%d" % (name, self.modules_counts[name])
         else:
@@ -410,7 +411,7 @@ class Module(object):
         @param name name of function to be added (string)
         @param function Function object to be added
         """
-        if self.functions.has_key(name):
+        if name in self.functions:
             self.functions_counts[name] += 1
             name = "%s_%d" % (name, self.functions_counts[name])
         else:
@@ -608,7 +609,7 @@ class Module(object):
                     for n in inherit.split(','):
                         n = n.strip()
                         if n:
-                            if self.classes.has_key(n):
+                            if n in self.classes:
                                 # we know this super class
                                 n = self.classes[n].name
                             else:
@@ -619,7 +620,7 @@ class Module(object):
                                     # look in module for class
                                     m = c[-2]
                                     c = c[-1]
-                                    if _modules.has_key(m):
+                                    if m in _modules:
                                         m = _modules[m]
                                         n = m.name
                             names.append(n)
@@ -681,7 +682,7 @@ class Module(object):
                 # from module import stuff
                 mod = m.group("ImportFromPath")
                 names = m.group("ImportFromList").split(',')
-                if not self.from_imports.has_key(mod):
+                if mod not in self.from_imports:
                     self.from_imports[mod] = []
                 for n in names:
                     n = n.strip()
@@ -820,7 +821,7 @@ class Module(object):
                     parent_obj = classstack[-1][0]
                 else:
                     parent_obj = self
-                if parent_obj.classes.has_key(class_name):
+                if class_name in parent_obj.classes:
                     cur_class = parent_obj.classes[class_name]
                 elif classstack and \
                      isinstance(classstack[-1][0], Class) and \
@@ -850,7 +851,7 @@ class Module(object):
                 cur_class = RbModule(self.name, module_name,
                                   self.file, lineno)
                 # add nested Ruby modules to the file
-                if self.modules.has_key(module_name):
+                if module_name in self.modules:
                     cur_class = self.modules[module_name]
                 else:
                     self.addModule(module_name, cur_class)
@@ -990,9 +991,9 @@ class Module(object):
         @return A dictionary with inheritance hierarchies.
         """
         hierarchy =  {}
-        for cls in self.classes.keys():
+        for cls in list(list(self.classes.keys())):
             self.assembleHierarchy(cls, self.classes, [cls], hierarchy)
-        for mod in self.modules.keys():
+        for mod in list(list(self.modules.keys())):
             self.assembleHierarchy(mod, self.modules, [mod], hierarchy)
         return hierarchy
     
@@ -1012,9 +1013,9 @@ class Module(object):
         @param result The resultant hierarchy
         """
         rv = {}
-        if classes.has_key(name):
+        if name in classes:
             for cls in classes[name].super:
-                if not classes.has_key(cls):
+                if cls not in classes:
                     rv[cls] = {}
                     exhausted = path + [cls]
                     exhausted.reverse()
@@ -1037,7 +1038,7 @@ class Module(object):
         @param fn function to call for classe that are already part of the
             result dictionary
         """
-        if path[0] in result.keys():
+        if path[0] in list(list(result.keys())):
             if len(path) > 1:
                 fn(path[1:], result[path[0]], fn)
         else:
@@ -1306,7 +1307,7 @@ def readModule(module, path = [], inpackage = False, basename = "",
                 break
         module = os.path.basename(module)
     
-    if caching and _modules.has_key(modname):
+    if caching and modname in _modules:
         # we've seen this module before...
         return _modules[modname]
     
@@ -1336,7 +1337,7 @@ def readModule(module, path = [], inpackage = False, basename = "",
     
     mod = Module(modname, file, type)
     try:
-        src = Utilities.decode(f.read())[0]
+        src = f.read()
         mod.scan(src)
     finally:
         f.close()
@@ -1388,8 +1389,8 @@ def find_module(name, path, extensions):
     # standard Python module file
     if name.lower().endswith('.py'):
         name = name[:-3]
-    if type(name) == type(u""):
-        name = name.encode('utf-8')
+##    if isinstance(name, type("")):
+##        name = name.encode('utf-8')
     
     return imp.find_module(name, path)
 
@@ -1425,15 +1426,15 @@ def resetParsedModule(module, basename = ""):
             modname = modname[:-3]
         module = os.path.basename(module)
     
-    if _modules.has_key(modname):
+    if modname in _modules:
         del _modules[modname]
     
 if __name__ == "__main__":
     # Main program for testing.
     mod = sys.argv[1]
     module = readModule(mod)
-    for cls in module.classes.values():
-        print "--------------"
-        print cls.name
-        for meth in cls.methods.values():
-            print meth.name, meth.pyqtSignature
+    for cls in list(module.classes.values()):
+        print("--------------")
+        print(cls.name)
+        for meth in list(cls.methods.values()):
+            print(meth.name, meth.pyqtSignature)

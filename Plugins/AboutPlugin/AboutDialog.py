@@ -34,7 +34,7 @@ aboutText = QApplication.translate("AboutDialog",
 ).format(Program, Homepage, BugAddress, FeatureAddress)
 
 authorsText = \
-u"""\
+"""\
 Detlev Offenbach
     Project Manager, Maintainer and German translation
     
@@ -65,7 +65,7 @@ Gianluca
 """
 
 thanksText = \
-u"""Phil Thompson for providing PyQt and QScintilla and pushing me into this business.
+"""Phil Thompson for providing PyQt and QScintilla and pushing me into this business.
 
 Andrew Bushnell of Fluent Inc. for contributing the multithreading debugger
 and a bunch of fixes to enhance the platform independance.
@@ -732,7 +732,7 @@ from PyQt4.QtCore import *
 
 import UI.PixmapCache
 
-from Ui_AboutDialog import Ui_AboutDialog
+from .Ui_AboutDialog import Ui_AboutDialog
 
 class AboutDialog(QDialog, Ui_AboutDialog):
     """

@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnDialog import Ui_SvnDialog
+from .Ui_SvnDialog import Ui_SvnDialog
 
 import Preferences
 
@@ -156,7 +156,9 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         the contents pane.
         """
         if self.proc is not None:
-            s = unicode(self.proc.readAllStandardOutput())
+            s = str(self.proc.readAllStandardOutput(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.resultbox.insertPlainText(s)
             self.resultbox.ensureCursorVisible()
             if not self.__hasAddOrDelete and len(s) > 0:
@@ -175,7 +177,9 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         """
         if self.proc is not None:
             self.errorGroup.show()
-            s = unicode(self.proc.readAllStandardError())
+            s = str(self.proc.readAllStandardError(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
         

@@ -9,7 +9,7 @@ Module implementing a dialog to select the zoom scale.
 
 from PyQt4.QtGui import QDialog
 
-from Ui_ZoomDialog import Ui_ZoomDialog
+from .Ui_ZoomDialog import Ui_ZoomDialog
 
 class ZoomDialog(QDialog, Ui_ZoomDialog):
     """

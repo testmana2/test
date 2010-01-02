@@ -20,10 +20,10 @@ from PyQt4.QtGui import *
 from E4Gui.E4Application import e4App
 from E4Gui.E4Completers import E4FileCompleter
 
-from Ui_UnittestDialog import Ui_UnittestDialog
-from Ui_UnittestStacktraceDialog import Ui_UnittestStacktraceDialog
+from .Ui_UnittestDialog import Ui_UnittestDialog
+from .Ui_UnittestStacktraceDialog import Ui_UnittestStacktraceDialog
 
-from DebugClients.Python.coverage import coverage
+from DebugClients.Python3.coverage import coverage
 
 import UI.PixmapCache
 
@@ -261,7 +261,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 QMessageBox.critical(self, 
                         self.trUtf8("Unittest"),
                         self.trUtf8("<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
-                            .format(self.testName, unicode(exc_type), unicode(exc_value)))
+                            .format(self.testName, str(exc_type), str(exc_value)))
                 return
                 
             # now set up the coverage stuff
@@ -530,8 +530,8 @@ class QtTestResult(unittest.TestResult):
         @param err The error traceback
         """
         unittest.TestResult.addFailure(self, test, err)
-        tracebackLines = apply(traceback.format_exception, err + (10,))
-        self.parent.testFailed(unicode(test), tracebackLines)
+        tracebackLines = traceback.format_exception(*err + (10,))
+        self.parent.testFailed(str(test), tracebackLines)
         
     def addError(self, test, err):
         """
@@ -541,8 +541,8 @@ class QtTestResult(unittest.TestResult):
         @param err The error traceback
         """
         unittest.TestResult.addError(self, test, err)
-        tracebackLines = apply(traceback.format_exception, err + (10,))
-        self.parent.testErrored(unicode(test), tracebackLines)
+        tracebackLines = traceback.format_exception(*err + (10,))
+        self.parent.testErrored(str(test), tracebackLines)
         
     def startTest(self, test):
         """
@@ -551,7 +551,7 @@ class QtTestResult(unittest.TestResult):
         @param test Reference to the test object
         """
         unittest.TestResult.startTest(self, test)
-        self.parent.testStarted(unicode(test), test.shortDescription())
+        self.parent.testStarted(str(test), test.shortDescription())
 
     def stopTest(self, test):
         """

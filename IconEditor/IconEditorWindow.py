@@ -12,9 +12,9 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Action import E4Action, createActionGroup
 
-from IconEditorGrid import IconEditorGrid
-from IconZoomDialog import IconZoomDialog
-from IconEditorPalette import IconEditorPalette
+from .IconEditorGrid import IconEditorGrid
+from .IconZoomDialog import IconZoomDialog
+from .IconEditorPalette import IconEditorPalette
 
 import UI.PixmapCache
 import UI.Config
@@ -128,7 +128,7 @@ class IconEditorWindow(QMainWindow):
         readFormats = QImageReader.supportedImageFormats()
         for readFormat in readFormats:
             try:
-                inputFormats.append(filters[unicode(readFormat)])
+                inputFormats.append(filters[str(readFormat)])
             except KeyError:
                 pass
         inputFormats.sort()
@@ -139,7 +139,7 @@ class IconEditorWindow(QMainWindow):
         writeFormats = QImageWriter.supportedImageFormats()
         for writeFormat in writeFormats:
             try:
-                outputFormats.append(filters[unicode(writeFormat)])
+                outputFormats.append(filters[str(writeFormat)])
             except KeyError:
                 pass
         outputFormats.sort()

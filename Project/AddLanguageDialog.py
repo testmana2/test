@@ -10,7 +10,7 @@ Module implementing a dialog to add a new language to the project.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_AddLanguageDialog import Ui_AddLanguageDialog
+from .Ui_AddLanguageDialog import Ui_AddLanguageDialog
 
 class AddLanguageDialog(QDialog, Ui_AddLanguageDialog):
     """

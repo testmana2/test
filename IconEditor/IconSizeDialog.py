@@ -7,7 +7,7 @@ Module implementing a dialog to enter the icon size.
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import pyqtSlot
 
-from Ui_IconSizeDialog import Ui_IconSizeDialog
+from .Ui_IconSizeDialog import Ui_IconSizeDialog
 
 class IconSizeDialog(QDialog, Ui_IconSizeDialog):
     """

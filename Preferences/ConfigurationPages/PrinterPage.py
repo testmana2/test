@@ -9,8 +9,8 @@ Module implementing the Printer configuration page.
 
 from PyQt4.QtCore import pyqtSlot
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_PrinterPage import Ui_PrinterPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_PrinterPage import Ui_PrinterPage
 
 import Preferences
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2002-2009 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -15,7 +15,7 @@ import shutil
 import glob
 import distutils.sysconfig
 
-from eric4config import getConfig
+from .eric4config import getConfig
 
 # Define the globals.
 progName = None
@@ -28,10 +28,10 @@ def usage(rcode = 2):
     """
     global progName
 
-    print "Usage:"
-    print "    %s [-h]" % (progName)
-    print "where:"
-    print "    -h             display this help message"
+    print("Usage:")
+    print("    %s [-h]" % (progName))
+    print("where:")
+    print("    -h             display this help message")
 
     sys.exit(rcode)
 
@@ -132,7 +132,7 @@ def main(argv):
     
     try:
         uninstallEric()
-    except IOError, msg:
+    except IOError as msg:
         sys.stderr.write('IOError: %s\nTry uninstall as root.\n' % msg)
     
     
@@ -142,8 +142,7 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print \
-"""An internal error occured.  Please report all the output of the program,
+        print("""An internal error occured.  Please report all the output of the program,
 including the following traceback, to eric5-bugs@eric-ide.python-projects.org.
-"""
+""")
         raise

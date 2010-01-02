@@ -88,14 +88,14 @@ class QsciScintillaCompat(QsciScintilla):
         @param font font to be used (QFont)
         """
         try:
-            rangeLow = range(self.STYLE_DEFAULT)
+            rangeLow = list(range(self.STYLE_DEFAULT))
         except AttributeError:
-            rangeLow = range(32)
+            rangeLow = list(range(32))
         try:
-            rangeHigh = range(self.STYLE_LASTPREDEFINED + 1,
-                              self.STYLE_MAX + 1)
+            rangeHigh = list(range(self.STYLE_LASTPREDEFINED + 1,
+                              self.STYLE_MAX + 1))
         except AttributeError:
-            rangeHigh = range(40, 128)
+            rangeHigh = list(range(40, 128))
         
         f = font.family()
         ps = font.pointSize()
@@ -122,7 +122,7 @@ class QsciScintillaCompat(QsciScintilla):
         @return linenumber at position or -1, if there is no line at pos
             (integer, zero based)
         """
-        if type(pos) == type(1):
+        if isinstance(pos, int):
             scipos = pos
         else:
             scipos = \
@@ -682,10 +682,11 @@ class QsciScintillaCompat(QsciScintilla):
         else:
             self.__targetSearchEnd = self.positionFromLineIndex(endline, endindex)
         
-        if self.isUtf8():
-            self.__targetSearchExpr = expr_.encode("utf-8")
-        else:
-            self.__targetSearchExpr = expr_.encode("latin1")
+##        if self.isUtf8():
+##            self.__targetSearchExpr = expr_.encode("utf-8")
+##        else:
+##            self.__targetSearchExpr = expr_.encode("latin1")
+        self.__targetSearchExpr = expr_
         
         if self.__targetSearchExpr:
             self.__targetSearchActive = True
@@ -721,10 +722,11 @@ class QsciScintillaCompat(QsciScintilla):
         
         start = self.SendScintilla(QsciScintilla.SCI_GETTARGETSTART)
         
-        if self.isUtf8():
-            r = replaceStr.encode("utf-8")
-        else:
-            r = replaceStr.encode("latin1")
+##        if self.isUtf8():
+##            r = replaceStr.encode("utf-8")
+##        else:
+##            r = replaceStr.encode("latin1")
+        r = replaceStr
         
         self.SendScintilla(cmd, len(r), r)
         

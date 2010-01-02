@@ -7,8 +7,8 @@
 Module implementing the handler class for reading an XML tasks file.
 """
 
-from Config import pluginRepositoryFileFormatVersion
-from XMLHandlerBase import XMLHandlerBase
+from .Config import pluginRepositoryFileFormatVersion
+from .XMLHandlerBase import XMLHandlerBase
 
 import Preferences
 

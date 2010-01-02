@@ -16,7 +16,7 @@ from E4Gui.E4Completers import E4FileCompleter
 
 from QScintilla.SpellChecker import SpellChecker
 
-from Ui_SpellingPropertiesDialog import Ui_SpellingPropertiesDialog
+from .Ui_SpellingPropertiesDialog import Ui_SpellingPropertiesDialog
 
 import Utilities
 import Preferences

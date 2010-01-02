@@ -20,8 +20,8 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from TaskPropertiesDialog import TaskPropertiesDialog
-from TaskFilterConfigDialog import TaskFilterConfigDialog
+from .TaskPropertiesDialog import TaskPropertiesDialog
+from .TaskFilterConfigDialog import TaskFilterConfigDialog
 
 import UI.PixmapCache
 
@@ -771,8 +771,8 @@ class TaskViewer(QTreeWidget):
             fn = os.path.join(self.project.ppath, file)
             # read the file and split it into textlines
             try:
-                f = open(fn, 'rb')
-                text, encoding = Utilities.decode(f.read())
+                f = open(fn, 'r')
+                text = f.read()
                 lines = text.splitlines()
                 f.close()
             except IOError:

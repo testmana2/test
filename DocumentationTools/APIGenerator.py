@@ -85,8 +85,7 @@ class APIGenerator(object):
         """
         Private method to generate the api section for classes.
         """
-        classNames = self.module.classes.keys()
-        classNames.sort()
+        classNames = sorted(list(self.module.classes.keys()))
         for className in classNames:
             if not self.__isPrivate(self.module.classes[className]):
                 self.__addClassVariablesAPI(className)
@@ -99,10 +98,7 @@ class APIGenerator(object):
         @param classname Name of the class containing the method. (string)
         """
         _class = self.module.classes[className]
-        methods = _class.methods.keys()
-        methods.sort()
-        
-        # first do the constructor
+        methods = sorted(list(_class.methods.keys()))
         if '__init__' in methods:
             methods.remove('__init__')
             if _class.isPublic():
@@ -156,8 +152,7 @@ class APIGenerator(object):
         """
         Private method to generate the api section for functions.
         """
-        funcNames = self.module.functions.keys()
-        funcNames.sort()
+        funcNames = sorted(list(self.module.functions.keys()))
         for funcName in funcNames:
             if not self.__isPrivate(self.module.functions[funcName]): 
                 if self.module.functions[funcName].isPublic():

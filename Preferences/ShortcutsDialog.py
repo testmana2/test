@@ -12,8 +12,8 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from Ui_ShortcutsDialog import Ui_ShortcutsDialog
-from ShortcutDialog import ShortcutDialog
+from .Ui_ShortcutsDialog import Ui_ShortcutsDialog
+from .ShortcutDialog import ShortcutDialog
 
 import UI.PixmapCache
 

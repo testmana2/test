@@ -7,9 +7,9 @@
 Module implementing a scheme access handler for about schemes.
 """
 
-from SchemeAccessHandler import SchemeAccessHandler
+from .SchemeAccessHandler import SchemeAccessHandler
 
-from NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
+from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
 
 class AboutAccessHandler(SchemeAccessHandler):
     """

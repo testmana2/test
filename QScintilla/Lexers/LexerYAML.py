@@ -9,7 +9,7 @@ Module implementing a YAML lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerYAML, QsciScintilla
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerYAML(QsciLexerYAML, Lexer):

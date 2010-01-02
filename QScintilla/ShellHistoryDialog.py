@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_ShellHistoryDialog import Ui_ShellHistoryDialog
+from .Ui_ShellHistoryDialog import Ui_ShellHistoryDialog
 
 class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
     """

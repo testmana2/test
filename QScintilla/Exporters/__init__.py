@@ -36,16 +36,16 @@ def getExporter(format, editor):
     """
     try:
         if format == "HTML":
-            from ExporterHTML import ExporterHTML
+            from .ExporterHTML import ExporterHTML
             return ExporterHTML(editor)
         elif format == "PDF":
-            from ExporterPDF import ExporterPDF
+            from .ExporterPDF import ExporterPDF
             return ExporterPDF(editor)
         elif format == "RTF":
-            from ExporterRTF import ExporterRTF
+            from .ExporterRTF import ExporterRTF
             return ExporterRTF(editor)
         elif format == "TeX":
-            from ExporterTEX import ExporterTEX
+            from .ExporterTEX import ExporterTEX
             return ExporterTEX(editor)
     except ImportError:
         return None

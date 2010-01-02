@@ -10,11 +10,11 @@ Module implementing the cookies configuration dialog.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from CookiesDialog import CookiesDialog
-from CookiesExceptionsDialog import CookiesExceptionsDialog
-from CookieJar import CookieJar
+from .CookiesDialog import CookiesDialog
+from .CookiesExceptionsDialog import CookiesExceptionsDialog
+from .CookieJar import CookieJar
 
-from Ui_CookiesConfigurationDialog import Ui_CookiesConfigurationDialog
+from .Ui_CookiesConfigurationDialog import Ui_CookiesConfigurationDialog
 
 import Preferences
 

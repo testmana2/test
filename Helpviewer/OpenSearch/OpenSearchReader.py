@@ -9,7 +9,7 @@ Module implementing a reader for open search engine descriptions.
 
 from PyQt4.QtCore import *
 
-from OpenSearchEngine import OpenSearchEngine
+from .OpenSearchEngine import OpenSearchEngine
 
 class OpenSearchReader(QXmlStreamReader):
     """

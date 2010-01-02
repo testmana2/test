@@ -12,10 +12,10 @@ import pysvn
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-from SvnUtilities import formatTime
-from SvnDialogMixin import SvnDialogMixin
+from .SvnUtilities import formatTime
+from .SvnDialogMixin import SvnDialogMixin
 
-from Ui_SvnRepoBrowserDialog import Ui_SvnRepoBrowserDialog
+from .Ui_SvnRepoBrowserDialog import Ui_SvnRepoBrowserDialog
 
 import UI.PixmapCache
 
@@ -183,7 +183,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
                                 dirent["kind"], dirent["path"])
                 self.__resort()
                 self.__resizeColumns()
-            except pysvn.ClientError, e:
+            except pysvn.ClientError as e:
                 self.__showError(e.args[0])
             except AttributeError:
                 self.__showError(\

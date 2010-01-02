@@ -9,7 +9,7 @@ Module implementing an IDL lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerIDL,  QsciScintilla
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerIDL(QsciLexerIDL, Lexer):

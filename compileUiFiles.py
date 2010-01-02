@@ -54,7 +54,7 @@ def compileUiFiles():
                     # Allow the caller to change the name of the .py file or generate
                     # it in a different directory.
                     if map is not None:
-                        py_dir, py_file = map(py_dir, py_file)
+                        py_dir, py_file = list(map(py_dir, py_file))
 
                     # Make sure the destination directory exists.
                     try:
@@ -102,7 +102,7 @@ def main(argv):
     @param argv the list of command line arguments.
     """
     # Compile .ui files
-    print "Compiling user interface files..."
+    print("Compiling user interface files...")
     compileUiFiles()
     
     
@@ -112,8 +112,7 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print \
-"""An internal error occured.  Please report all the output of the program,
+        print("""An internal error occured.  Please report all the output of the program,
 including the following traceback, to eric5-bugs@eric-ide.python-projects.org.
-"""
+""")
         raise

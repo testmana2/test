@@ -13,7 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 from PyQt4.QtGui import QMessageBox
 
-from AdBlockRule import AdBlockRule
+from .AdBlockRule import AdBlockRule
 
 import Helpviewer.HelpWindow
 
@@ -87,7 +87,7 @@ class AdBlockSubscription(QObject):
         url.setPath("subscribe")
         
         queryItems = []
-        queryItems.append(("location", unicode(self.__location)))
+        queryItems.append(("location", str(self.__location)))
         queryItems.append(("title", self.__title))
         if self.__enabled:
             queryItems.append(("enabled", "false"))
@@ -250,7 +250,7 @@ class AdBlockSubscription(QObject):
         reply = self.sender()
         
         response = reply.readAll()
-        redirect = reply.attribute(QNetworkRequest.RedirectionTargetAttribute)
+        redirect = reply.attribute(QNetworkRequest.RedirectionTargetAttribute) or QUrl()
         reply.close()
         reply.deleteLater()
         

@@ -10,7 +10,7 @@ Module implementing a toolbar configuration dialog.
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-from Ui_E4ToolBarDialog import Ui_E4ToolBarDialog
+from .Ui_E4ToolBarDialog import Ui_E4ToolBarDialog
 
 import UI.PixmapCache
 
@@ -78,7 +78,7 @@ class E4ToolBarDialog(QDialog, Ui_E4ToolBarDialog):
                 item.setText(0, action.text())
                 item.setIcon(0, action.icon())
                 item.setTextAlignment(0, Qt.AlignLeft | Qt.AlignVCenter)
-                item.setData(0, E4ToolBarDialog.ActionIdRole, long(id(action)))
+                item.setData(0, E4ToolBarDialog.ActionIdRole, int(id(action)))
                 item.setData(0, E4ToolBarDialog.WidgetActionRole, False)
                 if self.__manager.isWidgetAction(action):
                     item.setData(0, E4ToolBarDialog.WidgetActionRole, True)
@@ -86,7 +86,7 @@ class E4ToolBarDialog(QDialog, Ui_E4ToolBarDialog):
                     self.__widgetActionToToolBarItemID[id(action)] = None
             categoryItem.setExpanded(True)
         
-        for tbID, actions in self.__manager.toolBarsActions().items():
+        for tbID, actions in list(self.__manager.toolBarsActions().items()):
             tb = self.__manager.toolBarById(tbID)
             default = self.__manager.isDefaultToolBar(tb)
             tbItem = E4ToolBarItem(tbID, [], default)
@@ -103,7 +103,7 @@ class E4ToolBarDialog(QDialog, Ui_E4ToolBarDialog):
                         self.__widgetActionToToolBarItemID[aID] = id(tbItem)
                         self.__toolBarItemToWidgetActionID[id(tbItem)].append(aID)
             tbItem.actionIDs = actionIDs
-            self.toolbarComboBox.addItem(tb.windowTitle(), long(id(tbItem)))
+            self.toolbarComboBox.addItem(tb.windowTitle(), int(id(tbItem)))
             if default:
                 self.toolbarComboBox.setItemData(self.toolbarComboBox.count() - 1, 
                     QColor(Qt.darkGreen), Qt.ForegroundRole)
@@ -139,7 +139,7 @@ class E4ToolBarDialog(QDialog, Ui_E4ToolBarDialog):
             tbItem.isChanged = True
             self.__toolbarItems[id(tbItem)] = tbItem
             self.__toolBarItemToWidgetActionID[id(tbItem)] = []
-            self.toolbarComboBox.addItem(name, long(id(tbItem)))
+            self.toolbarComboBox.addItem(name, int(id(tbItem)))
             self.toolbarComboBox.model().sort(0)
             self.toolbarComboBox.setCurrentIndex(self.toolbarComboBox.findText(name))
     
@@ -241,7 +241,7 @@ class E4ToolBarDialog(QDialog, Ui_E4ToolBarDialog):
                 item.setText(action.text())
                 item.setIcon(action.icon())
                 item.setTextAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-                item.setData(E4ToolBarDialog.ActionIdRole, long(id(action)))
+                item.setData(E4ToolBarDialog.ActionIdRole, int(id(action)))
                 item.setData(E4ToolBarDialog.WidgetActionRole, False)
                 if self.__manager.isWidgetAction(action):
                     item.setData(E4ToolBarDialog.WidgetActionRole, True)
@@ -335,7 +335,7 @@ class E4ToolBarDialog(QDialog, Ui_E4ToolBarDialog):
             item.setText(action.text())
             item.setIcon(action.icon())
             item.setTextAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-            item.setData(E4ToolBarDialog.ActionIdRole, long(id(action)))
+            item.setData(E4ToolBarDialog.ActionIdRole, int(id(action)))
             item.setData(E4ToolBarDialog.WidgetActionRole, False)
             if self.__manager.isWidgetAction(action):
                 item.setData(E4ToolBarDialog.WidgetActionRole, True)
@@ -386,7 +386,7 @@ class E4ToolBarDialog(QDialog, Ui_E4ToolBarDialog):
         self.__removedToolBarIDs = []
         
         # step 2: save configured toolbars
-        for tbItem in self.__toolbarItems.values():
+        for tbItem in list(self.__toolbarItems.values()):
             if not tbItem.isChanged:
                 continue
             

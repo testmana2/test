@@ -12,9 +12,9 @@ from PyQt4.QtCore import Qt,  SIGNAL
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QHeaderView, QMenu, QBrush
 from PyQt4.QtCore import pyqtSlot
 
-from PluginDetailsDialog import PluginDetailsDialog
+from .PluginDetailsDialog import PluginDetailsDialog
 
-from Ui_PluginInfoDialog import Ui_PluginInfoDialog
+from .Ui_PluginInfoDialog import Ui_PluginInfoDialog
 
 class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
     """

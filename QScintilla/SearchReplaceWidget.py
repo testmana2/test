@@ -10,8 +10,8 @@ Module implementing the search and replace widget.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SearchWidget import Ui_SearchWidget
-from Ui_ReplaceWidget import Ui_ReplaceWidget
+from .Ui_SearchWidget import Ui_SearchWidget
+from .Ui_ReplaceWidget import Ui_ReplaceWidget
 
 from E4Gui.E4Action import E4Action
 

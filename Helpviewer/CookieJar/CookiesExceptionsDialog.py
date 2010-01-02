@@ -10,11 +10,11 @@ Module implementing a dialog for the configuration of cookie exceptions.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from CookieJar import CookieJar
-from CookieExceptionsModel import CookieExceptionsModel
-from CookieModel import CookieModel
+from .CookieJar import CookieJar
+from .CookieExceptionsModel import CookieExceptionsModel
+from .CookieModel import CookieModel
 
-from Ui_CookiesExceptionsDialog import Ui_CookiesExceptionsDialog
+from .Ui_CookiesExceptionsDialog import Ui_CookiesExceptionsDialog
 
 import UI.PixmapCache
 
@@ -55,7 +55,7 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         f = QFont()
         f.setPointSize(10)
         fm = QFontMetrics(f)
-        height = fm.height() + fm.height() / 3
+        height = fm.height() + fm.height() // 3
         self.exceptionsTable.verticalHeader().setDefaultSectionSize(height)
         self.exceptionsTable.verticalHeader().setMinimumSectionSize(-1)
         for section in range(self.__exceptionsModel.columnCount()):

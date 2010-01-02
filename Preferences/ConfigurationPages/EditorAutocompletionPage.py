@@ -7,8 +7,8 @@
 Module implementing the Editor Autocompletion configuration page.
 """
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorAutocompletionPage import Ui_EditorAutocompletionPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorAutocompletionPage import Ui_EditorAutocompletionPage
 
 import Preferences
 

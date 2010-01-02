@@ -16,7 +16,7 @@ import glob
 import fnmatch
 import copy
 import zipfile
-import cStringIO
+import io
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -25,17 +25,17 @@ from E4Gui.E4Application import e4App
 
 from Globals import recentNameProject
 
-from ProjectBrowserModel import ProjectBrowserModel
+from .ProjectBrowserModel import ProjectBrowserModel
 
-from AddLanguageDialog import AddLanguageDialog
-from AddFileDialog import AddFileDialog
-from AddDirectoryDialog import AddDirectoryDialog
-from PropertiesDialog import PropertiesDialog
-from AddFoundFilesDialog import AddFoundFilesDialog
-from DebuggerPropertiesDialog import DebuggerPropertiesDialog
-from FiletypeAssociationDialog import FiletypeAssociationDialog
-from LexerAssociationDialog import LexerAssociationDialog
-from UserPropertiesDialog import UserPropertiesDialog
+from .AddLanguageDialog import AddLanguageDialog
+from .AddFileDialog import AddFileDialog
+from .AddDirectoryDialog import AddDirectoryDialog
+from .PropertiesDialog import PropertiesDialog
+from .AddFoundFilesDialog import AddFoundFilesDialog
+from .DebuggerPropertiesDialog import DebuggerPropertiesDialog
+from .FiletypeAssociationDialog import FiletypeAssociationDialog
+from .LexerAssociationDialog import LexerAssociationDialog
+from .UserPropertiesDialog import UserPropertiesDialog
 
 from E4XML.XMLUtilities import make_parser
 from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
@@ -422,7 +422,7 @@ class Project(QObject):
         try:
             if self.__fileTypeCallbacks[self.pdata["PROJECTTYPE"][0]] is not None:
                 ftypes = self.__fileTypeCallbacks[self.pdata["PROJECTTYPE"][0]]()
-                for pattern, ftype in ftypes.items():
+                for pattern, ftype in list(ftypes.items()):
                     if pattern not in self.pdata["FILETYPES"]:
                         self.pdata["FILETYPES"][pattern] = ftype
                         self.setDirty(True)
@@ -556,9 +556,9 @@ class Project(QObject):
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
-                f = open(fn, "rb")
+                f = open(fn, "r")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -664,15 +664,15 @@ class Project(QObject):
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
-                f = open(fn, "rb")
+                f = open(fn, "r")
             try:
                 try:
                     parser.parse(f)
                 except UnicodeEncodeError:
                     f.seek(0)
-                    buf = cStringIO.StringIO(f.read())
+                    buf = io.StringIO(f.read())
                     parser.parse(buf)
             finally:
                 f.close()
@@ -746,9 +746,9 @@ class Project(QObject):
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "wb")
+                f = gzip.open(fn, "w")
             else:
-                f = open(fn, "wb")
+                f = open(fn, "w")
             
             ProjectWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
@@ -775,7 +775,7 @@ class Project(QObject):
         fn = os.path.join(self.getProjectManagementDir(), '%s.e4q' % fn)
         if os.path.exists(fn):
             try:
-                f = open(fn, "rb")
+                f = open(fn, "r")
                 
                 parser = make_parser(True)
                 handler = UserProjectHandler(self)
@@ -791,7 +791,7 @@ class Project(QObject):
                         parser.parse(f)
                     except UnicodeEncodeError:
                         f.seek(0)
-                        buf = cStringIO.StringIO(f.read())
+                        buf = io.StringIO(f.read())
                         parser.parse(buf)
                 finally:
                     f.close()
@@ -820,7 +820,7 @@ class Project(QObject):
         fn = os.path.join(self.getProjectManagementDir(), '%s.e4q' % fn)
         
         try:
-            f = open(fn, "wb")
+            f = open(fn, "w")
             
             UserProjectWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
@@ -864,14 +864,14 @@ class Project(QObject):
                             self.trUtf8("""Compressed project session files not"""
                                 """ supported. The compression library is missing."""))
                     return
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
                 if ext.lower() == ".e3p":
                     fn = os.path.join(self.ppath, '%s.e3s' % fn)
                 else:
                     fn = os.path.join(self.getProjectManagementDir(), 
                                       '%s%s.e4s' % (fn, indicator))
-                f = open(fn, "rb")
+                f = open(fn, "r")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -940,15 +940,15 @@ class Project(QObject):
                             self.trUtf8("<p>The project session <b>{0}</b> could not"
                                 " be read.</p>").format(fn))
                     return
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
-                f = open(fn, "rb")
+                f = open(fn, "r")
             try:
                 try:
                     parser.parse(f)
                 except UnicodeEncodeError:
                     f.seek(0)
-                    buf = cStringIO.StringIO(f.read())
+                    buf = io.StringIO(f.read())
                     parser.parse(buf)
             finally:
                 f.close()
@@ -1009,11 +1009,11 @@ class Project(QObject):
                             self.trUtf8("""Compressed project session files not"""
                                 """ supported. The compression library is missing."""))
                     return
-                f = gzip.open(fn, "wb")
+                f = gzip.open(fn, "w")
             else:
                 fn = os.path.join(self.getProjectManagementDir(), 
                                   '%s%s.e4s' % (fn, indicator))
-                f = open(fn, "wb")
+                f = open(fn, "w")
             
             SessionWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
@@ -1080,7 +1080,7 @@ class Project(QObject):
                         self.trUtf8("""Compressed tasks files not supported."""
                             """ The compression library is missing."""))
                     return
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
                 if ext.lower() == ".e3p":
                     fn = os.path.join(self.ppath, '%s.e3t' % fn)
@@ -1088,7 +1088,7 @@ class Project(QObject):
                     fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
                 if not os.path.exists(fn):
                     return
-                f = open(fn, "rb")
+                f = open(fn, "r")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -1140,15 +1140,15 @@ class Project(QObject):
                         self.trUtf8("""Compressed tasks files not supported."""
                             """ The compression library is missing."""))
                     return
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
-                f = open(fn, "rb")
+                f = open(fn, "r")
             try:
                 try:
                     parser.parse(f)
                 except UnicodeEncodeError:
                     f.seek(0)
-                    buf = cStringIO.StringIO(f.read())
+                    buf = io.StringIO(f.read())
                     parser.parse(buf)
             finally:
                 f.close()
@@ -1183,10 +1183,10 @@ class Project(QObject):
                         self.trUtf8("""Compressed tasks files not supported."""
                             """ The compression library is missing."""))
                     return
-                f = gzip.open(fn, "wb")
+                f = gzip.open(fn, "w")
             else:
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
-                f = open(fn, "wb")
+                f = open(fn, "w")
             
             TasksWriter(f, True, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
@@ -1230,13 +1230,13 @@ class Project(QObject):
                                         """ supported. The compression library is"""
                                         """ missing."""))
                     return
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
                 if ext.lower() == ".e3p":
                     fn = os.path.join(self.ppath, '%s.e3d' % fn)
                 else:
                     fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
-                f = open(fn, "rb")
+                f = open(fn, "r")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -1293,15 +1293,15 @@ class Project(QObject):
                             self.trUtf8("<p>The project debugger properties file"
                                         " <b>{0}</b> could not be read.</p>").format(fn))
                     return
-                f = gzip.open(fn, "rb")
+                f = gzip.open(fn, "r")
             else:
-                f = open(fn, "rb")
+                f = open(fn, "r")
             try:
                 try:
                     parser.parse(f)
                 except UnicodeEncodeError:
                     f.seek(0)
-                    buf = cStringIO.StringIO(f.read())
+                    buf = io.StringIO(f.read())
                     parser.parse(buf)
                 if self.debugProperties["INTERPRETER"]:
                     self.debugPropertiesLoaded = True
@@ -1354,10 +1354,10 @@ class Project(QObject):
                                         """ not supported. The compression library is"""
                                         """ missing."""))
                     return
-                f = gzip.open(fn, "wb")
+                f = gzip.open(fn, "w")
             else:
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
-                f = open(fn, "wb")
+                f = open(fn, "w")
             
             DebuggerPropertiesWriter(f, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()
@@ -1717,7 +1717,7 @@ class Project(QObject):
                                     return  # don't overwrite
                                     
                             shutil.copy(fn, target)
-                        except IOError, why:
+                        except IOError as why:
                             QMessageBox.critical(None,
                                 self.trUtf8("Add file"),
                                 self.trUtf8("<p>The selected file <b>{0}</b> could not be"
@@ -1747,7 +1747,7 @@ class Project(QObject):
         # get all relevant filename patterns
         patterns = []
         ignorePatterns = []
-        for pattern, patterntype in self.pdata["FILETYPES"].items():
+        for pattern, patterntype in list(self.pdata["FILETYPES"].items()):
             if patterntype == filetype:
                 patterns.append(pattern)
             elif patterntype == "__IGNORE__":
@@ -1769,7 +1769,7 @@ class Project(QObject):
         if not Utilities.samepath(target, source) and not os.path.isdir(target):
             try:
                 os.makedirs(target)
-            except IOError, why:
+            except IOError as why:
                 QMessageBox.critical(None,
                     self.trUtf8("Add directory"),
                     self.trUtf8("<p>The target directory <b>{0}</b> could not be"
@@ -1998,11 +1998,11 @@ class Project(QObject):
         
         try:
             os.rename(oldfn, newfn)
-        except OSError, msg:
+        except OSError as msg:
             QMessageBox.critical(None,
                 self.trUtf8("Rename File"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be renamed.<br />"""
-                    """Reason: {1}</p>""").format(oldfn, unicode(msg)))
+                    """Reason: {1}</p>""").format(oldfn, str(msg)))
             return False
 
         if fn in self.pdata["SOURCES"] or \
@@ -2328,7 +2328,7 @@ class Project(QObject):
                 # check, if the existing project directory is already under
                 # VCS control
                 pluginManager = e4App().getObject("PluginManager")
-                for indicator, vcsData in pluginManager.getVcsSystemIndicators().items():
+                for indicator, vcsData in list(pluginManager.getVcsSystemIndicators().items()):
                     if os.path.exists(os.path.join(self.ppath, indicator)):
                         if len(vcsData) > 1:
                             vcsList = []
@@ -2401,7 +2401,7 @@ class Project(QObject):
                     vcsSystemsDisplay,
                     0, False)
                 if ok and vcsSelected != self.trUtf8("None"):
-                    for vcsSystem, vcsSystemDisplay in vcsSystemsDict.items():
+                    for vcsSystem, vcsSystemDisplay in list(vcsSystemsDict.items()):
                         if vcsSystemDisplay == vcsSelected:
                             break
                     else:
@@ -2456,7 +2456,7 @@ class Project(QObject):
         QApplication.processEvents()
         
         # search the project directory for files with known extensions
-        filespecs = self.pdata["FILETYPES"].keys()
+        filespecs = list(self.pdata["FILETYPES"].keys())
         for filespec in filespecs:
             files = Utilities.direntries(self.ppath, True, filespec)
             for file in files:
@@ -2645,7 +2645,7 @@ class Project(QObject):
         @return the requested lexer language (string)
         """
         # try user settings first
-        for pattern, language in self.pdata["LEXERASSOCS"].items():
+        for pattern, language in list(self.pdata["LEXERASSOCS"].items()):
             if fnmatch.fnmatch(filename, pattern):
                 return language
         
@@ -2711,7 +2711,7 @@ class Project(QObject):
                         # check, if project is version controlled
                         pluginManager = e4App().getObject("PluginManager")
                         for indicator, vcsData in \
-                                pluginManager.getVcsSystemIndicators().items():
+                                list(pluginManager.getVcsSystemIndicators().items()):
                             if os.path.exists(os.path.join(self.ppath, indicator)):
                                 if len(vcsData) > 1:
                                     vcsList = []
@@ -4386,14 +4386,14 @@ class Project(QObject):
         
         # write the file
         try:
-            pkglistFile = open(pkglist, "wb")
+            pkglistFile = open(pkglist, "w")
             pkglistFile.write("\n".join(lst))
             pkglistFile.close()
-        except IOError, why:
+        except IOError as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Package List"),
                 self.trUtf8("""<p>The file <b>PKGLIST</b> could not be created.</p>"""
-                            """<p>Reason: {0}</p>""").format(unicode(why)),
+                            """<p>Reason: {0}</p>""").format(str(why)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
             return
@@ -4428,16 +4428,15 @@ class Project(QObject):
             return
         
         try:
-            pkglistFile = open(pkglist, "rb")
+            pkglistFile = open(pkglist, "r")
             names = pkglistFile.read()
             pkglistFile.close()
-            names = names.splitlines()
-            names.sort()
-        except IOError, why:
+            names = sorted(names.splitlines())
+        except IOError as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The file <b>PKGLIST</b> could not be read.</p>"""
-                            """<p>Reason: {0}</p>""").format(unicode(why)),
+                            """<p>Reason: {0}</p>""").format(str(why)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
             return
@@ -4449,12 +4448,12 @@ class Project(QObject):
                 archiveFile = zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED)
             except RuntimeError:
                 archiveFile = zipfile.ZipFile(archive, "w")
-        except IOError, why:
+        except IOError as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The eric4 plugin archive file <b>{0}</b> could """
                             """not be created.</p>"""
-                            """<p>Reason: {1}</p>""").format(archive, unicode(why)),
+                            """<p>Reason: {1}</p>""").format(archive, str(why)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
             return
@@ -4471,13 +4470,13 @@ class Project(QObject):
                     if name == self.pdata["MAINSCRIPT"][0]:
                         version = self.__pluginExtractVersion(\
                             os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0]))
-            except OSError, why:
+            except OSError as why:
                 QMessageBox.critical(None,
                     self.trUtf8("Create Plugin Archive"),
                     self.trUtf8("""<p>The file <b>{0}</b> could not be stored """
                                 """in the archive. Ignoring it.</p>"""
                                 """<p>Reason: {1}</p>""")\
-                                .format(os.path.join(self.ppath, name), unicode(why)),
+                                .format(os.path.join(self.ppath, name), str(why)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Ok))
         archiveFile.writestr("VERSION", version)
@@ -4531,12 +4530,12 @@ class Project(QObject):
             f = open(filename, "r")
             sourcelines = f.readlines()
             f.close()
-        except IOError, why:
+        except IOError as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""
-                            """<p>Reason: {1}</p>""").format(archive, unicode(why)),
+                            """<p>Reason: {1}</p>""").format(archive, str(why)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
             return ""
@@ -4570,12 +4569,12 @@ class Project(QObject):
             f = open(filename, "r")
             sourcelines = f.readlines()
             f.close()
-        except IOError, why:
+        except IOError as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""
-                            """<p>Reason: {1}</p>""").format(archive, unicode(why)),
+                            """<p>Reason: {1}</p>""").format(archive, str(why)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
             return ""

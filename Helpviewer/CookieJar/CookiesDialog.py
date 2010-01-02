@@ -10,11 +10,11 @@ Module implementing a dialog to show all cookies.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from CookieModel import CookieModel
-from CookieDetailsDialog import CookieDetailsDialog
-from CookiesExceptionsDialog import CookiesExceptionsDialog
+from .CookieModel import CookieModel
+from .CookieDetailsDialog import CookieDetailsDialog
+from .CookiesExceptionsDialog import CookiesExceptionsDialog
 
-from Ui_CookiesDialog import Ui_CookiesDialog
+from .Ui_CookiesDialog import Ui_CookiesDialog
 
 import UI.PixmapCache
 
@@ -60,7 +60,7 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
                      self.__tableModelReset)
         
         fm = QFontMetrics(QFont())
-        height = fm.height() + fm.height() / 3
+        height = fm.height() + fm.height() // 3
         self.cookiesTable.verticalHeader().setDefaultSectionSize(height)
         self.cookiesTable.verticalHeader().setMinimumSectionSize(-1)
         for section in range(model.columnCount()):
@@ -99,7 +99,7 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         path = model.data(model.index(row, 2))
         secure = model.data(model.index(row, 3))
         expires = model.data(model.index(row, 4)).toString("yyyy-MM-dd hh:mm")
-        value = unicode(
+        value = str(
             QByteArray.fromPercentEncoding(model.data(model.index(row, 5))))
         
         if self.__detailsDialog is None:

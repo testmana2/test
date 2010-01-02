@@ -17,7 +17,7 @@ from PyQt4.QtGui import QApplication, QTreeWidgetItem, QHeaderView, QCursor, \
 
 from E4Gui.E4Application import e4App
 
-from Ui_ProgramsDialog import Ui_ProgramsDialog
+from .Ui_ProgramsDialog import Ui_ProgramsDialog
 
 import Preferences
 import Utilities
@@ -234,7 +234,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                     finished = proc.waitForFinished(10000)
                     if finished:
                         output = \
-                            unicode(proc.readAllStandardOutput(), 
+                            str(proc.readAllStandardOutput(), 
                                     Preferences.getSystem("IOEncoding"), 
                                     'replace')
                         if versionRe is None:

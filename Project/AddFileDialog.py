@@ -14,7 +14,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4DirCompleter
 
-from Ui_AddFileDialog import Ui_AddFileDialog
+from .Ui_AddFileDialog import Ui_AddFileDialog
 
 import Utilities
 
@@ -85,7 +85,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
                 "INTERFACES"   : [], 
                 "TRANSLATIONS" : [], 
             }
-            for pattern, filetype in self.filetypes.items():
+            for pattern, filetype in list(self.filetypes.items()):
                 if filetype in patterns:
                     patterns[filetype].append(pattern)
             dfilter = self.trUtf8(
@@ -103,7 +103,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             caption = self.trUtf8("Select Files")
         elif self.filter == 'form':
             patterns = []
-            for pattern, filetype in self.filetypes.items():
+            for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "FORMS":
                     patterns.append(pattern)
             dfilter = self.trUtf8("Forms Files ({0})")\
@@ -111,7 +111,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             caption = self.trUtf8("Select user-interface files")
         elif self.filter == "resource":
             patterns = []
-            for pattern, filetype in self.filetypes.items():
+            for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "RESOURCES":
                     patterns.append(pattern)
             dfilter = self.trUtf8("Resource Files ({0})")\
@@ -119,7 +119,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             caption = self.trUtf8("Select resource files")
         elif self.filter == 'source':
             patterns = []
-            for pattern, filetype in self.filetypes.items():
+            for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "SOURCES":
                     patterns.append(pattern)
             dfilter = self.trUtf8("Source Files ({0});;All Files (*)")\
@@ -127,7 +127,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             caption = self.trUtf8("Select source files")
         elif self.filter == 'interface':
             patterns = []
-            for pattern, filetype in self.filetypes.items():
+            for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "INTERFACES":
                     patterns.append(pattern)
             dfilter = self.trUtf8("Interface Files ({0})")\
@@ -135,7 +135,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             caption = self.trUtf8("Select interface files")
         elif self.filter == 'translation':
             patterns = []
-            for pattern, filetype in self.filetypes.items():
+            for pattern, filetype in list(self.filetypes.items()):
                 if filetype == "TRANSLATIONS":
                     patterns.append(pattern)
             dfilter = self.trUtf8("Translation Files ({0})")\

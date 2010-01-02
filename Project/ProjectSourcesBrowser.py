@@ -29,11 +29,11 @@ from Graphics.ImportsDiagram import ImportsDiagram
 from Graphics.ApplicationDiagram import ApplicationDiagram
 from Graphics.PackageDiagram import PackageDiagram
 
-from ProjectBrowserModel import ProjectBrowserFileItem, \
+from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserSourceType
-from ProjectBaseBrowser import ProjectBaseBrowser
-from NewPythonPackageDialog import NewPythonPackageDialog
+from .ProjectBaseBrowser import ProjectBaseBrowser
+from .NewPythonPackageDialog import NewPythonPackageDialog
 
 import Utilities
 
@@ -396,10 +396,10 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                          BrowserMethodItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
             
-            bfcnt = categories[unicode(ProjectBrowserFileItem)]
-            cmcnt = categories[unicode(BrowserClassItem)] + \
-                    categories[unicode(BrowserMethodItem)]
-            sdcnt = categories[unicode(ProjectBrowserSimpleDirectoryItem)]
+            bfcnt = categories[str(ProjectBrowserFileItem)]
+            cmcnt = categories[str(BrowserClassItem)] + \
+                    categories[str(BrowserMethodItem)]
+            sdcnt = categories[str(ProjectBrowserSimpleDirectoryItem)]
             if cnt > 1 and cnt == bfcnt:
                 self.multiMenu.popup(self.mapToGlobal(coord))
             elif cnt > 1 and cnt == sdcnt:
@@ -414,21 +414,21 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                             if self.project.pdata["PROGLANGUAGE"][0] in \
                                ["Python", "Python3"]:
                                 if fn.endswith('.ptl'):
-                                    for act in self.sourceMenuActions.values():
+                                    for act in list(self.sourceMenuActions.values()):
                                         act.setEnabled(False)
                                     self.classDiagramAction.setEnabled(True)
                                     self.importsDiagramAction.setEnabled(True)
                                     self.unittestAction.setEnabled(False)
                                     self.checksMenu.menuAction().setEnabled(False)
                                 elif fn.endswith('.rb'):  # entry for mixed mode programs
-                                    for act in self.sourceMenuActions.values():
+                                    for act in list(self.sourceMenuActions.values()):
                                         act.setEnabled(False)
                                     self.classDiagramAction.setEnabled(True)
                                     self.importsDiagramAction.setEnabled(False)
                                     self.unittestAction.setEnabled(False)
                                     self.checksMenu.menuAction().setEnabled(False)
                                 else:  # assume the source file is a Python file
-                                    for act in self.sourceMenuActions.values():
+                                    for act in list(self.sourceMenuActions.values()):
                                         act.setEnabled(True)
                                     self.classDiagramAction.setEnabled(True)
                                     self.importsDiagramAction.setEnabled(True)
@@ -583,28 +583,28 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                 if not os.path.exists(packagePath):
                     try:
                         os.mkdir(packagePath)
-                    except IOError, err:
+                    except IOError as err:
                         QMessageBox.critical(None,
                             self.trUtf8("Add new Python package"),
                             self.trUtf8("""<p>The package directory <b>{0}</b> could"""
                                         """ not be created. Aborting...</p>"""
                                         """<p>Reason: {1}</p>""")\
-                                .format(packagePath, unicode(err)),
+                                .format(packagePath, str(err)),
                             QMessageBox.StandardButtons(\
                                 QMessageBox.Ok))
                         return
                 packageFile = os.path.join(packagePath, "__init__.py")
                 if not os.path.exists(packageFile):
                     try:
-                        f = open(packageFile, "wb")
+                        f = open(packageFile, "w")
                         f.close()
-                    except IOError, err:
+                    except IOError as err:
                         QMessageBox.critical(None,
                             self.trUtf8("Add new Python package"),
                             self.trUtf8("""<p>The package file <b>{0}</b> could"""
                                         """ not be created. Aborting...</p>"""
                                         """<p>Reason: {1}</p>""")\
-                                .format(packageFile, unicode(err)),
+                                .format(packageFile, str(err)),
                             QMessageBox.StandardButtons(\
                                 QMessageBox.Ok))
                         return

@@ -9,7 +9,7 @@ Module implementing a Java lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerJava,  QsciScintilla
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerJava(QsciLexerJava, Lexer):

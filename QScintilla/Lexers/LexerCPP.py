@@ -9,7 +9,7 @@ Module implementing a CPP lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerCPP,  QsciScintilla
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerCPP(QsciLexerCPP, Lexer):

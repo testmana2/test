@@ -14,8 +14,8 @@ this module.
 import sys
 import re
 
-import TemplatesListsStyle
-import TemplatesListsStyleCSS
+from . import TemplatesListsStyle
+from . import TemplatesListsStyleCSS
 
 from Utilities import html_uencode
 from Utilities.ModuleParser import RB_SOURCE
@@ -234,7 +234,7 @@ class ModuleDocument(object):
                     'ClassList' : classList,
                     'FunctionList' : functionList,
                 }
-        except TagError, e:
+        except TagError as e:
             sys.stderr.write("Error in tags of description of module %s.\n" % \
                 self.module.name)
             sys.stderr.write("%s\n" % e)
@@ -300,8 +300,7 @@ class ModuleDocument(object):
         
         @return The classes list section. (string)
         """
-        names = self.module.classes.keys()
-        names.sort()
+        names = sorted(list(self.module.classes.keys()))
         if names:
             self.empty = False
             s = self.__genListSection(names, self.module.classes)
@@ -318,8 +317,7 @@ class ModuleDocument(object):
         
         @return The modules list section. (string)
         """
-        names = self.module.modules.keys()
-        names.sort()
+        names = sorted(list(self.module.modules.keys()))
         if names:
             self.empty = False
             s = self.__genListSection(names, self.module.modules)
@@ -335,8 +333,7 @@ class ModuleDocument(object):
         
         @return The functions list section. (string)
         """
-        names = self.module.functions.keys()
-        names.sort()
+        names = sorted(list(self.module.functions.keys()))
         if names:
             self.empty = False
             s = self.__genListSection(names, self.module.functions)
@@ -352,8 +349,7 @@ class ModuleDocument(object):
         
         @return The classes details section. (string)
         """
-        classNames = self.module.classes.keys()
-        classNames.sort()
+        classNames = sorted(list(self.module.classes.keys()))
         classes = []
         for className in classNames:
             _class = self.module.classes[className]
@@ -376,7 +372,7 @@ class ModuleDocument(object):
                     'MethodList' : methList,
                     'MethodDetails' : methBodies,
                 }
-            except TagError, e:
+            except TagError as e:
                 sys.stderr.write("Error in tags of description of class %s.\n" % \
                     className)
                 sys.stderr.write("%s\n" % e)
@@ -432,10 +428,7 @@ class ModuleDocument(object):
         """
         methList = []
         methBodies = []
-        methods = obj.methods.keys()
-        methods.sort()
-        
-        # first do the constructor
+        methods = sorted(list(obj.methods.keys()))
         if '__init__' in methods:
             methods.remove('__init__')
             try:
@@ -447,7 +440,7 @@ class ModuleDocument(object):
                         self.__formatDescription(obj.methods['__init__'].description),
                     'Params' : ', '.join(obj.methods['__init__'].parameters[1:]),
                 }
-            except TagError, e:
+            except TagError as e:
                 sys.stderr.write("Error in tags of description of method %s.%s.\n" % \
                     (className, '__init__'))
                 sys.stderr.write("%s\n" % e)
@@ -464,7 +457,7 @@ class ModuleDocument(object):
                         self.__formatDescription(obj.methods[method].description),
                     'Params' : ', '.join(obj.methods[method].parameters[1:]),
                 }
-            except TagError, e:
+            except TagError as e:
                 sys.stderr.write("Error in tags of description of method %s.%s.\n" % \
                     (className, method))
                 sys.stderr.write("%s\n" % e)
@@ -485,8 +478,7 @@ class ModuleDocument(object):
         
         @return The Ruby modules details section. (string)
         """
-        rbModulesNames = self.module.modules.keys()
-        rbModulesNames.sort()
+        rbModulesNames = sorted(list(self.module.modules.keys()))
         rbModules = []
         for rbModuleName in rbModulesNames:
             rbModule = self.module.modules[rbModuleName]
@@ -506,7 +498,7 @@ class ModuleDocument(object):
                     'FunctionsList' : methList,
                     'FunctionsDetails' : methBodies,
                 }
-            except TagError, e:
+            except TagError as e:
                 sys.stderr.write("Error in tags of description of Ruby module %s.\n" % \
                     rbModuleName)
                 sys.stderr.write("%s\n" % e)
@@ -524,8 +516,7 @@ class ModuleDocument(object):
         @param modName Name of the Ruby module containing the classes. (string)
         @return The classes list and classes details section. (tuple of two string)
         """
-        classNames = obj.classes.keys()
-        classNames.sort()
+        classNames = sorted(list(obj.classes.keys()))
         classes = []
         for className in classNames:
             _class = obj.classes[className]
@@ -547,7 +538,7 @@ class ModuleDocument(object):
                     'MethodList' : methList,
                     'MethodDetails' : methBodies,
                 }
-            except TagError, e:
+            except TagError as e:
                 sys.stderr.write("Error in tags of description of class %s.\n" % \
                     className)
                 sys.stderr.write("%s\n" % e)
@@ -594,8 +585,7 @@ class ModuleDocument(object):
         @return The functions details section. (string)
         """
         funcBodies = []
-        funcNames = self.module.functions.keys()
-        funcNames.sort()
+        funcNames = sorted(list(self.module.functions.keys()))
         for funcName in funcNames:
             try:
                 funcBody = self.functionTemplate % { \
@@ -605,7 +595,7 @@ class ModuleDocument(object):
                         self.module.functions[funcName].description),
                     'Params' : ', '.join(self.module.functions[funcName].parameters),
                 }
-            except TagError, e:
+            except TagError as e:
                 sys.stderr.write("Error in tags of description of function %s.\n" % \
                     funcName)
                 sys.stderr.write("%s\n" % e)
@@ -709,8 +699,7 @@ class ModuleDocument(object):
         @return The list section. (string)
         """
         lst = []
-        keys = dictionary.keys()
-        keys.sort()
+        keys = sorted(list(dictionary.keys()))
         for key in keys:
             lst.append(template % { \
                 'Name' : key,
@@ -795,21 +784,21 @@ class ModuleDocument(object):
         while start != -1:
             stop = desc.find('}', start + 2)
             if stop == -1:
-                raise TagError, "Unterminated inline tag.\n%s" % desc
+                raise TagError("Unterminated inline tag.\n%s" % desc)
             
             tagText = desc[start + 1:stop]
             if tagText.startswith('@link'):
                 parts = tagText.split(None, 1)
                 if len(parts) < 2:
-                    raise TagError, "Wrong format in inline tag %s.\n%s" % \
-                                    (parts[0], desc)
+                    raise TagError("Wrong format in inline tag %s.\n%s" % \
+                                    (parts[0], desc))
                 
                 formattedTag = self.__formatCrossReferenceEntry(parts[1])
                 desc = desc.replace("{%s}" % tagText, formattedTag)
             else:
                 tag = tagText.split(None, 1)[0]
-                raise TagError, "Unknown inline tag encountered, %s.\n%s" % \
-                                (tag, desc)
+                raise TagError("Unknown inline tag encountered, %s.\n%s" % \
+                                (tag, desc))
             
             start = desc.find('{@')
         
@@ -851,7 +840,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     parts = desc.split(None, 2)
                     if len(parts) < 2:
-                        raise TagError, "Wrong format in %s line.\n" % parts[0]
+                        raise TagError("Wrong format in %s line.\n" % parts[0])
                     paramName = parts[1]
                     if parts[0] == "@keyparam":
                         paramName += '='
@@ -864,7 +853,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError, "Wrong format in %s line.\n" % parts[0]
+                        raise TagError("Wrong format in %s line.\n" % parts[0])
                     returns = [parts[1]]
                     lastItem = returns
                 elif desc.startswith("@exception") or \
@@ -873,7 +862,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     parts = desc.split(None, 2)
                     if len(parts) < 2:
-                        raise TagError, "Wrong format in %s line.\n" % parts[0]
+                        raise TagError("Wrong format in %s line.\n" % parts[0])
                     excName = parts[1]
                     try:
                         exceptionDict[excName] = [parts[2]]
@@ -884,7 +873,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     m = _signal(desc,0)
                     if m is None:
-                        raise TagError, "Wrong format in %s line.\n" % parts[0]
+                        raise TagError("Wrong format in %s line.\n" % parts[0])
                     signalName = 1 and m.group("SignalName1") \
                                    or m.group("SignalName2")
                     signalDesc = 1 and m.group("SignalDescription1") \
@@ -897,7 +886,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     m = _event(desc,0)
                     if m is None:
-                        raise TagError, "Wrong format in %s line.\n" % parts[0]
+                        raise TagError("Wrong format in %s line.\n" % parts[0])
                     eventName = 1 and m.group("EventName1") \
                                    or m.group("EventName2")
                     eventDesc = 1 and m.group("EventDescription1") \
@@ -910,35 +899,35 @@ class ModuleDocument(object):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError, "Wrong format in %s line.\n" % parts[0]
+                        raise TagError("Wrong format in %s line.\n" % parts[0])
                     deprecated = [parts[1]]
                     lastItem = deprecated
                 elif desc.startswith("@author"):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError, "Wrong format in %s line.\n" % parts[0]
+                        raise TagError("Wrong format in %s line.\n" % parts[0])
                     authorInfo = [parts[1]]
                     lastItem = authorInfo
                 elif desc.startswith("@since"):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError, "Wrong format in %s line.\n" % parts[0]
+                        raise TagError("Wrong format in %s line.\n" % parts[0])
                     sinceInfo = [parts[1]]
                     lastItem = sinceInfo
                 elif desc.startswith("@see"):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError, "Wrong format in %s line.\n" % parts[0]
+                        raise TagError("Wrong format in %s line.\n" % parts[0])
                     seeList.append([parts[1]])
                     lastItem = seeList[-1]
                 elif desc.startswith("@@"):
                     lastItem.append(desc[1:])
                 elif desc.startswith("@"):
                     tag = desc.split(None, 1)[0]
-                    raise TagError, "Unknown tag encountered, %s.\n" % tag
+                    raise TagError("Unknown tag encountered, %s.\n" % tag)
                 else:
                     lastItem.append(ditem)
             elif not inTagSection:

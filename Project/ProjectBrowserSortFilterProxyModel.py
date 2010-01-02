@@ -11,7 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from UI.BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
-from ProjectBrowserModel import ProjectBrowserSourceType
+from .ProjectBrowserModel import ProjectBrowserSourceType
 
 import Preferences
 

@@ -10,7 +10,7 @@ Module implementing a dialog to enter the data for a merge operation.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnMergeDialog import Ui_SvnMergeDialog
+from .Ui_SvnMergeDialog import Ui_SvnMergeDialog
 
 class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
     """

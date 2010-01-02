@@ -14,10 +14,10 @@ from E4Gui.E4ListView import E4ListView
 
 from Helpviewer.HelpWebSearchWidget import HelpWebSearchWidget
 
-from OpenSearchEngineModel import OpenSearchEngineModel
-from OpenSearchEditDialog import OpenSearchEditDialog
+from .OpenSearchEngineModel import OpenSearchEngineModel
+from .OpenSearchEditDialog import OpenSearchEditDialog
 
-from Ui_OpenSearchDialog import Ui_OpenSearchDialog
+from .Ui_OpenSearchDialog import Ui_OpenSearchDialog
 
 class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
     """

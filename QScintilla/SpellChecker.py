@@ -246,7 +246,7 @@ class SpellChecker(QObject):
         
         while True:
             try:
-                self.next()
+                next(self)
                 self.editor.setIndicatorRange(self.indicator, self.wordStart, 
                                               self.wordEnd - self.wordStart)
             except StopIteration:
@@ -452,7 +452,7 @@ class SpellChecker(QObject):
         Private method to advance to the next error.
         """
     
-    def next(self):
+    def __next__(self):
         """
         Public method to advance to the next error.
         

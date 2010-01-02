@@ -16,10 +16,10 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from ProjectBrowserModel import ProjectBrowserFileItem, \
+from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserFormType
-from ProjectBaseBrowser import ProjectBaseBrowser
+from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import UI.PixmapCache
@@ -310,8 +310,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
             
-            bfcnt = categories[unicode(ProjectBrowserFileItem)]
-            sdcnt = categories[unicode(ProjectBrowserSimpleDirectoryItem)]
+            bfcnt = categories[str(ProjectBrowserFileItem)]
+            sdcnt = categories[str(ProjectBrowserSimpleDirectoryItem)]
             if cnt > 1 and cnt == bfcnt:
                 self.multiMenu.popup(self.mapToGlobal(coord))
             elif cnt > 1 and cnt == sdcnt:
@@ -453,8 +453,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         fileNames = []
         for itm in self.getSelectedItems():
             fileNames.append(itm.fileName())
-        trfiles = self.project.pdata["TRANSLATIONS"][:]
-        trfiles.sort()
+        trfiles = sorted(self.project.pdata["TRANSLATIONS"][:])
         fileNames.extend([os.path.join(self.project.ppath, trfile) \
                           for trfile in trfiles \
                           if trfile.endswith('.qm')])
@@ -531,11 +530,11 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         try:
             shutil.copy(templateFile, fname)
-        except IOError, e:
+        except IOError as e:
             QMessageBox.critical(self,
                 self.trUtf8("New Form"),
                 self.trUtf8("<p>The new form file <b>{0}</b> could not be created.<br>"
-                    "Problem: {1}</p>").format(fname, unicode(e)))
+                    "Problem: {1}</p>").format(fname, str(e)))
             return
         
         self.project.appendFile(fname)
@@ -579,7 +578,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.compileProc.setReadChannel(QProcess.StandardOutput)
         
         while self.compileProc and self.compileProc.canReadLine():
-            self.buf += unicode(self.compileProc.readLine())
+            self.buf += str(self.compileProc.readLine(), 
+                            Preferences.getSystem("IOEncoding"), 
+                            'replace')
         
     def __readStderr(self):
         """
@@ -589,12 +590,12 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if self.compileProc is None:
             return
         
-        ioEncoding = str(Preferences.getSystem("IOEncoding"))
+        ioEncoding = Preferences.getSystem("IOEncoding")
         
         self.compileProc.setReadChannel(QProcess.StandardError)
         while self.compileProc and self.compileProc.canReadLine():
             s = self.uicompiler + ': '
-            error = unicode(self.compileProc.readLine(), 
+            error = str(self.compileProc.readLine(), 
                             ioEncoding, 'replace')
             s += error
             self.emit(SIGNAL('appendStderr'), s)
@@ -611,9 +612,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if exitStatus == QProcess.NormalExit and exitCode == 0 and self.buf:
             ofn = os.path.join(self.project.ppath, self.compiledFile)
             try:
-                f = open(ofn, "wb")
+                f = open(ofn, "w")
                 for line in self.buf.splitlines():
-                    f.write(line.encode("utf8") + os.linesep)
+                    f.write(line + os.linesep)
                 f.close()
                 if self.compiledFile not in self.project.pdata["SOURCES"]:
                     self.project.appendFile(ofn)
@@ -622,12 +623,12 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         self.trUtf8("Form Compilation"),
                         self.trUtf8("The compilation of the form file"
                             " was successful."))
-            except IOError, msg:
+            except IOError as msg:
                 if not self.noDialog:
                     QMessageBox.information(None,
                         self.trUtf8("Form Compilation"),
                         self.trUtf8("<p>The compilation of the form file failed.</p>"
-                            "<p>Reason: {0}</p>").format(unicode(msg)))
+                            "<p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
                 QMessageBox.information(None,
@@ -723,7 +724,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if self.hooks["generateDialogCode"] is not None:
             self.hooks["generateDialogCode"](filename)
         else:
-            from CreateDialogCodeDialog import CreateDialogCodeDialog
+            from .CreateDialogCodeDialog import CreateDialogCodeDialog
             
             # change environment
             sys.path.insert(0, self.project.getProjectPath())

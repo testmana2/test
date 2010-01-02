@@ -7,8 +7,8 @@
 Module implementing the handler class for reading an XML multi project file.
 """
 
-from Config import multiProjectFileFormatVersion
-from XMLHandlerBase import XMLHandlerBase
+from .Config import multiProjectFileFormatVersion
+from .XMLHandlerBase import XMLHandlerBase
 
 import Utilities
 

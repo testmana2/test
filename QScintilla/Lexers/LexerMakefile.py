@@ -9,7 +9,7 @@ Module implementing a Makefile lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerMakefile
 
-from Lexer import Lexer
+from .Lexer import Lexer
 
 class LexerMakefile(QsciLexerMakefile, Lexer):
     """ 

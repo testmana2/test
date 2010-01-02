@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from EditBreakpointDialog import EditBreakpointDialog
+from .EditBreakpointDialog import EditBreakpointDialog
 
 class BreakPointViewer(QTreeView):
     """
@@ -428,7 +428,7 @@ class BreakPointViewer(QTreeView):
         
         @return count of items selected (integer)
         """
-        count = len(self.selectedIndexes()) / (self.__model.columnCount() - 1)
+        count = len(self.selectedIndexes()) // (self.__model.columnCount() - 1)
         # column count is 1 greater than selectable
         return count
     

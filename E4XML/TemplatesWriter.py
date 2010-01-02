@@ -10,8 +10,8 @@ Module implementing the writer class for writing an XML templates file.
 import os
 import time
 
-from XMLWriterBase import XMLWriterBase
-from Config import templatesFileFormatVersion
+from .XMLWriterBase import XMLWriterBase
+from .Config import templatesFileFormatVersion
 
 class TemplatesWriter(XMLWriterBase):
     """

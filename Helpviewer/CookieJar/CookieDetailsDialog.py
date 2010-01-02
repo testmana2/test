@@ -10,7 +10,7 @@ Module implementing a dialog showing the cookie data.
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import pyqtSlot
 
-from Ui_CookieDetailsDialog import Ui_CookieDetailsDialog
+from .Ui_CookieDetailsDialog import Ui_CookieDetailsDialog
 
 class CookieDetailsDialog(QDialog, Ui_CookieDetailsDialog):
     """

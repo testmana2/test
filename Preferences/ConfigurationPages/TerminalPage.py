@@ -11,8 +11,8 @@ import sys
 
 from PyQt4.QtCore import pyqtSlot
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_TerminalPage import Ui_TerminalPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_TerminalPage import Ui_TerminalPage
 
 import Preferences
 import Utilities

@@ -12,7 +12,7 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnCommitDialog import Ui_SvnCommitDialog
+from .Ui_SvnCommitDialog import Ui_SvnCommitDialog
 
 import Preferences
 

@@ -17,8 +17,8 @@ from E4Gui.E4Application import e4App
 
 from UI.Browser import *
 
-from ProjectBrowserModel import *
-from ProjectBrowserSortFilterProxyModel import ProjectBrowserSortFilterProxyModel
+from .ProjectBrowserModel import *
+from .ProjectBrowserSortFilterProxyModel import ProjectBrowserSortFilterProxyModel
 
 import UI.PixmapCache
 import Preferences

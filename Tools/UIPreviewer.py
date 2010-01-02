@@ -67,7 +67,7 @@ class UIPreviewer(QMainWindow):
         self.styleCombo.setEditable(False)
         self.styleCombo.setToolTip(self.trUtf8("Select the GUI Theme"))
         self.styleLayout.addWidget(self.styleCombo)
-        self.styleCombo.addItems(QStyleFactory().keys())
+        self.styleCombo.addItems(list(QStyleFactory().keys()))
         self.styleCombo.setCurrentIndex(\
             int(Preferences.Prefs.settings.value('UIPreviewer/style')))
         
@@ -426,7 +426,7 @@ class UIPreviewer(QMainWindow):
         filters = ""
         formats = QImageWriter.supportedImageFormats()
         for format in formats:
-            filters = "%s*.%s " % (filters, unicode(format).lower())
+            filters = "%s*.%s " % (filters, str(format).lower())
         filter = self.trUtf8("Images ({0})").format(filters[:-1])
         
         fname = QFileDialog.getSaveFileName(\
@@ -538,8 +538,8 @@ class UIPreviewer(QMainWindow):
         @param printer reference to the printer object (QPrinter)
         """
         p = QPainter(printer)
-        marginX = (printer.pageRect().x() - printer.paperRect().x()) / 2
-        marginY = (printer.pageRect().y() - printer.paperRect().y()) / 2
+        marginX = (printer.pageRect().x() - printer.paperRect().x()) // 2
+        marginY = (printer.pageRect().y() - printer.paperRect().y()) // 2
 
         # double the margin on bottom of page
         if printer.orientation() == QPrinter.Portrait:

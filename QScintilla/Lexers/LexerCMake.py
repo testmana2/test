@@ -9,7 +9,7 @@ Module implementing a CMake lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerCMake
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerCMake(QsciLexerCMake, Lexer):

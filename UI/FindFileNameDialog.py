@@ -15,7 +15,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4DirCompleter
 
-from Ui_FindFileNameDialog import Ui_FindFileNameDialog
+from .Ui_FindFileNameDialog import Ui_FindFileNameDialog
 from Utilities import direntries
 import Utilities
 
@@ -98,7 +98,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
             
         searchPaths = []
         if self.searchDirCheckBox.isChecked() and \
-           self.searchDirEdit.text() == "":
+           self.searchDirEdit.text() != "":
             searchPaths.append(self.searchDirEdit.text())
         if self.projectCheckBox.isChecked():
             searchPaths.append(self.project.ppath)
@@ -119,7 +119,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
                     found = True
                     for file in files:
                         fp, fn = os.path.split(file)
-                        if locations.has_key(fn):
+                        if fn in locations:
                             if fp in locations[fn]:
                                 continue
                             else:

@@ -12,8 +12,8 @@ from PyQt4.QtGui import QFileDialog
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_DebuggerPython3Page import Ui_DebuggerPython3Page
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_DebuggerPython3Page import Ui_DebuggerPython3Page
 
 import Preferences
 import Utilities

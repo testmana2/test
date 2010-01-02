@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_FontDialogWizardDialog import Ui_FontDialogWizardDialog
+from .Ui_FontDialogWizardDialog import Ui_FontDialogWizardDialog
 
 class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
     """

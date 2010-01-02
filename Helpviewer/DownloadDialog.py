@@ -15,7 +15,7 @@ import Preferences
 
 import Helpviewer.HelpWindow
 
-from Ui_DownloadDialog import Ui_DownloadDialog
+from .Ui_DownloadDialog import Ui_DownloadDialog
 
 class DownloadDialog(QWidget, Ui_DownloadDialog):
     """
@@ -157,7 +157,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         """
         path = ""
         if self.__reply.hasRawHeader("Content-Disposition"):
-            header = unicode(self.__reply.rawHeader("Content-Disposition"))
+            header = str(self.__reply.rawHeader("Content-Disposition"))
             if header:
                 pos = header.find("filename=")
                 if pos != -1:
@@ -367,10 +367,10 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         if size < 1024:
             unit = self.trUtf8("bytes")
         elif size < 1024 * 1024:
-            size /= 1024
+            size //= 1024
             unit = self.trUtf8("kB")
         else:
-            size /= 1024 * 1024
+            size //= 1024 * 1024
             unit = self.trUtf8("MB")
         return "{0} {1}".format(size, unit)
     

@@ -9,7 +9,7 @@ Module implementing a Ruby lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerRuby
 
-from Lexer import Lexer
+from .Lexer import Lexer
 
 class LexerRuby(QsciLexerRuby, Lexer):
     """ 

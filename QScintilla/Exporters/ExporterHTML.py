@@ -16,7 +16,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
-from ExporterBase import ExporterBase
+from .ExporterBase import ExporterBase
 
 import Preferences
 import Utilities
@@ -73,7 +73,7 @@ class ExporterHTML(ExporterBase):
             styleIsUsed[QsciScintilla.STYLE_DEFAULT] = True
             
             try:
-                f = open(filename, "wb")
+                f = open(filename, "w")
                 
                 f.write(
                     '''<!DOCTYPE html PUBLIC "-//W3C//DTD'''
@@ -350,14 +350,14 @@ class ExporterHTML(ExporterBase):
                 
                 f.write('''</body>\n</html>\n''')
                 f.close()
-            except IOError, err:
+            except IOError as err:
                 QApplication.restoreOverrideCursor()
                 QMessageBox.critical(self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8(\
                         """<p>The source could not be exported to <b>{0}</b>.</p>"""
                         """<p>Reason: {1}</p>""")\
-                        .format(filename, unicode(err)),
+                        .format(filename, str(err)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Ok))
         finally:

@@ -9,7 +9,7 @@ Module implementing a XML lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerXML
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerXML(QsciLexerXML, Lexer):

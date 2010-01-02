@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.Qsci import QsciAPIs, QsciLexer
 
-import Lexers
+from . import Lexers
 import Preferences
 import Utilities
 
@@ -130,8 +130,7 @@ class APIs(QObject):
                     needsPreparation = True
                 else:
                     preparedAPIsTime = preparedAPIsInfo.lastModified()
-                    apifiles = Preferences.getEditorAPI(self.__language)
-                    apifiles.sort()
+                    apifiles = sorted(Preferences.getEditorAPI(self.__language))
                     if self.__apifiles != apifiles:
                         needsPreparation = True
                     for apifile in apifiles:
@@ -199,7 +198,7 @@ class APIsManager(QObject):
         """
         Public slot to reload the api information.
         """
-        for api in self.__apis.values():
+        for api in list(self.__apis.values()):
             api and api.reloadAPIs()
     
     def getAPIs(self, language, forPreparation = False):

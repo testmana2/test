@@ -14,7 +14,7 @@ import copy
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_ToolGroupConfigurationDialog import Ui_ToolGroupConfigurationDialog
+from .Ui_ToolGroupConfigurationDialog import Ui_ToolGroupConfigurationDialog
 import Utilities
 
 class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):

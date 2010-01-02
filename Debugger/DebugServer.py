@@ -18,9 +18,9 @@ from PyQt4.QtNetwork import QTcpServer, QHostAddress, QHostInfo
 
 from E4Gui.E4Application import e4App
 
-from BreakPointModel import BreakPointModel
-from WatchPointModel import WatchPointModel
-import DebugClientCapabilities
+from .BreakPointModel import BreakPointModel
+from .WatchPointModel import WatchPointModel
+from . import DebugClientCapabilities
 
 import Preferences
 import Utilities
@@ -218,7 +218,7 @@ class DebugServer(QTcpServer):
             interactive shell should be returned
         @return list of supported languages (list of strings)
         """
-        languages = self.__clientCapabilities.keys()
+        languages = list(self.__clientCapabilities.keys())
         try:
             del languages[languages.index("None")]
         except ValueError:
@@ -239,7 +239,7 @@ class DebugServer(QTcpServer):
         @return tuple of extensions associated with the language (tuple of strings)
         """
         extensions = []
-        for ext, lang in self.__clientAssociations.items():
+        for ext, lang in list(self.__clientAssociations.items()):
             if lang == language:
                 extensions.append(ext)
         
@@ -255,19 +255,19 @@ class DebugServer(QTcpServer):
             if clientType is None:
                 clientType = self.clientType
             if clientType == "Python":
-                from DebuggerInterfacePython import DebuggerInterfacePython
+                from .DebuggerInterfacePython import DebuggerInterfacePython
                 self.debuggerInterface = DebuggerInterfacePython(self, self.passive)
             elif clientType == "Python3":
-                from DebuggerInterfacePython3 import DebuggerInterfacePython3
+                from .DebuggerInterfacePython3 import DebuggerInterfacePython3
                 self.debuggerInterface = DebuggerInterfacePython3(self, self.passive)
             elif clientType == "Ruby":
-                from DebuggerInterfaceRuby import DebuggerInterfaceRuby
+                from .DebuggerInterfaceRuby import DebuggerInterfaceRuby
                 self.debuggerInterface = DebuggerInterfaceRuby(self, self.passive)
             elif clientType == "None":
-                from DebuggerInterfaceNone import DebuggerInterfaceNone
+                from .DebuggerInterfaceNone import DebuggerInterfaceNone
                 self.debuggerInterface = DebuggerInterfaceNone(self, self.passive)
             else:
-                from DebuggerInterfaceNone import DebuggerInterfaceNone
+                from .DebuggerInterfaceNone import DebuggerInterfaceNone
                 self.debuggerInterface = DebuggerInterfaceNone(self, self.passive)
                 self.clientType = "None"
         
@@ -352,14 +352,18 @@ class DebugServer(QTcpServer):
         """
         Private slot to process client output received via stdout.
         """
-        output = unicode(self.clientProcess.readAllStandardOutput())
+        output = str(self.clientProcess.readAllStandardOutput(), 
+                     Preferences.getSystem("IOEncoding"), 
+                     'replace')
         self.emit(SIGNAL("clientProcessStdout"), output)
         
     def __clientProcessError(self):
         """
         Private slot to process client output received via stderr.
         """
-        error = unicode(self.clientProcess.readAllStandardError())
+        error = str(self.clientProcess.readAllStandardError(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
         self.emit(SIGNAL("clientProcessStderr"), error)
         
     def __clientClearBreakPoint(self, fn, lineno):
@@ -1201,7 +1205,7 @@ class DebugServer(QTcpServer):
         @param fn filename of the debugged script (string)
         @param exc flag to enable exception reporting of the IDE (boolean)
         """
-        print self.trUtf8("Passive debug connection received")
+        print(self.trUtf8("Passive debug connection received"))
         self.passiveClientExited = False
         self.debugging = True
         self.__restoreBreakpoints()
@@ -1214,7 +1218,7 @@ class DebugServer(QTcpServer):
         """
         self.passiveClientExited = True
         self.shutdownServer()
-        print self.trUtf8("Passive debug connection closed")
+        print(self.trUtf8("Passive debug connection closed"))
         
     def __restoreBreakpoints(self):
         """

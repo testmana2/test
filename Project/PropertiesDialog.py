@@ -16,9 +16,9 @@ from E4Gui.E4Application import e4App
 
 from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
 
-from Ui_PropertiesDialog import Ui_PropertiesDialog
-from TranslationPropertiesDialog import TranslationPropertiesDialog
-from SpellingPropertiesDialog import SpellingPropertiesDialog
+from .Ui_PropertiesDialog import Ui_PropertiesDialog
+from .TranslationPropertiesDialog import TranslationPropertiesDialog
+from .SpellingPropertiesDialog import SpellingPropertiesDialog
 
 from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
 
@@ -170,7 +170,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         if not dir:
             dir = QDir.currentPath()
         patterns = []
-        for pattern, filetype in self.project.pdata["FILETYPES"].items():
+        for pattern, filetype in list(self.project.pdata["FILETYPES"].items()):
             if filetype == "SOURCES":
                 patterns.append(pattern)
         filters = self.trUtf8("Source Files ({0});;All Files (*)")\

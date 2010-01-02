@@ -13,7 +13,7 @@ from PyQt4.QtSql import QSqlDatabase
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from Ui_SqlConnectionDialog import Ui_SqlConnectionDialog
+from .Ui_SqlConnectionDialog import Ui_SqlConnectionDialog
 
 import Utilities
 

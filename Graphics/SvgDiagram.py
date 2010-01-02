@@ -11,7 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtSvg import QSvgWidget
 
-from ZoomDialog import ZoomDialog
+from .ZoomDialog import ZoomDialog
 
 import UI.Config
 

@@ -246,7 +246,7 @@ class LatexFormatter(Formatter):
         """
         cp = self.commandprefix
         styles = []
-        for name, definition in self.cmd2def.iteritems():
+        for name, definition in self.cmd2def.items():
             styles.append(r'\def\%s@tok@%s{%s}' % (cp, name, definition))
         return STYLE_TEMPLATE % {'cp': self.commandprefix,
                                  'styles': '\n'.join(styles)}

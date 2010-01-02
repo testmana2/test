@@ -12,8 +12,8 @@ import time
 
 from E4Gui.E4Application import e4App
 
-from Config import templatesFileFormatVersion
-from XMLHandlerBase import XMLHandlerBase
+from .Config import templatesFileFormatVersion
+from .XMLHandlerBase import XMLHandlerBase
 
 class TemplatesHandler(XMLHandlerBase):
     """

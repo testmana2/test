@@ -60,16 +60,16 @@ class StartDialog(QDialog):
         
         self.type = type
         if type == 0:
-            from Ui_StartDebugDialog import Ui_StartDebugDialog
+            from .Ui_StartDebugDialog import Ui_StartDebugDialog
             self.ui = Ui_StartDebugDialog()
         elif type == 1:
-            from Ui_StartRunDialog import Ui_StartRunDialog
+            from .Ui_StartRunDialog import Ui_StartRunDialog
             self.ui = Ui_StartRunDialog()
         elif type == 2:
-            from Ui_StartCoverageDialog import Ui_StartCoverageDialog
+            from .Ui_StartCoverageDialog import Ui_StartCoverageDialog
             self.ui = Ui_StartCoverageDialog()
         elif type == 3:
-            from Ui_StartProfileDialog import Ui_StartProfileDialog
+            from .Ui_StartProfileDialog import Ui_StartProfileDialog
             self.ui = Ui_StartProfileDialog()
         self.ui.setupUi(self)
         

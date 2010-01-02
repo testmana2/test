@@ -11,7 +11,7 @@ Module implementing the Plugin Details Dialog.
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import pyqtSlot
 
-from Ui_PluginDetailsDialog import Ui_PluginDetailsDialog
+from .Ui_PluginDetailsDialog import Ui_PluginDetailsDialog
 
 class PluginDetailsDialog(QDialog, Ui_PluginDetailsDialog):
     """

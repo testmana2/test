@@ -9,7 +9,7 @@ Module implementing a dialog to select the zoom factor.
 
 from PyQt4.QtGui import QDialog
 
-from Ui_IconZoomDialog import Ui_IconZoomDialog
+from .Ui_IconZoomDialog import Ui_IconZoomDialog
 
 class IconZoomDialog(QDialog, Ui_IconZoomDialog):
     """
@@ -34,4 +34,4 @@ class IconZoomDialog(QDialog, Ui_IconZoomDialog):
         
         @return zoom factor (int)
         """
-        return self.zoomSpinBox.value() / 100
+        return self.zoomSpinBox.value() // 100

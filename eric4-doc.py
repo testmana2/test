@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2003 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -37,95 +37,94 @@ def usage():
     It prints a reference of all commandline parameters that may
     be used and ends the application.
     """
-    print "eric4-doc"
-    print
-    print "Copyright (c) 2003 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>."
-    print
-    print "Usage:"
-    print
-    print "  eric4-doc [options] files..."
-    print
-    print "where files can be either python modules, package"
-    print "directories or ordinary directories."
-    print
-    print "Options:"
-    print
-    print "  -c filename or --style-sheet=filename"
-    print "        Specify a CSS style sheet file to be used."
-    print "  -e or --noempty"
-    print "        Don't include empty modules."
-    print "  -h or --help"
-    print "        Show this help and exit."
-    print "  -i or --noindex"
-    print "        Don't generate index files."
-    print "  -o directory or --outdir=directory"
-    print "        Generate files in the named directory."
-    print "  -R, -r or --recursive"
-    print "        Perform a recursive search for Python files."
-    print "  -t ext or --extension=ext"
-    print "        Add the given extension to the list of file extensions."
-    print "        This option may be given multiple times."
-    print "  -V or --version"
-    print "        Show version information and exit."
-    print "  -x directory or --exclude=directory"
-    print "        Specify a directory basename to be excluded."
-    print "        This option may be repeated multiple times."
-    print "  --exclude-file=pattern"
-    print "        Specify a filename pattern of files to be excluded."
-    print "        This option may be repeated multiple times."
-    print
-    print "  --body-color=color"
-    print "        Specify the text color."
-    print "  --body-background-color=color"
-    print "        Specify the text background color."
-    print "  --l1header-color=color"
-    print "        Specify the text color of level 1 headers."
-    print "  --l1header-background-color=color"
-    print "        Specify the text background color of level 1 headers."
-    print "  --l2header-color=color"
-    print "        Specify the text color of level 2 headers."
-    print "  --l2header-background-color=color"
-    print "        Specify the text background color of level 2 headers."
-    print "  --cfheader-color=color"
-    print "        Specify the text color of class and function headers."
-    print "  --cfheader-background-color=color"
-    print "        Specify the text background color of class and function headers."
-    print "  --link-color=color"
-    print "        Specify the text color of hyperlinks."
-    print
-    print "  --create-qhp"
-    print "        Enable generation of QtHelp files."
-    print "  --qhp-outdir=directory"
-    print "        Generate QtHelp files in the named directory."
-    print "  --qhp-namespace=namespace"
-    print "        Use the given namespace (mandatory)."
-    print "  --qhp-virtualfolder=folder"
-    print "        Use the given virtual folder (mandatory)."
-    print "        The virtual folder must not contain '/'."
-    print "  --qhp-filtername=name"
-    print "        Use the given name for the custom filter."
-    print "  --qhp-filterattribs=attributes"
-    print "        Add the given attributes to the filter list."
-    print "        Attributes must be separated by ':'."
-    print "  --qhp-title=title"
-    print "        Use this as the title for the generated help (mandatory)."
-    print "  --create-qhc"
-    print "        Enable generation of QtHelp Collection files."
+    print("eric4-doc")
+    print()
+    print("Copyright (c) 2003 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>.")
+    print()
+    print("Usage:")
+    print()
+    print("  eric4-doc [options] files...")
+    print()
+    print("where files can be either python modules, package")
+    print("directories or ordinary directories.")
+    print()
+    print("Options:")
+    print()
+    print("  -c filename or --style-sheet=filename")
+    print("        Specify a CSS style sheet file to be used.")
+    print("  -e or --noempty")
+    print("        Don't include empty modules.")
+    print("  -h or --help")
+    print("        Show this help and exit.")
+    print("  -i or --noindex")
+    print("        Don't generate index files.")
+    print("  -o directory or --outdir=directory")
+    print("        Generate files in the named directory.")
+    print("  -R, -r or --recursive")
+    print("        Perform a recursive search for Python files.")
+    print("  -t ext or --extension=ext")
+    print("        Add the given extension to the list of file extensions.")
+    print("        This option may be given multiple times.")
+    print("  -V or --version")
+    print("        Show version information and exit.")
+    print("  -x directory or --exclude=directory")
+    print("        Specify a directory basename to be excluded.")
+    print("        This option may be repeated multiple times.")
+    print("  --exclude-file=pattern")
+    print("        Specify a filename pattern of files to be excluded.")
+    print("        This option may be repeated multiple times.")
+    print()
+    print("  --body-color=color")
+    print("        Specify the text color.")
+    print("  --body-background-color=color")
+    print("        Specify the text background color.")
+    print("  --l1header-color=color")
+    print("        Specify the text color of level 1 headers.")
+    print("  --l1header-background-color=color")
+    print("        Specify the text background color of level 1 headers.")
+    print("  --l2header-color=color")
+    print("        Specify the text color of level 2 headers.")
+    print("  --l2header-background-color=color")
+    print("        Specify the text background color of level 2 headers.")
+    print("  --cfheader-color=color")
+    print("        Specify the text color of class and function headers.")
+    print("  --cfheader-background-color=color")
+    print("        Specify the text background color of class and function headers.")
+    print("  --link-color=color")
+    print("        Specify the text color of hyperlinks.")
+    print()
+    print("  --create-qhp")
+    print("        Enable generation of QtHelp files.")
+    print("  --qhp-outdir=directory")
+    print("        Generate QtHelp files in the named directory.")
+    print("  --qhp-namespace=namespace")
+    print("        Use the given namespace (mandatory).")
+    print("  --qhp-virtualfolder=folder")
+    print("        Use the given virtual folder (mandatory).")
+    print("        The virtual folder must not contain '/'.")
+    print("  --qhp-filtername=name")
+    print("        Use the given name for the custom filter.")
+    print("  --qhp-filterattribs=attributes")
+    print("        Add the given attributes to the filter list.")
+    print("        Attributes must be separated by ':'.")
+    print("  --qhp-title=title")
+    print("        Use this as the title for the generated help (mandatory).")
+    print("  --create-qhc")
+    print("        Enable generation of QtHelp Collection files.")
     sys.exit(1)
 
 def version():
     """
     Function to show the version information.
     """
-    print \
-"""eric4-doc  %s
+    print("""eric4-doc  %s
 
 Eric4 API documentation generator.
 
 Copyright (c) 2003-2009 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see the LICENSE.GPL3 for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.""" % Version
+PARTICULAR PURPOSE.""" % Version)
     sys.exit(1)
 
 def main():
@@ -149,7 +148,7 @@ def main():
              "qhp-virtualfolder=", "qhp-filtername=", "qhp-filterattribs=", 
              "qhp-title=", "create-qhc", 
             ])
-    except getopt.error, e:
+    except getopt.error as e:
         usage()
 
     excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject", 
@@ -346,10 +345,10 @@ def main():
                                 inpackage = inpackage, extensions = supportedExtensions)
                     moduleDocument = ModuleDocument(module, colors, stylesheet)
                     doc = moduleDocument.genDocument()
-                except IOError, v:
+                except IOError as v:
                     sys.stderr.write("%s error: %s\n" % (file, v[1]))
                     continue
-                except ImportError, v:
+                except ImportError as v:
                     sys.stderr.write("%s error: %s\n" % (file, v))
                     continue
                 
@@ -371,10 +370,10 @@ def main():
                 
                 # generate output
                 try:
-                    out = open(f, "wb")
+                    out = open(f, "w")
                     out.write(doc)
                     out.close()
-                except IOError, v:
+                except IOError as v:
                     sys.stderr.write("%s error: %s\n" % (file, v[1]))
                 else:
                     sys.stdout.write("%s ok\n" % f)

@@ -14,7 +14,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from Ui_TaskPropertiesDialog import Ui_TaskPropertiesDialog
+from .Ui_TaskPropertiesDialog import Ui_TaskPropertiesDialog
 
 
 class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):

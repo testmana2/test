@@ -11,9 +11,9 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtSql import QSqlDatabase, QSqlError, QSqlTableModel, QSqlQueryModel, QSqlQuery
 
-from SqlConnectionDialog import SqlConnectionDialog
+from .SqlConnectionDialog import SqlConnectionDialog
 
-from Ui_SqlBrowserWidget import Ui_SqlBrowserWidget
+from .Ui_SqlBrowserWidget import Ui_SqlBrowserWidget
 
 class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
     """

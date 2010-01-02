@@ -9,7 +9,7 @@ Module implementing a Tex lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerTeX
 
-from Lexer import Lexer
+from .Lexer import Lexer
 
 class LexerTeX(QsciLexerTeX, Lexer):
     """ 

@@ -9,8 +9,8 @@ Module implementing the handler class for handling a highlighting styles XML fil
 
 from PyQt4.QtGui import QColor, QFont
 
-from Config import highlightingStylesFileFormatVersion
-from XMLHandlerBase import XMLHandlerBase
+from .Config import highlightingStylesFileFormatVersion
+from .XMLHandlerBase import XMLHandlerBase
 
 class HighlightingStylesHandler(XMLHandlerBase):
     """

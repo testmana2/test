@@ -12,7 +12,7 @@ import sys
 import re
 import fnmatch
 import glob
-from types import UnicodeType
+##from types import UnicodeType
 import random
 import base64
 
@@ -38,8 +38,8 @@ import Preferences
 configDir = None
 
 coding_regexps = [
-    (2, re.compile(r'''coding[:=]\s*([-\w_.]+)''')), 
-    (1, re.compile(r'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')), 
+    (2, re.compile(br'''coding[:=]\s*([-\w_.]+)''')), 
+    (1, re.compile(br'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')), 
 ]
 supportedCodecs = ['utf-8', 
           'iso8859-1', 'iso8859-15', 'iso8859-2', 'iso8859-3', 
@@ -73,7 +73,7 @@ class CodingError(Exception):
         
         @return string representing the error message
         """
-        return unicode(self.errorMessage)
+        return str(self.errorMessage)
         
     def __str__(self):
         """
@@ -110,16 +110,17 @@ def decode(text):
     try:
         if text.startswith(BOM_UTF8):
             # UTF-8 with BOM
-            return unicode(text[len(BOM_UTF8):], 'utf-8'), 'utf-8-bom'
+            return str(text[len(BOM_UTF8):], 'utf-8'), 'utf-8-bom'
         elif text.startswith(BOM_UTF16):
             # UTF-16 with BOM
-            return unicode(text[len(BOM_UTF16):], 'utf-16'), 'utf-16'
+            return str(text[len(BOM_UTF16):], 'utf-16'), 'utf-16'
         elif text.startswith(BOM_UTF32):
             # UTF-32 with BOM
-            return unicode(text[len(BOM_UTF32):], 'utf-32'), 'utf-32'
+            return str(text[len(BOM_UTF32):], 'utf-32'), 'utf-32'
         coding = get_coding(text)
         if coding:
-            return unicode(text, coding), coding
+            coding = coding.decode()
+            return text.decode(coding), coding
     except (UnicodeError, LookupError):
         pass
     
@@ -131,7 +132,7 @@ def decode(text):
             guess = ThirdParty.CharDet.chardet.detect(text)
             if guess and guess['confidence'] > 0.95 and guess['encoding'] is not None:
                 codec = guess['encoding'].lower()
-                return unicode(text, codec), '%s-guessed' % codec
+                return str(text, codec), '%s-guessed' % codec
         except (UnicodeError, LookupError):
             pass
         except ImportError:
@@ -140,13 +141,13 @@ def decode(text):
     # Try default encoding
     try:
         codec = Preferences.getEditor("DefaultEncoding")
-        return unicode(text, codec), '%s-default' % codec
+        return str(text, codec), '%s-default' % codec
     except (UnicodeError, LookupError):
         pass
     
     # Assume UTF-8
     try:
-        return unicode(text, 'utf-8'), 'utf-8-guessed'
+        return str(text, 'utf-8'), 'utf-8-guessed'
     except (UnicodeError, LookupError):
         pass
     
@@ -155,12 +156,12 @@ def decode(text):
         if guess and guess['encoding'] is not None:
             try:
                 codec = guess['encoding'].lower()
-                return unicode(text, codec), '%s-guessed' % codec
+                return str(text, codec), '%s-guessed' % codec
             except (UnicodeError, LookupError):
                 pass
     
     # Assume Latin-1 (behaviour before 3.7.1)
-    return unicode(text, "latin-1"), 'latin-1-guessed'
+    return str(text, "latin-1"), 'latin-1-guessed'
 
 def encode(text, orig_coding):
     """
@@ -227,12 +228,12 @@ def toUnicode(s):
     @param s string to be converted (string)
     @return converted string (unicode)
     """
-    if type(s) is type(u""):
+    if isinstance(s, str):
         return s
     
     for codec in supportedCodecs:
         try:
-            u = unicode(s, codec)
+            u = str(s, codec)
             return u
         except UnicodeError:
             pass
@@ -242,7 +243,7 @@ def toUnicode(s):
     # we didn't succeed
     return s
     
-_escape = re.compile(eval(r'u"[&<>\"\u0080-\uffff]"'))
+_escape = re.compile(eval(r'"[&<>\"\u0080-\uffff]"'))
 
 _escape_map = {
     "&": "&amp;",
@@ -276,9 +277,9 @@ def html_encode(text, pattern=_escape):
     if not text:
         return ""
     text = pattern.sub(escape_entities, text)
-    return text.encode("ascii")
+    return text
 
-_uescape = re.compile(ur'[\u0080-\uffff]')
+_uescape = re.compile(r'[\u0080-\uffff]')
 
 def escape_uentities(m):
     """
@@ -301,13 +302,8 @@ def html_uencode(text, pattern=_uescape):
     """
     if not text:
         return ""
-    try:
-        if type(text) is not UnicodeType:
-            text = unicode(text, "utf-8")
-    except (ValueError,  LookupError):
-        pass
     text = pattern.sub(escape_uentities, text)
-    return text.encode("ascii")
+    return text
 
 def convertLineEnds(text, eol):
     """
@@ -882,22 +878,22 @@ def compile(file, codestring = ""):
     
     @param file source filename (string)
     @param codestring string containing the code to compile (string)
-    @return A tuple indicating status (1 = an error was found), the
+    @return A tuple indicating status (True = an error was found), the
         filename, the linenumber, the code string and the error message
         (boolean, string, string, string, string). The values are only
         valid, if the status equals 1.
     """
-    import __builtin__
+    import builtins
     if not codestring:
         try:
             f = open(file)
             codestring, encoding = decode(f.read())
             f.close()
         except IOError:
-            return (0, None, None, None, None)
+            return (False, None, None, None, None)
 
-    if type(codestring) == type(u""):
-        codestring = codestring.encode('utf-8')
+##    if isinstance(codestring, type("")):
+##        codestring = codestring.encode('utf-8')
     codestring = codestring.replace("\r\n","\n")
     codestring = codestring.replace("\r","\n")
 
@@ -905,20 +901,20 @@ def compile(file, codestring = ""):
         codestring = codestring + '\n'
     
     try:
-        if type(file) == type(u""):
-            file = file.encode('utf-8')
-        
+##        if isinstance(file, type("")):
+##            file = file.encode('utf-8')
+##        
         if file.endswith('.ptl'):
             try:
                 import quixote.ptl_compile
             except ImportError:
-                return (0, None, None, None, None)
+                return (False, None, None, None, None)
             template = quixote.ptl_compile.Template(codestring, file)
             template.compile()
             codeobject = template.code
         else:
-            codeobject = __builtin__.compile(codestring, file, 'exec')
-    except SyntaxError, detail:
+            codeobject = builtins.compile(codestring, file, 'exec')
+    except SyntaxError as detail:
         import traceback, re
         lines = traceback.format_exception_only(SyntaxError, detail)
         match = re.match('\s*File "(.+)", line (\d+)', 
@@ -939,8 +935,8 @@ def compile(file, codestring = ""):
             line = detail.lineno and detail.lineno or 1
             code = ""
             error = detail.msg
-        return (1, fn, line, code, error)
-    except ValueError, detail:
+        return (True, fn, line, code, error)
+    except ValueError as detail:
         try:
             fn = detail.filename
             line = detail.lineno
@@ -948,20 +944,20 @@ def compile(file, codestring = ""):
         except AttributeError:
             fn = ""
             line = 1
-            error = unicode(detail)
+            error = str(detail)
         code = ""
-        return (1, fn, line, code, error)
-    except StandardError, detail:
+        return (True, fn, line, code, error)
+    except Exception as detail:
         try:
             fn = detail.filename
             line = detail.lineno
             code = ""
             error = detail.msg
-            return (1, fn, line, code, error)
+            return (True, fn, line, code, error)
         except:         # this catchall is intentional
             pass
     
-    return (0, None, None, None, None)
+    return (False, None, None, None, None)
 
 def getConfigDir():
     """

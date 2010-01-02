@@ -18,8 +18,8 @@ from PyQt4.QtGui import *
 from E4Gui.E4Application import e4App
 
 import VCS
-from CommandOptionsDialog import vcsCommandOptionsDialog
-from RepositoryInfoDialog import VcsRepositoryInfoDialog
+from .CommandOptionsDialog import vcsCommandOptionsDialog
+from .RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 from E4Gui.E4Action import E4Action
 
@@ -144,7 +144,7 @@ class VcsProjectHelper(QObject):
             0, False)
         if not ok:
             return
-        for vcsSystem, vcsSystemDisplay in vcsSystemsDict.items():
+        for vcsSystem, vcsSystemDisplay in list(vcsSystemsDict.items()):
             if vcsSystemDisplay == vcsSelected:
                 break
         
@@ -304,8 +304,7 @@ class VcsProjectHelper(QObject):
         vcsSystemsDict = e4App().getObject("PluginManager")\
             .getPluginDisplayStrings("version_control")
         vcsSystemsDisplay = []
-        keys = vcsSystemsDict.keys()
-        keys.sort()
+        keys = sorted(list(vcsSystemsDict.keys()))
         for key in keys:
             vcsSystemsDisplay.append(vcsSystemsDict[key])
         vcsSelected, ok = QInputDialog.getItem(\
@@ -316,7 +315,7 @@ class VcsProjectHelper(QObject):
             0, False)
         if not ok:
             return
-        for vcsSystem, vcsSystemDisplay in vcsSystemsDict.items():
+        for vcsSystem, vcsSystemDisplay in list(vcsSystemsDict.items()):
             if vcsSystemDisplay == vcsSelected:
                 break
         

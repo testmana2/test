@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2007 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -12,10 +12,6 @@ This is the main Python script to uninstall eric4 plugins from outside of the ID
 
 import sys
 import os
-
-import sip
-sip.setapi("QString", 2)
-sip.setapi("QVariant", 2)
 
 for arg in sys.argv:
     if arg.startswith("--config="):

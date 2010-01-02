@@ -570,7 +570,7 @@ class PhpLexer(RegexLexer):
         self._functions = set()
         if self.funcnamehighlighting:
             from pygments.lexers._phpbuiltins import MODULES
-            for key, value in MODULES.iteritems():
+            for key, value in MODULES.items():
                 if key not in self.disabledmodules:
                     self._functions.update(value)
         RegexLexer.__init__(self, **options)

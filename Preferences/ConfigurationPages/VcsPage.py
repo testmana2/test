@@ -9,8 +9,8 @@ Module implementing the VCS configuration page.
 
 from PyQt4.QtCore import pyqtSlot
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_VcsPage import Ui_VcsPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_VcsPage import Ui_VcsPage
 
 import Preferences
 
@@ -76,7 +76,7 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         Preferences.setVCS("AutoUpdate", 
             self.autoUpdateCheckBox.isChecked())
     
-        for key in self.projectBrowserColours.keys():
+        for key in list(self.projectBrowserColours.keys()):
             Preferences.setProjectBrowserColour(key, self.projectBrowserColours[key])
     
     @pyqtSlot()

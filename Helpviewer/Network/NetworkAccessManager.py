@@ -25,13 +25,13 @@ import UI.PixmapCache
 from Helpviewer.HelpLanguagesDialog import HelpLanguagesDialog
 import Helpviewer.HelpWindow
 
-from NetworkReply import NetworkReply
-from NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
-from NetworkDiskCache import NetworkDiskCache
+from .NetworkReply import NetworkReply
+from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
+from .NetworkDiskCache import NetworkDiskCache
 
-from QtHelpAccessHandler import QtHelpAccessHandler
-from PyrcAccessHandler import PyrcAccessHandler
-from AboutAccessHandler import AboutAccessHandler
+from .QtHelpAccessHandler import QtHelpAccessHandler
+from .PyrcAccessHandler import PyrcAccessHandler
+from .AboutAccessHandler import AboutAccessHandler
 
 from Helpviewer.AdBlock.AdBlockAccessHandler import AdBlockAccessHandler
 

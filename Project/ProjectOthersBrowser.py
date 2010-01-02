@@ -15,10 +15,10 @@ import mimetypes
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from ProjectBrowserModel import ProjectBrowserFileItem, \
+from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserOthersType
-from ProjectBaseBrowser import ProjectBaseBrowser
+from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.BrowserModel import BrowserClassItem, BrowserMethodItem, \
     BrowserDirectoryItem, BrowserFileItem

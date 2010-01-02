@@ -71,7 +71,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
             finished = process.waitForFinished(300000)
             if finished and process.exitCode() == 0:
                 output = \
-                    unicode(process.readAllStandardOutput(), self.__ioEncoding, 'replace')
+                    str(process.readAllStandardOutput(), self.__ioEncoding, 'replace')
                 states = {}
                 for line in output.splitlines():
                     if self.rx_status1.exactMatch(line):
@@ -99,7 +99,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                                 self.statusList.append("%s %s" % (status, name))
                         except KeyError:
                             self.statusList.append("%s %s" % (status, name))
-                for name in self.reportedStates.keys():
+                for name in list(self.reportedStates.keys()):
                     if name not in states:
                         self.statusList.append("  %s" % name)
                 self.reportedStates = states
@@ -108,7 +108,10 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
             else:
                 process.kill()
                 process.waitForFinished()
-                return False, unicode(process.readAllStandardError())
+                return False, 
+                       str(process.readAllStandardError(), 
+                            Preferences.getSystem("IOEncoding"), 
+                            'replace')
         else:
             process.kill()
             process.waitForFinished()

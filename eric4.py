@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2002 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -14,13 +14,9 @@ of the IDE and starts the Qt event loop.
 import sys
 import os
 import traceback
-import cStringIO
+import io
 import time
 import logging
-
-import sip
-sip.setapi("QString", 2)
-sip.setapi("QVariant", 2)
 
 from PyQt4.QtCore import QTextCodec, SIGNAL, SLOT, qWarning, \
     QLibraryInfo, QTimer
@@ -88,7 +84,7 @@ def handleSingleApplication(ddindex):
             client.processArgs(sys.argv[1:])
         sys.exit(0)
     elif res < 0:
-        print "eric4: %s" % client.errstr()
+        print("eric4: %s" % client.errstr())
         sys.exit(res)
 
 def excepthook(excType, excValue, tracebackobj):
@@ -116,7 +112,7 @@ def excepthook(excType, excValue, tracebackobj):
     if distroInfo:
         versionInfo += "%s\n%s" % (separator, distroInfo)
     
-    tbinfofile = cStringIO.StringIO()
+    tbinfofile = io.StringIO()
     traceback.print_tb(tracebackobj, None, tbinfofile)
     tbinfofile.seek(0)
     tbinfo = tbinfofile.read()
@@ -250,7 +246,7 @@ def main():
         logging.debug("Shutting down, result %d" % res)
         logging.shutdown()
         sys.exit(res)
-    except Exception, err:
+    except Exception as err:
         raise err
 
 if __name__ == '__main__':

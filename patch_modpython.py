@@ -26,17 +26,17 @@ def usage(rcode = 2):
     """
     global progName, modDir
     
-    print "Usage:"
-    print "    %s [-h] [-d dir]" % (progName)
-    print "where:"
-    print "    -h             display this help message"
-    print "    -d dir         where Mod_python files are installed [default %s]" % \
-        (modDir)
-    print
-    print "This script patches the file apache.py of the Mod_python distribution"
-    print "so that it will work with the eric4 debugger instead of pdb."
-    print "Please see mod_python.html for more details."
-    print
+    print("Usage:")
+    print("    %s [-h] [-d dir]" % (progName))
+    print("where:")
+    print("    -h             display this help message")
+    print("    -d dir         where Mod_python files are installed [default %s]" % \
+        (modDir))
+    print()
+    print("This script patches the file apache.py of the Mod_python distribution")
+    print("so that it will work with the eric4 debugger instead of pdb.")
+    print("Please see mod_python.html for more details.")
+    print()
 
     sys.exit(rcode)
 
@@ -78,7 +78,7 @@ def main(argv):
         filename = os.path.join(modDir, "apache.py")
         f = open(filename, "r")
     except EnvironmentError:
-        print "The file %s does not exist. Aborting." % filename
+        print("The file %s does not exist. Aborting." % filename)
         sys.exit(1)
     
     lines = f.readlines()
@@ -112,19 +112,19 @@ def main(argv):
     s.close()
     
     if ericFound:
-        print "Mod_python is already patched for eric4."
+        print("Mod_python is already patched for eric4.")
         os.remove(sn)
     else:
         try:
             py_compile.compile(sn)
-        except py_compile.PyCompileError, e:
-            print "Error compiling %s. Aborting" % sn
-            print e
+        except py_compile.PyCompileError as e:
+            print("Error compiling %s. Aborting" % sn)
+            print(e)
             os.remove(sn)
             sys.exit(1)
-        except SyntaxError, e:
-            print "Error compiling %s. Aborting" % sn
-            print e
+        except SyntaxError as e:
+            print("Error compiling %s. Aborting" % sn)
+            print(e)
             os.remove(sn)
             sys.exit(1)
         
@@ -139,8 +139,8 @@ def main(argv):
             shutil.copy("%so" % sn, modDir)
             os.remove("%so" % sn)
             
-        print "Mod_python patched successfully."
-        print "Unpatched file copied to %s." % os.path.join(modDir, "apache.py.orig")
+        print("Mod_python patched successfully.")
+        print("Unpatched file copied to %s." % os.path.join(modDir, "apache.py.orig"))
     
     
 if __name__ == "__main__":
@@ -149,9 +149,8 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print \
-"""An internal error occured.  Please report all the output of the program,
+        print("""An internal error occured.  Please report all the output of the program,
 including the following traceback, to eric-bugs@die-offenbachs.de.
-"""
+""")
         raise
 

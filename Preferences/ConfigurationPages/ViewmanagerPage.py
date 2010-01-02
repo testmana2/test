@@ -14,8 +14,8 @@ from PyQt4.QtGui import QPixmap
 
 from E4Gui.E4Application import e4App
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_ViewmanagerPage import Ui_ViewmanagerPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_ViewmanagerPage import Ui_ViewmanagerPage
 
 import Preferences
 

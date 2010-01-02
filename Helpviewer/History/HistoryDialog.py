@@ -13,9 +13,9 @@ from PyQt4.QtGui import *
 from E4Gui.E4TreeSortFilterProxyModel import E4TreeSortFilterProxyModel
 
 import Helpviewer.HelpWindow
-from HistoryModel import HistoryModel
+from .HistoryModel import HistoryModel
 
-from Ui_HistoryDialog import Ui_HistoryDialog
+from .Ui_HistoryDialog import Ui_HistoryDialog
 
 import UI.PixmapCache
 

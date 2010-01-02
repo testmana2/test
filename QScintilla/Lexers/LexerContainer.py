@@ -9,7 +9,7 @@ Module implementing a base class for custom lexers.
 
 from PyQt4.Qsci import QsciLexer
 
-from Lexer import Lexer
+from .Lexer import Lexer
 
 class LexerContainer(QsciLexer, Lexer):
     """ 

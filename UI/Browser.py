@@ -16,10 +16,10 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from BrowserModel import BrowserModel, \
+from .BrowserModel import BrowserModel, \
     BrowserDirectoryItem, BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem
-from BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
+from .BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
 
 import UI.PixmapCache
 import Preferences
@@ -253,7 +253,7 @@ class Browser(QTreeView):
             [BrowserDirectoryItem, BrowserFileItem, 
              BrowserClassItem, BrowserMethodItem])
         cnt = categories["sum"]
-        bfcnt = categories[unicode(BrowserFileItem)]
+        bfcnt = categories[str(BrowserFileItem)]
         if cnt > 1 and cnt == bfcnt:
             self.multiMenu.popup(self.mapToGlobal(coord))
         else:
@@ -312,6 +312,8 @@ class Browser(QTreeView):
             if isinstance(itm, BrowserFileItem):
                 if itm.isPythonFile():
                     self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "Python")
+                elif itm.isPython3File():
+                    self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "Python3")
                 elif itm.isRubyFile():
                     self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "Ruby")
                 elif itm.isDFile():
@@ -518,7 +520,7 @@ class Browser(QTreeView):
         categories = {}
         categories["sum"] = 0
         for typ in filter:
-            categories[unicode(typ)] = 0
+            categories[str(typ)] = 0
         
         indexes = self.selectedIndexes()
         for index in indexes:
@@ -527,7 +529,7 @@ class Browser(QTreeView):
                 for typ in filter:
                     if isinstance(itm, typ):
                         categories["sum"] += 1
-                        categories[unicode(typ)] += 1
+                        categories[str(typ)] += 1
         
         return categories
         

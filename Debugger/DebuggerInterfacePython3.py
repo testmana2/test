@@ -17,8 +17,8 @@ from PyQt4.QtGui import QInputDialog, QMessageBox
 
 from E4Gui.E4Application import e4App
 
-from DebugProtocol import *
-import DebugClientCapabilities
+from .DebugProtocol import *
+from . import DebugClientCapabilities
 
 import Preferences
 import Utilities
@@ -129,7 +129,7 @@ class DebuggerInterfacePython3(QObject):
         proc = QProcess()
         if environment is not None:
             env = []
-            for key, value in environment.items():
+            for key, value in list(environment.items()):
                 env.append("%s=%s" % (key, value))
             proc.setEnvironment(env)
         args = []
@@ -420,7 +420,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param env environment settings (dictionary)
         """
-        self.__sendCommand('%s%s\n' % (RequestEnv, unicode(env)))
+        self.__sendCommand('%s%s\n' % (RequestEnv, str(env)))
     
     def remoteLoad(self, fn, argv, wd, traceInterpreter = False, autoContinue = True, 
                    autoFork = False, forkChild = False):
@@ -443,7 +443,7 @@ class DebuggerInterfacePython3(QObject):
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('%s%s\n' % (RequestForkMode, repr((autoFork, forkChild))))
         self.__sendCommand('%s%s|%s|%s|%d\n' % \
-            (RequestLoad, wd, fn, unicode(Utilities.parseOptionString(argv)), 
+            (RequestLoad, wd, fn, str(Utilities.parseOptionString(argv)), 
              traceInterpreter))
     
     def remoteRun(self, fn, argv, wd):
@@ -457,7 +457,7 @@ class DebuggerInterfacePython3(QObject):
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('%s%s|%s|%s\n' % \
-            (RequestRun, wd, fn, unicode(Utilities.parseOptionString(argv))))
+            (RequestRun, wd, fn, str(Utilities.parseOptionString(argv))))
     
     def remoteCoverage(self, fn, argv, wd, erase = False):
         """
@@ -472,7 +472,7 @@ class DebuggerInterfacePython3(QObject):
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('%s%s@@%s@@%s@@%d\n' % \
-            (RequestCoverage, wd, fn, unicode(Utilities.parseOptionString(argv)),
+            (RequestCoverage, wd, fn, str(Utilities.parseOptionString(argv)),
              erase))
 
     def remoteProfile(self, fn, argv, wd, erase = False):
@@ -487,7 +487,7 @@ class DebuggerInterfacePython3(QObject):
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('%s%s|%s|%s|%d\n' % \
-            (RequestProfile, wd, fn, unicode(Utilities.parseOptionString(argv)), erase))
+            (RequestProfile, wd, fn, str(Utilities.parseOptionString(argv)), erase))
 
     def remoteStatement(self, stmt):
         """
@@ -629,7 +629,7 @@ class DebuggerInterfacePython3(QObject):
         @param framenr framenumber of the variables to retrieve (int)
         """
         self.__sendCommand('%s%d, %d, %s\n' % \
-            (RequestVariables, framenr, scope, unicode(filter)))
+            (RequestVariables, framenr, scope, str(filter)))
     
     def remoteClientVariable(self, scope, filter, var, framenr = 0):
         """
@@ -740,16 +740,15 @@ class DebuggerInterfacePython3(QObject):
         while self.qsock and self.qsock.canReadLine():
             qs = self.qsock.readLine()
             if self.codec is not None:
-                us = self.codec.fromUnicode(unicode(qs))
+                line = self.codec.toUnicode(qs)
             else:
-                us = qs
-            line = str(us)
+                line = bytes(qs).decode()
             if line.endswith(EOT):
                 line = line[:-len(EOT)]
                 if not line:
                     continue
             
-##            print "Server: ", line          ##debug
+##            print("Server: ", line)          ##debug
             
             eoc = line.find('<') + 1
             

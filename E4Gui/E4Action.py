@@ -22,7 +22,7 @@ class ArgumentsError(RuntimeError):
         """
         Constructor
         """
-        self.errorMessage = unicode(error)
+        self.errorMessage = str(error)
         
     def __repr__(self):
         """
@@ -30,7 +30,7 @@ class ArgumentsError(RuntimeError):
         
         @return string representing the error message
         """
-        return unicode(self.errorMessage)
+        return str(self.errorMessage)
         
     def __str__(self):
         """

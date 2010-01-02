@@ -71,7 +71,7 @@ class ClbrBase(_ClbrBase):
         
         @param attr Attribute object to be added (Attribute)
         """
-        if not self.globals.has_key(attr.name):
+        if attr.name not in self.globals:
             self.globals[attr.name] = attr
         
     def _getglobal(self, name):
@@ -92,7 +92,7 @@ class ClbrBase(_ClbrBase):
         
         @param attr Attribute object to be added (Attribute)
         """
-        if not self.attributes.has_key(attr.name):
+        if attr.name not in self.attributes:
             self.attributes[attr.name] = attr
         
     def _getattribute(self, name):

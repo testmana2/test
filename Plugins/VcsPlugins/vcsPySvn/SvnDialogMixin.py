@@ -59,7 +59,7 @@ class SvnDialogMixin(object):
             as strings and save is a flag indicating, that username and
             password should be saved.
         """
-        from SvnLoginDialog import SvnLoginDialog
+        from .SvnLoginDialog import SvnLoginDialog
         cursor = QApplication.overrideCursor()
         if cursor is not None:
             QApplication.restoreOverrideCursor()
@@ -132,7 +132,7 @@ class SvnDialogMixin(object):
         
         @return a flag indicating success and the log message (string)
         """
-        from SvnCommitDialog import SvnCommitDialog
+        from .SvnCommitDialog import SvnCommitDialog
         if self.logMessage:
             return True, self.logMessage
         else:

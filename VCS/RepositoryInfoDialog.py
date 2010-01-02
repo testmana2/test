@@ -9,7 +9,7 @@ Module implemting a dialog to show repository information.
 
 from PyQt4.QtGui import QDialog
 
-from Ui_RepositoryInfoDialog import Ui_VcsRepositoryInfoDialog
+from .Ui_RepositoryInfoDialog import Ui_VcsRepositoryInfoDialog
 
 
 class VcsRepositoryInfoDialog(QDialog, Ui_VcsRepositoryInfoDialog):

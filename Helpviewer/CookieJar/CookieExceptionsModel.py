@@ -10,7 +10,7 @@ Module implementing the cookie exceptions model.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from CookieJar import CookieJar
+from .CookieJar import CookieJar
 
 class CookieExceptionsModel(QAbstractTableModel):
     """
@@ -46,7 +46,7 @@ class CookieExceptionsModel(QAbstractTableModel):
         """
         if role == Qt.SizeHintRole:
             fm = QFontMetrics(QFont())
-            height = fm.height() + fm.height() / 3
+            height = fm.height() + fm.height() // 3
             width = \
                 fm.width(self.headerData(section, orientation, Qt.DisplayRole))
             return QSize(width, height)

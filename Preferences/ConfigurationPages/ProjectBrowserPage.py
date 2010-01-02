@@ -11,8 +11,8 @@ from PyQt4.QtCore import pyqtSlot
 
 from E4Gui.E4Application import e4App
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_ProjectBrowserPage import Ui_ProjectBrowserPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_ProjectBrowserPage import Ui_ProjectBrowserPage
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -61,7 +61,7 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         """
         Public slot to save the Project Browser configuration.
         """
-        for key in self.projectBrowserColours.keys():
+        for key in list(self.projectBrowserColours.keys()):
             Preferences.setProjectBrowserColour(key, self.projectBrowserColours[key])
         
         Preferences.setProject("FollowEditor", 
@@ -72,7 +72,7 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         if self.pbGroup.isEnabled():
             self.__storeProjectBrowserFlags(\
                 self.projectTypeCombo.itemData(self.__currentProjectTypeIndex))
-            for projectType, flags in self.__projectBrowserFlags.items():
+            for projectType, flags in list(self.__projectBrowserFlags.items()):
                 if projectType != '':
                     Preferences.setProjectBrowserFlags(projectType, flags)
         

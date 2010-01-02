@@ -11,7 +11,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from PyQt4.QtHelp import QHelpEngineCore
 
-from Ui_QtHelpDocumentationDialog import Ui_QtHelpDocumentationDialog
+from .Ui_QtHelpDocumentationDialog import Ui_QtHelpDocumentationDialog
 
 class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
     """
@@ -104,7 +104,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         items = self.documentsList.selectedItems()
         for item in items:
             ns = item.text()
-            if ns in openedDocs.values():
+            if ns in list(openedDocs.values()):
                 res = QMessageBox.information(self,
                     self.trUtf8("Remove Documentation"),
                     self.trUtf8("""Some documents currently opened reference the """

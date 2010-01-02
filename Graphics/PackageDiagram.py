@@ -13,10 +13,10 @@ import os.path
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from UMLDialog import UMLDialog
-from ClassItem import ClassItem, ClassModel
-from AssociationItem import AssociationItem, Generalisation
-import GraphicsUtilities
+from .UMLDialog import UMLDialog
+from .ClassItem import ClassItem, ClassModel
+from .AssociationItem import AssociationItem, Generalisation
+from . import GraphicsUtilities
 
 import Utilities.ModuleParser
 import Utilities
@@ -118,9 +118,9 @@ class PackageDiagram(UMLDialog):
         # step 1: build all classes found in the modules
         classesFound = False
         
-        for modName in modules.keys():
+        for modName in list(modules.keys()):
             module = modules[modName]
-            for cls in module.classes.keys():
+            for cls in list(module.classes.keys()):
                 classesFound = True
                 self.__addLocalClass(cls, module.classes[cls], 0, 0)
         if not classesFound:
@@ -134,12 +134,12 @@ class PackageDiagram(UMLDialog):
         routes = []
         nodes = []
         
-        for modName in modules.keys():
+        for modName in list(modules.keys()):
             module = modules[modName]
             todo = [module.createHierarchy()]
             while todo:
                 hierarchy = todo[0]
-                for className in hierarchy.keys():
+                for className in list(hierarchy.keys()):
                     cw = self.__getCurrentShape(className)
                     if not cw and className.find('.') >= 0:
                         cw = self.__getCurrentShape(className.split('.')[-1])
@@ -168,7 +168,7 @@ class PackageDiagram(UMLDialog):
                     
                     if hierarchy.get(className):
                         todo.append(hierarchy.get(className))
-                        children = hierarchy.get(className).keys()
+                        children = list(hierarchy.get(className).keys())
                         for child in children:
                             if (className, child) not in routes:
                                 routes.append((className, child))

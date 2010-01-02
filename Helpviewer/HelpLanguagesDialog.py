@@ -10,7 +10,7 @@ Module implementing a dialog to configure the preferred languages.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_HelpLanguagesDialog import Ui_HelpLanguagesDialog
+from .Ui_HelpLanguagesDialog import Ui_HelpLanguagesDialog
 
 import Preferences
 

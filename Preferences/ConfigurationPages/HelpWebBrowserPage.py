@@ -9,8 +9,8 @@ Module implementing the Help web browser configuration page.
 
 from PyQt4.QtCore import qVersion, pyqtSlot
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage
 
 import Helpviewer.HelpWindow
 
@@ -167,7 +167,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         Private slot to set the current page as the home page.
         """
         url = self.__helpWindow.currentBrowser().url()
-        self.homePageEdit.setText(unicode(url.toEncoded()))
+        self.homePageEdit.setText(bytes(url.toEncoded()).decode())
     
     @pyqtSlot()
     def on_defaultHomeButton_clicked(self):

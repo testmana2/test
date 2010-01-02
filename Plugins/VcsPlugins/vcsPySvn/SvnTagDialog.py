@@ -10,7 +10,7 @@ Module implementing a dialog to enter the data for a tagging operation.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnTagDialog import Ui_SvnTagDialog
+from .Ui_SvnTagDialog import Ui_SvnTagDialog
 
 class SvnTagDialog(QDialog, Ui_SvnTagDialog):
     """

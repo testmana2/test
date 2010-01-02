@@ -38,7 +38,7 @@ def factory(vcs):
         # try alternative vcs interfaces assuming, that there is a common
         # indicator for the alternatives
         found = False
-        for indicator, vcsData in pluginManager.getVcsSystemIndicators().items():
+        for indicator, vcsData in list(pluginManager.getVcsSystemIndicators().items()):
             for vcsSystem, vcsSystemDisplay in vcsData:
                 if vcsSystem == vcs:
                     found = True

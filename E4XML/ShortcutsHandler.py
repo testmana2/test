@@ -7,8 +7,8 @@
 Module implementing the handler class for reading a keyboard shortcuts file.
 """
 
-from Config import shortcutsFileFormatVersion
-from XMLHandlerBase import XMLHandlerBase
+from .Config import shortcutsFileFormatVersion
+from .XMLHandlerBase import XMLHandlerBase
 
 class ShortcutsHandler(XMLHandlerBase):
     """
@@ -75,7 +75,7 @@ class ShortcutsHandler(XMLHandlerBase):
         Handler method for the "Shortcut" end tag.
         """
         if self.category:
-            if not self.shortcuts.has_key(self.category):
+            if self.category not in self.shortcuts:
                 self.shortcuts[self.category] = {}
             self.shortcuts[self.category][self.name] = (self.accel, self.altAccel)
         

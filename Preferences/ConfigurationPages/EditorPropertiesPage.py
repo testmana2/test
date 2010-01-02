@@ -11,8 +11,8 @@ from PyQt4.Qsci import QsciScintilla
 
 from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorPropertiesPage import Ui_EditorPropertiesPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorPropertiesPage import Ui_EditorPropertiesPage
 
 import Preferences
 
@@ -30,7 +30,7 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         self.setupUi(self)
         self.setObjectName("EditorPropertiesPage")
         
-        self.languages = sorted(lexers.keys()[:])
+        self.languages = sorted(list(lexers.keys())[:])
         
         # set initial values
         # All

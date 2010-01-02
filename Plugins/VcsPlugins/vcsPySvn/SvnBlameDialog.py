@@ -15,8 +15,8 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from SvnDialogMixin import SvnDialogMixin
-from Ui_SvnBlameDialog import Ui_SvnBlameDialog
+from .SvnDialogMixin import SvnDialogMixin
+from .Ui_SvnBlameDialog import Ui_SvnBlameDialog
 
 import Utilities
 
@@ -76,7 +76,7 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
             for annotation in annotations:
                 self.__generateItem(annotation["revision"].number,
                     annotation["author"], annotation["number"] + 1, annotation["line"])
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             locker.unlock()
             self.__showError(e.args[0]+'\n')
         self.__finish()

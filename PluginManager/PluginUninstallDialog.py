@@ -15,8 +15,8 @@ import shutil
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-from PluginManager import PluginManager
-from Ui_PluginUninstallDialog import Ui_PluginUninstallDialog
+from .PluginManager import PluginManager
+from .Ui_PluginUninstallDialog import Ui_PluginUninstallDialog
 
 class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
     """
@@ -58,8 +58,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         """
         pluginDirectory = self.pluginDirectoryCombo\
                 .itemData(index)
-        pluginNames = self.__pluginManager.getPluginModules(pluginDirectory)
-        pluginNames.sort()
+        pluginNames = sorted(self.__pluginManager.getPluginModules(pluginDirectory))
         self.pluginNameCombo.clear()
         for pluginName in pluginNames:
             fname = "%s.py" % os.path.join(pluginDirectory, pluginName)
@@ -139,12 +138,12 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
                 os.remove(fnamec)
             
             os.remove(pluginFile)
-        except OSError, err:
+        except OSError as err:
             QMessageBox.critical(None,
                 self.trUtf8("Plugin Uninstallation"),
                 self.trUtf8("""<p>The plugin package <b>{0}</b> could not be"""
                             """ removed. Aborting...</p>"""
-                            """<p>Reason: {1}</p>""").format(packageDir, unicode(err)),
+                            """<p>Reason: {1}</p>""").format(packageDir, str(err)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
             return False

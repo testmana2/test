@@ -9,7 +9,7 @@ Module implementing a dialog to edit the data of a search engine.
 
 from PyQt4.QtGui import QDialog
 
-from Ui_OpenSearchEditDialog import Ui_OpenSearchEditDialog
+from .Ui_OpenSearchEditDialog import Ui_OpenSearchEditDialog
 
 class OpenSearchEditDialog(QDialog, Ui_OpenSearchEditDialog):
     """

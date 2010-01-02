@@ -168,14 +168,14 @@ class PasswordManager(QObject):
         loginFile = os.path.join(Utilities.getConfigDir(), "browser", "logins")
         try:
             f = open(loginFile, "w")
-            for key, login in self.__logins.items():
+            for key, login in list(self.__logins.items()):
                 f.write("%s\n" % key)
                 f.write("%s\n" % login[0])
                 f.write("%s\n" % login[1])
                 f.write("%s\n" % self.SEPARATOR)
             if self.__loginForms:
                 f.write("%s\n" % self.FORMS)
-                for key, form in self.__loginForms.items():
+                for key, form in list(self.__loginForms.items()):
                     f.write("%s\n" % key)
                     form.save(f)
                     f.write("%s\n" % self.SEPARATOR)
@@ -184,11 +184,11 @@ class PasswordManager(QObject):
                 for key in self.__never:
                     f.write("%s\n") % key
             f.close()
-        except IOError, err:
+        except IOError as err:
             QMessageBox.critical(None,
                 self.trUtf8("Saving login data"),
                 self.trUtf8("""<p>Login data could not be saved to <b>{0}</b></p>"""
-                            """<p>Reason: {1}</p>""").format(loginFile, unicode(err)))
+                            """<p>Reason: {1}</p>""").format(loginFile, str(err)))
             return
     
     def __load(self):
@@ -201,13 +201,13 @@ class PasswordManager(QObject):
                 f = open(loginFile, "r")
                 lines = f.read()
                 f.close()
-            except IOError, err:
+            except IOError as err:
                 QMessageBox.critical(None,
                     self.trUtf8("Loading login data"),
                     self.trUtf8("""<p>Login data could not be loaded """
                                 """from <b>{0}</b></p>"""
                                 """<p>Reason: {1}</p>""")\
-                        .format(loginFile, unicode(err)))
+                        .format(loginFile, str(err)))
                 return
             
             data = []
@@ -492,8 +492,8 @@ class PasswordManager(QObject):
         """
         args = set()
         
-        dataStr = unicode(data)
-        boundaryStr = unicode(boundary)
+        dataStr = str(data)
+        boundaryStr = str(boundary)
         
         parts = dataStr.split(boundaryStr + "\r\n")
         for part in parts:

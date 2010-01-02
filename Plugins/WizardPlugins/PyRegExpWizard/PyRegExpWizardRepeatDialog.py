@@ -10,7 +10,7 @@ Module implementing a dialog for entering repeat counts.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_PyRegExpWizardRepeatDialog import Ui_PyRegExpWizardRepeatDialog
+from .Ui_PyRegExpWizardRepeatDialog import Ui_PyRegExpWizardRepeatDialog
 
 
 class PyRegExpWizardRepeatDialog(QDialog, Ui_PyRegExpWizardRepeatDialog):

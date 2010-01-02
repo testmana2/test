@@ -11,7 +11,7 @@ import re
 
 from PyQt4.Qsci import QsciLexerPython,  QsciScintilla
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerPython(QsciLexerPython, Lexer):

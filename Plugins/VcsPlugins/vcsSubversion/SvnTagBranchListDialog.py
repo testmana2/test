@@ -10,7 +10,9 @@ Module implementing a dialog to show a list of tags or branches.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnTagBranchListDialog import Ui_SvnTagBranchListDialog
+from .Ui_SvnTagBranchListDialog import Ui_SvnTagBranchListDialog
+
+import Preferences
 
 class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
     """
@@ -229,7 +231,9 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = unicode(self.process.readLine())
+            s = str(self.process.readLine(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             if self.rx_list.exactMatch(s):
                 rev = "%6s" % self.rx_list.cap(1)
                 author = self.rx_list.cap(2)
@@ -252,7 +256,9 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = unicode(self.process.readAllStandardError())
+            s = str(self.process.readAllStandardError(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
         

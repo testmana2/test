@@ -110,7 +110,7 @@ class TemplateMultipleVariablesDialog(QDialog):
         @return dictionary with the variable as a key and its value (string)
         """
         values = {}
-        for var, textEdit in self.variablesEntries.items():
+        for var, textEdit in list(self.variablesEntries.items()):
             try:
                 values[var] = textEdit.text()
             except AttributeError:

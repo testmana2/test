@@ -13,7 +13,7 @@ from PyQt4.QtSql import QSqlError, QSqlDatabase
 
 from E4Gui.E4Action import E4Action
 
-from SqlBrowserWidget import SqlBrowserWidget
+from .SqlBrowserWidget import SqlBrowserWidget
 
 import UI.PixmapCache
 import UI.Config

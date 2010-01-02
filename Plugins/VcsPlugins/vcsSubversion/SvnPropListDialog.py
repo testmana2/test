@@ -12,7 +12,9 @@ import types
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_SvnPropListDialog import Ui_SvnPropListDialog
+from .Ui_SvnPropListDialog import Ui_SvnPropListDialog
+
+import Preferences
 
 class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
     """
@@ -105,7 +107,7 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         args.append('--verbose')
         if recursive:
             args.append('--recursive')
-        if type(fn) is types.ListType:
+        if isinstance(fn, list):
             dname, fnames = self.vcs.splitPathList(fn)
             self.vcs.addArguments(args, fnames)
         else:
@@ -178,7 +180,9 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = unicode(self.process.readLine())
+            s = str(self.process.readLine(), 
+                     Preferences.getSystem("IOEncoding"), 
+                     'replace')
             if self.rx_path.exactMatch(s):
                 if self.lastProp:
                     self.__generateItem(self.lastPath, self.lastProp, self.propBuffer)
@@ -203,6 +207,8 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = unicode(self.process.readAllStandardError())
+            s = str(self.process.readAllStandardError(), 
+                     Preferences.getSystem("IOEncoding"), 
+                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

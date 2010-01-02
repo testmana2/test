@@ -13,8 +13,8 @@ from PyQt4.QtGui import QFileDialog, QInputDialog
 from E4Gui.E4Application import e4App
 from E4Gui.E4Completers import E4FileCompleter
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorAPIsPage import Ui_EditorAPIsPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorAPIsPage import Ui_EditorAPIsPage
 
 from QScintilla.APIsManager import APIsManager
 import QScintilla.Lexers
@@ -47,8 +47,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             Preferences.getEditor("AutoPrepareAPIs"))
         
         self.apis = {}
-        apiLanguages = [''] + QScintilla.Lexers.getSupportedLanguages().keys()
-        apiLanguages.sort()
+        apiLanguages = sorted([''] + list(QScintilla.Lexers.getSupportedLanguages().keys()))
         for lang in apiLanguages:
             if lang != "Guessed":
                 self.apiLanguageComboBox.addItem(lang)
@@ -68,7 +67,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         lang = self.apiLanguageComboBox.currentText()
         self.apis[lang] = self.__editorGetApisFromApiList()
         
-        for lang, apis in self.apis.items():
+        for lang, apis in list(self.apis.items()):
             Preferences.setEditorAPI(lang, apis)
         
     @pyqtSlot(str)

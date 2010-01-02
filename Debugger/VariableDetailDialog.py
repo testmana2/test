@@ -10,7 +10,7 @@ Module implementing the variable detail dialog.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_VariableDetailDialog import Ui_VariableDetailDialog
+from .Ui_VariableDetailDialog import Ui_VariableDetailDialog
 
 class VariableDetailDialog(QDialog, Ui_VariableDetailDialog):
     """

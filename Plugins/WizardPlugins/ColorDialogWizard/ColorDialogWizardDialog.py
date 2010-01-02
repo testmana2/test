@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_ColorDialogWizardDialog import Ui_ColorDialogWizardDialog
+from .Ui_ColorDialogWizardDialog import Ui_ColorDialogWizardDialog
 
 class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
     """
@@ -63,10 +63,10 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                     coStr = "QColor(%s)" % coStr
                 try:
                     if self.rQt45.isChecked():
-                        exec 'QColorDialog.getColor(%s, None, "%s")' % \
-                            (coStr, self.eTitle.text())
+                        exec('QColorDialog.getColor(%s, None, "%s")' % \
+                            (coStr, self.eTitle.text()))
                     else:
-                        exec 'QColorDialog.getColor(%s)' % coStr
+                        exec('QColorDialog.getColor(%s)' % coStr)
                 except:
                     QMessageBox.critical(None,
                         self.trUtf8("QColorDialog Wizard Error"),

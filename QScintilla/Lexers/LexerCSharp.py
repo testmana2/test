@@ -9,7 +9,7 @@ Module implementing a C# lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerCSharp,  QsciScintilla
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerCSharp(QsciLexerCSharp, Lexer):

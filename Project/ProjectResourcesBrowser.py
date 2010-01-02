@@ -16,10 +16,10 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Application import e4App
 
-from ProjectBrowserModel import ProjectBrowserFileItem, \
+from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserResourceType
-from ProjectBaseBrowser import ProjectBaseBrowser
+from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import UI.PixmapCache
@@ -271,8 +271,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                         [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
                         
-            bfcnt = categories[unicode(ProjectBrowserFileItem)]
-            sdcnt = categories[unicode(ProjectBrowserSimpleDirectoryItem)]
+            bfcnt = categories[str(ProjectBrowserFileItem)]
+            sdcnt = categories[str(ProjectBrowserSimpleDirectoryItem)]
             if cnt > 1 and cnt == bfcnt:
                 self.multiMenu.popup(self.mapToGlobal(coord))
             elif cnt > 1 and cnt == sdcnt:
@@ -421,18 +421,18 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     return
             
             try:
-                rcfile = open(fname, 'wb')
+                rcfile = open(fname, 'w')
                 rcfile.write('<!DOCTYPE RCC>\n')
                 rcfile.write('<RCC version="1.0">\n')
                 rcfile.write('<qresource>\n')
                 rcfile.write('</qresource>\n')
                 rcfile.write('</RCC>\n')
                 rcfile.close()
-            except IOError, e:
+            except IOError as e:
                 QMessageBox.critical(self,
                     self.trUtf8("New Resource"),
                     self.trUtf8("<p>The new resource file <b>{0}</b> could not be created.<br>"
-                        "Problem: {1}</p>").format(fname, unicode(e)))
+                        "Problem: {1}</p>").format(fname, str(e)))
                 return
             
             self.project.appendFile(fname)
@@ -476,7 +476,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.compileProc.setReadChannel(QProcess.StandardOutput)
         
         while self.compileProc and self.compileProc.canReadLine():
-            self.buf += unicode(self.compileProc.readLine())
+            self.buf += str(self.compileProc.readLine(), 
+                            Preferences.getSystem("IOEncoding"), 
+                            'replace')
         
     def __readStderr(self):
         """
@@ -486,12 +488,12 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         if self.compileProc is None:
             return
         
-        ioEncoding = str(Preferences.getSystem("IOEncoding"))
+        ioEncoding = Preferences.getSystem("IOEncoding")
         
         self.compileProc.setReadChannel(QProcess.StandardError)
         while self.compileProc and self.compileProc.canReadLine():
             s = self.rccCompiler + ': '
-            error = unicode(self.compileProc.readLine(), 
+            error = str(self.compileProc.readLine(), 
                             ioEncoding, 'replace')
             s += error
             self.emit(SIGNAL('appendStderr'), s)
@@ -508,9 +510,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         if exitStatus == QProcess.NormalExit and exitCode == 0 and self.buf:
             ofn = os.path.join(self.project.ppath, self.compiledFile)
             try:
-                f = open(ofn, "wb")
+                f = open(ofn, "w")
                 for line in self.buf.splitlines():
-                    f.write(line.encode("utf8") + os.linesep)
+                    f.write(line + os.linesep)
                 f.close()
                 if self.compiledFile not in self.project.pdata["SOURCES"]:
                     self.project.appendFile(ofn)
@@ -519,12 +521,12 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                         self.trUtf8("Resource Compilation"),
                         self.trUtf8("The compilation of the resource file"
                             " was successful."))
-            except IOError, msg:
+            except IOError as msg:
                 if not self.noDialog:
                     QMessageBox.information(None,
                         self.trUtf8("Resource Compilation"),
                         self.trUtf8("<p>The compilation of the resource file failed.</p>"
-                            "<p>Reason: {0}</p>").format(unicode(msg)))
+                            "<p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
                 QMessageBox.information(None,

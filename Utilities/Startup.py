@@ -61,15 +61,14 @@ def usage(appinfo, optlen = 12):
     ]
     options.extend(appinfo["options"])
     
-    print \
-"""
+    print("""
 Usage: %(bin)s [OPTIONS] %(arg)s
 
 %(name)s - %(description)s
     
-Options:""" % appinfo
+Options:""" % appinfo)
     for opt in options:
-        print "  %s  %s" % (opt[0].ljust(optlen), opt[1])
+        print("  %s  %s" % (opt[0].ljust(optlen), opt[1]))
     sys.exit(0)
 
 def version(appinfo):
@@ -78,8 +77,7 @@ def version(appinfo):
     
     @param appinfo dictionary describing the application
     """
-    print \
-"""
+    print("""
 %(name)s %(version)s
 
 %(description)s
@@ -87,7 +85,7 @@ def version(appinfo):
 Copyright (c) 2002 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see LICENSE.GPL3 for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.""" % appinfo
+PARTICULAR PURPOSE.""" % appinfo)
     sys.exit(0)
 
 def handleArgs(argv, appinfo):
@@ -127,8 +125,8 @@ def loadTranslatorForLocale(dirs, tn):
         if loaded:
             return (trans, True)
     
-    print "Warning: translation file '" + tn + "'could not be loaded."
-    print "Using default."
+    print("Warning: translation file '" + tn + "'could not be loaded.")
+    print("Using default.")
     return (None, False)
 
 def initializeResourceSearchPath():

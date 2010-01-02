@@ -12,15 +12,15 @@ import sys
 import shutil
 import zipfile
 import compileall
-import urlparse
+import urllib.parse
 
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from PluginManager import PluginManager
-from Ui_PluginInstallDialog import Ui_PluginInstallDialog
+from .PluginManager import PluginManager
+from .Ui_PluginInstallDialog import Ui_PluginInstallDialog
 
 import Utilities
 import Preferences
@@ -243,7 +243,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 .toString()
         
         # check if archive is a local url
-        url = urlparse.urlparse(archive)
+        url = urllib.parse.urlparse(archive)
         if url[0].lower() == 'file':
             archive = url[2]
 
@@ -373,8 +373,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         try:
             if packageName != "None":
                 packageDirs = ["%s/" % packageName, "%s\\" % packageName]
-                namelist = zip.namelist()
-                namelist.sort()
+                namelist = sorted(zip.namelist())
                 tot = len(namelist)
                 prog = 0
                 self.progress.setMaximum(tot)
@@ -398,7 +397,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                             d = os.path.dirname(outname)
                             if not os.path.exists(d):
                                 self.__makedirs(d)
-                            f = open(outname, "wb")
+                            f = open(outname, "w")
                             f.write(zip.read(name))
                             f.close()
                             self.__installedFiles.append(outname)
@@ -407,27 +406,27 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 compileUiFiles(os.path.join(destination, packageName), True)
             else:
                 outname = os.path.join(destination, pluginFileName)
-                f = open(outname, "wb")
+                f = open(outname, "w")
                 f.write(pluginSource)
                 f.close()
                 self.__installedFiles.append(outname)
-        except os.error, why:
+        except os.error as why:
             self.__rollback()
             return False, \
-                self.trUtf8("Error installing plugin. Reason: {0}").format(unicode(why)), \
+                self.trUtf8("Error installing plugin. Reason: {0}").format(str(why)), \
                 False
-        except IOError, why:
+        except IOError as why:
             self.__rollback()
             return False, \
-                self.trUtf8("Error installing plugin. Reason: {0}").format(unicode(why)), \
+                self.trUtf8("Error installing plugin. Reason: {0}").format(str(why)), \
                 False
-        except OSError, why:
+        except OSError as why:
             self.__rollback()
             return False, \
-                self.trUtf8("Error installing plugin. Reason: {0}").format(unicode(why)), \
+                self.trUtf8("Error installing plugin. Reason: {0}").format(str(why)), \
                 False
         except:
-            print >>sys.stderr, "Unspecific exception installing plugin."
+            print("Unspecific exception installing plugin.", file=sys.stderr)
             self.__rollback()
             return False, \
                 self.trUtf8("Unspecific exception installing plugin."), \
@@ -455,7 +454,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             if os.path.exists(dname):
                 shutil.rmtree(dname)
     
-    def __makedirs(self, name, mode = 0777):
+    def __makedirs(self, name, mode = 0o777):
         """
         Private method to create a directory and all intermediate ones.
         

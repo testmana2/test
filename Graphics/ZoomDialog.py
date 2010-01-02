@@ -9,7 +9,7 @@ Module implementing a zoom dialog for a graphics canvas.
 
 from PyQt4.QtGui import QDialog
 
-from Ui_ZoomDialog import Ui_ZoomDialog
+from .Ui_ZoomDialog import Ui_ZoomDialog
 
 class ZoomDialog(QDialog, Ui_ZoomDialog):
     """

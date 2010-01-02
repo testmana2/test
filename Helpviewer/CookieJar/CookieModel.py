@@ -46,7 +46,7 @@ class CookieModel(QAbstractTableModel):
         """
         if role == Qt.SizeHintRole:
             fm = QFontMetrics(QFont())
-            height = fm.height() + fm.height() / 3
+            height = fm.height() + fm.height() // 3
             width = \
                 fm.width(self.headerData(section, orientation, Qt.DisplayRole))
             return QSize(width, height)

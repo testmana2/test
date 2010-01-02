@@ -18,7 +18,7 @@ import re
 
 import Utilities
 import Utilities.ClassBrowsers as ClassBrowsers
-import ClbrBaseClasses
+from . import ClbrBaseClasses
 
 SUPPORTED_TYPES = [ClassBrowsers.IDL_SOURCE]
     
@@ -198,12 +198,12 @@ def readmodule_ex(module, path=[]):
     _modules[module] = dict
     classstack = [] # stack of (class, indent) pairs
     indent = 0
-    src = Utilities.decode(f.read())[0]
+    src = f.read()
     f.close()
 
     lineno, last_lineno_pos = 1, 0
     i = 0
-    while 1:
+    while True:
         m = _getnext(src, i)
         if not m:
             break
@@ -236,7 +236,7 @@ def readmodule_ex(module, path=[]):
                 # it's a function
                 f = Function(module, meth_name,
                              file, lineno, meth_sig)
-                if dict_counts.has_key(meth_name):
+                if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
                     meth_name = "%s_%d" % (meth_name, dict_counts[meth_name])
                 else:

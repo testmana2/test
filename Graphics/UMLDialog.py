@@ -10,7 +10,7 @@ Module implementing a dialog showing UML like diagrams.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from UMLGraphicsView import UMLGraphicsView
+from .UMLGraphicsView import UMLGraphicsView
 
 import UI.Config
 import UI.PixmapCache

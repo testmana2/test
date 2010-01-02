@@ -16,7 +16,7 @@ from PyQt4.QtGui import QHeaderView, QTreeWidgetItem, QDialog
 
 import QScintilla.Lexers
 
-from Ui_LexerAssociationDialog import Ui_LexerAssociationDialog
+from .Ui_LexerAssociationDialog import Ui_LexerAssociationDialog
 
 class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
     """
@@ -52,7 +52,7 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
         
         # set initial values
         self.project = project
-        for ext, lexer in self.project.pdata["LEXERASSOCS"].items():
+        for ext, lexer in list(self.project.pdata["LEXERASSOCS"].items()):
             QTreeWidgetItem(self.editorLexerList, [ext, lexer])
         self.editorLexerList.sortByColumn(0, Qt.AscendingOrder)
     

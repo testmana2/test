@@ -10,7 +10,7 @@
 """
 
 import sys
-from commands import getstatusoutput
+from subprocess import getstatusoutput
 
 from pygments.formatter import Formatter
 from pygments.util import get_bool_opt, get_int_opt, get_choice_opt
@@ -23,7 +23,7 @@ except ImportError:
     pil_available = False
 
 try:
-    import _winreg
+    import winreg
 except ImportError:
     _winreg = None
 
@@ -106,7 +106,7 @@ class FontManager(object):
             for style in styles:
                 try:
                     valname = '%s%s%s' % (basename, style and ' '+style, suffix)
-                    val, _ = _winreg.QueryValueEx(key, valname)
+                    val, _ = winreg.QueryValueEx(key, valname)
                     return val
                 except EnvironmentError:
                     continue
@@ -118,13 +118,13 @@ class FontManager(object):
 
     def _create_win(self):
         try:
-            key = _winreg.OpenKey(
-                _winreg.HKEY_LOCAL_MACHINE,
+            key = winreg.OpenKey(
+                winreg.HKEY_LOCAL_MACHINE,
                 r'Software\Microsoft\Windows NT\CurrentVersion\Fonts')
         except EnvironmentError:
             try:
-                key = _winreg.OpenKey(
-                    _winreg.HKEY_LOCAL_MACHINE,
+                key = winreg.OpenKey(
+                    winreg.HKEY_LOCAL_MACHINE,
                     r'Software\Microsoft\Windows\CurrentVersion\Fonts')
             except EnvironmentError:
                 raise FontNotFound('Can\'t open Windows font registry key')
@@ -141,7 +141,7 @@ class FontManager(object):
                     else:
                         self.fonts[style] = self.fonts['NORMAL']
         finally:
-            _winreg.CloseKey(key)
+            winreg.CloseKey(key)
 
     def get_char_size(self):
         """
@@ -426,7 +426,7 @@ class ImageFormatter(Formatter):
         """
         if not self.line_numbers:
             return
-        for i in xrange(self.maxlineno):
+        for i in range(self.maxlineno):
             if ((i + 1) % self.line_number_step) == 0:
                 self._draw_linenumber(i)
 

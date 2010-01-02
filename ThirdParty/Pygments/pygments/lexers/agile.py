@@ -1083,7 +1083,7 @@ class LuaLexer(RegexLexer):
         self._functions = set()
         if self.func_name_highlighting:
             from pygments.lexers._luabuiltins import MODULES
-            for mod, func in MODULES.iteritems():
+            for mod, func in MODULES.items():
                 if mod not in self.disabled_modules:
                     self._functions.update(func)
         RegexLexer.__init__(self, **options)
@@ -1098,7 +1098,7 @@ class LuaLexer(RegexLexer):
                 elif '.' in value:
                     a, b = value.split('.')
                     yield index, Name, a
-                    yield index + len(a), Punctuation, u'.'
+                    yield index + len(a), Punctuation, '.'
                     yield index + len(a) + 1, Name, b
                     continue
             yield index, token, value

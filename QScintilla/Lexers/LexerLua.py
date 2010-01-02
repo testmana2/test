@@ -9,7 +9,7 @@ Module implementing a Lua lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerLua
 
-from Lexer import Lexer
+from .Lexer import Lexer
 import Preferences
 
 class LexerLua(QsciLexerLua, Lexer):

@@ -14,8 +14,8 @@ from pygments.lexers import get_all_lexers
 from PyQt4.QtCore import Qt, pyqtSlot
 from PyQt4.QtGui import QHeaderView, QTreeWidgetItem
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorHighlightersPage import Ui_EditorHighlightersPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorHighlightersPage import Ui_EditorHighlightersPage
 
 import Preferences
 

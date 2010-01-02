@@ -10,7 +10,7 @@ Module implementing a dialog to display XML parse messages.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_XMLMessageDialog import Ui_XMLMessageDialog
+from .Ui_XMLMessageDialog import Ui_XMLMessageDialog
 
 
 class XMLMessageDialog(QDialog, Ui_XMLMessageDialog):

@@ -10,7 +10,7 @@ Module implementing a dialog to select which private data to clear.
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import pyqtSlot, qVersion
 
-from Ui_HelpClearPrivateDataDialog import Ui_HelpClearPrivateDataDialog
+from .Ui_HelpClearPrivateDataDialog import Ui_HelpClearPrivateDataDialog
 
 class HelpClearPrivateDataDialog(QDialog, Ui_HelpClearPrivateDataDialog):
     """

@@ -9,7 +9,7 @@ Module implementing a Diff lexer with some additional methods.
 
 from PyQt4.Qsci import QsciLexerDiff
 
-from Lexer import Lexer
+from .Lexer import Lexer
 
 class LexerDiff(QsciLexerDiff, Lexer):
     """ 

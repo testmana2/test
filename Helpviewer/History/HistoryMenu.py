@@ -16,8 +16,8 @@ from E4Gui.E4ModelMenu import E4ModelMenu
 
 import Helpviewer.HelpWindow
 
-from HistoryModel import HistoryModel
-from HistoryDialog import HistoryDialog
+from .HistoryModel import HistoryModel
+from .HistoryDialog import HistoryDialog
 
 import UI.PixmapCache
 
@@ -80,7 +80,7 @@ class HistoryMenuModel(QAbstractProxyModel):
                 folders -= 1
             return bumpedItems + folders
         
-        if parent.internalId() == sys.maxint:
+        if parent.internalId() == sys.maxsize:
             if parent.row() < self.bumpedRows():
                 return 0
         
@@ -112,7 +112,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         if not proxyIndex.isValid():
             return QModelIndex()
         
-        if proxyIndex.internalId() == sys.maxint:
+        if proxyIndex.internalId() == sys.maxsize:
             bumpedItems = self.bumpedRows()
             if proxyIndex.row() < bumpedItems:
                 return self.__treeModel.index(proxyIndex.row(), proxyIndex.column(), 
@@ -144,7 +144,7 @@ class HistoryMenuModel(QAbstractProxyModel):
             return QModelIndex()
         
         if not parent.isValid():
-            return self.createIndex(row, column, sys.maxint)
+            return self.createIndex(row, column, sys.maxsize)
         
         treeIndexParent = self.mapToSource(parent)
         
@@ -166,7 +166,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         @return index of parent (QModelIndex)
         """
         offset = index.internalId()
-        if offset == sys.maxint or not index.isValid():
+        if offset == sys.maxsize or not index.isValid():
             return QModelIndex()
         
         historyIndex = self.__treeModel.sourceModel().index(index.internalId(), 0)

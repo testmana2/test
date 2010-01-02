@@ -158,7 +158,7 @@ class TabnannyPlugin(QObject):
         @param menu reference to the menu (QMenu)
         """
         if menuName == "Checks" and \
-           e4App().getObject("Project").getProjectLanguage() == "Python":
+           e4App().getObject("Project").getProjectLanguage() == "Python3":
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E4Action(self.trUtf8('Check Indentations'),
@@ -241,7 +241,7 @@ class TabnannyPlugin(QObject):
         if menuName == "Checks":
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
-            self.__editorAct.setEnabled(editor.isPyFile())
+            self.__editorAct.setEnabled(editor.isPy3File())
     
     def __editorTabnanny(self):
         """

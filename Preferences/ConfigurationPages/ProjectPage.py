@@ -7,8 +7,8 @@
 Module implementing the Project configuration page.
 """
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_ProjectPage import Ui_ProjectPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_ProjectPage import Ui_ProjectPage
 
 import Preferences
 

@@ -18,14 +18,14 @@ from PyQt4.Qsci import QsciScintilla
 from E4Gui.E4Application import e4App
 from E4Gui.E4Action import E4Action, createActionGroup
 
-import Lexers
-from QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
-from SearchReplaceWidget import SearchReplaceWidget
+from . import Lexers
+from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+from .SearchReplaceWidget import SearchReplaceWidget
 
 import UI.PixmapCache
 import UI.Config
 
-from Printer import Printer
+from .Printer import Printer
 
 import Preferences
 
@@ -44,6 +44,14 @@ class MiniScintilla(QsciScintillaCompat):
         QsciScintillaCompat.__init__(self, parent)
         
         self.mw = parent
+    
+    def getFileName(self):
+        """
+        Public method to return the name of the file being displayed.
+        
+        @return filename of the displayed file (string)
+        """
+        return self.mw.getFileName()
     
     def focusInEvent(self, event):
         """
@@ -98,6 +106,7 @@ class MiniEditor(QMainWindow):
         self.__textEdit = MiniScintilla(self)
         self.__textEdit.clearSearchIndicators = self.clearSearchIndicators
         self.__textEdit.setSearchIndicator = self.setSearchIndicator
+        self.__textEdit.setUtf8(True)
         
         self.srHistory = {
             "search" : [], 
@@ -1497,16 +1506,26 @@ class MiniEditor(QMainWindow):
         @param fileName name of the file to load (string)
         @param filetype type of the source file (string)
         """
-        file= QFile(fileName)
-        if not file.open(QFile.ReadOnly):
-            QMessageBox.warning(self, self.trUtf8("eric4 Mini Editor"),
-                                 self.trUtf8("Cannot read file {0}:\n{1}.")\
-                                    .format(fileName, file.errorString()))
+        try:
+            f = open(fileName, 'r')
+        except IOError as why:
+            QMessageBox.critical(self, self.trUtf8('Open File'),
+                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
+                            '<p>Reason: {1}</p>')
+                    .format(fileName, str(why)))
             return
         
-        input = QTextStream(file)
-        QApplication.setOverrideCursor(Qt.WaitCursor)
-        txt = input.readAll()
+        QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
+        try:
+            txt = f.read()
+        except UnicodeDecodeError as why:
+            QApplication.restoreOverrideCursor()
+            QMessageBox.critical(self, self.trUtf8('Open File'),
+                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
+                            '<p>Reason: {1}</p>')
+                    .format(fileName, str(why)))
+            return
+        f.close()
         self.__textEdit.setText(txt)
         QApplication.restoreOverrideCursor()
         
@@ -1887,8 +1906,7 @@ class MiniEditor(QMainWindow):
         
         self.supportedLanguages = {}
         supportedLanguages = Lexers.getSupportedLanguages()
-        languages = supportedLanguages.keys()
-        languages.sort()
+        languages = sorted(list(supportedLanguages.keys()))
         for language in languages:
             if language != "Guessed":
                 self.supportedLanguages[language] = supportedLanguages[language][:]
@@ -2139,16 +2157,24 @@ class MiniEditor(QMainWindow):
         
         try:
             if createIt and not os.path.exists(fn):
-                f = open(fn, "wb")
+                f = open(fn, "w")
                 f.close()
-            f = open(fn, 'rb')
-        except IOError:
+            f = open(fn, 'r')
+        except IOError as why:
             QMessageBox.critical(self, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>')
-                    .format(fn))
+                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
+                            '<p>Reason: {1}</p>')
+                    .format(fn, str(why)))
             raise
         
-        txt = f.readline()
+        try:
+            txt = f.readline()
+        except UnicodeDecodeError as why:
+            QMessageBox.critical(self, self.trUtf8('Open File'),
+                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
+                            '<p>Reason: {1}</p>')
+                    .format(fn, str(why)))
+            raise
         f.close()
         return txt
     

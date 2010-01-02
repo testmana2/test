@@ -12,7 +12,7 @@ from PyQt4.QtCore import *
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from Ui_AddProjectDialog import Ui_AddProjectDialog
+from .Ui_AddProjectDialog import Ui_AddProjectDialog
 
 import Utilities
 

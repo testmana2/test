@@ -99,14 +99,14 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                             self.statusList.append("%s %s" % (status, file.path))
                     except KeyError:
                         self.statusList.append("%s %s" % (status, file.path))
-            for name in self.reportedStates.keys():
+            for name in list(self.reportedStates.keys()):
                 if name not in states:
                     self.statusList.append("  %s" % name)
             self.reportedStates = states
             res = True
             statusStr = \
                 self.trUtf8("Subversion status checked successfully (using pysvn)")
-        except pysvn.ClientError, e:
+        except pysvn.ClientError as e:
             res = False
             statusStr = e.args[0]
         os.chdir(cwd)

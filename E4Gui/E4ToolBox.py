@@ -9,7 +9,7 @@ Module implementing a horizontal and a vertical toolbox class.
 
 from PyQt4.QtGui import QToolBox, QTabWidget
 
-from E4TabWidget import E4TabWidget
+from .E4TabWidget import E4TabWidget
 
 class E4VerticalToolBox(QToolBox):
     """

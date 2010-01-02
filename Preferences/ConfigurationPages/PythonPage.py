@@ -7,8 +7,8 @@
 Module implementing the Python configuration page.
 """
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_PythonPage import Ui_PythonPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_PythonPage import Ui_PythonPage
 
 import Preferences
 from Utilities import supportedCodecs

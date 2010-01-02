@@ -13,8 +13,8 @@ from PyQt4.QtCore import pyqtSlot, QFileInfo
 from PyQt4.QtGui import QPalette, QFileDialog, QColorDialog, QFontDialog, \
                         QInputDialog, QMessageBox
 
-from ConfigurationPageBase import ConfigurationPageBase
-from Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage
 
 from E4XML.XMLUtilities import make_parser
 from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
@@ -43,8 +43,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         self.lexers = lexers
         
         # set initial values
-        languages = [''] + self.lexers.keys()
-        languages.sort()
+        languages = sorted([''] + list(self.lexers.keys()))
         self.lexerLanguageComboBox.addItems(languages)
         self.on_lexerLanguageComboBox_activated("")
         
@@ -52,7 +51,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         Public slot to save the Editor Highlighting Styles configuration.
         """
-        for lexer in self.lexers.values():
+        for lexer in list(self.lexers.values()):
             lexer.writeSettings(Preferences.Prefs.settings, "Scintilla")
         
     @pyqtSlot(str)
@@ -155,7 +154,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             pl.setColor(QPalette.Base, colour)
             self.sampleText.setPalette(pl)
             self.sampleText.repaint()
-            for style in self.lexer.ind2style.values():
+            for style in list(self.lexer.ind2style.values()):
                 self.lexer.setPaper(colour, style)
         
     @pyqtSlot()
@@ -181,7 +180,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         font, ok = QFontDialog.getFont(self.lexer.font(self.style))
         if ok:
             self.sampleText.setFont(font)
-            for style in self.lexer.ind2style.values():
+            for style in list(self.lexer.ind2style.values()):
                 self.lexer.setFont(font, style)
         
     def on_eolfillCheckBox_toggled(self, b):
@@ -208,7 +207,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         if ok:
             enabled = selection == on
             self.eolfillCheckBox.setChecked(enabled)
-            for style in self.lexer.ind2style.values():
+            for style in list(self.lexer.ind2style.values()):
                 self.lexer.setEolFill(enabled, style)
         
     @pyqtSlot()
@@ -229,7 +228,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         Private method to set all styles to their default values.
         """
-        for style in self.lexer.ind2style.values():
+        for style in list(self.lexer.ind2style.values()):
             self.__setToDefault(style)
         self.on_styleElementList_currentRowChanged(self.styleElementList.currentRow())
         
@@ -270,7 +269,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         Private slot to export the styles of all lexers.
         """
-        self.__exportStyles(self.lexers.values())
+        self.__exportStyles(list(self.lexers.values()))
         
     def __exportStyles(self, lexers):
         """
@@ -296,15 +295,15 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                 fn += ex
         
         try:
-            f = open(fn, "wb")
+            f = open(fn, "w")
             HighlightingStylesWriter(f, lexers).writeXML()
             f.close()
-        except IOError, err:
+        except IOError as err:
             QMessageBox.critical(self,
                 self.trUtf8("Export Highlighting Styles"),
                 self.trUtf8("""<p>The highlighting styles could not be exported"""
                             """ to file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
-                    .format(fn, unicode(err))
+                    .format(fn, str(err))
             )
         
     def __importStyles(self, lexers):
@@ -323,18 +322,18 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             return
         
         try:
-            f = open(fn, "rb")
+            f = open(fn, "r")
             try:
                 line = f.readline()
                 dtdLine = f.readline()
             finally:
                 f.close()
-        except IOError, err:
+        except IOError as err:
             QMessageBox.critical(self,
                 self.trUtf8("Import Highlighting Styles"),
                 self.trUtf8("""<p>The highlighting styles could not be read"""
                             """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
-                    .format(fn, unicode(err))
+                    .format(fn, str(err))
             )
             return
         
@@ -349,7 +348,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         parser.setErrorHandler(eh)
         
         try:
-            f = open(fn, "rb")
+            f = open(fn, "r")
             try:
                 try:
                     parser.parse(f)
@@ -359,12 +358,12 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                     parser.parse(buf)
             finally:
                 f.close()
-        except IOError, err:
+        except IOError as err:
             QMessageBox.critical(self,
                 self.trUtf8("Import Highlighting Styles"),
                 self.trUtf8("""<p>The highlighting styles could not be read"""
                             """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
-                    .format(fn, unicode(err))
+                    .format(fn, str(err))
             )
             return
         except XMLFatalParseError:

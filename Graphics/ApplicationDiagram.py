@@ -13,10 +13,10 @@ import glob
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from UMLDialog import UMLDialog
-from PackageItem import PackageItem, PackageModel
-from AssociationItem import AssociationItem, Imports
-import GraphicsUtilities
+from .UMLDialog import UMLDialog
+from .PackageItem import PackageItem, PackageModel
+from .AssociationItem import AssociationItem, Imports
+from . import GraphicsUtilities
 
 import Utilities.ModuleParser
 import Utilities
@@ -130,7 +130,7 @@ class ApplicationDiagram(UMLDialog):
                         n = "%s.%s" % (project, i)
                         if n in modules:
                             impLst.append(n)
-            for i in modules[module].from_imports.keys():
+            for i in list(modules[module].from_imports.keys()):
                 if i.startswith('.'):
                     dots = len(i) - len(i.lstrip('.'))
                     if dots == 1:

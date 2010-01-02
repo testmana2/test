@@ -13,10 +13,10 @@ from PyQt4.QtCore import *
 
 import Helpviewer.HelpWindow
 
-from AdBlockNetwork import AdBlockNetwork
-from AdBlockPage import AdBlockPage
-from AdBlockSubscription import AdBlockSubscription
-from AdBlockDialog import AdBlockDialog
+from .AdBlockNetwork import AdBlockNetwork
+from .AdBlockPage import AdBlockPage
+from .AdBlockSubscription import AdBlockSubscription
+from .AdBlockDialog import AdBlockDialog
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -114,7 +114,7 @@ class AdBlockManager(QObject):
         @return URL for custom subscriptions (QUrl)
         """
         location = self.__customSubscriptionLocation()
-        encodedUrl = unicode(location.toEncoded())
+        encodedUrl = bytes(location.toEncoded()).decode()
         url = QUrl("abp:subscribe?location=%s&title=%s" % \
             (encodedUrl, self.trUtf8("Custom Rules")))
         return url
@@ -195,7 +195,7 @@ class AdBlockManager(QObject):
         for subscription in self.__subscriptions:
             if subscription is None:
                 continue
-            subscriptions.append(unicode(subscription.url().toEncoded()))
+            subscriptions.append(bytes(subscription.url().toEncoded()).decode())
             subscription.saveRules()
         Preferences.setHelp("AdBlockSubscriptions", subscriptions)
     
@@ -212,7 +212,7 @@ class AdBlockManager(QObject):
         
         defaultSubscriptions = []
         defaultSubscriptions.append(
-            unicode(self.__customSubscriptionUrl().toEncoded()))
+            bytes(self.__customSubscriptionUrl().toEncoded()).decode())
         defaultSubscriptions.append(
             "abp:subscribe?location=http://adblockplus.mozdev.org/easylist/easylist.txt&title=EasyList")
         

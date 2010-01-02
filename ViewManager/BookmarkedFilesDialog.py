@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4Completers import E4FileCompleter
 
-from Ui_BookmarkedFilesDialog import Ui_BookmarkedFilesDialog
+from .Ui_BookmarkedFilesDialog import Ui_BookmarkedFilesDialog
 
 import Utilities
 

@@ -351,7 +351,7 @@ class ProjectBrowserModel(BrowserModel):
         """
         self.__vcsStatus = {}
         states = {}
-        keys = self.projectBrowserTypes.keys()[:]
+        keys = list(self.projectBrowserTypes.keys())[:]
         
         if self.project.vcs is not None:
             for key in keys:
@@ -693,7 +693,7 @@ class ProjectBrowserModel(BrowserModel):
         itemCache = {}
         if len(statesList) == 1 and statesList[0] == '--RESET--':
             statesList = []
-            for name in self.__vcsStatus.keys():
+            for name in list(self.__vcsStatus.keys()):
                 statesList.append(" %s" % name)
         
         for name in statesList:
@@ -767,7 +767,7 @@ class ProjectBrowserModel(BrowserModel):
         """
         Public method used to handle a change in preferences.
         """
-        for code in self.colorNames.keys():
+        for code in list(self.colorNames.keys()):
             color = Preferences.getProjectBrowserColour(self.colorNames[code])
             if color.name() == self.itemBackgroundColors[code].name():
                 continue

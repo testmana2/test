@@ -11,9 +11,9 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtWebKit import QWebHistoryInterface, QWebSettings
 
-from HistoryModel import HistoryModel
-from HistoryFilterModel import HistoryFilterModel
-from HistoryTreeModel import HistoryTreeModel
+from .HistoryModel import HistoryModel
+from .HistoryFilterModel import HistoryFilterModel
+from .HistoryTreeModel import HistoryTreeModel
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -353,9 +353,9 @@ class HistoryManager(QWebHistoryInterface):
             if ver != HISTORY_VERSION:
                 continue
             itm = HistoryEntry()
-            itm.url = stream.readString()
+            itm.url = stream.readString().decode()
             stream >> itm.dateTime
-            itm.title = stream.readString()
+            itm.title = stream.readString().decode()
             
             if not itm.dateTime.isValid():
                 continue
@@ -422,9 +422,9 @@ class HistoryManager(QWebHistoryInterface):
             stream = QDataStream(data, QIODevice.WriteOnly)
             itm = self.__history[index]
             stream.writeUInt32(HISTORY_VERSION)
-            stream.writeString(itm.url)
+            stream.writeString(itm.url.encode())
             stream << itm.dateTime
-            stream.writeString(itm.title)
+            stream.writeString(itm.title.encode())
             f.write(data)
         
         f.close()

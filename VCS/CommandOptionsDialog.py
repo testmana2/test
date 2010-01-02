@@ -12,7 +12,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_CommandOptionsDialog import Ui_vcsCommandOptionsDialog
+from .Ui_CommandOptionsDialog import Ui_vcsCommandOptionsDialog
 
 import Utilities
 

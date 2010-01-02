@@ -12,7 +12,9 @@ import os.path
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_EricapiExecDialog import Ui_EricapiExecDialog
+from .Ui_EricapiExecDialog import Ui_EricapiExecDialog
+
+import Preferences
 
 class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
     """
@@ -132,7 +134,9 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = unicode(self.process.readLine())
+            s = str(self.process.readLine(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.contents.insertPlainText(s)
             self.contents.ensureCursorVisible()
         
@@ -147,6 +151,8 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         
         while self.process.canReadLine():
             self.errorGroup.show()
-            s = unicode(self.process.readLine())
+            s = str(self.process.readLine(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

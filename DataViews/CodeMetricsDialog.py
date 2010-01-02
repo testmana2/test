@@ -14,8 +14,8 @@ import types
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from Ui_CodeMetricsDialog import Ui_CodeMetricsDialog
-import CodeMetrics
+from .Ui_CodeMetricsDialog import Ui_CodeMetricsDialog
+from . import CodeMetrics
 import Utilities
 
 class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
@@ -96,7 +96,7 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
                 the code metrics for (string or list of strings)
         """
         loc = QLocale()
-        if type(fn) is types.ListType:
+        if isinstance(fn, list):
             files = fn
         elif os.path.isdir(fn):
             files = Utilities.direntries(fn, True, '*.py', False)

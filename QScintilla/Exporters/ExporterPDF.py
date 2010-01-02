@@ -15,7 +15,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
-from ExporterBase import ExporterBase
+from .ExporterBase import ExporterBase
 
 import Preferences
 
@@ -73,7 +73,7 @@ class PDFObjectTracker(object):
         
         @param objectData data to be written (integer or string)
         """
-        if type(objectData) == type(1):
+        if isinstance(objectData, int):
             self.file.write("%d" % objectData)
         else:
             self.file.write(objectData)
@@ -359,7 +359,7 @@ class PDFRender(object):
         if self.firstLine:
             # avoid breakage due to locale setting
             f = int(self.leading * 10 + 0.5)
-            buffer = "0 -%d.%d TD\n" % (f / 10, f % 10)
+            buffer = "0 -%d.%d TD\n" % (f // 10, f % 10)
             self.firstLine = False
         else:
             buffer = "T*\n"
@@ -387,9 +387,9 @@ class ExporterPDF(ExporterBase):
         """
         pdfColor = ""
         for component in [color.red(), color.green(), color.blue()]:
-            c = (component * 1000 + 127) / 255
+            c = (component * 1000 + 127) // 255
             if c == 0 or c == 1000:
-                pdfColor += "%d " % (c / 1000)
+                pdfColor += "%d " % (c // 1000)
             else:
                 pdfColor += "0.%03d " % c
         return pdfColor
@@ -511,7 +511,7 @@ class ExporterPDF(ExporterBase):
                     self.pr.fontSize = PDF_FONTSIZE_DEFAULT
             
             try:
-                f = open(filename, "wb")
+                f = open(filename, "w")
                 
                 # initialise PDF rendering
                 ot = PDFObjectTracker(f)
@@ -575,14 +575,14 @@ class ExporterPDF(ExporterBase):
                 # write required stuff and close the PDF file
                 self.pr.endPDF()
                 f.close()
-            except IOError, err:
+            except IOError as err:
                 QApplication.restoreOverrideCursor()
                 QMessageBox.critical(self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8(
                         """<p>The source could not be exported to <b>{0}</b>.</p>"""
                         """<p>Reason: {1}</p>""")\
-                        .format(filename, unicode(err)),
+                        .format(filename, str(err)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Ok))
         finally:
