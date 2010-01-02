@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2007 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2007 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 # This is a  script to patch pyxml to correct a bug. 
 

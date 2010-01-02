@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2008 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2008 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 

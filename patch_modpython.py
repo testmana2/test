@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2003-2009 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2003-2010 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 # This is a  script to patch mod_python for eric4. 
 
