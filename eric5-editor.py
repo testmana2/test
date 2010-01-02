@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Editor
+Eric5 Editor
 
 This is the main Python script that performs the necessary initialization
 of the MiniEditor module and starts the Qt event loop. This is a standalone 
@@ -55,7 +55,7 @@ def main():
         ("", "name of file to edit")
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Editor",
+                                  "Eric5 Editor",
                                   "",
                                   "Simplified version of the eric5 editor",
                                   options)

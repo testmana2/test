@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 QRegExp
+Eric5 QRegExp
 
 This is the main Python script that performs the necessary initialization
 of the QRegExp wizard module and starts the Qt event loop. This is a standalone 
@@ -46,7 +46,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 QRegExp",
+                                  "Eric5 QRegExp",
                                   "",
                                   "Regexp editor for Qt's QRegExp class",
                                   options)

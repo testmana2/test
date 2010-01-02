@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Documentation Generator
+Eric5 Documentation Generator
 
 This is the main Python script of the documentation generator. It is
 this script that gets called via the source documentation interface.
@@ -119,7 +119,7 @@ def version():
     """
     print("""eric5-doc  %s
 
-Eric4 API documentation generator.
+Eric5 API documentation generator.
 
 Copyright (c) 2003-2010 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see the LICENSE.GPL3 for copying conditions.

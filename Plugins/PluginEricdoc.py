@@ -54,7 +54,7 @@ def exeDisplayData():
     data = {
         "programEntry"      : True, 
         "header"            : QApplication.translate("EricdocPlugin",
-                                "Eric4 Documentation Generator"), 
+                                "Eric5 Documentation Generator"), 
         "exe"               : exe, 
         "versionCommand"    : '--version', 
         "versionStartsWith" : 'eric5-', 

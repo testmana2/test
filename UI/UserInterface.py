@@ -5353,7 +5353,7 @@ class UserInterface(QMainWindow):
                 else:
                     if self.manualUpdatesCheck:
                         QMessageBox.information(None,
-                            self.trUtf8("Eric4 is up to date"),
+                            self.trUtf8("Eric5 is up to date"),
                             self.trUtf8("""You are using the latest version of eric5"""))
             else:
                 # check release version
@@ -5371,7 +5371,7 @@ class UserInterface(QMainWindow):
                 else:
                     if self.manualUpdatesCheck:
                         QMessageBox.information(None,
-                            self.trUtf8("Eric4 is up to date"),
+                            self.trUtf8("Eric5 is up to date"),
                             self.trUtf8("""You are using the latest version of eric5"""))
         except IndexError:
             QMessageBox.warning(None,

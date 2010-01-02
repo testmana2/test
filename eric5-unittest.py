@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Unittest
+Eric5 Unittest
 
 This is the main Python script that performs the necessary initialization
 of the unittest module and starts the Qt event loop. This is a standalone 
@@ -49,7 +49,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Unittest",
+                                  "Eric5 Unittest",
                                   "file",
                                   "Graphical unit test application",
                                   options)

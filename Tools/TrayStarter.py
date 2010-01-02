@@ -47,7 +47,7 @@ class TrayStarter(QSystemTrayIcon):
         self.connect(self, SIGNAL("activated(QSystemTrayIcon::ActivationReason)"),
                      self.__activated)
         
-        self.__menu = QMenu(self.trUtf8("Eric4 tray starter"))
+        self.__menu = QMenu(self.trUtf8("Eric5 tray starter"))
         
         self.recentProjectsMenu = QMenu(self.trUtf8('Recent Projects'), self.__menu)
         self.connect(self.recentProjectsMenu, SIGNAL('aboutToShow()'), 
@@ -68,7 +68,7 @@ class TrayStarter(QSystemTrayIcon):
         self.connect(self.recentFilesMenu, SIGNAL('triggered(QAction *)'),
                      self.__openRecent)
         
-        act = self.__menu.addAction(self.trUtf8("Eric4 tray starter"))
+        act = self.__menu.addAction(self.trUtf8("Eric5 tray starter"))
         font = act.font()
         font.setBold(True)
         act.setFont(font)

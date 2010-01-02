@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Plugin Uninstaller
+Eric5 Plugin Uninstaller
 
 This is the main Python script to uninstall eric5 plugins from outside of the IDE.
 """
@@ -42,7 +42,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Plugin Uninstaller",
+                                  "Eric5 Plugin Uninstaller",
                                   "",
                                   "Plugin uninstallation utility for eric5",
                                   options)

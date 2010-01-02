@@ -135,15 +135,15 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             Utilities.isWindowsPlatform() and "rbrcc.exe" or "rbrcc", 
             '-version', 'Ruby Resource Compiler', -1)
         
-        # 5. do the Eric4 programs
+        # 5. do the Eric5 programs
         # 5a. Translation Previewer
-        self.__createProgramEntry(self.trUtf8("Eric4 Translation Previewer"), 
+        self.__createProgramEntry(self.trUtf8("Eric5 Translation Previewer"), 
             Utilities.isWindowsPlatform() and "eric5-trpreviewer.bat" or "eric5-trpreviewer", 
-            '--version', 'Eric4', -2)
+            '--version', 'Eric5', -2)
         # 5b. Forms Previewer
-        self.__createProgramEntry(self.trUtf8("Eric4 Forms Previewer"), 
+        self.__createProgramEntry(self.trUtf8("Eric5 Forms Previewer"), 
             Utilities.isWindowsPlatform() and "eric5-uipreviewer.bat" or "eric5-uipreviewer", 
-            '--version', 'Eric4', -2)
+            '--version', 'Eric5', -2)
         
         # 6. do the CORBA programs
         # 6a. omniORB

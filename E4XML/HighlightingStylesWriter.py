@@ -43,7 +43,7 @@ class HighlightingStylesWriter(XMLWriterBase):
             highlightingStylesFileFormatVersion)
         
         # add some generation comments
-        self._write("<!-- Eric4 highlighting styles -->")
+        self._write("<!-- Eric5 highlighting styles -->")
         self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
         self._write("<!-- Author: %s -->" % self.escape("%s" % self.email))
         

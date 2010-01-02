@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 SQL Browser
+Eric5 SQL Browser
 
 This is the main Python script that performs the necessary initialization
 of the SQL browser and starts the Qt event loop.
@@ -50,7 +50,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 SQL Browser",
+                                  "Eric5 SQL Browser",
                                   "connection",
                                   "SQL browser",
                                   options)

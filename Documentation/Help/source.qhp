@@ -2345,7 +2345,7 @@
       <keyword name="HelpDocsInstaller (Module)" id="HelpDocsInstaller (Module)" ref="eric5.Helpviewer.HelpDocsInstaller.html" />
       <keyword name="HelpDocsInstaller" id="HelpDocsInstaller" ref="eric5.Helpviewer.HelpDocsInstaller.html#HelpDocsInstaller" />
       <keyword name="HelpDocsInstaller (Constructor)" id="HelpDocsInstaller (Constructor)" ref="eric5.Helpviewer.HelpDocsInstaller.html#HelpDocsInstaller.__init__" />
-      <keyword name="HelpDocsInstaller.__installEric4Doc" id="HelpDocsInstaller.__installEric4Doc" ref="eric5.Helpviewer.HelpDocsInstaller.html#HelpDocsInstaller.__installEric4Doc" />
+      <keyword name="HelpDocsInstaller.__installEric5Doc" id="HelpDocsInstaller.__installEric5Doc" ref="eric5.Helpviewer.HelpDocsInstaller.html#HelpDocsInstaller.__installEric5Doc" />
       <keyword name="HelpDocsInstaller.__installQtDoc" id="HelpDocsInstaller.__installQtDoc" ref="eric5.Helpviewer.HelpDocsInstaller.html#HelpDocsInstaller.__installQtDoc" />
       <keyword name="HelpDocsInstaller.installDocs" id="HelpDocsInstaller.installDocs" ref="eric5.Helpviewer.HelpDocsInstaller.html#HelpDocsInstaller.installDocs" />
       <keyword name="HelpDocsInstaller.run" id="HelpDocsInstaller.run" ref="eric5.Helpviewer.HelpDocsInstaller.html#HelpDocsInstaller.run" />

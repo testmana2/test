@@ -71,7 +71,7 @@ class HelpDocsInstaller(QThread):
                 return
             self.__mutex.unlock()
         
-        changes |= self.__installEric4Doc(engine)
+        changes |= self.__installEric5Doc(engine)
         engine = None
         del engine
         self.emit(SIGNAL("docsInstalled(bool)"), changes)
@@ -136,7 +136,7 @@ class HelpDocsInstaller(QThread):
         
         return False
     
-    def __installEric4Doc(self, engine):
+    def __installEric5Doc(self, engine):
         """
         Private method to install/update the eric5 help documentation.
         

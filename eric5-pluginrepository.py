@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Plugin Installer
+Eric5 Plugin Installer
 
 This is the main Python script to install eric5 plugins from outside of the IDE.
 """
@@ -42,7 +42,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Plugin Repository",
+                                  "Eric5 Plugin Repository",
                                   "",
                                   "Utility to show the contents of the eric5"
                                   " Plugin repository.",

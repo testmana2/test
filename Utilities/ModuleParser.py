@@ -938,7 +938,7 @@ class Module(object):
                             name = nv[0].strip()[1:]    # get rid of leading ':'
                             attr = parent.getAttribute("@"+name) or \
                                    parent.getAttribute("@@"+name) or \
-                                   Attribute(self.name, "@"+name, file, lineno)
+                                   Attribute(self.name, "@"+name, self.file, lineno)
                             if len(nv) == 1 or nv[1].strip() == "false":
                                 attr.setProtected()
                             elif nv[1].strip() == "true":
@@ -950,7 +950,7 @@ class Module(object):
                                 name = name.strip()[1:]     # get rid of leading ':'
                                 attr = parent.getAttribute("@"+name) or \
                                        parent.getAttribute("@@"+name) or \
-                                       Attribute(self.name, "@"+name, file, lineno)
+                                       Attribute(self.name, "@"+name, self.file, lineno)
                                 if access == "_accessor":
                                     attr.setPublic()
                                 elif access == "_reader" or access == "_writer":

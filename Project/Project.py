@@ -206,7 +206,7 @@ class Project(QObject):
         self.__binaryTranslationsCallbacks = {}
         self.__projectTypes["Qt4"] = self.trUtf8("Qt4 GUI")
         self.__projectTypes["Qt4C"] = self.trUtf8("Qt4 Console")
-        self.__projectTypes["E4Plugin"] = self.trUtf8("Eric4 Plugin")
+        self.__projectTypes["E4Plugin"] = self.trUtf8("Eric5 Plugin")
         self.__projectTypes["Console"] = self.trUtf8("Console")
         self.__projectTypes["Other"] = self.trUtf8("Other")
         try:

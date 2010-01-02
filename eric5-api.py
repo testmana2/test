@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 API Generator
+Eric5 API Generator
 
 This is the main Python script of the API generator. It is
 this script that gets called via the API generation interface.
@@ -83,7 +83,7 @@ def version():
     """
     print("""eric5-api  %s
 
-Eric4 API generator.
+Eric5 API generator.
 
 Copyright (c) 2004 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see the LICENSE.GPL3 for copying conditions.

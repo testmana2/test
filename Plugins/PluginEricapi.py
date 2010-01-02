@@ -53,7 +53,7 @@ def exeDisplayData():
     data = {
         "programEntry"      : True, 
         "header"            : QApplication.translate("EricapiPlugin",
-                                "Eric4 API File Generator"), 
+                                "Eric5 API File Generator"), 
         "exe"               : exe, 
         "versionCommand"    : '--version', 
         "versionStartsWith" : 'eric5-', 

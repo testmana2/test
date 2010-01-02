@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Configure
+Eric5 Configure
 
 This is the main Python script to configure the eric5 IDE from the outside.
 """
@@ -54,7 +54,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Configure",
+                                  "Eric5 Configure",
                                   "",
                                   "Configuration editor for eric5",
                                   options)

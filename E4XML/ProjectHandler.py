@@ -78,8 +78,6 @@ class ProjectHandler(XMLHandlerBase):
             'Eric4ApiParams' : (self.startEric4ApiParams, self.endEric4ApiParams),
             'CxfreezeParams' : (self.startCxfreezeParams, self.endCxfreezeParams),
             'PyLintParams' : (self.startPyLintParams, self.endPyLintParams),
-            # for really old project files
-            'HappyDocParams' : (self.defaultStartElement, self.defaultEndElement),
         })
         
         self.project = project

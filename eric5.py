@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Python IDE
+Eric5 Python IDE
 
 This is the main Python script that performs the necessary initialization
 of the IDE and starts the Qt event loop.
@@ -165,7 +165,7 @@ def main():
         ("", "(everything after that is considered arguments for this program)")
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4",
+                                  "Eric5",
                                   "[project | files... [--] [debug-options]]",
                                   "A Python IDE",
                                   options)

@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 TR Previewer
+Eric5 TR Previewer
 
 This is the main Python script that performs the necessary initialization
 of the tr previewer and starts the Qt event loop. This is a standalone version
@@ -52,7 +52,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 TR Previewer",
+                                  "Eric5 TR Previewer",
                                   "file",
                                   "TR file previewer",
                                   options)

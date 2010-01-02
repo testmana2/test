@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Tray
+Eric5 Tray
 
 This is the main Python script that performs the necessary initialization
 of the system-tray application. This acts as a quickstarter by providing a
@@ -44,7 +44,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Tray",
+                                  "Eric5 Tray",
                                   "",
                                   "Traystarter for eric5",
                                   options)

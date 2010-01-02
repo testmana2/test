@@ -729,17 +729,6 @@
     <Source>ThirdParty/CharDet/chardet/test.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEditDialog.py</Source>
     <Source>E4Gui/E4Application.py</Source>
-    <Source>ThirdParty/Pygments/style.py</Source>
-    <Source>ThirdParty/Pygments/plugin.py</Source>
-    <Source>ThirdParty/Pygments/formatter.py</Source>
-    <Source>ThirdParty/Pygments/cmdline.py</Source>
-    <Source>ThirdParty/Pygments/unistring.py</Source>
-    <Source>ThirdParty/Pygments/filter.py</Source>
-    <Source>ThirdParty/Pygments/console.py</Source>
-    <Source>ThirdParty/Pygments/util.py</Source>
-    <Source>ThirdParty/Pygments/token.py</Source>
-    <Source>ThirdParty/Pygments/scanner.py</Source>
-    <Source>ThirdParty/Pygments/lexer.py</Source>
     <Source>eric5config.py</Source>
     <Source>eric5.py</Source>
     <Source>eric5.pyw</Source>
@@ -1181,28 +1170,28 @@
             </key>
             <value>
               <list>
-                <unicode>CSSs</unicode>
-                <unicode>DTDs</unicode>
-                <unicode>DesignerTemplates</unicode>
-                <unicode>Documentation</unicode>
-                <unicode>Examples</unicode>
-                <unicode>ThirdParty</unicode>
-                <unicode>corbatests</unicode>
-                <unicode>i18n</unicode>
-                <unicode>icons</unicode>
-                <unicode>pixmaps</unicode>
-                <unicode>tests</unicode>
-                <unicode>unittests</unicode>
-                <unicode>Styles</unicode>
-                <unicode>CodeTemplates</unicode>
-                <unicode>.ropeproject</unicode>
-                <unicode>.svn</unicode>
-                <unicode>_svn</unicode>
-                <unicode>.eric4project</unicode>
-                <unicode>_eric4project</unicode>
-                <unicode>patches</unicode>
-                <unicode>Dictionaries</unicode>
-                <unicode>coverage</unicode>
+                <string>CSSs</string>
+                <string>DTDs</string>
+                <string>DesignerTemplates</string>
+                <string>Documentation</string>
+                <string>Examples</string>
+                <string>ThirdParty</string>
+                <string>corbatests</string>
+                <string>i18n</string>
+                <string>icons</string>
+                <string>pixmaps</string>
+                <string>tests</string>
+                <string>unittests</string>
+                <string>Styles</string>
+                <string>CodeTemplates</string>
+                <string>.ropeproject</string>
+                <string>.svn</string>
+                <string>_svn</string>
+                <string>.eric4project</string>
+                <string>_eric4project</string>
+                <string>patches</string>
+                <string>Dictionaries</string>
+                <string>coverage</string>
               </list>
             </value>
             <key>
@@ -1210,7 +1199,7 @@
             </key>
             <value>
               <list>
-                <unicode>Ui_*</unicode>
+                <string>Ui_*</string>
               </list>
             </value>
             <key>
@@ -1218,15 +1207,15 @@
             </key>
             <value>
               <list>
-                <unicode>Ruby</unicode>
-                <unicode>Python</unicode>
+                <string>Ruby</string>
+                <string>Python</string>
               </list>
             </value>
             <key>
               <string>outputFile</string>
             </key>
             <value>
-              <unicode>APIs/%L/eric4.api</unicode>
+              <string>APIs/%L/eric5.api</string>
             </value>
             <key>
               <string>useRecursion</string>
@@ -1245,78 +1234,80 @@
               <string>CFBgColor</string>
             </key>
             <value>
-              <unicode>#4fa4ff</unicode>
+              <string>#4fa4ff</string>
             </value>
             <key>
               <string>CFColor</string>
             </key>
             <value>
-              <unicode>#ffffff</unicode>
+              <string>#ffffff</string>
             </value>
             <key>
               <string>Level1HeaderBgColor</string>
             </key>
             <value>
-              <unicode>#4fa4ff</unicode>
+              <string>#4fa4ff</string>
             </value>
             <key>
               <string>Level1HeaderColor</string>
             </key>
             <value>
-              <unicode>#ffffff</unicode>
+              <string>#ffffff</string>
             </value>
             <key>
               <string>Level2HeaderBgColor</string>
             </key>
             <value>
-              <unicode>#00557f</unicode>
+              <string>#00557f</string>
             </value>
             <key>
               <string>Level2HeaderColor</string>
             </key>
             <value>
-              <unicode>#ffffff</unicode>
+              <string>#ffffff</string>
             </value>
             <key>
               <string>LinkColor</string>
             </key>
             <value>
-              <unicode>#aa5500</unicode>
+              <string>#aa5500</string>
             </value>
             <key>
               <string>cssFile</string>
             </key>
             <value>
-              <unicode>CSSs/default.css</unicode>
+              <string>CSSs/default.css</string>
             </value>
             <key>
               <string>ignoreDirectories</string>
             </key>
             <value>
               <list>
-                <unicode>CSSs</unicode>
-                <unicode>DTDs</unicode>
-                <unicode>DesignerTemplates</unicode>
-                <unicode>Documentation</unicode>
-                <unicode>Examples</unicode>
-                <unicode>ThirdParty</unicode>
-                <unicode>corbatests</unicode>
-                <unicode>i18n</unicode>
-                <unicode>icons</unicode>
-                <unicode>pixmaps</unicode>
-                <unicode>tests</unicode>
-                <unicode>unittests</unicode>
-                <unicode>rb_tests</unicode>
-                <unicode>Styles</unicode>
-                <unicode>CodeTemplates</unicode>
-                <unicode>.ropeproject</unicode>
-                <unicode>.svn</unicode>
-                <unicode>_svn</unicode>
-                <unicode>.eric4project</unicode>
-                <unicode>_eric4project</unicode>
-                <unicode>patches</unicode>
-                <unicode>Dictionaries</unicode>
-                <unicode>coverage</unicode>
+                <string>CSSs</string>
+                <string>DTDs</string>
+                <string>DesignerTemplates</string>
+                <string>Documentation</string>
+                <string>Examples</string>
+                <string>ThirdParty</string>
+                <string>corbatests</string>
+                <string>i18n</string>
+                <string>icons</string>
+                <string>pixmaps</string>
+                <string>tests</string>
+                <string>unittests</string>
+                <string>rb_tests</string>
+                <string>Styles</string>
+                <string>CodeTemplates</string>
+                <string>.ropeproject</string>
+                <string>.svn</string>
+                <string>_svn</string>
+                <string>.eric4project</string>
+                <string>_eric4project</string>
+                <string>patches</string>
+                <string>Dictionaries</string>
+                <string>coverage</string>
+                <string>.eric5project</string>
+                <string>_eric5project</string>
               </list>
             </value>
             <key>
@@ -1324,14 +1315,14 @@
             </key>
             <value>
               <list>
-                <unicode>Ui_*</unicode>
+                <string>Ui_*</string>
               </list>
             </value>
             <key>
               <string>outputDirectory</string>
             </key>
             <value>
-              <unicode>Documentation/Source</unicode>
+              <string>Documentation/Source</string>
             </value>
             <key>
               <string>qtHelpEnabled</string>
@@ -1343,44 +1334,44 @@
               <string>qtHelpFilterAttributes</string>
             </key>
             <value>
-              <unicode>eric4:ide:4.4</unicode>
+              <string>eric5:ide:5.0</string>
             </value>
             <key>
               <string>qtHelpFilterName</string>
             </key>
             <value>
-              <unicode>eric4</unicode>
+              <string>eric5</string>
             </value>
             <key>
               <string>qtHelpNamespace</string>
             </key>
             <value>
-              <unicode>org.eric4.ide.44</unicode>
+              <string>org.eric5.ide.50</string>
             </value>
             <key>
               <string>qtHelpOutputDirectory</string>
             </key>
             <value>
-              <unicode>Documentation/Help</unicode>
+              <string>Documentation/Help</string>
             </value>
             <key>
               <string>qtHelpTitle</string>
             </key>
             <value>
-              <unicode>The eric4 IDE</unicode>
+              <string>The eric5 IDE</string>
             </value>
             <key>
               <string>qtHelpVirtualFolder</string>
             </key>
             <value>
-              <unicode>eric4</unicode>
+              <string>eric5</string>
             </value>
             <key>
               <string>sourceExtensions</string>
             </key>
             <value>
               <list>
-                <unicode></unicode>
+                <string></string>
               </list>
             </value>
             <key>
@@ -1406,7 +1397,7 @@
               <string>configFile</string>
             </key>
             <value>
-              <unicode>/home/detlev/Development/Python/Eric4/eric4_4/eric4/pylint.rc</unicode>
+              <string>/home/detlev/Development/Python/Eric4/eric4_4/eric4/pylint.rc</string>
             </value>
             <key>
               <string>dialogReport</string>

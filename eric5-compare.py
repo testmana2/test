@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Compare
+Eric5 Compare
 
 This is the main Python script that performs the necessary initialization
 of the Compare module and starts the Qt event loop. This is a standalone 
@@ -50,7 +50,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 Compare",
+                                  "Eric5 Compare",
                                   "",
                                   "Simple graphical compare tool",
                                   options)

@@ -40,7 +40,7 @@ class ShortcutsWriter(XMLWriterBase):
             shortcutsFileFormatVersion)
         
         # add some generation comments
-        self._write("<!-- Eric4 keyboard shortcuts -->")
+        self._write("<!-- Eric5 keyboard shortcuts -->")
         self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
         self._write("<!-- Author: %s -->" % self.escape("%s" % self.email))
         

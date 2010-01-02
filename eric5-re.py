@@ -5,7 +5,7 @@
 #
 
 """
-Eric4 Re
+Eric5 Re
 
 This is the main Python script that performs the necessary initialization
 of the PyRegExp wizard module and starts the Qt event loop. This is a standalone 
@@ -46,7 +46,7 @@ def main():
          "use the given directory as the one containing the config files"), 
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric4 RE",
+                                  "Eric5 RE",
                                   "",
                                   "Regexp editor for the Python re module",
                                   options)
