@@ -167,7 +167,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             }
             changes.append(change)
         itm.setData(0, self.__messageRole, message)
-        itm.setData(0, self.__changesRole, str(changes))
+        itm.setData(0, self.__changesRole, changes)
         
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignLeft)
