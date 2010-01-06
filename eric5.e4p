@@ -63,7 +63,6 @@
     <Source>UI/DiffDialog.py</Source>
     <Source>UI/CompareDialog.py</Source>
     <Source>DebugClients/Python/DebugProtocol.py</Source>
-    <Source>DebugClients/Python/eric4dbgstub.py</Source>
     <Source>DebugClients/Python/PyProfile.py</Source>
     <Source>DebugClients/Python/FlexCompleter.py</Source>
     <Source>DebugClients/Python/getpass.py</Source>
@@ -601,7 +600,6 @@
     <Source>DebugClients/Python3/DebugClientBase.py</Source>
     <Source>DebugClients/Python3/DebugClient.py</Source>
     <Source>DebugClients/Python3/FlexCompleter.py</Source>
-    <Source>DebugClients/Python3/eric4dbgstub.py</Source>
     <Source>DebugClients/Python3/PyProfile.py</Source>
     <Source>DebugClients/Python3/DebugThread.py</Source>
     <Source>DebugClients/Python3/DebugClientThreads.py</Source>
@@ -750,6 +748,8 @@
     <Source>eric5-configure.py</Source>
     <Source>eric5-compare.py</Source>
     <Source>eric5-api.py</Source>
+    <Source>DebugClients/Python/eric5dbgstub.py</Source>
+    <Source>DebugClients/Python3/eric5dbgstub.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
