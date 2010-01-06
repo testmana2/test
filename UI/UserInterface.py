@@ -4414,9 +4414,6 @@ class UserInterface(QMainWindow):
                             break
                 else:
                     home = pyqt4DocDir
-                
-                if home:
-                    home = "file://" + home
             
             if not home or not os.path.exists(home):
                 QMessageBox.warning(None,
@@ -4425,6 +4422,8 @@ class UserInterface(QMainWindow):
                                 """ "<b>{0}</b>" could not be found.</p>""")\
                         .format(home))
                 return
+            
+            home = "file://" + home
         else:
             home = pyqt4DocDir
         
@@ -4455,7 +4454,7 @@ class UserInterface(QMainWindow):
                         .format(home))
                 return
         
-##        home = "file://" + home
+        home = "file://" + home
         
         hvType = Preferences.getHelp("HelpViewerType")
         if hvType == 1:
