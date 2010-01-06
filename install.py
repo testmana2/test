@@ -475,7 +475,7 @@ def getConfig(name):
     except KeyError:
         pass
 
-    raise AttributeError, '"%%s" is not a valid configuration value' %% name
+    raise AttributeError('"%%s" is not a valid configuration value' %% name)
 """ % (cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'], 
        cfg['ericDTDDir'], cfg['ericCSSDir'], 
        cfg['ericStylesDir'], cfg['ericDocDir'],
@@ -733,14 +733,14 @@ def main(argv):
         if distDir:
             compileall.compile_dir("eric", 
                                    ddir = os.path.join(distDir, modDir, cfg['ericDir']), 
-                                   rx = re.compile("Python3"), 
+                                   rx = re.compile("DebugClients/Python/"), 
                                    quiet = True)
             py_compile.compile("eric5config.py", 
                                dfile = os.path.join(distDir, modDir, "eric5config.py"))
         else:
             compileall.compile_dir("eric", 
                                    ddir = os.path.join(modDir, cfg['ericDir']), 
-                                   rx = re.compile("Python3"), 
+                                   rx = re.compile("DebugClients/Python/"), 
                                    quiet = True)
             py_compile.compile("eric5config.py", 
                                dfile = os.path.join(modDir, "eric5config.py"))

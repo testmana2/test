@@ -261,7 +261,7 @@ def main():
 
     if stylesheetFile:
         try:
-            sf = open(stylesheetFile, "rb")
+            sf = open(stylesheetFile, "r")
             stylesheet = sf.read()
             sf.close()
         except IOError:
