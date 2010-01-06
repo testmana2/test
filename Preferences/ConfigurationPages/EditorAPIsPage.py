@@ -206,7 +206,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             if self.__currentAPI is not None:
                 self.__currentAPI.prepareAPIs(\
                     ondemand = True, 
-                    rawList = [self.__editorGetApisFromApiList()])
+                    rawList = self.__editorGetApisFromApiList())
         
     def __apiPreparationFinished(self):
         """

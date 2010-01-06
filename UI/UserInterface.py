@@ -4300,6 +4300,8 @@ class UserInterface(QMainWindow):
                     '/usr/share/doc/packages/python/html')
         if not pythonDocDir.startswith("http://") and \
            not pythonDocDir.startswith("https://"):
+            if pythonDocDir.startswith("file://"):
+                pythonDocDir = pythonDocDir[7:]
             if not os.path.splitext(pythonDocDir)[1]:
                 home = Utilities.normjoinpath(pythonDocDir, 'index.html')
                 
@@ -4317,6 +4319,9 @@ class UserInterface(QMainWindow):
                                 """ "<b>{0}</b>" could not be found.</p>""")\
                         .format(home))
                 return
+            
+            if not home.endswith(".chm"):
+                home = "file://" + home
         else:
             home = pythonDocDir
         
@@ -4349,6 +4354,8 @@ class UserInterface(QMainWindow):
         elif qt4DocDir.startswith("http://") or qt4DocDir.startswith("https://"):
             home = qt4DocDir
         else:
+            if qt4DocDir.startswith("file://"):
+                qt4DocDir = qt4DocDir[7:]
             if not os.path.splitext(qt4DocDir)[1]:
                 home = Utilities.normjoinpath(qt4DocDir, 'index.html')
             else:
@@ -4361,6 +4368,8 @@ class UserInterface(QMainWindow):
                                 """ "<b>{0}</b>" could not be found.</p>""")\
                         .format(home))
                 return
+            
+            home = "file://" + home
         
         hvType = Preferences.getHelp("HelpViewerType")
         if hvType == 1:
@@ -4391,6 +4400,8 @@ class UserInterface(QMainWindow):
            not pyqt4DocDir.startswith("https://"):
             home = ""
             if pyqt4DocDir:
+                if pyqt4DocDir.startswith("file://"):
+                    pyqt4DocDir = pyqt4DocDir[7:]
                 if not os.path.splitext(pyqt4DocDir)[1]:
                     possibleHomes = [\
                         Utilities.normjoinpath(pyqt4DocDir, 'index.html'),
@@ -4403,6 +4414,9 @@ class UserInterface(QMainWindow):
                             break
                 else:
                     home = pyqt4DocDir
+                
+                if home:
+                    home = "file://" + home
             
             if not home or not os.path.exists(home):
                 QMessageBox.warning(None,
@@ -4441,6 +4455,8 @@ class UserInterface(QMainWindow):
                         .format(home))
                 return
         
+##        home = "file://" + home
+        
         hvType = Preferences.getHelp("HelpViewerType")
         if hvType == 1:
             self.launchHelpViewer(home)
@@ -4468,6 +4484,8 @@ class UserInterface(QMainWindow):
         
         if not pysideDocDir.startswith("http://") and \
            not pysideDocDir.startswith("https://"):
+            if pysideDocDir.startswith("file://"):
+                pysideDocDir = pysideDocDir[7:]
             if not os.path.splitext(pysideDocDir)[1]:
                 home = Utilities.normjoinpath(pysideDocDir, 'index.html')
             else:
@@ -4479,6 +4497,8 @@ class UserInterface(QMainWindow):
                                 """ "<b>{0}</b>" could not be found.</p>""")\
                         .format(home))
                 return
+            
+            home = "file://" + home
         else:
             home = pysideDocDir
         
