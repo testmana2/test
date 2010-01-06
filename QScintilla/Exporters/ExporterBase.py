@@ -49,7 +49,7 @@ class ExporterBase(QObject):
             if not ext:
                 ex = selectedFilter.split("(*")[1].split(")")[0]
                 if ex:
-                    fileName += ex
+                    fn += ex
             if QFileInfo(fn).exists():
                 res = QMessageBox.warning(self.editor,
                     self.trUtf8("Export source"),
