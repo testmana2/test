@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Shortcuts SYSTEM "Shortcuts-3.6.dtd">
-<!-- Eric4 keyboard shortcuts -->
-<!-- Saved: 2009-07-26, 12:19:16 -->
+<!-- Eric5 keyboard shortcuts -->
+<!-- Saved: 2010-01-07, 16:08:27 -->
 <!-- Author: Detlev Offenbach &lt;detlev@die-offenbachs.de&gt; -->
 <Shortcuts version="3.6">
   <Shortcut category="Project">
@@ -145,27 +145,12 @@
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Project">
-    <Name>packagers_cxfreeze</Name>
+    <Name>doc_eric5_api</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Project">
-    <Name>doc_eric4_api</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Project">
-    <Name>doc_eric4_doc</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Project">
-    <Name>project_check_pylint</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Project">
-    <Name>project_check_pylintshow</Name>
+    <Name>doc_eric5_doc</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
@@ -315,22 +300,12 @@
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="General">
-    <Name>qt_documentation</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="General">
     <Name>qt4_documentation</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="General">
     <Name>pyqt4_documentation</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="General">
-    <Name>pykde4_documentation</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
@@ -390,16 +365,6 @@
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="General">
-    <Name>qt_designer</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="General">
-    <Name>qt_linguist</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="General">
     <Name>qt_designer4</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
@@ -436,6 +401,16 @@
   </Shortcut>
   <Shortcut category="General">
     <Name>mini_editor</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>web_browser</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>icon_editor</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
@@ -707,12 +682,12 @@
   <Shortcut category="Edit">
     <Name>vm_edit_undo</Name>
     <Accel>Ctrl+Z</Accel>
-    <AltAccel>Alt+Backspace</AltAccel>
+    <AltAccel>F22</AltAccel>
   </Shortcut>
   <Shortcut category="Edit">
     <Name>vm_edit_redo</Name>
     <Accel>Ctrl+Shift+Z</Accel>
-    <AltAccel></AltAccel>
+    <AltAccel>F35</AltAccel>
   </Shortcut>
   <Shortcut category="Edit">
     <Name>vm_edit_revert</Name>
@@ -722,17 +697,17 @@
   <Shortcut category="Edit">
     <Name>vm_edit_cut</Name>
     <Accel>Ctrl+X</Accel>
-    <AltAccel>Shift+Del</AltAccel>
+    <AltAccel>F32</AltAccel>
   </Shortcut>
   <Shortcut category="Edit">
     <Name>vm_edit_copy</Name>
     <Accel>Ctrl+C</Accel>
-    <AltAccel>Ctrl+Ins</AltAccel>
+    <AltAccel>F30</AltAccel>
   </Shortcut>
   <Shortcut category="Edit">
     <Name>vm_edit_paste</Name>
     <Accel>Ctrl+V</Accel>
-    <AltAccel>Shift+Ins</AltAccel>
+    <AltAccel>F31</AltAccel>
   </Shortcut>
   <Shortcut category="Edit">
     <Name>vm_edit_clear</Name>
@@ -1222,7 +1197,7 @@
   <Shortcut category="Search">
     <Name>vm_search</Name>
     <Accel>Ctrl+F</Accel>
-    <AltAccel></AltAccel>
+    <AltAccel>F25</AltAccel>
   </Shortcut>
   <Shortcut category="Search">
     <Name>vm_search_next</Name>
@@ -1436,7 +1411,7 @@
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_update</Name>
-    <Accel></Accel>
+    <Accel>Ctrl+Alt+U</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
@@ -1486,7 +1461,7 @@
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_status</Name>
-    <Accel>Ctrl+Alt+U</Accel>
+    <Accel>Ctrl+Alt+S</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
@@ -1584,446 +1559,6 @@
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_rename</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_rename_local</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_rename_module</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_change_occurrences</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_extract_method</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_extract_variable</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_inline</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_move_method</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_move_module</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_use_function</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_introduce_factory_method</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_introduce_parameter_method</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_organize_imports</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_expand_star_imports</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_relative_to_absolute_imports</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_froms_to_imports</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_organize_imports</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_restructure</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_change_method_signature</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_inline_argument_default</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_transform_module_to_package</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_method_to_methodobject</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_encapsulate_attribute</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_local_variable_to_attribute</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_undo</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_redo</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_show_project_undo_history</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_show_project_redo_history</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_show_file_undo_history</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_show_file_redo_history</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_clear_history</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_find_occurrences</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_find_definition</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_find_implementations</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_edit_config</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_help</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_analyze_all</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_update_configuration</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_find_errors</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="RefactoringRope">
-    <Name>refactoring_find_all_errors</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_new</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_update</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_commit</Name>
-    <Accel>Ctrl+Alt+O</Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_add</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_remove</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_log</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_diff</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_status</Name>
-    <Accel>Ctrl+Alt+U</Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_tag</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_export</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_options</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_revert</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_merge</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_switch</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_cleanup</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_command</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_login</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="CVS">
-    <Name>cvs_logout</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_new</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_update</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_commit</Name>
-    <Accel>Ctrl+Alt+O</Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_add</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_remove</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_log</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_log_limited</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_log_browser</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_diff</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_extendeddiff</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_urldiff</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_status</Name>
-    <Accel>Ctrl+Alt+U</Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_tag</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_export</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_options</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_revert</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_merge</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_switch</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_resolve</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_cleanup</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_command</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_list_tags</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_list_branches</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_contents</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_property_set</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_property_list</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_property_delete</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_relocate</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_repo_browser</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Subversion">
-    <Name>subversion_configure</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_file_new_tab</Name>
     <Accel>Ctrl+T</Accel>
@@ -2042,6 +1577,11 @@
   <Shortcut category="HelpViewer">
     <Name>help_file_open_tab</Name>
     <Accel>Ctrl+Shift+O</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="HelpViewer">
+    <Name>help_file_save_as</Name>
+    <Accel>Ctrl+Shift+S</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
@@ -2075,11 +1615,6 @@
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
-    <Name>help_file_close_all</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="HelpViewer">
     <Name>help_file_private_browsing</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
@@ -2092,12 +1627,12 @@
   <Shortcut category="HelpViewer">
     <Name>help_go_backward</Name>
     <Accel>Alt+Left</Accel>
-    <AltAccel>Backspace</AltAccel>
+    <AltAccel>Back</AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_go_foreward</Name>
     <Accel>Alt+Right</Accel>
-    <AltAccel>Shift+Backspace</AltAccel>
+    <AltAccel>Forward</AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_go_home</Name>
@@ -2107,12 +1642,12 @@
   <Shortcut category="HelpViewer">
     <Name>help_go_reload</Name>
     <Accel>Ctrl+R</Accel>
-    <AltAccel>F5</AltAccel>
+    <AltAccel>F24</AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_go_stop</Name>
     <Accel>Ctrl+.</Accel>
-    <AltAccel>Esc</AltAccel>
+    <AltAccel>F23</AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_edit_copy</Name>
@@ -2122,7 +1657,7 @@
   <Shortcut category="HelpViewer">
     <Name>help_edit_find</Name>
     <Accel>Ctrl+F</Accel>
-    <AltAccel></AltAccel>
+    <AltAccel>F25</AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_edit_find_next</Name>
@@ -2132,11 +1667,6 @@
   <Shortcut category="HelpViewer">
     <Name>help_edit_find_previous</Name>
     <Accel>Shift+F3</Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="HelpViewer">
-    <Name>help_history_clear</Name>
-    <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
@@ -2276,6 +1806,21 @@
   </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_clear_icons_db</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="HelpViewer">
+    <Name>help_search_engines</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="HelpViewer">
+    <Name>help_manage_passwords</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="HelpViewer">
+    <Name>help_adblock</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
