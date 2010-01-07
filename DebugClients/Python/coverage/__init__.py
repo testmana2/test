@@ -5,12 +5,14 @@ http://nedbatchelder.com/code/coverage
 
 """
 
-__version__ = "3.0.1"    # see detailed history in CHANGES.txt
+__version__ = "3.2"    # see detailed history in CHANGES.txt
 
-from control import coverage
-from data import CoverageData
-from cmdline import main, CoverageScript
-from misc import CoverageException
+__url__ = "http://nedbatchelder.com/code/coverage"
+
+from coverage.control import coverage
+from coverage.data import CoverageData
+from coverage.cmdline import main, CoverageScript
+from coverage.misc import CoverageException
 
 
 # Module-level functions.  The original API to this module was based on
@@ -24,10 +26,10 @@ _the_coverage = None
 
 def _singleton_method(name):
     """Return a function to the `name` method on a singleton `coverage` object.
-    
+
     The singleton object is created the first time one of these functions is
     called.
-    
+
     """
     def wrapper(*args, **kwargs):
         """Singleton wrapper around a coverage method."""

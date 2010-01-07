@@ -754,6 +754,10 @@
     <Source>DebugClients/Python3/coverage/xmlreport.py</Source>
     <Source>DebugClients/Python3/coverage/phystokens.py</Source>
     <Source>DebugClients/Python3/coverage/results.py</Source>
+    <Source>DebugClients/Python/coverage/bytecode.py</Source>
+    <Source>DebugClients/Python/coverage/xmlreport.py</Source>
+    <Source>DebugClients/Python/coverage/phystokens.py</Source>
+    <Source>DebugClients/Python/coverage/results.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

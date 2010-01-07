@@ -1,9 +1,11 @@
 """HTML reporting for Coverage."""
 
 import os, re, shutil
-from . import __version__    # pylint: disable-msg=W0611
-from report import Reporter
-from templite import Templite
+
+from coverage import __url__, __version__           # pylint: disable-msg=W0611
+from coverage.phystokens import source_token_lines
+from coverage.report import Reporter
+from coverage.templite import Templite
 
 # Disable pylint msg W0612, because a bunch of variables look unused, but
 # they're accessed in a templite context via locals().
@@ -16,28 +18,29 @@ def data_filename(fname):
 def data(fname):
     """Return the contents of a data file of ours."""
     return open(data_filename(fname)).read()
-    
+
 
 class HtmlReporter(Reporter):
     """HTML reporting."""
-    
+
     def __init__(self, coverage, ignore_errors=False):
         super(HtmlReporter, self).__init__(coverage, ignore_errors)
         self.directory = None
         self.source_tmpl = Templite(data("htmlfiles/pyfile.html"), globals())
-        
+
         self.files = []
+        self.arcs = coverage.data.has_arcs()
 
     def report(self, morfs, directory, omit_prefixes=None):
         """Generate an HTML report for `morfs`.
-        
+
         `morfs` is a list of modules or filenames.  `directory` is where to put
         the HTML files. `omit_prefixes` is a list of strings, prefixes of
         modules to omit from the report.
-        
+
         """
         assert directory, "must provide a directory for html reporting"
-        
+
         # Process all the files.
         self.report_files(self.html_file, morfs, directory, omit_prefixes)
 
@@ -45,57 +48,79 @@ class HtmlReporter(Reporter):
         self.index_file()
 
         # Create the once-per-directory files.
-        shutil.copyfile(
-            data_filename("htmlfiles/style.css"),
-            os.path.join(directory, "style.css")
-            )
-        shutil.copyfile(
-            data_filename("htmlfiles/jquery-1.3.2.min.js"),
-            os.path.join(directory, "jquery-1.3.2.min.js")
-            )
+        for static in [
+            "style.css", "coverage_html.js",
+            "jquery-1.3.2.min.js", "jquery.tablesorter.min.js"
+            ]:
+            shutil.copyfile(
+                data_filename("htmlfiles/" + static),
+                os.path.join(directory, static)
+                )
 
-    def html_file(self, cu, statements, excluded, missing):
+    def html_file(self, cu, analysis):
         """Generate an HTML file for one source file."""
-        
-        source = cu.source_file()
-        source_lines = source.readlines()
-        
-        n_lin = len(source_lines)
-        n_stm = len(statements)
-        n_exc = len(excluded)
-        n_mis = len(missing)
-        n_run = n_stm - n_mis
-        if n_stm > 0:
-            pc_cov = 100.0 * n_run / n_stm
-        else:
-            pc_cov = 100.0
+
+        source = cu.source_file().read()
+
+        nums = analysis.numbers
+
+        missing_branch_arcs = analysis.missing_branch_arcs()
+        n_par = 0   # accumulated below.
+        arcs = self.arcs
 
         # These classes determine which lines are highlighted by default.
-        c_run = " run hide"
+        c_run = " run hide_run"
         c_exc = " exc"
         c_mis = " mis"
-        
+        c_par = " par" + c_run
+
         lines = []
-        for lineno, line in enumerate(source_lines):
-            lineno += 1     # enum is 0-based, lines are 1-based.
-            
-            
-            css_class = ""
-            if lineno in statements:
-                css_class += " stm"
-                if lineno not in missing and lineno not in excluded:
-                    css_class += c_run
-            if lineno in excluded:
-                css_class += c_exc
-            if lineno in missing:
-                css_class += c_mis
-                
-            lineinfo = {
-                'text': line,
+
+        for lineno, line in enumerate(source_token_lines(source)):
+            lineno += 1     # 1-based line numbers.
+            # Figure out how to mark this line.
+            line_class = ""
+            annotate_html = ""
+            annotate_title = ""
+            if lineno in analysis.statements:
+                line_class += " stm"
+            if lineno in analysis.excluded:
+                line_class += c_exc
+            elif lineno in analysis.missing:
+                line_class += c_mis
+            elif self.arcs and lineno in missing_branch_arcs:
+                line_class += c_par
+                n_par += 1
+                annlines = []
+                for b in missing_branch_arcs[lineno]:
+                    if b == -1:
+                        annlines.append("exit")
+                    else:
+                        annlines.append(str(b))
+                annotate_html = "&nbsp;&nbsp; ".join(annlines)
+                if len(annlines) > 1:
+                    annotate_title = "no jumps to these line numbers"
+                elif len(annlines) == 1:
+                    annotate_title = "no jump to this line number"
+            elif lineno in analysis.statements:
+                line_class += c_run
+
+            # Build the HTML for the line
+            html = ""
+            for tok_type, tok_text in line:
+                if tok_type == "ws":
+                    html += escape(tok_text)
+                else:
+                    tok_html = escape(tok_text) or '&nbsp;'
+                    html += "<span class='%s'>%s</span>" % (tok_type, tok_html)
+
+            lines.append({
+                'html': html,
                 'number': lineno,
-                'class': css_class.strip() or "pln"
-            }
-            lines.append(lineinfo)
+                'class': line_class.strip() or "pln",
+                'annotate': annotate_html,
+                'annotate_title': annotate_title,
+            })
 
         # Write the HTML page for this file.
         html_filename = cu.flat_rootname() + ".html"
@@ -107,11 +132,8 @@ class HtmlReporter(Reporter):
 
         # Save this file's information for the index file.
         self.files.append({
-            'stm': n_stm,
-            'run': n_run,
-            'exc': n_exc,
-            'mis': n_mis,
-            'pc_cov': pc_cov,
+            'nums': nums,
+            'par': n_par,
             'html_filename': html_filename,
             'cu': cu,
             })
@@ -121,51 +143,40 @@ class HtmlReporter(Reporter):
         index_tmpl = Templite(data("htmlfiles/index.html"), globals())
 
         files = self.files
-        
-        total_stm = sum([f['stm'] for f in files])
-        total_run = sum([f['run'] for f in files])
-        total_exc = sum([f['exc'] for f in files])
-        if total_stm:
-            total_cov = 100.0 * total_run / total_stm
-        else:
-            total_cov = 100.0
+        arcs = self.arcs
+
+        totals = sum([f['nums'] for f in files])
 
         fhtml = open(os.path.join(self.directory, "index.html"), "w")
         fhtml.write(index_tmpl.render(locals()))
         fhtml.close()
 
 
-# Helpers for templates
+# Helpers for templates and generating HTML
 
 def escape(t):
     """HTML-escape the text in t."""
     return (t
-            # Change all tabs to 4 spaces.
-            .expandtabs(4)
             # Convert HTML special chars into HTML entities.
             .replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
             .replace("'", "&#39;").replace('"', "&quot;")
-            # Convert runs of spaces: "      " -> "&nbsp; &nbsp; &nbsp; "
+            # Convert runs of spaces: "......" -> "&nbsp;.&nbsp;.&nbsp;."
             .replace("  ", "&nbsp; ")
             # To deal with odd-length runs, convert the final pair of spaces
-            # so that "     " -> "&nbsp; &nbsp;&nbsp; "
+            # so that "....." -> "&nbsp;.&nbsp;&nbsp;."
             .replace("  ", "&nbsp; ")
         )
 
-def not_empty(t):
-    """Make sure HTML content is not completely empty."""
-    return t or "&nbsp;"
-    
 def format_pct(p):
     """Format a percentage value for the HTML reports."""
     return "%.0f" % p
 
 def spaceless(html):
     """Squeeze out some annoying extra space from an HTML string.
-    
+
     Nicely-formatted templates mean lots of extra space in the result.  Get
     rid of some.
-    
+
     """
     html = re.sub(">\s+<p ", ">\n<p ", html)
     return html
