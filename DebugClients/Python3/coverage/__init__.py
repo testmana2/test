@@ -5,7 +5,9 @@ http://nedbatchelder.com/code/coverage
 
 """
 
-__version__ = "3.0.1"    # see detailed history in CHANGES.txt
+__version__ = "3.2"    # see detailed history in CHANGES.txt
+
+__url__ = "http://nedbatchelder.com/code/coverage"
 
 from .control import coverage
 from .data import CoverageData
@@ -24,10 +26,10 @@ _the_coverage = None
 
 def _singleton_method(name):
     """Return a function to the `name` method on a singleton `coverage` object.
-    
+
     The singleton object is created the first time one of these functions is
     called.
-    
+
     """
     def wrapper(*args, **kwargs):
         """Singleton wrapper around a coverage method."""

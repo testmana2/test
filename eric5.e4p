@@ -750,6 +750,10 @@
     <Source>eric5-api.py</Source>
     <Source>DebugClients/Python/eric5dbgstub.py</Source>
     <Source>DebugClients/Python3/eric5dbgstub.py</Source>
+    <Source>DebugClients/Python3/coverage/bytecode.py</Source>
+    <Source>DebugClients/Python3/coverage/xmlreport.py</Source>
+    <Source>DebugClients/Python3/coverage/phystokens.py</Source>
+    <Source>DebugClients/Python3/coverage/results.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
