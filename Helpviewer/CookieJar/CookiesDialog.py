@@ -75,6 +75,9 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
             header += buffer
             self.cookiesTable.horizontalHeader().resizeSection(section, header)
         self.cookiesTable.horizontalHeader().setStretchLastSection(True)
+        self.cookiesTable.model().sort(
+            self.cookiesTable.horizontalHeader().sortIndicatorSection(), 
+            Qt.AscendingOrder)
         
         self.__detailsDialog = None
     
@@ -99,8 +102,8 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         path = model.data(model.index(row, 2))
         secure = model.data(model.index(row, 3))
         expires = model.data(model.index(row, 4)).toString("yyyy-MM-dd hh:mm")
-        value = str(
-            QByteArray.fromPercentEncoding(model.data(model.index(row, 5))))
+        value = bytes(
+            QByteArray.fromPercentEncoding(model.data(model.index(row, 5)))).decode()
         
         if self.__detailsDialog is None:
             self.__detailsDialog = CookieDetailsDialog(self)

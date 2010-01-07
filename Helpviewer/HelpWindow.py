@@ -1611,8 +1611,6 @@ class HelpWindow(QMainWindow):
         printer.setPrinterName(Preferences.getPrinter("PrinterName"))
         
         printDialog = QPrintDialog(printer, self)
-        if browser.hasSelection():
-            printDialog.addEnabledOption(QAbstractPrintDialog.PrintSelection)
         if printDialog.exec_() == QDialog.Accepted:
             try:
                 frame.print_(printer)
@@ -2668,7 +2666,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot to show the search engines configuration dialog.
         """
-        from OpenSearch.OpenSearchDialog import OpenSearchDialog
+        from .OpenSearch.OpenSearchDialog import OpenSearchDialog
         
         dlg = OpenSearchDialog(self)
         dlg.exec_()
@@ -2685,7 +2683,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot to show the passwords management dialog.
         """
-        from Passwords.PasswordsDialog import PasswordsDialog
+        from .Passwords.PasswordsDialog import PasswordsDialog
         
         dlg = PasswordsDialog(self)
         dlg.exec_()

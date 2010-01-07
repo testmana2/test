@@ -38,7 +38,7 @@ class E4TreeView(QTreeView):
             return
         
         selectedRows = self.selectionModel().selectedRows()
-        for idx in reversed(selectedRows):
+        for idx in reversed(sorted(selectedRows)):
             self.model().removeRow(idx.row(), idx.parent())
     
     def removeAll(self):

@@ -82,7 +82,7 @@ class CookieModel(QAbstractTableModel):
             if col == 0:
                 return cookie.domain()
             elif col == 1:
-                return cookie.name()
+                return bytes(cookie.name()).decode()
             elif col == 2:
                 return cookie.path()
             elif col == 3:

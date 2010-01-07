@@ -43,7 +43,7 @@ for arg in sys.argv:
         sys.argv.remove(arg)
         break
 
-# make ThirdParty package available as a packages repository
+# make Third-Party package available as a packages repository
 try:
     import pygments
 except ImportError:

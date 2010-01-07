@@ -375,13 +375,19 @@ class BookmarksManager(QObject):
         """
         Public method to export the bookmarks.
         """
-        fileName = QFileDialog.getSaveFileName(
+        fileName, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             None,
             self.trUtf8("Export Bookmarks"),
             "eric5_bookmarks.xbel",
-            self.trUtf8("XBEL bookmarks") + " (*.xbel, *.xml)")
+            self.trUtf8("XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml"))
         if not fileName:
             return
+        
+        ext = QFileInfo(fileName).suffix()
+        if not ext:
+            ex = selectedFilter.split("(*")[1].split(")")[0]
+            if ex:
+                fileName += ex
         
         writer = XbelWriter()
         if not writer.write(fileName, self.__bookmarkRootNode):

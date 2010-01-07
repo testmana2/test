@@ -1164,7 +1164,7 @@ def pwEncode(pw):
     pop = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,;:-_!$?*+#"
     marker = "CE4"
     rpw = "".join(random.sample(pop, 32)) + pw + "".join(random.sample(pop, 32))
-    return marker + base64.b64encode(rpw)
+    return marker + base64.b64encode(rpw.encode()).decode()
 
 def pwDecode(epw):
     """
@@ -1176,7 +1176,7 @@ def pwDecode(epw):
     if not epw.startswith("CE4"):
         return epw  # it was not encoded using pwEncode
     
-    return base64.b64decode(epw[3:])[32:-32]
+    return base64.b64decode(epw[3:].encode())[32:-32].decode()
 
 ################################################################################
 # posix compatibility functions below

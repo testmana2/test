@@ -79,7 +79,7 @@ class OpenSearchEngine(QObject):
         result = result.replace("{inputEncoding}", "UTF-8")
         result = result.replace("{outputEncoding}", "UTF-8")
         result = result.replace("{searchTerms}", 
-                                str(QUrl.toPercentEncoding(searchTerm)))
+                                bytes(QUrl.toPercentEncoding(searchTerm)).decode())
         result = re.sub(r"""\{([^\}]*:|)source\??\}""", Program, result)
 
         return result
@@ -408,7 +408,8 @@ class OpenSearchEngine(QObject):
             return
         
         if self.__suggestionsReply is not None:
-            self.__suggestionsReply.disconnect(self)
+            self.disconnect(self.__suggestionsReply, SIGNAL("finished()"), 
+                            self.__suggestionsObtained)
             self.__suggestionsReply.abort()
             self.__suggestionsReply = None
         
