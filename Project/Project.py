@@ -4200,8 +4200,9 @@ class Project(QObject):
                 os.path.isfile("%s.profile" % basename) or \
                 os.path.isfile("%s.profile" % tbasename))
             self.codeCoverageAct.setEnabled(\
-                os.path.isfile("%s.coverage" % basename) or \
-                os.path.isfile("%s.coverage" % tbasename))
+                self.pdata["PROGLANGUAGE"][0] == "Python3" and \
+                (os.path.isfile("%s.coverage" % basename) or \
+                 os.path.isfile("%s.coverage" % tbasename)))
         else:
             self.codeProfileAct.setEnabled(False)
             self.codeCoverageAct.setEnabled(False)

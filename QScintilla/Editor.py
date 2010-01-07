@@ -3867,6 +3867,10 @@ class Editor(QsciScintillaCompat):
                 os.path.isfile("%s.coverage" % basename) or \
                 os.path.isfile("%s.coverage" % tbasename)
         
+        # now check for syntax errors
+        if self.hasSyntaxErrors():
+            coEnable = False
+        
         self.profileMenuAct.setEnabled(prEnable)
         self.coverageMenuAct.setEnabled(coEnable)
         self.coverageShowAnnotationMenuAct.setEnabled(\
