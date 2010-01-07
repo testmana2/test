@@ -156,7 +156,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 ' '.join(["*%s" % ext for ext in self.dbs.getExtensions('Python')])
             py3Extensions = \
                 ' '.join(["*%s" % ext for ext in self.dbs.getExtensions('Python3')])
-            filter = self.trUtf8("Python Files ({0});;Python3 Files ({1});;All Files (*)")\
+            filter = self.trUtf8("Python3 Files ({1});;Python2 Files ({0});;All Files (*)")\
                 .format(pyExtensions, py3Extensions)
         else:
             filter = self.trUtf8("Python Files (*.py);;All Files (*)")
@@ -179,7 +179,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param txt name of the test file (string)
         """
         if self.dbs:
-            exts = self.dbs.getExtensions("Python3")
+            exts = self.dbs.getExtensions("Python")
             if txt.endswith(exts):
                 self.coverageCheckBox.setChecked(False)
                 self.coverageCheckBox.setEnabled(False)
@@ -242,7 +242,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             
             # clean up list of imported modules to force a reimport upon running the test
             if self.savedModulelist:
-                for modname in sys.modules:
+                for modname in list(sys.modules.keys()):
                     if modname not in self.savedModulelist:
                         # delete it
                         del(sys.modules[modname])
