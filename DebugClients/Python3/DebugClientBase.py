@@ -285,15 +285,14 @@ class DebugClientBase(object):
         
         self.write("{0}{1!r}\n".format(ResponseThreadList, (currentId, threadList)))
     
-    def input(self, prompt, echo):
+    def input(self, prompt):
         """
         Public method to implement input() using the event loop.
         
         @param prompt the prompt to be shown (string)
-        @param echo Flag indicating echoing of the input (boolean)
         @return the entered string
         """
-        self.write("{0}{1!r}\n".format(ResponseRaw, (prompt, echo)))
+        self.write("{0}{1!r}\n".format(ResponseRaw, (prompt, 1)))
         self.inRawMode = True
         self.eventLoop(True)
         return self.rawLine
