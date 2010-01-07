@@ -2,9 +2,9 @@
 
 import os
 
-from coverage.backward import set, sorted           # pylint: disable-msg=W0622
-from coverage.misc import format_lines, NoSource
-from coverage.parser import CodeParser
+from .backward import set, sorted           # pylint: disable-msg=W0622
+from .misc import format_lines, NoSource
+from .parser import CodeParser
 
 
 class Analysis(object):

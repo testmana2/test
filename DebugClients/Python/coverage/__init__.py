@@ -9,10 +9,10 @@ __version__ = "3.2"    # see detailed history in CHANGES.txt
 
 __url__ = "http://nedbatchelder.com/code/coverage"
 
-from coverage.control import coverage
-from coverage.data import CoverageData
-from coverage.cmdline import main, CoverageScript
-from coverage.misc import CoverageException
+from .control import coverage
+from .data import CoverageData
+from .cmdline import main, CoverageScript
+from .misc import CoverageException
 
 
 # Module-level functions.  The original API to this module was based on

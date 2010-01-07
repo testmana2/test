@@ -2,8 +2,8 @@
 
 import imp, os, sys
 
-from coverage.backward import exec_function
-from coverage.misc import NoSource
+from .backward import exec_function
+from .misc import NoSource
 
 
 try:

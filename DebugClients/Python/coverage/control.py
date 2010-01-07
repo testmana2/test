@@ -2,23 +2,23 @@
 
 import atexit, os, socket
 
-from coverage.annotate import AnnotateReporter
-from coverage.backward import string_class          # pylint: disable-msg=W0622
-from coverage.codeunit import code_unit_factory, CodeUnit
-from coverage.collector import Collector
-from coverage.data import CoverageData
-from coverage.files import FileLocator
-from coverage.html import HtmlReporter
-from coverage.results import Analysis
-from coverage.summary import SummaryReporter
-from coverage.xmlreport import XmlReporter
+from .annotate import AnnotateReporter
+from .backward import string_class          # pylint: disable-msg=W0622
+from .codeunit import code_unit_factory, CodeUnit
+from .collector import Collector
+from .data import CoverageData
+from .files import FileLocator
+from .html import HtmlReporter
+from .results import Analysis
+from .summary import SummaryReporter
+from .xmlreport import XmlReporter
 
 class coverage(object):
     """Programmatic access to Coverage.
 
     To use::
 
-        from coverage import coverage
+        from . import coverage
 
         cov = coverage()
         cov.start()
@@ -52,7 +52,7 @@ class coverage(object):
         to the usual statement coverage.
 
         """
-        from coverage import __version__
+        from . import __version__
 
         self.cover_pylib = cover_pylib
         self.auto_data = auto_data

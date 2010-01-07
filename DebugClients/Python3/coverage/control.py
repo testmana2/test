@@ -18,7 +18,7 @@ class coverage(object):
 
     To use::
 
-        from coverage import coverage
+        from . import coverage
 
         cov = coverage()
         cov.start()
@@ -52,7 +52,7 @@ class coverage(object):
         to the usual statement coverage.
 
         """
-        from coverage import __version__
+        from . import __version__
 
         self.cover_pylib = cover_pylib
         self.auto_data = auto_data

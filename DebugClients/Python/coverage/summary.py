@@ -2,8 +2,8 @@
 
 import sys
 
-from coverage.report import Reporter
-from coverage.results import Numbers
+from .report import Reporter
+from .results import Numbers
 
 
 class SummaryReporter(Reporter):

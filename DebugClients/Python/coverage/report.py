@@ -1,8 +1,8 @@
 """Reporter foundation for Coverage."""
 
 import os
-from coverage.codeunit import code_unit_factory
-from coverage.misc import CoverageException, NoSource
+from .codeunit import code_unit_factory
+from .misc import CoverageException, NoSource
 
 class Reporter(object):
     """A base class for all reporters."""

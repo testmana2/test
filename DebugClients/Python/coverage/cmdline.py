@@ -2,8 +2,8 @@
 
 import optparse, re, sys
 
-from coverage.execfile import run_python_file
-from coverage.misc import CoverageException
+from .execfile import run_python_file
+from .misc import CoverageException
 
 
 class Opts(object):

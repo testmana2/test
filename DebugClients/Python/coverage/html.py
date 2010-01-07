@@ -2,10 +2,10 @@
 
 import os, re, shutil
 
-from coverage import __url__, __version__           # pylint: disable-msg=W0611
-from coverage.phystokens import source_token_lines
-from coverage.report import Reporter
-from coverage.templite import Templite
+from . import __url__, __version__           # pylint: disable-msg=W0611
+from .phystokens import source_token_lines
+from .report import Reporter
+from .templite import Templite
 
 # Disable pylint msg W0612, because a bunch of variables look unused, but
 # they're accessed in a templite context via locals().

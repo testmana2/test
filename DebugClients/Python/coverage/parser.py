@@ -2,9 +2,9 @@
 
 import glob, opcode, os, re, sys, token, tokenize
 
-from coverage.backward import set, sorted, StringIO # pylint: disable-msg=W0622
-from coverage.bytecode import ByteCodes, CodeObjects
-from coverage.misc import nice_pair, CoverageException, NoSource, expensive
+from .backward import set, sorted, StringIO # pylint: disable-msg=W0622
+from .bytecode import ByteCodes, CodeObjects
+from .misc import nice_pair, CoverageException, NoSource, expensive
 
 
 class CodeParser(object):

@@ -2,8 +2,8 @@
 
 import glob, os
 
-from coverage.backward import string_class, StringIO
-from coverage.misc import CoverageException
+from .backward import string_class, StringIO
+from .misc import CoverageException
 
 
 def code_unit_factory(morfs, file_locator, omit_prefixes=None):

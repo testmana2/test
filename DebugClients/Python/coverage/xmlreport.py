@@ -3,9 +3,9 @@
 import os, sys, time
 import xml.dom.minidom
 
-from coverage import __url__, __version__
-from coverage.backward import sorted            # pylint: disable-msg=W0622
-from coverage.report import Reporter
+from . import __url__, __version__
+from .backward import sorted            # pylint: disable-msg=W0622
+from .report import Reporter
 
 def rate(hit, num):
     """Return the fraction of `hit`/`num`."""
