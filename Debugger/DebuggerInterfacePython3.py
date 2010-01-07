@@ -26,14 +26,7 @@ import Utilities
 from eric5config import getConfig
 
 
-##ClientDefaultCapabilities = DebugClientCapabilities.HasAll
-ClientDefaultCapabilities = \
-    DebugClientCapabilities.HasDebugger | \
-    DebugClientCapabilities.HasInterpreter | \
-    DebugClientCapabilities.HasShell | \
-    DebugClientCapabilities.HasCompleter | \
-    DebugClientCapabilities.HasProfiler | \
-    DebugClientCapabilities.HasUnittest
+ClientDefaultCapabilities = DebugClientCapabilities.HasAll
     
 def getRegistryData():
     """
