@@ -264,11 +264,11 @@ class ExporterRTF(ExporterBase):
                 deltaStyle = ""
                 styleCurrent = -1
                 utf8 = self.editor.isUtf8()
-                utf8Ch = ""
+                utf8Ch = b""
                 utf8Len = 0
                 
                 while pos < lengthDoc:
-                    ch = self.editor.rawCharAt(pos)
+                    ch = self.editor.byteAt(pos)
                     style = self.editor.styleAt(pos)
                     if style != styleCurrent:
                         deltaStyle = self.__GetRTFStyleChange(lastStyle, styles[style])
@@ -277,35 +277,35 @@ class ExporterRTF(ExporterBase):
                         styleCurrent = style
                         lastStyle = styles[style]
                     
-                    if ch == '{':
+                    if ch == b'{':
                         f.write('\\{')
-                    elif ch == '}':
+                    elif ch == b'}':
                         f.write('\\}')
-                    elif ch == '\\':
+                    elif ch == b'\\':
                         f.write('\\\\')
-                    elif ch == '\t':
+                    elif ch == b'\t':
                         if tabs:
                             f.write(self.RTF_TAB)
                         else:
                             ts = tabSize - (column % tabSize)
                             f.write(' ' * ts)
                             column += ts - 1
-                    elif ch == '\n':
+                    elif ch == b'\n':
                         if not prevCR:
                             f.write(self.RTF_EOLN)
                             column -= 1
-                    elif ch == '\r':
+                    elif ch == b'\r':
                         f.write(self.RTF_EOLN)
                         column -= 1
                     else:
                         if ord(ch) > 0x7F and utf8:
                             utf8Ch += ch
                             if utf8Len == 0:
-                                if (ord(utf8Ch[0]) & 0xF0) == 0xF0:
+                                if (utf8Ch[0] & 0xF0) == 0xF0:
                                     utf8Len = 4
-                                elif (ord(utf8Ch[0]) & 0xE0) == 0xE0:
+                                elif (utf8Ch[0] & 0xE0) == 0xE0:
                                     utf8Len = 3
-                                elif (ord(utf8Ch[0]) & 0xC0) == 0xC0:
+                                elif (utf8Ch[0] & 0xC0) == 0xC0:
                                     utf8Len = 2
                                 column -= 1 # will be incremented again later
                             elif len(utf8Ch) == utf8Len:
@@ -314,12 +314,12 @@ class ExporterRTF(ExporterBase):
                                     f.write("\\'%x" % ord(ch))
                                 else:
                                     f.write("\\u%d\\'%x" % (ord(ch), ord(ch) & 0xFF))
-                                utf8Ch = ""
+                                utf8Ch = b""
                                 utf8Len = 0
                             else:
                                 column -= 1 # will be incremented again later
                         else:
-                            f.write(ch)
+                            f.write(ch.decode())
                     
                     column += 1
                     prevCR = ch == '\r'

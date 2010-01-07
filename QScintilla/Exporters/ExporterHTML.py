@@ -212,35 +212,35 @@ class ExporterHTML(ExporterBase):
                 column = 0
                 pos = 0
                 utf8 = self.editor.isUtf8()
-                utf8Ch = ""
+                utf8Ch = b""
                 utf8Len = 0
                 
                 while pos < lengthDoc:
-                    ch = self.editor.rawCharAt(pos)
+                    ch = self.editor.byteAt(pos)
                     style = self.editor.styleAt(pos)
                     if style != styleCurrent:
                         if inStyleSpan:
                             f.write('''</span>''')
                             inStyleSpan = False
-                        if ch not in ['\r', '\n']: # no need of a span for the EOL
+                        if ch not in [b'\r', b'\n']: # no need of a span for the EOL
                             if styleIsUsed[style]:
                                 f.write('''<span class="S%d">''' % style)
                                 inStyleSpan = True
                             styleCurrent = style
                     
-                    if ch == ' ':
+                    if ch == b' ':
                         if wysiwyg:
-                            prevCh = ''
+                            prevCh = b''
                             if column == 0: 
                                 # at start of line, must put a &nbsp; 
                                 # because regular space will be collapsed
-                                prevCh = ' '
-                            while pos < lengthDoc and self.editor.rawCharAt(pos) == ' ':
-                                if prevCh != ' ':
+                                prevCh = b' '
+                            while pos < lengthDoc and self.editor.byteAt(pos) == b' ':
+                                if prevCh != b' ':
                                     f.write(' ')
                                 else:
                                     f.write('''&nbsp;''')
-                                prevCh = self.editor.rawCharAt(pos)
+                                prevCh = self.editor.byteAt(pos)
                                 pos += 1
                                 column += 1
                             pos -= 1 
@@ -248,26 +248,26 @@ class ExporterHTML(ExporterBase):
                         else:
                             f.write(' ')
                             column += 1
-                    elif ch == '\t':
+                    elif ch == b'\t':
                         ts = tabSize - (column % tabSize)
                         if wysiwyg:
                             f.write('''&nbsp;''' * ts)
                             column += ts
                         else:
                             if tabs:
-                                f.write(ch)
+                                f.write('\t')
                                 column += 1
                             else:
                                 f.write(' ' * ts)
                                 column += ts
-                    elif ch in ['\r', '\n']:
+                    elif ch in [b'\r', b'\n']:
                         if inStyleSpan:
                             f.write('''</span>''')
                             inStyleSpan = False
                         if inFoldSpan:
                             f.write('''</span>''')
                             inFoldSpan = False
-                        if ch == '\r' and self.editor.rawCharAt(pos + 1) == '\n':
+                        if ch == b'\r' and self.editor.byteAt(pos + 1) == b'\n':
                             pos += 1 # CR+LF line ending, skip the "extra" EOL char
                         column = 0
                         if wysiwyg:
@@ -299,38 +299,38 @@ class ExporterHTML(ExporterBase):
                             f.write('\n')
                         
                         if styleIsUsed[styleCurrent] and \
-                           self.editor.rawCharAt(pos + 1) not in ['\r', '\n']:
+                           self.editor.byteAt(pos + 1) not in [b'\r', b'\n']:
                             # We know it's the correct next style,
                             # but no (empty) span for an empty line
                             f.write('''<span class="S%0d">''' % styleCurrent)
                             inStyleSpan = True
                     else:
-                        if ch == '<':
+                        if ch == b'<':
                             f.write('''&lt;''')
-                        elif ch == '>':
+                        elif ch == b'>':
                             f.write('''&gt''')
-                        elif ch == '&':
+                        elif ch == b'&':
                             f.write('''&amp;''')
                         else:
                             if ord(ch) > 127 and utf8:
                                 utf8Ch += ch
                                 if utf8Len == 0:
-                                    if (ord(utf8Ch[0]) & 0xF0) == 0xF0:
+                                    if (utf8Ch[0] & 0xF0) == 0xF0:
                                         utf8Len = 4
-                                    elif (ord(utf8Ch[0]) & 0xE0) == 0xE0:
+                                    elif (utf8Ch[0] & 0xE0) == 0xE0:
                                         utf8Len = 3
-                                    elif (ord(utf8Ch[0]) & 0xC0) == 0xC0:
+                                    elif (utf8Ch[0] & 0xC0) == 0xC0:
                                         utf8Len = 2
                                     column -= 1 # will be incremented again later
                                 elif len(utf8Ch) == utf8Len:
                                     ch = utf8Ch.decode('utf8')
                                     f.write(Utilities.html_encode(ch))
-                                    utf8Ch = ""
+                                    utf8Ch = b""
                                     utf8Len = 0
                                 else:
                                     column -= 1 # will be incremented again later
                             else:
-                                f.write(ch)
+                                f.write(ch.decode())
                         column += 1
                     
                     pos += 1

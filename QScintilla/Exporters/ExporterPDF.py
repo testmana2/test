@@ -511,7 +511,8 @@ class ExporterPDF(ExporterBase):
                     self.pr.fontSize = PDF_FONTSIZE_DEFAULT
             
             try:
-                f = open(filename, "w")
+                # save file in win ansi using cp1250
+                f = open(filename, "w", encoding = "cp1250", errors = "backslashreplace")
                 
                 # initialise PDF rendering
                 ot = PDFObjectTracker(f)
@@ -527,20 +528,20 @@ class ExporterPDF(ExporterBase):
                     pos = 0
                     column = 0
                     utf8 = self.editor.isUtf8()
-                    utf8Ch = ""
+                    utf8Ch = b""
                     utf8Len = 0
                     
                     while pos < lengthDoc:
-                        ch = self.editor.rawCharAt(pos)
+                        ch = self.editor.byteAt(pos)
                         style = self.editor.styleAt(pos)
                         
-                        if ch == '\t':
+                        if ch == b'\t':
                             # expand tabs
                             ts = tabSize - (column % tabSize)
                             column += ts
                             self.pr.add(' ' * ts, style)
-                        elif ch == '\r' or ch == '\n':
-                            if ch == '\r' and self.editor.rawCharAt(pos + 1) == '\n':
+                        elif ch == b'\r' or ch == b'\n':
+                            if ch == b'\r' and self.editor.byteAt(pos + 1) == b'\n':
                                 pos += 1
                             # close and begin a newline...
                             self.pr.nextLine()
@@ -550,24 +551,22 @@ class ExporterPDF(ExporterBase):
                             if ord(ch) > 127 and utf8:
                                 utf8Ch += ch
                                 if utf8Len == 0:
-                                    if (ord(utf8Ch[0]) & 0xF0) == 0xF0:
+                                    if (utf8Ch[0] & 0xF0) == 0xF0:
                                         utf8Len = 4
-                                    elif (ord(utf8Ch[0]) & 0xE0) == 0xE0:
+                                    elif (utf8Ch[0] & 0xE0) == 0xE0:
                                         utf8Len = 3
-                                    elif (ord(utf8Ch[0]) & 0xC0) == 0xC0:
+                                    elif (utf8Ch[0] & 0xC0) == 0xC0:
                                         utf8Len = 2
                                     column -= 1 # will be incremented again later
                                 elif len(utf8Ch) == utf8Len:
-                                    # convert utf-8 character to win ansi using cp1250
-                                    ch = utf8Ch.decode('utf8')\
-                                               .encode('cp1250', 'replace')
+                                    ch = utf8Ch.decode('utf8')
                                     self.pr.add(ch, style)
-                                    utf8Ch = ""
+                                    utf8Ch = b""
                                     utf8Len = 0
                                 else:
                                     column -= 1 # will be incremented again later
                             else:
-                                self.pr.add(ch, style)
+                                self.pr.add(ch.decode(), style)
                             column += 1
                         
                         pos += 1

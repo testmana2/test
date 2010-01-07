@@ -67,7 +67,7 @@ class ExporterTEX(ExporterBase):
         else:
             while style > 0:
                 buf += chr(ord('a') + (style % self.CHARZ))
-                style /= self.CHARZ
+                style //= self.CHARZ
         return buf
     
     def __defineTexStyle(self, font, color, paper, file, istyle):
@@ -193,38 +193,56 @@ class ExporterTEX(ExporterBase):
                 
                 lineIdx = 0
                 pos = 0
+                utf8 = self.editor.isUtf8()
+                utf8Ch = b""
+                utf8Len = 0
                 
                 while pos < lengthDoc:
-                    ch = self.editor.rawCharAt(pos)
+                    ch = self.editor.byteAt(pos)
                     style = self.editor.styleAt(pos)
                     if style != styleCurrent:
                         # new style
                         f.write("}\n\\eric%s{" % self.__texStyle(style))
                         styleCurrent = style
                     
-                    if ch == '\t':
+                    if ch == b'\t':
                         ts = tabSize - (lineIdx % tabSize)
                         lineIdx += ts - 1
                         f.write("\\hspace*{%dem}" % ts)
-                    elif ch == '\\':
+                    elif ch == b'\\':
                         f.write("{\\textbackslash}")
-                    elif ch in ['>', '<', '@']:
-                        f.write("$%c$" % ch)
-                    elif ch in ['{', '}', '^', '_', '&', '$', '#', '%', '~']:
-                        f.write("\\%c" % ch)
-                    elif ch in ['\r', '\n']:
+                    elif ch in [b'>', b'<', b'@']:
+                        f.write("$%c$" % ch[0])
+                    elif ch in [b'{', b'}', b'^', b'_', b'&', b'$', b'#', b'%', b'~']:
+                        f.write("\\%c" % ch[0])
+                    elif ch in [b'\r', b'\n']:
                         lineIdx = -1    # because incremented below
-                        if ch == '\r' and self.editor.rawCharAt(pos + 1) == '\n':
+                        if ch == b'\r' and self.editor.byteAt(pos + 1) == b'\n':
                             pos += 1    # skip the LF
                         styleCurrent = self.editor.styleAt(pos + 1)
                         f.write("} \\\\\n\\eric%s{" % self.__texStyle(styleCurrent))
-                    elif ch == ' ':
-                        if self.editor.rawCharAt(pos + 1) == ' ':
+                    elif ch == b' ':
+                        if self.editor.byteAt(pos + 1) == b' ':
                             f.write("{\\hspace*{1em}}")
                         else:
                             f.write(' ')
                     else:
-                        f.write(ch)
+                        if ord(ch) > 127 and utf8:
+                            utf8Ch += ch
+                            if utf8Len == 0:
+                                if (utf8Ch[0] & 0xF0) == 0xF0:
+                                    utf8Len = 4
+                                elif (utf8Ch[0] & 0xE0) == 0xE0:
+                                    utf8Len = 3
+                                elif (utf8Ch[0] & 0xC0) == 0xC0:
+                                    utf8Len = 2
+                            elif len(utf8Ch) == utf8Len:
+                                ch = utf8Ch.decode('utf8')
+                                f.write(ch)
+                                utf8Ch = b""
+                                utf8Len = 0
+                        else:
+                            f.write(ch.decode())
                     lineIdx += 1
                     pos += 1
                 

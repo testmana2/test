@@ -194,39 +194,38 @@ class QsciScintillaCompat(QsciScintilla):
         multibyte characters.
         
         @param pos position in the text (integer)
-        @return raw character at the requested position or empty string, if the position
+        @return character at the requested position or empty string, if the position
             is negative or past the end of the document (string)
         """
-        ch = self.rawCharAt(pos)
+        ch = self.byteAt(pos)
         if ch and ord(ch) > 127 and self.isUtf8():
-            if (ord(ch[0]) & 0xF0) == 0xF0:
+            if (ch[0] & 0xF0) == 0xF0:
                 utf8Len = 4
-            elif (ord(ch[0]) & 0xE0) == 0xE0:
+            elif (ch[0] & 0xE0) == 0xE0:
                 utf8Len = 3
-            elif (ord(ch[0]) & 0xC0) == 0xC0:
+            elif (ch[0] & 0xC0) == 0xC0:
                 utf8Len = 2
             while len(ch) < utf8Len:
                 pos += 1
-                ch += self.rawCharAt(pos)
+                ch += self.byteAt(pos)
             return ch.decode('utf8')
         else:
-            return ch
+            return ch.decode()
     
-    def rawCharAt(self, pos):
+    def byteAt(self, pos):
         """
-        Public method to get the raw character at a position in the text.
+        Public method to get the raw character (bytes) at a position in the text.
         
         @param pos position in the text (integer)
-        @return raw character at the requested position or empty string, if the position
-            is negative or past the end of the document (string)
+        @return raw character at the requested position or empty bytes, if the position
+            is negative or past the end of the document (bytes)
         """
         char = self.SendScintilla(QsciScintilla.SCI_GETCHARAT, pos)
         if char == 0:
-            return ""
-        elif char < 0:
-            return chr(char + 256)
-        else:
-            return chr(char)
+            return b""
+        if char < 0:
+            char += 256
+        return bytes.fromhex("{0:02x}".format(char))
     
     def foldLevelAt(self, line):
         """
