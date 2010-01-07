@@ -816,6 +816,7 @@ class DebugClientBase(object):
                 
                 # generate a coverage object
                 if int(cov):
+                    from coverage import coverage
                     self.cover = coverage(auto_data = True, 
                         data_file = "{0}.coverage".format(os.path.splitext(covname)[0]))
                     self.cover.use_cache(True)
