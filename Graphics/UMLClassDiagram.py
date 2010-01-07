@@ -7,6 +7,8 @@
 Module implementing a dialog showing a UML like class diagram.
 """
 
+import itertools
+
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
@@ -184,7 +186,7 @@ class UMLClassDiagram(UMLDialog):
         # generations across height
         y = 10.0
         for currentWidth, currentHeight, generation in \
-                map(None, widths, heights, generations):
+                itertools.zip_longest(widths, heights, generations):
             x = 10.0
             # whiteSpace is the space between any two elements
             whiteSpace = (width - currentWidth - 20) / (len(generation) - 1.0 or 2.0)
