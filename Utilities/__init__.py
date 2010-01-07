@@ -887,7 +887,8 @@ def compile(file, codestring = ""):
     if not codestring:
         try:
             f = open(file)
-            codestring, encoding = decode(f.read())
+##            codestring, encoding = decode(f.read())
+            codestring = f.read()
             f.close()
         except IOError:
             return (False, None, None, None, None)

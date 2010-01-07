@@ -146,7 +146,7 @@ class SyntaxCheckerPlugin(QObject):
         """
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(\
-                e4App().getObject("Project").getProjectLanguage() == "Python")
+                e4App().getObject("Project").getProjectLanguage() == "Python3")
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
@@ -178,6 +178,7 @@ class SyntaxCheckerPlugin(QObject):
         """
         project = e4App().getObject("Project")
         project.saveAllScripts()
+        # TODO: make this dependant on configured extensions
         files = [os.path.join(project.ppath, file) \
             for file in project.pdata["SOURCES"] \
                 if file.endswith(".py") or \

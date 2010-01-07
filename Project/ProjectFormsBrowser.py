@@ -830,7 +830,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 return
             
             progress = QProgressDialog(self.trUtf8("Determining changed forms..."), 
-                "", 0, 100)
+                None, 0, 100)
             progress.setMinimumDuration(0)
             i = 0
             

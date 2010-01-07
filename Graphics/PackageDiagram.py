@@ -73,7 +73,7 @@ class PackageDiagram(UMLDialog):
         try:
             prog = 0
             progress = QProgressDialog(self.trUtf8("Parsing modules..."),
-                "", 0, tot, self)
+                None, 0, tot, self)
             progress.show()
             QApplication.processEvents()
             for module in modules:

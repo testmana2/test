@@ -733,7 +733,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.hooks["compileChangedResources"](self.project.pdata["RESOURCES"])
         else:
             progress = QProgressDialog(self.trUtf8("Determining changed resources..."), 
-                "", 0, 100)
+                None, 0, 100)
             progress.setMinimumDuration(0)
             i = 0
             

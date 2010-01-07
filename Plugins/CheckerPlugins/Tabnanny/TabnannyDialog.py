@@ -71,11 +71,13 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         if isinstance(fn, list):
             files = fn
         elif os.path.isdir(fn):
+            # TODO: make this dependant on configured extensions
             files = Utilities.direntries(fn, 1, '*.py', 0)
             files += Utilities.direntries(fn, 1, '*.pyw', 0)
             files += Utilities.direntries(fn, 1, '*.ptl', 0)
         else:
             files = [fn]
+        # TODO: make this dependant on configured extensions
         files = [f for f in files \
                     if f.endswith(".py") or f.endswith(".pyw") or f.endswith(".ptl")]
         
