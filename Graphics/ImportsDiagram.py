@@ -21,6 +21,7 @@ from . import GraphicsUtilities
 
 import Utilities.ModuleParser
 import Utilities
+import Preferences
 
 class ImportsDiagram(UMLDialog):
     """
@@ -66,10 +67,12 @@ class ImportsDiagram(UMLDialog):
         @return dictionary of modules contained in the package.
         """
         moduleDict = {}
-        # TODO: change this to use configured Python extensions
-        modules = glob.glob(Utilities.normjoinpath(self.packagePath,'*.py')) + \
-                  glob.glob(Utilities.normjoinpath(self.packagePath,'*.pyw')) + \
-                  glob.glob(Utilities.normjoinpath(self.packagePath,'*.ptl'))
+        modules = []
+        for ext in Preferences.getPython("PythonExtensions") + \
+                    Preferences.getPython("Python3Extensions"):
+            modules.extend(
+                glob.glob(Utilities.normjoinpath(self.packagePath, '*%s' % ext)))
+        
         tot = len(modules)
         try:
             prog = 0

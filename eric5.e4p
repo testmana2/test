@@ -1037,8 +1037,8 @@
     <Other>README-eric5-doc.txt</Other>
     <Other>Documentation/eric5-plugin.odt</Other>
     <Other>Documentation/eric5-plugin.pdf</Other>
-    <Other>APIs/Python/eric5.api</Other>
     <Other>APIs/Ruby/eric5.api</Other>
+    <Other>APIs/Python3/eric5.api</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
@@ -1216,7 +1216,7 @@
             <value>
               <list>
                 <string>Ruby</string>
-                <string>Python</string>
+                <string>Python3</string>
               </list>
             </value>
             <key>

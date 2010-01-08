@@ -10,7 +10,6 @@ Module implementing the Python debugger interface for the debug server.
 import sys
 import os
 import socket
-import subprocess
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QInputDialog, QMessageBox
@@ -42,7 +41,7 @@ def getRegistryData():
         else:
             exts.append(".%s" % ext)
     
-    if exts:
+    if exts and Preferences.getDebugger("PythonInterpreter"):
         return ["Python", ClientDefaultCapabilities, exts]
     else:
         return ["", 0, []]
@@ -144,12 +143,13 @@ class DebuggerInterfacePython(QObject):
         @return client process object (QProcess) and a flag to indicate
             a network connection (boolean)
         """
-        if Preferences.getDebugger("CustomPythonInterpreter"):
-            interpreter = Preferences.getDebugger("PythonInterpreter")
-            if interpreter == "":
-                interpreter = sys.executable
-        else:
-            interpreter = sys.executable
+        interpreter = Preferences.getDebugger("PythonInterpreter")
+        if interpreter == "":
+            QMessageBox.critical(None,
+                self.trUtf8("Start Debugger"),
+                self.trUtf8(\
+                    """<p>No Python2 interpreter configured.</p>"""))
+            return None, False
         
         debugClientType = Preferences.getDebugger("DebugClientType")
         if debugClientType == "standard":

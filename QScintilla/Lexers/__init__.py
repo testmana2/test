@@ -245,9 +245,9 @@ def getOpenFileFiltersList(includeAll = False, asString = False):
     """
     openFileFiltersList = [
         QApplication.translate('Lexers', 
-            'Python Files (*.py *.py3)'), 
+            'Python Files (*.py *.py2 *.py3)'), 
         QApplication.translate('Lexers', 
-            'Python GUI Files (*.pyw *.pyw3)'), 
+            'Python GUI Files (*.pyw *.pyw2 *.pyw3)'), 
         QApplication.translate('Lexers', 
             'Pyrex Files (*.pyx)'), 
         QApplication.translate('Lexers', 
@@ -344,13 +344,13 @@ def getSaveFileFiltersList(includeAll = False, asString = False):
     """
     saveFileFiltersList = [
         QApplication.translate('Lexers', 
-            "Python Files (*.py)"), 
+            "Python Files (*.py2)"), 
         QApplication.translate('Lexers', 
-            "Python3 Files (*.py3)"), 
+            "Python3 Files (*.py)"), 
         QApplication.translate('Lexers', 
-            "Python GUI Files (*.pyw)"), 
+            "Python GUI Files (*.pyw2)"), 
         QApplication.translate('Lexers', 
-            "Python3 GUI Files (*.pyw3)"), 
+            "Python3 GUI Files (*.pyw)"), 
         QApplication.translate('Lexers', 
             "Pyrex Files (*.pyx)"),
         QApplication.translate('Lexers', 

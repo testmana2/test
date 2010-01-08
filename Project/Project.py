@@ -159,19 +159,19 @@ class Project(QObject):
         self.ui = parent
         
         self.sourceExtensions = {
-            "Python"  : ['.py', '.ptl', '.pyw'],
-            "Python3" : ['.py', '.pyw'],
+            "Python"  : Preferences.getPython("PythonExtensions"),
+            "Python3" : Preferences.getPython("Python3Extensions"),
             "Ruby"    : ['.rb'],
             "Mixed"   : ['.py', '.ptl', '.rb']
         }
         
         self.dbgFilters = {
             "Python"  : self.trUtf8(\
-                         "Python Files (*.py);;"
-                         "Python GUI Files (*.pyw);;"),
+                         "Python Files (*.py2);;"
+                         "Python GUI Files (*.pyw2);;"),
             "Python3" : self.trUtf8(\
-                         "Python3 Files (*.py3);;"
-                         "Python3 GUI Files (*.pyw3);;"),
+                         "Python3 Files (*.py *.py3);;"
+                         "Python3 GUI Files (*.pyw *.pyw3);;"),
             "Ruby"    : self.trUtf8("Ruby Files (*.rb);;"),
         }
         

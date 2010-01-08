@@ -396,6 +396,13 @@ def installEric():
                 shutil.copy(apiName, apidir)
             except EnvironmentError:
                 print("Could not install '%s'." % apiName)
+        if progLanguage == "Python":
+            # copy Python3 API files to the same destination
+            for apiName in glob.glob(os.path.join("eric", "APIs", "Python3", "*.api")):
+                try:
+                    shutil.copy(apiName, apidir)
+                except EnvironmentError:
+                    print("Could not install '%s'." % apiName)
 
 
 def createInstallConfig():
@@ -437,6 +444,10 @@ def createConfig():
     for progLanguage in progLanguages:
         for apiName in glob.glob(os.path.join("eric", "APIs", progLanguage, "*.api")):
             apis.append(os.path.basename(apiName))
+        if progLanguage == "Python":
+            # treat Python3 API files the same as Python API files
+            for apiName in glob.glob(os.path.join("eric", "APIs", "Python3", "*.api")):
+                apis.append(os.path.basename(apiName))
     
     fn = 'eric5config.py'
     config = \

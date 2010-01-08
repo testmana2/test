@@ -17,6 +17,8 @@ from E4Gui.E4Action import E4Action
 
 from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import SyntaxCheckerDialog
 
+import Preferences
+
 # Start-Of-Header
 name = "Syntax Checker Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
@@ -178,12 +180,9 @@ class SyntaxCheckerPlugin(QObject):
         """
         project = e4App().getObject("Project")
         project.saveAllScripts()
-        # TODO: make this dependant on configured extensions
         files = [os.path.join(project.ppath, file) \
             for file in project.pdata["SOURCES"] \
-                if file.endswith(".py") or \
-                   file.endswith(".pyw") or \
-                   file.endswith(".ptl")]
+                if file.endswith(tuple(Preferences.getPython("Python3Extensions")))]
         
         self.__projectSyntaxCheckerDialog = SyntaxCheckerDialog()
         self.__projectSyntaxCheckerDialog.show()

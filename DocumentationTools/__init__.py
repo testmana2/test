@@ -8,7 +8,7 @@ Package implementing the source code documentation tools.
 """
 
 supportedExtensionsDictForApis = {
-    "Python"  : [".py", ".pyw", ".ptl"], 
-    "Python3" : [".py3", ".pyw3"], 
+    "Python"  : [".py2", ".pyw2", ".ptl"], 
+    "Python3" : [".py", ".pyw", ".py3", ".pyw3"], 
     "Ruby"    : [".rb"]
 }

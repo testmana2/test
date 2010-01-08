@@ -36,15 +36,25 @@
      <property name="title">
       <string>Python3 Interpreter for Debug Client</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" colspan="2">
+       <widget class="QCheckBox" name="customPyCheckBox">
+        <property name="toolTip">
+         <string>Select, whether a special Python interpreter should be used</string>
+        </property>
+        <property name="text">
+         <string>Custom Python Interpreter</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
        <widget class="QLineEdit" name="interpreterEdit">
         <property name="toolTip">
          <string>Enter the path of the Python3 interpreter to be used by the debug client.</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
+      <item row="1" column="1">
        <widget class="QPushButton" name="interpreterButton">
         <property name="toolTip">
          <string>Press to select the Python3 interpreter via a file selection dialog</string>
@@ -181,6 +191,7 @@
   </layout>
  </widget>
  <tabstops>
+  <tabstop>customPyCheckBox</tabstop>
   <tabstop>interpreterEdit</tabstop>
   <tabstop>interpreterButton</tabstop>
   <tabstop>standardButton</tabstop>

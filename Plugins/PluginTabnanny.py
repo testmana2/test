@@ -17,6 +17,8 @@ from E4Gui.E4Action import E4Action
 
 from CheckerPlugins.Tabnanny.TabnannyDialog import TabnannyDialog
 
+import Preferences
+
 # Start-Of-Header
 name = "Tabnanny Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
@@ -180,12 +182,9 @@ class TabnannyPlugin(QObject):
         """
         project = e4App().getObject("Project")
         project.saveAllScripts()
-        # TODO: make this dependant on configured extensions
         files = [os.path.join(project.ppath, file) \
             for file in project.pdata["SOURCES"] \
-                if file.endswith(".py") or \
-                   file.endswith(".pyw") or \
-                   file.endswith(".ptl")]
+                if file.endswith(tuple(Preferences.getPython("Python3Extensions")))]
         
         self.__projectTabnannyDialog = TabnannyDialog()
         self.__projectTabnannyDialog.show()

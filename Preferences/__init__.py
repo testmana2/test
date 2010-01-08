@@ -57,16 +57,18 @@ class Prefs(object):
         "ThreeStateBreakPoints": False,
         "SuppressClientExit" : False, 
         "BreakAlways" : False, 
-        "CustomPythonInterpreter" : False,
         "PythonInterpreter" : "",
         "Python3Interpreter" : "",
+        "CustomPython3Interpreter" : False,
         "RubyInterpreter" : "/usr/bin/ruby",
         "DebugClientType" : "standard",     # supported "standard", "threaded", "custom"
         "DebugClient" : "",
         "DebugClientType3" : "standard",    # supported "standard", "threaded", "custom"
         "DebugClient3" : "",
-        "PythonExtensions" : ".py .pyw .ptl", # space separated list of Python extensions
-        "Python3Extensions" : ".py3 .pyw3",   # space separated list of Python3 extensions
+        "PythonExtensions" : ".py2 .pyw2 .ptl", 
+                                            # space separated list of Python extensions
+        "Python3Extensions" : ".py .pyw .py3 .pyw3",   
+                                            # space separated list of Python3 extensions
         "DebugEnvironmentReplace" : False,
         "DebugEnvironment" : "",
         "PythonRedirect" : True,
@@ -885,7 +887,7 @@ def getDebugger(key, prefClass = Prefs):
     @return the requested debugger setting
     """
     if key in ["RemoteDbgEnabled", "PassiveDbgEnabled",
-                "CustomPythonInterpreter",
+                "CustomPython3Interpreter",
                 "AutomaticReset", "DebugEnvironmentReplace",
                 "PythonRedirect", "PythonNoEncoding", 
                 "Python3Redirect", "Python3NoEncoding", 

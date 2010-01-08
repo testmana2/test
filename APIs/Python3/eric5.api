@@ -220,13 +220,13 @@ eric5.DebugClients.Python.PyProfile.PyProfile.fix_frame_filename?4(frame)
 eric5.DebugClients.Python.PyProfile.PyProfile.save?4()
 eric5.DebugClients.Python.PyProfile.PyProfile.trace_dispatch_call?4(frame, t)
 eric5.DebugClients.Python.PyProfile.PyProfile?1(basename, timer=None, bias=None)
-eric5.DebugClients.Python.eric4dbgstub.debugger?7
-eric5.DebugClients.Python.eric4dbgstub.ericpath?7
-eric5.DebugClients.Python.eric4dbgstub.initDebugger?4(kind = "standard")
-eric5.DebugClients.Python.eric4dbgstub.modDir?7
-eric5.DebugClients.Python.eric4dbgstub.runcall?4(func, *args)
-eric5.DebugClients.Python.eric4dbgstub.setScriptname?4(name)
-eric5.DebugClients.Python.eric4dbgstub.startDebugger?4(enableTrace = True, exceptions = True, tracePython = False, redirect = True)
+eric5.DebugClients.Python.eric5dbgstub.debugger?7
+eric5.DebugClients.Python.eric5dbgstub.ericpath?7
+eric5.DebugClients.Python.eric5dbgstub.initDebugger?4(kind = "standard")
+eric5.DebugClients.Python.eric5dbgstub.modDir?7
+eric5.DebugClients.Python.eric5dbgstub.runcall?4(func, *args)
+eric5.DebugClients.Python.eric5dbgstub.setScriptname?4(name)
+eric5.DebugClients.Python.eric5dbgstub.startDebugger?4(enableTrace = True, exceptions = True, tracePython = False, redirect = True)
 eric5.DebugClients.Python.getpass.default_getpass?7
 eric5.DebugClients.Python.getpass.getpass?4(prompt='Password: ')
 eric5.DebugClients.Python.getpass.getuser?4()
@@ -306,7 +306,7 @@ eric5.DebugClients.Python3.DebugClientBase.DebugClientBase.fork?4()
 eric5.DebugClients.Python3.DebugClientBase.DebugClientBase.getCoding?4()
 eric5.DebugClients.Python3.DebugClientBase.DebugClientBase.getRunning?4()
 eric5.DebugClients.Python3.DebugClientBase.DebugClientBase.handleLine?4(line)
-eric5.DebugClients.Python3.DebugClientBase.DebugClientBase.input?4(prompt, echo)
+eric5.DebugClients.Python3.DebugClientBase.DebugClientBase.input?4(prompt)
 eric5.DebugClients.Python3.DebugClientBase.DebugClientBase.main?4()
 eric5.DebugClients.Python3.DebugClientBase.DebugClientBase.progTerminated?4(status)
 eric5.DebugClients.Python3.DebugClientBase.DebugClientBase.run_call?4(scriptname, func, *args)
@@ -423,13 +423,13 @@ eric5.DebugClients.Python3.PyProfile.PyProfile.fix_frame_filename?4(frame)
 eric5.DebugClients.Python3.PyProfile.PyProfile.save?4()
 eric5.DebugClients.Python3.PyProfile.PyProfile.trace_dispatch_call?4(frame, t)
 eric5.DebugClients.Python3.PyProfile.PyProfile?1(basename, timer = None, bias = None)
-eric5.DebugClients.Python3.eric4dbgstub.debugger?7
-eric5.DebugClients.Python3.eric4dbgstub.ericpath?7
-eric5.DebugClients.Python3.eric4dbgstub.initDebugger?4(kind = "standard")
-eric5.DebugClients.Python3.eric4dbgstub.modDir?7
-eric5.DebugClients.Python3.eric4dbgstub.runcall?4(func, *args)
-eric5.DebugClients.Python3.eric4dbgstub.setScriptname?4(name)
-eric5.DebugClients.Python3.eric4dbgstub.startDebugger?4(enableTrace = True, exceptions = True, tracePython = False, redirect = True)
+eric5.DebugClients.Python3.eric5dbgstub.debugger?7
+eric5.DebugClients.Python3.eric5dbgstub.ericpath?7
+eric5.DebugClients.Python3.eric5dbgstub.initDebugger?4(kind = "standard")
+eric5.DebugClients.Python3.eric5dbgstub.modDir?7
+eric5.DebugClients.Python3.eric5dbgstub.runcall?4(func, *args)
+eric5.DebugClients.Python3.eric5dbgstub.setScriptname?4(name)
+eric5.DebugClients.Python3.eric5dbgstub.startDebugger?4(enableTrace = True, exceptions = True, tracePython = False, redirect = True)
 eric5.DebugClients.Python3.getpass.default_getpass?7
 eric5.DebugClients.Python3.getpass.getpass?4(prompt = 'Password: ')
 eric5.DebugClients.Python3.getpass.getuser?4()
@@ -4466,6 +4466,7 @@ eric5.QScintilla.MiniEditor.MiniScintilla?1(parent = None)
 eric5.QScintilla.Printer.Printer.formatPage?4(painter, drawing, area, pagenr)
 eric5.QScintilla.Printer.Printer?1(mode = QPrinter.ScreenResolution)
 eric5.QScintilla.QsciScintillaCompat.QSCINTILLA_VERSION?4()
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.byteAt?4(pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.charAt?4(pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.clearAllIndicators?4(indicator)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.clearAlternateKeys?4()
@@ -4519,7 +4520,6 @@ eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.positionAfter?4(pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.positionBefore?4(pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.positionFromLineIndex?4(line, index)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.positionFromPoint?4(point)
-eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.rawCharAt?4(pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.replaceTarget?4(replaceStr)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.scrollVertical?4(lines)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setCurrentIndicator?4(indicator)

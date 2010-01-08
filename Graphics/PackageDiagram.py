@@ -21,6 +21,7 @@ from . import GraphicsUtilities
 
 import Utilities.ModuleParser
 import Utilities
+import Preferences
 
 class PackageDiagram(UMLDialog):
     """
@@ -63,8 +64,10 @@ class PackageDiagram(UMLDialog):
         
         @return dictionary of modules contained in the package.
         """
-        # TODO: change this to use configured extensions
-        supportedExt = ['*.py', '*.pyw', '*.ptl', '*.rb']
+        supportedExt = \
+            ['*%s' % ext for ext in Preferences.getPython("PythonExtensions")] + \
+            ['*%s' % ext for ext in Preferences.getPython("Python3Extensions")] + \
+            ['*.rb']
         
         moduleDict = {}
         modules = []

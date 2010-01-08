@@ -20,6 +20,7 @@ from .Ui_TabnannyDialog import Ui_TabnannyDialog
 
 from . import Tabnanny
 import Utilities
+import Preferences
 
 class TabnannyDialog(QDialog, Ui_TabnannyDialog):
     """
@@ -71,15 +72,13 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         if isinstance(fn, list):
             files = fn
         elif os.path.isdir(fn):
-            # TODO: make this dependant on configured extensions
-            files = Utilities.direntries(fn, 1, '*.py', 0)
-            files += Utilities.direntries(fn, 1, '*.pyw', 0)
-            files += Utilities.direntries(fn, 1, '*.ptl', 0)
+            files = []
+            for ext in Preferences.getPython("Python3Extensions"):
+                files.extend(Utilities.direntries(fn, 1, '*%s' % ext, 0))
         else:
             files = [fn]
-        # TODO: make this dependant on configured extensions
         files = [f for f in files \
-                    if f.endswith(".py") or f.endswith(".pyw") or f.endswith(".ptl")]
+                    if f.endswith(tuple(Preferences.getPython("Python3Extensions")))]
         
         if len(files) > 0:
             self.checkProgress.setMaximum(len(files))

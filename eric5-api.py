@@ -163,7 +163,7 @@ def main():
         sys.exit(1)
     
     if len(progLanguages) == 0:
-        progLanguages = ["Python"]
+        progLanguages = ["Python3"]
     
     for progLanguage in sorted(progLanguages):
         basename = ""

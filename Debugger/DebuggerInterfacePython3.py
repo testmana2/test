@@ -10,7 +10,6 @@ Module implementing the Python3 debugger interface for the debug server.
 import sys
 import os
 import socket
-import subprocess
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QInputDialog, QMessageBox
@@ -42,7 +41,7 @@ def getRegistryData():
         else:
             exts.append(".%s" % ext)
     
-    if exts and Preferences.getDebugger("Python3Interpreter"):
+    if exts:
         return ["Python3", ClientDefaultCapabilities, exts]
     else:
         return ["", 0, []]
@@ -144,13 +143,12 @@ class DebuggerInterfacePython3(QObject):
         @return client process object (QProcess) and a flag to indicate
             a network connection (boolean)
         """
-        interpreter = Preferences.getDebugger("Python3Interpreter")
-        if interpreter == "":
-            QMessageBox.critical(None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(\
-                    """<p>No Python3 interpreter configured.</p>"""))
-            return None, False
+        if Preferences.getDebugger("CustomPython3Interpreter"):
+            interpreter = Preferences.getDebugger("Python3Interpreter")
+            if interpreter == "":
+                interpreter = sys.executable
+        else:
+            interpreter = sys.executable
         
         debugClientType = Preferences.getDebugger("DebugClientType3")
         if debugClientType == "standard":

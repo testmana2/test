@@ -34,8 +34,6 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         self.debugClientCompleter = E4FileCompleter(self.debugClientEdit)
         
         # set initial values
-        self.customPyCheckBox.setChecked(\
-            Preferences.getDebugger("CustomPythonInterpreter"))
         self.interpreterEdit.setText(\
             Preferences.getDebugger("PythonInterpreter"))
         dct = Preferences.getDebugger("DebugClientType")
@@ -58,8 +56,6 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         """
         Public slot to save the Debugger Python configuration.
         """
-        Preferences.setDebugger("CustomPythonInterpreter", 
-            self.customPyCheckBox.isChecked())
         Preferences.setDebugger("PythonInterpreter", 
             self.interpreterEdit.text())
         if self.standardButton.isChecked():

@@ -19,6 +19,7 @@ from E4Gui.E4Application import e4App
 from .Ui_SyntaxCheckerDialog import Ui_SyntaxCheckerDialog
 
 import Utilities
+import Preferences
 
 class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
     """
@@ -77,15 +78,13 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         if isinstance(fn, list):
             files = fn
         elif os.path.isdir(fn):
-            # TODO: make this dependant on configured extensions
-            files = Utilities.direntries(fn, 1, '*.py', 0)
-            files += Utilities.direntries(fn, 1, '*.pyw', 0)
-            files += Utilities.direntries(fn, 1, '*.ptl', 0)
+            files = []
+            for ext in Preferences.getPython("Python3Extensions"):
+                files.extend(Utilities.direntries(fn, 1, '*%s' % ext, 0))
         else:
             files = [fn]
-        # TODO: make this dependant on configured extensions
         files = [f for f in files \
-                    if f.endswith(".py") or f.endswith(".pyw") or f.endswith(".ptl")]
+                    if f.endswith(tuple(Preferences.getPython("Python3Extensions")))]
         
         if (codestring and len(files) == 1) or \
            (not codestring and len(files) > 0):
