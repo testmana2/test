@@ -316,7 +316,10 @@ class E4ModelMenu(QMenu):
                 row = self.__model.rowCount(self.__root)
             else:
                 idx = self.index(act)
-                assert idx.isValid()
+                if not idx.isValid():
+                    QMenu.dropEvent(self, evt)
+                    return
+                
                 row = idx.row()
                 if self.__model.hasChildren(idx):
                     parentIndex = idx
@@ -327,6 +330,7 @@ class E4ModelMenu(QMenu):
             evt.acceptProposedAction()
             self.__model.dropMimeData(evt.mimeData(), evt.dropAction(), 
                                       row, 0, parentIndex)
+            self.close()
         
         QMenu.dropEvent(self, evt)
     

@@ -134,7 +134,7 @@ class HistoryManager(QWebHistoryInterface):
         
         @return reference to the list of history entries (list of HistoryEntry)
         """
-        return self.__history
+        return self.__history[:]
     
     def setHistory(self, history, loadedAndSorted = False):
         """

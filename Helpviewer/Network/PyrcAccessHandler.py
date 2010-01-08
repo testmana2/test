@@ -38,8 +38,8 @@ class PyrcAccessHandler(SchemeAccessHandler):
             imageBuffer = QBuffer()
             imageBuffer.open(QIODevice.ReadWrite)
             if pixmap.save(imageBuffer, "PNG"):
-                html.replace("IMAGE_BINARY_DATA_HERE", 
-                             str(imageBuffer.buffer().toBase64()))
+                html = html.replace("IMAGE_BINARY_DATA_HERE", 
+                             bytes(imageBuffer.buffer().toBase64()).decode())
             return NetworkReply(request, QByteArray(html), "text/html")
         
         return NetworkProtocolUnknownErrorReply("pyrc")
