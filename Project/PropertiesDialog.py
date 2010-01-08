@@ -186,7 +186,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             if ppath:
                 ppath = QDir(ppath).absolutePath()
                 ppath.append(QDir.separator())
-                fn.replace(ppath, "")
+                fn = fn.replace(ppath, "")
             self.mainscriptEdit.setText(Utilities.toNativeSeparators(fn))
         
     @pyqtSlot()

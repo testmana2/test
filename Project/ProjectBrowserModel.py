@@ -541,7 +541,7 @@ class ProjectBrowserModel(BrowserModel):
         @return reference to the item found
         """
         if QDir.isAbsolutePath(name):
-            name.replace(self.project.ppath + os.sep, "")
+            name = name.replace(self.project.ppath + os.sep, "")
         pathlist = re.split(r'/|\\', name)
         if len(pathlist) > 0:
             olditem = self.rootItem
