@@ -22,8 +22,7 @@ warnings.filterwarnings("error", category=SyntaxWarning)
 from codecs import BOM_UTF8, BOM_UTF16, BOM_UTF32
 
 from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, \
-    qVersion, PYQT_VERSION_STR
-from PyQt4.QtGui import QApplication
+    qVersion, PYQT_VERSION_STR, QCoreApplication
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 from Globals import isWindowsPlatform   # import this method into the Utilities namespace
@@ -37,212 +36,214 @@ import Preferences
 
 configDir = None
 
-coding_regexps = [
-    (2, re.compile(br'''coding[:=]\s*([-\w_.]+)''')), 
-    (1, re.compile(br'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')), 
-]
+##coding_regexps = [
+##    (2, re.compile(br'''coding[:=]\s*([-\w_.]+)''')), 
+##    (1, re.compile(br'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')), 
+##]
 supportedCodecs = ['utf-8', 
           'iso8859-1', 'iso8859-15', 'iso8859-2', 'iso8859-3', 
           'iso8859-4', 'iso8859-5', 'iso8859-6', 'iso8859-7', 
           'iso8859-8', 'iso8859-9', 'iso8859-10', 'iso8859-11', 
           'iso8859-13', 'iso8859-14', 'iso8859-16', 'latin-1', 
-          'koi8-r', 'koi8-u', 'utf-16', 
+          'koi8-r', 'koi8-u', 
+          'utf-16', 'utf-32', 
           'cp037', 'cp424', 'cp437', 'cp500', 'cp737', 'cp775', 
           'cp850', 'cp852', 'cp855', 'cp856', 'cp857', 'cp860', 
           'cp861', 'cp862', 'cp863', 'cp864', 'cp865', 'cp866', 
-          'cp874', 'cp875', 'cp932', 'cp949', 'cp950', 'cp1006', 
-          'cp1026', 'cp1140', 'cp1250', 'cp1251', 'cp1252', 
-          'cp1253', 'cp1254', 'cp1255', 'cp1256', 'cp1257', 
-          'cp1258', 
+          'cp869', 'cp874', 'cp875', 'cp932', 'cp949', 'cp950', 
+          'cp1006', 'cp1026', 'cp1140', 'cp1250', 'cp1251', 
+          'cp1252', 'cp1253', 'cp1254', 'cp1255', 'cp1256', 
+          'cp1257', 'cp1258', 
+          'gb2312', 'gb18030', 
           'ascii']
 
-class CodingError(Exception):
-    """
-    Class implementing an exception, which is raised, if a given coding is incorrect.
-    """
-    def __init__(self, coding):
-        """
-        Constructor
-        """
-        self.errorMessage = QApplication.translate("CodingError", 
-            "The coding '{0}' is wrong for the given text.").format(coding)
-        
-    def __repr__(self):
-        """
-        Private method returning a representation of the exception.
-        
-        @return string representing the error message
-        """
-        return str(self.errorMessage)
-        
-    def __str__(self):
-        """
-        Private method returning a string representation of the exception.
-        
-        @return string representing the error message
-        """
-        return str(self.errorMessage)
-    
-def get_coding(text):
-    """
-    Function to get the coding of a text.
-    
-    @param text text to inspect (string)
-    @return coding string
-    """
-    lines = text.splitlines()
-    for coding in coding_regexps:
-        coding_re = coding[1]
-        head = lines[:coding[0]]
-        for l in head:
-            m = coding_re.search(l)
-            if m:
-                return m.group(1).lower()
-    return None
-
-def decode(text):
-    """
-    Function to decode a text.
-    
-    @param text text to decode (string)
-    @return decoded text and encoding
-    """
-    try:
-        if text.startswith(BOM_UTF8):
-            # UTF-8 with BOM
-            return str(text[len(BOM_UTF8):], 'utf-8'), 'utf-8-bom'
-        elif text.startswith(BOM_UTF16):
-            # UTF-16 with BOM
-            return str(text[len(BOM_UTF16):], 'utf-16'), 'utf-16'
-        elif text.startswith(BOM_UTF32):
-            # UTF-32 with BOM
-            return str(text[len(BOM_UTF32):], 'utf-32'), 'utf-32'
-        coding = get_coding(text)
-        if coding:
-            coding = coding.decode()
-            return text.decode(coding), coding
-    except (UnicodeError, LookupError):
-        pass
-    
-    guess = None
-    if Preferences.getEditor("AdvancedEncodingDetection"):
-        # Try the universal character encoding detector
-        try:
-            import ThirdParty.CharDet.chardet
-            guess = ThirdParty.CharDet.chardet.detect(text)
-            if guess and guess['confidence'] > 0.95 and guess['encoding'] is not None:
-                codec = guess['encoding'].lower()
-                return str(text, codec), '%s-guessed' % codec
-        except (UnicodeError, LookupError):
-            pass
-        except ImportError:
-            pass
-    
-    # Try default encoding
-    try:
-        codec = Preferences.getEditor("DefaultEncoding")
-        return str(text, codec), '%s-default' % codec
-    except (UnicodeError, LookupError):
-        pass
-    
-    # Assume UTF-8
-    try:
-        return str(text, 'utf-8'), 'utf-8-guessed'
-    except (UnicodeError, LookupError):
-        pass
-    
-    if Preferences.getEditor("AdvancedEncodingDetection"):
-        # Use the guessed one even if confifence level is low
-        if guess and guess['encoding'] is not None:
-            try:
-                codec = guess['encoding'].lower()
-                return str(text, codec), '%s-guessed' % codec
-            except (UnicodeError, LookupError):
-                pass
-    
-    # Assume Latin-1 (behaviour before 3.7.1)
-    return str(text, "latin-1"), 'latin-1-guessed'
-
-def encode(text, orig_coding):
-    """
-    Function to encode a text.
-    
-    @param text text to encode (string)
-    @param orig_coding type of the original coding (string)
-    @return encoded text and encoding
-    """
-    if orig_coding == 'utf-8-bom':
-        return BOM_UTF8 + text.encode("utf-8"), 'utf-8-bom'
-    
-    # Try declared coding spec
-    coding = get_coding(text)
-    if coding:
-        try:
-            return text.encode(coding), coding
-        except (UnicodeError, LookupError):
-            # Error: Declared encoding is incorrect
-            raise CodingError(coding)
-    
-    if orig_coding and orig_coding.endswith('-selected'):
-        coding = orig_coding.replace("-selected", "")
-        try:
-            return text.encode(coding), coding
-        except (UnicodeError, LookupError):
-            pass
-    if orig_coding and orig_coding.endswith('-default'):
-        coding = orig_coding.replace("-default", "")
-        try:
-            return text.encode(coding), coding
-        except (UnicodeError, LookupError):
-            pass
-    if orig_coding and orig_coding.endswith('-guessed'):
-        coding = orig_coding.replace("-guessed", "")
-        try:
-            return text.encode(coding), coding
-        except (UnicodeError, LookupError):
-            pass
-    
-    # Try configured default
-    try:
-        codec = Preferences.getEditor("DefaultEncoding")
-        return text.encode(codec), codec
-    except (UnicodeError, LookupError):
-        pass
-    
-    # Try saving as ASCII
-    try:
-        return text.encode('ascii'), 'ascii'
-    except UnicodeError:
-        pass
-    
-    # Save as UTF-8 without BOM
-    return text.encode('utf-8'), 'utf-8'
-    
-def toUnicode(s):
-    """
-    Public method to convert a string to unicode.
-    
-    Various codes are tried until one converts the string without an error.
-    If all codecs fail, the string is returned unaltered.
-    
-    @param s string to be converted (string)
-    @return converted string (unicode)
-    """
-    if isinstance(s, str):
-        return s
-    
-    for codec in supportedCodecs:
-        try:
-            u = str(s, codec)
-            return u
-        except UnicodeError:
-            pass
-        except TypeError:
-            break
-    
-    # we didn't succeed
-    return s
-    
+##class CodingError(Exception):
+##    """
+##    Class implementing an exception, which is raised, if a given coding is incorrect.
+##    """
+##    def __init__(self, coding):
+##        """
+##        Constructor
+##        """
+##        self.errorMessage = QApplication.translate("CodingError", 
+##            "The coding '{0}' is wrong for the given text.").format(coding)
+##        
+##    def __repr__(self):
+##        """
+##        Private method returning a representation of the exception.
+##        
+##        @return string representing the error message
+##        """
+##        return str(self.errorMessage)
+##        
+##    def __str__(self):
+##        """
+##        Private method returning a string representation of the exception.
+##        
+##        @return string representing the error message
+##        """
+##        return str(self.errorMessage)
+##    
+##def get_coding(text):
+##    """
+##    Function to get the coding of a text.
+##    
+##    @param text text to inspect (string)
+##    @return coding string
+##    """
+##    lines = text.splitlines()
+##    for coding in coding_regexps:
+##        coding_re = coding[1]
+##        head = lines[:coding[0]]
+##        for l in head:
+##            m = coding_re.search(l)
+##            if m:
+##                return m.group(1).lower()
+##    return None
+##
+##def decode(text):
+##    """
+##    Function to decode a text.
+##    
+##    @param text text to decode (string)
+##    @return decoded text and encoding
+##    """
+##    try:
+##        if text.startswith(BOM_UTF8):
+##            # UTF-8 with BOM
+##            return str(text[len(BOM_UTF8):], 'utf-8'), 'utf-8-bom'
+##        elif text.startswith(BOM_UTF16):
+##            # UTF-16 with BOM
+##            return str(text[len(BOM_UTF16):], 'utf-16'), 'utf-16'
+##        elif text.startswith(BOM_UTF32):
+##            # UTF-32 with BOM
+##            return str(text[len(BOM_UTF32):], 'utf-32'), 'utf-32'
+##        coding = get_coding(text)
+##        if coding:
+##            coding = coding.decode()
+##            return text.decode(coding), coding
+##    except (UnicodeError, LookupError):
+##        pass
+##    
+##    guess = None
+##    if Preferences.getEditor("AdvancedEncodingDetection"):
+##        # Try the universal character encoding detector
+##        try:
+##            import ThirdParty.CharDet.chardet
+##            guess = ThirdParty.CharDet.chardet.detect(text)
+##            if guess and guess['confidence'] > 0.95 and guess['encoding'] is not None:
+##                codec = guess['encoding'].lower()
+##                return str(text, codec), '%s-guessed' % codec
+##        except (UnicodeError, LookupError):
+##            pass
+##        except ImportError:
+##            pass
+##    
+##    # Try default encoding
+##    try:
+##        codec = Preferences.getEditor("DefaultEncoding")
+##        return str(text, codec), '%s-default' % codec
+##    except (UnicodeError, LookupError):
+##        pass
+##    
+##    # Assume UTF-8
+##    try:
+##        return str(text, 'utf-8'), 'utf-8-guessed'
+##    except (UnicodeError, LookupError):
+##        pass
+##    
+##    if Preferences.getEditor("AdvancedEncodingDetection"):
+##        # Use the guessed one even if confifence level is low
+##        if guess and guess['encoding'] is not None:
+##            try:
+##                codec = guess['encoding'].lower()
+##                return str(text, codec), '%s-guessed' % codec
+##            except (UnicodeError, LookupError):
+##                pass
+##    
+##    # Assume Latin-1 (behaviour before 3.7.1)
+##    return str(text, "latin-1"), 'latin-1-guessed'
+##
+##def encode(text, orig_coding):
+##    """
+##    Function to encode a text.
+##    
+##    @param text text to encode (string)
+##    @param orig_coding type of the original coding (string)
+##    @return encoded text and encoding
+##    """
+##    if orig_coding == 'utf-8-bom':
+##        return BOM_UTF8 + text.encode("utf-8"), 'utf-8-bom'
+##    
+##    # Try declared coding spec
+##    coding = get_coding(text)
+##    if coding:
+##        try:
+##            return text.encode(coding), coding
+##        except (UnicodeError, LookupError):
+##            # Error: Declared encoding is incorrect
+##            raise CodingError(coding)
+##    
+##    if orig_coding and orig_coding.endswith('-selected'):
+##        coding = orig_coding.replace("-selected", "")
+##        try:
+##            return text.encode(coding), coding
+##        except (UnicodeError, LookupError):
+##            pass
+##    if orig_coding and orig_coding.endswith('-default'):
+##        coding = orig_coding.replace("-default", "")
+##        try:
+##            return text.encode(coding), coding
+##        except (UnicodeError, LookupError):
+##            pass
+##    if orig_coding and orig_coding.endswith('-guessed'):
+##        coding = orig_coding.replace("-guessed", "")
+##        try:
+##            return text.encode(coding), coding
+##        except (UnicodeError, LookupError):
+##            pass
+##    
+##    # Try configured default
+##    try:
+##        codec = Preferences.getEditor("DefaultEncoding")
+##        return text.encode(codec), codec
+##    except (UnicodeError, LookupError):
+##        pass
+##    
+##    # Try saving as ASCII
+##    try:
+##        return text.encode('ascii'), 'ascii'
+##    except UnicodeError:
+##        pass
+##    
+##    # Save as UTF-8 without BOM
+##    return text.encode('utf-8'), 'utf-8'
+##    
+##def toUnicode(s):
+##    """
+##    Public method to convert a string to unicode.
+##    
+##    Various codes are tried until one converts the string without an error.
+##    If all codecs fail, the string is returned unaltered.
+##    
+##    @param s string to be converted (string)
+##    @return converted string (unicode)
+##    """
+##    if isinstance(s, str):
+##        return s
+##    
+##    for codec in supportedCodecs:
+##        try:
+##            u = str(s, codec)
+##            return u
+##        except UnicodeError:
+##            pass
+##        except TypeError:
+##            break
+##    
+##    # we didn't succeed
+##    return s
+##    
 _escape = re.compile(eval(r'"[&<>\"\u0080-\uffff]"'))
 
 _escape_map = {
@@ -794,7 +795,7 @@ def getPercentReplacementHelp():
     
     @returns help text (string)
     """
-    return QApplication.translate("Utilities", 
+    return QCoreApplication.translate("Utilities", 
         """<p>You may use %-codes as placeholders in the string."""
         """ Supported codes are:"""
         """<table>"""
@@ -1089,9 +1090,9 @@ def generateVersionInfo(linesep = '\n'):
     info =  "Version Numbers:%s  Python %s%s" % \
         (linesep, sys.version.split()[0], linesep)
     info += "  Qt %s%s  PyQt4 %s%s" % \
-        (str(qVersion()), linesep, str(PYQT_VERSION_STR), linesep)
+        (qVersion(), linesep, PYQT_VERSION_STR, linesep)
     info += "  sip %s%s  QScintilla %s%s" % \
-        (str(sip_version_str), linesep, str(QSCINTILLA_VERSION_STR), linesep)
+        (sip_version_str, linesep, QSCINTILLA_VERSION_STR, linesep)
     info += "  %s %s%s" % \
         (Program, Version, linesep * 2)
     info += "Platform: %s%s%s%s" % \

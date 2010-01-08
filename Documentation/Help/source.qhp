@@ -35,7 +35,7 @@
               <section title="eric5.DebugClients.Python.DebugThread" ref="eric5.DebugClients.Python.DebugThread.html" />
               <section title="eric5.DebugClients.Python.FlexCompleter" ref="eric5.DebugClients.Python.FlexCompleter.html" />
               <section title="eric5.DebugClients.Python.PyProfile" ref="eric5.DebugClients.Python.PyProfile.html" />
-              <section title="eric5.DebugClients.Python.eric4dbgstub" ref="eric5.DebugClients.Python.eric4dbgstub.html" />
+              <section title="eric5.DebugClients.Python.eric5dbgstub" ref="eric5.DebugClients.Python.eric5dbgstub.html" />
               <section title="eric5.DebugClients.Python.getpass" ref="eric5.DebugClients.Python.getpass.html" />
             </section>
             <section title="eric5.DebugClients.Python3" ref="index-eric5.DebugClients.Python3.html">
@@ -52,7 +52,7 @@
               <section title="eric5.DebugClients.Python3.DebugThread" ref="eric5.DebugClients.Python3.DebugThread.html" />
               <section title="eric5.DebugClients.Python3.FlexCompleter" ref="eric5.DebugClients.Python3.FlexCompleter.html" />
               <section title="eric5.DebugClients.Python3.PyProfile" ref="eric5.DebugClients.Python3.PyProfile.html" />
-              <section title="eric5.DebugClients.Python3.eric4dbgstub" ref="eric5.DebugClients.Python3.eric4dbgstub.html" />
+              <section title="eric5.DebugClients.Python3.eric5dbgstub" ref="eric5.DebugClients.Python3.eric5dbgstub.html" />
               <section title="eric5.DebugClients.Python3.getpass" ref="eric5.DebugClients.Python3.getpass.html" />
             </section>
             <section title="eric5.DebugClients.Ruby" ref="index-eric5.DebugClients.Ruby.html">
@@ -1963,7 +1963,6 @@
       <keyword name="VariablesViewer.__showContextMenu" id="VariablesViewer.__showContextMenu" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.__showContextMenu" />
       <keyword name="VariablesViewer.__showDetails" id="VariablesViewer.__showDetails" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.__showDetails" />
       <keyword name="VariablesViewer.__showVariableDetails" id="VariablesViewer.__showVariableDetails" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.__showVariableDetails" />
-      <keyword name="VariablesViewer.__unicode" id="VariablesViewer.__unicode" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.__unicode" />
       <keyword name="VariablesViewer.collapseItem" id="VariablesViewer.collapseItem" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.collapseItem" />
       <keyword name="VariablesViewer.expandItem" id="VariablesViewer.expandItem" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.expandItem" />
       <keyword name="VariablesViewer.handleResetUI" id="VariablesViewer.handleResetUI" ref="eric5.Debugger.VariablesViewer.html#VariablesViewer.handleResetUI" />
@@ -2049,14 +2048,11 @@
       <keyword name="TemplatePropertiesDialog.on_helpButton_clicked" id="TemplatePropertiesDialog.on_helpButton_clicked" ref="eric5.Templates.TemplatePropertiesDialog.html#TemplatePropertiesDialog.on_helpButton_clicked" />
       <keyword name="TemplatePropertiesDialog.setSelectedGroup" id="TemplatePropertiesDialog.setSelectedGroup" ref="eric5.Templates.TemplatePropertiesDialog.html#TemplatePropertiesDialog.setSelectedGroup" />
       <keyword name="Utilities (Package)" id="Utilities (Package)" ref="index-eric5.Utilities.html" />
-      <keyword name="CodingError" id="CodingError" ref="eric5.Utilities.__init__.html#CodingError" />
       <keyword name="_percentReplacementFunc" id="_percentReplacementFunc" ref="eric5.Utilities.__init__.html#_percentReplacementFunc" />
       <keyword name="compactPath" id="compactPath" ref="eric5.Utilities.__init__.html#compactPath" />
       <keyword name="compile" id="compile" ref="eric5.Utilities.__init__.html#compile" />
       <keyword name="convertLineEnds" id="convertLineEnds" ref="eric5.Utilities.__init__.html#convertLineEnds" />
-      <keyword name="decode" id="decode" ref="eric5.Utilities.__init__.html#decode" />
       <keyword name="direntries" id="direntries" ref="eric5.Utilities.__init__.html#direntries" />
-      <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />
       <keyword name="escape_entities" id="escape_entities" ref="eric5.Utilities.__init__.html#escape_entities" />
       <keyword name="escape_uentities" id="escape_uentities" ref="eric5.Utilities.__init__.html#escape_uentities" />
       <keyword name="fromNativeSeparators" id="fromNativeSeparators" ref="eric5.Utilities.__init__.html#fromNativeSeparators" />
@@ -2076,7 +2072,6 @@
       <keyword name="getPythonVersion" id="getPythonVersion" ref="eric5.Utilities.__init__.html#getPythonVersion" />
       <keyword name="getTestFileName" id="getTestFileName" ref="eric5.Utilities.__init__.html#getTestFileName" />
       <keyword name="getUserName" id="getUserName" ref="eric5.Utilities.__init__.html#getUserName" />
-      <keyword name="get_coding" id="get_coding" ref="eric5.Utilities.__init__.html#get_coding" />
       <keyword name="hasEnvironmentEntry" id="hasEnvironmentEntry" ref="eric5.Utilities.__init__.html#hasEnvironmentEntry" />
       <keyword name="html_encode" id="html_encode" ref="eric5.Utilities.__init__.html#html_encode" />
       <keyword name="html_uencode" id="html_uencode" ref="eric5.Utilities.__init__.html#html_uencode" />
@@ -2101,12 +2096,8 @@
       <keyword name="setConfigDir" id="setConfigDir" ref="eric5.Utilities.__init__.html#setConfigDir" />
       <keyword name="splitPath" id="splitPath" ref="eric5.Utilities.__init__.html#splitPath" />
       <keyword name="toNativeSeparators" id="toNativeSeparators" ref="eric5.Utilities.__init__.html#toNativeSeparators" />
-      <keyword name="toUnicode" id="toUnicode" ref="eric5.Utilities.__init__.html#toUnicode" />
       <keyword name="win32_GetUserName" id="win32_GetUserName" ref="eric5.Utilities.__init__.html#win32_GetUserName" />
       <keyword name="win32_Kill" id="win32_Kill" ref="eric5.Utilities.__init__.html#win32_Kill" />
-      <keyword name="CodingError (Constructor)" id="CodingError (Constructor)" ref="eric5.Utilities.__init__.html#CodingError.__init__" />
-      <keyword name="CodingError.__repr__" id="CodingError.__repr__" ref="eric5.Utilities.__init__.html#CodingError.__repr__" />
-      <keyword name="CodingError.__str__" id="CodingError.__str__" ref="eric5.Utilities.__init__.html#CodingError.__str__" />
       <keyword name="Startup (Module)" id="Startup (Module)" ref="eric5.Utilities.Startup.html" />
       <keyword name="handleArgs" id="handleArgs" ref="eric5.Utilities.Startup.html#handleArgs" />
       <keyword name="initializeResourceSearchPath" id="initializeResourceSearchPath" ref="eric5.Utilities.Startup.html#initializeResourceSearchPath" />
@@ -5125,6 +5116,7 @@
       <keyword name="QSCINTILLA_VERSION" id="QSCINTILLA_VERSION" ref="eric5.QScintilla.QsciScintillaCompat.html#QSCINTILLA_VERSION" />
       <keyword name="QsciScintillaCompat (Constructor)" id="QsciScintillaCompat (Constructor)" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__init__" />
       <keyword name="QsciScintillaCompat.__doSearchTarget" id="QsciScintillaCompat.__doSearchTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__doSearchTarget" />
+      <keyword name="QsciScintillaCompat.byteAt" id="QsciScintillaCompat.byteAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.byteAt" />
       <keyword name="QsciScintillaCompat.charAt" id="QsciScintillaCompat.charAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.charAt" />
       <keyword name="QsciScintillaCompat.clearAllIndicators" id="QsciScintillaCompat.clearAllIndicators" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.clearAllIndicators" />
       <keyword name="QsciScintillaCompat.clearAlternateKeys" id="QsciScintillaCompat.clearAlternateKeys" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.clearAlternateKeys" />
@@ -5178,7 +5170,6 @@
       <keyword name="QsciScintillaCompat.positionBefore" id="QsciScintillaCompat.positionBefore" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.positionBefore" />
       <keyword name="QsciScintillaCompat.positionFromLineIndex" id="QsciScintillaCompat.positionFromLineIndex" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.positionFromLineIndex" />
       <keyword name="QsciScintillaCompat.positionFromPoint" id="QsciScintillaCompat.positionFromPoint" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.positionFromPoint" />
-      <keyword name="QsciScintillaCompat.rawCharAt" id="QsciScintillaCompat.rawCharAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.rawCharAt" />
       <keyword name="QsciScintillaCompat.replaceTarget" id="QsciScintillaCompat.replaceTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.replaceTarget" />
       <keyword name="QsciScintillaCompat.scrollVertical" id="QsciScintillaCompat.scrollVertical" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.scrollVertical" />
       <keyword name="QsciScintillaCompat.setCurrentIndicator" id="QsciScintillaCompat.setCurrentIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCurrentIndicator" />
@@ -5996,11 +5987,6 @@
       <keyword name="Completer.attr_matches" id="Completer.attr_matches" ref="eric5.DebugClients.Python.FlexCompleter.html#Completer.attr_matches" />
       <keyword name="Completer.complete" id="Completer.complete" ref="eric5.DebugClients.Python.FlexCompleter.html#Completer.complete" />
       <keyword name="Completer.global_matches" id="Completer.global_matches" ref="eric5.DebugClients.Python.FlexCompleter.html#Completer.global_matches" />
-      <keyword name="eric4dbgstub (Module)" id="eric4dbgstub (Module)" ref="eric5.DebugClients.Python.eric4dbgstub.html" />
-      <keyword name="initDebugger" id="initDebugger" ref="eric5.DebugClients.Python.eric4dbgstub.html#initDebugger" />
-      <keyword name="runcall" id="runcall" ref="eric5.DebugClients.Python.eric4dbgstub.html#runcall" />
-      <keyword name="setScriptname" id="setScriptname" ref="eric5.DebugClients.Python.eric4dbgstub.html#setScriptname" />
-      <keyword name="startDebugger" id="startDebugger" ref="eric5.DebugClients.Python.eric4dbgstub.html#startDebugger" />
       <keyword name="AsyncIO (Module)" id="AsyncIO (Module)" ref="eric5.DebugClients.Python.AsyncIO.html" />
       <keyword name="AsyncIO" id="AsyncIO" ref="eric5.DebugClients.Python.AsyncIO.html#AsyncIO" />
       <keyword name="AsyncIO (Constructor)" id="AsyncIO (Constructor)" ref="eric5.DebugClients.Python.AsyncIO.html#AsyncIO.__init__" />
@@ -6098,6 +6084,11 @@
       <keyword name="DebugClientThreads.set_quit" id="DebugClientThreads.set_quit" ref="eric5.DebugClients.Python.DebugClientThreads.html#DebugClientThreads.set_quit" />
       <keyword name="DebugClientThreads.threadTerminated" id="DebugClientThreads.threadTerminated" ref="eric5.DebugClients.Python.DebugClientThreads.html#DebugClientThreads.threadTerminated" />
       <keyword name="DebugClientThreads.unlockClient" id="DebugClientThreads.unlockClient" ref="eric5.DebugClients.Python.DebugClientThreads.html#DebugClientThreads.unlockClient" />
+      <keyword name="eric5dbgstub (Module)" id="eric5dbgstub (Module)" ref="eric5.DebugClients.Python.eric5dbgstub.html" />
+      <keyword name="initDebugger" id="initDebugger" ref="eric5.DebugClients.Python.eric5dbgstub.html#initDebugger" />
+      <keyword name="runcall" id="runcall" ref="eric5.DebugClients.Python.eric5dbgstub.html#runcall" />
+      <keyword name="setScriptname" id="setScriptname" ref="eric5.DebugClients.Python.eric5dbgstub.html#setScriptname" />
+      <keyword name="startDebugger" id="startDebugger" ref="eric5.DebugClients.Python.eric5dbgstub.html#startDebugger" />
       <keyword name="DebugClientBase (Module)" id="DebugClientBase (Module)" ref="eric5.DebugClients.Python.DebugClientBase.html" />
       <keyword name="DebugClientBase" id="DebugClientBase" ref="eric5.DebugClients.Python.DebugClientBase.html#DebugClientBase" />
       <keyword name="DebugClientClose" id="DebugClientClose" ref="eric5.DebugClients.Python.DebugClientBase.html#DebugClientClose" />
@@ -6162,11 +6153,6 @@
       <keyword name="Completer.attr_matches" id="Completer.attr_matches" ref="eric5.DebugClients.Python3.FlexCompleter.html#Completer.attr_matches" />
       <keyword name="Completer.complete" id="Completer.complete" ref="eric5.DebugClients.Python3.FlexCompleter.html#Completer.complete" />
       <keyword name="Completer.global_matches" id="Completer.global_matches" ref="eric5.DebugClients.Python3.FlexCompleter.html#Completer.global_matches" />
-      <keyword name="eric4dbgstub (Module)" id="eric4dbgstub (Module)" ref="eric5.DebugClients.Python3.eric4dbgstub.html" />
-      <keyword name="initDebugger" id="initDebugger" ref="eric5.DebugClients.Python3.eric4dbgstub.html#initDebugger" />
-      <keyword name="runcall" id="runcall" ref="eric5.DebugClients.Python3.eric4dbgstub.html#runcall" />
-      <keyword name="setScriptname" id="setScriptname" ref="eric5.DebugClients.Python3.eric4dbgstub.html#setScriptname" />
-      <keyword name="startDebugger" id="startDebugger" ref="eric5.DebugClients.Python3.eric4dbgstub.html#startDebugger" />
       <keyword name="AsyncIO (Module)" id="AsyncIO (Module)" ref="eric5.DebugClients.Python3.AsyncIO.html" />
       <keyword name="AsyncIO" id="AsyncIO" ref="eric5.DebugClients.Python3.AsyncIO.html#AsyncIO" />
       <keyword name="AsyncIO (Constructor)" id="AsyncIO (Constructor)" ref="eric5.DebugClients.Python3.AsyncIO.html#AsyncIO.__init__" />
@@ -6265,6 +6251,11 @@
       <keyword name="DebugClientThreads.set_quit" id="DebugClientThreads.set_quit" ref="eric5.DebugClients.Python3.DebugClientThreads.html#DebugClientThreads.set_quit" />
       <keyword name="DebugClientThreads.threadTerminated" id="DebugClientThreads.threadTerminated" ref="eric5.DebugClients.Python3.DebugClientThreads.html#DebugClientThreads.threadTerminated" />
       <keyword name="DebugClientThreads.unlockClient" id="DebugClientThreads.unlockClient" ref="eric5.DebugClients.Python3.DebugClientThreads.html#DebugClientThreads.unlockClient" />
+      <keyword name="eric5dbgstub (Module)" id="eric5dbgstub (Module)" ref="eric5.DebugClients.Python3.eric5dbgstub.html" />
+      <keyword name="initDebugger" id="initDebugger" ref="eric5.DebugClients.Python3.eric5dbgstub.html#initDebugger" />
+      <keyword name="runcall" id="runcall" ref="eric5.DebugClients.Python3.eric5dbgstub.html#runcall" />
+      <keyword name="setScriptname" id="setScriptname" ref="eric5.DebugClients.Python3.eric5dbgstub.html#setScriptname" />
+      <keyword name="startDebugger" id="startDebugger" ref="eric5.DebugClients.Python3.eric5dbgstub.html#startDebugger" />
       <keyword name="DebugClientBase (Module)" id="DebugClientBase (Module)" ref="eric5.DebugClients.Python3.DebugClientBase.html" />
       <keyword name="DebugClientBase" id="DebugClientBase" ref="eric5.DebugClients.Python3.DebugClientBase.html#DebugClientBase" />
       <keyword name="DebugClientClose" id="DebugClientClose" ref="eric5.DebugClients.Python3.DebugClientBase.html#DebugClientClose" />
@@ -8854,6 +8845,7 @@
       <file>eric5.DebugClients.Python.FlexCompleter.html</file>
       <file>eric5.DebugClients.Python.PyProfile.html</file>
       <file>eric5.DebugClients.Python.eric4dbgstub.html</file>
+      <file>eric5.DebugClients.Python.eric5dbgstub.html</file>
       <file>eric5.DebugClients.Python.getpass.html</file>
       <file>eric5.DebugClients.Python3.AsyncFile.html</file>
       <file>eric5.DebugClients.Python3.AsyncIO.html</file>
@@ -8869,6 +8861,7 @@
       <file>eric5.DebugClients.Python3.FlexCompleter.html</file>
       <file>eric5.DebugClients.Python3.PyProfile.html</file>
       <file>eric5.DebugClients.Python3.eric4dbgstub.html</file>
+      <file>eric5.DebugClients.Python3.eric5dbgstub.html</file>
       <file>eric5.DebugClients.Python3.getpass.html</file>
       <file>eric5.DebugClients.Ruby.AsyncFile.html</file>
       <file>eric5.DebugClients.Ruby.AsyncIO.html</file>

@@ -5111,7 +5111,6 @@ eric5.Utilities.ClassBrowsers.rbclbr._getnext?8
 eric5.Utilities.ClassBrowsers.rbclbr._modules?8
 eric5.Utilities.ClassBrowsers.rbclbr.readmodule_ex?4(module, path=[])
 eric5.Utilities.ClassBrowsers.readmodule?4(module, path=[], isPyFile = False)
-eric5.Utilities.CodingError?1(coding)
 eric5.Utilities.ModuleParser.Attribute?1(module, name, file, lineno)
 eric5.Utilities.ModuleParser.Class.addAttribute?4(name, attr)
 eric5.Utilities.ModuleParser.Class.addDescription?4(description)
@@ -5180,14 +5179,11 @@ eric5.Utilities._escape?8
 eric5.Utilities._escape_map?8
 eric5.Utilities._percentReplacementFunc?5(matchobj)
 eric5.Utilities._uescape?8
-eric5.Utilities.coding_regexps?7
 eric5.Utilities.compactPath?4(path, width, measure = len)
 eric5.Utilities.compile?4(file, codestring = "")
 eric5.Utilities.configDir?7
 eric5.Utilities.convertLineEnds?4(text, eol)
-eric5.Utilities.decode?4(text)
 eric5.Utilities.direntries?4(path, filesonly=False, pattern=None, followsymlinks=True, checkStop=None)
-eric5.Utilities.encode?4(text, orig_coding)
 eric5.Utilities.escape_entities?4(m, map=_escape_map)
 eric5.Utilities.escape_uentities?4(m)
 eric5.Utilities.fromNativeSeparators?4(path)
@@ -5207,7 +5203,6 @@ eric5.Utilities.getPythonModulesDirectory?4()
 eric5.Utilities.getPythonVersion?4()
 eric5.Utilities.getTestFileName?4(fn)
 eric5.Utilities.getUserName?4()
-eric5.Utilities.get_coding?4(text)
 eric5.Utilities.hasEnvironmentEntry?4(key)
 eric5.Utilities.html_encode?4(text, pattern=_escape)
 eric5.Utilities.html_uencode?4(text, pattern=_uescape)
@@ -5233,7 +5228,6 @@ eric5.Utilities.setConfigDir?4(d)
 eric5.Utilities.splitPath?4(name)
 eric5.Utilities.supportedCodecs?7
 eric5.Utilities.toNativeSeparators?4(path)
-eric5.Utilities.toUnicode?4(s)
 eric5.Utilities.uic.compileUiDir?4(dir, recurse = False, map = None, **compileUi_args)
 eric5.Utilities.uic.compileUiFiles?4(dir, recurse = False)
 eric5.Utilities.uic.compile_ui?4(ui_dir, ui_file)
