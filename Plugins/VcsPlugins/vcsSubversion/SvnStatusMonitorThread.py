@@ -75,10 +75,10 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                 states = {}
                 for line in output.splitlines():
                     if self.rx_status1.exactMatch(line):
-                        flags = str(self.rx_status1.cap(1))
+                        flags = self.rx_status1.cap(1)
                         path = self.rx_status1.cap(3).strip()
                     elif self.rx_status2.exactMatch(line):
-                        flags = str(self.rx_status2.cap(1))
+                        flags = self.rx_status2.cap(1)
                         path = self.rx_status2.cap(5).strip()
                     else:
                         continue

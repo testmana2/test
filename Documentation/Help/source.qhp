@@ -2966,12 +2966,10 @@
       <keyword name="XMLHandlerBase.endFloat" id="XMLHandlerBase.endFloat" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endFloat" />
       <keyword name="XMLHandlerBase.endInt" id="XMLHandlerBase.endInt" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endInt" />
       <keyword name="XMLHandlerBase.endList" id="XMLHandlerBase.endList" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endList" />
-      <keyword name="XMLHandlerBase.endLong" id="XMLHandlerBase.endLong" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endLong" />
       <keyword name="XMLHandlerBase.endNone" id="XMLHandlerBase.endNone" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endNone" />
       <keyword name="XMLHandlerBase.endPickle" id="XMLHandlerBase.endPickle" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endPickle" />
       <keyword name="XMLHandlerBase.endString" id="XMLHandlerBase.endString" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endString" />
       <keyword name="XMLHandlerBase.endTuple" id="XMLHandlerBase.endTuple" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endTuple" />
-      <keyword name="XMLHandlerBase.endUnicode" id="XMLHandlerBase.endUnicode" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endUnicode" />
       <keyword name="XMLHandlerBase.startDictionary" id="XMLHandlerBase.startDictionary" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startDictionary" />
       <keyword name="XMLHandlerBase.startDocument" id="XMLHandlerBase.startDocument" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startDocument" />
       <keyword name="XMLHandlerBase.startElement" id="XMLHandlerBase.startElement" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startElement" />
@@ -3697,6 +3695,7 @@
       <keyword name="BrowserSysPathItem (Constructor)" id="BrowserSysPathItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem.__init__" />
       <keyword name="EmailDialog (Module)" id="EmailDialog (Module)" ref="eric5.UI.EmailDialog.html" />
       <keyword name="EmailDialog" id="EmailDialog" ref="eric5.UI.EmailDialog.html#EmailDialog" />
+      <keyword name="_encode_base64" id="_encode_base64" ref="eric5.UI.EmailDialog.html#_encode_base64" />
       <keyword name="EmailDialog (Constructor)" id="EmailDialog (Constructor)" ref="eric5.UI.EmailDialog.html#EmailDialog.__init__" />
       <keyword name="EmailDialog.__createMultipartMail" id="EmailDialog.__createMultipartMail" ref="eric5.UI.EmailDialog.html#EmailDialog.__createMultipartMail" />
       <keyword name="EmailDialog.__createSimpleMail" id="EmailDialog.__createSimpleMail" ref="eric5.UI.EmailDialog.html#EmailDialog.__createSimpleMail" />
@@ -4536,6 +4535,7 @@
       <keyword name="CreateDialogCodeDialog.__className" id="CreateDialogCodeDialog.__className" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.__className" />
       <keyword name="CreateDialogCodeDialog.__generateCode" id="CreateDialogCodeDialog.__generateCode" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.__generateCode" />
       <keyword name="CreateDialogCodeDialog.__generatePythonCode" id="CreateDialogCodeDialog.__generatePythonCode" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.__generatePythonCode" />
+      <keyword name="CreateDialogCodeDialog.__mapType" id="CreateDialogCodeDialog.__mapType" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.__mapType" />
       <keyword name="CreateDialogCodeDialog.__objectName" id="CreateDialogCodeDialog.__objectName" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.__objectName" />
       <keyword name="CreateDialogCodeDialog.__signatures" id="CreateDialogCodeDialog.__signatures" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.__signatures" />
       <keyword name="CreateDialogCodeDialog.__updateSlotsModel" id="CreateDialogCodeDialog.__updateSlotsModel" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.__updateSlotsModel" />
@@ -8844,7 +8844,6 @@
       <file>eric5.DebugClients.Python.DebugThread.html</file>
       <file>eric5.DebugClients.Python.FlexCompleter.html</file>
       <file>eric5.DebugClients.Python.PyProfile.html</file>
-      <file>eric5.DebugClients.Python.eric4dbgstub.html</file>
       <file>eric5.DebugClients.Python.eric5dbgstub.html</file>
       <file>eric5.DebugClients.Python.getpass.html</file>
       <file>eric5.DebugClients.Python3.AsyncFile.html</file>
@@ -8860,7 +8859,6 @@
       <file>eric5.DebugClients.Python3.DebugThread.html</file>
       <file>eric5.DebugClients.Python3.FlexCompleter.html</file>
       <file>eric5.DebugClients.Python3.PyProfile.html</file>
-      <file>eric5.DebugClients.Python3.eric4dbgstub.html</file>
       <file>eric5.DebugClients.Python3.eric5dbgstub.html</file>
       <file>eric5.DebugClients.Python3.getpass.html</file>
       <file>eric5.DebugClients.Ruby.AsyncFile.html</file>

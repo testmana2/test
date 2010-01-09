@@ -112,6 +112,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                     self.trUtf8("The project is not version controlled."))
                 self.vcsInfoButton.hide()
         else:
+            self.languageComboBox.setCurrentIndex(\
+                self.languageComboBox.findText("Python3"))
             self.projectTypeComboBox.setCurrentIndex(\
                 self.projectTypeComboBox.findText(projectTypes["Qt4"]))
             hp = os.getcwd()

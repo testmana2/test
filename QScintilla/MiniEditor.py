@@ -2078,7 +2078,7 @@ class MiniEditor(QMainWindow):
         key = 'Scintilla/%s/style0/font' % self.lexer_.language()
         fdesc = Preferences.Prefs.settings.value(key)
         if fdesc is not None:
-            font = QFont(fdesc[0], int(str(fdesc[1])))
+            font = QFont(fdesc[0], int(fdesc[1]))
             self.lexer_.setDefaultFont(font)
         self.lexer_.readSettings(Preferences.Prefs.settings, "Scintilla")
         

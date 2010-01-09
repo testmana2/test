@@ -157,7 +157,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         """
         path = ""
         if self.__reply.hasRawHeader("Content-Disposition"):
-            header = str(self.__reply.rawHeader("Content-Disposition"))
+            header = bytes(self.__reply.rawHeader("Content-Disposition")).decode()
             if header:
                 pos = header.find("filename=")
                 if pos != -1:

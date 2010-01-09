@@ -190,7 +190,7 @@ class AdBlockManager(QObject):
         if not self.__loaded:
             return
         
-        Preferences.setHelp("AdBlockEnabled", int(self.__enabled))
+        Preferences.setHelp("AdBlockEnabled", self.__enabled)
         subscriptions = []
         for subscription in self.__subscriptions:
             if subscription is None:
@@ -208,7 +208,7 @@ class AdBlockManager(QObject):
         
         self.__loaded = True
         
-        self.__enabled = bool(Preferences.getHelp("AdBlockEnabled"))
+        self.__enabled = Preferences.getHelp("AdBlockEnabled")
         
         defaultSubscriptions = []
         defaultSubscriptions.append(
@@ -220,7 +220,7 @@ class AdBlockManager(QObject):
         if len(subscriptions) == 0:
             subscriptions = defaultSubscriptions
         for subscription in subscriptions:
-            url = QUrl.fromEncoded(subscription)
+            url = QUrl.fromEncoded(subscription.encode())
             adBlockSubscription = AdBlockSubscription(url, self)
             self.connect(adBlockSubscription, SIGNAL("rulesChanged()"), 
                          self, SIGNAL("rulesChanged()"))

@@ -58,19 +58,19 @@ def sbsdiff(a, b, linenumberwidth = 4):
     
     for (ln1, l1), (ln2, l2), flag in _mdiff(a, b, None, None, IS_CHARACTER_JUNK):
         if not flag:
-            yield ('e', str(linenumberformat % ln1), l1,
-                        str(linenumberformat % ln2), l2)
+            yield ('e', linenumberformat % ln1, l1,
+                        linenumberformat % ln2, l2)
             continue
         if ln2 == "" and l2 == "\n":
-            yield ('d', str(linenumberformat % ln1), removeMarkers(l1),
+            yield ('d', linenumberformat % ln1, removeMarkers(l1),
                         emptylineno, '\n')
             continue
         if ln1 == "" and l1 == "\n":
             yield ('i', emptylineno, '\n',
-                        str(linenumberformat % ln2), removeMarkers(l2))
+                        linenumberformat % ln2, removeMarkers(l2))
             continue
-        yield ('r', str(linenumberformat % ln1), l1,
-                    str(linenumberformat % ln2), l2)
+        yield ('r', linenumberformat % ln1, l1,
+                    linenumberformat % ln2, l2)
 
 class CompareDialog(QWidget, Ui_CompareDialog):
     """
@@ -221,7 +221,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         filename1 = Utilities.toNativeSeparators(self.file1Edit.text())
         try:
-            f1 = open(filename1, "rb")
+            f1 = open(filename1, "r")
             lines1 = f1.readlines()
             f1.close()
         except IOError:
@@ -233,7 +233,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
 
         filename2 = Utilities.toNativeSeparators(self.file2Edit.text())
         try:
-            f2 = open(filename2, "rb")
+            f2 = open(filename2, "r")
             lines2 = f2.readlines()
             f2.close()
         except IOError:

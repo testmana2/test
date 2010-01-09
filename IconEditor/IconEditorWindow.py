@@ -128,7 +128,7 @@ class IconEditorWindow(QMainWindow):
         readFormats = QImageReader.supportedImageFormats()
         for readFormat in readFormats:
             try:
-                inputFormats.append(filters[str(readFormat)])
+                inputFormats.append(filters[bytes(readFormat).decode()])
             except KeyError:
                 pass
         inputFormats.sort()
@@ -139,7 +139,7 @@ class IconEditorWindow(QMainWindow):
         writeFormats = QImageWriter.supportedImageFormats()
         for writeFormat in writeFormats:
             try:
-                outputFormats.append(filters[str(writeFormat)])
+                outputFormats.append(filters[bytes(writeFormat).decode()])
             except KeyError:
                 pass
         outputFormats.sort()

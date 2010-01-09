@@ -140,7 +140,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         if self.rColor.isChecked():
             code += 'getColor('
             if self.eColor.currentText():
-                col = str(self.eColor.currentText())
+                col = self.eColor.currentText()
                 if col.startswith('#'):
                     code += 'QColor("%s")' % col
                 else:
@@ -176,7 +176,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                         (self.sRed.value(), self.sGreen.value(), self.sBlue.value(),
                         self.sAlpha.value())
                 else:
-                    code += str(self.eRGB.text())
+                    code += self.eRGB.text()
                 code += ')%s' % os.linesep
         
         return code

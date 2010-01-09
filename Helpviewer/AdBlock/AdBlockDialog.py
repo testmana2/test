@@ -99,7 +99,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
                              self.__removeSubscription)
         act.setEnabled(idx.isValid())
     
-    def addCustomRule(self, rule):
+    def addCustomRule(self, rule = ""):
         """
         Public slot to add a custom AdBlock rule.
         

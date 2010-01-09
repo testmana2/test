@@ -324,7 +324,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             filemtime1 = ""
         try:
-            f1 = open(self.filename1, "rb")
+            f1 = open(self.filename1, "r")
             lines1 = f1.readlines()
             f1.close()
         except IOError:
@@ -340,7 +340,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             filemtime2 = ""
         try:
-            f2 = open(self.filename2, "rb")
+            f2 = open(self.filename2, "r")
             lines2 = f2.readlines()
             f2.close()
         except IOError:
@@ -477,7 +477,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         self.__selectFile(self.file1Edit)
 
-    @pyqtSlot("")
+    @pyqtSlot()
     def on_file2Button_clicked(self):
         """
         Private slot to handle the file 2 file selection button press.

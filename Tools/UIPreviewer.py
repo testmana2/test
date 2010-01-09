@@ -426,7 +426,7 @@ class UIPreviewer(QMainWindow):
         filters = ""
         formats = QImageWriter.supportedImageFormats()
         for format in formats:
-            filters = "%s*.%s " % (filters, str(format).lower())
+            filters = "%s*.%s " % (filters, bytes(format).decode().lower())
         filter = self.trUtf8("Images ({0})").format(filters[:-1])
         
         fname = QFileDialog.getSaveFileName(\

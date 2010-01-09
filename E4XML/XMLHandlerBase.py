@@ -23,19 +23,21 @@ class XMLHandlerBase(ContentHandler):
         """
         self.startDocumentSpecific = None
         
+        # TODO: add support for bytes, bytearray, set, frozenset
         self.elements = {
             'none'    : (self.defaultStartElement, self.endNone),
             'int'     : (self.defaultStartElement, self.endInt),
-            'long'    : (self.defaultStartElement, self.endLong),
             'float'   : (self.defaultStartElement, self.endFloat),
             'complex' : (self.defaultStartElement, self.endComplex),
             'bool'    : (self.defaultStartElement, self.endBool),
             'string'  : (self.defaultStartElement, self.endString),
-            'unicode' : (self.defaultStartElement, self.endUnicode),
             'tuple'   : (self.startTuple, self.endTuple),
             'list'    : (self.startList, self.endList),
             'dict'    : (self.startDictionary, self.endDictionary),
             'pickle'  : (self.startPickle, self.endPickle),
+            # for backward compatibility
+            'long'    : (self.defaultStartElement, self.endInt),
+            'unicode' : (self.defaultStartElement, self.endString),
         }
         
         self.buffer = ""
@@ -152,12 +154,6 @@ class XMLHandlerBase(ContentHandler):
         """
         self.stack.append(int(self.buffer.strip()))
         
-    def endLong(self):
-        """
-        Handler method for the "long" end tag.
-        """
-        self.stack.append(int(self.buffer.strip()))
-        
     def endBool(self):
         """
         Handler method for the "bool" end tag.
@@ -187,13 +183,13 @@ class XMLHandlerBase(ContentHandler):
         s = str(self.utf8_to_code(self.unescape(self.buffer)))
         self.stack.append(s)
         
-    def endUnicode(self):
-        """
-        Handler method for the "unicode" end tag.
-        """
-        u = str(self.utf8_to_code(self.unescape(self.buffer)))
-        self.stack.append(u)
-        
+##    def endUnicode(self):
+##        """
+##        Handler method for the "unicode" end tag.
+##        """
+##        u = str(self.utf8_to_code(self.unescape(self.buffer)))
+##        self.stack.append(u)
+##        
     def startList(self, attrs):
         """
         Handler method for the "list" start tag.

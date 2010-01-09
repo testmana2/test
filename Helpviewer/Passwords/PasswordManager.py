@@ -492,8 +492,8 @@ class PasswordManager(QObject):
         """
         args = set()
         
-        dataStr = str(data)
-        boundaryStr = str(boundary)
+        dataStr = bytes(data).decode()
+        boundaryStr = bytes(boundary).decode()
         
         parts = dataStr.split(boundaryStr + "\r\n")
         for part in parts:

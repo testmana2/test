@@ -5175,7 +5175,7 @@ class UserInterface(QMainWindow):
             for window, i in zip(self.windows, list(range(len(self.windows)))):
                 if window is not None:
                     self.profiles[self.currentProfile][2][i] = \
-                        str(window.saveGeometry())
+                        bytes(window.saveGeometry())
 
         self.browser.saveToplevelDirs()
         

@@ -370,7 +370,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 text = f.read()
                 lines = text.splitlines()
                 f.close()
-            except IOError:
+            except (IOError, UnicodeError):
                 progress += 1
                 self.findProgress.setValue(progress)
                 continue
@@ -409,6 +409,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             
             progress += 1
             self.findProgress.setValue(progress)
+        
+        if not files:
+            self.findProgress.setMaximum(1)
+            self.findProgress.setValue(1)
         
         self.findProgressLabel.setPath("")
         

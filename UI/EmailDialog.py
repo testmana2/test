@@ -22,7 +22,23 @@ from .Info import Program, Version, BugAddress, FeatureAddress
 import Preferences
 import Utilities
 
+############################################################
+## This code is to work around a bug in the Python email  ##
+## package for Image and Audio mime messages.             ##
+############################################################
+from base64 import b64encode as _bencode
+def _encode_base64(msg):
+    """Encode the message's payload in Base64.
+
+    Also, add an appropriate Content-Transfer-Encoding header.
+    """
+    orig = msg.get_payload()
+    encdata = str(_bencode(orig), "ASCII")
+    msg.set_payload(encdata)
+    msg['Content-Transfer-Encoding'] = 'base64'
+
 from email import encoders
+encoders.encode_base64 = _encode_base64     # WORK AROUND: implement our corrected encoder
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
@@ -195,19 +211,19 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         msg.epilogue = ''
         
         # second part is intended to be read
-        att = MIMEText(msgtext, 
+        att = MIMEText(msgtext.encode(), 
                        _charset = Preferences.getSystem("StringEncoding"))
         msg.attach(att)
         
         # next parts contain the attachments
         for index in range(self.attachments.topLevelItemCount()):
             itm = self.attachments.topLevelItem(index)
-            maintype, subtype = str(itm.text(1)).split('/', 1)
+            maintype, subtype = itm.text(1).split('/', 1)
             fname = itm.text(0)
             name = os.path.basename(fname)
             
             if maintype == 'text':
-                att = MIMEText(open(fname, 'rb').read(), _subtype = subtype)
+                att = MIMEText(open(fname, 'r').read(), _subtype = subtype)
             elif maintype == 'image':
                 att = MIMEImage(open(fname, 'rb').read(), _subtype = subtype)
             elif maintype == 'audio':
@@ -229,7 +245,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @return flag indicating success (boolean)
         """
         try:
-            server = smtplib.SMTP(str(Preferences.getUser("MailServer")), 
+            server = smtplib.SMTP(Preferences.getUser("MailServer"), 
                                   Preferences.getUser("MailServerPort"))
             if Preferences.getUser("MailServerUseTLS"):
                 server.starttls()

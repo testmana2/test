@@ -205,7 +205,7 @@ class DebugClientBase(object):
         
         self.compile_command = codeop.CommandCompiler()
         
-        self.coding_re = re.compile(r"coding[:=]\s*([-\w_.]+)")
+        self.coding_re = re.compile(br"coding[:=]\s*([-\w_.]+)")
         self.defaultCoding = 'utf-8'
         self.__coding = self.defaultCoding
         self.noencoding = False
@@ -241,7 +241,7 @@ class DebugClientBase(object):
             for l in text.splitlines():
                 m = self.coding_re.search(l)
                 if m:
-                    self.__coding = m.group(1)
+                    self.__coding = m.group(1).decode()
                     return
             self.__coding = default
 

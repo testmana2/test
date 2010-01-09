@@ -261,7 +261,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         if Utilities.isWindowsPlatform():
             if filename.startswith("/"):
                 filename = filename[1:]
-        ver = str(url.encodedQuery())
+        ver = bytes(url.encodedQuery()).decode()
         v1 = ver.split('_')[0]
         v2 = ver.split('_')[1]
         if v1 == "" or v2 == "":

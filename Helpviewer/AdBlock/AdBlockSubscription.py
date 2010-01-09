@@ -87,9 +87,9 @@ class AdBlockSubscription(QObject):
         url.setPath("subscribe")
         
         queryItems = []
-        queryItems.append(("location", str(self.__location)))
+        queryItems.append(("location", bytes(self.__location).decode()))
         queryItems.append(("title", self.__title))
-        if self.__enabled:
+        if not self.__enabled:
             queryItems.append(("enabled", "false"))
         if self.__lastUpdate.isValid():
             queryItems.append(("lastUpdate", 

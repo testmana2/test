@@ -2,15 +2,15 @@
 
 import sys
 
-import eric4dbgstub
+import eric5dbgstub
 
 def main():
     print("Hello World!")
     sys.exit(0)
     
 if __name__ == "__main__":
-    if eric4dbgstub.initDebugger("standard"):
-# or   if eric4dbgstub.initDebugger("threads"):
-        eric4dbgstub.debugger.startDebugger()
+    if eric5dbgstub.initDebugger("standard"):
+# or   if eric5dbgstub.initDebugger("threads"):
+        eric5dbgstub.debugger.startDebugger()
 
     main()

@@ -352,7 +352,7 @@ class OpenSearchEngine(QObject):
             imageBuffer.open(QIODevice.ReadWrite)
             if image.save(imageBuffer, "PNG"):
                 self._imageUrl = "data:image/png;base64,{0}"\
-                                .format(str(imageBuffer.buffer().toBase64()))
+                                .format(bytes(imageBuffer.buffer().toBase64()).decode())
         
         self.__image = QImage(image)
         self.emit(SIGNAL("imageChanged()"))

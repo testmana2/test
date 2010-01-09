@@ -717,8 +717,6 @@ class Subversion(VersionControl):
                 args.append('--message')
                 args.append('Moving {0} to {1}'.format(name, target))
                 target = self.__svnURL(target)
-            else:
-                target = str(target)
             args.append(name)
             args.append(target)
             
@@ -1087,10 +1085,10 @@ class Subversion(VersionControl):
                         str(process.readAllStandardOutput(), ioEncoding, 'replace')
                     for line in output.splitlines():
                         if self.rx_status1.exactMatch(line):
-                            flags = str(self.rx_status1.cap(1))
+                            flags = self.rx_status1.cap(1)
                             path = self.rx_status1.cap(5).strip()
                         elif self.rx_status2.exactMatch(line):
-                            flags = str(self.rx_status2.cap(1))
+                            flags = self.rx_status2.cap(1)
                             path = self.rx_status2.cap(2).strip()
                         else:
                             continue

@@ -522,7 +522,6 @@ class VariablesViewer(QTreeWidget):
 ##        @param s the string to be converted (string)
 ##        @return unicode representation of s (unicode object)
 ##        """
-##        # TODO: remove me
 ##        if isinstance(s, type("")):
 ##            return s
 ##        try:

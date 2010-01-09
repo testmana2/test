@@ -33,7 +33,7 @@ class XMLWriterBase(object):
             type((1,)) : self._write_tuple,
             type([])   : self._write_list,
             type({})   : self._write_dictionary,
-            # TODO: add set
+            # TODO: add set, frozenset, bytes, bytearray
         }
         
         self.NEWPARA = chr(0x2029)
@@ -114,15 +114,6 @@ class XMLWriterBase(object):
         """
         self._write('%s<int>%s</int>' % ("  " * indent, value))
         
-    def _write_long(self, value, indent):
-        """
-        Protected method to dump a LongType object.
-        
-        @param value value to be dumped (long)
-        @param indent indentation level for prettier output (integer)
-        """
-        self._write('%s<long>%s</long>' % ("  " * indent, value))
-        
     def _write_bool(self, value, indent):
         """
         Protected method to dump a BooleanType object.
@@ -159,16 +150,6 @@ class XMLWriterBase(object):
         @param indent indentation level for prettier output (integer)
         """
         self._write('%s<string>%s</string>' % ("  " * indent, self.escape(value)))
-        
-    # TODO: add method for writing bytes
-    def _write_unicode(self, value, indent):
-        """
-        Protected method to dump an UnicodeType object.
-        
-        @param value value to be dumped (unicode)
-        @param indent indentation level for prettier output (integer)
-        """
-        self._write('%s<unicode>%s</unicode>' % ("  " * indent, self.escape(value)))
         
     def _write_tuple(self, value, indent):
         """

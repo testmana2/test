@@ -1102,7 +1102,7 @@ def setUI(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key == "ViewProfiles":
-        prefClass.settings.setValue("UI/" + key, value)#str(value))
+        prefClass.settings.setValue("UI/" + key, value)
     elif key == "LogStdErrColour":
         prefClass.settings.setValue("UI/" + key, value.name())
     elif key == "ProxyPassword":

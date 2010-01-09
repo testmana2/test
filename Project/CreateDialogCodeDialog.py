@@ -157,12 +157,36 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             for meth in list(cls.methods.values()):
                 if meth.name.startswith("on_"):
                     if meth.pyqtSignature is not None:
-                        sig = ", ".join([str(QMetaObject.normalizedType(t)) \
+                        sig = ", ".join([bytes(QMetaObject.normalizedType(t)).decode() \
                                          for t in meth.pyqtSignature.split(",")])
                         signatures.append("%s(%s)" % (meth.name, sig))
                     else:
                         signatures.append(meth.name)
         return signatures
+        
+    def __mapType(self, type_):
+        """
+        Private method to map a type as reported by Qt's meta object to the 
+        correct Python type.
+        
+        @param type_ type as reported by Qt (QByteArray)
+        @return mapped Python type (string)
+        """
+        mapped = bytes(type_).decode()
+        
+        # 1. check for const
+        mapped = mapped.replace("const ", "")
+        
+        # 2. check fpr *
+        mapped = mapped.replace("*", "")
+        
+        # 3. replace QString and QStringList
+        mapped = mapped.replace("QStringList", "list").replace("QString", "str")
+        
+        # 4. replace double by float
+        mapped = mapped.replace("double", "float")
+        
+        return mapped
         
     def __updateSlotsModel(self):
         """
@@ -206,7 +230,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                 continue
                         
                         pyqtSignature = \
-                            ", ".join([str(t) for t in metaMethod.parameterTypes()])
+                            ", ".join([self.__mapType(t) 
+                                       for t in metaMethod.parameterTypes()])
                         
                         parameterNames = metaMethod.parameterNames()
                         if parameterNames:
@@ -214,7 +239,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                 if not parameterNames[index]:
                                     parameterNames[index] = QByteArray("p%d" % index)
                         methNamesSig = \
-                            ", ".join([str(n) for n in parameterNames])
+                            ", ".join([bytes(n).decode() for n in parameterNames])
                         
                         if methNamesSig:
                             pythonSignature = "on_%s_%s(self, %s)" % \
@@ -350,7 +375,6 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 if child.checkState() and \
                    child.flags() & Qt.ItemFlags(Qt.ItemIsUserCheckable):
                     slotsCode.append('%s\n' % indentStr)
-                    # TODO: adjust to new signal/slot mechanism
                     slotsCode.append('%s@pyqtSlot(%s)\n' % \
                         (indentStr, child.data(pyqtSignatureRole)))
                     slotsCode.append('%sdef %s:\n' % \
