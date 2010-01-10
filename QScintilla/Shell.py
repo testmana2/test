@@ -21,7 +21,6 @@ from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
 
 import Preferences
 import UI.PixmapCache
-##from Utilities import toUnicode
 
 from Debugger.DebugClientCapabilities import HasShell, HasCompleter
 
@@ -576,7 +575,6 @@ class Shell(QsciScintillaCompat):
         """
         line, col = self.__getEndPos()
         self.setCursorPosition(line, col)
-##        self.insert(toUnicode(s))
         self.insert(s)
         self.prline, self.prcol = self.getCursorPosition()
         self.ensureCursorVisible()

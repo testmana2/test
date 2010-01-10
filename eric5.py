@@ -120,7 +120,7 @@ def excepthook(excType, excValue, tracebackobj):
     sections = [separator, timeString, separator, errmsg, separator, tbinfo]
     msg = '\n'.join(sections)
     try:
-        f = open(logFile, "w")
+        f = open(logFile, "w", encoding = "utf-8")
         f.write(msg)
         f.write(versionInfo)
         f.close()

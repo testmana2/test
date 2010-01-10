@@ -189,17 +189,22 @@ def readmodule_ex(module, path=[]):
     f = None
     fullpath = list(path)
     f, file, (suff, mode, type) = ClassBrowsers.find_module(module, fullpath)
+    if f:
+        f.close()
     if type not in SUPPORTED_TYPES:
         # not CORBA IDL source, can't do anything with this module
-        f.close()
         _modules[module] = dict
         return dict
 
     _modules[module] = dict
     classstack = [] # stack of (class, indent) pairs
     indent = 0
-    src = f.read()
-    f.close()
+    try:
+        src = Utilities.readEncodedFile(file)[0]
+    except (UnicodeError, IOError):
+        # can't do anything with this module
+        _modules[module] = dict
+        return dict
 
     lineno, last_lineno_pos = 1, 0
     i = 0

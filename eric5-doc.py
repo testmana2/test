@@ -261,7 +261,7 @@ def main():
 
     if stylesheetFile:
         try:
-            sf = open(stylesheetFile, "r")
+            sf = open(stylesheetFile, "r", encoding = "utf-8")
             stylesheet = sf.read()
             sf.close()
         except IOError:
@@ -370,7 +370,7 @@ def main():
                 
                 # generate output
                 try:
-                    out = open(f, "w")
+                    out = open(f, "w", encoding = "utf-8")
                     out.write(doc)
                     out.close()
                 except IOError as v:

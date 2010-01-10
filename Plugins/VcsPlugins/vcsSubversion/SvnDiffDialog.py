@@ -307,7 +307,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "w")
+            f = open(fname, "w", encoding = "utf-8")
             f.write(self.contents.toPlainText())
             f.close()
         except IOError as why:

@@ -145,7 +145,7 @@ class ExporterTEX(ExporterBase):
             styleIsUsed[QsciScintilla.STYLE_DEFAULT] = True
             
             try:
-                f = open(filename, "w")
+                f = open(filename, "w", encoding = "utf-8")
                 
                 f.write("\\documentclass[a4paper]{article}\n")
                 f.write("\\usepackage[a4paper,margin=1.5cm]{geometry}\n")

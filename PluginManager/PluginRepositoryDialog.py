@@ -250,7 +250,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if os.path.exists(self.pluginRepositoryFile):
             self.__repositoryMissing = False
             try:
-                f = open(self.pluginRepositoryFile, "r")
+                f = open(self.pluginRepositoryFile, "r", encoding = "utf-8")
                 line = f.readline()
                 dtdLine = f.readline()
                 f.close()
@@ -274,7 +274,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 parser.setErrorHandler(eh)
                 
                 try:
-                    f = open(self.pluginRepositoryFile, "r")
+                    f = open(self.pluginRepositoryFile, "r", encoding = "utf-8")
                     try:
                         try:
                             parser.parse(f)

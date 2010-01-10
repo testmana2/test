@@ -711,7 +711,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             return False
         
         try:
-            pf = open(pfile, "w")
+            pf = open(pfile, "w", encoding = "utf-8")
             for key, list in sections:
                 if len(list) > 0:
                     pf.write('%s = ' % key)

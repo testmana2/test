@@ -205,7 +205,7 @@ class MultiProject(QObject):
                     return False
                 f = gzip.open(fn, "r")
             else:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -276,7 +276,7 @@ class MultiProject(QObject):
                     return False
                 f = gzip.open(fn, "r")
             else:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             try:
                 try:
                     parser.parse(f)
@@ -353,7 +353,7 @@ class MultiProject(QObject):
                     return False
                 f = gzip.open(fn, "w")
             else:
-                f = open(fn, "w")
+                f = open(fn, "w", encoding = "utf-8")
             
             MultiProjectWriter(self, f, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()

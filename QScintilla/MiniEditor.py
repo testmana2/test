@@ -27,6 +27,7 @@ import UI.Config
 
 from .Printer import Printer
 
+import Utilities
 import Preferences
 
 class MiniScintilla(QsciScintillaCompat):
@@ -107,6 +108,7 @@ class MiniEditor(QMainWindow):
         self.__textEdit.clearSearchIndicators = self.clearSearchIndicators
         self.__textEdit.setSearchIndicator = self.setSearchIndicator
         self.__textEdit.setUtf8(True)
+        self.encoding = Preferences.getEditor("DefaultEncoding")
         
         self.srHistory = {
             "search" : [], 
@@ -1506,26 +1508,19 @@ class MiniEditor(QMainWindow):
         @param fileName name of the file to load (string)
         @param filetype type of the source file (string)
         """
-        try:
-            f = open(fileName, 'r')
-        except IOError as why:
-            QMessageBox.critical(self, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
-                            '<p>Reason: {1}</p>')
-                    .format(fileName, str(why)))
-            return
-        
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
+        
         try:
-            txt = f.read()
-        except UnicodeDecodeError as why:
+            txt, self.encoding = Utilities.readEncodedFile(fileName)
+        except (UnicodeDecodeError, IOError) as why:
             QApplication.restoreOverrideCursor()
             QMessageBox.critical(self, self.trUtf8('Open File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
                             '<p>Reason: {1}</p>')
                     .format(fileName, str(why)))
+            QApplication.restoreOverrideCursor()
             return
-        f.close()
+        
         self.__textEdit.setText(txt)
         QApplication.restoreOverrideCursor()
         
@@ -1547,19 +1542,21 @@ class MiniEditor(QMainWindow):
         @param fileName name of the file to save to (string)
         @return flag indicating success (boolean)
         """
-        file = QFile(fileName)
-        if not file.open(QFile.WriteOnly):
-            QMessageBox.warning(self, self.trUtf8("eric5 Mini Editor"),
-                                 self.trUtf8("Cannot write file {0}:\n{1}.")\
-                                 .format(fileName, file.errorString()))
+        QApplication.setOverrideCursor(Qt.WaitCursor)
+        txt = self.__textEdit.text()
+        try:
+            self.encoding = Utilities.writeEncodedFile(fileName, txt, self.encoding)
+        except (IOError, Utilities.CodingError, UnicodeError) as why:
+            QMessageBox.critical(self, self.trUtf8('Save File'),
+                self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
+                            'Reason: {1}</p>')
+                    .format(fileName, str(why)))
+            QApplication.restoreOverrideCursor()
         
             self.__checkActions()
             
             return False
         
-        out = QTextStream(file)
-        QApplication.setOverrideCursor(Qt.WaitCursor)
-        out << self.__textEdit.text()
         QApplication.restoreOverrideCursor()
         self.emit(SIGNAL("editorSaved"))
         
@@ -1589,11 +1586,7 @@ class MiniEditor(QMainWindow):
         self.__textEdit.setModified(False)
         self.setWindowModified(False)
         
-        try:
-            line0 = self.readLine0(self.__curFile)
-        except IOError:
-            line0 = ""
-        self.setLanguage(self.__bindName(line0))
+        self.setLanguage(self.__bindName(self.__textEdit.text(0)))
 
     def getFileName(self):
         """
@@ -2142,41 +2135,6 @@ class MiniEditor(QMainWindow):
                 bindName = "dummy.d"
                 self.filetype = "D"
         return bindName
-    
-    def readLine0(self, fn, createIt = False):
-        """
-        Public slot to read the first line from a file.
-        
-        @param fn filename to read from (string)
-        @param createIt flag indicating the creation of a new file, if the given
-            one doesn't exist (boolean)
-        @return first line of the file (string)
-        """
-        if not fn:
-            return ""
-        
-        try:
-            if createIt and not os.path.exists(fn):
-                f = open(fn, "w")
-                f.close()
-            f = open(fn, 'r')
-        except IOError as why:
-            QMessageBox.critical(self, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
-                            '<p>Reason: {1}</p>')
-                    .format(fn, str(why)))
-            raise
-        
-        try:
-            txt = f.readline()
-        except UnicodeDecodeError as why:
-            QMessageBox.critical(self, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
-                            '<p>Reason: {1}</p>')
-                    .format(fn, str(why)))
-            raise
-        f.close()
-        return txt
     
     ##########################################################
     ## Methods needed for the search functionality

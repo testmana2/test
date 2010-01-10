@@ -9,6 +9,7 @@ Module implementing a base class for all of eric5s XML writers.
 
 import os
 import pickle
+import base64
 
 class XMLWriterBase(object):
     """
@@ -36,7 +37,6 @@ class XMLWriterBase(object):
             dict       : self._write_dictionary,
             set        : self._write_set, 
             frozenset  : self._write_frozenset, 
-            # TODO: add set, frozenset, bytes, bytearray
         }
         
         self.NEWPARA = chr(0x2029)
@@ -49,7 +49,6 @@ class XMLWriterBase(object):
         @param s string to be written to the XML file
         @param newline flag indicating a linebreak
         """
-##        self.pf.write("%s%s" % (s.encode('utf-8'), 
         self.pf.write("%s%s" % (s, 
             newline and os.linesep or ""))
         
@@ -254,4 +253,4 @@ class XMLWriterBase(object):
         @param indent indentation level for prettier output (integer)
         """
         self._write('%s<pickle method="pickle" encoding="base64">%s</pickle>' % \
-            ("  " * indent, pickle.dumps(value).encode('base64')))
+            ("  " * indent, str(base64.b64encode(pickle.dumps(value)), "ASCII")))

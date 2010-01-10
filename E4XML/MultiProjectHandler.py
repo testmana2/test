@@ -60,7 +60,7 @@ class MultiProjectHandler(XMLHandlerBase):
         """
         Handler method for the "Description" end tag.
         """
-        self.buffer = self.unescape(self.utf8_to_code(self.buffer))
+        self.buffer = self.unescape(self.buffer)
         self.multiProject.description = self.decodedNewLines(self.buffer)
     
     def startProject(self, attrs):
@@ -83,20 +83,20 @@ class MultiProjectHandler(XMLHandlerBase):
         """
         Handler method for the "ProjectName" end tag.
         """
-        self.project["name"] = self.unescape(self.utf8_to_code(self.buffer))
+        self.project["name"] = self.unescape(self.buffer)
     
     def endProjectFile(self):
         """
         Handler method for the "ProjectFile" end tag.
         """
-        filename = self.utf8_to_code(self.buffer)
+        filename = self.buffer
         self.project["file"] = Utilities.toNativeSeparators(filename)
     
     def endProjectDescription(self):
         """
         Handler method for the "ProjectDescription" end tag.
         """
-        self.buffer = self.unescape(self.utf8_to_code(self.buffer))
+        self.buffer = self.unescape(self.buffer)
         self.project["description"] = self.decodedNewLines(self.buffer)
     
     def getVersion(self):

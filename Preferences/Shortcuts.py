@@ -203,7 +203,7 @@ def exportShortcuts(fn):
                 return 0
             f = gzip.open(fn, "w")
         else:
-            f = open(fn, "w")
+            f = open(fn, "w", encoding = "utf-8")
         
         ShortcutsWriter(f).writeXML()
         
@@ -232,7 +232,7 @@ def importShortcuts(fn):
                 return False
             f = gzip.open(fn, "r")
         else:
-            f = open(fn, "r")
+            f = open(fn, "r", encoding = "utf-8")
         try:
             line = f.readline()
             dtdLine = f.readline()
@@ -273,7 +273,7 @@ def importShortcuts(fn):
                 return False
             f = gzip.open(fn, "r")
         else:
-            f = open(fn, "r")
+            f = open(fn, "r", encoding = "utf-8")
         try:
             try:
                 parser.parse(f)

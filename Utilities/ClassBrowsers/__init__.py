@@ -109,8 +109,6 @@ def find_module(name, path, isPyFile = False):
     
     if name.lower().endswith('.py'):
         name = name[:-3]
-##    if isinstance(name, type("")):
-##        name = name.encode('utf-8')
     
     try:
         return imp.find_module(name, path)

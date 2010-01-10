@@ -88,50 +88,50 @@ class PluginRepositoryHandler(XMLHandlerBase):
         """
         Handler method for the "Name" end tag.
         """
-        self.info["name"] = self.unescape(self.utf8_to_code(self.buffer))
+        self.info["name"] = self.unescape(self.buffer)
         
     def endShort(self):
         """
         Handler method for the "Short" end tag.
         """
-        self.info["short"] = self.unescape(self.utf8_to_code(self.buffer))
+        self.info["short"] = self.unescape(self.buffer)
         
     def endDescription(self):
         """
         Handler method for the "Description" end tag.
         """
-        txt = self.unescape(self.utf8_to_code(self.buffer))
+        txt = self.unescape(self.buffer)
         self.info["description"] = [line.strip() for line in txt.splitlines()]
         
     def endUrl(self):
         """
         Handler method for the "Url" end tag.
         """
-        self.info["url"] = self.unescape(self.utf8_to_code(self.buffer))
+        self.info["url"] = self.unescape(self.buffer)
         
     def endAuthor(self):
         """
         Handler method for the "Author" end tag.
         """
-        self.info["author"] = self.unescape(self.utf8_to_code(self.buffer))
+        self.info["author"] = self.unescape(self.buffer)
         
     def endVersion(self):
         """
         Handler method for the "Version" end tag.
         """
-        self.info["version"] = self.unescape(self.utf8_to_code(self.buffer))
+        self.info["version"] = self.unescape(self.buffer)
         
     def endFilename(self):
         """
         Handler method for the "Filename" end tag.
         """
-        self.info["filename"] = self.unescape(self.utf8_to_code(self.buffer))
+        self.info["filename"] = self.unescape(self.buffer)
         
     def endRepositoryUrl(self):
         """
         Handler method for the "RepositoryUrl" end tag.
         """
-        url = self.unescape(self.utf8_to_code(self.buffer)).strip()
+        url = self.unescape(self.buffer).strip()
         Preferences.setUI("PluginRepositoryUrl5", url)
         
     def getVersion(self):

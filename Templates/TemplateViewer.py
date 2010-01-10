@@ -801,7 +801,7 @@ class TemplateViewer(QTreeWidget):
         try:
             if filename is None:
                 filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
-            f = open(filename, "w")
+            f = open(filename, "w", encoding = "utf-8")
             
             TemplatesWriter(f, self).writeXML()
             
@@ -823,7 +823,7 @@ class TemplateViewer(QTreeWidget):
                 filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
                 if not os.path.exists(filename):
                     return
-            f = open(filename, "r")
+            f = open(filename, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -846,7 +846,7 @@ class TemplateViewer(QTreeWidget):
             parser.setErrorHandler(eh)
             
             try:
-                f = open(filename, "r")
+                f = open(filename, "r", encoding = "utf-8")
                 try:
                     try:
                         parser.parse(f)

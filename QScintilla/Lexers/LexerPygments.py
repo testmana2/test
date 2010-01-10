@@ -343,7 +343,6 @@ class LexerPygments(LexerContainer):
         if self.editor is None:
             return True
         
-##        text = self.editor.text().encode('utf-8')
         text = self.editor.text()
         self.__lexer = self.__guessLexer(text)
         
@@ -367,7 +366,6 @@ class LexerPygments(LexerContainer):
         @param start position of first character to be styled (integer)
         @param end position of last character to be styled (integer)
         """
-##        text = self.editor.text()[:end + 1].encode('utf-8')
         text = self.editor.text()[:end + 1]
         self.__lexer = self.__guessLexer(text)
         

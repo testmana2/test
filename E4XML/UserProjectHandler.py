@@ -52,7 +52,6 @@ class UserProjectHandler(XMLHandlerBase):
         """
         Handler method for the "VcsType" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.project.pudata["VCSOVERRIDE"] = [self.buffer]
         
     def startVcsStatusMonitorInterval(self, attrs):

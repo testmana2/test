@@ -1328,19 +1328,19 @@ def readModule(module, path = [], inpackage = False, basename = "",
     if f is None:
         fullpath = list(path) + sys.path
         f, file, (suff, mode, type) = find_module(module, fullpath, _extensions)
+    if f:
+        f.close()
     if type not in SUPPORTED_TYPES:
         # not supported source, can't do anything with this module
-        if f:
-            f.close()
         _modules[modname] = Module(modname, None, None)
         return _modules[modname]
     
     mod = Module(modname, file, type)
     try:
-        src = f.read()
+        src = Utilities.readEncodedFile(file)[0]
         mod.scan(src)
-    finally:
-        f.close()
+    except (UnicodeError, IOError):
+        pass
     if caching:
         _modules[modname] = mod
     return mod
@@ -1389,8 +1389,6 @@ def find_module(name, path, extensions):
     # standard Python module file
     if name.lower().endswith('.py'):
         name = name[:-3]
-##    if isinstance(name, type("")):
-##        name = name.encode('utf-8')
     
     return imp.find_module(name, path)
 

@@ -24,7 +24,6 @@ import Preferences
 import Utilities
 
 import UI.PixmapCache
-##from Utilities import toUnicode
 
 from .ShellHistoryDialog import ShellHistoryDialog
 
@@ -423,7 +422,6 @@ class Terminal(QsciScintillaCompat):
         """
         line, col = self.__getEndPos()
         self.setCursorPosition(line, col)
-##        self.insert(toUnicode(s))
         self.insert(s)
         self.prline, self.prcol = self.getCursorPosition()
         self.ensureCursorVisible()

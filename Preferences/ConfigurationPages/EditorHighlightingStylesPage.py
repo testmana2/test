@@ -295,7 +295,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                 fn += ex
         
         try:
-            f = open(fn, "w")
+            f = open(fn, "w", encoding = "utf-8")
             HighlightingStylesWriter(f, lexers).writeXML()
             f.close()
         except IOError as err:
@@ -322,7 +322,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             return
         
         try:
-            f = open(fn, "r")
+            f = open(fn, "r", encoding = "utf-8")
             try:
                 line = f.readline()
                 dtdLine = f.readline()
@@ -348,7 +348,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         parser.setErrorHandler(eh)
         
         try:
-            f = open(fn, "r")
+            f = open(fn, "r", encoding = "utf-8")
             try:
                 try:
                     parser.parse(f)

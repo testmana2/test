@@ -106,25 +106,24 @@ class TasksHandler(XMLHandlerBase):
         """
         Handler method for the "Summary" end tag.
         """
-        self.task["summary"] = self.unescape(self.utf8_to_code(self.buffer))
+        self.task["summary"] = self.unescape(self.buffer)
         
     def endDescription(self):
         """
         Handler method for the "Description" end tag.
         """
         if self.version < '4.1':
-            self.task["summary"] = self.unescape(self.utf8_to_code(self.buffer))
+            self.task["summary"] = self.unescape(self.buffer)
         elif self.version == '4.1':
-            self.task["description"] = self.unescape(self.utf8_to_code(self.buffer))
+            self.task["description"] = self.unescape(self.buffer)
         else:
-            self.buffer = self.unescape(self.utf8_to_code(self.buffer))
+            self.buffer = self.unescape(self.buffer)
             self.task["description"] = self.decodedNewLines(self.buffer)
         
     def endCreated(self):
         """
         Handler method for the "Created" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.task["created"] = \
             time.mktime(time.strptime(self.buffer, "%Y-%m-%d, %H:%M:%S"))
     
@@ -132,14 +131,12 @@ class TasksHandler(XMLHandlerBase):
         """
         Handler method for the "Dir" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.pathStack.append(self.buffer)
         
     def endName(self):
         """
         Handler method for the "Name" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.pathStack.append(self.buffer)
         
     def endLinenumber(self):
@@ -166,7 +163,7 @@ class TasksHandler(XMLHandlerBase):
         """
         if self.version >= '4.2':
             self.task["filename"] = \
-                Utilities.toNativeSeparators(self.utf8_to_code(self.buffer))
+                Utilities.toNativeSeparators(self.buffer)
         else:
             self.task["filename"] = self.__buildPath()
         

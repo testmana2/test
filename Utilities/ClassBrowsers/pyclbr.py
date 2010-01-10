@@ -236,9 +236,10 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
         path = [file] + path
         f, file, (suff, mode, type) = \
                         ClassBrowsers.find_module('__init__', [file])
+    if f:
+        f.close()
     if type not in SUPPORTED_TYPES:
         # not Python source, can't do anything with this module
-        f.close()
         _modules[module] = dict
         return dict
 
@@ -248,8 +249,12 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
     deltastack = []
     deltaindent = 0
     deltaindentcalculated = 0
-    src = f.read()
-    f.close()
+    try:
+        src = Utilities.readEncodedFile(file)[0]
+    except (UnicodeError, IOError):
+        # can't do anything with this module
+        _modules[module] = dict
+        return dict
 
     lineno, last_lineno_pos = 1, 0
     i = 0

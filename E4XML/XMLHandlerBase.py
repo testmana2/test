@@ -8,8 +8,8 @@ Module implementing a base class for all of eric5s XML handlers.
 """
 
 import sys
-##from types import UnicodeType
-import pickle as pickle
+import pickle
+import base64
 
 from xml.sax.handler import ContentHandler
 
@@ -23,7 +23,6 @@ class XMLHandlerBase(ContentHandler):
         """
         self.startDocumentSpecific = None
         
-        # TODO: add support for bytes, bytearray, set, frozenset
         self.elements = {
             'none'      : (self.defaultStartElement, self.endNone),
             'int'       : (self.defaultStartElement, self.endInt),
@@ -50,17 +49,6 @@ class XMLHandlerBase(ContentHandler):
         
         self.NEWPARA = chr(0x2029)
         self.NEWLINE = chr(0x2028)
-        
-    def utf8_to_code(self, text):
-        """
-        Public method to convert a string to unicode and encode it for XML.
-        
-        @param text the text to encode (string)
-        """
-        # TODO: convert calls to this method to not use it anymore
-##        if not isinstance(text, UnicodeType):
-##            text = str(text, "utf-8")
-        return text
         
     def unescape(self, text, attribute = False):
         """
@@ -184,7 +172,7 @@ class XMLHandlerBase(ContentHandler):
         """
         Handler method for the "string" end tag.
         """
-        s = str(self.utf8_to_code(self.unescape(self.buffer)))
+        s = str(self.unescape(self.buffer))
         self.stack.append(s)
         
     def endBytes(self):
@@ -200,13 +188,7 @@ class XMLHandlerBase(ContentHandler):
         """
         by = bytearray([int(b) for b in self.buffer.strip().split(",")])
         self.stack.append(by)
-##    def endUnicode(self):
-##        """
-##        Handler method for the "unicode" end tag.
-##        """
-##        u = str(self.utf8_to_code(self.unescape(self.buffer)))
-##        self.stack.append(u)
-##        
+        
     def startList(self, attrs):
         """
         Handler method for the "list" start tag.
@@ -316,5 +298,5 @@ class XMLHandlerBase(ContentHandler):
         """
         Handler method for the "pickle" end tag.
         """
-        pic = self.utf8_to_code(self.buffer).decode(self.pickleEnc)
+        pic = base64.b64decode(self.buffer.encode("ASCII"))
         self.stack.append(pickle.loads(pic))

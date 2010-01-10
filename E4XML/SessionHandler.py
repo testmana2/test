@@ -95,14 +95,12 @@ class SessionHandler(XMLHandlerBase):
         """
         Handler method for the "MultiProject" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.multiProject.openMultiProject(self.buffer, False)
         
     def endProject(self):
         """
         Handler method for the "Project" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.project.openProject(self.buffer, False)
         
     def startFilename(self, attrs):
@@ -125,7 +123,6 @@ class SessionHandler(XMLHandlerBase):
         """
         Handler method for the "Filename" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.vm.openFiles(self.buffer)
         ed = self.vm.getOpenEditor(self.buffer)
         if ed is not None:
@@ -179,7 +176,7 @@ class SessionHandler(XMLHandlerBase):
         """
         Handler method for the "BFilename" end tag.
         """
-        self.filename = self.utf8_to_code(self.buffer)
+        self.filename = self.buffer
         
     def startLinenumber(self, attrs):
         """
@@ -193,8 +190,7 @@ class SessionHandler(XMLHandlerBase):
         """
         Handler method for the "Condition" end tag.
         """
-        cond = self.utf8_to_code(self.buffer)
-        cond = self.unescape(cond)
+        cond = self.unescape(self.buffer)
         if cond == 'None':
             self.bpCond = ''
         else:
@@ -236,13 +232,12 @@ class SessionHandler(XMLHandlerBase):
         """
         Handler method for the "Special" end tag.
         """
-        self.wpSpecialCond = self.utf8_to_code(self.buffer)
+        self.wpSpecialCond = self.buffer
         
     def endCommandLine(self):
         """
         Handler method for the "CommandLine" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.buffer = self.unescape(self.buffer)
         self.dbg.setArgvHistory(self.buffer)
         if not self.isGlobal:
@@ -252,7 +247,6 @@ class SessionHandler(XMLHandlerBase):
         """
         Handler method for the "WorkinDirectory" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.dbg.setWdHistory(self.buffer)
         if not self.isGlobal:
             self.project.dbgWd = self.buffer
@@ -261,7 +255,6 @@ class SessionHandler(XMLHandlerBase):
         """
         Handler method for the "Environment" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.dbg.setEnvHistory(self.buffer)
         if not self.isGlobal:
             self.project.dbgEnv = self.buffer
@@ -304,7 +297,6 @@ class SessionHandler(XMLHandlerBase):
         """
         Handler method for the "Exception" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.dbgExcList.append(self.buffer)
         
     def startIgnoredExceptions(self, attrs):
@@ -327,7 +319,6 @@ class SessionHandler(XMLHandlerBase):
         """
         Handler method for the "IgnoredException" end tag.
         """
-        self.buffer = self.utf8_to_code(self.buffer)
         self.dbgExcIgnoreList.append(self.buffer)
         
     def startAutoClearShell(self, attrs):

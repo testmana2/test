@@ -106,14 +106,9 @@ def check(file):
     check_equal = 0
 
     try:
-        f = open(file, "r")
-    except IOError as msg:
-        return (True, file, "1", "I/O Error: %s" % str(msg))
-
-    try:
-        text = f.read()
-    finally:
-        f.close()
+        text = Utilities.readEncodedFile(file)[0]
+    except (UnicodeError, IOError) as msg:
+        return (True, file, "1", "Error: %s" % str(msg))
         
     # convert eols
     text = Utilities.convertLineEnds(text, os.linesep)
@@ -123,24 +118,19 @@ def check(file):
         process_tokens(tokenize.generate_tokens(source.readline))
     
     except tokenize.TokenError as msg:
-        f.close()
         return (True, file, "1", "Token Error: %s" % str(msg))
     
     except IndentationError as err:
-        f.close()
         return (True, file, err.lineno, "Indentation Error: %s" % str(err.msg))
     
     except NannyNag as nag:
         badline = nag.get_lineno()
         line = nag.get_line()
-        f.close()
         return (True, file, str(badline), line)
     
     except Exception as err:
-        f.close()
         return (True, file, "1", "Unspecific Error: %s" % str(err))
     
-    f.close()
     return (False, None, None, None)
 
 class Whitespace(object):

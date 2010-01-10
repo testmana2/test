@@ -256,7 +256,7 @@ def main():
         if outdir and not os.path.exists(outdir):
             os.makedirs(outdir)
         try:
-            out = open(outputFile, "w")
+            out = open(outputFile, "w", encoding = "utf-8")
             out.write(os.linesep.join(sorted(apis)))
             out.close()
         except IOError as v:

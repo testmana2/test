@@ -252,10 +252,8 @@ class Editor(QsciScintillaCompat):
                         QMessageBox.No)
                     if res == QMessageBox.No or res == QMessageBox.Cancel:
                         raise IOError()
-                line0 = self.readLine0(self.fileName)
-                bindName = self.__bindName(line0)
-                self.__bindLexer(bindName)
                 self.readFile(self.fileName, True)
+                bindName = self.__bindName(self.text(0))
                 self.__bindLexer(bindName)
                 self.__bindCompleter(bindName)
                 self.__autoSyntaxCheck()
@@ -2171,38 +2169,6 @@ class Editor(QsciScintillaCompat):
                     break
                     # Couldn't find the unmodified state
     
-    def readLine0(self, fn, createIt = False):
-        """
-        Public slot to read the first line from a file.
-        
-        @param fn filename to read from (string)
-        @param createIt flag indicating the creation of a new file, if the given
-            one doesn't exist (boolean)
-        @return first line of the file (string)
-        """
-        try:
-            if createIt and not os.path.exists(fn):
-                f = open(fn, "w")
-                f.close()
-            f = open(fn, 'r')
-        except IOError as why:
-            QMessageBox.critical(self.vm, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
-                            '<p>Reason: {1}</p>')
-                    .format(fn, str(why)))
-            raise
-        
-        try:
-            txt = f.readline()
-        except UnicodeDecodeError as why:
-            QMessageBox.critical(self.vm, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
-                            '<p>Reason: {1}</p>')
-                    .format(fn, str(why)))
-            raise
-        f.close()
-        return txt
-        
     def readFile(self, fn, createIt = False):
         """
         Public slot to read the text from a file.
@@ -2211,29 +2177,14 @@ class Editor(QsciScintillaCompat):
         @param createIt flag indicating the creation of a new file, if the given
             one doesn't exist (boolean)
         """
+        QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
+        
         try:
             if createIt and not os.path.exists(fn):
                 f = open(fn, "w")
                 f.close()
-            f = open(fn, 'r')
-        except IOError as why:
-            QMessageBox.critical(self.vm, self.trUtf8('Open File'),
-                self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
-                            '<p>Reason: {1}</p>')
-                    .format(fn, str(why)))
-            raise
-        
-        QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
-        
-##        if fn.endswith('.ts') or fn.endswith('.ui'):
-##            # special treatment for Qt-Linguist and Qt-Designer files
-##            txt = f.read()
-##            self.encoding = 'latin-1'
-##        else:
-##            txt, self.encoding = f.read(), "utf-8" #Utilities.decode(f.read())
-        try:
-            txt = f.read()
-        except UnicodeDecodeError as why:
+            txt, self.encoding = Utilities.readEncodedFile(fn)
+        except (UnicodeDecodeError, IOError) as why:
             QApplication.restoreOverrideCursor()
             QMessageBox.critical(self.vm, self.trUtf8('Open File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
@@ -2241,8 +2192,6 @@ class Editor(QsciScintillaCompat):
                     .format(fn, str(why)))
             QApplication.restoreOverrideCursor()
             raise
-        self.encoding = f.encoding.lower()
-        f.close()
         fileEol = self.detectEolString(txt)
         
         modified = False
@@ -2303,7 +2252,7 @@ class Editor(QsciScintillaCompat):
         Public slot to write the text to a file.
         
         @param fn filename to write to (string)
-        @return flag indicating success
+        @return flag indicating success (boolean)
         """
         if Preferences.getEditor("StripTrailingWhitespace"):
             self.__removeTrailingWhitespace()
@@ -2318,15 +2267,7 @@ class Editor(QsciScintillaCompat):
                     txt += eol
             else:
                 txt += eol
-##        try:
-##            txt, self.encoding = Utilities.encode(txt, self.encoding)
-##        except Utilities.CodingError as e:
-##            QMessageBox.critical(self, self.trUtf8('Save File'),
-##                self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
-##                            'Reason: {1}</p>')
-##                    .format(fn, str(e)))
-##            return False
-##        
+        
         # create a backup file, if the option is set
         createBackup = Preferences.getEditor("CreateBackupFile")
         if createBackup:
@@ -2352,13 +2293,11 @@ class Editor(QsciScintillaCompat):
         
         # now write text to the file fn
         try:
-            f = open(fn, 'w', encoding = self.encoding)
-            f.write(txt)
-            f.close()
+            self.encoding = Utilities.writeEncodedFile(fn, txt, self.encoding)
             if createBackup and perms_valid:
                 os.chmod(fn, permissions)
             return True
-        except IOError as why:
+        except (IOError, Utilities.CodingError, UnicodeError) as why:
             QMessageBox.critical(self, self.trUtf8('Save File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
                             'Reason: {1}</p>')
@@ -4427,7 +4366,7 @@ class Editor(QsciScintillaCompat):
             return  # user aborted
         
         try:
-            f = open(fname, "r")
+            f = open(fname, "r", encoding = "utf-8")
             lines = f.readlines()
             f.close()
         except IOError:
@@ -4487,7 +4426,7 @@ class Editor(QsciScintillaCompat):
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "w")
+            f = open(fname, "w", encoding = "utf-8")
             f.write("%s%s" % (name, os.linesep))
             f.write(self.macros[name].save())
             f.close()

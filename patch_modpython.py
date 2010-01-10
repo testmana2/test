@@ -76,7 +76,7 @@ def main(argv):
     
     try:
         filename = os.path.join(modDir, "apache.py")
-        f = open(filename, "r")
+        f = open(filename, "r", encoding = "utf-8")
     except EnvironmentError:
         print("The file %s does not exist. Aborting." % filename)
         sys.exit(1)
@@ -88,7 +88,7 @@ def main(argv):
     ericFound = False
     
     sn = "apache.py"
-    s = open(sn, "w")
+    s = open(sn, "w", encoding = "utf-8")
     for line in lines:
         if not pdbFound and line.startswith("import pdb"):
             s.write("import eric5.DebugClients.Python.eric5dbgstub as pdb\n")

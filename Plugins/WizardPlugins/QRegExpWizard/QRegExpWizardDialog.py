@@ -239,7 +239,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                     return
             
             try:
-                f=open(Utilities.toNativeSeparators(fname), "w")
+                f=open(Utilities.toNativeSeparators(fname), "w", encoding = "utf-8")
                 f.write(self.regexpLineEdit.text())
                 f.close()
             except IOError as err:
@@ -260,7 +260,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
-                f=open(Utilities.toNativeSeparators(fname), "r")
+                f=open(Utilities.toNativeSeparators(fname), "r", encoding = "utf-8")
                 regexp = f.read()
                 f.close()
                 self.regexpLineEdit.setText(regexp)

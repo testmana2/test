@@ -366,11 +366,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 fn = file
             # read the file and split it into textlines
             try:
-                f = open(fn, 'r')
-                text = f.read()
+                text, encoding = Utilities.readEncodedFile(fn)
                 lines = text.splitlines()
-                f.close()
-            except (IOError, UnicodeError):
+            except (UnicodeError, IOError):
                 progress += 1
                 self.findProgress.setValue(progress)
                 continue
@@ -525,11 +523,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 
                 # read the file and split it into textlines
                 try:
-                    f = open(fn, 'r')
-                    text = f.read()
+                    text, encoding = Utilities.readEncodedFile(fn)
                     lines = text.splitlines()
-                    f.close()
-                except IOError as err:
+                except (UnicodeError, IOError):
                     QMessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8("""<p>Could not read the file <b>{0}</b>."""
@@ -551,10 +547,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 # write the file
                 txt = Utilities.linesep().join(lines)
                 try:
-                    f = open(fn, 'w')
-                    f.write(txt)
-                    f.close()
-                except IOError as err:
+                    Utilities.writeEncodedFile(fn, txt, encoding)
+                except (IOError, Utilities.CodingError, UnicodeError) as err:
                     QMessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8("""<p>Could not save the file <b>{0}</b>."""

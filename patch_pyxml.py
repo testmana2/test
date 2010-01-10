@@ -62,7 +62,7 @@ def isPatched():
     try:
         filename = \
             os.path.join(pyxmlModDir, "parsers", "xmlproc", "xmlutils.py")
-        f = open(filename, "r")
+        f = open(filename, "r", encoding = "utf-8")
     except EnvironmentError:
         print("Could not find the pyXML distribution. Please use the patch_pyxml.py")
         print("script to apply a patch needed to fix a bug causing it to fail for")
@@ -99,7 +99,7 @@ def patchPyXML():
     try:
         filename = \
             os.path.join(pyxmlModDir, "parsers", "xmlproc", "xmlutils.py")
-        f = open(filename, "r")
+        f = open(filename, "r", encoding = "utf-8")
     except EnvironmentError:
         print("The file %s does not exist. Aborting." % filename)
         sys.exit(1)
@@ -111,7 +111,7 @@ def patchPyXML():
     patched = False
     
     sn = "xmlutils.py"
-    s = open(sn, "w")
+    s = open(sn, "w", encoding = "utf-8")
     for line in lines:
         if patchPositionFound:
             if not line.startswith(\

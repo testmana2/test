@@ -287,7 +287,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 False
         
         # parse the plugin module's plugin header
-        pluginSource = zip.read(pluginFileName)
+        pluginSource = zip.read(pluginFileName).decode("utf-8")
         packageName = ""
         internalPackages = []
         needsRestart = False
@@ -397,7 +397,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                             d = os.path.dirname(outname)
                             if not os.path.exists(d):
                                 self.__makedirs(d)
-                            f = open(outname, "w")
+                            f = open(outname, "wb")
                             f.write(zip.read(name))
                             f.close()
                             self.__installedFiles.append(outname)
@@ -406,7 +406,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 compileUiFiles(os.path.join(destination, packageName), True)
             else:
                 outname = os.path.join(destination, pluginFileName)
-                f = open(outname, "w")
+                f = open(outname, "w", encoding = "utf-8")
                 f.write(pluginSource)
                 f.close()
                 self.__installedFiles.append(outname)

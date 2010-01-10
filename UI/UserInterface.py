@@ -622,7 +622,7 @@ class UserInterface(QMainWindow):
         styleSheetFile = Preferences.getUI("StyleSheet")
         if styleSheetFile:
             try:
-                f = open(styleSheetFile, "r")
+                f = open(styleSheetFile, "r", encoding = "utf-8")
                 styleSheet = f.read()
                 f.close()
             except IOError as msg:
@@ -2672,7 +2672,7 @@ class UserInterface(QMainWindow):
             address = BugAddress
         subject = "[eric5] "
         if attachFile is not None:
-            f = open(attachFile, "r")
+            f = open(attachFile, "r", encoding = "utf-8")
             body = f.read()
             f.close()
             if deleteAttachFile:
@@ -2700,7 +2700,7 @@ class UserInterface(QMainWindow):
                     self.trUtf8("An error log file was found. "
                                 "What should be done with it?"))
                 try:
-                    f = open(logFile, "r")
+                    f = open(logFile, "r", encoding = "utf-8")
                     txt = f.read()
                     f.close()
                     dlg.setDetailedText(txt)
@@ -3775,7 +3775,7 @@ class UserInterface(QMainWindow):
         if fn is not None and version == 0:
             # determine version from file, if not specified
             try:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
                 found = False
                 while not found:
                     uiLine = f.readline()
@@ -4830,7 +4830,7 @@ class UserInterface(QMainWindow):
         """
         try:
             fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
-            f = open(fn, "w")
+            f = open(fn, "w", encoding = "utf-8")
             
             TasksWriter(f, False).writeXML()
             
@@ -4850,7 +4850,7 @@ class UserInterface(QMainWindow):
             fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
             if not os.path.exists(fn):
                 return
-            f = open(fn, "r")
+            f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -4873,7 +4873,7 @@ class UserInterface(QMainWindow):
             parser.setErrorHandler(eh)
             
             try:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
                 try:
                     try:
                         parser.parse(f)
@@ -4905,7 +4905,7 @@ class UserInterface(QMainWindow):
         """
         try:
             fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
-            f = open(fn, "w")
+            f = open(fn, "w", encoding = "utf-8")
             
             SessionWriter(f, None).writeXML()
             
@@ -4929,7 +4929,7 @@ class UserInterface(QMainWindow):
                     self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
                         .format(fn))
                 return
-            f = open(fn, "r")
+            f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -4952,7 +4952,7 @@ class UserInterface(QMainWindow):
             parser.setErrorHandler(eh)
             
             try:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
                 try:
                     try:
                         parser.parse(f)

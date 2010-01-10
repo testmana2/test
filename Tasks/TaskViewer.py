@@ -771,11 +771,9 @@ class TaskViewer(QTreeWidget):
             fn = os.path.join(self.project.ppath, file)
             # read the file and split it into textlines
             try:
-                f = open(fn, 'r')
-                text = f.read()
+                text, encoding = Utilities.readEncodedFile(fn)
                 lines = text.splitlines()
-                f.close()
-            except IOError:
+            except (UnicodeError, IOError):
                 count += 1
                 self.progress.setValue(count)
                 continue

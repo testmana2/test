@@ -596,7 +596,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                 packageFile = os.path.join(packagePath, "__init__.py")
                 if not os.path.exists(packageFile):
                     try:
-                        f = open(packageFile, "w")
+                        f = open(packageFile, "w", encoding = "utf-8")
                         f.close()
                     except IOError as err:
                         QMessageBox.critical(None,

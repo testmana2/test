@@ -211,11 +211,10 @@ def analyze(filename, total):
     @param total dictionary receiving the overall code statistics
     @return a statistics object with the collected code statistics (SourceStat)
     """
-    file = open(filename, 'r')
     try:
-        text = file.read()
-    finally:
-        file.close()
+        text = Utilities.readEncodedFile(filename)[0]
+    except (UnicodeError, IOError):
+        return SourceStat()
 
     parser = Parser()
     parser.parse(text)

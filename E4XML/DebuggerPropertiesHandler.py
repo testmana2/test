@@ -57,15 +57,13 @@ class DebuggerPropertiesHandler(XMLHandlerBase):
         """
         Handler method for the "Interpreter" end tag.
         """
-        self.project.debugProperties["INTERPRETER"] = \
-            self.utf8_to_code(self.buffer)
+        self.project.debugProperties["INTERPRETER"] = self.buffer
         
     def endDebugClient(self):
         """
         Handler method for the "DebugClient" end tag.
         """
-        self.project.debugProperties["DEBUGCLIENT"] = \
-            self.utf8_to_code(self.buffer)
+        self.project.debugProperties["DEBUGCLIENT"] = self.buffer
         
     def startEnvironment(self, attrs):
         """
@@ -80,7 +78,7 @@ class DebuggerPropertiesHandler(XMLHandlerBase):
         Handler method for the "Environment" end tag.
         """
         self.project.debugProperties["ENVIRONMENTSTRING"] = \
-            self.unescape(self.utf8_to_code(self.buffer))
+            self.unescape(self.buffer)
         
     def startRemoteDebugger(self, attrs):
         """
@@ -94,15 +92,14 @@ class DebuggerPropertiesHandler(XMLHandlerBase):
         """
         Handler method for the "RemoteHost" end tag.
         """
-        self.project.debugProperties["REMOTEHOST"] = \
-            self.utf8_to_code(self.buffer)
+        self.project.debugProperties["REMOTEHOST"] = self.buffer
         
     def endRemoteCommand(self):
         """
         Handler method for the "RemoteCommand" end tag.
         """
         self.project.debugProperties["REMOTECOMMAND"] = \
-            self.unescape(self.utf8_to_code(self.buffer))
+            self.unescape(self.buffer)
         
     def startPathTranslation(self, attrs):
         """
@@ -116,15 +113,13 @@ class DebuggerPropertiesHandler(XMLHandlerBase):
         """
         Handler method for the "RemotePath" end tag.
         """
-        self.project.debugProperties["REMOTEPATH"] = \
-            self.utf8_to_code(self.buffer)
+        self.project.debugProperties["REMOTEPATH"] = self.buffer
         
     def endLocalPath(self):
         """
         Handler method for the "LocalPath" end tag.
         """
-        self.project.debugProperties["LOCALPATH"] = \
-            self.utf8_to_code(self.buffer)
+        self.project.debugProperties["LOCALPATH"] = self.buffer
         
     def startConsoleDebugger(self, attrs):
         """
@@ -139,7 +134,7 @@ class DebuggerPropertiesHandler(XMLHandlerBase):
         Handler method for the "ConsoleDebugger" end tag.
         """
         self.project.debugProperties["CONSOLECOMMAND"] = \
-            self.unescape(self.utf8_to_code(self.buffer))
+            self.unescape(self.buffer)
         
     def startRedirect(self, attrs):
         """

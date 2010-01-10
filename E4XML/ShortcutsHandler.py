@@ -45,19 +45,19 @@ class ShortcutsHandler(XMLHandlerBase):
         """
         Handler method for the "Name" end tag.
         """
-        self.name = self.utf8_to_code(self.buffer)
+        self.name = self.buffer
         
     def endAccel(self):
         """
         Handler method for the "Accel" end tag.
         """
-        self.accel = self.unescape(self.utf8_to_code(self.buffer))
+        self.accel = self.unescape(self.buffer)
         
     def endAltAccel(self):
         """
         Handler method for the "AltAccel" end tag.
         """
-        self.altAccel = self.unescape(self.utf8_to_code(self.buffer))
+        self.altAccel = self.unescape(self.buffer)
         
     def startShortcut(self, attrs):
         """

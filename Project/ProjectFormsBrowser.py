@@ -612,7 +612,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if exitStatus == QProcess.NormalExit and exitCode == 0 and self.buf:
             ofn = os.path.join(self.project.ppath, self.compiledFile)
             try:
-                f = open(ofn, "w")
+                f = open(ofn, "w", encoding = "utf-8")
                 for line in self.buf.splitlines():
                     f.write(line + os.linesep)
                 f.close()

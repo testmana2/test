@@ -421,7 +421,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     return
             
             try:
-                rcfile = open(fname, 'w')
+                rcfile = open(fname, 'w', encoding = "utf-8")
                 rcfile.write('<!DOCTYPE RCC>\n')
                 rcfile.write('<RCC version="1.0">\n')
                 rcfile.write('<qresource>\n')
@@ -510,7 +510,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         if exitStatus == QProcess.NormalExit and exitCode == 0 and self.buf:
             ofn = os.path.join(self.project.ppath, self.compiledFile)
             try:
-                f = open(ofn, "w")
+                f = open(ofn, "w", encoding = "utf-8")
                 for line in self.buf.splitlines():
                     f.write(line + os.linesep)
                 f.close()
@@ -700,7 +700,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         @return flag indicating some file is newer (boolean)
         """
         try:
-            f = open(filename, "r")
+            f = open(filename, "r", encoding = "utf-8")
             buf = f.read()
             f.close()
         except IOError:

@@ -221,7 +221,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         filename1 = Utilities.toNativeSeparators(self.file1Edit.text())
         try:
-            f1 = open(filename1, "r")
+            f1 = open(filename1, "r", encoding = "utf-8")
             lines1 = f1.readlines()
             f1.close()
         except IOError:
@@ -233,7 +233,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
 
         filename2 = Utilities.toNativeSeparators(self.file2Edit.text())
         try:
-            f2 = open(filename2, "r")
+            f2 = open(filename2, "r", encoding = "utf-8")
             lines2 = f2.readlines()
             f2.close()
         except IOError:

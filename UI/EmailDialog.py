@@ -28,9 +28,12 @@ import Utilities
 ############################################################
 from base64 import b64encode as _bencode
 def _encode_base64(msg):
-    """Encode the message's payload in Base64.
+    """
+    Function to encode the message's payload in Base64.
 
-    Also, add an appropriate Content-Transfer-Encoding header.
+    Note: It adds an appropriate Content-Transfer-Encoding header.
+    
+    @param msg reference to the message object (email.Message)
     """
     orig = msg.get_payload()
     encdata = str(_bencode(orig), "ASCII")
@@ -223,7 +226,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             name = os.path.basename(fname)
             
             if maintype == 'text':
-                att = MIMEText(open(fname, 'r').read(), _subtype = subtype)
+                att = MIMEText(
+                    open(fname, 'r', encoding = "utf-8").read(), _subtype = subtype)
             elif maintype == 'image':
                 att = MIMEImage(open(fname, 'rb').read(), _subtype = subtype)
             elif maintype == 'audio':

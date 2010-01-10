@@ -164,7 +164,7 @@ class PluginManager(QObject):
                 # create the global plugins directory
                 os.mkdir(self.pluginDirs["global"], 0o755)
                 fname = os.path.join(self.pluginDirs["global"], "__init__.py")
-                f = open()
+                f = open(fname, "w", encoding = "utf-8")
                 f.write('# -*- coding: utf-8 -*-' + os.linesep)
                 f.write(os.linesep)
                 f.write('"""' + os.linesep)

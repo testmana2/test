@@ -167,7 +167,7 @@ class PasswordManager(QObject):
         
         loginFile = os.path.join(Utilities.getConfigDir(), "browser", "logins")
         try:
-            f = open(loginFile, "w")
+            f = open(loginFile, "w", encoding = "utf-8")
             for key, login in list(self.__logins.items()):
                 f.write("%s\n" % key)
                 f.write("%s\n" % login[0])
@@ -198,7 +198,7 @@ class PasswordManager(QObject):
         loginFile = os.path.join(Utilities.getConfigDir(), "browser", "logins")
         if os.path.exists(loginFile):
             try:
-                f = open(loginFile, "r")
+                f = open(loginFile, "r", encoding = "utf-8")
                 lines = f.read()
                 f.close()
             except IOError as err:

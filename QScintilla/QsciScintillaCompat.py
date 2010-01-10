@@ -681,10 +681,6 @@ class QsciScintillaCompat(QsciScintilla):
         else:
             self.__targetSearchEnd = self.positionFromLineIndex(endline, endindex)
         
-##        if self.isUtf8():
-##            self.__targetSearchExpr = expr_.encode("utf-8")
-##        else:
-##            self.__targetSearchExpr = expr_.encode("latin1")
         self.__targetSearchExpr = expr_
         
         if self.__targetSearchExpr:
@@ -721,10 +717,6 @@ class QsciScintillaCompat(QsciScintilla):
         
         start = self.SendScintilla(QsciScintilla.SCI_GETTARGETSTART)
         
-##        if self.isUtf8():
-##            r = replaceStr.encode("utf-8")
-##        else:
-##            r = replaceStr.encode("latin1")
         r = replaceStr
         
         self.SendScintilla(cmd, len(r), r)

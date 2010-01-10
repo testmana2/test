@@ -304,7 +304,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             # new file
             try:
                 tmplName = os.path.join(getConfig('ericCodeTemplatesDir'), "impl.py.tmpl")
-                tmplFile = open(tmplName, 'r')
+                tmplFile = open(tmplName, 'r', encoding = "utf-8")
                 template = tmplFile.read()
                 tmplFile.close()
             except IOError as why:
@@ -337,7 +337,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         else:
             # extend existing file
             try:
-                srcFile = open(self.srcFile, 'r')
+                srcFile = open(self.srcFile, 'r', encoding = "utf-8")
                 sourceImpl = srcFile.readlines()
                 srcFile.close()
                 if not sourceImpl[-1].endswith(os.linesep):
@@ -394,7 +394,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         
         # write the new code
         try:
-            srcFile = open(self.filenameEdit.text(), 'w')
+            srcFile = open(self.filenameEdit.text(), 'w', encoding = "utf-8")
             srcFile.write("".join(sourceImpl))
             srcFile.close()
         except IOError as why:

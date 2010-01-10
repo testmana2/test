@@ -300,7 +300,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "w")
+            f = open(fname, "w", encoding = "utf-8")
             txt = self.contents.toPlainText()
             try:
                 f.write(txt)
@@ -324,7 +324,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             filemtime1 = ""
         try:
-            f1 = open(self.filename1, "r")
+            f1 = open(self.filename1, "r", encoding = "utf-8")
             lines1 = f1.readlines()
             f1.close()
         except IOError:
@@ -340,7 +340,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             filemtime2 = ""
         try:
-            f2 = open(self.filename2, "r")
+            f2 = open(self.filename2, "r", encoding = "utf-8")
             lines2 = f2.readlines()
             f2.close()
         except IOError:

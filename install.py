@@ -106,7 +106,7 @@ def copyToFile(name, text):
     @param name the name of the file.
     @param text the contents to copy to the file.
     """
-    f = open(name,"w")
+    f = open(name,"w", encoding = "utf-8")
     f.write(text)
     f.close()
 
@@ -207,7 +207,7 @@ def createGlobalPluginsDir():
     if not os.path.exists(fname):
         if not os.path.exists(pdir):
             os.mkdir(pdir,  0o755)
-        f = open(fname, "w")
+        f = open(fname, "w", encoding = "utf-8")
         f.write(\
 '''# -*- coding: utf-8 -*-
 

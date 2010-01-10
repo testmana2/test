@@ -558,7 +558,7 @@ class Project(QObject):
                     return False
                 f = gzip.open(fn, "r")
             else:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -662,7 +662,7 @@ class Project(QObject):
                     return False
                 f = gzip.open(fn, "r")
             else:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             try:
                 try:
                     parser.parse(f)
@@ -744,7 +744,7 @@ class Project(QObject):
                     return False
                 f = gzip.open(fn, "w")
             else:
-                f = open(fn, "w")
+                f = open(fn, "w", encoding = "utf-8")
             
             ProjectWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
@@ -771,7 +771,7 @@ class Project(QObject):
         fn = os.path.join(self.getProjectManagementDir(), '%s.e4q' % fn)
         if os.path.exists(fn):
             try:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
                 
                 parser = make_parser(True)
                 handler = UserProjectHandler(self)
@@ -814,7 +814,7 @@ class Project(QObject):
         fn = os.path.join(self.getProjectManagementDir(), '%s.e4q' % fn)
         
         try:
-            f = open(fn, "w")
+            f = open(fn, "w", encoding = "utf-8")
             
             UserProjectWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
@@ -859,7 +859,7 @@ class Project(QObject):
             else:
                 fn = os.path.join(self.getProjectManagementDir(), 
                                   '%s%s.e4s' % (fn, indicator))
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -930,7 +930,7 @@ class Project(QObject):
                     return
                 f = gzip.open(fn, "r")
             else:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             try:
                 try:
                     parser.parse(f)
@@ -999,7 +999,7 @@ class Project(QObject):
             else:
                 fn = os.path.join(self.getProjectManagementDir(), 
                                   '%s%s.e4s' % (fn, indicator))
-                f = open(fn, "w")
+                f = open(fn, "w", encoding = "utf-8")
             
             SessionWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
@@ -1066,7 +1066,7 @@ class Project(QObject):
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
                 if not os.path.exists(fn):
                     return
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -1120,7 +1120,7 @@ class Project(QObject):
                     return
                 f = gzip.open(fn, "r")
             else:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             try:
                 try:
                     parser.parse(f)
@@ -1164,7 +1164,7 @@ class Project(QObject):
                 f = gzip.open(fn, "w")
             else:
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
-                f = open(fn, "w")
+                f = open(fn, "w", encoding = "utf-8")
             
             TasksWriter(f, True, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
@@ -1208,7 +1208,7 @@ class Project(QObject):
                 f = gzip.open(fn, "r")
             else:
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
             f.close()
@@ -1267,7 +1267,7 @@ class Project(QObject):
                     return
                 f = gzip.open(fn, "r")
             else:
-                f = open(fn, "r")
+                f = open(fn, "r", encoding = "utf-8")
             try:
                 try:
                     parser.parse(f)
@@ -1327,7 +1327,7 @@ class Project(QObject):
                 f = gzip.open(fn, "w")
             else:
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
-                f = open(fn, "w")
+                f = open(fn, "w", encoding = "utf-8")
             
             DebuggerPropertiesWriter(f, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()
@@ -2241,7 +2241,7 @@ class Project(QObject):
                 # (only for Python and Python3)
                 if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
                     fn = os.path.join(self.ppath, "__init__.py")
-                    f = open(fn, "w")
+                    f = open(fn, "w", encoding = "utf-8")
                     f.close()
                     self.appendFile(fn, True)
                 tpd = os.path.join(self.ppath, self.translationsRoot)
@@ -2288,7 +2288,7 @@ class Project(QObject):
                 if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
                     fn = os.path.join(self.ppath, "__init__.py")
                     if not os.path.exists(fn):
-                        f = open(fn, "w")
+                        f = open(fn, "w", encoding = "utf-8")
                         f.close()
                         self.appendFile(fn, True)
                 self.saveProject()
@@ -4352,7 +4352,7 @@ class Project(QObject):
         
         # write the file
         try:
-            pkglistFile = open(pkglist, "w")
+            pkglistFile = open(pkglist, "w", encoding = "utf-8")
             pkglistFile.write("\n".join(lst))
             pkglistFile.close()
         except IOError as why:
@@ -4394,7 +4394,7 @@ class Project(QObject):
             return
         
         try:
-            pkglistFile = open(pkglist, "r")
+            pkglistFile = open(pkglist, "r", encoding = "utf-8")
             names = pkglistFile.read()
             pkglistFile.close()
             names = sorted(names.splitlines())
@@ -4493,7 +4493,7 @@ class Project(QObject):
         @return modified source (string), snapshot version string (string)
         """
         try:
-            f = open(filename, "r")
+            f = open(filename, "r", encoding = "utf-8")
             sourcelines = f.readlines()
             f.close()
         except IOError as why:
@@ -4532,7 +4532,7 @@ class Project(QObject):
         """
         version = "0.0.0"
         try:
-            f = open(filename, "r")
+            f = open(filename, "r", encoding = "utf-8")
             sourcelines = f.readlines()
             f.close()
         except IOError as why:

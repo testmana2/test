@@ -145,7 +145,7 @@ class ExporterRTF(ExporterBase):
                 bgColour = self.editor.paper()
             
             try:
-                f = open(filename, "w")
+                f = open(filename, "w", encoding = "utf-8")
                 
                 styles = {}
                 fonts = {}

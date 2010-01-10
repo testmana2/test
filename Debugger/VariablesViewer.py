@@ -18,7 +18,6 @@ from E4Gui.E4Application import e4App
 
 from .Config import ConfigVarTypeDispStrings, ConfigVarTypeStrings
 from .VariableDetailDialog import VariableDetailDialog
-##from Utilities import toUnicode
 
 import Preferences
 
@@ -515,23 +514,6 @@ class VariablesViewer(QTreeWidget):
             else:
                 return VariableItem(parent, dvar, dvalue, dtype)
         
-##    def __unicode(self, s):
-##        """
-##        Private method to convert a string to unicode.
-##        
-##        @param s the string to be converted (string)
-##        @return unicode representation of s (unicode object)
-##        """
-##        if isinstance(s, type("")):
-##            return s
-##        try:
-##            u = str(s, self.loc)
-##        except TypeError:
-##            u = str(s)
-##        except UnicodeError:
-##            u = toUnicode(s)
-##        return u
-##        
     def __addItem(self, parent, vtype, var, value):
         """
         Private method used to add an item to the list.
@@ -567,7 +549,6 @@ class VariablesViewer(QTreeWidget):
                     sval = eval(value)
                 except:
                     sval = value
-##            itm = self.__generateItem(parent, dvar, self.__unicode(sval), dvtype)
             itm = self.__generateItem(parent, dvar, str(sval), dvtype)
         
         else:

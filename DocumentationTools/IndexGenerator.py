@@ -174,7 +174,7 @@ class IndexGenerator(object):
               } + \
               self.footerTemplate
     
-        f = open(filename, "w")
+        f = open(filename, "w", encoding = "utf-8")
         f.write(doc)
         f.close()
     

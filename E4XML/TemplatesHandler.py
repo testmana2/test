@@ -86,13 +86,13 @@ class TemplatesHandler(XMLHandlerBase):
         """
         Handler method for the "TemplateText" end tag.
         """
-        self.templateText = self.unescape(self.utf8_to_code(self.buffer))
+        self.templateText = self.unescape(self.buffer)
 
     def endTemplateDescription(self):
         """
         Handler method for the "TemplateDescription" end tag.
         """
-        self.templateDescription = self.unescape(self.utf8_to_code(self.buffer))
+        self.templateDescription = self.unescape(self.buffer)
     
     def startTemplates(self, attrs):
         """
