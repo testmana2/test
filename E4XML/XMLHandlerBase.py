@@ -25,19 +25,23 @@ class XMLHandlerBase(ContentHandler):
         
         # TODO: add support for bytes, bytearray, set, frozenset
         self.elements = {
-            'none'    : (self.defaultStartElement, self.endNone),
-            'int'     : (self.defaultStartElement, self.endInt),
-            'float'   : (self.defaultStartElement, self.endFloat),
-            'complex' : (self.defaultStartElement, self.endComplex),
-            'bool'    : (self.defaultStartElement, self.endBool),
-            'string'  : (self.defaultStartElement, self.endString),
-            'tuple'   : (self.startTuple, self.endTuple),
-            'list'    : (self.startList, self.endList),
-            'dict'    : (self.startDictionary, self.endDictionary),
-            'pickle'  : (self.startPickle, self.endPickle),
+            'none'      : (self.defaultStartElement, self.endNone),
+            'int'       : (self.defaultStartElement, self.endInt),
+            'float'     : (self.defaultStartElement, self.endFloat),
+            'complex'   : (self.defaultStartElement, self.endComplex),
+            'bool'      : (self.defaultStartElement, self.endBool),
+            'string'    : (self.defaultStartElement, self.endString),
+            'bytes'     : (self.defaultStartElement, self.endBytes), 
+            'bytearray' : (self.defaultStartElement, self.endBytearray), 
+            'tuple'     : (self.startTuple, self.endTuple),
+            'list'      : (self.startList, self.endList),
+            'dict'      : (self.startDictionary, self.endDictionary),
+            'set'       : (self.startSet, self.endSet), 
+            'frozenset' : (self.startFrozenset, self.endFrozenset), 
+            'pickle'    : (self.startPickle, self.endPickle),
             # for backward compatibility
-            'long'    : (self.defaultStartElement, self.endInt),
-            'unicode' : (self.defaultStartElement, self.endString),
+            'long'      : (self.defaultStartElement, self.endInt),
+            'unicode'   : (self.defaultStartElement, self.endString),
         }
         
         self.buffer = ""
@@ -183,6 +187,19 @@ class XMLHandlerBase(ContentHandler):
         s = str(self.utf8_to_code(self.unescape(self.buffer)))
         self.stack.append(s)
         
+    def endBytes(self):
+        """
+        Handler method for the "bytes" end tag.
+        """
+        by = bytes([int(b) for b in self.buffer.strip().split(",")])
+        self.stack.append(by)
+        
+    def endBytearray(self):
+        """
+        Handler method for the "bytearray" end tag.
+        """
+        by = bytearray([int(b) for b in self.buffer.strip().split(",")])
+        self.stack.append(by)
 ##    def endUnicode(self):
 ##        """
 ##        Handler method for the "unicode" end tag.
@@ -197,7 +214,6 @@ class XMLHandlerBase(ContentHandler):
         @param attrs list of tag attributes
         """
         self.stack.append(self._marker)
-        self.stack.append([])
         
     def endList(self):
         """
@@ -207,8 +223,7 @@ class XMLHandlerBase(ContentHandler):
             if self.stack[i] is self._marker:
                 break
         assert i != -1
-        l = self.stack[i + 1]
-        l[:] = self.stack[i + 2:len(self.stack)]
+        l = self.stack[i + 1:len(self.stack)]
         self.stack[i:] = [l]
         
     def startTuple(self, attrs):
@@ -237,7 +252,6 @@ class XMLHandlerBase(ContentHandler):
         @param attrs list of tag attributes
         """
         self.stack.append(self._marker)
-        self.stack.append({})
         
     def endDictionary(self):
         """
@@ -247,10 +261,48 @@ class XMLHandlerBase(ContentHandler):
             if self.stack[i] is self._marker:
                 break
         assert i != -1
-        d = self.stack[i + 1]
-        for j in range(i + 2, len(self.stack), 2):
+        d = {}
+        for j in range(i + 1, len(self.stack), 2):
             d[self.stack[j]] = self.stack[j + 1]
         self.stack[i:] = [d]
+        
+    def startSet(self, attrs):
+        """
+        Handler method for the "set" start tag.
+        
+        @param attrs list of tag attributes
+        """
+        self.stack.append(self._marker)
+        
+    def endSet(self):
+        """
+        Handler method for the "set" end tag.
+        """
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i] is self._marker:
+                break
+        assert i != -1
+        s = set(self.stack[i + 1:len(self.stack)])
+        self.stack[i:] = [s]
+        
+    def startFrozenset(self, attrs):
+        """
+        Handler method for the "frozenset" start tag.
+        
+        @param attrs list of tag attributes
+        """
+        self.stack.append(self._marker)
+        
+    def endFrozenset(self):
+        """
+        Handler method for the "frozenset" end tag.
+        """
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i] is self._marker:
+                break
+        assert i != -1
+        f = frozenset(self.stack[i + 1:len(self.stack)])
+        self.stack[i:] = [f]
         
     def startPickle(self, attrs):
         """

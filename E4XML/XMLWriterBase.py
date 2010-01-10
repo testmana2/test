@@ -24,15 +24,18 @@ class XMLWriterBase(object):
         
         self.basics = {
             type(None) : self._write_none,
-            type(1)    : self._write_int,
-            type(1.1)  : self._write_float,
-            type(1+1j) : self._write_complex,
-            type(True) : self._write_bool,
-            type("")   : self._write_string,
-##            UnicodeType : self._write_unicode,  # should be bytes
-            type((1,)) : self._write_tuple,
-            type([])   : self._write_list,
-            type({})   : self._write_dictionary,
+            int        : self._write_int,
+            float      : self._write_float,
+            complex    : self._write_complex,
+            bool       : self._write_bool,
+            str        : self._write_string,
+            bytes      : self._write_bytes, 
+            bytearray  : self._write_bytearray, 
+            tuple      : self._write_tuple,
+            list       : self._write_list,
+            dict       : self._write_dictionary,
+            set        : self._write_set, 
+            frozenset  : self._write_frozenset, 
             # TODO: add set, frozenset, bytes, bytearray
         }
         
@@ -107,7 +110,7 @@ class XMLWriterBase(object):
         
     def _write_int(self, value, indent):
         """
-        Protected method to dump an IntType object.
+        Protected method to dump an int object.
         
         @param value value to be dumped (integer)
         @param indent indentation level for prettier output (integer)
@@ -116,7 +119,7 @@ class XMLWriterBase(object):
         
     def _write_bool(self, value, indent):
         """
-        Protected method to dump a BooleanType object.
+        Protected method to dump a bool object.
         
         @param value value to be dumped (boolean)
         @param indent indentation level for prettier output (integer)
@@ -125,7 +128,7 @@ class XMLWriterBase(object):
         
     def _write_float(self, value, indent):
         """
-        Protected method to dump a FloatType object.
+        Protected method to dump a float object.
         
         @param value value to be dumped (float)
         @param indent indentation level for prettier output (integer)
@@ -134,7 +137,7 @@ class XMLWriterBase(object):
         
     def _write_complex(self, value, indent):
         """
-        Protected method to dump a ComplexType object.
+        Protected method to dump a complex object.
         
         @param value value to be dumped (complex)
         @param indent indentation level for prettier output (integer)
@@ -144,16 +147,36 @@ class XMLWriterBase(object):
         
     def _write_string(self, value, indent):
         """
-        Protected method to dump a StringType object.
+        Protected method to dump a str object.
         
         @param value value to be dumped (string)
         @param indent indentation level for prettier output (integer)
         """
         self._write('%s<string>%s</string>' % ("  " * indent, self.escape(value)))
         
+    def _write_bytes(self, value, indent):
+        """
+        Protected method to dump a bytes object.
+        
+        @param value value to be dumped (bytes)
+        @param indent indentation level for prettier output (integer)
+        """
+        self._write('%s<bytes>%s</bytes>' % (
+            " " * indent, ",".join(["%d" % b for b in value])))
+        
+    def _write_bytearray(self, value, indent):
+        """
+        Protected method to dump a bytearray object.
+        
+        @param value value to be dumped (bytearray)
+        @param indent indentation level for prettier output (integer)
+        """
+        self._write('%s<bytearray>%s</bytearray>' % (
+            " " * indent, ",".join(["%d" % b for b in value])))
+        
     def _write_tuple(self, value, indent):
         """
-        Protected method to dump a TupleType object.
+        Protected method to dump a tuple object.
         
         @param value value to be dumped (tuple)
         @param indent indentation level for prettier output (integer)
@@ -166,7 +189,7 @@ class XMLWriterBase(object):
         
     def _write_list(self, value, indent):
         """
-        Protected method to dump a ListType object.
+        Protected method to dump a list object.
         
         @param value value to be dumped (list)
         @param indent indentation level for prettier output (integer)
@@ -179,7 +202,7 @@ class XMLWriterBase(object):
         
     def _write_dictionary(self, value, indent):
         """
-        Protected method to dump a DictType object.
+        Protected method to dump a dict object.
         
         @param value value to be dumped (dictionary)
         @param indent indentation level for prettier output (integer)
@@ -196,6 +219,32 @@ class XMLWriterBase(object):
             self._writeBasics(value[key], nindent2)
             self._write('%s</value>' % ("  " * nindent1))
         self._write('%s</dict>' % ("  " * indent))
+        
+    def _write_set(self, value, indent):
+        """
+        Protected method to dump a set object.
+        
+        @param value value to be dumped (set)
+        @param indent indentation level for prettier output (integer)
+        """
+        self._write('%s<set>' % ("  " * indent))
+        nindent = indent + 1
+        for elem in value:
+            self._writeBasics(elem, nindent)
+        self._write('%s</set>' % ("  " * indent))
+        
+    def _write_frozenset(self, value, indent):
+        """
+        Protected method to dump a frozenset object.
+        
+        @param value value to be dumped (frozenset)
+        @param indent indentation level for prettier output (integer)
+        """
+        self._write('%s<frozenset>' % ("  " * indent))
+        nindent = indent + 1
+        for elem in value:
+            self._writeBasics(elem, nindent)
+        self._write('%s</frozenset>' % ("  " * indent))
         
     def _write_unimplemented(self, value, indent):
         """

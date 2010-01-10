@@ -2960,21 +2960,27 @@
       <keyword name="XMLHandlerBase.defaultEndElement" id="XMLHandlerBase.defaultEndElement" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.defaultEndElement" />
       <keyword name="XMLHandlerBase.defaultStartElement" id="XMLHandlerBase.defaultStartElement" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.defaultStartElement" />
       <keyword name="XMLHandlerBase.endBool" id="XMLHandlerBase.endBool" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endBool" />
+      <keyword name="XMLHandlerBase.endBytearray" id="XMLHandlerBase.endBytearray" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endBytearray" />
+      <keyword name="XMLHandlerBase.endBytes" id="XMLHandlerBase.endBytes" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endBytes" />
       <keyword name="XMLHandlerBase.endComplex" id="XMLHandlerBase.endComplex" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endComplex" />
       <keyword name="XMLHandlerBase.endDictionary" id="XMLHandlerBase.endDictionary" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endDictionary" />
       <keyword name="XMLHandlerBase.endElement" id="XMLHandlerBase.endElement" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endElement" />
       <keyword name="XMLHandlerBase.endFloat" id="XMLHandlerBase.endFloat" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endFloat" />
+      <keyword name="XMLHandlerBase.endFrozenset" id="XMLHandlerBase.endFrozenset" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endFrozenset" />
       <keyword name="XMLHandlerBase.endInt" id="XMLHandlerBase.endInt" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endInt" />
       <keyword name="XMLHandlerBase.endList" id="XMLHandlerBase.endList" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endList" />
       <keyword name="XMLHandlerBase.endNone" id="XMLHandlerBase.endNone" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endNone" />
       <keyword name="XMLHandlerBase.endPickle" id="XMLHandlerBase.endPickle" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endPickle" />
+      <keyword name="XMLHandlerBase.endSet" id="XMLHandlerBase.endSet" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endSet" />
       <keyword name="XMLHandlerBase.endString" id="XMLHandlerBase.endString" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endString" />
       <keyword name="XMLHandlerBase.endTuple" id="XMLHandlerBase.endTuple" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.endTuple" />
       <keyword name="XMLHandlerBase.startDictionary" id="XMLHandlerBase.startDictionary" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startDictionary" />
       <keyword name="XMLHandlerBase.startDocument" id="XMLHandlerBase.startDocument" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startDocument" />
       <keyword name="XMLHandlerBase.startElement" id="XMLHandlerBase.startElement" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startElement" />
+      <keyword name="XMLHandlerBase.startFrozenset" id="XMLHandlerBase.startFrozenset" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startFrozenset" />
       <keyword name="XMLHandlerBase.startList" id="XMLHandlerBase.startList" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startList" />
       <keyword name="XMLHandlerBase.startPickle" id="XMLHandlerBase.startPickle" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startPickle" />
+      <keyword name="XMLHandlerBase.startSet" id="XMLHandlerBase.startSet" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startSet" />
       <keyword name="XMLHandlerBase.startTuple" id="XMLHandlerBase.startTuple" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startTuple" />
       <keyword name="XMLHandlerBase.unescape" id="XMLHandlerBase.unescape" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.unescape" />
       <keyword name="XMLHandlerBase.utf8_to_code" id="XMLHandlerBase.utf8_to_code" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.utf8_to_code" />
@@ -3099,16 +3105,18 @@
       <keyword name="XMLWriterBase._write" id="XMLWriterBase._write" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write" />
       <keyword name="XMLWriterBase._writeBasics" id="XMLWriterBase._writeBasics" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._writeBasics" />
       <keyword name="XMLWriterBase._write_bool" id="XMLWriterBase._write_bool" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_bool" />
+      <keyword name="XMLWriterBase._write_bytearray" id="XMLWriterBase._write_bytearray" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_bytearray" />
+      <keyword name="XMLWriterBase._write_bytes" id="XMLWriterBase._write_bytes" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_bytes" />
       <keyword name="XMLWriterBase._write_complex" id="XMLWriterBase._write_complex" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_complex" />
       <keyword name="XMLWriterBase._write_dictionary" id="XMLWriterBase._write_dictionary" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_dictionary" />
       <keyword name="XMLWriterBase._write_float" id="XMLWriterBase._write_float" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_float" />
+      <keyword name="XMLWriterBase._write_frozenset" id="XMLWriterBase._write_frozenset" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_frozenset" />
       <keyword name="XMLWriterBase._write_int" id="XMLWriterBase._write_int" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_int" />
       <keyword name="XMLWriterBase._write_list" id="XMLWriterBase._write_list" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_list" />
-      <keyword name="XMLWriterBase._write_long" id="XMLWriterBase._write_long" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_long" />
       <keyword name="XMLWriterBase._write_none" id="XMLWriterBase._write_none" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_none" />
+      <keyword name="XMLWriterBase._write_set" id="XMLWriterBase._write_set" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_set" />
       <keyword name="XMLWriterBase._write_string" id="XMLWriterBase._write_string" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_string" />
       <keyword name="XMLWriterBase._write_tuple" id="XMLWriterBase._write_tuple" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_tuple" />
-      <keyword name="XMLWriterBase._write_unicode" id="XMLWriterBase._write_unicode" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_unicode" />
       <keyword name="XMLWriterBase._write_unimplemented" id="XMLWriterBase._write_unimplemented" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase._write_unimplemented" />
       <keyword name="XMLWriterBase.encodedNewLines" id="XMLWriterBase.encodedNewLines" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase.encodedNewLines" />
       <keyword name="XMLWriterBase.escape" id="XMLWriterBase.escape" ref="eric5.E4XML.XMLWriterBase.html#XMLWriterBase.escape" />
