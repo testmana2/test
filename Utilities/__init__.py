@@ -132,6 +132,15 @@ def readEncodedFile(filename):
     f = open(filename, "rb")
     text = f.read()
     f.close()
+    return decode(text)
+
+def decode(text):
+    """
+    Function to decode some byte text into a string.
+    
+    @param text byte text to decode (bytes)
+    @return tuple of decoded text and encoding (string, string)
+    """
     try:
         if text.startswith(BOM_UTF8):
             # UTF-8 with BOM
@@ -196,6 +205,22 @@ def writeEncodedFile(filename, text, orig_coding):
     @param orig_coding type of the original encoding (string)
     @return encoding used for writing the file (string)
     """
+    etext, encoding = encode(text, orig_coding)
+    
+    f = open(filename, "wb")
+    f.write(etext)
+    f.close()
+    
+    return encoding
+
+def encode(text, orig_coding):
+    """
+    Function to encode text into a byte text.
+    
+    @param text text to be encoded (string)
+    @param orig_coding type of the original encoding (string)
+    @return tuple of encoded text and encoding used (bytes, string)
+    """
     encoding = None
     if orig_coding == 'utf-8-bom':
         etext, encoding = BOM_UTF8 + text.encode("utf-8"), 'utf-8-bom'
@@ -240,11 +265,7 @@ def writeEncodedFile(filename, text, orig_coding):
                         # Save as UTF-8 without BOM
                         etext, encoding = text.encode('utf-8'), 'utf-8'
     
-    f = open(filename, "wb")
-    f.write(etext)
-    f.close()
-    
-    return encoding
+    return etext, encoding
     
 _escape = re.compile(eval(r'"[&<>\"\u0080-\uffff]"'))
 
