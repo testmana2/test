@@ -201,12 +201,16 @@ def exportShortcuts(fn):
                         """Compressed keyboard shortcut files"""
                         """ not supported. The compression library is missing."""))
                 return 0
-            f = gzip.open(fn, "w")
+            f = io.StringIO()
         else:
             f = open(fn, "w", encoding = "utf-8")
         
         ShortcutsWriter(f).writeXML()
         
+        if fn.lower().endswith("e4kz"):
+            g = gzip.open(fn, "wb")
+            g.write(f.getvalue().encode("utf-8"))
+            g.close()
         f.close()
         return True
     except IOError:
@@ -230,7 +234,9 @@ def importShortcuts(fn):
                         """Compressed keyboard shortcut files"""
                         """ not supported. The compression library is missing."""))
                 return False
-            f = gzip.open(fn, "r")
+            g = gzip.open(fn, "rb")
+            f = io.StringIO(g.read().decode("utf-8"))
+            g.close()
         else:
             f = open(fn, "r", encoding = "utf-8")
         try:
@@ -271,7 +277,9 @@ def importShortcuts(fn):
                         """Compressed keyboard shortcut files"""
                         """ not supported. The compression library is missing."""))
                 return False
-            f = gzip.open(fn, "r")
+            g = gzip.open(fn, "rb")
+            f = io.StringIO(g.read().decode("utf-8"))
+            g.close()
         else:
             f = open(fn, "r", encoding = "utf-8")
         try:

@@ -203,7 +203,9 @@ class MultiProject(QObject):
                         self.trUtf8("""Compressed multiproject files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
@@ -274,7 +276,9 @@ class MultiProject(QObject):
                         self.trUtf8("""Compressed multiproject files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 f = open(fn, "r", encoding = "utf-8")
             try:
@@ -351,15 +355,18 @@ class MultiProject(QObject):
                         self.trUtf8("""Compressed multiproject files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "w")
+                f = io.StringIO()
             else:
                 f = open(fn, "w", encoding = "utf-8")
             
             MultiProjectWriter(self, f, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()
             
+            if fn.lower().endswith("e4mz"):
+                g = gzip.open(fn, "wb")
+                g.write(f.getvalue().encode("utf-8"))
+                g.close()
             f.close()
-            
         except IOError:
             QMessageBox.critical(None,
                 self.trUtf8("Save multiproject file"),

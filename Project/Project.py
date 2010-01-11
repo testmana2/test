@@ -556,7 +556,9 @@ class Project(QObject):
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
@@ -660,7 +662,9 @@ class Project(QObject):
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 f = open(fn, "r", encoding = "utf-8")
             try:
@@ -742,12 +746,16 @@ class Project(QObject):
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = gzip.open(fn, "w")
+                f = io.StringIO()
             else:
                 f = open(fn, "w", encoding = "utf-8")
             
             ProjectWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
+            if fn.lower().endswith("e4pz"):
+                g = gzip.open(fn, "wb")
+                g.write(f.getvalue().encode("utf-8"))
+                g.close()
             f.close()
             
         except IOError:
@@ -855,7 +863,9 @@ class Project(QObject):
                             self.trUtf8("""Compressed project session files not"""
                                 """ supported. The compression library is missing."""))
                     return
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 fn = os.path.join(self.getProjectManagementDir(), 
                                   '%s%s.e4s' % (fn, indicator))
@@ -928,7 +938,9 @@ class Project(QObject):
                             self.trUtf8("<p>The project session <b>{0}</b> could not"
                                 " be read.</p>").format(fn))
                     return
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 f = open(fn, "r", encoding = "utf-8")
             try:
@@ -995,7 +1007,7 @@ class Project(QObject):
                             self.trUtf8("""Compressed project session files not"""
                                 """ supported. The compression library is missing."""))
                     return
-                f = gzip.open(fn, "w")
+                f = io.StringIO()
             else:
                 fn = os.path.join(self.getProjectManagementDir(), 
                                   '%s%s.e4s' % (fn, indicator))
@@ -1003,6 +1015,10 @@ class Project(QObject):
             
             SessionWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
+            if fn.lower().endswith("e4sz"):
+                g = gzip.open(fn, "wb")
+                g.write(f.getvalue().encode("utf-8"))
+                g.close()
             f.close()
             
         except IOError:
@@ -1061,7 +1077,9 @@ class Project(QObject):
                         self.trUtf8("""Compressed tasks files not supported."""
                             """ The compression library is missing."""))
                     return
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
                 if not os.path.exists(fn):
@@ -1118,7 +1136,9 @@ class Project(QObject):
                         self.trUtf8("""Compressed tasks files not supported."""
                             """ The compression library is missing."""))
                     return
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 f = open(fn, "r", encoding = "utf-8")
             try:
@@ -1161,13 +1181,17 @@ class Project(QObject):
                         self.trUtf8("""Compressed tasks files not supported."""
                             """ The compression library is missing."""))
                     return
-                f = gzip.open(fn, "w")
+                f = io.StringIO()
             else:
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
                 f = open(fn, "w", encoding = "utf-8")
             
             TasksWriter(f, True, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
+            if fn.lower().endswith("e4tz"):
+                g = gzip.open(fn, "wb")
+                g.write(f.getvalue().encode("utf-8"))
+                g.close()
             f.close()
             
         except IOError:
@@ -1205,7 +1229,9 @@ class Project(QObject):
                                         """ supported. The compression library is"""
                                         """ missing."""))
                     return
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
                 f = open(fn, "r", encoding = "utf-8")
@@ -1265,7 +1291,9 @@ class Project(QObject):
                             self.trUtf8("<p>The project debugger properties file"
                                         " <b>{0}</b> could not be read.</p>").format(fn))
                     return
-                f = gzip.open(fn, "r")
+                g = gzip.open(fn, "rb")
+                f = io.StringIO(g.read().decode("utf-8"))
+                g.close()
             else:
                 f = open(fn, "r", encoding = "utf-8")
             try:
@@ -1324,7 +1352,7 @@ class Project(QObject):
                                         """ not supported. The compression library is"""
                                         """ missing."""))
                     return
-                f = gzip.open(fn, "w")
+                f = io.StringIO()
             else:
                 fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
                 f = open(fn, "w", encoding = "utf-8")
@@ -1332,6 +1360,10 @@ class Project(QObject):
             DebuggerPropertiesWriter(f, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()
             
+            if fn.lower().endswith("e4dz"):
+                g = gzip.open(fn, "wb")
+                g.write(f.getvalue().encode("utf-8"))
+                g.close()
             f.close()
             
         except IOError:
