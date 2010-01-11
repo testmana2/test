@@ -502,9 +502,9 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if not zipfile.is_zipfile(archive):
             return False
         
-        zip = zipfile.ZipFile(archive, "r")
+        zip = zipfile.ZipFile(archive, "rb")
         try:
-            aversion = zip.read("VERSION")
+            aversion = zip.read("VERSION").decode("utf-8")
         except KeyError:
             aversion = ""
         zip.close()

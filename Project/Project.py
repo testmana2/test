@@ -4443,9 +4443,9 @@ class Project(QObject):
             os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0].replace(".py", ".zip"))
         try:
             try:
-                archiveFile = zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED)
+                archiveFile = zipfile.ZipFile(archive, "wb", zipfile.ZIP_DEFLATED)
             except RuntimeError:
-                archiveFile = zipfile.ZipFile(archive, "w")
+                archiveFile = zipfile.ZipFile(archive, "wb")
         except IOError as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
@@ -4477,7 +4477,7 @@ class Project(QObject):
                                 .format(os.path.join(self.ppath, name), str(why)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Ok))
-        archiveFile.writestr("VERSION", version)
+        archiveFile.writestr("VERSION", version.encode("utf-8"))
         archiveFile.close()
         
         if not archive in self.pdata["OTHERS"]:
@@ -4511,7 +4511,7 @@ class Project(QObject):
         
         if not path in zipFile.namelist():
             self.__createZipDirEntries(os.path.split(path[:-1])[0], zipFile)
-            zipFile.writestr(path, "")
+            zipFile.writestr(path, b"")
     
     def __createSnapshotSource(self, filename):
         """
@@ -4522,13 +4522,12 @@ class Project(QObject):
         and date indicator to the version string.
         
         @param filename name of the plugin file to modify (string)
-        @return modified source (string), snapshot version string (string)
+        @return modified source (bytes), snapshot version string (string)
         """
         try:
-            f = open(filename, "r", encoding = "utf-8")
-            sourcelines = f.readlines()
-            f.close()
-        except IOError as why:
+            sourcelines, encoding = Utilities.readEncodedFile(filename)
+            sourcelines = sourcelines.splitlines(True)
+        except (IOError, UnicodeError) as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
@@ -4536,7 +4535,7 @@ class Project(QObject):
                             """<p>Reason: {1}</p>""").format(archive, str(why)),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Ok))
-            return ""
+            return b"", ""
         
         lineno = 0
         while lineno < len(sourcelines):
@@ -4553,21 +4552,21 @@ class Project(QObject):
             
             lineno += 1
         
-        return "".join(sourcelines), sversion
+        source = Utilities.encode("".join(sourcelines), encoding)
+        return source, sversion
     
     def __pluginExtractVersion(self, filename):
         """
         Private method to extract the version number entry.
         
-        @param filename name of the plugin file to modify (string)
+        @param filename name of the plugin file (string)
         @return version string (string)
         """
         version = "0.0.0"
         try:
-            f = open(filename, "r", encoding = "utf-8")
-            sourcelines = f.readlines()
-            f.close()
-        except IOError as why:
+            sourcelines = Utilities.readEncodedFile(filename)[0]
+            sourcelines = sourcelines.splitlines(True)
+        except (IOError, UnicodeError) as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
@@ -4577,10 +4576,10 @@ class Project(QObject):
                     QMessageBox.Ok))
             return ""
         
-        lineno = 0
-        while lineno < len(sourcelines):
-            if sourcelines[lineno].startswith("version = "):
-                version = sourcelines[lineno].replace("version = ", "").strip()[1:-1]
+        for sourceline in sourcelines:
+            if sourceline.startswith("version = "):
+                version = sourceline.replace("version = ", "").strip()\
+                            .replace('"', "").replace("'", "")
                 break
             
             lineno += 1

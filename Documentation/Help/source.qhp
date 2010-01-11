@@ -2048,11 +2048,14 @@
       <keyword name="TemplatePropertiesDialog.on_helpButton_clicked" id="TemplatePropertiesDialog.on_helpButton_clicked" ref="eric5.Templates.TemplatePropertiesDialog.html#TemplatePropertiesDialog.on_helpButton_clicked" />
       <keyword name="TemplatePropertiesDialog.setSelectedGroup" id="TemplatePropertiesDialog.setSelectedGroup" ref="eric5.Templates.TemplatePropertiesDialog.html#TemplatePropertiesDialog.setSelectedGroup" />
       <keyword name="Utilities (Package)" id="Utilities (Package)" ref="index-eric5.Utilities.html" />
+      <keyword name="CodingError" id="CodingError" ref="eric5.Utilities.__init__.html#CodingError" />
       <keyword name="_percentReplacementFunc" id="_percentReplacementFunc" ref="eric5.Utilities.__init__.html#_percentReplacementFunc" />
       <keyword name="compactPath" id="compactPath" ref="eric5.Utilities.__init__.html#compactPath" />
       <keyword name="compile" id="compile" ref="eric5.Utilities.__init__.html#compile" />
       <keyword name="convertLineEnds" id="convertLineEnds" ref="eric5.Utilities.__init__.html#convertLineEnds" />
+      <keyword name="decode" id="decode" ref="eric5.Utilities.__init__.html#decode" />
       <keyword name="direntries" id="direntries" ref="eric5.Utilities.__init__.html#direntries" />
+      <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />
       <keyword name="escape_entities" id="escape_entities" ref="eric5.Utilities.__init__.html#escape_entities" />
       <keyword name="escape_uentities" id="escape_uentities" ref="eric5.Utilities.__init__.html#escape_uentities" />
       <keyword name="fromNativeSeparators" id="fromNativeSeparators" ref="eric5.Utilities.__init__.html#fromNativeSeparators" />
@@ -2072,6 +2075,8 @@
       <keyword name="getPythonVersion" id="getPythonVersion" ref="eric5.Utilities.__init__.html#getPythonVersion" />
       <keyword name="getTestFileName" id="getTestFileName" ref="eric5.Utilities.__init__.html#getTestFileName" />
       <keyword name="getUserName" id="getUserName" ref="eric5.Utilities.__init__.html#getUserName" />
+      <keyword name="get_coding" id="get_coding" ref="eric5.Utilities.__init__.html#get_coding" />
+      <keyword name="get_codingBytes" id="get_codingBytes" ref="eric5.Utilities.__init__.html#get_codingBytes" />
       <keyword name="hasEnvironmentEntry" id="hasEnvironmentEntry" ref="eric5.Utilities.__init__.html#hasEnvironmentEntry" />
       <keyword name="html_encode" id="html_encode" ref="eric5.Utilities.__init__.html#html_encode" />
       <keyword name="html_uencode" id="html_uencode" ref="eric5.Utilities.__init__.html#html_uencode" />
@@ -2091,6 +2096,7 @@
       <keyword name="prepareQtMacBundle" id="prepareQtMacBundle" ref="eric5.Utilities.__init__.html#prepareQtMacBundle" />
       <keyword name="pwDecode" id="pwDecode" ref="eric5.Utilities.__init__.html#pwDecode" />
       <keyword name="pwEncode" id="pwEncode" ref="eric5.Utilities.__init__.html#pwEncode" />
+      <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.Utilities.__init__.html#readEncodedFile" />
       <keyword name="relpath" id="relpath" ref="eric5.Utilities.__init__.html#relpath" />
       <keyword name="samepath" id="samepath" ref="eric5.Utilities.__init__.html#samepath" />
       <keyword name="setConfigDir" id="setConfigDir" ref="eric5.Utilities.__init__.html#setConfigDir" />
@@ -2098,6 +2104,10 @@
       <keyword name="toNativeSeparators" id="toNativeSeparators" ref="eric5.Utilities.__init__.html#toNativeSeparators" />
       <keyword name="win32_GetUserName" id="win32_GetUserName" ref="eric5.Utilities.__init__.html#win32_GetUserName" />
       <keyword name="win32_Kill" id="win32_Kill" ref="eric5.Utilities.__init__.html#win32_Kill" />
+      <keyword name="writeEncodedFile" id="writeEncodedFile" ref="eric5.Utilities.__init__.html#writeEncodedFile" />
+      <keyword name="CodingError (Constructor)" id="CodingError (Constructor)" ref="eric5.Utilities.__init__.html#CodingError.__init__" />
+      <keyword name="CodingError.__repr__" id="CodingError.__repr__" ref="eric5.Utilities.__init__.html#CodingError.__repr__" />
+      <keyword name="CodingError.__str__" id="CodingError.__str__" ref="eric5.Utilities.__init__.html#CodingError.__str__" />
       <keyword name="Startup (Module)" id="Startup (Module)" ref="eric5.Utilities.Startup.html" />
       <keyword name="handleArgs" id="handleArgs" ref="eric5.Utilities.Startup.html#handleArgs" />
       <keyword name="initializeResourceSearchPath" id="initializeResourceSearchPath" ref="eric5.Utilities.Startup.html#initializeResourceSearchPath" />
@@ -2983,7 +2993,6 @@
       <keyword name="XMLHandlerBase.startSet" id="XMLHandlerBase.startSet" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startSet" />
       <keyword name="XMLHandlerBase.startTuple" id="XMLHandlerBase.startTuple" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.startTuple" />
       <keyword name="XMLHandlerBase.unescape" id="XMLHandlerBase.unescape" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.unescape" />
-      <keyword name="XMLHandlerBase.utf8_to_code" id="XMLHandlerBase.utf8_to_code" ref="eric5.E4XML.XMLHandlerBase.html#XMLHandlerBase.utf8_to_code" />
       <keyword name="MultiProjectWriter (Module)" id="MultiProjectWriter (Module)" ref="eric5.E4XML.MultiProjectWriter.html" />
       <keyword name="MultiProjectWriter" id="MultiProjectWriter" ref="eric5.E4XML.MultiProjectWriter.html#MultiProjectWriter" />
       <keyword name="MultiProjectWriter (Constructor)" id="MultiProjectWriter (Constructor)" ref="eric5.E4XML.MultiProjectWriter.html#MultiProjectWriter.__init__" />
@@ -5259,7 +5268,6 @@
       <keyword name="MiniEditor.getFileName" id="MiniEditor.getFileName" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.getFileName" />
       <keyword name="MiniEditor.getLanguage" id="MiniEditor.getLanguage" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.getLanguage" />
       <keyword name="MiniEditor.getSRHistory" id="MiniEditor.getSRHistory" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.getSRHistory" />
-      <keyword name="MiniEditor.readLine0" id="MiniEditor.readLine0" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.readLine0" />
       <keyword name="MiniEditor.setLanguage" id="MiniEditor.setLanguage" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.setLanguage" />
       <keyword name="MiniEditor.setSearchIndicator" id="MiniEditor.setSearchIndicator" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.setSearchIndicator" />
       <keyword name="MiniEditor.setText" id="MiniEditor.setText" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.setText" />
@@ -5568,7 +5576,6 @@
       <keyword name="Editor.printPreviewFile" id="Editor.printPreviewFile" ref="eric5.QScintilla.Editor.html#Editor.printPreviewFile" />
       <keyword name="Editor.projectLexerAssociationsChanged" id="Editor.projectLexerAssociationsChanged" ref="eric5.QScintilla.Editor.html#Editor.projectLexerAssociationsChanged" />
       <keyword name="Editor.readFile" id="Editor.readFile" ref="eric5.QScintilla.Editor.html#Editor.readFile" />
-      <keyword name="Editor.readLine0" id="Editor.readLine0" ref="eric5.QScintilla.Editor.html#Editor.readLine0" />
       <keyword name="Editor.readSettings" id="Editor.readSettings" ref="eric5.QScintilla.Editor.html#Editor.readSettings" />
       <keyword name="Editor.redo" id="Editor.redo" ref="eric5.QScintilla.Editor.html#Editor.redo" />
       <keyword name="Editor.refresh" id="Editor.refresh" ref="eric5.QScintilla.Editor.html#Editor.refresh" />
