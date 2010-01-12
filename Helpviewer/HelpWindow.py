@@ -45,7 +45,7 @@ from .AdBlock.AdBlockManager import AdBlockManager
 from E4Gui.E4TabWidget import E4TabWidget
 from E4Gui.E4Action import E4Action
 
-from E4Network.E5NetworkMonitor import E5NetworkMonitor
+from E5Network.E5NetworkMonitor import E5NetworkMonitor
 
 import Preferences
 from Preferences import Shortcuts
