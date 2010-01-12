@@ -578,9 +578,6 @@
     <Source>Helpviewer/HelpWebSearchWidget.py</Source>
     <Source>Helpviewer/HelpClearPrivateDataDialog.py</Source>
     <Source>E4Gui/E4TableView.py</Source>
-    <Source>E4Network/__init__.py</Source>
-    <Source>E4Network/E4NetworkMonitor.py</Source>
-    <Source>E4Network/E4NetworkHeaderDetailsDialog.py</Source>
     <Source>Helpviewer/HelpLanguagesDialog.py</Source>
     <Source>DebugClients/Python/coverage/html.py</Source>
     <Source>DebugClients/Python/coverage/report.py</Source>
@@ -758,6 +755,9 @@
     <Source>E5Graphics/__init__.py</Source>
     <Source>E5Graphics/E5ArrowItem.py</Source>
     <Source>E5Graphics/E5GraphicsView.py</Source>
+    <Source>E5Network/__init__.py</Source>
+    <Source>E5Network/E5NetworkMonitor.py</Source>
+    <Source>E5Network/E5NetworkHeaderDetailsDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -938,8 +938,6 @@
     <Form>Helpviewer/HelpTopicDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/DebuggerPython3Page.ui</Form>
     <Form>Helpviewer/HelpClearPrivateDataDialog.ui</Form>
-    <Form>E4Network/E4NetworkMonitor.ui</Form>
-    <Form>E4Network/E4NetworkHeaderDetailsDialog.ui</Form>
     <Form>Helpviewer/HelpLanguagesDialog.ui</Form>
     <Form>Helpviewer/CookieJar/CookiesExceptionsDialog.ui</Form>
     <Form>Helpviewer/CookieJar/CookiesDialog.ui</Form>
@@ -959,6 +957,8 @@
     <Form>Helpviewer/AdBlock/AdBlockDialog.ui</Form>
     <Form>Helpviewer/OpenSearch/OpenSearchEditDialog.ui</Form>
     <Form>E5XML/XMLMessageDialog.ui</Form>
+    <Form>E5Network/E5NetworkMonitor.ui</Form>
+    <Form>E5Network/E5NetworkHeaderDetailsDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

@@ -10,9 +10,9 @@ Module implementing a dialog to show the data of a response or reply header.
 from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import pyqtSlot
 
-from .Ui_E4NetworkHeaderDetailsDialog import Ui_E4NetworkHeaderDetailsDialog
+from .Ui_E5NetworkHeaderDetailsDialog import Ui_E5NetworkHeaderDetailsDialog
 
-class E4NetworkHeaderDetailsDialog(QDialog, Ui_E4NetworkHeaderDetailsDialog):
+class E5NetworkHeaderDetailsDialog(QDialog, Ui_E5NetworkHeaderDetailsDialog):
     """
     Class implementing a dialog to show the data of a response or reply header.
     """

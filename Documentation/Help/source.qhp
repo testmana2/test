@@ -121,13 +121,13 @@
             <section title="eric5.E4Gui.E4TreeSortFilterProxyModel" ref="eric5.E4Gui.E4TreeSortFilterProxyModel.html" />
             <section title="eric5.E4Gui.E4TreeView" ref="eric5.E4Gui.E4TreeView.html" />
           </section>
-          <section title="eric5.E4Network" ref="index-eric5.E4Network.html">
-            <section title="eric5.E4Network.E4NetworkHeaderDetailsDialog" ref="eric5.E4Network.E4NetworkHeaderDetailsDialog.html" />
-            <section title="eric5.E4Network.E4NetworkMonitor" ref="eric5.E4Network.E4NetworkMonitor.html" />
-          </section>
           <section title="eric5.E5Graphics" ref="index-eric5.E5Graphics.html">
             <section title="eric5.E5Graphics.E5ArrowItem" ref="eric5.E5Graphics.E5ArrowItem.html" />
             <section title="eric5.E5Graphics.E5GraphicsView" ref="eric5.E5Graphics.E5GraphicsView.html" />
+          </section>
+          <section title="eric5.E5Network" ref="index-eric5.E5Network.html">
+            <section title="eric5.E5Network.E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
+            <section title="eric5.E5Network.E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html" />
           </section>
           <section title="eric5.E5XML" ref="index-eric5.E5XML.html">
             <section title="eric5.E5XML.Config" ref="eric5.E5XML.Config.html" />
@@ -1746,6 +1746,32 @@
       <keyword name="UMLGraphicsView.selectItem" id="UMLGraphicsView.selectItem" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.selectItem" />
       <keyword name="UMLGraphicsView.selectItems" id="UMLGraphicsView.selectItems" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.selectItems" />
       <keyword name="UMLGraphicsView.setDiagramName" id="UMLGraphicsView.setDiagramName" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.setDiagramName" />
+      <keyword name="E5Network (Package)" id="E5Network (Package)" ref="index-eric5.E5Network.html" />
+      <keyword name="E5NetworkHeaderDetailsDialog (Module)" id="E5NetworkHeaderDetailsDialog (Module)" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
+      <keyword name="E5NetworkHeaderDetailsDialog" id="E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html#E5NetworkHeaderDetailsDialog" />
+      <keyword name="E5NetworkHeaderDetailsDialog (Constructor)" id="E5NetworkHeaderDetailsDialog (Constructor)" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html#E5NetworkHeaderDetailsDialog.__init__" />
+      <keyword name="E5NetworkHeaderDetailsDialog.setData" id="E5NetworkHeaderDetailsDialog.setData" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html#E5NetworkHeaderDetailsDialog.setData" />
+      <keyword name="E5NetworkMonitor (Module)" id="E5NetworkMonitor (Module)" ref="eric5.E5Network.E5NetworkMonitor.html" />
+      <keyword name="E5NetworkMonitor" id="E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor" />
+      <keyword name="E5NetworkRequest" id="E5NetworkRequest" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkRequest" />
+      <keyword name="E5RequestModel" id="E5RequestModel" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel" />
+      <keyword name="E5NetworkMonitor (Constructor)" id="E5NetworkMonitor (Constructor)" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.__init__" />
+      <keyword name="E5NetworkMonitor.__currentChanged" id="E5NetworkMonitor.__currentChanged" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.__currentChanged" />
+      <keyword name="E5NetworkMonitor.__showHeaderDetails" id="E5NetworkMonitor.__showHeaderDetails" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.__showHeaderDetails" />
+      <keyword name="E5NetworkMonitor.closeEvent" id="E5NetworkMonitor.closeEvent" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.closeEvent" />
+      <keyword name="E5NetworkMonitor.closeMonitor" id="E5NetworkMonitor.closeMonitor" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.closeMonitor" />
+      <keyword name="E5NetworkMonitor.instance" id="E5NetworkMonitor.instance" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.instance" />
+      <keyword name="E5NetworkMonitor.reject" id="E5NetworkMonitor.reject" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.reject" />
+      <keyword name="E5NetworkRequest (Constructor)" id="E5NetworkRequest (Constructor)" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkRequest.__init__" />
+      <keyword name="E5RequestModel (Constructor)" id="E5RequestModel (Constructor)" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.__init__" />
+      <keyword name="E5RequestModel.__addReply" id="E5RequestModel.__addReply" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.__addReply" />
+      <keyword name="E5RequestModel.__addRequest" id="E5RequestModel.__addRequest" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.__addRequest" />
+      <keyword name="E5RequestModel.__requestCreated" id="E5RequestModel.__requestCreated" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.__requestCreated" />
+      <keyword name="E5RequestModel.columnCount" id="E5RequestModel.columnCount" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.columnCount" />
+      <keyword name="E5RequestModel.data" id="E5RequestModel.data" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.data" />
+      <keyword name="E5RequestModel.headerData" id="E5RequestModel.headerData" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.headerData" />
+      <keyword name="E5RequestModel.removeRows" id="E5RequestModel.removeRows" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.removeRows" />
+      <keyword name="E5RequestModel.rowCount" id="E5RequestModel.rowCount" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.rowCount" />
       <keyword name="Debugger (Package)" id="Debugger (Package)" ref="index-eric5.Debugger.html" />
       <keyword name="DebugProtocol (Module)" id="DebugProtocol (Module)" ref="eric5.Debugger.DebugProtocol.html" />
       <keyword name="DebugUI (Module)" id="DebugUI (Module)" ref="eric5.Debugger.DebugUI.html" />
@@ -3127,32 +3153,6 @@
       <keyword name="ToolGroupConfigurationDialog.on_groupsList_currentRowChanged" id="ToolGroupConfigurationDialog.on_groupsList_currentRowChanged" ref="eric5.Preferences.ToolGroupConfigurationDialog.html#ToolGroupConfigurationDialog.on_groupsList_currentRowChanged" />
       <keyword name="ToolGroupConfigurationDialog.on_newButton_clicked" id="ToolGroupConfigurationDialog.on_newButton_clicked" ref="eric5.Preferences.ToolGroupConfigurationDialog.html#ToolGroupConfigurationDialog.on_newButton_clicked" />
       <keyword name="ToolGroupConfigurationDialog.on_upButton_clicked" id="ToolGroupConfigurationDialog.on_upButton_clicked" ref="eric5.Preferences.ToolGroupConfigurationDialog.html#ToolGroupConfigurationDialog.on_upButton_clicked" />
-      <keyword name="E4Network (Package)" id="E4Network (Package)" ref="index-eric5.E4Network.html" />
-      <keyword name="E4NetworkHeaderDetailsDialog (Module)" id="E4NetworkHeaderDetailsDialog (Module)" ref="eric5.E4Network.E4NetworkHeaderDetailsDialog.html" />
-      <keyword name="E4NetworkHeaderDetailsDialog" id="E4NetworkHeaderDetailsDialog" ref="eric5.E4Network.E4NetworkHeaderDetailsDialog.html#E4NetworkHeaderDetailsDialog" />
-      <keyword name="E4NetworkHeaderDetailsDialog (Constructor)" id="E4NetworkHeaderDetailsDialog (Constructor)" ref="eric5.E4Network.E4NetworkHeaderDetailsDialog.html#E4NetworkHeaderDetailsDialog.__init__" />
-      <keyword name="E4NetworkHeaderDetailsDialog.setData" id="E4NetworkHeaderDetailsDialog.setData" ref="eric5.E4Network.E4NetworkHeaderDetailsDialog.html#E4NetworkHeaderDetailsDialog.setData" />
-      <keyword name="E4NetworkMonitor (Module)" id="E4NetworkMonitor (Module)" ref="eric5.E4Network.E4NetworkMonitor.html" />
-      <keyword name="E4NetworkMonitor" id="E4NetworkMonitor" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkMonitor" />
-      <keyword name="E4NetworkRequest" id="E4NetworkRequest" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkRequest" />
-      <keyword name="E4RequestModel" id="E4RequestModel" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel" />
-      <keyword name="E4NetworkMonitor (Constructor)" id="E4NetworkMonitor (Constructor)" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkMonitor.__init__" />
-      <keyword name="E4NetworkMonitor.__currentChanged" id="E4NetworkMonitor.__currentChanged" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkMonitor.__currentChanged" />
-      <keyword name="E4NetworkMonitor.__showHeaderDetails" id="E4NetworkMonitor.__showHeaderDetails" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkMonitor.__showHeaderDetails" />
-      <keyword name="E4NetworkMonitor.closeEvent" id="E4NetworkMonitor.closeEvent" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkMonitor.closeEvent" />
-      <keyword name="E4NetworkMonitor.closeMonitor" id="E4NetworkMonitor.closeMonitor" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkMonitor.closeMonitor" />
-      <keyword name="E4NetworkMonitor.instance" id="E4NetworkMonitor.instance" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkMonitor.instance" />
-      <keyword name="E4NetworkMonitor.reject" id="E4NetworkMonitor.reject" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkMonitor.reject" />
-      <keyword name="E4NetworkRequest (Constructor)" id="E4NetworkRequest (Constructor)" ref="eric5.E4Network.E4NetworkMonitor.html#E4NetworkRequest.__init__" />
-      <keyword name="E4RequestModel (Constructor)" id="E4RequestModel (Constructor)" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel.__init__" />
-      <keyword name="E4RequestModel.__addReply" id="E4RequestModel.__addReply" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel.__addReply" />
-      <keyword name="E4RequestModel.__addRequest" id="E4RequestModel.__addRequest" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel.__addRequest" />
-      <keyword name="E4RequestModel.__requestCreated" id="E4RequestModel.__requestCreated" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel.__requestCreated" />
-      <keyword name="E4RequestModel.columnCount" id="E4RequestModel.columnCount" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel.columnCount" />
-      <keyword name="E4RequestModel.data" id="E4RequestModel.data" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel.data" />
-      <keyword name="E4RequestModel.headerData" id="E4RequestModel.headerData" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel.headerData" />
-      <keyword name="E4RequestModel.removeRows" id="E4RequestModel.removeRows" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel.removeRows" />
-      <keyword name="E4RequestModel.rowCount" id="E4RequestModel.rowCount" ref="eric5.E4Network.E4NetworkMonitor.html#E4RequestModel.rowCount" />
       <keyword name="Globals (Package)" id="Globals (Package)" ref="index-eric5.Globals.html" />
       <keyword name="isWindowsPlatform" id="isWindowsPlatform" ref="eric5.Globals.__init__.html#isWindowsPlatform" />
       <keyword name="ViewManager (Package)" id="ViewManager (Package)" ref="index-eric5.ViewManager.html" />
@@ -8934,10 +8934,10 @@
       <file>eric5.E4Gui.E4ToolBox.html</file>
       <file>eric5.E4Gui.E4TreeSortFilterProxyModel.html</file>
       <file>eric5.E4Gui.E4TreeView.html</file>
-      <file>eric5.E4Network.E4NetworkHeaderDetailsDialog.html</file>
-      <file>eric5.E4Network.E4NetworkMonitor.html</file>
       <file>eric5.E5Graphics.E5ArrowItem.html</file>
       <file>eric5.E5Graphics.E5GraphicsView.html</file>
+      <file>eric5.E5Network.E5NetworkHeaderDetailsDialog.html</file>
+      <file>eric5.E5Network.E5NetworkMonitor.html</file>
       <file>eric5.E5XML.Config.html</file>
       <file>eric5.E5XML.DebuggerPropertiesHandler.html</file>
       <file>eric5.E5XML.DebuggerPropertiesWriter.html</file>
@@ -9393,8 +9393,8 @@
       <file>index-eric5.Debugger.html</file>
       <file>index-eric5.DocumentationTools.html</file>
       <file>index-eric5.E4Gui.html</file>
-      <file>index-eric5.E4Network.html</file>
       <file>index-eric5.E5Graphics.html</file>
+      <file>index-eric5.E5Network.html</file>
       <file>index-eric5.E5XML.html</file>
       <file>index-eric5.Globals.html</file>
       <file>index-eric5.Graphics.html</file>

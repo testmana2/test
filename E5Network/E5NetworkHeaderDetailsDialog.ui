@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>E4NetworkHeaderDetailsDialog</class>
- <widget class="QDialog" name="E4NetworkHeaderDetailsDialog">
+ <class>E5NetworkHeaderDetailsDialog</class>
+ <widget class="QDialog" name="E5NetworkHeaderDetailsDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -65,7 +65,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>E4NetworkHeaderDetailsDialog</receiver>
+   <receiver>E5NetworkHeaderDetailsDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -81,7 +81,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>E4NetworkHeaderDetailsDialog</receiver>
+   <receiver>E5NetworkHeaderDetailsDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

@@ -32,6 +32,8 @@ class NetworkReply(QNetworkReply):
         self.setHeader(QNetworkRequest.ContentTypeHeader, mimeType)
         self.setHeader(QNetworkRequest.ContentLengthHeader, 
                        QByteArray.number(fileData.length()))
+        self.setAttribute(QNetworkRequest.HttpStatusCodeAttribute, 200)
+        self.setAttribute(QNetworkRequest.HttpReasonPhraseAttribute, "OK")
         QTimer.singleShot(0, self, SIGNAL("metaDataChanged()"))
         QTimer.singleShot(0, self, SIGNAL("readyRead()"))
     

@@ -13,11 +13,11 @@ from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
 import UI.PixmapCache
 
-from .E4NetworkHeaderDetailsDialog import E4NetworkHeaderDetailsDialog
+from .E5NetworkHeaderDetailsDialog import E5NetworkHeaderDetailsDialog
 
-from .Ui_E4NetworkMonitor import Ui_E4NetworkMonitor
+from .Ui_E5NetworkMonitor import Ui_E5NetworkMonitor
 
-class E4NetworkRequest(object):
+class E5NetworkRequest(object):
     """
     Class for storing all data related to a specific request.
     """
@@ -35,7 +35,7 @@ class E4NetworkRequest(object):
         self.info = ""
         self.replyHeaders = []  # list of tuple of two items
 
-class E4NetworkMonitor(QDialog, Ui_E4NetworkMonitor):
+class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
     """
     Class implementing a network monitor dialog.
     """
@@ -50,7 +50,7 @@ class E4NetworkMonitor(QDialog, Ui_E4NetworkMonitor):
             (QNetworkAccessManager)
         """
         if cls._monitor is None:
-            cls._monitor = E4NetworkMonitor(networkAccessManager)
+            cls._monitor = E5NetworkMonitor(networkAccessManager)
             cls._monitor.setAttribute(Qt.WA_DeleteOnClose, True)
         
         return cls._monitor
@@ -107,7 +107,7 @@ class E4NetworkMonitor(QDialog, Ui_E4NetworkMonitor):
         self.connect(self.removeAllButton, SIGNAL("clicked()"), 
             self.requestsList.removeAll)
         
-        self.__model = E4RequestModel(networkAccessManager, self)
+        self.__model = E5RequestModel(networkAccessManager, self)
         self.__proxyModel.setSourceModel(self.__model)
         self.requestsList.setModel(self.__proxyModel)
         self.connect(self.requestsList.selectionModel(), 
@@ -200,11 +200,11 @@ class E4NetworkMonitor(QDialog, Ui_E4NetworkMonitor):
         name = headerList.model().data(headerList.model().index(row, 0))
         value = headerList.model().data(headerList.model().index(row, 1))
         if self.__headersDlg is None:
-            self.__headersDlg = E4NetworkHeaderDetailsDialog(self)
+            self.__headersDlg = E5NetworkHeaderDetailsDialog(self)
         self.__headersDlg.setData(name, value)
         self.__headersDlg.show()
 
-class E4RequestModel(QAbstractTableModel):
+class E5RequestModel(QAbstractTableModel):
     """
     Class implementing a model storing request objects.
     """
@@ -247,7 +247,7 @@ class E4RequestModel(QAbstractTableModel):
         @param request reference to the request object (QNetworkRequest)
         @param reply reference to the reply object(QNetworkReply)
         """
-        req = E4NetworkRequest()
+        req = E5NetworkRequest()
         req.op = operation
         req.request = QNetworkRequest(request)
         req.reply = reply
@@ -257,7 +257,7 @@ class E4RequestModel(QAbstractTableModel):
         """
         Private method to add a request object to the model.
         
-        @param req reference to the request object (E4NetworkRequest)
+        @param req reference to the request object (E5NetworkRequest)
         """
         self.beginInsertRows(QModelIndex(), len(self.requests), len(self.requests))
         self.requests.append(req)
@@ -285,8 +285,8 @@ class E4RequestModel(QAbstractTableModel):
             self.requests[offset].replyHeaders.append((header, reply.rawHeader(header)))
         
         # save reply info to be displayed
-        status = reply.attribute(QNetworkRequest.HttpStatusCodeAttribute)
-        reason = reply.attribute(QNetworkRequest.HttpReasonPhraseAttribute)
+        status = reply.attribute(QNetworkRequest.HttpStatusCodeAttribute) or 0
+        reason = reply.attribute(QNetworkRequest.HttpReasonPhraseAttribute) or ""
         self.requests[offset].response = "%d %s" % (status, reason)
         self.requests[offset].length = reply.header(QNetworkRequest.ContentLengthHeader)
         self.requests[offset].contentType = reply.header(QNetworkRequest.ContentTypeHeader)
