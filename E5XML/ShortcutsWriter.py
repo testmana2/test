@@ -9,7 +9,7 @@ Module implementing the writer class for writing an XML shortcuts file.
 
 import time
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .XMLWriterBase import XMLWriterBase
 from .Config import shortcutsFileFormatVersion
@@ -47,7 +47,7 @@ class ShortcutsWriter(XMLWriterBase):
         # add the main tag
         self._write('<Shortcuts version="%s">' % shortcutsFileFormatVersion)
         
-        for act in e4App().getObject("Project").getActions():
+        for act in e5App().getObject("Project").getActions():
             self._write('  <Shortcut category="Project">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -56,7 +56,7 @@ class ShortcutsWriter(XMLWriterBase):
                 % self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("UserInterface").getActions('ui'):
+        for act in e5App().getObject("UserInterface").getActions('ui'):
             self._write('  <Shortcut category="General">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -65,7 +65,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("UserInterface").getActions('wizards'):
+        for act in e5App().getObject("UserInterface").getActions('wizards'):
             self._write('  <Shortcut category="Wizards">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -74,7 +74,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("DebugUI").getActions():
+        for act in e5App().getObject("DebugUI").getActions():
             self._write('  <Shortcut category="Debug">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -83,7 +83,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("ViewManager").getActions('edit'):
+        for act in e5App().getObject("ViewManager").getActions('edit'):
             self._write('  <Shortcut category="Edit">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -92,7 +92,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("ViewManager").getActions('file'):
+        for act in e5App().getObject("ViewManager").getActions('file'):
             self._write('  <Shortcut category="File">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -101,7 +101,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("ViewManager").getActions('search'):
+        for act in e5App().getObject("ViewManager").getActions('search'):
             self._write('  <Shortcut category="Search">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -110,7 +110,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("ViewManager").getActions('view'):
+        for act in e5App().getObject("ViewManager").getActions('view'):
             self._write('  <Shortcut category="View">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -119,7 +119,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("ViewManager").getActions('macro'):
+        for act in e5App().getObject("ViewManager").getActions('macro'):
             self._write('  <Shortcut category="Macro">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -128,7 +128,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("ViewManager").getActions('bookmark'):
+        for act in e5App().getObject("ViewManager").getActions('bookmark'):
             self._write('  <Shortcut category="Bookmarks">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -137,7 +137,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for act in e4App().getObject("ViewManager").getActions('spelling'):
+        for act in e5App().getObject("ViewManager").getActions('spelling'):
             self._write('  <Shortcut category="Spelling">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \
@@ -146,7 +146,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        actions = e4App().getObject("ViewManager").getActions('window')
+        actions = e5App().getObject("ViewManager").getActions('window')
         for act in actions:
             self._write('  <Shortcut category="Window">')
             self._write('    <Name>%s</Name>' % act.objectName())
@@ -156,7 +156,7 @@ class ShortcutsWriter(XMLWriterBase):
                 self.escape("%s" % act.alternateShortcut().toString()))
             self._write('  </Shortcut>')
         
-        for category, ref in e4App().getPluginObjects():
+        for category, ref in e5App().getPluginObjects():
             if hasattr(ref, "getActions"):
                 actions = ref.getActions()
                 for act in actions:
@@ -170,7 +170,7 @@ class ShortcutsWriter(XMLWriterBase):
                             self.escape("%s" % act.alternateShortcut().toString()))
                         self._write('  </Shortcut>')
     
-        for act in e4App().getObject("DummyHelpViewer").getActions():
+        for act in e5App().getObject("DummyHelpViewer").getActions():
             self._write('  <Shortcut category="HelpViewer">')
             self._write('    <Name>%s</Name>' % act.objectName())
             self._write('    <Accel>%s</Accel>' % \

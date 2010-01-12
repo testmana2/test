@@ -14,7 +14,7 @@ import types
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Ui_TabnannyDialog import Ui_TabnannyDialog
 
@@ -142,4 +142,4 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         fn = Utilities.normabspath(itm.text(0))
         lineno = int(itm.text(1))
         
-        e4App().getObject("ViewManager").openSourceFile(fn, lineno)
+        e5App().getObject("ViewManager").openSourceFile(fn, lineno)

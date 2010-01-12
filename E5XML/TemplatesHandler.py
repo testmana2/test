@@ -10,7 +10,7 @@ Module implementing the handler class for reading an XML templates file.
 import os
 import time
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Config import templatesFileFormatVersion
 from .XMLHandlerBase import XMLHandlerBase
@@ -41,7 +41,7 @@ class TemplatesHandler(XMLHandlerBase):
         if templateViewer:
             self.viewer = templateViewer
         else:
-            self.viewer = e4App().getObject("TemplateViewer")
+            self.viewer = e5App().getObject("TemplateViewer")
         
     def startDocumentTemplates(self):
         """

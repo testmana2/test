@@ -15,7 +15,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Ui_FindFileDialog import Ui_FindFileDialog
 
@@ -253,7 +253,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         Private slot to handle the find button being pressed.
         """
-        if self.__replaceMode and not e4App().getObject("ViewManager").checkAllDirty():
+        if self.__replaceMode and not e5App().getObject("ViewManager").checkAllDirty():
             return
         
         self.__cancelSearch = False
@@ -300,7 +300,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             files = self.__getFileList(os.path.abspath(self.dirEdit.text()), 
                                        filterRe)
         elif self.openFilesButton.isChecked():
-            files = e4App().getObject("ViewManager").getOpenFilenames()
+            files = e5App().getObject("ViewManager").getOpenFilenames()
         
         self.findList.clear()
         QApplication.processEvents()

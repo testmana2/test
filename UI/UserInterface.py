@@ -17,7 +17,7 @@ from PyQt4.QtGui import *
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QHttp, QNetworkProxy
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from Debugger.DebugUI import DebugUI
 from Debugger.DebugServer import DebugServer
@@ -511,22 +511,22 @@ class UserInterface(QMainWindow):
         
         # register all relevant objects
         splash.showMessage(self.trUtf8("Registering Objects..."))
-        e4App().registerObject("UserInterface", self)
-        e4App().registerObject("DebugUI", self.debuggerUI)
-        e4App().registerObject("DebugServer", debugServer)
-        e4App().registerObject("ViewManager", self.viewmanager)
-        e4App().registerObject("Project", self.project)
-        e4App().registerObject("ProjectBrowser", self.projectBrowser)
-        e4App().registerObject("MultiProject", self.multiProject)
-        e4App().registerObject("TaskViewer", self.taskViewer)
-        e4App().registerObject("TemplateViewer", self.templateViewer)
-        e4App().registerObject("Shell", self.shell)
-        e4App().registerObject("FindFilesDialog", self.findFilesDialog)
-        e4App().registerObject("ReplaceFilesDialog", self.replaceFilesDialog)
-        e4App().registerObject("DummyHelpViewer", self.dummyHelpViewer)
-        e4App().registerObject("PluginManager", self.pluginManager)
-        e4App().registerObject("ToolbarManager", self.toolbarManager)
-        e4App().registerObject("Terminal", self.terminal)
+        e5App().registerObject("UserInterface", self)
+        e5App().registerObject("DebugUI", self.debuggerUI)
+        e5App().registerObject("DebugServer", debugServer)
+        e5App().registerObject("ViewManager", self.viewmanager)
+        e5App().registerObject("Project", self.project)
+        e5App().registerObject("ProjectBrowser", self.projectBrowser)
+        e5App().registerObject("MultiProject", self.multiProject)
+        e5App().registerObject("TaskViewer", self.taskViewer)
+        e5App().registerObject("TemplateViewer", self.templateViewer)
+        e5App().registerObject("Shell", self.shell)
+        e5App().registerObject("FindFilesDialog", self.findFilesDialog)
+        e5App().registerObject("ReplaceFilesDialog", self.replaceFilesDialog)
+        e5App().registerObject("DummyHelpViewer", self.dummyHelpViewer)
+        e5App().registerObject("PluginManager", self.pluginManager)
+        e5App().registerObject("ToolbarManager", self.toolbarManager)
+        e5App().registerObject("Terminal", self.terminal)
         
         # Initialize the actions, menus, toolbars and statusbar
         splash.showMessage(self.trUtf8("Initializing Actions..."))
@@ -637,7 +637,7 @@ class UserInterface(QMainWindow):
         else:
             styleSheet = ""
         
-        e4App().setStyleSheet(styleSheet)
+        e5App().setStyleSheet(styleSheet)
         
     def __createLayout(self, debugServer):
         """
@@ -2905,7 +2905,7 @@ class UserInterface(QMainWindow):
         Private method to quit the application.
         """
         if self.__shutdown():
-            e4App().closeAllWindows()
+            e5App().closeAllWindows()
         
     def __restart(self):
         """
@@ -2920,7 +2920,7 @@ class UserInterface(QMainWindow):
             QMessageBox.Yes)
         
         if res == QMessageBox.Yes and self.__shutdown():
-            e4App().closeAllWindows()
+            e5App().closeAllWindows()
             program = sys.executable
             eric5 = os.path.join(getConfig("ericDir"), "eric5.py")
             args = [eric5]
@@ -4733,7 +4733,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the projectOpened signal.
         """
         self.__setWindowCaption(project = self.project.name)
-        cap = e4App().getObject("DebugServer")\
+        cap = e5App().getObject("DebugServer")\
             .getClientCapabilities(self.project.pdata["PROGLANGUAGE"][0])
         self.utProjectAct.setEnabled(cap & HasUnittest)
         self.utProjectOpen = cap & HasUnittest
@@ -4782,7 +4782,7 @@ class UserInterface(QMainWindow):
         self.wizardsMenuAct.setEnabled(len(self.__menus["wizards"].actions()) > 0)
         
         if fn and str(fn) != "None":
-            dbs = e4App().getObject("DebugServer")
+            dbs = e5App().getObject("DebugServer")
             for language in dbs.getSupportedLanguages():
                 exts = dbs.getExtensions(language)
                 if fn.endswith(exts):
@@ -4808,7 +4808,7 @@ class UserInterface(QMainWindow):
             fn = None
             
         if fn:
-            dbs = e4App().getObject("DebugServer")
+            dbs = e5App().getObject("DebugServer")
             for language in dbs.getSupportedLanguages():
                 exts = dbs.getExtensions(language)
                 if fn.endswith(exts):
@@ -5114,7 +5114,7 @@ class UserInterface(QMainWindow):
             event.accept()
             if not self.inCloseEevent:
                 self.inCloseEevent = True
-                QTimer.singleShot(0, e4App().closeAllWindows)
+                QTimer.singleShot(0, e5App().closeAllWindows)
         else:
             event.ignore()
 

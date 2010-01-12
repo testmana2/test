@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
 
@@ -52,7 +52,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         self.mainscriptCompleter = E4FileCompleter(self.mainscriptEdit)
         
         projectLanguages = sorted(
-            e4App().getObject("DebugServer").getSupportedLanguages())
+            e5App().getObject("DebugServer").getSupportedLanguages())
         self.languageComboBox.addItems(projectLanguages)
         
         projectTypes = project.getProjectTypes()
@@ -97,7 +97,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 pass
             self.vcsLabel.show()
             if self.project.vcs is not None:
-                vcsSystemsDict = e4App().getObject("PluginManager")\
+                vcsSystemsDict = e5App().getObject("PluginManager")\
                     .getPluginDisplayStrings("version_control")
                 try:
                     vcsSystemDisplay = vcsSystemsDict[self.project.pdata["VCS"][0]]

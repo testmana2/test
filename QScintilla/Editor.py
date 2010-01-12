@@ -15,7 +15,7 @@ from PyQt4.Qsci import QsciScintilla, QsciMacro
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from . import Exporters
 from . import Lexers
@@ -1279,7 +1279,7 @@ class Editor(QsciScintillaCompat):
             self.disconnect(self, SIGNAL("SCN_STYLENEEDED(int)"), self.__styleNeeded)
         
         language = ""
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         if project.isOpen() and project.isProjectFile(filename):
             language = project.getEditorLexerAssoc(os.path.basename(filename))
         if not language:
@@ -1974,7 +1974,7 @@ class Editor(QsciScintillaCompat):
         Public slot to print the text.
         """
         printer = Printer(mode = QPrinter.HighResolution)
-        sb = e4App().getObject("UserInterface").statusBar()
+        sb = e5App().getObject("UserInterface").statusBar()
         printDialog = QPrintDialog(printer, self)
         if self.hasSelectedText():
             printDialog.addEnabledOption(QAbstractPrintDialog.PrintSelection)
@@ -3779,7 +3779,7 @@ class Editor(QsciScintillaCompat):
         coEnable = False
         
         # first check if the file belongs to a project
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         if project.isOpen() and project.isProjectSource(self.fileName):
             fn = project.getMainScript(True)
             if fn is not None:
@@ -3823,7 +3823,7 @@ class Editor(QsciScintillaCompat):
         """
         Private slot handling the aboutToShow signal of the diagrams context menu.
         """
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         if project.isOpen() and project.isProjectSource(self.fileName):
             self.applicationDiagramMenuAct.setEnabled(True)
         else:
@@ -4023,7 +4023,7 @@ class Editor(QsciScintillaCompat):
         
         # first check if the file belongs to a project and there is
         # a project coverage file
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         if project.isOpen() and project.isProjectSource(self.fileName):
             fn = project.getMainScript(True)
             if fn is not None:
@@ -4162,7 +4162,7 @@ class Editor(QsciScintillaCompat):
         
         # first check if the file belongs to a project and there is
         # a project profile file
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         if project.isOpen() and project.isProjectSource(self.fileName):
             fn = project.getMainScript(True)
             if fn is not None:
@@ -4535,7 +4535,7 @@ class Editor(QsciScintillaCompat):
             SIGNAL("rowsInserted(const QModelIndex &, int, int)"),
             self.__addBreakPoints)
         
-        self.disconnect(e4App().getObject("Project"), SIGNAL("projectPropertiesChanged"), 
+        self.disconnect(e5App().getObject("Project"), SIGNAL("projectPropertiesChanged"), 
                         self.__projectPropertiesChanged)
         
         if self.spell:
@@ -4982,7 +4982,7 @@ class Editor(QsciScintillaCompat):
                 QMessageBox.No | \
                 QMessageBox.Yes),
             QMessageBox.Yes)
-        self.applicationDiagram = ApplicationDiagram(e4App().getObject("Project"), 
+        self.applicationDiagram = ApplicationDiagram(e5App().getObject("Project"), 
                                     self, noModules = (res == QMessageBox.No))
         self.applicationDiagram.show()
     
@@ -5013,12 +5013,12 @@ class Editor(QsciScintillaCompat):
             line, index = self.getCursorPosition()
             tmplName = self.getWordLeft(line, index)
             if tmplName:
-                if e4App().getObject("TemplateViewer").hasTemplate(tmplName):
+                if e5App().getObject("TemplateViewer").hasTemplate(tmplName):
                     self.__applyTemplate(tmplName)
                     return
                 else:
                     templateNames = \
-                        e4App().getObject("TemplateViewer").getTemplateNames(tmplName)
+                        e5App().getObject("TemplateViewer").getTemplateNames(tmplName)
                     if len(templateNames) == 1:
                         self.__applyTemplate(templateNames[0])
                         return
@@ -5045,9 +5045,9 @@ class Editor(QsciScintillaCompat):
         
         @param templateName name of the template to apply (string)
         """
-        if e4App().getObject("TemplateViewer").hasTemplate(templateName):
+        if e5App().getObject("TemplateViewer").hasTemplate(templateName):
             self.extendSelectionWordLeft()
-            e4App().getObject("TemplateViewer").applyNamedTemplate(templateName)
+            e5App().getObject("TemplateViewer").applyNamedTemplate(templateName)
     
     #######################################################################
     ## Project related methods
@@ -5057,7 +5057,7 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to handle changes of the project properties.
         """
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         if self.spell:
             pwl, pel = project.getProjectDictionaries()
             self.__setSpellingLanguage(project.getProjectSpellLanguage(), 
@@ -5067,7 +5067,7 @@ class Editor(QsciScintillaCompat):
         """
         Public method to signal, that this editor has been added to a project.
         """
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         if self.spell:
             pwl, pel = project.getProjectDictionaries()
             self.__setSpellingLanguage(project.getProjectSpellLanguage(), 
@@ -5101,7 +5101,7 @@ class Editor(QsciScintillaCompat):
                 self.spell = SpellChecker(self, self.spellingIndicator, 
                                           checkRegion = self.isSpellCheckRegion)
             self.setSpellingForProject()
-            self.connect(e4App().getObject("Project"), SIGNAL("projectPropertiesChanged"),
+            self.connect(e5App().getObject("Project"), SIGNAL("projectPropertiesChanged"),
                          self.__projectPropertiesChanged)
             self.spell.setMinimumWordSize(
                 Preferences.getEditor("SpellCheckingMinWordSize"))
@@ -5116,7 +5116,7 @@ class Editor(QsciScintillaCompat):
         Public method to set the spell checking options for files belonging
         to the current project.
         """
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         if self.fileName and \
            project.isOpen() and \
            project.isProjectSource(self.fileName):

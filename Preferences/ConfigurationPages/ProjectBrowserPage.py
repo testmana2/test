@@ -9,7 +9,7 @@ Module implementing the Project Browser configuration page.
 
 from PyQt4.QtCore import pyqtSlot
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ProjectBrowserPage import Ui_ProjectBrowserPage
@@ -39,7 +39,7 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         self.projectTypeCombo.addItem('', '')
         self.__projectBrowserFlags = {'' : 0}
         try:
-            projectTypes = e4App().getObject("Project").getProjectTypes()
+            projectTypes = e5App().getObject("Project").getProjectTypes()
             for projectType in sorted(projectTypes.keys()):
                 self.projectTypeCombo.addItem(projectTypes[projectType], 
                                               projectType)

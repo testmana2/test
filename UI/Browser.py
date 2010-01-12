@@ -14,7 +14,7 @@ import mimetypes
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .BrowserModel import BrowserModel, \
     BrowserDirectoryItem, BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
@@ -431,7 +431,7 @@ class Browser(QTreeView):
         index = self.currentIndex()
         searchDir = self.model().item(index).dirName()
         
-        findFilesDialog = e4App().getObject("FindFilesDialog")
+        findFilesDialog = e5App().getObject("FindFilesDialog")
         findFilesDialog.setSearchDirectory(searchDir)
         findFilesDialog.show()
         findFilesDialog.raise_()
@@ -444,7 +444,7 @@ class Browser(QTreeView):
         index = self.currentIndex()
         searchDir = self.model().item(index).dirName()
         
-        replaceFilesDialog = e4App().getObject("ReplaceFilesDialog")
+        replaceFilesDialog = e5App().getObject("ReplaceFilesDialog")
         replaceFilesDialog.setSearchDirectory(searchDir)
         replaceFilesDialog.show()
         replaceFilesDialog.raise_()
@@ -544,6 +544,6 @@ class Browser(QTreeView):
         Private method to open the configuration dialog.
         """
         if self.__embeddedBrowser == 1:
-            e4App().getObject("UserInterface").showPreferences("debuggerGeneralPage")
+            e5App().getObject("UserInterface").showPreferences("debuggerGeneralPage")
         elif self.__embeddedBrowser == 2:
-            e4App().getObject("UserInterface").showPreferences("projectBrowserPage")
+            e5App().getObject("UserInterface").showPreferences("projectBrowserPage")

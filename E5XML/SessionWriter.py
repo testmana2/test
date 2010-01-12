@@ -10,7 +10,7 @@ Module implementing the writer class for writing an XML project session file.
 import os
 import time
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .XMLWriterBase import XMLWriterBase
 from .Config import sessionFileFormatVersion
@@ -32,11 +32,11 @@ class SessionWriter(XMLWriterBase):
         XMLWriterBase.__init__(self, file)
         
         self.name = projectName
-        self.project = e4App().getObject("Project")
-        self.multiProject = e4App().getObject("MultiProject")
-        self.vm = e4App().getObject("ViewManager")
-        self.dbg = e4App().getObject("DebugUI")
-        self.dbs = e4App().getObject("DebugServer")
+        self.project = e5App().getObject("Project")
+        self.multiProject = e5App().getObject("MultiProject")
+        self.vm = e5App().getObject("ViewManager")
+        self.dbg = e5App().getObject("DebugUI")
+        self.dbs = e5App().getObject("DebugServer")
         
     def writeXML(self):
         """

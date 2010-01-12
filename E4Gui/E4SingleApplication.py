@@ -10,7 +10,7 @@ Module implementing the single application server and client.
 import sys
 import os
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from Utilities.SingleApplication import SingleApplicationClient, SingleApplicationServer
 
@@ -62,7 +62,7 @@ class E4SingleApplicationServer(SingleApplicationServer):
         
         @param fname filename to be opened (string)
         """
-        e4App().getObject("ViewManager").openSourceFile(fname)
+        e5App().getObject("ViewManager").openSourceFile(fname)
         
     def __saOpenProject(self, pfname):
         """
@@ -70,7 +70,7 @@ class E4SingleApplicationServer(SingleApplicationServer):
         
         @param pfname filename of the project to be opened (string)
         """
-        e4App().getObject("Project").openProject(pfname)
+        e5App().getObject("Project").openProject(pfname)
         
     def __saArguments(self, argsStr):
         """
@@ -78,7 +78,7 @@ class E4SingleApplicationServer(SingleApplicationServer):
         
         @param argsStr space delimited list of command args(string)
         """
-        e4App().getObject("DebugUI").setArgvHistory(argsStr)
+        e5App().getObject("DebugUI").setArgvHistory(argsStr)
 
 class E4SingleApplicationClient(SingleApplicationClient):
     """

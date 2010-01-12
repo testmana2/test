@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 
@@ -165,7 +165,7 @@ class VcsProjectBrowserHelper(QObject):
                     name = itm.dirName()
                 names.append(name)
         if Preferences.getVCS("AutoSaveFiles"):
-            vm = e4App().getObject("ViewManager")
+            vm = e5App().getObject("ViewManager")
             for name in names:
                 vm.saveEditor(name)
         self.vcs.vcsCommit(names, '')

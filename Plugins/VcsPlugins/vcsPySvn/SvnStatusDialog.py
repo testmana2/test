@@ -15,7 +15,7 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .SvnConst import svnStatusMap
 from .SvnDialogMixin import SvnDialogMixin
@@ -397,7 +397,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
             return
         
         if Preferences.getVCS("AutoSaveFiles"):
-            vm = e4App().getObject("ViewManager")
+            vm = e5App().getObject("ViewManager")
             for name in names:
                 vm.saveEditor(name)
         self.vcs.vcsCommit(names, '')
@@ -425,7 +425,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         self.vcs.vcsAdd(names)
         self.on_refreshButton_clicked()
         
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         for name in names:
             project.getModel().updateVCSStatus(name)
 

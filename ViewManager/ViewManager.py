@@ -13,7 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from Globals import recentNameFiles
 
@@ -3143,7 +3143,7 @@ class ViewManager(QObject):
         @return reference to the new editor object (Editor.Editor)
         """
         editor = Editor(self.dbs, fn, self, filetype = filetype, editor = caller,
-                        tv = e4App().getObject("TaskViewer"))
+                        tv = e5App().getObject("TaskViewer"))
         self.editors.append(editor)
         self.__connectEditor(editor)
         self.__editorOpened()
@@ -3295,7 +3295,7 @@ class ViewManager(QObject):
                     break
             else:
                 editor = Editor(self.dbs, fn, self, filetype = filetype,
-                                tv = e4App().getObject("TaskViewer"))
+                                tv = e5App().getObject("TaskViewer"))
                 self.editors.append(editor)
                 self.__connectEditor(editor)
                 self.__editorOpened()
@@ -3459,7 +3459,7 @@ class ViewManager(QObject):
         
         @param ed editor to be saved
         """
-        pro = e4App().getObject("Project")
+        pro = e5App().getObject("Project")
         path = pro.ppath
         if ed:
             ok, newName = ed.saveFileAs(path)
@@ -3492,7 +3492,7 @@ class ViewManager(QObject):
         """
         Public slot to generate a new empty editor.
         """
-        editor = Editor(self.dbs, None, self, tv = e4App().getObject("TaskViewer"))
+        editor = Editor(self.dbs, None, self, tv = e5App().getObject("TaskViewer"))
         self.editors.append(editor)
         self.__connectEditor(editor)
         self._addView(editor, None)
@@ -3706,10 +3706,10 @@ class ViewManager(QObject):
         """
         Private method to handle the cut action.
         """
-        if QApplication.focusWidget() == e4App().getObject("Shell"):
-            e4App().getObject("Shell").cut()
-        elif QApplication.focusWidget() == e4App().getObject("Terminal"):
-            e4App().getObject("Terminal").cut()
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            e5App().getObject("Shell").cut()
+        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+            e5App().getObject("Terminal").cut()
         else:
             self.activeWindow().cut()
         
@@ -3717,10 +3717,10 @@ class ViewManager(QObject):
         """
         Private method to handle the copy action.
         """
-        if QApplication.focusWidget() == e4App().getObject("Shell"):
-            e4App().getObject("Shell").copy()
-        elif QApplication.focusWidget() == e4App().getObject("Terminal"):
-            e4App().getObject("Terminal").copy()
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            e5App().getObject("Shell").copy()
+        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+            e5App().getObject("Terminal").copy()
         else:
             self.activeWindow().copy()
         
@@ -3728,10 +3728,10 @@ class ViewManager(QObject):
         """
         Private method to handle the paste action.
         """
-        if QApplication.focusWidget() == e4App().getObject("Shell"):
-            e4App().getObject("Shell").paste()
-        elif QApplication.focusWidget() == e4App().getObject("Terminal"):
-            e4App().getObject("Terminal").paste()
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            e5App().getObject("Shell").paste()
+        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+            e5App().getObject("Terminal").paste()
         else:
             self.activeWindow().paste()
         
@@ -3739,10 +3739,10 @@ class ViewManager(QObject):
         """
         Private method to handle the delete action.
         """
-        if QApplication.focusWidget() == e4App().getObject("Shell"):
-            e4App().getObject("Shell").clear()
-        elif QApplication.focusWidget() == e4App().getObject("Terminal"):
-            e4App().getObject("Terminal").clear()
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            e5App().getObject("Shell").clear()
+        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+            e5App().getObject("Terminal").clear()
         else:
             self.activeWindow().clear()
         
@@ -4103,10 +4103,10 @@ class ViewManager(QObject):
         """
         Private method to handle the zoom in action.
         """
-        if QApplication.focusWidget() == e4App().getObject("Shell"):
-            e4App().getObject("Shell").zoomIn()
-        elif QApplication.focusWidget() == e4App().getObject("Terminal"):
-            e4App().getObject("Terminal").zoomIn()
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            e5App().getObject("Shell").zoomIn()
+        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+            e5App().getObject("Terminal").zoomIn()
         else:
             aw = self.activeWindow()
             if aw:
@@ -4116,10 +4116,10 @@ class ViewManager(QObject):
         """
         Private method to handle the zoom out action.
         """
-        if QApplication.focusWidget() == e4App().getObject("Shell"):
-            e4App().getObject("Shell").zoomOut()
-        elif QApplication.focusWidget() == e4App().getObject("Terminal"):
-            e4App().getObject("Terminal").zoomOut()
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            e5App().getObject("Shell").zoomOut()
+        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+            e5App().getObject("Terminal").zoomOut()
         else:
             aw = self.activeWindow()
             if aw:
@@ -4129,10 +4129,10 @@ class ViewManager(QObject):
         """
         Private method to handle the zoom action.
         """
-        if QApplication.focusWidget() == e4App().getObject("Shell"):
-            aw = e4App().getObject("Shell")
-        elif QApplication.focusWidget() == e4App().getObject("Terminal"):
-            aw = e4App().getObject("Terminal")
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            aw = e5App().getObject("Shell")
+        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+            aw = e5App().getObject("Terminal")
         else:
             aw = self.activeWindow()
         if aw:
@@ -4709,10 +4709,10 @@ class ViewManager(QObject):
         @param cmd the scintilla command to be sent
         """
         focusWidget = QApplication.focusWidget()
-        if focusWidget == e4App().getObject("Shell"):
-            e4App().getObject("Shell").editorCommand(cmd)
-        elif focusWidget == e4App().getObject("Terminal"):
-            e4App().getObject("Terminal").editorCommand(cmd)
+        if focusWidget == e5App().getObject("Shell"):
+            e5App().getObject("Shell").editorCommand(cmd)
+        elif focusWidget == e5App().getObject("Terminal"):
+            e5App().getObject("Terminal").editorCommand(cmd)
         elif focusWidget == self.quickFindtextCombo:
             self.quickFindtextCombo._editor.editorCommand(cmd)
         else:
@@ -4726,8 +4726,8 @@ class ViewManager(QObject):
         cursor is not at the end of the line.
         """
         focusWidget = QApplication.focusWidget()
-        if focusWidget == e4App().getObject("Shell") or \
-           focusWidget == e4App().getObject("Terminal") or \
+        if focusWidget == e5App().getObject("Shell") or \
+           focusWidget == e5App().getObject("Terminal") or \
            focusWidget == self.quickFindtextCombo:
             return
         else:
@@ -4769,8 +4769,8 @@ class ViewManager(QObject):
             return os.path.dirname(self.activeWindow().getFileName())
         
         # check, if there is an active project and return its path
-        elif e4App().getObject("Project").isOpen():
-            return e4App().getObject("Project").ppath
+        elif e5App().getObject("Project").isOpen():
+            return e5App().getObject("Project").ppath
         
         else:
             # None will cause open dialog to start with cwd

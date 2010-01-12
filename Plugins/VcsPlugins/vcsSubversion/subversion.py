@@ -15,7 +15,7 @@ import urllib.request, urllib.parse, urllib.error
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from VCS.VersionControl import VersionControl
 
@@ -770,11 +770,11 @@ class Subversion(VersionControl):
             names = [name]
         for nam in names:
             if os.path.isfile(nam):
-                editor = e4App().getObject("ViewManager").getOpenEditor(nam)
+                editor = e5App().getObject("ViewManager").getOpenEditor(nam)
                 if editor and not editor.checkDirty() :
                     return
             else:
-                project = e4App().getObject("Project")
+                project = e5App().getObject("Project")
                 if nam == project.ppath and not project.saveAllScripts():
                     return
         self.diff = SvnDiffDialog(self)
@@ -1504,11 +1504,11 @@ class Subversion(VersionControl):
             names = [name]
         for nam in names:
             if os.path.isfile(nam):
-                editor = e4App().getObject("ViewManager").getOpenEditor(nam)
+                editor = e5App().getObject("ViewManager").getOpenEditor(nam)
                 if editor and not editor.checkDirty() :
                     return
             else:
-                project = e4App().getObject("Project")
+                project = e5App().getObject("Project")
                 if nam == project.ppath and not project.saveAllScripts():
                     return
         dlg = SvnRevisionSelectionDialog()
@@ -1537,11 +1537,11 @@ class Subversion(VersionControl):
             names = [name]
         for nam in names:
             if os.path.isfile(nam):
-                editor = e4App().getObject("ViewManager").getOpenEditor(nam)
+                editor = e5App().getObject("ViewManager").getOpenEditor(nam)
                 if editor and not editor.checkDirty() :
                     return
             else:
-                project = e4App().getObject("Project")
+                project = e5App().getObject("Project")
                 if nam == project.ppath and not project.saveAllScripts():
                     return
         

@@ -14,7 +14,7 @@ import glob
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -581,4 +581,4 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         """
         Private method to open the configuration dialog.
         """
-        e4App().getObject("UserInterface").showPreferences("corbaPage")
+        e5App().getObject("UserInterface").showPreferences("corbaPage")

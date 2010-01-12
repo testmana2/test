@@ -16,7 +16,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QTcpServer, QHostAddress, QHostInfo
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .BreakPointModel import BreakPointModel
 from .WatchPointModel import WatchPointModel
@@ -315,7 +315,7 @@ class DebugServer(QTcpServer):
             
             self.__createDebuggerInterface()
             if forProject:
-                project = e4App().getObject("Project")
+                project = e5App().getObject("Project")
                 if not project.isDebugPropertiesLoaded():
                     self.clientProcess, isNetworked = \
                         self.debuggerInterface.startRemote(self.serverPort(), 

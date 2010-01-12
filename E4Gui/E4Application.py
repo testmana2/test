@@ -112,4 +112,4 @@ class E4Application(QApplication):
         else:
             raise KeyError('Pluginobject "%s" is not registered.' % name)
 
-e4App = QCoreApplication.instance
+e5App = QCoreApplication.instance

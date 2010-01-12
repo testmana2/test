@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import QObject, SIGNAL
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from E4Gui.E4Action import E4Action
 
@@ -70,7 +70,7 @@ class TabnannyPlugin(QObject):
         
         @return tuple of None and activation status (boolean)
         """
-        menu = e4App().getObject("Project").getMenu("Checks")
+        menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
             self.__projectAct = E4Action(self.trUtf8('Check Indentations'),
                     self.trUtf8('&Indentations...'), 0, 0,
@@ -83,7 +83,7 @@ class TabnannyPlugin(QObject):
                 """ for bad indentations using tabnanny.</p>"""
             ))
             self.connect(self.__projectAct, SIGNAL('triggered()'), self.__projectTabnanny)
-            e4App().getObject("Project").addE4Actions([self.__projectAct])
+            e5App().getObject("Project").addE4Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
         self.__editorAct = E4Action(self.trUtf8('Check Indentations'),
@@ -96,16 +96,16 @@ class TabnannyPlugin(QObject):
         ))
         self.connect(self.__editorAct, SIGNAL('triggered()'), self.__editorTabnanny)
         
-        self.connect(e4App().getObject("Project"), SIGNAL("showMenu"), 
+        self.connect(e5App().getObject("Project"), SIGNAL("showMenu"), 
                      self.__projectShowMenu)
-        self.connect(e4App().getObject("ProjectBrowser").getProjectBrowser("sources"), 
+        self.connect(e5App().getObject("ProjectBrowser").getProjectBrowser("sources"), 
                      SIGNAL("showMenu"), self.__projectBrowserShowMenu)
-        self.connect(e4App().getObject("ViewManager"), SIGNAL("editorOpenedEd"), 
+        self.connect(e5App().getObject("ViewManager"), SIGNAL("editorOpenedEd"), 
                      self.__editorOpened)
-        self.connect(e4App().getObject("ViewManager"), SIGNAL("editorClosedEd"), 
+        self.connect(e5App().getObject("ViewManager"), SIGNAL("editorClosedEd"), 
                      self.__editorClosed)
         
-        for editor in e4App().getObject("ViewManager").getOpenEditors():
+        for editor in e5App().getObject("ViewManager").getOpenEditors():
             self.__editorOpened(editor)
         
         return None, True
@@ -114,16 +114,16 @@ class TabnannyPlugin(QObject):
         """
         Public method to deactivate this plugin.
         """
-        self.disconnect(e4App().getObject("Project"), SIGNAL("showMenu"), 
+        self.disconnect(e5App().getObject("Project"), SIGNAL("showMenu"), 
                         self.__projectShowMenu)
-        self.disconnect(e4App().getObject("ProjectBrowser").getProjectBrowser("sources"), 
+        self.disconnect(e5App().getObject("ProjectBrowser").getProjectBrowser("sources"), 
                         SIGNAL("showMenu"), self.__projectBrowserShowMenu)
-        self.disconnect(e4App().getObject("ViewManager"), SIGNAL("editorOpenedEd"), 
+        self.disconnect(e5App().getObject("ViewManager"), SIGNAL("editorOpenedEd"), 
                         self.__editorOpened)
-        self.disconnect(e4App().getObject("ViewManager"), SIGNAL("editorClosedEd"), 
+        self.disconnect(e5App().getObject("ViewManager"), SIGNAL("editorClosedEd"), 
                         self.__editorClosed)
         
-        menu = e4App().getObject("Project").getMenu("Checks")
+        menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
             menu.removeAction(self.__projectAct)
         
@@ -149,7 +149,7 @@ class TabnannyPlugin(QObject):
         """
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(\
-                e4App().getObject("Project").getProjectLanguage() == "Python3")
+                e5App().getObject("Project").getProjectLanguage() == "Python3")
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
@@ -160,7 +160,7 @@ class TabnannyPlugin(QObject):
         @param menu reference to the menu (QMenu)
         """
         if menuName == "Checks" and \
-           e4App().getObject("Project").getProjectLanguage() == "Python3":
+           e5App().getObject("Project").getProjectLanguage() == "Python3":
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E4Action(self.trUtf8('Check Indentations'),
@@ -180,7 +180,7 @@ class TabnannyPlugin(QObject):
         """
         Public slot used to check the project files for bad indentations.
         """
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         project.saveAllScripts()
         files = [os.path.join(project.ppath, file) \
             for file in project.pdata["SOURCES"] \
@@ -195,7 +195,7 @@ class TabnannyPlugin(QObject):
         Private method to handle the tabnanny context menu action of the project
         sources browser.
         """
-        browser = e4App().getObject("ProjectBrowser").getProjectBrowser("sources")
+        browser = e5App().getObject("ProjectBrowser").getProjectBrowser("sources")
         itm = browser.model().item(browser.currentIndex())
         try:
             fn = itm.fileName()
@@ -247,7 +247,7 @@ class TabnannyPlugin(QObject):
         """
         Private slot to handle the tabnanny context menu action of the editors.
         """
-        editor = e4App().getObject("ViewManager").activeWindow()
+        editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
             if not editor.checkDirty():
                 return

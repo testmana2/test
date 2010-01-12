@@ -12,7 +12,7 @@ some repository information and an abstract base class. The individual
 interfaces (i.e. CVS) have to be subclasses of this base class.
 """
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 import Preferences
 
@@ -28,7 +28,7 @@ def factory(vcs):
     @param vcs name of the VCS system to be used (string)
     @return the instantiated VCS object
     """
-    pluginManager = e4App().getObject("PluginManager")
+    pluginManager = e5App().getObject("PluginManager")
     if pluginManager is None:
         # that should not happen
         vc = None

@@ -14,7 +14,7 @@ import types
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Ui_SyntaxCheckerDialog import Ui_SyntaxCheckerDialog
 
@@ -156,7 +156,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         lineno = int(itm.text(1))
         error = itm.text(2)
         
-        vm = e4App().getObject("ViewManager")
+        vm = e5App().getObject("ViewManager")
         vm.openSourceFile(fn, lineno)
         editor = vm.getOpenEditor(fn)
         editor.toggleSyntaxError(lineno, True, error)
@@ -172,7 +172,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         # go through the list again to clear syntax error markers
         # for files, that are ok
-        vm = e4App().getObject("ViewManager")
+        vm = e5App().getObject("ViewManager")
         openFiles = vm.getOpenFilenames()
         errorFiles = []
         for index in range(self.resultList.topLevelItemCount()):
@@ -187,7 +187,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         """
         Private method to clear all error markers of open editors.
         """
-        vm = e4App().getObject("ViewManager")
+        vm = e5App().getObject("ViewManager")
         openFiles = vm.getOpenFilenames()
         for file in openFiles:
             editor = vm.getOpenEditor(file)

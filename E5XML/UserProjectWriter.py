@@ -9,7 +9,7 @@ Module implementing the writer class for writing an XML user project properties 
 
 import time
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .XMLWriterBase import XMLWriterBase
 from .Config import userProjectFileFormatVersion
@@ -29,8 +29,8 @@ class UserProjectWriter(XMLWriterBase):
         """
         XMLWriterBase.__init__(self, file)
         
-        self.pudata = e4App().getObject("Project").pudata
-        self.pdata = e4App().getObject("Project").pdata
+        self.pudata = e5App().getObject("Project").pudata
+        self.pdata = e5App().getObject("Project").pdata
         self.name = projectName
         
     def writeXML(self):

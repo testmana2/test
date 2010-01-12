@@ -10,7 +10,7 @@ Module implementing the writer class for writing an XML tasks file.
 import os
 import time
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .XMLWriterBase import XMLWriterBase
 from .Config import tasksFileFormatVersion
@@ -57,9 +57,9 @@ class TasksWriter(XMLWriterBase):
         
         # do the tasks
         if self.forProject:
-            tasks = e4App().getObject("TaskViewer").getProjectTasks()
+            tasks = e5App().getObject("TaskViewer").getProjectTasks()
         else:
-            tasks = e4App().getObject("TaskViewer").getGlobalTasks()
+            tasks = e5App().getObject("TaskViewer").getGlobalTasks()
         for task in tasks:
             self._write('  <Task priority="%d" completed="%s" bugfix="%s">' % \
                         (task.priority, task.completed, task.isBugfixTask))

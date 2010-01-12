@@ -15,7 +15,7 @@ from PyQt4.QtCore import pyqtSlot, Qt, QProcess
 from PyQt4.QtGui import QApplication, QTreeWidgetItem, QHeaderView, QCursor, \
     QDialog, QDialogButtonBox
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Ui_ProgramsDialog import Ui_ProgramsDialog
 
@@ -170,7 +170,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         self.__createEntry(self.trUtf8("Spell Checker - PyEnchant"), text, version)
         
         # do the plugin related programs
-        pm = e4App().getObject("PluginManager")
+        pm = e5App().getObject("PluginManager")
         for info in pm.getPluginExeDisplayData():
             if info["programEntry"]:
                 self.__createProgramEntry(

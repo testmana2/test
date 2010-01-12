@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from VCS.ProjectBrowserHelper import VcsProjectBrowserHelper
 
@@ -853,7 +853,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         """
         Private method to open the configuration dialog.
         """
-        e4App().getObject("UserInterface").showPreferences("zzz_subversionPage")
+        e5App().getObject("UserInterface").showPreferences("zzz_subversionPage")
         
     def __SVNAddToChangelist(self):
         """

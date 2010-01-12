@@ -10,7 +10,7 @@ Module implementing the user specific project properties dialog.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 import Preferences
 
@@ -45,7 +45,7 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
         enableVcsGroup = False
         if self.project.pdata["VCS"]:
             found = False
-            for indicator, vcsData in list(e4App().getObject("PluginManager")\
+            for indicator, vcsData in list(e5App().getObject("PluginManager")\
                                              .getVcsSystemIndicators().items()):
                 for vcsSystem, vcsSystemDisplay in vcsData:
                     if vcsSystem == self.project.pdata["VCS"][0]:

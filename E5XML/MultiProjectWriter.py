@@ -10,7 +10,7 @@ Module implementing the writer class for writing an XML multi project file.
 import os
 import time
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .XMLWriterBase import XMLWriterBase
 from .Config import multiProjectFileFormatVersion

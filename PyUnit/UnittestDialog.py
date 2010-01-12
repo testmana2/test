@@ -17,7 +17,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 from E4Gui.E4Completers import E4FileCompleter
 
 from .Ui_UnittestDialog import Ui_UnittestDialog
@@ -228,7 +228,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         if self.dbs and not self.localCheckBox.isChecked():
             # we are cooperating with the eric5 IDE
-            project = e4App().getObject("Project")
+            project = e5App().getObject("Project")
             if project.isOpen() and project.isProjectSource(prog):
                 mainScript = project.getMainScript(True)
             else:
@@ -268,7 +268,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             if self.coverageCheckBox.isChecked():
                 if self.dbs:
                     # we are cooperating with the eric5 IDE
-                    project = e4App().getObject("Project")
+                    project = e5App().getObject("Project")
                     if project.isOpen() and project.isProjectSource(prog):
                         mainScript = project.getMainScript(True)
                     else:

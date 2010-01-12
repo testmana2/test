@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from ViewManager.ViewManager import ViewManager
 
@@ -199,7 +199,7 @@ class Listspace(QSplitter, ViewManager):
                 self.contextMenuEditor = self.editors[row]
                 if self.contextMenuEditor:
                     self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
-                    self.projectMenuAct.setEnabled(e4App().getObject("Project").isOpen())
+                    self.projectMenuAct.setEnabled(e5App().getObject("Project").isOpen())
                     self.__menu.popup(self.viewlist.mapToGlobal(point))
         
     def canCascade(self):

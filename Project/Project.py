@@ -21,7 +21,7 @@ import io
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from Globals import recentNameProject
 
@@ -2327,7 +2327,7 @@ class Project(QObject):
                 
                 # check, if the existing project directory is already under
                 # VCS control
-                pluginManager = e4App().getObject("PluginManager")
+                pluginManager = e5App().getObject("PluginManager")
                 for indicator, vcsData in list(pluginManager.getVcsSystemIndicators().items()):
                     if os.path.exists(os.path.join(self.ppath, indicator)):
                         if len(vcsData) > 1:
@@ -2388,7 +2388,7 @@ class Project(QObject):
             
             # put the project under VCS control
             if self.vcs is None:
-                vcsSystemsDict = e4App().getObject("PluginManager")\
+                vcsSystemsDict = e5App().getObject("PluginManager")\
                     .getPluginDisplayStrings("version_control")
                 vcsSystemsDisplay = [self.trUtf8("None")]
                 keys = sorted(vcsSystemsDict.keys())
@@ -2597,7 +2597,7 @@ class Project(QObject):
                         self.__statusMonitorStatus)
                     self.vcs.vcsShutdown()
                     self.vcs = None
-                    e4App().getObject("PluginManager").deactivateVcsPlugins()
+                    e5App().getObject("PluginManager").deactivateVcsPlugins()
                 # reinit VCS
                 self.vcs = self.initVCS()
                 # start the VCS monitor thread
@@ -2709,7 +2709,7 @@ class Project(QObject):
                     self.vcs = self.initVCS()
                     if self.vcs is None:
                         # check, if project is version controlled
-                        pluginManager = e4App().getObject("PluginManager")
+                        pluginManager = e5App().getObject("PluginManager")
                         for indicator, vcsData in \
                                 list(pluginManager.getVcsSystemIndicators().items()):
                             if os.path.exists(os.path.join(self.ppath, indicator)):
@@ -2948,7 +2948,7 @@ class Project(QObject):
             self.__writeDebugProperties(True)
         
         # now save all open modified files of the project
-        vm = e4App().getObject("ViewManager")
+        vm = e5App().getObject("ViewManager")
         success = True
         for fn in vm.getOpenFilenames():
             if self.isProjectFile(fn):
@@ -2976,7 +2976,7 @@ class Project(QObject):
         if self.vcs:
             self.vcs.vcsShutdown()
             self.vcs = None
-            e4App().getObject("PluginManager").deactivateVcsPlugins()
+            e5App().getObject("PluginManager").deactivateVcsPlugins()
         
         # now close all project related windows
         self.__closeAllWindows()
@@ -3015,7 +3015,7 @@ class Project(QObject):
             for syntax errors (boolean)
         @return flag indicating success (boolean)
         """
-        vm = e4App().getObject("ViewManager")
+        vm = e5App().getObject("ViewManager")
         success = True
         filesWithSyntaxErrors = 0
         for fn in vm.getOpenFilenames():

@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 from E4Gui.E4TabWidget import E4TabWidget
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 import UI.PixmapCache
 import Preferences
@@ -105,4 +105,4 @@ class LogViewer(QTextEdit):
         """
         Private method to open the configuration dialog.
         """
-        e4App().getObject("UserInterface").showPreferences("interfacePage")
+        e5App().getObject("UserInterface").showPreferences("interfacePage")

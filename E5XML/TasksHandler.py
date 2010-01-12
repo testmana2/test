@@ -10,7 +10,7 @@ Module implementing the handler class for reading an XML tasks file.
 import os
 import time
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Config import tasksFileFormatVersion
 from .XMLHandlerBase import XMLHandlerBase
@@ -48,7 +48,7 @@ class TasksHandler(XMLHandlerBase):
         if taskViewer:
             self.taskViewer = taskViewer
         else:
-            self.taskViewer = e4App().getObject("TaskViewer")
+            self.taskViewer = e5App().getObject("TaskViewer")
         
     def startDocumentTasks(self):
         """

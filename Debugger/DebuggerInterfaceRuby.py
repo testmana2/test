@@ -14,7 +14,7 @@ import socket
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QMessageBox
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .DebugProtocol import *
 from . import DebugClientCapabilities
@@ -230,7 +230,7 @@ class DebuggerInterfaceRuby(QObject):
         @return pid of the client process (integer) and a flag to indicate
             a network connection (boolean)
         """
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         if not project.isDebugPropertiesLoaded():
             return None, self.__isNetworked
         

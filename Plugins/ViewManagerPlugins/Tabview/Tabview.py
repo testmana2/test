@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from ViewManager.ViewManager import ViewManager
 
@@ -263,7 +263,7 @@ class TabWidget(E4TabWidget):
             self.contextMenuEditor = self.widget(index)
             if self.contextMenuEditor:
                 self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
-            self.projectMenuAct.setEnabled(e4App().getObject("Project").isOpen())
+            self.projectMenuAct.setEnabled(e5App().getObject("Project").isOpen())
             
             self.contextMenuIndex = index
             self.leftMenuAct.setEnabled(index > 0)
@@ -374,7 +374,7 @@ class TabWidget(E4TabWidget):
                 txt = os.path.basename(fn)
             else:
                 txt = fn
-                ppath = e4App().getObject("Project").getProjectPath()
+                ppath = e5App().getObject("Project").getProjectPath()
                 if ppath:
                     txt = txt.replace(ppath + os.sep, "")
             
@@ -735,7 +735,7 @@ class Tabview(QSplitter, ViewManager):
                 txt = os.path.basename(fn)
             else:
                 txt = fn
-                ppath = e4App().getObject("Project").getProjectPath()
+                ppath = e5App().getObject("Project").getProjectPath()
                 if ppath:
                     txt = txt.replace(ppath + os.sep, "")
             if len(txt) > self.maxFileNameChars:
@@ -775,7 +775,7 @@ class Tabview(QSplitter, ViewManager):
                 txt = os.path.basename(fn)
             else:
                 txt = fn
-                ppath = e4App().getObject("Project").getProjectPath()
+                ppath = e5App().getObject("Project").getProjectPath()
                 if ppath:
                     txt = txt.replace(ppath + os.sep, "")
             if len(txt) > self.maxFileNameChars:
@@ -846,7 +846,7 @@ class Tabview(QSplitter, ViewManager):
             tabName = os.path.basename(newName)
         else:
             tabName = newName
-            ppath = e4App().getObject("Project").getProjectPath()
+            ppath = e5App().getObject("Project").getProjectPath()
             if ppath:
                 tabName = tabName.replace(ppath + os.sep, "")
         if len(tabName) > self.maxFileNameChars:
@@ -1076,7 +1076,7 @@ class Tabview(QSplitter, ViewManager):
                             txt = os.path.basename(fn)
                         else:
                             txt = fn
-                            ppath = e4App().getObject("Project").getProjectPath()
+                            ppath = e5App().getObject("Project").getProjectPath()
                             if ppath:
                                 txt = txt.replace(ppath + os.sep, "")
                         if len(txt) > self.maxFileNameChars:

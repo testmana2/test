@@ -14,7 +14,7 @@ import copy
 from PyQt4.QtCore import QObject, SIGNAL
 from PyQt4.QtGui import QDialog, QApplication
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from E4Gui.E4Action import E4Action
 
@@ -90,7 +90,7 @@ class EricapiPlugin(QObject):
         
         @return tuple of None and activation status (boolean)
         """
-        menu = e4App().getObject("Project").getMenu("Apidoc")
+        menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
             self.__projectAct = E4Action(self.trUtf8('Generate API file (eric5-api)'),
                     self.trUtf8('Generate &API file (eric5-api)'), 0, 0,
@@ -102,10 +102,10 @@ class EricapiPlugin(QObject):
                 """<p>Generate an API file using eric5-api.</p>"""
             ))
             self.connect(self.__projectAct, SIGNAL('triggered()'), self.__doEricapi)
-            e4App().getObject("Project").addE4Actions([self.__projectAct])
+            e5App().getObject("Project").addE4Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
-        self.connect(e4App().getObject("Project"), SIGNAL("showMenu"), 
+        self.connect(e5App().getObject("Project"), SIGNAL("showMenu"), 
                      self.__projectShowMenu)
         
         return None, True
@@ -114,13 +114,13 @@ class EricapiPlugin(QObject):
         """
         Public method to deactivate this plugin.
         """
-        self.disconnect(e4App().getObject("Project"), SIGNAL("showMenu"), 
+        self.disconnect(e5App().getObject("Project"), SIGNAL("showMenu"), 
                         self.__projectShowMenu)
         
-        menu = e4App().getObject("Project").getMenu("Apidoc")
+        menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
             menu.removeAction(self.__projectAct)
-            e4App().getObject("Project").removeE4Actions([self.__projectAct])
+            e5App().getObject("Project").removeE4Actions([self.__projectAct])
         self.__initialize()
     
     def __projectShowMenu(self, menuName, menu):
@@ -134,14 +134,14 @@ class EricapiPlugin(QObject):
         if menuName == "Apidoc":
             if self.__projectAct is not None:
                 self.__projectAct.setEnabled(\
-                    e4App().getObject("Project").getProjectLanguage() in \
+                    e5App().getObject("Project").getProjectLanguage() in \
                         ["Python", "Python3", "Ruby"])
     
     def __doEricapi(self):
         """
         Private slot to perform the eric5-api api generation.
         """
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         parms = project.getData('DOCUMENTATIONPARMS', "ERIC4API")
         dlg = EricapiConfigDialog(project, parms)
         if dlg.exec_() == QDialog.Accepted:

@@ -18,7 +18,7 @@ import time
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .TaskPropertiesDialog import TaskPropertiesDialog
 from .TaskFilterConfigDialog import TaskFilterConfigDialog
@@ -811,4 +811,4 @@ class TaskViewer(QTreeWidget):
         """
         Private method to open the configuration dialog.
         """
-        e4App().getObject("UserInterface").showPreferences("tasksPage")
+        e5App().getObject("UserInterface").showPreferences("tasksPage")

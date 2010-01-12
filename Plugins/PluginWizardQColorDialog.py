@@ -10,7 +10,7 @@ Module implementing the QColorDialog wizard plugin.
 from PyQt4.QtCore import QObject, SIGNAL
 from PyQt4.QtGui import QDialog, QMessageBox
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 from E4Gui.E4Action import E4Action
 
 from WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog import \
@@ -113,7 +113,7 @@ class ColorDialogWizard(QObject):
         """
         Private method to handle the wizards action 
         """
-        editor = e4App().getObject("ViewManager").activeWindow()
+        editor = e5App().getObject("ViewManager").activeWindow()
         
         if editor == None:
                 QMessageBox.critical(None, 

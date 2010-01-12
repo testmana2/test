@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QPixmap
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ViewmanagerPage import Ui_ViewmanagerPage
@@ -34,7 +34,7 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         self.setObjectName("ViewmanagerPage")
         
         # set initial values
-        self.pluginManager = e4App().getObject("PluginManager")
+        self.pluginManager = e5App().getObject("PluginManager")
         self.viewmanagers = self.pluginManager.getPluginDisplayStrings("viewmanager")
         self.windowComboBox.clear()
         currentVm = Preferences.getViewManager()

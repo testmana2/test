@@ -10,7 +10,7 @@ Module implementing a dialog for the configuration of eric5s keyboard shortcuts.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Ui_ShortcutsDialog import Ui_ShortcutsDialog
 from .ShortcutDialog import ShortcutDialog
@@ -109,72 +109,72 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         self.actionButton.setChecked(True)
         
         # let the plugin manager create on demand plugin objects
-        pm = e4App().getObject("PluginManager")
+        pm = e5App().getObject("PluginManager")
         pm.initOnDemandPlugins()
         
         # populate the various lists
         self.projectItem = self.__generateCategoryItem(self.trUtf8("Project"))
-        for act in e4App().getObject("Project").getActions():
+        for act in e5App().getObject("Project").getActions():
             self.__generateShortcutItem(self.projectItem, act)
         
         self.uiItem = self.__generateCategoryItem(self.trUtf8("General"))
-        for act in e4App().getObject("UserInterface").getActions('ui'):
+        for act in e5App().getObject("UserInterface").getActions('ui'):
             self.__generateShortcutItem(self.uiItem, act)
         
         self.wizardsItem = self.__generateCategoryItem(self.trUtf8("Wizards"))
-        for act in e4App().getObject("UserInterface").getActions('wizards'):
+        for act in e5App().getObject("UserInterface").getActions('wizards'):
             self.__generateShortcutItem(self.wizardsItem, act)
         
         self.debugItem = self.__generateCategoryItem(self.trUtf8("Debug"))
-        for act in e4App().getObject("DebugUI").getActions():
+        for act in e5App().getObject("DebugUI").getActions():
             self.__generateShortcutItem(self.debugItem, act)
         
         self.editItem = self.__generateCategoryItem(self.trUtf8("Edit"))
-        for act in e4App().getObject("ViewManager").getActions('edit'):
+        for act in e5App().getObject("ViewManager").getActions('edit'):
             self.__generateShortcutItem(self.editItem, act)
         
         self.fileItem = self.__generateCategoryItem(self.trUtf8("File"))
-        for act in e4App().getObject("ViewManager").getActions('file'):
+        for act in e5App().getObject("ViewManager").getActions('file'):
             self.__generateShortcutItem(self.fileItem, act)
         
         self.searchItem = self.__generateCategoryItem(self.trUtf8("Search"))
-        for act in e4App().getObject("ViewManager").getActions('search'):
+        for act in e5App().getObject("ViewManager").getActions('search'):
             self.__generateShortcutItem(self.searchItem, act)
         
         self.viewItem = self.__generateCategoryItem(self.trUtf8("View"))
-        for act in e4App().getObject("ViewManager").getActions('view'):
+        for act in e5App().getObject("ViewManager").getActions('view'):
             self.__generateShortcutItem(self.viewItem, act)
         
         self.macroItem = self.__generateCategoryItem(self.trUtf8("Macro"))
-        for act in e4App().getObject("ViewManager").getActions('macro'):
+        for act in e5App().getObject("ViewManager").getActions('macro'):
             self.__generateShortcutItem(self.macroItem, act)
         
         self.bookmarkItem = self.__generateCategoryItem(self.trUtf8("Bookmarks"))
-        for act in e4App().getObject("ViewManager").getActions('bookmark'):
+        for act in e5App().getObject("ViewManager").getActions('bookmark'):
             self.__generateShortcutItem(self.bookmarkItem, act)
         
         self.spellingItem = self.__generateCategoryItem(self.trUtf8("Spelling"))
-        for act in e4App().getObject("ViewManager").getActions('spelling'):
+        for act in e5App().getObject("ViewManager").getActions('spelling'):
             self.__generateShortcutItem(self.spellingItem, act)
         
-        actions = e4App().getObject("ViewManager").getActions('window')
+        actions = e5App().getObject("ViewManager").getActions('window')
         if actions:
             self.windowItem = self.__generateCategoryItem(self.trUtf8("Window"))
             for act in actions:
                 self.__generateShortcutItem(self.windowItem, act)
         
         self.pluginCategoryItems = []
-        for category, ref in e4App().getPluginObjects():
+        for category, ref in e5App().getPluginObjects():
             if hasattr(ref, "getActions"):
                 categoryItem = self.__generateCategoryItem(category)
-                objectType = e4App().getPluginObjectType(category)
+                objectType = e5App().getPluginObjectType(category)
                 for act in ref.getActions():
                     self.__generateShortcutItem(categoryItem, act, 
                                                 objectType = objectType)
                 self.pluginCategoryItems.append(categoryItem)
         
         self.helpViewerItem = self.__generateCategoryItem(self.trUtf8("Web Browser"))
-        for act in e4App().getObject("DummyHelpViewer").getActions():
+        for act in e5App().getObject("DummyHelpViewer").getActions():
             self.__generateShortcutItem(self.helpViewerItem, act, True)
         
         self.__resort()
@@ -369,40 +369,40 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         Private slot to handle the OK button press.
         """
         self.__saveCategoryActions(self.projectItem, 
-            e4App().getObject("Project").getActions())
+            e5App().getObject("Project").getActions())
         self.__saveCategoryActions(self.uiItem, 
-            e4App().getObject("UserInterface").getActions('ui'))
+            e5App().getObject("UserInterface").getActions('ui'))
         self.__saveCategoryActions(self.wizardsItem, 
-            e4App().getObject("UserInterface").getActions('wizards'))
+            e5App().getObject("UserInterface").getActions('wizards'))
         self.__saveCategoryActions(self.debugItem, 
-            e4App().getObject("DebugUI").getActions())
+            e5App().getObject("DebugUI").getActions())
         self.__saveCategoryActions(self.editItem, 
-            e4App().getObject("ViewManager").getActions('edit'))
+            e5App().getObject("ViewManager").getActions('edit'))
         self.__saveCategoryActions(self.fileItem, 
-            e4App().getObject("ViewManager").getActions('file'))
+            e5App().getObject("ViewManager").getActions('file'))
         self.__saveCategoryActions(self.searchItem, 
-            e4App().getObject("ViewManager").getActions('search'))
+            e5App().getObject("ViewManager").getActions('search'))
         self.__saveCategoryActions(self.viewItem, 
-            e4App().getObject("ViewManager").getActions('view'))
+            e5App().getObject("ViewManager").getActions('view'))
         self.__saveCategoryActions(self.macroItem, 
-            e4App().getObject("ViewManager").getActions('macro'))
+            e5App().getObject("ViewManager").getActions('macro'))
         self.__saveCategoryActions(self.bookmarkItem, 
-            e4App().getObject("ViewManager").getActions('bookmark'))
+            e5App().getObject("ViewManager").getActions('bookmark'))
         self.__saveCategoryActions(self.spellingItem, 
-            e4App().getObject("ViewManager").getActions('spelling'))
+            e5App().getObject("ViewManager").getActions('spelling'))
         
-        actions = e4App().getObject("ViewManager").getActions('window')
+        actions = e5App().getObject("ViewManager").getActions('window')
         if actions:
             self.__saveCategoryActions(self.windowItem, actions)
         
         for categoryItem in self.pluginCategoryItems:
             category = categoryItem.text(0)
-            ref = e4App().getPluginObject(category)
+            ref = e5App().getPluginObject(category)
             if ref is not None and hasattr(ref, "getActions"):
                 self.__saveCategoryActions(categoryItem, ref.getActions())
         
         self.__saveCategoryActions(self.helpViewerItem, 
-            e4App().getObject("DummyHelpViewer").getActions())
+            e5App().getObject("DummyHelpViewer").getActions())
         
         Shortcuts.saveShortcuts()
         Preferences.syncPreferences()

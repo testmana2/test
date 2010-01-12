@@ -10,7 +10,7 @@ Module implementing the writer class for writing an XML project debugger propert
 import os
 import time
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .XMLWriterBase import XMLWriterBase
 from .Config import debuggerPropertiesFileFormatVersion
@@ -32,7 +32,7 @@ class DebuggerPropertiesWriter(XMLWriterBase):
         XMLWriterBase.__init__(self, file)
         
         self.name = projectName
-        self.project = e4App().getObject("Project")
+        self.project = e5App().getObject("Project")
         
     def writeXML(self):
         """

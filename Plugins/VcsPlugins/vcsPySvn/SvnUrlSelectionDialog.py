@@ -10,7 +10,7 @@ Module implementing a dialog to enter the URLs for the svn diff command.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 import pysvn
 
@@ -71,7 +71,7 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
             self.repoRootLabel1.setText(reposRoot)
             self.repoRootLabel2.setText(reposRoot)
         else:
-            ppath = e4App().getObject('Project').getProjectPath()
+            ppath = e5App().getObject('Project').getProjectPath()
             if path != ppath:
                 path = path.replace(ppath, '')
                 reposURL = reposURL.replace(path, '')

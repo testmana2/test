@@ -14,7 +14,7 @@ import shutil
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -506,7 +506,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         @param exitStatus exit status of the process (QProcess.ExitStatus)
         """
         self.compileRunning = False
-        e4App().getObject("ViewManager").enableEditorsCheckFocusIn(True)
+        e5App().getObject("ViewManager").enableEditorsCheckFocusIn(True)
         if exitStatus == QProcess.NormalExit and exitCode == 0 and self.buf:
             ofn = os.path.join(self.project.ppath, self.compiledFile)
             try:
@@ -599,7 +599,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         procStarted = self.compileProc.waitForStarted()
         if procStarted:
             self.compileRunning = True
-            e4App().getObject("ViewManager").enableEditorsCheckFocusIn(False)
+            e5App().getObject("ViewManager").enableEditorsCheckFocusIn(False)
             return self.compileProc
         else:
             self.compileRunning = False

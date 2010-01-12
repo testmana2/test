@@ -13,7 +13,7 @@ import types
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 import QScintilla.Lexers
 
@@ -77,10 +77,10 @@ class ConfigurationWidget(QWidget):
         if not fromEric:
             from PluginManager.PluginManager import PluginManager
             try:
-                self.pluginManager = e4App().getObject("PluginManager")
+                self.pluginManager = e5App().getObject("PluginManager")
             except KeyError:
                 self.pluginManager = PluginManager(self)
-                e4App().registerObject("PluginManager", self.pluginManager)
+                e5App().registerObject("PluginManager", self.pluginManager)
         
         if not helpBrowserMode:
             self.configItems = {
@@ -250,7 +250,7 @@ class ConfigurationWidget(QWidget):
             }
             
             self.configItems.update(
-                e4App().getObject("PluginManager").getPluginConfigData())
+                e5App().getObject("PluginManager").getPluginConfigData())
         else:
             self.configItems = {
                 # key : [display string, pixmap name, dialog module name or 

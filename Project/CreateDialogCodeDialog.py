@@ -14,7 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4 import uic
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .NewDialogClassDialog import NewDialogClassDialog
 from .Ui_CreateDialogCodeDialog import Ui_CreateDialogCodeDialog
@@ -67,7 +67,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         self.__module = None
         
         if os.path.exists(self.srcFile):
-            vm = e4App().getObject("ViewManager")
+            vm = e5App().getObject("ViewManager")
             ed = vm.getOpenEditor(self.srcFile)
             if ed and not vm.checkDirty(ed):
                 self.__initError = True

@@ -12,7 +12,7 @@ import sys
 
 from PyQt4.QtGui import QApplication
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 import Preferences
 from Preferences.Shortcuts import readShortcuts
@@ -125,7 +125,7 @@ def prepareUninstall():
     """
     Module function to prepare for an uninstallation.
     """
-    if not e4App().getObject("PluginManager").isPluginLoaded("PluginVcsSubversion"):
+    if not e5App().getObject("PluginManager").isPluginLoaded("PluginVcsSubversion"):
         Preferences.Prefs.settings.remove("Subversion")
     
 class VcsPySvnPlugin(object):
@@ -149,7 +149,7 @@ class VcsPySvnPlugin(object):
         from VcsPlugins.vcsPySvn.ProjectHelper import SvnProjectHelper
         self.__projectHelperObject = SvnProjectHelper(None, None)
         try:
-            e4App().registerPluginObject(pluginTypename, self.__projectHelperObject, 
+            e5App().registerPluginObject(pluginTypename, self.__projectHelperObject, 
                                          pluginType)
         except KeyError:
             pass    # ignore duplicate registration
@@ -230,4 +230,4 @@ class VcsPySvnPlugin(object):
         """
         Public method to prepare for an uninstallation.
         """
-        e4App().unregisterPluginObject(pluginTypename)
+        e5App().unregisterPluginObject(pluginTypename)

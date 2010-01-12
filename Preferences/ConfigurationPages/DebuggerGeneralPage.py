@@ -13,7 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtNetwork import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
 
@@ -41,7 +41,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             self.execLineEdit.setWhatsThis(t)
         
         try:
-            backends = e4App().getObject("DebugServer").getSupportedLanguages()
+            backends = e5App().getObject("DebugServer").getSupportedLanguages()
             for backend in sorted(backends):
                 self.passiveDbgBackendCombo.addItem(backend)
         except KeyError:

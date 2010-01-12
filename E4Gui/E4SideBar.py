@@ -11,7 +11,7 @@ from PyQt4.QtCore import SIGNAL,  SLOT, QEvent, QSize, Qt, QByteArray, \
                          QDataStream, QIODevice
 from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, QToolButton
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 import UI.PixmapCache
 
@@ -78,7 +78,7 @@ class E4SideBar(QWidget):
         
         self.connect(self.__tabBar, SIGNAL("currentChanged(int)"), 
                      self.__stackedWidget, SLOT("setCurrentIndex(int)"))
-        self.connect(e4App(), SIGNAL("focusChanged(QWidget*, QWidget*)"), 
+        self.connect(e5App(), SIGNAL("focusChanged(QWidget*, QWidget*)"), 
                      self.__appFocusChanged)
         self.connect(self.__autoHideButton, SIGNAL("toggled(bool)"), 
                      self.__autoHideToggled)

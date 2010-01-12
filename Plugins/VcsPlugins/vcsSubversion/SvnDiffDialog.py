@@ -14,7 +14,7 @@ import types
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
 
@@ -143,7 +143,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             else:
                 dname, fname = self.vcs.splitPath(fn)
                 fnames = [fname]
-            ppath = e4App().getObject('Project').getProjectPath()
+            ppath = e5App().getObject('Project').getProjectPath()
             if dname == ppath:
                 path = ""
             else:

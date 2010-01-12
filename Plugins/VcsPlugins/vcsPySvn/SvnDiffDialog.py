@@ -16,7 +16,7 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
@@ -186,7 +186,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         cwd = os.getcwd()
         os.chdir(dname)
         try:
-            ppath = e4App().getObject('Project').getProjectPath()
+            ppath = e5App().getObject('Project').getProjectPath()
             dname = dname.replace(ppath, '')
             if dname:
                 dname += "/"

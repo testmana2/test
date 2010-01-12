@@ -14,7 +14,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Config import ConfigVarTypeDispStrings, ConfigVarTypeStrings
 from .VariableDetailDialog import VariableDetailDialog
@@ -156,8 +156,8 @@ class SpecialVarItem(VariableItem):
             par = par.parent()
         
         # step 2: request the variable from the debugger
-        filter = e4App().getObject("DebugUI").variablesFilter(self.scope)
-        e4App().getObject("DebugServer").remoteClientVariable(\
+        filter = e5App().getObject("DebugUI").variablesFilter(self.scope)
+        e5App().getObject("DebugServer").remoteClientVariable(\
             self.scope, filter, pathlist, self.framenr)
 
 class ArrayElementVarItem(VariableItem):
@@ -711,4 +711,4 @@ class VariablesViewer(QTreeWidget):
         """
         Private method to open the configuration dialog.
         """
-        e4App().getObject("UserInterface").showPreferences("debuggerGeneralPage")
+        e5App().getObject("UserInterface").showPreferences("debuggerGeneralPage")

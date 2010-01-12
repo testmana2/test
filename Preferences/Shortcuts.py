@@ -12,7 +12,7 @@ import io
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from Preferences import Prefs, syncPreferences
 
@@ -49,45 +49,45 @@ def readShortcuts(prefClass = Prefs, helpViewer = None, pluginName = None):
     @keyparam pluginName name of the plugin for which to load shortcuts (string)
     """
     if helpViewer is None and pluginName is None:
-        for act in e4App().getObject("Project").getActions():
+        for act in e5App().getObject("Project").getActions():
             __readShortcut(act, "Project", prefClass)
         
-        for act in e4App().getObject("UserInterface").getActions('ui'):
+        for act in e5App().getObject("UserInterface").getActions('ui'):
             __readShortcut(act, "General", prefClass)
         
-        for act in e4App().getObject("UserInterface").getActions('wizards'):
+        for act in e5App().getObject("UserInterface").getActions('wizards'):
             __readShortcut(act, "Wizards", prefClass)
         
-        for act in e4App().getObject("DebugUI").getActions():
+        for act in e5App().getObject("DebugUI").getActions():
             __readShortcut(act, "Debug", prefClass)
         
-        for act in e4App().getObject("ViewManager").getActions('edit'):
+        for act in e5App().getObject("ViewManager").getActions('edit'):
             __readShortcut(act, "Edit", prefClass)
         
-        for act in e4App().getObject("ViewManager").getActions('file'):
+        for act in e5App().getObject("ViewManager").getActions('file'):
             __readShortcut(act, "File", prefClass)
         
-        for act in e4App().getObject("ViewManager").getActions('search'):
+        for act in e5App().getObject("ViewManager").getActions('search'):
             __readShortcut(act, "Search", prefClass)
         
-        for act in e4App().getObject("ViewManager").getActions('view'):
+        for act in e5App().getObject("ViewManager").getActions('view'):
             __readShortcut(act, "View", prefClass)
         
-        for act in e4App().getObject("ViewManager").getActions('macro'):
+        for act in e5App().getObject("ViewManager").getActions('macro'):
             __readShortcut(act, "Macro", prefClass)
         
-        for act in e4App().getObject("ViewManager").getActions('bookmark'):
+        for act in e5App().getObject("ViewManager").getActions('bookmark'):
             __readShortcut(act, "Bookmarks", prefClass)
         
-        for act in e4App().getObject("ViewManager").getActions('spelling'):
+        for act in e5App().getObject("ViewManager").getActions('spelling'):
             __readShortcut(act, "Spelling", prefClass)
         
-        actions = e4App().getObject("ViewManager").getActions('window')
+        actions = e5App().getObject("ViewManager").getActions('window')
         if actions:
             for act in actions:
                 __readShortcut(act, "Window", prefClass)
         
-        for category, ref in e4App().getPluginObjects():
+        for category, ref in e5App().getPluginObjects():
             if hasattr(ref, "getActions"):
                 actions = ref.getActions()
                 for act in actions:
@@ -99,7 +99,7 @@ def readShortcuts(prefClass = Prefs, helpViewer = None, pluginName = None):
     
     if pluginName is not None:
         try:
-            ref = e4App().getPluginObject(pluginName)
+            ref = e5App().getPluginObject(pluginName)
             if hasattr(ref, "getActions"):
                 actions = ref.getActions()
                 for act in actions:
@@ -136,51 +136,51 @@ def saveShortcuts(prefClass = Prefs):
     prefClass.settings.endGroup()
     
     # step 2: save the various shortcuts
-    for act in e4App().getObject("Project").getActions():
+    for act in e5App().getObject("Project").getActions():
         __saveShortcut(act, "Project", prefClass)
     
-    for act in e4App().getObject("UserInterface").getActions('ui'):
+    for act in e5App().getObject("UserInterface").getActions('ui'):
         __saveShortcut(act, "General", prefClass)
     
-    for act in e4App().getObject("UserInterface").getActions('wizards'):
+    for act in e5App().getObject("UserInterface").getActions('wizards'):
         __saveShortcut(act, "Wizards", prefClass)
     
-    for act in e4App().getObject("DebugUI").getActions():
+    for act in e5App().getObject("DebugUI").getActions():
         __saveShortcut(act, "Debug", prefClass)
     
-    for act in e4App().getObject("ViewManager").getActions('edit'):
+    for act in e5App().getObject("ViewManager").getActions('edit'):
         __saveShortcut(act, "Edit", prefClass)
     
-    for act in e4App().getObject("ViewManager").getActions('file'):
+    for act in e5App().getObject("ViewManager").getActions('file'):
         __saveShortcut(act, "File", prefClass)
     
-    for act in e4App().getObject("ViewManager").getActions('search'):
+    for act in e5App().getObject("ViewManager").getActions('search'):
         __saveShortcut(act, "Search", prefClass)
     
-    for act in e4App().getObject("ViewManager").getActions('view'):
+    for act in e5App().getObject("ViewManager").getActions('view'):
         __saveShortcut(act, "View", prefClass)
     
-    for act in e4App().getObject("ViewManager").getActions('macro'):
+    for act in e5App().getObject("ViewManager").getActions('macro'):
         __saveShortcut(act, "Macro", prefClass)
     
-    for act in e4App().getObject("ViewManager").getActions('bookmark'):
+    for act in e5App().getObject("ViewManager").getActions('bookmark'):
         __saveShortcut(act, "Bookmarks", prefClass)
     
-    for act in e4App().getObject("ViewManager").getActions('spelling'):
+    for act in e5App().getObject("ViewManager").getActions('spelling'):
         __saveShortcut(act, "Spelling", prefClass)
     
-    actions = e4App().getObject("ViewManager").getActions('window')
+    actions = e5App().getObject("ViewManager").getActions('window')
     if actions:
         for act in actions:
             __saveShortcut(act, "Window", prefClass)
     
-    for category, ref in e4App().getPluginObjects():
+    for category, ref in e5App().getPluginObjects():
         if hasattr(ref, "getActions"):
             actions = ref.getActions()
             for act in actions:
                 __saveShortcut(act, category, prefClass)
     
-    for act in e4App().getObject("DummyHelpViewer").getActions():
+    for act in e5App().getObject("DummyHelpViewer").getActions():
         __saveShortcut(act, "HelpViewer", prefClass)
 
 def exportShortcuts(fn):
@@ -343,59 +343,59 @@ def setActions(shortcuts):
         read from a XML file
     """
     if "Project" in shortcuts:
-        __setAction(e4App().getObject("Project").getActions(), 
+        __setAction(e5App().getObject("Project").getActions(), 
             shortcuts["Project"])
     
     if "General" in shortcuts:
-        __setAction(e4App().getObject("UserInterface").getActions('ui'), 
+        __setAction(e5App().getObject("UserInterface").getActions('ui'), 
             shortcuts["General"])
     
     if "Wizards" in shortcuts:
-        __setAction(e4App().getObject("UserInterface").getActions('wizards'), 
+        __setAction(e5App().getObject("UserInterface").getActions('wizards'), 
             shortcuts["Wizards"])
     
     if "Debug" in shortcuts:
-        __setAction(e4App().getObject("DebugUI").getActions(), 
+        __setAction(e5App().getObject("DebugUI").getActions(), 
             shortcuts["Debug"])
     
     if "Edit" in shortcuts:
-        __setAction(e4App().getObject("ViewManager").getActions('edit'), 
+        __setAction(e5App().getObject("ViewManager").getActions('edit'), 
             shortcuts["Edit"])
     
     if "File" in shortcuts:
-        __setAction(e4App().getObject("ViewManager").getActions('file'), 
+        __setAction(e5App().getObject("ViewManager").getActions('file'), 
             shortcuts["File"])
     
     if "Search" in shortcuts:
-        __setAction(e4App().getObject("ViewManager").getActions('search'), 
+        __setAction(e5App().getObject("ViewManager").getActions('search'), 
             shortcuts["Search"])
     
     if "View" in shortcuts:
-        __setAction(e4App().getObject("ViewManager").getActions('view'), 
+        __setAction(e5App().getObject("ViewManager").getActions('view'), 
             shortcuts["View"])
     
     if "Macro" in shortcuts:
-        __setAction(e4App().getObject("ViewManager").getActions('macro'), 
+        __setAction(e5App().getObject("ViewManager").getActions('macro'), 
             shortcuts["Macro"])
     
     if "Bookmarks" in shortcuts:
-        __setAction(e4App().getObject("ViewManager").getActions('bookmark'), 
+        __setAction(e5App().getObject("ViewManager").getActions('bookmark'), 
             shortcuts["Bookmarks"])
     
     if "Spelling" in shortcuts:
-        __setAction(e4App().getObject("ViewManager").getActions('spelling'), 
+        __setAction(e5App().getObject("ViewManager").getActions('spelling'), 
             shortcuts["Spelling"])
     
     if "Window" in shortcuts:
-        actions = e4App().getObject("ViewManager").getActions('window')
+        actions = e5App().getObject("ViewManager").getActions('window')
         if actions:
             __setAction(actions, shortcuts["Window"])
     
-    for category, ref in e4App().getPluginObjects():
+    for category, ref in e5App().getPluginObjects():
         if category in shortcuts and hasattr(ref, "getActions"):
             actions = ref.getActions()
             __setAction(actions, shortcuts[category])
     
     if "HelpViewer" in shortcuts:
-        __setAction(e4App().getObject("DummyHelpViewer").getActions(), 
+        __setAction(e5App().getObject("DummyHelpViewer").getActions(), 
             shortcuts["HelpViewer"])

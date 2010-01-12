@@ -15,7 +15,7 @@ import copy
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 import VCS
 from .CommandOptionsDialog import vcsCommandOptionsDialog
@@ -130,7 +130,7 @@ class VcsProjectHelper(QObject):
         if not self.project.checkDirty():
             return
         
-        vcsSystemsDict = e4App().getObject("PluginManager")\
+        vcsSystemsDict = e5App().getObject("PluginManager")\
             .getPluginDisplayStrings("version_control")
         vcsSystemsDisplay = []
         keys = sorted(vcsSystemsDict.keys())
@@ -301,7 +301,7 @@ class VcsProjectHelper(QObject):
         pdata_vcsother = copy.deepcopy(self.project.pdata["VCSOTHERDATA"])
         vcs = self.project.vcs
         vcsHelper = self.project.vcsProjectHelper
-        vcsSystemsDict = e4App().getObject("PluginManager")\
+        vcsSystemsDict = e5App().getObject("PluginManager")\
             .getPluginDisplayStrings("version_control")
         vcsSystemsDisplay = []
         keys = sorted(list(vcsSystemsDict.keys()))

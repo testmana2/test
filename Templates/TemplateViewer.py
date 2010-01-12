@@ -16,7 +16,7 @@ import io
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .TemplatePropertiesDialog import TemplatePropertiesDialog
 from .TemplateMultipleVariablesDialog import TemplateMultipleVariablesDialog
@@ -33,7 +33,7 @@ from E5XML.TemplatesWriter import TemplatesWriter
 import UI.PixmapCache
 import Utilities
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 class TemplateGroup(QTreeWidgetItem):
     """
@@ -584,7 +584,7 @@ class TemplateViewer(QTreeWidget):
         
         @return dictionary of predefined variables and their values
         """
-        project = e4App().getObject("Project")
+        project = e5App().getObject("Project")
         editor = self.viewmanager.activeWindow()
         today = datetime.datetime.now().date()
         sepchar = Preferences.getTemplates("SeparatorChar")
@@ -877,7 +877,7 @@ class TemplateViewer(QTreeWidget):
         """
         Private method to open the configuration dialog.
         """
-        e4App().getObject("UserInterface").showPreferences("templatesPage")
+        e5App().getObject("UserInterface").showPreferences("templatesPage")
     
     def hasTemplate(self, entryName):
         """

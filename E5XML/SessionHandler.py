@@ -7,7 +7,7 @@
 Module implementing the handler class for reading an XML project session file.
 """
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from .Config import sessionFileFormatVersion
 from .XMLHandlerBase import XMLHandlerBase
@@ -66,11 +66,11 @@ class SessionHandler(XMLHandlerBase):
         self.project = project
         self.isGlobal = project is None
         
-        self.project = e4App().getObject("Project")
-        self.multiProject = e4App().getObject("MultiProject")
-        self.vm = e4App().getObject("ViewManager")
-        self.dbg = e4App().getObject("DebugUI")
-        self.dbs = e4App().getObject("DebugServer")
+        self.project = e5App().getObject("Project")
+        self.multiProject = e5App().getObject("MultiProject")
+        self.vm = e5App().getObject("ViewManager")
+        self.dbg = e5App().getObject("DebugUI")
+        self.dbs = e5App().getObject("DebugServer")
         
     def startDocumentSession(self):
         """

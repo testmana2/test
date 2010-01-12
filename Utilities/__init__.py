@@ -26,7 +26,7 @@ from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 from Globals import isWindowsPlatform   # import this method into the Utilities namespace
 
-from E4Gui.E4Application import e4App
+from E4Gui.E4Application import e5App
 
 from UI.Info import Program, Version
 
@@ -745,7 +745,7 @@ def getPercentReplacement(code):
     """
     if code in ["C", "%C"]:
         # column of the cursor of the current editor
-        aw = e4App().getObject("ViewManager").activeWindow()
+        aw = e5App().getObject("ViewManager").activeWindow()
         if aw is None:
             column = -1
         else:
@@ -753,7 +753,7 @@ def getPercentReplacement(code):
         return "%d" % column
     elif code in ["D", "%D"]:
         # directory of active editor
-        aw = e4App().getObject("ViewManager").activeWindow()
+        aw = e5App().getObject("ViewManager").activeWindow()
         if aw is None:
             dn = "not_available"
         else:
@@ -765,7 +765,7 @@ def getPercentReplacement(code):
         return dn
     elif code in ["F", "%F"]:
         # filename (complete) of active editor
-        aw = e4App().getObject("ViewManager").activeWindow()
+        aw = e5App().getObject("ViewManager").activeWindow()
         if aw is None:
             fn = "not_available"
         else:
@@ -778,7 +778,7 @@ def getPercentReplacement(code):
         return getHomeDir()
     elif code in ["L", "%L"]:
         # line of the cursor of the current editor
-        aw = e4App().getObject("ViewManager").activeWindow()
+        aw = e5App().getObject("ViewManager").activeWindow()
         if aw is None:
             line = 0
         else:
@@ -786,13 +786,13 @@ def getPercentReplacement(code):
         return "%d" % line
     elif code in ["P", "%P"]:
         # project path
-        projectPath = e4App().getObject("Project").getProjectPath()
+        projectPath = e5App().getObject("Project").getProjectPath()
         if not projectPath:
             projectPath = "not_available"
         return projectPath
     elif code in ["S", "%S"]:
         # selected text of the current editor
-        aw = e4App().getObject("ViewManager").activeWindow()
+        aw = e5App().getObject("ViewManager").activeWindow()
         if aw is None:
             text = "not_available"
         else:
@@ -1123,7 +1123,7 @@ def generatePluginsVersionInfo(linesep = '\n'):
     @return string with plugins version infos (string)
     """
     infoStr = ""
-    app = e4App()
+    app = e5App()
     if app is not None:
         try:
             pm = app.getObject("PluginManager")
