@@ -135,7 +135,7 @@ _py_getnext = re.compile(r"""
     )
 
 |   (?P<Import>
-        ^ import [ \t]+
+        ^ (?: import | from [ \t]+ \. [ \t]+ import ) [ \t]+
         (?P<ImportList> [^#;\n]+ )
     )
 
