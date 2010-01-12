@@ -37,20 +37,20 @@ from .FiletypeAssociationDialog import FiletypeAssociationDialog
 from .LexerAssociationDialog import LexerAssociationDialog
 from .UserPropertiesDialog import UserPropertiesDialog
 
-from E4XML.XMLUtilities import make_parser
-from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E4XML.XMLEntityResolver import XMLEntityResolver
+from E5XML.XMLUtilities import make_parser
+from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
+from E5XML.XMLEntityResolver import XMLEntityResolver
 
-from E4XML.ProjectHandler import ProjectHandler
-from E4XML.ProjectWriter import ProjectWriter
-from E4XML.UserProjectHandler import UserProjectHandler
-from E4XML.UserProjectWriter import UserProjectWriter
-from E4XML.SessionHandler import SessionHandler
-from E4XML.SessionWriter import SessionWriter
-from E4XML.TasksHandler import TasksHandler
-from E4XML.TasksWriter import TasksWriter
-from E4XML.DebuggerPropertiesHandler import DebuggerPropertiesHandler
-from E4XML.DebuggerPropertiesWriter import DebuggerPropertiesWriter
+from E5XML.ProjectHandler import ProjectHandler
+from E5XML.ProjectWriter import ProjectWriter
+from E5XML.UserProjectHandler import UserProjectHandler
+from E5XML.UserProjectWriter import UserProjectWriter
+from E5XML.SessionHandler import SessionHandler
+from E5XML.SessionWriter import SessionWriter
+from E5XML.TasksHandler import TasksHandler
+from E5XML.TasksWriter import TasksWriter
+from E5XML.DebuggerPropertiesHandler import DebuggerPropertiesHandler
+from E5XML.DebuggerPropertiesWriter import DebuggerPropertiesWriter
 
 import VCS
 from VCS.CommandOptionsDialog import vcsCommandOptionsDialog

@@ -21,10 +21,10 @@ from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
 from UI.AuthenticationDialog import AuthenticationDialog
 
-from E4XML.XMLUtilities import make_parser
-from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E4XML.XMLEntityResolver import XMLEntityResolver
-from E4XML.PluginRepositoryHandler import PluginRepositoryHandler
+from E5XML.XMLUtilities import make_parser
+from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
+from E5XML.XMLEntityResolver import XMLEntityResolver
+from E5XML.PluginRepositoryHandler import PluginRepositoryHandler
 
 import Utilities
 import Preferences

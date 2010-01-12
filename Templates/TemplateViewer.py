@@ -24,11 +24,11 @@ from .TemplateSingleVariableDialog import TemplateSingleVariableDialog
 
 import Preferences
 
-from E4XML.XMLUtilities import make_parser
-from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E4XML.XMLEntityResolver import XMLEntityResolver
-from E4XML.TemplatesHandler import TemplatesHandler
-from E4XML.TemplatesWriter import TemplatesWriter
+from E5XML.XMLUtilities import make_parser
+from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
+from E5XML.XMLEntityResolver import XMLEntityResolver
+from E5XML.TemplatesHandler import TemplatesHandler
+from E5XML.TemplatesWriter import TemplatesWriter
 
 import UI.PixmapCache
 import Utilities

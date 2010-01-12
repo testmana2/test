@@ -480,33 +480,6 @@
     <Source>Preferences/ConfigurationPages/NetworkPage.py</Source>
     <Source>QScintilla/Lexers/LexerContainer.py</Source>
     <Source>QScintilla/Lexers/LexerPygments.py</Source>
-    <Source>E4XML/ProjectWriter.py</Source>
-    <Source>E4XML/SessionWriter.py</Source>
-    <Source>E4XML/ProjectHandler.py</Source>
-    <Source>E4XML/ShortcutsWriter.py</Source>
-    <Source>E4XML/DebuggerPropertiesWriter.py</Source>
-    <Source>E4XML/TemplatesWriter.py</Source>
-    <Source>E4XML/DebuggerPropertiesHandler.py</Source>
-    <Source>E4XML/ShortcutsHandler.py</Source>
-    <Source>E4XML/TasksHandler.py</Source>
-    <Source>E4XML/Config.py</Source>
-    <Source>E4XML/__init__.py</Source>
-    <Source>E4XML/TasksWriter.py</Source>
-    <Source>E4XML/TemplatesHandler.py</Source>
-    <Source>E4XML/SessionHandler.py</Source>
-    <Source>E4XML/UserProjectWriter.py</Source>
-    <Source>E4XML/UserProjectHandler.py</Source>
-    <Source>E4XML/PluginRepositoryHandler.py</Source>
-    <Source>E4XML/MultiProjectWriter.py</Source>
-    <Source>E4XML/MultiProjectHandler.py</Source>
-    <Source>E4XML/HighlightingStylesWriter.py</Source>
-    <Source>E4XML/HighlightingStylesHandler.py</Source>
-    <Source>E4XML/XMLUtilities.py</Source>
-    <Source>E4XML/XMLHandlerBase.py</Source>
-    <Source>E4XML/XMLWriterBase.py</Source>
-    <Source>E4XML/XMLMessageDialog.py</Source>
-    <Source>E4XML/XMLEntityResolver.py</Source>
-    <Source>E4XML/XMLErrorHandler.py</Source>
     <Source>QScintilla/SpellChecker.py</Source>
     <Source>Preferences/ConfigurationPages/EditorSpellCheckingPage.py</Source>
     <Source>QScintilla/SpellCheckingDialog.py</Source>
@@ -758,6 +731,33 @@
     <Source>DebugClients/Python/coverage/xmlreport.py</Source>
     <Source>DebugClients/Python/coverage/phystokens.py</Source>
     <Source>DebugClients/Python/coverage/results.py</Source>
+    <Source>E5XML/ProjectWriter.py</Source>
+    <Source>E5XML/SessionWriter.py</Source>
+    <Source>E5XML/ProjectHandler.py</Source>
+    <Source>E5XML/ShortcutsWriter.py</Source>
+    <Source>E5XML/DebuggerPropertiesWriter.py</Source>
+    <Source>E5XML/TemplatesWriter.py</Source>
+    <Source>E5XML/DebuggerPropertiesHandler.py</Source>
+    <Source>E5XML/ShortcutsHandler.py</Source>
+    <Source>E5XML/TasksHandler.py</Source>
+    <Source>E5XML/Config.py</Source>
+    <Source>E5XML/__init__.py</Source>
+    <Source>E5XML/TasksWriter.py</Source>
+    <Source>E5XML/TemplatesHandler.py</Source>
+    <Source>E5XML/SessionHandler.py</Source>
+    <Source>E5XML/UserProjectWriter.py</Source>
+    <Source>E5XML/UserProjectHandler.py</Source>
+    <Source>E5XML/PluginRepositoryHandler.py</Source>
+    <Source>E5XML/MultiProjectWriter.py</Source>
+    <Source>E5XML/MultiProjectHandler.py</Source>
+    <Source>E5XML/HighlightingStylesWriter.py</Source>
+    <Source>E5XML/HighlightingStylesHandler.py</Source>
+    <Source>E5XML/XMLUtilities.py</Source>
+    <Source>E5XML/XMLHandlerBase.py</Source>
+    <Source>E5XML/XMLWriterBase.py</Source>
+    <Source>E5XML/XMLMessageDialog.py</Source>
+    <Source>E5XML/XMLEntityResolver.py</Source>
+    <Source>E5XML/XMLErrorHandler.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -928,7 +928,6 @@
     <Form>Preferences/ViewProfileToolboxesDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/TerminalPage.ui</Form>
     <Form>Preferences/ConfigurationPages/NetworkPage.ui</Form>
-    <Form>E4XML/XMLMessageDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorSpellCheckingPage.ui</Form>
     <Form>QScintilla/SpellCheckingDialog.ui</Form>
     <Form>Project/SpellingPropertiesDialog.ui</Form>
@@ -959,6 +958,7 @@
     <Form>Helpviewer/Passwords/PasswordsDialog.ui</Form>
     <Form>Helpviewer/AdBlock/AdBlockDialog.ui</Form>
     <Form>Helpviewer/OpenSearch/OpenSearchEditDialog.ui</Form>
+    <Form>E5XML/XMLMessageDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

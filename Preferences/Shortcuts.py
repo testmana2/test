@@ -16,11 +16,11 @@ from E4Gui.E4Application import e4App
 
 from Preferences import Prefs, syncPreferences
 
-from E4XML.XMLUtilities import make_parser
-from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E4XML.ShortcutsHandler import ShortcutsHandler
-from E4XML.ShortcutsWriter import ShortcutsWriter
-from E4XML.XMLEntityResolver import XMLEntityResolver
+from E5XML.XMLUtilities import make_parser
+from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
+from E5XML.ShortcutsHandler import ShortcutsHandler
+from E5XML.ShortcutsWriter import ShortcutsWriter
+from E5XML.XMLEntityResolver import XMLEntityResolver
 
 def __readShortcut(act, category, prefClass):
     """

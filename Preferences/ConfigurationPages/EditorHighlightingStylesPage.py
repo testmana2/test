@@ -16,11 +16,11 @@ from PyQt4.QtGui import QPalette, QFileDialog, QColorDialog, QFontDialog, \
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage
 
-from E4XML.XMLUtilities import make_parser
-from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E4XML.XMLEntityResolver import XMLEntityResolver
-from E4XML.HighlightingStylesWriter import HighlightingStylesWriter
-from E4XML.HighlightingStylesHandler import HighlightingStylesHandler
+from E5XML.XMLUtilities import make_parser
+from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
+from E5XML.XMLEntityResolver import XMLEntityResolver
+from E5XML.HighlightingStylesWriter import HighlightingStylesWriter
+from E5XML.HighlightingStylesHandler import HighlightingStylesHandler
 
 import Preferences
 

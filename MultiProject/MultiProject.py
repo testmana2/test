@@ -21,12 +21,12 @@ from Globals import recentNameMultiProject
 from .PropertiesDialog import PropertiesDialog
 from .AddProjectDialog import AddProjectDialog
 
-from E4XML.XMLUtilities import make_parser
-from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E4XML.XMLEntityResolver import XMLEntityResolver
+from E5XML.XMLUtilities import make_parser
+from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
+from E5XML.XMLEntityResolver import XMLEntityResolver
 
-from E4XML.MultiProjectHandler import MultiProjectHandler
-from E4XML.MultiProjectWriter import MultiProjectWriter
+from E5XML.MultiProjectHandler import MultiProjectHandler
+from E5XML.MultiProjectWriter import MultiProjectWriter
 
 import UI.PixmapCache
 

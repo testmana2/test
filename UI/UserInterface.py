@@ -88,15 +88,15 @@ from Graphics.SvgDiagram import SvgDiagram
 
 import UI.PixmapCache
 
-from E4XML.XMLUtilities import make_parser
-from E4XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E4XML.XMLEntityResolver import XMLEntityResolver
-from E4XML.TasksHandler import TasksHandler
-from E4XML.TasksWriter import TasksWriter
-from E4XML.TemplatesHandler import TemplatesHandler
-from E4XML.TemplatesWriter import TemplatesWriter
-from E4XML.SessionWriter import SessionWriter
-from E4XML.SessionHandler import SessionHandler
+from E5XML.XMLUtilities import make_parser
+from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
+from E5XML.XMLEntityResolver import XMLEntityResolver
+from E5XML.TasksHandler import TasksHandler
+from E5XML.TasksWriter import TasksWriter
+from E5XML.TemplatesHandler import TemplatesHandler
+from E5XML.TemplatesWriter import TemplatesWriter
+from E5XML.SessionWriter import SessionWriter
+from E5XML.SessionHandler import SessionHandler
 
 from IconEditor.IconEditorWindow import IconEditorWindow
 
