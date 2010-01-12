@@ -953,28 +953,6 @@ eric5.DocumentationTools.TemplatesListsStyleCSS.signalsListEntryTemplate?7
 eric5.DocumentationTools.TemplatesListsStyleCSS.signalsListTemplate?7
 eric5.DocumentationTools.TemplatesListsStyleCSS.sinceInfoTemplate?7
 eric5.DocumentationTools.supportedExtensionsDictForApis?7
-eric5.E4Graphics.E4ArrowItem.ArrowheadAngleFactor?7
-eric5.E4Graphics.E4ArrowItem.E4ArrowItem.boundingRect?4()
-eric5.E4Graphics.E4ArrowItem.E4ArrowItem.paint?4(painter, option, widget = None)
-eric5.E4Graphics.E4ArrowItem.E4ArrowItem.setEndPoint?4(x, y)
-eric5.E4Graphics.E4ArrowItem.E4ArrowItem.setPoints?4(xa, ya, xb, yb)
-eric5.E4Graphics.E4ArrowItem.E4ArrowItem.setStartPoint?4(x, y)
-eric5.E4Graphics.E4ArrowItem.E4ArrowItem?1(origin = QPointF(), end = QPointF(), filled = False, type = NormalArrow, parent = None)
-eric5.E4Graphics.E4ArrowItem.NormalArrow?7
-eric5.E4Graphics.E4ArrowItem.WideArrow?7
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView._getDiagramRect?5(border = 0)
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView._getDiagramSize?5(border = 0)
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.filteredItems?4(items)
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.printDiagram?4(printer, diagramName = "")
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.resizeScene?4(amount, isWidth = True)
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.saveImage?4(filename, format = "PNG")
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.setSceneSize?4(width, height)
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.setZoom?4(zoomFactor)
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.zoom?4()
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.zoomIn?4()
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.zoomOut?4()
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView.zoomReset?4()
-eric5.E4Graphics.E4GraphicsView.E4GraphicsView?1(scene, parent = None)
 eric5.E4Gui.E4Action.ArgumentsError?1(error)
 eric5.E4Gui.E4Action.E4Action.alternateShortcut?4()
 eric5.E4Gui.E4Action.E4Action.setAlternateShortcut?4(shortcut)
@@ -1213,6 +1191,28 @@ eric5.E4Network.E4NetworkMonitor.E4RequestModel.headerData?4(section, orientatio
 eric5.E4Network.E4NetworkMonitor.E4RequestModel.removeRows?4(row, count, parent)
 eric5.E4Network.E4NetworkMonitor.E4RequestModel.rowCount?4(parent)
 eric5.E4Network.E4NetworkMonitor.E4RequestModel?1(networkAccessManager, parent = None)
+eric5.E5Graphics.E5ArrowItem.ArrowheadAngleFactor?7
+eric5.E5Graphics.E5ArrowItem.E5ArrowItem.boundingRect?4()
+eric5.E5Graphics.E5ArrowItem.E5ArrowItem.paint?4(painter, option, widget = None)
+eric5.E5Graphics.E5ArrowItem.E5ArrowItem.setEndPoint?4(x, y)
+eric5.E5Graphics.E5ArrowItem.E5ArrowItem.setPoints?4(xa, ya, xb, yb)
+eric5.E5Graphics.E5ArrowItem.E5ArrowItem.setStartPoint?4(x, y)
+eric5.E5Graphics.E5ArrowItem.E5ArrowItem?1(origin = QPointF(), end = QPointF(), filled = False, type = NormalArrow, parent = None)
+eric5.E5Graphics.E5ArrowItem.NormalArrow?7
+eric5.E5Graphics.E5ArrowItem.WideArrow?7
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView._getDiagramRect?5(border = 0)
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView._getDiagramSize?5(border = 0)
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.filteredItems?4(items)
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.printDiagram?4(printer, diagramName = "")
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.resizeScene?4(amount, isWidth = True)
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.saveImage?4(filename, format = "PNG")
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.setSceneSize?4(width, height)
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.setZoom?4(zoomFactor)
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.zoom?4()
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.zoomIn?4()
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.zoomOut?4()
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.zoomReset?4()
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView?1(scene, parent = None)
 eric5.E5XML.Config.debuggerPropertiesFileFormatVersion?7
 eric5.E5XML.Config.highlightingStylesFileFormatVersion?7
 eric5.E5XML.Config.multiProjectFileFormatVersion?7

@@ -101,10 +101,6 @@
             <section title="eric5.DocumentationTools.TemplatesListsStyle" ref="eric5.DocumentationTools.TemplatesListsStyle.html" />
             <section title="eric5.DocumentationTools.TemplatesListsStyleCSS" ref="eric5.DocumentationTools.TemplatesListsStyleCSS.html" />
           </section>
-          <section title="eric5.E4Graphics" ref="index-eric5.E4Graphics.html">
-            <section title="eric5.E4Graphics.E4ArrowItem" ref="eric5.E4Graphics.E4ArrowItem.html" />
-            <section title="eric5.E4Graphics.E4GraphicsView" ref="eric5.E4Graphics.E4GraphicsView.html" />
-          </section>
           <section title="eric5.E4Gui" ref="index-eric5.E4Gui.html">
             <section title="eric5.E4Gui.E4Action" ref="eric5.E4Gui.E4Action.html" />
             <section title="eric5.E4Gui.E4Application" ref="eric5.E4Gui.E4Application.html" />
@@ -128,6 +124,10 @@
           <section title="eric5.E4Network" ref="index-eric5.E4Network.html">
             <section title="eric5.E4Network.E4NetworkHeaderDetailsDialog" ref="eric5.E4Network.E4NetworkHeaderDetailsDialog.html" />
             <section title="eric5.E4Network.E4NetworkMonitor" ref="eric5.E4Network.E4NetworkMonitor.html" />
+          </section>
+          <section title="eric5.E5Graphics" ref="index-eric5.E5Graphics.html">
+            <section title="eric5.E5Graphics.E5ArrowItem" ref="eric5.E5Graphics.E5ArrowItem.html" />
+            <section title="eric5.E5Graphics.E5GraphicsView" ref="eric5.E5Graphics.E5GraphicsView.html" />
           </section>
           <section title="eric5.E5XML" ref="index-eric5.E5XML.html">
             <section title="eric5.E5XML.Config" ref="eric5.E5XML.Config.html" />
@@ -1235,6 +1235,31 @@
       <keyword name="XMLWriterBase.encodedNewLines" id="XMLWriterBase.encodedNewLines" ref="eric5.E5XML.XMLWriterBase.html#XMLWriterBase.encodedNewLines" />
       <keyword name="XMLWriterBase.escape" id="XMLWriterBase.escape" ref="eric5.E5XML.XMLWriterBase.html#XMLWriterBase.escape" />
       <keyword name="XMLWriterBase.writeXML" id="XMLWriterBase.writeXML" ref="eric5.E5XML.XMLWriterBase.html#XMLWriterBase.writeXML" />
+      <keyword name="E5Graphics (Package)" id="E5Graphics (Package)" ref="index-eric5.E5Graphics.html" />
+      <keyword name="E5GraphicsView (Module)" id="E5GraphicsView (Module)" ref="eric5.E5Graphics.E5GraphicsView.html" />
+      <keyword name="E5GraphicsView" id="E5GraphicsView" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView" />
+      <keyword name="E5GraphicsView (Constructor)" id="E5GraphicsView (Constructor)" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.__init__" />
+      <keyword name="E5GraphicsView.__getDiagram" id="E5GraphicsView.__getDiagram" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.__getDiagram" />
+      <keyword name="E5GraphicsView._getDiagramRect" id="E5GraphicsView._getDiagramRect" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView._getDiagramRect" />
+      <keyword name="E5GraphicsView._getDiagramSize" id="E5GraphicsView._getDiagramSize" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView._getDiagramSize" />
+      <keyword name="E5GraphicsView.filteredItems" id="E5GraphicsView.filteredItems" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.filteredItems" />
+      <keyword name="E5GraphicsView.printDiagram" id="E5GraphicsView.printDiagram" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.printDiagram" />
+      <keyword name="E5GraphicsView.resizeScene" id="E5GraphicsView.resizeScene" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.resizeScene" />
+      <keyword name="E5GraphicsView.saveImage" id="E5GraphicsView.saveImage" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.saveImage" />
+      <keyword name="E5GraphicsView.setSceneSize" id="E5GraphicsView.setSceneSize" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.setSceneSize" />
+      <keyword name="E5GraphicsView.setZoom" id="E5GraphicsView.setZoom" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.setZoom" />
+      <keyword name="E5GraphicsView.zoom" id="E5GraphicsView.zoom" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.zoom" />
+      <keyword name="E5GraphicsView.zoomIn" id="E5GraphicsView.zoomIn" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.zoomIn" />
+      <keyword name="E5GraphicsView.zoomOut" id="E5GraphicsView.zoomOut" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.zoomOut" />
+      <keyword name="E5GraphicsView.zoomReset" id="E5GraphicsView.zoomReset" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.zoomReset" />
+      <keyword name="E5ArrowItem (Module)" id="E5ArrowItem (Module)" ref="eric5.E5Graphics.E5ArrowItem.html" />
+      <keyword name="E5ArrowItem" id="E5ArrowItem" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem" />
+      <keyword name="E5ArrowItem (Constructor)" id="E5ArrowItem (Constructor)" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.__init__" />
+      <keyword name="E5ArrowItem.boundingRect" id="E5ArrowItem.boundingRect" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.boundingRect" />
+      <keyword name="E5ArrowItem.paint" id="E5ArrowItem.paint" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.paint" />
+      <keyword name="E5ArrowItem.setEndPoint" id="E5ArrowItem.setEndPoint" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setEndPoint" />
+      <keyword name="E5ArrowItem.setPoints" id="E5ArrowItem.setPoints" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setPoints" />
+      <keyword name="E5ArrowItem.setStartPoint" id="E5ArrowItem.setStartPoint" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setStartPoint" />
       <keyword name="PyUnit (Package)" id="PyUnit (Package)" ref="index-eric5.PyUnit.html" />
       <keyword name="UnittestDialog (Module)" id="UnittestDialog (Module)" ref="eric5.PyUnit.UnittestDialog.html" />
       <keyword name="QtTestResult" id="QtTestResult" ref="eric5.PyUnit.UnittestDialog.html#QtTestResult" />
@@ -3937,31 +3962,6 @@
       <keyword name="BrowserSortFilterProxyModel.lessThan" id="BrowserSortFilterProxyModel.lessThan" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.lessThan" />
       <keyword name="BrowserSortFilterProxyModel.preferencesChanged" id="BrowserSortFilterProxyModel.preferencesChanged" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.preferencesChanged" />
       <keyword name="BrowserSortFilterProxyModel.sort" id="BrowserSortFilterProxyModel.sort" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.sort" />
-      <keyword name="E4Graphics (Package)" id="E4Graphics (Package)" ref="index-eric5.E4Graphics.html" />
-      <keyword name="E4ArrowItem (Module)" id="E4ArrowItem (Module)" ref="eric5.E4Graphics.E4ArrowItem.html" />
-      <keyword name="E4ArrowItem" id="E4ArrowItem" ref="eric5.E4Graphics.E4ArrowItem.html#E4ArrowItem" />
-      <keyword name="E4ArrowItem (Constructor)" id="E4ArrowItem (Constructor)" ref="eric5.E4Graphics.E4ArrowItem.html#E4ArrowItem.__init__" />
-      <keyword name="E4ArrowItem.boundingRect" id="E4ArrowItem.boundingRect" ref="eric5.E4Graphics.E4ArrowItem.html#E4ArrowItem.boundingRect" />
-      <keyword name="E4ArrowItem.paint" id="E4ArrowItem.paint" ref="eric5.E4Graphics.E4ArrowItem.html#E4ArrowItem.paint" />
-      <keyword name="E4ArrowItem.setEndPoint" id="E4ArrowItem.setEndPoint" ref="eric5.E4Graphics.E4ArrowItem.html#E4ArrowItem.setEndPoint" />
-      <keyword name="E4ArrowItem.setPoints" id="E4ArrowItem.setPoints" ref="eric5.E4Graphics.E4ArrowItem.html#E4ArrowItem.setPoints" />
-      <keyword name="E4ArrowItem.setStartPoint" id="E4ArrowItem.setStartPoint" ref="eric5.E4Graphics.E4ArrowItem.html#E4ArrowItem.setStartPoint" />
-      <keyword name="E4GraphicsView (Module)" id="E4GraphicsView (Module)" ref="eric5.E4Graphics.E4GraphicsView.html" />
-      <keyword name="E4GraphicsView" id="E4GraphicsView" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView" />
-      <keyword name="E4GraphicsView (Constructor)" id="E4GraphicsView (Constructor)" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.__init__" />
-      <keyword name="E4GraphicsView.__getDiagram" id="E4GraphicsView.__getDiagram" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.__getDiagram" />
-      <keyword name="E4GraphicsView._getDiagramRect" id="E4GraphicsView._getDiagramRect" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView._getDiagramRect" />
-      <keyword name="E4GraphicsView._getDiagramSize" id="E4GraphicsView._getDiagramSize" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView._getDiagramSize" />
-      <keyword name="E4GraphicsView.filteredItems" id="E4GraphicsView.filteredItems" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.filteredItems" />
-      <keyword name="E4GraphicsView.printDiagram" id="E4GraphicsView.printDiagram" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.printDiagram" />
-      <keyword name="E4GraphicsView.resizeScene" id="E4GraphicsView.resizeScene" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.resizeScene" />
-      <keyword name="E4GraphicsView.saveImage" id="E4GraphicsView.saveImage" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.saveImage" />
-      <keyword name="E4GraphicsView.setSceneSize" id="E4GraphicsView.setSceneSize" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.setSceneSize" />
-      <keyword name="E4GraphicsView.setZoom" id="E4GraphicsView.setZoom" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.setZoom" />
-      <keyword name="E4GraphicsView.zoom" id="E4GraphicsView.zoom" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.zoom" />
-      <keyword name="E4GraphicsView.zoomIn" id="E4GraphicsView.zoomIn" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.zoomIn" />
-      <keyword name="E4GraphicsView.zoomOut" id="E4GraphicsView.zoomOut" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.zoomOut" />
-      <keyword name="E4GraphicsView.zoomReset" id="E4GraphicsView.zoomReset" ref="eric5.E4Graphics.E4GraphicsView.html#E4GraphicsView.zoomReset" />
       <keyword name="E4Gui (Package)" id="E4Gui (Package)" ref="index-eric5.E4Gui.html" />
       <keyword name="E4TabWidget (Module)" id="E4TabWidget (Module)" ref="eric5.E4Gui.E4TabWidget.html" />
       <keyword name="E4DnDTabBar" id="E4DnDTabBar" ref="eric5.E4Gui.E4TabWidget.html#E4DnDTabBar" />
@@ -8916,8 +8916,6 @@
       <file>eric5.DocumentationTools.QtHelpGenerator.html</file>
       <file>eric5.DocumentationTools.TemplatesListsStyle.html</file>
       <file>eric5.DocumentationTools.TemplatesListsStyleCSS.html</file>
-      <file>eric5.E4Graphics.E4ArrowItem.html</file>
-      <file>eric5.E4Graphics.E4GraphicsView.html</file>
       <file>eric5.E4Gui.E4Action.html</file>
       <file>eric5.E4Gui.E4Application.html</file>
       <file>eric5.E4Gui.E4Completers.html</file>
@@ -8938,6 +8936,8 @@
       <file>eric5.E4Gui.E4TreeView.html</file>
       <file>eric5.E4Network.E4NetworkHeaderDetailsDialog.html</file>
       <file>eric5.E4Network.E4NetworkMonitor.html</file>
+      <file>eric5.E5Graphics.E5ArrowItem.html</file>
+      <file>eric5.E5Graphics.E5GraphicsView.html</file>
       <file>eric5.E5XML.Config.html</file>
       <file>eric5.E5XML.DebuggerPropertiesHandler.html</file>
       <file>eric5.E5XML.DebuggerPropertiesWriter.html</file>
@@ -9392,9 +9392,9 @@
       <file>index-eric5.DebugClients.html</file>
       <file>index-eric5.Debugger.html</file>
       <file>index-eric5.DocumentationTools.html</file>
-      <file>index-eric5.E4Graphics.html</file>
       <file>index-eric5.E4Gui.html</file>
       <file>index-eric5.E4Network.html</file>
+      <file>index-eric5.E5Graphics.html</file>
       <file>index-eric5.E5XML.html</file>
       <file>index-eric5.Globals.html</file>
       <file>index-eric5.Graphics.html</file>

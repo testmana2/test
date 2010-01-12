@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a subclass of E4GraphicsView for our diagrams.
+Module implementing a subclass of E5GraphicsView for our diagrams.
 """
 
 import sys
@@ -12,7 +12,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Graphics.E4GraphicsView import E4GraphicsView
+from E5Graphics.E5GraphicsView import E5GraphicsView
 
 from .UMLItem import UMLItem
 from .UMLSceneSizeDialog import UMLSceneSizeDialog
@@ -23,9 +23,9 @@ import UI.PixmapCache
 
 import Preferences
 
-class UMLGraphicsView(E4GraphicsView):
+class UMLGraphicsView(E5GraphicsView):
     """
-    Class implementing a specialized E4GraphicsView for our diagrams.
+    Class implementing a specialized E5GraphicsView for our diagrams.
     
     @signal relayout() emitted to indicate a relayout of the diagram
         is requested
@@ -39,7 +39,7 @@ class UMLGraphicsView(E4GraphicsView):
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
         """
-        E4GraphicsView.__init__(self, scene, parent)
+        E5GraphicsView.__init__(self, scene, parent)
         if name:
             self.setObjectName(name)
         

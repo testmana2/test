@@ -17,7 +17,7 @@ WideArrow = 2
 
 ArrowheadAngleFactor = 0.26179938779914941  # 0.5 * atan(sqrt(3.0) / 3.0)
 
-class E4ArrowItem(QAbstractGraphicsShapeItem):
+class E5ArrowItem(QAbstractGraphicsShapeItem):
     """
     Class implementing an arrow graphics item subclass.
     """

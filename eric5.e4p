@@ -210,15 +210,12 @@
     <Source>Project/UserPropertiesDialog.py</Source>
     <Source>Preferences/ConfigurationPages/GraphicsPage.py</Source>
     <Source>QScintilla/APIsManager.py</Source>
-    <Source>E4Graphics/E4ArrowItem.py</Source>
-    <Source>E4Graphics/E4GraphicsView.py</Source>
     <Source>Graphics/AssociationItem.py</Source>
     <Source>Graphics/ClassItem.py</Source>
     <Source>Graphics/UMLGraphicsView.py</Source>
     <Source>Graphics/UMLItem.py</Source>
     <Source>Graphics/UMLSceneSizeDialog.py</Source>
     <Source>Graphics/UMLDialog.py</Source>
-    <Source>E4Graphics/__init__.py</Source>
     <Source>Graphics/PackageItem.py</Source>
     <Source>Graphics/ModuleItem.py</Source>
     <Source>patch_pyxml.py</Source>
@@ -758,6 +755,9 @@
     <Source>E5XML/XMLMessageDialog.py</Source>
     <Source>E5XML/XMLEntityResolver.py</Source>
     <Source>E5XML/XMLErrorHandler.py</Source>
+    <Source>E5Graphics/__init__.py</Source>
+    <Source>E5Graphics/E5ArrowItem.py</Source>
+    <Source>E5Graphics/E5GraphicsView.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

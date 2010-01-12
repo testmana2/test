@@ -10,7 +10,7 @@ Module implementing a graphics item for an association between two items.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Graphics.E4ArrowItem import E4ArrowItem, NormalArrow, WideArrow
+from E5Graphics.E5ArrowItem import E5ArrowItem, NormalArrow, WideArrow
 
 Normal = 0
 Generalisation = 1
@@ -27,7 +27,7 @@ SouthEast = 7
 SouthWest = 8
 Center = 9
 
-class AssociationItem(E4ArrowItem):
+class AssociationItem(E5ArrowItem):
     """
     Class implementing a graphics item for an association between two items.
     
@@ -58,7 +58,7 @@ class AssociationItem(E4ArrowItem):
             arrowType = WideArrow
             arrowFilled = False
         
-        E4ArrowItem.__init__(self, QPointF(0, 0), QPointF(100, 100), 
+        E5ArrowItem.__init__(self, QPointF(0, 0), QPointF(100, 100), 
             arrowFilled, arrowType, parent)
         
         self.setFlag(QGraphicsItem.ItemIsMovable, False)

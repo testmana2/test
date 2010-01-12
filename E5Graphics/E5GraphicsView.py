@@ -14,7 +14,7 @@ from PyQt4.QtGui import *
 
 import Preferences
 
-class E4GraphicsView(QGraphicsView):
+class E5GraphicsView(QGraphicsView):
     """
     Class implementing a graphics view.
     """
@@ -26,7 +26,7 @@ class E4GraphicsView(QGraphicsView):
         @param parent parent widget (QWidget)
         """
         QGraphicsView.__init__(self, scene, parent)
-        self.setObjectName("E4GraphicsView")
+        self.setObjectName("E5GraphicsView")
         
         self.setBackgroundBrush(QBrush(Qt.white))
         self.setRenderHint(QPainter.Antialiasing, True)
