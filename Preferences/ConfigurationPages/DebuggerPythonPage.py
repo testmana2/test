@@ -10,7 +10,7 @@ Module implementing the Debugger Python configuration page.
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_DebuggerPythonPage import Ui_DebuggerPythonPage
@@ -30,8 +30,8 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         self.setupUi(self)
         self.setObjectName("DebuggerPythonPage")
         
-        self.interpreterCompleter = E4FileCompleter(self.interpreterEdit)
-        self.debugClientCompleter = E4FileCompleter(self.debugClientEdit)
+        self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)
+        self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
         
         # set initial values
         self.interpreterEdit.setText(\

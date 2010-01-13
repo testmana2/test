@@ -15,8 +15,8 @@ from PyQt4.QtGui import *
 
 from UI.Browser import Browser
 
-from E4Gui.E4TabWidget import E4TabWidget
-from E4Gui.E4Led import E4Led
+from E5Gui.E5TabWidget import E5TabWidget
+from E5Gui.E5Led import E5Led
 
 from .ProjectSourcesBrowser import ProjectSourcesBrowser
 from .ProjectFormsBrowser import ProjectFormsBrowser
@@ -32,7 +32,7 @@ from .ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
     OthersBrowserFlag, AllBrowsersFlag
 
-class ProjectBrowser(E4TabWidget):
+class ProjectBrowser(E5TabWidget):
     """
     Class implementing the project browser part of the eric5 UI.
     
@@ -55,12 +55,12 @@ class ProjectBrowser(E4TabWidget):
             have the file browser in a separate window or embedded
             in the debeug browser instead
         """
-        E4TabWidget.__init__(self, parent)
+        E5TabWidget.__init__(self, parent)
         self.project = project
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         
-        self.vcsStatusIndicator = E4Led(self)
+        self.vcsStatusIndicator = E5Led(self)
         self.setCornerWidget(self.vcsStatusIndicator, Qt.TopLeftCorner)
         self.vcsStatusColorNames = {
             "A" : "VcsAdded",
@@ -233,7 +233,7 @@ class ProjectBrowser(E4TabWidget):
         
         @param evt show event to handle (QShowEvent)
         """
-        E4TabWidget.showEvent(self, evt)
+        E5TabWidget.showEvent(self, evt)
         if self.embeddedBrowser:
             self.fileBrowser.layoutDisplay()
         

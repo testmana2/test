@@ -16,7 +16,7 @@ import io
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from .TemplatePropertiesDialog import TemplatePropertiesDialog
 from .TemplateMultipleVariablesDialog import TemplateMultipleVariablesDialog
@@ -33,7 +33,7 @@ from E5XML.TemplatesWriter import TemplatesWriter
 import UI.PixmapCache
 import Utilities
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 class TemplateGroup(QTreeWidgetItem):
     """

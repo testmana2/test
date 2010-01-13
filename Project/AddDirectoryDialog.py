@@ -10,7 +10,7 @@ Module implementing a dialog to add files of a directory to the project.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .Ui_AddDirectoryDialog import Ui_AddDirectoryDialog
 
@@ -36,8 +36,8 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
-        self.sourceDirCompleter = E4DirCompleter(self.sourceDirEdit)
-        self.targetDirCompleter = E4DirCompleter(self.targetDirEdit)
+        self.sourceDirCompleter = E5DirCompleter(self.sourceDirEdit)
+        self.targetDirCompleter = E5DirCompleter(self.targetDirEdit)
         
         self.ppath = pro.ppath
         self.targetDirEdit.setText(self.ppath)

@@ -10,7 +10,7 @@ Module implementing a dialog to enter the data for a new property.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .Ui_SvnPropSetDialog import Ui_SvnPropSetDialog
 
@@ -29,7 +29,7 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.propFileCompleter = E4FileCompleter(self.propFileEdit)
+        self.propFileCompleter = E5FileCompleter(self.propFileEdit)
         
     @pyqtSlot()
     def on_fileButton_clicked(self):

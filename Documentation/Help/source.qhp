@@ -101,29 +101,29 @@
             <section title="eric5.DocumentationTools.TemplatesListsStyle" ref="eric5.DocumentationTools.TemplatesListsStyle.html" />
             <section title="eric5.DocumentationTools.TemplatesListsStyleCSS" ref="eric5.DocumentationTools.TemplatesListsStyleCSS.html" />
           </section>
-          <section title="eric5.E4Gui" ref="index-eric5.E4Gui.html">
-            <section title="eric5.E4Gui.E4Action" ref="eric5.E4Gui.E4Action.html" />
-            <section title="eric5.E4Gui.E4Application" ref="eric5.E4Gui.E4Application.html" />
-            <section title="eric5.E4Gui.E4Completers" ref="eric5.E4Gui.E4Completers.html" />
-            <section title="eric5.E4Gui.E4Led" ref="eric5.E4Gui.E4Led.html" />
-            <section title="eric5.E4Gui.E4LineEdit" ref="eric5.E4Gui.E4LineEdit.html" />
-            <section title="eric5.E4Gui.E4ListView" ref="eric5.E4Gui.E4ListView.html" />
-            <section title="eric5.E4Gui.E4ModelMenu" ref="eric5.E4Gui.E4ModelMenu.html" />
-            <section title="eric5.E4Gui.E4ModelToolBar" ref="eric5.E4Gui.E4ModelToolBar.html" />
-            <section title="eric5.E4Gui.E4SideBar" ref="eric5.E4Gui.E4SideBar.html" />
-            <section title="eric5.E4Gui.E4SingleApplication" ref="eric5.E4Gui.E4SingleApplication.html" />
-            <section title="eric5.E4Gui.E4SqueezeLabels" ref="eric5.E4Gui.E4SqueezeLabels.html" />
-            <section title="eric5.E4Gui.E4TabWidget" ref="eric5.E4Gui.E4TabWidget.html" />
-            <section title="eric5.E4Gui.E4TableView" ref="eric5.E4Gui.E4TableView.html" />
-            <section title="eric5.E4Gui.E4ToolBarDialog" ref="eric5.E4Gui.E4ToolBarDialog.html" />
-            <section title="eric5.E4Gui.E4ToolBarManager" ref="eric5.E4Gui.E4ToolBarManager.html" />
-            <section title="eric5.E4Gui.E4ToolBox" ref="eric5.E4Gui.E4ToolBox.html" />
-            <section title="eric5.E4Gui.E4TreeSortFilterProxyModel" ref="eric5.E4Gui.E4TreeSortFilterProxyModel.html" />
-            <section title="eric5.E4Gui.E4TreeView" ref="eric5.E4Gui.E4TreeView.html" />
-          </section>
           <section title="eric5.E5Graphics" ref="index-eric5.E5Graphics.html">
             <section title="eric5.E5Graphics.E5ArrowItem" ref="eric5.E5Graphics.E5ArrowItem.html" />
             <section title="eric5.E5Graphics.E5GraphicsView" ref="eric5.E5Graphics.E5GraphicsView.html" />
+          </section>
+          <section title="eric5.E5Gui" ref="index-eric5.E5Gui.html">
+            <section title="eric5.E5Gui.E5Action" ref="eric5.E5Gui.E5Action.html" />
+            <section title="eric5.E5Gui.E5Application" ref="eric5.E5Gui.E5Application.html" />
+            <section title="eric5.E5Gui.E5Completers" ref="eric5.E5Gui.E5Completers.html" />
+            <section title="eric5.E5Gui.E5Led" ref="eric5.E5Gui.E5Led.html" />
+            <section title="eric5.E5Gui.E5LineEdit" ref="eric5.E5Gui.E5LineEdit.html" />
+            <section title="eric5.E5Gui.E5ListView" ref="eric5.E5Gui.E5ListView.html" />
+            <section title="eric5.E5Gui.E5ModelMenu" ref="eric5.E5Gui.E5ModelMenu.html" />
+            <section title="eric5.E5Gui.E5ModelToolBar" ref="eric5.E5Gui.E5ModelToolBar.html" />
+            <section title="eric5.E5Gui.E5SideBar" ref="eric5.E5Gui.E5SideBar.html" />
+            <section title="eric5.E5Gui.E5SingleApplication" ref="eric5.E5Gui.E5SingleApplication.html" />
+            <section title="eric5.E5Gui.E5SqueezeLabels" ref="eric5.E5Gui.E5SqueezeLabels.html" />
+            <section title="eric5.E5Gui.E5TabWidget" ref="eric5.E5Gui.E5TabWidget.html" />
+            <section title="eric5.E5Gui.E5TableView" ref="eric5.E5Gui.E5TableView.html" />
+            <section title="eric5.E5Gui.E5ToolBarDialog" ref="eric5.E5Gui.E5ToolBarDialog.html" />
+            <section title="eric5.E5Gui.E5ToolBarManager" ref="eric5.E5Gui.E5ToolBarManager.html" />
+            <section title="eric5.E5Gui.E5ToolBox" ref="eric5.E5Gui.E5ToolBox.html" />
+            <section title="eric5.E5Gui.E5TreeSortFilterProxyModel" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html" />
+            <section title="eric5.E5Gui.E5TreeView" ref="eric5.E5Gui.E5TreeView.html" />
           </section>
           <section title="eric5.E5Network" ref="index-eric5.E5Network.html">
             <section title="eric5.E5Network.E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
@@ -1509,7 +1509,7 @@
       <keyword name="MultiProject.__syncRecent" id="MultiProject.__syncRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__syncRecent" />
       <keyword name="MultiProject.__writeMultiProject" id="MultiProject.__writeMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__writeMultiProject" />
       <keyword name="MultiProject.__writeXMLMultiProject" id="MultiProject.__writeXMLMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__writeXMLMultiProject" />
-      <keyword name="MultiProject.addE4Actions" id="MultiProject.addE4Actions" ref="eric5.MultiProject.MultiProject.html#MultiProject.addE4Actions" />
+      <keyword name="MultiProject.addE5Actions" id="MultiProject.addE5Actions" ref="eric5.MultiProject.MultiProject.html#MultiProject.addE5Actions" />
       <keyword name="MultiProject.addProject" id="MultiProject.addProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.addProject" />
       <keyword name="MultiProject.changeProjectProperties" id="MultiProject.changeProjectProperties" ref="eric5.MultiProject.MultiProject.html#MultiProject.changeProjectProperties" />
       <keyword name="MultiProject.checkDirty" id="MultiProject.checkDirty" ref="eric5.MultiProject.MultiProject.html#MultiProject.checkDirty" />
@@ -1531,7 +1531,7 @@
       <keyword name="MultiProject.newMultiProject" id="MultiProject.newMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.newMultiProject" />
       <keyword name="MultiProject.openMultiProject" id="MultiProject.openMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.openMultiProject" />
       <keyword name="MultiProject.openProject" id="MultiProject.openProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.openProject" />
-      <keyword name="MultiProject.removeE4Actions" id="MultiProject.removeE4Actions" ref="eric5.MultiProject.MultiProject.html#MultiProject.removeE4Actions" />
+      <keyword name="MultiProject.removeE5Actions" id="MultiProject.removeE5Actions" ref="eric5.MultiProject.MultiProject.html#MultiProject.removeE5Actions" />
       <keyword name="MultiProject.removeProject" id="MultiProject.removeProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.removeProject" />
       <keyword name="MultiProject.saveMultiProject" id="MultiProject.saveMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.saveMultiProject" />
       <keyword name="MultiProject.saveMultiProjectAs" id="MultiProject.saveMultiProjectAs" ref="eric5.MultiProject.MultiProject.html#MultiProject.saveMultiProjectAs" />
@@ -3903,7 +3903,7 @@
       <keyword name="UserInterface.__whatsThis" id="UserInterface.__whatsThis" ref="eric5.UI.UserInterface.html#UserInterface.__whatsThis" />
       <keyword name="UserInterface.__writeSession" id="UserInterface.__writeSession" ref="eric5.UI.UserInterface.html#UserInterface.__writeSession" />
       <keyword name="UserInterface.__writeTasks" id="UserInterface.__writeTasks" ref="eric5.UI.UserInterface.html#UserInterface.__writeTasks" />
-      <keyword name="UserInterface.addE4Actions" id="UserInterface.addE4Actions" ref="eric5.UI.UserInterface.html#UserInterface.addE4Actions" />
+      <keyword name="UserInterface.addE5Actions" id="UserInterface.addE5Actions" ref="eric5.UI.UserInterface.html#UserInterface.addE5Actions" />
       <keyword name="UserInterface.appendToStderr" id="UserInterface.appendToStderr" ref="eric5.UI.UserInterface.html#UserInterface.appendToStderr" />
       <keyword name="UserInterface.appendToStdout" id="UserInterface.appendToStdout" ref="eric5.UI.UserInterface.html#UserInterface.appendToStdout" />
       <keyword name="UserInterface.checkConfigurationStatus" id="UserInterface.checkConfigurationStatus" ref="eric5.UI.UserInterface.html#UserInterface.checkConfigurationStatus" />
@@ -3925,7 +3925,7 @@
       <keyword name="UserInterface.performVersionCheck" id="UserInterface.performVersionCheck" ref="eric5.UI.UserInterface.html#UserInterface.performVersionCheck" />
       <keyword name="UserInterface.processArgs" id="UserInterface.processArgs" ref="eric5.UI.UserInterface.html#UserInterface.processArgs" />
       <keyword name="UserInterface.registerToolbar" id="UserInterface.registerToolbar" ref="eric5.UI.UserInterface.html#UserInterface.registerToolbar" />
-      <keyword name="UserInterface.removeE4Actions" id="UserInterface.removeE4Actions" ref="eric5.UI.UserInterface.html#UserInterface.removeE4Actions" />
+      <keyword name="UserInterface.removeE5Actions" id="UserInterface.removeE5Actions" ref="eric5.UI.UserInterface.html#UserInterface.removeE5Actions" />
       <keyword name="UserInterface.reregisterToolbar" id="UserInterface.reregisterToolbar" ref="eric5.UI.UserInterface.html#UserInterface.reregisterToolbar" />
       <keyword name="UserInterface.setDebugProfile" id="UserInterface.setDebugProfile" ref="eric5.UI.UserInterface.html#UserInterface.setDebugProfile" />
       <keyword name="UserInterface.showAvailableVersionsInfo" id="UserInterface.showAvailableVersionsInfo" ref="eric5.UI.UserInterface.html#UserInterface.showAvailableVersionsInfo" />
@@ -3962,286 +3962,286 @@
       <keyword name="BrowserSortFilterProxyModel.lessThan" id="BrowserSortFilterProxyModel.lessThan" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.lessThan" />
       <keyword name="BrowserSortFilterProxyModel.preferencesChanged" id="BrowserSortFilterProxyModel.preferencesChanged" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.preferencesChanged" />
       <keyword name="BrowserSortFilterProxyModel.sort" id="BrowserSortFilterProxyModel.sort" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.sort" />
-      <keyword name="E4Gui (Package)" id="E4Gui (Package)" ref="index-eric5.E4Gui.html" />
-      <keyword name="E4TabWidget (Module)" id="E4TabWidget (Module)" ref="eric5.E4Gui.E4TabWidget.html" />
-      <keyword name="E4DnDTabBar" id="E4DnDTabBar" ref="eric5.E4Gui.E4TabWidget.html#E4DnDTabBar" />
-      <keyword name="E4TabWidget" id="E4TabWidget" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget" />
-      <keyword name="E4WheelTabBar" id="E4WheelTabBar" ref="eric5.E4Gui.E4TabWidget.html#E4WheelTabBar" />
-      <keyword name="E4DnDTabBar (Constructor)" id="E4DnDTabBar (Constructor)" ref="eric5.E4Gui.E4TabWidget.html#E4DnDTabBar.__init__" />
-      <keyword name="E4DnDTabBar.dragEnterEvent" id="E4DnDTabBar.dragEnterEvent" ref="eric5.E4Gui.E4TabWidget.html#E4DnDTabBar.dragEnterEvent" />
-      <keyword name="E4DnDTabBar.dropEvent" id="E4DnDTabBar.dropEvent" ref="eric5.E4Gui.E4TabWidget.html#E4DnDTabBar.dropEvent" />
-      <keyword name="E4DnDTabBar.mouseMoveEvent" id="E4DnDTabBar.mouseMoveEvent" ref="eric5.E4Gui.E4TabWidget.html#E4DnDTabBar.mouseMoveEvent" />
-      <keyword name="E4DnDTabBar.mousePressEvent" id="E4DnDTabBar.mousePressEvent" ref="eric5.E4Gui.E4TabWidget.html#E4DnDTabBar.mousePressEvent" />
-      <keyword name="E4TabWidget (Constructor)" id="E4TabWidget (Constructor)" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.__init__" />
-      <keyword name="E4TabWidget.__currentChanged" id="E4TabWidget.__currentChanged" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.__currentChanged" />
-      <keyword name="E4TabWidget.__freeSide" id="E4TabWidget.__freeSide" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.__freeSide" />
-      <keyword name="E4TabWidget.__handleTabCustomContextMenuRequested" id="E4TabWidget.__handleTabCustomContextMenuRequested" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.__handleTabCustomContextMenuRequested" />
-      <keyword name="E4TabWidget.animationLabel" id="E4TabWidget.animationLabel" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.animationLabel" />
-      <keyword name="E4TabWidget.moveTab" id="E4TabWidget.moveTab" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.moveTab" />
-      <keyword name="E4TabWidget.nextTab" id="E4TabWidget.nextTab" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.nextTab" />
-      <keyword name="E4TabWidget.prevTab" id="E4TabWidget.prevTab" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.prevTab" />
-      <keyword name="E4TabWidget.resetAnimation" id="E4TabWidget.resetAnimation" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.resetAnimation" />
-      <keyword name="E4TabWidget.selectTab" id="E4TabWidget.selectTab" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.selectTab" />
-      <keyword name="E4TabWidget.setTabContextMenuPolicy" id="E4TabWidget.setTabContextMenuPolicy" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.setTabContextMenuPolicy" />
-      <keyword name="E4TabWidget.switchTab" id="E4TabWidget.switchTab" ref="eric5.E4Gui.E4TabWidget.html#E4TabWidget.switchTab" />
-      <keyword name="E4WheelTabBar (Constructor)" id="E4WheelTabBar (Constructor)" ref="eric5.E4Gui.E4TabWidget.html#E4WheelTabBar.__init__" />
-      <keyword name="E4WheelTabBar.wheelEvent" id="E4WheelTabBar.wheelEvent" ref="eric5.E4Gui.E4TabWidget.html#E4WheelTabBar.wheelEvent" />
-      <keyword name="E4SideBar (Module)" id="E4SideBar (Module)" ref="eric5.E4Gui.E4SideBar.html" />
-      <keyword name="E4SideBar" id="E4SideBar" ref="eric5.E4Gui.E4SideBar.html#E4SideBar" />
-      <keyword name="E4SideBar (Constructor)" id="E4SideBar (Constructor)" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.__init__" />
-      <keyword name="E4SideBar.__appFocusChanged" id="E4SideBar.__appFocusChanged" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.__appFocusChanged" />
-      <keyword name="E4SideBar.__autoHideToggled" id="E4SideBar.__autoHideToggled" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.__autoHideToggled" />
-      <keyword name="E4SideBar.addTab" id="E4SideBar.addTab" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.addTab" />
-      <keyword name="E4SideBar.clear" id="E4SideBar.clear" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.clear" />
-      <keyword name="E4SideBar.count" id="E4SideBar.count" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.count" />
-      <keyword name="E4SideBar.currentIndex" id="E4SideBar.currentIndex" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.currentIndex" />
-      <keyword name="E4SideBar.currentWidget" id="E4SideBar.currentWidget" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.currentWidget" />
-      <keyword name="E4SideBar.enterEvent" id="E4SideBar.enterEvent" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.enterEvent" />
-      <keyword name="E4SideBar.eventFilter" id="E4SideBar.eventFilter" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.eventFilter" />
-      <keyword name="E4SideBar.expand" id="E4SideBar.expand" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.expand" />
-      <keyword name="E4SideBar.indexOf" id="E4SideBar.indexOf" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.indexOf" />
-      <keyword name="E4SideBar.insertTab" id="E4SideBar.insertTab" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.insertTab" />
-      <keyword name="E4SideBar.isAutoHiding" id="E4SideBar.isAutoHiding" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.isAutoHiding" />
-      <keyword name="E4SideBar.isMinimized" id="E4SideBar.isMinimized" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.isMinimized" />
-      <keyword name="E4SideBar.isTabEnabled" id="E4SideBar.isTabEnabled" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.isTabEnabled" />
-      <keyword name="E4SideBar.leaveEvent" id="E4SideBar.leaveEvent" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.leaveEvent" />
-      <keyword name="E4SideBar.nextTab" id="E4SideBar.nextTab" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.nextTab" />
-      <keyword name="E4SideBar.orientation" id="E4SideBar.orientation" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.orientation" />
-      <keyword name="E4SideBar.prevTab" id="E4SideBar.prevTab" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.prevTab" />
-      <keyword name="E4SideBar.removeTab" id="E4SideBar.removeTab" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.removeTab" />
-      <keyword name="E4SideBar.restoreState" id="E4SideBar.restoreState" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.restoreState" />
-      <keyword name="E4SideBar.saveState" id="E4SideBar.saveState" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.saveState" />
-      <keyword name="E4SideBar.setCurrentIndex" id="E4SideBar.setCurrentIndex" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.setCurrentIndex" />
-      <keyword name="E4SideBar.setCurrentWidget" id="E4SideBar.setCurrentWidget" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.setCurrentWidget" />
-      <keyword name="E4SideBar.setOrientation" id="E4SideBar.setOrientation" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.setOrientation" />
-      <keyword name="E4SideBar.setSplitter" id="E4SideBar.setSplitter" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.setSplitter" />
-      <keyword name="E4SideBar.setTabEnabled" id="E4SideBar.setTabEnabled" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.setTabEnabled" />
-      <keyword name="E4SideBar.setTabIcon" id="E4SideBar.setTabIcon" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.setTabIcon" />
-      <keyword name="E4SideBar.setTabText" id="E4SideBar.setTabText" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.setTabText" />
-      <keyword name="E4SideBar.setTabToolTip" id="E4SideBar.setTabToolTip" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.setTabToolTip" />
-      <keyword name="E4SideBar.setTabWhatsThis" id="E4SideBar.setTabWhatsThis" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.setTabWhatsThis" />
-      <keyword name="E4SideBar.shrink" id="E4SideBar.shrink" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.shrink" />
-      <keyword name="E4SideBar.tabIcon" id="E4SideBar.tabIcon" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.tabIcon" />
-      <keyword name="E4SideBar.tabText" id="E4SideBar.tabText" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.tabText" />
-      <keyword name="E4SideBar.tabToolTip" id="E4SideBar.tabToolTip" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.tabToolTip" />
-      <keyword name="E4SideBar.tabWhatsThis" id="E4SideBar.tabWhatsThis" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.tabWhatsThis" />
-      <keyword name="E4SideBar.widget" id="E4SideBar.widget" ref="eric5.E4Gui.E4SideBar.html#E4SideBar.widget" />
-      <keyword name="E4ModelToolBar (Module)" id="E4ModelToolBar (Module)" ref="eric5.E4Gui.E4ModelToolBar.html" />
-      <keyword name="E4ModelToolBar" id="E4ModelToolBar" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar" />
-      <keyword name="E4ModelToolBar (Constructor)" id="E4ModelToolBar (Constructor)" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.__init__" />
-      <keyword name="E4ModelToolBar._build" id="E4ModelToolBar._build" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar._build" />
-      <keyword name="E4ModelToolBar._createMenu" id="E4ModelToolBar._createMenu" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar._createMenu" />
-      <keyword name="E4ModelToolBar.dragEnterEvent" id="E4ModelToolBar.dragEnterEvent" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.dragEnterEvent" />
-      <keyword name="E4ModelToolBar.dropEvent" id="E4ModelToolBar.dropEvent" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.dropEvent" />
-      <keyword name="E4ModelToolBar.eventFilter" id="E4ModelToolBar.eventFilter" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.eventFilter" />
-      <keyword name="E4ModelToolBar.hideEvent" id="E4ModelToolBar.hideEvent" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.hideEvent" />
-      <keyword name="E4ModelToolBar.index" id="E4ModelToolBar.index" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.index" />
-      <keyword name="E4ModelToolBar.model" id="E4ModelToolBar.model" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.model" />
-      <keyword name="E4ModelToolBar.mouseMoveEvent" id="E4ModelToolBar.mouseMoveEvent" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.mouseMoveEvent" />
-      <keyword name="E4ModelToolBar.resetFlags" id="E4ModelToolBar.resetFlags" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.resetFlags" />
-      <keyword name="E4ModelToolBar.rootIndex" id="E4ModelToolBar.rootIndex" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.rootIndex" />
-      <keyword name="E4ModelToolBar.setModel" id="E4ModelToolBar.setModel" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.setModel" />
-      <keyword name="E4ModelToolBar.setRootIndex" id="E4ModelToolBar.setRootIndex" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.setRootIndex" />
-      <keyword name="E4ModelToolBar.showEvent" id="E4ModelToolBar.showEvent" ref="eric5.E4Gui.E4ModelToolBar.html#E4ModelToolBar.showEvent" />
-      <keyword name="E4SqueezeLabels (Module)" id="E4SqueezeLabels (Module)" ref="eric5.E4Gui.E4SqueezeLabels.html" />
-      <keyword name="E4SqueezeLabel" id="E4SqueezeLabel" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabel" />
-      <keyword name="E4SqueezeLabelPath" id="E4SqueezeLabelPath" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabelPath" />
-      <keyword name="E4SqueezeLabel (Constructor)" id="E4SqueezeLabel (Constructor)" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabel.__init__" />
-      <keyword name="E4SqueezeLabel.paintEvent" id="E4SqueezeLabel.paintEvent" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabel.paintEvent" />
-      <keyword name="E4SqueezeLabel.setText" id="E4SqueezeLabel.setText" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabel.setText" />
-      <keyword name="E4SqueezeLabelPath (Constructor)" id="E4SqueezeLabelPath (Constructor)" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabelPath.__init__" />
-      <keyword name="E4SqueezeLabelPath.length" id="E4SqueezeLabelPath.length" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabelPath.length" />
-      <keyword name="E4SqueezeLabelPath.paintEvent" id="E4SqueezeLabelPath.paintEvent" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabelPath.paintEvent" />
-      <keyword name="E4SqueezeLabelPath.setPath" id="E4SqueezeLabelPath.setPath" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabelPath.setPath" />
-      <keyword name="E4SqueezeLabelPath.setSurrounding" id="E4SqueezeLabelPath.setSurrounding" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabelPath.setSurrounding" />
-      <keyword name="E4SqueezeLabelPath.setTextPath" id="E4SqueezeLabelPath.setTextPath" ref="eric5.E4Gui.E4SqueezeLabels.html#E4SqueezeLabelPath.setTextPath" />
-      <keyword name="E4ToolBarDialog (Module)" id="E4ToolBarDialog (Module)" ref="eric5.E4Gui.E4ToolBarDialog.html" />
-      <keyword name="E4ToolBarDialog" id="E4ToolBarDialog" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog" />
-      <keyword name="E4ToolBarItem" id="E4ToolBarItem" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarItem" />
-      <keyword name="E4ToolBarDialog (Constructor)" id="E4ToolBarDialog (Constructor)" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.__init__" />
-      <keyword name="E4ToolBarDialog.__resetCurrentToolbar" id="E4ToolBarDialog.__resetCurrentToolbar" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.__resetCurrentToolbar" />
-      <keyword name="E4ToolBarDialog.__restoreCurrentToolbar" id="E4ToolBarDialog.__restoreCurrentToolbar" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.__restoreCurrentToolbar" />
-      <keyword name="E4ToolBarDialog.__restoreCurrentToolbarToDefault" id="E4ToolBarDialog.__restoreCurrentToolbarToDefault" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.__restoreCurrentToolbarToDefault" />
-      <keyword name="E4ToolBarDialog.__saveToolBars" id="E4ToolBarDialog.__saveToolBars" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.__saveToolBars" />
-      <keyword name="E4ToolBarDialog.__setupButtons" id="E4ToolBarDialog.__setupButtons" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.__setupButtons" />
-      <keyword name="E4ToolBarDialog.__toolbarComboBox_currentIndexChanged" id="E4ToolBarDialog.__toolbarComboBox_currentIndexChanged" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.__toolbarComboBox_currentIndexChanged" />
-      <keyword name="E4ToolBarDialog.on_actionsTree_currentItemChanged" id="E4ToolBarDialog.on_actionsTree_currentItemChanged" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_actionsTree_currentItemChanged" />
-      <keyword name="E4ToolBarDialog.on_buttonBox_clicked" id="E4ToolBarDialog.on_buttonBox_clicked" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_buttonBox_clicked" />
-      <keyword name="E4ToolBarDialog.on_downButton_clicked" id="E4ToolBarDialog.on_downButton_clicked" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_downButton_clicked" />
-      <keyword name="E4ToolBarDialog.on_leftButton_clicked" id="E4ToolBarDialog.on_leftButton_clicked" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_leftButton_clicked" />
-      <keyword name="E4ToolBarDialog.on_newButton_clicked" id="E4ToolBarDialog.on_newButton_clicked" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_newButton_clicked" />
-      <keyword name="E4ToolBarDialog.on_removeButton_clicked" id="E4ToolBarDialog.on_removeButton_clicked" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_removeButton_clicked" />
-      <keyword name="E4ToolBarDialog.on_renameButton_clicked" id="E4ToolBarDialog.on_renameButton_clicked" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_renameButton_clicked" />
-      <keyword name="E4ToolBarDialog.on_rightButton_clicked" id="E4ToolBarDialog.on_rightButton_clicked" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_rightButton_clicked" />
-      <keyword name="E4ToolBarDialog.on_toolbarActionsList_currentItemChanged" id="E4ToolBarDialog.on_toolbarActionsList_currentItemChanged" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_toolbarActionsList_currentItemChanged" />
-      <keyword name="E4ToolBarDialog.on_upButton_clicked" id="E4ToolBarDialog.on_upButton_clicked" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarDialog.on_upButton_clicked" />
-      <keyword name="E4ToolBarItem (Constructor)" id="E4ToolBarItem (Constructor)" ref="eric5.E4Gui.E4ToolBarDialog.html#E4ToolBarItem.__init__" />
-      <keyword name="E4ModelMenu (Module)" id="E4ModelMenu (Module)" ref="eric5.E4Gui.E4ModelMenu.html" />
-      <keyword name="E4ModelMenu" id="E4ModelMenu" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu" />
-      <keyword name="E4ModelMenu (Constructor)" id="E4ModelMenu (Constructor)" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.__init__" />
-      <keyword name="E4ModelMenu.__aboutToShow" id="E4ModelMenu.__aboutToShow" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.__aboutToShow" />
-      <keyword name="E4ModelMenu.__actionTriggered" id="E4ModelMenu.__actionTriggered" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.__actionTriggered" />
-      <keyword name="E4ModelMenu.__makeAction" id="E4ModelMenu.__makeAction" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.__makeAction" />
-      <keyword name="E4ModelMenu.createBaseMenu" id="E4ModelMenu.createBaseMenu" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.createBaseMenu" />
-      <keyword name="E4ModelMenu.createMenu" id="E4ModelMenu.createMenu" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.createMenu" />
-      <keyword name="E4ModelMenu.dragEnterEvent" id="E4ModelMenu.dragEnterEvent" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.dragEnterEvent" />
-      <keyword name="E4ModelMenu.dropEvent" id="E4ModelMenu.dropEvent" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.dropEvent" />
-      <keyword name="E4ModelMenu.firstSeparator" id="E4ModelMenu.firstSeparator" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.firstSeparator" />
-      <keyword name="E4ModelMenu.index" id="E4ModelMenu.index" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.index" />
-      <keyword name="E4ModelMenu.makeAction" id="E4ModelMenu.makeAction" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.makeAction" />
-      <keyword name="E4ModelMenu.maxRows" id="E4ModelMenu.maxRows" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.maxRows" />
-      <keyword name="E4ModelMenu.model" id="E4ModelMenu.model" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.model" />
-      <keyword name="E4ModelMenu.mouseMoveEvent" id="E4ModelMenu.mouseMoveEvent" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.mouseMoveEvent" />
-      <keyword name="E4ModelMenu.mousePressEvent" id="E4ModelMenu.mousePressEvent" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.mousePressEvent" />
-      <keyword name="E4ModelMenu.mouseReleaseEvent" id="E4ModelMenu.mouseReleaseEvent" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.mouseReleaseEvent" />
-      <keyword name="E4ModelMenu.postPopulated" id="E4ModelMenu.postPopulated" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.postPopulated" />
-      <keyword name="E4ModelMenu.prePopulated" id="E4ModelMenu.prePopulated" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.prePopulated" />
-      <keyword name="E4ModelMenu.removeEntry" id="E4ModelMenu.removeEntry" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.removeEntry" />
-      <keyword name="E4ModelMenu.resetFlags" id="E4ModelMenu.resetFlags" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.resetFlags" />
-      <keyword name="E4ModelMenu.rootIndex" id="E4ModelMenu.rootIndex" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.rootIndex" />
-      <keyword name="E4ModelMenu.separatorRole" id="E4ModelMenu.separatorRole" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.separatorRole" />
-      <keyword name="E4ModelMenu.setFirstSeparator" id="E4ModelMenu.setFirstSeparator" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.setFirstSeparator" />
-      <keyword name="E4ModelMenu.setMaxRows" id="E4ModelMenu.setMaxRows" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.setMaxRows" />
-      <keyword name="E4ModelMenu.setModel" id="E4ModelMenu.setModel" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.setModel" />
-      <keyword name="E4ModelMenu.setRootIndex" id="E4ModelMenu.setRootIndex" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.setRootIndex" />
-      <keyword name="E4ModelMenu.setSeparatorRole" id="E4ModelMenu.setSeparatorRole" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.setSeparatorRole" />
-      <keyword name="E4ModelMenu.setStatusBarTextRole" id="E4ModelMenu.setStatusBarTextRole" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.setStatusBarTextRole" />
-      <keyword name="E4ModelMenu.statusBarTextRole" id="E4ModelMenu.statusBarTextRole" ref="eric5.E4Gui.E4ModelMenu.html#E4ModelMenu.statusBarTextRole" />
-      <keyword name="E4TreeView (Module)" id="E4TreeView (Module)" ref="eric5.E4Gui.E4TreeView.html" />
-      <keyword name="E4TreeView" id="E4TreeView" ref="eric5.E4Gui.E4TreeView.html#E4TreeView" />
-      <keyword name="E4TreeView.keyPressEvent" id="E4TreeView.keyPressEvent" ref="eric5.E4Gui.E4TreeView.html#E4TreeView.keyPressEvent" />
-      <keyword name="E4TreeView.removeAll" id="E4TreeView.removeAll" ref="eric5.E4Gui.E4TreeView.html#E4TreeView.removeAll" />
-      <keyword name="E4TreeView.removeSelected" id="E4TreeView.removeSelected" ref="eric5.E4Gui.E4TreeView.html#E4TreeView.removeSelected" />
-      <keyword name="E4ListView (Module)" id="E4ListView (Module)" ref="eric5.E4Gui.E4ListView.html" />
-      <keyword name="E4ListView" id="E4ListView" ref="eric5.E4Gui.E4ListView.html#E4ListView" />
-      <keyword name="E4ListView.keyPressEvent" id="E4ListView.keyPressEvent" ref="eric5.E4Gui.E4ListView.html#E4ListView.keyPressEvent" />
-      <keyword name="E4ListView.removeAll" id="E4ListView.removeAll" ref="eric5.E4Gui.E4ListView.html#E4ListView.removeAll" />
-      <keyword name="E4ListView.removeSelected" id="E4ListView.removeSelected" ref="eric5.E4Gui.E4ListView.html#E4ListView.removeSelected" />
-      <keyword name="E4Action (Module)" id="E4Action (Module)" ref="eric5.E4Gui.E4Action.html" />
-      <keyword name="ArgumentsError" id="ArgumentsError" ref="eric5.E4Gui.E4Action.html#ArgumentsError" />
-      <keyword name="E4Action" id="E4Action" ref="eric5.E4Gui.E4Action.html#E4Action" />
-      <keyword name="addActions" id="addActions" ref="eric5.E4Gui.E4Action.html#addActions" />
-      <keyword name="createActionGroup" id="createActionGroup" ref="eric5.E4Gui.E4Action.html#createActionGroup" />
-      <keyword name="ArgumentsError (Constructor)" id="ArgumentsError (Constructor)" ref="eric5.E4Gui.E4Action.html#ArgumentsError.__init__" />
-      <keyword name="ArgumentsError.__repr__" id="ArgumentsError.__repr__" ref="eric5.E4Gui.E4Action.html#ArgumentsError.__repr__" />
-      <keyword name="ArgumentsError.__str__" id="ArgumentsError.__str__" ref="eric5.E4Gui.E4Action.html#ArgumentsError.__str__" />
-      <keyword name="E4Action (Constructor)" id="E4Action (Constructor)" ref="eric5.E4Gui.E4Action.html#E4Action.__init__" />
-      <keyword name="E4Action.alternateShortcut" id="E4Action.alternateShortcut" ref="eric5.E4Gui.E4Action.html#E4Action.alternateShortcut" />
-      <keyword name="E4Action.setAlternateShortcut" id="E4Action.setAlternateShortcut" ref="eric5.E4Gui.E4Action.html#E4Action.setAlternateShortcut" />
-      <keyword name="E4TreeSortFilterProxyModel (Module)" id="E4TreeSortFilterProxyModel (Module)" ref="eric5.E4Gui.E4TreeSortFilterProxyModel.html" />
-      <keyword name="E4TreeSortFilterProxyModel" id="E4TreeSortFilterProxyModel" ref="eric5.E4Gui.E4TreeSortFilterProxyModel.html#E4TreeSortFilterProxyModel" />
-      <keyword name="E4TreeSortFilterProxyModel (Constructor)" id="E4TreeSortFilterProxyModel (Constructor)" ref="eric5.E4Gui.E4TreeSortFilterProxyModel.html#E4TreeSortFilterProxyModel.__init__" />
-      <keyword name="E4TreeSortFilterProxyModel.filterAcceptsRow" id="E4TreeSortFilterProxyModel.filterAcceptsRow" ref="eric5.E4Gui.E4TreeSortFilterProxyModel.html#E4TreeSortFilterProxyModel.filterAcceptsRow" />
-      <keyword name="E4TreeSortFilterProxyModel.hasChildren" id="E4TreeSortFilterProxyModel.hasChildren" ref="eric5.E4Gui.E4TreeSortFilterProxyModel.html#E4TreeSortFilterProxyModel.hasChildren" />
-      <keyword name="E4Completers (Module)" id="E4Completers (Module)" ref="eric5.E4Gui.E4Completers.html" />
-      <keyword name="E4DirCompleter" id="E4DirCompleter" ref="eric5.E4Gui.E4Completers.html#E4DirCompleter" />
-      <keyword name="E4FileCompleter" id="E4FileCompleter" ref="eric5.E4Gui.E4Completers.html#E4FileCompleter" />
-      <keyword name="E4StringListCompleter" id="E4StringListCompleter" ref="eric5.E4Gui.E4Completers.html#E4StringListCompleter" />
-      <keyword name="E4DirCompleter (Constructor)" id="E4DirCompleter (Constructor)" ref="eric5.E4Gui.E4Completers.html#E4DirCompleter.__init__" />
-      <keyword name="E4FileCompleter (Constructor)" id="E4FileCompleter (Constructor)" ref="eric5.E4Gui.E4Completers.html#E4FileCompleter.__init__" />
-      <keyword name="E4StringListCompleter (Constructor)" id="E4StringListCompleter (Constructor)" ref="eric5.E4Gui.E4Completers.html#E4StringListCompleter.__init__" />
-      <keyword name="E4ToolBox (Module)" id="E4ToolBox (Module)" ref="eric5.E4Gui.E4ToolBox.html" />
-      <keyword name="E4HorizontalToolBox" id="E4HorizontalToolBox" ref="eric5.E4Gui.E4ToolBox.html#E4HorizontalToolBox" />
-      <keyword name="E4VerticalToolBox" id="E4VerticalToolBox" ref="eric5.E4Gui.E4ToolBox.html#E4VerticalToolBox" />
-      <keyword name="E4HorizontalToolBox (Constructor)" id="E4HorizontalToolBox (Constructor)" ref="eric5.E4Gui.E4ToolBox.html#E4HorizontalToolBox.__init__" />
-      <keyword name="E4HorizontalToolBox.addItem" id="E4HorizontalToolBox.addItem" ref="eric5.E4Gui.E4ToolBox.html#E4HorizontalToolBox.addItem" />
-      <keyword name="E4HorizontalToolBox.insertItem" id="E4HorizontalToolBox.insertItem" ref="eric5.E4Gui.E4ToolBox.html#E4HorizontalToolBox.insertItem" />
-      <keyword name="E4HorizontalToolBox.setItemEnabled" id="E4HorizontalToolBox.setItemEnabled" ref="eric5.E4Gui.E4ToolBox.html#E4HorizontalToolBox.setItemEnabled" />
-      <keyword name="E4HorizontalToolBox.setItemToolTip" id="E4HorizontalToolBox.setItemToolTip" ref="eric5.E4Gui.E4ToolBox.html#E4HorizontalToolBox.setItemToolTip" />
-      <keyword name="E4VerticalToolBox (Constructor)" id="E4VerticalToolBox (Constructor)" ref="eric5.E4Gui.E4ToolBox.html#E4VerticalToolBox.__init__" />
-      <keyword name="E4VerticalToolBox.wheelEvent" id="E4VerticalToolBox.wheelEvent" ref="eric5.E4Gui.E4ToolBox.html#E4VerticalToolBox.wheelEvent" />
-      <keyword name="E4ToolBarManager (Module)" id="E4ToolBarManager (Module)" ref="eric5.E4Gui.E4ToolBarManager.html" />
-      <keyword name="E4ToolBarManager" id="E4ToolBarManager" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager" />
-      <keyword name="E4ToolBarManager (Constructor)" id="E4ToolBarManager (Constructor)" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.__init__" />
-      <keyword name="E4ToolBarManager.__findAction" id="E4ToolBarManager.__findAction" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.__findAction" />
-      <keyword name="E4ToolBarManager.__findDefaultToolBar" id="E4ToolBarManager.__findDefaultToolBar" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.__findDefaultToolBar" />
-      <keyword name="E4ToolBarManager.__toolBarByName" id="E4ToolBarManager.__toolBarByName" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.__toolBarByName" />
-      <keyword name="E4ToolBarManager.actionById" id="E4ToolBarManager.actionById" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.actionById" />
-      <keyword name="E4ToolBarManager.addAction" id="E4ToolBarManager.addAction" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.addAction" />
-      <keyword name="E4ToolBarManager.addToolBar" id="E4ToolBarManager.addToolBar" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.addToolBar" />
-      <keyword name="E4ToolBarManager.categories" id="E4ToolBarManager.categories" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.categories" />
-      <keyword name="E4ToolBarManager.categoryActions" id="E4ToolBarManager.categoryActions" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.categoryActions" />
-      <keyword name="E4ToolBarManager.createToolBar" id="E4ToolBarManager.createToolBar" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.createToolBar" />
-      <keyword name="E4ToolBarManager.defaultToolBarActions" id="E4ToolBarManager.defaultToolBarActions" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.defaultToolBarActions" />
-      <keyword name="E4ToolBarManager.defaultToolBars" id="E4ToolBarManager.defaultToolBars" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.defaultToolBars" />
-      <keyword name="E4ToolBarManager.deleteToolBar" id="E4ToolBarManager.deleteToolBar" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.deleteToolBar" />
-      <keyword name="E4ToolBarManager.isDefaultToolBar" id="E4ToolBarManager.isDefaultToolBar" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.isDefaultToolBar" />
-      <keyword name="E4ToolBarManager.isWidgetAction" id="E4ToolBarManager.isWidgetAction" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.isWidgetAction" />
-      <keyword name="E4ToolBarManager.mainWindow" id="E4ToolBarManager.mainWindow" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.mainWindow" />
-      <keyword name="E4ToolBarManager.removeAction" id="E4ToolBarManager.removeAction" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.removeAction" />
-      <keyword name="E4ToolBarManager.removeToolBar" id="E4ToolBarManager.removeToolBar" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.removeToolBar" />
-      <keyword name="E4ToolBarManager.removeWidgetActions" id="E4ToolBarManager.removeWidgetActions" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.removeWidgetActions" />
-      <keyword name="E4ToolBarManager.renameToolBar" id="E4ToolBarManager.renameToolBar" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.renameToolBar" />
-      <keyword name="E4ToolBarManager.resetAllToolBars" id="E4ToolBarManager.resetAllToolBars" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.resetAllToolBars" />
-      <keyword name="E4ToolBarManager.resetToolBar" id="E4ToolBarManager.resetToolBar" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.resetToolBar" />
-      <keyword name="E4ToolBarManager.restoreState" id="E4ToolBarManager.restoreState" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.restoreState" />
-      <keyword name="E4ToolBarManager.saveState" id="E4ToolBarManager.saveState" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.saveState" />
-      <keyword name="E4ToolBarManager.setMainWindow" id="E4ToolBarManager.setMainWindow" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.setMainWindow" />
-      <keyword name="E4ToolBarManager.setToolBar" id="E4ToolBarManager.setToolBar" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.setToolBar" />
-      <keyword name="E4ToolBarManager.setToolBars" id="E4ToolBarManager.setToolBars" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.setToolBars" />
-      <keyword name="E4ToolBarManager.toolBarActions" id="E4ToolBarManager.toolBarActions" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.toolBarActions" />
-      <keyword name="E4ToolBarManager.toolBarById" id="E4ToolBarManager.toolBarById" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.toolBarById" />
-      <keyword name="E4ToolBarManager.toolBarWidgetAction" id="E4ToolBarManager.toolBarWidgetAction" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.toolBarWidgetAction" />
-      <keyword name="E4ToolBarManager.toolBars" id="E4ToolBarManager.toolBars" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.toolBars" />
-      <keyword name="E4ToolBarManager.toolBarsActions" id="E4ToolBarManager.toolBarsActions" ref="eric5.E4Gui.E4ToolBarManager.html#E4ToolBarManager.toolBarsActions" />
-      <keyword name="E4TableView (Module)" id="E4TableView (Module)" ref="eric5.E4Gui.E4TableView.html" />
-      <keyword name="E4TableView" id="E4TableView" ref="eric5.E4Gui.E4TableView.html#E4TableView" />
-      <keyword name="E4TableView.keyPressEvent" id="E4TableView.keyPressEvent" ref="eric5.E4Gui.E4TableView.html#E4TableView.keyPressEvent" />
-      <keyword name="E4TableView.removeAll" id="E4TableView.removeAll" ref="eric5.E4Gui.E4TableView.html#E4TableView.removeAll" />
-      <keyword name="E4TableView.removeSelected" id="E4TableView.removeSelected" ref="eric5.E4Gui.E4TableView.html#E4TableView.removeSelected" />
-      <keyword name="E4LineEdit (Module)" id="E4LineEdit (Module)" ref="eric5.E4Gui.E4LineEdit.html" />
-      <keyword name="E4LineEdit" id="E4LineEdit" ref="eric5.E4Gui.E4LineEdit.html#E4LineEdit" />
-      <keyword name="E4LineEdit (Constructor)" id="E4LineEdit (Constructor)" ref="eric5.E4Gui.E4LineEdit.html#E4LineEdit.__init__" />
-      <keyword name="E4LineEdit.inactiveText" id="E4LineEdit.inactiveText" ref="eric5.E4Gui.E4LineEdit.html#E4LineEdit.inactiveText" />
-      <keyword name="E4LineEdit.paintEvent" id="E4LineEdit.paintEvent" ref="eric5.E4Gui.E4LineEdit.html#E4LineEdit.paintEvent" />
-      <keyword name="E4LineEdit.setInactiveText" id="E4LineEdit.setInactiveText" ref="eric5.E4Gui.E4LineEdit.html#E4LineEdit.setInactiveText" />
-      <keyword name="E4Led (Module)" id="E4Led (Module)" ref="eric5.E4Gui.E4Led.html" />
-      <keyword name="E4Led" id="E4Led" ref="eric5.E4Gui.E4Led.html#E4Led" />
-      <keyword name="E4Led (Constructor)" id="E4Led (Constructor)" ref="eric5.E4Gui.E4Led.html#E4Led.__init__" />
-      <keyword name="E4Led.__getBestRoundSize" id="E4Led.__getBestRoundSize" ref="eric5.E4Gui.E4Led.html#E4Led.__getBestRoundSize" />
-      <keyword name="E4Led.__paintRectangular" id="E4Led.__paintRectangular" ref="eric5.E4Gui.E4Led.html#E4Led.__paintRectangular" />
-      <keyword name="E4Led.__paintRound" id="E4Led.__paintRound" ref="eric5.E4Gui.E4Led.html#E4Led.__paintRound" />
-      <keyword name="E4Led.color" id="E4Led.color" ref="eric5.E4Gui.E4Led.html#E4Led.color" />
-      <keyword name="E4Led.darkFactor" id="E4Led.darkFactor" ref="eric5.E4Gui.E4Led.html#E4Led.darkFactor" />
-      <keyword name="E4Led.isFramed" id="E4Led.isFramed" ref="eric5.E4Gui.E4Led.html#E4Led.isFramed" />
-      <keyword name="E4Led.isOn" id="E4Led.isOn" ref="eric5.E4Gui.E4Led.html#E4Led.isOn" />
-      <keyword name="E4Led.minimumSizeHint" id="E4Led.minimumSizeHint" ref="eric5.E4Gui.E4Led.html#E4Led.minimumSizeHint" />
-      <keyword name="E4Led.off" id="E4Led.off" ref="eric5.E4Gui.E4Led.html#E4Led.off" />
-      <keyword name="E4Led.on" id="E4Led.on" ref="eric5.E4Gui.E4Led.html#E4Led.on" />
-      <keyword name="E4Led.paintEvent" id="E4Led.paintEvent" ref="eric5.E4Gui.E4Led.html#E4Led.paintEvent" />
-      <keyword name="E4Led.ratio" id="E4Led.ratio" ref="eric5.E4Gui.E4Led.html#E4Led.ratio" />
-      <keyword name="E4Led.setColor" id="E4Led.setColor" ref="eric5.E4Gui.E4Led.html#E4Led.setColor" />
-      <keyword name="E4Led.setDarkFactor" id="E4Led.setDarkFactor" ref="eric5.E4Gui.E4Led.html#E4Led.setDarkFactor" />
-      <keyword name="E4Led.setFramed" id="E4Led.setFramed" ref="eric5.E4Gui.E4Led.html#E4Led.setFramed" />
-      <keyword name="E4Led.setOn" id="E4Led.setOn" ref="eric5.E4Gui.E4Led.html#E4Led.setOn" />
-      <keyword name="E4Led.setRatio" id="E4Led.setRatio" ref="eric5.E4Gui.E4Led.html#E4Led.setRatio" />
-      <keyword name="E4Led.setShape" id="E4Led.setShape" ref="eric5.E4Gui.E4Led.html#E4Led.setShape" />
-      <keyword name="E4Led.shape" id="E4Led.shape" ref="eric5.E4Gui.E4Led.html#E4Led.shape" />
-      <keyword name="E4Led.sizeHint" id="E4Led.sizeHint" ref="eric5.E4Gui.E4Led.html#E4Led.sizeHint" />
-      <keyword name="E4Led.toggle" id="E4Led.toggle" ref="eric5.E4Gui.E4Led.html#E4Led.toggle" />
-      <keyword name="E4Application (Module)" id="E4Application (Module)" ref="eric5.E4Gui.E4Application.html" />
-      <keyword name="E4Application" id="E4Application" ref="eric5.E4Gui.E4Application.html#E4Application" />
-      <keyword name="E4Application (Constructor)" id="E4Application (Constructor)" ref="eric5.E4Gui.E4Application.html#E4Application.__init__" />
-      <keyword name="E4Application.getObject" id="E4Application.getObject" ref="eric5.E4Gui.E4Application.html#E4Application.getObject" />
-      <keyword name="E4Application.getPluginObject" id="E4Application.getPluginObject" ref="eric5.E4Gui.E4Application.html#E4Application.getPluginObject" />
-      <keyword name="E4Application.getPluginObjectType" id="E4Application.getPluginObjectType" ref="eric5.E4Gui.E4Application.html#E4Application.getPluginObjectType" />
-      <keyword name="E4Application.getPluginObjects" id="E4Application.getPluginObjects" ref="eric5.E4Gui.E4Application.html#E4Application.getPluginObjects" />
-      <keyword name="E4Application.registerObject" id="E4Application.registerObject" ref="eric5.E4Gui.E4Application.html#E4Application.registerObject" />
-      <keyword name="E4Application.registerPluginObject" id="E4Application.registerPluginObject" ref="eric5.E4Gui.E4Application.html#E4Application.registerPluginObject" />
-      <keyword name="E4Application.unregisterPluginObject" id="E4Application.unregisterPluginObject" ref="eric5.E4Gui.E4Application.html#E4Application.unregisterPluginObject" />
-      <keyword name="E4SingleApplication (Module)" id="E4SingleApplication (Module)" ref="eric5.E4Gui.E4SingleApplication.html" />
-      <keyword name="E4SingleApplicationClient" id="E4SingleApplicationClient" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationClient" />
-      <keyword name="E4SingleApplicationServer" id="E4SingleApplicationServer" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationServer" />
-      <keyword name="E4SingleApplicationClient (Constructor)" id="E4SingleApplicationClient (Constructor)" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationClient.__init__" />
-      <keyword name="E4SingleApplicationClient.__openFile" id="E4SingleApplicationClient.__openFile" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationClient.__openFile" />
-      <keyword name="E4SingleApplicationClient.__openProject" id="E4SingleApplicationClient.__openProject" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationClient.__openProject" />
-      <keyword name="E4SingleApplicationClient.__sendArguments" id="E4SingleApplicationClient.__sendArguments" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationClient.__sendArguments" />
-      <keyword name="E4SingleApplicationClient.processArgs" id="E4SingleApplicationClient.processArgs" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationClient.processArgs" />
-      <keyword name="E4SingleApplicationServer (Constructor)" id="E4SingleApplicationServer (Constructor)" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationServer.__init__" />
-      <keyword name="E4SingleApplicationServer.__saArguments" id="E4SingleApplicationServer.__saArguments" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationServer.__saArguments" />
-      <keyword name="E4SingleApplicationServer.__saOpenFile" id="E4SingleApplicationServer.__saOpenFile" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationServer.__saOpenFile" />
-      <keyword name="E4SingleApplicationServer.__saOpenProject" id="E4SingleApplicationServer.__saOpenProject" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationServer.__saOpenProject" />
-      <keyword name="E4SingleApplicationServer.handleCommand" id="E4SingleApplicationServer.handleCommand" ref="eric5.E4Gui.E4SingleApplication.html#E4SingleApplicationServer.handleCommand" />
+      <keyword name="E5Gui (Package)" id="E5Gui (Package)" ref="index-eric5.E5Gui.html" />
+      <keyword name="E5SingleApplication (Module)" id="E5SingleApplication (Module)" ref="eric5.E5Gui.E5SingleApplication.html" />
+      <keyword name="E5SingleApplicationClient" id="E5SingleApplicationClient" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationClient" />
+      <keyword name="E5SingleApplicationServer" id="E5SingleApplicationServer" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationServer" />
+      <keyword name="E5SingleApplicationClient (Constructor)" id="E5SingleApplicationClient (Constructor)" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.__init__" />
+      <keyword name="E5SingleApplicationClient.__openFile" id="E5SingleApplicationClient.__openFile" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.__openFile" />
+      <keyword name="E5SingleApplicationClient.__openProject" id="E5SingleApplicationClient.__openProject" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.__openProject" />
+      <keyword name="E5SingleApplicationClient.__sendArguments" id="E5SingleApplicationClient.__sendArguments" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.__sendArguments" />
+      <keyword name="E5SingleApplicationClient.processArgs" id="E5SingleApplicationClient.processArgs" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.processArgs" />
+      <keyword name="E5SingleApplicationServer (Constructor)" id="E5SingleApplicationServer (Constructor)" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.__init__" />
+      <keyword name="E5SingleApplicationServer.__saArguments" id="E5SingleApplicationServer.__saArguments" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.__saArguments" />
+      <keyword name="E5SingleApplicationServer.__saOpenFile" id="E5SingleApplicationServer.__saOpenFile" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.__saOpenFile" />
+      <keyword name="E5SingleApplicationServer.__saOpenProject" id="E5SingleApplicationServer.__saOpenProject" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.__saOpenProject" />
+      <keyword name="E5SingleApplicationServer.handleCommand" id="E5SingleApplicationServer.handleCommand" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.handleCommand" />
+      <keyword name="E5LineEdit (Module)" id="E5LineEdit (Module)" ref="eric5.E5Gui.E5LineEdit.html" />
+      <keyword name="E5LineEdit" id="E5LineEdit" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit" />
+      <keyword name="E5LineEdit (Constructor)" id="E5LineEdit (Constructor)" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.__init__" />
+      <keyword name="E5LineEdit.inactiveText" id="E5LineEdit.inactiveText" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.inactiveText" />
+      <keyword name="E5LineEdit.paintEvent" id="E5LineEdit.paintEvent" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.paintEvent" />
+      <keyword name="E5LineEdit.setInactiveText" id="E5LineEdit.setInactiveText" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.setInactiveText" />
+      <keyword name="E5Led (Module)" id="E5Led (Module)" ref="eric5.E5Gui.E5Led.html" />
+      <keyword name="E5Led" id="E5Led" ref="eric5.E5Gui.E5Led.html#E5Led" />
+      <keyword name="E5Led (Constructor)" id="E5Led (Constructor)" ref="eric5.E5Gui.E5Led.html#E5Led.__init__" />
+      <keyword name="E5Led.__getBestRoundSize" id="E5Led.__getBestRoundSize" ref="eric5.E5Gui.E5Led.html#E5Led.__getBestRoundSize" />
+      <keyword name="E5Led.__paintRectangular" id="E5Led.__paintRectangular" ref="eric5.E5Gui.E5Led.html#E5Led.__paintRectangular" />
+      <keyword name="E5Led.__paintRound" id="E5Led.__paintRound" ref="eric5.E5Gui.E5Led.html#E5Led.__paintRound" />
+      <keyword name="E5Led.color" id="E5Led.color" ref="eric5.E5Gui.E5Led.html#E5Led.color" />
+      <keyword name="E5Led.darkFactor" id="E5Led.darkFactor" ref="eric5.E5Gui.E5Led.html#E5Led.darkFactor" />
+      <keyword name="E5Led.isFramed" id="E5Led.isFramed" ref="eric5.E5Gui.E5Led.html#E5Led.isFramed" />
+      <keyword name="E5Led.isOn" id="E5Led.isOn" ref="eric5.E5Gui.E5Led.html#E5Led.isOn" />
+      <keyword name="E5Led.minimumSizeHint" id="E5Led.minimumSizeHint" ref="eric5.E5Gui.E5Led.html#E5Led.minimumSizeHint" />
+      <keyword name="E5Led.off" id="E5Led.off" ref="eric5.E5Gui.E5Led.html#E5Led.off" />
+      <keyword name="E5Led.on" id="E5Led.on" ref="eric5.E5Gui.E5Led.html#E5Led.on" />
+      <keyword name="E5Led.paintEvent" id="E5Led.paintEvent" ref="eric5.E5Gui.E5Led.html#E5Led.paintEvent" />
+      <keyword name="E5Led.ratio" id="E5Led.ratio" ref="eric5.E5Gui.E5Led.html#E5Led.ratio" />
+      <keyword name="E5Led.setColor" id="E5Led.setColor" ref="eric5.E5Gui.E5Led.html#E5Led.setColor" />
+      <keyword name="E5Led.setDarkFactor" id="E5Led.setDarkFactor" ref="eric5.E5Gui.E5Led.html#E5Led.setDarkFactor" />
+      <keyword name="E5Led.setFramed" id="E5Led.setFramed" ref="eric5.E5Gui.E5Led.html#E5Led.setFramed" />
+      <keyword name="E5Led.setOn" id="E5Led.setOn" ref="eric5.E5Gui.E5Led.html#E5Led.setOn" />
+      <keyword name="E5Led.setRatio" id="E5Led.setRatio" ref="eric5.E5Gui.E5Led.html#E5Led.setRatio" />
+      <keyword name="E5Led.setShape" id="E5Led.setShape" ref="eric5.E5Gui.E5Led.html#E5Led.setShape" />
+      <keyword name="E5Led.shape" id="E5Led.shape" ref="eric5.E5Gui.E5Led.html#E5Led.shape" />
+      <keyword name="E5Led.sizeHint" id="E5Led.sizeHint" ref="eric5.E5Gui.E5Led.html#E5Led.sizeHint" />
+      <keyword name="E5Led.toggle" id="E5Led.toggle" ref="eric5.E5Gui.E5Led.html#E5Led.toggle" />
+      <keyword name="E5SqueezeLabels (Module)" id="E5SqueezeLabels (Module)" ref="eric5.E5Gui.E5SqueezeLabels.html" />
+      <keyword name="E5SqueezeLabel" id="E5SqueezeLabel" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabel" />
+      <keyword name="E5SqueezeLabelPath" id="E5SqueezeLabelPath" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath" />
+      <keyword name="E5SqueezeLabel (Constructor)" id="E5SqueezeLabel (Constructor)" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabel.__init__" />
+      <keyword name="E5SqueezeLabel.paintEvent" id="E5SqueezeLabel.paintEvent" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabel.paintEvent" />
+      <keyword name="E5SqueezeLabel.setText" id="E5SqueezeLabel.setText" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabel.setText" />
+      <keyword name="E5SqueezeLabelPath (Constructor)" id="E5SqueezeLabelPath (Constructor)" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.__init__" />
+      <keyword name="E5SqueezeLabelPath.length" id="E5SqueezeLabelPath.length" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.length" />
+      <keyword name="E5SqueezeLabelPath.paintEvent" id="E5SqueezeLabelPath.paintEvent" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.paintEvent" />
+      <keyword name="E5SqueezeLabelPath.setPath" id="E5SqueezeLabelPath.setPath" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.setPath" />
+      <keyword name="E5SqueezeLabelPath.setSurrounding" id="E5SqueezeLabelPath.setSurrounding" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.setSurrounding" />
+      <keyword name="E5SqueezeLabelPath.setTextPath" id="E5SqueezeLabelPath.setTextPath" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.setTextPath" />
+      <keyword name="E5ToolBox (Module)" id="E5ToolBox (Module)" ref="eric5.E5Gui.E5ToolBox.html" />
+      <keyword name="E5HorizontalToolBox" id="E5HorizontalToolBox" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox" />
+      <keyword name="E5VerticalToolBox" id="E5VerticalToolBox" ref="eric5.E5Gui.E5ToolBox.html#E5VerticalToolBox" />
+      <keyword name="E5HorizontalToolBox (Constructor)" id="E5HorizontalToolBox (Constructor)" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.__init__" />
+      <keyword name="E5HorizontalToolBox.addItem" id="E5HorizontalToolBox.addItem" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.addItem" />
+      <keyword name="E5HorizontalToolBox.insertItem" id="E5HorizontalToolBox.insertItem" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.insertItem" />
+      <keyword name="E5HorizontalToolBox.setItemEnabled" id="E5HorizontalToolBox.setItemEnabled" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.setItemEnabled" />
+      <keyword name="E5HorizontalToolBox.setItemToolTip" id="E5HorizontalToolBox.setItemToolTip" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.setItemToolTip" />
+      <keyword name="E5VerticalToolBox (Constructor)" id="E5VerticalToolBox (Constructor)" ref="eric5.E5Gui.E5ToolBox.html#E5VerticalToolBox.__init__" />
+      <keyword name="E5VerticalToolBox.wheelEvent" id="E5VerticalToolBox.wheelEvent" ref="eric5.E5Gui.E5ToolBox.html#E5VerticalToolBox.wheelEvent" />
+      <keyword name="E5SideBar (Module)" id="E5SideBar (Module)" ref="eric5.E5Gui.E5SideBar.html" />
+      <keyword name="E5SideBar" id="E5SideBar" ref="eric5.E5Gui.E5SideBar.html#E5SideBar" />
+      <keyword name="E5SideBar (Constructor)" id="E5SideBar (Constructor)" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__init__" />
+      <keyword name="E5SideBar.__appFocusChanged" id="E5SideBar.__appFocusChanged" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__appFocusChanged" />
+      <keyword name="E5SideBar.__autoHideToggled" id="E5SideBar.__autoHideToggled" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__autoHideToggled" />
+      <keyword name="E5SideBar.addTab" id="E5SideBar.addTab" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.addTab" />
+      <keyword name="E5SideBar.clear" id="E5SideBar.clear" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.clear" />
+      <keyword name="E5SideBar.count" id="E5SideBar.count" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.count" />
+      <keyword name="E5SideBar.currentIndex" id="E5SideBar.currentIndex" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.currentIndex" />
+      <keyword name="E5SideBar.currentWidget" id="E5SideBar.currentWidget" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.currentWidget" />
+      <keyword name="E5SideBar.enterEvent" id="E5SideBar.enterEvent" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.enterEvent" />
+      <keyword name="E5SideBar.eventFilter" id="E5SideBar.eventFilter" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.eventFilter" />
+      <keyword name="E5SideBar.expand" id="E5SideBar.expand" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.expand" />
+      <keyword name="E5SideBar.indexOf" id="E5SideBar.indexOf" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.indexOf" />
+      <keyword name="E5SideBar.insertTab" id="E5SideBar.insertTab" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.insertTab" />
+      <keyword name="E5SideBar.isAutoHiding" id="E5SideBar.isAutoHiding" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.isAutoHiding" />
+      <keyword name="E5SideBar.isMinimized" id="E5SideBar.isMinimized" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.isMinimized" />
+      <keyword name="E5SideBar.isTabEnabled" id="E5SideBar.isTabEnabled" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.isTabEnabled" />
+      <keyword name="E5SideBar.leaveEvent" id="E5SideBar.leaveEvent" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.leaveEvent" />
+      <keyword name="E5SideBar.nextTab" id="E5SideBar.nextTab" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.nextTab" />
+      <keyword name="E5SideBar.orientation" id="E5SideBar.orientation" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.orientation" />
+      <keyword name="E5SideBar.prevTab" id="E5SideBar.prevTab" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.prevTab" />
+      <keyword name="E5SideBar.removeTab" id="E5SideBar.removeTab" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.removeTab" />
+      <keyword name="E5SideBar.restoreState" id="E5SideBar.restoreState" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.restoreState" />
+      <keyword name="E5SideBar.saveState" id="E5SideBar.saveState" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.saveState" />
+      <keyword name="E5SideBar.setCurrentIndex" id="E5SideBar.setCurrentIndex" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setCurrentIndex" />
+      <keyword name="E5SideBar.setCurrentWidget" id="E5SideBar.setCurrentWidget" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setCurrentWidget" />
+      <keyword name="E5SideBar.setOrientation" id="E5SideBar.setOrientation" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setOrientation" />
+      <keyword name="E5SideBar.setSplitter" id="E5SideBar.setSplitter" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setSplitter" />
+      <keyword name="E5SideBar.setTabEnabled" id="E5SideBar.setTabEnabled" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setTabEnabled" />
+      <keyword name="E5SideBar.setTabIcon" id="E5SideBar.setTabIcon" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setTabIcon" />
+      <keyword name="E5SideBar.setTabText" id="E5SideBar.setTabText" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setTabText" />
+      <keyword name="E5SideBar.setTabToolTip" id="E5SideBar.setTabToolTip" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setTabToolTip" />
+      <keyword name="E5SideBar.setTabWhatsThis" id="E5SideBar.setTabWhatsThis" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setTabWhatsThis" />
+      <keyword name="E5SideBar.shrink" id="E5SideBar.shrink" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.shrink" />
+      <keyword name="E5SideBar.tabIcon" id="E5SideBar.tabIcon" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.tabIcon" />
+      <keyword name="E5SideBar.tabText" id="E5SideBar.tabText" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.tabText" />
+      <keyword name="E5SideBar.tabToolTip" id="E5SideBar.tabToolTip" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.tabToolTip" />
+      <keyword name="E5SideBar.tabWhatsThis" id="E5SideBar.tabWhatsThis" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.tabWhatsThis" />
+      <keyword name="E5SideBar.widget" id="E5SideBar.widget" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.widget" />
+      <keyword name="E5TreeView (Module)" id="E5TreeView (Module)" ref="eric5.E5Gui.E5TreeView.html" />
+      <keyword name="E5TreeView" id="E5TreeView" ref="eric5.E5Gui.E5TreeView.html#E5TreeView" />
+      <keyword name="E5TreeView.keyPressEvent" id="E5TreeView.keyPressEvent" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.keyPressEvent" />
+      <keyword name="E5TreeView.removeAll" id="E5TreeView.removeAll" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.removeAll" />
+      <keyword name="E5TreeView.removeSelected" id="E5TreeView.removeSelected" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.removeSelected" />
+      <keyword name="E5Completers (Module)" id="E5Completers (Module)" ref="eric5.E5Gui.E5Completers.html" />
+      <keyword name="E5DirCompleter" id="E5DirCompleter" ref="eric5.E5Gui.E5Completers.html#E5DirCompleter" />
+      <keyword name="E5FileCompleter" id="E5FileCompleter" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter" />
+      <keyword name="E5StringListCompleter" id="E5StringListCompleter" ref="eric5.E5Gui.E5Completers.html#E5StringListCompleter" />
+      <keyword name="E5DirCompleter (Constructor)" id="E5DirCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5DirCompleter.__init__" />
+      <keyword name="E5FileCompleter (Constructor)" id="E5FileCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter.__init__" />
+      <keyword name="E5StringListCompleter (Constructor)" id="E5StringListCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5StringListCompleter.__init__" />
+      <keyword name="E5ListView (Module)" id="E5ListView (Module)" ref="eric5.E5Gui.E5ListView.html" />
+      <keyword name="E5ListView" id="E5ListView" ref="eric5.E5Gui.E5ListView.html#E5ListView" />
+      <keyword name="E5ListView.keyPressEvent" id="E5ListView.keyPressEvent" ref="eric5.E5Gui.E5ListView.html#E5ListView.keyPressEvent" />
+      <keyword name="E5ListView.removeAll" id="E5ListView.removeAll" ref="eric5.E5Gui.E5ListView.html#E5ListView.removeAll" />
+      <keyword name="E5ListView.removeSelected" id="E5ListView.removeSelected" ref="eric5.E5Gui.E5ListView.html#E5ListView.removeSelected" />
+      <keyword name="E5ToolBarManager (Module)" id="E5ToolBarManager (Module)" ref="eric5.E5Gui.E5ToolBarManager.html" />
+      <keyword name="E5ToolBarManager" id="E5ToolBarManager" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager" />
+      <keyword name="E5ToolBarManager (Constructor)" id="E5ToolBarManager (Constructor)" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.__init__" />
+      <keyword name="E5ToolBarManager.__findAction" id="E5ToolBarManager.__findAction" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.__findAction" />
+      <keyword name="E5ToolBarManager.__findDefaultToolBar" id="E5ToolBarManager.__findDefaultToolBar" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.__findDefaultToolBar" />
+      <keyword name="E5ToolBarManager.__toolBarByName" id="E5ToolBarManager.__toolBarByName" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.__toolBarByName" />
+      <keyword name="E5ToolBarManager.actionById" id="E5ToolBarManager.actionById" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.actionById" />
+      <keyword name="E5ToolBarManager.addAction" id="E5ToolBarManager.addAction" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.addAction" />
+      <keyword name="E5ToolBarManager.addToolBar" id="E5ToolBarManager.addToolBar" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.addToolBar" />
+      <keyword name="E5ToolBarManager.categories" id="E5ToolBarManager.categories" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.categories" />
+      <keyword name="E5ToolBarManager.categoryActions" id="E5ToolBarManager.categoryActions" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.categoryActions" />
+      <keyword name="E5ToolBarManager.createToolBar" id="E5ToolBarManager.createToolBar" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.createToolBar" />
+      <keyword name="E5ToolBarManager.defaultToolBarActions" id="E5ToolBarManager.defaultToolBarActions" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.defaultToolBarActions" />
+      <keyword name="E5ToolBarManager.defaultToolBars" id="E5ToolBarManager.defaultToolBars" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.defaultToolBars" />
+      <keyword name="E5ToolBarManager.deleteToolBar" id="E5ToolBarManager.deleteToolBar" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.deleteToolBar" />
+      <keyword name="E5ToolBarManager.isDefaultToolBar" id="E5ToolBarManager.isDefaultToolBar" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.isDefaultToolBar" />
+      <keyword name="E5ToolBarManager.isWidgetAction" id="E5ToolBarManager.isWidgetAction" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.isWidgetAction" />
+      <keyword name="E5ToolBarManager.mainWindow" id="E5ToolBarManager.mainWindow" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.mainWindow" />
+      <keyword name="E5ToolBarManager.removeAction" id="E5ToolBarManager.removeAction" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.removeAction" />
+      <keyword name="E5ToolBarManager.removeToolBar" id="E5ToolBarManager.removeToolBar" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.removeToolBar" />
+      <keyword name="E5ToolBarManager.removeWidgetActions" id="E5ToolBarManager.removeWidgetActions" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.removeWidgetActions" />
+      <keyword name="E5ToolBarManager.renameToolBar" id="E5ToolBarManager.renameToolBar" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.renameToolBar" />
+      <keyword name="E5ToolBarManager.resetAllToolBars" id="E5ToolBarManager.resetAllToolBars" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.resetAllToolBars" />
+      <keyword name="E5ToolBarManager.resetToolBar" id="E5ToolBarManager.resetToolBar" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.resetToolBar" />
+      <keyword name="E5ToolBarManager.restoreState" id="E5ToolBarManager.restoreState" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.restoreState" />
+      <keyword name="E5ToolBarManager.saveState" id="E5ToolBarManager.saveState" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.saveState" />
+      <keyword name="E5ToolBarManager.setMainWindow" id="E5ToolBarManager.setMainWindow" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.setMainWindow" />
+      <keyword name="E5ToolBarManager.setToolBar" id="E5ToolBarManager.setToolBar" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.setToolBar" />
+      <keyword name="E5ToolBarManager.setToolBars" id="E5ToolBarManager.setToolBars" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.setToolBars" />
+      <keyword name="E5ToolBarManager.toolBarActions" id="E5ToolBarManager.toolBarActions" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.toolBarActions" />
+      <keyword name="E5ToolBarManager.toolBarById" id="E5ToolBarManager.toolBarById" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.toolBarById" />
+      <keyword name="E5ToolBarManager.toolBarWidgetAction" id="E5ToolBarManager.toolBarWidgetAction" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.toolBarWidgetAction" />
+      <keyword name="E5ToolBarManager.toolBars" id="E5ToolBarManager.toolBars" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.toolBars" />
+      <keyword name="E5ToolBarManager.toolBarsActions" id="E5ToolBarManager.toolBarsActions" ref="eric5.E5Gui.E5ToolBarManager.html#E5ToolBarManager.toolBarsActions" />
+      <keyword name="E5ToolBarDialog (Module)" id="E5ToolBarDialog (Module)" ref="eric5.E5Gui.E5ToolBarDialog.html" />
+      <keyword name="E5ToolBarDialog" id="E5ToolBarDialog" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog" />
+      <keyword name="E5ToolBarItem" id="E5ToolBarItem" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarItem" />
+      <keyword name="E5ToolBarDialog (Constructor)" id="E5ToolBarDialog (Constructor)" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.__init__" />
+      <keyword name="E5ToolBarDialog.__resetCurrentToolbar" id="E5ToolBarDialog.__resetCurrentToolbar" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.__resetCurrentToolbar" />
+      <keyword name="E5ToolBarDialog.__restoreCurrentToolbar" id="E5ToolBarDialog.__restoreCurrentToolbar" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.__restoreCurrentToolbar" />
+      <keyword name="E5ToolBarDialog.__restoreCurrentToolbarToDefault" id="E5ToolBarDialog.__restoreCurrentToolbarToDefault" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.__restoreCurrentToolbarToDefault" />
+      <keyword name="E5ToolBarDialog.__saveToolBars" id="E5ToolBarDialog.__saveToolBars" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.__saveToolBars" />
+      <keyword name="E5ToolBarDialog.__setupButtons" id="E5ToolBarDialog.__setupButtons" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.__setupButtons" />
+      <keyword name="E5ToolBarDialog.__toolbarComboBox_currentIndexChanged" id="E5ToolBarDialog.__toolbarComboBox_currentIndexChanged" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.__toolbarComboBox_currentIndexChanged" />
+      <keyword name="E5ToolBarDialog.on_actionsTree_currentItemChanged" id="E5ToolBarDialog.on_actionsTree_currentItemChanged" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_actionsTree_currentItemChanged" />
+      <keyword name="E5ToolBarDialog.on_buttonBox_clicked" id="E5ToolBarDialog.on_buttonBox_clicked" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_buttonBox_clicked" />
+      <keyword name="E5ToolBarDialog.on_downButton_clicked" id="E5ToolBarDialog.on_downButton_clicked" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_downButton_clicked" />
+      <keyword name="E5ToolBarDialog.on_leftButton_clicked" id="E5ToolBarDialog.on_leftButton_clicked" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_leftButton_clicked" />
+      <keyword name="E5ToolBarDialog.on_newButton_clicked" id="E5ToolBarDialog.on_newButton_clicked" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_newButton_clicked" />
+      <keyword name="E5ToolBarDialog.on_removeButton_clicked" id="E5ToolBarDialog.on_removeButton_clicked" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_removeButton_clicked" />
+      <keyword name="E5ToolBarDialog.on_renameButton_clicked" id="E5ToolBarDialog.on_renameButton_clicked" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_renameButton_clicked" />
+      <keyword name="E5ToolBarDialog.on_rightButton_clicked" id="E5ToolBarDialog.on_rightButton_clicked" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_rightButton_clicked" />
+      <keyword name="E5ToolBarDialog.on_toolbarActionsList_currentItemChanged" id="E5ToolBarDialog.on_toolbarActionsList_currentItemChanged" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_toolbarActionsList_currentItemChanged" />
+      <keyword name="E5ToolBarDialog.on_upButton_clicked" id="E5ToolBarDialog.on_upButton_clicked" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarDialog.on_upButton_clicked" />
+      <keyword name="E5ToolBarItem (Constructor)" id="E5ToolBarItem (Constructor)" ref="eric5.E5Gui.E5ToolBarDialog.html#E5ToolBarItem.__init__" />
+      <keyword name="E5Application (Module)" id="E5Application (Module)" ref="eric5.E5Gui.E5Application.html" />
+      <keyword name="E5Application" id="E5Application" ref="eric5.E5Gui.E5Application.html#E5Application" />
+      <keyword name="E5Application (Constructor)" id="E5Application (Constructor)" ref="eric5.E5Gui.E5Application.html#E5Application.__init__" />
+      <keyword name="E5Application.getObject" id="E5Application.getObject" ref="eric5.E5Gui.E5Application.html#E5Application.getObject" />
+      <keyword name="E5Application.getPluginObject" id="E5Application.getPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.getPluginObject" />
+      <keyword name="E5Application.getPluginObjectType" id="E5Application.getPluginObjectType" ref="eric5.E5Gui.E5Application.html#E5Application.getPluginObjectType" />
+      <keyword name="E5Application.getPluginObjects" id="E5Application.getPluginObjects" ref="eric5.E5Gui.E5Application.html#E5Application.getPluginObjects" />
+      <keyword name="E5Application.registerObject" id="E5Application.registerObject" ref="eric5.E5Gui.E5Application.html#E5Application.registerObject" />
+      <keyword name="E5Application.registerPluginObject" id="E5Application.registerPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.registerPluginObject" />
+      <keyword name="E5Application.unregisterPluginObject" id="E5Application.unregisterPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.unregisterPluginObject" />
+      <keyword name="E5TreeSortFilterProxyModel (Module)" id="E5TreeSortFilterProxyModel (Module)" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html" />
+      <keyword name="E5TreeSortFilterProxyModel" id="E5TreeSortFilterProxyModel" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html#E5TreeSortFilterProxyModel" />
+      <keyword name="E5TreeSortFilterProxyModel (Constructor)" id="E5TreeSortFilterProxyModel (Constructor)" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html#E5TreeSortFilterProxyModel.__init__" />
+      <keyword name="E5TreeSortFilterProxyModel.filterAcceptsRow" id="E5TreeSortFilterProxyModel.filterAcceptsRow" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html#E5TreeSortFilterProxyModel.filterAcceptsRow" />
+      <keyword name="E5TreeSortFilterProxyModel.hasChildren" id="E5TreeSortFilterProxyModel.hasChildren" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html#E5TreeSortFilterProxyModel.hasChildren" />
+      <keyword name="E5TabWidget (Module)" id="E5TabWidget (Module)" ref="eric5.E5Gui.E5TabWidget.html" />
+      <keyword name="E5DnDTabBar" id="E5DnDTabBar" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar" />
+      <keyword name="E5TabWidget" id="E5TabWidget" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget" />
+      <keyword name="E5WheelTabBar" id="E5WheelTabBar" ref="eric5.E5Gui.E5TabWidget.html#E5WheelTabBar" />
+      <keyword name="E5DnDTabBar (Constructor)" id="E5DnDTabBar (Constructor)" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar.__init__" />
+      <keyword name="E5DnDTabBar.dragEnterEvent" id="E5DnDTabBar.dragEnterEvent" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar.dragEnterEvent" />
+      <keyword name="E5DnDTabBar.dropEvent" id="E5DnDTabBar.dropEvent" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar.dropEvent" />
+      <keyword name="E5DnDTabBar.mouseMoveEvent" id="E5DnDTabBar.mouseMoveEvent" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar.mouseMoveEvent" />
+      <keyword name="E5DnDTabBar.mousePressEvent" id="E5DnDTabBar.mousePressEvent" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar.mousePressEvent" />
+      <keyword name="E5TabWidget (Constructor)" id="E5TabWidget (Constructor)" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.__init__" />
+      <keyword name="E5TabWidget.__currentChanged" id="E5TabWidget.__currentChanged" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.__currentChanged" />
+      <keyword name="E5TabWidget.__freeSide" id="E5TabWidget.__freeSide" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.__freeSide" />
+      <keyword name="E5TabWidget.__handleTabCustomContextMenuRequested" id="E5TabWidget.__handleTabCustomContextMenuRequested" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.__handleTabCustomContextMenuRequested" />
+      <keyword name="E5TabWidget.animationLabel" id="E5TabWidget.animationLabel" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.animationLabel" />
+      <keyword name="E5TabWidget.moveTab" id="E5TabWidget.moveTab" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.moveTab" />
+      <keyword name="E5TabWidget.nextTab" id="E5TabWidget.nextTab" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.nextTab" />
+      <keyword name="E5TabWidget.prevTab" id="E5TabWidget.prevTab" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.prevTab" />
+      <keyword name="E5TabWidget.resetAnimation" id="E5TabWidget.resetAnimation" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.resetAnimation" />
+      <keyword name="E5TabWidget.selectTab" id="E5TabWidget.selectTab" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.selectTab" />
+      <keyword name="E5TabWidget.setTabContextMenuPolicy" id="E5TabWidget.setTabContextMenuPolicy" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.setTabContextMenuPolicy" />
+      <keyword name="E5TabWidget.switchTab" id="E5TabWidget.switchTab" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.switchTab" />
+      <keyword name="E5WheelTabBar (Constructor)" id="E5WheelTabBar (Constructor)" ref="eric5.E5Gui.E5TabWidget.html#E5WheelTabBar.__init__" />
+      <keyword name="E5WheelTabBar.wheelEvent" id="E5WheelTabBar.wheelEvent" ref="eric5.E5Gui.E5TabWidget.html#E5WheelTabBar.wheelEvent" />
+      <keyword name="E5Action (Module)" id="E5Action (Module)" ref="eric5.E5Gui.E5Action.html" />
+      <keyword name="ArgumentsError" id="ArgumentsError" ref="eric5.E5Gui.E5Action.html#ArgumentsError" />
+      <keyword name="E5Action" id="E5Action" ref="eric5.E5Gui.E5Action.html#E5Action" />
+      <keyword name="addActions" id="addActions" ref="eric5.E5Gui.E5Action.html#addActions" />
+      <keyword name="createActionGroup" id="createActionGroup" ref="eric5.E5Gui.E5Action.html#createActionGroup" />
+      <keyword name="ArgumentsError (Constructor)" id="ArgumentsError (Constructor)" ref="eric5.E5Gui.E5Action.html#ArgumentsError.__init__" />
+      <keyword name="ArgumentsError.__repr__" id="ArgumentsError.__repr__" ref="eric5.E5Gui.E5Action.html#ArgumentsError.__repr__" />
+      <keyword name="ArgumentsError.__str__" id="ArgumentsError.__str__" ref="eric5.E5Gui.E5Action.html#ArgumentsError.__str__" />
+      <keyword name="E5Action (Constructor)" id="E5Action (Constructor)" ref="eric5.E5Gui.E5Action.html#E5Action.__init__" />
+      <keyword name="E5Action.alternateShortcut" id="E5Action.alternateShortcut" ref="eric5.E5Gui.E5Action.html#E5Action.alternateShortcut" />
+      <keyword name="E5Action.setAlternateShortcut" id="E5Action.setAlternateShortcut" ref="eric5.E5Gui.E5Action.html#E5Action.setAlternateShortcut" />
+      <keyword name="E5ModelMenu (Module)" id="E5ModelMenu (Module)" ref="eric5.E5Gui.E5ModelMenu.html" />
+      <keyword name="E5ModelMenu" id="E5ModelMenu" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu" />
+      <keyword name="E5ModelMenu (Constructor)" id="E5ModelMenu (Constructor)" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.__init__" />
+      <keyword name="E5ModelMenu.__aboutToShow" id="E5ModelMenu.__aboutToShow" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.__aboutToShow" />
+      <keyword name="E5ModelMenu.__actionTriggered" id="E5ModelMenu.__actionTriggered" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.__actionTriggered" />
+      <keyword name="E5ModelMenu.__makeAction" id="E5ModelMenu.__makeAction" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.__makeAction" />
+      <keyword name="E5ModelMenu.createBaseMenu" id="E5ModelMenu.createBaseMenu" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.createBaseMenu" />
+      <keyword name="E5ModelMenu.createMenu" id="E5ModelMenu.createMenu" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.createMenu" />
+      <keyword name="E5ModelMenu.dragEnterEvent" id="E5ModelMenu.dragEnterEvent" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.dragEnterEvent" />
+      <keyword name="E5ModelMenu.dropEvent" id="E5ModelMenu.dropEvent" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.dropEvent" />
+      <keyword name="E5ModelMenu.firstSeparator" id="E5ModelMenu.firstSeparator" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.firstSeparator" />
+      <keyword name="E5ModelMenu.index" id="E5ModelMenu.index" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.index" />
+      <keyword name="E5ModelMenu.makeAction" id="E5ModelMenu.makeAction" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.makeAction" />
+      <keyword name="E5ModelMenu.maxRows" id="E5ModelMenu.maxRows" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.maxRows" />
+      <keyword name="E5ModelMenu.model" id="E5ModelMenu.model" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.model" />
+      <keyword name="E5ModelMenu.mouseMoveEvent" id="E5ModelMenu.mouseMoveEvent" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.mouseMoveEvent" />
+      <keyword name="E5ModelMenu.mousePressEvent" id="E5ModelMenu.mousePressEvent" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.mousePressEvent" />
+      <keyword name="E5ModelMenu.mouseReleaseEvent" id="E5ModelMenu.mouseReleaseEvent" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.mouseReleaseEvent" />
+      <keyword name="E5ModelMenu.postPopulated" id="E5ModelMenu.postPopulated" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.postPopulated" />
+      <keyword name="E5ModelMenu.prePopulated" id="E5ModelMenu.prePopulated" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.prePopulated" />
+      <keyword name="E5ModelMenu.removeEntry" id="E5ModelMenu.removeEntry" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.removeEntry" />
+      <keyword name="E5ModelMenu.resetFlags" id="E5ModelMenu.resetFlags" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.resetFlags" />
+      <keyword name="E5ModelMenu.rootIndex" id="E5ModelMenu.rootIndex" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.rootIndex" />
+      <keyword name="E5ModelMenu.separatorRole" id="E5ModelMenu.separatorRole" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.separatorRole" />
+      <keyword name="E5ModelMenu.setFirstSeparator" id="E5ModelMenu.setFirstSeparator" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.setFirstSeparator" />
+      <keyword name="E5ModelMenu.setMaxRows" id="E5ModelMenu.setMaxRows" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.setMaxRows" />
+      <keyword name="E5ModelMenu.setModel" id="E5ModelMenu.setModel" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.setModel" />
+      <keyword name="E5ModelMenu.setRootIndex" id="E5ModelMenu.setRootIndex" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.setRootIndex" />
+      <keyword name="E5ModelMenu.setSeparatorRole" id="E5ModelMenu.setSeparatorRole" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.setSeparatorRole" />
+      <keyword name="E5ModelMenu.setStatusBarTextRole" id="E5ModelMenu.setStatusBarTextRole" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.setStatusBarTextRole" />
+      <keyword name="E5ModelMenu.statusBarTextRole" id="E5ModelMenu.statusBarTextRole" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.statusBarTextRole" />
+      <keyword name="E5TableView (Module)" id="E5TableView (Module)" ref="eric5.E5Gui.E5TableView.html" />
+      <keyword name="E5TableView" id="E5TableView" ref="eric5.E5Gui.E5TableView.html#E5TableView" />
+      <keyword name="E5TableView.keyPressEvent" id="E5TableView.keyPressEvent" ref="eric5.E5Gui.E5TableView.html#E5TableView.keyPressEvent" />
+      <keyword name="E5TableView.removeAll" id="E5TableView.removeAll" ref="eric5.E5Gui.E5TableView.html#E5TableView.removeAll" />
+      <keyword name="E5TableView.removeSelected" id="E5TableView.removeSelected" ref="eric5.E5Gui.E5TableView.html#E5TableView.removeSelected" />
+      <keyword name="E5ModelToolBar (Module)" id="E5ModelToolBar (Module)" ref="eric5.E5Gui.E5ModelToolBar.html" />
+      <keyword name="E5ModelToolBar" id="E5ModelToolBar" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar" />
+      <keyword name="E5ModelToolBar (Constructor)" id="E5ModelToolBar (Constructor)" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.__init__" />
+      <keyword name="E5ModelToolBar._build" id="E5ModelToolBar._build" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar._build" />
+      <keyword name="E5ModelToolBar._createMenu" id="E5ModelToolBar._createMenu" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar._createMenu" />
+      <keyword name="E5ModelToolBar.dragEnterEvent" id="E5ModelToolBar.dragEnterEvent" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.dragEnterEvent" />
+      <keyword name="E5ModelToolBar.dropEvent" id="E5ModelToolBar.dropEvent" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.dropEvent" />
+      <keyword name="E5ModelToolBar.eventFilter" id="E5ModelToolBar.eventFilter" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.eventFilter" />
+      <keyword name="E5ModelToolBar.hideEvent" id="E5ModelToolBar.hideEvent" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.hideEvent" />
+      <keyword name="E5ModelToolBar.index" id="E5ModelToolBar.index" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.index" />
+      <keyword name="E5ModelToolBar.model" id="E5ModelToolBar.model" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.model" />
+      <keyword name="E5ModelToolBar.mouseMoveEvent" id="E5ModelToolBar.mouseMoveEvent" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.mouseMoveEvent" />
+      <keyword name="E5ModelToolBar.resetFlags" id="E5ModelToolBar.resetFlags" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.resetFlags" />
+      <keyword name="E5ModelToolBar.rootIndex" id="E5ModelToolBar.rootIndex" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.rootIndex" />
+      <keyword name="E5ModelToolBar.setModel" id="E5ModelToolBar.setModel" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.setModel" />
+      <keyword name="E5ModelToolBar.setRootIndex" id="E5ModelToolBar.setRootIndex" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.setRootIndex" />
+      <keyword name="E5ModelToolBar.showEvent" id="E5ModelToolBar.showEvent" ref="eric5.E5Gui.E5ModelToolBar.html#E5ModelToolBar.showEvent" />
       <keyword name="Project (Package)" id="Project (Package)" ref="index-eric5.Project.html" />
       <keyword name="DebuggerPropertiesDialog (Module)" id="DebuggerPropertiesDialog (Module)" ref="eric5.Project.DebuggerPropertiesDialog.html" />
       <keyword name="DebuggerPropertiesDialog" id="DebuggerPropertiesDialog" ref="eric5.Project.DebuggerPropertiesDialog.html#DebuggerPropertiesDialog" />
@@ -4359,7 +4359,7 @@
       <keyword name="Project.__writeUserProperties" id="Project.__writeUserProperties" ref="eric5.Project.Project.html#Project.__writeUserProperties" />
       <keyword name="Project.__writeXMLProject" id="Project.__writeXMLProject" ref="eric5.Project.Project.html#Project.__writeXMLProject" />
       <keyword name="Project.addDirectory" id="Project.addDirectory" ref="eric5.Project.Project.html#Project.addDirectory" />
-      <keyword name="Project.addE4Actions" id="Project.addE4Actions" ref="eric5.Project.Project.html#Project.addE4Actions" />
+      <keyword name="Project.addE5Actions" id="Project.addE5Actions" ref="eric5.Project.Project.html#Project.addE5Actions" />
       <keyword name="Project.addFiles" id="Project.addFiles" ref="eric5.Project.Project.html#Project.addFiles" />
       <keyword name="Project.addIdlDir" id="Project.addIdlDir" ref="eric5.Project.Project.html#Project.addIdlDir" />
       <keyword name="Project.addIdlFiles" id="Project.addIdlFiles" ref="eric5.Project.Project.html#Project.addIdlFiles" />
@@ -4428,7 +4428,7 @@
       <keyword name="Project.othersAdded" id="Project.othersAdded" ref="eric5.Project.Project.html#Project.othersAdded" />
       <keyword name="Project.registerProjectType" id="Project.registerProjectType" ref="eric5.Project.Project.html#Project.registerProjectType" />
       <keyword name="Project.removeDirectory" id="Project.removeDirectory" ref="eric5.Project.Project.html#Project.removeDirectory" />
-      <keyword name="Project.removeE4Actions" id="Project.removeE4Actions" ref="eric5.Project.Project.html#Project.removeE4Actions" />
+      <keyword name="Project.removeE5Actions" id="Project.removeE5Actions" ref="eric5.Project.Project.html#Project.removeE5Actions" />
       <keyword name="Project.removeFile" id="Project.removeFile" ref="eric5.Project.Project.html#Project.removeFile" />
       <keyword name="Project.removeLanguageFile" id="Project.removeLanguageFile" ref="eric5.Project.Project.html#Project.removeLanguageFile" />
       <keyword name="Project.renameFile" id="Project.renameFile" ref="eric5.Project.Project.html#Project.renameFile" />
@@ -8916,26 +8916,26 @@
       <file>eric5.DocumentationTools.QtHelpGenerator.html</file>
       <file>eric5.DocumentationTools.TemplatesListsStyle.html</file>
       <file>eric5.DocumentationTools.TemplatesListsStyleCSS.html</file>
-      <file>eric5.E4Gui.E4Action.html</file>
-      <file>eric5.E4Gui.E4Application.html</file>
-      <file>eric5.E4Gui.E4Completers.html</file>
-      <file>eric5.E4Gui.E4Led.html</file>
-      <file>eric5.E4Gui.E4LineEdit.html</file>
-      <file>eric5.E4Gui.E4ListView.html</file>
-      <file>eric5.E4Gui.E4ModelMenu.html</file>
-      <file>eric5.E4Gui.E4ModelToolBar.html</file>
-      <file>eric5.E4Gui.E4SideBar.html</file>
-      <file>eric5.E4Gui.E4SingleApplication.html</file>
-      <file>eric5.E4Gui.E4SqueezeLabels.html</file>
-      <file>eric5.E4Gui.E4TabWidget.html</file>
-      <file>eric5.E4Gui.E4TableView.html</file>
-      <file>eric5.E4Gui.E4ToolBarDialog.html</file>
-      <file>eric5.E4Gui.E4ToolBarManager.html</file>
-      <file>eric5.E4Gui.E4ToolBox.html</file>
-      <file>eric5.E4Gui.E4TreeSortFilterProxyModel.html</file>
-      <file>eric5.E4Gui.E4TreeView.html</file>
       <file>eric5.E5Graphics.E5ArrowItem.html</file>
       <file>eric5.E5Graphics.E5GraphicsView.html</file>
+      <file>eric5.E5Gui.E5Action.html</file>
+      <file>eric5.E5Gui.E5Application.html</file>
+      <file>eric5.E5Gui.E5Completers.html</file>
+      <file>eric5.E5Gui.E5Led.html</file>
+      <file>eric5.E5Gui.E5LineEdit.html</file>
+      <file>eric5.E5Gui.E5ListView.html</file>
+      <file>eric5.E5Gui.E5ModelMenu.html</file>
+      <file>eric5.E5Gui.E5ModelToolBar.html</file>
+      <file>eric5.E5Gui.E5SideBar.html</file>
+      <file>eric5.E5Gui.E5SingleApplication.html</file>
+      <file>eric5.E5Gui.E5SqueezeLabels.html</file>
+      <file>eric5.E5Gui.E5TabWidget.html</file>
+      <file>eric5.E5Gui.E5TableView.html</file>
+      <file>eric5.E5Gui.E5ToolBarDialog.html</file>
+      <file>eric5.E5Gui.E5ToolBarManager.html</file>
+      <file>eric5.E5Gui.E5ToolBox.html</file>
+      <file>eric5.E5Gui.E5TreeSortFilterProxyModel.html</file>
+      <file>eric5.E5Gui.E5TreeView.html</file>
       <file>eric5.E5Network.E5NetworkHeaderDetailsDialog.html</file>
       <file>eric5.E5Network.E5NetworkMonitor.html</file>
       <file>eric5.E5XML.Config.html</file>
@@ -9392,8 +9392,8 @@
       <file>index-eric5.DebugClients.html</file>
       <file>index-eric5.Debugger.html</file>
       <file>index-eric5.DocumentationTools.html</file>
-      <file>index-eric5.E4Gui.html</file>
       <file>index-eric5.E5Graphics.html</file>
+      <file>index-eric5.E5Gui.html</file>
       <file>index-eric5.E5Network.html</file>
       <file>index-eric5.E5XML.html</file>
       <file>index-eric5.Globals.html</file>

@@ -12,9 +12,9 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
-from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
+from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
 from .Ui_PropertiesDialog import Ui_PropertiesDialog
 from .TranslationPropertiesDialog import TranslationPropertiesDialog
@@ -48,8 +48,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         self.transPropertiesDlg = None
         self.spellPropertiesDlg = None
         
-        self.dirCompleter = E4DirCompleter(self.dirEdit)
-        self.mainscriptCompleter = E4FileCompleter(self.mainscriptEdit)
+        self.dirCompleter = E5DirCompleter(self.dirEdit)
+        self.mainscriptCompleter = E5FileCompleter(self.mainscriptEdit)
         
         projectLanguages = sorted(
             e5App().getObject("DebugServer").getSupportedLanguages())

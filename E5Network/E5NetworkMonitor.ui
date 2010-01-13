@@ -63,7 +63,7 @@
     </layout>
    </item>
    <item>
-    <widget class="E4TableView" name="requestsList">
+    <widget class="E5TableView" name="requestsList">
      <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
@@ -184,9 +184,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>E4TableView</class>
+   <class>E5TableView</class>
    <extends>QTableView</extends>
-   <header>E4Gui/E4TableView.h</header>
+   <header>E5Gui/E5TableView.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

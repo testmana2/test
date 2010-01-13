@@ -17,7 +17,7 @@ import urllib.parse
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .PluginManager import PluginManager
 from .Ui_PluginInstallDialog import Ui_PluginInstallDialog

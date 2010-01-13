@@ -10,7 +10,7 @@ Module implementing the Subversion command dialog.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .Ui_SvnCommandDialog import Ui_SvnCommandDialog
 
@@ -36,7 +36,7 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.workdirCompleter = E4DirCompleter(self.workdirCombo)
+        self.workdirCompleter = E5DirCompleter(self.workdirCombo)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.okButton.setEnabled(False)

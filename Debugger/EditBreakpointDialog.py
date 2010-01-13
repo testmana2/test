@@ -12,7 +12,7 @@ import os.path
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .Ui_EditBreakpointDialog import Ui_EditBreakpointDialog
 
@@ -43,7 +43,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         self.setModal(modal)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
-        self.filenameCompleter = E4FileCompleter(self.filenameCombo)
+        self.filenameCompleter = E5FileCompleter(self.filenameCombo)
         
         fn, lineno = id
         

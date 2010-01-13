@@ -10,7 +10,7 @@ Module implementing a dialog to manage history.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4TreeSortFilterProxyModel import E4TreeSortFilterProxyModel
+from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 
 import Helpviewer.HelpWindow
 from .HistoryModel import HistoryModel
@@ -44,7 +44,7 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
             self.__historyManager = Helpviewer.HelpWindow.HelpWindow.historyManager()
         
         self.__model = self.__historyManager.historyTreeModel()
-        self.__proxyModel = E4TreeSortFilterProxyModel(self)
+        self.__proxyModel = E5TreeSortFilterProxyModel(self)
         self.__proxyModel.setSortRole(HistoryModel.DateTimeRole)
         self.__proxyModel.setFilterKeyColumn(-1)
         self.__proxyModel.setSourceModel(self.__model)

@@ -12,7 +12,7 @@ some repository information and an abstract base class. The individual
 interfaces (i.e. CVS) have to be subclasses of this base class.
 """
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 import Preferences
 

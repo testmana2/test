@@ -42,8 +42,8 @@ from .Passwords.PasswordManager import PasswordManager
 from .Network.NetworkAccessManager import NetworkAccessManager
 from .AdBlock.AdBlockManager import AdBlockManager
 
-from E4Gui.E4TabWidget import E4TabWidget
-from E4Gui.E4Action import E4Action
+from E5Gui.E5TabWidget import E5TabWidget
+from E5Gui.E5Action import E5Action
 
 from E5Network.E5NetworkMonitor import E5NetworkMonitor
 
@@ -118,7 +118,7 @@ class HelpWindow(QMainWindow):
             self.__progressBar = None
             
             self.tabContextMenuIndex = -1
-            self.tabWidget = E4TabWidget(self, dnd = True)
+            self.tabWidget = E5TabWidget(self, dnd = True)
             self.connect(self.tabWidget, SIGNAL('currentChanged(int)'),
                 self.__currentChanged)
             self.tabWidget.setTabContextMenuPolicy(Qt.CustomContextMenu)
@@ -323,7 +323,7 @@ class HelpWindow(QMainWindow):
         # list of all actions
         self.__actions = []
         
-        self.newTabAct = E4Action(self.trUtf8('New Tab'), 
+        self.newTabAct = E5Action(self.trUtf8('New Tab'), 
             UI.PixmapCache.getIcon("new.png"),
             self.trUtf8('&New Tab'), 
             QKeySequence(self.trUtf8("Ctrl+T","File|New Tab")), 
@@ -336,7 +336,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.newTabAct, SIGNAL('triggered()'), self.newTab)
         self.__actions.append(self.newTabAct)
         
-        self.newAct = E4Action(self.trUtf8('New Window'), 
+        self.newAct = E5Action(self.trUtf8('New Window'), 
             UI.PixmapCache.getIcon("newWindow.png"),
             self.trUtf8('New &Window'), 
             QKeySequence(self.trUtf8("Ctrl+N","File|New Window")), 
@@ -349,7 +349,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.newAct, SIGNAL('triggered()'), self.newWindow)
         self.__actions.append(self.newAct)
         
-        self.openAct = E4Action(self.trUtf8('Open File'), 
+        self.openAct = E5Action(self.trUtf8('Open File'), 
             UI.PixmapCache.getIcon("open.png"),
             self.trUtf8('&Open File'), 
             QKeySequence(self.trUtf8("Ctrl+O","File|Open")), 
@@ -363,7 +363,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.openAct, SIGNAL('triggered()'), self.__openFile)
         self.__actions.append(self.openAct)
         
-        self.openTabAct = E4Action(self.trUtf8('Open File in New Tab'), 
+        self.openTabAct = E5Action(self.trUtf8('Open File in New Tab'), 
             UI.PixmapCache.getIcon("openNewTab.png"),
             self.trUtf8('Open File in New &Tab'), 
             QKeySequence(self.trUtf8("Shift+Ctrl+O","File|Open in new tab")), 
@@ -378,7 +378,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.openTabAct, SIGNAL('triggered()'), self.__openFileNewTab)
         self.__actions.append(self.openTabAct)
         
-        self.saveAsAct = E4Action(self.trUtf8('Save As '), 
+        self.saveAsAct = E5Action(self.trUtf8('Save As '), 
             UI.PixmapCache.getIcon("fileSaveAs.png"),
             self.trUtf8('&Save As...'), 
             QKeySequence(self.trUtf8("Shift+Ctrl+S","File|Save As")), 
@@ -393,7 +393,7 @@ class HelpWindow(QMainWindow):
         self.__actions.append(self.saveAsAct)
         
         bookmarksManager = self.bookmarksManager()
-        self.importBookmarksAct = E4Action(self.trUtf8('Import Bookmarks'), 
+        self.importBookmarksAct = E5Action(self.trUtf8('Import Bookmarks'), 
             self.trUtf8('&Import Bookmarks...'), 
             0, 0, self, 'help_file_import_bookmarks')
         self.importBookmarksAct.setStatusTip(\
@@ -406,7 +406,7 @@ class HelpWindow(QMainWindow):
                      bookmarksManager.importBookmarks)
         self.__actions.append(self.importBookmarksAct)
         
-        self.exportBookmarksAct = E4Action(self.trUtf8('Export Bookmarks'), 
+        self.exportBookmarksAct = E5Action(self.trUtf8('Export Bookmarks'), 
             self.trUtf8('&Export Bookmarks...'), 
             0, 0, self, 'help_file_export_bookmarks')
         self.exportBookmarksAct.setStatusTip(\
@@ -419,7 +419,7 @@ class HelpWindow(QMainWindow):
                      bookmarksManager.exportBookmarks)
         self.__actions.append(self.exportBookmarksAct)
         
-        self.printAct = E4Action(self.trUtf8('Print'), 
+        self.printAct = E5Action(self.trUtf8('Print'), 
             UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('&Print'), 
             QKeySequence(self.trUtf8("Ctrl+P","File|Print")), 
@@ -432,7 +432,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.printAct, SIGNAL('triggered()'), self.__printFile)
         self.__actions.append(self.printAct)
         
-        self.printPreviewAct = E4Action(self.trUtf8('Print Preview'), 
+        self.printPreviewAct = E5Action(self.trUtf8('Print Preview'), 
             UI.PixmapCache.getIcon("printPreview.png"),
             self.trUtf8('Print Preview'), 
             0, 0, self, 'help_file_print_preview')
@@ -446,7 +446,7 @@ class HelpWindow(QMainWindow):
             self.__printPreviewFile)
         self.__actions.append(self.printPreviewAct)
         
-        self.closeAct = E4Action(self.trUtf8('Close'), 
+        self.closeAct = E5Action(self.trUtf8('Close'), 
             UI.PixmapCache.getIcon("close.png"),
             self.trUtf8('&Close'), 
             QKeySequence(self.trUtf8("Ctrl+W","File|Close")), 
@@ -459,7 +459,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.closeAct, SIGNAL('triggered()'), self.__close)
         self.__actions.append(self.closeAct)
         
-        self.closeAllAct = E4Action(self.trUtf8('Close All'), 
+        self.closeAllAct = E5Action(self.trUtf8('Close All'), 
             self.trUtf8('Close &All'), 
             0, 0, self, 'help_file_close_all')
         self.closeAllAct.setStatusTip(self.trUtf8('Close all help windows'))
@@ -470,7 +470,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.closeAllAct, SIGNAL('triggered()'), self.__closeAll)
         self.__actions.append(self.closeAllAct)
         
-        self.privateBrowsingAct = E4Action(self.trUtf8('Private Browsing'), 
+        self.privateBrowsingAct = E5Action(self.trUtf8('Private Browsing'), 
             UI.PixmapCache.getIcon("privateBrowsing.png"),
             self.trUtf8('Private &Browsing'), 
             0, 0, self, 'help_file_private_browsing')
@@ -485,7 +485,7 @@ class HelpWindow(QMainWindow):
         self.privateBrowsingAct.setCheckable(True)
         self.__actions.append(self.privateBrowsingAct)
         
-        self.exitAct = E4Action(self.trUtf8('Quit'), 
+        self.exitAct = E5Action(self.trUtf8('Quit'), 
             UI.PixmapCache.getIcon("exit.png"),
             self.trUtf8('&Quit'), 
             QKeySequence(self.trUtf8("Ctrl+Q","File|Quit")), 
@@ -502,7 +502,7 @@ class HelpWindow(QMainWindow):
                          qApp, SLOT('closeAllWindows()'))
         self.__actions.append(self.exitAct)
         
-        self.backAct = E4Action(self.trUtf8('Backward'), 
+        self.backAct = E5Action(self.trUtf8('Backward'), 
             UI.PixmapCache.getIcon("back.png"),
             self.trUtf8('&Backward'), 
             QKeySequence(self.trUtf8("Alt+Left","Go|Backward")), 
@@ -517,7 +517,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.backAct, SIGNAL('triggered()'), self.__backward)
         self.__actions.append(self.backAct)
         
-        self.forwardAct = E4Action(self.trUtf8('Forward'), 
+        self.forwardAct = E5Action(self.trUtf8('Forward'), 
             UI.PixmapCache.getIcon("forward.png"),
             self.trUtf8('&Forward'), 
             QKeySequence(self.trUtf8("Alt+Right","Go|Forward")), 
@@ -532,7 +532,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.forwardAct, SIGNAL('triggered()'), self.__forward)
         self.__actions.append(self.forwardAct)
         
-        self.homeAct = E4Action(self.trUtf8('Home'), 
+        self.homeAct = E5Action(self.trUtf8('Home'), 
             UI.PixmapCache.getIcon("home.png"),
             self.trUtf8('&Home'), 
             QKeySequence(self.trUtf8("Ctrl+Home","Go|Home")), 
@@ -545,7 +545,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.homeAct, SIGNAL('triggered()'), self.__home)
         self.__actions.append(self.homeAct)
         
-        self.reloadAct = E4Action(self.trUtf8('Reload'), 
+        self.reloadAct = E5Action(self.trUtf8('Reload'), 
             UI.PixmapCache.getIcon("reload.png"),
             self.trUtf8('&Reload'), 
             QKeySequence(self.trUtf8("Ctrl+R","Go|Reload")), 
@@ -559,7 +559,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.reloadAct, SIGNAL('triggered()'), self.__reload)
         self.__actions.append(self.reloadAct)
         
-        self.stopAct = E4Action(self.trUtf8('Stop'), 
+        self.stopAct = E5Action(self.trUtf8('Stop'), 
             UI.PixmapCache.getIcon("stopLoading.png"),
             self.trUtf8('&Stop'), 
             QKeySequence(self.trUtf8("Ctrl+.","Go|Stop")), 
@@ -573,7 +573,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.stopAct, SIGNAL('triggered()'), self.__stopLoading)
         self.__actions.append(self.stopAct)
         
-        self.copyAct = E4Action(self.trUtf8('Copy'), 
+        self.copyAct = E5Action(self.trUtf8('Copy'), 
             UI.PixmapCache.getIcon("editCopy.png"),
             self.trUtf8('&Copy'), 
             QKeySequence(self.trUtf8("Ctrl+C","Edit|Copy")), 
@@ -586,7 +586,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.copyAct, SIGNAL('triggered()'), self.__copy)
         self.__actions.append(self.copyAct)
         
-        self.findAct = E4Action(self.trUtf8('Find...'), 
+        self.findAct = E5Action(self.trUtf8('Find...'), 
             UI.PixmapCache.getIcon("find.png"),
             self.trUtf8('&Find...'), 
             QKeySequence(self.trUtf8("Ctrl+F","Edit|Find")), 
@@ -599,7 +599,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.findAct, SIGNAL('triggered()'), self.__find)
         self.__actions.append(self.findAct)
         
-        self.findNextAct = E4Action(self.trUtf8('Find next'), 
+        self.findNextAct = E5Action(self.trUtf8('Find next'), 
             UI.PixmapCache.getIcon("findNext.png"),
             self.trUtf8('Find &next'), 
             QKeySequence(self.trUtf8("F3","Edit|Find next")), 
@@ -613,7 +613,7 @@ class HelpWindow(QMainWindow):
             self.connect(self.findNextAct, SIGNAL('triggered()'), self.findDlg.findNext)
         self.__actions.append(self.findNextAct)
         
-        self.findPrevAct = E4Action(self.trUtf8('Find previous'), 
+        self.findPrevAct = E5Action(self.trUtf8('Find previous'), 
             UI.PixmapCache.getIcon("findPrev.png"),
             self.trUtf8('Find &previous'), 
             QKeySequence(self.trUtf8("Shift+F3","Edit|Find previous")), 
@@ -629,7 +629,7 @@ class HelpWindow(QMainWindow):
                          self.findDlg.findPrevious)
         self.__actions.append(self.findPrevAct)
         
-        self.bookmarksManageAct = E4Action(self.trUtf8('Manage Bookmarks'), 
+        self.bookmarksManageAct = E5Action(self.trUtf8('Manage Bookmarks'), 
             self.trUtf8('&Manage Bookmarks...'), 
             QKeySequence(self.trUtf8("Ctrl+Shift+B", "Help|Manage bookmarks")), 
             0, self, 'help_bookmarks_manage')
@@ -643,7 +643,7 @@ class HelpWindow(QMainWindow):
             self.__showBookmarksDialog)
         self.__actions.append(self.bookmarksManageAct)
         
-        self.bookmarksAddAct = E4Action(self.trUtf8('Add Bookmark'), 
+        self.bookmarksAddAct = E5Action(self.trUtf8('Add Bookmark'), 
             UI.PixmapCache.getIcon("addBookmark.png"),
             self.trUtf8('Add &Bookmark...'), 
             QKeySequence(self.trUtf8("Ctrl+D", "Help|Add bookmark")), 
@@ -657,7 +657,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.bookmarksAddAct, SIGNAL('triggered()'), self.__addBookmark)
         self.__actions.append(self.bookmarksAddAct)
         
-        self.bookmarksAddFolderAct = E4Action(self.trUtf8('Add Folder'), 
+        self.bookmarksAddFolderAct = E5Action(self.trUtf8('Add Folder'), 
             self.trUtf8('Add &Folder...'), 
             0, 0, self, 'help_bookmark_show_all')
         self.bookmarksAddFolderAct.setStatusTip(self.trUtf8(
@@ -670,7 +670,7 @@ class HelpWindow(QMainWindow):
             self.__addBookmarkFolder)
         self.__actions.append(self.bookmarksAddFolderAct)
         
-        self.bookmarksAllTabsAct = E4Action(self.trUtf8('Bookmark All Tabs'), 
+        self.bookmarksAllTabsAct = E5Action(self.trUtf8('Bookmark All Tabs'), 
             self.trUtf8('Bookmark All Tabs...'), 
             0, 0, self, 'help_bookmark_all_tabs')
         self.bookmarksAllTabsAct.setStatusTip(self.trUtf8(
@@ -684,7 +684,7 @@ class HelpWindow(QMainWindow):
             self.__bookmarkAll)
         self.__actions.append(self.bookmarksAllTabsAct)
         
-        self.whatsThisAct = E4Action(self.trUtf8('What\'s This?'), 
+        self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'), 
             UI.PixmapCache.getIcon("whatsThis.png"),
             self.trUtf8('&What\'s This?'), 
             QKeySequence(self.trUtf8("Shift+F1","Help|What's This?'")), 
@@ -701,7 +701,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.whatsThisAct, SIGNAL('triggered()'), self.__whatsThis)
         self.__actions.append(self.whatsThisAct)
         
-        self.aboutAct = E4Action(self.trUtf8('About'), 
+        self.aboutAct = E5Action(self.trUtf8('About'), 
             self.trUtf8('&About'), 
             0, 0, self, 'help_help_about')
         self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
@@ -712,7 +712,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.aboutAct, SIGNAL('triggered()'), self.__about)
         self.__actions.append(self.aboutAct)
         
-        self.aboutQtAct = E4Action(self.trUtf8('About Qt'), 
+        self.aboutQtAct = E5Action(self.trUtf8('About Qt'), 
             self.trUtf8('About &Qt'), 
             0, 0, self, 'help_help_about_qt')
         self.aboutQtAct.setStatusTip(\
@@ -724,7 +724,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.aboutQtAct, SIGNAL('triggered()'), self.__aboutQt)
         self.__actions.append(self.aboutQtAct)
         
-        self.zoomInAct = E4Action(self.trUtf8('Zoom in'), 
+        self.zoomInAct = E5Action(self.trUtf8('Zoom in'), 
             UI.PixmapCache.getIcon("zoomIn.png"),
             self.trUtf8('Zoom &in'), 
             QKeySequence(self.trUtf8("Ctrl++","View|Zoom in")), 
@@ -737,7 +737,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.zoomInAct, SIGNAL('triggered()'), self.__zoomIn)
         self.__actions.append(self.zoomInAct)
         
-        self.zoomOutAct = E4Action(self.trUtf8('Zoom out'), 
+        self.zoomOutAct = E5Action(self.trUtf8('Zoom out'), 
             UI.PixmapCache.getIcon("zoomOut.png"),
             self.trUtf8('Zoom &out'), 
             QKeySequence(self.trUtf8("Ctrl+-","View|Zoom out")), 
@@ -750,7 +750,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.zoomOutAct, SIGNAL('triggered()'), self.__zoomOut)
         self.__actions.append(self.zoomOutAct)
         
-        self.zoomResetAct = E4Action(self.trUtf8('Zoom reset'), 
+        self.zoomResetAct = E5Action(self.trUtf8('Zoom reset'), 
             UI.PixmapCache.getIcon("zoomReset.png"),
             self.trUtf8('Zoom &reset'), 
             QKeySequence(self.trUtf8("Ctrl+0","View|Zoom reset")), 
@@ -765,7 +765,7 @@ class HelpWindow(QMainWindow):
         self.__actions.append(self.zoomResetAct)
         
         if hasattr(QWebSettings, 'ZoomTextOnly'):
-            self.zoomTextOnlyAct = E4Action(self.trUtf8('Zoom text only'), 
+            self.zoomTextOnlyAct = E5Action(self.trUtf8('Zoom text only'), 
                 self.trUtf8('Zoom &text only'), 
                 0, 0, self, 'help_view_zoom_text_only')
             self.zoomTextOnlyAct.setCheckable(True)
@@ -781,7 +781,7 @@ class HelpWindow(QMainWindow):
         else:
             self.zoomTextOnlyAct = None
         
-        self.pageSourceAct = E4Action(self.trUtf8('Show page source'), 
+        self.pageSourceAct = E5Action(self.trUtf8('Show page source'), 
             self.trUtf8('Show page source'), 
             QKeySequence(self.trUtf8('Ctrl+U')), 0,
             self, 'help_show_page_source')
@@ -794,7 +794,7 @@ class HelpWindow(QMainWindow):
         self.__actions.append(self.pageSourceAct)
         self.addAction(self.pageSourceAct)
         
-        self.fullScreenAct = E4Action(self.trUtf8('Full Screen'), 
+        self.fullScreenAct = E5Action(self.trUtf8('Full Screen'), 
             UI.PixmapCache.getIcon("windowFullscreen.png"),
             self.trUtf8('&Full Screen'), 
             QKeySequence(self.trUtf8('F11')), 0,
@@ -803,7 +803,7 @@ class HelpWindow(QMainWindow):
         self.__actions.append(self.fullScreenAct)
         self.addAction(self.fullScreenAct)
         
-        self.nextTabAct = E4Action(self.trUtf8('Show next tab'), 
+        self.nextTabAct = E5Action(self.trUtf8('Show next tab'), 
             self.trUtf8('Show next tab'), 
             QKeySequence(self.trUtf8('Ctrl+Alt+Tab')), 0,
             self, 'help_view_next_tab')
@@ -811,7 +811,7 @@ class HelpWindow(QMainWindow):
         self.__actions.append(self.nextTabAct)
         self.addAction(self.nextTabAct)
         
-        self.prevTabAct = E4Action(self.trUtf8('Show previous tab'), 
+        self.prevTabAct = E5Action(self.trUtf8('Show previous tab'), 
             self.trUtf8('Show previous tab'), 
             QKeySequence(self.trUtf8('Shift+Ctrl+Alt+Tab')), 0,
             self, 'help_view_previous_tab')
@@ -819,7 +819,7 @@ class HelpWindow(QMainWindow):
         self.__actions.append(self.prevTabAct)
         self.addAction(self.prevTabAct)
         
-        self.switchTabAct = E4Action(self.trUtf8('Switch between tabs'), 
+        self.switchTabAct = E5Action(self.trUtf8('Switch between tabs'), 
             self.trUtf8('Switch between tabs'), 
             QKeySequence(self.trUtf8('Ctrl+1')), 0,
             self, 'help_switch_tabs')
@@ -827,7 +827,7 @@ class HelpWindow(QMainWindow):
         self.__actions.append(self.switchTabAct)
         self.addAction(self.switchTabAct)
         
-        self.prefAct = E4Action(self.trUtf8('Preferences'),
+        self.prefAct = E5Action(self.trUtf8('Preferences'),
             UI.PixmapCache.getIcon("configure.png"),
             self.trUtf8('&Preferences...'), 0, 0, self, 'help_preferences')
         self.prefAct.setStatusTip(self.trUtf8('Set the prefered configuration'))
@@ -839,7 +839,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.prefAct, SIGNAL('triggered()'), self.__showPreferences)
         self.__actions.append(self.prefAct)
 
-        self.acceptedLanguagesAct = E4Action(self.trUtf8('Languages'),
+        self.acceptedLanguagesAct = E5Action(self.trUtf8('Languages'),
             UI.PixmapCache.getIcon("flag.png"),
             self.trUtf8('&Languages...'), 0, 0, self, 'help_accepted_languages')
         self.acceptedLanguagesAct.setStatusTip(self.trUtf8(
@@ -852,7 +852,7 @@ class HelpWindow(QMainWindow):
                      self.__showAcceptedLanguages)
         self.__actions.append(self.acceptedLanguagesAct)
         
-        self.cookiesAct = E4Action(self.trUtf8('Cookies'),
+        self.cookiesAct = E5Action(self.trUtf8('Cookies'),
             UI.PixmapCache.getIcon("cookie.png"),
             self.trUtf8('C&ookies...'), 0, 0, self, 'help_cookies')
         self.cookiesAct.setStatusTip(self.trUtf8(
@@ -865,7 +865,7 @@ class HelpWindow(QMainWindow):
                      self.__showCookiesConfiguration)
         self.__actions.append(self.cookiesAct)
         
-        self.syncTocAct = E4Action(self.trUtf8('Sync with Table of Contents'), 
+        self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'), 
             UI.PixmapCache.getIcon("syncToc.png"),
             self.trUtf8('Sync with Table of Contents'), 
             0, 0, self, 'help_sync_toc')
@@ -878,7 +878,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.syncTocAct, SIGNAL('triggered()'), self.__syncTOC)
         self.__actions.append(self.syncTocAct)
         
-        self.showTocAct = E4Action(self.trUtf8('Table of Contents'), 
+        self.showTocAct = E5Action(self.trUtf8('Table of Contents'), 
             self.trUtf8('Table of Contents'), 
             0, 0, self, 'help_show_toc')
         self.showTocAct.setStatusTip(self.trUtf8(
@@ -890,7 +890,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.showTocAct, SIGNAL('triggered()'), self.__showTocWindow)
         self.__actions.append(self.showTocAct)
         
-        self.showIndexAct = E4Action(self.trUtf8('Index'), 
+        self.showIndexAct = E5Action(self.trUtf8('Index'), 
             self.trUtf8('Index'), 
             0, 0, self, 'help_show_index')
         self.showIndexAct.setStatusTip(self.trUtf8(
@@ -902,7 +902,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.showIndexAct, SIGNAL('triggered()'), self.__showIndexWindow)
         self.__actions.append(self.showIndexAct)
         
-        self.showSearchAct = E4Action(self.trUtf8('Search'), 
+        self.showSearchAct = E5Action(self.trUtf8('Search'), 
             self.trUtf8('Search'), 
             0, 0, self, 'help_show_search')
         self.showSearchAct.setStatusTip(self.trUtf8(
@@ -914,7 +914,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.showSearchAct, SIGNAL('triggered()'), self.__showSearchWindow)
         self.__actions.append(self.showSearchAct)
         
-        self.manageQtHelpDocsAct = E4Action(self.trUtf8('Manage QtHelp Documents'), 
+        self.manageQtHelpDocsAct = E5Action(self.trUtf8('Manage QtHelp Documents'), 
             self.trUtf8('Manage QtHelp &Documents'), 
             0, 0, self, 'help_qthelp_documents')
         self.manageQtHelpDocsAct.setStatusTip(self.trUtf8(
@@ -927,7 +927,7 @@ class HelpWindow(QMainWindow):
                      self.__manageQtHelpDocumentation)
         self.__actions.append(self.manageQtHelpDocsAct)
         
-        self.manageQtHelpFiltersAct = E4Action(self.trUtf8('Manage QtHelp Filters'), 
+        self.manageQtHelpFiltersAct = E5Action(self.trUtf8('Manage QtHelp Filters'), 
             self.trUtf8('Manage QtHelp &Filters'), 
             0, 0, self, 'help_qthelp_filters')
         self.manageQtHelpFiltersAct.setStatusTip(self.trUtf8(
@@ -940,7 +940,7 @@ class HelpWindow(QMainWindow):
                      self.__manageQtHelpFilters)
         self.__actions.append(self.manageQtHelpFiltersAct)
         
-        self.reindexDocumentationAct = E4Action(self.trUtf8('Reindex Documentation'), 
+        self.reindexDocumentationAct = E5Action(self.trUtf8('Reindex Documentation'), 
             self.trUtf8('&Reindex Documentation'), 
             0, 0, self, 'help_qthelp_reindex')
         self.reindexDocumentationAct.setStatusTip(self.trUtf8(
@@ -954,7 +954,7 @@ class HelpWindow(QMainWindow):
                          self.__searchEngine.reindexDocumentation)
         self.__actions.append(self.reindexDocumentationAct)
         
-        self.clearPrivateDataAct = E4Action(self.trUtf8('Clear private data'), 
+        self.clearPrivateDataAct = E5Action(self.trUtf8('Clear private data'), 
                       self.trUtf8('&Clear private data'), 
                       0, 0,
                       self, 'help_clear_private_data')
@@ -968,7 +968,7 @@ class HelpWindow(QMainWindow):
                      self.__clearPrivateData)
         self.__actions.append(self.clearPrivateDataAct)
         
-        self.clearIconsAct = E4Action(self.trUtf8('Clear icons database'), 
+        self.clearIconsAct = E5Action(self.trUtf8('Clear icons database'), 
                       self.trUtf8('Clear &icons database'), 
                       0, 0,
                       self, 'help_clear_icons_db')
@@ -980,7 +980,7 @@ class HelpWindow(QMainWindow):
         self.connect(self.clearIconsAct, SIGNAL('triggered()'), self.__clearIconsDatabase)
         self.__actions.append(self.clearIconsAct)
         
-        self.searchEnginesAct = E4Action(self.trUtf8('Configure Search Engines'), 
+        self.searchEnginesAct = E5Action(self.trUtf8('Configure Search Engines'), 
                       self.trUtf8('Configure &Search Engines...'), 
                       0, 0,
                       self, 'help_search_engines')
@@ -994,7 +994,7 @@ class HelpWindow(QMainWindow):
                      self.__showEnginesConfigurationDialog)
         self.__actions.append(self.searchEnginesAct)
         
-        self.passwordsAct = E4Action(self.trUtf8('Manage Saved Passwords'), 
+        self.passwordsAct = E5Action(self.trUtf8('Manage Saved Passwords'), 
                       self.trUtf8('Manage Saved Passwords...'), 
                       0, 0,
                       self, 'help_manage_passwords')
@@ -1008,7 +1008,7 @@ class HelpWindow(QMainWindow):
                      self.__showPasswordsDialog)
         self.__actions.append(self.passwordsAct)
         
-        self.adblockAct = E4Action(self.trUtf8('Ad Block'), 
+        self.adblockAct = E5Action(self.trUtf8('Ad Block'), 
                       self.trUtf8('&Ad Block...'), 
                       0, 0,
                       self, 'help_adblock')
@@ -1022,7 +1022,7 @@ class HelpWindow(QMainWindow):
                      self.__showAdBlockDialog)
         self.__actions.append(self.adblockAct)
         
-        self.toolsMonitorAct = E4Action(self.trUtf8('Show Network Monitor'), 
+        self.toolsMonitorAct = E5Action(self.trUtf8('Show Network Monitor'), 
                       self.trUtf8('Show &Network Monitor'), 
                       0, 0,
                       self, 'help_tools_network_monitor')
@@ -1045,7 +1045,7 @@ class HelpWindow(QMainWindow):
         """
         Public method to get a list of all actions.
         
-        @return list of all actions (list of E4Action)
+        @return list of all actions (list of E5Action)
         """
         return self.__actions[:]
         

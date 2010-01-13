@@ -13,7 +13,7 @@ from PyQt4.QtGui import *
 from .Ui_SearchWidget import Ui_SearchWidget
 from .Ui_ReplaceWidget import Ui_ReplaceWidget
 
-from E4Gui.E4Action import E4Action
+from E5Gui.E5Action import E5Action
 
 import Preferences
 

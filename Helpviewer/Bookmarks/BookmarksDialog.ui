@@ -59,7 +59,7 @@
     </layout>
    </item>
    <item>
-    <widget class="E4TreeView" name="bookmarksTree">
+    <widget class="E5TreeView" name="bookmarksTree">
      <property name="dragDropMode">
       <enum>QAbstractItemView::InternalMove</enum>
      </property>
@@ -128,9 +128,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>E4TreeView</class>
+   <class>E5TreeView</class>
    <extends>QTreeView</extends>
-   <header>E4Gui/E4TreeView</header>
+   <header>E5Gui/E5TreeView</header>
   </customwidget>
  </customwidgets>
  <tabstops>

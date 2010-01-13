@@ -10,8 +10,8 @@ Module implementing the QMessageBox wizard plugin.
 from PyQt4.QtCore import QObject, SIGNAL
 from PyQt4.QtGui import QDialog, QMessageBox
 
-from E4Gui.E4Application import e5App
-from E4Gui.E4Action import E4Action
+from E5Gui.E5Application import e5App
+from E5Gui.E5Action import E5Action
 
 from WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog import \
     MessageBoxWizardDialog
@@ -62,13 +62,13 @@ class MessageBoxWizard(QObject):
         menu = self.__ui.getMenu("wizards")
         if menu:
             menu.removeAction(self.action)
-        self.__ui.removeE4Actions([self.action], 'wizards')
+        self.__ui.removeE5Actions([self.action], 'wizards')
     
     def __initAction(self):
         """
         Private method to initialize the action.
         """
-        self.action = E4Action(self.trUtf8('QMessageBox Wizard'),
+        self.action = E5Action(self.trUtf8('QMessageBox Wizard'),
              self.trUtf8('Q&MessageBox Wizard...'), 0, 0, self,
              'wizards_qmessagebox')
         self.action.setStatusTip(self.trUtf8('QMessageBox Wizard'))
@@ -80,7 +80,7 @@ class MessageBoxWizard(QObject):
         ))
         self.connect(self.action, SIGNAL('triggered()'), self.__handle)
         
-        self.__ui.addE4Actions([self.action], 'wizards')
+        self.__ui.addE5Actions([self.action], 'wizards')
 
     def __initMenu(self):
         """

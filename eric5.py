@@ -49,11 +49,11 @@ try:
 except ImportError:
     sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
 
-from E4Gui.E4Application import E4Application
+from E5Gui.E5Application import E5Application
 
 from UI.Info import Program, Version, BugAddress
 from UI.SplashScreen import SplashScreen, NoneSplashScreen
-from E4Gui.E4SingleApplication import E4SingleApplicationClient
+from E5Gui.E5SingleApplication import E5SingleApplicationClient
 
 import Utilities
 from Utilities import Startup
@@ -67,7 +67,7 @@ def handleSingleApplication(ddindex):
     
     @param ddindex index of a '--' option in the options list
     """
-    client = E4SingleApplicationClient()
+    client = E5SingleApplicationClient()
     res = client.connect()
     if res > 0:
         if "--nosplash" in sys.argv and sys.argv.index("--nosplash") < ddindex:
@@ -174,7 +174,7 @@ def main():
     if Preferences.getUI("SingleApplicationMode"):
         handleSingleApplication(ddindex)
     
-    app = E4Application(sys.argv)
+    app = E5Application(sys.argv)
     
     # set the searchpath for icons
     Startup.initializeResourceSearchPath()
@@ -225,8 +225,8 @@ def main():
         str(Preferences.getSystem("StringEncoding"))))
     
     splash.showMessage(QApplication.translate("eric5", "Importing packages..."))
-    # We can only import these after creating the E4Application because they
-    # make Qt calls that need the E4Application to exist.
+    # We can only import these after creating the E5Application because they
+    # make Qt calls that need the E5Application to exist.
     from UI.UserInterface import UserInterface
 
     splash.showMessage(QApplication.translate("eric5", "Generating Main Window..."))

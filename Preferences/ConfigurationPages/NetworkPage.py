@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_NetworkPage import Ui_NetworkPage
@@ -32,7 +32,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.setupUi(self)
         self.setObjectName("NetworkPage")
         
-        self.downloadDirCompleter = E4DirCompleter(self.downloadDirEdit)
+        self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         
         self.proxyTypeCombo.addItem(self.trUtf8("Transparent HTTP"), 0)
         self.proxyTypeCombo.addItem(self.trUtf8("Caching HTTP"), 1)

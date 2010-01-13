@@ -14,7 +14,7 @@ import copy
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
 from DocumentationTools.Config import eric5docDefaultColors, eric5docColorParameterNames
@@ -74,9 +74,9 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         
         self.ppath = ppath
         
-        self.outputDirCompleter = E4DirCompleter(self.outputDirEdit)
-        self.ignoreDirCompleter = E4DirCompleter(self.ignoreDirEdit)
-        self.qtHelpDirCompleter = E4DirCompleter(self.qtHelpDirEdit)
+        self.outputDirCompleter = E5DirCompleter(self.outputDirEdit)
+        self.ignoreDirCompleter = E5DirCompleter(self.ignoreDirEdit)
+        self.qtHelpDirCompleter = E5DirCompleter(self.qtHelpDirEdit)
         
         self.recursionCheckBox.setChecked(self.parameters['useRecursion'])
         self.noindexCheckBox.setChecked(self.parameters['noindex'])

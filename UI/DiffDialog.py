@@ -14,7 +14,7 @@ import time
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .Ui_DiffDialog import Ui_DiffDialog
 import Utilities
@@ -195,8 +195,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         QWidget.__init__(self,parent)
         self.setupUi(self)
         
-        self.file1Completer = E4FileCompleter(self.file1Edit)
-        self.file2Completer = E4FileCompleter(self.file2Edit)
+        self.file1Completer = E5FileCompleter(self.file1Edit)
+        self.file2Completer = E5FileCompleter(self.file2Edit)
         
         self.diffButton = \
             self.buttonBox.addButton(self.trUtf8("Compare"), QDialogButtonBox.ActionRole)

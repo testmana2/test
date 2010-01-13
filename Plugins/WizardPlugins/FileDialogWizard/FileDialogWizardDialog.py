@@ -12,9 +12,9 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
-from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
+from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
 from .Ui_FileDialogWizardDialog import Ui_FileDialogWizardDialog
 
@@ -34,8 +34,8 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.eStartWithCompleter = E4FileCompleter(self.eStartWith)
-        self.eWorkDirCompleter = E4DirCompleter(self.eWorkDir)
+        self.eStartWithCompleter = E5FileCompleter(self.eStartWith)
+        self.eWorkDirCompleter = E5DirCompleter(self.eWorkDir)
         
         self.connect(self.rSaveFile, SIGNAL("toggled(bool)"), 
             self.__toggleConfirmCheckBox)

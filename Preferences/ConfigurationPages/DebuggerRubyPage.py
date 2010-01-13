@@ -10,7 +10,7 @@ Module implementing the Debugger Ruby configuration page.
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_DebuggerRubyPage import Ui_DebuggerRubyPage
@@ -30,7 +30,7 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         self.setupUi(self)
         self.setObjectName("DebuggerRubyPage")
         
-        self.rubyInterpreterCompleter = E4FileCompleter(self.rubyInterpreterEdit)
+        self.rubyInterpreterCompleter = E5FileCompleter(self.rubyInterpreterEdit)
         
         # set initial values
         self.rubyInterpreterEdit.setText(\

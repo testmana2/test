@@ -16,7 +16,7 @@ import QScintilla.Editor
 
 import UI.PixmapCache
 
-from E4Gui.E4Action import E4Action, addActions
+from E5Gui.E5Action import E5Action, addActions
 
 import Utilities
 
@@ -208,7 +208,7 @@ class MdiArea(QMdiArea, ViewManager):
         """
         Protected method to define the user interface actions for window handling.
         """
-        self.tileAct = E4Action(self.trUtf8('Tile'),
+        self.tileAct = E5Action(self.trUtf8('Tile'),
             self.trUtf8('&Tile'), 0, 0, self, 'vm_window_tile')
         self.tileAct.setStatusTip(self.trUtf8('Tile the windows'))
         self.tileAct.setWhatsThis(self.trUtf8(
@@ -218,7 +218,7 @@ class MdiArea(QMdiArea, ViewManager):
         self.connect(self.tileAct, SIGNAL('triggered()'), self.tile)
         self.windowActions.append(self.tileAct)
         
-        self.cascadeAct = E4Action(self.trUtf8('Cascade'),
+        self.cascadeAct = E5Action(self.trUtf8('Cascade'),
             self.trUtf8('&Cascade'), 0, 0, self, 'vm_window_cascade')
         self.cascadeAct.setStatusTip(self.trUtf8('Cascade the windows'))
         self.cascadeAct.setWhatsThis(self.trUtf8(
@@ -228,7 +228,7 @@ class MdiArea(QMdiArea, ViewManager):
         self.connect(self.cascadeAct, SIGNAL('triggered()'), self.cascade)
         self.windowActions.append(self.cascadeAct)
         
-        self.nextChildAct = E4Action(self.trUtf8('Next'),
+        self.nextChildAct = E5Action(self.trUtf8('Next'),
             self.trUtf8('&Next'), 0, 0, self, 'vm_window_next')
         self.nextChildAct.setStatusTip(self.trUtf8('Activate next window'))
         self.nextChildAct.setWhatsThis(self.trUtf8(
@@ -238,7 +238,7 @@ class MdiArea(QMdiArea, ViewManager):
         self.connect(self.nextChildAct, SIGNAL('triggered()'), self.activateNextSubWindow)
         self.windowActions.append(self.nextChildAct)
         
-        self.prevChildAct = E4Action(self.trUtf8('Previous'),
+        self.prevChildAct = E5Action(self.trUtf8('Previous'),
             self.trUtf8('&Previous'), 0, 0, self, 'vm_window_previous')
         self.prevChildAct.setStatusTip(self.trUtf8('Activate previous window'))
         self.prevChildAct.setWhatsThis(self.trUtf8(
@@ -249,7 +249,7 @@ class MdiArea(QMdiArea, ViewManager):
             self.activatePreviousSubWindow)
         self.windowActions.append(self.prevChildAct)
         
-        self.restoreAllAct = E4Action(self.trUtf8('Restore All'),
+        self.restoreAllAct = E5Action(self.trUtf8('Restore All'),
             self.trUtf8('&Restore All'), 0, 0, self, 'vm_window_restore_all')
         self.restoreAllAct.setStatusTip(self.trUtf8('Restore all windows'))
         self.restoreAllAct.setWhatsThis(self.trUtf8(
@@ -259,7 +259,7 @@ class MdiArea(QMdiArea, ViewManager):
         self.connect(self.restoreAllAct, SIGNAL('triggered()'), self.__restoreAllWindows)
         self.windowActions.append(self.restoreAllAct)
         
-        self.iconizeAllAct = E4Action(self.trUtf8('Iconize All'),
+        self.iconizeAllAct = E5Action(self.trUtf8('Iconize All'),
             self.trUtf8('&Iconize All'), 0, 0, self, 'vm_window_iconize_all')
         self.iconizeAllAct.setStatusTip(self.trUtf8('Iconize all windows'))
         self.iconizeAllAct.setWhatsThis(self.trUtf8(

@@ -26,7 +26,7 @@ from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 from Globals import isWindowsPlatform   # import this method into the Utilities namespace
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from UI.Info import Program, Version
 

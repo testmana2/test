@@ -14,9 +14,9 @@ import copy
 from PyQt4.QtCore import QObject, SIGNAL
 from PyQt4.QtGui import QDialog, QApplication
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
-from E4Gui.E4Action import E4Action
+from E5Gui.E5Action import E5Action
 
 from DocumentationPlugins.Ericapi.EricapiConfigDialog import EricapiConfigDialog
 from DocumentationPlugins.Ericapi.EricapiExecDialog import EricapiExecDialog
@@ -92,7 +92,7 @@ class EricapiPlugin(QObject):
         """
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
-            self.__projectAct = E4Action(self.trUtf8('Generate API file (eric5-api)'),
+            self.__projectAct = E5Action(self.trUtf8('Generate API file (eric5-api)'),
                     self.trUtf8('Generate &API file (eric5-api)'), 0, 0,
                     self, 'doc_eric5_api')
             self.__projectAct.setStatusTip(\
@@ -102,7 +102,7 @@ class EricapiPlugin(QObject):
                 """<p>Generate an API file using eric5-api.</p>"""
             ))
             self.connect(self.__projectAct, SIGNAL('triggered()'), self.__doEricapi)
-            e5App().getObject("Project").addE4Actions([self.__projectAct])
+            e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
         self.connect(e5App().getObject("Project"), SIGNAL("showMenu"), 
@@ -120,7 +120,7 @@ class EricapiPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
             menu.removeAction(self.__projectAct)
-            e5App().getObject("Project").removeE4Actions([self.__projectAct])
+            e5App().getObject("Project").removeE5Actions([self.__projectAct])
         self.__initialize()
     
     def __projectShowMenu(self, menuName, menu):

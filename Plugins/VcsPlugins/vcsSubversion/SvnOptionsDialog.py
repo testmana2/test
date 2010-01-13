@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
 from .Ui_SvnOptionsDialog import Ui_SvnOptionsDialog
@@ -36,7 +36,7 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.vcsDirectoryCompleter = E4DirCompleter(self.vcsUrlEdit)
+        self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)
         
         self.project = project
         

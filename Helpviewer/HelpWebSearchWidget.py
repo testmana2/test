@@ -18,7 +18,7 @@ import UI.PixmapCache
 
 import Preferences
 
-from E4Gui.E4LineEdit import E4LineEdit
+from E5Gui.E5LineEdit import E5LineEdit
 
 from .OpenSearch.OpenSearchManager import OpenSearchManager
 from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
@@ -63,7 +63,7 @@ class HelpWebSearchWidget(QWidget):
         self.__searchButton.setIcon(UI.PixmapCache.getIcon("webSearch.png"))
         self.__layout.addWidget(self.__searchButton)
         
-        self.__searchEdit = E4LineEdit(parent = self)
+        self.__searchEdit = E5LineEdit(parent = self)
         self.__layout.addWidget(self.__searchEdit)
         
         self.__clearButton = QToolButton(self)

@@ -10,9 +10,9 @@ Module implementing the log viewer widget and the log widget.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4TabWidget import E4TabWidget
+from E5Gui.E5TabWidget import E5TabWidget
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 import UI.PixmapCache
 import Preferences

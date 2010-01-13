@@ -11,7 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtSql import QSqlError, QSqlDatabase
 
-from E4Gui.E4Action import E4Action
+from E5Gui.E5Action import E5Action
 
 from .SqlBrowserWidget import SqlBrowserWidget
 
@@ -83,7 +83,7 @@ class SqlBrowser(QMainWindow):
         # list of all actions
         self.__actions = []
         
-        self.addConnectionAct = E4Action(self.trUtf8('Add Connection'), 
+        self.addConnectionAct = E5Action(self.trUtf8('Add Connection'), 
             UI.PixmapCache.getIcon("databaseConnection.png"),
             self.trUtf8('Add &Connection...'), 
             0, 0, self, 'sql_file_add_connection')
@@ -97,7 +97,7 @@ class SqlBrowser(QMainWindow):
                      self.__browser.addConnectionByDialog)
         self.__actions.append(self.addConnectionAct)
         
-        self.exitAct = E4Action(self.trUtf8('Quit'), 
+        self.exitAct = E5Action(self.trUtf8('Quit'), 
             UI.PixmapCache.getIcon("exit.png"),
             self.trUtf8('&Quit'), 
             QKeySequence(self.trUtf8("Ctrl+Q","File|Quit")), 
@@ -110,7 +110,7 @@ class SqlBrowser(QMainWindow):
         self.connect(self.exitAct, SIGNAL('triggered()'), 
                      qApp, SLOT('closeAllWindows()'))
         
-        self.aboutAct = E4Action(self.trUtf8('About'), 
+        self.aboutAct = E5Action(self.trUtf8('About'), 
             self.trUtf8('&About'), 
             0, 0, self, 'sql_help_about')
         self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
@@ -121,7 +121,7 @@ class SqlBrowser(QMainWindow):
         self.connect(self.aboutAct, SIGNAL('triggered()'), self.__about)
         self.__actions.append(self.aboutAct)
         
-        self.aboutQtAct = E4Action(self.trUtf8('About Qt'), 
+        self.aboutQtAct = E5Action(self.trUtf8('About Qt'), 
             self.trUtf8('About &Qt'), 
             0, 0, self, 'sql_help_about_qt')
         self.aboutQtAct.setStatusTip(\

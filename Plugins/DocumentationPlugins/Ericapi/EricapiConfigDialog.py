@@ -14,7 +14,7 @@ import copy
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
+from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
 from .Ui_EricapiConfigDialog import Ui_EricapiConfigDialog
 import Utilities
@@ -54,8 +54,8 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             for key, value in list(parms.items()):
                 self.parameters[key] = parms[key]
         
-        self.outputFileCompleter = E4FileCompleter(self.outputFileEdit)
-        self.ignoreDirCompleter = E4DirCompleter(self.ignoreDirEdit)
+        self.outputFileCompleter = E5FileCompleter(self.outputFileEdit)
+        self.ignoreDirCompleter = E5DirCompleter(self.ignoreDirEdit)
         
         self.recursionCheckBox.setChecked(self.parameters['useRecursion'])
         self.oldStyleCheckBox.setChecked(not self.parameters['newStyle'])

@@ -10,7 +10,7 @@ Module implementing the Debugger Python3 configuration page.
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_DebuggerPython3Page import Ui_DebuggerPython3Page
@@ -30,8 +30,8 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         self.setupUi(self)
         self.setObjectName("DebuggerPython3Page")
         
-        self.interpreterCompleter = E4FileCompleter(self.interpreterEdit)
-        self.debugClientCompleter = E4FileCompleter(self.debugClientEdit)
+        self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)
+        self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
         
         # set initial values
         self.customPyCheckBox.setChecked(\

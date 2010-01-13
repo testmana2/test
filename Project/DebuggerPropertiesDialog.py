@@ -13,7 +13,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
+from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
 from .Ui_DebuggerPropertiesDialog import Ui_DebuggerPropertiesDialog
 
@@ -39,9 +39,9 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
-        self.debugClientCompleter = E4FileCompleter(self.debugClientEdit)
-        self.interpreterCompleter = E4FileCompleter(self.interpreterEdit)
-        self.translationLocalCompleter = E4DirCompleter(self.translationLocalEdit)
+        self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
+        self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)
+        self.translationLocalCompleter = E5DirCompleter(self.translationLocalEdit)
         
         self.project = project
         

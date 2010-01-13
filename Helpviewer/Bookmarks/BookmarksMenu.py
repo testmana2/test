@@ -10,14 +10,14 @@ Module implementing the bookmarks menu.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4ModelMenu import E4ModelMenu
+from E5Gui.E5ModelMenu import E5ModelMenu
 
 import Helpviewer.HelpWindow
 
 from .BookmarksModel import BookmarksModel
 from .BookmarkNode import BookmarkNode
 
-class BookmarksMenu(E4ModelMenu):
+class BookmarksMenu(E5ModelMenu):
     """
     Class implementing the bookmarks menu base class.
     
@@ -31,7 +31,7 @@ class BookmarksMenu(E4ModelMenu):
         
         @param parent reference to the parent widget (QWidget)
         """
-        E4ModelMenu.__init__(self, parent)
+        E5ModelMenu.__init__(self, parent)
         
         self.connect(self, SIGNAL("activated(const QModelIndex&)"), self.__activated)
         self.setStatusBarTextRole(BookmarksModel.UrlStringRole)

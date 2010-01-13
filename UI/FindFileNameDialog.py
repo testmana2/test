@@ -13,7 +13,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .Ui_FindFileNameDialog import Ui_FindFileNameDialog
 from Utilities import direntries
@@ -41,7 +41,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         QWidget.__init__(self, parent)
         self.setupUi(self)
         
-        self.searchDirCompleter = E4DirCompleter(self.searchDirEdit)
+        self.searchDirCompleter = E5DirCompleter(self.searchDirEdit)
         
         self.fileList.headerItem().setText(self.fileList.columnCount(), "")
         

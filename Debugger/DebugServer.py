@@ -16,7 +16,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QTcpServer, QHostAddress, QHostInfo
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from .BreakPointModel import BreakPointModel
 from .WatchPointModel import WatchPointModel

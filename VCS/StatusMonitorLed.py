@@ -10,11 +10,11 @@ Module implementing a LED to indicate the status of the VCS status monitor threa
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Led import E4Led, E4LedRectangular
+from E5Gui.E5Led import E5Led, E5LedRectangular
 
 import Preferences
 
-class StatusMonitorLed(E4Led):
+class StatusMonitorLed(E5Led):
     """
     Class implementing a LED to indicate the status of the VCS status monitor thread.
     """
@@ -25,7 +25,7 @@ class StatusMonitorLed(E4Led):
         @param project reference to the project object (Project.Project)
         @param parent reference to the parent object (QWidget)
         """
-        E4Led.__init__(self, parent, shape = E4LedRectangular, rectRatio = 1.0)
+        E5Led.__init__(self, parent, shape = E5LedRectangular, rectRatio = 1.0)
         
         self.project = project
         self.vcsMonitorLedColors = {

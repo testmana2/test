@@ -10,7 +10,7 @@ Module implementing the Help Viewers configuration page.
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QButtonGroup, QFileDialog
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpViewersPage import Ui_HelpViewersPage
@@ -36,7 +36,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         self.helpViewerGroup.addButton(self.webBrowserButton)
         self.helpViewerGroup.addButton(self.customViewerButton)
         
-        self.customViewerCompleter = E4FileCompleter(self.customViewerEdit)
+        self.customViewerCompleter = E5FileCompleter(self.customViewerEdit)
         
         # set initial values
         hvId = Preferences.getHelp("HelpViewerType")

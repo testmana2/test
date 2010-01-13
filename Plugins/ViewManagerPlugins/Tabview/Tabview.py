@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from ViewManager.ViewManager import ViewManager
 
@@ -20,14 +20,14 @@ import QScintilla.Editor
 
 import UI.PixmapCache
 
-from E4Gui.E4TabWidget import E4TabWidget, E4WheelTabBar
-from E4Gui.E4Led import E4Led
+from E5Gui.E5TabWidget import E5TabWidget, E5WheelTabBar
+from E5Gui.E5Led import E5Led
 
 import Preferences
 
 from eric5config import getConfig
 
-class TabBar(E4WheelTabBar):
+class TabBar(E5WheelTabBar):
     """
     Class implementing a customized tab bar supporting drag & drop.
     
@@ -48,7 +48,7 @@ class TabBar(E4WheelTabBar):
         
         @param parent reference to the parent widget (QWidget)
         """
-        E4WheelTabBar.__init__(self, parent)
+        E5WheelTabBar.__init__(self, parent)
         self.setAcceptDrops(True)
         
         self.__dragStartPos = QPoint()
@@ -61,7 +61,7 @@ class TabBar(E4WheelTabBar):
         """
         if event.button() == Qt.LeftButton:
             self.__dragStartPos = QPoint(event.pos())
-        E4WheelTabBar.mousePressEvent(self, event)
+        E5WheelTabBar.mousePressEvent(self, event)
     
     def mouseMoveEvent(self, event):
         """
@@ -86,7 +86,7 @@ class TabBar(E4WheelTabBar):
                 drag.exec_(Qt.DropActions(Qt.CopyAction))
             elif event.modifiers() == Qt.KeyboardModifiers(Qt.NoModifier):
                 drag.exec_(Qt.DropActions(Qt.MoveAction))
-        E4WheelTabBar.mouseMoveEvent(self, event)
+        E5WheelTabBar.mouseMoveEvent(self, event)
     
     def dragEnterEvent(self, event):
         """
@@ -102,7 +102,7 @@ class TabBar(E4WheelTabBar):
            "source-index" in formats and \
            "tabwidget-id" in formats:
             event.acceptProposedAction()
-        E4WheelTabBar.dragEnterEvent(self, event)
+        E5WheelTabBar.dragEnterEvent(self, event)
     
     def dropEvent(self, event):
         """
@@ -132,9 +132,9 @@ class TabBar(E4WheelTabBar):
                 elif event.proposedAction() == Qt.CopyAction:
                     self.emit(SIGNAL("tabCopyRequested(int, int)"), fromIndex, toIndex)
                     event.acceptProposedAction()
-        E4WheelTabBar.dropEvent(self, event)
+        E5WheelTabBar.dropEvent(self, event)
 
-class TabWidget(E4TabWidget):
+class TabWidget(E5TabWidget):
     """
     Class implementing a custimized tab widget.
     """
@@ -144,7 +144,7 @@ class TabWidget(E4TabWidget):
         
         @param vm view manager widget (Tabview)
         """
-        E4TabWidget.__init__(self)
+        E5TabWidget.__init__(self)
         self.setAttribute(Qt.WA_DeleteOnClose, True)
         
         self.__tabBar = TabBar(self)
@@ -162,7 +162,7 @@ class TabWidget(E4TabWidget):
         self.vm = vm
         self.editors = []
         
-        self.indicator = E4Led(self)
+        self.indicator = E5Led(self)
         self.setCornerWidget(self.indicator, Qt.TopLeftCorner)
         
         self.rightCornerWidget = QWidget(self)
@@ -212,7 +212,7 @@ class TabWidget(E4TabWidget):
         self.emptyLabel = QLabel()
         self.emptyLabel.setPixmap(ericPic)
         self.emptyLabel.setAlignment(Qt.AlignVCenter | Qt.AlignHCenter)
-        E4TabWidget.addTab(self, self.emptyLabel, UI.PixmapCache.getIcon("empty.png"), "")
+        E5TabWidget.addTab(self, self.emptyLabel, UI.PixmapCache.getIcon("empty.png"), "")
         
     def __initMenu(self):
         """
@@ -314,7 +314,7 @@ class TabWidget(E4TabWidget):
         @param editor the editor object to be added (QScintilla.Editor.Editor)
         @param title title for the new tab (string)
         """
-        E4TabWidget.addTab(self, editor, UI.PixmapCache.getIcon("empty.png"), title)
+        E5TabWidget.addTab(self, editor, UI.PixmapCache.getIcon("empty.png"), title)
         if self.closeButton:
             self.closeButton.setEnabled(True)
         else:
@@ -339,7 +339,7 @@ class TabWidget(E4TabWidget):
         @param title title for the new tab (string)
         @return index of the inserted tab (integer)
         """
-        newIndex = E4TabWidget.insertTab(self, index, editor, 
+        newIndex = E5TabWidget.insertTab(self, index, editor, 
                                          UI.PixmapCache.getIcon("empty.png"), 
                                          title)
         if self.closeButton:
@@ -405,7 +405,7 @@ class TabWidget(E4TabWidget):
             self.editors.remove(object)
         
         if not self.editors:
-            E4TabWidget.addTab(self, self.emptyLabel, 
+            E5TabWidget.addTab(self, self.emptyLabel, 
                 UI.PixmapCache.getIcon("empty.png"), "")
             self.emptyLabel.show()
             if self.closeButton:
@@ -481,7 +481,7 @@ class TabWidget(E4TabWidget):
         if not self.editors:
             return None
         else:
-            return E4TabWidget.currentWidget(self)
+            return E5TabWidget.currentWidget(self)
         
     def hasEditor(self, editor):
         """
@@ -1026,7 +1026,7 @@ class Tabview(QSplitter, ViewManager):
         if event.type() == QEvent.MouseButtonPress and \
            not event.button() == Qt.RightButton:
             self.currentTabWidget.showIndicator(False)
-            if isinstance(watched, E4TabWidget):
+            if isinstance(watched, E5TabWidget):
                 switched = watched is not self.currentTabWidget
                 self.currentTabWidget = watched
             elif isinstance(watched, QTabBar):

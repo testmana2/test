@@ -12,11 +12,11 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from VCS.ProjectHelper import VcsProjectHelper
 
-from E4Gui.E4Action import E4Action
+from E5Gui.E5Action import E5Action
 
 import UI.PixmapCache
 
@@ -39,7 +39,7 @@ class SvnProjectHelper(VcsProjectHelper):
         """
         Public method to get a list of all actions.
         
-        @return list of all actions (list of E4Action)
+        @return list of all actions (list of E5Action)
         """
         return self.actions[:]
     
@@ -47,7 +47,7 @@ class SvnProjectHelper(VcsProjectHelper):
         """
         Public method to generate the action objects.
         """
-        self.vcsNewAct = E4Action(self.trUtf8('New from repository'),
+        self.vcsNewAct = E5Action(self.trUtf8('New from repository'),
                 UI.PixmapCache.getIcon("vcsCheckout.png"),
                 self.trUtf8('&New from repository...'), 0, 0, self, 'subversion_new')
         self.vcsNewAct.setStatusTip(self.trUtf8(
@@ -60,7 +60,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsNewAct, SIGNAL('triggered()'), self._vcsCheckout)
         self.actions.append(self.vcsNewAct)
         
-        self.vcsUpdateAct = E4Action(self.trUtf8('Update from repository'),
+        self.vcsUpdateAct = E5Action(self.trUtf8('Update from repository'),
                 UI.PixmapCache.getIcon("vcsUpdate.png"),
                 self.trUtf8('&Update from repository'), 0, 0, self,
                 'subversion_update')
@@ -74,7 +74,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsUpdateAct, SIGNAL('triggered()'), self._vcsUpdate)
         self.actions.append(self.vcsUpdateAct)
         
-        self.vcsCommitAct = E4Action(self.trUtf8('Commit changes to repository'),
+        self.vcsCommitAct = E5Action(self.trUtf8('Commit changes to repository'),
                 UI.PixmapCache.getIcon("vcsCommit.png"),
                 self.trUtf8('&Commit changes to repository...'), 0, 0, self,
                 'subversion_commit')
@@ -88,7 +88,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsCommitAct, SIGNAL('triggered()'), self._vcsCommit)
         self.actions.append(self.vcsCommitAct)
         
-        self.vcsAddAct = E4Action(self.trUtf8('Add to repository'),
+        self.vcsAddAct = E5Action(self.trUtf8('Add to repository'),
                 UI.PixmapCache.getIcon("vcsAdd.png"),
                 self.trUtf8('&Add to repository...'), 0, 0, self, 'subversion_add')
         self.vcsAddAct.setStatusTip(self.trUtf8(
@@ -101,7 +101,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsAddAct, SIGNAL('triggered()'), self._vcsImport)
         self.actions.append(self.vcsAddAct)
         
-        self.vcsRemoveAct = E4Action(self.trUtf8('Remove from repository (and disk)'),
+        self.vcsRemoveAct = E5Action(self.trUtf8('Remove from repository (and disk)'),
                 UI.PixmapCache.getIcon("vcsRemove.png"),
                 self.trUtf8('&Remove from repository (and disk)'),
                 0, 0, self, 'subversion_remove')
@@ -116,7 +116,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsRemoveAct, SIGNAL('triggered()'), self._vcsRemove)
         self.actions.append(self.vcsRemoveAct)
         
-        self.vcsLogAct = E4Action(self.trUtf8('Show log'),
+        self.vcsLogAct = E5Action(self.trUtf8('Show log'),
                 UI.PixmapCache.getIcon("vcsLog.png"),
                 self.trUtf8('Show &log'),
                 0, 0, self, 'subversion_log')
@@ -130,7 +130,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsLogAct, SIGNAL('triggered()'), self._vcsLog)
         self.actions.append(self.vcsLogAct)
         
-        self.svnLogLimitedAct = E4Action(self.trUtf8('Show limited log'),
+        self.svnLogLimitedAct = E5Action(self.trUtf8('Show limited log'),
                 UI.PixmapCache.getIcon("vcsLog.png"),
                 self.trUtf8('Show limited log'),
                 0, 0, self, 'subversion_log_limited')
@@ -145,7 +145,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnLogLimitedAct, SIGNAL('triggered()'), self.__svnLogLimited)
         self.actions.append(self.svnLogLimitedAct)
         
-        self.svnLogBrowserAct = E4Action(self.trUtf8('Show log browser'),
+        self.svnLogBrowserAct = E5Action(self.trUtf8('Show log browser'),
                 UI.PixmapCache.getIcon("vcsLog.png"),
                 self.trUtf8('Show log browser'),
                 0, 0, self, 'subversion_log_browser')
@@ -161,7 +161,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnLogBrowserAct, SIGNAL('triggered()'), self.__svnLogBrowser)
         self.actions.append(self.svnLogBrowserAct)
         
-        self.vcsDiffAct = E4Action(self.trUtf8('Show difference'),
+        self.vcsDiffAct = E5Action(self.trUtf8('Show difference'),
                 UI.PixmapCache.getIcon("vcsDiff.png"),
                 self.trUtf8('Show &difference'),
                 0, 0, self, 'subversion_diff')
@@ -175,7 +175,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsDiffAct, SIGNAL('triggered()'), self._vcsDiff)
         self.actions.append(self.vcsDiffAct)
         
-        self.svnExtDiffAct = E4Action(self.trUtf8('Show difference (extended)'),
+        self.svnExtDiffAct = E5Action(self.trUtf8('Show difference (extended)'),
                 UI.PixmapCache.getIcon("vcsDiff.png"),
                 self.trUtf8('Show difference (extended)'),
                 0, 0, self, 'subversion_extendeddiff')
@@ -189,7 +189,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnExtDiffAct, SIGNAL('triggered()'), self.__svnExtendedDiff)
         self.actions.append(self.svnExtDiffAct)
         
-        self.svnUrlDiffAct = E4Action(self.trUtf8('Show difference (URLs)'),
+        self.svnUrlDiffAct = E5Action(self.trUtf8('Show difference (URLs)'),
                 UI.PixmapCache.getIcon("vcsDiff.png"),
                 self.trUtf8('Show difference (URLs)'),
                 0, 0, self, 'subversion_urldiff')
@@ -204,7 +204,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnUrlDiffAct, SIGNAL('triggered()'), self.__svnUrlDiff)
         self.actions.append(self.svnUrlDiffAct)
         
-        self.vcsStatusAct = E4Action(self.trUtf8('Show status'),
+        self.vcsStatusAct = E5Action(self.trUtf8('Show status'),
                 UI.PixmapCache.getIcon("vcsStatus.png"),
                 self.trUtf8('Show &status'),
                 0, 0, self, 'subversion_status')
@@ -218,7 +218,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsStatusAct, SIGNAL('triggered()'), self._vcsStatus)
         self.actions.append(self.vcsStatusAct)
         
-        self.svnRepoInfoAct = E4Action(self.trUtf8('Show repository info'), 
+        self.svnRepoInfoAct = E5Action(self.trUtf8('Show repository info'), 
                 UI.PixmapCache.getIcon("vcsRepo.png"),
                 self.trUtf8('Show repository info'),
                 0, 0, self, 'subversion_repoinfo')
@@ -233,7 +233,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnRepoInfoAct, SIGNAL('triggered()'), self.__svnInfo)
         self.actions.append(self.svnRepoInfoAct)
         
-        self.vcsTagAct = E4Action(self.trUtf8('Tag in repository'), 
+        self.vcsTagAct = E5Action(self.trUtf8('Tag in repository'), 
                 UI.PixmapCache.getIcon("vcsTag.png"),
                 self.trUtf8('&Tag in repository...'),
                 0, 0, self, 'subversion_tag')
@@ -247,7 +247,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsTagAct, SIGNAL('triggered()'), self._vcsTag)
         self.actions.append(self.vcsTagAct)
         
-        self.vcsExportAct = E4Action(self.trUtf8('Export from repository'), 
+        self.vcsExportAct = E5Action(self.trUtf8('Export from repository'), 
                 UI.PixmapCache.getIcon("vcsExport.png"),
                 self.trUtf8('&Export from repository...'),
                 0, 0, self, 'subversion_export')
@@ -261,7 +261,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsExportAct, SIGNAL('triggered()'), self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
-        self.vcsPropsAct = E4Action(self.trUtf8('Command options'),
+        self.vcsPropsAct = E5Action(self.trUtf8('Command options'),
                 self.trUtf8('Command &options...'),0,0,self,
                 'subversion_options')
         self.vcsPropsAct.setStatusTip(self.trUtf8('Show the VCS command options'))
@@ -272,7 +272,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsPropsAct, SIGNAL('triggered()'), self._vcsCommandOptions)
         self.actions.append(self.vcsPropsAct)
         
-        self.vcsRevertAct = E4Action(self.trUtf8('Revert changes'),
+        self.vcsRevertAct = E5Action(self.trUtf8('Revert changes'),
                 UI.PixmapCache.getIcon("vcsRevert.png"),
                 self.trUtf8('Re&vert changes'),
                 0, 0, self, 'subversion_revert')
@@ -286,7 +286,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsRevertAct, SIGNAL('triggered()'), self._vcsRevert)
         self.actions.append(self.vcsRevertAct)
         
-        self.vcsMergeAct = E4Action(self.trUtf8('Merge'),
+        self.vcsMergeAct = E5Action(self.trUtf8('Merge'),
                 UI.PixmapCache.getIcon("vcsMerge.png"),
                 self.trUtf8('Mer&ge changes...'),
                 0, 0, self, 'subversion_merge')
@@ -300,7 +300,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsMergeAct, SIGNAL('triggered()'), self._vcsMerge)
         self.actions.append(self.vcsMergeAct)
         
-        self.vcsSwitchAct = E4Action(self.trUtf8('Switch'),
+        self.vcsSwitchAct = E5Action(self.trUtf8('Switch'),
                 UI.PixmapCache.getIcon("vcsSwitch.png"),
                 self.trUtf8('S&witch...'),
                 0, 0, self, 'subversion_switch')
@@ -314,7 +314,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsSwitchAct, SIGNAL('triggered()'), self._vcsSwitch)
         self.actions.append(self.vcsSwitchAct)
         
-        self.vcsResolveAct = E4Action(self.trUtf8('Resolve conflicts'),
+        self.vcsResolveAct = E5Action(self.trUtf8('Resolve conflicts'),
                 self.trUtf8('Resolve con&flicts'),
                 0, 0, self, 'subversion_resolve')
         self.vcsResolveAct.setStatusTip(self.trUtf8(
@@ -327,7 +327,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsResolveAct, SIGNAL('triggered()'), self.__svnResolve)
         self.actions.append(self.vcsResolveAct)
         
-        self.vcsCleanupAct = E4Action(self.trUtf8('Cleanup'),
+        self.vcsCleanupAct = E5Action(self.trUtf8('Cleanup'),
                 self.trUtf8('Cleanu&p'),
                 0, 0, self, 'subversion_cleanup')
         self.vcsCleanupAct.setStatusTip(self.trUtf8(
@@ -340,7 +340,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsCleanupAct, SIGNAL('triggered()'), self._vcsCleanup)
         self.actions.append(self.vcsCleanupAct)
         
-        self.vcsCommandAct = E4Action(self.trUtf8('Execute command'),
+        self.vcsCommandAct = E5Action(self.trUtf8('Execute command'),
                 self.trUtf8('E&xecute command...'),
                 0, 0, self, 'subversion_command')
         self.vcsCommandAct.setStatusTip(self.trUtf8(
@@ -353,7 +353,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.vcsCommandAct, SIGNAL('triggered()'), self._vcsCommand)
         self.actions.append(self.vcsCommandAct)
         
-        self.svnTagListAct = E4Action(self.trUtf8('List tags'), 
+        self.svnTagListAct = E5Action(self.trUtf8('List tags'), 
                 self.trUtf8('List tags...'),
                 0, 0, self, 'subversion_list_tags')
         self.svnTagListAct.setStatusTip(self.trUtf8(
@@ -366,7 +366,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnTagListAct, SIGNAL('triggered()'), self.__svnTagList)
         self.actions.append(self.svnTagListAct)
         
-        self.svnBranchListAct = E4Action(self.trUtf8('List branches'), 
+        self.svnBranchListAct = E5Action(self.trUtf8('List branches'), 
                 self.trUtf8('List branches...'),
                 0, 0, self, 'subversion_list_branches')
         self.svnBranchListAct.setStatusTip(self.trUtf8(
@@ -379,7 +379,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnBranchListAct, SIGNAL('triggered()'), self.__svnBranchList)
         self.actions.append(self.svnBranchListAct)
         
-        self.svnListAct = E4Action(self.trUtf8('List repository contents'), 
+        self.svnListAct = E5Action(self.trUtf8('List repository contents'), 
                 self.trUtf8('List repository contents...'),
                 0, 0, self, 'subversion_contents')
         self.svnListAct.setStatusTip(self.trUtf8(
@@ -392,7 +392,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnListAct, SIGNAL('triggered()'), self.__svnTagList)
         self.actions.append(self.svnListAct)
         
-        self.svnPropSetAct = E4Action(self.trUtf8('Set Property'),
+        self.svnPropSetAct = E5Action(self.trUtf8('Set Property'),
                 self.trUtf8('Set Property...'),
                 0, 0, self, 'subversion_property_set')
         self.svnPropSetAct.setStatusTip(self.trUtf8(
@@ -405,7 +405,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnPropSetAct, SIGNAL('triggered()'), self.__svnPropSet)
         self.actions.append(self.svnPropSetAct)
         
-        self.svnPropListAct = E4Action(self.trUtf8('List Properties'),
+        self.svnPropListAct = E5Action(self.trUtf8('List Properties'),
                 self.trUtf8('List Properties...'),
                 0, 0, self, 'subversion_property_list')
         self.svnPropListAct.setStatusTip(self.trUtf8(
@@ -418,7 +418,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnPropListAct, SIGNAL('triggered()'), self.__svnPropList)
         self.actions.append(self.svnPropListAct)
         
-        self.svnPropDelAct = E4Action(self.trUtf8('Delete Property'),
+        self.svnPropDelAct = E5Action(self.trUtf8('Delete Property'),
                 self.trUtf8('Delete Property...'),
                 0, 0, self, 'subversion_property_delete')
         self.svnPropDelAct.setStatusTip(self.trUtf8(
@@ -431,7 +431,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnPropDelAct, SIGNAL('triggered()'), self.__svnPropDel)
         self.actions.append(self.svnPropDelAct)
         
-        self.svnRelocateAct = E4Action(self.trUtf8('Relocate'),
+        self.svnRelocateAct = E5Action(self.trUtf8('Relocate'),
                 UI.PixmapCache.getIcon("vcsSwitch.png"),
                 self.trUtf8('Relocate...'),
                 0, 0, self, 'subversion_relocate')
@@ -445,7 +445,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnRelocateAct, SIGNAL('triggered()'), self.__svnRelocate)
         self.actions.append(self.svnRelocateAct)
         
-        self.svnRepoBrowserAct = E4Action(self.trUtf8('Repository Browser'),
+        self.svnRepoBrowserAct = E5Action(self.trUtf8('Repository Browser'),
                 UI.PixmapCache.getIcon("vcsRepoBrowser.png"),
                 self.trUtf8('Repository Browser...'),
                 0, 0, self, 'subversion_repo_browser')
@@ -459,7 +459,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.connect(self.svnRepoBrowserAct, SIGNAL('triggered()'), self.__svnRepoBrowser)
         self.actions.append(self.svnRepoBrowserAct)
         
-        self.svnConfigAct = E4Action(self.trUtf8('Configure'),
+        self.svnConfigAct = E5Action(self.trUtf8('Configure'),
                 self.trUtf8('Configure...'),
                 0, 0, self, 'subversion_configure')
         self.svnConfigAct.setStatusTip(self.trUtf8(

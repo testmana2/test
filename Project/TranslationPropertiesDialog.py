@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
+from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
 from .Ui_TranslationPropertiesDialog import Ui_TranslationPropertiesDialog
 
@@ -36,9 +36,9 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         self.project = project
         self.parent = parent
         
-        self.transPatternCompleter = E4FileCompleter(self.transPatternEdit)
-        self.transBinPathCompleter = E4DirCompleter(self.transBinPathEdit)
-        self.exceptionCompleter = E4FileCompleter(self.exceptionEdit)
+        self.transPatternCompleter = E5FileCompleter(self.transPatternEdit)
+        self.transBinPathCompleter = E5DirCompleter(self.transBinPathEdit)
+        self.exceptionCompleter = E5FileCompleter(self.exceptionEdit)
         
         self.initFilters()
         if not new:

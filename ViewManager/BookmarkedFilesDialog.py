@@ -10,7 +10,7 @@ Module implementing a configuration dialog for the bookmarked files menu.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .Ui_BookmarkedFilesDialog import Ui_BookmarkedFilesDialog
 
@@ -30,7 +30,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.fileCompleter = E4FileCompleter(self.fileEdit)
+        self.fileCompleter = E5FileCompleter(self.fileEdit)
         
         self.bookmarks = bookmarks[:]
         for bookmark in self.bookmarks:

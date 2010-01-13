@@ -13,7 +13,7 @@ from PyQt4.QtGui import QMessageBox
 from UI.Info import *
 import UI.PixmapCache
 
-from E4Gui.E4Action import E4Action
+from E5Gui.E5Action import E5Action
 
 from AboutPlugin.AboutDialog import AboutDialog
 
@@ -65,7 +65,7 @@ class AboutPlugin(QObject):
             menu.removeAction(self.aboutAct)
             menu.removeAction(self.aboutQtAct)
         acts = [self.aboutAct, self.aboutQtAct]
-        self.__ui.removeE4Actions(acts, 'ui')
+        self.__ui.removeE5Actions(acts, 'ui')
     
     def __initActions(self):
         """
@@ -73,7 +73,7 @@ class AboutPlugin(QObject):
         """
         acts = []
         
-        self.aboutAct = E4Action(self.trUtf8('About {0}').format(Program),
+        self.aboutAct = E5Action(self.trUtf8('About {0}').format(Program),
                 UI.PixmapCache.getIcon("helpAbout.png"),
                 self.trUtf8('&About {0}').format(Program),
                 0, 0, self, 'about_eric')
@@ -85,7 +85,7 @@ class AboutPlugin(QObject):
         self.connect(self.aboutAct, SIGNAL('triggered()'), self.__about)
         acts.append(self.aboutAct)
         
-        self.aboutQtAct = E4Action(self.trUtf8('About Qt'),
+        self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
                 UI.PixmapCache.getIcon("helpAboutQt.png"),
                 self.trUtf8('About &Qt'), 0, 0, self, 'about_qt')
         self.aboutQtAct.setStatusTip(\
@@ -97,7 +97,7 @@ class AboutPlugin(QObject):
         self.connect(self.aboutQtAct, SIGNAL('triggered()'), self.__aboutQt)
         acts.append(self.aboutQtAct)
         
-        self.__ui.addE4Actions(acts, 'ui')
+        self.__ui.addE5Actions(acts, 'ui')
 
     def __initMenu(self):
         """

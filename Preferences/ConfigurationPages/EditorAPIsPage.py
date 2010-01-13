@@ -10,8 +10,8 @@ Module implementing the Editor APIs configuration page.
 from PyQt4.QtCore import QDir, pyqtSlot, SIGNAL, QFileInfo
 from PyQt4.QtGui import QFileDialog, QInputDialog
 
-from E4Gui.E4Application import e5App
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Application import e5App
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorAPIsPage import Ui_EditorAPIsPage
@@ -39,7 +39,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         self.__currentAPI = None
         self.__inPreparation = False
         
-        self.apiFileCompleter = E4FileCompleter(self.apiFileEdit)
+        self.apiFileCompleter = E5FileCompleter(self.apiFileEdit)
         
         # set initial values
         self.pluginManager = e5App().getObject("PluginManager")

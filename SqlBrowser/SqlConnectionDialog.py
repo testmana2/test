@@ -11,7 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtSql import QSqlDatabase
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .Ui_SqlConnectionDialog import Ui_SqlConnectionDialog
 
@@ -28,7 +28,7 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.databaseFileCompleter = E4FileCompleter()
+        self.databaseFileCompleter = E5FileCompleter()
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         

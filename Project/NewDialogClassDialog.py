@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .Ui_NewDialogClassDialog import Ui_NewDialogClassDialog
 
@@ -35,7 +35,7 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.okButton.setEnabled(False)
         
-        self.pathnameCompleter = E4DirCompleter(self.pathnameEdit)
+        self.pathnameCompleter = E5DirCompleter(self.pathnameEdit)
         
         self.classnameEdit.setText(defaultClassName)
         self.filenameEdit.setText(defaultFile)

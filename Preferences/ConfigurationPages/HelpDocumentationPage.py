@@ -10,7 +10,7 @@ Module implementing the Help Documentation configuration page.
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpDocumentationPage import Ui_HelpDocumentationPage
@@ -30,10 +30,10 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.setupUi(self)
         self.setObjectName("HelpDocumentationPage")
         
-        self.pythonDocDirCompleter = E4DirCompleter(self.pythonDocDirEdit)
-        self.qt4DocDirCompleter = E4DirCompleter(self.qt4DocDirEdit)
-        self.pyqt4DocDirCompleter = E4DirCompleter(self.pyqt4DocDirEdit)
-        self.pysideDocDirCompleter = E4DirCompleter(self.pysideDocDirEdit)
+        self.pythonDocDirCompleter = E5DirCompleter(self.pythonDocDirEdit)
+        self.qt4DocDirCompleter = E5DirCompleter(self.qt4DocDirEdit)
+        self.pyqt4DocDirCompleter = E5DirCompleter(self.pyqt4DocDirEdit)
+        self.pysideDocDirCompleter = E5DirCompleter(self.pysideDocDirEdit)
         
         try:
             import PySide

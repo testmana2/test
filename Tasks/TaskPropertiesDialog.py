@@ -12,7 +12,7 @@ import time
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .Ui_TaskPropertiesDialog import Ui_TaskPropertiesDialog
 
@@ -32,7 +32,7 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.filenameCompleter = E4FileCompleter(self.filenameEdit)
+        self.filenameCompleter = E5FileCompleter(self.filenameEdit)
         
         if not projectOpen:
             self.projectCheckBox.setEnabled(False)

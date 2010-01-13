@@ -10,7 +10,7 @@ Module implementing the Help Viewers configuration page.
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpAppearancePage import Ui_HelpAppearancePage
@@ -30,7 +30,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         self.setupUi(self)
         self.setObjectName("HelpAppearancePage")
         
-        self.styleSheetCompleter = E4FileCompleter(self.styleSheetEdit)
+        self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
         
         self.helpColours = {}
         

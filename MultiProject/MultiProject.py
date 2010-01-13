@@ -14,7 +14,7 @@ import io
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from Globals import recentNameMultiProject
 
@@ -30,7 +30,7 @@ from E5XML.MultiProjectWriter import MultiProjectWriter
 
 import UI.PixmapCache
 
-from E4Gui.E4Action import E4Action, createActionGroup
+from E5Gui.E5Action import E5Action, createActionGroup
 
 import Preferences
 import Utilities
@@ -678,7 +678,7 @@ class MultiProject(QObject):
         
         self.actGrp1 = createActionGroup(self)
         
-        act = E4Action(self.trUtf8('New multiproject'),
+        act = E5Action(self.trUtf8('New multiproject'),
                 UI.PixmapCache.getIcon("multiProjectNew.png"),
                 self.trUtf8('&New...'), 0, 0,
                 self.actGrp1,'multi_project_new')
@@ -691,7 +691,7 @@ class MultiProject(QObject):
         self.connect(act, SIGNAL('triggered()'), self.newMultiProject)
         self.actions.append(act)
 
-        act = E4Action(self.trUtf8('Open multiproject'),
+        act = E5Action(self.trUtf8('Open multiproject'),
                 UI.PixmapCache.getIcon("multiProjectOpen.png"),
                 self.trUtf8('&Open...'), 0, 0,
                 self.actGrp1,'multi_project_open')
@@ -703,7 +703,7 @@ class MultiProject(QObject):
         self.connect(act, SIGNAL('triggered()'), self.openMultiProject)
         self.actions.append(act)
 
-        self.closeAct = E4Action(self.trUtf8('Close multiproject'),
+        self.closeAct = E5Action(self.trUtf8('Close multiproject'),
                 UI.PixmapCache.getIcon("multiProjectClose.png"),
                 self.trUtf8('&Close'), 0, 0, self, 'multi_project_close')
         self.closeAct.setStatusTip(self.trUtf8('Close the current multiproject'))
@@ -714,7 +714,7 @@ class MultiProject(QObject):
         self.connect(self.closeAct, SIGNAL('triggered()'), self.closeMultiProject)
         self.actions.append(self.closeAct)
 
-        self.saveAct = E4Action(self.trUtf8('Save multiproject'),
+        self.saveAct = E5Action(self.trUtf8('Save multiproject'),
                 UI.PixmapCache.getIcon("multiProjectSave.png"),
                 self.trUtf8('&Save'), 0, 0, self, 'multi_project_save')
         self.saveAct.setStatusTip(self.trUtf8('Save the current multiproject'))
@@ -725,7 +725,7 @@ class MultiProject(QObject):
         self.connect(self.saveAct, SIGNAL('triggered()'), self.saveMultiProject)
         self.actions.append(self.saveAct)
 
-        self.saveasAct = E4Action(self.trUtf8('Save multiproject as'),
+        self.saveasAct = E5Action(self.trUtf8('Save multiproject as'),
                 UI.PixmapCache.getIcon("multiProjectSaveAs.png"),
                 self.trUtf8('Save &as...'), 0, 0, self, 'multi_project_save_as')
         self.saveasAct.setStatusTip(self.trUtf8(
@@ -737,7 +737,7 @@ class MultiProject(QObject):
         self.connect(self.saveasAct, SIGNAL('triggered()'), self.saveMultiProjectAs)
         self.actions.append(self.saveasAct)
 
-        self.addProjectAct = E4Action(self.trUtf8('Add project to multiproject'),
+        self.addProjectAct = E5Action(self.trUtf8('Add project to multiproject'),
                 UI.PixmapCache.getIcon("fileProject.png"),
                 self.trUtf8('Add &project...'), 0, 0,
                 self,'multi_project_add_project')
@@ -751,7 +751,7 @@ class MultiProject(QObject):
         self.connect(self.addProjectAct, SIGNAL('triggered()'), self.addProject)
         self.actions.append(self.addProjectAct)
 
-        self.propsAct = E4Action(self.trUtf8('Multiproject properties'),
+        self.propsAct = E5Action(self.trUtf8('Multiproject properties'),
                 UI.PixmapCache.getIcon("multiProjectProps.png"),
                 self.trUtf8('&Properties...'), 0, 0, self, 'multi_project_properties')
         self.propsAct.setStatusTip(self.trUtf8('Show the multiproject properties'))
@@ -810,7 +810,7 @@ class MultiProject(QObject):
         """
         Public slot to initialize the multi project toolbar.
         
-        @param toolbarManager reference to a toolbar manager object (E4ToolBarManager)
+        @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return the toolbar generated (QToolBar)
         """
         tb = QToolBar(self.trUtf8("Multiproject"), self.parent())
@@ -896,23 +896,23 @@ class MultiProject(QObject):
         """
         Public method to get a list of all actions.
         
-        @return list of all actions (list of E4Action)
+        @return list of all actions (list of E5Action)
         """
         return self.actions[:]
     
-    def addE4Actions(self, actions):
+    def addE5Actions(self, actions):
         """
         Public method to add actions to the list of actions.
         
-        @param actions list of actions (list of E4Action)
+        @param actions list of actions (list of E5Action)
         """
         self.actions.extend(actions)
     
-    def removeE4Actions(self, actions):
+    def removeE5Actions(self, actions):
         """
         Public method to remove actions from the list of actions.
         
-        @param actions list of actions (list of E4Action)
+        @param actions list of actions (list of E5Action)
         """
         for act in actions:
             try:

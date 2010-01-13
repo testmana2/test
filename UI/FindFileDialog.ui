@@ -295,7 +295,7 @@
     </layout>
    </item>
    <item>
-    <widget class="E4SqueezeLabelPath" name="findProgressLabel" >
+    <widget class="E5SqueezeLabelPath" name="findProgressLabel" >
      <property name="sizePolicy" >
       <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
        <horstretch>0</horstretch>
@@ -373,9 +373,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>E4SqueezeLabelPath</class>
+   <class>E5SqueezeLabelPath</class>
    <extends>QLabel</extends>
-   <header>E4Gui/E4SqueezeLabels.h</header>
+   <header>E5Gui/E5SqueezeLabels.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

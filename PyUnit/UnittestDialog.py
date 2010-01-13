@@ -17,8 +17,8 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Application import e5App
+from E5Gui.E5Completers import E5FileCompleter
 
 from .Ui_UnittestDialog import Ui_UnittestDialog
 from .Ui_UnittestStacktraceDialog import Ui_UnittestStacktraceDialog
@@ -80,7 +80,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.progressLed.setDarkFactor(150)
         self.progressLed.off()
         
-        self.testSuiteCompleter = E4FileCompleter(self.testsuiteComboBox)
+        self.testSuiteCompleter = E5FileCompleter(self.testsuiteComboBox)
         
         self.fileHistory = []
         self.testNameHistory = []

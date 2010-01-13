@@ -9,7 +9,7 @@ Module implementing the writer class for writing an XML user project properties 
 
 import time
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from .XMLWriterBase import XMLWriterBase
 from .Config import userProjectFileFormatVersion

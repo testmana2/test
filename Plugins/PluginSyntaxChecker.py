@@ -11,9 +11,9 @@ import os
 
 from PyQt4.QtCore import QObject, SIGNAL
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
-from E4Gui.E4Action import E4Action
+from E5Gui.E5Action import E5Action
 
 from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import SyntaxCheckerDialog
 
@@ -72,7 +72,7 @@ class SyntaxCheckerPlugin(QObject):
         """
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
-            self.__projectAct = E4Action(self.trUtf8('Check Syntax'),
+            self.__projectAct = E5Action(self.trUtf8('Check Syntax'),
                     self.trUtf8('&Syntax...'), 0, 0,
                     self, 'project_check_syntax')
             self.__projectAct.setStatusTip(\
@@ -83,10 +83,10 @@ class SyntaxCheckerPlugin(QObject):
             ))
             self.connect(self.__projectAct, SIGNAL('triggered()'), 
                          self.__projectSyntaxCheck)
-            e5App().getObject("Project").addE4Actions([self.__projectAct])
+            e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
-        self.__editorAct = E4Action(self.trUtf8('Check Syntax'),
+        self.__editorAct = E5Action(self.trUtf8('Check Syntax'),
                 self.trUtf8('&Syntax...'), 0, 0,
                 self, "")
         self.__editorAct.setWhatsThis(self.trUtf8(
@@ -162,7 +162,7 @@ class SyntaxCheckerPlugin(QObject):
            e5App().getObject("Project").getProjectLanguage() == "Python3":
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
-                self.__projectBrowserAct = E4Action(self.trUtf8('Check Syntax'),
+                self.__projectBrowserAct = E5Action(self.trUtf8('Check Syntax'),
                         self.trUtf8('&Syntax...'), 0, 0,
                         self, "")
                 self.__projectBrowserAct.setWhatsThis(self.trUtf8(

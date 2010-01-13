@@ -10,7 +10,7 @@ Module implementing the add project dialog.
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .Ui_AddProjectDialog import Ui_AddProjectDialog
 
@@ -31,7 +31,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.fileCompleter = E4FileCompleter(self.filenameEdit)
+        self.fileCompleter = E5FileCompleter(self.filenameEdit)
         
         self.startdir = startdir
         

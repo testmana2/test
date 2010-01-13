@@ -10,7 +10,7 @@ Module implementing the writer class for writing a highlighting styles XML file.
 import os
 import time
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from .XMLWriterBase import XMLWriterBase
 from .Config import highlightingStylesFileFormatVersion

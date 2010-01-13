@@ -10,7 +10,7 @@ Module implementing the AdBlock configuration dialog.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4TreeSortFilterProxyModel import E4TreeSortFilterProxyModel
+from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 
 import Helpviewer.HelpWindow
 
@@ -35,7 +35,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.__adBlockModel = AdBlockModel(self)
-        self.__proxyModel = E4TreeSortFilterProxyModel(self)
+        self.__proxyModel = E5TreeSortFilterProxyModel(self)
         self.__proxyModel.setSourceModel(self.__adBlockModel)
         self.subscriptionsTree.setModel(self.__proxyModel)
         

@@ -21,7 +21,7 @@ import io
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from Globals import recentNameProject
 
@@ -64,7 +64,7 @@ from DataViews.PyProfileDialog import PyProfileDialog
 
 import UI.PixmapCache
 
-from E4Gui.E4Action import E4Action, createActionGroup
+from E5Gui.E5Action import E5Action, createActionGroup
 
 import Preferences
 import Utilities
@@ -206,7 +206,7 @@ class Project(QObject):
         self.__binaryTranslationsCallbacks = {}
         self.__projectTypes["Qt4"] = self.trUtf8("Qt4 GUI")
         self.__projectTypes["Qt4C"] = self.trUtf8("Qt4 Console")
-        self.__projectTypes["E4Plugin"] = self.trUtf8("Eric5 Plugin")
+        self.__projectTypes["E4Plugin"] = self.trUtf8("Eric Plugin")
         self.__projectTypes["Console"] = self.trUtf8("Console")
         self.__projectTypes["Other"] = self.trUtf8("Other")
         try:
@@ -3221,7 +3221,7 @@ class Project(QObject):
         
         self.actGrp1 = createActionGroup(self)
         
-        act = E4Action(self.trUtf8('New project'),
+        act = E5Action(self.trUtf8('New project'),
                 UI.PixmapCache.getIcon("projectNew.png"),
                 self.trUtf8('&New...'), 0, 0,
                 self.actGrp1,'project_new')
@@ -3234,7 +3234,7 @@ class Project(QObject):
         self.connect(act, SIGNAL('triggered()'), self.newProject)
         self.actions.append(act)
 
-        act = E4Action(self.trUtf8('Open project'),
+        act = E5Action(self.trUtf8('Open project'),
                 UI.PixmapCache.getIcon("projectOpen.png"),
                 self.trUtf8('&Open...'), 0, 0,
                 self.actGrp1,'project_open')
@@ -3246,7 +3246,7 @@ class Project(QObject):
         self.connect(act, SIGNAL('triggered()'), self.openProject)
         self.actions.append(act)
 
-        self.closeAct = E4Action(self.trUtf8('Close project'),
+        self.closeAct = E5Action(self.trUtf8('Close project'),
                 UI.PixmapCache.getIcon("projectClose.png"),
                 self.trUtf8('&Close'), 0, 0, self, 'project_close')
         self.closeAct.setStatusTip(self.trUtf8('Close the current project'))
@@ -3257,7 +3257,7 @@ class Project(QObject):
         self.connect(self.closeAct, SIGNAL('triggered()'), self.closeProject)
         self.actions.append(self.closeAct)
 
-        self.saveAct = E4Action(self.trUtf8('Save project'),
+        self.saveAct = E5Action(self.trUtf8('Save project'),
                 UI.PixmapCache.getIcon("projectSave.png"),
                 self.trUtf8('&Save'), 0, 0, self, 'project_save')
         self.saveAct.setStatusTip(self.trUtf8('Save the current project'))
@@ -3268,7 +3268,7 @@ class Project(QObject):
         self.connect(self.saveAct, SIGNAL('triggered()'), self.saveProject)
         self.actions.append(self.saveAct)
 
-        self.saveasAct = E4Action(self.trUtf8('Save project as'),
+        self.saveasAct = E5Action(self.trUtf8('Save project as'),
                 UI.PixmapCache.getIcon("projectSaveAs.png"),
                 self.trUtf8('Save &as...'), 0, 0, self, 'project_save_as')
         self.saveasAct.setStatusTip(self.trUtf8('Save the current project to a new file'))
@@ -3281,7 +3281,7 @@ class Project(QObject):
 
         self.actGrp2 = createActionGroup(self)
         
-        self.addFilesAct = E4Action(self.trUtf8('Add files to project'),
+        self.addFilesAct = E5Action(self.trUtf8('Add files to project'),
                 UI.PixmapCache.getIcon("fileMisc.png"),
                 self.trUtf8('Add &files...'), 0, 0,
                 self.actGrp2,'project_add_file')
@@ -3295,7 +3295,7 @@ class Project(QObject):
         self.connect(self.addFilesAct, SIGNAL('triggered()'), self.addFiles)
         self.actions.append(self.addFilesAct)
 
-        self.addDirectoryAct = E4Action(self.trUtf8('Add directory to project'),
+        self.addDirectoryAct = E5Action(self.trUtf8('Add directory to project'),
                 UI.PixmapCache.getIcon("dirOpen.png"),
                 self.trUtf8('Add directory...'), 0, 0,
                 self.actGrp2,'project_add_directory')
@@ -3309,7 +3309,7 @@ class Project(QObject):
         self.connect(self.addDirectoryAct, SIGNAL('triggered()'), self.addDirectory)
         self.actions.append(self.addDirectoryAct)
 
-        self.addLanguageAct = E4Action(self.trUtf8('Add translation to project'),
+        self.addLanguageAct = E5Action(self.trUtf8('Add translation to project'),
                 UI.PixmapCache.getIcon("linguist4.png"),
                 self.trUtf8('Add &translation...'), 0, 0,
                 self.actGrp2,'project_add_translation')
@@ -3323,7 +3323,7 @@ class Project(QObject):
         self.connect(self.addLanguageAct, SIGNAL('triggered()'), self.addLanguage)
         self.actions.append(self.addLanguageAct)
 
-        act = E4Action(self.trUtf8('Search new files'),
+        act = E5Action(self.trUtf8('Search new files'),
                 self.trUtf8('Searc&h new files...'), 0, 0,
                 self.actGrp2,'project_search_new_files')
         act.setStatusTip(self.trUtf8('Search new files in the project directory.'))
@@ -3335,7 +3335,7 @@ class Project(QObject):
         self.connect(act, SIGNAL('triggered()'), self.__searchNewFiles)
         self.actions.append(act)
 
-        self.propsAct = E4Action(self.trUtf8('Project properties'),
+        self.propsAct = E5Action(self.trUtf8('Project properties'),
                 UI.PixmapCache.getIcon("projectProps.png"),
                 self.trUtf8('&Properties...'), 0, 0, self, 'project_properties')
         self.propsAct.setStatusTip(self.trUtf8('Show the project properties'))
@@ -3346,7 +3346,7 @@ class Project(QObject):
         self.connect(self.propsAct, SIGNAL('triggered()'), self.__showProperties)
         self.actions.append(self.propsAct)
 
-        self.userPropsAct = E4Action(self.trUtf8('User project properties'),
+        self.userPropsAct = E5Action(self.trUtf8('User project properties'),
                 UI.PixmapCache.getIcon("projectUserProps.png"),
                 self.trUtf8('&User Properties...'), 0, 0, self, 'project_user_properties')
         self.userPropsAct.setStatusTip(self.trUtf8(
@@ -3358,7 +3358,7 @@ class Project(QObject):
         self.connect(self.userPropsAct, SIGNAL('triggered()'), self.__showUserProperties)
         self.actions.append(self.userPropsAct)
 
-        self.filetypesAct = E4Action(self.trUtf8('Filetype Associations'),
+        self.filetypesAct = E5Action(self.trUtf8('Filetype Associations'),
                 self.trUtf8('Filetype Associations...'), 0, 0,
                 self, 'project_filetype_associatios')
         self.filetypesAct.setStatusTip(\
@@ -3374,7 +3374,7 @@ class Project(QObject):
             self.__showFiletypeAssociations)
         self.actions.append(self.filetypesAct)
 
-        self.lexersAct = E4Action(self.trUtf8('Lexer Associations'),
+        self.lexersAct = E5Action(self.trUtf8('Lexer Associations'),
                 self.trUtf8('Lexer Associations...'), 0, 0,
                 self, 'project_lexer_associatios')
         self.lexersAct.setStatusTip(\
@@ -3391,7 +3391,7 @@ class Project(QObject):
 
         self.dbgActGrp = createActionGroup(self)
         
-        act = E4Action(self.trUtf8('Debugger Properties'),
+        act = E5Action(self.trUtf8('Debugger Properties'),
                 self.trUtf8('Debugger &Properties...'), 0, 0,
                 self.dbgActGrp, 'project_debugger_properties')
         act.setStatusTip(self.trUtf8('Show the debugger properties'))
@@ -3402,7 +3402,7 @@ class Project(QObject):
         self.connect(act, SIGNAL('triggered()'), self.__showDebugProperties)
         self.actions.append(act)
         
-        act = E4Action(self.trUtf8('Load'),
+        act = E5Action(self.trUtf8('Load'),
                 self.trUtf8('&Load'), 0, 0,
                 self.dbgActGrp, 'project_debugger_properties_load')
         act.setStatusTip(self.trUtf8('Load the debugger properties'))
@@ -3413,7 +3413,7 @@ class Project(QObject):
         self.connect(act, SIGNAL('triggered()'), self.__readDebugProperties)
         self.actions.append(act)
         
-        act = E4Action(self.trUtf8('Save'),
+        act = E5Action(self.trUtf8('Save'),
                 self.trUtf8('&Save'), 0, 0,
                 self.dbgActGrp, 'project_debugger_properties_save')
         act.setStatusTip(self.trUtf8('Save the debugger properties'))
@@ -3424,7 +3424,7 @@ class Project(QObject):
         self.connect(act, SIGNAL('triggered()'), self.__writeDebugProperties)
         self.actions.append(act)
         
-        act = E4Action(self.trUtf8('Delete'),
+        act = E5Action(self.trUtf8('Delete'),
                 self.trUtf8('&Delete'), 0, 0,
                 self.dbgActGrp, 'project_debugger_properties_delete')
         act.setStatusTip(self.trUtf8('Delete the debugger properties'))
@@ -3436,7 +3436,7 @@ class Project(QObject):
         self.connect(act, SIGNAL('triggered()'), self.__deleteDebugProperties)
         self.actions.append(act)
         
-        act = E4Action(self.trUtf8('Reset'),
+        act = E5Action(self.trUtf8('Reset'),
                 self.trUtf8('&Reset'), 0, 0,
                 self.dbgActGrp, 'project_debugger_properties_resets')
         act.setStatusTip(self.trUtf8('Reset the debugger properties'))
@@ -3449,7 +3449,7 @@ class Project(QObject):
         
         self.sessActGrp = createActionGroup(self)
 
-        act = E4Action(self.trUtf8('Load session'),
+        act = E5Action(self.trUtf8('Load session'),
                 self.trUtf8('Load session'), 0, 0,
                 self.sessActGrp, 'project_load_session')
         act.setStatusTip(self.trUtf8('Load the projects session file.'))
@@ -3466,7 +3466,7 @@ class Project(QObject):
         self.connect(act, SIGNAL('triggered()'), self.__readSession)
         self.actions.append(act)
 
-        act = E4Action(self.trUtf8('Save session'),
+        act = E5Action(self.trUtf8('Save session'),
                 self.trUtf8('Save session'), 0, 0,
                 self.sessActGrp, 'project_save_session')
         act.setStatusTip(self.trUtf8('Save the projects session file.'))
@@ -3483,7 +3483,7 @@ class Project(QObject):
         self.connect(act, SIGNAL('triggered()'), self.__writeSession)
         self.actions.append(act)
         
-        act = E4Action(self.trUtf8('Delete session'),
+        act = E5Action(self.trUtf8('Delete session'),
                 self.trUtf8('Delete session'), 0, 0,
                 self.sessActGrp, 'project_delete_session')
         act.setStatusTip(self.trUtf8('Delete the projects session file.'))
@@ -3496,7 +3496,7 @@ class Project(QObject):
         
         self.chkGrp = createActionGroup(self)
 
-        self.codeMetricsAct = E4Action(self.trUtf8('Code Metrics'),
+        self.codeMetricsAct = E5Action(self.trUtf8('Code Metrics'),
                 self.trUtf8('&Code Metrics...'), 0, 0,
                 self.chkGrp,'project_code_metrics')
         self.codeMetricsAct.setStatusTip(\
@@ -3508,7 +3508,7 @@ class Project(QObject):
         self.connect(self.codeMetricsAct, SIGNAL('triggered()'), self.__showCodeMetrics)
         self.actions.append(self.codeMetricsAct)
 
-        self.codeCoverageAct = E4Action(self.trUtf8('Python Code Coverage'),
+        self.codeCoverageAct = E5Action(self.trUtf8('Python Code Coverage'),
                 self.trUtf8('Code Co&verage...'), 0, 0,
                 self.chkGrp,'project_code_coverage')
         self.codeCoverageAct.setStatusTip(\
@@ -3521,7 +3521,7 @@ class Project(QObject):
         self.connect(self.codeCoverageAct, SIGNAL('triggered()'), self.__showCodeCoverage)
         self.actions.append(self.codeCoverageAct)
 
-        self.codeProfileAct = E4Action(self.trUtf8('Profile Data'),
+        self.codeProfileAct = E5Action(self.trUtf8('Profile Data'),
                 self.trUtf8('&Profile Data...'), 0, 0,
                 self.chkGrp,'project_profile_data')
         self.codeProfileAct.setStatusTip(\
@@ -3533,7 +3533,7 @@ class Project(QObject):
         self.connect(self.codeProfileAct, SIGNAL('triggered()'), self.__showProfileData)
         self.actions.append(self.codeProfileAct)
 
-        self.applicationDiagramAct = E4Action(self.trUtf8('Application Diagram'),
+        self.applicationDiagramAct = E5Action(self.trUtf8('Application Diagram'),
                 self.trUtf8('&Application Diagram...'), 0, 0,
                 self.chkGrp,'project_application_diagram')
         self.applicationDiagramAct.setStatusTip(\
@@ -3548,7 +3548,7 @@ class Project(QObject):
 
         self.pluginGrp = createActionGroup(self)
 
-        self.pluginPkgListAct = E4Action(self.trUtf8('Create Package List'),
+        self.pluginPkgListAct = E5Action(self.trUtf8('Create Package List'),
                 UI.PixmapCache.getIcon("pluginArchiveList.png"),
                 self.trUtf8('Create &Package List'), 0, 0,
                 self.pluginGrp,'project_plugin_pkglist')
@@ -3563,7 +3563,7 @@ class Project(QObject):
             self.__pluginCreatePkgList)
         self.actions.append(self.pluginPkgListAct)
 
-        self.pluginArchiveAct = E4Action(self.trUtf8('Create Plugin Archive'),
+        self.pluginArchiveAct = E5Action(self.trUtf8('Create Plugin Archive'),
                 UI.PixmapCache.getIcon("pluginArchive.png"),
                 self.trUtf8('Create Plugin &Archive'), 0, 0,
                 self.pluginGrp,'project_plugin_archive')
@@ -3579,7 +3579,7 @@ class Project(QObject):
             self.__pluginCreateArchive)
         self.actions.append(self.pluginArchiveAct)
     
-        self.pluginSArchiveAct = E4Action(self.trUtf8('Create Plugin Archive (Snapshot)'),
+        self.pluginSArchiveAct = E5Action(self.trUtf8('Create Plugin Archive (Snapshot)'),
                 UI.PixmapCache.getIcon("pluginArchiveSnapshot.png"),
                 self.trUtf8('Create Plugin Archive (&Snapshot)'), 0, 0,
                 self.pluginGrp,'project_plugin_sarchive')
@@ -3729,7 +3729,7 @@ class Project(QObject):
         """
         Public slot to initialize the project toolbar.
         
-        @param toolbarManager reference to a toolbar manager object (E4ToolBarManager)
+        @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return the toolbar generated (QToolBar)
         """
         tb = QToolBar(self.trUtf8("Project"), self.parent())
@@ -3939,23 +3939,23 @@ class Project(QObject):
         """
         Public method to get a list of all actions.
         
-        @return list of all actions (list of E4Action)
+        @return list of all actions (list of E5Action)
         """
         return self.actions[:]
         
-    def addE4Actions(self, actions):
+    def addE5Actions(self, actions):
         """
         Public method to add actions to the list of actions.
         
-        @param actions list of actions (list of E4Action)
+        @param actions list of actions (list of E5Action)
         """
         self.actions.extend(actions)
         
-    def removeE4Actions(self, actions):
+    def removeE5Actions(self, actions):
         """
         Public method to remove actions from the list of actions.
         
-        @param actions list of actions (list of E4Action)
+        @param actions list of actions (list of E5Action)
         """
         for act in actions:
             try:

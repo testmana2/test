@@ -12,7 +12,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4ModelMenu import E4ModelMenu
+from E5Gui.E5ModelMenu import E5ModelMenu
 
 import Helpviewer.HelpWindow
 
@@ -199,7 +199,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         mdata.setUrls(urls)
         return mdata
 
-class HistoryMenu(E4ModelMenu):
+class HistoryMenu(E5ModelMenu):
     """
     Class implementing the history menu.
     
@@ -213,7 +213,7 @@ class HistoryMenu(E4ModelMenu):
         
         @param parent reference to the parent widget (QWidget)
         """
-        E4ModelMenu.__init__(self, parent)
+        E5ModelMenu.__init__(self, parent)
         
         self.__historyManager = None
         self.__historyMenuModel = None

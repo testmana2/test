@@ -159,11 +159,6 @@
     <Source>Graphics/PixmapDiagram.py</Source>
     <Source>Graphics/__init__.py</Source>
     <Source>Graphics/ZoomDialog.py</Source>
-    <Source>E4Gui/__init__.py</Source>
-    <Source>E4Gui/E4Action.py</Source>
-    <Source>E4Gui/E4Led.py</Source>
-    <Source>E4Gui/E4SingleApplication.py</Source>
-    <Source>E4Gui/E4TabWidget.py</Source>
     <Source>Graphics/GraphicsUtilities.py</Source>
     <Source>Graphics/UMLClassDiagram.py</Source>
     <Source>Graphics/PackageDiagram.py</Source>
@@ -224,7 +219,6 @@
     <Source>Debugger/DebuggerInterfaceNone.py</Source>
     <Source>Debugger/DebugClientCapabilities.py</Source>
     <Source>Debugger/DebugProtocol.py</Source>
-    <Source>E4Gui/E4Completers.py</Source>
     <Source>Preferences/ProgramsDialog.py</Source>
     <Source>Project/CreateDialogCodeDialog.py</Source>
     <Source>Project/NewDialogClassDialog.py</Source>
@@ -398,8 +392,6 @@
     <Source>Plugins/VcsPlugins/vcsSubversion/ConfigurationPage/SubversionPage.py</Source>
     <Source>Plugins/VcsPlugins/vcsSubversion/SvnUtilities.py</Source>
     <Source>QScintilla/MiniEditor.py</Source>
-    <Source>E4Gui/E4ToolBarManager.py</Source>
-    <Source>E4Gui/E4ToolBarDialog.py</Source>
     <Source>MultiProject/__init__.py</Source>
     <Source>MultiProject/MultiProject.py</Source>
     <Source>MultiProject/PropertiesDialog.py</Source>
@@ -420,7 +412,6 @@
     <Source>UI/AuthenticationDialog.py</Source>
     <Source>QScintilla/ShellHistoryDialog.py</Source>
     <Source>Preferences/ConfigurationPages/HelpAppearancePage.py</Source>
-    <Source>E4Gui/E4SqueezeLabels.py</Source>
     <Source>Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorCalltipsQScintillaPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorPropertiesPage.py</Source>
@@ -434,7 +425,6 @@
     <Source>QScintilla/Lexers/LexerPostScript.py</Source>
     <Source>QScintilla/Lexers/LexerYAML.py</Source>
     <Source>QScintilla/SearchReplaceWidget.py</Source>
-    <Source>E4Gui/E4ToolBox.py</Source>
     <Source>ThirdParty/__init__.py</Source>
     <Source>ThirdParty/CharDet/__init__.py</Source>
     <Source>ThirdParty/CharDet/chardet/gb2312freq.py</Source>
@@ -481,7 +471,6 @@
     <Source>Preferences/ConfigurationPages/EditorSpellCheckingPage.py</Source>
     <Source>QScintilla/SpellCheckingDialog.py</Source>
     <Source>Project/SpellingPropertiesDialog.py</Source>
-    <Source>E4Gui/E4SideBar.py</Source>
     <Source>Project/LexerAssociationDialog.py</Source>
     <Source>ThirdParty/Pygments/__init__.py</Source>
     <Source>ThirdParty/Pygments/pygments/style.py</Source>
@@ -574,10 +563,8 @@
     <Source>DebugClients/Python3/DebugThread.py</Source>
     <Source>DebugClients/Python3/DebugClientThreads.py</Source>
     <Source>DebugClients/Python3/DCTestResult.py</Source>
-    <Source>E4Gui/E4LineEdit.py</Source>
     <Source>Helpviewer/HelpWebSearchWidget.py</Source>
     <Source>Helpviewer/HelpClearPrivateDataDialog.py</Source>
-    <Source>E4Gui/E4TableView.py</Source>
     <Source>Helpviewer/HelpLanguagesDialog.py</Source>
     <Source>DebugClients/Python/coverage/html.py</Source>
     <Source>DebugClients/Python/coverage/report.py</Source>
@@ -597,7 +584,6 @@
     <Source>Helpviewer/CookieJar/CookieExceptionsModel.py</Source>
     <Source>Helpviewer/CookieJar/CookieDetailsDialog.py</Source>
     <Source>Helpviewer/OpenSearch/__init__.py</Source>
-    <Source>E4Gui/E4ListView.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEngineAction.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchManager.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchDefaultEngines.py</Source>
@@ -619,11 +605,9 @@
     <Source>Utilities/AutoSaver.py</Source>
     <Source>Helpviewer/Bookmarks/DefaultBookmarks.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksManager.py</Source>
-    <Source>E4Gui/E4ModelMenu.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksMenu.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksToolBar.py</Source>
     <Source>Helpviewer/Bookmarks/AddBookmarkDialog.py</Source>
-    <Source>E4Gui/E4TreeView.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksDialog.py</Source>
     <Source>Preferences/ConfigurationPages/HelpWebBrowserPage.py</Source>
     <Source>Helpviewer/HTMLResources.py</Source>
@@ -662,8 +646,6 @@
     <Source>DebugClients/Python3/coverage/report.py</Source>
     <Source>DebugClients/Python3/coverage/summary.py</Source>
     <Source>DebugClients/Python3/coverage/templite.py</Source>
-    <Source>E4Gui/E4ModelToolBar.py</Source>
-    <Source>E4Gui/E4TreeSortFilterProxyModel.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/parsers.py</Source>
     <Source>Helpviewer/Passwords/__init__.py</Source>
     <Source>Helpviewer/Passwords/PasswordManager.py</Source>
@@ -693,7 +675,6 @@
     <Source>compileUiFiles.py</Source>
     <Source>ThirdParty/CharDet/chardet/test.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEditDialog.py</Source>
-    <Source>E4Gui/E4Application.py</Source>
     <Source>eric5config.py</Source>
     <Source>eric5.py</Source>
     <Source>eric5.pyw</Source>
@@ -758,6 +739,25 @@
     <Source>E5Network/__init__.py</Source>
     <Source>E5Network/E5NetworkMonitor.py</Source>
     <Source>E5Network/E5NetworkHeaderDetailsDialog.py</Source>
+    <Source>E5Gui/__init__.py</Source>
+    <Source>E5Gui/E5ToolBarDialog.py</Source>
+    <Source>E5Gui/E5Action.py</Source>
+    <Source>E5Gui/E5Application.py</Source>
+    <Source>E5Gui/E5Completers.py</Source>
+    <Source>E5Gui/E5Led.py</Source>
+    <Source>E5Gui/E5LineEdit.py</Source>
+    <Source>E5Gui/E5ListView.py</Source>
+    <Source>E5Gui/E5ModelMenu.py</Source>
+    <Source>E5Gui/E5ModelToolBar.py</Source>
+    <Source>E5Gui/E5SideBar.py</Source>
+    <Source>E5Gui/E5SingleApplication.py</Source>
+    <Source>E5Gui/E5SqueezeLabels.py</Source>
+    <Source>E5Gui/E5TabWidget.py</Source>
+    <Source>E5Gui/E5TableView.py</Source>
+    <Source>E5Gui/E5ToolBarManager.py</Source>
+    <Source>E5Gui/E5ToolBox.py</Source>
+    <Source>E5Gui/E5TreeSortFilterProxyModel.py</Source>
+    <Source>E5Gui/E5TreeView.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -906,7 +906,6 @@
     <Form>Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsPySvn/ConfigurationPage/SubversionPage.ui</Form>
     <Form>Plugins/VcsPlugins/vcsSubversion/ConfigurationPage/SubversionPage.ui</Form>
-    <Form>E4Gui/E4ToolBarDialog.ui</Form>
     <Form>MultiProject/PropertiesDialog.ui</Form>
     <Form>MultiProject/AddProjectDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/MultiProjectPage.ui</Form>
@@ -959,6 +958,7 @@
     <Form>E5XML/XMLMessageDialog.ui</Form>
     <Form>E5Network/E5NetworkMonitor.ui</Form>
     <Form>E5Network/E5NetworkHeaderDetailsDialog.ui</Form>
+    <Form>E5Gui/E5ToolBarDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

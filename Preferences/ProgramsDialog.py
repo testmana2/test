@@ -15,7 +15,7 @@ from PyQt4.QtCore import pyqtSlot, Qt, QProcess
 from PyQt4.QtGui import QApplication, QTreeWidgetItem, QHeaderView, QCursor, \
     QDialog, QDialogButtonBox
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from .Ui_ProgramsDialog import Ui_ProgramsDialog
 

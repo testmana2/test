@@ -12,7 +12,7 @@ import io
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from Preferences import Prefs, syncPreferences
 
@@ -26,7 +26,7 @@ def __readShortcut(act, category, prefClass):
     """
     Private function to read a single keyboard shortcut from the settings.
     
-    @param act reference to the action object (E4Action)
+    @param act reference to the action object (E5Action)
     @param category category the action belongs to (string)
     @param prefClass preferences class used as the storage area
     """
@@ -112,7 +112,7 @@ def __saveShortcut(act, category, prefClass):
     """
     Private function to write a single keyboard shortcut to the settings.
     
-    @param act reference to the action object (E4Action)
+    @param act reference to the action object (E5Action)
     @param category category the action belongs to (string)
     @param prefClass preferences class used as the storage area
     """
@@ -218,7 +218,7 @@ def exportShortcuts(fn):
 
 def importShortcuts(fn):
     """
-    Module function to import the keyboard shortcuts for the defined E4Actions.
+    Module function to import the keyboard shortcuts for the defined E5Actions.
     
     @param fn filename of the import file (string)
     @return flag indicating success
@@ -323,7 +323,7 @@ def __setAction(actions, sdict):
     """
     Private function to write a single keyboard shortcut to the settings.
     
-    @param actions list of actions to set (list of E4Action)
+    @param actions list of actions to set (list of E5Action)
     @param sdict dictionary containg accelerator information for one category
     """
     for act in actions:

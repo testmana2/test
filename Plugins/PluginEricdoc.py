@@ -14,9 +14,9 @@ import copy
 from PyQt4.QtCore import QObject, SIGNAL
 from PyQt4.QtGui import QDialog, QApplication
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
-from E4Gui.E4Action import E4Action
+from E5Gui.E5Action import E5Action
 
 from DocumentationPlugins.Ericdoc.EricdocConfigDialog import EricdocConfigDialog
 from DocumentationPlugins.Ericdoc.EricdocExecDialog import EricdocExecDialog
@@ -94,7 +94,7 @@ class EricdocPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
             self.__projectAct = \
-                E4Action(self.trUtf8('Generate documentation (eric5-doc)'),
+                E5Action(self.trUtf8('Generate documentation (eric5-doc)'),
                     self.trUtf8('Generate &documentation (eric5-doc)'), 0, 0,
                     self, 'doc_eric5_doc')
             self.__projectAct.setStatusTip(\
@@ -104,7 +104,7 @@ class EricdocPlugin(QObject):
                 """<p>Generate API documentation using eric5-doc.</p>"""
             ))
             self.connect(self.__projectAct, SIGNAL('triggered()'), self.__doEricdoc)
-            e5App().getObject("Project").addE4Actions([self.__projectAct])
+            e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
         self.connect(e5App().getObject("Project"), SIGNAL("showMenu"), 
@@ -122,7 +122,7 @@ class EricdocPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
             menu.removeAction(self.__projectAct)
-            e5App().getObject("Project").removeE4Actions([self.__projectAct])
+            e5App().getObject("Project").removeE5Actions([self.__projectAct])
         self.__initialize()
     
     def __projectShowMenu(self, menuName, menu):

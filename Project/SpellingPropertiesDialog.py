@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from QScintilla.SpellChecker import SpellChecker
 
@@ -39,8 +39,8 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         self.project = project
         self.parent = parent
         
-        self.pwlCompleter = E4FileCompleter(self.pwlEdit)
-        self.pelCompleter = E4FileCompleter(self.pelEdit)
+        self.pwlCompleter = E5FileCompleter(self.pwlEdit)
+        self.pelCompleter = E5FileCompleter(self.pelEdit)
         
         self.spellingComboBox.addItem(self.trUtf8("<default>"))
         self.spellingComboBox.addItems(sorted(SpellChecker.getAvailableLanguages()))

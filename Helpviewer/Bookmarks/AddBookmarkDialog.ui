@@ -36,14 +36,14 @@
     </widget>
    </item>
    <item>
-    <widget class="E4LineEdit" name="nameEdit" >
+    <widget class="E5LineEdit" name="nameEdit" >
      <property name="toolTip" >
       <string>Enter the name</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="E4LineEdit" name="addressEdit" >
+    <widget class="E5LineEdit" name="addressEdit" >
      <property name="toolTip" >
       <string>Enter the address</string>
      </property>
@@ -79,9 +79,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>E4LineEdit</class>
+   <class>E5LineEdit</class>
    <extends>QLineEdit</extends>
-   <header>E4Gui/E4LineEdit.h</header>
+   <header>E5Gui/E5LineEdit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

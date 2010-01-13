@@ -10,7 +10,7 @@ Module implementing a dialog for the configuration of eric5s keyboard shortcuts.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from .Ui_ShortcutsDialog import Ui_ShortcutsDialog
 from .ShortcutDialog import ShortcutDialog
@@ -82,7 +82,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         Private method to generate a keyboard shortcut item.
         
         @param category reference to the category item (QTreeWidgetItem)
-        @param action reference to the keyboard action (E4Action)
+        @param action reference to the keyboard action (E5Action)
         @keyparam noCheck flag indicating that no uniqueness check should
             be performed (boolean)
         @keyparam objectType type of the object (string). Objects of the same type
@@ -353,7 +353,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         Private method to save the actions for a category.
         
         @param category reference to the category item (QTreeWidgetItem)
-        @param actions list of actions for the category (list of E4Action)
+        @param actions list of actions for the category (list of E5Action)
         """
         for index in range(category.childCount()):
             itm = category.child(index)

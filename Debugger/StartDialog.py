@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 import Utilities
 import Preferences
@@ -76,7 +76,7 @@ class StartDialog(QDialog):
         self.clearButton = self.ui.buttonBox.addButton(\
             self.trUtf8("Clear Histories"), QDialogButtonBox.ActionRole)
         
-        self.workdirCompleter = E4DirCompleter(self.ui.workdirCombo)
+        self.workdirCompleter = E5DirCompleter(self.ui.workdirCombo)
         
         self.setWindowTitle(caption)
         self.ui.cmdlineCombo.clear()

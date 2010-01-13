@@ -12,7 +12,7 @@ import os.path
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
+from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
 from .Ui_SvnCopyDialog import Ui_SvnCopyDialog
 
@@ -34,9 +34,9 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         
         self.source = source
         if os.path.isdir(self.source):
-            self.targetCompleter = E4DirCompleter(self.targetEdit)
+            self.targetCompleter = E5DirCompleter(self.targetEdit)
         else:
-            self.targetCompleter = E4FileCompleter(self.targetEdit)
+            self.targetCompleter = E5FileCompleter(self.targetEdit)
         
         if move:
             self.setWindowTitle(self.trUtf8('Subversion Move'))

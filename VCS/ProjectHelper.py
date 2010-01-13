@@ -15,13 +15,13 @@ import copy
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 import VCS
 from .CommandOptionsDialog import vcsCommandOptionsDialog
 from .RepositoryInfoDialog import VcsRepositoryInfoDialog
 
-from E4Gui.E4Action import E4Action
+from E5Gui.E5Action import E5Action
 
 import Utilities
 import Preferences
@@ -64,7 +64,7 @@ class VcsProjectHelper(QObject):
         """
         Public method to generate the action objects.
         """
-        self.vcsNewAct = E4Action(self.trUtf8('New from repository'),
+        self.vcsNewAct = E5Action(self.trUtf8('New from repository'),
                 self.trUtf8('&New from repository...'), 0, 0, self, 'vcs_new')
         self.vcsNewAct.setStatusTip(self.trUtf8(
             'Create a new project from the VCS repository'
@@ -76,7 +76,7 @@ class VcsProjectHelper(QObject):
         self.connect(self.vcsNewAct, SIGNAL('triggered()'), self._vcsCheckout)
         self.actions.append(self.vcsNewAct)
         
-        self.vcsExportAct = E4Action(self.trUtf8('Export from repository'), 
+        self.vcsExportAct = E5Action(self.trUtf8('Export from repository'), 
                 self.trUtf8('&Export from repository...'), 0, 0, self, 'vcs_export')
         self.vcsExportAct.setStatusTip(self.trUtf8(
             'Export a project from the repository'
@@ -88,7 +88,7 @@ class VcsProjectHelper(QObject):
         self.connect(self.vcsExportAct, SIGNAL('triggered()'), self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
-        self.vcsAddAct = E4Action(self.trUtf8('Add to repository'),
+        self.vcsAddAct = E5Action(self.trUtf8('Add to repository'),
                 self.trUtf8('&Add to repository...'), 0, 0, self, 'vcs_add')
         self.vcsAddAct.setStatusTip(self.trUtf8(
             'Add the local project to the VCS repository'

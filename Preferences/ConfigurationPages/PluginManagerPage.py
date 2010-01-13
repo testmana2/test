@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_PluginManagerPage import Ui_PluginManagerPage
@@ -32,7 +32,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         self.setupUi(self)
         self.setObjectName("PluginManagerPage")
         
-        self.downloadDirCompleter = E4DirCompleter(self.downloadDirEdit)
+        self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         
         # set initial values
         self.activateExternalPluginsCheckBox.setChecked(\

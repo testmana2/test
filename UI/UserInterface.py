@@ -17,7 +17,7 @@ from PyQt4.QtGui import *
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QHttp, QNetworkProxy
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from Debugger.DebugUI import DebugUI
 from Debugger.DebugServer import DebugServer
@@ -68,14 +68,14 @@ from .FindFileDialog import FindFileDialog
 from .FindFileNameDialog import FindFileNameDialog
 from .AuthenticationDialog import AuthenticationDialog
 
-from E4Gui.E4SingleApplication import E4SingleApplicationServer
-from E4Gui.E4Action import E4Action, createActionGroup
-from E4Gui.E4ToolBarManager import E4ToolBarManager
-from E4Gui.E4ToolBarDialog import E4ToolBarDialog
-from E4Gui.E4SqueezeLabels import E4SqueezeLabelPath
-from E4Gui.E4ToolBox import E4VerticalToolBox, E4HorizontalToolBox
-from E4Gui.E4SideBar import E4SideBar
-from E4Gui.E4TabWidget import E4TabWidget
+from E5Gui.E5SingleApplication import E5SingleApplicationServer
+from E5Gui.E5Action import E5Action, createActionGroup
+from E5Gui.E5ToolBarManager import E5ToolBarManager
+from E5Gui.E5ToolBarDialog import E5ToolBarDialog
+from E5Gui.E5SqueezeLabels import E5SqueezeLabelPath
+from E5Gui.E5ToolBox import E5VerticalToolBox, E5HorizontalToolBox
+from E5Gui.E5SideBar import E5SideBar
+from E5Gui.E5TabWidget import E5TabWidget
 
 from VCS.StatusMonitorLed import StatusMonitorLed
 
@@ -497,7 +497,7 @@ class UserInterface(QMainWindow):
         self.compareDlg = CompareDialog()
         
         # create the toolbar manager object
-        self.toolbarManager = E4ToolBarManager(self, self)
+        self.toolbarManager = E5ToolBarManager(self, self)
         self.toolbarManager.setMainWindow(self)
         
         # Initialize the tool groups and list of started tools
@@ -560,7 +560,7 @@ class UserInterface(QMainWindow):
         # now fire up the single application server
         if Preferences.getUI("SingleApplicationMode"):
             splash.showMessage(self.trUtf8("Initializing Single Application Server..."))
-            self.SAServer = E4SingleApplicationServer()
+            self.SAServer = E5SingleApplicationServer()
         else:
             self.SAServer = None
         
@@ -832,13 +832,13 @@ class UserInterface(QMainWindow):
         """
         # Create the vertical toolbox
         self.vToolboxDock = self.__createDockWindow("vToolboxDock")
-        self.vToolbox = E4VerticalToolBox(self.vToolboxDock)
+        self.vToolbox = E5VerticalToolBox(self.vToolboxDock)
         self.__setupDockWindow(self.vToolboxDock, Qt.LeftDockWidgetArea, 
                                self.vToolbox, self.trUtf8("Vertical Toolbox"))
         
         # Create the horizontal toolbox
         self.hToolboxDock = self.__createDockWindow("hToolboxDock")
-        self.hToolbox = E4HorizontalToolBox(self.hToolboxDock)
+        self.hToolbox = E5HorizontalToolBox(self.hToolboxDock)
         self.__setupDockWindow(self.hToolboxDock, Qt.BottomDockWidgetArea, 
                                self.hToolbox, self.trUtf8("Horizontal Toolbox"))
         
@@ -921,10 +921,10 @@ class UserInterface(QMainWindow):
         @param debugServer reference to the debug server object
         """
         # Create the left sidebar
-        self.leftSidebar = E4SideBar(E4SideBar.West)
+        self.leftSidebar = E5SideBar(E5SideBar.West)
         
         # Create the bottom sidebar
-        self.bottomSidebar = E4SideBar(E4SideBar.South)
+        self.bottomSidebar = E5SideBar(E5SideBar.South)
         
         # Create the project browser
         logging.debug("Creating Project Browser...")
@@ -1250,7 +1250,7 @@ class UserInterface(QMainWindow):
         self.actions = []
         self.wizardsActions = []
         
-        self.exitAct = E4Action(self.trUtf8('Quit'),
+        self.exitAct = E5Action(self.trUtf8('Quit'),
                 UI.PixmapCache.getIcon("exit.png"),
                 self.trUtf8('&Quit'),
                 QKeySequence(self.trUtf8("Ctrl+Q","File|Quit")),
@@ -1267,7 +1267,7 @@ class UserInterface(QMainWindow):
 
         self.viewProfileActGrp = createActionGroup(self, "viewprofiles", True)
         
-        self.setEditProfileAct = E4Action(self.trUtf8('Edit Profile'),
+        self.setEditProfileAct = E5Action(self.trUtf8('Edit Profile'),
                 UI.PixmapCache.getIcon("viewProfileEdit.png"),
                 self.trUtf8('Edit Profile'),
                 0, 0,
@@ -1282,7 +1282,7 @@ class UserInterface(QMainWindow):
         self.connect(self.setEditProfileAct, SIGNAL('triggered()'), self.__setEditProfile)
         self.actions.append(self.setEditProfileAct)
         
-        self.setDebugProfileAct = E4Action(self.trUtf8('Debug Profile'),
+        self.setDebugProfileAct = E5Action(self.trUtf8('Debug Profile'),
                 UI.PixmapCache.getIcon("viewProfileDebug.png"),
                 self.trUtf8('Debug Profile'),
                 0, 0,
@@ -1298,7 +1298,7 @@ class UserInterface(QMainWindow):
         self.connect(self.setDebugProfileAct, SIGNAL('triggered()'), self.setDebugProfile)
         self.actions.append(self.setDebugProfileAct)
         
-        self.pbAct = E4Action(self.trUtf8('Project-Viewer'),
+        self.pbAct = E5Action(self.trUtf8('Project-Viewer'),
                 self.trUtf8('&Project-Viewer'), 0, 0, self, 'project_viewer', True)
         self.pbAct.setStatusTip(self.trUtf8('Toggle the Project-Viewer window'))
         self.pbAct.setWhatsThis(self.trUtf8(
@@ -1309,7 +1309,7 @@ class UserInterface(QMainWindow):
         self.connect(self.pbAct, SIGNAL('triggered()'), self.__toggleProjectBrowser)
         self.actions.append(self.pbAct)
         
-        self.pbActivateAct = E4Action(self.trUtf8('Activate Project-Viewer'),
+        self.pbActivateAct = E5Action(self.trUtf8('Activate Project-Viewer'),
                 self.trUtf8('Activate Project-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+P")),
                 0, self,
@@ -1319,7 +1319,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.pbActivateAct)
         self.addAction(self.pbActivateAct)
 
-        self.mpbAct = E4Action(self.trUtf8('Multiproject-Viewer'),
+        self.mpbAct = E5Action(self.trUtf8('Multiproject-Viewer'),
                 self.trUtf8('&Multiproject-Viewer'), 0, 0, self, 
                 'multi_project_viewer', True)
         self.mpbAct.setStatusTip(self.trUtf8('Toggle the Multiproject-Viewer window'))
@@ -1331,7 +1331,7 @@ class UserInterface(QMainWindow):
         self.connect(self.mpbAct, SIGNAL('triggered()'), self.__toggleMultiProjectBrowser)
         self.actions.append(self.mpbAct)
         
-        self.mpbActivateAct = E4Action(self.trUtf8('Activate Multiproject-Viewer'),
+        self.mpbActivateAct = E5Action(self.trUtf8('Activate Multiproject-Viewer'),
                 self.trUtf8('Activate Multiproject-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+M")),
                 0, self,
@@ -1341,7 +1341,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.mpbActivateAct)
         self.addAction(self.mpbActivateAct)
 
-        self.debugViewerAct = E4Action(self.trUtf8('Debug-Viewer'),
+        self.debugViewerAct = E5Action(self.trUtf8('Debug-Viewer'),
                 self.trUtf8('&Debug-Viewer'), 0, 0, self, 'debug_viewer', True)
         self.debugViewerAct.setStatusTip(self.trUtf8('Toggle the Debug-Viewer window'))
         self.debugViewerAct.setWhatsThis(self.trUtf8(
@@ -1352,7 +1352,7 @@ class UserInterface(QMainWindow):
         self.connect(self.debugViewerAct, SIGNAL('triggered()'), self.__toggleDebugViewer)
         self.actions.append(self.debugViewerAct)
         
-        self.debugViewerActivateAct = E4Action(self.trUtf8('Activate Debug-Viewer'),
+        self.debugViewerActivateAct = E5Action(self.trUtf8('Activate Debug-Viewer'),
                 self.trUtf8('Activate Debug-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+D")),
                 0, self,
@@ -1362,7 +1362,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.debugViewerActivateAct)
         self.addAction(self.debugViewerActivateAct)
 
-        self.shellAct = E4Action(self.trUtf8('Shell'),
+        self.shellAct = E5Action(self.trUtf8('Shell'),
                 self.trUtf8('&Shell'), 0, 0, self, 'interpreter_shell', True)
         self.shellAct.setStatusTip(self.trUtf8('Toggle the Shell window'))
         self.shellAct.setWhatsThis(self.trUtf8(
@@ -1374,7 +1374,7 @@ class UserInterface(QMainWindow):
             self.connect(self.shellAct, SIGNAL('triggered()'), self.__toggleShell)
         self.actions.append(self.shellAct)
 
-        self.shellActivateAct = E4Action(self.trUtf8('Activate Shell'),
+        self.shellActivateAct = E5Action(self.trUtf8('Activate Shell'),
                 self.trUtf8('Activate Shell'),
                 QKeySequence(self.trUtf8("Alt+Shift+S")),
                 0, self,
@@ -1383,7 +1383,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.shellActivateAct)
         self.addAction(self.shellActivateAct)
 
-        self.terminalAct = E4Action(self.trUtf8('Terminal'),
+        self.terminalAct = E5Action(self.trUtf8('Terminal'),
                 self.trUtf8('Te&rminal'), 0, 0, self, 'terminal', True)
         self.terminalAct.setStatusTip(self.trUtf8('Toggle the Terminal window'))
         self.terminalAct.setWhatsThis(self.trUtf8(
@@ -1394,7 +1394,7 @@ class UserInterface(QMainWindow):
         self.connect(self.terminalAct, SIGNAL('triggered()'), self.__toggleTerminal)
         self.actions.append(self.terminalAct)
 
-        self.terminalActivateAct = E4Action(self.trUtf8('Activate Terminal'),
+        self.terminalActivateAct = E5Action(self.trUtf8('Activate Terminal'),
                 self.trUtf8('Activate Terminal'),
                 QKeySequence(self.trUtf8("Alt+Shift+R")),
                 0, self,
@@ -1404,7 +1404,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.terminalActivateAct)
         self.addAction(self.terminalActivateAct)
 
-        self.browserAct = E4Action(self.trUtf8('File-Browser'),
+        self.browserAct = E5Action(self.trUtf8('File-Browser'),
                 self.trUtf8('File-&Browser'), 0, 0, self, 'file_browser', True)
         self.browserAct.setStatusTip(self.trUtf8('Toggle the File-Browser window'))
         self.browserAct.setWhatsThis(self.trUtf8(
@@ -1416,7 +1416,7 @@ class UserInterface(QMainWindow):
             self.connect(self.browserAct, SIGNAL('triggered()'), self.__toggleBrowser)
         self.actions.append(self.browserAct)
 
-        self.browserActivateAct = E4Action(self.trUtf8('Activate File-Browser'),
+        self.browserActivateAct = E5Action(self.trUtf8('Activate File-Browser'),
                 self.trUtf8('Activate File-Browser'),
                 QKeySequence(self.trUtf8("Alt+Shift+F")),
                 0, self,
@@ -1426,7 +1426,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.browserActivateAct)
         self.addAction(self.browserActivateAct)
 
-        self.logViewerAct = E4Action(self.trUtf8('Log-Viewer'),
+        self.logViewerAct = E5Action(self.trUtf8('Log-Viewer'),
                 self.trUtf8('&Log-Viewer'), 0, 0, self, 'log_viewer', True)
         self.logViewerAct.setStatusTip(self.trUtf8('Toggle the Log-Viewer window'))
         self.logViewerAct.setWhatsThis(self.trUtf8(
@@ -1437,7 +1437,7 @@ class UserInterface(QMainWindow):
         self.connect(self.logViewerAct, SIGNAL('triggered()'), self.__toggleLogViewer)
         self.actions.append(self.logViewerAct)
 
-        self.logViewerActivateAct = E4Action(self.trUtf8('Activate Log-Viewer'),
+        self.logViewerActivateAct = E5Action(self.trUtf8('Activate Log-Viewer'),
                 self.trUtf8('Activate Log-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+G")),
                 0, self,
@@ -1447,7 +1447,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.logViewerActivateAct)
         self.addAction(self.logViewerActivateAct)
 
-        self.taskViewerAct = E4Action(self.trUtf8('Task-Viewer'),
+        self.taskViewerAct = E5Action(self.trUtf8('Task-Viewer'),
                 self.trUtf8('T&ask-Viewer'), 0, 0, self, 'task_viewer', True)
         self.taskViewerAct.setStatusTip(self.trUtf8('Toggle the Task-Viewer window'))
         self.taskViewerAct.setWhatsThis(self.trUtf8(
@@ -1458,7 +1458,7 @@ class UserInterface(QMainWindow):
         self.connect(self.taskViewerAct, SIGNAL('triggered()'), self.__toggleTaskViewer)
         self.actions.append(self.taskViewerAct)
 
-        self.taskViewerActivateAct = E4Action(self.trUtf8('Activate Task-Viewer'),
+        self.taskViewerActivateAct = E5Action(self.trUtf8('Activate Task-Viewer'),
                 self.trUtf8('Activate Task-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+T")),
                 0, self,
@@ -1468,7 +1468,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.taskViewerActivateAct)
         self.addAction(self.taskViewerActivateAct)
 
-        self.templateViewerAct = E4Action(self.trUtf8('Template-Viewer'),
+        self.templateViewerAct = E5Action(self.trUtf8('Template-Viewer'),
                 self.trUtf8('Temp&late-Viewer'), 0, 0, self, 'template_viewer', True)
         self.templateViewerAct.setStatusTip(\
             self.trUtf8('Toggle the Template-Viewer window'))
@@ -1481,7 +1481,7 @@ class UserInterface(QMainWindow):
                 self.__toggleTemplateViewer)
         self.actions.append(self.templateViewerAct)
 
-        self.templateViewerActivateAct = E4Action(self.trUtf8('Activate Template-Viewer'),
+        self.templateViewerActivateAct = E5Action(self.trUtf8('Activate Template-Viewer'),
                 self.trUtf8('Activate Template-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+A")),
                 0, self,
@@ -1491,7 +1491,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.templateViewerActivateAct)
         self.addAction(self.templateViewerActivateAct)
 
-        self.vtAct = E4Action(self.trUtf8('Vertical Toolbox'),
+        self.vtAct = E5Action(self.trUtf8('Vertical Toolbox'),
                 self.trUtf8('&Vertical Toolbox'), 0, 0, self, 'vertical_toolbox', True)
         self.vtAct.setStatusTip(self.trUtf8('Toggle the Vertical Toolbox window'))
         self.vtAct.setWhatsThis(self.trUtf8(
@@ -1502,7 +1502,7 @@ class UserInterface(QMainWindow):
         self.connect(self.vtAct, SIGNAL('triggered()'), self.__toggleVerticalToolbox)
         self.actions.append(self.vtAct)
         
-        self.htAct = E4Action(self.trUtf8('Horizontal Toolbox'),
+        self.htAct = E5Action(self.trUtf8('Horizontal Toolbox'),
                 self.trUtf8('&Horizontal Toolbox'), 0, 0, self, 
                 'horizontal_toolbox', True)
         self.htAct.setStatusTip(self.trUtf8('Toggle the Horizontal Toolbox window'))
@@ -1514,7 +1514,7 @@ class UserInterface(QMainWindow):
         self.connect(self.htAct, SIGNAL('triggered()'), self.__toggleHorizontalToolbox)
         self.actions.append(self.htAct)
         
-        self.lsbAct = E4Action(self.trUtf8('Left Sidebar'),
+        self.lsbAct = E5Action(self.trUtf8('Left Sidebar'),
                 self.trUtf8('&Left Sidebar'), 0, 0, self, 'left_sidebar', True)
         self.lsbAct.setStatusTip(self.trUtf8('Toggle the left sidebar window'))
         self.lsbAct.setWhatsThis(self.trUtf8(
@@ -1525,7 +1525,7 @@ class UserInterface(QMainWindow):
         self.connect(self.lsbAct, SIGNAL('triggered()'), self.__toggleLeftSidebar)
         self.actions.append(self.lsbAct)
         
-        self.bsbAct = E4Action(self.trUtf8('Bottom Sidebar'),
+        self.bsbAct = E5Action(self.trUtf8('Bottom Sidebar'),
                 self.trUtf8('&Bottom Sidebar'), 0, 0, self, 
                 'bottom_sidebar', True)
         self.bsbAct.setStatusTip(self.trUtf8('Toggle the bottom sidebar window'))
@@ -1537,7 +1537,7 @@ class UserInterface(QMainWindow):
         self.connect(self.bsbAct, SIGNAL('triggered()'), self.__toggleBottomSidebar)
         self.actions.append(self.bsbAct)
         
-        self.whatsThisAct = E4Action(self.trUtf8('What\'s This?'),
+        self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'),
                 UI.PixmapCache.getIcon("whatsThis.png"),
                 self.trUtf8('&What\'s This?'), 
                 QKeySequence(self.trUtf8("Shift+F1")),
@@ -1554,7 +1554,7 @@ class UserInterface(QMainWindow):
         self.connect(self.whatsThisAct, SIGNAL('triggered()'), self.__whatsThis)
         self.actions.append(self.whatsThisAct)
 
-        self.helpviewerAct = E4Action(self.trUtf8('Helpviewer'),
+        self.helpviewerAct = E5Action(self.trUtf8('Helpviewer'),
                 UI.PixmapCache.getIcon("help.png"),
                 self.trUtf8('&Helpviewer...'), 
                 QKeySequence(self.trUtf8("F1")),
@@ -1577,7 +1577,7 @@ class UserInterface(QMainWindow):
         self.__initEricDocAction()
         self.__initPySideDocActions()
       
-        self.versionAct = E4Action(self.trUtf8('Show Versions'),
+        self.versionAct = E5Action(self.trUtf8('Show Versions'),
                 self.trUtf8('Show &Versions'), 0, 0, self, 'show_versions')
         self.versionAct.setStatusTip(self.trUtf8('Display version information'))
         self.versionAct.setWhatsThis(self.trUtf8(
@@ -1587,7 +1587,7 @@ class UserInterface(QMainWindow):
         self.connect(self.versionAct, SIGNAL('triggered()'), self.__showVersions)
         self.actions.append(self.versionAct)
 
-        self.checkUpdateAct = E4Action(self.trUtf8('Check for Updates'),
+        self.checkUpdateAct = E5Action(self.trUtf8('Check for Updates'),
                 self.trUtf8('Check for &Updates...'), 0, 0, self, 'check_updates')
         self.checkUpdateAct.setStatusTip(self.trUtf8('Check for Updates'))
         self.checkUpdateAct.setWhatsThis(self.trUtf8(
@@ -1597,7 +1597,7 @@ class UserInterface(QMainWindow):
         self.connect(self.checkUpdateAct, SIGNAL('triggered()'), self.performVersionCheck)
         self.actions.append(self.checkUpdateAct)
     
-        self.showVersionsAct = E4Action(self.trUtf8('Show downloadable versions'),
+        self.showVersionsAct = E5Action(self.trUtf8('Show downloadable versions'),
                 self.trUtf8('Show &downloadable versions...'), 
                 0, 0, self, 'show_downloadable_versions')
         self.showVersionsAct.setStatusTip(\
@@ -1611,7 +1611,7 @@ class UserInterface(QMainWindow):
                 self.showAvailableVersionsInfo)
         self.actions.append(self.showVersionsAct)
 
-        self.reportBugAct = E4Action(self.trUtf8('Report Bug'),
+        self.reportBugAct = E5Action(self.trUtf8('Report Bug'),
                 self.trUtf8('Report &Bug...'), 0, 0, self, 'report_bug')
         self.reportBugAct.setStatusTip(self.trUtf8('Report a bug'))
         self.reportBugAct.setWhatsThis(self.trUtf8(
@@ -1621,7 +1621,7 @@ class UserInterface(QMainWindow):
         self.connect(self.reportBugAct, SIGNAL('triggered()'), self.__reportBug)
         self.actions.append(self.reportBugAct)
         
-        self.requestFeatureAct = E4Action(self.trUtf8('Request Feature'),
+        self.requestFeatureAct = E5Action(self.trUtf8('Request Feature'),
                 self.trUtf8('Request &Feature...'), 0, 0, self, 'request_feature')
         self.requestFeatureAct.setStatusTip(self.trUtf8('Send a feature request'))
         self.requestFeatureAct.setWhatsThis(self.trUtf8(
@@ -1633,7 +1633,7 @@ class UserInterface(QMainWindow):
 
         self.utActGrp = createActionGroup(self)
         
-        self.utDialogAct = E4Action(self.trUtf8('Unittest'), 
+        self.utDialogAct = E5Action(self.trUtf8('Unittest'), 
                 UI.PixmapCache.getIcon("unittest.png"),
                 self.trUtf8('&Unittest...'),
                 0, 0, self.utActGrp, 'unittest')
@@ -1646,7 +1646,7 @@ class UserInterface(QMainWindow):
         self.connect(self.utDialogAct, SIGNAL('triggered()'), self.__unittest)
         self.actions.append(self.utDialogAct)
 
-        self.utRestartAct = E4Action(self.trUtf8('Unittest Restart'),
+        self.utRestartAct = E5Action(self.trUtf8('Unittest Restart'),
             UI.PixmapCache.getIcon("unittestRestart.png"),
             self.trUtf8('&Restart Unittest...'),
             0, 0, self.utActGrp, 'unittest_restart')
@@ -1659,7 +1659,7 @@ class UserInterface(QMainWindow):
         self.utRestartAct.setEnabled(False)
         self.actions.append(self.utRestartAct)
         
-        self.utScriptAct = E4Action(self.trUtf8('Unittest Script'),
+        self.utScriptAct = E5Action(self.trUtf8('Unittest Script'),
             UI.PixmapCache.getIcon("unittestScript.png"),
             self.trUtf8('Unittest &Script...'),
             0, 0, self.utActGrp, 'unittest_script')
@@ -1672,7 +1672,7 @@ class UserInterface(QMainWindow):
         self.utScriptAct.setEnabled(False)
         self.actions.append(self.utScriptAct)
         
-        self.utProjectAct = E4Action(self.trUtf8('Unittest Project'),
+        self.utProjectAct = E5Action(self.trUtf8('Unittest Project'),
             UI.PixmapCache.getIcon("unittestProject.png"),
             self.trUtf8('Unittest &Project...'),
             0, 0, self.utActGrp, 'unittest_project')
@@ -1690,7 +1690,7 @@ class UserInterface(QMainWindow):
             "%s.exe" % Utilities.generateQtToolName("designer") or \
             Utilities.generateQtToolName("designer")
         if Utilities.isinpath(designerExe):
-            self.designer4Act = E4Action(self.trUtf8('Qt-Designer 4'), 
+            self.designer4Act = E5Action(self.trUtf8('Qt-Designer 4'), 
                     UI.PixmapCache.getIcon("designer4.png"),
                     self.trUtf8('&Designer 4...'), 0, 0, self, 'qt_designer4')
             self.designer4Act.setStatusTip(self.trUtf8('Start Qt-Designer 4'))
@@ -1707,7 +1707,7 @@ class UserInterface(QMainWindow):
             "%s.exe" % Utilities.generateQtToolName("linguist") or \
             Utilities.generateQtToolName("linguist")
         if Utilities.isinpath(linguistExe):
-            self.linguist4Act = E4Action(self.trUtf8('Qt-Linguist 4'), 
+            self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist 4'), 
                     UI.PixmapCache.getIcon("linguist4.png"),
                     self.trUtf8('&Linguist 4...'), 0, 0, self, 'qt_linguist4')
             self.linguist4Act.setStatusTip(self.trUtf8('Start Qt-Linguist 4'))
@@ -1720,7 +1720,7 @@ class UserInterface(QMainWindow):
         else:
             self.linguist4Act = None
     
-        self.uipreviewerAct = E4Action(self.trUtf8('UI Previewer'), 
+        self.uipreviewerAct = E5Action(self.trUtf8('UI Previewer'), 
                 UI.PixmapCache.getIcon("uiPreviewer.png"),
                 self.trUtf8('&UI Previewer...'), 0, 0, self, 'ui_previewer')
         self.uipreviewerAct.setStatusTip(self.trUtf8('Start the UI Previewer'))
@@ -1731,7 +1731,7 @@ class UserInterface(QMainWindow):
         self.connect(self.uipreviewerAct, SIGNAL('triggered()'), self.__UIPreviewer)
         self.actions.append(self.uipreviewerAct)
         
-        self.trpreviewerAct = E4Action(self.trUtf8('Translations Previewer'), 
+        self.trpreviewerAct = E5Action(self.trUtf8('Translations Previewer'), 
                 UI.PixmapCache.getIcon("trPreviewer.png"),
                 self.trUtf8('&Translations Previewer...'), 0, 0, self, 'tr_previewer')
         self.trpreviewerAct.setStatusTip(self.trUtf8('Start the Translations Previewer'))
@@ -1742,7 +1742,7 @@ class UserInterface(QMainWindow):
         self.connect(self.trpreviewerAct, SIGNAL('triggered()'), self.__TRPreviewer)
         self.actions.append(self.trpreviewerAct)
         
-        self.diffAct = E4Action(self.trUtf8('Compare Files'),
+        self.diffAct = E5Action(self.trUtf8('Compare Files'),
                 UI.PixmapCache.getIcon("diffFiles.png"),
                 self.trUtf8('&Compare Files...'), 0, 0, self, 'diff_files')
         self.diffAct.setStatusTip(self.trUtf8('Compare two files'))
@@ -1753,7 +1753,7 @@ class UserInterface(QMainWindow):
         self.connect(self.diffAct, SIGNAL('triggered()'), self.__compareFiles)
         self.actions.append(self.diffAct)
 
-        self.compareAct = E4Action(self.trUtf8('Compare Files side by side'),
+        self.compareAct = E5Action(self.trUtf8('Compare Files side by side'),
                 UI.PixmapCache.getIcon("compareFiles.png"),
                 self.trUtf8('Compare Files &side by side...'), 
                 0, 0, self, 'compare_files')
@@ -1766,7 +1766,7 @@ class UserInterface(QMainWindow):
         self.connect(self.compareAct, SIGNAL('triggered()'), self.__compareFilesSbs)
         self.actions.append(self.compareAct)
 
-        self.sqlBrowserAct = E4Action(self.trUtf8('SQL Browser'),
+        self.sqlBrowserAct = E5Action(self.trUtf8('SQL Browser'),
                 UI.PixmapCache.getIcon("sqlBrowser.png"),
                 self.trUtf8('SQL &Browser...'), 
                 0, 0, self, 'sql_browser')
@@ -1778,7 +1778,7 @@ class UserInterface(QMainWindow):
         self.connect(self.sqlBrowserAct, SIGNAL('triggered()'), self.__sqlBrowser)
         self.actions.append(self.sqlBrowserAct)
 
-        self.miniEditorAct = E4Action(self.trUtf8('Mini Editor'),
+        self.miniEditorAct = E5Action(self.trUtf8('Mini Editor'),
                 UI.PixmapCache.getIcon("editor.png"),
                 self.trUtf8('Mini &Editor...'), 
                 0, 0, self, 'mini_editor')
@@ -1790,7 +1790,7 @@ class UserInterface(QMainWindow):
         self.connect(self.miniEditorAct, SIGNAL('triggered()'), self.__openMiniEditor)
         self.actions.append(self.miniEditorAct)
 
-        self.webBrowserAct = E4Action(self.trUtf8('Web Browser'),
+        self.webBrowserAct = E5Action(self.trUtf8('Web Browser'),
                 UI.PixmapCache.getIcon("ericWeb.png"),
                 self.trUtf8('&Web Browser...'), 
                 0, 0, self, 'web_browser')
@@ -1802,7 +1802,7 @@ class UserInterface(QMainWindow):
         self.connect(self.webBrowserAct, SIGNAL('triggered()'), self.__webBrowser)
         self.actions.append(self.webBrowserAct)
 
-        self.iconEditorAct = E4Action(self.trUtf8('Icon Editor'),
+        self.iconEditorAct = E5Action(self.trUtf8('Icon Editor'),
                 UI.PixmapCache.getIcon("iconEditor.png"),
                 self.trUtf8('&Icon Editor...'), 
                 0, 0, self, 'icon_editor')
@@ -1814,7 +1814,7 @@ class UserInterface(QMainWindow):
         self.connect(self.iconEditorAct, SIGNAL('triggered()'), self.__editPixmap)
         self.actions.append(self.iconEditorAct)
 
-        self.prefAct = E4Action(self.trUtf8('Preferences'),
+        self.prefAct = E5Action(self.trUtf8('Preferences'),
                 UI.PixmapCache.getIcon("configure.png"),
                 self.trUtf8('&Preferences...'), 0, 0, self, 'preferences')
         self.prefAct.setStatusTip(self.trUtf8('Set the prefered configuration'))
@@ -1826,7 +1826,7 @@ class UserInterface(QMainWindow):
         self.connect(self.prefAct, SIGNAL('triggered()'), self.showPreferences)
         self.actions.append(self.prefAct)
 
-        self.prefExportAct = E4Action(self.trUtf8('Export Preferences'),
+        self.prefExportAct = E5Action(self.trUtf8('Export Preferences'),
                 UI.PixmapCache.getIcon("configureExport.png"),
                 self.trUtf8('E&xport Preferences...'), 0, 0, self, 'export_preferences')
         self.prefExportAct.setStatusTip(self.trUtf8('Export the current configuration'))
@@ -1837,7 +1837,7 @@ class UserInterface(QMainWindow):
         self.connect(self.prefExportAct, SIGNAL('triggered()'), self.__exportPreferences)
         self.actions.append(self.prefExportAct)
 
-        self.prefImportAct = E4Action(self.trUtf8('Import Preferences'),
+        self.prefImportAct = E5Action(self.trUtf8('Import Preferences'),
                 UI.PixmapCache.getIcon("configureImport.png"),
                 self.trUtf8('I&mport Preferences...'), 0, 0, self, 'import_preferences')
         self.prefImportAct.setStatusTip(self.trUtf8(
@@ -1849,7 +1849,7 @@ class UserInterface(QMainWindow):
         self.connect(self.prefImportAct, SIGNAL('triggered()'), self.__importPreferences)
         self.actions.append(self.prefImportAct)
 
-        self.reloadAPIsAct = E4Action(self.trUtf8('Reload APIs'),
+        self.reloadAPIsAct = E5Action(self.trUtf8('Reload APIs'),
                 self.trUtf8('Reload &APIs'), 0, 0, self, 'reload_apis')
         self.reloadAPIsAct.setStatusTip(self.trUtf8('Reload the API information'))
         self.reloadAPIsAct.setWhatsThis(self.trUtf8(
@@ -1859,7 +1859,7 @@ class UserInterface(QMainWindow):
         self.connect(self.reloadAPIsAct, SIGNAL('triggered()'), self.__reloadAPIs)
         self.actions.append(self.reloadAPIsAct)
 
-        self.showExternalToolsAct = E4Action(self.trUtf8('Show external tools'),
+        self.showExternalToolsAct = E5Action(self.trUtf8('Show external tools'),
                 UI.PixmapCache.getIcon("showPrograms.png"),
                 self.trUtf8('Show external &tools'), 0, 0, self, 'show_external_tools')
         self.showExternalToolsAct.setStatusTip(self.trUtf8('Reload the API information'))
@@ -1872,7 +1872,7 @@ class UserInterface(QMainWindow):
                 self.__showExternalTools)
         self.actions.append(self.showExternalToolsAct)
 
-        self.configViewProfilesAct = E4Action(self.trUtf8('View Profiles'),
+        self.configViewProfilesAct = E5Action(self.trUtf8('View Profiles'),
                 UI.PixmapCache.getIcon("configureViewProfiles.png"),
                 self.trUtf8('&View Profiles...'), 0, 0, self, 'view_profiles')
         self.configViewProfilesAct.setStatusTip(self.trUtf8('Configure view profiles'))
@@ -1886,7 +1886,7 @@ class UserInterface(QMainWindow):
                 self.__configViewProfiles)
         self.actions.append(self.configViewProfilesAct)
 
-        self.configToolBarsAct = E4Action(self.trUtf8('Toolbars'),
+        self.configToolBarsAct = E5Action(self.trUtf8('Toolbars'),
                 UI.PixmapCache.getIcon("toolbarsConfigure.png"),
                 self.trUtf8('Tool&bars...'), 0, 0, self, 'configure_toolbars')
         self.configToolBarsAct.setStatusTip(self.trUtf8('Configure toolbars'))
@@ -1899,7 +1899,7 @@ class UserInterface(QMainWindow):
         self.connect(self.configToolBarsAct, SIGNAL('triggered()'), self.__configToolBars)
         self.actions.append(self.configToolBarsAct)
 
-        self.shortcutsAct = E4Action(self.trUtf8('Keyboard Shortcuts'),
+        self.shortcutsAct = E5Action(self.trUtf8('Keyboard Shortcuts'),
                 UI.PixmapCache.getIcon("configureShortcuts.png"),
                 self.trUtf8('Keyboard &Shortcuts...'), 0, 0, self, 'keyboard_shortcuts')
         self.shortcutsAct.setStatusTip(self.trUtf8('Set the keyboard shortcuts'))
@@ -1911,7 +1911,7 @@ class UserInterface(QMainWindow):
         self.connect(self.shortcutsAct, SIGNAL('triggered()'), self.__configShortcuts)
         self.actions.append(self.shortcutsAct)
 
-        self.exportShortcutsAct = E4Action(self.trUtf8('Export Keyboard Shortcuts'),
+        self.exportShortcutsAct = E5Action(self.trUtf8('Export Keyboard Shortcuts'),
                 UI.PixmapCache.getIcon("exportShortcuts.png"),
                 self.trUtf8('&Export Keyboard Shortcuts...'), 0, 0, self,
                 'export_keyboard_shortcuts')
@@ -1924,7 +1924,7 @@ class UserInterface(QMainWindow):
                 self.__exportShortcuts)
         self.actions.append(self.exportShortcutsAct)
 
-        self.importShortcutsAct = E4Action(self.trUtf8('Import Keyboard Shortcuts'),
+        self.importShortcutsAct = E5Action(self.trUtf8('Import Keyboard Shortcuts'),
                 UI.PixmapCache.getIcon("importShortcuts.png"),
                 self.trUtf8('&Import Keyboard Shortcuts...'), 0, 0, self,
                 'import_keyboard_shortcuts')
@@ -1937,7 +1937,7 @@ class UserInterface(QMainWindow):
                 self.__importShortcuts)
         self.actions.append(self.importShortcutsAct)
 
-        self.viewmanagerActivateAct = E4Action(self.trUtf8('Activate current editor'),
+        self.viewmanagerActivateAct = E5Action(self.trUtf8('Activate current editor'),
                 self.trUtf8('Activate current editor'),
                 QKeySequence(self.trUtf8("Alt+Shift+E")),
                 0, self,
@@ -1947,7 +1947,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.viewmanagerActivateAct)
         self.addAction(self.viewmanagerActivateAct)
 
-        self.nextTabAct = E4Action(self.trUtf8('Show next'), 
+        self.nextTabAct = E5Action(self.trUtf8('Show next'), 
                       self.trUtf8('Show next'), 
                       QKeySequence(self.trUtf8('Ctrl+Alt+Tab')), 0,
                       self, 'view_next_tab')
@@ -1955,7 +1955,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.nextTabAct)
         self.addAction(self.nextTabAct)
         
-        self.prevTabAct = E4Action(self.trUtf8('Show previous'), 
+        self.prevTabAct = E5Action(self.trUtf8('Show previous'), 
                       self.trUtf8('Show previous'), 
                       QKeySequence(self.trUtf8('Shift+Ctrl+Alt+Tab')), 0,
                       self, 'view_previous_tab')
@@ -1963,7 +1963,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.prevTabAct)
         self.addAction(self.prevTabAct)
         
-        self.switchTabAct = E4Action(self.trUtf8('Switch between tabs'), 
+        self.switchTabAct = E5Action(self.trUtf8('Switch between tabs'), 
                       self.trUtf8('Switch between tabs'), 
                       QKeySequence(self.trUtf8('Ctrl+1')), 0,
                       self, 'switch_tabs')
@@ -1971,7 +1971,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.switchTabAct)
         self.addAction(self.switchTabAct)
         
-        self.pluginInfoAct = E4Action(self.trUtf8('Plugin Infos'),
+        self.pluginInfoAct = E5Action(self.trUtf8('Plugin Infos'),
                 UI.PixmapCache.getIcon("plugin.png"),
                 self.trUtf8('&Plugin Infos...'), 0, 0, self, 'plugin_infos')
         self.pluginInfoAct.setStatusTip(self.trUtf8('Show Plugin Infos'))
@@ -1983,7 +1983,7 @@ class UserInterface(QMainWindow):
         self.connect(self.pluginInfoAct, SIGNAL('triggered()'), self.__showPluginInfo)
         self.actions.append(self.pluginInfoAct)
         
-        self.pluginInstallAct = E4Action(self.trUtf8('Install Plugins'),
+        self.pluginInstallAct = E5Action(self.trUtf8('Install Plugins'),
                 UI.PixmapCache.getIcon("pluginInstall.png"),
                 self.trUtf8('&Install Plugins...'), 0, 0, self, 'plugin_install')
         self.pluginInstallAct.setStatusTip(self.trUtf8('Install Plugins'))
@@ -1994,7 +1994,7 @@ class UserInterface(QMainWindow):
         self.connect(self.pluginInstallAct, SIGNAL('triggered()'), self.__installPlugins)
         self.actions.append(self.pluginInstallAct)
         
-        self.pluginDeinstallAct = E4Action(self.trUtf8('Uninstall Plugin'),
+        self.pluginDeinstallAct = E5Action(self.trUtf8('Uninstall Plugin'),
                 UI.PixmapCache.getIcon("pluginUninstall.png"),
                 self.trUtf8('&Uninstall Plugin...'), 0, 0, self, 'plugin_deinstall')
         self.pluginDeinstallAct.setStatusTip(self.trUtf8('Uninstall Plugin'))
@@ -2006,7 +2006,7 @@ class UserInterface(QMainWindow):
                 self.__deinstallPlugin)
         self.actions.append(self.pluginDeinstallAct)
 
-        self.pluginRepoAct = E4Action(self.trUtf8('Plugin Repository'),
+        self.pluginRepoAct = E5Action(self.trUtf8('Plugin Repository'),
                 UI.PixmapCache.getIcon("pluginRepository.png"),
                 self.trUtf8('Plugin &Repository...'), 0, 0, self, 'plugin_repository')
         self.pluginRepoAct.setStatusTip(self.trUtf8(
@@ -2036,7 +2036,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to initilize the action to show the Qt documentation.
         """
-        self.qt4DocAct = E4Action(self.trUtf8('Qt4 Documentation'),
+        self.qt4DocAct = E5Action(self.trUtf8('Qt4 Documentation'),
                 self.trUtf8('Qt&4 Documentation'), 0, 0, self, 'qt4_documentation')
         self.qt4DocAct.setStatusTip(self.trUtf8('Open Qt4 Documentation'))
         self.qt4DocAct.setWhatsThis(self.trUtf8(
@@ -2048,7 +2048,7 @@ class UserInterface(QMainWindow):
         self.connect(self.qt4DocAct, SIGNAL('triggered()'), self.__showQt4Doc)
         self.actions.append(self.qt4DocAct)
       
-        self.pyqt4DocAct = E4Action(self.trUtf8('PyQt4 Documentation'),
+        self.pyqt4DocAct = E5Action(self.trUtf8('PyQt4 Documentation'),
                 self.trUtf8('P&yQt4 Documentation'), 0, 0, self, 'pyqt4_documentation')
         self.pyqt4DocAct.setStatusTip(self.trUtf8('Open PyQt4 Documentation'))
         self.pyqt4DocAct.setWhatsThis(self.trUtf8(
@@ -2064,7 +2064,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to initilize the action to show the Python documentation.
         """
-        self.pythonDocAct = E4Action(self.trUtf8('Python Documentation'),
+        self.pythonDocAct = E5Action(self.trUtf8('Python Documentation'),
             self.trUtf8('&Python Documentation'), 0, 0, self, 'python_documentation')
         self.pythonDocAct.setStatusTip(self.trUtf8('Open Python Documentation'))
         self.pythonDocAct.setWhatsThis(self.trUtf8(
@@ -2083,7 +2083,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to initialize the action to show the eric5 documentation.
         """
-        self.ericDocAct = E4Action(self.trUtf8("Eric API Documentation"),
+        self.ericDocAct = E5Action(self.trUtf8("Eric API Documentation"),
             self.trUtf8('&Eric API Documentation'), 0, 0, self, 'eric_documentation')
         self.ericDocAct.setStatusTip(self.trUtf8("Open Eric API Documentation"))
         self.ericDocAct.setWhatsThis(self.trUtf8(
@@ -2101,7 +2101,7 @@ class UserInterface(QMainWindow):
         """
         try:
             import PySide
-            self.pysideDocAct = E4Action(self.trUtf8('PySide Documentation'),
+            self.pysideDocAct = E5Action(self.trUtf8('PySide Documentation'),
                 self.trUtf8('Py&Side Documentation'), 0, 0, self, 'pyside_documentation')
             self.pysideDocAct.setStatusTip(self.trUtf8('Open PySide Documentation'))
             self.pysideDocAct.setWhatsThis(self.trUtf8(
@@ -2437,7 +2437,7 @@ class UserInterface(QMainWindow):
             """ current editors files writability.</p>"""
         ))
 
-        self.sbFile = E4SqueezeLabelPath(self.__statusBar)
+        self.sbFile = E5SqueezeLabelPath(self.__statusBar)
         self.sbFile.setMaximumWidth(500)
         self.sbFile.setMinimumWidth(100)
         self.__statusBar.addPermanentWidget(self.sbFile, True)
@@ -2753,26 +2753,26 @@ class UserInterface(QMainWindow):
         editor = MiniEditor(parent = self)
         editor.show()
         
-    def addE4Actions(self, actions, type):
+    def addE5Actions(self, actions, type):
         """
         Public method to add actions to the list of actions.
         
         @param type string denoting the action set to get.
             It must be one of "ui" or "wizards".
-        @param actions list of actions to be added (list of E4Action)
+        @param actions list of actions to be added (list of E5Action)
         """
         if type == 'ui':
             self.actions.extend(actions)
         elif type == 'wizards':
             self.wizardsActions.extend(actions)
         
-    def removeE4Actions(self, actions, type = 'ui'):
+    def removeE5Actions(self, actions, type = 'ui'):
         """
         Public method to remove actions from the list of actions.
         
         @param type string denoting the action set to get.
             It must be one of "ui" or "wizards".
-        @param actions list of actions (list of E4Action)
+        @param actions list of actions (list of E5Action)
         """
         for act in actions:
             try:
@@ -2789,7 +2789,7 @@ class UserInterface(QMainWindow):
         
         @param type string denoting the action set to get.
             It must be one of "ui" or "wizards".
-        @return list of all actions (list of E4Action)
+        @return list of all actions (list of E5Action)
         """
         if type == 'ui':
             return self.actions[:]
@@ -4611,7 +4611,7 @@ class UserInterface(QMainWindow):
         
         if Preferences.getUI("SingleApplicationMode"):
             if self.SAServer is None:
-                self.SAServer = E4SingleApplicationServer()
+                self.SAServer = E5SingleApplicationServer()
         else:
             if self.SAServer is not None:
                 self.SAServer.shutdown()
@@ -4669,7 +4669,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to configure the various toolbars.
         """
-        dlg = E4ToolBarDialog(self.toolbarManager)
+        dlg = E5ToolBarDialog(self.toolbarManager)
         if dlg.exec_() == QDialog.Accepted:
             Preferences.setUI("ToolbarManagerState", self.toolbarManager.saveState())
         

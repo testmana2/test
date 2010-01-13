@@ -168,7 +168,7 @@ cases.&lt;/p></string>
          </spacer>
         </item>
         <item>
-         <widget class="E4Led" name="progressLed" />
+         <widget class="E5Led" name="progressLed" />
         </item>
        </layout>
       </item>
@@ -349,9 +349,9 @@ Double clicking on an entry will show the respective traceback.&lt;/p></string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>E4Led</class>
+   <class>E5Led</class>
    <extends>QFrame</extends>
-   <header>E4Gui/E4Led.h</header>
+   <header>E5Gui/E5Led.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

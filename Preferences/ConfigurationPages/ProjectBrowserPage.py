@@ -9,7 +9,7 @@ Module implementing the Project Browser configuration page.
 
 from PyQt4.QtCore import pyqtSlot
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ProjectBrowserPage import Ui_ProjectBrowserPage

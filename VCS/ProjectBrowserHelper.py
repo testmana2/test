@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 

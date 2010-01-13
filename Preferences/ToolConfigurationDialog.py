@@ -14,7 +14,7 @@ import copy
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .Ui_ToolConfigurationDialog import Ui_ToolConfigurationDialog
 import Utilities
@@ -33,8 +33,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.iconCompleter = E4FileCompleter(self.iconEdit)
-        self.executableCompleter = E4FileCompleter(self.executableEdit)
+        self.iconCompleter = E5FileCompleter(self.iconEdit)
+        self.executableCompleter = E5FileCompleter(self.executableEdit)
         
         self.redirectionModes = [
             ("no", self.trUtf8("no redirection")),

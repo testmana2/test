@@ -10,7 +10,7 @@ Module implementing the Editor Spellchecking configuration page.
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QPixmap, QIcon, QFileDialog
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorSpellCheckingPage import Ui_EditorSpellCheckingPage
@@ -41,8 +41,8 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         else:
             self.spellingFrame.setEnabled(False)
         
-        self.pwlFileCompleter = E4FileCompleter(self.pwlEdit, showHidden = True)
-        self.pelFileCompleter = E4FileCompleter(self.pelEdit, showHidden = True)
+        self.pwlFileCompleter = E5FileCompleter(self.pwlEdit, showHidden = True)
+        self.pelFileCompleter = E5FileCompleter(self.pelEdit, showHidden = True)
         
         # set initial values
         self.checkingEnabledCheckBox.setChecked(

@@ -12,7 +12,7 @@ import sys
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_QtPage import Ui_QtPage
@@ -32,8 +32,8 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         self.setupUi(self)
         self.setObjectName("QtPage")
         
-        self.qt4Completer = E4DirCompleter(self.qt4Edit)
-        self.qt4TransCompleter = E4DirCompleter(self.qt4TransEdit)
+        self.qt4Completer = E5DirCompleter(self.qt4Edit)
+        self.qt4TransCompleter = E5DirCompleter(self.qt4TransEdit)
         
         if sys.platform != "darwin":
             self.qt4Group.hide()

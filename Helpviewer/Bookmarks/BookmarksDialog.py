@@ -10,7 +10,7 @@ Module implementing a dialog to manage bookmarks.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4TreeSortFilterProxyModel import E4TreeSortFilterProxyModel
+from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 
 import Helpviewer.HelpWindow
 from .BookmarkNode import BookmarkNode
@@ -45,7 +45,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
             self.__bookmarksManager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
         
         self.__bookmarksModel = self.__bookmarksManager.bookmarksModel()
-        self.__proxyModel = E4TreeSortFilterProxyModel(self)
+        self.__proxyModel = E5TreeSortFilterProxyModel(self)
         self.__proxyModel.setFilterKeyColumn(-1)
         self.__proxyModel.setSourceModel(self.__bookmarksModel)
         

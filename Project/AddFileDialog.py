@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .Ui_AddFileDialog import Ui_AddFileDialog
 
@@ -38,7 +38,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
-        self.targetDirCompleter = E4DirCompleter(self.targetDirEdit)
+        self.targetDirCompleter = E5DirCompleter(self.targetDirEdit)
         
         self.targetDirEdit.setText(pro.ppath)
         self.filter = filter

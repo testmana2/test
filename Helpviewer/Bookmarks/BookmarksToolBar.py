@@ -10,7 +10,7 @@ Module implementing a tool bar showing bookmarks.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4ModelToolBar import E4ModelToolBar
+from E5Gui.E5ModelToolBar import E5ModelToolBar
 
 import Helpviewer.HelpWindow
 
@@ -21,7 +21,7 @@ from .AddBookmarkDialog import AddBookmarkDialog
 
 import UI.PixmapCache
 
-class BookmarksToolBar(E4ModelToolBar):
+class BookmarksToolBar(E5ModelToolBar):
     """
     Class implementing a tool bar showing bookmarks.
     
@@ -36,7 +36,7 @@ class BookmarksToolBar(E4ModelToolBar):
         @param model reference to the bookmarks model (BookmarksModel)
         @param parent reference to the parent widget (QWidget)
         """
-        E4ModelToolBar.__init__(self, 
+        E5ModelToolBar.__init__(self, 
             QApplication.translate("BookmarksToolBar", "Bookmarks"), parent)
         
         self.__bookmarksModel = model
@@ -170,7 +170,7 @@ class BookmarksToolBar(E4ModelToolBar):
         """
         Protected method to create the menu for a tool bar action.
         
-        @return menu for a tool bar action (E4ModelMenu)
+        @return menu for a tool bar action (E5ModelMenu)
         """
         menu = BookmarksMenu(self)
         self.connect(menu, SIGNAL("openUrl(const QUrl&, const QString&)"), 

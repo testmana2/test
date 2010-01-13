@@ -14,7 +14,7 @@ from PyQt4.QtCore import QTranslator, QTextCodec, QLocale, QDir, SIGNAL, SLOT, \
     QLibraryInfo
 from PyQt4.QtGui import QApplication
 
-from E4Gui.E4Application import E4Application
+from E5Gui.E5Application import E5Application
 
 import Preferences
 import Utilities
@@ -198,7 +198,7 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True):
         if the last window was closed (boolean)
     """
     ddindex = handleArgs(argv, appinfo)
-    app = E4Application(argv)
+    app = E5Application(argv)
     app.setQuitOnLastWindowClosed(quitOnLastWindowClosed)
     try:
         sys.setappdefaultencoding(Preferences.getSystem("StringEncoding"))

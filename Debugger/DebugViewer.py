@@ -33,7 +33,7 @@ from .WatchPointViewer import WatchPointViewer
 import Utilities
 import UI.PixmapCache
 
-from E4Gui.E4TabWidget import E4TabWidget
+from E5Gui.E5TabWidget import E5TabWidget
 
 class DebugViewer(QWidget):
     """
@@ -74,7 +74,7 @@ class DebugViewer(QWidget):
         self.__mainLayout.setMargin(0)
         self.setLayout(self.__mainLayout)
         
-        self.__tabWidget = E4TabWidget()
+        self.__tabWidget = E5TabWidget()
         self.__mainLayout.addWidget(self.__tabWidget)
         
         self.embeddedShell = embeddedShell

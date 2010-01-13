@@ -7,7 +7,7 @@
 Module implementing the handler class for reading an XML project session file.
 """
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
 from .Config import sessionFileFormatVersion
 from .XMLHandlerBase import XMLHandlerBase

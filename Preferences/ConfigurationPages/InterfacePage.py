@@ -13,7 +13,7 @@ import os
 from PyQt4.QtCore import pyqtSlot, QTranslator, qVersion
 from PyQt4.QtGui import QStyleFactory, QFileDialog
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_InterfacePage import Ui_InterfacePage
@@ -35,7 +35,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         self.setupUi(self)
         self.setObjectName("InterfacePage")
         
-        self.styleSheetCompleter = E4FileCompleter(self.styleSheetEdit)
+        self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
         
         self.uiColours = {}
         

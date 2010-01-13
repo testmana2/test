@@ -10,7 +10,7 @@ Module implementing the Icons configuration page.
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QListWidgetItem, QFileDialog
 
-from E4Gui.E4Completers import E4DirCompleter
+from E5Gui.E5Completers import E5DirCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .IconsPreviewDialog import IconsPreviewDialog
@@ -31,7 +31,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         self.setupUi(self)
         self.setObjectName("IconsPage")
         
-        self.iconDirectoryCompleter = E4DirCompleter(self.iconDirectoryEdit)
+        self.iconDirectoryCompleter = E5DirCompleter(self.iconDirectoryEdit)
         
         # set initial values
         dirList = Preferences.getIcons("Path")[:]

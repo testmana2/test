@@ -10,7 +10,7 @@ Module implementing a dialog for the configuration of search engines.
 from PyQt4.QtGui import QDialog, QFileDialog, QMessageBox
 from PyQt4.QtCore import pyqtSlot, SIGNAL
 
-from E4Gui.E4ListView import E4ListView
+from E5Gui.E5ListView import E5ListView
 
 from Helpviewer.HelpWebSearchWidget import HelpWebSearchWidget
 

@@ -15,7 +15,7 @@ from difflib import _mdiff, IS_CHARACTER_JUNK
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 import UI.PixmapCache
 
@@ -87,8 +87,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         QWidget.__init__(self,parent)
         self.setupUi(self)
         
-        self.file1Completer = E4FileCompleter(self.file1Edit)
-        self.file2Completer = E4FileCompleter(self.file2Edit)
+        self.file1Completer = E5FileCompleter(self.file1Edit)
+        self.file2Completer = E5FileCompleter(self.file2Edit)
         
         self.diffButton = \
             self.buttonBox.addButton(self.trUtf8("Compare"), QDialogButtonBox.ActionRole)

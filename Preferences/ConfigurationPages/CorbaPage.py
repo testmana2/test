@@ -10,7 +10,7 @@ Module implementing the Corba configuration page.
 from PyQt4.QtCore import QDir, pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
-from E4Gui.E4Completers import E4FileCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_CorbaPage import Ui_CorbaPage
@@ -30,7 +30,7 @@ class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
         self.setupUi(self)
         self.setObjectName("CorbaPage")
         
-        self.idlCompleter = E4FileCompleter(self.idlEdit)
+        self.idlCompleter = E5FileCompleter(self.idlEdit)
         
         # set initial values
         self.idlEdit.setText(Preferences.getCorba("omniidl"))

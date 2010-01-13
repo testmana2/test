@@ -13,9 +13,9 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtNetwork import *
 
-from E4Gui.E4Application import e5App
+from E5Gui.E5Application import e5App
 
-from E4Gui.E4Completers import E4FileCompleter, E4DirCompleter
+from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_DebuggerGeneralPage import Ui_DebuggerGeneralPage
@@ -52,8 +52,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             t += Utilities.getPercentReplacementHelp()
             self.consoleDbgEdit.setWhatsThis(t)
         
-        self.consoleDbgCompleter = E4FileCompleter(self.consoleDbgEdit)
-        self.dbgTranslationLocalCompleter = E4DirCompleter(self.dbgTranslationLocalEdit)
+        self.consoleDbgCompleter = E5FileCompleter(self.consoleDbgEdit)
+        self.dbgTranslationLocalCompleter = E5DirCompleter(self.dbgTranslationLocalEdit)
         
         # set initial values
         interfaces = []

@@ -15,8 +15,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
-from E4Gui.E4Application import e5App
-from E4Gui.E4Action import E4Action, createActionGroup
+from E5Gui.E5Application import e5App
+from E5Gui.E5Action import E5Action, createActionGroup
 
 from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
@@ -305,7 +305,7 @@ class MiniEditor(QMainWindow):
         """
         Private function to read a single keyboard shortcut from the settings.
         
-        @param act reference to the action object (E4Action)
+        @param act reference to the action object (E5Action)
         @param category category the action belongs to (string)
         @param prefClass preferences class used as the storage area
         """
@@ -348,7 +348,7 @@ class MiniEditor(QMainWindow):
         """
         Private method to create the File actions.
         """
-        self.newAct = E4Action(self.trUtf8('New'),
+        self.newAct = E5Action(self.trUtf8('New'),
                 UI.PixmapCache.getIcon("new.png"),
                 self.trUtf8('&New'),
                 QKeySequence(self.trUtf8("Ctrl+N", "File|New")),
@@ -361,7 +361,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.newAct, SIGNAL('triggered()'), self.__newFile)
         self.fileActions.append(self.newAct)
         
-        self.openAct = E4Action(self.trUtf8('Open'),
+        self.openAct = E5Action(self.trUtf8('Open'),
                 UI.PixmapCache.getIcon("open.png"),
                 self.trUtf8('&Open...'),
                 QKeySequence(self.trUtf8("Ctrl+O", "File|Open")), 
@@ -374,7 +374,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.openAct, SIGNAL('triggered()'), self.__open)
         self.fileActions.append(self.openAct)
         
-        self.saveAct = E4Action(self.trUtf8('Save'),
+        self.saveAct = E5Action(self.trUtf8('Save'),
                 UI.PixmapCache.getIcon("fileSave.png"),
                 self.trUtf8('&Save'),
                 QKeySequence(self.trUtf8("Ctrl+S", "File|Save")), 
@@ -387,7 +387,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.saveAct, SIGNAL('triggered()'), self.__save)
         self.fileActions.append(self.saveAct)
         
-        self.saveAsAct = E4Action(self.trUtf8('Save as'),
+        self.saveAsAct = E5Action(self.trUtf8('Save as'),
                 UI.PixmapCache.getIcon("fileSaveAs.png"),
                 self.trUtf8('Save &as...'),
                 QKeySequence(self.trUtf8("Shift+Ctrl+S", "File|Save As")), 
@@ -401,7 +401,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.saveAsAct, SIGNAL('triggered()'), self.__saveAs)
         self.fileActions.append(self.saveAsAct)
         
-        self.closeAct = E4Action(self.trUtf8('Close'),
+        self.closeAct = E5Action(self.trUtf8('Close'),
                 UI.PixmapCache.getIcon("close.png"),
                 self.trUtf8('&Close'),
                 QKeySequence(self.trUtf8("Ctrl+W", "File|Close")), 
@@ -414,7 +414,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.closeAct, SIGNAL('triggered()'), self.close)
         self.fileActions.append(self.closeAct)
         
-        self.printAct = E4Action(self.trUtf8('Print'),
+        self.printAct = E5Action(self.trUtf8('Print'),
                 UI.PixmapCache.getIcon("print.png"),
                 self.trUtf8('&Print'),
                 QKeySequence(self.trUtf8("Ctrl+P", "File|Print")), 
@@ -428,7 +428,7 @@ class MiniEditor(QMainWindow):
         self.fileActions.append(self.printAct)
         
         self.printPreviewAct = \
-            E4Action(self.trUtf8('Print Preview'),
+            E5Action(self.trUtf8('Print Preview'),
                 UI.PixmapCache.getIcon("printPreview.png"),
                 QApplication.translate('ViewManager', 'Print Preview'),
                 0, 0, self, 'vm_file_print_preview')
@@ -446,7 +446,7 @@ class MiniEditor(QMainWindow):
         """
         Private method to create the Edit actions.
         """
-        self.undoAct = E4Action(self.trUtf8('Undo'),
+        self.undoAct = E5Action(self.trUtf8('Undo'),
                 UI.PixmapCache.getIcon("editUndo.png"),
                 self.trUtf8('&Undo'),
                 QKeySequence(self.trUtf8("Ctrl+Z", "Edit|Undo")), 
@@ -460,7 +460,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.undoAct, SIGNAL('triggered()'), self.__undo)
         self.editActions.append(self.undoAct)
         
-        self.redoAct = E4Action(self.trUtf8('Redo'),
+        self.redoAct = E5Action(self.trUtf8('Redo'),
                 UI.PixmapCache.getIcon("editRedo.png"),
                 self.trUtf8('&Redo'),
                 QKeySequence(self.trUtf8("Ctrl+Shift+Z", "Edit|Redo")), 
@@ -473,7 +473,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.redoAct, SIGNAL('triggered()'), self.__redo)
         self.editActions.append(self.redoAct)
         
-        self.cutAct = E4Action(self.trUtf8('Cut'),
+        self.cutAct = E5Action(self.trUtf8('Cut'),
                 UI.PixmapCache.getIcon("editCut.png"),
                 self.trUtf8('Cu&t'),
                 QKeySequence(self.trUtf8("Ctrl+X", "Edit|Cut")),
@@ -487,7 +487,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.cutAct, SIGNAL('triggered()'), self.__textEdit.cut)
         self.editActions.append(self.cutAct)
         
-        self.copyAct = E4Action(self.trUtf8('Copy'),
+        self.copyAct = E5Action(self.trUtf8('Copy'),
                 UI.PixmapCache.getIcon("editCopy.png"),
                 self.trUtf8('&Copy'),
                 QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")), 
@@ -501,7 +501,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.copyAct, SIGNAL('triggered()'), self.__textEdit.copy)
         self.editActions.append(self.copyAct)
         
-        self.pasteAct = E4Action(self.trUtf8('Paste'),
+        self.pasteAct = E5Action(self.trUtf8('Paste'),
                 UI.PixmapCache.getIcon("editPaste.png"),
                 self.trUtf8('&Paste'),
                 QKeySequence(self.trUtf8("Ctrl+V", "Edit|Paste")), 
@@ -516,7 +516,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.pasteAct, SIGNAL('triggered()'), self.__textEdit.paste)
         self.editActions.append(self.pasteAct)
         
-        self.deleteAct = E4Action(self.trUtf8('Clear'),
+        self.deleteAct = E5Action(self.trUtf8('Clear'),
                 UI.PixmapCache.getIcon("editDelete.png"),
                 self.trUtf8('Cl&ear'),
                 QKeySequence(self.trUtf8("Alt+Shift+C", "Edit|Clear")), 
@@ -546,7 +546,7 @@ class MiniEditor(QMainWindow):
         
         self.editorActGrp = createActionGroup(self)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move left one character'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move left one character'), 
                       QApplication.translate('ViewManager', 'Move left one character'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Left')), 0,
                       self.editorActGrp, 'vm_edit_move_left_char')
@@ -554,7 +554,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move right one character'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move right one character'), 
                       QApplication.translate('ViewManager', 'Move right one character'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Right')), 0,
                       self.editorActGrp, 'vm_edit_move_right_char')
@@ -562,7 +562,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move up one line'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move up one line'), 
                       QApplication.translate('ViewManager', 'Move up one line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Up')), 0,
                       self.editorActGrp, 'vm_edit_move_up_line')
@@ -570,7 +570,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move down one line'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move down one line'), 
                       QApplication.translate('ViewManager', 'Move down one line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Down')), 0,
                       self.editorActGrp, 'vm_edit_move_down_line')
@@ -578,7 +578,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move left one word part'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move left one word part'), 
                       QApplication.translate('ViewManager', 'Move left one word part'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Left')), 0,
                       self.editorActGrp, 'vm_edit_move_left_word_part')
@@ -586,7 +586,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move right one word part'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move right one word part'), 
                       QApplication.translate('ViewManager', 'Move right one word part'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Right')), 0,
                       self.editorActGrp, 'vm_edit_move_right_word_part')
@@ -594,7 +594,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move left one word'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move left one word'), 
                       QApplication.translate('ViewManager', 'Move left one word'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Left')), 0,
                       self.editorActGrp, 'vm_edit_move_left_word')
@@ -602,7 +602,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move right one word'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move right one word'), 
                       QApplication.translate('ViewManager', 'Move right one word'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Right')), 
                       0,
@@ -611,7 +611,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Move to first visible character in line'), 
                       QApplication.translate('ViewManager', 
                         'Move to first visible character in line'), 
@@ -621,7 +621,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Move to start of displayed line'), 
                       QApplication.translate('ViewManager', 
                         'Move to start of displayed line'), 
@@ -631,7 +631,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move to end of line'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move to end of line'), 
                       QApplication.translate('ViewManager', 'Move to end of line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'End')), 0,
                       self.editorActGrp, 'vm_edit_move_end_line')
@@ -639,7 +639,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Scroll view down one line'),
+        act = E5Action(QApplication.translate('ViewManager', 'Scroll view down one line'),
                       QApplication.translate('ViewManager', 'Scroll view down one line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Down')), 0,
                       self.editorActGrp, 'vm_edit_scroll_down_line')
@@ -647,7 +647,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Scroll view up one line'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Scroll view up one line'), 
                       QApplication.translate('ViewManager', 'Scroll view up one line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Up')), 0,
                       self.editorActGrp, 'vm_edit_scroll_up_line')
@@ -655,7 +655,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move up one paragraph'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move up one paragraph'), 
                       QApplication.translate('ViewManager', 'Move up one paragraph'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Up')), 0,
                       self.editorActGrp, 'vm_edit_move_up_para')
@@ -663,7 +663,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move down one paragraph'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move down one paragraph'), 
                       QApplication.translate('ViewManager', 'Move down one paragraph'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Down')), 0,
                       self.editorActGrp, 'vm_edit_move_down_para')
@@ -671,7 +671,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move up one page'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move up one page'), 
                       QApplication.translate('ViewManager', 'Move up one page'), 
                       QKeySequence(QApplication.translate('ViewManager', 'PgUp')), 0,
                       self.editorActGrp, 'vm_edit_move_up_page')
@@ -679,7 +679,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move down one page'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move down one page'), 
                       QApplication.translate('ViewManager', 'Move down one page'), 
                       QKeySequence(QApplication.translate('ViewManager', 'PgDown')), 0,
                       self.editorActGrp, 'vm_edit_move_down_page')
@@ -687,7 +687,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move to start of text'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move to start of text'), 
                       QApplication.translate('ViewManager', 'Move to start of text'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Home')), 0,
                       self.editorActGrp, 'vm_edit_move_start_text')
@@ -695,7 +695,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Move to end of text'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Move to end of text'), 
                       QApplication.translate('ViewManager', 'Move to end of text'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+End')), 0,
                       self.editorActGrp, 'vm_edit_move_end_text')
@@ -703,7 +703,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Indent one level'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Indent one level'), 
                       QApplication.translate('ViewManager', 'Indent one level'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Tab')), 0,
                       self.editorActGrp, 'vm_edit_indent_one_level')
@@ -711,7 +711,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Unindent one level'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Unindent one level'), 
                       QApplication.translate('ViewManager', 'Unindent one level'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Shift+Tab')), 0,
                       self.editorActGrp, 'vm_edit_unindent_one_level')
@@ -719,7 +719,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection left one character'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection left one character'), 
@@ -730,7 +730,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection right one character'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection right one character'), 
@@ -741,7 +741,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection up one line'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection up one line'), 
@@ -751,7 +751,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection down one line'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection down one line'), 
@@ -762,7 +762,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection left one word part'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection left one word part'), 
@@ -774,7 +774,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection right one word part'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection right one word part'), 
@@ -786,7 +786,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection left one word'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection left one word'), 
@@ -798,7 +798,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection right one word'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection right one word'), 
@@ -810,7 +810,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection to first visible character in line'),
                       QApplication.translate('ViewManager', 
                         'Extend selection to first visible character in line'), 
@@ -821,7 +821,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection to start of line'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection to start of line'), 
@@ -833,7 +833,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection to end of line'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection to end of line'), 
@@ -843,7 +843,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection up one paragraph'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection up one paragraph'), 
@@ -854,7 +854,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection down one paragraph'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection down one paragraph'), 
@@ -866,7 +866,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection up one page'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection up one page'), 
@@ -877,7 +877,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection down one page'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection down one page'), 
@@ -888,7 +888,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection to start of text'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection to start of text'), 
@@ -900,7 +900,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection to end of text'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection to end of text'), 
@@ -912,7 +912,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Delete previous character'), 
                       QApplication.translate('ViewManager', 'Delete previous character'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Backspace')), 
@@ -923,7 +923,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Delete previous character if not at line start'), 
                       QApplication.translate('ViewManager', 
                         'Delete previous character if not at line start'), 
@@ -933,7 +933,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Delete current character'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Delete current character'), 
                       QApplication.translate('ViewManager', 'Delete current character'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Del')), 0,
                       self.editorActGrp, 'vm_edit_delete_current_char')
@@ -941,7 +941,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Delete word to left'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Delete word to left'), 
                       QApplication.translate('ViewManager', 'Delete word to left'), 
                       QKeySequence(QApplication.translate('ViewManager', 
                         'Ctrl+Backspace')), 
@@ -951,7 +951,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Delete word to right'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Delete word to right'), 
                       QApplication.translate('ViewManager', 'Delete word to right'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Del')), 0,
                       self.editorActGrp, 'vm_edit_delete_word_right')
@@ -959,7 +959,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Delete line to left'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Delete line to left'), 
                       QApplication.translate('ViewManager', 'Delete line to left'), 
                       QKeySequence(QApplication.translate('ViewManager', 
                         'Ctrl+Shift+Backspace')), 
@@ -969,7 +969,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Delete line to right'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Delete line to right'), 
                       QApplication.translate('ViewManager', 'Delete line to right'), 
                       QKeySequence(QApplication.translate('ViewManager', 
                         'Ctrl+Shift+Del')), 
@@ -979,7 +979,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Insert new line'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Insert new line'), 
                       QApplication.translate('ViewManager', 'Insert new line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Return')), 
                       QKeySequence(QApplication.translate('ViewManager', 'Enter')), 
@@ -988,7 +988,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                                               'Insert new line below current line'), 
                       QApplication.translate('ViewManager', 
                                              'Insert new line below current line'), 
@@ -998,7 +998,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.__textEdit.newLineBelow)
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Delete current line'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Delete current line'), 
                       QApplication.translate('ViewManager', 'Delete current line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+U')), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+L')),
@@ -1007,7 +1007,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Duplicate current line'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Duplicate current line'), 
                       QApplication.translate('ViewManager', 'Duplicate current line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+D')), 0,
                       self.editorActGrp, 'vm_edit_duplicate_current_line')
@@ -1015,7 +1015,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Swap current and previous lines'), 
                       QApplication.translate('ViewManager', 
                         'Swap current and previous lines'), 
@@ -1025,7 +1025,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Cut current line'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Cut current line'), 
                       QApplication.translate('ViewManager', 'Cut current line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+L')),
                       0,
@@ -1034,7 +1034,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Copy current line'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Copy current line'), 
                       QApplication.translate('ViewManager', 'Copy current line'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+T')),
                       0,
@@ -1043,7 +1043,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Toggle insert/overtype'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Toggle insert/overtype'), 
                       QApplication.translate('ViewManager', 'Toggle insert/overtype'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Ins')), 0,
                       self.editorActGrp, 'vm_edit_toggle_insert_overtype')
@@ -1051,7 +1051,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Convert selection to lower case'), 
                       QApplication.translate('ViewManager', 
                         'Convert selection to lower case'), 
@@ -1062,7 +1062,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Convert selection to upper case'), 
                       QApplication.translate('ViewManager', 
                         'Convert selection to upper case'), 
@@ -1073,7 +1073,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Move to end of displayed line'), 
                       QApplication.translate('ViewManager', 
                         'Move to end of displayed line'), 
@@ -1083,7 +1083,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend selection to end of displayed line'), 
                       QApplication.translate('ViewManager', 
                         'Extend selection to end of displayed line'), 
@@ -1093,7 +1093,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Formfeed'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Formfeed'), 
                       QApplication.translate('ViewManager', 'Formfeed'), 
                       0, 0,
                       self.editorActGrp, 'vm_edit_formfeed')
@@ -1101,7 +1101,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 'Escape'), 
+        act = E5Action(QApplication.translate('ViewManager', 'Escape'), 
                       QApplication.translate('ViewManager', 'Escape'), 
                       QKeySequence(QApplication.translate('ViewManager', 'Esc')), 0,
                       self.editorActGrp, 'vm_edit_escape')
@@ -1109,7 +1109,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend rectangular selection down one line'), 
                       QApplication.translate('ViewManager', 
                         'Extend rectangular selection down one line'), 
@@ -1121,7 +1121,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend rectangular selection up one line'), 
                       QApplication.translate('ViewManager', 
                         'Extend rectangular selection up one line'), 
@@ -1132,7 +1132,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend rectangular selection left one character'), 
                       QApplication.translate('ViewManager', 
                         'Extend rectangular selection left one character'), 
@@ -1144,7 +1144,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend rectangular selection right one character'), 
                       QApplication.translate('ViewManager', 
                         'Extend rectangular selection right one character'), 
@@ -1156,7 +1156,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend rectangular selection to first'
                         ' visible character in line'), 
                       QApplication.translate('ViewManager', 
@@ -1171,7 +1171,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend rectangular selection to end of line'), 
                       QApplication.translate('ViewManager', 
                         'Extend rectangular selection to end of line'), 
@@ -1182,7 +1182,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend rectangular selection up one page'), 
                       QApplication.translate('ViewManager', 
                         'Extend rectangular selection up one page'), 
@@ -1194,7 +1194,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Extend rectangular selection down one page'), 
                       QApplication.translate('ViewManager', 
                         'Extend rectangular selection down one page'), 
@@ -1206,7 +1206,7 @@ class MiniEditor(QMainWindow):
         self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
         self.editActions.append(act)
         
-        act = E4Action(QApplication.translate('ViewManager', 
+        act = E5Action(QApplication.translate('ViewManager', 
                         'Duplicate current selection'), 
                       QApplication.translate('ViewManager', 
                         'Duplicate current selection'), 
@@ -1223,7 +1223,7 @@ class MiniEditor(QMainWindow):
         """
         Private method defining the user interface actions for the search commands.
         """
-        self.searchAct = E4Action(QApplication.translate('ViewManager', 'Search'),
+        self.searchAct = E5Action(QApplication.translate('ViewManager', 'Search'),
                 UI.PixmapCache.getIcon("find.png"),
                 QApplication.translate('ViewManager', '&Search...'),
                 QKeySequence(QApplication.translate('ViewManager', 
@@ -1241,7 +1241,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.searchAct, SIGNAL('triggered()'), self.__search)
         self.searchActions.append(self.searchAct)
         
-        self.searchNextAct = E4Action(QApplication.translate('ViewManager', 
+        self.searchNextAct = E5Action(QApplication.translate('ViewManager', 
                     'Search next'),
                 UI.PixmapCache.getIcon("findNext.png"),
                 QApplication.translate('ViewManager', 'Search &next'),
@@ -1259,7 +1259,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.searchNextAct, SIGNAL('triggered()'), self.searchDlg.findNext)
         self.searchActions.append(self.searchNextAct)
         
-        self.searchPrevAct = E4Action(QApplication.translate('ViewManager', 
+        self.searchPrevAct = E5Action(QApplication.translate('ViewManager', 
                     'Search previous'),
                 UI.PixmapCache.getIcon("findPrev.png"),
                 QApplication.translate('ViewManager', 'Search &previous'),
@@ -1277,7 +1277,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.searchPrevAct, SIGNAL('triggered()'), self.searchDlg.findPrev)
         self.searchActions.append(self.searchPrevAct)
         
-        self.searchClearMarkersAct = E4Action(QApplication.translate('ViewManager', 
+        self.searchClearMarkersAct = E5Action(QApplication.translate('ViewManager', 
                     'Clear search markers'),
                 UI.PixmapCache.getIcon("findClear.png"),
                 QApplication.translate('ViewManager', 'Clear search markers'),
@@ -1295,7 +1295,7 @@ class MiniEditor(QMainWindow):
             self.__searchClearMarkers)
         self.searchActions.append(self.searchClearMarkersAct)
         
-        self.replaceAct = E4Action(QApplication.translate('ViewManager', 'Replace'),
+        self.replaceAct = E5Action(QApplication.translate('ViewManager', 'Replace'),
                 QApplication.translate('ViewManager', '&Replace...'),
                 QKeySequence(QApplication.translate('ViewManager', 
                     "Ctrl+R", "Search|Replace")), 
@@ -1316,7 +1316,7 @@ class MiniEditor(QMainWindow):
         """
         Private method to create the Help actions.
         """
-        self.aboutAct = E4Action(self.trUtf8('About'),
+        self.aboutAct = E5Action(self.trUtf8('About'),
                 self.trUtf8('&About'),
                 0, 0, self, 'about_eric')
         self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
@@ -1326,7 +1326,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.aboutAct, SIGNAL('triggered()'), self.__about)
         self.helpActions.append(self.aboutAct)
         
-        self.aboutQtAct = E4Action(self.trUtf8('About Qt'),
+        self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
                 self.trUtf8('About &Qt'), 0, 0, self, 'about_qt')
         self.aboutQtAct.setStatusTip(\
             self.trUtf8('Display information about the Qt toolkit'))
@@ -1337,7 +1337,7 @@ class MiniEditor(QMainWindow):
         self.connect(self.aboutQtAct, SIGNAL('triggered()'), self.__aboutQt)
         self.helpActions.append(self.aboutQtAct)
         
-        self.whatsThisAct = E4Action(self.trUtf8('What\'s This?'), 
+        self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'), 
             UI.PixmapCache.getIcon("whatsThis.png"),
             self.trUtf8('&What\'s This?'), 
             QKeySequence(self.trUtf8("Shift+F1","Help|What's This?'")), 
