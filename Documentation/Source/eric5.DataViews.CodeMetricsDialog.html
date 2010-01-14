@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.DataViews.CodeMetricsDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#111;&#100;&#101; &#109;&#101;&#116;&#114;&#105;&#99;&#115; &#100;&#105;&#97;&#108;&#111;&#103;.
+Module implementing a code metrics dialog.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#CodeMetricsDialog">CodeMetricsDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#109;&#101;&#116;&#114;&#105;&#99;&#115;.</td>
+<td>Class implementing a dialog to display the code metrics.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="CodeMetricsDialog" ID="CodeMetricsDialog"></a>
 <h2>CodeMetricsDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#109;&#101;&#116;&#114;&#105;&#99;&#115;.
+    Class implementing a dialog to display the code metrics.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_CodeMetricsDialog
@@ -55,159 +55,159 @@ QDialog, Ui_CodeMetricsDialog
 <table>
 <tr>
 <td><a href="#CodeMetricsDialog.__init__">CodeMetricsDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.__createResultItem">__createResultItem</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97; &#110;&#101;w &#105;&#116;&#101;&#109; &#105;&#110; &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot to create a new item in the result list.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.__createSummaryItem">__createSummaryItem</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97; &#110;&#101;w &#105;&#116;&#101;&#109; &#105;&#110; &#116;&#104;&#101; &#115;&#117;&#109;&#109;&#97;&#114;y &#108;&#105;&#115;&#116;.</td>
+<td>Private slot to create a new item in the summary list.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.__finish">__finish</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#97;&#99;&#116;&#105;&#111;&#110; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#111;&#114; &#116;&#104;&#101; &#117;&#115;&#101;&#114; &#112;&#114;&#101;&#115;&#115;&#101;&#100; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;.</td>
+<td>Private slot called when the action finished or the user pressed the button.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.__getValues">__getValues</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#101;x&#116;&#114;&#97;&#99;&#116; &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#109;&#101;&#116;&#114;&#105;&#99; v&#97;&#108;&#117;&#101;&#115;.</td>
+<td>Private method to extract the code metric values.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.__resizeResultColumns">__resizeResultColumns</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#105;z&#101; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#99;&#111;&#108;&#117;&#109;&#110;&#115;.</td>
+<td>Private method to resize the list columns.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.__resizeSummaryColumns">__resizeSummaryColumns</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#105;z&#101; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#99;&#111;&#108;&#117;&#109;&#110;&#115;.</td>
+<td>Private method to resize the list columns.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.__resultCollapse">__resultCollapse</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#111;&#108;&#108;&#97;&#112;&#115;&#101; &#97;&#108;&#108; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#111;&#102; &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116;&#108;&#105;&#115;&#116;.</td>
+<td>Private slot to collapse all entries of the resultlist.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.__resultExpand">__resultExpand</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#101;x&#112;&#97;&#110;&#100; &#97;&#108;&#108; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#111;&#102; &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116;&#108;&#105;&#115;&#116;.</td>
+<td>Private slot to expand all entries of the resultlist.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.__showContextMenu">__showContextMenu</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117; &#111;&#102; &#116;&#104;&#101; &#108;&#105;&#115;&#116;v&#105;&#101;w.</td>
+<td>Private slot to show the context menu of the listview.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100;.</td>
+<td>Private slot called by a button of the button box clicked.</td>
 </tr><tr>
 <td><a href="#CodeMetricsDialog.start">start</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#116;&#97;&#114;&#116; &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#109;&#101;&#116;&#114;&#105;&#99;&#115; &#100;&#101;&#116;&#101;&#114;&#109;&#105;&#110;&#97;&#116;&#105;&#111;&#110;.</td>
+<td>Public slot to start the code metrics determination.</td>
 </tr>
 </table>
 <a NAME="CodeMetricsDialog.__init__" ID="CodeMetricsDialog.__init__"></a>
 <h4>CodeMetricsDialog (Constructor)</h4>
 <b>CodeMetricsDialog</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget (QWidget)
 </dd>
 </dl><a NAME="CodeMetricsDialog.__createResultItem" ID="CodeMetricsDialog.__createResultItem"></a>
 <h4>CodeMetricsDialog.__createResultItem</h4>
 <b>__createResultItem</b>(<i>parent, strings</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97; &#110;&#101;w &#105;&#116;&#101;&#109; &#105;&#110; &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116; &#108;&#105;&#115;&#116;.
+        Private slot to create a new item in the result list.
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; &#111;&#102; &#116;&#104;&#101; &#110;&#101;w &#105;&#116;&#101;&#109; (&#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116; &#111;&#114; &#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+parent of the new item (QTreeWidget or QTreeWidgetItem)
 </dd><dt><i>strings</i></dt>
 <dd>
-&#115;&#116;&#114;&#105;&#110;&#103;&#115; &#116;&#111; &#98;&#101; &#100;&#105;&#115;&#112;&#108;&#97;y&#101;&#100; (&#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+strings to be displayed (list of strings)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#116;&#104;&#101; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101;&#100; &#105;&#116;&#101;&#109;
+the generated item
 </dd>
 </dl><a NAME="CodeMetricsDialog.__createSummaryItem" ID="CodeMetricsDialog.__createSummaryItem"></a>
 <h4>CodeMetricsDialog.__createSummaryItem</h4>
 <b>__createSummaryItem</b>(<i>col0, col1</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97; &#110;&#101;w &#105;&#116;&#101;&#109; &#105;&#110; &#116;&#104;&#101; &#115;&#117;&#109;&#109;&#97;&#114;y &#108;&#105;&#115;&#116;.
+        Private slot to create a new item in the summary list.
 </p><dl>
 <dt><i>col0</i></dt>
 <dd>
-&#115;&#116;&#114;&#105;&#110;&#103; &#102;&#111;&#114; &#99;&#111;&#108;&#117;&#109;&#110; &#48; (&#115;&#116;&#114;&#105;&#110;&#103;)
+string for column 0 (string)
 </dd><dt><i>col1</i></dt>
 <dd>
-&#115;&#116;&#114;&#105;&#110;&#103; &#102;&#111;&#114; &#99;&#111;&#108;&#117;&#109;&#110; &#49; (&#115;&#116;&#114;&#105;&#110;&#103;)
+string for column 1 (string)
 </dd>
 </dl><a NAME="CodeMetricsDialog.__finish" ID="CodeMetricsDialog.__finish"></a>
 <h4>CodeMetricsDialog.__finish</h4>
 <b>__finish</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#97;&#99;&#116;&#105;&#111;&#110; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#111;&#114; &#116;&#104;&#101; &#117;&#115;&#101;&#114; &#112;&#114;&#101;&#115;&#115;&#101;&#100; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;.
+        Private slot called when the action finished or the user pressed the button.
 </p><a NAME="CodeMetricsDialog.__getValues" ID="CodeMetricsDialog.__getValues"></a>
 <h4>CodeMetricsDialog.__getValues</h4>
 <b>__getValues</b>(<i>loc, stats, identifier</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#101;x&#116;&#114;&#97;&#99;&#116; &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#109;&#101;&#116;&#114;&#105;&#99; v&#97;&#108;&#117;&#101;&#115;.
+        Private method to extract the code metric values.
 </p><dl>
 <dt><i>loc</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#108;&#111;&#99;&#97;&#108;&#101; &#111;&#98;&#106;&#101;&#99;&#116; (&#81;&#76;&#111;&#99;&#97;&#108;&#101;)
+reference to the locale object (QLocale)
 </dd><dt><i>stats</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#109;&#101;&#116;&#114;&#105;&#99; &#115;&#116;&#97;&#116;&#105;&#115;&#116;&#105;&#99;&#115; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the code metric statistics object
 </dd><dt><i>identifier</i></dt>
 <dd>
-&#105;&#100;&#101;&#110;&#116;&#105;&#102;&#105;&#101;&#114; &#116;&#111; &#103;&#101;&#116; v&#97;&#108;&#117;&#101;&#115; &#102;&#111;&#114;
+identifier to get values for
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; v&#97;&#108;&#117;&#101;&#115; &#115;&#117;&#105;&#116;&#97;&#98;&#108;&#101; &#102;&#111;&#114; &#100;&#105;&#115;&#112;&#108;&#97;y (&#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+list of values suitable for display (list of strings)
 </dd>
 </dl><a NAME="CodeMetricsDialog.__resizeResultColumns" ID="CodeMetricsDialog.__resizeResultColumns"></a>
 <h4>CodeMetricsDialog.__resizeResultColumns</h4>
 <b>__resizeResultColumns</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#105;z&#101; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#99;&#111;&#108;&#117;&#109;&#110;&#115;.
+        Private method to resize the list columns.
 </p><a NAME="CodeMetricsDialog.__resizeSummaryColumns" ID="CodeMetricsDialog.__resizeSummaryColumns"></a>
 <h4>CodeMetricsDialog.__resizeSummaryColumns</h4>
 <b>__resizeSummaryColumns</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#105;z&#101; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#99;&#111;&#108;&#117;&#109;&#110;&#115;.
+        Private method to resize the list columns.
 </p><a NAME="CodeMetricsDialog.__resultCollapse" ID="CodeMetricsDialog.__resultCollapse"></a>
 <h4>CodeMetricsDialog.__resultCollapse</h4>
 <b>__resultCollapse</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#111;&#108;&#108;&#97;&#112;&#115;&#101; &#97;&#108;&#108; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#111;&#102; &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116;&#108;&#105;&#115;&#116;.
+        Private slot to collapse all entries of the resultlist.
 </p><a NAME="CodeMetricsDialog.__resultExpand" ID="CodeMetricsDialog.__resultExpand"></a>
 <h4>CodeMetricsDialog.__resultExpand</h4>
 <b>__resultExpand</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#101;x&#112;&#97;&#110;&#100; &#97;&#108;&#108; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#111;&#102; &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116;&#108;&#105;&#115;&#116;.
+        Private slot to expand all entries of the resultlist.
 </p><a NAME="CodeMetricsDialog.__showContextMenu" ID="CodeMetricsDialog.__showContextMenu"></a>
 <h4>CodeMetricsDialog.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i>coord</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117; &#111;&#102; &#116;&#104;&#101; &#108;&#105;&#115;&#116;v&#105;&#101;w.
+        Private slot to show the context menu of the listview.
 </p><dl>
 <dt><i>coord</i></dt>
 <dd>
-&#116;&#104;&#101; &#112;&#111;&#115;&#105;&#116;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#109;&#111;&#117;&#115;&#101; &#112;&#111;&#105;&#110;&#116;&#101;&#114; (&#81;&#80;&#111;&#105;&#110;&#116;)
+the position of the mouse pointer (QPoint)
 </dd>
 </dl><a NAME="CodeMetricsDialog.on_buttonBox_clicked" ID="CodeMetricsDialog.on_buttonBox_clicked"></a>
 <h4>CodeMetricsDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100;.
+        Private slot called by a button of the button box clicked.
 </p><dl>
 <dt><i>button</i></dt>
 <dd>
-&#98;&#117;&#116;&#116;&#111;&#110; &#116;&#104;&#97;&#116; w&#97;&#115; &#99;&#108;&#105;&#99;&#107;&#101;&#100; (&#81;&#65;&#98;&#115;&#116;&#114;&#97;&#99;&#116;&#66;&#117;&#116;&#116;&#111;&#110;)
+button that was clicked (QAbstractButton)
 </dd>
 </dl><a NAME="CodeMetricsDialog.start" ID="CodeMetricsDialog.start"></a>
 <h4>CodeMetricsDialog.start</h4>
 <b>start</b>(<i>fn</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#116;&#97;&#114;&#116; &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#109;&#101;&#116;&#114;&#105;&#99;&#115; &#100;&#101;&#116;&#101;&#114;&#109;&#105;&#110;&#97;&#116;&#105;&#111;&#110;.
+        Public slot to start the code metrics determination.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
-&#102;&#105;&#108;&#101; &#111;&#114; &#108;&#105;&#115;&#116; &#111;&#102; &#102;&#105;&#108;&#101;&#115; &#111;&#114; &#100;&#105;&#114;&#101;&#99;&#116;&#111;&#114;y &#116;&#111; &#98;&#101; &#115;&#104;&#111;w
-                &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#109;&#101;&#116;&#114;&#105;&#99;&#115; &#102;&#111;&#114; (&#115;&#116;&#114;&#105;&#110;&#103; &#111;&#114; &#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+file or list of files or directory to be show
+                the code metrics for (string or list of strings)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

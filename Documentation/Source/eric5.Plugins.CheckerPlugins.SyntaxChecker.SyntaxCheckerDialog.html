@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#115;&#105;&#109;&#112;&#108;&#101; &#80;y&#116;&#104;&#111;&#110; &#115;y&#110;&#116;&#97;x &#99;&#104;&#101;&#99;&#107;&#101;&#114;.
+Module implementing a simple Python syntax checker.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#SyntaxCheckerDialog">SyntaxCheckerDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116;&#115; &#111;&#102; &#97; &#115;y&#110;&#116;&#97;x &#99;&#104;&#101;&#99;&#107; &#114;&#117;&#110;.</td>
+<td>Class implementing a dialog to display the results of a syntax check run.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="SyntaxCheckerDialog" ID="SyntaxCheckerDialog"></a>
 <h2>SyntaxCheckerDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116;&#115; &#111;&#102; &#97; &#115;y&#110;&#116;&#97;x &#99;&#104;&#101;&#99;&#107; &#114;&#117;&#110;.
+    Class implementing a dialog to display the results of a syntax check run.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_SyntaxCheckerDialog
@@ -55,119 +55,119 @@ QDialog, Ui_SyntaxCheckerDialog
 <table>
 <tr>
 <td><a href="#SyntaxCheckerDialog.__init__">SyntaxCheckerDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__clearErrors">__clearErrors</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#108;&#101;&#97;&#114; &#97;&#108;&#108; &#101;&#114;&#114;&#111;&#114; &#109;&#97;&#114;&#107;&#101;&#114;&#115; &#111;&#102; &#111;&#112;&#101;&#110; &#101;&#100;&#105;&#116;&#111;&#114;&#115;.</td>
+<td>Private method to clear all error markers of open editors.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__createResultItem">__createResultItem</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#105;&#110; &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116; &#108;&#105;&#115;&#116;.</td>
+<td>Private method to create an entry in the result list.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__finish">__finish</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#115;y&#110;&#116;&#97;x &#99;&#104;&#101;&#99;&#107; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#111;&#114; &#116;&#104;&#101; &#117;&#115;&#101;&#114; &#112;&#114;&#101;&#115;&#115;&#101;&#100; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;.</td>
+<td>Private slot called when the syntax check finished or the user pressed the button.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__resort">__resort</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#111;&#114;&#116; &#116;&#104;&#101; &#116;&#114;&#101;&#101;.</td>
+<td>Private method to resort the tree.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100;.</td>
+<td>Private slot called by a button of the button box clicked.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.on_resultList_itemActivated">on_resultList_itemActivated</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#97;&#99;&#116;&#105;v&#97;&#116;&#105;&#111;&#110; &#111;&#102; &#97;&#110; &#105;&#116;&#101;&#109;.</td>
+<td>Private slot to handle the activation of an item.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.on_showButton_clicked">on_showButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; "&#83;&#104;&#111;w" &#98;&#117;&#116;&#116;&#111;&#110; &#112;&#114;&#101;&#115;&#115;.</td>
+<td>Private slot to handle the "Show" button press.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.start">start</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#116;&#97;&#114;&#116; &#116;&#104;&#101; &#115;y&#110;&#116;&#97;x &#99;&#104;&#101;&#99;&#107;.</td>
+<td>Public slot to start the syntax check.</td>
 </tr>
 </table>
 <a NAME="SyntaxCheckerDialog.__init__" ID="SyntaxCheckerDialog.__init__"></a>
 <h4>SyntaxCheckerDialog (Constructor)</h4>
 <b>SyntaxCheckerDialog</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#84;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116;. (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+The parent widget. (QWidget)
 </dd>
 </dl><a NAME="SyntaxCheckerDialog.__clearErrors" ID="SyntaxCheckerDialog.__clearErrors"></a>
 <h4>SyntaxCheckerDialog.__clearErrors</h4>
 <b>__clearErrors</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#108;&#101;&#97;&#114; &#97;&#108;&#108; &#101;&#114;&#114;&#111;&#114; &#109;&#97;&#114;&#107;&#101;&#114;&#115; &#111;&#102; &#111;&#112;&#101;&#110; &#101;&#100;&#105;&#116;&#111;&#114;&#115;.
+        Private method to clear all error markers of open editors.
 </p><a NAME="SyntaxCheckerDialog.__createResultItem" ID="SyntaxCheckerDialog.__createResultItem"></a>
 <h4>SyntaxCheckerDialog.__createResultItem</h4>
 <b>__createResultItem</b>(<i>file, line, error, sourcecode</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#105;&#110; &#116;&#104;&#101; &#114;&#101;&#115;&#117;&#108;&#116; &#108;&#105;&#115;&#116;.
+        Private method to create an entry in the result list.
 </p><dl>
 <dt><i>file</i></dt>
 <dd>
-&#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101; &#111;&#102; &#102;&#105;&#108;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+filename of file (string)
 </dd><dt><i>line</i></dt>
 <dd>
-&#108;&#105;&#110;&#101;&#110;&#117;&#109;&#98;&#101;&#114; &#111;&#102; &#102;&#97;&#117;&#108;&#116;y &#115;&#111;&#117;&#114;&#99;&#101; (&#105;&#110;&#116;&#101;&#103;&#101;&#114; &#111;&#114; &#115;&#116;&#114;&#105;&#110;&#103;)
+linenumber of faulty source (integer or string)
 </dd><dt><i>error</i></dt>
 <dd>
-&#101;&#114;&#114;&#111;&#114; &#116;&#101;x&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+error text (string)
 </dd><dt><i>sourcecode</i></dt>
 <dd>
-&#102;&#97;&#117;&#108;&#116;y &#108;&#105;&#110;&#101; &#111;&#102; &#99;&#111;&#100;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+faulty line of code (string)
 </dd>
 </dl><a NAME="SyntaxCheckerDialog.__finish" ID="SyntaxCheckerDialog.__finish"></a>
 <h4>SyntaxCheckerDialog.__finish</h4>
 <b>__finish</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#115;y&#110;&#116;&#97;x &#99;&#104;&#101;&#99;&#107; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#111;&#114; &#116;&#104;&#101; &#117;&#115;&#101;&#114; &#112;&#114;&#101;&#115;&#115;&#101;&#100; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;.
+        Private slot called when the syntax check finished or the user pressed the button.
 </p><a NAME="SyntaxCheckerDialog.__resort" ID="SyntaxCheckerDialog.__resort"></a>
 <h4>SyntaxCheckerDialog.__resort</h4>
 <b>__resort</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#111;&#114;&#116; &#116;&#104;&#101; &#116;&#114;&#101;&#101;.
+        Private method to resort the tree.
 </p><a NAME="SyntaxCheckerDialog.on_buttonBox_clicked" ID="SyntaxCheckerDialog.on_buttonBox_clicked"></a>
 <h4>SyntaxCheckerDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100;.
+        Private slot called by a button of the button box clicked.
 </p><dl>
 <dt><i>button</i></dt>
 <dd>
-&#98;&#117;&#116;&#116;&#111;&#110; &#116;&#104;&#97;&#116; w&#97;&#115; &#99;&#108;&#105;&#99;&#107;&#101;&#100; (&#81;&#65;&#98;&#115;&#116;&#114;&#97;&#99;&#116;&#66;&#117;&#116;&#116;&#111;&#110;)
+button that was clicked (QAbstractButton)
 </dd>
 </dl><a NAME="SyntaxCheckerDialog.on_resultList_itemActivated" ID="SyntaxCheckerDialog.on_resultList_itemActivated"></a>
 <h4>SyntaxCheckerDialog.on_resultList_itemActivated</h4>
 <b>on_resultList_itemActivated</b>(<i>itm, col</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#97;&#99;&#116;&#105;v&#97;&#116;&#105;&#111;&#110; &#111;&#102; &#97;&#110; &#105;&#116;&#101;&#109;. 
+        Private slot to handle the activation of an item. 
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#97;&#99;&#116;&#105;v&#97;&#116;&#101;&#100; &#105;&#116;&#101;&#109; (&#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+reference to the activated item (QTreeWidgetItem)
 </dd><dt><i>col</i></dt>
 <dd>
-&#99;&#111;&#108;&#117;&#109;&#110; &#116;&#104;&#101; &#105;&#116;&#101;&#109; w&#97;&#115; &#97;&#99;&#116;&#105;v&#97;&#116;&#101;&#100; &#105;&#110; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+column the item was activated in (integer)
 </dd>
 </dl><a NAME="SyntaxCheckerDialog.on_showButton_clicked" ID="SyntaxCheckerDialog.on_showButton_clicked"></a>
 <h4>SyntaxCheckerDialog.on_showButton_clicked</h4>
 <b>on_showButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; "&#83;&#104;&#111;w" &#98;&#117;&#116;&#116;&#111;&#110; &#112;&#114;&#101;&#115;&#115;.
+        Private slot to handle the "Show" button press.
 </p><a NAME="SyntaxCheckerDialog.start" ID="SyntaxCheckerDialog.start"></a>
 <h4>SyntaxCheckerDialog.start</h4>
 <b>start</b>(<i>fn, codestring = ""</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#116;&#97;&#114;&#116; &#116;&#104;&#101; &#115;y&#110;&#116;&#97;x &#99;&#104;&#101;&#99;&#107;.
+        Public slot to start the syntax check.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
-&#102;&#105;&#108;&#101; &#111;&#114; &#108;&#105;&#115;&#116; &#111;&#102; &#102;&#105;&#108;&#101;&#115; &#111;&#114; &#100;&#105;&#114;&#101;&#99;&#116;&#111;&#114;y &#116;&#111; &#98;&#101; &#99;&#104;&#101;&#99;&#107;&#101;&#100;
-                (&#115;&#116;&#114;&#105;&#110;&#103; &#111;&#114; &#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+file or list of files or directory to be checked
+                (string or list of strings)
 </dd><dt><i>codestring</i></dt>
 <dd>
-&#115;&#116;&#114;&#105;&#110;&#103; &#99;&#111;&#110;&#116;&#97;&#105;&#110;&#105;&#110;&#103; &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#116;&#111; &#98;&#101; &#99;&#104;&#101;&#99;&#107;&#101;&#100; (&#115;&#116;&#114;&#105;&#110;&#103;).
-            &#73;&#102; &#116;&#104;&#105;&#115; &#105;&#115; &#103;&#105;v&#101;&#110;, &#102;&#105;&#108;&#101; &#109;&#117;&#115;&#116; &#98;&#101; &#97; &#115;&#105;&#110;&#103;&#108;&#101; &#102;&#105;&#108;&#101; &#110;&#97;&#109;&#101;.
+string containing the code to be checked (string).
+            If this is given, file must be a single file name.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

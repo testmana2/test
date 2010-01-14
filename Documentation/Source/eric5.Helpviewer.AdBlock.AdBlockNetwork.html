@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Helpviewer.AdBlock.AdBlockNetwork</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#110;&#101;&#116;w&#111;&#114;&#107; &#98;&#108;&#111;&#99;&#107; &#99;&#108;&#97;&#115;&#115;.
+Module implementing the network block class.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#AdBlockNetwork">AdBlockNetwork</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#110;&#101;&#116;w&#111;&#114;&#107; &#98;&#108;&#111;&#99;&#107;.</td>
+<td>Class implementing a network block.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="AdBlockNetwork" ID="AdBlockNetwork"></a>
 <h2>AdBlockNetwork</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#110;&#101;&#116;w&#111;&#114;&#107; &#98;&#108;&#111;&#99;&#107;.
+    Class implementing a network block.
 </p>
 <h3>Derived from</h3>
 QObject
@@ -55,18 +55,18 @@ QObject
 <table>
 <tr>
 <td><a href="#AdBlockNetwork.block">block</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107; &#102;&#111;&#114; &#97; &#110;&#101;&#116;w&#111;&#114;&#107; &#98;&#108;&#111;&#99;&#107;.</td>
+<td>Public method to check for a network block.</td>
 </tr>
 </table>
 <a NAME="AdBlockNetwork.block" ID="AdBlockNetwork.block"></a>
 <h4>AdBlockNetwork.block</h4>
 <b>block</b>(<i>request</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107; &#102;&#111;&#114; &#97; &#110;&#101;&#116;w&#111;&#114;&#107; &#98;&#108;&#111;&#99;&#107;.
+        Public method to check for a network block.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#112;&#108;y &#111;&#98;&#106;&#101;&#99;&#116; (&#81;&#78;&#101;&#116;w&#111;&#114;&#107;&#82;&#101;&#112;&#108;y) &#111;&#114; &#78;&#111;&#110;&#101;
+reply object (QNetworkReply) or None
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Helpviewer.CookieJar.CookieDetailsDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#115;&#104;&#111;w&#105;&#110;&#103; &#116;&#104;&#101; &#99;&#111;&#111;&#107;&#105;&#101; &#100;&#97;&#116;&#97;.
+Module implementing a dialog showing the cookie data.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#CookieDetailsDialog">CookieDetailsDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#115;&#104;&#111;w&#105;&#110;&#103; &#116;&#104;&#101; &#99;&#111;&#111;&#107;&#105;&#101; &#100;&#97;&#116;&#97;.</td>
+<td>Class implementing a dialog showing the cookie data.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="CookieDetailsDialog" ID="CookieDetailsDialog"></a>
 <h2>CookieDetailsDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#115;&#104;&#111;w&#105;&#110;&#103; &#116;&#104;&#101; &#99;&#111;&#111;&#107;&#105;&#101; &#100;&#97;&#116;&#97;.
+    Class implementing a dialog showing the cookie data.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_CookieDetailsDialog
@@ -55,46 +55,46 @@ QDialog, Ui_CookieDetailsDialog
 <table>
 <tr>
 <td><a href="#CookieDetailsDialog.__init__">CookieDetailsDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#CookieDetailsDialog.setData">setData</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#116;&#111; &#98;&#101; &#115;&#104;&#111;w&#110;.</td>
+<td>Public method to set the data to be shown.</td>
 </tr>
 </table>
 <a NAME="CookieDetailsDialog.__init__" ID="CookieDetailsDialog.__init__"></a>
 <h4>CookieDetailsDialog (Constructor)</h4>
 <b>CookieDetailsDialog</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; &#111;&#98;&#106;&#101;&#99;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+reference to the parent object (QWidget)
 </dd>
 </dl><a NAME="CookieDetailsDialog.setData" ID="CookieDetailsDialog.setData"></a>
 <h4>CookieDetailsDialog.setData</h4>
 <b>setData</b>(<i>domain, name, path, secure, expires, value</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#116;&#111; &#98;&#101; &#115;&#104;&#111;w&#110;.
+        Public method to set the data to be shown.
 </p><dl>
 <dt><i>domain</i></dt>
 <dd>
-&#100;&#111;&#109;&#97;&#105;&#110; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#111;&#107;&#105;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+domain of the cookie (string)
 </dd><dt><i>name</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#111;&#107;&#105;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the cookie (string)
 </dd><dt><i>path</i></dt>
 <dd>
-&#112;&#97;&#116;&#104; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#111;&#107;&#105;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+path of the cookie (string)
 </dd><dt><i>secure</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#115;&#101;&#99;&#117;&#114;&#101; &#99;&#111;&#111;&#107;&#105;&#101; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating a secure cookie (boolean)
 </dd><dt><i>expires</i></dt>
 <dd>
-&#101;x&#112;&#105;&#114;&#97;&#116;&#105;&#111;&#110; &#116;&#105;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#111;&#107;&#105;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+expiration time of the cookie (string)
 </dd><dt><i>value</i></dt>
 <dd>
-v&#97;&#108;&#117;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#111;&#107;&#105;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+value of the cookie (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

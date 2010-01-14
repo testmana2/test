@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardRepeatDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#101;&#110;&#116;&#101;&#114;&#105;&#110;&#103; &#114;&#101;&#112;&#101;&#97;&#116; &#99;&#111;&#117;&#110;&#116;&#115;.
+Module implementing a dialog for entering repeat counts.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#PyRegExpWizardRepeatDialog">PyRegExpWizardRepeatDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#101;&#110;&#116;&#101;&#114;&#105;&#110;&#103; &#114;&#101;&#112;&#101;&#97;&#116; &#99;&#111;&#117;&#110;&#116;&#115;.</td>
+<td>Class implementing a dialog for entering repeat counts.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="PyRegExpWizardRepeatDialog" ID="PyRegExpWizardRepeatDialog"></a>
 <h2>PyRegExpWizardRepeatDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#101;&#110;&#116;&#101;&#114;&#105;&#110;&#103; &#114;&#101;&#112;&#101;&#97;&#116; &#99;&#111;&#117;&#110;&#116;&#115;.
+    Class implementing a dialog for entering repeat counts.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_PyRegExpWizardRepeatDialog
@@ -55,57 +55,57 @@ QDialog, Ui_PyRegExpWizardRepeatDialog
 <table>
 <tr>
 <td><a href="#PyRegExpWizardRepeatDialog.__init__">PyRegExpWizardRepeatDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#PyRegExpWizardRepeatDialog.getRepeat">getRepeat</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;'&#115; &#114;&#101;&#115;&#117;&#108;&#116;.</td>
+<td>Public method to retrieve the dialog's result.</td>
 </tr><tr>
 <td><a href="#PyRegExpWizardRepeatDialog.on_lowerSpin_valueChanged">on_lowerSpin_valueChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#108;&#111;w&#101;&#114;&#83;&#112;&#105;&#110; v&#97;&#108;&#117;&#101;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot to handle the lowerSpin valueChanged signal.</td>
 </tr><tr>
 <td><a href="#PyRegExpWizardRepeatDialog.on_upperSpin_valueChanged">on_upperSpin_valueChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#117;&#112;&#112;&#101;&#114;&#83;&#112;&#105;&#110; v&#97;&#108;&#117;&#101;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot to handle the upperSpin valueChanged signal.</td>
 </tr>
 </table>
 <a NAME="PyRegExpWizardRepeatDialog.__init__" ID="PyRegExpWizardRepeatDialog.__init__"></a>
 <h4>PyRegExpWizardRepeatDialog (Constructor)</h4>
 <b>PyRegExpWizardRepeatDialog</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget (QWidget)
 </dd>
 </dl><a NAME="PyRegExpWizardRepeatDialog.getRepeat" ID="PyRegExpWizardRepeatDialog.getRepeat"></a>
 <h4>PyRegExpWizardRepeatDialog.getRepeat</h4>
 <b>getRepeat</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;'&#115; &#114;&#101;&#115;&#117;&#108;&#116;.
+        Public method to retrieve the dialog's result.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#97;&#100;y &#102;&#111;&#114;&#109;&#97;&#116;&#116;&#101;&#100; &#114;&#101;&#112;&#101;&#97;&#116; &#115;&#116;&#114;&#105;&#110;&#103; (&#115;&#116;&#114;&#105;&#110;&#103;)
+ready formatted repeat string (string)
 </dd>
 </dl><a NAME="PyRegExpWizardRepeatDialog.on_lowerSpin_valueChanged" ID="PyRegExpWizardRepeatDialog.on_lowerSpin_valueChanged"></a>
 <h4>PyRegExpWizardRepeatDialog.on_lowerSpin_valueChanged</h4>
 <b>on_lowerSpin_valueChanged</b>(<i>value</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#108;&#111;w&#101;&#114;&#83;&#112;&#105;&#110; v&#97;&#108;&#117;&#101;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot to handle the lowerSpin valueChanged signal.
 </p><dl>
 <dt><i>value</i></dt>
 <dd>
-v&#97;&#108;&#117;&#101; &#111;&#102; &#116;&#104;&#101; &#115;&#112;&#105;&#110;&#98;&#111;x (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+value of the spinbox (integer)
 </dd>
 </dl><a NAME="PyRegExpWizardRepeatDialog.on_upperSpin_valueChanged" ID="PyRegExpWizardRepeatDialog.on_upperSpin_valueChanged"></a>
 <h4>PyRegExpWizardRepeatDialog.on_upperSpin_valueChanged</h4>
 <b>on_upperSpin_valueChanged</b>(<i>value</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#117;&#112;&#112;&#101;&#114;&#83;&#112;&#105;&#110; v&#97;&#108;&#117;&#101;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot to handle the upperSpin valueChanged signal.
 </p><dl>
 <dt><i>value</i></dt>
 <dd>
-v&#97;&#108;&#117;&#101; &#111;&#102; &#116;&#104;&#101; &#115;&#112;&#105;&#110;&#98;&#111;x (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+value of the spinbox (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

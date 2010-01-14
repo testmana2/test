@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#101;&#110;&#116;&#101;&#114; &#111;&#112;&#116;&#105;&#111;&#110;&#115; &#117;&#115;&#101;&#100; &#116;&#111; &#115;&#116;&#97;&#114;&#116; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#105;&#110; &#116;&#104;&#101; &#86;&#67;&#83;.
+Module implementing a dialog to enter options used to start a project in the VCS.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#SvnOptionsDialog">SvnOptionsDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#101;&#110;&#116;&#101;&#114; &#111;&#112;&#116;&#105;&#111;&#110;&#115; &#117;&#115;&#101;&#100; &#116;&#111; &#115;&#116;&#97;&#114;&#116; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#105;&#110; &#116;&#104;&#101; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y.</td>
+<td>Class implementing a dialog to enter options used to start a project in the repository.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,8 +43,8 @@ a { color: #AA5500; }
 <a NAME="SvnOptionsDialog" ID="SvnOptionsDialog"></a>
 <h2>SvnOptionsDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#101;&#110;&#116;&#101;&#114; &#111;&#112;&#116;&#105;&#111;&#110;&#115; &#117;&#115;&#101;&#100; &#116;&#111; &#115;&#116;&#97;&#114;&#116; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#105;&#110; &#116;&#104;&#101;
-    &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y.
+    Class implementing a dialog to enter options used to start a project in the
+    repository.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_SvnOptionsDialog
@@ -56,54 +56,54 @@ QDialog, Ui_SvnOptionsDialog
 <table>
 <tr>
 <td><a href="#SvnOptionsDialog.__init__">SvnOptionsDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#SvnOptionsDialog.getData">getData</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#101;&#110;&#116;&#101;&#114;&#101;&#100; &#105;&#110;&#116;&#111; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Public slot to retrieve the data entered into the dialog.</td>
 </tr><tr>
 <td><a href="#SvnOptionsDialog.on_protocolCombo_activated">on_protocolCombo_activated</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;w&#105;&#116;&#99;&#104; &#116;&#104;&#101; &#115;&#116;&#97;&#116;&#117;&#115; &#111;&#102; &#116;&#104;&#101; &#100;&#105;&#114;&#101;&#99;&#116;&#111;&#114;y &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#98;&#117;&#116;&#116;&#111;&#110;.</td>
+<td>Private slot to switch the status of the directory selection button.</td>
 </tr><tr>
 <td><a href="#SvnOptionsDialog.on_vcsUrlButton_clicked">on_vcsUrlButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#97; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Private slot to display a selection dialog.</td>
 </tr>
 </table>
 <a NAME="SvnOptionsDialog.__init__" ID="SvnOptionsDialog.__init__"></a>
 <h4>SvnOptionsDialog (Constructor)</h4>
 <b>SvnOptionsDialog</b>(<i>vcs, project, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>vcs</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#99;&#111;&#110;&#116;&#114;&#111;&#108; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the version control object
 </dd><dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the project object
 </dd><dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget (QWidget)
 </dd>
 </dl><a NAME="SvnOptionsDialog.getData" ID="SvnOptionsDialog.getData"></a>
 <h4>SvnOptionsDialog.getData</h4>
 <b>getData</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#101;&#110;&#116;&#101;&#114;&#101;&#100; &#105;&#110;&#116;&#111; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Public slot to retrieve the data entered into the dialog.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#97; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y &#99;&#111;&#110;&#116;&#97;&#105;&#110;&#105;&#110;&#103; &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#101;&#110;&#116;&#101;&#114;&#101;&#100;
+a dictionary containing the data entered
 </dd>
 </dl><a NAME="SvnOptionsDialog.on_protocolCombo_activated" ID="SvnOptionsDialog.on_protocolCombo_activated"></a>
 <h4>SvnOptionsDialog.on_protocolCombo_activated</h4>
 <b>on_protocolCombo_activated</b>(<i>protocol</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;w&#105;&#116;&#99;&#104; &#116;&#104;&#101; &#115;&#116;&#97;&#116;&#117;&#115; &#111;&#102; &#116;&#104;&#101; &#100;&#105;&#114;&#101;&#99;&#116;&#111;&#114;y &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#98;&#117;&#116;&#116;&#111;&#110;.
+        Private slot to switch the status of the directory selection button.
 </p><a NAME="SvnOptionsDialog.on_vcsUrlButton_clicked" ID="SvnOptionsDialog.on_vcsUrlButton_clicked"></a>
 <h4>SvnOptionsDialog.on_vcsUrlButton_clicked</h4>
 <b>on_vcsUrlButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#97; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Private slot to display a selection dialog.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

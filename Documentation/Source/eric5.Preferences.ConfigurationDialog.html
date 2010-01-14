@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Preferences.ConfigurationDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#111;&#102; &#101;&#114;&#105;&#99;&#53;.
+Module implementing a dialog for the configuration of eric5.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,16 +32,16 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#ConfigurationDialog">ConfigurationDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; v&#97;&#114;&#105;&#97;&#110;&#116;.</td>
+<td>Class for the dialog variant.</td>
 </tr><tr>
 <td><a href="#ConfigurationPageItem">ConfigurationPageItem</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109; &#104;&#111;&#108;&#100;&#105;&#110;&#103; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; &#100;&#97;&#116;&#97;.</td>
+<td>Class implementing a QTreeWidgetItem holding the configuration page data.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget">ConfigurationWidget</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#111;&#102; &#101;&#114;&#105;&#99;&#53;.</td>
+<td>Class implementing a dialog for the configuration of eric5.</td>
 </tr><tr>
 <td><a href="#ConfigurationWindow">ConfigurationWindow</a></td>
-<td>&#77;&#97;&#105;&#110; w&#105;&#110;&#100;&#111;w &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#115;&#116;&#97;&#110;&#100;&#97;&#108;&#111;&#110;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Main window class for the standalone dialog.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -52,12 +52,12 @@ a { color: #AA5500; }
 <a NAME="ConfigurationDialog" ID="ConfigurationDialog"></a>
 <h2>ConfigurationDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; v&#97;&#114;&#105;&#97;&#110;&#116;.
+    Class for the dialog variant.
 </p><h4>Signals</h4>
 <dl>
 <dt>preferencesChanged</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#115;&#101;&#116;&#116;&#105;&#110;&#103;&#115; &#104;&#97;v&#101; &#98;&#101;&#101;&#110; &#99;&#104;&#97;&#110;&#103;&#101;&#100;
+emitted after settings have been changed
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -70,61 +70,61 @@ QDialog
 <table>
 <tr>
 <td><a href="#ConfigurationDialog.__init__">ConfigurationDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ConfigurationDialog.__preferencesChanged">__preferencesChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115;.</td>
+<td>Private slot to handle a change of the preferences.</td>
 </tr><tr>
 <td><a href="#ConfigurationDialog.setPreferences">setPreferences</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#115;&#116;&#111;&#114;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; v&#97;&#108;&#117;&#101;&#115; &#105;&#110;&#116;&#111; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115; &#115;&#116;&#111;&#114;&#97;&#103;&#101;.</td>
+<td>Public method called to store the selected values into the preferences storage.</td>
 </tr><tr>
 <td><a href="#ConfigurationDialog.showConfigurationPageByName">showConfigurationPageByName</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#97; &#110;&#97;&#109;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Public slot to show a named configuration page.</td>
 </tr>
 </table>
 <a NAME="ConfigurationDialog.__init__" ID="ConfigurationDialog.__init__"></a>
 <h4>ConfigurationDialog (Constructor)</h4>
 <b>ConfigurationDialog</b>(<i>parent = None, name = None, modal = False, fromEric = True, helpBrowserMode = False</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#84;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; &#111;&#102; &#116;&#104;&#105;&#115; &#100;&#105;&#97;&#108;&#111;&#103;. (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+The parent widget of this dialog. (QWidget)
 </dd><dt><i>name</i></dt>
 <dd>
-&#84;&#104;&#101; &#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#105;&#115; &#100;&#105;&#97;&#108;&#111;&#103;. &#115;&#116;&#114;&#105;&#110;&#103;
+The name of this dialog. string
 </dd><dt><i>modal</i></dt>
 <dd>
-&#70;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#109;&#111;&#100;&#97;&#108; &#100;&#105;&#97;&#108;&#111;&#103;. (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+Flag indicating a modal dialog. (boolean)
 </dd><dt><i>fromEric=</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#105;&#111;&#110; &#102;&#114;&#111;&#109; w&#105;&#116;&#104;&#105;&#110; &#116;&#104;&#101;
-            &#101;&#114;&#105;&#99;&#53; &#105;&#100;&#101; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating a dialog generation from within the
+            eric5 ide (boolean)
 </dd><dt><i>helpBrowserMode=</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#116;&#111; &#115;&#104;&#111;w &#111;&#110;&#108;y &#104;&#101;&#108;&#112; &#112;&#97;&#103;&#101;&#115;
-            &#102;&#111;&#114; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#114;&#101;&#108;&#97;&#116;&#101;&#100; &#116;&#111; &#116;&#104;&#101; &#104;&#101;&#108;&#112; &#98;&#114;&#111;w&#115;&#101;&#114; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating to show only help pages
+            for entries related to the help browser (boolean)
 </dd>
 </dl><a NAME="ConfigurationDialog.__preferencesChanged" ID="ConfigurationDialog.__preferencesChanged"></a>
 <h4>ConfigurationDialog.__preferencesChanged</h4>
 <b>__preferencesChanged</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115;.
+        Private slot to handle a change of the preferences.
 </p><a NAME="ConfigurationDialog.setPreferences" ID="ConfigurationDialog.setPreferences"></a>
 <h4>ConfigurationDialog.setPreferences</h4>
 <b>setPreferences</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#115;&#116;&#111;&#114;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; v&#97;&#108;&#117;&#101;&#115; &#105;&#110;&#116;&#111; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115; &#115;&#116;&#111;&#114;&#97;&#103;&#101;.
+        Public method called to store the selected values into the preferences storage.
 </p><a NAME="ConfigurationDialog.showConfigurationPageByName" ID="ConfigurationDialog.showConfigurationPageByName"></a>
 <h4>ConfigurationDialog.showConfigurationPageByName</h4>
 <b>showConfigurationPageByName</b>(<i>pageName</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#97; &#110;&#97;&#109;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+        Public slot to show a named configuration page.
 </p><dl>
 <dt><i>pageName</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; &#116;&#111; &#115;&#104;&#111;w (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the configuration page to show (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -132,7 +132,7 @@ QDialog
 <a NAME="ConfigurationPageItem" ID="ConfigurationPageItem"></a>
 <h2>ConfigurationPageItem</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109; &#104;&#111;&#108;&#100;&#105;&#110;&#103; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; &#100;&#97;&#116;&#97;.
+    Class implementing a QTreeWidgetItem holding the configuration page data.
 </p>
 <h3>Derived from</h3>
 QTreeWidgetItem
@@ -144,40 +144,40 @@ QTreeWidgetItem
 <table>
 <tr>
 <td><a href="#ConfigurationPageItem.__init__">ConfigurationPageItem</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ConfigurationPageItem.getPageName">getPageName</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#97;&#115;&#115;&#111;&#99;&#105;&#97;&#116;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Public method to get the name of the associated configuration page.</td>
 </tr>
 </table>
 <a NAME="ConfigurationPageItem.__init__" ID="ConfigurationPageItem.__init__"></a>
 <h4>ConfigurationPageItem (Constructor)</h4>
 <b>ConfigurationPageItem</b>(<i>parent, text, pageName, iconFile</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; &#111;&#102; &#116;&#104;&#101; &#105;&#116;&#101;&#109; (&#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116; &#111;&#114; &#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+parent widget of the item (QTreeWidget or QTreeWidgetItem)
 </dd><dt><i>text</i></dt>
 <dd>
-&#116;&#101;x&#116; &#116;&#111; &#98;&#101; &#100;&#105;&#115;&#112;&#108;&#97;y&#101;&#100; (&#115;&#116;&#114;&#105;&#110;&#103;)
+text to be displayed (string)
 </dd><dt><i>pageName</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the configuration page (string)
 </dd><dt><i>iconFile</i></dt>
 <dd>
-&#102;&#105;&#108;&#101; &#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#105;&#99;&#111;&#110; &#116;&#111; &#98;&#101; &#115;&#104;&#111;w&#110; (&#115;&#116;&#114;&#105;&#110;&#103;)
+file name of the icon to be shown (string)
 </dd>
 </dl><a NAME="ConfigurationPageItem.getPageName" ID="ConfigurationPageItem.getPageName"></a>
 <h4>ConfigurationPageItem.getPageName</h4>
 <b>getPageName</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#97;&#115;&#115;&#111;&#99;&#105;&#97;&#116;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+        Public method to get the name of the associated configuration page.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the configuration page (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -185,12 +185,12 @@ QTreeWidgetItem
 <a NAME="ConfigurationWidget" ID="ConfigurationWidget"></a>
 <h2>ConfigurationWidget</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#111;&#102; &#101;&#114;&#105;&#99;&#53;.
+    Class implementing a dialog for the configuration of eric5.
 </p><h4>Signals</h4>
 <dl>
 <dt>preferencesChanged</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#115;&#101;&#116;&#116;&#105;&#110;&#103;&#115; &#104;&#97;v&#101; &#98;&#101;&#101;&#110; &#99;&#104;&#97;&#110;&#103;&#101;&#100;
+emitted after settings have been changed
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -203,189 +203,189 @@ QWidget
 <table>
 <tr>
 <td><a href="#ConfigurationWidget.__init__">ConfigurationWidget</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.__importConfigurationPage">__importConfigurationPage</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#109;&#112;&#111;&#114;&#116; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; &#109;&#111;&#100;&#117;&#108;&#101;.</td>
+<td>Private method to import a configuration page module.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.__initLexers">__initLexers</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101; &#116;&#104;&#101; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y &#111;&#102; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115; &#108;&#101;x&#101;&#114;&#115;.</td>
+<td>Private method to initialize the dictionary of preferences lexers.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.__initPage">__initPage</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Private method to initialize a configuration page.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.__setupUi">__setupUi</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#103;&#101;&#110;&#101;&#114;&#97;&#108; &#115;&#101;&#116;&#117;&#112; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; w&#105;&#100;&#103;&#101;&#116;.</td>
+<td>Private method to perform the general setup of the configuration widget.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.__showConfigurationPage">__showConfigurationPage</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#97; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Private slot to show a selected configuration page.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.calledFromEric">calledFromEric</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107;, &#105;&#102; &#105;&#110;v&#111;&#107;&#101;&#100; &#102;&#114;&#111;&#109; w&#105;&#116;&#104;&#105;&#110; &#101;&#114;&#105;&#99;.</td>
+<td>Public method to check, if invoked from within eric.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.getLexers">getLexers</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#108;&#101;x&#101;&#114;&#115; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y.</td>
+<td>Public method to get a reference to the lexers dictionary.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.getPage">getPage</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#97;&#109;&#101;&#100; &#112;&#97;&#103;&#101;.</td>
+<td>Public method to get a reference to the named page.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.on_applyButton_clicked">on_applyButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#97;&#112;&#112;&#108;y &#116;&#104;&#101; &#115;&#101;&#116;&#116;&#105;&#110;&#103;&#115; &#111;&#102; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#112;&#97;&#103;&#101;.</td>
+<td>Private slot called to apply the settings of the current page.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100;.</td>
+<td>Private slot called by a button of the button box clicked.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.on_resetButton_clicked">on_resetButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#114;&#101;&#115;&#101;&#116; &#116;&#104;&#101; &#115;&#101;&#116;&#116;&#105;&#110;&#103;&#115; &#111;&#102; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#112;&#97;&#103;&#101;.</td>
+<td>Private slot called to reset the settings of the current page.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.setPreferences">setPreferences</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#115;&#116;&#111;&#114;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; v&#97;&#108;&#117;&#101;&#115; &#105;&#110;&#116;&#111; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115; &#115;&#116;&#111;&#114;&#97;&#103;&#101;.</td>
+<td>Public method called to store the selected values into the preferences storage.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.showConfigurationPageByName">showConfigurationPageByName</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#97; &#110;&#97;&#109;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Public slot to show a named configuration page.</td>
 </tr>
 </table>
 <a NAME="ConfigurationWidget.__init__" ID="ConfigurationWidget.__init__"></a>
 <h4>ConfigurationWidget (Constructor)</h4>
 <b>ConfigurationWidget</b>(<i>parent = None, fromEric = True, helpBrowserMode = False</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#84;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; &#111;&#102; &#116;&#104;&#105;&#115; &#100;&#105;&#97;&#108;&#111;&#103;. (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+The parent widget of this dialog. (QWidget)
 </dd><dt><i>fromEric=</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#105;&#111;&#110; &#102;&#114;&#111;&#109; w&#105;&#116;&#104;&#105;&#110; &#116;&#104;&#101;
-            &#101;&#114;&#105;&#99;&#53; &#105;&#100;&#101; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating a dialog generation from within the
+            eric5 ide (boolean)
 </dd><dt><i>helpBrowserMode=</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#116;&#111; &#115;&#104;&#111;w &#111;&#110;&#108;y &#104;&#101;&#108;&#112; &#112;&#97;&#103;&#101;&#115;
-            &#102;&#111;&#114; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#114;&#101;&#108;&#97;&#116;&#101;&#100; &#116;&#111; &#116;&#104;&#101; &#104;&#101;&#108;&#112; &#98;&#114;&#111;w&#115;&#101;&#114; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating to show only help pages
+            for entries related to the help browser (boolean)
 </dd>
 </dl><a NAME="ConfigurationWidget.__importConfigurationPage" ID="ConfigurationWidget.__importConfigurationPage"></a>
 <h4>ConfigurationWidget.__importConfigurationPage</h4>
 <b>__importConfigurationPage</b>(<i>name</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#109;&#112;&#111;&#114;&#116; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; &#109;&#111;&#100;&#117;&#108;&#101;.
+        Private method to import a configuration page module.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; &#109;&#111;&#100;&#117;&#108;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the configuration page module (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; &#109;&#111;&#100;&#117;&#108;&#101;
+reference to the configuration page module
 </dd>
 </dl><a NAME="ConfigurationWidget.__initLexers" ID="ConfigurationWidget.__initLexers"></a>
 <h4>ConfigurationWidget.__initLexers</h4>
 <b>__initLexers</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101; &#116;&#104;&#101; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y &#111;&#102; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115; &#108;&#101;x&#101;&#114;&#115;.
+        Private method to initialize the dictionary of preferences lexers.
 </p><a NAME="ConfigurationWidget.__initPage" ID="ConfigurationWidget.__initPage"></a>
 <h4>ConfigurationWidget.__initPage</h4>
 <b>__initPage</b>(<i>pageData</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+        Private method to initialize a configuration page.
 </p><dl>
 <dt><i>pageData</i></dt>
 <dd>
-&#100;&#97;&#116;&#97; &#115;&#116;&#114;&#117;&#99;&#116;&#117;&#114;&#101; &#102;&#111;&#114; &#116;&#104;&#101; &#112;&#97;&#103;&#101; &#116;&#111; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101;
+data structure for the page to initialize
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101;&#100; &#112;&#97;&#103;&#101;
+reference to the initialized page
 </dd>
 </dl><a NAME="ConfigurationWidget.__setupUi" ID="ConfigurationWidget.__setupUi"></a>
 <h4>ConfigurationWidget.__setupUi</h4>
 <b>__setupUi</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#103;&#101;&#110;&#101;&#114;&#97;&#108; &#115;&#101;&#116;&#117;&#112; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; w&#105;&#100;&#103;&#101;&#116;.
+        Private method to perform the general setup of the configuration widget.
 </p><a NAME="ConfigurationWidget.__showConfigurationPage" ID="ConfigurationWidget.__showConfigurationPage"></a>
 <h4>ConfigurationWidget.__showConfigurationPage</h4>
 <b>__showConfigurationPage</b>(<i>itm, column</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#97; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+        Private slot to show a selected configuration page.
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#105;&#116;&#101;&#109; (&#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+reference to the selected item (QTreeWidgetItem)
 </dd><dt><i>column</i></dt>
 <dd>
-&#99;&#111;&#108;&#117;&#109;&#110; &#116;&#104;&#97;&#116; w&#97;&#115; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;) (&#105;&#103;&#110;&#111;&#114;&#101;&#100;)
+column that was selected (integer) (ignored)
 </dd>
 </dl><a NAME="ConfigurationWidget.calledFromEric" ID="ConfigurationWidget.calledFromEric"></a>
 <h4>ConfigurationWidget.calledFromEric</h4>
 <b>calledFromEric</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107;, &#105;&#102; &#105;&#110;v&#111;&#107;&#101;&#100; &#102;&#114;&#111;&#109; w&#105;&#116;&#104;&#105;&#110; &#101;&#114;&#105;&#99;.
+        Public method to check, if invoked from within eric.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#105;&#110;v&#111;&#99;&#97;&#116;&#105;&#111;&#110; &#102;&#114;&#111;&#109; w&#105;&#116;&#104;&#105;&#110; &#101;&#114;&#105;&#99; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating invocation from within eric (boolean)
 </dd>
 </dl><a NAME="ConfigurationWidget.getLexers" ID="ConfigurationWidget.getLexers"></a>
 <h4>ConfigurationWidget.getLexers</h4>
 <b>getLexers</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#108;&#101;x&#101;&#114;&#115; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y.
+        Public method to get a reference to the lexers dictionary.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#108;&#101;x&#101;&#114;&#115; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y
+reference to the lexers dictionary
 </dd>
 </dl><a NAME="ConfigurationWidget.getPage" ID="ConfigurationWidget.getPage"></a>
 <h4>ConfigurationWidget.getPage</h4>
 <b>getPage</b>(<i>pageName</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#97;&#109;&#101;&#100; &#112;&#97;&#103;&#101;.
+        Public method to get a reference to the named page.
 </p><dl>
 <dt><i>pageName</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the configuration page (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#103;&#101; &#111;&#114; &#78;&#111;&#110;&#101;, &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#112;&#97;&#103;&#101; w&#97;&#115;
-            &#110;&#111;&#116; &#108;&#111;&#97;&#100;&#101;&#100; y&#101;&#116;
+reference to the page or None, indicating page was
+            not loaded yet
 </dd>
 </dl><a NAME="ConfigurationWidget.on_applyButton_clicked" ID="ConfigurationWidget.on_applyButton_clicked"></a>
 <h4>ConfigurationWidget.on_applyButton_clicked</h4>
 <b>on_applyButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#97;&#112;&#112;&#108;y &#116;&#104;&#101; &#115;&#101;&#116;&#116;&#105;&#110;&#103;&#115; &#111;&#102; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#112;&#97;&#103;&#101;.
+        Private slot called to apply the settings of the current page.
 </p><a NAME="ConfigurationWidget.on_buttonBox_clicked" ID="ConfigurationWidget.on_buttonBox_clicked"></a>
 <h4>ConfigurationWidget.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100;.
+        Private slot called by a button of the button box clicked.
 </p><dl>
 <dt><i>button</i></dt>
 <dd>
-&#98;&#117;&#116;&#116;&#111;&#110; &#116;&#104;&#97;&#116; w&#97;&#115; &#99;&#108;&#105;&#99;&#107;&#101;&#100; (&#81;&#65;&#98;&#115;&#116;&#114;&#97;&#99;&#116;&#66;&#117;&#116;&#116;&#111;&#110;)
+button that was clicked (QAbstractButton)
 </dd>
 </dl><a NAME="ConfigurationWidget.on_resetButton_clicked" ID="ConfigurationWidget.on_resetButton_clicked"></a>
 <h4>ConfigurationWidget.on_resetButton_clicked</h4>
 <b>on_resetButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#114;&#101;&#115;&#101;&#116; &#116;&#104;&#101; &#115;&#101;&#116;&#116;&#105;&#110;&#103;&#115; &#111;&#102; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#112;&#97;&#103;&#101;.
+        Private slot called to reset the settings of the current page.
 </p><a NAME="ConfigurationWidget.setPreferences" ID="ConfigurationWidget.setPreferences"></a>
 <h4>ConfigurationWidget.setPreferences</h4>
 <b>setPreferences</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#115;&#116;&#111;&#114;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; v&#97;&#108;&#117;&#101;&#115; &#105;&#110;&#116;&#111; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115; &#115;&#116;&#111;&#114;&#97;&#103;&#101;.
+        Public method called to store the selected values into the preferences storage.
 </p><a NAME="ConfigurationWidget.showConfigurationPageByName" ID="ConfigurationWidget.showConfigurationPageByName"></a>
 <h4>ConfigurationWidget.showConfigurationPageByName</h4>
 <b>showConfigurationPageByName</b>(<i>pageName</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#97; &#110;&#97;&#109;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+        Public slot to show a named configuration page.
 </p><dl>
 <dt><i>pageName</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; &#116;&#111; &#115;&#104;&#111;w (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the configuration page to show (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -393,7 +393,7 @@ QWidget
 <a NAME="ConfigurationWindow" ID="ConfigurationWindow"></a>
 <h2>ConfigurationWindow</h2>
 <p>
-    &#77;&#97;&#105;&#110; w&#105;&#110;&#100;&#111;w &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#115;&#116;&#97;&#110;&#100;&#97;&#108;&#111;&#110;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.
+    Main window class for the standalone dialog.
 </p>
 <h3>Derived from</h3>
 QMainWindow
@@ -405,39 +405,39 @@ QMainWindow
 <table>
 <tr>
 <td><a href="#ConfigurationWindow.__init__">ConfigurationWindow</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ConfigurationWindow.accept">accept</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#79;&#107; &#98;&#117;&#116;&#116;&#111;&#110;.</td>
+<td>Protected slot called by the Ok button.</td>
 </tr><tr>
 <td><a href="#ConfigurationWindow.showConfigurationPageByName">showConfigurationPageByName</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#97; &#110;&#97;&#109;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Public slot to show a named configuration page.</td>
 </tr>
 </table>
 <a NAME="ConfigurationWindow.__init__" ID="ConfigurationWindow.__init__"></a>
 <h4>ConfigurationWindow (Constructor)</h4>
 <b>ConfigurationWindow</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+reference to the parent widget (QWidget)
 </dd>
 </dl><a NAME="ConfigurationWindow.accept" ID="ConfigurationWindow.accept"></a>
 <h4>ConfigurationWindow.accept</h4>
 <b>accept</b>(<i></i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#79;&#107; &#98;&#117;&#116;&#116;&#111;&#110;. 
+        Protected slot called by the Ok button. 
 </p><a NAME="ConfigurationWindow.showConfigurationPageByName" ID="ConfigurationWindow.showConfigurationPageByName"></a>
 <h4>ConfigurationWindow.showConfigurationPageByName</h4>
 <b>showConfigurationPageByName</b>(<i>pageName</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#97; &#110;&#97;&#109;&#101;&#100; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+        Public slot to show a named configuration page.
 </p><dl>
 <dt><i>pageName</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101; &#116;&#111; &#115;&#104;&#111;w (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the configuration page to show (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

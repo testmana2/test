@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.ViewManager.BookmarkedFilesDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#101;&#100; &#102;&#105;&#108;&#101;&#115; &#109;&#101;&#110;&#117;.
+Module implementing a configuration dialog for the bookmarked files menu.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#BookmarkedFilesDialog">BookmarkedFilesDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#101;&#100; &#102;&#105;&#108;&#101;&#115; &#109;&#101;&#110;&#117;.</td>
+<td>Class implementing a configuration dialog for the bookmarked files menu.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="BookmarkedFilesDialog" ID="BookmarkedFilesDialog"></a>
 <h2>BookmarkedFilesDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#101;&#100; &#102;&#105;&#108;&#101;&#115; &#109;&#101;&#110;&#117;.
+    Class implementing a configuration dialog for the bookmarked files menu.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_BookmarkedFilesDialog
@@ -55,125 +55,125 @@ QDialog, Ui_BookmarkedFilesDialog
 <table>
 <tr>
 <td><a href="#BookmarkedFilesDialog.__init__">BookmarkedFilesDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.__swap">__swap</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#117;&#115;&#101;&#100; &#116;w&#111; &#115;w&#97;&#112; &#116;w&#111; &#108;&#105;&#115;&#116; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#103;&#105;v&#101;&#110; &#98;y &#116;&#104;&#101;&#105;&#114; &#105;&#110;&#100;&#101;x.</td>
+<td>Private method used two swap two list entries given by their index.</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.getBookmarkedFiles">getBookmarkedFiles</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#115; &#108;&#105;&#115;&#116;.</td>
+<td>Public method to retrieve the tools list.</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.on_addButton_clicked">on_addButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97; &#110;&#101;w &#101;&#110;&#116;&#114;y.</td>
+<td>Private slot to add a new entry.</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.on_changeButton_clicked">on_changeButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#104;&#97;&#110;&#103;&#101; &#97;&#110; &#101;&#110;&#116;&#114;y.</td>
+<td>Private slot to change an entry.</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.on_deleteButton_clicked">on_deleteButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;y.</td>
+<td>Private slot to delete the selected entry.</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.on_downButton_clicked">on_downButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#100;&#111;w&#110; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot to move an entry down in the list.</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.on_fileButton_clicked">on_fileButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; v&#105;&#97; &#97; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Private slot to handle the file selection via a file selection dialog.</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.on_fileEdit_textChanged">on_fileEdit_textChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#116;&#101;x&#116;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#102;&#105;&#108;&#101; &#101;&#100;&#105;&#116;.</td>
+<td>Private slot to handle the textChanged signal of the file edit.</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.on_filesList_currentRowChanged">on_filesList_currentRowChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#108;&#105;&#110;&#101;&#101;&#100;&#105;&#116; &#100;&#101;&#112;&#101;&#110;&#100;&#105;&#110;&#103; &#111;&#110; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;y.</td>
+<td>Private slot to set the lineedit depending on the selected entry.</td>
 </tr><tr>
 <td><a href="#BookmarkedFilesDialog.on_upButton_clicked">on_upButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#117;&#112; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot to move an entry up in the list.</td>
 </tr>
 </table>
 <a NAME="BookmarkedFilesDialog.__init__" ID="BookmarkedFilesDialog.__init__"></a>
 <h4>BookmarkedFilesDialog (Constructor)</h4>
 <b>BookmarkedFilesDialog</b>(<i>bookmarks, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>bookmarks</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#101;&#100; &#102;&#105;&#108;&#101;&#115; (&#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+list of bookmarked files (list of strings)
 </dd><dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget (QWidget)
 </dd>
 </dl><a NAME="BookmarkedFilesDialog.__swap" ID="BookmarkedFilesDialog.__swap"></a>
 <h4>BookmarkedFilesDialog.__swap</h4>
 <b>__swap</b>(<i>itm1, itm2</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#117;&#115;&#101;&#100; &#116;w&#111; &#115;w&#97;&#112; &#116;w&#111; &#108;&#105;&#115;&#116; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#103;&#105;v&#101;&#110; &#98;y &#116;&#104;&#101;&#105;&#114; &#105;&#110;&#100;&#101;x.
+        Private method used two swap two list entries given by their index.
 </p><dl>
 <dt><i>itm1</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#102;&#105;&#114;&#115;&#116; &#101;&#110;&#116;&#114;y (&#105;&#110;&#116;)
+index of first entry (int)
 </dd><dt><i>itm2</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#115;&#101;&#99;&#111;&#110;&#100; &#101;&#110;&#116;&#114;y (&#105;&#110;&#116;)
+index of second entry (int)
 </dd>
 </dl><a NAME="BookmarkedFilesDialog.getBookmarkedFiles" ID="BookmarkedFilesDialog.getBookmarkedFiles"></a>
 <h4>BookmarkedFilesDialog.getBookmarkedFiles</h4>
 <b>getBookmarkedFiles</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#115; &#108;&#105;&#115;&#116;. 
+        Public method to retrieve the tools list. 
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#97; &#108;&#105;&#115;&#116; &#111;&#102; &#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101;&#115; (&#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+a list of filenames (list of strings)
 </dd>
 </dl><a NAME="BookmarkedFilesDialog.on_addButton_clicked" ID="BookmarkedFilesDialog.on_addButton_clicked"></a>
 <h4>BookmarkedFilesDialog.on_addButton_clicked</h4>
 <b>on_addButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97; &#110;&#101;w &#101;&#110;&#116;&#114;y.
+        Private slot to add a new entry.
 </p><a NAME="BookmarkedFilesDialog.on_changeButton_clicked" ID="BookmarkedFilesDialog.on_changeButton_clicked"></a>
 <h4>BookmarkedFilesDialog.on_changeButton_clicked</h4>
 <b>on_changeButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#104;&#97;&#110;&#103;&#101; &#97;&#110; &#101;&#110;&#116;&#114;y.
+        Private slot to change an entry.
 </p><a NAME="BookmarkedFilesDialog.on_deleteButton_clicked" ID="BookmarkedFilesDialog.on_deleteButton_clicked"></a>
 <h4>BookmarkedFilesDialog.on_deleteButton_clicked</h4>
 <b>on_deleteButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;y.
+        Private slot to delete the selected entry.
 </p><a NAME="BookmarkedFilesDialog.on_downButton_clicked" ID="BookmarkedFilesDialog.on_downButton_clicked"></a>
 <h4>BookmarkedFilesDialog.on_downButton_clicked</h4>
 <b>on_downButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#100;&#111;w&#110; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private slot to move an entry down in the list.
 </p><a NAME="BookmarkedFilesDialog.on_fileButton_clicked" ID="BookmarkedFilesDialog.on_fileButton_clicked"></a>
 <h4>BookmarkedFilesDialog.on_fileButton_clicked</h4>
 <b>on_fileButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; v&#105;&#97; &#97; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Private slot to handle the file selection via a file selection dialog.
 </p><a NAME="BookmarkedFilesDialog.on_fileEdit_textChanged" ID="BookmarkedFilesDialog.on_fileEdit_textChanged"></a>
 <h4>BookmarkedFilesDialog.on_fileEdit_textChanged</h4>
 <b>on_fileEdit_textChanged</b>(<i>txt</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#116;&#101;x&#116;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#102;&#105;&#108;&#101; &#101;&#100;&#105;&#116;.
+        Private slot to handle the textChanged signal of the file edit.
 </p><dl>
 <dt><i>txt</i></dt>
 <dd>
-&#116;&#104;&#101; &#116;&#101;x&#116; &#111;&#102; &#116;&#104;&#101; &#102;&#105;&#108;&#101; &#101;&#100;&#105;&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the text of the file edit (string)
 </dd>
 </dl><a NAME="BookmarkedFilesDialog.on_filesList_currentRowChanged" ID="BookmarkedFilesDialog.on_filesList_currentRowChanged"></a>
 <h4>BookmarkedFilesDialog.on_filesList_currentRowChanged</h4>
 <b>on_filesList_currentRowChanged</b>(<i>row</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#108;&#105;&#110;&#101;&#101;&#100;&#105;&#116; &#100;&#101;&#112;&#101;&#110;&#100;&#105;&#110;&#103; &#111;&#110; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;y.
+        Private slot to set the lineedit depending on the selected entry.
 </p><dl>
 <dt><i>row</i></dt>
 <dd>
-&#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#114;&#111;w (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+the current row (integer)
 </dd>
 </dl><a NAME="BookmarkedFilesDialog.on_upButton_clicked" ID="BookmarkedFilesDialog.on_upButton_clicked"></a>
 <h4>BookmarkedFilesDialog.on_upButton_clicked</h4>
 <b>on_upButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#117;&#112; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private slot to move an entry up in the list.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

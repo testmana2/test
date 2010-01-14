@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Helpviewer.Bookmarks.BookmarksManager</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114;.
+Module implementing the bookmarks manager.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,16 +32,16 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#BookmarksManager">BookmarksManager</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114;.</td>
+<td>Class implementing the bookmarks manager.</td>
 </tr><tr>
 <td><a href="#ChangeBookmarkCommand">ChangeBookmarkCommand</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#73;&#110;&#115;&#101;&#114;&#116; &#117;&#110;&#100;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.</td>
+<td>Class implementing the Insert undo command.</td>
 </tr><tr>
 <td><a href="#InsertBookmarksCommand">InsertBookmarksCommand</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#73;&#110;&#115;&#101;&#114;&#116; &#117;&#110;&#100;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.</td>
+<td>Class implementing the Insert undo command.</td>
 </tr><tr>
 <td><a href="#RemoveBookmarksCommand">RemoveBookmarksCommand</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#82;&#101;&#109;&#111;v&#101; &#117;&#110;&#100;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.</td>
+<td>Class implementing the Remove undo command.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -52,19 +52,19 @@ a { color: #AA5500; }
 <a NAME="BookmarksManager" ID="BookmarksManager"></a>
 <h2>BookmarksManager</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114;.
+    Class implementing the bookmarks manager.
 </p><h4>Signals</h4>
 <dl>
 <dt>entryAdded</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#110;&#111;&#100;&#101; &#104;&#97;&#115; &#98;&#101;&#101;&#110; &#97;&#100;&#100;&#101;&#100;
+emitted after a bookmark node has been added
 </dd><dt>entryChanged</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#110;&#111;&#100;&#101; &#104;&#97;&#115; &#98;&#101;&#101;&#110; &#99;&#104;&#97;&#110;&#103;&#101;&#100;
+emitted after a bookmark node has been changed
 </dd><dt>entryRemoved</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;
-        &#110;&#111;&#100;&#101; &#104;&#97;&#115; &#98;&#101;&#101;&#110; &#114;&#101;&#109;&#111;v&#101;&#100;
+emitted after a bookmark
+        node has been removed
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -77,203 +77,203 @@ QObject
 <table>
 <tr>
 <td><a href="#BookmarksManager.__init__">BookmarksManager</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#BookmarksManager.__convertFromOldBookmarks">__convertFromOldBookmarks</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#110;v&#101;&#114;&#116; &#116;&#104;&#101; &#111;&#108;&#100; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#105;&#110;&#116;&#111; &#116;&#104;&#101; &#110;&#101;w &#111;&#110;&#101;&#115;.</td>
+<td>Private method to convert the old bookmarks into the new ones.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.addBookmark">addBookmark</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.</td>
+<td>Public method to add a bookmark.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.bookmarks">bookmarks</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#114;&#111;&#111;&#116; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#110;&#111;&#100;&#101;.</td>
+<td>Public method to get a reference to the root bookmark node.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.bookmarksModel">bookmarksModel</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#111;&#100;&#101;&#108;.</td>
+<td>Public method to get a reference to the bookmarks model.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.changeExpanded">changeExpanded</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#101;x&#112;&#97;&#110;&#100;&#101;&#100; &#115;&#116;&#97;&#116;&#101;.</td>
+<td>Public method to handle a change of the expanded state.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.close">close</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#108;&#111;&#115;&#101; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#109;&#97;&#110;&#97;&#103;&#101;&#114;.</td>
+<td>Public method to close the bookmark manager.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.exportBookmarks">exportBookmarks</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#101;x&#112;&#111;&#114;&#116; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.</td>
+<td>Public method to export the bookmarks.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.importBookmarks">importBookmarks</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#109;&#112;&#111;&#114;&#116; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.</td>
+<td>Public method to import bookmarks.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.load">load</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#108;&#111;&#97;&#100; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.</td>
+<td>Public method to load the bookmarks.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.menu">menu</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#101;&#110;&#117; &#110;&#111;&#100;&#101;.</td>
+<td>Public method to get a reference to the bookmarks menu node.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.removeBookmark">removeBookmark</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#109;&#111;v&#101; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.</td>
+<td>Public method to remove a bookmark.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.save">save</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.</td>
+<td>Public method to save the bookmarks.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.setTitle">setTitle</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#116;&#105;&#116;&#108;&#101; &#111;&#102; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.</td>
+<td>Public method to set the title of a bookmark.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.setUrl">setUrl</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#85;&#82;&#76; &#111;&#102; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.</td>
+<td>Public method to set the URL of a bookmark.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.toolbar">toolbar</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#110;&#111;&#100;&#101;.</td>
+<td>Public method to get a reference to the bookmarks toolbar node.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.undoRedoStack">undoRedoStack</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#117;&#110;&#100;&#111; &#115;&#116;&#97;&#99;&#107;.</td>
+<td>Public method to get a reference to the undo stack.</td>
 </tr>
 </table>
 <a NAME="BookmarksManager.__init__" ID="BookmarksManager.__init__"></a>
 <h4>BookmarksManager (Constructor)</h4>
 <b>BookmarksManager</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; &#111;&#98;&#106;&#101;&#99;&#116; (&#81;&#79;&#98;&#106;&#101;&#99;&#116;)
+reference to the parent object (QObject)
 </dd>
 </dl><a NAME="BookmarksManager.__convertFromOldBookmarks" ID="BookmarksManager.__convertFromOldBookmarks"></a>
 <h4>BookmarksManager.__convertFromOldBookmarks</h4>
 <b>__convertFromOldBookmarks</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#110;v&#101;&#114;&#116; &#116;&#104;&#101; &#111;&#108;&#100; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#105;&#110;&#116;&#111; &#116;&#104;&#101; &#110;&#101;w &#111;&#110;&#101;&#115;.
+        Private method to convert the old bookmarks into the new ones.
 </p><a NAME="BookmarksManager.addBookmark" ID="BookmarksManager.addBookmark"></a>
 <h4>BookmarksManager.addBookmark</h4>
 <b>addBookmark</b>(<i>parent, node, row = -1</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.
+        Public method to add a bookmark.
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#111;&#100;&#101; &#116;&#111; &#97;&#100;&#100; &#116;&#111; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the node to add to (BookmarkNode)
 </dd><dt><i>node</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#111;&#100;&#101; &#116;&#111; &#97;&#100;&#100; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the node to add (BookmarkNode)
 </dd><dt><i>row</i></dt>
 <dd>
-&#114;&#111;w &#110;&#117;&#109;&#98;&#101;&#114; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+row number (integer)
 </dd>
 </dl><a NAME="BookmarksManager.bookmarks" ID="BookmarksManager.bookmarks"></a>
 <h4>BookmarksManager.bookmarks</h4>
 <b>bookmarks</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#114;&#111;&#111;&#116; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#110;&#111;&#100;&#101;.
+        Public method to get a reference to the root bookmark node.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#114;&#111;&#111;&#116; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#110;&#111;&#100;&#101; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the root bookmark node (BookmarkNode)
 </dd>
 </dl><a NAME="BookmarksManager.bookmarksModel" ID="BookmarksManager.bookmarksModel"></a>
 <h4>BookmarksManager.bookmarksModel</h4>
 <b>bookmarksModel</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#111;&#100;&#101;&#108;.
+        Public method to get a reference to the bookmarks model.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#111;&#100;&#101;&#108; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;&#77;&#111;&#100;&#101;&#108;)
+reference to the bookmarks model (BookmarksModel)
 </dd>
 </dl><a NAME="BookmarksManager.changeExpanded" ID="BookmarksManager.changeExpanded"></a>
 <h4>BookmarksManager.changeExpanded</h4>
 <b>changeExpanded</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#101;x&#112;&#97;&#110;&#100;&#101;&#100; &#115;&#116;&#97;&#116;&#101;.
+        Public method to handle a change of the expanded state.
 </p><a NAME="BookmarksManager.close" ID="BookmarksManager.close"></a>
 <h4>BookmarksManager.close</h4>
 <b>close</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#108;&#111;&#115;&#101; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#109;&#97;&#110;&#97;&#103;&#101;&#114;.
+        Public method to close the bookmark manager.
 </p><a NAME="BookmarksManager.exportBookmarks" ID="BookmarksManager.exportBookmarks"></a>
 <h4>BookmarksManager.exportBookmarks</h4>
 <b>exportBookmarks</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#101;x&#112;&#111;&#114;&#116; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.
+        Public method to export the bookmarks.
 </p><a NAME="BookmarksManager.importBookmarks" ID="BookmarksManager.importBookmarks"></a>
 <h4>BookmarksManager.importBookmarks</h4>
 <b>importBookmarks</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#109;&#112;&#111;&#114;&#116; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.
+        Public method to import bookmarks.
 </p><a NAME="BookmarksManager.load" ID="BookmarksManager.load"></a>
 <h4>BookmarksManager.load</h4>
 <b>load</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#108;&#111;&#97;&#100; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.
+        Public method to load the bookmarks.
 </p><a NAME="BookmarksManager.menu" ID="BookmarksManager.menu"></a>
 <h4>BookmarksManager.menu</h4>
 <b>menu</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#101;&#110;&#117; &#110;&#111;&#100;&#101;.
+        Public method to get a reference to the bookmarks menu node.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#101;&#110;&#117; &#110;&#111;&#100;&#101; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the bookmarks menu node (BookmarkNode)
 </dd>
 </dl><a NAME="BookmarksManager.removeBookmark" ID="BookmarksManager.removeBookmark"></a>
 <h4>BookmarksManager.removeBookmark</h4>
 <b>removeBookmark</b>(<i>node</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#109;&#111;v&#101; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.
+        Public method to remove a bookmark.
 </p><dl>
 <dt><i>node</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#111;&#100;&#101; &#116;&#111; &#98;&#101; &#114;&#101;&#109;&#111;v&#101;&#100; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the node to be removed (BookmarkNode)
 </dd>
 </dl><a NAME="BookmarksManager.save" ID="BookmarksManager.save"></a>
 <h4>BookmarksManager.save</h4>
 <b>save</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.
+        Public method to save the bookmarks.
 </p><a NAME="BookmarksManager.setTitle" ID="BookmarksManager.setTitle"></a>
 <h4>BookmarksManager.setTitle</h4>
 <b>setTitle</b>(<i>node, newTitle</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#116;&#105;&#116;&#108;&#101; &#111;&#102; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.
+        Public method to set the title of a bookmark.
 </p><dl>
 <dt><i>node</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#111;&#100;&#101; &#116;&#111; &#98;&#101; &#99;&#104;&#97;&#110;&#103;&#101;&#100; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the node to be changed (BookmarkNode)
 </dd><dt><i>newTitle</i></dt>
 <dd>
-&#116;&#105;&#116;&#108;&#101; &#116;&#111; &#98;&#101; &#115;&#101;&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+title to be set (string)
 </dd>
 </dl><a NAME="BookmarksManager.setUrl" ID="BookmarksManager.setUrl"></a>
 <h4>BookmarksManager.setUrl</h4>
 <b>setUrl</b>(<i>node, newUrl</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#85;&#82;&#76; &#111;&#102; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.
+        Public method to set the URL of a bookmark.
 </p><dl>
 <dt><i>node</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#111;&#100;&#101; &#116;&#111; &#98;&#101; &#99;&#104;&#97;&#110;&#103;&#101;&#100; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the node to be changed (BookmarkNode)
 </dd><dt><i>newUrl</i></dt>
 <dd>
-&#85;&#82;&#76; &#116;&#111; &#98;&#101; &#115;&#101;&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+URL to be set (string)
 </dd>
 </dl><a NAME="BookmarksManager.toolbar" ID="BookmarksManager.toolbar"></a>
 <h4>BookmarksManager.toolbar</h4>
 <b>toolbar</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#110;&#111;&#100;&#101;.
+        Public method to get a reference to the bookmarks toolbar node.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#110;&#111;&#100;&#101; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the bookmarks toolbar node (BookmarkNode)
 </dd>
 </dl><a NAME="BookmarksManager.undoRedoStack" ID="BookmarksManager.undoRedoStack"></a>
 <h4>BookmarksManager.undoRedoStack</h4>
 <b>undoRedoStack</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#117;&#110;&#100;&#111; &#115;&#116;&#97;&#99;&#107;.
+        Public method to get a reference to the undo stack.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#117;&#110;&#100;&#111; &#115;&#116;&#97;&#99;&#107; (&#81;&#85;&#110;&#100;&#111;&#83;&#116;&#97;&#99;&#107;)
+reference to the undo stack (QUndoStack)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -281,7 +281,7 @@ QObject
 <a NAME="ChangeBookmarkCommand" ID="ChangeBookmarkCommand"></a>
 <h2>ChangeBookmarkCommand</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#73;&#110;&#115;&#101;&#114;&#116; &#117;&#110;&#100;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.
+    Class implementing the Insert undo command.
 </p>
 <h3>Derived from</h3>
 QUndoCommand
@@ -293,52 +293,52 @@ QUndoCommand
 <table>
 <tr>
 <td><a href="#ChangeBookmarkCommand.__init__">ChangeBookmarkCommand</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ChangeBookmarkCommand.redo">redo</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#114;&#101;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Public slot to perform the redo action.</td>
 </tr><tr>
 <td><a href="#ChangeBookmarkCommand.undo">undo</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#117;&#110;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Public slot to perform the undo action.</td>
 </tr>
 </table>
 <a NAME="ChangeBookmarkCommand.__init__" ID="ChangeBookmarkCommand.__init__"></a>
 <h4>ChangeBookmarkCommand (Constructor)</h4>
 <b>ChangeBookmarkCommand</b>(<i>bookmarksManager, node, newValue, title</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>bookmarksManager</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;&#77;&#97;&#110;&#97;&#103;&#101;&#114;)
+reference to the bookmarks manager (BookmarksManager)
 </dd><dt><i>node</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#111;&#100;&#101; &#116;&#111; &#98;&#101; &#99;&#104;&#97;&#110;&#103;&#101;&#100; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the node to be changed (BookmarkNode)
 </dd><dt><i>newValue</i></dt>
 <dd>
-&#110;&#101;w v&#97;&#108;&#117;&#101; &#116;&#111; &#98;&#101; &#115;&#101;&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+new value to be set (string)
 </dd><dt><i>title</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#116;&#105;&#116;&#108;&#101; (&#84;&#114;&#117;&#101;) &#111;&#114;
-            &#116;&#104;&#101; &#85;&#82;&#76; (&#70;&#97;&#108;&#115;&#101;) (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating a change of the title (True) or
+            the URL (False) (boolean)
 </dd>
 </dl><a NAME="ChangeBookmarkCommand.redo" ID="ChangeBookmarkCommand.redo"></a>
 <h4>ChangeBookmarkCommand.redo</h4>
 <b>redo</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#114;&#101;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.
+        Public slot to perform the redo action.
 </p><a NAME="ChangeBookmarkCommand.undo" ID="ChangeBookmarkCommand.undo"></a>
 <h4>ChangeBookmarkCommand.undo</h4>
 <b>undo</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#117;&#110;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.
+        Public slot to perform the undo action.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="InsertBookmarksCommand" ID="InsertBookmarksCommand"></a>
 <h2>InsertBookmarksCommand</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#73;&#110;&#115;&#101;&#114;&#116; &#117;&#110;&#100;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.
+    Class implementing the Insert undo command.
 </p>
 <h3>Derived from</h3>
 RemoveBookmarksCommand
@@ -350,51 +350,51 @@ RemoveBookmarksCommand
 <table>
 <tr>
 <td><a href="#InsertBookmarksCommand.__init__">InsertBookmarksCommand</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#InsertBookmarksCommand.redo">redo</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#114;&#101;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Public slot to perform the redo action.</td>
 </tr><tr>
 <td><a href="#InsertBookmarksCommand.undo">undo</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#117;&#110;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Public slot to perform the undo action.</td>
 </tr>
 </table>
 <a NAME="InsertBookmarksCommand.__init__" ID="InsertBookmarksCommand.__init__"></a>
 <h4>InsertBookmarksCommand (Constructor)</h4>
 <b>InsertBookmarksCommand</b>(<i>bookmarksManager, parent, node, row</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>bookmarksManager</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;&#77;&#97;&#110;&#97;&#103;&#101;&#114;)
+reference to the bookmarks manager (BookmarksManager)
 </dd><dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; &#110;&#111;&#100;&#101; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the parent node (BookmarkNode)
 </dd><dt><i>node</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#111;&#100;&#101; &#116;&#111; &#98;&#101; &#105;&#110;&#115;&#101;&#114;&#116;&#101;&#100; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the node to be inserted (BookmarkNode)
 </dd><dt><i>row</i></dt>
 <dd>
-&#114;&#111;w &#110;&#117;&#109;&#98;&#101;&#114; &#111;&#102; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+row number of bookmark (integer)
 </dd>
 </dl><a NAME="InsertBookmarksCommand.redo" ID="InsertBookmarksCommand.redo"></a>
 <h4>InsertBookmarksCommand.redo</h4>
 <b>redo</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#114;&#101;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.
+        Public slot to perform the redo action.
 </p><a NAME="InsertBookmarksCommand.undo" ID="InsertBookmarksCommand.undo"></a>
 <h4>InsertBookmarksCommand.undo</h4>
 <b>undo</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#117;&#110;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.
+        Public slot to perform the undo action.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="RemoveBookmarksCommand" ID="RemoveBookmarksCommand"></a>
 <h2>RemoveBookmarksCommand</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#82;&#101;&#109;&#111;v&#101; &#117;&#110;&#100;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.
+    Class implementing the Remove undo command.
 </p>
 <h3>Derived from</h3>
 QUndoCommand
@@ -406,41 +406,41 @@ QUndoCommand
 <table>
 <tr>
 <td><a href="#RemoveBookmarksCommand.__init__">RemoveBookmarksCommand</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#RemoveBookmarksCommand.redo">redo</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#114;&#101;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Public slot to perform the redo action.</td>
 </tr><tr>
 <td><a href="#RemoveBookmarksCommand.undo">undo</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#117;&#110;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Public slot to perform the undo action.</td>
 </tr>
 </table>
 <a NAME="RemoveBookmarksCommand.__init__" ID="RemoveBookmarksCommand.__init__"></a>
 <h4>RemoveBookmarksCommand (Constructor)</h4>
 <b>RemoveBookmarksCommand</b>(<i>bookmarksManager, parent, row</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>bookmarksManager</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;&#77;&#97;&#110;&#97;&#103;&#101;&#114;)
+reference to the bookmarks manager (BookmarksManager)
 </dd><dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; &#110;&#111;&#100;&#101; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#78;&#111;&#100;&#101;)
+reference to the parent node (BookmarkNode)
 </dd><dt><i>row</i></dt>
 <dd>
-&#114;&#111;w &#110;&#117;&#109;&#98;&#101;&#114; &#111;&#102; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+row number of bookmark (integer)
 </dd>
 </dl><a NAME="RemoveBookmarksCommand.redo" ID="RemoveBookmarksCommand.redo"></a>
 <h4>RemoveBookmarksCommand.redo</h4>
 <b>redo</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#114;&#101;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.
+        Public slot to perform the redo action.
 </p><a NAME="RemoveBookmarksCommand.undo" ID="RemoveBookmarksCommand.undo"></a>
 <h4>RemoveBookmarksCommand.undo</h4>
 <b>undo</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#117;&#110;&#100;&#111; &#97;&#99;&#116;&#105;&#111;&#110;.
+        Public slot to perform the undo action.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

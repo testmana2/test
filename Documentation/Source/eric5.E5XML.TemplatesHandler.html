@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.E5XML.TemplatesHandler</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#114;&#101;&#97;&#100;&#105;&#110;&#103; &#97;&#110; &#88;&#77;&#76; &#116;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#115; &#102;&#105;&#108;&#101;.
+Module implementing the handler class for reading an XML templates file.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#TemplatesHandler">TemplatesHandler</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#115;&#97;x &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#116;&#111; &#114;&#101;&#97;&#100; &#97;&#110; &#88;&#77;&#76; &#116;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#115; &#102;&#105;&#108;&#101;.</td>
+<td>Class implementing a sax handler to read an XML templates file.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="TemplatesHandler" ID="TemplatesHandler"></a>
 <h2>TemplatesHandler</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#115;&#97;x &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#116;&#111; &#114;&#101;&#97;&#100; &#97;&#110; &#88;&#77;&#76; &#116;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#115; &#102;&#105;&#108;&#101;.
+    Class implementing a sax handler to read an XML templates file.
 </p>
 <h3>Derived from</h3>
 XMLHandlerBase
@@ -55,102 +55,102 @@ XMLHandlerBase
 <table>
 <tr>
 <td><a href="#TemplatesHandler.__init__">TemplatesHandler</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#TemplatesHandler.endTemplate">endTemplate</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Template" end tag.</td>
 </tr><tr>
 <td><a href="#TemplatesHandler.endTemplateDescription">endTemplateDescription</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#68;&#101;&#115;&#99;&#114;&#105;&#112;&#116;&#105;&#111;&#110;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "TemplateDescription" end tag.</td>
 </tr><tr>
 <td><a href="#TemplatesHandler.endTemplateText">endTemplateText</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#84;&#101;x&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "TemplateText" end tag.</td>
 </tr><tr>
 <td><a href="#TemplatesHandler.getVersion">getVersion</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#116;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#115;.</td>
+<td>Public method to retrieve the version of the templates.</td>
 </tr><tr>
 <td><a href="#TemplatesHandler.startDocumentTemplates">startDocumentTemplates</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.</td>
+<td>Handler called, when the document parsing is started.</td>
 </tr><tr>
 <td><a href="#TemplatesHandler.startTemplate">startTemplate</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Template" start tag.</td>
 </tr><tr>
 <td><a href="#TemplatesHandler.startTemplateGroup">startTemplateGroup</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#71;&#114;&#111;&#117;&#112;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "TemplateGroup" start tag.</td>
 </tr><tr>
 <td><a href="#TemplatesHandler.startTemplates">startTemplates</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#115;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Templates" start tag.</td>
 </tr>
 </table>
 <a NAME="TemplatesHandler.__init__" ID="TemplatesHandler.__init__"></a>
 <h4>TemplatesHandler (Constructor)</h4>
 <b>TemplatesHandler</b>(<i>templateViewer=None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>templateViewer</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#116;&#101;&#109;&#112;&#108;&#97;&#116;&#101; v&#105;&#101;w&#101;&#114; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the template viewer object
 </dd>
 </dl><a NAME="TemplatesHandler.endTemplate" ID="TemplatesHandler.endTemplate"></a>
 <h4>TemplatesHandler.endTemplate</h4>
 <b>endTemplate</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Template" end tag.
 </p><a NAME="TemplatesHandler.endTemplateDescription" ID="TemplatesHandler.endTemplateDescription"></a>
 <h4>TemplatesHandler.endTemplateDescription</h4>
 <b>endTemplateDescription</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#68;&#101;&#115;&#99;&#114;&#105;&#112;&#116;&#105;&#111;&#110;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "TemplateDescription" end tag.
 </p><a NAME="TemplatesHandler.endTemplateText" ID="TemplatesHandler.endTemplateText"></a>
 <h4>TemplatesHandler.endTemplateText</h4>
 <b>endTemplateText</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#84;&#101;x&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "TemplateText" end tag.
 </p><a NAME="TemplatesHandler.getVersion" ID="TemplatesHandler.getVersion"></a>
 <h4>TemplatesHandler.getVersion</h4>
 <b>getVersion</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#116;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#115;.
+        Public method to retrieve the version of the templates.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#83;&#116;&#114;&#105;&#110;&#103; &#99;&#111;&#110;&#116;&#97;&#105;&#110;&#105;&#110;&#103; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#110;&#117;&#109;&#98;&#101;&#114;.
+String containing the version number.
 </dd>
 </dl><a NAME="TemplatesHandler.startDocumentTemplates" ID="TemplatesHandler.startDocumentTemplates"></a>
 <h4>TemplatesHandler.startDocumentTemplates</h4>
 <b>startDocumentTemplates</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.
+        Handler called, when the document parsing is started.
 </p><a NAME="TemplatesHandler.startTemplate" ID="TemplatesHandler.startTemplate"></a>
 <h4>TemplatesHandler.startTemplate</h4>
 <b>startTemplate</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "Template" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="TemplatesHandler.startTemplateGroup" ID="TemplatesHandler.startTemplateGroup"></a>
 <h4>TemplatesHandler.startTemplateGroup</h4>
 <b>startTemplateGroup</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#71;&#114;&#111;&#117;&#112;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "TemplateGroup" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="TemplatesHandler.startTemplates" ID="TemplatesHandler.startTemplates"></a>
 <h4>TemplatesHandler.startTemplates</h4>
 <b>startTemplates</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#84;&#101;&#109;&#112;&#108;&#97;&#116;&#101;&#115;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "Templates" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

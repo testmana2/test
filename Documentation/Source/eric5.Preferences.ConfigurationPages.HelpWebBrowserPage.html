@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Preferences.ConfigurationPages.HelpWebBrowserPage</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#72;&#101;&#108;&#112; w&#101;&#98; &#98;&#114;&#111;w&#115;&#101;&#114; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+Module implementing the Help web browser configuration page.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,21 +32,21 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#HelpWebBrowserPage">HelpWebBrowserPage</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#72;&#101;&#108;&#112; w&#101;&#98; &#98;&#114;&#111;w&#115;&#101;&#114; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Class implementing the Help web browser configuration page.</td>
 </tr>
 </table>
 <h3>Functions</h3>
 <table>
 <tr>
 <td><a href="#create">create</a></td>
-<td>&#77;&#111;&#100;&#117;&#108;&#101; &#102;&#117;&#110;&#99;&#116;&#105;&#111;&#110; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Module function to create the configuration page.</td>
 </tr>
 </table>
 <hr /><hr />
 <a NAME="HelpWebBrowserPage" ID="HelpWebBrowserPage"></a>
 <h2>HelpWebBrowserPage</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#72;&#101;&#108;&#112; w&#101;&#98; &#98;&#114;&#111;w&#115;&#101;&#114; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+    Class implementing the Help web browser configuration page.
 </p>
 <h3>Derived from</h3>
 ConfigurationPageBase, Ui_HelpWebBrowserPage
@@ -58,43 +58,43 @@ ConfigurationPageBase, Ui_HelpWebBrowserPage
 <table>
 <tr>
 <td><a href="#HelpWebBrowserPage.__init__">HelpWebBrowserPage</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#HelpWebBrowserPage.on_defaultHomeButton_clicked">on_defaultHomeButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#100;&#101;&#102;&#97;&#117;&#108;&#116; &#104;&#111;&#109;&#101; &#112;&#97;&#103;&#101;.</td>
+<td>Private slot to set the default home page.</td>
 </tr><tr>
 <td><a href="#HelpWebBrowserPage.on_setCurrentPageButton_clicked">on_setCurrentPageButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#112;&#97;&#103;&#101; &#97;&#115; &#116;&#104;&#101; &#104;&#111;&#109;&#101; &#112;&#97;&#103;&#101;.</td>
+<td>Private slot to set the current page as the home page.</td>
 </tr><tr>
 <td><a href="#HelpWebBrowserPage.save">save</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#72;&#101;&#108;&#112; &#86;&#105;&#101;w&#101;&#114;&#115; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110;.</td>
+<td>Public slot to save the Help Viewers configuration.</td>
 </tr>
 </table>
 <a NAME="HelpWebBrowserPage.__init__" ID="HelpWebBrowserPage.__init__"></a>
 <h4>HelpWebBrowserPage (Constructor)</h4>
 <b>HelpWebBrowserPage</b>(<i>configDialog</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>configDialog</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103; (&#67;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110;&#68;&#105;&#97;&#108;&#111;&#103;)
+reference to the configuration dialog (ConfigurationDialog)
 </dd>
 </dl><a NAME="HelpWebBrowserPage.on_defaultHomeButton_clicked" ID="HelpWebBrowserPage.on_defaultHomeButton_clicked"></a>
 <h4>HelpWebBrowserPage.on_defaultHomeButton_clicked</h4>
 <b>on_defaultHomeButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#100;&#101;&#102;&#97;&#117;&#108;&#116; &#104;&#111;&#109;&#101; &#112;&#97;&#103;&#101;.
+        Private slot to set the default home page.
 </p><a NAME="HelpWebBrowserPage.on_setCurrentPageButton_clicked" ID="HelpWebBrowserPage.on_setCurrentPageButton_clicked"></a>
 <h4>HelpWebBrowserPage.on_setCurrentPageButton_clicked</h4>
 <b>on_setCurrentPageButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#112;&#97;&#103;&#101; &#97;&#115; &#116;&#104;&#101; &#104;&#111;&#109;&#101; &#112;&#97;&#103;&#101;.
+        Private slot to set the current page as the home page.
 </p><a NAME="HelpWebBrowserPage.save" ID="HelpWebBrowserPage.save"></a>
 <h4>HelpWebBrowserPage.save</h4>
 <b>save</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#72;&#101;&#108;&#112; &#86;&#105;&#101;w&#101;&#114;&#115; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110;.
+        Public slot to save the Help Viewers configuration.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -102,11 +102,11 @@ ConfigurationPageBase, Ui_HelpWebBrowserPage
 <h2>create</h2>
 <b>create</b>(<i>dlg</i>)
 <p>
-    &#77;&#111;&#100;&#117;&#108;&#101; &#102;&#117;&#110;&#99;&#116;&#105;&#111;&#110; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+    Module function to create the configuration page.
 </p><dl>
 <dt><i>dlg</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;
+reference to the configuration dialog
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

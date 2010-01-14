@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.QScintilla.SearchReplaceWidget</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#101;&#97;&#114;&#99;&#104; &#97;&#110;&#100; &#114;&#101;&#112;&#108;&#97;&#99;&#101; w&#105;&#100;&#103;&#101;&#116;.
+Module implementing the search and replace widget.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#SearchReplaceWidget">SearchReplaceWidget</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#101;&#97;&#114;&#99;&#104; &#97;&#110;&#100; &#114;&#101;&#112;&#108;&#97;&#99;&#101; w&#105;&#100;&#103;&#101;&#116;.</td>
+<td>Class implementing the search and replace widget.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,12 +43,12 @@ a { color: #AA5500; }
 <a NAME="SearchReplaceWidget" ID="SearchReplaceWidget"></a>
 <h2>SearchReplaceWidget</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#101;&#97;&#114;&#99;&#104; &#97;&#110;&#100; &#114;&#101;&#112;&#108;&#97;&#99;&#101; w&#105;&#100;&#103;&#101;&#116;.
+    Class implementing the search and replace widget.
 </p><h4>Signals</h4>
 <dl>
 <dt>searchListChanged</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#116;&#111; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#101; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#97;&#114;&#99;&#104; &#108;&#105;&#115;&#116;
+emitted to indicate a change of the search list
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -61,203 +61,203 @@ QWidget
 <table>
 <tr>
 <td><a href="#SearchReplaceWidget.__init__">SearchReplaceWidget</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.__findByReturnPressed">__findByReturnPressed</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#116;&#117;&#114;&#110;&#80;&#114;&#101;&#115;&#115;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#102;&#105;&#110;&#100;&#116;&#101;x&#116; &#99;&#111;&#109;&#98;&#111;&#98;&#111;x.</td>
+<td>Private slot to handle the returnPressed signal of the findtext combobox.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.__findNextPrev">__findNextPrev</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#110;&#101;x&#116; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#97;&#114;&#99;&#104; &#116;&#101;x&#116;.</td>
+<td>Private method to find the next occurrence of the search text.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.__markOccurrences">__markOccurrences</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#109;&#97;&#114;&#107; &#97;&#108;&#108; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101;&#115; &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#97;&#114;&#99;&#104; &#116;&#101;x&#116;.</td>
+<td>Private method to mark all occurrences of the search text.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.__showFind">__showFind</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#105;&#115; w&#105;&#100;&#103;&#101;&#116; &#105;&#110; &#102;&#105;&#110;&#100; &#109;&#111;&#100;&#101;.</td>
+<td>Private method to display this widget in find mode.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.__showReplace">__showReplace</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#105;&#115; w&#105;&#100;&#103;&#101;&#116; &#105;&#110; &#114;&#101;&#112;&#108;&#97;&#99;&#101; &#109;&#111;&#100;&#101;.</td>
+<td>Private slot to display this widget in replace mode.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.findNext">findNext</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#110;&#101;x&#116; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#101;x&#116;.</td>
+<td>Public slot to find the next occurrence of text.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.findPrev">findPrev</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#110;&#101;x&#116; &#112;&#114;&#101;v&#105;&#111;&#117;&#115; &#111;&#102; &#116;&#101;x&#116;.</td>
+<td>Public slot to find the next previous of text.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.keyPressEvent">keyPressEvent</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#107;&#101;y &#112;&#114;&#101;&#115;&#115; &#101;v&#101;&#110;&#116;&#115;.</td>
+<td>Protected slot to handle key press events.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.on_closeButton_clicked">on_closeButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#108;&#111;&#115;&#101; &#116;&#104;&#101; w&#105;&#100;&#103;&#101;&#116;.</td>
+<td>Private slot to close the widget.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.on_findNextButton_clicked">on_findNextButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#110;&#101;x&#116; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#101;x&#116;.</td>
+<td>Private slot to find the next occurrence of text.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.on_findPrevButton_clicked">on_findPrevButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#112;&#114;&#101;v&#105;&#111;&#117;&#115; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#101;x&#116;.</td>
+<td>Private slot to find the previous occurrence of text.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.on_findtextCombo_editTextChanged">on_findtextCombo_editTextChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#101;&#110;&#97;&#98;&#108;&#101;/&#100;&#105;&#115;&#97;&#98;&#108;&#101; &#116;&#104;&#101; &#102;&#105;&#110;&#100; &#98;&#117;&#116;&#116;&#111;&#110;&#115;.</td>
+<td>Private slot to enable/disable the find buttons.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.on_replaceAllButton_clicked">on_replaceAllButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#112;&#108;&#97;&#99;&#101; &#97;&#108;&#108; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101;&#115; &#111;&#102; &#116;&#101;x&#116;.</td>
+<td>Private slot to replace all occurrences of text.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.on_replaceButton_clicked">on_replaceButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#112;&#108;&#97;&#99;&#101; &#111;&#110;&#101; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#101;x&#116;.</td>
+<td>Private slot to replace one occurrence of text.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.selectionChanged">selectionChanged</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#114;&#97;&#99;&#107;&#105;&#110;&#103; &#99;&#104;&#97;&#110;&#103;&#101;&#115; &#111;&#102; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#116;&#101;x&#116;.</td>
+<td>Public slot tracking changes of selected text.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.show">show</a></td>
-<td>&#79;v&#101;&#114;&#114;&#105;&#100;&#100;&#101;&#110; &#115;&#108;&#111;&#116; &#102;&#114;&#111;&#109; &#81;&#87;&#105;&#100;&#103;&#101;&#116;.</td>
+<td>Overridden slot from QWidget.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.updateSelectionCheckBox">updateSelectionCheckBox</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#99;&#104;&#101;&#99;&#107; &#98;&#111;x.</td>
+<td>Public slot to update the selection check box.</td>
 </tr>
 </table>
 <a NAME="SearchReplaceWidget.__init__" ID="SearchReplaceWidget.__init__"></a>
 <h4>SearchReplaceWidget (Constructor)</h4>
 <b>SearchReplaceWidget</b>(<i>replace, vm, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>replace</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#114;&#101;&#112;&#108;&#97;&#99;&#101; w&#105;&#100;&#103;&#101;&#116; &#105;&#115; &#99;&#97;&#108;&#108;&#101;&#100;
+flag indicating a replace widget is called
 </dd><dt><i>vm</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; v&#105;&#101;w&#109;&#97;&#110;&#97;&#103;&#101;&#114; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the viewmanager object
 </dd><dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; &#111;&#102; &#116;&#104;&#105;&#115; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget of this widget (QWidget)
 </dd>
 </dl><a NAME="SearchReplaceWidget.__findByReturnPressed" ID="SearchReplaceWidget.__findByReturnPressed"></a>
 <h4>SearchReplaceWidget.__findByReturnPressed</h4>
 <b>__findByReturnPressed</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#116;&#117;&#114;&#110;&#80;&#114;&#101;&#115;&#115;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#102;&#105;&#110;&#100;&#116;&#101;x&#116; &#99;&#111;&#109;&#98;&#111;&#98;&#111;x.
+        Private slot to handle the returnPressed signal of the findtext combobox.
 </p><a NAME="SearchReplaceWidget.__findNextPrev" ID="SearchReplaceWidget.__findNextPrev"></a>
 <h4>SearchReplaceWidget.__findNextPrev</h4>
 <b>__findNextPrev</b>(<i>txt, backwards</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#110;&#101;x&#116; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#97;&#114;&#99;&#104; &#116;&#101;x&#116;.
+        Private method to find the next occurrence of the search text.
 </p><dl>
 <dt><i>txt</i></dt>
 <dd>
-&#116;&#101;x&#116; &#116;&#111; &#115;&#101;&#97;&#114;&#99;&#104; &#102;&#111;&#114; (&#115;&#116;&#114;&#105;&#110;&#103;)
+text to search for (string)
 </dd><dt><i>backwards</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#98;&#97;&#99;&#107;w&#97;&#114;&#100;&#115; &#115;&#101;&#97;&#114;&#99;&#104; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating a backwards search (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#115;&#117;&#99;&#99;&#101;&#115;&#115; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating success (boolean)
 </dd>
 </dl><a NAME="SearchReplaceWidget.__markOccurrences" ID="SearchReplaceWidget.__markOccurrences"></a>
 <h4>SearchReplaceWidget.__markOccurrences</h4>
 <b>__markOccurrences</b>(<i>txt</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#109;&#97;&#114;&#107; &#97;&#108;&#108; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101;&#115; &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#97;&#114;&#99;&#104; &#116;&#101;x&#116;.
+        Private method to mark all occurrences of the search text.
 </p><dl>
 <dt><i>txt</i></dt>
 <dd>
-&#116;&#101;x&#116; &#116;&#111; &#115;&#101;&#97;&#114;&#99;&#104; &#102;&#111;&#114; (&#115;&#116;&#114;&#105;&#110;&#103;)
+text to search for (string)
 </dd>
 </dl><a NAME="SearchReplaceWidget.__showFind" ID="SearchReplaceWidget.__showFind"></a>
 <h4>SearchReplaceWidget.__showFind</h4>
 <b>__showFind</b>(<i>text = ''</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#105;&#115; w&#105;&#100;&#103;&#101;&#116; &#105;&#110; &#102;&#105;&#110;&#100; &#109;&#111;&#100;&#101;.
+        Private method to display this widget in find mode.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#101;x&#116; &#116;&#111; &#98;&#101; &#115;&#104;&#111;w&#110; &#105;&#110; &#116;&#104;&#101; &#102;&#105;&#110;&#100;&#116;&#101;x&#116; &#101;&#100;&#105;&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+text to be shown in the findtext edit (string)
 </dd>
 </dl><a NAME="SearchReplaceWidget.__showReplace" ID="SearchReplaceWidget.__showReplace"></a>
 <h4>SearchReplaceWidget.__showReplace</h4>
 <b>__showReplace</b>(<i>text=''</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#105;&#115; w&#105;&#100;&#103;&#101;&#116; &#105;&#110; &#114;&#101;&#112;&#108;&#97;&#99;&#101; &#109;&#111;&#100;&#101;.
+        Private slot to display this widget in replace mode.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#101;x&#116; &#116;&#111; &#98;&#101; &#115;&#104;&#111;w&#110; &#105;&#110; &#116;&#104;&#101; &#102;&#105;&#110;&#100;&#116;&#101;x&#116; &#101;&#100;&#105;&#116;
+text to be shown in the findtext edit
 </dd>
 </dl><a NAME="SearchReplaceWidget.findNext" ID="SearchReplaceWidget.findNext"></a>
 <h4>SearchReplaceWidget.findNext</h4>
 <b>findNext</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#110;&#101;x&#116; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#101;x&#116;.
+        Public slot to find the next occurrence of text.
 </p><a NAME="SearchReplaceWidget.findPrev" ID="SearchReplaceWidget.findPrev"></a>
 <h4>SearchReplaceWidget.findPrev</h4>
 <b>findPrev</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#110;&#101;x&#116; &#112;&#114;&#101;v&#105;&#111;&#117;&#115; &#111;&#102; &#116;&#101;x&#116;.
+        Public slot to find the next previous of text.
 </p><a NAME="SearchReplaceWidget.keyPressEvent" ID="SearchReplaceWidget.keyPressEvent"></a>
 <h4>SearchReplaceWidget.keyPressEvent</h4>
 <b>keyPressEvent</b>(<i>event</i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#107;&#101;y &#112;&#114;&#101;&#115;&#115; &#101;v&#101;&#110;&#116;&#115;.
+        Protected slot to handle key press events.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#107;&#101;y &#112;&#114;&#101;&#115;&#115; &#101;v&#101;&#110;&#116; (&#81;&#75;&#101;y&#69;v&#101;&#110;&#116;)
+reference to the key press event (QKeyEvent)
 </dd>
 </dl><a NAME="SearchReplaceWidget.on_closeButton_clicked" ID="SearchReplaceWidget.on_closeButton_clicked"></a>
 <h4>SearchReplaceWidget.on_closeButton_clicked</h4>
 <b>on_closeButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#108;&#111;&#115;&#101; &#116;&#104;&#101; w&#105;&#100;&#103;&#101;&#116;.
+        Private slot to close the widget.
 </p><a NAME="SearchReplaceWidget.on_findNextButton_clicked" ID="SearchReplaceWidget.on_findNextButton_clicked"></a>
 <h4>SearchReplaceWidget.on_findNextButton_clicked</h4>
 <b>on_findNextButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#110;&#101;x&#116; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#101;x&#116;.
+        Private slot to find the next occurrence of text.
 </p><a NAME="SearchReplaceWidget.on_findPrevButton_clicked" ID="SearchReplaceWidget.on_findPrevButton_clicked"></a>
 <h4>SearchReplaceWidget.on_findPrevButton_clicked</h4>
 <b>on_findPrevButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#112;&#114;&#101;v&#105;&#111;&#117;&#115; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#101;x&#116;.
+        Private slot to find the previous occurrence of text.
 </p><a NAME="SearchReplaceWidget.on_findtextCombo_editTextChanged" ID="SearchReplaceWidget.on_findtextCombo_editTextChanged"></a>
 <h4>SearchReplaceWidget.on_findtextCombo_editTextChanged</h4>
 <b>on_findtextCombo_editTextChanged</b>(<i>txt</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#101;&#110;&#97;&#98;&#108;&#101;/&#100;&#105;&#115;&#97;&#98;&#108;&#101; &#116;&#104;&#101; &#102;&#105;&#110;&#100; &#98;&#117;&#116;&#116;&#111;&#110;&#115;.
+        Private slot to enable/disable the find buttons.
 </p><a NAME="SearchReplaceWidget.on_replaceAllButton_clicked" ID="SearchReplaceWidget.on_replaceAllButton_clicked"></a>
 <h4>SearchReplaceWidget.on_replaceAllButton_clicked</h4>
 <b>on_replaceAllButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#112;&#108;&#97;&#99;&#101; &#97;&#108;&#108; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101;&#115; &#111;&#102; &#116;&#101;x&#116;.
+        Private slot to replace all occurrences of text.
 </p><a NAME="SearchReplaceWidget.on_replaceButton_clicked" ID="SearchReplaceWidget.on_replaceButton_clicked"></a>
 <h4>SearchReplaceWidget.on_replaceButton_clicked</h4>
 <b>on_replaceButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#112;&#108;&#97;&#99;&#101; &#111;&#110;&#101; &#111;&#99;&#99;&#117;&#114;&#114;&#101;&#110;&#99;&#101; &#111;&#102; &#116;&#101;x&#116;.
+        Private slot to replace one occurrence of text.
 </p><a NAME="SearchReplaceWidget.selectionChanged" ID="SearchReplaceWidget.selectionChanged"></a>
 <h4>SearchReplaceWidget.selectionChanged</h4>
 <b>selectionChanged</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#114;&#97;&#99;&#107;&#105;&#110;&#103; &#99;&#104;&#97;&#110;&#103;&#101;&#115; &#111;&#102; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#116;&#101;x&#116;.
+        Public slot tracking changes of selected text.
 </p><a NAME="SearchReplaceWidget.show" ID="SearchReplaceWidget.show"></a>
 <h4>SearchReplaceWidget.show</h4>
 <b>show</b>(<i>text = ''</i>)
 <p>
-        &#79;v&#101;&#114;&#114;&#105;&#100;&#100;&#101;&#110; &#115;&#108;&#111;&#116; &#102;&#114;&#111;&#109; &#81;&#87;&#105;&#100;&#103;&#101;&#116;.
+        Overridden slot from QWidget.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#101;x&#116; &#116;&#111; &#98;&#101; &#115;&#104;&#111;w&#110; &#105;&#110; &#116;&#104;&#101; &#102;&#105;&#110;&#100;&#116;&#101;x&#116; &#101;&#100;&#105;&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+text to be shown in the findtext edit (string)
 </dd>
 </dl><a NAME="SearchReplaceWidget.updateSelectionCheckBox" ID="SearchReplaceWidget.updateSelectionCheckBox"></a>
 <h4>SearchReplaceWidget.updateSelectionCheckBox</h4>
 <b>updateSelectionCheckBox</b>(<i>editor</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#99;&#104;&#101;&#99;&#107; &#98;&#111;x.
+        Public slot to update the selection check box.
 </p><dl>
 <dt><i>editor</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#101;&#100;&#105;&#116;&#111;&#114; (&#69;&#100;&#105;&#116;&#111;&#114;)
+reference to the editor (Editor)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

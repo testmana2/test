@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Utilities.AutoSaver</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97;&#110; &#97;&#117;&#116;&#111; &#115;&#97;v&#101;&#114; &#99;&#108;&#97;&#115;&#115;.
+Module implementing an auto saver class.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#AutoSaver">AutoSaver</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#97;&#117;&#116;&#111; &#115;&#97;v&#101;&#114;.</td>
+<td>Class implementing the auto saver.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="AutoSaver" ID="AutoSaver"></a>
 <h2>AutoSaver</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#97;&#117;&#116;&#111; &#115;&#97;v&#101;&#114;.
+    Class implementing the auto saver.
 </p>
 <h3>Derived from</h3>
 QObject
@@ -55,50 +55,50 @@ QObject
 <table>
 <tr>
 <td><a href="#AutoSaver.__init__">AutoSaver</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#AutoSaver.changeOccurred">changeOccurred</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#97; &#99;&#104;&#97;&#110;&#103;&#101;.</td>
+<td>Public slot handling a change.</td>
 </tr><tr>
 <td><a href="#AutoSaver.saveIfNeccessary">saveIfNeccessary</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#99;&#116;&#105;v&#97;&#116;&#101; &#116;&#104;&#101; &#115;&#97;v&#101; &#111;&#112;&#101;&#114;&#97;&#116;&#105;&#111;&#110;.</td>
+<td>Public method to activate the save operation.</td>
 </tr><tr>
 <td><a href="#AutoSaver.timerEvent">timerEvent</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#116;&#105;&#109;&#101;&#114; &#101;v&#101;&#110;&#116;&#115;.</td>
+<td>Protected method handling timer events.</td>
 </tr>
 </table>
 <a NAME="AutoSaver.__init__" ID="AutoSaver.__init__"></a>
 <h4>AutoSaver (Constructor)</h4>
 <b>AutoSaver</b>(<i>parent, save</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; &#111;&#98;&#106;&#101;&#99;&#116; (&#81;&#79;&#98;&#106;&#101;&#99;&#116;)
+reference to the parent object (QObject)
 </dd><dt><i>save</i></dt>
 <dd>
-&#115;&#108;&#111;&#116; &#116;&#111; &#98;&#101; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#115;&#97;v&#101; &#111;&#112;&#101;&#114;&#97;&#116;&#105;&#111;&#110;
+slot to be called to perform the save operation
 </dd>
 </dl><a NAME="AutoSaver.changeOccurred" ID="AutoSaver.changeOccurred"></a>
 <h4>AutoSaver.changeOccurred</h4>
 <b>changeOccurred</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#97; &#99;&#104;&#97;&#110;&#103;&#101;.
+        Public slot handling a change.
 </p><a NAME="AutoSaver.saveIfNeccessary" ID="AutoSaver.saveIfNeccessary"></a>
 <h4>AutoSaver.saveIfNeccessary</h4>
 <b>saveIfNeccessary</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#99;&#116;&#105;v&#97;&#116;&#101; &#116;&#104;&#101; &#115;&#97;v&#101; &#111;&#112;&#101;&#114;&#97;&#116;&#105;&#111;&#110;.
+        Public method to activate the save operation.
 </p><a NAME="AutoSaver.timerEvent" ID="AutoSaver.timerEvent"></a>
 <h4>AutoSaver.timerEvent</h4>
 <b>timerEvent</b>(<i>evt</i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#116;&#105;&#109;&#101;&#114; &#101;v&#101;&#110;&#116;&#115;.
+        Protected method handling timer events.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#116;&#105;&#109;&#101;&#114; &#101;v&#101;&#110;&#116; (&#81;&#84;&#105;&#109;&#101;&#114;&#69;v&#101;&#110;&#116;)
+reference to the timer event (QTimerEvent)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

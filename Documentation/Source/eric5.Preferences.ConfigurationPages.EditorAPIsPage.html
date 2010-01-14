@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Preferences.ConfigurationPages.EditorAPIsPage</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#69;&#100;&#105;&#116;&#111;&#114; &#65;&#80;&#73;&#115; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+Module implementing the Editor APIs configuration page.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,21 +32,21 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#EditorAPIsPage">EditorAPIsPage</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#69;&#100;&#105;&#116;&#111;&#114; &#65;&#80;&#73;&#115; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Class implementing the Editor APIs configuration page.</td>
 </tr>
 </table>
 <h3>Functions</h3>
 <table>
 <tr>
 <td><a href="#create">create</a></td>
-<td>&#77;&#111;&#100;&#117;&#108;&#101; &#102;&#117;&#110;&#99;&#116;&#105;&#111;&#110; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.</td>
+<td>Module function to create the configuration page.</td>
 </tr>
 </table>
 <hr /><hr />
 <a NAME="EditorAPIsPage" ID="EditorAPIsPage"></a>
 <h2>EditorAPIsPage</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#69;&#100;&#105;&#116;&#111;&#114; &#65;&#80;&#73;&#115; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+    Class implementing the Editor APIs configuration page.
 </p>
 <h3>Derived from</h3>
 ConfigurationPageBase, Ui_EditorAPIsPage
@@ -58,147 +58,147 @@ ConfigurationPageBase, Ui_EditorAPIsPage
 <table>
 <tr>
 <td><a href="#EditorAPIsPage.__init__">EditorAPIsPage</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.__apiPreparationCancelled">__apiPreparationCancelled</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#116;&#104;&#101; &#65;&#80;&#73; &#112;&#114;&#101;&#112;&#97;&#114;&#97;&#116;&#105;&#111;&#110; &#104;&#97;&#115; &#98;&#101;&#101;&#110; &#99;&#97;&#110;&#99;&#101;&#108;&#108;&#101;&#100;.</td>
+<td>Private slot called after the API preparation has been cancelled.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.__apiPreparationFinished">__apiPreparationFinished</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#99;&#97;&#108;&#108;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#116;&#104;&#101; &#65;&#80;&#73; &#112;&#114;&#101;&#112;&#97;&#114;&#97;&#116;&#105;&#111;&#110; &#104;&#97;&#115; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100;.</td>
+<td>Private method called after the API preparation has finished.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.__apiPreparationStarted">__apiPreparationStarted</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#99;&#97;&#108;&#108;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#116;&#104;&#101; &#65;&#80;&#73; &#112;&#114;&#101;&#112;&#97;&#114;&#97;&#116;&#105;&#111;&#110; &#104;&#97;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.</td>
+<td>Private method called after the API preparation has started.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.__editorGetApisFromApiList">__editorGetApisFromApiList</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#97;&#112;&#105; &#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101;&#115; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot to retrieve the api filenames from the list.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.on_addApiFileButton_clicked">on_addApiFileButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#116;&#104;&#101; &#97;&#112;&#105; &#102;&#105;&#108;&#101; &#100;&#105;&#115;&#112;&#108;&#97;y&#101;&#100; &#116;&#111; &#116;&#104;&#101; &#108;&#105;&#115;&#116;&#98;&#111;x.</td>
+<td>Private slot to add the api file displayed to the listbox.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.on_addInstalledApiFileButton_clicked">on_addInstalledApiFileButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97;&#110; &#65;&#80;&#73; &#102;&#105;&#108;&#101; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#111;&#102; &#105;&#110;&#115;&#116;&#97;&#108;&#108;&#101;&#100; &#65;&#80;&#73; &#102;&#105;&#108;&#101;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#108;&#101;x&#101;&#114; &#108;&#97;&#110;&#103;&#117;&#97;&#103;&#101;.</td>
+<td>Private slot to add an API file from the list of installed API files for the selected lexer language.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.on_addPluginApiFileButton_clicked">on_addPluginApiFileButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97;&#110; &#65;&#80;&#73; &#102;&#105;&#108;&#101; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#111;&#102; &#65;&#80;&#73; &#102;&#105;&#108;&#101;&#115; &#105;&#110;&#115;&#116;&#97;&#108;&#108;&#101;&#100; &#98;y &#112;&#108;&#117;&#103;&#105;&#110;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#108;&#101;x&#101;&#114; &#108;&#97;&#110;&#103;&#117;&#97;&#103;&#101;.</td>
+<td>Private slot to add an API file from the list of API files installed by plugins for the selected lexer language.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.on_apiFileButton_clicked">on_apiFileButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#108;&#101;&#99;&#116; &#97;&#110; &#97;&#112;&#105; &#102;&#105;&#108;&#101;.</td>
+<td>Private method to select an api file.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.on_apiLanguageComboBox_activated">on_apiLanguageComboBox_activated</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#108;&#108; &#116;&#104;&#101; &#97;&#112;&#105; &#108;&#105;&#115;&#116;&#98;&#111;x &#111;&#102; &#116;&#104;&#101; &#97;&#112;&#105; &#112;&#97;&#103;&#101;.</td>
+<td>Private slot to fill the api listbox of the api page.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.on_deleteApiFileButton_clicked">on_deleteApiFileButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116;&#108;y &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#102;&#105;&#108;&#101; &#111;&#102; &#116;&#104;&#101; &#108;&#105;&#115;&#116;&#98;&#111;x.</td>
+<td>Private slot to delete the currently selected file of the listbox.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.on_prepareApiButton_clicked">on_prepareApiButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#114;&#101;&#112;&#97;&#114;&#101; &#116;&#104;&#101; &#65;&#80;&#73; &#102;&#105;&#108;&#101; &#102;&#111;&#114; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116;&#108;y &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#108;&#97;&#110;&#103;&#117;&#97;&#103;&#101;.</td>
+<td>Private slot to prepare the API file for the currently selected language.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.save">save</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#69;&#100;&#105;&#116;&#111;&#114; &#65;&#80;&#73;&#115; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110;.</td>
+<td>Public slot to save the Editor APIs configuration.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.saveState">saveState</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#115;&#116;&#97;&#116;&#101; &#111;&#102; &#116;&#104;&#101; w&#105;&#100;&#103;&#101;&#116;.</td>
+<td>Public method to save the current state of the widget.</td>
 </tr><tr>
 <td><a href="#EditorAPIsPage.setState">setState</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#115;&#116;&#97;&#116;&#101; &#111;&#102; &#116;&#104;&#101; w&#105;&#100;&#103;&#101;&#116;.</td>
+<td>Public method to set the state of the widget.</td>
 </tr>
 </table>
 <a NAME="EditorAPIsPage.__init__" ID="EditorAPIsPage.__init__"></a>
 <h4>EditorAPIsPage (Constructor)</h4>
 <b>EditorAPIsPage</b>(<i></i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><a NAME="EditorAPIsPage.__apiPreparationCancelled" ID="EditorAPIsPage.__apiPreparationCancelled"></a>
 <h4>EditorAPIsPage.__apiPreparationCancelled</h4>
 <b>__apiPreparationCancelled</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#116;&#104;&#101; &#65;&#80;&#73; &#112;&#114;&#101;&#112;&#97;&#114;&#97;&#116;&#105;&#111;&#110; &#104;&#97;&#115; &#98;&#101;&#101;&#110; &#99;&#97;&#110;&#99;&#101;&#108;&#108;&#101;&#100;.
+        Private slot called after the API preparation has been cancelled.
 </p><a NAME="EditorAPIsPage.__apiPreparationFinished" ID="EditorAPIsPage.__apiPreparationFinished"></a>
 <h4>EditorAPIsPage.__apiPreparationFinished</h4>
 <b>__apiPreparationFinished</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#99;&#97;&#108;&#108;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#116;&#104;&#101; &#65;&#80;&#73; &#112;&#114;&#101;&#112;&#97;&#114;&#97;&#116;&#105;&#111;&#110; &#104;&#97;&#115; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100;.
+        Private method called after the API preparation has finished.
 </p><a NAME="EditorAPIsPage.__apiPreparationStarted" ID="EditorAPIsPage.__apiPreparationStarted"></a>
 <h4>EditorAPIsPage.__apiPreparationStarted</h4>
 <b>__apiPreparationStarted</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#99;&#97;&#108;&#108;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#116;&#104;&#101; &#65;&#80;&#73; &#112;&#114;&#101;&#112;&#97;&#114;&#97;&#116;&#105;&#111;&#110; &#104;&#97;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.
+        Private method called after the API preparation has started.
 </p><a NAME="EditorAPIsPage.__editorGetApisFromApiList" ID="EditorAPIsPage.__editorGetApisFromApiList"></a>
 <h4>EditorAPIsPage.__editorGetApisFromApiList</h4>
 <b>__editorGetApisFromApiList</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#97;&#112;&#105; &#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101;&#115; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private slot to retrieve the api filenames from the list.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#97;&#112;&#105; &#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101;&#115; (&#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+list of api filenames (list of strings)
 </dd>
 </dl><a NAME="EditorAPIsPage.on_addApiFileButton_clicked" ID="EditorAPIsPage.on_addApiFileButton_clicked"></a>
 <h4>EditorAPIsPage.on_addApiFileButton_clicked</h4>
 <b>on_addApiFileButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#116;&#104;&#101; &#97;&#112;&#105; &#102;&#105;&#108;&#101; &#100;&#105;&#115;&#112;&#108;&#97;y&#101;&#100; &#116;&#111; &#116;&#104;&#101; &#108;&#105;&#115;&#116;&#98;&#111;x.
+        Private slot to add the api file displayed to the listbox.
 </p><a NAME="EditorAPIsPage.on_addInstalledApiFileButton_clicked" ID="EditorAPIsPage.on_addInstalledApiFileButton_clicked"></a>
 <h4>EditorAPIsPage.on_addInstalledApiFileButton_clicked</h4>
 <b>on_addInstalledApiFileButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97;&#110; &#65;&#80;&#73; &#102;&#105;&#108;&#101; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#111;&#102; &#105;&#110;&#115;&#116;&#97;&#108;&#108;&#101;&#100; &#65;&#80;&#73; &#102;&#105;&#108;&#101;&#115;
-        &#102;&#111;&#114; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#108;&#101;x&#101;&#114; &#108;&#97;&#110;&#103;&#117;&#97;&#103;&#101;.
+        Private slot to add an API file from the list of installed API files
+        for the selected lexer language.
 </p><a NAME="EditorAPIsPage.on_addPluginApiFileButton_clicked" ID="EditorAPIsPage.on_addPluginApiFileButton_clicked"></a>
 <h4>EditorAPIsPage.on_addPluginApiFileButton_clicked</h4>
 <b>on_addPluginApiFileButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97;&#110; &#65;&#80;&#73; &#102;&#105;&#108;&#101; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#111;&#102; &#65;&#80;&#73; &#102;&#105;&#108;&#101;&#115; &#105;&#110;&#115;&#116;&#97;&#108;&#108;&#101;&#100;
-        &#98;y &#112;&#108;&#117;&#103;&#105;&#110;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#108;&#101;x&#101;&#114; &#108;&#97;&#110;&#103;&#117;&#97;&#103;&#101;.
+        Private slot to add an API file from the list of API files installed
+        by plugins for the selected lexer language.
 </p><a NAME="EditorAPIsPage.on_apiFileButton_clicked" ID="EditorAPIsPage.on_apiFileButton_clicked"></a>
 <h4>EditorAPIsPage.on_apiFileButton_clicked</h4>
 <b>on_apiFileButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#108;&#101;&#99;&#116; &#97;&#110; &#97;&#112;&#105; &#102;&#105;&#108;&#101;.
+        Private method to select an api file.
 </p><a NAME="EditorAPIsPage.on_apiLanguageComboBox_activated" ID="EditorAPIsPage.on_apiLanguageComboBox_activated"></a>
 <h4>EditorAPIsPage.on_apiLanguageComboBox_activated</h4>
 <b>on_apiLanguageComboBox_activated</b>(<i>language</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#102;&#105;&#108;&#108; &#116;&#104;&#101; &#97;&#112;&#105; &#108;&#105;&#115;&#116;&#98;&#111;x &#111;&#102; &#116;&#104;&#101; &#97;&#112;&#105; &#112;&#97;&#103;&#101;.
+        Private slot to fill the api listbox of the api page.
 </p><dl>
 <dt><i>language</i></dt>
 <dd>
-&#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#65;&#80;&#73; &#108;&#97;&#110;&#103;&#117;&#97;&#103;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+selected API language (string)
 </dd>
 </dl><a NAME="EditorAPIsPage.on_deleteApiFileButton_clicked" ID="EditorAPIsPage.on_deleteApiFileButton_clicked"></a>
 <h4>EditorAPIsPage.on_deleteApiFileButton_clicked</h4>
 <b>on_deleteApiFileButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116;&#108;y &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#102;&#105;&#108;&#101; &#111;&#102; &#116;&#104;&#101; &#108;&#105;&#115;&#116;&#98;&#111;x.
+        Private slot to delete the currently selected file of the listbox.
 </p><a NAME="EditorAPIsPage.on_prepareApiButton_clicked" ID="EditorAPIsPage.on_prepareApiButton_clicked"></a>
 <h4>EditorAPIsPage.on_prepareApiButton_clicked</h4>
 <b>on_prepareApiButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#114;&#101;&#112;&#97;&#114;&#101; &#116;&#104;&#101; &#65;&#80;&#73; &#102;&#105;&#108;&#101; &#102;&#111;&#114; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116;&#108;y &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#108;&#97;&#110;&#103;&#117;&#97;&#103;&#101;.
+        Private slot to prepare the API file for the currently selected language.
 </p><a NAME="EditorAPIsPage.save" ID="EditorAPIsPage.save"></a>
 <h4>EditorAPIsPage.save</h4>
 <b>save</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#69;&#100;&#105;&#116;&#111;&#114; &#65;&#80;&#73;&#115; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110;.
+        Public slot to save the Editor APIs configuration.
 </p><a NAME="EditorAPIsPage.saveState" ID="EditorAPIsPage.saveState"></a>
 <h4>EditorAPIsPage.saveState</h4>
 <b>saveState</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#115;&#116;&#97;&#116;&#101; &#111;&#102; &#116;&#104;&#101; w&#105;&#100;&#103;&#101;&#116;.
+        Public method to save the current state of the widget.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#108;&#101;x&#101;&#114; &#108;&#97;&#110;&#103;&#117;&#97;&#103;&#101; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+index of the selected lexer language (integer)
 </dd>
 </dl><a NAME="EditorAPIsPage.setState" ID="EditorAPIsPage.setState"></a>
 <h4>EditorAPIsPage.setState</h4>
 <b>setState</b>(<i>state</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#115;&#116;&#97;&#116;&#101; &#111;&#102; &#116;&#104;&#101; w&#105;&#100;&#103;&#101;&#116;.
+        Public method to set the state of the widget.
 </p><dl>
 <dt><i>state</i></dt>
 <dd>
-&#115;&#116;&#97;&#116;&#101; &#100;&#97;&#116;&#97; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101;&#100; &#98;y &#115;&#97;v&#101;&#83;&#116;&#97;&#116;&#101;
+state data generated by saveState
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -207,11 +207,11 @@ ConfigurationPageBase, Ui_EditorAPIsPage
 <h2>create</h2>
 <b>create</b>(<i>dlg</i>)
 <p>
-    &#77;&#111;&#100;&#117;&#108;&#101; &#102;&#117;&#110;&#99;&#116;&#105;&#111;&#110; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#112;&#97;&#103;&#101;.
+    Module function to create the configuration page.
 </p><dl>
 <dt><i>dlg</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;
+reference to the configuration dialog
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.E5XML.PluginRepositoryHandler</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#114;&#101;&#97;&#100;&#105;&#110;&#103; &#97;&#110; &#88;&#77;&#76; &#116;&#97;&#115;&#107;&#115; &#102;&#105;&#108;&#101;.
+Module implementing the handler class for reading an XML tasks file.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#PluginRepositoryHandler">PluginRepositoryHandler</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#115;&#97;x &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#116;&#111; &#114;&#101;&#97;&#100; &#97;&#110; &#88;&#77;&#76; &#116;&#97;&#115;&#107;&#115; &#102;&#105;&#108;&#101;.</td>
+<td>Class implementing a sax handler to read an XML tasks file.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="PluginRepositoryHandler" ID="PluginRepositoryHandler"></a>
 <h2>PluginRepositoryHandler</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#115;&#97;x &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#116;&#111; &#114;&#101;&#97;&#100; &#97;&#110; &#88;&#77;&#76; &#116;&#97;&#115;&#107;&#115; &#102;&#105;&#108;&#101;.
+    Class implementing a sax handler to read an XML tasks file.
 </p>
 <h3>Derived from</h3>
 XMLHandlerBase
@@ -55,137 +55,137 @@ XMLHandlerBase
 <table>
 <tr>
 <td><a href="#PluginRepositoryHandler.__init__">PluginRepositoryHandler</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.endAuthor">endAuthor</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#65;&#117;&#116;&#104;&#111;&#114;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Author" end tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.endDescription">endDescription</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#68;&#101;&#115;&#99;&#114;&#105;&#112;&#116;&#105;&#111;&#110;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Description" end tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.endFilename">endFilename</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#70;&#105;&#108;&#101;&#110;&#97;&#109;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Filename" end tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.endName">endName</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#78;&#97;&#109;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Name" end tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.endPlugin">endPlugin</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#80;&#108;&#117;&#103;&#105;&#110;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Plugin" end tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.endRepositoryUrl">endRepositoryUrl</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#82;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y&#85;&#114;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "RepositoryUrl" end tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.endShort">endShort</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#83;&#104;&#111;&#114;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Short" end tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.endUrl">endUrl</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#85;&#114;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Url" end tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.endVersion">endVersion</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#86;&#101;&#114;&#115;&#105;&#111;&#110;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Version" end tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.getVersion">getVersion</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#116;&#97;&#115;&#107;&#115; &#102;&#105;&#108;&#101;.</td>
+<td>Public method to retrieve the version of the tasks file.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.startDocumentPlugins">startDocumentPlugins</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.</td>
+<td>Handler called, when the document parsing is started.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.startPlugin">startPlugin</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#80;&#108;&#117;&#103;&#105;&#110;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Plugin" start tag.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryHandler.startPlugins">startPlugins</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#80;&#108;&#117;&#103;&#105;&#110;&#115;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Plugins" start tag.</td>
 </tr>
 </table>
 <a NAME="PluginRepositoryHandler.__init__" ID="PluginRepositoryHandler.__init__"></a>
 <h4>PluginRepositoryHandler (Constructor)</h4>
 <b>PluginRepositoryHandler</b>(<i>parent</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; &#100;&#105;&#97;&#108;&#111;&#103; (&#80;&#108;&#117;&#103;&#105;&#110;&#82;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y&#68;&#105;&#97;&#108;&#111;&#103;)
+reference to the parent dialog (PluginRepositoryDialog)
 </dd>
 </dl><a NAME="PluginRepositoryHandler.endAuthor" ID="PluginRepositoryHandler.endAuthor"></a>
 <h4>PluginRepositoryHandler.endAuthor</h4>
 <b>endAuthor</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#65;&#117;&#116;&#104;&#111;&#114;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Author" end tag.
 </p><a NAME="PluginRepositoryHandler.endDescription" ID="PluginRepositoryHandler.endDescription"></a>
 <h4>PluginRepositoryHandler.endDescription</h4>
 <b>endDescription</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#68;&#101;&#115;&#99;&#114;&#105;&#112;&#116;&#105;&#111;&#110;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Description" end tag.
 </p><a NAME="PluginRepositoryHandler.endFilename" ID="PluginRepositoryHandler.endFilename"></a>
 <h4>PluginRepositoryHandler.endFilename</h4>
 <b>endFilename</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#70;&#105;&#108;&#101;&#110;&#97;&#109;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Filename" end tag.
 </p><a NAME="PluginRepositoryHandler.endName" ID="PluginRepositoryHandler.endName"></a>
 <h4>PluginRepositoryHandler.endName</h4>
 <b>endName</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#78;&#97;&#109;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Name" end tag.
 </p><a NAME="PluginRepositoryHandler.endPlugin" ID="PluginRepositoryHandler.endPlugin"></a>
 <h4>PluginRepositoryHandler.endPlugin</h4>
 <b>endPlugin</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#80;&#108;&#117;&#103;&#105;&#110;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Plugin" end tag.
 </p><a NAME="PluginRepositoryHandler.endRepositoryUrl" ID="PluginRepositoryHandler.endRepositoryUrl"></a>
 <h4>PluginRepositoryHandler.endRepositoryUrl</h4>
 <b>endRepositoryUrl</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#82;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y&#85;&#114;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "RepositoryUrl" end tag.
 </p><a NAME="PluginRepositoryHandler.endShort" ID="PluginRepositoryHandler.endShort"></a>
 <h4>PluginRepositoryHandler.endShort</h4>
 <b>endShort</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#83;&#104;&#111;&#114;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Short" end tag.
 </p><a NAME="PluginRepositoryHandler.endUrl" ID="PluginRepositoryHandler.endUrl"></a>
 <h4>PluginRepositoryHandler.endUrl</h4>
 <b>endUrl</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#85;&#114;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Url" end tag.
 </p><a NAME="PluginRepositoryHandler.endVersion" ID="PluginRepositoryHandler.endVersion"></a>
 <h4>PluginRepositoryHandler.endVersion</h4>
 <b>endVersion</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#86;&#101;&#114;&#115;&#105;&#111;&#110;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Version" end tag.
 </p><a NAME="PluginRepositoryHandler.getVersion" ID="PluginRepositoryHandler.getVersion"></a>
 <h4>PluginRepositoryHandler.getVersion</h4>
 <b>getVersion</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#116;&#97;&#115;&#107;&#115; &#102;&#105;&#108;&#101;.
+        Public method to retrieve the version of the tasks file.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#83;&#116;&#114;&#105;&#110;&#103; &#99;&#111;&#110;&#116;&#97;&#105;&#110;&#105;&#110;&#103; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#110;&#117;&#109;&#98;&#101;&#114;.
+String containing the version number.
 </dd>
 </dl><a NAME="PluginRepositoryHandler.startDocumentPlugins" ID="PluginRepositoryHandler.startDocumentPlugins"></a>
 <h4>PluginRepositoryHandler.startDocumentPlugins</h4>
 <b>startDocumentPlugins</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.
+        Handler called, when the document parsing is started.
 </p><a NAME="PluginRepositoryHandler.startPlugin" ID="PluginRepositoryHandler.startPlugin"></a>
 <h4>PluginRepositoryHandler.startPlugin</h4>
 <b>startPlugin</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#80;&#108;&#117;&#103;&#105;&#110;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "Plugin" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="PluginRepositoryHandler.startPlugins" ID="PluginRepositoryHandler.startPlugins"></a>
 <h4>PluginRepositoryHandler.startPlugins</h4>
 <b>startPlugins</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#80;&#108;&#117;&#103;&#105;&#110;&#115;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "Plugins" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

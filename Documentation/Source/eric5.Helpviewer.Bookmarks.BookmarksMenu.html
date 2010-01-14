@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Helpviewer.Bookmarks.BookmarksMenu</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#101;&#110;&#117;.
+Module implementing the bookmarks menu.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,10 +32,10 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#BookmarksMenu">BookmarksMenu</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#101;&#110;&#117; &#98;&#97;&#115;&#101; &#99;&#108;&#97;&#115;&#115;.</td>
+<td>Class implementing the bookmarks menu base class.</td>
 </tr><tr>
 <td><a href="#BookmarksMenuBarMenu">BookmarksMenuBarMenu</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;y&#110;&#97;&#109;&#105;&#99;&#97;&#108;&#108;y &#112;&#111;&#112;&#117;&#108;&#97;&#116;&#101;&#100; &#109;&#101;&#110;&#117; &#102;&#111;&#114; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.</td>
+<td>Class implementing a dynamically populated menu for bookmarks.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -46,16 +46,16 @@ a { color: #AA5500; }
 <a NAME="BookmarksMenu" ID="BookmarksMenu"></a>
 <h2>BookmarksMenu</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115; &#109;&#101;&#110;&#117; &#98;&#97;&#115;&#101; &#99;&#108;&#97;&#115;&#115;.
+    Class implementing the bookmarks menu base class.
 </p><h4>Signals</h4>
 <dl>
 <dt>newUrl(const QUrl&, const QString&)</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#85;&#82;&#76; &#105;&#110; &#97; &#110;&#101;w &#116;&#97;&#98;
+emitted to open a URL in a new tab
 </dd><dt>openUrl(const QUrl&, const QString&)</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#85;&#82;&#76; &#105;&#110; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116;
-            &#116;&#97;&#98;
+emitted to open a URL in the current
+            tab
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -68,105 +68,105 @@ E5ModelMenu
 <table>
 <tr>
 <td><a href="#BookmarksMenu.__init__">BookmarksMenu</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#BookmarksMenu.__activated">__activated</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#116;&#104;&#101; &#97;&#99;&#116;&#105;v&#97;&#116;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot handling the activated signal.</td>
 </tr><tr>
 <td><a href="#BookmarksMenu.__contextMenuRequested">__contextMenuRequested</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117; &#114;&#101;&#113;&#117;&#101;&#115;&#116;.</td>
+<td>Private slot to handle the context menu request.</td>
 </tr><tr>
 <td><a href="#BookmarksMenu.__openAll">__openAll</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97;&#108;&#108; &#116;&#104;&#101; &#109;&#101;&#110;&#117;'&#115; &#105;&#116;&#101;&#109;&#115;.</td>
+<td>Private slot to open all the menu's items.</td>
 </tr><tr>
 <td><a href="#BookmarksMenu.__openBookmark">__openBookmark</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#105;&#110; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#98;&#114;&#111;w&#115;&#101;&#114; &#116;&#97;&#98;.</td>
+<td>Private slot to open a bookmark in the current browser tab.</td>
 </tr><tr>
 <td><a href="#BookmarksMenu.__openBookmarkInNewTab">__openBookmarkInNewTab</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#105;&#110; &#97; &#110;&#101;w &#98;&#114;&#111;w&#115;&#101;&#114; &#116;&#97;&#98;.</td>
+<td>Private slot to open a bookmark in a new browser tab.</td>
 </tr><tr>
 <td><a href="#BookmarksMenu.__removeBookmark">__removeBookmark</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#109;&#111;v&#101; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.</td>
+<td>Private slot to remove a bookmark.</td>
 </tr><tr>
 <td><a href="#BookmarksMenu.createBaseMenu">createBaseMenu</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#109;&#101;&#110;&#117; &#116;&#104;&#97;&#116; &#105;&#115; &#117;&#115;&#101;&#100; &#116;&#111; &#112;&#111;&#112;&#117;&#108;&#97;&#116;&#101; &#115;&#117;&#98; &#109;&#101;&#110;&#117;'&#115;.</td>
+<td>Public method to get the menu that is used to populate sub menu's.</td>
 </tr><tr>
 <td><a href="#BookmarksMenu.postPopulated">postPopulated</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#97;&#110;y &#97;&#99;&#116;&#105;&#111;&#110;&#115; &#97;&#102;&#116;&#101;&#114; &#116;&#104;&#101; &#116;&#114;&#101;&#101;.</td>
+<td>Public method to add any actions after the tree.</td>
 </tr>
 </table>
 <a NAME="BookmarksMenu.__init__" ID="BookmarksMenu.__init__"></a>
 <h4>BookmarksMenu (Constructor)</h4>
 <b>BookmarksMenu</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+reference to the parent widget (QWidget)
 </dd>
 </dl><a NAME="BookmarksMenu.__activated" ID="BookmarksMenu.__activated"></a>
 <h4>BookmarksMenu.__activated</h4>
 <b>__activated</b>(<i>idx</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#116;&#104;&#101; &#97;&#99;&#116;&#105;v&#97;&#116;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot handling the activated signal.
 </p><dl>
 <dt><i>idx</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#116;&#104;&#101; &#97;&#99;&#116;&#105;v&#97;&#116;&#101;&#100; &#105;&#116;&#101;&#109; (&#81;&#77;&#111;&#100;&#101;&#108;&#73;&#110;&#100;&#101;x)
+index of the activated item (QModelIndex)
 </dd>
 </dl><a NAME="BookmarksMenu.__contextMenuRequested" ID="BookmarksMenu.__contextMenuRequested"></a>
 <h4>BookmarksMenu.__contextMenuRequested</h4>
 <b>__contextMenuRequested</b>(<i>pos</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117; &#114;&#101;&#113;&#117;&#101;&#115;&#116;.
+        Private slot to handle the context menu request.
 </p><dl>
 <dt><i>pos</i></dt>
 <dd>
-&#112;&#111;&#115;&#105;&#116;&#105;&#111;&#110; &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117; &#115;&#104;&#97;&#108;&#108; &#98;&#101; &#115;&#104;&#111;w&#110; (&#81;&#80;&#111;&#105;&#110;&#116;)
+position the context menu shall be shown (QPoint)
 </dd>
 </dl><a NAME="BookmarksMenu.__openAll" ID="BookmarksMenu.__openAll"></a>
 <h4>BookmarksMenu.__openAll</h4>
 <b>__openAll</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97;&#108;&#108; &#116;&#104;&#101; &#109;&#101;&#110;&#117;'&#115; &#105;&#116;&#101;&#109;&#115;.
+        Private slot to open all the menu's items.
 </p><a NAME="BookmarksMenu.__openBookmark" ID="BookmarksMenu.__openBookmark"></a>
 <h4>BookmarksMenu.__openBookmark</h4>
 <b>__openBookmark</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#105;&#110; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#98;&#114;&#111;w&#115;&#101;&#114; &#116;&#97;&#98;.
+        Private slot to open a bookmark in the current browser tab.
 </p><a NAME="BookmarksMenu.__openBookmarkInNewTab" ID="BookmarksMenu.__openBookmarkInNewTab"></a>
 <h4>BookmarksMenu.__openBookmarkInNewTab</h4>
 <b>__openBookmarkInNewTab</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107; &#105;&#110; &#97; &#110;&#101;w &#98;&#114;&#111;w&#115;&#101;&#114; &#116;&#97;&#98;.
+        Private slot to open a bookmark in a new browser tab.
 </p><a NAME="BookmarksMenu.__removeBookmark" ID="BookmarksMenu.__removeBookmark"></a>
 <h4>BookmarksMenu.__removeBookmark</h4>
 <b>__removeBookmark</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#109;&#111;v&#101; &#97; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;.
+        Private slot to remove a bookmark.
 </p><a NAME="BookmarksMenu.createBaseMenu" ID="BookmarksMenu.createBaseMenu"></a>
 <h4>BookmarksMenu.createBaseMenu</h4>
 <b>createBaseMenu</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#109;&#101;&#110;&#117; &#116;&#104;&#97;&#116; &#105;&#115; &#117;&#115;&#101;&#100; &#116;&#111; &#112;&#111;&#112;&#117;&#108;&#97;&#116;&#101; &#115;&#117;&#98; &#109;&#101;&#110;&#117;'&#115;.
+        Public method to get the menu that is used to populate sub menu's.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#109;&#101;&#110;&#117; (&#66;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;&#77;&#101;&#110;&#117;)
+reference to the menu (BookmarksMenu)
 </dd>
 </dl><a NAME="BookmarksMenu.postPopulated" ID="BookmarksMenu.postPopulated"></a>
 <h4>BookmarksMenu.postPopulated</h4>
 <b>postPopulated</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#97;&#110;y &#97;&#99;&#116;&#105;&#111;&#110;&#115; &#97;&#102;&#116;&#101;&#114; &#116;&#104;&#101; &#116;&#114;&#101;&#101;.
+        Public method to add any actions after the tree.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="BookmarksMenuBarMenu" ID="BookmarksMenuBarMenu"></a>
 <h2>BookmarksMenuBarMenu</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;y&#110;&#97;&#109;&#105;&#99;&#97;&#108;&#108;y &#112;&#111;&#112;&#117;&#108;&#97;&#116;&#101;&#100; &#109;&#101;&#110;&#117; &#102;&#111;&#114; &#98;&#111;&#111;&#107;&#109;&#97;&#114;&#107;&#115;.
+    Class implementing a dynamically populated menu for bookmarks.
 </p>
 <h3>Derived from</h3>
 BookmarksMenu
@@ -178,44 +178,44 @@ BookmarksMenu
 <table>
 <tr>
 <td><a href="#BookmarksMenuBarMenu.__init__">BookmarksMenuBarMenu</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#BookmarksMenuBarMenu.prePopulated">prePopulated</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#97;&#110;y &#97;&#99;&#116;&#105;&#111;&#110;&#115; &#98;&#101;&#102;&#111;&#114;&#101; &#116;&#104;&#101; &#116;&#114;&#101;&#101;.</td>
+<td>Public method to add any actions before the tree.</td>
 </tr><tr>
 <td><a href="#BookmarksMenuBarMenu.setInitialActions">setInitialActions</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#111;&#102; &#97;&#99;&#116;&#105;&#111;&#110;&#115; &#116;&#104;&#97;&#116; &#115;&#104;&#111;&#117;&#108;&#100; &#97;&#112;&#112;&#101;&#97;&#114; &#102;&#105;&#114;&#115;&#116; &#105;&#110; &#116;&#104;&#101; &#109;&#101;&#110;&#117;.</td>
+<td>Public method to set the list of actions that should appear first in the menu.</td>
 </tr>
 </table>
 <a NAME="BookmarksMenuBarMenu.__init__" ID="BookmarksMenuBarMenu.__init__"></a>
 <h4>BookmarksMenuBarMenu (Constructor)</h4>
 <b>BookmarksMenuBarMenu</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+reference to the parent widget (QWidget)
 </dd>
 </dl><a NAME="BookmarksMenuBarMenu.prePopulated" ID="BookmarksMenuBarMenu.prePopulated"></a>
 <h4>BookmarksMenuBarMenu.prePopulated</h4>
 <b>prePopulated</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#97;&#110;y &#97;&#99;&#116;&#105;&#111;&#110;&#115; &#98;&#101;&#102;&#111;&#114;&#101; &#116;&#104;&#101; &#116;&#114;&#101;&#101;.
+        Public method to add any actions before the tree.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#105;&#102; &#97;&#110;y &#97;&#99;&#116;&#105;&#111;&#110;&#115; w&#101;&#114;&#101; &#97;&#100;&#100;&#101;&#100; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating if any actions were added (boolean)
 </dd>
 </dl><a NAME="BookmarksMenuBarMenu.setInitialActions" ID="BookmarksMenuBarMenu.setInitialActions"></a>
 <h4>BookmarksMenuBarMenu.setInitialActions</h4>
 <b>setInitialActions</b>(<i>actions</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#111;&#102; &#97;&#99;&#116;&#105;&#111;&#110;&#115; &#116;&#104;&#97;&#116; &#115;&#104;&#111;&#117;&#108;&#100; &#97;&#112;&#112;&#101;&#97;&#114; &#102;&#105;&#114;&#115;&#116; &#105;&#110; &#116;&#104;&#101; &#109;&#101;&#110;&#117;.
+        Public method to set the list of actions that should appear first in the menu.
 </p><dl>
 <dt><i>actions</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#105;&#110;&#105;&#116;&#105;&#97;&#108; &#97;&#99;&#116;&#105;&#111;&#110;&#115; (&#108;&#105;&#115;&#116; &#111;&#102; &#81;&#65;&#99;&#116;&#105;&#111;&#110;)
+list of initial actions (list of QAction)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

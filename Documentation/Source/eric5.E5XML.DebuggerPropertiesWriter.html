@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.E5XML.DebuggerPropertiesWriter</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; w&#114;&#105;&#116;&#101;&#114; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; w&#114;&#105;&#116;&#105;&#110;&#103; &#97;&#110; &#88;&#77;&#76; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#101;&#98;&#117;&#103;&#103;&#101;&#114; &#112;&#114;&#111;&#112;&#101;&#114;&#116;&#105;&#101;&#115; &#102;&#105;&#108;&#101;.
+Module implementing the writer class for writing an XML project debugger properties file.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#DebuggerPropertiesWriter">DebuggerPropertiesWriter</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; w&#114;&#105;&#116;&#101;&#114; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; w&#114;&#105;&#116;&#105;&#110;&#103; &#97;&#110; &#88;&#77;&#76; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#101;&#98;&#117;&#103;&#103;&#101;&#114; &#112;&#114;&#111;&#112;&#101;&#114;&#116;&#105;&#101;&#115; &#102;&#105;&#108;&#101;.</td>
+<td>Class implementing the writer class for writing an XML project debugger properties file.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,8 +43,8 @@ a { color: #AA5500; }
 <a NAME="DebuggerPropertiesWriter" ID="DebuggerPropertiesWriter"></a>
 <h2>DebuggerPropertiesWriter</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; w&#114;&#105;&#116;&#101;&#114; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; w&#114;&#105;&#116;&#105;&#110;&#103; &#97;&#110; &#88;&#77;&#76; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#101;&#98;&#117;&#103;&#103;&#101;&#114; &#112;&#114;&#111;&#112;&#101;&#114;&#116;&#105;&#101;&#115;
-    &#102;&#105;&#108;&#101;.
+    Class implementing the writer class for writing an XML project debugger properties
+    file.
 </p>
 <h3>Derived from</h3>
 XMLWriterBase
@@ -56,30 +56,30 @@ XMLWriterBase
 <table>
 <tr>
 <td><a href="#DebuggerPropertiesWriter.__init__">DebuggerPropertiesWriter</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#DebuggerPropertiesWriter.writeXML">writeXML</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; w&#114;&#105;&#116;&#101; &#116;&#104;&#101; &#88;&#77;&#76; &#116;&#111; &#116;&#104;&#101; &#102;&#105;&#108;&#101;.</td>
+<td>Public method to write the XML to the file.</td>
 </tr>
 </table>
 <a NAME="DebuggerPropertiesWriter.__init__" ID="DebuggerPropertiesWriter.__init__"></a>
 <h4>DebuggerPropertiesWriter (Constructor)</h4>
 <b>DebuggerPropertiesWriter</b>(<i>file, projectName</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>file</i></dt>
 <dd>
-&#111;&#112;&#101;&#110; &#102;&#105;&#108;&#101; (&#108;&#105;&#107;&#101;) &#111;&#98;&#106;&#101;&#99;&#116; &#102;&#111;&#114; w&#114;&#105;&#116;&#105;&#110;&#103;
+open file (like) object for writing
 </dd><dt><i>projectName</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the project (string)
 </dd>
 </dl><a NAME="DebuggerPropertiesWriter.writeXML" ID="DebuggerPropertiesWriter.writeXML"></a>
 <h4>DebuggerPropertiesWriter.writeXML</h4>
 <b>writeXML</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; w&#114;&#105;&#116;&#101; &#116;&#104;&#101; &#88;&#77;&#76; &#116;&#111; &#116;&#104;&#101; &#102;&#105;&#108;&#101;.
+        Public method to write the XML to the file.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

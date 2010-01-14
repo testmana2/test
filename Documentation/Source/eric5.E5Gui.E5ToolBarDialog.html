@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.E5Gui.E5ToolBarDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.
+Module implementing a toolbar configuration dialog.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,10 +32,10 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#E5ToolBarDialog">E5ToolBarDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Class implementing a toolbar configuration dialog.</td>
 </tr><tr>
 <td><a href="#E5ToolBarItem">E5ToolBarItem</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#115;&#116;&#111;&#114;&#105;&#110;&#103; &#100;&#97;&#116;&#97; &#98;&#101;&#108;&#111;&#110;&#103;&#105;&#110;&#103; &#116;&#111; &#97; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#101;&#110;&#116;&#114;y &#111;&#102; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Class storing data belonging to a toolbar entry of the toolbar dialog.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -46,7 +46,7 @@ a { color: #AA5500; }
 <a NAME="E5ToolBarDialog" ID="E5ToolBarDialog"></a>
 <h2>E5ToolBarDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.
+    Class implementing a toolbar configuration dialog.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_E5ToolBarDialog
@@ -58,167 +58,167 @@ QDialog, Ui_E5ToolBarDialog
 <table>
 <tr>
 <td><a href="#E5ToolBarDialog.__init__">E5ToolBarDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.__resetCurrentToolbar">__resetCurrentToolbar</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;v&#101;&#114;&#116; &#97;&#108;&#108; &#99;&#104;&#97;&#110;&#103;&#101;&#115; &#109;&#97;&#100;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114;.</td>
+<td>Private method to revert all changes made to the current toolbar.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.__restoreCurrentToolbar">__restoreCurrentToolbar</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#100;&#111; &#116;&#111; &#114;&#101;&#115;&#116;&#111;&#114;&#101; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#116;&#111; &#116;&#104;&#101; &#103;&#105;v&#101;&#110; &#108;&#105;&#115;&#116; &#111;&#102; &#97;&#99;&#116;&#105;&#111;&#110;&#115;.</td>
+<td>Private methdo to restore the current toolbar to the given list of actions.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.__restoreCurrentToolbarToDefault">__restoreCurrentToolbarToDefault</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#116;&#111; &#105;&#116;'&#115; &#100;&#101;&#102;&#97;&#117;&#108;&#116; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110;.</td>
+<td>Private method to set the current toolbar to it's default configuration.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.__saveToolBars">__saveToolBars</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#101;&#100; &#116;&#111;&#111;&#108;&#98;&#97;&#114;&#115;.</td>
+<td>Private method to save the configured toolbars.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.__setupButtons">__setupButtons</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;&#115; &#115;&#116;&#97;&#116;&#101;.</td>
+<td>Private slot to set the buttons state.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.__toolbarComboBox_currentIndexChanged">__toolbarComboBox_currentIndexChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#117;&#112;&#111;&#110; &#97; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114;.</td>
+<td>Private slot called upon a selection of the current toolbar.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_actionsTree_currentItemChanged">on_actionsTree_currentItemChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116;&#108;y &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#97;&#99;&#116;&#105;&#111;&#110; &#99;&#104;&#97;&#110;&#103;&#101;&#115;.</td>
+<td>Private slot called, when the currently selected action changes.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x w&#97;&#115; &#99;&#108;&#105;&#99;&#107;&#101;&#100;.</td>
+<td>Private slot called, when a button of the button box was clicked.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_downButton_clicked">on_downButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#117;&#115;&#101;&#100; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#97;&#99;&#116;&#105;&#111;&#110; &#100;&#111;w&#110; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot used to move an action down in the list.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_leftButton_clicked">on_leftButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#97;&#110; &#97;&#99;&#116;&#105;&#111;&#110; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot to delete an action from the list.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_newButton_clicked">on_newButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97; &#110;&#101;w &#116;&#111;&#111;&#108;&#98;&#97;&#114;.</td>
+<td>Private slot to create a new toolbar.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_removeButton_clicked">on_removeButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#109;&#111;v&#101; &#97; &#99;&#117;&#115;&#116;&#111;&#109; &#116;&#111;&#111;&#108;&#98;&#97;&#114;</td>
+<td>Private slot to remove a custom toolbar</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_renameButton_clicked">on_renameButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#110;&#97;&#109;&#101; &#97; &#99;&#117;&#115;&#116;&#111;&#109; &#116;&#111;&#111;&#108;&#98;&#97;&#114;.</td>
+<td>Private slot to rename a custom toolbar.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_rightButton_clicked">on_rightButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97;&#110; &#97;&#99;&#116;&#105;&#111;&#110; &#116;&#111; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot to add an action to the list.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_toolbarActionsList_currentItemChanged">on_toolbarActionsList_currentItemChanged</a></td>
-<td>&#83;&#108;&#111;&#116; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#97;&#116;&#105;&#111;&#110; &#103;&#111;&#101;&#115; &#104;&#101;&#114;&#101;.</td>
+<td>Slot documentation goes here.</td>
 </tr><tr>
 <td><a href="#E5ToolBarDialog.on_upButton_clicked">on_upButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#117;&#115;&#101;&#100; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#97;&#99;&#116;&#105;&#111;&#110; &#117;&#112; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot used to move an action up in the list.</td>
 </tr>
 </table>
 <a NAME="E5ToolBarDialog.__init__" ID="E5ToolBarDialog.__init__"></a>
 <h4>E5ToolBarDialog (Constructor)</h4>
 <b>E5ToolBarDialog</b>(<i>toolBarManager, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>toolBarManager</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#97; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#109;&#97;&#110;&#97;&#103;&#101;&#114; &#111;&#98;&#106;&#101;&#99;&#116; (&#69;&#53;&#84;&#111;&#111;&#108;&#66;&#97;&#114;&#77;&#97;&#110;&#97;&#103;&#101;&#114;)
+reference to a toolbar manager object (E5ToolBarManager)
 </dd><dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+reference to the parent widget (QWidget)
 </dd>
 </dl><a NAME="E5ToolBarDialog.__resetCurrentToolbar" ID="E5ToolBarDialog.__resetCurrentToolbar"></a>
 <h4>E5ToolBarDialog.__resetCurrentToolbar</h4>
 <b>__resetCurrentToolbar</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;v&#101;&#114;&#116; &#97;&#108;&#108; &#99;&#104;&#97;&#110;&#103;&#101;&#115; &#109;&#97;&#100;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114;.
+        Private method to revert all changes made to the current toolbar.
 </p><a NAME="E5ToolBarDialog.__restoreCurrentToolbar" ID="E5ToolBarDialog.__restoreCurrentToolbar"></a>
 <h4>E5ToolBarDialog.__restoreCurrentToolbar</h4>
 <b>__restoreCurrentToolbar</b>(<i>actions</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#100;&#111; &#116;&#111; &#114;&#101;&#115;&#116;&#111;&#114;&#101; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#116;&#111; &#116;&#104;&#101; &#103;&#105;v&#101;&#110; &#108;&#105;&#115;&#116; &#111;&#102; &#97;&#99;&#116;&#105;&#111;&#110;&#115;.
+        Private methdo to restore the current toolbar to the given list of actions.
 </p><dl>
 <dt><i>actions</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#97;&#99;&#116;&#105;&#111;&#110;&#115; &#116;&#111; &#115;&#101;&#116; &#102;&#111;&#114; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114; (&#108;&#105;&#115;&#116; &#111;&#102; &#81;&#65;&#99;&#116;&#105;&#111;&#110;)
+list of actions to set for the current toolbar (list of QAction)
 </dd>
 </dl><a NAME="E5ToolBarDialog.__restoreCurrentToolbarToDefault" ID="E5ToolBarDialog.__restoreCurrentToolbarToDefault"></a>
 <h4>E5ToolBarDialog.__restoreCurrentToolbarToDefault</h4>
 <b>__restoreCurrentToolbarToDefault</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#116;&#111; &#105;&#116;'&#115; &#100;&#101;&#102;&#97;&#117;&#108;&#116; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110;.
+        Private method to set the current toolbar to it's default configuration.
 </p><a NAME="E5ToolBarDialog.__saveToolBars" ID="E5ToolBarDialog.__saveToolBars"></a>
 <h4>E5ToolBarDialog.__saveToolBars</h4>
 <b>__saveToolBars</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#97;v&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#101;&#100; &#116;&#111;&#111;&#108;&#98;&#97;&#114;&#115;.
+        Private method to save the configured toolbars.
 </p><a NAME="E5ToolBarDialog.__setupButtons" ID="E5ToolBarDialog.__setupButtons"></a>
 <h4>E5ToolBarDialog.__setupButtons</h4>
 <b>__setupButtons</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;&#115; &#115;&#116;&#97;&#116;&#101;.
+        Private slot to set the buttons state.
 </p><a NAME="E5ToolBarDialog.__toolbarComboBox_currentIndexChanged" ID="E5ToolBarDialog.__toolbarComboBox_currentIndexChanged"></a>
 <h4>E5ToolBarDialog.__toolbarComboBox_currentIndexChanged</h4>
 <b>__toolbarComboBox_currentIndexChanged</b>(<i>index</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#117;&#112;&#111;&#110; &#97; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114;.
+        Private slot called upon a selection of the current toolbar.
 </p><dl>
 <dt><i>index</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#116;&#104;&#101; &#110;&#101;w &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+index of the new current toolbar (integer)
 </dd>
 </dl><a NAME="E5ToolBarDialog.on_actionsTree_currentItemChanged" ID="E5ToolBarDialog.on_actionsTree_currentItemChanged"></a>
 <h4>E5ToolBarDialog.on_actionsTree_currentItemChanged</h4>
 <b>on_actionsTree_currentItemChanged</b>(<i>current, previous</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116;&#108;y &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#97;&#99;&#116;&#105;&#111;&#110; &#99;&#104;&#97;&#110;&#103;&#101;&#115;.
+        Private slot called, when the currently selected action changes.
 </p><a NAME="E5ToolBarDialog.on_buttonBox_clicked" ID="E5ToolBarDialog.on_buttonBox_clicked"></a>
 <h4>E5ToolBarDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x w&#97;&#115; &#99;&#108;&#105;&#99;&#107;&#101;&#100;.
+        Private slot called, when a button of the button box was clicked.
 </p><a NAME="E5ToolBarDialog.on_downButton_clicked" ID="E5ToolBarDialog.on_downButton_clicked"></a>
 <h4>E5ToolBarDialog.on_downButton_clicked</h4>
 <b>on_downButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#117;&#115;&#101;&#100; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#97;&#99;&#116;&#105;&#111;&#110; &#100;&#111;w&#110; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private slot used to move an action down in the list.
 </p><a NAME="E5ToolBarDialog.on_leftButton_clicked" ID="E5ToolBarDialog.on_leftButton_clicked"></a>
 <h4>E5ToolBarDialog.on_leftButton_clicked</h4>
 <b>on_leftButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#97;&#110; &#97;&#99;&#116;&#105;&#111;&#110; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private slot to delete an action from the list.
 </p><a NAME="E5ToolBarDialog.on_newButton_clicked" ID="E5ToolBarDialog.on_newButton_clicked"></a>
 <h4>E5ToolBarDialog.on_newButton_clicked</h4>
 <b>on_newButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97; &#110;&#101;w &#116;&#111;&#111;&#108;&#98;&#97;&#114;.
+        Private slot to create a new toolbar.
 </p><a NAME="E5ToolBarDialog.on_removeButton_clicked" ID="E5ToolBarDialog.on_removeButton_clicked"></a>
 <h4>E5ToolBarDialog.on_removeButton_clicked</h4>
 <b>on_removeButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#109;&#111;v&#101; &#97; &#99;&#117;&#115;&#116;&#111;&#109; &#116;&#111;&#111;&#108;&#98;&#97;&#114;
+        Private slot to remove a custom toolbar
 </p><a NAME="E5ToolBarDialog.on_renameButton_clicked" ID="E5ToolBarDialog.on_renameButton_clicked"></a>
 <h4>E5ToolBarDialog.on_renameButton_clicked</h4>
 <b>on_renameButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#110;&#97;&#109;&#101; &#97; &#99;&#117;&#115;&#116;&#111;&#109; &#116;&#111;&#111;&#108;&#98;&#97;&#114;.
+        Private slot to rename a custom toolbar.
 </p><a NAME="E5ToolBarDialog.on_rightButton_clicked" ID="E5ToolBarDialog.on_rightButton_clicked"></a>
 <h4>E5ToolBarDialog.on_rightButton_clicked</h4>
 <b>on_rightButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97;&#110; &#97;&#99;&#116;&#105;&#111;&#110; &#116;&#111; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private slot to add an action to the list.
 </p><a NAME="E5ToolBarDialog.on_toolbarActionsList_currentItemChanged" ID="E5ToolBarDialog.on_toolbarActionsList_currentItemChanged"></a>
 <h4>E5ToolBarDialog.on_toolbarActionsList_currentItemChanged</h4>
 <b>on_toolbarActionsList_currentItemChanged</b>(<i>current, previous</i>)
 <p>
-        &#83;&#108;&#111;&#116; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#97;&#116;&#105;&#111;&#110; &#103;&#111;&#101;&#115; &#104;&#101;&#114;&#101;.
+        Slot documentation goes here.
 </p><a NAME="E5ToolBarDialog.on_upButton_clicked" ID="E5ToolBarDialog.on_upButton_clicked"></a>
 <h4>E5ToolBarDialog.on_upButton_clicked</h4>
 <b>on_upButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#117;&#115;&#101;&#100; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#97;&#99;&#116;&#105;&#111;&#110; &#117;&#112; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private slot used to move an action up in the list.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="E5ToolBarItem" ID="E5ToolBarItem"></a>
 <h2>E5ToolBarItem</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#115;&#116;&#111;&#114;&#105;&#110;&#103; &#100;&#97;&#116;&#97; &#98;&#101;&#108;&#111;&#110;&#103;&#105;&#110;&#103; &#116;&#111; &#97; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#101;&#110;&#116;&#114;y &#111;&#102; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#100;&#105;&#97;&#108;&#111;&#103;.
+    Class storing data belonging to a toolbar entry of the toolbar dialog.
 </p>
 <h3>Derived from</h3>
 object
@@ -230,24 +230,24 @@ object
 <table>
 <tr>
 <td><a href="#E5ToolBarItem.__init__">E5ToolBarItem</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr>
 </table>
 <a NAME="E5ToolBarItem.__init__" ID="E5ToolBarItem.__init__"></a>
 <h4>E5ToolBarItem (Constructor)</h4>
 <b>E5ToolBarItem</b>(<i>toolBarId, actionIDs, default</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>toolBarId</i></dt>
 <dd>
-&#105;&#100; &#111;&#102; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#98;&#97;&#114; &#111;&#98;&#106;&#101;&#99;&#116; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+id of the toolbar object (integer)
 </dd><dt><i>actionIDs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#97;&#99;&#116;&#105;&#111;&#110; &#73;&#68;&#115; &#98;&#101;&#108;&#111;&#110;&#103;&#105;&#110;&#103; &#116;&#111; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#98;&#97;&#114; (&#108;&#105;&#115;&#116; &#111;&#102; &#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+list of action IDs belonging to the toolbar (list of integer)
 </dd><dt><i>default</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#100;&#101;&#102;&#97;&#117;&#108;&#116; &#116;&#111;&#111;&#108;&#98;&#97;&#114; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating a default toolbar (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

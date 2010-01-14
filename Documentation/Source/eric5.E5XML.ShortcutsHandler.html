@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.E5XML.ShortcutsHandler</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#114;&#101;&#97;&#100;&#105;&#110;&#103; &#97; &#107;&#101;y&#98;&#111;&#97;&#114;&#100; &#115;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115; &#102;&#105;&#108;&#101;.
+Module implementing the handler class for reading a keyboard shortcuts file.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#ShortcutsHandler">ShortcutsHandler</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#115;&#97;x &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#116;&#111; &#114;&#101;&#97;&#100; &#97; &#107;&#101;y&#98;&#111;&#97;&#114;&#100; &#115;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115; &#102;&#105;&#108;&#101;.</td>
+<td>Class implementing a sax handler to read a keyboard shortcuts file.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="ShortcutsHandler" ID="ShortcutsHandler"></a>
 <h2>ShortcutsHandler</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#115;&#97;x &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#116;&#111; &#114;&#101;&#97;&#100; &#97; &#107;&#101;y&#98;&#111;&#97;&#114;&#100; &#115;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115; &#102;&#105;&#108;&#101;.
+    Class implementing a sax handler to read a keyboard shortcuts file.
 </p>
 <h3>Derived from</h3>
 XMLHandlerBase
@@ -55,108 +55,108 @@ XMLHandlerBase
 <table>
 <tr>
 <td><a href="#ShortcutsHandler.__init__">ShortcutsHandler</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ShortcutsHandler.endAccel">endAccel</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#65;&#99;&#99;&#101;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Accel" end tag.</td>
 </tr><tr>
 <td><a href="#ShortcutsHandler.endAltAccel">endAltAccel</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#65;&#108;&#116;&#65;&#99;&#99;&#101;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "AltAccel" end tag.</td>
 </tr><tr>
 <td><a href="#ShortcutsHandler.endName">endName</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#78;&#97;&#109;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Name" end tag.</td>
 </tr><tr>
 <td><a href="#ShortcutsHandler.endShortcut">endShortcut</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#83;&#104;&#111;&#114;&#116;&#99;&#117;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Shortcut" end tag.</td>
 </tr><tr>
 <td><a href="#ShortcutsHandler.getShortcuts">getShortcuts</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#115;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115;.</td>
+<td>Public method to retrieve the shortcuts.</td>
 </tr><tr>
 <td><a href="#ShortcutsHandler.getVersion">getVersion</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#115;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115;.</td>
+<td>Public method to retrieve the version of the shortcuts.</td>
 </tr><tr>
 <td><a href="#ShortcutsHandler.startDocumentShortcuts">startDocumentShortcuts</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.</td>
+<td>Handler called, when the document parsing is started.</td>
 </tr><tr>
 <td><a href="#ShortcutsHandler.startShortcut">startShortcut</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#83;&#104;&#111;&#114;&#116;&#99;&#117;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Shortcut" start tag.</td>
 </tr><tr>
 <td><a href="#ShortcutsHandler.startShortcuts">startShortcuts</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#83;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "Shortcuts" start tag.</td>
 </tr>
 </table>
 <a NAME="ShortcutsHandler.__init__" ID="ShortcutsHandler.__init__"></a>
 <h4>ShortcutsHandler (Constructor)</h4>
 <b>ShortcutsHandler</b>(<i></i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><a NAME="ShortcutsHandler.endAccel" ID="ShortcutsHandler.endAccel"></a>
 <h4>ShortcutsHandler.endAccel</h4>
 <b>endAccel</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#65;&#99;&#99;&#101;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Accel" end tag.
 </p><a NAME="ShortcutsHandler.endAltAccel" ID="ShortcutsHandler.endAltAccel"></a>
 <h4>ShortcutsHandler.endAltAccel</h4>
 <b>endAltAccel</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#65;&#108;&#116;&#65;&#99;&#99;&#101;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "AltAccel" end tag.
 </p><a NAME="ShortcutsHandler.endName" ID="ShortcutsHandler.endName"></a>
 <h4>ShortcutsHandler.endName</h4>
 <b>endName</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#78;&#97;&#109;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Name" end tag.
 </p><a NAME="ShortcutsHandler.endShortcut" ID="ShortcutsHandler.endShortcut"></a>
 <h4>ShortcutsHandler.endShortcut</h4>
 <b>endShortcut</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#83;&#104;&#111;&#114;&#116;&#99;&#117;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "Shortcut" end tag.
 </p><a NAME="ShortcutsHandler.getShortcuts" ID="ShortcutsHandler.getShortcuts"></a>
 <h4>ShortcutsHandler.getShortcuts</h4>
 <b>getShortcuts</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#115;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115;.
+        Public method to retrieve the shortcuts.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#68;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y &#111;&#102; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;&#105;&#101;&#115; &#111;&#102; &#115;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115;. &#84;&#104;&#101; &#107;&#101;y&#115; &#111;&#102; &#116;&#104;&#101;
-            &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y &#97;&#114;&#101; &#116;&#104;&#101; &#99;&#97;&#116;&#101;&#103;&#111;&#114;&#105;&#101;&#115;, &#116;&#104;&#101; v&#97;&#108;&#117;&#101;&#115; &#97;&#114;&#101; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;&#105;&#101;&#115;.
-            &#84;&#104;&#101;&#115;&#101; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;&#105;&#101;&#115; &#104;&#97;v&#101; &#116;&#104;&#101; &#115;&#104;&#111;&#114;&#116;&#99;&#117;&#116; &#110;&#97;&#109;&#101; &#97;&#115; &#116;&#104;&#101;&#105;&#114; &#107;&#101;y &#97;&#110;&#100;
-            &#97; &#116;&#117;&#112;&#108;&#101; &#111;&#102; &#97;&#99;&#99;&#101;&#108;&#101;&#114;&#97;&#116;&#111;&#114;&#115; &#97;&#115; &#116;&#104;&#101;&#105;&#114; v&#97;&#108;&#117;&#101;.
+Dictionary of dictionaries of shortcuts. The keys of the
+            dictionary are the categories, the values are dictionaries.
+            These dictionaries have the shortcut name as their key and
+            a tuple of accelerators as their value.
 </dd>
 </dl><a NAME="ShortcutsHandler.getVersion" ID="ShortcutsHandler.getVersion"></a>
 <h4>ShortcutsHandler.getVersion</h4>
 <b>getVersion</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#115;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115;.
+        Public method to retrieve the version of the shortcuts.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#83;&#116;&#114;&#105;&#110;&#103; &#99;&#111;&#110;&#116;&#97;&#105;&#110;&#105;&#110;&#103; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#110;&#117;&#109;&#98;&#101;&#114;.
+String containing the version number.
 </dd>
 </dl><a NAME="ShortcutsHandler.startDocumentShortcuts" ID="ShortcutsHandler.startDocumentShortcuts"></a>
 <h4>ShortcutsHandler.startDocumentShortcuts</h4>
 <b>startDocumentShortcuts</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.
+        Handler called, when the document parsing is started.
 </p><a NAME="ShortcutsHandler.startShortcut" ID="ShortcutsHandler.startShortcut"></a>
 <h4>ShortcutsHandler.startShortcut</h4>
 <b>startShortcut</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#83;&#104;&#111;&#114;&#116;&#99;&#117;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "Shortcut" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="ShortcutsHandler.startShortcuts" ID="ShortcutsHandler.startShortcuts"></a>
 <h4>ShortcutsHandler.startShortcuts</h4>
 <b>startShortcuts</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#83;&#104;&#111;&#114;&#116;&#99;&#117;&#116;&#115;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "Shortcuts" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

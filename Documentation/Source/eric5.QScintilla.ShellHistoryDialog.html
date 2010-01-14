@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.QScintilla.ShellHistoryDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#104;&#101;&#108;&#108; &#104;&#105;&#115;&#116;&#111;&#114;y &#100;&#105;&#97;&#108;&#111;&#103;.
+Module implementing the shell history dialog.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#ShellHistoryDialog">ShellHistoryDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#104;&#101;&#108;&#108; &#104;&#105;&#115;&#116;&#111;&#114;y &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Class implementing the shell history dialog.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="ShellHistoryDialog" ID="ShellHistoryDialog"></a>
 <h2>ShellHistoryDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#104;&#101;&#108;&#108; &#104;&#105;&#115;&#116;&#111;&#114;y &#100;&#105;&#97;&#108;&#111;&#103;.
+    Class implementing the shell history dialog.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_ShellHistoryDialog
@@ -55,91 +55,91 @@ QDialog, Ui_ShellHistoryDialog
 <table>
 <tr>
 <td><a href="#ShellHistoryDialog.__init__">ShellHistoryDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ShellHistoryDialog.getHistory">getHistory</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#104;&#105;&#115;&#116;&#111;&#114;y &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Public method to retrieve the history from the dialog.</td>
 </tr><tr>
 <td><a href="#ShellHistoryDialog.on_copyButton_clicked">on_copyButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#111;&#112;y &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#116;&#111; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#101;&#100;&#105;&#116;&#111;&#114;.</td>
+<td>Private slot to copy the selected entries to the current editor.</td>
 </tr><tr>
 <td><a href="#ShellHistoryDialog.on_deleteButton_clicked">on_deleteButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#104;&#105;&#115;&#116;&#111;&#114;y.</td>
+<td>Private slot to delete the selected entries from the history.</td>
 </tr><tr>
 <td><a href="#ShellHistoryDialog.on_executeButton_clicked">on_executeButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#101;x&#101;&#99;&#117;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#105;&#110; &#116;&#104;&#101; &#115;&#104;&#101;&#108;&#108;.</td>
+<td>Private slot to execute the selected entries in the shell.</td>
 </tr><tr>
 <td><a href="#ShellHistoryDialog.on_historyList_itemDoubleClicked">on_historyList_itemDoubleClicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#100;&#111;&#117;&#98;&#108;&#101; &#99;&#108;&#105;&#99;&#107; &#111;&#102; &#97;&#110; &#105;&#116;&#101;&#109;.</td>
+<td>Private slot to handle a double click of an item.</td>
 </tr><tr>
 <td><a href="#ShellHistoryDialog.on_historyList_itemSelectionChanged">on_historyList_itemSelectionChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Private slot to handle a change of the selection.</td>
 </tr><tr>
 <td><a href="#ShellHistoryDialog.on_reloadButton_clicked">on_reloadButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#108;&#111;&#97;&#100; &#116;&#104;&#101; &#104;&#105;&#115;&#116;&#111;&#114;y.</td>
+<td>Private slot to reload the history.</td>
 </tr>
 </table>
 <a NAME="ShellHistoryDialog.__init__" ID="ShellHistoryDialog.__init__"></a>
 <h4>ShellHistoryDialog (Constructor)</h4>
 <b>ShellHistoryDialog</b>(<i>history, vm, shell</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>history</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#115;&#104;&#101;&#108;&#108; &#104;&#105;&#115;&#116;&#111;&#114;y (&#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+reference to the current shell history (list of strings)
 </dd><dt><i>vm</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; v&#105;&#101;w&#109;&#97;&#110;&#97;&#103;&#101;&#114; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the viewmanager object
 </dd><dt><i>shell</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#115;&#104;&#101;&#108;&#108; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the shell object
 </dd>
 </dl><a NAME="ShellHistoryDialog.getHistory" ID="ShellHistoryDialog.getHistory"></a>
 <h4>ShellHistoryDialog.getHistory</h4>
 <b>getHistory</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#104;&#105;&#115;&#116;&#111;&#114;y &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Public method to retrieve the history from the dialog.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#104;&#105;&#115;&#116;&#111;&#114;y &#101;&#110;&#116;&#114;&#105;&#101;&#115; (&#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+list of history entries (list of strings)
 </dd>
 </dl><a NAME="ShellHistoryDialog.on_copyButton_clicked" ID="ShellHistoryDialog.on_copyButton_clicked"></a>
 <h4>ShellHistoryDialog.on_copyButton_clicked</h4>
 <b>on_copyButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#111;&#112;y &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#116;&#111; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#101;&#100;&#105;&#116;&#111;&#114;.
+        Private slot to copy the selected entries to the current editor.
 </p><a NAME="ShellHistoryDialog.on_deleteButton_clicked" ID="ShellHistoryDialog.on_deleteButton_clicked"></a>
 <h4>ShellHistoryDialog.on_deleteButton_clicked</h4>
 <b>on_deleteButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#104;&#105;&#115;&#116;&#111;&#114;y.
+        Private slot to delete the selected entries from the history.
 </p><a NAME="ShellHistoryDialog.on_executeButton_clicked" ID="ShellHistoryDialog.on_executeButton_clicked"></a>
 <h4>ShellHistoryDialog.on_executeButton_clicked</h4>
 <b>on_executeButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#101;x&#101;&#99;&#117;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#105;&#110; &#116;&#104;&#101; &#115;&#104;&#101;&#108;&#108;.
+        Private slot to execute the selected entries in the shell.
 </p><a NAME="ShellHistoryDialog.on_historyList_itemDoubleClicked" ID="ShellHistoryDialog.on_historyList_itemDoubleClicked"></a>
 <h4>ShellHistoryDialog.on_historyList_itemDoubleClicked</h4>
 <b>on_historyList_itemDoubleClicked</b>(<i>item</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#100;&#111;&#117;&#98;&#108;&#101; &#99;&#108;&#105;&#99;&#107; &#111;&#102; &#97;&#110; &#105;&#116;&#101;&#109;.
+        Private slot to handle a double click of an item.
 </p><dl>
 <dt><i>item</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#105;&#116;&#101;&#109; &#116;&#104;&#97;&#116; w&#97;&#115; &#100;&#111;&#117;&#98;&#108;&#101; &#99;&#108;&#105;&#99;&#107;&#101;&#100; (&#81;&#76;&#105;&#115;&#116;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+reference to the item that was double clicked (QListWidgetItem)
 </dd>
 </dl><a NAME="ShellHistoryDialog.on_historyList_itemSelectionChanged" ID="ShellHistoryDialog.on_historyList_itemSelectionChanged"></a>
 <h4>ShellHistoryDialog.on_historyList_itemSelectionChanged</h4>
 <b>on_historyList_itemSelectionChanged</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110;.
+        Private slot to handle a change of the selection.
 </p><a NAME="ShellHistoryDialog.on_reloadButton_clicked" ID="ShellHistoryDialog.on_reloadButton_clicked"></a>
 <h4>ShellHistoryDialog.on_reloadButton_clicked</h4>
 <b>on_reloadButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#108;&#111;&#97;&#100; &#116;&#104;&#101; &#104;&#105;&#115;&#116;&#111;&#114;y.
+        Private slot to reload the history.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

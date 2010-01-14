@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Project.ProjectBrowserSortFilterProxyModel</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#114;&#111;w&#115;&#101;&#114; &#115;&#111;&#114;&#116; &#102;&#105;&#108;&#116;&#101;&#114; &#112;&#114;&#111;xy &#109;&#111;&#100;&#101;&#108;.
+Module implementing the browser sort filter proxy model.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#ProjectBrowserSortFilterProxyModel">ProjectBrowserSortFilterProxyModel</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#114;&#111;w&#115;&#101;&#114; &#115;&#111;&#114;&#116; &#102;&#105;&#108;&#116;&#101;&#114; &#112;&#114;&#111;xy &#109;&#111;&#100;&#101;&#108;.</td>
+<td>Class implementing the browser sort filter proxy model.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="ProjectBrowserSortFilterProxyModel" ID="ProjectBrowserSortFilterProxyModel"></a>
 <h2>ProjectBrowserSortFilterProxyModel</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#114;&#111;w&#115;&#101;&#114; &#115;&#111;&#114;&#116; &#102;&#105;&#108;&#116;&#101;&#114; &#112;&#114;&#111;xy &#109;&#111;&#100;&#101;&#108;.
+    Class implementing the browser sort filter proxy model.
 </p>
 <h3>Derived from</h3>
 BrowserSortFilterProxyModel
@@ -55,55 +55,55 @@ BrowserSortFilterProxyModel
 <table>
 <tr>
 <td><a href="#ProjectBrowserSortFilterProxyModel.__init__">ProjectBrowserSortFilterProxyModel</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ProjectBrowserSortFilterProxyModel.filterAcceptsRow">filterAcceptsRow</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#102;&#105;&#108;&#116;&#101;&#114; &#114;&#111;w&#115;.</td>
+<td>Protected method to filter rows.</td>
 </tr><tr>
 <td><a href="#ProjectBrowserSortFilterProxyModel.preferencesChanged">preferencesChanged</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115; &#115;&#101;&#116;&#116;&#105;&#110;&#103;&#115;.</td>
+<td>Public slot called to handle a change of the preferences settings.</td>
 </tr>
 </table>
 <a NAME="ProjectBrowserSortFilterProxyModel.__init__" ID="ProjectBrowserSortFilterProxyModel.__init__"></a>
 <h4>ProjectBrowserSortFilterProxyModel (Constructor)</h4>
 <b>ProjectBrowserSortFilterProxyModel</b>(<i>filterType, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>filterType</i></dt>
 <dd>
-&#116;y&#112;&#101; &#111;&#102; &#102;&#105;&#108;&#116;&#101;&#114; &#116;&#111; &#97;&#112;&#112;&#108;y
+type of filter to apply
 </dd><dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; &#111;&#98;&#106;&#101;&#99;&#116; (&#81;&#79;&#98;&#106;&#101;&#99;&#116;)
+reference to the parent object (QObject)
 </dd>
 </dl><a NAME="ProjectBrowserSortFilterProxyModel.filterAcceptsRow" ID="ProjectBrowserSortFilterProxyModel.filterAcceptsRow"></a>
 <h4>ProjectBrowserSortFilterProxyModel.filterAcceptsRow</h4>
 <b>filterAcceptsRow</b>(<i>source_row, source_parent</i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#102;&#105;&#108;&#116;&#101;&#114; &#114;&#111;w&#115;.
+        Protected method to filter rows.
 </p><p>
-        &#73;&#116; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#115; &#97; &#102;&#105;&#108;&#116;&#101;&#114; &#116;&#111; &#115;&#117;&#112;&#112;&#114;&#101;&#115;&#115; &#116;&#104;&#101; &#100;&#105;&#115;&#112;&#108;&#97;y &#111;&#102; &#110;&#111;&#110; &#112;&#117;&#98;&#108;&#105;&#99;
-        &#99;&#108;&#97;&#115;&#115;&#101;&#115;, &#109;&#101;&#116;&#104;&#111;&#100;&#115; &#97;&#110;&#100; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;.
+        It implements a filter to suppress the display of non public
+        classes, methods and attributes.
 </p><dl>
 <dt><i>source_row</i></dt>
 <dd>
-&#114;&#111;w &#110;&#117;&#109;&#98;&#101;&#114; (&#105;&#110; &#116;&#104;&#101; &#115;&#111;&#117;&#114;&#99;&#101; &#109;&#111;&#100;&#101;&#108;) &#111;&#102; &#105;&#116;&#101;&#109; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+row number (in the source model) of item (integer)
 </dd><dt><i>source_parent</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#112;&#97;&#114;&#101;&#110;&#116; &#105;&#116;&#101;&#109; (&#105;&#110; &#116;&#104;&#101; &#115;&#111;&#117;&#114;&#99;&#101; &#109;&#111;&#100;&#101;&#108;)
-            &#111;&#102; &#105;&#116;&#101;&#109; (&#81;&#77;&#111;&#100;&#101;&#108;&#73;&#110;&#100;&#101;x)
+index of parent item (in the source model)
+            of item (QModelIndex)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103;, &#105;&#102; &#116;&#104;&#101; &#105;&#116;&#101;&#109; &#115;&#104;&#111;&#117;&#108;&#100; &#98;&#101; &#115;&#104;&#111;w&#110; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating, if the item should be shown (boolean)
 </dd>
 </dl><a NAME="ProjectBrowserSortFilterProxyModel.preferencesChanged" ID="ProjectBrowserSortFilterProxyModel.preferencesChanged"></a>
 <h4>ProjectBrowserSortFilterProxyModel.preferencesChanged</h4>
 <b>preferencesChanged</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115; &#115;&#101;&#116;&#116;&#105;&#110;&#103;&#115;.
+        Public slot called to handle a change of the preferences settings.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

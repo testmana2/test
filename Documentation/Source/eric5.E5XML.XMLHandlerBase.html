@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.E5XML.XMLHandlerBase</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#98;&#97;&#115;&#101; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#97;&#108;&#108; &#111;&#102; &#101;&#114;&#105;&#99;&#53;&#115; &#88;&#77;&#76; &#104;&#97;&#110;&#100;&#108;&#101;&#114;&#115;.
+Module implementing a base class for all of eric5s XML handlers.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#XMLHandlerBase">XMLHandlerBase</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#97;&#115;&#101; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#97;&#108; &#111;&#102; &#101;&#114;&#105;&#99;&#53;&#115; &#88;&#77;&#76; &#104;&#97;&#110;&#100;&#108;&#101;&#114;&#115;.</td>
+<td>Class implementing the base class for al of eric5s XML handlers.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="XMLHandlerBase" ID="XMLHandlerBase"></a>
 <h2>XMLHandlerBase</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#98;&#97;&#115;&#101; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#97;&#108; &#111;&#102; &#101;&#114;&#105;&#99;&#53;&#115; &#88;&#77;&#76; &#104;&#97;&#110;&#100;&#108;&#101;&#114;&#115;.
+    Class implementing the base class for al of eric5s XML handlers.
 </p>
 <h3>Derived from</h3>
 ContentHandler
@@ -55,311 +55,311 @@ ContentHandler
 <table>
 <tr>
 <td><a href="#XMLHandlerBase.__init__">XMLHandlerBase</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase._prepareBasics">_prepareBasics</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#112;&#114;&#101;&#112;&#97;&#114;&#101; &#116;&#104;&#101; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#111;&#102; &#88;&#77;&#76; &#102;&#111;&#114; &#98;&#97;&#115;&#105;&#99; &#112;y&#116;&#104;&#111;&#110; &#116;y&#112;&#101;&#115;.</td>
+<td>Protected method to prepare the parsing of XML for basic python types.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.characters">characters</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100; &#102;&#111;&#114; &#111;&#114;&#100;&#105;&#110;&#97;&#114;y &#116;&#101;x&#116;.</td>
+<td>Handler called for ordinary text.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.decodedNewLines">decodedNewLines</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#100;&#101;&#99;&#111;&#100;&#101; &#110;&#101;w&#108;&#105;&#110;&#101;&#115; &#97;&#110;&#100; &#112;&#97;&#114;&#97;&#103;&#114;&#97;&#112;&#104; &#98;&#114;&#101;&#97;&#107;&#115;.</td>
+<td>Public method to decode newlines and paragraph breaks.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.defaultEndElement">defaultEndElement</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; &#99;&#111;&#109;&#109;&#111;&#110; &#101;&#110;&#100; &#116;&#97;&#103;&#115;.</td>
+<td>Handler method for the common end tags.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.defaultStartElement">defaultStartElement</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#99;&#111;&#109;&#109;&#111;&#110; &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;&#115;.</td>
+<td>Handler method for common start tags.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endBool">endBool</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#98;&#111;&#111;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "bool" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endBytearray">endBytearray</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#98;y&#116;&#101;&#97;&#114;&#114;&#97;y" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "bytearray" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endBytes">endBytes</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#98;y&#116;&#101;&#115;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "bytes" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endComplex">endComplex</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#99;&#111;&#109;&#112;&#108;&#101;x" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "complex" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endDictionary">endDictionary</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "dictionary" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endElement">endElement</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#97;&#110; &#101;&#110;&#100;&#105;&#110;&#103; &#116;&#97;&#103; &#105;&#115; &#102;&#111;&#117;&#110;&#100;.</td>
+<td>Handler called, when an ending tag is found.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endFloat">endFloat</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#102;&#108;&#111;&#97;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "float" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endFrozenset">endFrozenset</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#102;&#114;&#111;z&#101;&#110;&#115;&#101;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "frozenset" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endInt">endInt</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#105;&#110;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "int" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endList">endList</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#108;&#105;&#115;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "list" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endNone">endNone</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#110;&#111;&#110;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "none" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endPickle">endPickle</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#112;&#105;&#99;&#107;&#108;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "pickle" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endSet">endSet</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#115;&#101;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "set" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endString">endString</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#115;&#116;&#114;&#105;&#110;&#103;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "string" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.endTuple">endTuple</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#116;&#117;&#112;&#108;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "tuple" end tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.startDictionary">startDictionary</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "dictionary" start tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.startDocument">startDocument</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.</td>
+<td>Handler called, when the document parsing is started.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.startElement">startElement</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#97; &#115;&#116;&#97;&#114;&#116;&#105;&#110;&#103; &#116;&#97;&#103; &#105;&#115; &#102;&#111;&#117;&#110;&#100;.</td>
+<td>Handler called, when a starting tag is found.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.startFrozenset">startFrozenset</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#102;&#114;&#111;z&#101;&#110;&#115;&#101;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "frozenset" start tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.startList">startList</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#108;&#105;&#115;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "list" start tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.startPickle">startPickle</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#112;&#105;&#99;&#107;&#108;&#101;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "pickle" start tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.startSet">startSet</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#115;&#101;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "set" start tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.startTuple">startTuple</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#116;&#117;&#112;&#108;&#101;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "tuple" start tag.</td>
 </tr><tr>
 <td><a href="#XMLHandlerBase.unescape">unescape</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#117;&#115;&#101;&#100; &#116;&#111; &#117;&#110;&#101;&#115;&#99;&#97;&#112;&#101; &#99;&#101;&#114;&#116;&#97;&#105;&#110; &#99;&#104;&#97;&#114;&#97;&#99;&#116;&#101;&#114;&#115;.</td>
+<td>Public method used to unescape certain characters.</td>
 </tr>
 </table>
 <a NAME="XMLHandlerBase.__init__" ID="XMLHandlerBase.__init__"></a>
 <h4>XMLHandlerBase (Constructor)</h4>
 <b>XMLHandlerBase</b>(<i></i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><a NAME="XMLHandlerBase._prepareBasics" ID="XMLHandlerBase._prepareBasics"></a>
 <h4>XMLHandlerBase._prepareBasics</h4>
 <b>_prepareBasics</b>(<i></i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#112;&#114;&#101;&#112;&#97;&#114;&#101; &#116;&#104;&#101; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#111;&#102; &#88;&#77;&#76; &#102;&#111;&#114; &#98;&#97;&#115;&#105;&#99; &#112;y&#116;&#104;&#111;&#110; &#116;y&#112;&#101;&#115;.
+        Protected method to prepare the parsing of XML for basic python types.
 </p><a NAME="XMLHandlerBase.characters" ID="XMLHandlerBase.characters"></a>
 <h4>XMLHandlerBase.characters</h4>
 <b>characters</b>(<i>chars</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100; &#102;&#111;&#114; &#111;&#114;&#100;&#105;&#110;&#97;&#114;y &#116;&#101;x&#116;.
+        Handler called for ordinary text.
 </p><dl>
 <dt><i>chars</i></dt>
 <dd>
-&#116;&#104;&#101; &#115;&#99;&#97;&#110;&#110;&#101;&#100; &#116;&#101;x&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the scanned text (string)
 </dd>
 </dl><a NAME="XMLHandlerBase.decodedNewLines" ID="XMLHandlerBase.decodedNewLines"></a>
 <h4>XMLHandlerBase.decodedNewLines</h4>
 <b>decodedNewLines</b>(<i>text</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#100;&#101;&#99;&#111;&#100;&#101; &#110;&#101;w&#108;&#105;&#110;&#101;&#115; &#97;&#110;&#100; &#112;&#97;&#114;&#97;&#103;&#114;&#97;&#112;&#104; &#98;&#114;&#101;&#97;&#107;&#115;.
+        Public method to decode newlines and paragraph breaks.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#101;x&#116; &#116;&#111; &#100;&#101;&#99;&#111;&#100;&#101; (&#115;&#116;&#114;&#105;&#110;&#103; &#111;&#114; &#81;&#83;&#116;&#114;&#105;&#110;&#103;)
+text to decode (string or QString)
 </dd>
 </dl><a NAME="XMLHandlerBase.defaultEndElement" ID="XMLHandlerBase.defaultEndElement"></a>
 <h4>XMLHandlerBase.defaultEndElement</h4>
 <b>defaultEndElement</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; &#99;&#111;&#109;&#109;&#111;&#110; &#101;&#110;&#100; &#116;&#97;&#103;&#115;.
+        Handler method for the common end tags.
 </p><a NAME="XMLHandlerBase.defaultStartElement" ID="XMLHandlerBase.defaultStartElement"></a>
 <h4>XMLHandlerBase.defaultStartElement</h4>
 <b>defaultStartElement</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#99;&#111;&#109;&#109;&#111;&#110; &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;&#115;.
+        Handler method for common start tags.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="XMLHandlerBase.endBool" ID="XMLHandlerBase.endBool"></a>
 <h4>XMLHandlerBase.endBool</h4>
 <b>endBool</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#98;&#111;&#111;&#108;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "bool" end tag.
 </p><a NAME="XMLHandlerBase.endBytearray" ID="XMLHandlerBase.endBytearray"></a>
 <h4>XMLHandlerBase.endBytearray</h4>
 <b>endBytearray</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#98;y&#116;&#101;&#97;&#114;&#114;&#97;y" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "bytearray" end tag.
 </p><a NAME="XMLHandlerBase.endBytes" ID="XMLHandlerBase.endBytes"></a>
 <h4>XMLHandlerBase.endBytes</h4>
 <b>endBytes</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#98;y&#116;&#101;&#115;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "bytes" end tag.
 </p><a NAME="XMLHandlerBase.endComplex" ID="XMLHandlerBase.endComplex"></a>
 <h4>XMLHandlerBase.endComplex</h4>
 <b>endComplex</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#99;&#111;&#109;&#112;&#108;&#101;x" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "complex" end tag.
 </p><a NAME="XMLHandlerBase.endDictionary" ID="XMLHandlerBase.endDictionary"></a>
 <h4>XMLHandlerBase.endDictionary</h4>
 <b>endDictionary</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "dictionary" end tag.
 </p><a NAME="XMLHandlerBase.endElement" ID="XMLHandlerBase.endElement"></a>
 <h4>XMLHandlerBase.endElement</h4>
 <b>endElement</b>(<i>name</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#97;&#110; &#101;&#110;&#100;&#105;&#110;&#103; &#116;&#97;&#103; &#105;&#115; &#102;&#111;&#117;&#110;&#100;.
+        Handler called, when an ending tag is found.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#116;&#97;&#103; (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the tag (string)
 </dd>
 </dl><a NAME="XMLHandlerBase.endFloat" ID="XMLHandlerBase.endFloat"></a>
 <h4>XMLHandlerBase.endFloat</h4>
 <b>endFloat</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#102;&#108;&#111;&#97;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "float" end tag.
 </p><a NAME="XMLHandlerBase.endFrozenset" ID="XMLHandlerBase.endFrozenset"></a>
 <h4>XMLHandlerBase.endFrozenset</h4>
 <b>endFrozenset</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#102;&#114;&#111;z&#101;&#110;&#115;&#101;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "frozenset" end tag.
 </p><a NAME="XMLHandlerBase.endInt" ID="XMLHandlerBase.endInt"></a>
 <h4>XMLHandlerBase.endInt</h4>
 <b>endInt</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#105;&#110;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "int" end tag.
 </p><a NAME="XMLHandlerBase.endList" ID="XMLHandlerBase.endList"></a>
 <h4>XMLHandlerBase.endList</h4>
 <b>endList</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#108;&#105;&#115;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "list" end tag.
 </p><a NAME="XMLHandlerBase.endNone" ID="XMLHandlerBase.endNone"></a>
 <h4>XMLHandlerBase.endNone</h4>
 <b>endNone</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#110;&#111;&#110;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "none" end tag.
 </p><a NAME="XMLHandlerBase.endPickle" ID="XMLHandlerBase.endPickle"></a>
 <h4>XMLHandlerBase.endPickle</h4>
 <b>endPickle</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#112;&#105;&#99;&#107;&#108;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "pickle" end tag.
 </p><a NAME="XMLHandlerBase.endSet" ID="XMLHandlerBase.endSet"></a>
 <h4>XMLHandlerBase.endSet</h4>
 <b>endSet</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#115;&#101;&#116;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "set" end tag.
 </p><a NAME="XMLHandlerBase.endString" ID="XMLHandlerBase.endString"></a>
 <h4>XMLHandlerBase.endString</h4>
 <b>endString</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#115;&#116;&#114;&#105;&#110;&#103;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "string" end tag.
 </p><a NAME="XMLHandlerBase.endTuple" ID="XMLHandlerBase.endTuple"></a>
 <h4>XMLHandlerBase.endTuple</h4>
 <b>endTuple</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#116;&#117;&#112;&#108;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "tuple" end tag.
 </p><a NAME="XMLHandlerBase.startDictionary" ID="XMLHandlerBase.startDictionary"></a>
 <h4>XMLHandlerBase.startDictionary</h4>
 <b>startDictionary</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "dictionary" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="XMLHandlerBase.startDocument" ID="XMLHandlerBase.startDocument"></a>
 <h4>XMLHandlerBase.startDocument</h4>
 <b>startDocument</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.
+        Handler called, when the document parsing is started.
 </p><a NAME="XMLHandlerBase.startElement" ID="XMLHandlerBase.startElement"></a>
 <h4>XMLHandlerBase.startElement</h4>
 <b>startElement</b>(<i>name, attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#97; &#115;&#116;&#97;&#114;&#116;&#105;&#110;&#103; &#116;&#97;&#103; &#105;&#115; &#102;&#111;&#117;&#110;&#100;.
+        Handler called, when a starting tag is found.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#116;&#97;&#103; (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the tag (string)
 </dd><dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="XMLHandlerBase.startFrozenset" ID="XMLHandlerBase.startFrozenset"></a>
 <h4>XMLHandlerBase.startFrozenset</h4>
 <b>startFrozenset</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#102;&#114;&#111;z&#101;&#110;&#115;&#101;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "frozenset" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="XMLHandlerBase.startList" ID="XMLHandlerBase.startList"></a>
 <h4>XMLHandlerBase.startList</h4>
 <b>startList</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#108;&#105;&#115;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "list" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="XMLHandlerBase.startPickle" ID="XMLHandlerBase.startPickle"></a>
 <h4>XMLHandlerBase.startPickle</h4>
 <b>startPickle</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#112;&#105;&#99;&#107;&#108;&#101;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "pickle" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="XMLHandlerBase.startSet" ID="XMLHandlerBase.startSet"></a>
 <h4>XMLHandlerBase.startSet</h4>
 <b>startSet</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#115;&#101;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "set" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="XMLHandlerBase.startTuple" ID="XMLHandlerBase.startTuple"></a>
 <h4>XMLHandlerBase.startTuple</h4>
 <b>startTuple</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#116;&#117;&#112;&#108;&#101;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "tuple" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="XMLHandlerBase.unescape" ID="XMLHandlerBase.unescape"></a>
 <h4>XMLHandlerBase.unescape</h4>
 <b>unescape</b>(<i>text, attribute = False</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#117;&#115;&#101;&#100; &#116;&#111; &#117;&#110;&#101;&#115;&#99;&#97;&#112;&#101; &#99;&#101;&#114;&#116;&#97;&#105;&#110; &#99;&#104;&#97;&#114;&#97;&#99;&#116;&#101;&#114;&#115;.
+        Public method used to unescape certain characters.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#104;&#101; &#116;&#101;x&#116; &#116;&#111; &#117;&#110;&#101;&#115;&#99;&#97;&#112;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the text to unescape (string)
 </dd><dt><i>attribute</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#117;&#110;&#101;&#115;&#99;&#97;&#112;&#105;&#110;&#103; &#105;&#115; &#100;&#111;&#110;&#101; &#102;&#111;&#114; &#97;&#110; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;
+flag indicating unescaping is done for an attribute
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

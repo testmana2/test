@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Project.ProjectResourcesBrowser</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#108;&#97;&#115;&#115; &#117;&#115;&#101;&#100; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#101; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#112;&#97;&#114;&#116; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+Module implementing a class used to display the resources part of the project.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#ProjectResourcesBrowser">ProjectResourcesBrowser</a></td>
-<td>&#65; &#99;&#108;&#97;&#115;&#115; &#117;&#115;&#101;&#100; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#101; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#112;&#97;&#114;&#116; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>A class used to display the resources part of the project.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,24 +43,24 @@ a { color: #AA5500; }
 <a NAME="ProjectResourcesBrowser" ID="ProjectResourcesBrowser"></a>
 <h2>ProjectResourcesBrowser</h2>
 <p>
-    &#65; &#99;&#108;&#97;&#115;&#115; &#117;&#115;&#101;&#100; &#116;&#111; &#100;&#105;&#115;&#112;&#108;&#97;y &#116;&#104;&#101; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#112;&#97;&#114;&#116; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;. 
+    A class used to display the resources part of the project. 
 </p><h4>Signals</h4>
 <dl>
 <dt>appendStderr(string)</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#115;&#111;&#109;&#101;&#116;&#104;&#105;&#110;&#103; w&#97;&#115; &#114;&#101;&#99;&#101;&#105;v&#101;&#100; &#102;&#114;&#111;&#109;
-            &#97; &#81;&#80;&#114;&#111;&#99;&#101;&#115;&#115; &#111;&#110; &#115;&#116;&#100;&#101;&#114;&#114;
+emitted after something was received from
+            a QProcess on stderr
 </dd><dt>closeSourceWindow(string)</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#97; &#102;&#105;&#108;&#101; &#104;&#97;&#115; &#98;&#101;&#101;&#110; &#114;&#101;&#109;&#111;v&#101;&#100;/&#100;&#101;&#108;&#101;&#116;&#101;&#100;
-            &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;
+emitted after a file has been removed/deleted
+            from the project
 </dd><dt>showMenu(string, QMenu)</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; w&#104;&#101;&#110; &#97; &#109;&#101;&#110;&#117; &#105;&#115; &#97;&#98;&#111;&#117;&#116; &#116;&#111; &#98;&#101; &#115;&#104;&#111;w&#110;. &#84;&#104;&#101; &#110;&#97;&#109;&#101;
-            &#111;&#102; &#116;&#104;&#101; &#109;&#101;&#110;&#117; &#97;&#110;&#100; &#97; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#109;&#101;&#110;&#117; &#97;&#114;&#101; &#103;&#105;v&#101;&#110;.
+emitted when a menu is about to be shown. The name
+            of the menu and a reference to the menu are given.
 </dd><dt>sourceFile(string)</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#102;&#105;&#108;&#101; &#105;&#110; &#97;&#110; &#101;&#100;&#105;&#116;&#111;&#114;
+emitted to open a resources file in an editor
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -73,271 +73,271 @@ ProjectBaseBrowser
 <table>
 <tr>
 <td><a href="#ProjectResourcesBrowser.__init__">ProjectResourcesBrowser</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__addResourceFiles">__addResourceFiles</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private method to add resource files to the project.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__addResourcesDirectory">__addResourcesDirectory</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115; &#111;&#102; &#97; &#100;&#105;&#114;&#101;&#99;&#116;&#111;&#114;y &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private method to add resource files of a directory to the project.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__checkResourcesNewer">__checkResourcesNewer</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107;, &#105;&#102; &#97;&#110;y &#102;&#105;&#108;&#101; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#100; &#105;&#110; &#97; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101; &#105;&#115; &#110;&#101;w&#101;&#114; &#116;&#104;&#97;&#110; &#97; &#103;&#105;v&#101;&#110; &#116;&#105;&#109;&#101;.</td>
+<td>Private method to check, if any file referenced in a resource file is newer than a given time.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__compileAllResources">__compileAllResources</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#97;&#108;&#108; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#116;&#111; &#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115;.</td>
+<td>Private method to compile all resources to source files.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__compileQRC">__compileQRC</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#97; .&#113;&#114;&#99; &#102;&#105;&#108;&#101; &#116;&#111; &#97; .&#112;y &#102;&#105;&#108;&#101;.</td>
+<td>Privat method to compile a .qrc file to a .py file.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__compileQRCDone">__compileQRCDone</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115;.</td>
+<td>Private slot to handle the finished signal of the compile process.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__compileResource">__compileResource</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#97; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#116;&#111; &#97; &#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;.</td>
+<td>Private method to compile a resource to a source file.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__compileSelectedResources">__compileSelectedResources</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#116;&#111; &#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115;.</td>
+<td>Private method to compile selected resources to source files.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__deleteFile">__deleteFile</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#97; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private method to delete a resource file from the project.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__newResource">__newResource</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#78;&#101;w &#82;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#109;&#101;&#110;&#117; &#97;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Private slot to handle the New Resource menu action.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__openFile">__openFile</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#79;&#112;&#101;&#110; &#109;&#101;&#110;&#117; &#97;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Private slot to handle the Open menu action.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__readStderr">__readStderr</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#97;&#100;y&#82;&#101;&#97;&#100;&#83;&#116;&#97;&#110;&#100;&#97;&#114;&#100;&#69;&#114;&#114;&#111;&#114; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#112;y&#114;&#99;&#99;&#52;/&#114;&#98;&#114;&#99;&#99; &#112;&#114;&#111;&#99;&#101;&#115;&#115;.</td>
+<td>Private slot to handle the readyReadStandardError signal of the pyrcc4/rbrcc process.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__readStdout">__readStdout</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#97;&#100;y&#82;&#101;&#97;&#100;&#83;&#116;&#97;&#110;&#100;&#97;&#114;&#100;&#79;&#117;&#116;&#112;&#117;&#116; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#112;y&#114;&#99;&#99;&#52;/&#114;&#98;&#114;&#99;&#99; &#112;&#114;&#111;&#99;&#101;&#115;&#115;.</td>
+<td>Private slot to handle the readyReadStandardOutput signal of the pyrcc4/rbrcc process.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__showContextMenu">__showContextMenu</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#109;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot called by the menu aboutToShow signal.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__showContextMenuBack">__showContextMenuBack</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#98;&#97;&#99;&#107;&#77;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot called by the backMenu aboutToShow signal.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__showContextMenuDir">__showContextMenuDir</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#100;&#105;&#114;&#77;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot called by the dirMenu aboutToShow signal.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__showContextMenuDirMulti">__showContextMenuDirMulti</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#100;&#105;&#114;&#77;&#117;&#108;&#116;&#105;&#77;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot called by the dirMultiMenu aboutToShow signal.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.__showContextMenuMulti">__showContextMenuMulti</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105;&#77;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot called by the multiMenu aboutToShow signal.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser._contextMenuRequested">_contextMenuRequested</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117;.</td>
+<td>Protected slot to show the context menu.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser._createPopupMenus">_createPopupMenus</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#111;v&#101;&#114;&#108;&#111;&#97;&#100;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#116;&#104;&#101; &#112;&#111;&#112;&#117;&#112; &#109;&#101;&#110;&#117;.</td>
+<td>Protected overloaded method to generate the popup menu.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser._initHookMethods">_initHookMethods</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101; &#116;&#104;&#101; &#104;&#111;&#111;&#107;&#115; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y.</td>
+<td>Protected method to initialize the hooks dictionary.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser._openItem">_openItem</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#111;&#112;&#101;&#110; &#112;&#111;&#112;&#117;&#112; &#109;&#101;&#110;&#117; &#101;&#110;&#116;&#114;y.</td>
+<td>Protected slot to handle the open popup menu entry.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.compileChangedResources">compileChangedResources</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#97;&#108;&#108; &#99;&#104;&#97;&#110;&#103;&#101;&#100; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#116;&#111; &#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115;.</td>
+<td>Public method to compile all changed resources to source files.</td>
 </tr><tr>
 <td><a href="#ProjectResourcesBrowser.handlePreferencesChanged">handlePreferencesChanged</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#117;&#115;&#101;&#100; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Public slot used to handle the preferencesChanged signal.</td>
 </tr>
 </table>
 <a NAME="ProjectResourcesBrowser.__init__" ID="ProjectResourcesBrowser.__init__"></a>
 <h4>ProjectResourcesBrowser (Constructor)</h4>
 <b>ProjectResourcesBrowser</b>(<i>project, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the project object
 </dd><dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; &#111;&#102; &#116;&#104;&#105;&#115; &#98;&#114;&#111;w&#115;&#101;&#114; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget of this browser (QWidget)
 </dd>
 </dl><a NAME="ProjectResourcesBrowser.__addResourceFiles" ID="ProjectResourcesBrowser.__addResourceFiles"></a>
 <h4>ProjectResourcesBrowser.__addResourceFiles</h4>
 <b>__addResourceFiles</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private method to add resource files to the project.
 </p><a NAME="ProjectResourcesBrowser.__addResourcesDirectory" ID="ProjectResourcesBrowser.__addResourcesDirectory"></a>
 <h4>ProjectResourcesBrowser.__addResourcesDirectory</h4>
 <b>__addResourcesDirectory</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115; &#111;&#102; &#97; &#100;&#105;&#114;&#101;&#99;&#116;&#111;&#114;y &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private method to add resource files of a directory to the project.
 </p><a NAME="ProjectResourcesBrowser.__checkResourcesNewer" ID="ProjectResourcesBrowser.__checkResourcesNewer"></a>
 <h4>ProjectResourcesBrowser.__checkResourcesNewer</h4>
 <b>__checkResourcesNewer</b>(<i>filename, mtime</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107;, &#105;&#102; &#97;&#110;y &#102;&#105;&#108;&#101; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#100; &#105;&#110; &#97; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;
-        &#102;&#105;&#108;&#101; &#105;&#115; &#110;&#101;w&#101;&#114; &#116;&#104;&#97;&#110; &#97; &#103;&#105;v&#101;&#110; &#116;&#105;&#109;&#101;.
+        Private method to check, if any file referenced in a resource
+        file is newer than a given time.
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
-&#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+filename of the resource file (string)
 </dd><dt><i>mtime</i></dt>
 <dd>
-&#109;&#111;&#100;&#105;&#102;&#105;&#99;&#97;&#116;&#105;&#111;&#110; &#116;&#105;&#109;&#101; &#116;&#111; &#99;&#104;&#101;&#99;&#107; &#97;&#103;&#97;&#105;&#110;&#115;&#116;
+modification time to check against
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#115;&#111;&#109;&#101; &#102;&#105;&#108;&#101; &#105;&#115; &#110;&#101;w&#101;&#114; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating some file is newer (boolean)
 </dd>
 </dl><a NAME="ProjectResourcesBrowser.__compileAllResources" ID="ProjectResourcesBrowser.__compileAllResources"></a>
 <h4>ProjectResourcesBrowser.__compileAllResources</h4>
 <b>__compileAllResources</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#97;&#108;&#108; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#116;&#111; &#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115;.
+        Private method to compile all resources to source files.
 </p><a NAME="ProjectResourcesBrowser.__compileQRC" ID="ProjectResourcesBrowser.__compileQRC"></a>
 <h4>ProjectResourcesBrowser.__compileQRC</h4>
 <b>__compileQRC</b>(<i>fn, noDialog = False, progress = None</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#97; .&#113;&#114;&#99; &#102;&#105;&#108;&#101; &#116;&#111; &#97; .&#112;y &#102;&#105;&#108;&#101;.
+        Privat method to compile a .qrc file to a .py file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
-&#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; .&#117;&#105; &#102;&#105;&#108;&#101; &#116;&#111; &#98;&#101; &#99;&#111;&#109;&#112;&#105;&#108;&#101;&#100;
+filename of the .ui file to be compiled
 </dd><dt><i>noDialog</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#115;&#105;&#108;&#101;&#110;&#116; &#111;&#112;&#101;&#114;&#97;&#116;&#105;&#111;&#110;&#115;
+flag indicating silent operations
 </dd><dt><i>progress</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#103;&#114;&#101;&#115;&#115; &#100;&#105;&#97;&#108;&#111;&#103;
+reference to the progress dialog
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115; (&#81;&#80;&#114;&#111;&#99;&#101;&#115;&#115;)
+reference to the compile process (QProcess)
 </dd>
 </dl><a NAME="ProjectResourcesBrowser.__compileQRCDone" ID="ProjectResourcesBrowser.__compileQRCDone"></a>
 <h4>ProjectResourcesBrowser.__compileQRCDone</h4>
 <b>__compileQRCDone</b>(<i>exitCode, exitStatus</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115;.
+        Private slot to handle the finished signal of the compile process.
 </p><dl>
 <dt><i>exitCode</i></dt>
 <dd>
-&#101;x&#105;&#116; &#99;&#111;&#100;&#101; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+exit code of the process (integer)
 </dd><dt><i>exitStatus</i></dt>
 <dd>
-&#101;x&#105;&#116; &#115;&#116;&#97;&#116;&#117;&#115; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115; (&#81;&#80;&#114;&#111;&#99;&#101;&#115;&#115;.&#69;x&#105;&#116;&#83;&#116;&#97;&#116;&#117;&#115;)
+exit status of the process (QProcess.ExitStatus)
 </dd>
 </dl><a NAME="ProjectResourcesBrowser.__compileResource" ID="ProjectResourcesBrowser.__compileResource"></a>
 <h4>ProjectResourcesBrowser.__compileResource</h4>
 <b>__compileResource</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#97; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#116;&#111; &#97; &#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;.
+        Private method to compile a resource to a source file.
 </p><a NAME="ProjectResourcesBrowser.__compileSelectedResources" ID="ProjectResourcesBrowser.__compileSelectedResources"></a>
 <h4>ProjectResourcesBrowser.__compileSelectedResources</h4>
 <b>__compileSelectedResources</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#116;&#111; &#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115;.
+        Private method to compile selected resources to source files.
 </p><a NAME="ProjectResourcesBrowser.__deleteFile" ID="ProjectResourcesBrowser.__deleteFile"></a>
 <h4>ProjectResourcesBrowser.__deleteFile</h4>
 <b>__deleteFile</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#97; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private method to delete a resource file from the project.
 </p><a NAME="ProjectResourcesBrowser.__newResource" ID="ProjectResourcesBrowser.__newResource"></a>
 <h4>ProjectResourcesBrowser.__newResource</h4>
 <b>__newResource</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#78;&#101;w &#82;&#101;&#115;&#111;&#117;&#114;&#99;&#101; &#109;&#101;&#110;&#117; &#97;&#99;&#116;&#105;&#111;&#110;.
+        Private slot to handle the New Resource menu action.
 </p><a NAME="ProjectResourcesBrowser.__openFile" ID="ProjectResourcesBrowser.__openFile"></a>
 <h4>ProjectResourcesBrowser.__openFile</h4>
 <b>__openFile</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#79;&#112;&#101;&#110; &#109;&#101;&#110;&#117; &#97;&#99;&#116;&#105;&#111;&#110;.
+        Private slot to handle the Open menu action.
 </p><a NAME="ProjectResourcesBrowser.__readStderr" ID="ProjectResourcesBrowser.__readStderr"></a>
 <h4>ProjectResourcesBrowser.__readStderr</h4>
 <b>__readStderr</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#97;&#100;y&#82;&#101;&#97;&#100;&#83;&#116;&#97;&#110;&#100;&#97;&#114;&#100;&#69;&#114;&#114;&#111;&#114; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; 
-        &#112;y&#114;&#99;&#99;&#52;/&#114;&#98;&#114;&#99;&#99; &#112;&#114;&#111;&#99;&#101;&#115;&#115;.
+        Private slot to handle the readyReadStandardError signal of the 
+        pyrcc4/rbrcc process.
 </p><a NAME="ProjectResourcesBrowser.__readStdout" ID="ProjectResourcesBrowser.__readStdout"></a>
 <h4>ProjectResourcesBrowser.__readStdout</h4>
 <b>__readStdout</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#97;&#100;y&#82;&#101;&#97;&#100;&#83;&#116;&#97;&#110;&#100;&#97;&#114;&#100;&#79;&#117;&#116;&#112;&#117;&#116; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; 
-        &#112;y&#114;&#99;&#99;&#52;/&#114;&#98;&#114;&#99;&#99; &#112;&#114;&#111;&#99;&#101;&#115;&#115;.
+        Private slot to handle the readyReadStandardOutput signal of the 
+        pyrcc4/rbrcc process.
 </p><a NAME="ProjectResourcesBrowser.__showContextMenu" ID="ProjectResourcesBrowser.__showContextMenu"></a>
 <h4>ProjectResourcesBrowser.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#109;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot called by the menu aboutToShow signal.
 </p><a NAME="ProjectResourcesBrowser.__showContextMenuBack" ID="ProjectResourcesBrowser.__showContextMenuBack"></a>
 <h4>ProjectResourcesBrowser.__showContextMenuBack</h4>
 <b>__showContextMenuBack</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#98;&#97;&#99;&#107;&#77;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot called by the backMenu aboutToShow signal.
 </p><a NAME="ProjectResourcesBrowser.__showContextMenuDir" ID="ProjectResourcesBrowser.__showContextMenuDir"></a>
 <h4>ProjectResourcesBrowser.__showContextMenuDir</h4>
 <b>__showContextMenuDir</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#100;&#105;&#114;&#77;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot called by the dirMenu aboutToShow signal.
 </p><a NAME="ProjectResourcesBrowser.__showContextMenuDirMulti" ID="ProjectResourcesBrowser.__showContextMenuDirMulti"></a>
 <h4>ProjectResourcesBrowser.__showContextMenuDirMulti</h4>
 <b>__showContextMenuDirMulti</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#100;&#105;&#114;&#77;&#117;&#108;&#116;&#105;&#77;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot called by the dirMultiMenu aboutToShow signal.
 </p><a NAME="ProjectResourcesBrowser.__showContextMenuMulti" ID="ProjectResourcesBrowser.__showContextMenuMulti"></a>
 <h4>ProjectResourcesBrowser.__showContextMenuMulti</h4>
 <b>__showContextMenuMulti</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105;&#77;&#101;&#110;&#117; &#97;&#98;&#111;&#117;&#116;&#84;&#111;&#83;&#104;&#111;w &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot called by the multiMenu aboutToShow signal.
 </p><a NAME="ProjectResourcesBrowser._contextMenuRequested" ID="ProjectResourcesBrowser._contextMenuRequested"></a>
 <h4>ProjectResourcesBrowser._contextMenuRequested</h4>
 <b>_contextMenuRequested</b>(<i>coord</i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117;.
+        Protected slot to show the context menu.
 </p><dl>
 <dt><i>coord</i></dt>
 <dd>
-&#116;&#104;&#101; &#112;&#111;&#115;&#105;&#116;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#109;&#111;&#117;&#115;&#101; &#112;&#111;&#105;&#110;&#116;&#101;&#114; (&#81;&#80;&#111;&#105;&#110;&#116;)
+the position of the mouse pointer (QPoint)
 </dd>
 </dl><a NAME="ProjectResourcesBrowser._createPopupMenus" ID="ProjectResourcesBrowser._createPopupMenus"></a>
 <h4>ProjectResourcesBrowser._createPopupMenus</h4>
 <b>_createPopupMenus</b>(<i></i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#111;v&#101;&#114;&#108;&#111;&#97;&#100;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#116;&#104;&#101; &#112;&#111;&#112;&#117;&#112; &#109;&#101;&#110;&#117;.
+        Protected overloaded method to generate the popup menu.
 </p><a NAME="ProjectResourcesBrowser._initHookMethods" ID="ProjectResourcesBrowser._initHookMethods"></a>
 <h4>ProjectResourcesBrowser._initHookMethods</h4>
 <b>_initHookMethods</b>(<i></i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101; &#116;&#104;&#101; &#104;&#111;&#111;&#107;&#115; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y.
+        Protected method to initialize the hooks dictionary.
 </p><p>
-        &#83;&#117;&#112;&#112;&#111;&#114;&#116;&#101;&#100; &#104;&#111;&#111;&#107; &#109;&#101;&#116;&#104;&#111;&#100;&#115; &#97;&#114;&#101;&#58;
-        &#60;&#117;&#108;&#62;
-        &#60;&#108;&#105;&#62;&#99;&#111;&#109;&#112;&#105;&#108;&#101;&#82;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#58; &#116;&#97;&#107;&#101;&#115; &#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101; &#97;&#115; &#112;&#97;&#114;&#97;&#109;&#101;&#116;&#101;&#114;&#60;/&#108;&#105;&#62;
-        &#60;&#108;&#105;&#62;&#99;&#111;&#109;&#112;&#105;&#108;&#101;&#65;&#108;&#108;&#82;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115;&#58; &#116;&#97;&#107;&#101;&#115; &#108;&#105;&#115;&#116; &#111;&#102; &#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101;&#115; &#97;&#115; &#112;&#97;&#114;&#97;&#109;&#101;&#116;&#101;&#114;&#60;/&#108;&#105;&#62;
-        &#60;&#108;&#105;&#62;&#99;&#111;&#109;&#112;&#105;&#108;&#101;&#67;&#104;&#97;&#110;&#103;&#101;&#100;&#82;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115;&#58; &#116;&#97;&#107;&#101;&#115; &#108;&#105;&#115;&#116; &#111;&#102; &#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101;&#115; &#97;&#115; &#112;&#97;&#114;&#97;&#109;&#101;&#116;&#101;&#114;&#60;/&#108;&#105;&#62;
-        &#60;&#108;&#105;&#62;&#99;&#111;&#109;&#112;&#105;&#108;&#101;&#83;&#101;&#108;&#101;&#99;&#116;&#101;&#100;&#82;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115;&#58; &#116;&#97;&#107;&#101;&#115; &#108;&#105;&#115;&#116; &#111;&#102; &#97;&#108;&#108; &#102;&#111;&#114;&#109; &#102;&#105;&#108;&#101;&#110;&#97;&#109;&#101;&#115; &#97;&#115; &#112;&#97;&#114;&#97;&#109;&#101;&#116;&#101;&#114;&#60;/&#108;&#105;&#62;
-        &#60;&#108;&#105;&#62;&#110;&#101;w&#82;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#58; &#116;&#97;&#107;&#101;&#115; &#102;&#117;&#108;&#108; &#100;&#105;&#114;&#101;&#99;&#116;&#111;&#114;y &#112;&#97;&#116;&#104; &#111;&#102; &#110;&#101;w &#102;&#105;&#108;&#101; &#97;&#115; &#112;&#97;&#114;&#97;&#109;&#101;&#116;&#101;&#114;&#60;/&#108;&#105;&#62;
-        &#60;/&#117;&#108;&#62;
+        Supported hook methods are:
+        <ul>
+        <li>compileResource: takes filename as parameter</li>
+        <li>compileAllResources: takes list of filenames as parameter</li>
+        <li>compileChangedResources: takes list of filenames as parameter</li>
+        <li>compileSelectedResources: takes list of all form filenames as parameter</li>
+        <li>newResource: takes full directory path of new file as parameter</li>
+        </ul>
 </p><p>
-        &#60;&#98;&#62;&#78;&#111;&#116;&#101;&#60;/&#98;&#62;&#58; &#70;&#105;&#108;&#101;&#110;&#97;&#109;&#101;&#115; &#97;&#114;&#101; &#114;&#101;&#108;&#97;&#116;&#105;v&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#105;&#114;&#101;&#99;&#116;&#111;&#114;y, &#105;&#102; &#110;&#111;&#116;
-        &#115;&#112;&#101;&#99;&#105;&#102;&#105;&#101;&#100; &#100;&#105;&#102;&#102;&#101;&#114;&#101;&#110;&#116;&#108;y.
+        <b>Note</b>: Filenames are relative to the project directory, if not
+        specified differently.
 </p><a NAME="ProjectResourcesBrowser._openItem" ID="ProjectResourcesBrowser._openItem"></a>
 <h4>ProjectResourcesBrowser._openItem</h4>
 <b>_openItem</b>(<i></i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#111;&#112;&#101;&#110; &#112;&#111;&#112;&#117;&#112; &#109;&#101;&#110;&#117; &#101;&#110;&#116;&#114;y.
+        Protected slot to handle the open popup menu entry.
 </p><a NAME="ProjectResourcesBrowser.compileChangedResources" ID="ProjectResourcesBrowser.compileChangedResources"></a>
 <h4>ProjectResourcesBrowser.compileChangedResources</h4>
 <b>compileChangedResources</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#111;&#109;&#112;&#105;&#108;&#101; &#97;&#108;&#108; &#99;&#104;&#97;&#110;&#103;&#101;&#100; &#114;&#101;&#115;&#111;&#117;&#114;&#99;&#101;&#115; &#116;&#111; &#115;&#111;&#117;&#114;&#99;&#101; &#102;&#105;&#108;&#101;&#115;.
+        Public method to compile all changed resources to source files.
 </p><a NAME="ProjectResourcesBrowser.handlePreferencesChanged" ID="ProjectResourcesBrowser.handlePreferencesChanged"></a>
 <h4>ProjectResourcesBrowser.handlePreferencesChanged</h4>
 <b>handlePreferencesChanged</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#117;&#115;&#101;&#100; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#112;&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101;&#115;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.
+        Public slot used to handle the preferencesChanged signal.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

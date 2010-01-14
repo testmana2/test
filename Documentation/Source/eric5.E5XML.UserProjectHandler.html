@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.E5XML.UserProjectHandler</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#114;&#101;&#97;&#100;&#105;&#110;&#103; &#97;&#110; &#88;&#77;&#76; &#117;&#115;&#101;&#114; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#112;&#114;&#111;&#112;&#101;&#114;&#116;&#105;&#101;&#115; &#102;&#105;&#108;&#101;.
+Module implementing the handler class for reading an XML user project properties file.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#UserProjectHandler">UserProjectHandler</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#115;&#97;x &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#116;&#111; &#114;&#101;&#97;&#100; &#97;&#110; &#88;&#77;&#76; &#117;&#115;&#101;&#114; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#112;&#114;&#111;&#112;&#101;&#114;&#116;&#105;&#101;&#115; &#102;&#105;&#108;&#101;.</td>
+<td>Class implementing a sax handler to read an XML user project properties file.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="UserProjectHandler" ID="UserProjectHandler"></a>
 <h2>UserProjectHandler</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#115;&#97;x &#104;&#97;&#110;&#100;&#108;&#101;&#114; &#116;&#111; &#114;&#101;&#97;&#100; &#97;&#110; &#88;&#77;&#76; &#117;&#115;&#101;&#114; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#112;&#114;&#111;&#112;&#101;&#114;&#116;&#105;&#101;&#115; &#102;&#105;&#108;&#101;.
+    Class implementing a sax handler to read an XML user project properties file.
 </p>
 <h3>Derived from</h3>
 XMLHandlerBase
@@ -55,74 +55,74 @@ XMLHandlerBase
 <table>
 <tr>
 <td><a href="#UserProjectHandler.__init__">UserProjectHandler</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#UserProjectHandler.endVcsType">endVcsType</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#86;&#99;&#115;&#84;y&#112;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.</td>
+<td>Handler method for the "VcsType" end tag.</td>
 </tr><tr>
 <td><a href="#UserProjectHandler.getVersion">getVersion</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#117;&#115;&#101;&#114; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#102;&#105;&#108;&#101;.</td>
+<td>Public method to retrieve the version of the user project file.</td>
 </tr><tr>
 <td><a href="#UserProjectHandler.startDocumentProject">startDocumentProject</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.</td>
+<td>Handler called, when the document parsing is started.</td>
 </tr><tr>
 <td><a href="#UserProjectHandler.startUserProject">startUserProject</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#85;&#115;&#101;&#114;&#80;&#114;&#111;&#106;&#101;&#99;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "UserProject" start tag.</td>
 </tr><tr>
 <td><a href="#UserProjectHandler.startVcsStatusMonitorInterval">startVcsStatusMonitorInterval</a></td>
-<td>&#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#86;&#99;&#115;&#83;&#116;&#97;&#116;&#117;&#115;&#77;&#111;&#110;&#105;&#116;&#111;&#114;&#73;&#110;&#116;&#101;&#114;v&#97;&#108;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.</td>
+<td>Handler method for the "VcsStatusMonitorInterval" start tag.</td>
 </tr>
 </table>
 <a NAME="UserProjectHandler.__init__" ID="UserProjectHandler.__init__"></a>
 <h4>UserProjectHandler (Constructor)</h4>
 <b>UserProjectHandler</b>(<i>project</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>project</i></dt>
 <dd>
-&#82;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#111;&#98;&#106;&#101;&#99;&#116; &#116;&#111; &#115;&#116;&#111;&#114;&#101; &#116;&#104;&#101;
-                &#105;&#110;&#102;&#111;&#114;&#109;&#97;&#116;&#105;&#111;&#110; &#105;&#110;&#116;&#111;.
+Reference to the project object to store the
+                information into.
 </dd>
 </dl><a NAME="UserProjectHandler.endVcsType" ID="UserProjectHandler.endVcsType"></a>
 <h4>UserProjectHandler.endVcsType</h4>
 <b>endVcsType</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#86;&#99;&#115;&#84;y&#112;&#101;" &#101;&#110;&#100; &#116;&#97;&#103;.
+        Handler method for the "VcsType" end tag.
 </p><a NAME="UserProjectHandler.getVersion" ID="UserProjectHandler.getVersion"></a>
 <h4>UserProjectHandler.getVersion</h4>
 <b>getVersion</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#117;&#115;&#101;&#114; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#102;&#105;&#108;&#101;.
+        Public method to retrieve the version of the user project file.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#83;&#116;&#114;&#105;&#110;&#103; &#99;&#111;&#110;&#116;&#97;&#105;&#110;&#105;&#110;&#103; &#116;&#104;&#101; v&#101;&#114;&#115;&#105;&#111;&#110; &#110;&#117;&#109;&#98;&#101;&#114;.
+String containing the version number.
 </dd>
 </dl><a NAME="UserProjectHandler.startDocumentProject" ID="UserProjectHandler.startDocumentProject"></a>
 <h4>UserProjectHandler.startDocumentProject</h4>
 <b>startDocumentProject</b>(<i></i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#112;&#97;&#114;&#115;&#105;&#110;&#103; &#105;&#115; &#115;&#116;&#97;&#114;&#116;&#101;&#100;.
+        Handler called, when the document parsing is started.
 </p><a NAME="UserProjectHandler.startUserProject" ID="UserProjectHandler.startUserProject"></a>
 <h4>UserProjectHandler.startUserProject</h4>
 <b>startUserProject</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#85;&#115;&#101;&#114;&#80;&#114;&#111;&#106;&#101;&#99;&#116;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "UserProject" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl><a NAME="UserProjectHandler.startVcsStatusMonitorInterval" ID="UserProjectHandler.startVcsStatusMonitorInterval"></a>
 <h4>UserProjectHandler.startVcsStatusMonitorInterval</h4>
 <b>startVcsStatusMonitorInterval</b>(<i>attrs</i>)
 <p>
-        &#72;&#97;&#110;&#100;&#108;&#101;&#114; &#109;&#101;&#116;&#104;&#111;&#100; &#102;&#111;&#114; &#116;&#104;&#101; "&#86;&#99;&#115;&#83;&#116;&#97;&#116;&#117;&#115;&#77;&#111;&#110;&#105;&#116;&#111;&#114;&#73;&#110;&#116;&#101;&#114;v&#97;&#108;" &#115;&#116;&#97;&#114;&#116; &#116;&#97;&#103;.
+        Handler method for the "VcsStatusMonitorInterval" start tag.
 </p><dl>
 <dt><i>attrs</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#103; &#97;&#116;&#116;&#114;&#105;&#98;&#117;&#116;&#101;&#115;
+list of tag attributes
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

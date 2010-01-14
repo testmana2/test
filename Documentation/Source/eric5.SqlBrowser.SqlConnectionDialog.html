@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.SqlBrowser.SqlConnectionDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#101;&#110;&#116;&#101;&#114; &#116;&#104;&#101; &#99;&#111;&#110;&#110;&#101;&#99;&#116;&#105;&#111;&#110; &#112;&#97;&#114;&#97;&#109;&#101;&#116;&#101;&#114;&#115;.
+Module implementing a dialog to enter the connection parameters.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#SqlConnectionDialog">SqlConnectionDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#101;&#110;&#116;&#101;&#114; &#116;&#104;&#101; &#99;&#111;&#110;&#110;&#101;&#99;&#116;&#105;&#111;&#110; &#112;&#97;&#114;&#97;&#109;&#101;&#116;&#101;&#114;&#115;.</td>
+<td>Class implementing a dialog to enter the connection parameters.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="SqlConnectionDialog" ID="SqlConnectionDialog"></a>
 <h2>SqlConnectionDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#101;&#110;&#116;&#101;&#114; &#116;&#104;&#101; &#99;&#111;&#110;&#110;&#101;&#99;&#116;&#105;&#111;&#110; &#112;&#97;&#114;&#97;&#109;&#101;&#116;&#101;&#114;&#115;.
+    Class implementing a dialog to enter the connection parameters.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_SqlConnectionDialog
@@ -55,61 +55,61 @@ QDialog, Ui_SqlConnectionDialog
 <table>
 <tr>
 <td><a href="#SqlConnectionDialog.__init__">SqlConnectionDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#SqlConnectionDialog.__updateDialog">__updateDialog</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; &#100;&#101;&#112;&#101;&#110;&#100;&#105;&#110;&#103; &#111;&#110; &#105;&#116;'&#115; &#99;&#111;&#110;&#116;&#101;&#110;&#116;&#115;.</td>
+<td>Private slot to update the dialog depending on it's contents.</td>
 </tr><tr>
 <td><a href="#SqlConnectionDialog.getData">getData</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#110;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#97;&#116;&#97;.</td>
+<td>Public method to retrieve the connection data.</td>
 </tr><tr>
 <td><a href="#SqlConnectionDialog.on_databaseEdit_textChanged">on_databaseEdit_textChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#116;&#104;&#101; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101; &#110;&#97;&#109;&#101;.</td>
+<td>Private slot handling the change of the database name.</td>
 </tr><tr>
 <td><a href="#SqlConnectionDialog.on_databaseFileButton_clicked">on_databaseFileButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101; &#102;&#105;&#108;&#101; v&#105;&#97; &#97; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Private slot to open a database file via a file selection dialog.</td>
 </tr><tr>
 <td><a href="#SqlConnectionDialog.on_driverCombo_activated">on_driverCombo_activated</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#111;&#102; &#97; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101; &#100;&#114;&#105;v&#101;&#114;.</td>
+<td>Private slot handling the selection of a database driver.</td>
 </tr>
 </table>
 <a NAME="SqlConnectionDialog.__init__" ID="SqlConnectionDialog.__init__"></a>
 <h4>SqlConnectionDialog (Constructor)</h4>
 <b>SqlConnectionDialog</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><a NAME="SqlConnectionDialog.__updateDialog" ID="SqlConnectionDialog.__updateDialog"></a>
 <h4>SqlConnectionDialog.__updateDialog</h4>
 <b>__updateDialog</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; &#100;&#101;&#112;&#101;&#110;&#100;&#105;&#110;&#103; &#111;&#110; &#105;&#116;'&#115; &#99;&#111;&#110;&#116;&#101;&#110;&#116;&#115;.
+        Private slot to update the dialog depending on it's contents.
 </p><a NAME="SqlConnectionDialog.getData" ID="SqlConnectionDialog.getData"></a>
 <h4>SqlConnectionDialog.getData</h4>
 <b>getData</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#99;&#111;&#110;&#110;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#97;&#116;&#97;.
+        Public method to retrieve the connection data.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#116;&#117;&#112;&#108;&#101; &#103;&#105;v&#105;&#110;&#103; &#116;&#104;&#101; &#100;&#114;&#105;v&#101;&#114; &#110;&#97;&#109;&#101; (&#81;&#83;&#116;&#114;&#105;&#110;&#103;), &#116;&#104;&#101; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101; &#110;&#97;&#109;&#101; (&#81;&#83;&#116;&#114;&#105;&#110;&#103;),
-            &#116;&#104;&#101; &#117;&#115;&#101;&#114; &#110;&#97;&#109;&#101; (&#81;&#83;&#116;&#114;&#105;&#110;&#103;), &#116;&#104;&#101; &#112;&#97;&#115;&#115;w&#111;&#114;&#100; (&#81;&#83;&#116;&#114;&#105;&#110;&#103;), &#116;&#104;&#101; &#104;&#111;&#115;&#116; &#110;&#97;&#109;&#101; (&#81;&#83;&#116;&#114;&#105;&#110;&#103;)
-            &#97;&#110;&#100; &#116;&#104;&#101; &#112;&#111;&#114;&#116; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+tuple giving the driver name (QString), the database name (QString),
+            the user name (QString), the password (QString), the host name (QString)
+            and the port (integer)
 </dd>
 </dl><a NAME="SqlConnectionDialog.on_databaseEdit_textChanged" ID="SqlConnectionDialog.on_databaseEdit_textChanged"></a>
 <h4>SqlConnectionDialog.on_databaseEdit_textChanged</h4>
 <b>on_databaseEdit_textChanged</b>(<i>p0</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#116;&#104;&#101; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101; &#110;&#97;&#109;&#101;.
+        Private slot handling the change of the database name.
 </p><a NAME="SqlConnectionDialog.on_databaseFileButton_clicked" ID="SqlConnectionDialog.on_databaseFileButton_clicked"></a>
 <h4>SqlConnectionDialog.on_databaseFileButton_clicked</h4>
 <b>on_databaseFileButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101; &#102;&#105;&#108;&#101; v&#105;&#97; &#97; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Private slot to open a database file via a file selection dialog.
 </p><a NAME="SqlConnectionDialog.on_driverCombo_activated" ID="SqlConnectionDialog.on_driverCombo_activated"></a>
 <h4>SqlConnectionDialog.on_driverCombo_activated</h4>
 <b>on_driverCombo_activated</b>(<i>txt</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#111;&#102; &#97; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101; &#100;&#114;&#105;v&#101;&#114;.
+        Private slot handling the selection of a database driver.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

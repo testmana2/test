@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Helpviewer.Network.NetworkAccessManagerProxy</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#110;&#101;&#116;w&#111;&#114;&#107; &#97;&#99;&#99;&#101;&#115;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114; &#112;&#114;&#111;xy &#102;&#111;&#114; w&#101;&#98; &#112;&#97;&#103;&#101;&#115;.
+Module implementing a network access manager proxy for web pages.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#NetworkAccessManagerProxy">NetworkAccessManagerProxy</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#110;&#101;&#116;w&#111;&#114;&#107; &#97;&#99;&#99;&#101;&#115;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114; &#112;&#114;&#111;xy &#102;&#111;&#114; w&#101;&#98; &#112;&#97;&#103;&#101;&#115;.</td>
+<td>Class implementing a network access manager proxy for web pages.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="NetworkAccessManagerProxy" ID="NetworkAccessManagerProxy"></a>
 <h2>NetworkAccessManagerProxy</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#110;&#101;&#116;w&#111;&#114;&#107; &#97;&#99;&#99;&#101;&#115;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114; &#112;&#114;&#111;xy &#102;&#111;&#114; w&#101;&#98; &#112;&#97;&#103;&#101;&#115;.
+    Class implementing a network access manager proxy for web pages.
 </p>
 <h3>Derived from</h3>
 QNetworkAccessManager
@@ -55,70 +55,70 @@ QNetworkAccessManager
 <table>
 <tr>
 <td><a href="#NetworkAccessManagerProxy.__init__">NetworkAccessManagerProxy</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#NetworkAccessManagerProxy.createRequest">createRequest</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97; &#114;&#101;&#113;&#117;&#101;&#115;&#116;.</td>
+<td>Protected method to create a request.</td>
 </tr><tr>
 <td><a href="#NetworkAccessManagerProxy.setPrimaryNetworkAccessManager">setPrimaryNetworkAccessManager</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#112;&#114;&#105;&#109;&#97;&#114;y &#110;&#101;&#116;w&#111;&#114;&#107; &#97;&#99;&#99;&#101;&#115;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114;.</td>
+<td>Public method to set the primary network access manager.</td>
 </tr><tr>
 <td><a href="#NetworkAccessManagerProxy.setWebPage">setWebPage</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#97; w&#101;&#98; &#112;&#97;&#103;&#101;.</td>
+<td>Public method to set the reference to a web page.</td>
 </tr>
 </table>
 <a NAME="NetworkAccessManagerProxy.__init__" ID="NetworkAccessManagerProxy.__init__"></a>
 <h4>NetworkAccessManagerProxy (Constructor)</h4>
 <b>NetworkAccessManagerProxy</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; &#111;&#98;&#106;&#101;&#99;&#116; (&#81;&#79;&#98;&#106;&#101;&#99;&#116;)
+reference to the parent object (QObject)
 </dd>
 </dl><a NAME="NetworkAccessManagerProxy.createRequest" ID="NetworkAccessManagerProxy.createRequest"></a>
 <h4>NetworkAccessManagerProxy.createRequest</h4>
 <b>createRequest</b>(<i>op, request, outgoingData = None</i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#97; &#114;&#101;&#113;&#117;&#101;&#115;&#116;.
+        Protected method to create a request.
 </p><dl>
 <dt><i>op</i></dt>
 <dd>
-&#116;&#104;&#101; &#111;&#112;&#101;&#114;&#97;&#116;&#105;&#111;&#110; &#116;&#111; &#98;&#101; &#112;&#101;&#114;&#102;&#111;&#114;&#109;&#101;&#100; (&#81;&#78;&#101;&#116;w&#111;&#114;&#107;&#65;&#99;&#99;&#101;&#115;&#115;&#77;&#97;&#110;&#97;&#103;&#101;&#114;.&#79;&#112;&#101;&#114;&#97;&#116;&#105;&#111;&#110;)
+the operation to be performed (QNetworkAccessManager.Operation)
 </dd><dt><i>request</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#114;&#101;&#113;&#117;&#101;&#115;&#116; &#111;&#98;&#106;&#101;&#99;&#116; (&#81;&#78;&#101;&#116;w&#111;&#114;&#107;&#82;&#101;&#113;&#117;&#101;&#115;&#116;)
+reference to the request object (QNetworkRequest)
 </dd><dt><i>outgoingData</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#97;&#110; &#73;&#79;&#68;&#101;v&#105;&#99;&#101; &#99;&#111;&#110;&#116;&#97;&#105;&#110;&#105;&#110;&#103; &#100;&#97;&#116;&#97; &#116;&#111; &#98;&#101; &#115;&#101;&#110;&#116;
-            (&#81;&#73;&#79;&#68;&#101;v&#105;&#99;&#101;)
+reference to an IODevice containing data to be sent
+            (QIODevice)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#99;&#114;&#101;&#97;&#116;&#101;&#100; &#114;&#101;&#112;&#108;y &#111;&#98;&#106;&#101;&#99;&#116; (&#81;&#78;&#101;&#116;w&#111;&#114;&#107;&#82;&#101;&#112;&#108;y)
+reference to the created reply object (QNetworkReply)
 </dd>
 </dl><a NAME="NetworkAccessManagerProxy.setPrimaryNetworkAccessManager" ID="NetworkAccessManagerProxy.setPrimaryNetworkAccessManager"></a>
 <h4>NetworkAccessManagerProxy.setPrimaryNetworkAccessManager</h4>
 <b>setPrimaryNetworkAccessManager</b>(<i>manager</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#112;&#114;&#105;&#109;&#97;&#114;y &#110;&#101;&#116;w&#111;&#114;&#107; &#97;&#99;&#99;&#101;&#115;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114;.
+        Public method to set the primary network access manager.
 </p><dl>
 <dt><i>manager</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#110;&#101;&#116;w&#111;&#114;&#107; &#97;&#99;&#99;&#101;&#115;&#115; &#109;&#97;&#110;&#97;&#103;&#101;&#114; &#111;&#98;&#106;&#101;&#99;&#116;
-            (&#81;&#78;&#101;&#116;w&#111;&#114;&#107;&#65;&#99;&#99;&#101;&#115;&#115;&#77;&#97;&#110;&#97;&#103;&#101;&#114;)
+reference to the network access manager object
+            (QNetworkAccessManager)
 </dd>
 </dl><a NAME="NetworkAccessManagerProxy.setWebPage" ID="NetworkAccessManagerProxy.setWebPage"></a>
 <h4>NetworkAccessManagerProxy.setWebPage</h4>
 <b>setWebPage</b>(<i>page</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#97; w&#101;&#98; &#112;&#97;&#103;&#101;.
+        Public method to set the reference to a web page.
 </p><dl>
 <dt><i>page</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; w&#101;&#98; &#112;&#97;&#103;&#101; &#111;&#98;&#106;&#101;&#99;&#116; (&#72;&#101;&#108;&#112;&#87;&#101;&#98;&#80;&#97;&#103;&#101;)
+reference to the web page object (HelpWebPage)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

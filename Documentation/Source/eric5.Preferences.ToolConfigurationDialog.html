@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Preferences.ToolConfigurationDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#115; &#109;&#101;&#110;&#117;.
+Module implementing a configuration dialog for the tools menu.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#ToolConfigurationDialog">ToolConfigurationDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#115; &#109;&#101;&#110;&#117;.</td>
+<td>Class implementing a configuration dialog for the tools menu.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="ToolConfigurationDialog" ID="ToolConfigurationDialog"></a>
 <h2>ToolConfigurationDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#115; &#109;&#101;&#110;&#117;.
+    Class implementing a configuration dialog for the tools menu.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_ToolConfigurationDialog
@@ -55,228 +55,228 @@ QDialog, Ui_ToolConfigurationDialog
 <table>
 <tr>
 <td><a href="#ToolConfigurationDialog.__init__">ToolConfigurationDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.__findModeIndex">__findModeIndex</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#109;&#111;&#100;&#101; &#105;&#110;&#100;&#101;x &#98;y &#105;&#116;&#115; &#115;&#104;&#111;&#114;&#116; &#110;&#97;&#109;&#101;.</td>
+<td>Private method to find the mode index by its short name.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.__swap">__swap</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#117;&#115;&#101;&#100; &#116;w&#111; &#115;w&#97;&#112; &#116;w&#111; &#108;&#105;&#115;&#116; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#103;&#105;v&#101;&#110; &#98;y &#116;&#104;&#101;&#105;&#114; &#105;&#110;&#100;&#101;x.</td>
+<td>Private method used two swap two list entries given by their index.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.__toolEntryChanged">__toolEntryChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#97;&#99;&#116;&#105;&#111;&#110;&#115; w&#104;&#101;&#110; &#97; &#116;&#111;&#111;&#108; &#101;&#110;&#116;&#114;y w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.</td>
+<td>Private slot to perform actions when a tool entry was changed.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.getToollist">getToollist</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#115; &#108;&#105;&#115;&#116;.</td>
+<td>Public method to retrieve the tools list.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_addButton_clicked">on_addButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97; &#110;&#101;w &#101;&#110;&#116;&#114;y.</td>
+<td>Private slot to add a new entry.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_argumentsEdit_textChanged">on_argumentsEdit_textChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#97;&#114;&#103;&#117;&#109;&#101;&#110;&#116;&#115; &#115;&#116;&#114;&#105;&#110;&#103; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.</td>
+<td>Private slot called, when the arguments string was changed.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_changeButton_clicked">on_changeButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#104;&#97;&#110;&#103;&#101; &#97;&#110; &#101;&#110;&#116;&#114;y.</td>
+<td>Private slot to change an entry.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_deleteButton_clicked">on_deleteButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;y.</td>
+<td>Private slot to delete the selected entry.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_downButton_clicked">on_downButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#100;&#111;w&#110; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot to move an entry down in the list.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_executableButton_clicked">on_executableButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#101;x&#101;&#99;&#117;&#116;&#97;&#98;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; v&#105;&#97; &#97; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Private slot to handle the executable selection via a file selection dialog.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_executableEdit_textChanged">on_executableEdit_textChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#101;x&#101;&#99;&#117;&#116;&#97;&#98;&#108;&#101; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.</td>
+<td>Private slot called, when the executable was changed.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_iconButton_clicked">on_iconButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#105;&#99;&#111;&#110; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; v&#105;&#97; &#97; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Private slot to handle the icon selection via a file selection dialog.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_iconEdit_textChanged">on_iconEdit_textChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#105;&#99;&#111;&#110; &#112;&#97;&#116;&#104; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.</td>
+<td>Private slot called, when the icon path was changed.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_menuEdit_textChanged">on_menuEdit_textChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#109;&#101;&#110;&#117; &#116;&#101;x&#116; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.</td>
+<td>Private slot called, when the menu text was changed.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_newButton_clicked">on_newButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#108;&#101;&#97;&#114; &#97;&#108;&#108; &#101;&#110;&#116;&#114;y &#102;&#105;&#101;&#108;&#100;&#115;.</td>
+<td>Private slot to clear all entry fields.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_redirectCombo_currentIndexChanged">on_redirectCombo_currentIndexChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#114;&#101;&#100;&#105;&#114;&#101;&#99;&#116;&#105;&#111;&#110; &#109;&#111;&#100;&#101; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.</td>
+<td>Private slot called, when the redirection mode was changed.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_separatorButton_clicked">on_separatorButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97; &#109;&#101;&#110;&#117; &#115;&#101;&#112;&#97;&#114;&#97;&#116;&#111;&#114;.</td>
+<td>Private slot to add a menu separator.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_toolsList_currentRowChanged">on_toolsList_currentRowChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#108;&#105;&#110;&#101;&#101;&#100;&#105;&#116;&#115; &#100;&#101;&#112;&#101;&#110;&#100;&#105;&#110;&#103; &#111;&#110; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;y.</td>
+<td>Private slot to set the lineedits depending on the selected entry.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_upButton_clicked">on_upButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#117;&#112; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private slot to move an entry up in the list.</td>
 </tr>
 </table>
 <a NAME="ToolConfigurationDialog.__init__" ID="ToolConfigurationDialog.__init__"></a>
 <h4>ToolConfigurationDialog (Constructor)</h4>
 <b>ToolConfigurationDialog</b>(<i>toollist, parent=None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>toollist</i></dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#101;&#100; &#116;&#111;&#111;&#108;&#115;
+list of configured tools
 </dd><dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget (QWidget)
 </dd>
 </dl><a NAME="ToolConfigurationDialog.__findModeIndex" ID="ToolConfigurationDialog.__findModeIndex"></a>
 <h4>ToolConfigurationDialog.__findModeIndex</h4>
 <b>__findModeIndex</b>(<i>shortName</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#102;&#105;&#110;&#100; &#116;&#104;&#101; &#109;&#111;&#100;&#101; &#105;&#110;&#100;&#101;x &#98;y &#105;&#116;&#115; &#115;&#104;&#111;&#114;&#116; &#110;&#97;&#109;&#101;.
+        Private method to find the mode index by its short name.
 </p><dl>
 <dt><i>shortName</i></dt>
 <dd>
-&#115;&#104;&#111;&#114;&#116; &#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#109;&#111;&#100;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+short name of the mode (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#116;&#104;&#101; &#109;&#111;&#100;&#101; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+index of the mode (integer)
 </dd>
 </dl><a NAME="ToolConfigurationDialog.__swap" ID="ToolConfigurationDialog.__swap"></a>
 <h4>ToolConfigurationDialog.__swap</h4>
 <b>__swap</b>(<i>itm1, itm2</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#117;&#115;&#101;&#100; &#116;w&#111; &#115;w&#97;&#112; &#116;w&#111; &#108;&#105;&#115;&#116; &#101;&#110;&#116;&#114;&#105;&#101;&#115; &#103;&#105;v&#101;&#110; &#98;y &#116;&#104;&#101;&#105;&#114; &#105;&#110;&#100;&#101;x.
+        Private method used two swap two list entries given by their index.
 </p><dl>
 <dt><i>itm1</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#102;&#105;&#114;&#115;&#116; &#101;&#110;&#116;&#114;y (&#105;&#110;&#116;)
+index of first entry (int)
 </dd><dt><i>itm2</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#115;&#101;&#99;&#111;&#110;&#100; &#101;&#110;&#116;&#114;y (&#105;&#110;&#116;)
+index of second entry (int)
 </dd>
 </dl><a NAME="ToolConfigurationDialog.__toolEntryChanged" ID="ToolConfigurationDialog.__toolEntryChanged"></a>
 <h4>ToolConfigurationDialog.__toolEntryChanged</h4>
 <b>__toolEntryChanged</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#97;&#99;&#116;&#105;&#111;&#110;&#115; w&#104;&#101;&#110; &#97; &#116;&#111;&#111;&#108; &#101;&#110;&#116;&#114;y w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.
+        Private slot to perform actions when a tool entry was changed.
 </p><a NAME="ToolConfigurationDialog.getToollist" ID="ToolConfigurationDialog.getToollist"></a>
 <h4>ToolConfigurationDialog.getToollist</h4>
 <b>getToollist</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#116;&#111;&#111;&#108;&#115; &#108;&#105;&#115;&#116;. 
+        Public method to retrieve the tools list. 
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#97; &#108;&#105;&#115;&#116; &#111;&#102; &#116;&#117;&#112;&#108;&#101;&#115; &#99;&#111;&#110;&#116;&#97;&#105;&#110;&#105;&#110;&#103; &#116;&#104;&#101; &#109;&#101;&#110;&#117; &#116;&#101;x&#116;, &#116;&#104;&#101; &#101;x&#101;&#99;&#117;&#116;&#97;&#98;&#108;&#101;,
-            &#116;&#104;&#101; &#101;x&#101;&#99;&#117;&#116;&#97;&#98;&#108;&#101;&#115; &#97;&#114;&#103;&#117;&#109;&#101;&#110;&#116;&#115; &#97;&#110;&#100; &#97; &#114;&#101;&#100;&#105;&#114;&#101;&#99;&#116;&#105;&#111;&#110; &#102;&#108;&#97;&#103;
+a list of tuples containing the menu text, the executable,
+            the executables arguments and a redirection flag
 </dd>
 </dl><a NAME="ToolConfigurationDialog.on_addButton_clicked" ID="ToolConfigurationDialog.on_addButton_clicked"></a>
 <h4>ToolConfigurationDialog.on_addButton_clicked</h4>
 <b>on_addButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97; &#110;&#101;w &#101;&#110;&#116;&#114;y.
+        Private slot to add a new entry.
 </p><a NAME="ToolConfigurationDialog.on_argumentsEdit_textChanged" ID="ToolConfigurationDialog.on_argumentsEdit_textChanged"></a>
 <h4>ToolConfigurationDialog.on_argumentsEdit_textChanged</h4>
 <b>on_argumentsEdit_textChanged</b>(<i>text</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#97;&#114;&#103;&#117;&#109;&#101;&#110;&#116;&#115; &#115;&#116;&#114;&#105;&#110;&#103; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.
+        Private slot called, when the arguments string was changed.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#104;&#101; &#110;&#101;w &#116;&#101;x&#116; (&#115;&#116;&#114;&#105;&#110;&#103;) (&#105;&#103;&#110;&#111;&#114;&#101;&#100;)
+the new text (string) (ignored)
 </dd>
 </dl><a NAME="ToolConfigurationDialog.on_changeButton_clicked" ID="ToolConfigurationDialog.on_changeButton_clicked"></a>
 <h4>ToolConfigurationDialog.on_changeButton_clicked</h4>
 <b>on_changeButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#104;&#97;&#110;&#103;&#101; &#97;&#110; &#101;&#110;&#116;&#114;y.
+        Private slot to change an entry.
 </p><a NAME="ToolConfigurationDialog.on_deleteButton_clicked" ID="ToolConfigurationDialog.on_deleteButton_clicked"></a>
 <h4>ToolConfigurationDialog.on_deleteButton_clicked</h4>
 <b>on_deleteButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#100;&#101;&#108;&#101;&#116;&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;y.
+        Private slot to delete the selected entry.
 </p><a NAME="ToolConfigurationDialog.on_downButton_clicked" ID="ToolConfigurationDialog.on_downButton_clicked"></a>
 <h4>ToolConfigurationDialog.on_downButton_clicked</h4>
 <b>on_downButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#100;&#111;w&#110; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private slot to move an entry down in the list.
 </p><a NAME="ToolConfigurationDialog.on_executableButton_clicked" ID="ToolConfigurationDialog.on_executableButton_clicked"></a>
 <h4>ToolConfigurationDialog.on_executableButton_clicked</h4>
 <b>on_executableButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#101;x&#101;&#99;&#117;&#116;&#97;&#98;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; v&#105;&#97; &#97; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Private slot to handle the executable selection via a file selection dialog.
 </p><a NAME="ToolConfigurationDialog.on_executableEdit_textChanged" ID="ToolConfigurationDialog.on_executableEdit_textChanged"></a>
 <h4>ToolConfigurationDialog.on_executableEdit_textChanged</h4>
 <b>on_executableEdit_textChanged</b>(<i>text</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#101;x&#101;&#99;&#117;&#116;&#97;&#98;&#108;&#101; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.
+        Private slot called, when the executable was changed.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#104;&#101; &#110;&#101;w &#116;&#101;x&#116; (&#115;&#116;&#114;&#105;&#110;&#103;) (&#105;&#103;&#110;&#111;&#114;&#101;&#100;)
+the new text (string) (ignored)
 </dd>
 </dl><a NAME="ToolConfigurationDialog.on_iconButton_clicked" ID="ToolConfigurationDialog.on_iconButton_clicked"></a>
 <h4>ToolConfigurationDialog.on_iconButton_clicked</h4>
 <b>on_iconButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#105;&#99;&#111;&#110; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; v&#105;&#97; &#97; &#102;&#105;&#108;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Private slot to handle the icon selection via a file selection dialog.
 </p><a NAME="ToolConfigurationDialog.on_iconEdit_textChanged" ID="ToolConfigurationDialog.on_iconEdit_textChanged"></a>
 <h4>ToolConfigurationDialog.on_iconEdit_textChanged</h4>
 <b>on_iconEdit_textChanged</b>(<i>text</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#105;&#99;&#111;&#110; &#112;&#97;&#116;&#104; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.
+        Private slot called, when the icon path was changed.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#104;&#101; &#110;&#101;w &#116;&#101;x&#116; (&#115;&#116;&#114;&#105;&#110;&#103;) (&#105;&#103;&#110;&#111;&#114;&#101;&#100;)
+the new text (string) (ignored)
 </dd>
 </dl><a NAME="ToolConfigurationDialog.on_menuEdit_textChanged" ID="ToolConfigurationDialog.on_menuEdit_textChanged"></a>
 <h4>ToolConfigurationDialog.on_menuEdit_textChanged</h4>
 <b>on_menuEdit_textChanged</b>(<i>text</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#109;&#101;&#110;&#117; &#116;&#101;x&#116; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.
+        Private slot called, when the menu text was changed.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#104;&#101; &#110;&#101;w &#116;&#101;x&#116; (&#115;&#116;&#114;&#105;&#110;&#103;) (&#105;&#103;&#110;&#111;&#114;&#101;&#100;)
+the new text (string) (ignored)
 </dd>
 </dl><a NAME="ToolConfigurationDialog.on_newButton_clicked" ID="ToolConfigurationDialog.on_newButton_clicked"></a>
 <h4>ToolConfigurationDialog.on_newButton_clicked</h4>
 <b>on_newButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#99;&#108;&#101;&#97;&#114; &#97;&#108;&#108; &#101;&#110;&#116;&#114;y &#102;&#105;&#101;&#108;&#100;&#115;.
+        Private slot to clear all entry fields.
 </p><a NAME="ToolConfigurationDialog.on_redirectCombo_currentIndexChanged" ID="ToolConfigurationDialog.on_redirectCombo_currentIndexChanged"></a>
 <h4>ToolConfigurationDialog.on_redirectCombo_currentIndexChanged</h4>
 <b>on_redirectCombo_currentIndexChanged</b>(<i>index</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101; &#114;&#101;&#100;&#105;&#114;&#101;&#99;&#116;&#105;&#111;&#110; &#109;&#111;&#100;&#101; w&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.
+        Private slot called, when the redirection mode was changed.
 </p><dl>
 <dt><i>index</i></dt>
 <dd>
-&#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#109;&#111;&#100;&#101; &#105;&#110;&#100;&#101;x (&#105;&#110;&#116;&#101;&#103;&#101;&#114;) (&#105;&#103;&#110;&#111;&#114;&#101;&#100;)
+the selected mode index (integer) (ignored)
 </dd>
 </dl><a NAME="ToolConfigurationDialog.on_separatorButton_clicked" ID="ToolConfigurationDialog.on_separatorButton_clicked"></a>
 <h4>ToolConfigurationDialog.on_separatorButton_clicked</h4>
 <b>on_separatorButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#97; &#109;&#101;&#110;&#117; &#115;&#101;&#112;&#97;&#114;&#97;&#116;&#111;&#114;.
+        Private slot to add a menu separator.
 </p><a NAME="ToolConfigurationDialog.on_toolsList_currentRowChanged" ID="ToolConfigurationDialog.on_toolsList_currentRowChanged"></a>
 <h4>ToolConfigurationDialog.on_toolsList_currentRowChanged</h4>
 <b>on_toolsList_currentRowChanged</b>(<i>row</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#108;&#105;&#110;&#101;&#101;&#100;&#105;&#116;&#115; &#100;&#101;&#112;&#101;&#110;&#100;&#105;&#110;&#103; &#111;&#110; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;y.
+        Private slot to set the lineedits depending on the selected entry.
 </p><dl>
 <dt><i>row</i></dt>
 <dd>
-&#116;&#104;&#101; &#114;&#111;w &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#101;&#110;&#116;&#114;y (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+the row of the selected entry (integer)
 </dd>
 </dl><a NAME="ToolConfigurationDialog.on_upButton_clicked" ID="ToolConfigurationDialog.on_upButton_clicked"></a>
 <h4>ToolConfigurationDialog.on_upButton_clicked</h4>
 <b>on_upButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#109;&#111;v&#101; &#97;&#110; &#101;&#110;&#116;&#114;y &#117;&#112; &#105;&#110; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private slot to move an entry up in the list.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.IconEditor.IconEditorPalette</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#112;&#97;&#108;&#101;&#116;&#116;&#101; w&#105;&#100;&#103;&#101;&#116; &#102;&#111;&#114; &#116;&#104;&#101; &#105;&#99;&#111;&#110; &#101;&#100;&#105;&#116;&#111;&#114;.
+Module implementing a palette widget for the icon editor.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#IconEditorPalette">IconEditorPalette</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#112;&#97;&#108;&#101;&#116;&#116;&#101; w&#105;&#100;&#103;&#101;&#116; &#102;&#111;&#114; &#116;&#104;&#101; &#105;&#99;&#111;&#110; &#101;&#100;&#105;&#116;&#111;&#114;.</td>
+<td>Class implementing a palette widget for the icon editor.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,12 +43,12 @@ a { color: #AA5500; }
 <a NAME="IconEditorPalette" ID="IconEditorPalette"></a>
 <h2>IconEditorPalette</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#112;&#97;&#108;&#101;&#116;&#116;&#101; w&#105;&#100;&#103;&#101;&#116; &#102;&#111;&#114; &#116;&#104;&#101; &#105;&#99;&#111;&#110; &#101;&#100;&#105;&#116;&#111;&#114;.
+    Class implementing a palette widget for the icon editor.
 </p><h4>Signals</h4>
 <dl>
 <dt>colorSelected(QColor)</dt>
 <dd>
-&#101;&#109;&#105;&#116;&#116;&#101;&#100; &#97;&#102;&#116;&#101;&#114; &#97; &#110;&#101;w &#99;&#111;&#108;&#111;&#114; &#104;&#97;&#115; &#98;&#101;&#101;&#110; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100;
+emitted after a new color has been selected
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -61,56 +61,56 @@ QWidget
 <table>
 <tr>
 <td><a href="#IconEditorPalette.__init__">IconEditorPalette</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#IconEditorPalette.__alphaChanged">__alphaChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#116;&#114;&#97;&#99;&#107; &#99;&#104;&#97;&#110;&#103;&#101;&#115; &#111;&#102; &#116;&#104;&#101; &#97;&#108;&#112;&#104;&#97; &#99;&#104;&#97;&#110;&#110;&#101;&#108;.</td>
+<td>Private slot to track changes of the alpha channel.</td>
 </tr><tr>
 <td><a href="#IconEditorPalette.__selectColor">__selectColor</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#108;&#101;&#99;&#116; &#97; &#110;&#101;w &#100;&#114;&#97;w&#105;&#110;&#103; &#99;&#111;&#108;&#111;&#114;.</td>
+<td>Private slot to select a new drawing color.</td>
 </tr><tr>
 <td><a href="#IconEditorPalette.colorChanged">colorChanged</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#99;&#111;&#108;&#111;&#114; &#112;&#114;&#101;v&#105;&#101;w.</td>
+<td>Public slot to update the color preview.</td>
 </tr><tr>
 <td><a href="#IconEditorPalette.previewChanged">previewChanged</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#112;&#114;&#101;v&#105;&#101;w.</td>
+<td>Public slot to update the preview.</td>
 </tr>
 </table>
 <a NAME="IconEditorPalette.__init__" ID="IconEditorPalette.__init__"></a>
 <h4>IconEditorPalette (Constructor)</h4>
 <b>IconEditorPalette</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+reference to the parent widget (QWidget)
 </dd>
 </dl><a NAME="IconEditorPalette.__alphaChanged" ID="IconEditorPalette.__alphaChanged"></a>
 <h4>IconEditorPalette.__alphaChanged</h4>
 <b>__alphaChanged</b>(<i>val</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#116;&#114;&#97;&#99;&#107; &#99;&#104;&#97;&#110;&#103;&#101;&#115; &#111;&#102; &#116;&#104;&#101; &#97;&#108;&#112;&#104;&#97; &#99;&#104;&#97;&#110;&#110;&#101;&#108;.
+        Private slot to track changes of the alpha channel.
 </p><dl>
 <dt><i>val</i></dt>
 <dd>
-v&#97;&#108;&#117;&#101; &#111;&#102; &#116;&#104;&#101; &#97;&#108;&#112;&#104;&#97; &#99;&#104;&#97;&#110;&#110;&#101;&#108;
+value of the alpha channel
 </dd>
 </dl><a NAME="IconEditorPalette.__selectColor" ID="IconEditorPalette.__selectColor"></a>
 <h4>IconEditorPalette.__selectColor</h4>
 <b>__selectColor</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#108;&#101;&#99;&#116; &#97; &#110;&#101;w &#100;&#114;&#97;w&#105;&#110;&#103; &#99;&#111;&#108;&#111;&#114;.
+        Private slot to select a new drawing color.
 </p><a NAME="IconEditorPalette.colorChanged" ID="IconEditorPalette.colorChanged"></a>
 <h4>IconEditorPalette.colorChanged</h4>
 <b>colorChanged</b>(<i>color</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#99;&#111;&#108;&#111;&#114; &#112;&#114;&#101;v&#105;&#101;w.
+        Public slot to update the color preview.
 </p><a NAME="IconEditorPalette.previewChanged" ID="IconEditorPalette.previewChanged"></a>
 <h4>IconEditorPalette.previewChanged</h4>
 <b>previewChanged</b>(<i>pixmap</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#112;&#114;&#101;v&#105;&#101;w.
+        Public slot to update the preview.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

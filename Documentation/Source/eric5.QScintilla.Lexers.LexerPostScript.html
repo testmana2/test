@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.QScintilla.Lexers.LexerPostScript</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#80;&#111;&#115;&#116;&#83;&#99;&#114;&#105;&#112;&#116; &#108;&#101;x&#101;&#114; w&#105;&#116;&#104; &#115;&#111;&#109;&#101; &#97;&#100;&#100;&#105;&#116;&#105;&#111;&#110;&#97;&#108; &#109;&#101;&#116;&#104;&#111;&#100;&#115;.
+Module implementing a PostScript lexer with some additional methods.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#LexerPostScript">LexerPostScript</a></td>
-<td>&#83;&#117;&#98;&#99;&#108;&#97;&#115;&#115; &#116;&#111; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116; &#115;&#111;&#109;&#101; &#97;&#100;&#100;&#105;&#116;&#105;&#111;&#110;&#97;&#108; &#108;&#101;x&#101;&#114; &#100;&#101;&#112;&#101;&#110;&#100;&#97;&#110;&#116; &#109;&#101;&#116;&#104;&#111;&#100;&#115;.</td>
+<td>Subclass to implement some additional lexer dependant methods.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -45,7 +45,7 @@ a { color: #AA5500; }
 <p>
 
 </p><p>
-    &#83;&#117;&#98;&#99;&#108;&#97;&#115;&#115; &#116;&#111; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116; &#115;&#111;&#109;&#101; &#97;&#100;&#100;&#105;&#116;&#105;&#111;&#110;&#97;&#108; &#108;&#101;x&#101;&#114; &#100;&#101;&#112;&#101;&#110;&#100;&#97;&#110;&#116; &#109;&#101;&#116;&#104;&#111;&#100;&#115;.
+    Subclass to implement some additional lexer dependant methods.
 </p>
 <h3>Derived from</h3>
 QsciLexerPostScript, Lexer
@@ -57,52 +57,52 @@ QsciLexerPostScript, Lexer
 <table>
 <tr>
 <td><a href="#LexerPostScript.__init__">LexerPostScript</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#LexerPostScript.initProperties">initProperties</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101; &#116;&#104;&#101; &#112;&#114;&#111;&#112;&#101;&#114;&#116;&#105;&#101;&#115;.</td>
+<td>Public slot to initialize the properties.</td>
 </tr><tr>
 <td><a href="#LexerPostScript.isCommentStyle">isCommentStyle</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107;, &#105;&#102; &#97; &#115;&#116;y&#108;&#101; &#105;&#115; &#97; &#99;&#111;&#109;&#109;&#101;&#110;&#116; &#115;&#116;y&#108;&#101;.</td>
+<td>Public method to check, if a style is a comment style.</td>
 </tr><tr>
 <td><a href="#LexerPostScript.isStringStyle">isStringStyle</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107;, &#105;&#102; &#97; &#115;&#116;y&#108;&#101; &#105;&#115; &#97; &#115;&#116;&#114;&#105;&#110;&#103; &#115;&#116;y&#108;&#101;.</td>
+<td>Public method to check, if a style is a string style.</td>
 </tr>
 </table>
 <a NAME="LexerPostScript.__init__" ID="LexerPostScript.__init__"></a>
 <h4>LexerPostScript (Constructor)</h4>
 <b>LexerPostScript</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; &#111;&#102; &#116;&#104;&#105;&#115; &#108;&#101;x&#101;&#114;
+parent widget of this lexer
 </dd>
 </dl><a NAME="LexerPostScript.initProperties" ID="LexerPostScript.initProperties"></a>
 <h4>LexerPostScript.initProperties</h4>
 <b>initProperties</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#105;&#110;&#105;&#116;&#105;&#97;&#108;&#105;z&#101; &#116;&#104;&#101; &#112;&#114;&#111;&#112;&#101;&#114;&#116;&#105;&#101;&#115;.
+        Public slot to initialize the properties.
 </p><a NAME="LexerPostScript.isCommentStyle" ID="LexerPostScript.isCommentStyle"></a>
 <h4>LexerPostScript.isCommentStyle</h4>
 <b>isCommentStyle</b>(<i>style</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107;, &#105;&#102; &#97; &#115;&#116;y&#108;&#101; &#105;&#115; &#97; &#99;&#111;&#109;&#109;&#101;&#110;&#116; &#115;&#116;y&#108;&#101;.
+        Public method to check, if a style is a comment style.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#99;&#111;&#109;&#109;&#101;&#110;&#116; &#115;&#116;y&#108;&#101; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating a comment style (boolean)
 </dd>
 </dl><a NAME="LexerPostScript.isStringStyle" ID="LexerPostScript.isStringStyle"></a>
 <h4>LexerPostScript.isStringStyle</h4>
 <b>isStringStyle</b>(<i>style</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#104;&#101;&#99;&#107;, &#105;&#102; &#97; &#115;&#116;y&#108;&#101; &#105;&#115; &#97; &#115;&#116;&#114;&#105;&#110;&#103; &#115;&#116;y&#108;&#101;.
+        Public method to check, if a style is a string style.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97; &#115;&#116;&#114;&#105;&#110;&#103; &#115;&#116;y&#108;&#101; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating a string style (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

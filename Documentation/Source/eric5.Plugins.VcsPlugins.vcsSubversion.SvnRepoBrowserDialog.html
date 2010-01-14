@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Plugins.VcsPlugins.vcsSubversion.SvnRepoBrowserDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#117;&#98;v&#101;&#114;&#115;&#105;&#111;&#110; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#98;&#114;&#111;w&#115;&#101;&#114; &#100;&#105;&#97;&#108;&#111;&#103;.
+Module implementing the subversion repository browser dialog.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#SvnRepoBrowserDialog">SvnRepoBrowserDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#117;&#98;v&#101;&#114;&#115;&#105;&#111;&#110; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#98;&#114;&#111;w&#115;&#101;&#114; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Class implementing the subversion repository browser dialog.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="SvnRepoBrowserDialog" ID="SvnRepoBrowserDialog"></a>
 <h2>SvnRepoBrowserDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#117;&#98;v&#101;&#114;&#115;&#105;&#111;&#110; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#98;&#114;&#111;w&#115;&#101;&#114; &#100;&#105;&#97;&#108;&#111;&#103;.
+    Class implementing the subversion repository browser dialog.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_SvnRepoBrowserDialog
@@ -55,314 +55,314 @@ QDialog, Ui_SvnRepoBrowserDialog
 <table>
 <tr>
 <td><a href="#SvnRepoBrowserDialog.__init__">SvnRepoBrowserDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__finish">__finish</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#111;&#114; &#116;&#104;&#101; &#117;&#115;&#101;&#114; &#112;&#114;&#101;&#115;&#115;&#101;&#100; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;.</td>
+<td>Private slot called when the process finished or the user pressed the button.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__generateItem">__generateItem</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#97; &#116;&#114;&#101;&#101; &#105;&#116;&#101;&#109; &#105;&#110; &#116;&#104;&#101; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#116;&#114;&#101;&#101;.</td>
+<td>Private method to generate a tree item in the repository tree.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__listRepo">__listRepo</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#115;v&#110; &#108;&#105;&#115;&#116; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.</td>
+<td>Private method to perform the svn list command.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__normalizeUrl">__normalizeUrl</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#110;&#111;&#114;&#109;&#97;&#108;&#105;&#116;&#101; &#116;&#104;&#101; &#117;&#114;&#108;.</td>
+<td>Private method to normalite the url.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__procFinished">__procFinished</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#111;&#110;&#110;&#101;&#99;&#116;&#101;&#100; &#116;&#111; &#116;&#104;&#101; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot connected to the finished signal.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__readStderr">__readStderr</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#97;&#100;y&#82;&#101;&#97;&#100;&#83;&#116;&#97;&#110;&#100;&#97;&#114;&#100;&#69;&#114;&#114;&#111;&#114; &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot to handle the readyReadStandardError signal.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__readStdout">__readStdout</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#97;&#100;y&#82;&#101;&#97;&#100;&#83;&#116;&#97;&#110;&#100;&#97;&#114;&#100;&#79;&#117;&#116;&#112;&#117;&#116; &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot to handle the readyReadStandardOutput signal.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__repoRoot">__repoRoot</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#114;&#111;&#111;&#116; &#117;&#115;&#105;&#110;&#103; &#116;&#104;&#101; &#115;v&#110; &#105;&#110;&#102;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.</td>
+<td>Private method to get the repository root using the svn info command.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__resizeColumns">__resizeColumns</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#105;z&#101; &#116;&#104;&#101; &#116;&#114;&#101;&#101; &#99;&#111;&#108;&#117;&#109;&#110;&#115;.</td>
+<td>Private method to resize the tree columns.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.__resort">__resort</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#111;&#114;&#116; &#116;&#104;&#101; &#116;&#114;&#101;&#101;.</td>
+<td>Private method to resort the tree.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.accept">accept</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; &#105;&#115; &#97;&#99;&#99;&#101;&#112;&#116;&#101;&#100;.</td>
+<td>Public slot called when the dialog is accepted.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.closeEvent">closeEvent</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#108;&#111;&#115;&#101; &#101;v&#101;&#110;&#116; &#104;&#97;&#110;&#100;&#108;&#101;&#114;.</td>
+<td>Private slot implementing a close event handler.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.getSelectedUrl">getSelectedUrl</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#85;&#82;&#76;.</td>
+<td>Public method to retrieve the selected repository URL.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.keyPressEvent">keyPressEvent</a></td>
-<td>&#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#107;&#101;y &#112;&#114;&#101;&#115;&#115; &#101;v&#101;&#110;&#116;.</td>
+<td>Protected slot to handle a key press event.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.on_input_returnPressed">on_input_returnPressed</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#112;&#114;&#101;&#115;&#115; &#111;&#102; &#116;&#104;&#101; &#114;&#101;&#116;&#117;&#114;&#110; &#107;&#101;y &#105;&#110; &#116;&#104;&#101; &#105;&#110;&#112;&#117;&#116; &#102;&#105;&#101;&#108;&#100;.</td>
+<td>Private slot to handle the press of the return key in the input field.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.on_passwordCheckBox_toggled">on_passwordCheckBox_toggled</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#112;&#97;&#115;&#115;w&#111;&#114;&#100; &#99;&#104;&#101;&#99;&#107;&#98;&#111;x &#116;&#111;&#103;&#103;&#108;&#101;&#100;.</td>
+<td>Private slot to handle the password checkbox toggled.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.on_repoTree_itemCollapsed">on_repoTree_itemCollapsed</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#97;&#110; &#105;&#116;&#101;&#109; &#105;&#115; &#99;&#111;&#108;&#108;&#97;&#112;&#115;&#101;&#100;.</td>
+<td>Private slot called when an item is collapsed.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.on_repoTree_itemExpanded">on_repoTree_itemExpanded</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#97;&#110; &#105;&#116;&#101;&#109; &#105;&#115; &#101;x&#112;&#97;&#110;&#100;&#101;&#100;.</td>
+<td>Private slot called when an item is expanded.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.on_repoTree_itemSelectionChanged">on_repoTree_itemSelectionChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#99;&#104;&#97;&#110;&#103;&#101;&#115;.</td>
+<td>Private slot called when the selection changes.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.on_sendButton_clicked">on_sendButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#110;&#100; &#116;&#104;&#101; &#105;&#110;&#112;&#117;&#116; &#116;&#111; &#116;&#104;&#101; &#115;&#117;&#98;v&#101;&#114;&#115;&#105;&#111;&#110; &#112;&#114;&#111;&#99;&#101;&#115;&#115;.</td>
+<td>Private slot to send the input to the subversion process.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.on_urlCombo_currentIndexChanged">on_urlCombo_currentIndexChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#97; &#110;&#101;w &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#85;&#82;&#76; &#105;&#115; &#101;&#110;&#116;&#101;&#114;&#101;&#100; &#111;&#114; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100;.</td>
+<td>Private slot called, when a new repository URL is entered or selected.</td>
 </tr><tr>
 <td><a href="#SvnRepoBrowserDialog.start">start</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#116;&#97;&#114;&#116; &#116;&#104;&#101; &#115;v&#110; &#105;&#110;&#102;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.</td>
+<td>Public slot to start the svn info command.</td>
 </tr>
 </table>
 <a NAME="SvnRepoBrowserDialog.__init__" ID="SvnRepoBrowserDialog.__init__"></a>
 <h4>SvnRepoBrowserDialog (Constructor)</h4>
 <b>SvnRepoBrowserDialog</b>(<i>vcs, mode = "browse", parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>vcs</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; v&#99;&#115; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the vcs object
 </dd><dt><i>mode</i></dt>
 <dd>
-&#109;&#111;&#100;&#101; &#111;&#102; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; (&#115;&#116;&#114;&#105;&#110;&#103;, "&#98;&#114;&#111;w&#115;&#101;" &#111;&#114; "&#115;&#101;&#108;&#101;&#99;&#116;")
+mode of the dialog (string, "browse" or "select")
 </dd><dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget (QWidget)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.__finish" ID="SvnRepoBrowserDialog.__finish"></a>
 <h4>SvnRepoBrowserDialog.__finish</h4>
 <b>__finish</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#111;&#114; &#116;&#104;&#101; &#117;&#115;&#101;&#114; &#112;&#114;&#101;&#115;&#115;&#101;&#100; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;.
+        Private slot called when the process finished or the user pressed the button.
 </p><a NAME="SvnRepoBrowserDialog.__generateItem" ID="SvnRepoBrowserDialog.__generateItem"></a>
 <h4>SvnRepoBrowserDialog.__generateItem</h4>
 <b>__generateItem</b>(<i>repopath, revision, author, size, date, nodekind, url</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#97; &#116;&#114;&#101;&#101; &#105;&#116;&#101;&#109; &#105;&#110; &#116;&#104;&#101; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#116;&#114;&#101;&#101;.
+        Private method to generate a tree item in the repository tree.
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; &#111;&#102; &#116;&#104;&#101; &#105;&#116;&#101;&#109; &#116;&#111; &#98;&#101; &#99;&#114;&#101;&#97;&#116;&#101;&#100; (&#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116; &#111;&#114; &#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+parent of the item to be created (QTreeWidget or QTreeWidgetItem)
 </dd><dt><i>repopath</i></dt>
 <dd>
-&#112;&#97;&#116;&#104; &#111;&#102; &#116;&#104;&#101; &#105;&#116;&#101;&#109; (&#115;&#116;&#114;&#105;&#110;&#103;)
+path of the item (string)
 </dd><dt><i>revision</i></dt>
 <dd>
-&#114;&#101;v&#105;&#115;&#105;&#111;&#110; &#105;&#110;&#102;&#111; (&#115;&#116;&#114;&#105;&#110;&#103;)
+revision info (string)
 </dd><dt><i>author</i></dt>
 <dd>
-&#97;&#117;&#116;&#104;&#111;&#114; &#105;&#110;&#102;&#111; (&#115;&#116;&#114;&#105;&#110;&#103;)
+author info (string)
 </dd><dt><i>size</i></dt>
 <dd>
-&#115;&#105;z&#101; &#105;&#110;&#102;&#111; (&#115;&#116;&#114;&#105;&#110;&#103;)
+size info (string)
 </dd><dt><i>date</i></dt>
 <dd>
-&#100;&#97;&#116;&#101; &#105;&#110;&#102;&#111; (&#115;&#116;&#114;&#105;&#110;&#103;)
+date info (string)
 </dd><dt><i>nodekind</i></dt>
 <dd>
-&#110;&#111;&#100;&#101; &#107;&#105;&#110;&#100; &#105;&#110;&#102;&#111; (&#115;&#116;&#114;&#105;&#110;&#103;, "&#100;&#105;&#114;" &#111;&#114; "&#102;&#105;&#108;&#101;")
+node kind info (string, "dir" or "file")
 </dd><dt><i>url</i></dt>
 <dd>
-&#117;&#114;&#108; &#111;&#102; &#116;&#104;&#101; &#101;&#110;&#116;&#114;y (&#115;&#116;&#114;&#105;&#110;&#103;)
+url of the entry (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101;&#100; &#105;&#116;&#101;&#109; (&#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+reference to the generated item (QTreeWidgetItem)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.__listRepo" ID="SvnRepoBrowserDialog.__listRepo"></a>
 <h4>SvnRepoBrowserDialog.__listRepo</h4>
 <b>__listRepo</b>(<i>url, parent = None</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#112;&#101;&#114;&#102;&#111;&#114;&#109; &#116;&#104;&#101; &#115;v&#110; &#108;&#105;&#115;&#116; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.
+        Private method to perform the svn list command.
 </p><dl>
 <dt><i>url</i></dt>
 <dd>
-&#116;&#104;&#101; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#85;&#82;&#76; &#116;&#111; &#98;&#114;&#111;w&#115;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the repository URL to browse (string)
 </dd><dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#105;&#116;&#101;&#109;, &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#115;&#104;&#111;&#117;&#108;&#100; &#98;&#101; &#97;&#112;&#112;&#101;&#110;&#100;&#101;&#100; &#116;&#111;
-            (&#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116; &#111;&#114; &#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+reference to the item, the data should be appended to
+            (QTreeWidget or QTreeWidgetItem)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.__normalizeUrl" ID="SvnRepoBrowserDialog.__normalizeUrl"></a>
 <h4>SvnRepoBrowserDialog.__normalizeUrl</h4>
 <b>__normalizeUrl</b>(<i>url</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#110;&#111;&#114;&#109;&#97;&#108;&#105;&#116;&#101; &#116;&#104;&#101; &#117;&#114;&#108;.
+        Private method to normalite the url.
 </p><dl>
 <dt><i>url</i></dt>
 <dd>
-&#116;&#104;&#101; &#117;&#114;&#108; &#116;&#111; &#110;&#111;&#114;&#109;&#97;&#108;&#105;z&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the url to normalize (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#110;&#111;&#114;&#109;&#97;&#108;&#105;z&#101;&#100; &#85;&#82;&#76; (&#115;&#116;&#114;&#105;&#110;&#103;)
+normalized URL (string)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.__procFinished" ID="SvnRepoBrowserDialog.__procFinished"></a>
 <h4>SvnRepoBrowserDialog.__procFinished</h4>
 <b>__procFinished</b>(<i>exitCode, exitStatus</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#111;&#110;&#110;&#101;&#99;&#116;&#101;&#100; &#116;&#111; &#116;&#104;&#101; &#102;&#105;&#110;&#105;&#115;&#104;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot connected to the finished signal.
 </p><dl>
 <dt><i>exitCode</i></dt>
 <dd>
-&#101;x&#105;&#116; &#99;&#111;&#100;&#101; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+exit code of the process (integer)
 </dd><dt><i>exitStatus</i></dt>
 <dd>
-&#101;x&#105;&#116; &#115;&#116;&#97;&#116;&#117;&#115; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115; (&#81;&#80;&#114;&#111;&#99;&#101;&#115;&#115;.&#69;x&#105;&#116;&#83;&#116;&#97;&#116;&#117;&#115;)
+exit status of the process (QProcess.ExitStatus)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.__readStderr" ID="SvnRepoBrowserDialog.__readStderr"></a>
 <h4>SvnRepoBrowserDialog.__readStderr</h4>
 <b>__readStderr</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#97;&#100;y&#82;&#101;&#97;&#100;&#83;&#116;&#97;&#110;&#100;&#97;&#114;&#100;&#69;&#114;&#114;&#111;&#114; &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot to handle the readyReadStandardError signal.
 </p><p>
-        &#73;&#116; &#114;&#101;&#97;&#100;&#115; &#116;&#104;&#101; &#101;&#114;&#114;&#111;&#114; &#111;&#117;&#116;&#112;&#117;&#116; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115; &#97;&#110;&#100; &#105;&#110;&#115;&#101;&#114;&#116;&#115; &#105;&#116; &#105;&#110;&#116;&#111; &#116;&#104;&#101;
-        &#101;&#114;&#114;&#111;&#114; &#112;&#97;&#110;&#101;.
+        It reads the error output of the process and inserts it into the
+        error pane.
 </p><a NAME="SvnRepoBrowserDialog.__readStdout" ID="SvnRepoBrowserDialog.__readStdout"></a>
 <h4>SvnRepoBrowserDialog.__readStdout</h4>
 <b>__readStdout</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#97;&#100;y&#82;&#101;&#97;&#100;&#83;&#116;&#97;&#110;&#100;&#97;&#114;&#100;&#79;&#117;&#116;&#112;&#117;&#116; &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot to handle the readyReadStandardOutput signal.
 </p><p>
-        &#73;&#116; &#114;&#101;&#97;&#100;&#115; &#116;&#104;&#101; &#111;&#117;&#116;&#112;&#117;&#116; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#99;&#101;&#115;&#115;, &#102;&#111;&#114;&#109;&#97;&#116;&#115; &#105;&#116; &#97;&#110;&#100; &#105;&#110;&#115;&#101;&#114;&#116;&#115; &#105;&#116; &#105;&#110;&#116;&#111;
-        &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;&#110;&#116;&#115; &#112;&#97;&#110;&#101;.
+        It reads the output of the process, formats it and inserts it into
+        the contents pane.
 </p><a NAME="SvnRepoBrowserDialog.__repoRoot" ID="SvnRepoBrowserDialog.__repoRoot"></a>
 <h4>SvnRepoBrowserDialog.__repoRoot</h4>
 <b>__repoRoot</b>(<i>url</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#114;&#111;&#111;&#116; &#117;&#115;&#105;&#110;&#103; &#116;&#104;&#101; &#115;v&#110; &#105;&#110;&#102;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.
+        Private method to get the repository root using the svn info command.
 </p><dl>
 <dt><i>url</i></dt>
 <dd>
-&#116;&#104;&#101; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#85;&#82;&#76; &#116;&#111; &#98;&#114;&#111;w&#115;&#101;&#114; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the repository URL to browser (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#114;&#111;&#111;&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+repository root (string)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.__resizeColumns" ID="SvnRepoBrowserDialog.__resizeColumns"></a>
 <h4>SvnRepoBrowserDialog.__resizeColumns</h4>
 <b>__resizeColumns</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#105;z&#101; &#116;&#104;&#101; &#116;&#114;&#101;&#101; &#99;&#111;&#108;&#117;&#109;&#110;&#115;.
+        Private method to resize the tree columns.
 </p><a NAME="SvnRepoBrowserDialog.__resort" ID="SvnRepoBrowserDialog.__resort"></a>
 <h4>SvnRepoBrowserDialog.__resort</h4>
 <b>__resort</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#115;&#111;&#114;&#116; &#116;&#104;&#101; &#116;&#114;&#101;&#101;.
+        Private method to resort the tree.
 </p><a NAME="SvnRepoBrowserDialog.accept" ID="SvnRepoBrowserDialog.accept"></a>
 <h4>SvnRepoBrowserDialog.accept</h4>
 <b>accept</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; &#105;&#115; &#97;&#99;&#99;&#101;&#112;&#116;&#101;&#100;.
+        Public slot called when the dialog is accepted.
 </p><a NAME="SvnRepoBrowserDialog.closeEvent" ID="SvnRepoBrowserDialog.closeEvent"></a>
 <h4>SvnRepoBrowserDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#99;&#108;&#111;&#115;&#101; &#101;v&#101;&#110;&#116; &#104;&#97;&#110;&#100;&#108;&#101;&#114;.
+        Private slot implementing a close event handler.
 </p><dl>
 <dt><i>e</i></dt>
 <dd>
-&#99;&#108;&#111;&#115;&#101; &#101;v&#101;&#110;&#116; (&#81;&#67;&#108;&#111;&#115;&#101;&#69;v&#101;&#110;&#116;)
+close event (QCloseEvent)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.getSelectedUrl" ID="SvnRepoBrowserDialog.getSelectedUrl"></a>
 <h4>SvnRepoBrowserDialog.getSelectedUrl</h4>
 <b>getSelectedUrl</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#114;&#101;&#116;&#114;&#105;&#101;v&#101; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#85;&#82;&#76;.
+        Public method to retrieve the selected repository URL.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#85;&#82;&#76; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the selected repository URL (string)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.keyPressEvent" ID="SvnRepoBrowserDialog.keyPressEvent"></a>
 <h4>SvnRepoBrowserDialog.keyPressEvent</h4>
 <b>keyPressEvent</b>(<i>evt</i>)
 <p>
-        &#80;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#97; &#107;&#101;y &#112;&#114;&#101;&#115;&#115; &#101;v&#101;&#110;&#116;.
+        Protected slot to handle a key press event.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
-&#116;&#104;&#101; &#107;&#101;y &#112;&#114;&#101;&#115;&#115; &#101;v&#101;&#110;&#116; (&#81;&#75;&#101;y&#69;v&#101;&#110;&#116;)
+the key press event (QKeyEvent)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.on_input_returnPressed" ID="SvnRepoBrowserDialog.on_input_returnPressed"></a>
 <h4>SvnRepoBrowserDialog.on_input_returnPressed</h4>
 <b>on_input_returnPressed</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#112;&#114;&#101;&#115;&#115; &#111;&#102; &#116;&#104;&#101; &#114;&#101;&#116;&#117;&#114;&#110; &#107;&#101;y &#105;&#110; &#116;&#104;&#101; &#105;&#110;&#112;&#117;&#116; &#102;&#105;&#101;&#108;&#100;.
+        Private slot to handle the press of the return key in the input field.
 </p><a NAME="SvnRepoBrowserDialog.on_passwordCheckBox_toggled" ID="SvnRepoBrowserDialog.on_passwordCheckBox_toggled"></a>
 <h4>SvnRepoBrowserDialog.on_passwordCheckBox_toggled</h4>
 <b>on_passwordCheckBox_toggled</b>(<i>isOn</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#112;&#97;&#115;&#115;w&#111;&#114;&#100; &#99;&#104;&#101;&#99;&#107;&#98;&#111;x &#116;&#111;&#103;&#103;&#108;&#101;&#100;.
+        Private slot to handle the password checkbox toggled.
 </p><dl>
 <dt><i>isOn</i></dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#115;&#116;&#97;&#116;&#117;&#115; &#111;&#102; &#116;&#104;&#101; &#99;&#104;&#101;&#99;&#107; &#98;&#111;x (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating the status of the check box (boolean)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.on_repoTree_itemCollapsed" ID="SvnRepoBrowserDialog.on_repoTree_itemCollapsed"></a>
 <h4>SvnRepoBrowserDialog.on_repoTree_itemCollapsed</h4>
 <b>on_repoTree_itemCollapsed</b>(<i>item</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#97;&#110; &#105;&#116;&#101;&#109; &#105;&#115; &#99;&#111;&#108;&#108;&#97;&#112;&#115;&#101;&#100;.
+        Private slot called when an item is collapsed.
 </p><dl>
 <dt><i>item</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#105;&#116;&#101;&#109; &#116;&#111; &#98;&#101; &#99;&#111;&#108;&#108;&#97;&#112;&#115;&#101;&#100; (&#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+reference to the item to be collapsed (QTreeWidgetItem)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.on_repoTree_itemExpanded" ID="SvnRepoBrowserDialog.on_repoTree_itemExpanded"></a>
 <h4>SvnRepoBrowserDialog.on_repoTree_itemExpanded</h4>
 <b>on_repoTree_itemExpanded</b>(<i>item</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#97;&#110; &#105;&#116;&#101;&#109; &#105;&#115; &#101;x&#112;&#97;&#110;&#100;&#101;&#100;.
+        Private slot called when an item is expanded.
 </p><dl>
 <dt><i>item</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#105;&#116;&#101;&#109; &#116;&#111; &#98;&#101; &#101;x&#112;&#97;&#110;&#100;&#101;&#100; (&#81;&#84;&#114;&#101;&#101;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+reference to the item to be expanded (QTreeWidgetItem)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.on_repoTree_itemSelectionChanged" ID="SvnRepoBrowserDialog.on_repoTree_itemSelectionChanged"></a>
 <h4>SvnRepoBrowserDialog.on_repoTree_itemSelectionChanged</h4>
 <b>on_repoTree_itemSelectionChanged</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; w&#104;&#101;&#110; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#99;&#104;&#97;&#110;&#103;&#101;&#115;.
+        Private slot called when the selection changes.
 </p><a NAME="SvnRepoBrowserDialog.on_sendButton_clicked" ID="SvnRepoBrowserDialog.on_sendButton_clicked"></a>
 <h4>SvnRepoBrowserDialog.on_sendButton_clicked</h4>
 <b>on_sendButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#101;&#110;&#100; &#116;&#104;&#101; &#105;&#110;&#112;&#117;&#116; &#116;&#111; &#116;&#104;&#101; &#115;&#117;&#98;v&#101;&#114;&#115;&#105;&#111;&#110; &#112;&#114;&#111;&#99;&#101;&#115;&#115;.
+        Private slot to send the input to the subversion process.
 </p><a NAME="SvnRepoBrowserDialog.on_urlCombo_currentIndexChanged" ID="SvnRepoBrowserDialog.on_urlCombo_currentIndexChanged"></a>
 <h4>SvnRepoBrowserDialog.on_urlCombo_currentIndexChanged</h4>
 <b>on_urlCombo_currentIndexChanged</b>(<i>text</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#97; &#110;&#101;w &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#85;&#82;&#76; &#105;&#115; &#101;&#110;&#116;&#101;&#114;&#101;&#100; &#111;&#114; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100;.
+        Private slot called, when a new repository URL is entered or selected.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#104;&#101; &#116;&#101;x&#116; &#111;&#102; &#116;&#104;&#101; &#99;&#117;&#114;&#114;&#101;&#110;&#116; &#105;&#116;&#101;&#109; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the text of the current item (string)
 </dd>
 </dl><a NAME="SvnRepoBrowserDialog.start" ID="SvnRepoBrowserDialog.start"></a>
 <h4>SvnRepoBrowserDialog.start</h4>
 <b>start</b>(<i>url</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#116;&#97;&#114;&#116; &#116;&#104;&#101; &#115;v&#110; &#105;&#110;&#102;&#111; &#99;&#111;&#109;&#109;&#97;&#110;&#100;.
+        Public slot to start the svn info command.
 </p><dl>
 <dt><i>url</i></dt>
 <dd>
-&#116;&#104;&#101; &#114;&#101;&#112;&#111;&#115;&#105;&#116;&#111;&#114;y &#85;&#82;&#76; &#116;&#111; &#98;&#114;&#111;w&#115;&#101;&#114; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the repository URL to browser (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

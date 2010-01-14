@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Project.CreateDialogCodeDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#99;&#111;&#100;&#101; &#102;&#111;&#114; &#97; &#81;&#116;&#52; &#100;&#105;&#97;&#108;&#111;&#103;.
+Module implementing a dialog to generate code for a Qt4 dialog.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#CreateDialogCodeDialog">CreateDialogCodeDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#99;&#111;&#100;&#101; &#102;&#111;&#114; &#97; &#81;&#116;&#52; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Class implementing a dialog to generate code for a Qt4 dialog.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="CreateDialogCodeDialog" ID="CreateDialogCodeDialog"></a>
 <h2>CreateDialogCodeDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#99;&#111;&#100;&#101; &#102;&#111;&#114; &#97; &#81;&#116;&#52; &#100;&#105;&#97;&#108;&#111;&#103;.
+    Class implementing a dialog to generate code for a Qt4 dialog.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_CreateDialogCodeDialog
@@ -55,175 +55,175 @@ QDialog, Ui_CreateDialogCodeDialog
 <table>
 <tr>
 <td><a href="#CreateDialogCodeDialog.__init__">CreateDialogCodeDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.__className">__className</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#99;&#108;&#97;&#115;&#115; &#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Private method to get the class name of the dialog.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.__generateCode">__generateCode</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#97;&#115; &#114;&#101;&#113;&#117;&#101;&#115;&#116;&#101;&#100; &#98;y &#116;&#104;&#101; &#117;&#115;&#101;&#114;.</td>
+<td>Private slot to generate the code as requested by the user.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.__generatePythonCode">__generatePythonCode</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#80;y&#116;&#104;&#111;&#110; &#99;&#111;&#100;&#101; &#97;&#115; &#114;&#101;&#113;&#117;&#101;&#115;&#116;&#101;&#100; &#98;y &#116;&#104;&#101; &#117;&#115;&#101;&#114;.</td>
+<td>Private slot to generate Python code as requested by the user.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.__mapType">__mapType</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#109;&#97;&#112; &#97; &#116;y&#112;&#101; &#97;&#115; &#114;&#101;&#112;&#111;&#114;&#116;&#101;&#100; &#98;y &#81;&#116;'&#115; &#109;&#101;&#116;&#97; &#111;&#98;&#106;&#101;&#99;&#116; &#116;&#111; &#116;&#104;&#101; &#99;&#111;&#114;&#114;&#101;&#99;&#116; &#80;y&#116;&#104;&#111;&#110; &#116;y&#112;&#101;.</td>
+<td>Private method to map a type as reported by Qt's meta object to the correct Python type.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.__objectName">__objectName</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#111;&#98;&#106;&#101;&#99;&#116; &#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Private method to get the object name of the dialog.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.__signatures">__signatures</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#115;&#105;&#103;&#110;&#97;&#116;&#117;&#114;&#101;&#115;.</td>
+<td>Private slot to get the signatures.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.__updateSlotsModel">__updateSlotsModel</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#115;&#108;&#111;&#116;&#115; &#116;&#114;&#101;&#101; &#100;&#105;&#115;&#112;&#108;&#97;y.</td>
+<td>Private slot to update the slots tree display.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.initError">initError</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#100;&#101;&#116;&#101;&#114;&#109;&#105;&#110;&#101;, &#105;&#102; &#116;&#104;&#101;&#114;&#101; w&#97;&#115; &#97;&#110; &#105;&#110;&#105;&#116;&#105;&#97;&#108;z&#97;&#116;&#105;&#111;&#110; &#101;&#114;&#114;&#111;&#114;.</td>
+<td>Public method to determine, if there was an initialzation error.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;&#66;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.</td>
+<td>Private slot to handle the buttonBox clicked signal.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.on_classNameCombo_activated">on_classNameCombo_activated</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#97;&#99;&#116;&#105;v&#97;&#116;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#99;&#108;&#97;&#115;&#115;&#110;&#97;&#109;&#101; &#99;&#111;&#109;&#98;&#111;.</td>
+<td>Private slot to handle the activated signal of the classname combo.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.on_clearFilterButton_clicked">on_clearFilterButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#99;&#108;&#105;&#99;&#107; &#111;&#102; &#116;&#104;&#101; &#99;&#108;&#101;&#97;&#114; &#102;&#105;&#108;&#116;&#101;&#114; &#98;&#117;&#116;&#116;&#111;&#110;.</td>
+<td>Private slot called by a click of the clear filter button.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.on_filterEdit_textChanged">on_filterEdit_textChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101;x&#116; &#111;&#102; &#116;&#104;&#101; &#102;&#105;&#108;&#116;&#101;&#114; &#101;&#100;&#105;&#116; &#104;&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.</td>
+<td>Private slot called, when thext of the filter edit has changed.</td>
 </tr><tr>
 <td><a href="#CreateDialogCodeDialog.on_newButton_clicked">on_newButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#101;&#110;&#116;&#101;&#114; &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#102;&#111;&#114; &#97; &#110;&#101;w &#100;&#105;&#97;&#108;&#111;&#103; &#99;&#108;&#97;&#115;&#115;.</td>
+<td>Private slot called to enter the data for a new dialog class.</td>
 </tr>
 </table>
 <a NAME="CreateDialogCodeDialog.__init__" ID="CreateDialogCodeDialog.__init__"></a>
 <h4>CreateDialogCodeDialog (Constructor)</h4>
 <b>CreateDialogCodeDialog</b>(<i>formName, project, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>formName</i></dt>
 <dd>
-&#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#102;&#105;&#108;&#101; &#99;&#111;&#110;&#116;&#97;&#105;&#110;&#105;&#110;&#103; &#116;&#104;&#101; &#102;&#111;&#114;&#109; (&#115;&#116;&#114;&#105;&#110;&#103;)
+name of the file containing the form (string)
 </dd><dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the project object
 </dd><dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; &#105;&#102; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget if the dialog (QWidget)
 </dd>
 </dl><a NAME="CreateDialogCodeDialog.__className" ID="CreateDialogCodeDialog.__className"></a>
 <h4>CreateDialogCodeDialog.__className</h4>
 <b>__className</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#99;&#108;&#97;&#115;&#115; &#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Private method to get the class name of the dialog.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#99;&#108;&#97;&#115;&#115; &#110;&#97;&#109;&#101; (&#115;&#116;&#105;&#110;&#103;)
+class name (sting)
 </dd>
 </dl><a NAME="CreateDialogCodeDialog.__generateCode" ID="CreateDialogCodeDialog.__generateCode"></a>
 <h4>CreateDialogCodeDialog.__generateCode</h4>
 <b>__generateCode</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#116;&#104;&#101; &#99;&#111;&#100;&#101; &#97;&#115; &#114;&#101;&#113;&#117;&#101;&#115;&#116;&#101;&#100; &#98;y &#116;&#104;&#101; &#117;&#115;&#101;&#114;.
+        Private slot to generate the code as requested by the user.
 </p><a NAME="CreateDialogCodeDialog.__generatePythonCode" ID="CreateDialogCodeDialog.__generatePythonCode"></a>
 <h4>CreateDialogCodeDialog.__generatePythonCode</h4>
 <b>__generatePythonCode</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101; &#80;y&#116;&#104;&#111;&#110; &#99;&#111;&#100;&#101; &#97;&#115; &#114;&#101;&#113;&#117;&#101;&#115;&#116;&#101;&#100; &#98;y &#116;&#104;&#101; &#117;&#115;&#101;&#114;.
+        Private slot to generate Python code as requested by the user.
 </p><a NAME="CreateDialogCodeDialog.__mapType" ID="CreateDialogCodeDialog.__mapType"></a>
 <h4>CreateDialogCodeDialog.__mapType</h4>
 <b>__mapType</b>(<i>type_</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#109;&#97;&#112; &#97; &#116;y&#112;&#101; &#97;&#115; &#114;&#101;&#112;&#111;&#114;&#116;&#101;&#100; &#98;y &#81;&#116;'&#115; &#109;&#101;&#116;&#97; &#111;&#98;&#106;&#101;&#99;&#116; &#116;&#111; &#116;&#104;&#101; 
-        &#99;&#111;&#114;&#114;&#101;&#99;&#116; &#80;y&#116;&#104;&#111;&#110; &#116;y&#112;&#101;.
+        Private method to map a type as reported by Qt's meta object to the 
+        correct Python type.
 </p><dl>
 <dt><i>type_</i></dt>
 <dd>
-&#116;y&#112;&#101; &#97;&#115; &#114;&#101;&#112;&#111;&#114;&#116;&#101;&#100; &#98;y &#81;&#116; (&#81;&#66;y&#116;&#101;&#65;&#114;&#114;&#97;y)
+type as reported by Qt (QByteArray)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#109;&#97;&#112;&#112;&#101;&#100; &#80;y&#116;&#104;&#111;&#110; &#116;y&#112;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+mapped Python type (string)
 </dd>
 </dl><a NAME="CreateDialogCodeDialog.__objectName" ID="CreateDialogCodeDialog.__objectName"></a>
 <h4>CreateDialogCodeDialog.__objectName</h4>
 <b>__objectName</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#111;&#98;&#106;&#101;&#99;&#116; &#110;&#97;&#109;&#101; &#111;&#102; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Private method to get the object name of the dialog.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#111;&#98;&#106;&#101;&#99;&#116; &#110;&#97;&#109;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+object name (string)
 </dd>
 </dl><a NAME="CreateDialogCodeDialog.__signatures" ID="CreateDialogCodeDialog.__signatures"></a>
 <h4>CreateDialogCodeDialog.__signatures</h4>
 <b>__signatures</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#115;&#105;&#103;&#110;&#97;&#116;&#117;&#114;&#101;&#115;.
+        Private slot to get the signatures.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#115;&#105;&#103;&#110;&#97;&#116;&#117;&#114;&#101;&#115; (&#108;&#105;&#115;&#116; &#111;&#102; &#115;&#116;&#114;&#105;&#110;&#103;&#115;)
+list of signatures (list of strings)
 </dd>
 </dl><a NAME="CreateDialogCodeDialog.__updateSlotsModel" ID="CreateDialogCodeDialog.__updateSlotsModel"></a>
 <h4>CreateDialogCodeDialog.__updateSlotsModel</h4>
 <b>__updateSlotsModel</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#112;&#100;&#97;&#116;&#101; &#116;&#104;&#101; &#115;&#108;&#111;&#116;&#115; &#116;&#114;&#101;&#101; &#100;&#105;&#115;&#112;&#108;&#97;y.
+        Private slot to update the slots tree display.
 </p><a NAME="CreateDialogCodeDialog.initError" ID="CreateDialogCodeDialog.initError"></a>
 <h4>CreateDialogCodeDialog.initError</h4>
 <b>initError</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#100;&#101;&#116;&#101;&#114;&#109;&#105;&#110;&#101;, &#105;&#102; &#116;&#104;&#101;&#114;&#101; w&#97;&#115; &#97;&#110; &#105;&#110;&#105;&#116;&#105;&#97;&#108;z&#97;&#116;&#105;&#111;&#110; &#101;&#114;&#114;&#111;&#114;.
+        Public method to determine, if there was an initialzation error.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#97;&#110; &#105;&#110;&#105;&#116;&#105;&#97;&#108;z&#97;&#116;&#105;&#111;&#110; &#101;&#114;&#114;&#111;&#114; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating an initialzation error (boolean)
 </dd>
 </dl><a NAME="CreateDialogCodeDialog.on_buttonBox_clicked" ID="CreateDialogCodeDialog.on_buttonBox_clicked"></a>
 <h4>CreateDialogCodeDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110;&#66;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108;.
+        Private slot to handle the buttonBox clicked signal.
 </p><dl>
 <dt><i>button</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#116;&#104;&#97;&#116; w&#97;&#115; &#99;&#108;&#105;&#99;&#107;&#101;&#100; (&#81;&#65;&#98;&#115;&#116;&#114;&#97;&#99;&#116;&#66;&#117;&#116;&#116;&#111;&#110;)
+reference to the button that was clicked (QAbstractButton)
 </dd>
 </dl><a NAME="CreateDialogCodeDialog.on_classNameCombo_activated" ID="CreateDialogCodeDialog.on_classNameCombo_activated"></a>
 <h4>CreateDialogCodeDialog.on_classNameCombo_activated</h4>
 <b>on_classNameCombo_activated</b>(<i>index</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#97;&#99;&#116;&#105;v&#97;&#116;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#99;&#108;&#97;&#115;&#115;&#110;&#97;&#109;&#101; &#99;&#111;&#109;&#98;&#111;.
+        Private slot to handle the activated signal of the classname combo.
 </p><dl>
 <dt><i>index</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#116;&#104;&#101; &#97;&#99;&#116;&#105;v&#97;&#116;&#101;&#100; &#105;&#116;&#101;&#109; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+index of the activated item (integer)
 </dd>
 </dl><a NAME="CreateDialogCodeDialog.on_clearFilterButton_clicked" ID="CreateDialogCodeDialog.on_clearFilterButton_clicked"></a>
 <h4>CreateDialogCodeDialog.on_clearFilterButton_clicked</h4>
 <b>on_clearFilterButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#99;&#108;&#105;&#99;&#107; &#111;&#102; &#116;&#104;&#101; &#99;&#108;&#101;&#97;&#114; &#102;&#105;&#108;&#116;&#101;&#114; &#98;&#117;&#116;&#116;&#111;&#110;.
+        Private slot called by a click of the clear filter button.
 </p><a NAME="CreateDialogCodeDialog.on_filterEdit_textChanged" ID="CreateDialogCodeDialog.on_filterEdit_textChanged"></a>
 <h4>CreateDialogCodeDialog.on_filterEdit_textChanged</h4>
 <b>on_filterEdit_textChanged</b>(<i>text</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100;, w&#104;&#101;&#110; &#116;&#104;&#101;x&#116; &#111;&#102; &#116;&#104;&#101; &#102;&#105;&#108;&#116;&#101;&#114; &#101;&#100;&#105;&#116; &#104;&#97;&#115; &#99;&#104;&#97;&#110;&#103;&#101;&#100;.
+        Private slot called, when thext of the filter edit has changed.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#99;&#104;&#97;&#110;&#103;&#101;&#100; &#116;&#101;x&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+changed text (string)
 </dd>
 </dl><a NAME="CreateDialogCodeDialog.on_newButton_clicked" ID="CreateDialogCodeDialog.on_newButton_clicked"></a>
 <h4>CreateDialogCodeDialog.on_newButton_clicked</h4>
 <b>on_newButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#116;&#111; &#101;&#110;&#116;&#101;&#114; &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#102;&#111;&#114; &#97; &#110;&#101;w &#100;&#105;&#97;&#108;&#111;&#103; &#99;&#108;&#97;&#115;&#115;.
+        Private slot called to enter the data for a new dialog class.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

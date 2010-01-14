@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.PluginManager.PluginUninstallDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#112;&#108;&#117;&#103;&#105;&#110; &#100;&#101;&#105;&#110;&#115;&#116;&#97;&#108;&#108;&#97;&#116;&#105;&#111;&#110;.
+Module implementing a dialog for plugin deinstallation.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,13 +32,13 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#PluginUninstallDialog">PluginUninstallDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; v&#97;&#114;&#105;&#97;&#110;&#116;.</td>
+<td>Class for the dialog variant.</td>
 </tr><tr>
 <td><a href="#PluginUninstallWidget">PluginUninstallWidget</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#112;&#108;&#117;&#103;&#105;&#110; &#100;&#101;&#105;&#110;&#115;&#116;&#97;&#108;&#108;&#97;&#116;&#105;&#111;&#110;.</td>
+<td>Class implementing a dialog for plugin deinstallation.</td>
 </tr><tr>
 <td><a href="#PluginUninstallWindow">PluginUninstallWindow</a></td>
-<td>&#77;&#97;&#105;&#110; w&#105;&#110;&#100;&#111;w &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#115;&#116;&#97;&#110;&#100;&#97;&#108;&#111;&#110;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Main window class for the standalone dialog.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -49,7 +49,7 @@ a { color: #AA5500; }
 <a NAME="PluginUninstallDialog" ID="PluginUninstallDialog"></a>
 <h2>PluginUninstallDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; v&#97;&#114;&#105;&#97;&#110;&#116;.
+    Class for the dialog variant.
 </p>
 <h3>Derived from</h3>
 QDialog
@@ -61,21 +61,21 @@ QDialog
 <table>
 <tr>
 <td><a href="#PluginUninstallDialog.__init__">PluginUninstallDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr>
 </table>
 <a NAME="PluginUninstallDialog.__init__" ID="PluginUninstallDialog.__init__"></a>
 <h4>PluginUninstallDialog (Constructor)</h4>
 <b>PluginUninstallDialog</b>(<i>pluginManager, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>pluginManager</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#108;&#117;&#103;&#105;&#110; &#109;&#97;&#110;&#97;&#103;&#101;&#114; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the plugin manager object
 </dd><dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+reference to the parent widget (QWidget)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -83,7 +83,7 @@ QDialog
 <a NAME="PluginUninstallWidget" ID="PluginUninstallWidget"></a>
 <h2>PluginUninstallWidget</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#112;&#108;&#117;&#103;&#105;&#110; &#100;&#101;&#105;&#110;&#115;&#116;&#97;&#108;&#108;&#97;&#116;&#105;&#111;&#110;.
+    Class implementing a dialog for plugin deinstallation.
 </p>
 <h3>Derived from</h3>
 QWidget, Ui_PluginUninstallDialog
@@ -95,56 +95,56 @@ QWidget, Ui_PluginUninstallDialog
 <table>
 <tr>
 <td><a href="#PluginUninstallWidget.__init__">PluginUninstallWidget</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#PluginUninstallWidget.__uninstallPlugin">__uninstallPlugin</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#110;&#105;&#110;&#115;&#116;&#97;&#108;&#108; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#112;&#108;&#117;&#103;&#105;&#110;.</td>
+<td>Private slot to uninstall the selected plugin.</td>
 </tr><tr>
 <td><a href="#PluginUninstallWidget.on_buttonBox_accepted">on_buttonBox_accepted</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#97;&#99;&#99;&#101;&#112;&#116;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x.</td>
+<td>Private slot to handle the accepted signal of the button box.</td>
 </tr><tr>
 <td><a href="#PluginUninstallWidget.on_pluginDirectoryCombo_currentIndexChanged">on_pluginDirectoryCombo_currentIndexChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#111;&#112;&#117;&#108;&#97;&#116;&#101; &#116;&#104;&#101; &#112;&#108;&#117;&#103;&#105;&#110; &#110;&#97;&#109;&#101; &#99;&#111;&#109;&#98;&#111; &#117;&#112;&#111;&#110; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#112;&#108;&#117;&#103;&#105;&#110; &#97;&#114;&#101;&#97;.</td>
+<td>Private slot to populate the plugin name combo upon a change of the plugin area.</td>
 </tr>
 </table>
 <a NAME="PluginUninstallWidget.__init__" ID="PluginUninstallWidget.__init__"></a>
 <h4>PluginUninstallWidget (Constructor)</h4>
 <b>PluginUninstallWidget</b>(<i>pluginManager, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>pluginManager</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#108;&#117;&#103;&#105;&#110; &#109;&#97;&#110;&#97;&#103;&#101;&#114; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the plugin manager object
 </dd><dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; &#111;&#102; &#116;&#104;&#105;&#115; &#100;&#105;&#97;&#108;&#111;&#103; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent of this dialog (QWidget)
 </dd>
 </dl><a NAME="PluginUninstallWidget.__uninstallPlugin" ID="PluginUninstallWidget.__uninstallPlugin"></a>
 <h4>PluginUninstallWidget.__uninstallPlugin</h4>
 <b>__uninstallPlugin</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#117;&#110;&#105;&#110;&#115;&#116;&#97;&#108;&#108; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#112;&#108;&#117;&#103;&#105;&#110;.
+        Private slot to uninstall the selected plugin.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#115;&#117;&#99;&#99;&#101;&#115;&#115; (&#98;&#111;&#111;&#108;&#101;&#97;&#110;)
+flag indicating success (boolean)
 </dd>
 </dl><a NAME="PluginUninstallWidget.on_buttonBox_accepted" ID="PluginUninstallWidget.on_buttonBox_accepted"></a>
 <h4>PluginUninstallWidget.on_buttonBox_accepted</h4>
 <b>on_buttonBox_accepted</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#97;&#99;&#99;&#101;&#112;&#116;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x.
+        Private slot to handle the accepted signal of the button box.
 </p><a NAME="PluginUninstallWidget.on_pluginDirectoryCombo_currentIndexChanged" ID="PluginUninstallWidget.on_pluginDirectoryCombo_currentIndexChanged"></a>
 <h4>PluginUninstallWidget.on_pluginDirectoryCombo_currentIndexChanged</h4>
 <b>on_pluginDirectoryCombo_currentIndexChanged</b>(<i>index</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#112;&#111;&#112;&#117;&#108;&#97;&#116;&#101; &#116;&#104;&#101; &#112;&#108;&#117;&#103;&#105;&#110; &#110;&#97;&#109;&#101; &#99;&#111;&#109;&#98;&#111; &#117;&#112;&#111;&#110; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101;
-        &#112;&#108;&#117;&#103;&#105;&#110; &#97;&#114;&#101;&#97;.
+        Private slot to populate the plugin name combo upon a change of the
+        plugin area.
 </p><dl>
 <dt><i>index</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;x &#111;&#102; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#105;&#116;&#101;&#109; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+index of the selected item (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -152,7 +152,7 @@ QWidget, Ui_PluginUninstallDialog
 <a NAME="PluginUninstallWindow" ID="PluginUninstallWindow"></a>
 <h2>PluginUninstallWindow</h2>
 <p>
-    &#77;&#97;&#105;&#110; w&#105;&#110;&#100;&#111;w &#99;&#108;&#97;&#115;&#115; &#102;&#111;&#114; &#116;&#104;&#101; &#115;&#116;&#97;&#110;&#100;&#97;&#108;&#111;&#110;&#101; &#100;&#105;&#97;&#108;&#111;&#103;.
+    Main window class for the standalone dialog.
 </p>
 <h3>Derived from</h3>
 QMainWindow
@@ -164,18 +164,18 @@ QMainWindow
 <table>
 <tr>
 <td><a href="#PluginUninstallWindow.__init__">PluginUninstallWindow</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr>
 </table>
 <a NAME="PluginUninstallWindow.__init__" ID="PluginUninstallWindow.__init__"></a>
 <h4>PluginUninstallWindow (Constructor)</h4>
 <b>PluginUninstallWindow</b>(<i>parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+reference to the parent widget (QWidget)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

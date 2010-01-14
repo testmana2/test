@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.MultiProject.MultiProjectBrowser</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#98;&#114;&#111;w&#115;&#101;&#114;.
+Module implementing the multi project browser.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#MultiProjectBrowser">MultiProjectBrowser</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#98;&#114;&#111;w&#115;&#101;&#114;.</td>
+<td>Class implementing the multi project browser.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="MultiProjectBrowser" ID="MultiProjectBrowser"></a>
 <h2>MultiProjectBrowser</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#98;&#114;&#111;w&#115;&#101;&#114;.
+    Class implementing the multi project browser.
 </p>
 <h3>Derived from</h3>
 QListWidget
@@ -55,198 +55,198 @@ QListWidget
 <table>
 <tr>
 <td><a href="#MultiProjectBrowser.__init__">MultiProjectBrowser</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__addProject">__addProject</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#116;&#111; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.</td>
+<td>Private method to add a project to the list.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__configure">__configure</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#111;&#112;&#101;&#110; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Private method to open the configuration dialog.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__contextMenuRequested">__contextMenuRequested</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117;.</td>
+<td>Private slot to show the context menu.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__createPopupMenu">__createPopupMenu</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#116;&#104;&#101; &#112;&#111;&#112;&#117;&#112; &#109;&#101;&#110;&#117;.</td>
+<td>Private method to create the popup menu.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__findProjectItem">__findProjectItem</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#97;&#114;&#99;&#104; &#97; &#115;&#112;&#101;&#99;&#105;&#102;&#105;&#99; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#105;&#116;&#101;&#109;.</td>
+<td>Private method to search a specific project item.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__multiProjectClosed">__multiProjectClosed</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#99;&#108;&#111;&#115;&#105;&#110;&#103; &#111;&#102; &#97; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private slot to handle the closing of a multi project.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__multiProjectOpened">__multiProjectOpened</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#111;&#112;&#101;&#110;&#105;&#110;&#103; &#111;&#102; &#97; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private slot to handle the opening of a multi project.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__newMultiProject">__newMultiProject</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#99;&#114;&#101;&#97;&#116;&#105;&#111;&#110; &#111;&#102; &#97; &#110;&#101;w &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private slot to handle the creation of a new multi project.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__openItem">__openItem</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private slot to open a project.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__projectAdded">__projectAdded</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#97;&#100;&#100;&#105;&#116;&#105;&#111;&#110; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#116;&#111; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private slot to handle the addition of a project to the multi project.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__projectDataChanged">__projectDataChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#111;&#102; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private slot to handle the change of a project of the multi project.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__projectOpened">__projectOpened</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#111;&#112;&#101;&#110;&#105;&#110;&#103; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private slot to handle the opening of a project.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__projectRemoved">__projectRemoved</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#109;&#111;v&#97;&#108; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.</td>
+<td>Private slot to handle the removal of a project from the multi project.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__removeProject">__removeProject</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#82;&#101;&#109;&#111;v&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117; &#101;&#110;&#116;&#114;y.</td>
+<td>Private method to handle the Remove context menu entry.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__setItemData">__setItemData</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#105;&#116;&#101;&#109;.</td>
+<td>Private method to set the data of a project item.</td>
 </tr><tr>
 <td><a href="#MultiProjectBrowser.__showProjectProperties">__showProjectProperties</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#104;&#111;w &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#101;&#110;&#116;&#114;y.</td>
+<td>Private method to show the data of a project entry.</td>
 </tr>
 </table>
 <a NAME="MultiProjectBrowser.__init__" ID="MultiProjectBrowser.__init__"></a>
 <h4>MultiProjectBrowser (Constructor)</h4>
 <b>MultiProjectBrowser</b>(<i>multiProject, parent = None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#111;&#98;&#106;&#101;&#99;&#116;
+reference to the multi project object
 </dd><dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget (QWidget)
 </dd>
 </dl><a NAME="MultiProjectBrowser.__addProject" ID="MultiProjectBrowser.__addProject"></a>
 <h4>MultiProjectBrowser.__addProject</h4>
 <b>__addProject</b>(<i>project</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#97;&#100;&#100; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#116;&#111; &#116;&#104;&#101; &#108;&#105;&#115;&#116;.
+        Private method to add a project to the list.
 </p><dl>
 <dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#97;&#116;&#97; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y
+reference to the project data dictionary
 </dd>
 </dl><a NAME="MultiProjectBrowser.__configure" ID="MultiProjectBrowser.__configure"></a>
 <h4>MultiProjectBrowser.__configure</h4>
 <b>__configure</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#111;&#112;&#101;&#110; &#116;&#104;&#101; &#99;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#97;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.
+        Private method to open the configuration dialog.
 </p><a NAME="MultiProjectBrowser.__contextMenuRequested" ID="MultiProjectBrowser.__contextMenuRequested"></a>
 <h4>MultiProjectBrowser.__contextMenuRequested</h4>
 <b>__contextMenuRequested</b>(<i>coord</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#115;&#104;&#111;w &#116;&#104;&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117;.
+        Private slot to show the context menu.
 </p><dl>
 <dt><i>coord</i></dt>
 <dd>
-&#116;&#104;&#101; &#112;&#111;&#115;&#105;&#116;&#105;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#109;&#111;&#117;&#115;&#101; &#112;&#111;&#105;&#110;&#116;&#101;&#114; (&#81;&#80;&#111;&#105;&#110;&#116;)
+the position of the mouse pointer (QPoint)
 </dd>
 </dl><a NAME="MultiProjectBrowser.__createPopupMenu" ID="MultiProjectBrowser.__createPopupMenu"></a>
 <h4>MultiProjectBrowser.__createPopupMenu</h4>
 <b>__createPopupMenu</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#99;&#114;&#101;&#97;&#116;&#101; &#116;&#104;&#101; &#112;&#111;&#112;&#117;&#112; &#109;&#101;&#110;&#117;.
+        Private method to create the popup menu.
 </p><a NAME="MultiProjectBrowser.__findProjectItem" ID="MultiProjectBrowser.__findProjectItem"></a>
 <h4>MultiProjectBrowser.__findProjectItem</h4>
 <b>__findProjectItem</b>(<i>project</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#97;&#114;&#99;&#104; &#97; &#115;&#112;&#101;&#99;&#105;&#102;&#105;&#99; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#105;&#116;&#101;&#109;.
+        Private method to search a specific project item.
 </p><dl>
 <dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#97;&#116;&#97; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y
+reference to the project data dictionary
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#114;&#111;w &#110;&#117;&#109;&#98;&#101;&#114; &#111;&#102; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116;, -&#49; &#105;&#102; &#110;&#111;&#116; &#102;&#111;&#117;&#110;&#100; (&#105;&#110;&#116;&#101;&#103;&#101;&#114;)
+row number of the project, -1 if not found (integer)
 </dd>
 </dl><a NAME="MultiProjectBrowser.__multiProjectClosed" ID="MultiProjectBrowser.__multiProjectClosed"></a>
 <h4>MultiProjectBrowser.__multiProjectClosed</h4>
 <b>__multiProjectClosed</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#99;&#108;&#111;&#115;&#105;&#110;&#103; &#111;&#102; &#97; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private slot to handle the closing of a multi project.
 </p><a NAME="MultiProjectBrowser.__multiProjectOpened" ID="MultiProjectBrowser.__multiProjectOpened"></a>
 <h4>MultiProjectBrowser.__multiProjectOpened</h4>
 <b>__multiProjectOpened</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#111;&#112;&#101;&#110;&#105;&#110;&#103; &#111;&#102; &#97; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private slot to handle the opening of a multi project.
 </p><a NAME="MultiProjectBrowser.__newMultiProject" ID="MultiProjectBrowser.__newMultiProject"></a>
 <h4>MultiProjectBrowser.__newMultiProject</h4>
 <b>__newMultiProject</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#99;&#114;&#101;&#97;&#116;&#105;&#111;&#110; &#111;&#102; &#97; &#110;&#101;w &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private slot to handle the creation of a new multi project.
 </p><a NAME="MultiProjectBrowser.__openItem" ID="MultiProjectBrowser.__openItem"></a>
 <h4>MultiProjectBrowser.__openItem</h4>
 <b>__openItem</b>(<i>itm = None</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#111;&#112;&#101;&#110; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private slot to open a project.
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#105;&#116;&#101;&#109; &#116;&#111; &#98;&#101; &#111;&#112;&#101;&#110;&#101;&#100; (&#81;&#76;&#105;&#115;&#116;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+reference to the project item to be opened (QListWidgetItem)
 </dd>
 </dl><a NAME="MultiProjectBrowser.__projectAdded" ID="MultiProjectBrowser.__projectAdded"></a>
 <h4>MultiProjectBrowser.__projectAdded</h4>
 <b>__projectAdded</b>(<i>project</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#97;&#100;&#100;&#105;&#116;&#105;&#111;&#110; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#116;&#111; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private slot to handle the addition of a project to the multi project.
 </p><dl>
 <dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#97;&#116;&#97; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y
+reference to the project data dictionary
 </dd>
 </dl><a NAME="MultiProjectBrowser.__projectDataChanged" ID="MultiProjectBrowser.__projectDataChanged"></a>
 <h4>MultiProjectBrowser.__projectDataChanged</h4>
 <b>__projectDataChanged</b>(<i>project</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#111;&#102; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private slot to handle the change of a project of the multi project.
 </p><dl>
 <dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#97;&#116;&#97; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y
+reference to the project data dictionary
 </dd>
 </dl><a NAME="MultiProjectBrowser.__projectOpened" ID="MultiProjectBrowser.__projectOpened"></a>
 <h4>MultiProjectBrowser.__projectOpened</h4>
 <b>__projectOpened</b>(<i>projectfile</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#111;&#112;&#101;&#110;&#105;&#110;&#103; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private slot to handle the opening of a project.
 </p><a NAME="MultiProjectBrowser.__projectRemoved" ID="MultiProjectBrowser.__projectRemoved"></a>
 <h4>MultiProjectBrowser.__projectRemoved</h4>
 <b>__projectRemoved</b>(<i>project</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#114;&#101;&#109;&#111;v&#97;&#108; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#109;&#117;&#108;&#116;&#105; &#112;&#114;&#111;&#106;&#101;&#99;&#116;.
+        Private slot to handle the removal of a project from the multi project.
 </p><dl>
 <dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#97;&#116;&#97; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y
+reference to the project data dictionary
 </dd>
 </dl><a NAME="MultiProjectBrowser.__removeProject" ID="MultiProjectBrowser.__removeProject"></a>
 <h4>MultiProjectBrowser.__removeProject</h4>
 <b>__removeProject</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#82;&#101;&#109;&#111;v&#101; &#99;&#111;&#110;&#116;&#101;x&#116; &#109;&#101;&#110;&#117; &#101;&#110;&#116;&#114;y.
+        Private method to handle the Remove context menu entry.
 </p><a NAME="MultiProjectBrowser.__setItemData" ID="MultiProjectBrowser.__setItemData"></a>
 <h4>MultiProjectBrowser.__setItemData</h4>
 <b>__setItemData</b>(<i>itm, project</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#101;&#116; &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#105;&#116;&#101;&#109;.
+        Private method to set the data of a project item.
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#105;&#116;&#101;&#109; &#116;&#111; &#98;&#101; &#115;&#101;&#116; (&#81;&#76;&#105;&#115;&#116;&#87;&#105;&#100;&#103;&#101;&#116;&#73;&#116;&#101;&#109;)
+reference to the item to be set (QListWidgetItem)
 </dd><dt><i>project</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#100;&#97;&#116;&#97; &#100;&#105;&#99;&#116;&#105;&#111;&#110;&#97;&#114;y
+reference to the project data dictionary
 </dd>
 </dl><a NAME="MultiProjectBrowser.__showProjectProperties" ID="MultiProjectBrowser.__showProjectProperties"></a>
 <h4>MultiProjectBrowser.__showProjectProperties</h4>
 <b>__showProjectProperties</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#115;&#104;&#111;w &#116;&#104;&#101; &#100;&#97;&#116;&#97; &#111;&#102; &#97; &#112;&#114;&#111;&#106;&#101;&#99;&#116; &#101;&#110;&#116;&#114;y.
+        Private method to show the data of a project entry.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

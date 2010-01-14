@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Helpviewer.QtHelpDocumentationDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#109;&#97;&#110;&#97;&#103;&#101; &#116;&#104;&#101; &#81;&#116;&#72;&#101;&#108;&#112; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#97;&#116;&#105;&#111;&#110; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101;.
+Module implementing a dialog to manage the QtHelp documentation database.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#QtHelpDocumentationDialog">QtHelpDocumentationDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#109;&#97;&#110;&#97;&#103;&#101; &#116;&#104;&#101; &#81;&#116;&#72;&#101;&#108;&#112; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#97;&#116;&#105;&#111;&#110; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101;.</td>
+<td>Class implementing a dialog to manage the QtHelp documentation database.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,7 +43,7 @@ a { color: #AA5500; }
 <a NAME="QtHelpDocumentationDialog" ID="QtHelpDocumentationDialog"></a>
 <h2>QtHelpDocumentationDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#116;&#111; &#109;&#97;&#110;&#97;&#103;&#101; &#116;&#104;&#101; &#81;&#116;&#72;&#101;&#108;&#112; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#97;&#116;&#105;&#111;&#110; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101;.
+    Class implementing a dialog to manage the QtHelp documentation database.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_QtHelpDocumentationDialog
@@ -55,72 +55,72 @@ QDialog, Ui_QtHelpDocumentationDialog
 <table>
 <tr>
 <td><a href="#QtHelpDocumentationDialog.__init__">QtHelpDocumentationDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#QtHelpDocumentationDialog.getTabsToClose">getTabsToClose</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#98;&#115; &#116;&#111; &#99;&#108;&#111;&#115;&#101;.</td>
+<td>Public method to get the list of tabs to close.</td>
 </tr><tr>
 <td><a href="#QtHelpDocumentationDialog.hasChanges">hasChanges</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#116;&#101;&#115;&#116; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#99;&#104;&#97;&#110;&#103;&#101;&#115;.</td>
+<td>Public slot to test the dialog for changes.</td>
 </tr><tr>
 <td><a href="#QtHelpDocumentationDialog.on_addButton_clicked">on_addButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#115; &#116;&#111; &#116;&#104;&#101; &#104;&#101;&#108;&#112; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101;.</td>
+<td>Private slot to add documents to the help database.</td>
 </tr><tr>
 <td><a href="#QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged">on_documentsList_itemSelectionChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#115; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110;.</td>
+<td>Private slot handling a change of the documents selection.</td>
 </tr><tr>
 <td><a href="#QtHelpDocumentationDialog.on_removeButton_clicked">on_removeButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#109;&#111;v&#101; &#97; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#104;&#101;&#108;&#112; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101;.</td>
+<td>Private slot to remove a document from the help database.</td>
 </tr>
 </table>
 <a NAME="QtHelpDocumentationDialog.__init__" ID="QtHelpDocumentationDialog.__init__"></a>
 <h4>QtHelpDocumentationDialog (Constructor)</h4>
 <b>QtHelpDocumentationDialog</b>(<i>engine, parent</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>engine</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#104;&#101;&#108;&#112; &#101;&#110;&#103;&#105;&#110;&#101; (&#81;&#72;&#101;&#108;&#112;&#69;&#110;&#103;&#105;&#110;&#101;)
+reference to the help engine (QHelpEngine)
 </dd><dt><i>parent</i></dt>
 <dd>
-&#114;&#101;&#102;&#101;&#114;&#101;&#110;&#99;&#101; &#116;&#111; &#116;&#104;&#101; &#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+reference to the parent widget (QWidget)
 </dd>
 </dl><a NAME="QtHelpDocumentationDialog.getTabsToClose" ID="QtHelpDocumentationDialog.getTabsToClose"></a>
 <h4>QtHelpDocumentationDialog.getTabsToClose</h4>
 <b>getTabsToClose</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#98;&#115; &#116;&#111; &#99;&#108;&#111;&#115;&#101;.
+        Public method to get the list of tabs to close.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#108;&#105;&#115;&#116; &#111;&#102; &#116;&#97;&#98; &#105;&#100;&#115; &#116;&#111; &#98;&#101; &#99;&#108;&#111;&#115;&#101;&#100; (&#108;&#105;&#115;&#116; &#111;&#102; &#105;&#110;&#116;&#101;&#103;&#101;&#114;&#115;)
+list of tab ids to be closed (list of integers)
 </dd>
 </dl><a NAME="QtHelpDocumentationDialog.hasChanges" ID="QtHelpDocumentationDialog.hasChanges"></a>
 <h4>QtHelpDocumentationDialog.hasChanges</h4>
 <b>hasChanges</b>(<i></i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#115;&#108;&#111;&#116; &#116;&#111; &#116;&#101;&#115;&#116; &#116;&#104;&#101; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#99;&#104;&#97;&#110;&#103;&#101;&#115;.
+        Public slot to test the dialog for changes.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-&#102;&#108;&#97;&#103; &#105;&#110;&#100;&#105;&#99;&#97;&#116;&#105;&#110;&#103; &#112;&#114;&#101;&#115;&#101;&#110;&#99;&#101; &#111;&#102; &#99;&#104;&#97;&#110;&#103;&#101;&#115;
+flag indicating presence of changes
 </dd>
 </dl><a NAME="QtHelpDocumentationDialog.on_addButton_clicked" ID="QtHelpDocumentationDialog.on_addButton_clicked"></a>
 <h4>QtHelpDocumentationDialog.on_addButton_clicked</h4>
 <b>on_addButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#97;&#100;&#100; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#115; &#116;&#111; &#116;&#104;&#101; &#104;&#101;&#108;&#112; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101;.
+        Private slot to add documents to the help database.
 </p><a NAME="QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged" ID="QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged"></a>
 <h4>QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged</h4>
 <b>on_documentsList_itemSelectionChanged</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#104;&#97;&#110;&#100;&#108;&#105;&#110;&#103; &#97; &#99;&#104;&#97;&#110;&#103;&#101; &#111;&#102; &#116;&#104;&#101; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#115; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110;.
+        Private slot handling a change of the documents selection.
 </p><a NAME="QtHelpDocumentationDialog.on_removeButton_clicked" ID="QtHelpDocumentationDialog.on_removeButton_clicked"></a>
 <h4>QtHelpDocumentationDialog.on_removeButton_clicked</h4>
 <b>on_removeButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#114;&#101;&#109;&#111;v&#101; &#97; &#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116; &#102;&#114;&#111;&#109; &#116;&#104;&#101; &#104;&#101;&#108;&#112; &#100;&#97;&#116;&#97;&#98;&#97;&#115;&#101;.
+        Private slot to remove a document from the help database.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

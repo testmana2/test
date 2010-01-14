@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Plugins.WizardPlugins.FontDialogWizard.FontDialogWizardDialog</h1>
 <p>
-&#77;&#111;&#100;&#117;&#108;&#101; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#102;&#111;&#110;&#116; &#100;&#105;&#97;&#108;&#111;&#103; w&#105;z&#97;&#114;&#100; &#100;&#105;&#97;&#108;&#111;&#103;.
+Module implementing the font dialog wizard dialog.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ a { color: #AA5500; }
 <table>
 <tr>
 <td><a href="#FontDialogWizardDialog">FontDialogWizardDialog</a></td>
-<td>&#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#102;&#111;&#110;&#116; &#100;&#105;&#97;&#108;&#111;&#103; w&#105;z&#97;&#114;&#100; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Class implementing the font dialog wizard dialog.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,10 +43,10 @@ a { color: #AA5500; }
 <a NAME="FontDialogWizardDialog" ID="FontDialogWizardDialog"></a>
 <h2>FontDialogWizardDialog</h2>
 <p>
-    &#67;&#108;&#97;&#115;&#115; &#105;&#109;&#112;&#108;&#101;&#109;&#101;&#110;&#116;&#105;&#110;&#103; &#116;&#104;&#101; &#102;&#111;&#110;&#116; &#100;&#105;&#97;&#108;&#111;&#103; w&#105;z&#97;&#114;&#100; &#100;&#105;&#97;&#108;&#111;&#103;.
+    Class implementing the font dialog wizard dialog.
 </p><p>
-    &#73;&#116; &#100;&#105;&#115;&#112;&#108;&#97;y&#115; &#97; &#100;&#105;&#97;&#108;&#111;&#103; &#102;&#111;&#114; &#101;&#110;&#116;&#101;&#114;&#105;&#110;&#103; &#116;&#104;&#101; &#112;&#97;&#114;&#97;&#109;&#101;&#116;&#101;&#114;&#115;
-    &#102;&#111;&#114; &#116;&#104;&#101; &#81;&#70;&#111;&#110;&#116;&#68;&#105;&#97;&#108;&#111;&#103; &#99;&#111;&#100;&#101; &#103;&#101;&#110;&#101;&#114;&#97;&#116;&#111;&#114;.
+    It displays a dialog for entering the parameters
+    for the QFontDialog code generator.
 </p>
 <h3>Derived from</h3>
 QDialog, Ui_FontDialogWizardDialog
@@ -58,83 +58,83 @@ QDialog, Ui_FontDialogWizardDialog
 <table>
 <tr>
 <td><a href="#FontDialogWizardDialog.__init__">FontDialogWizardDialog</a></td>
-<td>&#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#FontDialogWizardDialog.getCode">getCode</a></td>
-<td>&#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#115;&#111;&#117;&#114;&#99;&#101; &#99;&#111;&#100;&#101;.</td>
+<td>Public method to get the source code.</td>
 </tr><tr>
 <td><a href="#FontDialogWizardDialog.on_bTest_clicked">on_bTest_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#116;&#101;&#115;&#116; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#111;&#112;&#116;&#105;&#111;&#110;&#115;.</td>
+<td>Private method to test the selected options.</td>
 </tr><tr>
 <td><a href="#FontDialogWizardDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100;.</td>
+<td>Private slot called by a button of the button box clicked.</td>
 </tr><tr>
 <td><a href="#FontDialogWizardDialog.on_eVariable_textChanged">on_eVariable_textChanged</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#116;&#101;x&#116;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#101;&#86;&#97;&#114;&#105;&#97;&#98;&#108;&#101;.</td>
+<td>Private slot to handle the textChanged signal of eVariable.</td>
 </tr><tr>
 <td><a href="#FontDialogWizardDialog.on_fontButton_clicked">on_fontButton_clicked</a></td>
-<td>&#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#112;&#114;&#101;&#115;&#115; &#116;&#111; &#115;&#101;&#108;&#101;&#99;&#116; &#97; &#102;&#111;&#110;&#116; v&#105;&#97; &#97; &#102;&#111;&#110;&#116; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; &#100;&#105;&#97;&#108;&#111;&#103;.</td>
+<td>Private slot to handle the button press to select a font via a font selection dialog.</td>
 </tr>
 </table>
 <a NAME="FontDialogWizardDialog.__init__" ID="FontDialogWizardDialog.__init__"></a>
 <h4>FontDialogWizardDialog (Constructor)</h4>
 <b>FontDialogWizardDialog</b>(<i>parent=None</i>)
 <p>
-        &#67;&#111;&#110;&#115;&#116;&#114;&#117;&#99;&#116;&#111;&#114;
+        Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
-&#112;&#97;&#114;&#101;&#110;&#116; w&#105;&#100;&#103;&#101;&#116; (&#81;&#87;&#105;&#100;&#103;&#101;&#116;)
+parent widget (QWidget)
 </dd>
 </dl><a NAME="FontDialogWizardDialog.getCode" ID="FontDialogWizardDialog.getCode"></a>
 <h4>FontDialogWizardDialog.getCode</h4>
 <b>getCode</b>(<i>indLevel, indString</i>)
 <p>
-        &#80;&#117;&#98;&#108;&#105;&#99; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#103;&#101;&#116; &#116;&#104;&#101; &#115;&#111;&#117;&#114;&#99;&#101; &#99;&#111;&#100;&#101;.
+        Public method to get the source code.
 </p><dl>
 <dt><i>indLevel</i></dt>
 <dd>
-&#105;&#110;&#100;&#101;&#110;&#116;&#97;&#116;&#105;&#111;&#110; &#108;&#101;v&#101;&#108; (&#105;&#110;&#116;)
+indentation level (int)
 </dd><dt><i>indString</i></dt>
 <dd>
-&#115;&#116;&#114;&#105;&#110;&#103; &#117;&#115;&#101;&#100; &#102;&#111;&#114; &#105;&#110;&#100;&#101;&#110;&#116;&#97;&#116;&#105;&#111;&#110; (&#115;&#112;&#97;&#99;&#101; &#111;&#114; &#116;&#97;&#98;) (&#115;&#116;&#114;&#105;&#110;&#103;)
+string used for indentation (space or tab) (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-&#103;&#101;&#110;&#101;&#114;&#97;&#116;&#101;&#100; &#99;&#111;&#100;&#101; (&#115;&#116;&#114;&#105;&#110;&#103;)
+generated code (string)
 </dd>
 </dl><a NAME="FontDialogWizardDialog.on_bTest_clicked" ID="FontDialogWizardDialog.on_bTest_clicked"></a>
 <h4>FontDialogWizardDialog.on_bTest_clicked</h4>
 <b>on_bTest_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#109;&#101;&#116;&#104;&#111;&#100; &#116;&#111; &#116;&#101;&#115;&#116; &#116;&#104;&#101; &#115;&#101;&#108;&#101;&#99;&#116;&#101;&#100; &#111;&#112;&#116;&#105;&#111;&#110;&#115;.
+        Private method to test the selected options.
 </p><a NAME="FontDialogWizardDialog.on_buttonBox_clicked" ID="FontDialogWizardDialog.on_buttonBox_clicked"></a>
 <h4>FontDialogWizardDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#99;&#97;&#108;&#108;&#101;&#100; &#98;y &#97; &#98;&#117;&#116;&#116;&#111;&#110; &#111;&#102; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#98;&#111;x &#99;&#108;&#105;&#99;&#107;&#101;&#100;.
+        Private slot called by a button of the button box clicked.
 </p><dl>
 <dt><i>button</i></dt>
 <dd>
-&#98;&#117;&#116;&#116;&#111;&#110; &#116;&#104;&#97;&#116; w&#97;&#115; &#99;&#108;&#105;&#99;&#107;&#101;&#100; (&#81;&#65;&#98;&#115;&#116;&#114;&#97;&#99;&#116;&#66;&#117;&#116;&#116;&#111;&#110;)
+button that was clicked (QAbstractButton)
 </dd>
 </dl><a NAME="FontDialogWizardDialog.on_eVariable_textChanged" ID="FontDialogWizardDialog.on_eVariable_textChanged"></a>
 <h4>FontDialogWizardDialog.on_eVariable_textChanged</h4>
 <b>on_eVariable_textChanged</b>(<i>text</i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#116;&#101;x&#116;&#67;&#104;&#97;&#110;&#103;&#101;&#100; &#115;&#105;&#103;&#110;&#97;&#108; &#111;&#102; &#101;&#86;&#97;&#114;&#105;&#97;&#98;&#108;&#101;.
+        Private slot to handle the textChanged signal of eVariable.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-&#116;&#104;&#101; &#110;&#101;w &#116;&#101;x&#116; (&#115;&#116;&#114;&#105;&#110;&#103;)
+the new text (string)
 </dd>
 </dl><a NAME="FontDialogWizardDialog.on_fontButton_clicked" ID="FontDialogWizardDialog.on_fontButton_clicked"></a>
 <h4>FontDialogWizardDialog.on_fontButton_clicked</h4>
 <b>on_fontButton_clicked</b>(<i></i>)
 <p>
-        &#80;&#114;&#105;v&#97;&#116;&#101; &#115;&#108;&#111;&#116; &#116;&#111; &#104;&#97;&#110;&#100;&#108;&#101; &#116;&#104;&#101; &#98;&#117;&#116;&#116;&#111;&#110; &#112;&#114;&#101;&#115;&#115; &#116;&#111; &#115;&#101;&#108;&#101;&#99;&#116; &#97; &#102;&#111;&#110;&#116; v&#105;&#97; &#97; &#102;&#111;&#110;&#116; &#115;&#101;&#108;&#101;&#99;&#116;&#105;&#111;&#110; 
-        &#100;&#105;&#97;&#108;&#111;&#103;.
+        Private slot to handle the button press to select a font via a font selection 
+        dialog.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
