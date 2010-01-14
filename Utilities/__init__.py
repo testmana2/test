@@ -267,7 +267,7 @@ def encode(text, orig_coding):
     
     return etext, encoding
     
-_escape = re.compile(eval(r'"[&<>\"\u0080-\uffff]"'))
+_escape = re.compile("[&<>\"\u0080-\uffff]")
 
 _escape_map = {
     "&": "&amp;",
@@ -303,7 +303,7 @@ def html_encode(text, pattern=_escape):
     text = pattern.sub(escape_entities, text)
     return text
 
-_uescape = re.compile(r'[\u0080-\uffff]')
+_uescape = re.compile('[\u0080-\uffff]')
 
 def escape_uentities(m):
     """
