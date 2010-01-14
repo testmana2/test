@@ -568,7 +568,10 @@ class DebugBase(bdb.Bdb):
         """
         if exctype in [SystemExit, bdb.BdbQuit]:
             atexit._run_exitfuncs()
-            self._dbgClient.progTerminated(excval)
+            if isinstance(excval, int):
+                self._dbgClient.progTerminated(excval)
+            else:
+                self._dbgClient.progTerminated(excval.code)
             return
         
         elif exctype in [SyntaxError, IndentationError]:
