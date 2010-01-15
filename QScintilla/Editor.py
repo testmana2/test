@@ -213,6 +213,8 @@ class Editor(QsciScintillaCompat):
             self.markerDefine(UI.PixmapCache.getPixmap("notcovered.png"))
         self.taskmarker = \
             self.markerDefine(UI.PixmapCache.getPixmap("task.png"))
+        self.warning = \
+            self.markerDefine(UI.PixmapCache.getPixmap("warning.png"))
         
         # define the line markers
         self.currentline = self.markerDefine(QsciScintilla.Background)
@@ -3148,7 +3150,8 @@ class Editor(QsciScintillaCompat):
                           (1 << self.bookmark)     | \
                           (1 << self.syntaxerror)  | \
                           (1 << self.notcovered)   | \
-                          (1 << self.taskmarker)
+                          (1 << self.taskmarker)   | \
+                          (1 << self.warning)
             self.setMarginWidth(1, 16)
             self.setMarginSensitivity(1, True)
             self.setMarginMarkerMask(1, margin1Mask)
@@ -3181,7 +3184,8 @@ class Editor(QsciScintillaCompat):
             
             marginIndicMask = (1 << self.syntaxerror)  | \
                               (1 << self.notcovered)   | \
-                              (1 << self.taskmarker)
+                              (1 << self.taskmarker)   | \
+                              (1 << self.warning)
             self.setMarginWidth(self.__indicMargin, 16)
             self.setMarginSensitivity(self.__indicMargin, True)
             self.setMarginMarkerMask(self.__indicMargin, marginIndicMask)
