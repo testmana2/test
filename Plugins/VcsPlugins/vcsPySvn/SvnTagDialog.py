@@ -41,13 +41,14 @@ class SvnTagDialog(QDialog, Ui_SvnTagDialog):
         if not standardLayout:
             self.TagActionGroup.setEnabled(False)
         
+    @pyqtSlot(str)
     def on_tagCombo_editTextChanged(self, text):
         """
         Private method used to enable/disable the OK-button.
         
         @param text tag name entered in the combo (string)
         """
-        self.okButton.setDisabled(text != "")
+        self.okButton.setDisabled(text == "")
     
     def getParameters(self):
         """
