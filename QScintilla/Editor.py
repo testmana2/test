@@ -4524,6 +4524,7 @@ class Editor(QsciScintillaCompat):
             self.__menuClearBreakpoints()
         
         for clone in self.__clones[:]:
+            self.removeClone(clone)
             clone.removeClone(self)
         
         self.disconnect(self.breakpointModel, 
@@ -4572,6 +4573,7 @@ class Editor(QsciScintillaCompat):
         
         @param event the event object (QFocusEvent)
         """
+        self.recolor()
         self.vm.editActGrp.setEnabled(True)
         self.vm.editorActGrp.setEnabled(True)
         self.vm.copyActGrp.setEnabled(True)
