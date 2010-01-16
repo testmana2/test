@@ -4413,7 +4413,7 @@ class ViewManager(QObject):
         Private slot to set the automatic spell checking of all editors.
         """
         enabled = self.autoSpellCheckAct.isChecked()
-        Preferences.setEditor("AutoSpellCheckingEnabled", int(enabled))
+        Preferences.setEditor("AutoSpellCheckingEnabled", enabled)
         for editor in self.editors:
             editor.setAutoSpellChecking()
     

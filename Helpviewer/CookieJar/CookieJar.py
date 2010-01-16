@@ -150,7 +150,8 @@ class CookieJar(QNetworkCookieJar):
         if self.__keepCookies == self.KeepUntilExit:
             self.setAllCookies([])
         
-        self.__filterTrackingCookies = Preferences.getHelp("FilterTrackingCookies")
+        self.__filterTrackingCookies = Preferences.toBool(
+            Preferences.getHelp("FilterTrackingCookies"))
         
         self.__loaded = True
         self.emit(SIGNAL("cookiesChanged()"))
@@ -180,7 +181,7 @@ class CookieJar(QNetworkCookieJar):
         
         Preferences.setHelp("AcceptCookies", self.__acceptCookies)
         Preferences.setHelp("KeepCookiesUntil", self.__keepCookies)
-        Preferences.setHelp("FilterTrackingCookies", int(self.__filterTrackingCookies))
+        Preferences.setHelp("FilterTrackingCookies", self.__filterTrackingCookies)
     
     def __purgeOldCookies(self):
         """

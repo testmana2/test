@@ -5154,7 +5154,7 @@ class UserInterface(QMainWindow):
             self.SAServer.shutdown()
             self.SAServer = None
         
-        Preferences.setGeometry("MainMaximized", int(self.isMaximized()))
+        Preferences.setGeometry("MainMaximized", self.isMaximized())
         if not self.isMaximized():
             Preferences.setGeometry("MainGeometry", self.saveGeometry())
         if self.layout == "FloatingWindows":      # floating windows

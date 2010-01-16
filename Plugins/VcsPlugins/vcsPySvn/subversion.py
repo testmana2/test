@@ -1122,14 +1122,14 @@ class Subversion(VersionControl):
                 rev1 = "HEAD"
             else:
                 revision1 = \
-                    pysvn.Revision(pysvn.opt_revision_kind.number, int(urlrev1)[0])
+                    pysvn.Revision(pysvn.opt_revision_kind.number, int(urlrev1))
                 rev1 = urlrev1
             if urlrev2 in ["HEAD", "head"]:
                 revision2 = pysvn.Revision(pysvn.opt_revision_kind.head)
                 rev2 = "HEAD"
             else:
                 revision2 = \
-                    pysvn.Revision(pysvn.opt_revision_kind.number, int(urlrev2)[0])
+                    pysvn.Revision(pysvn.opt_revision_kind.number, int(urlrev2))
                 rev2 = urlrev2
             if not target:
                 url1 = name
