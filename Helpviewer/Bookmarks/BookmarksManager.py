@@ -379,7 +379,7 @@ class BookmarksManager(QObject):
             None,
             self.trUtf8("Export Bookmarks"),
             "eric5_bookmarks.xbel",
-            self.trUtf8("XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml"))
+            self.trUtf8("XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)"))
         if not fileName:
             return
         
