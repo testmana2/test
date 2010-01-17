@@ -239,8 +239,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         archive = archiveFilename
         destination = \
-            self.destinationCombo.itemData(self.destinationCombo.currentIndex())\
-                .toString()
+            self.destinationCombo.itemData(self.destinationCombo.currentIndex())
         
         # check if archive is a local url
         url = urllib.parse.urlparse(archive)
