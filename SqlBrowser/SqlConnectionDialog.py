@@ -91,8 +91,7 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
             self,
             self.trUtf8("Select Database File"),
             startdir,
-            self.trUtf8("All Files (*)"),
-            None)
+            self.trUtf8("All Files (*)"))
         
         if dbFile:
             self.databaseEdit.setText(Utilities.toNativeSeparators(dbFile))
