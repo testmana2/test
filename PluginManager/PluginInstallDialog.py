@@ -268,7 +268,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                             """writeable. Aborting...</p>""").format(destination), \
                 False
         
-        zip = zipfile.ZipFile(archive, "rb")
+        zip = zipfile.ZipFile(archive, "r")
         
         # check, if the archive contains a valid plugin
         pluginFound = False

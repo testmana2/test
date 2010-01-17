@@ -4447,9 +4447,9 @@ class Project(QObject):
             os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0].replace(".py", ".zip"))
         try:
             try:
-                archiveFile = zipfile.ZipFile(archive, "wb", zipfile.ZIP_DEFLATED)
+                archiveFile = zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED)
             except RuntimeError:
-                archiveFile = zipfile.ZipFile(archive, "wb")
+                archiveFile = zipfile.ZipFile(archive, "w")
         except IOError as why:
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
