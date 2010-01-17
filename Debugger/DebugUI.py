@@ -1416,7 +1416,7 @@ class DebugUI(QObject):
             
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
-                    argv.insert(0, "--plugin=%s " % fn)
+                    argv = "--plugin=%s %s" % (fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
                 # Ask the client to open the new program.
@@ -1520,7 +1520,7 @@ class DebugUI(QObject):
             
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
-                    argv.insert(0, "--plugin=%s " % fn)
+                    argv = "--plugin=%s %s" % (fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
                 # Ask the client to open the new program.
@@ -1620,7 +1620,7 @@ class DebugUI(QObject):
             
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
-                    argv.insert(0, "--plugin=%s " % fn)
+                    argv = "--plugin=%s %s" % (fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
                 # Ask the client to open the new program.
@@ -1734,7 +1734,7 @@ class DebugUI(QObject):
             
             if not doNotStart:
                 if debugProject and self.project.getProjectType() == "E4Plugin":
-                    argv.insert(0, "--plugin=%s " % fn)
+                    argv = "--plugin=%s %s" % (fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                     tracePython = True # override flag because it must be true
                 
@@ -1785,7 +1785,7 @@ class DebugUI(QObject):
         
         if not doNotStart:
             if forProject and self.project.getProjectType() == "E4Plugin":
-                argv.insert(0, "--plugin=%s " % fn)
+                argv = "--plugin=%s %s" % (fn, argv)
                 fn = os.path.join(getConfig('ericDir'), "eric5.py")
             
             if self.lastStartAction in [1, 2]:
