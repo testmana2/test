@@ -3810,7 +3810,7 @@ eric5.Project.Project.Project.checkDirty?4()
 eric5.Project.Project.Project.checkLanguageFiles?4()
 eric5.Project.Project.Project.checkVCSStatus?4()
 eric5.Project.Project.Project.clearStatusMonitorCachedState?4(name)
-eric5.Project.Project.Project.closeProject?4(reopen = False)
+eric5.Project.Project.Project.closeProject?4(reopen = False, noSave = False)
 eric5.Project.Project.Project.copyDirectory?4(olddn, newdn)
 eric5.Project.Project.Project.dbgKeynames?7
 eric5.Project.Project.Project.deleteDirectory?4(dn)

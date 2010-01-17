@@ -245,6 +245,7 @@ class Subversion(VersionControl):
                 project.closeProject()
                 return
             shutil.rmtree(tmpProjectDir, True)
+            project.closeProject(noSave = True)
             project.openProject(pfn)
         
     def vcsImport(self, vcsDataDict, projectDir, noDialog = False):

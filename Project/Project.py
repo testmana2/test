@@ -2917,11 +2917,12 @@ class Project(QObject):
         self.profiledata        and self.profiledata.close()
         self.applicationDiagram and self.applicationDiagram.close()
         
-    def closeProject(self, reopen = False):
+    def closeProject(self, reopen = False, noSave = False):
         """
         Public slot to close the current project.
         
         @keyparam reopen flag indicating a reopening of the project (boolean)
+        @keyparam noSave flag indicating to not perform save actions (boolean)
         @return flag indicating success (boolean)
         """
         # save the list of recently opened projects
@@ -2934,17 +2935,19 @@ class Project(QObject):
             return False
         
         # save the user project properties
-        self.__writeUserProperties()
+        if not noSave:
+            self.__writeUserProperties()
         
         # save the project session file being quiet about error
         if reopen:
             self.__writeSession(quiet = True, indicator = "_tmp")
-        elif Preferences.getProject("AutoSaveSession"):
+        elif Preferences.getProject("AutoSaveSession") and not noSave:
             self.__writeSession(quiet = True)
         
         # save the project debugger properties file being quiet about error
         if Preferences.getProject("AutoSaveDbgProperties") and \
-           self.isDebugPropertiesLoaded():
+           self.isDebugPropertiesLoaded() and \
+           not noSave:
             self.__writeDebugProperties(True)
         
         # now save all open modified files of the project
@@ -2968,7 +2971,8 @@ class Project(QObject):
                 self.__statusMonitorStatus)
         
         # now save the tasks
-        self.__writeTasks()
+        if not noSave:
+            self.__writeTasks()
         self.ui.taskViewer.clearProjectTasks()
         self.ui.taskViewer.setProjectOpen(False)
         

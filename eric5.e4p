@@ -1050,7 +1050,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1058,7 +1057,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1066,7 +1064,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1074,7 +1071,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1082,7 +1078,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1090,7 +1085,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1098,7 +1092,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1106,7 +1099,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1114,7 +1106,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1122,7 +1113,7 @@
         </key>
         <value>
           <list>
-            <string></string>
+            <string>--show-updates</string>
           </list>
         </value>
         <key>
@@ -1130,7 +1121,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
         <key>
@@ -1138,7 +1128,6 @@
         </key>
         <value>
           <list>
-            <string></string>
           </list>
         </value>
       </dict>

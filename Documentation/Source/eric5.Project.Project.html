@@ -1284,13 +1284,16 @@ name of the entry to be cleared (string)
 </dd>
 </dl><a NAME="Project.closeProject" ID="Project.closeProject"></a>
 <h4>Project.closeProject</h4>
-<b>closeProject</b>(<i>reopen = False</i>)
+<b>closeProject</b>(<i>reopen = False, noSave = False</i>)
 <p>
         Public slot to close the current project.
 </p><dl>
 <dt><i>reopen=</i></dt>
 <dd>
 flag indicating a reopening of the project (boolean)
+</dd><dt><i>noSave=</i></dt>
+<dd>
+flag indicating to not perform save actions (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

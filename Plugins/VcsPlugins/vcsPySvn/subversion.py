@@ -252,6 +252,7 @@ class Subversion(VersionControl):
                 project.closeProject()
                 return
             shutil.rmtree(tmpProjectDir, True)
+            project.closeProject(noSave = True)
             project.openProject(pfn)
         
     def vcsImport(self, vcsDataDict, projectDir, noDialog = False):
@@ -296,22 +297,20 @@ class Subversion(VersionControl):
         locker = QMutexLocker(self.vcsExecutionMutex)
         cwd = os.getcwd()
         os.chdir(os.path.join(tmpDir, project))
-        opts = self.options['global'] + self.options['update']
+        opts = self.options['global']
         recurse = "--non-recursive" not in opts
-        ignore = "--ignore" in opts
         url = self.__svnURL(vcsDir)
         client = self.getClient()
         if not noDialog:
             dlg = \
                 SvnDialog(self.trUtf8('Importing project into Subversion repository'),
-                          "import%s%s --message %s ." % \
+                          "import%s --message %s ." % \
                             ((not recurse) and " --non-recursive" or "", 
-                             ignore and " --ignore" or "",
                              msg),
                     client)
             QApplication.processEvents()
         try:
-            rev = client.import_(".", url, msg, recurse, ignore)
+            rev = client.import_(".", url, msg, recurse, ignore = True)
             status = True
         except pysvn.ClientError as e:
             status = False
