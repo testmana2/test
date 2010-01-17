@@ -56,7 +56,7 @@ class vcsCommandOptionsDialog(QDialog, Ui_vcsCommandOptionsDialog):
                   self.statusEdit, self.tagEdit, self.exportEdit]:
             t = widget.whatsThis()
             if t:
-                t = t.append(Utilities.getPercentReplacementHelp())
+                t += Utilities.getPercentReplacementHelp()
                 widget.setWhatsThis(t)
         
     def getOptions(self):
