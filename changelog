@@ -1,5 +1,9 @@
 Change Log
 ----------
 
+Version 5.0-snapshot-2010mmdd:
+- bug fixes
+- added code to use the PYTHONPATH environment setting in the debuggers
+
 Version 5.0-snapshot-20100116:
 - first snapshot of eric5

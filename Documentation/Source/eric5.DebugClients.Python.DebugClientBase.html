@@ -130,6 +130,9 @@ object
 <td><a href="#DebugClientBase.__generateFilterObjects">__generateFilterObjects</a></td>
 <td>Private slot to convert a filter string to a list of filter objects.</td>
 </tr><tr>
+<td><a href="#DebugClientBase.__getSysPath">__getSysPath</a></td>
+<td>Private slot to calculate a path list including the PYTHONPATH environment variable.</td>
+</tr><tr>
 <td><a href="#DebugClientBase.__interact">__interact</a></td>
 <td>Private method to Interact with  the debugger.</td>
 </tr><tr>
@@ -349,6 +352,22 @@ A tuple consisting of a list of formatted variables. Each variable
 </dd><dt><i>filterString</i></dt>
 <dd>
 string of filter patterns separated by ';'
+</dd>
+</dl><a NAME="DebugClientBase.__getSysPath" ID="DebugClientBase.__getSysPath"></a>
+<h4>DebugClientBase.__getSysPath</h4>
+<b>__getSysPath</b>(<i>firstEntry</i>)
+<p>
+        Private slot to calculate a path list including the PYTHONPATH 
+        environment variable.
+</p><dl>
+<dt><i>firstEntry</i></dt>
+<dd>
+entry to be put first in sys.path (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+path list for use as sys.path (list of strings)
 </dd>
 </dl><a NAME="DebugClientBase.__interact" ID="DebugClientBase.__interact"></a>
 <h4>DebugClientBase.__interact</h4>

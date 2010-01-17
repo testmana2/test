@@ -474,8 +474,7 @@ class DebugClientBase(object):
                     pass
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
-                sys.path[0] = os.path.dirname(sys.argv[0])
-                sys.path.insert(0, '')
+                sys.path = self.__getSysPath(os.path.dirname(sys.argv[0]))
                 if wd == '':
                     os.chdir(sys.path[1])
                 else:
@@ -520,8 +519,7 @@ class DebugClientBase(object):
                     pass
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
-                sys.path[0] = os.path.dirname(sys.argv[0])
-                sys.path.insert(0, '')
+                sys.path = self.__getSysPath(os.path.dirname(sys.argv[0]))
                 if wd == '':
                     os.chdir(sys.path[1])
                 else:
@@ -558,8 +556,7 @@ class DebugClientBase(object):
                     pass
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
-                sys.path[0] = os.path.dirname(sys.argv[0])
-                sys.path.insert(0, '')
+                sys.path = self.__getSysPath(os.path.dirname(sys.argv[0]))
                 if wd == '':
                     os.chdir(sys.path[1])
                 else:
@@ -597,8 +594,7 @@ class DebugClientBase(object):
                     pass
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
-                sys.path[0] = os.path.dirname(sys.argv[0])
-                sys.path.insert(0, '')
+                sys.path = self.__getSysPath(os.path.dirname(sys.argv[0]))
                 if wd == '':
                     os.chdir(sys.path[1])
                 else:
@@ -1763,8 +1759,7 @@ class DebugClientBase(object):
         self.dircache = []
         sys.argv = progargs[:]
         sys.argv[0] = os.path.abspath(sys.argv[0])
-        sys.path[0] = os.path.dirname(sys.argv[0])
-        sys.path.insert(0, '')
+        sys.path = self.__getSysPath(os.path.dirname(sys.argv[0]))
         if wd == '':
             os.chdir(sys.path[1])
         else:
@@ -1960,3 +1955,19 @@ class DebugClientBase(object):
             return
         
         DebugClientOrigClose(fd)
+        
+    def __getSysPath(self, firstEntry):
+        """
+        Private slot to calculate a path list including the PYTHONPATH 
+        environment variable.
+        
+        @param firstEntry entry to be put first in sys.path (string)
+        @return path list for use as sys.path (list of strings)
+        """
+        sysPath = [path for path in os.environ.get("PYTHONPATH", "").split(os.pathsep) 
+                   if path not in sys.path] + sys.path[:]
+        if "" in sysPath:
+            sysPath.remove("")
+        sysPath.insert(0, firstEntry)
+        sysPath.insert(0, '')
+        return sysPath

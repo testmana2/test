@@ -6121,6 +6121,7 @@
       <keyword name="DebugClientBase.__formatQt4Variable" id="DebugClientBase.__formatQt4Variable" ref="eric5.DebugClients.Python.DebugClientBase.html#DebugClientBase.__formatQt4Variable" />
       <keyword name="DebugClientBase.__formatVariablesList" id="DebugClientBase.__formatVariablesList" ref="eric5.DebugClients.Python.DebugClientBase.html#DebugClientBase.__formatVariablesList" />
       <keyword name="DebugClientBase.__generateFilterObjects" id="DebugClientBase.__generateFilterObjects" ref="eric5.DebugClients.Python.DebugClientBase.html#DebugClientBase.__generateFilterObjects" />
+      <keyword name="DebugClientBase.__getSysPath" id="DebugClientBase.__getSysPath" ref="eric5.DebugClients.Python.DebugClientBase.html#DebugClientBase.__getSysPath" />
       <keyword name="DebugClientBase.__interact" id="DebugClientBase.__interact" ref="eric5.DebugClients.Python.DebugClientBase.html#DebugClientBase.__interact" />
       <keyword name="DebugClientBase.__resolveHost" id="DebugClientBase.__resolveHost" ref="eric5.DebugClients.Python.DebugClientBase.html#DebugClientBase.__resolveHost" />
       <keyword name="DebugClientBase.__setCoding" id="DebugClientBase.__setCoding" ref="eric5.DebugClients.Python.DebugClientBase.html#DebugClientBase.__setCoding" />
@@ -6288,6 +6289,7 @@
       <keyword name="DebugClientBase.__formatQt4Variable" id="DebugClientBase.__formatQt4Variable" ref="eric5.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__formatQt4Variable" />
       <keyword name="DebugClientBase.__formatVariablesList" id="DebugClientBase.__formatVariablesList" ref="eric5.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__formatVariablesList" />
       <keyword name="DebugClientBase.__generateFilterObjects" id="DebugClientBase.__generateFilterObjects" ref="eric5.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__generateFilterObjects" />
+      <keyword name="DebugClientBase.__getSysPath" id="DebugClientBase.__getSysPath" ref="eric5.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__getSysPath" />
       <keyword name="DebugClientBase.__interact" id="DebugClientBase.__interact" ref="eric5.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__interact" />
       <keyword name="DebugClientBase.__resolveHost" id="DebugClientBase.__resolveHost" ref="eric5.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__resolveHost" />
       <keyword name="DebugClientBase.__setCoding" id="DebugClientBase.__setCoding" ref="eric5.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__setCoding" />
