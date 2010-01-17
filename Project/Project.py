@@ -4556,7 +4556,7 @@ class Project(QObject):
             
             lineno += 1
         
-        source = Utilities.encode("".join(sourcelines), encoding)
+        source = Utilities.encode("".join(sourcelines), encoding)[0]
         return source, sversion
     
     def __pluginExtractVersion(self, filename):
