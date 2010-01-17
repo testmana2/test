@@ -910,7 +910,7 @@ def compile(file, codestring = ""):
     import builtins
     if not codestring:
         try:
-            codestring = Utilities.readEncodedFile(file)[0]
+            codestring = readEncodedFile(file)[0]
         except (UnicodeDecodeError, IOError):
             return (False, None, None, None, None)
 
