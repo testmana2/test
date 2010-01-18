@@ -154,7 +154,7 @@ class BookmarksManager(QObject):
             QMessageBox.warning(None,
                 self.trUtf8("Loading Bookmarks"),
                 self.trUtf8("""Error when loading bookmarks on line {0}, column {1}:\n"""
-                            """{3}""")\
+                            """{2}""")\
                     .format(reader.lineNumber(), 
                             reader.columnNumber(), 
                             reader.errorString()))
