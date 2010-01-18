@@ -129,10 +129,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if self.__repositoryMissing or current is None:
             return
         
-        self.urlEdit.setText(current.data(0, urlRole))
-        self.descriptionEdit.setPlainText(
-            self.__formatDescription(current.data(0, descrRole)))
-        self.authorEdit.setText(current.data(0, authorRole))
+        self.urlEdit.setText(current.data(0, urlRole) or "")
+        self.descriptionEdit.setPlainText(current.data(0, descrRole) and \
+            self.__formatDescription(current.data(0, descrRole)) or "")
+        self.authorEdit.setText(current.data(0, authorRole) or "")
     
     def __selectedItems(self):
         """
