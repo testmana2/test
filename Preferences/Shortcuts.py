@@ -119,10 +119,10 @@ def __saveShortcut(act, category, prefClass):
     if act.objectName():
         prefClass.settings.setValue(
             "Shortcuts/{0}/{1}/Accel".format(category, act.objectName()), 
-            act.shortcut())
+            act.shortcut().toString())
         prefClass.settings.setValue(
             "Shortcuts/{0}/{1}/AltAccel".format(category, act.objectName()), 
-            act.alternateShortcut())
+            act.alternateShortcut().toString())
 
 def saveShortcuts(prefClass = Prefs):
     """
