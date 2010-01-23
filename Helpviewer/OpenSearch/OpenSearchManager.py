@@ -205,6 +205,7 @@ class OpenSearchManager(QObject):
         if engine.name() in self.__engines:
             return False
         
+        engine.setParent(self)
         self.__engines[engine.name()] = engine
         
         self.emit(SIGNAL("changed()"))
