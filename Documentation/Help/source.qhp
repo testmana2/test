@@ -3869,6 +3869,7 @@
       <keyword name="UserInterface.__sqlBrowser" id="UserInterface.__sqlBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__sqlBrowser" />
       <keyword name="UserInterface.__sslErrors" id="UserInterface.__sslErrors" ref="eric5.UI.UserInterface.html#UserInterface.__sslErrors" />
       <keyword name="UserInterface.__startToolProcess" id="UserInterface.__startToolProcess" ref="eric5.UI.UserInterface.html#UserInterface.__startToolProcess" />
+      <keyword name="UserInterface.__startWebBrowser" id="UserInterface.__startWebBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__startWebBrowser" />
       <keyword name="UserInterface.__switchTab" id="UserInterface.__switchTab" ref="eric5.UI.UserInterface.html#UserInterface.__switchTab" />
       <keyword name="UserInterface.__toggleBottomSidebar" id="UserInterface.__toggleBottomSidebar" ref="eric5.UI.UserInterface.html#UserInterface.__toggleBottomSidebar" />
       <keyword name="UserInterface.__toggleBrowser" id="UserInterface.__toggleBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__toggleBrowser" />

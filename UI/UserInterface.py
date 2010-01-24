@@ -1799,7 +1799,7 @@ class UserInterface(QMainWindow):
             """<b>Web Browser</b>"""
             """<p>Browse the Internet with the eric5 Web Browser.</p>"""
         ))
-        self.connect(self.webBrowserAct, SIGNAL('triggered()'), self.__webBrowser)
+        self.connect(self.webBrowserAct, SIGNAL('triggered()'), self.__startWebBrowser)
         self.actions.append(self.webBrowserAct)
 
         self.iconEditorAct = E5Action(self.trUtf8('Icon Editor'),
@@ -3942,7 +3942,7 @@ class UserInterface(QMainWindow):
         """
         self.__assistant(version = 4)
     
-    def __webBrowser(self, home = None):
+    def __startWebBrowser(self, home = None):
         """
         Private slot to start a web browser executable.
         
