@@ -186,8 +186,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         if fn:
             ppath = self.dirEdit.text()
             if ppath:
-                ppath = QDir(ppath).absolutePath()
-                ppath.append(QDir.separator())
+                ppath = QDir(ppath).absolutePath() + QDir.separator()
                 fn = fn.replace(ppath, "")
             self.mainscriptEdit.setText(Utilities.toNativeSeparators(fn))
         
