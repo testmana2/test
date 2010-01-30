@@ -126,6 +126,8 @@ class MdiArea(QMdiArea, ViewManager):
         win.show()
         if win.hasSyntaxErrors():
             self.__setSubWindowIcon(win, UI.PixmapCache.getIcon("syntaxError.png"))
+        elif win.hasFlakesWarnings():
+            self.__setSubWindowIcon(win, UI.PixmapCache.getIcon("warning.png"))
         else:
             self.__setSubWindowIcon(win, UI.PixmapCache.getIcon("empty.png"))
         
@@ -301,6 +303,8 @@ class MdiArea(QMdiArea, ViewManager):
             self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("fileModified.png"))
         elif editor.hasSyntaxErrors():
             self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("syntaxError.png"))
+        elif editor.hasFlakesWarnings():
+            self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("warning.png"))
         else:
             self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("empty.png"))
         self._checkActions(editor)
@@ -313,6 +317,8 @@ class MdiArea(QMdiArea, ViewManager):
         """
         if editor.hasSyntaxErrors():
             self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("syntaxError.png"))
+        elif editor.hasFlakesWarnings():
+            self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("warning.png"))
         else:
             self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("empty.png"))
         

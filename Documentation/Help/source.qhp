@@ -478,6 +478,7 @@
               <section title="eric5.Preferences.ConfigurationPages.PrinterPage" ref="eric5.Preferences.ConfigurationPages.PrinterPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ProjectBrowserPage" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ProjectPage" ref="eric5.Preferences.ConfigurationPages.ProjectPage.html" />
+              <section title="eric5.Preferences.ConfigurationPages.Py3FlakesPage" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.PythonPage" ref="eric5.Preferences.ConfigurationPages.PythonPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.QtPage" ref="eric5.Preferences.ConfigurationPages.QtPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ShellPage" ref="eric5.Preferences.ConfigurationPages.ShellPage.html" />
@@ -641,6 +642,10 @@
               <section title="eric5.Utilities.ClassBrowsers.idlclbr" ref="eric5.Utilities.ClassBrowsers.idlclbr.html" />
               <section title="eric5.Utilities.ClassBrowsers.pyclbr" ref="eric5.Utilities.ClassBrowsers.pyclbr.html" />
               <section title="eric5.Utilities.ClassBrowsers.rbclbr" ref="eric5.Utilities.ClassBrowsers.rbclbr.html" />
+            </section>
+            <section title="eric5.Utilities.py3flakes" ref="index-eric5.Utilities.py3flakes.html">
+              <section title="eric5.Utilities.py3flakes.checker" ref="eric5.Utilities.py3flakes.checker.html" />
+              <section title="eric5.Utilities.py3flakes.messages" ref="eric5.Utilities.py3flakes.messages.html" />
             </section>
             <section title="eric5.Utilities.AutoSaver" ref="eric5.Utilities.AutoSaver.html" />
             <section title="eric5.Utilities.ModuleParser" ref="eric5.Utilities.ModuleParser.html" />
@@ -2943,6 +2948,7 @@
       <keyword name="getEditorLexerAssocs" id="getEditorLexerAssocs" ref="eric5.Preferences.__init__.html#getEditorLexerAssocs" />
       <keyword name="getEditorOtherFonts" id="getEditorOtherFonts" ref="eric5.Preferences.__init__.html#getEditorOtherFonts" />
       <keyword name="getEditorTyping" id="getEditorTyping" ref="eric5.Preferences.__init__.html#getEditorTyping" />
+      <keyword name="getFlakes" id="getFlakes" ref="eric5.Preferences.__init__.html#getFlakes" />
       <keyword name="getGeometry" id="getGeometry" ref="eric5.Preferences.__init__.html#getGeometry" />
       <keyword name="getGraphics" id="getGraphics" ref="eric5.Preferences.__init__.html#getGraphics" />
       <keyword name="getHelp" id="getHelp" ref="eric5.Preferences.__init__.html#getHelp" />
@@ -2988,6 +2994,7 @@
       <keyword name="setEditorLexerAssocs" id="setEditorLexerAssocs" ref="eric5.Preferences.__init__.html#setEditorLexerAssocs" />
       <keyword name="setEditorOtherFonts" id="setEditorOtherFonts" ref="eric5.Preferences.__init__.html#setEditorOtherFonts" />
       <keyword name="setEditorTyping" id="setEditorTyping" ref="eric5.Preferences.__init__.html#setEditorTyping" />
+      <keyword name="setFlakes" id="setFlakes" ref="eric5.Preferences.__init__.html#setFlakes" />
       <keyword name="setGeometry" id="setGeometry" ref="eric5.Preferences.__init__.html#setGeometry" />
       <keyword name="setGraphics" id="setGraphics" ref="eric5.Preferences.__init__.html#setGraphics" />
       <keyword name="setHelp" id="setHelp" ref="eric5.Preferences.__init__.html#setHelp" />
@@ -3171,6 +3178,7 @@
       <keyword name="ViewManager.__breakpointToggled" id="ViewManager.__breakpointToggled" ref="eric5.ViewManager.ViewManager.html#ViewManager.__breakpointToggled" />
       <keyword name="ViewManager.__clearAllBookmarks" id="ViewManager.__clearAllBookmarks" ref="eric5.ViewManager.ViewManager.html#ViewManager.__clearAllBookmarks" />
       <keyword name="ViewManager.__clearAllSyntaxErrors" id="ViewManager.__clearAllSyntaxErrors" ref="eric5.ViewManager.ViewManager.html#ViewManager.__clearAllSyntaxErrors" />
+      <keyword name="ViewManager.__clearAllWarnings" id="ViewManager.__clearAllWarnings" ref="eric5.ViewManager.ViewManager.html#ViewManager.__clearAllWarnings" />
       <keyword name="ViewManager.__clearBookmarked" id="ViewManager.__clearBookmarked" ref="eric5.ViewManager.ViewManager.html#ViewManager.__clearBookmarked" />
       <keyword name="ViewManager.__clearRecent" id="ViewManager.__clearRecent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__clearRecent" />
       <keyword name="ViewManager.__connectEditor" id="ViewManager.__connectEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.__connectEditor" />
@@ -3231,10 +3239,12 @@
       <keyword name="ViewManager.__nextBookmark" id="ViewManager.__nextBookmark" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextBookmark" />
       <keyword name="ViewManager.__nextTask" id="ViewManager.__nextTask" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextTask" />
       <keyword name="ViewManager.__nextUncovered" id="ViewManager.__nextUncovered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextUncovered" />
+      <keyword name="ViewManager.__nextWarning" id="ViewManager.__nextWarning" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextWarning" />
       <keyword name="ViewManager.__openSourceFile" id="ViewManager.__openSourceFile" ref="eric5.ViewManager.ViewManager.html#ViewManager.__openSourceFile" />
       <keyword name="ViewManager.__previousBookmark" id="ViewManager.__previousBookmark" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousBookmark" />
       <keyword name="ViewManager.__previousTask" id="ViewManager.__previousTask" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousTask" />
       <keyword name="ViewManager.__previousUncovered" id="ViewManager.__previousUncovered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousUncovered" />
+      <keyword name="ViewManager.__previousWarning" id="ViewManager.__previousWarning" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousWarning" />
       <keyword name="ViewManager.__quickSearch" id="ViewManager.__quickSearch" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearch" />
       <keyword name="ViewManager.__quickSearchEnter" id="ViewManager.__quickSearchEnter" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchEnter" />
       <keyword name="ViewManager.__quickSearchEscape" id="ViewManager.__quickSearchEscape" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchEscape" />
@@ -5469,6 +5479,7 @@
       <keyword name="Editor.__showContextMenuResources" id="Editor.__showContextMenuResources" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuResources" />
       <keyword name="Editor.__showContextMenuShow" id="Editor.__showContextMenuShow" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuShow" />
       <keyword name="Editor.__showContextMenuSpelling" id="Editor.__showContextMenuSpelling" ref="eric5.QScintilla.Editor.html#Editor.__showContextMenuSpelling" />
+      <keyword name="Editor.__showFlakesWarning" id="Editor.__showFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.__showFlakesWarning" />
       <keyword name="Editor.__showImportsDiagram" id="Editor.__showImportsDiagram" ref="eric5.QScintilla.Editor.html#Editor.__showImportsDiagram" />
       <keyword name="Editor.__showPackageDiagram" id="Editor.__showPackageDiagram" ref="eric5.QScintilla.Editor.html#Editor.__showPackageDiagram" />
       <keyword name="Editor.__showProfileData" id="Editor.__showProfileData" ref="eric5.QScintilla.Editor.html#Editor.__showProfileData" />
@@ -5496,6 +5507,7 @@
       <keyword name="Editor.checkSpelling" id="Editor.checkSpelling" ref="eric5.QScintilla.Editor.html#Editor.checkSpelling" />
       <keyword name="Editor.clearBookmarks" id="Editor.clearBookmarks" ref="eric5.QScintilla.Editor.html#Editor.clearBookmarks" />
       <keyword name="Editor.clearBreakpoint" id="Editor.clearBreakpoint" ref="eric5.QScintilla.Editor.html#Editor.clearBreakpoint" />
+      <keyword name="Editor.clearFlakesWarnings" id="Editor.clearFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.clearFlakesWarnings" />
       <keyword name="Editor.clearSearchIndicators" id="Editor.clearSearchIndicators" ref="eric5.QScintilla.Editor.html#Editor.clearSearchIndicators" />
       <keyword name="Editor.clearSyntaxError" id="Editor.clearSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.clearSyntaxError" />
       <keyword name="Editor.close" id="Editor.close" ref="eric5.QScintilla.Editor.html#Editor.close" />
@@ -5523,6 +5535,7 @@
       <keyword name="Editor.getEncoding" id="Editor.getEncoding" ref="eric5.QScintilla.Editor.html#Editor.getEncoding" />
       <keyword name="Editor.getFileName" id="Editor.getFileName" ref="eric5.QScintilla.Editor.html#Editor.getFileName" />
       <keyword name="Editor.getFileType" id="Editor.getFileType" ref="eric5.QScintilla.Editor.html#Editor.getFileType" />
+      <keyword name="Editor.getFlakesWarnings" id="Editor.getFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.getFlakesWarnings" />
       <keyword name="Editor.getFolds" id="Editor.getFolds" ref="eric5.QScintilla.Editor.html#Editor.getFolds" />
       <keyword name="Editor.getHighlightPosition" id="Editor.getHighlightPosition" ref="eric5.QScintilla.Editor.html#Editor.getHighlightPosition" />
       <keyword name="Editor.getLanguage" id="Editor.getLanguage" ref="eric5.QScintilla.Editor.html#Editor.getLanguage" />
@@ -5542,6 +5555,7 @@
       <keyword name="Editor.hasBookmarks" id="Editor.hasBookmarks" ref="eric5.QScintilla.Editor.html#Editor.hasBookmarks" />
       <keyword name="Editor.hasBreakpoints" id="Editor.hasBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.hasBreakpoints" />
       <keyword name="Editor.hasCoverageMarkers" id="Editor.hasCoverageMarkers" ref="eric5.QScintilla.Editor.html#Editor.hasCoverageMarkers" />
+      <keyword name="Editor.hasFlakesWarnings" id="Editor.hasFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.hasFlakesWarnings" />
       <keyword name="Editor.hasMiniMenu" id="Editor.hasMiniMenu" ref="eric5.QScintilla.Editor.html#Editor.hasMiniMenu" />
       <keyword name="Editor.hasSyntaxErrors" id="Editor.hasSyntaxErrors" ref="eric5.QScintilla.Editor.html#Editor.hasSyntaxErrors" />
       <keyword name="Editor.hasTaskMarkers" id="Editor.hasTaskMarkers" ref="eric5.QScintilla.Editor.html#Editor.hasTaskMarkers" />
@@ -5568,9 +5582,11 @@
       <keyword name="Editor.mousePressEvent" id="Editor.mousePressEvent" ref="eric5.QScintilla.Editor.html#Editor.mousePressEvent" />
       <keyword name="Editor.newBreakpointWithProperties" id="Editor.newBreakpointWithProperties" ref="eric5.QScintilla.Editor.html#Editor.newBreakpointWithProperties" />
       <keyword name="Editor.nextBookmark" id="Editor.nextBookmark" ref="eric5.QScintilla.Editor.html#Editor.nextBookmark" />
+      <keyword name="Editor.nextFlakesWarning" id="Editor.nextFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.nextFlakesWarning" />
       <keyword name="Editor.nextTask" id="Editor.nextTask" ref="eric5.QScintilla.Editor.html#Editor.nextTask" />
       <keyword name="Editor.nextUncovered" id="Editor.nextUncovered" ref="eric5.QScintilla.Editor.html#Editor.nextUncovered" />
       <keyword name="Editor.previousBookmark" id="Editor.previousBookmark" ref="eric5.QScintilla.Editor.html#Editor.previousBookmark" />
+      <keyword name="Editor.previousFlakesWarning" id="Editor.previousFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.previousFlakesWarning" />
       <keyword name="Editor.previousTask" id="Editor.previousTask" ref="eric5.QScintilla.Editor.html#Editor.previousTask" />
       <keyword name="Editor.previousUncovered" id="Editor.previousUncovered" ref="eric5.QScintilla.Editor.html#Editor.previousUncovered" />
       <keyword name="Editor.printFile" id="Editor.printFile" ref="eric5.QScintilla.Editor.html#Editor.printFile" />
@@ -5603,6 +5619,7 @@
       <keyword name="Editor.streamCommentLineOrSelection" id="Editor.streamCommentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.streamCommentLineOrSelection" />
       <keyword name="Editor.streamCommentSelection" id="Editor.streamCommentSelection" ref="eric5.QScintilla.Editor.html#Editor.streamCommentSelection" />
       <keyword name="Editor.toggleBookmark" id="Editor.toggleBookmark" ref="eric5.QScintilla.Editor.html#Editor.toggleBookmark" />
+      <keyword name="Editor.toggleFlakesWarning" id="Editor.toggleFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.toggleFlakesWarning" />
       <keyword name="Editor.toggleSyntaxError" id="Editor.toggleSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.toggleSyntaxError" />
       <keyword name="Editor.uncommentLine" id="Editor.uncommentLine" ref="eric5.QScintilla.Editor.html#Editor.uncommentLine" />
       <keyword name="Editor.uncommentLineOrSelection" id="Editor.uncommentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.uncommentLineOrSelection" />
@@ -6387,6 +6404,113 @@
       <keyword name="Interface (Constructor)" id="Interface (Constructor)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Interface.__init__" />
       <keyword name="Module (Constructor)" id="Module (Constructor)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Module.__init__" />
       <keyword name="VisibilityMixin (Constructor)" id="VisibilityMixin (Constructor)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#VisibilityMixin.__init__" />
+      <keyword name="py3flakes (Package)" id="py3flakes (Package)" ref="index-eric5.Utilities.py3flakes.html" />
+      <keyword name="checker (Module)" id="checker (Module)" ref="eric5.Utilities.py3flakes.checker.html" />
+      <keyword name="Argument" id="Argument" ref="eric5.Utilities.py3flakes.checker.html#Argument" />
+      <keyword name="Assignment" id="Assignment" ref="eric5.Utilities.py3flakes.checker.html#Assignment" />
+      <keyword name="Binding" id="Binding" ref="eric5.Utilities.py3flakes.checker.html#Binding" />
+      <keyword name="Checker" id="Checker" ref="eric5.Utilities.py3flakes.checker.html#Checker" />
+      <keyword name="ClassScope" id="ClassScope" ref="eric5.Utilities.py3flakes.checker.html#ClassScope" />
+      <keyword name="ExportBinding" id="ExportBinding" ref="eric5.Utilities.py3flakes.checker.html#ExportBinding" />
+      <keyword name="FunctionDefinition" id="FunctionDefinition" ref="eric5.Utilities.py3flakes.checker.html#FunctionDefinition" />
+      <keyword name="FunctionScope" id="FunctionScope" ref="eric5.Utilities.py3flakes.checker.html#FunctionScope" />
+      <keyword name="Importation" id="Importation" ref="eric5.Utilities.py3flakes.checker.html#Importation" />
+      <keyword name="ModuleScope" id="ModuleScope" ref="eric5.Utilities.py3flakes.checker.html#ModuleScope" />
+      <keyword name="Scope" id="Scope" ref="eric5.Utilities.py3flakes.checker.html#Scope" />
+      <keyword name="UnBinding" id="UnBinding" ref="eric5.Utilities.py3flakes.checker.html#UnBinding" />
+      <keyword name="Binding (Constructor)" id="Binding (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Binding.__init__" />
+      <keyword name="Binding.__repr__" id="Binding.__repr__" ref="eric5.Utilities.py3flakes.checker.html#Binding.__repr__" />
+      <keyword name="Binding.__str__" id="Binding.__str__" ref="eric5.Utilities.py3flakes.checker.html#Binding.__str__" />
+      <keyword name="Checker (Constructor)" id="Checker (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Checker.__init__" />
+      <keyword name="Checker.ASSERT" id="Checker.ASSERT" ref="eric5.Utilities.py3flakes.checker.html#Checker.ASSERT" />
+      <keyword name="Checker.ASSIGN" id="Checker.ASSIGN" ref="eric5.Utilities.py3flakes.checker.html#Checker.ASSIGN" />
+      <keyword name="Checker.ATTRIBUTE" id="Checker.ATTRIBUTE" ref="eric5.Utilities.py3flakes.checker.html#Checker.ATTRIBUTE" />
+      <keyword name="Checker.AUGASSIGN" id="Checker.AUGASSIGN" ref="eric5.Utilities.py3flakes.checker.html#Checker.AUGASSIGN" />
+      <keyword name="Checker.BINOP" id="Checker.BINOP" ref="eric5.Utilities.py3flakes.checker.html#Checker.BINOP" />
+      <keyword name="Checker.BOOLOP" id="Checker.BOOLOP" ref="eric5.Utilities.py3flakes.checker.html#Checker.BOOLOP" />
+      <keyword name="Checker.CALL" id="Checker.CALL" ref="eric5.Utilities.py3flakes.checker.html#Checker.CALL" />
+      <keyword name="Checker.CLASSDEF" id="Checker.CLASSDEF" ref="eric5.Utilities.py3flakes.checker.html#Checker.CLASSDEF" />
+      <keyword name="Checker.COMPARE" id="Checker.COMPARE" ref="eric5.Utilities.py3flakes.checker.html#Checker.COMPARE" />
+      <keyword name="Checker.COMPREHENSION" id="Checker.COMPREHENSION" ref="eric5.Utilities.py3flakes.checker.html#Checker.COMPREHENSION" />
+      <keyword name="Checker.DELETE" id="Checker.DELETE" ref="eric5.Utilities.py3flakes.checker.html#Checker.DELETE" />
+      <keyword name="Checker.DICT" id="Checker.DICT" ref="eric5.Utilities.py3flakes.checker.html#Checker.DICT" />
+      <keyword name="Checker.DICTCOMP" id="Checker.DICTCOMP" ref="eric5.Utilities.py3flakes.checker.html#Checker.DICTCOMP" />
+      <keyword name="Checker.EXCEPTHANDLER" id="Checker.EXCEPTHANDLER" ref="eric5.Utilities.py3flakes.checker.html#Checker.EXCEPTHANDLER" />
+      <keyword name="Checker.EXPR" id="Checker.EXPR" ref="eric5.Utilities.py3flakes.checker.html#Checker.EXPR" />
+      <keyword name="Checker.EXTSLICE" id="Checker.EXTSLICE" ref="eric5.Utilities.py3flakes.checker.html#Checker.EXTSLICE" />
+      <keyword name="Checker.FOR" id="Checker.FOR" ref="eric5.Utilities.py3flakes.checker.html#Checker.FOR" />
+      <keyword name="Checker.FUNCTIONDEF" id="Checker.FUNCTIONDEF" ref="eric5.Utilities.py3flakes.checker.html#Checker.FUNCTIONDEF" />
+      <keyword name="Checker.GLOBAL" id="Checker.GLOBAL" ref="eric5.Utilities.py3flakes.checker.html#Checker.GLOBAL" />
+      <keyword name="Checker.IF" id="Checker.IF" ref="eric5.Utilities.py3flakes.checker.html#Checker.IF" />
+      <keyword name="Checker.IFEXP" id="Checker.IFEXP" ref="eric5.Utilities.py3flakes.checker.html#Checker.IFEXP" />
+      <keyword name="Checker.IMPORT" id="Checker.IMPORT" ref="eric5.Utilities.py3flakes.checker.html#Checker.IMPORT" />
+      <keyword name="Checker.IMPORTFROM" id="Checker.IMPORTFROM" ref="eric5.Utilities.py3flakes.checker.html#Checker.IMPORTFROM" />
+      <keyword name="Checker.INDEX" id="Checker.INDEX" ref="eric5.Utilities.py3flakes.checker.html#Checker.INDEX" />
+      <keyword name="Checker.KEYWORD" id="Checker.KEYWORD" ref="eric5.Utilities.py3flakes.checker.html#Checker.KEYWORD" />
+      <keyword name="Checker.LAMBDA" id="Checker.LAMBDA" ref="eric5.Utilities.py3flakes.checker.html#Checker.LAMBDA" />
+      <keyword name="Checker.LIST" id="Checker.LIST" ref="eric5.Utilities.py3flakes.checker.html#Checker.LIST" />
+      <keyword name="Checker.LISTCOMP" id="Checker.LISTCOMP" ref="eric5.Utilities.py3flakes.checker.html#Checker.LISTCOMP" />
+      <keyword name="Checker.NAME" id="Checker.NAME" ref="eric5.Utilities.py3flakes.checker.html#Checker.NAME" />
+      <keyword name="Checker.RAISE" id="Checker.RAISE" ref="eric5.Utilities.py3flakes.checker.html#Checker.RAISE" />
+      <keyword name="Checker.RETURN" id="Checker.RETURN" ref="eric5.Utilities.py3flakes.checker.html#Checker.RETURN" />
+      <keyword name="Checker.SLICE" id="Checker.SLICE" ref="eric5.Utilities.py3flakes.checker.html#Checker.SLICE" />
+      <keyword name="Checker.STARRED" id="Checker.STARRED" ref="eric5.Utilities.py3flakes.checker.html#Checker.STARRED" />
+      <keyword name="Checker.SUBSCRIPT" id="Checker.SUBSCRIPT" ref="eric5.Utilities.py3flakes.checker.html#Checker.SUBSCRIPT" />
+      <keyword name="Checker.TRYEXCEPT" id="Checker.TRYEXCEPT" ref="eric5.Utilities.py3flakes.checker.html#Checker.TRYEXCEPT" />
+      <keyword name="Checker.TRYFINALLY" id="Checker.TRYFINALLY" ref="eric5.Utilities.py3flakes.checker.html#Checker.TRYFINALLY" />
+      <keyword name="Checker.UNARYOP" id="Checker.UNARYOP" ref="eric5.Utilities.py3flakes.checker.html#Checker.UNARYOP" />
+      <keyword name="Checker.WITH" id="Checker.WITH" ref="eric5.Utilities.py3flakes.checker.html#Checker.WITH" />
+      <keyword name="Checker.YIELD" id="Checker.YIELD" ref="eric5.Utilities.py3flakes.checker.html#Checker.YIELD" />
+      <keyword name="Checker._runDeferred" id="Checker._runDeferred" ref="eric5.Utilities.py3flakes.checker.html#Checker._runDeferred" />
+      <keyword name="Checker.addArgs" id="Checker.addArgs" ref="eric5.Utilities.py3flakes.checker.html#Checker.addArgs" />
+      <keyword name="Checker.addBinding" id="Checker.addBinding" ref="eric5.Utilities.py3flakes.checker.html#Checker.addBinding" />
+      <keyword name="Checker.checkUnusedAssignments" id="Checker.checkUnusedAssignments" ref="eric5.Utilities.py3flakes.checker.html#Checker.checkUnusedAssignments" />
+      <keyword name="Checker.check_dead_scopes" id="Checker.check_dead_scopes" ref="eric5.Utilities.py3flakes.checker.html#Checker.check_dead_scopes" />
+      <keyword name="Checker.collectLoopVars" id="Checker.collectLoopVars" ref="eric5.Utilities.py3flakes.checker.html#Checker.collectLoopVars" />
+      <keyword name="Checker.deferAssignment" id="Checker.deferAssignment" ref="eric5.Utilities.py3flakes.checker.html#Checker.deferAssignment" />
+      <keyword name="Checker.deferFunction" id="Checker.deferFunction" ref="eric5.Utilities.py3flakes.checker.html#Checker.deferFunction" />
+      <keyword name="Checker.handleAssignName" id="Checker.handleAssignName" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleAssignName" />
+      <keyword name="Checker.handleBody" id="Checker.handleBody" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleBody" />
+      <keyword name="Checker.handleNode" id="Checker.handleNode" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleNode" />
+      <keyword name="Checker.ignore" id="Checker.ignore" ref="eric5.Utilities.py3flakes.checker.html#Checker.ignore" />
+      <keyword name="Checker.popScope" id="Checker.popScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.popScope" />
+      <keyword name="Checker.pushClassScope" id="Checker.pushClassScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.pushClassScope" />
+      <keyword name="Checker.pushFunctionScope" id="Checker.pushFunctionScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.pushFunctionScope" />
+      <keyword name="Checker.report" id="Checker.report" ref="eric5.Utilities.py3flakes.checker.html#Checker.report" />
+      <keyword name="Checker.runFunction" id="Checker.runFunction" ref="eric5.Utilities.py3flakes.checker.html#Checker.runFunction" />
+      <keyword name="Checker.scope" id="Checker.scope" ref="eric5.Utilities.py3flakes.checker.html#Checker.scope" />
+      <keyword name="ExportBinding.names" id="ExportBinding.names" ref="eric5.Utilities.py3flakes.checker.html#ExportBinding.names" />
+      <keyword name="FunctionScope (Constructor)" id="FunctionScope (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#FunctionScope.__init__" />
+      <keyword name="Importation (Constructor)" id="Importation (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Importation.__init__" />
+      <keyword name="Scope (Constructor)" id="Scope (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Scope.__init__" />
+      <keyword name="Scope.__repr__" id="Scope.__repr__" ref="eric5.Utilities.py3flakes.checker.html#Scope.__repr__" />
+      <keyword name="messages (Module)" id="messages (Module)" ref="eric5.Utilities.py3flakes.messages.html" />
+      <keyword name="DuplicateArgument" id="DuplicateArgument" ref="eric5.Utilities.py3flakes.messages.html#DuplicateArgument" />
+      <keyword name="ImportShadowedByLoopVar" id="ImportShadowedByLoopVar" ref="eric5.Utilities.py3flakes.messages.html#ImportShadowedByLoopVar" />
+      <keyword name="ImportStarUsed" id="ImportStarUsed" ref="eric5.Utilities.py3flakes.messages.html#ImportStarUsed" />
+      <keyword name="LateFutureImport" id="LateFutureImport" ref="eric5.Utilities.py3flakes.messages.html#LateFutureImport" />
+      <keyword name="Message" id="Message" ref="eric5.Utilities.py3flakes.messages.html#Message" />
+      <keyword name="RedefinedFunction" id="RedefinedFunction" ref="eric5.Utilities.py3flakes.messages.html#RedefinedFunction" />
+      <keyword name="RedefinedWhileUnused" id="RedefinedWhileUnused" ref="eric5.Utilities.py3flakes.messages.html#RedefinedWhileUnused" />
+      <keyword name="UndefinedExport" id="UndefinedExport" ref="eric5.Utilities.py3flakes.messages.html#UndefinedExport" />
+      <keyword name="UndefinedLocal" id="UndefinedLocal" ref="eric5.Utilities.py3flakes.messages.html#UndefinedLocal" />
+      <keyword name="UndefinedName" id="UndefinedName" ref="eric5.Utilities.py3flakes.messages.html#UndefinedName" />
+      <keyword name="UnusedImport" id="UnusedImport" ref="eric5.Utilities.py3flakes.messages.html#UnusedImport" />
+      <keyword name="UnusedVariable" id="UnusedVariable" ref="eric5.Utilities.py3flakes.messages.html#UnusedVariable" />
+      <keyword name="DuplicateArgument (Constructor)" id="DuplicateArgument (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#DuplicateArgument.__init__" />
+      <keyword name="ImportShadowedByLoopVar (Constructor)" id="ImportShadowedByLoopVar (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#ImportShadowedByLoopVar.__init__" />
+      <keyword name="ImportStarUsed (Constructor)" id="ImportStarUsed (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#ImportStarUsed.__init__" />
+      <keyword name="LateFutureImport (Constructor)" id="LateFutureImport (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#LateFutureImport.__init__" />
+      <keyword name="Message (Constructor)" id="Message (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#Message.__init__" />
+      <keyword name="Message.__str__" id="Message.__str__" ref="eric5.Utilities.py3flakes.messages.html#Message.__str__" />
+      <keyword name="Message.getMessageData" id="Message.getMessageData" ref="eric5.Utilities.py3flakes.messages.html#Message.getMessageData" />
+      <keyword name="RedefinedFunction (Constructor)" id="RedefinedFunction (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#RedefinedFunction.__init__" />
+      <keyword name="RedefinedWhileUnused (Constructor)" id="RedefinedWhileUnused (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#RedefinedWhileUnused.__init__" />
+      <keyword name="UndefinedExport (Constructor)" id="UndefinedExport (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UndefinedExport.__init__" />
+      <keyword name="UndefinedLocal (Constructor)" id="UndefinedLocal (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UndefinedLocal.__init__" />
+      <keyword name="UndefinedName (Constructor)" id="UndefinedName (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UndefinedName.__init__" />
+      <keyword name="UnusedImport (Constructor)" id="UnusedImport (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UnusedImport.__init__" />
+      <keyword name="UnusedVariable (Constructor)" id="UnusedVariable (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UnusedVariable.__init__" />
       <keyword name="Passwords (Package)" id="Passwords (Package)" ref="index-eric5.Helpviewer.Passwords.html" />
       <keyword name="PasswordModel (Module)" id="PasswordModel (Module)" ref="eric5.Helpviewer.Passwords.PasswordModel.html" />
       <keyword name="PasswordModel" id="PasswordModel" ref="eric5.Helpviewer.Passwords.PasswordModel.html#PasswordModel" />
@@ -7198,6 +7322,11 @@
       <keyword name="ViewmanagerPage (Constructor)" id="ViewmanagerPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html#ViewmanagerPage.__init__" />
       <keyword name="ViewmanagerPage.on_windowComboBox_activated" id="ViewmanagerPage.on_windowComboBox_activated" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html#ViewmanagerPage.on_windowComboBox_activated" />
       <keyword name="ViewmanagerPage.save" id="ViewmanagerPage.save" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html#ViewmanagerPage.save" />
+      <keyword name="Py3FlakesPage (Module)" id="Py3FlakesPage (Module)" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html" />
+      <keyword name="Py3FlakesPage" id="Py3FlakesPage" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html#Py3FlakesPage" />
+      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html#create" />
+      <keyword name="Py3FlakesPage (Constructor)" id="Py3FlakesPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html#Py3FlakesPage.__init__" />
+      <keyword name="Py3FlakesPage.save" id="Py3FlakesPage.save" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html#Py3FlakesPage.save" />
       <keyword name="EditorAPIsPage (Module)" id="EditorAPIsPage (Module)" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html" />
       <keyword name="EditorAPIsPage" id="EditorAPIsPage" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.EditorAPIsPage.html#create" />
@@ -9209,6 +9338,7 @@
       <file>eric5.Preferences.ConfigurationPages.PrinterPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ProjectPage.html</file>
+      <file>eric5.Preferences.ConfigurationPages.Py3FlakesPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.PythonPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.QtPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ShellPage.html</file>
@@ -9350,6 +9480,8 @@
       <file>eric5.Utilities.SingleApplication.html</file>
       <file>eric5.Utilities.Startup.html</file>
       <file>eric5.Utilities.__init__.html</file>
+      <file>eric5.Utilities.py3flakes.checker.html</file>
+      <file>eric5.Utilities.py3flakes.messages.html</file>
       <file>eric5.Utilities.uic.html</file>
       <file>eric5.VCS.CommandOptionsDialog.html</file>
       <file>eric5.VCS.ProjectBrowserHelper.html</file>
@@ -9453,6 +9585,7 @@
       <file>index-eric5.UI.html</file>
       <file>index-eric5.Utilities.ClassBrowsers.html</file>
       <file>index-eric5.Utilities.html</file>
+      <file>index-eric5.Utilities.py3flakes.html</file>
       <file>index-eric5.VCS.html</file>
       <file>index-eric5.ViewManager.html</file>
       <file>index-eric5.html</file>

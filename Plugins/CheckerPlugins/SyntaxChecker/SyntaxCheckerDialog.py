@@ -19,12 +19,18 @@ from E5Gui.E5Application import e5App
 from .Ui_SyntaxCheckerDialog import Ui_SyntaxCheckerDialog
 
 import Utilities
+from Utilities.py3flakes.checker import Checker
+from Utilities.py3flakes.messages import ImportStarUsed
 import Preferences
+import UI.PixmapCache
 
 class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
     """
     Class implementing a dialog to display the results of a syntax check run.
     """
+    filenameRole = Qt.UserRole + 1
+    warningRole = Qt.UserRole + 2
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -54,7 +60,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.resultList.sortItems(self.resultList.sortColumn(), 
                                   self.resultList.header().sortIndicatorOrder())
         
-    def __createResultItem(self, file, line, error, sourcecode):
+    def __createResultItem(self, file, line, error, sourcecode, isWarning = False):
         """
         Private method to create an entry in the result list.
         
@@ -62,9 +68,17 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param line linenumber of faulty source (integer or string)
         @param error error text (string)
         @param sourcecode faulty line of code (string)
+        @param isWarning flag indicating a warning message (boolean)
         """
-        itm = QTreeWidgetItem(self.resultList, [file, str(line), error, sourcecode])
+        itm = QTreeWidgetItem(self.resultList, 
+                              [os.path.basename(file), str(line), error, sourcecode])
         itm.setTextAlignment(1, Qt.AlignRight)
+        if isWarning:
+            itm.setIcon(0, UI.PixmapCache.getIcon("warning.png"))
+        else:
+            itm.setIcon(0, UI.PixmapCache.getIcon("syntaxError.png"))
+        itm.setData(0, self.filenameRole, file)
+        itm.setData(0, self.warningRole, isWarning)
         
     def start(self, fn, codestring = ""):
         """
@@ -91,16 +105,39 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             self.checkProgress.setMaximum(len(files))
             QApplication.processEvents()
             
+            ignoreStarImportWarnings = Preferences.getFlakes("IgnoreStarImportWarnings")
             # now go through all the files
             progress = 0
             for file in files:
                 if self.cancelled:
                     return
                 
-                nok, fname, line, code, error = Utilities.compile(file, codestring)
+                if codestring:
+                    source = codestring
+                else:
+                    try:
+                        source = Utilities.readEncodedFile(file)[0]
+                        # convert eols
+                        source = Utilities.convertLineEnds(source, os.linesep)
+                    except (UnicodeDecodeError, IOError):
+                        continue    # just ignore it
+                
+                nok, fname, line, code, error = Utilities.compile(file, source)
                 if nok:
                     self.noResults = False
                     self.__createResultItem(fname, line, error, code)
+                else:
+                    if Preferences.getFlakes("IncludeInSyntaxCheck"):
+                        warnings = Checker(source, file)
+                        warnings.messages.sort(key = lambda a: a.lineno)
+                        for warning in warnings.messages:
+                            if ignoreStarImportWarnings and \
+                               isinstance(warning, ImportStarUsed):
+                                continue
+                            self.noResults = False
+                            fname, lineno, message = warning.getMessageData()
+                            self.__createResultItem(fname, lineno, message, "", 
+                                                    isWarning = True)
                 progress += 1
                 self.checkProgress.setValue(progress)
                 QApplication.processEvents()
@@ -152,14 +189,17 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         if self.noResults:
             return
             
-        fn = Utilities.normabspath(itm.text(0))
+        fn = Utilities.normabspath(itm.data(0, self.filenameRole))
         lineno = int(itm.text(1))
         error = itm.text(2)
         
         vm = e5App().getObject("ViewManager")
         vm.openSourceFile(fn, lineno)
         editor = vm.getOpenEditor(fn)
-        editor.toggleSyntaxError(lineno, True, error)
+        if itm.data(0, self.warningRole):
+            editor.toggleFlakesWarning(lineno, True, error)
+        else:
+            editor.toggleSyntaxError(lineno, True, error)
         
     @pyqtSlot()
     def on_showButton_clicked(self):

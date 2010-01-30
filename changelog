@@ -4,6 +4,8 @@ Change Log
 Version 5.0-snapshot-2010mmdd:
 - bug fixes
 - added code to use the PYTHONPATH environment setting in the debuggers
+- added my own Python3 port of pyflakes
+- integrated py3flakes into syntax checker dialog and editor
 
 Version 5.0-snapshot-20100116:
 - first snapshot of eric5

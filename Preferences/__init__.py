@@ -683,6 +683,12 @@ class Prefs(object):
         "IconEditorState" : QtCore.QByteArray(), 
     }
     
+    # defaults for py3flakes
+    py3flakesDefaults = {
+        "IncludeInSyntaxCheck" : True, 
+        "IgnoreStarImportWarnings" : True, 
+    }
+    
     # defaults for geometry
     geometryDefaults = {
         "HelpViewerGeometry" : QtCore.QByteArray(),
@@ -1960,6 +1966,31 @@ def setIconEditor(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     prefClass.settings.setValue("IconEditor/" + key, value)
+
+def getFlakes(key, prefClass = Prefs):
+    """
+    Module function to retrieve the py3flakes related settings.
+    
+    @param key the key of the value to get
+    @param prefClass preferences class used as the storage area
+    @return the requested user setting
+    """
+    if key in ["IncludeInSyntaxCheck", "IgnoreStarImportWarnings"]:
+        return toBool(prefClass.settings.value("Py3Flakes/" + key, 
+            prefClass.py3flakesDefaults[key]))
+    else:
+        return prefClass.settings.value("Py3Flakes/" + key,
+            prefClass.py3flakesDefaults[key])
+    
+def setFlakes(key, value, prefClass = Prefs):
+    """
+    Module function to store the py3flakes related settings.
+    
+    @param key the key of the setting to be set
+    @param value the value to be set
+    @param prefClass preferences class used as the storage area
+    """
+    prefClass.settings.setValue("Py3Flakes/" + key, value)
     
 def getGeometry(key, prefClass = Prefs):
     """

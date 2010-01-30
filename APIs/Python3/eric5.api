@@ -2336,10 +2336,12 @@ eric5.Plugins.AboutPlugin.AboutDialog.authorsText?7
 eric5.Plugins.AboutPlugin.AboutDialog.licenseText?7
 eric5.Plugins.AboutPlugin.AboutDialog.thanksText?7
 eric5.Plugins.AboutPlugin.AboutDialog.titleText?7
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.filenameRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.on_resultList_itemActivated?4(itm, col)
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.on_showButton_clicked?4()
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.start?4(fn, codestring = "")
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.warningRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog?1(parent = None)
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.NannyNag.get_line?4()
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.NannyNag.get_lineno?4()
@@ -3502,6 +3504,9 @@ eric5.Preferences.ConfigurationPages.ProjectBrowserPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.ProjectPage.ProjectPage.save?4()
 eric5.Preferences.ConfigurationPages.ProjectPage.ProjectPage?1()
 eric5.Preferences.ConfigurationPages.ProjectPage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.Py3FlakesPage.Py3FlakesPage.save?4()
+eric5.Preferences.ConfigurationPages.Py3FlakesPage.Py3FlakesPage?1()
+eric5.Preferences.ConfigurationPages.Py3FlakesPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.PythonPage.PythonPage.save?4()
 eric5.Preferences.ConfigurationPages.PythonPage.PythonPage?1()
 eric5.Preferences.ConfigurationPages.PythonPage.create?4(dlg)
@@ -3583,6 +3588,7 @@ eric5.Preferences.Prefs.printerDefaults?7
 eric5.Preferences.Prefs.projectBrowserColourDefaults?7
 eric5.Preferences.Prefs.projectBrowserFlagsDefaults?7
 eric5.Preferences.Prefs.projectDefaults?7
+eric5.Preferences.Prefs.py3flakesDefaults?7
 eric5.Preferences.Prefs.qtDefaults?7
 eric5.Preferences.Prefs.resetLayout?7
 eric5.Preferences.Prefs.shellDefaults?7
@@ -3662,6 +3668,7 @@ eric5.Preferences.getEditorLexerAssoc?4(filename, prefClass = Prefs)
 eric5.Preferences.getEditorLexerAssocs?4(prefClass = Prefs)
 eric5.Preferences.getEditorOtherFonts?4(key, prefClass = Prefs)
 eric5.Preferences.getEditorTyping?4(key, prefClass = Prefs)
+eric5.Preferences.getFlakes?4(key, prefClass = Prefs)
 eric5.Preferences.getGeometry?4(key, prefClass = Prefs)
 eric5.Preferences.getGraphics?4(key, prefClass = Prefs)
 eric5.Preferences.getHelp?4(key, prefClass = Prefs)
@@ -3707,6 +3714,7 @@ eric5.Preferences.setEditorExporter?4(key, value, prefClass = Prefs)
 eric5.Preferences.setEditorLexerAssocs?4(assocs, prefClass = Prefs)
 eric5.Preferences.setEditorOtherFonts?4(key, font, prefClass = Prefs)
 eric5.Preferences.setEditorTyping?4(key, value, prefClass = Prefs)
+eric5.Preferences.setFlakes?4(key, value, prefClass = Prefs)
 eric5.Preferences.setGeometry?4(key, value, prefClass = Prefs)
 eric5.Preferences.setGraphics?4(key, value, prefClass = Prefs)
 eric5.Preferences.setHelp?4(key, value, prefClass = Prefs)
@@ -4101,6 +4109,7 @@ eric5.QScintilla.Editor.Editor.checkDirty?4()
 eric5.QScintilla.Editor.Editor.checkSpelling?4()
 eric5.QScintilla.Editor.Editor.clearBookmarks?4()
 eric5.QScintilla.Editor.Editor.clearBreakpoint?4(line)
+eric5.QScintilla.Editor.Editor.clearFlakesWarnings?4()
 eric5.QScintilla.Editor.Editor.clearSearchIndicators?4()
 eric5.QScintilla.Editor.Editor.clearSyntaxError?4()
 eric5.QScintilla.Editor.Editor.close?4(alsoDelete = False)
@@ -4128,6 +4137,7 @@ eric5.QScintilla.Editor.Editor.getCurrentWord?4()
 eric5.QScintilla.Editor.Editor.getEncoding?4()
 eric5.QScintilla.Editor.Editor.getFileName?4()
 eric5.QScintilla.Editor.Editor.getFileType?4()
+eric5.QScintilla.Editor.Editor.getFlakesWarnings?4()
 eric5.QScintilla.Editor.Editor.getFolds?4()
 eric5.QScintilla.Editor.Editor.getHighlightPosition?4()
 eric5.QScintilla.Editor.Editor.getLanguage?4()
@@ -4147,6 +4157,7 @@ eric5.QScintilla.Editor.Editor.handleRenamed?4(fn)
 eric5.QScintilla.Editor.Editor.hasBookmarks?4()
 eric5.QScintilla.Editor.Editor.hasBreakpoints?4()
 eric5.QScintilla.Editor.Editor.hasCoverageMarkers?4()
+eric5.QScintilla.Editor.Editor.hasFlakesWarnings?4()
 eric5.QScintilla.Editor.Editor.hasMiniMenu?4()
 eric5.QScintilla.Editor.Editor.hasSyntaxErrors?4()
 eric5.QScintilla.Editor.Editor.hasTaskMarkers?4()
@@ -4173,9 +4184,11 @@ eric5.QScintilla.Editor.Editor.menuToggleBreakpoint?4()
 eric5.QScintilla.Editor.Editor.mousePressEvent?4(event)
 eric5.QScintilla.Editor.Editor.newBreakpointWithProperties?4(line, properties)
 eric5.QScintilla.Editor.Editor.nextBookmark?4()
+eric5.QScintilla.Editor.Editor.nextFlakesWarning?4()
 eric5.QScintilla.Editor.Editor.nextTask?4()
 eric5.QScintilla.Editor.Editor.nextUncovered?4()
 eric5.QScintilla.Editor.Editor.previousBookmark?4()
+eric5.QScintilla.Editor.Editor.previousFlakesWarning?4()
 eric5.QScintilla.Editor.Editor.previousTask?4()
 eric5.QScintilla.Editor.Editor.previousUncovered?4()
 eric5.QScintilla.Editor.Editor.printFile?4()
@@ -4208,6 +4221,7 @@ eric5.QScintilla.Editor.Editor.streamCommentLine?4()
 eric5.QScintilla.Editor.Editor.streamCommentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.streamCommentSelection?4()
 eric5.QScintilla.Editor.Editor.toggleBookmark?4(line)
+eric5.QScintilla.Editor.Editor.toggleFlakesWarning?4(line, warning, msg = "")
 eric5.QScintilla.Editor.Editor.toggleSyntaxError?4(line, error, msg = "")
 eric5.QScintilla.Editor.Editor.uncommentLine?4()
 eric5.QScintilla.Editor.Editor.uncommentLineOrSelection?4()
@@ -5233,6 +5247,108 @@ eric5.Utilities.posix_GetUserName?4()
 eric5.Utilities.prepareQtMacBundle?4(toolname, version, args)
 eric5.Utilities.pwDecode?4(epw)
 eric5.Utilities.pwEncode?4(pw)
+eric5.Utilities.py3flakes.checker.Binding?1(name, source)
+eric5.Utilities.py3flakes.checker.Checker.ASSERT?4(node)
+eric5.Utilities.py3flakes.checker.Checker.ASSIGN?4(node)
+eric5.Utilities.py3flakes.checker.Checker.ATTRIBUTE?4(node)
+eric5.Utilities.py3flakes.checker.Checker.ATTRIBUTES?7
+eric5.Utilities.py3flakes.checker.Checker.AUGASSIGN?4(node)
+eric5.Utilities.py3flakes.checker.Checker.BINOP?4(node)
+eric5.Utilities.py3flakes.checker.Checker.BOOLOP?4(node)
+eric5.Utilities.py3flakes.checker.Checker.CALL?4(node)
+eric5.Utilities.py3flakes.checker.Checker.CLASSDEF?4(node)
+eric5.Utilities.py3flakes.checker.Checker.COMPARE?4(node)
+eric5.Utilities.py3flakes.checker.Checker.COMPREHENSION?4(node)
+eric5.Utilities.py3flakes.checker.Checker.DELETE?4(node)
+eric5.Utilities.py3flakes.checker.Checker.DICT?4(node)
+eric5.Utilities.py3flakes.checker.Checker.DICTCOMP?4(node)
+eric5.Utilities.py3flakes.checker.Checker.EXCEPTHANDLER?4(node)
+eric5.Utilities.py3flakes.checker.Checker.EXPR?4(node)
+eric5.Utilities.py3flakes.checker.Checker.EXTSLICE?4(node)
+eric5.Utilities.py3flakes.checker.Checker.FOR?4(node)
+eric5.Utilities.py3flakes.checker.Checker.FUNCTIONDEF?4(node)
+eric5.Utilities.py3flakes.checker.Checker.GLOBAL?4(node)
+eric5.Utilities.py3flakes.checker.Checker.IF?4(node)
+eric5.Utilities.py3flakes.checker.Checker.IFEXP?4(node)
+eric5.Utilities.py3flakes.checker.Checker.IMPORT?4(node)
+eric5.Utilities.py3flakes.checker.Checker.IMPORTFROM?4(node)
+eric5.Utilities.py3flakes.checker.Checker.INDEX?4(node)
+eric5.Utilities.py3flakes.checker.Checker.INVERT?7
+eric5.Utilities.py3flakes.checker.Checker.KEYWORD?4(node)
+eric5.Utilities.py3flakes.checker.Checker.LAMBDA?4(node)
+eric5.Utilities.py3flakes.checker.Checker.LIST?4(node)
+eric5.Utilities.py3flakes.checker.Checker.LISTCOMP?4(node)
+eric5.Utilities.py3flakes.checker.Checker.MOD?7
+eric5.Utilities.py3flakes.checker.Checker.NAME?4(node)
+eric5.Utilities.py3flakes.checker.Checker.NONLOCAL?7
+eric5.Utilities.py3flakes.checker.Checker.PASS?7
+eric5.Utilities.py3flakes.checker.Checker.RAISE?4(node)
+eric5.Utilities.py3flakes.checker.Checker.RETURN?4(node)
+eric5.Utilities.py3flakes.checker.Checker.SET?7
+eric5.Utilities.py3flakes.checker.Checker.SETCOMP?7
+eric5.Utilities.py3flakes.checker.Checker.SLICE?4(node)
+eric5.Utilities.py3flakes.checker.Checker.STARRED?4(node)
+eric5.Utilities.py3flakes.checker.Checker.SUBSCRIPT?4(node)
+eric5.Utilities.py3flakes.checker.Checker.TRYEXCEPT?4(node)
+eric5.Utilities.py3flakes.checker.Checker.TRYFINALLY?4(node)
+eric5.Utilities.py3flakes.checker.Checker.UNARYOP?4(node)
+eric5.Utilities.py3flakes.checker.Checker.WHILE?7
+eric5.Utilities.py3flakes.checker.Checker.WITH?4(node)
+eric5.Utilities.py3flakes.checker.Checker.YIELD?4(node)
+eric5.Utilities.py3flakes.checker.Checker._runDeferred?5(deferred)
+eric5.Utilities.py3flakes.checker.Checker.addArgs?4()
+eric5.Utilities.py3flakes.checker.Checker.addBinding?4(lineno, value, reportRedef = True)
+eric5.Utilities.py3flakes.checker.Checker.checkUnusedAssignments?4()
+eric5.Utilities.py3flakes.checker.Checker.check_dead_scopes?4()
+eric5.Utilities.py3flakes.checker.Checker.collectLoopVars?4()
+eric5.Utilities.py3flakes.checker.Checker.deferAssignment?4(callable)
+eric5.Utilities.py3flakes.checker.Checker.deferFunction?4(callable)
+eric5.Utilities.py3flakes.checker.Checker.handleAssignName?4(node)
+eric5.Utilities.py3flakes.checker.Checker.handleBody?4(tree)
+eric5.Utilities.py3flakes.checker.Checker.handleNode?4(node, parent)
+eric5.Utilities.py3flakes.checker.Checker.ignore?4(node)
+eric5.Utilities.py3flakes.checker.Checker.nodeDepth?7
+eric5.Utilities.py3flakes.checker.Checker.popScope?4()
+eric5.Utilities.py3flakes.checker.Checker.pushClassScope?4()
+eric5.Utilities.py3flakes.checker.Checker.pushFunctionScope?4()
+eric5.Utilities.py3flakes.checker.Checker.report?4(messageClass, *args, **kwargs)
+eric5.Utilities.py3flakes.checker.Checker.runFunction?4()
+eric5.Utilities.py3flakes.checker.Checker.scope?4()
+eric5.Utilities.py3flakes.checker.Checker.scope?7
+eric5.Utilities.py3flakes.checker.Checker.traceTree?7
+eric5.Utilities.py3flakes.checker.Checker?1(module, filename = '(none)')
+eric5.Utilities.py3flakes.checker.ExportBinding.names?4()
+eric5.Utilities.py3flakes.checker.FunctionScope?1()
+eric5.Utilities.py3flakes.checker.Importation?1(name, source)
+eric5.Utilities.py3flakes.checker.Scope.importStarred?7
+eric5.Utilities.py3flakes.checker.Scope?1()
+eric5.Utilities.py3flakes.checker._MAGIC_GLOBALS?8
+eric5.Utilities.py3flakes.messages.DuplicateArgument.message?7
+eric5.Utilities.py3flakes.messages.DuplicateArgument?1(filename, lineno, name)
+eric5.Utilities.py3flakes.messages.ImportShadowedByLoopVar.message?7
+eric5.Utilities.py3flakes.messages.ImportShadowedByLoopVar?1(filename, lineno, name, orig_lineno)
+eric5.Utilities.py3flakes.messages.ImportStarUsed.message?7
+eric5.Utilities.py3flakes.messages.ImportStarUsed?1(filename, lineno, modname)
+eric5.Utilities.py3flakes.messages.LateFutureImport.message?7
+eric5.Utilities.py3flakes.messages.LateFutureImport?1(filename, lineno, names)
+eric5.Utilities.py3flakes.messages.Message.getMessageData?4()
+eric5.Utilities.py3flakes.messages.Message.message?7
+eric5.Utilities.py3flakes.messages.Message.message_args?7
+eric5.Utilities.py3flakes.messages.Message?1(filename, lineno)
+eric5.Utilities.py3flakes.messages.RedefinedFunction.message?7
+eric5.Utilities.py3flakes.messages.RedefinedFunction?1(filename, lineno, name, orig_lineno)
+eric5.Utilities.py3flakes.messages.RedefinedWhileUnused.message?7
+eric5.Utilities.py3flakes.messages.RedefinedWhileUnused?1(filename, lineno, name, orig_lineno)
+eric5.Utilities.py3flakes.messages.UndefinedExport.message?7
+eric5.Utilities.py3flakes.messages.UndefinedExport?1(filename, lineno, name)
+eric5.Utilities.py3flakes.messages.UndefinedLocal.message?7
+eric5.Utilities.py3flakes.messages.UndefinedLocal?1(filename, lineno, name, orig_lineno)
+eric5.Utilities.py3flakes.messages.UndefinedName.message?7
+eric5.Utilities.py3flakes.messages.UndefinedName?1(filename, lineno, name)
+eric5.Utilities.py3flakes.messages.UnusedImport.message?7
+eric5.Utilities.py3flakes.messages.UnusedImport?1(filename, lineno, name)
+eric5.Utilities.py3flakes.messages.UnusedVariable.message?7
+eric5.Utilities.py3flakes.messages.UnusedVariable?1(filename, lineno, name)
 eric5.Utilities.readEncodedFile?4(filename)
 eric5.Utilities.relpath?4(path, start = os.path.curdir)
 eric5.Utilities.samepath?4(f1, f2)

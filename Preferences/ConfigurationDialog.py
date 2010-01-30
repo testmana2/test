@@ -114,6 +114,9 @@ class ConfigurationWidget(QWidget):
                 "printerPage" : \
                     [self.trUtf8("Printer"), "preferences-printer.png",
                     "PrinterPage", None, None],
+                "py3flakesPage" : \
+                    [self.trUtf8("Py3Flakes"), "warning.png",
+                    "Py3FlakesPage", None, None],
                 "pythonPage" : \
                     [self.trUtf8("Python"), "preferences-python.png",
                     "PythonPage", None, None],

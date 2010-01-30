@@ -758,6 +758,10 @@
     <Source>E5Gui/E5ToolBox.py</Source>
     <Source>E5Gui/E5TreeSortFilterProxyModel.py</Source>
     <Source>E5Gui/E5TreeView.py</Source>
+    <Source>Utilities/py3flakes/__init__.py</Source>
+    <Source>Utilities/py3flakes/checker.py</Source>
+    <Source>Utilities/py3flakes/messages.py</Source>
+    <Source>Preferences/ConfigurationPages/Py3FlakesPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -959,6 +963,7 @@
     <Form>E5Network/E5NetworkMonitor.ui</Form>
     <Form>E5Network/E5NetworkHeaderDetailsDialog.ui</Form>
     <Form>E5Gui/E5ToolBarDialog.ui</Form>
+    <Form>Preferences/ConfigurationPages/Py3FlakesPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

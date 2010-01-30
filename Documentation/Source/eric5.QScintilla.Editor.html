@@ -446,6 +446,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__showContextMenuSpelling">__showContextMenuSpelling</a></td>
 <td>Private slot to set up the spelling menu before it is shown.</td>
 </tr><tr>
+<td><a href="#Editor.__showFlakesWarning">__showFlakesWarning</a></td>
+<td>Private slot to handle the 'Show warning' context menu action.</td>
+</tr><tr>
 <td><a href="#Editor.__showImportsDiagram">__showImportsDiagram</a></td>
 <td>Private method to handle the Imports Diagram context menu action.</td>
 </tr><tr>
@@ -526,6 +529,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.clearBreakpoint">clearBreakpoint</a></td>
 <td>Public method to clear a breakpoint.</td>
+</tr><tr>
+<td><a href="#Editor.clearFlakesWarnings">clearFlakesWarnings</a></td>
+<td>Public slot to handle the 'Clear all warnings' context menu action.</td>
 </tr><tr>
 <td><a href="#Editor.clearSearchIndicators">clearSearchIndicators</a></td>
 <td>Public method to clear all search indicators.</td>
@@ -608,6 +614,9 @@ QsciScintillaCompat
 <td><a href="#Editor.getFileType">getFileType</a></td>
 <td>Public method to return the type of the file being displayed.</td>
 </tr><tr>
+<td><a href="#Editor.getFlakesWarnings">getFlakesWarnings</a></td>
+<td>Public method to retrieve the flakes warning markers.</td>
+</tr><tr>
 <td><a href="#Editor.getFolds">getFolds</a></td>
 <td>Public method to get a list line numbers of collapsed folds.</td>
 </tr><tr>
@@ -665,11 +674,14 @@ QsciScintillaCompat
 <td><a href="#Editor.hasCoverageMarkers">hasCoverageMarkers</a></td>
 <td>Public method to test, if there are coverage markers.</td>
 </tr><tr>
+<td><a href="#Editor.hasFlakesWarnings">hasFlakesWarnings</a></td>
+<td>Public method to check for the presence of flakes warnings.</td>
+</tr><tr>
 <td><a href="#Editor.hasMiniMenu">hasMiniMenu</a></td>
 <td>Public method to check the miniMenu flag.</td>
 </tr><tr>
 <td><a href="#Editor.hasSyntaxErrors">hasSyntaxErrors</a></td>
-<td>Public method to check for the presence of bookmarks.</td>
+<td>Public method to check for the presence of syntax errors.</td>
 </tr><tr>
 <td><a href="#Editor.hasTaskMarkers">hasTaskMarkers</a></td>
 <td>Public method to determine, if this editor contains any task markers.</td>
@@ -743,6 +755,9 @@ QsciScintillaCompat
 <td><a href="#Editor.nextBookmark">nextBookmark</a></td>
 <td>Public slot to handle the 'Next bookmark' context menu action.</td>
 </tr><tr>
+<td><a href="#Editor.nextFlakesWarning">nextFlakesWarning</a></td>
+<td>Public slot to handle the 'Next warning' context menu action.</td>
+</tr><tr>
 <td><a href="#Editor.nextTask">nextTask</a></td>
 <td>Public slot to handle the 'Next task' context menu action.</td>
 </tr><tr>
@@ -751,6 +766,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.previousBookmark">previousBookmark</a></td>
 <td>Public slot to handle the 'Previous bookmark' context menu action.</td>
+</tr><tr>
+<td><a href="#Editor.previousFlakesWarning">previousFlakesWarning</a></td>
+<td>Public slot to handle the 'Previous warning' context menu action.</td>
 </tr><tr>
 <td><a href="#Editor.previousTask">previousTask</a></td>
 <td>Public slot to handle the 'Previous task' context menu action.</td>
@@ -847,6 +865,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.toggleBookmark">toggleBookmark</a></td>
 <td>Public method to toggle a bookmark.</td>
+</tr><tr>
+<td><a href="#Editor.toggleFlakesWarning">toggleFlakesWarning</a></td>
+<td>Public method to toggle a flakes warning indicator.</td>
 </tr><tr>
 <td><a href="#Editor.toggleSyntaxError">toggleSyntaxError</a></td>
 <td>Public method to toggle a syntax error indicator.</td>
@@ -1681,7 +1702,17 @@ name of the personal/project exclude list (string)
 <b>__showContextMenuSpelling</b>(<i></i>)
 <p>
         Private slot to set up the spelling menu before it is shown.
-</p><a NAME="Editor.__showImportsDiagram" ID="Editor.__showImportsDiagram"></a>
+</p><a NAME="Editor.__showFlakesWarning" ID="Editor.__showFlakesWarning"></a>
+<h4>Editor.__showFlakesWarning</h4>
+<b>__showFlakesWarning</b>(<i>line = -1</i>)
+<p>
+        Private slot to handle the 'Show warning' context menu action.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line number to show the flakes warning for (integer)
+</dd>
+</dl><a NAME="Editor.__showImportsDiagram" ID="Editor.__showImportsDiagram"></a>
 <h4>Editor.__showImportsDiagram</h4>
 <b>__showImportsDiagram</b>(<i></i>)
 <p>
@@ -1912,7 +1943,12 @@ flag indicating successful reset of the dirty flag (boolean)
 <dd>
 linenumber of the breakpoint (integer)
 </dd>
-</dl><a NAME="Editor.clearSearchIndicators" ID="Editor.clearSearchIndicators"></a>
+</dl><a NAME="Editor.clearFlakesWarnings" ID="Editor.clearFlakesWarnings"></a>
+<h4>Editor.clearFlakesWarnings</h4>
+<b>clearFlakesWarnings</b>(<i></i>)
+<p>
+        Public slot to handle the 'Clear all warnings' context menu action.
+</p><a NAME="Editor.clearSearchIndicators" ID="Editor.clearSearchIndicators"></a>
 <h4>Editor.clearSearchIndicators</h4>
 <b>clearSearchIndicators</b>(<i></i>)
 <p>
@@ -2157,6 +2193,17 @@ filename of the displayed file (string)
 <dd>
 type of the displayed file (string)
 </dd>
+</dl><a NAME="Editor.getFlakesWarnings" ID="Editor.getFlakesWarnings"></a>
+<h4>Editor.getFlakesWarnings</h4>
+<b>getFlakesWarnings</b>(<i></i>)
+<p>
+        Public method to retrieve the flakes warning markers.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+sorted list of all lines containing a flakes warning
+            (list of integer)
+</dd>
 </dl><a NAME="Editor.getFolds" ID="Editor.getFolds"></a>
 <h4>Editor.getFolds</h4>
 <b>getFolds</b>(<i></i>)
@@ -2389,7 +2436,17 @@ flag indicating the presence of breakpoints (boolean)
 <b>hasCoverageMarkers</b>(<i></i>)
 <p>
         Public method to test, if there are coverage markers.
-</p><a NAME="Editor.hasMiniMenu" ID="Editor.hasMiniMenu"></a>
+</p><a NAME="Editor.hasFlakesWarnings" ID="Editor.hasFlakesWarnings"></a>
+<h4>Editor.hasFlakesWarnings</h4>
+<b>hasFlakesWarnings</b>(<i></i>)
+<p>
+        Public method to check for the presence of flakes warnings.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the presence of flakes warnings (boolean)
+</dd>
+</dl><a NAME="Editor.hasMiniMenu" ID="Editor.hasMiniMenu"></a>
 <h4>Editor.hasMiniMenu</h4>
 <b>hasMiniMenu</b>(<i></i>)
 <p>
@@ -2403,11 +2460,11 @@ flag indicating a minimized context menu (boolean)
 <h4>Editor.hasSyntaxErrors</h4>
 <b>hasSyntaxErrors</b>(<i></i>)
 <p>
-        Public method to check for the presence of bookmarks.
+        Public method to check for the presence of syntax errors.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating the presence of bookmarks (boolean)
+flag indicating the presence of syntax errors (boolean)
 </dd>
 </dl><a NAME="Editor.hasTaskMarkers" ID="Editor.hasTaskMarkers"></a>
 <h4>Editor.hasTaskMarkers</h4>
@@ -2603,6 +2660,11 @@ properties for the breakpoint (tuple)
 <b>nextBookmark</b>(<i></i>)
 <p>
         Public slot to handle the 'Next bookmark' context menu action.
+</p><a NAME="Editor.nextFlakesWarning" ID="Editor.nextFlakesWarning"></a>
+<h4>Editor.nextFlakesWarning</h4>
+<b>nextFlakesWarning</b>(<i></i>)
+<p>
+        Public slot to handle the 'Next warning' context menu action.
 </p><a NAME="Editor.nextTask" ID="Editor.nextTask"></a>
 <h4>Editor.nextTask</h4>
 <b>nextTask</b>(<i></i>)
@@ -2618,6 +2680,11 @@ properties for the breakpoint (tuple)
 <b>previousBookmark</b>(<i></i>)
 <p>
         Public slot to handle the 'Previous bookmark' context menu action.
+</p><a NAME="Editor.previousFlakesWarning" ID="Editor.previousFlakesWarning"></a>
+<h4>Editor.previousFlakesWarning</h4>
+<b>previousFlakesWarning</b>(<i></i>)
+<p>
+        Public slot to handle the 'Previous warning' context menu action.
 </p><a NAME="Editor.previousTask" ID="Editor.previousTask"></a>
 <h4>Editor.previousTask</h4>
 <b>previousTask</b>(<i></i>)
@@ -2894,6 +2961,23 @@ flag indicating this editor should be saved (boolean)
 <dt><i>line</i></dt>
 <dd>
 line number of the bookmark (integer)
+</dd>
+</dl><a NAME="Editor.toggleFlakesWarning" ID="Editor.toggleFlakesWarning"></a>
+<h4>Editor.toggleFlakesWarning</h4>
+<b>toggleFlakesWarning</b>(<i>line, warning, msg = ""</i>)
+<p>
+        Public method to toggle a flakes warning indicator.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line number of the flakes warning
+</dd><dt><i>erwarningror</i></dt>
+<dd>
+flag indicating if the warning marker should be
+            set or deleted (boolean)
+</dd><dt><i>msg</i></dt>
+<dd>
+warning message (string)
 </dd>
 </dl><a NAME="Editor.toggleSyntaxError" ID="Editor.toggleSyntaxError"></a>
 <h4>Editor.toggleSyntaxError</h4>

@@ -49,7 +49,7 @@ Module implementing a simple Python syntax checker.
 QDialog, Ui_SyntaxCheckerDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>filenameRole</td></tr><tr><td>warningRole</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -99,7 +99,7 @@ The parent widget. (QWidget)
         Private method to clear all error markers of open editors.
 </p><a NAME="SyntaxCheckerDialog.__createResultItem" ID="SyntaxCheckerDialog.__createResultItem"></a>
 <h4>SyntaxCheckerDialog.__createResultItem</h4>
-<b>__createResultItem</b>(<i>file, line, error, sourcecode</i>)
+<b>__createResultItem</b>(<i>file, line, error, sourcecode, isWarning = False</i>)
 <p>
         Private method to create an entry in the result list.
 </p><dl>
@@ -115,6 +115,9 @@ error text (string)
 </dd><dt><i>sourcecode</i></dt>
 <dd>
 faulty line of code (string)
+</dd><dt><i>isWarning</i></dt>
+<dd>
+flag indicating a warning message (boolean)
 </dd>
 </dl><a NAME="SyntaxCheckerDialog.__finish" ID="SyntaxCheckerDialog.__finish"></a>
 <h4>SyntaxCheckerDialog.__finish</h4>

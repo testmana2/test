@@ -36,6 +36,8 @@ from .Printer import Printer
 
 import Preferences
 import Utilities
+from Utilities.py3flakes.checker import Checker
+from Utilities.py3flakes.messages import ImportStarUsed
 
 import UI.PixmapCache
 
@@ -132,6 +134,8 @@ class Editor(QsciScintillaCompat):
                                     # bookmark markers
         self.syntaxerrors = {}      # key:   marker handle
                                     # value: error message
+        self.warnings = {}          # key:   marker handle
+                                    # value: warning message
         self.notcoveredMarkers = [] # just a list of marker handles
         
         self.condHistory = []
@@ -908,6 +912,19 @@ class Editor(QsciScintillaCompat):
             self.indicMarginMenu.addAction(self.trUtf8('Clear syntax error'),
                 self.clearSyntaxError)
         self.indicMarginMenu.addSeparator()
+        self.marginMenuActs["NextWarningMarker"] = \
+            self.indicMarginMenu.addAction(self.trUtf8("Next warning"), 
+                self.nextFlakesWarning)
+        self.marginMenuActs["PreviousWarningMarker"] = \
+            self.indicMarginMenu.addAction(self.trUtf8("Previous warning"), 
+                self.previousFlakesWarning)
+        self.marginMenuActs["ShowWarning"] = \
+            self.indicMarginMenu.addAction(self.trUtf8('Show warning message'),
+                self.__showFlakesWarning)
+        self.marginMenuActs["ClearWarnings"] = \
+            self.indicMarginMenu.addAction(self.trUtf8('Clear warnings'),
+                self.clearFlakesWarnings)
+        self.indicMarginMenu.addSeparator()
         self.marginMenuActs["NextCoverageMarker"] = \
             self.indicMarginMenu.addAction(self.trUtf8('Next uncovered line'),
                 self.nextUncovered)
@@ -952,6 +969,19 @@ class Editor(QsciScintillaCompat):
         self.marginMenuActs["ClearSyntaxError"] = \
             self.marginMenu.addAction(self.trUtf8('Clear syntax error'),
                 self.clearSyntaxError)
+        self.marginMenu.addSeparator()
+        self.marginMenuActs["NextWarningMarker"] = \
+            self.marginMenu.addAction(self.trUtf8("Next warning"), 
+                self.nextFlakesWarning)
+        self.marginMenuActs["PreviousWarningMarker"] = \
+            self.marginMenu.addAction(self.trUtf8("Previous warning"), 
+                self.previousFlakesWarning)
+        self.marginMenuActs["ShowWarning"] = \
+            self.marginMenu.addAction(self.trUtf8('Show warning message'),
+                self.__showFlakesWarning)
+        self.marginMenuActs["ClearWarnings"] = \
+            self.marginMenu.addAction(self.trUtf8('Clear warnings'),
+                self.clearFlakesWarnings)
         self.marginMenu.addSeparator()
         self.marginMenuActs["Breakpoint"] = \
             self.marginMenu.addAction(self.trUtf8('Toggle breakpoint'), 
@@ -2465,6 +2495,8 @@ class Editor(QsciScintillaCompat):
                 elif modifiers & Qt.KeyboardModifiers(Qt.ControlModifier):
                     if self.markersAtLine(line) & (1 << self.syntaxerror):
                         self.__showSyntaxError(line)
+                    elif self.markersAtLine(line) & (1 << self.warning):
+                        self.__showFlakesWarning(line)
                 else:
                     if self.marginMenuActs["LMBbreakpoints"].isChecked():
                         self.__toggleBreakpoint(line + 1)
@@ -2478,6 +2510,8 @@ class Editor(QsciScintillaCompat):
             elif margin == self.__indicMargin:
                 if self.markersAtLine(line) & (1 << self.syntaxerror):
                     self.__showSyntaxError(line)
+                elif self.markersAtLine(line) & (1 << self.warning):
+                    self.__showFlakesWarning(line)
         
     def handleMonospacedEnable(self):
         """
@@ -3893,6 +3927,20 @@ class Editor(QsciScintillaCompat):
             self.marginMenuActs["ClearSyntaxError"].setEnabled(False)
             self.marginMenuActs["ShowSyntaxError"].setEnabled(False)
         
+        if len(self.warnings):
+            self.marginMenuActs["NextWarningMarker"].setEnabled(True)
+            self.marginMenuActs["PreviousWarningMarker"].setEnabled(True)
+            self.marginMenuActs["ClearWarnings"].setEnabled(True)
+            if self.markersAtLine(self.line) & (1 << self.warning):
+                self.marginMenuActs["ShowWarning"].setEnabled(True)
+            else:
+                self.marginMenuActs["ShowWarning"].setEnabled(False)
+        else:
+            self.marginMenuActs["NextWarningMarker"].setEnabled(False)
+            self.marginMenuActs["PreviousWarningMarker"].setEnabled(True)
+            self.marginMenuActs["ClearWarnings"].setEnabled(False)
+            self.marginMenuActs["ShowWarning"].setEnabled(False)
+        
         if self.notcoveredMarkers:
             self.marginMenuActs["NextCoverageMarker"].setEnabled(True)
             self.marginMenuActs["PreviousCoverageMarker"].setEnabled(True)
@@ -4000,11 +4048,25 @@ class Editor(QsciScintillaCompat):
         """
         if Preferences.getEditor("AutoCheckSyntax"):
             self.clearSyntaxError()
+            self.clearFlakesWarnings()
             if self.isPy3File():
                 syntaxError, _fn, errorline, _code, _error = \
                     Utilities.compile(self.fileName, self.text())
                 if syntaxError:
-                    self.toggleSyntaxError(int(errorline), 1, _error)
+                    self.toggleSyntaxError(int(errorline), True, _error)
+                else:
+                    if Preferences.getFlakes("IncludeInSyntaxCheck"):
+                        ignoreStarImportWarnings = \
+                            Preferences.getFlakes("IgnoreStarImportWarnings")
+                        warnings = Checker(self.text(), self.fileName)
+                        warnings.messages.sort(key = lambda a: a.lineno)
+                        for warning in warnings.messages:
+                            if ignoreStarImportWarnings and \
+                               isinstance(warning, ImportStarUsed):
+                                continue
+                            
+                            _fn, lineno, message = warning.getMessageData()
+                            self.toggleFlakesWarning(lineno, True, message)
         
     def __showCodeMetrics(self):
         """
@@ -4274,9 +4336,9 @@ class Editor(QsciScintillaCompat):
         
     def hasSyntaxErrors(self):
         """
-        Public method to check for the presence of bookmarks.
+        Public method to check for the presence of syntax errors.
         
-        @return flag indicating the presence of bookmarks (boolean)
+        @return flag indicating the presence of syntax errors (boolean)
         """
         return len(self.syntaxerrors) > 0
     
@@ -4316,6 +4378,121 @@ class Editor(QsciScintillaCompat):
             QMessageBox.critical(None,
                 self.trUtf8("Syntax Error"),
                 self.trUtf8("No syntax error message available."))
+    
+    ############################################################################
+    ## Flakes warning handling methods below
+    ############################################################################
+
+    def toggleFlakesWarning(self, line, warning, msg = ""):
+        """
+        Public method to toggle a flakes warning indicator.
+        
+        @param line line number of the flakes warning
+        @param erwarningror flag indicating if the warning marker should be
+            set or deleted (boolean)
+        @param msg warning message (string)
+        """
+        if line == 0:
+            line = 1
+            # hack to show a warning marker, if line is reported to be 0
+        if warning:
+            # set a new warning marker
+            markers = self.markersAtLine(line - 1)
+            if not (markers & (1 << self.warning)):
+                handle = self.markerAdd(line - 1, self.warning)
+                self.warnings[handle] = msg
+                self.emit(SIGNAL('syntaxerrorToggled'), self)
+        else:
+            for handle in list(self.warnings.keys()):
+                if self.markerLine(handle) == line - 1:
+                    del self.warnings[handle]
+                    self.markerDeleteHandle(handle)
+                    self.emit(SIGNAL('syntaxerrorToggled'), self)
+    
+    def getFlakesWarnings(self):
+        """
+        Public method to retrieve the flakes warning markers.
+        
+        @return sorted list of all lines containing a flakes warning
+            (list of integer)
+        """
+        fwlist = []
+        for handle in list(self.warnings.keys()):
+            fwlist.append(self.markerLine(handle) + 1)
+        
+        fwlist.sort()
+        return fwlist
+    
+    def hasFlakesWarnings(self):
+        """
+        Public method to check for the presence of flakes warnings.
+        
+        @return flag indicating the presence of flakes warnings (boolean)
+        """
+        return len(self.warnings) > 0
+    
+    def nextFlakesWarning(self):
+        """
+        Public slot to handle the 'Next warning' context menu action.
+        """
+        line, index = self.getCursorPosition()
+        if line == self.lines() - 1:
+            line = 0
+        else:
+            line += 1
+        fwline = self.markerFindNext(line, 1 << self.warning)
+        if fwline < 0:
+            # wrap around
+            fwline = self.markerFindNext(0, 1 << self.warning)
+        if fwline >= 0:
+            self.setCursorPosition(fwline, 0)
+            self.ensureLineVisible(fwline)
+    
+    def previousFlakesWarning(self):
+        """
+        Public slot to handle the 'Previous warning' context menu action.
+        """
+        line, index = self.getCursorPosition()
+        if line == 0:
+            line = self.lines() - 1
+        else:
+            line -= 1
+        fwline = self.markerFindPrevious(line, 1 << self.warning)
+        if fwline < 0:
+            # wrap around
+            fwline = self.markerFindPrevious(self.lines() - 1, 1 << self.warning)
+        if fwline >= 0:
+            self.setCursorPosition(fwline, 0)
+            self.ensureLineVisible(fwline)
+    
+    def clearFlakesWarnings(self):
+        """
+        Public slot to handle the 'Clear all warnings' context menu action.
+        """
+        for handle in self.warnings:
+            self.markerDeleteHandle(handle)
+        self.warnings = {}
+        self.emit(SIGNAL('syntaxerrorToggled'), self)
+    
+    def __showFlakesWarning(self, line = -1):
+        """
+        Private slot to handle the 'Show warning' context menu action.
+        
+        @param line line number to show the flakes warning for (integer)
+        """
+        if line == -1:
+            line = self.line
+        
+        for handle in list(self.warnings.keys()):
+            if self.markerLine(handle) == line:
+                QMessageBox.warning(None,
+                    self.trUtf8("py3flakes Warning"),
+                    self.warnings[handle])
+                break
+        else:
+            QMessageBox.warning(None,
+                self.trUtf8("py3flakes Warning"),
+                self.trUtf8("No py3flakes warning message available."))
     
     #################################################################
     ## Macro handling methods
@@ -4697,6 +4874,9 @@ class Editor(QsciScintillaCompat):
         
         # clear syntax error markers
         self.clearSyntaxError()
+        
+        # clear flakes warning markers
+        self.clearFlakesWarnings()
         
         # clear breakpoint markers
         for handle in list(self.breaks.keys()):

@@ -419,6 +419,8 @@ class Listspace(QSplitter, ViewManager):
             self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("fileModified.png"))
         elif editor.hasSyntaxErrors():
             self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("syntaxError.png"))
+        elif editor.hasFlakesWarnings():
+            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("warning.png"))
         else:
             self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("empty.png"))
         self.viewlist.setCurrentRow(currentRow)
@@ -434,6 +436,8 @@ class Listspace(QSplitter, ViewManager):
         index = self.editors.index(editor)
         if editor.hasSyntaxErrors():
             self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("syntaxError.png"))
+        elif editor.hasFlakesWarnings():
+            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("warning.png"))
         else:
             self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("empty.png"))
         self.viewlist.setCurrentRow(currentRow)

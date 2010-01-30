@@ -2648,7 +2648,8 @@ class ViewManager(QObject):
                 """<b>Goto Syntax Error</b>"""
                 """<p>Go to next syntax error of the current editor.</p>"""
                 ))
-        self.connect(self.syntaxErrorGotoAct, SIGNAL('triggered()'), self.__gotoSyntaxError)
+        self.connect(self.syntaxErrorGotoAct, SIGNAL('triggered()'), 
+            self.__gotoSyntaxError)
         self.bookmarkActions.append(self.syntaxErrorGotoAct)
         
         self.syntaxErrorClearAct = E5Action(QApplication.translate('ViewManager', 
@@ -2665,6 +2666,57 @@ class ViewManager(QObject):
         self.connect(self.syntaxErrorClearAct, SIGNAL('triggered()'), 
             self.__clearAllSyntaxErrors)
         self.bookmarkActions.append(self.syntaxErrorClearAct)
+        
+        self.warningsNextAct = E5Action(QApplication.translate('ViewManager', 
+                                'Next warning message'),
+                            UI.PixmapCache.getIcon("warningNext.png"),
+                            QApplication.translate('ViewManager', 
+                                '&Next warning message'),
+                            0, 0,
+                            self.bookmarkActGrp, 'vm_warning_next')
+        self.warningsNextAct.setStatusTip(QApplication.translate('ViewManager', 
+            'Next warning message'))
+        self.warningsNextAct.setWhatsThis(QApplication.translate('ViewManager', 
+                """<b>Next warning message</b>"""
+                """<p>Go to next line of the current editor"""
+                """ having a py3flakes warning.</p>"""
+                ))
+        self.connect(self.warningsNextAct, SIGNAL('triggered()'), self.__nextWarning)
+        self.bookmarkActions.append(self.warningsNextAct)
+        
+        self.warningsPreviousAct = E5Action(QApplication.translate('ViewManager', 
+                                'Previous warning message'),
+                            UI.PixmapCache.getIcon("warningPrev.png"),
+                            QApplication.translate('ViewManager', 
+                                '&Previous warning message'),
+                            0, 0,
+                            self.bookmarkActGrp, 'vm_warning_previous')
+        self.warningsPreviousAct.setStatusTip(QApplication.translate('ViewManager', 
+            'Previous warning message'))
+        self.warningsPreviousAct.setWhatsThis(QApplication.translate('ViewManager', 
+                """<b>Previous warning message</b>"""
+                """<p>Go to previous line of the current editor"""
+                """ having a py3flakes warning.</p>"""
+                ))
+        self.connect(self.warningsPreviousAct, SIGNAL('triggered()'), 
+            self.__previousWarning)
+        self.bookmarkActions.append(self.warningsPreviousAct)
+        
+        self.warningsClearAct = E5Action(QApplication.translate('ViewManager', 
+                                'Clear Warning Messages'),
+                            QApplication.translate('ViewManager', 
+                                'Clear &Warning Messages'),
+                            0, 0,
+                            self.bookmarkActGrp, 'vm_warnings_clear')
+        self.warningsClearAct.setStatusTip(QApplication.translate('ViewManager', 
+            'Clear Warning Messages'))
+        self.warningsClearAct.setWhatsThis(QApplication.translate('ViewManager', 
+                """<b>Clear Warning Messages</b>"""
+                """<p>Clear py3flakes warning messages of all editors.</p>"""
+                ))
+        self.connect(self.warningsClearAct, SIGNAL('triggered()'), 
+            self.__clearAllWarnings)
+        self.bookmarkActions.append(self.warningsClearAct)
         
         self.notcoveredNextAct = E5Action(QApplication.translate('ViewManager', 
                                 'Next uncovered line'),
@@ -2753,6 +2805,10 @@ class ViewManager(QObject):
         menu.addAction(self.syntaxErrorGotoAct)
         menu.addAction(self.syntaxErrorClearAct)
         menu.addSeparator()
+        menu.addAction(self.warningsNextAct)
+        menu.addAction(self.warningsPreviousAct)
+        menu.addAction(self.warningsClearAct)
+        menu.addSeparator()
         menu.addAction(self.notcoveredNextAct)
         menu.addAction(self.notcoveredPreviousAct)
         menu.addSeparator()
@@ -2784,6 +2840,9 @@ class ViewManager(QObject):
         tb.addAction(self.bookmarkPreviousAct)
         tb.addSeparator()
         tb.addAction(self.syntaxErrorGotoAct)
+        tb.addSeparator()
+        tb.addAction(self.warningsNextAct)
+        tb.addAction(self.warningsPreviousAct)
         tb.addSeparator()
         tb.addAction(self.taskNextAct)
         tb.addAction(self.taskPreviousAct)
@@ -4350,7 +4409,34 @@ class ViewManager(QObject):
         else:
             self.syntaxErrorGotoAct.setEnabled(False)
             self.syntaxErrorClearAct.setEnabled(False)
+        if editor.hasFlakesWarnings():
+            self.warningsNextAct.setEnabled(True)
+            self.warningsPreviousAct.setEnabled(True)
+            self.warningsClearAct.setEnabled(True)
+        else:
+            self.warningsNextAct.setEnabled(False)
+            self.warningsPreviousAct.setEnabled(False)
+            self.warningsClearAct.setEnabled(False)
         self.emit(SIGNAL('syntaxerrorToggled'), editor)
+        
+    def __nextWarning(self):
+        """
+        Private method to handle the next warning action.
+        """
+        self.activeWindow().nextFlakesWarning()
+        
+    def __previousWarning(self):
+        """
+        Private method to handle the previous warning action.
+        """
+        self.activeWindow().previousFlakesWarning()
+        
+    def __clearAllWarnings(self):
+        """
+        Private method to handle the clear all warnings action.
+        """
+        for editor in self.editors:
+            editor.clearFlakesWarnings()
         
     def __nextUncovered(self):
         """
@@ -4581,6 +4667,15 @@ class ViewManager(QObject):
             else:
                 self.syntaxErrorGotoAct.setEnabled(False)
                 self.syntaxErrorClearAct.setEnabled(False)
+            
+            if editor.hasFlakesWarnings():
+                self.warningsNextAct.setEnabled(True)
+                self.warningsPreviousAct.setEnabled(True)
+                self.warningsClearAct.setEnabled(True)
+            else:
+                self.warningsNextAct.setEnabled(False)
+                self.warningsPreviousAct.setEnabled(False)
+                self.warningsClearAct.setEnabled(False)
             
             if editor.hasCoverageMarkers():
                 self.notcoveredNextAct.setEnabled(True)
