@@ -160,6 +160,8 @@ class CompleterRuby(CompleterBase):
         @return flag indicating, if the cursor is inside a comment (boolean)
         """
         txt = self.editor.text(line)
+        if col == len(txt):
+            col -= 1
         while col >= 0:
             if txt[col] == "#":
                 return True
