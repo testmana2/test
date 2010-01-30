@@ -176,12 +176,13 @@ class CompleterPython(CompleterBase):
         # colon
         # skip colon, dedent to if for else:
         elif char == ':':
-            if char == self.editor.text(line)[col]:
+            text = self.editor.text(line)
+            if col < len(text) and char == txt[col]:
                 if self.__colonDetection:
                     self.editor.setSelection(line, col, line, col + 1)
                     self.editor.removeSelectedText()
             else:
-                txt = self.editor.text(line)[:col]
+                txt = text[:col]
                 if self.__dedentElse and self.__elseRX.exactMatch(txt):
                     self.__dedentElseToIfWhileForTry()
                 elif self.__dedentExcept and self.__exceptcRX.exactMatch(txt):
