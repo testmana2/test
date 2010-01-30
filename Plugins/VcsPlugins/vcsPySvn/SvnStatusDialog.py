@@ -230,7 +230,6 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         opts = self.vcs.options['global'] + self.vcs.options['status']
         verbose = "--verbose" in opts
         recurse = "--non-recursive" not in opts
-        ignore = True # "--ignore" not in opts
         update = "--show-updates" in opts
         
         locker = QMutexLocker(self.vcs.vcsExecutionMutex)
@@ -253,7 +252,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                 
                 # step 2: determine status of files
                 allFiles = self.client.status(name, recurse = recurse, get_all = verbose, 
-                                              ignore = ignore, update = update)
+                                              ignore = True, update = update)
                 counter = 0
                 for file in allFiles:
                     uptodate = True

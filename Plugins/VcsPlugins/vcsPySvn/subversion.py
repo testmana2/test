@@ -646,7 +646,7 @@ class Subversion(VersionControl):
         opts = self.options['global'] + self.options['add']
         recurse = False
         force = "--force" in opts or noDialog
-        ignore = "--ignore" in opts
+        noignore = "--no-ignore" in opts
         client = self.getClient()
         if not noDialog:
             dlg = \
@@ -654,12 +654,12 @@ class Subversion(VersionControl):
                     self.trUtf8('Adding files/directories to the Subversion repository'),
                         "add --non-recursive%s%s %s" % \
                             (force and " --force" or "",
-                             ignore and " --ignore" or "",
+                             noignore and " --no-ignore" or "",
                              " ".join(names)),
                     client)
             QApplication.processEvents()
         try:
-            client.add(names, recurse = recurse, force = force, ignore = ignore)
+            client.add(names, recurse = recurse, force = force, ignore = not noignore)
         except pysvn.ClientError as e:
             if not noDialog:
                 dlg.showError(e.args[0])
