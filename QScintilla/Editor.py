@@ -4396,12 +4396,16 @@ class Editor(QsciScintillaCompat):
             line = 1
             # hack to show a warning marker, if line is reported to be 0
         if warning:
-            # set a new warning marker
+            # set/ammend a new warning marker
             markers = self.markersAtLine(line - 1)
             if not (markers & (1 << self.warning)):
                 handle = self.markerAdd(line - 1, self.warning)
                 self.warnings[handle] = msg
                 self.emit(SIGNAL('syntaxerrorToggled'), self)
+            else:
+                for handle in list(self.warnings.keys()):
+                    if self.markerLine(handle) == line - 1:
+                        self.warnings[handle] += "\n" + msg
         else:
             for handle in list(self.warnings.keys()):
                 if self.markerLine(handle) == line - 1:
