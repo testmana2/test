@@ -288,7 +288,6 @@ class ConfigurationWidget(QWidget):
             }
         
         # generate the list entries
-        itemsToExpand = []
         for key in sorted(self.configItems.keys()):
             pageData = self.configItems[key]
             if pageData[3]:
@@ -566,8 +565,7 @@ class ConfigurationWidget(QWidget):
             self.configStack.removeWidget(currentPage)
             if pageName == "editorHighlightingStylesPage":
                 self.__initLexers()
-            pageData = self.configItems[pageName]
-            pageData[-1] = None
+            self.configItems[pageName][-1] = None
             
             self.showConfigurationPageByName(pageName)
             if savedState is not None:

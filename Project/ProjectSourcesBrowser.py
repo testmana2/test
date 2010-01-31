@@ -8,17 +8,13 @@ Module implementing a class used to display the Sources part of the project.
 """
 
 import os
-import sys
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E5Gui.E5Application import e5App
-
 from UI.BrowserModel import BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
-import UI.PixmapCache
 
 from DataViews.CodeMetricsDialog import CodeMetricsDialog
 from DataViews.PyCoverageDialog import PyCoverageDialog

@@ -8,7 +8,6 @@ Module implementing a dialog to generate code for a Qt4 dialog.
 """
 
 import os
-import sys
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *

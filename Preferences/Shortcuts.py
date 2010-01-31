@@ -240,7 +240,7 @@ def importShortcuts(fn):
         else:
             f = open(fn, "r", encoding = "utf-8")
         try:
-            line = f.readline()
+            f.readline()
             dtdLine = f.readline()
         finally:
             f.close()

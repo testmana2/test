@@ -8,7 +8,6 @@ Module implementing a dialog to compare two files.
 """
 
 import os
-import sys
 import time
 
 from PyQt4.QtCore import *

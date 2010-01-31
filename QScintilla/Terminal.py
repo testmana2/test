@@ -18,7 +18,7 @@ from PyQt4.Qsci import QsciScintilla
 from E5Gui.E5Application import e5App
 
 from . import Lexers
-from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+from .QsciScintillaCompat import QsciScintillaCompat
 
 import Preferences
 import Utilities
@@ -498,7 +498,6 @@ class Terminal(QsciScintillaCompat):
         @param ev key event (QKeyEvent)
         """
         txt = ev.text()
-        key = ev.key()
         
         # See it is text to insert.
         if len(txt) and txt >= " ":
@@ -853,7 +852,7 @@ class Terminal(QsciScintillaCompat):
         Private slot to stop the shell process.
         """
         self.__process.kill()
-        res = self.__process.waitForFinished(3000)
+        self.__process.waitForFinished(3000)
         
     def handlePreferencesChanged(self):
         """

@@ -7,8 +7,6 @@
 Module implementing a dialog to compare two files and show the result side by side.
 """
 
-import os
-import sys
 import re
 from difflib import _mdiff, IS_CHARACTER_JUNK
 

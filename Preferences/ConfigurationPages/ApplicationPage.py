@@ -7,10 +7,6 @@
 Module implementing the Application configuration page.
 """
 
-import os
-
-from PyQt4.QtCore import pyqtSlot
-
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ApplicationPage import Ui_ApplicationPage
 

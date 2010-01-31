@@ -23,7 +23,6 @@ def printerr(s):
     
     @param s data to be printed
     """
-    import sys
     sys.__stderr__.write('{0!s}\n'.format(s))
     sys.__stderr__.flush()
 

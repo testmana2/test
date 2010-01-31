@@ -9,7 +9,6 @@ Module implementing the editor component of the eric5 IDE.
 
 import os
 import re
-import types
     
 from PyQt4.Qsci import QsciScintilla, QsciMacro
 from PyQt4.QtCore import *
@@ -1350,9 +1349,9 @@ class Editor(QsciScintillaCompat):
         # now set the lexer properties
         self.lexer_.initProperties()
         
-        # initialize the auto indent style of the lexer
-        ais = self.lexer_.autoIndentStyle()
-        
+##        # initialize the auto indent style of the lexer
+##        ais = self.lexer_.autoIndentStyle()
+##        
         # initialize the lexer APIs settings
         api = self.vm.getAPIsManager().getAPIs(self.apiLanguage)
         if api is not None:
@@ -3093,9 +3092,9 @@ class Editor(QsciScintillaCompat):
         if self.lexer_ is not None:
             self.lexer_.readSettings(Preferences.Prefs.settings, "Scintilla")
             self.lexer_.initProperties()
-            
-            # initialize the auto indent style of the lexer
-            ais = self.lexer_.autoIndentStyle()
+##            
+##            # initialize the auto indent style of the lexer
+##            ais = self.lexer_.autoIndentStyle()
         
         # read the typing completer settings
         if self.completer is not None:
@@ -4737,7 +4736,6 @@ class Editor(QsciScintillaCompat):
         @param ev key event (QKeyEvent)
         """
         txt = ev.text()
-        key = ev.key()
         
         # See it is text to insert.
         if len(txt) and txt >= " ":

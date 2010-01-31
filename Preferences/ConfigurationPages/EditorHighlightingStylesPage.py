@@ -7,7 +7,7 @@
 Module implementing the Editor Highlighting Styles configuration page.
 """
 
-import os
+import io
 
 from PyQt4.QtCore import pyqtSlot, QFileInfo
 from PyQt4.QtGui import QPalette, QFileDialog, QColorDialog, QFontDialog, \
@@ -324,7 +324,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         try:
             f = open(fn, "r", encoding = "utf-8")
             try:
-                line = f.readline()
+                f.readline()
                 dtdLine = f.readline()
             finally:
                 f.close()
@@ -354,7 +354,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
                     parser.parse(f)
                 except UnicodeEncodeError:
                     f.seek(0)
-                    buf = cStringIO.StringIO(f.read())
+                    buf = io.StringIO(f.read())
                     parser.parse(buf)
             finally:
                 f.close()

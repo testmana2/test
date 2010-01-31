@@ -21,7 +21,6 @@ import Preferences
 
 from .BookmarkedFilesDialog import BookmarkedFilesDialog
 
-from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 from QScintilla.Editor import Editor
 from QScintilla.GotoDialog import GotoDialog
 from QScintilla.SearchReplaceWidget import SearchReplaceWidget

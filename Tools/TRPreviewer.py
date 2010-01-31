@@ -7,7 +7,6 @@
 Module implementing the TR Previewer main window.
 """
 
-import sys
 import os
 
 from PyQt4.QtCore import *
@@ -16,7 +15,6 @@ from PyQt4 import uic
 
 from .TRSingleApplication import TRSingleApplicationServer
 
-import Preferences
 import UI.PixmapCache
 import UI.Config
 

@@ -7,9 +7,6 @@
 Module implementing a dialog to enter filetype associations for the project.
 """
 
-import sys
-import os
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
@@ -46,7 +43,7 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         for pattern, filetype in list(self.project.pdata["FILETYPES"].items()):
             try:
                 index = self.filetypes.index(filetype)
-                itm = self.__createItem(pattern, self.filetypeStrings[index])
+                self.__createItem(pattern, self.filetypeStrings[index])
             except ValueError:
                 pass    # silently discard entries of unknown type
         

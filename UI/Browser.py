@@ -7,7 +7,6 @@
 Module implementing a browser with class browsing capabilities.
 """
 
-import sys
 import os
 import mimetypes
 

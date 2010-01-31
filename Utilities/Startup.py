@@ -10,7 +10,7 @@ Module implementing some startup helper funcions
 import os
 import sys
 
-from PyQt4.QtCore import QTranslator, QTextCodec, QLocale, QDir, SIGNAL, SLOT, \
+from PyQt4.QtCore import QTranslator, QTextCodec, QLocale, SIGNAL, SLOT, \
     QLibraryInfo
 from PyQt4.QtGui import QApplication
 
@@ -95,7 +95,7 @@ def handleArgs(argv, appinfo):
     @param argv list of commandline parameters (list of strings)
     @param appinfo dictionary describing the application
     @return index of the '--' option (integer). This is used to tell
-        the application, that all additional option don't belong to
+        the application, that all additional options don't belong to
         the application.
     """
     ddindex = 30000     # arbitrarily large number
@@ -154,6 +154,7 @@ def loadTranslators(qtTransDir, app, translationFiles = ()):
         be loaded (tuple of strings)
     @return the requested locale (string)
     """
+    global loaded_translators
     translations = ("qt", "eric5") + translationFiles
     loc = Preferences.getUILanguage()
     if loc is None:
@@ -197,7 +198,7 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True):
     @keyparam quitOnLastWindowClosed flag indicating to quit the application,
         if the last window was closed (boolean)
     """
-    ddindex = handleArgs(argv, appinfo)
+    handleArgs(argv, appinfo)
     app = E5Application(argv)
     app.setQuitOnLastWindowClosed(quitOnLastWindowClosed)
     try:

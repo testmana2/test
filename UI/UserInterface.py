@@ -75,7 +75,6 @@ from E5Gui.E5ToolBarDialog import E5ToolBarDialog
 from E5Gui.E5SqueezeLabels import E5SqueezeLabelPath
 from E5Gui.E5ToolBox import E5VerticalToolBox, E5HorizontalToolBox
 from E5Gui.E5SideBar import E5SideBar
-from E5Gui.E5TabWidget import E5TabWidget
 
 from VCS.StatusMonitorLed import StatusMonitorLed
 
@@ -93,8 +92,6 @@ from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
 from E5XML.XMLEntityResolver import XMLEntityResolver
 from E5XML.TasksHandler import TasksHandler
 from E5XML.TasksWriter import TasksWriter
-from E5XML.TemplatesHandler import TemplatesHandler
-from E5XML.TemplatesWriter import TemplatesWriter
 from E5XML.SessionWriter import SessionWriter
 from E5XML.SessionHandler import SessionHandler
 

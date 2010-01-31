@@ -12,7 +12,6 @@ introductory text. This text is configurable.
 """
 
 import os
-import sys
 import time
 
 from PyQt4.QtCore import *

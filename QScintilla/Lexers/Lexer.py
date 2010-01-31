@@ -7,8 +7,6 @@
 Module implementing the lexer base class.
 """
 
-import Preferences
-
 class Lexer(object):
     """ 
     Class to implement the lexer mixin class.

@@ -7,8 +7,6 @@
 Module implementing the UI Previewer main window.
 """
 
-import sys
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4 import uic

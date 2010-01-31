@@ -8,10 +8,7 @@ Module implementing the Editor Styles configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QPixmap, QIcon
 from PyQt4.Qsci import QsciScintilla
-
-from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorStylesPage import Ui_EditorStylesPage

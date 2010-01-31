@@ -12,8 +12,6 @@ and to find out the superclasses of an interface as well as its attributes.
 It is based on the Python class browser found in this package.
 """
 
-import sys
-import os
 import re
 
 import Utilities
@@ -177,7 +175,8 @@ def readmodule_ex(module, path=[]):
     @param path path the file should be searched in (list of strings)
     @return the resulting dictionary
     '''
-
+    global _modules
+    
     dict = {}
     dict_counts = {}
 

@@ -16,7 +16,7 @@ from .Ui_ProjectBrowserPage import Ui_ProjectBrowserPage
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
-    OthersBrowserFlag, AllBrowsersFlag
+    OthersBrowserFlag
 
 import Preferences
 

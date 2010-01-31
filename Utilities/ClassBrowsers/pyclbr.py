@@ -14,7 +14,6 @@ This is module is based on pyclbr found in the Python 2.2.2 distribution.
 
 
 import sys
-import os
 import imp
 import re
 
@@ -204,7 +203,8 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
     @param inpackage flag indicating a module inside a package is scanned
     @return the resulting dictionary
     '''
-
+    global _modules
+    
     dict = {}
     dict_counts = {}
 

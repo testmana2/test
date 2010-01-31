@@ -7,9 +7,6 @@
 Module implementing a compatability interface class to QsciScintilla.
 """
 
-import sys
-
-from PyQt4.QtCore import Qt, SIGNAL
 from PyQt4.QtGui import QApplication, QPalette
 from PyQt4.Qsci import QsciScintilla, \
     QSCINTILLA_VERSION as QsciQSCINTILLA_VERSION, QSCINTILLA_VERSION_STR

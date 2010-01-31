@@ -8,8 +8,6 @@ Module implementing a class used to display the resources part of the project.
 """
 
 import os
-import sys
-import shutil
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -22,12 +20,9 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
-import UI.PixmapCache
 
 import Preferences
 import Utilities
-
-from eric5config import getConfig
 
 class ProjectResourcesBrowser(ProjectBaseBrowser):
     """

@@ -7,8 +7,6 @@
 Module implementing the Editor General configuration page.
 """
 
-import QScintilla.Lexers
-
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorGeneralPage import Ui_EditorGeneralPage
 

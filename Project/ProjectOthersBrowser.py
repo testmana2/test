@@ -9,7 +9,6 @@ the other categories.
 """
 
 import os
-import sys
 import mimetypes
 
 from PyQt4.QtCore import *
@@ -20,12 +19,7 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserOthersType
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
-from UI.BrowserModel import BrowserClassItem, BrowserMethodItem, \
-    BrowserDirectoryItem, BrowserFileItem
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
-import UI.PixmapCache
-
-import Preferences
 
 class ProjectOthersBrowser(ProjectBaseBrowser):
     """

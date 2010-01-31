@@ -7,8 +7,6 @@
 Module implementing the Terminal configuration page.
 """
 
-import sys
-
 from PyQt4.QtCore import pyqtSlot
 
 from .ConfigurationPageBase import ConfigurationPageBase

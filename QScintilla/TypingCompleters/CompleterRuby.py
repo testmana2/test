@@ -9,7 +9,7 @@ Module implementing a typing completer for Ruby.
 
 import re
 
-from PyQt4.QtCore import QObject, SIGNAL, QRegExp
+from PyQt4.QtCore import QRegExp
 from PyQt4.Qsci import QsciLexerRuby
 
 from .CompleterBase import CompleterBase

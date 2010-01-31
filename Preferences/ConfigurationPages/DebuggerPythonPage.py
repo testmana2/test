@@ -7,7 +7,7 @@
 Module implementing the Debugger Python configuration page.
 """
 
-from PyQt4.QtCore import QDir, pyqtSlot
+from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5FileCompleter

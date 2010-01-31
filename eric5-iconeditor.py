@@ -13,7 +13,6 @@ of the integrated icon editor.
 """
 
 import sys
-import os
 
 for arg in sys.argv:
     if arg.startswith("--config="):
@@ -24,7 +23,6 @@ for arg in sys.argv:
         break
 
 from Utilities import Startup
-import Utilities
 
 def createMainWidget(argv):
     """

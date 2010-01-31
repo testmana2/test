@@ -8,7 +8,6 @@ Module implementing the Editor Search configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QPixmap, QIcon
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorSearchPage import Ui_EditorSearchPage

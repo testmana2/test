@@ -11,7 +11,6 @@ This is the main Python script to uninstall eric5 plugins from outside of the ID
 """
 
 import sys
-import os
 
 for arg in sys.argv:
     if arg.startswith("--config="):

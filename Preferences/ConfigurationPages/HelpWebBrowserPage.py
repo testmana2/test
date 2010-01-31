@@ -12,8 +12,6 @@ from PyQt4.QtCore import qVersion, pyqtSlot
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage
 
-import Helpviewer.HelpWindow
-
 import Preferences
 
 class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):

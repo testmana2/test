@@ -8,9 +8,6 @@ Package implementing lexers for the various supported programming languages.
 """
 
 from PyQt4.QtGui import QApplication
-from PyQt4.Qsci import QSCINTILLA_VERSION_STR
-
-from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 
 import Preferences
 
@@ -43,6 +40,7 @@ def registerLexer(name, displayString, filenameSample, getLexerFunc,
         wildcard patterns to be associated with the lexer)
     @exception KeyError raised when the given name is already in use
     """
+    global LexerRegistry
     if name in LexerRegistry:
         raise KeyError('Lexer "%s" already registered.' % name)
     else:

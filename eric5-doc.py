@@ -15,7 +15,6 @@ This script can be used via the commandline as well.
 import glob
 import os
 import sys
-import shutil
 import fnmatch
 
 import Utilities.ModuleParser
@@ -148,7 +147,7 @@ def main():
              "qhp-virtualfolder=", "qhp-filtername=", "qhp-filterattribs=", 
              "qhp-title=", "create-qhc", 
             ])
-    except getopt.error as e:
+    except getopt.error:
         usage()
 
     excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject", 

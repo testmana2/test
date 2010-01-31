@@ -9,7 +9,7 @@ Module implementing the printer functionality.
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-from PyQt4.Qsci import QsciScintilla, QsciPrinter
+from PyQt4.Qsci import QsciPrinter
 
 import Preferences
 

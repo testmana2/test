@@ -7,15 +7,12 @@
 Module implementing a configuration dialog for the tools menu.
 """
 
-import sys
-import os
 import copy
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from .Ui_ToolGroupConfigurationDialog import Ui_ToolGroupConfigurationDialog
-import Utilities
 
 class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
     """

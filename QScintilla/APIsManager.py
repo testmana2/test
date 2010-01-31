@@ -7,14 +7,11 @@
 Module implementing the APIsManager.
 """
 
-import os
-
 from PyQt4.QtCore import *
-from PyQt4.Qsci import QsciAPIs, QsciLexer
+from PyQt4.Qsci import QsciAPIs
 
 from . import Lexers
 import Preferences
-import Utilities
 
 class APIs(QObject):
     """
@@ -90,7 +87,7 @@ class APIs(QObject):
         """
         Private method called to save an API, after it has been prepared.
         """
-        res = self.__apis.savePrepared()
+        self.__apis.savePrepared()
         self.__inPreparation = False
         self.emit(SIGNAL('apiPreparationFinished()'))
     

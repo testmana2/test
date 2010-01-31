@@ -7,7 +7,6 @@
 Module implementing the browser model.
 """
 
-import sys
 import os
 import re
 

@@ -8,8 +8,6 @@ Module implementing the project management functionality.
 """
 
 import os
-import sys
-import re
 import time
 import shutil
 import glob
@@ -68,8 +66,6 @@ from E5Gui.E5Action import E5Action, createActionGroup
 
 import Preferences
 import Utilities
-
-from eric5config import getConfig
 
 class Project(QObject):
     """
@@ -884,7 +880,7 @@ class Project(QObject):
             
         # now read the file
         if line.startswith('<?xml'):
-            res = self.__readXMLSession(fn, dtdLine.startswith("<!DOCTYPE"), quiet)
+            self.__readXMLSession(fn, dtdLine.startswith("<!DOCTYPE"), quiet)
         else:
             if not quiet:
                 QMessageBox.critical(None,
@@ -1097,7 +1093,7 @@ class Project(QObject):
             
         # now read the file
         if line.startswith('<?xml'):
-            res = self.__readXMLTasks(fn, dtdLine.startswith("<!DOCTYPE"))
+            self.__readXMLTasks(fn, dtdLine.startswith("<!DOCTYPE"))
         else:
             QMessageBox.critical(None,
                 self.trUtf8("Read project session"),
@@ -1696,7 +1692,6 @@ class Project(QObject):
             fnames, target, isSource = dlg.getData()
             if target != '':
                 for fn in fnames:
-                    ext = os.path.splitext(fn)[1]
                     targetfile = os.path.join(target, os.path.basename(fn))
                     if not Utilities.samepath(os.path.dirname(fn), target):
                         try:
@@ -1721,8 +1716,8 @@ class Project(QObject):
                             QMessageBox.critical(None,
                                 self.trUtf8("Add file"),
                                 self.trUtf8("<p>The selected file <b>{0}</b> could not be"
-                                    " added to <b>{1}</b>.</p>")
-                                    .format(fn, target),
+                                    " added to <b>{1}</b>.</p><p>Reason: {2}</p>")
+                                    .format(fn, target, str(why)),
                                 QMessageBox.StandardButtons(\
                                     QMessageBox.Abort))
                             return
@@ -1773,8 +1768,8 @@ class Project(QObject):
                 QMessageBox.critical(None,
                     self.trUtf8("Add directory"),
                     self.trUtf8("<p>The target directory <b>{0}</b> could not be"
-                        " created.</p>")
-                        .format(target),
+                        " created.</p><p>Reason: {1}</p>")
+                        .format(target, str(why)),
                     QMessageBox.StandardButtons(\
                         QMessageBox.Abort))
                 return

@@ -14,8 +14,6 @@ interfaces (i.e. CVS) have to be subclasses of this base class.
 
 from E5Gui.E5Application import e5App
 
-import Preferences
-
 ######################################################################
 ## Below is the factory function to instantiate the appropriate
 ## vcs object depending on the project settings.

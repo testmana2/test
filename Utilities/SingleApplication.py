@@ -10,8 +10,6 @@ Module implementing the single application server and client.
 from PyQt4.QtCore import SIGNAL
 from PyQt4.QtNetwork import QLocalServer, QLocalSocket
 
-import Utilities
-
 class SingleApplicationServer(QLocalServer):
     """
     Class implementing the single application server base class.

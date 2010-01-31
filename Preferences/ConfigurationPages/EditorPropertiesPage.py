@@ -7,8 +7,6 @@
 Module implementing the Editor Properties configuration page.
 """
 
-from PyQt4.Qsci import QsciScintilla
-
 from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 
 from .ConfigurationPageBase import ConfigurationPageBase

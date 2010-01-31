@@ -13,7 +13,6 @@ version of the integrated unittest module.
 """
 
 import sys
-import os
 
 for arg in sys.argv:
     if arg.startswith("--config="):

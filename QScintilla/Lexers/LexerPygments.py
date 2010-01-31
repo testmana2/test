@@ -7,8 +7,6 @@
 Module implementing a custom lexer using pygments.
 """
 
-import sys
-
 from pygments.token import Token
 from pygments.lexers import guess_lexer_for_filename, guess_lexer, find_lexer_class
 from pygments.util import ClassNotFound

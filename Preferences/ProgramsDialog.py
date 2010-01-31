@@ -8,7 +8,6 @@ Module implementing the Programs page.
 """
 
 import os
-import sys
 import re
 
 from PyQt4.QtCore import pyqtSlot, Qt, QProcess
@@ -248,7 +247,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                                 break
                     else:
                         version = self.trUtf8("(not executable)")
-                itm2 = QTreeWidgetItem(itm, [exe, version])
+                QTreeWidgetItem(itm, [exe, version])
                 itm.setExpanded(True)
             else:
                 itm.setText(1, self.trUtf8("(not found)"))
@@ -271,7 +270,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         itm.setFont(0, font)
         
         if len(entryVersion):
-            itm2 = QTreeWidgetItem(itm, [entryText, entryVersion])
+            QTreeWidgetItem(itm, [entryText, entryVersion])
             itm.setExpanded(True)
         else:
             itm.setText(1, self.trUtf8("(not found)"))

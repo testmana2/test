@@ -29,9 +29,6 @@ except ImportError:
 
 from Utilities import Startup
 
-import Preferences
-
-
 def createMainWidget(argv):
     """
     Function to create the main widget.

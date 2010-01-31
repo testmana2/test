@@ -30,7 +30,6 @@ except ImportError:
     sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
 
 from Utilities import Startup
-import Utilities
 
 def createMainWidget(argv):
     """

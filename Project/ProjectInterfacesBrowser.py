@@ -8,7 +8,6 @@ Module implementing the a class used to display the interfaces (IDL) part of the
 """
 
 import os
-import sys
 import glob
 
 from PyQt4.QtCore import *
@@ -24,7 +23,6 @@ from .ProjectBaseBrowser import ProjectBaseBrowser
 from UI.BrowserModel import BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
-import UI.PixmapCache
 
 import Preferences
 import Utilities

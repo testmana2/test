@@ -8,7 +8,6 @@ Module implementing the baseclass for the various project browsers.
 """
 
 import os
-import sys
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -19,9 +18,6 @@ from UI.Browser import *
 
 from .ProjectBrowserModel import *
 from .ProjectBrowserSortFilterProxyModel import ProjectBrowserSortFilterProxyModel
-
-import UI.PixmapCache
-import Preferences
 
 class ProjectBaseBrowser(Browser):
     """

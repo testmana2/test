@@ -13,7 +13,6 @@ of the integrated ui previewer.
 """
 
 import sys
-import os
 
 for arg in sys.argv:
     if arg.startswith("--config="):

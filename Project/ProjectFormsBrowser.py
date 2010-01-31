@@ -22,7 +22,6 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
-import UI.PixmapCache
 
 import Preferences
 import Utilities

@@ -100,8 +100,6 @@ def main(argv):
 
     global platBinDir
     
-    depChecks = 1
-
     for opt, arg in optlist:
         if opt == "-h":
             usage(0)

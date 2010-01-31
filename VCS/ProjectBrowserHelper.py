@@ -228,7 +228,6 @@ class VcsProjectBrowserHelper(QObject):
         It is used to add the selected
         directory tree to the VCS repository.
         """
-        items = self.browser.getSelectedItems()
         names = []
         for itm in self.browser.getSelectedItems():
             try:

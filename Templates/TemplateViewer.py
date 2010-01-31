@@ -9,7 +9,6 @@ Module implementing a template viewer and associated classes.
 
 import datetime
 import os
-import sys
 import re
 import io
 
@@ -32,8 +31,6 @@ from E5XML.TemplatesWriter import TemplatesWriter
 
 import UI.PixmapCache
 import Utilities
-
-from E5Gui.E5Application import e5App
 
 class TemplateGroup(QTreeWidgetItem):
     """

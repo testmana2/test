@@ -449,11 +449,6 @@ class SpellChecker(QObject):
     
     def __next__(self):
         """
-        Private method to advance to the next error.
-        """
-    
-    def __next__(self):
-        """
         Public method to advance to the next error.
         
         @return self

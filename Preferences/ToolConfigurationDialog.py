@@ -7,8 +7,6 @@
 Module implementing a configuration dialog for the tools menu.
 """
 
-import sys
-import os
 import copy
 
 from PyQt4.QtCore import *

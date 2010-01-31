@@ -8,14 +8,11 @@ Module implementing a class used to display the translations part of the project
 """
 
 import os
-import sys
 import shutil
 import fnmatch
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-
-from E5Gui.E5Application import e5App
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -23,7 +20,6 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
-import UI.PixmapCache
 
 import Preferences
 import Utilities

@@ -17,12 +17,12 @@ from PyQt4.Qsci import QsciScintilla
 from E5Gui.E5Application import e5App
 
 from . import Lexers
-from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+from .QsciScintillaCompat import QsciScintillaCompat
 
 import Preferences
 import UI.PixmapCache
 
-from Debugger.DebugClientCapabilities import HasShell, HasCompleter
+from Debugger.DebugClientCapabilities import HasCompleter
 
 from .ShellHistoryDialog import ShellHistoryDialog
 
@@ -735,7 +735,6 @@ class Shell(QsciScintillaCompat):
         @param ev key event (QKeyEvent)
         """
         txt = ev.text()
-        key = ev.key()
         
         # See it is text to insert.
         if len(txt) and txt >= " ":

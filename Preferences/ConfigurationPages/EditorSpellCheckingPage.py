@@ -8,7 +8,7 @@ Module implementing the Editor Spellchecking configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QPixmap, QIcon, QFileDialog
+from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5FileCompleter
 

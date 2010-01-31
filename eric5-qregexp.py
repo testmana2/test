@@ -13,7 +13,6 @@ version of the integrated QRegExp wizard.
 """
 
 import sys
-import os
 
 for arg in sys.argv:
     if arg.startswith("--config="):

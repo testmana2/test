@@ -7,7 +7,6 @@
 Module implementing a dialog to send bug reports.
 """
 
-import sys
 import os
 import mimetypes
 import smtplib
@@ -18,7 +17,7 @@ from PyQt4.QtGui import *
 
 from .Ui_EmailDialog import Ui_EmailDialog
 
-from .Info import Program, Version, BugAddress, FeatureAddress
+from .Info import BugAddress, FeatureAddress
 import Preferences
 import Utilities
 
@@ -163,12 +162,6 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
         @return string containing the mail message
         """
-        try:
-            import sipconfig
-            sip_version_str = sipconfig.Configuration().sip_version_str
-        except ImportError:
-            sip_version_str = "sip version not available"
-        
         msgtext = "%s\r\n----\r\n%s----\r\n%s----\r\n%s" % \
             (self.message.toPlainText(), 
              Utilities.generateVersionInfo("\r\n"), 
@@ -189,12 +182,6 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
         @return string containing the mail message
         """
-        try:
-            import sipconfig
-            sip_version_str = sipconfig.Configuration().sip_version_str
-        except ImportError:
-            sip_version_str = "sip version not available"
-        
         mpPreamble = ("This is a MIME-encoded message with attachments. "
             "If you see this message, your mail client is not "
             "capable of displaying the attachments.")
@@ -236,7 +223,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 att = MIMEBase(maintype, subtype)
                 att.set_payload(open(fname, 'rb').read())
                 encoders.encode_base64(att)
-            att.add_header('Content-Disposition', 'attachment', filename = fname)
+            att.add_header('Content-Disposition', 'attachment', filename = name)
             msg.attach(att)
             
         return msg.as_string()
@@ -284,8 +271,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
 
             QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
             QApplication.processEvents()
-            result = server.sendmail(Preferences.getUser("Email"),
-                self.__toAddress, msg)
+            server.sendmail(Preferences.getUser("Email"), self.__toAddress, msg)
             server.quit()
             QApplication.restoreOverrideCursor()
         except (smtplib.SMTPException, socket.error) as e:
@@ -326,7 +312,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         type = mimetypes.guess_type(fname)[0]
         if not type:
             type = "application/octet-stream"
-        itm = QTreeWidgetItem(self.attachments, [fname, type])
+        QTreeWidgetItem(self.attachments, [fname, type])
         self.attachments.header().resizeSections(QHeaderView.ResizeToContents)
         self.attachments.header().setStretchLastSection(True)
         

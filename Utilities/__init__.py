@@ -30,7 +30,6 @@ from E5Gui.E5Application import e5App
 
 from UI.Info import Program, Version
 
-from eric5config import getConfig
 import Preferences
 
 configDir = None
@@ -69,7 +68,7 @@ class CodingError(Exception):
         """
         Constructor
         """
-        self.errorMessage = QApplication.translate("CodingError", 
+        self.errorMessage = QCoreApplication.translate("CodingError", 
             "The coding '{0}' is wrong for the given text.").format(coding)
         
     def __repr__(self):
@@ -875,7 +874,6 @@ def getPythonLibPath():
     minor = vl[1]
 
     pyVers = major + "." + minor
-    pyVersNr = int(major) * 10 + int(minor)
 
     if isWindowsPlatform():
         libDir = sys.prefix + "\\Lib"
@@ -928,9 +926,8 @@ def compile(file, codestring = ""):
                 return (False, None, None, None, None)
             template = quixote.ptl_compile.Template(codestring, file)
             template.compile()
-            codeobject = template.code
         else:
-            codeobject = builtins.compile(codestring, file, 'exec')
+            builtins.compile(codestring, file, 'exec')
     except SyntaxError as detail:
         import traceback, re
         lines = traceback.format_exception_only(SyntaxError, detail)

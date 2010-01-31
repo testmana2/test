@@ -13,7 +13,6 @@ context menu to start the eric5 IDE and the eric5 tools.
 """
 
 import sys
-import os
 
 for arg in sys.argv:
     if arg.startswith("--config="):

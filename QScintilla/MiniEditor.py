@@ -7,7 +7,6 @@
 Module implementing a minimalistic editor for simple editing tasks.
 """
 
-import sys
 import os
 import re
 
@@ -15,11 +14,10 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
-from E5Gui.E5Application import e5App
 from E5Gui.E5Action import E5Action, createActionGroup
 
 from . import Lexers
-from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+from .QsciScintillaCompat import QsciScintillaCompat
 from .SearchReplaceWidget import SearchReplaceWidget
 
 import UI.PixmapCache
@@ -2077,9 +2075,9 @@ class MiniEditor(QMainWindow):
         
         # now set the lexer properties
         self.lexer_.initProperties()
-        
-        # initialize the auto indent style of the lexer
-        ais = self.lexer_.autoIndentStyle()
+##        
+##        # initialize the auto indent style of the lexer
+##        ais = self.lexer_.autoIndentStyle()
         
     def __styleNeeded(self, position):
         """

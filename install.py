@@ -513,7 +513,7 @@ def doDependancyChecks():
     print("Python Version: %d.%d.%d" % sys.version_info[:3])
     
     try:
-        from PyQt4.QtCore import qVersion, PYQT_VERSION
+        from PyQt4.QtCore import qVersion
     except ImportError as msg:
         print('Sorry, please install PyQt4.')
         print('Error: %s' % msg)

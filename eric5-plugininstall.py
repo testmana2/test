@@ -11,7 +11,6 @@ This is the main Python script to install eric5 plugins from outside of the IDE.
 """
 
 import sys
-import os
 
 for arg in sys.argv:
     if arg.startswith("--config="):

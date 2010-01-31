@@ -7,8 +7,6 @@
 Module implementing the VCS command options dialog.
 """
 
-import sys
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 

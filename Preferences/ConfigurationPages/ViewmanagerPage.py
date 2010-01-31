@@ -7,10 +7,7 @@
 Module implementing the Viewmanager configuration page.
 """
 
-import os
-
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QPixmap
 
 from E5Gui.E5Application import e5App
 
@@ -18,8 +15,6 @@ from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ViewmanagerPage import Ui_ViewmanagerPage
 
 import Preferences
-
-from eric5config import getConfig
 
 class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
     """

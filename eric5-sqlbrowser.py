@@ -11,8 +11,7 @@ This is the main Python script that performs the necessary initialization
 of the SQL browser and starts the Qt event loop.
 """
 
-import sys, os
-import os
+import sys
 
 for arg in sys.argv:
     if arg.startswith("--config="):

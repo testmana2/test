@@ -8,7 +8,6 @@ Module implementing the base class of the VCS project helper.
 """
 
 import os
-import sys
 import shutil
 import copy
 
@@ -17,13 +16,11 @@ from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
 
-import VCS
 from .CommandOptionsDialog import vcsCommandOptionsDialog
 from .RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 from E5Gui.E5Action import E5Action
 
-import Utilities
 import Preferences
 
 class VcsProjectHelper(QObject):

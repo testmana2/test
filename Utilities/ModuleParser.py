@@ -1273,6 +1273,8 @@ def readModule(module, path = [], inpackage = False, basename = "",
     @return reference to a Module object containing the parsed
         module information (Module)
     '''
+    global _modules
+    
     if extensions is None:
         _extensions = ['.py', '.pyw', '.ptl', '.rb']
     else:

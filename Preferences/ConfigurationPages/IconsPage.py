@@ -7,7 +7,7 @@
 Module implementing the Icons configuration page.
 """
 
-from PyQt4.QtCore import QDir, pyqtSlot
+from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QListWidgetItem, QFileDialog
 
 from E5Gui.E5Completers import E5DirCompleter
