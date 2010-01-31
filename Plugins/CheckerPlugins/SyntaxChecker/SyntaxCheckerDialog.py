@@ -81,7 +81,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             self.__lastFileItem.setData(0, self.filenameRole, file)
         
         itm = QTreeWidgetItem(self.__lastFileItem, 
-                              [str(line), error, sourcecode])
+                              ["{0:6}".format(line), error, sourcecode])
         if isWarning:
             itm.setIcon(0, UI.PixmapCache.getIcon("warning.png"))
         else:
