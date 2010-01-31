@@ -177,7 +177,7 @@ class CompleterPython(CompleterBase):
         # skip colon, dedent to if for else:
         elif char == ':':
             text = self.editor.text(line)
-            if col < len(text) and char == txt[col]:
+            if col < len(text) and char == text[col]:
                 if self.__colonDetection:
                     self.editor.setSelection(line, col, line, col + 1)
                     self.editor.removeSelectedText()
