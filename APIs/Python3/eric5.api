@@ -2336,7 +2336,9 @@ eric5.Plugins.AboutPlugin.AboutDialog.authorsText?7
 eric5.Plugins.AboutPlugin.AboutDialog.licenseText?7
 eric5.Plugins.AboutPlugin.AboutDialog.thanksText?7
 eric5.Plugins.AboutPlugin.AboutDialog.titleText?7
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.errorRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.filenameRole?7
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.lineRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.on_resultList_itemActivated?4(itm, col)
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.on_showButton_clicked?4()

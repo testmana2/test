@@ -29,7 +29,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
     Class implementing a dialog to display the results of a syntax check run.
     """
     filenameRole = Qt.UserRole + 1
-    warningRole = Qt.UserRole + 2
+    lineRole     = Qt.UserRole + 2
+    errorRole    = Qt.UserRole + 3
+    warningRole  = Qt.UserRole + 4
     
     def __init__(self, parent = None):
         """
@@ -43,7 +45,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.showButton = self.buttonBox.addButton(\
             self.trUtf8("Show"), QDialogButtonBox.ActionRole)
         self.showButton.setToolTip(\
-            self.trUtf8("Press to show all files containing a syntax error"))
+            self.trUtf8("Press to show all files containing an issue"))
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
@@ -52,6 +54,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         self.noResults = True
         self.cancelled = False
+        self.__lastFileItem = None
         
     def __resort(self):
         """
@@ -70,15 +73,23 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param sourcecode faulty line of code (string)
         @param isWarning flag indicating a warning message (boolean)
         """
-        itm = QTreeWidgetItem(self.resultList, 
-                              [os.path.basename(file), str(line), error, sourcecode])
-        itm.setTextAlignment(1, Qt.AlignRight)
+        if self.__lastFileItem is None:
+            # It's a new file
+            self.__lastFileItem = QTreeWidgetItem(self.resultList, [file])
+            self.__lastFileItem.setFirstColumnSpanned(True)
+            self.__lastFileItem.setExpanded(True)
+            self.__lastFileItem.setData(0, self.filenameRole, file)
+        
+        itm = QTreeWidgetItem(self.__lastFileItem, 
+                              [str(line), error, sourcecode])
         if isWarning:
             itm.setIcon(0, UI.PixmapCache.getIcon("warning.png"))
         else:
             itm.setIcon(0, UI.PixmapCache.getIcon("syntaxError.png"))
-        itm.setToolTip(0, file)
+##        itm.setToolTip(0, file)
         itm.setData(0, self.filenameRole, file)
+        itm.setData(0, self.lineRole, line)
+        itm.setData(0, self.errorRole, error)
         itm.setData(0, self.warningRole, isWarning)
         
     def start(self, fn, codestring = ""):
@@ -112,6 +123,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             for file in files:
                 if self.cancelled:
                     return
+                
+                self.__lastFileItem = None
                 
                 if codestring:
                     source = codestring
@@ -158,7 +171,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
         if self.noResults:
-            self.__createResultItem(self.trUtf8('No syntax errors found.'), "", "", "")
+            QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])
             QApplication.processEvents()
             self.showButton.setEnabled(False)
             self.__clearErrors()
@@ -189,40 +202,45 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         """
         if self.noResults:
             return
-            
-        fn = Utilities.normabspath(itm.data(0, self.filenameRole))
-        lineno = int(itm.text(1))
-        error = itm.text(2)
         
-        vm = e5App().getObject("ViewManager")
-        vm.openSourceFile(fn, lineno)
-        editor = vm.getOpenEditor(fn)
-        if itm.data(0, self.warningRole):
-            editor.toggleFlakesWarning(lineno, True, error)
-        else:
-            editor.toggleSyntaxError(lineno, True, error)
+        if itm.parent():
+            fn = Utilities.normabspath(itm.data(0, self.filenameRole))
+            lineno = itm.data(0, self.lineRole)
+            error = itm.data(0, self.errorRole)
+            
+            vm = e5App().getObject("ViewManager")
+            vm.openSourceFile(fn, lineno)
+            editor = vm.getOpenEditor(fn)
+            
+            if itm.data(0, self.warningRole):
+                editor.toggleFlakesWarning(lineno, True, error)
+            else:
+                editor.toggleSyntaxError(lineno, True, error)
         
     @pyqtSlot()
     def on_showButton_clicked(self):
         """
         Private slot to handle the "Show" button press.
         """
+        vm = e5App().getObject("ViewManager")
+        
         for index in range(self.resultList.topLevelItemCount()):
             itm = self.resultList.topLevelItem(index)
-            self.on_resultList_itemActivated(itm, 0)
+            fn = Utilities.normabspath(itm.data(0, self.filenameRole))
+            vm.openSourceFile(fn, 1)
         
-        # go through the list again to clear syntax error markers
-        # for files, that are ok
-        vm = e5App().getObject("ViewManager")
+        # go through the list again to clear syntax error and 
+        # py3flakes warning markers for files, that are ok
         openFiles = vm.getOpenFilenames()
         errorFiles = []
         for index in range(self.resultList.topLevelItemCount()):
             itm = self.resultList.topLevelItem(index)
-            errorFiles.append(Utilities.normabspath(itm.text(0)))
+            errorFiles.append(Utilities.normabspath(itm.data(0, self.filenameRole)))
         for file in openFiles:
             if not file in errorFiles:
                 editor = vm.getOpenEditor(file)
                 editor.clearSyntaxError()
+                editor.clearFlakesWarnings()
         
     def __clearErrors(self):
         """
@@ -233,3 +251,4 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         for file in openFiles:
             editor = vm.getOpenEditor(file)
             editor.clearSyntaxError()
+            editor.clearFlakesWarnings()

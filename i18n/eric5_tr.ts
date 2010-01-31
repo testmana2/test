@@ -31538,12 +31538,12 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
 <context>
     <name>SyntaxCheckerDialog</name>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="13"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="14"/>
         <source>Syntax Check Result</source>
         <translation>Sözdizimi Kontrol Sonucu</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="16"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="17"/>
         <source>&lt;b&gt;Syntax Check Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the syntax check. Double clicking an
 entry will open an editor window and position the cursor at the respective line.&lt;/p&gt;</source>
@@ -31552,7 +31552,7 @@ entry will open an editor window and position the cursor at the respective line.
 Çit tıklamada hatanın olduğu pozisyonda bir düzenleme penceresi açılır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="27"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="28"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the syntax check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -31562,42 +31562,57 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="46"/>
         <source>Filename</source>
-        <translation>Dosyaadı</translation>
+        <translation type="obsolete">Dosyaadı</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="51"/>
         <source>#</source>
-        <translation>#</translation>
+        <translation type="obsolete">#</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="56"/>
         <source>Syntax Error</source>
-        <translation>Sözdizimi Hatası</translation>
+        <translation type="obsolete">Sözdizimi Hatası</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="61"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="51"/>
         <source>Source</source>
         <translation>Kaynak</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="69"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="59"/>
         <source>Shows the progress of the syntax check action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="43"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="45"/>
         <source>Show</source>
         <translation>Göster</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="45"/>
-        <source>Press to show all files containing a syntax error</source>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="160"/>
+        <source>No syntax errors found.</source>
+        <translation type="obsolete">Söz dizimi hatası bulunamadı.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="41"/>
+        <source>File/Line</source>
+        <translation type="unfinished">Dosya/Satır</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="46"/>
+        <source>Message</source>
+        <translation type="unfinished">Mesaj</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="47"/>
+        <source>Press to show all files containing an issue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="160"/>
-        <source>No syntax errors found.</source>
-        <translation>Söz dizimi hatası bulunamadı.</translation>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="174"/>
+        <source>No issues found.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

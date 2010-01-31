@@ -32211,12 +32211,12 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
 <context>
     <name>SyntaxCheckerDialog</name>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="13"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="14"/>
         <source>Syntax Check Result</source>
         <translation>语法检查结果</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="16"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="17"/>
         <source>&lt;b&gt;Syntax Check Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the syntax check. Double clicking an
 entry will open an editor window and position the cursor at the respective line.&lt;/p&gt;</source>
@@ -32224,7 +32224,7 @@ entry will open an editor window and position the cursor at the respective line.
 &lt;p&gt;该对话框显示语法检查的结果。双击条目将打开编辑器窗口并将光标放置在相应行。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="27"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="28"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the syntax check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -32236,42 +32236,62 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="46"/>
         <source>Filename</source>
-        <translation>文件名</translation>
+        <translation type="obsolete">文件名</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="51"/>
         <source>#</source>
-        <translation>#</translation>
+        <translation type="obsolete">#</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="56"/>
         <source>Syntax Error</source>
-        <translation>语法错误</translation>
+        <translation type="obsolete">语法错误</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="61"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="51"/>
         <source>Source</source>
         <translation>源文件</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="69"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="59"/>
         <source>Shows the progress of the syntax check action</source>
         <translation>显示语法检查行为的进程</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="43"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="45"/>
         <source>Show</source>
         <translation>显示</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="45"/>
         <source>Press to show all files containing a syntax error</source>
-        <translation>显示显示包含一个语法错误的所有文件</translation>
+        <translation type="obsolete">显示显示包含一个语法错误的所有文件</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="160"/>
         <source>No syntax errors found.</source>
-        <translation>未找到语法错误。</translation>
+        <translation type="obsolete">未找到语法错误。</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="41"/>
+        <source>File/Line</source>
+        <translation type="unfinished">文件/行</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="46"/>
+        <source>Message</source>
+        <translation type="unfinished">消息</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="47"/>
+        <source>Press to show all files containing an issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="174"/>
+        <source>No issues found.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

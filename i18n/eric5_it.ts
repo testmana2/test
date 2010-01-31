@@ -31238,15 +31238,15 @@ Per andare a trunk lascia vuoti.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="160"/>
         <source>No syntax errors found.</source>
-        <translation>Nessun errore di sintassi trovato.</translation>
+        <translation type="obsolete">Nessun errore di sintassi trovato.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="13"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="14"/>
         <source>Syntax Check Result</source>
         <translation>Risultati controllo errori di sintassi</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="16"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="17"/>
         <source>&lt;b&gt;Syntax Check Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the syntax check. Double clicking an
 entry will open an editor window and position the cursor at the respective line.&lt;/p&gt;</source>
@@ -31255,7 +31255,7 @@ entry will open an editor window and position the cursor at the respective line.
 aprirà l&apos;editor e posizionerà il cursore sulla relativa riga.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="27"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="28"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the syntax check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -31268,37 +31268,57 @@ relativa riga.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="46"/>
         <source>Filename</source>
-        <translation>Nome file</translation>
+        <translation type="obsolete">Nome file</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="51"/>
         <source>#</source>
-        <translation>#</translation>
+        <translation type="obsolete">#</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="56"/>
         <source>Syntax Error</source>
-        <translation>Errore di sintassi</translation>
+        <translation type="obsolete">Errore di sintassi</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="61"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="51"/>
         <source>Source</source>
         <translation>Sorgente</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="69"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="59"/>
         <source>Shows the progress of the syntax check action</source>
         <translation>Mostra l&apos;avanzamento del controllo della sintassi</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="45"/>
         <source>Press to show all files containing a syntax error</source>
-        <translation>Premi per mostrare tutti i file che contengono errori di sintassi</translation>
+        <translation type="obsolete">Premi per mostrare tutti i file che contengono errori di sintassi</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="43"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="45"/>
         <source>Show</source>
         <translation>Mostra</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="41"/>
+        <source>File/Line</source>
+        <translation type="unfinished">File/Linea</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="46"/>
+        <source>Message</source>
+        <translation type="unfinished">Messaggio</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="47"/>
+        <source>Press to show all files containing an issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="174"/>
+        <source>No issues found.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
