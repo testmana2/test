@@ -135,7 +135,7 @@ class Editor(QsciScintillaCompat):
         self.syntaxerrors = {}      # key:   marker handle
                                     # value: error message
         self.warnings = {}          # key:   marker handle
-                                    # value: warning message
+                                    # value: list of warning messages
         self.notcoveredMarkers = [] # just a list of marker handles
         
         self.condHistory = []
@@ -4400,12 +4400,13 @@ class Editor(QsciScintillaCompat):
             markers = self.markersAtLine(line - 1)
             if not (markers & (1 << self.warning)):
                 handle = self.markerAdd(line - 1, self.warning)
-                self.warnings[handle] = msg
+                self.warnings[handle] = [msg]
                 self.emit(SIGNAL('syntaxerrorToggled'), self)
             else:
                 for handle in list(self.warnings.keys()):
-                    if self.markerLine(handle) == line - 1:
-                        self.warnings[handle] += "\n" + msg
+                    if self.markerLine(handle) == line - 1 and \
+                       msg not in self.warnings[handle]:
+                        self.warnings[handle].append(msg)
         else:
             for handle in list(self.warnings.keys()):
                 if self.markerLine(handle) == line - 1:
@@ -4491,7 +4492,7 @@ class Editor(QsciScintillaCompat):
             if self.markerLine(handle) == line:
                 QMessageBox.warning(None,
                     self.trUtf8("py3flakes Warning"),
-                    self.warnings[handle])
+                    '\n'.join(self.warnings[handle]))
                 break
         else:
             QMessageBox.warning(None,
