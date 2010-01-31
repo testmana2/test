@@ -7,8 +7,6 @@
 Module defining the different Python types and their display strings.
 """
 
-from DebugClients.Python.DebugConfig import ConfigVarTypeStrings
-    
 try:
     from PyQt4.QtCore import QT_TRANSLATE_NOOP
     

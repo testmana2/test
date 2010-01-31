@@ -8,7 +8,6 @@ Module implementing a dialog to show the data of a response or reply header.
 """
 
 from PyQt4.QtGui import QDialog
-from PyQt4.QtCore import pyqtSlot
 
 from .Ui_E5NetworkHeaderDetailsDialog import Ui_E5NetworkHeaderDetailsDialog
 

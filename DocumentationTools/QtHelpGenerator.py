@@ -109,7 +109,6 @@ class QtHelpGenerator(object):
         if "__init__" in file:
             dir = os.path.dirname(file)
             udir = os.path.dirname(dir)
-            base = os.path.basename(dir)
             if udir:
                 upackage = udir.replace(os.sep, ".")
                 try:
@@ -173,15 +172,6 @@ class QtHelpGenerator(object):
                 (mod, joinext(mod, ".html"))
         s += indent + '</section>\n'
         return s
-    
-    def __generateKeywords(self):
-        """
-        Private method to generate the keywords section.
-        
-        @return keywords section (string)
-        """
-        indent = level * '  '
-        return "\n".join([])
     
     def generateFiles(self, basename = ""):
         """

@@ -7,7 +7,6 @@
 Module implementing the writer class for writing an XML tasks file.
 """
 
-import os
 import time
 
 from E5Gui.E5Application import e5App

@@ -7,9 +7,7 @@
 Module implementing the Ruby debugger interface for the debug server.
 """
 
-import sys
 import os
-import socket
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QMessageBox

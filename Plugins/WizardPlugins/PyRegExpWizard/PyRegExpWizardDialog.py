@@ -7,7 +7,6 @@
 Module implementing the Python re wizard dialog.
 """
 
-import sys
 import os
 import re
 
@@ -377,7 +376,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         if regex:
             try:
                 if self.py2Button.isChecked():
-                    regobj = re.compile(regex,
+                    re.compile(regex,
                         (not self.caseSensitiveCheckBox.isChecked() and re.IGNORECASE or 0) | \
                         self.multilineCheckBox.isChecked() and re.MULTILINE or 0 | \
                         self.dotallCheckBox.isChecked() and re.DOTALL or 0 | \
@@ -385,7 +384,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                         self.localeCheckBox.isChecked() and re.LOCALE or 0 | \
                         self.unicodeCheckBox.isChecked() and re.UNICODE or 0)
                 else:
-                    regobj = re.compile(regex,
+                    re.compile(regex,
                         (not self.caseSensitiveCheckBox.isChecked() and re.IGNORECASE or 0) | \
                         self.multilineCheckBox.isChecked() and re.MULTILINE or 0 | \
                         self.dotallCheckBox.isChecked() and re.DOTALL or 0 | \

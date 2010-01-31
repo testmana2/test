@@ -78,7 +78,6 @@ class IndexGenerator(object):
         if "__init__" in file:
             dir = os.path.dirname(file)
             udir = os.path.dirname(dir)
-            base = os.path.basename(dir)
             if udir:
                 upackage = udir.replace(os.sep, ".")
                 try:
@@ -98,9 +97,8 @@ class IndexGenerator(object):
             
             if moduleDocument.isEmpty():
                 return
-            
+        
         package = os.path.dirname(file).replace(os.sep, ".")
-        name = os.path.splitext(file)[0].replace(os.sep, ".")
         try:
             elt = self.packages[package]
         except KeyError:

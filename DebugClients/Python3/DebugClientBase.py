@@ -16,8 +16,6 @@ import os
 import time
 import imp
 import re
-import distutils.sysconfig
-import imp
 
 
 from DebugProtocol import *
@@ -32,7 +30,7 @@ DebugClientInstance = None
 
 ################################################################################
 
-def DebugClientInput(prompt = ""):
+def DebugClientInput(prompt = "", echo = True):
     """
     Replacement for the standard input builtin.
     
@@ -43,7 +41,7 @@ def DebugClientInput(prompt = ""):
     if DebugClientInstance is None or not DebugClientInstance.redirect:
         return DebugClientOrigInput(prompt)
 
-    return DebugClientInstance.input(prompt)
+    return DebugClientInstance.input(prompt, echo)
 
 # Use our own input().
 try:
@@ -285,14 +283,15 @@ class DebugClientBase(object):
         
         self.write("{0}{1!r}\n".format(ResponseThreadList, (currentId, threadList)))
     
-    def input(self, prompt):
+    def input(self, prompt, echo = True):
         """
         Public method to implement input() using the event loop.
         
         @param prompt the prompt to be shown (string)
+        @param echo Flag indicating echoing of the input (boolean)
         @return the entered string
         """
-        self.write("{0}{1!r}\n".format(ResponseRaw, (prompt, 1)))
+        self.write("{0}{1!r}\n".format(ResponseRaw, (prompt, echo)))
         self.inRawMode = True
         self.eventLoop(True)
         return self.rawLine

@@ -88,11 +88,7 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
         @param indString string used for indentation (space or tab) (string)
         @return generated code (string)
         """
-        # calculate our indentation level and the indentation string
-        il = indLevel + 1
-        istring = il * indString
-        
-        # now generate the code
+        # generate the code
         code = 'QFontDialog.getFont('
         if not self.eVariable.text():
             if self.font is not None:

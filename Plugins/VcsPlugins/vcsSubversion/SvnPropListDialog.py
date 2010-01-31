@@ -7,8 +7,6 @@
 Module implementing a dialog to show the output of the svn proplist command process.
 """
 
-import types
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 

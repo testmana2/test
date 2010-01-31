@@ -7,8 +7,6 @@
 Module implementing the Start Program dialog.
 """
 
-import os
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 

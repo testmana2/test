@@ -7,7 +7,6 @@
 Module implementing the single application server and client.
 """
 
-import sys
 import os
 
 from E5Gui.E5Application import e5App

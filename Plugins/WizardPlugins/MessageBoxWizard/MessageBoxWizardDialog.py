@@ -12,8 +12,6 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E5Gui.E5Application import e5App
-
 from .Ui_MessageBoxWizardDialog import Ui_MessageBoxWizardDialog
 
 class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):

@@ -8,7 +8,7 @@ Module implementing a dialog to select a help topic to display.
 """
 
 from PyQt4.QtGui import QDialog
-from PyQt4.QtCore import pyqtSlot, SIGNAL, QUrl
+from PyQt4.QtCore import SIGNAL, QUrl
 
 from .Ui_HelpTopicDialog import Ui_HelpTopicDialog
 

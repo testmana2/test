@@ -9,7 +9,7 @@ Module implementing the mdi area view manager plugin.
 
 import os
 
-from PyQt4.QtCore import QT_TRANSLATE_NOOP, qVersion
+from PyQt4.QtCore import QT_TRANSLATE_NOOP
 from PyQt4.QtGui import QPixmap
 
 # Start-Of-Header

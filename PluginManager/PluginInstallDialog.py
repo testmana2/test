@@ -17,8 +17,6 @@ import urllib.parse
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-from E5Gui.E5Completers import E5FileCompleter
-
 from .PluginManager import PluginManager
 from .Ui_PluginInstallDialog import Ui_PluginInstallDialog
 
@@ -371,7 +369,6 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         self.__installedFiles = []
         try:
             if packageName != "None":
-                packageDirs = ["%s/" % packageName, "%s\\" % packageName]
                 namelist = sorted(zip.namelist())
                 tot = len(namelist)
                 prog = 0

@@ -16,7 +16,6 @@ from PyQt4.QtGui import *
 from .UMLDialog import UMLDialog
 from .PackageItem import PackageItem, PackageModel
 from .AssociationItem import AssociationItem, Imports
-from . import GraphicsUtilities
 
 import Utilities.ModuleParser
 import Utilities

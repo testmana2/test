@@ -7,9 +7,7 @@
 Module implementing a Python code coverage dialog.
 """
 
-import sys
 import os
-import types
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *

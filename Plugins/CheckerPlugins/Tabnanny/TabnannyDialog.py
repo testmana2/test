@@ -7,9 +7,7 @@
 Module implementing a dialog to show the output of the tabnanny command process.
 """
 
-import sys
 import os
-import types
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *

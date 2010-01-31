@@ -8,7 +8,6 @@ Module implementing a dialog to show the output of the svn log command process.
 """
 
 import os
-import sys
 
 import pysvn
 
@@ -96,6 +95,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         cwd = os.getcwd()
         os.chdir(dname)
         try:
+            nextRev = 0
             fetched = 0
             logs = []
             limit = noEntries or 9999999

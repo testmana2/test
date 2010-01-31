@@ -11,8 +11,6 @@ import os
 
 from PyQt4.QtCore import *
 
-import Helpviewer.HelpWindow
-
 from .AdBlockNetwork import AdBlockNetwork
 from .AdBlockPage import AdBlockPage
 from .AdBlockSubscription import AdBlockSubscription

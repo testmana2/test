@@ -7,13 +7,10 @@
 Module implementing the QRegExp wizard dialog.
 """
 
-import sys
 import os
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-
-from E5Gui.E5Application import e5App
 
 from .Ui_QRegExpWizardDialog import Ui_QRegExpWizardDialog
 
@@ -76,7 +73,6 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         if fromEric:
             self.buttonBox.button(QDialogButtonBox.Close).hide()
             self.copyButton = None
-            uitype = e5App().getObject("Project").getProjectType()
         else:
             self.copyButton = \
                 self.buttonBox.addButton(self.trUtf8("Copy"), QDialogButtonBox.ActionRole)

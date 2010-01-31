@@ -154,10 +154,8 @@ class E5SideBar(QWidget):
         if obj == self.__tabBar:
             if evt.type() == QEvent.MouseButtonPress:
                 pos = evt.pos()
-                index = -1
                 for i in range(self.__tabBar.count()):
                     if self.__tabBar.tabRect(i).contains(pos):
-                        index = i
                         break
                 
                 if i == self.__tabBar.currentIndex():
@@ -480,7 +478,7 @@ class E5SideBar(QWidget):
         
         data = QByteArray(state)
         stream = QDataStream(data, QIODevice.ReadOnly)
-        version = stream.readUInt16()
+        stream.readUInt16() # version
         minimized = stream.readBool()
         
         if minimized:

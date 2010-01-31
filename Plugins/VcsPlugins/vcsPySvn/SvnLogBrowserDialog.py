@@ -220,6 +220,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         cwd = os.getcwd()
         os.chdir(self.dname)
         try:
+            nextRev = 0
             fetched = 0
             logs = []
             while fetched < limit:

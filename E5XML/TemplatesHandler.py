@@ -7,9 +7,6 @@
 Module implementing the handler class for reading an XML templates file.
 """
 
-import os
-import time
-
 from E5Gui.E5Application import e5App
 
 from .Config import templatesFileFormatVersion

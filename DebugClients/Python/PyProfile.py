@@ -8,7 +8,6 @@ Module defining additions to the standard Python profile.py.
 
 import os
 import marshal
-import types
 import profile
 import atexit
 import pickle

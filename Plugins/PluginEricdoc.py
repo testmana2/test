@@ -8,8 +8,6 @@ Module implementing the Ericdoc plugin.
 """
 
 import os
-import sys
-import copy
 
 from PyQt4.QtCore import QObject, SIGNAL
 from PyQt4.QtGui import QDialog, QApplication

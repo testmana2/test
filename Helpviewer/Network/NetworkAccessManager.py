@@ -20,12 +20,10 @@ except ImportError:
     SSL_AVAILABLE = False
 
 from UI.AuthenticationDialog import AuthenticationDialog
-import UI.PixmapCache
 
 from Helpviewer.HelpLanguagesDialog import HelpLanguagesDialog
 import Helpviewer.HelpWindow
 
-from .NetworkReply import NetworkReply
 from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
 from .NetworkDiskCache import NetworkDiskCache
 

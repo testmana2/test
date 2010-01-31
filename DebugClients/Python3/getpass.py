@@ -13,8 +13,6 @@ This module is a replacement for the one found in the Python distribution. It
 is to provide a debugger compatible variant of the a.m. functions.
 """
 
-import sys
-
 __all__ = ["getpass", "getuser"]
 
 def getuser():
@@ -46,7 +44,7 @@ def getpass(prompt = 'Password: '):
     @param prompt Prompt to be shown to the user (string)
     @return Password entered by the user (string)
     """
-    return raw_input(prompt, 0)
+    return input(prompt, False)
     
 unix_getpass = getpass
 win_getpass = getpass

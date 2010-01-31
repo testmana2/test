@@ -8,8 +8,6 @@ Module implementing the builtin API generator.
 
 """
 
-import sys
-
 from QScintilla.Editor import Editor
 
 class APIGenerator(object):

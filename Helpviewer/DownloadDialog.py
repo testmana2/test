@@ -318,7 +318,6 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
             return
         
         bytesTotal = self.progressBar.maximum()
-        running = not self.__downloadedSuccessfully()
         
         info = ""
         if self.__downloading():
@@ -381,15 +380,6 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         @return flag indicating a download is in progress (boolean)
         """
         return self.__stopButton.isEnabled()
-    
-    def __downloadedSuccessfully(self):
-        """
-        Private method to determine the download status.
-        
-        @return download status (boolean)
-        """
-        return (not self.__stopButton.isEnabled() and \
-                not self.__tryAgainButton.isEnabled())
     
     def __finished(self):
         """

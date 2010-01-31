@@ -221,8 +221,6 @@ def analyze(filename, total):
 
     stats = SourceStat()
     stats.inc('lines', parser.lines)
-    comments = 0
-    empty = 0
     for idx in range(len(parser.tokenlist)):
         tok = parser.tokenlist[idx]
         

@@ -7,7 +7,6 @@
 Module implementing a dialog to show the output of the svn status command process.
 """
 
-import types
 import os
 
 from PyQt4.QtCore import *

@@ -34,7 +34,6 @@ class AdBlockNetwork(QObject):
         
         urlString = bytes(url.toEncoded()).decode()
         blockedRule = None
-        blockingSubscription = None
         
         for subscription in manager.subscriptions():
             if subscription.allow(urlString):
@@ -43,7 +42,6 @@ class AdBlockNetwork(QObject):
             rule = subscription.block(urlString)
             if rule is not None:
                 blockedRule = rule
-                blockingSubscription = subscription
                 break
         
         if blockedRule is not None:

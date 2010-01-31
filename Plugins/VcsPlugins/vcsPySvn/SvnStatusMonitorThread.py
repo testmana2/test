@@ -11,8 +11,6 @@ import os
 
 import pysvn
 
-from PyQt4.QtCore import QRegExp
-
 from VCS.StatusMonitorThread import VcsStatusMonitorThread
 
 import Preferences

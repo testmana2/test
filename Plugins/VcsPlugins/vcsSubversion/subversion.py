@@ -9,7 +9,6 @@ Module implementing the version control systems interface to Subversion.
 
 import os
 import shutil
-import types
 import urllib.request, urllib.parse, urllib.error
 
 from PyQt4.QtCore import *
@@ -43,7 +42,6 @@ from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
 from .SvnStatusMonitorThread import SvnStatusMonitorThread
 
 from .ProjectBrowserHelper import SvnProjectBrowserHelper
-from .ProjectHelper import SvnProjectHelper
 
 import Preferences
 import Utilities
@@ -282,7 +280,7 @@ class Subversion(VersionControl):
                 shutil.copytree(projectDir, os.path.join(tmpDir, project, 'trunk'))
             else:
                 shutil.copytree(projectDir, os.path.join(tmpDir, project))
-        except OSError as e:
+        except OSError:
             if os.path.isdir(tmpDir):
                 shutil.rmtree(tmpDir, True)            
             return False, False
@@ -708,7 +706,6 @@ class Subversion(VersionControl):
                 target, force = dlg.getData()
         
         if accepted:
-            isdir = os.path.isdir(name)
             args = []
             args.append('move')
             self.addArguments(args, opts)

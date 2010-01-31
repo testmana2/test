@@ -8,7 +8,7 @@ Module implementing specialized tree views.
 """
 
 from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QTreeView, QItemSelectionModel
+from PyQt4.QtGui import QTreeView
 
 class E5TreeView(QTreeView):
     """

@@ -7,16 +7,14 @@
 Module implementing the variables viewer widget.
 """
 
-import types
-from math import log10
-import sys
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
 
-from .Config import ConfigVarTypeDispStrings, ConfigVarTypeStrings
+from DebugClients.Python3.DebugConfig import ConfigVarTypeStrings
+    
+from .Config import ConfigVarTypeDispStrings
 from .VariableDetailDialog import VariableDetailDialog
 
 import Preferences
@@ -441,12 +439,10 @@ class VariablesViewer(QTreeWidget):
             if self.current:
                 self.curpathlist = self.__buildTreePath(self.current)
         
-        subelementsAdded = False
         if vlist:
             itm = self.__findItem(vlist[0], 0)
             for var, vtype, value in vlist[1:]:
                 self.__addItem(itm, vtype, var, value)
-            subelementsAdded = True
 
         # reexpand tree
         openItems = sorted(self.openItems[:])

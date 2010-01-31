@@ -8,13 +8,10 @@ Module implementing the multi project management functionality.
 """
 
 import os
-import sys
 import io
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-
-from E5Gui.E5Application import e5App
 
 from Globals import recentNameMultiProject
 
@@ -602,7 +599,7 @@ class MultiProject(QObject):
                     return False
                 
             self.name = QFileInfo(fn).baseName()
-            ok = self.__writeMultiProject(fn)
+            self.__writeMultiProject(fn)
             
             self.emit(SIGNAL('multiProjectClosed'))
             self.emit(SIGNAL('multiProjectOpened'))

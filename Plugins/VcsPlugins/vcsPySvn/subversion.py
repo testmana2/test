@@ -9,7 +9,6 @@ Module implementing the version control systems interface to Subversion.
 
 import os
 import shutil
-import types
 import urllib.request, urllib.parse, urllib.error
 import time
 
@@ -48,7 +47,6 @@ from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
 from .SvnStatusMonitorThread import SvnStatusMonitorThread
 
 from .ProjectBrowserHelper import SvnProjectBrowserHelper
-from .ProjectHelper import SvnProjectHelper
 
 from Plugins.VcsPlugins.vcsSubversion.SvnDialog import SvnDialog as SvnProcessDialog
 
@@ -382,7 +380,7 @@ class Subversion(VersionControl):
             QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
-            rev = client.checkout(url, projectDir, recurse)
+            client.checkout(url, projectDir, recurse)
             status = True
         except pysvn.ClientError as e:
             status = False
@@ -443,7 +441,7 @@ class Subversion(VersionControl):
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
-            rev = client.export(url, projectDir, force = True, recurse = recurse)
+            client.export(url, projectDir, force = True, recurse = recurse)
             status = True
         except pysvn.ClientError as e:
             status = False
@@ -583,7 +581,7 @@ class Subversion(VersionControl):
                     client)
         QApplication.processEvents()
         try:
-            revlist = client.update(fnames, recurse)
+            client.update(fnames, recurse)
         except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
@@ -1263,7 +1261,7 @@ class Subversion(VersionControl):
                         self.statusCache[name] = self.canBeCommitted
                     else:
                         self.statusCache[name] = self.canBeAdded
-            except pysvn.ClientError as e:
+            except pysvn.ClientError:
                 locker.unlock()    # ignore pysvn errors
         
         return names
@@ -1296,7 +1294,7 @@ class Subversion(VersionControl):
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
-            rev = client.cleanup(name)
+            client.cleanup(name)
         except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
@@ -1408,9 +1406,11 @@ class Subversion(VersionControl):
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
             entry = client.info(path)
-            return entry.url
+            url = entry.url
         except pysvn.ClientError:
-            return None
+            url = None
+        locker.unlock()
+        return url
 
     def svnResolve(self, name):
         """
@@ -1439,7 +1439,7 @@ class Subversion(VersionControl):
         QApplication.processEvents()
         try:
             for name in fnames:
-                rev = client.resolved(name, recurse = recurse)
+                client.resolved(name, recurse = recurse)
         except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()

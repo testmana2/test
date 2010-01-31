@@ -7,7 +7,6 @@
 Module implementing a dialog to display profile data.
 """
 
-import sys
 import os
 import pickle
 

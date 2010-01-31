@@ -41,7 +41,6 @@ for being called from within the eric5 IDE.
 __version__ = "6_eric"
 
 import os
-import sys
 import tokenize
 import io
 

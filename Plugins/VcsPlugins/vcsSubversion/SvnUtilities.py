@@ -7,10 +7,7 @@
 Module implementing some common utility functions for the subversion package.
 """
 
-import sys
 import os
-
-from PyQt4.QtCore import QDateTime, Qt
 
 import Utilities
 

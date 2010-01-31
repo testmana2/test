@@ -7,8 +7,6 @@
 Module implementing a dialog to show the output of a pysvn action.
 """
 
-import os
-
 import pysvn
 
 from PyQt4.QtCore import *

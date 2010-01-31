@@ -12,8 +12,6 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E5Gui.E5Application import e5App
-
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
 from .Ui_FileDialogWizardDialog import Ui_FileDialogWizardDialog

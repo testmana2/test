@@ -21,8 +21,6 @@ import UI.Config
 
 import Preferences
 
-from eric5config import getConfig
-
 class IconEditorWindow(QMainWindow):
     """
     Class implementing the web browser main window.

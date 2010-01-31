@@ -205,7 +205,7 @@ class WatchPointViewer(QTreeView):
         """
         for index in self.selectedIndexes():
             self.__setRowSelected(index, False)
-            
+    
     def __findDuplicates(self, cond, special, showMessage = False, index = QModelIndex()):
         """
         Private method to check, if an entry already exists.
@@ -234,13 +234,6 @@ class WatchPointViewer(QTreeView):
         
         return duplicate
     
-    def __clearSelection(self):
-        """
-        Private slot to clear the selection.
-        """
-        for index in self.selectedIndexes():
-            self.__setRowSelected(index, False)
-            
     def __addWatchPoint(self):
         """
         Private slot to handle the add watch expression context menu entry.
@@ -388,7 +381,6 @@ class WatchPointViewer(QTreeView):
         for index in self.selectedIndexes():
             sindex = self.__toSourceIndex(index)
             if sindex.isValid() and index.column() == 0:
-                lastrow = index.row()
                 idxList.append(sindex)
         self.__model.deleteWatchPoints(idxList)
 

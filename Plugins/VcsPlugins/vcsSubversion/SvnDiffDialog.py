@@ -8,8 +8,6 @@ Module implementing a dialog to show the output of the svn diff command process.
 """
 
 import os
-import sys
-import types
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *

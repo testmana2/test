@@ -8,7 +8,6 @@ Module implementing a dialog to show the output of the svn proplist command proc
 """
 
 import os
-import types
 
 import pysvn
 

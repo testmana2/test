@@ -7,9 +7,6 @@
 Module implementing an 'About Eric' dialog.
 """
 
-import sys
-
-from PyQt4.QtCore import Qt, SIGNAL
 from PyQt4.QtGui import QApplication
 
 from UI.Info import *
@@ -724,8 +721,6 @@ copy of the Program in return for a fee.
 
                      END OF TERMS AND CONDITIONS""".format(Copyright)
 
-
-import os
 
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *

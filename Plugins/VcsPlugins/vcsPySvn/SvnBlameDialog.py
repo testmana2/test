@@ -8,7 +8,6 @@ Module implementing a dialog to show the output of the svn blame command.
 """
 
 import os
-import sys
 
 import pysvn
 

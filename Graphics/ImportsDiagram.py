@@ -9,7 +9,6 @@ Module implementing a dialog showing an imports diagram of a package.
 
 import glob
 import os
-import sys
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -17,7 +16,6 @@ from PyQt4.QtGui import *
 from .UMLDialog import UMLDialog
 from .ModuleItem import ModuleItem, ModuleModel
 from .AssociationItem import AssociationItem, Imports
-from . import GraphicsUtilities
 
 import Utilities.ModuleParser
 import Utilities

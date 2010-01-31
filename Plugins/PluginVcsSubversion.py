@@ -8,7 +8,6 @@ Module implementing the Subversion version control plugin.
 """
 
 import os
-import sys
 
 from PyQt4.QtGui import QApplication
 

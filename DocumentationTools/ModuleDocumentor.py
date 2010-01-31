@@ -526,7 +526,6 @@ class ModuleDocument(object):
             else:
                 supers = 'None'
             
-            classname = "%s.%s" % (modName, className)
             methList, methBodies = self.__genMethodSection(_class, className)
             
             try:
@@ -741,8 +740,8 @@ class ModuleDocument(object):
             try:
                 reference, label = entry.split(None, 1)
             except ValueError:
-                reference = seeEntryString
-                label = seeEntryString
+                reference = entry
+                label = entry
             try:
                 path, anchor = reference.split('#', 1)
             except ValueError:

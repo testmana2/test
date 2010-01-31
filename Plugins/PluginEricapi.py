@@ -8,8 +8,6 @@ Module implementing the Ericapi plugin.
 """
 
 import os
-import sys
-import copy
 
 from PyQt4.QtCore import QObject, SIGNAL
 from PyQt4.QtGui import QDialog, QApplication
@@ -161,7 +159,7 @@ class EricapiPlugin(QObject):
                 if "%L" in outputFileName:
                     outfile = outputFileName.replace("%L", progLanguage)
                 else:
-                    if len(progLanguages) == 1:
+                    if len(parms['languages']) == 1:
                         outfile = outputFileName
                     else:
                         root, ext = os.path.splitext(outputFileName)

@@ -232,7 +232,7 @@ class E5GraphicsView(QGraphicsView):
         """
         rect = self._getDiagramRect(self.border)
         if format == "SVG":
-            svg = self.__getDiagram(rect, format = format, filename = filename)
+            self.__getDiagram(rect, format = format, filename = filename)
             return True
         else:
             pixmap = self.__getDiagram(rect)

@@ -10,8 +10,6 @@ Module implementing a specialized entity resolver to find our DTDs.
 import os.path
 from xml.sax.handler import EntityResolver
 
-import Utilities
-
 from eric5config import getConfig
 
 class XMLEntityResolver(EntityResolver):

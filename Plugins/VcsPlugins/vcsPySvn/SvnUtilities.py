@@ -7,7 +7,6 @@
 Module implementing some common utility functions for the pysvn package.
 """
 
-import sys
 import os
 
 from PyQt4.QtCore import QDateTime, Qt

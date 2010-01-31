@@ -11,7 +11,6 @@ shortcuts.
 """
 
 from PyQt4.QtGui import QAction, QActionGroup, QIcon, QKeySequence
-from PyQt4.QtCore import QObject
 
 class ArgumentsError(RuntimeError):
     """

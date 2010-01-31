@@ -7,8 +7,6 @@
 Module implementing a subclass of E5GraphicsView for our diagrams.
 """
 
-import sys
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 

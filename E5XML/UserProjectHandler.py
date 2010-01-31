@@ -7,8 +7,6 @@
 Module implementing the handler class for reading an XML user project properties file.
 """
 
-import os
-
 from .Config import userProjectFileFormatVersion
 from .XMLHandlerBase import XMLHandlerBase
 

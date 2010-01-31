@@ -30,7 +30,6 @@ from .ExceptionLogger import ExceptionLogger
 from .BreakPointViewer import BreakPointViewer
 from .WatchPointViewer import WatchPointViewer
 
-import Utilities
 import UI.PixmapCache
 
 from E5Gui.E5TabWidget import E5TabWidget

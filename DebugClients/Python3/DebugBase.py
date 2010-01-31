@@ -8,10 +8,8 @@ Module implementing the debug base class.
 """
 
 import sys
-import traceback
 import bdb
 import os
-import types
 import atexit
 import inspect
 

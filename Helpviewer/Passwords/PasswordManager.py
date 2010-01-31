@@ -379,7 +379,7 @@ class PasswordManager(QObject):
             neverButton = mb.addButton(
                 self.trUtf8("Never for this site"), QMessageBox.DestructiveRole)
             noButton = mb.addButton(self.trUtf8("Not now"), QMessageBox.RejectRole)
-            yesButton = mb.addButton(QMessageBox.Yes)
+            mb.addButton(QMessageBox.Yes)
             mb.exec_()
             if mb.clickedButton() == neverButton:
                 self.__never.append(url.toString())
@@ -392,7 +392,6 @@ class PasswordManager(QObject):
         password = ""
         for index in range(len(form.elements)):
             element = form.elements[index]
-            name = element[0].lower()
             type_ = form.elementTypes[element[0]]
             if user == "" and \
                type_ == "text":

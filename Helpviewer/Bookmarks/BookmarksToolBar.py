@@ -15,11 +15,8 @@ from E5Gui.E5ModelToolBar import E5ModelToolBar
 import Helpviewer.HelpWindow
 
 from .BookmarksModel import BookmarksModel
-from .BookmarkNode import BookmarkNode
 from .BookmarksMenu import BookmarksMenu
 from .AddBookmarkDialog import AddBookmarkDialog
-
-import UI.PixmapCache
 
 class BookmarksToolBar(E5ModelToolBar):
     """

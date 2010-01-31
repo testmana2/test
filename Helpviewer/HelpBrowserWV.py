@@ -8,17 +8,12 @@
 Module implementing the helpbrowser using QWebView.
 """
 
-import os
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtWebKit import QWebView, QWebPage, QWebSettings
-from PyQt4.QtNetwork import QNetworkProxy, QNetworkAccessManager, QNetworkReply, \
-    QNetworkRequest
+from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 from .DownloadDialog import DownloadDialog
 from .HelpWebSearchWidget import HelpWebSearchWidget
@@ -545,7 +540,6 @@ class HelpBrowser(QWebView):
         
         @param evt reference to the context menu event object (QContextMenuEvent)
         """
-        pos = evt.pos()
         menu = QMenu(self)
         
         hit = self.page().mainFrame().hitTestContent(evt.pos())

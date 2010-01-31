@@ -163,7 +163,6 @@ class AssociationItem(E5ArrowItem):
         
         # find itemA region
         rc = QRectF(xA, yA, rectA.width(), rectA.height())
-        oldRegionA = self.regionA
         self.regionA = self.__findPointRegion(rc, xB, yB)
         # move some regions to the standard ones
         if self.regionA == NorthWest:
@@ -181,7 +180,6 @@ class AssociationItem(E5ArrowItem):
         
         # now do the same for itemB
         rc = QRectF(xB, yB, rectB.width(), rectB.height())
-        oldRegionB = self.regionB
         self.regionB = self.__findPointRegion(rc, xA, yA)
         # move some regions to the standard ones
         if self.regionB == NorthWest:

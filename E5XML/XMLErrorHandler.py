@@ -8,7 +8,6 @@ Module implementing an error handler class.
 """
 
 from xml.sax.handler import ErrorHandler
-from xml.sax import SAXParseException
 
 from .XMLMessageDialog import XMLMessageDialog
 

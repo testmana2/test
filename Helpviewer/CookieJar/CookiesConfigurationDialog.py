@@ -16,8 +16,6 @@ from .CookieJar import CookieJar
 
 from .Ui_CookiesConfigurationDialog import Ui_CookiesConfigurationDialog
 
-import Preferences
-
 class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
     """
     Class implementing the cookies configuration dialog.

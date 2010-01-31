@@ -7,7 +7,6 @@
 Module implementing a base class for all of eric5s XML handlers.
 """
 
-import sys
 import pickle
 import base64
 

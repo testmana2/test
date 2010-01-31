@@ -13,8 +13,6 @@ This module is a replacement for the one found in the Python distribution. It
 is to provide a debugger compatible variant of the a.m. functions.
 """
 
-import sys
-
 __all__ = ["getpass","getuser"]
 
 def getuser():

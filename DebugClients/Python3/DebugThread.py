@@ -8,7 +8,6 @@ Module implementing the debug thread.
 """
 
 import bdb
-import os
 import sys
 
 from DebugBase import *

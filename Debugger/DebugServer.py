@@ -7,10 +7,7 @@
 Module implementing the debug server.
 """
 
-import sys
 import os
-import time
-import signal
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QMessageBox
@@ -279,7 +276,7 @@ class DebugServer(QTcpServer):
         """
         if clType is not None and clType in self.getSupportedLanguages():
             self.clientType = clType
-            ok = Preferences.Prefs.settings.setValue('DebugClient/Type', 
+            Preferences.Prefs.settings.setValue('DebugClient/Type', 
                 self.clientType)
         
     def startClient(self, unplanned = True, clType = None, forProject = False, 
@@ -460,7 +457,10 @@ class DebugServer(QTcpServer):
             cond, special = cond.split()
             special = self.watchSpecialChanged
         else:
-            return cond, ""
+            cond = cond
+            special = ""
+        
+        return cond, special
         
     def __clientClearWatchPoint(self, condition):
         """

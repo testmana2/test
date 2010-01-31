@@ -76,7 +76,7 @@ def sort(nodes, routes, noRecursion = False):
         nodes = list(filter(lambda x, l = stage: x not in l, nodes))
         if nodelen == len(nodes):
             if noRecursion:
-                raise recursionError(nodes)
+                raise RecursionError(nodes)
             else:
                 stages.append(nodes[:])
                 nodes = []

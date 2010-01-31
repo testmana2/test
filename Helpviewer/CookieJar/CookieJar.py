@@ -87,7 +87,7 @@ class CookieJar(QNetworkCookieJar):
         if version != self.JAR_VERSION:
             return []
         
-        noCookies = stream.readUInt32()
+        stream.readUInt32() # number of cookies
         
         rawCookie = QByteArray()
         while not stream.atEnd():

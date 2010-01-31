@@ -7,7 +7,6 @@
 Module implementing the writer class for writing an XML templates file.
 """
 
-import os
 import time
 
 from .XMLWriterBase import XMLWriterBase

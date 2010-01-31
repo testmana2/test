@@ -11,7 +11,6 @@ import os
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-from PyQt4.QtNetwork import QNetworkProxy
 from PyQt4.QtWebKit import QWebSettings
 from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
 

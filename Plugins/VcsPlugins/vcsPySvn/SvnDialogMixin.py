@@ -114,8 +114,7 @@ class SvnDialogMixin(object):
                                       QMessageBox.AcceptRole)
         tempButton = msgBox.addButton(self.trUtf8("&Temporary accept"), 
                                       QMessageBox.AcceptRole)
-        rejectButton = msgBox.addButton(self.trUtf8("&Reject"), 
-                                        QMessageBox.RejectRole)
+        msgBox.addButton(self.trUtf8("&Reject"), QMessageBox.RejectRole)
         msgBox.exec_()
         if cursor is not None:
             QApplication.setOverrideCursor(cursor)
