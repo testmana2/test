@@ -40,8 +40,8 @@ class Prefs(object):
     """
     # defaults for the variables window
     varDefaults = {
-        "LocalsFilter" : [],
-        "GlobalsFilter" : []
+        "LocalsFilter" : "[]",
+        "GlobalsFilter" : "[]"
     }
     
     # defaults for the debugger
