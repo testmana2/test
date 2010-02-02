@@ -744,14 +744,14 @@ def main(argv):
         if distDir:
             compileall.compile_dir("eric", 
                                    ddir = os.path.join(distDir, modDir, cfg['ericDir']), 
-                                   rx = re.compile("DebugClients/Python/"), 
+                                   rx = re.compile(r"DebugClients[\\/]Python[\\/]"), 
                                    quiet = True)
             py_compile.compile("eric5config.py", 
                                dfile = os.path.join(distDir, modDir, "eric5config.py"))
         else:
             compileall.compile_dir("eric", 
                                    ddir = os.path.join(modDir, cfg['ericDir']), 
-                                   rx = re.compile("DebugClients/Python/"), 
+                                   rx = re.compile(r"DebugClients[\\/]Python[\\/]"), 
                                    quiet = True)
             py_compile.compile("eric5config.py", 
                                dfile = os.path.join(modDir, "eric5config.py"))
