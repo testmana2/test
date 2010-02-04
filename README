@@ -60,6 +60,13 @@ README for the eric5 IDE
         Please take your time and go through all the configuration items.
         However, every configuration option has a meaningful default value.
     
+    Running from the sources
+    
+        If you want to run eric5 from within the source tree you have to execute
+        the compileUiFiles.py script once after a fresh checkout from the source
+        repository or when new dialogs have been added. Thereafter just execute
+        the eric5.py script.
+    
     Tray starter
     
         eric5 comes with a little utility called "eric5-tray". This embeds an icon
