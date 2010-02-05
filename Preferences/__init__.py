@@ -577,10 +577,16 @@ class Prefs(object):
     })
 
     # defaults for system settings
-    sysDefaults = {
-        "StringEncoding" : "utf-8",
-        "IOEncoding"     : "utf-8",
-    }
+    if isWindowsPlatform():
+        sysDefaults = {
+            "StringEncoding" : "cp1251",
+            "IOEncoding"     : "cp1251",
+        }
+    else:
+        sysDefaults = {
+            "StringEncoding" : "utf-8",
+            "IOEncoding"     : "utf-8",
+        }
     
     # defaults for the shell settings
     shellDefaults = {
