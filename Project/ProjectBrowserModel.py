@@ -122,7 +122,11 @@ class ProjectBrowserSimpleDirectoryItem(BrowserItem, ProjectBrowserItemMixin):
             self._dirName = os.path.dirname(self._dirName)
         
         self.type_ = ProjectBrowserItemSimpleDirectory
-        self.icon = UI.PixmapCache.getIcon("dirClosed.png")
+        if os.path.lexists(self._dirName) and os.path.islink(self._dirName):
+            self.symlink = True
+            self.icon = UI.PixmapCache.getSymlinkIcon("dirClosed.png")
+        else:
+            self.icon = UI.PixmapCache.getIcon("dirClosed.png")
     
     def dirName(self):
         """

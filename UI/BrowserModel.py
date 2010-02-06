@@ -86,6 +86,12 @@ class BrowserModel(QAbstractItemModel):
         elif role == Qt.DecorationRole:
             if index.column() == 0:
                 return index.internalPointer().getIcon()
+        elif role == Qt.FontRole:
+            item = index.internalPointer()
+            if item.isSymlink():
+                font = QFont(QApplication.font("QTreeView"))
+                font.setItalic(True)
+                return font
         
         return None
     
@@ -567,6 +573,7 @@ class BrowserItem(object):
         self.icon = UI.PixmapCache.getIcon("empty.png")
         self._populated = True
         self._lazyPopulation = False
+        self.symlink = False
     
     def appendChild(self, child):
         """
@@ -705,6 +712,14 @@ class BrowserItem(object):
             return self.itemData[column] < other.itemData[column]
         except IndexError:
             return False
+    
+    def isSymlink(self):
+        """
+        Public method to check, if the items is a symbolic link.
+        
+        @return flag indicating a symbolic link (boolean)
+        """
+        return self.symlink
 
 class BrowserDirectoryItem(BrowserItem):
     """
@@ -728,10 +743,14 @@ class BrowserDirectoryItem(BrowserItem):
         BrowserItem.__init__(self, parent, dn)
         
         self.type_ = BrowserItemDirectory
-        self.icon = UI.PixmapCache.getIcon("dirClosed.png")
+        if os.path.lexists(self._dirName) and os.path.islink(self._dirName):
+            self.symlink = True
+            self.icon = UI.PixmapCache.getSymlinkIcon("dirClosed.png")
+        else:
+            self.icon = UI.PixmapCache.getIcon("dirClosed.png")
         self._populated = False
         self._lazyPopulation = True
-    
+
     def setName(self, dinfo, full = True):
         """
         Public method to set the directory name.
@@ -810,50 +829,57 @@ class BrowserFileItem(BrowserItem):
         
         self._moduleName = ''
         
+        pixName = ""
         if self.isPythonFile():
             if self.fileext == '.py':
-                self.icon = UI.PixmapCache.getIcon("filePython.png")
+                pixName = "filePython.png"
             else:
-                self.icon = UI.PixmapCache.getIcon("filePython2.png")
+                pixName = "filePython2.png"
             self._populated = False
             self._lazyPopulation = True
             self._moduleName = os.path.basename(finfo)
         elif self.isPython3File():
-            self.icon = UI.PixmapCache.getIcon("filePython.png")
+            pixName = "filePython.png"
             self._populated = False
             self._lazyPopulation = True
             self._moduleName = os.path.basename(finfo)
         elif self.isRubyFile():
-            self.icon = UI.PixmapCache.getIcon("fileRuby.png")
+            pixName = "fileRuby.png"
             self._populated = False
             self._lazyPopulation = True
             self._moduleName = os.path.basename(finfo)
         elif self.isDesignerFile():
-            self.icon = UI.PixmapCache.getIcon("fileDesigner.png")
+            pixName = "fileDesigner.png"
         elif self.isLinguistFile():
             if self.fileext == '.ts':
-                self.icon = UI.PixmapCache.getIcon("fileLinguist.png")
+                pixName = "fileLinguist.png"
             else:
-                self.icon = UI.PixmapCache.getIcon("fileLinguist2.png")
+                pixName = "fileLinguist2.png"
         elif self.isResourcesFile():
-            self.icon = UI.PixmapCache.getIcon("fileResource.png")
+            pixName = "fileResource.png"
         elif self.isProjectFile():
-            self.icon = UI.PixmapCache.getIcon("fileProject.png")
+            pixName = "fileProject.png"
         elif self.isMultiProjectFile():
-            self.icon = UI.PixmapCache.getIcon("fileMultiProject.png")
+            pixName = "fileMultiProject.png"
         elif self.isIdlFile():
-            self.icon = UI.PixmapCache.getIcon("fileIDL.png")
+            pixName = "fileIDL.png"
             self._populated = False
             self._lazyPopulation = True
             self._moduleName = os.path.basename(finfo)
         elif self.isPixmapFile():
-            self.icon = UI.PixmapCache.getIcon("filePixmap.png")
+            pixName = "filePixmap.png"
         elif self.isSvgFile():
-            self.icon = UI.PixmapCache.getIcon("fileSvg.png")
+            pixName = "fileSvg.png"
         elif self.isDFile():
-            self.icon = UI.PixmapCache.getIcon("fileD.png")
+            pixName = "fileD.png"
         else:
-            self.icon = UI.PixmapCache.getIcon("fileMisc.png")
+            pixName = "fileMisc.png"
+        
+        if os.path.lexists(self._filename) and os.path.islink(self._filename):
+            self.symlink = True
+            self.icon = UI.PixmapCache.getSymlinkIcon(pixName)
+        else:
+            self.icon = UI.PixmapCache.getIcon(pixName)
     
     def setName(self, finfo, full = True):
         """

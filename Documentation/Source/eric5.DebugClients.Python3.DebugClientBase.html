@@ -559,13 +559,16 @@ the received line
 </dd>
 </dl><a NAME="DebugClientBase.input" ID="DebugClientBase.input"></a>
 <h4>DebugClientBase.input</h4>
-<b>input</b>(<i>prompt</i>)
+<b>input</b>(<i>prompt, echo = True</i>)
 <p>
         Public method to implement input() using the event loop.
 </p><dl>
 <dt><i>prompt</i></dt>
 <dd>
 the prompt to be shown (string)
+</dd><dt><i>echo</i></dt>
+<dd>
+Flag indicating echoing of the input (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -726,7 +729,7 @@ open file descriptor to be closed (integer)
 <hr /><hr />
 <a NAME="DebugClientInput" ID="DebugClientInput"></a>
 <h2>DebugClientInput</h2>
-<b>DebugClientInput</b>(<i>prompt = ""</i>)
+<b>DebugClientInput</b>(<i>prompt = "", echo = True</i>)
 <p>
     Replacement for the standard input builtin.
 </p><p>

@@ -2890,7 +2890,6 @@
       <keyword name="DownloadDialog (Constructor)" id="DownloadDialog (Constructor)" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__init__" />
       <keyword name="DownloadDialog.__dataString" id="DownloadDialog.__dataString" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__dataString" />
       <keyword name="DownloadDialog.__downloadProgress" id="DownloadDialog.__downloadProgress" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__downloadProgress" />
-      <keyword name="DownloadDialog.__downloadedSuccessfully" id="DownloadDialog.__downloadedSuccessfully" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__downloadedSuccessfully" />
       <keyword name="DownloadDialog.__downloading" id="DownloadDialog.__downloading" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__downloading" />
       <keyword name="DownloadDialog.__finished" id="DownloadDialog.__finished" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__finished" />
       <keyword name="DownloadDialog.__getFileName" id="DownloadDialog.__getFileName" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__getFileName" />
@@ -3609,6 +3608,7 @@
       <keyword name="addSearchPath" id="addSearchPath" ref="eric5.UI.PixmapCache.html#addSearchPath" />
       <keyword name="getIcon" id="getIcon" ref="eric5.UI.PixmapCache.html#getIcon" />
       <keyword name="getPixmap" id="getPixmap" ref="eric5.UI.PixmapCache.html#getPixmap" />
+      <keyword name="getSymlinkIcon" id="getSymlinkIcon" ref="eric5.UI.PixmapCache.html#getSymlinkIcon" />
       <keyword name="PixmapCache (Constructor)" id="PixmapCache (Constructor)" ref="eric5.UI.PixmapCache.html#PixmapCache.__init__" />
       <keyword name="PixmapCache.addSearchPath" id="PixmapCache.addSearchPath" ref="eric5.UI.PixmapCache.html#PixmapCache.addSearchPath" />
       <keyword name="PixmapCache.getPixmap" id="PixmapCache.getPixmap" ref="eric5.UI.PixmapCache.html#PixmapCache.getPixmap" />
@@ -3707,6 +3707,7 @@
       <keyword name="BrowserItem.isLazyPopulated" id="BrowserItem.isLazyPopulated" ref="eric5.UI.BrowserModel.html#BrowserItem.isLazyPopulated" />
       <keyword name="BrowserItem.isPopulated" id="BrowserItem.isPopulated" ref="eric5.UI.BrowserModel.html#BrowserItem.isPopulated" />
       <keyword name="BrowserItem.isPublic" id="BrowserItem.isPublic" ref="eric5.UI.BrowserModel.html#BrowserItem.isPublic" />
+      <keyword name="BrowserItem.isSymlink" id="BrowserItem.isSymlink" ref="eric5.UI.BrowserModel.html#BrowserItem.isSymlink" />
       <keyword name="BrowserItem.lessThan" id="BrowserItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserItem.lessThan" />
       <keyword name="BrowserItem.parent" id="BrowserItem.parent" ref="eric5.UI.BrowserModel.html#BrowserItem.parent" />
       <keyword name="BrowserItem.removeChild" id="BrowserItem.removeChild" ref="eric5.UI.BrowserModel.html#BrowserItem.removeChild" />
@@ -5832,7 +5833,6 @@
       <keyword name="QtHelpGenerator (Module)" id="QtHelpGenerator (Module)" ref="eric5.DocumentationTools.QtHelpGenerator.html" />
       <keyword name="QtHelpGenerator" id="QtHelpGenerator" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator" />
       <keyword name="QtHelpGenerator (Constructor)" id="QtHelpGenerator (Constructor)" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.__init__" />
-      <keyword name="QtHelpGenerator.__generateKeywords" id="QtHelpGenerator.__generateKeywords" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.__generateKeywords" />
       <keyword name="QtHelpGenerator.__generateSections" id="QtHelpGenerator.__generateSections" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.__generateSections" />
       <keyword name="QtHelpGenerator.generateFiles" id="QtHelpGenerator.generateFiles" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.generateFiles" />
       <keyword name="QtHelpGenerator.remember" id="QtHelpGenerator.remember" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.remember" />

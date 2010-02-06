@@ -9,7 +9,7 @@ Module implementing a pixmap cache for icons.
 
 import os
 
-from PyQt4.QtGui import QPixmap, QIcon
+from PyQt4.QtGui import QPixmap, QIcon, QPainter
 
 class PixmapCache(object):
     """
@@ -74,6 +74,20 @@ def getIcon(key, cache = pixCache):
     @return the requested icon (QIcon)
     """
     return QIcon(cache.getPixmap(key))
+
+def getSymlinkIcon(key, cache = pixCache):
+    """
+    Module function to retrieve a symbolic link icon.
+
+    @param key name of the wanted icon (string)
+    @return the requested icon (QIcon)
+    """
+    pix1 = QPixmap(cache.getPixmap(key))
+    pix2 = cache.getPixmap("symlink.png")
+    painter = QPainter(pix1)
+    painter.drawPixmap(0, 10, pix2)
+    painter.end()
+    return QIcon(pix1)
 
 def addSearchPath(path, cache = pixCache):
     """
