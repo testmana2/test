@@ -1,7 +1,7 @@
 Change Log
 ----------
 
-Version 5.0-snapshot-2010mmdd:
+Version 5.0-snapshot-20100206:
 - bug fixes
 - added code to use the PYTHONPATH environment setting in the debuggers
 - added my own Python3 port of pyflakes
