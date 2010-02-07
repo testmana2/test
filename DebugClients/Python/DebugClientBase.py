@@ -468,10 +468,6 @@ class DebugClientBase(object):
                 sys.argv = []
                 wd, fn, args, tracePython = arg.split('|')
                 self.__setCoding(fn)
-                try:
-                    sys.setappdefaultencoding(self.__coding)
-                except AttributeError:
-                    pass
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
                 sys.path = self.__getSysPath(os.path.dirname(sys.argv[0]))
@@ -513,10 +509,6 @@ class DebugClientBase(object):
                 sys.argv = []
                 wd, fn, args = arg.split('|')
                 self.__setCoding(fn)
-                try:
-                    sys.setappdefaultencoding(self.__coding)
-                except AttributeError:
-                    pass
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
                 sys.path = self.__getSysPath(os.path.dirname(sys.argv[0]))
@@ -550,10 +542,6 @@ class DebugClientBase(object):
                 sys.argv = []
                 wd, fn, args, erase = arg.split('@@')
                 self.__setCoding(fn)
-                try:
-                    sys.setappdefaultencoding(self.__coding)
-                except AttributeError:
-                    pass
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
                 sys.path = self.__getSysPath(os.path.dirname(sys.argv[0]))
@@ -588,10 +576,6 @@ class DebugClientBase(object):
                 sys.argv = []
                 wd, fn, args, erase = arg.split('|')
                 self.__setCoding(fn)
-                try:
-                    sys.setappdefaultencoding(self.__coding)
-                except AttributeError:
-                    pass
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
                 sys.path = self.__getSysPath(os.path.dirname(sys.argv[0]))
@@ -1186,10 +1170,6 @@ class DebugClientBase(object):
         
         # reset coding
         self.__coding = self.defaultCoding
-        try:
-            sys.setappdefaultencoding(self.defaultCoding)
-        except AttributeError:
-            pass
 
     def __dumpVariables(self, frmnr, scope, filter):
         """
@@ -1707,10 +1687,6 @@ class DebugClientBase(object):
                 self.running = None
         if self.running:
             self.__setCoding(self.running)
-            try:
-                sys.setappdefaultencoding(self.defaultCoding)
-            except AttributeError:
-                pass
         self.passive = 1
         self.write("%s%s|%d\n" % (PassiveStartup, self.running, exceptions))
         self.__interact()
@@ -1766,10 +1742,6 @@ class DebugClientBase(object):
             os.chdir(wd)
         self.running = sys.argv[0]
         self.__setCoding(self.running)
-        try:
-            sys.setappdefaultencoding(self.__coding)
-        except AttributeError:
-            pass
         self.mainFrame = None
         self.inRawMode = 0
         self.debugging = 1
@@ -1874,10 +1846,6 @@ class DebugClientBase(object):
             else:
                 if not self.noencoding:
                     self.__coding = self.defaultCoding
-                    try:
-                        sys.setappdefaultencoding(self.defaultCoding)
-                    except AttributeError:
-                        pass
                 self.startProgInDebugger(args, wd, host, port, 
                                          exceptions=exceptions, tracePython=tracePython,
                                          redirect=redirect)
@@ -1911,10 +1879,6 @@ class DebugClientBase(object):
             if port >= 0:
                 if not self.noencoding:
                     self.__coding = self.defaultCoding
-                    try:
-                        sys.setappdefaultencoding(self.defaultCoding)
-                    except AttributeError:
-                        pass
                 self.connectDebugger(port, remoteAddress, redirect)
                 self.__interact()
             else:

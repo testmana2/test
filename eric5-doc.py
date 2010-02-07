@@ -169,12 +169,6 @@ def main():
     qtHelpTitle = ""
     qtHelpCreateCollection = False
     
-    # Set the applications string encoding
-    try:
-        sys.setappdefaultencoding(str(Preferences.getSystem("StringEncoding")))
-    except AttributeError:
-        pass
-
     for k, v in opts:
         if k in ["-o", "--outdir"]:
             outputDir = v

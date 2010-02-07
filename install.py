@@ -249,11 +249,11 @@ def cleanUp():
         if os.path.exists(rwname):
             os.remove(rwname)
     
-    # Cleanup our config file
-    for name in ['eric5config.py', 'eric5config.pyc']:
-        e4cfile = os.path.join(pyModDir, name)
-        if os.path.exists(e4cfile):
-            os.remove(e4cfile)
+    # Cleanup our config file(s)
+    for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
+        e5cfile = os.path.join(pyModDir, name)
+        if os.path.exists(e5cfile):
+            os.remove(e5cfile)
         
     # Cleanup the install directories
     for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
@@ -327,12 +327,6 @@ def installEric():
             shutil.copy('eric5config.py', modDir)
             if os.path.exists('eric5config.pyc'):
                 shutil.copy('eric5config.pyc', modDir)
-        
-        # copy the eric5.pth file
-        if distDir:
-            shutil.copy('eric%seric5.pth' % os.sep, cfg['mdir'])
-        else:
-            shutil.copy('eric%seric5.pth' % os.sep, modDir)
         
         # copy the various parts of eric5
         copyTree('eric', cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'], 

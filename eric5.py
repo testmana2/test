@@ -207,12 +207,6 @@ def main():
     if len(sys.argv) > 1:
         args = sys.argv[1:]
     
-    # Set the applications string encoding
-    try:
-        sys.setappdefaultencoding(Preferences.getSystem("StringEncoding"))
-    except AttributeError:
-        pass
-    
     # get the Qt4 translations directory
     qt4TransDir = Preferences.getQt4TranslationsDir()
     if not qt4TransDir:

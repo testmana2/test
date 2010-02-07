@@ -201,10 +201,6 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True):
     handleArgs(argv, appinfo)
     app = E5Application(argv)
     app.setQuitOnLastWindowClosed(quitOnLastWindowClosed)
-    try:
-        sys.setappdefaultencoding(Preferences.getSystem("StringEncoding"))
-    except AttributeError:
-        pass
 
     initializeResourceSearchPath()
     QApplication.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
