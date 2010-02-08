@@ -594,6 +594,9 @@ class TemplateViewer(QTreeWidget):
         if project.name:
             varValues[keyfmt % 'project_name'] = project.name
 
+        if project.ppath:
+            varValues[keyfmt % 'project_path'] = project.ppath
+
         path_name = editor.getFileName()
         if path_name:
             dir_name, file_name = os.path.split(path_name)
@@ -607,6 +610,22 @@ class TemplateViewer(QTreeWidget):
                     keyfmt % 'base_name': base_name,
                     keyfmt % 'ext': ext
             })
+        
+        varValues[keyfmt % 'clipboard:ml'] = QApplication.clipboard().text()
+        varValues[keyfmt % 'clipboard'] = QApplication.clipboard().text()
+
+        if editor.hasSelectedText():
+            varValues[keyfmt % 'cur_select:ml'] = editor.selectedText()
+            varValues[keyfmt % 'cur_select'] = editor.selectedText()
+        else:
+            varValues[keyfmt % 'cur_select:ml'] = os.linesep
+            varValues[keyfmt % 'cur_select'] = ""
+
+        varValues[keyfmt % 'insertion'] = "i_n_s_e_r_t_i_o_n"
+        
+        varValues[keyfmt % 'select_start'] = "s_e_l_e_c_t_s_t_a_r_t"
+        varValues[keyfmt % 'select_end'] = "s_e_l_e_c_t_e_n_d"
+
         return varValues
 
     def applyTemplate(self, itm):
@@ -655,11 +674,56 @@ class TemplateViewer(QTreeWidget):
             # It should be done in this way to allow undo
             editor.beginUndoAction()
             if editor.hasSelectedText():
+                line = editor.getSelection()[0]
                 editor.removeSelectedText()
-            line, index = editor.getCursorPosition()
+            else:
+                line = editor.getCursorPosition()[0]
+            
+            if len(indent) > 0:
+                count += len(indent)
+            
+            if "i_n_s_e_r_t_i_o_n" in txt and "s_e_l_e_c_t" in txt:
+                txt = "'Insertion and selection can not be in template together'"
+            
+            if "i_n_s_e_r_t_i_o_n" in txt:
+                lines = 1
+                for aline in txt.splitlines():
+                    count =  aline.find("i_n_s_e_r_t_i_o_n")
+                    if count >= 0:
+                        txt = txt.replace("i_n_s_e_r_t_i_o_n",  "")
+                        if len(indent) > 0:
+                            count += len(indent)
+                        break
+                    else:
+                        lines += 1
+            
+            setselect = False
+            if "s_e_l_e_c_t_s_t_a_r_t" in txt and "s_e_l_e_c_t_e_n_d" in txt:
+                setselect = True
+                linea = 1
+                for aline in txt.splitlines():
+                    posa =  aline.find("s_e_l_e_c_t_s_t_a_r_t")
+                    if posa >= 0:
+                        txt = txt.replace("s_e_l_e_c_t_s_t_a_r_t",  "")
+                        break
+                    else:
+                        linea += 1
+                lineb = 1
+                for aline in txt.splitlines():
+                    posb =  aline.find("s_e_l_e_c_t_e_n_d")
+                    if posb >= 0:
+                        txt = txt.replace("s_e_l_e_c_t_e_n_d",  "")
+                        break
+                    else:
+                        lineb += 1          
+            
             editor.insert(txt)
-            editor.setCursorPosition(line + lines - 1, 
-                count and index + count or 0)
+            
+            if setselect:
+                editor.setSelection(line + linea - 1, posa, line + lineb - 1, posb)
+            else:
+                editor.setCursorPosition(line + lines - 1, count)
+                
             editor.endUndoAction()
             editor.setFocus()
 

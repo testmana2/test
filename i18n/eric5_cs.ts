@@ -19796,12 +19796,12 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="822"/>
+        <location filename="Preferences/__init__.py" line="816"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="841"/>
+        <location filename="Preferences/__init__.py" line="835"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
@@ -32199,7 +32199,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Templates/TemplatePropertiesDialog.py" line="109"/>
         <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occuring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Pro použití proměnných v šabloně stačí název proměnné zabalit do znaků $. Při použití šablony, budete na hodnoty proměnných dotázáni.&lt;/p&gt;&lt;p&gt;Příklad šablony: Toto je $PROMENNA$&lt;/p&gt;&lt;p&gt;Ve chvíli, kdy tuto šablonu použijete, budete dotázáni na hodnotu pro proměnnou $PROMENNA$. Každý výskyt $PROMENNA$ pak bude nahrazen hodnotou, kerou jste zadali.&lt;/p&gt;&lt;p&gt;Pokud chcete v šabloně použít přímo znak $, který nemá uvozovat žádnou proměnnou, tadejte $$ (dva znaky za sebou). Ty budou při použití šablony automaticky převedeny na jeden znak.&lt;/p&gt;&lt;p&gt;Jestliže chcete obsah proměnné speciálně ošetřit, tak za proměnnou musí následovat &apos;:&apos; a jedna z formátovacích definic (např. $PROMENNA:ml$). Podporované definice jsou:&lt;table&gt;&lt;tr&gt;    &lt;td&gt;ml&lt;/td&gt;    &lt;td&gt;Definuje víceřádkové formátování. První řádek obsahu proměnné je předsazen stringem, který je v šabloně na řádku před proměnnou. Všechny ostatní řádky jsou předsazeny stejným počtem bílých znaků jaký obsahuje proměnná.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;rl&lt;/td&gt;    &lt;td&gt;Definuje opakované formátování řádků. Každá řádka obsahu proměnné je předsazena stringem, který je v šabloně na řádku před proměnnou.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Následující předdefinované proměnné, které můžou být v šabloně použity:&lt;table&gt;&lt;tr&gt;    &lt;td&gt;date&lt;/td&gt;    &lt;td&gt;dnešní datum ve formáoti ISO (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;year&lt;/td&gt;    &lt;td&gt;aktuální rok&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;project_name&lt;/td&gt;    &lt;td&gt;název projektu (je-li nějaký)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;path_name&lt;/td&gt;    &lt;td&gt;plná cesta k aktuálnímu souboru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;dir_name&lt;/td&gt;    &lt;td&gt;plná cesta do rodičovského adresáře&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;file_name&lt;/td&gt;    &lt;td&gt;aktuální název souboru (bez adresáře)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;base_name&lt;/td&gt;    &lt;td&gt;jako &lt;i&gt;file_name&lt;/i&gt;, ale bez extenze&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;ext&lt;/td&gt;    &lt;td&gt;extenze aktuálního souboru&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Jestliže chcete změnit výchozí oddělovač na nějaký jiný, nastavte jej, prosím, v konfiguračním dialogu.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Pro použití proměnných v šabloně stačí název proměnné zabalit do znaků $. Při použití šablony, budete na hodnoty proměnných dotázáni.&lt;/p&gt;&lt;p&gt;Příklad šablony: Toto je $PROMENNA$&lt;/p&gt;&lt;p&gt;Ve chvíli, kdy tuto šablonu použijete, budete dotázáni na hodnotu pro proměnnou $PROMENNA$. Každý výskyt $PROMENNA$ pak bude nahrazen hodnotou, kerou jste zadali.&lt;/p&gt;&lt;p&gt;Pokud chcete v šabloně použít přímo znak $, který nemá uvozovat žádnou proměnnou, tadejte $$ (dva znaky za sebou). Ty budou při použití šablony automaticky převedeny na jeden znak.&lt;/p&gt;&lt;p&gt;Jestliže chcete obsah proměnné speciálně ošetřit, tak za proměnnou musí následovat &apos;:&apos; a jedna z formátovacích definic (např. $PROMENNA:ml$). Podporované definice jsou:&lt;table&gt;&lt;tr&gt;    &lt;td&gt;ml&lt;/td&gt;    &lt;td&gt;Definuje víceřádkové formátování. První řádek obsahu proměnné je předsazen stringem, který je v šabloně na řádku před proměnnou. Všechny ostatní řádky jsou předsazeny stejným počtem bílých znaků jaký obsahuje proměnná.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;rl&lt;/td&gt;    &lt;td&gt;Definuje opakované formátování řádků. Každá řádka obsahu proměnné je předsazena stringem, který je v šabloně na řádku před proměnnou.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Následující předdefinované proměnné, které můžou být v šabloně použity:&lt;table&gt;&lt;tr&gt;    &lt;td&gt;date&lt;/td&gt;    &lt;td&gt;dnešní datum ve formáoti ISO (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;year&lt;/td&gt;    &lt;td&gt;aktuální rok&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;project_name&lt;/td&gt;    &lt;td&gt;název projektu (je-li nějaký)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;path_name&lt;/td&gt;    &lt;td&gt;plná cesta k aktuálnímu souboru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;dir_name&lt;/td&gt;    &lt;td&gt;plná cesta do rodičovského adresáře&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;file_name&lt;/td&gt;    &lt;td&gt;aktuální název souboru (bez adresáře)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;base_name&lt;/td&gt;    &lt;td&gt;jako &lt;i&gt;file_name&lt;/i&gt;, ale bez extenze&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;ext&lt;/td&gt;    &lt;td&gt;extenze aktuálního souboru&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Jestliže chcete změnit výchozí oddělovač na nějaký jiný, nastavte jej, prosím, v konfiguračním dialogu.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Templates/TemplatePropertiesDialog.ui" line="31"/>
@@ -32220,6 +32220,11 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Templates/TemplatePropertiesDialog.py" line="35"/>
         <source>&lt;b&gt;Template name&lt;b&gt;&lt;p&gt;Enter the name of the template. Templates may be autocompleted upon this name. In order to support autocompletion. the template name must only consist of letters (a-z and A-Z), digits (0-9) and underscores (_).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Název šablony&lt;/p&gt;&lt;p&gt;Zadejte název šablony. Šablony mohou být autoamticky sestaveny na toto jméno. Z důvodu podpory automatického sestavení musí název šablony obsahovat pouze písmena (a-z a A-Z), čísla (0-9) a podtržítka (_).&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplatePropertiesDialog.py" line="109"/>
+        <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -32329,7 +32334,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Záznamy šablon&lt;/b&gt; jsou aktuální šablony. Jsou seskupeny do skupin. Nápověda jak je definovat je dostupná v dialogu editace šablony. V podadresáři distribuce Erica je k prostudování jeden příklad šablony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="712"/>
+        <location filename="Templates/TemplateViewer.py" line="776"/>
         <source>Edit Template Group</source>
         <translation>Editovat skupinu šablon</translation>
     </message>
@@ -32339,7 +32344,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Skupina šablon se jménem &lt;b&gt;%1&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="807"/>
+        <location filename="Templates/TemplateViewer.py" line="871"/>
         <source>Save templates</source>
         <translation>Uložit šablony</translation>
     </message>
@@ -32349,7 +32354,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Do souboru se šablonami &lt;b&gt;%1&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="867"/>
+        <location filename="Templates/TemplateViewer.py" line="931"/>
         <source>Read templates</source>
         <translation>Načíst šablony</translation>
     </message>
@@ -32380,22 +32385,22 @@ be changed via the preferences dialog.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Záznamy šablon&lt;/b&gt; jsou aktuální šablony. Jsou seskupeny do skupin. Nápověda jak je definovat je dostupná v dialogu editace šablony. V podadresáři distribuce Erica je k prostudování jeden příklad šablony.&lt;/p&gt; {5 ?}</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="712"/>
+        <location filename="Templates/TemplateViewer.py" line="776"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="807"/>
+        <location filename="Templates/TemplateViewer.py" line="871"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="857"/>
+        <location filename="Templates/TemplateViewer.py" line="921"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="867"/>
+        <location filename="Templates/TemplateViewer.py" line="931"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40479,12 +40484,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="227"/>
+        <location filename="eric5.py" line="221"/>
         <source>Importing packages...</source>
         <translation type="unfinished">Importování balíčků...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="232"/>
+        <location filename="eric5.py" line="226"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">Generování hlavního okna...</translation>
     </message>

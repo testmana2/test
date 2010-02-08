@@ -19856,12 +19856,12 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="822"/>
+        <location filename="Preferences/__init__.py" line="816"/>
         <source>Export Preferences</source>
         <translation>Esporta Preferenze</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="841"/>
+        <location filename="Preferences/__init__.py" line="835"/>
         <source>Import Preferences</source>
         <translation>Importa Preferenze</translation>
     </message>
@@ -32349,7 +32349,7 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
     <message>
         <location filename="Templates/TemplatePropertiesDialog.py" line="109"/>
         <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occuring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Per usare una variabile in un template, basta solo racchiudere il nome della variabile con il carattere $. Quando il template verrà usato, verrà richiesto un valore per questa variabile.&lt;/p&gt;&lt;p&gt;Esempio di template: This is a $VAR$&lt;/p&gt;&lt;p&gt;Quando usi questo template ti varrà chiesto un valore per la variabile $VAR$. Ogni ripetizione di $VAR$ verrà sostituita con quello che hai inserito.&lt;/p&gt;&lt;p&gt;Se devi usare un singolo carattere $ in un template, che non viene usato per racchiudere una variabile, scrivi $$ (due caratteri dollaro). Verranno automanticamente sostituiti con un singolo carattere $ quando il template viene usato.&lt;/p&gt;&lt;p&gt;Se vuoi che il contenuto di una variabile sia manipolato in un modo specifico, il nome deve essere seguito da &apos;:&apos; e da un indicatore di formattazione (es. $VAR$:ml). Gli indicatori di formattazione supportati sono:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifica una formattazione multilinea. La prima linea delal variabile contiene il prefisso con la stringa precedente alla variabile sulla stessa linea del template. Tutte le altre linee sono precedute dallo stesso numero di spazi della linea che contiene la variabile.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifica una ripetizione di linea. Ogni riga del contenuto della variabile è preceduta dalla stringa che si trova prima della variabile sulla stessa linea del template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Le seguenti variabili predefinite possono essere usate in un template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;data di oggi in formato ISO (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;anno corrente &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;nome del progetto (se presente)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;percorso complete del file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;percorso completo della directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;nome file  (senza directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;come &lt;i&gt;file_name&lt;/i&gt;, ma senza estensione &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;estensine del file&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Per usare una variabile in un template, basta solo racchiudere il nome della variabile con il carattere $. Quando il template verrà usato, verrà richiesto un valore per questa variabile.&lt;/p&gt;&lt;p&gt;Esempio di template: This is a $VAR$&lt;/p&gt;&lt;p&gt;Quando usi questo template ti varrà chiesto un valore per la variabile $VAR$. Ogni ripetizione di $VAR$ verrà sostituita con quello che hai inserito.&lt;/p&gt;&lt;p&gt;Se devi usare un singolo carattere $ in un template, che non viene usato per racchiudere una variabile, scrivi $$ (due caratteri dollaro). Verranno automanticamente sostituiti con un singolo carattere $ quando il template viene usato.&lt;/p&gt;&lt;p&gt;Se vuoi che il contenuto di una variabile sia manipolato in un modo specifico, il nome deve essere seguito da &apos;:&apos; e da un indicatore di formattazione (es. $VAR$:ml). Gli indicatori di formattazione supportati sono:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifica una formattazione multilinea. La prima linea delal variabile contiene il prefisso con la stringa precedente alla variabile sulla stessa linea del template. Tutte le altre linee sono precedute dallo stesso numero di spazi della linea che contiene la variabile.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifica una ripetizione di linea. Ogni riga del contenuto della variabile è preceduta dalla stringa che si trova prima della variabile sulla stessa linea del template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Le seguenti variabili predefinite possono essere usate in un template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;data di oggi in formato ISO (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;anno corrente &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;nome del progetto (se presente)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;percorso complete del file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;percorso completo della directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;nome file  (senza directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;come &lt;i&gt;file_name&lt;/i&gt;, ma senza estensione &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;estensine del file&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;</translation>
     </message>
     <message>
         <location filename="Templates/TemplatePropertiesDialog.ui" line="31"/>
@@ -32370,6 +32370,11 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <location filename="Templates/TemplatePropertiesDialog.py" line="35"/>
         <source>&lt;b&gt;Template name&lt;b&gt;&lt;p&gt;Enter the name of the template. Templates may be autocompleted upon this name. In order to support autocompletion. the template name must only consist of letters (a-z and A-Z), digits (0-9) and underscores (_).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nome template&lt;b&gt;&lt;p&gt;Inserisci il nome del template. I templae possono avere il completamento automatico. Per supportare il completamento automatico, il nome del template deve consistere solo di lettere (a-z e A-Z), numeri (0-9) e underscore(_).&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplatePropertiesDialog.py" line="109"/>
+        <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -32393,7 +32398,7 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
 <context>
     <name>TemplateViewer</name>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="712"/>
+        <location filename="Templates/TemplateViewer.py" line="776"/>
         <source>Edit Template Group</source>
         <translation>Modifica gruppo template</translation>
     </message>
@@ -32488,7 +32493,7 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;I Template groups&lt;/b&gt; sono un modo di raggruppare i singoli template. I gruppi hanno un attributo che specifica per quale linguaggio di programmazione si applicano. Per aggiunte dei template, almeno un gruppo deve essere definito.&lt;/p&gt;&lt;p&lt;b&gt;Template entries&lt;/b&gt; sono i template. Sono raggruppati dai template groups. Supoprto su come definirli è disponibile nel dialogo di modifica dei template. C&apos;è un esempiodi template disponibile nella sottodirectory Examples della distribuzione di eric4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="807"/>
+        <location filename="Templates/TemplateViewer.py" line="871"/>
         <source>Save templates</source>
         <translation>Salva template</translation>
     </message>
@@ -32498,7 +32503,7 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Il file template &lt;b&gt;%1&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="867"/>
+        <location filename="Templates/TemplateViewer.py" line="931"/>
         <source>Read templates</source>
         <translation>Leggi template</translation>
     </message>
@@ -32528,22 +32533,22 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;I Template groups&lt;/b&gt; sono un modo di raggruppare i singoli template. I gruppi hanno un attributo che specifica per quale linguaggio di programmazione si applicano. Per aggiunte dei template, almeno un gruppo deve essere definito.&lt;/p&gt;&lt;p&lt;b&gt;Template entries&lt;/b&gt; sono i template. Sono raggruppati dai template groups. Supoprto su come definirli è disponibile nel dialogo di modifica dei template. C&apos;è un esempiodi template disponibile nella sottodirectory Examples della distribuzione di eric4.&lt;/p&gt; {5 ?}</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="712"/>
+        <location filename="Templates/TemplateViewer.py" line="776"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="807"/>
+        <location filename="Templates/TemplateViewer.py" line="871"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="857"/>
+        <location filename="Templates/TemplateViewer.py" line="921"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="867"/>
+        <location filename="Templates/TemplateViewer.py" line="931"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33568,7 +33573,8 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <location filename="Project/TranslationPropertiesDialog.ui" line="85"/>
         <source>&amp;Translation Path Pattern:
 (Use &apos;%language%&apos; where the language code should be inserted, e.g. i18n/eric5_%language%.ts)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Percorso pattern &amp;Traduzione:
+(Usa  &apos;%language%&apos; dove il codice della lingua deve essere usato, e.g. i18n/eric4_%language%.ts) {18n?} {5_?}</translation>
     </message>
     <message>
         <location filename="Project/TranslationPropertiesDialog.py" line="58"/>
@@ -40615,12 +40621,12 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="227"/>
+        <location filename="eric5.py" line="221"/>
         <source>Importing packages...</source>
         <translation type="unfinished">Importazione packages...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="232"/>
+        <location filename="eric5.py" line="226"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">Generazione Main Window...</translation>
     </message>

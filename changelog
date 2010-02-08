@@ -3,6 +3,9 @@ Change Log
 Version 5.0-snapshot-2010mmdd:
 - bug fixes
 - added code to indicate directories and files being symbolic links
+- extendend the predefined template variables by "project_path",
+  "clipboard", "cur_select", "insertion", "select_start" and
+  "select_end"
 
 Version 5.0-snapshot-20100206:
 - bug fixes

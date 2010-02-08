@@ -20126,12 +20126,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="822"/>
+        <location filename="Preferences/__init__.py" line="816"/>
         <source>Export Preferences</source>
         <translation>Export des préférences</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="841"/>
+        <location filename="Preferences/__init__.py" line="835"/>
         <source>Import Preferences</source>
         <translation>Import des préférences</translation>
     </message>
@@ -33338,7 +33338,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Templates/TemplatePropertiesDialog.py" line="109"/>
         <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occuring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Pour utiliser des variables dans un gabarit, il suffit d&apos;encadrer le nom de variable entre dux caractères &apos;$&apos;. Au moment de l&apos;utilisation du gabarit, des valeurs pour ces variables vous seront demandées.&lt;/p&gt;&lt;p&gt;Exemple de gabarit: Ceci est une $VAR$&lt;/p&gt;&lt;p&gt;Quand vous utiliserez ce gabarit,il vous sera demandé une valeur pour la variable VAR. Toutes les occurences de $VAR$ seront remplacées par la valeur que vous aurez indiquée.&lt;/p&gt;&lt;p&gt;Si vous souhaitez utiliser le caractère $ dans un gabarit, tapez deux fois le caractère dollar $$ à la place. Ils seront remplacés automatiquement par un seul dollar.&lt;/p&gt;&lt;p&gt;Le contenu d&apos;une variable peut être traité spécifiquement lorsque le nom de variable est suivi du caractère &apos;:&apos; et d&apos;un mot clé (e.g. $VAR:ml$). Les mots clés acceptés sont :&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;ml&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Spécifie un contenu de variable sur plusieurs lignes. Dans ce cas, la portion de ligne précédant le nom de la variable dans le gabarit est répétée pour la première ligne. Pour les autres lignes de la variable, une chaîne d&apos;espaces de même longueur est reproduite comme préfixe.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;rl&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Spécifie également un contenu sur plusieurs lignes. Dans ce cas, la portion de ligne précédant le nom de la variable est répété en préfixe à toutes les lignes.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Les variables suivantes peuvent être définie dans le gabarit:&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;date du jour au format ISO (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;year&lt;/b&gt;&lt;/td&gt;&lt;td&gt;année courante&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;project_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;nom du projet (s&apos;il yen a un)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;path_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;chemin complet du fichier courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;dir_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;chemin copmplet du répertoire&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;file_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;nom du fichier (sans le chemin)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;base_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;comme &lt;i&gt;file_name&lt;/i&gt;, mais sans l&apos;extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;ext&lt;/b&gt;&lt;/td&gt;&lt;td&gt;extension du fichier courant&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Vous pouvez utiliser un autre délimiteur que le dollar en utilisant la fenêtre de configuration.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Pour utiliser des variables dans un gabarit, il suffit d&apos;encadrer le nom de variable entre dux caractères &apos;$&apos;. Au moment de l&apos;utilisation du gabarit, des valeurs pour ces variables vous seront demandées.&lt;/p&gt;&lt;p&gt;Exemple de gabarit: Ceci est une $VAR$&lt;/p&gt;&lt;p&gt;Quand vous utiliserez ce gabarit,il vous sera demandé une valeur pour la variable VAR. Toutes les occurences de $VAR$ seront remplacées par la valeur que vous aurez indiquée.&lt;/p&gt;&lt;p&gt;Si vous souhaitez utiliser le caractère $ dans un gabarit, tapez deux fois le caractère dollar $$ à la place. Ils seront remplacés automatiquement par un seul dollar.&lt;/p&gt;&lt;p&gt;Le contenu d&apos;une variable peut être traité spécifiquement lorsque le nom de variable est suivi du caractère &apos;:&apos; et d&apos;un mot clé (e.g. $VAR:ml$). Les mots clés acceptés sont :&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;ml&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Spécifie un contenu de variable sur plusieurs lignes. Dans ce cas, la portion de ligne précédant le nom de la variable dans le gabarit est répétée pour la première ligne. Pour les autres lignes de la variable, une chaîne d&apos;espaces de même longueur est reproduite comme préfixe.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;rl&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Spécifie également un contenu sur plusieurs lignes. Dans ce cas, la portion de ligne précédant le nom de la variable est répété en préfixe à toutes les lignes.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Les variables suivantes peuvent être définie dans le gabarit:&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;date du jour au format ISO (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;year&lt;/b&gt;&lt;/td&gt;&lt;td&gt;année courante&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;project_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;nom du projet (s&apos;il yen a un)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;path_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;chemin complet du fichier courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;dir_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;chemin copmplet du répertoire&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;file_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;nom du fichier (sans le chemin)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;base_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;comme &lt;i&gt;file_name&lt;/i&gt;, mais sans l&apos;extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;ext&lt;/b&gt;&lt;/td&gt;&lt;td&gt;extension du fichier courant&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Vous pouvez utiliser un autre délimiteur que le dollar en utilisant la fenêtre de configuration.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Templates/TemplatePropertiesDialog.ui" line="31"/>
@@ -33359,6 +33359,11 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Templates/TemplatePropertiesDialog.py" line="35"/>
         <source>&lt;b&gt;Template name&lt;b&gt;&lt;p&gt;Enter the name of the template. Templates may be autocompleted upon this name. In order to support autocompletion. the template name must only consist of letters (a-z and A-Z), digits (0-9) and underscores (_).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nom de gabarit&lt;/b&gt;&lt;p&gt;Entrer le nom du gabarit. Les gabarits peuvent être auto-complétés à partir de ce nom. Pour supporter l&apos;autocomplétion, le nom de gabarit ne doit contenir que des lettres (a-z et A-Z), des chiffres (0-9) et des underscores (_).&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplatePropertiesDialog.py" line="109"/>
+        <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -33382,7 +33387,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TemplateViewer</name>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="712"/>
+        <location filename="Templates/TemplateViewer.py" line="776"/>
         <source>Edit Template Group</source>
         <translation>Edition du Groupe de gabarits</translation>
     </message>
@@ -33477,7 +33482,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Les &lt;b&gt;Groupes de gabarits&lt;/b&gt; sont des ensembles de gabarits individuels. Les groupes ont un attribut indiquant pour quel langage de programmation ils doivent être appliqués. Pour ajouter des nouveaux gabarits, au moins un groupe doit déjà exister.&lt;/p&gt;&lt;p&gt;Les entrées &lt;b&gt;Gabarits&lt;/b&gt; désignent les gabarits eux-mêmes; ils sont rassemblés dans les groupes de gabarits. Pour savoir comment les définir, consulter l&apos;aide dans la fenêtre d&apos;édition des gabarits. Il y a un exemple de gabarit dans le répertoire Examples du répertoire eric4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="807"/>
+        <location filename="Templates/TemplateViewer.py" line="871"/>
         <source>Save templates</source>
         <translation>Enregistrement des gabarits</translation>
     </message>
@@ -33487,7 +33492,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Impossible de d&apos;écrire le fichier gabarit &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="867"/>
+        <location filename="Templates/TemplateViewer.py" line="931"/>
         <source>Read templates</source>
         <translation>Lecture des gabarits</translation>
     </message>
@@ -33517,22 +33522,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="unfinished">&lt;p&gt;Les &lt;b&gt;Groupes de gabarits&lt;/b&gt; sont des ensembles de gabarits individuels. Les groupes ont un attribut indiquant pour quel langage de programmation ils doivent être appliqués. Pour ajouter des nouveaux gabarits, au moins un groupe doit déjà exister.&lt;/p&gt;&lt;p&gt;Les entrées &lt;b&gt;Gabarits&lt;/b&gt; désignent les gabarits eux-mêmes; ils sont rassemblés dans les groupes de gabarits. Pour savoir comment les définir, consulter l&apos;aide dans la fenêtre d&apos;édition des gabarits. Il y a un exemple de gabarit dans le répertoire Examples du répertoire eric4.&lt;/p&gt; {5 ?}</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="712"/>
+        <location filename="Templates/TemplateViewer.py" line="776"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="807"/>
+        <location filename="Templates/TemplateViewer.py" line="871"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="857"/>
+        <location filename="Templates/TemplateViewer.py" line="921"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="867"/>
+        <location filename="Templates/TemplateViewer.py" line="931"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34572,7 +34577,8 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Project/TranslationPropertiesDialog.ui" line="85"/>
         <source>&amp;Translation Path Pattern:
 (Use &apos;%language%&apos; where the language code should be inserted, e.g. i18n/eric5_%language%.ts)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Pattern des fichiers de traduction:
+(Utiliser la balise %language% là où la langue doit être insérée, ex:  i18n/eric4_%language%.ts) {18n?} {5_?}</translation>
     </message>
     <message>
         <location filename="Project/TranslationPropertiesDialog.py" line="58"/>
@@ -41732,12 +41738,12 @@ police de l&apos;éditeur.&lt;/p&gt;</translation>
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="227"/>
+        <location filename="eric5.py" line="221"/>
         <source>Importing packages...</source>
         <translation type="unfinished">Importation des packages...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="232"/>
+        <location filename="eric5.py" line="226"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">Création de la fenêtre principale...</translation>
     </message>
