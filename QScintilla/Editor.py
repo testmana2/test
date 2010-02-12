@@ -4774,12 +4774,12 @@ class Editor(QsciScintillaCompat):
                 msg = self.trUtf8(\
                     """<p>The file <b>{0}</b> has been changed while it was opened in"""
                     """ eric5. Reread it?</p>""").format(self.fileName)
-                default = QMessageBox.No
+                default = QMessageBox.Yes
                 if self.isModified():
                     msg += self.trUtf8(\
                         """<br><b>Warning:</b> You will loose"""
                         """ your changes upon reopening it.""")
-                    default = QMessageBox.Ok
+                    default = QMessageBox.No
                 res = QMessageBox.warning(None,
                     self.trUtf8("File changed"), msg,
                     QMessageBox.StandardButtons(\
