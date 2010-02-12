@@ -111,7 +111,7 @@ class MdiArea(QMdiArea, ViewManager):
         
         @param win editor window to be added
         @param fn filename of this editor
-        @param noName name to be used for an unnamed editor (string or QString)
+        @param noName name to be used for an unnamed editor (string)
         """
         self.addSubWindow(win)
         if fn is None:
@@ -276,7 +276,7 @@ class MdiArea(QMdiArea, ViewManager):
         Public method to change the displayed name of the editor.
         
         @param editor editor window to be changed
-        @param newName new name to be shown (string or QString)
+        @param newName new name to be shown (string)
         """
         pass
         

@@ -373,7 +373,7 @@ class TRPreviewer(QMainWindow):
         """
         Public slot to activate a translation.
         
-        @param name name (language) of the translation (string or QString)
+        @param name name (language) of the translation (string)
         """
         self.translations.set(name)
     
@@ -585,7 +585,7 @@ class TranslationsDict(QObject):
         """
         Private method to delete a translator from the list of available translators.
         
-        @param name name of the translator to delete (string or QString)
+        @param name name of the translator to delete (string)
         """
         if name == noTranslationName:
             return

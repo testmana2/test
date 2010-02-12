@@ -75,7 +75,7 @@ class VersionControl(QObject):
         """
         Public method used to test for the presence of the vcs.
         
-        It must return a bool to indicate the existance and a QString giving
+        It must return a bool to indicate the existance and a string giving
         an error message in case of failure.
         
         @exception RuntimeError not implemented
@@ -593,7 +593,7 @@ class VersionControl(QObject):
         
         It simply reemits the received status.
         
-        @param status status of the monitoring thread (QString, ok, nok or off)
+        @param status status of the monitoring thread (string, ok, nok or off)
         @param statusMsg explanotory text for the signaled status (string)
         """
         self.emit(SIGNAL("vcsStatusMonitorStatus(QString, QString)"), status, statusMsg)

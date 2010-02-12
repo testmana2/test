@@ -236,7 +236,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         """
         Private slot to show an error message.
         
-        @param msg error message to show (string or QString)
+        @param msg error message to show (string)
         """
         self.errorGroup.show()
         self.errors.insertPlainText(msg)

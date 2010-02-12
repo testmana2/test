@@ -53,7 +53,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         </ul>
         
         @return tuple of flag indicating successful operation (boolean) and 
-            a status message in case of non successful operation (QString)
+            a status message in case of non successful operation (string)
         """
         self.shouldUpdate = False
         

@@ -32,7 +32,7 @@ class LoginForm(object):
         self.name = ""
         self.hasAPassword = False
         self.elements = []      # list of tuples of element name and value 
-                                # (QString, QString)
+                                # (string, string)
         self.elementTypes = {}  # dict of element name as key and type as value
     
     def isValid(self):

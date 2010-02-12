@@ -2413,7 +2413,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot to filter the QtHelp documentation.
         
-        @param customFilter name of filter to be applied (QString)
+        @param customFilter name of filter to be applied (string)
         """
         self.__helpEngine.setCurrentFilter(customFilter)
         
@@ -2522,7 +2522,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot to show installation errors.
         
-        @param message message to be shown (QString)
+        @param message message to be shown (string)
         """
         QMessageBox.warning(self,
             self.trUtf8("eric5 Web Browser"),
@@ -2562,7 +2562,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot handling warnings from the help engine.
         
-        @param msg message sent by the help  engine (QString)
+        @param msg message sent by the help  engine (string)
         """
         QMessageBox.warning(self,
             self.trUtf8("Help Engine"), msg)

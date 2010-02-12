@@ -14,7 +14,7 @@ def compileUiFiles(dir, recurse = False):
     """
     Module function to compile the .ui files of a directory tree to Python sources.
     
-    @param dir name of a directory to scan for .ui files (string or QString)
+    @param dir name of a directory to scan for .ui files (string)
     @param recurse flag indicating to recurse into subdirectories (boolean)
     """
     try:

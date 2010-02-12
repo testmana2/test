@@ -524,7 +524,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         """
         Private slot called, when a new filter field is selected.
         
-        @param txt text of the selected field (QString)
+        @param txt text of the selected field (string)
         """
         self.__filterLogs()
     

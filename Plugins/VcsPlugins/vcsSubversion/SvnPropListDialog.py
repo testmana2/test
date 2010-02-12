@@ -68,11 +68,11 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         """
         Private method to generate a properties item in the properties list.
         
-        @param path file/directory name the property applies to (string or QString)
-        @param propName name of the property (string or QString)
-        @param propValue value of the property (string or QString)
+        @param path file/directory name the property applies to (string)
+        @param propName name of the property (string)
+        @param propValue value of the property (string)
         """
-        QTreeWidgetItem(self.propsList, QStringList() << path << propName << propValue)
+        QTreeWidgetItem(self.propsList, [path, propName, propValue])
         
     def closeEvent(self, e):
         """

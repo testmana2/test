@@ -72,7 +72,7 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         """
         Public method to set the domain to be displayed.
         
-        @param domain domain name to be displayed (string or QString)
+        @param domain domain name to be displayed (string)
         """
         self.domainEdit.setText(domain)
     

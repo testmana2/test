@@ -25,7 +25,7 @@ class UMLSceneSizeDialog(QDialog, Ui_UMLSceneSizeDialog):
         @param minW minimum width allowed (integer)
         @param minH minimum height allowed (integer)
         @param parent parent widget of this dialog (QWidget)
-        @param name name of this widget (QString or string)
+        @param name name of this widget (string)
         """
         QDialog.__init__(self, parent)
         if name:

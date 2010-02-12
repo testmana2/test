@@ -80,7 +80,7 @@ class XMLWriterBase(object):
         """
         Public method to encode newlines and paragraph breaks.
         
-        @param text text to encode (string or QString)
+        @param text text to encode (string)
         """
         return text.replace("\n\n", self.NEWPARA).replace("\n", self.NEWLINE)
     

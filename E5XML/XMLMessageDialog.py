@@ -55,7 +55,7 @@ class XMLMessageDialog(QDialog, Ui_XMLMessageDialog):
         """
         Private method to append text to the end of the messages pane.
         
-        @param txt text to insert (QString)
+        @param txt text to insert (string)
         @param color text color to be used (QColor)
         """
         if txt is not None:

@@ -21,7 +21,7 @@ class ZoomDialog(QDialog, Ui_ZoomDialog):
         
         @param zoom zoom factor to show in the spinbox (float)
         @param parent parent widget of this dialog (QWidget)
-        @param name name of this dialog (string or QString)
+        @param name name of this dialog (string)
         """
         QDialog.__init__(self, parent)
         if name:

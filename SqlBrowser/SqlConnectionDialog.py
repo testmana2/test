@@ -100,8 +100,8 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         """
         Public method to retrieve the connection data.
         
-        @return tuple giving the driver name (QString), the database name (QString),
-            the user name (QString), the password (QString), the host name (QString)
+        @return tuple giving the driver name (string), the database name (string),
+            the user name (string), the password (string), the host name (string)
             and the port (integer)
         """
         return (

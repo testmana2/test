@@ -360,7 +360,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         Private method to generate a formatted data string.
         
         @param size size to be formatted (integer)
-        @return formatted data string (QString)
+        @return formatted data string (string)
         """
         unit = ""
         if size < 1024:

@@ -1062,7 +1062,7 @@ class Subversion(VersionControl):
                 url = '%s/branches/%s' % (reposRoot, urllib.parse.quote(tag))
             elif tagType == 4:
                 url = '%s/trunk' % (reposRoot)
-                tn = QString('HEAD')
+                tn = 'HEAD'
         else:
             url = self.__svnURL(tag)
             tn = url

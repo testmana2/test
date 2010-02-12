@@ -66,7 +66,7 @@ class XMLHandlerBase(ContentHandler):
         """
         Public method to decode newlines and paragraph breaks.
         
-        @param text text to decode (string or QString)
+        @param text text to decode (string)
         """
         return text.replace(self.NEWPARA, "\n\n").replace(self.NEWLINE, "\n")
         

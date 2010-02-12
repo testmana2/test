@@ -182,6 +182,6 @@ class VcsStatusMonitorThread(QThread):
         </ul>
         
         @return tuple of flag indicating successful operation (boolean) and 
-            a status message in case of non successful operation (QString)
+            a status message in case of non successful operation (string)
         """
         raise RuntimeError('Not implemented')

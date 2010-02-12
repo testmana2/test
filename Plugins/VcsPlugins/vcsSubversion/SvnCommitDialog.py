@@ -50,7 +50,7 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         """
         Public method to retrieve the log message.
         
-        @return the log message (QString)
+        @return the log message (string)
         """
         msg = self.logEdit.toPlainText()
         if msg:
@@ -79,7 +79,7 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         """
         Public method to retrieve the changelists data.
         
-        @return tuple containing the changelists (QStringList) and a flag
+        @return tuple containing the changelists (list of strings) and a flag
             indicating to keep changelists (boolean)
         """
         listsTxt = self.changeListsEdit.text()

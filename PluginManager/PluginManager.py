@@ -857,7 +857,7 @@ class PluginManager(QObject):
         """
         Public method to check, if a certain plugin is loaded.
         
-        @param pluginName name of the plugin to check for (string or QString)
+        @param pluginName name of the plugin to check for (string)
         @return flag indicating, if the plugin is loaded (boolean)
         """
         return pluginName in self.__activeModules or \
@@ -869,7 +869,7 @@ class PluginManager(QObject):
         """
         Public method to check, if a certain plugin is active.
         
-        @param pluginName name of the plugin to check for (string or QString)
+        @param pluginName name of the plugin to check for (string)
         @return flag indicating, if the plugin is active (boolean)
         """
         return pluginName in self.__activeModules or \

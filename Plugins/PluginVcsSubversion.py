@@ -83,7 +83,7 @@ def displayString():
     """
     Public function to get the display string.
     
-    @return display string (QString)
+    @return display string (string)
     """
     exe = 'svn'
     if Utilities.isWindowsPlatform():
