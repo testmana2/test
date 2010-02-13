@@ -77,6 +77,9 @@ QDialog
 <td><a href="#StartDialog.getProfilingData">getProfilingData</a></td>
 <td>Public method to retrieve the profiling related data entered into this dialog.</td>
 </tr><tr>
+<td><a href="#StartDialog.getRunData">getRunData</a></td>
+<td>Public method to retrieve the debug related data entered into this dialog.</td>
+</tr><tr>
 <td><a href="#StartDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
 </tr><tr>
@@ -193,6 +196,18 @@ a tuple of a flag indicating, if the Python library should be traced
 <dt>Returns:</dt>
 <dd>
 flag indicating erasure of profiling info (boolean)
+</dd>
+</dl><a NAME="StartDialog.getRunData" ID="StartDialog.getRunData"></a>
+<h4>StartDialog.getRunData</h4>
+<b>getRunData</b>(<i></i>)
+<p>
+        Public method to retrieve the debug related data entered into this dialog.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+a tuple of a flag indicating, that the debugger should fork automatically
+            (boolean) and a flag indicating, that the debugger should debug the child 
+            process after forking automatically (boolean)
 </dd>
 </dl><a NAME="StartDialog.on_buttonBox_clicked" ID="StartDialog.on_buttonBox_clicked"></a>
 <h4>StartDialog.on_buttonBox_clicked</h4>

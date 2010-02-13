@@ -1561,9 +1561,12 @@ class DebugUI(QObject):
             cap = self.trUtf8("Run Script")
         dlg = StartDialog(cap, self.argvHistory, self.wdHistory, self.envHistory, 
             self.exceptions, self.ui, 1,
-            autoClearShell = self.autoClearShell)
+            autoClearShell = self.autoClearShell, 
+            autoFork = self.forkAutomatically, 
+            forkChild = self.forkIntoChild)
         if dlg.exec_() == QDialog.Accepted:
             argv, wd, env, exceptions, clearShell, clearHistories, console = dlg.getData()
+            forkAutomatically, forkIntoChild = dlg.getRunData()
             
             if runProject:
                 fn = self.project.getMainScript(1)
@@ -1615,6 +1618,10 @@ class DebugUI(QObject):
             # Save the run in console flag
             self.runInConsole = console
             
+            # Save the forking flags
+            self.forkAutomatically = forkAutomatically
+            self.forkIntoChild = forkIntoChild
+            
             # Hide all error highlights
             self.viewmanager.unhighlight()
             
@@ -1626,7 +1633,8 @@ class DebugUI(QObject):
                 # Ask the client to open the new program.
                 self.debugServer.remoteRun(fn, argv, wd, env,
                     autoClearShell = self.autoClearShell, forProject = runProject, 
-                    runInConsole = console)
+                    runInConsole = console, autoFork = forkAutomatically, 
+                    forkChild = forkIntoChild)
                 
                 self.stopAct.setEnabled(True)
         
@@ -1793,20 +1801,25 @@ class DebugUI(QObject):
                 self.debugServer.remoteLoad(fn, argv, wd, env,  
                     autoClearShell = self.autoClearShell, tracePython = self.tracePython,
                     autoContinue = self.autoContinue, forProject = forProject, 
-                    runInConsole = self.runInConsole)
+                    runInConsole = self.runInConsole, autoFork = self.forkAutomatically, 
+                    forkChild = self.forkIntoChild)
                 
                 # Signal that we have started a debugging session
                 self.emit(SIGNAL('debuggingStarted'), fn)
+            
             elif self.lastStartAction in [3, 4]:
                 # Ask the client to run the new program.
                 self.debugServer.remoteRun(fn, argv, wd, env, 
                     autoClearShell = self.autoClearShell, forProject = forProject, 
-                    runInConsole = self.runInConsole)
+                    runInConsole = self.runInConsole, autoFork = self.forkAutomatically, 
+                    forkChild = self.forkIntoChild)
+            
             elif self.lastStartAction in [5, 6]:
                 # Ask the client to coverage run the new program.
                 self.debugServer.remoteCoverage(fn, argv, wd, env, 
                     autoClearShell = self.autoClearShell, erase = self.eraseCoverage,
                     forProject = forProject, runInConsole = self.runInConsole)
+            
             elif self.lastStartAction in [7, 8]:
                 # Ask the client to profile run the new program.
                 self.debugServer.remoteProfile(fn, argv, wd, env, 

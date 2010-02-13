@@ -1936,6 +1936,7 @@
       <keyword name="StartDialog.getData" id="StartDialog.getData" ref="eric5.Debugger.StartDialog.html#StartDialog.getData" />
       <keyword name="StartDialog.getDebugData" id="StartDialog.getDebugData" ref="eric5.Debugger.StartDialog.html#StartDialog.getDebugData" />
       <keyword name="StartDialog.getProfilingData" id="StartDialog.getProfilingData" ref="eric5.Debugger.StartDialog.html#StartDialog.getProfilingData" />
+      <keyword name="StartDialog.getRunData" id="StartDialog.getRunData" ref="eric5.Debugger.StartDialog.html#StartDialog.getRunData" />
       <keyword name="StartDialog.on_buttonBox_clicked" id="StartDialog.on_buttonBox_clicked" ref="eric5.Debugger.StartDialog.html#StartDialog.on_buttonBox_clicked" />
       <keyword name="StartDialog.on_dirButton_clicked" id="StartDialog.on_dirButton_clicked" ref="eric5.Debugger.StartDialog.html#StartDialog.on_dirButton_clicked" />
       <keyword name="StartDialog.on_modFuncCombo_editTextChanged" id="StartDialog.on_modFuncCombo_editTextChanged" ref="eric5.Debugger.StartDialog.html#StartDialog.on_modFuncCombo_editTextChanged" />

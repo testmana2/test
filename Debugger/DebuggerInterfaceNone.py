@@ -134,13 +134,15 @@ class DebuggerInterfaceNone(QObject):
         """
         return
         
-    def remoteRun(self, fn, argv, wd):
+    def remoteRun(self, fn, argv, wd, autoFork = False, forkChild = False):
         """
         Public method to load a new program to run.
         
         @param fn the filename to run (string)
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
+        @keyparam autoFork flag indicating the automatic fork mode (boolean)
+        @keyparam forkChild flag indicating to debug the child after forking (boolean)
         """
         return
         

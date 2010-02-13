@@ -569,7 +569,7 @@ the raw input (string)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteRun" ID="DebuggerInterfacePython3.remoteRun"></a>
 <h4>DebuggerInterfacePython3.remoteRun</h4>
-<b>remoteRun</b>(<i>fn, argv, wd</i>)
+<b>remoteRun</b>(<i>fn, argv, wd, autoFork = False, forkChild = False</i>)
 <p>
         Public method to load a new program to run.
 </p><dl>
@@ -582,6 +582,12 @@ the commandline arguments to pass to the program (string)
 </dd><dt><i>wd</i></dt>
 <dd>
 the working directory for the program (string)
+</dd><dt><i>autoFork=</i></dt>
+<dd>
+flag indicating the automatic fork mode (boolean)
+</dd><dt><i>forkChild=</i></dt>
+<dd>
+flag indicating to debug the child after forking (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteSetThread" ID="DebuggerInterfacePython3.remoteSetThread"></a>
 <h4>DebuggerInterfacePython3.remoteSetThread</h4>

@@ -100,7 +100,11 @@ class StartDialog(QDialog):
             self.ui.forkModeCheckBox.setChecked(autoFork)
             self.ui.forkChildCheckBox.setChecked(forkChild)
         
-        if type == 3:   # start coverage or profile dialog
+        if type == 1:       # start run dialog
+            self.ui.forkModeCheckBox.setChecked(autoFork)
+            self.ui.forkChildCheckBox.setChecked(forkChild)
+        
+        if type == 3:       # start coverage or profile dialog
             self.ui.eraseCheckBox.setChecked(True)
         
         self.__clearHistoryLists = False
@@ -161,6 +165,18 @@ class StartDialog(QDialog):
             return (self.ui.tracePythonCheckBox.isChecked(),
                     self.ui.autoContinueCheckBox.isChecked(),
                     self.ui.forkModeCheckBox.isChecked(), 
+                    self.ui.forkChildCheckBox.isChecked())
+        
+    def getRunData(self):
+        """
+        Public method to retrieve the debug related data entered into this dialog.
+        
+        @return a tuple of a flag indicating, that the debugger should fork automatically
+            (boolean) and a flag indicating, that the debugger should debug the child 
+            process after forking automatically (boolean)
+        """
+        if self.type == 1:
+            return (self.ui.forkModeCheckBox.isChecked(), 
                     self.ui.forkChildCheckBox.isChecked())
         
     def getCoverageData(self):

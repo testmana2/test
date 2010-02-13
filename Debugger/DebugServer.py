@@ -652,7 +652,8 @@ class DebugServer(QTcpServer):
         self.__restoreWatchpoints()
 
     def remoteRun(self, fn, argv, wd, env, autoClearShell = True,
-                  forProject = False, runInConsole = False):
+                  forProject = False, runInConsole = False, 
+                  autoFork = False, forkChild = False):
         """
         Public method to load a new program to run.
         
@@ -665,6 +666,8 @@ class DebugServer(QTcpServer):
         @keyparam forProject flag indicating a project related action (boolean)
         @keyparam runInConsole flag indicating to start the debugger in a 
             console window (boolean)
+        @keyparam autoFork flag indicating the automatic fork mode (boolean)
+        @keyparam forkChild flag indicating to debug the child after forking (boolean)
         """
         self.__autoClearShell = autoClearShell
         
@@ -677,7 +680,7 @@ class DebugServer(QTcpServer):
         
         self.remoteEnvironment(env)
         
-        self.debuggerInterface.remoteRun(fn, argv, wd)
+        self.debuggerInterface.remoteRun(fn, argv, wd, autoFork, forkChild)
         self.debugging = False
 
     def remoteCoverage(self, fn, argv, wd, env, autoClearShell = True,

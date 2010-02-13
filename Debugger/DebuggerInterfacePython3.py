@@ -436,16 +436,19 @@ class DebuggerInterfacePython3(QObject):
             (RequestLoad, wd, fn, str(Utilities.parseOptionString(argv)), 
              traceInterpreter))
     
-    def remoteRun(self, fn, argv, wd):
+    def remoteRun(self, fn, argv, wd, autoFork = False, forkChild = False):
         """
         Public method to load a new program to run.
         
         @param fn the filename to run (string)
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
+        @keyparam autoFork flag indicating the automatic fork mode (boolean)
+        @keyparam forkChild flag indicating to debug the child after forking (boolean)
         """
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
+        self.__sendCommand('%s%s\n' % (RequestForkMode, repr((autoFork, forkChild))))
         self.__sendCommand('%s%s|%s|%s\n' % \
             (RequestRun, wd, fn, str(Utilities.parseOptionString(argv))))
     

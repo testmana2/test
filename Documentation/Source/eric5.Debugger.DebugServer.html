@@ -1410,7 +1410,7 @@ the raw input (string)
 </dd>
 </dl><a NAME="DebugServer.remoteRun" ID="DebugServer.remoteRun"></a>
 <h4>DebugServer.remoteRun</h4>
-<b>remoteRun</b>(<i>fn, argv, wd, env, autoClearShell = True, forProject = False, runInConsole = False</i>)
+<b>remoteRun</b>(<i>fn, argv, wd, env, autoClearShell = True, forProject = False, runInConsole = False, autoFork = False, forkChild = False</i>)
 <p>
         Public method to load a new program to run.
 </p><dl>
@@ -1437,6 +1437,12 @@ flag indicating a project related action (boolean)
 <dd>
 flag indicating to start the debugger in a
             console window (boolean)
+</dd><dt><i>autoFork=</i></dt>
+<dd>
+flag indicating the automatic fork mode (boolean)
+</dd><dt><i>forkChild=</i></dt>
+<dd>
+flag indicating to debug the child after forking (boolean)
 </dd>
 </dl><a NAME="DebugServer.remoteSetThread" ID="DebugServer.remoteSetThread"></a>
 <h4>DebugServer.remoteSetThread</h4>

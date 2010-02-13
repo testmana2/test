@@ -6,6 +6,7 @@ Version 5.0-snapshot-2010mmdd:
 - extendend the predefined template variables by "project_path",
   "clipboard", "cur_select", "insertion", "select_start" and
   "select_end"
+- added the auto fork options to the run dialog
 
 Version 5.0-snapshot-20100206:
 - bug fixes
