@@ -123,7 +123,10 @@ class AsyncFile(object):
         
         @return file number (int)
         """
-        return self.sock.fileno()
+        try:
+            return self.sock.fileno()
+        except socket.error:
+            return -1
 
     def read_p(self, size = -1):
         """
