@@ -100,7 +100,7 @@ class ColorDialogWizard(QObject):
         dlg = ColorDialogWizardDialog(None)
         if dlg.exec_() == QDialog.Accepted:
             line, index = editor.getCursorPosition()
-            indLevel = editor.indentation(line)/editor.indentationWidth()
+            indLevel = editor.indentation(line) // editor.indentationWidth()
             if editor.indentationsUseTabs():
                 indString = '\t'
             else:
