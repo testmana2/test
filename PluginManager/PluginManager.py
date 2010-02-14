@@ -311,7 +311,7 @@ class PluginManager(QObject):
             module.eric5PluginModuleFilename = fname
             self.__modulesCount += 1
             if reload_:
-                reload(module)
+                imp.reload(module)
         except PluginLoadError:
             print("Error loading plugin module:", name)
         except Exception as err:
