@@ -14,6 +14,7 @@ import fnmatch
 import glob
 import random
 import base64
+import getpass
 
 import warnings
 warnings.filterwarnings("error", category=SyntaxWarning)
@@ -839,10 +840,10 @@ def getUserName():
     
     @return user name (string)
     """
-    if isWindowsPlatform():
+    user = getpass.getuser()
+    
+    if not user and isWindowsPlatform():
         return win32_GetUserName()
-    else:
-        return posix_GetUserName()
 
 def getHomeDir():
     """
@@ -1195,21 +1196,7 @@ def pwDecode(epw):
 # posix compatibility functions below
 ################################################################################
 
-def posix_GetUserName():
-    """
-    Function to get the user name under Posix systems.
-    
-    @return user name (string)
-    """
-    try:
-        import pwd
-        return pwd.getpwuid(os.getuid())[0]
-    except ImportError:
-        try:
-            u = getEnvironmentEntry('USER')
-        except KeyError:
-            u = getEnvironmentEntry('user', None)
-        return u
+# None right now
 
 ################################################################################
 # win32 compatibility functions below

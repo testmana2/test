@@ -2466,7 +2466,6 @@
       <keyword name="parseEnvironmentString" id="parseEnvironmentString" ref="eric5.Utilities.__init__.html#parseEnvironmentString" />
       <keyword name="parseOptionString" id="parseOptionString" ref="eric5.Utilities.__init__.html#parseOptionString" />
       <keyword name="parseString" id="parseString" ref="eric5.Utilities.__init__.html#parseString" />
-      <keyword name="posix_GetUserName" id="posix_GetUserName" ref="eric5.Utilities.__init__.html#posix_GetUserName" />
       <keyword name="prepareQtMacBundle" id="prepareQtMacBundle" ref="eric5.Utilities.__init__.html#prepareQtMacBundle" />
       <keyword name="pwDecode" id="pwDecode" ref="eric5.Utilities.__init__.html#pwDecode" />
       <keyword name="pwEncode" id="pwEncode" ref="eric5.Utilities.__init__.html#pwEncode" />
