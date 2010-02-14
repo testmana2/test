@@ -4057,15 +4057,22 @@ class Editor(QsciScintillaCompat):
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
                         ignoreStarImportWarnings = \
                             Preferences.getFlakes("IgnoreStarImportWarnings")
-                        warnings = Checker(self.text(), self.fileName)
-                        warnings.messages.sort(key = lambda a: a.lineno)
-                        for warning in warnings.messages:
-                            if ignoreStarImportWarnings and \
-                               isinstance(warning, ImportStarUsed):
-                                continue
-                            
-                            _fn, lineno, message = warning.getMessageData()
-                            self.toggleFlakesWarning(lineno, True, message)
+                        try:
+                            warnings = Checker(self.text(), self.fileName)
+                            warnings.messages.sort(key = lambda a: a.lineno)
+                            for warning in warnings.messages:
+                                if ignoreStarImportWarnings and \
+                                   isinstance(warning, ImportStarUsed):
+                                    continue
+                                
+                                _fn, lineno, message = warning.getMessageData()
+                                self.toggleFlakesWarning(lineno, True, message)
+                        except SyntaxError as err:
+                            if err.text.strip():
+                                msg = err.text.strip()
+                            else:
+                                msg = err.msg
+                            self.toggleSyntaxError(err.lineno, True, msg)
         
     def __showCodeMetrics(self):
         """

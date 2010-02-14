@@ -140,16 +140,23 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     self.__createResultItem(fname, line, error, code)
                 else:
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
-                        warnings = Checker(source, file)
-                        warnings.messages.sort(key = lambda a: a.lineno)
-                        for warning in warnings.messages:
-                            if ignoreStarImportWarnings and \
-                               isinstance(warning, ImportStarUsed):
-                                continue
-                            self.noResults = False
-                            fname, lineno, message = warning.getMessageData()
-                            self.__createResultItem(fname, lineno, message, "", 
-                                                    isWarning = True)
+                        try:
+                            warnings = Checker(source, file)
+                            warnings.messages.sort(key = lambda a: a.lineno)
+                            for warning in warnings.messages:
+                                if ignoreStarImportWarnings and \
+                                   isinstance(warning, ImportStarUsed):
+                                    continue
+                                self.noResults = False
+                                fname, lineno, message = warning.getMessageData()
+                                self.__createResultItem(fname, lineno, message, "", 
+                                                        isWarning = True)
+                        except SyntaxError as err:
+                            if err.text.strip():
+                                msg = err.text.strip()
+                            else:
+                                msg = err.msg
+                            self.__createResultItem(err.filename, err.lineno, msg, "")
                 progress += 1
                 self.checkProgress.setValue(progress)
                 QApplication.processEvents()
