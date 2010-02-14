@@ -32,7 +32,7 @@ class HelpTopicDialog(QDialog, Ui_HelpTopicDialog):
             .format(keyword))
         
         self.__links = links
-        for topic in self.__links:
+        for topic in sorted(self.__links):
             self.topicsList.addItem(topic)
         if self.topicsList.count() > 0:
             self.topicsList.setCurrentRow(0)

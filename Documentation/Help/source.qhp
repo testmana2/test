@@ -2917,6 +2917,7 @@
       <keyword name="HelpIndexWidget (Module)" id="HelpIndexWidget (Module)" ref="eric5.Helpviewer.HelpIndexWidget.html" />
       <keyword name="HelpIndexWidget" id="HelpIndexWidget" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget" />
       <keyword name="HelpIndexWidget (Constructor)" id="HelpIndexWidget (Constructor)" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__init__" />
+      <keyword name="HelpIndexWidget.__activated" id="HelpIndexWidget.__activated" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__activated" />
       <keyword name="HelpIndexWidget.__disableSearchEdit" id="HelpIndexWidget.__disableSearchEdit" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__disableSearchEdit" />
       <keyword name="HelpIndexWidget.__enableSearchEdit" id="HelpIndexWidget.__enableSearchEdit" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__enableSearchEdit" />
       <keyword name="HelpIndexWidget.__filterIndices" id="HelpIndexWidget.__filterIndices" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__filterIndices" />

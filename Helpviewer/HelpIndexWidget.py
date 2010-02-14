@@ -16,7 +16,9 @@ class HelpIndexWidget(QWidget):
     """
     Class implementing a window for showing the QtHelp index.
     
-    @signal linkActivated(const QUrl&) emitted when an index  entry is activated
+    @signal linkActivated(const QUrl&) emitted when an index entry is activated
+    @signal linksActivated(links, keyword) emitted when an index entry referencing
+            multiple targets is activated
     @signal escapePressed() emitted when the ESC key was pressed
     """
     def __init__(self, engine, mainWindow, parent = None):
@@ -52,17 +54,29 @@ class HelpIndexWidget(QWidget):
                      self.__disableSearchEdit)
         self.connect(self.__engine.indexModel(), SIGNAL("indexCreated()"), 
                      self.__enableSearchEdit)
-        self.connect(self.__index, SIGNAL("linkActivated(const QUrl&, const QString&)"), 
-                     self, SIGNAL("linkActivated(const QUrl&)"))
-        self.connect(self.__index, 
-                     SIGNAL("linksActivated(const QMap<QString, QUrl>&, const QString&)"),
-                     self, 
-                     SIGNAL("linksActivated(const QMap<QString, QUrl>&, const QString&)"))
+        self.connect(self.__index, SIGNAL("activated(const QModelIndex&)"), 
+                     self.__activated)
         self.connect(self.__searchEdit, SIGNAL("returnPressed()"), 
                      self.__index, SLOT("activateCurrentItem()"))
         self.__layout.addWidget(self.__index)
         
         self.__index.viewport().installEventFilter(self)
+    
+    def __activated(self, idx):
+        """
+        Private slot to handle the activation of a keyword entry.
+        
+        @param idx index of the activated entry (QModelIndex)
+        """
+        model = self.__index.model()
+        if model is not None:
+            keyword = model.data(idx, Qt.DisplayRole)
+            links = model.linksForKeyword(keyword)
+            if len(links) == 1:
+                self.emit(SIGNAL("linkActivated(const QUrl&)"), 
+                          QUrl(links[list(links.keys())[0]]))
+            else:
+                self.emit(SIGNAL("linksActivated"), links, keyword)
     
     def __filterIndices(self, filter):
         """
@@ -132,7 +146,7 @@ class HelpIndexWidget(QWidget):
                 
                 act = menu.exec_()
                 if act == curTab:
-                    self.__index.activateCurrentItem()
+                    self.__activated(idx)
                 elif act == newTab:
                     model = self.__index.model()
                     if model is not None:

@@ -51,7 +51,11 @@ Module implementing a window for showing the QtHelp index.
 emitted when the ESC key was pressed
 </dd><dt>linkActivated(const QUrl&)</dt>
 <dd>
-emitted when an index  entry is activated
+emitted when an index entry is activated
+</dd><dt>linksActivated(links, keyword)</dt>
+<dd>
+emitted when an index entry referencing
+            multiple targets is activated
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -65,6 +69,9 @@ QWidget
 <tr>
 <td><a href="#HelpIndexWidget.__init__">HelpIndexWidget</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#HelpIndexWidget.__activated">__activated</a></td>
+<td>Private slot to handle the activation of a keyword entry.</td>
 </tr><tr>
 <td><a href="#HelpIndexWidget.__disableSearchEdit">__disableSearchEdit</a></td>
 <td>Private slot to enable the search edit.</td>
@@ -97,6 +104,16 @@ reference to the main window object (QMainWindow)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="HelpIndexWidget.__activated" ID="HelpIndexWidget.__activated"></a>
+<h4>HelpIndexWidget.__activated</h4>
+<b>__activated</b>(<i>idx</i>)
+<p>
+        Private slot to handle the activation of a keyword entry.
+</p><dl>
+<dt><i>idx</i></dt>
+<dd>
+index of the activated entry (QModelIndex)
 </dd>
 </dl><a NAME="HelpIndexWidget.__disableSearchEdit" ID="HelpIndexWidget.__disableSearchEdit"></a>
 <h4>HelpIndexWidget.__disableSearchEdit</h4>

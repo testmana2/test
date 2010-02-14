@@ -245,7 +245,7 @@ class HelpWindow(QMainWindow):
             self.connect(self.__indexWindow, SIGNAL("linkActivated(const QUrl&)"), 
                          self.__linkActivated)
             self.connect(self.__indexWindow, 
-                         SIGNAL("linksActivated(const QMap<QString, QUrl>&, const QString&)"),
+                         SIGNAL("linksActivated"),
                          self.__linksActivated)
             self.connect(self.__indexWindow, SIGNAL("escapePressed()"), 
                          self.__activateCurrentBrowser)
