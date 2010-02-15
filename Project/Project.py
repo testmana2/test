@@ -1907,7 +1907,7 @@ class Project(QObject):
         
     def addOthersFiles(self):
         """
-        Private slot to add files to the OTHERS project data.
+        Public slot to add files to the OTHERS project data.
         """
         self.addFiles('others')
         
@@ -1937,7 +1937,7 @@ class Project(QObject):
         
     def addOthersDir(self):
         """
-        Private slot to add a directory to the OTHERS project data.
+        Public slot to add a directory to the OTHERS project data.
         """
         self.addDirectory('others')
         
