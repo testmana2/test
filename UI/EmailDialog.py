@@ -41,11 +41,12 @@ def _encode_base64(msg):
 
 from email import encoders
 encoders.encode_base64 = _encode_base64     # WORK AROUND: implement our corrected encoder
-from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.audio import MIMEAudio
+from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
+from email.header import Header
 
 class EmailDialog(QDialog, Ui_EmailDialog):
     """
@@ -162,18 +163,27 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
         @return string containing the mail message
         """
+        coding = Preferences.getSystem("StringEncoding")
         msgtext = "%s\r\n----\r\n%s----\r\n%s----\r\n%s" % \
             (self.message.toPlainText(), 
              Utilities.generateVersionInfo("\r\n"), 
              Utilities.generatePluginsVersionInfo("\r\n"), 
              Utilities.generateDistroInfo("\r\n"))
         
-        msg = MIMEText(msgtext, 
-                       _charset = Preferences.getSystem("StringEncoding"))
+        try:
+            msgtext.encode("us-ascii")
+            msg = MIMEText(msgtext)
+        except UnicodeEncodeError:
+            msg = MIMEText(msgtext.encode(coding), _charset = coding)
         msg['From']    = Preferences.getUser("Email")
         msg['To']      = self.__toAddress
-        msg['Subject'] = '[eric5] %s' % self.subject.text()
-            
+        subject = '[eric5] %s' % self.subject.text()
+        try:
+            subject.encode("us-ascii")
+            msg['Subject'] = subject
+        except UnicodeEncodeError:
+            msg['Subject'] = Header(subject, coding)
+        
         return msg.as_string()
         
     def __createMultipartMail(self):
@@ -182,6 +192,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
         @return string containing the mail message
         """
+        coding = Preferences.getSystem("StringEncoding")
         mpPreamble = ("This is a MIME-encoded message with attachments. "
             "If you see this message, your mail client is not "
             "capable of displaying the attachments.")
@@ -196,13 +207,21 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         msg = MIMEMultipart()
         msg['From']    = Preferences.getUser("Email")
         msg['To']      = self.__toAddress
-        msg['Subject'] = '[eric5] %s' % self.subject.text()
+        subject = '[eric5] %s' % self.subject.text()
+        try:
+            subject.encode("us-ascii")
+            msg['Subject'] = subject
+        except UnicodeEncodeError:
+            msg['Subject'] = Header(subject, coding)
         msg.preamble = mpPreamble
         msg.epilogue = ''
         
         # second part is intended to be read
-        att = MIMEText(msgtext.encode(), 
-                       _charset = Preferences.getSystem("StringEncoding"))
+        try:
+            msgtext.encode("us-ascii")
+            att = MIMEText(msgtext)
+        except UnicodeEncodeError:
+            att = MIMEText(msgtext.encode(coding), _charset = coding)
         msg.attach(att)
         
         # next parts contain the attachments
@@ -213,16 +232,19 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             name = os.path.basename(fname)
             
             if maintype == 'text':
-                att = MIMEText(
-                    open(fname, 'r', encoding = "utf-8").read(), _subtype = subtype)
+                txt = open(fname, 'r', encoding = "utf-8").read()
+                try:
+                    txt.encode("us-ascii")
+                    att = MIMEText(txt, _subtype = subtype)
+                except UnicodeEncodeError:
+                    att = MIMEText(
+                        txt.encode("utf-8"), _subtype = subtype, _charset = "utf-8")
             elif maintype == 'image':
                 att = MIMEImage(open(fname, 'rb').read(), _subtype = subtype)
             elif maintype == 'audio':
                 att = MIMEAudio(open(fname, 'rb').read(), _subtype = subtype)
             else:
-                att = MIMEBase(maintype, subtype)
-                att.set_payload(open(fname, 'rb').read())
-                encoders.encode_base64(att)
+                att = MIMEApplication(open(fname, 'rb').read())
             att.add_header('Content-Disposition', 'attachment', filename = name)
             msg.attach(att)
             
