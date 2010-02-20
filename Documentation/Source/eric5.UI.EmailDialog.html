@@ -66,6 +66,12 @@ QDialog, Ui_EmailDialog
 <td><a href="#EmailDialog.__createSimpleMail">__createSimpleMail</a></td>
 <td>Private method to create a simple mail message.</td>
 </tr><tr>
+<td><a href="#EmailDialog.__encodedHeader">__encodedHeader</a></td>
+<td>Private method to create a correctly encoded mail header.</td>
+</tr><tr>
+<td><a href="#EmailDialog.__encodedText">__encodedText</a></td>
+<td>Private method to create a MIMEText message with correct encoding.</td>
+</tr><tr>
 <td><a href="#EmailDialog.__sendmail">__sendmail</a></td>
 <td>Private method to actually send the message.</td>
 </tr><tr>
@@ -129,6 +135,36 @@ string containing the mail message
 <dt>Returns:</dt>
 <dd>
 string containing the mail message
+</dd>
+</dl><a NAME="EmailDialog.__encodedHeader" ID="EmailDialog.__encodedHeader"></a>
+<h4>EmailDialog.__encodedHeader</h4>
+<b>__encodedHeader</b>(<i>txt</i>)
+<p>
+        Private method to create a correctly encoded mail header.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+header text to encode (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+encoded header (email.header.Header)
+</dd>
+</dl><a NAME="EmailDialog.__encodedText" ID="EmailDialog.__encodedText"></a>
+<h4>EmailDialog.__encodedText</h4>
+<b>__encodedText</b>(<i>txt</i>)
+<p>
+        Private method to create a MIMEText message with correct encoding.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be put into the MIMEText object (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+MIMEText object
 </dd>
 </dl><a NAME="EmailDialog.__sendmail" ID="EmailDialog.__sendmail"></a>
 <h4>EmailDialog.__sendmail</h4>

@@ -3753,6 +3753,8 @@
       <keyword name="EmailDialog (Constructor)" id="EmailDialog (Constructor)" ref="eric5.UI.EmailDialog.html#EmailDialog.__init__" />
       <keyword name="EmailDialog.__createMultipartMail" id="EmailDialog.__createMultipartMail" ref="eric5.UI.EmailDialog.html#EmailDialog.__createMultipartMail" />
       <keyword name="EmailDialog.__createSimpleMail" id="EmailDialog.__createSimpleMail" ref="eric5.UI.EmailDialog.html#EmailDialog.__createSimpleMail" />
+      <keyword name="EmailDialog.__encodedHeader" id="EmailDialog.__encodedHeader" ref="eric5.UI.EmailDialog.html#EmailDialog.__encodedHeader" />
+      <keyword name="EmailDialog.__encodedText" id="EmailDialog.__encodedText" ref="eric5.UI.EmailDialog.html#EmailDialog.__encodedText" />
       <keyword name="EmailDialog.__sendmail" id="EmailDialog.__sendmail" ref="eric5.UI.EmailDialog.html#EmailDialog.__sendmail" />
       <keyword name="EmailDialog.attachFile" id="EmailDialog.attachFile" ref="eric5.UI.EmailDialog.html#EmailDialog.attachFile" />
       <keyword name="EmailDialog.keyPressEvent" id="EmailDialog.keyPressEvent" ref="eric5.UI.EmailDialog.html#EmailDialog.keyPressEvent" />

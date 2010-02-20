@@ -157,32 +157,51 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                     pass
             self.accept()
         
+    def __encodedText(self, txt):
+        """
+        Private method to create a MIMEText message with correct encoding.
+        
+        @param txt text to be put into the MIMEText object (string)
+        @return MIMEText object
+        """
+        try:
+            txt.encode("us-ascii")
+            return MIMEText(txt)
+        except UnicodeEncodeError:
+            coding = Preferences.getSystem("StringEncoding")
+            return MIMEText(txt.encode(coding), _charset = coding)
+        
+    def __encodedHeader(self, txt):
+        """
+        Private method to create a correctly encoded mail header.
+        
+        @param txt header text to encode (string)
+        @return encoded header (email.header.Header)
+        """
+        try:
+            txt.encode("us-ascii")
+            return Header(txt)
+        except UnicodeEncodeError:
+            coding = Preferences.getSystem("StringEncoding")
+            return Header(txt, coding)
+        
     def __createSimpleMail(self):
         """
         Private method to create a simple mail message.
         
         @return string containing the mail message
         """
-        coding = Preferences.getSystem("StringEncoding")
         msgtext = "%s\r\n----\r\n%s----\r\n%s----\r\n%s" % \
             (self.message.toPlainText(), 
              Utilities.generateVersionInfo("\r\n"), 
              Utilities.generatePluginsVersionInfo("\r\n"), 
              Utilities.generateDistroInfo("\r\n"))
         
-        try:
-            msgtext.encode("us-ascii")
-            msg = MIMEText(msgtext)
-        except UnicodeEncodeError:
-            msg = MIMEText(msgtext.encode(coding), _charset = coding)
+        msg = self.__encodedText(msgtext)
         msg['From']    = Preferences.getUser("Email")
         msg['To']      = self.__toAddress
         subject = '[eric5] %s' % self.subject.text()
-        try:
-            subject.encode("us-ascii")
-            msg['Subject'] = subject
-        except UnicodeEncodeError:
-            msg['Subject'] = Header(subject, coding)
+        msg['Subject'] = self.__encodedHeader(subject)
         
         return msg.as_string()
         
@@ -192,7 +211,6 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
         @return string containing the mail message
         """
-        coding = Preferences.getSystem("StringEncoding")
         mpPreamble = ("This is a MIME-encoded message with attachments. "
             "If you see this message, your mail client is not "
             "capable of displaying the attachments.")
@@ -208,20 +226,12 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         msg['From']    = Preferences.getUser("Email")
         msg['To']      = self.__toAddress
         subject = '[eric5] %s' % self.subject.text()
-        try:
-            subject.encode("us-ascii")
-            msg['Subject'] = subject
-        except UnicodeEncodeError:
-            msg['Subject'] = Header(subject, coding)
+        msg['Subject'] = self.__encodedHeader(subject)
         msg.preamble = mpPreamble
         msg.epilogue = ''
         
         # second part is intended to be read
-        try:
-            msgtext.encode("us-ascii")
-            att = MIMEText(msgtext)
-        except UnicodeEncodeError:
-            att = MIMEText(msgtext.encode(coding), _charset = coding)
+        att = self.__encodedText(msgtext)
         msg.attach(att)
         
         # next parts contain the attachments
