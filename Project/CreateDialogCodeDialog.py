@@ -219,8 +219,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                             method = "on_%s_%s" % \
                                 (name, metaMethod.signature().split("(")[0])
                             method2 = "on_%s_%s" % \
-                                (name, 
-                                 QMetaObject.normalizedSignature(metaMethod.signature()))
+                                (name, bytes(QMetaObject.normalizedSignature(
+                                    metaMethod.signature())).decode())
                             
                             if method2 in signatureList or method in signatureList:
                                 itm2.setFlags(Qt.ItemFlags(Qt.ItemIsEnabled))
