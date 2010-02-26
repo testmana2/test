@@ -1843,7 +1843,7 @@ class Project(QObject):
                 return
             
             if filetype == 'OTHERS':
-                self.__addToOthers(source)
+                self.addToOthers(source)
                 return
             
             if source == '':
@@ -1859,11 +1859,11 @@ class Project(QObject):
             else:
                 self.__addSingleDirectory(filetype, source, target)
         
-    def __addToOthers(self, fn):
+    def addToOthers(self, fn):
         """
-        Private method to add file/directory to the OTHERS project data.
+        Public method to add a file/directory to the OTHERS project data.
         
-        @param fn filename or directoryname to add
+        @param fn file name or directory name to add (string)
         """
         if fn:
             # if it is below the project directory, make it relative to that
