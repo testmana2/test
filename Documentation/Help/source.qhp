@@ -4319,7 +4319,6 @@
       <keyword name="Project (Constructor)" id="Project (Constructor)" ref="eric5.Project.Project.html#Project.__init__" />
       <keyword name="Project.__addRecursiveDirectory" id="Project.__addRecursiveDirectory" ref="eric5.Project.Project.html#Project.__addRecursiveDirectory" />
       <keyword name="Project.__addSingleDirectory" id="Project.__addSingleDirectory" ref="eric5.Project.Project.html#Project.__addSingleDirectory" />
-      <keyword name="Project.__addToOthers" id="Project.__addToOthers" ref="eric5.Project.Project.html#Project.__addToOthers" />
       <keyword name="Project.__binaryTranslationFile" id="Project.__binaryTranslationFile" ref="eric5.Project.Project.html#Project.__binaryTranslationFile" />
       <keyword name="Project.__checkFilesExist" id="Project.__checkFilesExist" ref="eric5.Project.Project.html#Project.__checkFilesExist" />
       <keyword name="Project.__clearRecent" id="Project.__clearRecent" ref="eric5.Project.Project.html#Project.__clearRecent" />
@@ -4385,6 +4384,7 @@
       <keyword name="Project.addResourceFiles" id="Project.addResourceFiles" ref="eric5.Project.Project.html#Project.addResourceFiles" />
       <keyword name="Project.addSourceDir" id="Project.addSourceDir" ref="eric5.Project.Project.html#Project.addSourceDir" />
       <keyword name="Project.addSourceFiles" id="Project.addSourceFiles" ref="eric5.Project.Project.html#Project.addSourceFiles" />
+      <keyword name="Project.addToOthers" id="Project.addToOthers" ref="eric5.Project.Project.html#Project.addToOthers" />
       <keyword name="Project.addUiDir" id="Project.addUiDir" ref="eric5.Project.Project.html#Project.addUiDir" />
       <keyword name="Project.addUiFiles" id="Project.addUiFiles" ref="eric5.Project.Project.html#Project.addUiFiles" />
       <keyword name="Project.appendFile" id="Project.appendFile" ref="eric5.Project.Project.html#Project.appendFile" />

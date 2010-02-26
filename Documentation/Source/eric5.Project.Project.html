@@ -157,9 +157,6 @@ QObject
 <td><a href="#Project.__addSingleDirectory">__addSingleDirectory</a></td>
 <td>Private method used to add all files of a single directory to the project.</td>
 </tr><tr>
-<td><a href="#Project.__addToOthers">__addToOthers</a></td>
-<td>Private method to add file/directory to the OTHERS project data.</td>
-</tr><tr>
 <td><a href="#Project.__binaryTranslationFile">__binaryTranslationFile</a></td>
 <td>Private method to calculate the filename of the binary translations file given the name of the raw translations file.</td>
 </tr><tr>
@@ -354,6 +351,9 @@ QObject
 </tr><tr>
 <td><a href="#Project.addSourceFiles">addSourceFiles</a></td>
 <td>Public slot to add source files to the current project.</td>
+</tr><tr>
+<td><a href="#Project.addToOthers">addToOthers</a></td>
+<td>Public method to add a file/directory to the OTHERS project data.</td>
 </tr><tr>
 <td><a href="#Project.addUiDir">addUiDir</a></td>
 <td>Public slot to add all forms of a directory to the current project.</td>
@@ -640,16 +640,6 @@ target directory (string)
 </dd><dt><i>quiet</i></dt>
 <dd>
 flag indicating quiet operations (boolean)
-</dd>
-</dl><a NAME="Project.__addToOthers" ID="Project.__addToOthers"></a>
-<h4>Project.__addToOthers</h4>
-<b>__addToOthers</b>(<i>fn</i>)
-<p>
-        Private method to add file/directory to the OTHERS project data.
-</p><dl>
-<dt><i>fn</i></dt>
-<dd>
-filename or directoryname to add
 </dd>
 </dl><a NAME="Project.__binaryTranslationFile" ID="Project.__binaryTranslationFile"></a>
 <h4>Project.__binaryTranslationFile</h4>
@@ -1225,7 +1215,17 @@ start directory for the selection dialog
 <b>addSourceFiles</b>(<i></i>)
 <p>
         Public slot to add source files to the current project.
-</p><a NAME="Project.addUiDir" ID="Project.addUiDir"></a>
+</p><a NAME="Project.addToOthers" ID="Project.addToOthers"></a>
+<h4>Project.addToOthers</h4>
+<b>addToOthers</b>(<i>fn</i>)
+<p>
+        Public method to add a file/directory to the OTHERS project data.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+file name or directory name to add (string)
+</dd>
+</dl><a NAME="Project.addUiDir" ID="Project.addUiDir"></a>
 <h4>Project.addUiDir</h4>
 <b>addUiDir</b>(<i></i>)
 <p>
