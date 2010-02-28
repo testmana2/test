@@ -4765,6 +4765,7 @@ class Editor(QsciScintillaCompat):
         self.vm.editorActGrp.setEnabled(True)
         self.vm.copyActGrp.setEnabled(True)
         self.vm.viewActGrp.setEnabled(True)
+        self.vm.searchActGrp.setEnabled(True)
         try:
             self.setCaretWidth(self.caretWidth)
         except AttributeError:

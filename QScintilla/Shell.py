@@ -1391,6 +1391,7 @@ class Shell(QsciScintillaCompat):
             self.vm.editorActGrp.setEnabled(True)
             self.vm.copyActGrp.setEnabled(True)
             self.vm.viewActGrp.setEnabled(True)
+            self.vm.searchActGrp.setEnabled(False)
         except AttributeError:
             pass
         self.setCaretWidth(self.caretWidth)

@@ -225,7 +225,7 @@ def main():
 
     splash.showMessage(QApplication.translate("eric5", "Generating Main Window..."))
     try:
-        mainWindow = UserInterface(loc, splash, pluginFile, noopen, restartArgs)
+        mainWindow = UserInterface(app, loc, splash, pluginFile, noopen, restartArgs)
         app.connect(app, SIGNAL("lastWindowClosed()"), app, SLOT("quit()"))
         mainWindow.show()
         

@@ -533,6 +533,9 @@ QObject
 <td><a href="#ViewManager.addToRecentList">addToRecentList</a></td>
 <td>Public slot to add a filename to the list of recently opened files.</td>
 </tr><tr>
+<td><a href="#ViewManager.appFocusChanged">appFocusChanged</a></td>
+<td>Public method to handle the global change of focus.</td>
+</tr><tr>
 <td><a href="#ViewManager.canCascade">canCascade</a></td>
 <td>Public method to signal if cascading of managed windows is available.</td>
 </tr><tr>
@@ -1605,6 +1608,19 @@ Not implemented
 <dt><i>fn</i></dt>
 <dd>
 name of the file to be added
+</dd>
+</dl><a NAME="ViewManager.appFocusChanged" ID="ViewManager.appFocusChanged"></a>
+<h4>ViewManager.appFocusChanged</h4>
+<b>appFocusChanged</b>(<i>old, now</i>)
+<p>
+        Public method to handle the global change of focus.
+</p><dl>
+<dt><i>old</i></dt>
+<dd>
+reference to the widget loosing focus (QWidget)
+</dd><dt><i>now</i></dt>
+<dd>
+reference to the widget gaining focus (QWidget)
 </dd>
 </dl><a NAME="ViewManager.canCascade" ID="ViewManager.canCascade"></a>
 <h4>ViewManager.canCascade</h4>

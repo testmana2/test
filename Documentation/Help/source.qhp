@@ -3293,6 +3293,7 @@
       <keyword name="ViewManager.addSplit" id="ViewManager.addSplit" ref="eric5.ViewManager.ViewManager.html#ViewManager.addSplit" />
       <keyword name="ViewManager.addToExtrasMenu" id="ViewManager.addToExtrasMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.addToExtrasMenu" />
       <keyword name="ViewManager.addToRecentList" id="ViewManager.addToRecentList" ref="eric5.ViewManager.ViewManager.html#ViewManager.addToRecentList" />
+      <keyword name="ViewManager.appFocusChanged" id="ViewManager.appFocusChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.appFocusChanged" />
       <keyword name="ViewManager.canCascade" id="ViewManager.canCascade" ref="eric5.ViewManager.ViewManager.html#ViewManager.canCascade" />
       <keyword name="ViewManager.canSplit" id="ViewManager.canSplit" ref="eric5.ViewManager.ViewManager.html#ViewManager.canSplit" />
       <keyword name="ViewManager.canTile" id="ViewManager.canTile" ref="eric5.ViewManager.ViewManager.html#ViewManager.canTile" />

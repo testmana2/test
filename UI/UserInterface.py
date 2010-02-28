@@ -169,10 +169,11 @@ class UserInterface(QMainWindow):
     maxSbFilePathLen = 150
     maxMenuFilePathLen = 75
     
-    def __init__(self, locale, splash, plugin, noOpenAtStartup, restartArguments):
+    def __init__(self, app, locale, splash, plugin, noOpenAtStartup, restartArguments):
         """
         Constructor
         
+        @param app reference to the application object (E5Application)
         @param locale locale to be used by the UI (string)
         @param splash reference to the splashscreen (UI.SplashScreen.SplashScreen)
         @param plugin filename of a plugin to be loaded (used for plugin development)
@@ -255,6 +256,8 @@ class UserInterface(QMainWindow):
         
         # now setup the connections
         splash.showMessage(self.trUtf8("Setting up connections..."))
+        self.connect(app, SIGNAL("focusChanged(QWidget*, QWidget*)"), 
+                     self.viewmanager.appFocusChanged)
         self.connect(self.browser, SIGNAL('sourceFile'),
                      self.viewmanager.openSourceFile)
         self.connect(self.browser, SIGNAL('designerFile'),

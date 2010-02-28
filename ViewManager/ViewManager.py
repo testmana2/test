@@ -29,6 +29,8 @@ from QScintilla.APIsManager import APIsManager
 from QScintilla.SpellChecker import SpellChecker
 import QScintilla.Lexers
 import QScintilla.Exporters
+from QScintilla.Shell import Shell
+from QScintilla.Terminal import Terminal
 
 import Utilities
 
@@ -3737,6 +3739,19 @@ class ViewManager(QObject):
         self.ui.findFileNameDialog.show()
         self.ui.findFileNameDialog.raise_()
         self.ui.findFileNameDialog.activateWindow()
+    
+    def appFocusChanged(self, old, now):
+        """
+        Public method to handle the global change of focus.
+        
+        @param old reference to the widget loosing focus (QWidget)
+        @param now reference to the widget gaining focus (QWidget)
+        """
+        if not isinstance(now, (Editor, Shell, Terminal)):
+            self.editActGrp.setEnabled(False)
+            self.copyActGrp.setEnabled(False)
+            self.viewActGrp.setEnabled(False)
+            self.searchActGrp.setEnabled(False)
     
     ##################################################################
     ## Below are the action methods for the edit menu
