@@ -265,7 +265,7 @@ class DebugClientBase(object):
         Public method to send the list of threads.
         """
         threadList = []
-        if self.threads:    # indication for the threaded debugger
+        if self.threads and self.currentThread:    # indication for the threaded debugger
             currentId = self.currentThread.get_ident()
             for t in self.threads.values():
                 d = {}
