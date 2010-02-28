@@ -507,7 +507,7 @@ class Checker(object):
             return
         
         # if the name hasn't already been defined in the current scope
-        if isinstance(node, ast.Tuple):
+        if isinstance(node, (ast.Tuple, ast.List)):
             for elt in node.elts:
                 elt.parent = node
                 self.handleAssignName(elt)
