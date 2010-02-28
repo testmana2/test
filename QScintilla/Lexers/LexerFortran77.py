@@ -58,3 +58,11 @@ class LexerFortran77(QsciLexerFortran77, Lexer):
         return style in [QsciLexerFortran77.DoubleQuotedString, 
                          QsciLexerFortran77.SingleQuotedString, 
                          QsciLexerFortran77.UnclosedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerFortran77.keywords(self, kwSet)

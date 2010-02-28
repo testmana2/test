@@ -70,3 +70,11 @@ class LexerPerl(QsciLexerPerl, Lexer):
                          QsciLexerPerl.QuotedStringQX, 
                          QsciLexerPerl.SingleQuotedHereDocument, 
                          QsciLexerPerl.SingleQuotedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerPerl.keywords(self, kwSet)

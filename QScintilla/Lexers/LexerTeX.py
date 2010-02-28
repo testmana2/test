@@ -41,3 +41,11 @@ class LexerTeX(QsciLexerTeX, Lexer):
         @return flag indicating a string style (boolean)
         """
         return style in [QsciLexerTeX.Text]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerTeX.keywords(self, kwSet)

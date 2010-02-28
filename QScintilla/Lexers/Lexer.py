@@ -4,8 +4,10 @@
 #
 
 """
-Module implementing the lexer base class.
+Module implementing the lexer mixin class.
 """
+
+import Preferences
 
 class Lexer(object):
     """ 
@@ -198,3 +200,19 @@ class Lexer(object):
         @return flag indicating a string style (boolean)
         """
         return True
+    
+    def keywords(self, kwSet):
+        """
+        Public method to get the keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        keywords_ = Preferences.getEditorKeywords(self.language())
+        if keywords_:
+            kw = keywords_[kwSet]
+            if kw == "":
+                return None
+            else:
+                return kw
+        else:
+            return self.defaultKeywords(kwSet)

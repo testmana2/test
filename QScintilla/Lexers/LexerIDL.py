@@ -72,3 +72,11 @@ class LexerIDL(QsciLexerIDL, Lexer):
                          QsciLexerIDL.SingleQuotedString, 
                          QsciLexerIDL.UnclosedString, 
                          QsciLexerIDL.VerbatimString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerIDL.keywords(self, kwSet)

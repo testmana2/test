@@ -72,3 +72,11 @@ class LexerJava(QsciLexerJava, Lexer):
                          QsciLexerJava.SingleQuotedString, 
                          QsciLexerJava.UnclosedString, 
                          QsciLexerJava.VerbatimString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerJava.keywords(self, kwSet)

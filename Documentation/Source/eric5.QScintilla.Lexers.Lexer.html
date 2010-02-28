@@ -22,7 +22,7 @@ a { color: #AA5500; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.QScintilla.Lexers.Lexer</h1>
 <p>
-Module implementing the lexer base class.
+Module implementing the lexer mixin class.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -91,6 +91,9 @@ object
 </tr><tr>
 <td><a href="#Lexer.isStringStyle">isStringStyle</a></td>
 <td>Public method to check, if a style is a string style.</td>
+</tr><tr>
+<td><a href="#Lexer.keywords">keywords</a></td>
+<td>Public method to get the keywords.</td>
 </tr><tr>
 <td><a href="#Lexer.smartIndentLine">smartIndentLine</a></td>
 <td>Public method to handle smart indentation for a line.</td>
@@ -212,6 +215,16 @@ flag indicating a comment style (boolean)
 <dt>Returns:</dt>
 <dd>
 flag indicating a string style (boolean)
+</dd>
+</dl><a NAME="Lexer.keywords" ID="Lexer.keywords"></a>
+<h4>Lexer.keywords</h4>
+<b>keywords</b>(<i>kwSet</i>)
+<p>
+        Public method to get the keywords.
+</p><dl>
+<dt><i>kwSet</i></dt>
+<dd>
+number of the keyword set (integer)
 </dd>
 </dl><a NAME="Lexer.smartIndentLine" ID="Lexer.smartIndentLine"></a>
 <h4>Lexer.smartIndentLine</h4>

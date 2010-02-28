@@ -52,3 +52,11 @@ class LexerSQL(QsciLexerSQL, Lexer):
         """
         return style in [QsciLexerSQL.DoubleQuotedString, 
                          QsciLexerSQL.SingleQuotedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerSQL.keywords(self, kwSet)

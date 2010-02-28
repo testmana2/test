@@ -762,6 +762,7 @@
     <Source>Utilities/py3flakes/checker.py</Source>
     <Source>Utilities/py3flakes/messages.py</Source>
     <Source>Preferences/ConfigurationPages/Py3FlakesPage.py</Source>
+    <Source>Preferences/ConfigurationPages/EditorKeywordsPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -964,6 +965,7 @@
     <Form>E5Network/E5NetworkHeaderDetailsDialog.ui</Form>
     <Form>E5Gui/E5ToolBarDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/Py3FlakesPage.ui</Form>
+    <Form>Preferences/ConfigurationPages/EditorKeywordsPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

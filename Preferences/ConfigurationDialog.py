@@ -207,6 +207,9 @@ class ConfigurationWidget(QWidget):
                     [self.trUtf8("Styles"), 
                     "preferences-highlighting-styles.png",
                     "EditorHighlightingStylesPage", "1editorLexerPage", None],
+                "editorKeywordsPage" : \
+                    [self.trUtf8("Keywords"), "preferences-keywords.png", 
+                     "EditorKeywordsPage", "1editorLexerPage", None], 
                 "editorPropertiesPage" : \
                     [self.trUtf8("Properties"), "preferences-properties.png",
                     "EditorPropertiesPage", "1editorLexerPage", None],

@@ -84,3 +84,11 @@ class LexerCPP(QsciLexerCPP, Lexer):
                          QsciLexerCPP.SingleQuotedString, 
                          QsciLexerCPP.UnclosedString, 
                          QsciLexerCPP.VerbatimString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerCPP.keywords(self, kwSet)

@@ -59,3 +59,11 @@ class LexerLua(QsciLexerLua, Lexer):
         return style in [QsciLexerLua.String, 
                          QsciLexerLua.LiteralString, 
                          QsciLexerLua.UnclosedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerLua.keywords(self, kwSet)

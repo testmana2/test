@@ -116,3 +116,11 @@ class LexerPython(QsciLexerPython, Lexer):
                          QsciLexerPython.TripleDoubleQuotedString, 
                          QsciLexerPython.TripleSingleQuotedString, 
                          QsciLexerPython.UnclosedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerPython.keywords(self, kwSet)

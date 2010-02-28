@@ -51,3 +51,11 @@ class LexerBash(QsciLexerBash, Lexer):
         return style in [QsciLexerBash.DoubleQuotedString, 
                          QsciLexerBash.SingleQuotedString, 
                          QsciLexerBash.SingleQuotedHereDocument]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerBash.keywords(self, kwSet)

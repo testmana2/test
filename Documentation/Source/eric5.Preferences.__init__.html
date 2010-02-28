@@ -68,6 +68,9 @@ to import it.
 <td><a href="#getEditorExporter">getEditorExporter</a></td>
 <td>Module function to retrieve the various editor exporters settings.</td>
 </tr><tr>
+<td><a href="#getEditorKeywords">getEditorKeywords</a></td>
+<td>Module function to retrieve the various lists of language keywords.</td>
+</tr><tr>
 <td><a href="#getEditorLexerAssoc">getEditorLexerAssoc</a></td>
 <td>Module function to retrieve a lexer association.</td>
 </tr><tr>
@@ -208,6 +211,9 @@ to import it.
 </tr><tr>
 <td><a href="#setEditorExporter">setEditorExporter</a></td>
 <td>Module function to store the various editor exporters settings.</td>
+</tr><tr>
+<td><a href="#setEditorKeywords">setEditorKeywords</a></td>
+<td>Module function to store the various lists of language keywords.</td>
 </tr><tr>
 <td><a href="#setEditorLexerAssocs">setEditorLexerAssocs</a></td>
 <td>Module function to retrieve all lexer associations.</td>
@@ -466,6 +472,27 @@ preferences class used as the storage area
 <dt>Returns:</dt>
 <dd>
 the requested editor setting
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getEditorKeywords" ID="getEditorKeywords"></a>
+<h2>getEditorKeywords</h2>
+<b>getEditorKeywords</b>(<i>key, prefClass = Prefs</i>)
+<p>
+    Module function to retrieve the various lists of language keywords.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+the key of the value to get
+</dd><dt><i>prefClass</i></dt>
+<dd>
+preferences class used as the storage area
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the requested list of language keywords (list of strings)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -1355,6 +1382,25 @@ the key of the setting to be set
 </dd><dt><i>value</i></dt>
 <dd>
 the value to be set
+</dd><dt><i>prefClass</i></dt>
+<dd>
+preferences class used as the storage area
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="setEditorKeywords" ID="setEditorKeywords"></a>
+<h2>setEditorKeywords</h2>
+<b>setEditorKeywords</b>(<i>key, keywordsLists, prefClass = Prefs</i>)
+<p>
+    Module function to store the various lists of language keywords.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+the key of the api to be set
+</dd><dt><i>keywordsLists</i></dt>
+<dd>
+the list of language keywords (list of strings)
 </dd><dt><i>prefClass</i></dt>
 <dd>
 preferences class used as the storage area

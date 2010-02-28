@@ -1249,6 +1249,30 @@ def setEditorAPI(key, apilist, prefClass = Prefs):
     """
     prefClass.settings.setValue("Editor/APIs/" + key, apilist)
     
+def getEditorKeywords(key, prefClass = Prefs):
+    """
+    Module function to retrieve the various lists of language keywords.
+    
+    @param key the key of the value to get
+    @param prefClass preferences class used as the storage area
+    @return the requested list of language keywords (list of strings)
+    """
+    keywords = prefClass.settings.value("Editor/Keywords/" + key)
+    if keywords is not None:
+        return keywords
+    else:
+        return []
+    
+def setEditorKeywords(key, keywordsLists, prefClass = Prefs):
+    """
+    Module function to store the various lists of language keywords.
+    
+    @param key the key of the api to be set
+    @param keywordsLists the list of language keywords (list of strings)
+    @param prefClass preferences class used as the storage area
+    """
+    prefClass.settings.setValue("Editor/Keywords/" + key, keywordsLists)
+    
 def getEditorLexerAssocs(prefClass = Prefs):
     """
     Module function to retrieve all lexer associations.

@@ -55,3 +55,11 @@ class LexerVHDL(QsciLexerVHDL, Lexer):
         """
         return style in [QsciLexerVHDL.String, 
                          QsciLexerVHDL.UnclosedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerVHDL.keywords(self, kwSet)

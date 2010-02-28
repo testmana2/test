@@ -54,3 +54,11 @@ class LexerCSS(QsciLexerCSS, Lexer):
         """
         return style in [QsciLexerCSS.DoubleQuotedString, 
                          QsciLexerCSS.SingleQuotedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerCSS.keywords(self, kwSet)

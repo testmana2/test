@@ -56,3 +56,11 @@ class LexerRuby(QsciLexerRuby, Lexer):
                          QsciLexerRuby.PercentStringw, 
                          QsciLexerRuby.PercentStringx, 
                          QsciLexerRuby.SingleQuotedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerRuby.keywords(self, kwSet)

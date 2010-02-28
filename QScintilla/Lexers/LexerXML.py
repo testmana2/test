@@ -97,3 +97,11 @@ class LexerXML(QsciLexerXML, Lexer):
                          QsciLexerXML.ASPPythonTripleSingleQuotedString, 
                          QsciLexerXML.PHPDoubleQuotedString, 
                          QsciLexerXML.PHPSingleQuotedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerXML.keywords(self, kwSet)

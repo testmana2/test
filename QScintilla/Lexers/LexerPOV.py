@@ -61,3 +61,11 @@ class LexerPOV(QsciLexerPOV, Lexer):
         """
         return style in [QsciLexerPOV.String, 
                          QsciLexerPOV.UnclosedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerPOV.keywords(self, kwSet)

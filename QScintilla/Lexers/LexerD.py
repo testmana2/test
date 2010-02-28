@@ -78,3 +78,11 @@ class LexerD(QsciLexerD, Lexer):
         """
         return style in [QsciLexerD.String, 
                          QsciLexerD.UnclosedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerD.keywords(self, kwSet)

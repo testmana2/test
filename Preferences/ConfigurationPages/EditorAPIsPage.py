@@ -47,7 +47,8 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             Preferences.getEditor("AutoPrepareAPIs"))
         
         self.apis = {}
-        apiLanguages = sorted([''] + list(QScintilla.Lexers.getSupportedLanguages().keys()))
+        apiLanguages = sorted([''] + \
+                       list(QScintilla.Lexers.getSupportedLanguages().keys()))
         for lang in apiLanguages:
             if lang != "Guessed":
                 self.apiLanguageComboBox.addItem(lang)

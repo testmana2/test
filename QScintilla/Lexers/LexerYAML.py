@@ -48,3 +48,11 @@ class LexerYAML(QsciLexerYAML, Lexer):
         @return flag indicating a string style (boolean)
         """
         return False
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerYAML.keywords(self, kwSet)

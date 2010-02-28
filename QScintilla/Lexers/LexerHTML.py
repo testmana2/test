@@ -96,3 +96,11 @@ class LexerHTML(QsciLexerHTML, Lexer):
                          QsciLexerHTML.ASPPythonTripleSingleQuotedString, 
                          QsciLexerHTML.PHPDoubleQuotedString, 
                          QsciLexerHTML.PHPSingleQuotedString]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        """
+        return QsciLexerHTML.keywords(self, kwSet)
