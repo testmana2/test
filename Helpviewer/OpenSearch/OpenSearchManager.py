@@ -18,6 +18,8 @@ from .OpenSearchEngine import OpenSearchEngine
 from .OpenSearchReader import OpenSearchReader
 from .OpenSearchWriter import OpenSearchWriter
 
+from E5Gui.E5Application import e5App
+
 from Utilities.AutoSaver import AutoSaver
 import Utilities
 import Preferences
@@ -36,6 +38,8 @@ class OpenSearchManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
+        if parent is None:
+            parent = e5App()
         QObject.__init__(self, parent)
         
         self.__engines = {}
