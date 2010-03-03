@@ -35,6 +35,7 @@ class AdBlockManager(QObject):
         QObject.__init__(self, parent)
         
         self.__loaded = False
+        self.__subscriptionsLoaded = False
         self.__enabled = False
         self.__adBlockDialog = None
         self.__adBlockNetwork = None
@@ -71,6 +72,8 @@ class AdBlockManager(QObject):
             return
         
         self.__enabled = enabled
+        if enabled:
+            self.__loadSubscriptions()
         self.emit(SIGNAL("rulesChanged()"))
     
     def network(self):
@@ -189,13 +192,14 @@ class AdBlockManager(QObject):
             return
         
         Preferences.setHelp("AdBlockEnabled", self.__enabled)
-        subscriptions = []
-        for subscription in self.__subscriptions:
-            if subscription is None:
-                continue
-            subscriptions.append(bytes(subscription.url().toEncoded()).decode())
-            subscription.saveRules()
-        Preferences.setHelp("AdBlockSubscriptions", subscriptions)
+        if self.__subscriptionsLoaded:
+            subscriptions = []
+            for subscription in self.__subscriptions:
+                if subscription is None:
+                    continue
+                subscriptions.append(bytes(subscription.url().toEncoded()).decode())
+                subscription.saveRules()
+            Preferences.setHelp("AdBlockSubscriptions", subscriptions)
     
     def load(self):
         """
@@ -207,6 +211,15 @@ class AdBlockManager(QObject):
         self.__loaded = True
         
         self.__enabled = Preferences.getHelp("AdBlockEnabled")
+        if self.__enabled:
+            self.__loadSubscriptions()
+    
+    def __loadSubscriptions():
+        """
+        Private method to load the set of subscriptions.
+        """
+        if self.__subscriptionsLoaded:
+            return
         
         defaultSubscriptions = []
         defaultSubscriptions.append(
@@ -225,6 +238,8 @@ class AdBlockManager(QObject):
             self.connect(adBlockSubscription, SIGNAL("changed()"), 
                          self, SIGNAL("rulesChanged()"))
             self.__subscriptions.append(adBlockSubscription)
+        
+        self.__subscriptionsLoaded = True
     
     def showDialog(self):
         """
