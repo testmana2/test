@@ -535,7 +535,7 @@ def doDependancyChecks():
     from PyQt4.QtCore import PYQT_VERSION_STR
     pyqtVersion = PYQT_VERSION_STR
     # always assume, that snapshots are new enough
-    if pyqtVersion.find("snapshot-") == -1:
+    if "snapshot" not in pyqtVersion:
         while pyqtVersion.count('.') < 2:
             pyqtVersion += '.0'
         (maj, min, pat) = pyqtVersion.split('.')
@@ -552,7 +552,7 @@ def doDependancyChecks():
     from PyQt4.Qsci import QSCINTILLA_VERSION_STR
     scintillaVersion = QSCINTILLA_VERSION_STR
     # always assume, that snapshots are new enough
-    if scintillaVersion.find("snapshot-") == -1:
+    if "snapshot" not in scintillaVersion:
         while scintillaVersion.count('.') < 2:
             scintillaVersion += '.0'
         (maj, min, pat) = scintillaVersion.split('.')
