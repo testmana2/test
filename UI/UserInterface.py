@@ -980,8 +980,7 @@ class UserInterface(QMainWindow):
                               UI.PixmapCache.getIcon("logViewer.png"), 
                               self.trUtf8("Log-Viewer"))
 
-        self.windows = [None, None, self.debugViewerDock, 
-            None, None, None, None, None]
+        self.windows = [None, None, self.debugViewerDock, None, None, None, None, None]
 
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
@@ -3195,6 +3194,12 @@ class UserInterface(QMainWindow):
             for window, i in zip(self.windows, list(range(len(self.windows)))):
                 if window is not None:
                     self.profiles[self.currentProfile][0][i] = window.isVisible()
+            if self.layout == "Toolboxes":
+                self.profiles[self.currentProfile][5][0] = self.vToolboxDock.isVisible()
+                self.profiles[self.currentProfile][5][1] = self.hToolboxDock.isVisible()
+            elif self.layout == "Sidebars":
+                self.profiles[self.currentProfile][5][0] = self.leftSidebar.isVisible()
+                self.profiles[self.currentProfile][5][1] = self.bottomSidebar.isVisible()
             Preferences.setUI("ViewProfiles", self.profiles)
     
     def __activateViewProfile(self, name, save = True):
@@ -3390,7 +3395,7 @@ class UserInterface(QMainWindow):
 
     def __activateDebugViewer(self):
         """
-        Private slot to handle the activation of the debug browser.
+        Private slot to handle the activation of the debug viewer.
         """
         if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
             self.debugViewerDock.show()

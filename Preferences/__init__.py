@@ -116,39 +116,39 @@ class Prefs(object):
         # Templates-Viewer, Multiproject-Viewer, Terminal
         "ViewProfiles" : {
             "edit"  : [
-                        # visibility (0)
-                        [ True,  False,  False,  True,  True,  True,  True,  True, True],
-                        # saved state main window with dock windows (1)
-                        b"",
-                        # saved states floating windows (2)
-                        [b"", b"", b"", b"", b"", b"", b"", b"", b""],
-                        # saved state main window with floating windows (3)
-                        b"", 
-                        # saved state main window with toolbox windows (4)
-                        b"", 
-                        # visibility of the toolboxes (5)
-                        [ True,  True], 
-                        # saved states of the splitters and sidebars of the 
-                        # sidebars layout (6)
-                        [b"", b"", b"", b""], 
-                      ],
+                    # visibility (0)
+                    [ True,  False,  False,  True,  True,  True,  True,  True, True],
+                    # saved state main window with dock windows (1)
+                    b"",
+                    # saved states floating windows (2)
+                    [b"", b"", b"", b"", b"", b"", b"", b"", b""],
+                    # saved state main window with floating windows (3)
+                    b"", 
+                    # saved state main window with toolbox windows (4)
+                    b"", 
+                    # visibility of the toolboxes/sidebars (5)
+                    [ True,  True], 
+                    # saved states of the splitters and sidebars of the 
+                    # sidebars layout (6)
+                    [b"", b"", b"", b""], 
+                ],
             "debug" : [
-                        # visibility (0)
-                        [ False,  False,  True,  True,  True,  True,  False,  False, True], 
-                        # saved state main window with dock windows (1)
-                        b"",
-                        # saved states floating windows (2)
-                        [b"", b"", b"", b"", b"", b"", b"", b"", b""],
-                        # saved state main window with floating windows (3)
-                        b"", 
-                        # saved state main window with toolbox windows (4)
-                        b"", 
-                        # visibility of the toolboxes (5)
-                        [ False,  True], 
-                        # saved states of the splitters and sidebars of the 
-                        # sidebars layout (6)
-                        [b"", b"", b"", b""], 
-                      ],
+                    # visibility (0)
+                    [ False,  False,  True,  True,  True,  True,  False,  False, True], 
+                    # saved state main window with dock windows (1)
+                    b"",
+                    # saved states floating windows (2)
+                    [b"", b"", b"", b"", b"", b"", b"", b"", b""],
+                    # saved state main window with floating windows (3)
+                    b"", 
+                    # saved state main window with toolbox windows (4)
+                    b"", 
+                    # visibility of the toolboxes/sidebars (5)
+                    [ False,  True], 
+                    # saved states of the splitters and sidebars of the 
+                    # sidebars layout (6)
+                    [b"", b"", b"", b""], 
+                ],
         },
         "ToolbarManagerState" : QtCore.QByteArray(), 
         "ShowSplash" : True,
@@ -1085,6 +1085,16 @@ def getUI(key, prefClass = Prefs):
                 if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name]):
                     viewProfiles[name].extend(
                         prefClass.uiDefaults["ViewProfiles"][name][vpLength:])
+                
+                # adjust entries for toolboxes and sidebars
+                vpLength = len(viewProfiles[name][5])
+                if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name][5]):
+                    viewProfiles[name][5].extend(\
+                        prefClass.uiDefaults["ViewProfiles"][name][5][vpLength:])
+                vpLength = len(viewProfiles[name][6])
+                if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name][6]):
+                    viewProfiles[name][6].extend(\
+                        prefClass.uiDefaults["ViewProfiles"][name][6][vpLength:])
         else:
             viewProfiles = prefClass.uiDefaults["ViewProfiles"]
         return viewProfiles
