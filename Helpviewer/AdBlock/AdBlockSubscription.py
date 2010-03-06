@@ -179,7 +179,9 @@ class AdBlockSubscription(QObject):
         if self.__location.isEmpty():
             return ""
         
-        sha1 = QCryptographicHash.hash(self.__location, QCryptographicHash.Sha1).toHex()
+        sha1 = bytes(
+            QCryptographicHash.hash(self.__location, QCryptographicHash.Sha1).toHex())\
+            .decode()
         dataDir = os.path.join(Utilities.getConfigDir(), "browser", "subscriptions")
         if not os.path.exists(dataDir):
             os.makedirs(dataDir)

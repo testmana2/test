@@ -62,7 +62,10 @@ class AdBlockRule(object):
         
         options = parsedLine.find("$")
         if options >= 0:
-            self.__options = parsedLine[options + 1].split(",")
+            try:
+                self.__options = parsedLine[options + 1:].split(",")
+            except IndexError:
+                self.__options = []
             parsedLine = parsedLine[:options]
         
         self.setPattern(parsedLine, regExpRule)

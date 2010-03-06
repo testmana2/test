@@ -214,7 +214,7 @@ class AdBlockManager(QObject):
         if self.__enabled:
             self.__loadSubscriptions()
     
-    def __loadSubscriptions():
+    def __loadSubscriptions(self):
         """
         Private method to load the set of subscriptions.
         """

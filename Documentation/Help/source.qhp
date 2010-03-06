@@ -6987,6 +6987,7 @@
       <keyword name="AdBlockManager (Constructor)" id="AdBlockManager (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__init__" />
       <keyword name="AdBlockManager.__customSubscriptionLocation" id="AdBlockManager.__customSubscriptionLocation" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__customSubscriptionLocation" />
       <keyword name="AdBlockManager.__customSubscriptionUrl" id="AdBlockManager.__customSubscriptionUrl" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__customSubscriptionUrl" />
+      <keyword name="AdBlockManager.__loadSubscriptions" id="AdBlockManager.__loadSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__loadSubscriptions" />
       <keyword name="AdBlockManager.addSubscription" id="AdBlockManager.addSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.addSubscription" />
       <keyword name="AdBlockManager.close" id="AdBlockManager.close" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.close" />
       <keyword name="AdBlockManager.customRules" id="AdBlockManager.customRules" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.customRules" />
