@@ -17,7 +17,7 @@ import glob
 from PyQt4.QtCore import QDir
 
 try:
-    from .eric5config import getConfig
+    from eric5config import getConfig
 except ImportError:
     print("The eric5 IDE doesn't seem to be installed. Aborting.")
     sys.exit(1)
