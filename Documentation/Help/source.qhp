@@ -3027,6 +3027,7 @@
       <keyword name="shouldResetLayout" id="shouldResetLayout" ref="eric5.Preferences.__init__.html#shouldResetLayout" />
       <keyword name="syncPreferences" id="syncPreferences" ref="eric5.Preferences.__init__.html#syncPreferences" />
       <keyword name="toBool" id="toBool" ref="eric5.Preferences.__init__.html#toBool" />
+      <keyword name="toByteArray" id="toByteArray" ref="eric5.Preferences.__init__.html#toByteArray" />
       <keyword name="toList" id="toList" ref="eric5.Preferences.__init__.html#toList" />
       <keyword name="PreferencesLexer (Module)" id="PreferencesLexer (Module)" ref="eric5.Preferences.PreferencesLexer.html" />
       <keyword name="PreferencesLexer" id="PreferencesLexer" ref="eric5.Preferences.PreferencesLexer.html#PreferencesLexer" />

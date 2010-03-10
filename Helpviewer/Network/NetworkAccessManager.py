@@ -63,8 +63,8 @@ class NetworkAccessManager(QNetworkAccessManager):
         if SSL_AVAILABLE:
             sslCfg = QSslConfiguration.defaultConfiguration()
             caList = sslCfg.caCertificates()
-            caNew = QSslCertificate.fromData(Preferences.Prefs.settings\
-                .value("Help/CaCertificates"))
+            caNew = QSslCertificate.fromData(Preferences.toByteArray(
+                Preferences.Prefs.settings.value("Help/CaCertificates")))
             for cert in caNew:
                 caList.append(cert)
             sslCfg.setCaCertificates(caList)
@@ -235,8 +235,8 @@ class NetworkAccessManager(QNetworkAccessManager):
         @param reply reference to the reply object (QNetworkReply)
         @param errors list of SSL errors (list of QSslError)
         """
-        caMerge = QSslCertificate.fromData(Preferences.Prefs.settings\
-            .value("Help/CaCertificates"))
+        caMerge = QSslCertificate.fromData(Preferences.toByteArray(
+            Preferences.Prefs.settings.value("Help/CaCertificates")))
         caNew = []
         
         errorStrings = []

@@ -2114,6 +2114,18 @@ def toList(value):
         return [value]
     else:
         return value
+
+def toByteArray(value):
+    """
+    Module function to convert a value to a byte array.
+    
+    @param value value to be converted
+    @return converted data
+    """
+    if value is None:
+        return QtCore.QByteArray()
+    else:
+        return value
     
 initPreferences()
 initRecentSettings()
