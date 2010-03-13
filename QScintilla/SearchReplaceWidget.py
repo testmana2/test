@@ -13,6 +13,8 @@ from PyQt4.QtGui import *
 from .Ui_SearchWidget import Ui_SearchWidget
 from .Ui_ReplaceWidget import Ui_ReplaceWidget
 
+from E5Gui.E5Action import E5Action
+
 import Preferences
 
 import UI.PixmapCache
@@ -111,6 +113,22 @@ character except an alphabetic character.</td></tr>
             self.connect(self.ui.replacetextCombo.lineEdit(), SIGNAL("returnPressed()"), 
                          self.on_replaceButton_clicked)
         
+        self.findNextAct = E5Action(self.trUtf8('Find Next'),
+                self.trUtf8('Find Next'),
+                0, 0, self, 'search_widget_find_next')
+        self.connect(self.findNextAct, SIGNAL('triggered()'), 
+                     self.on_findNextButton_clicked)
+        self.findNextAct.setEnabled(False)
+        self.ui.findtextCombo.addAction(self.findNextAct)
+        
+        self.findPrevAct = E5Action(self.trUtf8('Find Prev'),
+                self.trUtf8('Find Prev'),
+                0, 0, self, 'search_widget_find_prev')
+        self.connect(self.findPrevAct, SIGNAL('triggered()'), 
+                     self.on_findPrevButton_clicked)
+        self.findPrevAct.setEnabled(False)
+        self.ui.findtextCombo.addAction(self.findPrevAct)
+        
         self.havefound = False
         self.__pos = None
         self.__findBackwards = False
@@ -123,13 +141,17 @@ character except an alphabetic character.</td></tr>
         """
         if not txt:
             self.ui.findNextButton.setEnabled(False)
+            self.findNextAct.setEnabled(False)
             self.ui.findPrevButton.setEnabled(False)
+            self.findPrevAct.setEnabled(False)
             if self.replace:
                 self.ui.replaceButton.setEnabled(False)
                 self.ui.replaceAllButton.setEnabled(False)
         else:
             self.ui.findNextButton.setEnabled(True)
+            self.findNextAct.setEnabled(True)
             self.ui.findPrevButton.setEnabled(True)
+            self.findPrevAct.setEnabled(True)
             if self.replace:
                 self.ui.replaceButton.setEnabled(False)
                 self.ui.replaceAllButton.setEnabled(True)
@@ -381,6 +403,13 @@ character except an alphabetic character.</td></tr>
         aw = self.viewmanager.activeWindow()
         self.updateSelectionCheckBox(aw)
         
+        self.findNextAct.setShortcut(self.viewmanager.searchNextAct.shortcut())
+        self.findNextAct.setAlternateShortcut(
+            self.viewmanager.searchNextAct.alternateShortcut())
+        self.findPrevAct.setShortcut(self.viewmanager.searchPrevAct.shortcut())
+        self.findPrevAct.setAlternateShortcut(
+            self.viewmanager.searchPrevAct.alternateShortcut())
+        
         self.havefound = True
         self.__findBackwards = False
     
@@ -554,6 +583,13 @@ character except an alphabetic character.</td></tr>
             if line1 == line2:
                 aw.setSelection(line1, index1, line1, index1)
                 self.findNext()
+        
+        self.findNextAct.setShortcut(self.viewmanager.searchNextAct.shortcut())
+        self.findNextAct.setAlternateShortcut(
+            self.viewmanager.searchNextAct.alternateShortcut())
+        self.findPrevAct.setShortcut(self.viewmanager.searchPrevAct.shortcut())
+        self.findPrevAct.setAlternateShortcut(
+            self.viewmanager.searchPrevAct.alternateShortcut())
 
     def show(self, text = ''):
         """
