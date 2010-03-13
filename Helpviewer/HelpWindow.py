@@ -2820,3 +2820,11 @@ class HelpWindow(QMainWindow):
             cls._adblockManager = AdBlockManager()
         
         return cls._adblockManager
+    
+    def openSearchManager(self):
+        """
+        Public method to get a reference to the opensearch manager object.
+        
+        @return reference to the opensearch manager object (OpenSearchManager)
+        """
+        return self.searchEdit.openSearchManager()

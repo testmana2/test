@@ -26,8 +26,6 @@ class HelpWebSearchWidget(QWidget):
     
     @signal search(url) emitted when the search should be done
     """
-    _openSearchManager = None
-    
     def __init__(self, parent = None):
         """
         Constructor
@@ -39,7 +37,8 @@ class HelpWebSearchWidget(QWidget):
         
         self.mw = parent
         
-        self.connect(HelpWebSearchWidget.openSearchManager(), 
+        self.__openSearchManager = OpenSearchManager(self)
+        self.connect(self.__openSearchManager, 
                      SIGNAL("currentEngineChanged()"), 
                      self.__currentEngineChanged)
         self.__currentEngine = ""
@@ -115,9 +114,7 @@ class HelpWebSearchWidget(QWidget):
                 self.__recentSearches = self.__recentSearches[:self.__maxSavedSearches]
             self.__setupCompleterMenu()
         
-        url = HelpWebSearchWidget.openSearchManager()\
-                                 .currentEngine()\
-                                 .searchUrl(searchText)
+        url = self.__openSearchManager.currentEngine().searchUrl(searchText)
         self.emit(SIGNAL("search"), url)
     
     def __setupCompleterMenu(self):
@@ -220,9 +217,7 @@ class HelpWebSearchWidget(QWidget):
         """
         searchText = self.__searchEdit.text()
         if searchText:
-            HelpWebSearchWidget.openSearchManager()\
-                               .currentEngine()\
-                               .requestSuggestions(searchText)
+            self.__openSearchManager.currentEngine().requestSuggestions(searchText)
     
     def __newSuggestions(self, suggestions):
         """
@@ -240,16 +235,15 @@ class HelpWebSearchWidget(QWidget):
         """
         self.__enginesMenu.clear()
         
-        osm = HelpWebSearchWidget.openSearchManager()
-        engineNames = osm.allEnginesNames()
+        engineNames = self.__openSearchManager.allEnginesNames()
         for engineName in engineNames:
-            engine = osm.engine(engineName)
+            engine = self.__openSearchManager.engine(engineName)
             action = OpenSearchEngineAction(engine, self.__enginesMenu)
             action.setData(engineName)
             self.connect(action, SIGNAL("triggered()"), self.__changeCurrentEngine)
             self.__enginesMenu.addAction(action)
             
-            if osm.currentEngineName() == engineName:
+            if self.__openSearchManager.currentEngineName() == engineName:
                 action.setCheckable(True)
                 action.setChecked(True)
         
@@ -297,7 +291,7 @@ class HelpWebSearchWidget(QWidget):
         action = self.sender()
         if action is not None:
             name = action.data()
-            HelpWebSearchWidget.openSearchManager().setCurrentEngineName(name)
+            self.__openSearchManager.setCurrentEngineName(name)
     
     def __addEngineFromUrl(self):
         """
@@ -309,7 +303,7 @@ class HelpWebSearchWidget(QWidget):
             if not isinstance(url, QUrl):
                 return 
             
-            HelpWebSearchWidget.openSearchManager().addEngine(url)
+            self.__openSearchManager.addEngine(url)
     
     def __searchButtonClicked(self):
         """
@@ -351,31 +345,27 @@ class HelpWebSearchWidget(QWidget):
         if searches is not None:
             self.__recentSearches = searches
     
-    @classmethod
-    def openSearchManager(cls):
+    def openSearchManager(self):
         """
-        Class method to get a reference to the opensearch manager object.
+        Public method to get a reference to the opensearch manager object.
         
         @return reference to the opensearch manager object (OpenSearchManager)
         """
-        if cls._openSearchManager is None:
-            cls._openSearchManager = OpenSearchManager()
-        return cls._openSearchManager
+        return self.__openSearchManager
     
     def __currentEngineChanged(self):
         """
         Private slot to track a change of the current search engine.
         """
-        osm = HelpWebSearchWidget.openSearchManager()
-        if osm.engineExists(self.__currentEngine):
-            oldEngine = osm.engine(self.__currentEngine)
+        if self.__openSearchManager.engineExists(self.__currentEngine):
+            oldEngine = self.__openSearchManager.engine(self.__currentEngine)
             self.disconnect(oldEngine, SIGNAL("imageChanged()"), 
                             self.__engineImageChanged)
             if self.__suggestionsEnabled:
                 self.disconnect(oldEngine, SIGNAL("suggestions(const QStringList&)"), 
                                 self.__newSuggestions)
         
-        newEngine = osm.currentEngine()
+        newEngine = self.__openSearchManager.currentEngine()
         if newEngine.networkAccessManager() is None:
             newEngine.setNetworkAccessManager(self.mw.networkAccessManager())
         self.connect(newEngine, SIGNAL("imageChanged()"), 
@@ -384,10 +374,10 @@ class HelpWebSearchWidget(QWidget):
             self.connect(newEngine, SIGNAL("suggestions(const QStringList&)"), 
                          self.__newSuggestions)
         
-        self.__searchEdit.setInactiveText(osm.currentEngineName())
-        self.__currentEngine = osm.currentEngineName()
+        self.__searchEdit.setInactiveText(self.__openSearchManager.currentEngineName())
+        self.__currentEngine = self.__openSearchManager.currentEngineName()
         self.__engineButton.setIcon(
-            QIcon(QPixmap.fromImage(osm.currentEngine().image())))
+            QIcon(QPixmap.fromImage(self.__openSearchManager.currentEngine().image())))
         self.__suggestions = []
         self.__setupCompleterMenu()
     
@@ -395,6 +385,5 @@ class HelpWebSearchWidget(QWidget):
         """
         Private slot to handle a change of the current search engine icon.
         """
-        osm = HelpWebSearchWidget.openSearchManager()
         self.__engineButton.setIcon(
-            QIcon(QPixmap.fromImage(osm.currentEngine().image())))
+            QIcon(QPixmap.fromImage(self.__openSearchManager.currentEngine().image())))

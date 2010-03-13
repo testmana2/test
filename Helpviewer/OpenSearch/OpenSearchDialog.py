@@ -10,8 +10,6 @@ Module implementing a dialog for the configuration of search engines.
 from PyQt4.QtGui import QDialog, QFileDialog, QMessageBox
 from PyQt4.QtCore import pyqtSlot, SIGNAL
 
-from Helpviewer.HelpWebSearchWidget import HelpWebSearchWidget
-
 from .OpenSearchEngineModel import OpenSearchEngineModel
 from .OpenSearchEditDialog import OpenSearchEditDialog
 
@@ -30,8 +28,10 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         
         self.setModal(True)
         
+        self.__mw = parent
+        
         self.__model = \
-            OpenSearchEngineModel(HelpWebSearchWidget.openSearchManager(), self)
+            OpenSearchEngineModel(self.__mw.openSearchManager(), self)
         self.enginesTable.setModel(self.__model)
         self.enginesTable.horizontalHeader().resizeSection(0, 200)
         self.enginesTable.horizontalHeader().setStretchLastSection(True)
@@ -55,7 +55,7 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
             "",
             self.trUtf8("OpenSearch (*.xml);;All Files (*)"))
         
-        osm = HelpWebSearchWidget.openSearchManager()
+        osm = self.__mw.openSearchManager()
         for fileName in fileNames:
             if not osm.addEngine(fileName):
                 QMessageBox.critical(self,
@@ -80,7 +80,7 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         """
         Private slot to restore the default search engines.
         """
-        HelpWebSearchWidget.openSearchManager().restoreDefaults()
+        self.__mw.openSearchManager().restoreDefaults()
     
     @pyqtSlot()
     def on_editButton_clicked(self):
@@ -93,7 +93,7 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         else:
             row = rows[0].row()
         
-        osm = HelpWebSearchWidget.openSearchManager()
+        osm = self.__mw.openSearchManager()
         engineName = osm.allEnginesNames()[row]
         engine = osm.engine(engineName)
         dlg = OpenSearchEditDialog(engine, self)

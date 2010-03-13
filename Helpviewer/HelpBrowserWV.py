@@ -16,7 +16,6 @@ from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
 import Preferences
 
 from .DownloadDialog import DownloadDialog
-from .HelpWebSearchWidget import HelpWebSearchWidget
 from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
 from .JavaScriptResources import fetchLinks_js
 from .HTMLResources import notFoundPage_html
@@ -32,6 +31,17 @@ class JavaScriptExternalObject(QObject):
     """
     Class implementing an external javascript object to add search providers.
     """
+    def __init__(self, mw, parent = None):
+        """
+        Constructor
+        
+        @param mw reference to the main window 8HelpWindow)
+        @param parent reference to the parent object (QObject)
+        """
+        QObject.__init__(self, parent)
+        
+        self.__mw = mw
+    
     @pyqtSlot(str)
     def AddSearchProvider(self, url):
         """
@@ -39,7 +49,7 @@ class JavaScriptExternalObject(QObject):
         
         @param url url of the XML file defining the search provider (string)
         """
-        HelpWebSearchWidget.openSearchManager().addEngine(QUrl(url));
+        self.__mw.openSearchManager().addEngine(QUrl(url));
 
 class LinkedResource(object):
     """
@@ -68,6 +78,17 @@ class JavaScriptEricObject(QObject):
         QT_TRANSLATE_NOOP("JavaScriptEricObject", "About Eric"), 
     ]
     
+    def __init__(self, mw, parent = None):
+        """
+        Constructor
+        
+        @param mw reference to the main window 8HelpWindow)
+        @param parent reference to the parent object (QObject)
+        """
+        QObject.__init__(self, parent)
+        
+        self.__mw = mw
+    
     @pyqtSlot(str, result = str)
     def translate(self, trans):
         """
@@ -93,7 +114,7 @@ class JavaScriptEricObject(QObject):
         @return string for the search provider (string)
         """
         return self.trUtf8("Search results provided by {0}")\
-            .format(HelpWebSearchWidget.openSearchManager().currentEngineName())
+            .format(self.__mw.openSearchManager().currentEngineName())
     
     @pyqtSlot(str, result = str)
     def searchUrl(self, searchStr):
@@ -104,7 +125,7 @@ class JavaScriptEricObject(QObject):
         @return search URL (string)
         """
         return bytes(
-            HelpWebSearchWidget.openSearchManager().currentEngine()\
+            self.__mw.openSearchManager().currentEngine()\
             .searchUrl(searchStr).toEncoded()).decode()
 
 ##########################################################################################
@@ -235,7 +256,7 @@ class HelpBrowser(QWebView):
             self.__addExternalBinding)
         self.__addExternalBinding(self.page().mainFrame())
         
-        self.connect(HelpWebSearchWidget.openSearchManager(), 
+        self.connect(self.mw.openSearchManager(), 
                      SIGNAL("currentEngineChanged()"), 
                      self.__currentEngineChanged)
     
@@ -247,14 +268,14 @@ class HelpBrowser(QWebView):
         """
         self.page().settings().setAttribute(QWebSettings.JavascriptEnabled, True)
         if self.__javaScriptBinding is None:
-            self.__javaScriptBinding = JavaScriptExternalObject(self)
+            self.__javaScriptBinding = JavaScriptExternalObject(self.mw, self)
         
         if frame is None:
             # called from QWebFrame.javaScriptWindowObjectCleared
             frame = self.sender()
             if frame.url().scheme() == "pyrc" and frame.url().path() == "home":
                 if self.__javaScriptEricObject is None:
-                    self.__javaScriptEricObject = JavaScriptEricObject(self)
+                    self.__javaScriptEricObject = JavaScriptEricObject(self.mw, self)
                 frame.addToJavaScriptWindowObject("eric", self.__javaScriptEricObject)
         else:
             # called from QWebPage.frameCreated
@@ -593,9 +614,9 @@ class HelpBrowser(QWebView):
         if self.selectedText():
             self.__searchMenu = menu.addMenu(self.trUtf8("Search with..."))
             
-            engineNames = HelpWebSearchWidget.openSearchManager().allEnginesNames()
+            engineNames = self.mw.openSearchManager().allEnginesNames()
             for engineName in engineNames:
-                engine = HelpWebSearchWidget.openSearchManager().engine(engineName)
+                engine = self.mw.openSearchManager().engine(engineName)
                 act = OpenSearchEngineAction(engine, self.__searchMenu)
                 self.__searchMenu.addAction(act)
                 act.setData(engineName)
@@ -688,7 +709,7 @@ class HelpBrowser(QWebView):
         
         engineName = act.data()
         if engineName:
-            engine = HelpWebSearchWidget.openSearchManager().engine(engineName)
+            engine = self.mw.openSearchManager().engine(engineName)
             self.emit(SIGNAL("search(const QUrl &)"), engine.searchUrl(searchText))
     
     def __webInspector(self):

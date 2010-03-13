@@ -2692,9 +2692,11 @@
       <keyword name="HelpWebPage.acceptNavigationRequest" id="HelpWebPage.acceptNavigationRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.acceptNavigationRequest" />
       <keyword name="HelpWebPage.pageAttributeId" id="HelpWebPage.pageAttributeId" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.pageAttributeId" />
       <keyword name="HelpWebPage.populateNetworkRequest" id="HelpWebPage.populateNetworkRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.populateNetworkRequest" />
+      <keyword name="JavaScriptEricObject (Constructor)" id="JavaScriptEricObject (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.__init__" />
       <keyword name="JavaScriptEricObject.providerString" id="JavaScriptEricObject.providerString" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.providerString" />
       <keyword name="JavaScriptEricObject.searchUrl" id="JavaScriptEricObject.searchUrl" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.searchUrl" />
       <keyword name="JavaScriptEricObject.translate" id="JavaScriptEricObject.translate" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.translate" />
+      <keyword name="JavaScriptExternalObject (Constructor)" id="JavaScriptExternalObject (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptExternalObject.__init__" />
       <keyword name="JavaScriptExternalObject.AddSearchProvider" id="JavaScriptExternalObject.AddSearchProvider" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptExternalObject.AddSearchProvider" />
       <keyword name="LinkedResource (Constructor)" id="LinkedResource (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#LinkedResource.__init__" />
       <keyword name="HelpWebSearchWidget (Module)" id="HelpWebSearchWidget (Module)" ref="eric5.Helpviewer.HelpWebSearchWidget.html" />
@@ -2848,6 +2850,7 @@
       <keyword name="HelpWindow.newBrowser" id="HelpWindow.newBrowser" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newBrowser" />
       <keyword name="HelpWindow.newTab" id="HelpWindow.newTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newTab" />
       <keyword name="HelpWindow.newWindow" id="HelpWindow.newWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newWindow" />
+      <keyword name="HelpWindow.openSearchManager" id="HelpWindow.openSearchManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openSearchManager" />
       <keyword name="HelpWindow.passwordManager" id="HelpWindow.passwordManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.passwordManager" />
       <keyword name="HelpWindow.preferencesChanged" id="HelpWindow.preferencesChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.preferencesChanged" />
       <keyword name="HelpWindow.progressBar" id="HelpWindow.progressBar" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.progressBar" />
