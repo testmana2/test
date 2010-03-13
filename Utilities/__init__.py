@@ -16,8 +16,26 @@ import random
 import base64
 import getpass
 
+def __showwarning(message, category, filename, lineno, file = None, line = ""):
+    """
+    Module function to raise a SyntaxError for a SyntaxWarning.
+    
+    @param message warning object
+    @param category type object of the warning
+    @param filename name of the file causing the warning (string)
+    @param lineno line number causing the warning (integer)
+    @param file file to write the warning message to (ignored)
+    @param line line causing the warning (ignored)
+    @raise SyntaxError
+    """
+    if category is SyntaxWarning:
+        err = SyntaxError(str(message))
+        err.filename = filename
+        err.lineno = lineno
+        raise err
+    
 import warnings
-warnings.filterwarnings("error", category=SyntaxWarning)
+warnings.showwarning = __showwarning
 
 from codecs import BOM_UTF8, BOM_UTF16, BOM_UTF32
 
@@ -957,7 +975,7 @@ def compile(file, codestring = ""):
             line = detail.lineno
             error = detail.msg
         except AttributeError:
-            fn = ""
+            fn = file
             line = 1
             error = str(detail)
         code = ""

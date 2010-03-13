@@ -2424,6 +2424,7 @@
       <keyword name="TemplatePropertiesDialog.setSelectedGroup" id="TemplatePropertiesDialog.setSelectedGroup" ref="eric5.Templates.TemplatePropertiesDialog.html#TemplatePropertiesDialog.setSelectedGroup" />
       <keyword name="Utilities (Package)" id="Utilities (Package)" ref="index-eric5.Utilities.html" />
       <keyword name="CodingError" id="CodingError" ref="eric5.Utilities.__init__.html#CodingError" />
+      <keyword name="__showwarning" id="__showwarning" ref="eric5.Utilities.__init__.html#__showwarning" />
       <keyword name="_percentReplacementFunc" id="_percentReplacementFunc" ref="eric5.Utilities.__init__.html#_percentReplacementFunc" />
       <keyword name="compactPath" id="compactPath" ref="eric5.Utilities.__init__.html#compactPath" />
       <keyword name="compile" id="compile" ref="eric5.Utilities.__init__.html#compile" />

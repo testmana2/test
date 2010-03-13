@@ -38,6 +38,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <h3>Functions</h3>
 <table>
 <tr>
+<td><a href="#__showwarning">__showwarning</a></td>
+<td>Module function to raise a SyntaxError for a SyntaxWarning.</td>
+</tr><tr>
 <td><a href="#_percentReplacementFunc">_percentReplacementFunc</a></td>
 <td>Protected function called for replacing % codes.</td>
 </tr><tr>
@@ -253,6 +256,39 @@ string representing the error message
 <dt>Returns:</dt>
 <dd>
 string representing the error message
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="__showwarning" ID="__showwarning"></a>
+<h2>__showwarning</h2>
+<b>__showwarning</b>(<i>message, category, filename, lineno, file = None, line = ""</i>)
+<p>
+    Module function to raise a SyntaxError for a SyntaxWarning.
+</p><dl>
+<dt><i>message</i></dt>
+<dd>
+warning object
+</dd><dt><i>category</i></dt>
+<dd>
+type object of the warning
+</dd><dt><i>filename</i></dt>
+<dd>
+name of the file causing the warning (string)
+</dd><dt><i>lineno</i></dt>
+<dd>
+line number causing the warning (integer)
+</dd><dt><i>file</i></dt>
+<dd>
+file to write the warning message to (ignored)
+</dd><dt><i>line</i></dt>
+<dd>
+line causing the warning (ignored)
+</dd>
+</dl><dl>
+<dt>Raises <b>SyntaxError</b>:</dt>
+<dd>
+
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
