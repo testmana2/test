@@ -406,9 +406,11 @@ character except an alphabetic character.</td></tr>
         self.findNextAct.setShortcut(self.viewmanager.searchNextAct.shortcut())
         self.findNextAct.setAlternateShortcut(
             self.viewmanager.searchNextAct.alternateShortcut())
+        self.findNextAct.setShortcutContext(Qt.WidgetShortcut)
         self.findPrevAct.setShortcut(self.viewmanager.searchPrevAct.shortcut())
         self.findPrevAct.setAlternateShortcut(
             self.viewmanager.searchPrevAct.alternateShortcut())
+        self.findPrevAct.setShortcutContext(Qt.WidgetShortcut)
         
         self.havefound = True
         self.__findBackwards = False
@@ -587,9 +589,11 @@ character except an alphabetic character.</td></tr>
         self.findNextAct.setShortcut(self.viewmanager.searchNextAct.shortcut())
         self.findNextAct.setAlternateShortcut(
             self.viewmanager.searchNextAct.alternateShortcut())
+        self.findNextAct.setShortcutContext(Qt.WidgetShortcut)
         self.findPrevAct.setShortcut(self.viewmanager.searchPrevAct.shortcut())
         self.findPrevAct.setAlternateShortcut(
             self.viewmanager.searchPrevAct.alternateShortcut())
+        self.findPrevAct.setShortcutContext(Qt.WidgetShortcut)
 
     def show(self, text = ''):
         """
