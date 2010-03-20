@@ -7,10 +7,10 @@
 Module implementing the Help Documentation configuration page.
 """
 
-from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtCore import pyqtSlot, QUrl
 from PyQt4.QtGui import QFileDialog
 
-from E5Gui.E5Completers import E5DirCompleter
+from E5Gui.E5Completers import E5FileCompleter
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpDocumentationPage import Ui_HelpDocumentationPage
@@ -30,10 +30,10 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.setupUi(self)
         self.setObjectName("HelpDocumentationPage")
         
-        self.pythonDocDirCompleter = E5DirCompleter(self.pythonDocDirEdit)
-        self.qt4DocDirCompleter = E5DirCompleter(self.qt4DocDirEdit)
-        self.pyqt4DocDirCompleter = E5DirCompleter(self.pyqt4DocDirEdit)
-        self.pysideDocDirCompleter = E5DirCompleter(self.pysideDocDirEdit)
+        self.pythonDocDirCompleter = E5FileCompleter(self.pythonDocDirEdit)
+        self.qt4DocDirCompleter = E5FileCompleter(self.qt4DocDirEdit)
+        self.pyqt4DocDirCompleter = E5FileCompleter(self.pyqt4DocDirEdit)
+        self.pysideDocDirCompleter = E5FileCompleter(self.pysideDocDirEdit)
         
         try:
             import PySide
@@ -70,59 +70,56 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the Python documentation directory.
         """
-        dir = QFileDialog.getExistingDirectory(\
+        entry = QFileDialog.getOpenFileName(\
             self,
-            self.trUtf8("Select Python documentation directory"),
-            self.pythonDocDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            self.trUtf8("Select Python documentation entry"),
+            QUrl(self.pythonDocDirEdit.text()).path(),
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
         
-        if dir:
-            self.pythonDocDirEdit.setText(\
-                Utilities.toNativeSeparators(dir))
+        if entry:
+            self.pythonDocDirEdit.setText(Utilities.toNativeSeparators(entry))
         
     @pyqtSlot()
     def on_qt4DocDirButton_clicked(self):
         """
         Private slot to select the Qt4 documentation directory.
         """
-        dir = QFileDialog.getExistingDirectory(\
+        entry = QFileDialog.getOpenFileName(\
             self,
-            self.trUtf8("Select Qt4 documentation directory"),
-            self.qt4DocDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            self.trUtf8("Select Qt4 documentation entry"),
+            QUrl(self.qt4DocDirEdit.text()).path(),
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
         
-        if dir:
-            self.qt4DocDirEdit.setText(\
-                Utilities.toNativeSeparators(dir))
+        if entry:
+            self.qt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
         
     @pyqtSlot()
     def on_pyqt4DocDirButton_clicked(self):
         """
         Private slot to select the PyQt4 documentation directory.
         """
-        dir = QFileDialog.getExistingDirectory(\
+        entry = QFileDialog.getOpenFileName(\
             self,
-            self.trUtf8("Select PyQt4 documentation directory"),
-            self.pyqt4DocDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            self.trUtf8("Select PyQt4 documentation entry"),
+            QUrl(self.pyqt4DocDirEdit.text()).path(),
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
         
-        if dir:
-            self.pyqt4DocDirEdit.setText(\
-                Utilities.toNativeSeparators(dir))
+        if entry:
+            self.pyqt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
         
     @pyqtSlot()
     def on_pysideDocDirButton_clicked(self):
         """
         Private slot to select the PySide documentation directory.
         """
-        dir = QFileDialog.getExistingDirectory(\
+        entry = QFileDialog.getOpenFileName(\
             self,
-            self.trUtf8("Select PySide documentation directory"),
-            self.pysideDocDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            self.trUtf8("Select PySide documentation entry"),
+            QUrl(self.pysideDocDirEdit.text()).path(),
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
         
-        if dir:
-            self.pysideDocDirEdit.setText(Utilities.toNativeSeparators(dir))
+        if entry:
+            self.pysideDocDirEdit.setText(Utilities.toNativeSeparators(entry))
     
 def create(dlg):
     """

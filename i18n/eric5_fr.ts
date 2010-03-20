@@ -11930,7 +11930,7 @@ et le curseurest placé après la parenthèse fermante</translation>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
         <source>Select Python documentation directory</source>
-        <translation>Sélection du répertoire de documentation Python</translation>
+        <translation type="obsolete">Sélection du répertoire de documentation Python</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="92"/>
@@ -11940,12 +11940,12 @@ et le curseurest placé après la parenthèse fermante</translation>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="88"/>
         <source>Select Qt4 documentation directory</source>
-        <translation>Sélection du répertoire de documentation Qt4</translation>
+        <translation type="obsolete">Sélection du répertoire de documentation Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="103"/>
         <source>Select PyQt4 documentation directory</source>
-        <translation>Sélection du répertoire de documentation PyQt4</translation>
+        <translation type="obsolete">Sélection du répertoire de documentation PyQt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="17"/>
@@ -11998,8 +11998,28 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="118"/>
-        <source>Select PySide documentation directory</source>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
+        <source>Select Python documentation entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="115"/>
+        <source>HTML Files (*.html *.htm);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="87"/>
+        <source>Select Qt4 documentation entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="101"/>
+        <source>Select PyQt4 documentation entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="115"/>
+        <source>Select PySide documentation entry</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -26144,17 +26164,17 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation type="obsolete">Aucun remplacement car &apos;%1&apos; est introuvable.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="470"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="472"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="542"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="544"/>
         <source>Replaced {0} occurrences.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="546"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="548"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>

@@ -10888,17 +10888,17 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
         <source>Select Python documentation directory</source>
-        <translation>Seleccionar el directorio con la documentación de Python</translation>
+        <translation type="obsolete">Seleccionar el directorio con la documentación de Python</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="88"/>
         <source>Select Qt4 documentation directory</source>
-        <translation>Seleccionar el directorio con la documentación de Qt4</translation>
+        <translation type="obsolete">Seleccionar el directorio con la documentación de Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="103"/>
         <source>Select PyQt4 documentation directory</source>
-        <translation>Seleccionar el directorio con la documentación de PyQt4</translation>
+        <translation type="obsolete">Seleccionar el directorio con la documentación de PyQt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="136"/>
@@ -10923,7 +10923,32 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="118"/>
         <source>Select PySide documentation directory</source>
-        <translation>Seleccionar el directorio con la documentación de PySide</translation>
+        <translation type="obsolete">Seleccionar el directorio con la documentación de PySide</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
+        <source>Select Python documentation entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="115"/>
+        <source>HTML Files (*.html *.htm);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="87"/>
+        <source>Select Qt4 documentation entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="101"/>
+        <source>Select PyQt4 documentation entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="115"/>
+        <source>Select PySide documentation entry</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -23358,17 +23383,17 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="470"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="472"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; no se ha encontrado.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="542"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="544"/>
         <source>Replaced {0} occurrences.</source>
         <translation>Se han reemplazado {0} ocurrencias.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="546"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="548"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>No se ha reemplazado nada porque &apos;{0}&apos; no se ha encontrado.</translation>
     </message>

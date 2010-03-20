@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="1.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1550,7 +1549,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -1601,7 +1600,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -10637,7 +10636,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="568"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -10885,21 +10884,6 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;b&gt;Hinweis&lt;/b&gt;: Leer lassen, um die Umgebungsvariable PYQT4DOCDIR zu verwenden, wenn sie gesetzt ist.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
-        <source>Select Python documentation directory</source>
-        <translation>Wähle Python Dokumentationsverzeichnis</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="88"/>
-        <source>Select Qt4 documentation directory</source>
-        <translation>Wähle Qt4 Dokumentationsverzeichnis</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="103"/>
-        <source>Select PyQt4 documentation directory</source>
-        <translation>Wähle PyQt4 Dokumentationsverzeichnis</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="17"/>
         <source>&lt;b&gt;Configure help documentation&lt;/b&gt;</source>
         <translation>&lt;b&gt;Hilfe Dokumentation einstellen&lt;/b&gt;</translation>
@@ -10925,9 +10909,29 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;b&gt;Hinweis&lt;/b&gt;: Leer lassen, um die Umgebungsvariable PYSIDEDOCDIR zu verwenden, wenn sie gesetzt ist.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="118"/>
-        <source>Select PySide documentation directory</source>
-        <translation>Wähle PySide Dokumentationsverzeichnis</translation>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
+        <source>Select Python documentation entry</source>
+        <translation>Wähle Python Dokumentationsstart</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="115"/>
+        <source>HTML Files (*.html *.htm);;All Files (*)</source>
+        <translation>HTML Dateien (*.html *.htm);;Alle Dateien (*)</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="87"/>
+        <source>Select Qt4 documentation entry</source>
+        <translation>Wähle Qt4 Dokumentationsstart</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="101"/>
+        <source>Select PyQt4 documentation entry</source>
+        <translation>Wähle PyQt4 Dokumentationsstart</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="115"/>
+        <source>Select PySide documentation entry</source>
+        <translation>Wähle PySide Dokumentationsstart</translation>
     </message>
 </context>
 <context>
@@ -23392,17 +23396,17 @@ innerhalb der Klammern bedeutet, dass die gefundene Übereinstimmung nicht zur w
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="470"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="472"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; wurde nicht gefunden.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="542"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="544"/>
         <source>Replaced {0} occurrences.</source>
         <translation>{0} Vorkommen ersetzt.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="546"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="548"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>Es wurde nichts ersetzt, da &apos;{0}&apos; nicht gefunden wurde.</translation>
     </message>
