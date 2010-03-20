@@ -166,7 +166,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 else:
                     fmt = 'self.trUtf8("%s"),%s%s'
                 code += fmt % (self.eStartWith.text(), os.linesep, istring)
-            if self.eFilters.text():
+            if self.eFilters.text() == "":
                 code += '""'
             else:
                 if self.cFilters.isChecked(): 
