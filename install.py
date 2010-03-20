@@ -231,6 +231,13 @@ def cleanUp():
     
     global pyModDir, progLanguages
     
+    # Remove the menu entry for Linux systems
+    if sys.platform.startswith("linux"):
+        for name in ["/usr/share/pixmaps/eric.png", 
+                     "/usr/share/applications/eric5.desktop"]:
+            if os.path.exists(name):
+                os.remove(name)
+    
     # Remove the wrapper scripts
     rem_wnames = [
         "eric5-api", "eric5-compare",
@@ -397,6 +404,11 @@ def installEric():
                     shutil.copy(apiName, apidir)
                 except EnvironmentError:
                     print("Could not install '%s'." % apiName)
+    
+    # create menu entry for Linux systems
+    if sys.platform.startswith("linux"):
+        shutil.copy(os.path.join("eric", "icons", "default", "eric.png"), "/usr/share/pixmaps")
+        shutil.copy(os.path.join("eric", "eric5.desktop"), "/usr/share/applications")
 
 
 def createInstallConfig():

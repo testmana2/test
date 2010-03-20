@@ -62,6 +62,13 @@ def uninstallEric():
     """
     global pyModDir
     
+    # Remove the menu entry for Linux systems
+    if sys.platform.startswith("linux"):
+        for name in ["/usr/share/pixmaps/eric.png", 
+                     "/usr/share/applications/eric5.desktop"]:
+            if os.path.exists(name):
+                os.remove(name)
+    
     # Remove the wrapper scripts
     rem_wnames = [
         "eric5-api", "eric5-compare",

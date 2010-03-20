@@ -1046,6 +1046,7 @@
     <Other>APIs/Ruby/eric5.api</Other>
     <Other>APIs/Python3/eric5.api</Other>
     <Other>.issues</Other>
+    <Other>eric5.desktop</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
