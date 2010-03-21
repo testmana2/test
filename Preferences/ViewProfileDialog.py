@@ -47,6 +47,7 @@ class ViewProfileDialog(QDialog):
         # set the editor profile
         profile = self.profiles["edit"][0]
         self.ui.epdbCheckBox.setChecked(profile[2])
+        self.ui.epcoCheckBox.setChecked(profile[9])
         if self.__layout in ["Toolboxes", "Sidebars"]:
             profile = self.profiles["edit"][5]
             self.ui.epvtCheckBox.setChecked(profile[0])
@@ -72,6 +73,7 @@ class ViewProfileDialog(QDialog):
         # set the debug profile
         profile = self.profiles["debug"][0]
         self.ui.dpdbCheckBox.setChecked(profile[2])
+        self.ui.dpcoCheckBox.setChecked(profile[9])
         if self.__layout in ["Toolboxes", "Sidebars"]:
             profile = self.profiles["edit"][5]
             self.ui.dpvtCheckBox.setChecked(profile[0])
@@ -104,12 +106,14 @@ class ViewProfileDialog(QDialog):
         if self.__layout in ["Toolboxes", "Sidebars"]:
             # get the edit profile
             self.profiles["edit"][0][2] = self.ui.epdbCheckBox.isChecked()
+            self.profiles["edit"][0][9] = self.ui.epcoCheckBox.isChecked()
             self.profiles["edit"][5] = [\
                 self.ui.epvtCheckBox.isChecked(), 
                 self.ui.ephtCheckBox.isChecked(), 
             ]
             # get the debug profile
             self.profiles["debug"][0][2] = self.ui.dpdbCheckBox.isChecked()
+            self.profiles["debug"][0][9] = self.ui.dpcoCheckBox.isChecked()
             self.profiles["debug"][5] = [\
                 self.ui.dpvtCheckBox.isChecked(), 
                 self.ui.dphtCheckBox.isChecked(), 
@@ -126,6 +130,7 @@ class ViewProfileDialog(QDialog):
                 self.ui.eptevCheckBox.isChecked(),
                 self.ui.epmpbCheckBox.isChecked(),
                 self.ui.eptwCheckBox.isChecked(),
+                self.ui.epcoCheckBox.isChecked()
             ]
             
             # get the debug profile
@@ -139,6 +144,7 @@ class ViewProfileDialog(QDialog):
                 self.ui.dptevCheckBox.isChecked(),
                 self.ui.dpmpbCheckBox.isChecked(),
                 self.ui.dptwCheckBox.isChecked(),
+                self.ui.dpcoCheckBox.isChecked()
             ]
         
         return self.profiles

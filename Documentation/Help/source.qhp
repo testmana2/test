@@ -14,6 +14,12 @@
     <toc>
       <section title="The eric5 IDE" ref="index.html">
         <section title="eric5" ref="index-eric5.html">
+          <section title="eric5.Cooperation" ref="index-eric5.Cooperation.html">
+            <section title="eric5.Cooperation.ChatWidget" ref="eric5.Cooperation.ChatWidget.html" />
+            <section title="eric5.Cooperation.Connection" ref="eric5.Cooperation.Connection.html" />
+            <section title="eric5.Cooperation.CooperationClient" ref="eric5.Cooperation.CooperationClient.html" />
+            <section title="eric5.Cooperation.CooperationServer" ref="eric5.Cooperation.CooperationServer.html" />
+          </section>
           <section title="eric5.DataViews" ref="index-eric5.DataViews.html">
             <section title="eric5.DataViews.CodeMetrics" ref="eric5.DataViews.CodeMetrics.html" />
             <section title="eric5.DataViews.CodeMetricsDialog" ref="eric5.DataViews.CodeMetricsDialog.html" />
@@ -443,6 +449,7 @@
             <section title="eric5.Preferences.ConfigurationPages" ref="index-eric5.Preferences.ConfigurationPages.html">
               <section title="eric5.Preferences.ConfigurationPages.ApplicationPage" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ConfigurationPageBase" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html" />
+              <section title="eric5.Preferences.ConfigurationPages.CooperationPage" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.CorbaPage" ref="eric5.Preferences.ConfigurationPages.CorbaPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.DebuggerGeneralPage" ref="eric5.Preferences.ConfigurationPages.DebuggerGeneralPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.DebuggerPython3Page" ref="eric5.Preferences.ConfigurationPages.DebuggerPython3Page.html" />
@@ -2943,6 +2950,7 @@
       <keyword name="Preferences (Package)" id="Preferences (Package)" ref="index-eric5.Preferences.html" />
       <keyword name="Prefs" id="Prefs" ref="eric5.Preferences.__init__.html#Prefs" />
       <keyword name="exportPreferences" id="exportPreferences" ref="eric5.Preferences.__init__.html#exportPreferences" />
+      <keyword name="getCooperation" id="getCooperation" ref="eric5.Preferences.__init__.html#getCooperation" />
       <keyword name="getCorba" id="getCorba" ref="eric5.Preferences.__init__.html#getCorba" />
       <keyword name="getDebugger" id="getDebugger" ref="eric5.Preferences.__init__.html#getDebugger" />
       <keyword name="getEditor" id="getEditor" ref="eric5.Preferences.__init__.html#getEditor" />
@@ -2991,6 +2999,7 @@
       <keyword name="resetLayout" id="resetLayout" ref="eric5.Preferences.__init__.html#resetLayout" />
       <keyword name="saveResetLayout" id="saveResetLayout" ref="eric5.Preferences.__init__.html#saveResetLayout" />
       <keyword name="saveToolGroups" id="saveToolGroups" ref="eric5.Preferences.__init__.html#saveToolGroups" />
+      <keyword name="setCooperation" id="setCooperation" ref="eric5.Preferences.__init__.html#setCooperation" />
       <keyword name="setCorba" id="setCorba" ref="eric5.Preferences.__init__.html#setCorba" />
       <keyword name="setDebugger" id="setDebugger" ref="eric5.Preferences.__init__.html#setDebugger" />
       <keyword name="setEditor" id="setEditor" ref="eric5.Preferences.__init__.html#setEditor" />
@@ -3170,6 +3179,61 @@
       <keyword name="ToolGroupConfigurationDialog.on_upButton_clicked" id="ToolGroupConfigurationDialog.on_upButton_clicked" ref="eric5.Preferences.ToolGroupConfigurationDialog.html#ToolGroupConfigurationDialog.on_upButton_clicked" />
       <keyword name="Globals (Package)" id="Globals (Package)" ref="index-eric5.Globals.html" />
       <keyword name="isWindowsPlatform" id="isWindowsPlatform" ref="eric5.Globals.__init__.html#isWindowsPlatform" />
+      <keyword name="Cooperation (Package)" id="Cooperation (Package)" ref="index-eric5.Cooperation.html" />
+      <keyword name="ChatWidget (Module)" id="ChatWidget (Module)" ref="eric5.Cooperation.ChatWidget.html" />
+      <keyword name="ChatWidget" id="ChatWidget" ref="eric5.Cooperation.ChatWidget.html#ChatWidget" />
+      <keyword name="ChatWidget (Constructor)" id="ChatWidget (Constructor)" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__init__" />
+      <keyword name="ChatWidget.__handleMessage" id="ChatWidget.__handleMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__handleMessage" />
+      <keyword name="ChatWidget.__initialConnectionRefused" id="ChatWidget.__initialConnectionRefused" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__initialConnectionRefused" />
+      <keyword name="ChatWidget.__newParticipant" id="ChatWidget.__newParticipant" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__newParticipant" />
+      <keyword name="ChatWidget.__participantLeft" id="ChatWidget.__participantLeft" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__participantLeft" />
+      <keyword name="ChatWidget.__setConnected" id="ChatWidget.__setConnected" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__setConnected" />
+      <keyword name="ChatWidget.__showErrorMessage" id="ChatWidget.__showErrorMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__showErrorMessage" />
+      <keyword name="ChatWidget.appendMessage" id="ChatWidget.appendMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.appendMessage" />
+      <keyword name="ChatWidget.on_connectButton_clicked" id="ChatWidget.on_connectButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_connectButton_clicked" />
+      <keyword name="ChatWidget.on_hostEdit_textChanged" id="ChatWidget.on_hostEdit_textChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_hostEdit_textChanged" />
+      <keyword name="ChatWidget.on_serverButton_clicked" id="ChatWidget.on_serverButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_serverButton_clicked" />
+      <keyword name="ChatWidget.preferencesChanged" id="ChatWidget.preferencesChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.preferencesChanged" />
+      <keyword name="Connection (Module)" id="Connection (Module)" ref="eric5.Cooperation.Connection.html" />
+      <keyword name="Connection" id="Connection" ref="eric5.Cooperation.Connection.html#Connection" />
+      <keyword name="Connection (Constructor)" id="Connection (Constructor)" ref="eric5.Cooperation.Connection.html#Connection.__init__" />
+      <keyword name="Connection.__dataLengthForCurrentDataType" id="Connection.__dataLengthForCurrentDataType" ref="eric5.Cooperation.Connection.html#Connection.__dataLengthForCurrentDataType" />
+      <keyword name="Connection.__hasEnoughData" id="Connection.__hasEnoughData" ref="eric5.Cooperation.Connection.html#Connection.__hasEnoughData" />
+      <keyword name="Connection.__processData" id="Connection.__processData" ref="eric5.Cooperation.Connection.html#Connection.__processData" />
+      <keyword name="Connection.__processReadyRead" id="Connection.__processReadyRead" ref="eric5.Cooperation.Connection.html#Connection.__processReadyRead" />
+      <keyword name="Connection.__readDataIntoBuffer" id="Connection.__readDataIntoBuffer" ref="eric5.Cooperation.Connection.html#Connection.__readDataIntoBuffer" />
+      <keyword name="Connection.__readProtocolHeader" id="Connection.__readProtocolHeader" ref="eric5.Cooperation.Connection.html#Connection.__readProtocolHeader" />
+      <keyword name="Connection.__sendGreetingMessage" id="Connection.__sendGreetingMessage" ref="eric5.Cooperation.Connection.html#Connection.__sendGreetingMessage" />
+      <keyword name="Connection.__sendPing" id="Connection.__sendPing" ref="eric5.Cooperation.Connection.html#Connection.__sendPing" />
+      <keyword name="Connection.name" id="Connection.name" ref="eric5.Cooperation.Connection.html#Connection.name" />
+      <keyword name="Connection.sendGetParticipants" id="Connection.sendGetParticipants" ref="eric5.Cooperation.Connection.html#Connection.sendGetParticipants" />
+      <keyword name="Connection.sendMessage" id="Connection.sendMessage" ref="eric5.Cooperation.Connection.html#Connection.sendMessage" />
+      <keyword name="Connection.sendParticipants" id="Connection.sendParticipants" ref="eric5.Cooperation.Connection.html#Connection.sendParticipants" />
+      <keyword name="Connection.serverPort" id="Connection.serverPort" ref="eric5.Cooperation.Connection.html#Connection.serverPort" />
+      <keyword name="Connection.setGreetingMessage" id="Connection.setGreetingMessage" ref="eric5.Cooperation.Connection.html#Connection.setGreetingMessage" />
+      <keyword name="Connection.timerEvent" id="Connection.timerEvent" ref="eric5.Cooperation.Connection.html#Connection.timerEvent" />
+      <keyword name="CooperationServer (Module)" id="CooperationServer (Module)" ref="eric5.Cooperation.CooperationServer.html" />
+      <keyword name="CooperationServer" id="CooperationServer" ref="eric5.Cooperation.CooperationServer.html#CooperationServer" />
+      <keyword name="CooperationServer (Constructor)" id="CooperationServer (Constructor)" ref="eric5.Cooperation.CooperationServer.html#CooperationServer.__init__" />
+      <keyword name="CooperationServer.incomingConnection" id="CooperationServer.incomingConnection" ref="eric5.Cooperation.CooperationServer.html#CooperationServer.incomingConnection" />
+      <keyword name="CooperationServer.startListening" id="CooperationServer.startListening" ref="eric5.Cooperation.CooperationServer.html#CooperationServer.startListening" />
+      <keyword name="CooperationClient (Module)" id="CooperationClient (Module)" ref="eric5.Cooperation.CooperationClient.html" />
+      <keyword name="CooperationClient" id="CooperationClient" ref="eric5.Cooperation.CooperationClient.html#CooperationClient" />
+      <keyword name="CooperationClient (Constructor)" id="CooperationClient (Constructor)" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__init__" />
+      <keyword name="CooperationClient.__connectionError" id="CooperationClient.__connectionError" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__connectionError" />
+      <keyword name="CooperationClient.__disconnected" id="CooperationClient.__disconnected" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__disconnected" />
+      <keyword name="CooperationClient.__getParticipants" id="CooperationClient.__getParticipants" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__getParticipants" />
+      <keyword name="CooperationClient.__newConnection" id="CooperationClient.__newConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__newConnection" />
+      <keyword name="CooperationClient.__processParticipants" id="CooperationClient.__processParticipants" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__processParticipants" />
+      <keyword name="CooperationClient.__readyForUse" id="CooperationClient.__readyForUse" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__readyForUse" />
+      <keyword name="CooperationClient.__removeConnection" id="CooperationClient.__removeConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__removeConnection" />
+      <keyword name="CooperationClient.connectToHost" id="CooperationClient.connectToHost" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.connectToHost" />
+      <keyword name="CooperationClient.disconnectConnections" id="CooperationClient.disconnectConnections" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.disconnectConnections" />
+      <keyword name="CooperationClient.hasConnection" id="CooperationClient.hasConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.hasConnection" />
+      <keyword name="CooperationClient.hasConnections" id="CooperationClient.hasConnections" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.hasConnections" />
+      <keyword name="CooperationClient.nickName" id="CooperationClient.nickName" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.nickName" />
+      <keyword name="CooperationClient.sendMessage" id="CooperationClient.sendMessage" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.sendMessage" />
+      <keyword name="CooperationClient.server" id="CooperationClient.server" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.server" />
       <keyword name="ViewManager (Package)" id="ViewManager (Package)" ref="index-eric5.ViewManager.html" />
       <keyword name="factory" id="factory" ref="eric5.ViewManager.__init__.html#factory" />
       <keyword name="ViewManager (Module)" id="ViewManager (Module)" ref="eric5.ViewManager.ViewManager.html" />
@@ -3788,6 +3852,7 @@
       <keyword name="UserInterface.__TRPreviewer" id="UserInterface.__TRPreviewer" ref="eric5.UI.UserInterface.html#UserInterface.__TRPreviewer" />
       <keyword name="UserInterface.__UIPreviewer" id="UserInterface.__UIPreviewer" ref="eric5.UI.UserInterface.html#UserInterface.__UIPreviewer" />
       <keyword name="UserInterface.__activateBrowser" id="UserInterface.__activateBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__activateBrowser" />
+      <keyword name="UserInterface.__activateCooperationViewer" id="UserInterface.__activateCooperationViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateCooperationViewer" />
       <keyword name="UserInterface.__activateDebugViewer" id="UserInterface.__activateDebugViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateDebugViewer" />
       <keyword name="UserInterface.__activateLogViewer" id="UserInterface.__activateLogViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateLogViewer" />
       <keyword name="UserInterface.__activateMultiProjectBrowser" id="UserInterface.__activateMultiProjectBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__activateMultiProjectBrowser" />
@@ -3896,6 +3961,7 @@
       <keyword name="UserInterface.__switchTab" id="UserInterface.__switchTab" ref="eric5.UI.UserInterface.html#UserInterface.__switchTab" />
       <keyword name="UserInterface.__toggleBottomSidebar" id="UserInterface.__toggleBottomSidebar" ref="eric5.UI.UserInterface.html#UserInterface.__toggleBottomSidebar" />
       <keyword name="UserInterface.__toggleBrowser" id="UserInterface.__toggleBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__toggleBrowser" />
+      <keyword name="UserInterface.__toggleCooperationViewer" id="UserInterface.__toggleCooperationViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleCooperationViewer" />
       <keyword name="UserInterface.__toggleDebugViewer" id="UserInterface.__toggleDebugViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleDebugViewer" />
       <keyword name="UserInterface.__toggleHorizontalToolbox" id="UserInterface.__toggleHorizontalToolbox" ref="eric5.UI.UserInterface.html#UserInterface.__toggleHorizontalToolbox" />
       <keyword name="UserInterface.__toggleLeftSidebar" id="UserInterface.__toggleLeftSidebar" ref="eric5.UI.UserInterface.html#UserInterface.__toggleLeftSidebar" />
@@ -7473,6 +7539,11 @@
       <keyword name="VcsPage.on_pbVcsReplacedButton_clicked" id="VcsPage.on_pbVcsReplacedButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsReplacedButton_clicked" />
       <keyword name="VcsPage.on_pbVcsUpdateButton_clicked" id="VcsPage.on_pbVcsUpdateButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsUpdateButton_clicked" />
       <keyword name="VcsPage.save" id="VcsPage.save" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.save" />
+      <keyword name="CooperationPage (Module)" id="CooperationPage (Module)" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html" />
+      <keyword name="CooperationPage" id="CooperationPage" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage" />
+      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#create" />
+      <keyword name="CooperationPage (Constructor)" id="CooperationPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage.__init__" />
+      <keyword name="CooperationPage.save" id="CooperationPage.save" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage.save" />
       <keyword name="InterfacePage (Module)" id="InterfacePage (Module)" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html" />
       <keyword name="InterfacePage" id="InterfacePage" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#create" />
@@ -9024,6 +9095,10 @@
       <keyword name="PDFStyle (Constructor)" id="PDFStyle (Constructor)" ref="eric5.QScintilla.Exporters.ExporterPDF.html#PDFStyle.__init__" />
     </keywords>
     <files>
+      <file>eric5.Cooperation.ChatWidget.html</file>
+      <file>eric5.Cooperation.Connection.html</file>
+      <file>eric5.Cooperation.CooperationClient.html</file>
+      <file>eric5.Cooperation.CooperationServer.html</file>
       <file>eric5.DataViews.CodeMetrics.html</file>
       <file>eric5.DataViews.CodeMetricsDialog.html</file>
       <file>eric5.DataViews.PyCoverageDialog.html</file>
@@ -9353,6 +9428,7 @@
       <file>eric5.Preferences.ConfigurationDialog.html</file>
       <file>eric5.Preferences.ConfigurationPages.ApplicationPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html</file>
+      <file>eric5.Preferences.ConfigurationPages.CooperationPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.CorbaPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.DebuggerGeneralPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.DebuggerPython3Page.html</file>
@@ -9571,6 +9647,7 @@
       <file>eric5.patch_modpython.html</file>
       <file>eric5.patch_pyxml.html</file>
       <file>eric5.uninstall.html</file>
+      <file>index-eric5.Cooperation.html</file>
       <file>index-eric5.DataViews.html</file>
       <file>index-eric5.DebugClients.Python.html</file>
       <file>index-eric5.DebugClients.Python3.html</file>

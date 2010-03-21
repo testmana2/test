@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Cooperation.CooperationClient</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Cooperation.CooperationClient</h1>
+<p>
+Module implementing the client of the cooperation package.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#CooperationClient">CooperationClient</a></td>
+<td>Class implementing the client of the cooperation package.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="CooperationClient" ID="CooperationClient"></a>
+<h2>CooperationClient</h2>
+<p>
+    Class implementing the client of the cooperation package.
+</p><h4>Signals</h4>
+<dl>
+<dt>cannotConnect()</dt>
+<dd>
+emitted, if the initial connection fails
+</dd><dt>connectionError(message)</dt>
+<dd>
+emitted when a connection error occurs (string)
+</dd><dt>newMessage(user, message)</dt>
+<dd>
+emitted after a new message has
+            arrived (string, string)
+</dd><dt>newParticipant(nickname)</dt>
+<dd>
+emitted after a new participant joined (string)
+</dd><dt>participantLeft(nickname)</dt>
+<dd>
+emitted after a participant left (string)
+</dd>
+</dl>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+<table>
+<tr><td>cannotConnect</td></tr><tr><td>connectionError</td></tr><tr><td>newMessage</td></tr><tr><td>newParticipant</td></tr><tr><td>participantLeft</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#CooperationClient.__init__">CooperationClient</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#CooperationClient.__connectionError">__connectionError</a></td>
+<td>Private slot to handle a connection error.</td>
+</tr><tr>
+<td><a href="#CooperationClient.__disconnected">__disconnected</a></td>
+<td>Private slot to handle the disconnection of a chat client.</td>
+</tr><tr>
+<td><a href="#CooperationClient.__getParticipants">__getParticipants</a></td>
+<td>Private slot to handle the request for a list of participants.</td>
+</tr><tr>
+<td><a href="#CooperationClient.__newConnection">__newConnection</a></td>
+<td>Private slot to handle a new connection.</td>
+</tr><tr>
+<td><a href="#CooperationClient.__processParticipants">__processParticipants</a></td>
+<td>Private slot to handle the receipt of a list of participants.</td>
+</tr><tr>
+<td><a href="#CooperationClient.__readyForUse">__readyForUse</a></td>
+<td>Private slot to handle a connection getting ready for use.</td>
+</tr><tr>
+<td><a href="#CooperationClient.__removeConnection">__removeConnection</a></td>
+<td>Private method to remove a connection.</td>
+</tr><tr>
+<td><a href="#CooperationClient.connectToHost">connectToHost</a></td>
+<td>Public method to connect to a host.</td>
+</tr><tr>
+<td><a href="#CooperationClient.disconnectConnections">disconnectConnections</a></td>
+<td>Public slot to disconnect from the chat network.</td>
+</tr><tr>
+<td><a href="#CooperationClient.hasConnection">hasConnection</a></td>
+<td>Public method to check for an existing connection.</td>
+</tr><tr>
+<td><a href="#CooperationClient.hasConnections">hasConnections</a></td>
+<td>Public method to check, if there are any connections established.</td>
+</tr><tr>
+<td><a href="#CooperationClient.nickName">nickName</a></td>
+<td>Public method to get the nick name.</td>
+</tr><tr>
+<td><a href="#CooperationClient.sendMessage">sendMessage</a></td>
+<td>Public method to send a message.</td>
+</tr><tr>
+<td><a href="#CooperationClient.server">server</a></td>
+<td>Public method to get a reference to the server.</td>
+</tr>
+</table>
+<a NAME="CooperationClient.__init__" ID="CooperationClient.__init__"></a>
+<h4>CooperationClient (Constructor)</h4>
+<b>CooperationClient</b>(<i></i>)
+<p>
+        Constructor
+</p><a NAME="CooperationClient.__connectionError" ID="CooperationClient.__connectionError"></a>
+<h4>CooperationClient.__connectionError</h4>
+<b>__connectionError</b>(<i>socketError</i>)
+<p>
+        Private slot to handle a connection error.
+</p><dl>
+<dt><i>socketError</i></dt>
+<dd>
+reference to the error object (QAbstractSocket.SocketError)
+</dd>
+</dl><a NAME="CooperationClient.__disconnected" ID="CooperationClient.__disconnected"></a>
+<h4>CooperationClient.__disconnected</h4>
+<b>__disconnected</b>(<i></i>)
+<p>
+        Private slot to handle the disconnection of a chat client.
+</p><a NAME="CooperationClient.__getParticipants" ID="CooperationClient.__getParticipants"></a>
+<h4>CooperationClient.__getParticipants</h4>
+<b>__getParticipants</b>(<i></i>)
+<p>
+        Private slot to handle the request for a list of participants.
+</p><a NAME="CooperationClient.__newConnection" ID="CooperationClient.__newConnection"></a>
+<h4>CooperationClient.__newConnection</h4>
+<b>__newConnection</b>(<i>connection</i>)
+<p>
+        Private slot to handle a new connection.
+</p><dl>
+<dt><i>connection</i></dt>
+<dd>
+reference to the new connection (Connection)
+</dd>
+</dl><a NAME="CooperationClient.__processParticipants" ID="CooperationClient.__processParticipants"></a>
+<h4>CooperationClient.__processParticipants</h4>
+<b>__processParticipants</b>(<i>participants</i>)
+<p>
+        Private slot to handle the receipt of a list of participants.
+</p><dl>
+<dt><i>participants</i></dt>
+<dd>
+list of participants (list of strings of "host:port")
+</dd>
+</dl><a NAME="CooperationClient.__readyForUse" ID="CooperationClient.__readyForUse"></a>
+<h4>CooperationClient.__readyForUse</h4>
+<b>__readyForUse</b>(<i></i>)
+<p>
+        Private slot to handle a connection getting ready for use.
+</p><a NAME="CooperationClient.__removeConnection" ID="CooperationClient.__removeConnection"></a>
+<h4>CooperationClient.__removeConnection</h4>
+<b>__removeConnection</b>(<i>connection</i>)
+<p>
+        Private method to remove a connection.
+</p><dl>
+<dt><i>connection</i></dt>
+<dd>
+reference to the connection to be removed (Connection)
+</dd>
+</dl><a NAME="CooperationClient.connectToHost" ID="CooperationClient.connectToHost"></a>
+<h4>CooperationClient.connectToHost</h4>
+<b>connectToHost</b>(<i>host, port</i>)
+<p>
+        Public method to connect to a host.
+</p><dl>
+<dt><i>host</i></dt>
+<dd>
+host to connect to (string)
+</dd><dt><i>port</i></dt>
+<dd>
+port to connect to (integer)
+</dd>
+</dl><a NAME="CooperationClient.disconnectConnections" ID="CooperationClient.disconnectConnections"></a>
+<h4>CooperationClient.disconnectConnections</h4>
+<b>disconnectConnections</b>(<i></i>)
+<p>
+        Public slot to disconnect from the chat network.
+</p><a NAME="CooperationClient.hasConnection" ID="CooperationClient.hasConnection"></a>
+<h4>CooperationClient.hasConnection</h4>
+<b>hasConnection</b>(<i>senderIp, senderPort = -1</i>)
+<p>
+        Public method to check for an existing connection.
+</p><dl>
+<dt><i>senderIp</i></dt>
+<dd>
+address of the sender (QHostAddress)
+</dd><dt><i>senderPort</i></dt>
+<dd>
+port of the sender (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an existing connection (boolean)
+</dd>
+</dl><a NAME="CooperationClient.hasConnections" ID="CooperationClient.hasConnections"></a>
+<h4>CooperationClient.hasConnections</h4>
+<b>hasConnections</b>(<i></i>)
+<p>
+        Public method to check, if there are any connections established.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the presence of connections (boolean)
+</dd>
+</dl><a NAME="CooperationClient.nickName" ID="CooperationClient.nickName"></a>
+<h4>CooperationClient.nickName</h4>
+<b>nickName</b>(<i></i>)
+<p>
+        Public method to get the nick name.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+nick name (string)
+</dd>
+</dl><a NAME="CooperationClient.sendMessage" ID="CooperationClient.sendMessage"></a>
+<h4>CooperationClient.sendMessage</h4>
+<b>sendMessage</b>(<i>message</i>)
+<p>
+        Public method to send a message.
+</p><dl>
+<dt><i>message</i></dt>
+<dd>
+message to be sent (string)
+</dd>
+</dl><a NAME="CooperationClient.server" ID="CooperationClient.server"></a>
+<h4>CooperationClient.server</h4>
+<b>server</b>(<i></i>)
+<p>
+        Public method to get a reference to the server.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the server object (CooperationServer)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

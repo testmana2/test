@@ -50,6 +50,9 @@ to import it.
 <td><a href="#exportPreferences">exportPreferences</a></td>
 <td>Module function to export the current preferences.</td>
 </tr><tr>
+<td><a href="#getCooperation">getCooperation</a></td>
+<td>Module function to retrieve the various Cooperation settings.</td>
+</tr><tr>
 <td><a href="#getCorba">getCorba</a></td>
 <td>Module function to retrieve the various corba settings.</td>
 </tr><tr>
@@ -194,6 +197,9 @@ to import it.
 <td><a href="#saveToolGroups">saveToolGroups</a></td>
 <td>Module function to write the tool groups configuration.</td>
 </tr><tr>
+<td><a href="#setCooperation">setCooperation</a></td>
+<td>Module function to store the various Cooperation settings.</td>
+</tr><tr>
 <td><a href="#setCorba">setCorba</a></td>
 <td>Module function to store the various corba settings.</td>
 </tr><tr>
@@ -331,7 +337,7 @@ to import it.
 object
 <h3>Class Attributes</h3>
 <table>
-<tr><td>corbaDefaults</td></tr><tr><td>debuggerDefaults</td></tr><tr><td>editorColourDefaults</td></tr><tr><td>editorDefaults</td></tr><tr><td>editorExporterDefaults</td></tr><tr><td>editorOtherFontsDefaults</td></tr><tr><td>editorTypingDefaults</td></tr><tr><td>fontFamily</td></tr><tr><td>fontSize</td></tr><tr><td>geometryDefaults</td></tr><tr><td>graphicsDefaults</td></tr><tr><td>helpDefaults</td></tr><tr><td>iconEditorDefaults</td></tr><tr><td>iconsDefaults</td></tr><tr><td>multiProjectDefaults</td></tr><tr><td>pluginManagerDefaults</td></tr><tr><td>printerDefaults</td></tr><tr><td>projectBrowserColourDefaults</td></tr><tr><td>projectBrowserFlagsDefaults</td></tr><tr><td>projectDefaults</td></tr><tr><td>py3flakesDefaults</td></tr><tr><td>qtDefaults</td></tr><tr><td>resetLayout</td></tr><tr><td>shellDefaults</td></tr><tr><td>sysDefaults</td></tr><tr><td>tasksDefaults</td></tr><tr><td>templatesDefaults</td></tr><tr><td>terminalDefaults</td></tr><tr><td>uiDefaults</td></tr><tr><td>userDefaults</td></tr><tr><td>varDefaults</td></tr><tr><td>vcsDefaults</td></tr><tr><td>viewProfilesLength</td></tr><tr><td>websettings</td></tr>
+<tr><td>cooperationDefaults</td></tr><tr><td>corbaDefaults</td></tr><tr><td>debuggerDefaults</td></tr><tr><td>editorColourDefaults</td></tr><tr><td>editorDefaults</td></tr><tr><td>editorExporterDefaults</td></tr><tr><td>editorOtherFontsDefaults</td></tr><tr><td>editorTypingDefaults</td></tr><tr><td>fontFamily</td></tr><tr><td>fontSize</td></tr><tr><td>geometryDefaults</td></tr><tr><td>graphicsDefaults</td></tr><tr><td>helpDefaults</td></tr><tr><td>iconEditorDefaults</td></tr><tr><td>iconsDefaults</td></tr><tr><td>multiProjectDefaults</td></tr><tr><td>pluginManagerDefaults</td></tr><tr><td>printerDefaults</td></tr><tr><td>projectBrowserColourDefaults</td></tr><tr><td>projectBrowserFlagsDefaults</td></tr><tr><td>projectDefaults</td></tr><tr><td>py3flakesDefaults</td></tr><tr><td>qtDefaults</td></tr><tr><td>resetLayout</td></tr><tr><td>shellDefaults</td></tr><tr><td>sysDefaults</td></tr><tr><td>tasksDefaults</td></tr><tr><td>templatesDefaults</td></tr><tr><td>terminalDefaults</td></tr><tr><td>uiDefaults</td></tr><tr><td>userDefaults</td></tr><tr><td>varDefaults</td></tr><tr><td>vcsDefaults</td></tr><tr><td>viewProfilesLength</td></tr><tr><td>websettings</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -349,6 +355,27 @@ object
 <dt><i>prefClass</i></dt>
 <dd>
 preferences class used as the storage area
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getCooperation" ID="getCooperation"></a>
+<h2>getCooperation</h2>
+<b>getCooperation</b>(<i>key, prefClass = Prefs</i>)
+<p>
+    Module function to retrieve the various Cooperation settings.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+the key of the value to get
+</dd><dt><i>prefClass</i></dt>
+<dd>
+preferences class used as the storage area
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the requested UI setting
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -1271,6 +1298,25 @@ reference to the list of tool groups
 </dd><dt><i>currentGroup</i></dt>
 <dd>
 index of the currently selected tool group (integer)
+</dd><dt><i>prefClass</i></dt>
+<dd>
+preferences class used as the storage area
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="setCooperation" ID="setCooperation"></a>
+<h2>setCooperation</h2>
+<b>setCooperation</b>(<i>key, value, prefClass = Prefs</i>)
+<p>
+    Module function to store the various Cooperation settings.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+the key of the setting to be set
+</dd><dt><i>value</i></dt>
+<dd>
+the value to be set
 </dd><dt><i>prefClass</i></dt>
 <dd>
 preferences class used as the storage area

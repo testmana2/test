@@ -1,60 +1,71 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>ViewProfileSidebarsDialog</class>
- <widget class="QDialog" name="ViewProfileSidebarsDialog" >
-  <property name="geometry" >
+ <widget class="QDialog" name="ViewProfileSidebarsDialog">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>608</width>
-    <height>179</height>
+    <height>201</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Configure View Profiles</string>
   </property>
-  <property name="sizeGripEnabled" >
+  <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QGridLayout" name="gridLayout" >
-   <item row="0" column="0" colspan="2" >
-    <widget class="QLabel" name="textLabel1" >
-     <property name="text" >
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="textLabel1">
+     <property name="text">
       <string>Select the windows, that should be visible, when the different profiles are active.</string>
      </property>
-     <property name="alignment" >
+     <property name="alignment">
       <set>Qt::AlignVCenter</set>
      </property>
     </widget>
    </item>
-   <item row="1" column="0" >
-    <widget class="QGroupBox" name="editGroup" >
-     <property name="title" >
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="editGroup">
+     <property name="title">
       <string>&amp;Edit Profile</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout" >
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QCheckBox" name="epvtCheckBox" >
-        <property name="text" >
+       <widget class="QCheckBox" name="epvtCheckBox">
+        <property name="text">
          <string>Left Sidebar</string>
         </property>
-        <property name="checked" >
+        <property name="checked">
          <bool>true</bool>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="ephtCheckBox" >
-        <property name="text" >
+       <widget class="QCheckBox" name="ephtCheckBox">
+        <property name="text">
          <string>Bottom Sidebar</string>
         </property>
-        <property name="checked" >
+        <property name="checked">
          <bool>true</bool>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="epdbCheckBox" >
-        <property name="text" >
+       <widget class="QCheckBox" name="epcoCheckBox">
+        <property name="text">
+         <string>Cooperation</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="epdbCheckBox">
+        <property name="text">
          <string>Debug-Viewer</string>
         </property>
        </widget>
@@ -62,35 +73,42 @@
      </layout>
     </widget>
    </item>
-   <item row="1" column="1" >
-    <widget class="QGroupBox" name="debugGroup" >
-     <property name="title" >
+   <item row="1" column="1">
+    <widget class="QGroupBox" name="debugGroup">
+     <property name="title">
       <string>&amp;Debug Profile</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2" >
+     <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QCheckBox" name="dpvtCheckBox" >
-        <property name="text" >
+       <widget class="QCheckBox" name="dpvtCheckBox">
+        <property name="text">
          <string>Left Sidebar</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="dphtCheckBox" >
-        <property name="text" >
+       <widget class="QCheckBox" name="dphtCheckBox">
+        <property name="text">
          <string>Bottom Sidebar</string>
         </property>
-        <property name="checked" >
+        <property name="checked">
          <bool>true</bool>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="dpdbCheckBox" >
-        <property name="text" >
+       <widget class="QCheckBox" name="dpcoCheckBox">
+        <property name="text">
+         <string>Cooperation</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dpdbCheckBox">
+        <property name="text">
          <string>Debug-Viewer</string>
         </property>
-        <property name="checked" >
+        <property name="checked">
          <bool>true</bool>
         </property>
        </widget>
@@ -98,26 +116,28 @@
      </layout>
     </widget>
    </item>
-   <item row="2" column="0" colspan="2" >
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="orientation" >
+   <item row="2" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="standardButtons" >
+     <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
- <layoutdefault spacing="6" margin="6" />
+ <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <tabstops>
   <tabstop>epvtCheckBox</tabstop>
   <tabstop>ephtCheckBox</tabstop>
+  <tabstop>epcoCheckBox</tabstop>
   <tabstop>epdbCheckBox</tabstop>
   <tabstop>dpvtCheckBox</tabstop>
   <tabstop>dphtCheckBox</tabstop>
+  <tabstop>dpcoCheckBox</tabstop>
   <tabstop>dpdbCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
@@ -129,11 +149,11 @@
    <receiver>ViewProfileSidebarsDialog</receiver>
    <slot>accept()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>56</x>
      <y>208</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>56</x>
      <y>229</y>
     </hint>
@@ -145,11 +165,11 @@
    <receiver>ViewProfileSidebarsDialog</receiver>
    <slot>reject()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>146</x>
      <y>215</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>146</x>
      <y>234</y>
     </hint>

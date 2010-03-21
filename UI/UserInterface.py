@@ -57,6 +57,8 @@ from Tasks.TaskViewer import TaskViewer
 
 from Templates.TemplateViewer import TemplateViewer
 
+from Cooperation.ChatWidget import ChatWidget
+
 from .Browser import Browser
 from .Info import *
 from . import Config
@@ -454,6 +456,8 @@ class UserInterface(QMainWindow):
                      self.pluginManager.preferencesChanged)
         self.connect(self, SIGNAL('preferencesChanged'),
                      debugServer.preferencesChanged)
+        self.connect(self, SIGNAL('preferencesChanged'),
+                     self.cooperation.preferencesChanged)
         
         self.connect(self.viewmanager, SIGNAL('editorSaved'),
                      self.project.repopulateItem)
@@ -706,6 +710,10 @@ class UserInterface(QMainWindow):
             embeddedBrowser=(self.embeddedFileBrowser == 1))
         self.debugViewer.setWindowTitle(self.trUtf8("Debug-Viewer"))
 
+        # Create the chat part of the user interface
+        self.cooperation = ChatWidget()
+        self.cooperation.setWindowTitle(self.trUtf8("Cooperation"))
+        
         # Create the log viewer part of the user interface
         self.logViewer = LogViewer(None)
         self.logViewer.setWindowTitle(self.trUtf8("Log-Viewer"))
@@ -724,7 +732,7 @@ class UserInterface(QMainWindow):
 
         self.windows = [self.projectBrowser, None, self.debugViewer, 
             None, self.logViewer, self.taskViewer, self.templateViewer, 
-            self.multiProjectBrowser, self.terminal]
+            self.multiProjectBrowser, self.terminal, self.cooperation]
 
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
@@ -773,6 +781,12 @@ class UserInterface(QMainWindow):
         self.__setupDockWindow(self.debugViewerDock, Qt.RightDockWidgetArea,
                              self.debugViewer, self.trUtf8("Debug-Viewer"))
 
+        # Create the chat part of the user interface
+        self.cooperationDock = self.__createDockWindow("CooperationDock")
+        self.cooperation = ChatWidget(parent = self.cooperationDock)
+        self.__setupDockWindow(self.cooperationDock, Qt.RightDockWidgetArea,
+                             self.cooperation, self.trUtf8("Cooperation"))
+        
         # Create the log viewer part of the user interface
         self.logViewerDock = self.__createDockWindow("LogViewerDock")
         self.logViewer = LogViewer(self.logViewerDock)
@@ -800,7 +814,7 @@ class UserInterface(QMainWindow):
         
         self.windows = [self.projectBrowserDock, None, self.debugViewerDock, 
             None, self.logViewerDock, self.taskViewerDock, self.templateViewerDock, 
-            self.multiProjectBrowserDock, self.terminalDock]
+            self.multiProjectBrowserDock, self.terminalDock, self.cooperationDock]
 
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
@@ -871,6 +885,12 @@ class UserInterface(QMainWindow):
         self.__setupDockWindow(self.debugViewerDock, Qt.RightDockWidgetArea,
                              self.debugViewer, self.trUtf8("Debug-Viewer"))
 
+        # Create the chat part of the user interface
+        self.cooperationDock = self.__createDockWindow("CooperationDock")
+        self.cooperation = ChatWidget(parent = self.cooperationDock)
+        self.__setupDockWindow(self.cooperationDock, Qt.RightDockWidgetArea,
+                             self.cooperation, self.trUtf8("Cooperation"))
+        
         # Create the terminal part of the user interface
         self.terminal = Terminal(self.viewmanager)
         self.hToolbox.addItem(self.terminal, 
@@ -889,8 +909,8 @@ class UserInterface(QMainWindow):
                               UI.PixmapCache.getIcon("logViewer.png"), 
                               self.trUtf8("Log-Viewer"))
 
-        self.windows = [None, None, self.debugViewerDock, 
-            None, None, None, None, None]
+        self.windows = [None, None, self.debugViewerDock, None, None, 
+                        None, None, None, None, self.cooperationDock]
 
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
@@ -959,6 +979,12 @@ class UserInterface(QMainWindow):
         self.__setupDockWindow(self.debugViewerDock, Qt.RightDockWidgetArea,
                              self.debugViewer, self.trUtf8("Debug-Viewer"))
 
+        # Create the chat part of the user interface
+        self.cooperationDock = self.__createDockWindow("CooperationDock")
+        self.cooperation = ChatWidget(parent = self.cooperationDock)
+        self.__setupDockWindow(self.cooperationDock, Qt.RightDockWidgetArea,
+                             self.cooperation, self.trUtf8("Cooperation"))
+        
         # Create the terminal part of the user interface
         logging.debug("Creating Terminal...")
         self.terminal = Terminal(self.viewmanager)
@@ -980,7 +1006,8 @@ class UserInterface(QMainWindow):
                               UI.PixmapCache.getIcon("logViewer.png"), 
                               self.trUtf8("Log-Viewer"))
 
-        self.windows = [None, None, self.debugViewerDock, None, None, None, None, None]
+        self.windows = [None, None, self.debugViewerDock, None, None, 
+                        None, None, None, None, self.cooperationDock]
 
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
@@ -1536,6 +1563,30 @@ class UserInterface(QMainWindow):
         self.connect(self.bsbAct, SIGNAL('triggered()'), self.__toggleBottomSidebar)
         self.actions.append(self.bsbAct)
         
+        self.cooperationViewerAct = E5Action(self.trUtf8('Cooperation'),
+                self.trUtf8('&Cooperation'), 0, 0, self, 'cooperation_viewer', True)
+        self.cooperationViewerAct.setStatusTip(self.trUtf8(
+            'Toggle the Cooperation window'))
+        self.cooperationViewerAct.setWhatsThis(self.trUtf8(
+            """<b>Toggle the Cooperation window</b>"""
+            """<p>If the Cooperation window is hidden then display it."""
+            """ If it is displayed then close it.</p>"""
+        ))
+        self.connect(self.cooperationViewerAct, SIGNAL('triggered()'), 
+                self.__toggleCooperationViewer)
+        self.actions.append(self.cooperationViewerAct)
+        
+        self.cooperationViewerActivateAct = E5Action(
+                self.trUtf8('Activate Cooperation-Viewer'),
+                self.trUtf8('Activate Cooperation-Viewer'),
+                QKeySequence(self.trUtf8("Alt+Shift+O")),
+                0, self,
+                'cooperation_viewer_activate', True)
+        self.connect(self.cooperationViewerActivateAct, SIGNAL('triggered()'), 
+                self.__activateCooperationViewer)
+        self.actions.append(self.cooperationViewerActivateAct)
+        self.addAction(self.cooperationViewerActivateAct)
+
         self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'),
                 UI.PixmapCache.getIcon("whatsThis.png"),
                 self.trUtf8('&What\'s This?'), 
@@ -3036,6 +3087,8 @@ class UserInterface(QMainWindow):
             self.vtAct.setChecked(not self.vToolboxDock.isHidden())
             self.__menus["window"].addAction(self.htAct)
             self.htAct.setChecked(not self.hToolboxDock.isHidden())
+            self.__menus["window"].addAction(self.cooperationViewerAct)
+            self.cooperationViewerAct.setChecked(not self.cooperationDock.isHidden())
             self.__menus["window"].addAction(self.debugViewerAct)
             self.debugViewerAct.setChecked(not self.debugViewerDock.isHidden())
         elif self.layout == "Sidebars":
@@ -3043,6 +3096,8 @@ class UserInterface(QMainWindow):
             self.lsbAct.setChecked(not self.leftSidebar.isHidden())
             self.__menus["window"].addAction(self.bsbAct)
             self.bsbAct.setChecked(not self.bottomSidebar.isHidden())
+            self.__menus["window"].addAction(self.cooperationViewerAct)
+            self.cooperationViewerAct.setChecked(not self.cooperationDock.isHidden())
             self.__menus["window"].addAction(self.debugViewerAct)
             self.debugViewerAct.setChecked(not self.debugViewerDock.isHidden())
         else:
@@ -3102,6 +3157,12 @@ class UserInterface(QMainWindow):
                 self.templateViewerAct.setChecked(not self.templateViewerDock.isHidden())
             else:
                 self.templateViewerAct.setChecked(not self.templateViewer.isHidden())
+
+            self.__menus["window"].addAction(self.cooperationViewerAct)
+            if self.layout == "DockWindows":
+                self.cooperationViewerAct.setChecked(not self.cooperationDock.isHidden())
+            else:
+                self.cooperationViewerAct.setChecked(not self.cooperation.isHidden())
 
         # Insert menu entry for toolbar settings
         self.__menus["window"].addSeparator()
@@ -3672,6 +3733,32 @@ class UserInterface(QMainWindow):
         else:
             if hasFocus:
                 self.__activateViewmanager()
+        
+    def __toggleCooperationViewer(self):
+        """
+        Private slot to handle the toggle of the cooperation window.
+        """
+        hasFocus = self.cooperation.hasFocus()
+        if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
+            shown = self.__toggleWindow(self.cooperationDock)
+        else:
+            shown = self.__toggleWindow(self.cooperation)
+        if shown:
+            self.__activateCooperationViewer()
+        else:
+            if hasFocus:
+                self.__activateViewmanager()
+        
+    def __activateCooperationViewer(self):
+        """
+        Private slot to handle the activation of the cooperation window.
+        """
+        if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
+            self.cooperationDock.show()
+            self.cooperationDock.raise_()
+        else:
+            self.cooperation.show()
+        self.cooperation.setFocus(Qt.ActiveWindowFocusReason)
         
     def __activateViewmanager(self):
         """

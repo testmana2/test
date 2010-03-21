@@ -85,6 +85,7 @@ class Prefs(object):
     }
     debuggerDefaults["AllowedHosts"] = ["127.0.0.1", "::1%0"]
     
+    # defaults for the UI settings
     uiDefaults = {
         "Language" : "System",
         "Style" : "System",
@@ -113,15 +114,15 @@ class Prefs(object):
         "TabViewManagerFilenameOnly" : True, 
         # the order in ViewProfiles is Project-Viewer, File-Browser,
         # Debug-Viewer, Python-Shell, Log-Viewer, Task-Viewer,
-        # Templates-Viewer, Multiproject-Viewer, Terminal
+        # Templates-Viewer, Multiproject-Viewer, Terminal, Chat
         "ViewProfiles" : {
             "edit"  : [
                     # visibility (0)
-                    [ True,  False,  False,  True,  True,  True,  True,  True, True],
+                    [ True, False, False, True, True, True, True,  True,  True, True],
                     # saved state main window with dock windows (1)
                     b"",
                     # saved states floating windows (2)
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b""],
+                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
                     # saved state main window with floating windows (3)
                     b"", 
                     # saved state main window with toolbox windows (4)
@@ -134,11 +135,11 @@ class Prefs(object):
                 ],
             "debug" : [
                     # visibility (0)
-                    [ False,  False,  True,  True,  True,  True,  False,  False, True], 
+                    [ False, False, True, True, True, True, False, False, True, True], 
                     # saved state main window with dock windows (1)
                     b"",
                     # saved states floating windows (2)
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b""],
+                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
                     # saved state main window with floating windows (3)
                     b"", 
                     # saved state main window with toolbox windows (4)
@@ -191,6 +192,14 @@ class Prefs(object):
     
     iconsDefaults = {
         "Path" : [],
+    }
+    
+    # defaults for the cooperation settings
+    cooperationDefaults = {
+        "ServerPort" : 42000, 
+        "AutoStartServer" : False,
+        "TryOtherPorts" : True, 
+        "MaxPortsToTry" : 100, 
     }
     
     # defaults for the editor settings
@@ -1151,6 +1160,34 @@ def setIcons(key, value, prefClass = Prefs):
     """
     prefClass.settings.setValue("UI/Icons/" + key, value)
     
+def getCooperation(key, prefClass = Prefs):
+    """
+    Module function to retrieve the various Cooperation settings.
+    
+    @param key the key of the value to get
+    @param prefClass preferences class used as the storage area
+    @return the requested UI setting
+    """
+    if key in ["AutoStartServer", "TryOtherPorts"]:
+        return toBool(prefClass.settings.value("Cooperation/" + key,
+            prefClass.cooperationDefaults[key]))
+    elif key in ["ServerPort", "MaxPortsToTry"]:
+        return int(prefClass.settings.value("Cooperation/" + key,
+            prefClass.cooperationDefaults[key]))
+    else:
+        return prefClass.settings.value("Cooperation/" + key, 
+            prefClass.cooperationDefaults[key])
+    
+def setCooperation(key, value, prefClass = Prefs):
+    """
+    Module function to store the various Cooperation settings.
+    
+    @param key the key of the setting to be set
+    @param value the value to be set
+    @param prefClass preferences class used as the storage area
+    """
+    prefClass.settings.setValue("Cooperation/" + key, value)
+
 def getEditor(key, prefClass = Prefs):
     """
     Module function to retrieve the various editor settings.

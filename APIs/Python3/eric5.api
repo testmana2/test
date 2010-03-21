@@ -1,3 +1,59 @@
+eric5.Cooperation.ChatWidget.ChatWidget.appendMessage?4(from_, message)
+eric5.Cooperation.ChatWidget.ChatWidget.on_connectButton_clicked?4()
+eric5.Cooperation.ChatWidget.ChatWidget.on_hostEdit_textChanged?4(host)
+eric5.Cooperation.ChatWidget.ChatWidget.on_serverButton_clicked?4()
+eric5.Cooperation.ChatWidget.ChatWidget.preferencesChanged?4()
+eric5.Cooperation.ChatWidget.ChatWidget?1(port = -1, parent = None)
+eric5.Cooperation.Connection.Connection.GetParticipants?7
+eric5.Cooperation.Connection.Connection.Greeting?7
+eric5.Cooperation.Connection.Connection.Participants?7
+eric5.Cooperation.Connection.Connection.Ping?7
+eric5.Cooperation.Connection.Connection.PlainText?7
+eric5.Cooperation.Connection.Connection.Pong?7
+eric5.Cooperation.Connection.Connection.ProtocolGetParticipants?7
+eric5.Cooperation.Connection.Connection.ProtocolGreeting?7
+eric5.Cooperation.Connection.Connection.ProtocolMessage?7
+eric5.Cooperation.Connection.Connection.ProtocolParticipants?7
+eric5.Cooperation.Connection.Connection.ProtocolPing?7
+eric5.Cooperation.Connection.Connection.ProtocolPong?7
+eric5.Cooperation.Connection.Connection.ReadingGreeting?7
+eric5.Cooperation.Connection.Connection.ReadyForUse?7
+eric5.Cooperation.Connection.Connection.Undefined?7
+eric5.Cooperation.Connection.Connection.WaitingForGreeting?7
+eric5.Cooperation.Connection.Connection.getParticipants?7
+eric5.Cooperation.Connection.Connection.name?4()
+eric5.Cooperation.Connection.Connection.newMessage?7
+eric5.Cooperation.Connection.Connection.participants?7
+eric5.Cooperation.Connection.Connection.readyForUse?7
+eric5.Cooperation.Connection.Connection.sendGetParticipants?4()
+eric5.Cooperation.Connection.Connection.sendMessage?4(message)
+eric5.Cooperation.Connection.Connection.sendParticipants?4(participants)
+eric5.Cooperation.Connection.Connection.serverPort?4()
+eric5.Cooperation.Connection.Connection.setGreetingMessage?4(message, serverPort)
+eric5.Cooperation.Connection.Connection.timerEvent?4(evt)
+eric5.Cooperation.Connection.Connection?1(parent = None)
+eric5.Cooperation.Connection.MaxBufferSize?7
+eric5.Cooperation.Connection.PingInterval?7
+eric5.Cooperation.Connection.PongTimeout?7
+eric5.Cooperation.Connection.SeparatorToken?7
+eric5.Cooperation.Connection.TransferTimeout?7
+eric5.Cooperation.CooperationClient.CooperationClient.cannotConnect?7
+eric5.Cooperation.CooperationClient.CooperationClient.connectToHost?4(host, port)
+eric5.Cooperation.CooperationClient.CooperationClient.connectionError?7
+eric5.Cooperation.CooperationClient.CooperationClient.disconnectConnections?4()
+eric5.Cooperation.CooperationClient.CooperationClient.hasConnection?4(senderIp, senderPort = -1)
+eric5.Cooperation.CooperationClient.CooperationClient.hasConnections?4()
+eric5.Cooperation.CooperationClient.CooperationClient.newMessage?7
+eric5.Cooperation.CooperationClient.CooperationClient.newParticipant?7
+eric5.Cooperation.CooperationClient.CooperationClient.nickName?4()
+eric5.Cooperation.CooperationClient.CooperationClient.participantLeft?7
+eric5.Cooperation.CooperationClient.CooperationClient.sendMessage?4(message)
+eric5.Cooperation.CooperationClient.CooperationClient.server?4()
+eric5.Cooperation.CooperationClient.CooperationClient?1()
+eric5.Cooperation.CooperationServer.CooperationServer.incomingConnection?4(socketDescriptor)
+eric5.Cooperation.CooperationServer.CooperationServer.newConnection?7
+eric5.Cooperation.CooperationServer.CooperationServer.startListening?4(port = -1)
+eric5.Cooperation.CooperationServer.CooperationServer?1(parent = None)
 eric5.DataViews.CodeMetrics.COMMENT?7
 eric5.DataViews.CodeMetrics.DEDENT?7
 eric5.DataViews.CodeMetrics.EMPTY?7
@@ -3305,6 +3361,9 @@ eric5.Preferences.ConfigurationPages.ConfigurationPageBase.ConfigurationPageBase
 eric5.Preferences.ConfigurationPages.ConfigurationPageBase.ConfigurationPageBase.selectFont?4(fontSample, fontVar, showFontInfo = False)
 eric5.Preferences.ConfigurationPages.ConfigurationPageBase.ConfigurationPageBase.setState?4(state)
 eric5.Preferences.ConfigurationPages.ConfigurationPageBase.ConfigurationPageBase?1()
+eric5.Preferences.ConfigurationPages.CooperationPage.CooperationPage.save?4()
+eric5.Preferences.ConfigurationPages.CooperationPage.CooperationPage?1()
+eric5.Preferences.ConfigurationPages.CooperationPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.CorbaPage.CorbaPage.on_idlButton_clicked?4()
 eric5.Preferences.ConfigurationPages.CorbaPage.CorbaPage.save?4()
 eric5.Preferences.ConfigurationPages.CorbaPage.CorbaPage?1()
@@ -3578,6 +3637,7 @@ eric5.Preferences.PreferencesLexer.PreferencesLexer.setPaper?4(c, style)
 eric5.Preferences.PreferencesLexer.PreferencesLexer?1(language, parent=None)
 eric5.Preferences.PreferencesLexer.PreferencesLexerError?1()
 eric5.Preferences.PreferencesLexer.PreferencesLexerLanguageError?1(language)
+eric5.Preferences.Prefs.cooperationDefaults?7
 eric5.Preferences.Prefs.corbaDefaults?7
 eric5.Preferences.Prefs.debuggerDefaults?7
 eric5.Preferences.Prefs.editorColourDefaults?7
@@ -3668,6 +3728,7 @@ eric5.Preferences.ToolGroupConfigurationDialog.ToolGroupConfigurationDialog?1(to
 eric5.Preferences.ViewProfileDialog.ViewProfileDialog.getProfiles?4()
 eric5.Preferences.ViewProfileDialog.ViewProfileDialog?1(layout, profiles, separateShell, separateBrowser, parent = None)
 eric5.Preferences.exportPreferences?4(prefClass = Prefs)
+eric5.Preferences.getCooperation?4(key, prefClass = Prefs)
 eric5.Preferences.getCorba?4(key, prefClass = Prefs)
 eric5.Preferences.getDebugger?4(key, prefClass = Prefs)
 eric5.Preferences.getEditor?4(key, prefClass = Prefs)
@@ -3716,6 +3777,7 @@ eric5.Preferences.removeProjectBrowserFlags?4(key, prefClass = Prefs)
 eric5.Preferences.resetLayout?4(prefClass = Prefs)
 eric5.Preferences.saveResetLayout?4(prefClass = Prefs)
 eric5.Preferences.saveToolGroups?4(toolGroups, currentGroup, prefClass = Prefs)
+eric5.Preferences.setCooperation?4(key, value, prefClass = Prefs)
 eric5.Preferences.setCorba?4(key, value, prefClass = Prefs)
 eric5.Preferences.setDebugger?4(key, value, prefClass = Prefs)
 eric5.Preferences.setEditor?4(key, value, prefClass = Prefs)

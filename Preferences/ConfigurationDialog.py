@@ -93,6 +93,9 @@ class ConfigurationWidget(QWidget):
                 "applicationPage" : \
                     [self.trUtf8("Application"), "preferences-application.png",
                      "ApplicationPage", None, None],
+                "cooperationPage" : \
+                    [self.trUtf8("Cooperation"), "preferences-cooperation.png",
+                     "CooperationPage", None, None],
                 "corbaPage" : \
                     [self.trUtf8("CORBA"), "preferences-orbit.png",
                     "CorbaPage", None, None],

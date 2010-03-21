@@ -763,6 +763,12 @@
     <Source>Utilities/py3flakes/messages.py</Source>
     <Source>Preferences/ConfigurationPages/Py3FlakesPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorKeywordsPage.py</Source>
+    <Source>Cooperation/__init__.py</Source>
+    <Source>Cooperation/Connection.py</Source>
+    <Source>Cooperation/ChatWidget.py</Source>
+    <Source>Cooperation/CooperationClient.py</Source>
+    <Source>Cooperation/CooperationServer.py</Source>
+    <Source>Preferences/ConfigurationPages/CooperationPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -966,6 +972,8 @@
     <Form>E5Gui/E5ToolBarDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/Py3FlakesPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorKeywordsPage.ui</Form>
+    <Form>Cooperation/ChatWidget.ui</Form>
+    <Form>Preferences/ConfigurationPages/CooperationPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
