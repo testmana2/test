@@ -531,6 +531,7 @@ class UserInterface(QMainWindow):
         e5App().registerObject("PluginManager", self.pluginManager)
         e5App().registerObject("ToolbarManager", self.toolbarManager)
         e5App().registerObject("Terminal", self.terminal)
+        e5App().registerObject("Cooperation", self.cooperation)
         
         # Initialize the actions, menus, toolbars and statusbar
         splash.showMessage(self.trUtf8("Initializing Actions..."))
