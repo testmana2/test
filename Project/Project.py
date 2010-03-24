@@ -626,8 +626,8 @@ class Project(QObject):
             
             # create hash value, if it doesn't have one
             if not self.pdata["HASH"][0]:
-                hash = str(QCrytographicHash.hash(
-                    QByteArray(self.ppath), QCryptographicHash.Sha1),
+                hash = str(QCryptographicHash.hash(
+                    QByteArray(self.ppath), QCryptographicHash.Sha1).toHex(),
                     encoding = "utf-8")
                 self.pdata["HASH"] = [hash]
                 self.setDirty(True)
@@ -2261,8 +2261,8 @@ class Project(QObject):
             
             self.emit(SIGNAL("projectAboutToBeCreated"))
             
-            hash = str(QCrytographicHash.hash(
-                QByteArray(self.ppath), QCryptographicHash.Sha1),
+            hash = str(QCryptographicHash.hash(
+                QByteArray(self.ppath), QCryptographicHash.Sha1).toHex(),
                 encoding = "utf-8")
             self.pdata["HASH"] = [hash]
             

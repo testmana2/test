@@ -978,6 +978,7 @@
       <keyword name="ProjectHandler.endEric4ApiParams" id="ProjectHandler.endEric4ApiParams" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.endEric4ApiParams" />
       <keyword name="ProjectHandler.endEric4DocParams" id="ProjectHandler.endEric4DocParams" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.endEric4DocParams" />
       <keyword name="ProjectHandler.endForm" id="ProjectHandler.endForm" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.endForm" />
+      <keyword name="ProjectHandler.endHash" id="ProjectHandler.endHash" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.endHash" />
       <keyword name="ProjectHandler.endInterface" id="ProjectHandler.endInterface" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.endInterface" />
       <keyword name="ProjectHandler.endLanguage" id="ProjectHandler.endLanguage" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.endLanguage" />
       <keyword name="ProjectHandler.endMainScript" id="ProjectHandler.endMainScript" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.endMainScript" />
