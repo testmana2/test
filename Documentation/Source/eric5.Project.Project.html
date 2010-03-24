@@ -409,6 +409,9 @@ QObject
 <td><a href="#Project.getFiles">getFiles</a></td>
 <td>Public method to get all files starting with a common prefix.</td>
 </tr><tr>
+<td><a href="#Project.getHash">getHash</a></td>
+<td>Public method to get the project hash.</td>
+</tr><tr>
 <td><a href="#Project.getMainScript">getMainScript</a></td>
 <td>Public method to return the main script filename.</td>
 </tr><tr>
@@ -444,6 +447,12 @@ QObject
 </tr><tr>
 <td><a href="#Project.getProjectTypes">getProjectTypes</a></td>
 <td>Public method to get the list of supported project types.</td>
+</tr><tr>
+<td><a href="#Project.getRelativePath">getRelativePath</a></td>
+<td>Public method to convert a file path to a project relative file path.</td>
+</tr><tr>
+<td><a href="#Project.getRelativeUniversalPath">getRelativeUniversalPath</a></td>
+<td>Public method to convert a file path to a project relative file path with universal separators.</td>
 </tr><tr>
 <td><a href="#Project.getSources">getSources</a></td>
 <td>Public method to return the source script files.</td>
@@ -1434,6 +1443,16 @@ the requested lexer language (string)
 <dd>
 prefix (string)
 </dd>
+</dl><a NAME="Project.getHash" ID="Project.getHash"></a>
+<h4>Project.getHash</h4>
+<b>getHash</b>(<i></i>)
+<p>
+        Public method to get the project hash.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+project hash as a hex string (string)
+</dd>
 </dl><a NAME="Project.getMainScript" ID="Project.getMainScript"></a>
 <h4>Project.getMainScript</h4>
 <b>getMainScript</b>(<i>normalized = False</i>)
@@ -1564,6 +1583,40 @@ UI type of the project (string)
 <dt>Returns:</dt>
 <dd>
 reference to the dictionary of project types.
+</dd>
+</dl><a NAME="Project.getRelativePath" ID="Project.getRelativePath"></a>
+<h4>Project.getRelativePath</h4>
+<b>getRelativePath</b>(<i>fn</i>)
+<p>
+        Public method to convert a file path to a project relative
+        file path.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+file or directory name to convert (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+project relative path or unchanged path, if fn doesn't
+            belong to the project (string)
+</dd>
+</dl><a NAME="Project.getRelativeUniversalPath" ID="Project.getRelativeUniversalPath"></a>
+<h4>Project.getRelativeUniversalPath</h4>
+<b>getRelativeUniversalPath</b>(<i>fn</i>)
+<p>
+        Public method to convert a file path to a project relative
+        file path with universal separators.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+file or directory name to convert (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+project relative path or unchanged path, if fn doesn't
+            belong to the project (string)
 </dd>
 </dl><a NAME="Project.getSources" ID="Project.getSources"></a>
 <h4>Project.getSources</h4>

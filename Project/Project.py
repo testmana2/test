@@ -3156,6 +3156,36 @@ class Project(QObject):
         else:
             return os.path.join(self.ppath, ".eric5project")
         
+    def getHash(self):
+        """
+        Public method to get the project hash.
+        
+        @return project hash as a hex string (string)
+        """
+        return self.pdata["HASH"][0]
+        
+    def getRelativePath(self, fn):
+        """
+        Public method to convert a file path to a project relative
+        file path.
+        
+        @param fn file or directory name to convert (string)
+        @return project relative path or unchanged path, if fn doesn't
+            belong to the project (string)
+        """
+        return fn.replace(self.ppath + os.sep, "")
+        
+    def getRelativeUniversalPath(self, fn):
+        """
+        Public method to convert a file path to a project relative
+        file path with universal separators.
+        
+        @param fn file or directory name to convert (string)
+        @return project relative path or unchanged path, if fn doesn't
+            belong to the project (string)
+        """
+        return Utilities.fromNativeSeparators(fn.replace(self.ppath + os.sep, ""))
+        
     def isProjectFile(self, fn):
         """
         Public method used to check, if the passed in filename belongs to the project.

@@ -4479,6 +4479,7 @@
       <keyword name="Project.getDefaultSourceExtension" id="Project.getDefaultSourceExtension" ref="eric5.Project.Project.html#Project.getDefaultSourceExtension" />
       <keyword name="Project.getEditorLexerAssoc" id="Project.getEditorLexerAssoc" ref="eric5.Project.Project.html#Project.getEditorLexerAssoc" />
       <keyword name="Project.getFiles" id="Project.getFiles" ref="eric5.Project.Project.html#Project.getFiles" />
+      <keyword name="Project.getHash" id="Project.getHash" ref="eric5.Project.Project.html#Project.getHash" />
       <keyword name="Project.getMainScript" id="Project.getMainScript" ref="eric5.Project.Project.html#Project.getMainScript" />
       <keyword name="Project.getMenu" id="Project.getMenu" ref="eric5.Project.Project.html#Project.getMenu" />
       <keyword name="Project.getModel" id="Project.getModel" ref="eric5.Project.Project.html#Project.getModel" />
@@ -4491,6 +4492,8 @@
       <keyword name="Project.getProjectSpellLanguage" id="Project.getProjectSpellLanguage" ref="eric5.Project.Project.html#Project.getProjectSpellLanguage" />
       <keyword name="Project.getProjectType" id="Project.getProjectType" ref="eric5.Project.Project.html#Project.getProjectType" />
       <keyword name="Project.getProjectTypes" id="Project.getProjectTypes" ref="eric5.Project.Project.html#Project.getProjectTypes" />
+      <keyword name="Project.getRelativePath" id="Project.getRelativePath" ref="eric5.Project.Project.html#Project.getRelativePath" />
+      <keyword name="Project.getRelativeUniversalPath" id="Project.getRelativeUniversalPath" ref="eric5.Project.Project.html#Project.getRelativeUniversalPath" />
       <keyword name="Project.getSources" id="Project.getSources" ref="eric5.Project.Project.html#Project.getSources" />
       <keyword name="Project.getStatusMonitorAutoUpdate" id="Project.getStatusMonitorAutoUpdate" ref="eric5.Project.Project.html#Project.getStatusMonitorAutoUpdate" />
       <keyword name="Project.getStatusMonitorInterval" id="Project.getStatusMonitorInterval" ref="eric5.Project.Project.html#Project.getStatusMonitorInterval" />
