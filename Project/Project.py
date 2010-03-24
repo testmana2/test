@@ -114,7 +114,7 @@ class Project(QObject):
     keynames = [
         "PROGLANGUAGE", "MIXEDLANGUAGE", "PROJECTTYPE",
         "SPELLLANGUAGE", "SPELLWORDS", "SPELLEXCLUDES", 
-        "DESCRIPTION", "VERSION",
+        "DESCRIPTION", "VERSION", "HASH",
         "AUTHOR", "EMAIL",
         "SOURCES", "FORMS", "RESOURCES",
         "TRANSLATIONS", "TRANSLATIONPATTERN", "TRANSLATIONSBINPATH", 
@@ -301,7 +301,8 @@ class Project(QObject):
             self.pdata[key] = []
         self.pdata["AUTHOR"] = ['']
         self.pdata["EMAIL"] = ['']
-        self.pdata["PROGLANGUAGE"] = ["Python"]
+        self.pdata["HASH"] = ['']
+        self.pdata["PROGLANGUAGE"] = ["Python3"]
         self.pdata["MIXEDLANGUAGE"] = [False]
         self.pdata["PROJECTTYPE"] = ["Qt4"]
         self.pdata["SPELLLANGUAGE"] = \
@@ -622,6 +623,14 @@ class Project(QObject):
                 dn = os.path.dirname(fn)
                 if dn not in self.otherssubdirs:
                     self.otherssubdirs.append(dn)
+            
+            # create hash value, if it doesn't have one
+            if not self.pdata["HASH"][0]:
+                hash = str(QCrytographicHash.hash(
+                    QByteArray(self.ppath), QCryptographicHash.Sha1),
+                    encoding = "utf-8")
+                self.pdata["HASH"] = [hash]
+                self.setDirty(True)
             
         return res
 
@@ -2251,6 +2260,11 @@ class Project(QObject):
             self.pluginGrp.setEnabled(self.pdata["PROJECTTYPE"][0] == "E4Plugin")
             
             self.emit(SIGNAL("projectAboutToBeCreated"))
+            
+            hash = str(QCrytographicHash.hash(
+                QByteArray(self.ppath), QCryptographicHash.Sha1),
+                encoding = "utf-8")
+            self.pdata["HASH"] = [hash]
             
             # create the project directory if it doesn't exist already
             if not os.path.isdir(self.ppath):

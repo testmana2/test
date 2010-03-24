@@ -35,6 +35,7 @@ class ProjectHandler(XMLHandlerBase):
             'ProjectWordList' : (self.defaultStartElement, self.endProjectWordList), 
             'ProjectExcludeList' : (self.defaultStartElement, 
                                     self.endProjectExcludeList), 
+            'Hash' : (self.defaultStartElement, self.endHash), 
             'ProgLanguage' : (self.startProgLanguage, self.endProgLanguage),
             'ProjectType' : (self.defaultStartElement, self.endProjectType),
             'Description' : (self.defaultStartElement, self.endDescription),
@@ -112,6 +113,12 @@ class ProjectHandler(XMLHandlerBase):
         """
         path = Utilities.toNativeSeparators(self.buffer)
         self.project.pdata["SPELLEXCLUDES"] = [path]
+        
+    def endHash(self):
+        """
+        Handler method for the "Hash" end tag.
+        """
+        self.project.pdata["HASH"] = [self.buffer]
         
     def startProgLanguage(self, attrs):
         """

@@ -63,6 +63,9 @@ class ProjectWriter(XMLWriterBase):
             self._write("  <ProjectExcludeList>%s</ProjectExcludeList>" % \
                 Utilities.fromNativeSeparators(self.pdata["SPELLEXCLUDES"][0]))
         
+        # do the hash
+        self._write('  <Hash>%s</Hash>' % self.pdata["HASH"][0])
+        
         # do the programming language
         self._write('  <ProgLanguage mixed="%d">%s</ProgLanguage>' % \
             (self.pdata["MIXEDLANGUAGE"][0], self.pdata["PROGLANGUAGE"][0]))
