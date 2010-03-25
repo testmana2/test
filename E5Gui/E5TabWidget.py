@@ -272,7 +272,8 @@ class E5TabWidget(QTabWidget):
         
         @return free side (QTabBar.ButtonPosition)
         """
-        side = self.__tabBar.style().styleHint(QStyle.SH_TabBar_CloseButtonPosition)
+        side = self.__tabBar.style().styleHint(QStyle.SH_TabBar_CloseButtonPosition, 
+            None, None, None)
         if side == QTabBar.LeftSide:
             side = QTabBar.RightSide
         else:
