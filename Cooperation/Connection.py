@@ -38,6 +38,7 @@ class Connection(QTcpSocket):
     Greeting        = 3
     GetParticipants = 4
     Participants    = 5
+    Editor          = 6
     Undefined       = 99
     
     ProtocolMessage         = "MESSAGE"
@@ -46,11 +47,13 @@ class Connection(QTcpSocket):
     ProtocolGreeting        = "GREETING"
     ProtocolGetParticipants = "GET_PARTICIPANTS"
     ProtocolParticipants    = "PARTICIPANTS"
+    ProtocolEditor          = "EDITOR"
     
     readyForUse     = pyqtSignal()
     newMessage      = pyqtSignal(str, str)
     getParticipants = pyqtSignal()
     participants    = pyqtSignal(list)
+    editorCommand   = pyqtSignal(str, str, str)
     
     def __init__(self, parent = None):
         """
@@ -267,6 +270,8 @@ class Connection(QTcpSocket):
             self.__currentDataType = Connection.GetParticipants
         elif self.__buffer == Connection.ProtocolParticipants:
             self.__currentDataType = Connection.Participants
+        elif self.__buffer == Connection.ProtocolEditor:
+            self.__currentDataType = Connection.Editor
         else:
             self.__currentDataType = Connection.Undefined
             self.abort()
@@ -320,6 +325,9 @@ class Connection(QTcpSocket):
             else:
                 participantsList = msg.split(SeparatorToken)
             self.participants.emit(participantsList[:])
+        elif self.__currentDataType == Connection.Editor:
+            hash, fn, msg = str(self.__buffer, encoding = "utf-8").split(SeparatorToken)
+            self.editorCommand.emit(hash, fn, msg)
         
         self.__currentDataType = Connection.Undefined
         self.__numBytesForCurrentDataType = 0
@@ -346,4 +354,19 @@ class Connection(QTcpSocket):
         msg = QByteArray(message.encode("utf-8"))
         data = QByteArray("{0}{1}{2}{1}".format(
             Connection.ProtocolParticipants, SeparatorToken, msg.size())) + msg
+        self.write(data)
+    
+    def sendEditorCommand(self, projectHash, filename, message):
+        """
+        Public method to send an editor command.
+        
+        @param projectHash hash of the project (string)
+        @param filename project relative universal file name of 
+            the sending editor (string)
+        @param message editor command to be sent (string)
+        """
+        msg = QByteArray("{0}{1}{2}{1}{3}".format(
+            projectHash, SeparatorToken, filename, message).encode("utf-8"))
+        data = QByteArray("{0}{1}{2}{1}".format(
+            Connection.ProtocolEditor, SeparatorToken, msg.size())) + msg
         self.write(data)

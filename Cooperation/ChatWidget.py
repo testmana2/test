@@ -237,3 +237,9 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.serverPortSpin.setValue(Preferences.getCooperation("ServerPort"))
             if Preferences.getCooperation("AutoStartServer"):
                 self.on_serverButton_clicked()
+    
+    def getClient(self):
+        """
+        Public method to get a reference to the cooperation client.
+        """
+        return self.__client

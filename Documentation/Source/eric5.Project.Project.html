@@ -391,6 +391,9 @@ QObject
 <td><a href="#Project.deleteLanguageFile">deleteLanguageFile</a></td>
 <td>Public slot to delete a translation from the project directory.</td>
 </tr><tr>
+<td><a href="#Project.getAbsoluteUniversalPath">getAbsoluteUniversalPath</a></td>
+<td>Public method to convert a project relative file path with universal separators to an absolute file path.</td>
+</tr><tr>
 <td><a href="#Project.getActions">getActions</a></td>
 <td>Public method to get a list of all actions.</td>
 </tr><tr>
@@ -1361,6 +1364,22 @@ flag indicating success (boolean)
 <dt><i>langFile</i></dt>
 <dd>
 the translation file to be removed (string)
+</dd>
+</dl><a NAME="Project.getAbsoluteUniversalPath" ID="Project.getAbsoluteUniversalPath"></a>
+<h4>Project.getAbsoluteUniversalPath</h4>
+<b>getAbsoluteUniversalPath</b>(<i>fn</i>)
+<p>
+        Public method to convert a project relative file path with universal 
+        separators to an absolute file path.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+file or directory name to convert (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+absolute path (string)
 </dd>
 </dl><a NAME="Project.getActions" ID="Project.getActions"></a>
 <h4>Project.getActions</h4>

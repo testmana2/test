@@ -3186,6 +3186,18 @@ class Project(QObject):
         """
         return Utilities.fromNativeSeparators(fn.replace(self.ppath + os.sep, ""))
         
+    def getAbsoluteUniversalPath(self, fn):
+        """
+        Public method to convert a project relative file path with universal 
+        separators to an absolute file path.
+        
+        @param fn file or directory name to convert (string)
+        @return absolute path (string)
+        """
+        if not os.path.isabs(fn):
+            fn = os.path.join(self.ppath, Utilities.toNativeSeparators(fn))
+        return fn
+        
     def isProjectFile(self, fn):
         """
         Public method used to check, if the passed in filename belongs to the project.

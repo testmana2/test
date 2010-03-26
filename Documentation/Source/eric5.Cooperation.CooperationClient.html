@@ -52,6 +52,10 @@ emitted, if the initial connection fails
 </dd><dt>connectionError(message)</dt>
 <dd>
 emitted when a connection error occurs (string)
+</dd><dt>editorCommand(hash, filename, message)</dt>
+<dd>
+emitted when an editor command
+            has been received (string, string, string)
 </dd><dt>newMessage(user, message)</dt>
 <dd>
 emitted after a new message has
@@ -68,7 +72,7 @@ emitted after a participant left (string)
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>cannotConnect</td></tr><tr><td>connectionError</td></tr><tr><td>newMessage</td></tr><tr><td>newParticipant</td></tr><tr><td>participantLeft</td></tr>
+<tr><td>cannotConnect</td></tr><tr><td>connectionError</td></tr><tr><td>editorCommand</td></tr><tr><td>newMessage</td></tr><tr><td>newParticipant</td></tr><tr><td>participantLeft</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -111,6 +115,9 @@ QObject
 </tr><tr>
 <td><a href="#CooperationClient.nickName">nickName</a></td>
 <td>Public method to get the nick name.</td>
+</tr><tr>
+<td><a href="#CooperationClient.sendEditorCommand">sendEditorCommand</a></td>
+<td>Public method to send an editor command.</td>
 </tr><tr>
 <td><a href="#CooperationClient.sendMessage">sendMessage</a></td>
 <td>Public method to send a message.</td>
@@ -234,6 +241,23 @@ flag indicating the presence of connections (boolean)
 <dt>Returns:</dt>
 <dd>
 nick name (string)
+</dd>
+</dl><a NAME="CooperationClient.sendEditorCommand" ID="CooperationClient.sendEditorCommand"></a>
+<h4>CooperationClient.sendEditorCommand</h4>
+<b>sendEditorCommand</b>(<i>projectHash, filename, message</i>)
+<p>
+        Public method to send an editor command.
+</p><dl>
+<dt><i>projectHash</i></dt>
+<dd>
+hash of the project (string)
+</dd><dt><i>filename</i></dt>
+<dd>
+project relative universal file name of
+            the sending editor (string)
+</dd><dt><i>message</i></dt>
+<dd>
+editor command to be sent (string)
 </dd>
 </dl><a NAME="CooperationClient.sendMessage" ID="CooperationClient.sendMessage"></a>
 <h4>CooperationClient.sendMessage</h4>

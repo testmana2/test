@@ -117,7 +117,7 @@ emitted to signal the undo availability
 QsciScintillaCompat
 <h3>Class Attributes</h3>
 <table>
-<tr><td>AttributeID</td></tr><tr><td>AttributePrivateID</td></tr><tr><td>AttributeProtectedID</td></tr><tr><td>ClassID</td></tr><tr><td>ClassPrivateID</td></tr><tr><td>ClassProtectedID</td></tr><tr><td>EnumID</td></tr><tr><td>FromDocumentID</td></tr><tr><td>MethodID</td></tr><tr><td>MethodPrivateID</td></tr><tr><td>MethodProtectedID</td></tr><tr><td>TemplateImageID</td></tr>
+<tr><td>AttributeID</td></tr><tr><td>AttributePrivateID</td></tr><tr><td>AttributeProtectedID</td></tr><tr><td>ClassID</td></tr><tr><td>ClassPrivateID</td></tr><tr><td>ClassProtectedID</td></tr><tr><td>EnumID</td></tr><tr><td>FromDocumentID</td></tr><tr><td>MethodID</td></tr><tr><td>MethodPrivateID</td></tr><tr><td>MethodProtectedID</td></tr><tr><td>SelectionToken</td></tr><tr><td>Separator</td></tr><tr><td>TemplateImageID</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -353,6 +353,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__printPreview">__printPreview</a></td>
 <td>Private slot to generate a print preview.</td>
 </tr><tr>
+<td><a href="#Editor.__processSelectionCommand">__processSelectionCommand</a></td>
+<td>Private slot to process a remote selection command</td>
+</tr><tr>
 <td><a href="#Editor.__projectPropertiesChanged">__projectPropertiesChanged</a></td>
 <td>Private slot to handle changes of the project properties.</td>
 </tr><tr>
@@ -376,6 +379,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__selectPygmentsLexer">__selectPygmentsLexer</a></td>
 <td>Private method to select a specific pygments lexer.</td>
+</tr><tr>
+<td><a href="#Editor.__selectionChanged">__selectionChanged</a></td>
+<td>Private slot to handle a change of the selection.</td>
 </tr><tr>
 <td><a href="#Editor.__setAutoCompletion">__setAutoCompletion</a></td>
 <td>Private method to configure the autocompletion function.</td>
@@ -791,6 +797,9 @@ QsciScintillaCompat
 <td><a href="#Editor.readSettings">readSettings</a></td>
 <td>Public slot to read the settings into our lexer.</td>
 </tr><tr>
+<td><a href="#Editor.receive">receive</a></td>
+<td>Public slot to handle received editor commands.</td>
+</tr><tr>
 <td><a href="#Editor.redo">redo</a></td>
 <td>Public method to redo the last recorded change.</td>
 </tr><tr>
@@ -814,6 +823,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.selectWord">selectWord</a></td>
 <td>Public method to select the word at a position.</td>
+</tr><tr>
+<td><a href="#Editor.send">send</a></td>
+<td>Public method to send an editor command to remote editors.</td>
 </tr><tr>
 <td><a href="#Editor.setAutoCompletionEnabled">setAutoCompletionEnabled</a></td>
 <td>Public method to enable/disable autocompletion.</td>
@@ -1526,6 +1538,16 @@ normalized encoding (string)
 <dd>
 reference to the printer object (QScintilla.Printer.Printer)
 </dd>
+</dl><a NAME="Editor.__processSelectionCommand" ID="Editor.__processSelectionCommand"></a>
+<h4>Editor.__processSelectionCommand</h4>
+<b>__processSelectionCommand</b>(<i>argsString</i>)
+<p>
+        Private slot to process a remote selection command
+</p><dl>
+<dt><i>argsString</i></dt>
+<dd>
+string containing the selection parameters (string)
+</dd>
 </dl><a NAME="Editor.__projectPropertiesChanged" ID="Editor.__projectPropertiesChanged"></a>
 <h4>Editor.__projectPropertiesChanged</h4>
 <b>__projectPropertiesChanged</b>(<i></i>)
@@ -1576,7 +1598,12 @@ flag indicating to propagate the change (boolean)
 <dd>
 name of the selected pygments lexer (string)
 </dd>
-</dl><a NAME="Editor.__setAutoCompletion" ID="Editor.__setAutoCompletion"></a>
+</dl><a NAME="Editor.__selectionChanged" ID="Editor.__selectionChanged"></a>
+<h4>Editor.__selectionChanged</h4>
+<b>__selectionChanged</b>(<i></i>)
+<p>
+        Private slot to handle a change of the selection.
+</p><a NAME="Editor.__setAutoCompletion" ID="Editor.__setAutoCompletion"></a>
 <h4>Editor.__setAutoCompletion</h4>
 <b>__setAutoCompletion</b>(<i></i>)
 <p>
@@ -2729,7 +2756,17 @@ flag indicating the creation of a new file, if the given
 <b>readSettings</b>(<i></i>)
 <p>
         Public slot to read the settings into our lexer.
-</p><a NAME="Editor.redo" ID="Editor.redo"></a>
+</p><a NAME="Editor.receive" ID="Editor.receive"></a>
+<h4>Editor.receive</h4>
+<b>receive</b>(<i>command</i>)
+<p>
+        Public slot to handle received editor commands.
+</p><dl>
+<dt><i>command</i></dt>
+<dd>
+command string (string)
+</dd>
+</dl><a NAME="Editor.redo" ID="Editor.redo"></a>
 <h4>Editor.redo</h4>
 <b>redo</b>(<i></i>)
 <p>
@@ -2806,6 +2843,19 @@ number of line to look at (int)
 </dd><dt><i>index</i></dt>
 <dd>
 position to look at (int)
+</dd>
+</dl><a NAME="Editor.send" ID="Editor.send"></a>
+<h4>Editor.send</h4>
+<b>send</b>(<i>token, args</i>)
+<p>
+        Public method to send an editor command to remote editors.
+</p><dl>
+<dt><i>token</i></dt>
+<dd>
+command token (string)
+</dd><dt><i>args</i></dt>
+<dd>
+arguments for the command (string)
 </dd>
 </dl><a NAME="Editor.setAutoCompletionEnabled" ID="Editor.setAutoCompletionEnabled"></a>
 <h4>Editor.setAutoCompletionEnabled</h4>

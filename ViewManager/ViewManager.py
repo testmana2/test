@@ -142,6 +142,8 @@ class ViewManager(QObject):
         # initialize the APIs manager
         self.apisManager = APIsManager(parent = self)
         
+        self.__cooperationClient = None
+        
     def setReferences(self, ui, dbs):
         """
         Public method to set some references needed later on.
@@ -4921,3 +4923,41 @@ class ViewManager(QObject):
         @return the APIs manager object (eric5.QScintilla.APIsManager)
         """
         return self.apisManager
+    
+    #######################################################################
+    ## Cooperation related methods
+    #######################################################################
+    
+    def send(self, fileName, message):
+        """
+        Public method to send an editor command to remote editors.
+        
+        @param fileName file name of the editor (string)
+        @param message command message to be sent (string)
+        """
+        project = e5App().getObject("Project")
+        if project.isProjectFile(fileName):
+            if self.__cooperationClient is None:
+                self.__cooperationClient = e5App().getObject("Cooperation").getClient()
+                self.__cooperationClient.editorCommand.connect(
+                    self.__receive)
+            self.__cooperationClient.sendEditorCommand(
+                project.getHash(), 
+                project.getRelativeUniversalPath(fileName), 
+                message
+            )
+    
+    def __receive(self, hash, fileName, command):
+        """
+        Private slot to handle received editor commands.
+        
+        @param hash hash of the project (string)
+        @param fileName project relative file name of the editor (string)
+        @param command command string (string)
+        """
+        project = e5App().getObject("Project")
+        if hash == project.getHash():
+            fn = project.getAbsoluteUniversalPath(fileName)
+            editor = self.getOpenEditor(fn)
+            if editor:
+                editor.receive(command)

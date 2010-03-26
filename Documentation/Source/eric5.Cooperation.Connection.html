@@ -66,7 +66,7 @@ emitted when the connection is ready for use
 QTcpSocket
 <h3>Class Attributes</h3>
 <table>
-<tr><td>GetParticipants</td></tr><tr><td>Greeting</td></tr><tr><td>Participants</td></tr><tr><td>Ping</td></tr><tr><td>PlainText</td></tr><tr><td>Pong</td></tr><tr><td>ProtocolGetParticipants</td></tr><tr><td>ProtocolGreeting</td></tr><tr><td>ProtocolMessage</td></tr><tr><td>ProtocolParticipants</td></tr><tr><td>ProtocolPing</td></tr><tr><td>ProtocolPong</td></tr><tr><td>ReadingGreeting</td></tr><tr><td>ReadyForUse</td></tr><tr><td>Undefined</td></tr><tr><td>WaitingForGreeting</td></tr><tr><td>getParticipants</td></tr><tr><td>newMessage</td></tr><tr><td>participants</td></tr><tr><td>readyForUse</td></tr>
+<tr><td>Editor</td></tr><tr><td>GetParticipants</td></tr><tr><td>Greeting</td></tr><tr><td>Participants</td></tr><tr><td>Ping</td></tr><tr><td>PlainText</td></tr><tr><td>Pong</td></tr><tr><td>ProtocolEditor</td></tr><tr><td>ProtocolGetParticipants</td></tr><tr><td>ProtocolGreeting</td></tr><tr><td>ProtocolMessage</td></tr><tr><td>ProtocolParticipants</td></tr><tr><td>ProtocolPing</td></tr><tr><td>ProtocolPong</td></tr><tr><td>ReadingGreeting</td></tr><tr><td>ReadyForUse</td></tr><tr><td>Undefined</td></tr><tr><td>WaitingForGreeting</td></tr><tr><td>editorCommand</td></tr><tr><td>getParticipants</td></tr><tr><td>newMessage</td></tr><tr><td>participants</td></tr><tr><td>readyForUse</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -100,6 +100,9 @@ QTcpSocket
 </tr><tr>
 <td><a href="#Connection.name">name</a></td>
 <td>Public method to get the connection name.</td>
+</tr><tr>
+<td><a href="#Connection.sendEditorCommand">sendEditorCommand</a></td>
+<td>Public method to send an editor command.</td>
 </tr><tr>
 <td><a href="#Connection.sendGetParticipants">sendGetParticipants</a></td>
 <td>Public method to request a list of participants.</td>
@@ -204,6 +207,23 @@ flag indicating a successful read (boolean)
 <dt>Returns:</dt>
 <dd>
 connection name (string)
+</dd>
+</dl><a NAME="Connection.sendEditorCommand" ID="Connection.sendEditorCommand"></a>
+<h4>Connection.sendEditorCommand</h4>
+<b>sendEditorCommand</b>(<i>projectHash, filename, message</i>)
+<p>
+        Public method to send an editor command.
+</p><dl>
+<dt><i>projectHash</i></dt>
+<dd>
+hash of the project (string)
+</dd><dt><i>filename</i></dt>
+<dd>
+project relative universal file name of
+            the sending editor (string)
+</dd><dt><i>message</i></dt>
+<dd>
+editor command to be sent (string)
 </dd>
 </dl><a NAME="Connection.sendGetParticipants" ID="Connection.sendGetParticipants"></a>
 <h4>Connection.sendGetParticipants</h4>

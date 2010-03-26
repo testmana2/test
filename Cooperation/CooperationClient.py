@@ -25,12 +25,15 @@ class CooperationClient(QObject):
     @signal participantLeft(nickname) emitted after a participant left (string)
     @signal connectionError(message) emitted when a connection error occurs (string)
     @signal cannotConnect() emitted, if the initial connection fails
+    @signal editorCommand(hash, filename, message) emitted when an editor command
+            has been received (string, string, string)
     """
     newMessage      = pyqtSignal(str, str)
     newParticipant  = pyqtSignal(str)
     participantLeft = pyqtSignal(str)
     connectionError = pyqtSignal(str)
     cannotConnect   = pyqtSignal()
+    editorCommand   = pyqtSignal(str, str, str)
     
     def __init__(self):
         """
@@ -203,6 +206,7 @@ class CooperationClient(QObject):
         
         connection.newMessage.connect(self.newMessage)
         connection.getParticipants.connect(self.__getParticipants)
+        connection.editorCommand.connect(self.editorCommand)
         
         self.__peers[connection.peerAddress()].append(connection)
         nick = connection.name()
@@ -256,3 +260,16 @@ class CooperationClient(QObject):
                     connection = Connection(self)
                     self.__newConnection(connection)
                     connection.connectToHost(host, port)
+    
+    def sendEditorCommand(self, projectHash, filename, message):
+        """
+        Public method to send an editor command.
+        
+        @param projectHash hash of the project (string)
+        @param filename project relative universal file name of 
+            the sending editor (string)
+        @param message editor command to be sent (string)
+        """
+        for connectionList in self.__peers.values():
+            for connection in connectionList:
+                connection.sendEditorCommand(projectHash, filename, message)

@@ -416,6 +416,9 @@ QObject
 <td><a href="#ViewManager.__quickSearchText">__quickSearchText</a></td>
 <td>Private slot to handle the textChanged signal of the quicksearch edit.</td>
 </tr><tr>
+<td><a href="#ViewManager.__receive">__receive</a></td>
+<td>Private slot to handle received editor commands.</td>
+</tr><tr>
 <td><a href="#ViewManager.__replace">__replace</a></td>
 <td>Private method to handle the replace action.</td>
 </tr><tr>
@@ -733,6 +736,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.saveEditorsList">saveEditorsList</a></td>
 <td>Public slot to save a list of editors.</td>
+</tr><tr>
+<td><a href="#ViewManager.send">send</a></td>
+<td>Public method to send an editor command to remote editors.</td>
 </tr><tr>
 <td><a href="#ViewManager.setEditorName">setEditorName</a></td>
 <td>Public method to change the displayed name of the editor.</td>
@@ -1275,7 +1281,23 @@ text to search for (string)
 <b>__quickSearchText</b>(<i></i>)
 <p>
         Private slot to handle the textChanged signal of the quicksearch edit.
-</p><a NAME="ViewManager.__replace" ID="ViewManager.__replace"></a>
+</p><a NAME="ViewManager.__receive" ID="ViewManager.__receive"></a>
+<h4>ViewManager.__receive</h4>
+<b>__receive</b>(<i>hash, fileName, command</i>)
+<p>
+        Private slot to handle received editor commands.
+</p><dl>
+<dt><i>hash</i></dt>
+<dd>
+hash of the project (string)
+</dd><dt><i>fileName</i></dt>
+<dd>
+project relative file name of the editor (string)
+</dd><dt><i>command</i></dt>
+<dd>
+command string (string)
+</dd>
+</dl><a NAME="ViewManager.__replace" ID="ViewManager.__replace"></a>
 <h4>ViewManager.__replace</h4>
 <b>__replace</b>(<i></i>)
 <p>
@@ -2345,6 +2367,19 @@ editor to be saved
 <dt><i>editors</i></dt>
 <dd>
 list of editors to be saved
+</dd>
+</dl><a NAME="ViewManager.send" ID="ViewManager.send"></a>
+<h4>ViewManager.send</h4>
+<b>send</b>(<i>fileName, message</i>)
+<p>
+        Public method to send an editor command to remote editors.
+</p><dl>
+<dt><i>fileName</i></dt>
+<dd>
+file name of the editor (string)
+</dd><dt><i>message</i></dt>
+<dd>
+command message to be sent (string)
 </dd>
 </dl><a NAME="ViewManager.setEditorName" ID="ViewManager.setEditorName"></a>
 <h4>ViewManager.setEditorName</h4>

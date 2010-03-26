@@ -1,15 +1,18 @@
 eric5.Cooperation.ChatWidget.ChatWidget.appendMessage?4(from_, message)
+eric5.Cooperation.ChatWidget.ChatWidget.getClient?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_connectButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_hostEdit_textChanged?4(host)
 eric5.Cooperation.ChatWidget.ChatWidget.on_serverButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.preferencesChanged?4()
 eric5.Cooperation.ChatWidget.ChatWidget?1(port = -1, parent = None)
+eric5.Cooperation.Connection.Connection.Editor?7
 eric5.Cooperation.Connection.Connection.GetParticipants?7
 eric5.Cooperation.Connection.Connection.Greeting?7
 eric5.Cooperation.Connection.Connection.Participants?7
 eric5.Cooperation.Connection.Connection.Ping?7
 eric5.Cooperation.Connection.Connection.PlainText?7
 eric5.Cooperation.Connection.Connection.Pong?7
+eric5.Cooperation.Connection.Connection.ProtocolEditor?7
 eric5.Cooperation.Connection.Connection.ProtocolGetParticipants?7
 eric5.Cooperation.Connection.Connection.ProtocolGreeting?7
 eric5.Cooperation.Connection.Connection.ProtocolMessage?7
@@ -20,11 +23,13 @@ eric5.Cooperation.Connection.Connection.ReadingGreeting?7
 eric5.Cooperation.Connection.Connection.ReadyForUse?7
 eric5.Cooperation.Connection.Connection.Undefined?7
 eric5.Cooperation.Connection.Connection.WaitingForGreeting?7
+eric5.Cooperation.Connection.Connection.editorCommand?7
 eric5.Cooperation.Connection.Connection.getParticipants?7
 eric5.Cooperation.Connection.Connection.name?4()
 eric5.Cooperation.Connection.Connection.newMessage?7
 eric5.Cooperation.Connection.Connection.participants?7
 eric5.Cooperation.Connection.Connection.readyForUse?7
+eric5.Cooperation.Connection.Connection.sendEditorCommand?4(projectHash, filename, message)
 eric5.Cooperation.Connection.Connection.sendGetParticipants?4()
 eric5.Cooperation.Connection.Connection.sendMessage?4(message)
 eric5.Cooperation.Connection.Connection.sendParticipants?4(participants)
@@ -41,12 +46,14 @@ eric5.Cooperation.CooperationClient.CooperationClient.cannotConnect?7
 eric5.Cooperation.CooperationClient.CooperationClient.connectToHost?4(host, port)
 eric5.Cooperation.CooperationClient.CooperationClient.connectionError?7
 eric5.Cooperation.CooperationClient.CooperationClient.disconnectConnections?4()
+eric5.Cooperation.CooperationClient.CooperationClient.editorCommand?7
 eric5.Cooperation.CooperationClient.CooperationClient.hasConnection?4(senderIp, senderPort = -1)
 eric5.Cooperation.CooperationClient.CooperationClient.hasConnections?4()
 eric5.Cooperation.CooperationClient.CooperationClient.newMessage?7
 eric5.Cooperation.CooperationClient.CooperationClient.newParticipant?7
 eric5.Cooperation.CooperationClient.CooperationClient.nickName?4()
 eric5.Cooperation.CooperationClient.CooperationClient.participantLeft?7
+eric5.Cooperation.CooperationClient.CooperationClient.sendEditorCommand?4(projectHash, filename, message)
 eric5.Cooperation.CooperationClient.CooperationClient.sendMessage?4(message)
 eric5.Cooperation.CooperationClient.CooperationClient.server?4()
 eric5.Cooperation.CooperationClient.CooperationClient?1()
@@ -3901,6 +3908,7 @@ eric5.Project.Project.Project.dbgKeynames?7
 eric5.Project.Project.Project.deleteDirectory?4(dn)
 eric5.Project.Project.Project.deleteFile?4(fn)
 eric5.Project.Project.Project.deleteLanguageFile?4(langFile)
+eric5.Project.Project.Project.getAbsoluteUniversalPath?4(fn)
 eric5.Project.Project.Project.getActions?4()
 eric5.Project.Project.Project.getData?4(category, key)
 eric5.Project.Project.Project.getDebugProperty?4(key)
@@ -4172,6 +4180,8 @@ eric5.QScintilla.Editor.Editor.FromDocumentID?7
 eric5.QScintilla.Editor.Editor.MethodID?7
 eric5.QScintilla.Editor.Editor.MethodPrivateID?7
 eric5.QScintilla.Editor.Editor.MethodProtectedID?7
+eric5.QScintilla.Editor.Editor.SelectionToken?7
+eric5.QScintilla.Editor.Editor.Separator?7
 eric5.QScintilla.Editor.Editor.TemplateImageID?7
 eric5.QScintilla.Editor.Editor.addClone?4(editor)
 eric5.QScintilla.Editor.Editor.addedToProject?4()
@@ -4276,6 +4286,7 @@ eric5.QScintilla.Editor.Editor.printPreviewFile?4()
 eric5.QScintilla.Editor.Editor.projectLexerAssociationsChanged?4()
 eric5.QScintilla.Editor.Editor.readFile?4(fn, createIt = False)
 eric5.QScintilla.Editor.Editor.readSettings?4()
+eric5.QScintilla.Editor.Editor.receive?4(command)
 eric5.QScintilla.Editor.Editor.redo?4()
 eric5.QScintilla.Editor.Editor.refresh?4()
 eric5.QScintilla.Editor.Editor.removeClone?4(editor)
@@ -4284,6 +4295,7 @@ eric5.QScintilla.Editor.Editor.saveFile?4(saveas = False, path = None)
 eric5.QScintilla.Editor.Editor.saveFileAs?4(path = None)
 eric5.QScintilla.Editor.Editor.selectCurrentWord?4()
 eric5.QScintilla.Editor.Editor.selectWord?4(line, index)
+eric5.QScintilla.Editor.Editor.send?4(token, args)
 eric5.QScintilla.Editor.Editor.setAutoCompletionEnabled?4(enable)
 eric5.QScintilla.Editor.Editor.setAutoCompletionHook?4(func)
 eric5.QScintilla.Editor.Editor.setAutoSpellChecking?4()
@@ -5681,6 +5693,7 @@ eric5.ViewManager.ViewManager.ViewManager.saveEditor?4(fn)
 eric5.ViewManager.ViewManager.ViewManager.saveEditorEd?4(ed)
 eric5.ViewManager.ViewManager.ViewManager.saveEditorToProjectEd?4(ed)
 eric5.ViewManager.ViewManager.ViewManager.saveEditorsList?4(editors)
+eric5.ViewManager.ViewManager.ViewManager.send?4(fileName, message)
 eric5.ViewManager.ViewManager.ViewManager.setEditorName?4(editor, newName)
 eric5.ViewManager.ViewManager.ViewManager.setFileLine?4(fn, line, error = False, syntaxError = False)
 eric5.ViewManager.ViewManager.ViewManager.setReferences?4(ui, dbs)

@@ -77,6 +77,7 @@ class Editor(QsciScintillaCompat):
     @signal encodingChanged(encoding) emitted when the editors encoding was set. The 
             encoding name is passed as a parameter.
     """
+    # Autocompletion icon definitions
     ClassID              = 1
     ClassProtectedID     = 2
     ClassPrivateID       = 3
@@ -91,6 +92,11 @@ class Editor(QsciScintillaCompat):
     FromDocumentID       = 99
     
     TemplateImageID      = 100
+    
+    # Cooperation related definitions
+    Separator = "@@@"
+    
+    SelectionToken = "SELECT"
     
     def __init__(self, dbs, fn = None, vm = None,
                  filetype = "", editor = None, tv = None):
@@ -168,7 +174,7 @@ class Editor(QsciScintillaCompat):
         self.clearAlternateKeys()
         self.clearKeys()
         
-        # initialise the mark occurrences timer
+        # initialize the mark occurrences timer
         self.__markOccurrencesTimer = QTimer(self)
         self.__markOccurrencesTimer.setSingleShot(True)
         self.__markOccurrencesTimer.setInterval(
@@ -177,10 +183,13 @@ class Editor(QsciScintillaCompat):
                      self.__markOccurrences)
         self.__markedText = ""
         
-        # initialise some spellchecking stuff
+        # initialize some spellchecking stuff
         self.spell = None
         self.lastLine = 0
         self.lastIndex = 0
+        
+        # initialize some cooperation stuff
+        self.__lastSelection = (-1, -1, -1, -1)
         
         self.connect(self, SIGNAL('modificationChanged(bool)'), 
                      self.__modificationChanged)
@@ -190,6 +199,8 @@ class Editor(QsciScintillaCompat):
                      self.__modificationReadOnly)
         self.connect(self, SIGNAL('userListActivated(int, const QString)'),
                      self.__completionListSelected)
+        self.connect(self, SIGNAL('selectionChanged()'),
+                     self.__selectionChanged)
         
         # margins layout
         if QSCINTILLA_VERSION() >= 0x020301:
@@ -5463,3 +5474,55 @@ class Editor(QsciScintillaCompat):
         self.spell.ignoreAlways(word)
         if Preferences.getEditor("AutoSpellCheckingEnabled"):
             self.spell.checkDocumentIncrementally()
+    
+    #######################################################################
+    ## Cooperation related methods
+    #######################################################################
+    
+    def send(self, token, args):
+        """
+        Public method to send an editor command to remote editors.
+        
+        @param token command token (string)
+        @param args arguments for the command (string)
+        """
+        msg = ""
+        if token == Editor.SelectionToken:
+            msg = "{0}{1}{2} {3} {4} {5}".format(
+                token, 
+                Editor.Separator, 
+                *args
+            )
+        
+        self.vm.send(self.fileName, msg)
+    
+    def receive(self, command):
+        """
+        Public slot to handle received editor commands.
+        
+        @param command command string (string)
+        """
+        token, argsString = command.split(Editor.Separator)
+        if token == Editor.SelectionToken:
+            self.__processSelectionCommand(argsString)
+    
+    def __selectionChanged(self):
+        """
+        Private slot to handle a change of the selection.
+        """
+        sel = self.getSelection()
+        if sel != self.__lastSelection:
+            self.send(Editor.SelectionToken, args = sel)
+            self.__lastSelection = sel
+    
+    def __processSelectionCommand(self, argsString):
+        """
+        Private slot to process a remote selection command
+        
+        @param argsString string containing the selection parameters (string)
+        """
+        self.selectionChanged.disconnect(self.__selectionChanged)
+        args = argsString.split()
+        self.setSelection(int(args[0]), int(args[1]), int(args[2]), int(args[3]))
+        self.ensureLineVisible(int(args[0]))
+        self.selectionChanged.connect(self.__selectionChanged)
