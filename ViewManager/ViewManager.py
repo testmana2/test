@@ -4928,6 +4928,26 @@ class ViewManager(QObject):
     ## Cooperation related methods
     #######################################################################
     
+    def __getCooperationClient(self):
+        """
+        Private method to initialize and get a reference to the cooperation
+        client.
+        
+        @return reference to the cooperation client (CooperationClient)
+        """
+        if self.__cooperationClient is None:
+            self.__cooperationClient = e5App().getObject("Cooperation").getClient()
+            self.__cooperationClient.editorCommand.connect(self.__receive)
+        return self.__cooperationClient
+    
+    def isConnected(self):
+        """
+        Public method to check the connection status of the IDE.
+        
+        @return flag indicating the connection status (boolean)
+        """
+        return self.__getCooperationClient().hasConnections()
+    
     def send(self, fileName, message):
         """
         Public method to send an editor command to remote editors.
@@ -4937,11 +4957,7 @@ class ViewManager(QObject):
         """
         project = e5App().getObject("Project")
         if project.isProjectFile(fileName):
-            if self.__cooperationClient is None:
-                self.__cooperationClient = e5App().getObject("Cooperation").getClient()
-                self.__cooperationClient.editorCommand.connect(
-                    self.__receive)
-            self.__cooperationClient.sendEditorCommand(
+            self.__getCooperationClient().sendEditorCommand(
                 project.getHash(), 
                 project.getRelativeUniversalPath(fileName), 
                 message

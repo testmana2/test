@@ -3292,6 +3292,7 @@
       <keyword name="ViewManager.__enableSpellingActions" id="ViewManager.__enableSpellingActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__enableSpellingActions" />
       <keyword name="ViewManager.__exportMenuTriggered" id="ViewManager.__exportMenuTriggered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__exportMenuTriggered" />
       <keyword name="ViewManager.__findFileName" id="ViewManager.__findFileName" ref="eric5.ViewManager.ViewManager.html#ViewManager.__findFileName" />
+      <keyword name="ViewManager.__getCooperationClient" id="ViewManager.__getCooperationClient" ref="eric5.ViewManager.ViewManager.html#ViewManager.__getCooperationClient" />
       <keyword name="ViewManager.__goto" id="ViewManager.__goto" ref="eric5.ViewManager.ViewManager.html#ViewManager.__goto" />
       <keyword name="ViewManager.__gotoBrace" id="ViewManager.__gotoBrace" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoBrace" />
       <keyword name="ViewManager.__gotoSyntaxError" id="ViewManager.__gotoSyntaxError" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoSyntaxError" />
@@ -3412,6 +3413,7 @@
       <keyword name="ViewManager.initSpellingToolbar" id="ViewManager.initSpellingToolbar" ref="eric5.ViewManager.ViewManager.html#ViewManager.initSpellingToolbar" />
       <keyword name="ViewManager.initViewMenu" id="ViewManager.initViewMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.initViewMenu" />
       <keyword name="ViewManager.initViewToolbar" id="ViewManager.initViewToolbar" ref="eric5.ViewManager.ViewManager.html#ViewManager.initViewToolbar" />
+      <keyword name="ViewManager.isConnected" id="ViewManager.isConnected" ref="eric5.ViewManager.ViewManager.html#ViewManager.isConnected" />
       <keyword name="ViewManager.newEditor" id="ViewManager.newEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.newEditor" />
       <keyword name="ViewManager.newEditorView" id="ViewManager.newEditorView" ref="eric5.ViewManager.ViewManager.html#ViewManager.newEditorView" />
       <keyword name="ViewManager.newProject" id="ViewManager.newProject" ref="eric5.ViewManager.ViewManager.html#ViewManager.newProject" />

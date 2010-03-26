@@ -5510,10 +5510,11 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to handle a change of the selection.
         """
-        sel = self.getSelection()
-        if sel != self.__lastSelection:
-            self.send(Editor.SelectionToken, args = sel)
-            self.__lastSelection = sel
+        if self.vm.isConnected():
+            sel = self.getSelection()
+            if sel != self.__lastSelection:
+                self.send(Editor.SelectionToken, args = sel)
+                self.__lastSelection = sel
     
     def __processSelectionCommand(self, argsString):
         """

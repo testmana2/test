@@ -302,6 +302,9 @@ QObject
 <td><a href="#ViewManager.__findFileName">__findFileName</a></td>
 <td>Private method to handle the search for file action.</td>
 </tr><tr>
+<td><a href="#ViewManager.__getCooperationClient">__getCooperationClient</a></td>
+<td>Private method to initialize and get a reference to the cooperation client.</td>
+</tr><tr>
 <td><a href="#ViewManager.__goto">__goto</a></td>
 <td>Private method to handle the goto action.</td>
 </tr><tr>
@@ -661,6 +664,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.initViewToolbar">initViewToolbar</a></td>
 <td>Public method to create the View toolbar</td>
+</tr><tr>
+<td><a href="#ViewManager.isConnected">isConnected</a></td>
+<td>Public method to check the connection status of the IDE.</td>
 </tr><tr>
 <td><a href="#ViewManager.newEditor">newEditor</a></td>
 <td>Public slot to generate a new empty editor.</td>
@@ -1070,7 +1076,18 @@ reference to the action that was triggered (QAction)
 <b>__findFileName</b>(<i></i>)
 <p>
         Private method to handle the search for file action.
-</p><a NAME="ViewManager.__goto" ID="ViewManager.__goto"></a>
+</p><a NAME="ViewManager.__getCooperationClient" ID="ViewManager.__getCooperationClient"></a>
+<h4>ViewManager.__getCooperationClient</h4>
+<b>__getCooperationClient</b>(<i></i>)
+<p>
+        Private method to initialize and get a reference to the cooperation
+        client.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the cooperation client (CooperationClient)
+</dd>
+</dl><a NAME="ViewManager.__goto" ID="ViewManager.__goto"></a>
 <h4>ViewManager.__goto</h4>
 <b>__goto</b>(<i></i>)
 <p>
@@ -2150,6 +2167,16 @@ reference to a toolbar manager object (E5ToolBarManager)
 <dt>Returns:</dt>
 <dd>
 the generated toolbar
+</dd>
+</dl><a NAME="ViewManager.isConnected" ID="ViewManager.isConnected"></a>
+<h4>ViewManager.isConnected</h4>
+<b>isConnected</b>(<i></i>)
+<p>
+        Public method to check the connection status of the IDE.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the connection status (boolean)
 </dd>
 </dl><a NAME="ViewManager.newEditor" ID="ViewManager.newEditor"></a>
 <h4>ViewManager.newEditor</h4>
