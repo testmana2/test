@@ -226,7 +226,10 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             else:
                 exe = Utilities.getExecutablePath(exe)
             if exe:
-                if versionCommand and versionStartsWith and versionPosition:
+                if versionCommand and \
+                   (versionStartsWith != "" or \
+                    (versionRe is not None and versionRe != "")) and \
+                   versionPosition:
                     proc = QProcess()
                     proc.setProcessChannelMode(QProcess.MergedChannels)
                     proc.start(exe, [versionCommand])
@@ -241,10 +244,14 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                         versionRe = re.compile(versionRe, re.UNICODE)
                         for line in output.splitlines():
                             if versionRe.search(line):
-                                version = line.split()[versionPosition]
-                                if versionCleanup:
-                                    version = version[versionCleanup[0]:versionCleanup[1]]
-                                break
+                                try:
+                                    version = line.split()[versionPosition]
+                                    if versionCleanup:
+                                        version = \
+                                            version[versionCleanup[0]:versionCleanup[1]]
+                                    break
+                                except IndexError:
+                                    version = self.trUtf8("(unknown)")
                     else:
                         version = self.trUtf8("(not executable)")
                 QTreeWidgetItem(itm, [exe, version])
