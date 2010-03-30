@@ -7,7 +7,8 @@ eric5.Cooperation.ChatWidget.ChatWidget.getClient?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_cancelEditButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_chatEdit_customContextMenuRequested?4(pos)
 eric5.Cooperation.ChatWidget.ChatWidget.on_connectButton_clicked?4()
-eric5.Cooperation.ChatWidget.ChatWidget.on_hostEdit_textChanged?4(host)
+eric5.Cooperation.ChatWidget.ChatWidget.on_hostEdit_currentIndexChanged?4(index)
+eric5.Cooperation.ChatWidget.ChatWidget.on_hostEdit_editTextChanged?4(host)
 eric5.Cooperation.ChatWidget.ChatWidget.on_sendEditButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_serverButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_shareButton_clicked?4(checked)
@@ -1563,6 +1564,7 @@ eric5.E5XML.XMLWriterBase.XMLWriterBase.writeXML?4()
 eric5.E5XML.XMLWriterBase.XMLWriterBase?1(file)
 eric5.Globals.isWindowsPlatform?4()
 eric5.Globals.recentNameFiles?7
+eric5.Globals.recentNameHosts?7
 eric5.Globals.recentNameMultiProject?7
 eric5.Globals.recentNameProject?7
 eric5.Globals.settingsNameGlobal?7

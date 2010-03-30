@@ -18,6 +18,7 @@ settingsNameRecent = "eric5recent"
 recentNameMultiProject = "MultiProjects"
 recentNameProject = "Projects"
 recentNameFiles = "Files"
+recentNameHosts = "Hosts"
 
 def isWindowsPlatform():
     """

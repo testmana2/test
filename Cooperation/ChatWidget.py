@@ -13,6 +13,8 @@ from PyQt4.QtGui import QWidget, QColor, QListWidgetItem, QMenu, QFileDialog, \
 
 from E5Gui.E5Application import e5App
 
+from Globals import recentNameHosts
+
 from QScintilla.Editor import Editor
 
 from .CooperationClient import CooperationClient
@@ -95,6 +97,55 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         
         if Preferences.getCooperation("AutoStartServer"):
             self.on_serverButton_clicked()
+        
+        self.recent = []
+        self.__loadRecent()
+    
+    def __loadRecent(self):
+        """
+        Private method to load the recently connected hosts.
+        """
+        self.recent = []
+        Preferences.Prefs.rsettings.sync()
+        rh = Preferences.Prefs.rsettings.value(recentNameHosts)
+        if rh is not None:
+            self.recent = rh[:20]
+            self.hostEdit.clear()
+            self.hostEdit.addItem("", -1)
+            for entry in self.recent:
+                host, port = entry.split(":")
+                port = int(port)
+                hostStr = "{0} ({1})".format(host, port)
+                self.hostEdit.addItem(hostStr, port)
+    
+    def __saveRecent(self):
+        """
+        Private method to save the list of recently connected hosts.
+        """
+        Preferences.Prefs.rsettings.setValue(recentNameHosts, self.recent)
+        Preferences.Prefs.rsettings.sync()
+    
+    def __setHostsHistory(self, host, port):
+        """
+        Private method to set the given host and port.
+        
+        @param host host name to remember (string)
+        @param port port number to remember (integer)
+        """
+        hostStr = "{0}:{1}".format(host, port)
+        if hostStr in self.recent:
+            self.recent.remove(hostStr)
+        self.recent.insert(0, hostStr)
+        
+        hostStr = "{0} ({1})".format(host, port)
+        index = self.hostEdit.findText(hostStr)
+        if index != -1:
+            self.hostEdit.removeItem(index)
+        if self.hostEdit.itemText(0) == host:
+            self.hostEdit.removeItem(0)
+            self.hostEdit.setEditText(hostStr)
+        self.hostEdit.insertItem(0, hostStr, port)
+        self.hostEdit.setCurrentIndex(0)
     
     def __handleMessage(self):
         """
@@ -179,7 +230,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         bar.setValue(bar.maximum())
     
     @pyqtSlot(str)
-    def on_hostEdit_textChanged(self, host):
+    def on_hostEdit_editTextChanged(self, host):
         """
         Private slot handling the entry of a host to connect to.
         
@@ -188,16 +239,34 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         if not self.__connected:
             self.connectButton.setEnabled(host != "")
     
+    @pyqtSlot(int)
+    def on_hostEdit_currentIndexChanged(self, index):
+        """
+        Private slot to handle the selection of a host.
+        
+        @param index index of the selected entry (integer)
+        """
+        port = self.hostEdit.itemData(index)
+        if port is not None:
+            if port == -1:
+                self.portSpin.setValue(Preferences.getCooperation("ServerPort"))
+            else:
+                self.portSpin.setValue(port)
+    
     @pyqtSlot()
     def on_connectButton_clicked(self):
         """
         Private slot initiating the connection.
         """
         if not self.__connected:
+            self.__setHostsHistory(self.hostEdit.currentText().split()[0], 
+                                   self.portSpin.value())
+            self.__saveRecent()
             if not self.__client.server().isListening():
                 self.on_serverButton_clicked()
             if self.__client.server().isListening():
-                self.__client.connectToHost(self.hostEdit.text(), self.portSpin.value())
+                self.__client.connectToHost(self.hostEdit.currentText().split()[0], 
+                                            self.portSpin.value())
                 self.__setConnected(True)
         else:
             self.__client.disconnectConnections()
@@ -240,7 +309,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.connectionLed.setColor(QColor(Qt.green))
         else:
             self.connectButton.setText(self.trUtf8("Connect"))
-            self.connectButton.setEnabled(self.hostEdit.text() != "")
+            self.connectButton.setEnabled(self.hostEdit.currentText() != "")
             self.connectionLed.setColor(QColor(Qt.red))
             self.cancelEditButton.click()
             self.shareButton.click()

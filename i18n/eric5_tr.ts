@@ -1996,157 +1996,177 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="70"/>
+        <location filename="Cooperation/ChatWidget.ui" line="74"/>
         <source>Press to send the text above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="73"/>
+        <location filename="Cooperation/ChatWidget.ui" line="77"/>
         <source>Send</source>
         <translation type="unfinished">Gönder</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="179"/>
+        <location filename="Cooperation/ChatWidget.ui" line="183"/>
         <source>Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="185"/>
+        <location filename="Cooperation/ChatWidget.ui" line="189"/>
         <source>Host:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="250"/>
+        <location filename="Cooperation/ChatWidget.ui" line="276"/>
         <source>Port:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="234"/>
+        <location filename="Cooperation/ChatWidget.ui" line="260"/>
         <source>Shows the connection status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="244"/>
+        <location filename="Cooperation/ChatWidget.ui" line="270"/>
         <source>Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="289"/>
+        <location filename="Cooperation/ChatWidget.ui" line="318"/>
         <source>Shows the status of the server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="213"/>
+        <location filename="Cooperation/ChatWidget.py" line="282"/>
         <source>Start Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="108"/>
+        <location filename="Cooperation/ChatWidget.py" line="159"/>
         <source>! Unknown command: {0}
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="129"/>
+        <location filename="Cooperation/ChatWidget.py" line="180"/>
         <source>* {0} has joined.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="158"/>
+        <location filename="Cooperation/ChatWidget.py" line="209"/>
         <source>* {0} has left.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="221"/>
+        <location filename="Cooperation/ChatWidget.py" line="290"/>
         <source>Stop Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="226"/>
+        <location filename="Cooperation/ChatWidget.py" line="295"/>
         <source>! Server Error: {0}
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="238"/>
+        <location filename="Cooperation/ChatWidget.py" line="307"/>
         <source>Disconnect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="242"/>
+        <location filename="Cooperation/ChatWidget.py" line="311"/>
         <source>Connect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="86"/>
+        <location filename="Cooperation/ChatWidget.ui" line="90"/>
         <source>Share Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="108"/>
+        <location filename="Cooperation/ChatWidget.ui" line="112"/>
         <source>Press to toggle the shared status of the current editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="156"/>
+        <location filename="Cooperation/ChatWidget.ui" line="160"/>
         <source>...</source>
         <translation type="unfinished">...</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="124"/>
+        <location filename="Cooperation/ChatWidget.ui" line="128"/>
         <source>Press to start a shared edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="140"/>
+        <location filename="Cooperation/ChatWidget.ui" line="144"/>
         <source>Press to end the edit and send the changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="153"/>
+        <location filename="Cooperation/ChatWidget.ui" line="157"/>
         <source>Press to cancel the shared edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="71"/>
+        <location filename="Cooperation/ChatWidget.py" line="73"/>
         <source>Clear</source>
         <translation type="unfinished">Temizle</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="73"/>
+        <location filename="Cooperation/ChatWidget.py" line="75"/>
         <source>Save</source>
         <translation type="unfinished">Kaydet</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="75"/>
+        <location filename="Cooperation/ChatWidget.py" line="77"/>
         <source>Copy</source>
         <translation type="unfinished">Kopyala</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="427"/>
+        <location filename="Cooperation/ChatWidget.py" line="496"/>
         <source>Save Chat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="413"/>
+        <location filename="Cooperation/ChatWidget.py" line="482"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="427"/>
+        <location filename="Cooperation/ChatWidget.py" line="496"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="444"/>
+        <location filename="Cooperation/ChatWidget.py" line="513"/>
         <source>Error saving Chat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="444"/>
+        <location filename="Cooperation/ChatWidget.py" line="513"/>
         <source>&lt;p&gt;The chat contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.ui" line="67"/>
+        <source>Enter the text to send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.ui" line="202"/>
+        <source>Enter the host to connect to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.ui" line="225"/>
+        <source>Enter the port to connect to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.ui" line="283"/>
+        <source>Enter the server port</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

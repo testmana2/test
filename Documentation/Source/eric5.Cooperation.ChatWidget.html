@@ -95,6 +95,9 @@ QWidget, Ui_ChatWidget
 <td><a href="#ChatWidget.__initialConnectionRefused">__initialConnectionRefused</a></td>
 <td>Private slot to handle the refusal of the initial connection.</td>
 </tr><tr>
+<td><a href="#ChatWidget.__loadRecent">__loadRecent</a></td>
+<td>Private method to load the recently connected hosts.</td>
+</tr><tr>
 <td><a href="#ChatWidget.__newParticipant">__newParticipant</a></td>
 <td>Private slot handling a new participant joining.</td>
 </tr><tr>
@@ -104,8 +107,14 @@ QWidget, Ui_ChatWidget
 <td><a href="#ChatWidget.__saveChat">__saveChat</a></td>
 <td>Private slot to save the contents of the chat display.</td>
 </tr><tr>
+<td><a href="#ChatWidget.__saveRecent">__saveRecent</a></td>
+<td>Private method to save the list of recently connected hosts.</td>
+</tr><tr>
 <td><a href="#ChatWidget.__setConnected">__setConnected</a></td>
 <td>Private slot to set the connected state.</td>
+</tr><tr>
+<td><a href="#ChatWidget.__setHostsHistory">__setHostsHistory</a></td>
+<td>Private method to set the given host and port.</td>
 </tr><tr>
 <td><a href="#ChatWidget.__showErrorMessage">__showErrorMessage</a></td>
 <td>Private slot to show an error message.</td>
@@ -128,7 +137,10 @@ QWidget, Ui_ChatWidget
 <td><a href="#ChatWidget.on_connectButton_clicked">on_connectButton_clicked</a></td>
 <td>Private slot initiating the connection.</td>
 </tr><tr>
-<td><a href="#ChatWidget.on_hostEdit_textChanged">on_hostEdit_textChanged</a></td>
+<td><a href="#ChatWidget.on_hostEdit_currentIndexChanged">on_hostEdit_currentIndexChanged</a></td>
+<td>Private slot to handle the selection of a host.</td>
+</tr><tr>
+<td><a href="#ChatWidget.on_hostEdit_editTextChanged">on_hostEdit_editTextChanged</a></td>
 <td>Private slot handling the entry of a host to connect to.</td>
 </tr><tr>
 <td><a href="#ChatWidget.on_sendEditButton_clicked">on_sendEditButton_clicked</a></td>
@@ -196,6 +208,11 @@ command message (string)
 <b>__initialConnectionRefused</b>(<i></i>)
 <p>
         Private slot to handle the refusal of the initial connection.
+</p><a NAME="ChatWidget.__loadRecent" ID="ChatWidget.__loadRecent"></a>
+<h4>ChatWidget.__loadRecent</h4>
+<b>__loadRecent</b>(<i></i>)
+<p>
+        Private method to load the recently connected hosts.
 </p><a NAME="ChatWidget.__newParticipant" ID="ChatWidget.__newParticipant"></a>
 <h4>ChatWidget.__newParticipant</h4>
 <b>__newParticipant</b>(<i>nick</i>)
@@ -221,6 +238,11 @@ nick name of the participant (string)
 <b>__saveChat</b>(<i></i>)
 <p>
         Private slot to save the contents of the chat display.
+</p><a NAME="ChatWidget.__saveRecent" ID="ChatWidget.__saveRecent"></a>
+<h4>ChatWidget.__saveRecent</h4>
+<b>__saveRecent</b>(<i></i>)
+<p>
+        Private method to save the list of recently connected hosts.
 </p><a NAME="ChatWidget.__setConnected" ID="ChatWidget.__setConnected"></a>
 <h4>ChatWidget.__setConnected</h4>
 <b>__setConnected</b>(<i>connected</i>)
@@ -230,6 +252,19 @@ nick name of the participant (string)
 <dt><i>connected</i></dt>
 <dd>
 new connected state (boolean)
+</dd>
+</dl><a NAME="ChatWidget.__setHostsHistory" ID="ChatWidget.__setHostsHistory"></a>
+<h4>ChatWidget.__setHostsHistory</h4>
+<b>__setHostsHistory</b>(<i>host, port</i>)
+<p>
+        Private method to set the given host and port.
+</p><dl>
+<dt><i>host</i></dt>
+<dd>
+host name to remember (string)
+</dd><dt><i>port</i></dt>
+<dd>
+port number to remember (integer)
 </dd>
 </dl><a NAME="ChatWidget.__showErrorMessage" ID="ChatWidget.__showErrorMessage"></a>
 <h4>ChatWidget.__showErrorMessage</h4>
@@ -289,9 +324,19 @@ the position of the mouse pointer (QPoint)
 <b>on_connectButton_clicked</b>(<i></i>)
 <p>
         Private slot initiating the connection.
-</p><a NAME="ChatWidget.on_hostEdit_textChanged" ID="ChatWidget.on_hostEdit_textChanged"></a>
-<h4>ChatWidget.on_hostEdit_textChanged</h4>
-<b>on_hostEdit_textChanged</b>(<i>host</i>)
+</p><a NAME="ChatWidget.on_hostEdit_currentIndexChanged" ID="ChatWidget.on_hostEdit_currentIndexChanged"></a>
+<h4>ChatWidget.on_hostEdit_currentIndexChanged</h4>
+<b>on_hostEdit_currentIndexChanged</b>(<i>index</i>)
+<p>
+        Private slot to handle the selection of a host.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+index of the selected entry (integer)
+</dd>
+</dl><a NAME="ChatWidget.on_hostEdit_editTextChanged" ID="ChatWidget.on_hostEdit_editTextChanged"></a>
+<h4>ChatWidget.on_hostEdit_editTextChanged</h4>
+<b>on_hostEdit_editTextChanged</b>(<i>host</i>)
 <p>
         Private slot handling the entry of a host to connect to.
 </p><dl>
