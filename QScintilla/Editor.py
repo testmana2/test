@@ -9,6 +9,7 @@ Module implementing the editor component of the eric5 IDE.
 
 import os
 import re
+import difflib
     
 from PyQt4.Qsci import QsciScintilla, QsciMacro
 from PyQt4.QtCore import *
@@ -96,7 +97,11 @@ class Editor(QsciScintillaCompat):
     # Cooperation related definitions
     Separator = "@@@"
     
-    SelectionToken = "SELECT"
+    StartEditToken      = "START_EDIT"
+    EndEditToken        = "END_EDIT"
+    CancelEditToken     = "CANCEL_EDIT"
+    RequestSyncToken    = "REQUEST_SYNC"
+    SyncToken           = "SYNC"
     
     def __init__(self, dbs, fn = None, vm = None,
                  filetype = "", editor = None, tv = None):
@@ -189,7 +194,12 @@ class Editor(QsciScintillaCompat):
         self.lastIndex = 0
         
         # initialize some cooperation stuff
-        self.__lastSelection = (-1, -1, -1, -1)
+        self.__isSyncing = False
+        self.__receivedWhileSyncing = []
+        self.__savedText = ""
+        self.__inSharedEdit = False
+        self.__isShared = False
+        self.__inRemoteSharedEdit = False
         
         self.connect(self, SIGNAL('modificationChanged(bool)'), 
                      self.__modificationChanged)
@@ -199,8 +209,6 @@ class Editor(QsciScintillaCompat):
                      self.__modificationReadOnly)
         self.connect(self, SIGNAL('userListActivated(int, const QString)'),
                      self.__completionListSelected)
-        self.connect(self, SIGNAL('selectionChanged()'),
-                     self.__selectionChanged)
         
         # margins layout
         if QSCINTILLA_VERSION() >= 0x020301:
@@ -4873,7 +4881,7 @@ class Editor(QsciScintillaCompat):
         """
         if self.fileName is None:
             return
-        readOnly = not QFileInfo(self.fileName).isWritable()
+        readOnly = not QFileInfo(self.fileName).isWritable() or self.isReadOnly()
         if not bForce and (readOnly == self.isReadOnly()):
             return
         cap = self.fileName
@@ -5479,22 +5487,102 @@ class Editor(QsciScintillaCompat):
     ## Cooperation related methods
     #######################################################################
     
-    def send(self, token, args):
+    def getSharingStatus(self):
         """
-        Public method to send an editor command to remote editors.
+        Public method to get some share status info.
+        
+        @return tuple indicating, if the editor is sharable, the sharing status,
+            if it is inside a locally initiated shared edit session and
+            if it is inside a remotely initiated shared edit session
+            (boolean, boolean, boolean, boolean)
+        """
+        project = e5App().getObject("Project")
+        return project.isOpen() and project.isProjectFile(self.fileName), \
+               self.__isShared, self.__inSharedEdit, self.__inRemoteSharedEdit
+    
+    def shareConnected(self, connected):
+        """
+        Public slot to handle a change of the connected state.
+        
+        @param connected flag indicating the connected state (boolean)
+        """
+        if not connected:
+            self.__inRemoteSharedEdit = False
+            self.setReadOnly(False)
+            self.__updateReadOnly()
+            self.cancelSharedEdit(send = False)
+            self.__isSyncing = False
+            self.__receivedWhileSyncing = []
+    
+    def shareEditor(self, share):
+        """
+        Public slot to set the shared status of the editor.
+        
+        @param share flag indicating the share status (boolean)
+        """
+        self.__isShared = share
+        if not share:
+            self.shareConnected(False)
+    
+    def startSharedEdit(self):
+        """
+        Public slot to start a shared edit session for the editor.
+        """
+        self.__inSharedEdit = True
+        self.__savedText = self.text()
+        hash = str(
+            QCryptographicHash.hash(
+                Utilities.encode(self.__savedText, self.encoding)[0], 
+                QCryptographicHash.Sha1).toHex(),
+            encoding = "utf-8")
+        self.__send(Editor.StartEditToken, hash)
+    
+    def sendSharedEdit(self):
+        """
+        Public slot to end a shared edit session for the editor and
+        send the changes.
+        """
+        commands = self.__calculateChanges(self.__savedText, self.text())
+        self.__send(Editor.EndEditToken, commands)
+        self.__inSharedEdit = False
+        self.__savedText = ""
+    
+    def cancelSharedEdit(self, send = True):
+        """
+        Public slot to cancel a shared edit session for the editor.
+        
+        @keyparam send flag indicating to send the CancelEdit command (boolean)
+        """
+        self.__inSharedEdit = False
+        self.__savedText = ""
+        if send:
+            self.__send(Editor.CancelEditToken)
+    
+    def __send(self, token, args = None):
+        """
+        Private method to send an editor command to remote editors.
         
         @param token command token (string)
         @param args arguments for the command (string)
         """
-        msg = ""
-        if token == Editor.SelectionToken:
-            msg = "{0}{1}{2} {3} {4} {5}".format(
-                token, 
-                Editor.Separator, 
-                *args
-            )
-        
-        self.vm.send(self.fileName, msg)
+        if self.vm.isConnected():
+            msg = ""
+            if token in (Editor.StartEditToken, 
+                         Editor.EndEditToken, 
+                         Editor.RequestSyncToken, 
+                         Editor.SyncToken):
+                msg = "{0}{1}{2}".format(
+                    token, 
+                    Editor.Separator, 
+                    args
+                )
+            elif token == Editor.CancelEditToken:
+                msg = "{0}{1}c".format(
+                    token, 
+                    Editor.Separator
+                )
+            
+            self.vm.send(self.fileName, msg)
     
     def receive(self, command):
         """
@@ -5502,28 +5590,153 @@ class Editor(QsciScintillaCompat):
         
         @param command command string (string)
         """
-        token, argsString = command.split(Editor.Separator)
-        if token == Editor.SelectionToken:
-            self.__processSelectionCommand(argsString)
+        if self.__isShared:
+            if self.__isSyncing and \
+               not command.startswith(Editor.SyncToken + Editor.Separator):
+                self.__receivedWhileSyncing.append(command)
+            else:
+                self.__dispatchCommand(command)
     
-    def __selectionChanged(self):
+    def __dispatchCommand(self, command):
         """
-        Private slot to handle a change of the selection.
-        """
-        if self.vm.isConnected():
-            sel = self.getSelection()
-            if sel != self.__lastSelection:
-                self.send(Editor.SelectionToken, args = sel)
-                self.__lastSelection = sel
-    
-    def __processSelectionCommand(self, argsString):
-        """
-        Private slot to process a remote selection command
+        Private method to dispatch received commands.
         
-        @param argsString string containing the selection parameters (string)
+        @param command command to be processed (string)
         """
-        self.selectionChanged.disconnect(self.__selectionChanged)
-        args = argsString.split()
-        self.setSelection(int(args[0]), int(args[1]), int(args[2]), int(args[3]))
-        self.ensureLineVisible(int(args[0]))
-        self.selectionChanged.connect(self.__selectionChanged)
+        token, argsString = command.split(Editor.Separator, 1)
+        if token == Editor.StartEditToken:
+            self.__processStartEditCommand(argsString)
+        elif token == Editor.CancelEditToken:
+            self.shareConnected(False)
+        elif token == Editor.EndEditToken:
+            self.__processEndEditCommand(argsString)
+        elif token == Editor.RequestSyncToken:
+            self.__processRequestSyncCommand(argsString)
+        elif token == Editor.SyncToken:
+            self.__processSyncCommand(argsString)
+    
+    def __processStartEditCommand(self, argsString):
+        """
+        Private slot to process a remote StartEdit command
+        
+        @param argsString string containing the command parameters (string)
+        """
+        if not self.__inSharedEdit and not self.__inRemoteSharedEdit:
+            self.__inRemoteSharedEdit = True
+            self.setReadOnly(True)
+            self.__updateReadOnly()
+            hash = str(
+                QCryptographicHash.hash(
+                    Utilities.encode(self.text(), self.encoding)[0], 
+                    QCryptographicHash.Sha1).toHex(),
+                encoding = "utf-8")
+            if hash != argsString:
+                # text is different to the remote site, request to sync it
+                self.__isSyncing = True
+                self.__send(Editor.RequestSyncToken, argsString)
+    
+    def __calculateChanges(self, old, new):
+        """
+        Private method to determine change commands to convert old text into
+        new text.
+        
+        @param old old text (string)
+        @param new new text (string)
+        @return commands to change old into new (string)
+        """
+        oldL = old.splitlines()
+        newL = new.splitlines()
+        matcher = difflib.SequenceMatcher(None, oldL, newL)
+        
+        formatStr = "@@{0} {1} {2} {3}"
+        commands = []
+        for token, i1, i2, j1, j2 in matcher.get_opcodes():
+            if token == "insert":
+                commands.append(formatStr.format("i", j1, j2 - j1, -1))
+                commands.extend(newL[j1:j2])
+            elif token == "delete":
+                commands.append(formatStr.format("d", j1, i2 - i1, -1))
+            elif token == "replace":
+                commands.append(formatStr.format("r", j1, i2 - i1, j2 - j1))
+                commands.extend(newL[j1:j2])
+        
+        return "\n".join(commands) + "\n"
+    
+    def __processEndEditCommand(self, argsString):
+        """
+        Private slot to process a remote EndEdit command
+        
+        @param argsString string containing the command parameters (string)
+        """
+        commands = argsString.splitlines()
+        sep = self.getLineSeparator()
+        cur = self.getCursorPosition()
+        
+        self.setReadOnly(False)
+        self.beginUndoAction()
+        while commands:
+            commandLine = commands.pop(0)
+            if not commandLine.startswith("@@"):
+                continue
+            
+            command, *args = commandLine.split()
+            pos, l1, l2 = [int(arg) for arg in args]
+            if command == "@@i":
+                txt = sep.join(commands[0:l1]) + sep
+                self.insertAt(txt, pos, 0)
+                del commands[0:l1]
+            elif command == "@@d":
+                self.setSelection(pos, 0, pos + l1, 0)
+                self.removeSelectedText()
+            elif command == "@@r":
+                self.setSelection(pos, 0, pos + l1, 0)
+                self.removeSelectedText()
+                txt = sep.join(commands[0:l2]) + sep
+                self.insertAt(txt, pos, 0)
+                del commands[0:l2]
+        self.endUndoAction()
+        self.__updateReadOnly()
+        self.__inRemoteSharedEdit = False
+        
+        self.setCursorPosition(*cur)
+    
+    def __processRequestSyncCommand(self, argsString):
+        """
+        Private slot to process a remote RequestSync command
+        
+        @param argsString string containing the command parameters (string)
+        """
+        if self.__inSharedEdit:
+            hash = str(
+                QCryptographicHash.hash(
+                    Utilities.encode(self.__savedText, self.encoding)[0], 
+                    QCryptographicHash.Sha1).toHex(),
+                encoding = "utf-8")
+            
+            if hash == argsString:
+                self.__send(Editor.SyncToken, self.__savedText)
+    
+    def __processSyncCommand(self, argsString):
+        """
+        Private slot to process a remote Sync command
+        
+        @param argsString string containing the command parameters (string)
+        """
+        if self.__isSyncing:
+            cur = self.getCursorPosition()
+            
+            self.setReadOnly(False)
+            self.beginUndoAction()
+            self.selectAll()
+            self.removeSelectedText()
+            self.insertAt(argsString, 0, 0)
+            self.endUndoAction()
+            self.setReadOnly(True)
+            
+            self.setCursorPosition(*cur)
+            
+            while self.__receivedWhileSyncing:
+               command = self.__receivedWhileSyncing.pop(0) 
+               self.__dispatchCommand(command)
+            
+            self.__isSyncing = False

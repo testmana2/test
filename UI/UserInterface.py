@@ -471,6 +471,22 @@ class UserInterface(QMainWindow):
                      self.__checkActions)
         self.connect(self.viewmanager, SIGNAL('editorChanged'),
                      self.projectBrowser.handleEditorChanged)
+        self.connect(self.viewmanager, SIGNAL('checkActions'),
+                     self.cooperation.checkEditorActions)
+        
+        self.connect(self.cooperation, SIGNAL('shareEditor(bool)'),
+                     self.viewmanager.shareEditor)
+        self.connect(self.cooperation, SIGNAL('startEdit()'),
+                     self.viewmanager.startSharedEdit)
+        self.connect(self.cooperation, SIGNAL('sendEdit()'),
+                     self.viewmanager.sendSharedEdit)
+        self.connect(self.cooperation, SIGNAL('cancelEdit()'),
+                     self.viewmanager.cancelSharedEdit)
+        self.connect(self.cooperation, SIGNAL('connected(bool)'),
+                     self.viewmanager.shareConnected)
+        self.connect(self.cooperation, SIGNAL('editorCommand(QString, QString, QString)'),
+                     self.viewmanager.receive)
+        self.viewmanager.setCooperationClient(self.cooperation.getClient())
         
         # Generate the unittest dialog
         self.unittestDialog = UnittestDialog(None, self.debuggerUI.debugServer, self)

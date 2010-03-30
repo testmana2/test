@@ -1,9 +1,20 @@
 eric5.Cooperation.ChatWidget.ChatWidget.appendMessage?4(from_, message)
+eric5.Cooperation.ChatWidget.ChatWidget.cancelEdit?7
+eric5.Cooperation.ChatWidget.ChatWidget.checkEditorActions?4(editor)
+eric5.Cooperation.ChatWidget.ChatWidget.connected?7
+eric5.Cooperation.ChatWidget.ChatWidget.editorCommand?7
 eric5.Cooperation.ChatWidget.ChatWidget.getClient?4()
+eric5.Cooperation.ChatWidget.ChatWidget.on_cancelEditButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_connectButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_hostEdit_textChanged?4(host)
+eric5.Cooperation.ChatWidget.ChatWidget.on_sendEditButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_serverButton_clicked?4()
+eric5.Cooperation.ChatWidget.ChatWidget.on_shareButton_clicked?4(checked)
+eric5.Cooperation.ChatWidget.ChatWidget.on_startEditButton_clicked?4(checked)
 eric5.Cooperation.ChatWidget.ChatWidget.preferencesChanged?4()
+eric5.Cooperation.ChatWidget.ChatWidget.sendEdit?7
+eric5.Cooperation.ChatWidget.ChatWidget.shareEditor?7
+eric5.Cooperation.ChatWidget.ChatWidget.startEdit?7
 eric5.Cooperation.ChatWidget.ChatWidget?1(port = -1, parent = None)
 eric5.Cooperation.Connection.Connection.Editor?7
 eric5.Cooperation.Connection.Connection.GetParticipants?7
@@ -4172,16 +4183,20 @@ eric5.QScintilla.APIsManager.APIsManager?1(parent = None)
 eric5.QScintilla.Editor.Editor.AttributeID?7
 eric5.QScintilla.Editor.Editor.AttributePrivateID?7
 eric5.QScintilla.Editor.Editor.AttributeProtectedID?7
+eric5.QScintilla.Editor.Editor.CancelEditToken?7
 eric5.QScintilla.Editor.Editor.ClassID?7
 eric5.QScintilla.Editor.Editor.ClassPrivateID?7
 eric5.QScintilla.Editor.Editor.ClassProtectedID?7
+eric5.QScintilla.Editor.Editor.EndEditToken?7
 eric5.QScintilla.Editor.Editor.EnumID?7
 eric5.QScintilla.Editor.Editor.FromDocumentID?7
 eric5.QScintilla.Editor.Editor.MethodID?7
 eric5.QScintilla.Editor.Editor.MethodPrivateID?7
 eric5.QScintilla.Editor.Editor.MethodProtectedID?7
-eric5.QScintilla.Editor.Editor.SelectionToken?7
+eric5.QScintilla.Editor.Editor.RequestSyncToken?7
 eric5.QScintilla.Editor.Editor.Separator?7
+eric5.QScintilla.Editor.Editor.StartEditToken?7
+eric5.QScintilla.Editor.Editor.SyncToken?7
 eric5.QScintilla.Editor.Editor.TemplateImageID?7
 eric5.QScintilla.Editor.Editor.addClone?4(editor)
 eric5.QScintilla.Editor.Editor.addedToProject?4()
@@ -4194,6 +4209,7 @@ eric5.QScintilla.Editor.Editor.boxCommentSelection?4()
 eric5.QScintilla.Editor.Editor.callTip?4()
 eric5.QScintilla.Editor.Editor.callTipHook?4()
 eric5.QScintilla.Editor.Editor.canAutoCompleteFromAPIs?4()
+eric5.QScintilla.Editor.Editor.cancelSharedEdit?4(send = True)
 eric5.QScintilla.Editor.Editor.changeEvent?4(evt)
 eric5.QScintilla.Editor.Editor.checkDirty?4()
 eric5.QScintilla.Editor.Editor.checkSpelling?4()
@@ -4235,6 +4251,7 @@ eric5.QScintilla.Editor.Editor.getLexer?4()
 eric5.QScintilla.Editor.Editor.getMenu?4(menuName)
 eric5.QScintilla.Editor.Editor.getNoName?4()
 eric5.QScintilla.Editor.Editor.getSearchText?4(selectionOnly = False)
+eric5.QScintilla.Editor.Editor.getSharingStatus?4()
 eric5.QScintilla.Editor.Editor.getSyntaxErrors?4()
 eric5.QScintilla.Editor.Editor.getWord?4(line, index, direction = 0, useWordChars = True)
 eric5.QScintilla.Editor.Editor.getWordBoundaries?4(line, index, useWordChars = True)
@@ -4295,7 +4312,7 @@ eric5.QScintilla.Editor.Editor.saveFile?4(saveas = False, path = None)
 eric5.QScintilla.Editor.Editor.saveFileAs?4(path = None)
 eric5.QScintilla.Editor.Editor.selectCurrentWord?4()
 eric5.QScintilla.Editor.Editor.selectWord?4(line, index)
-eric5.QScintilla.Editor.Editor.send?4(token, args)
+eric5.QScintilla.Editor.Editor.sendSharedEdit?4()
 eric5.QScintilla.Editor.Editor.setAutoCompletionEnabled?4(enable)
 eric5.QScintilla.Editor.Editor.setAutoCompletionHook?4(func)
 eric5.QScintilla.Editor.Editor.setAutoSpellChecking?4()
@@ -4306,9 +4323,12 @@ eric5.QScintilla.Editor.Editor.setMonospaced?4(on)
 eric5.QScintilla.Editor.Editor.setNoName?4(noName)
 eric5.QScintilla.Editor.Editor.setSearchIndicator?4(startPos, indicLength)
 eric5.QScintilla.Editor.Editor.setSpellingForProject?4()
+eric5.QScintilla.Editor.Editor.shareConnected?4(connected)
+eric5.QScintilla.Editor.Editor.shareEditor?4(share)
 eric5.QScintilla.Editor.Editor.shortenEmptyLines?4()
 eric5.QScintilla.Editor.Editor.shouldAutosave?4()
 eric5.QScintilla.Editor.Editor.smartIndentLineOrSelection?4()
+eric5.QScintilla.Editor.Editor.startSharedEdit?4()
 eric5.QScintilla.Editor.Editor.streamCommentLine?4()
 eric5.QScintilla.Editor.Editor.streamCommentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.streamCommentSelection?4()
@@ -5630,6 +5650,7 @@ eric5.ViewManager.ViewManager.ViewManager.appFocusChanged?4(old, now)
 eric5.ViewManager.ViewManager.ViewManager.canCascade?4()
 eric5.ViewManager.ViewManager.ViewManager.canSplit?4()
 eric5.ViewManager.ViewManager.ViewManager.canTile?4()
+eric5.ViewManager.ViewManager.ViewManager.cancelSharedEdit?4()
 eric5.ViewManager.ViewManager.ViewManager.cascade?4()
 eric5.ViewManager.ViewManager.ViewManager.checkAllDirty?4()
 eric5.ViewManager.ViewManager.ViewManager.checkDirty?4(editor, autosave = False)
@@ -5668,6 +5689,7 @@ eric5.ViewManager.ViewManager.ViewManager.initSearchToolbars?4(toolbarManager)
 eric5.ViewManager.ViewManager.ViewManager.initSpellingToolbar?4(toolbarManager)
 eric5.ViewManager.ViewManager.ViewManager.initViewMenu?4()
 eric5.ViewManager.ViewManager.ViewManager.initViewToolbar?4(toolbarManager)
+eric5.ViewManager.ViewManager.ViewManager.isConnected?4()
 eric5.ViewManager.ViewManager.ViewManager.newEditor?4()
 eric5.ViewManager.ViewManager.ViewManager.newEditorView?4(fn, caller, filetype = "")
 eric5.ViewManager.ViewManager.ViewManager.newProject?4()
@@ -5683,6 +5705,7 @@ eric5.ViewManager.ViewManager.ViewManager.projectClosed?4()
 eric5.ViewManager.ViewManager.ViewManager.projectFileRenamed?4(oldfn, newfn)
 eric5.ViewManager.ViewManager.ViewManager.projectLexerAssociationsChanged?4()
 eric5.ViewManager.ViewManager.ViewManager.projectOpened?4()
+eric5.ViewManager.ViewManager.ViewManager.receive?4(hash, fileName, command)
 eric5.ViewManager.ViewManager.ViewManager.removeSplit?4()
 eric5.ViewManager.ViewManager.ViewManager.saveAllEditors?4()
 eric5.ViewManager.ViewManager.ViewManager.saveAsCurrentEditor?4()
@@ -5694,13 +5717,18 @@ eric5.ViewManager.ViewManager.ViewManager.saveEditorEd?4(ed)
 eric5.ViewManager.ViewManager.ViewManager.saveEditorToProjectEd?4(ed)
 eric5.ViewManager.ViewManager.ViewManager.saveEditorsList?4(editors)
 eric5.ViewManager.ViewManager.ViewManager.send?4(fileName, message)
+eric5.ViewManager.ViewManager.ViewManager.sendSharedEdit?4()
+eric5.ViewManager.ViewManager.ViewManager.setCooperationClient?4(client)
 eric5.ViewManager.ViewManager.ViewManager.setEditorName?4(editor, newName)
 eric5.ViewManager.ViewManager.ViewManager.setFileLine?4(fn, line, error = False, syntaxError = False)
 eric5.ViewManager.ViewManager.ViewManager.setReferences?4(ui, dbs)
 eric5.ViewManager.ViewManager.ViewManager.setSbInfo?4(sbFile, sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol)
 eric5.ViewManager.ViewManager.ViewManager.setSplitOrientation?4(orientation)
+eric5.ViewManager.ViewManager.ViewManager.shareConnected?4(connected)
+eric5.ViewManager.ViewManager.ViewManager.shareEditor?4(share)
 eric5.ViewManager.ViewManager.ViewManager.showDebugSource?4(fn, line)
 eric5.ViewManager.ViewManager.ViewManager.showWindowMenu?4(windowMenu)
+eric5.ViewManager.ViewManager.ViewManager.startSharedEdit?4()
 eric5.ViewManager.ViewManager.ViewManager.textForFind?4(getCurrentWord = True)
 eric5.ViewManager.ViewManager.ViewManager.tile?4()
 eric5.ViewManager.ViewManager.ViewManager.unhighlight?4(current = False)

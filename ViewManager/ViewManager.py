@@ -4928,17 +4928,13 @@ class ViewManager(QObject):
     ## Cooperation related methods
     #######################################################################
     
-    def __getCooperationClient(self):
+    def setCooperationClient(self, client):
         """
-        Private method to initialize and get a reference to the cooperation
-        client.
+        Public method to set a reference to the cooperation client.
         
-        @return reference to the cooperation client (CooperationClient)
+        @param client reference to the cooperation client (CooperationClient)
         """
-        if self.__cooperationClient is None:
-            self.__cooperationClient = e5App().getObject("Cooperation").getClient()
-            self.__cooperationClient.editorCommand.connect(self.__receive)
-        return self.__cooperationClient
+        self.__cooperationClient = client
     
     def isConnected(self):
         """
@@ -4946,7 +4942,7 @@ class ViewManager(QObject):
         
         @return flag indicating the connection status (boolean)
         """
-        return self.__getCooperationClient().hasConnections()
+        return self.__cooperationClient.hasConnections()
     
     def send(self, fileName, message):
         """
@@ -4957,15 +4953,15 @@ class ViewManager(QObject):
         """
         project = e5App().getObject("Project")
         if project.isProjectFile(fileName):
-            self.__getCooperationClient().sendEditorCommand(
+            self.__cooperationClient.sendEditorCommand(
                 project.getHash(), 
                 project.getRelativeUniversalPath(fileName), 
                 message
             )
     
-    def __receive(self, hash, fileName, command):
+    def receive(self, hash, fileName, command):
         """
-        Private slot to handle received editor commands.
+        Public slot to handle received editor commands.
         
         @param hash hash of the project (string)
         @param fileName project relative file name of the editor (string)
@@ -4977,3 +4973,55 @@ class ViewManager(QObject):
             editor = self.getOpenEditor(fn)
             if editor:
                 editor.receive(command)
+    
+    def shareConnected(self, connected):
+        """
+        Public slot to handle a change of the connected state.
+        
+        @param connected flag indicating the connected state (boolean)
+        """
+        for editor in self.getOpenEditors():
+            editor.shareConnected(connected)
+    
+    def shareEditor(self, share):
+        """
+        Public slot to set the shared status of the current editor.
+        
+        @param share flag indicating the share status (boolean)
+        """
+        aw = self.activeWindow()
+        if aw is not None:
+            fn = aw.getFileName()
+            if e5App().getObject("Project").isProjectFile(fn):
+                aw.shareEditor(share)
+    
+    def startSharedEdit(self):
+        """
+        Public slot to start a shared edit session for the current editor.
+        """
+        aw = self.activeWindow()
+        if aw is not None:
+            fn = aw.getFileName()
+            if e5App().getObject("Project").isProjectFile(fn):
+                aw.startSharedEdit()
+    
+    def sendSharedEdit(self):
+        """
+        Public slot to end a shared edit session for the current editor and
+        send the changes.
+        """
+        aw = self.activeWindow()
+        if aw is not None:
+            fn = aw.getFileName()
+            if e5App().getObject("Project").isProjectFile(fn):
+                aw.sendSharedEdit()
+    
+    def cancelSharedEdit(self):
+        """
+        Public slot to cancel a shared edit session for the current editor.
+        """
+        aw = self.activeWindow()
+        if aw is not None:
+            fn = aw.getFileName()
+            if e5App().getObject("Project").isProjectFile(fn):
+                aw.cancelSharedEdit()

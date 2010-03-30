@@ -44,18 +44,44 @@ Module implementing the chat dialog.
 <h2>ChatWidget</h2>
 <p>
     Class implementing the chat dialog.
-</p>
+</p><h4>Signals</h4>
+<dl>
+<dt>cancelEdit()</dt>
+<dd>
+emitted to cancel a shared edit session
+</dd><dt>connected(connected)</dt>
+<dd>
+emitted to signal a change of the connected
+            state (boole)
+</dd><dt>editorCommand(hash, filename, message)</dt>
+<dd>
+emitted when an editor command
+            has been received (string, string, string)
+</dd><dt>sendEdit()</dt>
+<dd>
+emitted to send a shared edit session
+</dd><dt>shareEditor(share)</dt>
+<dd>
+emitted to signal a share is requested (bool)
+</dd><dt>startEdit()</dt>
+<dd>
+emitted to start a shared edit session
+</dd>
+</dl>
 <h3>Derived from</h3>
 QWidget, Ui_ChatWidget
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>cancelEdit</td></tr><tr><td>connected</td></tr><tr><td>editorCommand</td></tr><tr><td>sendEdit</td></tr><tr><td>shareEditor</td></tr><tr><td>startEdit</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
 <tr>
 <td><a href="#ChatWidget.__init__">ChatWidget</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#ChatWidget.__editorCommandMessage">__editorCommandMessage</a></td>
+<td>Private slot to handle editor command messages from the client.</td>
 </tr><tr>
 <td><a href="#ChatWidget.__handleMessage">__handleMessage</a></td>
 <td>Private slot handling the Return key pressed in the message edit.</td>
@@ -78,8 +104,14 @@ QWidget, Ui_ChatWidget
 <td><a href="#ChatWidget.appendMessage">appendMessage</a></td>
 <td>Public slot to append a message to the display.</td>
 </tr><tr>
+<td><a href="#ChatWidget.checkEditorActions">checkEditorActions</a></td>
+<td>Public slot to set action according to an editor's state.</td>
+</tr><tr>
 <td><a href="#ChatWidget.getClient">getClient</a></td>
 <td>Public method to get a reference to the cooperation client.</td>
+</tr><tr>
+<td><a href="#ChatWidget.on_cancelEditButton_clicked">on_cancelEditButton_clicked</a></td>
+<td>Private slot to cancel a shared edit session.</td>
 </tr><tr>
 <td><a href="#ChatWidget.on_connectButton_clicked">on_connectButton_clicked</a></td>
 <td>Private slot initiating the connection.</td>
@@ -87,8 +119,17 @@ QWidget, Ui_ChatWidget
 <td><a href="#ChatWidget.on_hostEdit_textChanged">on_hostEdit_textChanged</a></td>
 <td>Private slot handling the entry of a host to connect to.</td>
 </tr><tr>
+<td><a href="#ChatWidget.on_sendEditButton_clicked">on_sendEditButton_clicked</a></td>
+<td>Private slot to end a shared edit session and send the changes.</td>
+</tr><tr>
 <td><a href="#ChatWidget.on_serverButton_clicked">on_serverButton_clicked</a></td>
 <td>Private slot to start the server.</td>
+</tr><tr>
+<td><a href="#ChatWidget.on_shareButton_clicked">on_shareButton_clicked</a></td>
+<td>Private slot to share the current editor.</td>
+</tr><tr>
+<td><a href="#ChatWidget.on_startEditButton_clicked">on_startEditButton_clicked</a></td>
+<td>Private slot to start a shared edit session.</td>
 </tr><tr>
 <td><a href="#ChatWidget.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle a change of preferences.</td>
@@ -106,6 +147,22 @@ port to be used for the cooperation server (integer)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="ChatWidget.__editorCommandMessage" ID="ChatWidget.__editorCommandMessage"></a>
+<h4>ChatWidget.__editorCommandMessage</h4>
+<b>__editorCommandMessage</b>(<i>hash, fileName, message</i>)
+<p>
+        Private slot to handle editor command messages from the client.
+</p><dl>
+<dt><i>hash</i></dt>
+<dd>
+hash of the project (string)
+</dd><dt><i>fileName</i></dt>
+<dd>
+project relative file name of the editor (string)
+</dd><dt><i>message</i></dt>
+<dd>
+command message (string)
 </dd>
 </dl><a NAME="ChatWidget.__handleMessage" ID="ChatWidget.__handleMessage"></a>
 <h4>ChatWidget.__handleMessage</h4>
@@ -170,11 +227,26 @@ originator of the message (string)
 <dd>
 message to be appended (string)
 </dd>
+</dl><a NAME="ChatWidget.checkEditorActions" ID="ChatWidget.checkEditorActions"></a>
+<h4>ChatWidget.checkEditorActions</h4>
+<b>checkEditorActions</b>(<i>editor</i>)
+<p>
+        Public slot to set action according to an editor's state.
+</p><dl>
+<dt><i>editor</i></dt>
+<dd>
+reference to the editor (Editor)
+</dd>
 </dl><a NAME="ChatWidget.getClient" ID="ChatWidget.getClient"></a>
 <h4>ChatWidget.getClient</h4>
 <b>getClient</b>(<i></i>)
 <p>
         Public method to get a reference to the cooperation client.
+</p><a NAME="ChatWidget.on_cancelEditButton_clicked" ID="ChatWidget.on_cancelEditButton_clicked"></a>
+<h4>ChatWidget.on_cancelEditButton_clicked</h4>
+<b>on_cancelEditButton_clicked</b>(<i></i>)
+<p>
+        Private slot to cancel a shared edit session.
 </p><a NAME="ChatWidget.on_connectButton_clicked" ID="ChatWidget.on_connectButton_clicked"></a>
 <h4>ChatWidget.on_connectButton_clicked</h4>
 <b>on_connectButton_clicked</b>(<i></i>)
@@ -190,12 +262,37 @@ message to be appended (string)
 <dd>
 host to connect to (string)
 </dd>
-</dl><a NAME="ChatWidget.on_serverButton_clicked" ID="ChatWidget.on_serverButton_clicked"></a>
+</dl><a NAME="ChatWidget.on_sendEditButton_clicked" ID="ChatWidget.on_sendEditButton_clicked"></a>
+<h4>ChatWidget.on_sendEditButton_clicked</h4>
+<b>on_sendEditButton_clicked</b>(<i></i>)
+<p>
+        Private slot to end a shared edit session and send the changes.
+</p><a NAME="ChatWidget.on_serverButton_clicked" ID="ChatWidget.on_serverButton_clicked"></a>
 <h4>ChatWidget.on_serverButton_clicked</h4>
 <b>on_serverButton_clicked</b>(<i></i>)
 <p>
         Private slot to start the server.
-</p><a NAME="ChatWidget.preferencesChanged" ID="ChatWidget.preferencesChanged"></a>
+</p><a NAME="ChatWidget.on_shareButton_clicked" ID="ChatWidget.on_shareButton_clicked"></a>
+<h4>ChatWidget.on_shareButton_clicked</h4>
+<b>on_shareButton_clicked</b>(<i>checked</i>)
+<p>
+        Private slot to share the current editor.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+flag indicating the button state (boolean)
+</dd>
+</dl><a NAME="ChatWidget.on_startEditButton_clicked" ID="ChatWidget.on_startEditButton_clicked"></a>
+<h4>ChatWidget.on_startEditButton_clicked</h4>
+<b>on_startEditButton_clicked</b>(<i>checked</i>)
+<p>
+        Private slot to start a shared edit session.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+flag indicating the button state (boolean)
+</dd>
+</dl><a NAME="ChatWidget.preferencesChanged" ID="ChatWidget.preferencesChanged"></a>
 <h4>ChatWidget.preferencesChanged</h4>
 <b>preferencesChanged</b>(<i></i>)
 <p>

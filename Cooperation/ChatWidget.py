@@ -7,8 +7,12 @@
 Module implementing the chat dialog.
 """
 
-from PyQt4.QtCore import Qt, pyqtSlot, QDateTime
+from PyQt4.QtCore import Qt, pyqtSlot, pyqtSignal, QDateTime
 from PyQt4.QtGui import QWidget, QColor, QListWidgetItem
+
+from E5Gui.E5Application import e5App
+
+from QScintilla.Editor import Editor
 
 from .CooperationClient import CooperationClient
 
@@ -20,7 +24,24 @@ import UI.PixmapCache
 class ChatWidget(QWidget, Ui_ChatWidget):
     """
     Class implementing the chat dialog.
+    
+    @signal connected(connected) emitted to signal a change of the connected
+            state (boole)
+    @signal editorCommand(hash, filename, message) emitted when an editor command
+            has been received (string, string, string)
+    @signal shareEditor(share) emitted to signal a share is requested (bool)
+    @signal startEdit() emitted to start a shared edit session
+    @signal sendEdit() emitted to send a shared edit session
+    @signal cancelEdit() emitted to cancel a shared edit session
     """
+    connected = pyqtSignal(bool)
+    editorCommand = pyqtSignal(str, str, str)
+    
+    shareEditor = pyqtSignal(bool)
+    startEdit = pyqtSignal()
+    sendEdit = pyqtSignal()
+    cancelEdit = pyqtSignal()
+    
     def __init__(self, port = -1, parent = None):
         """
         Constructor
@@ -30,6 +51,15 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         """
         QWidget.__init__(self, parent)
         self.setupUi(self)
+        
+        self.shareButton.setIcon(
+            UI.PixmapCache.getIcon("sharedEditDisconnected.png"))
+        self.startEditButton.setIcon(
+            UI.PixmapCache.getIcon("sharedEditStart.png"))
+        self.sendEditButton.setIcon(
+            UI.PixmapCache.getIcon("sharedEditSend.png"))
+        self.cancelEditButton.setIcon(
+            UI.PixmapCache.getIcon("sharedEditCancel.png"))
         
         self.__client = CooperationClient()
         self.__myNickName = self.__client.nickName()
@@ -41,6 +71,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.__client.participantLeft.connect(self.__participantLeft)
         self.__client.connectionError.connect(self.__showErrorMessage)
         self.__client.cannotConnect.connect(self.__initialConnectionRefused)
+        self.__client.editorCommand.connect(self.__editorCommandMessage)
         
         self.serverButton.setText(self.trUtf8("Start Server"))
         self.serverLed.setColor(QColor(Qt.red))
@@ -194,21 +225,26 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         @param connected new connected state (boolean)
         """
         if connected:
-            self.__connected = True
             self.connectButton.setText(self.trUtf8("Disconnect"))
             self.connectButton.setEnabled(True)
-            self.hostEdit.setEnabled(False)
-            self.portSpin.setEnabled(False)
             self.connectionLed.setColor(QColor(Qt.green))
-            self.serverButton.setEnabled(False)
         else:
-            self.__connected = False
             self.connectButton.setText(self.trUtf8("Connect"))
             self.connectButton.setEnabled(self.hostEdit.text() != "")
-            self.hostEdit.setEnabled(True)
-            self.portSpin.setEnabled(True)
             self.connectionLed.setColor(QColor(Qt.red))
-            self.serverButton.setEnabled(True)
+            self.cancelEditButton.click()
+            self.shareButton.click()
+        self.__connected = connected
+        self.hostEdit.setEnabled(not connected)
+        self.portSpin.setEnabled(not connected)
+        self.serverButton.setEnabled(not connected)
+        self.sharingGroup.setEnabled(connected)
+        
+        if connected:
+            vm = e5App().getObject("ViewManager")
+            aw = vm.activeWindow()
+            if aw:
+                self.checkEditorActions(aw)
     
     def __showErrorMessage(self, message):
         """
@@ -243,3 +279,100 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         Public method to get a reference to the cooperation client.
         """
         return self.__client
+    
+    def __editorCommandMessage(self, hash, fileName, message):
+        """
+        Private slot to handle editor command messages from the client.
+        
+        @param hash hash of the project (string)
+        @param fileName project relative file name of the editor (string)
+        @param message command message (string)
+        """
+        self.editorCommand.emit(hash, fileName, message)
+        
+        if message.startswith(Editor.StartEditToken + Editor.Separator) or \
+           message.startswith(Editor.EndEditToken + Editor.Separator):
+            vm = e5App().getObject("ViewManager")
+            aw = vm.activeWindow()
+            if aw:
+                self.checkEditorActions(aw)
+    
+    @pyqtSlot(bool)
+    def on_shareButton_clicked(self, checked):
+        """
+        Private slot to share the current editor.
+        
+        @param checked flag indicating the button state (boolean)
+        """
+        if checked:
+            self.shareButton.setIcon(
+                UI.PixmapCache.getIcon("sharedEditConnected.png"))
+        else:
+            self.shareButton.setIcon(
+                UI.PixmapCache.getIcon("sharedEditDisconnected.png"))
+        self.startEditButton.setEnabled(checked)
+        
+        self.shareEditor.emit(checked)
+    
+    @pyqtSlot(bool)
+    def on_startEditButton_clicked(self, checked):
+        """
+        Private slot to start a shared edit session.
+        
+        @param checked flag indicating the button state (boolean)
+        """
+        if checked:
+            self.sendEditButton.setEnabled(True)
+            self.cancelEditButton.setEnabled(True)
+            self.shareButton.setEnabled(False)
+            self.startEditButton.setEnabled(False)
+            
+            self.startEdit.emit()
+    
+    @pyqtSlot()
+    def on_sendEditButton_clicked(self):
+        """
+        Private slot to end a shared edit session and send the changes.
+        """
+        self.sendEditButton.setEnabled(False)
+        self.cancelEditButton.setEnabled(False)
+        self.shareButton.setEnabled(True)
+        self.startEditButton.setEnabled(True)
+        self.startEditButton.setChecked(False)
+        
+        self.sendEdit.emit()
+    
+    @pyqtSlot()
+    def on_cancelEditButton_clicked(self):
+        """
+        Private slot to cancel a shared edit session.
+        """
+        self.sendEditButton.setEnabled(False)
+        self.cancelEditButton.setEnabled(False)
+        self.shareButton.setEnabled(True)
+        self.startEditButton.setEnabled(True)
+        self.startEditButton.setChecked(False)
+        
+        self.cancelEdit.emit()
+    
+    def checkEditorActions(self, editor):
+        """
+        Public slot to set action according to an editor's state.
+        
+        @param editor reference to the editor (Editor)
+        """
+        shareable, sharing, editing, remoteEditing = editor.getSharingStatus()
+        
+        self.shareButton.setChecked(sharing)
+        if sharing:
+            self.shareButton.setIcon(
+                UI.PixmapCache.getIcon("sharedEditConnected.png"))
+        else:
+            self.shareButton.setIcon(
+                UI.PixmapCache.getIcon("sharedEditDisconnected.png"))
+        self.startEditButton.setChecked(editing)
+        
+        self.shareButton.setEnabled(shareable and not editing)
+        self.startEditButton.setEnabled(sharing and not editing and not remoteEditing)
+        self.sendEditButton.setEnabled(editing)
+        self.cancelEditButton.setEnabled(editing)

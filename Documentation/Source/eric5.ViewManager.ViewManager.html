@@ -302,9 +302,6 @@ QObject
 <td><a href="#ViewManager.__findFileName">__findFileName</a></td>
 <td>Private method to handle the search for file action.</td>
 </tr><tr>
-<td><a href="#ViewManager.__getCooperationClient">__getCooperationClient</a></td>
-<td>Private method to initialize and get a reference to the cooperation client.</td>
-</tr><tr>
 <td><a href="#ViewManager.__goto">__goto</a></td>
 <td>Private method to handle the goto action.</td>
 </tr><tr>
@@ -418,9 +415,6 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.__quickSearchText">__quickSearchText</a></td>
 <td>Private slot to handle the textChanged signal of the quicksearch edit.</td>
-</tr><tr>
-<td><a href="#ViewManager.__receive">__receive</a></td>
-<td>Private slot to handle received editor commands.</td>
 </tr><tr>
 <td><a href="#ViewManager.__replace">__replace</a></td>
 <td>Private method to handle the replace action.</td>
@@ -550,6 +544,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.canTile">canTile</a></td>
 <td>Public method to signal if tiling of managed windows is available.</td>
+</tr><tr>
+<td><a href="#ViewManager.cancelSharedEdit">cancelSharedEdit</a></td>
+<td>Public slot to cancel a shared edit session for the current editor.</td>
 </tr><tr>
 <td><a href="#ViewManager.cascade">cascade</a></td>
 <td>Public method to cascade the managed windows.</td>
@@ -713,6 +710,9 @@ QObject
 <td><a href="#ViewManager.projectOpened">projectOpened</a></td>
 <td>Public slot to handle the projectOpened signal.</td>
 </tr><tr>
+<td><a href="#ViewManager.receive">receive</a></td>
+<td>Public slot to handle received editor commands.</td>
+</tr><tr>
 <td><a href="#ViewManager.removeSplit">removeSplit</a></td>
 <td>Public method used to remove the current split view.</td>
 </tr><tr>
@@ -746,6 +746,12 @@ QObject
 <td><a href="#ViewManager.send">send</a></td>
 <td>Public method to send an editor command to remote editors.</td>
 </tr><tr>
+<td><a href="#ViewManager.sendSharedEdit">sendSharedEdit</a></td>
+<td>Public slot to end a shared edit session for the current editor and send the changes.</td>
+</tr><tr>
+<td><a href="#ViewManager.setCooperationClient">setCooperationClient</a></td>
+<td>Public method to set a reference to the cooperation client.</td>
+</tr><tr>
 <td><a href="#ViewManager.setEditorName">setEditorName</a></td>
 <td>Public method to change the displayed name of the editor.</td>
 </tr><tr>
@@ -761,11 +767,20 @@ QObject
 <td><a href="#ViewManager.setSplitOrientation">setSplitOrientation</a></td>
 <td>Public method used to set the orientation of the split view.</td>
 </tr><tr>
+<td><a href="#ViewManager.shareConnected">shareConnected</a></td>
+<td>Public slot to handle a change of the connected state.</td>
+</tr><tr>
+<td><a href="#ViewManager.shareEditor">shareEditor</a></td>
+<td>Public slot to set the shared status of the current editor.</td>
+</tr><tr>
 <td><a href="#ViewManager.showDebugSource">showDebugSource</a></td>
 <td>Public method to open the given file and highlight the given line in it.</td>
 </tr><tr>
 <td><a href="#ViewManager.showWindowMenu">showWindowMenu</a></td>
 <td>Public method to set up the viewmanager part of the Window menu.</td>
+</tr><tr>
+<td><a href="#ViewManager.startSharedEdit">startSharedEdit</a></td>
+<td>Public slot to start a shared edit session for the current editor.</td>
 </tr><tr>
 <td><a href="#ViewManager.textForFind">textForFind</a></td>
 <td>Public method to determine the selection or the current word for the next find operation.</td>
@@ -1076,18 +1091,7 @@ reference to the action that was triggered (QAction)
 <b>__findFileName</b>(<i></i>)
 <p>
         Private method to handle the search for file action.
-</p><a NAME="ViewManager.__getCooperationClient" ID="ViewManager.__getCooperationClient"></a>
-<h4>ViewManager.__getCooperationClient</h4>
-<b>__getCooperationClient</b>(<i></i>)
-<p>
-        Private method to initialize and get a reference to the cooperation
-        client.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the cooperation client (CooperationClient)
-</dd>
-</dl><a NAME="ViewManager.__goto" ID="ViewManager.__goto"></a>
+</p><a NAME="ViewManager.__goto" ID="ViewManager.__goto"></a>
 <h4>ViewManager.__goto</h4>
 <b>__goto</b>(<i></i>)
 <p>
@@ -1298,23 +1302,7 @@ text to search for (string)
 <b>__quickSearchText</b>(<i></i>)
 <p>
         Private slot to handle the textChanged signal of the quicksearch edit.
-</p><a NAME="ViewManager.__receive" ID="ViewManager.__receive"></a>
-<h4>ViewManager.__receive</h4>
-<b>__receive</b>(<i>hash, fileName, command</i>)
-<p>
-        Private slot to handle received editor commands.
-</p><dl>
-<dt><i>hash</i></dt>
-<dd>
-hash of the project (string)
-</dd><dt><i>fileName</i></dt>
-<dd>
-project relative file name of the editor (string)
-</dd><dt><i>command</i></dt>
-<dd>
-command string (string)
-</dd>
-</dl><a NAME="ViewManager.__replace" ID="ViewManager.__replace"></a>
+</p><a NAME="ViewManager.__replace" ID="ViewManager.__replace"></a>
 <h4>ViewManager.__replace</h4>
 <b>__replace</b>(<i></i>)
 <p>
@@ -1701,7 +1689,12 @@ flag indicating tiling of windows is available
 <dd>
 Not implemented
 </dd>
-</dl><a NAME="ViewManager.cascade" ID="ViewManager.cascade"></a>
+</dl><a NAME="ViewManager.cancelSharedEdit" ID="ViewManager.cancelSharedEdit"></a>
+<h4>ViewManager.cancelSharedEdit</h4>
+<b>cancelSharedEdit</b>(<i></i>)
+<p>
+        Public slot to cancel a shared edit session for the current editor.
+</p><a NAME="ViewManager.cascade" ID="ViewManager.cascade"></a>
 <h4>ViewManager.cascade</h4>
 <b>cascade</b>(<i></i>)
 <p>
@@ -2305,7 +2298,23 @@ new filename of the file (string)
 <b>projectOpened</b>(<i></i>)
 <p>
         Public slot to handle the projectOpened signal.
-</p><a NAME="ViewManager.removeSplit" ID="ViewManager.removeSplit"></a>
+</p><a NAME="ViewManager.receive" ID="ViewManager.receive"></a>
+<h4>ViewManager.receive</h4>
+<b>receive</b>(<i>hash, fileName, command</i>)
+<p>
+        Public slot to handle received editor commands.
+</p><dl>
+<dt><i>hash</i></dt>
+<dd>
+hash of the project (string)
+</dd><dt><i>fileName</i></dt>
+<dd>
+project relative file name of the editor (string)
+</dd><dt><i>command</i></dt>
+<dd>
+command string (string)
+</dd>
+</dl><a NAME="ViewManager.removeSplit" ID="ViewManager.removeSplit"></a>
 <h4>ViewManager.removeSplit</h4>
 <b>removeSplit</b>(<i></i>)
 <p>
@@ -2408,6 +2417,22 @@ file name of the editor (string)
 <dd>
 command message to be sent (string)
 </dd>
+</dl><a NAME="ViewManager.sendSharedEdit" ID="ViewManager.sendSharedEdit"></a>
+<h4>ViewManager.sendSharedEdit</h4>
+<b>sendSharedEdit</b>(<i></i>)
+<p>
+        Public slot to end a shared edit session for the current editor and
+        send the changes.
+</p><a NAME="ViewManager.setCooperationClient" ID="ViewManager.setCooperationClient"></a>
+<h4>ViewManager.setCooperationClient</h4>
+<b>setCooperationClient</b>(<i>client</i>)
+<p>
+        Public method to set a reference to the cooperation client.
+</p><dl>
+<dt><i>client</i></dt>
+<dd>
+reference to the cooperation client (CooperationClient)
+</dd>
 </dl><a NAME="ViewManager.setEditorName" ID="ViewManager.setEditorName"></a>
 <h4>ViewManager.setEditorName</h4>
 <b>setEditorName</b>(<i>editor, newName</i>)
@@ -2501,6 +2526,26 @@ reference to the eol indicator part of the statusbar (QLabel)
 orientation of the split
                 (Qt.Horizontal or Qt.Vertical)
 </dd>
+</dl><a NAME="ViewManager.shareConnected" ID="ViewManager.shareConnected"></a>
+<h4>ViewManager.shareConnected</h4>
+<b>shareConnected</b>(<i>connected</i>)
+<p>
+        Public slot to handle a change of the connected state.
+</p><dl>
+<dt><i>connected</i></dt>
+<dd>
+flag indicating the connected state (boolean)
+</dd>
+</dl><a NAME="ViewManager.shareEditor" ID="ViewManager.shareEditor"></a>
+<h4>ViewManager.shareEditor</h4>
+<b>shareEditor</b>(<i>share</i>)
+<p>
+        Public slot to set the shared status of the current editor.
+</p><dl>
+<dt><i>share</i></dt>
+<dd>
+flag indicating the share status (boolean)
+</dd>
 </dl><a NAME="ViewManager.showDebugSource" ID="ViewManager.showDebugSource"></a>
 <h4>ViewManager.showDebugSource</h4>
 <b>showDebugSource</b>(<i>fn, line</i>)
@@ -2529,7 +2574,12 @@ reference to the window menu
 <dd>
 Not implemented
 </dd>
-</dl><a NAME="ViewManager.textForFind" ID="ViewManager.textForFind"></a>
+</dl><a NAME="ViewManager.startSharedEdit" ID="ViewManager.startSharedEdit"></a>
+<h4>ViewManager.startSharedEdit</h4>
+<b>startSharedEdit</b>(<i></i>)
+<p>
+        Public slot to start a shared edit session for the current editor.
+</p><a NAME="ViewManager.textForFind" ID="ViewManager.textForFind"></a>
 <h4>ViewManager.textForFind</h4>
 <b>textForFind</b>(<i>getCurrentWord = True</i>)
 <p>

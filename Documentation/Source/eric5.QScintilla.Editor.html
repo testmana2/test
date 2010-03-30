@@ -117,7 +117,7 @@ emitted to signal the undo availability
 QsciScintillaCompat
 <h3>Class Attributes</h3>
 <table>
-<tr><td>AttributeID</td></tr><tr><td>AttributePrivateID</td></tr><tr><td>AttributeProtectedID</td></tr><tr><td>ClassID</td></tr><tr><td>ClassPrivateID</td></tr><tr><td>ClassProtectedID</td></tr><tr><td>EnumID</td></tr><tr><td>FromDocumentID</td></tr><tr><td>MethodID</td></tr><tr><td>MethodPrivateID</td></tr><tr><td>MethodProtectedID</td></tr><tr><td>SelectionToken</td></tr><tr><td>Separator</td></tr><tr><td>TemplateImageID</td></tr>
+<tr><td>AttributeID</td></tr><tr><td>AttributePrivateID</td></tr><tr><td>AttributeProtectedID</td></tr><tr><td>CancelEditToken</td></tr><tr><td>ClassID</td></tr><tr><td>ClassPrivateID</td></tr><tr><td>ClassProtectedID</td></tr><tr><td>EndEditToken</td></tr><tr><td>EnumID</td></tr><tr><td>FromDocumentID</td></tr><tr><td>MethodID</td></tr><tr><td>MethodPrivateID</td></tr><tr><td>MethodProtectedID</td></tr><tr><td>RequestSyncToken</td></tr><tr><td>Separator</td></tr><tr><td>StartEditToken</td></tr><tr><td>SyncToken</td></tr><tr><td>TemplateImageID</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -172,6 +172,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__breakPointDataAboutToBeChanged">__breakPointDataAboutToBeChanged</a></td>
 <td>Private slot to handle the dataAboutToBeChanged signal of the breakpoint model.</td>
+</tr><tr>
+<td><a href="#Editor.__calculateChanges">__calculateChanges</a></td>
+<td>Private method to determine change commands to convert old text into new text.</td>
 </tr><tr>
 <td><a href="#Editor.__callTip">__callTip</a></td>
 <td>Private method to show call tips provided by a plugin.</td>
@@ -229,6 +232,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__deselectAll">__deselectAll</a></td>
 <td>Private slot handling the deselect all context menu action.</td>
+</tr><tr>
+<td><a href="#Editor.__dispatchCommand">__dispatchCommand</a></td>
+<td>Private method to dispatch received commands.</td>
 </tr><tr>
 <td><a href="#Editor.__encodingChanged">__encodingChanged</a></td>
 <td>Private slot to handle a change of the encoding.</td>
@@ -353,8 +359,17 @@ QsciScintillaCompat
 <td><a href="#Editor.__printPreview">__printPreview</a></td>
 <td>Private slot to generate a print preview.</td>
 </tr><tr>
-<td><a href="#Editor.__processSelectionCommand">__processSelectionCommand</a></td>
-<td>Private slot to process a remote selection command</td>
+<td><a href="#Editor.__processEndEditCommand">__processEndEditCommand</a></td>
+<td>Private slot to process a remote EndEdit command</td>
+</tr><tr>
+<td><a href="#Editor.__processRequestSyncCommand">__processRequestSyncCommand</a></td>
+<td>Private slot to process a remote RequestSync command</td>
+</tr><tr>
+<td><a href="#Editor.__processStartEditCommand">__processStartEditCommand</a></td>
+<td>Private slot to process a remote StartEdit command</td>
+</tr><tr>
+<td><a href="#Editor.__processSyncCommand">__processSyncCommand</a></td>
+<td>Private slot to process a remote Sync command</td>
 </tr><tr>
 <td><a href="#Editor.__projectPropertiesChanged">__projectPropertiesChanged</a></td>
 <td>Private slot to handle changes of the project properties.</td>
@@ -380,8 +395,8 @@ QsciScintillaCompat
 <td><a href="#Editor.__selectPygmentsLexer">__selectPygmentsLexer</a></td>
 <td>Private method to select a specific pygments lexer.</td>
 </tr><tr>
-<td><a href="#Editor.__selectionChanged">__selectionChanged</a></td>
-<td>Private slot to handle a change of the selection.</td>
+<td><a href="#Editor.__send">__send</a></td>
+<td>Private method to send an editor command to remote editors.</td>
 </tr><tr>
 <td><a href="#Editor.__setAutoCompletion">__setAutoCompletion</a></td>
 <td>Private method to configure the autocompletion function.</td>
@@ -521,6 +536,9 @@ QsciScintillaCompat
 <td><a href="#Editor.canAutoCompleteFromAPIs">canAutoCompleteFromAPIs</a></td>
 <td>Public method to check for API availablity.</td>
 </tr><tr>
+<td><a href="#Editor.cancelSharedEdit">cancelSharedEdit</a></td>
+<td>Public slot to cancel a shared edit session for the editor.</td>
+</tr><tr>
 <td><a href="#Editor.changeEvent">changeEvent</a></td>
 <td>Protected method called to process an event.</td>
 </tr><tr>
@@ -643,6 +661,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.getSearchText">getSearchText</a></td>
 <td>Public method to determine the selection or the current word for the next search operation.</td>
+</tr><tr>
+<td><a href="#Editor.getSharingStatus">getSharingStatus</a></td>
+<td>Public method to get some share status info.</td>
 </tr><tr>
 <td><a href="#Editor.getSyntaxErrors">getSyntaxErrors</a></td>
 <td>Public method to retrieve the syntax error markers.</td>
@@ -824,8 +845,8 @@ QsciScintillaCompat
 <td><a href="#Editor.selectWord">selectWord</a></td>
 <td>Public method to select the word at a position.</td>
 </tr><tr>
-<td><a href="#Editor.send">send</a></td>
-<td>Public method to send an editor command to remote editors.</td>
+<td><a href="#Editor.sendSharedEdit">sendSharedEdit</a></td>
+<td>Public slot to end a shared edit session for the editor and send the changes.</td>
 </tr><tr>
 <td><a href="#Editor.setAutoCompletionEnabled">setAutoCompletionEnabled</a></td>
 <td>Public method to enable/disable autocompletion.</td>
@@ -857,6 +878,12 @@ QsciScintillaCompat
 <td><a href="#Editor.setSpellingForProject">setSpellingForProject</a></td>
 <td>Public method to set the spell checking options for files belonging to the current project.</td>
 </tr><tr>
+<td><a href="#Editor.shareConnected">shareConnected</a></td>
+<td>Public slot to handle a change of the connected state.</td>
+</tr><tr>
+<td><a href="#Editor.shareEditor">shareEditor</a></td>
+<td>Public slot to set the shared status of the editor.</td>
+</tr><tr>
 <td><a href="#Editor.shortenEmptyLines">shortenEmptyLines</a></td>
 <td>Public slot to compress lines consisting solely of whitespace characters.</td>
 </tr><tr>
@@ -865,6 +892,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.smartIndentLineOrSelection">smartIndentLineOrSelection</a></td>
 <td>Public slot to indent current line smartly.</td>
+</tr><tr>
+<td><a href="#Editor.startSharedEdit">startSharedEdit</a></td>
+<td>Public slot to start a shared edit session for the editor.</td>
 </tr><tr>
 <td><a href="#Editor.streamCommentLine">streamCommentLine</a></td>
 <td>Public slot to stream comment the current line.</td>
@@ -1079,6 +1109,25 @@ start index of the rows to be changed (QModelIndex)
 <dd>
 end index of the rows to be changed (QModelIndex)
 </dd>
+</dl><a NAME="Editor.__calculateChanges" ID="Editor.__calculateChanges"></a>
+<h4>Editor.__calculateChanges</h4>
+<b>__calculateChanges</b>(<i>old, new</i>)
+<p>
+        Private method to determine change commands to convert old text into
+        new text.
+</p><dl>
+<dt><i>old</i></dt>
+<dd>
+old text (string)
+</dd><dt><i>new</i></dt>
+<dd>
+new text (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+commands to change old into new (string)
+</dd>
 </dl><a NAME="Editor.__callTip" ID="Editor.__callTip"></a>
 <h4>Editor.__callTip</h4>
 <b>__callTip</b>(<i></i>)
@@ -1219,7 +1268,17 @@ end row (integer)
 <b>__deselectAll</b>(<i></i>)
 <p>
         Private slot handling the deselect all context menu action.
-</p><a NAME="Editor.__encodingChanged" ID="Editor.__encodingChanged"></a>
+</p><a NAME="Editor.__dispatchCommand" ID="Editor.__dispatchCommand"></a>
+<h4>Editor.__dispatchCommand</h4>
+<b>__dispatchCommand</b>(<i>command</i>)
+<p>
+        Private method to dispatch received commands.
+</p><dl>
+<dt><i>command</i></dt>
+<dd>
+command to be processed (string)
+</dd>
+</dl><a NAME="Editor.__encodingChanged" ID="Editor.__encodingChanged"></a>
 <h4>Editor.__encodingChanged</h4>
 <b>__encodingChanged</b>(<i>encoding, propagate = True</i>)
 <p>
@@ -1538,15 +1597,45 @@ normalized encoding (string)
 <dd>
 reference to the printer object (QScintilla.Printer.Printer)
 </dd>
-</dl><a NAME="Editor.__processSelectionCommand" ID="Editor.__processSelectionCommand"></a>
-<h4>Editor.__processSelectionCommand</h4>
-<b>__processSelectionCommand</b>(<i>argsString</i>)
+</dl><a NAME="Editor.__processEndEditCommand" ID="Editor.__processEndEditCommand"></a>
+<h4>Editor.__processEndEditCommand</h4>
+<b>__processEndEditCommand</b>(<i>argsString</i>)
 <p>
-        Private slot to process a remote selection command
+        Private slot to process a remote EndEdit command
 </p><dl>
 <dt><i>argsString</i></dt>
 <dd>
-string containing the selection parameters (string)
+string containing the command parameters (string)
+</dd>
+</dl><a NAME="Editor.__processRequestSyncCommand" ID="Editor.__processRequestSyncCommand"></a>
+<h4>Editor.__processRequestSyncCommand</h4>
+<b>__processRequestSyncCommand</b>(<i>argsString</i>)
+<p>
+        Private slot to process a remote RequestSync command
+</p><dl>
+<dt><i>argsString</i></dt>
+<dd>
+string containing the command parameters (string)
+</dd>
+</dl><a NAME="Editor.__processStartEditCommand" ID="Editor.__processStartEditCommand"></a>
+<h4>Editor.__processStartEditCommand</h4>
+<b>__processStartEditCommand</b>(<i>argsString</i>)
+<p>
+        Private slot to process a remote StartEdit command
+</p><dl>
+<dt><i>argsString</i></dt>
+<dd>
+string containing the command parameters (string)
+</dd>
+</dl><a NAME="Editor.__processSyncCommand" ID="Editor.__processSyncCommand"></a>
+<h4>Editor.__processSyncCommand</h4>
+<b>__processSyncCommand</b>(<i>argsString</i>)
+<p>
+        Private slot to process a remote Sync command
+</p><dl>
+<dt><i>argsString</i></dt>
+<dd>
+string containing the command parameters (string)
 </dd>
 </dl><a NAME="Editor.__projectPropertiesChanged" ID="Editor.__projectPropertiesChanged"></a>
 <h4>Editor.__projectPropertiesChanged</h4>
@@ -1598,12 +1687,20 @@ flag indicating to propagate the change (boolean)
 <dd>
 name of the selected pygments lexer (string)
 </dd>
-</dl><a NAME="Editor.__selectionChanged" ID="Editor.__selectionChanged"></a>
-<h4>Editor.__selectionChanged</h4>
-<b>__selectionChanged</b>(<i></i>)
+</dl><a NAME="Editor.__send" ID="Editor.__send"></a>
+<h4>Editor.__send</h4>
+<b>__send</b>(<i>token, args = None</i>)
 <p>
-        Private slot to handle a change of the selection.
-</p><a NAME="Editor.__setAutoCompletion" ID="Editor.__setAutoCompletion"></a>
+        Private method to send an editor command to remote editors.
+</p><dl>
+<dt><i>token</i></dt>
+<dd>
+command token (string)
+</dd><dt><i>args</i></dt>
+<dd>
+arguments for the command (string)
+</dd>
+</dl><a NAME="Editor.__setAutoCompletion" ID="Editor.__setAutoCompletion"></a>
 <h4>Editor.__setAutoCompletion</h4>
 <b>__setAutoCompletion</b>(<i></i>)
 <p>
@@ -1915,6 +2012,16 @@ function set by setCallTipHook()
 <dt>Returns:</dt>
 <dd>
 flag indicating autocompletion from APIs is available (boolean)
+</dd>
+</dl><a NAME="Editor.cancelSharedEdit" ID="Editor.cancelSharedEdit"></a>
+<h4>Editor.cancelSharedEdit</h4>
+<b>cancelSharedEdit</b>(<i>send = True</i>)
+<p>
+        Public slot to cancel a shared edit session for the editor.
+</p><dl>
+<dt><i>send=</i></dt>
+<dd>
+flag indicating to send the CancelEdit command (boolean)
 </dd>
 </dl><a NAME="Editor.changeEvent" ID="Editor.changeEvent"></a>
 <h4>Editor.changeEvent</h4>
@@ -2312,6 +2419,19 @@ flag indicating that only selected text should be
 <dt>Returns:</dt>
 <dd>
 selection or current word (string)
+</dd>
+</dl><a NAME="Editor.getSharingStatus" ID="Editor.getSharingStatus"></a>
+<h4>Editor.getSharingStatus</h4>
+<b>getSharingStatus</b>(<i></i>)
+<p>
+        Public method to get some share status info.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple indicating, if the editor is sharable, the sharing status,
+            if it is inside a locally initiated shared edit session and
+            if it is inside a remotely initiated shared edit session
+            (boolean, boolean, boolean, boolean)
 </dd>
 </dl><a NAME="Editor.getSyntaxErrors" ID="Editor.getSyntaxErrors"></a>
 <h4>Editor.getSyntaxErrors</h4>
@@ -2844,20 +2964,13 @@ number of line to look at (int)
 <dd>
 position to look at (int)
 </dd>
-</dl><a NAME="Editor.send" ID="Editor.send"></a>
-<h4>Editor.send</h4>
-<b>send</b>(<i>token, args</i>)
+</dl><a NAME="Editor.sendSharedEdit" ID="Editor.sendSharedEdit"></a>
+<h4>Editor.sendSharedEdit</h4>
+<b>sendSharedEdit</b>(<i></i>)
 <p>
-        Public method to send an editor command to remote editors.
-</p><dl>
-<dt><i>token</i></dt>
-<dd>
-command token (string)
-</dd><dt><i>args</i></dt>
-<dd>
-arguments for the command (string)
-</dd>
-</dl><a NAME="Editor.setAutoCompletionEnabled" ID="Editor.setAutoCompletionEnabled"></a>
+        Public slot to end a shared edit session for the editor and
+        send the changes.
+</p><a NAME="Editor.setAutoCompletionEnabled" ID="Editor.setAutoCompletionEnabled"></a>
 <h4>Editor.setAutoCompletionEnabled</h4>
 <b>setAutoCompletionEnabled</b>(<i>enable</i>)
 <p>
@@ -2967,7 +3080,27 @@ length of the indicator (integer)
 <p>
         Public method to set the spell checking options for files belonging
         to the current project.
-</p><a NAME="Editor.shortenEmptyLines" ID="Editor.shortenEmptyLines"></a>
+</p><a NAME="Editor.shareConnected" ID="Editor.shareConnected"></a>
+<h4>Editor.shareConnected</h4>
+<b>shareConnected</b>(<i>connected</i>)
+<p>
+        Public slot to handle a change of the connected state.
+</p><dl>
+<dt><i>connected</i></dt>
+<dd>
+flag indicating the connected state (boolean)
+</dd>
+</dl><a NAME="Editor.shareEditor" ID="Editor.shareEditor"></a>
+<h4>Editor.shareEditor</h4>
+<b>shareEditor</b>(<i>share</i>)
+<p>
+        Public slot to set the shared status of the editor.
+</p><dl>
+<dt><i>share</i></dt>
+<dd>
+flag indicating the share status (boolean)
+</dd>
+</dl><a NAME="Editor.shortenEmptyLines" ID="Editor.shortenEmptyLines"></a>
 <h4>Editor.shortenEmptyLines</h4>
 <b>shortenEmptyLines</b>(<i></i>)
 <p>
@@ -2987,6 +3120,11 @@ flag indicating this editor should be saved (boolean)
 <b>smartIndentLineOrSelection</b>(<i></i>)
 <p>
         Public slot to indent current line smartly.
+</p><a NAME="Editor.startSharedEdit" ID="Editor.startSharedEdit"></a>
+<h4>Editor.startSharedEdit</h4>
+<b>startSharedEdit</b>(<i></i>)
+<p>
+        Public slot to start a shared edit session for the editor.
 </p><a NAME="Editor.streamCommentLine" ID="Editor.streamCommentLine"></a>
 <h4>Editor.streamCommentLine</h4>
 <b>streamCommentLine</b>(<i></i>)

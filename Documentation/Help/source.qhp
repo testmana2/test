@@ -3184,6 +3184,7 @@
       <keyword name="ChatWidget (Module)" id="ChatWidget (Module)" ref="eric5.Cooperation.ChatWidget.html" />
       <keyword name="ChatWidget" id="ChatWidget" ref="eric5.Cooperation.ChatWidget.html#ChatWidget" />
       <keyword name="ChatWidget (Constructor)" id="ChatWidget (Constructor)" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__init__" />
+      <keyword name="ChatWidget.__editorCommandMessage" id="ChatWidget.__editorCommandMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__editorCommandMessage" />
       <keyword name="ChatWidget.__handleMessage" id="ChatWidget.__handleMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__handleMessage" />
       <keyword name="ChatWidget.__initialConnectionRefused" id="ChatWidget.__initialConnectionRefused" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__initialConnectionRefused" />
       <keyword name="ChatWidget.__newParticipant" id="ChatWidget.__newParticipant" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__newParticipant" />
@@ -3191,10 +3192,15 @@
       <keyword name="ChatWidget.__setConnected" id="ChatWidget.__setConnected" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__setConnected" />
       <keyword name="ChatWidget.__showErrorMessage" id="ChatWidget.__showErrorMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__showErrorMessage" />
       <keyword name="ChatWidget.appendMessage" id="ChatWidget.appendMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.appendMessage" />
+      <keyword name="ChatWidget.checkEditorActions" id="ChatWidget.checkEditorActions" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.checkEditorActions" />
       <keyword name="ChatWidget.getClient" id="ChatWidget.getClient" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.getClient" />
+      <keyword name="ChatWidget.on_cancelEditButton_clicked" id="ChatWidget.on_cancelEditButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_cancelEditButton_clicked" />
       <keyword name="ChatWidget.on_connectButton_clicked" id="ChatWidget.on_connectButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_connectButton_clicked" />
       <keyword name="ChatWidget.on_hostEdit_textChanged" id="ChatWidget.on_hostEdit_textChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_hostEdit_textChanged" />
+      <keyword name="ChatWidget.on_sendEditButton_clicked" id="ChatWidget.on_sendEditButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_sendEditButton_clicked" />
       <keyword name="ChatWidget.on_serverButton_clicked" id="ChatWidget.on_serverButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_serverButton_clicked" />
+      <keyword name="ChatWidget.on_shareButton_clicked" id="ChatWidget.on_shareButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_shareButton_clicked" />
+      <keyword name="ChatWidget.on_startEditButton_clicked" id="ChatWidget.on_startEditButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_startEditButton_clicked" />
       <keyword name="ChatWidget.preferencesChanged" id="ChatWidget.preferencesChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.preferencesChanged" />
       <keyword name="Connection (Module)" id="Connection (Module)" ref="eric5.Cooperation.Connection.html" />
       <keyword name="Connection" id="Connection" ref="eric5.Cooperation.Connection.html#Connection" />
@@ -3292,7 +3298,6 @@
       <keyword name="ViewManager.__enableSpellingActions" id="ViewManager.__enableSpellingActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__enableSpellingActions" />
       <keyword name="ViewManager.__exportMenuTriggered" id="ViewManager.__exportMenuTriggered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__exportMenuTriggered" />
       <keyword name="ViewManager.__findFileName" id="ViewManager.__findFileName" ref="eric5.ViewManager.ViewManager.html#ViewManager.__findFileName" />
-      <keyword name="ViewManager.__getCooperationClient" id="ViewManager.__getCooperationClient" ref="eric5.ViewManager.ViewManager.html#ViewManager.__getCooperationClient" />
       <keyword name="ViewManager.__goto" id="ViewManager.__goto" ref="eric5.ViewManager.ViewManager.html#ViewManager.__goto" />
       <keyword name="ViewManager.__gotoBrace" id="ViewManager.__gotoBrace" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoBrace" />
       <keyword name="ViewManager.__gotoSyntaxError" id="ViewManager.__gotoSyntaxError" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoSyntaxError" />
@@ -3331,7 +3336,6 @@
       <keyword name="ViewManager.__quickSearchMarkOccurrences" id="ViewManager.__quickSearchMarkOccurrences" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchMarkOccurrences" />
       <keyword name="ViewManager.__quickSearchPrev" id="ViewManager.__quickSearchPrev" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchPrev" />
       <keyword name="ViewManager.__quickSearchText" id="ViewManager.__quickSearchText" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchText" />
-      <keyword name="ViewManager.__receive" id="ViewManager.__receive" ref="eric5.ViewManager.ViewManager.html#ViewManager.__receive" />
       <keyword name="ViewManager.__replace" id="ViewManager.__replace" ref="eric5.ViewManager.ViewManager.html#ViewManager.__replace" />
       <keyword name="ViewManager.__replaceFiles" id="ViewManager.__replaceFiles" ref="eric5.ViewManager.ViewManager.html#ViewManager.__replaceFiles" />
       <keyword name="ViewManager.__saveRecent" id="ViewManager.__saveRecent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__saveRecent" />
@@ -3375,6 +3379,7 @@
       <keyword name="ViewManager.canCascade" id="ViewManager.canCascade" ref="eric5.ViewManager.ViewManager.html#ViewManager.canCascade" />
       <keyword name="ViewManager.canSplit" id="ViewManager.canSplit" ref="eric5.ViewManager.ViewManager.html#ViewManager.canSplit" />
       <keyword name="ViewManager.canTile" id="ViewManager.canTile" ref="eric5.ViewManager.ViewManager.html#ViewManager.canTile" />
+      <keyword name="ViewManager.cancelSharedEdit" id="ViewManager.cancelSharedEdit" ref="eric5.ViewManager.ViewManager.html#ViewManager.cancelSharedEdit" />
       <keyword name="ViewManager.cascade" id="ViewManager.cascade" ref="eric5.ViewManager.ViewManager.html#ViewManager.cascade" />
       <keyword name="ViewManager.checkAllDirty" id="ViewManager.checkAllDirty" ref="eric5.ViewManager.ViewManager.html#ViewManager.checkAllDirty" />
       <keyword name="ViewManager.checkDirty" id="ViewManager.checkDirty" ref="eric5.ViewManager.ViewManager.html#ViewManager.checkDirty" />
@@ -3429,6 +3434,7 @@
       <keyword name="ViewManager.projectFileRenamed" id="ViewManager.projectFileRenamed" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectFileRenamed" />
       <keyword name="ViewManager.projectLexerAssociationsChanged" id="ViewManager.projectLexerAssociationsChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectLexerAssociationsChanged" />
       <keyword name="ViewManager.projectOpened" id="ViewManager.projectOpened" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectOpened" />
+      <keyword name="ViewManager.receive" id="ViewManager.receive" ref="eric5.ViewManager.ViewManager.html#ViewManager.receive" />
       <keyword name="ViewManager.removeSplit" id="ViewManager.removeSplit" ref="eric5.ViewManager.ViewManager.html#ViewManager.removeSplit" />
       <keyword name="ViewManager.saveAllEditors" id="ViewManager.saveAllEditors" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveAllEditors" />
       <keyword name="ViewManager.saveAsCurrentEditor" id="ViewManager.saveAsCurrentEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveAsCurrentEditor" />
@@ -3440,13 +3446,18 @@
       <keyword name="ViewManager.saveEditorToProjectEd" id="ViewManager.saveEditorToProjectEd" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveEditorToProjectEd" />
       <keyword name="ViewManager.saveEditorsList" id="ViewManager.saveEditorsList" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveEditorsList" />
       <keyword name="ViewManager.send" id="ViewManager.send" ref="eric5.ViewManager.ViewManager.html#ViewManager.send" />
+      <keyword name="ViewManager.sendSharedEdit" id="ViewManager.sendSharedEdit" ref="eric5.ViewManager.ViewManager.html#ViewManager.sendSharedEdit" />
+      <keyword name="ViewManager.setCooperationClient" id="ViewManager.setCooperationClient" ref="eric5.ViewManager.ViewManager.html#ViewManager.setCooperationClient" />
       <keyword name="ViewManager.setEditorName" id="ViewManager.setEditorName" ref="eric5.ViewManager.ViewManager.html#ViewManager.setEditorName" />
       <keyword name="ViewManager.setFileLine" id="ViewManager.setFileLine" ref="eric5.ViewManager.ViewManager.html#ViewManager.setFileLine" />
       <keyword name="ViewManager.setReferences" id="ViewManager.setReferences" ref="eric5.ViewManager.ViewManager.html#ViewManager.setReferences" />
       <keyword name="ViewManager.setSbInfo" id="ViewManager.setSbInfo" ref="eric5.ViewManager.ViewManager.html#ViewManager.setSbInfo" />
       <keyword name="ViewManager.setSplitOrientation" id="ViewManager.setSplitOrientation" ref="eric5.ViewManager.ViewManager.html#ViewManager.setSplitOrientation" />
+      <keyword name="ViewManager.shareConnected" id="ViewManager.shareConnected" ref="eric5.ViewManager.ViewManager.html#ViewManager.shareConnected" />
+      <keyword name="ViewManager.shareEditor" id="ViewManager.shareEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.shareEditor" />
       <keyword name="ViewManager.showDebugSource" id="ViewManager.showDebugSource" ref="eric5.ViewManager.ViewManager.html#ViewManager.showDebugSource" />
       <keyword name="ViewManager.showWindowMenu" id="ViewManager.showWindowMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.showWindowMenu" />
+      <keyword name="ViewManager.startSharedEdit" id="ViewManager.startSharedEdit" ref="eric5.ViewManager.ViewManager.html#ViewManager.startSharedEdit" />
       <keyword name="ViewManager.textForFind" id="ViewManager.textForFind" ref="eric5.ViewManager.ViewManager.html#ViewManager.textForFind" />
       <keyword name="ViewManager.tile" id="ViewManager.tile" ref="eric5.ViewManager.ViewManager.html#ViewManager.tile" />
       <keyword name="ViewManager.unhighlight" id="ViewManager.unhighlight" ref="eric5.ViewManager.ViewManager.html#ViewManager.unhighlight" />
@@ -5479,6 +5490,7 @@
       <keyword name="Editor.__bindLexer" id="Editor.__bindLexer" ref="eric5.QScintilla.Editor.html#Editor.__bindLexer" />
       <keyword name="Editor.__bindName" id="Editor.__bindName" ref="eric5.QScintilla.Editor.html#Editor.__bindName" />
       <keyword name="Editor.__breakPointDataAboutToBeChanged" id="Editor.__breakPointDataAboutToBeChanged" ref="eric5.QScintilla.Editor.html#Editor.__breakPointDataAboutToBeChanged" />
+      <keyword name="Editor.__calculateChanges" id="Editor.__calculateChanges" ref="eric5.QScintilla.Editor.html#Editor.__calculateChanges" />
       <keyword name="Editor.__callTip" id="Editor.__callTip" ref="eric5.QScintilla.Editor.html#Editor.__callTip" />
       <keyword name="Editor.__changeBreakPoints" id="Editor.__changeBreakPoints" ref="eric5.QScintilla.Editor.html#Editor.__changeBreakPoints" />
       <keyword name="Editor.__charAdded" id="Editor.__charAdded" ref="eric5.QScintilla.Editor.html#Editor.__charAdded" />
@@ -5498,6 +5510,7 @@
       <keyword name="Editor.__cursorPositionChanged" id="Editor.__cursorPositionChanged" ref="eric5.QScintilla.Editor.html#Editor.__cursorPositionChanged" />
       <keyword name="Editor.__deleteBreakPoints" id="Editor.__deleteBreakPoints" ref="eric5.QScintilla.Editor.html#Editor.__deleteBreakPoints" />
       <keyword name="Editor.__deselectAll" id="Editor.__deselectAll" ref="eric5.QScintilla.Editor.html#Editor.__deselectAll" />
+      <keyword name="Editor.__dispatchCommand" id="Editor.__dispatchCommand" ref="eric5.QScintilla.Editor.html#Editor.__dispatchCommand" />
       <keyword name="Editor.__encodingChanged" id="Editor.__encodingChanged" ref="eric5.QScintilla.Editor.html#Editor.__encodingChanged" />
       <keyword name="Editor.__encodingsMenuTriggered" id="Editor.__encodingsMenuTriggered" ref="eric5.QScintilla.Editor.html#Editor.__encodingsMenuTriggered" />
       <keyword name="Editor.__eolChanged" id="Editor.__eolChanged" ref="eric5.QScintilla.Editor.html#Editor.__eolChanged" />
@@ -5539,7 +5552,10 @@
       <keyword name="Editor.__newViewNewSplit" id="Editor.__newViewNewSplit" ref="eric5.QScintilla.Editor.html#Editor.__newViewNewSplit" />
       <keyword name="Editor.__normalizedEncoding" id="Editor.__normalizedEncoding" ref="eric5.QScintilla.Editor.html#Editor.__normalizedEncoding" />
       <keyword name="Editor.__printPreview" id="Editor.__printPreview" ref="eric5.QScintilla.Editor.html#Editor.__printPreview" />
-      <keyword name="Editor.__processSelectionCommand" id="Editor.__processSelectionCommand" ref="eric5.QScintilla.Editor.html#Editor.__processSelectionCommand" />
+      <keyword name="Editor.__processEndEditCommand" id="Editor.__processEndEditCommand" ref="eric5.QScintilla.Editor.html#Editor.__processEndEditCommand" />
+      <keyword name="Editor.__processRequestSyncCommand" id="Editor.__processRequestSyncCommand" ref="eric5.QScintilla.Editor.html#Editor.__processRequestSyncCommand" />
+      <keyword name="Editor.__processStartEditCommand" id="Editor.__processStartEditCommand" ref="eric5.QScintilla.Editor.html#Editor.__processStartEditCommand" />
+      <keyword name="Editor.__processSyncCommand" id="Editor.__processSyncCommand" ref="eric5.QScintilla.Editor.html#Editor.__processSyncCommand" />
       <keyword name="Editor.__projectPropertiesChanged" id="Editor.__projectPropertiesChanged" ref="eric5.QScintilla.Editor.html#Editor.__projectPropertiesChanged" />
       <keyword name="Editor.__registerImages" id="Editor.__registerImages" ref="eric5.QScintilla.Editor.html#Editor.__registerImages" />
       <keyword name="Editor.__removeFromSpellingDictionary" id="Editor.__removeFromSpellingDictionary" ref="eric5.QScintilla.Editor.html#Editor.__removeFromSpellingDictionary" />
@@ -5548,7 +5564,7 @@
       <keyword name="Editor.__restoreBreakpoints" id="Editor.__restoreBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__restoreBreakpoints" />
       <keyword name="Editor.__selectAll" id="Editor.__selectAll" ref="eric5.QScintilla.Editor.html#Editor.__selectAll" />
       <keyword name="Editor.__selectPygmentsLexer" id="Editor.__selectPygmentsLexer" ref="eric5.QScintilla.Editor.html#Editor.__selectPygmentsLexer" />
-      <keyword name="Editor.__selectionChanged" id="Editor.__selectionChanged" ref="eric5.QScintilla.Editor.html#Editor.__selectionChanged" />
+      <keyword name="Editor.__send" id="Editor.__send" ref="eric5.QScintilla.Editor.html#Editor.__send" />
       <keyword name="Editor.__setAutoCompletion" id="Editor.__setAutoCompletion" ref="eric5.QScintilla.Editor.html#Editor.__setAutoCompletion" />
       <keyword name="Editor.__setCallTips" id="Editor.__setCallTips" ref="eric5.QScintilla.Editor.html#Editor.__setCallTips" />
       <keyword name="Editor.__setEolMode" id="Editor.__setEolMode" ref="eric5.QScintilla.Editor.html#Editor.__setEolMode" />
@@ -5595,6 +5611,7 @@
       <keyword name="Editor.callTip" id="Editor.callTip" ref="eric5.QScintilla.Editor.html#Editor.callTip" />
       <keyword name="Editor.callTipHook" id="Editor.callTipHook" ref="eric5.QScintilla.Editor.html#Editor.callTipHook" />
       <keyword name="Editor.canAutoCompleteFromAPIs" id="Editor.canAutoCompleteFromAPIs" ref="eric5.QScintilla.Editor.html#Editor.canAutoCompleteFromAPIs" />
+      <keyword name="Editor.cancelSharedEdit" id="Editor.cancelSharedEdit" ref="eric5.QScintilla.Editor.html#Editor.cancelSharedEdit" />
       <keyword name="Editor.changeEvent" id="Editor.changeEvent" ref="eric5.QScintilla.Editor.html#Editor.changeEvent" />
       <keyword name="Editor.checkDirty" id="Editor.checkDirty" ref="eric5.QScintilla.Editor.html#Editor.checkDirty" />
       <keyword name="Editor.checkSpelling" id="Editor.checkSpelling" ref="eric5.QScintilla.Editor.html#Editor.checkSpelling" />
@@ -5636,6 +5653,7 @@
       <keyword name="Editor.getMenu" id="Editor.getMenu" ref="eric5.QScintilla.Editor.html#Editor.getMenu" />
       <keyword name="Editor.getNoName" id="Editor.getNoName" ref="eric5.QScintilla.Editor.html#Editor.getNoName" />
       <keyword name="Editor.getSearchText" id="Editor.getSearchText" ref="eric5.QScintilla.Editor.html#Editor.getSearchText" />
+      <keyword name="Editor.getSharingStatus" id="Editor.getSharingStatus" ref="eric5.QScintilla.Editor.html#Editor.getSharingStatus" />
       <keyword name="Editor.getSyntaxErrors" id="Editor.getSyntaxErrors" ref="eric5.QScintilla.Editor.html#Editor.getSyntaxErrors" />
       <keyword name="Editor.getWord" id="Editor.getWord" ref="eric5.QScintilla.Editor.html#Editor.getWord" />
       <keyword name="Editor.getWordBoundaries" id="Editor.getWordBoundaries" ref="eric5.QScintilla.Editor.html#Editor.getWordBoundaries" />
@@ -5696,7 +5714,7 @@
       <keyword name="Editor.saveFileAs" id="Editor.saveFileAs" ref="eric5.QScintilla.Editor.html#Editor.saveFileAs" />
       <keyword name="Editor.selectCurrentWord" id="Editor.selectCurrentWord" ref="eric5.QScintilla.Editor.html#Editor.selectCurrentWord" />
       <keyword name="Editor.selectWord" id="Editor.selectWord" ref="eric5.QScintilla.Editor.html#Editor.selectWord" />
-      <keyword name="Editor.send" id="Editor.send" ref="eric5.QScintilla.Editor.html#Editor.send" />
+      <keyword name="Editor.sendSharedEdit" id="Editor.sendSharedEdit" ref="eric5.QScintilla.Editor.html#Editor.sendSharedEdit" />
       <keyword name="Editor.setAutoCompletionEnabled" id="Editor.setAutoCompletionEnabled" ref="eric5.QScintilla.Editor.html#Editor.setAutoCompletionEnabled" />
       <keyword name="Editor.setAutoCompletionHook" id="Editor.setAutoCompletionHook" ref="eric5.QScintilla.Editor.html#Editor.setAutoCompletionHook" />
       <keyword name="Editor.setAutoSpellChecking" id="Editor.setAutoSpellChecking" ref="eric5.QScintilla.Editor.html#Editor.setAutoSpellChecking" />
@@ -5707,9 +5725,12 @@
       <keyword name="Editor.setNoName" id="Editor.setNoName" ref="eric5.QScintilla.Editor.html#Editor.setNoName" />
       <keyword name="Editor.setSearchIndicator" id="Editor.setSearchIndicator" ref="eric5.QScintilla.Editor.html#Editor.setSearchIndicator" />
       <keyword name="Editor.setSpellingForProject" id="Editor.setSpellingForProject" ref="eric5.QScintilla.Editor.html#Editor.setSpellingForProject" />
+      <keyword name="Editor.shareConnected" id="Editor.shareConnected" ref="eric5.QScintilla.Editor.html#Editor.shareConnected" />
+      <keyword name="Editor.shareEditor" id="Editor.shareEditor" ref="eric5.QScintilla.Editor.html#Editor.shareEditor" />
       <keyword name="Editor.shortenEmptyLines" id="Editor.shortenEmptyLines" ref="eric5.QScintilla.Editor.html#Editor.shortenEmptyLines" />
       <keyword name="Editor.shouldAutosave" id="Editor.shouldAutosave" ref="eric5.QScintilla.Editor.html#Editor.shouldAutosave" />
       <keyword name="Editor.smartIndentLineOrSelection" id="Editor.smartIndentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.smartIndentLineOrSelection" />
+      <keyword name="Editor.startSharedEdit" id="Editor.startSharedEdit" ref="eric5.QScintilla.Editor.html#Editor.startSharedEdit" />
       <keyword name="Editor.streamCommentLine" id="Editor.streamCommentLine" ref="eric5.QScintilla.Editor.html#Editor.streamCommentLine" />
       <keyword name="Editor.streamCommentLineOrSelection" id="Editor.streamCommentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.streamCommentLineOrSelection" />
       <keyword name="Editor.streamCommentSelection" id="Editor.streamCommentSelection" ref="eric5.QScintilla.Editor.html#Editor.streamCommentSelection" />
