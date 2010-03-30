@@ -7,8 +7,9 @@
 Module implementing the chat dialog.
 """
 
-from PyQt4.QtCore import Qt, pyqtSlot, pyqtSignal, QDateTime
-from PyQt4.QtGui import QWidget, QColor, QListWidgetItem
+from PyQt4.QtCore import Qt, pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo
+from PyQt4.QtGui import QWidget, QColor, QListWidgetItem, QMenu, QFileDialog, \
+    QMessageBox, QApplication
 
 from E5Gui.E5Application import e5App
 
@@ -19,6 +20,7 @@ from .CooperationClient import CooperationClient
 from .Ui_ChatWidget import Ui_ChatWidget
 
 import Preferences
+import Utilities
 import UI.PixmapCache
 
 class ChatWidget(QWidget, Ui_ChatWidget):
@@ -63,6 +65,14 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         
         self.__client = CooperationClient()
         self.__myNickName = self.__client.nickName()
+        
+        self.__chatMenu = QMenu(self)
+        self.__clearChatAct = \
+            self.__chatMenu.addAction(self.trUtf8("Clear"), self.__clearChat)
+        self.__saveChatAct = \
+            self.__chatMenu.addAction(self.trUtf8("Save"), self.__saveChat)
+        self.__copyChatAct = \
+            self.__chatMenu.addAction(self.trUtf8("Copy"), self.__copyChat)
         
         self.messageEdit.returnPressed.connect(self.__handleMessage)
         self.sendButton.clicked.connect(self.__handleMessage)
@@ -376,3 +386,72 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.startEditButton.setEnabled(sharing and not editing and not remoteEditing)
         self.sendEditButton.setEnabled(editing)
         self.cancelEditButton.setEnabled(editing)
+    
+    @pyqtSlot(QPoint)
+    def on_chatEdit_customContextMenuRequested(self, pos):
+        """
+        Private slot to show the context menu for the chat.
+        
+        @param pos the position of the mouse pointer (QPoint)
+        """
+        self.__saveChatAct.setEnabled(self.chatEdit.toPlainText() != "")
+        self.__copyChatAct.setEnabled(self.chatEdit.toPlainText() != "")
+        self.__chatMenu.popup(self.chatEdit.mapToGlobal(pos))
+    
+    def __clearChat(self):
+        """
+        Private slot to clear the contents of the chat display.
+        """
+        self.chatEdit.clear()
+    
+    def __saveChat(self):
+        """
+        Private slot to save the contents of the chat display.
+        """
+        txt = self.chatEdit.toPlainText()
+        if txt:
+            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+                self,
+                self.trUtf8("Save Chat"),
+                "",
+                self.trUtf8("Text Files (*.txt);;All Files (*)"),
+                None,
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            if fname:
+                ext = QFileInfo(fname).suffix()
+                if not ext:
+                    ex = selectedFilter.split("(*")[1].split(")")[0]
+                    if ex:
+                        fname += ex
+                if QFileInfo(fname).exists():
+                    res = QMessageBox.warning(self,
+                        self.trUtf8("Save Chat"),
+                        self.trUtf8("<p>The file <b>{0}</b> already exists.</p>")
+                            .format(fname),
+                        QMessageBox.StandardButtons(\
+                            QMessageBox.Abort | \
+                            QMessageBox.Save),
+                        QMessageBox.Abort)
+                    if res != QMessageBox.Save:
+                        return
+                    fname = Utilities.toNativeSeparators(fname)
+                
+                try:
+                    f = open(fname, "w", encoding = "utf-8")
+                    f.write(txt)
+                    f.close()
+                except IOError as err:
+                    QMessageBox.critical(self,
+                        self.trUtf8("Error saving Chat"),
+                        self.trUtf8("""<p>The chat contents could not be written"""
+                                    """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
+                            .format(fname, str(err)))
+    
+    def __copyChat(self):
+        """
+        Private slot to copy the contents of the chat display to the clipboard.
+        """
+        txt = self.chatEdit.toPlainText()
+        if txt:
+            cb = QApplication.clipboard()
+            cb.setText(txt)

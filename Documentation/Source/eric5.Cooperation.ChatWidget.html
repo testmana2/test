@@ -80,6 +80,12 @@ QWidget, Ui_ChatWidget
 <td><a href="#ChatWidget.__init__">ChatWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#ChatWidget.__clearChat">__clearChat</a></td>
+<td>Private slot to clear the contents of the chat display.</td>
+</tr><tr>
+<td><a href="#ChatWidget.__copyChat">__copyChat</a></td>
+<td>Private slot to copy the contents of the chat display to the clipboard.</td>
+</tr><tr>
 <td><a href="#ChatWidget.__editorCommandMessage">__editorCommandMessage</a></td>
 <td>Private slot to handle editor command messages from the client.</td>
 </tr><tr>
@@ -94,6 +100,9 @@ QWidget, Ui_ChatWidget
 </tr><tr>
 <td><a href="#ChatWidget.__participantLeft">__participantLeft</a></td>
 <td>Private slot handling a participant leaving the session.</td>
+</tr><tr>
+<td><a href="#ChatWidget.__saveChat">__saveChat</a></td>
+<td>Private slot to save the contents of the chat display.</td>
 </tr><tr>
 <td><a href="#ChatWidget.__setConnected">__setConnected</a></td>
 <td>Private slot to set the connected state.</td>
@@ -112,6 +121,9 @@ QWidget, Ui_ChatWidget
 </tr><tr>
 <td><a href="#ChatWidget.on_cancelEditButton_clicked">on_cancelEditButton_clicked</a></td>
 <td>Private slot to cancel a shared edit session.</td>
+</tr><tr>
+<td><a href="#ChatWidget.on_chatEdit_customContextMenuRequested">on_chatEdit_customContextMenuRequested</a></td>
+<td>Private slot to show the context menu for the chat.</td>
 </tr><tr>
 <td><a href="#ChatWidget.on_connectButton_clicked">on_connectButton_clicked</a></td>
 <td>Private slot initiating the connection.</td>
@@ -148,7 +160,17 @@ port to be used for the cooperation server (integer)
 <dd>
 reference to the parent widget (QWidget)
 </dd>
-</dl><a NAME="ChatWidget.__editorCommandMessage" ID="ChatWidget.__editorCommandMessage"></a>
+</dl><a NAME="ChatWidget.__clearChat" ID="ChatWidget.__clearChat"></a>
+<h4>ChatWidget.__clearChat</h4>
+<b>__clearChat</b>(<i></i>)
+<p>
+        Private slot to clear the contents of the chat display.
+</p><a NAME="ChatWidget.__copyChat" ID="ChatWidget.__copyChat"></a>
+<h4>ChatWidget.__copyChat</h4>
+<b>__copyChat</b>(<i></i>)
+<p>
+        Private slot to copy the contents of the chat display to the clipboard.
+</p><a NAME="ChatWidget.__editorCommandMessage" ID="ChatWidget.__editorCommandMessage"></a>
 <h4>ChatWidget.__editorCommandMessage</h4>
 <b>__editorCommandMessage</b>(<i>hash, fileName, message</i>)
 <p>
@@ -194,7 +216,12 @@ nick name of the new participant (string)
 <dd>
 nick name of the participant (string)
 </dd>
-</dl><a NAME="ChatWidget.__setConnected" ID="ChatWidget.__setConnected"></a>
+</dl><a NAME="ChatWidget.__saveChat" ID="ChatWidget.__saveChat"></a>
+<h4>ChatWidget.__saveChat</h4>
+<b>__saveChat</b>(<i></i>)
+<p>
+        Private slot to save the contents of the chat display.
+</p><a NAME="ChatWidget.__setConnected" ID="ChatWidget.__setConnected"></a>
 <h4>ChatWidget.__setConnected</h4>
 <b>__setConnected</b>(<i>connected</i>)
 <p>
@@ -247,7 +274,17 @@ reference to the editor (Editor)
 <b>on_cancelEditButton_clicked</b>(<i></i>)
 <p>
         Private slot to cancel a shared edit session.
-</p><a NAME="ChatWidget.on_connectButton_clicked" ID="ChatWidget.on_connectButton_clicked"></a>
+</p><a NAME="ChatWidget.on_chatEdit_customContextMenuRequested" ID="ChatWidget.on_chatEdit_customContextMenuRequested"></a>
+<h4>ChatWidget.on_chatEdit_customContextMenuRequested</h4>
+<b>on_chatEdit_customContextMenuRequested</b>(<i>pos</i>)
+<p>
+        Private slot to show the context menu for the chat.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+the position of the mouse pointer (QPoint)
+</dd>
+</dl><a NAME="ChatWidget.on_connectButton_clicked" ID="ChatWidget.on_connectButton_clicked"></a>
 <h4>ChatWidget.on_connectButton_clicked</h4>
 <b>on_connectButton_clicked</b>(<i></i>)
 <p>
