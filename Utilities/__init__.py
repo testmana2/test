@@ -175,6 +175,12 @@ def decode(text):
     except (UnicodeError, LookupError):
         pass
     
+    # Assume UTF-8
+    try:
+        return str(text, 'utf-8'), 'utf-8-guessed'
+    except (UnicodeError, LookupError):
+        pass
+    
     guess = None
     if Preferences.getEditor("AdvancedEncodingDetection"):
         # Try the universal character encoding detector
@@ -193,12 +199,6 @@ def decode(text):
     try:
         codec = Preferences.getEditor("DefaultEncoding")
         return str(text, codec), '%s-default' % codec
-    except (UnicodeError, LookupError):
-        pass
-    
-    # Assume UTF-8
-    try:
-        return str(text, 'utf-8'), 'utf-8-guessed'
     except (UnicodeError, LookupError):
         pass
     
