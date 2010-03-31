@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Chat</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QGroupBox" name="usersGroup">
      <property name="sizePolicy">
@@ -47,8 +47,8 @@
      <property name="title">
       <string>Chat</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="2">
        <widget class="QTextEdit" name="chatEdit">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -61,14 +61,27 @@
         </property>
        </widget>
       </item>
-      <item>
+      <item row="1" column="0">
        <widget class="QLineEdit" name="messageEdit">
         <property name="toolTip">
          <string>Enter the text to send</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item row="1" column="1">
+       <widget class="QToolButton" name="clearMessageButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="toolTip">
+         <string>Press to clear the message text</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
        <widget class="QPushButton" name="sendButton">
         <property name="toolTip">
          <string>Press to send the text above</string>
@@ -182,84 +195,92 @@
      <property name="title">
       <string>Connection</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>Host:</string>
-        </property>
-       </widget>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Host:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="hostEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Enter the host and port to connect to in the form &quot;host:port&quot;</string>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="insertPolicy">
+           <enum>QComboBox::InsertAtTop</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="clearHostButton">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="toolTip">
+           <string>Press to clear the host</string>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
-      <item row="0" column="1" colspan="3">
-       <widget class="QComboBox" name="hostEdit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="toolTip">
-         <string>Enter the host to connect to</string>
-        </property>
-        <property name="editable">
-         <bool>true</bool>
-        </property>
-        <property name="insertPolicy">
-         <enum>QComboBox::InsertAtTop</enum>
-        </property>
-        <property name="sizeAdjustPolicy">
-         <enum>QComboBox::AdjustToMinimumContentsLength</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Port:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QSpinBox" name="portSpin">
-        <property name="toolTip">
-         <string>Enter the port to connect to</string>
-        </property>
-        <property name="minimum">
-         <number>1025</number>
-        </property>
-        <property name="maximum">
-         <number>65535</number>
-        </property>
-        <property name="value">
-         <number>42000</number>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QPushButton" name="connectButton">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="autoDefault">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="3">
-       <widget class="E5Led" name="connectionLed" native="true">
-        <property name="toolTip">
-         <string>Shows the connection status</string>
-        </property>
-       </widget>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QPushButton" name="clearHostsButton">
+          <property name="toolTip">
+           <string>Press to clear the hosts list</string>
+          </property>
+          <property name="text">
+           <string>Clear</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="connectButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="E5Led" name="connectionLed" native="true">
+          <property name="toolTip">
+           <string>Shows the connection status</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -336,15 +357,48 @@
   <tabstop>serverButton</tabstop>
   <tabstop>serverPortSpin</tabstop>
   <tabstop>hostEdit</tabstop>
-  <tabstop>portSpin</tabstop>
   <tabstop>connectButton</tabstop>
-  <tabstop>messageEdit</tabstop>
-  <tabstop>sendButton</tabstop>
+  <tabstop>clearHostsButton</tabstop>
   <tabstop>shareButton</tabstop>
   <tabstop>startEditButton</tabstop>
   <tabstop>sendEditButton</tabstop>
   <tabstop>cancelEditButton</tabstop>
+  <tabstop>messageEdit</tabstop>
+  <tabstop>sendButton</tabstop>
  </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>clearHostButton</sender>
+   <signal>pressed()</signal>
+   <receiver>hostEdit</receiver>
+   <slot>clearEditText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>651</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>221</x>
+     <y>653</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clearMessageButton</sender>
+   <signal>pressed()</signal>
+   <receiver>messageEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>488</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>241</x>
+     <y>489</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

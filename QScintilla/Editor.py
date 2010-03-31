@@ -5497,7 +5497,9 @@ class Editor(QsciScintillaCompat):
             (boolean, boolean, boolean, boolean)
         """
         project = e5App().getObject("Project")
-        return project.isOpen() and project.isProjectFile(self.fileName), \
+        return self.fileName is not None and \
+                project.isOpen() and \
+                project.isProjectFile(self.fileName), \
                self.__isShared, self.__inSharedEdit, self.__inRemoteSharedEdit
     
     def shareConnected(self, connected):

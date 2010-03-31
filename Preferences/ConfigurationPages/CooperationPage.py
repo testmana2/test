@@ -33,6 +33,8 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
             Preferences.getCooperation("ServerPort"))
         self.portToTrySpin.setValue(
             Preferences.getCooperation("MaxPortsToTry"))
+        self.autoAcceptCheckBox.setChecked(
+            Preferences.getCooperation("AutoAcceptConnections"))
     
     def save(self):
         """
@@ -42,6 +44,8 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
             self.autostartCheckBox.isChecked())
         Preferences.setCooperation("TryOtherPorts", 
             self.otherPortsCheckBox.isChecked())
+        Preferences.setCooperation("AutoAcceptConnections", 
+            self.autoAcceptCheckBox.isChecked())
         Preferences.setCooperation("ServerPort", 
             self.serverPortSpin.value())
         Preferences.setCooperation("MaxPortsToTry", 

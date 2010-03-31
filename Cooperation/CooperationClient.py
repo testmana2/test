@@ -35,13 +35,15 @@ class CooperationClient(QObject):
     cannotConnect   = pyqtSignal()
     editorCommand   = pyqtSignal(str, str, str)
     
-    def __init__(self):
+    def __init__(self, parent = None):
         """
         Constructor
-        """
-        QObject.__init__(self)
         
-        self.__server = CooperationServer()
+        @param parent reference to the parent object (QObject)
+        """
+        QObject.__init__(self, parent)
+        
+        self.__server = CooperationServer(self)
         self.__peers = collections.defaultdict(list)
         
         self.__initialConnection = None
@@ -161,6 +163,7 @@ class CooperationClient(QObject):
         
         @param connection reference to the new connection (Connection)
         """
+        connection.setParent(self)
         connection.setGreetingMessage(self.__username, 
                                       self.__server.serverPort())
         

@@ -3185,15 +3185,20 @@
       <keyword name="ChatWidget" id="ChatWidget" ref="eric5.Cooperation.ChatWidget.html#ChatWidget" />
       <keyword name="ChatWidget (Constructor)" id="ChatWidget (Constructor)" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__init__" />
       <keyword name="ChatWidget.__clearChat" id="ChatWidget.__clearChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__clearChat" />
+      <keyword name="ChatWidget.__clearHostsHistory" id="ChatWidget.__clearHostsHistory" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__clearHostsHistory" />
+      <keyword name="ChatWidget.__copyAllChat" id="ChatWidget.__copyAllChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__copyAllChat" />
       <keyword name="ChatWidget.__copyChat" id="ChatWidget.__copyChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__copyChat" />
+      <keyword name="ChatWidget.__cutAllChat" id="ChatWidget.__cutAllChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__cutAllChat" />
+      <keyword name="ChatWidget.__cutChat" id="ChatWidget.__cutChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__cutChat" />
       <keyword name="ChatWidget.__editorCommandMessage" id="ChatWidget.__editorCommandMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__editorCommandMessage" />
+      <keyword name="ChatWidget.__getConnectionParameters" id="ChatWidget.__getConnectionParameters" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__getConnectionParameters" />
       <keyword name="ChatWidget.__handleMessage" id="ChatWidget.__handleMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__handleMessage" />
       <keyword name="ChatWidget.__initialConnectionRefused" id="ChatWidget.__initialConnectionRefused" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__initialConnectionRefused" />
-      <keyword name="ChatWidget.__loadRecent" id="ChatWidget.__loadRecent" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__loadRecent" />
+      <keyword name="ChatWidget.__loadHostsHistory" id="ChatWidget.__loadHostsHistory" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__loadHostsHistory" />
       <keyword name="ChatWidget.__newParticipant" id="ChatWidget.__newParticipant" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__newParticipant" />
       <keyword name="ChatWidget.__participantLeft" id="ChatWidget.__participantLeft" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__participantLeft" />
       <keyword name="ChatWidget.__saveChat" id="ChatWidget.__saveChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__saveChat" />
-      <keyword name="ChatWidget.__saveRecent" id="ChatWidget.__saveRecent" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__saveRecent" />
+      <keyword name="ChatWidget.__saveHostsHistory" id="ChatWidget.__saveHostsHistory" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__saveHostsHistory" />
       <keyword name="ChatWidget.__setConnected" id="ChatWidget.__setConnected" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__setConnected" />
       <keyword name="ChatWidget.__setHostsHistory" id="ChatWidget.__setHostsHistory" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__setHostsHistory" />
       <keyword name="ChatWidget.__showErrorMessage" id="ChatWidget.__showErrorMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__showErrorMessage" />
@@ -3201,9 +3206,9 @@
       <keyword name="ChatWidget.checkEditorActions" id="ChatWidget.checkEditorActions" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.checkEditorActions" />
       <keyword name="ChatWidget.getClient" id="ChatWidget.getClient" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.getClient" />
       <keyword name="ChatWidget.on_cancelEditButton_clicked" id="ChatWidget.on_cancelEditButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_cancelEditButton_clicked" />
+      <keyword name="ChatWidget.on_chatEdit_copyAvailable" id="ChatWidget.on_chatEdit_copyAvailable" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_chatEdit_copyAvailable" />
       <keyword name="ChatWidget.on_chatEdit_customContextMenuRequested" id="ChatWidget.on_chatEdit_customContextMenuRequested" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_chatEdit_customContextMenuRequested" />
       <keyword name="ChatWidget.on_connectButton_clicked" id="ChatWidget.on_connectButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_connectButton_clicked" />
-      <keyword name="ChatWidget.on_hostEdit_currentIndexChanged" id="ChatWidget.on_hostEdit_currentIndexChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_hostEdit_currentIndexChanged" />
       <keyword name="ChatWidget.on_hostEdit_editTextChanged" id="ChatWidget.on_hostEdit_editTextChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_hostEdit_editTextChanged" />
       <keyword name="ChatWidget.on_sendEditButton_clicked" id="ChatWidget.on_sendEditButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_sendEditButton_clicked" />
       <keyword name="ChatWidget.on_serverButton_clicked" id="ChatWidget.on_serverButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_serverButton_clicked" />

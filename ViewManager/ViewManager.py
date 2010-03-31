@@ -4992,7 +4992,7 @@ class ViewManager(QObject):
         aw = self.activeWindow()
         if aw is not None:
             fn = aw.getFileName()
-            if e5App().getObject("Project").isProjectFile(fn):
+            if fn and e5App().getObject("Project").isProjectFile(fn):
                 aw.shareEditor(share)
     
     def startSharedEdit(self):
@@ -5002,7 +5002,7 @@ class ViewManager(QObject):
         aw = self.activeWindow()
         if aw is not None:
             fn = aw.getFileName()
-            if e5App().getObject("Project").isProjectFile(fn):
+            if fn and e5App().getObject("Project").isProjectFile(fn):
                 aw.startSharedEdit()
     
     def sendSharedEdit(self):
@@ -5013,7 +5013,7 @@ class ViewManager(QObject):
         aw = self.activeWindow()
         if aw is not None:
             fn = aw.getFileName()
-            if e5App().getObject("Project").isProjectFile(fn):
+            if fn and e5App().getObject("Project").isProjectFile(fn):
                 aw.sendSharedEdit()
     
     def cancelSharedEdit(self):
@@ -5023,5 +5023,5 @@ class ViewManager(QObject):
         aw = self.activeWindow()
         if aw is not None:
             fn = aw.getFileName()
-            if e5App().getObject("Project").isProjectFile(fn):
+            if fn and e5App().getObject("Project").isProjectFile(fn):
                 aw.cancelSharedEdit()

@@ -8,14 +8,16 @@ Module implementing a class representing a peer connection.
 """
 
 from PyQt4.QtCore import pyqtSignal, QTimer, QTime, QByteArray
+from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QTcpSocket
+
+import Preferences
 
 MaxBufferSize   = 1024 * 1024
 TransferTimeout =   30 * 1000
 PongTimeout     =   60 * 1000
 PingInterval    =    5 * 1000
 SeparatorToken  = '|||'
-
 
 class Connection(QTcpSocket):
     """
@@ -152,8 +154,13 @@ class Connection(QTcpSocket):
                 self.abort()
                 return
             
-            user, serverPort = str(self.__buffer, encoding = "utf-8").split(":")
+            try:
+                user, serverPort = str(self.__buffer, encoding = "utf-8").split(":")
+            except ValueError:
+                self.abort()
+                return
             self.__serverPort = int(serverPort)
+            
             self.__username = "{0}@{1}:{2}".format(
                 user, 
                 self.peerAddress().toString(), 
@@ -167,6 +174,23 @@ class Connection(QTcpSocket):
                 self.abort()
                 return
             
+            if self.__serverPort != self.peerPort() and \
+               not Preferences.getCooperation("AutoAcceptConnections"):
+                # don't ask for reverse connections or 
+                # if we shall accept automatically
+                res = QMessageBox.question(None,
+                    self.trUtf8("New Connection"),
+                    self.trUtf8("""<p>Accept connection from """
+                                """<strong>{0}@{1}</strong>?</p>""").format(
+                        user, self.peerAddress().toString()),
+                    QMessageBox.StandardButtons(\
+                        QMessageBox.No | \
+                        QMessageBox.Yes),
+                    QMessageBox.Yes)
+                if res == QMessageBox.No:
+                    self.abort()
+                    return
+
             if not self.__isGreetingMessageSent:
                 self.__sendGreetingMessage()
             

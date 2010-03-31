@@ -200,6 +200,7 @@ class Prefs(object):
         "AutoStartServer" : False,
         "TryOtherPorts" : True, 
         "MaxPortsToTry" : 100, 
+        "AutoAcceptConnections" : False, 
     }
     
     # defaults for the editor settings
@@ -1168,7 +1169,7 @@ def getCooperation(key, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested UI setting
     """
-    if key in ["AutoStartServer", "TryOtherPorts"]:
+    if key in ["AutoStartServer", "TryOtherPorts", "AutoAcceptConnections"]:
         return toBool(prefClass.settings.value("Cooperation/" + key,
             prefClass.cooperationDefaults[key]))
     elif key in ["ServerPort", "MaxPortsToTry"]:

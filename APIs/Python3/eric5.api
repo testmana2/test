@@ -5,9 +5,9 @@ eric5.Cooperation.ChatWidget.ChatWidget.connected?7
 eric5.Cooperation.ChatWidget.ChatWidget.editorCommand?7
 eric5.Cooperation.ChatWidget.ChatWidget.getClient?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_cancelEditButton_clicked?4()
+eric5.Cooperation.ChatWidget.ChatWidget.on_chatEdit_copyAvailable?4(yes)
 eric5.Cooperation.ChatWidget.ChatWidget.on_chatEdit_customContextMenuRequested?4(pos)
 eric5.Cooperation.ChatWidget.ChatWidget.on_connectButton_clicked?4()
-eric5.Cooperation.ChatWidget.ChatWidget.on_hostEdit_currentIndexChanged?4(index)
 eric5.Cooperation.ChatWidget.ChatWidget.on_hostEdit_editTextChanged?4(host)
 eric5.Cooperation.ChatWidget.ChatWidget.on_sendEditButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_serverButton_clicked?4()
@@ -69,7 +69,7 @@ eric5.Cooperation.CooperationClient.CooperationClient.participantLeft?7
 eric5.Cooperation.CooperationClient.CooperationClient.sendEditorCommand?4(projectHash, filename, message)
 eric5.Cooperation.CooperationClient.CooperationClient.sendMessage?4(message)
 eric5.Cooperation.CooperationClient.CooperationClient.server?4()
-eric5.Cooperation.CooperationClient.CooperationClient?1()
+eric5.Cooperation.CooperationClient.CooperationClient?1(parent = None)
 eric5.Cooperation.CooperationServer.CooperationServer.incomingConnection?4(socketDescriptor)
 eric5.Cooperation.CooperationServer.CooperationServer.newConnection?7
 eric5.Cooperation.CooperationServer.CooperationServer.startListening?4(port = -1)

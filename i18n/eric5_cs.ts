@@ -1955,156 +1955,156 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="74"/>
+        <location filename="Cooperation/ChatWidget.ui" line="87"/>
         <source>Press to send the text above</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="77"/>
+        <location filename="Cooperation/ChatWidget.ui" line="90"/>
         <source>Send</source>
         <translation type="unfinished">Odeslat</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="183"/>
+        <location filename="Cooperation/ChatWidget.ui" line="196"/>
         <source>Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="189"/>
+        <location filename="Cooperation/ChatWidget.ui" line="204"/>
         <source>Host:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="276"/>
+        <location filename="Cooperation/ChatWidget.ui" line="297"/>
         <source>Port:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="260"/>
+        <location filename="Cooperation/ChatWidget.ui" line="279"/>
         <source>Shows the connection status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="270"/>
+        <location filename="Cooperation/ChatWidget.ui" line="291"/>
         <source>Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="318"/>
+        <location filename="Cooperation/ChatWidget.ui" line="339"/>
         <source>Shows the status of the server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="282"/>
+        <location filename="Cooperation/ChatWidget.py" line="315"/>
         <source>Start Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="159"/>
+        <location filename="Cooperation/ChatWidget.py" line="176"/>
         <source>! Unknown command: {0}
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="180"/>
+        <location filename="Cooperation/ChatWidget.py" line="197"/>
         <source>* {0} has joined.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="209"/>
+        <location filename="Cooperation/ChatWidget.py" line="226"/>
         <source>* {0} has left.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="290"/>
+        <location filename="Cooperation/ChatWidget.py" line="323"/>
         <source>Stop Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="295"/>
+        <location filename="Cooperation/ChatWidget.py" line="328"/>
         <source>! Server Error: {0}
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="307"/>
+        <location filename="Cooperation/ChatWidget.py" line="340"/>
         <source>Disconnect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="311"/>
+        <location filename="Cooperation/ChatWidget.py" line="344"/>
         <source>Connect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="90"/>
+        <location filename="Cooperation/ChatWidget.ui" line="103"/>
         <source>Share Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="112"/>
+        <location filename="Cooperation/ChatWidget.ui" line="125"/>
         <source>Press to toggle the shared status of the current editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="160"/>
+        <location filename="Cooperation/ChatWidget.ui" line="239"/>
         <source>...</source>
         <translation type="unfinished">...</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="128"/>
+        <location filename="Cooperation/ChatWidget.ui" line="141"/>
         <source>Press to start a shared edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="144"/>
+        <location filename="Cooperation/ChatWidget.ui" line="157"/>
         <source>Press to end the edit and send the changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="157"/>
+        <location filename="Cooperation/ChatWidget.ui" line="170"/>
         <source>Press to cancel the shared edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="73"/>
+        <location filename="Cooperation/ChatWidget.py" line="95"/>
         <source>Clear</source>
         <translation type="unfinished">Vyčistit</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="75"/>
+        <location filename="Cooperation/ChatWidget.py" line="100"/>
         <source>Save</source>
         <translation type="unfinished">Uložit</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="77"/>
+        <location filename="Cooperation/ChatWidget.py" line="81"/>
         <source>Copy</source>
         <translation type="unfinished">Kopírovat</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="496"/>
+        <location filename="Cooperation/ChatWidget.py" line="541"/>
         <source>Save Chat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="482"/>
+        <location filename="Cooperation/ChatWidget.py" line="527"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="496"/>
+        <location filename="Cooperation/ChatWidget.py" line="541"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="513"/>
+        <location filename="Cooperation/ChatWidget.py" line="558"/>
         <source>Error saving Chat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="513"/>
+        <location filename="Cooperation/ChatWidget.py" line="558"/>
         <source>&lt;p&gt;The chat contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2114,18 +2114,43 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="202"/>
-        <source>Enter the host to connect to</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Cooperation/ChatWidget.ui" line="225"/>
-        <source>Enter the port to connect to</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Cooperation/ChatWidget.ui" line="283"/>
+        <location filename="Cooperation/ChatWidget.ui" line="304"/>
         <source>Enter the server port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.ui" line="77"/>
+        <source>Press to clear the message text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.ui" line="217"/>
+        <source>Enter the host and port to connect to in the form &quot;host:port&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.ui" line="236"/>
+        <source>Press to clear the host</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.ui" line="250"/>
+        <source>Press to clear the hosts list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.py" line="77"/>
+        <source>Cut</source>
+        <translation type="unfinished">Vyjmout</translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.py" line="86"/>
+        <source>Cut all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.py" line="90"/>
+        <source>Copy all</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2957,14 +2982,24 @@ to display the configuration page.</source>
 <context>
     <name>Connection</name>
     <message>
-        <location filename="Cooperation/Connection.py" line="66"/>
+        <location filename="Cooperation/Connection.py" line="68"/>
         <source>undefined</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Cooperation/Connection.py" line="67"/>
+        <location filename="Cooperation/Connection.py" line="69"/>
         <source>unknown</source>
         <translation type="unfinished">neznámý</translation>
+    </message>
+    <message>
+        <location filename="Cooperation/Connection.py" line="181"/>
+        <source>New Connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Cooperation/Connection.py" line="181"/>
+        <source>&lt;p&gt;Accept connection from &lt;strong&gt;{0}@{1}&lt;/strong&gt;?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3303,12 +3338,12 @@ to display the configuration page.</source>
 <context>
     <name>CooperationClient</name>
     <message>
-        <location filename="Cooperation/CooperationClient.py" line="66"/>
+        <location filename="Cooperation/CooperationClient.py" line="68"/>
         <source>unknown</source>
         <translation type="unfinished">neznámý</translation>
     </message>
     <message>
-        <location filename="Cooperation/CooperationClient.py" line="256"/>
+        <location filename="Cooperation/CooperationClient.py" line="259"/>
         <source>Illegal address: {0}:{1}
 </source>
         <translation type="unfinished"></translation>
@@ -3322,43 +3357,63 @@ to display the configuration page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="42"/>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="46"/>
         <source>Select to start the server automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="45"/>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="49"/>
         <source>Start server automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="52"/>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="56"/>
         <source>Server Port:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="59"/>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="63"/>
         <source>Enter the port number to listen on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="91"/>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="95"/>
         <source>Select to incrementally try other ports for the server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="94"/>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="98"/>
         <source>Try other ports for server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="104"/>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="108"/>
         <source>No. ports to try:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="114"/>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="118"/>
         <source>Enter the maximum number of additional ports to try</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="40"/>
+        <source>Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="147"/>
+        <source>Connections</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="153"/>
+        <source>Select to accept incomming connections automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/CooperationPage.ui" line="156"/>
+        <source>Accept connections automatically</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -20121,12 +20176,12 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="825"/>
+        <location filename="Preferences/__init__.py" line="826"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="844"/>
+        <location filename="Preferences/__init__.py" line="845"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>

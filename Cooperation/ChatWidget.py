@@ -64,17 +64,42 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             UI.PixmapCache.getIcon("sharedEditSend.png"))
         self.cancelEditButton.setIcon(
             UI.PixmapCache.getIcon("sharedEditCancel.png"))
+        self.clearMessageButton.setIcon(
+            UI.PixmapCache.getIcon("clearLeft.png"))
+        self.clearHostButton.setIcon(
+            UI.PixmapCache.getIcon("clearLeft.png"))
         
-        self.__client = CooperationClient()
+        self.__client = CooperationClient(self)
         self.__myNickName = self.__client.nickName()
         
         self.__chatMenu = QMenu(self)
-        self.__clearChatAct = \
-            self.__chatMenu.addAction(self.trUtf8("Clear"), self.__clearChat)
-        self.__saveChatAct = \
-            self.__chatMenu.addAction(self.trUtf8("Save"), self.__saveChat)
+        self.__cutChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editCut.png"), 
+                self.trUtf8("Cut"), self.__cutChat)
         self.__copyChatAct = \
-            self.__chatMenu.addAction(self.trUtf8("Copy"), self.__copyChat)
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"), 
+                self.trUtf8("Copy"), self.__copyChat)
+        self.__chatMenu.addSeparator()
+        self.__cutAllChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editCut.png"), 
+                self.trUtf8("Cut all"), self.__cutAllChat)
+        self.__copyAllChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"), 
+                self.trUtf8("Copy all"), self.__copyAllChat)
+        self.__chatMenu.addSeparator()
+        self.__clearChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editDelete.png"), 
+                self.trUtf8("Clear"), self.__clearChat)
+        self.__chatMenu.addSeparator()
+        self.__saveChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("fileSave.png"), 
+                self.trUtf8("Save"), self.__saveChat)
         
         self.messageEdit.returnPressed.connect(self.__handleMessage)
         self.sendButton.clicked.connect(self.__handleMessage)
@@ -90,7 +115,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         if port == -1:
             port = Preferences.getCooperation("ServerPort")
         
-        self.portSpin.setValue(port)
+##        self.portSpin.setValue(port)
         self.serverPortSpin.setValue(port)
         
         self.__setConnected(False)
@@ -99,53 +124,45 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.on_serverButton_clicked()
         
         self.recent = []
-        self.__loadRecent()
+        self.__loadHostsHistory()
     
-    def __loadRecent(self):
+    def __loadHostsHistory(self):
         """
         Private method to load the recently connected hosts.
         """
-        self.recent = []
+        self.__recent = []
         Preferences.Prefs.rsettings.sync()
         rh = Preferences.Prefs.rsettings.value(recentNameHosts)
         if rh is not None:
-            self.recent = rh[:20]
+            self.__recent = rh[:20]
             self.hostEdit.clear()
-            self.hostEdit.addItem("", -1)
-            for entry in self.recent:
-                host, port = entry.split(":")
-                port = int(port)
-                hostStr = "{0} ({1})".format(host, port)
-                self.hostEdit.addItem(hostStr, port)
+            self.hostEdit.addItems(self.__recent)
+            self.hostEdit.clearEditText()
     
-    def __saveRecent(self):
+    def __saveHostsHistory(self):
         """
         Private method to save the list of recently connected hosts.
         """
-        Preferences.Prefs.rsettings.setValue(recentNameHosts, self.recent)
+        Preferences.Prefs.rsettings.setValue(recentNameHosts, self.__recent)
         Preferences.Prefs.rsettings.sync()
     
-    def __setHostsHistory(self, host, port):
+    def __setHostsHistory(self, host):
         """
-        Private method to set the given host and port.
+        Private method to remember the given host as the most recent entry.
         
-        @param host host name to remember (string)
-        @param port port number to remember (integer)
+        @param host host entry to remember (string)
         """
-        hostStr = "{0}:{1}".format(host, port)
-        if hostStr in self.recent:
-            self.recent.remove(hostStr)
-        self.recent.insert(0, hostStr)
-        
-        hostStr = "{0} ({1})".format(host, port)
-        index = self.hostEdit.findText(hostStr)
-        if index != -1:
-            self.hostEdit.removeItem(index)
-        if self.hostEdit.itemText(0) == host:
-            self.hostEdit.removeItem(0)
-            self.hostEdit.setEditText(hostStr)
-        self.hostEdit.insertItem(0, hostStr, port)
-        self.hostEdit.setCurrentIndex(0)
+        if host in self.__recent:
+            self.__recent.remove(host)
+        self.__recent.insert(0, host)
+        self.__saveHostsHistory()
+    
+    def __clearHostsHistory(self):
+        """
+        Private slot to clear the hosts history.
+        """
+        self.__recent = []
+        self.__saveHostsHistory()
     
     def __handleMessage(self):
         """
@@ -239,19 +256,38 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         if not self.__connected:
             self.connectButton.setEnabled(host != "")
     
-    @pyqtSlot(int)
-    def on_hostEdit_currentIndexChanged(self, index):
+##    @pyqtSlot(int)
+##    def on_hostEdit_currentIndexChanged(self, index):
+##        """
+##        Private slot to handle the selection of a host.
+##        
+##        @param index index of the selected entry (integer)
+##        """
+##        port = self.hostEdit.itemData(index)
+##        if port is not None:
+##            if port == -1:
+##                self.portSpin.setValue(Preferences.getCooperation("ServerPort"))
+##            else:
+##                self.portSpin.setValue(port)
+    def __getConnectionParameters(self):
         """
-        Private slot to handle the selection of a host.
+        Private method to determine the connection parameters.
         
-        @param index index of the selected entry (integer)
+        @return tuple with hostname and port (string, integer)
         """
-        port = self.hostEdit.itemData(index)
-        if port is not None:
-            if port == -1:
-                self.portSpin.setValue(Preferences.getCooperation("ServerPort"))
-            else:
-                self.portSpin.setValue(port)
+        hostEntry = self.hostEdit.currentText()
+        if ":" in hostEntry:
+            host, port = hostEntry.split(":")
+            try:
+                port = int(port)
+            except ValueError:
+                port = Preferences.getCooperation("ServerPort")
+                self.hostEdit.setEditText("{0}:{1}".format(host, port))
+        else:
+            host = hostEntry
+            port = Preferences.getCooperation("ServerPort")
+            self.hostEdit.setEditText("{0}:{1}".format(host, port))
+        return host, port
     
     @pyqtSlot()
     def on_connectButton_clicked(self):
@@ -259,14 +295,11 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         Private slot initiating the connection.
         """
         if not self.__connected:
-            self.__setHostsHistory(self.hostEdit.currentText().split()[0], 
-                                   self.portSpin.value())
-            self.__saveRecent()
+            self.__setHostsHistory(self.hostEdit.currentText())
             if not self.__client.server().isListening():
                 self.on_serverButton_clicked()
             if self.__client.server().isListening():
-                self.__client.connectToHost(self.hostEdit.currentText().split()[0], 
-                                            self.portSpin.value())
+                self.__client.connectToHost(*self.__getConnectionParameters())
                 self.__setConnected(True)
         else:
             self.__client.disconnectConnections()
@@ -315,7 +348,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.shareButton.click()
         self.__connected = connected
         self.hostEdit.setEnabled(not connected)
-        self.portSpin.setEnabled(not connected)
+##        self.portSpin.setEnabled(not connected)
         self.serverButton.setEnabled(not connected)
         self.sharingGroup.setEnabled(connected)
         
@@ -456,6 +489,16 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.sendEditButton.setEnabled(editing)
         self.cancelEditButton.setEnabled(editing)
     
+    @pyqtSlot(bool)
+    def on_chatEdit_copyAvailable(self, yes):
+        """
+        Private slot to react to text selection/deselection of the chat edit.
+        
+        @param yes flag signaling the availability of selected text (boolean)
+        """
+        self.__copyChatAct.setEnabled(yes)
+        self.__cutChatAct.setEnabled(yes)
+    
     @pyqtSlot(QPoint)
     def on_chatEdit_customContextMenuRequested(self, pos):
         """
@@ -463,8 +506,10 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         
         @param pos the position of the mouse pointer (QPoint)
         """
-        self.__saveChatAct.setEnabled(self.chatEdit.toPlainText() != "")
-        self.__copyChatAct.setEnabled(self.chatEdit.toPlainText() != "")
+        enable = self.chatEdit.toPlainText() != ""
+        self.__saveChatAct.setEnabled(enable)
+        self.__copyAllChatAct.setEnabled(enable)
+        self.__cutAllChatAct.setEnabled(enable)
         self.__chatMenu.popup(self.chatEdit.mapToGlobal(pos))
     
     def __clearChat(self):
@@ -520,7 +565,29 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         """
         Private slot to copy the contents of the chat display to the clipboard.
         """
+        self.chatEdit.copy()
+    
+    def __cutChat(self):
+        """
+        Private slot to cut the contents of the chat display to the clipboard.
+        """
+        self.chatEdit.cut()
+    
+    def __copyAllChat(self):
+        """
+        Private slot to copy the contents of the chat display to the clipboard.
+        """
         txt = self.chatEdit.toPlainText()
         if txt:
             cb = QApplication.clipboard()
             cb.setText(txt)
+    
+    def __cutAllChat(self):
+        """
+        Private slot to cut the contents of the chat display to the clipboard.
+        """
+        txt = self.chatEdit.toPlainText()
+        if txt:
+            cb = QApplication.clipboard()
+            cb.setText(txt)
+        self.chatEdit.clear()
