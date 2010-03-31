@@ -89,6 +89,9 @@ QObject
 <td><a href="#CooperationClient.__disconnected">__disconnected</a></td>
 <td>Private slot to handle the disconnection of a chat client.</td>
 </tr><tr>
+<td><a href="#CooperationClient.__findConnections">__findConnections</a></td>
+<td>Public method to get a list of connection given a nick name.</td>
+</tr><tr>
 <td><a href="#CooperationClient.__getParticipants">__getParticipants</a></td>
 <td>Private slot to handle the request for a list of participants.</td>
 </tr><tr>
@@ -101,8 +104,11 @@ QObject
 <td><a href="#CooperationClient.__readyForUse">__readyForUse</a></td>
 <td>Private slot to handle a connection getting ready for use.</td>
 </tr><tr>
-<td><a href="#CooperationClient.__removeConnection">__removeConnection</a></td>
-<td>Private method to remove a connection.</td>
+<td><a href="#CooperationClient.banKickUser">banKickUser</a></td>
+<td>Public method to ban and kick a user by its nick name.</td>
+</tr><tr>
+<td><a href="#CooperationClient.banUser">banUser</a></td>
+<td>Public method to ban a user by its nick name.</td>
 </tr><tr>
 <td><a href="#CooperationClient.connectToHost">connectToHost</a></td>
 <td>Public method to connect to a host.</td>
@@ -116,8 +122,14 @@ QObject
 <td><a href="#CooperationClient.hasConnections">hasConnections</a></td>
 <td>Public method to check, if there are any connections established.</td>
 </tr><tr>
+<td><a href="#CooperationClient.kickUser">kickUser</a></td>
+<td>Public method to kick a user by its nick name.</td>
+</tr><tr>
 <td><a href="#CooperationClient.nickName">nickName</a></td>
 <td>Public method to get the nick name.</td>
+</tr><tr>
+<td><a href="#CooperationClient.removeConnection">removeConnection</a></td>
+<td>Public method to remove a connection.</td>
 </tr><tr>
 <td><a href="#CooperationClient.sendEditorCommand">sendEditorCommand</a></td>
 <td>Public method to send an editor command.</td>
@@ -164,7 +176,22 @@ error message (string)
 <b>__disconnected</b>(<i></i>)
 <p>
         Private slot to handle the disconnection of a chat client.
-</p><a NAME="CooperationClient.__getParticipants" ID="CooperationClient.__getParticipants"></a>
+</p><a NAME="CooperationClient.__findConnections" ID="CooperationClient.__findConnections"></a>
+<h4>CooperationClient.__findConnections</h4>
+<b>__findConnections</b>(<i>nick</i>)
+<p>
+        Public method to get a list of connection given a nick name.
+</p><dl>
+<dt><i>nick</i></dt>
+<dd>
+nick name in the format of self.nickName() (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of references to the connection objects (list of Connection)
+</dd>
+</dl><a NAME="CooperationClient.__getParticipants" ID="CooperationClient.__getParticipants"></a>
 <h4>CooperationClient.__getParticipants</h4>
 <b>__getParticipants</b>(<i></i>)
 <p>
@@ -194,15 +221,25 @@ list of participants (list of strings of "host:port")
 <b>__readyForUse</b>(<i></i>)
 <p>
         Private slot to handle a connection getting ready for use.
-</p><a NAME="CooperationClient.__removeConnection" ID="CooperationClient.__removeConnection"></a>
-<h4>CooperationClient.__removeConnection</h4>
-<b>__removeConnection</b>(<i>connection</i>)
+</p><a NAME="CooperationClient.banKickUser" ID="CooperationClient.banKickUser"></a>
+<h4>CooperationClient.banKickUser</h4>
+<b>banKickUser</b>(<i>nick</i>)
 <p>
-        Private method to remove a connection.
+        Public method to ban and kick a user by its nick name.
 </p><dl>
-<dt><i>connection</i></dt>
+<dt><i>nick</i></dt>
 <dd>
-reference to the connection to be removed (Connection)
+nick name in the format of self.nickName() (string)
+</dd>
+</dl><a NAME="CooperationClient.banUser" ID="CooperationClient.banUser"></a>
+<h4>CooperationClient.banUser</h4>
+<b>banUser</b>(<i>nick</i>)
+<p>
+        Public method to ban a user by its nick name.
+</p><dl>
+<dt><i>nick</i></dt>
+<dd>
+nick name in the format of self.nickName() (string)
 </dd>
 </dl><a NAME="CooperationClient.connectToHost" ID="CooperationClient.connectToHost"></a>
 <h4>CooperationClient.connectToHost</h4>
@@ -250,6 +287,16 @@ flag indicating an existing connection (boolean)
 <dd>
 flag indicating the presence of connections (boolean)
 </dd>
+</dl><a NAME="CooperationClient.kickUser" ID="CooperationClient.kickUser"></a>
+<h4>CooperationClient.kickUser</h4>
+<b>kickUser</b>(<i>nick</i>)
+<p>
+        Public method to kick a user by its nick name.
+</p><dl>
+<dt><i>nick</i></dt>
+<dd>
+nick name in the format of self.nickName() (string)
+</dd>
 </dl><a NAME="CooperationClient.nickName" ID="CooperationClient.nickName"></a>
 <h4>CooperationClient.nickName</h4>
 <b>nickName</b>(<i></i>)
@@ -259,6 +306,16 @@ flag indicating the presence of connections (boolean)
 <dt>Returns:</dt>
 <dd>
 nick name (string)
+</dd>
+</dl><a NAME="CooperationClient.removeConnection" ID="CooperationClient.removeConnection"></a>
+<h4>CooperationClient.removeConnection</h4>
+<b>removeConnection</b>(<i>connection</i>)
+<p>
+        Public method to remove a connection.
+</p><dl>
+<dt><i>connection</i></dt>
+<dd>
+reference to the connection to be removed (Connection)
 </dd>
 </dl><a NAME="CooperationClient.sendEditorCommand" ID="CooperationClient.sendEditorCommand"></a>
 <h4>CooperationClient.sendEditorCommand</h4>

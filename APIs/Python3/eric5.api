@@ -14,6 +14,7 @@ eric5.Cooperation.ChatWidget.ChatWidget.on_sendEditButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_serverButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_shareButton_clicked?4(checked)
 eric5.Cooperation.ChatWidget.ChatWidget.on_startEditButton_clicked?4(checked)
+eric5.Cooperation.ChatWidget.ChatWidget.on_usersList_customContextMenuRequested?4(pos)
 eric5.Cooperation.ChatWidget.ChatWidget.preferencesChanged?4()
 eric5.Cooperation.ChatWidget.ChatWidget.sendEdit?7
 eric5.Cooperation.ChatWidget.ChatWidget.shareEditor?7
@@ -57,6 +58,8 @@ eric5.Cooperation.Connection.PingInterval?7
 eric5.Cooperation.Connection.PongTimeout?7
 eric5.Cooperation.Connection.SeparatorToken?7
 eric5.Cooperation.Connection.TransferTimeout?7
+eric5.Cooperation.CooperationClient.CooperationClient.banKickUser?4(nick)
+eric5.Cooperation.CooperationClient.CooperationClient.banUser?4(nick)
 eric5.Cooperation.CooperationClient.CooperationClient.cannotConnect?7
 eric5.Cooperation.CooperationClient.CooperationClient.connectToHost?4(host, port)
 eric5.Cooperation.CooperationClient.CooperationClient.connectionError?7
@@ -64,10 +67,12 @@ eric5.Cooperation.CooperationClient.CooperationClient.disconnectConnections?4()
 eric5.Cooperation.CooperationClient.CooperationClient.editorCommand?7
 eric5.Cooperation.CooperationClient.CooperationClient.hasConnection?4(senderIp, senderPort = -1)
 eric5.Cooperation.CooperationClient.CooperationClient.hasConnections?4()
+eric5.Cooperation.CooperationClient.CooperationClient.kickUser?4(nick)
 eric5.Cooperation.CooperationClient.CooperationClient.newMessage?7
 eric5.Cooperation.CooperationClient.CooperationClient.newParticipant?7
 eric5.Cooperation.CooperationClient.CooperationClient.nickName?4()
 eric5.Cooperation.CooperationClient.CooperationClient.participantLeft?7
+eric5.Cooperation.CooperationClient.CooperationClient.removeConnection?4(connection)
 eric5.Cooperation.CooperationClient.CooperationClient.sendEditorCommand?4(projectHash, filename, message)
 eric5.Cooperation.CooperationClient.CooperationClient.sendMessage?4(message)
 eric5.Cooperation.CooperationClient.CooperationClient.server?4()
@@ -3385,6 +3390,10 @@ eric5.Preferences.ConfigurationPages.ConfigurationPageBase.ConfigurationPageBase
 eric5.Preferences.ConfigurationPages.ConfigurationPageBase.ConfigurationPageBase.selectFont?4(fontSample, fontVar, showFontInfo = False)
 eric5.Preferences.ConfigurationPages.ConfigurationPageBase.ConfigurationPageBase.setState?4(state)
 eric5.Preferences.ConfigurationPages.ConfigurationPageBase.ConfigurationPageBase?1()
+eric5.Preferences.ConfigurationPages.CooperationPage.CooperationPage.on_addBannedUserButton_clicked?4()
+eric5.Preferences.ConfigurationPages.CooperationPage.CooperationPage.on_bannedUserEdit_textChanged?4(txt)
+eric5.Preferences.ConfigurationPages.CooperationPage.CooperationPage.on_bannedUsersList_itemSelectionChanged?4()
+eric5.Preferences.ConfigurationPages.CooperationPage.CooperationPage.on_deleteBannedUsersButton_clicked?4()
 eric5.Preferences.ConfigurationPages.CooperationPage.CooperationPage.save?4()
 eric5.Preferences.ConfigurationPages.CooperationPage.CooperationPage?1()
 eric5.Preferences.ConfigurationPages.CooperationPage.create?4(dlg)

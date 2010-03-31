@@ -15,6 +15,8 @@ from PyQt4.QtNetwork import QHostInfo, QHostAddress, QAbstractSocket
 from .CooperationServer import CooperationServer
 from .Connection import Connection
 
+import Preferences
+
 class CooperationClient(QObject):
     """
     Class implementing the client of the cooperation package.
@@ -134,9 +136,9 @@ class CooperationClient(QObject):
         
         return False
     
-    def __removeConnection(self, connection):
+    def removeConnection(self, connection):
         """
-        Private method to remove a connection.
+        Public method to remove a connection.
         
         @param connection reference to the connection to be removed (Connection)
         """
@@ -147,6 +149,9 @@ class CooperationClient(QObject):
             if nick != "":
                 self.participantLeft.emit(nick)
         
+        if connection.isValid():
+            connection.abort()
+        
         connection.deleteLater()
     
     def disconnectConnections(self):
@@ -155,7 +160,7 @@ class CooperationClient(QObject):
         """
         for connectionList in self.__peers.values():
             while connectionList:
-                self.__removeConnection(connectionList[0])
+                self.removeConnection(connectionList[0])
     
     def __newConnection(self, connection):
         """
@@ -199,14 +204,14 @@ class CooperationClient(QObject):
             self.connectionError.emit(msg)
         if connection == self.__initialConnection:
             self.cannotConnect.emit()
-        self.__removeConnection(connection)
+        self.removeConnection(connection)
     
     def __disconnected(self):
         """
         Private slot to handle the disconnection of a chat client.
         """
         connection = self.sender()
-        self.__removeConnection(connection)
+        self.removeConnection(connection)
     
     def __readyForUse(self):
         """
@@ -285,3 +290,53 @@ class CooperationClient(QObject):
         for connectionList in self.__peers.values():
             for connection in connectionList:
                 connection.sendEditorCommand(projectHash, filename, message)
+    
+    def __findConnections(self, nick):
+        """
+        Public method to get a list of connection given a nick name.
+        
+        @param nick nick name in the format of self.nickName() (string)
+        @return list of references to the connection objects (list of Connection)
+        """
+        if "@" not in nick or ":" not in nick:
+            # nick given in wrong format
+            return []
+        
+        user, host = nick.split(":")[0].split("@")
+        senderIp = QHostAddress(host)
+        
+        if senderIp not in self.__peers:
+            return []
+        
+        return self.__peers[senderIp][:]
+    
+    def kickUser(self, nick):
+        """
+        Public method to kick a user by its nick name.
+        
+        @param nick nick name in the format of self.nickName() (string)
+        """
+        for connection in self.__findConnections(nick):
+            connection.abort()
+    
+    def banUser(self, nick):
+        """
+        Public method to ban a user by its nick name.
+        
+        @param nick nick name in the format of self.nickName() (string)
+        """
+        Preferences.syncPreferences()
+        user = nick.split(":")[0]
+        bannedUsers = Preferences.getCooperation("BannedUsers")[:]
+        if user not in bannedUsers:
+            bannedUsers.append(user)
+            Preferences.setCooperation("BannedUsers", bannedUsers)
+    
+    def banKickUser(self, nick):
+        """
+        Public method to ban and kick a user by its nick name.
+        
+        @param nick nick name in the format of self.nickName() (string)
+        """
+        self.banUser(nick)
+        self.kickUser(nick)

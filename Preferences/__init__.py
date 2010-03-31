@@ -201,6 +201,7 @@ class Prefs(object):
         "TryOtherPorts" : True, 
         "MaxPortsToTry" : 100, 
         "AutoAcceptConnections" : False, 
+        "BannedUsers" : [], 
     }
     
     # defaults for the editor settings
@@ -815,7 +816,8 @@ def syncPreferences(prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     prefClass.settings.setValue("General/Configured", True)
-    initPreferences()
+    prefClass.settings.sync()
+##    initPreferences()
     
 def exportPreferences(prefClass = Prefs):
     """
@@ -1174,6 +1176,9 @@ def getCooperation(key, prefClass = Prefs):
             prefClass.cooperationDefaults[key]))
     elif key in ["ServerPort", "MaxPortsToTry"]:
         return int(prefClass.settings.value("Cooperation/" + key,
+            prefClass.cooperationDefaults[key]))
+    elif key in ["BannedUsers"]:
+        return toList(prefClass.settings.value("Cooperation/" + key,
             prefClass.cooperationDefaults[key]))
     else:
         return prefClass.settings.value("Cooperation/" + key, 

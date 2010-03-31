@@ -3184,6 +3184,8 @@
       <keyword name="ChatWidget (Module)" id="ChatWidget (Module)" ref="eric5.Cooperation.ChatWidget.html" />
       <keyword name="ChatWidget" id="ChatWidget" ref="eric5.Cooperation.ChatWidget.html#ChatWidget" />
       <keyword name="ChatWidget (Constructor)" id="ChatWidget (Constructor)" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__init__" />
+      <keyword name="ChatWidget.__banKickUser" id="ChatWidget.__banKickUser" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__banKickUser" />
+      <keyword name="ChatWidget.__banUser" id="ChatWidget.__banUser" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__banUser" />
       <keyword name="ChatWidget.__clearChat" id="ChatWidget.__clearChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__clearChat" />
       <keyword name="ChatWidget.__clearHostsHistory" id="ChatWidget.__clearHostsHistory" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__clearHostsHistory" />
       <keyword name="ChatWidget.__copyAllChat" id="ChatWidget.__copyAllChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__copyAllChat" />
@@ -3193,7 +3195,10 @@
       <keyword name="ChatWidget.__editorCommandMessage" id="ChatWidget.__editorCommandMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__editorCommandMessage" />
       <keyword name="ChatWidget.__getConnectionParameters" id="ChatWidget.__getConnectionParameters" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__getConnectionParameters" />
       <keyword name="ChatWidget.__handleMessage" id="ChatWidget.__handleMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__handleMessage" />
+      <keyword name="ChatWidget.__initChatMenu" id="ChatWidget.__initChatMenu" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__initChatMenu" />
+      <keyword name="ChatWidget.__initUsersMenu" id="ChatWidget.__initUsersMenu" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__initUsersMenu" />
       <keyword name="ChatWidget.__initialConnectionRefused" id="ChatWidget.__initialConnectionRefused" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__initialConnectionRefused" />
+      <keyword name="ChatWidget.__kickUser" id="ChatWidget.__kickUser" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__kickUser" />
       <keyword name="ChatWidget.__loadHostsHistory" id="ChatWidget.__loadHostsHistory" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__loadHostsHistory" />
       <keyword name="ChatWidget.__newParticipant" id="ChatWidget.__newParticipant" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__newParticipant" />
       <keyword name="ChatWidget.__participantLeft" id="ChatWidget.__participantLeft" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__participantLeft" />
@@ -3215,6 +3220,7 @@
       <keyword name="ChatWidget.on_serverButton_clicked" id="ChatWidget.on_serverButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_serverButton_clicked" />
       <keyword name="ChatWidget.on_shareButton_clicked" id="ChatWidget.on_shareButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_shareButton_clicked" />
       <keyword name="ChatWidget.on_startEditButton_clicked" id="ChatWidget.on_startEditButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_startEditButton_clicked" />
+      <keyword name="ChatWidget.on_usersList_customContextMenuRequested" id="ChatWidget.on_usersList_customContextMenuRequested" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_usersList_customContextMenuRequested" />
       <keyword name="ChatWidget.preferencesChanged" id="ChatWidget.preferencesChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.preferencesChanged" />
       <keyword name="Connection (Module)" id="Connection (Module)" ref="eric5.Cooperation.Connection.html" />
       <keyword name="Connection" id="Connection" ref="eric5.Cooperation.Connection.html#Connection" />
@@ -3247,16 +3253,20 @@
       <keyword name="CooperationClient.__connectionError" id="CooperationClient.__connectionError" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__connectionError" />
       <keyword name="CooperationClient.__connectionRejected" id="CooperationClient.__connectionRejected" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__connectionRejected" />
       <keyword name="CooperationClient.__disconnected" id="CooperationClient.__disconnected" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__disconnected" />
+      <keyword name="CooperationClient.__findConnections" id="CooperationClient.__findConnections" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__findConnections" />
       <keyword name="CooperationClient.__getParticipants" id="CooperationClient.__getParticipants" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__getParticipants" />
       <keyword name="CooperationClient.__newConnection" id="CooperationClient.__newConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__newConnection" />
       <keyword name="CooperationClient.__processParticipants" id="CooperationClient.__processParticipants" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__processParticipants" />
       <keyword name="CooperationClient.__readyForUse" id="CooperationClient.__readyForUse" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__readyForUse" />
-      <keyword name="CooperationClient.__removeConnection" id="CooperationClient.__removeConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__removeConnection" />
+      <keyword name="CooperationClient.banKickUser" id="CooperationClient.banKickUser" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.banKickUser" />
+      <keyword name="CooperationClient.banUser" id="CooperationClient.banUser" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.banUser" />
       <keyword name="CooperationClient.connectToHost" id="CooperationClient.connectToHost" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.connectToHost" />
       <keyword name="CooperationClient.disconnectConnections" id="CooperationClient.disconnectConnections" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.disconnectConnections" />
       <keyword name="CooperationClient.hasConnection" id="CooperationClient.hasConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.hasConnection" />
       <keyword name="CooperationClient.hasConnections" id="CooperationClient.hasConnections" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.hasConnections" />
+      <keyword name="CooperationClient.kickUser" id="CooperationClient.kickUser" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.kickUser" />
       <keyword name="CooperationClient.nickName" id="CooperationClient.nickName" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.nickName" />
+      <keyword name="CooperationClient.removeConnection" id="CooperationClient.removeConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.removeConnection" />
       <keyword name="CooperationClient.sendEditorCommand" id="CooperationClient.sendEditorCommand" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.sendEditorCommand" />
       <keyword name="CooperationClient.sendMessage" id="CooperationClient.sendMessage" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.sendMessage" />
       <keyword name="CooperationClient.server" id="CooperationClient.server" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.server" />
@@ -7596,6 +7606,10 @@
       <keyword name="CooperationPage" id="CooperationPage" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#create" />
       <keyword name="CooperationPage (Constructor)" id="CooperationPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage.__init__" />
+      <keyword name="CooperationPage.on_addBannedUserButton_clicked" id="CooperationPage.on_addBannedUserButton_clicked" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage.on_addBannedUserButton_clicked" />
+      <keyword name="CooperationPage.on_bannedUserEdit_textChanged" id="CooperationPage.on_bannedUserEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage.on_bannedUserEdit_textChanged" />
+      <keyword name="CooperationPage.on_bannedUsersList_itemSelectionChanged" id="CooperationPage.on_bannedUsersList_itemSelectionChanged" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage.on_bannedUsersList_itemSelectionChanged" />
+      <keyword name="CooperationPage.on_deleteBannedUsersButton_clicked" id="CooperationPage.on_deleteBannedUsersButton_clicked" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage.on_deleteBannedUsersButton_clicked" />
       <keyword name="CooperationPage.save" id="CooperationPage.save" ref="eric5.Preferences.ConfigurationPages.CooperationPage.html#CooperationPage.save" />
       <keyword name="InterfacePage (Module)" id="InterfacePage (Module)" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html" />
       <keyword name="InterfacePage" id="InterfacePage" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage" />

@@ -80,6 +80,12 @@ QWidget, Ui_ChatWidget
 <td><a href="#ChatWidget.__init__">ChatWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#ChatWidget.__banKickUser">__banKickUser</a></td>
+<td>Private slot to ban and kick a user.</td>
+</tr><tr>
+<td><a href="#ChatWidget.__banUser">__banUser</a></td>
+<td>Private slot to ban a user.</td>
+</tr><tr>
 <td><a href="#ChatWidget.__clearChat">__clearChat</a></td>
 <td>Private slot to clear the contents of the chat display.</td>
 </tr><tr>
@@ -107,8 +113,17 @@ QWidget, Ui_ChatWidget
 <td><a href="#ChatWidget.__handleMessage">__handleMessage</a></td>
 <td>Private slot handling the Return key pressed in the message edit.</td>
 </tr><tr>
+<td><a href="#ChatWidget.__initChatMenu">__initChatMenu</a></td>
+<td>Private slot to initialize the chat edit context menu.</td>
+</tr><tr>
+<td><a href="#ChatWidget.__initUsersMenu">__initUsersMenu</a></td>
+<td>Private slot to initialize the users list context menu.</td>
+</tr><tr>
 <td><a href="#ChatWidget.__initialConnectionRefused">__initialConnectionRefused</a></td>
 <td>Private slot to handle the refusal of the initial connection.</td>
+</tr><tr>
+<td><a href="#ChatWidget.__kickUser">__kickUser</a></td>
+<td>Private slot to disconnect a user.</td>
 </tr><tr>
 <td><a href="#ChatWidget.__loadHostsHistory">__loadHostsHistory</a></td>
 <td>Private method to load the recently connected hosts.</td>
@@ -173,6 +188,9 @@ QWidget, Ui_ChatWidget
 <td><a href="#ChatWidget.on_startEditButton_clicked">on_startEditButton_clicked</a></td>
 <td>Private slot to start a shared edit session.</td>
 </tr><tr>
+<td><a href="#ChatWidget.on_usersList_customContextMenuRequested">on_usersList_customContextMenuRequested</a></td>
+<td>Private slot to show the context menu for the users list.</td>
+</tr><tr>
 <td><a href="#ChatWidget.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle a change of preferences.</td>
 </tr>
@@ -190,7 +208,17 @@ port to be used for the cooperation server (integer)
 <dd>
 reference to the parent widget (QWidget)
 </dd>
-</dl><a NAME="ChatWidget.__clearChat" ID="ChatWidget.__clearChat"></a>
+</dl><a NAME="ChatWidget.__banKickUser" ID="ChatWidget.__banKickUser"></a>
+<h4>ChatWidget.__banKickUser</h4>
+<b>__banKickUser</b>(<i></i>)
+<p>
+        Private slot to ban and kick a user.
+</p><a NAME="ChatWidget.__banUser" ID="ChatWidget.__banUser"></a>
+<h4>ChatWidget.__banUser</h4>
+<b>__banUser</b>(<i></i>)
+<p>
+        Private slot to ban a user.
+</p><a NAME="ChatWidget.__clearChat" ID="ChatWidget.__clearChat"></a>
 <h4>ChatWidget.__clearChat</h4>
 <b>__clearChat</b>(<i></i>)
 <p>
@@ -251,11 +279,26 @@ tuple with hostname and port (string, integer)
 <b>__handleMessage</b>(<i></i>)
 <p>
         Private slot handling the Return key pressed in the message edit.
+</p><a NAME="ChatWidget.__initChatMenu" ID="ChatWidget.__initChatMenu"></a>
+<h4>ChatWidget.__initChatMenu</h4>
+<b>__initChatMenu</b>(<i></i>)
+<p>
+        Private slot to initialize the chat edit context menu.
+</p><a NAME="ChatWidget.__initUsersMenu" ID="ChatWidget.__initUsersMenu"></a>
+<h4>ChatWidget.__initUsersMenu</h4>
+<b>__initUsersMenu</b>(<i></i>)
+<p>
+        Private slot to initialize the users list context menu.
 </p><a NAME="ChatWidget.__initialConnectionRefused" ID="ChatWidget.__initialConnectionRefused"></a>
 <h4>ChatWidget.__initialConnectionRefused</h4>
 <b>__initialConnectionRefused</b>(<i></i>)
 <p>
         Private slot to handle the refusal of the initial connection.
+</p><a NAME="ChatWidget.__kickUser" ID="ChatWidget.__kickUser"></a>
+<h4>ChatWidget.__kickUser</h4>
+<b>__kickUser</b>(<i></i>)
+<p>
+        Private slot to disconnect a user.
 </p><a NAME="ChatWidget.__loadHostsHistory" ID="ChatWidget.__loadHostsHistory"></a>
 <h4>ChatWidget.__loadHostsHistory</h4>
 <b>__loadHostsHistory</b>(<i></i>)
@@ -423,6 +466,16 @@ flag indicating the button state (boolean)
 <dt><i>checked</i></dt>
 <dd>
 flag indicating the button state (boolean)
+</dd>
+</dl><a NAME="ChatWidget.on_usersList_customContextMenuRequested" ID="ChatWidget.on_usersList_customContextMenuRequested"></a>
+<h4>ChatWidget.on_usersList_customContextMenuRequested</h4>
+<b>on_usersList_customContextMenuRequested</b>(<i>pos</i>)
+<p>
+        Private slot to show the context menu for the users list.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+the position of the mouse pointer (QPoint)
 </dd>
 </dl><a NAME="ChatWidget.preferencesChanged" ID="ChatWidget.preferencesChanged"></a>
 <h4>ChatWidget.preferencesChanged</h4>

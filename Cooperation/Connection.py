@@ -175,6 +175,18 @@ class Connection(QTcpSocket):
                 self.abort()
                 return
             
+            bannedName = "{0}@{1}".format(
+                user, 
+                self.peerAddress().toString()
+            )
+            Preferences.syncPreferences()
+            if bannedName in Preferences.getCooperation("BannedUsers"):
+                self.rejected.emit(
+                    self.trUtf8("* Connection attempted by banned user '{0}'.")\
+                    .format(bannedName))
+                self.abort()
+                return
+            
             if self.__serverPort != self.peerPort() and \
                not Preferences.getCooperation("AutoAcceptConnections"):
                 # don't ask for reverse connections or 

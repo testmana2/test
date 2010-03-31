@@ -72,34 +72,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.__client = CooperationClient(self)
         self.__myNickName = self.__client.nickName()
         
-        self.__chatMenu = QMenu(self)
-        self.__cutChatAct = \
-            self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editCut.png"), 
-                self.trUtf8("Cut"), self.__cutChat)
-        self.__copyChatAct = \
-            self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editCopy.png"), 
-                self.trUtf8("Copy"), self.__copyChat)
-        self.__chatMenu.addSeparator()
-        self.__cutAllChatAct = \
-            self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editCut.png"), 
-                self.trUtf8("Cut all"), self.__cutAllChat)
-        self.__copyAllChatAct = \
-            self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editCopy.png"), 
-                self.trUtf8("Copy all"), self.__copyAllChat)
-        self.__chatMenu.addSeparator()
-        self.__clearChatAct = \
-            self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editDelete.png"), 
-                self.trUtf8("Clear"), self.__clearChat)
-        self.__chatMenu.addSeparator()
-        self.__saveChatAct = \
-            self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("fileSave.png"), 
-                self.trUtf8("Save"), self.__saveChat)
+        self.__initChatMenu()
+        self.__initUsersMenu()
         
         self.messageEdit.returnPressed.connect(self.__handleMessage)
         self.sendButton.clicked.connect(self.__handleMessage)
@@ -366,7 +340,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.chatEdit.setTextColor(Qt.red)
         self.chatEdit.append(
             QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
-        self.chatEdit.append(message)
+        self.chatEdit.append(message + "\n")
         self.chatEdit.setTextColor(color)
     
     def __initialConnectionRefused(self):
@@ -487,6 +461,39 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.sendEditButton.setEnabled(editing)
         self.cancelEditButton.setEnabled(editing)
     
+    def __initChatMenu(self):
+        """
+        Private slot to initialize the chat edit context menu.
+        """
+        self.__chatMenu = QMenu(self)
+        self.__cutChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editCut.png"), 
+                self.trUtf8("Cut"), self.__cutChat)
+        self.__copyChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"), 
+                self.trUtf8("Copy"), self.__copyChat)
+        self.__chatMenu.addSeparator()
+        self.__cutAllChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editCut.png"), 
+                self.trUtf8("Cut all"), self.__cutAllChat)
+        self.__copyAllChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"), 
+                self.trUtf8("Copy all"), self.__copyAllChat)
+        self.__chatMenu.addSeparator()
+        self.__clearChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("editDelete.png"), 
+                self.trUtf8("Clear"), self.__clearChat)
+        self.__chatMenu.addSeparator()
+        self.__saveChatAct = \
+            self.__chatMenu.addAction(
+                UI.PixmapCache.getIcon("fileSave.png"), 
+                self.trUtf8("Save"), self.__saveChat)
+    
     @pyqtSlot(bool)
     def on_chatEdit_copyAvailable(self, yes):
         """
@@ -589,3 +596,79 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             cb = QApplication.clipboard()
             cb.setText(txt)
         self.chatEdit.clear()
+    
+    def __initUsersMenu(self):
+        """
+        Private slot to initialize the users list context menu.
+        """
+        self.__usersMenu = QMenu(self)
+        self.__kickUserAct = \
+            self.__usersMenu.addAction(
+                UI.PixmapCache.getIcon("chatKickUser.png"), 
+                self.trUtf8("Kick User"), self.__kickUser)
+        self.__banUserAct = \
+            self.__usersMenu.addAction(
+                UI.PixmapCache.getIcon("chatBanUser.png"), 
+                self.trUtf8("Ban User"), self.__banUser)
+        self.__banKickUserAct = \
+            self.__usersMenu.addAction(
+                UI.PixmapCache.getIcon("chatBanKickUser.png"), 
+                self.trUtf8("Ban and Kick User"), self.__banKickUser)
+    
+    @pyqtSlot(QPoint)
+    def on_usersList_customContextMenuRequested(self, pos):
+        """
+        Private slot to show the context menu for the users list.
+        
+        @param pos the position of the mouse pointer (QPoint)
+        """
+        itm = self.usersList.itemAt(pos)
+        self.__kickUserAct.setEnabled(itm is not None)
+        self.__banUserAct.setEnabled(itm is not None)
+        self.__banKickUserAct.setEnabled(itm is not None)
+        self.__usersMenu.popup(self.usersList.mapToGlobal(pos))
+    
+    def __kickUser(self):
+        """
+        Private slot to disconnect a user.
+        """
+        itm = self.usersList.currentItem()
+        self.__client.kickUser(itm.text())
+        
+        color = self.chatEdit.textColor()
+        self.chatEdit.setTextColor(Qt.darkYellow)
+        self.chatEdit.append(
+            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
+        self.chatEdit.append(self.trUtf8("* {0} has been kicked.\n").format(
+            itm.text().split(":")[0]))
+        self.chatEdit.setTextColor(color)
+    
+    def __banUser(self):
+        """
+        Private slot to ban a user.
+        """
+        itm = self.usersList.currentItem()
+        self.__client.banUser(itm.text())
+        
+        color = self.chatEdit.textColor()
+        self.chatEdit.setTextColor(Qt.darkYellow)
+        self.chatEdit.append(
+            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
+        self.chatEdit.append(self.trUtf8("* {0} has been banned.\n").format(
+            itm.text().split(":")[0]))
+        self.chatEdit.setTextColor(color)
+    
+    def __banKickUser(self):
+        """
+        Private slot to ban and kick a user.
+        """
+        itm = self.usersList.currentItem()
+        self.__client.banKickUser(itm.text())
+        
+        color = self.chatEdit.textColor()
+        self.chatEdit.setTextColor(Qt.darkYellow)
+        self.chatEdit.append(
+            QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
+        self.chatEdit.append(self.trUtf8("* {0} has been banned and kicked.\n").format(
+            itm.text().split(":")[0]))
+        self.chatEdit.setTextColor(color)

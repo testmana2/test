@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>508</width>
-    <height>442</height>
+    <height>540</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -161,17 +161,56 @@
     </widget>
    </item>
    <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
+    <widget class="QGroupBox" name="bannedUsersGroup">
+     <property name="title">
+      <string>Banned Users</string>
      </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>291</height>
-      </size>
-     </property>
-    </spacer>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="3">
+       <widget class="QListWidget" name="bannedUsersList">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="deleteBannedUsersButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Delete the selected entries from the list of banned users</string>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="bannedUserEdit">
+        <property name="toolTip">
+         <string>Enter the user and host of the banned user</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="addBannedUserButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Add the user to the list of banned users</string>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
   </layout>
  </widget>
@@ -180,6 +219,11 @@
   <tabstop>serverPortSpin</tabstop>
   <tabstop>otherPortsCheckBox</tabstop>
   <tabstop>portToTrySpin</tabstop>
+  <tabstop>autoAcceptCheckBox</tabstop>
+  <tabstop>bannedUsersList</tabstop>
+  <tabstop>deleteBannedUsersButton</tabstop>
+  <tabstop>bannedUserEdit</tabstop>
+  <tabstop>addBannedUserButton</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -190,12 +234,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>41</x>
-     <y>96</y>
+     <x>54</x>
+     <y>140</y>
     </hint>
     <hint type="destinationlabel">
-     <x>38</x>
-     <y>125</y>
+     <x>51</x>
+     <y>169</y>
     </hint>
    </hints>
   </connection>
@@ -206,12 +250,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>129</x>
-     <y>102</y>
+     <x>142</x>
+     <y>140</y>
     </hint>
     <hint type="destinationlabel">
-     <x>129</x>
-     <y>123</y>
+     <x>161</x>
+     <y>169</y>
     </hint>
    </hints>
   </connection>
