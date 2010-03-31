@@ -115,7 +115,6 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         if port == -1:
             port = Preferences.getCooperation("ServerPort")
         
-##        self.portSpin.setValue(port)
         self.serverPortSpin.setValue(port)
         
         self.__setConnected(False)
@@ -256,19 +255,6 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         if not self.__connected:
             self.connectButton.setEnabled(host != "")
     
-##    @pyqtSlot(int)
-##    def on_hostEdit_currentIndexChanged(self, index):
-##        """
-##        Private slot to handle the selection of a host.
-##        
-##        @param index index of the selected entry (integer)
-##        """
-##        port = self.hostEdit.itemData(index)
-##        if port is not None:
-##            if port == -1:
-##                self.portSpin.setValue(Preferences.getCooperation("ServerPort"))
-##            else:
-##                self.portSpin.setValue(port)
     def __getConnectionParameters(self):
         """
         Private method to determine the connection parameters.
@@ -348,7 +334,6 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.shareButton.click()
         self.__connected = connected
         self.hostEdit.setEnabled(not connected)
-##        self.portSpin.setEnabled(not connected)
         self.serverButton.setEnabled(not connected)
         self.sharingGroup.setEnabled(connected)
         

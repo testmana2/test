@@ -2075,9 +2075,6 @@ class MiniEditor(QMainWindow):
         
         # now set the lexer properties
         self.lexer_.initProperties()
-##        
-##        # initialize the auto indent style of the lexer
-##        ais = self.lexer_.autoIndentStyle()
         
     def __styleNeeded(self, position):
         """
