@@ -155,6 +155,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.__recent.remove(host)
         self.__recent.insert(0, host)
         self.__saveHostsHistory()
+        self.hostEdit.clear()
+        self.hostEdit.addItems(self.__recent)
     
     def __clearHostsHistory(self):
         """
@@ -162,6 +164,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         """
         self.__recent = []
         self.__saveHostsHistory()
+        self.hostEdit.clear()
+        self.hostEdit.addItems(self.__recent)
     
     def __handleMessage(self):
         """
@@ -281,15 +285,23 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         Private slot initiating the connection.
         """
         if not self.__connected:
+            host, port = self.__getConnectionParameters()
             self.__setHostsHistory(self.hostEdit.currentText())
             if not self.__client.server().isListening():
                 self.on_serverButton_clicked()
             if self.__client.server().isListening():
-                self.__client.connectToHost(*self.__getConnectionParameters())
+                self.__client.connectToHost(host, port)
                 self.__setConnected(True)
         else:
             self.__client.disconnectConnections()
             self.__setConnected(False)
+    
+    @pyqtSlot()
+    def on_clearHostsButton_clicked(self):
+        """
+        Private slot to clear the hosts list.
+        """
+        self.__clearHostsHistory()
     
     @pyqtSlot()
     def on_serverButton_clicked(self):
@@ -330,8 +342,9 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.connectButton.setText(self.trUtf8("Connect"))
             self.connectButton.setEnabled(self.hostEdit.currentText() != "")
             self.connectionLed.setColor(QColor(Qt.red))
-            self.cancelEditButton.click()
-            self.shareButton.click()
+            self.on_cancelEditButton_clicked()
+            self.shareButton.setChecked(False)
+            self.on_shareButton_clicked(False)
         self.__connected = connected
         self.hostEdit.setEnabled(not connected)
         self.serverButton.setEnabled(not connected)

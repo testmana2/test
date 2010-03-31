@@ -56,6 +56,7 @@ class Connection(QTcpSocket):
     getParticipants = pyqtSignal()
     participants    = pyqtSignal(list)
     editorCommand   = pyqtSignal(str, str, str)
+    rejected        = pyqtSignal(str)
     
     def __init__(self, parent = None):
         """
@@ -79,7 +80,7 @@ class Connection(QTcpSocket):
         self.__buffer = QByteArray()
         
         self.readyRead.connect(self.__processReadyRead)
-        self.disconnected.connect(self.__pingTimer.stop)
+        self.disconnected.connect(self.__disconnected)
         self.__pingTimer.timeout.connect(self.__sendPing)
         self.connected.connect(self.__sendGreetingMessage)
     
@@ -394,3 +395,12 @@ class Connection(QTcpSocket):
         data = QByteArray("{0}{1}{2}{1}".format(
             Connection.ProtocolEditor, SeparatorToken, msg.size())) + msg
         self.write(data)
+    
+    def __disconnected(self):
+        """
+        Private slot to handle the connection being dropped.
+        """
+        self.__pingTimer.stop()
+        if self.__state == Connection.WaitingForGreeting:
+            self.rejected.emit(self.trUtf8("* Connection to {0}:{1} refused.").format(
+                self.peerName(), self.peerPort()))

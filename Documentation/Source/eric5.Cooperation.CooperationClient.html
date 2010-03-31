@@ -83,6 +83,9 @@ QObject
 <td><a href="#CooperationClient.__connectionError">__connectionError</a></td>
 <td>Private slot to handle a connection error.</td>
 </tr><tr>
+<td><a href="#CooperationClient.__connectionRejected">__connectionRejected</a></td>
+<td>Private slot to handle the rejection of a connection.</td>
+</tr><tr>
 <td><a href="#CooperationClient.__disconnected">__disconnected</a></td>
 <td>Private slot to handle the disconnection of a chat client.</td>
 </tr><tr>
@@ -145,6 +148,16 @@ reference to the parent object (QObject)
 <dt><i>socketError</i></dt>
 <dd>
 reference to the error object (QAbstractSocket.SocketError)
+</dd>
+</dl><a NAME="CooperationClient.__connectionRejected" ID="CooperationClient.__connectionRejected"></a>
+<h4>CooperationClient.__connectionRejected</h4>
+<b>__connectionRejected</b>(<i>msg</i>)
+<p>
+        Private slot to handle the rejection of a connection.
+</p><dl>
+<dt><i>msg</i></dt>
+<dd>
+error message (string)
 </dd>
 </dl><a NAME="CooperationClient.__disconnected" ID="CooperationClient.__disconnected"></a>
 <h4>CooperationClient.__disconnected</h4>

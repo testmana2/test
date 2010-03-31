@@ -170,6 +170,15 @@ class CooperationClient(QObject):
         connection.error.connect(self.__connectionError)
         connection.disconnected.connect(self.__disconnected)
         connection.readyForUse.connect(self.__readyForUse)
+        connection.rejected.connect(self.__connectionRejected)
+    
+    def __connectionRejected(self, msg):
+        """
+        Private slot to handle the rejection of a connection.
+        
+        @param msg error message (string)
+        """
+        self.connectionError.emit(msg)
     
     def __connectionError(self, socketError):
         """
@@ -180,13 +189,13 @@ class CooperationClient(QObject):
         connection = self.sender()
         if socketError != QAbstractSocket.RemoteHostClosedError:
             if connection.peerPort() != 0:
-                msg = "{0}:{1}\n{2}\n".format(
+                msg = "* {0}:{1}\n{2}\n".format(
                     connection.peerAddress().toString(), 
                     connection.peerPort(), 
                     connection.errorString()
                 )
             else:
-                msg = "{0}\n".format(connection.errorString())
+                msg = "* {0}\n".format(connection.errorString())
             self.connectionError.emit(msg)
         if connection == self.__initialConnection:
             self.cannotConnect.emit()

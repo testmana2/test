@@ -66,7 +66,7 @@ emitted when the connection is ready for use
 QTcpSocket
 <h3>Class Attributes</h3>
 <table>
-<tr><td>Editor</td></tr><tr><td>GetParticipants</td></tr><tr><td>Greeting</td></tr><tr><td>Participants</td></tr><tr><td>Ping</td></tr><tr><td>PlainText</td></tr><tr><td>Pong</td></tr><tr><td>ProtocolEditor</td></tr><tr><td>ProtocolGetParticipants</td></tr><tr><td>ProtocolGreeting</td></tr><tr><td>ProtocolMessage</td></tr><tr><td>ProtocolParticipants</td></tr><tr><td>ProtocolPing</td></tr><tr><td>ProtocolPong</td></tr><tr><td>ReadingGreeting</td></tr><tr><td>ReadyForUse</td></tr><tr><td>Undefined</td></tr><tr><td>WaitingForGreeting</td></tr><tr><td>editorCommand</td></tr><tr><td>getParticipants</td></tr><tr><td>newMessage</td></tr><tr><td>participants</td></tr><tr><td>readyForUse</td></tr>
+<tr><td>Editor</td></tr><tr><td>GetParticipants</td></tr><tr><td>Greeting</td></tr><tr><td>Participants</td></tr><tr><td>Ping</td></tr><tr><td>PlainText</td></tr><tr><td>Pong</td></tr><tr><td>ProtocolEditor</td></tr><tr><td>ProtocolGetParticipants</td></tr><tr><td>ProtocolGreeting</td></tr><tr><td>ProtocolMessage</td></tr><tr><td>ProtocolParticipants</td></tr><tr><td>ProtocolPing</td></tr><tr><td>ProtocolPong</td></tr><tr><td>ReadingGreeting</td></tr><tr><td>ReadyForUse</td></tr><tr><td>Undefined</td></tr><tr><td>WaitingForGreeting</td></tr><tr><td>editorCommand</td></tr><tr><td>getParticipants</td></tr><tr><td>newMessage</td></tr><tr><td>participants</td></tr><tr><td>readyForUse</td></tr><tr><td>rejected</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -76,6 +76,9 @@ QTcpSocket
 </tr><tr>
 <td><a href="#Connection.__dataLengthForCurrentDataType">__dataLengthForCurrentDataType</a></td>
 <td>Private method to get the data length for the current data type.</td>
+</tr><tr>
+<td><a href="#Connection.__disconnected">__disconnected</a></td>
+<td>Private slot to handle the connection being dropped.</td>
 </tr><tr>
 <td><a href="#Connection.__hasEnoughData">__hasEnoughData</a></td>
 <td>Private method to check, if enough data is available.</td>
@@ -143,7 +146,12 @@ referenec to the parent object (QObject)
 <dd>
 data length (integer)
 </dd>
-</dl><a NAME="Connection.__hasEnoughData" ID="Connection.__hasEnoughData"></a>
+</dl><a NAME="Connection.__disconnected" ID="Connection.__disconnected"></a>
+<h4>Connection.__disconnected</h4>
+<b>__disconnected</b>(<i></i>)
+<p>
+        Private slot to handle the connection being dropped.
+</p><a NAME="Connection.__hasEnoughData" ID="Connection.__hasEnoughData"></a>
 <h4>Connection.__hasEnoughData</h4>
 <b>__hasEnoughData</b>(<i></i>)
 <p>

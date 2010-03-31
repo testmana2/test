@@ -7,6 +7,7 @@ eric5.Cooperation.ChatWidget.ChatWidget.getClient?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_cancelEditButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_chatEdit_copyAvailable?4(yes)
 eric5.Cooperation.ChatWidget.ChatWidget.on_chatEdit_customContextMenuRequested?4(pos)
+eric5.Cooperation.ChatWidget.ChatWidget.on_clearHostsButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_connectButton_clicked?4()
 eric5.Cooperation.ChatWidget.ChatWidget.on_hostEdit_editTextChanged?4(host)
 eric5.Cooperation.ChatWidget.ChatWidget.on_sendEditButton_clicked?4()
@@ -42,6 +43,7 @@ eric5.Cooperation.Connection.Connection.name?4()
 eric5.Cooperation.Connection.Connection.newMessage?7
 eric5.Cooperation.Connection.Connection.participants?7
 eric5.Cooperation.Connection.Connection.readyForUse?7
+eric5.Cooperation.Connection.Connection.rejected?7
 eric5.Cooperation.Connection.Connection.sendEditorCommand?4(projectHash, filename, message)
 eric5.Cooperation.Connection.Connection.sendGetParticipants?4()
 eric5.Cooperation.Connection.Connection.sendMessage?4(message)

@@ -3208,6 +3208,7 @@
       <keyword name="ChatWidget.on_cancelEditButton_clicked" id="ChatWidget.on_cancelEditButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_cancelEditButton_clicked" />
       <keyword name="ChatWidget.on_chatEdit_copyAvailable" id="ChatWidget.on_chatEdit_copyAvailable" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_chatEdit_copyAvailable" />
       <keyword name="ChatWidget.on_chatEdit_customContextMenuRequested" id="ChatWidget.on_chatEdit_customContextMenuRequested" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_chatEdit_customContextMenuRequested" />
+      <keyword name="ChatWidget.on_clearHostsButton_clicked" id="ChatWidget.on_clearHostsButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_clearHostsButton_clicked" />
       <keyword name="ChatWidget.on_connectButton_clicked" id="ChatWidget.on_connectButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_connectButton_clicked" />
       <keyword name="ChatWidget.on_hostEdit_editTextChanged" id="ChatWidget.on_hostEdit_editTextChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_hostEdit_editTextChanged" />
       <keyword name="ChatWidget.on_sendEditButton_clicked" id="ChatWidget.on_sendEditButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_sendEditButton_clicked" />
@@ -3219,6 +3220,7 @@
       <keyword name="Connection" id="Connection" ref="eric5.Cooperation.Connection.html#Connection" />
       <keyword name="Connection (Constructor)" id="Connection (Constructor)" ref="eric5.Cooperation.Connection.html#Connection.__init__" />
       <keyword name="Connection.__dataLengthForCurrentDataType" id="Connection.__dataLengthForCurrentDataType" ref="eric5.Cooperation.Connection.html#Connection.__dataLengthForCurrentDataType" />
+      <keyword name="Connection.__disconnected" id="Connection.__disconnected" ref="eric5.Cooperation.Connection.html#Connection.__disconnected" />
       <keyword name="Connection.__hasEnoughData" id="Connection.__hasEnoughData" ref="eric5.Cooperation.Connection.html#Connection.__hasEnoughData" />
       <keyword name="Connection.__processData" id="Connection.__processData" ref="eric5.Cooperation.Connection.html#Connection.__processData" />
       <keyword name="Connection.__processReadyRead" id="Connection.__processReadyRead" ref="eric5.Cooperation.Connection.html#Connection.__processReadyRead" />
@@ -3243,6 +3245,7 @@
       <keyword name="CooperationClient" id="CooperationClient" ref="eric5.Cooperation.CooperationClient.html#CooperationClient" />
       <keyword name="CooperationClient (Constructor)" id="CooperationClient (Constructor)" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__init__" />
       <keyword name="CooperationClient.__connectionError" id="CooperationClient.__connectionError" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__connectionError" />
+      <keyword name="CooperationClient.__connectionRejected" id="CooperationClient.__connectionRejected" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__connectionRejected" />
       <keyword name="CooperationClient.__disconnected" id="CooperationClient.__disconnected" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__disconnected" />
       <keyword name="CooperationClient.__getParticipants" id="CooperationClient.__getParticipants" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__getParticipants" />
       <keyword name="CooperationClient.__newConnection" id="CooperationClient.__newConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__newConnection" />
