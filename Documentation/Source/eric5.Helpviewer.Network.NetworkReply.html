@@ -69,7 +69,7 @@ QNetworkReply
 </table>
 <a NAME="NetworkReply.__init__" ID="NetworkReply.__init__"></a>
 <h4>NetworkReply (Constructor)</h4>
-<b>NetworkReply</b>(<i>request, fileData, mimeType</i>)
+<b>NetworkReply</b>(<i>request, fileData, mimeType, parent = None</i>)
 <p>
         Constructor
 </p><dl>
@@ -82,6 +82,9 @@ reference to the data buffer (QByteArray)
 </dd><dt><i>mimeType</i></dt>
 <dd>
 for the reply (string)
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent object (QObject)
 </dd>
 </dl><a NAME="NetworkReply.abort" ID="NetworkReply.abort"></a>
 <h4>NetworkReply.abort</h4>

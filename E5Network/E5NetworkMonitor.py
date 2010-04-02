@@ -129,7 +129,6 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         
         @param evt reference to the close event object (QCloseEvent)
         """
-        self.deleteLater()
         self.__class__._monitor = None
         QDialog.closeEvent(self, evt)
     

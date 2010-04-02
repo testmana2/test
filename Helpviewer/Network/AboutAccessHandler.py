@@ -25,4 +25,4 @@ class AboutAccessHandler(SchemeAccessHandler):
             (QIODevice)
         @return reference to the created reply object (QNetworkReply)
         """
-        return NetworkProtocolUnknownErrorReply("about")
+        return NetworkProtocolUnknownErrorReply("about", self.parent())

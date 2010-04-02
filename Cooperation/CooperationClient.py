@@ -151,8 +151,6 @@ class CooperationClient(QObject):
         
         if connection.isValid():
             connection.abort()
-        
-        connection.deleteLater()
     
     def disconnectConnections(self):
         """

@@ -42,6 +42,7 @@ class OpenSearchManager(QObject):
             parent = e5App()
         QObject.__init__(self, parent)
         
+        self.__replies = []
         self.__engines = {}
         self.__keywords = {}
         self.__current = ""
@@ -171,6 +172,7 @@ class OpenSearchManager(QObject):
         reply = HelpWindow.networkAccessManager().get(QNetworkRequest(url))
         self.connect(reply, SIGNAL("finished()"), self.__engineFromUrlAvailable)
         reply.setParent(self)
+        self.__replies.append(reply)
         
         return True
     
@@ -381,8 +383,9 @@ class OpenSearchManager(QObject):
         
         res = QMessageBox.question(None,
             "",
-            self.trUtf8("""Do you want to add the following engine to your list of"""
-                        """ search engines?<br/><br/>Name: {0}<br/>Searches on: {1}""")\
+            self.trUtf8("""<p>Do you want to add the following engine to your list of"""
+                        """ search engines?<br/><br/>Name: {0}<br/>"""
+                        """Searches on: {1}</p>""")\
                 .format(engine.name(), host),
             QMessageBox.StandardButtons(\
                 QMessageBox.No | \
@@ -400,14 +403,16 @@ class OpenSearchManager(QObject):
         
         if reply.error() != QNetworkReply.NoError:
             reply.close()
-            reply.deleteLater()
+            if reply in self.__replies:
+                self.__replies.remove(reply)
             return
         
         reader = OpenSearchReader()
         engine = reader.read(reply)
         
         reply.close()
-        reply.deleteLater()
+        if reply in self.__replies:
+            self.__replies.remove(reply)
         
         if not engine.isValid():
             return

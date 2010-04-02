@@ -40,6 +40,6 @@ class PyrcAccessHandler(SchemeAccessHandler):
             if pixmap.save(imageBuffer, "PNG"):
                 html = html.replace("IMAGE_BINARY_DATA_HERE", 
                              bytes(imageBuffer.buffer().toBase64()).decode())
-            return NetworkReply(request, QByteArray(html), "text/html")
+            return NetworkReply(request, QByteArray(html), "text/html", self.parent())
         
-        return NetworkProtocolUnknownErrorReply("pyrc")
+        return NetworkProtocolUnknownErrorReply("pyrc", self.parent())

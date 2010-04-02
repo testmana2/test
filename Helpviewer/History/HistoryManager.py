@@ -336,8 +336,8 @@ class HistoryManager(QWebHistoryInterface):
         if not historyFile.open(QIODevice.ReadOnly):
             QMessageBox.warning(None,
                 self.trUtf8("Loading History"),
-                self.trUtf8("""Unable to open history file <b>{0}</b>.<br/>"""
-                            """Reason: {1}""")\
+                self.trUtf8("""<p>Unable to open history file <b>{0}</b>.<br/>"""
+                            """Reason: {1}</p>""")\
                     .format(historyFile.fileName, historyFile.errorString()))
             return
         
@@ -412,8 +412,8 @@ class HistoryManager(QWebHistoryInterface):
         if not opened:
             QMessageBox.warning(None,
                 self.trUtf8("Saving History"),
-                self.trUtf8("""Unable to open history file <b>{0}</b>.<br/>"""
-                            """Reason: {1}""")\
+                self.trUtf8("""<p>Unable to open history file <b>{0}</b>.<br/>"""
+                            """Reason: {1}</p>""")\
                     .format(f.fileName(), f.errorString()))
             return
         
@@ -432,14 +432,14 @@ class HistoryManager(QWebHistoryInterface):
             if historyFile.exists() and not historyFile.remove():
                 QMessageBox.warning(None,
                     self.trUtf8("Saving History"),
-                    self.trUtf8("""Error removing old history file <b>{0}</b>."""
-                                """<br/>Reason: {1}""")\
+                    self.trUtf8("""<p>Error removing old history file <b>{0}</b>."""
+                                """<br/>Reason: {1}</p>""")\
                         .format(historyFile.fileName(), historyFile.errorString()))
             if not f.copy(historyFile.fileName()):
                 QMessageBox.warning(None,
                     self.trUtf8("Saving History"),
-                    self.trUtf8("""Error moving new history file over old one """
-                                """(<b>{0}</b>).<br/>Reason: {1}""")\
+                    self.trUtf8("""<p>Error moving new history file over old one """
+                                """(<b>{0}</b>).<br/>Reason: {1}</p>""")\
                         .format(historyFile.fileName(), tempFile.errorString()))
         
         try:

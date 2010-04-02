@@ -3427,7 +3427,7 @@ göstermek için gelen listeyi seçiniz</translation>
         <translation type="unfinished">bilinmeyen</translation>
     </message>
     <message>
-        <location filename="Cooperation/CooperationClient.py" line="273"/>
+        <location filename="Cooperation/CooperationClient.py" line="271"/>
         <source>Illegal address: {0}:{1}
 </source>
         <translation type="unfinished"></translation>
@@ -5679,17 +5679,17 @@ Bağlantı yok
         <translation>bitince korumayı aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="45"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="48"/>
         <source>Try Again</source>
         <translation>Tekrar Dene</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="48"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="51"/>
         <source>Stop</source>
         <translation>Dur</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="131"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="140"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
@@ -5729,7 +5729,7 @@ Bağlantı yok
         <translation type="obsolete">%1 of %2 (%3/sn) %4</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="342"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="351"/>
         <source>?</source>
         <translation>?</translation>
     </message>
@@ -5744,22 +5744,22 @@ Bağlantı yok
         <translation type="obsolete">%1 of %2 - Durdu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="367"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="376"/>
         <source>bytes</source>
         <translation>bitler</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="370"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="379"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="373"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="382"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="119"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="122"/>
         <source>Downloading</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5769,53 +5769,58 @@ Bağlantı yok
         <translation type="unfinished">Eric4 İndirme {5 ?}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="119"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="122"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="141"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="150"/>
         <source>Download canceled: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="254"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="261"/>
         <source>Error opening save file: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="261"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="268"/>
         <source>Error saving: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="278"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="285"/>
         <source>Network Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="332"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="341"/>
         <source>- {0}:{1:02} minutes remaining</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="339"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="348"/>
         <source>- {0} seconds remaining</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="341"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="350"/>
         <source>{0} of {1} ({2}/sec) {3}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="350"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
         <source>{0} downloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="353"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="362"/>
         <source>{0} of {1} - Stopped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/DownloadDialog.py" line="44"/>
+        <source>Eric5 Download {0}</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6167,42 +6172,42 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
 <context>
     <name>E5RequestModel</name>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="222"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="221"/>
         <source>Method</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="223"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="222"/>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="224"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="223"/>
         <source>Response</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="225"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="224"/>
         <source>Length</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="226"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="225"/>
         <source>Content Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="227"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="226"/>
         <source>Info</source>
         <translation type="unfinished">Bilgi</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="297"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="296"/>
         <source>Redirect: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="330"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="329"/>
         <source>Unknown</source>
         <translation type="unfinished">Bilinmeyen</translation>
     </message>
@@ -12163,7 +12168,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
     <name>HelpDocsInstaller</name>
     <message>
         <location filename="Helpviewer/HelpDocsInstaller.py" line="182"/>
-        <source>The file &lt;b&gt;{0}&lt;/b&gt; could not be registered.&lt;br/&gt;Reason: {1}</source>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be registered.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -14514,17 +14519,17 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
     </message>
     <message>
         <location filename="Helpviewer/History/HistoryManager.py" line="413"/>
-        <source>Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}</source>
+        <source>&lt;p&gt;Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="Helpviewer/History/HistoryManager.py" line="433"/>
-        <source>Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}</source>
+        <source>&lt;p&gt;Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="Helpviewer/History/HistoryManager.py" line="439"/>
-        <source>Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}</source>
+        <source>&lt;p&gt;Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -19459,8 +19464,8 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
 <context>
     <name>OpenSearchManager</name>
     <message>
-        <location filename="Helpviewer/OpenSearch/OpenSearchManager.py" line="382"/>
-        <source>Do you want to add the following engine to your list of search engines?&lt;br/&gt;&lt;br/&gt;Name: {0}&lt;br/&gt;Searches on: {1}</source>
+        <location filename="Helpviewer/OpenSearch/OpenSearchManager.py" line="384"/>
+        <source>&lt;p&gt;Do you want to add the following engine to your list of search engines?&lt;br/&gt;&lt;br/&gt;Name: {0}&lt;br/&gt;Searches on: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

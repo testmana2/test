@@ -2112,7 +2112,7 @@ eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply.NetworkProtocolUnknown
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.abort?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.bytesAvailable?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.readData?4(maxlen)
-eric5.Helpviewer.Network.NetworkReply.NetworkReply?1(request, fileData, mimeType)
+eric5.Helpviewer.Network.NetworkReply.NetworkReply?1(request, fileData, mimeType, parent = None)
 eric5.Helpviewer.Network.PyrcAccessHandler.PyrcAccessHandler.createRequest?4(op, request, outgoingData = None)
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtHelpAccessHandler.createRequest?4(op, request, outgoingData = None)
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtHelpAccessHandler?1(engine, parent = None)

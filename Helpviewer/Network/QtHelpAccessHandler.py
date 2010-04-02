@@ -47,4 +47,4 @@ class QtHelpAccessHandler(SchemeAccessHandler):
             mimeType = "text/javascript"
         else:
             mimeType = "text/html"
-        return NetworkReply(request, self.__engine.fileData(url), mimeType)
+        return NetworkReply(request, self.__engine.fileData(url), mimeType, self.parent())

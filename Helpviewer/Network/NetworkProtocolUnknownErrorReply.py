@@ -21,7 +21,7 @@ class NetworkProtocolUnknownErrorReply(QNetworkReply):
         @param protocol protocol name (string)
         @param parent reference to the parent object (QObject)
         """
-        QNetworkReply.__init__(self)
+        QNetworkReply.__init__(self, parent)
         self.setError(QNetworkReply.ProtocolUnknownError, 
                       self.trUtf8("Protocol '{0}' not supported.").format(protocol))
         QTimer.singleShot(0, self.__fireSignals)

@@ -14,15 +14,16 @@ class NetworkReply(QNetworkReply):
     """
     Class implementing a QNetworkReply subclass for special data.
     """
-    def __init__(self, request, fileData, mimeType):
+    def __init__(self, request, fileData, mimeType, parent = None):
         """
         Constructor
         
         @param request reference to the request object (QNetworkRequest)
         @param fileData reference to the data buffer (QByteArray)
         @param mimeType for the reply (string)
+        @param parent reference to the parent object (QObject)
         """
-        QNetworkReply.__init__(self)
+        QNetworkReply.__init__(self, parent)
         
         self.__data = fileData
         

@@ -3198,7 +3198,7 @@ para visualizar la página de configuración.</translation>
         <translation type="unfinished">desconocido</translation>
     </message>
     <message>
-        <location filename="Cooperation/CooperationClient.py" line="273"/>
+        <location filename="Cooperation/CooperationClient.py" line="271"/>
         <source>Illegal address: {0}:{1}
 </source>
         <translation type="unfinished"></translation>
@@ -5284,42 +5284,42 @@ Not connected
         <translation>Mantener abierto al terminar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="45"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="48"/>
         <source>Try Again</source>
         <translation>Intentar de nuevo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="48"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="51"/>
         <source>Stop</source>
         <translation>Parar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="131"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="140"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="342"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="351"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="367"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="376"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="370"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="379"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="373"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="382"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="119"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="122"/>
         <source>Downloading</source>
         <translation>Descargando</translation>
     </message>
@@ -5329,54 +5329,59 @@ Not connected
         <translation>Descarga de Eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="119"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="122"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Está a punto de descargar el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;¿Qué desea hacer?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="141"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="150"/>
         <source>Download canceled: {0}</source>
         <translation>Descarga cancelada: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="254"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="261"/>
         <source>Error opening save file: {0}</source>
         <translation>Error al abrir el fichero a guardar: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="261"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="268"/>
         <source>Error saving: {0}</source>
         <translation>Error al guardar: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="278"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="285"/>
         <source>Network Error: {0}</source>
         <translation>Error de Red: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="332"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="341"/>
         <source>- {0}:{1:02} minutes remaining</source>
         <translation>-{0}:{1:02} minutos restantes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="339"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="348"/>
         <source>- {0} seconds remaining</source>
         <translation>- {0} seconds restantes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="341"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="350"/>
         <source>{0} of {1} ({2}/sec) {3}</source>
         <translation>{0} de {1} ({2}/segundo) {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="350"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
         <source>{0} downloaded</source>
         <translation>{0} descargado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="353"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="362"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} de {1} - Parado</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/DownloadDialog.py" line="44"/>
+        <source>Eric5 Download {0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5503,42 +5508,42 @@ selección completa.&lt;/li&gt;
 <context>
     <name>E5RequestModel</name>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="222"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="221"/>
         <source>Method</source>
         <translation>Método</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="223"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="222"/>
         <source>Address</source>
         <translation>Dirección</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="224"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="223"/>
         <source>Response</source>
         <translation>Respuesta</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="225"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="224"/>
         <source>Length</source>
         <translation>Longitud</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="226"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="225"/>
         <source>Content Type</source>
         <translation>Tipo de Contenido</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="227"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="226"/>
         <source>Info</source>
         <translation>Información</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="297"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="296"/>
         <source>Redirect: {0}</source>
         <translation>Redirigir: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="330"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="329"/>
         <source>Unknown</source>
         <translation>Desconocido</translation>
     </message>
@@ -11205,7 +11210,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpDocsInstaller.py" line="182"/>
         <source>The file &lt;b&gt;{0}&lt;/b&gt; could not be registered.&lt;br/&gt;Reason: {1}</source>
-        <translation>El archivo &lt;b&gt;{0}&lt;/b&gt; no ha podido ser registrado.&lt;br/&gt;Causa: {1}</translation>
+        <translation type="obsolete">El archivo &lt;b&gt;{0}&lt;/b&gt; no ha podido ser registrado.&lt;br/&gt;Causa: {1}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpDocsInstaller.py" line="182"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be registered.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13278,17 +13288,32 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/History/HistoryManager.py" line="413"/>
         <source>Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}</source>
-        <translation>No se ha podido abrir el archivo de historial &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Razón: {1}</translation>
+        <translation type="obsolete">No se ha podido abrir el archivo de historial &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Razón: {1}</translation>
     </message>
     <message>
         <location filename="Helpviewer/History/HistoryManager.py" line="433"/>
         <source>Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}</source>
-        <translation>Error al eliminar el antiguo archivo de historial &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Razón: {1}</translation>
+        <translation type="obsolete">Error al eliminar el antiguo archivo de historial &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Razón: {1}</translation>
     </message>
     <message>
         <location filename="Helpviewer/History/HistoryManager.py" line="439"/>
         <source>Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}</source>
-        <translation>Error al copiar el nuevo archivo de historial sobre el antiguo (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Razón: {1}</translation>
+        <translation type="obsolete">Error al copiar el nuevo archivo de historial sobre el antiguo (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Razón: {1}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryManager.py" line="413"/>
+        <source>&lt;p&gt;Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryManager.py" line="433"/>
+        <source>&lt;p&gt;Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryManager.py" line="439"/>
+        <source>&lt;p&gt;Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -17883,7 +17908,12 @@ Do you want to save your changes?</source>
     <message>
         <location filename="Helpviewer/OpenSearch/OpenSearchManager.py" line="382"/>
         <source>Do you want to add the following engine to your list of search engines?&lt;br/&gt;&lt;br/&gt;Name: {0}&lt;br/&gt;Searches on: {1}</source>
-        <translation>¿Desea añadir el siguiente motor a la lista de motores de búsqueda?&lt;br/&gt;&lt;br/&gt;Nombre: {0}&lt;br/&gt;Busca en: {1}</translation>
+        <translation type="obsolete">¿Desea añadir el siguiente motor a la lista de motores de búsqueda?&lt;br/&gt;&lt;br/&gt;Nombre: {0}&lt;br/&gt;Busca en: {1}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OpenSearch/OpenSearchManager.py" line="384"/>
+        <source>&lt;p&gt;Do you want to add the following engine to your list of search engines?&lt;br/&gt;&lt;br/&gt;Name: {0}&lt;br/&gt;Searches on: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -41,6 +41,9 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         self.setupUi(self)
         self.setAttribute(Qt.WA_DeleteOnClose)
         
+        self.__windowTitleTemplate = self.trUtf8("Eric5 Download {0}")
+        self.setWindowTitle(self.__windowTitleTemplate.format(""))
+        
         self.__tryAgainButton = \
             self.buttonBox.addButton(self.trUtf8("Try Again"), 
                                      QDialogButtonBox.ActionRole)
@@ -122,7 +125,13 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
                             """<p>What do you want to do?</p>""").format(baseName),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Open | \
-                    QMessageBox.Save))
+                    QMessageBox.Save | \
+                    QMessageBox.Cancel))
+            if res == QMessageBox.Cancel:
+                self.__stop()
+                self.close()
+                return
+            
             self.__autoOpen = res == QMessageBox.Open
             fileName = QDesktopServices.storageLocation(QDesktopServices.TempLocation) + \
                         '/' + baseName
@@ -232,8 +241,6 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         else:
             nam = QNetworkAccessManager()
         reply = nam.get(QNetworkRequest(self.__url))
-        if self.__reply:
-            self.__reply.deleteLater()
         if self.__output.exists():
             self.__output.remove()
         self.__reply = reply
@@ -288,7 +295,6 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         locationHeader = self.__reply.header(QNetworkRequest.LocationHeader)
         if locationHeader.isValid():
             self.__url = locationHeader
-            self.__reply.deleteLater()
             self.__reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(
                            QNetworkRequest(self.__url))
             self.__initialize()
@@ -304,9 +310,12 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         if total == -1:
             self.progressBar.setValue(0)
             self.progressBar.setMaximum(0)
+            self.setWindowTitle(self.__windowTitleTemplate.format(""))
         else:
             self.progressBar.setValue(received)
             self.progressBar.setMaximum(total)
+            pc = "{0}%".format(received * 100 // total)
+            self.setWindowTitle(self.__windowTitleTemplate.format(pc))
         self.__updateInfoLabel()
     
     def __updateInfoLabel(self):

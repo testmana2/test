@@ -159,8 +159,6 @@ class AdBlockManager(QObject):
         try:
             self.__subscriptions.remove(subscription)
             rulesFileName = subscription.rulesFileName()
-            if subscription.parent() == self:
-                subscription.deleteLater()
             QFile.remove(rulesFileName)
             self.emit(SIGNAL("rulesChanged()"))
         except ValueError:

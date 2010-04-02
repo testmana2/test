@@ -54,6 +54,7 @@ class OpenSearchEngine(QObject):
         self._suggestionsParameters = []       # list of two tuples
         self._imageUrl = ""
         self.__image = QImage()
+        self.__imageReply = None
         self.__iconMoved = False
         self.__searchMethod = "get"
         self.__suggestionsMethod = "get"
@@ -303,22 +304,22 @@ class OpenSearchEngine(QObject):
         if self.__networkAccessManager is None or not self._imageUrl:
             return
         
-        reply = self.__networkAccessManager.get(
+        self.__imageReply = self.__networkAccessManager.get(
             QNetworkRequest(QUrl.fromEncoded(self._imageUrl)))
-        self.connect(reply, SIGNAL("finished()"), self.__imageObtained)
+        self.connect(self.__imageReply, SIGNAL("finished()"), self.__imageObtained)
     
     def __imageObtained(self):
         """
         Private slot to receive the image of the engine.
         """
         reply = self.sender()
-        if reply is None:
+        if reply is None or reply != self.__imageReply:
             return
         
         response = reply.readAll()
         
         reply.close()
-        reply.deleteLater()
+        self.__imageReply = None
         
         if response.isEmpty():
             return

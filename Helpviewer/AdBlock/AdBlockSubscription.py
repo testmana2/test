@@ -254,7 +254,7 @@ class AdBlockSubscription(QObject):
         response = reply.readAll()
         redirect = reply.attribute(QNetworkRequest.RedirectionTargetAttribute) or QUrl()
         reply.close()
-        reply.deleteLater()
+        self.__downloading = None
         
         if reply.error() != QNetworkReply.NoError:
             QMessageBox.warning(None,

@@ -915,7 +915,6 @@ class HelpBrowser(QWebView):
         if dlg in self.__downloadWindows:
             self.disconnect(dlg, SIGNAL("done()"), self.__downloadDone)
             self.__downloadWindows.remove(dlg)
-            dlg.deleteLater()
     
     def __downloadRequested(self, request):
         """
