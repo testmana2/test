@@ -76,5 +76,6 @@ class LexerPerl(QsciLexerPerl, Lexer):
         Public method to get the default keywords.
         
         @param kwSet number of the keyword set (integer) 
+        @return string giving the keywords (string) or None
         """
         return QsciLexerPerl.keywords(self, kwSet)

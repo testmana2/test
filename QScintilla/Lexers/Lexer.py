@@ -205,7 +205,8 @@ class Lexer(object):
         """
         Public method to get the keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
+        @return string giving the keywords (string) or None
         """
         keywords_ = Preferences.getEditorKeywords(self.language())
         if keywords_:

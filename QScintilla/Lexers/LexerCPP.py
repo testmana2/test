@@ -90,5 +90,6 @@ class LexerCPP(QsciLexerCPP, Lexer):
         Public method to get the default keywords.
         
         @param kwSet number of the keyword set (integer) 
+        @return string giving the keywords (string) or None
         """
         return QsciLexerCPP.keywords(self, kwSet)

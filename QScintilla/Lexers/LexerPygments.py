@@ -401,3 +401,12 @@ class LexerPygments(LexerContainer):
         return style in [PYGMENTS_STRING, PYGMENTS_DOCSTRING, PYGMENTS_OTHER, 
                          PYGMENTS_HEADING, PYGMENTS_SUBHEADING, PYGMENTS_EMPHASIZE, 
                          PYGMENTS_STRONG]
+    
+    def defaultKeywords(self, kwSet):
+        """
+        Public method to get the default keywords.
+        
+        @param kwSet number of the keyword set (integer) 
+        @return string giving the keywords (string) or None
+        """
+        return None

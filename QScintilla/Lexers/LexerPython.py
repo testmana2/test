@@ -121,6 +121,7 @@ class LexerPython(QsciLexerPython, Lexer):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
+        @return string giving the keywords (string) or None
         """
         return QsciLexerPython.keywords(self, kwSet)
