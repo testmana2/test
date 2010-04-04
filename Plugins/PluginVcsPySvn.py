@@ -181,7 +181,7 @@ class VcsPySvnPlugin(object):
     
     def getPreferences(self, key):
         """
-        Public method to retrieve the various refactoring settings.
+        Public method to retrieve the various settings.
         
         @param key the key of the value to get
         @param prefClass preferences class used as the storage area
@@ -201,7 +201,7 @@ class VcsPySvnPlugin(object):
     
     def setPreferences(self, key, value):
         """
-        Public method to store the various refactoring settings.
+        Public method to store the various settings.
         
         @param key the key of the setting to be set
         @param value the value to be set
