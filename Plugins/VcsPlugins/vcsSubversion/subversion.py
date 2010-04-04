@@ -254,7 +254,7 @@ class Subversion(VersionControl):
         @param projectDir project directory (string)
         @param noDialog flag indicating quiet operations
         @return flag indicating an execution without errors (boolean)
-            and a flag indicating the version controll status (boolean)
+            and a flag indicating the version control status (boolean)
         """
         noDialog = False
         msg = vcsDataDict["message"]
@@ -705,6 +705,11 @@ class Subversion(VersionControl):
             if accepted:
                 target, force = dlg.getData()
         
+        if not rx_prot.exactMatch(target):
+            isDir = os.path.isdir(name)
+        else:
+            isDir = False
+        
         if accepted:
             args = []
             args.append('move')
@@ -729,12 +734,12 @@ class Subversion(VersionControl):
                     res = dia.normalExit()
             if res and not rx_prot.exactMatch(target):
                 if target.startswith(project.getProjectPath()):
-                    if os.path.isdir(name):
+                    if isDir:
                         project.moveDirectory(name, target)
                     else:
                         project.renameFileInPdata(name, target)
                 else:
-                    if os.path.isdir(name):
+                    if isDir:
                         project.removeDirectory(name)
                     else:
                         project.removeFile(name)
@@ -1044,7 +1049,7 @@ class Subversion(VersionControl):
         
         <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
         directory has been scanned already. If so, it is assumed, that the states for
-        all files has been populated by the previous run.
+        all files have been populated by the previous run.
         
         @param names dictionary with all filenames to be checked as keys
         @param dname directory to check in (string)

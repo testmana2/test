@@ -128,6 +128,16 @@ class ProjectBrowserSimpleDirectoryItem(BrowserItem, ProjectBrowserItemMixin):
         else:
             self.icon = UI.PixmapCache.getIcon("dirClosed.png")
     
+    def setName(self, dinfo, full = True):
+        """
+        Public method to set the directory name.
+        
+        @param dinfo dinfo is the string for the directory (string)
+        @param full flag indicating full pathname should be displayed (boolean)
+        """
+        self._dirName = os.path.abspath(dinfo)
+        self.itemData[0] = os.path.basename(self._dirName)
+    
     def dirName(self):
         """
         Public method returning the directory name.
@@ -653,19 +663,20 @@ class ProjectBrowserModel(BrowserModel):
         if itm is None:
             return
         
-        if itm.isLazyPopulated() and not itm.isPopulated():
-            # item is not populated yet, nothing to do
-            return
-        
-        if itm.childCount():
-            index = self.createIndex(itm.row(), 0, itm)
-            self.beginRemoveRows(index, 0, itm.childCount() - 1)
-            itm.removeChildren()
-            self.endRemoveRows()
-            Utilities.ModuleParser.resetParsedModule(\
-                os.path.join(self.project.ppath, name))
+        if itm.isLazyPopulated():
+            if not itm.isPopulated():
+                # item is not populated yet, nothing to do
+                return
             
-            self.populateItem(itm, True)
+            if itm.childCount():
+                index = self.createIndex(itm.row(), 0, itm)
+                self.beginRemoveRows(index, 0, itm.childCount() - 1)
+                itm.removeChildren()
+                self.endRemoveRows()
+                Utilities.ModuleParser.resetParsedModule(\
+                    os.path.join(self.project.ppath, name))
+                
+                self.populateItem(itm, True)
     
     def projectPropertiesChanged(self):
         """

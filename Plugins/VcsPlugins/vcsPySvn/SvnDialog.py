@@ -138,5 +138,7 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
     def hasAddOrDelete(self):
         """
         Public method to check, if the last action contained an add or delete.
+        
+        @return flag indicating the presence of an add or delete (boolean)
         """
         return self.__hasAddOrDelete

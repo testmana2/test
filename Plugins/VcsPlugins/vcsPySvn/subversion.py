@@ -791,6 +791,7 @@ class Subversion(VersionControl):
         rx_prot = QRegExp('(file:|svn:|svn+ssh:|http:|https:).+')
         opts = self.options['global']
         res = False
+        
         if noDialog:
             if target is None:
                 return False
@@ -801,6 +802,11 @@ class Subversion(VersionControl):
             accepted = (dlg.exec_() == QDialog.Accepted)
             if accepted:
                 target, force = dlg.getData()
+        
+        if not rx_prot.exactMatch(target):
+            isDir = os.path.isdir(name)
+        else:
+            isDir = False
         
         if accepted:
             client = self.getClient()
@@ -834,12 +840,12 @@ class Subversion(VersionControl):
                 dlg.exec_()
             if res and not rx_prot.exactMatch(target):
                 if target.startswith(project.getProjectPath()):
-                    if os.path.isdir(name):
+                    if isDir:
                         project.moveDirectory(name, target)
                     else:
                         project.renameFileInPdata(name, target)
                 else:
-                    if os.path.isdir(name):
+                    if isDir:
                         project.removeDirectory(name)
                     else:
                         project.removeFile(name)

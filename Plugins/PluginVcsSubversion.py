@@ -183,11 +183,10 @@ class VcsSubversionPlugin(object):
     
     def getPreferences(self, key):
         """
-        Public method to retrieve the various refactoring settings.
+        Public method to retrieve the various settings.
         
         @param key the key of the value to get
-        @param prefClass preferences class used as the storage area
-        @return the requested refactoring setting
+        @return the requested setting
         """
         if key in ["StopLogOnCopy"]:
             return Preferences.toBool(Preferences.Prefs.settings.value(
@@ -203,11 +202,10 @@ class VcsSubversionPlugin(object):
     
     def setPreferences(self, key, value):
         """
-        Public method to store the various refactoring settings.
+        Public method to store the various settings.
         
         @param key the key of the setting to be set
         @param value the value to be set
-        @param prefClass preferences class used as the storage area
         """
         Preferences.Prefs.settings.setValue("Subversion/" + key, value)
     
