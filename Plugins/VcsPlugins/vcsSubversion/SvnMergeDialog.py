@@ -74,7 +74,7 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
         
     def getParameters(self):
         """
-        Public method to retrieve the tag data.
+        Public method to retrieve the merge data.
         
         @return tuple naming two tag names or two revisions, a target and
             a flag indicating a forced merge (string, string, string, boolean)
