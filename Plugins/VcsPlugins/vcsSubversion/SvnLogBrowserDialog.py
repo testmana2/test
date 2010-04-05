@@ -252,6 +252,9 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         
         @param fn filename to show the log for (string)
         """
+        self.errorGroup.hide()
+        QApplication.processEvents()
+        
         self.filename = fn
         self.dname, self.fname = self.vcs.splitPath(fn)
         
@@ -396,6 +399,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         error pane.
         """
         if self.process is not None:
+            self.errorGroup.show()
             s = str(self.process.readAllStandardError(), 
                      Preferences.getSystem("IOEncoding"), 
                      'replace')
@@ -586,7 +590,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         Private slot called, when the stop on copy/move checkbox is clicked
         """
         self.vcs.getPlugin().setPreferences("StopLogOnCopy", 
-                                            int(self.stopCheckBox.isChecked()))
+                                            self.stopCheckBox.isChecked())
         self.nextButton.setEnabled(True)
         self.limitSpinBox.setEnabled(True)
     
@@ -615,6 +619,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         else:
             self.errors.insertPlainText(input)
             self.errors.ensureCursorVisible()
+        self.errorGroup.show()
         
         self.process.write(input)
         
