@@ -426,6 +426,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         project = e5App().getObject("Project")
         for name in names:
             project.getModel().updateVCSStatus(name)
+        self.vcs.checkVCSStatus()
 
     def __revert(self):
         """
@@ -441,6 +442,10 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         
         self.vcs.vcsRevert(names)
         self.on_refreshButton_clicked()
+        
+        project = e5App().getObject("Project")
+        for name in names:
+            project.getModel().updateVCSStatus(name)
         self.vcs.checkVCSStatus()
         
     def __lock(self):
