@@ -634,10 +634,10 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self._VCSRevert)
-        self.vcsDirMenuActions.append(act)
+        self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsMerge.png"),
             self.trUtf8('Merge changes'), self._VCSMerge)
-        self.vcsDirMenuActions.append(act)
+        self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Resolve conflict'), self.__SVNResolve)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
