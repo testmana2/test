@@ -148,16 +148,14 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         Private method to resize the list columns.
         """
         self.blameList.header().resizeSections(QHeaderView.ResizeToContents)
-        self.blameList.header().setStretchLastSection(True)
         
     def __generateItem(self, revision, author, text):
         """
-        Private method to generate a tag item in the taglist.
+        Private method to generate a blame item in the blame list.
         
         @param revision revision string (string)
-        @param author author of the tag (string)
-        @param date date of the tag (string)
-        @param name name (path) of the tag (string)
+        @param author author of the change (string)
+        @param text line of text from the annotated file (string)
         """
         itm = QTreeWidgetItem(self.blameList, 
             [revision, author, "%d" % self.lineno, text])
