@@ -634,7 +634,12 @@ def direntries(path, filesonly=False, pattern=None, followsymlinks=True, checkSt
             if checkStop and checkStop():
                 break
             
-            if entry in ['CVS', '.svn', '_svn', '.hg', '.ropeproject']:
+            if entry in ['CVS', 'cvs', 
+                         '.svn', '_svn', 
+                         '.hg', '_hg', 
+                         '.ropeproject', '_ropeproject',
+                         '.eric5project', '_eric5project', 
+                         '.issues', '_issues']:
                 continue
             
             fentry = os.path.join(path, entry)
