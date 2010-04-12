@@ -770,6 +770,32 @@
     <Source>Cooperation/CooperationClient.py</Source>
     <Source>Cooperation/CooperationServer.py</Source>
     <Source>Preferences/ConfigurationPages/CooperationPage.py</Source>
+    <Source>Plugins/PluginVcsMercurial.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/__init__.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/hg.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/Config.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgUtilities.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/__init__.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgStatusMonitorThread.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgTagDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgCommandDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -975,6 +1001,23 @@
     <Form>Preferences/ConfigurationPages/EditorKeywordsPage.ui</Form>
     <Form>Cooperation/ChatWidget.ui</Form>
     <Form>Preferences/ConfigurationPages/CooperationPage.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgLogDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgCommandDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
@@ -1056,6 +1099,8 @@
     <Other>APIs/Python3/eric5.api</Other>
     <Other>.issues</Other>
     <Other>eric5.desktop</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/icons/mercurial.png</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/icons/preferences-mercurial.png</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

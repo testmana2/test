@@ -85,7 +85,7 @@ object
 <td>Public method to get the filename of the config file.</td>
 </tr><tr>
 <td><a href="#VcsSubversionPlugin.getPreferences">getPreferences</a></td>
-<td>Public method to retrieve the various refactoring settings.</td>
+<td>Public method to retrieve the various settings.</td>
 </tr><tr>
 <td><a href="#VcsSubversionPlugin.getProjectHelper">getProjectHelper</a></td>
 <td>Public method to get a reference to the project helper object.</td>
@@ -97,7 +97,7 @@ object
 <td>Public method to prepare for an uninstallation.</td>
 </tr><tr>
 <td><a href="#VcsSubversionPlugin.setPreferences">setPreferences</a></td>
-<td>Public method to store the various refactoring settings.</td>
+<td>Public method to store the various settings.</td>
 </tr>
 </table>
 <a NAME="VcsSubversionPlugin.__init__" ID="VcsSubversionPlugin.__init__"></a>
@@ -140,19 +140,16 @@ filename of the config file (string)
 <h4>VcsSubversionPlugin.getPreferences</h4>
 <b>getPreferences</b>(<i>key</i>)
 <p>
-        Public method to retrieve the various refactoring settings.
+        Public method to retrieve the various settings.
 </p><dl>
 <dt><i>key</i></dt>
 <dd>
 the key of the value to get
-</dd><dt><i>prefClass</i></dt>
-<dd>
-preferences class used as the storage area
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-the requested refactoring setting
+the requested setting
 </dd>
 </dl><a NAME="VcsSubversionPlugin.getProjectHelper" ID="VcsSubversionPlugin.getProjectHelper"></a>
 <h4>VcsSubversionPlugin.getProjectHelper</h4>
@@ -183,7 +180,7 @@ filename of the servers file (string)
 <h4>VcsSubversionPlugin.setPreferences</h4>
 <b>setPreferences</b>(<i>key, value</i>)
 <p>
-        Public method to store the various refactoring settings.
+        Public method to store the various settings.
 </p><dl>
 <dt><i>key</i></dt>
 <dd>
@@ -191,9 +188,6 @@ the key of the setting to be set
 </dd><dt><i>value</i></dt>
 <dd>
 the value to be set
-</dd><dt><i>prefClass</i></dt>
-<dd>
-preferences class used as the storage area
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

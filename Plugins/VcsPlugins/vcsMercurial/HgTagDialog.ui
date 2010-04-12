@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HgTagDialog</class>
+ <widget class="QDialog" name="HgTagDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>189</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Subversion Tag</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout">
+   <item row="2" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="tagCombo">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Enter the name of the tag</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;b&gt;Tag Name&lt;/b&gt;
+&lt;p&gt;Enter the name of the tag to be created, moved or deleted.&lt;/p&gt;</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="autoCompletion">
+      <bool>true</bool>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="TextLabel1">
+     <property name="text">
+      <string>Name:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QGroupBox" name="TagActionGroup">
+     <property name="title">
+      <string>Tag Action</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <item>
+       <widget class="QRadioButton" name="createRegularButton">
+        <property name="toolTip">
+         <string>Select to create a regular tag</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Create Regular Tag&lt;/b&gt;
+&lt;p&gt;Select this entry in order to create a regular tag.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Create Regular Tag</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="createLocalButton">
+        <property name="toolTip">
+         <string>Select to create a local tag</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Create Local Tag&lt;/b&gt;
+&lt;p&gt;Select this entry in order to create a local tag.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Create Local Tag</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="deleteButton">
+        <property name="toolTip">
+         <string>Select to delete a tag</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Delete Tag&lt;/b&gt;
+&lt;p&gt;Select this entry in order to delete the selected tag.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Delete Tag</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <tabstops>
+  <tabstop>tagCombo</tabstop>
+  <tabstop>createRegularButton</tabstop>
+  <tabstop>createLocalButton</tabstop>
+  <tabstop>deleteButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>HgTagDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>25</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>HgTagDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -61,7 +61,7 @@ QDialog, Ui_SvnBlameDialog
 <td>Private slot called when the process finished or the user pressed the button.</td>
 </tr><tr>
 <td><a href="#SvnBlameDialog.__generateItem">__generateItem</a></td>
-<td>Private method to generate a tag item in the taglist.</td>
+<td>Private method to generate a blame item in the blame list.</td>
 </tr><tr>
 <td><a href="#SvnBlameDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
@@ -119,20 +119,17 @@ parent widget (QWidget)
 <h4>SvnBlameDialog.__generateItem</h4>
 <b>__generateItem</b>(<i>revision, author, text</i>)
 <p>
-        Private method to generate a tag item in the taglist.
+        Private method to generate a blame item in the blame list.
 </p><dl>
 <dt><i>revision</i></dt>
 <dd>
 revision string (string)
 </dd><dt><i>author</i></dt>
 <dd>
-author of the tag (string)
-</dd><dt><i>date</i></dt>
+author of the change (string)
+</dd><dt><i>text</i></dt>
 <dd>
-date of the tag (string)
-</dd><dt><i>name</i></dt>
-<dd>
-name (path) of the tag (string)
+line of text from the annotated file (string)
 </dd>
 </dl><a NAME="SvnBlameDialog.__procFinished" ID="SvnBlameDialog.__procFinished"></a>
 <h4>SvnBlameDialog.__procFinished</h4>
