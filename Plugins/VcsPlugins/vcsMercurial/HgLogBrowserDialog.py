@@ -57,6 +57,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
+        self.__parentsRole = Qt.UserRole + 2
         
         self.process = QProcess()
         self.connect(self.process, SIGNAL('finished(int, QProcess::ExitStatus)'),
@@ -122,7 +123,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.filesTree.sortItems(sortColumn, 
             self.filesTree.header().sortIndicatorOrder())
     
-    def __generateLogItem(self, author, date, message, revision, changedPaths):
+    def __generateLogItem(self, author, date, message, revision, changedPaths, parents):
         """
         Private method to generate a log tree entry.
         
@@ -131,7 +132,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param message text of the log message (list of strings)
         @param revision revision info (string)
         @param changedPaths list of dictionary objects containing
-            info about the changed files/directories 
+            info about the changed files/directories
+        @param parents list of parent revisions (list of integers)
         @return reference to the generated item (QTreeWidgetItem)
         """
         msg = []
@@ -148,6 +150,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         itm.setData(0, self.__messageRole, message)
         itm.setData(0, self.__changesRole, changedPaths)
+        itm.setData(0, self.__parentsRole, parents)
         
         itm.setTextAlignment(0, Qt.AlignLeft)
         itm.setTextAlignment(1, Qt.AlignLeft)
@@ -215,6 +218,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         args.append('--template')
         args.append("change|{rev}:{node|short}\n"
                     "user|{author}\n"
+                    "parents|{parents}\n"
                     "date|{date|isodate}\n"
                     "description|{desc}\n"
                     "file_adds|{file_adds}\n"
@@ -310,6 +314,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     log["revision"] = value.strip()
                 elif key == "user":
                     log["author"] = value.strip()
+                elif key == "parents":
+                    log["parents"] = [int(x) for x in value.strip().split()]
                 elif key == "date":
                     log["date"] = " ".join(value.strip().split()[:2])
                 elif key == "description":
@@ -341,7 +347,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             else:
                 if len(log) > 1:
                     self.__generateLogItem(log["author"], log["date"], 
-                        log["message"], log["revision"], changedPaths)
+                        log["message"], log["revision"], changedPaths,
+                        log["parents"])
                     dt = QDate.fromString(log["date"], Qt.ISODate)
                     if not self.__maxDate.isValid() and not self.__minDate.isValid():
                         self.__maxDate = dt
