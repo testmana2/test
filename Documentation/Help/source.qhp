@@ -7963,11 +7963,15 @@
       <keyword name="HgLogBrowserDialog (Module)" id="HgLogBrowserDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html" />
       <keyword name="HgLogBrowserDialog" id="HgLogBrowserDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog" />
       <keyword name="HgLogBrowserDialog (Constructor)" id="HgLogBrowserDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__init__" />
+      <keyword name="HgLogBrowserDialog.__branchColor" id="HgLogBrowserDialog.__branchColor" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__branchColor" />
       <keyword name="HgLogBrowserDialog.__diffRevisions" id="HgLogBrowserDialog.__diffRevisions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__diffRevisions" />
       <keyword name="HgLogBrowserDialog.__filterLogs" id="HgLogBrowserDialog.__filterLogs" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__filterLogs" />
       <keyword name="HgLogBrowserDialog.__finish" id="HgLogBrowserDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__finish" />
+      <keyword name="HgLogBrowserDialog.__generateEdges" id="HgLogBrowserDialog.__generateEdges" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__generateEdges" />
       <keyword name="HgLogBrowserDialog.__generateFileItem" id="HgLogBrowserDialog.__generateFileItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__generateFileItem" />
+      <keyword name="HgLogBrowserDialog.__generateIcon" id="HgLogBrowserDialog.__generateIcon" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__generateIcon" />
       <keyword name="HgLogBrowserDialog.__generateLogItem" id="HgLogBrowserDialog.__generateLogItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__generateLogItem" />
+      <keyword name="HgLogBrowserDialog.__getColor" id="HgLogBrowserDialog.__getColor" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getColor" />
       <keyword name="HgLogBrowserDialog.__getLogEntries" id="HgLogBrowserDialog.__getLogEntries" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getLogEntries" />
       <keyword name="HgLogBrowserDialog.__procFinished" id="HgLogBrowserDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__procFinished" />
       <keyword name="HgLogBrowserDialog.__processBuffer" id="HgLogBrowserDialog.__processBuffer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__processBuffer" />
@@ -7976,8 +7980,8 @@
       <keyword name="HgLogBrowserDialog.__resizeColumnsFiles" id="HgLogBrowserDialog.__resizeColumnsFiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resizeColumnsFiles" />
       <keyword name="HgLogBrowserDialog.__resizeColumnsLog" id="HgLogBrowserDialog.__resizeColumnsLog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resizeColumnsLog" />
       <keyword name="HgLogBrowserDialog.__resortFiles" id="HgLogBrowserDialog.__resortFiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resortFiles" />
-      <keyword name="HgLogBrowserDialog.__resortLog" id="HgLogBrowserDialog.__resortLog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resortLog" />
       <keyword name="HgLogBrowserDialog.closeEvent" id="HgLogBrowserDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.closeEvent" />
+      <keyword name="HgLogBrowserDialog.col2x" id="HgLogBrowserDialog.col2x" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.col2x" />
       <keyword name="HgLogBrowserDialog.keyPressEvent" id="HgLogBrowserDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.keyPressEvent" />
       <keyword name="HgLogBrowserDialog.on_buttonBox_clicked" id="HgLogBrowserDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_buttonBox_clicked" />
       <keyword name="HgLogBrowserDialog.on_clearRxEditButton_clicked" id="HgLogBrowserDialog.on_clearRxEditButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_clearRxEditButton_clicked" />

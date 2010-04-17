@@ -26,7 +26,7 @@ Module implementing a dialog to browse the log history.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>COLORNAMES</td></tr><tr><td>COLORS</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -49,13 +49,16 @@ Module implementing a dialog to browse the log history.
 QDialog, Ui_HgLogBrowserDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>AuthorColumn</td></tr><tr><td>BranchColumn</td></tr><tr><td>DateColumn</td></tr><tr><td>IconColumn</td></tr><tr><td>MessageColumn</td></tr><tr><td>RevisionColumn</td></tr><tr><td>TagsColumn</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
 <tr>
 <td><a href="#HgLogBrowserDialog.__init__">HgLogBrowserDialog</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__branchColor">__branchColor</a></td>
+<td>Private method to calculate a color for a given branch name.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__diffRevisions">__diffRevisions</a></td>
 <td>Private method to do a diff of two revisions.</td>
@@ -66,11 +69,20 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__finish">__finish</a></td>
 <td>Private slot called when the process finished or the user pressed the button.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__generateEdges">__generateEdges</a></td>
+<td>Private method to generate edge info for the give data.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__generateFileItem">__generateFileItem</a></td>
 <td>Private method to generate a changed files tree entry.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__generateIcon">__generateIcon</a></td>
+<td>Private method to generate an icon containing the revision tree for the given data.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__generateLogItem">__generateLogItem</a></td>
 <td>Private method to generate a log tree entry.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__getColor">__getColor</a></td>
+<td>Private method to get the (rotating) name of the color given an index.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__getLogEntries">__getLogEntries</a></td>
 <td>Private method to retrieve log entries from the repository.</td>
@@ -96,11 +108,11 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__resortFiles">__resortFiles</a></td>
 <td>Private method to resort the changed files tree.</td>
 </tr><tr>
-<td><a href="#HgLogBrowserDialog.__resortLog">__resortLog</a></td>
-<td>Private method to resort the log tree.</td>
-</tr><tr>
 <td><a href="#HgLogBrowserDialog.closeEvent">closeEvent</a></td>
 <td>Private slot implementing a close event handler.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.col2x">col2x</a></td>
+<td></td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.keyPressEvent">keyPressEvent</a></td>
 <td>Protected slot to handle a key press event.</td>
@@ -167,6 +179,21 @@ reference to the vcs object
 <dd>
 parent widget (QWidget)
 </dd>
+</dl><a NAME="HgLogBrowserDialog.__branchColor" ID="HgLogBrowserDialog.__branchColor"></a>
+<h4>HgLogBrowserDialog.__branchColor</h4>
+<b>__branchColor</b>(<i>branchName</i>)
+<p>
+        Private method to calculate a color for a given branch name.
+</p><dl>
+<dt><i>branchName</i></dt>
+<dd>
+name of the branch (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+name of the color to use (string)
+</dd>
 </dl><a NAME="HgLogBrowserDialog.__diffRevisions" ID="HgLogBrowserDialog.__diffRevisions"></a>
 <h4>HgLogBrowserDialog.__diffRevisions</h4>
 <b>__diffRevisions</b>(<i>rev1, rev2</i>)
@@ -190,7 +217,28 @@ second revision number (integer)
 <b>__finish</b>(<i></i>)
 <p>
         Private slot called when the process finished or the user pressed the button.
-</p><a NAME="HgLogBrowserDialog.__generateFileItem" ID="HgLogBrowserDialog.__generateFileItem"></a>
+</p><a NAME="HgLogBrowserDialog.__generateEdges" ID="HgLogBrowserDialog.__generateEdges"></a>
+<h4>HgLogBrowserDialog.__generateEdges</h4>
+<b>__generateEdges</b>(<i>rev, parents</i>)
+<p>
+        Private method to generate edge info for the give data.
+</p><dl>
+<dt><i>rev</i></dt>
+<dd>
+revision to calculate edge info for (integer)
+</dd><dt><i>parents</i></dt>
+<dd>
+list of parent revisions (list of integers)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple containing the column and color index for
+            the given node and a list of tuples indicating the edges
+            between the given node and its parents 
+            (integer, integer, [(integer, integer, integer), ...])
+</dd>
+</dl><a NAME="HgLogBrowserDialog.__generateFileItem" ID="HgLogBrowserDialog.__generateFileItem"></a>
 <h4>HgLogBrowserDialog.__generateFileItem</h4>
 <b>__generateFileItem</b>(<i>action, path</i>)
 <p>
@@ -208,9 +256,39 @@ path of the file in the repository (string)
 <dd>
 reference to the generated item (QTreeWidgetItem)
 </dd>
+</dl><a NAME="HgLogBrowserDialog.__generateIcon" ID="HgLogBrowserDialog.__generateIcon"></a>
+<h4>HgLogBrowserDialog.__generateIcon</h4>
+<b>__generateIcon</b>(<i>column, color, bottomedges, topedges, dotColor</i>)
+<p>
+        Private method to generate an icon containing the revision tree for the
+        given data.
+</p><dl>
+<dt><i>column</i></dt>
+<dd>
+column index of the revision (integer)
+</dd><dt><i>color</i></dt>
+<dd>
+color of the node (integer)
+</dd><dt><i>bottomedges</i></dt>
+<dd>
+list of edges for the bottom of the node
+            (list of tuples of three integers)
+</dd><dt><i>topedges</i></dt>
+<dd>
+list of edges for the top of the node
+            (list of tuples of three integers)
+</dd><dt><i>dotColor</i></dt>
+<dd>
+color to be used for the dot (QColor)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+icon for the node (QIcon)
+</dd>
 </dl><a NAME="HgLogBrowserDialog.__generateLogItem" ID="HgLogBrowserDialog.__generateLogItem"></a>
 <h4>HgLogBrowserDialog.__generateLogItem</h4>
-<b>__generateLogItem</b>(<i>author, date, message, revision, changedPaths</i>)
+<b>__generateLogItem</b>(<i>author, date, message, revision, changedPaths, parents, branches, tags</i>)
 <p>
         Private method to generate a log tree entry.
 </p><dl>
@@ -229,12 +307,36 @@ revision info (string)
 </dd><dt><i>changedPaths</i></dt>
 <dd>
 list of dictionary objects containing
-            info about the changed files/directories 
+            info about the changed files/directories
+</dd><dt><i>parents</i></dt>
+<dd>
+list of parent revisions (list of integers)
+</dd><dt><i>branches</i></dt>
+<dd>
+list of branches (list of strings)
+</dd><dt><i>tags</i></dt>
+<dd>
+list of tags (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
 reference to the generated item (QTreeWidgetItem)
+</dd>
+</dl><a NAME="HgLogBrowserDialog.__getColor" ID="HgLogBrowserDialog.__getColor"></a>
+<h4>HgLogBrowserDialog.__getColor</h4>
+<b>__getColor</b>(<i>n</i>)
+<p>
+        Private method to get the (rotating) name of the color given an index.
+</p><dl>
+<dt><i>n</i></dt>
+<dd>
+color index (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+color name (string)
 </dd>
 </dl><a NAME="HgLogBrowserDialog.__getLogEntries" ID="HgLogBrowserDialog.__getLogEntries"></a>
 <h4>HgLogBrowserDialog.__getLogEntries</h4>
@@ -294,11 +396,6 @@ exit status of the process (QProcess.ExitStatus)
 <b>__resortFiles</b>(<i></i>)
 <p>
         Private method to resort the changed files tree.
-</p><a NAME="HgLogBrowserDialog.__resortLog" ID="HgLogBrowserDialog.__resortLog"></a>
-<h4>HgLogBrowserDialog.__resortLog</h4>
-<b>__resortLog</b>(<i></i>)
-<p>
-        Private method to resort the log tree.
 </p><a NAME="HgLogBrowserDialog.closeEvent" ID="HgLogBrowserDialog.closeEvent"></a>
 <h4>HgLogBrowserDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
@@ -309,7 +406,10 @@ exit status of the process (QProcess.ExitStatus)
 <dd>
 close event (QCloseEvent)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.keyPressEvent" ID="HgLogBrowserDialog.keyPressEvent"></a>
+</dl><a NAME="HgLogBrowserDialog.col2x" ID="HgLogBrowserDialog.col2x"></a>
+<h4>HgLogBrowserDialog.col2x</h4>
+<b>col2x</b>(<i>radius</i>)
+<a NAME="HgLogBrowserDialog.keyPressEvent" ID="HgLogBrowserDialog.keyPressEvent"></a>
 <h4>HgLogBrowserDialog.keyPressEvent</h4>
 <b>keyPressEvent</b>(<i>evt</i>)
 <p>

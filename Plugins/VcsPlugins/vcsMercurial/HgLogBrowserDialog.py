@@ -9,9 +9,10 @@ Module implementing a dialog to browse the log history.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, SIGNAL, Qt, QDate, QProcess, QTimer, QRegExp
+from PyQt4.QtCore import pyqtSlot, SIGNAL, Qt, QDate, QProcess, QTimer, QRegExp, QSize
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
-    QApplication, QMessageBox, QCursor, QWidget, QLineEdit
+    QApplication, QMessageBox, QCursor, QWidget, QLineEdit, QColor, QPixmap, \
+    QPainter, QPen, QBrush, QIcon
 
 from .Ui_HgLogBrowserDialog import Ui_HgLogBrowserDialog
 from .HgDiffDialog import HgDiffDialog
@@ -20,10 +21,23 @@ import UI.PixmapCache
 
 import Preferences
 
+COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
+              "cyan", "olive", "magenta", "darkred", "darkmagenta",
+              "darkcyan", "gray", "yellow"]
+COLORS = [str(QColor(x).name()) for x in COLORNAMES]
+
 class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
+    IconColumn     = 0
+    BranchColumn   = 1
+    RevisionColumn = 2
+    AuthorColumn   = 3
+    DateColumn     = 4
+    MessageColumn  = 5
+    TagsColumn     = 6
+    
     def __init__(self, vcs, parent = None):
         """
         Constructor
@@ -57,7 +71,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
-        self.__parentsRole = Qt.UserRole + 2
+        self.__edgesRole   = Qt.UserRole + 2
         
         self.process = QProcess()
         self.connect(self.process, SIGNAL('finished(int, QProcess::ExitStatus)'),
@@ -77,6 +91,18 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.diff = None
         self.__started = False
         self.__lastRev = 0
+        
+        # attributes to store log graph data
+        self.__revs = []
+        self.__revColors = {}
+        self.__revColor = 0
+        
+        self.__dotRadius = 8
+        self.__rowHeight = 20
+        
+        self.__branchColors = {}
+        
+        self.logTree.setIconSize(QSize(100 * self.__rowHeight, self.__rowHeight))
     
     def closeEvent(self, e):
         """
@@ -99,13 +125,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.logTree.header().resizeSections(QHeaderView.ResizeToContents)
         self.logTree.header().setStretchLastSection(True)
     
-    def __resortLog(self):
-        """
-        Private method to resort the log tree.
-        """
-        self.logTree.sortItems(self.logTree.sortColumn(), 
-            self.logTree.header().sortIndicatorOrder())
-    
     def __resizeColumnsFiles(self):
         """
         Private method to resize the changed files tree columns.
@@ -123,7 +142,139 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.filesTree.sortItems(sortColumn, 
             self.filesTree.header().sortIndicatorOrder())
     
-    def __generateLogItem(self, author, date, message, revision, changedPaths, parents):
+    def __getColor(self, n):
+        """
+        Private method to get the (rotating) name of the color given an index.
+        
+        @param n color index (integer)
+        @return color name (string)
+        """
+        return COLORS[n % len(COLORS)]
+    
+    def __branchColor(self, branchName):
+        """
+        Private method to calculate a color for a given branch name.
+        
+        @param branchName name of the branch (string)
+        @return name of the color to use (string)
+        """
+        if branchName not in self.__branchColors:
+            self.__branchColors[branchName] = self.__getColor(len(self.__branchColors))
+        return self.__branchColors[branchName]
+    
+    def __generateEdges(self, rev, parents):
+        """
+        Private method to generate edge info for the give data.
+        
+        @param rev revision to calculate edge info for (integer)
+        @param parents list of parent revisions (list of integers)
+        @return tuple containing the column and color index for
+            the given node and a list of tuples indicating the edges
+            between the given node and its parents 
+            (integer, integer, [(integer, integer, integer), ...])
+        """
+        if not parents:
+            parents = [rev - 1]
+        
+        if rev not in self.__revs:
+            # new head
+            self.__revs.append(rev)
+            self.__revColors[rev] = self.__revColor
+            self.__revColor += 1
+        
+        col = self.__revs.index(rev)
+        color = self.__revColors.pop(rev)
+        next = self.__revs[:]
+        
+        # add parents to next
+        addparents = [p for p in parents if p not in next]
+        next[col:col + 1] = addparents
+        
+        # set colors for the parents
+        for i, p in enumerate(addparents):
+            if not i:
+                self.__revColors[p] = color
+            else:
+                self.__revColors[p] = self.__revColor
+                self.__revColor += 1
+        
+        # add edges to the graph
+        edges = []
+        if rev:
+            for ecol, erev in enumerate(self.__revs):
+                if erev in next:
+                    edges.append((ecol, next.index(erev), self.__revColors[erev]))
+                elif erev == rev:
+                    for p in parents:
+                        edges.append((ecol, next.index(p), self.__revColors[p]))
+        
+        self.__revs = next
+        return col, color, edges
+    
+    def __generateIcon(self, column, color, bottomedges, topedges, dotColor):
+        """
+        Private method to generate an icon containing the revision tree for the
+        given data.
+        
+        @param column column index of the revision (integer)
+        @param color color of the node (integer)
+        @param bottomedges list of edges for the bottom of the node 
+            (list of tuples of three integers)
+        @param topedges list of edges for the top of the node 
+            (list of tuples of three integers)
+        @param dotColor color to be used for the dot (QColor)
+        @return icon for the node (QIcon)
+        """
+        def col2x(col, radius):
+            return int(1.2 * radius) * col + radius // 2 + 3
+        
+        radius = self.__dotRadius
+        w = len(bottomedges) * radius + 20
+        h = self.__rowHeight
+
+        dot_x = col2x(column, radius) - radius // 2
+        dot_y = h // 2
+
+        pix = QPixmap(w, h)
+        pix.fill(QColor(0, 0, 0, 0))
+        painter = QPainter(pix)
+        painter.setRenderHint(QPainter.Antialiasing)
+
+        pen = QPen(Qt.blue)
+        pen.setWidth(2)
+        painter.setPen(pen)
+
+        lpen = QPen(pen)
+        lpen.setColor(Qt.black)
+        painter.setPen(lpen)
+
+        for y1, y2, lines in ((0, h, bottomedges),
+                              (-h, 0, topedges)):
+            if lines:
+                for start, end, ecolor in lines:
+                    lpen = QPen(pen)
+                    lpen.setColor(QColor(self.__getColor(ecolor)))
+                    lpen.setWidth(2)
+                    painter.setPen(lpen)
+                    x1 = col2x(start, radius)
+                    x2 = col2x(end, radius)
+                    painter.drawLine(x1, dot_y + y1, x2, dot_y + y2)
+
+        penradius = 1
+        pencolor = Qt.black
+
+        dot_y = (h // 2) - radius // 2
+
+        painter.setBrush(dotColor)
+        pen = QPen(pencolor)
+        pen.setWidth(penradius)
+        painter.setPen(pen)
+        painter.drawEllipse(dot_x, dot_y, radius, radius)
+        painter.end()
+        return QIcon(pix)
+    
+    def __generateLogItem(self, author, date, message, revision, changedPaths, parents, 
+                          branches, tags):
         """
         Private method to generate a log tree entry.
         
@@ -134,6 +285,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param changedPaths list of dictionary objects containing
             info about the changed files/directories
         @param parents list of parent revisions (list of integers)
+        @param branches list of branches (list of strings)
+        @param tags list of tags (string)
         @return reference to the generated item (QTreeWidgetItem)
         """
         msg = []
@@ -142,21 +295,35 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         rev, node = revision.split(":")
         itm = QTreeWidgetItem(self.logTree, [
+            "", 
+            branches[0], 
             "{0:>7}:{1}".format(rev, node), 
             author, 
             date, 
-            " ".join(msg), 
+            " ".join(msg[:1]), 
+            ", ".join(tags), 
         ])
+        
+        itm.setForeground(self.BranchColumn, 
+                          QBrush(QColor(self.__branchColor(branches[0]))))
+        
+        column, color, edges = self.__generateEdges(int(rev), parents)
         
         itm.setData(0, self.__messageRole, message)
         itm.setData(0, self.__changesRole, changedPaths)
-        itm.setData(0, self.__parentsRole, parents)
+        itm.setData(0, self.__edgesRole, edges)
         
-        itm.setTextAlignment(0, Qt.AlignLeft)
-        itm.setTextAlignment(1, Qt.AlignLeft)
-        itm.setTextAlignment(2, Qt.AlignLeft)
-        itm.setTextAlignment(3, Qt.AlignLeft)
-        itm.setTextAlignment(4, Qt.AlignLeft)
+        if self.fname == "." and self.dname == self.repodir:
+            if self.logTree.topLevelItemCount() > 1:
+                topedges = \
+                    self.logTree.topLevelItem(self.logTree.indexOfTopLevelItem(itm) - 1)\
+                    .data(0, self.__edgesRole)
+            else:
+                topedges = None
+            
+            icon = self.__generateIcon(column, color, edges, topedges, 
+                                       QColor(self.__branchColor(branches[0])))
+            itm.setIcon(0, icon)
         
         try:
             self.__lastRev = int(revision.split(":")[0])
@@ -217,13 +384,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             args.append('--follow')
         args.append('--template')
         args.append("change|{rev}:{node|short}\n"
-                    "user|{author}\n"
+                    "user|{email}\n"
                     "parents|{parents}\n"
                     "date|{date|isodate}\n"
                     "description|{desc}\n"
                     "file_adds|{file_adds}\n"
                     "files_mods|{file_mods}\n"
                     "file_dels|{file_dels}\n"
+                    "branches|{branches}\n"
+                    "tags|{tags}\n"
                     "@@@\n")
         if self.fname != "." or self.dname != self.repodir:
             args.append(self.filename)
@@ -315,7 +484,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 elif key == "user":
                     log["author"] = value.strip()
                 elif key == "parents":
-                    log["parents"] = [int(x) for x in value.strip().split()]
+                    log["parents"] = \
+                        [int(x.split(":", 1)[0]) for x in value.strip().split()]
                 elif key == "date":
                     log["date"] = " ".join(value.strip().split()[:2])
                 elif key == "description":
@@ -341,6 +511,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                                 "action" : "D", 
                                 "path"   : f, 
                             })
+                elif key == "branches":
+                    if value.strip():
+                        log["branches"] = value.strip().split()
+                    else:
+                        log["branches"] = ["default"]
+                elif key == "tags":
+                    log["tags"] = value.strip().split()
                 else:
                     if value.strip():
                         log["message"].append(value.strip())
@@ -348,7 +525,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 if len(log) > 1:
                     self.__generateLogItem(log["author"], log["date"], 
                         log["message"], log["revision"], changedPaths,
-                        log["parents"])
+                        log["parents"], log["branches"], log["tags"])
                     dt = QDate.fromString(log["date"], Qt.ISODate)
                     if not self.__maxDate.isValid() and not self.__minDate.isValid():
                         self.__maxDate = dt
@@ -364,7 +541,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.logTree.doItemsLayout()
         self.__resizeColumnsLog()
-        self.__resortLog()
         
         if self.__started:
             self.logTree.setCurrentItem(self.logTree.topLevelItem(0))
@@ -486,13 +662,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if itm is None:
             self.diffPreviousButton.setEnabled(False)
             return
-        rev2 = int(itm.text(0).split(":")[0])
+        rev2 = int(itm.text(self.RevisionColumn).split(":")[0])
         
         itm = self.logTree.topLevelItem(self.logTree.indexOfTopLevelItem(itm) + 1)
         if itm is None:
             self.diffPreviousButton.setEnabled(False)
             return
-        rev1 = int(itm.text(0).split(":")[0])
+        rev1 = int(itm.text(self.RevisionColumn).split(":")[0])
         
         self.__diffRevisions(rev1, rev2)
     
@@ -506,8 +682,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.diffRevisionsButton.setEnabled(False)
             return
         
-        rev2 = int(items[0].text(0).split(":")[0])
-        rev1 = int(items[1].text(0).split(":")[0])
+        rev2 = int(items[0].text(self.RevisionColumn).split(":")[0])
+        rev1 = int(items[1].text(self.RevisionColumn).split(":")[0])
         
         self.__diffRevisions(min(rev1, rev2), max(rev1, rev2))
     
@@ -556,23 +732,24 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             to_ = self.toDate.date().addDays(1).toString("yyyy-MM-dd")
             txt = self.fieldCombo.currentText()
             if txt == self.trUtf8("Author"):
-                fieldIndex = 1
+                fieldIndex = self.AuthorColumn
                 searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
             elif txt == self.trUtf8("Revision"):
-                fieldIndex = 0
+                fieldIndex = self.RevisionColumn
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):
                     searchRx = QRegExp("^\s*%s" % txt[1:], Qt.CaseInsensitive)
                 else:
                     searchRx = QRegExp(txt, Qt.CaseInsensitive)
             else:
-                fieldIndex = 3
+                fieldIndex = self.MessageColumn
                 searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
             
             currentItem = self.logTree.currentItem()
             for topIndex in range(self.logTree.topLevelItemCount()):
                 topItem = self.logTree.topLevelItem(topIndex)
-                if topItem.text(2) <= to_ and topItem.text(2) >= from_ and \
+                if topItem.text(self.DateColumn) <= to_ and \
+                   topItem.text(self.DateColumn) >= from_ and \
                    searchRx.indexIn(topItem.text(fieldIndex)) > -1:
                     topItem.setHidden(False)
                     if topItem is currentItem:

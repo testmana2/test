@@ -111,12 +111,19 @@
      <property name="itemsExpandable">
       <bool>false</bool>
      </property>
-     <property name="sortingEnabled">
-      <bool>true</bool>
-     </property>
      <property name="allColumnsShowFocus">
       <bool>true</bool>
      </property>
+     <column>
+      <property name="text">
+       <string> </string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Branch</string>
+      </property>
+     </column>
      <column>
       <property name="text">
        <string>Revision</string>
@@ -135,6 +142,11 @@
      <column>
       <property name="text">
        <string>Message</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Tags</string>
       </property>
      </column>
     </widget>
