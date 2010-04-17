@@ -688,6 +688,7 @@ class Hg(VersionControl):
             args.append('--remove')
         args.append('--message')
         if tagOp != HgTagDialog.DeleteTag:
+            tag = tag.strip().replace(" ", "_")
             args.append("Created tag <{0}>.".format(tag))
         else:
             args.append("Removed tag <{0}>.".format(tag))
@@ -1462,7 +1463,7 @@ class Hg(VersionControl):
         if ok and name:
             args = []
             args.append('branch')
-            args.append(name)
+            args.append(name.strip().replace(" ", "_"))
             
             dia = HgDialog(self.trUtf8('Creating branch in the Mercurial repository'))
             res = dia.startProcess(args, repodir)
