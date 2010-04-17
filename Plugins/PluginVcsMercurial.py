@@ -143,6 +143,7 @@ class VcsMercurialPlugin(object):
         
         self.__mercurialDefaults = {
             "StopLogOnCopy"  : True, # used in log browser
+            "UseLogBrowser"  : True, 
             "LogLimit"       : 100, 
             "CommitMessages" : 20, 
         }
@@ -188,7 +189,7 @@ class VcsMercurialPlugin(object):
         @param key the key of the value to get
         @return the requested setting
         """
-        if key in ["StopLogOnCopy"]:
+        if key in ["StopLogOnCopy", "UseLogBrowser"]:
             return Preferences.toBool(Preferences.Prefs.settings.value(
                 "Mercurial/" + key, self.__mercurialDefaults[key]))
         elif key in ["LogLimit", "CommitMessages"]:

@@ -33,6 +33,7 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         # set initial values
         self.logSpinBox.setValue(self.__plugin.getPreferences("LogLimit"))
         self.commitSpinBox.setValue(self.__plugin.getPreferences("CommitMessages"))
+        self.logBrowserCheckBox.setChecked(self.__plugin.getPreferences("UseLogBrowser"))
     
     def save(self):
         """
@@ -40,6 +41,7 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         """
         self.__plugin.setPreferences("LogLimit", self.logSpinBox.value())
         self.__plugin.setPreferences("CommitMessages", self.commitSpinBox.value())
+        self.__plugin.setPreferences("UseLogBrowser", self.logBrowserCheckBox.isChecked())
     
     @pyqtSlot()
     def on_configButton_clicked(self):

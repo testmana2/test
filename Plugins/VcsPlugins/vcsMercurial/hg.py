@@ -1254,9 +1254,14 @@ class Hg(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
-        self.log = HgLogDialog(self, mode = "incoming")
-        self.log.show()
-        self.log.start(name)
+        if self.getPlugin().getPreferences("UseLogBrowser"):
+            self.logBrowser = HgLogBrowserDialog(self, mode = "incoming")
+            self.logBrowser.show()
+            self.logBrowser.start(name)
+        else:
+            self.log = HgLogDialog(self, mode = "incoming")
+            self.log.show()
+            self.log.start(name)
     
     def hgOutgoing(self, name):
         """
@@ -1265,9 +1270,14 @@ class Hg(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
-        self.log = HgLogDialog(self, mode = "outgoing")
-        self.log.show()
-        self.log.start(name)
+        if self.getPlugin().getPreferences("UseLogBrowser"):
+            self.logBrowser = HgLogBrowserDialog(self, mode = "outgoing")
+            self.logBrowser.show()
+            self.logBrowser.start(name)
+        else:
+            self.log = HgLogDialog(self, mode = "outgoing")
+            self.log.show()
+            self.log.start(name)
     
     def hgPull(self, name):
         """

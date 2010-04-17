@@ -2869,7 +2869,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_s
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_stopCheckBox_clicked?4(checked)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_toDate_dateChanged?4(date)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.start?4(fn)
-eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog?1(vcs, parent = None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog?1(vcs, mode = "log", parent = None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.HgLogDialog.closeEvent?4(e)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.HgLogDialog.keyPressEvent?4(evt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.HgLogDialog.on_input_returnPressed?4()

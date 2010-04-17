@@ -10,7 +10,7 @@
     <height>384</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -119,6 +119,25 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Incoming / Outgoing</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="logBrowserCheckBox">
+        <property name="toolTip">
+         <string>Select to show the incoming and outgoing log in a log browser dialog</string>
+        </property>
+        <property name="text">
+         <string>Use Log Browser for incoming / outgoing log</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QPushButton" name="configButton">
      <property name="toolTip">
       <string>Edit the mercurial config file</string>
@@ -143,6 +162,12 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>logSpinBox</tabstop>
+  <tabstop>commitSpinBox</tabstop>
+  <tabstop>logBrowserCheckBox</tabstop>
+  <tabstop>configButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

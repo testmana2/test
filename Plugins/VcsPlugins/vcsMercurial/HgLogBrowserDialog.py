@@ -38,11 +38,12 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     MessageColumn  = 5
     TagsColumn     = 6
     
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, mode = "log", parent = None):
         """
         Constructor
         
         @param vcs reference to the vcs object
+        @param mode mode of the dialog (string; one of log, incoming, outgoing)
         @param parent parent widget (QWidget)
         """
         QDialog.__init__(self, parent)
@@ -55,6 +56,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.filesTree.header().setSortIndicator(0, Qt.AscendingOrder)
         
         self.vcs = vcs
+        if mode in ("log", "incoming", "outgoing"):
+            self.mode = mode
+        else:
+            self.mode = "log"
         
         self.__maxDate = QDate()
         self.__minDate = QDate()
@@ -371,12 +376,14 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.inputGroup.show()
         
         args = []
-        args.append('log')
+        args.append(self.mode)
         self.vcs.addArguments(args, self.vcs.options['global'])
         self.vcs.addArguments(args, self.vcs.options['log'])
         args.append('--verbose')
         args.append('--limit')
         args.append(str(self.limitSpinBox.value()))
+        if self.mode in ("incoming", "outgoing"):
+            args.append("--newest-first")
         if startRev is not None:
             args.append('--rev')
             args.append('{0}:0'.format(startRev))
@@ -472,6 +479,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         noEntries = 0
         log = {"message" : []}
         changedPaths = []
+        initialText = True
         for s in self.buf:
             if s != "@@@\n":
                 try:
@@ -480,6 +488,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     key = ""
                     value = s
                 if key == "change":
+                    initialText = False
                     log["revision"] = value.strip()
                 elif key == "user":
                     log["author"] = value.strip()
@@ -519,6 +528,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 elif key == "tags":
                     log["tags"] = value.strip().split()
                 else:
+                    if initialText:
+                        continue
                     if value.strip():
                         log["message"].append(value.strip())
             else:

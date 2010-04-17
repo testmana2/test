@@ -31,7 +31,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         Constructor
         
         @param vcs reference to the vcs object
-        @param mode mode of the dialog (string, one of log, incoming, outgoing)
+        @param mode mode of the dialog (string; one of log, incoming, outgoing)
         @param parent parent widget (QWidget)
         """
         QWidget.__init__(self, parent)

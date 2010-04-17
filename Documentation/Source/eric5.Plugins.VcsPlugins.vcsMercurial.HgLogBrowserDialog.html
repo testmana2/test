@@ -168,13 +168,16 @@ QDialog, Ui_HgLogBrowserDialog
 </table>
 <a NAME="HgLogBrowserDialog.__init__" ID="HgLogBrowserDialog.__init__"></a>
 <h4>HgLogBrowserDialog (Constructor)</h4>
-<b>HgLogBrowserDialog</b>(<i>vcs, parent = None</i>)
+<b>HgLogBrowserDialog</b>(<i>vcs, mode = "log", parent = None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>vcs</i></dt>
 <dd>
 reference to the vcs object
+</dd><dt><i>mode</i></dt>
+<dd>
+mode of the dialog (string; one of log, incoming, outgoing)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
