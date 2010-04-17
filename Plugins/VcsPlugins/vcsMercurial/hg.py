@@ -206,9 +206,9 @@ class Hg(VersionControl):
             "glob:.eric5project", 
             "glob:.ropeproject", 
             "glob:.directory", 
-            "glob:*.pyc", 
-            "glob:*.orig", 
-            "glob:*.bak", 
+            "glob:**.pyc", 
+            "glob:**.orig", 
+            "glob:**.bak", 
         ]
         
         msg = vcsDataDict["message"]
