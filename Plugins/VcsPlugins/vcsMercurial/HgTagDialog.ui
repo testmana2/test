@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Subversion Tag</string>
+   <string>Mercurial Tag</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
