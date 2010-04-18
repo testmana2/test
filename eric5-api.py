@@ -21,7 +21,6 @@ import Utilities.ModuleParser
 from DocumentationTools.APIGenerator import APIGenerator
 from UI.Info import Version
 import Utilities
-import Preferences
 import DocumentationTools
 
 def usage():

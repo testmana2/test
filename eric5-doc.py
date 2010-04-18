@@ -24,7 +24,6 @@ from DocumentationTools.QtHelpGenerator import QtHelpGenerator
 from DocumentationTools.Config import eric5docDefaultColors
 from UI.Info import Version
 import Utilities
-import Preferences
 
 # list of supported filename extensions
 supportedExtensions = [".py", ".pyw", ".ptl", ".rb"]    
