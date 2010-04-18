@@ -299,13 +299,16 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             msg.append(line.strip())
         
         rev, node = revision.split(":")
+        msgtxt = msg[0]
+        if len(msgtxt) > 30:
+            msgtxt = "{0}...".format(msgtxt[:30])
         itm = QTreeWidgetItem(self.logTree, [
             "", 
             branches[0], 
             "{0:>7}:{1}".format(rev, node), 
             author, 
             date, 
-            " ".join(msg[:1]), 
+            msgtxt, 
             ", ".join(tags), 
         ])
         
@@ -391,7 +394,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             args.append('--follow')
         args.append('--template')
         args.append("change|{rev}:{node|short}\n"
-                    "user|{email}\n"
+                    "user|{author|email}\n"
                     "parents|{parents}\n"
                     "date|{date|isodate}\n"
                     "description|{desc}\n"
