@@ -7,7 +7,6 @@
 Module implementing the Mercurial command dialog.
 """
 
-from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_HgCommandDialog import Ui_HgCommandDialog

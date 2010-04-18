@@ -221,16 +221,19 @@ flag indicating the status of the check box (boolean)
         Private slot to send the input to the subversion process.
 </p><a NAME="HgDialog.startProcess" ID="HgDialog.startProcess"></a>
 <h4>HgDialog.startProcess</h4>
-<b>startProcess</b>(<i>args, workingDir = None</i>)
+<b>startProcess</b>(<i>args, workingDir = None, showArgs = True</i>)
 <p>
         Public slot used to start the process.
 </p><dl>
 <dt><i>args</i></dt>
 <dd>
 list of arguments for the process (list of strings)
-</dd><dt><i>workingDir</i></dt>
+</dd><dt><i>workingDir=</i></dt>
 <dd>
 working directory for the process (string)
+</dd><dt><i>showArgs=</i></dt>
+<dd>
+flag indicating to show the arguments (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

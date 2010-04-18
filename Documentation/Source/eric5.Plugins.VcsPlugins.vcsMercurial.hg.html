@@ -87,6 +87,9 @@ VersionControl
 <td><a href="#Hg.hgCopy">hgCopy</a></td>
 <td>Public method used to copy a file/directory.</td>
 </tr><tr>
+<td><a href="#Hg.hgEditConfig">hgEditConfig</a></td>
+<td>Public method used to edit the repository config file.</td>
+</tr><tr>
 <td><a href="#Hg.hgExtendedDiff">hgExtendedDiff</a></td>
 <td>Public method used to view the difference of a file/directory to the Mercurial repository.</td>
 </tr><tr>
@@ -117,8 +120,20 @@ VersionControl
 <td><a href="#Hg.hgPush">hgPush</a></td>
 <td>Public method used to push changes to a remote Mercurial repository.</td>
 </tr><tr>
+<td><a href="#Hg.hgRecover">hgRecover</a></td>
+<td>Public method to recover an interrupted transaction.</td>
+</tr><tr>
 <td><a href="#Hg.hgResolve">hgResolve</a></td>
 <td>Public method used to resolve conflicts of a file/directory.</td>
+</tr><tr>
+<td><a href="#Hg.hgShowConfig">hgShowConfig</a></td>
+<td>Public method to show the combined config.</td>
+</tr><tr>
+<td><a href="#Hg.hgShowPaths">hgShowPaths</a></td>
+<td>Public method to show the path aliases for remote repositories.</td>
+</tr><tr>
+<td><a href="#Hg.hgVerify">hgVerify</a></td>
+<td>Public method to verify the integrity of the repository.</td>
 </tr><tr>
 <td><a href="#Hg.vcsAdd">vcsAdd</a></td>
 <td>Public method used to add a file/directory to the Mercurial repository.</td>
@@ -301,7 +316,7 @@ file name to show the annotations for (string)
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be tagged (string)
+file/directory name to be branched (string)
 </dd>
 </dl><a NAME="Hg.hgCopy" ID="Hg.hgCopy"></a>
 <h4>Hg.hgCopy</h4>
@@ -320,6 +335,16 @@ reference to the project object
 <dt>Returns:</dt>
 <dd>
 flag indicating successfull operation (boolean)
+</dd>
+</dl><a NAME="Hg.hgEditConfig" ID="Hg.hgEditConfig"></a>
+<h4>Hg.hgEditConfig</h4>
+<b>hgEditConfig</b>(<i>name</i>)
+<p>
+        Public method used to edit the repository config file.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
 </dd>
 </dl><a NAME="Hg.hgExtendedDiff" ID="Hg.hgExtendedDiff"></a>
 <h4>Hg.hgExtendedDiff</h4>
@@ -444,6 +469,16 @@ directory name of the project to be pulled to (string)
 <dd>
 directory name of the project to be pushed from (string)
 </dd>
+</dl><a NAME="Hg.hgRecover" ID="Hg.hgRecover"></a>
+<h4>Hg.hgRecover</h4>
+<b>hgRecover</b>(<i>name</i>)
+<p>
+        Public method to recover an interrupted transaction.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
 </dl><a NAME="Hg.hgResolve" ID="Hg.hgResolve"></a>
 <h4>Hg.hgResolve</h4>
 <b>hgResolve</b>(<i>name</i>)
@@ -453,6 +488,36 @@ directory name of the project to be pushed from (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to be resolved (string)
+</dd>
+</dl><a NAME="Hg.hgShowConfig" ID="Hg.hgShowConfig"></a>
+<h4>Hg.hgShowConfig</h4>
+<b>hgShowConfig</b>(<i>name</i>)
+<p>
+        Public method to show the combined config.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgShowPaths" ID="Hg.hgShowPaths"></a>
+<h4>Hg.hgShowPaths</h4>
+<b>hgShowPaths</b>(<i>name</i>)
+<p>
+        Public method to show the path aliases for remote repositories.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgVerify" ID="Hg.hgVerify"></a>
+<h4>Hg.hgVerify</h4>
+<b>hgVerify</b>(<i>name</i>)
+<p>
+        Public method to verify the integrity of the repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
 </dd>
 </dl><a NAME="Hg.vcsAdd" ID="Hg.vcsAdd"></a>
 <h4>Hg.vcsAdd</h4>

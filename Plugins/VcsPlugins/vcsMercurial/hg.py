@@ -16,6 +16,8 @@ from PyQt4.QtGui import QMessageBox, QApplication, QDialog, QInputDialog
 
 from E5Gui.E5Application import e5App
 
+from QScintilla.MiniEditor import MiniEditor
+
 from VCS.VersionControl import VersionControl
 from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
 
@@ -99,6 +101,7 @@ class Hg(VersionControl):
         self.status = None
         self.tagbranchList = None
         self.annotate = None
+        self.editor = None
         
         self.statusCache = {}
         
@@ -1443,7 +1446,7 @@ class Hg(VersionControl):
         """
         Public method used to set the tag in the Mercurial repository.
         
-        @param name file/directory name to be tagged (string)
+        @param name file/directory name to be branched (string)
         """
         dname, fname = self.splitPath(name)
         
@@ -1469,6 +1472,118 @@ class Hg(VersionControl):
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
+    
+    def hgEditConfig(self, name):
+        """
+        Public method used to edit the repository config file.
+        
+        @param name file/directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
+        self.editor = MiniEditor(cfgFile, "Properties")
+        self.editor.show()
+    
+    def hgVerify(self, name):
+        """
+        Public method to verify the integrity of the repository.
+        
+        @param name file/directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        args = []
+        args.append('verify')
+        
+        dia = HgDialog(self.trUtf8('Verifying the integrity of the Mercurial repository'))
+        res = dia.startProcess(args, repodir)
+        if res:
+            dia.exec_()
+    
+    def hgShowConfig(self, name):
+        """
+        Public method to show the combined config.
+        
+        @param name file/directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        args = []
+        args.append('showconfig')
+        args.append("--untrusted")
+        
+        dia = HgDialog(self.trUtf8('Showing the combined configuration settings'))
+        res = dia.startProcess(args, repodir, False)
+        if res:
+            dia.exec_()
+    
+    def hgShowPaths(self, name):
+        """
+        Public method to show the path aliases for remote repositories.
+        
+        @param name file/directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        args = []
+        args.append('paths')
+        
+        dia = HgDialog(self.trUtf8('Showing aliases for remote repositories'))
+        res = dia.startProcess(args, repodir, False)
+        if res:
+            dia.exec_()
+    
+    def hgRecover(self, name):
+        """
+        Public method to recover an interrupted transaction.
+        
+        @param name file/directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        args = []
+        args.append('recover')
+        
+        dia = HgDialog(self.trUtf8('Recovering from interrupted transaction'))
+        res = dia.startProcess(args, repodir, False)
+        if res:
+            dia.exec_()
     
     ############################################################################
     ## Methods to get the helper objects are below.

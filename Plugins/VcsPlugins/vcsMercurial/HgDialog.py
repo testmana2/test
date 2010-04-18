@@ -96,12 +96,13 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.normal = (exitStatus == QProcess.NormalExit) and (exitCode == 0)
         self.__finish()
     
-    def startProcess(self, args, workingDir = None):
+    def startProcess(self, args, workingDir = None, showArgs = True):
         """
         Public slot used to start the process.
         
         @param args list of arguments for the process (list of strings)
-        @param workingDir working directory for the process (string)
+        @keyparam workingDir working directory for the process (string)
+        @keyparam showArgs flag indicating to show the arguments (boolean)
         @return flag indicating a successful start of the process
         """
         self.errorGroup.hide()
@@ -113,8 +114,9 @@ class HgDialog(QDialog, Ui_HgDialog):
         
         self.proc = QProcess()
         
-        self.resultbox.append(' '.join(args))
-        self.resultbox.append('')
+        if showArgs:
+            self.resultbox.append(' '.join(args))
+            self.resultbox.append('')
         
         self.connect(self.proc, SIGNAL('finished(int, QProcess::ExitStatus)'),
             self.__procFinished)

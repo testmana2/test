@@ -10,6 +10,7 @@ Module implementing the VCS project helper for Mercurial.
 import os
 
 from PyQt4.QtCore import SIGNAL
+from PyQt4.QtGui import QMenu
 
 from E5Gui.E5Application import e5App
 
@@ -488,6 +489,71 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.connect(self.hgConfigAct, SIGNAL('triggered()'), self.__hgConfigure)
         self.actions.append(self.hgConfigAct)
+        
+        self.hgRepoConfigAct = E5Action(self.trUtf8('Edit repository config'),
+                self.trUtf8('Edit repository config...'),
+                0, 0, self, 'mercurial_repo_configure')
+        self.hgRepoConfigAct.setStatusTip(self.trUtf8(
+            'Show an editor to edit the repository config file'
+        ))
+        self.hgRepoConfigAct.setWhatsThis(self.trUtf8(
+            """<b>Edit repository config</b>"""
+            """<p>Show an editor to edit the repository config file.</p>"""
+        ))
+        self.connect(self.hgRepoConfigAct, SIGNAL('triggered()'), self.__hgEditRepoConfig)
+        self.actions.append(self.hgRepoConfigAct)
+        
+        self.hgShowConfigAct = E5Action(self.trUtf8('Show combined config settings'),
+                self.trUtf8('Show combined config settings...'),
+                0, 0, self, 'mercurial_show_config')
+        self.hgShowConfigAct.setStatusTip(self.trUtf8(
+            'Show the combined config settings from all config files'
+        ))
+        self.hgShowConfigAct.setWhatsThis(self.trUtf8(
+            """<b>Show combined config settings</b>"""
+            """<p>This shows the combined config settings from all config files.</p>"""
+        ))
+        self.connect(self.hgShowConfigAct, SIGNAL('triggered()'), self.__hgShowConfig)
+        self.actions.append(self.hgShowConfigAct)
+        
+        self.hgShowPathsAct = E5Action(self.trUtf8('Show paths'),
+                self.trUtf8('Show paths...'),
+                0, 0, self, 'mercurial_show_paths')
+        self.hgShowPathsAct.setStatusTip(self.trUtf8(
+            'Show the aliases for remote repositories'
+        ))
+        self.hgShowPathsAct.setWhatsThis(self.trUtf8(
+            """<b>Show paths</b>"""
+            """<p>This shows the aliases for remote repositories.</p>"""
+        ))
+        self.connect(self.hgShowPathsAct, SIGNAL('triggered()'), self.__hgShowPaths)
+        self.actions.append(self.hgShowPathsAct)
+        
+        self.hgVerifyAct = E5Action(self.trUtf8('Verify repository'),
+                self.trUtf8('Verify repository...'),
+                0, 0, self, 'mercurial_verify')
+        self.hgVerifyAct.setStatusTip(self.trUtf8(
+            'Verify the integrity of the repository'
+        ))
+        self.hgVerifyAct.setWhatsThis(self.trUtf8(
+            """<b>Verify repository</b>"""
+            """<p>This verifies the integrity of the repository.</p>"""
+        ))
+        self.connect(self.hgVerifyAct, SIGNAL('triggered()'), self.__hgVerify)
+        self.actions.append(self.hgVerifyAct)
+        
+        self.hgRecoverAct = E5Action(self.trUtf8('Recover'),
+                self.trUtf8('Recover...'),
+                0, 0, self, 'mercurial_recover')
+        self.hgRecoverAct.setStatusTip(self.trUtf8(
+            'Recover from an interrupted transaction'
+        ))
+        self.hgRecoverAct.setWhatsThis(self.trUtf8(
+            """<b>Recover</b>"""
+            """<p>This recovers from an interrupted transaction.</p>"""
+        ))
+        self.connect(self.hgRecoverAct, SIGNAL('triggered()'), self.__hgRecover)
+        self.actions.append(self.hgRecoverAct)
     
     def initMenu(self, menu):
         """
@@ -496,6 +562,16 @@ class HgProjectHelper(VcsProjectHelper):
         @param menu reference to the menu to be populated (QMenu)
         """
         menu.clear()
+        
+        adminMenu = QMenu(self.trUtf8("Repository Administration"), menu)
+        adminMenu.addAction(self.hgShowPathsAct)
+        adminMenu.addSeparator()
+        adminMenu.addAction(self.hgShowConfigAct)
+        adminMenu.addAction(self.hgRepoConfigAct)
+        adminMenu.addSeparator()
+        adminMenu.addAction(self.hgRecoverAct)
+        adminMenu.addSeparator()
+        adminMenu.addAction(self.hgVerifyAct)
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -548,6 +624,8 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsCleanupAct)
         menu.addSeparator()
         menu.addAction(self.vcsCommandAct)
+        menu.addSeparator()
+        menu.addMenu(adminMenu)
         menu.addSeparator()
         menu.addAction(self.vcsPropsAct)
         menu.addSeparator()
@@ -652,3 +730,33 @@ class HgProjectHelper(VcsProjectHelper):
         if Preferences.getVCS("AutoSaveFiles"):
             self.project.saveAllScripts()
         self.vcs.vcsCommit(self.project.ppath, '', closeBranch = True)
+    
+    def __hgEditRepoConfig(self):
+        """
+        Protected slot used to edit the repository config file.
+        """
+        self.vcs.hgEditConfig(self.project.ppath)
+    
+    def __hgShowConfig(self):
+        """
+        Protected slot used to show the combined config.
+        """
+        self.vcs.hgShowConfig(self.project.ppath)
+    
+    def __hgVerify(self):
+        """
+        Protected slot used to verify the integrity of the repository.
+        """
+        self.vcs.hgVerify(self.project.ppath)
+    
+    def __hgShowPaths(self):
+        """
+        Protected slot used to show the aliases for remote repositories.
+        """
+        self.vcs.hgShowPaths(self.project.ppath)
+    
+    def __hgRecover(self):
+        """
+        Protected slot used to recover from an interrupted transaction.
+        """
+        self.vcs.hgRecover(self.project.ppath)

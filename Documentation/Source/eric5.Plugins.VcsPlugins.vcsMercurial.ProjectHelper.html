@@ -69,6 +69,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__hgConfigure">__hgConfigure</a></td>
 <td>Private method to open the configuration dialog.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__hgEditRepoConfig">__hgEditRepoConfig</a></td>
+<td>Protected slot used to edit the repository config file.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.__hgExtendedDiff">__hgExtendedDiff</a></td>
 <td>Private slot used to perform a svn diff with the selection of revisions.</td>
 </tr><tr>
@@ -96,14 +99,26 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__hgPush">__hgPush</a></td>
 <td>Private slot used to push changes to a remote repository.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__hgRecover">__hgRecover</a></td>
+<td>Protected slot used to recover from an interrupted transaction.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.__hgResolve">__hgResolve</a></td>
 <td>Private slot used to resolve conflicts of the local project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgShowConfig">__hgShowConfig</a></td>
+<td>Protected slot used to show the combined config.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgShowPaths">__hgShowPaths</a></td>
+<td>Protected slot used to show the aliases for remote repositories.</td>
 </tr><tr>
 <td><a href="#HgProjectHelper.__hgTagList">__hgTagList</a></td>
 <td>Private slot used to list the tags of the project.</td>
 </tr><tr>
 <td><a href="#HgProjectHelper.__hgTip">__hgTip</a></td>
 <td>Private slot used to show the tip of the repository.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgVerify">__hgVerify</a></td>
+<td>Protected slot used to verify the integrity of the repository.</td>
 </tr><tr>
 <td><a href="#HgProjectHelper.getActions">getActions</a></td>
 <td>Public method to get a list of all actions.</td>
@@ -154,6 +169,11 @@ name of this object (string)
 <b>__hgConfigure</b>(<i></i>)
 <p>
         Private method to open the configuration dialog.
+</p><a NAME="HgProjectHelper.__hgEditRepoConfig" ID="HgProjectHelper.__hgEditRepoConfig"></a>
+<h4>HgProjectHelper.__hgEditRepoConfig</h4>
+<b>__hgEditRepoConfig</b>(<i></i>)
+<p>
+        Protected slot used to edit the repository config file.
 </p><a NAME="HgProjectHelper.__hgExtendedDiff" ID="HgProjectHelper.__hgExtendedDiff"></a>
 <h4>HgProjectHelper.__hgExtendedDiff</h4>
 <b>__hgExtendedDiff</b>(<i></i>)
@@ -199,11 +219,26 @@ name of this object (string)
 <b>__hgPush</b>(<i></i>)
 <p>
         Private slot used to push changes to a remote repository.
+</p><a NAME="HgProjectHelper.__hgRecover" ID="HgProjectHelper.__hgRecover"></a>
+<h4>HgProjectHelper.__hgRecover</h4>
+<b>__hgRecover</b>(<i></i>)
+<p>
+        Protected slot used to recover from an interrupted transaction.
 </p><a NAME="HgProjectHelper.__hgResolve" ID="HgProjectHelper.__hgResolve"></a>
 <h4>HgProjectHelper.__hgResolve</h4>
 <b>__hgResolve</b>(<i></i>)
 <p>
         Private slot used to resolve conflicts of the local project.
+</p><a NAME="HgProjectHelper.__hgShowConfig" ID="HgProjectHelper.__hgShowConfig"></a>
+<h4>HgProjectHelper.__hgShowConfig</h4>
+<b>__hgShowConfig</b>(<i></i>)
+<p>
+        Protected slot used to show the combined config.
+</p><a NAME="HgProjectHelper.__hgShowPaths" ID="HgProjectHelper.__hgShowPaths"></a>
+<h4>HgProjectHelper.__hgShowPaths</h4>
+<b>__hgShowPaths</b>(<i></i>)
+<p>
+        Protected slot used to show the aliases for remote repositories.
 </p><a NAME="HgProjectHelper.__hgTagList" ID="HgProjectHelper.__hgTagList"></a>
 <h4>HgProjectHelper.__hgTagList</h4>
 <b>__hgTagList</b>(<i></i>)
@@ -214,6 +249,11 @@ name of this object (string)
 <b>__hgTip</b>(<i></i>)
 <p>
         Private slot used to show the tip of the repository.
+</p><a NAME="HgProjectHelper.__hgVerify" ID="HgProjectHelper.__hgVerify"></a>
+<h4>HgProjectHelper.__hgVerify</h4>
+<b>__hgVerify</b>(<i></i>)
+<p>
+        Protected slot used to verify the integrity of the repository.
 </p><a NAME="HgProjectHelper.getActions" ID="HgProjectHelper.getActions"></a>
 <h4>HgProjectHelper.getActions</h4>
 <b>getActions</b>(<i></i>)

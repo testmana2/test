@@ -12,11 +12,7 @@ import os
 from PyQt4.QtCore import SIGNAL
 from PyQt4.QtGui import QMenu
 
-from E5Gui.E5Application import e5App
-
 from VCS.ProjectBrowserHelper import VcsProjectBrowserHelper
-
-from Project.ProjectBrowserModel import ProjectBrowserFileItem
 
 import UI.PixmapCache
 
