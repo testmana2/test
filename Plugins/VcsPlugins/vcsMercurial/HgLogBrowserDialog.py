@@ -57,9 +57,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.vcs = vcs
         if mode in ("log", "incoming", "outgoing"):
-            self.mode = mode
+            self.commandMode = mode
         else:
-            self.mode = "log"
+            self.commandMode = "log"
         
         self.__maxDate = QDate()
         self.__minDate = QDate()
@@ -96,6 +96,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.diff = None
         self.__started = False
         self.__lastRev = 0
+        self.projectMode = False
         
         # attributes to store log graph data
         self.__revs = []
@@ -205,7 +206,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         # add edges to the graph
         edges = []
-        if rev:
+##        if rev and parents[0] != -1:
+        if parents[0] != -1:
             for ecol, erev in enumerate(self.__revs):
                 if erev in next:
                     edges.append((ecol, next.index(erev), self.__revColors[erev]))
@@ -278,6 +280,49 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         painter.end()
         return QIcon(pix)
     
+    def __getParents(self, rev):
+        """
+        Private method to get the parents of the currently viewed file/directory.
+        
+        @param rev revision number to get parents for (string)
+        @return list of parent revisions (list of integers)
+        """
+        errMsg = ""
+        parents = [-1]
+        
+        process = QProcess()
+        args = []
+        args.append("parents")
+        args.append("--template")
+        args.append("{rev}\n")
+        args.append("-r")
+        args.append(rev)
+        args.append(self.filename)
+        
+        process.setWorkingDirectory(self.repodir)
+        process.start('hg', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                output = \
+                    str(process.readAllStandardOutput(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace')
+                parents = [int(p) for p in output.strip().splitlines()]
+            else:
+                if not finished:
+                    errMsg = self.trUtf8("The hg process did not finish within 30s.")
+        else:
+            errMsg = self.trUtf8("Could not start the hg executable.")
+        
+        if errMsg:
+            QMessageBox.critical(self,
+                self.trUtf8("Mercurial Error"),
+                errMsg)
+        
+        return parents
+    
     def __generateLogItem(self, author, date, message, revision, changedPaths, parents, 
                           branches, tags):
         """
@@ -315,23 +360,24 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         itm.setForeground(self.BranchColumn, 
                           QBrush(QColor(self.__branchColor(branches[0]))))
         
+        if not self.projectMode:
+            parents = self.__getParents(rev)
         column, color, edges = self.__generateEdges(int(rev), parents)
         
         itm.setData(0, self.__messageRole, message)
         itm.setData(0, self.__changesRole, changedPaths)
         itm.setData(0, self.__edgesRole, edges)
         
-        if self.fname == "." and self.dname == self.repodir:
-            if self.logTree.topLevelItemCount() > 1:
-                topedges = \
-                    self.logTree.topLevelItem(self.logTree.indexOfTopLevelItem(itm) - 1)\
-                    .data(0, self.__edgesRole)
-            else:
-                topedges = None
-            
-            icon = self.__generateIcon(column, color, edges, topedges, 
-                                       QColor(self.__branchColor(branches[0])))
-            itm.setIcon(0, icon)
+        if self.logTree.topLevelItemCount() > 1:
+            topedges = \
+                self.logTree.topLevelItem(self.logTree.indexOfTopLevelItem(itm) - 1)\
+                .data(0, self.__edgesRole)
+        else:
+            topedges = None
+        
+        icon = self.__generateIcon(column, color, edges, topedges, 
+                                   QColor(self.__branchColor(branches[0])))
+        itm.setIcon(0, icon)
         
         try:
             self.__lastRev = int(revision.split(":")[0])
@@ -379,18 +425,20 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.inputGroup.show()
         
         args = []
-        args.append(self.mode)
+        args.append(self.commandMode)
         self.vcs.addArguments(args, self.vcs.options['global'])
         self.vcs.addArguments(args, self.vcs.options['log'])
         args.append('--verbose')
         args.append('--limit')
         args.append(str(self.limitSpinBox.value()))
-        if self.mode in ("incoming", "outgoing"):
+        if self.commandMode in ("incoming", "outgoing"):
             args.append("--newest-first")
         if startRev is not None:
             args.append('--rev')
             args.append('{0}:0'.format(startRev))
-        if not self.stopCheckBox.isChecked():
+        if not self.projectMode and \
+           not self.fname == "." and \
+           not self.stopCheckBox.isChecked():
             args.append('--follow')
         args.append('--template')
         args.append("change|{rev}:{node|short}\n"
@@ -404,7 +452,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     "branches|{branches}\n"
                     "tags|{tags}\n"
                     "@@@\n")
-        if self.fname != "." or self.dname != self.repodir:
+        if not self.projectMode:
             args.append(self.filename)
         
         self.process.setWorkingDirectory(self.repodir)
@@ -439,6 +487,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             if self.repodir == os.sep:
                 return
         
+        self.projectMode = (self.fname == "." and self.dname == self.repodir)
+        self.stopCheckBox.setDisabled(self.projectMode or self.fname == ".")
         self.activateWindow()
         self.raise_()
         

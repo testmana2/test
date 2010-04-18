@@ -87,6 +87,9 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__getLogEntries">__getLogEntries</a></td>
 <td>Private method to retrieve log entries from the repository.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__getParents">__getParents</a></td>
+<td>Private method to get the parents of the currently viewed file/directory.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
@@ -350,6 +353,21 @@ color name (string)
 <dt><i>startRev</i></dt>
 <dd>
 revision number to start from (integer, string)
+</dd>
+</dl><a NAME="HgLogBrowserDialog.__getParents" ID="HgLogBrowserDialog.__getParents"></a>
+<h4>HgLogBrowserDialog.__getParents</h4>
+<b>__getParents</b>(<i>rev</i>)
+<p>
+        Private method to get the parents of the currently viewed file/directory.
+</p><dl>
+<dt><i>rev</i></dt>
+<dd>
+revision number to get parents for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of parent revisions (list of integers)
 </dd>
 </dl><a NAME="HgLogBrowserDialog.__procFinished" ID="HgLogBrowserDialog.__procFinished"></a>
 <h4>HgLogBrowserDialog.__procFinished</h4>
