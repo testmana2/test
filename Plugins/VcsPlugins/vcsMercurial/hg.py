@@ -205,15 +205,6 @@ class Hg(VersionControl):
         @return flag indicating an execution without errors (boolean)
             and a flag indicating the version controll status (boolean)
         """
-        ignorePatterns = [
-            "glob:.eric5project", 
-            "glob:.ropeproject", 
-            "glob:.directory", 
-            "glob:**.pyc", 
-            "glob:**.orig", 
-            "glob:**.bak", 
-        ]
-        
         msg = vcsDataDict["message"]
         if not msg:
             msg = '***'
@@ -228,13 +219,7 @@ class Hg(VersionControl):
         status = dia.normalExit()
         
         if status:
-            try:
-                # create a .hgignore file
-                ignore = open(os.path.join(projectDir, ".hgignore"), "w")
-                ignore.write("\n".join(ignorePatterns))
-                ignore.close()
-            except IOError:
-                status = False
+            status = self.hgCreateIgnoreFile(projectDir)
             
             if status:
                 args = []
@@ -1584,6 +1569,41 @@ class Hg(VersionControl):
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
+    
+    def hgCreateIgnoreFile(self, name, autoAdd = False):
+        """
+        Public method to create the ignore file.
+        
+        @param name directory name to create the ignore file in (string)
+        @param autoAdd flag indicating to add it automatically (boolean)
+        @return flag indicating success
+        """
+        ignorePatterns = [
+            "glob:.eric5project", 
+            "glob:.ropeproject", 
+            "glob:.directory", 
+            "glob:**.pyc", 
+            "glob:**.orig", 
+            "glob:**.bak", 
+        ]
+        
+        ignoreName = os.path.join(name, ".hgignore")
+        try:
+            # create a .hgignore file
+            ignore = open(ignoreName, "w")
+            ignore.write("\n".join(ignorePatterns))
+            ignore.write("\n")
+            ignore.close()
+            status = True
+        except IOError:
+            status = False
+        
+        if status and autoAdd:
+            self.vcsAdd(ignoreName, noDialog = True)
+            project = e5App().getObject("Project")
+            project.appendFile(ignoreName)
+        
+        return status
     
     ############################################################################
     ## Methods to get the helper objects are below.

@@ -87,6 +87,9 @@ VersionControl
 <td><a href="#Hg.hgCopy">hgCopy</a></td>
 <td>Public method used to copy a file/directory.</td>
 </tr><tr>
+<td><a href="#Hg.hgCreateIgnoreFile">hgCreateIgnoreFile</a></td>
+<td>Public method to create the ignore file.</td>
+</tr><tr>
 <td><a href="#Hg.hgEditConfig">hgEditConfig</a></td>
 <td>Public method used to edit the repository config file.</td>
 </tr><tr>
@@ -335,6 +338,24 @@ reference to the project object
 <dt>Returns:</dt>
 <dd>
 flag indicating successfull operation (boolean)
+</dd>
+</dl><a NAME="Hg.hgCreateIgnoreFile" ID="Hg.hgCreateIgnoreFile"></a>
+<h4>Hg.hgCreateIgnoreFile</h4>
+<b>hgCreateIgnoreFile</b>(<i>name, autoAdd = False</i>)
+<p>
+        Public method to create the ignore file.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name to create the ignore file in (string)
+</dd><dt><i>autoAdd</i></dt>
+<dd>
+flag indicating to add it automatically (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success
 </dd>
 </dl><a NAME="Hg.hgEditConfig" ID="Hg.hgEditConfig"></a>
 <h4>Hg.hgEditConfig</h4>

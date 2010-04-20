@@ -554,6 +554,19 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.connect(self.hgRecoverAct, SIGNAL('triggered()'), self.__hgRecover)
         self.actions.append(self.hgRecoverAct)
+        
+        self.hgCreateIgnoreAct = E5Action(self.trUtf8('Create .hgignore'),
+                self.trUtf8('Create .hgignore'),
+                0, 0, self, 'mercurial_create ignore')
+        self.hgCreateIgnoreAct.setStatusTip(self.trUtf8(
+            'Create a .hgignore file with default values'
+        ))
+        self.hgCreateIgnoreAct.setWhatsThis(self.trUtf8(
+            """<b>Create .hgignore</b>"""
+            """<p>This creates a .hgignore file with default values.</p>"""
+        ))
+        self.connect(self.hgCreateIgnoreAct, SIGNAL('triggered()'), self.__hgCreateIgnore)
+        self.actions.append(self.hgCreateIgnoreAct)
     
     def initMenu(self, menu):
         """
@@ -568,6 +581,8 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgShowConfigAct)
         adminMenu.addAction(self.hgRepoConfigAct)
+        adminMenu.addSeparator()
+        adminMenu.addAction(self.hgCreateIgnoreAct)
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgRecoverAct)
         adminMenu.addSeparator()
@@ -760,3 +775,9 @@ class HgProjectHelper(VcsProjectHelper):
         Protected slot used to recover from an interrupted transaction.
         """
         self.vcs.hgRecover(self.project.ppath)
+    
+    def __hgCreateIgnore(self):
+        """
+        Protected slot used to create a .hgignore file for the project.
+        """
+        self.vcs.hgCreateIgnoreFile(self.project.ppath, autoAdd = True)
