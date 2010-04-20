@@ -185,7 +185,11 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         @param status of the tag/branch (string)
         @param name name of the tag/branch (string)
         """
-        itm = QTreeWidgetItem(self.tagList, [revision, changeset, status, name])
+        itm = QTreeWidgetItem(self.tagList, [
+            "{0:>7}".format(revision), 
+            changeset, 
+            status, 
+            name])
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignRight)
         itm.setTextAlignment(2, Qt.AlignHCenter)
