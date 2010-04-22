@@ -372,22 +372,7 @@ class ProjectBrowserModel(BrowserModel):
                     states[os.path.normcase(os.path.join(self.project.ppath, fn))] = 0
             
             self.project.vcs.clearStatusCache()
-            for dir in self.project.subdirs:
-                states = self.project.vcs.vcsAllRegisteredStates(states, 
-                    os.path.join(self.project.ppath, dir))
-            
-            for dir in self.project.otherssubdirs:
-                if not os.path.isabs(dir):
-                    dir = os.path.join(self.project.ppath, dir)
-                states = self.project.vcs.vcsAllRegisteredStates(states, dir)
-            
-            if self.project.pdata["TRANSLATIONPATTERN"]:
-                dir = os.path.join(self.project.ppath, 
-                                   self.project.pdata["TRANSLATIONPATTERN"][0])\
-                      .split("%language%")[0]
-                if not os.path.isdir(dir):
-                    dir = os.path.dirname(dir)
-                states = self.project.vcs.vcsAllRegisteredStates(states, dir)
+            states = self.project.vcs.vcsAllRegisteredStates(states, self.project.ppath)
         
         self.inRefresh = True
         for key in keys:

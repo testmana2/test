@@ -784,6 +784,9 @@ class Hg(VersionControl):
         if fname == '.' and os.path.isdir(os.path.join(dname, self.adminDir)):
             return self.canBeCommitted
         
+        if name in self.statusCache:
+            return self.statusCache[name]
+        
         # find the root of the repo
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
@@ -837,10 +840,6 @@ class Hg(VersionControl):
         
         found = False
         for name in list(self.statusCache.keys()):
-##            if os.path.dirname(name) == dname:
-##                if shortcut:
-##                    found = True
-##                    break
             if name in names:
                 found = True
                 names[name] = self.statusCache[name]
@@ -876,11 +875,8 @@ class Hg(VersionControl):
                             if flag not in "?I":
                                 if name in names:
                                     names[name] = self.canBeCommitted
-##                                dirName = os.path.dirname(name)
                                 if dirName in names:
                                     names[dirName] = self.canBeCommitted
-##                                self.statusCache[name] = self.canBeCommitted
-##                                self.statusCache[dirName] = self.canBeCommitted
                                 if dirs:
                                     for d in dirs:
                                         if name.startswith(d):
@@ -892,7 +888,6 @@ class Hg(VersionControl):
                             self.statusCache[dirName] = self.canBeCommitted
                         else:
                             self.statusCache[name] = self.canBeAdded
-##                            dirName = os.path.dirname(name)
                             if dirName not in self.statusCache:
                                 self.statusCache[dirName] = self.canBeAdded
         
