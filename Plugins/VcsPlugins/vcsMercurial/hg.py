@@ -837,13 +837,13 @@ class Hg(VersionControl):
         
         found = False
         for name in list(self.statusCache.keys()):
-            if os.path.dirname(name) == dname:
-                if shortcut:
-                    found = True
-                    break
-                if name in names:
-                    found = True
-                    names[name] = self.statusCache[name]
+##            if os.path.dirname(name) == dname:
+##                if shortcut:
+##                    found = True
+##                    break
+            if name in names:
+                found = True
+                names[name] = self.statusCache[name]
         
         if not found:
             # find the root of the repo
@@ -871,26 +871,30 @@ class Hg(VersionControl):
                     for line in output.splitlines():
                         flag, path = line.split(" ", 1)
                         name = os.path.join(repodir, os.path.normcase(path))
+                        dirName = os.path.dirname(name)
                         if name.startswith(dname):
                             if flag not in "?I":
                                 if name in names:
                                     names[name] = self.canBeCommitted
-                                dirName = os.path.dirname(name)
+##                                dirName = os.path.dirname(name)
                                 if dirName in names:
                                     names[dirName] = self.canBeCommitted
-                                self.statusCache[name] = self.canBeCommitted
-                                self.statusCache[dirName] = self.canBeCommitted
+##                                self.statusCache[name] = self.canBeCommitted
+##                                self.statusCache[dirName] = self.canBeCommitted
                                 if dirs:
                                     for d in dirs:
                                         if name.startswith(d):
                                             names[d] = self.canBeCommitted
                                             dirs.remove(d)
                                             break
-                            else:
-                                self.statusCache[name] = self.canBeAdded
-                                dirName = os.path.dirname(name)
-                                if dirName not in self.statusCache:
-                                    self.statusCache[dirName] = self.canBeAdded
+                        if flag not in "?I":
+                            self.statusCache[name] = self.canBeCommitted
+                            self.statusCache[dirName] = self.canBeCommitted
+                        else:
+                            self.statusCache[name] = self.canBeAdded
+##                            dirName = os.path.dirname(name)
+                            if dirName not in self.statusCache:
+                                self.statusCache[dirName] = self.canBeAdded
         
         return names
     
