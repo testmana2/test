@@ -57,7 +57,6 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         args.append('status')
         args.append('--noninteractive')
         args.append('--all')
-##        args.append('.')
         process.setWorkingDirectory(self.projectDir)
         process.start('hg', args)
         procStarted = process.waitForStarted()

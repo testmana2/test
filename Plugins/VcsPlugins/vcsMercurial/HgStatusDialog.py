@@ -257,7 +257,6 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 line = str(self.process.readLine(), 
                         Preferences.getSystem("IOEncoding"), 
                         'replace')
-##                if not line.startswith("  "):
                 if line[0] in "ACIMR?!" and line[1] == " ":
                     status, path = line.strip().split(" ", 1)
                     self.__generateItem(status, path)
