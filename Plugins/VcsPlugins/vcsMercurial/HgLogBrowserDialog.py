@@ -698,8 +698,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.__resizeColumnsFiles()
             self.__resortFiles()
         
-        self.diffPreviousButton.setEnabled(
-            current != self.logTree.topLevelItem(self.logTree.topLevelItemCount() - 1))
+        self.diffPreviousButton.setEnabled(current is not None)
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
@@ -729,9 +728,12 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         itm = self.logTree.topLevelItem(self.logTree.indexOfTopLevelItem(itm) + 1)
         if itm is None:
-            self.diffPreviousButton.setEnabled(False)
-            return
-        rev1 = int(itm.text(self.RevisionColumn).split(":")[0])
+            rev1 = rev2 - 1
+            if rev1 < 0:
+                self.diffPreviousButton.setEnabled(False)
+                return
+        else:
+            rev1 = int(itm.text(self.RevisionColumn).split(":")[0])
         
         self.__diffRevisions(rev1, rev2)
     
