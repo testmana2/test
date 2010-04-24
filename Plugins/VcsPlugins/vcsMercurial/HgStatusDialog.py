@@ -136,7 +136,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
     
     def start(self, fn):
         """
-        Public slot to start the svn status command.
+        Public slot to start the hg status command.
         
         @param fn filename(s)/directoryname(s) to show the status of
             (string or list of strings)

@@ -648,7 +648,7 @@ class HgProjectHelper(VcsProjectHelper):
     
     def __hgExtendedDiff(self):
         """
-        Private slot used to perform a svn diff with the selection of revisions.
+        Private slot used to perform a hg diff with the selection of revisions.
         """
         self.vcs.hgExtendedDiff(self.project.ppath)
     

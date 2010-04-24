@@ -62,17 +62,6 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
             
             if directory:
                 self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))
-##        else:
-##            dlg = SvnRepoBrowserDialog(self.vcs, mode = "select", parent = self)
-##            dlg.start(self.protocolCombo.currentText() + self.vcsUrlEdit.text())
-##            if dlg.exec_() == QDialog.Accepted:
-##                url = dlg.getSelectedUrl()
-##                if url:
-##                    protocol = url.split("://")[0]
-##                    path = url.split("://")[1]
-##                    self.protocolCombo.setCurrentIndex(\
-##                        self.protocolCombo.findText(protocol + "://"))
-##                    self.vcsUrlEdit.setText(path)
     
     @pyqtSlot()
     def on_projectDirButton_clicked(self):

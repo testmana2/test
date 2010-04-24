@@ -54,20 +54,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(False)
             for act in standardItems:
                 act.setEnabled(False)
-##            if not hasattr(self.browser.currentItem(), 'fileName'):
-##                self.blameAct.setEnabled(False)
+            if not hasattr(self.browser.currentItem(), 'fileName'):
+                self.annotateAct.setEnabled(False)
         else:
             for act in self.vcsMenuActions:
                 act.setEnabled(False)
             for act in self.vcsAddMenuActions:
                 act.setEnabled(True)
-##            if 1 in self.browser.specialMenuEntries:
-##                try:
-##                    name = self.browser.currentItem().fileName()
-##                except AttributeError:
-##                    name = self.browser.currentItem().dirName()
-##                if not os.path.isdir(name):
-##                    self.vcsMenuAddTree.setEnabled(False)
             for act in standardItems:
                 act.setEnabled(True)
     
@@ -106,9 +99,6 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 act.setEnabled(False)
             for act in self.vcsAddMultiMenuActions:
                 act.setEnabled(True)
-##            if 1 in self.browser.specialMenuEntries and \
-##               self.__itemsHaveFiles(items):
-##                self.vcsMultiMenuAddTree.setEnabled(False)
             for act in standardItems:
                 act.setEnabled(True)
     
@@ -209,11 +199,6 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Add to repository'), 
             self._VCSAdd)
         self.vcsAddMenuActions.append(act)
-##        if 1 in self.browser.specialMenuEntries:
-##            self.vcsMenuAddTree = menu.addAction(UI.PixmapCache.getIcon("vcsAdd.png"),
-##                self.trUtf8('Add tree to repository'), 
-##                self._VCSAddTree)
-##            self.vcsAddMenuActions.append(self.vcsMenuAddTree)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
             self.trUtf8('Remove from repository (and disk)'), 
             self._VCSRemove)
@@ -298,11 +283,6 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsAdd.png"),
             self.trUtf8('Add to repository'), self._VCSAdd)
         self.vcsAddMultiMenuActions.append(act)
-##        if 1 in self.browser.specialMenuEntries:
-##            self.vcsMultiMenuAddTree = \
-##                menu.addAction(UI.PixmapCache.getIcon("vcsAdd.png"),
-##                self.trUtf8('Add tree to repository'), self._VCSAddTree)
-##            self.vcsAddMultiMenuActions.append(self.vcsMultiMenuAddTree)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
             self.trUtf8('Remove from repository (and disk)'), 
             self._VCSRemove)

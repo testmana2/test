@@ -206,7 +206,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         # add edges to the graph
         edges = []
-##        if rev and parents[0] != -1:
         if parents[0] != -1:
             for ecol, erev in enumerate(self.__revs):
                 if erev in next:
@@ -470,7 +469,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     
     def start(self, fn):
         """
-        Public slot to start the svn log command.
+        Public slot to start the hg log command.
         
         @param fn filename to show the log for (string)
         """
@@ -527,7 +526,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     
     def __processBuffer(self):
         """
-        Private method to process the buffered output of the svn log command.
+        Private method to process the buffered output of the hg log command.
         """
         noEntries = 0
         log = {"message" : []}

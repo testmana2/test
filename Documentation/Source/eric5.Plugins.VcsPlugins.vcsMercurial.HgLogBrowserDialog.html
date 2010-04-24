@@ -94,7 +94,7 @@ QDialog, Ui_HgLogBrowserDialog
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__processBuffer">__processBuffer</a></td>
-<td>Private method to process the buffered output of the svn log command.</td>
+<td>Private method to process the buffered output of the hg log command.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__readStderr">__readStderr</a></td>
 <td>Private slot to handle the readyReadStandardError signal.</td>
@@ -166,7 +166,7 @@ QDialog, Ui_HgLogBrowserDialog
 <td>Private slot called, when the from date changes.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.start">start</a></td>
-<td>Public slot to start the svn log command.</td>
+<td>Public slot to start the hg log command.</td>
 </tr>
 </table>
 <a NAME="HgLogBrowserDialog.__init__" ID="HgLogBrowserDialog.__init__"></a>
@@ -386,7 +386,7 @@ exit status of the process (QProcess.ExitStatus)
 <h4>HgLogBrowserDialog.__processBuffer</h4>
 <b>__processBuffer</b>(<i></i>)
 <p>
-        Private method to process the buffered output of the svn log command.
+        Private method to process the buffered output of the hg log command.
 </p><a NAME="HgLogBrowserDialog.__readStderr" ID="HgLogBrowserDialog.__readStderr"></a>
 <h4>HgLogBrowserDialog.__readStderr</h4>
 <b>__readStderr</b>(<i></i>)
@@ -557,7 +557,7 @@ new date (QDate)
 <h4>HgLogBrowserDialog.start</h4>
 <b>start</b>(<i>fn</i>)
 <p>
-        Public slot to start the svn log command.
+        Public slot to start the hg log command.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
