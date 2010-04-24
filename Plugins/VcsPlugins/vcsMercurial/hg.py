@@ -11,8 +11,8 @@ import os
 import shutil
 import urllib.request, urllib.parse, urllib.error
 
-from PyQt4.QtCore import QProcess, SIGNAL
-from PyQt4.QtGui import QMessageBox, QApplication, QDialog, QInputDialog
+from PyQt4.QtCore import QProcess, SIGNAL, QFileInfo
+from PyQt4.QtGui import QMessageBox, QApplication, QDialog, QInputDialog, QFileDialog
 
 from E5Gui.E5Application import e5App
 
@@ -38,6 +38,7 @@ from .HgAnnotateDialog import HgAnnotateDialog
 from .HgTagDialog import HgTagDialog
 from .HgTagBranchListDialog import HgTagBranchListDialog
 from .HgCommandDialog import HgCommandDialog
+from .HgBundleDialog import HgBundleDialog
 
 from .ProjectBrowserHelper import HgProjectBrowserHelper
 
@@ -1603,6 +1604,112 @@ class Hg(VersionControl):
             project.appendFile(ignoreName)
         
         return status
+    
+    def hgBundle(self, name):
+        """
+        Public method to create a changegroup file.
+        
+        @param name file/directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        dlg = HgBundleDialog()
+        if dlg.exec_() == QDialog.Accepted:
+            rev, compression, all = dlg.getParameters()
+            
+            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+                None,
+                self.trUtf8("Mercurial Bundle"),
+                None,
+                self.trUtf8("Mercurial Bundle Files (*.bundle)"),
+                None,
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            
+            if not fname:
+                return  # user aborted
+            
+            ext = QFileInfo(fname).suffix()
+            if not ext:
+                ex = selectedFilter.split("(*")[1].split(")")[0]
+                if ex:
+                    fname += ex
+            if QFileInfo(fname).exists():
+                res = QMessageBox.warning(None,
+                    self.trUtf8("Mercurial Bundle"),
+                    self.trUtf8("<p>The Mercurial bundle file <b>{0}</b> "
+                                "already exists.</p>")
+                        .format(fname),
+                    QMessageBox.StandardButtons(\
+                        QMessageBox.Abort | \
+                        QMessageBox.Save),
+                    QMessageBox.Abort)
+                if res != QMessageBox.Save:
+                    return
+            fname = Utilities.toNativeSeparators(fname)
+            
+            args = []
+            args.append('bundle')
+            if all:
+                args.append("--all")
+            if rev:
+                args.append("--rev")
+                args.append(rev)
+            if compression:
+                args.append("--type")
+                args.append(compression)
+            args.append(fname)
+            
+            dia = HgDialog(self.trUtf8('Recovering from interrupted transaction'))
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+    
+    def hgUnbundle(self, name):
+        """
+        Public method to apply changegroup files.
+        
+        @param name file/directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        files = QFileDialog.getOpenFileNames(\
+            None,
+            self.trUtf8("Mercurial Unbundle"),
+            "",
+            self.trUtf8("Mercurial Bundle Files (*.bundle);;All Files (*)"))
+        if files:
+            update = QMessageBox.question(None,
+                self.trUtf8("Mercurial Unbundle"),
+                self.trUtf8("""Shall the working directory be updated?"""),
+                QMessageBox.StandardButtons(\
+                    QMessageBox.No | \
+                    QMessageBox.Yes),
+                QMessageBox.Yes) == QMessageBox.Yes
+            
+            args = []
+            args.append('unbundle')
+            if update:
+                args.append("--update")
+            args.extend(files)
+            
+            dia = HgDialog(self.trUtf8('Recovering from interrupted transaction'))
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
     
     ############################################################################
     ## Methods to get the helper objects are below.
