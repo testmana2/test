@@ -84,6 +84,9 @@ VersionControl
 <td><a href="#Hg.hgBranch">hgBranch</a></td>
 <td>Public method used to set the tag in the Mercurial repository.</td>
 </tr><tr>
+<td><a href="#Hg.hgBundle">hgBundle</a></td>
+<td>Public method to create a changegroup file.</td>
+</tr><tr>
 <td><a href="#Hg.hgCopy">hgCopy</a></td>
 <td>Public method used to copy a file/directory.</td>
 </tr><tr>
@@ -134,6 +137,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgShowPaths">hgShowPaths</a></td>
 <td>Public method to show the path aliases for remote repositories.</td>
+</tr><tr>
+<td><a href="#Hg.hgUnbundle">hgUnbundle</a></td>
+<td>Public method to apply changegroup files.</td>
 </tr><tr>
 <td><a href="#Hg.hgVerify">hgVerify</a></td>
 <td>Public method to verify the integrity of the repository.</td>
@@ -320,6 +326,16 @@ file name to show the annotations for (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to be branched (string)
+</dd>
+</dl><a NAME="Hg.hgBundle" ID="Hg.hgBundle"></a>
+<h4>Hg.hgBundle</h4>
+<b>hgBundle</b>(<i>name</i>)
+<p>
+        Public method to create a changegroup file.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
 </dd>
 </dl><a NAME="Hg.hgCopy" ID="Hg.hgCopy"></a>
 <h4>Hg.hgCopy</h4>
@@ -525,6 +541,16 @@ file/directory name (string)
 <b>hgShowPaths</b>(<i>name</i>)
 <p>
         Public method to show the path aliases for remote repositories.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgUnbundle" ID="Hg.hgUnbundle"></a>
+<h4>Hg.hgUnbundle</h4>
+<b>hgUnbundle</b>(<i>name</i>)
+<p>
+        Public method to apply changegroup files.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
