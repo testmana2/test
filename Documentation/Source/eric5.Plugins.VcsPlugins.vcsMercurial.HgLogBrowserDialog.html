@@ -246,7 +246,7 @@ tuple containing the column and color index for
 </dd>
 </dl><a NAME="HgLogBrowserDialog.__generateFileItem" ID="HgLogBrowserDialog.__generateFileItem"></a>
 <h4>HgLogBrowserDialog.__generateFileItem</h4>
-<b>__generateFileItem</b>(<i>action, path</i>)
+<b>__generateFileItem</b>(<i>action, path, copyfrom</i>)
 <p>
         Private method to generate a changed files tree entry.
 </p><dl>
@@ -256,6 +256,9 @@ indicator for the change action ("A", "D" or "M")
 </dd><dt><i>path</i></dt>
 <dd>
 path of the file in the repository (string)
+</dd><dt><i>copyfrom</i></dt>
+<dd>
+path the file was copied from (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

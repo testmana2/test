@@ -341,7 +341,7 @@ def installEric():
         copyTree('eric', cfg['ericDir'], ['*.rb'], 
             ['eric%sExamples' % os.sep])
         copyTree('eric%sPlugins' % os.sep, '%s%sPlugins' % (cfg['ericDir'], os.sep), 
-            ['*.png'])
+            ['*.png', '*.style'])
         copyTree('eric%sDocumentation' % os.sep, cfg['ericDocDir'], ['*.html', '*.qch'])
         copyTree('eric%sDTDs' % os.sep, cfg['ericDTDDir'], ['*.dtd'])
         copyTree('eric%sCSSs' % os.sep, cfg['ericCSSDir'], ['*.css'])

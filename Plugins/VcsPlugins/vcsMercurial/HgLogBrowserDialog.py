@@ -385,17 +385,19 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         return itm
     
-    def __generateFileItem(self, action, path):
+    def __generateFileItem(self, action, path, copyfrom):
         """
         Private method to generate a changed files tree entry.
         
         @param action indicator for the change action ("A", "D" or "M")
         @param path path of the file in the repository (string)
+        @param copyfrom path the file was copied from (string)
         @return reference to the generated item (QTreeWidgetItem)
         """
         itm = QTreeWidgetItem(self.filesTree, [
             self.flags[action], 
             path, 
+            copyfrom, 
         ])
         
         return itm
@@ -439,18 +441,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
            not self.fname == "." and \
            not self.stopCheckBox.isChecked():
             args.append('--follow')
-        args.append('--template')
-        args.append("change|{rev}:{node|short}\n"
-                    "user|{author|email}\n"
-                    "parents|{parents}\n"
-                    "date|{date|isodate}\n"
-                    "description|{desc}\n"
-                    "file_adds|{file_adds}\n"
-                    "files_mods|{file_mods}\n"
-                    "file_dels|{file_dels}\n"
-                    "branches|{branches}\n"
-                    "tags|{tags}\n"
-                    "@@@\n")
+        args.append('--copies')
+        args.append('--style')
+        args.append(os.path.join(os.path.dirname(__file__), "styles", "logBrowser.style"))
         if not self.projectMode:
             args.append(self.filename)
         
@@ -532,6 +525,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         log = {"message" : []}
         changedPaths = []
         initialText = True
+        fileCopies = {}
         for s in self.buf:
             if s != "@@@\n":
                 try:
@@ -553,32 +547,47 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     log["message"].append(value.strip())
                 elif key == "file_adds":
                     if value.strip():
-                        for f in value.strip().split():
-                            changedPaths.append({\
-                                "action" : "A", 
-                                "path"   : f, 
-                            })
+                        for f in value.strip().split(", "):
+                            if f in fileCopies:
+                                changedPaths.append({
+                                    "action"   : "A", 
+                                    "path"     : f, 
+                                    "copyfrom" : fileCopies[f], 
+                                })
+                            else:
+                                changedPaths.append({
+                                    "action"   : "A", 
+                                    "path"     : f, 
+                                    "copyfrom" : "", 
+                                })
                 elif key == "files_mods":
                     if value.strip():
-                        for f in value.strip().split():
-                            changedPaths.append({\
-                                "action" : "M", 
-                                "path"   : f, 
+                        for f in value.strip().split(", "):
+                            changedPaths.append({
+                                "action"   : "M", 
+                                "path"     : f, 
+                                "copyfrom" : "", 
                             })
                 elif key == "file_dels":
                     if value.strip():
-                        for f in value.strip().split():
-                            changedPaths.append({\
-                                "action" : "D", 
-                                "path"   : f, 
+                        for f in value.strip().split(", "):
+                            changedPaths.append({
+                                "action"   : "D", 
+                                "path"     : f, 
+                                "copyfrom" : "", 
                             })
+                elif key == "file_copies":
+                    if value.strip():
+                        for entry in value.strip().split(", "):
+                            newName, oldName = entry[:-1].split(" (")
+                            fileCopies[newName] = oldName
                 elif key == "branches":
                     if value.strip():
-                        log["branches"] = value.strip().split()
+                        log["branches"] = value.strip().split(", ")
                     else:
                         log["branches"] = ["default"]
                 elif key == "tags":
-                    log["tags"] = value.strip().split()
+                    log["tags"] = value.strip().split(", ")
                 else:
                     if initialText:
                         continue
@@ -601,6 +610,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     noEntries += 1
                     log = {"message" : []}
                     changedPaths = []
+                    fileCopies = {}
         
         self.logTree.doItemsLayout()
         self.__resizeColumnsLog()
@@ -694,7 +704,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         changes = current.data(0, self.__changesRole)
         if len(changes) > 0:
             for change in changes:
-                self.__generateFileItem(change["action"], change["path"])
+                self.__generateFileItem(
+                    change["action"], change["path"], change["copyfrom"])
             self.__resizeColumnsFiles()
             self.__resortFiles()
         

@@ -112,18 +112,9 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if noEntries:
             args.append('--limit')
             args.append(str(noEntries))
-        args.append('--template')
-        args.append("change|{rev}:{node|short}\n"
-                    "branches|{branches}\n"
-                    "tags|{tags}\n"
-                    "parents|{parents}\n"
-                    "user|{author}\n"
-                    "date|{date|isodate}\n"
-                    "description|{desc}\n"
-                    "file_adds|{file_adds}\n"
-                    "files_mods|{file_mods}\n"
-                    "file_dels|{file_dels}\n"
-                    "@@@\n")
+        args.append('--copies')
+        args.append('--style')
+        args.append(os.path.join(os.path.dirname(__file__), "styles", "logDialog.style"))
         if self.fname != "." or self.dname != repodir:
             args.append(self.filename)
         
@@ -160,9 +151,11 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         
         hasInitialText = 0  # three states flag (-1, 0, 1)
         lvers = 1
+        fileCopies = {}
         for s in self.buf:
             if s == "@@@\n":
                 self.contents.insertHtml('</p>{0}<br/>\n'.format(80 * "="))
+                fileCopies = {}
             else:
                 try:
                     key, value = s.split("|", 1)
@@ -216,24 +209,35 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 elif key == "description":
                     self.contents.insertHtml(Utilities.html_encode(value.strip()))
                     self.contents.insertHtml('<br />\n')
+                elif key == "file_copies":
+                    if value.strip():
+                        for entry in value.strip().split(", "):
+                            newName, oldName = entry[:-1].split(" (")
+                            fileCopies[newName] = oldName
                 elif key == "file_adds":
                     if value.strip():
                         self.contents.insertHtml('<br />\n')
-                        for f in value.strip().split():
-                            self.contents.insertHtml(
-                                self.trUtf8('Added {0}<br />\n')\
-                                    .format(Utilities.html_encode(f)))
+                        for f in value.strip().split(", "):
+                            if f in fileCopies:
+                                self.contents.insertHtml(
+                                    self.trUtf8('Added {0} (copied from {1})<br />\n')\
+                                        .format(Utilities.html_encode(f), 
+                                                Utilities.html_encode(fileCopies[f])))
+                            else:
+                                self.contents.insertHtml(
+                                    self.trUtf8('Added {0}<br />\n')\
+                                        .format(Utilities.html_encode(f)))
                 elif key == "files_mods":
                     if value.strip():
                         self.contents.insertHtml('<br />\n')
-                        for f in value.strip().split():
+                        for f in value.strip().split(", "):
                             self.contents.insertHtml(
                                 self.trUtf8('Modified {0}<br />\n')\
                                     .format(Utilities.html_encode(f)))
                 elif key == "file_dels":
                     if value.strip():
                         self.contents.insertHtml('<br />\n')
-                        for f in value.strip().split():
+                        for f in value.strip().split(", "):
                             self.contents.insertHtml(
                                 self.trUtf8('Deleted {0}<br />\n')\
                                     .format(Utilities.html_encode(f)))

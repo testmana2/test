@@ -1103,6 +1103,8 @@
     <Other>eric5.desktop</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/mercurial.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/preferences-mercurial.png</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowser.style</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialog.style</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
