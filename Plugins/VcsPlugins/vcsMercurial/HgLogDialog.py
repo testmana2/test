@@ -112,7 +112,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if noEntries:
             args.append('--limit')
             args.append(str(noEntries))
-        args.append('--copies')
+        if self.mode == "log":
+            args.append('--copies')
         args.append('--style')
         args.append(os.path.join(os.path.dirname(__file__), "styles", "logDialog.style"))
         if self.fname != "." or self.dname != repodir:

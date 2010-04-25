@@ -441,7 +441,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
            not self.fname == "." and \
            not self.stopCheckBox.isChecked():
             args.append('--follow')
-        args.append('--copies')
+        if self.commandMode == "log":
+            args.append('--copies')
         args.append('--style')
         args.append(os.path.join(os.path.dirname(__file__), "styles", "logBrowser.style"))
         if not self.projectMode:
