@@ -4071,7 +4071,8 @@ class Editor(QsciScintillaCompat):
                         ignoreStarImportWarnings = \
                             Preferences.getFlakes("IgnoreStarImportWarnings")
                         try:
-                            warnings = Checker(self.text(), self.fileName)
+                            txt = self.text().replace("\r\n", "\n").replace("\r", "\n")
+                            warnings = Checker(txt, self.fileName)
                             warnings.messages.sort(key = lambda a: a.lineno)
                             for warning in warnings.messages:
                                 if ignoreStarImportWarnings and \
