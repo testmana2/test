@@ -15,14 +15,20 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
     """
     Class implementing a dialog to enter the data for a bundle operation.
     """
-    def __init__(self, parent = None):
+    def __init__(self, tagsList, branchesList, parent = None):
         """
         Constructor
+        
+        @param tagsList list of tags (list of strings)
+        @param branchesList list of branches (list of strings)
+        @param parent parent widget (QWidget)
         """
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
         self.compressionCombo.addItems(["", "bzip2", "gzip", "none"])
+        self.tagCombo.addItems(list(sorted(tagsList)))
+        self.branchCombo.addItems(list(sorted(["default"] + branchesList)))
     
     def getParameters(self):
         """

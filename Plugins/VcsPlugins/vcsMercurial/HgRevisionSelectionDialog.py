@@ -15,12 +15,13 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
     """
     Class implementing a dialog to select a revision.
     """
-    def __init__(self, tagsList, branchesList, parent = None):
+    def __init__(self, tagsList, branchesList, showNone = False, parent = None):
         """
         Constructor
         
         @param tagsList list of tags (list of strings)
         @param branchesList list of branches (list of strings)
+        @param showNone flag influencing the label of the 'None' selection (boolean)
         @param parent parent widget (QWidget)
         """
         QDialog.__init__(self, parent)
@@ -28,6 +29,11 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
        
         self.tagCombo.addItems(list(sorted(tagsList)))
         self.branchCombo.addItems(list(sorted(["default"] + branchesList)))
+        
+        if showNone:
+            self.tipButton.setText(self.trUtf8("No revision selected"))
+            self.tipButton.setToolTip(self.trUtf8(
+                "Select to not specify a specific revision"))
     
     def getRevision(self):
         """

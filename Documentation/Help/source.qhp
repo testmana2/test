@@ -7785,6 +7785,7 @@
       <keyword name="Hg.clearStatusCache" id="Hg.clearStatusCache" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.clearStatusCache" />
       <keyword name="Hg.getPlugin" id="Hg.getPlugin" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getPlugin" />
       <keyword name="Hg.hgAnnotate" id="Hg.hgAnnotate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgAnnotate" />
+      <keyword name="Hg.hgBisect" id="Hg.hgBisect" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBisect" />
       <keyword name="Hg.hgBranch" id="Hg.hgBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBranch" />
       <keyword name="Hg.hgBundle" id="Hg.hgBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBundle" />
       <keyword name="Hg.hgCopy" id="Hg.hgCopy" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCopy" />
@@ -7802,6 +7803,7 @@
       <keyword name="Hg.hgPush" id="Hg.hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPush" />
       <keyword name="Hg.hgRecover" id="Hg.hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRecover" />
       <keyword name="Hg.hgResolve" id="Hg.hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgResolve" />
+      <keyword name="Hg.hgShowBranch" id="Hg.hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowBranch" />
       <keyword name="Hg.hgShowConfig" id="Hg.hgShowConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowConfig" />
       <keyword name="Hg.hgShowPaths" id="Hg.hgShowPaths" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowPaths" />
       <keyword name="Hg.hgUnbundle" id="Hg.hgUnbundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgUnbundle" />
@@ -7861,6 +7863,10 @@
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html" />
       <keyword name="HgProjectHelper" id="HgProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper" />
       <keyword name="HgProjectHelper (Constructor)" id="HgProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__init__" />
+      <keyword name="HgProjectHelper.__hgBisectBad" id="HgProjectHelper.__hgBisectBad" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectBad" />
+      <keyword name="HgProjectHelper.__hgBisectGood" id="HgProjectHelper.__hgBisectGood" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectGood" />
+      <keyword name="HgProjectHelper.__hgBisectReset" id="HgProjectHelper.__hgBisectReset" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectReset" />
+      <keyword name="HgProjectHelper.__hgBisectSkip" id="HgProjectHelper.__hgBisectSkip" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectSkip" />
       <keyword name="HgProjectHelper.__hgBranch" id="HgProjectHelper.__hgBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBranch" />
       <keyword name="HgProjectHelper.__hgBranchList" id="HgProjectHelper.__hgBranchList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBranchList" />
       <keyword name="HgProjectHelper.__hgBundle" id="HgProjectHelper.__hgBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBundle" />
@@ -7879,6 +7885,7 @@
       <keyword name="HgProjectHelper.__hgPush" id="HgProjectHelper.__hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPush" />
       <keyword name="HgProjectHelper.__hgRecover" id="HgProjectHelper.__hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRecover" />
       <keyword name="HgProjectHelper.__hgResolve" id="HgProjectHelper.__hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgResolve" />
+      <keyword name="HgProjectHelper.__hgShowBranch" id="HgProjectHelper.__hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowBranch" />
       <keyword name="HgProjectHelper.__hgShowConfig" id="HgProjectHelper.__hgShowConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowConfig" />
       <keyword name="HgProjectHelper.__hgShowPaths" id="HgProjectHelper.__hgShowPaths" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowPaths" />
       <keyword name="HgProjectHelper.__hgTagList" id="HgProjectHelper.__hgTagList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgTagList" />

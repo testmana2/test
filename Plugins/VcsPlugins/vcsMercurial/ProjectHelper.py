@@ -426,6 +426,19 @@ class HgProjectHelper(VcsProjectHelper):
         self.connect(self.hgCloseBranchAct, SIGNAL('triggered()'), self.__hgCloseBranch)
         self.actions.append(self.hgCloseBranchAct)
         
+        self.hgShowBranchAct = E5Action(self.trUtf8('Show current branch'), 
+                self.trUtf8('Show current branch'),
+                0, 0, self, 'mercurial_show_branch')
+        self.hgShowBranchAct.setStatusTip(self.trUtf8(
+            'Show the current branch of the project'
+        ))
+        self.hgShowBranchAct.setWhatsThis(self.trUtf8(
+            """<b>Show current branch</b>"""
+            """<p>This shows the current branch of the project.</p>"""
+        ))
+        self.connect(self.hgShowBranchAct, SIGNAL('triggered()'), self.__hgShowBranch)
+        self.actions.append(self.hgShowBranchAct)
+        
         self.vcsSwitchAct = E5Action(self.trUtf8('Switch'),
                 UI.PixmapCache.getIcon("vcsSwitch.png"),
                 self.trUtf8('S&witch...'),
@@ -595,6 +608,58 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.connect(self.hgUnbundleAct, SIGNAL('triggered()'), self.__hgUnbundle)
         self.actions.append(self.hgUnbundleAct)
+        
+        self.hgBisectGoodAct = E5Action(self.trUtf8('Mark as "good"'),
+                self.trUtf8('Mark as "good"...'),
+                0, 0, self, 'mercurial_bisect_good')
+        self.hgBisectGoodAct.setStatusTip(self.trUtf8(
+            'Mark a selectable changeset as good'
+        ))
+        self.hgBisectGoodAct.setWhatsThis(self.trUtf8(
+            """<b>Mark as good</b>"""
+            """<p>This marks a selectable changeset as good.</p>"""
+        ))
+        self.connect(self.hgBisectGoodAct, SIGNAL('triggered()'), self.__hgBisectGood)
+        self.actions.append(self.hgBisectGoodAct)
+        
+        self.hgBisectBadAct = E5Action(self.trUtf8('Mark as "bad"'),
+                self.trUtf8('Mark as "bad"...'),
+                0, 0, self, 'mercurial_bisect_bad')
+        self.hgBisectBadAct.setStatusTip(self.trUtf8(
+            'Mark a selectable changeset as bad'
+        ))
+        self.hgBisectBadAct.setWhatsThis(self.trUtf8(
+            """<b>Mark as bad</b>"""
+            """<p>This marks a selectable changeset as bad.</p>"""
+        ))
+        self.connect(self.hgBisectBadAct, SIGNAL('triggered()'), self.__hgBisectBad)
+        self.actions.append(self.hgBisectBadAct)
+        
+        self.hgBisectSkipAct = E5Action(self.trUtf8('Skip'),
+                self.trUtf8('Skip'),
+                0, 0, self, 'mercurial_bisect_skip')
+        self.hgBisectSkipAct.setStatusTip(self.trUtf8(
+            'Skip the current changeset'
+        ))
+        self.hgBisectSkipAct.setWhatsThis(self.trUtf8(
+            """<b>Skip</b>"""
+            """<p>This skips the current changeset.</p>"""
+        ))
+        self.connect(self.hgBisectSkipAct, SIGNAL('triggered()'), self.__hgBisectSkip)
+        self.actions.append(self.hgBisectSkipAct)
+        
+        self.hgBisectResetAct = E5Action(self.trUtf8('Reset'),
+                self.trUtf8('Reset'),
+                0, 0, self, 'mercurial_bisect_reset')
+        self.hgBisectResetAct.setStatusTip(self.trUtf8(
+            'Reset the bisect search data'
+        ))
+        self.hgBisectResetAct.setWhatsThis(self.trUtf8(
+            """<b>Reset</b>"""
+            """<p>This resets the bisect search data.</p>"""
+        ))
+        self.connect(self.hgBisectResetAct, SIGNAL('triggered()'), self.__hgBisectReset)
+        self.actions.append(self.hgBisectResetAct)
     
     def initMenu(self, menu):
         """
@@ -608,6 +673,7 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addAction(self.hgHeadsAct)
         adminMenu.addAction(self.hgParentsAct)
         adminMenu.addAction(self.hgTipAct)
+        adminMenu.addAction(self.hgShowBranchAct)
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgShowPathsAct)
         adminMenu.addSeparator()
@@ -623,6 +689,12 @@ class HgProjectHelper(VcsProjectHelper):
         bundleMenu = QMenu(self.trUtf8("Changegroup Management"), menu)
         bundleMenu.addAction(self.hgBundleAct)
         bundleMenu.addAction(self.hgUnbundleAct)
+        
+        bisectMenu = QMenu(self.trUtf8("Bisect"), menu)
+        bisectMenu.addAction(self.hgBisectGoodAct)
+        bisectMenu.addAction(self.hgBisectBadAct)
+        bisectMenu.addAction(self.hgBisectSkipAct)
+        bisectMenu.addAction(self.hgBisectResetAct)
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -669,6 +741,8 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsResolveAct)
         menu.addSeparator()
         menu.addAction(self.vcsSwitchAct)
+        menu.addSeparator()
+        menu.addMenu(bisectMenu)
         menu.addSeparator()
         menu.addAction(self.vcsCleanupAct)
         menu.addSeparator()
@@ -764,6 +838,12 @@ class HgProjectHelper(VcsProjectHelper):
         """
         self.vcs.hgBranch(self.project.ppath)
     
+    def __hgShowBranch(self):
+        """
+        Private slot used to show the current branch for the project.
+        """
+        self.vcs.hgShowBranch(self.project.ppath)
+    
     def __hgConfigure(self):
         """
         Private method to open the configuration dialog.
@@ -827,3 +907,27 @@ class HgProjectHelper(VcsProjectHelper):
         Protected slot used to apply changegroup files.
         """
         self.vcs.hgUnbundle(self.project.ppath)
+    
+    def __hgBisectGood(self):
+        """
+        Protected slot used to execute the bisect --good command.
+        """
+        self.vcs.hgBisect(self.project.ppath, "good")
+    
+    def __hgBisectBad(self):
+        """
+        Protected slot used to execute the bisect --bad command.
+        """
+        self.vcs.hgBisect(self.project.ppath, "bad")
+    
+    def __hgBisectSkip(self):
+        """
+        Protected slot used to execute the bisect --skip command.
+        """
+        self.vcs.hgBisect(self.project.ppath, "skip")
+    
+    def __hgBisectReset(self):
+        """
+        Protected slot used to execute the bisect --reset command.
+        """
+        self.vcs.hgBisect(self.project.ppath, "reset")

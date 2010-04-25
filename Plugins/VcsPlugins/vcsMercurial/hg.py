@@ -1429,7 +1429,7 @@ class Hg(VersionControl):
     
     def hgBranch(self, name):
         """
-        Public method used to set the tag in the Mercurial repository.
+        Public method used to create a branch in the Mercurial repository.
         
         @param name file/directory name to be branched (string)
         """
@@ -1457,6 +1457,29 @@ class Hg(VersionControl):
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
+    
+    def hgShowBranch(self, name):
+        """
+        Public method used to show the current branch the working directory.
+        
+        @param name file/directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        args = []
+        args.append("branch")
+        
+        dia = HgDialog(self.trUtf8('Showing current branch'))
+        res = dia.startProcess(args, repodir, False)
+        if res:
+            dia.exec_()
     
     def hgEditConfig(self, name):
         """
@@ -1620,13 +1643,13 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        dlg = HgBundleDialog()
+        dlg = HgBundleDialog(self.tagsList, self.branchesList)
         if dlg.exec_() == QDialog.Accepted:
             rev, compression, all = dlg.getParameters()
             
             fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
                 None,
-                self.trUtf8("Mercurial Bundle"),
+                self.trUtf8("Create changegroup"),
                 None,
                 self.trUtf8("Mercurial Bundle Files (*.bundle)"),
                 None,
@@ -1642,7 +1665,7 @@ class Hg(VersionControl):
                     fname += ex
             if QFileInfo(fname).exists():
                 res = QMessageBox.warning(None,
-                    self.trUtf8("Mercurial Bundle"),
+                    self.trUtf8("Create changegroup"),
                     self.trUtf8("<p>The Mercurial bundle file <b>{0}</b> "
                                 "already exists.</p>")
                         .format(fname),
@@ -1666,7 +1689,7 @@ class Hg(VersionControl):
                 args.append(compression)
             args.append(fname)
             
-            dia = HgDialog(self.trUtf8('Recovering from interrupted transaction'))
+            dia = HgDialog(self.trUtf8('Create changegroup'))
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1688,12 +1711,12 @@ class Hg(VersionControl):
         
         files = QFileDialog.getOpenFileNames(\
             None,
-            self.trUtf8("Mercurial Unbundle"),
+            self.trUtf8("Apply changegroups"),
             "",
             self.trUtf8("Mercurial Bundle Files (*.bundle);;All Files (*)"))
         if files:
             update = QMessageBox.question(None,
-                self.trUtf8("Mercurial Unbundle"),
+                self.trUtf8("Apply changegroups"),
                 self.trUtf8("""Shall the working directory be updated?"""),
                 QMessageBox.StandardButtons(\
                     QMessageBox.No | \
@@ -1706,10 +1729,51 @@ class Hg(VersionControl):
                 args.append("--update")
             args.extend(files)
             
-            dia = HgDialog(self.trUtf8('Recovering from interrupted transaction'))
+            dia = HgDialog(self.trUtf8('Apply changegroups'))
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
+    
+    def hgBisect(self, name, subcommand):
+        """
+        Public method to perform bisect commands.
+        
+        @param name file/directory name (string)
+        @param subcommand name of the subcommand (string, one of 'good', 'bad',
+            'skip' or 'reset')
+        """
+        if subcommand not in ("good", "bad", "skip", "reset"):
+            raise ValueError(
+                self.trUtf8("Bisect subcommand ({0}) invalid.").format(subcommand))
+        
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        rev = ""
+        if subcommand in ("good", "bad"):
+            dlg = HgRevisionSelectionDialog(self.tagsList, self.branchesList, 
+                                            showNone =True)
+            if dlg.exec_() == QDialog.Accepted:
+                rev = dlg.getRevision()
+            else:
+                return
+        
+        args = []
+        args.append("bisect")
+        args.append("--{0}".format(subcommand))
+        if rev:
+            args.append(rev)
+        
+        dia = HgDialog(self.trUtf8('Mercurial Bisect ({0})').format(subcommand))
+        res = dia.startProcess(args, repodir)
+        if res:
+            dia.exec_()
     
     ############################################################################
     ## Methods to get the helper objects are below.

@@ -63,7 +63,7 @@ QDialog, Ui_HgRevisionSelectionDialog
 </table>
 <a NAME="HgRevisionSelectionDialog.__init__" ID="HgRevisionSelectionDialog.__init__"></a>
 <h4>HgRevisionSelectionDialog (Constructor)</h4>
-<b>HgRevisionSelectionDialog</b>(<i>tagsList, branchesList, parent = None</i>)
+<b>HgRevisionSelectionDialog</b>(<i>tagsList, branchesList, showNone = False, parent = None</i>)
 <p>
         Constructor
 </p><dl>
@@ -73,6 +73,9 @@ list of tags (list of strings)
 </dd><dt><i>branchesList</i></dt>
 <dd>
 list of branches (list of strings)
+</dd><dt><i>showNone</i></dt>
+<dd>
+flag influencing the label of the 'None' selection (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)

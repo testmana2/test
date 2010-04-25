@@ -81,8 +81,11 @@ VersionControl
 <td><a href="#Hg.hgAnnotate">hgAnnotate</a></td>
 <td>Public method to show the output of the hg annotate command.</td>
 </tr><tr>
+<td><a href="#Hg.hgBisect">hgBisect</a></td>
+<td>Public method to perform bisect commands.</td>
+</tr><tr>
 <td><a href="#Hg.hgBranch">hgBranch</a></td>
-<td>Public method used to set the tag in the Mercurial repository.</td>
+<td>Public method used to create a branch in the Mercurial repository.</td>
 </tr><tr>
 <td><a href="#Hg.hgBundle">hgBundle</a></td>
 <td>Public method to create a changegroup file.</td>
@@ -131,6 +134,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgResolve">hgResolve</a></td>
 <td>Public method used to resolve conflicts of a file/directory.</td>
+</tr><tr>
+<td><a href="#Hg.hgShowBranch">hgShowBranch</a></td>
+<td>Public method used to show the current branch the working directory.</td>
 </tr><tr>
 <td><a href="#Hg.hgShowConfig">hgShowConfig</a></td>
 <td>Public method to show the combined config.</td>
@@ -317,11 +323,25 @@ reference to the plugin object (VcsMercurialPlugin)
 <dd>
 file name to show the annotations for (string)
 </dd>
+</dl><a NAME="Hg.hgBisect" ID="Hg.hgBisect"></a>
+<h4>Hg.hgBisect</h4>
+<b>hgBisect</b>(<i>name, subcommand</i>)
+<p>
+        Public method to perform bisect commands.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd><dt><i>subcommand</i></dt>
+<dd>
+name of the subcommand (string, one of 'good', 'bad',
+            'skip' or 'reset')
+</dd>
 </dl><a NAME="Hg.hgBranch" ID="Hg.hgBranch"></a>
 <h4>Hg.hgBranch</h4>
 <b>hgBranch</b>(<i>name</i>)
 <p>
-        Public method used to set the tag in the Mercurial repository.
+        Public method used to create a branch in the Mercurial repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -525,6 +545,16 @@ file/directory name (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to be resolved (string)
+</dd>
+</dl><a NAME="Hg.hgShowBranch" ID="Hg.hgShowBranch"></a>
+<h4>Hg.hgShowBranch</h4>
+<b>hgShowBranch</b>(<i>name</i>)
+<p>
+        Public method used to show the current branch the working directory.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
 </dd>
 </dl><a NAME="Hg.hgShowConfig" ID="Hg.hgShowConfig"></a>
 <h4>Hg.hgShowConfig</h4>

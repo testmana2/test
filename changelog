@@ -4,6 +4,7 @@ Version 5.0-snapshot-2010mmdd:
 - bug fixes
 - added administration actions to the Mercurial plug-in
 - added changegroup related actions to the Mercurial plug-in
+- added bisect commands to the Mercurial plug-in
 
 Version 5.0-snapshot-20100418:
 - bug fixes

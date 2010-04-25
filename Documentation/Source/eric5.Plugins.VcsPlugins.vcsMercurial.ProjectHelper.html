@@ -57,6 +57,18 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__init__">HgProjectHelper</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__hgBisectBad">__hgBisectBad</a></td>
+<td>Protected slot used to execute the bisect --bad command.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBisectGood">__hgBisectGood</a></td>
+<td>Protected slot used to execute the bisect --good command.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBisectReset">__hgBisectReset</a></td>
+<td>Protected slot used to execute the bisect --reset command.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBisectSkip">__hgBisectSkip</a></td>
+<td>Protected slot used to execute the bisect --skip command.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.__hgBranch">__hgBranch</a></td>
 <td>Private slot used to create a new branch for the project.</td>
 </tr><tr>
@@ -111,6 +123,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__hgResolve">__hgResolve</a></td>
 <td>Private slot used to resolve conflicts of the local project.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__hgShowBranch">__hgShowBranch</a></td>
+<td>Private slot used to show the current branch for the project.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.__hgShowConfig">__hgShowConfig</a></td>
 <td>Protected slot used to show the combined config.</td>
 </tr><tr>
@@ -158,7 +173,27 @@ parent widget (QWidget)
 <dd>
 name of this object (string)
 </dd>
-</dl><a NAME="HgProjectHelper.__hgBranch" ID="HgProjectHelper.__hgBranch"></a>
+</dl><a NAME="HgProjectHelper.__hgBisectBad" ID="HgProjectHelper.__hgBisectBad"></a>
+<h4>HgProjectHelper.__hgBisectBad</h4>
+<b>__hgBisectBad</b>(<i></i>)
+<p>
+        Protected slot used to execute the bisect --bad command.
+</p><a NAME="HgProjectHelper.__hgBisectGood" ID="HgProjectHelper.__hgBisectGood"></a>
+<h4>HgProjectHelper.__hgBisectGood</h4>
+<b>__hgBisectGood</b>(<i></i>)
+<p>
+        Protected slot used to execute the bisect --good command.
+</p><a NAME="HgProjectHelper.__hgBisectReset" ID="HgProjectHelper.__hgBisectReset"></a>
+<h4>HgProjectHelper.__hgBisectReset</h4>
+<b>__hgBisectReset</b>(<i></i>)
+<p>
+        Protected slot used to execute the bisect --reset command.
+</p><a NAME="HgProjectHelper.__hgBisectSkip" ID="HgProjectHelper.__hgBisectSkip"></a>
+<h4>HgProjectHelper.__hgBisectSkip</h4>
+<b>__hgBisectSkip</b>(<i></i>)
+<p>
+        Protected slot used to execute the bisect --skip command.
+</p><a NAME="HgProjectHelper.__hgBranch" ID="HgProjectHelper.__hgBranch"></a>
 <h4>HgProjectHelper.__hgBranch</h4>
 <b>__hgBranch</b>(<i></i>)
 <p>
@@ -248,6 +283,11 @@ name of this object (string)
 <b>__hgResolve</b>(<i></i>)
 <p>
         Private slot used to resolve conflicts of the local project.
+</p><a NAME="HgProjectHelper.__hgShowBranch" ID="HgProjectHelper.__hgShowBranch"></a>
+<h4>HgProjectHelper.__hgShowBranch</h4>
+<b>__hgShowBranch</b>(<i></i>)
+<p>
+        Private slot used to show the current branch for the project.
 </p><a NAME="HgProjectHelper.__hgShowConfig" ID="HgProjectHelper.__hgShowConfig"></a>
 <h4>HgProjectHelper.__hgShowConfig</h4>
 <b>__hgShowConfig</b>(<i></i>)
