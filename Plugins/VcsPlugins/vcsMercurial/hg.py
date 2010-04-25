@@ -838,6 +838,7 @@ class Hg(VersionControl):
         """
         if dname.endswith(os.sep):
             dname = dname[:-1]
+        dname = os.path.normcase(dname)
         
         found = False
         for name in list(self.statusCache.keys()):
@@ -870,7 +871,7 @@ class Hg(VersionControl):
                         str(process.readAllStandardOutput(), ioEncoding, 'replace')
                     for line in output.splitlines():
                         flag, path = line.split(" ", 1)
-                        name = os.path.join(repodir, os.path.normcase(path))
+                        name = os.path.normcase(os.path.join(repodir, path))
                         dirName = os.path.dirname(name)
                         if name.startswith(dname):
                             if flag not in "?I":
