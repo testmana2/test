@@ -13,6 +13,8 @@ from PyQt4.QtCore import pyqtSlot, QProcess, SIGNAL, QTimer, QUrl, QByteArray
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QApplication, QMessageBox, \
     QLineEdit, QTextCursor
 
+from E5Gui.E5Application import e5App
+
 from .Ui_HgLogDialog import Ui_HgLogDialog
 from .HgDiffDialog import HgDiffDialog
 
@@ -112,10 +114,18 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if noEntries:
             args.append('--limit')
             args.append(str(noEntries))
+        if self.mode in ("incoming", "outgoing"):
+            args.append("--newest-first")
         if self.mode == "log":
             args.append('--copies')
         args.append('--style')
         args.append(os.path.join(os.path.dirname(__file__), "styles", "logDialog.style"))
+        if self.mode == "incoming":
+            project = e5App().getObject("Project")
+            self.vcs.bundleFile = os.path.join(
+                project.getProjectManagementDir(), "hg-bundle.hg")
+            args.append('--bundle')
+            args.append(self.vcs.bundleFile)
         if self.fname != "." or self.dname != repodir:
             args.append(self.filename)
         
@@ -172,6 +182,9 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                     try:
                         lv = self.revisions[lvers]
                         lvers += 1
+                    except IndexError:
+                        lv = str(int(rev) - 1)
+                    if rev != "0":
                         url = QUrl()
                         url.setScheme("file")
                         url.setPath(self.filename)
@@ -183,8 +196,6 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                             str(query, encoding="ascii"), 
                             self.trUtf8('diff to {0}').format(lv), 
                         )
-                    except IndexError:
-                        pass
                     dstr += '<br />\n'
                     self.contents.insertHtml(dstr)
                 elif key == "branches":

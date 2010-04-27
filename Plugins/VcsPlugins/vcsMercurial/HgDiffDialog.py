@@ -106,6 +106,10 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.vcs.addArguments(args, self.vcs.options['global'])
         self.vcs.addArguments(args, self.vcs.options['diff'])
         
+        if self.vcs.bundleFile:
+            args.append('--repository')
+            args.append(self.vcs.bundleFile)
+        
         if versions is not None:
             self.raise_()
             self.activateWindow()

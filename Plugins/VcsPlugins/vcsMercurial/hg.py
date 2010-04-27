@@ -103,6 +103,7 @@ class Hg(VersionControl):
         self.tagbranchList = None
         self.annotate = None
         self.editor = None
+        self.bundleFile = None
         
         self.statusCache = {}
         
@@ -131,6 +132,9 @@ class Hg(VersionControl):
             self.tagbranchList.close()
         if self.annotate is not None:
             self.annotate.close()
+        
+        if self.bundleFile and os.path.exists(self.bundleFile):
+            os.remove(self.bundleFile)
     
     def vcsExists(self):
         """

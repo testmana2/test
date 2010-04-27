@@ -14,6 +14,8 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem,
     QApplication, QMessageBox, QCursor, QWidget, QLineEdit, QColor, QPixmap, \
     QPainter, QPen, QBrush, QIcon
 
+from E5Gui.E5Application import e5App
+
 from .Ui_HgLogBrowserDialog import Ui_HgLogBrowserDialog
 from .HgDiffDialog import HgDiffDialog
 
@@ -445,6 +447,12 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             args.append('--copies')
         args.append('--style')
         args.append(os.path.join(os.path.dirname(__file__), "styles", "logBrowser.style"))
+        if self.commandMode == "incoming":
+            project = e5App().getObject("Project")
+            self.vcs.bundleFile = os.path.join(
+                project.getProjectManagementDir(), "hg-bundle.hg")
+            args.append('--bundle')
+            args.append(self.vcs.bundleFile)
         if not self.projectMode:
             args.append(self.filename)
         
