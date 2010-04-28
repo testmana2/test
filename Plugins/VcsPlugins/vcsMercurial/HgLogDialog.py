@@ -64,7 +64,12 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.revisions = []  # stack of remembered revisions
         self.revString = self.trUtf8('Revision')
         
-        self.buf = []        # buffer for stdout
+        self.logEntries = []        # list of log entries
+        self.lastLogEntry = {}
+        self.fileCopies = {}
+        self.endInitialText = False
+        self.initialText = ""
+        
         self.diff = None
     
     def closeEvent(self, e):
@@ -96,10 +101,10 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.dname, self.fname = self.vcs.splitPath(fn)
         
         # find the root of the repo
-        repodir = self.dname
-        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
-            repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+        self.repodir = self.dname
+        while not os.path.isdir(os.path.join(self.repodir, self.vcs.adminDir)):
+            self.repodir = os.path.dirname(self.repodir)
+            if self.repodir == os.sep:
                 return
         
         self.process.kill()
@@ -126,10 +131,10 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 project.getProjectManagementDir(), "hg-bundle.hg")
             args.append('--bundle')
             args.append(self.vcs.bundleFile)
-        if self.fname != "." or self.dname != repodir:
+        if self.fname != "." or self.dname != self.repodir:
             args.append(self.filename)
         
-        self.process.setWorkingDirectory(repodir)
+        self.process.setWorkingDirectory(self.repodir)
         
         self.process.start('hg', args)
         procStarted = self.process.waitForStarted()
@@ -141,6 +146,52 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('hg'))
+    
+    def __getParents(self, rev):
+        """
+        Private method to get the parents of the currently viewed file/directory.
+        
+        @param rev revision number to get parents for (string)
+        @return list of parent revisions (list of strings)
+        """
+        errMsg = ""
+        parents = []
+        
+        process = QProcess()
+        args = []
+        args.append("parents")
+        if self.commandMode == "incoming" and self.vcs.bundleFile:
+            args.append("--repository")
+            args.append(self.vcs.bundleFile)
+        args.append("--template")
+        args.append("{rev}:{node|short}\n")
+        args.append("-r")
+        args.append(rev)
+        args.append(self.filename)
+        
+        process.setWorkingDirectory(self.repodir)
+        process.start('hg', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                output = \
+                    str(process.readAllStandardOutput(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace')
+                parents = [p for p in output.strip().splitlines()]
+            else:
+                if not finished:
+                    errMsg = self.trUtf8("The hg process did not finish within 30s.")
+        else:
+            errMsg = self.trUtf8("Could not start the hg executable.")
+        
+        if errMsg:
+            QMessageBox.critical(self,
+                self.trUtf8("Mercurial Error"),
+                errMsg)
+        
+        return parents
     
     def __procFinished(self, exitCode, exitStatus):
         """
@@ -154,111 +205,89 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         
         self.contents.clear()
         
-        if not self.buf:
+        if not self.logEntries:
             self.errors.append(self.trUtf8("No log available for '{0}'")\
                                .format(self.filename))
             self.errorGroup.show()
             return
         
-        hasInitialText = 0  # three states flag (-1, 0, 1)
-        lvers = 1
-        fileCopies = {}
-        for s in self.buf:
-            if s == "@@@\n":
-                self.contents.insertHtml('</p>{0}<br/>\n'.format(80 * "="))
-                fileCopies = {}
-            else:
-                try:
-                    key, value = s.split("|", 1)
-                except ValueError:
-                    key = ""
-                    value = s
-                if key == "change":
-                    if hasInitialText == 1:
-                        self.contents.insertHtml('{0}<br/>\n'.format(80 * "="))
-                        hasInitialText = -1
-                    rev, hexRev = value.split(":")
-                    dstr = '<p><b>{0} {1}</b>'.format(self.revString, value)
-                    try:
-                        lv = self.revisions[lvers]
-                        lvers += 1
-                    except IndexError:
-                        lv = str(int(rev) - 1)
-                    if rev != "0":
-                        url = QUrl()
-                        url.setScheme("file")
-                        url.setPath(self.filename)
-                        query = QByteArray()
-                        query.append(lv.split(":")[0]).append('_').append(rev)
-                        url.setEncodedQuery(query)
-                        dstr += ' [<a href="{0}" name="{1}" id="{1}">{2}</a>]'.format(
-                            url.toString(), 
-                            str(query, encoding="ascii"), 
-                            self.trUtf8('diff to {0}').format(lv), 
-                        )
-                    dstr += '<br />\n'
-                    self.contents.insertHtml(dstr)
-                elif key == "branches":
-                    if value.strip():
-                        self.contents.insertHtml(self.trUtf8("Branches: {0}<br />\n")\
-                            .format(value.strip()))
-                elif key == "tags":
-                    if value.strip():
-                        self.contents.insertHtml(self.trUtf8("Tags: {0}<br />\n")\
-                            .format(value.strip()))
-                elif key == "parents":
-                    if value.strip():
-                        self.contents.insertHtml(self.trUtf8("Parents: {0}<br />\n")\
-                            .format(value.strip()))
-                elif key == "user":
-                    dstr = self.contents.insertHtml(
-                        self.trUtf8('<i>Author: {0}</i><br />\n').format(value.strip()))
-                elif key == "date":
-                    date, time = value.strip().split()[:2]
-                    dstr = self.contents.insertHtml(
-                        self.trUtf8('<i>Date: {0}, {1}</i><br />\n')\
-                            .format(date, time))
-                elif key == "description":
-                    self.contents.insertHtml(Utilities.html_encode(value.strip()))
-                    self.contents.insertHtml('<br />\n')
-                elif key == "file_copies":
-                    if value.strip():
-                        for entry in value.strip().split(", "):
-                            newName, oldName = entry[:-1].split(" (")
-                            fileCopies[newName] = oldName
-                elif key == "file_adds":
-                    if value.strip():
-                        self.contents.insertHtml('<br />\n')
-                        for f in value.strip().split(", "):
-                            if f in fileCopies:
-                                self.contents.insertHtml(
-                                    self.trUtf8('Added {0} (copied from {1})<br />\n')\
-                                        .format(Utilities.html_encode(f), 
-                                                Utilities.html_encode(fileCopies[f])))
-                            else:
-                                self.contents.insertHtml(
-                                    self.trUtf8('Added {0}<br />\n')\
-                                        .format(Utilities.html_encode(f)))
-                elif key == "files_mods":
-                    if value.strip():
-                        self.contents.insertHtml('<br />\n')
-                        for f in value.strip().split(", "):
-                            self.contents.insertHtml(
-                                self.trUtf8('Modified {0}<br />\n')\
-                                    .format(Utilities.html_encode(f)))
-                elif key == "file_dels":
-                    if value.strip():
-                        self.contents.insertHtml('<br />\n')
-                        for f in value.strip().split(", "):
-                            self.contents.insertHtml(
-                                self.trUtf8('Deleted {0}<br />\n')\
-                                    .format(Utilities.html_encode(f)))
-                else:
-                    if value.strip():
-                        self.contents.insertHtml(Utilities.html_encode(value.strip()))
-                    self.contents.insertHtml('<br />\n')
-                    if hasInitialText == 0:
-                        hasInitialText = 1
+        if self.initialText:
+            self.contents.insertHtml(Utilities.html_encode(self.initialText.strip()))
+            self.contents.insertHtml('<br />\n')
+            self.contents.insertHtml('{0}<br/>\n'.format(80 * "="))
+            
+        for entry in self.logEntries:
+            fileCopies = {}
+            for fentry in entry["file_copies"].split(", "):
+                newName, oldName = entry[:-1].split(" (")
+                fileCopies[newName] = oldName
+            
+            rev, hexRev = entry["change"].split(":")
+            dstr = '<p><b>{0} {1}</b>'.format(self.revString, entry["change"])
+            parents = self.__getParents(rev)
+            for parent in parents:
+                url = QUrl()
+                url.setScheme("file")
+                url.setPath(self.filename)
+                query = QByteArray()
+                query.append(parent.split(":")[0]).append('_').append(rev)
+                url.setEncodedQuery(query)
+                dstr += ' [<a href="{0}" name="{1}" id="{1}">{2}</a>]'.format(
+                    url.toString(), 
+                    str(query, encoding="ascii"), 
+                    self.trUtf8('diff to {0}').format(parent), 
+                )
+            dstr += '<br />\n'
+            self.contents.insertHtml(dstr)
+            
+            self.contents.insertHtml(self.trUtf8("Branches: {0}<br />\n")\
+                .format(entry["branches"]))
+            
+            self.contents.insertHtml(self.trUtf8("Tags: {0}<br />\n")\
+                .format(entry["tags"]))
+            
+            self.contents.insertHtml(self.trUtf8("Parents: {0}<br />\n")\
+                .format(entry["parents"]))
+            
+            self.contents.insertHtml(self.trUtf8('<i>Author: {0}</i><br />\n')\
+                .format(entry["user"]))
+            
+            date, time = entry["date"].split()[:2]
+            self.contents.insertHtml(self.trUtf8('<i>Date: {0}, {1}</i><br />\n')\
+                .format(date, time))
+            
+            for line in entry["description"]:
+                self.contents.insertHtml(Utilities.html_encode(line.strip()))
+                self.contents.insertHtml('<br />\n')
+            
+            if entry["file_adds"]:
+                self.contents.insertHtml('<br />\n')
+                for f in entry["file_adds"].strip().split(", "):
+                    if f in fileCopies:
+                        self.contents.insertHtml(
+                            self.trUtf8('Added {0} (copied from {1})<br />\n')\
+                                .format(Utilities.html_encode(f), 
+                                        Utilities.html_encode(fileCopies[f])))
+                    else:
+                        self.contents.insertHtml(
+                            self.trUtf8('Added {0}<br />\n')\
+                                .format(Utilities.html_encode(f)))
+            
+            if entry["files_mods"]:
+                self.contents.insertHtml('<br />\n')
+                for f in entry["files_mods"].strip().split(", "):
+                    self.contents.insertHtml(
+                        self.trUtf8('Modified {0}<br />\n')\
+                            .format(Utilities.html_encode(f)))
+            
+            if entry["file_dels"]:
+                self.contents.insertHtml('<br />\n')
+                for f in entry["file_dels"].strip().split(", "):
+                    self.contents.insertHtml(
+                        self.trUtf8('Deleted {0}<br />\n')\
+                            .format(Utilities.html_encode(f)))
+            
+            self.contents.insertHtml('</p>{0}<br/>\n'.format(80 * "="))
         
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.Start)
@@ -274,15 +303,39 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(), 
+            s = str(self.process.readLine(), 
                         Preferences.getSystem("IOEncoding"), 
                         'replace')
-            self.buf.append(line)
+##            self.buf.append(line)
+##            
+##            if line.startswith("change|"):
+##                ver = line[7:]
+##                # save revision number for later use
+##                self.revisions.append(ver)
             
-            if line.startswith("change|"):
-                ver = line[7:]
-                # save revision number for later use
-                self.revisions.append(ver)
+            if s == "@@@\n":
+                self.logEntries.append(self.lastLogEntry)
+                self.lastLogEntry = {}
+                self.fileCopies = {}
+            else:
+                try:
+                    key, value = s.split("|", 1)
+                except ValueError:
+                    key = ""
+                    value = s
+                if key == "change":
+                    self.endInitialText = True
+                if key in ("change", "branches", "tags", "parents", "user",
+                            "date", "file_copies", "file_adds", "files_mods",
+                            "file_dels"):
+                    self.lastLogEntry[key] = value.strip()
+                elif key == "description":
+                    self.lastLogEntry[key] = [value.strip()]
+                else:
+                    if self.endInitialText:
+                        self.lastLogEntry["description"].append(value.strip())
+                    else:
+                        self.initialText.append(value)
     
     def __readStderr(self):
         """
