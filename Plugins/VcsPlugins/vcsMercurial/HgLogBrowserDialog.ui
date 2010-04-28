@@ -102,9 +102,6 @@
      <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
-     <property name="selectionMode">
-      <enum>QAbstractItemView::ExtendedSelection</enum>
-     </property>
      <property name="rootIsDecorated">
       <bool>false</bool>
      </property>
@@ -253,22 +250,22 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="diffPreviousButton">
+      <widget class="QPushButton" name="diffP1Button">
        <property name="toolTip">
-        <string>Press to generate a diff to the previous revision</string>
+        <string>Press to generate a diff to the first parent revision</string>
        </property>
        <property name="text">
-        <string>&amp;Diff to Previous</string>
+        <string>Diff to Parent &amp;1</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="diffRevisionsButton">
+      <widget class="QPushButton" name="diffP2Button">
        <property name="toolTip">
-        <string>Press to compare two revisions</string>
+        <string>Press to generate a diff to the second parent revision</string>
        </property>
        <property name="text">
-        <string>&amp;Compare Revisions</string>
+        <string>Diff to Parent &amp;2</string>
        </property>
       </widget>
      </item>
@@ -400,8 +397,8 @@
   <tabstop>nextButton</tabstop>
   <tabstop>limitSpinBox</tabstop>
   <tabstop>stopCheckBox</tabstop>
-  <tabstop>diffPreviousButton</tabstop>
-  <tabstop>diffRevisionsButton</tabstop>
+  <tabstop>diffP1Button</tabstop>
+  <tabstop>diffP2Button</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>
   <tabstop>sendButton</tabstop>

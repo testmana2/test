@@ -79,6 +79,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
         self.__edgesRole   = Qt.UserRole + 2
+        self.__parentsRole = Qt.UserRole + 3
         
         self.process = QProcess()
         self.connect(self.process, SIGNAL('finished(int, QProcess::ExitStatus)'),
@@ -181,9 +182,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             between the given node and its parents 
             (integer, integer, [(integer, integer, integer), ...])
         """
-        if not parents:
-            parents = [rev - 1]
-        
         if rev not in self.__revs:
             # new head
             self.__revs.append(rev)
@@ -294,6 +292,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         process = QProcess()
         args = []
         args.append("parents")
+        if self.commandMode == "incoming" and self.vcs.bundleFile:
+            args.append("--repository")
+            args.append(self.vcs.bundleFile)
         args.append("--template")
         args.append("{rev}\n")
         args.append("-r")
@@ -363,11 +364,14 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         if not self.projectMode:
             parents = self.__getParents(rev)
+        if not parents:
+            parents = [int(rev) - 1]
         column, color, edges = self.__generateEdges(int(rev), parents)
         
         itm.setData(0, self.__messageRole, message)
         itm.setData(0, self.__changesRole, changedPaths)
         itm.setData(0, self.__edgesRole, edges)
+        itm.setData(0, self.__parentsRole, parents)
         
         if self.logTree.topLevelItemCount() > 1:
             topedges = \
@@ -718,14 +722,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.__resizeColumnsFiles()
             self.__resortFiles()
         
-        self.diffPreviousButton.setEnabled(current is not None)
-    
-    @pyqtSlot()
-    def on_logTree_itemSelectionChanged(self):
-        """
-        Private slot called, when the selection has changed.
-        """
-        self.diffRevisionsButton.setEnabled(len(self.logTree.selectedItems()) == 2)
+        parents = current.data(0, self.__parentsRole)
+        self.diffP1Button.setEnabled(len(parents) > 0)
+        self.diffP2Button.setEnabled(len(parents) > 1)
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -736,41 +735,40 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.__getLogEntries(self.__lastRev - 1)
     
     @pyqtSlot()
-    def on_diffPreviousButton_clicked(self):
+    def on_diffP1Button_clicked(self):
         """
-        Private slot to handle the Diff to Previous button.
+        Private slot to handle the Diff to Parent 1 button.
         """
         itm = self.logTree.currentItem()
         if itm is None:
-            self.diffPreviousButton.setEnabled(False)
+            self.diffP1Button.setEnabled(False)
             return
         rev2 = int(itm.text(self.RevisionColumn).split(":")[0])
         
-        itm = self.logTree.topLevelItem(self.logTree.indexOfTopLevelItem(itm) + 1)
-        if itm is None:
-            rev1 = rev2 - 1
-            if rev1 < 0:
-                self.diffPreviousButton.setEnabled(False)
-                return
-        else:
-            rev1 = int(itm.text(self.RevisionColumn).split(":")[0])
+        rev1 = itm.data(0, self.__parentsRole)[0]
+        if rev1 < 0:
+            self.diffP1Button.setEnabled(False)
+            return
         
         self.__diffRevisions(rev1, rev2)
     
     @pyqtSlot()
-    def on_diffRevisionsButton_clicked(self):
+    def on_diffP2_clicked(self):
         """
-        Private slot to handle the Compare Revisions button.
+        Private slot to handle the Diff to Parent 2 button.
         """
-        items = self.logTree.selectedItems()
-        if len(items) != 2:
-            self.diffRevisionsButton.setEnabled(False)
+        itm = self.logTree.currentItem()
+        if itm is None:
+            self.diffP2Button.setEnabled(False)
+            return
+        rev2 = int(itm.text(self.RevisionColumn).split(":")[0])
+        
+        rev1 = itm.data(0, self.__parentsRole)[1]
+        if rev1 < 0:
+            self.diffP2Button.setEnabled(False)
             return
         
-        rev2 = int(items[0].text(self.RevisionColumn).split(":")[0])
-        rev1 = int(items[1].text(self.RevisionColumn).split(":")[0])
-        
-        self.__diffRevisions(min(rev1, rev2), max(rev1, rev2))
+        self.__diffRevisions(rev1, rev2)
     
     @pyqtSlot(QDate)
     def on_fromDate_dateChanged(self, date):
