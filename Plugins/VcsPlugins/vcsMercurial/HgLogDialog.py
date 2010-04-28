@@ -215,11 +215,13 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             self.errorGroup.show()
             return
         
+        html = ""
+        
         if self.initialText:
             for line in self.initialText:
-                self.contents.insertHtml(Utilities.html_encode(line.strip()))
-                self.contents.insertHtml('<br />\n')
-            self.contents.insertHtml('{0}<br/>\n'.format(80 * "="))
+                html += Utilities.html_encode(line.strip())
+                html += '<br />\n'
+            html += '{0}<br/>\n'.format(80 * "=")
             
         for entry in self.logEntries:
             fileCopies = {}
@@ -247,57 +249,49 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                     self.trUtf8('diff to {0}').format(parent), 
                 )
             dstr += '<br />\n'
-            self.contents.insertHtml(dstr)
+            html += dstr
             
-            self.contents.insertHtml(self.trUtf8("Branches: {0}<br />\n")\
-                .format(entry["branches"]))
+            html += self.trUtf8("Branches: {0}<br />\n").format(entry["branches"])
             
-            self.contents.insertHtml(self.trUtf8("Tags: {0}<br />\n")\
-                .format(entry["tags"]))
+            html += self.trUtf8("Tags: {0}<br />\n").format(entry["tags"])
             
-            self.contents.insertHtml(self.trUtf8("Parents: {0}<br />\n")\
-                .format(entry["parents"]))
+            html += self.trUtf8("Parents: {0}<br />\n").format(entry["parents"])
             
-            self.contents.insertHtml(self.trUtf8('<i>Author: {0}</i><br />\n')\
-                .format(entry["user"]))
+            html += self.trUtf8('<i>Author: {0}</i><br />\n').format(entry["user"])
             
             date, time = entry["date"].split()[:2]
-            self.contents.insertHtml(self.trUtf8('<i>Date: {0}, {1}</i><br />\n')\
-                .format(date, time))
+            html += self.trUtf8('<i>Date: {0}, {1}</i><br />\n').format(date, time)
             
             for line in entry["description"]:
-                self.contents.insertHtml(Utilities.html_encode(line.strip()))
-                self.contents.insertHtml('<br />\n')
+                html += Utilities.html_encode(line.strip())
+                html += '<br />\n'
             
             if entry["file_adds"]:
-                self.contents.insertHtml('<br />\n')
+                html += '<br />\n'
                 for f in entry["file_adds"].strip().split(", "):
                     if f in fileCopies:
-                        self.contents.insertHtml(
-                            self.trUtf8('Added {0} (copied from {1})<br />\n')\
+                        html += self.trUtf8('Added {0} (copied from {1})<br />\n')\
                                 .format(Utilities.html_encode(f), 
-                                        Utilities.html_encode(fileCopies[f])))
+                                        Utilities.html_encode(fileCopies[f]))
                     else:
-                        self.contents.insertHtml(
-                            self.trUtf8('Added {0}<br />\n')\
-                                .format(Utilities.html_encode(f)))
+                        html += self.trUtf8('Added {0}<br />\n')\
+                                .format(Utilities.html_encode(f))
             
             if entry["files_mods"]:
-                self.contents.insertHtml('<br />\n')
+                html += '<br />\n'
                 for f in entry["files_mods"].strip().split(", "):
-                    self.contents.insertHtml(
-                        self.trUtf8('Modified {0}<br />\n')\
-                            .format(Utilities.html_encode(f)))
+                    html += self.trUtf8('Modified {0}<br />\n')\
+                            .format(Utilities.html_encode(f))
             
             if entry["file_dels"]:
-                self.contents.insertHtml('<br />\n')
+                html += '<br />\n'
                 for f in entry["file_dels"].strip().split(", "):
-                    self.contents.insertHtml(
-                        self.trUtf8('Deleted {0}<br />\n')\
-                            .format(Utilities.html_encode(f)))
+                    html += self.trUtf8('Deleted {0}<br />\n')\
+                            .format(Utilities.html_encode(f))
             
-            self.contents.insertHtml('</p>{0}<br/>\n'.format(80 * "="))
+            html += '</p>{0}<br/>\n'.format(80 * "=")
         
+        self.contents.setHtml(html)
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.Start)
         self.contents.setTextCursor(tc)
