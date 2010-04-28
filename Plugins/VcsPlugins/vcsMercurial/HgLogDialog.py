@@ -315,12 +315,6 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             s = str(self.process.readLine(), 
                         Preferences.getSystem("IOEncoding"), 
                         'replace')
-##            self.buf.append(line)
-##            
-##            if line.startswith("change|"):
-##                ver = line[7:]
-##                # save revision number for later use
-##                self.revisions.append(ver)
             
             if s == "@@@\n":
                 self.logEntries.append(self.lastLogEntry)
