@@ -113,7 +113,7 @@
      </property>
      <column>
       <property name="text">
-       <string/>
+       <string>Graph</string>
       </property>
      </column>
      <column>

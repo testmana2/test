@@ -63,12 +63,13 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         
         self.revisions = []  # stack of remembered revisions
         self.revString = self.trUtf8('Revision')
+        self.projectMode = False
         
         self.logEntries = []        # list of log entries
         self.lastLogEntry = {}
         self.fileCopies = {}
         self.endInitialText = False
-        self.initialText = ""
+        self.initialText = []
         
         self.diff = None
     
@@ -107,6 +108,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             if self.repodir == os.sep:
                 return
         
+        self.projectMode = (self.fname == "." and self.dname == self.repodir)
+        
         self.process.kill()
         
         self.activateWindow()
@@ -131,7 +134,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 project.getProjectManagementDir(), "hg-bundle.hg")
             args.append('--bundle')
             args.append(self.vcs.bundleFile)
-        if self.fname != "." or self.dname != self.repodir:
+        if not self.projectMode:
             args.append(self.filename)
         
         self.process.setWorkingDirectory(self.repodir)
@@ -160,14 +163,15 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         process = QProcess()
         args = []
         args.append("parents")
-        if self.commandMode == "incoming" and self.vcs.bundleFile:
+        if self.mode == "incoming" and self.vcs.bundleFile:
             args.append("--repository")
             args.append(self.vcs.bundleFile)
         args.append("--template")
         args.append("{rev}:{node|short}\n")
         args.append("-r")
         args.append(rev)
-        args.append(self.filename)
+        if not self.projectMode:
+            args.append(self.filename)
         
         process.setWorkingDirectory(self.repodir)
         process.start('hg', args)
@@ -212,19 +216,24 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             return
         
         if self.initialText:
-            self.contents.insertHtml(Utilities.html_encode(self.initialText.strip()))
-            self.contents.insertHtml('<br />\n')
+            for line in self.initialText:
+                self.contents.insertHtml(Utilities.html_encode(line.strip()))
+                self.contents.insertHtml('<br />\n')
             self.contents.insertHtml('{0}<br/>\n'.format(80 * "="))
             
         for entry in self.logEntries:
             fileCopies = {}
-            for fentry in entry["file_copies"].split(", "):
-                newName, oldName = entry[:-1].split(" (")
-                fileCopies[newName] = oldName
+            if entry["file_copies"]:
+                for fentry in entry["file_copies"].split(", "):
+                    newName, oldName = fentry[:-1].split(" (")
+                    fileCopies[newName] = oldName
             
             rev, hexRev = entry["change"].split(":")
             dstr = '<p><b>{0} {1}</b>'.format(self.revString, entry["change"])
-            parents = self.__getParents(rev)
+            if entry["parents"]:
+                parents = entry["parents"].split()
+            else:
+                parents = self.__getParents(rev)
             for parent in parents:
                 url = QUrl()
                 url.setScheme("file")

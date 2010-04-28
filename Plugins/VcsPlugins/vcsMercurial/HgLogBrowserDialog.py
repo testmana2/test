@@ -299,7 +299,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         args.append("{rev}\n")
         args.append("-r")
         args.append(rev)
-        args.append(self.filename)
+        if not self.projectMode:
+            args.append(self.filename)
         
         process.setWorkingDirectory(self.repodir)
         process.start('hg', args)
@@ -753,7 +754,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__diffRevisions(rev1, rev2)
     
     @pyqtSlot()
-    def on_diffP2_clicked(self):
+    def on_diffP2Button_clicked(self):
         """
         Private slot to handle the Diff to Parent 2 button.
         """
