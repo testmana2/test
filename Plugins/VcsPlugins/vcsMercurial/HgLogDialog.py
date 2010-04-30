@@ -175,6 +175,10 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             elif self.vcs.bundleFile:
                 args.append("--repository")
                 args.append(self.vcs.bundleFile)
+        args.append("--template")
+        args.append("{rev}:{node|short}\n")
+        args.append("-r")
+        args.append(rev)
         if not self.projectMode:
             args.append(self.filename)
         
