@@ -110,7 +110,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         if bundle:
             args.append('--repository')
             args.append(bundle)
-        elif self.vcs.bundleFile:
+        elif self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
             args.append('--repository')
             args.append(self.vcs.bundleFile)
         
