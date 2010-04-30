@@ -84,12 +84,13 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         else:
             return str(version)
     
-    def start(self, fn, versions = None):
+    def start(self, fn, versions = None, bundle = None):
         """
         Public slot to start the hg diff command.
         
         @param fn filename to be diffed (string)
         @param versions list of versions to be diffed (list of up to 2 strings or None)
+        @param bundle name of a bundle file (string)
         """
         self.errorGroup.hide()
         self.inputGroup.show()
@@ -106,7 +107,10 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.vcs.addArguments(args, self.vcs.options['global'])
         self.vcs.addArguments(args, self.vcs.options['diff'])
         
-        if self.vcs.bundleFile:
+        if bundle:
+            args.append('--repository')
+            args.append(bundle)
+        elif self.vcs.bundleFile:
             args.append('--repository')
             args.append(self.vcs.bundleFile)
         

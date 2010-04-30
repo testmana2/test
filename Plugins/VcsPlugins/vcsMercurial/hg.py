@@ -1656,7 +1656,7 @@ class Hg(VersionControl):
                 None,
                 self.trUtf8("Create changegroup"),
                 None,
-                self.trUtf8("Mercurial Bundle Files (*.bundle)"),
+                self.trUtf8("Mercurial Bundle Files (*.hg)"),
                 None,
                 QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
             
@@ -1699,6 +1699,29 @@ class Hg(VersionControl):
             if res:
                 dia.exec_()
     
+    def hgPreviewBundle(self, name):
+        """
+        Public method used to view the log of incoming changes from a
+        changegroup file.
+        
+        @param name file/directory name to show the log of (string)
+        """
+        file = QFileDialog.getOpenFileName(\
+            None,
+            self.trUtf8("Preview changegroup"),
+            "",
+            self.trUtf8("Mercurial Bundle Files (*.hg);;All Files (*)"))
+        if file:
+            if self.getPlugin().getPreferences("UseLogBrowser"):
+                self.logBrowser = \
+                    HgLogBrowserDialog(self, mode = "incoming", bundle = file)
+                self.logBrowser.show()
+                self.logBrowser.start(name)
+            else:
+                self.log = HgLogDialog(self, mode = "incoming", bundle = file)
+                self.log.show()
+                self.log.start(name)
+    
     def hgUnbundle(self, name):
         """
         Public method to apply changegroup files.
@@ -1718,7 +1741,7 @@ class Hg(VersionControl):
             None,
             self.trUtf8("Apply changegroups"),
             "",
-            self.trUtf8("Mercurial Bundle Files (*.bundle);;All Files (*)"))
+            self.trUtf8("Mercurial Bundle Files (*.hg);;All Files (*)"))
         if files:
             update = QMessageBox.question(None,
                 self.trUtf8("Apply changegroups"),

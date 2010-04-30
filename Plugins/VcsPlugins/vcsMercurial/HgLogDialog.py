@@ -28,12 +28,13 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
     The dialog is nonmodal. Clicking a link in the upper text pane shows 
     a diff of the revisions.
     """
-    def __init__(self, vcs, mode = "log", parent = None):
+    def __init__(self, vcs, mode = "log", bundle = None, parent = None):
         """
         Constructor
         
         @param vcs reference to the vcs object
         @param mode mode of the dialog (string; one of log, incoming, outgoing)
+        @param bundle name of a bundle file (string)
         @param parent parent widget (QWidget)
         """
         QWidget.__init__(self, parent)
@@ -47,6 +48,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             self.mode = mode
         else:
             self.mode = "log"
+        self.bundle = bundle
         
         self.contents.setHtml(\
             self.trUtf8('<b>Processing your request, please wait...</b>'))
@@ -129,11 +131,14 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         args.append('--style')
         args.append(os.path.join(os.path.dirname(__file__), "styles", "logDialog.style"))
         if self.mode == "incoming":
-            project = e5App().getObject("Project")
-            self.vcs.bundleFile = os.path.join(
-                project.getProjectManagementDir(), "hg-bundle.hg")
-            args.append('--bundle')
-            args.append(self.vcs.bundleFile)
+            if self.bundle:
+                args.append(self.bundle)
+            else:
+                project = e5App().getObject("Project")
+                self.vcs.bundleFile = os.path.join(
+                    project.getProjectManagementDir(), "hg-bundle.hg")
+                args.append('--bundle')
+                args.append(self.vcs.bundleFile)
         if not self.projectMode:
             args.append(self.filename)
         
@@ -163,13 +168,13 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         process = QProcess()
         args = []
         args.append("parents")
-        if self.mode == "incoming" and self.vcs.bundleFile:
-            args.append("--repository")
-            args.append(self.vcs.bundleFile)
-        args.append("--template")
-        args.append("{rev}:{node|short}\n")
-        args.append("-r")
-        args.append(rev)
+        if self.mode == "incoming":
+            if self.bundle:
+                args.append("--repository")
+                args.append(self.bundle)
+            elif self.vcs.bundleFile:
+                args.append("--repository")
+                args.append(self.vcs.bundleFile)
         if not self.projectMode:
             args.append(self.filename)
         
@@ -369,7 +374,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             del self.diff
         self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
-        self.diff.start(filename, [v1, v2])
+        self.diff.start(filename, [v1, v2], self.bundle)
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

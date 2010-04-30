@@ -40,12 +40,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     MessageColumn  = 5
     TagsColumn     = 6
     
-    def __init__(self, vcs, mode = "log", parent = None):
+    def __init__(self, vcs, mode = "log", bundle = None, parent = None):
         """
         Constructor
         
         @param vcs reference to the vcs object
         @param mode mode of the dialog (string; one of log, incoming, outgoing)
+        @param bundle name of a bundle file (string)
         @param parent parent widget (QWidget)
         """
         QDialog.__init__(self, parent)
@@ -62,6 +63,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.commandMode = mode
         else:
             self.commandMode = "log"
+        self.bundle = bundle
         
         self.__maxDate = QDate()
         self.__minDate = QDate()
@@ -292,9 +294,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         process = QProcess()
         args = []
         args.append("parents")
-        if self.commandMode == "incoming" and self.vcs.bundleFile:
-            args.append("--repository")
-            args.append(self.vcs.bundleFile)
+        if self.commandMode == "incoming":
+            if self.bundle:
+                args.append("--repository")
+                args.append(self.bundle)
+            elif self.vcs.bundleFile:
+                args.append("--repository")
+                args.append(self.vcs.bundleFile)
         args.append("--template")
         args.append("{rev}\n")
         args.append("-r")
@@ -453,11 +459,14 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         args.append('--style')
         args.append(os.path.join(os.path.dirname(__file__), "styles", "logBrowser.style"))
         if self.commandMode == "incoming":
-            project = e5App().getObject("Project")
-            self.vcs.bundleFile = os.path.join(
-                project.getProjectManagementDir(), "hg-bundle.hg")
-            args.append('--bundle')
-            args.append(self.vcs.bundleFile)
+            if self.bundle:
+                args.append(self.bundle)
+            else:
+                project = e5App().getObject("Project")
+                self.vcs.bundleFile = os.path.join(
+                    project.getProjectManagementDir(), "hg-bundle.hg")
+                args.append('--bundle')
+                args.append(self.vcs.bundleFile)
         if not self.projectMode:
             args.append(self.filename)
         
@@ -688,7 +697,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             del self.diff
         self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
-        self.diff.start(self.filename, [rev1, rev2])
+        self.diff.start(self.filename, [rev1, rev2], self.bundle)
     
     def on_buttonBox_clicked(self, button):
         """

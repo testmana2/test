@@ -595,6 +595,21 @@ class HgProjectHelper(VcsProjectHelper):
         self.connect(self.hgBundleAct, SIGNAL('triggered()'), self.__hgBundle)
         self.actions.append(self.hgBundleAct)
         
+        self.hgPreviewBundleAct = E5Action(self.trUtf8('Preview changegroup'),
+                self.trUtf8('Preview changegroup...'),
+                0, 0, self, 'mercurial_preview_bundle')
+        self.hgPreviewBundleAct.setStatusTip(self.trUtf8(
+            'Preview a changegroup file containing a collecting of changesets'
+        ))
+        self.hgPreviewBundleAct.setWhatsThis(self.trUtf8(
+            """<b>Preview changegroup</b>"""
+            """<p>This previews a changegroup file containing a collecting of"""
+            """ changesets.</p>"""
+        ))
+        self.connect(self.hgPreviewBundleAct, SIGNAL('triggered()'), 
+                     self.__hgPreviewBundle)
+        self.actions.append(self.hgPreviewBundleAct)
+        
         self.hgUnbundleAct = E5Action(self.trUtf8('Apply changegroups'),
                 self.trUtf8('Apply changegroups...'),
                 0, 0, self, 'mercurial_unbundle')
@@ -688,6 +703,7 @@ class HgProjectHelper(VcsProjectHelper):
         
         bundleMenu = QMenu(self.trUtf8("Changegroup Management"), menu)
         bundleMenu.addAction(self.hgBundleAct)
+        bundleMenu.addAction(self.hgPreviewBundleAct)
         bundleMenu.addAction(self.hgUnbundleAct)
         
         bisectMenu = QMenu(self.trUtf8("Bisect"), menu)
@@ -901,6 +917,12 @@ class HgProjectHelper(VcsProjectHelper):
         Protected slot used to create a changegroup file.
         """
         self.vcs.hgBundle(self.project.ppath)
+    
+    def __hgPreviewBundle(self):
+        """
+        Protected slot used to preview a changegroup file.
+        """
+        self.vcs.hgPreviewBundle(self.project.ppath)
     
     def __hgUnbundle(self):
         """
