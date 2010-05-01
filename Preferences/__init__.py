@@ -531,6 +531,7 @@ class Prefs(object):
         "VcsModified" : QtGui.QColor(QtCore.Qt.yellow),
         "VcsReplaced" : QtGui.QColor(QtCore.Qt.cyan), 
         "VcsUpdate"   : QtGui.QColor(QtCore.Qt.green),
+        "VcsRemoved"  : QtGui.QColor(QtCore.Qt.magenta)
     }
     
     # defaults for the help settings

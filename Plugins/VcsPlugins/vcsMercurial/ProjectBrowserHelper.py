@@ -10,10 +10,13 @@ Module implementing the VCS project browser helper for Mercurial.
 import os
 
 from PyQt4.QtCore import SIGNAL
-from PyQt4.QtGui import QMenu
+from PyQt4.QtGui import QMenu, QDialog
+
+from Project.ProjectBrowserModel import ProjectBrowserFileItem
 
 from VCS.ProjectBrowserHelper import VcsProjectBrowserHelper
 
+from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import UI.PixmapCache
 
 class HgProjectBrowserHelper(VcsProjectBrowserHelper):
@@ -203,6 +206,10 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Remove from repository (and disk)'), 
             self._VCSRemove)
         self.vcsMenuActions.append(act)
+        act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
+            self.trUtf8('Remove from repository only'), 
+            self.__HgForget)
+        self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(self.trUtf8('Copy in repository'), self.__HgCopy)
         self.vcsMenuActions.append(act)
@@ -287,7 +294,10 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Remove from repository (and disk)'), 
             self._VCSRemove)
         self.vcsMultiMenuActions.append(act)
-        self.vcsRemoveMultiMenuItem = act
+        act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
+            self.trUtf8('Remove from repository only'), 
+            self.__HgForget)
+        self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(UI.PixmapCache.getIcon("vcsStatus.png"),
             self.trUtf8('Show status'), self._VCSStatus)
@@ -592,3 +602,32 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             except AttributeError:
                 names.append(itm.dirName())
         self.vcs.hgResolve(names)
+        
+    def __HgForget(self):
+        """
+        Private slot called by the context menu to remove the selected file from the
+        Mercurial repository leaving a copy in the project directory.
+        """
+        if self.isTranslationsBrowser:
+            items = self.browser.getSelectedItems([ProjectBrowserFileItem])
+            names = [itm.fileName() for itm in items]
+            
+            dlg = DeleteFilesConfirmationDialog(self.parent(),
+                self.trUtf8("Remove from repository only"),
+                self.trUtf8("Do you really want to remove these translation files from"
+                    " the repository?"),
+                names)
+        else:
+            items = self.browser.getSelectedItems()
+            names = [itm.fileName() for itm in items]
+            files = [name.replace(self.browser.project.ppath + os.sep, '') \
+                for name in names]
+            
+            dlg = DeleteFilesConfirmationDialog(self.parent(),
+                self.trUtf8("Remove from repository only"),
+                self.trUtf8("Do you really want to remove these files"
+                    " from the repository?"),
+                files)
+        
+        if dlg.exec_() == QDialog.Accepted:
+            self.vcs.hgForget(names)

@@ -41,6 +41,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         <ul>
             <li>"A" path was added but not yet comitted</li>
             <li>"M" path has local changes</li>
+            <li>"O" path was removed</li>
             <li>"R" path was deleted and then re-added</li>
             <li>"U" path needs an update</li>
             <li>"Z" path contains a conflict</li>
@@ -69,8 +70,11 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                 for line in output.splitlines():
                     if not line.startswith("  "):
                         flag, name = line.split(" ", 1)
-                        if flag in "AM":
-                            status = flag
+                        if flag in "AMR":
+                            if flag == "R":
+                                status = "O"
+                            else:
+                                status = flag
                             states[name] = status
                 
                 args = []

@@ -59,6 +59,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.menuactions.append(self.menu.addAction(\
             self.trUtf8("Add to repository"), self.__add))
         self.menuactions.append(self.menu.addAction(\
+            self.trUtf8("Remove from repository"), self.__forget))
+        self.menuactions.append(self.menu.addAction(\
             self.trUtf8("Revert changes"), self.__revert))
         self.menu.addSeparator()
         self.menuactions.append(self.menu.addAction(self.trUtf8("Adjust column sizes"),
@@ -79,6 +81,10 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         self.unversionedIndicators = [
             self.trUtf8('not tracked'), 
+        ]
+        
+        self.missingIndicators = [
+            self.trUtf8('missing')
         ]
         
         self.status = {
@@ -404,6 +410,21 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             project.getModel().updateVCSStatus(name)
         self.vcs.checkVCSStatus()
     
+    def __forget(self):
+        """
+        Private slot to handle the Remove context menu entry.
+        """
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+                 for itm in self.__getMissingItems()]
+        if not names:
+            QMessageBox.information(self,
+                self.trUtf8("Remove"),
+                self.trUtf8("""There are no missing entries available/selected."""))
+            return
+        
+        self.vcs.hgForget(names)
+        self.on_refreshButton_clicked()
+    
     def __revert(self):
         """
         Private slot to handle the Revert context menu entry.
@@ -447,3 +468,15 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             if itm.text(self.__statusColumn) in self.unversionedIndicators:
                 unversionedItems.append(itm)
         return unversionedItems
+    
+    def __getMissingItems(self):
+        """
+        Private method to retrieve all entries, that have a missing status.
+        
+        @return list of all items with a missing status
+        """
+        missingItems = []
+        for itm in self.statusList.selectedItems():
+            if itm.text(self.__statusColumn) in self.missingIndicators:
+                missingItems.append(itm)
+        return missingItems

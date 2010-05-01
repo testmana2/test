@@ -355,7 +355,6 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Remove from repository (and disk)'), 
             self._VCSRemove)
         self.vcsMultiMenuActions.append(act)
-        self.vcsRemoveMultiMenuItem = act
         if self.vcs.versionStr >= '1.5.0':
             menu.addSeparator()
             act = menu.addAction(self.trUtf8("Add to Changelist"), 

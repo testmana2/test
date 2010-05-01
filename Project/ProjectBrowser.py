@@ -62,6 +62,7 @@ class ProjectBrowser(E5TabWidget):
         self.vcsStatusColorNames = {
             "A" : "VcsAdded",
             "M" : "VcsModified",
+            "O" : "VcsRemoved", 
             "R" : "VcsReplaced", 
             "U" : "VcsUpdate",
             "Z" : "VcsConflict",
@@ -70,6 +71,7 @@ class ProjectBrowser(E5TabWidget):
             " " : self.trUtf8("up to date"), 
             "A" : self.trUtf8("files added"), 
             "M" : self.trUtf8("local modifications"), 
+            "O" : self.trUtf8("files removed"), 
             "R" : self.trUtf8("files replaced"), 
             "U" : self.trUtf8("update required"), 
             "Z" : self.trUtf8("conflict"), 

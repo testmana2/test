@@ -58,6 +58,9 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         self.projectBrowserColours["VcsConflict"] = \
             self.initColour("VcsConflict", self.pbVcsConflictButton, 
                 Preferences.getProjectBrowserColour)
+        self.projectBrowserColours["VcsRemoved"] = \
+            self.initColour("VcsRemoved", self.pbVcsRemovedButton, 
+                Preferences.getProjectBrowserColour)
     
     def save(self):
         """
@@ -88,7 +91,7 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         self.projectBrowserColours["VcsAdded"] = \
             self.selectColour(self.pbVcsAddedButton, 
                 self.projectBrowserColours["VcsAdded"])
-        
+    
     @pyqtSlot()
     def on_pbVcsConflictButton_clicked(self):
         """
@@ -98,7 +101,7 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         self.projectBrowserColours["VcsConflict"] = \
             self.selectColour(self.pbVcsConflictButton, 
                 self.projectBrowserColours["VcsConflict"])
-        
+    
     @pyqtSlot()
     def on_pbVcsModifiedButton_clicked(self):
         """
@@ -108,7 +111,7 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         self.projectBrowserColours["VcsModified"] = \
             self.selectColour(self.pbVcsModifiedButton, 
                 self.projectBrowserColours["VcsModified"])
-        
+    
     @pyqtSlot()
     def on_pbVcsReplacedButton_clicked(self):
         """
@@ -118,7 +121,17 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
         self.projectBrowserColours["VcsReplaced"] = \
             self.selectColour(self.pbVcsReplacedButton, 
                 self.projectBrowserColours["VcsReplaced"])
-        
+    
+    @pyqtSlot()
+    def on_pbVcsRemovedButton_clicked(self):
+        """
+        Private slot to set the background colour for entries with VCS 
+        status "removed".
+        """
+        self.projectBrowserColours["VcsRemoved"] = \
+            self.selectColour(self.pbVcsRemovedButton, 
+                self.projectBrowserColours["VcsRemoved"])
+    
     @pyqtSlot()
     def on_pbVcsUpdateButton_clicked(self):
         """

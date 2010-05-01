@@ -51,7 +51,7 @@ class Hg(VersionControl):
     
     @signal committed() emitted after the commit action has completed
     """
-    def __init__(self, plugin, parent=None, name=None):
+    def __init__(self, plugin, parent = None, name = None):
         """
         Constructor
         
@@ -109,6 +109,8 @@ class Hg(VersionControl):
         
         self.__commitData = {}
         self.__commitDialog = None
+        
+        self.__forgotNames = []
     
     def getPlugin(self):
         """
@@ -377,6 +379,11 @@ class Hg(VersionControl):
             if res:
                 dia.exec_()
         self.emit(SIGNAL("committed()"))
+        if self.__forgotNames:
+            model = e5App().getObject("Project").getModel()
+            for name in self.__forgotNames:
+                model.updateVCSStatus(name)
+            self.__forgotNames = []
         self.checkVCSStatus()
     
     def vcsUpdate(self, name, noDialog = False, revision = None):
@@ -1598,6 +1605,29 @@ class Hg(VersionControl):
         if res:
             dia.exec_()
     
+    def hgIdentify(self, name):
+        """
+        Public method to identify the current working directory.
+        
+        @param name file/directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        args = []
+        args.append('identify')
+        
+        dia = HgDialog(self.trUtf8('Identifying project directory'))
+        res = dia.startProcess(args, repodir, False)
+        if res:
+            dia.exec_()
+    
     def hgCreateIgnoreFile(self, name, autoAdd = False):
         """
         Public method to create the ignore file.
@@ -1606,6 +1636,7 @@ class Hg(VersionControl):
         @param autoAdd flag indicating to add it automatically (boolean)
         @return flag indicating success
         """
+        status = False
         ignorePatterns = [
             "glob:.eric5project", 
             "glob:.ropeproject", 
@@ -1616,20 +1647,32 @@ class Hg(VersionControl):
         ]
         
         ignoreName = os.path.join(name, ".hgignore")
-        try:
-            # create a .hgignore file
-            ignore = open(ignoreName, "w")
-            ignore.write("\n".join(ignorePatterns))
-            ignore.write("\n")
-            ignore.close()
-            status = True
-        except IOError:
-            status = False
-        
-        if status and autoAdd:
-            self.vcsAdd(ignoreName, noDialog = True)
-            project = e5App().getObject("Project")
-            project.appendFile(ignoreName)
+        if os.path.exists(ignoreName):
+            res = QMessageBox.warning(None,
+                self.trUtf8("Create .hgignore file"),
+                self.trUtf8("""<p>The file <b>{0}</b> exists already."""
+                            """ Overwrite it?</p>""").format(ignoreName),
+                QMessageBox.StandardButtons(\
+                    QMessageBox.No | \
+                    QMessageBox.Yes),
+                QMessageBox.No)
+        else:
+            res = QMessageBox.Yes
+        if res == QMessageBox.Yes:
+            try:
+                # create a .hgignore file
+                ignore = open(ignoreName, "w")
+                ignore.write("\n".join(ignorePatterns))
+                ignore.write("\n")
+                ignore.close()
+                status = True
+            except IOError:
+                status = False
+            
+            if status and autoAdd:
+                self.vcsAdd(ignoreName, noDialog = True)
+                project = e5App().getObject("Project")
+                project.appendFile(ignoreName)
         
         return status
     
@@ -1802,6 +1845,43 @@ class Hg(VersionControl):
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
+    
+    def hgForget(self, name):
+        """
+        Public method used to remove a file from the Mercurial repository.
+        
+        This will not remove the file from the project directory.
+        
+        @param name file/directory name to be removed (string or list of strings))
+        """
+        args = []
+        args.append('forget')
+        self.addArguments(args, self.options['global'])
+        args.append('-v')
+        
+        if isinstance(name, list):
+            dname, fnames = self.splitPathList(name)
+            self.addArguments(args, name)
+        else:
+            dname, fname = self.splitPath(name)
+            args.append(name)
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return False
+        
+        dia = HgDialog(\
+            self.trUtf8('Removing files from the Mercurial repository only'))
+        res = dia.startProcess(args, repodir)
+        if res:
+            dia.exec_()
+            if isinstance(name, list):
+                self.__forgotNames.extend(name)
+            else:
+                self.__forgotNames.append(name)
     
     ############################################################################
     ## Methods to get the helper objects are below.

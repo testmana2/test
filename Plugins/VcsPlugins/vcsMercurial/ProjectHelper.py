@@ -568,6 +568,19 @@ class HgProjectHelper(VcsProjectHelper):
         self.connect(self.hgRecoverAct, SIGNAL('triggered()'), self.__hgRecover)
         self.actions.append(self.hgRecoverAct)
         
+        self.hgIdentifyAct = E5Action(self.trUtf8('Identify'),
+                self.trUtf8('Identify...'),
+                0, 0, self, 'mercurial_identify')
+        self.hgIdentifyAct.setStatusTip(self.trUtf8(
+            'Identify the project directory'
+        ))
+        self.hgIdentifyAct.setWhatsThis(self.trUtf8(
+            """<b>Identify</b>"""
+            """<p>This identifies the project directory.</p>"""
+        ))
+        self.connect(self.hgIdentifyAct, SIGNAL('triggered()'), self.__hgIdentify)
+        self.actions.append(self.hgIdentifyAct)
+        
         self.hgCreateIgnoreAct = E5Action(self.trUtf8('Create .hgignore'),
                 self.trUtf8('Create .hgignore'),
                 0, 0, self, 'mercurial_create ignore')
@@ -689,6 +702,7 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addAction(self.hgParentsAct)
         adminMenu.addAction(self.hgTipAct)
         adminMenu.addAction(self.hgShowBranchAct)
+        adminMenu.addAction(self.hgIdentifyAct)
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgShowPathsAct)
         adminMenu.addSeparator()
@@ -905,6 +919,12 @@ class HgProjectHelper(VcsProjectHelper):
         Protected slot used to recover from an interrupted transaction.
         """
         self.vcs.hgRecover(self.project.ppath)
+    
+    def __hgIdentify(self):
+        """
+        Protected slot used to identify the project directory.
+        """
+        self.vcs.hgIdentify(self.project.ppath)
     
     def __hgCreateIgnore(self):
         """

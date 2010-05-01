@@ -236,6 +236,7 @@ class ProjectBrowserModel(BrowserModel):
         self.colorNames = {
             "A" : "VcsAdded",
             "M" : "VcsModified",
+            "O" : "VcsRemoved", 
             "R" : "VcsReplaced", 
             "U" : "VcsUpdate",
             "Z" : "VcsConflict",
@@ -244,6 +245,7 @@ class ProjectBrowserModel(BrowserModel):
             " " : QColor(),
             "A" : Preferences.getProjectBrowserColour(self.colorNames["A"]),
             "M" : Preferences.getProjectBrowserColour(self.colorNames["M"]),
+            "O" : Preferences.getProjectBrowserColour(self.colorNames["O"]),
             "R" : Preferences.getProjectBrowserColour(self.colorNames["R"]),
             "U" : Preferences.getProjectBrowserColour(self.colorNames["U"]),
             "Z" : Preferences.getProjectBrowserColour(self.colorNames["Z"]),
@@ -681,6 +683,7 @@ class ProjectBrowserModel(BrowserModel):
             <ul>
                 <li>"A" path was added but not yet comitted</li>
                 <li>"M" path has local changes</li>
+                <li>"O" path was removed</li>
                 <li>"R" path was deleted and then re-added</li>
                 <li>"U" path needs an update</li>
                 <li>"Z" path contains a conflict</li>

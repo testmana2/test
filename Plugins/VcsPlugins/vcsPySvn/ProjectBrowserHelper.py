@@ -358,7 +358,6 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Remove from repository (and disk)'), 
             self._VCSRemove)
         self.vcsMultiMenuActions.append(act)
-        self.vcsRemoveMultiMenuItem = act
         if pysvn.svn_version >= (1, 5, 0) and pysvn.version >= (1, 6, 0):
             menu.addSeparator()
             act = menu.addAction(self.trUtf8("Add to Changelist"), 
