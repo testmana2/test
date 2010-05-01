@@ -69,8 +69,14 @@ QWidget, Ui_HgStatusDialog
 <td><a href="#HgStatusDialog.__finish">__finish</a></td>
 <td>Private slot called when the process finished or the user pressed the button.</td>
 </tr><tr>
+<td><a href="#HgStatusDialog.__forget">__forget</a></td>
+<td>Private slot to handle the Remove context menu entry.</td>
+</tr><tr>
 <td><a href="#HgStatusDialog.__generateItem">__generateItem</a></td>
 <td>Private method to generate a status item in the status list.</td>
+</tr><tr>
+<td><a href="#HgStatusDialog.__getMissingItems">__getMissingItems</a></td>
+<td>Private method to retrieve all entries, that have a missing status.</td>
 </tr><tr>
 <td><a href="#HgStatusDialog.__getModifiedItems">__getModifiedItems</a></td>
 <td>Private method to retrieve all entries, that have a modified status.</td>
@@ -157,6 +163,11 @@ parent widget (QWidget)
 <b>__finish</b>(<i></i>)
 <p>
         Private slot called when the process finished or the user pressed the button.
+</p><a NAME="HgStatusDialog.__forget" ID="HgStatusDialog.__forget"></a>
+<h4>HgStatusDialog.__forget</h4>
+<b>__forget</b>(<i></i>)
+<p>
+        Private slot to handle the Remove context menu entry.
 </p><a NAME="HgStatusDialog.__generateItem" ID="HgStatusDialog.__generateItem"></a>
 <h4>HgStatusDialog.__generateItem</h4>
 <b>__generateItem</b>(<i>status, path</i>)
@@ -169,6 +180,16 @@ status indicator (string)
 </dd><dt><i>path</i></dt>
 <dd>
 path of the file or directory (string)
+</dd>
+</dl><a NAME="HgStatusDialog.__getMissingItems" ID="HgStatusDialog.__getMissingItems"></a>
+<h4>HgStatusDialog.__getMissingItems</h4>
+<b>__getMissingItems</b>(<i></i>)
+<p>
+        Private method to retrieve all entries, that have a missing status.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of all items with a missing status
 </dd>
 </dl><a NAME="HgStatusDialog.__getModifiedItems" ID="HgStatusDialog.__getModifiedItems"></a>
 <h4>HgStatusDialog.__getModifiedItems</h4>

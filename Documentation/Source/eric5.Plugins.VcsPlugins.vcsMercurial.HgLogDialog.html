@@ -60,6 +60,9 @@ QWidget, Ui_HgLogDialog
 <td><a href="#HgLogDialog.__init__">HgLogDialog</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HgLogDialog.__getParents">__getParents</a></td>
+<td>Private method to get the parents of the currently viewed file/directory.</td>
+</tr><tr>
 <td><a href="#HgLogDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
@@ -93,7 +96,7 @@ QWidget, Ui_HgLogDialog
 </table>
 <a NAME="HgLogDialog.__init__" ID="HgLogDialog.__init__"></a>
 <h4>HgLogDialog (Constructor)</h4>
-<b>HgLogDialog</b>(<i>vcs, mode = "log", parent = None</i>)
+<b>HgLogDialog</b>(<i>vcs, mode = "log", bundle = None, parent = None</i>)
 <p>
         Constructor
 </p><dl>
@@ -103,9 +106,27 @@ reference to the vcs object
 </dd><dt><i>mode</i></dt>
 <dd>
 mode of the dialog (string; one of log, incoming, outgoing)
+</dd><dt><i>bundle</i></dt>
+<dd>
+name of a bundle file (string)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
+</dd>
+</dl><a NAME="HgLogDialog.__getParents" ID="HgLogDialog.__getParents"></a>
+<h4>HgLogDialog.__getParents</h4>
+<b>__getParents</b>(<i>rev</i>)
+<p>
+        Private method to get the parents of the currently viewed file/directory.
+</p><dl>
+<dt><i>rev</i></dt>
+<dd>
+revision number to get parents for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of parent revisions (list of strings)
 </dd>
 </dl><a NAME="HgLogDialog.__procFinished" ID="HgLogDialog.__procFinished"></a>
 <h4>HgLogDialog.__procFinished</h4>

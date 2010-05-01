@@ -102,6 +102,12 @@ VersionControl
 <td><a href="#Hg.hgExtendedDiff">hgExtendedDiff</a></td>
 <td>Public method used to view the difference of a file/directory to the Mercurial repository.</td>
 </tr><tr>
+<td><a href="#Hg.hgForget">hgForget</a></td>
+<td>Public method used to remove a file from the Mercurial repository.</td>
+</tr><tr>
+<td><a href="#Hg.hgIdentify">hgIdentify</a></td>
+<td>Public method to identify the current working directory.</td>
+</tr><tr>
 <td><a href="#Hg.hgIncoming">hgIncoming</a></td>
 <td>Public method used to view the log of incoming changes from the Mercurial repository.</td>
 </tr><tr>
@@ -122,6 +128,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgOutgoing">hgOutgoing</a></td>
 <td>Public method used to view the log of outgoing changes from the Mercurial repository.</td>
+</tr><tr>
+<td><a href="#Hg.hgPreviewBundle">hgPreviewBundle</a></td>
+<td>Public method used to view the log of incoming changes from a changegroup file.</td>
 </tr><tr>
 <td><a href="#Hg.hgPull">hgPull</a></td>
 <td>Public method used to pull changes from a remote Mercurial repository.</td>
@@ -246,7 +255,7 @@ VersionControl
 </table>
 <a NAME="Hg.__init__" ID="Hg.__init__"></a>
 <h4>Hg (Constructor)</h4>
-<b>Hg</b>(<i>plugin, parent=None, name=None</i>)
+<b>Hg</b>(<i>plugin, parent = None, name = None</i>)
 <p>
         Constructor
 </p><dl>
@@ -420,6 +429,28 @@ file/directory name (string)
 <dd>
 file/directory name to be diffed (string)
 </dd>
+</dl><a NAME="Hg.hgForget" ID="Hg.hgForget"></a>
+<h4>Hg.hgForget</h4>
+<b>hgForget</b>(<i>name</i>)
+<p>
+        Public method used to remove a file from the Mercurial repository.
+</p><p>
+        This will not remove the file from the project directory.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to be removed (string or list of strings))
+</dd>
+</dl><a NAME="Hg.hgIdentify" ID="Hg.hgIdentify"></a>
+<h4>Hg.hgIdentify</h4>
+<b>hgIdentify</b>(<i>name</i>)
+<p>
+        Public method to identify the current working directory.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
 </dl><a NAME="Hg.hgIncoming" ID="Hg.hgIncoming"></a>
 <h4>Hg.hgIncoming</h4>
 <b>hgIncoming</b>(<i>name</i>)
@@ -501,6 +532,17 @@ properly normalized url for subversion (string)
 <p>
         Public method used to view the log of outgoing changes from the 
         Mercurial repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to show the log of (string)
+</dd>
+</dl><a NAME="Hg.hgPreviewBundle" ID="Hg.hgPreviewBundle"></a>
+<h4>Hg.hgPreviewBundle</h4>
+<b>hgPreviewBundle</b>(<i>name</i>)
+<p>
+        Public method used to view the log of incoming changes from a
+        changegroup file.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>

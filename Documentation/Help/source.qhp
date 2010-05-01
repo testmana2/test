@@ -7645,6 +7645,7 @@
       <keyword name="VcsPage.on_pbVcsAddedButton_clicked" id="VcsPage.on_pbVcsAddedButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsAddedButton_clicked" />
       <keyword name="VcsPage.on_pbVcsConflictButton_clicked" id="VcsPage.on_pbVcsConflictButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsConflictButton_clicked" />
       <keyword name="VcsPage.on_pbVcsModifiedButton_clicked" id="VcsPage.on_pbVcsModifiedButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsModifiedButton_clicked" />
+      <keyword name="VcsPage.on_pbVcsRemovedButton_clicked" id="VcsPage.on_pbVcsRemovedButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsRemovedButton_clicked" />
       <keyword name="VcsPage.on_pbVcsReplacedButton_clicked" id="VcsPage.on_pbVcsReplacedButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsReplacedButton_clicked" />
       <keyword name="VcsPage.on_pbVcsUpdateButton_clicked" id="VcsPage.on_pbVcsUpdateButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsUpdateButton_clicked" />
       <keyword name="VcsPage.save" id="VcsPage.save" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.save" />
@@ -7758,7 +7759,9 @@
       <keyword name="HgStatusDialog.__commit" id="HgStatusDialog.__commit" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__commit" />
       <keyword name="HgStatusDialog.__committed" id="HgStatusDialog.__committed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__committed" />
       <keyword name="HgStatusDialog.__finish" id="HgStatusDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__finish" />
+      <keyword name="HgStatusDialog.__forget" id="HgStatusDialog.__forget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__forget" />
       <keyword name="HgStatusDialog.__generateItem" id="HgStatusDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__generateItem" />
+      <keyword name="HgStatusDialog.__getMissingItems" id="HgStatusDialog.__getMissingItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getMissingItems" />
       <keyword name="HgStatusDialog.__getModifiedItems" id="HgStatusDialog.__getModifiedItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getModifiedItems" />
       <keyword name="HgStatusDialog.__getUnversionedItems" id="HgStatusDialog.__getUnversionedItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getUnversionedItems" />
       <keyword name="HgStatusDialog.__procFinished" id="HgStatusDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__procFinished" />
@@ -7792,6 +7795,8 @@
       <keyword name="Hg.hgCreateIgnoreFile" id="Hg.hgCreateIgnoreFile" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCreateIgnoreFile" />
       <keyword name="Hg.hgEditConfig" id="Hg.hgEditConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgEditConfig" />
       <keyword name="Hg.hgExtendedDiff" id="Hg.hgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgExtendedDiff" />
+      <keyword name="Hg.hgForget" id="Hg.hgForget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgForget" />
+      <keyword name="Hg.hgIdentify" id="Hg.hgIdentify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIdentify" />
       <keyword name="Hg.hgIncoming" id="Hg.hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIncoming" />
       <keyword name="Hg.hgInfo" id="Hg.hgInfo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgInfo" />
       <keyword name="Hg.hgListTagBranch" id="Hg.hgListTagBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgListTagBranch" />
@@ -7799,6 +7804,7 @@
       <keyword name="Hg.hgLogLimited" id="Hg.hgLogLimited" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgLogLimited" />
       <keyword name="Hg.hgNormalizeURL" id="Hg.hgNormalizeURL" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgNormalizeURL" />
       <keyword name="Hg.hgOutgoing" id="Hg.hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgOutgoing" />
+      <keyword name="Hg.hgPreviewBundle" id="Hg.hgPreviewBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPreviewBundle" />
       <keyword name="Hg.hgPull" id="Hg.hgPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPull" />
       <keyword name="Hg.hgPush" id="Hg.hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPush" />
       <keyword name="Hg.hgRecover" id="Hg.hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRecover" />
@@ -7876,11 +7882,13 @@
       <keyword name="HgProjectHelper.__hgEditRepoConfig" id="HgProjectHelper.__hgEditRepoConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgEditRepoConfig" />
       <keyword name="HgProjectHelper.__hgExtendedDiff" id="HgProjectHelper.__hgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgExtendedDiff" />
       <keyword name="HgProjectHelper.__hgHeads" id="HgProjectHelper.__hgHeads" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgHeads" />
+      <keyword name="HgProjectHelper.__hgIdentify" id="HgProjectHelper.__hgIdentify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentify" />
       <keyword name="HgProjectHelper.__hgIncoming" id="HgProjectHelper.__hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIncoming" />
       <keyword name="HgProjectHelper.__hgLogBrowser" id="HgProjectHelper.__hgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgLogBrowser" />
       <keyword name="HgProjectHelper.__hgLogLimited" id="HgProjectHelper.__hgLogLimited" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgLogLimited" />
       <keyword name="HgProjectHelper.__hgOutgoing" id="HgProjectHelper.__hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgOutgoing" />
       <keyword name="HgProjectHelper.__hgParents" id="HgProjectHelper.__hgParents" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgParents" />
+      <keyword name="HgProjectHelper.__hgPreviewBundle" id="HgProjectHelper.__hgPreviewBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPreviewBundle" />
       <keyword name="HgProjectHelper.__hgPull" id="HgProjectHelper.__hgPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPull" />
       <keyword name="HgProjectHelper.__hgPush" id="HgProjectHelper.__hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPush" />
       <keyword name="HgProjectHelper.__hgRecover" id="HgProjectHelper.__hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRecover" />
@@ -7926,6 +7934,7 @@
       <keyword name="HgProjectBrowserHelper.__HgAnnotate" id="HgProjectBrowserHelper.__HgAnnotate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgAnnotate" />
       <keyword name="HgProjectBrowserHelper.__HgCopy" id="HgProjectBrowserHelper.__HgCopy" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgCopy" />
       <keyword name="HgProjectBrowserHelper.__HgExtendedDiff" id="HgProjectBrowserHelper.__HgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgExtendedDiff" />
+      <keyword name="HgProjectBrowserHelper.__HgForget" id="HgProjectBrowserHelper.__HgForget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgForget" />
       <keyword name="HgProjectBrowserHelper.__HgLogBrowser" id="HgProjectBrowserHelper.__HgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgLogBrowser" />
       <keyword name="HgProjectBrowserHelper.__HgLogLimited" id="HgProjectBrowserHelper.__HgLogLimited" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgLogLimited" />
       <keyword name="HgProjectBrowserHelper.__HgMove" id="HgProjectBrowserHelper.__HgMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgMove" />
@@ -7949,6 +7958,7 @@
       <keyword name="HgLogDialog (Module)" id="HgLogDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html" />
       <keyword name="HgLogDialog" id="HgLogDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog" />
       <keyword name="HgLogDialog (Constructor)" id="HgLogDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog.__init__" />
+      <keyword name="HgLogDialog.__getParents" id="HgLogDialog.__getParents" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog.__getParents" />
       <keyword name="HgLogDialog.__procFinished" id="HgLogDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog.__procFinished" />
       <keyword name="HgLogDialog.__readStderr" id="HgLogDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog.__readStderr" />
       <keyword name="HgLogDialog.__readStdout" id="HgLogDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog.__readStdout" />
@@ -8010,13 +8020,12 @@
       <keyword name="HgLogBrowserDialog.keyPressEvent" id="HgLogBrowserDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.keyPressEvent" />
       <keyword name="HgLogBrowserDialog.on_buttonBox_clicked" id="HgLogBrowserDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_buttonBox_clicked" />
       <keyword name="HgLogBrowserDialog.on_clearRxEditButton_clicked" id="HgLogBrowserDialog.on_clearRxEditButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_clearRxEditButton_clicked" />
-      <keyword name="HgLogBrowserDialog.on_diffPreviousButton_clicked" id="HgLogBrowserDialog.on_diffPreviousButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_diffPreviousButton_clicked" />
-      <keyword name="HgLogBrowserDialog.on_diffRevisionsButton_clicked" id="HgLogBrowserDialog.on_diffRevisionsButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_diffRevisionsButton_clicked" />
+      <keyword name="HgLogBrowserDialog.on_diffP1Button_clicked" id="HgLogBrowserDialog.on_diffP1Button_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_diffP1Button_clicked" />
+      <keyword name="HgLogBrowserDialog.on_diffP2Button_clicked" id="HgLogBrowserDialog.on_diffP2Button_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_diffP2Button_clicked" />
       <keyword name="HgLogBrowserDialog.on_fieldCombo_activated" id="HgLogBrowserDialog.on_fieldCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_fieldCombo_activated" />
       <keyword name="HgLogBrowserDialog.on_fromDate_dateChanged" id="HgLogBrowserDialog.on_fromDate_dateChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_fromDate_dateChanged" />
       <keyword name="HgLogBrowserDialog.on_input_returnPressed" id="HgLogBrowserDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_input_returnPressed" />
       <keyword name="HgLogBrowserDialog.on_logTree_currentItemChanged" id="HgLogBrowserDialog.on_logTree_currentItemChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_logTree_currentItemChanged" />
-      <keyword name="HgLogBrowserDialog.on_logTree_itemSelectionChanged" id="HgLogBrowserDialog.on_logTree_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_logTree_itemSelectionChanged" />
       <keyword name="HgLogBrowserDialog.on_nextButton_clicked" id="HgLogBrowserDialog.on_nextButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_nextButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_passwordCheckBox_toggled" id="HgLogBrowserDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_passwordCheckBox_toggled" />
       <keyword name="HgLogBrowserDialog.on_rxEdit_textChanged" id="HgLogBrowserDialog.on_rxEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_rxEdit_textChanged" />

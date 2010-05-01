@@ -126,11 +126,11 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.on_clearRxEditButton_clicked">on_clearRxEditButton_clicked</a></td>
 <td>Private slot called by a click of the clear RX edit button.</td>
 </tr><tr>
-<td><a href="#HgLogBrowserDialog.on_diffPreviousButton_clicked">on_diffPreviousButton_clicked</a></td>
-<td>Private slot to handle the Diff to Previous button.</td>
+<td><a href="#HgLogBrowserDialog.on_diffP1Button_clicked">on_diffP1Button_clicked</a></td>
+<td>Private slot to handle the Diff to Parent 1 button.</td>
 </tr><tr>
-<td><a href="#HgLogBrowserDialog.on_diffRevisionsButton_clicked">on_diffRevisionsButton_clicked</a></td>
-<td>Private slot to handle the Compare Revisions button.</td>
+<td><a href="#HgLogBrowserDialog.on_diffP2Button_clicked">on_diffP2Button_clicked</a></td>
+<td>Private slot to handle the Diff to Parent 2 button.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_fieldCombo_activated">on_fieldCombo_activated</a></td>
 <td>Private slot called, when a new filter field is selected.</td>
@@ -143,9 +143,6 @@ QDialog, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_logTree_currentItemChanged">on_logTree_currentItemChanged</a></td>
 <td>Private slot called, when the current item of the log tree changes.</td>
-</tr><tr>
-<td><a href="#HgLogBrowserDialog.on_logTree_itemSelectionChanged">on_logTree_itemSelectionChanged</a></td>
-<td>Private slot called, when the selection has changed.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_nextButton_clicked">on_nextButton_clicked</a></td>
 <td>Private slot to handle the Next button.</td>
@@ -171,7 +168,7 @@ QDialog, Ui_HgLogBrowserDialog
 </table>
 <a NAME="HgLogBrowserDialog.__init__" ID="HgLogBrowserDialog.__init__"></a>
 <h4>HgLogBrowserDialog (Constructor)</h4>
-<b>HgLogBrowserDialog</b>(<i>vcs, mode = "log", parent = None</i>)
+<b>HgLogBrowserDialog</b>(<i>vcs, mode = "log", bundle = None, parent = None</i>)
 <p>
         Constructor
 </p><dl>
@@ -181,6 +178,9 @@ reference to the vcs object
 </dd><dt><i>mode</i></dt>
 <dd>
 mode of the dialog (string; one of log, incoming, outgoing)
+</dd><dt><i>bundle</i></dt>
+<dd>
+name of a bundle file (string)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -458,16 +458,16 @@ button that was clicked (QAbstractButton)
 <b>on_clearRxEditButton_clicked</b>(<i></i>)
 <p>
         Private slot called by a click of the clear RX edit button.
-</p><a NAME="HgLogBrowserDialog.on_diffPreviousButton_clicked" ID="HgLogBrowserDialog.on_diffPreviousButton_clicked"></a>
-<h4>HgLogBrowserDialog.on_diffPreviousButton_clicked</h4>
-<b>on_diffPreviousButton_clicked</b>(<i></i>)
+</p><a NAME="HgLogBrowserDialog.on_diffP1Button_clicked" ID="HgLogBrowserDialog.on_diffP1Button_clicked"></a>
+<h4>HgLogBrowserDialog.on_diffP1Button_clicked</h4>
+<b>on_diffP1Button_clicked</b>(<i></i>)
 <p>
-        Private slot to handle the Diff to Previous button.
-</p><a NAME="HgLogBrowserDialog.on_diffRevisionsButton_clicked" ID="HgLogBrowserDialog.on_diffRevisionsButton_clicked"></a>
-<h4>HgLogBrowserDialog.on_diffRevisionsButton_clicked</h4>
-<b>on_diffRevisionsButton_clicked</b>(<i></i>)
+        Private slot to handle the Diff to Parent 1 button.
+</p><a NAME="HgLogBrowserDialog.on_diffP2Button_clicked" ID="HgLogBrowserDialog.on_diffP2Button_clicked"></a>
+<h4>HgLogBrowserDialog.on_diffP2Button_clicked</h4>
+<b>on_diffP2Button_clicked</b>(<i></i>)
 <p>
-        Private slot to handle the Compare Revisions button.
+        Private slot to handle the Diff to Parent 2 button.
 </p><a NAME="HgLogBrowserDialog.on_fieldCombo_activated" ID="HgLogBrowserDialog.on_fieldCombo_activated"></a>
 <h4>HgLogBrowserDialog.on_fieldCombo_activated</h4>
 <b>on_fieldCombo_activated</b>(<i>txt</i>)
@@ -506,12 +506,7 @@ reference to the new current item (QTreeWidgetItem)
 <dd>
 reference to the old current item (QTreeWidgetItem)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.on_logTree_itemSelectionChanged" ID="HgLogBrowserDialog.on_logTree_itemSelectionChanged"></a>
-<h4>HgLogBrowserDialog.on_logTree_itemSelectionChanged</h4>
-<b>on_logTree_itemSelectionChanged</b>(<i></i>)
-<p>
-        Private slot called, when the selection has changed.
-</p><a NAME="HgLogBrowserDialog.on_nextButton_clicked" ID="HgLogBrowserDialog.on_nextButton_clicked"></a>
+</dl><a NAME="HgLogBrowserDialog.on_nextButton_clicked" ID="HgLogBrowserDialog.on_nextButton_clicked"></a>
 <h4>HgLogBrowserDialog.on_nextButton_clicked</h4>
 <b>on_nextButton_clicked</b>(<i></i>)
 <p>
