@@ -612,16 +612,31 @@ class HgProjectHelper(VcsProjectHelper):
                 self.trUtf8('Preview changegroup...'),
                 0, 0, self, 'mercurial_preview_bundle')
         self.hgPreviewBundleAct.setStatusTip(self.trUtf8(
-            'Preview a changegroup file containing a collecting of changesets'
+            'Preview a changegroup file containing a collection of changesets'
         ))
         self.hgPreviewBundleAct.setWhatsThis(self.trUtf8(
             """<b>Preview changegroup</b>"""
-            """<p>This previews a changegroup file containing a collecting of"""
+            """<p>This previews a changegroup file containing a collection of"""
             """ changesets.</p>"""
         ))
         self.connect(self.hgPreviewBundleAct, SIGNAL('triggered()'), 
                      self.__hgPreviewBundle)
         self.actions.append(self.hgPreviewBundleAct)
+        
+        self.hgIdentifyBundleAct = E5Action(self.trUtf8('Identify changegroup'),
+                self.trUtf8('Identify changegroup...'),
+                0, 0, self, 'mercurial_identify_bundle')
+        self.hgIdentifyBundleAct.setStatusTip(self.trUtf8(
+            'Identify a changegroup file containing a collection of changesets'
+        ))
+        self.hgIdentifyBundleAct.setWhatsThis(self.trUtf8(
+            """<b>Identify changegroup</b>"""
+            """<p>This identifies a changegroup file containing a collection of"""
+            """ changesets.</p>"""
+        ))
+        self.connect(self.hgIdentifyBundleAct, SIGNAL('triggered()'), 
+                     self.__hgIdentifyBundle)
+        self.actions.append(self.hgIdentifyBundleAct)
         
         self.hgUnbundleAct = E5Action(self.trUtf8('Apply changegroups'),
                 self.trUtf8('Apply changegroups...'),
@@ -717,6 +732,7 @@ class HgProjectHelper(VcsProjectHelper):
         
         bundleMenu = QMenu(self.trUtf8("Changegroup Management"), menu)
         bundleMenu.addAction(self.hgBundleAct)
+        bundleMenu.addAction(self.hgIdentifyBundleAct)
         bundleMenu.addAction(self.hgPreviewBundleAct)
         bundleMenu.addAction(self.hgUnbundleAct)
         
@@ -943,6 +959,12 @@ class HgProjectHelper(VcsProjectHelper):
         Protected slot used to preview a changegroup file.
         """
         self.vcs.hgPreviewBundle(self.project.ppath)
+    
+    def __hgIdentifyBundle(self):
+        """
+        Protected slot used to identify a changegroup file.
+        """
+        self.vcs.hgIdentifyBundle(self.project.ppath)
     
     def __hgUnbundle(self):
         """

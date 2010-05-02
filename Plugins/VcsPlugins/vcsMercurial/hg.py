@@ -1698,8 +1698,8 @@ class Hg(VersionControl):
             fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
                 None,
                 self.trUtf8("Create changegroup"),
-                None,
-                self.trUtf8("Mercurial Bundle Files (*.hg)"),
+                repodir,
+                self.trUtf8("Mercurial Changegroup Files (*.hg)"),
                 None,
                 QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
             
@@ -1714,7 +1714,7 @@ class Hg(VersionControl):
             if QFileInfo(fname).exists():
                 res = QMessageBox.warning(None,
                     self.trUtf8("Create changegroup"),
-                    self.trUtf8("<p>The Mercurial bundle file <b>{0}</b> "
+                    self.trUtf8("<p>The Mercurial changegroup file <b>{0}</b> "
                                 "already exists.</p>")
                         .format(fname),
                     QMessageBox.StandardButtons(\
@@ -1747,13 +1747,13 @@ class Hg(VersionControl):
         Public method used to view the log of incoming changes from a
         changegroup file.
         
-        @param name file/directory name to show the log of (string)
+        @param name directory name on which to base the changegroup (string)
         """
         file = QFileDialog.getOpenFileName(\
             None,
             self.trUtf8("Preview changegroup"),
-            "",
-            self.trUtf8("Mercurial Bundle Files (*.hg);;All Files (*)"))
+            repodir,
+            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
             if self.getPlugin().getPreferences("UseLogBrowser"):
                 self.logBrowser = \
@@ -1764,6 +1764,36 @@ class Hg(VersionControl):
                 self.log = HgLogDialog(self, mode = "incoming", bundle = file)
                 self.log.show()
                 self.log.start(name)
+    
+    def hgIdentifyBundle(self, name):
+        """
+        Public method used to identify a changegroup file.
+        
+        @param name directory name on which to base the changegroup (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        file = QFileDialog.getOpenFileName(\
+            None,
+            self.trUtf8("Preview changegroup"),
+            repodir,
+            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
+        if file:
+            args = []
+            args.append('identify')
+            args.append(file)
+            
+            dia = HgDialog(self.trUtf8('Identifying changegroup file'))
+            res = dia.startProcess(args, repodir, False)
+            if res:
+                dia.exec_()
     
     def hgUnbundle(self, name):
         """
@@ -1783,8 +1813,8 @@ class Hg(VersionControl):
         files = QFileDialog.getOpenFileNames(\
             None,
             self.trUtf8("Apply changegroups"),
-            "",
-            self.trUtf8("Mercurial Bundle Files (*.hg);;All Files (*)"))
+            repodir,
+            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if files:
             update = QMessageBox.question(None,
                 self.trUtf8("Apply changegroups"),

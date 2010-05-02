@@ -108,6 +108,9 @@ VersionControl
 <td><a href="#Hg.hgIdentify">hgIdentify</a></td>
 <td>Public method to identify the current working directory.</td>
 </tr><tr>
+<td><a href="#Hg.hgIdentifyBundle">hgIdentifyBundle</a></td>
+<td>Public method used to identify a changegroup file.</td>
+</tr><tr>
 <td><a href="#Hg.hgIncoming">hgIncoming</a></td>
 <td>Public method used to view the log of incoming changes from the Mercurial repository.</td>
 </tr><tr>
@@ -451,6 +454,16 @@ file/directory name to be removed (string or list of strings))
 <dd>
 file/directory name (string)
 </dd>
+</dl><a NAME="Hg.hgIdentifyBundle" ID="Hg.hgIdentifyBundle"></a>
+<h4>Hg.hgIdentifyBundle</h4>
+<b>hgIdentifyBundle</b>(<i>name</i>)
+<p>
+        Public method used to identify a changegroup file.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name on which to base the changegroup (string)
+</dd>
 </dl><a NAME="Hg.hgIncoming" ID="Hg.hgIncoming"></a>
 <h4>Hg.hgIncoming</h4>
 <b>hgIncoming</b>(<i>name</i>)
@@ -546,7 +559,7 @@ file/directory name to show the log of (string)
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to show the log of (string)
+directory name on which to base the changegroup (string)
 </dd>
 </dl><a NAME="Hg.hgPull" ID="Hg.hgPull"></a>
 <h4>Hg.hgPull</h4>
