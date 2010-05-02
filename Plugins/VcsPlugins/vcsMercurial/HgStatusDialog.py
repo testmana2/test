@@ -210,13 +210,14 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             QTimer.singleShot(2000, self.process.kill)
             self.process.waitForFinished(3000)
         
-        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
         self.refreshButton.setEnabled(True)
+        
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
         
         for act in self.menuactions:
             act.setEnabled(True)

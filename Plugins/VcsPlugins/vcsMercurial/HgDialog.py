@@ -9,7 +9,7 @@ Module implementing a dialog starting a process and showing its output.
 
 import os
 
-from PyQt4.QtCore import QProcess, QTimer, SIGNAL, pyqtSlot
+from PyQt4.QtCore import QProcess, QTimer, SIGNAL, pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QMessageBox, QLineEdit
 
 from .Ui_HgDialog import Ui_HgDialog
@@ -53,14 +53,15 @@ class HgDialog(QDialog, Ui_HgDialog):
             QTimer.singleShot(2000, self.proc.kill)
             self.proc.waitForFinished(3000)
         
-        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
         
         self.proc = None
+        
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
         
         if Preferences.getVCS("AutoClose") and \
            self.normal and \

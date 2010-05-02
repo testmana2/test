@@ -129,12 +129,13 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             QTimer.singleShot(2000, self.process.kill)
             self.process.waitForFinished(3000)
         
+        self.inputGroup.setEnabled(False)
+        self.inputGroup.hide()
+        
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        
-        self.inputGroup.setEnabled(False)
-        self.inputGroup.hide()
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
         
         self.process = None
         
