@@ -81,6 +81,9 @@ VersionControl
 <td><a href="#Hg.hgAnnotate">hgAnnotate</a></td>
 <td>Public method to show the output of the hg annotate command.</td>
 </tr><tr>
+<td><a href="#Hg.hgBackout">hgBackout</a></td>
+<td>Public method used to backout an earlier changeset from the Mercurial repository.</td>
+</tr><tr>
 <td><a href="#Hg.hgBisect">hgBisect</a></td>
 <td>Public method to perform bisect commands.</td>
 </tr><tr>
@@ -334,6 +337,16 @@ reference to the plugin object (VcsMercurialPlugin)
 <dt><i>name</i></dt>
 <dd>
 file name to show the annotations for (string)
+</dd>
+</dl><a NAME="Hg.hgBackout" ID="Hg.hgBackout"></a>
+<h4>Hg.hgBackout</h4>
+<b>hgBackout</b>(<i>name</i>)
+<p>
+        Public method used to backout an earlier changeset from the Mercurial repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name (string or list of strings))
 </dd>
 </dl><a NAME="Hg.hgBisect" ID="Hg.hgBisect"></a>
 <h4>Hg.hgBisect</h4>
@@ -639,7 +652,7 @@ file/directory name (string)
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name (string)
+directory name (string)
 </dd>
 </dl><a NAME="Hg.hgVerify" ID="Hg.hgVerify"></a>
 <h4>Hg.hgVerify</h4>

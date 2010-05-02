@@ -39,6 +39,7 @@ from .HgTagDialog import HgTagDialog
 from .HgTagBranchListDialog import HgTagBranchListDialog
 from .HgCommandDialog import HgCommandDialog
 from .HgBundleDialog import HgBundleDialog
+from .HgBackoutDialog import HgBackoutDialog
 
 from .ProjectBrowserHelper import HgProjectBrowserHelper
 
@@ -1290,6 +1291,8 @@ class Hg(VersionControl):
         args.append('pull')
         self.addArguments(args, self.options['global'])
         args.append('-v')
+        if self.getPlugin().getPreferences("PullUpdate"):
+            args.append('--update')
         
         # find the root of the repo
         repodir = self.splitPath(name)[0]
@@ -1749,6 +1752,15 @@ class Hg(VersionControl):
         
         @param name directory name on which to base the changegroup (string)
         """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
         file = QFileDialog.getOpenFileName(\
             None,
             self.trUtf8("Preview changegroup"),
@@ -1799,7 +1811,7 @@ class Hg(VersionControl):
         """
         Public method to apply changegroup files.
         
-        @param name file/directory name (string)
+        @param name directory name (string)
         """
         dname, fname = self.splitPath(name)
         
@@ -1901,7 +1913,7 @@ class Hg(VersionControl):
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
-                return False
+                return
         
         dia = HgDialog(\
             self.trUtf8('Removing files from the Mercurial repository only'))
@@ -1912,6 +1924,50 @@ class Hg(VersionControl):
                 self.__forgotNames.extend(name)
             else:
                 self.__forgotNames.append(name)
+    
+    def hgBackout(self, name):
+        """
+        Public method used to backout an earlier changeset from the Mercurial repository.
+        
+        @param name directory name (string or list of strings))
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        dlg = HgBackoutDialog(self.tagsList, self.branchesList)
+        if dlg.exec_() == QDialog.Accepted:
+            rev, merge, date, user, message = dlg.getParameters()
+            if not rev:
+                QMessageBox.warning(None,
+                    self.trUtf8("Backing out changeset"),
+                    self.trUtf8("""No revision given. Aborting..."""))
+                return
+            
+            args = []
+            args.append('backout')
+            args.append('-v')
+            if merge:
+                args.append('--merge')
+            if date:
+                args.append('--date')
+                args.append(date)
+            if user:
+                args.append('--user')
+                args.append(user)
+            args.append('--message')
+            args.append(message)
+            args.append(rev)
+            
+            dia = HgDialog(self.trUtf8('Backing out changeset'))
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
     
     ############################################################################
     ## Methods to get the helper objects are below.

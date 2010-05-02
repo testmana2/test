@@ -10,7 +10,7 @@
     <height>384</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -138,6 +138,25 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="title">
+      <string>Pull</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="pullUpdateCheckBox">
+        <property name="toolTip">
+         <string>Select to update the working directory to new tip</string>
+        </property>
+        <property name="text">
+         <string>Update after pulling</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QPushButton" name="configButton">
      <property name="toolTip">
       <string>Edit the mercurial config file</string>
@@ -166,6 +185,7 @@
   <tabstop>logSpinBox</tabstop>
   <tabstop>commitSpinBox</tabstop>
   <tabstop>logBrowserCheckBox</tabstop>
+  <tabstop>pullUpdateCheckBox</tabstop>
   <tabstop>configButton</tabstop>
  </tabstops>
  <resources/>

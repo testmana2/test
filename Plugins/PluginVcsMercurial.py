@@ -146,6 +146,7 @@ class VcsMercurialPlugin(object):
             "UseLogBrowser"  : True, 
             "LogLimit"       : 100, 
             "CommitMessages" : 20, 
+            "PullUpdate"     : False, 
         }
         
         from VcsPlugins.vcsMercurial.ProjectHelper import HgProjectHelper
@@ -189,7 +190,7 @@ class VcsMercurialPlugin(object):
         @param key the key of the value to get
         @return the requested setting
         """
-        if key in ["StopLogOnCopy", "UseLogBrowser"]:
+        if key in ["StopLogOnCopy", "UseLogBrowser", "PullUpdate"]:
             return Preferences.toBool(Preferences.Prefs.settings.value(
                 "Mercurial/" + key, self.__mercurialDefaults[key]))
         elif key in ["LogLimit", "CommitMessages"]:

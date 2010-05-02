@@ -325,6 +325,7 @@
                 </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.Config" ref="eric5.Plugins.VcsPlugins.vcsMercurial.Config.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html" />
@@ -7788,6 +7789,7 @@
       <keyword name="Hg.clearStatusCache" id="Hg.clearStatusCache" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.clearStatusCache" />
       <keyword name="Hg.getPlugin" id="Hg.getPlugin" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getPlugin" />
       <keyword name="Hg.hgAnnotate" id="Hg.hgAnnotate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgAnnotate" />
+      <keyword name="Hg.hgBackout" id="Hg.hgBackout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBackout" />
       <keyword name="Hg.hgBisect" id="Hg.hgBisect" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBisect" />
       <keyword name="Hg.hgBranch" id="Hg.hgBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBranch" />
       <keyword name="Hg.hgBundle" id="Hg.hgBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBundle" />
@@ -7870,6 +7872,7 @@
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html" />
       <keyword name="HgProjectHelper" id="HgProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper" />
       <keyword name="HgProjectHelper (Constructor)" id="HgProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__init__" />
+      <keyword name="HgProjectHelper.__hgBackout" id="HgProjectHelper.__hgBackout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBackout" />
       <keyword name="HgProjectHelper.__hgBisectBad" id="HgProjectHelper.__hgBisectBad" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectBad" />
       <keyword name="HgProjectHelper.__hgBisectGood" id="HgProjectHelper.__hgBisectGood" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectGood" />
       <keyword name="HgProjectHelper.__hgBisectReset" id="HgProjectHelper.__hgBisectReset" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectReset" />
@@ -7996,6 +7999,11 @@
       <keyword name="HgDialog.on_passwordCheckBox_toggled" id="HgDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html#HgDialog.on_passwordCheckBox_toggled" />
       <keyword name="HgDialog.on_sendButton_clicked" id="HgDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html#HgDialog.on_sendButton_clicked" />
       <keyword name="HgDialog.startProcess" id="HgDialog.startProcess" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html#HgDialog.startProcess" />
+      <keyword name="HgBackoutDialog (Module)" id="HgBackoutDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html" />
+      <keyword name="HgBackoutDialog" id="HgBackoutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html#HgBackoutDialog" />
+      <keyword name="HgBackoutDialog (Constructor)" id="HgBackoutDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html#HgBackoutDialog.__init__" />
+      <keyword name="HgBackoutDialog.getParameters" id="HgBackoutDialog.getParameters" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html#HgBackoutDialog.getParameters" />
+      <keyword name="HgBackoutDialog.on_noneButton_toggled" id="HgBackoutDialog.on_noneButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html#HgBackoutDialog.on_noneButton_toggled" />
       <keyword name="HgLogBrowserDialog (Module)" id="HgLogBrowserDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html" />
       <keyword name="HgLogBrowserDialog" id="HgLogBrowserDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog" />
       <keyword name="HgLogBrowserDialog (Constructor)" id="HgLogBrowserDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__init__" />
@@ -9805,6 +9813,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.Config.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html</file>

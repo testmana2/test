@@ -703,6 +703,19 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.connect(self.hgBisectResetAct, SIGNAL('triggered()'), self.__hgBisectReset)
         self.actions.append(self.hgBisectResetAct)
+        
+        self.hgBackoutAct = E5Action(self.trUtf8('Back out changeset'),
+                self.trUtf8('Back out changeset'),
+                0, 0, self, 'mercurial_backout')
+        self.hgBackoutAct.setStatusTip(self.trUtf8(
+            'Back out changes of an earlier changeset'
+        ))
+        self.hgBackoutAct.setWhatsThis(self.trUtf8(
+            """<b>Back out changeset</b>"""
+            """<p>This backs out changes of an earlier changeset.</p>"""
+        ))
+        self.connect(self.hgBackoutAct, SIGNAL('triggered()'), self.__hgBackout)
+        self.actions.append(self.hgBackoutAct)
     
     def initMenu(self, menu):
         """
@@ -727,6 +740,8 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addAction(self.hgCreateIgnoreAct)
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgRecoverAct)
+        adminMenu.addSeparator()
+        adminMenu.addAction(self.hgBackoutAct)
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgVerifyAct)
         
@@ -995,3 +1010,9 @@ class HgProjectHelper(VcsProjectHelper):
         Protected slot used to execute the bisect --reset command.
         """
         self.vcs.hgBisect(self.project.ppath, "reset")
+    
+    def __hgBackout(self):
+        """
+        Protected slot used to back out changes of a changeset.
+        """
+        self.vcs.hgBackout(self.project.ppath)

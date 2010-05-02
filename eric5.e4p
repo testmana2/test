@@ -797,6 +797,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgCommandDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1020,6 +1021,7 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgCommandDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
