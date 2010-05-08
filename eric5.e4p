@@ -1107,10 +1107,11 @@
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/preferences-mercurial.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowser.style</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialog.style</Other>
+    <Other>.hgignore</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
-    <VcsType>PySvn</VcsType>
+    <VcsType>Mercurial</VcsType>
     <VcsOptions>
       <dict>
         <key>
@@ -1181,7 +1182,6 @@
         </key>
         <value>
           <list>
-            <string>--show-updates</string>
           </list>
         </value>
         <key>
@@ -1202,12 +1202,6 @@
     </VcsOptions>
     <VcsOtherData>
       <dict>
-        <key>
-          <string>standardLayout</string>
-        </key>
-        <value>
-          <bool>True</bool>
-        </value>
       </dict>
     </VcsOtherData>
   </Vcs>
