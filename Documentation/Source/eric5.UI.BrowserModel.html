@@ -439,6 +439,9 @@ BrowserItem
 <td><a href="#BrowserDirectoryItem.lessThan">lessThan</a></td>
 <td>Public method to check, if the item is less than the other one.</td>
 </tr><tr>
+<td><a href="#BrowserDirectoryItem.name">name</a></td>
+<td>Public method to return the name of the item.</td>
+</tr><tr>
 <td><a href="#BrowserDirectoryItem.setName">setName</a></td>
 <td>Public method to set the directory name.</td>
 </tr>
@@ -489,6 +492,16 @@ sort order (Qt.SortOrder) (for special sorting)
 <dt>Returns:</dt>
 <dd>
 true, if this item is less than other (boolean)
+</dd>
+</dl><a NAME="BrowserDirectoryItem.name" ID="BrowserDirectoryItem.name"></a>
+<h4>BrowserDirectoryItem.name</h4>
+<b>name</b>(<i></i>)
+<p>
+        Public method to return the name of the item.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+name of the item (string)
 </dd>
 </dl><a NAME="BrowserDirectoryItem.setName" ID="BrowserDirectoryItem.setName"></a>
 <h4>BrowserDirectoryItem.setName</h4>
@@ -573,6 +586,9 @@ BrowserItem
 </tr><tr>
 <td><a href="#BrowserFileItem.moduleName">moduleName</a></td>
 <td>Public method returning the module name.</td>
+</tr><tr>
+<td><a href="#BrowserFileItem.name">name</a></td>
+<td>Public method to return the name of the item.</td>
 </tr><tr>
 <td><a href="#BrowserFileItem.setName">setName</a></td>
 <td>Public method to set the directory name.</td>
@@ -777,6 +793,16 @@ true, if this item is less than other (boolean)
 <dt>Returns:</dt>
 <dd>
 module name (string)
+</dd>
+</dl><a NAME="BrowserFileItem.name" ID="BrowserFileItem.name"></a>
+<h4>BrowserFileItem.name</h4>
+<b>name</b>(<i></i>)
+<p>
+        Public method to return the name of the item.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+name of the item (string)
 </dd>
 </dl><a NAME="BrowserFileItem.setName" ID="BrowserFileItem.setName"></a>
 <h4>BrowserFileItem.setName</h4>
@@ -1188,11 +1214,20 @@ QAbstractItemModel
 <td><a href="#BrowserModel.__init__">BrowserModel</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#BrowserModel.__directoryChanged">__directoryChanged</a></td>
+<td>Private slot to handle the directoryChanged signal of the watcher.</td>
+</tr><tr>
 <td><a href="#BrowserModel.__populateModel">__populateModel</a></td>
 <td>Private method to populate the browser model.</td>
 </tr><tr>
 <td><a href="#BrowserModel._addItem">_addItem</a></td>
 <td>Protected slot to add an item.</td>
+</tr><tr>
+<td><a href="#BrowserModel._addWatchedItem">_addWatchedItem</a></td>
+<td>Protected method to watch an item.</td>
+</tr><tr>
+<td><a href="#BrowserModel._removeWatchedItem">_removeWatchedItem</a></td>
+<td>Protected method to remove a watched item.</td>
 </tr><tr>
 <td><a href="#BrowserModel.addItem">addItem</a></td>
 <td>Puplic slot to add an item.</td>
@@ -1271,6 +1306,16 @@ QAbstractItemModel
 <dd>
 reference to parent object (QObject)
 </dd>
+</dl><a NAME="BrowserModel.__directoryChanged" ID="BrowserModel.__directoryChanged"></a>
+<h4>BrowserModel.__directoryChanged</h4>
+<b>__directoryChanged</b>(<i>path</i>)
+<p>
+        Private slot to handle the directoryChanged signal of the watcher.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+path of the directory (string)
+</dd>
 </dl><a NAME="BrowserModel.__populateModel" ID="BrowserModel.__populateModel"></a>
 <h4>BrowserModel.__populateModel</h4>
 <b>__populateModel</b>(<i></i>)
@@ -1288,6 +1333,26 @@ reference to item to add (BrowserItem)
 </dd><dt><i>parentItem</i></dt>
 <dd>
 reference to item to add to (BrowserItem)
+</dd>
+</dl><a NAME="BrowserModel._addWatchedItem" ID="BrowserModel._addWatchedItem"></a>
+<h4>BrowserModel._addWatchedItem</h4>
+<b>_addWatchedItem</b>(<i>itm</i>)
+<p>
+        Protected method to watch an item.
+</p><dl>
+<dt><i>itm</i></dt>
+<dd>
+item to be watched (BrowserDirectoryItem)
+</dd>
+</dl><a NAME="BrowserModel._removeWatchedItem" ID="BrowserModel._removeWatchedItem"></a>
+<h4>BrowserModel._removeWatchedItem</h4>
+<b>_removeWatchedItem</b>(<i>itm</i>)
+<p>
+        Protected method to remove a watched item.
+</p><dl>
+<dt><i>itm</i></dt>
+<dd>
+item to be removed (BrowserDirectoryItem)
 </dd>
 </dl><a NAME="BrowserModel.addItem" ID="BrowserModel.addItem"></a>
 <h4>BrowserModel.addItem</h4>
@@ -1554,7 +1619,7 @@ flag indicating a repopulation (boolean)
 </p><dl>
 <dt><i>dirname</i></dt>
 <dd>
-name of the directory containg the file (string)
+name of the directory containing the file (string)
 </dd>
 </dl><a NAME="BrowserModel.removeToplevelDir" ID="BrowserModel.removeToplevelDir"></a>
 <h4>BrowserModel.removeToplevelDir</h4>

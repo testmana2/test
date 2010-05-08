@@ -3825,6 +3825,7 @@
       <keyword name="BrowserDirectoryItem (Constructor)" id="BrowserDirectoryItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserDirectoryItem.__init__" />
       <keyword name="BrowserDirectoryItem.dirName" id="BrowserDirectoryItem.dirName" ref="eric5.UI.BrowserModel.html#BrowserDirectoryItem.dirName" />
       <keyword name="BrowserDirectoryItem.lessThan" id="BrowserDirectoryItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserDirectoryItem.lessThan" />
+      <keyword name="BrowserDirectoryItem.name" id="BrowserDirectoryItem.name" ref="eric5.UI.BrowserModel.html#BrowserDirectoryItem.name" />
       <keyword name="BrowserDirectoryItem.setName" id="BrowserDirectoryItem.setName" ref="eric5.UI.BrowserModel.html#BrowserDirectoryItem.setName" />
       <keyword name="BrowserFileItem (Constructor)" id="BrowserFileItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserFileItem.__init__" />
       <keyword name="BrowserFileItem.dirName" id="BrowserFileItem.dirName" ref="eric5.UI.BrowserModel.html#BrowserFileItem.dirName" />
@@ -3844,6 +3845,7 @@
       <keyword name="BrowserFileItem.isSvgFile" id="BrowserFileItem.isSvgFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isSvgFile" />
       <keyword name="BrowserFileItem.lessThan" id="BrowserFileItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserFileItem.lessThan" />
       <keyword name="BrowserFileItem.moduleName" id="BrowserFileItem.moduleName" ref="eric5.UI.BrowserModel.html#BrowserFileItem.moduleName" />
+      <keyword name="BrowserFileItem.name" id="BrowserFileItem.name" ref="eric5.UI.BrowserModel.html#BrowserFileItem.name" />
       <keyword name="BrowserFileItem.setName" id="BrowserFileItem.setName" ref="eric5.UI.BrowserModel.html#BrowserFileItem.setName" />
       <keyword name="BrowserItem (Constructor)" id="BrowserItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserItem.__init__" />
       <keyword name="BrowserItem.appendChild" id="BrowserItem.appendChild" ref="eric5.UI.BrowserModel.html#BrowserItem.appendChild" />
@@ -3870,8 +3872,11 @@
       <keyword name="BrowserMethodItem.lessThan" id="BrowserMethodItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.lessThan" />
       <keyword name="BrowserMethodItem.lineno" id="BrowserMethodItem.lineno" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.lineno" />
       <keyword name="BrowserModel (Constructor)" id="BrowserModel (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserModel.__init__" />
+      <keyword name="BrowserModel.__directoryChanged" id="BrowserModel.__directoryChanged" ref="eric5.UI.BrowserModel.html#BrowserModel.__directoryChanged" />
       <keyword name="BrowserModel.__populateModel" id="BrowserModel.__populateModel" ref="eric5.UI.BrowserModel.html#BrowserModel.__populateModel" />
       <keyword name="BrowserModel._addItem" id="BrowserModel._addItem" ref="eric5.UI.BrowserModel.html#BrowserModel._addItem" />
+      <keyword name="BrowserModel._addWatchedItem" id="BrowserModel._addWatchedItem" ref="eric5.UI.BrowserModel.html#BrowserModel._addWatchedItem" />
+      <keyword name="BrowserModel._removeWatchedItem" id="BrowserModel._removeWatchedItem" ref="eric5.UI.BrowserModel.html#BrowserModel._removeWatchedItem" />
       <keyword name="BrowserModel.addItem" id="BrowserModel.addItem" ref="eric5.UI.BrowserModel.html#BrowserModel.addItem" />
       <keyword name="BrowserModel.addTopLevelDir" id="BrowserModel.addTopLevelDir" ref="eric5.UI.BrowserModel.html#BrowserModel.addTopLevelDir" />
       <keyword name="BrowserModel.clear" id="BrowserModel.clear" ref="eric5.UI.BrowserModel.html#BrowserModel.clear" />
