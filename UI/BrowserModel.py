@@ -246,12 +246,16 @@ class BrowserModel(QAbstractItemModel):
         """
         if isinstance(itm, BrowserDirectoryItem):
             dirName = itm.dirName()
-            if dirName not in self.watcher.directories() and \
-               dirName != "" and \
+            if dirName != "" and \
                not dirName.startswith("//") and \
                not dirName.startswith("\\\\"):
-                self.watcher.addPath(dirName)
-                self.watchedItems[dirName] = itm
+                if dirName not in self.watcher.directories():
+                    self.watcher.addPath(dirName)
+                if dirName in self.watchedItems and \
+                   itm not in self.watchedItems[dirName]:
+                    self.watchedItems[dirName].append(itm)
+                else:
+                    self.watchedItems[dirName] = [itm]
     
     def _removeWatchedItem(self, itm):
         """
@@ -261,11 +265,12 @@ class BrowserModel(QAbstractItemModel):
         """
         if isinstance(itm, BrowserDirectoryItem):
             dirName = itm.dirName()
-            self.watcher.removePath(dirName)
-            try:
+            if dirName in self.watchedItems and \
+               itm in self.watchedItems[dirName]:
+                self.watchedItems[dirName].remove(itm)
+            if len(self.watchedItems[dirName]) == 0:
                 del self.watchedItems[dirName]
-            except KeyError:
-                pass
+                self.watcher.removePath(dirName)
     
     def __directoryChanged(self, path):
         """
@@ -277,56 +282,56 @@ class BrowserModel(QAbstractItemModel):
             # just ignore the situation we don't have a reference to the item
             return
         
-        itm = self.watchedItems[path]
-        if itm.isPopulated():
-            oldCnt = itm.childCount()
-            
-            qdir = QDir(itm.dirName())
-            
-            entryInfoList = \
-                qdir.entryInfoList(QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot))
-            
-            # step 1: check for new entries
-            for f in entryInfoList:
-                fpath = f.absoluteFilePath()
-                childFound = False
-                for child in itm.children():
-                    if child.name() == fpath:
-                        childFound = True
-                        break
-                if childFound:
-                    continue
+        for itm in self.watchedItems[path]:
+            if itm.isPopulated():
+                oldCnt = itm.childCount()
                 
-                cnt = itm.childCount()
-                self.beginInsertRows(self.createIndex(itm.row(), 0, itm),
-                    cnt, cnt)
-                if f.isDir():
-                    node = BrowserDirectoryItem(itm,
-                        Utilities.toNativeSeparators(f.absoluteFilePath()), 
-                        False)
-                    self._addWatchedItem(node)
-                else:
-                    node = BrowserFileItem(itm,
-                        Utilities.toNativeSeparators(f.absoluteFilePath()))
-                self._addItem(node, itm)
-                self.endInsertRows()
-            
-            # step 2: check for removed entries
-            if len(entryInfoList) != itm.childCount():
-                for row in range(oldCnt - 1, -1, -1):
-                    child = itm.child(row)
-                    entryFound = False
-                    for f in entryInfoList:
-                        if f.absoluteFilePath() == child.name():
-                            entryFound = True
+                qdir = QDir(itm.dirName())
+                
+                entryInfoList = qdir.entryInfoList(
+                    QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot))
+                
+                # step 1: check for new entries
+                for f in entryInfoList:
+                    fpath = f.absoluteFilePath()
+                    childFound = False
+                    for child in itm.children():
+                        if child.name() == fpath:
+                            childFound = True
                             break
-                    if entryFound:
+                    if childFound:
                         continue
                     
-                    self.beginRemoveRows(self.createIndex(itm.row(), 0, itm),
-                        row, row)
-                    itm.removeChild(child)
-                    self.endRemoveRows()
+                    cnt = itm.childCount()
+                    self.beginInsertRows(self.createIndex(itm.row(), 0, itm),
+                        cnt, cnt)
+                    if f.isDir():
+                        node = BrowserDirectoryItem(itm,
+                            Utilities.toNativeSeparators(f.absoluteFilePath()), 
+                            False)
+                        self._addWatchedItem(node)
+                    else:
+                        node = BrowserFileItem(itm,
+                            Utilities.toNativeSeparators(f.absoluteFilePath()))
+                    self._addItem(node, itm)
+                    self.endInsertRows()
+                
+                # step 2: check for removed entries
+                if len(entryInfoList) != itm.childCount():
+                    for row in range(oldCnt - 1, -1, -1):
+                        child = itm.child(row)
+                        entryFound = False
+                        for f in entryInfoList:
+                            if f.absoluteFilePath() == child.name():
+                                entryFound = True
+                                break
+                        if entryFound:
+                            continue
+                        
+                        self.beginRemoveRows(self.createIndex(itm.row(), 0, itm),
+                            row, row)
+                        itm.removeChild(child)
+                        self.endRemoveRows()
     
     def __populateModel(self):
         """
