@@ -279,6 +279,8 @@ class Prefs(object):
         "DefaultOpenFilter" : "",
         "DefaultSaveFilter" : "",
         
+        "ZoomFactor" : 0, 
+        
         # All (most) lexers
         "AllFoldCompact" : True,
         
@@ -1212,7 +1214,7 @@ def getEditor(key, prefClass = Prefs):
                  "CaretWidth", "AutoCompletionSource", "AutoCompletionThreshold", 
                  "CallTipsVisible", "CallTipsStyle", "MarkOccurrencesTimeout", 
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize", 
-                 "PostScriptLevel", "EOLMode"]:
+                 "PostScriptLevel", "EOLMode", "ZoomFactor"]:
         return int(prefClass.settings.value("Editor/" + key, 
             prefClass.editorDefaults[key]))
     else:

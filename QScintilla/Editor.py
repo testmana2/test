@@ -3337,6 +3337,8 @@ class Editor(QsciScintillaCompat):
             self.setWrapVisualFlags(\
                 QsciScintilla.WrapFlagNone, QsciScintilla.WrapFlagNone)
         
+        self.zoomTo(Preferences.getEditor("ZoomFactor"))
+        
         self.searchIndicator = QsciScintilla.INDIC_CONTAINER
         self.indicatorDefine(self.searchIndicator, QsciScintilla.INDIC_BOX, 
             Preferences.getEditorColour("SearchMarkers"))

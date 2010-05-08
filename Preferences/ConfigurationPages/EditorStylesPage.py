@@ -132,6 +132,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             self.initColour("NonmatchingBraceBack", self.nonmatchingBracesBackButton, 
                 Preferences.getEditorColour)
         
+        self.zoomfactorSlider.setValue(
+            Preferences.getEditor("ZoomFactor"))
+        
         self.whitespaceCheckBox.setChecked(\
             Preferences.getEditor("ShowWhitespace"))
         self.miniMenuCheckBox.setChecked(\
@@ -181,6 +184,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         Preferences.setEditor("BraceHighlighting",
             self.bracehighlightingCheckBox.isChecked())
+        
+        Preferences.setEditor("ZoomFactor", 
+            self.zoomfactorSlider.value())
         
         Preferences.setEditor("ShowWhitespace", 
             self.whitespaceCheckBox.isChecked())
