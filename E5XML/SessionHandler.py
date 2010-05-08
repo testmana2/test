@@ -112,6 +112,7 @@ class SessionHandler(XMLHandlerBase):
         self.buffer = ""
         self.cline = int(attrs.get("cline", "0"))
         self.cindex = int(attrs.get("cindex", "0"))
+        self.zoom = int(attrs.get("zoom", "-1"))
         
         folds = attrs.get("folds", "")
         if folds:
@@ -126,6 +127,8 @@ class SessionHandler(XMLHandlerBase):
         self.vm.openFiles(self.buffer)
         ed = self.vm.getOpenEditor(self.buffer)
         if ed is not None:
+            if self.zoom > -1:
+                ed.zoomTo(self.zoom)
             if self.folds:
                 ed.recolor()
                 for line in self.folds:

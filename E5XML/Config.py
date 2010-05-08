@@ -17,7 +17,7 @@ projectFileFormatVersion = "5.0"
 userProjectFileFormatVersion = "4.0"
 
 # version number of the project session file
-sessionFileFormatVersion = "4.3"
+sessionFileFormatVersion = "4.4"
 
 # version number of the shortcuts file
 shortcutsFileFormatVersion = "3.6"

@@ -76,11 +76,14 @@ class SessionWriter(XMLWriterBase):
                 if ed is not None:
                     line, index = ed.getCursorPosition()
                     folds = ','.join([str(i + 1) for i in ed.getFolds()])
+                    zoom = ed.getZoom()
                 else:
                     line, index = 0, 0
                     folds = ''
-                self._write('    <Filename cline="%d" cindex="%d" folds="%s">%s</Filename>' % \
-                    (line, index, folds, of))
+                    zoom = -1
+                self._write('    <Filename cline="%d" cindex="%d" folds="%s" zoom="%d">'
+                            '%s</Filename>' % \
+                    (line, index, folds, zoom, of))
         self._write("  </Filenames>")
         
         aw = self.vm.getActiveName()
