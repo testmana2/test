@@ -80,7 +80,7 @@ class SessionWriter(XMLWriterBase):
                 else:
                     line, index = 0, 0
                     folds = ''
-                    zoom = -1
+                    zoom = -9999
                 self._write('    <Filename cline="%d" cindex="%d" folds="%s" zoom="%d">'
                             '%s</Filename>' % \
                     (line, index, folds, zoom, of))
