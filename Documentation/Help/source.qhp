@@ -4832,6 +4832,7 @@
       <keyword name="ProjectBrowserModel.addNewItem" id="ProjectBrowserModel.addNewItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.addNewItem" />
       <keyword name="ProjectBrowserModel.changeVCSStates" id="ProjectBrowserModel.changeVCSStates" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.changeVCSStates" />
       <keyword name="ProjectBrowserModel.data" id="ProjectBrowserModel.data" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.data" />
+      <keyword name="ProjectBrowserModel.directoryChanged" id="ProjectBrowserModel.directoryChanged" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.directoryChanged" />
       <keyword name="ProjectBrowserModel.findChildItem" id="ProjectBrowserModel.findChildItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.findChildItem" />
       <keyword name="ProjectBrowserModel.findItem" id="ProjectBrowserModel.findItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.findItem" />
       <keyword name="ProjectBrowserModel.findParentItemByName" id="ProjectBrowserModel.findParentItemByName" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.findParentItemByName" />

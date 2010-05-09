@@ -4304,6 +4304,7 @@ eric5.Project.ProjectBrowserModel.ProjectBrowserItemSimpleDirectory?7
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.addNewItem?4(typeString, name, additionalTypeStrings = [])
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.changeVCSStates?4(statesList)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.data?4(index, role)
+eric5.Project.ProjectBrowserModel.ProjectBrowserModel.directoryChanged?4(path)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.findChildItem?4(text, column, parentItem = None)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.findItem?4(name)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.findParentItemByName?4(type_, name, dontSplit = False)

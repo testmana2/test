@@ -296,6 +296,9 @@ BrowserModel
 <td><a href="#ProjectBrowserModel.data">data</a></td>
 <td>Public method to get data of an item.</td>
 </tr><tr>
+<td><a href="#ProjectBrowserModel.directoryChanged">directoryChanged</a></td>
+<td>Public slot to handle the directoryChanged signal of the watcher.</td>
+</tr><tr>
 <td><a href="#ProjectBrowserModel.findChildItem">findChildItem</a></td>
 <td>Public method to find a child item given some text.</td>
 </tr><tr>
@@ -388,7 +391,7 @@ item to work on
 </dd><dt><i>name</i></dt>
 <dd>
 filename belonging to this item (string)
-</dd><dt><i>recursive</i></dt>
+</dd><dt><i>recursive=</i></dt>
 <dd>
 flag indicating a recursive update (boolean)
 </dd>
@@ -447,6 +450,16 @@ role of data (Qt.ItemDataRole)
 <dt>Returns:</dt>
 <dd>
 requested data
+</dd>
+</dl><a NAME="ProjectBrowserModel.directoryChanged" ID="ProjectBrowserModel.directoryChanged"></a>
+<h4>ProjectBrowserModel.directoryChanged</h4>
+<b>directoryChanged</b>(<i>path</i>)
+<p>
+        Public slot to handle the directoryChanged signal of the watcher.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+path of the directory (string)
 </dd>
 </dl><a NAME="ProjectBrowserModel.findChildItem" ID="ProjectBrowserModel.findChildItem"></a>
 <h4>ProjectBrowserModel.findChildItem</h4>

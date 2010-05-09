@@ -222,6 +222,10 @@ class ProjectBrowserModel(BrowserModel):
         self.progDir = None
         self.project = parent
         
+        self.watchedItems = {}
+        self.watcher = QFileSystemWatcher(self)
+        self.watcher.directoryChanged.connect(self.directoryChanged)
+        
         self.inRefresh = False
         
         self.projectBrowserTypes = {
@@ -310,6 +314,8 @@ class ProjectBrowserModel(BrowserModel):
         @param parentItem reference to the directory item to be populated
         @param repopulate flag indicating a repopulation (boolean)
         """
+        self._addWatchedItem(parentItem)
+        
         qdir = QDir(parentItem.dirName())
         
         entryInfoList = \
@@ -353,6 +359,9 @@ class ProjectBrowserModel(BrowserModel):
         Public method called after a project has been closed.
         """
         self.__vcsStatus = {}
+        
+        self.watchedItems = {}
+        self.watcher.removePaths(self.watcher.directories())
         
         self.rootItem.removeChildren()
         self.reset()
@@ -568,6 +577,78 @@ class ProjectBrowserModel(BrowserModel):
             index =  self.createIndex(itm.row(), 0, itm)
         return index
     
+    def directoryChanged(self, path):
+        """
+        Public slot to handle the directoryChanged signal of the watcher.
+        
+        @param path path of the directory (string)
+        """
+        if path not in self.watchedItems:
+            # just ignore the situation we don't have a reference to the item
+            return
+        
+        for itm in self.watchedItems[path]:
+            oldCnt = itm.childCount()
+            
+            qdir = QDir(itm.dirName())
+            
+            entryInfoList = qdir.entryInfoList(
+                QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot))
+            
+            # step 1: check for new entries
+            children = itm.children()
+            for f in entryInfoList:
+                fpath = f.absoluteFilePath()
+                childFound = False
+                for child in children:
+                    if child.name() == fpath:
+                        childFound = True
+                        children.remove(child)
+                        break
+                if childFound:
+                    continue
+                
+                cnt = itm.childCount()
+                self.beginInsertRows(self.createIndex(itm.row(), 0, itm),
+                    cnt, cnt)
+                if f.isDir():
+                    node = ProjectBrowserDirectoryItem(itm,
+                        Utilities.toNativeSeparators(f.absoluteFilePath()), 
+                        itm.getProjectTypes()[0], 
+                        False)
+                else:
+                    node = ProjectBrowserFileItem(itm,
+                        Utilities.toNativeSeparators(f.absoluteFilePath()), 
+                        itm.getProjectTypes()[0])
+                self._addItem(node, itm)
+                if self.project.vcs is not None:
+                    self.project.vcs.clearStatusCache()
+                    state = self.project.vcs.vcsRegisteredState(node.name())
+                    if state == self.project.vcs.canBeCommitted:
+                        node.addVcsStatus(self.project.vcs.vcsName())
+                    else:
+                        node.addVcsStatus(self.trUtf8("local"))
+                self.endInsertRows()
+            
+            # step 2: check for removed entries
+            if len(entryInfoList) != itm.childCount():
+                for row in range(oldCnt - 1, -1, -1):
+                    child = itm.child(row)
+                    entryFound = False
+                    for f in entryInfoList:
+                        if f.absoluteFilePath() == child.name():
+                            entryFound = True
+                            entryInfoList.remove(f)
+                            break
+                    if entryFound:
+                        continue
+                    
+                    self._removeWatchedItem(child)
+                    self.beginRemoveRows(self.createIndex(itm.row(), 0, itm),
+                        row, row)
+                    itm.removeChild(child)
+                    self.endRemoveRows()
+    
     def __addVCSStatus(self, item, name):
         """
         Private method used to set the vcs status of a node.
@@ -590,7 +671,7 @@ class ProjectBrowserModel(BrowserModel):
         
         @param item item to work on
         @param name filename belonging to this item (string)
-        @param recursive flag indicating a recursive update (boolean)
+        @keyparam recursive flag indicating a recursive update (boolean)
         """
         if self.project.vcs is not None:
             self.project.vcs.clearStatusCache()

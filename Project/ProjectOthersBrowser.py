@@ -306,11 +306,11 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         itm = self.model().item(self.currentIndex())
         if isinstance(itm, ProjectBrowserFileItem):
             name = itm.fileName()
+            self.project.repopulateItem(name)
         elif isinstance(itm, ProjectBrowserDirectoryItem):
             name = itm.dirName()
+            self._model.directoryChanged(name)
         else:
             name = ''
         
-        if name:
-            self.project.repopulateItem(name)
         self._resizeColumns(QModelIndex())
