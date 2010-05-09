@@ -711,6 +711,29 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.cancelled = True
             self.__finish()
     
+    def __updateDiffButtons(self):
+        """
+        Private slot to update the enabled status of the diff buttons.
+        """
+        selectionLength = len(self.logTree.selectedItems())
+        if selectionLength <= 1:
+            current = self.logTree.currentItem()
+            parents = current.data(0, self.__parentsRole)
+            self.diffP1Button.setEnabled(len(parents) > 0)
+            self.diffP2Button.setEnabled(len(parents) > 1)
+            
+            self.diffRevisionsButton.setEnabled(False)
+        elif selectionLength == 2:
+            self.diffP1Button.setEnabled(False)
+            self.diffP2Button.setEnabled(False)
+            
+            self.diffRevisionsButton.setEnabled(True)
+        else:
+            self.diffP1Button.setEnabled(False)
+            self.diffP2Button.setEnabled(False)
+            
+            self.diffRevisionsButton.setEnabled(False)
+    
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_logTree_currentItemChanged(self, current, previous):
         """
@@ -732,9 +755,22 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.__resizeColumnsFiles()
             self.__resortFiles()
         
-        parents = current.data(0, self.__parentsRole)
-        self.diffP1Button.setEnabled(len(parents) > 0)
-        self.diffP2Button.setEnabled(len(parents) > 1)
+        self.__updateDiffButtons()
+##        
+##        parents = current.data(0, self.__parentsRole)
+##        self.diffP1Button.setEnabled(len(parents) > 0)
+##        self.diffP2Button.setEnabled(len(parents) > 1)
+    
+    @pyqtSlot()
+    def on_logTree_itemSelectionChanged(self):
+        """
+        Private slot called, when the selection has changed.
+        """
+##        self.diffRevisionsButton.setEnabled(len(self.logTree.selectedItems()) == 2)
+        if len(self.logTree.selectedItems()) == 1:
+            self.logTree.setCurrentItem(self.logTree.selectedItems()[0])
+        
+        self.__updateDiffButtons()
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -779,6 +815,18 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             return
         
         self.__diffRevisions(rev1, rev2)
+    
+    @pyqtSlot()
+    def on_diffRevisionsButton_clicked(self):
+        """
+        Private slot to handle the Compare Revisions button.
+        """
+        items = self.logTree.selectedItems()
+        
+        rev2 = int(items[0].text(self.RevisionColumn).split(":")[0])
+        rev1 = int(items[1].text(self.RevisionColumn).split(":")[0])
+        
+        self.__diffRevisions(min(rev1, rev2), max(rev1, rev2))
     
     @pyqtSlot(QDate)
     def on_fromDate_dateChanged(self, date):

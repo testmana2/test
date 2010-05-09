@@ -111,6 +111,9 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__resortFiles">__resortFiles</a></td>
 <td>Private method to resort the changed files tree.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__updateDiffButtons">__updateDiffButtons</a></td>
+<td>Private slot to update the enabled status of the diff buttons.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.closeEvent">closeEvent</a></td>
 <td>Private slot implementing a close event handler.</td>
 </tr><tr>
@@ -132,6 +135,9 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.on_diffP2Button_clicked">on_diffP2Button_clicked</a></td>
 <td>Private slot to handle the Diff to Parent 2 button.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.on_diffRevisionsButton_clicked">on_diffRevisionsButton_clicked</a></td>
+<td>Private slot to handle the Compare Revisions button.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.on_fieldCombo_activated">on_fieldCombo_activated</a></td>
 <td>Private slot called, when a new filter field is selected.</td>
 </tr><tr>
@@ -143,6 +149,9 @@ QDialog, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_logTree_currentItemChanged">on_logTree_currentItemChanged</a></td>
 <td>Private slot called, when the current item of the log tree changes.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.on_logTree_itemSelectionChanged">on_logTree_itemSelectionChanged</a></td>
+<td>Private slot called, when the selection has changed.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_nextButton_clicked">on_nextButton_clicked</a></td>
 <td>Private slot to handle the Next button.</td>
@@ -420,6 +429,11 @@ exit status of the process (QProcess.ExitStatus)
 <b>__resortFiles</b>(<i></i>)
 <p>
         Private method to resort the changed files tree.
+</p><a NAME="HgLogBrowserDialog.__updateDiffButtons" ID="HgLogBrowserDialog.__updateDiffButtons"></a>
+<h4>HgLogBrowserDialog.__updateDiffButtons</h4>
+<b>__updateDiffButtons</b>(<i></i>)
+<p>
+        Private slot to update the enabled status of the diff buttons.
 </p><a NAME="HgLogBrowserDialog.closeEvent" ID="HgLogBrowserDialog.closeEvent"></a>
 <h4>HgLogBrowserDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
@@ -468,6 +482,11 @@ button that was clicked (QAbstractButton)
 <b>on_diffP2Button_clicked</b>(<i></i>)
 <p>
         Private slot to handle the Diff to Parent 2 button.
+</p><a NAME="HgLogBrowserDialog.on_diffRevisionsButton_clicked" ID="HgLogBrowserDialog.on_diffRevisionsButton_clicked"></a>
+<h4>HgLogBrowserDialog.on_diffRevisionsButton_clicked</h4>
+<b>on_diffRevisionsButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the Compare Revisions button.
 </p><a NAME="HgLogBrowserDialog.on_fieldCombo_activated" ID="HgLogBrowserDialog.on_fieldCombo_activated"></a>
 <h4>HgLogBrowserDialog.on_fieldCombo_activated</h4>
 <b>on_fieldCombo_activated</b>(<i>txt</i>)
@@ -506,7 +525,12 @@ reference to the new current item (QTreeWidgetItem)
 <dd>
 reference to the old current item (QTreeWidgetItem)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.on_nextButton_clicked" ID="HgLogBrowserDialog.on_nextButton_clicked"></a>
+</dl><a NAME="HgLogBrowserDialog.on_logTree_itemSelectionChanged" ID="HgLogBrowserDialog.on_logTree_itemSelectionChanged"></a>
+<h4>HgLogBrowserDialog.on_logTree_itemSelectionChanged</h4>
+<b>on_logTree_itemSelectionChanged</b>(<i></i>)
+<p>
+        Private slot called, when the selection has changed.
+</p><a NAME="HgLogBrowserDialog.on_nextButton_clicked" ID="HgLogBrowserDialog.on_nextButton_clicked"></a>
 <h4>HgLogBrowserDialog.on_nextButton_clicked</h4>
 <b>on_nextButton_clicked</b>(<i></i>)
 <p>

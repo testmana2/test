@@ -16,7 +16,7 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout">
      <item>
@@ -101,6 +101,9 @@
      </property>
      <property name="alternatingRowColors">
       <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
      </property>
      <property name="rootIsDecorated">
       <bool>false</bool>
@@ -202,7 +205,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QPushButton" name="nextButton">
        <property name="toolTip">
@@ -266,6 +269,16 @@
        </property>
        <property name="text">
         <string>Diff to Parent &amp;2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="diffRevisionsButton">
+       <property name="toolTip">
+        <string>Press to compare two revisions</string>
+       </property>
+       <property name="text">
+        <string>&amp;Compare Revisions</string>
        </property>
       </widget>
      </item>
@@ -399,9 +412,10 @@
   <tabstop>stopCheckBox</tabstop>
   <tabstop>diffP1Button</tabstop>
   <tabstop>diffP2Button</tabstop>
+  <tabstop>diffRevisionsButton</tabstop>
   <tabstop>input</tabstop>
-  <tabstop>passwordCheckBox</tabstop>
   <tabstop>sendButton</tabstop>
+  <tabstop>passwordCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
