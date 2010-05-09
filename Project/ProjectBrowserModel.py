@@ -361,7 +361,9 @@ class ProjectBrowserModel(BrowserModel):
         self.__vcsStatus = {}
         
         self.watchedItems = {}
-        self.watcher.removePaths(self.watcher.directories())
+        watchedDirs = self.watcher.directories()
+        if watchedDirs:
+            self.watcher.removePaths(watchedDirs)
         
         self.rootItem.removeChildren()
         self.reset()
