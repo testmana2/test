@@ -1914,7 +1914,7 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation>Navigateur de fichiers</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="224"/>
+        <location filename="UI/Browser.py" line="228"/>
         <source>New toplevel directory...</source>
         <translation>Nouveau répertoire racine...</translation>
     </message>
@@ -1929,22 +1929,22 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation>Ajouter en tant que répertoire racine</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="401"/>
+        <location filename="UI/Browser.py" line="405"/>
         <source>New toplevel directory</source>
         <translation>Nouveau répertoire racine</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="208"/>
+        <location filename="UI/Browser.py" line="212"/>
         <source>Find in this directory</source>
         <translation>Trouver dans ce répertoire</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="229"/>
+        <location filename="UI/Browser.py" line="233"/>
         <source>Configure...</source>
         <translation>Configuration...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="211"/>
+        <location filename="UI/Browser.py" line="215"/>
         <source>Find&amp;&amp;Replace in this directory</source>
         <translation>Rechercher&amp;&amp;Rempacer dans ce répertoire</translation>
     </message>
@@ -1954,8 +1954,13 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="214"/>
+        <location filename="UI/Browser.py" line="218"/>
         <source>Copy Path to Clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="208"/>
+        <source>Refresh directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1967,7 +1972,7 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation>Nom</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="483"/>
+        <location filename="UI/BrowserModel.py" line="588"/>
         <source>Attributes</source>
         <translation>Attributs</translation>
     </message>
@@ -1977,17 +1982,17 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation type="obsolete">Encodage: %1</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="442"/>
+        <location filename="UI/BrowserModel.py" line="547"/>
         <source>Globals</source>
         <translation>Variables globales</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="493"/>
+        <location filename="UI/BrowserModel.py" line="598"/>
         <source>Attributes (global)</source>
         <translation>Attributs globaux</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="437"/>
+        <location filename="UI/BrowserModel.py" line="542"/>
         <source>Coding: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6738,7 +6743,7 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation>Éditer le point d&apos;arrêt...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3899"/>
+        <location filename="QScintilla/Editor.py" line="3901"/>
         <source>Enable breakpoint</source>
         <translation>Activer le point d&apos;arrêt</translation>
     </message>
@@ -6813,102 +6818,102 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation>Fichier Modifié</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3434"/>
+        <location filename="QScintilla/Editor.py" line="3436"/>
         <source>Autocompletion</source>
         <translation>Autocompletion</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3434"/>
+        <location filename="QScintilla/Editor.py" line="3436"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>L&apos;autocompletion n&apos;est pas disponible car aucune source d&apos;autocomplétion n&apos;est définie.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3902"/>
+        <location filename="QScintilla/Editor.py" line="3904"/>
         <source>Disable breakpoint</source>
         <translation>Désactiver le point d&apos;arrêt</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4143"/>
+        <location filename="QScintilla/Editor.py" line="4145"/>
         <source>Code Coverage</source>
         <translation>Code Coverage</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4143"/>
+        <location filename="QScintilla/Editor.py" line="4145"/>
         <source>Please select a coverage file</source>
         <translation>Sélectionner un fichier coverage</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4282"/>
+        <location filename="QScintilla/Editor.py" line="4284"/>
         <source>Profile Data</source>
         <translation>Profiler de données</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4282"/>
+        <location filename="QScintilla/Editor.py" line="4284"/>
         <source>Please select a profile file</source>
         <translation>Sélectionner un fichier profile</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4537"/>
+        <location filename="QScintilla/Editor.py" line="4539"/>
         <source>Macro Name</source>
         <translation>Nom de la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4537"/>
+        <location filename="QScintilla/Editor.py" line="4539"/>
         <source>Select a macro name:</source>
         <translation>Sélectionner un nom de macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4605"/>
+        <location filename="QScintilla/Editor.py" line="4607"/>
         <source>Macro files (*.macro)</source>
         <translation>Fichier Macro (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4565"/>
+        <location filename="QScintilla/Editor.py" line="4567"/>
         <source>Load macro file</source>
         <translation>Charger un fichier macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4586"/>
+        <location filename="QScintilla/Editor.py" line="4588"/>
         <source>Error loading macro</source>
         <translation>Erreur lors du chargement de la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4605"/>
+        <location filename="QScintilla/Editor.py" line="4607"/>
         <source>Save macro file</source>
         <translation>Enregistrer le fichier macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4622"/>
+        <location filename="QScintilla/Editor.py" line="4624"/>
         <source>Save macro</source>
         <translation>Enregistrer la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4640"/>
+        <location filename="QScintilla/Editor.py" line="4642"/>
         <source>Error saving macro</source>
         <translation>Erreur lors de l&apos;enregistrement de la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4651"/>
+        <location filename="QScintilla/Editor.py" line="4653"/>
         <source>Start Macro Recording</source>
         <translation>Démarrer l&apos;enregistrement de la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4678"/>
+        <location filename="QScintilla/Editor.py" line="4680"/>
         <source>Macro Recording</source>
         <translation>Enregistrement de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4678"/>
+        <location filename="QScintilla/Editor.py" line="4680"/>
         <source>Enter name of the macro:</source>
         <translation>Entrer le nom de la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4801"/>
+        <location filename="QScintilla/Editor.py" line="4803"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; Toutes les modifications seront écrasées en réouvrant le fichier.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4805"/>
+        <location filename="QScintilla/Editor.py" line="4807"/>
         <source>File changed</source>
         <translation>Fichier modifié</translation>
     </message>
@@ -6948,7 +6953,7 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">Prière de sélectionner un rapport Cyclops à supprimer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5001"/>
+        <location filename="QScintilla/Editor.py" line="5003"/>
         <source>Drop Error</source>
         <translation>Erreur de suppression</translation>
     </message>
@@ -6958,12 +6963,12 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation>Afficher le message d&apos;erreur de syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4398"/>
+        <location filename="QScintilla/Editor.py" line="4400"/>
         <source>Syntax Error</source>
         <translation>Erreur de syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4398"/>
+        <location filename="QScintilla/Editor.py" line="4400"/>
         <source>No syntax error message available.</source>
         <translation>Aucun message d&apos;erreur de syntaxe..</translation>
     </message>
@@ -6993,17 +6998,17 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation>Ligne non executée précédente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4189"/>
+        <location filename="QScintilla/Editor.py" line="4191"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Afficher les annotations de Code Coverage</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4185"/>
+        <location filename="QScintilla/Editor.py" line="4187"/>
         <source>All lines have been covered.</source>
         <translation>Toutes les lignes ont été executées.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4189"/>
+        <location filename="QScintilla/Editor.py" line="4191"/>
         <source>There is no coverage file available.</source>
         <translation>Impossible de trouver le fichier de coverage.</translation>
     </message>
@@ -7103,42 +7108,42 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">%1 (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5019"/>
+        <location filename="QScintilla/Editor.py" line="5021"/>
         <source>Resources</source>
         <translation>Ressources</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5021"/>
+        <location filename="QScintilla/Editor.py" line="5023"/>
         <source>Add file...</source>
         <translation>Ajouter un fichier...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5023"/>
+        <location filename="QScintilla/Editor.py" line="5025"/>
         <source>Add files...</source>
         <translation>Ajouter des fichiers...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5025"/>
+        <location filename="QScintilla/Editor.py" line="5027"/>
         <source>Add aliased file...</source>
         <translation>Ajouter un fichier alias...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5027"/>
+        <location filename="QScintilla/Editor.py" line="5029"/>
         <source>Add localized resource...</source>
         <translation>Ajouter une ressource localisée...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5048"/>
+        <location filename="QScintilla/Editor.py" line="5050"/>
         <source>Add file resource</source>
         <translation>Ajoute un fichier ressource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5064"/>
+        <location filename="QScintilla/Editor.py" line="5066"/>
         <source>Add file resources</source>
         <translation>Ajoute des fichiers ressources</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5091"/>
+        <location filename="QScintilla/Editor.py" line="5093"/>
         <source>Add aliased file resource</source>
         <translation>Ajoute un alias de fichier ressource</translation>
     </message>
@@ -7148,32 +7153,32 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">Alias pour le fichier &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5152"/>
+        <location filename="QScintilla/Editor.py" line="5154"/>
         <source>Package Diagram</source>
         <translation>Diagramme de package</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5152"/>
+        <location filename="QScintilla/Editor.py" line="5154"/>
         <source>Include class attributes?</source>
         <translation>Inclure les attributs de classes ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5189"/>
+        <location filename="QScintilla/Editor.py" line="5191"/>
         <source>Application Diagram</source>
         <translation>Diagramme de l&apos;application</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5189"/>
+        <location filename="QScintilla/Editor.py" line="5191"/>
         <source>Include module names?</source>
         <translation>Inclure les noms de modules ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5030"/>
+        <location filename="QScintilla/Editor.py" line="5032"/>
         <source>Add resource frame</source>
         <translation>Ajouter un cadre ressource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4651"/>
+        <location filename="QScintilla/Editor.py" line="4653"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>L&apos;enregistrement de macro est déjà actif. En démarrer une nouvelle ?</translation>
     </message>
@@ -7228,12 +7233,12 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation>Aucun format d&apos;exportation indiqué. Abandon...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5173"/>
+        <location filename="QScintilla/Editor.py" line="5175"/>
         <source>Imports Diagram</source>
         <translation>Diagramme des modules</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5173"/>
+        <location filename="QScintilla/Editor.py" line="5175"/>
         <source>Include imports from external modules?</source>
         <translation>Inclure l&apos;importation de modules externes?</translation>
     </message>
@@ -7313,7 +7318,7 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation>Sélectionne l&apos;analyseur Pygments à appliquer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5422"/>
+        <location filename="QScintilla/Editor.py" line="5424"/>
         <source>Check spelling...</source>
         <translation>Correction orthographique...</translation>
     </message>
@@ -7323,12 +7328,12 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation>Correction orthographique de la sélection...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5424"/>
+        <location filename="QScintilla/Editor.py" line="5426"/>
         <source>Add to dictionary</source>
         <translation>Ajouter au dictionnaire</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5426"/>
+        <location filename="QScintilla/Editor.py" line="5428"/>
         <source>Ignore All</source>
         <translation>Tout ignorer</translation>
     </message>
@@ -7373,42 +7378,42 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4579"/>
+        <location filename="QScintilla/Editor.py" line="4581"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4586"/>
+        <location filename="QScintilla/Editor.py" line="4588"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4622"/>
+        <location filename="QScintilla/Editor.py" line="4624"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4640"/>
+        <location filename="QScintilla/Editor.py" line="4642"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4796"/>
+        <location filename="QScintilla/Editor.py" line="4798"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4884"/>
+        <location filename="QScintilla/Editor.py" line="4886"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5001"/>
+        <location filename="QScintilla/Editor.py" line="5003"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5091"/>
+        <location filename="QScintilla/Editor.py" line="5093"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7433,12 +7438,12 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4518"/>
+        <location filename="QScintilla/Editor.py" line="4520"/>
         <source>py3flakes Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4518"/>
+        <location filename="QScintilla/Editor.py" line="4520"/>
         <source>No py3flakes warning message available.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9230,123 +9235,123 @@ avec l&apos;autocomplétion</translation>
 <context>
     <name>EditorStylesPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="16"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure editor styles&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configuration des styles&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="36"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
         <source>Fonts</source>
         <translation>Polices</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="42"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="43"/>
         <source>Select, whether the monospaced font should be used as default</source>
         <translation>Cocher pour utiliser une police monospacée par défaut</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="45"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="46"/>
         <source>Use monospaced as default</source>
         <translation>Police monospacée par défaut</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="55"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
         <source>Default Text</source>
         <translation>Texte par défaut</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="68"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="69"/>
         <source>Press to select the default font for the editor&apos;s text</source>
         <translation>Cliquer pour sélectionner la police par défaut de l&apos;éditeur de texte</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="71"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="72"/>
         <source>Default Text Font</source>
         <translation>Police par défaut</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="78"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="79"/>
         <source>Press to select the font to be used as the monospaced font</source>
         <translation>Cliquer pour choisir une police monospacée 
 (les caractères auront tous la même largeur)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="81"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
         <source>Monospaced Font</source>
         <translation>Police monospacée</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="336"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="337"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>Cliquer pour choisir une police pour les numéros de ligne</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="339"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="340"/>
         <source>Line Numbers Font</source>
         <translation>Police des numéros de ligne</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="91"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="92"/>
         <source>Monospaced Text</source>
         <translation>Texte monospacé</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="355"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="356"/>
         <source>2345</source>
         <translation>2345</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="107"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="108"/>
         <source>Margins</source>
         <translation>Marges</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="115"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="116"/>
         <source>Select whether line numbers margin should be shown.</source>
         <translation>Indique si la colonne donnant les numéros de ligne doit être affichée.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="118"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="119"/>
         <source>Show Line Numbers Margin</source>
         <translation>Afficher les numéros de ligne</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="125"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="126"/>
         <source>Select whether the fold margin should be shown.</source>
         <translation>Sélectionne si la marge de pliage de code doit être affichée.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="128"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="129"/>
         <source>Show Fold Margin</source>
         <translation>Afficher la marge de contraction de code</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="149"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="150"/>
         <source>Linenumbers width:</source>
         <translation>Largeur de marge pour les numéros de ligne:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="159"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="160"/>
         <source>Move to set the width of the linenumbers margin.</source>
         <translation>Déplacer le curseur pour changer la largeur de marge des numéros de ligne.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="181"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="182"/>
         <source>Displays the selected width of the linenumbers margin.</source>
         <translation>Affiche la largeur sélectionnée pour la colonne donnant les numéros de ligne.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="201"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="202"/>
         <source>Folding style:</source>
         <translation>Type de pliage de code:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="214"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="215"/>
         <source>Select the folding style to be used in the folding margin</source>
         <translation>Sélectionner un style pour le pliage de code</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="217"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="218"/>
         <source>&lt;b&gt;Folding style&lt;/b&gt;
 &lt;p&gt;Select the desired folding style to be used in the folding margin.&lt;/p&gt;
 &lt;p&gt;The available styles are:
@@ -9371,354 +9376,374 @@ avec l&apos;autocomplétion</translation>
 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="231"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="232"/>
         <source>Plain</source>
         <translation>Brut</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="236"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="237"/>
         <source>Circled</source>
         <translation>Cerclé</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="241"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="242"/>
         <source>Boxed</source>
         <translation>Carré</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="246"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
         <source>Circled Tree</source>
         <translation>Cerclé, Arborecent</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="251"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="252"/>
         <source>Boxed Tree</source>
         <translation>Carré, Arborescent</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="386"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="387"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="394"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="395"/>
         <source>Select to use custom selection colours</source>
         <translation>Cocher pour utiliser des couleurs de sélection personalisées</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="397"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="398"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Utiliser des couleurs personalisées pour la sélection&lt;/b&gt;&lt;p&gt;Cocher cette case pour utiliser des couleurs personalisées pour la sélection de texte dans l&apos;éditeur et dans la fenêtre shell. Les couleurs de police et d&apos;arrière plan pour la sélection sont définies dans la section Couleur.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="400"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="401"/>
         <source>Use custom selection colours</source>
         <translation>Utiliser des couleurs personlisées pour la sélection de texte</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="407"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>Cocher si le texte sélectionné doit etre colorié par l&apos;analyseur syntaxique.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="410"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
         <source>Colourize selected text</source>
         <translation>Colorier le texte sélectionné</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="417"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
         <source>Select to extend selection to end of line</source>
         <translation>Cocher pour étendre la sélection à la fin de la ligne</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="420"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
         <source>Extend selection to end of line</source>
         <translation>Extension de la sélection à la fin de la ligne</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="431"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="432"/>
         <source>Selection foreground:</source>
         <translation>Couleur des caractères:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="444"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="445"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>Couleur des caractères pour la sélection.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="454"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
         <source>Selection background:</source>
         <translation>Couleur de fond:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="467"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="468"/>
         <source>Select the background colour for the selection.</source>
         <translation>Sélectionne la couleur de fond pour les caractères sélectionnés.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="482"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="483"/>
         <source>Caret</source>
         <translation>Curseur</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="488"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="489"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Cocher, si la ligne du curseur doit être colorée de façon spécifique</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="491"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="492"/>
         <source>Caretline visible</source>
         <translation>Ligne du curseur visible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="500"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="501"/>
         <source>Caret width:</source>
         <translation>Largeur du curseur:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="507"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="508"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Sélectionner une largeur de curseur (1, 2 or 3 pixels)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="540"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="541"/>
         <source>Caret foreground:</source>
         <translation>Curseur:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="553"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="554"/>
         <source>Select the colour for the caret.</source>
         <translation>Couleur pour le curseur.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="563"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
         <source>Caretline background:</source>
         <translation>Ligne  du curseur:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="576"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="577"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Sélection de la couleur de fond pour la ligne contenant le curseur.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="597"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="598"/>
         <source>Current line marker:</source>
         <translation>Ligne courante (debug):</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="610"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="611"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Sélectionne la couleur de la ligne courante quand elle est marquée automatiquement.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="620"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
         <source>Error line marker:</source>
         <translation>Ligne d&apos;erreur:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="633"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="634"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Sélectionne la couleur pour les lignes ayant une erreur.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="646"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="647"/>
         <source>Braces</source>
         <translation>Parenthèses</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="652"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="653"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Indique si bonnes et mauvaises parenthèses doivent être colorées.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="655"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="656"/>
         <source>Highlight braces</source>
         <translation>Coloration des parenthèses</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="662"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
         <source>Matched braces:</source>
         <translation>Fermeture valide des parenthèses:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="675"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="676"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Sélectionne la couleur des parenthèses correctement fermées.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="685"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
         <source>Matched braces background:</source>
         <translation>Couleur de fond:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="698"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="699"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Sélectionner une couleur de fond pour surligner le texte des parenthèses correctement refermées.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="714"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="715"/>
         <source>Unmatched brace:</source>
         <translation>Parenthèse non refermée:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="721"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="722"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Sélectionne la couleur des parenthèses mal fermées.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="737"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="738"/>
         <source>Unmatched brace background:</source>
         <translation>Couleur de fond:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="744"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="745"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Sélectionner une couleur de fond pour surligner le texte des parenthèses non refermées.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="757"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="758"/>
         <source>End of Line</source>
         <translation>Fins de lignes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="765"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="766"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Indique si les caractères &quot;fin de ligne&quot; (EOL) doivent être affichés</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="768"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="769"/>
         <source>Show End of Line</source>
         <translation>Afficher les caractères de fin de ligne (EOL)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="775"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
         <source>Select, whether long lines should be wrapped</source>
         <translation>Sélectionner pour passer automatiquement à la ligne lors de l&apos;affichage des longues lignes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="778"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
         <source>Wrap long lines</source>
         <translation>Retour à la ligne automatique</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="787"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="788"/>
         <source>Edge Mode</source>
         <translation>Bordure de fin de ligne</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="831"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Sélectionner la couleur de la bordure.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="841"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
         <source>Background colour:</source>
         <translation>Couleur de fond:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="854"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="855"/>
         <source>Move to set the edge column.</source>
         <translation>Déplacer pour choisir la colonne de bordure.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="882"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="883"/>
         <source>Displays the selected tab width.</source>
         <translation>Affiche la largeur des tabulations.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="898"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="899"/>
         <source>Column number:</source>
         <translation>Numéro de colonne:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="905"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="906"/>
         <source>Mode:</source>
         <translation>Mode:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="919"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
         <source>Disabled</source>
         <translation>Désactivé</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="924"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="925"/>
         <source>Draw Line</source>
         <translation>Ligne verticale</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="929"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
         <source>Change Background Colour</source>
         <translation>Changement de la couleur de fond</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="943"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1001"/>
         <source>Various</source>
         <translation>Divers</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="949"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1007"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Sélectionne si les espaces doivent être affichés explicitement</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="952"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1010"/>
         <source>Show Whitespace</source>
         <translation>Affiche explicitement les espaces</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="959"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Cocher pour utiliser un menu contextuel réduit</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="962"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
         <source>Show minimal context menu</source>
         <translation>Afficher un menu contextuel minimal</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="263"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="264"/>
         <source>Margins foreground:</source>
         <translation>Couleur des numéros de ligne</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="276"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="277"/>
         <source>Select the foreground colour for the margins</source>
         <translation>Sélection de la couleur des numéros de ligne dans la marge</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="286"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
         <source>Margins background:</source>
         <translation>Couleur de fond des marges :</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="299"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="300"/>
         <source>Select the background colour for the margins</source>
         <translation>Sélection de la couleur de fond pour les marges</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="309"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
         <source>Foldmargin background:</source>
         <translation>Couleur de la marge de pliage de code : </translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="322"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="323"/>
         <source>Select the background colour for the foldmargin</source>
         <translation>Sélectionne la couleur de la marge de pliage de code</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="135"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="136"/>
         <source>Select to show unified margins (like eric4 &lt; 4.3.0)</source>
         <translation>Cocher pour afficher des marges unfifiées (comme dans eric4 &lt; 4.3.0)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="138"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="139"/>
         <source>Show unified margins</source>
         <translation>Afficher des marges unifiées</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="591"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
         <source>Debugging Line Markers</source>
         <translation>Marquage des lignes déboguées</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="944"/>
+        <source>Zoom</source>
+        <translation type="unfinished">Zoom</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="950"/>
+        <source>Initial zoom factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
+        <source>Move to set the initial zoom factor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="982"/>
+        <source>Displays the selected initial zoom factor</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15291,12 +15316,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="136"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Erreur du processus</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="136"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17402,27 +17427,27 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="374"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="375"/>
         <source>Commit</source>
         <translation type="unfinished">Commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="435"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="436"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation type="unfinished">Il n&apos;y a pas de modification non commitée disponible/sélectionnée.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="400"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="401"/>
         <source>Add</source>
         <translation type="unfinished">Ajouter</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="400"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="401"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation type="unfinished">Aucune entrée &quot;non-versionnée&quot; disponible/sélectionnée.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="435"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="436"/>
         <source>Revert</source>
         <translation type="unfinished">Recouvrir</translation>
     </message>
@@ -17432,12 +17457,12 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="420"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="421"/>
         <source>Remove</source>
         <translation type="unfinished">Supprimer</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="420"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="421"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17561,12 +17586,12 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="216"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="217"/>
         <source>active</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="221"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="222"/>
         <source>yes</source>
         <translation type="unfinished">oui</translation>
     </message>
@@ -23791,12 +23816,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="829"/>
+        <location filename="Preferences/__init__.py" line="831"/>
         <source>Export Preferences</source>
         <translation>Export des préférences</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="848"/>
+        <location filename="Preferences/__init__.py" line="850"/>
         <source>Import Preferences</source>
         <translation>Import des préférences</translation>
     </message>

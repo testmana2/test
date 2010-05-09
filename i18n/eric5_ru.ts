@@ -1769,7 +1769,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Просмотрщик файлов</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="224"/>
+        <location filename="UI/Browser.py" line="228"/>
         <source>New toplevel directory...</source>
         <translation>Новый каталог верхнего уровня...</translation>
     </message>
@@ -1784,22 +1784,22 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Добавить как каталог верхнего уровня</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="401"/>
+        <location filename="UI/Browser.py" line="405"/>
         <source>New toplevel directory</source>
         <translation>Новый каталог верхнего уровня</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="208"/>
+        <location filename="UI/Browser.py" line="212"/>
         <source>Find in this directory</source>
         <translation>Найти в этом каталоге</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="211"/>
+        <location filename="UI/Browser.py" line="215"/>
         <source>Find&amp;&amp;Replace in this directory</source>
         <translation>Найти и изменить в этом каталоге</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="229"/>
+        <location filename="UI/Browser.py" line="233"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
@@ -1809,9 +1809,14 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Открыть в редакторе иконок</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="214"/>
+        <location filename="UI/Browser.py" line="218"/>
         <source>Copy Path to Clipboard</source>
         <translation>Сопировать путь в буфер обмена</translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="208"/>
+        <source>Refresh directory</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1822,22 +1827,22 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="483"/>
+        <location filename="UI/BrowserModel.py" line="588"/>
         <source>Attributes</source>
         <translation>Атрибуты</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="437"/>
+        <location filename="UI/BrowserModel.py" line="542"/>
         <source>Coding: {0}</source>
         <translation type="unfinished">Кодирование: {0}</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="442"/>
+        <location filename="UI/BrowserModel.py" line="547"/>
         <source>Globals</source>
         <translation>Глобальные переменные</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="493"/>
+        <location filename="UI/BrowserModel.py" line="598"/>
         <source>Attributes (global)</source>
         <translation>Атрибуты (глобальные)</translation>
     </message>
@@ -6451,12 +6456,12 @@ whole selection.&lt;/li&gt;
         <translation>Файл изменён</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4801"/>
+        <location filename="QScintilla/Editor.py" line="4803"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Предупреждение:&lt;/b&gt; При переоткрытии все изменения будут потеряны.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4805"/>
+        <location filename="QScintilla/Editor.py" line="4807"/>
         <source>File changed</source>
         <translation>Файл изменён</translation>
     </message>
@@ -6501,7 +6506,7 @@ whole selection.&lt;/li&gt;
         <translation>Редактировать точку останова...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3899"/>
+        <location filename="QScintilla/Editor.py" line="3901"/>
         <source>Enable breakpoint</source>
         <translation>Разрешить точку останова</translation>
     </message>
@@ -6531,82 +6536,82 @@ whole selection.&lt;/li&gt;
         <translation>Левая клавиша мыши ставит точки останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3902"/>
+        <location filename="QScintilla/Editor.py" line="3904"/>
         <source>Disable breakpoint</source>
         <translation>Запретить точку останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4143"/>
+        <location filename="QScintilla/Editor.py" line="4145"/>
         <source>Code Coverage</source>
         <translation>Охват кода</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4143"/>
+        <location filename="QScintilla/Editor.py" line="4145"/>
         <source>Please select a coverage file</source>
         <translation>Пожалуйста, выберите файл для информации охвата</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4537"/>
+        <location filename="QScintilla/Editor.py" line="4539"/>
         <source>Macro Name</source>
         <translation>Имя макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4537"/>
+        <location filename="QScintilla/Editor.py" line="4539"/>
         <source>Select a macro name:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4605"/>
+        <location filename="QScintilla/Editor.py" line="4607"/>
         <source>Macro files (*.macro)</source>
         <translation>Макросы (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4565"/>
+        <location filename="QScintilla/Editor.py" line="4567"/>
         <source>Load macro file</source>
         <translation>Загрузить макрос</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4586"/>
+        <location filename="QScintilla/Editor.py" line="4588"/>
         <source>Error loading macro</source>
         <translation>Ошибка при загрузке макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4605"/>
+        <location filename="QScintilla/Editor.py" line="4607"/>
         <source>Save macro file</source>
         <translation>Сохранить файл с макросами</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4622"/>
+        <location filename="QScintilla/Editor.py" line="4624"/>
         <source>Save macro</source>
         <translation>Сохранить макрос</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4640"/>
+        <location filename="QScintilla/Editor.py" line="4642"/>
         <source>Error saving macro</source>
         <translation>Ошибка при сохранении макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4651"/>
+        <location filename="QScintilla/Editor.py" line="4653"/>
         <source>Start Macro Recording</source>
         <translation>Начало записи макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4678"/>
+        <location filename="QScintilla/Editor.py" line="4680"/>
         <source>Macro Recording</source>
         <translation>Запись макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4678"/>
+        <location filename="QScintilla/Editor.py" line="4680"/>
         <source>Enter name of the macro:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4282"/>
+        <location filename="QScintilla/Editor.py" line="4284"/>
         <source>Profile Data</source>
         <translation>Данные профайлера</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4282"/>
+        <location filename="QScintilla/Editor.py" line="4284"/>
         <source>Please select a profile file</source>
         <translation>Пожалуйста, выберите файл профиля</translation>
     </message>
@@ -6616,12 +6621,12 @@ whole selection.&lt;/li&gt;
         <translation>Автозавершение разрешено</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3434"/>
+        <location filename="QScintilla/Editor.py" line="3436"/>
         <source>Autocompletion</source>
         <translation>Автозавершение</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3434"/>
+        <location filename="QScintilla/Editor.py" line="3436"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Автозавершение недоступно, так как не задан источник автозавершения.</translation>
     </message>
@@ -6656,7 +6661,7 @@ whole selection.&lt;/li&gt;
         <translation>Автосохранение разрешено</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5001"/>
+        <location filename="QScintilla/Editor.py" line="5003"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
@@ -6666,12 +6671,12 @@ whole selection.&lt;/li&gt;
         <translation>Показать сообщение о синтаксической ошибке</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4398"/>
+        <location filename="QScintilla/Editor.py" line="4400"/>
         <source>Syntax Error</source>
         <translation>Синтаксическая ошибка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4398"/>
+        <location filename="QScintilla/Editor.py" line="4400"/>
         <source>No syntax error message available.</source>
         <translation>Нет сообщения о синтаксической ошибке.</translation>
     </message>
@@ -6701,17 +6706,17 @@ whole selection.&lt;/li&gt;
         <translation>Предыдущая невыполняемая строка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4189"/>
+        <location filename="QScintilla/Editor.py" line="4191"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Показать аннотации по охвату</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4185"/>
+        <location filename="QScintilla/Editor.py" line="4187"/>
         <source>All lines have been covered.</source>
         <translation>Все строки выполняются.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4189"/>
+        <location filename="QScintilla/Editor.py" line="4191"/>
         <source>There is no coverage file available.</source>
         <translation>Нет файла с информацией по охвату.</translation>
     </message>
@@ -6736,27 +6741,27 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished">&lt;p&gt;В файле &lt;b&gt;{0}&lt;/b&gt; есть несохранённые изменения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4579"/>
+        <location filename="QScintilla/Editor.py" line="4581"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Невозможно прочитать файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4586"/>
+        <location filename="QScintilla/Editor.py" line="4588"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Файл с макросами &lt;b&gt;{0}&lt;/b&gt; повреждён&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4622"/>
+        <location filename="QScintilla/Editor.py" line="4624"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Файл с макросами &lt;b&gt;{0}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4640"/>
+        <location filename="QScintilla/Editor.py" line="4642"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Невозможно сохранить файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5001"/>
+        <location filename="QScintilla/Editor.py" line="5003"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
@@ -6801,82 +6806,82 @@ whole selection.&lt;/li&gt;
         <translation>Нет языка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4884"/>
+        <location filename="QScintilla/Editor.py" line="4886"/>
         <source>{0} (ro)</source>
         <translation type="unfinished">{0} (только чтение)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5019"/>
+        <location filename="QScintilla/Editor.py" line="5021"/>
         <source>Resources</source>
         <translation>Ресурсы</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5021"/>
+        <location filename="QScintilla/Editor.py" line="5023"/>
         <source>Add file...</source>
         <translation>Добавить файл...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5023"/>
+        <location filename="QScintilla/Editor.py" line="5025"/>
         <source>Add files...</source>
         <translation>Добавить файлы...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5025"/>
+        <location filename="QScintilla/Editor.py" line="5027"/>
         <source>Add aliased file...</source>
         <translation>Добавить файл под другим именем...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5027"/>
+        <location filename="QScintilla/Editor.py" line="5029"/>
         <source>Add localized resource...</source>
         <translation>Добавить локализованный ресурс...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5048"/>
+        <location filename="QScintilla/Editor.py" line="5050"/>
         <source>Add file resource</source>
         <translation>Добавить файл ресурсов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5064"/>
+        <location filename="QScintilla/Editor.py" line="5066"/>
         <source>Add file resources</source>
         <translation>Добавить файлы ресурсов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5091"/>
+        <location filename="QScintilla/Editor.py" line="5093"/>
         <source>Add aliased file resource</source>
         <translation>Добавить файл ресурсов под другим именем</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5091"/>
+        <location filename="QScintilla/Editor.py" line="5093"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation type="unfinished">Другое имя для файла &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5152"/>
+        <location filename="QScintilla/Editor.py" line="5154"/>
         <source>Package Diagram</source>
         <translation>Диаграмма пакетов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5152"/>
+        <location filename="QScintilla/Editor.py" line="5154"/>
         <source>Include class attributes?</source>
         <translation>Включать атрибуты класса?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5189"/>
+        <location filename="QScintilla/Editor.py" line="5191"/>
         <source>Application Diagram</source>
         <translation>Диаграмма приложения</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5189"/>
+        <location filename="QScintilla/Editor.py" line="5191"/>
         <source>Include module names?</source>
         <translation>Включать имена модулей?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5030"/>
+        <location filename="QScintilla/Editor.py" line="5032"/>
         <source>Add resource frame</source>
         <translation>Добавить фрагмент ресурсов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4651"/>
+        <location filename="QScintilla/Editor.py" line="4653"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Запись макроса уже идёт. Начать новую запись?</translation>
     </message>
@@ -6931,12 +6936,12 @@ whole selection.&lt;/li&gt;
         <translation>Не задан формат экспорта. Отмена...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5173"/>
+        <location filename="QScintilla/Editor.py" line="5175"/>
         <source>Imports Diagram</source>
         <translation>Диаграмма импортов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5173"/>
+        <location filename="QScintilla/Editor.py" line="5175"/>
         <source>Include imports from external modules?</source>
         <translation>Включать импорты из внешних модулей?</translation>
     </message>
@@ -7016,7 +7021,7 @@ whole selection.&lt;/li&gt;
         <translation>Задайте язык лексического анализатора.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5422"/>
+        <location filename="QScintilla/Editor.py" line="5424"/>
         <source>Check spelling...</source>
         <translation>Проверка орфографии...</translation>
     </message>
@@ -7026,12 +7031,12 @@ whole selection.&lt;/li&gt;
         <translation>Проверка орфографии подсвеченного участка...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5424"/>
+        <location filename="QScintilla/Editor.py" line="5426"/>
         <source>Add to dictionary</source>
         <translation>Добавить в слварь</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5426"/>
+        <location filename="QScintilla/Editor.py" line="5428"/>
         <source>Ignore All</source>
         <translation>Игнорировать всё</translation>
     </message>
@@ -7056,7 +7061,7 @@ whole selection.&lt;/li&gt;
         <translation>&lt;p&gt;Невозможно сохранить файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4796"/>
+        <location filename="QScintilla/Editor.py" line="4798"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в eric5. Обновить?&lt;/p&gt;</translation>
     </message>
@@ -7081,12 +7086,12 @@ whole selection.&lt;/li&gt;
         <translation>Очистить предупреждения</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4518"/>
+        <location filename="QScintilla/Editor.py" line="4520"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes предупреждения</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4518"/>
+        <location filename="QScintilla/Editor.py" line="4520"/>
         <source>No py3flakes warning message available.</source>
         <translation>Нет py3flakes предупреждений</translation>
     </message>
@@ -8854,263 +8859,263 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EditorStylesPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="201"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="202"/>
         <source>Folding style:</source>
         <translation>Стиль сворачивания:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="214"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="215"/>
         <source>Select the folding style to be used in the folding margin</source>
         <translation>Какой стиль сворачивания будет использован</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="231"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="232"/>
         <source>Plain</source>
         <translation>Обычный</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="236"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="237"/>
         <source>Circled</source>
         <translation>Окружности</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="241"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="242"/>
         <source>Boxed</source>
         <translation>Квадраты</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="246"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
         <source>Circled Tree</source>
         <translation>Дерево с окружностями</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="251"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="252"/>
         <source>Boxed Tree</source>
         <translation>Дерево с квадратами</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="42"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="43"/>
         <source>Select, whether the monospaced font should be used as default</source>
         <translation>Следует ли использовать по умолчанию моноширинный шрифт</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="45"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="46"/>
         <source>Use monospaced as default</source>
         <translation>Использовать моноширинный шрифт по умолчанию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="78"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="79"/>
         <source>Press to select the font to be used as the monospaced font</source>
         <translation>Задайте шрифт, который будет использован как моноширинный</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="81"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
         <source>Monospaced Font</source>
         <translation>Моноширинный шрифт</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="336"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="337"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>Нажмите для выбора шрифта для номеров строк в редакторе</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="339"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="340"/>
         <source>Line Numbers Font</source>
         <translation>Шрифт для номеров строк</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="488"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="489"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Будет ли подсвечиваться текущая строка</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="491"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="492"/>
         <source>Caretline visible</source>
         <translation>Подсветка текущей строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="407"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>Будет ли лексический анализатор подсвечивать выделенный текст другим цветом.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="410"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
         <source>Colourize selected text</source>
         <translation>Изменять цвет выделенного текста</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="500"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="501"/>
         <source>Caret width:</source>
         <translation>Ширина каретки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="507"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="508"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Задайте ширину каретки (1, 2 или 3 пикселя)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="787"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="788"/>
         <source>Edge Mode</source>
         <translation>Правая граница</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="831"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Задайте цвет для отображения правой границы.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="841"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
         <source>Background colour:</source>
         <translation>Цвет фона:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="854"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="855"/>
         <source>Move to set the edge column.</source>
         <translation>Задайте положение правой границы.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="882"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="883"/>
         <source>Displays the selected tab width.</source>
         <translation>Выбранная ширина табуляции.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="898"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="899"/>
         <source>Column number:</source>
         <translation>Колонка:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="905"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="906"/>
         <source>Mode:</source>
         <translation>Режим:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="919"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
         <source>Disabled</source>
         <translation>Отключено</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="924"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="925"/>
         <source>Draw Line</source>
         <translation>Рисовать линию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="929"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
         <source>Change Background Colour</source>
         <translation>Изменить цвет фона</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="16"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure editor styles&lt;/b&gt;</source>
         <translation>&lt;b&gt;Настроить стили редактора&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="355"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="356"/>
         <source>2345</source>
         <translation>2345</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="91"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="92"/>
         <source>Monospaced Text</source>
         <translation>Моноширинный текст</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="71"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="72"/>
         <source>Default Text Font</source>
         <translation>Шрифт по-умолчанию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="55"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
         <source>Default Text</source>
         <translation>Обычный текст</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="68"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="69"/>
         <source>Press to select the default font for the editor&apos;s text</source>
         <translation>Задать шрифт по-умолчанию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="394"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="395"/>
         <source>Select to use custom selection colours</source>
         <translation>Использовать собственные цвета выделения</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="397"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="398"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Собственные цвета выделения&lt;/b&gt;
 &lt;p&gt;Выберите эту пометку, чтобы использовать собственные цвета для выделения в окнах редактора и оболочки. Цвета выделения устанавливаются на странице настройки цветов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="400"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="401"/>
         <source>Use custom selection colours</source>
         <translation>Использовать собственные цвета для выделения</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="36"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
         <source>Fonts</source>
         <translation>Шрифты</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="386"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="387"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="417"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
         <source>Select to extend selection to end of line</source>
         <translation>Раздвинуть выделение до конца строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="420"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
         <source>Extend selection to end of line</source>
         <translation>Раздвинуть выделение до конца строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="482"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="483"/>
         <source>Caret</source>
         <translation>Каретка</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="107"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="108"/>
         <source>Margins</source>
         <translation>Границы</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="115"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="116"/>
         <source>Select whether line numbers margin should be shown.</source>
         <translation>Будут ли показываться номера строк.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="118"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="119"/>
         <source>Show Line Numbers Margin</source>
         <translation>Показывать номера строк</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="125"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="126"/>
         <source>Select whether the fold margin should be shown.</source>
         <translation>Надо ли показывать полосу свёртки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="128"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="129"/>
         <source>Show Fold Margin</source>
         <translation>Показать полосу свёртки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="149"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="150"/>
         <source>Linenumbers width:</source>
         <translation>Ширина номера строки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="159"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="160"/>
         <source>Move to set the width of the linenumbers margin.</source>
         <translation>Задайте ширину поля для номеров строк.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="181"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="182"/>
         <source>Displays the selected width of the linenumbers margin.</source>
         <translation>Выбранная ширина края номеров линий.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="217"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="218"/>
         <source>&lt;b&gt;Folding style&lt;/b&gt;
 &lt;p&gt;Select the desired folding style to be used in the folding margin.&lt;/p&gt;
 &lt;p&gt;The available styles are:
@@ -9135,214 +9140,234 @@ whole selection.&lt;/li&gt;
 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="431"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="432"/>
         <source>Selection foreground:</source>
         <translation>Цвет выделения:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="444"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="445"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>Задайте цвет выделения.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="454"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
         <source>Selection background:</source>
         <translation>Фон выделения:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="467"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="468"/>
         <source>Select the background colour for the selection.</source>
         <translation>Задайте фон для выделенного текста.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="540"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="541"/>
         <source>Caret foreground:</source>
         <translation>Цвет каретки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="553"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="554"/>
         <source>Select the colour for the caret.</source>
         <translation>Задайте цвет курсора.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="563"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
         <source>Caretline background:</source>
         <translation>Фон каретки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="576"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="577"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Задайте фон для текущей строки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="597"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="598"/>
         <source>Current line marker:</source>
         <translation>Отметка текущей строки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="610"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="611"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Выберите цвет для пометки текущей строки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="620"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
         <source>Error line marker:</source>
         <translation>Отметка ошибочной строки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="633"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="634"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Выберите цвет для пометки ошибочной строки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="646"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="647"/>
         <source>Braces</source>
         <translation>Фигурные скобки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="652"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="653"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Будут ли подсвечиваться парные и неверно расставленные скобки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="655"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="656"/>
         <source>Highlight braces</source>
         <translation>Подсвечивать скобки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="662"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
         <source>Matched braces:</source>
         <translation>Парные скобки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="675"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="676"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Выберите цвет для выделения парных скобок.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="685"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
         <source>Matched braces background:</source>
         <translation>Цвет фона для закрытой скобки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="698"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="699"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Задайте цвет фона для подсветки закрытых скобок.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="714"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="715"/>
         <source>Unmatched brace:</source>
         <translation>Непарная скобка:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="721"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="722"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Выберите цвет для выделения непарных скобок.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="737"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="738"/>
         <source>Unmatched brace background:</source>
         <translation>Цвет фона для незакрытой скобки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="744"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="745"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Задайте цвет фона для подсветки незакрытых скобок.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="757"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="758"/>
         <source>End of Line</source>
         <translation>Конц строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="765"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="766"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Надо ли показывать концы строк</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="768"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="769"/>
         <source>Show End of Line</source>
         <translation>Показать концы строк</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="775"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
         <source>Select, whether long lines should be wrapped</source>
         <translation>Следует ли переносить длинные строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="778"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
         <source>Wrap long lines</source>
         <translation>Переносить длинные строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="943"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1001"/>
         <source>Various</source>
         <translation>Разное</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="949"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1007"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Будут ли показываться провельные символы</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="952"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1010"/>
         <source>Show Whitespace</source>
         <translation>Показывать пробелы</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="959"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Показать минималистичное контекстное меню</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="962"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
         <source>Show minimal context menu</source>
         <translation>Показать минималистичное контекстное меню</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="263"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="264"/>
         <source>Margins foreground:</source>
         <translation>Цвет границ:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="276"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="277"/>
         <source>Select the foreground colour for the margins</source>
         <translation>Цвет границ</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="286"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
         <source>Margins background:</source>
         <translation>Фоновый цвет границ:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="299"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="300"/>
         <source>Select the background colour for the margins</source>
         <translation>Фоновый цвет границ</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="309"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
         <source>Foldmargin background:</source>
         <translation>Фоновый цвет границ свертки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="322"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="323"/>
         <source>Select the background colour for the foldmargin</source>
         <translation>Фоновый цвет границ свертки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="135"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="136"/>
         <source>Select to show unified margins (like eric4 &lt; 4.3.0)</source>
         <translation>Показывать объединенные границы (как в eric4 &lt; 4.3.0)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="138"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="139"/>
         <source>Show unified margins</source>
         <translation>Показывать объединенные границы</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="591"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
         <source>Debugging Line Markers</source>
         <translation>Отметка текущей строки отладчика</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="944"/>
+        <source>Zoom</source>
+        <translation type="unfinished">Масштаб</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="950"/>
+        <source>Initial zoom factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
+        <source>Move to set the initial zoom factor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="982"/>
+        <source>Displays the selected initial zoom factor</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14538,12 +14563,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="136"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="136"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16686,27 +16711,27 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="374"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="375"/>
         <source>Commit</source>
         <translation type="unfinished">Зафиксировать</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="435"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="436"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation type="unfinished">Нет доступных/выбранных неотправленных изменений.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="400"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="401"/>
         <source>Add</source>
         <translation type="unfinished">Добавить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="400"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="401"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation type="unfinished">Нет/не выбраны неверсионные элементы.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="435"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="436"/>
         <source>Revert</source>
         <translation type="unfinished">Откатить</translation>
     </message>
@@ -16716,12 +16741,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="420"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="421"/>
         <source>Remove</source>
         <translation type="unfinished">Удалить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="420"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="421"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16845,12 +16870,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="216"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="217"/>
         <source>active</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="221"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="222"/>
         <source>yes</source>
         <translation type="unfinished">да</translation>
     </message>
@@ -22858,12 +22883,12 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="829"/>
+        <location filename="Preferences/__init__.py" line="831"/>
         <source>Export Preferences</source>
         <translation>Экспорт предпочтений</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="848"/>
+        <location filename="Preferences/__init__.py" line="850"/>
         <source>Import Preferences</source>
         <translation>Импорт предпочтений</translation>
     </message>

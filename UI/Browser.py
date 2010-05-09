@@ -206,6 +206,10 @@ class Browser(QTreeView):
             self.__removeToplevel)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(QApplication.translate('Browser', 
+            'Refresh directory'),
+            self.__refreshDirectory)
+        self.dirMenu.addSeparator()
+        self.dirMenu.addAction(QApplication.translate('Browser', 
             'Find in this directory'),
             self.__findInDirectory)
         self.dirMenu.addAction(QApplication.translate('Browser', 
@@ -422,6 +426,14 @@ class Browser(QTreeView):
         index = self.currentIndex()
         dname = self.model().item(index).dirName()
         self.__model.addTopLevelDir(dname)
+        
+    def __refreshDirectory(self):
+        """
+        Private slot to refresh a directory entry.
+        """
+        index = self.currentIndex()
+        refreshDir = self.model().item(index).dirName()
+        self.__model.directoryChanged(refreshDir)
         
     def __findInDirectory(self):
         """

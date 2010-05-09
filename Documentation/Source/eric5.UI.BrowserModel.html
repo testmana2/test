@@ -1214,9 +1214,6 @@ QAbstractItemModel
 <td><a href="#BrowserModel.__init__">BrowserModel</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#BrowserModel.__directoryChanged">__directoryChanged</a></td>
-<td>Private slot to handle the directoryChanged signal of the watcher.</td>
-</tr><tr>
 <td><a href="#BrowserModel.__populateModel">__populateModel</a></td>
 <td>Private method to populate the browser model.</td>
 </tr><tr>
@@ -1243,6 +1240,9 @@ QAbstractItemModel
 </tr><tr>
 <td><a href="#BrowserModel.data">data</a></td>
 <td>Public method to get data of an item.</td>
+</tr><tr>
+<td><a href="#BrowserModel.directoryChanged">directoryChanged</a></td>
+<td>Public slot to handle the directoryChanged signal of the watcher.</td>
 </tr><tr>
 <td><a href="#BrowserModel.flags">flags</a></td>
 <td>Public method to get the item flags.</td>
@@ -1305,16 +1305,6 @@ QAbstractItemModel
 <dt><i>parent</i></dt>
 <dd>
 reference to parent object (QObject)
-</dd>
-</dl><a NAME="BrowserModel.__directoryChanged" ID="BrowserModel.__directoryChanged"></a>
-<h4>BrowserModel.__directoryChanged</h4>
-<b>__directoryChanged</b>(<i>path</i>)
-<p>
-        Private slot to handle the directoryChanged signal of the watcher.
-</p><dl>
-<dt><i>path</i></dt>
-<dd>
-path of the directory (string)
 </dd>
 </dl><a NAME="BrowserModel.__populateModel" ID="BrowserModel.__populateModel"></a>
 <h4>BrowserModel.__populateModel</h4>
@@ -1414,6 +1404,16 @@ role of data (Qt.ItemDataRole)
 <dt>Returns:</dt>
 <dd>
 requested data
+</dd>
+</dl><a NAME="BrowserModel.directoryChanged" ID="BrowserModel.directoryChanged"></a>
+<h4>BrowserModel.directoryChanged</h4>
+<b>directoryChanged</b>(<i>path</i>)
+<p>
+        Public slot to handle the directoryChanged signal of the watcher.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+path of the directory (string)
 </dd>
 </dl><a NAME="BrowserModel.flags" ID="BrowserModel.flags"></a>
 <h4>BrowserModel.flags</h4>

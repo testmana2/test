@@ -3707,6 +3707,7 @@
       <keyword name="Browser.__createPopupMenus" id="Browser.__createPopupMenus" ref="eric5.UI.Browser.html#Browser.__createPopupMenus" />
       <keyword name="Browser.__findInDirectory" id="Browser.__findInDirectory" ref="eric5.UI.Browser.html#Browser.__findInDirectory" />
       <keyword name="Browser.__newToplevelDir" id="Browser.__newToplevelDir" ref="eric5.UI.Browser.html#Browser.__newToplevelDir" />
+      <keyword name="Browser.__refreshDirectory" id="Browser.__refreshDirectory" ref="eric5.UI.Browser.html#Browser.__refreshDirectory" />
       <keyword name="Browser.__removeToplevel" id="Browser.__removeToplevel" ref="eric5.UI.Browser.html#Browser.__removeToplevel" />
       <keyword name="Browser.__replaceInDirectory" id="Browser.__replaceInDirectory" ref="eric5.UI.Browser.html#Browser.__replaceInDirectory" />
       <keyword name="Browser._contextMenuRequested" id="Browser._contextMenuRequested" ref="eric5.UI.Browser.html#Browser._contextMenuRequested" />
@@ -3872,7 +3873,6 @@
       <keyword name="BrowserMethodItem.lessThan" id="BrowserMethodItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.lessThan" />
       <keyword name="BrowserMethodItem.lineno" id="BrowserMethodItem.lineno" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.lineno" />
       <keyword name="BrowserModel (Constructor)" id="BrowserModel (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserModel.__init__" />
-      <keyword name="BrowserModel.__directoryChanged" id="BrowserModel.__directoryChanged" ref="eric5.UI.BrowserModel.html#BrowserModel.__directoryChanged" />
       <keyword name="BrowserModel.__populateModel" id="BrowserModel.__populateModel" ref="eric5.UI.BrowserModel.html#BrowserModel.__populateModel" />
       <keyword name="BrowserModel._addItem" id="BrowserModel._addItem" ref="eric5.UI.BrowserModel.html#BrowserModel._addItem" />
       <keyword name="BrowserModel._addWatchedItem" id="BrowserModel._addWatchedItem" ref="eric5.UI.BrowserModel.html#BrowserModel._addWatchedItem" />
@@ -3882,6 +3882,7 @@
       <keyword name="BrowserModel.clear" id="BrowserModel.clear" ref="eric5.UI.BrowserModel.html#BrowserModel.clear" />
       <keyword name="BrowserModel.columnCount" id="BrowserModel.columnCount" ref="eric5.UI.BrowserModel.html#BrowserModel.columnCount" />
       <keyword name="BrowserModel.data" id="BrowserModel.data" ref="eric5.UI.BrowserModel.html#BrowserModel.data" />
+      <keyword name="BrowserModel.directoryChanged" id="BrowserModel.directoryChanged" ref="eric5.UI.BrowserModel.html#BrowserModel.directoryChanged" />
       <keyword name="BrowserModel.flags" id="BrowserModel.flags" ref="eric5.UI.BrowserModel.html#BrowserModel.flags" />
       <keyword name="BrowserModel.hasChildren" id="BrowserModel.hasChildren" ref="eric5.UI.BrowserModel.html#BrowserModel.hasChildren" />
       <keyword name="BrowserModel.headerData" id="BrowserModel.headerData" ref="eric5.UI.BrowserModel.html#BrowserModel.headerData" />

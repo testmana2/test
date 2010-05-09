@@ -48,7 +48,7 @@ class BrowserModel(QAbstractItemModel):
         self.progDir = None
         self.watchedItems = {}
         self.watcher = QFileSystemWatcher(self)
-        self.watcher.directoryChanged.connect(self.__directoryChanged)
+        self.watcher.directoryChanged.connect(self.directoryChanged)
         
         self.__populateModel()
     
@@ -251,9 +251,9 @@ class BrowserModel(QAbstractItemModel):
                not dirName.startswith("\\\\"):
                 if dirName not in self.watcher.directories():
                     self.watcher.addPath(dirName)
-                if dirName in self.watchedItems and \
-                   itm not in self.watchedItems[dirName]:
-                    self.watchedItems[dirName].append(itm)
+                if dirName in self.watchedItems:
+                    if itm not in self.watchedItems[dirName]:
+                        self.watchedItems[dirName].append(itm)
                 else:
                     self.watchedItems[dirName] = [itm]
     
@@ -265,16 +265,16 @@ class BrowserModel(QAbstractItemModel):
         """
         if isinstance(itm, BrowserDirectoryItem):
             dirName = itm.dirName()
-            if dirName in self.watchedItems and \
-               itm in self.watchedItems[dirName]:
-                self.watchedItems[dirName].remove(itm)
-            if len(self.watchedItems[dirName]) == 0:
-                del self.watchedItems[dirName]
-                self.watcher.removePath(dirName)
+            if dirName in self.watchedItems:
+                if itm in self.watchedItems[dirName]:
+                    self.watchedItems[dirName].remove(itm)
+                if len(self.watchedItems[dirName]) == 0:
+                    del self.watchedItems[dirName]
+                    self.watcher.removePath(dirName)
     
-    def __directoryChanged(self, path):
+    def directoryChanged(self, path):
         """
-        Private slot to handle the directoryChanged signal of the watcher.
+        Public slot to handle the directoryChanged signal of the watcher.
         
         @param path path of the directory (string)
         """
@@ -283,55 +283,57 @@ class BrowserModel(QAbstractItemModel):
             return
         
         for itm in self.watchedItems[path]:
-            if itm.isPopulated():
-                oldCnt = itm.childCount()
+            oldCnt = itm.childCount()
+            
+            qdir = QDir(itm.dirName())
+            
+            entryInfoList = qdir.entryInfoList(
+                QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot))
+            
+            # step 1: check for new entries
+            children = itm.children()
+            for f in entryInfoList:
+                fpath = f.absoluteFilePath()
+                childFound = False
+                for child in children:
+                    if child.name() == fpath:
+                        childFound = True
+                        children.remove(child)
+                        break
+                if childFound:
+                    continue
                 
-                qdir = QDir(itm.dirName())
-                
-                entryInfoList = qdir.entryInfoList(
-                    QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot))
-                
-                # step 1: check for new entries
-                for f in entryInfoList:
-                    fpath = f.absoluteFilePath()
-                    childFound = False
-                    for child in itm.children():
-                        if child.name() == fpath:
-                            childFound = True
+                cnt = itm.childCount()
+                self.beginInsertRows(self.createIndex(itm.row(), 0, itm),
+                    cnt, cnt)
+                if f.isDir():
+                    node = BrowserDirectoryItem(itm,
+                        Utilities.toNativeSeparators(f.absoluteFilePath()), 
+                        False)
+                else:
+                    node = BrowserFileItem(itm,
+                        Utilities.toNativeSeparators(f.absoluteFilePath()))
+                self._addItem(node, itm)
+                self.endInsertRows()
+            
+            # step 2: check for removed entries
+            if len(entryInfoList) != itm.childCount():
+                for row in range(oldCnt - 1, -1, -1):
+                    child = itm.child(row)
+                    entryFound = False
+                    for f in entryInfoList:
+                        if f.absoluteFilePath() == child.name():
+                            entryFound = True
+                            entryInfoList.remove(f)
                             break
-                    if childFound:
+                    if entryFound:
                         continue
                     
-                    cnt = itm.childCount()
-                    self.beginInsertRows(self.createIndex(itm.row(), 0, itm),
-                        cnt, cnt)
-                    if f.isDir():
-                        node = BrowserDirectoryItem(itm,
-                            Utilities.toNativeSeparators(f.absoluteFilePath()), 
-                            False)
-                        self._addWatchedItem(node)
-                    else:
-                        node = BrowserFileItem(itm,
-                            Utilities.toNativeSeparators(f.absoluteFilePath()))
-                    self._addItem(node, itm)
-                    self.endInsertRows()
-                
-                # step 2: check for removed entries
-                if len(entryInfoList) != itm.childCount():
-                    for row in range(oldCnt - 1, -1, -1):
-                        child = itm.child(row)
-                        entryFound = False
-                        for f in entryInfoList:
-                            if f.absoluteFilePath() == child.name():
-                                entryFound = True
-                                break
-                        if entryFound:
-                            continue
-                        
-                        self.beginRemoveRows(self.createIndex(itm.row(), 0, itm),
-                            row, row)
-                        itm.removeChild(child)
-                        self.endRemoveRows()
+                    self._removeWatchedItem(child)
+                    self.beginRemoveRows(self.createIndex(itm.row(), 0, itm),
+                        row, row)
+                    itm.removeChild(child)
+                    self.endRemoveRows()
     
     def __populateModel(self):
         """
@@ -350,8 +352,8 @@ class BrowserModel(QAbstractItemModel):
                     d.absoluteFilePath()))
         
         for d in self.toplevelDirs:
-            self._addItem(BrowserDirectoryItem(self.rootItem, d), self.rootItem)
-            self.watcher.addPath(d)
+            itm = BrowserDirectoryItem(self.rootItem, d)
+            self._addItem(itm, self.rootItem)
     
     def programChange(self, dirname):
         """
@@ -373,7 +375,6 @@ class BrowserModel(QAbstractItemModel):
         itm = BrowserDirectoryItem(self.rootItem, dirname)
         self.addItem(itm)
         self.progDir = itm
-        self._addWatchedItem(itm)
     
     def addTopLevelDir(self, dirname):
         """
@@ -385,7 +386,6 @@ class BrowserModel(QAbstractItemModel):
             itm = BrowserDirectoryItem(self.rootItem, dirname)
             self.addItem(itm)
             self.toplevelDirs.append(itm.dirName())
-            self._addWatchedItem(itm)
     
     def removeToplevelDir(self, index):
         """
@@ -464,6 +464,8 @@ class BrowserModel(QAbstractItemModel):
         @param parentItem reference to the directory item to be populated
         @param repopulate flag indicating a repopulation (boolean)
         """
+        self._addWatchedItem(parentItem)
+        
         qdir = QDir(parentItem.dirName())
         
         entryInfoList = \
@@ -477,7 +479,6 @@ class BrowserModel(QAbstractItemModel):
                     node = BrowserDirectoryItem(parentItem,
                         Utilities.toNativeSeparators(f.absoluteFilePath()), 
                         False)
-                    self._addWatchedItem(node)
                 else:
                     node = BrowserFileItem(parentItem,
                         Utilities.toNativeSeparators(f.absoluteFilePath()))
@@ -502,7 +503,6 @@ class BrowserModel(QAbstractItemModel):
                 
                 node = BrowserDirectoryItem(parentItem, p)
                 self._addItem(node, parentItem)
-                self._addWatchedItem(node)
             if repopulate:
                 self.endInsertRows()
 

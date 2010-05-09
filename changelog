@@ -4,6 +4,7 @@ Version 5.0-snapshot-2010mmdd:
 - bug fixes
 - added code to save the editor zoom factor in the session file
 - added code to configure the zoom factor a file is opened with
+- added code to update the file browser window (mostly) automatically
 
 Version 5.0-snapshot-20100508:
 - bug fixes
