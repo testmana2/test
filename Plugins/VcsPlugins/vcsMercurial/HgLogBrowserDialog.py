@@ -756,17 +756,12 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.__resortFiles()
         
         self.__updateDiffButtons()
-##        
-##        parents = current.data(0, self.__parentsRole)
-##        self.diffP1Button.setEnabled(len(parents) > 0)
-##        self.diffP2Button.setEnabled(len(parents) > 1)
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
         """
         Private slot called, when the selection has changed.
         """
-##        self.diffRevisionsButton.setEnabled(len(self.logTree.selectedItems()) == 2)
         if len(self.logTree.selectedItems()) == 1:
             self.logTree.setCurrentItem(self.logTree.selectedItems()[0])
         
