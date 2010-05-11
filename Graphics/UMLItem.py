@@ -40,6 +40,11 @@ class UMLItem(QGraphicsRectItem):
         
         self.setFlag(QGraphicsItem.ItemIsMovable, True)
         self.setFlag(QGraphicsItem.ItemIsSelectable, True)
+        try:
+            self.setFlag(QGraphicsItem.ItemSendsGeometryChanges, True)
+        except AttributeError:
+            # only available for Qt 4.6.0 and newer
+            pass
         
     def setSize(self, width, height):
         """
