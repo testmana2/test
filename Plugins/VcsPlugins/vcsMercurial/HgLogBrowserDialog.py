@@ -238,6 +238,12 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @return icon for the node (QIcon)
         """
         def col2x(col, radius):
+            """
+            Local function to calculate a x-position for a column.
+            
+            @param col column number (integer)
+            @param radius radius of the indicator circle (integer)
+            """
             return int(1.2 * radius) * col + radius // 2 + 3
         
         radius = self.__dotRadius

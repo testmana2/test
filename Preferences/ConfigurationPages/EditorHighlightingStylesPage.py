@@ -11,7 +11,7 @@ import io
 
 from PyQt4.QtCore import pyqtSlot, QFileInfo
 from PyQt4.QtGui import QPalette, QFileDialog, QColorDialog, QFontDialog, \
-                        QInputDialog, QMessageBox
+                        QInputDialog, QMessageBox, QFont, QMenu
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage
@@ -29,6 +29,11 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
     """
     Class implementing the Editor Highlighting Styles configuration page.
     """
+    FAMILYONLY    = 0
+    SIZEONLY      = 1
+    FAMILYANDSIZE = 2
+    FONT          = 99
+    
     def __init__(self, lexers):
         """
         Constructor
@@ -38,6 +43,32 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         ConfigurationPageBase.__init__(self)
         self.setupUi(self)
         self.setObjectName("EditorHighlightingStylesPage")
+        
+        self.__fontButtonMenu = QMenu()
+        act = self.__fontButtonMenu.addAction(self.trUtf8("Font"))
+        act.setData(self.FONT)
+        self.__fontButtonMenu.addSeparator()
+        act = self.__fontButtonMenu.addAction(self.trUtf8("Family and Size only"))
+        act.setData(self.FAMILYANDSIZE)
+        act = self.__fontButtonMenu.addAction(self.trUtf8("Family only"))
+        act.setData(self.FAMILYONLY)
+        act = self.__fontButtonMenu.addAction(self.trUtf8("Size only"))
+        act.setData(self.SIZEONLY)
+        self.__fontButtonMenu.triggered.connect(self.__fontButtonMenuTriggered)
+        self.fontButton.setMenu(self.__fontButtonMenu)
+        
+        self.__allFontsButtonMenu = QMenu()
+        act = self.__allFontsButtonMenu.addAction(self.trUtf8("Font"))
+        act.setData(self.FONT)
+        self.__allFontsButtonMenu.addSeparator()
+        act = self.__allFontsButtonMenu.addAction(self.trUtf8("Family and Size only"))
+        act.setData(self.FAMILYANDSIZE)
+        act = self.__allFontsButtonMenu.addAction(self.trUtf8("Family only"))
+        act.setData(self.FAMILYONLY)
+        act = self.__allFontsButtonMenu.addAction(self.trUtf8("Size only"))
+        act.setData(self.SIZEONLY)
+        self.__allFontsButtonMenu.triggered.connect(self.__allFontsButtonMenuTriggered)
+        self.allFontsButton.setMenu(self.__allFontsButtonMenu)
         
         self.lexer = None
         self.lexers = lexers
@@ -157,31 +188,89 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             for style in list(self.lexer.ind2style.values()):
                 self.lexer.setPaper(colour, style)
         
-    @pyqtSlot()
-    def on_fontButton_clicked(self):
+    def __changeFont(self, doAll, familyOnly, sizeOnly):
         """
-        Private method used to select the font of the selected style and lexer.
+        Private slot to change the highlighter font.
+        
+        @param doAll flag indicating to change the font for all styles (boolean)
+        @param familyOnly flag indicating to set the font family only (boolean)
+        @param sizeOnly flag indicating to set the font size only (boolean
         """
+        def setFont(font, style, familyOnly, sizeOnly):
+            """
+            Local function to set the font.
+            
+            @param font font to be set (QFont)
+            @param style style to set the font for (integer)
+            @param familyOnly flag indicating to set the font family only (boolean)
+            @param sizeOnly flag indicating to set the font size only (boolean
+            """
+            if familyOnly or sizeOnly:
+                newFont = QFont(self.lexer.font(style))
+                if familyOnly:
+                    newFont.setFamily(font.family())
+                if sizeOnly:
+                    newFont.setPointSize(font.pointSize())
+                self.lexer.setFont(newFont, style)
+            else:
+                self.lexer.setFont(font, style)
+        
+        def setSampleFont(font, familyOnly, sizeOnly):
+            """
+            Local function to set the font of the sample text.
+            
+            @param font font to be set (QFont)
+            @param familyOnly flag indicating to set the font family only (boolean)
+            @param sizeOnly flag indicating to set the font size only (boolean
+            """
+            if familyOnly or sizeOnly:
+                newFont = QFont(self.lexer.font(self.style))
+                if familyOnly:
+                    newFont.setFamily(font.family())
+                if sizeOnly:
+                    newFont.setPointSize(font.pointSize())
+                self.sampleText.setFont(newFont)
+            else:
+                self.sampleText.setFont(font)
+        
         font, ok = QFontDialog.getFont(self.lexer.font(self.style))
         if ok:
-            self.sampleText.setFont(font)
-            if len(self.styleElementList.selectedItems()) > 1:
+            setSampleFont(font, familyOnly, sizeOnly)
+            if doAll:
+                for style in list(self.lexer.ind2style.values()):
+                    setFont(font, style, familyOnly, sizeOnly)
+            elif len(self.styleElementList.selectedItems()) > 1:
                 for selItem in self.styleElementList.selectedItems():
                     style = self.lexer.ind2style[self.styleElementList.row(selItem)]
-                    self.lexer.setFont(font, style)
+                    setFont(font, style, familyOnly, sizeOnly)
             else:
-                self.lexer.setFont(font, self.style)
+                setFont(font, self.style, familyOnly, sizeOnly)
         
-    @pyqtSlot()
-    def on_allFontsButton_clicked(self):
+    def __fontButtonMenuTriggered(self, act):
         """
-        Private method used to change the font of all styles of a selected lexer.
+        Private slot used to select the font of the selected style and lexer.
+        
+        @param act reference to the triggering action (QAction)
         """
-        font, ok = QFontDialog.getFont(self.lexer.font(self.style))
-        if ok:
-            self.sampleText.setFont(font)
-            for style in list(self.lexer.ind2style.values()):
-                self.lexer.setFont(font, style)
+        if act is None:
+            return
+        
+        familyOnly = act.data() in [self.FAMILYANDSIZE, self.FAMILYONLY]
+        sizeOnly = act.data() in [self.FAMILYANDSIZE, self.SIZEONLY]
+        self.__changeFont(False, familyOnly, sizeOnly)
+        
+    def __allFontsButtonMenuTriggered(self, act):
+        """
+        Private slot used to change the font of all styles of a selected lexer.
+        
+        @param act reference to the triggering action (QAction)
+        """
+        if act is None:
+            return
+        
+        familyOnly = act.data() in [self.FAMILYANDSIZE, self.FAMILYONLY]
+        sizeOnly = act.data() in [self.FAMILYANDSIZE, self.SIZEONLY]
+        self.__changeFont(True, familyOnly, sizeOnly)
         
     def on_eolfillCheckBox_toggled(self, b):
         """
