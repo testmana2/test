@@ -114,6 +114,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__branchColors = {}
         
         self.logTree.setIconSize(QSize(100 * self.__rowHeight, self.__rowHeight))
+        
+        self.__projectRevision = -1
     
     def closeEvent(self, e):
         """
@@ -219,7 +221,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__revs = next
         return col, color, edges
     
-    def __generateIcon(self, column, color, bottomedges, topedges, dotColor):
+    def __generateIcon(self, column, color, bottomedges, topedges, dotColor, currentRev):
         """
         Private method to generate an icon containing the revision tree for the
         given data.
@@ -231,6 +233,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param topedges list of edges for the top of the node 
             (list of tuples of three integers)
         @param dotColor color to be used for the dot (QColor)
+        @param currentRev flag indicating to draw the icon for the
+            current revision (boolean)
         @return icon for the node (QIcon)
         """
         def col2x(col, radius):
@@ -239,23 +243,24 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         radius = self.__dotRadius
         w = len(bottomedges) * radius + 20
         h = self.__rowHeight
-
+        
         dot_x = col2x(column, radius) - radius // 2
         dot_y = h // 2
-
+        
         pix = QPixmap(w, h)
         pix.fill(QColor(0, 0, 0, 0))
         painter = QPainter(pix)
         painter.setRenderHint(QPainter.Antialiasing)
-
+        
         pen = QPen(Qt.blue)
         pen.setWidth(2)
         painter.setPen(pen)
-
+        
         lpen = QPen(pen)
         lpen.setColor(Qt.black)
         painter.setPen(lpen)
-
+        
+        # draw the revision history lines
         for y1, y2, lines in ((0, h, bottomedges),
                               (-h, 0, topedges)):
             if lines:
@@ -267,12 +272,19 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     x1 = col2x(start, radius)
                     x2 = col2x(end, radius)
                     painter.drawLine(x1, dot_y + y1, x2, dot_y + y2)
-
+        
         penradius = 1
         pencolor = Qt.black
-
+        
         dot_y = (h // 2) - radius // 2
-
+        
+        # draw a dot for the revision
+        if currentRev:
+            # enlarge dot for the current revision
+            delta = 2
+            radius += 2 * delta
+            dot_y -= delta
+            dot_x -= delta
         painter.setBrush(dotColor)
         pen = QPen(pencolor)
         pen.setWidth(penradius)
@@ -332,6 +344,39 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         return parents
     
+    def __identifyProject(self):
+        """
+        Private method to determine the revision of the project directory.
+        """
+        errMsg = ""
+        
+        process = QProcess()
+        args = []
+        args.append("identify")
+        args.append("-n")
+        
+        process.setWorkingDirectory(self.repodir)
+        process.start('hg', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                output = \
+                    str(process.readAllStandardOutput(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace')
+                self.__projectRevision = output.strip()
+            else:
+                if not finished:
+                    errMsg = self.trUtf8("The hg process did not finish within 30s.")
+        else:
+            errMsg = self.trUtf8("Could not start the hg executable.")
+        
+        if errMsg:
+            QMessageBox.critical(self,
+                self.trUtf8("Mercurial Error"),
+                errMsg)
+    
     def __generateLogItem(self, author, date, message, revision, changedPaths, parents, 
                           branches, tags):
         """
@@ -388,7 +433,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             topedges = None
         
         icon = self.__generateIcon(column, color, edges, topedges, 
-                                   QColor(self.__branchColor(branches[0])))
+                                   QColor(self.__branchColor(branches[0])), 
+                                   rev == self.__projectRevision)
         itm.setIcon(0, icon)
         
         try:
@@ -544,6 +590,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private method to process the buffered output of the hg log command.
         """
+        self.__identifyProject()
+        
         noEntries = 0
         log = {"message" : []}
         changedPaths = []
