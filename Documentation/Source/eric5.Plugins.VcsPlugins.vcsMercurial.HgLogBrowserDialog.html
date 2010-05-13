@@ -90,6 +90,9 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__getParents">__getParents</a></td>
 <td>Private method to get the parents of the currently viewed file/directory.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__identifyProject">__identifyProject</a></td>
+<td>Private method to determine the revision of the project directory.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
@@ -276,7 +279,7 @@ reference to the generated item (QTreeWidgetItem)
 </dd>
 </dl><a NAME="HgLogBrowserDialog.__generateIcon" ID="HgLogBrowserDialog.__generateIcon"></a>
 <h4>HgLogBrowserDialog.__generateIcon</h4>
-<b>__generateIcon</b>(<i>column, color, bottomedges, topedges, dotColor</i>)
+<b>__generateIcon</b>(<i>column, color, bottomedges, topedges, dotColor, currentRev</i>)
 <p>
         Private method to generate an icon containing the revision tree for the
         given data.
@@ -298,6 +301,10 @@ list of edges for the top of the node
 </dd><dt><i>dotColor</i></dt>
 <dd>
 color to be used for the dot (QColor)
+</dd><dt><i>currentRev</i></dt>
+<dd>
+flag indicating to draw the icon for the
+            current revision (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -381,7 +388,12 @@ revision number to get parents for (string)
 <dd>
 list of parent revisions (list of integers)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.__procFinished" ID="HgLogBrowserDialog.__procFinished"></a>
+</dl><a NAME="HgLogBrowserDialog.__identifyProject" ID="HgLogBrowserDialog.__identifyProject"></a>
+<h4>HgLogBrowserDialog.__identifyProject</h4>
+<b>__identifyProject</b>(<i></i>)
+<p>
+        Private method to determine the revision of the project directory.
+</p><a NAME="HgLogBrowserDialog.__procFinished" ID="HgLogBrowserDialog.__procFinished"></a>
 <h4>HgLogBrowserDialog.__procFinished</h4>
 <b>__procFinished</b>(<i>exitCode, exitStatus</i>)
 <p>

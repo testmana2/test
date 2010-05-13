@@ -8025,6 +8025,7 @@
       <keyword name="HgLogBrowserDialog.__getColor" id="HgLogBrowserDialog.__getColor" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getColor" />
       <keyword name="HgLogBrowserDialog.__getLogEntries" id="HgLogBrowserDialog.__getLogEntries" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getLogEntries" />
       <keyword name="HgLogBrowserDialog.__getParents" id="HgLogBrowserDialog.__getParents" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getParents" />
+      <keyword name="HgLogBrowserDialog.__identifyProject" id="HgLogBrowserDialog.__identifyProject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__identifyProject" />
       <keyword name="HgLogBrowserDialog.__procFinished" id="HgLogBrowserDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__procFinished" />
       <keyword name="HgLogBrowserDialog.__processBuffer" id="HgLogBrowserDialog.__processBuffer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__processBuffer" />
       <keyword name="HgLogBrowserDialog.__readStderr" id="HgLogBrowserDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__readStderr" />
