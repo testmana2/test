@@ -366,6 +366,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         Preferences.getSystem("IOEncoding"), 
                         'replace')
                 self.__projectRevision = output.strip()
+                if self.__projectRevision.endswith("+"):
+                    self.__projectRevision = self.__projectRevision[:-1]
             else:
                 if not finished:
                     errMsg = self.trUtf8("The hg process did not finish within 30s.")
@@ -555,6 +557,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.logTree.clear()
         self.__started = True
+        self.__identifyProject()
         self.__getLogEntries()
     
     def __procFinished(self, exitCode, exitStatus):
@@ -590,8 +593,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private method to process the buffered output of the hg log command.
         """
-        self.__identifyProject()
-        
         noEntries = 0
         log = {"message" : []}
         changedPaths = []
