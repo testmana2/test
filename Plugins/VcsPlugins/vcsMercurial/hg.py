@@ -792,6 +792,7 @@ class Hg(VersionControl):
         """
         if name.endswith(os.sep):
             name = name[:-1]
+        name = os.path.normcase(name)
         dname, fname = self.splitPath(name)
         
         if fname == '.' and os.path.isdir(os.path.join(dname, self.adminDir)):
@@ -826,7 +827,9 @@ class Hg(VersionControl):
                     absname = os.path.join(repodir, os.path.normcase(path))
                     if flag not in "?I":
                         if fname == '.':
-                            if absname.startswith(dname):
+                            if absname.startswith(dname + os.path.sep):
+                                return self.canBeCommitted
+                            if absname == dname:
                                 return self.canBeCommitted
                         else:
                             if absname == name:
