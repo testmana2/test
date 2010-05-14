@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HelpClearPrivateDataDialog</class>
+ <widget class="QDialog" name="HelpClearPrivateDataDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>305</width>
+    <height>191</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Clear Private Data</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QCheckBox" name="historyCheckBox">
+     <property name="toolTip">
+      <string>Select to clear the browsing history</string>
+     </property>
+     <property name="text">
+      <string>&amp;Browsing History</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="searchCheckBox">
+     <property name="toolTip">
+      <string>Select to clear the search history</string>
+     </property>
+     <property name="text">
+      <string>&amp;Search History</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="cookiesCheckBox">
+     <property name="toolTip">
+      <string>Select to clear the cookies</string>
+     </property>
+     <property name="text">
+      <string>&amp;Cookies</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="cacheCheckBox">
+     <property name="toolTip">
+      <string>Select to clear the disk cache</string>
+     </property>
+     <property name="text">
+      <string>Cached &amp;Web Pages</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="iconsCheckBox">
+     <property name="toolTip">
+      <string>Select to clear the website icons</string>
+     </property>
+     <property name="text">
+      <string>Website &amp;Icons</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="passwordsCheckBox">
+     <property name="toolTip">
+      <string>Select to clear the saved passwords</string>
+     </property>
+     <property name="text">
+      <string>Saved &amp;Passwords</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>historyCheckBox</tabstop>
+  <tabstop>searchCheckBox</tabstop>
+  <tabstop>cookiesCheckBox</tabstop>
+  <tabstop>cacheCheckBox</tabstop>
+  <tabstop>iconsCheckBox</tabstop>
+  <tabstop>passwordsCheckBox</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>HelpClearPrivateDataDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>HelpClearPrivateDataDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

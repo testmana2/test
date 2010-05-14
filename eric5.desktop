@@ -1,0 +1,13 @@
+[Desktop Entry]
+X-SuSE-translate=true
+Type=Application
+Exec=eric5
+MimeType=application/x-eric5;
+Icon=eric
+Terminal=false
+Name=eric5
+Name[de]=eric5
+GenericName=Integrated Development Environment for Python
+GenericName[de]=Integrierte Entwicklungsumgebung für Python
+Categories=Qt;Python;Development;IDE;
+
