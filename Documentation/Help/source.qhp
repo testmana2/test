@@ -4620,6 +4620,7 @@
       <keyword name="Project.setStatusMonitorAutoUpdate" id="Project.setStatusMonitorAutoUpdate" ref="eric5.Project.Project.html#Project.setStatusMonitorAutoUpdate" />
       <keyword name="Project.setStatusMonitorInterval" id="Project.setStatusMonitorInterval" ref="eric5.Project.Project.html#Project.setStatusMonitorInterval" />
       <keyword name="Project.startStatusMonitor" id="Project.startStatusMonitor" ref="eric5.Project.Project.html#Project.startStatusMonitor" />
+      <keyword name="Project.startswithProjectPath" id="Project.startswithProjectPath" ref="eric5.Project.Project.html#Project.startswithProjectPath" />
       <keyword name="Project.stopStatusMonitor" id="Project.stopStatusMonitor" ref="eric5.Project.Project.html#Project.stopStatusMonitor" />
       <keyword name="Project.unregisterProjectType" id="Project.unregisterProjectType" ref="eric5.Project.Project.html#Project.unregisterProjectType" />
       <keyword name="Project.updateFileTypes" id="Project.updateFileTypes" ref="eric5.Project.Project.html#Project.updateFileTypes" />

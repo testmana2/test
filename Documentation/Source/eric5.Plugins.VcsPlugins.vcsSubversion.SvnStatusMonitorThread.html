@@ -63,16 +63,16 @@ VcsStatusMonitorThread
 </table>
 <a NAME="SvnStatusMonitorThread.__init__" ID="SvnStatusMonitorThread.__init__"></a>
 <h4>SvnStatusMonitorThread (Constructor)</h4>
-<b>SvnStatusMonitorThread</b>(<i>interval, projectDir, vcs, parent = None</i>)
+<b>SvnStatusMonitorThread</b>(<i>interval, project, vcs, parent = None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>interval</i></dt>
 <dd>
 new interval in seconds (integer)
-</dd><dt><i>projectDir</i></dt>
+</dd><dt><i>project</i></dt>
 <dd>
-project directory to monitor (string)
+reference to the project object (Project)
 </dd><dt><i>vcs</i></dt>
 <dd>
 reference to the version control object

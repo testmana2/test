@@ -592,6 +592,9 @@ QObject
 <td><a href="#Project.startStatusMonitor">startStatusMonitor</a></td>
 <td>Public method to start the VCS status monitor thread.</td>
 </tr><tr>
+<td><a href="#Project.startswithProjectPath">startswithProjectPath</a></td>
+<td>Public method to check, if a path starts with the project path.</td>
+</tr><tr>
 <td><a href="#Project.stopStatusMonitor">stopStatusMonitor</a></td>
 <td>Public method to stop the VCS status monitor thread.</td>
 </tr><tr>
@@ -1605,36 +1608,36 @@ reference to the dictionary of project types.
 </dd>
 </dl><a NAME="Project.getRelativePath" ID="Project.getRelativePath"></a>
 <h4>Project.getRelativePath</h4>
-<b>getRelativePath</b>(<i>fn</i>)
+<b>getRelativePath</b>(<i>path</i>)
 <p>
         Public method to convert a file path to a project relative
         file path.
 </p><dl>
-<dt><i>fn</i></dt>
+<dt><i>path</i></dt>
 <dd>
 file or directory name to convert (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-project relative path or unchanged path, if fn doesn't
+project relative path or unchanged path, if path doesn't
             belong to the project (string)
 </dd>
 </dl><a NAME="Project.getRelativeUniversalPath" ID="Project.getRelativeUniversalPath"></a>
 <h4>Project.getRelativeUniversalPath</h4>
-<b>getRelativeUniversalPath</b>(<i>fn</i>)
+<b>getRelativeUniversalPath</b>(<i>path</i>)
 <p>
         Public method to convert a file path to a project relative
         file path with universal separators.
 </p><dl>
-<dt><i>fn</i></dt>
+<dt><i>path</i></dt>
 <dd>
 file or directory name to convert (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-project relative path or unchanged path, if fn doesn't
+project relative path or unchanged path, if path doesn't
             belong to the project (string)
 </dd>
 </dl><a NAME="Project.getSources" ID="Project.getSources"></a>
@@ -2212,7 +2215,17 @@ status monitor interval in seconds (integer)
 <b>startStatusMonitor</b>(<i></i>)
 <p>
         Public method to start the VCS status monitor thread.
-</p><a NAME="Project.stopStatusMonitor" ID="Project.stopStatusMonitor"></a>
+</p><a NAME="Project.startswithProjectPath" ID="Project.startswithProjectPath"></a>
+<h4>Project.startswithProjectPath</h4>
+<b>startswithProjectPath</b>(<i>path</i>)
+<p>
+        Public method to check, if a path starts with the project path.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+path to be checked (string)
+</dd>
+</dl><a NAME="Project.stopStatusMonitor" ID="Project.stopStatusMonitor"></a>
 <h4>Project.stopStatusMonitor</h4>
 <b>stopStatusMonitor</b>(<i></i>)
 <p>

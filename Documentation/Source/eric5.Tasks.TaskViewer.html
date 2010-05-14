@@ -100,7 +100,7 @@ QTreeWidgetItem
 </table>
 <a NAME="Task.__init__" ID="Task.__init__"></a>
 <h4>Task (Constructor)</h4>
-<b>Task</b>(<i>description, priority = 1, filename = "", lineno = 0, completed = False, _time = 0, isProjectTask = False, isBugfixTask = False, ppath = "", longtext = ""</i>)
+<b>Task</b>(<i>description, priority = 1, filename = "", lineno = 0, completed = False, _time = 0, isProjectTask = False, isBugfixTask = False, project = None, longtext = ""</i>)
 <p>
         Constructor
 </p><dl>
@@ -132,9 +132,9 @@ flag indicating a task related to the current project
 </dd><dt><i>isBugfixTask</i></dt>
 <dd>
 flag indicating a bugfix task (boolean)
-</dd><dt><i>ppath</i></dt>
+</dd><dt><i>project</i></dt>
 <dd>
-the project path (string)
+reference to the project object (Project)
 </dd><dt><i>longtext</i></dt>
 <dd>
 explanatory text of the task (string)
