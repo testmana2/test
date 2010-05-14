@@ -85,7 +85,8 @@ class ApplicationDiagram(UMLDialog):
         """
         Private method to build the packages shapes of the diagram.
         """
-        project = os.path.splitdrive(self.project.ppath)[1].replace(os.sep, '.')[1:]
+        project = os.path.splitdrive(self.project.getProjectPath())[1]\
+            .replace(os.sep, '.')[1:]
         packages = {}
         shapes = {}
         p = 10

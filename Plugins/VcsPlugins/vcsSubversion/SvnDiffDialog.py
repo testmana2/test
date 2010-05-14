@@ -141,11 +141,11 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             else:
                 dname, fname = self.vcs.splitPath(fn)
                 fnames = [fname]
-            ppath = e5App().getObject('Project').getProjectPath()
-            if dname == ppath:
+            project = e5App().getObject('Project')
+            if dname == project.getProjectPath():
                 path = ""
             else:
-                path = dname.replace(ppath + os.sep, '')
+                path = project.getRelativePath(dname)
             if path:
                 path += "/"
             for fname in fnames:

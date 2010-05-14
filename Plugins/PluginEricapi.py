@@ -165,7 +165,7 @@ class EricapiPlugin(QObject):
                         root, ext = os.path.splitext(outputFileName)
                         outfile = "%s-%s%s" % (root, progLanguage.lower(), ext)
                 
-                outfile = outfile.replace(project.ppath+os.sep, '')
+                outfile = project.getRelativePath(outfile)
                 if outfile not in project.pdata['OTHERS']:
                     project.pdata['OTHERS'].append(outfile)
                     project.setDirty(True)

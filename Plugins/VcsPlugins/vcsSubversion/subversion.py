@@ -1821,4 +1821,4 @@ class Subversion(VersionControl):
         @param interval check interval for the monitor thread in seconds (integer)
         @return reference to the monitor thread (QThread)
         """
-        return SvnStatusMonitorThread(interval, project.ppath, self)
+        return SvnStatusMonitorThread(interval, project, self)

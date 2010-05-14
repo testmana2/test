@@ -373,10 +373,7 @@ class TabWidget(E5TabWidget):
             if Preferences.getUI("TabViewManagerFilenameOnly"):
                 txt = os.path.basename(fn)
             else:
-                txt = fn
-                ppath = e5App().getObject("Project").getProjectPath()
-                if ppath:
-                    txt = txt.replace(ppath + os.sep, "")
+                txt = e5App().getObject("Project").getRelativePath(fn)
             
             maxFileNameChars = Preferences.getUI("TabViewManagerFilenameLength")
             if len(txt) > maxFileNameChars:
@@ -734,10 +731,7 @@ class Tabview(QSplitter, ViewManager):
             if self.filenameOnly:
                 txt = os.path.basename(fn)
             else:
-                txt = fn
-                ppath = e5App().getObject("Project").getProjectPath()
-                if ppath:
-                    txt = txt.replace(ppath + os.sep, "")
+                txt = e5App().getObject("Project").getRelativePath(fn)
             if len(txt) > self.maxFileNameChars:
                 txt = "...%s" % txt[-self.maxFileNameChars:]
             if not QFileInfo(fn).isWritable():
@@ -774,10 +768,7 @@ class Tabview(QSplitter, ViewManager):
             if self.filenameOnly:
                 txt = os.path.basename(fn)
             else:
-                txt = fn
-                ppath = e5App().getObject("Project").getProjectPath()
-                if ppath:
-                    txt = txt.replace(ppath + os.sep, "")
+                txt = e5App().getObject("Project").getRelativePath(fn)
             if len(txt) > self.maxFileNameChars:
                 txt = "...%s" % txt[-self.maxFileNameChars:]
             if not QFileInfo(fn).isWritable():
@@ -845,10 +836,7 @@ class Tabview(QSplitter, ViewManager):
         if self.filenameOnly:
             tabName = os.path.basename(newName)
         else:
-            tabName = newName
-            ppath = e5App().getObject("Project").getProjectPath()
-            if ppath:
-                tabName = tabName.replace(ppath + os.sep, "")
+            tabName = e5App().getObject("Project").getRelativePath(newName)
         if len(tabName) > self.maxFileNameChars:
             tabName = "...%s" % tabName[-self.maxFileNameChars:]
         index = self.currentTabWidget.indexOf(editor)
@@ -1079,10 +1067,7 @@ class Tabview(QSplitter, ViewManager):
                         if self.filenameOnly:
                             txt = os.path.basename(fn)
                         else:
-                            txt = fn
-                            ppath = e5App().getObject("Project").getProjectPath()
-                            if ppath:
-                                txt = txt.replace(ppath + os.sep, "")
+                            txt = e5App().getObject("Project").getRelativePath(fn)
                         if len(txt) > self.maxFileNameChars:
                             txt = "...%s" % txt[-self.maxFileNameChars:]
                         if not QFileInfo(fn).isWritable():

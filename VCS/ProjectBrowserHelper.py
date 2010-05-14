@@ -267,8 +267,7 @@ class VcsProjectBrowserHelper(QObject):
                 names = [itm.dirName() for itm in items]
             else:
                 names = [itm.fileName() for itm in items]
-            files = [
-                name.replace(self.browser.project.ppath+os.sep, '') \
+            files = [self.browser.project.getRelativePath(name) \
                 for name in names]
             
             dlg = DeleteFilesConfirmationDialog(self.parent(),

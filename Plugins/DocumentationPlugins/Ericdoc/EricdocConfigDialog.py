@@ -26,11 +26,11 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
     """
     Class implementing a dialog to enter the parameters for eric5-doc.
     """
-    def __init__(self, ppath, parms = None, parent = None):
+    def __init__(self, project, parms = None, parent = None):
         """
         Constructor
         
-        @param ppath project path of the current project (string)
+        @param project reference to the project object (Project.Project)
         @param parms parameters to set in the dialog
         @param parent parent widget of this dialog
         """
@@ -72,7 +72,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
                 else:
                     self.parameters[key] = parms[key]
         
-        self.ppath = ppath
+        self.ppath = project.getProjectPath()
+        self.project = project
         
         self.outputDirCompleter = E5DirCompleter(self.outputDirEdit)
         self.ignoreDirCompleter = E5DirCompleter(self.ignoreDirEdit)
@@ -247,7 +248,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         if directory:
             # make it relative, if it is a subdirectory of the project path 
             dn = Utilities.toNativeSeparators(directory)
-            dn = dn.replace(self.ppath + os.sep, '')
+            dn = self.project.getRelativePath(dn)
             while dn.endswith(os.sep):
                 dn = dn[:-1]
             self.outputDirEdit.setText(dn)
@@ -272,7 +273,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         if directory:
             # make it relative, if it is a subdirectory of the project path 
             dn = Utilities.toNativeSeparators(directory)
-            dn = dn.replace(self.ppath + os.sep, '')
+            dn = self.project.getRelativePath(dn)
             while dn.endswith(os.sep):
                 dn = dn[:-1]
             self.ignoreDirEdit.setText(dn)
@@ -310,7 +311,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         if cssFile:
             # make it relative, if it is in a subdirectory of the project path 
             cf = Utilities.toNativeSeparators(cssFile)
-            cf = cf.replace(self.ppath + os.sep, '')
+            cf = self.project.getRelativePath(cf)
             self.cssEdit.setText(cf)
 
     def __selectColor(self, colorKey):
@@ -458,7 +459,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         if directory:
             # make it relative, if it is a subdirectory of the project path 
             dn = Utilities.toNativeSeparators(directory)
-            dn = dn.replace(self.ppath + os.sep, '')
+            dn = self.project.getRelativePath(dn)
             while dn.endswith(os.sep):
                 dn = dn[:-1]
             self.qtHelpDirEdit.setText(dn)

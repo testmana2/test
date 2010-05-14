@@ -69,9 +69,10 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
             self.repoRootLabel1.setText(reposRoot)
             self.repoRootLabel2.setText(reposRoot)
         else:
-            ppath = e5App().getObject('Project').getProjectPath()
-            if path != ppath:
-                path = path.replace(ppath, '')
+            project = e5App().getObject('Project')
+            if Utilities.normcasepath(path) != \
+               Utilities.normcasepath(project.getProjectPath()):
+                path = project.getRelativePath(path)
                 reposURL = reposURL.replace(path, '')
             self.repoRootLabel1.hide()
             self.typeCombo1.hide()

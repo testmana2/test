@@ -617,7 +617,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if itmList and not previewAll:
             for itm in itmList:
                 if isinstance(itm, ProjectBrowserSimpleDirectoryItem):
-                    dname = itm.dirName().replace(self.project.ppath+os.sep, '')
+                    dname = self.project.getRelativePath(itm.dirName())
                     trfiles = sorted(self.project.pdata["TRANSLATIONS"][:])
                     for trfile in trfiles:
                         if trfile.startswith(dname):
@@ -686,7 +686,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         sections.append(("FORMS", forms))
         
         if langs:
-            l = [lang.fileName().replace(self.project.ppath + os.sep, '') \
+            l = [self.project.getRelativePath(lang.fileName()) \
                  for lang in langs if lang.fileName().endswith('.ts')]
         else:
             try:
@@ -873,13 +873,13 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         else:
             if noobsolete:
                 if self.hooks["generateSelected"] is not None:
-                    l = [lang.fileName().replace(self.project.ppath + os.sep, '') \
+                    l = [self.project.getRelativePath(lang.fileName()) \
                          for lang in langs]
                     self.hooks["generateSelected"](l)
                     return
             else:
                 if self.hooks["generateSelectedWithObsolete"] is not None:
-                    l = [lang.fileName().replace(self.project.ppath + os.sep, '') \
+                    l = [self.project.getRelativePath(lang.fileName()) \
                          for lang in langs]
                     self.hooks["generateSelectedWithObsolete"](l)
                     return
@@ -1015,7 +1015,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 return
         else:
             if self.hooks["releaseSelected"] is not None:
-                l = [lang.fileName().replace(self.project.ppath+os.sep, '') \
+                l = [self.project.getRelativePath(lang.fileName()) \
                      for lang in langs]
                 self.hooks["releaseSelected"](l)
                 return

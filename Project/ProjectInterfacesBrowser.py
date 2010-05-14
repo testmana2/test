@@ -382,7 +382,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         for itm in itmList:
             fn2 = itm.fileName()
             fullNames.append(fn2)
-            fn = fn2.replace(self.project.ppath+os.sep, '')
+            fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
         dlg = DeleteFilesConfirmationDialog(self.parent(),
@@ -512,7 +512,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         if self.omniidl is not None:
             itm = self.model().item(self.currentIndex())
             fn2 = itm.fileName()
-            fn = fn2.replace(self.project.ppath+os.sep, '')
+            fn = self.project.getRelativePath(fn2)
             self.__compileIDL(fn)
         
     def __compileAllInterfaces(self):
@@ -550,7 +550,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         if self.omniidl is not None:
             items = self.getSelectedItems()
             
-            files = [itm.fileName().replace(self.project.ppath+os.sep, '') \
+            files = [self.project.getRelativePath(itm.fileName()) \
                      for itm in items]
             numIDLs = len(files)
             progress = QProgressDialog(self.trUtf8("Compiling interfaces..."), 

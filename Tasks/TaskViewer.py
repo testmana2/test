@@ -33,7 +33,7 @@ class Task(QTreeWidgetItem):
     """
     def __init__(self, description, priority = 1, filename = "", lineno = 0, 
                  completed = False, _time = 0, isProjectTask = False, 
-                 isBugfixTask = False, ppath = "", longtext = ""):
+                 isBugfixTask = False, project = None, longtext = ""):
         """
         Constructor
         
@@ -47,7 +47,7 @@ class Task(QTreeWidgetItem):
         @param isProjectTask flag indicating a task related to the current project
             (boolean)
         @param isBugfixTask flag indicating a bugfix task (boolean)
-        @param ppath the project path (string)
+        @param project reference to the project object (Project)
         @param longtext explanatory text of the task (string)
         """
         self.description = description
@@ -62,10 +62,10 @@ class Task(QTreeWidgetItem):
         self.created = _time and _time or time.time()
         self._isProjectTask = isProjectTask
         self.isBugfixTask = isBugfixTask
-        self.ppath = ppath
+        self.project = project
         
         if isProjectTask:
-            self.filename = self.filename.replace(self.ppath + os.sep, "")
+            self.filename = self.project.getRelativePath(self.filename)
             
         QTreeWidgetItem.__init__(self, ["", "", self.description, self.filename, 
             (self.lineno and "%6d" % self.lineno or "")])
@@ -165,7 +165,7 @@ class Task(QTreeWidgetItem):
         @return filename (string)
         """
         if self._isProjectTask and self.filename:
-            return os.path.join(self.ppath, self.filename)
+            return os.path.join(self.project.getProjectPath(), self.filename)
         else:
             return self.filename
     
@@ -531,8 +531,7 @@ class TaskViewer(QTreeWidget):
         """
         task = Task(description, priority, filename, lineno, completed, 
                    _time, isProjectTask, isBugfixTask, 
-                   self.project and self.project.ppath or "", 
-                   longtext)
+                   self.project, longtext)
         self.tasks.append(task)
         if self.taskFilter.showTask(task):
             self.addTopLevelItem(task)

@@ -861,7 +861,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             name = self.browser.currentItem().fileName()
         except AttributeError:
             name = self.browser.currentItem().dirName()
-        name = name.replace(self.project.ppath+os.sep, "")
+        name = self.project.getRelativePath(name)
         self.vcs.svnInfo(self.project.ppath, name)
         
     def __SVNConfigure(self):

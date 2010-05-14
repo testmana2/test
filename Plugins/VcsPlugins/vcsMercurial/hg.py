@@ -2007,8 +2007,8 @@ class Hg(VersionControl):
         """
         Protected method to create an instance of the VCS status monitor thread.
         
-        @param project reference to the project object
+        @param project reference to the project object (Project)
         @param interval check interval for the monitor thread in seconds (integer)
         @return reference to the monitor thread (QThread)
         """
-        return HgStatusMonitorThread(interval, project.ppath, self)
+        return HgStatusMonitorThread(interval, project, self)

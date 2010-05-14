@@ -108,6 +108,6 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
             self.project.pdata["SPELLLANGUAGE"] = \
                 [self.spellingComboBox.currentText()]
         self.project.pdata["SPELLWORDS"] = \
-            [self.pwlEdit.text().replace(self.project.ppath + os.sep, "")]
+            [self.project.getRelativePath(self.pwlEdit.text())]
         self.project.pdata["SPELLEXCLUDES"] = \
-            [self.pelEdit.text().replace(self.project.ppath + os.sep, "")]
+            [self.project.getRelativePath(self.pelEdit.text())]

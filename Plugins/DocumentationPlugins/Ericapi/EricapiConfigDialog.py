@@ -173,7 +173,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         if filename:
             # make it relative, if it is in a subdirectory of the project path 
             fn = Utilities.toNativeSeparators(filename)
-            fn = fn.replace(self.ppath + os.sep, '')
+            fn = self.project.getRelativePath(fn)
             self.outputFileEdit.setText(fn)
 
     def on_outputFileEdit_textChanged(self, filename):
@@ -204,7 +204,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         if directory:
             # make it relative, if it is a subdirectory of the project path 
             dn = Utilities.toNativeSeparators(directory)
-            dn = dn.replace(self.ppath + os.sep, '')
+            dn = self.project.getRelativePath(dn)
             while dn.endswith(os.sep):
                 dn = dn[:-1]
             self.ignoreDirEdit.setText(dn)

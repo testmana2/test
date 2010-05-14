@@ -304,7 +304,7 @@ class ProjectBaseBrowser(Browser):
         @param fn filename of file to be highlighted (string)
         """
         newfn = os.path.abspath(fn)
-        newfn = newfn.replace(self.project.ppath + os.sep, '')
+        newfn = self.project.getRelativePath(newfn)
         sindex = self._model.itemIndexByName(newfn)
         if sindex.isValid():
             index = self.model().mapFromSource(sindex)

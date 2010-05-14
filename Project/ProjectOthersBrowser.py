@@ -269,13 +269,13 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         for itm in itmList:
             if isinstance(itm, ProjectBrowserFileItem):
                 fn2 = itm.fileName()
-                fn = fn2.replace(self.project.ppath+os.sep, '')
+                fn = self.project.getRelativePath(fn2)
                 items.append(itm)
                 fullNames.append(fn2)
                 names.append(fn)
             else:
                 dn2 = itm.dirName()
-                dn = dn2.replace(self.project.ppath+os.sep, '')
+                dn = self.project.getRelativePath(dn2)
                 dirItems.append(itm)
                 dirFullNames.append(dn2)
                 dirNames.append(dn)

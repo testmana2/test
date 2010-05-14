@@ -7,8 +7,6 @@
 Module implementing the VCS status monitor thread base class.
 """
 
-import os
-
 from PyQt4.QtCore import QThread, QMutex, QWaitCondition, SIGNAL
 
 class VcsStatusMonitorThread(QThread):
@@ -19,12 +17,12 @@ class VcsStatusMonitorThread(QThread):
     @signal vcsStatusMonitorStatus(QString, QString) emitted to signal the status of the
         monitoring thread (ok, nok, op) and a status message
     """
-    def __init__(self, interval, projectDir, vcs, parent = None):
+    def __init__(self, interval, project, vcs, parent = None):
         """
         Constructor
         
         @param interval new interval in seconds (integer)
-        @param projectDir project directory to monitor (string)
+        @param project reference to the project object (Project)
         @param vcs reference to the version control object
         @param parent reference to the parent object (QObject)
         """
@@ -33,7 +31,8 @@ class VcsStatusMonitorThread(QThread):
         
         self.setTerminationEnabled(True)
         
-        self.projectDir = projectDir
+        self.projectDir = project.getProjectPath()
+        self.project = project
         self.vcs = vcs
         
         self.interval = interval
@@ -158,7 +157,7 @@ class VcsStatusMonitorThread(QThread):
         
         @param name name of the entry to be cleared (string)
         """
-        key = name.replace(self.projectDir + os.sep, '')
+        key = self.project.getRelativePath(name)
         try:
             del self.reportedStates[key]
         except KeyError:

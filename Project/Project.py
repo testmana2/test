@@ -15,6 +15,7 @@ import fnmatch
 import copy
 import zipfile
 import io
+import re
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -280,6 +281,7 @@ class Project(QObject):
         self.dirty = False      # dirty flag
         self.pfile = ""         # name of the project file
         self.ppath = ""         # name of the project directory
+        self.ppathRe = None
         self.translationsRoot = ""  # the translations prefix
         self.name = ""
         self.opened = False
@@ -571,6 +573,10 @@ class Project(QObject):
             
         self.pfile = os.path.abspath(fn)
         self.ppath = os.path.abspath(os.path.dirname(fn))
+        if Utilities.isWindowsPlatform():
+            self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE )
+        else:
+            self.ppathRe = re.compile(re.escape(self.ppath + os.sep))
         
         # insert filename into list of recently opened projects
         self.__syncRecent()
@@ -726,6 +732,10 @@ class Project(QObject):
         if res:
             self.pfile = os.path.abspath(fn)
             self.ppath = os.path.abspath(os.path.dirname(fn))
+            if Utilities.isWindowsPlatform():
+                self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE )
+            else:
+                self.ppathRe = re.compile(re.escape(self.ppath + os.sep))
             self.name = os.path.splitext(os.path.basename(fn))[0]
             self.setDirty(False)
             
@@ -1542,15 +1552,16 @@ class Project(QObject):
         
         @param langFile the translation file to be removed (string)
         """
-        langFile = langFile.replace(self.ppath + os.sep, '')
+        langFile = self.getRelativePath(langFile)
         qmFile = self.__binaryTranslationFile(langFile)
         self.pdata["TRANSLATIONS"].remove(langFile)
         self.__model.removeItem(langFile)
         if qmFile:
             try:
                 if self.pdata["TRANSLATIONSBINPATH"]:
-                    qmFile = os.path.join(self.pdata["TRANSLATIONSBINPATH"][0],
-                        os.path.basename(qmFile)).replace(self.ppath + os.sep, '')
+                    qmFile = self.getRelativePath(
+                        os.path.join(self.pdata["TRANSLATIONSBINPATH"][0],
+                        os.path.basename(qmFile)))
                 self.pdata["TRANSLATIONS"].remove(qmFile)
                 self.__model.removeItem(qmFile)
             except ValueError:
@@ -1563,7 +1574,7 @@ class Project(QObject):
         
         @param langFile the translation file to be removed (string)
         """
-        langFile = langFile.replace(self.ppath + os.sep, '')
+        langFile = self.getRelativePath(langFile)
         qmFile = self.__binaryTranslationFile(langFile)
         
         try:
@@ -1583,8 +1594,9 @@ class Project(QObject):
         if qmFile:
             try:
                 if self.pdata["TRANSLATIONSBINPATH"]:
-                    qmFile = os.path.join(self.pdata["TRANSLATIONSBINPATH"][0],
-                        os.path.basename(qmFile)).replace(self.ppath + os.sep, '')
+                    qmFile = self.getRelativePath(
+                        os.path.join(self.pdata["TRANSLATIONSBINPATH"][0],
+                        os.path.basename(qmFile)))
                 fn = os.path.join(self.ppath, qmFile)
                 if os.path.exists(fn):
                     os.remove(fn)
@@ -1608,7 +1620,7 @@ class Project(QObject):
         
         if os.path.isabs(fn):
             # make it relative to the project root, if it starts with that path
-            newfn = fn.replace(self.ppath + os.sep, '')
+            newfn = self.getRelativePath(fn)
         else:
             # assume relative paths are relative to the project root
             newfn = fn
@@ -1876,7 +1888,7 @@ class Project(QObject):
         """
         if fn:
             # if it is below the project directory, make it relative to that
-            fn = fn.replace(self.ppath + os.sep, '')
+            fn = self.getRelativePath(fn)
             
             # if it ends with the directory separator character, remove it
             if fn.endswith(os.sep):
@@ -1958,11 +1970,11 @@ class Project(QObject):
         @param newfn new filename of the main script (string)
         """
         if self.pdata["MAINSCRIPT"]:
-            ofn = oldfn.replace(self.ppath + os.sep, '')
+            ofn = self.getRelativePath(oldfn)
             if ofn != self.pdata["MAINSCRIPT"][0]:
                 return
             
-            fn = newfn.replace(self.ppath + os.sep, '')
+            fn = self.getRelativePath(newfn)
             self.pdata["MAINSCRIPT"] = [fn]
             self.setDirty(True)
         
@@ -1974,7 +1986,7 @@ class Project(QObject):
         @param newfn new filename of the file (string)
         @return flag indicating success
         """
-        fn = oldfn.replace(self.ppath + os.sep, '')
+        fn = self.getRelativePath(oldfn)
         isSourceFile = fn in self.pdata["SOURCES"]
         
         if newfn is None:
@@ -2028,7 +2040,7 @@ class Project(QObject):
         @param isSourceFile flag indicating that this is a source file
                 even if it doesn't have the source extension (boolean)
         """
-        fn = oldname.replace(self.ppath + os.sep, '')
+        fn = self.getRelativePath(oldname)
         if os.path.dirname(oldname) == os.path.dirname(newname):
             self.removeFile(oldname, False)
             self.appendFile(newname, isSourceFile, False)
@@ -2047,7 +2059,7 @@ class Project(QObject):
         @param start prefix (string)
         """
         filelist = []
-        start = start.replace(self.ppath + os.sep, '')
+        start = self.getRelativePath(start)
         for key in ["SOURCES", "FORMS", "INTERFACES", "RESOURCES", "OTHERS"]:
             for entry in self.pdata[key][:]:
                 if entry.startswith(start):
@@ -2061,8 +2073,8 @@ class Project(QObject):
         @param olddn original directory name (string)
         @param newdn new directory name (string)
         """
-        olddn = olddn.replace(self.ppath + os.sep, '')
-        newdn = newdn.replace(self.ppath + os.sep, '')
+        olddn = self.getRelativePath(olddn)
+        newdn = self.getRelativePath(newdn)
         for key in ["SOURCES", "FORMS", "INTERFACES", "RESOURCES", "OTHERS"]:
             for entry in self.pdata[key][:]:
                 if entry.startswith(olddn):
@@ -2077,8 +2089,8 @@ class Project(QObject):
         @param olddn old directory name (string)
         @param newdn new directory name (string)
         """
-        olddn = olddn.replace(self.ppath + os.sep, '')
-        newdn = newdn.replace(self.ppath + os.sep, '')
+        olddn = self.getRelativePath(olddn)
+        newdn = self.getRelativePath(newdn)
         typeStrings = []
         for key in ["SOURCES", "FORMS", "INTERFACES", "RESOURCES", "OTHERS"]:
             for entry in self.pdata[key][:]:
@@ -2110,7 +2122,7 @@ class Project(QObject):
         @param fn filename to be removed from the project
         @param updateModel flag indicating an update of the model is requested (boolean)
         """
-        fn = fn.replace(self.ppath + os.sep, '')
+        fn = self.getRelativePath(fn)
         dirty = True
         if fn in self.pdata["SOURCES"]:
             self.pdata["SOURCES"].remove(fn)
@@ -2139,7 +2151,7 @@ class Project(QObject):
         @param dn directory name to be removed from the project
         """
         dirty = False
-        dn = dn.replace(self.ppath + os.sep, '')
+        dn = self.getRelativePath(dn)
         for entry in self.pdata["OTHERS"][:]:
             if entry.startswith(dn):
                 self.pdata["OTHERS"].remove(entry)
@@ -2212,7 +2224,7 @@ class Project(QObject):
         @param fn filename to be checked (string)
         @return flag indicating, if the project contains the file (boolean)
         """
-        fn = fn.replace(self.ppath + os.sep, '')
+        fn = self.getRelativePath(fn)
         if fn in self.pdata["SOURCES"] or \
            fn in self.pdata["FORMS"] or \
            fn in self.pdata["INTERFACES"] or \
@@ -2511,7 +2523,7 @@ class Project(QObject):
                 if not pattern.isEmpty:
                     self.pdata["TRANSLATIONPATTERN"] = [pattern]
             self.pdata["TRANSLATIONPATTERN"][0] = \
-                self.pdata["TRANSLATIONPATTERN"][0].replace(self.ppath + os.sep, "")
+                self.getRelativePath(self.pdata["TRANSLATIONPATTERN"][0])
             pattern = self.pdata["TRANSLATIONPATTERN"][0].replace("%language%", "*")
             for ts in tslist:
                 if fnmatch.fnmatch(ts, pattern):
@@ -3032,7 +3044,7 @@ class Project(QObject):
         success = True
         filesWithSyntaxErrors = 0
         for fn in vm.getOpenFilenames():
-            rfn = fn.replace(self.ppath + os.sep, '') # make relativ to project
+            rfn = self.getRelativePath(fn)
             if rfn in self.pdata["SOURCES"] or rfn in self.pdata["OTHERS"]:
                 editor = vm.getOpenEditor(fn)
                 success &= vm.saveEditorEd(editor)
@@ -3137,6 +3149,17 @@ class Project(QObject):
         """
         return self.ppath
         
+    def startswithProjectPath(self, path):
+        """
+        Public method to check, if a path starts with the project path.
+        
+        @param path path to be checked (string)
+        """
+        if self.ppathRe:
+            return self.ppathRe.match(path) is not None
+        else:
+            return False
+        
     def getProjectFile(self):
         """
         Public method to get the path of the project file.
@@ -3164,27 +3187,30 @@ class Project(QObject):
         """
         return self.pdata["HASH"][0]
         
-    def getRelativePath(self, fn):
+    def getRelativePath(self, path):
         """
         Public method to convert a file path to a project relative
         file path.
         
-        @param fn file or directory name to convert (string)
-        @return project relative path or unchanged path, if fn doesn't
+        @param path file or directory name to convert (string)
+        @return project relative path or unchanged path, if path doesn't
             belong to the project (string)
         """
-        return fn.replace(self.ppath + os.sep, "")
+        if self.startswithProjectPath(path):
+            return self.ppathRe.sub("", path, 1)
+        else:
+            return path
         
-    def getRelativeUniversalPath(self, fn):
+    def getRelativeUniversalPath(self, path):
         """
         Public method to convert a file path to a project relative
         file path with universal separators.
         
-        @param fn file or directory name to convert (string)
-        @return project relative path or unchanged path, if fn doesn't
+        @param path file or directory name to convert (string)
+        @return project relative path or unchanged path, if path doesn't
             belong to the project (string)
         """
-        return Utilities.fromNativeSeparators(fn.replace(self.ppath + os.sep, ""))
+        return Utilities.fromNativeSeparators(self.getRelativePath(path))
         
     def getAbsoluteUniversalPath(self, fn):
         """
@@ -3206,7 +3232,7 @@ class Project(QObject):
         @return flag indicating membership (boolean)
         """
         newfn = os.path.abspath(fn)
-        newfn = newfn.replace(self.ppath + os.sep, '')
+        newfn = self.getRelativePath(newfn)
         if newfn in self.pdata["SOURCES"] or \
            newfn in self.pdata["FORMS"] or \
            newfn in self.pdata["INTERFACES"] or \
@@ -3229,7 +3255,7 @@ class Project(QObject):
         @return flag indicating membership (boolean)
         """
         newfn = os.path.abspath(fn)
-        newfn = newfn.replace(self.ppath + os.sep, '')
+        newfn = self.getRelativePath(newfn)
         return newfn in self.pdata["SOURCES"]
         
     def isProjectForm(self, fn):
@@ -3241,7 +3267,7 @@ class Project(QObject):
         @return flag indicating membership (boolean)
         """
         newfn = os.path.abspath(fn)
-        newfn = newfn.replace(self.ppath + os.sep, '')
+        newfn = self.getRelativePath(newfn)
         return newfn in self.pdata["FORMS"]
         
     def isProjectInterface(self, fn):
@@ -3253,7 +3279,7 @@ class Project(QObject):
         @return flag indicating membership (boolean)
         """
         newfn = os.path.abspath(fn)
-        newfn = newfn.replace(self.ppath + os.sep, '')
+        newfn = self.getRelativePath(newfn)
         return newfn in self.pdata["INTERFACES"]
         
     def isProjectResource(self, fn):
@@ -3265,7 +3291,7 @@ class Project(QObject):
         @return flag indicating membership (boolean)
         """
         newfn = os.path.abspath(fn)
-        newfn = newfn.replace(self.ppath + os.sep, '')
+        newfn = self.getRelativePath(newfn)
         return newfn in self.pdata["RESOURCES"]
         
     def initActions(self):
@@ -3925,7 +3951,7 @@ class Project(QObject):
                 # do not bother with dirs here...
                 if os.path.isdir(ns):
                     if recursiveSearch:
-                        d = ns.replace(self.ppath + os.sep, '')
+                        d = self.getRelativePath(ns)
                         if d not in dirs:
                             dirs.append(d)
                     continue
@@ -4039,7 +4065,7 @@ class Project(QObject):
         if not self.isOpen():
             return
         
-        name = fullname.replace(self.ppath + os.sep, "")
+        name = self.getRelativePath(fullname)
         self.emit(SIGNAL("prepareRepopulateItem"), name)
         self.__model.repopulateItem(name)
         self.emit(SIGNAL("completeRepopulateItem"), name)

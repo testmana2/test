@@ -565,7 +565,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         else:
             dn = ""
         
-        dn = dn.replace(self.project.ppath, "")
+        dn = self.project.getRelativePath(dn)
         if dn.startswith(os.sep):
             dn = dn[1:]
         dlg = NewPythonPackageDialog(dn, self)
@@ -651,7 +651,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         for itm in itmList:
             fn2 = itm.fileName()
             fullNames.append(fn2)
-            fn = fn2.replace(self.project.ppath+os.sep, '')
+            fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
         dlg = DeleteFilesConfirmationDialog(self.parent(),

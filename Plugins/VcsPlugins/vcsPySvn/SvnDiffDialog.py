@@ -184,8 +184,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         cwd = os.getcwd()
         os.chdir(dname)
         try:
-            ppath = e5App().getObject('Project').getProjectPath()
-            dname = dname.replace(ppath, '')
+            dname = e5App().getObject('Project').getRelativePath(dname)
             if dname:
                 dname += "/"
             for name in fnames:

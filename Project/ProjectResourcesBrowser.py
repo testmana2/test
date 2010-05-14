@@ -444,7 +444,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         for itm in itmList:
             fn2 = itm.fileName()
             fullNames.append(fn2)
-            fn = fn2.replace(self.project.ppath+os.sep, '')
+            fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
         dlg = DeleteFilesConfirmationDialog(self.parent(),
@@ -614,7 +614,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         """
         itm = self.model().item(self.currentIndex())
         fn2 = itm.fileName()
-        fn = fn2.replace(self.project.ppath+os.sep, '')
+        fn = self.project.getRelativePath(fn2)
         if self.hooks["compileResource"] is not None:
             self.hooks["compileResource"](fn)
         else:
@@ -655,7 +655,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         Private method to compile selected resources to source files.
         """
         items = self.getSelectedItems()
-        files = [itm.fileName().replace(self.project.ppath+os.sep, '') \
+        files = [self.project.getRelativePath(itm.fileName()) \
                  for itm in items]
         
         if self.hooks["compileSelectedResources"] is not None:

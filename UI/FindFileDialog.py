@@ -267,8 +267,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
         if self.projectButton.isChecked():
             if self.filterCheckBox.isChecked():
-                files = [file.replace(self.project.ppath + os.sep, "") \
-                         for file in self.__getFileList(self.project.ppath, filterRe)]
+                files = [self.project.getRelativePath(file) \
+                         for file in \
+                         self.__getFileList(self.project.getProjectPath(), filterRe)]
             else:
                 files = []
                 if self.sourcesCheckBox.isChecked():

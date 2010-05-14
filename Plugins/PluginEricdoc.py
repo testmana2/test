@@ -7,8 +7,6 @@
 Module implementing the Ericdoc plugin.
 """
 
-import os
-
 from PyQt4.QtCore import QObject, SIGNAL
 from PyQt4.QtGui import QDialog, QApplication
 
@@ -143,7 +141,7 @@ class EricdocPlugin(QObject):
         """
         project = e5App().getObject("Project")
         parms = project.getData('DOCUMENTATIONPARMS', "ERIC4DOC")
-        dlg = EricdocConfigDialog(project.getProjectPath(), parms)
+        dlg = EricdocConfigDialog(project, parms)
         if dlg.exec_() == QDialog.Accepted:
             args, parms = dlg.generateParameters()
             project.setData('DOCUMENTATIONPARMS', "ERIC4DOC", parms)
@@ -159,7 +157,7 @@ class EricdocPlugin(QObject):
                 outdir = 'doc'      # that is eric5-docs default output dir
                 
             # add it to the project data, if it isn't in already
-            outdir = outdir.replace(project.ppath+os.sep, '')
+            outdir = project.getRelativePath(outdir)
             if outdir not in project.pdata['OTHERS']:
                 project.pdata['OTHERS'].append(outdir)
                 project.setDirty(True)
@@ -171,7 +169,7 @@ class EricdocPlugin(QObject):
                     outdir = 'help'      # that is eric5-docs default QtHelp output dir
                     
                 # add it to the project data, if it isn't in already
-                outdir = outdir.replace(project.ppath+os.sep, '')
+                outdir = project.getRelativePath(outdir)
                 if outdir not in project.pdata['OTHERS']:
                     project.pdata['OTHERS'].append(outdir)
                     project.setDirty(True)

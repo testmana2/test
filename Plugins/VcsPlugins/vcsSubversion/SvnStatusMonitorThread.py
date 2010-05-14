@@ -17,16 +17,16 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
     """
     Class implementing the VCS status monitor thread class for Subversion.
     """
-    def __init__(self, interval, projectDir, vcs, parent = None):
+    def __init__(self, interval, project, vcs, parent = None):
         """
         Constructor
         
         @param interval new interval in seconds (integer)
-        @param projectDir project directory to monitor (string)
+        @param project reference to the project object (Project)
         @param vcs reference to the version control object
         @param parent reference to the parent object (QObject)
         """
-        VcsStatusMonitorThread.__init__(self, interval, projectDir, vcs, parent)
+        VcsStatusMonitorThread.__init__(self, interval, project, vcs, parent)
         
         self.__ioEncoding = Preferences.getSystem("IOEncoding")
         

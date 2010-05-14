@@ -139,12 +139,11 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Private slot to add the shown exception to the listwidget.
         """
-        if self.project.ppath == '':
-            ppath = self.parent.getPPath()
-        else:
-            ppath = self.project.ppath
         texcept = self.exceptionEdit.text()
-        texcept = texcept.replace(ppath + os.sep, "")
+        if self.project.ppath == '':
+            texcept = texcept.replace(self.parent.getPPath() + os.sep, "")
+        else:
+            texcept = self.project.getRelativePath(texcept)
         if texcept.endswith(os.sep):
             texcept = texcept[:-1]
         if texcept:
@@ -204,14 +203,14 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         tp = Utilities.toNativeSeparators(self.transPatternEdit.text())
         if tp:
-            tp = tp.replace(self.project.ppath + os.sep, "")
+            tp = self.project.getRelativePath(tp)
             self.project.pdata["TRANSLATIONPATTERN"] = [tp]
             self.project.translationsRoot = tp.split("%language%")[0]
         else:
             self.project.pdata["TRANSLATIONPATTERN"] = []
         tp = Utilities.toNativeSeparators(self.transBinPathEdit.text())
         if tp:
-            tp = tp.replace(self.project.ppath + os.sep, "")
+            tp = self.project.getRelativePath(tp)
             self.project.pdata["TRANSLATIONSBINPATH"] = [tp]
         else:
             self.project.pdata["TRANSLATIONSBINPATH"] = []
