@@ -236,7 +236,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         self.project.pdata["VERSION"] = [self.versionEdit.text()]
         fn = self.mainscriptEdit.text()
         if fn:
-            fn = self.project.getRelativePath(fn2)
+            fn = self.project.getRelativePath(fn)
             self.project.pdata["MAINSCRIPT"] = [fn]
             self.project.translationsRoot = os.path.splitext(fn)[0]
         else:
