@@ -41,7 +41,7 @@ class ImportsDiagram(UMLDialog):
         """
         self.showExternalImports = showExternalImports
         self.packagePath = Utilities.normabspath(package)
-        self.package = self.packagePath.replace(os.sep, '.')[1:]
+        self.package = os.path.splitdrive(self.packagePath)[1].replace(os.sep, '.')[1:]
         hasInit = True
         ppath = self.packagePath
         while hasInit:
