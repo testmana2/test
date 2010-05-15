@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Project SYSTEM "Project-5.0.dtd">
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<Project version="5.0">
+<Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
   <ProjectExcludeList>Dictionaries/excludes.dic</ProjectExcludeList>
@@ -13,6 +13,7 @@
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
   <TranslationPattern>i18n/eric5_%language%.ts</TranslationPattern>
+  <Eol index="1" />
   <Sources>
     <Source>__init__.py</Source>
     <Source>Preferences/__init__.py</Source>
@@ -1244,13 +1245,16 @@
                 <string>Styles</string>
                 <string>CodeTemplates</string>
                 <string>.ropeproject</string>
-                <string>.svn</string>
-                <string>_svn</string>
-                <string>.eric4project</string>
-                <string>_eric4project</string>
                 <string>patches</string>
                 <string>Dictionaries</string>
                 <string>coverage</string>
+                <string>.eric5project</string>
+                <string>_eric5project</string>
+                <string>_ropeproject</string>
+                <string>.hg</string>
+                <string>_hg</string>
+                <string>.directory</string>
+                <string>.issues</string>
               </list>
             </value>
             <key>
@@ -1358,15 +1362,16 @@
                 <string>Styles</string>
                 <string>CodeTemplates</string>
                 <string>.ropeproject</string>
-                <string>.svn</string>
-                <string>_svn</string>
-                <string>.eric4project</string>
-                <string>_eric4project</string>
                 <string>patches</string>
                 <string>Dictionaries</string>
                 <string>coverage</string>
                 <string>.eric5project</string>
                 <string>_eric5project</string>
+                <string>_ropeproject</string>
+                <string>.hg</string>
+                <string>_hg</string>
+                <string>.directory</string>
+                <string>.issues</string>
               </list>
             </value>
             <key>

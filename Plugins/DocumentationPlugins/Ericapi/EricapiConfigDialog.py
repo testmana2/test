@@ -53,12 +53,13 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         if parms is not None:
             for key, value in list(parms.items()):
                 self.parameters[key] = parms[key]
+        self.parameters['outputFile'] = \
+            Utilities.toNativeSeparators(self.parameters['outputFile'])
         
         self.outputFileCompleter = E5FileCompleter(self.outputFileEdit)
         self.ignoreDirCompleter = E5DirCompleter(self.ignoreDirEdit)
         
         self.recursionCheckBox.setChecked(self.parameters['useRecursion'])
-        self.oldStyleCheckBox.setChecked(not self.parameters['newStyle'])
         self.includePrivateCheckBox.setChecked(self.parameters['includePrivate'])
         self.outputFileEdit.setText(self.parameters['outputFile'])
         self.baseEdit.setText(self.parameters['basePackage'])
@@ -80,7 +81,6 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         """
         self.defaults = {
             'useRecursion' : False,
-            'newStyle' : True,
             'includePrivate' : False, 
             'outputFile' : '',
             'basePackage' : '',
@@ -117,7 +117,8 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         
         # 2. the commandline options
         if self.parameters['outputFile'] != self.defaults['outputFile']:
-            parms['outputFile'] = self.parameters['outputFile']
+            parms['outputFile'] = Utilities.fromNativeSeparators(
+                self.project.getRelativePath(self.parameters['outputFile']))
             args.append('-o')
             if os.path.isabs(self.parameters['outputFile']):
                 args.append(self.parameters['outputFile'])
@@ -144,9 +145,6 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             for ext in self.parameters['sourceExtensions']:
                 args.append('-t')
                 args.append(ext)
-        if self.parameters['newStyle'] != self.defaults['newStyle']:
-            parms['newStyle'] = self.parameters['newStyle']
-            args.append('--oldstyle')
         if self.parameters['includePrivate'] != self.defaults['includePrivate']:
             parms['includePrivate'] = self.parameters['includePrivate']
             args.append('-p')
@@ -235,7 +233,6 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         It saves the values in the parameters dictionary.
         """
         self.parameters['useRecursion'] = self.recursionCheckBox.isChecked()
-        self.parameters['newStyle'] = not self.oldStyleCheckBox.isChecked()
         self.parameters['includePrivate'] = self.includePrivateCheckBox.isChecked()
         outfile = self.outputFileEdit.text()
         if outfile != '':

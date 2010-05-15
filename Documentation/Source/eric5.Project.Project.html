@@ -143,7 +143,7 @@ emitted to signal the status of the
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>dbgKeynames</td></tr><tr><td>keynames</td></tr><tr><td>userKeynames</td></tr>
+<tr><td>dbgKeynames</td></tr><tr><td>eols</td></tr><tr><td>keynames</td></tr><tr><td>userKeynames</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -409,6 +409,9 @@ QObject
 <td><a href="#Project.getEditorLexerAssoc">getEditorLexerAssoc</a></td>
 <td>Public method to retrieve a lexer association.</td>
 </tr><tr>
+<td><a href="#Project.getEolString">getEolString</a></td>
+<td>Public method to get the EOL-string to be used by the project.</td>
+</tr><tr>
 <td><a href="#Project.getFiles">getFiles</a></td>
 <td>Public method to get all files starting with a common prefix.</td>
 </tr><tr>
@@ -603,6 +606,9 @@ QObject
 </tr><tr>
 <td><a href="#Project.updateFileTypes">updateFileTypes</a></td>
 <td>Public method to update the filetype associations with new default values.</td>
+</tr><tr>
+<td><a href="#Project.useSystemEol">useSystemEol</a></td>
+<td>Public method to check, if the project uses the system eol setting.</td>
 </tr>
 </table>
 <a NAME="Project.__init__" ID="Project.__init__"></a>
@@ -1455,6 +1461,16 @@ filename used to determine the associated lexer language (string)
 <dd>
 the requested lexer language (string)
 </dd>
+</dl><a NAME="Project.getEolString" ID="Project.getEolString"></a>
+<h4>Project.getEolString</h4>
+<b>getEolString</b>(<i></i>)
+<p>
+        Public method to get the EOL-string to be used by the project.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+eol string (string)
+</dd>
 </dl><a NAME="Project.getFiles" ID="Project.getFiles"></a>
 <h4>Project.getFiles</h4>
 <b>getFiles</b>(<i>start</i>)
@@ -2245,7 +2261,17 @@ internal type designator to be unregistered (string)
 <b>updateFileTypes</b>(<i></i>)
 <p>
         Public method to update the filetype associations with new default values.
-</p>
+</p><a NAME="Project.useSystemEol" ID="Project.useSystemEol"></a>
+<h4>Project.useSystemEol</h4>
+<b>useSystemEol</b>(<i></i>)
+<p>
+        Public method to check, if the project uses the system eol setting.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the usage of system eol (boolean)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

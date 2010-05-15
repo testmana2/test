@@ -611,7 +611,11 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if exitStatus == QProcess.NormalExit and exitCode == 0 and self.buf:
             ofn = os.path.join(self.project.ppath, self.compiledFile)
             try:
-                f = open(ofn, "w", encoding = "utf-8")
+                if self.project.useSystemEol():
+                    newline = None
+                else:
+                    newline = self.project.getEolString()
+                f = open(ofn, "w", encoding = "utf-8", newline = newline)
                 for line in self.buf.splitlines():
                     f.write(line + "\n")
                 f.close()

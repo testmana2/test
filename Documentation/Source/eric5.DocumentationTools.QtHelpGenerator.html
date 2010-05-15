@@ -57,6 +57,9 @@ object
 <td><a href="#QtHelpGenerator.__init__">QtHelpGenerator</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#QtHelpGenerator.__convertEol">__convertEol</a></td>
+<td>Private method to convert the newline characters.</td>
+</tr><tr>
 <td><a href="#QtHelpGenerator.__generateSections">__generateSections</a></td>
 <td>Private method to generate the sections part.</td>
 </tr><tr>
@@ -99,6 +102,24 @@ title to be used for the generated help (string)
 flag indicating the generation of the collection
             files (boolean)
 </dd>
+</dl><a NAME="QtHelpGenerator.__convertEol" ID="QtHelpGenerator.__convertEol"></a>
+<h4>QtHelpGenerator.__convertEol</h4>
+<b>__convertEol</b>(<i>txt, newline</i>)
+<p>
+        Private method to convert the newline characters.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be converted (string)
+</dd><dt><i>newline</i></dt>
+<dd>
+newline character to be used (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+converted text (string)
+</dd>
 </dl><a NAME="QtHelpGenerator.__generateSections" ID="QtHelpGenerator.__generateSections"></a>
 <h4>QtHelpGenerator.__generateSections</h4>
 <b>__generateSections</b>(<i>package, level</i>)
@@ -119,7 +140,7 @@ sections part (string)
 </dd>
 </dl><a NAME="QtHelpGenerator.generateFiles" ID="QtHelpGenerator.generateFiles"></a>
 <h4>QtHelpGenerator.generateFiles</h4>
-<b>generateFiles</b>(<i>basename = ""</i>)
+<b>generateFiles</b>(<i>basename = "", newline = None</i>)
 <p>
         Public method to generate all index files.
 </p><dl>
@@ -128,6 +149,9 @@ sections part (string)
 The basename of the file hierarchy to be documented.
             The basename is stripped off the filename if it starts with
             the basename.
+</dd><dt><i>newline</i></dt>
+<dd>
+newline character to be used (string)
 </dd>
 </dl><a NAME="QtHelpGenerator.remember" ID="QtHelpGenerator.remember"></a>
 <h4>QtHelpGenerator.remember</h4>

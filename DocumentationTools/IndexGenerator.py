@@ -106,12 +106,13 @@ class IndexGenerator(object):
         elt["modules"][moduleDocument.name()] = \
             moduleDocument.shortDescription()
     
-    def __writeIndex(self, packagename, package):
+    def __writeIndex(self, packagename, package, newline = None):
         """
         Private method to generate an index file for a package.
         
         @param packagename The name of the package. (string)
         @param package A dictionary with information about the package.
+        @param newline newline character to be used (string)
         @return The name of the generated index file.
         """
         if packagename == "00index":
@@ -172,19 +173,20 @@ class IndexGenerator(object):
               } + \
               self.footerTemplate
     
-        f = open(filename, "w", encoding = "utf-8")
+        f = open(filename, "w", encoding = "utf-8", newline = newline)
         f.write(doc)
         f.close()
     
         return filename
     
-    def writeIndices(self, basename = ""):
+    def writeIndices(self, basename = "", newline = None):
         """
         Public method to generate all index files.
         
         @param basename The basename of the file hierarchy to be documented.
             The basename is stripped off the filename if it starts with
             the basename.
+        @param newline newline character to be used (string)
         """
         if not self.remembered:
             sys.stderr.write("No index to generate.\n")
@@ -198,7 +200,7 @@ class IndexGenerator(object):
             try:
                 if basename:
                     package = package.replace(basename,"")
-                out = self.__writeIndex(package, element)
+                out = self.__writeIndex(package, element, newline)
             except IOError as v:
                 sys.stderr.write("%s error: %s\n" % (package, v[1]))
             else:

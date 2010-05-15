@@ -95,6 +95,10 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 self.descriptionEdit.setPlainText(self.project.pdata["DESCRIPTION"][0])
             except LookupError:
                 pass
+            try:
+                self.eolComboBox.setCurrentIndex(self.project.pdata["EOL"][0])
+            except IndexError:
+                pass
             self.vcsLabel.show()
             if self.project.vcs is not None:
                 vcsSystemsDict = e5App().getObject("PluginManager")\
@@ -251,6 +255,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         projectType = self.getProjectType()
         if projectType is not None:
             self.project.pdata["PROJECTTYPE"] = [projectType]
+        self.project.pdata["EOL"] = [self.eolComboBox.currentIndex()]
         
         if self.spellPropertiesDlg is not None:
             self.spellPropertiesDlg.storeData()

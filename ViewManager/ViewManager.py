@@ -3524,7 +3524,7 @@ class ViewManager(QObject):
         pro = e5App().getObject("Project")
         path = pro.ppath
         if ed:
-            ok, newName = ed.saveFileAs(path)
+            ok, newName = ed.saveFileAs(path, toProject = True)
             if ok:
                 self.setEditorName(ed, newName)
                 pro.appendFile(newName)

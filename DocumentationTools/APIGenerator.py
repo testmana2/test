@@ -27,23 +27,19 @@ class APIGenerator(object):
         Method to generate the source code documentation.
         
         @param newStyle flag indicating the api generation for QScintilla 1.7 and 
-            newer (boolean)
+            newer (boolean) (ignored)
         @param basePackage name of the base package (string)
         @param includePrivate flag indicating to include 
             private methods/functions (boolean)
         @return The API information. (string)
         """
         self.includePrivate = includePrivate
-        self.newStyle = newStyle
-        if self.newStyle:
-            modulePath = self.module.name.split('.')
-            if modulePath[-1] == '__init__':
-                del modulePath[-1]
-            if basePackage:
-                modulePath[0] = basePackage
-            self.moduleName = "%s." % '.'.join(modulePath)
-        else:
-            self.moduleName = ""
+        modulePath = self.module.name.split('.')
+        if modulePath[-1] == '__init__':
+            del modulePath[-1]
+        if basePackage:
+            modulePath[0] = basePackage
+        self.moduleName = "%s." % '.'.join(modulePath)
         self.api = []
         self.__addGlobalsAPI()
         self.__addClassesAPI()
@@ -64,10 +60,7 @@ class APIGenerator(object):
         """
         Private method to generate the api section for global variables. 
         """
-        if self.newStyle:
-            moduleNameStr = "%s" % self.moduleName
-        else:
-            moduleNameStr = ""
+        moduleNameStr = "%s" % self.moduleName
         
         for globalName in sorted(self.module.globals.keys()):
             if not self.__isPrivate(self.module.globals[globalName]):
@@ -109,10 +102,7 @@ class APIGenerator(object):
                 (self.moduleName, _class.name, id, 
                  ', '.join(_class.methods['__init__'].parameters[1:])))
             
-        if self.newStyle:
-            classNameStr = "%s%s." % (self.moduleName, className)
-        else:
-            classNameStr = ""
+        classNameStr = "%s%s." % (self.moduleName, className)
         for method in methods:
             if not self.__isPrivate(_class.methods[method]): 
                 if _class.methods[method].isPublic():
@@ -132,10 +122,7 @@ class APIGenerator(object):
         @param classname Name of the class containing the class variables. (string)
         """
         _class = self.module.classes[className]
-        if self.newStyle:
-            classNameStr = "%s%s." % (self.moduleName, className)
-        else:
-            classNameStr = ""
+        classNameStr = "%s%s." % (self.moduleName, className)
         for variable in sorted(_class.globals.keys()):
             if not self.__isPrivate(_class.globals[variable]): 
                 if _class.globals[variable].isPublic():

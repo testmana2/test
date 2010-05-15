@@ -416,7 +416,11 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     return
             
             try:
-                rcfile = open(fname, 'w', encoding = "utf-8")
+                if self.project.useSystemEol():
+                    newline = None
+                else:
+                    newline = self.project.getEolString()
+                rcfile = open(fname, 'w', encoding = "utf-8", newline = newline)
                 rcfile.write('<!DOCTYPE RCC>\n')
                 rcfile.write('<RCC version="1.0">\n')
                 rcfile.write('<qresource>\n')
@@ -426,8 +430,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             except IOError as e:
                 QMessageBox.critical(self,
                     self.trUtf8("New Resource"),
-                    self.trUtf8("<p>The new resource file <b>{0}</b> could not be created.<br>"
-                        "Problem: {1}</p>").format(fname, str(e)))
+                    self.trUtf8("<p>The new resource file <b>{0}</b> could not"
+                        " be created.<br>Problem: {1}</p>")\
+                        .format(fname, str(e)))
                 return
             
             self.project.appendFile(fname)
@@ -505,7 +510,11 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         if exitStatus == QProcess.NormalExit and exitCode == 0 and self.buf:
             ofn = os.path.join(self.project.ppath, self.compiledFile)
             try:
-                f = open(ofn, "w", encoding = "utf-8")
+                if self.project.useSystemEol():
+                    newline = None
+                else:
+                    newline = self.project.getEolString()
+                f = open(ofn, "w", encoding = "utf-8", newline = newline)
                 for line in self.buf.splitlines():
                     f.write(line + "\n")
                 f.close()

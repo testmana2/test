@@ -71,6 +71,7 @@ class ProjectHandler(XMLHandlerBase):
             'PackagersParams' : (self.startPackagersParams, self.endPackagersParams), 
             'CheckersParams' : (self.startCheckersParams, self.endCheckersParams),
             'OtherToolsParams' : (self.startOtherToolsParams, self.endOtherToolsParams),
+            'Eol' : (self.startEol, self.defaultEndElement), 
             # parameters kept for backward compatibility
             'UIType' : (self.defaultStartElement, self.endUIType),
             'TranslationPrefix' : (self.startTranslationPrefix, 
@@ -516,6 +517,15 @@ class ProjectHandler(XMLHandlerBase):
         lexer = attrs.get("lexer", "")
         if pattern:
             self.project.pdata["LEXERASSOCS"][pattern] = lexer
+        
+    def startEol(self, attrs):
+        """
+        Handler method for the "Eol" start tag.
+        
+        @param attrs list of tag attributes
+        """
+        index = int(attrs.get("index", "0"))
+        self.project.pdata["EOL"] = [index]
         
     def __buildPath(self):
         """

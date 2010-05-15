@@ -2415,14 +2415,18 @@ class Editor(QsciScintillaCompat):
             self.lastModified = QFileInfo(fn).lastModified()
             return (False, None)
         
-    def saveFileAs(self, path = None):
+    def saveFileAs(self, path = None, toProject = False):
         """
         Public slot to save a file with a new name.
         
         @param path directory to save the file in (string)
+        @keyparam toProject flag indicating a save to project operation (boolean)
         @return tuple of two values (boolean, string) giving a success indicator and
             the name of the saved file
         """
+        if toProject:
+            self.setEolModeByEolString(self.project.getEolString())
+            self.convertEols(self.eolMode())
         return self.saveFile(True, path)
         
     def handleRenamed(self, fn):
@@ -3342,9 +3346,14 @@ class Editor(QsciScintillaCompat):
         """
         Private method to configure the eol mode of the editor.
         """
-        eolMode = Preferences.getEditor("EOLMode")
-        eolMode = QsciScintilla.EolMode(eolMode)
-        self.setEolMode(eolMode)
+        if self.fileName and \
+           self.project.isOpen() and \
+           self.project.isProjectFile(self.fileName):
+            self.setEolModeByEolString(self.project.getEolString())
+        else:
+            eolMode = Preferences.getEditor("EOLMode")
+            eolMode = QsciScintilla.EolMode(eolMode)
+            self.setEolMode(eolMode)
         self.__eolChanged()
         
     def __setAutoCompletion(self):
@@ -5256,6 +5265,9 @@ class Editor(QsciScintillaCompat):
             pwl, pel = self.project.getProjectDictionaries()
             self.__setSpellingLanguage(self.project.getProjectSpellLanguage(), 
                                        pwl = pwl, pel = pel)
+        
+        self.setEolModeByEolString(self.project.getEolString())
+        self.convertEols(self.eolMode())
     
     def addedToProject(self):
         """
@@ -5265,7 +5277,7 @@ class Editor(QsciScintillaCompat):
             pwl, pel = self.project.getProjectDictionaries()
             self.__setSpellingLanguage(self.project.getProjectSpellLanguage(), 
                                        pwl = pwl, pel = pel)
-            self.connect(project, SIGNAL("projectPropertiesChanged"), 
+            self.connect(self.project, SIGNAL("projectPropertiesChanged"), 
                          self.__projectPropertiesChanged)
     
     #######################################################################

@@ -86,7 +86,7 @@ the style to be used for the generated pages (string)
 </dd>
 </dl><a NAME="IndexGenerator.__writeIndex" ID="IndexGenerator.__writeIndex"></a>
 <h4>IndexGenerator.__writeIndex</h4>
-<b>__writeIndex</b>(<i>packagename, package</i>)
+<b>__writeIndex</b>(<i>packagename, package, newline = None</i>)
 <p>
         Private method to generate an index file for a package.
 </p><dl>
@@ -96,6 +96,9 @@ The name of the package. (string)
 </dd><dt><i>package</i></dt>
 <dd>
 A dictionary with information about the package.
+</dd><dt><i>newline</i></dt>
+<dd>
+newline character to be used (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -123,7 +126,7 @@ The basename of the file hierarchy to be documented.
 </dd>
 </dl><a NAME="IndexGenerator.writeIndices" ID="IndexGenerator.writeIndices"></a>
 <h4>IndexGenerator.writeIndices</h4>
-<b>writeIndices</b>(<i>basename = ""</i>)
+<b>writeIndices</b>(<i>basename = "", newline = None</i>)
 <p>
         Public method to generate all index files.
 </p><dl>
@@ -132,6 +135,9 @@ The basename of the file hierarchy to be documented.
 The basename of the file hierarchy to be documented.
             The basename is stripped off the filename if it starts with
             the basename.
+</dd><dt><i>newline</i></dt>
+<dd>
+newline character to be used (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

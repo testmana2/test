@@ -393,7 +393,12 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         
         # write the new code
         try:
-            srcFile = open(self.filenameEdit.text(), 'w', encoding = "utf-8")
+            if self.project.useSystemEol():
+                newline = None
+            else:
+                newline = self.project.getEolString()
+            srcFile = open(self.filenameEdit.text(), 'w', encoding = "utf-8", 
+                           newline = newline)
             srcFile.write("".join(sourceImpl))
             srcFile.close()
         except IOError as why:

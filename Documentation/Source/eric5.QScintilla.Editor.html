@@ -860,9 +860,6 @@ QsciScintillaCompat
 <td><a href="#Editor.setCallTipHook">setCallTipHook</a></td>
 <td>Public method to set a calltip hook.</td>
 </tr><tr>
-<td><a href="#Editor.setEolModeByEolString">setEolModeByEolString</a></td>
-<td>Public method to set the eol mode given the eol string.</td>
-</tr><tr>
 <td><a href="#Editor.setLanguage">setLanguage</a></td>
 <td>Public method to set a lexer language.</td>
 </tr><tr>
@@ -2932,13 +2929,16 @@ tuple of two values (boolean, string) giving a success indicator and
 </dd>
 </dl><a NAME="Editor.saveFileAs" ID="Editor.saveFileAs"></a>
 <h4>Editor.saveFileAs</h4>
-<b>saveFileAs</b>(<i>path = None</i>)
+<b>saveFileAs</b>(<i>path = None, toProject = False</i>)
 <p>
         Public slot to save a file with a new name.
 </p><dl>
 <dt><i>path</i></dt>
 <dd>
 directory to save the file in (string)
+</dd><dt><i>toProject=</i></dt>
+<dd>
+flag indicating a save to project operation (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -3010,16 +3010,6 @@ Function to be set to determine calltips. func
             a position into the text and the amount of commas to the
             left of the cursor. It should return the possible
             calltips as a list of strings.
-</dd>
-</dl><a NAME="Editor.setEolModeByEolString" ID="Editor.setEolModeByEolString"></a>
-<h4>Editor.setEolModeByEolString</h4>
-<b>setEolModeByEolString</b>(<i>eolStr</i>)
-<p>
-        Public method to set the eol mode given the eol string.
-</p><dl>
-<dt><i>eolStr</i></dt>
-<dd>
-eol string (string)
 </dd>
 </dl><a NAME="Editor.setLanguage" ID="Editor.setLanguage"></a>
 <h4>Editor.setLanguage</h4>

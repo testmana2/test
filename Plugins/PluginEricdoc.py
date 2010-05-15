@@ -139,12 +139,21 @@ class EricdocPlugin(QObject):
         """
         Private slot to perform the eric5-doc api documentation generation.
         """
+        eolTranslation = {
+            '\r' : 'cr', 
+            '\n' : 'lf', 
+            '\r\n' : 'crlf', 
+        }
         project = e5App().getObject("Project")
         parms = project.getData('DOCUMENTATIONPARMS', "ERIC4DOC")
         dlg = EricdocConfigDialog(project, parms)
         if dlg.exec_() == QDialog.Accepted:
             args, parms = dlg.generateParameters()
             project.setData('DOCUMENTATIONPARMS', "ERIC4DOC", parms)
+            
+            # add parameter for the eol setting
+            if not project.useSystemEol():
+                args.append("--eol=%s" % eolTranslation[project.getEolString()])
             
             # now do the call
             dia = EricdocExecDialog("Ericdoc")

@@ -95,6 +95,10 @@ class ProjectWriter(XMLWriterBase):
             self._write("  <TranslationsBinPath>%s</TranslationsBinPath>" % \
                 Utilities.fromNativeSeparators(self.pdata["TRANSLATIONSBINPATH"][0]))
         
+        # do the eol setting
+        if self.pdata["EOL"] and self.pdata["EOL"][0]:
+            self._write('  <Eol index="%d" />' % self.pdata["EOL"][0])
+        
         # do the sources
         self._write("  <Sources>")
         for name in self.pdata["SOURCES"]:

@@ -167,19 +167,40 @@ class QtHelpGenerator(object):
                 joinext("index-%s" % package, ".html"))
         for subpack in sorted(self.packages[package]["subpackages"]):
             s += self.__generateSections(subpack, level + 1)
+            s += '\n'
         for mod in sorted(self.packages[package]["modules"]):
             s += indent1 + '<section title="%s" ref="%s" />\n' % \
                 (mod, joinext(mod, ".html"))
-        s += indent + '</section>\n'
+        s += indent + '</section>'
         return s
     
-    def generateFiles(self, basename = ""):
+    def __convertEol(self, txt, newline):
+        """
+        Private method to convert the newline characters.
+        
+        @param txt text to be converted (string)
+        @param newline newline character to be used (string)
+        @return converted text (string)
+        """
+        # step 1: normalize eol to '\n'
+        txt = txt.replace("\r\n", "\n").replace("\r", "\n")
+        
+        # step 2: convert to the target eol
+        if newline is None:
+            return txt.replace("\n", os.linesep)
+        elif newline in ["\r", "\r\n"]:
+            return txt.replace("\n", newline)
+        else:
+            return txt
+    
+    def generateFiles(self, basename = "", newline = None):
         """
         Public method to generate all index files.
         
         @param basename The basename of the file hierarchy to be documented.
             The basename is stripped off the filename if it starts with
             the basename.
+        @param newline newline character to be used (string)
         """
         if not self.remembered:
             sys.stderr.write("No QtHelp to generate.\n")
@@ -210,8 +231,9 @@ class QtHelpGenerator(object):
             "files" : files, 
         }
         
+        txt = self.__convertEol(HelpProject % helpAttribs, newline)
         f = codecs.open(os.path.join(self.outputDir, HelpProjectFile), 'w', 'utf-8')
-        f.write(HelpProject % helpAttribs)
+        f.write(txt)
         f.close()
         
         if self.createCollection and \
@@ -219,10 +241,11 @@ class QtHelpGenerator(object):
             collectionAttribs = {
                 "helpfile" : HelpHelpFile, 
             }
-        
+            
+            txt = self.__convertEol(HelpCollection % collectionAttribs, newline)
             f = codecs.open(os.path.join(self.outputDir, HelpCollectionProjectFile), 
                             'w', 'utf-8')
-            f.write(HelpCollection % collectionAttribs)
+            f.write(txt)
             f.close()
         
         sys.stdout.write("QtHelp files written.\n")

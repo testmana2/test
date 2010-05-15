@@ -1039,6 +1039,7 @@
       <keyword name="ProjectHandler.startCxfreezeParams" id="ProjectHandler.startCxfreezeParams" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.startCxfreezeParams" />
       <keyword name="ProjectHandler.startDocumentProject" id="ProjectHandler.startDocumentProject" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.startDocumentProject" />
       <keyword name="ProjectHandler.startDocumentationParams" id="ProjectHandler.startDocumentationParams" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.startDocumentationParams" />
+      <keyword name="ProjectHandler.startEol" id="ProjectHandler.startEol" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.startEol" />
       <keyword name="ProjectHandler.startEric4ApiParams" id="ProjectHandler.startEric4ApiParams" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.startEric4ApiParams" />
       <keyword name="ProjectHandler.startEric4DocParams" id="ProjectHandler.startEric4DocParams" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.startEric4DocParams" />
       <keyword name="ProjectHandler.startFiletypeAssociation" id="ProjectHandler.startFiletypeAssociation" ref="eric5.E5XML.ProjectHandler.html#ProjectHandler.startFiletypeAssociation" />
@@ -4559,6 +4560,7 @@
       <keyword name="Project.getDebugProperty" id="Project.getDebugProperty" ref="eric5.Project.Project.html#Project.getDebugProperty" />
       <keyword name="Project.getDefaultSourceExtension" id="Project.getDefaultSourceExtension" ref="eric5.Project.Project.html#Project.getDefaultSourceExtension" />
       <keyword name="Project.getEditorLexerAssoc" id="Project.getEditorLexerAssoc" ref="eric5.Project.Project.html#Project.getEditorLexerAssoc" />
+      <keyword name="Project.getEolString" id="Project.getEolString" ref="eric5.Project.Project.html#Project.getEolString" />
       <keyword name="Project.getFiles" id="Project.getFiles" ref="eric5.Project.Project.html#Project.getFiles" />
       <keyword name="Project.getHash" id="Project.getHash" ref="eric5.Project.Project.html#Project.getHash" />
       <keyword name="Project.getMainScript" id="Project.getMainScript" ref="eric5.Project.Project.html#Project.getMainScript" />
@@ -4624,6 +4626,7 @@
       <keyword name="Project.stopStatusMonitor" id="Project.stopStatusMonitor" ref="eric5.Project.Project.html#Project.stopStatusMonitor" />
       <keyword name="Project.unregisterProjectType" id="Project.unregisterProjectType" ref="eric5.Project.Project.html#Project.unregisterProjectType" />
       <keyword name="Project.updateFileTypes" id="Project.updateFileTypes" ref="eric5.Project.Project.html#Project.updateFileTypes" />
+      <keyword name="Project.useSystemEol" id="Project.useSystemEol" ref="eric5.Project.Project.html#Project.useSystemEol" />
       <keyword name="AddDirectoryDialog (Module)" id="AddDirectoryDialog (Module)" ref="eric5.Project.AddDirectoryDialog.html" />
       <keyword name="AddDirectoryDialog" id="AddDirectoryDialog" ref="eric5.Project.AddDirectoryDialog.html#AddDirectoryDialog" />
       <keyword name="AddDirectoryDialog (Constructor)" id="AddDirectoryDialog (Constructor)" ref="eric5.Project.AddDirectoryDialog.html#AddDirectoryDialog.__init__" />
@@ -5800,7 +5803,6 @@
       <keyword name="Editor.setAutoCompletionHook" id="Editor.setAutoCompletionHook" ref="eric5.QScintilla.Editor.html#Editor.setAutoCompletionHook" />
       <keyword name="Editor.setAutoSpellChecking" id="Editor.setAutoSpellChecking" ref="eric5.QScintilla.Editor.html#Editor.setAutoSpellChecking" />
       <keyword name="Editor.setCallTipHook" id="Editor.setCallTipHook" ref="eric5.QScintilla.Editor.html#Editor.setCallTipHook" />
-      <keyword name="Editor.setEolModeByEolString" id="Editor.setEolModeByEolString" ref="eric5.QScintilla.Editor.html#Editor.setEolModeByEolString" />
       <keyword name="Editor.setLanguage" id="Editor.setLanguage" ref="eric5.QScintilla.Editor.html#Editor.setLanguage" />
       <keyword name="Editor.setMonospaced" id="Editor.setMonospaced" ref="eric5.QScintilla.Editor.html#Editor.setMonospaced" />
       <keyword name="Editor.setNoName" id="Editor.setNoName" ref="eric5.QScintilla.Editor.html#Editor.setNoName" />
@@ -6029,6 +6031,7 @@
       <keyword name="QtHelpGenerator (Module)" id="QtHelpGenerator (Module)" ref="eric5.DocumentationTools.QtHelpGenerator.html" />
       <keyword name="QtHelpGenerator" id="QtHelpGenerator" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator" />
       <keyword name="QtHelpGenerator (Constructor)" id="QtHelpGenerator (Constructor)" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.__init__" />
+      <keyword name="QtHelpGenerator.__convertEol" id="QtHelpGenerator.__convertEol" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.__convertEol" />
       <keyword name="QtHelpGenerator.__generateSections" id="QtHelpGenerator.__generateSections" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.__generateSections" />
       <keyword name="QtHelpGenerator.generateFiles" id="QtHelpGenerator.generateFiles" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.generateFiles" />
       <keyword name="QtHelpGenerator.remember" id="QtHelpGenerator.remember" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.remember" />

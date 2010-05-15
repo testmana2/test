@@ -139,6 +139,11 @@ class EricapiPlugin(QObject):
         """
         Private slot to perform the eric5-api api generation.
         """
+        eolTranslation = {
+            '\r' : 'cr', 
+            '\n' : 'lf', 
+            '\r\n' : 'crlf', 
+        }
         project = e5App().getObject("Project")
         parms = project.getData('DOCUMENTATIONPARMS', "ERIC4API")
         dlg = EricapiConfigDialog(project, parms)
@@ -146,14 +151,18 @@ class EricapiPlugin(QObject):
             args, parms = dlg.generateParameters()
             project.setData('DOCUMENTATIONPARMS', "ERIC4API", parms)
             
+            # add parameter for the eol setting
+            if not project.useSystemEol():
+                args.append("--eol=%s" % eolTranslation[project.getEolString()])
+            
             # now do the call
             dia = EricapiExecDialog("Ericapi")
             res = dia.start(args, project.ppath)
             if res:
                 dia.exec_()
-                
+            
             outputFileName = parms['outputFile']
-                
+            
             # add output files to the project data, if they aren't in already
             for progLanguage in parms['languages']:
                 if "%L" in outputFileName:

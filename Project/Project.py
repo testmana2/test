@@ -120,7 +120,7 @@ class Project(QObject):
         "SOURCES", "FORMS", "RESOURCES",
         "TRANSLATIONS", "TRANSLATIONPATTERN", "TRANSLATIONSBINPATH", 
         "TRANSLATIONEXCEPTIONS",
-        "MAINSCRIPT",
+        "MAINSCRIPT", "EOL", 
         "VCS", "VCSOPTIONS", "VCSOTHERDATA",
         "OTHERS", "INTERFACES", 
         "FILETYPES", "LEXERASSOCS", 
@@ -143,6 +143,8 @@ class Project(QObject):
     userKeynames = [
         "VCSOVERRIDE", "VCSSTATUSMONITORINTERVAL",
     ]
+    
+    eols = [os.linesep, "\n", "\r", "\r\n"]
     
     def __init__(self, parent = None, filename = None):
         """
@@ -318,6 +320,7 @@ class Project(QObject):
         self.pdata["PACKAGERSPARMS"] = {}
         self.pdata["DOCUMENTATIONPARMS"] = {}
         self.pdata["OTHERTOOLSPARMS"] = {}
+        self.pdata["EOL"] = [0]
         
         self.__initDebugProperties()
         
@@ -752,6 +755,10 @@ class Project(QObject):
         @return flag indicating success (boolean)
         """
         try:
+            if self.pdata["EOL"][0] == 0:
+                newline = None
+            else:
+                newline = self.getEolString()
             if fn.lower().endswith("e4pz"):
                 try:
                     import gzip
@@ -761,9 +768,9 @@ class Project(QObject):
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
                     return False
-                f = io.StringIO()
+                f = io.StringIO(newline = newline)
             else:
-                f = open(fn, "w", encoding = "utf-8")
+                f = open(fn, "w", encoding = "utf-8", newline = newline)
             
             ProjectWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             
@@ -3224,6 +3231,22 @@ class Project(QObject):
             fn = os.path.join(self.ppath, Utilities.toNativeSeparators(fn))
         return fn
         
+    def getEolString(self):
+        """
+        Public method to get the EOL-string to be used by the project.
+        
+        @return eol string (string)
+        """
+        return self.eols[self.pdata["EOL"][0]]
+        
+    def useSystemEol(self):
+        """
+        Public method to check, if the project uses the system eol setting.
+        
+        @return flag indicating the usage of system eol (boolean)
+        """
+        return self.pdata["EOL"][0] == 0
+        
     def isProjectFile(self, fn):
         """
         Public method used to check, if the passed in filename belongs to the project.
@@ -4465,7 +4488,11 @@ class Project(QObject):
         
         # write the file
         try:
-            pkglistFile = open(pkglist, "w", encoding = "utf-8")
+            if self.pdata["EOL"][0] == 0:
+                newline = None
+            else:
+                newline = self.getEolString()
+            pkglistFile = open(pkglist, "w", encoding = "utf-8", newline = newline)
             pkglistFile.write("\n".join(lst))
             pkglistFile.close()
         except IOError as why:

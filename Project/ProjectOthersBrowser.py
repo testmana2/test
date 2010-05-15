@@ -8,7 +8,6 @@ Module implementing a class used to display the parts of the project, that don't
 the other categories.
 """
 
-import os
 import mimetypes
 
 from PyQt4.QtCore import *

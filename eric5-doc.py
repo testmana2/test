@@ -52,6 +52,12 @@ def usage():
     print("        Specify a CSS style sheet file to be used.")
     print("  -e or --noempty")
     print("        Don't include empty modules.")
+    print("  --eol=eol-type")
+    print("        Use the given eol type to terminate lines.")
+    print("        Valid values are 'cr', 'lf' and 'crlf'.")
+    print("  --exclude-file=pattern")
+    print("        Specify a filename pattern of files to be excluded.")
+    print("        This option may be repeated multiple times.")
     print("  -h or --help")
     print("        Show this help and exit.")
     print("  -i or --noindex")
@@ -67,9 +73,6 @@ def usage():
     print("        Show version information and exit.")
     print("  -x directory or --exclude=directory")
     print("        Specify a directory basename to be excluded.")
-    print("        This option may be repeated multiple times.")
-    print("  --exclude-file=pattern")
-    print("        Specify a filename pattern of files to be excluded.")
     print("        This option may be repeated multiple times.")
     print()
     print("  --body-color=color")
@@ -136,7 +139,7 @@ def main():
         opts, args = getopt.getopt(sys.argv[1:], "c:ehio:Rrt:Vx:",
             ["exclude=", "extension=", "help", "noindex", "noempty", "outdir=",
              "recursive", "style-sheet=", "version",
-             "exclude-file=",
+             "exclude-file=", "eol=", 
              "body-color=", "body-background-color=", 
              "l1header-color=", "l1header-background-color=",
              "l2header-color=", "l2header-background-color=",
@@ -156,6 +159,8 @@ def main():
     recursive = False
     doIndex = True
     noempty = False
+    newline = None
+    
     stylesheetFile = ""
     colors = eric5docDefaultColors.copy()
     
@@ -191,6 +196,13 @@ def main():
             if not v.startswith("."):
                 v = ".%s" % v
             supportedExtensions.append(v)
+        elif k == "--eol":
+            if v.lower() == "cr":
+                newline = '\r'
+            elif v.lower() == "lf":
+                newline = '\n'
+            elif v.lower() == "crlf":
+                newline = '\r\n'
         
         elif k == "--body-color":
             colors['BodyColor'] = v
@@ -362,7 +374,7 @@ def main():
                 
                 # generate output
                 try:
-                    out = open(f, "w", encoding = "utf-8")
+                    out = open(f, "w", encoding = "utf-8", newline = newline)
                     out.write(doc)
                     out.close()
                 except IOError as v:
@@ -376,11 +388,11 @@ def main():
 
     # write index files
     if doIndex:
-        indexGenerator.writeIndices(basename)
+        indexGenerator.writeIndices(basename, newline = newline)
     
     # generate the QtHelp files
     if qtHelpCreation:
-        qtHelpGenerator.generateFiles()
+        qtHelpGenerator.generateFiles(newline = newline)
 
     sys.exit(0)
 

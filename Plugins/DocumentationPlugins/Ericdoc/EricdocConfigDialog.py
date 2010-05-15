@@ -71,6 +71,15 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
                     self.colors[key] = parms[key]
                 else:
                     self.parameters[key] = parms[key]
+        self.parameters['outputDirectory'] = \
+            Utilities.toNativeSeparators(self.parameters['outputDirectory'])
+        self.parameters['qtHelpOutputDirectory'] = \
+            Utilities.toNativeSeparators(self.parameters['qtHelpOutputDirectory'])
+        self.parameters['cssFile'] = \
+            Utilities.toNativeSeparators(self.parameters['cssFile'])
+        if self.parameters['cssFile'].startswith("%PYTHON%"):
+            self.parameters['cssFile'] = self.parameters['cssFile'].replace(
+                "%PYTHON%", Utilities.getPythonModulesDirectory())
         
         self.ppath = project.getProjectPath()
         self.project = project
@@ -151,7 +160,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         # 2. the commandline options
         # 2a. general commandline options
         if self.parameters['outputDirectory'] != self.defaults['outputDirectory']:
-            parms['outputDirectory'] = self.parameters['outputDirectory']
+            parms['outputDirectory'] = Utilities.fromNativeSeparators(
+                self.project.getRelativePath(self.parameters['outputDirectory']))
             args.append('-o')
             if os.path.isabs(self.parameters['outputDirectory']):
                 args.append(self.parameters['outputDirectory'])
@@ -183,7 +193,11 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         
         # 2b. style commandline options
         if self.parameters['cssFile'] != self.defaults['cssFile']:
-            parms['cssFile'] = self.parameters['cssFile']
+            cssFile = self.project.getRelativePath(self.parameters['cssFile'])
+            if cssFile.startswith(Utilities.getPythonModulesDirectory()):
+                cssFile = cssFile.replace(
+                    Utilities.getPythonModulesDirectory(), "%PYTHON%")
+            parms['cssFile'] = Utilities.fromNativeSeparators(cssFile)
             args.append('-c')
             if os.path.isabs(self.parameters['cssFile']):
                 args.append(self.parameters['cssFile'])
@@ -201,7 +215,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             args.append('--create-qhp')
         if self.parameters['qtHelpOutputDirectory'] != \
            self.defaults['qtHelpOutputDirectory']:
-            parms['qtHelpOutputDirectory'] = self.parameters['qtHelpOutputDirectory']
+            parms['qtHelpOutputDirectory'] = Utilities.fromNativeSeparators(
+                self.project.getRelativePath(self.parameters['qtHelpOutputDirectory']))
             if os.path.isabs(self.parameters['outputDirectory']):
                 args.append("--qhp-outdir=%s" % self.parameters['qtHelpOutputDirectory'])
             else:

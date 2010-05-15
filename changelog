@@ -8,6 +8,7 @@ Version 5.0-snapshot-2010mmdd:
 - added code to update the Others tab of the project browser (mostly) automatically
 - added a menu to the highlighting styles config page to change individual
   aspects of a font only
+- changed code to improve development on multiple platforms
 
 Version 5.0-snapshot-20100508:
 - bug fixes
