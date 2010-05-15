@@ -161,7 +161,7 @@ class EricdocPlugin(QObject):
             if res:
                 dia.exec_()
             
-            outdir = parms['outputDirectory']
+            outdir = Utilities.toNativeSeparators(parms['outputDirectory'])
             if outdir == '':
                 outdir = 'doc'      # that is eric5-docs default output dir
                 
@@ -173,7 +173,7 @@ class EricdocPlugin(QObject):
                 project.othersAdded(outdir)
             
             if parms['qtHelpEnabled']:
-                outdir = parms['qtHelpOutputDirectory']
+                outdir = Utilities.toNativeSeparators(parms['qtHelpOutputDirectory'])
                 if outdir == '':
                     outdir = 'help'      # that is eric5-docs default QtHelp output dir
                     

@@ -161,7 +161,7 @@ class EricapiPlugin(QObject):
             if res:
                 dia.exec_()
             
-            outputFileName = parms['outputFile']
+            outputFileName = Utilities.toNativeSeparators(parms['outputFile'])
             
             # add output files to the project data, if they aren't in already
             for progLanguage in parms['languages']:
