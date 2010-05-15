@@ -131,6 +131,7 @@ class Editor(QsciScintillaCompat):
         self.vm = vm
         self.filetype = filetype
         self.noName = ""
+        self.project = e5App().getObject("Project")
         
         # clear some variables
         self.lastHighlight   = None   # remember the last highlighted line
@@ -1329,9 +1330,8 @@ class Editor(QsciScintillaCompat):
             self.disconnect(self, SIGNAL("SCN_STYLENEEDED(int)"), self.__styleNeeded)
         
         language = ""
-        project = e5App().getObject("Project")
-        if project.isOpen() and project.isProjectFile(filename):
-            language = project.getEditorLexerAssoc(os.path.basename(filename))
+        if self.project.isOpen() and self.project.isProjectFile(filename):
+            language = self.project.getEditorLexerAssoc(os.path.basename(filename))
         if not language:
             filename = os.path.basename(filename)
             language = Preferences.getEditorLexerAssoc(filename)
@@ -1630,7 +1630,7 @@ class Editor(QsciScintillaCompat):
         """
         if self.breaks:
             bps = []    # list of breakpoints
-            for handle, (ln, cond, temp, enabled, ignorecount) in list(self.breaks.items()):
+            for handle, (ln, cond, temp, enabled, ignorecount) in self.breaks.items():
                 line = self.markerLine(handle) + 1
                 bps.append((ln, line, (cond, temp, enabled, ignorecount)))
                 self.markerDeleteHandle(handle)
@@ -2266,20 +2266,6 @@ class Editor(QsciScintillaCompat):
         
         self.setModified(modified)
         self.lastModified = QFileInfo(self.fileName).lastModified()
-        
-    def setEolModeByEolString(self, eolStr):
-        """
-        Public method to set the eol mode given the eol string.
-        
-        @param eolStr eol string (string)
-        """
-        if eolStr == '\r\n':
-            self.setEolMode(QsciScintilla.EolMode(QsciScintilla.EolWindows))
-        elif eolStr == '\n':
-            self.setEolMode(QsciScintilla.EolMode(QsciScintilla.EolUnix))
-        elif eolStr == '\r':
-            self.setEolMode(QsciScintilla.EolMode(QsciScintilla.EolMac))
-        self.__eolChanged()
         
     def __removeTrailingWhitespace(self):
         """
@@ -3831,9 +3817,8 @@ class Editor(QsciScintillaCompat):
         coEnable = False
         
         # first check if the file belongs to a project
-        project = e5App().getObject("Project")
-        if project.isOpen() and project.isProjectSource(self.fileName):
-            fn = project.getMainScript(True)
+        if self.project.isOpen() and self.project.isProjectSource(self.fileName):
+            fn = self.project.getMainScript(True)
             if fn is not None:
                 tfn = Utilities.getTestFileName(fn)
                 basename = os.path.splitext(fn)[0]
@@ -3875,8 +3860,7 @@ class Editor(QsciScintillaCompat):
         """
         Private slot handling the aboutToShow signal of the diagrams context menu.
         """
-        project = e5App().getObject("Project")
-        if project.isOpen() and project.isProjectSource(self.fileName):
+        if self.project.isOpen() and self.project.isProjectSource(self.fileName):
             self.applicationDiagramMenuAct.setEnabled(True)
         else:
             self.applicationDiagramMenuAct.setEnabled(False)
@@ -4111,9 +4095,8 @@ class Editor(QsciScintillaCompat):
         
         # first check if the file belongs to a project and there is
         # a project coverage file
-        project = e5App().getObject("Project")
-        if project.isOpen() and project.isProjectSource(self.fileName):
-            fn = project.getMainScript(True)
+        if self.project.isOpen() and self.project.isProjectSource(self.fileName):
+            fn = self.project.getMainScript(True)
             if fn is not None:
                 tfn = Utilities.getTestFileName(fn)
                 basename = os.path.splitext(fn)[0]
@@ -4250,9 +4233,8 @@ class Editor(QsciScintillaCompat):
         
         # first check if the file belongs to a project and there is
         # a project profile file
-        project = e5App().getObject("Project")
-        if project.isOpen() and project.isProjectSource(self.fileName):
-            fn = project.getMainScript(True)
+        if self.project.isOpen() and self.project.isProjectSource(self.fileName):
+            fn = self.project.getMainScript(True)
             if fn is not None:
                 tfn = Utilities.getTestFileName(fn)
                 basename = os.path.splitext(fn)[0]
@@ -4744,7 +4726,7 @@ class Editor(QsciScintillaCompat):
             SIGNAL("rowsInserted(const QModelIndex &, int, int)"),
             self.__addBreakPoints)
         
-        self.disconnect(e5App().getObject("Project"), SIGNAL("projectPropertiesChanged"), 
+        self.disconnect(self.project, SIGNAL("projectPropertiesChanged"), 
                         self.__projectPropertiesChanged)
         
         if self.spell:
@@ -5195,7 +5177,7 @@ class Editor(QsciScintillaCompat):
                 QMessageBox.No | \
                 QMessageBox.Yes),
             QMessageBox.Yes)
-        self.applicationDiagram = ApplicationDiagram(e5App().getObject("Project"), 
+        self.applicationDiagram = ApplicationDiagram(self.project, 
                                     self, noModules = (res == QMessageBox.No))
         self.applicationDiagram.show()
     
@@ -5270,20 +5252,18 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to handle changes of the project properties.
         """
-        project = e5App().getObject("Project")
         if self.spell:
-            pwl, pel = project.getProjectDictionaries()
-            self.__setSpellingLanguage(project.getProjectSpellLanguage(), 
+            pwl, pel = self.project.getProjectDictionaries()
+            self.__setSpellingLanguage(self.project.getProjectSpellLanguage(), 
                                        pwl = pwl, pel = pel)
     
     def addedToProject(self):
         """
         Public method to signal, that this editor has been added to a project.
         """
-        project = e5App().getObject("Project")
         if self.spell:
-            pwl, pel = project.getProjectDictionaries()
-            self.__setSpellingLanguage(project.getProjectSpellLanguage(), 
+            pwl, pel = self.project.getProjectDictionaries()
+            self.__setSpellingLanguage(self.project.getProjectSpellLanguage(), 
                                        pwl = pwl, pel = pel)
             self.connect(project, SIGNAL("projectPropertiesChanged"), 
                          self.__projectPropertiesChanged)
@@ -5314,7 +5294,7 @@ class Editor(QsciScintillaCompat):
                 self.spell = SpellChecker(self, self.spellingIndicator, 
                                           checkRegion = self.isSpellCheckRegion)
             self.setSpellingForProject()
-            self.connect(e5App().getObject("Project"), SIGNAL("projectPropertiesChanged"),
+            self.connect(self.project, SIGNAL("projectPropertiesChanged"),
                          self.__projectPropertiesChanged)
             self.spell.setMinimumWordSize(
                 Preferences.getEditor("SpellCheckingMinWordSize"))
@@ -5329,12 +5309,11 @@ class Editor(QsciScintillaCompat):
         Public method to set the spell checking options for files belonging
         to the current project.
         """
-        project = e5App().getObject("Project")
         if self.fileName and \
-           project.isOpen() and \
-           project.isProjectSource(self.fileName):
-            pwl, pel = project.getProjectDictionaries()
-            self.__setSpellingLanguage(project.getProjectSpellLanguage(), 
+           self.project.isOpen() and \
+           self.project.isProjectSource(self.fileName):
+            pwl, pel = self.project.getProjectDictionaries()
+            self.__setSpellingLanguage(self.project.getProjectSpellLanguage(), 
                                        pwl = pwl, pel = pel)
     
     def setAutoSpellChecking(self):
@@ -5493,10 +5472,9 @@ class Editor(QsciScintillaCompat):
             if it is inside a remotely initiated shared edit session
             (boolean, boolean, boolean, boolean)
         """
-        project = e5App().getObject("Project")
         return self.fileName is not None and \
-                project.isOpen() and \
-                project.isProjectFile(self.fileName), \
+                self.project.isOpen() and \
+                self.project.isProjectFile(self.fileName), \
                self.__isShared, self.__inSharedEdit, self.__inRemoteSharedEdit
     
     def shareConnected(self, connected):
