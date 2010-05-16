@@ -4552,7 +4552,7 @@ class UserInterface(QMainWindow):
         """
         home = Utilities.normjoinpath(getConfig('ericDocDir'),
             "Source", "index.html")
-            
+        
         if not home.startswith("http://") and \
            not home.startswith("https://"):
             if not os.path.exists(home):
@@ -4563,7 +4563,10 @@ class UserInterface(QMainWindow):
                         .format(home))
                 return
         
-        home = "file://" + home
+        if Utilities.isWindowsPlatform():
+            home = "file:///" + Utilities.fromNativeSeparators(home)
+        else:
+            home = "file://" + home
         
         hvType = Preferences.getHelp("HelpViewerType")
         if hvType == 1:

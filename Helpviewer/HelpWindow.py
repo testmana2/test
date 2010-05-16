@@ -1424,6 +1424,7 @@ class HelpWindow(QMainWindow):
         @return guessed URL (QUrl)
         """
         manager = self.searchEdit.openSearchManager()
+        path = Utilities.fromNativeSeparators(path)
         url = manager.convertKeywordSearchToUrl(path)
         if url.isValid():
             return url
@@ -1545,7 +1546,11 @@ class HelpWindow(QMainWindow):
                         "All Files (*)"
             ))
         if fn:
-            self.currentBrowser().setSource(QUrl("file://" + fn))
+            if Utilities.isWindowsPlatform():
+                url = "file:///" + Utilities.fromNativeSeparators(fn)
+            else:
+                url = "file://" + fn
+            self.currentBrowser().setSource(QUrl(url))
         
     def __openFileNewTab(self):
         """
@@ -1561,7 +1566,11 @@ class HelpWindow(QMainWindow):
                         "All Files (*)"
             ))
         if fn:
-            self.newTab("file://" + fn)
+            if Utilities.isWindowsPlatform():
+                url = "file:///" + Utilities.fromNativeSeparators(fn)
+            else:
+                url = "file://" + fn
+            self.newTab(url)
         
     def __savePageAs(self):
         """
