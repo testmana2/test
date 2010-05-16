@@ -440,7 +440,7 @@ class HistoryManager(QWebHistoryInterface):
                     self.trUtf8("Saving History"),
                     self.trUtf8("""<p>Error moving new history file over old one """
                                 """(<b>{0}</b>).<br/>Reason: {1}</p>""")\
-                        .format(historyFile.fileName(), tempFile.errorString()))
+                        .format(historyFile.fileName(), f.errorString()))
         
         try:
             self.__lastSavedUrl = self.__history[0].url
