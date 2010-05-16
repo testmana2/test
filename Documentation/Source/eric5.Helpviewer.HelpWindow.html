@@ -211,9 +211,6 @@ QMainWindow
 <td><a href="#HelpWindow.__openUrlNewTab">__openUrlNewTab</a></td>
 <td>Private slot to load a URL from the bookmarks menu or bookmarks toolbar in a new tab.</td>
 </tr><tr>
-<td><a href="#HelpWindow.__pathEdited">__pathEdited</a></td>
-<td>Private slot called, when a URL has been entered.</td>
-</tr><tr>
 <td><a href="#HelpWindow.__pathSelected">__pathSelected</a></td>
 <td>Private slot called when a file is selected in the combobox.</td>
 </tr><tr>
@@ -830,12 +827,7 @@ url to be opened (QUrl)
 <dd>
 title of the bookmark (string)
 </dd>
-</dl><a NAME="HelpWindow.__pathEdited" ID="HelpWindow.__pathEdited"></a>
-<h4>HelpWindow.__pathEdited</h4>
-<b>__pathEdited</b>(<i></i>)
-<p>
-        Private slot called, when a URL has been entered.
-</p><a NAME="HelpWindow.__pathSelected" ID="HelpWindow.__pathSelected"></a>
+</dl><a NAME="HelpWindow.__pathSelected" ID="HelpWindow.__pathSelected"></a>
 <h4>HelpWindow.__pathSelected</h4>
 <b>__pathSelected</b>(<i>path</i>)
 <p>
@@ -1387,13 +1379,16 @@ reference to the load progress bar (QProgressBar)
 </dd>
 </dl><a NAME="HelpWindow.resetLoading" ID="HelpWindow.resetLoading"></a>
 <h4>HelpWindow.resetLoading</h4>
-<b>resetLoading</b>(<i>widget</i>)
+<b>resetLoading</b>(<i>widget, ok</i>)
 <p>
         Public method to reset the loading icon.
 </p><dl>
 <dt><i>widget</i></dt>
 <dd>
 reference to the widget to reset the icon for (QWidget)
+</dd><dt><i>ok</i></dt>
+<dd>
+flag indicating the result (boolean)
 </dd>
 </dl><a NAME="HelpWindow.search" ID="HelpWindow.search"></a>
 <h4>HelpWindow.search</h4>

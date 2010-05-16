@@ -2817,7 +2817,6 @@
       <keyword name="HelpWindow.__openFileNewTab" id="HelpWindow.__openFileNewTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__openFileNewTab" />
       <keyword name="HelpWindow.__openUrl" id="HelpWindow.__openUrl" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__openUrl" />
       <keyword name="HelpWindow.__openUrlNewTab" id="HelpWindow.__openUrlNewTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__openUrlNewTab" />
-      <keyword name="HelpWindow.__pathEdited" id="HelpWindow.__pathEdited" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__pathEdited" />
       <keyword name="HelpWindow.__pathSelected" id="HelpWindow.__pathSelected" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__pathSelected" />
       <keyword name="HelpWindow.__prevTab" id="HelpWindow.__prevTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__prevTab" />
       <keyword name="HelpWindow.__printFile" id="HelpWindow.__printFile" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printFile" />
@@ -2936,7 +2935,6 @@
       <keyword name="DownloadDialog.__downloading" id="DownloadDialog.__downloading" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__downloading" />
       <keyword name="DownloadDialog.__finished" id="DownloadDialog.__finished" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__finished" />
       <keyword name="DownloadDialog.__getFileName" id="DownloadDialog.__getFileName" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__getFileName" />
-      <keyword name="DownloadDialog.__initialize" id="DownloadDialog.__initialize" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__initialize" />
       <keyword name="DownloadDialog.__metaDataChanged" id="DownloadDialog.__metaDataChanged" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__metaDataChanged" />
       <keyword name="DownloadDialog.__networkError" id="DownloadDialog.__networkError" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__networkError" />
       <keyword name="DownloadDialog.__open" id="DownloadDialog.__open" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__open" />
@@ -2946,6 +2944,7 @@
       <keyword name="DownloadDialog.__tryAgain" id="DownloadDialog.__tryAgain" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__tryAgain" />
       <keyword name="DownloadDialog.__updateInfoLabel" id="DownloadDialog.__updateInfoLabel" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__updateInfoLabel" />
       <keyword name="DownloadDialog.closeEvent" id="DownloadDialog.closeEvent" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.closeEvent" />
+      <keyword name="DownloadDialog.initialize" id="DownloadDialog.initialize" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.initialize" />
       <keyword name="DownloadDialog.on_buttonBox_clicked" id="DownloadDialog.on_buttonBox_clicked" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.on_buttonBox_clicked" />
       <keyword name="HelpSearchWidget (Module)" id="HelpSearchWidget (Module)" ref="eric5.Helpviewer.HelpSearchWidget.html" />
       <keyword name="HelpSearchWidget" id="HelpSearchWidget" ref="eric5.Helpviewer.HelpSearchWidget.html#HelpSearchWidget" />

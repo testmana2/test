@@ -12,45 +12,45 @@ notFoundPage_html = """\
 <head>
 <title>{0}</title>
 <style>
-body {
+body {{
   padding: 3em 0em;
   background: #eeeeee;
-}
-hr {
+}}
+hr {{
   color: lightgray;
   width: 100%;
-}
-img {
+}}
+img {{
   float: left;
   opacity: .8;
-}
-#box {
+}}
+#box {{
   background: white;
   border: 1px solid lightgray;
   width: 600px;
   padding: 60px;
   margin: auto;
-}
-h1 {
+}}
+h1 {{
   font-size: 130%;
   font-weight: bold;
   border-bottom: 1px solid lightgray;
   margin-left: 48px;
-}
-h2 {
+}}
+h2 {{
   font-size: 100%;
   font-weight: normal;
   border-bottom: 1px solid lightgray;
   margin-left: 48px;
-}
-ul {
-  font-size: 80%;
+}}
+ul {{
+  font-size: 100%;
   padding-left: 48px;
   margin: 5px 0;
-}
-#reloadButton {
+}}
+#reloadButton {{
   padding-left: 48px;
-}
+}}
 </style>
 </head>
 <body>

@@ -78,9 +78,6 @@ QWidget, Ui_DownloadDialog
 <td><a href="#DownloadDialog.__getFileName">__getFileName</a></td>
 <td>Private method to get the filename to save to from the user.</td>
 </tr><tr>
-<td><a href="#DownloadDialog.__initialize">__initialize</a></td>
-<td>Private method to (re)initialize the dialog.</td>
-</tr><tr>
 <td><a href="#DownloadDialog.__metaDataChanged">__metaDataChanged</a></td>
 <td>Private slot to handle a change of the meta data.</td>
 </tr><tr>
@@ -107,6 +104,9 @@ QWidget, Ui_DownloadDialog
 </tr><tr>
 <td><a href="#DownloadDialog.closeEvent">closeEvent</a></td>
 <td>Protected method called when the dialog is closed.</td>
+</tr><tr>
+<td><a href="#DownloadDialog.initialize">initialize</a></td>
+<td>Public method to (re)initialize the dialog.</td>
 </tr><tr>
 <td><a href="#DownloadDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
@@ -183,12 +183,12 @@ flag indicating a download is in progress (boolean)
 <b>__getFileName</b>(<i></i>)
 <p>
         Private method to get the filename to save to from the user.
-</p><a NAME="DownloadDialog.__initialize" ID="DownloadDialog.__initialize"></a>
-<h4>DownloadDialog.__initialize</h4>
-<b>__initialize</b>(<i></i>)
-<p>
-        Private method to (re)initialize the dialog.
-</p><a NAME="DownloadDialog.__metaDataChanged" ID="DownloadDialog.__metaDataChanged"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
+</dl><a NAME="DownloadDialog.__metaDataChanged" ID="DownloadDialog.__metaDataChanged"></a>
 <h4>DownloadDialog.__metaDataChanged</h4>
 <b>__metaDataChanged</b>(<i></i>)
 <p>
@@ -243,7 +243,17 @@ proposed filename (string)
 <b>closeEvent</b>(<i>evt</i>)
 <p>
         Protected method called when the dialog is closed.
-</p><a NAME="DownloadDialog.on_buttonBox_clicked" ID="DownloadDialog.on_buttonBox_clicked"></a>
+</p><a NAME="DownloadDialog.initialize" ID="DownloadDialog.initialize"></a>
+<h4>DownloadDialog.initialize</h4>
+<b>initialize</b>(<i></i>)
+<p>
+        Public method to (re)initialize the dialog.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
+</dl><a NAME="DownloadDialog.on_buttonBox_clicked" ID="DownloadDialog.on_buttonBox_clicked"></a>
 <h4>DownloadDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>

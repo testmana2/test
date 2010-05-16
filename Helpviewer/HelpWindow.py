@@ -1291,8 +1291,6 @@ class HelpWindow(QMainWindow):
         self.pathCombo.setAutoCompletion(True)
         self.connect(self.pathCombo, SIGNAL('activated(const QString&)'),
                      self.__pathSelected)
-        self.connect(self.pathCombo.lineEdit(), SIGNAL('returnPressed()'),
-                     self.__pathEdited)
         self.pathCombo.setWhatsThis(self.trUtf8(
                 """<p>Enter the help file to be displayed directly into this"""
                 """ edit field. Select a previously shown help file from the"""
@@ -1407,13 +1405,6 @@ class HelpWindow(QMainWindow):
             act.setData(idx)
             idx += 1
             act.setIcon(HelpWindow.__getWebIcon(QUrl(hist)))
-        
-    def __pathEdited(self):
-        """
-        Private slot called, when a URL has been entered.
-        """
-        path = self.pathCombo.currentText()
-        self.__pathSelected(path)
         
     def __pathSelected(self, path):
         """
@@ -2225,16 +2216,20 @@ class HelpWindow(QMainWindow):
         
         self.__setLoadingActions(True)
     
-    def resetLoading(self, widget):
+    def resetLoading(self, widget, ok):
         """
         Public method to reset the loading icon.
         
         @param widget reference to the widget to reset the icon for (QWidget)
+        @param ok flag indicating the result (boolean)
         """
         index = self.tabWidget.indexOf(widget)
         self.tabWidget.resetAnimation(index)
         self.tabWidget.setTabIcon(index, widget.icon())
-        self.statusBar().showMessage(self.trUtf8("Finished loading"))
+        if ok:
+            self.statusBar().showMessage(self.trUtf8("Finished loading"))
+        else:
+            self.statusBar().showMessage(self.trUtf8("Failed to load"))
         
         self.__setLoadingActions(False)
     

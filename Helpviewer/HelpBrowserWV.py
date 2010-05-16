@@ -817,11 +817,12 @@ class HelpBrowser(QWebView):
         """
         self.__isLoading = False
         self.mw.progressBar().hide()
-        self.mw.resetLoading(self)
+        self.mw.resetLoading(self, ok)
         
         self.__iconChanged()
         
-        self.mw.passwordManager().fill(self.page())
+        if ok:
+            self.mw.passwordManager().fill(self.page())
     
     def isLoading(self):
         """
@@ -864,17 +865,17 @@ class HelpBrowser(QWebView):
         if reply.error() == QNetworkReply.NoError:
             if reply.url().isEmpty():
                 return
-            header = reply.header(QNetworkRequest.ContentLengthHeader)
-            size = header
+            size = reply.header(QNetworkRequest.ContentLengthHeader)
             if size == 0:
                 return
             
             if requestFilename is None:
                 requestFilename = Preferences.getUI("RequestDownloadFilename")
             dlg = DownloadDialog(reply, requestFilename, self.page(), download)
-            self.connect(dlg, SIGNAL("done()"), self.__downloadDone)
-            self.__downloadWindows.append(dlg)
-            dlg.show()
+            if dlg.initialize():
+                self.connect(dlg, SIGNAL("done()"), self.__downloadDone)
+                self.__downloadWindows.append(dlg)
+                dlg.show()
         else:
             replyUrl = reply.url()
             if replyUrl.isEmpty():
@@ -914,7 +915,6 @@ class HelpBrowser(QWebView):
         dlg = self.sender()
         if dlg in self.__downloadWindows:
             self.disconnect(dlg, SIGNAL("done()"), self.__downloadDone)
-            self.__downloadWindows.remove(dlg)
     
     def __downloadRequested(self, request):
         """

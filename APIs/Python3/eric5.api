@@ -1885,6 +1885,7 @@ eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.setDo
 eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog?1(cookieJar, parent = None)
 eric5.Helpviewer.DownloadDialog.DownloadDialog.closeEvent?4(evt)
 eric5.Helpviewer.DownloadDialog.DownloadDialog.done?7
+eric5.Helpviewer.DownloadDialog.DownloadDialog.initialize?4()
 eric5.Helpviewer.DownloadDialog.DownloadDialog.on_buttonBox_clicked?4(button)
 eric5.Helpviewer.DownloadDialog.DownloadDialog?1(reply = None, requestFilename = False, webPage = None, download = False, parent = None)
 eric5.Helpviewer.HTMLResources.notFoundPage_html?7
@@ -1992,7 +1993,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.openSearchManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.passwordManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.preferencesChanged?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.progressBar?4()
-eric5.Helpviewer.HelpWindow.HelpWindow.resetLoading?4(widget)
+eric5.Helpviewer.HelpWindow.HelpWindow.resetLoading?4(widget, ok)
 eric5.Helpviewer.HelpWindow.HelpWindow.search?4(word)
 eric5.Helpviewer.HelpWindow.HelpWindow.searchEnginesAction?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.setLoading?4(widget)

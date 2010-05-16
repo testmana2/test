@@ -67,12 +67,12 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         self.__bytesReceived = 0
         self.__downloadTime = QTime()
         self.__output = QFile()
-        
-        self.__initialize()
     
-    def __initialize(self):
+    def initialize(self):
         """
-        Private method to (re)initialize the dialog.
+        Public method to (re)initialize the dialog.
+        
+        @return flag indicating success (boolean)
         """
         if self.__reply is None:
             return
@@ -94,7 +94,8 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         # reset info
         self.infoLabel.clear()
         self.progressBar.setValue(0)
-        self.__getFileName()
+        if not self.__getFileName():
+            return False
         
         # start timer for the download estimation
         self.__downloadTime.start()
@@ -102,10 +103,15 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         if self.__reply.error() != QNetworkReply.NoError:
             self.__networkError()
             self.__finished()
+            return False
+        
+        return True
     
     def __getFileName(self):
         """
         Private method to get the filename to save to from the user.
+        
+        @return flag indicating success (boolean)
         """
         downloadDirectory = Preferences.getUI("DownloadPath")
         if not downloadDirectory:
@@ -130,7 +136,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
             if res == QMessageBox.Cancel:
                 self.__stop()
                 self.close()
-                return
+                return False
             
             self.__autoOpen = res == QMessageBox.Open
             fileName = QDesktopServices.storageLocation(QDesktopServices.TempLocation) + \
@@ -146,16 +152,19 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
                 self.__reply.close()
                 if not self.keepOpenCheckBox.isChecked():
                     self.close()
+                    return False
                 else:
                     self.filenameLabel.setText(self.trUtf8("Download canceled: {0}")\
                         .format(QFileInfo(defaultFileName).fileName()))
                     self.__stop()
-                return
+                    return True
         
         self.__output.setFileName(fileName)
         self.filenameLabel.setText(QFileInfo(self.__output.fileName()).fileName())
         if self.__requestFilename:
             self.__readyRead()
+        
+        return True
     
     def __saveFileName(self, directory):
         """
@@ -244,7 +253,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         if self.__output.exists():
             self.__output.remove()
         self.__reply = reply
-        self.__initialize()
+        self.initialize()
     
     def __readyRead(self):
         """
@@ -297,7 +306,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
             self.__url = locationHeader
             self.__reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(
                            QNetworkRequest(self.__url))
-            self.__initialize()
+            self.initialize()
     
     def __downloadProgress(self, received, total):
         """
@@ -375,12 +384,12 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         if size < 1024:
             unit = self.trUtf8("bytes")
         elif size < 1024 * 1024:
-            size //= 1024
+            size /= 1024
             unit = self.trUtf8("kB")
         else:
-            size //= 1024 * 1024
+            size /= 1024 * 1024
             unit = self.trUtf8("MB")
-        return "{0} {1}".format(size, unit)
+        return "{0:.1f} {1}".format(size, unit)
     
     def __downloading(self):
         """
@@ -416,4 +425,16 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         Protected method called when the dialog is closed.
         """
         self.__output.close()
+        
+        self.disconnect(self.__reply, SIGNAL("readyRead()"), self.__readyRead)
+        self.disconnect(self.__reply, SIGNAL("error(QNetworkReply::NetworkError)"), 
+                        self.__networkError)
+        self.disconnect(self.__reply, SIGNAL("downloadProgress(qint64, qint64)"), 
+                        self.__downloadProgress)
+        self.disconnect(self.__reply, SIGNAL("metaDataChanged()"), 
+                        self.__metaDataChanged)
+        self.disconnect(self.__reply, SIGNAL("finished()"), self.__finished)
+        self.__reply.close()
+        self.__reply.deleteLater()
+        
         self.done.emit()
