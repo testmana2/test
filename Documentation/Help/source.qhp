@@ -2728,8 +2728,10 @@
       <keyword name="HelpBrowser.zoomReset" id="HelpBrowser.zoomReset" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.zoomReset" />
       <keyword name="HelpWebPage (Constructor)" id="HelpWebPage (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.__init__" />
       <keyword name="HelpWebPage.acceptNavigationRequest" id="HelpWebPage.acceptNavigationRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.acceptNavigationRequest" />
+      <keyword name="HelpWebPage.extension" id="HelpWebPage.extension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.extension" />
       <keyword name="HelpWebPage.pageAttributeId" id="HelpWebPage.pageAttributeId" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.pageAttributeId" />
       <keyword name="HelpWebPage.populateNetworkRequest" id="HelpWebPage.populateNetworkRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.populateNetworkRequest" />
+      <keyword name="HelpWebPage.supportsExtension" id="HelpWebPage.supportsExtension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.supportsExtension" />
       <keyword name="JavaScriptEricObject (Constructor)" id="JavaScriptEricObject (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.__init__" />
       <keyword name="JavaScriptEricObject.providerString" id="JavaScriptEricObject.providerString" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.providerString" />
       <keyword name="JavaScriptEricObject.searchUrl" id="JavaScriptEricObject.searchUrl" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.searchUrl" />

@@ -12,6 +12,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtWebKit import QWebView, QWebPage, QWebSettings
 from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
+import sip
 
 import Preferences
 
@@ -181,6 +182,64 @@ class HelpWebPage(QWebPage):
         @return attribute id of the page attribute (integer)
         """
         return QNetworkRequest.User + 100
+    
+    def supportsExtension(self, extension):
+        """
+        Public method to check the support for an extension.
+        
+        @param extension extension to test for (QWebPage.Extension)
+        @return flag indicating the support of extension (boolean)
+        """
+        try:
+            if extension == QWebPage.ErrorPageExtension:
+                return True
+        except AttributeError:
+            pass
+        
+        return QWebPage.supportsExtension(self, extension)
+    
+    def extension(self, extension, option, output):
+        """
+        Public method to implement a specific extension.
+        
+        @param extension extension to be executed (QWebPage.Extension)
+        @param option provides input to the extension (QWebPage.ExtensionOption)
+        @param output stores the output results (QWebPage.ExtensionReturn)
+        @return flag indicating a successful call of the extension (boolean)
+        """
+        try:
+            if extension == QWebPage.ErrorPageExtension:
+                info = sip.cast(option, QWebPage.ErrorPageExtensionOption)
+                errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
+                urlString = bytes(info.url.toEncoded()).decode()
+                html = notFoundPage_html
+                title = self.trUtf8("Error loading page: {0}").format(urlString)
+                pixmap = qApp.style()\
+                         .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
+                         .pixmap(32, 32)
+                imageBuffer = QBuffer()
+                imageBuffer.open(QIODevice.ReadWrite)
+                if pixmap.save(imageBuffer, "PNG"):
+                    html = html.replace("IMAGE_BINARY_DATA_HERE", 
+                                 bytes(imageBuffer.buffer().toBase64()).decode())
+                errorPage.content = QByteArray(html.format(
+                    title, 
+                    info.errorString, 
+                    self.trUtf8("When connecting to: {0}.").format(urlString), 
+                    self.trUtf8("Check the address for errors such as "
+                                "<b>ww</b>.example.org instead of "
+                                "<b>www</b>.example.org"), 
+                    self.trUtf8("If the address is correct, try checking the network "
+                                "connection."), 
+                    self.trUtf8("If your computer or network is protected by a firewall "
+                                "or proxy, make sure that the browser is permitted to "
+                                "access the network.")
+                ).encode("utf8"))
+                return True
+        except AttributeError:
+            pass
+        
+        return QWebPage.extension(self, extension, option, output)
 
 ##########################################################################################
 

@@ -1109,6 +1109,7 @@
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowser.style</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialog.style</Other>
     <Other>.hgignore</Other>
+    <Other>patches</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

@@ -1056,12 +1056,12 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Moduller İnceleniyor...</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagram.py" line="182"/>
+        <location filename="Graphics/ApplicationDiagram.py" line="183"/>
         <source>&lt;&lt;Application&gt;&gt;</source>
         <translation>&lt;&lt;Uygulama&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagram.py" line="184"/>
+        <location filename="Graphics/ApplicationDiagram.py" line="185"/>
         <source>&lt;&lt;Others&gt;&gt;</source>
         <translation>&lt;&lt;Diğerleri&gt;&gt;</translation>
     </message>
@@ -3642,7 +3642,7 @@ göstermek için gelen listeyi seçiniz</translation>
         <translation type="obsolete">&lt;p&gt; &lt;b&gt;%1&lt;/b&gt;form dosyası yüklenirken bir hata oldu.&lt;/p&gt;&lt;p&gt;%2&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/CreateDialogCodeDialog.py" line="400"/>
+        <location filename="Project/CreateDialogCodeDialog.py" line="405"/>
         <source>Code Generation</source>
         <translation>Kod üretici</translation>
     </message>
@@ -3687,7 +3687,7 @@ göstermek için gelen listeyi seçiniz</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/CreateDialogCodeDialog.py" line="400"/>
+        <location filename="Project/CreateDialogCodeDialog.py" line="405"/>
         <source>&lt;p&gt;Could not write the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5694,7 +5694,7 @@ Bağlantı yok
         <translation>Dur</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="140"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="146"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
@@ -5734,7 +5734,7 @@ Bağlantı yok
         <translation type="obsolete">%1 of %2 (%3/sn) %4</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="351"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="360"/>
         <source>?</source>
         <translation>?</translation>
     </message>
@@ -5749,22 +5749,22 @@ Bağlantı yok
         <translation type="obsolete">%1 of %2 - Durdu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="376"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="385"/>
         <source>bytes</source>
         <translation>bitler</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="379"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="388"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="382"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="391"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="122"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="128"/>
         <source>Downloading</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5774,52 +5774,52 @@ Bağlantı yok
         <translation type="unfinished">Eric4 İndirme {5 ?}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="122"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="128"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="150"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="157"/>
         <source>Download canceled: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="261"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="270"/>
         <source>Error opening save file: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="268"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="277"/>
         <source>Error saving: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="285"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="294"/>
         <source>Network Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="341"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="350"/>
         <source>- {0}:{1:02} minutes remaining</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="348"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="357"/>
         <source>- {0} seconds remaining</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="350"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
         <source>{0} of {1} ({2}/sec) {3}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="368"/>
         <source>{0} downloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="362"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="371"/>
         <source>{0} of {1} - Stopped</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6532,222 +6532,222 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt;Dosyanın boyutu&lt;b&gt;%1&lt;/b&gt; &lt;b&gt;%2 KB&lt;/b&gt;.Gerçekten tam yüklendiğine inanıyor musunuz?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="321"/>
+        <location filename="QScintilla/Editor.py" line="322"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kaynak Düzenleme Penceresi&lt;/b&gt;&lt;p&gt;Bu pencere bir kaynak dosyasını düzenlemek ve görüntülemek için kullanılır.  Bunlardan istediğiniz kadarını açabilirsiniz.Pencerenin başlık çubuğunda dosyanın adı görüntülenir.&lt;/p&gt;&lt;p&gt;Katlama işareti ile satır numarası arasındaki boşluğa tıklayarak bekleme noktalarını kolayca oluşturabilirsiniz. Sağ tuş menüsü ile sınırları kolayca belirleyebilirsiniz.&lt;/p&gt;&lt;p&gt;Üstkarakter tuşu ile birlikte katlama işareti ile satır numarası arasındaki boşluğa tıklarsanız yerimlerini oluşturabilirsiniz.&lt;/p&gt;&lt;p&gt;Bu işlem sağ tuş menüsünde ayrılmıştır&lt;/p&gt;&lt;p&gt;Ctrl ile beraber tıklarsanız varsa söz dizimi hatası ile ilgili ipuçları ve nedenlerini görebilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="549"/>
+        <location filename="QScintilla/Editor.py" line="550"/>
         <source>Undo</source>
         <translation>Geri Al</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="552"/>
+        <location filename="QScintilla/Editor.py" line="553"/>
         <source>Redo</source>
         <translation>İlerial</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="555"/>
+        <location filename="QScintilla/Editor.py" line="556"/>
         <source>Revert to last saved state</source>
         <translation>En son kaydedileni eski haline getir</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="559"/>
+        <location filename="QScintilla/Editor.py" line="560"/>
         <source>Cut</source>
         <translation>Kes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="562"/>
+        <location filename="QScintilla/Editor.py" line="563"/>
         <source>Copy</source>
         <translation>Kopyala</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="564"/>
+        <location filename="QScintilla/Editor.py" line="565"/>
         <source>Paste</source>
         <translation>Yapıştır</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="568"/>
+        <location filename="QScintilla/Editor.py" line="569"/>
         <source>Indent</source>
         <translation>Girintili</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="570"/>
+        <location filename="QScintilla/Editor.py" line="571"/>
         <source>Unindent</source>
         <translation>Girintisiz</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="573"/>
+        <location filename="QScintilla/Editor.py" line="574"/>
         <source>Comment</source>
         <translation>Yorumlayıcı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="576"/>
+        <location filename="QScintilla/Editor.py" line="577"/>
         <source>Uncomment</source>
         <translation>Yorumlanamaz</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="579"/>
+        <location filename="QScintilla/Editor.py" line="580"/>
         <source>Stream Comment</source>
         <translation>Yorumlayıcı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="582"/>
+        <location filename="QScintilla/Editor.py" line="583"/>
         <source>Box Comment</source>
         <translation>Kutu Yorumlayıcı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="585"/>
+        <location filename="QScintilla/Editor.py" line="586"/>
         <source>Select to brace</source>
         <translation>Köşeli ayracı seç</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="587"/>
+        <location filename="QScintilla/Editor.py" line="588"/>
         <source>Select all</source>
         <translation>Hepsini seç</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="588"/>
+        <location filename="QScintilla/Editor.py" line="589"/>
         <source>Deselect all</source>
         <translation>Tüm seçimi iptal et</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5424"/>
+        <location filename="QScintilla/Editor.py" line="5415"/>
         <source>Check spelling...</source>
         <translation>Yazım denetimi ...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="594"/>
+        <location filename="QScintilla/Editor.py" line="595"/>
         <source>Check spelling of selection...</source>
         <translation>Seçilen bölümün yazım denitimi...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="598"/>
+        <location filename="QScintilla/Editor.py" line="599"/>
         <source>Remove from dictionary</source>
         <translation>Sözlükten kaldır</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="601"/>
+        <location filename="QScintilla/Editor.py" line="602"/>
         <source>Shorten empty lines</source>
         <translation>Boş satırları kısalt</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="609"/>
+        <location filename="QScintilla/Editor.py" line="610"/>
         <source>Use Monospaced Font</source>
         <translation>Tek hacimli yazıtipi kullan</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="614"/>
+        <location filename="QScintilla/Editor.py" line="615"/>
         <source>Autosave enabled</source>
         <translation>Otomatik kayıt kabul edildi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="619"/>
+        <location filename="QScintilla/Editor.py" line="620"/>
         <source>Typing aids enabled</source>
         <translation>İmla düzeltme kabul edildi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="626"/>
+        <location filename="QScintilla/Editor.py" line="627"/>
         <source>Autocompletion enabled</source>
         <translation>Otomatik tamamlama onaylı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="643"/>
+        <location filename="QScintilla/Editor.py" line="644"/>
         <source>New view</source>
         <translation>Yeni görünüm</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="644"/>
+        <location filename="QScintilla/Editor.py" line="645"/>
         <source>New view (with new split)</source>
         <translation>Yeni görünüm (yeni ayraç ile)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="648"/>
+        <location filename="QScintilla/Editor.py" line="649"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="652"/>
+        <location filename="QScintilla/Editor.py" line="653"/>
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="654"/>
+        <location filename="QScintilla/Editor.py" line="655"/>
         <source>Save As...</source>
         <translation>Farklı Kaydet...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="659"/>
+        <location filename="QScintilla/Editor.py" line="660"/>
         <source>Print Preview</source>
         <translation>Yazdırma Öngörünümü</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="661"/>
+        <location filename="QScintilla/Editor.py" line="662"/>
         <source>Print</source>
         <translation>Yazdır</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="678"/>
+        <location filename="QScintilla/Editor.py" line="679"/>
         <source>Autocomplete</source>
         <translation>Otomatik tamamlama</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="681"/>
+        <location filename="QScintilla/Editor.py" line="682"/>
         <source>dynamic</source>
         <translation>dinamik</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="684"/>
+        <location filename="QScintilla/Editor.py" line="685"/>
         <source>from Document</source>
         <translation>Belgeden</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="687"/>
+        <location filename="QScintilla/Editor.py" line="688"/>
         <source>from APIs</source>
         <translation>API&apos;den</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="690"/>
+        <location filename="QScintilla/Editor.py" line="691"/>
         <source>from Document and APIs</source>
         <translation>Belgeden ve API&apos;den</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="694"/>
+        <location filename="QScintilla/Editor.py" line="695"/>
         <source>Calltip</source>
         <translation>İpucu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="704"/>
+        <location filename="QScintilla/Editor.py" line="705"/>
         <source>Check</source>
         <translation>Kontrol</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="712"/>
+        <location filename="QScintilla/Editor.py" line="713"/>
         <source>Show</source>
         <translation>Göster</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="714"/>
+        <location filename="QScintilla/Editor.py" line="715"/>
         <source>Code metrics...</source>
         <translation>Metrik Kod...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="716"/>
+        <location filename="QScintilla/Editor.py" line="717"/>
         <source>Code coverage...</source>
         <translation>Kod koruyucu...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="718"/>
+        <location filename="QScintilla/Editor.py" line="719"/>
         <source>Show code coverage annotations</source>
         <translation>Kodun dipnotunu göster</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="721"/>
+        <location filename="QScintilla/Editor.py" line="722"/>
         <source>Hide code coverage annotations</source>
         <translation>Kod koruyucu dipnotunu gizle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="724"/>
+        <location filename="QScintilla/Editor.py" line="725"/>
         <source>Profile data...</source>
         <translation>Veri kesiti...</translation>
     </message>
@@ -6762,182 +6762,182 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">Tepegöz raporunu kaldır</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="734"/>
+        <location filename="QScintilla/Editor.py" line="735"/>
         <source>Diagrams</source>
         <translation>Şema</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="736"/>
+        <location filename="QScintilla/Editor.py" line="737"/>
         <source>Class Diagram...</source>
         <translation>Sınıf Şeması...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="738"/>
+        <location filename="QScintilla/Editor.py" line="739"/>
         <source>Package Diagram...</source>
         <translation>Paket Şeması...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="740"/>
+        <location filename="QScintilla/Editor.py" line="741"/>
         <source>Imports Diagram...</source>
         <translation>Şemayı İçeal...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="743"/>
+        <location filename="QScintilla/Editor.py" line="744"/>
         <source>Application Diagram...</source>
         <translation>Uygulama Şeması...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="754"/>
+        <location filename="QScintilla/Editor.py" line="755"/>
         <source>Languages</source>
         <translation>Diller</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="757"/>
+        <location filename="QScintilla/Editor.py" line="758"/>
         <source>No Language</source>
         <translation>Dil Yok</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="776"/>
+        <location filename="QScintilla/Editor.py" line="777"/>
         <source>Guessed</source>
         <translation>Konuk</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1096"/>
+        <location filename="QScintilla/Editor.py" line="1097"/>
         <source>Alternatives</source>
         <translation>Alternatif</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="794"/>
+        <location filename="QScintilla/Editor.py" line="795"/>
         <source>Encodings</source>
         <translation>Kodçözülüyor</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="816"/>
+        <location filename="QScintilla/Editor.py" line="817"/>
         <source>End-of-Line Type</source>
         <translation>Satır Sonu Yazısı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="820"/>
+        <location filename="QScintilla/Editor.py" line="821"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="826"/>
+        <location filename="QScintilla/Editor.py" line="827"/>
         <source>Windows</source>
         <translation>Pencereler</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="832"/>
+        <location filename="QScintilla/Editor.py" line="833"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="847"/>
+        <location filename="QScintilla/Editor.py" line="848"/>
         <source>Export as</source>
         <translation>Farklı Dışaktar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="969"/>
+        <location filename="QScintilla/Editor.py" line="970"/>
         <source>Toggle bookmark</source>
         <translation>Yerimi açkapa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="972"/>
+        <location filename="QScintilla/Editor.py" line="973"/>
         <source>Next bookmark</source>
         <translation>Sonraki yerimi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="975"/>
+        <location filename="QScintilla/Editor.py" line="976"/>
         <source>Previous bookmark</source>
         <translation>Önceki yerimi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="978"/>
+        <location filename="QScintilla/Editor.py" line="979"/>
         <source>Clear all bookmarks</source>
         <translation>Tüm yerimlerini temizle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1005"/>
+        <location filename="QScintilla/Editor.py" line="1006"/>
         <source>Toggle breakpoint</source>
         <translation>Beklemenoktası açkapa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1008"/>
+        <location filename="QScintilla/Editor.py" line="1009"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Geçici bekleme noktası açkapa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1011"/>
+        <location filename="QScintilla/Editor.py" line="1012"/>
         <source>Edit breakpoint...</source>
         <translation>Bekleme noktasını düzenle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3901"/>
+        <location filename="QScintilla/Editor.py" line="3894"/>
         <source>Enable breakpoint</source>
         <translation>Beklemenoktasını kabul et</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1017"/>
+        <location filename="QScintilla/Editor.py" line="1018"/>
         <source>Next breakpoint</source>
         <translation>Sonraki Beklemenoktası</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1020"/>
+        <location filename="QScintilla/Editor.py" line="1021"/>
         <source>Previous breakpoint</source>
         <translation>Önceki bekleme noktası</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1023"/>
+        <location filename="QScintilla/Editor.py" line="1024"/>
         <source>Clear all breakpoints</source>
         <translation>Tüm beklemenoktalarını temizle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="982"/>
+        <location filename="QScintilla/Editor.py" line="983"/>
         <source>Goto syntax error</source>
         <translation>Sözdizimi hatasına git</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="985"/>
+        <location filename="QScintilla/Editor.py" line="986"/>
         <source>Show syntax error message</source>
         <translation>Sözdizimi hata mesajını göster</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="988"/>
+        <location filename="QScintilla/Editor.py" line="989"/>
         <source>Clear syntax error</source>
         <translation>Sözdizimi hatalarını sil</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1027"/>
+        <location filename="QScintilla/Editor.py" line="1028"/>
         <source>Next uncovered line</source>
         <translation>Sonraki kapanmamış satır</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1030"/>
+        <location filename="QScintilla/Editor.py" line="1031"/>
         <source>Previous uncovered line</source>
         <translation>Önceki kaplanmamış satır</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1034"/>
+        <location filename="QScintilla/Editor.py" line="1035"/>
         <source>Next task</source>
         <translation>Sonraki görev</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1037"/>
+        <location filename="QScintilla/Editor.py" line="1038"/>
         <source>Previous task</source>
         <translation>Önceki görev</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1041"/>
+        <location filename="QScintilla/Editor.py" line="1042"/>
         <source>LMB toggles bookmarks</source>
         <translation>LMB açkapa yerimleri</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1046"/>
+        <location filename="QScintilla/Editor.py" line="1047"/>
         <source>LMB toggles breakpoints</source>
         <translation>LMB açkapa bekleme noktası</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1082"/>
+        <location filename="QScintilla/Editor.py" line="1083"/>
         <source>Export source</source>
         <translation>Kaynağı dışaktar</translation>
     </message>
@@ -6947,7 +6947,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt; &lt;b&gt;%1&lt;/b&gt;dışa aktarma formatı eric4&apos;ün dışa aktarım formatlarından değil. İptel ediliyor...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1082"/>
+        <location filename="QScintilla/Editor.py" line="1083"/>
         <source>No export format given. Aborting...</source>
         <translation>Girilen dışaaktarma formatı yok. İptal edildi...</translation>
     </message>
@@ -6957,12 +6957,12 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">Alternatifler (%1)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1111"/>
+        <location filename="QScintilla/Editor.py" line="1112"/>
         <source>Pygments Lexer</source>
         <translation>Pyment Lexer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1111"/>
+        <location filename="QScintilla/Editor.py" line="1112"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Kullanmak için Pygment lexer seç</translation>
     </message>
@@ -7012,7 +7012,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt; &lt;b&gt;%1&lt;/b&gt; dosyası açılamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2389"/>
+        <location filename="QScintilla/Editor.py" line="2375"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
@@ -7027,52 +7027,52 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt; &lt;b&gt;%1&lt;/b&gt;dosyası burda zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3436"/>
+        <location filename="QScintilla/Editor.py" line="3431"/>
         <source>Autocompletion</source>
         <translation>Otomatik tamamlama</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3436"/>
+        <location filename="QScintilla/Editor.py" line="3431"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Otomatiktamamlama uygun değil çünkü bu otomatiktamamlama kaynağı değil.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3904"/>
+        <location filename="QScintilla/Editor.py" line="3897"/>
         <source>Disable breakpoint</source>
         <translation>Durmanoktasını iptal et</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4145"/>
+        <location filename="QScintilla/Editor.py" line="4137"/>
         <source>Code Coverage</source>
         <translation>Kod Koruyucu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4145"/>
+        <location filename="QScintilla/Editor.py" line="4137"/>
         <source>Please select a coverage file</source>
         <translation>Lütfen bir koruyucu dosya seçiniz</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4191"/>
+        <location filename="QScintilla/Editor.py" line="4183"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Kodların Dipnotunu Göster</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4187"/>
+        <location filename="QScintilla/Editor.py" line="4179"/>
         <source>All lines have been covered.</source>
         <translation>Tüm satırlar korumaya alındı.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4191"/>
+        <location filename="QScintilla/Editor.py" line="4183"/>
         <source>There is no coverage file available.</source>
         <translation>Hazırda koruma dosyası yok.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4284"/>
+        <location filename="QScintilla/Editor.py" line="4275"/>
         <source>Profile Data</source>
         <translation>Veri Kesiti</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4284"/>
+        <location filename="QScintilla/Editor.py" line="4275"/>
         <source>Please select a profile file</source>
         <translation>Lütfen kesit dosyasını seçiniz</translation>
     </message>
@@ -7097,37 +7097,37 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">Lütfen, kaldırılacak Tepegöz rapor dosyasını seçin</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4400"/>
+        <location filename="QScintilla/Editor.py" line="4391"/>
         <source>Syntax Error</source>
         <translation>Sözdizimi Hatası</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4400"/>
+        <location filename="QScintilla/Editor.py" line="4391"/>
         <source>No syntax error message available.</source>
         <translation>Uygun söz dizimi hata mesajı yok.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4539"/>
+        <location filename="QScintilla/Editor.py" line="4530"/>
         <source>Macro Name</source>
         <translation>Makro Adı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4539"/>
+        <location filename="QScintilla/Editor.py" line="4530"/>
         <source>Select a macro name:</source>
         <translation>Bir makro ismi seç:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4567"/>
+        <location filename="QScintilla/Editor.py" line="4558"/>
         <source>Load macro file</source>
         <translation>Makro dosyasını yükle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4607"/>
+        <location filename="QScintilla/Editor.py" line="4598"/>
         <source>Macro files (*.macro)</source>
         <translation>Makro dosyaları (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4588"/>
+        <location filename="QScintilla/Editor.py" line="4579"/>
         <source>Error loading macro</source>
         <translation>Makronun yüklenmesinde hata</translation>
     </message>
@@ -7142,12 +7142,12 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt; &lt;b&gt;%1&lt;/b&gt;makro dosyası bozuk.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4607"/>
+        <location filename="QScintilla/Editor.py" line="4598"/>
         <source>Save macro file</source>
         <translation>Makro Dosyasını Kaydet</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4624"/>
+        <location filename="QScintilla/Editor.py" line="4615"/>
         <source>Save macro</source>
         <translation>Makro Kaydet</translation>
     </message>
@@ -7157,7 +7157,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt;makro dosyası zaten açık.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4642"/>
+        <location filename="QScintilla/Editor.py" line="4633"/>
         <source>Error saving macro</source>
         <translation>Makronun kaydedilmesinde hata</translation>
     </message>
@@ -7167,22 +7167,22 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt; &lt;b&gt;%1&lt;/b&gt; makro dosyası yazılamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4653"/>
+        <location filename="QScintilla/Editor.py" line="4644"/>
         <source>Start Macro Recording</source>
         <translation>Makro Kaydı Başladı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4653"/>
+        <location filename="QScintilla/Editor.py" line="4644"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Makro kaydı şuan aktif. Yeniden başlasın mı?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4680"/>
+        <location filename="QScintilla/Editor.py" line="4671"/>
         <source>Macro Recording</source>
         <translation>Makro Kaydediliyor</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4680"/>
+        <location filename="QScintilla/Editor.py" line="4671"/>
         <source>Enter name of the macro:</source>
         <translation>Makronun ismini gir:</translation>
     </message>
@@ -7192,12 +7192,12 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt; dosyası eric4 açıkken değiştirildi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4803"/>
+        <location filename="QScintilla/Editor.py" line="4794"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Uyarı:&lt;/b&gt; Yapılan değişiklikleri yeniden açarken kaybedebilirsiniz.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4807"/>
+        <location filename="QScintilla/Editor.py" line="4798"/>
         <source>File changed</source>
         <translation>Dosya değiştirilmiş</translation>
     </message>
@@ -7207,7 +7207,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">%1 (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5003"/>
+        <location filename="QScintilla/Editor.py" line="4994"/>
         <source>Drop Error</source>
         <translation>Düşme hatası</translation>
     </message>
@@ -7217,47 +7217,47 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt;dosya değil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5021"/>
+        <location filename="QScintilla/Editor.py" line="5012"/>
         <source>Resources</source>
         <translation>Kaynaklar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5023"/>
+        <location filename="QScintilla/Editor.py" line="5014"/>
         <source>Add file...</source>
         <translation>Dosya ekle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5025"/>
+        <location filename="QScintilla/Editor.py" line="5016"/>
         <source>Add files...</source>
         <translation>Dosyaları ekle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5027"/>
+        <location filename="QScintilla/Editor.py" line="5018"/>
         <source>Add aliased file...</source>
         <translation>Kısaltmalar dosyasına ekle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5029"/>
+        <location filename="QScintilla/Editor.py" line="5020"/>
         <source>Add localized resource...</source>
         <translation>Yaral kaynak ekle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5032"/>
+        <location filename="QScintilla/Editor.py" line="5023"/>
         <source>Add resource frame</source>
         <translation>Çerçeve kaynağı ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5050"/>
+        <location filename="QScintilla/Editor.py" line="5041"/>
         <source>Add file resource</source>
         <translation>Dosya kaynağını ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5066"/>
+        <location filename="QScintilla/Editor.py" line="5057"/>
         <source>Add file resources</source>
         <translation>Dosya kaynaklarını ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5093"/>
+        <location filename="QScintilla/Editor.py" line="5084"/>
         <source>Add aliased file resource</source>
         <translation>Kısaltmalar dosyası kaynağını ekle</translation>
     </message>
@@ -7267,57 +7267,57 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">Kısaltmalar dosyası için &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5154"/>
+        <location filename="QScintilla/Editor.py" line="5145"/>
         <source>Package Diagram</source>
         <translation>Paket Şeması</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5154"/>
+        <location filename="QScintilla/Editor.py" line="5145"/>
         <source>Include class attributes?</source>
         <translation>Sınıf nitelikleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5175"/>
+        <location filename="QScintilla/Editor.py" line="5166"/>
         <source>Imports Diagram</source>
         <translation>Şemayı İçeal</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5175"/>
+        <location filename="QScintilla/Editor.py" line="5166"/>
         <source>Include imports from external modules?</source>
         <translation>Harici modüllerdan içe aktarım dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5191"/>
+        <location filename="QScintilla/Editor.py" line="5182"/>
         <source>Application Diagram</source>
         <translation>Uygulama Şeması</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5191"/>
+        <location filename="QScintilla/Editor.py" line="5182"/>
         <source>Include module names?</source>
         <translation>Modül isimleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5426"/>
+        <location filename="QScintilla/Editor.py" line="5417"/>
         <source>Add to dictionary</source>
         <translation>Sözlüğe ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5428"/>
+        <location filename="QScintilla/Editor.py" line="5419"/>
         <source>Ignore All</source>
         <translation>Hepsini Görmezden Gel</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="266"/>
+        <location filename="QScintilla/Editor.py" line="267"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1074"/>
+        <location filename="QScintilla/Editor.py" line="1075"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1093"/>
+        <location filename="QScintilla/Editor.py" line="1094"/>
         <source>Alternatives ({0})</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7332,82 +7332,82 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2348"/>
+        <location filename="QScintilla/Editor.py" line="2334"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2389"/>
+        <location filename="QScintilla/Editor.py" line="2375"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4581"/>
+        <location filename="QScintilla/Editor.py" line="4572"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4588"/>
+        <location filename="QScintilla/Editor.py" line="4579"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4624"/>
+        <location filename="QScintilla/Editor.py" line="4615"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4642"/>
+        <location filename="QScintilla/Editor.py" line="4633"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4798"/>
+        <location filename="QScintilla/Editor.py" line="4789"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4886"/>
+        <location filename="QScintilla/Editor.py" line="4877"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5003"/>
+        <location filename="QScintilla/Editor.py" line="4994"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5093"/>
+        <location filename="QScintilla/Editor.py" line="5084"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="992"/>
+        <location filename="QScintilla/Editor.py" line="993"/>
         <source>Next warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="995"/>
+        <location filename="QScintilla/Editor.py" line="996"/>
         <source>Previous warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="998"/>
+        <location filename="QScintilla/Editor.py" line="999"/>
         <source>Show warning message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1001"/>
+        <location filename="QScintilla/Editor.py" line="1002"/>
         <source>Clear warnings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4520"/>
+        <location filename="QScintilla/Editor.py" line="4511"/>
         <source>py3flakes Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4520"/>
+        <location filename="QScintilla/Editor.py" line="4511"/>
         <source>No py3flakes warning message available.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8383,7 +8383,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation>Yazı tipini seç.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="102"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="61"/>
         <source>Font</source>
         <translation>Yazı Tipi</translation>
     </message>
@@ -8393,7 +8393,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation>Satır sonuna kadar dolrurmak için seç.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="201"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="290"/>
         <source>Fill to end of line</source>
         <translation>Satırın sonuna kadar doldur</translation>
     </message>
@@ -8493,22 +8493,22 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation>Tüm stilleri dışa aktar</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="199"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="288"/>
         <source>Enabled</source>
         <translation>Yetkili</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="200"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="289"/>
         <source>Disabled</source>
         <translation>Onaylanmamış</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="201"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="290"/>
         <source>Select fill to end of line for all styles</source>
         <translation>Tüm stiller için satır sonunu doldurmayı  seç</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="302"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="391"/>
         <source>Export Highlighting Styles</source>
         <translation>Metin Vurgulayıcı Stillerini Dışa Aktar</translation>
     </message>
@@ -8518,28 +8518,43 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">eric4 metin vurgulayıcı stilleri dosyası (*.e4h)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="370"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="459"/>
         <source>Import Highlighting Styles</source>
         <translation>Metin Vurgulayıcı Stillerini İçe Aktar</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="315"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="404"/>
         <source>Highlighting styles file (*.e4h)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="302"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="391"/>
         <source>&lt;p&gt;The highlighting styles could not be exported to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="362"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="451"/>
         <source>&lt;p&gt;The highlighting styles could not be read from file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="370"/>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="459"/>
         <source>&lt;p&gt;The highlighting styles file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="64"/>
+        <source>Family and Size only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="66"/>
+        <source>Family only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="68"/>
+        <source>Size only</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -10085,157 +10100,152 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
 <context>
     <name>EricapiConfigDialog</name>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="13"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="14"/>
         <source>Ericapi Configuration</source>
         <translation>Ericapi Ayarları</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="24"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="25"/>
         <source>Enter an output filename</source>
         <translation>Çıktı dosadını giriniz</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="27"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="28"/>
         <source>&lt;b&gt;Output Filename&lt;/b&gt;&lt;p&gt;Enter the filename of the output file. A &apos;%L&apos; placeholder is replaced by the language of the API file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="37"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="38"/>
         <source>Press to open a file selection dialog</source>
         <translation>Dosya seçme diyaloğunu açmak için basınız</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="230"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="221"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="47"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="48"/>
         <source>Output File:</source>
         <translation>Çıktı Dosyası:</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="62"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="63"/>
         <source>Languages</source>
         <translation>Diller</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="68"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="69"/>
         <source>Select the languages of the  APIs to generate</source>
         <translation>API&apos;leri üretmek için dilleri seçiniz</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="83"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="84"/>
         <source>Additional source extensions:</source>
         <translation>İlave kaynak eklentileri:</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="90"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="91"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>İlave edeceğiniz ek kaynakları virgüllerle ayırarak giriniz</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="117"/>
-        <source>Select to generate API files for QScintilla prior to 1.7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="120"/>
         <source>Generate old style API files</source>
-        <translation>Eski stil API dosyalarını üret</translation>
+        <translation type="obsolete">Eski stil API dosyalarını üret</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="127"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="118"/>
         <source>Select to recurse into subdirectories</source>
         <translation>Alt dizinlerin içine kaynak için seç</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="130"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="121"/>
         <source>Recurse into subdirectories</source>
         <translation>Altdizinlerin içine kaynak</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="137"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="128"/>
         <source>Select to include private classes, methods and functions in the API file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="140"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="131"/>
         <source>Include private classes, methods and functions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="151"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="142"/>
         <source>Base package name:</source>
         <translation>Taban paket adı:</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="158"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="149"/>
         <source>Enter the name of the base package</source>
         <translation>Ana paket adını giriniz</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="169"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="160"/>
         <source>Exclude Files:</source>
         <translation>Dışarda Tutulan Dosyalar:</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="176"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="167"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="191"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="182"/>
         <source>Exclude Directories</source>
         <translation>Dışarda Tutulan Dizinler</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="197"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="188"/>
         <source>Enter a directory basename to be ignored</source>
         <translation>İptal edilecek kök dizin listesini girin</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="204"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="195"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Girilen dizini eklemek ve listelemek için basınız</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="207"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="198"/>
         <source>Add</source>
         <translation>Ekle</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="214"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="205"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Seçilen dizini listeden silmek için basınız</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="217"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="208"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="227"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="218"/>
         <source>Press to open a directory selection dialog</source>
         <translation>Dizin seçme diyaloğunu açmak için basınız</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="237"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="228"/>
         <source>List of directory basenames to be ignored</source>
         <translation>iptal edilecek kök dizin listesi</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="167"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="165"/>
         <source>Select output file</source>
         <translation>Çıktı dosyasının seçiniz</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="167"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="165"/>
         <source>API files (*.api);;All files (*)</source>
         <translation>API dosyaları (*.api);;Tüm dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="198"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="196"/>
         <source>Select directory to exclude</source>
         <translation>Dışırıda tutulacak dizinleri seçiniz</translation>
     </message>
@@ -10608,22 +10618,22 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="241"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="257"/>
         <source>Select output directory</source>
         <translation>Çıktı dizinini seç</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="266"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="282"/>
         <source>Select directory to exclude</source>
         <translation>Dışırıda tutulacak dizinleri seçiniz</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="304"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="320"/>
         <source>Select CSS style sheet</source>
         <translation>CSS sayfa stilini seç</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="304"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="320"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation>Sayfa stili (*.css);;Tüm dosyalar (*)</translation>
     </message>
@@ -10688,7 +10698,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="452"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="468"/>
         <source>Select output directory for QtHelp files</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10802,27 +10812,27 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;b&gt;Belge Üreteci&lt;/b&gt;&lt;p&gt;Eric4-doc ta kullanılmak üzere API belgesi üretiliyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="54"/>
+        <location filename="Plugins/PluginEricdoc.py" line="52"/>
         <source>Eric5 Documentation Generator</source>
         <translation type="unfinished">Eric4 Belge Üreteci {5 ?}</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="95"/>
+        <location filename="Plugins/PluginEricdoc.py" line="93"/>
         <source>Generate documentation (eric5-doc)</source>
         <translation type="unfinished">Belge üreteci (eric4-doc) {5-?}</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="95"/>
+        <location filename="Plugins/PluginEricdoc.py" line="93"/>
         <source>Generate &amp;documentation (eric5-doc)</source>
         <translation type="unfinished">Bel&amp;ge üreteci (eric4-doc) {5-?}</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="98"/>
+        <location filename="Plugins/PluginEricdoc.py" line="96"/>
         <source>Generate API documentation using eric5-doc</source>
         <translation type="unfinished">Eric4-doc ta kullanılmak üzere API belgesi üretiliyor {5-?}</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="100"/>
+        <location filename="Plugins/PluginEricdoc.py" line="98"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Belge Üreteci&lt;/b&gt;&lt;p&gt;Eric4-doc ta kullanılmak üzere API belgesi üretiliyor.&lt;/p&gt; {5-?}</translation>
     </message>
@@ -11598,12 +11608,12 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation>Bul</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="550"/>
+        <location filename="UI/FindFileDialog.py" line="551"/>
         <source>Replace in Files</source>
         <translation>Dosya içinde değiştir</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="466"/>
+        <location filename="UI/FindFileDialog.py" line="467"/>
         <source>Select directory</source>
         <translation>Dizin Seçiniz</translation>
     </message>
@@ -11628,32 +11638,32 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="575"/>
+        <location filename="UI/FindFileDialog.py" line="576"/>
         <source>Open</source>
         <translation type="unfinished">Aç</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="576"/>
+        <location filename="UI/FindFileDialog.py" line="577"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="325"/>
+        <location filename="UI/FindFileDialog.py" line="326"/>
         <source>Invalid search expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="325"/>
+        <location filename="UI/FindFileDialog.py" line="326"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="527"/>
+        <location filename="UI/FindFileDialog.py" line="528"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="550"/>
+        <location filename="UI/FindFileDialog.py" line="551"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12006,17 +12016,17 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt; dosyası için bir gösterici başlatılamadı.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="568"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="627"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Yeni sekmede bir bağlantı açar<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="209"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="268"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yardım Penceresi&lt;/b&gt;&lt;p&gt;Bu pencere seçilen yardım bilgilerini gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="627"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="686"/>
         <source>Web Inspector...</source>
         <translation>Web Denetleyicisi...</translation>
     </message>
@@ -12026,97 +12036,97 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;title&gt;Yardım Penceresi&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Talep edilen  URL &lt;b&gt;%1&lt;/b&gt; adresi yüklenemedi.&lt;/p&gt;&lt;p&gt;Sebep: %2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="894"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="894"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="894"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="601"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="660"/>
         <source>Bookmark this Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="572"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="631"/>
         <source>Save Lin&amp;k</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="573"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="632"/>
         <source>Bookmark this Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="576"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="635"/>
         <source>Copy Link to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="581"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="640"/>
         <source>Open Image in New Tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="585"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="644"/>
         <source>Save Image</source>
         <translation type="unfinished">Görüntüyü Kaydet</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="586"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="645"/>
         <source>Copy Image to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="587"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="646"/>
         <source>Copy Image Location to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="390"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="449"/>
         <source>Web Browser</source>
         <translation type="unfinished">Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="591"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="650"/>
         <source>Block Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="615"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="674"/>
         <source>Search with...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="350"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="409"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="390"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="449"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="372"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="431"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="885"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="945"/>
         <source>Error loading page: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="894"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
         <source>When connecting to: {0}.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12940,6 +12950,34 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
     </message>
 </context>
 <context>
+    <name>HelpWebPage</name>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="216"/>
+        <source>Error loading page: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <source>When connecting to: {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <source>If the address is correct, try checking the network connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>HelpWebSearchWidget</name>
     <message>
         <location filename="Helpviewer/HelpWebSearchWidget.py" line="138"/>
@@ -13032,7 +13070,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation>&lt;b&gt;Yeni Pencere&lt;/b&gt;&lt;p&gt;Bu yeni bir yardım gözatıcı penceresi açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1563"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1559"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
     </message>
@@ -13745,12 +13783,12 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation>Git</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1296"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1294"/>
         <source>&lt;p&gt;Enter the help file to be displayed directly into this edit field. Select a previously shown help file from the drop down list.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Görüntülenen bu düzenleme alanından direkt yardım dosyasını gir. Aşağı kayan listededen öncelikle görünmesini istediğiniz yardım dosyasını seçiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1563"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1559"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Yardım Dosyaları (*.html *.htm);;PDF Dosyaları (*.pdf);;CHM Dosyaları (*.chm);;Tüm Dosyalar (*)</translation>
     </message>
@@ -13870,7 +13908,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2348"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2352"/>
         <source>Could not find an associated content.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13935,22 +13973,22 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2464"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2468"/>
         <source>Updating search index</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2518"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2522"/>
         <source>Looking for Documentation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2548"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2552"/>
         <source>Unfiltered</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2567"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2571"/>
         <source>Help Engine</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13980,7 +14018,7 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2237"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2239"/>
         <source>Finished loading</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14472,8 +14510,13 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2527"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2531"/>
         <source>eric5 Web Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="2241"/>
+        <source>Failed to load</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -14560,157 +14603,157 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="969"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="972"/>
         <source>Mercurial command</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1138"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1141"/>
         <source>Copying {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1231"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1234"/>
         <source>Mercurial Log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1231"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1234"/>
         <source>Select number of entries to show.</source>
         <translation type="unfinished">gösterilecek giriş miktarını seç.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1304"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1307"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1329"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1332"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1438"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1441"/>
         <source>Resolving files/directories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1460"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1463"/>
         <source>Create Branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1460"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1463"/>
         <source>Enter branch name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1471"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1474"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1536"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1539"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1560"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1563"/>
         <source>Showing the combined configuration settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1583"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1586"/>
         <source>Showing aliases for remote repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1606"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1609"/>
         <source>Recovering from interrupted transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1831"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1834"/>
         <source>Shall the working directory be updated?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1494"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1497"/>
         <source>Showing current branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1743"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1746"/>
         <source>Create changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1845"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1848"/>
         <source>Apply changegroups</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1859"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1862"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1886"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1889"/>
         <source>Mercurial Bisect ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1795"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1798"/>
         <source>Preview changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1629"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1632"/>
         <source>Identifying project directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1654"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1657"/>
         <source>Create .hgignore file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1654"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1657"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1918"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1921"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1701"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1704"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1718"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1721"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1825"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1828"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1805"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1808"/>
         <source>Identifying changegroup file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1967"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1970"/>
         <source>Backing out changeset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1947"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1950"/>
         <source>No revision given. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15388,12 +15431,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="878"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="928"/>
         <source>Revision</source>
         <translation type="unfinished">Gözden Geçirme</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="875"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="925"/>
         <source>Author</source>
         <translation type="unfinished">Yazar</translation>
     </message>
@@ -15528,27 +15571,27 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished">Değiştirildi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="479"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="533"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="479"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="533"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="324"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="379"/>
         <source>The hg process did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="326"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="381"/>
         <source>Could not start the hg executable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="329"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="384"/>
         <source>Mercurial Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19688,27 +19731,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>JavaScriptEricObject</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="75"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="76"/>
         <source>Welcome to Eric Web Browser!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="76"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="77"/>
         <source>Eric Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="77"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="78"/>
         <source>Search!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="78"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="79"/>
         <source>About Eric</source>
         <translation type="unfinished">Eric Hakkında</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="116"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="117"/>
         <source>Search results provided by {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23972,17 +24015,17 @@ Select Update.</source>
         <translation type="obsolete">Python Dosyaları (*.py);;Python Dosyaları win32 (*.pyw);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="171"/>
+        <location filename="Project/Project.py" line="174"/>
         <source>Ruby Files (*.rb);;</source>
         <translation>Ruby Dosyaları  (*.rb);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="203"/>
+        <location filename="Project/Project.py" line="206"/>
         <source>Qt4 GUI</source>
         <translation>Qt4 GUI</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="204"/>
+        <location filename="Project/Project.py" line="207"/>
         <source>Qt4 Console</source>
         <translation>Qt4 konsolu</translation>
     </message>
@@ -24002,12 +24045,12 @@ Select Update.</source>
         <translation type="obsolete">KDE 3</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="206"/>
+        <location filename="Project/Project.py" line="209"/>
         <source>Console</source>
         <translation>Konsol- kumanda birimi</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="207"/>
+        <location filename="Project/Project.py" line="210"/>
         <source>Other</source>
         <translation>Diğer</translation>
     </message>
@@ -24017,7 +24060,7 @@ Select Update.</source>
         <translation type="obsolete">KDE 4</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="249"/>
+        <location filename="Project/Project.py" line="252"/>
         <source>Registering Project Type</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24027,12 +24070,12 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt;Proje türü &lt;b&gt;%1&lt;/b&gt; halihazırda var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="693"/>
+        <location filename="Project/Project.py" line="702"/>
         <source>Read project file</source>
         <translation>Proje dosyasını oku</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="749"/>
+        <location filename="Project/Project.py" line="766"/>
         <source>Compressed project files not supported. The compression library is missing.</source>
         <translation>Sıkıştırılmış proje dosyaları desteklenmiyor. Sıkıştırma kütüphanesi kayıp.</translation>
     </message>
@@ -24042,37 +24085,37 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt; proje dosyası okunamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="767"/>
+        <location filename="Project/Project.py" line="784"/>
         <source>Save project file</source>
         <translation>Proje dosyasını kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="808"/>
+        <location filename="Project/Project.py" line="825"/>
         <source>Read user project properties</source>
         <translation>Kullanıcı projesinin özelliklerini oku</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="836"/>
+        <location filename="Project/Project.py" line="853"/>
         <source>Save user project properties</source>
         <translation>Kullanıcı projesinin özelliklerini kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1107"/>
+        <location filename="Project/Project.py" line="1124"/>
         <source>Read project session</source>
         <translation>Proje oturumunu oku</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1388"/>
+        <location filename="Project/Project.py" line="1405"/>
         <source>Please save the project first.</source>
         <translation>Lütfen ilkolarak projeyi kaydedin.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1231"/>
+        <location filename="Project/Project.py" line="1248"/>
         <source>Compressed project session files not supported. The compression library is missing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1031"/>
+        <location filename="Project/Project.py" line="1048"/>
         <source>Save project session</source>
         <translation>Proje oturumunu kaydet</translation>
     </message>
@@ -24082,17 +24125,17 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt;Proje oturum dosyası&lt;b&gt;%1&lt;/b&gt; yazılamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1055"/>
+        <location filename="Project/Project.py" line="1072"/>
         <source>Delete project session</source>
         <translation>Proje oturumunu sil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1159"/>
+        <location filename="Project/Project.py" line="1176"/>
         <source>Read tasks</source>
         <translation>Görevler Okunuyor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1184"/>
+        <location filename="Project/Project.py" line="1201"/>
         <source>Compressed tasks files not supported. The compression library is missing.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24107,87 +24150,87 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt;Görev dosyası &lt;b&gt;%1&lt;/b&gt; desteklenmeyen bir formata sahip.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1203"/>
+        <location filename="Project/Project.py" line="1220"/>
         <source>Save tasks</source>
         <translation>Görevleri kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1319"/>
+        <location filename="Project/Project.py" line="1336"/>
         <source>Read debugger properties</source>
         <translation>Hata ayıklayıcı özelliklerini oku</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1376"/>
+        <location filename="Project/Project.py" line="1393"/>
         <source>Save debugger properties</source>
         <translation>Hata ayıklayıcı özelliklerini kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1354"/>
+        <location filename="Project/Project.py" line="1371"/>
         <source>Compressed project debugger properties files not supported. The compression library is missing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1401"/>
+        <location filename="Project/Project.py" line="1418"/>
         <source>Delete debugger properties</source>
         <translation>Hata ayıklayıcı özelliklerini sil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1485"/>
+        <location filename="Project/Project.py" line="1502"/>
         <source>Add Language</source>
         <translation>Dil Ekle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1485"/>
+        <location filename="Project/Project.py" line="1502"/>
         <source>You have to specify a translation pattern first.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1592"/>
+        <location filename="Project/Project.py" line="1611"/>
         <source>Delete translation</source>
         <translation>Çevereye silin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1736"/>
+        <location filename="Project/Project.py" line="1755"/>
         <source>Add file</source>
         <translation>Dosya ekle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1847"/>
+        <location filename="Project/Project.py" line="1866"/>
         <source>The target directory must not be empty.</source>
         <translation>Hedef dizin boş olamaz.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1859"/>
+        <location filename="Project/Project.py" line="1878"/>
         <source>Add directory</source>
         <translation>Dizin Ekle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1767"/>
+        <location filename="Project/Project.py" line="1786"/>
         <source>&lt;p&gt;The source directory doesn&apos;t contain any files belonging to the selected category.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1859"/>
+        <location filename="Project/Project.py" line="1878"/>
         <source>The source directory must not be empty.</source>
         <translation>Kaynak dizin boş olamaz.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1981"/>
+        <location filename="Project/Project.py" line="2000"/>
         <source>Rename file</source>
         <translation>Dosya adını değiştir</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2006"/>
+        <location filename="Project/Project.py" line="2025"/>
         <source>Rename File</source>
         <translation>Dosya adını Değiştir</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2176"/>
+        <location filename="Project/Project.py" line="2195"/>
         <source>Delete file</source>
         <translation>Dosya sil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2199"/>
+        <location filename="Project/Project.py" line="2218"/>
         <source>Delete directory</source>
         <translation>Dizini sil</translation>
     </message>
@@ -24197,7 +24240,7 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt;Seçilen&lt;b&gt;%1&lt;/b&gt; dizini silinemedi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2274"/>
+        <location filename="Project/Project.py" line="2293"/>
         <source>Create project directory</source>
         <translation>Proje dizinin oluştur</translation>
     </message>
@@ -24207,52 +24250,52 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt; &lt;b&gt;%1&lt;/b&gt; Projesinin  dizini  oluşturulamadı.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2730"/>
+        <location filename="Project/Project.py" line="2749"/>
         <source>New Project</source>
         <translation>Yeni Proje</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2318"/>
+        <location filename="Project/Project.py" line="2337"/>
         <source>Add existing files to the project?</source>
         <translation>Var olan dosyalar projeye eklensin mi?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2730"/>
+        <location filename="Project/Project.py" line="2749"/>
         <source>Select Version Control System</source>
         <translation>Sürüm Kontrol Sistemini Seç</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2432"/>
+        <location filename="Project/Project.py" line="2451"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3279"/>
+        <location filename="Project/Project.py" line="3328"/>
         <source>New project</source>
         <translation>Yeni Proje</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2382"/>
+        <location filename="Project/Project.py" line="2401"/>
         <source>Shall the project file be added to the repository?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2412"/>
+        <location filename="Project/Project.py" line="2431"/>
         <source>None</source>
         <translation>Yok</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2406"/>
+        <location filename="Project/Project.py" line="2425"/>
         <source>Select version control system for the project</source>
         <translation>proje için sürüm kontrol sistemini seçin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2504"/>
+        <location filename="Project/Project.py" line="2523"/>
         <source>Translation Pattern</source>
         <translation>Çeviri Örüntüsü</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2504"/>
+        <location filename="Project/Project.py" line="2523"/>
         <source>Enter the path pattern for translation files (use &apos;%language%&apos; in place of the language code):</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24262,7 +24305,7 @@ Select Update.</source>
         <translation type="obsolete">Güvenlik Problemi</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3292"/>
+        <location filename="Project/Project.py" line="3341"/>
         <source>Open project</source>
         <translation>Projeyi aç</translation>
     </message>
@@ -24272,27 +24315,27 @@ Select Update.</source>
         <translation type="obsolete">Proje Dosyaları (*.e4p *.e4pz *.e3p *.e3pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2848"/>
+        <location filename="Project/Project.py" line="2867"/>
         <source>Compressed Project Files (*.e4pz)</source>
         <translation>Sıkıştırılmış Proje Dosyaları (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2850"/>
+        <location filename="Project/Project.py" line="2869"/>
         <source>Project Files (*.e4p)</source>
         <translation>Proje Dosyaları (*.e4p)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3326"/>
+        <location filename="Project/Project.py" line="3375"/>
         <source>Save project as</source>
         <translation>projeyi farklı adda kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2851"/>
+        <location filename="Project/Project.py" line="2870"/>
         <source>Project Files (*.e4p);;Compressed Project Files (*.e4pz)</source>
         <translation>Project Dosyaları (*.e4p);;Sıkıştırılmış Proje Dosyaları (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2867"/>
+        <location filename="Project/Project.py" line="2886"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
@@ -24302,22 +24345,22 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt; &lt;b&gt;%1&lt;/b&gt;dosyası burda zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2902"/>
+        <location filename="Project/Project.py" line="2921"/>
         <source>Close Project</source>
         <translation>Projeyi Kapat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2902"/>
+        <location filename="Project/Project.py" line="2921"/>
         <source>The current project has unsaved changes.</source>
         <translation>Geçerli projede kaydedilmemiş dosyalar var.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3043"/>
+        <location filename="Project/Project.py" line="3062"/>
         <source>Syntax errors detected</source>
         <translation>Sözdizimi Hataları tespit edildi</translation>
     </message>
     <message numerus="yes">
-        <location filename="Project/Project.py" line="3043"/>
+        <location filename="Project/Project.py" line="3062"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -24325,447 +24368,447 @@ Select Update.</source>
         </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3279"/>
+        <location filename="Project/Project.py" line="3328"/>
         <source>&amp;New...</source>
         <translation>Ye&amp;ni...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3283"/>
+        <location filename="Project/Project.py" line="3332"/>
         <source>Generate a new project</source>
         <translation>Yeni bir proje üret</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3284"/>
+        <location filename="Project/Project.py" line="3333"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yeni...&lt;/b&gt;&lt;p&gt;Bu yeni bir proje için bilgilerin girileceği bir diyalog açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3292"/>
+        <location filename="Project/Project.py" line="3341"/>
         <source>&amp;Open...</source>
         <translation>&amp;Aç...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3296"/>
+        <location filename="Project/Project.py" line="3345"/>
         <source>Open an existing project</source>
         <translation>Var olan bir projeyi aç</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3297"/>
+        <location filename="Project/Project.py" line="3346"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aç...&lt;/b&gt;&lt;p&gt;Bu varolan bir projeyi açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3304"/>
+        <location filename="Project/Project.py" line="3353"/>
         <source>Close project</source>
         <translation>Projeyi kapat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3304"/>
+        <location filename="Project/Project.py" line="3353"/>
         <source>&amp;Close</source>
         <translation>&amp;Kapat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3307"/>
+        <location filename="Project/Project.py" line="3356"/>
         <source>Close the current project</source>
         <translation>Geçerli projeyi kapat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3308"/>
+        <location filename="Project/Project.py" line="3357"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kapat&lt;/b&gt;&lt;p&gt;Bu geçerli projeyi kapatır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3315"/>
+        <location filename="Project/Project.py" line="3364"/>
         <source>Save project</source>
         <translation>Projeyi kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3471"/>
+        <location filename="Project/Project.py" line="3520"/>
         <source>&amp;Save</source>
         <translation>&amp;Kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3318"/>
+        <location filename="Project/Project.py" line="3367"/>
         <source>Save the current project</source>
         <translation>Geçerli projeyi kapat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3319"/>
+        <location filename="Project/Project.py" line="3368"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kaydet&lt;/b&gt;&lt;p&gt;Bu geçerli projeyi kaydeder.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3326"/>
+        <location filename="Project/Project.py" line="3375"/>
         <source>Save &amp;as...</source>
         <translation>Farklı k&amp;aydet...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3329"/>
+        <location filename="Project/Project.py" line="3378"/>
         <source>Save the current project to a new file</source>
         <translation>Geçerli projeyi yeni bir dosya olarak kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3330"/>
+        <location filename="Project/Project.py" line="3379"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3339"/>
+        <location filename="Project/Project.py" line="3388"/>
         <source>Add files to project</source>
         <translation>Projeye dosyalar ekle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3339"/>
+        <location filename="Project/Project.py" line="3388"/>
         <source>Add &amp;files...</source>
         <translation>Dosyaları &amp;ekle...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3343"/>
+        <location filename="Project/Project.py" line="3392"/>
         <source>Add files to the current project</source>
         <translation>Geçerli projeye dosyalar ekle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3344"/>
+        <location filename="Project/Project.py" line="3393"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3353"/>
+        <location filename="Project/Project.py" line="3402"/>
         <source>Add directory to project</source>
         <translation>Projeye dizin ekle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3353"/>
+        <location filename="Project/Project.py" line="3402"/>
         <source>Add directory...</source>
         <translation>Dizin ekle...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3357"/>
+        <location filename="Project/Project.py" line="3406"/>
         <source>Add a directory to the current project</source>
         <translation>Geçerli projeye bir dizin ekleyiniz</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3359"/>
+        <location filename="Project/Project.py" line="3408"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3367"/>
+        <location filename="Project/Project.py" line="3416"/>
         <source>Add translation to project</source>
         <translation>Projeye çeviri ekle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3367"/>
+        <location filename="Project/Project.py" line="3416"/>
         <source>Add &amp;translation...</source>
         <translation>Çeviri &amp;ekle...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3371"/>
+        <location filename="Project/Project.py" line="3420"/>
         <source>Add a translation to the current project</source>
         <translation>Geçerli projeye çeviri ekle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3373"/>
+        <location filename="Project/Project.py" line="3422"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3381"/>
+        <location filename="Project/Project.py" line="3430"/>
         <source>Search new files</source>
         <translation>Yeni dosyaları ara</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3381"/>
+        <location filename="Project/Project.py" line="3430"/>
         <source>Searc&amp;h new files...</source>
         <translation>Yeni dosyaları a&amp;ra...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3384"/>
+        <location filename="Project/Project.py" line="3433"/>
         <source>Search new files in the project directory.</source>
         <translation>Proje dizininde yeni dosyaları ara.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3385"/>
+        <location filename="Project/Project.py" line="3434"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3393"/>
+        <location filename="Project/Project.py" line="3442"/>
         <source>Project properties</source>
         <translation>Proje özellikleri</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3393"/>
+        <location filename="Project/Project.py" line="3442"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Özellikler...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3396"/>
+        <location filename="Project/Project.py" line="3445"/>
         <source>Show the project properties</source>
         <translation>Proje özelliklerini göster</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3397"/>
+        <location filename="Project/Project.py" line="3446"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3404"/>
+        <location filename="Project/Project.py" line="3453"/>
         <source>User project properties</source>
         <translation>Kullanıcı projesi özellikleri</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3404"/>
+        <location filename="Project/Project.py" line="3453"/>
         <source>&amp;User Properties...</source>
         <translation>K&amp;ullanıcı Özellikleri...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3407"/>
+        <location filename="Project/Project.py" line="3456"/>
         <source>Show the user specific project properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3409"/>
+        <location filename="Project/Project.py" line="3458"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3416"/>
+        <location filename="Project/Project.py" line="3465"/>
         <source>Filetype Associations</source>
         <translation>Dosyatipi Birleştirme</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3416"/>
+        <location filename="Project/Project.py" line="3465"/>
         <source>Filetype Associations...</source>
         <translation>Dosyatipi Birleştirme...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3419"/>
+        <location filename="Project/Project.py" line="3468"/>
         <source>Show the project filetype associations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3421"/>
+        <location filename="Project/Project.py" line="3470"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3432"/>
+        <location filename="Project/Project.py" line="3481"/>
         <source>Lexer Associations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3432"/>
+        <location filename="Project/Project.py" line="3481"/>
         <source>Lexer Associations...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3435"/>
+        <location filename="Project/Project.py" line="3484"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3437"/>
+        <location filename="Project/Project.py" line="3486"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3449"/>
+        <location filename="Project/Project.py" line="3498"/>
         <source>Debugger Properties</source>
         <translation>Hata Ayıklayıcı Özellikleri</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3449"/>
+        <location filename="Project/Project.py" line="3498"/>
         <source>Debugger &amp;Properties...</source>
         <translation>Hata Ayıklayıcı &amp;Özellikleri...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3452"/>
+        <location filename="Project/Project.py" line="3501"/>
         <source>Show the debugger properties</source>
         <translation>Hata ayıklayıcı özelliklerini göster</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3453"/>
+        <location filename="Project/Project.py" line="3502"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3460"/>
+        <location filename="Project/Project.py" line="3509"/>
         <source>Load</source>
         <translation>Yükle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3460"/>
+        <location filename="Project/Project.py" line="3509"/>
         <source>&amp;Load</source>
         <translation>Yük&amp;le</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3463"/>
+        <location filename="Project/Project.py" line="3512"/>
         <source>Load the debugger properties</source>
         <translation>Hata ayıklayıcı özelliklerini yükle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3464"/>
+        <location filename="Project/Project.py" line="3513"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3471"/>
+        <location filename="Project/Project.py" line="3520"/>
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3474"/>
+        <location filename="Project/Project.py" line="3523"/>
         <source>Save the debugger properties</source>
         <translation>Hata ayıklayıcı özelliklerini kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3475"/>
+        <location filename="Project/Project.py" line="3524"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3482"/>
+        <location filename="Project/Project.py" line="3531"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3482"/>
+        <location filename="Project/Project.py" line="3531"/>
         <source>&amp;Delete</source>
         <translation>&amp;Sil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3485"/>
+        <location filename="Project/Project.py" line="3534"/>
         <source>Delete the debugger properties</source>
         <translation>Hata ayıklayıcı özelliklerini sil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3486"/>
+        <location filename="Project/Project.py" line="3535"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3494"/>
+        <location filename="Project/Project.py" line="3543"/>
         <source>Reset</source>
         <translation>Başadön</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3494"/>
+        <location filename="Project/Project.py" line="3543"/>
         <source>&amp;Reset</source>
         <translation>Başad&amp;ön</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3497"/>
+        <location filename="Project/Project.py" line="3546"/>
         <source>Reset the debugger properties</source>
         <translation>Hata ayıklayıcı özelliklerini başa döndür</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3498"/>
+        <location filename="Project/Project.py" line="3547"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3507"/>
+        <location filename="Project/Project.py" line="3556"/>
         <source>Load session</source>
         <translation>Oturum yükleniyor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3510"/>
+        <location filename="Project/Project.py" line="3559"/>
         <source>Load the projects session file.</source>
         <translation>Projelerin oturm dosyasını yükle.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3511"/>
+        <location filename="Project/Project.py" line="3560"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3524"/>
+        <location filename="Project/Project.py" line="3573"/>
         <source>Save session</source>
         <translation>Oturumu kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3527"/>
+        <location filename="Project/Project.py" line="3576"/>
         <source>Save the projects session file.</source>
         <translation>Proje oturum dosyasını kaydet.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3528"/>
+        <location filename="Project/Project.py" line="3577"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3541"/>
+        <location filename="Project/Project.py" line="3590"/>
         <source>Delete session</source>
         <translation>Oturumu sil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3544"/>
+        <location filename="Project/Project.py" line="3593"/>
         <source>Delete the projects session file.</source>
         <translation>Proje oturum dosyasını sil.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3545"/>
+        <location filename="Project/Project.py" line="3594"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Oturumu sil&lt;/b&gt;&lt;p&gt;Bu projenin oturum dosyasını siler&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3554"/>
+        <location filename="Project/Project.py" line="3603"/>
         <source>Code Metrics</source>
         <translation>Metrik Kod</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3554"/>
+        <location filename="Project/Project.py" line="3603"/>
         <source>&amp;Code Metrics...</source>
         <translation>Me&amp;trik Kod...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3557"/>
+        <location filename="Project/Project.py" line="3606"/>
         <source>Show some code metrics for the project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3559"/>
+        <location filename="Project/Project.py" line="3608"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3566"/>
+        <location filename="Project/Project.py" line="3615"/>
         <source>Python Code Coverage</source>
         <translation>Python Kod Koruyucu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3566"/>
+        <location filename="Project/Project.py" line="3615"/>
         <source>Code Co&amp;verage...</source>
         <translation>Kod Koru&amp;yucu...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3569"/>
+        <location filename="Project/Project.py" line="3618"/>
         <source>Show code coverage information for the project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3571"/>
+        <location filename="Project/Project.py" line="3620"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4260"/>
+        <location filename="Project/Project.py" line="4309"/>
         <source>Profile Data</source>
         <translation>Veri Kesiti</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3579"/>
+        <location filename="Project/Project.py" line="3628"/>
         <source>&amp;Profile Data...</source>
         <translation>&amp;Veri kesiti...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3582"/>
+        <location filename="Project/Project.py" line="3631"/>
         <source>Show profiling data for the project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3584"/>
+        <location filename="Project/Project.py" line="3633"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24795,42 +24838,42 @@ Select Update.</source>
         <translation type="obsolete">Tepegöz roporunu projeden kaldırın.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4313"/>
+        <location filename="Project/Project.py" line="4362"/>
         <source>Application Diagram</source>
         <translation>Uygulama Şeması</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3591"/>
+        <location filename="Project/Project.py" line="3640"/>
         <source>&amp;Application Diagram...</source>
         <translation>Uygulama Şem&amp;ası...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3594"/>
+        <location filename="Project/Project.py" line="3643"/>
         <source>Show a diagram of the project.</source>
         <translation>Projenin bir şemasını göster.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3596"/>
+        <location filename="Project/Project.py" line="3645"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uygulama Şeması...&lt;/b&gt;&lt;p&gt;Bu projenin bir şemasını gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4446"/>
+        <location filename="Project/Project.py" line="4499"/>
         <source>Create Package List</source>
         <translation>Paket Listesini Oluştur</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3606"/>
+        <location filename="Project/Project.py" line="3655"/>
         <source>Create &amp;Package List</source>
         <translation>&amp;Paket Listesini Üret</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4625"/>
+        <location filename="Project/Project.py" line="4678"/>
         <source>Create Plugin Archive</source>
         <translation>Eklenti Arşivi Oluştur</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3621"/>
+        <location filename="Project/Project.py" line="3670"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Eklenti &amp;Arşivi Oluştur</translation>
     </message>
@@ -24840,112 +24883,112 @@ Select Update.</source>
         <translation type="obsolete">Eric4 eklenti arşiv dosyası oluştur.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3637"/>
+        <location filename="Project/Project.py" line="3686"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Eklenti arşivi oluştur (Enstantene)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3637"/>
+        <location filename="Project/Project.py" line="3686"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Eklenti Arşivi Oluştur (En&amp;stantene)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3672"/>
+        <location filename="Project/Project.py" line="3721"/>
         <source>&amp;Project</source>
         <translation>&amp;Proje</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3673"/>
+        <location filename="Project/Project.py" line="3722"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Geçmiş P&amp;rojeleri Aç</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3674"/>
+        <location filename="Project/Project.py" line="3723"/>
         <source>&amp;Version Control</source>
         <translation>S&amp;ürüm Kontrol</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3677"/>
+        <location filename="Project/Project.py" line="3726"/>
         <source>Chec&amp;k</source>
         <translation>&amp;Kontrol</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3679"/>
+        <location filename="Project/Project.py" line="3728"/>
         <source>Sho&amp;w</source>
         <translation>G&amp;öster</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3680"/>
+        <location filename="Project/Project.py" line="3729"/>
         <source>&amp;Diagrams</source>
         <translation>Şemalar &amp;D</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3681"/>
+        <location filename="Project/Project.py" line="3730"/>
         <source>Session</source>
         <translation>Oturum</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3682"/>
+        <location filename="Project/Project.py" line="3731"/>
         <source>Source &amp;Documentation</source>
         <translation>Kaynak Belgeleme &amp;D</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3684"/>
+        <location filename="Project/Project.py" line="3733"/>
         <source>Debugger</source>
         <translation>Hata Ayıklayıcı</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3685"/>
+        <location filename="Project/Project.py" line="3734"/>
         <source>Pac&amp;kagers</source>
         <translation>Pa&amp;ketleyici</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3793"/>
+        <location filename="Project/Project.py" line="3842"/>
         <source>Project</source>
         <translation>Proje</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3853"/>
+        <location filename="Project/Project.py" line="3902"/>
         <source>&amp;Clear</source>
         <translation>T&amp;emizle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3963"/>
+        <location filename="Project/Project.py" line="4012"/>
         <source>Search New Files</source>
         <translation>Yeni Dosyaları Ara</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3963"/>
+        <location filename="Project/Project.py" line="4012"/>
         <source>There were no new files found to be added.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4101"/>
+        <location filename="Project/Project.py" line="4150"/>
         <source>Version Control System</source>
         <translation>Sürüm Kontrol Sistemi</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4193"/>
+        <location filename="Project/Project.py" line="4242"/>
         <source>Coverage Data</source>
         <translation>Veri Kapsamı</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4239"/>
+        <location filename="Project/Project.py" line="4288"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Bugeçerli projede tanımlanan ana betik değil. Durduruluyor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4214"/>
+        <location filename="Project/Project.py" line="4263"/>
         <source>Code Coverage</source>
         <translation>Kod Koruyucu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4214"/>
+        <location filename="Project/Project.py" line="4263"/>
         <source>Please select a coverage file</source>
         <translation>Lütfen bir koruyucu dosya seçiniz</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4260"/>
+        <location filename="Project/Project.py" line="4309"/>
         <source>Please select a profile file</source>
         <translation>Lütfen kesit dosyasını seçiniz</translation>
     </message>
@@ -24960,267 +25003,267 @@ Select Update.</source>
         <translation type="obsolete">Lütfen, kaldırılacak Tepegöz rapor dosyasını seçin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4313"/>
+        <location filename="Project/Project.py" line="4362"/>
         <source>Include module names?</source>
         <translation>Modül isimleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4420"/>
+        <location filename="Project/Project.py" line="4469"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4465"/>
+        <location filename="Project/Project.py" line="4518"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4475"/>
+        <location filename="Project/Project.py" line="4528"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="210"/>
+        <location filename="Project/Project.py" line="213"/>
         <source>PySide GUI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="211"/>
+        <location filename="Project/Project.py" line="214"/>
         <source>PySide Console</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="165"/>
+        <location filename="Project/Project.py" line="168"/>
         <source>Python Files (*.py2);;Python GUI Files (*.pyw2);;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="168"/>
+        <location filename="Project/Project.py" line="171"/>
         <source>Python3 Files (*.py *.py3);;Python3 GUI Files (*.pyw *.pyw3);;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="205"/>
+        <location filename="Project/Project.py" line="208"/>
         <source>Eric Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="249"/>
+        <location filename="Project/Project.py" line="252"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="686"/>
+        <location filename="Project/Project.py" line="695"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="581"/>
+        <location filename="Project/Project.py" line="590"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="693"/>
+        <location filename="Project/Project.py" line="702"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="767"/>
+        <location filename="Project/Project.py" line="784"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="808"/>
+        <location filename="Project/Project.py" line="825"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="836"/>
+        <location filename="Project/Project.py" line="853"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="941"/>
+        <location filename="Project/Project.py" line="958"/>
         <source>&lt;p&gt;The project session &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="895"/>
+        <location filename="Project/Project.py" line="912"/>
         <source>&lt;p&gt;The project session &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="962"/>
+        <location filename="Project/Project.py" line="979"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1031"/>
+        <location filename="Project/Project.py" line="1048"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1055"/>
+        <location filename="Project/Project.py" line="1072"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1159"/>
+        <location filename="Project/Project.py" line="1176"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1107"/>
+        <location filename="Project/Project.py" line="1124"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1203"/>
+        <location filename="Project/Project.py" line="1220"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1319"/>
+        <location filename="Project/Project.py" line="1336"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1259"/>
+        <location filename="Project/Project.py" line="1276"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1376"/>
+        <location filename="Project/Project.py" line="1393"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1401"/>
+        <location filename="Project/Project.py" line="1418"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1592"/>
+        <location filename="Project/Project.py" line="1611"/>
         <source>&lt;p&gt;The selected translation file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1795"/>
+        <location filename="Project/Project.py" line="1814"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1991"/>
+        <location filename="Project/Project.py" line="2010"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2006"/>
+        <location filename="Project/Project.py" line="2025"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be renamed.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2176"/>
+        <location filename="Project/Project.py" line="2195"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2199"/>
+        <location filename="Project/Project.py" line="2218"/>
         <source>&lt;p&gt;The selected directory &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2274"/>
+        <location filename="Project/Project.py" line="2293"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2685"/>
+        <location filename="Project/Project.py" line="2704"/>
         <source>Project Files (*.e4p *.e4pz)</source>
         <translation type="unfinished">Proje Dosyaları (*.e4p *.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2867"/>
+        <location filename="Project/Project.py" line="2886"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3610"/>
+        <location filename="Project/Project.py" line="3659"/>
         <source>Create an initial PKGLIST file for an eric5 plugin.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3612"/>
+        <location filename="Project/Project.py" line="3661"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3625"/>
+        <location filename="Project/Project.py" line="3674"/>
         <source>Create an eric5 plugin archive file.</source>
         <translation type="unfinished">Eric4 eklenti arşiv dosyası oluştur. {5 ?}</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3627"/>
+        <location filename="Project/Project.py" line="3676"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3641"/>
+        <location filename="Project/Project.py" line="3690"/>
         <source>Create an eric5 plugin archive file (snapshot release).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3643"/>
+        <location filename="Project/Project.py" line="3692"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4092"/>
+        <location filename="Project/Project.py" line="4141"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4101"/>
+        <location filename="Project/Project.py" line="4150"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4446"/>
+        <location filename="Project/Project.py" line="4499"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4489"/>
+        <location filename="Project/Project.py" line="4542"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4505"/>
+        <location filename="Project/Project.py" line="4558"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4527"/>
+        <location filename="Project/Project.py" line="4580"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4541"/>
+        <location filename="Project/Project.py" line="4594"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4625"/>
+        <location filename="Project/Project.py" line="4678"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1725"/>
+        <location filename="Project/Project.py" line="1744"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be added to &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1777"/>
+        <location filename="Project/Project.py" line="1796"/>
         <source>&lt;p&gt;The target directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25299,7 +25342,7 @@ Select Update.</source>
         <translation>VCS Durumu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBrowserModel.py" line="682"/>
+        <location filename="Project/ProjectBrowserModel.py" line="684"/>
         <source>local</source>
         <translation>yerel</translation>
     </message>
@@ -25620,17 +25663,17 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="633"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="637"/>
         <source>Form Compilation</source>
         <translation>Form Derleme</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="621"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="625"/>
         <source>The compilation of the form file was successful.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="633"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="637"/>
         <source>The compilation of the form file failed.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25650,7 +25693,7 @@ Select Update.</source>
         <translation type="obsolete">Altsınıfın adını giriniz:</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="708"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="712"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
@@ -25660,22 +25703,22 @@ Select Update.</source>
         <translation type="obsolete">%1 başlatılamadı. Belirtilen yolda olduğundan emin olun.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="796"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="800"/>
         <source>Compiling forms...</source>
         <translation>Formlar derleniyor...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="796"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="800"/>
         <source>Abort</source>
         <translation>Durdur</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="831"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="835"/>
         <source>Determining changed forms...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="857"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="861"/>
         <source>Compiling changed forms...</source>
         <translation>Değişen formlar derleniyor...</translation>
     </message>
@@ -25690,12 +25733,12 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="627"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="631"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="708"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="712"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25836,77 +25879,77 @@ Select Update.</source>
 <context>
     <name>ProjectOthersBrowser</name>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="49"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="48"/>
         <source>Others</source>
         <translation>Diğerleri</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="51"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="50"/>
         <source>&lt;b&gt;Project Others Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all other files and directories contained in the current project. Several actions can be executed via the context menu. The entry which is registered in the project is shown in a different colour.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="74"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="73"/>
         <source>Rename file</source>
         <translation>Dosya adını değiştir</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="112"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="111"/>
         <source>Remove from project</source>
         <translation>Projeden çıkar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="115"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="114"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="98"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="97"/>
         <source>Add files...</source>
         <translation>Dosyaları ekle...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="100"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="99"/>
         <source>Add directory...</source>
         <translation>Dizin ekle...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="85"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="84"/>
         <source>Refresh</source>
         <translation>Tazele</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="118"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="117"/>
         <source>Expand all directories</source>
         <translation>Tüm dizinleri genişlet</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="120"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="119"/>
         <source>Collapse all directories</source>
         <translation>Tüm dizinleri daralt</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="123"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="122"/>
         <source>Configure...</source>
         <translation>Yapılandır...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="289"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="288"/>
         <source>Delete files/directories</source>
         <translation>Dosyaları/Dizinleri Sil</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="289"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="288"/>
         <source>Do you really want to delete these entries from the project?</source>
         <translation>Bu girişi projeden silmek istediğinizden gerçekten emin misiniz?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="71"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="70"/>
         <source>Open in Icon Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="87"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="86"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26157,7 +26200,7 @@ Select Update.</source>
         <translation>Kaynakları derle</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="427"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="431"/>
         <source>New Resource</source>
         <translation>Yeni Kaynak</translation>
     </message>
@@ -26172,32 +26215,32 @@ Select Update.</source>
         <translation>Bu dosya halihazırda var! Üzerine yazılsın mı?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="450"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="455"/>
         <source>Delete resources</source>
         <translation>Kaynakları sil</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="450"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="455"/>
         <source>Do you really want to delete these resources from the project?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="527"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="536"/>
         <source>Resource Compilation</source>
         <translation>Kaynak Derleme</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="515"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="524"/>
         <source>The compilation of the resource file was successful.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="527"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="536"/>
         <source>The compilation of the resource file failed.</source>
         <translation>Kaynağın derlenmesinde hata.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="603"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="612"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
@@ -26207,22 +26250,22 @@ Select Update.</source>
         <translation type="obsolete">%1 başlatılamadı. Belirtilen yolda olduğundan emin olun.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="665"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="674"/>
         <source>Compiling resources...</source>
         <translation>Kaynaklar derleniyor...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="665"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="674"/>
         <source>Abort</source>
         <translation>Durdur</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="730"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="739"/>
         <source>Determining changed resources...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="762"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="771"/>
         <source>Compiling changed resources...</source>
         <translation>Değişen kaynaklar derleniyor...</translation>
     </message>
@@ -26232,17 +26275,17 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="427"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="431"/>
         <source>&lt;p&gt;The new resource file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="521"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="530"/>
         <source>&lt;p&gt;The compilation of the resource file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="603"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="612"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26691,12 +26734,12 @@ Select Update.</source>
 <context>
     <name>PropertiesDialog</name>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="19"/>
+        <location filename="Project/PropertiesDialog.ui" line="20"/>
         <source>Project Properties</source>
         <translation>Proje Özellikleri</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="22"/>
+        <location filename="Project/PropertiesDialog.ui" line="23"/>
         <source>&lt;b&gt;Project Properties Dialog&lt;/b&gt;
 &lt;p&gt;This dialog is used to show and edit the projects properties.&lt;/p&gt;
 &lt;p&gt;If the project is controlled by a version control system, the &quot;Show Repository Info&quot; button displays information about the repository.&lt;/p&gt;</source>
@@ -26705,79 +26748,79 @@ Select Update.</source>
 &lt;p&gt;Eğer proje sürüm kontrol sistemi ile kontrol ediliyorsa , &quot;Kaynak Havuzu Bilgisi Göster&quot; düğmesi ile kaynak havuzu hakkında bilgi alabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="35"/>
+        <location filename="Project/PropertiesDialog.ui" line="36"/>
         <source>Project &amp;Name:</source>
         <translation>Pro&amp;je Adı:</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="45"/>
+        <location filename="Project/PropertiesDialog.ui" line="46"/>
         <source>Enter the project name</source>
         <translation>Proje adını gir</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="48"/>
+        <location filename="Project/PropertiesDialog.ui" line="49"/>
         <source>&lt;b&gt;Project Name&lt;/b&gt;
 &lt;p&gt;Enter the project name&lt;/p&gt;</source>
         <translation>&lt;b&gt;Proje Adı&lt;/b&gt;
 &lt;p&gt;Proje adını giriniz&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="56"/>
+        <location filename="Project/PropertiesDialog.ui" line="57"/>
         <source>Press to edit the spell checking properties</source>
         <translation>Yazım denetimi özelliklerini düzenlemek için basınız</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="59"/>
+        <location filename="Project/PropertiesDialog.ui" line="60"/>
         <source>Spell Checking Properties...</source>
         <translation>Yazım Denetimi Özellikleri...</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="66"/>
+        <location filename="Project/PropertiesDialog.ui" line="67"/>
         <source>&amp;Progr. Language:</source>
         <translation>&amp;Progr. Dili:</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="76"/>
+        <location filename="Project/PropertiesDialog.ui" line="77"/>
         <source>Select the project&apos;s programming language</source>
         <translation>Projenin programlama dilini seçiniz</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="83"/>
+        <location filename="Project/PropertiesDialog.ui" line="84"/>
         <source>Select, if the project uses other programming languages as well</source>
         <translation>Projede başka diller kullanılıyorsa bile, seçiniz</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="86"/>
+        <location filename="Project/PropertiesDialog.ui" line="87"/>
         <source>Mi&amp;xed programming languages</source>
         <translation>Karı&amp;şık Programlama Dili</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="89"/>
+        <location filename="Project/PropertiesDialog.ui" line="90"/>
         <source>Alt+X</source>
         <translation>Alt+X</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="96"/>
+        <location filename="Project/PropertiesDialog.ui" line="97"/>
         <source>Project &amp;Type:</source>
         <translation>Proje &amp;Tipi:</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="106"/>
+        <location filename="Project/PropertiesDialog.ui" line="107"/>
         <source>Select the type of the project</source>
         <translation>Projenin tipini seçiniz</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="113"/>
+        <location filename="Project/PropertiesDialog.ui" line="114"/>
         <source>Project &amp;Directory:</source>
         <translation>Proje &amp;Dizini:</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="123"/>
+        <location filename="Project/PropertiesDialog.ui" line="124"/>
         <source>Enter the project directory</source>
         <translation>Proje dizinini gir</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="126"/>
+        <location filename="Project/PropertiesDialog.ui" line="127"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the project directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -26786,51 +26829,51 @@ Select Update.</source>
 diyalog ile seçebilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="135"/>
+        <location filename="Project/PropertiesDialog.ui" line="136"/>
         <source>Show directory selection dialog</source>
         <translation>Dizin seçme diyaloğunu göster</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="138"/>
+        <location filename="Project/PropertiesDialog.ui" line="139"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Select a project directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Proje Dizini&lt;/b&gt;
 &lt;p&gt;Dizin seçim diyaloğu ile bir proje dizini seçiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="199"/>
+        <location filename="Project/PropertiesDialog.ui" line="200"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="149"/>
+        <location filename="Project/PropertiesDialog.ui" line="150"/>
         <source>&amp;Version No.:</source>
         <translation>&amp;Sürüm No.:</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="159"/>
+        <location filename="Project/PropertiesDialog.ui" line="160"/>
         <source>Enter the version number</source>
         <translation>Sürüm numarasını giriniz</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="162"/>
+        <location filename="Project/PropertiesDialog.ui" line="163"/>
         <source>&lt;b&gt;Version No.&lt;/b&gt;
 &lt;p&gt;Enter the version no.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sürüm No.&lt;/b&gt;
 &lt;p&gt;Sürüm numarasını gir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="170"/>
+        <location filename="Project/PropertiesDialog.ui" line="171"/>
         <source>&amp;Main Script:</source>
         <translation>Ana B&amp;etik:</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="180"/>
+        <location filename="Project/PropertiesDialog.ui" line="181"/>
         <source>Enter the main script</source>
         <translation>Ana betiği gir</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="183"/>
+        <location filename="Project/PropertiesDialog.ui" line="184"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Enter the main script of the project. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -26838,55 +26881,55 @@ diyalog ile seçebilirsiniz.&lt;/p&gt;</translation>
 &lt;p&gt;Projenin ana betiğini giriniz. sağdaki düğmeye basarak bir diyalog ile seçiminizi yapabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="192"/>
+        <location filename="Project/PropertiesDialog.ui" line="193"/>
         <source>Show file selection dialog</source>
         <translation>Dosya seçim diyaloğunu göster</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="195"/>
+        <location filename="Project/PropertiesDialog.ui" line="196"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Select the projects main script via a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ana betik&lt;/b&gt;
 &lt;p&gt;Dosya seçim diyaloğu ile projenin ana betiğini seçiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="206"/>
+        <location filename="Project/PropertiesDialog.ui" line="207"/>
         <source>Press to edit the translations properties</source>
         <translation>Çeviri özelliklerini düzenlemek için basınız</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="209"/>
+        <location filename="Project/PropertiesDialog.ui" line="210"/>
         <source>Translations Properties...</source>
         <translation>Çeviriler Özellikleri...</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="216"/>
+        <location filename="Project/PropertiesDialog.ui" line="254"/>
         <source>&amp;Author:</source>
         <translation>Y&amp;azar:</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="226"/>
+        <location filename="Project/PropertiesDialog.ui" line="264"/>
         <source>Enter authors name</source>
         <translation>Yazarların adını gir</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="229"/>
+        <location filename="Project/PropertiesDialog.ui" line="267"/>
         <source>&lt;b&gt;Author&lt;/b&gt;
 &lt;p&gt;Enter the name of the author.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yazar&lt;/b&gt;&lt;p&gt;Yazarın adını giriniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="237"/>
+        <location filename="Project/PropertiesDialog.ui" line="275"/>
         <source>&amp;Email:</source>
         <translation>&amp;Emektup:</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="247"/>
+        <location filename="Project/PropertiesDialog.ui" line="285"/>
         <source>Enter authors email</source>
         <translation>Yazarların emailini gir</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="250"/>
+        <location filename="Project/PropertiesDialog.ui" line="288"/>
         <source>&lt;b&gt;Email&lt;/b&gt;
 &lt;p&gt;Enter the email address of the author&lt;/p&gt;</source>
         <translation>&lt;b&gt;Epostal&lt;/b&gt;
@@ -26903,23 +26946,23 @@ diyalog ile seçebilirsiniz.&lt;/p&gt;</translation>
         <translation>Açıklamayı gir</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="274"/>
+        <location filename="Project/PropertiesDialog.ui" line="312"/>
         <source>&lt;b&gt;Description&lt;/b&gt;
 &lt;p&gt;Enter a short description for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Açıklama&lt;/b&gt;&lt;p&gt;Proje için kısa bir açıklama giriniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="305"/>
+        <location filename="Project/PropertiesDialog.ui" line="343"/>
         <source>Press to show information about the repository</source>
         <translation>Kayna havuzu hakkında bilgi göstermek için basınız</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="308"/>
+        <location filename="Project/PropertiesDialog.ui" line="346"/>
         <source>Show &amp;Repository Info</source>
         <translation>Kaynak Havuzu Bilgisini Göste&amp;r</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.ui" line="311"/>
+        <location filename="Project/PropertiesDialog.ui" line="349"/>
         <source>Alt+R</source>
         <translation>Alt+R</translation>
     </message>
@@ -26940,12 +26983,12 @@ diyalog ile seçebilirsiniz.&lt;/p&gt;</translation>
         <translation type="obsolete">Projenin sürüm kontrolü &lt;b&gt;%1&lt;/b&gt; tarafından yapılıyor.</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.py" line="111"/>
+        <location filename="Project/PropertiesDialog.py" line="115"/>
         <source>The project is not version controlled.</source>
         <translation>Projenin sürüm kontrolü yapılmadı.</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.py" line="131"/>
+        <location filename="Project/PropertiesDialog.py" line="135"/>
         <source>Select project directory</source>
         <translation>Proje dizinini seç</translation>
     </message>
@@ -26955,19 +26998,49 @@ diyalog ile seçebilirsiniz.&lt;/p&gt;</translation>
         <translation type="obsolete">Kaynak Dosyaları (%1);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.py" line="180"/>
+        <location filename="Project/PropertiesDialog.py" line="184"/>
         <source>Select main script file</source>
         <translation>Ana betik dosyasını seç</translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.py" line="106"/>
+        <location filename="Project/PropertiesDialog.py" line="110"/>
         <source>The project is version controlled by &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/PropertiesDialog.py" line="178"/>
+        <location filename="Project/PropertiesDialog.py" line="182"/>
         <source>Source Files ({0});;All Files (*)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Project/PropertiesDialog.ui" line="217"/>
+        <source>End of &amp;Line Character:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Project/PropertiesDialog.ui" line="227"/>
+        <source>Select the end of line character to be used by the project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Project/PropertiesDialog.ui" line="231"/>
+        <source>System</source>
+        <translation type="unfinished">Sistem</translation>
+    </message>
+    <message>
+        <location filename="Project/PropertiesDialog.ui" line="236"/>
+        <source>Unix</source>
+        <translation type="unfinished">Unix</translation>
+    </message>
+    <message>
+        <location filename="Project/PropertiesDialog.ui" line="241"/>
+        <source>Macintosh</source>
+        <translation type="unfinished">Macintosh</translation>
+    </message>
+    <message>
+        <location filename="Project/PropertiesDialog.ui" line="246"/>
+        <source>Windows/DOS</source>
+        <translation type="unfinished">Windows/DOS</translation>
     </message>
 </context>
 <context>
@@ -32397,17 +32470,17 @@ directory selection dialog.&lt;/p&gt;</source>
         <translation type="obsolete">%1 işlemi başlatılamadı.Büyük ihtimalle, problem arama yolunda.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="238"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="237"/>
         <source>There is no difference.</source>
         <translation>Herhangi bir farklılık bulunamadı.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="350"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="349"/>
         <source>Save Diff</source>
         <translation>Farklılıkları Kaydet</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="316"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="315"/>
         <source>Patch Files (*.diff)</source>
         <translation>Patch Dosyaları (*.diff)</translation>
     </message>
@@ -32439,17 +32512,17 @@ directory selection dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="333"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="332"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="350"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="349"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="192"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="191"/>
         <source>Processing file &apos;{0}&apos;...
 </source>
         <translation type="unfinished"></translation>
@@ -35684,7 +35757,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="385"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="382"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35773,12 +35846,12 @@ the respective line.&lt;/p&gt;</source>
         <translation type="obsolete">%1 (ro)</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="770"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="764"/>
         <source>Untitled {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1089"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1074"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36127,22 +36200,22 @@ the respective line.&lt;/p&gt;</source>
         <translation>Yapılandır...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="717"/>
+        <location filename="Tasks/TaskViewer.py" line="716"/>
         <source>Activate task filter</source>
         <translation>Görev süzgeçini etkinleştir</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="717"/>
+        <location filename="Tasks/TaskViewer.py" line="716"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Görev süzgeçlerinin etkin olan hiç süzgeçi yok. Bu süzgeçlerin ayarlarını yapmak ister misiniz?</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="757"/>
+        <location filename="Tasks/TaskViewer.py" line="756"/>
         <source>Extracting project tasks...</source>
         <translation>Proje görevleri çıkarılıyor...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="757"/>
+        <location filename="Tasks/TaskViewer.py" line="756"/>
         <source>Abort</source>
         <translation>Durdur</translation>
     </message>
@@ -36154,7 +36227,7 @@ the respective line.&lt;/p&gt;</source>
 %1</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="763"/>
+        <location filename="Tasks/TaskViewer.py" line="762"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation type="unfinished"></translation>
@@ -37526,12 +37599,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>İkili  Çeviriler için dizin seçiniz</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="161"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="160"/>
         <source>Exempt file from translation</source>
         <translation>Çeviriden muaf tutulacak dosya</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="174"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="173"/>
         <source>Exempt directory from translation</source>
         <translation>Çeviriden muaf tutlacak dizin</translation>
     </message>
@@ -39567,7 +39640,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Kılavye Kısayolları&lt;/b&gt;&lt;p&gt;Uygulamanın Kılavye kısayolların tercih ettiğiniz şekilde ayarlayınız.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4816"/>
+        <location filename="UI/UserInterface.py" line="4819"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Kılavye Kısa Yollarını Dışa Aktar</translation>
     </message>
@@ -39587,7 +39660,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Klavye Kısayollarını Dışa Aktar&lt;/b&gt;&lt;p&gt;Uygulamanın kılavye kısayollarını dışa aktar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4825"/>
+        <location filename="UI/UserInterface.py" line="4828"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Klavye kısayollarını İçe Aktar</translation>
     </message>
@@ -39987,7 +40060,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;tr&gt;&lt;td&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;%2&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5539"/>
+        <location filename="UI/UserInterface.py" line="5542"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -40110,12 +40183,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">İşlemin &apos;%1&apos; i bitti.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4602"/>
+        <location filename="UI/UserInterface.py" line="4605"/>
         <source>Documentation Missing</source>
         <translation>Eksik Belgeleme</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4587"/>
+        <location filename="UI/UserInterface.py" line="4590"/>
         <source>Documentation</source>
         <translation>Belgeleme</translation>
     </message>
@@ -40140,12 +40213,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">eric4 kılavye kısayolları dosyası (*.e4k *.e4kz);;eric3 klavye kısayolları dosyası (*.e3k *.e3kz)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4949"/>
+        <location filename="UI/UserInterface.py" line="4952"/>
         <source>Save tasks</source>
         <translation>Görevleri kaydet</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5006"/>
+        <location filename="UI/UserInterface.py" line="5009"/>
         <source>Read tasks</source>
         <translation>Görevler Okunuyor</translation>
     </message>
@@ -40160,7 +40233,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;Görev dosyası &lt;b&gt;%1&lt;/b&gt; desteklenmeyen bir formata sahip.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5024"/>
+        <location filename="UI/UserInterface.py" line="5027"/>
         <source>Save session</source>
         <translation>Oturumu kaydet</translation>
     </message>
@@ -40170,7 +40243,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;Oturum dosyası &lt;b&gt;%1&lt;/b&gt; yazılamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5085"/>
+        <location filename="UI/UserInterface.py" line="5088"/>
         <source>Read session</source>
         <translation>Oturumu oku</translation>
     </message>
@@ -40180,7 +40253,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;Oturum dosyası &lt;b&gt;%1&lt;/b&gt; okunamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5203"/>
+        <location filename="UI/UserInterface.py" line="5206"/>
         <source>Drop Error</source>
         <translation>Düşme hatası</translation>
     </message>
@@ -40190,17 +40263,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt;dosya değil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5505"/>
+        <location filename="UI/UserInterface.py" line="5508"/>
         <source>Error during updates check</source>
         <translation>Güncellemeleri kontrol esnasında hata</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5353"/>
+        <location filename="UI/UserInterface.py" line="5356"/>
         <source>Proxy usage was activated but no proxy host configured.</source>
         <translation>Proxy kullanımı aktif edildi ancak ana bilgisayar proxy ayarlanmadı.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5378"/>
+        <location filename="UI/UserInterface.py" line="5381"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Vazgeç</translation>
     </message>
@@ -40210,17 +40283,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Host %1 deneniyor</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5410"/>
+        <location filename="UI/UserInterface.py" line="5413"/>
         <source>Error downloading versions file</source>
         <translation>Sürüm dosyaları indirirken hata</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5410"/>
+        <location filename="UI/UserInterface.py" line="5413"/>
         <source>Could not download the versions file.</source>
         <translation>Sürüm dosyası indirilemiyor.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5489"/>
+        <location filename="UI/UserInterface.py" line="5492"/>
         <source>Update available</source>
         <translation>Güncelleme mümkün değil</translation>
     </message>
@@ -40240,12 +40313,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Siz eric4&apos;ün son sürümünü kullanıyorsunuz</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5505"/>
+        <location filename="UI/UserInterface.py" line="5508"/>
         <source>Could not perform updates check.</source>
         <translation>Güncellemelere ulaşamıyorum.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5526"/>
+        <location filename="UI/UserInterface.py" line="5529"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Mümkün sürümler&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -40260,12 +40333,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;  &apos;%1&apos; proxy&apos;sini kullanarak bağlan:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5572"/>
+        <location filename="UI/UserInterface.py" line="5575"/>
         <source>SSL Errors</source>
         <translation>SSL Hataları</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5598"/>
+        <location filename="UI/UserInterface.py" line="5601"/>
         <source>First time usage</source>
         <translation>İlk kullanım</translation>
     </message>
@@ -40370,7 +40443,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4587"/>
+        <location filename="UI/UserInterface.py" line="4590"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40532,92 +40605,92 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4602"/>
+        <location filename="UI/UserInterface.py" line="4605"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4796"/>
+        <location filename="UI/UserInterface.py" line="4799"/>
         <source>Keyboard shortcut file (*.e4k);;Compressed keyboard shortcut file (*.e4kz)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4816"/>
+        <location filename="UI/UserInterface.py" line="4819"/>
         <source>&lt;p&gt;The keyboard shortcuts could not be written to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4825"/>
+        <location filename="UI/UserInterface.py" line="4828"/>
         <source>Keyboard shortcut file (*.e4k *.e4kz)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4949"/>
+        <location filename="UI/UserInterface.py" line="4952"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4996"/>
+        <location filename="UI/UserInterface.py" line="4999"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5006"/>
+        <location filename="UI/UserInterface.py" line="5009"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5024"/>
+        <location filename="UI/UserInterface.py" line="5027"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5075"/>
+        <location filename="UI/UserInterface.py" line="5078"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5085"/>
+        <location filename="UI/UserInterface.py" line="5088"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5203"/>
+        <location filename="UI/UserInterface.py" line="5206"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5383"/>
+        <location filename="UI/UserInterface.py" line="5386"/>
         <source>Trying host {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5489"/>
+        <location filename="UI/UserInterface.py" line="5492"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5501"/>
+        <location filename="UI/UserInterface.py" line="5504"/>
         <source>Eric5 is up to date</source>
         <translation type="unfinished">Eric4 güncelleniyor {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5501"/>
+        <location filename="UI/UserInterface.py" line="5504"/>
         <source>You are using the latest version of eric5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5550"/>
+        <location filename="UI/UserInterface.py" line="5553"/>
         <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5572"/>
+        <location filename="UI/UserInterface.py" line="5575"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5598"/>
+        <location filename="UI/UserInterface.py" line="5601"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation type="unfinished">Eric4 henüz ayarlanmadı. Ayarlar Diyaloğu başlatılıyor. {5 ?}</translation>
     </message>
@@ -41173,7 +41246,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>VcsProjectBrowserHelper</name>
     <message>
-        <location filename="VCS/ProjectBrowserHelper.py" line="274"/>
+        <location filename="VCS/ProjectBrowserHelper.py" line="273"/>
         <source>Remove from repository (and disk)</source>
         <translation>Kaynak havuzundan kaldır (ve diskten)</translation>
     </message>
@@ -41183,7 +41256,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Bu çeviri dosyalarını gerçektenkaynak havuzundan (ve diskten)  silmeki istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectBrowserHelper.py" line="274"/>
+        <location filename="VCS/ProjectBrowserHelper.py" line="273"/>
         <source>Do you really want to remove these files/directories from the repository (and disk)?</source>
         <translation>Bu dosyaları/dizinleri kaynak havuzundan (ve diskten)  gerçekten kaldırmak istiyor musunuz?</translation>
     </message>
@@ -41360,22 +41433,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>VcsStatusMonitorThread</name>
     <message>
-        <location filename="VCS/StatusMonitorThread.py" line="57"/>
+        <location filename="VCS/StatusMonitorThread.py" line="56"/>
         <source>Waiting for lock</source>
         <translation>Kilit için bekleniyor</translation>
     </message>
     <message>
-        <location filename="VCS/StatusMonitorThread.py" line="65"/>
+        <location filename="VCS/StatusMonitorThread.py" line="64"/>
         <source>Checking repository status</source>
         <translation>Kaynak Havuzuz Durumu Kontrol Ediliyor</translation>
     </message>
     <message>
-        <location filename="VCS/StatusMonitorThread.py" line="74"/>
+        <location filename="VCS/StatusMonitorThread.py" line="73"/>
         <source>Sending data</source>
         <translation>Veri Gönderiliyor</translation>
     </message>
     <message>
-        <location filename="VCS/StatusMonitorThread.py" line="81"/>
+        <location filename="VCS/StatusMonitorThread.py" line="80"/>
         <source>Timed out waiting for lock</source>
         <translation>Kilit için beklenirken ara verildi</translation>
     </message>
@@ -44672,30 +44745,30 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>mercurial</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1022"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1025"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1391"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1394"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1395"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1398"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1034"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1037"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1055"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1058"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;
 &lt;p&gt;&lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
@@ -44706,23 +44779,23 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1385"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1388"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1387"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1390"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1399"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1402"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1402"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1405"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;

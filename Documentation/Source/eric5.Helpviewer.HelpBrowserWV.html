@@ -686,11 +686,17 @@ QWebPage
 <td><a href="#HelpWebPage.acceptNavigationRequest">acceptNavigationRequest</a></td>
 <td>Protected method to determine, if a request may be accepted.</td>
 </tr><tr>
+<td><a href="#HelpWebPage.extension">extension</a></td>
+<td>Public method to implement a specific extension.</td>
+</tr><tr>
 <td><a href="#HelpWebPage.pageAttributeId">pageAttributeId</a></td>
 <td>Public method to get the attribute id of the page attribute.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.populateNetworkRequest">populateNetworkRequest</a></td>
 <td>Public method to add data to a network request.</td>
+</tr><tr>
+<td><a href="#HelpWebPage.supportsExtension">supportsExtension</a></td>
+<td>Public method to check the support for an extension.</td>
 </tr>
 </table>
 <a NAME="HelpWebPage.__init__" ID="HelpWebPage.__init__"></a>
@@ -724,6 +730,27 @@ type of the navigation request (QWebPage.NavigationType)
 <dd>
 flag indicating acceptance (boolean)
 </dd>
+</dl><a NAME="HelpWebPage.extension" ID="HelpWebPage.extension"></a>
+<h4>HelpWebPage.extension</h4>
+<b>extension</b>(<i>extension, option, output</i>)
+<p>
+        Public method to implement a specific extension.
+</p><dl>
+<dt><i>extension</i></dt>
+<dd>
+extension to be executed (QWebPage.Extension)
+</dd><dt><i>option</i></dt>
+<dd>
+provides input to the extension (QWebPage.ExtensionOption)
+</dd><dt><i>output</i></dt>
+<dd>
+stores the output results (QWebPage.ExtensionReturn)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a successful call of the extension (boolean)
+</dd>
 </dl><a NAME="HelpWebPage.pageAttributeId" ID="HelpWebPage.pageAttributeId"></a>
 <h4>HelpWebPage.pageAttributeId</h4>
 <b>pageAttributeId</b>(<i></i>)
@@ -743,6 +770,21 @@ attribute id of the page attribute (integer)
 <dt><i>request</i></dt>
 <dd>
 reference to the network request object (QNetworkRequest)
+</dd>
+</dl><a NAME="HelpWebPage.supportsExtension" ID="HelpWebPage.supportsExtension"></a>
+<h4>HelpWebPage.supportsExtension</h4>
+<b>supportsExtension</b>(<i>extension</i>)
+<p>
+        Public method to check the support for an extension.
+</p><dl>
+<dt><i>extension</i></dt>
+<dd>
+extension to test for (QWebPage.Extension)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the support of extension (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
