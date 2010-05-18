@@ -1,0 +1,29 @@
+<!-- This is the DTD for eric4's tasks file version 4.1 -->
+
+<!ELEMENT   Summary             (#PCDATA)>
+
+<!ELEMENT   Description         (#PCDATA)>
+
+<!ELEMENT   Created             (#PCDATA)>
+
+<!ELEMENT   Dir                 (#PCDATA)>
+<!ELEMENT   Name                (#PCDATA)>
+
+<!ELEMENT   Filename            (Dir*, Name)>
+
+<!ELEMENT   Linenumber          (#PCDATA)>
+
+<!ELEMENT   Resource            (Filename, Linenumber)>
+
+<!ELEMENT   Task                (Summary,
+                                 Description,
+                                 Created,
+                                 Resource?)>
+<!ATTLIST   Task
+    priority    CDATA   #REQUIRED
+    completed   CDATA   #REQUIRED
+    bugfix      CDATA   #IMPLIED>
+
+<!ELEMENT   Tasks               (Task*)>
+<!ATTLIST   Tasks
+    version     CDATA   #REQUIRED>
