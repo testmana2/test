@@ -61,6 +61,8 @@ class OpenSearchEngine(QObject):
             "get"  : QNetworkAccessManager.GetOperation, 
             "post" : QNetworkAccessManager.PostOperation, 
         }
+        
+        self.__replies = []
     
     @classmethod
     def parseTemplate(cls, searchTerm, searchTemplate):
@@ -306,6 +308,7 @@ class OpenSearchEngine(QObject):
         reply = self.__networkAccessManager.get(
             QNetworkRequest(QUrl.fromEncoded(self._imageUrl)))
         self.connect(reply, SIGNAL("finished()"), self.__imageObtained)
+        self.__replies.append(reply)
     
     def __imageObtained(self):
         """
@@ -318,6 +321,8 @@ class OpenSearchEngine(QObject):
         response = reply.readAll()
         
         reply.close()
+        if reply in self.__replies:
+            self.__replies.remove(reply)
         reply.deleteLater()
         
         if response.isEmpty():
