@@ -176,6 +176,16 @@ def main():
     
     app = E5Application(sys.argv)
     
+    if Utilities.isWindowsPlatform():
+        libPath = os.path.join(Utilities.getPythonModulesDirectory(), 
+                               "PyQt", "plugins")
+        if os.path.exists(libPath):
+            libPath = Utilities.fromNativeSeparators(libPath)
+            libraryPaths = QApplication.libraryPaths()
+            if libPath not in libraryPaths:
+                libraryPaths.insert(0, libPath)
+                QApplication.setLibraryPaths(libraryPaths)
+
     # set the searchpath for icons
     Startup.initializeResourceSearchPath()
 
