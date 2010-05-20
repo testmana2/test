@@ -14,11 +14,8 @@ notFoundPage_html = """\
 <style>
 body {{
   padding: 3em 0em;
-  background: #eeeeee;
-}}
-hr {{
-  color: lightgray;
-  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#85784A), to(#FDFDFD), color-stop(0.5, #FDFDFD));
+  background-repeat: repeat-x;
 }}
 img {{
   float: left;
@@ -47,9 +44,6 @@ ul {{
   font-size: 100%;
   padding-left: 48px;
   margin: 5px 0;
-}}
-#reloadButton {{
-  padding-left: 48px;
 }}
 </style>
 </head>
