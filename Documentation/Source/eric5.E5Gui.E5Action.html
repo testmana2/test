@@ -122,11 +122,20 @@ QAction
 <td><a href="#E5Action.__init__">E5Action</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#E5Action.__ammendToolTip">__ammendToolTip</a></td>
+<td>Private slot to add the primary keyboard accelerator to the tooltip.</td>
+</tr><tr>
 <td><a href="#E5Action.alternateShortcut">alternateShortcut</a></td>
 <td>Public method to retrieve the alternative keyboard shortcut.</td>
 </tr><tr>
 <td><a href="#E5Action.setAlternateShortcut">setAlternateShortcut</a></td>
 <td>Public slot to set the alternative keyboard shortcut.</td>
+</tr><tr>
+<td><a href="#E5Action.setShortcut">setShortcut</a></td>
+<td>Public slot to set the keyboard shortcut.</td>
+</tr><tr>
+<td><a href="#E5Action.setShortcuts">setShortcuts</a></td>
+<td>Public slot to set the list of keyboard shortcuts.</td>
 </tr>
 </table>
 <a NAME="E5Action.__init__" ID="E5Action.__init__"></a>
@@ -153,7 +162,12 @@ argument list of the constructor. This list is one of
                 parent (QObject), name (string)</li>
             </ul>
 </dd>
-</dl><a NAME="E5Action.alternateShortcut" ID="E5Action.alternateShortcut"></a>
+</dl><a NAME="E5Action.__ammendToolTip" ID="E5Action.__ammendToolTip"></a>
+<h4>E5Action.__ammendToolTip</h4>
+<b>__ammendToolTip</b>(<i></i>)
+<p>
+        Private slot to add the primary keyboard accelerator to the tooltip.
+</p><a NAME="E5Action.alternateShortcut" ID="E5Action.alternateShortcut"></a>
 <h4>E5Action.alternateShortcut</h4>
 <b>alternateShortcut</b>(<i></i>)
 <p>
@@ -172,6 +186,28 @@ the alternative accelerator (QKeySequence)
 <dt><i>shortcut</i></dt>
 <dd>
 the alternative accelerator (QKeySequence)
+</dd>
+</dl><a NAME="E5Action.setShortcut" ID="E5Action.setShortcut"></a>
+<h4>E5Action.setShortcut</h4>
+<b>setShortcut</b>(<i>shortcut</i>)
+<p>
+        Public slot to set the keyboard shortcut.
+</p><dl>
+<dt><i>shortcut</i></dt>
+<dd>
+the accelerator (QKeySequence)
+</dd>
+</dl><a NAME="E5Action.setShortcuts" ID="E5Action.setShortcuts"></a>
+<h4>E5Action.setShortcuts</h4>
+<b>setShortcuts</b>(<i>shortcuts</i>)
+<p>
+        Public slot to set the list of keyboard shortcuts.
+</p><dl>
+<dt><i>shortcuts</i></dt>
+<dd>
+list of keyboard accelerators (list of QKeySequence)
+            or key for a platform dependent list of accelerators 
+            (QKeySequence.StandardKey)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

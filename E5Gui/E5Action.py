@@ -10,7 +10,7 @@ This extension is necessary in order to support alternate keyboard
 shortcuts.
 """
 
-from PyQt4.QtGui import QAction, QActionGroup, QIcon, QKeySequence
+from PyQt4.QtGui import QAction, QActionGroup, QIcon, QKeySequence, qApp
 
 class ArgumentsError(RuntimeError):
     """
@@ -99,6 +99,8 @@ class E5Action(QAction):
         if len(args) == 7+incr:
             self.setCheckable(args[6+incr])
         
+        self.__ammendToolTip()
+        
     def setAlternateShortcut(self, shortcut):
         """
         Public slot to set the alternative keyboard shortcut.
@@ -125,6 +127,38 @@ class E5Action(QAction):
             return QKeySequence()
         else:
             return shortcuts[1]
+        
+    def setShortcut(self, shortcut):
+        """
+        Public slot to set the keyboard shortcut.
+        
+        @param shortcut the accelerator (QKeySequence)
+        """
+        QAction.setShortcut(self, shortcut)
+        self.__ammendToolTip()
+        
+    def setShortcuts(self, shortcuts):
+        """
+        Public slot to set the list of keyboard shortcuts.
+        
+        @param shortcuts list of keyboard accelerators (list of QKeySequence)
+            or key for a platform dependent list of accelerators 
+            (QKeySequence.StandardKey)
+        """
+        QAction.setShortcuts(self, shortcuts)
+        self.__ammendToolTip()
+        
+    def __ammendToolTip(self):
+        """
+        Private slot to add the primary keyboard accelerator to the tooltip.
+        """
+        shortcut = self.shortcut().toString(QKeySequence.NativeText)
+        if shortcut:
+            if qApp.isLeftToRight():
+                fmt = "{0} ({1})"
+            else:
+                fmt = "({1}) {0}"
+            self.setToolTip(fmt.format(self.iconText(), shortcut))
 
 def addActions(target, actions):
     """
