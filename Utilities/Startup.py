@@ -141,6 +141,20 @@ def initializeResourceSearchPath():
     if not defaultIconPath in iconPaths:
         UI.PixmapCache.addSearchPath(defaultIconPath)
 
+def setLibraryPaths():
+    """
+    Module function to set the Qt library paths correctly for windows systems.
+    """
+    if Utilities.isWindowsPlatform():
+        from PyQt4 import pyqtconfig
+        libPath = os.path.join(pyqtconfig._pkg_config["pyqt_mod_dir"], "plugins")
+        if os.path.exists(libPath):
+            libPath = Utilities.fromNativeSeparators(libPath)
+            libraryPaths = QApplication.libraryPaths()
+            if libPath not in libraryPaths:
+                libraryPaths.insert(0, libPath)
+                QApplication.setLibraryPaths(libraryPaths)
+
 # the translator must not be deleted, therefore we save them here
 loaded_translators = {}
 
@@ -202,16 +216,7 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True):
     app = E5Application(argv)
     app.setQuitOnLastWindowClosed(quitOnLastWindowClosed)
     
-    if Utilities.isWindowsPlatform():
-        libPath = os.path.join(Utilities.getPythonModulesDirectory(), 
-                               "PyQt", "plugins")
-        if os.path.exists(libPath):
-            libPath = Utilities.fromNativeSeparators(libPath)
-            libraryPaths = QApplication.libraryPaths()
-            if libPath not in libraryPaths:
-                libraryPaths.insert(0, libPath)
-                QApplication.setLibraryPaths(libraryPaths)
-
+    setLibraryPaths()
     initializeResourceSearchPath()
     QApplication.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
     
