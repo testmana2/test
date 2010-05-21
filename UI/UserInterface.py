@@ -4051,17 +4051,13 @@ class UserInterface(QMainWindow):
         """
         self.__assistant(version = 4)
     
-    def __startWebBrowser(self, home = None):
+    def __startWebBrowser(self, home = ""):
         """
-        Private slot to start a web browser executable.
+        Private slot to start the eric5 web browser.
         
         @param home full pathname of a file to display (string)
         """
-        started = QDesktopServices.openUrl(QUrl(home))
-        if not started:
-            QMessageBox.critical(self,
-                self.trUtf8('Open Browser'),
-                self.trUtf8('Could not start a web browser'))
+        self.launchHelpViewer(home)
         
     def __customViewer(self, home = None):
         """
