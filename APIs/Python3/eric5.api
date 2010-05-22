@@ -5386,7 +5386,7 @@ eric5.UI.FindFileDialog.FindFileDialog.endRole?7
 eric5.UI.FindFileDialog.FindFileDialog.lineRole?7
 eric5.UI.FindFileDialog.FindFileDialog.on_buttonBox_clicked?4(button)
 eric5.UI.FindFileDialog.FindFileDialog.on_dirButton_clicked?4()
-eric5.UI.FindFileDialog.FindFileDialog.on_dirEdit_textChanged?4(text)
+eric5.UI.FindFileDialog.FindFileDialog.on_dirCombo_editTextChanged?4(text)
 eric5.UI.FindFileDialog.FindFileDialog.on_dirSelectButton_clicked?4()
 eric5.UI.FindFileDialog.FindFileDialog.on_filterCheckBox_clicked?4()
 eric5.UI.FindFileDialog.FindFileDialog.on_filterEdit_textEdited?4(p0)

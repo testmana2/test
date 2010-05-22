@@ -3680,7 +3680,7 @@
       <keyword name="FindFileDialog.__stopSearch" id="FindFileDialog.__stopSearch" ref="eric5.UI.FindFileDialog.html#FindFileDialog.__stopSearch" />
       <keyword name="FindFileDialog.on_buttonBox_clicked" id="FindFileDialog.on_buttonBox_clicked" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_buttonBox_clicked" />
       <keyword name="FindFileDialog.on_dirButton_clicked" id="FindFileDialog.on_dirButton_clicked" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_dirButton_clicked" />
-      <keyword name="FindFileDialog.on_dirEdit_textChanged" id="FindFileDialog.on_dirEdit_textChanged" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_dirEdit_textChanged" />
+      <keyword name="FindFileDialog.on_dirCombo_editTextChanged" id="FindFileDialog.on_dirCombo_editTextChanged" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_dirCombo_editTextChanged" />
       <keyword name="FindFileDialog.on_dirSelectButton_clicked" id="FindFileDialog.on_dirSelectButton_clicked" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_dirSelectButton_clicked" />
       <keyword name="FindFileDialog.on_filterCheckBox_clicked" id="FindFileDialog.on_filterCheckBox_clicked" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_filterCheckBox_clicked" />
       <keyword name="FindFileDialog.on_filterEdit_textEdited" id="FindFileDialog.on_filterEdit_textEdited" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_filterEdit_textEdited" />
