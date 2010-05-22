@@ -69,8 +69,16 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
         self.findProgressLabel.setMaximumWidth(550)
         
-        self.searchHistory = []
-        self.replaceHistory = []
+        self.searchHistory = Preferences.toList(
+            Preferences.Prefs.settings.value("FindFileDialog/SearchHistory"))
+        self.replaceHistory = Preferences.toList(
+            Preferences.Prefs.settings.value("FindFileDialog/ReplaceHistory"))
+        self.dirHistory = Preferences.toList(
+            Preferences.Prefs.settings.value("FindFileDialog/DirectoryHistory"))
+        self.findtextCombo.addItems(self.searchHistory)
+        self.replacetextCombo.addItems(self.replaceHistory)
+        self.dirCombo.addItems(self.dirHistory)
+        
         self.project = project
         
         self.findList.headerItem().setText(self.findList.columnCount(), "")
@@ -158,6 +166,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.findList.clear()
             self.replacetextCombo.setEditText("")
         
+        self.dirCombo.setEditText("")
+        
         QDialog.show(self)
         
     def on_findtextCombo_editTextChanged(self, text):
@@ -176,9 +186,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         self.__enableFindButton()
         
-    def on_dirEdit_textChanged(self, text):
+    def on_dirCombo_editTextChanged(self, text):
         """
-        Private slot to handle the textChanged signal of the directory edit.
+        Private slot to handle the textChanged signal of the directory combo box.
         
         @param text (ignored)
         """
@@ -221,8 +231,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         if self.findtextCombo.currentText() == "" or \
            (self.__replaceMode and self.replacetextCombo.currentText() == "") or \
            (self.dirButton.isChecked() and \
-            (self.dirEdit.text() == "" or \
-             not os.path.exists(os.path.abspath(self.dirEdit.text())))) or \
+            (self.dirCombo.currentText() == "" or \
+             not os.path.exists(os.path.abspath(self.dirCombo.currentText())))) or \
            (self.filterCheckBox.isChecked() and self.filterEdit.text() == ""):
             self.findButton.setEnabled(False)
             self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
@@ -296,7 +306,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                     filters.append(self.filterResources)
                 filterString = "|".join(filters)
                 filterRe = re.compile(filterString)
-            files = self.__getFileList(os.path.abspath(self.dirEdit.text()), 
+            files = self.__getFileList(os.path.abspath(self.dirCombo.currentText()), 
                                        filterRe)
         elif self.openFilesButton.isChecked():
             files = e5App().getObject("ViewManager").getOpenFilenames()
@@ -339,6 +349,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.searchHistory.insert(0, ct)
         self.findtextCombo.clear()
         self.findtextCombo.addItems(self.searchHistory)
+        Preferences.Prefs.settings.setValue("FindFileDialog/SearchHistory", 
+                                            self.searchHistory[:30])
+        
         if self.__replaceMode:
             replTxt = self.replacetextCombo.currentText()
             if replTxt in self.replaceHistory:
@@ -346,6 +359,18 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.replaceHistory.insert(0, replTxt)
             self.replacetextCombo.clear()
             self.replacetextCombo.addItems(self.replaceHistory)
+            Preferences.Prefs.settings.setValue("FindFileDialog/ReplaceHistory", 
+                                                self.replaceHistory[:30])
+        
+        if self.dirButton.isChecked():
+            dir = self.dirCombo.currentText()
+            if dir in self.dirHistory:
+                self.dirHistory.remove(dir)
+            self.dirHistory.insert(0, dir)
+            self.dirCombo.clear()
+            self.dirCombo.addItems(self.dirHistory)
+            Preferences.Prefs.settings.setValue("FindFileDialog/DirectoryHistory", 
+                                                self.dirHistory[:30])
         
         # now go through all the files
         self.__populating = True
@@ -467,11 +492,11 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         directory = QFileDialog.getExistingDirectory(\
             self,
             self.trUtf8("Select directory"),
-            self.dirEdit.text(),
+            self.dirCombo.currentText(),
             QFileDialog.Options(QFileDialog.ShowDirsOnly))
             
         if directory:
-            self.dirEdit.setText(Utilities.toNativeSeparators(directory))
+            self.dirCombo.setEditText(Utilities.toNativeSeparators(directory))
         
     def __getFileList(self, path, filterRe):
         """
@@ -497,7 +522,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         @param searchDir name of the directory to search in (string)
         """
         self.dirButton.setChecked(True)
-        self.dirEdit.setText(Utilities.toNativeSeparators(searchDir))
+        self.dirCombo.setEditText(Utilities.toNativeSeparators(searchDir))
         
     @pyqtSlot()
     def on_replaceButton_clicked(self):

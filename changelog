@@ -10,6 +10,8 @@ Version 5.0-snapshot-2010mmdd:
   aspects of a font only
 - changed code to improve development on multiple platforms
 - added code to show the keyboard shortcut to the tooltip of an action
+- changed the Find in Files dialog to remember the history of the search string,
+  replace string and the search directory
 
 Version 5.0-snapshot-20100508:
 - bug fixes
