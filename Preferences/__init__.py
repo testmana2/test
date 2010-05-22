@@ -161,6 +161,7 @@ class Prefs(object):
                                         # 3 = weekly
                                         # 4 = monthly
         "UseProxy" : False,
+        "UseSystemProxy" : True, 
         "ProxyHost" : "",
         "ProxyPort" : 80,
         "ProxyUser" : "",
@@ -1053,7 +1054,7 @@ def getUI(key, prefClass = Prefs):
                 "BrowsersListContentsByOccurrence", "LogViewerAutoRaise", 
                 "SingleApplicationMode", "TabViewManagerFilenameOnly", 
                 "CaptionShowsFilename", "ShowSplash", 
-                "SingleCloseButton", "UseProxy", 
+                "SingleCloseButton", "UseProxy", "UseSystemProxy", 
                 "TopLeftByLeft", "BottomLeftByLeft", 
                 "TopRightByRight", "BottomRightByRight", 
                 "RequestDownloadFilename", 

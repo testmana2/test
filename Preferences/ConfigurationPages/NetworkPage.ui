@@ -10,7 +10,7 @@
     <height>563</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -83,103 +83,135 @@
      <property name="checked">
       <bool>false</bool>
      </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_5">
-        <property name="text">
-         <string>Proxy-Type:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1" colspan="2">
-       <widget class="QComboBox" name="proxyTypeCombo">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="systemProxyButton">
         <property name="toolTip">
-         <string>Select the type of the proxy</string>
+         <string>Select to use the system proxy configuration</string>
         </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label">
         <property name="text">
-         <string>Proxy-Host:</string>
+         <string>Use system proxy configuration</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1" colspan="2">
-       <widget class="QLineEdit" name="proxyHostEdit">
+      <item>
+       <widget class="QRadioButton" name="manualProxyButton">
         <property name="toolTip">
-         <string>Enter the name of the proxy host</string>
+         <string>Select to use an application specific proxy configuration</string>
         </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>Proxy-Port:</string>
+         <string>Manual proxy configuration:</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
-       <widget class="QSpinBox" name="proxyPortSpin">
-        <property name="toolTip">
-         <string>Enter the proxy port</string>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Manual proxy settings</string>
         </property>
-        <property name="alignment">
-         <set>Qt::AlignRight</set>
+        <property name="flat">
+         <bool>false</bool>
         </property>
-        <property name="minimum">
-         <number>1</number>
-        </property>
-        <property name="maximum">
-         <number>65535</number>
-        </property>
-        <property name="value">
-         <number>80</number>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <spacer>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Username:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1" colspan="2">
-       <widget class="QLineEdit" name="proxyUserEdit">
-        <property name="toolTip">
-         <string>Enter the username for the proxy</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>Password:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1" colspan="2">
-       <widget class="QLineEdit" name="proxyPasswordEdit">
-        <property name="toolTip">
-         <string>Enter the password for the proxy</string>
-        </property>
-        <property name="echoMode">
-         <enum>QLineEdit::Password</enum>
-        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Proxy-Type:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" colspan="2">
+          <widget class="QComboBox" name="proxyTypeCombo">
+           <property name="toolTip">
+            <string>Select the type of the proxy</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Proxy-Host:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="2">
+          <widget class="QLineEdit" name="proxyHostEdit">
+           <property name="toolTip">
+            <string>Enter the name of the proxy host</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Proxy-Port:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="proxyPortSpin">
+           <property name="toolTip">
+            <string>Enter the proxy port</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight</set>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>65535</number>
+           </property>
+           <property name="value">
+            <number>80</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <spacer>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Username:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" colspan="2">
+          <widget class="QLineEdit" name="proxyUserEdit">
+           <property name="toolTip">
+            <string>Enter the username for the proxy</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Password:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" colspan="2">
+          <widget class="QLineEdit" name="proxyPasswordEdit">
+           <property name="toolTip">
+            <string>Enter the password for the proxy</string>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>
@@ -205,6 +237,8 @@
   <tabstop>downloadDirButton</tabstop>
   <tabstop>requestFilenameCheckBox</tabstop>
   <tabstop>proxyGroup</tabstop>
+  <tabstop>systemProxyButton</tabstop>
+  <tabstop>manualProxyButton</tabstop>
   <tabstop>proxyTypeCombo</tabstop>
   <tabstop>proxyHostEdit</tabstop>
   <tabstop>proxyPortSpin</tabstop>
@@ -212,5 +246,22 @@
   <tabstop>proxyPasswordEdit</tabstop>
  </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>manualProxyButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>63</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

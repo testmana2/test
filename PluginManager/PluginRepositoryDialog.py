@@ -15,7 +15,7 @@ import io
 
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
-from PyQt4.QtNetwork import QHttp, QNetworkProxy
+from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 
 from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
@@ -72,7 +72,16 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.pluginRepositoryFile = \
             os.path.join(Utilities.getConfigDir(), "PluginRepository")
         
-        self.__http = None
+        # attributes for the network objects
+        self.__networkManager = QNetworkAccessManager(self)
+        self.connect(self.__networkManager, 
+            SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
+            self.__proxyAuthenticationRequired)
+        self.connect(self.__networkManager, 
+            SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
+            self.__sslErrors)
+        self.__replies = []
+        
         self.__doneMethod = None
         self.__inDownload = False
         self.__pluginsToDownload = []
@@ -322,39 +331,6 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         @param filename local name of the file (string)
         @param doneMethod method to be called when done
         """
-        if self.__http is None:
-            self.__http = QHttp()
-            self.connect(self.__http, SIGNAL("done(bool)"), self.__downloadFileDone)
-            self.connect(self.__http, SIGNAL("dataReadProgress(int, int)"), 
-                self.__dataReadProgress)
-            self.connect(self.__http, 
-                SIGNAL('proxyAuthenticationRequired(const QNetworkProxy &, QAuthenticator *)'),
-                self.__proxyAuthenticationRequired)
-            self.connect(self.__http, SIGNAL("sslErrors(const QList<QSslError>&)"), 
-                self.__sslErrors)
-        
-        if Preferences.getUI("UseProxy"):
-            host = Preferences.getUI("ProxyHost")
-            if not host:
-                QMessageBox.critical(None,
-                    self.trUtf8("Error downloading file"),
-                    self.trUtf8("""Proxy usage was activated"""
-                                """ but no proxy host configured."""))
-                return
-            else:
-                pProxyType = Preferences.getUI("ProxyType")
-                if pProxyType == 0:
-                    proxyType = QNetworkProxy.HttpProxy
-                elif pProxyType == 1:
-                    proxyType = QNetworkProxy.HttpCachingProxy
-                elif pProxyType == 2:
-                    proxyType = QNetworkProxy.Socks5Proxy
-                self.__proxy = QNetworkProxy(proxyType, host, 
-                    Preferences.getUI("ProxyPort"),
-                    Preferences.getUI("ProxyUser"),
-                    Preferences.getUI("ProxyPassword"))
-                self.__http.setProxy(self.__proxy)
-        
         self.__updateButton.setEnabled(False)
         self.__downloadButton.setEnabled(False)
         self.__downloadCancelButton.setEnabled(True)
@@ -367,38 +343,34 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadIODevice = QFile(self.__downloadFileName + ".tmp")
         self.__downloadCancelled = False
         
-        if QUrl(url).scheme().lower() == 'https':
-            connectionMode = QHttp.ConnectionModeHttps
-        else:
-            connectionMode = QHttp.ConnectionModeHttp
-        self.__http.setHost(QUrl(url).host(), connectionMode, QUrl(url).port(0))
-        self.__http.get(QUrl(url).path(), self.__downloadIODevice)
+        reply = self.__networkManager.get(QNetworkRequest(QUrl(url)))
+        self.connect(reply, SIGNAL("finished()"), self.__downloadFileDone)
+        self.connect(reply, SIGNAL("downloadProgress(qint64, qint64)"), 
+            self.__downloadProgress)
+        self.__replies.append(reply)
     
-    def __downloadFileDone(self, error):
+    def __downloadFileDone(self):
         """
         Private method called, after the file has been downloaded
         from the internet.
-        
-        @param error flag indicating an error condition (boolean)
         """
         self.__updateButton.setEnabled(True)
         self.__downloadCancelButton.setEnabled(False)
         self.statusLabel.setText("  ")
         
         ok = True
-        if error or self.__http.lastResponse().statusCode() != 200:
+        reply = self.sender()
+        if reply in self.__replies:
+            self.__replies.remove(reply)
+        if reply.error() != QNetworkReply.NoError:
             ok = False
             if not self.__downloadCancelled:
-                if error:
-                    msg = self.__http.errorString()
-                else:
-                    msg = self.__http.lastResponse().reasonPhrase()
                 QMessageBox.warning(None,
                     self.trUtf8("Error downloading file"),
                     self.trUtf8(
                         """<p>Could not download the requested file from {0}.</p>"""
                         """<p>Error: {1}</p>"""
-                    ).format(self.__downloadURL, msg)
+                    ).format(self.__downloadURL, reply.errorString())
                 )
             self.downloadProgress.setValue(0)
             self.__downloadURL = None
@@ -412,6 +384,9 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                     self.__downloadButton.setEnabled(len(self.__selectedItems()))
             return
         
+        self.__downloadIODevice.open(QIODevice.WriteOnly)
+        self.__downloadIODevice.write(reply.readAll())
+        self.__downloadIODevice.close()
         if QFile.exists(self.__downloadFileName):
             QFile.remove(self.__downloadFileName)
         self.__downloadIODevice.rename(self.__downloadFileName)
@@ -425,20 +400,22 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         Private slot to cancel the current download.
         """
-        if self.__http is not None:
+        if self.__replies:
+            reply = self.__replies[0]
             self.__downloadCancelled = True
             self.__pluginsToDownload = []
-            self.__http.abort()
+            reply.abort()
     
-    def __dataReadProgress(self, done, total):
+    def __downloadProgress(self, done, total):
         """
         Private slot to show the download progress.
         
         @param done number of bytes downloaded so far (integer)
         @param total total bytes to be downloaded (integer)
         """
-        self.downloadProgress.setMaximum(total)
-        self.downloadProgress.setValue(done)
+        if total:
+            self.downloadProgress.setMaximum(total)
+            self.downloadProgress.setValue(done)
     
     def addEntry(self, name, short, description, url, author, version, filename, status):
         """
@@ -530,14 +507,15 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 Preferences.setUI("ProxyUser", username)
                 Preferences.setUI("ProxyPassword", password)
     
-    def __sslErrors(self, sslErrors):
+    def __sslErrors(self, reply, errors):
         """
         Private slot to handle SSL errors.
         
-        @param sslErrors list of SSL errors (list of QSslError)
+        @param reply reference to the reply object (QNetworkReply)
+        @param errors list of SSL errors (list of QSslError)
         """
         errorStrings = []
-        for err in sslErrors:
+        for err in errors:
             errorStrings.append(err.errorString())
         errorString = '.<br />'.join(errorStrings)
         ret = QMessageBox.warning(self,
@@ -551,10 +529,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 QMessageBox.Yes),
             QMessageBox.No)
         if ret == QMessageBox.Yes:
-            self.__http.ignoreSslErrors()
+            reply.ignoreSslErrors()
         else:
             self.__downloadCancelled = True
-            self.__http.abort()
+            reply.abort()
     
     def getDownloadedPlugins(self):
         """

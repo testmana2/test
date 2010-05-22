@@ -45,6 +45,10 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         
         self.proxyGroup.setChecked(\
             Preferences.getUI("UseProxy"))
+        if Preferences.getUI("UseSystemProxy"):
+            self.systemProxyButton.setChecked(True)
+        else:
+            self.manualProxyButton.setChecked(True)
         self.proxyTypeCombo.setCurrentIndex(self.proxyTypeCombo.findData(\
             Preferences.getUI("ProxyType")))
         self.proxyHostEdit.setText(\
@@ -67,6 +71,8 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         
         Preferences.setUI("UseProxy",
             self.proxyGroup.isChecked())
+        Preferences.setUI("UseSystemProxy", 
+            self.systemProxyButton.isChecked())
         Preferences.setUI("ProxyType", 
             self.proxyTypeCombo.itemData(self.proxyTypeCombo.currentIndex()))
         Preferences.setUI("ProxyHost",

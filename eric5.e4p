@@ -799,6 +799,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgCommandDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.py</Source>
+    <Source>E5Network/E5NetworkProxyFactory.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

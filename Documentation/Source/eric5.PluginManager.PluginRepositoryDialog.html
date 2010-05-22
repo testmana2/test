@@ -121,9 +121,6 @@ QWidget, Ui_PluginRepositoryDialog
 <td><a href="#PluginRepositoryWidget.__init__">PluginRepositoryWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#PluginRepositoryWidget.__dataReadProgress">__dataReadProgress</a></td>
-<td>Private slot to show the download progress.</td>
-</tr><tr>
 <td><a href="#PluginRepositoryWidget.__downloadCancel">__downloadCancel</a></td>
 <td>Private slot to cancel the current download.</td>
 </tr><tr>
@@ -144,6 +141,9 @@ QWidget, Ui_PluginRepositoryDialog
 </tr><tr>
 <td><a href="#PluginRepositoryWidget.__downloadPluginsDone">__downloadPluginsDone</a></td>
 <td>Private method called, when the download of the plugins is finished.</td>
+</tr><tr>
+<td><a href="#PluginRepositoryWidget.__downloadProgress">__downloadProgress</a></td>
+<td>Private slot to show the download progress.</td>
 </tr><tr>
 <td><a href="#PluginRepositoryWidget.__downloadRepositoryFileDone">__downloadRepositoryFileDone</a></td>
 <td>Private method called after the repository file was downloaded.</td>
@@ -198,19 +198,6 @@ QWidget, Ui_PluginRepositoryDialog
 <dd>
 parent of this dialog (QWidget)
 </dd>
-</dl><a NAME="PluginRepositoryWidget.__dataReadProgress" ID="PluginRepositoryWidget.__dataReadProgress"></a>
-<h4>PluginRepositoryWidget.__dataReadProgress</h4>
-<b>__dataReadProgress</b>(<i>done, total</i>)
-<p>
-        Private slot to show the download progress.
-</p><dl>
-<dt><i>done</i></dt>
-<dd>
-number of bytes downloaded so far (integer)
-</dd><dt><i>total</i></dt>
-<dd>
-total bytes to be downloaded (integer)
-</dd>
 </dl><a NAME="PluginRepositoryWidget.__downloadCancel" ID="PluginRepositoryWidget.__downloadCancel"></a>
 <h4>PluginRepositoryWidget.__downloadCancel</h4>
 <b>__downloadCancel</b>(<i></i>)
@@ -234,16 +221,11 @@ method to be called when done
 </dd>
 </dl><a NAME="PluginRepositoryWidget.__downloadFileDone" ID="PluginRepositoryWidget.__downloadFileDone"></a>
 <h4>PluginRepositoryWidget.__downloadFileDone</h4>
-<b>__downloadFileDone</b>(<i>error</i>)
+<b>__downloadFileDone</b>(<i></i>)
 <p>
         Private method called, after the file has been downloaded
         from the internet.
-</p><dl>
-<dt><i>error</i></dt>
-<dd>
-flag indicating an error condition (boolean)
-</dd>
-</dl><a NAME="PluginRepositoryWidget.__downloadPlugin" ID="PluginRepositoryWidget.__downloadPlugin"></a>
+</p><a NAME="PluginRepositoryWidget.__downloadPlugin" ID="PluginRepositoryWidget.__downloadPlugin"></a>
 <h4>PluginRepositoryWidget.__downloadPlugin</h4>
 <b>__downloadPlugin</b>(<i></i>)
 <p>
@@ -271,7 +253,20 @@ full path of the downloaded file (string)
 <b>__downloadPluginsDone</b>(<i></i>)
 <p>
         Private method called, when the download of the plugins is finished.
-</p><a NAME="PluginRepositoryWidget.__downloadRepositoryFileDone" ID="PluginRepositoryWidget.__downloadRepositoryFileDone"></a>
+</p><a NAME="PluginRepositoryWidget.__downloadProgress" ID="PluginRepositoryWidget.__downloadProgress"></a>
+<h4>PluginRepositoryWidget.__downloadProgress</h4>
+<b>__downloadProgress</b>(<i>done, total</i>)
+<p>
+        Private slot to show the download progress.
+</p><dl>
+<dt><i>done</i></dt>
+<dd>
+number of bytes downloaded so far (integer)
+</dd><dt><i>total</i></dt>
+<dd>
+total bytes to be downloaded (integer)
+</dd>
+</dl><a NAME="PluginRepositoryWidget.__downloadRepositoryFileDone" ID="PluginRepositoryWidget.__downloadRepositoryFileDone"></a>
 <h4>PluginRepositoryWidget.__downloadRepositoryFileDone</h4>
 <b>__downloadRepositoryFileDone</b>(<i>status, filename</i>)
 <p>
@@ -352,11 +347,14 @@ list of selected items (list)
 </dd>
 </dl><a NAME="PluginRepositoryWidget.__sslErrors" ID="PluginRepositoryWidget.__sslErrors"></a>
 <h4>PluginRepositoryWidget.__sslErrors</h4>
-<b>__sslErrors</b>(<i>sslErrors</i>)
+<b>__sslErrors</b>(<i>reply, errors</i>)
 <p>
         Private slot to handle SSL errors.
 </p><dl>
-<dt><i>sslErrors</i></dt>
+<dt><i>reply</i></dt>
+<dd>
+reference to the reply object (QNetworkReply)
+</dd><dt><i>errors</i></dt>
 <dd>
 list of SSL errors (list of QSslError)
 </dd>

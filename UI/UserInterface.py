@@ -15,7 +15,8 @@ import logging
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR
-from PyQt4.QtNetwork import QHttp, QNetworkProxy
+from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
+    QNetworkRequest, QNetworkReply
 
 from E5Gui.E5Application import e5App
 
@@ -96,6 +97,8 @@ from E5XML.TasksHandler import TasksHandler
 from E5XML.TasksWriter import TasksWriter
 from E5XML.SessionWriter import SessionWriter
 from E5XML.SessionHandler import SessionHandler
+
+from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory
 
 from IconEditor.IconEditorWindow import IconEditorWindow
 
@@ -207,6 +210,9 @@ class UserInterface(QMainWindow):
         else:
             self.restoreGeometry(g)
         self.__startup = True
+        
+        self.__proxyFactory = E5NetworkProxyFactory()
+        QNetworkProxyFactory.setApplicationProxyFactory(self.__proxyFactory)
         
         self.capProject = ""
         self.capEditor = ""
@@ -610,8 +616,15 @@ class UserInterface(QMainWindow):
         # now start the debug client
         debugServer.startClient(False)
         
-        # attribute for the http client object
-        self.http = None
+        # attributes for the network objects
+        self.__networkManager = QNetworkAccessManager(self)
+        self.connect(self.__networkManager, 
+            SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
+            self.__proxyAuthenticationRequired)
+        self.connect(self.__networkManager, 
+                SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
+            self.__sslErrors)
+        self.__replies = []
         
         # attribute for the help window
         self.helpWindow = None
@@ -5337,37 +5350,6 @@ class UserInterface(QMainWindow):
         self.__inVersionCheck = True
         self.manualUpdatesCheck = manual
         self.showAvailableVersions = showVersions
-        if self.http is None:
-            self.http = QHttp()
-            self.connect(self.http, SIGNAL("done(bool)"), self.__versionsDownloadDone)
-            self.connect(self.http, 
-                SIGNAL('proxyAuthenticationRequired(const QNetworkProxy &, QAuthenticator *)'),
-                self.__proxyAuthenticationRequired)
-            self.connect(self.http, SIGNAL("sslErrors(const QList<QSslError>&)"), 
-                self.__sslErrors)
-        
-        if Preferences.getUI("UseProxy"):
-            host = Preferences.getUI("ProxyHost")
-            if not host:
-                QMessageBox.critical(None,
-                    self.trUtf8("Error during updates check"),
-                    self.trUtf8("""Proxy usage was activated"""
-                                """ but no proxy host configured."""))
-                return
-            else:
-                pProxyType = Preferences.getUI("ProxyType")
-                if pProxyType == 0:
-                    proxyType = QNetworkProxy.HttpProxy
-                elif pProxyType == 1:
-                    proxyType = QNetworkProxy.HttpCachingProxy
-                elif pProxyType == 2:
-                    proxyType = QNetworkProxy.Socks5Proxy
-                self.__proxy = QNetworkProxy(proxyType, host, 
-                    Preferences.getUI("ProxyPort"),
-                    Preferences.getUI("ProxyUser"),
-                    Preferences.getUI("ProxyPassword"))
-                self.http.setProxy(self.__proxy)
-        
         self.httpAlternative = alternative
         url = QUrl(self.__httpAlternatives[alternative])
         self.__versionCheckCanceled = False
@@ -5382,15 +5364,14 @@ class UserInterface(QMainWindow):
             self.__versionCheckProgress.setLabelText(self.trUtf8("Trying host {0}")\
                 .format(url.host()))
             self.__versionCheckProgress.setValue(alternative)
-        self.http.setHost(url.host(), url.port(80))
-        self.http.get(url.path())
+        reply = self.__networkManager.get(QNetworkRequest(url))
+        self.connect(reply, SIGNAL("finished()"), self.__versionsDownloadDone)
+        self.__replies.append(reply)
         
-    def __versionsDownloadDone(self, error):
+    def __versionsDownloadDone(self):
         """
         Private method called, after the versions file has been downloaded
         from the internet.
-        
-        @param error flag indicating an error condition (boolean)
         """
         if self.__versionCheckCanceled:
             self.__inVersionCheck = False
@@ -5399,7 +5380,10 @@ class UserInterface(QMainWindow):
                 self.__versionCheckProgress = None
             return
         
-        if error or self.http.lastResponse().statusCode() != 200:
+        reply = self.sender()
+        if reply in self.__replies:
+            self.__replies.remove(reply)
+        if reply.error() != QNetworkReply.NoError:
             self.httpAlternative += 1
             if self.httpAlternative >= len(self.__httpAlternatives):
                 self.__inVersionCheck = False
@@ -5411,7 +5395,6 @@ class UserInterface(QMainWindow):
                     self.trUtf8("""Could not download the versions file."""))
                 return
             else:
-                self.http = None
                 self.performVersionCheck(self.manualUpdatesCheck, self.httpAlternative, 
                     self.showAvailableVersions)
                 return
@@ -5421,7 +5404,7 @@ class UserInterface(QMainWindow):
             self.__versionCheckProgress.reset()
             self.__versionCheckProgress = None
         ioEncoding = Preferences.getSystem("IOEncoding")
-        versions = str(self.http.readAll(), ioEncoding, 'replace').splitlines()
+        versions = str(reply.readAll(), ioEncoding, 'replace').splitlines()
         self.__updateVersionsUrls(versions)
         if self.showAvailableVersions:
             self.__showAvailableVersionInfos(versions)
@@ -5558,11 +5541,12 @@ class UserInterface(QMainWindow):
                 Preferences.setUI("ProxyUser", username)
                 Preferences.setUI("ProxyPassword", password)
         
-    def __sslErrors(self, sslErrors):
+    def __sslErrors(self, reply, errors):
         """
         Private slot to handle SSL errors.
         
-        @param sslErrors list of SSL errors (list of QSslError)
+        @param reply reference to the reply object (QNetworkReply)
+        @param errors list of SSL errors (list of QSslError)
         """
         errorStrings = []
         for err in sslErrors:
@@ -5579,10 +5563,10 @@ class UserInterface(QMainWindow):
                 QMessageBox.Yes),
             QMessageBox.No)
         if ret == QMessageBox.Yes:
-            self.__http.ignoreSslErrors()
+            reply.ignoreSslErrors()
         else:
             self.__downloadCancelled = True
-            self.__http.abort()
+            reply.abort()
     
     #######################################
     ## Below are methods for various checks

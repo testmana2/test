@@ -1492,11 +1492,14 @@ flag indicating success
         Private slot to start the SQL browser tool.
 </p><a NAME="UserInterface.__sslErrors" ID="UserInterface.__sslErrors"></a>
 <h4>UserInterface.__sslErrors</h4>
-<b>__sslErrors</b>(<i>sslErrors</i>)
+<b>__sslErrors</b>(<i>reply, errors</i>)
 <p>
         Private slot to handle SSL errors.
 </p><dl>
-<dt><i>sslErrors</i></dt>
+<dt><i>reply</i></dt>
+<dd>
+reference to the reply object (QNetworkReply)
+</dd><dt><i>errors</i></dt>
 <dd>
 list of SSL errors (list of QSslError)
 </dd>
@@ -1715,16 +1718,11 @@ contents of the downloaded versions file (list of strings)
         Private method called to cancel the version check.
 </p><a NAME="UserInterface.__versionsDownloadDone" ID="UserInterface.__versionsDownloadDone"></a>
 <h4>UserInterface.__versionsDownloadDone</h4>
-<b>__versionsDownloadDone</b>(<i>error</i>)
+<b>__versionsDownloadDone</b>(<i></i>)
 <p>
         Private method called, after the versions file has been downloaded
         from the internet.
-</p><dl>
-<dt><i>error</i></dt>
-<dd>
-flag indicating an error condition (boolean)
-</dd>
-</dl><a NAME="UserInterface.__webBrowser" ID="UserInterface.__webBrowser"></a>
+</p><a NAME="UserInterface.__webBrowser" ID="UserInterface.__webBrowser"></a>
 <h4>UserInterface.__webBrowser</h4>
 <b>__webBrowser</b>(<i></i>)
 <p>

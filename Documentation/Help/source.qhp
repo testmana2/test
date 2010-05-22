@@ -134,6 +134,7 @@
           <section title="eric5.E5Network" ref="index-eric5.E5Network.html">
             <section title="eric5.E5Network.E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
             <section title="eric5.E5Network.E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html" />
+            <section title="eric5.E5Network.E5NetworkProxyFactory" ref="eric5.E5Network.E5NetworkProxyFactory.html" />
           </section>
           <section title="eric5.E5XML" ref="index-eric5.E5XML.html">
             <section title="eric5.E5XML.Config" ref="eric5.E5XML.Config.html" />
@@ -1467,7 +1468,6 @@
       <keyword name="PluginRepositoryDialog.__closeAndInstall" id="PluginRepositoryDialog.__closeAndInstall" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryDialog.__closeAndInstall" />
       <keyword name="PluginRepositoryDialog.getDownloadedPlugins" id="PluginRepositoryDialog.getDownloadedPlugins" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryDialog.getDownloadedPlugins" />
       <keyword name="PluginRepositoryWidget (Constructor)" id="PluginRepositoryWidget (Constructor)" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__init__" />
-      <keyword name="PluginRepositoryWidget.__dataReadProgress" id="PluginRepositoryWidget.__dataReadProgress" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__dataReadProgress" />
       <keyword name="PluginRepositoryWidget.__downloadCancel" id="PluginRepositoryWidget.__downloadCancel" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadCancel" />
       <keyword name="PluginRepositoryWidget.__downloadFile" id="PluginRepositoryWidget.__downloadFile" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadFile" />
       <keyword name="PluginRepositoryWidget.__downloadFileDone" id="PluginRepositoryWidget.__downloadFileDone" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadFileDone" />
@@ -1475,6 +1475,7 @@
       <keyword name="PluginRepositoryWidget.__downloadPluginDone" id="PluginRepositoryWidget.__downloadPluginDone" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadPluginDone" />
       <keyword name="PluginRepositoryWidget.__downloadPlugins" id="PluginRepositoryWidget.__downloadPlugins" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadPlugins" />
       <keyword name="PluginRepositoryWidget.__downloadPluginsDone" id="PluginRepositoryWidget.__downloadPluginsDone" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadPluginsDone" />
+      <keyword name="PluginRepositoryWidget.__downloadProgress" id="PluginRepositoryWidget.__downloadProgress" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadProgress" />
       <keyword name="PluginRepositoryWidget.__downloadRepositoryFileDone" id="PluginRepositoryWidget.__downloadRepositoryFileDone" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__downloadRepositoryFileDone" />
       <keyword name="PluginRepositoryWidget.__formatDescription" id="PluginRepositoryWidget.__formatDescription" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__formatDescription" />
       <keyword name="PluginRepositoryWidget.__isUpToDate" id="PluginRepositoryWidget.__isUpToDate" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__isUpToDate" />
@@ -1795,6 +1796,10 @@
       <keyword name="E5NetworkHeaderDetailsDialog" id="E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html#E5NetworkHeaderDetailsDialog" />
       <keyword name="E5NetworkHeaderDetailsDialog (Constructor)" id="E5NetworkHeaderDetailsDialog (Constructor)" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html#E5NetworkHeaderDetailsDialog.__init__" />
       <keyword name="E5NetworkHeaderDetailsDialog.setData" id="E5NetworkHeaderDetailsDialog.setData" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html#E5NetworkHeaderDetailsDialog.setData" />
+      <keyword name="E5NetworkProxyFactory (Module)" id="E5NetworkProxyFactory (Module)" ref="eric5.E5Network.E5NetworkProxyFactory.html" />
+      <keyword name="E5NetworkProxyFactory" id="E5NetworkProxyFactory" ref="eric5.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory" />
+      <keyword name="E5NetworkProxyFactory (Constructor)" id="E5NetworkProxyFactory (Constructor)" ref="eric5.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory.__init__" />
+      <keyword name="E5NetworkProxyFactory.queryProxy" id="E5NetworkProxyFactory.queryProxy" ref="eric5.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory.queryProxy" />
       <keyword name="E5NetworkMonitor (Module)" id="E5NetworkMonitor (Module)" ref="eric5.E5Network.E5NetworkMonitor.html" />
       <keyword name="E5NetworkMonitor" id="E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor" />
       <keyword name="E5NetworkRequest" id="E5NetworkRequest" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkRequest" />
@@ -6918,7 +6923,6 @@
       <keyword name="NetworkAccessManager.__authenticationRequired" id="NetworkAccessManager.__authenticationRequired" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__authenticationRequired" />
       <keyword name="NetworkAccessManager.__certToString" id="NetworkAccessManager.__certToString" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__certToString" />
       <keyword name="NetworkAccessManager.__proxyAuthenticationRequired" id="NetworkAccessManager.__proxyAuthenticationRequired" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__proxyAuthenticationRequired" />
-      <keyword name="NetworkAccessManager.__setAccessManagerProxy" id="NetworkAccessManager.__setAccessManagerProxy" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__setAccessManagerProxy" />
       <keyword name="NetworkAccessManager.__setDiskCache" id="NetworkAccessManager.__setDiskCache" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__setDiskCache" />
       <keyword name="NetworkAccessManager.__sslErrors" id="NetworkAccessManager.__sslErrors" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__sslErrors" />
       <keyword name="NetworkAccessManager.createRequest" id="NetworkAccessManager.createRequest" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.createRequest" />
@@ -9676,6 +9680,7 @@
       <file>eric5.E5Gui.E5TreeView.html</file>
       <file>eric5.E5Network.E5NetworkHeaderDetailsDialog.html</file>
       <file>eric5.E5Network.E5NetworkMonitor.html</file>
+      <file>eric5.E5Network.E5NetworkProxyFactory.html</file>
       <file>eric5.E5XML.Config.html</file>
       <file>eric5.E5XML.DebuggerPropertiesHandler.html</file>
       <file>eric5.E5XML.DebuggerPropertiesWriter.html</file>

@@ -11,13 +11,14 @@ import os
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QDialog, QMessageBox
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
-    QNetworkProxy
+from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 try:
     from PyQt4.QtNetwork import QSsl, QSslCertificate, QSslConfiguration, QSslSocket
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
+
+from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory
 
 from UI.AuthenticationDialog import AuthenticationDialog
 
@@ -56,7 +57,9 @@ class NetworkAccessManager(QNetworkAccessManager):
         
         self.__schemeHandlers = {}  # dictionary of scheme handlers
         
-        self.__setAccessManagerProxy()
+        self.__proxyFactory = E5NetworkProxyFactory()
+        self.setProxyFactory(self.__proxyFactory)
+        
         self.__setDiskCache()
         self.languagesChanged()
         
@@ -75,7 +78,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                 self.__sslErrors)
         
         self.connect(self, 
-            SIGNAL('proxyAuthenticationRequired(const QNetworkProxy &, QAuthenticator *)'),
+            SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
             self.__proxyAuthenticationRequired)
         self.connect(self, 
             SIGNAL('authenticationRequired(QNetworkReply *, QAuthenticator *)'), 
@@ -142,37 +145,6 @@ class NetworkAccessManager(QNetworkAccessManager):
                   op, req, reply)
         
         return reply
-    
-    def __setAccessManagerProxy(self):
-        """
-        Private method  to set the proxy used by the network access manager.
-        """
-        if Preferences.getUI("UseProxy"):
-            host = Preferences.getUI("ProxyHost")
-            if not host:
-                QMessageBox.critical(None,
-                    self.trUtf8("Web Browser"),
-                    self.trUtf8("""Proxy usage was activated"""
-                                """ but no proxy host configured."""))
-                return
-            else:
-                pProxyType = Preferences.getUI("ProxyType")
-                if pProxyType == 0:
-                    proxyType = QNetworkProxy.HttpProxy
-                elif pProxyType == 1:
-                    proxyType = QNetworkProxy.HttpCachingProxy
-                elif pProxyType == 2:
-                    proxyType = QNetworkProxy.Socks5Proxy
-                self.__proxy = QNetworkProxy(proxyType, host, 
-                    Preferences.getUI("ProxyPort"),
-                    Preferences.getUI("ProxyUser"),
-                    Preferences.getUI("ProxyPassword"))
-                self.__proxy.setCapabilities(QNetworkProxy.Capabilities(
-                    QNetworkProxy.CachingCapability | \
-                    QNetworkProxy.HostNameLookupCapability))
-        else:
-            self.__proxy = QNetworkProxy(QNetworkProxy.NoProxy)
-        self.setProxy(self.__proxy)
     
     def __authenticationRequired(self, reply, auth):
         """
@@ -327,7 +299,6 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         Public slot to signal a change of preferences.
         """
-        self.__setAccessManagerProxy()
         self.__setDiskCache()
     
     def languagesChanged(self):
