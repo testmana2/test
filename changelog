@@ -2,6 +2,7 @@ Change Log
 ----------
 Version 5.1-snapshot-2010mmdd:
 - bug fixes
+- added an action to perform a 'hg push -f' to the Mercurial plug-in
 
 Version 5.0-snapshot-20100523:
 - bug fixes

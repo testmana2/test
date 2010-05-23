@@ -149,6 +149,21 @@ class HgProjectHelper(VcsProjectHelper):
         self.connect(self.hgPushAct, SIGNAL('triggered()'), self.__hgPush)
         self.actions.append(self.hgPushAct)
         
+        self.hgPushForcedAct = E5Action(self.trUtf8('Push changes (force)'),
+                UI.PixmapCache.getIcon("vcsCommit.png"),
+                self.trUtf8('Push changes (force)'),
+                0, 0, self, 'mercurial_push_forced')
+        self.hgPushForcedAct.setStatusTip(self.trUtf8(
+            'Push changes to a remote repository with force option'
+        ))
+        self.hgPushForcedAct.setWhatsThis(self.trUtf8(
+            """<b>Push changes (force)</b>"""
+            """<p>This pushes changes from the local repository to a """
+            """remote repository using the 'force' option.</p>"""
+        ))
+        self.connect(self.hgPushForcedAct, SIGNAL('triggered()'), self.__hgPushForced)
+        self.actions.append(self.hgPushForcedAct)
+        
         self.vcsExportAct = E5Action(self.trUtf8('Export from repository'), 
                 UI.PixmapCache.getIcon("vcsExport.png"),
                 self.trUtf8('&Export from repository...'),
@@ -745,6 +760,9 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgVerifyAct)
         
+        specialsMenu = QMenu(self.trUtf8("Specials"), menu)
+        specialsMenu.addAction(self.hgPushForcedAct)
+        
         bundleMenu = QMenu(self.trUtf8("Changegroup Management"), menu)
         bundleMenu.addAction(self.hgBundleAct)
         bundleMenu.addAction(self.hgIdentifyBundleAct)
@@ -810,6 +828,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsCommandAct)
         menu.addSeparator()
         menu.addMenu(adminMenu)
+        menu.addMenu(specialsMenu)
         menu.addSeparator()
         menu.addAction(self.vcsPropsAct)
         menu.addSeparator()
@@ -856,6 +875,13 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to push changes to a remote repository.
         """
         self.vcs.hgPush(self.project.ppath)
+    
+    def __hgPushForced(self):
+        """
+        Private slot used to push changes to a remote repository using
+        the force option.
+        """
+        self.vcs.hgPush(self.project.ppath, force = True)
     
     def __hgHeads(self):
         """

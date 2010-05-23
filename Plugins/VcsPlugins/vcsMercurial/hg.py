@@ -1311,16 +1311,19 @@ class Hg(VersionControl):
             res = dia.hasAddOrDelete()
         self.checkVCSStatus()
     
-    def hgPush(self, name):
+    def hgPush(self, name, force = False):
         """
         Public method used to push changes to a remote Mercurial repository.
         
         @param name directory name of the project to be pushed from (string)
+        @keyparam force flag indicating a forced push (boolean)
         """
         args = []
         args.append('push')
         self.addArguments(args, self.options['global'])
         args.append('-v')
+        if force:
+            args.append('-f')
         
         # find the root of the repo
         repodir = self.splitPath(name)[0]
