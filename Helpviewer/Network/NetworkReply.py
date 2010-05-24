@@ -58,7 +58,7 @@ class NetworkReply(QNetworkReply):
         Protected method to retrieve data from the reply object.
         
         @param maxlen maximum number of bytes to read (integer)
-        @return string containing the data (string)
+        @return string containing the data (bytes)
         """
         len_ = min(maxlen, self.__data.length())
         buffer = bytes(self.__data[:len_])

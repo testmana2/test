@@ -128,7 +128,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
             res = QMessageBox.question(None,
                 self.trUtf8("Downloading"),
                 self.trUtf8("""<p>You are about to download the file <b>{0}</b>.</p>"""
-                            """<p>What do you want to do?</p>""").format(baseName),
+                            """<p>What do you want to do?</p>""").format(fileName),
                 QMessageBox.StandardButtons(\
                     QMessageBox.Open | \
                     QMessageBox.Save | \
@@ -140,7 +140,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
             
             self.__autoOpen = res == QMessageBox.Open
             fileName = QDesktopServices.storageLocation(QDesktopServices.TempLocation) + \
-                        '/' + baseName
+                        '/' + fileName
         
         if not self.__autoOpen and self.__requestFilename:
             fileName = QFileDialog.getSaveFileName(
@@ -317,12 +317,12 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         """
         self.__bytesReceived = received
         if total == -1:
-            self.progressBar.setValue(0)
             self.progressBar.setMaximum(0)
+            self.progressBar.setValue(0)
             self.setWindowTitle(self.__windowTitleTemplate.format(""))
         else:
-            self.progressBar.setValue(received)
             self.progressBar.setMaximum(total)
+            self.progressBar.setValue(received)
             pc = "{0}%".format(received * 100 // total)
             self.setWindowTitle(self.__windowTitleTemplate.format(pc))
         self.__updateInfoLabel()
