@@ -2103,6 +2103,13 @@ eric5.Helpviewer.History.HistoryTreeModel.HistoryTreeModel?1(sourceModel, parent
 eric5.Helpviewer.JavaScriptResources.fetchLinks_js?7
 eric5.Helpviewer.JavaScriptResources.parseForms_js?7
 eric5.Helpviewer.Network.AboutAccessHandler.AboutAccessHandler.createRequest?4(op, request, outgoingData = None)
+eric5.Helpviewer.Network.FtpAccessHandler.FtpAccessHandler.createRequest?4(op, request, outgoingData = None)
+eric5.Helpviewer.Network.FtpReply.FtpReply.abort?4()
+eric5.Helpviewer.Network.FtpReply.FtpReply.bytesAvailable?4()
+eric5.Helpviewer.Network.FtpReply.FtpReply.isSequential?4()
+eric5.Helpviewer.Network.FtpReply.FtpReply.readData?4(maxlen)
+eric5.Helpviewer.Network.FtpReply.FtpReply?1(url, parent = None)
+eric5.Helpviewer.Network.FtpReply.ftpListPage_html?7
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.createRequest?4(op, request, outgoingData = None)
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.languagesChanged?4()
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.preferencesChanged?4()
@@ -2969,7 +2976,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgNormalizeURL?4(url)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgOutgoing?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgPreviewBundle?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgPull?4(name)
-eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgPush?4(name)
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgPush?4(name, force = False)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgRecover?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgResolve?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgShowBranch?4(name)

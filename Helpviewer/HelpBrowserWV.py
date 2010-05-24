@@ -221,7 +221,7 @@ class HelpWebPage(QWebPage):
                 imageBuffer.open(QIODevice.ReadWrite)
                 if pixmap.save(imageBuffer, "PNG"):
                     html = html.replace("IMAGE_BINARY_DATA_HERE", 
-                                 bytes(imageBuffer.buffer().toBase64()).decode())
+                                 str(imageBuffer.buffer().toBase64(), encoding="ascii"))
                 errorPage.content = QByteArray(html.format(
                     title, 
                     info.errorString, 
@@ -425,7 +425,7 @@ class HelpBrowser(QWebView):
                         self.trUtf8("""<p>Could not start a viewer"""
                         """ for file <b>{0}</b>.</p>""").format(name.path()))
                 return
-        elif name.scheme() in ["mailto", "ftp"]:
+        elif name.scheme() in ["mailto"]:
             started = QDesktopServices.openUrl(name)
             if not started:
                 QMessageBox.critical(self,
@@ -924,6 +924,7 @@ class HelpBrowser(QWebView):
         if reply.error() == QNetworkReply.NoError:
             if reply.url().isEmpty():
                 return
+            parent = QUrl(reply.url().toString().rsplit("/", 1)[0] + "/")
             size = reply.header(QNetworkRequest.ContentLengthHeader)
             if size == 0:
                 return
@@ -935,6 +936,7 @@ class HelpBrowser(QWebView):
                 self.connect(dlg, SIGNAL("done()"), self.__downloadDone)
                 self.__downloadWindows.append(dlg)
                 dlg.show()
+            self.setUrl(parent)
         else:
             replyUrl = reply.url()
             if replyUrl.isEmpty():
@@ -950,7 +952,7 @@ class HelpBrowser(QWebView):
             imageBuffer.open(QIODevice.ReadWrite)
             if pixmap.save(imageBuffer, "PNG"):
                 html = html.replace("IMAGE_BINARY_DATA_HERE", 
-                             bytes(imageBuffer.buffer().toBase64()).decode())
+                             str(imageBuffer.buffer().toBase64(), encoding="ascii"))
             html = html.format(
                 title, 
                 reply.errorString(), 

@@ -5424,27 +5424,27 @@ Not connected
         <translation>Стоп</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="146"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="145"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="157"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="156"/>
         <source>Download canceled: {0}</source>
         <translation type="unfinished">Скачивание прервано: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="270"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="269"/>
         <source>Error opening save file: {0}</source>
         <translation type="unfinished">Ошибка сохранения файла: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="277"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="276"/>
         <source>Error saving: {0}</source>
         <translation type="unfinished">Ошибка при сохранении: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="294"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="293"/>
         <source>Network Error: {0}</source>
         <translation type="unfinished">Сетевая ошибка: {0}</translation>
     </message>
@@ -5459,47 +5459,47 @@ Not connected
         <translation type="obsolete">осталось {3} секунд</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="358"/>
         <source>{0} of {1} ({2}/sec) {3}</source>
         <translation type="unfinished">{0} из {1} ({2}/сек) {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="360"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
         <source>?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="368"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="367"/>
         <source>{0} downloaded</source>
         <translation type="unfinished">{0} скачено</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="371"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="370"/>
         <source>{0} of {1} - Stopped</source>
         <translation type="unfinished">{0} из {1} - остановлено</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="385"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="384"/>
         <source>bytes</source>
         <translation>байты</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="388"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="387"/>
         <source>kB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="391"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="390"/>
         <source>MB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="128"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
         <source>Downloading</source>
         <translation>Скачивание</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="128"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Начинается загрузка файла &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Что Вы хотите с ним сделать?&lt;/p&gt;</translation>
     </message>
@@ -5509,12 +5509,12 @@ Not connected
         <translation>Скачивание Eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="350"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="349"/>
         <source>- {0}:{1:02} minutes remaining</source>
         <translation>осталось {0}:{1:02} минут</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="357"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="356"/>
         <source>- {0} seconds remaining</source>
         <translation>осталось {0} секунд</translation>
     </message>
@@ -11447,6 +11447,31 @@ whole selection.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>FtpReply</name>
+    <message>
+        <location filename="Helpviewer/Network/FtpReply.py" line="274"/>
+        <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/FtpReply.py" line="287"/>
+        <source>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Last modified&lt;/th&gt;&lt;/tr&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/FtpReply.py" line="313"/>
+        <source>{0} {1}</source>
+        <comment>size unit</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/FtpReply.py" line="337"/>
+        <source>Listing of {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>GotoDialog</name>
     <message>
         <location filename="QScintilla/GotoDialog.ui" line="13"/>
@@ -11620,27 +11645,27 @@ whole selection.&lt;/li&gt;
         <translation>WEB проводник...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="945"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="947"/>
         <source>Error loading page: {0}</source>
         <translation type="unfinished">Ошибка при загрузке страницы: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>When connecting to: {0}.</source>
         <translation type="unfinished">При соединении с {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Проверьте адрес на ошибки типа &lt;b&gt;ww&lt;/b&gt;.example.org вместо &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Если адрес правильный, проверьте сетевое соединение.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Если ваш компьютер или локальная сеть находятся за firewall или proxy, убедитесь что браузеру разрешено подсоединяться к сети.</translation>
     </message>
@@ -21657,47 +21682,47 @@ Do you want to save your changes?</source>
         <translation type="obsolete">Активирована работа через прокси, но не настроен ни один прокси-сервер.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="159"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="161"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation type="unfinished">&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="162"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="164"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation type="unfinished">&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;; realm &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="189"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="191"/>
         <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
         <translation type="unfinished">&lt;b&gt;Подключиться к прокси &apos;{0}&apos; используя:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="226"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="228"/>
         <source>SSL Errors</source>
         <translation>Ошибки SSL</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="226"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="228"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Ошибки SSL для &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Игнорировать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="242"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="244"/>
         <source>Certificates</source>
         <translation>Сертификаты</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="242"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="244"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Сертификаты:&lt;br/&gt;{0}&lt;br/&gt;Принять?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="281"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="283"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation type="unfinished">&lt;br/&gt;эмитент: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="284"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="286"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation type="unfinished">&lt;br/&gt;Не действительны ранее: {0}&lt;br/&gt;Действительны до: {1}</translation>
     </message>
@@ -21707,7 +21732,7 @@ Do you want to save your changes?</source>
         <translation type="obsolete">&lt;br/&gt;Альтернативные имеа::&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="291"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="293"/>
         <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
         <translation type="unfinished">&lt;br/&gt;Альтернативные имеа::&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>

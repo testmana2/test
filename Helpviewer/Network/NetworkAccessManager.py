@@ -31,6 +31,7 @@ from .NetworkDiskCache import NetworkDiskCache
 from .QtHelpAccessHandler import QtHelpAccessHandler
 from .PyrcAccessHandler import PyrcAccessHandler
 from .AboutAccessHandler import AboutAccessHandler
+from .FtpAccessHandler import FtpAccessHandler
 
 from Helpviewer.AdBlock.AdBlockAccessHandler import AdBlockAccessHandler
 
@@ -89,6 +90,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         self.setSchemeHandler("pyrc", PyrcAccessHandler(self))
         self.setSchemeHandler("about", AboutAccessHandler(self))
         self.setSchemeHandler("abp", AdBlockAccessHandler(self))
+        self.setSchemeHandler("ftp", FtpAccessHandler(self))
     
     def setSchemeHandler(self, scheme, handler):
         """
