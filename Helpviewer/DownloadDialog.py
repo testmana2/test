@@ -122,7 +122,6 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         
         defaultFileName = self.__saveFileName(downloadDirectory)
         fileName = defaultFileName
-        baseName = QFileInfo(fileName).completeBaseName()
         self.__autoOpen = False
         if not self.__toDownload:
             res = QMessageBox.question(None,

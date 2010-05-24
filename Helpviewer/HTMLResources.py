@@ -23,21 +23,22 @@ img {{
 }}
 #box {{
   background: white;
-  border: 1px solid lightgray;
+  border: 1px solid #85784A;
   width: 600px;
   padding: 60px;
   margin: auto;
+  -webkit-border-radius: 0.8em;
 }}
 h1 {{
   font-size: 130%;
   font-weight: bold;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #85784A;
   margin-left: 48px;
 }}
 h2 {{
   font-size: 100%;
   font-weight: normal;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #85784A;
   margin-left: 48px;
 }}
 ul {{
