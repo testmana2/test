@@ -199,8 +199,8 @@ class NetworkAccessManager(QNetworkAccessManager):
             if dlg.shallSave():
                 Preferences.setUI("ProxyUser", username)
                 Preferences.setUI("ProxyPassword", password)
-                self.__proxy.setUser(username)
-                self.__proxy.setPassword(password)
+                proxy.setUser(username)
+                proxy.setPassword(password)
     
     def __sslErrors(self, reply, errors):
         """
