@@ -57,6 +57,8 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                                                   url.userName(), url.password())
                             proxyList = [proxy]
                             break
+                proxyList[0].setUser(Preferences.getUI("ProxyUser"))
+                proxyList[0].setPassword(Preferences.getUI("ProxyPassword"))
                 return proxyList
             else:
                 host = Preferences.getUI("ProxyHost")
