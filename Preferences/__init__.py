@@ -1802,9 +1802,13 @@ def getQt4TranslationsDir(prefClass = Prefs):
     s = prefClass.settings.value("Qt/Qt4TranslationsDir", 
         prefClass.qtDefaults["Qt4TranslationsDir"])
     if s == "":
-        return os.getenv("QT4TRANSLATIONSDIR", "")
-    else:
-        return s
+        s = os.getenv("QT4TRANSLATIONSDIR", "")
+    if s == "" and isWindowsPlatform():
+        from PyQt4 import pyqtconfig
+        transPath = os.path.join(pyqtconfig._pkg_config["pyqt_mod_dir"], "translations")
+        if os.path.exists(transPath):
+            s = transPath
+    return s
     
 def getQt(key, prefClass = Prefs):
     """
