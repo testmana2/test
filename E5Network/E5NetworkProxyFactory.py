@@ -10,9 +10,11 @@ Module implementing a network proxy factory.
 import sys
 import os
 
-from PyQt4.QtCore import QUrl
-from PyQt4.QtGui import QMessageBox
+from PyQt4.QtCore import QUrl, Qt, QCoreApplication
+from PyQt4.QtGui import QMessageBox, QDialog
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkProxy, QNetworkProxyQuery
+
+from UI.AuthenticationDialog import AuthenticationDialog
 
 import Preferences
 
@@ -57,11 +59,11 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                                                   url.userName(), url.password())
                             proxyList = [proxy]
                             break
-                proxyList[0].setUser(Preferences.getUI("ProxyUser"))
-                proxyList[0].setPassword(Preferences.getUI("ProxyPassword"))
+                proxyList[0].setUser(Preferences.getUI("ProxyUser/Http"))
+                proxyList[0].setPassword(Preferences.getUI("ProxyPassword/Http"))
                 return proxyList
             else:
-                host = Preferences.getUI("ProxyHost")
+                host = Preferences.getUI("ProxyHost/Http")
                 if not host:
                     QMessageBox.critical(None,
                         self.trUtf8("Proxy Configuration Error"),
@@ -69,17 +71,31 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                                     """ but no proxy host configured."""))
                     return [QNetworkProxy(QNetworkProxy.DefaultProxy)]
                 else:
-                    pProxyType = Preferences.getUI("ProxyType")
-                    if pProxyType == 0:
-                        proxyType = QNetworkProxy.HttpProxy
-                    elif pProxyType == 1:
-                        proxyType = QNetworkProxy.HttpCachingProxy
-                    elif pProxyType == 2:
-                        proxyType = QNetworkProxy.Socks5Proxy
-                    proxy = QNetworkProxy(proxyType, host, 
-                        Preferences.getUI("ProxyPort"),
-                        Preferences.getUI("ProxyUser"),
-                        Preferences.getUI("ProxyPassword"))
+                    proxy = QNetworkProxy(QNetworkProxy.HttpProxy, host, 
+                        Preferences.getUI("ProxyPort/Http"),
+                        Preferences.getUI("ProxyUser/Http"),
+                        Preferences.getUI("ProxyPassword/Http"))
                     return [proxy, QNetworkProxy(QNetworkProxy.DefaultProxy)]
         else:
             return [QNetworkProxy(QNetworkProxy.NoProxy)]
+
+def proxyAuthenticationRequired(proxy, auth):
+    """
+    Module slot to handle a proxy authentication request.
+    
+    @param proxy reference to the proxy object (QNetworkProxy)
+    @param auth reference to the authenticator object (QAuthenticator)
+    """
+    info = QCoreApplication.translate("E5NetworkProxyFactory", "<b>Connect to proxy '{0}' using:</b>")\
+        .format(Qt.escape(proxy.hostName()))
+    
+    dlg = AuthenticationDialog(info, proxy.user(), True)
+    if dlg.exec_() == QDialog.Accepted:
+        username, password = dlg.getData()
+        auth.setUser(username)
+        auth.setPassword(password)
+        if dlg.shallSave():
+            Preferences.setUI("ProxyUser/Http", username)
+            Preferences.setUI("ProxyPassword/Http", password)
+            proxy.setUser(username)
+            proxy.setPassword(password)

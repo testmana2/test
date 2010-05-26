@@ -19,12 +19,12 @@ from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkRepl
 
 from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
-from UI.AuthenticationDialog import AuthenticationDialog
-
 from E5XML.XMLUtilities import make_parser
 from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
 from E5XML.XMLEntityResolver import XMLEntityResolver
 from E5XML.PluginRepositoryHandler import PluginRepositoryHandler
+
+from E5Network.E5NetworkProxyFactory import proxyAuthenticationRequired
 
 import Utilities
 import Preferences
@@ -76,7 +76,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__networkManager = QNetworkAccessManager(self)
         self.connect(self.__networkManager, 
             SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
-            self.__proxyAuthenticationRequired)
+            proxyAuthenticationRequired)
         self.connect(self.__networkManager, 
             SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
             self.__sslErrors)
@@ -487,25 +487,6 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         zip.close()
         
         return aversion == version
-    
-    def __proxyAuthenticationRequired(self, proxy, auth):
-        """
-        Private slot to handle a proxy authentication request.
-        
-        @param proxy reference to the proxy object (QNetworkProxy)
-        @param auth reference to the authenticator object (QAuthenticator)
-        """
-        info = self.trUtf8("<b>Connect to proxy '{0}' using:</b>")\
-            .format(Qt.escape(proxy.hostName()))
-        
-        dlg = AuthenticationDialog(info, proxy.user(), True)
-        if dlg.exec_() == QDialog.Accepted:
-            username, password = dlg.getData()
-            auth.setUser(username)
-            auth.setPassword(password)
-            if dlg.shallSave():
-                Preferences.setUI("ProxyUser", username)
-                Preferences.setUI("ProxyPassword", password)
     
     def __sslErrors(self, reply, errors):
         """

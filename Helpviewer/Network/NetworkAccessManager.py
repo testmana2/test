@@ -18,7 +18,7 @@ try:
 except ImportError:
     SSL_AVAILABLE = False
 
-from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory
+from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, proxyAuthenticationRequired
 
 from UI.AuthenticationDialog import AuthenticationDialog
 
@@ -80,7 +80,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         
         self.connect(self, 
             SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
-            self.__proxyAuthenticationRequired)
+            proxyAuthenticationRequired)
         self.connect(self, 
             SIGNAL('authenticationRequired(QNetworkReply *, QAuthenticator *)'), 
             self.__authenticationRequired)
@@ -180,27 +180,6 @@ class NetworkAccessManager(QNetworkAccessManager):
             if Preferences.getHelp("SavePasswords"):
                 Helpviewer.HelpWindow.HelpWindow.passwordManager().setLogin(
                     reply.url(), auth.realm(), username, password)
-    
-    def __proxyAuthenticationRequired(self, proxy, auth):
-        """
-        Private slot to handle a proxy authentication request.
-        
-        @param proxy reference to the proxy object (QNetworkProxy)
-        @param auth reference to the authenticator object (QAuthenticator)
-        """
-        info = self.trUtf8("<b>Connect to proxy '{0}' using:</b>")\
-            .format(Qt.escape(proxy.hostName()))
-        
-        dlg = AuthenticationDialog(info, proxy.user(), True)
-        if dlg.exec_() == QDialog.Accepted:
-            username, password = dlg.getData()
-            auth.setUser(username)
-            auth.setPassword(password)
-            if dlg.shallSave():
-                Preferences.setUI("ProxyUser", username)
-                Preferences.setUI("ProxyPassword", password)
-                proxy.setUser(username)
-                proxy.setPassword(password)
     
     def __sslErrors(self, reply, errors):
         """

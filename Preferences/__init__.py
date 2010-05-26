@@ -161,11 +161,24 @@ class Prefs(object):
                                         # 3 = weekly
                                         # 4 = monthly
         "UseProxy" : False,
-        "UseSystemProxy" : True, 
-        "ProxyHost" : "",
-        "ProxyPort" : 80,
-        "ProxyUser" : "",
-        "ProxyPassword" : "",
+        "UseSystemProxy" : True,
+        "UseHttpProxyForAll" : False, 
+        "ProxyHost/Http" : "",
+        "ProxyHost/Https" : "",
+        "ProxyHost/Ftp" : "",
+        "ProxyHost/Socks5" : "",
+        "ProxyPort/Http" : 80,
+        "ProxyPort/Https" : 443,
+        "ProxyPort/Ftp" : 21,
+        "ProxyPort/Socks5" : 0,
+        "ProxyUser/Http" : "",
+        "ProxyUser/Https" : "",
+        "ProxyUser/Ftp" : "",
+        "ProxyUser/Socks5" : "",
+        "ProxyPassword/Http" : "",
+        "ProxyPassword/Https" : "",
+        "ProxyPassword/Ftp" : "",
+        "ProxyPassword/Socks5" : "",
         "ProxyType" : 0,            # 0 = transparent HTTP proxy
                                     # 1 = caching HTTP proxy
                                     # 2 = SOCKS5 proxy
@@ -1054,7 +1067,8 @@ def getUI(key, prefClass = Prefs):
                 "BrowsersListContentsByOccurrence", "LogViewerAutoRaise", 
                 "SingleApplicationMode", "TabViewManagerFilenameOnly", 
                 "CaptionShowsFilename", "ShowSplash", 
-                "SingleCloseButton", "UseProxy", "UseSystemProxy", 
+                "SingleCloseButton", 
+                "UseProxy", "UseSystemProxy", "UseHttpProxyForAll", 
                 "TopLeftByLeft", "BottomLeftByLeft", 
                 "TopRightByRight", "BottomRightByRight", 
                 "RequestDownloadFilename", 
@@ -1063,11 +1077,13 @@ def getUI(key, prefClass = Prefs):
         return toBool(prefClass.settings.value("UI/" + key,
             prefClass.uiDefaults[key]))
     elif key in ["TabViewManagerFilenameLength", "CaptionFilenameLength",
-                 "ProxyPort", "ProxyType", "OpenOnStartup", 
+                 "ProxyPort/Http", "ProxyPort/Https", "ProxyPort/Ftp", "ProxyPort/Socks5", 
+                 "OpenOnStartup", 
                  "PerformVersionCheck", "RecentNumber", ]:
         return int(prefClass.settings.value("UI/" + key,
             prefClass.uiDefaults[key]))
-    elif key == "ProxyPassword":
+    elif key in ["ProxyPassword/Http", "ProxyPassword/Https", 
+                 "ProxyPassword/Ftp", "ProxyPassword/Socks5", ]:
         from Utilities import pwDecode
         return pwDecode(prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
     elif key in ["LogStdErrColour"]:
@@ -1137,7 +1153,8 @@ def setUI(key, value, prefClass = Prefs):
         prefClass.settings.setValue("UI/" + key, value)
     elif key == "LogStdErrColour":
         prefClass.settings.setValue("UI/" + key, value.name())
-    elif key == "ProxyPassword":
+    elif key in ["ProxyPassword/Http", "ProxyPassword/Https", 
+                 "ProxyPassword/Ftp", "ProxyPassword/Socks5", ]:
         from Utilities import pwEncode
         prefClass.settings.setValue("UI/" + key, pwEncode(value))
     else:

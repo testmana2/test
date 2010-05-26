@@ -34,10 +34,6 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         
         self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         
-        self.proxyTypeCombo.addItem(self.trUtf8("Transparent HTTP"), 0)
-        self.proxyTypeCombo.addItem(self.trUtf8("Caching HTTP"), 1)
-        self.proxyTypeCombo.addItem(self.trUtf8("Socks5"), 2)
-        
         # set initial values
         self.downloadDirEdit.setText(Preferences.getUI("DownloadPath"))
         self.requestFilenameCheckBox.setChecked(
@@ -49,16 +45,14 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.systemProxyButton.setChecked(True)
         else:
             self.manualProxyButton.setChecked(True)
-        self.proxyTypeCombo.setCurrentIndex(self.proxyTypeCombo.findData(\
-            Preferences.getUI("ProxyType")))
         self.proxyHostEdit.setText(\
-            Preferences.getUI("ProxyHost"))
+            Preferences.getUI("ProxyHost/Http"))
         self.proxyUserEdit.setText(\
-            Preferences.getUI("ProxyUser"))
+            Preferences.getUI("ProxyUser/Http"))
         self.proxyPasswordEdit.setText(\
-            Preferences.getUI("ProxyPassword"))
+            Preferences.getUI("ProxyPassword/Http"))
         self.proxyPortSpin.setValue(\
-            Preferences.getUI("ProxyPort"))
+            Preferences.getUI("ProxyPort/Http"))
         
     def save(self):
         """
@@ -73,15 +67,13 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.proxyGroup.isChecked())
         Preferences.setUI("UseSystemProxy", 
             self.systemProxyButton.isChecked())
-        Preferences.setUI("ProxyType", 
-            self.proxyTypeCombo.itemData(self.proxyTypeCombo.currentIndex()))
-        Preferences.setUI("ProxyHost",
+        Preferences.setUI("ProxyHost/Http",
             self.proxyHostEdit.text())
-        Preferences.setUI("ProxyUser",
+        Preferences.setUI("ProxyUser/Http",
             self.proxyUserEdit.text())
-        Preferences.setUI("ProxyPassword",
+        Preferences.setUI("ProxyPassword/Http",
             self.proxyPasswordEdit.text())
-        Preferences.setUI("ProxyPort",
+        Preferences.setUI("ProxyPort/Http",
             self.proxyPortSpin.value())
     
     @pyqtSlot()

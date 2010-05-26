@@ -69,7 +69,6 @@ from .CompareDialog import CompareDialog
 from .LogView import LogViewer
 from .FindFileDialog import FindFileDialog
 from .FindFileNameDialog import FindFileNameDialog
-from .AuthenticationDialog import AuthenticationDialog
 
 from E5Gui.E5SingleApplication import E5SingleApplicationServer
 from E5Gui.E5Action import E5Action, createActionGroup
@@ -98,7 +97,7 @@ from E5XML.TasksWriter import TasksWriter
 from E5XML.SessionWriter import SessionWriter
 from E5XML.SessionHandler import SessionHandler
 
-from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory
+from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, proxyAuthenticationRequired
 
 from IconEditor.IconEditorWindow import IconEditorWindow
 
@@ -620,7 +619,7 @@ class UserInterface(QMainWindow):
         self.__networkManager = QNetworkAccessManager(self)
         self.connect(self.__networkManager, 
             SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
-            self.__proxyAuthenticationRequired)
+            proxyAuthenticationRequired)
         self.connect(self.__networkManager, 
                 SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
             self.__sslErrors)
@@ -5521,25 +5520,6 @@ class UserInterface(QMainWindow):
         versionText += self.trUtf8("""</table>""")
         
         QMessageBox.about(self, Program, versionText)
-        
-    def __proxyAuthenticationRequired(self, proxy, auth):
-        """
-        Private slot to handle a proxy authentication request.
-        
-        @param proxy reference to the proxy object (QNetworkProxy)
-        @param auth reference to the authenticator object (QAuthenticator)
-        """
-        info = self.trUtf8("<b>Connect to proxy '{0}' using:</b>")\
-            .format(Qt.escape(proxy.hostName()))
-        
-        dlg = AuthenticationDialog(info, proxy.user(), True)
-        if dlg.exec_() == QDialog.Accepted:
-            username, password = dlg.getData()
-            auth.setUser(username)
-            auth.setPassword(password)
-            if dlg.shallSave():
-                Preferences.setUI("ProxyUser", username)
-                Preferences.setUI("ProxyPassword", password)
         
     def __sslErrors(self, reply, errors):
         """
