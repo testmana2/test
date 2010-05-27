@@ -1301,6 +1301,8 @@ eric5.E5Network.E5NetworkMonitor.E5RequestModel.rowCount?4(parent)
 eric5.E5Network.E5NetworkMonitor.E5RequestModel?1(networkAccessManager, parent = None)
 eric5.E5Network.E5NetworkProxyFactory.E5NetworkProxyFactory.queryProxy?4(query)
 eric5.E5Network.E5NetworkProxyFactory.E5NetworkProxyFactory?1()
+eric5.E5Network.E5NetworkProxyFactory.proxyAuthenticationRequired?4(proxy, auth)
+eric5.E5Network.E5NetworkProxyFactory.schemeFromProxyType?4(proxyType)
 eric5.E5XML.Config.debuggerPropertiesFileFormatVersion?7
 eric5.E5XML.Config.highlightingStylesFileFormatVersion?7
 eric5.E5XML.Config.multiProjectFileFormatVersion?7

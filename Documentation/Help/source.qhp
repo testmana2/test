@@ -1482,7 +1482,6 @@
       <keyword name="PluginRepositoryWidget.__formatDescription" id="PluginRepositoryWidget.__formatDescription" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__formatDescription" />
       <keyword name="PluginRepositoryWidget.__isUpToDate" id="PluginRepositoryWidget.__isUpToDate" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__isUpToDate" />
       <keyword name="PluginRepositoryWidget.__populateList" id="PluginRepositoryWidget.__populateList" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__populateList" />
-      <keyword name="PluginRepositoryWidget.__proxyAuthenticationRequired" id="PluginRepositoryWidget.__proxyAuthenticationRequired" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__proxyAuthenticationRequired" />
       <keyword name="PluginRepositoryWidget.__resortRepositoryList" id="PluginRepositoryWidget.__resortRepositoryList" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__resortRepositoryList" />
       <keyword name="PluginRepositoryWidget.__selectedItems" id="PluginRepositoryWidget.__selectedItems" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__selectedItems" />
       <keyword name="PluginRepositoryWidget.__sslErrors" id="PluginRepositoryWidget.__sslErrors" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.__sslErrors" />
@@ -1800,6 +1799,8 @@
       <keyword name="E5NetworkHeaderDetailsDialog.setData" id="E5NetworkHeaderDetailsDialog.setData" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html#E5NetworkHeaderDetailsDialog.setData" />
       <keyword name="E5NetworkProxyFactory (Module)" id="E5NetworkProxyFactory (Module)" ref="eric5.E5Network.E5NetworkProxyFactory.html" />
       <keyword name="E5NetworkProxyFactory" id="E5NetworkProxyFactory" ref="eric5.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory" />
+      <keyword name="proxyAuthenticationRequired" id="proxyAuthenticationRequired" ref="eric5.E5Network.E5NetworkProxyFactory.html#proxyAuthenticationRequired" />
+      <keyword name="schemeFromProxyType" id="schemeFromProxyType" ref="eric5.E5Network.E5NetworkProxyFactory.html#schemeFromProxyType" />
       <keyword name="E5NetworkProxyFactory (Constructor)" id="E5NetworkProxyFactory (Constructor)" ref="eric5.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory.__init__" />
       <keyword name="E5NetworkProxyFactory.queryProxy" id="E5NetworkProxyFactory.queryProxy" ref="eric5.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory.queryProxy" />
       <keyword name="E5NetworkMonitor (Module)" id="E5NetworkMonitor (Module)" ref="eric5.E5Network.E5NetworkMonitor.html" />
@@ -4006,7 +4007,6 @@
       <keyword name="UserInterface.__programChange" id="UserInterface.__programChange" ref="eric5.UI.UserInterface.html#UserInterface.__programChange" />
       <keyword name="UserInterface.__projectClosed" id="UserInterface.__projectClosed" ref="eric5.UI.UserInterface.html#UserInterface.__projectClosed" />
       <keyword name="UserInterface.__projectOpened" id="UserInterface.__projectOpened" ref="eric5.UI.UserInterface.html#UserInterface.__projectOpened" />
-      <keyword name="UserInterface.__proxyAuthenticationRequired" id="UserInterface.__proxyAuthenticationRequired" ref="eric5.UI.UserInterface.html#UserInterface.__proxyAuthenticationRequired" />
       <keyword name="UserInterface.__quit" id="UserInterface.__quit" ref="eric5.UI.UserInterface.html#UserInterface.__quit" />
       <keyword name="UserInterface.__readSession" id="UserInterface.__readSession" ref="eric5.UI.UserInterface.html#UserInterface.__readSession" />
       <keyword name="UserInterface.__readTasks" id="UserInterface.__readTasks" ref="eric5.UI.UserInterface.html#UserInterface.__readTasks" />
@@ -6924,7 +6924,6 @@
       <keyword name="NetworkAccessManager (Constructor)" id="NetworkAccessManager (Constructor)" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__init__" />
       <keyword name="NetworkAccessManager.__authenticationRequired" id="NetworkAccessManager.__authenticationRequired" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__authenticationRequired" />
       <keyword name="NetworkAccessManager.__certToString" id="NetworkAccessManager.__certToString" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__certToString" />
-      <keyword name="NetworkAccessManager.__proxyAuthenticationRequired" id="NetworkAccessManager.__proxyAuthenticationRequired" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__proxyAuthenticationRequired" />
       <keyword name="NetworkAccessManager.__setDiskCache" id="NetworkAccessManager.__setDiskCache" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__setDiskCache" />
       <keyword name="NetworkAccessManager.__sslErrors" id="NetworkAccessManager.__sslErrors" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__sslErrors" />
       <keyword name="NetworkAccessManager.createRequest" id="NetworkAccessManager.createRequest" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.createRequest" />
@@ -6944,6 +6943,7 @@
       <keyword name="FtpReply.__commandStarted" id="FtpReply.__commandStarted" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__commandStarted" />
       <keyword name="FtpReply.__connectToHost" id="FtpReply.__connectToHost" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__connectToHost" />
       <keyword name="FtpReply.__cssLinkClass" id="FtpReply.__cssLinkClass" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__cssLinkClass" />
+      <keyword name="FtpReply.__errorSignals" id="FtpReply.__errorSignals" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__errorSignals" />
       <keyword name="FtpReply.__processCommand" id="FtpReply.__processCommand" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__processCommand" />
       <keyword name="FtpReply.__processData" id="FtpReply.__processData" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__processData" />
       <keyword name="FtpReply.__processListInfo" id="FtpReply.__processListInfo" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__processListInfo" />

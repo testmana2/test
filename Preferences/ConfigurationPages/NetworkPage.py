@@ -45,14 +45,20 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.systemProxyButton.setChecked(True)
         else:
             self.manualProxyButton.setChecked(True)
-        self.proxyHostEdit.setText(\
+        self.httpProxyForAllCheckBox.setChecked(
+            Preferences.getUI("UseHttpProxyForAll"))
+        self.httpProxyHostEdit.setText(\
             Preferences.getUI("ProxyHost/Http"))
-        self.proxyUserEdit.setText(\
-            Preferences.getUI("ProxyUser/Http"))
-        self.proxyPasswordEdit.setText(\
-            Preferences.getUI("ProxyPassword/Http"))
-        self.proxyPortSpin.setValue(\
+        self.httpsProxyHostEdit.setText(\
+            Preferences.getUI("ProxyHost/Https"))
+        self.ftpProxyHostEdit.setText(\
+            Preferences.getUI("ProxyHost/Ftp"))
+        self.httpProxyPortSpin.setValue(\
             Preferences.getUI("ProxyPort/Http"))
+        self.httpsProxyPortSpin.setValue(\
+            Preferences.getUI("ProxyPort/Https"))
+        self.ftpProxyPortSpin.setValue(\
+            Preferences.getUI("ProxyPort/Ftp"))
         
     def save(self):
         """
@@ -67,14 +73,20 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.proxyGroup.isChecked())
         Preferences.setUI("UseSystemProxy", 
             self.systemProxyButton.isChecked())
+        Preferences.setUI("UseHttpProxyForAll", 
+            self.httpProxyForAllCheckBox.isChecked())
         Preferences.setUI("ProxyHost/Http",
-            self.proxyHostEdit.text())
-        Preferences.setUI("ProxyUser/Http",
-            self.proxyUserEdit.text())
-        Preferences.setUI("ProxyPassword/Http",
-            self.proxyPasswordEdit.text())
+            self.httpProxyHostEdit.text())
+        Preferences.setUI("ProxyHost/Https",
+            self.httpsProxyHostEdit.text())
+        Preferences.setUI("ProxyHost/Ftp",
+            self.ftpProxyHostEdit.text())
         Preferences.setUI("ProxyPort/Http",
-            self.proxyPortSpin.value())
+            self.httpProxyPortSpin.value())
+        Preferences.setUI("ProxyPort/Https",
+            self.httpsProxyPortSpin.value())
+        Preferences.setUI("ProxyPort/Ftp",
+            self.ftpProxyPortSpin.value())
     
     @pyqtSlot()
     def on_downloadDirButton_clicked(self):

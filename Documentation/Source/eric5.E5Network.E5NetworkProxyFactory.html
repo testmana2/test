@@ -37,7 +37,13 @@ Module implementing a network proxy factory.
 </table>
 <h3>Functions</h3>
 <table>
-<tr><td>None</td></tr>
+<tr>
+<td><a href="#proxyAuthenticationRequired">proxyAuthenticationRequired</a></td>
+<td>Module slot to handle a proxy authentication request.</td>
+</tr><tr>
+<td><a href="#schemeFromProxyType">schemeFromProxyType</a></td>
+<td>Module function to determine the scheme name from the proxy type.</td>
+</tr>
 </table>
 <hr /><hr />
 <a NAME="E5NetworkProxyFactory" ID="E5NetworkProxyFactory"></a>
@@ -80,6 +86,40 @@ reference to the query object (QNetworkProxyQuery)
 <dt>Returns:</dt>
 <dd>
 list of proxies in order of preference (list of QNetworkProxy)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="proxyAuthenticationRequired" ID="proxyAuthenticationRequired"></a>
+<h2>proxyAuthenticationRequired</h2>
+<b>proxyAuthenticationRequired</b>(<i>proxy, auth</i>)
+<p>
+    Module slot to handle a proxy authentication request.
+</p><dl>
+<dt><i>proxy</i></dt>
+<dd>
+reference to the proxy object (QNetworkProxy)
+</dd><dt><i>auth</i></dt>
+<dd>
+reference to the authenticator object (QAuthenticator)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="schemeFromProxyType" ID="schemeFromProxyType"></a>
+<h2>schemeFromProxyType</h2>
+<b>schemeFromProxyType</b>(<i>proxyType</i>)
+<p>
+    Module function to determine the scheme name from the proxy type.
+</p><dl>
+<dt><i>proxyType</i></dt>
+<dd>
+type of the proxy (QNetworkProxy.ProxyType)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+scheme (string, one of Http, Https, Ftp)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
