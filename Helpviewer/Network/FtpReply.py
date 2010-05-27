@@ -9,7 +9,8 @@ Module implementing a network reply class for FTP resources.
 
 from PyQt4.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer
 from PyQt4.QtGui import QPixmap
-from PyQt4.QtNetwork import QFtp, QNetworkReply, QNetworkRequest, QUrlInfo
+from PyQt4.QtNetwork import QFtp, QNetworkReply, QNetworkRequest, QUrlInfo, \
+    QNetworkProxyQuery, QNetworkProxy
 from PyQt4.QtWebKit import QWebSettings
 
 import UI.PixmapCache
@@ -113,8 +114,34 @@ class FtpReply(QNetworkReply):
         self.__content = QByteArray()
         self.__units = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]
         
+        if url.path() == "":
+            url.setPath("/")
         self.setUrl(url)
+        # do proxy setup
+        query = QNetworkProxyQuery(url)
+        proxyList = parent.proxyFactory().queryProxy(query)
+        ftpProxy = QNetworkProxy()
+        for proxy in proxyList:
+            if proxy.type() == QNetworkProxy.NoProxy or \
+               proxy.type() == QNetworkProxy.FtpCachingProxy:
+                ftpProxy = proxy
+                break
+        if ftpProxy.type() == QNetworkProxy.DefaultProxy:
+            self.setError(QNetworkReply.ProxyNotFoundError, 
+                          self.trUtf8("No suitable proxy found."))
+            QTimer.singleShot(0, self.__errorSignals)
+            return
+        elif ftpProxy.type() == QNetworkProxy.FtpCachingProxy:
+            self.__ftp.setProxy(ftpProxy.hostName(), ftpProxy.port())
+        
         QTimer.singleShot(0, self.__connectToHost)
+    
+    def __errorSignals(self):
+        """
+        Private slot to send signal for errors during initialisation.
+        """
+        self.error.emit(QNetworkReply.ProxyNotFoundError)
+        self.finished.emit()
     
     def abort(self):
         """
