@@ -1777,7 +1777,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/Browser.py" line="208"/>
         <source>Refresh directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar directorio</translation>
     </message>
 </context>
 <context>
@@ -5307,32 +5307,32 @@ Not connected
         <translation>Parar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="146"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="145"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="360"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="385"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="384"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="388"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="387"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="391"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="390"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="128"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
         <source>Downloading</source>
         <translation>Descargando</translation>
     </message>
@@ -5342,52 +5342,52 @@ Not connected
         <translation>Descarga de Eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="128"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Está a punto de descargar el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;¿Qué desea hacer?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="157"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="156"/>
         <source>Download canceled: {0}</source>
         <translation>Descarga cancelada: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="270"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="269"/>
         <source>Error opening save file: {0}</source>
         <translation>Error al abrir el fichero a guardar: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="277"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="276"/>
         <source>Error saving: {0}</source>
         <translation>Error al guardar: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="294"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="293"/>
         <source>Network Error: {0}</source>
         <translation>Error de Red: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="350"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="349"/>
         <source>- {0}:{1:02} minutes remaining</source>
         <translation>-{0}:{1:02} minutos restantes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="357"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="356"/>
         <source>- {0} seconds remaining</source>
         <translation>- {0} seconds restantes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="358"/>
         <source>{0} of {1} ({2}/sec) {3}</source>
         <translation>{0} de {1} ({2}/segundo) {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="368"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="367"/>
         <source>{0} downloaded</source>
         <translation>{0} descargado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="371"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="370"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} de {1} - Parado</translation>
     </message>
@@ -5521,14 +5521,14 @@ selección completa.&lt;/li&gt;
 <context>
     <name>E5NetworkProxyFactory</name>
     <message>
-        <location filename="E5Network/E5NetworkProxyFactory.py" line="40"/>
+        <location filename="E5Network/E5NetworkProxyFactory.py" line="66"/>
         <source>Proxy Configuration Error</source>
-        <translation type="unfinished"></translation>
+        <translation> Error de Configuración de Proxy</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkProxyFactory.py" line="40"/>
+        <location filename="E5Network/E5NetworkProxyFactory.py" line="66"/>
         <source>Proxy usage was activated but no proxy host configured.</source>
-        <translation type="unfinished">Se ha activado el uso de proxy  pero no hay configurado ningún host proxy.</translation>
+        <translation>Se ha activado el uso de proxy  pero no hay configurado ningún host proxy.</translation>
     </message>
 </context>
 <context>
@@ -7793,17 +7793,17 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="64"/>
         <source>Family and Size only</source>
-        <translation type="unfinished"></translation>
+        <translation>Familia y Tamaño solamente</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="66"/>
         <source>Family only</source>
-        <translation type="unfinished"></translation>
+        <translation>Familia solamente</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="68"/>
         <source>Size only</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño solamente</translation>
     </message>
 </context>
 <context>
@@ -8928,22 +8928,22 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="944"/>
         <source>Zoom</source>
-        <translation type="unfinished">Zoom</translation>
+        <translation>Zoom</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="950"/>
         <source>Initial zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor de zoom inicial:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
         <source>Move to set the initial zoom factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover para establecer el factor de zoom inicial</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="982"/>
         <source>Displays the selected initial zoom factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra el factor de zoom inicial seleccionado</translation>
     </message>
 </context>
 <context>
@@ -9371,16 +9371,6 @@ selección completa.&lt;/li&gt;
         <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="91"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>Introduzca extensiones de códigos fuente adicionales separados por comas</translation>
-    </message>
-    <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="117"/>
-        <source>Select to generate API files for QScintilla prior to 1.7</source>
-        <translation type="obsolete">Seleccione para generar archivos de API para QScintilla anterior a 1.7</translation>
-    </message>
-    <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="120"/>
-        <source>Generate old style API files</source>
-        <translation type="obsolete">Generar archivos de API de estilo antiguo</translation>
     </message>
     <message>
         <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="118"/>
@@ -11103,17 +11093,17 @@ selección completa.&lt;/li&gt;
         <translation>Inspector Web...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Compruebe que la dirección no tenga errores como &lt;b&gt;ww&lt;/b&gt;.ejemplo.org en lugar de &lt;b&gt;www&lt;/b&gt;.ejemplo.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Si la dirección es correcta, intente comprobar la conexión de red.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Si el ordenador o la red están protegidos por un firewall o un proxy, asegúrese de que al navegador se le permite acceder a la red.</translation>
     </message>
@@ -11188,12 +11178,12 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;No se pudo ejecutar una aplicación para la URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="945"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="947"/>
         <source>Error loading page: {0}</source>
         <translation>Error al cargar la página: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>When connecting to: {0}.</source>
         <translation>Al conectar con: {0}.</translation>
     </message>
@@ -11853,27 +11843,27 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="216"/>
         <source>Error loading page: {0}</source>
-        <translation type="unfinished">Error al cargar la página: {0}</translation>
+        <translation>Error al cargar la página: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
         <source>When connecting to: {0}.</source>
-        <translation type="unfinished">Al conectar con: {0}.</translation>
+        <translation>Al conectar con: {0}.</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
-        <translation type="unfinished">Compruebe que la dirección no tenga errores como &lt;b&gt;ww&lt;/b&gt;.ejemplo.org en lugar de &lt;b&gt;www&lt;/b&gt;.ejemplo.org</translation>
+        <translation>Compruebe que la dirección no tenga errores como &lt;b&gt;ww&lt;/b&gt;.ejemplo.org en lugar de &lt;b&gt;www&lt;/b&gt;.ejemplo.org</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
         <source>If the address is correct, try checking the network connection.</source>
-        <translation type="unfinished">Si la dirección es correcta, intente comprobar la conexión de red.</translation>
+        <translation>Si la dirección es correcta, intente comprobar la conexión de red.</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
-        <translation type="unfinished">Si el ordenador o la red están protegidos por un firewall o un proxy, asegúrese de que al navegador se le permite acceder a la red.</translation>
+        <translation>Si el ordenador o la red están protegidos por un firewall o un proxy, asegúrese de que al navegador se le permite acceder a la red.</translation>
     </message>
 </context>
 <context>
@@ -13286,7 +13276,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2241"/>
         <source>Failed to load</source>
-        <translation type="unfinished"></translation>
+        <translation>Ha fallado la carga</translation>
     </message>
 </context>
 <context>
@@ -14205,12 +14195,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <translation>Seleccione el campo de filtrado</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="928"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="929"/>
         <source>Revision</source>
         <translation>Revisión</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="925"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="926"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
@@ -14272,12 +14262,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="278"/>
         <source>Press to compare two revisions</source>
-        <translation type="unfinished">Pulse para comparar dos revisiones</translation>
+        <translation>Pulse para comparar dos revisiones</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="281"/>
         <source>&amp;Compare Revisions</source>
-        <translation type="unfinished">&amp;Comparar Revisiones</translation>
+        <translation>&amp;Comparar Revisiones</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="309"/>
@@ -14345,12 +14335,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <translation>Modificado</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="533"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="534"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="533"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="534"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
@@ -20747,16 +20737,6 @@ Do you want to save your changes?</source>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="153"/>
-        <source>Web Browser</source>
-        <translation type="obsolete">Navegador Web</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="153"/>
-        <source>Proxy usage was activated but no proxy host configured.</source>
-        <translation type="obsolete">Se ha activado el uso de proxy  pero no hay configurado ningún host proxy.</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="226"/>
         <source>SSL Errors</source>
         <translation>Errores de SSL</translation>
@@ -20927,27 +20907,27 @@ Do you want to save your changes?</source>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="90"/>
         <source>Select to use the system proxy configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar la configuración de proxy de sistema</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="93"/>
         <source>Use system proxy configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar configuración de proxy de sistema</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="100"/>
         <source>Select to use an application specific proxy configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar una configuración de proxy específica de aplicación</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="103"/>
         <source>Manual proxy configuration:</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuración manual de proxy:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="110"/>
         <source>Manual proxy settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes manuales de proxy</translation>
     </message>
 </context>
 <context>
@@ -21940,27 +21920,22 @@ Seleccione Actualizar.</translation>
         <translation>Error al descargar el fichero</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="339"/>
-        <source>Proxy usage was activated but no proxy host configured.</source>
-        <translation type="obsolete">Se ha activado el uso de proxy  pero no hay configurado ningún host proxy.</translation>
-    </message>
-    <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="435"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="436"/>
         <source>Stable</source>
         <translation>Estable</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="441"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="442"/>
         <source>Unstable</source>
         <translation>Inestable</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="447"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="448"/>
         <source>Unknown</source>
         <translation>Desconocido</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="520"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="521"/>
         <source>SSL Errors</source>
         <translation>Errores SSL</translation>
     </message>
@@ -21980,12 +21955,12 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;No se pudo descargar el archivo solicitado desde {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="497"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="498"/>
         <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
         <translation>&lt;b&gt;Conectar al proxy &apos;{0}&apos; utilizando:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="520"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="521"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Errores SSL:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;¿Desea ignorar estos errores?&lt;/p&gt;</translation>
     </message>
@@ -21993,17 +21968,17 @@ Seleccione Actualizar.</translation>
 <context>
     <name>PluginRepositoryWindow</name>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="616"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="617"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="616"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="617"/>
         <source>OK</source>
         <translation>Aceptar</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="616"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="617"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar el proceso.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -25098,32 +25073,32 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="217"/>
         <source>End of &amp;Line Character:</source>
-        <translation type="unfinished"></translation>
+        <translation>Carácter de Fin de &amp;Línea:</translation>
     </message>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="227"/>
         <source>Select the end of line character to be used by the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el carácter de fin de línea a utilizar en este proyecto</translation>
     </message>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="231"/>
         <source>System</source>
-        <translation type="unfinished">Sistema</translation>
+        <translation>Sistema</translation>
     </message>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="236"/>
         <source>Unix</source>
-        <translation type="unfinished">Unix</translation>
+        <translation>Unix</translation>
     </message>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="241"/>
         <source>Macintosh</source>
-        <translation type="unfinished">Macintosh</translation>
+        <translation>Macintosh</translation>
     </message>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="246"/>
         <source>Windows/DOS</source>
-        <translation type="unfinished">Windows/DOS</translation>
+        <translation>Windows/DOS</translation>
     </message>
 </context>
 <context>
@@ -36858,16 +36833,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4062"/>
-        <source>Open Browser</source>
-        <translation type="obsolete">Abrir navegador</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="4062"/>
-        <source>Could not start a web browser</source>
-        <translation type="obsolete">No se ha podido ejecutar el navegador</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="4083"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>No hay visor personalizado seleccionado actualmente. Por favor, especifique uno en el diálogo de preferencias.</translation>
@@ -36911,11 +36876,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="UI/UserInterface.py" line="5487"/>
         <source>Error during updates check</source>
         <translation>Error durante la verificación de actualización</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="5356"/>
-        <source>Proxy usage was activated but no proxy host configured.</source>
-        <translation type="obsolete">Se ha activado el uso de proxy  pero no hay configurado ningún host proxy.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="5359"/>
