@@ -363,10 +363,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                                                 self.replaceHistory[:30])
         
         if self.dirButton.isChecked():
-            dir = self.dirCombo.currentText()
-            if dir in self.dirHistory:
-                self.dirHistory.remove(dir)
-            self.dirHistory.insert(0, dir)
+            searchDir = self.dirCombo.currentText()
+            if searchDir in self.dirHistory:
+                self.dirHistory.remove(searchDir)
+            self.dirHistory.insert(0, searchDir)
             self.dirCombo.clear()
             self.dirCombo.addItems(self.dirHistory)
             Preferences.Prefs.settings.setValue("FindFileDialog/DirectoryHistory", 
