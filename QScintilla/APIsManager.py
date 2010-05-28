@@ -7,11 +7,14 @@
 Module implementing the APIsManager.
 """
 
+import os
+
 from PyQt4.QtCore import *
 from PyQt4.Qsci import QsciAPIs
 
 from . import Lexers
 import Preferences
+import Utilities
 
 class APIs(QObject):
     """
@@ -160,6 +163,19 @@ class APIs(QObject):
         @return list of installed API files (list of strings)
         """
         if self.__apis is not None:
+            if Utilities.isWindowsPlatform():
+                from PyQt4 import pyqtconfig
+                qsciPath = os.path.join(pyqtconfig._pkg_config["pyqt_mod_dir"], "qsci")
+                if os.path.exists(qsciPath):
+                    # it's the installer
+                    apidir = os.path.join(qsciPath, "api", self.__lexer.lexer())
+                    fnames = []
+                    filist = QDir(apidir).entryInfoList(["*.api"], QDir.Files, 
+                                                        QDir.IgnoreCase)
+                    for fi in filist:
+                        fnames.append(fi.absoluteFilePath())
+                    return fnames
+            
             return self.__apis.installedAPIFiles()
         else:
             return []
