@@ -490,6 +490,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.cancelled = False
         self.errors.clear()
         
+        self.inputGroup.setEnabled(True)
         self.inputGroup.show()
         
         args = []
