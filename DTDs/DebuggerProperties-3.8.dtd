@@ -1,0 +1,41 @@
+<!-- This is the DTD for eric3's project session file version 3.8 -->
+
+<!ELEMENT   Interpreter         (#PCDATA)>
+
+<!ELEMENT   DebugClient         (#PCDATA)>
+
+<!ELEMENT   Environment         (#PCDATA)>
+<!ATTLIST   Environment
+    override        CDATA   #REQUIRED>
+
+<!ELEMENT   RemoteHost          (#PCDATA)>
+<!ELEMENT   RemoteCommand       (#PCDATA)>
+<!ELEMENT   RemoteDebugger      (RemoteHost,
+                                 RemoteCommand)>
+<!ATTLIST   RemoteDebugger
+    on              CDATA   #REQUIRED>
+
+<!ELEMENT   RemotePath          (#PCDATA)>
+<!ELEMENT   LocalPath           (#PCDATA)>
+<!ELEMENT   PathTranslation     (RemotePath,
+                                 LocalPath)>
+<!ATTLIST   PathTranslation
+    on              CDATA   #REQUIRED>
+
+<!ELEMENT   ConsoleDebugger     (#PCDATA)>
+<!ATTLIST   ConsoleDebugger
+    on              CDATA   #REQUIRED>
+
+<!ELEMENT   Redirect            EMPTY>
+<!ATTLIST   Redirect
+    on              CDATA   #REQUIRED>
+
+<!ELEMENT   DebuggerProperties  (Interpreter,
+                                 DebugClient,
+                                 Environment,
+                                 RemoteDebugger,
+                                 PathTranslation,
+                                 ConsoleDebugger,
+                                 Redirect)>
+<!ATTLIST   DebuggerProperties
+    version         CDATA   #REQUIRED>
