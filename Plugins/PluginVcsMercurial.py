@@ -146,7 +146,9 @@ class VcsMercurialPlugin(object):
             "UseLogBrowser"  : True, 
             "LogLimit"       : 100, 
             "CommitMessages" : 20, 
-            "PullUpdate"     : False, 
+            "PullUpdate"     : False,
+            "ServerPort"     : 8000, 
+            "ServerStyle"    : "", 
         }
         
         from VcsPlugins.vcsMercurial.ProjectHelper import HgProjectHelper
@@ -193,7 +195,7 @@ class VcsMercurialPlugin(object):
         if key in ["StopLogOnCopy", "UseLogBrowser", "PullUpdate"]:
             return Preferences.toBool(Preferences.Prefs.settings.value(
                 "Mercurial/" + key, self.__mercurialDefaults[key]))
-        elif key in ["LogLimit", "CommitMessages"]:
+        elif key in ["LogLimit", "CommitMessages", "ServerPort"]:
             return int(Preferences.Prefs.settings.value("Mercurial/" + key,
                 self.__mercurialDefaults[key]))
         elif key in ["Commits"]:

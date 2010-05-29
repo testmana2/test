@@ -802,6 +802,7 @@
     <Source>E5Network/E5NetworkProxyFactory.py</Source>
     <Source>Helpviewer/Network/FtpAccessHandler.py</Source>
     <Source>Helpviewer/Network/FtpReply.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1113,6 +1114,8 @@
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialog.style</Other>
     <Other>.hgignore</Other>
     <Other>patches</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/icons/startServer.png</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/icons/stopServer.png</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

@@ -40,6 +40,7 @@ from .HgTagBranchListDialog import HgTagBranchListDialog
 from .HgCommandDialog import HgCommandDialog
 from .HgBundleDialog import HgBundleDialog
 from .HgBackoutDialog import HgBackoutDialog
+from .HgServeDialog import HgServeDialog
 
 from .ProjectBrowserHelper import HgProjectBrowserHelper
 
@@ -104,6 +105,7 @@ class Hg(VersionControl):
         self.tagbranchList = None
         self.annotate = None
         self.editor = None
+        self.serveDlg = None
         self.bundleFile = None
         
         self.statusCache = {}
@@ -135,6 +137,8 @@ class Hg(VersionControl):
             self.tagbranchList.close()
         if self.annotate is not None:
             self.annotate.close()
+        if self.serveDlg is not None:
+            self.serveDlg.close()
         
         if self.bundleFile and os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
@@ -1974,6 +1978,24 @@ class Hg(VersionControl):
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
+    
+    def hgServe(self, name):
+        """
+        Public method used to edit the repository config file.
+        
+        @param name directory name (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        self.serveDlg = HgServeDialog(self, repodir)
+        self.serveDlg.show()
     
     ############################################################################
     ## Methods to get the helper objects are below.

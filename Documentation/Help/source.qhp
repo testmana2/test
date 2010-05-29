@@ -342,6 +342,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html" />
@@ -7854,6 +7855,7 @@
       <keyword name="Hg.hgPush" id="Hg.hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPush" />
       <keyword name="Hg.hgRecover" id="Hg.hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRecover" />
       <keyword name="Hg.hgResolve" id="Hg.hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgResolve" />
+      <keyword name="Hg.hgServe" id="Hg.hgServe" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgServe" />
       <keyword name="Hg.hgShowBranch" id="Hg.hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowBranch" />
       <keyword name="Hg.hgShowConfig" id="Hg.hgShowConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowConfig" />
       <keyword name="Hg.hgShowPaths" id="Hg.hgShowPaths" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowPaths" />
@@ -7890,6 +7892,17 @@
       <keyword name="Hg.vcsSwitch" id="Hg.vcsSwitch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsSwitch" />
       <keyword name="Hg.vcsTag" id="Hg.vcsTag" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsTag" />
       <keyword name="Hg.vcsUpdate" id="Hg.vcsUpdate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsUpdate" />
+      <keyword name="HgServeDialog (Module)" id="HgServeDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html" />
+      <keyword name="HgServeDialog" id="HgServeDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog" />
+      <keyword name="HgServeDialog (Constructor)" id="HgServeDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__init__" />
+      <keyword name="HgServeDialog.__appendText" id="HgServeDialog.__appendText" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__appendText" />
+      <keyword name="HgServeDialog.__procFinished" id="HgServeDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__procFinished" />
+      <keyword name="HgServeDialog.__readStderr" id="HgServeDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__readStderr" />
+      <keyword name="HgServeDialog.__readStdout" id="HgServeDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__readStdout" />
+      <keyword name="HgServeDialog.__startBrowser" id="HgServeDialog.__startBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__startBrowser" />
+      <keyword name="HgServeDialog.__startServer" id="HgServeDialog.__startServer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__startServer" />
+      <keyword name="HgServeDialog.__stopServer" id="HgServeDialog.__stopServer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.__stopServer" />
+      <keyword name="HgServeDialog.closeEvent" id="HgServeDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html#HgServeDialog.closeEvent" />
       <keyword name="HgTagDialog (Module)" id="HgTagDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html" />
       <keyword name="HgTagDialog" id="HgTagDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html#HgTagDialog" />
       <keyword name="HgTagDialog (Constructor)" id="HgTagDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html#HgTagDialog.__init__" />
@@ -7941,6 +7954,7 @@
       <keyword name="HgProjectHelper.__hgPushForced" id="HgProjectHelper.__hgPushForced" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPushForced" />
       <keyword name="HgProjectHelper.__hgRecover" id="HgProjectHelper.__hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRecover" />
       <keyword name="HgProjectHelper.__hgResolve" id="HgProjectHelper.__hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgResolve" />
+      <keyword name="HgProjectHelper.__hgServe" id="HgProjectHelper.__hgServe" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgServe" />
       <keyword name="HgProjectHelper.__hgShowBranch" id="HgProjectHelper.__hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowBranch" />
       <keyword name="HgProjectHelper.__hgShowConfig" id="HgProjectHelper.__hgShowConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowConfig" />
       <keyword name="HgProjectHelper.__hgShowPaths" id="HgProjectHelper.__hgShowPaths" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowPaths" />
@@ -9877,6 +9891,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html</file>

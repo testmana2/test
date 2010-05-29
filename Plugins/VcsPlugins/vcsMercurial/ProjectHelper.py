@@ -731,6 +731,19 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.connect(self.hgBackoutAct, SIGNAL('triggered()'), self.__hgBackout)
         self.actions.append(self.hgBackoutAct)
+        
+        self.hgServeAct = E5Action(self.trUtf8('Serve project repository'),
+                self.trUtf8('Serve project repository...'),
+                0, 0, self, 'mercurial_serve')
+        self.hgServeAct.setStatusTip(self.trUtf8(
+            'Serve the project repository'
+        ))
+        self.hgServeAct.setWhatsThis(self.trUtf8(
+            """<b>Serve project repository</b>"""
+            """<p>This serves the project repository.</p>"""
+        ))
+        self.connect(self.hgServeAct, SIGNAL('triggered()'), self.__hgServe)
+        self.actions.append(self.hgServeAct)
     
     def initMenu(self, menu):
         """
@@ -762,6 +775,8 @@ class HgProjectHelper(VcsProjectHelper):
         
         specialsMenu = QMenu(self.trUtf8("Specials"), menu)
         specialsMenu.addAction(self.hgPushForcedAct)
+        specialsMenu.addSeparator()
+        specialsMenu.addAction(self.hgServeAct)
         
         bundleMenu = QMenu(self.trUtf8("Changegroup Management"), menu)
         bundleMenu.addAction(self.hgBundleAct)
@@ -1042,3 +1057,9 @@ class HgProjectHelper(VcsProjectHelper):
         Protected slot used to back out changes of a changeset.
         """
         self.vcs.hgBackout(self.project.ppath)
+    
+    def __hgServe(self):
+        """
+        Protected slot used to serve the project.
+        """
+        self.vcs.hgServe(self.project.ppath)
