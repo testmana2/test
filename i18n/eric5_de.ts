@@ -16089,49 +16089,54 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
 <context>
     <name>HgServeDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="41"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="43"/>
         <source>Start Server</source>
         <translation>Server starten</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="46"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="48"/>
         <source>Stop Server</source>
         <translation>Server anhalten</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="51"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="53"/>
         <source>Start Browser</source>
         <translation>Browser starten</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="59"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="61"/>
         <source>Enter the server port</source>
         <translation>Gib den Serverport ein</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="64"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="66"/>
         <source>Select the style to use</source>
         <translation>Wähle den Stil aus</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="68"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="70"/>
         <source>Server</source>
         <translation>Server</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="75"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="77"/>
         <source>Browser</source>
         <translation>Browser</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="129"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="131"/>
         <source>Process Generation Error</source>
         <translation>Fehler beim Prozessstart</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="129"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="131"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Der Prozess {0} konnte nicht gestartet werden. Stellen Sie sicher, dass er sich im Suchpfad befindet.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="41"/>
+        <source>Mercurial Server</source>
+        <translation>Mercurial Server</translation>
     </message>
 </context>
 <context>

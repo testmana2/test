@@ -38,6 +38,8 @@ class HgServeDialog(QMainWindow):
         
         self.__styles = ["paper", "coal", "gitweb", "monoblue", "spartan", ]
         
+        self.setWindowTitle(self.trUtf8("Mercurial Server"))
+        
         self.__startAct = QAction(
             UI.PixmapCache.getIcon(
                 os.path.join("VcsPlugins", "vcsMercurial", "icons", "startServer.png")), 
