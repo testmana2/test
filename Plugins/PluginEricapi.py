@@ -55,7 +55,7 @@ def exeDisplayData():
         "exe"               : exe, 
         "versionCommand"    : '--version', 
         "versionStartsWith" : 'eric5-', 
-        "versionPosition"   : -2, 
+        "versionPosition"   : -3, 
         "version"           : "", 
         "versionCleanup"    : None, 
     }

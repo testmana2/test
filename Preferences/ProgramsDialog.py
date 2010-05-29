@@ -138,11 +138,11 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         # 5a. Translation Previewer
         self.__createProgramEntry(self.trUtf8("Eric5 Translation Previewer"), 
             Utilities.isWindowsPlatform() and "eric5-trpreviewer.bat" or "eric5-trpreviewer", 
-            '--version', 'Eric5', -2)
+            '--version', 'Eric5', -3)
         # 5b. Forms Previewer
         self.__createProgramEntry(self.trUtf8("Eric5 Forms Previewer"), 
             Utilities.isWindowsPlatform() and "eric5-uipreviewer.bat" or "eric5-uipreviewer", 
-            '--version', 'Eric5', -2)
+            '--version', 'Eric5', -3)
         
         # 6. do the CORBA programs
         # 6a. omniORB
