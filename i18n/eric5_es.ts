@@ -16089,49 +16089,54 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>HgServeDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="41"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="43"/>
         <source>Start Server</source>
         <translation type="unfinished">Iniciar servidor</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="46"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="48"/>
         <source>Stop Server</source>
         <translation type="unfinished">Detener servidor</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="51"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="53"/>
         <source>Start Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="59"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="61"/>
         <source>Enter the server port</source>
         <translation type="unfinished">Introducir el puerto del servidor</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="64"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="66"/>
         <source>Select the style to use</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="68"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="70"/>
         <source>Server</source>
         <translation type="unfinished">Servidor</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="75"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="77"/>
         <source>Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="129"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="131"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="129"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="131"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished">El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="41"/>
+        <source>Mercurial Server</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
