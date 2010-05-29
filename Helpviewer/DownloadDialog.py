@@ -139,7 +139,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
             
             self.__autoOpen = res == QMessageBox.Open
             fileName = QDesktopServices.storageLocation(QDesktopServices.TempLocation) + \
-                        '/' + fileName
+                        '/' + QFileInfo(fileName).completeBaseName()
         
         if not self.__autoOpen and self.__requestFilename:
             fileName = QFileDialog.getSaveFileName(
