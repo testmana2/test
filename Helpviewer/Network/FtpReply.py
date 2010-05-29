@@ -10,7 +10,7 @@ Module implementing a network reply class for FTP resources.
 from PyQt4.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer
 from PyQt4.QtGui import QPixmap
 from PyQt4.QtNetwork import QFtp, QNetworkReply, QNetworkRequest, QUrlInfo, \
-    QNetworkProxyQuery, QNetworkProxy
+    QNetworkProxyQuery, QNetworkProxy, QAuthenticator
 from PyQt4.QtWebKit import QWebSettings
 
 import UI.PixmapCache
@@ -102,6 +102,8 @@ class FtpReply(QNetworkReply):
         @param parent reference to the parent object (QObject)
         """
         QNetworkReply.__init__(self, parent)
+        
+        self.__manager = parent
         
         self.__ftp = QFtp(self)
         self.__ftp.listInfo.connect(self.__processListInfo)
@@ -203,19 +205,35 @@ class FtpReply(QNetworkReply):
         @param error flag indicating an error condition (boolean)
         """
         if error:
-            if error == QFtp.HostNotFound:
+            if self.__ftp.error() == QFtp.HostNotFound:
                 err = QNetworkReply.HostNotFoundError
-            elif error == QFtp.ConnectionRefused:
+            elif self.__ftp.error() == QFtp.ConnectionRefused:
                 err = QNetworkReply.ConnectionRefusedError
             else:
-                err = QNetworkReply.ContentNotFoundError
+                if self.__ftp.state() != QFtp.LoggedIn and \
+                   self.__ftp.state() == QFtp.Connected:
+                    # authentication is required
+                    newUrl = self.url()
+                    auth = QAuthenticator()
+                    self.__manager.authenticationRequired.emit(self, auth)
+                    if not auth.isNull():
+                        newUrl.setUserName(auth.user())
+                        newUrl.setPassword(auth.password())
+                        self.setUrl(newUrl)
+                        self.__ftp.login(auth.user(), auth.password())
+                        return
+                
+                err = QNetworkReply.ProtocolFailure
             self.setError(err, self.__ftp.errorString())
             self.error.emit(err)
+            self.finished.emit()
+            if self.__ftp.state() != QFtp.Unconnected:
+                self.__ftp.close()
             return
         
         cmd = self.__ftp.currentCommand()
         if cmd == QFtp.ConnectToHost:
-            self.__ftp.login()
+            self.__ftp.login(self.url().userName(), self.url().password())
         elif cmd == QFtp.Login:
             self.__ftp.list(self.url().path())
         elif cmd == QFtp.List:
