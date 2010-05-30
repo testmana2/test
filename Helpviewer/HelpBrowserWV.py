@@ -901,7 +901,7 @@ class HelpBrowser(QWebView):
         
         req = QNetworkRequest(url)
         reply = self.mw.networkAccessManager().get(req)
-        self.__unsupportedContent(reply, True)
+        self.__unsupportedContent(reply, True, True)
     
     def __unsupportedContent(self, reply, requestFilename = None, download = False):
         """
