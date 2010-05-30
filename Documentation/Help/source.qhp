@@ -8090,6 +8090,7 @@
       <keyword name="HgLogBrowserDialog.closeEvent" id="HgLogBrowserDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.closeEvent" />
       <keyword name="HgLogBrowserDialog.col2x" id="HgLogBrowserDialog.col2x" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.col2x" />
       <keyword name="HgLogBrowserDialog.keyPressEvent" id="HgLogBrowserDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.keyPressEvent" />
+      <keyword name="HgLogBrowserDialog.on_branchCombo_activated" id="HgLogBrowserDialog.on_branchCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_branchCombo_activated" />
       <keyword name="HgLogBrowserDialog.on_buttonBox_clicked" id="HgLogBrowserDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_buttonBox_clicked" />
       <keyword name="HgLogBrowserDialog.on_clearRxEditButton_clicked" id="HgLogBrowserDialog.on_clearRxEditButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_clearRxEditButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_diffP1Button_clicked" id="HgLogBrowserDialog.on_diffP1Button_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_diffP1Button_clicked" />

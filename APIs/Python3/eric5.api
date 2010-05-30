@@ -2875,6 +2875,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.Tags
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.closeEvent?4(e)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.col2x?4(radius)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.keyPressEvent?4(evt)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_branchCombo_activated?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_clearRxEditButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_diffP1Button_clicked?4()

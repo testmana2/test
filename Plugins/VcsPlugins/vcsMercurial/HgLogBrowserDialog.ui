@@ -18,7 +18,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
@@ -50,6 +50,49 @@
        </property>
        <property name="calendarPopup">
         <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Branch:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="branchCombo">
+       <property name="toolTip">
+        <string>Select the branch to filter on</string>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QComboBox::AdjustToContents</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_3">
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
        </property>
       </widget>
      </item>
@@ -247,6 +290,12 @@
      </item>
      <item>
       <widget class="Line" name="line">
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -401,6 +450,7 @@
  <tabstops>
   <tabstop>fromDate</tabstop>
   <tabstop>toDate</tabstop>
+  <tabstop>branchCombo</tabstop>
   <tabstop>fieldCombo</tabstop>
   <tabstop>rxEdit</tabstop>
   <tabstop>clearRxEditButton</tabstop>
@@ -414,8 +464,8 @@
   <tabstop>diffP2Button</tabstop>
   <tabstop>diffRevisionsButton</tabstop>
   <tabstop>input</tabstop>
-  <tabstop>sendButton</tabstop>
   <tabstop>passwordCheckBox</tabstop>
+  <tabstop>sendButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

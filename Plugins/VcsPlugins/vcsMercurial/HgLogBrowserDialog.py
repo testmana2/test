@@ -112,6 +112,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__rowHeight = 20
         
         self.__branchColors = {}
+        self.__allBranchesFilter = self.trUtf8("All")
         
         self.logTree.setIconSize(QSize(100 * self.__rowHeight, self.__rowHeight))
         
@@ -702,6 +703,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.nextButton.setEnabled(False)
             self.limitSpinBox.setEnabled(False)
         
+        # update the log filters
         self.__filterLogsEnabled = False
         self.fromDate.setMinimumDate(self.__minDate)
         self.fromDate.setMaximumDate(self.__maxDate)
@@ -709,6 +711,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.toDate.setMinimumDate(self.__minDate)
         self.toDate.setMaximumDate(self.__maxDate)
         self.toDate.setDate(self.__maxDate)
+        
+        branchFilter = self.branchCombo.currentText()
+        if not branchFilter:
+            branchFilter = self.__allBranchesFilter
+        self.branchCombo.clear()
+        self.branchCombo.addItems(
+            [self.__allBranchesFilter] + sorted(self.__branchColors.keys()))
+        self.branchCombo.setCurrentIndex(self.branchCombo.findText(branchFilter))
+        
         self.__filterLogsEnabled = True
         self.__filterLogs()
     
@@ -898,6 +909,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__filterLogs()
     
     @pyqtSlot(str)
+    def on_branchCombo_activated(self, txt):
+        """
+        Private slot called, when a new branch is selected.
+        
+        @param txt text of the selected branch (string)
+        """
+        self.__filterLogs()
+    
+    @pyqtSlot(str)
     def on_fieldCombo_activated(self, txt):
         """
         Private slot called, when a new filter field is selected.
@@ -922,6 +942,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if self.__filterLogsEnabled:
             from_ = self.fromDate.date().toString("yyyy-MM-dd")
             to_ = self.toDate.date().addDays(1).toString("yyyy-MM-dd")
+            branch = self.branchCombo.currentText()
+            
             txt = self.fieldCombo.currentText()
             if txt == self.trUtf8("Author"):
                 fieldIndex = self.AuthorColumn
@@ -942,6 +964,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 topItem = self.logTree.topLevelItem(topIndex)
                 if topItem.text(self.DateColumn) <= to_ and \
                    topItem.text(self.DateColumn) >= from_ and \
+                   (branch == self.__allBranchesFilter or \
+                    topItem.text(self.BranchColumn) == branch) and \
                    searchRx.indexIn(topItem.text(fieldIndex)) > -1:
                     topItem.setHidden(False)
                     if topItem is currentItem:
