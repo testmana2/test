@@ -1598,7 +1598,6 @@ class HelpWindow(QMainWindow):
         @param frame reference to the frame to be printed (QWebFrame)
         """
         printer = QPrinter(mode = QPrinter.HighResolution)
-        printer.setFullPage(1)
         if Preferences.getPrinter("ColorMode"):
             printer.setColorMode(QPrinter.Color)
         else:
@@ -1632,7 +1631,6 @@ class HelpWindow(QMainWindow):
             browser = self.currentBrowser()
         
         printer = QPrinter(mode = QPrinter.HighResolution)
-        printer.setFullPage(1)
         if Preferences.getPrinter("ColorMode"):
             printer.setColorMode(QPrinter.Color)
         else:

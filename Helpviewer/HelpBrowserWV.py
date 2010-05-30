@@ -924,7 +924,6 @@ class HelpBrowser(QWebView):
         if reply.error() == QNetworkReply.NoError:
             if reply.url().isEmpty():
                 return
-            parent = QUrl(reply.url().toString().rsplit("/", 1)[0] + "/")
             size = reply.header(QNetworkRequest.ContentLengthHeader)
             if size == 0:
                 return
@@ -936,7 +935,7 @@ class HelpBrowser(QWebView):
                 self.connect(dlg, SIGNAL("done()"), self.__downloadDone)
                 self.__downloadWindows.append(dlg)
                 dlg.show()
-            self.setUrl(parent)
+            self.setUrl(self.url())
         else:
             replyUrl = reply.url()
             if replyUrl.isEmpty():

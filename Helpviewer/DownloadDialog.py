@@ -301,7 +301,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         Private slot to handle a change of the meta data.
         """
         locationHeader = self.__reply.header(QNetworkRequest.LocationHeader)
-        if locationHeader.isValid():
+        if locationHeader:
             self.__url = locationHeader
             self.__reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(
                            QNetworkRequest(self.__url))
