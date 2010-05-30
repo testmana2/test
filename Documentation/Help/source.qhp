@@ -2832,6 +2832,8 @@
       <keyword name="HelpWindow.__pathSelected" id="HelpWindow.__pathSelected" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__pathSelected" />
       <keyword name="HelpWindow.__prevTab" id="HelpWindow.__prevTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__prevTab" />
       <keyword name="HelpWindow.__printFile" id="HelpWindow.__printFile" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printFile" />
+      <keyword name="HelpWindow.__printFilePdf" id="HelpWindow.__printFilePdf" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printFilePdf" />
+      <keyword name="HelpWindow.__printPdfRequested" id="HelpWindow.__printPdfRequested" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printPdfRequested" />
       <keyword name="HelpWindow.__printPreview" id="HelpWindow.__printPreview" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printPreview" />
       <keyword name="HelpWindow.__printPreviewFile" id="HelpWindow.__printPreviewFile" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printPreviewFile" />
       <keyword name="HelpWindow.__printRequested" id="HelpWindow.__printRequested" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printRequested" />
@@ -2873,6 +2875,7 @@
       <keyword name="HelpWindow.__tabContextMenuMoveLeft" id="HelpWindow.__tabContextMenuMoveLeft" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuMoveLeft" />
       <keyword name="HelpWindow.__tabContextMenuMoveRight" id="HelpWindow.__tabContextMenuMoveRight" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuMoveRight" />
       <keyword name="HelpWindow.__tabContextMenuPrint" id="HelpWindow.__tabContextMenuPrint" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuPrint" />
+      <keyword name="HelpWindow.__tabContextMenuPrintPdf" id="HelpWindow.__tabContextMenuPrintPdf" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuPrintPdf" />
       <keyword name="HelpWindow.__tabContextMenuPrintPreview" id="HelpWindow.__tabContextMenuPrintPreview" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuPrintPreview" />
       <keyword name="HelpWindow.__titleChanged" id="HelpWindow.__titleChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__titleChanged" />
       <keyword name="HelpWindow.__viewFullScreen" id="HelpWindow.__viewFullScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__viewFullScreen" />

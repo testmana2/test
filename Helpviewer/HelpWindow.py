@@ -431,6 +431,18 @@ class HelpWindow(QMainWindow):
         self.connect(self.printAct, SIGNAL('triggered()'), self.__printFile)
         self.__actions.append(self.printAct)
         
+        self.printPdfAct = E5Action(self.trUtf8('Print as PDF'), 
+            UI.PixmapCache.getIcon("printPdf.png"),
+            self.trUtf8('Print as PDF'), 
+            0, 0, self, 'help_file_print_pdf')
+        self.printPdfAct.setStatusTip(self.trUtf8('Print the displayed help as PDF'))
+        self.printPdfAct.setWhatsThis(self.trUtf8(
+                """<b>Print as PDF</b>"""
+                """<p>Print the displayed help text as a PDF file.</p>"""
+        ))
+        self.connect(self.printPdfAct, SIGNAL('triggered()'), self.__printFilePdf)
+        self.__actions.append(self.printPdfAct)
+        
         self.printPreviewAct = E5Action(self.trUtf8('Print Preview'), 
             UI.PixmapCache.getIcon("printPreview.png"),
             self.trUtf8('Print Preview'), 
@@ -1068,6 +1080,7 @@ class HelpWindow(QMainWindow):
         menu.addSeparator()
         menu.addAction(self.printPreviewAct)
         menu.addAction(self.printAct)
+        menu.addAction(self.printPdfAct)
         menu.addSeparator()
         menu.addAction(self.closeAct)
         menu.addAction(self.closeAllAct)
@@ -1200,6 +1213,8 @@ class HelpWindow(QMainWindow):
             self.trUtf8('Print Preview'), self.__tabContextMenuPrintPreview)
         self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__tabContextMenuPrint)
+        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("printPdf.png"),
+            self.trUtf8('Print as PDF'), self.__tabContextMenuPrintPdf)
         self.__tabContextMenu.addSeparator()
         self.__tabContextMenu.addAction(self.bookmarksAllTabsAct)
     
@@ -1219,6 +1234,7 @@ class HelpWindow(QMainWindow):
         filetb.addSeparator()
         filetb.addAction(self.printPreviewAct)
         filetb.addAction(self.printAct)
+        filetb.addAction(self.printPdfAct)
         filetb.addSeparator()
         filetb.addAction(self.closeAct)
         filetb.addAction(self.exitAct)
@@ -1607,6 +1623,47 @@ class HelpWindow(QMainWindow):
         else:
             printer.setPageOrder(QPrinter.LastPageFirst)
         printer.setPrinterName(Preferences.getPrinter("PrinterName"))
+        
+        printDialog = QPrintDialog(printer, self)
+        if printDialog.exec_() == QDialog.Accepted:
+            try:
+                frame.print_(printer)
+            except AttributeError:
+                QMessageBox.critical(self,
+                    self.trUtf8("Eric Web Browser"),
+                    self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
+                                """Please upgrade.</p>"""))
+                return
+        
+    def __printFilePdf(self, browser = None):
+        """
+        Private slot called to print the displayed file to PDF.
+        
+        @param browser reference to the browser to be printed (HelpBrowserWV)
+        """
+        if browser is None:
+            browser = self.currentBrowser()
+        
+        self.__printPdfRequested(browser.page().mainFrame())
+        
+    def __printPdfRequested(self, frame):
+        """
+        Private slot to handle a print to PDF request.
+        
+        @param frame reference to the frame to be printed (QWebFrame)
+        """
+        printer = QPrinter(mode = QPrinter.HighResolution)
+        if Preferences.getPrinter("ColorMode"):
+            printer.setColorMode(QPrinter.Color)
+        else:
+            printer.setColorMode(QPrinter.GrayScale)
+        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
+        printer.setOutputFormat(QPrinter.PdfFormat)
+        name = frame.url().path().rsplit('/', 1)[-1]
+        if name:
+            name = name.rsplit('.', 1)[0]
+            name += '.pdf'
+            printer.setOutputFileName(name)
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_() == QDialog.Accepted:
@@ -2084,6 +2141,7 @@ class HelpWindow(QMainWindow):
                 self.__setPathComboBackground()
                 
                 self.printAct.setEnabled(hasattr(cb, 'print_'))
+                self.printPdfAct.setEnabled(hasattr(cb, 'print_'))
                 if self.printPreviewAct:
                     self.printPreviewAct.setEnabled(hasattr(cb, 'print_'))
                 
@@ -2149,6 +2207,13 @@ class HelpWindow(QMainWindow):
         """
         browser = self.tabWidget.widget(self.tabContextMenuIndex)
         self.__printFile(browser)
+        
+    def __tabContextMenuPrintPdf(self):
+        """
+        Private method to print the selected tab.
+        """
+        browser = self.tabWidget.widget(self.tabContextMenuIndex)
+        self.__printFilePdf(browser)
         
     def __tabContextMenuPrintPreview(self):
         """

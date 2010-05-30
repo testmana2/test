@@ -220,6 +220,12 @@ QMainWindow
 <td><a href="#HelpWindow.__printFile">__printFile</a></td>
 <td>Private slot called to print the displayed file.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__printFilePdf">__printFilePdf</a></td>
+<td>Private slot called to print the displayed file to PDF.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__printPdfRequested">__printPdfRequested</a></td>
+<td>Private slot to handle a print to PDF request.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__printPreview">__printPreview</a></td>
 <td>Public slot to generate a print preview.</td>
 </tr><tr>
@@ -341,6 +347,9 @@ QMainWindow
 <td>Private method to move a tab one position to the right.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__tabContextMenuPrint">__tabContextMenuPrint</a></td>
+<td>Private method to print the selected tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__tabContextMenuPrintPdf">__tabContextMenuPrintPdf</a></td>
 <td>Private method to print the selected tab.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__tabContextMenuPrintPreview">__tabContextMenuPrintPreview</a></td>
@@ -852,6 +861,26 @@ path to be shown (string)
 <dd>
 reference to the browser to be printed (HelpBrowserWV)
 </dd>
+</dl><a NAME="HelpWindow.__printFilePdf" ID="HelpWindow.__printFilePdf"></a>
+<h4>HelpWindow.__printFilePdf</h4>
+<b>__printFilePdf</b>(<i>browser = None</i>)
+<p>
+        Private slot called to print the displayed file to PDF.
+</p><dl>
+<dt><i>browser</i></dt>
+<dd>
+reference to the browser to be printed (HelpBrowserWV)
+</dd>
+</dl><a NAME="HelpWindow.__printPdfRequested" ID="HelpWindow.__printPdfRequested"></a>
+<h4>HelpWindow.__printPdfRequested</h4>
+<b>__printPdfRequested</b>(<i>frame</i>)
+<p>
+        Private slot to handle a print to PDF request.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+reference to the frame to be printed (QWebFrame)
+</dd>
 </dl><a NAME="HelpWindow.__printPreview" ID="HelpWindow.__printPreview"></a>
 <h4>HelpWindow.__printPreview</h4>
 <b>__printPreview</b>(<i>printer</i>)
@@ -1108,6 +1137,11 @@ URL of the new site (QUrl)
 </p><a NAME="HelpWindow.__tabContextMenuPrint" ID="HelpWindow.__tabContextMenuPrint"></a>
 <h4>HelpWindow.__tabContextMenuPrint</h4>
 <b>__tabContextMenuPrint</b>(<i></i>)
+<p>
+        Private method to print the selected tab.
+</p><a NAME="HelpWindow.__tabContextMenuPrintPdf" ID="HelpWindow.__tabContextMenuPrintPdf"></a>
+<h4>HelpWindow.__tabContextMenuPrintPdf</h4>
+<b>__tabContextMenuPrintPdf</b>(<i></i>)
 <p>
         Private method to print the selected tab.
 </p><a NAME="HelpWindow.__tabContextMenuPrintPreview" ID="HelpWindow.__tabContextMenuPrintPreview"></a>
