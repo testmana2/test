@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Graphics.ModuleItem</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Graphics.ModuleItem</h1>
+<p>
+Module implementing a module item.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#ModuleItem">ModuleItem</a></td>
+<td>Class implementing a module item.</td>
+</tr><tr>
+<td><a href="#ModuleModel">ModuleModel</a></td>
+<td>Class implementing the module model.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="ModuleItem" ID="ModuleItem"></a>
+<h2>ModuleItem</h2>
+<p>
+    Class implementing a module item.
+</p>
+<h3>Derived from</h3>
+UMLItem
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#ModuleItem.__init__">ModuleItem</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#ModuleItem.__calculateSize">__calculateSize</a></td>
+<td>Private method to calculate the size of the module item.</td>
+</tr><tr>
+<td><a href="#ModuleItem.__createTexts">__createTexts</a></td>
+<td>Private method to create the text items of the module item.</td>
+</tr><tr>
+<td><a href="#ModuleItem.paint">paint</a></td>
+<td>Public method to paint the item in local coordinates.</td>
+</tr><tr>
+<td><a href="#ModuleItem.setModel">setModel</a></td>
+<td>Method to set the module model.</td>
+</tr>
+</table>
+<a NAME="ModuleItem.__init__" ID="ModuleItem.__init__"></a>
+<h4>ModuleItem (Constructor)</h4>
+<b>ModuleItem</b>(<i>model = None, x = 0, y = 0, rounded = False, parent = None, scene = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>model</i></dt>
+<dd>
+module model containing the module data (ModuleModel)
+</dd><dt><i>x</i></dt>
+<dd>
+x-coordinate (integer)
+</dd><dt><i>y</i></dt>
+<dd>
+y-coordinate (integer)
+</dd><dt><i>rounded=</i></dt>
+<dd>
+flag indicating a rounded corner (boolean)
+</dd><dt><i>parent=</i></dt>
+<dd>
+reference to the parent object (QGraphicsItem)
+</dd><dt><i>scene=</i></dt>
+<dd>
+reference to the scene object (QGraphicsScene)
+</dd>
+</dl><a NAME="ModuleItem.__calculateSize" ID="ModuleItem.__calculateSize"></a>
+<h4>ModuleItem.__calculateSize</h4>
+<b>__calculateSize</b>(<i></i>)
+<p>
+        Private method to calculate the size of the module item.
+</p><a NAME="ModuleItem.__createTexts" ID="ModuleItem.__createTexts"></a>
+<h4>ModuleItem.__createTexts</h4>
+<b>__createTexts</b>(<i></i>)
+<p>
+        Private method to create the text items of the module item.
+</p><a NAME="ModuleItem.paint" ID="ModuleItem.paint"></a>
+<h4>ModuleItem.paint</h4>
+<b>paint</b>(<i>painter, option, widget = None</i>)
+<p>
+        Public method to paint the item in local coordinates.
+</p><dl>
+<dt><i>painter</i></dt>
+<dd>
+reference to the painter object (QPainter)
+</dd><dt><i>option</i></dt>
+<dd>
+style options (QStyleOptionGraphicsItem)
+</dd><dt><i>widget</i></dt>
+<dd>
+optional reference to the widget painted on (QWidget)
+</dd>
+</dl><a NAME="ModuleItem.setModel" ID="ModuleItem.setModel"></a>
+<h4>ModuleItem.setModel</h4>
+<b>setModel</b>(<i>model</i>)
+<p>
+        Method to set the module model.
+</p><dl>
+<dt><i>model</i></dt>
+<dd>
+module model containing the module data (ModuleModel)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="ModuleModel" ID="ModuleModel"></a>
+<h2>ModuleModel</h2>
+<p>
+    Class implementing the module model.
+</p>
+<h3>Derived from</h3>
+object
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#ModuleModel.__init__">ModuleModel</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#ModuleModel.addClass">addClass</a></td>
+<td>Method to add a class to the module model.</td>
+</tr><tr>
+<td><a href="#ModuleModel.getClasses">getClasses</a></td>
+<td>Method to retrieve the classes of the module.</td>
+</tr><tr>
+<td><a href="#ModuleModel.getName">getName</a></td>
+<td>Method to retrieve the module name.</td>
+</tr>
+</table>
+<a NAME="ModuleModel.__init__" ID="ModuleModel.__init__"></a>
+<h4>ModuleModel (Constructor)</h4>
+<b>ModuleModel</b>(<i>name, classlist=[]</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+the module name (string)
+</dd><dt><i>classlist</i></dt>
+<dd>
+list of class names (list of strings)
+</dd>
+</dl><a NAME="ModuleModel.addClass" ID="ModuleModel.addClass"></a>
+<h4>ModuleModel.addClass</h4>
+<b>addClass</b>(<i>classname</i>)
+<p>
+        Method to add a class to the module model.
+</p><dl>
+<dt><i>classname</i></dt>
+<dd>
+class name to be added (string)
+</dd>
+</dl><a NAME="ModuleModel.getClasses" ID="ModuleModel.getClasses"></a>
+<h4>ModuleModel.getClasses</h4>
+<b>getClasses</b>(<i></i>)
+<p>
+        Method to retrieve the classes of the module.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of class names (list of strings)
+</dd>
+</dl><a NAME="ModuleModel.getName" ID="ModuleModel.getName"></a>
+<h4>ModuleModel.getName</h4>
+<b>getName</b>(<i></i>)
+<p>
+        Method to retrieve the module name.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+module name (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
