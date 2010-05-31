@@ -74,7 +74,7 @@ class Connection(QTcpSocket):
         self.__numBytesForCurrentDataType = -1
         self.__transferTimerId = 0
         self.__isGreetingMessageSent = False
-        self.__pingTimer = QTimer()
+        self.__pingTimer = QTimer(self)
         self.__pingTimer.setInterval(PingInterval)
         self.__pongTime = QTime()
         self.__buffer = QByteArray()
