@@ -1,0 +1,136 @@
+<!-- This is the DTD for eric4's project file version 4.1 -->
+
+<!-- This is a copy of the Basic DTD -->
+<!ELEMENT   int         (#PCDATA)>
+<!ELEMENT   long        (#PCDATA)>
+<!ELEMENT   float       (#PCDATA)>
+<!ELEMENT   complex     (#PCDATA)>
+<!ELEMENT   bool        (#PCDATA)>
+<!ELEMENT   string      (#PCDATA)>
+<!ELEMENT   unicode     (#PCDATA)>
+<!ELEMENT   none        EMPTY>
+
+<!ELEMENT   pickle      (#PCDATA)>
+<!ATTLIST   pickle
+    method      CDATA   #REQUIRED
+    encoding    CDATA   #REQUIRED>
+
+<!ELEMENT   key         (int | long | float | complex | string | unicode)>
+<!ELEMENT   value       (int | long | float | complex | bool | string | unicode | none | 
+    dict | tuple | list | pickle)>
+
+<!ELEMENT   dict        (key, value)*>
+
+<!ELEMENT   tuple        (int | long | float | complex | bool | string | unicode | none | 
+    dict | tuple | list | pickle)*>
+
+<!ELEMENT   list        (int | long | float | complex | bool | string | unicode | none | 
+    dict | tuple | list | pickle)*>
+<!-- End of the Basic DTD -->
+
+<!ELEMENT   ProgLanguage        (#PCDATA)>
+<!ATTLIST   ProgLanguage
+    mixed       CDATA   #REQUIRED>
+
+<!ELEMENT   UIType              (#PCDATA)>
+
+<!ELEMENT   Description         (#PCDATA)>
+
+<!ELEMENT   Version             (#PCDATA)>
+
+<!ELEMENT   Author              (#PCDATA)>
+
+<!ELEMENT   Email               (#PCDATA)>
+
+<!ELEMENT   Dir                 (#PCDATA)>
+<!ELEMENT   Name                (#PCDATA)>
+
+<!ELEMENT   TranslationPrefix   (Dir*, Name)>
+
+<!ELEMENT   TranslationsBinPath (Dir*, Name)>
+
+<!ELEMENT   Source              (Dir*, Name)>
+
+<!ELEMENT   Sources             (Source*)>
+
+<!ELEMENT   Form                (Dir*, Name)>
+
+<!ELEMENT   Forms               (Form*)>
+
+<!ELEMENT   Translation         (Dir*, Name)>
+
+<!ELEMENT   Translations        (Translation*)>
+
+<!ELEMENT   TranslationException  (Dir*, Name)>
+
+<!ELEMENT   TranslationExceptions (TranslationException*)>
+
+<!ELEMENT   Resource            (Dir*, Name)>
+
+<!ELEMENT   Resources           (Resource*)>
+
+<!ELEMENT   Interface           (Dir*, Name)>
+
+<!ELEMENT   Interfaces          (Interface*)>
+
+<!ELEMENT   Other               (Dir*, Name)>
+
+<!ELEMENT   Others              (Other*)>
+
+<!ELEMENT   MainScript          (Dir*, Name)>
+
+<!ELEMENT   VcsType             (#PCDATA)>
+<!ELEMENT   VcsOptions          (dict)>
+<!ELEMENT   VcsOtherData        (dict)>
+
+<!ELEMENT   Vcs                 (VcsType?,
+                                 VcsOptions?,
+                                 VcsOtherData?)>
+
+<!ELEMENT   FiletypeAssociation EMPTY>
+<!ATTLIST   FiletypeAssociation
+    pattern     CDATA   #REQUIRED
+    type        CDATA   #REQUIRED>
+
+<!ELEMENT   FiletypeAssociations (FiletypeAssociation*)>
+
+<!ELEMENT   DocumentationParams (dict)>
+
+<!ELEMENT   Documentation       (DocumentationParams?)>
+
+<!ELEMENT   PackagersParams     (dict)>
+
+<!ELEMENT   Packagers           (PackagersParams?)>
+
+<!ELEMENT   CheckersParams      (dict)>
+
+<!ELEMENT   Checkers            (CheckersParams?)>
+
+<!ELEMENT   OtherToolsParams    (dict)>
+
+<!ELEMENT   OtherTools          (OtherToolsParams?)>
+
+<!ELEMENT   Project             (ProgLanguage,
+                                 UIType,
+                                 Description?,
+                                 Version?,
+                                 Author?,
+                                 Email?,
+                                 TranslationPrefix?,
+                                 TranslationsBinPath?,
+                                 Sources,
+                                 Forms,
+                                 Translations,
+                                 TranslationExceptions?,
+                                 Resources,
+                                 Interfaces,
+                                 Others,
+                                 MainScript?,
+                                 Vcs,
+                                 FiletypeAssociations,
+                                 Documentation?,
+                                 Packagers?,
+                                 Checkers?,
+                                 OtherTools?)>
+<!ATTLIST   Project
+    version     CDATA   #REQUIRED>
