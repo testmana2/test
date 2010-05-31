@@ -105,15 +105,18 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                                                   url.userName(), url.password())
                             proxyList = [proxy]
                             break
-                scheme = schemeFromProxyType(proxyList[0].type())
-                if scheme == "":
-                    scheme = "Http"
-                if scheme != "NoProxy":
-                    proxyList[0].setUser(
-                        Preferences.getUI("ProxyUser/{0}".format(scheme)))
-                    proxyList[0].setPassword(
-                        Preferences.getUI("ProxyPassword/{0}".format(scheme)))
-                return proxyList
+                if proxyList:
+                    scheme = schemeFromProxyType(proxyList[0].type())
+                    if scheme == "":
+                        scheme = "Http"
+                    if scheme != "NoProxy":
+                        proxyList[0].setUser(
+                            Preferences.getUI("ProxyUser/{0}".format(scheme)))
+                        proxyList[0].setPassword(
+                            Preferences.getUI("ProxyPassword/{0}".format(scheme)))
+                    return proxyList
+                else:
+                    return [QNetworkProxy(QNetworkProxy.NoProxy)]
             else:
                 if Preferences.getUI("UseHttpProxyForAll"):
                     protocol = "Http"
