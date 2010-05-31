@@ -60,7 +60,9 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                 if proxyList:
                     proxyList[0].setUser(Preferences.getUI("ProxyUser"))
                     proxyList[0].setPassword(Preferences.getUI("ProxyPassword"))
-                return proxyList
+                    return proxyList
+                else:
+                    return [QNetworkProxy(QNetworkProxy.NoProxy)]
             else:
                 host = Preferences.getUI("ProxyHost")
                 if not host:

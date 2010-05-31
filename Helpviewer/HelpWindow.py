@@ -1429,7 +1429,10 @@ class HelpWindow(QMainWindow):
         if url.isValid():
             return url
         
-        return QUrl(path)
+        try:
+            return QUrl.fromUserInput(path)
+        except AttributeError:
+            return QUrl(path)
     
     def __setPathComboBackground(self):
         """
