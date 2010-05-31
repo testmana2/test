@@ -114,7 +114,9 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                             Preferences.getUI("ProxyUser/{0}".format(scheme)))
                         proxyList[0].setPassword(
                             Preferences.getUI("ProxyPassword/{0}".format(scheme)))
-                return proxyList
+                    return proxyList
+                else:
+                    return [QNetworkProxy(QNetworkProxy.NoProxy)]
             else:
                 if Preferences.getUI("UseHttpProxyForAll"):
                     protocol = "Http"
