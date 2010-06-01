@@ -856,7 +856,22 @@ class QsciScintillaCompat(QsciScintilla):
         """
         # call into the QsciCommandSet
         self.standardCommands().clearAlternateKeys()
+
+    #####################################################################################
+    # specialized event handlers
+    #####################################################################################
     
+    def focusOutEvent(self, event):
+        """
+        Public method called when the editor loses focus.
+        
+        @param event the event object (QFocusEvent)
+        """
+        if self.isListActive():
+            self.cancelList()
+        
+        QsciScintilla.focusOutEvent(self, event)
+
     #####################################################################################
     # interface methods to the mini editor
     #####################################################################################
