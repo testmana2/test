@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog</h1>
+<p>
+Module implementing a dialog to enter the data for a backout operation.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#HgBackoutDialog">HgBackoutDialog</a></td>
+<td>Class implementing a dialog to enter the data for a backout operation.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="HgBackoutDialog" ID="HgBackoutDialog"></a>
+<h2>HgBackoutDialog</h2>
+<p>
+    Class implementing a dialog to enter the data for a backout operation.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_HgBackoutDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HgBackoutDialog.__init__">HgBackoutDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HgBackoutDialog.getParameters">getParameters</a></td>
+<td>Public method to retrieve the backout data.</td>
+</tr><tr>
+<td><a href="#HgBackoutDialog.on_noneButton_toggled">on_noneButton_toggled</a></td>
+<td>Private slot to handle the toggling of the None revision button.</td>
+</tr>
+</table>
+<a NAME="HgBackoutDialog.__init__" ID="HgBackoutDialog.__init__"></a>
+<h4>HgBackoutDialog (Constructor)</h4>
+<b>HgBackoutDialog</b>(<i>tagsList, branchesList, parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>tagsList</i></dt>
+<dd>
+list of tags (list of strings)
+</dd><dt><i>branchesList</i></dt>
+<dd>
+list of branches (list of strings)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="HgBackoutDialog.getParameters" ID="HgBackoutDialog.getParameters"></a>
+<h4>HgBackoutDialog.getParameters</h4>
+<b>getParameters</b>(<i></i>)
+<p>
+        Public method to retrieve the backout data.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple naming the revision, a flag indicating a
+            merge, the commit date, the commit user and a commit message
+            (string, boolean, string, string, string)
+</dd>
+</dl><a NAME="HgBackoutDialog.on_noneButton_toggled" ID="HgBackoutDialog.on_noneButton_toggled"></a>
+<h4>HgBackoutDialog.on_noneButton_toggled</h4>
+<b>on_noneButton_toggled</b>(<i>checked</i>)
+<p>
+        Private slot to handle the toggling of the None revision button.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+flag indicating the checked state (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
