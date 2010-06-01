@@ -95,12 +95,12 @@ class HistoryManager(QWebHistoryInterface):
         self.__history = []
         self.__lastSavedUrl = ""
         
-        self.__expiredTimer = QTimer()
+        self.__expiredTimer = QTimer(self)
         self.__expiredTimer.setSingleShot(True)
         self.connect(self.__expiredTimer, SIGNAL("timeout()"), 
                      self.__checkForExpired)
         
-        self.__frequencyTimer = QTimer()
+        self.__frequencyTimer = QTimer(self)
         self.__frequencyTimer.setSingleShot(True)
         self.connect(self.__frequencyTimer, SIGNAL("timeout()"), 
                      self.__refreshFrequencies)

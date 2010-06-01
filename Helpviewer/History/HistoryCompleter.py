@@ -228,7 +228,7 @@ class HistoryCompleter(QCompleter):
         self.setModelSorting(QCompleter.CaseSensitivelySortedModel)
         
         self.__searchString = ""
-        self.__filterTimer = QTimer()
+        self.__filterTimer = QTimer(self)
         self.__filterTimer.setSingleShot(True)
         self.connect(self.__filterTimer, SIGNAL("timeout()"), self.__updateFilter)
     
