@@ -6181,7 +6181,7 @@ gli elementi visualizzati.&lt;/p&gt;
 <context>
     <name>E5NetworkProxyFactory</name>
     <message>
-        <location filename="E5Network/E5NetworkProxyFactory.py" line="124"/>
+        <location filename="E5Network/E5NetworkProxyFactory.py" line="127"/>
         <source>Proxy Configuration Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6196,7 +6196,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkProxyFactory.py" line="124"/>
+        <location filename="E5Network/E5NetworkProxyFactory.py" line="127"/>
         <source>Proxy usage was activated but no proxy host for protocol &apos;{0}&apos; configured.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9247,12 +9247,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Font a larghezza fissa</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="337"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="347"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>Premi per selezionare il font per i numeri di linea dell&apos;editor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="340"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="350"/>
         <source>Line Numbers Font</source>
         <translation>Font Numeri linea</translation>
     </message>
@@ -9262,7 +9262,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Testo prespaziato</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="356"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="366"/>
         <source>2345</source>
         <translation>2345</translation>
     </message>
@@ -9367,312 +9367,312 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Albero squadrato</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="387"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="397"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="395"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="405"/>
         <source>Select to use custom selection colours</source>
         <translation>Selezione per usare colori personalizzati per la selezione</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="398"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Usa colori personalizzati per la selezione&lt;/b&gt;&lt;p&gt;Seleziona per poter usare colori personalizzati per la selezione nella finestra dell&apos;editor e nella shell. I colori per la selezione del primo piano e dello sfondo sono definiti sulla pagina dei colori.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="401"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
         <source>Use custom selection colours</source>
         <translation>Usa colori personalizzati per le selezione</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>Seleziona, se il testo selezionato deve essere colorato dall&apos;analizzatore lessicale.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
         <source>Colourize selected text</source>
         <translation>Colora testo selezionato</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="428"/>
         <source>Select to extend selection to end of line</source>
         <translation>Seleziona per estendere la selezione fino alla fine della linea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="431"/>
         <source>Extend selection to end of line</source>
         <translation>Estendi selezione fino alla fine della linea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="432"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="442"/>
         <source>Selection foreground:</source>
         <translation>Selezione primo piano:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="445"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>Seleziona il colore di primo piano per la selezione.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="465"/>
         <source>Selection background:</source>
         <translation>Selezione sfondo:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="468"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="478"/>
         <source>Select the background colour for the selection.</source>
         <translation>Seleziona il colore di sfondo per la selezione.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="483"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="493"/>
         <source>Caret</source>
         <translation>Caret</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="489"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="499"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Seleziona, se il caret deve essere evidenziato</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="492"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="502"/>
         <source>Caretline visible</source>
         <translation>Caretline visibile</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="501"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="511"/>
         <source>Caret width:</source>
         <translation>Larghezza Caret:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="508"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="518"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Selezione larghezza caret (1, 2 o 3 pixel)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="541"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="551"/>
         <source>Caret foreground:</source>
         <translation>Primo piano Caret:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="554"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
         <source>Select the colour for the caret.</source>
         <translation>Seleziona il colore per il caret.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="574"/>
         <source>Caretline background:</source>
         <translation>Sfondo caretline:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="577"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="587"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Seleziona il colore di sfondo per una linea contenente il caret.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="598"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="608"/>
         <source>Current line marker:</source>
         <translation>Marcatore di linea corrente:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="611"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Seleziona il colore per il marcatore di linea corrente.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="631"/>
         <source>Error line marker:</source>
         <translation>Marcatori linea errore:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="634"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="644"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Seleziona il colore per il marcatore di linea di errore.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="647"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="657"/>
         <source>Braces</source>
         <translation>Parentesi</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="653"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Seleziona nel caso parentesi bilanciate e non bialnciate debbano essere evidenziate.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="656"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="666"/>
         <source>Highlight braces</source>
         <translation>Evidenzia parentesi</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="673"/>
         <source>Matched braces:</source>
         <translation>Parentesi bilanciate:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="676"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Seleziona il colore di evidenziazione delle parentesi bilanciate.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="696"/>
         <source>Matched braces background:</source>
         <translation>Sfondo parentesi bilanciate:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="699"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="709"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Seleziona il colore di sfondo per evidenziare le parentesi bilanciate.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="715"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="725"/>
         <source>Unmatched brace:</source>
         <translation>Parentesi non bilanciate::</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="722"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="732"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Seleziona il colore per evidenziare parentesi non bilanciate.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="738"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="748"/>
         <source>Unmatched brace background:</source>
         <translation>Sfondo parentesi non bilanciate:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="745"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="755"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Seleziona il colore di sfondo per l&apos;evidenziazione delle parentesi non bilanciate.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="758"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="768"/>
         <source>End of Line</source>
         <translation>Fine linea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="766"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Selezione nel caso il fine linea debba essere mostrato</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="769"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
         <source>Show End of Line</source>
         <translation>Mostra fine linea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="786"/>
         <source>Select, whether long lines should be wrapped</source>
         <translation>Seleziona, nel caso le linee lunghe debbano essere impaginate</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="789"/>
         <source>Wrap long lines</source>
         <translation>Dividi linee lunghe</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="788"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="798"/>
         <source>Edge Mode</source>
         <translation>Modo Edge</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Seleziona il colore per il marcatore del bordo.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="852"/>
         <source>Background colour:</source>
         <translation>Colore di sfondo:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="855"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="865"/>
         <source>Move to set the edge column.</source>
         <translation>Muovi per impostare la colonna del bordo.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="883"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="893"/>
         <source>Displays the selected tab width.</source>
         <translation>Mostra la larghezza attuare del tab.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="899"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="909"/>
         <source>Column number:</source>
         <translation>Numero colonna:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="906"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="916"/>
         <source>Mode:</source>
         <translation>Modo:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
         <source>Disabled</source>
         <translation>Disabilitato</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="925"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="935"/>
         <source>Draw Line</source>
         <translation>Disegna linea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="940"/>
         <source>Change Background Colour</source>
         <translation>Cambia colore di sfondo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1001"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1011"/>
         <source>Various</source>
         <translation>Vari</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1007"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Seleziona nel caso gli spaci devono essere mostrati</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1010"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
         <source>Show Whitespace</source>
         <translation>Mostra spazi</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1027"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Seleziona per mostrare un menù di contesto minimale</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1030"/>
         <source>Show minimal context menu</source>
         <translation>Mostra menù di contesto minimale</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="264"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="274"/>
         <source>Margins foreground:</source>
         <translation>Primo piano per i margini:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="277"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
         <source>Select the foreground colour for the margins</source>
         <translation>Seleziona il colore di primo piano per i margini</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="297"/>
         <source>Margins background:</source>
         <translation>Sfondo margini:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="300"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
         <source>Select the background colour for the margins</source>
         <translation>Seleziona il colore di sfondo per i margini</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="320"/>
         <source>Foldmargin background:</source>
         <translation>Sfondo margine di compressione:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="323"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="333"/>
         <source>Select the background colour for the foldmargin</source>
         <translation>Seleziona il colore di sfondo per il margine di compressione</translation>
     </message>
@@ -9687,28 +9687,38 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Mostra margini unificati</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="602"/>
         <source>Debugging Line Markers</source>
         <translation>Marcatori linea di debug</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="944"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="954"/>
         <source>Zoom</source>
         <translation type="unfinished">Zoom</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="950"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
         <source>Initial zoom factor:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="970"/>
         <source>Move to set the initial zoom factor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="982"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="992"/>
         <source>Displays the selected initial zoom factor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="257"/>
+        <source>Arrow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="262"/>
+        <source>Arrow Tree</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -12929,7 +12939,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Nuova finestra</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1575"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1578"/>
         <source>Open File</source>
         <translation>Apri File</translation>
     </message>
@@ -13330,7 +13340,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Vai</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1575"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1578"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>File di help  (*.html *.htm);;File PDF (*.pdf);;File CHM (*.chm);;Tutti i file (*)</translation>
     </message>
@@ -13391,7 +13401,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Muovi a destra</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2087"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2090"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -13554,7 +13564,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>&lt;b&gt;Stampa Preview&lt;/b&gt;&lt;p&gt;Stampa la preview del testo di help mostrato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1715"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1718"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt;</translation>
     </message>
@@ -13754,27 +13764,27 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Filtrato per:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2415"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2418"/>
         <source>Could not find an associated content.</source>
         <translation>Non posso trovare un contenuto associato.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2531"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2534"/>
         <source>Updating search index</source>
         <translation>Aggiornamento indice di ricerca</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2585"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2588"/>
         <source>Looking for Documentation...</source>
         <translation>Ricerca documentazione...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2615"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2618"/>
         <source>Unfiltered</source>
         <translation>Non filtrato</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2634"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2637"/>
         <source>Help Engine</source>
         <translation>Motore di help</translation>
     </message>
@@ -13799,12 +13809,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>&lt;b&gt;Navigazione anonima&lt;/b&gt;&lt;p&gt;Attiva la navigazione anonima. In questa modalità la cronologia non è più registrata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2287"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2290"/>
         <source>Loading...</source>
         <translation>Caricamento...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2302"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2305"/>
         <source>Finished loading</source>
         <translation>Caricamento terminato</translation>
     </message>
@@ -14132,7 +14142,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>&lt;b&gt;Aggiungi ai segnalibri tutte le linguette...&lt;/b&gt;&lt;p&gt;Apri un dialogo per aggiungere ai segnalibri tutte le linguette aperte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1808"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1811"/>
         <source>Saved Tabs</source>
         <translation>Salva Linguette</translation>
     </message>
@@ -14216,12 +14226,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation type="obsolete">Web Browser di eric4</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1734"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1737"/>
         <source>Eric Web Browser</source>
         <translation>Eric Web Browser</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1725"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1728"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Informazioni sul Browser Web di Eric&lt;/h3&gt;&lt;p&gt;Il Browser Web di Eric è un misto di pagine di help e un browser HTML.&lt;/p&gt;</translation>
     </message>
@@ -14296,17 +14306,17 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Apre un dialogo per configurare le regole di sottoscrizione di AdBlock.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2031"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2034"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sei sicuro di voler attivare la navigazione riservata ?&lt;/b&gt;&lt;p&gt;Quando la navigazione riservata è attivata, le pagine web visitate non sono salvate nella cronologia, le ricerche non sono aggiunte alla lista delle ricerche recenti e le icone e i cookie dei siti web non sono salvati. Fino alla chiusura del programma è ancora possibile premere i pulsanti Indietro e Avanti per tornare alle pagine che sono state aperte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2594"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2597"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">Web Browser di eric4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2304"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2307"/>
         <source>Failed to load</source>
         <translation type="unfinished"></translation>
     </message>

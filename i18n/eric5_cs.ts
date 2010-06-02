@@ -6163,7 +6163,7 @@ whole selection.&lt;/li&gt;
 <context>
     <name>E5NetworkProxyFactory</name>
     <message>
-        <location filename="E5Network/E5NetworkProxyFactory.py" line="124"/>
+        <location filename="E5Network/E5NetworkProxyFactory.py" line="127"/>
         <source>Proxy Configuration Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6173,7 +6173,7 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkProxyFactory.py" line="124"/>
+        <location filename="E5Network/E5NetworkProxyFactory.py" line="127"/>
         <source>Proxy usage was activated but no proxy host for protocol &apos;{0}&apos; configured.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9223,12 +9223,12 @@ whole selection.&lt;/li&gt;
         <translation>Neproporcionální font</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="337"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="347"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>Stisknout pro výběr fontu pro na čísla řádků v editoru</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="340"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="350"/>
         <source>Line Numbers Font</source>
         <translation>Font čísel řádek</translation>
     </message>
@@ -9238,7 +9238,7 @@ whole selection.&lt;/li&gt;
         <translation>Neproporcionální text</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="356"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="366"/>
         <source>2345</source>
         <translation></translation>
     </message>
@@ -9333,312 +9333,312 @@ whole selection.&lt;/li&gt;
         <translation>Propojené čtverce</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="387"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="397"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="395"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="405"/>
         <source>Select to use custom selection colours</source>
         <translation>Vybrat použití obvyklého výběru barev</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="398"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Použít obvyklý výběr barev&lt;/b&gt;&lt;p&gt;Vyberte tento přepínač pokud v okně editoru a shellu chcete použít obvyklý typ barev. Barvy popředí a pozadí budou definovány barvami strany.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="401"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
         <source>Use custom selection colours</source>
         <translation>Použít obvyklé barvy</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>Vybrat, jestliže má být vybraný text obarven lexerem.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
         <source>Colourize selected text</source>
         <translation>Obarvit vybraný text</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="428"/>
         <source>Select to extend selection to end of line</source>
         <translation>Aktivovat výběr rozšířený o konec řádku</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="431"/>
         <source>Extend selection to end of line</source>
         <translation>Rozšířený výběr na konec řádku</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="432"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="442"/>
         <source>Selection foreground:</source>
         <translation>Výběr popředí:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="445"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>Vybrat barvu popředí pro výběr.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="465"/>
         <source>Selection background:</source>
         <translation>Výběr pozadí:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="468"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="478"/>
         <source>Select the background colour for the selection.</source>
         <translation>Vybrat barvu pozadí pro výběr.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="483"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="493"/>
         <source>Caret</source>
         <translation>Karet (textový kurzor)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="489"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="499"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Vybrat, má-li být linka karetu zvýrazněna</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="492"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="502"/>
         <source>Caretline visible</source>
         <translation>Zobrazení textového kurzoru</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="501"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="511"/>
         <source>Caret width:</source>
         <translation>Šířka text.kurzoru:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="508"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="518"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Výběr délky karetu (1, 2 nebo 3 pixelu)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="541"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="551"/>
         <source>Caret foreground:</source>
         <translation>Barva karetu:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="554"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
         <source>Select the colour for the caret.</source>
         <translation>Výběr barvy karetu.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="574"/>
         <source>Caretline background:</source>
         <translation>Pozadí karetu:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="577"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="587"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Vybrat barvu pozadí pro řádku obsahující karet.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="598"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="608"/>
         <source>Current line marker:</source>
         <translation>Značka aktuální řádky:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="611"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Vybrat barvu pro značku aktuální řádky.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="631"/>
         <source>Error line marker:</source>
         <translation>Značka chybné řádky:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="634"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="644"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Vybrat barvu pro značku chybné řádky.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="647"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="657"/>
         <source>Braces</source>
         <translation>Závorky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="653"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Vybrat, jestliže se má zkontrolovat párovost závorek a neplatné se mají zvýraznit.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="656"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="666"/>
         <source>Highlight braces</source>
         <translation>Zvýraznit závorky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="673"/>
         <source>Matched braces:</source>
         <translation>Párové závorky:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="676"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Výběr barvy pro zvýraznění párových závorek.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="696"/>
         <source>Matched braces background:</source>
         <translation>Pozadí párových závorek:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="699"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="709"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Výběr barvy pozadí pro zvýraznění párových závorek.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="715"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="725"/>
         <source>Unmatched brace:</source>
         <translation>Nepárová závorka:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="722"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="732"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Výběr barvy pro zvýraznění nepárových závorek.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="738"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="748"/>
         <source>Unmatched brace background:</source>
         <translation>Pozadí nepárové závorky:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="745"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="755"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Vybrat barvu pozadí pro zvýraznění nepárových závorek.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="758"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="768"/>
         <source>End of Line</source>
         <translation>Konec řádku</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="766"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Vybrat, mají-li se zobrazovat symboly konce řádků</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="769"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
         <source>Show End of Line</source>
         <translation>Zobrazovat konce řádků</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="786"/>
         <source>Select, whether long lines should be wrapped</source>
         <translation>Vybrat, mají-li se dlouhé řádky zalamovat</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="789"/>
         <source>Wrap long lines</source>
         <translation>Zalamovat dlouhé řádky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="788"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="798"/>
         <source>Edge Mode</source>
         <translation>Mód okraje</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Vybrat barvu pro značku okraje.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="852"/>
         <source>Background colour:</source>
         <translation>Barva pozadí:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="855"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="865"/>
         <source>Move to set the edge column.</source>
         <translation>Posunout pro nastavení sloupce okraje.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="883"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="893"/>
         <source>Displays the selected tab width.</source>
         <translation>Zobrazuje vybranou šířku tabulátoru.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="899"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="909"/>
         <source>Column number:</source>
         <translation>Číslo sloupce:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="906"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="916"/>
         <source>Mode:</source>
         <translation>Mód:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
         <source>Disabled</source>
         <translation>Vypnuto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="925"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="935"/>
         <source>Draw Line</source>
         <translation>Zobrazit linku</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="940"/>
         <source>Change Background Colour</source>
         <translation>Změnit barvu pozadí</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1001"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1011"/>
         <source>Various</source>
         <translation>Různé</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1007"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Vybrat, mají-li se zobrazovat prázdné znaky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1010"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
         <source>Show Whitespace</source>
         <translation>Zobrazit prázdné znaky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1027"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Vybrat pro zobrazení minimalistického kontextového menu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1030"/>
         <source>Show minimal context menu</source>
         <translation>Zobrazit minimální kontextové menu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="264"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="274"/>
         <source>Margins foreground:</source>
         <translation>Barva textu okrajů:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="277"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
         <source>Select the foreground colour for the margins</source>
         <translation>Vybrat barvu textu okrajů</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="297"/>
         <source>Margins background:</source>
         <translation>Barva pozadí okrajů:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="300"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
         <source>Select the background colour for the margins</source>
         <translation>Vybrat barvu pozadí okrajů</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="320"/>
         <source>Foldmargin background:</source>
         <translation>Barava pozadí okraje skládání:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="323"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="333"/>
         <source>Select the background colour for the foldmargin</source>
         <translation>Vybrat barvu pozadí pro okraj se značkami skládání</translation>
     </message>
@@ -9653,28 +9653,38 @@ whole selection.&lt;/li&gt;
         <translation>Zobrazit jednotné okraje</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="602"/>
         <source>Debugging Line Markers</source>
         <translation>Značky debugované řádky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="944"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="954"/>
         <source>Zoom</source>
         <translation type="unfinished">Lupa</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="950"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
         <source>Initial zoom factor:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="970"/>
         <source>Move to set the initial zoom factor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="982"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="992"/>
         <source>Displays the selected initial zoom factor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="257"/>
+        <source>Arrow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="262"/>
+        <source>Arrow Tree</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -13293,17 +13303,17 @@ whole selection.&lt;/li&gt;
         <translation>&lt;p&gt;Zadání souboru s nápovědou, který se zobrazí přímo do tohoto editačního okna. Výběr předchozí zobrazené nápovědy z drop down seznamu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1575"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1578"/>
         <source>Open File</source>
         <translation>Otevřít soubor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1575"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1578"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Help soubory (*.html *.htm);;PDF soubory (*.pdf);;CHM soubory (*.chm);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2087"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2090"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -13510,7 +13520,7 @@ whole selection.&lt;/li&gt;
         <translation>&lt;b&gt;Vytisknout náhled&lt;/b&gt;&lt;p&gt;Tisknout náhled zobrazeného textu nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1715"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1718"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tisk není dostupný kvůli bugu v PyQt4.Please upgrade.&lt;/p&gt;</translation>
     </message>
@@ -13650,7 +13660,7 @@ whole selection.&lt;/li&gt;
         <translation>Filtrováno: </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2415"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2418"/>
         <source>Could not find an associated content.</source>
         <translation>Asociovaný obsah nelze nalézt.</translation>
     </message>
@@ -13715,22 +13725,22 @@ whole selection.&lt;/li&gt;
         <translation>&lt;b&gt;Znovu indexovat dokumentaci&lt;/b&gt;&lt;p&gt;Přeindexuje dokumentaci.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2531"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2534"/>
         <source>Updating search index</source>
         <translation>Aktualizovat index pro hledání</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2585"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2588"/>
         <source>Looking for Documentation...</source>
         <translation>Vyhledat dokumentaci...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2615"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2618"/>
         <source>Unfiltered</source>
         <translation>Nefiltrováno</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2634"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2637"/>
         <source>Help Engine</source>
         <translation>Engine nápovědy</translation>
     </message>
@@ -13755,12 +13765,12 @@ whole selection.&lt;/li&gt;
         <translation>&lt;b&gt;Mód soukromí&lt;/b&gt;&lt;p&gt;Zapne mód soukromí. V tomto módu není zaznamenávána historie stran.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2287"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2290"/>
         <source>Loading...</source>
         <translation>Načítám...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2302"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2305"/>
         <source>Finished loading</source>
         <translation>Načteno</translation>
     </message>
@@ -14088,7 +14098,7 @@ whole selection.&lt;/li&gt;
         <translation>&lt;b&gt;Vytvořit záložky pro všechny taby...&lt;/b&gt;&lt;p&gt;Otevřít dialog pro přidání nové složky záložek pro všechny otevřené taby.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1808"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1811"/>
         <source>Saved Tabs</source>
         <translation>Uložkt taby</translation>
     </message>
@@ -14172,12 +14182,12 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">eric4 web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1734"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1737"/>
         <source>Eric Web Browser</source>
         <translation>Eric web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1725"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1728"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;O Eric web prohlížeči&lt;/h3&gt;&lt;p&gt;Eric web prohlížeč je kombinace souboru nápovědy a HTML prohlížeče.&lt;/p&gt;</translation>
     </message>
@@ -14232,7 +14242,7 @@ whole selection.&lt;/li&gt;
         <translation>&lt;b&gt;Spravovat uložená hesla...&lt;/b&gt;&lt;p&gt;Otevře dialog pro spravování uložených hesel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2031"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2034"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jste si jistí, že chcte zapnout soukromé prohlížení?&lt;/b&gt;&lt;p&gt;Když je soukromé prohlížení zapnuto, web strany se nepřidávají do historie, vyhledávání se nepřidává do seznamu posledních hledání a ikony webů a cookies nejsou ukládány. Dokud nezavřete okno, jsou tlačítka Zpět a Vpřed stále funkční pro strany, které jste před tím otevřeli.&lt;/p&gt;</translation>
     </message>
@@ -14257,12 +14267,12 @@ whole selection.&lt;/li&gt;
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Otevře dialog pro konfiguraci AdBlock odebírání a pravidel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2594"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2597"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">eric4 web prohlížeč {5 ?}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2304"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2307"/>
         <source>Failed to load</source>
         <translation type="unfinished"></translation>
     </message>

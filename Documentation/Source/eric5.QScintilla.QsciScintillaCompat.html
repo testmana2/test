@@ -56,7 +56,7 @@ Module implementing a compatability interface class to QsciScintilla.
 QsciScintilla
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>ArrowFoldStyle</td></tr><tr><td>ArrowTreeFoldStyle</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -66,6 +66,9 @@ QsciScintilla
 </tr><tr>
 <td><a href="#QsciScintillaCompat.__doSearchTarget">__doSearchTarget</a></td>
 <td>Private method to perform the search in target.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.__setFoldMarker">__setFoldMarker</a></td>
+<td>Private method to define a fold marker.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.byteAt">byteAt</a></td>
 <td>Public method to get the raw character (bytes) at a position in the text.</td>
@@ -144,6 +147,9 @@ QsciScintilla
 </tr><tr>
 <td><a href="#QsciScintillaCompat.findNextTarget">findNextTarget</a></td>
 <td>Public method to find the next occurrence in the target range.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.focusOutEvent">focusOutEvent</a></td>
+<td>Public method called when the editor loses focus.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.foldExpandedAt">foldExpandedAt</a></td>
 <td>Public method to determine, if a fold is expanded.</td>
@@ -241,6 +247,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.setEolModeByEolString">setEolModeByEolString</a></td>
 <td>Public method to set the eol mode given the eol string.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.setFolding">setFolding</a></td>
+<td>Public method to set the folding style and margin.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.setIndentationGuideView">setIndentationGuideView</a></td>
 <td>Public method to set the view of the indentation guides.</td>
 </tr><tr>
@@ -300,6 +309,19 @@ window flags
 <dt>Returns:</dt>
 <dd>
 flag indicating a successful search (boolean)
+</dd>
+</dl><a NAME="QsciScintillaCompat.__setFoldMarker" ID="QsciScintillaCompat.__setFoldMarker"></a>
+<h4>QsciScintillaCompat.__setFoldMarker</h4>
+<b>__setFoldMarker</b>(<i>marknr, mark = QsciScintilla.SC_MARK_EMPTY</i>)
+<p>
+        Private method to define a fold marker.
+</p><dl>
+<dt><i>marknr</i></dt>
+<dd>
+marker number to define (integer)
+</dd><dt><i>mark</i></dt>
+<dd>
+fold mark symbol to be used (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.byteAt" ID="QsciScintillaCompat.byteAt"></a>
 <h4>QsciScintillaCompat.byteAt</h4>
@@ -558,6 +580,16 @@ flag indicating a successful search (boolean)
 <dt>Returns:</dt>
 <dd>
 flag indicating a successful search (boolean)
+</dd>
+</dl><a NAME="QsciScintillaCompat.focusOutEvent" ID="QsciScintillaCompat.focusOutEvent"></a>
+<h4>QsciScintillaCompat.focusOutEvent</h4>
+<b>focusOutEvent</b>(<i>event</i>)
+<p>
+        Public method called when the editor loses focus.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+the event object (QFocusEvent)
 </dd>
 </dl><a NAME="QsciScintillaCompat.foldExpandedAt" ID="QsciScintillaCompat.foldExpandedAt"></a>
 <h4>QsciScintillaCompat.foldExpandedAt</h4>
@@ -942,6 +974,19 @@ the indicator or style are not valid
 <dt><i>eolStr</i></dt>
 <dd>
 eol string (string)
+</dd>
+</dl><a NAME="QsciScintillaCompat.setFolding" ID="QsciScintillaCompat.setFolding"></a>
+<h4>QsciScintillaCompat.setFolding</h4>
+<b>setFolding</b>(<i>style, margin = 2</i>)
+<p>
+        Public method to set the folding style and margin.
+</p><dl>
+<dt><i>style</i></dt>
+<dd>
+folding style to set (integer)
+</dd><dt><i>margin</i></dt>
+<dd>
+margin number (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.setIndentationGuideView" ID="QsciScintillaCompat.setIndentationGuideView"></a>
 <h4>QsciScintillaCompat.setIndentationGuideView</h4>

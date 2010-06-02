@@ -7,6 +7,7 @@ Version 5.1-snapshot-2010mmdd:
 - added action to start a Mercurial server to the Mercurial plug-in
 - added action to print to PDF to the web browser
 - added a branch filter to the Mercurial log browser
+- added additional fold styles
 
 Version 5.0-snapshot-20100523:
 - bug fixes

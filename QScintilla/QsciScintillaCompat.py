@@ -7,7 +7,8 @@
 Module implementing a compatability interface class to QsciScintilla.
 """
 
-from PyQt4.QtGui import QApplication, QPalette
+from PyQt4.QtCore import Qt
+from PyQt4.QtGui import QApplication, QPalette, QColor
 from PyQt4.Qsci import QsciScintilla, \
     QSCINTILLA_VERSION as QsciQSCINTILLA_VERSION, QSCINTILLA_VERSION_STR
 
@@ -38,6 +39,9 @@ class QsciScintillaCompat(QsciScintilla):
     QsciScintilla incrementally. This class ensures compatibility
     to older versions of QsciScintilla.
     """
+    ArrowFoldStyle      = QsciScintilla.BoxedTreeFoldStyle + 1
+    ArrowTreeFoldStyle  = ArrowFoldStyle + 1
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -838,6 +842,63 @@ class QsciScintillaCompat(QsciScintilla):
         """
         res = self.SendScintilla(QsciScintilla.SCI_INDICATORVALUEAT, indicator, pos)
         return res
+    
+    #####################################################################################
+    # methods to perform folding related stuff
+    #####################################################################################
+    
+    def __setFoldMarker(self, marknr, mark = QsciScintilla.SC_MARK_EMPTY):
+        """
+        Private method to define a fold marker.
+        
+        @param marknr marker number to define (integer)
+        @param mark fold mark symbol to be used (integer)
+        """
+        self.SendScintilla(QsciScintilla.SCI_MARKERDEFINE, marknr, mark)
+        
+        if mark != QsciScintilla.SC_MARK_EMPTY:
+            self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+                marknr, QColor(Qt.white))
+            self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+                marknr, QColor(Qt.black))
+    
+    def setFolding(self, style, margin = 2):
+        """
+        Public method to set the folding style and margin.
+        
+        @param style folding style to set (integer)
+        @param margin margin number (integer)
+        """
+        if style < self.ArrowFoldStyle:
+            QsciScintilla.setFolding(self, style, margin)
+        else:
+            QsciScintilla.setFolding(self, QsciScintilla.PlainFoldStyle, margin)
+            
+            if style == self.ArrowFoldStyle:
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER, 
+                                     QsciScintilla.SC_MARK_ARROW);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPEN, 
+                                     QsciScintilla.SC_MARK_ARROWDOWN);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERSUB);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERTAIL);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEREND);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPENMID);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL);
+            elif style == self.ArrowTreeFoldStyle:
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER, 
+                                     QsciScintilla.SC_MARK_ARROW);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPEN, 
+                                     QsciScintilla.SC_MARK_ARROWDOWN);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERSUB, 
+                                     QsciScintilla.SC_MARK_VLINE);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERTAIL, 
+                                     QsciScintilla.SC_MARK_LCORNER);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEREND, 
+                                     QsciScintilla.SC_MARK_ARROW);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPENMID, 
+                                     QsciScintilla.SC_MARK_ARROWDOWN);
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, 
+                                     QsciScintilla.SC_MARK_TCORNER);
     
     #####################################################################################
     # interface methods to the standard keyboard command set

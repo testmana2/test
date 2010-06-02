@@ -10,6 +10,8 @@ Module implementing the Editor Styles configuration page.
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.Qsci import QsciScintilla
 
+from QScintilla.QsciScintillaCompat import QsciScintillaCompat
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorStylesPage import Ui_EditorStylesPage
 
@@ -32,7 +34,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             QsciScintilla.CircledFoldStyle,
             QsciScintilla.BoxedFoldStyle,
             QsciScintilla.CircledTreeFoldStyle,
-            QsciScintilla.BoxedTreeFoldStyle
+            QsciScintilla.BoxedTreeFoldStyle, 
+            QsciScintillaCompat.ArrowFoldStyle, 
+            QsciScintillaCompat.ArrowTreeFoldStyle, 
         ]
         
         self.edgeModes = [

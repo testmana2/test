@@ -5345,6 +5345,7 @@
       <keyword name="QSCINTILLA_VERSION" id="QSCINTILLA_VERSION" ref="eric5.QScintilla.QsciScintillaCompat.html#QSCINTILLA_VERSION" />
       <keyword name="QsciScintillaCompat (Constructor)" id="QsciScintillaCompat (Constructor)" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__init__" />
       <keyword name="QsciScintillaCompat.__doSearchTarget" id="QsciScintillaCompat.__doSearchTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__doSearchTarget" />
+      <keyword name="QsciScintillaCompat.__setFoldMarker" id="QsciScintillaCompat.__setFoldMarker" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__setFoldMarker" />
       <keyword name="QsciScintillaCompat.byteAt" id="QsciScintillaCompat.byteAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.byteAt" />
       <keyword name="QsciScintillaCompat.charAt" id="QsciScintillaCompat.charAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.charAt" />
       <keyword name="QsciScintillaCompat.clearAllIndicators" id="QsciScintillaCompat.clearAllIndicators" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.clearAllIndicators" />
@@ -5371,6 +5372,7 @@
       <keyword name="QsciScintillaCompat.extendSelectionWordRight" id="QsciScintillaCompat.extendSelectionWordRight" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.extendSelectionWordRight" />
       <keyword name="QsciScintillaCompat.findFirstTarget" id="QsciScintillaCompat.findFirstTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.findFirstTarget" />
       <keyword name="QsciScintillaCompat.findNextTarget" id="QsciScintillaCompat.findNextTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.findNextTarget" />
+      <keyword name="QsciScintillaCompat.focusOutEvent" id="QsciScintillaCompat.focusOutEvent" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.focusOutEvent" />
       <keyword name="QsciScintillaCompat.foldExpandedAt" id="QsciScintillaCompat.foldExpandedAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldExpandedAt" />
       <keyword name="QsciScintillaCompat.foldFlagsAt" id="QsciScintillaCompat.foldFlagsAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldFlagsAt" />
       <keyword name="QsciScintillaCompat.foldHeaderAt" id="QsciScintillaCompat.foldHeaderAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldHeaderAt" />
@@ -5403,6 +5405,7 @@
       <keyword name="QsciScintillaCompat.scrollVertical" id="QsciScintillaCompat.scrollVertical" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.scrollVertical" />
       <keyword name="QsciScintillaCompat.setCurrentIndicator" id="QsciScintillaCompat.setCurrentIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCurrentIndicator" />
       <keyword name="QsciScintillaCompat.setEolModeByEolString" id="QsciScintillaCompat.setEolModeByEolString" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setEolModeByEolString" />
+      <keyword name="QsciScintillaCompat.setFolding" id="QsciScintillaCompat.setFolding" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setFolding" />
       <keyword name="QsciScintillaCompat.setIndentationGuideView" id="QsciScintillaCompat.setIndentationGuideView" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndentationGuideView" />
       <keyword name="QsciScintillaCompat.setIndicator" id="QsciScintillaCompat.setIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndicator" />
       <keyword name="QsciScintillaCompat.setIndicatorRange" id="QsciScintillaCompat.setIndicatorRange" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndicatorRange" />
