@@ -577,7 +577,7 @@ class Project(QObject):
         self.pfile = os.path.abspath(fn)
         self.ppath = os.path.abspath(os.path.dirname(fn))
         if Utilities.isWindowsPlatform():
-            self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE )
+            self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE)
         else:
             self.ppathRe = re.compile(re.escape(self.ppath + os.sep))
         
@@ -736,7 +736,7 @@ class Project(QObject):
             self.pfile = os.path.abspath(fn)
             self.ppath = os.path.abspath(os.path.dirname(fn))
             if Utilities.isWindowsPlatform():
-                self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE )
+                self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE)
             else:
                 self.ppathRe = re.compile(re.escape(self.ppath + os.sep))
             self.name = os.path.splitext(os.path.basename(fn))[0]
@@ -2255,6 +2255,10 @@ class Project(QObject):
         if dlg.exec_() == QDialog.Accepted:
             self.closeProject()
             dlg.storeData()
+            if Utilities.isWindowsPlatform():
+                self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE)
+            else:
+                self.ppathRe = re.compile(re.escape(self.ppath + os.sep))
             self.pdata["VCS"] = ['None']
             self.opened = True
             if not self.pdata["FILETYPES"]:
