@@ -24,6 +24,8 @@ class LexerSQL(QsciLexerSQL, Lexer):
         """
         QsciLexerSQL.__init__(self, parent)
         Lexer.__init__(self)
+        
+        self.commentString = "--"
     
     def initProperties(self):
         """

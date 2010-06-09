@@ -25,7 +25,7 @@ class LexerYAML(QsciLexerYAML, Lexer):
         QsciLexerYAML.__init__(self, parent)
         Lexer.__init__(self)
         
-        self.commentString = "#"
+        self.commentString = "---"
     
     def initProperties(self):
         """
