@@ -26,6 +26,10 @@ class LexerLua(QsciLexerLua, Lexer):
         Lexer.__init__(self)
         
         self.commentString = "--"
+        self.streamCommentString = {
+            'start' : '--[[ ',
+            'end'   : ' ]]--'
+        }
     
     def initProperties(self):
         """
