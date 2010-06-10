@@ -3220,8 +3220,9 @@ class ViewManager(QObject):
         
         @param fn name of the file to be added
         """
-        if fn in self.recent:
-            self.recent.remove(fn)
+        for recent in self.recent[:]:
+            if Utilities.samepath(fn, recent):
+                self.recent.remove(recent)
         self.recent.insert(0, fn)
         maxRecent = Preferences.getUI("RecentNumber")
         if len(self.recent) > maxRecent:
