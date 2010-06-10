@@ -840,8 +840,9 @@ class MultiProject(QObject):
         Private method to synchronize the list of recently opened multi projects
         with the central store.
         """
-        if self.pfile in self.recent:
-            self.recent.remove(self.pfile)
+        for recent in self.recent[:]:
+            if Utilities.samepath(self.pfile, recent):
+                self.recent.remove(recent)
         self.recent.insert(0, self.pfile)
         maxRecent = Preferences.getProject("RecentNumber")
         if len(self.recent) > maxRecent:

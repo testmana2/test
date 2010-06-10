@@ -381,7 +381,7 @@ class Terminal(QsciScintillaCompat):
         """
         Private slot to clear the current history.
         """
-        self.history.clear()
+        self.history = []
         
     def __selectHistory(self):
         """
