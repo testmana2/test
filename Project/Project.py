@@ -2005,6 +2005,7 @@ class Project(QObject):
                 QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
             if not newfn:
                 return False
+            newfn = Utilities.toNativeSeparators(newfn)
         
         if os.path.exists(newfn):
             canceled = QMessageBox.warning(None,
