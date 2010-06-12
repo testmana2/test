@@ -90,7 +90,7 @@ class Project(QObject):
     @signal projectOpenedHooks() emitted after a project file was read but before the
             projectOpened() signal is sent
     @signal projectOpened() emitted after a project file was read
-    @signal projectClosedHooks() emitted after a project file was clsoed but before the
+    @signal projectClosedHooks() emitted after a project file was closed but before the
             projectClosed() signal is sent
     @signal projectClosed() emitted after a project was closed
     @signal projectOthersAdded(string) emitted after a file or directory was added
