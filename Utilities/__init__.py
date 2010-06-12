@@ -596,11 +596,16 @@ def compactPath(path, width, measure = len):
     ellipsis = '...'
     
     head, tail = os.path.split(path)
-    while head:
-        path = os.path.join("%s%s" % (head, ellipsis), tail)
+    mid = len(head) // 2
+    head1 = head[:mid]
+    head2 = head[mid:]
+    while head1:
+        # head1 is same size as head2 or one shorter
+        path = os.path.join("%s%s%s" % (head1, ellipsis, head2), tail)
         if measure(path) <= width:
             return path
-        head = head[:-1]
+        head1 = head1[:-1]
+        head2 = head2[1:]
     path = os.path.join(ellipsis, tail)
     if measure(path) <= width:
         return path
