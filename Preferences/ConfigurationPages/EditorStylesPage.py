@@ -108,6 +108,12 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.editorColours["FoldmarginBackground"] = \
             self.initColour("FoldmarginBackground", self.foldmarginBackgroundButton, 
                 Preferences.getEditorColour)
+        self.editorColours["FoldMarkersForeground"] = \
+            self.initColour("FoldMarkersForeground", self.foldmarkersForegroundButton, 
+                Preferences.getEditorColour)
+        self.editorColours["FoldMarkersBackground"] = \
+            self.initColour("FoldMarkersBackground", self.foldmarkersBackgroundButton, 
+                Preferences.getEditorColour)
         
         self.eolCheckBox.setChecked(Preferences.getEditor("ShowEOL"))
         self.wrapLongLinesCheckBox.setChecked(\
@@ -346,6 +352,24 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.editorColours["NonmatchingBraceBack"] = \
             self.selectColour(self.nonmatchingBracesBackButton, 
                 self.editorColours["NonmatchingBraceBack"])
+        
+    @pyqtSlot()
+    def on_foldmarkersForegroundButton_clicked(self):
+        """
+        Private slot to set the foreground colour for the foldmarkers.
+        """
+        self.editorColours["FoldMarkersForeground"] = \
+            self.selectColour(self.foldmarkersForegroundButton, 
+                self.editorColours["FoldMarkersForeground"])
+        
+    @pyqtSlot()
+    def on_foldmarkersBackgroundButton_clicked(self):
+        """
+        Private slot to set the background colour for the margins.
+        """
+        self.editorColours["FoldMarkersBackground"] = \
+            self.selectColour(self.foldmarkersBackgroundButton, 
+                self.editorColours["FoldMarkersBackground"])
         
     def polishPage(self):
         """

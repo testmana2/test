@@ -900,6 +900,50 @@ class QsciScintillaCompat(QsciScintilla):
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, 
                                      QsciScintilla.SC_MARK_TCORNER);
     
+    def setFoldMarkersColors(self, foreColor, backColor):
+        """
+        Public method to set the foreground and background colors of the
+        fold markers.
+        
+        @param foreColor foreground color (QColor)
+        @param backColor background color (QColor)
+        """
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+            QsciScintilla.SC_MARKNUM_FOLDER, foreColor)
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+            QsciScintilla.SC_MARKNUM_FOLDER, backColor)
+        
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+            QsciScintilla.SC_MARKNUM_FOLDEROPEN, foreColor)
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+            QsciScintilla.SC_MARKNUM_FOLDEROPEN, backColor)
+        
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+            QsciScintilla.SC_MARKNUM_FOLDEROPENMID, foreColor)
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+            QsciScintilla.SC_MARKNUM_FOLDEROPENMID, backColor)
+        
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+            QsciScintilla.SC_MARKNUM_FOLDERSUB, foreColor)
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+            QsciScintilla.SC_MARKNUM_FOLDERSUB, backColor)
+        
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+            QsciScintilla.SC_MARKNUM_FOLDERTAIL, foreColor)
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+            QsciScintilla.SC_MARKNUM_FOLDERTAIL, backColor)
+        
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+            QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, foreColor)
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+            QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, backColor)
+        
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+            QsciScintilla.SC_MARKNUM_FOLDEREND, foreColor)
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+            QsciScintilla.SC_MARKNUM_FOLDEREND, backColor)
+        
+    
     #####################################################################################
     # interface methods to the standard keyboard command set
     #####################################################################################

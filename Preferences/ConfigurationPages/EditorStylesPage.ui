@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>576</width>
-    <height>1250</height>
+    <height>1325</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -331,6 +331,52 @@
           </property>
           <property name="toolTip">
            <string>Select the background colour for the foldmargin</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Foldmarkers foreground:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="foldmarkersForegroundButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Select the foreground colour of the foldmarkers</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Foldmarkers background:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="foldmarkersBackgroundButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Select the background colour of the foldmarkers</string>
           </property>
           <property name="text">
            <string/>
@@ -1061,6 +1107,8 @@
   <tabstop>marginsForegroundButton</tabstop>
   <tabstop>marginsBackgroundButton</tabstop>
   <tabstop>foldmarginBackgroundButton</tabstop>
+  <tabstop>foldmarkersForegroundButton</tabstop>
+  <tabstop>foldmarkersBackgroundButton</tabstop>
   <tabstop>linenumbersFontButton</tabstop>
   <tabstop>customSelColourCheckBox</tabstop>
   <tabstop>colourizeSelTextCheckBox</tabstop>

@@ -5998,12 +5998,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Drucken abgebrochen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4798"/>
+        <location filename="QScintilla/Editor.py" line="4796"/>
         <source>File changed</source>
         <translation>Datei geändert</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4794"/>
+        <location filename="QScintilla/Editor.py" line="4792"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Warnung:&lt;/b&gt; Vorgenommenen Änderungen gehen beim neu einlesen verloren.</translation>
     </message>
@@ -6068,57 +6068,57 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zurück zum letzten gesichert Zustand</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4528"/>
         <source>Macro Name</source>
         <translation>Makro Name</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4528"/>
         <source>Select a macro name:</source>
         <translation>Wähle einen Makro Namen:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4596"/>
         <source>Macro files (*.macro)</source>
         <translation>Makro Dateien (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4558"/>
+        <location filename="QScintilla/Editor.py" line="4556"/>
         <source>Load macro file</source>
         <translation>Lade Makro Datei</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4579"/>
+        <location filename="QScintilla/Editor.py" line="4577"/>
         <source>Error loading macro</source>
         <translation>Fehler beim Makro Laden</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4596"/>
         <source>Save macro file</source>
         <translation>Makro Datei schreiben</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4615"/>
+        <location filename="QScintilla/Editor.py" line="4613"/>
         <source>Save macro</source>
         <translation>Makro speichern</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4633"/>
+        <location filename="QScintilla/Editor.py" line="4631"/>
         <source>Error saving macro</source>
         <translation>Fehler beim Makro speichern</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4644"/>
+        <location filename="QScintilla/Editor.py" line="4642"/>
         <source>Start Macro Recording</source>
         <translation>Makroaufzeichnung starten</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4671"/>
+        <location filename="QScintilla/Editor.py" line="4669"/>
         <source>Macro Recording</source>
         <translation>Makroaufzeichnung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4671"/>
+        <location filename="QScintilla/Editor.py" line="4669"/>
         <source>Enter name of the macro:</source>
         <translation>Gib einen Namen für das Makro ein:</translation>
     </message>
@@ -6178,32 +6178,32 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Haltepunkt bearbeiten...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3894"/>
+        <location filename="QScintilla/Editor.py" line="3892"/>
         <source>Enable breakpoint</source>
         <translation>Haltepunkt aktivieren</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3897"/>
+        <location filename="QScintilla/Editor.py" line="3895"/>
         <source>Disable breakpoint</source>
         <translation>Haltepunkt deaktivieren</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4137"/>
+        <location filename="QScintilla/Editor.py" line="4135"/>
         <source>Code Coverage</source>
         <translation>Quelltext Abdeckung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4137"/>
+        <location filename="QScintilla/Editor.py" line="4135"/>
         <source>Please select a coverage file</source>
         <translation>Bitte wählen sie eine Datei mit Abdeckungsdaten</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4275"/>
+        <location filename="QScintilla/Editor.py" line="4273"/>
         <source>Profile Data</source>
         <translation>Profildaten</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4275"/>
+        <location filename="QScintilla/Editor.py" line="4273"/>
         <source>Please select a profile file</source>
         <translation>Bitte wählen sie eine Datei mit Profildaten</translation>
     </message>
@@ -6213,12 +6213,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Autom. Vervollständigung aktiv</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3431"/>
+        <location filename="QScintilla/Editor.py" line="3429"/>
         <source>Autocompletion</source>
         <translation>Autom. Vervollständigung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3431"/>
+        <location filename="QScintilla/Editor.py" line="3429"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Die automatische Vervollständigung ist nicht verfügbar, da keine Quelle gesetzt ist.</translation>
     </message>
@@ -6253,7 +6253,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Autom. Speicherung aktiv</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4994"/>
+        <location filename="QScintilla/Editor.py" line="4992"/>
         <source>Drop Error</source>
         <translation>Drop Fehler</translation>
     </message>
@@ -6263,12 +6263,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zeige Syntaxfehlermeldung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4391"/>
+        <location filename="QScintilla/Editor.py" line="4389"/>
         <source>Syntax Error</source>
         <translation>Syntaxfehler</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4391"/>
+        <location filename="QScintilla/Editor.py" line="4389"/>
         <source>No syntax error message available.</source>
         <translation>Keine Syntaxfehlermeldung verfügbar.</translation>
     </message>
@@ -6298,17 +6298,17 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Vorige nichtabgedeckte Zeile</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4183"/>
+        <location filename="QScintilla/Editor.py" line="4181"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zeilen ohne Abdeckung Markieren</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4179"/>
+        <location filename="QScintilla/Editor.py" line="4177"/>
         <source>All lines have been covered.</source>
         <translation>Alle Zeilen sind abgedeckt.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4183"/>
+        <location filename="QScintilla/Editor.py" line="4181"/>
         <source>There is no coverage file available.</source>
         <translation>Es gibt keine Datei mit Abdeckungsinformationen.</translation>
     </message>
@@ -6323,27 +6323,27 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; enthält ungesicherte Änderungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4572"/>
+        <location filename="QScintilla/Editor.py" line="4570"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makro Datei &lt;b&gt;{0}&lt;/b&gt; kann nicht gelesen werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4579"/>
+        <location filename="QScintilla/Editor.py" line="4577"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makro Datei &lt;b&gt;{0}&lt;/b&gt; ist zerstört.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4615"/>
+        <location filename="QScintilla/Editor.py" line="4613"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makro Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4633"/>
+        <location filename="QScintilla/Editor.py" line="4631"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makro Datei &lt;b&gt;{0}&lt;/b&gt; kann nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4994"/>
+        <location filename="QScintilla/Editor.py" line="4992"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; ist keine Datei.&lt;/p&gt;</translation>
     </message>
@@ -6388,82 +6388,82 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Keine Sprache</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4877"/>
+        <location filename="QScintilla/Editor.py" line="4875"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5012"/>
+        <location filename="QScintilla/Editor.py" line="5010"/>
         <source>Resources</source>
         <translation>Resourcen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5014"/>
+        <location filename="QScintilla/Editor.py" line="5012"/>
         <source>Add file...</source>
         <translation>Datei hinzufügen...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5016"/>
+        <location filename="QScintilla/Editor.py" line="5014"/>
         <source>Add files...</source>
         <translation>Dateien hinzufügen...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5018"/>
+        <location filename="QScintilla/Editor.py" line="5016"/>
         <source>Add aliased file...</source>
         <translation>Aliased Datei hinzufügen...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5020"/>
+        <location filename="QScintilla/Editor.py" line="5018"/>
         <source>Add localized resource...</source>
         <translation>Lokalisierte Resource hinzufügen...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5041"/>
+        <location filename="QScintilla/Editor.py" line="5039"/>
         <source>Add file resource</source>
         <translation>Dateiresource hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5057"/>
+        <location filename="QScintilla/Editor.py" line="5055"/>
         <source>Add file resources</source>
         <translation>Dateiresourcen hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5084"/>
+        <location filename="QScintilla/Editor.py" line="5082"/>
         <source>Add aliased file resource</source>
         <translation>Aliased Dateiresourcen hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5084"/>
+        <location filename="QScintilla/Editor.py" line="5082"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias für Datei &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5145"/>
+        <location filename="QScintilla/Editor.py" line="5143"/>
         <source>Package Diagram</source>
         <translation>Package-Diagramm</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5145"/>
+        <location filename="QScintilla/Editor.py" line="5143"/>
         <source>Include class attributes?</source>
         <translation>Klassenattribute anzeigen?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5182"/>
+        <location filename="QScintilla/Editor.py" line="5180"/>
         <source>Application Diagram</source>
         <translation>Applikations-Diagramm</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5182"/>
+        <location filename="QScintilla/Editor.py" line="5180"/>
         <source>Include module names?</source>
         <translation>Modulnamen anzeigen?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5023"/>
+        <location filename="QScintilla/Editor.py" line="5021"/>
         <source>Add resource frame</source>
         <translation>Resource Rahmen hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4644"/>
+        <location filename="QScintilla/Editor.py" line="4642"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Eine Makroaufzeichnung ist bereits aktiv. Neu starten?</translation>
     </message>
@@ -6518,12 +6518,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Kein Exportformat angegeben. Abbruch...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5166"/>
+        <location filename="QScintilla/Editor.py" line="5164"/>
         <source>Imports Diagram</source>
         <translation>Imports Diagramm</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5166"/>
+        <location filename="QScintilla/Editor.py" line="5164"/>
         <source>Include imports from external modules?</source>
         <translation>Imports externer Module anzeigen?</translation>
     </message>
@@ -6603,7 +6603,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Wähle den anzuwendenden Pygments Lexer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5415"/>
+        <location filename="QScintilla/Editor.py" line="5413"/>
         <source>Check spelling...</source>
         <translation>Rechtschreibprüfung...</translation>
     </message>
@@ -6613,12 +6613,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Rechtschreibprüfung für Auswahl...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5417"/>
+        <location filename="QScintilla/Editor.py" line="5415"/>
         <source>Add to dictionary</source>
         <translation>Zum Wörterbuch hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5419"/>
+        <location filename="QScintilla/Editor.py" line="5417"/>
         <source>Ignore All</source>
         <translation>Alle ignorieren</translation>
     </message>
@@ -6638,7 +6638,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gesichert werden.&lt;br/&gt;Grund: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4789"/>
+        <location filename="QScintilla/Editor.py" line="4787"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; wurde geändert, während sie in eric5 geöffnet war. Neu einlesen?&lt;/p&gt;</translation>
     </message>
@@ -6663,12 +6663,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Warnungen löschen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4511"/>
+        <location filename="QScintilla/Editor.py" line="4509"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes Warnung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4511"/>
+        <location filename="QScintilla/Editor.py" line="4509"/>
         <source>No py3flakes warning message available.</source>
         <translation>Keine Py3flakes Warnung verfügbar.</translation>
     </message>
@@ -8490,12 +8490,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Monospace Font</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="347"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="393"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>Drücken, um den Font für die Zeilennummern des Editors zu wählen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="350"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="396"/>
         <source>Line Numbers Font</source>
         <translation>Zeilennummernfont</translation>
     </message>
@@ -8505,7 +8505,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Monospace Text</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="366"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="412"/>
         <source>2345</source>
         <translation>2345</translation>
     </message>
@@ -8600,282 +8600,282 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Baum mit Kästen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="397"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="443"/>
         <source>Selection</source>
         <translation>Auswahl</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="405"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="451"/>
         <source>Select to use custom selection colours</source>
         <translation>Auswählen, um eigen Farben für die Auswahl zu verwenden</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="454"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eigene Farben für Auswahl&lt;/b&gt;&lt;p&gt;Diesen Eintrag auswählen, um eigene Farben für die Auswahl in Editor und Shell Fenstern zu verwenden. Die Farben für den Auswahlvorder- und -hintergrund werden auf der Farbkonfigurationsseite eingestellt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="457"/>
         <source>Use custom selection colours</source>
         <translation>Eigene Farben für Auswahl</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="464"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>Auswählen, um den ausgewählten Text durch den Lexer einzufärben.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="467"/>
         <source>Colourize selected text</source>
         <translation>Ausgewählten Text einfärben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="428"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="474"/>
         <source>Select to extend selection to end of line</source>
         <translation>Auswählen, um die Auswahl bis zum Zeilenende zu erweitern</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="431"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="477"/>
         <source>Extend selection to end of line</source>
         <translation>Auswahl bis zum Zeilenende erweitern</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="442"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="488"/>
         <source>Selection foreground:</source>
         <translation>Vordergrund der Auswahl:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="501"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>Wählt die Textfarbe für die Auswahl.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="465"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="511"/>
         <source>Selection background:</source>
         <translation>Hintergrund der Auswahl:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="478"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="524"/>
         <source>Select the background colour for the selection.</source>
         <translation>Wähle die Hintergrundfarbe für die Auswahl.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="493"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="539"/>
         <source>Caret</source>
         <translation>Cursor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="499"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="545"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Auswählen, um die aktuelle Zeile hervorzuheben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="502"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="548"/>
         <source>Caretline visible</source>
         <translation>Aktuelle Zeile hervorheben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="511"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="557"/>
         <source>Caret width:</source>
         <translation>Cursorbreite:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="518"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Wähle die Cursorbreite (1, 2 oder 3 Pixel)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="551"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="597"/>
         <source>Caret foreground:</source>
         <translation>Cursorfarbe:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="610"/>
         <source>Select the colour for the caret.</source>
         <translation>Wähle die Farbe für die Einfügemarke.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="574"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="620"/>
         <source>Caretline background:</source>
         <translation>Hintergrund der aktuellen Zeile:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="587"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="633"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Wähle die Hintergrundfarbe für die Zeile mit der Einfügemarke.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="608"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="654"/>
         <source>Current line marker:</source>
         <translation>Markierung für aktuelle Zeile:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="667"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Wähle die Farbe der Markierung für die aktuelle Zeile.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="631"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="677"/>
         <source>Error line marker:</source>
         <translation>Markierung für Fehlerzeile:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="644"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="690"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Wähle die Farbe der Markierung für die Fehlerzeile.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="657"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="703"/>
         <source>Braces</source>
         <translation>Klammern</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="709"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Wähle aus, ob passende und ungültige Klammerung hervorgehoben werden soll.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="666"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="712"/>
         <source>Highlight braces</source>
         <translation>Klammerung hervorheben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="673"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="719"/>
         <source>Matched braces:</source>
         <translation>Passende Klammer:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="732"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Wähle die Farbe zur Hervorhebung passender Klammerung.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="696"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="742"/>
         <source>Matched braces background:</source>
         <translation>Hintergrund passende Klammer:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="709"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="755"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Wähle die Hintergrundfarbe zur Hervorhebung passender Klammerung.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="725"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="771"/>
         <source>Unmatched brace:</source>
         <translation>Ungültige Klammer:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="732"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="778"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Wähle die Farbe zur Hervorhebung ungültiger Klammerung.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="748"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="794"/>
         <source>Unmatched brace background:</source>
         <translation>Hintergrund ungültige Klammer:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="755"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="801"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Wähle die Hintergrundfarbe zur Hervorhebung ungültiger Klammerung.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="768"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="814"/>
         <source>End of Line</source>
         <translation>Zeilenende</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="822"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Wähle aus, ob die Zeilenendemarkierung angezeigt werden soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="825"/>
         <source>Show End of Line</source>
         <translation>Zeige Zeilenendemarkierung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="786"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
         <source>Select, whether long lines should be wrapped</source>
         <translation>Auswählen, wenn lange Zeilen umbrochen werden sollen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="789"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="835"/>
         <source>Wrap long lines</source>
         <translation>Lange Zeilen umbrechen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="798"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="844"/>
         <source>Edge Mode</source>
         <translation>Seitenrand</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="888"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Wähle die Farbe für den Seitenrand.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="852"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="898"/>
         <source>Background colour:</source>
         <translation>Hintergrundfarbe:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="865"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="911"/>
         <source>Move to set the edge column.</source>
         <translation>Bewegen sie den Schieber, um die Seitenbreite zu setzen.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="893"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="939"/>
         <source>Displays the selected tab width.</source>
         <translation>Zeigt die gewählte Tabulatorweite an.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="909"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="955"/>
         <source>Column number:</source>
         <translation>Seitenbreite:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="916"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="962"/>
         <source>Mode:</source>
         <translation>Modus:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="976"/>
         <source>Disabled</source>
         <translation>Ausgeschaltet</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="935"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="981"/>
         <source>Draw Line</source>
         <translation>Zeichne Linie</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="940"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="986"/>
         <source>Change Background Colour</source>
         <translation>Ändere Hintergrundfarbe</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1011"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1057"/>
         <source>Various</source>
         <translation>Verschiedenes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1063"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Wähle aus, ob Leerzeichen angezeigt werden sollen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1066"/>
         <source>Show Whitespace</source>
         <translation>Zeige Leerzeichen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1027"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1073"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Auswählen, um ein minimales Kontextmenü anzuzeigen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1030"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1076"/>
         <source>Show minimal context menu</source>
         <translation>Zeige minimales Kontextmenü</translation>
     </message>
@@ -8920,27 +8920,27 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zeige zusammengefaßte Spalten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="602"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="648"/>
         <source>Debugging Line Markers</source>
         <translation>Zeilenmarkierungen zum Debuggen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="954"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1000"/>
         <source>Zoom</source>
         <translation>Vergrößerung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1006"/>
         <source>Initial zoom factor:</source>
         <translation>Anfangsvergrößerungsfaktor:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="970"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1016"/>
         <source>Move to set the initial zoom factor</source>
         <translation>Verschiebe den Regler zur Auswahl des Anfangsvergrößerungsfaktors</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="992"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1038"/>
         <source>Displays the selected initial zoom factor</source>
         <translation>Zeigt den gewählten Anfangsvergrößerungsfaktor an</translation>
     </message>
@@ -8953,6 +8953,26 @@ gesamte Auswahl.&lt;/li&gt;
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="262"/>
         <source>Arrow Tree</source>
         <translation>Baum mit Pfeilen</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="343"/>
+        <source>Foldmarkers foreground:</source>
+        <translation>Faltmarkenvordergrund:</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="356"/>
+        <source>Select the foreground colour of the foldmarkers</source>
+        <translation>Wähle die Vordergrundfarbe der Faltmarken</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="366"/>
+        <source>Foldmarkers background:</source>
+        <translation>Faltmarkenhintergrund:</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="379"/>
+        <source>Select the background colour of the foldmarkers</source>
+        <translation>Wähle die Hintergrundfarbe der Faltmarken</translation>
     </message>
 </context>
 <context>
@@ -20367,7 +20387,7 @@ Sollen die Änderungen gesichert werden?</translation>
         <translation>Datei geladen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1837"/>
+        <location filename="QScintilla/MiniEditor.py" line="1840"/>
         <source>Untitled</source>
         <translation>Unbenannt</translation>
     </message>
@@ -20382,22 +20402,22 @@ Sollen die Änderungen gesichert werden?</translation>
         <translation>Mini Editor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1877"/>
+        <location filename="QScintilla/MiniEditor.py" line="1880"/>
         <source>Select all</source>
         <translation>Alles auswählen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1878"/>
+        <location filename="QScintilla/MiniEditor.py" line="1881"/>
         <source>Deselect all</source>
         <translation>Auswahl aufheben</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1889"/>
+        <location filename="QScintilla/MiniEditor.py" line="1892"/>
         <source>Languages</source>
         <translation>Sprachen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1892"/>
+        <location filename="QScintilla/MiniEditor.py" line="1895"/>
         <source>No Language</source>
         <translation>Keine Sprache</translation>
     </message>
@@ -20484,22 +20504,22 @@ Sollen die Änderungen gesichert werden?</translation>
         <translation>Druckt die aktuelle Datei</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1803"/>
+        <location filename="QScintilla/MiniEditor.py" line="1806"/>
         <source>Printing...</source>
         <translation>Drucke...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1819"/>
+        <location filename="QScintilla/MiniEditor.py" line="1822"/>
         <source>Printing completed</source>
         <translation>Drucken beendet</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1821"/>
+        <location filename="QScintilla/MiniEditor.py" line="1824"/>
         <source>Error while printing</source>
         <translation>Fehler beim Drucken</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1824"/>
+        <location filename="QScintilla/MiniEditor.py" line="1827"/>
         <source>Printing aborted</source>
         <translation>Drucken abgebrochen</translation>
     </message>
@@ -20524,27 +20544,27 @@ Sollen die Änderungen gesichert werden?</translation>
         <translation>&lt;b&gt;Seitenansicht&lt;/b&gt;&lt;p&gt;Zeift eine Seitenansicht der aktuellen Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1911"/>
+        <location filename="QScintilla/MiniEditor.py" line="1914"/>
         <source>Guessed</source>
         <translation>Ermittelt</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1931"/>
+        <location filename="QScintilla/MiniEditor.py" line="1934"/>
         <source>Alternatives</source>
         <translation>Alternativen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1928"/>
+        <location filename="QScintilla/MiniEditor.py" line="1931"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativen ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1945"/>
+        <location filename="QScintilla/MiniEditor.py" line="1948"/>
         <source>Pygments Lexer</source>
         <translation>Pygments Lexer</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1945"/>
+        <location filename="QScintilla/MiniEditor.py" line="1948"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Wähle den anzuwendenden Pygments Lexer.</translation>
     </message>
@@ -20652,7 +20672,7 @@ Sollen die Änderungen gesichert werden?</translation>
         <translation>Mehrfachprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="873"/>
+        <location filename="MultiProject/MultiProject.py" line="874"/>
         <source>&amp;Clear</source>
         <translation>&amp;Löschen</translation>
     </message>
@@ -22207,12 +22227,12 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="838"/>
+        <location filename="Preferences/__init__.py" line="840"/>
         <source>Export Preferences</source>
         <translation>Konfiguration exportieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="857"/>
+        <location filename="Preferences/__init__.py" line="859"/>
         <source>Import Preferences</source>
         <translation>Konfiguration importieren</translation>
     </message>
@@ -22472,167 +22492,167 @@ Bitte Aktualisieren.</translation>
         <translation>Datei hinzufügen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2195"/>
+        <location filename="Project/Project.py" line="2196"/>
         <source>Delete file</source>
         <translation>Datei löschen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2293"/>
+        <location filename="Project/Project.py" line="2298"/>
         <source>Create project directory</source>
         <translation>Projektverzeichnis erstellen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3341"/>
+        <location filename="Project/Project.py" line="3346"/>
         <source>Open project</source>
         <translation>Projekt öffnen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3375"/>
+        <location filename="Project/Project.py" line="3380"/>
         <source>Save project as</source>
         <translation>Projekt speichern unter</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2886"/>
+        <location filename="Project/Project.py" line="2891"/>
         <source>Save File</source>
         <translation>Datei speichern</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2921"/>
+        <location filename="Project/Project.py" line="2926"/>
         <source>Close Project</source>
         <translation>Projekt schließen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2921"/>
+        <location filename="Project/Project.py" line="2926"/>
         <source>The current project has unsaved changes.</source>
         <translation>Das aktuelle Projekt hat ungesicherte Änderungen.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3520"/>
+        <location filename="Project/Project.py" line="3525"/>
         <source>&amp;Save</source>
         <translation>&amp;Speichern</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3328"/>
+        <location filename="Project/Project.py" line="3333"/>
         <source>New project</source>
         <translation>Neues Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3328"/>
+        <location filename="Project/Project.py" line="3333"/>
         <source>&amp;New...</source>
         <translation>&amp;Neu...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3332"/>
+        <location filename="Project/Project.py" line="3337"/>
         <source>Generate a new project</source>
         <translation>Erstelle ein neues Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3333"/>
+        <location filename="Project/Project.py" line="3338"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Neu...&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog zur Eingabe der Informationen des neuen Projektes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3341"/>
+        <location filename="Project/Project.py" line="3346"/>
         <source>&amp;Open...</source>
         <translation>&amp;Öffnen...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3345"/>
+        <location filename="Project/Project.py" line="3350"/>
         <source>Open an existing project</source>
         <translation>Öffnet ein bestehendes Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3346"/>
+        <location filename="Project/Project.py" line="3351"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Öffnen...&lt;/b&gt;&lt;p&gt;Dies öffnet ein bestehendes Projekt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3353"/>
+        <location filename="Project/Project.py" line="3358"/>
         <source>Close project</source>
         <translation>Projekt schließen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3353"/>
+        <location filename="Project/Project.py" line="3358"/>
         <source>&amp;Close</source>
         <translation>Schl&amp;ießen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3356"/>
+        <location filename="Project/Project.py" line="3361"/>
         <source>Close the current project</source>
         <translation>Schließt das aktuelle Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3357"/>
+        <location filename="Project/Project.py" line="3362"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schließen&lt;/b&gt;&lt;p&gt;Dies schließt das aktuelle Projekt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3364"/>
+        <location filename="Project/Project.py" line="3369"/>
         <source>Save project</source>
         <translation>Projekt speichern</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3367"/>
+        <location filename="Project/Project.py" line="3372"/>
         <source>Save the current project</source>
         <translation>Speichert das aktuelle Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3368"/>
+        <location filename="Project/Project.py" line="3373"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Speichern&lt;/b&gt;&lt;p&gt;Dies speichert das aktuelle Projekt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3378"/>
+        <location filename="Project/Project.py" line="3383"/>
         <source>Save the current project to a new file</source>
         <translation>Speichert das aktuelle Projekt in eine neue Datei</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3379"/>
+        <location filename="Project/Project.py" line="3384"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Speichern unter&lt;/b&gt;&lt;p&gt;Dies speichert das aktuelle Projekt in eine neue Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3416"/>
+        <location filename="Project/Project.py" line="3421"/>
         <source>Add translation to project</source>
         <translation>Übersetzung zum Projekt hinzufügen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3416"/>
+        <location filename="Project/Project.py" line="3421"/>
         <source>Add &amp;translation...</source>
         <translation>&amp;Übersetzung hinzufügen...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3420"/>
+        <location filename="Project/Project.py" line="3425"/>
         <source>Add a translation to the current project</source>
         <translation>Eine Übersetzung zum aktuellen Projekt hinzufügen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3422"/>
+        <location filename="Project/Project.py" line="3427"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Übersetzung hinzufügen...&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog, mit dem eine Übersetzung zum aktuellen Projekt hinzugefügt werden kann.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3442"/>
+        <location filename="Project/Project.py" line="3447"/>
         <source>Project properties</source>
         <translation>Projekt Eigenschaften</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3442"/>
+        <location filename="Project/Project.py" line="3447"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Eigenschaften...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3445"/>
+        <location filename="Project/Project.py" line="3450"/>
         <source>Show the project properties</source>
         <translation>Zeigt die Projekt Eigenschaften an</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3446"/>
+        <location filename="Project/Project.py" line="3451"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eigenschaften...&lt;/b&gt;&lt;p&gt;Dies zeigt einen Dialog an, mit dem die Projekt Eigenschaften bearbeitet werden können.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3722"/>
+        <location filename="Project/Project.py" line="3727"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Zu&amp;letzt geöffnete Projekte</translation>
     </message>
@@ -22642,17 +22662,17 @@ Bitte Aktualisieren.</translation>
         <translation>Das Zielverzeichnis darf nicht leer sein.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3430"/>
+        <location filename="Project/Project.py" line="3435"/>
         <source>Search new files</source>
         <translation>Neue Dateien suchen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3430"/>
+        <location filename="Project/Project.py" line="3435"/>
         <source>Searc&amp;h new files...</source>
         <translation>Neue &amp;Dateien suchen...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3433"/>
+        <location filename="Project/Project.py" line="3438"/>
         <source>Search new files in the project directory.</source>
         <translation>Sucht neue Dateien im Projektverzeichnis.</translation>
     </message>
@@ -22672,22 +22692,22 @@ Bitte Aktualisieren.</translation>
         <translation>Sprache hinzufügen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3375"/>
+        <location filename="Project/Project.py" line="3380"/>
         <source>Save &amp;as...</source>
         <translation>Speichern &amp;unter...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4150"/>
+        <location filename="Project/Project.py" line="4156"/>
         <source>Version Control System</source>
         <translation>Versionskontrollsystem</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4012"/>
+        <location filename="Project/Project.py" line="4018"/>
         <source>Search New Files</source>
         <translation>Neue Dateien suchen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4012"/>
+        <location filename="Project/Project.py" line="4018"/>
         <source>There were no new files found to be added.</source>
         <translation>Es wurden keine neuen Dateien gefunden.</translation>
     </message>
@@ -22707,147 +22727,147 @@ Bitte Aktualisieren.</translation>
         <translation>Projekt Session speichern</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3556"/>
+        <location filename="Project/Project.py" line="3561"/>
         <source>Load session</source>
         <translation>Session laden</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3559"/>
+        <location filename="Project/Project.py" line="3564"/>
         <source>Load the projects session file.</source>
         <translation>Laden der Projekt Session.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3573"/>
+        <location filename="Project/Project.py" line="3578"/>
         <source>Save session</source>
         <translation>Session speichern</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3576"/>
+        <location filename="Project/Project.py" line="3581"/>
         <source>Save the projects session file.</source>
         <translation>Speichern der Projekt Session.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3560"/>
+        <location filename="Project/Project.py" line="3565"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Session laden&lt;/b&gt;&lt;p&gt;Dies lädt eine Projekt Session Datei. Die Session enthält die folgenden Daten.&lt;br&gt;- alle offenen Quelltextdateien&lt;br&gt;- alle Haltepunkte&lt;br&gt;- die Kommandozeilenparameter&lt;br&gt;- das Arbeitsverzeichnis&lt;br&gt;- das Ausnahmemeldungsflag&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3577"/>
+        <location filename="Project/Project.py" line="3582"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Session speichern&lt;/b&gt;&lt;p&gt;Dies speichert eine Projekt Session Datei. Die Session enthält die folgenden Daten.&lt;br&gt;- alle offenen Quelltextdateien&lt;br&gt;- alle Haltepunkte&lt;br&gt;- die Kommandozeilenparameter&lt;br&gt;- das Arbeitsverzeichnis&lt;br&gt;- das Ausnahmemeldungsflag&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3731"/>
+        <location filename="Project/Project.py" line="3736"/>
         <source>Source &amp;Documentation</source>
         <translation>&amp;Quelltextdokumentation</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3726"/>
+        <location filename="Project/Project.py" line="3731"/>
         <source>Chec&amp;k</source>
         <translation>&amp;Prüfen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3603"/>
+        <location filename="Project/Project.py" line="3608"/>
         <source>Code Metrics</source>
         <translation>Quelltext Metriken</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3603"/>
+        <location filename="Project/Project.py" line="3608"/>
         <source>&amp;Code Metrics...</source>
         <translation>&amp;Quelltext Metriken...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3606"/>
+        <location filename="Project/Project.py" line="3611"/>
         <source>Show some code metrics for the project.</source>
         <translation>Zeige einige Quelltext Metriken für das Projekt.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3608"/>
+        <location filename="Project/Project.py" line="3613"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Quelltext Metriken...&lt;/b&gt;&lt;p&gt;Dies zeigt einige Quelltext Metriken für alle Python Dateien des Projektes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3615"/>
+        <location filename="Project/Project.py" line="3620"/>
         <source>Python Code Coverage</source>
         <translation>Python Quelltext Abdeckung</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3615"/>
+        <location filename="Project/Project.py" line="3620"/>
         <source>Code Co&amp;verage...</source>
         <translation>&amp;Quelltext Abdeckung...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3618"/>
+        <location filename="Project/Project.py" line="3623"/>
         <source>Show code coverage information for the project.</source>
         <translation>Zeige die Quelltextabdeckung für das Projekt.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3620"/>
+        <location filename="Project/Project.py" line="3625"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Quelltext Abdeckung...&lt;/b&gt;&lt;p&gt;Dies zeigt die Quelltextabdeckung für alle Python Dateien des Projektes an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4309"/>
+        <location filename="Project/Project.py" line="4315"/>
         <source>Profile Data</source>
         <translation>Profildaten</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3628"/>
+        <location filename="Project/Project.py" line="3633"/>
         <source>&amp;Profile Data...</source>
         <translation>&amp;Profildaten...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3631"/>
+        <location filename="Project/Project.py" line="3636"/>
         <source>Show profiling data for the project.</source>
         <translation>Zeige Profildaten des aktuellen Projektes.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3633"/>
+        <location filename="Project/Project.py" line="3638"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profildaten...&lt;/b&gt;&lt;p&gt;Dies zeigt die Profildaten des Projektes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3728"/>
+        <location filename="Project/Project.py" line="3733"/>
         <source>Sho&amp;w</source>
         <translation>&amp;Zeige</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4288"/>
+        <location filename="Project/Project.py" line="4294"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Für das aktuelle Projekt ist kein Hauptskript festgelegt. Abbruch</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4242"/>
+        <location filename="Project/Project.py" line="4248"/>
         <source>Coverage Data</source>
         <translation>Quelltext Abdeckungsdaten</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3723"/>
+        <location filename="Project/Project.py" line="3728"/>
         <source>&amp;Version Control</source>
         <translation>&amp;Versionskontrolle</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4362"/>
+        <location filename="Project/Project.py" line="4368"/>
         <source>Application Diagram</source>
         <translation>Applikations-Diagramm</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3640"/>
+        <location filename="Project/Project.py" line="3645"/>
         <source>&amp;Application Diagram...</source>
         <translation>&amp;Applikations-Diagramm...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3643"/>
+        <location filename="Project/Project.py" line="3648"/>
         <source>Show a diagram of the project.</source>
         <translation>Zeigt ein Diagramm des Projektes.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3645"/>
+        <location filename="Project/Project.py" line="3650"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Applikations-Diagramm...&lt;/b&gt;&lt;p&gt;Dies zeigt ein Diagramm des Projektes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3729"/>
+        <location filename="Project/Project.py" line="3734"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagramme</translation>
     </message>
@@ -22867,37 +22887,37 @@ Bitte Aktualisieren.</translation>
         <translation>Projektdatei speichern</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4263"/>
+        <location filename="Project/Project.py" line="4269"/>
         <source>Code Coverage</source>
         <translation>Quelltext Abdeckung</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4263"/>
+        <location filename="Project/Project.py" line="4269"/>
         <source>Please select a coverage file</source>
         <translation>Bitte wählen sie eine Datei mit Abdeckungsdaten</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4309"/>
+        <location filename="Project/Project.py" line="4315"/>
         <source>Please select a profile file</source>
         <translation>Bitte wählen sie eine Datei mit Profildaten</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3402"/>
+        <location filename="Project/Project.py" line="3407"/>
         <source>Add directory to project</source>
         <translation>Verzeichnis zum Projekt hinzufügen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3402"/>
+        <location filename="Project/Project.py" line="3407"/>
         <source>Add directory...</source>
         <translation>Verzeichnis hinzufügen...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3406"/>
+        <location filename="Project/Project.py" line="3411"/>
         <source>Add a directory to the current project</source>
         <translation>Füge den Inhalt eines Verzeichnisses zum Projekt hinzu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3408"/>
+        <location filename="Project/Project.py" line="3413"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Verzeichnis hinzufügen&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog, mit dem ein Verzeichnis bzw. der Inhalt eines Verzeichnisses zum aktuellen Projekt hinzugefügt werden kann.&lt;/p&gt;</translation>
     </message>
@@ -22907,32 +22927,32 @@ Bitte Aktualisieren.</translation>
         <translation>Datei umbenennen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2025"/>
+        <location filename="Project/Project.py" line="2026"/>
         <source>Rename File</source>
         <translation>Datei umbenennen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2401"/>
+        <location filename="Project/Project.py" line="2406"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>Soll die Projektdatei zum Repository hinzugefügt werden?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2749"/>
+        <location filename="Project/Project.py" line="2754"/>
         <source>New Project</source>
         <translation>Neues Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2337"/>
+        <location filename="Project/Project.py" line="2342"/>
         <source>Add existing files to the project?</source>
         <translation>Existierende Dateien dem projekt hinzufügen?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2451"/>
+        <location filename="Project/Project.py" line="2456"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation>Möchten sie die VCS Befehlsoptionen bearbeiten?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2425"/>
+        <location filename="Project/Project.py" line="2430"/>
         <source>Select version control system for the project</source>
         <translation>Wähle das Versionskontrollsystem für das Projekt</translation>
     </message>
@@ -22982,22 +23002,22 @@ Bitte Aktualisieren.</translation>
         <translation>&lt;p&gt;Die ausgewählte Übersetzungsdatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelöscht werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2886"/>
+        <location filename="Project/Project.py" line="2891"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2010"/>
+        <location filename="Project/Project.py" line="2011"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2195"/>
+        <location filename="Project/Project.py" line="2196"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die ausgewählte Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelöscht werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2293"/>
+        <location filename="Project/Project.py" line="2298"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Projektverzeichnis &lt;b&gt;{0}&lt;/b&gt; konnte nicht erstellt werden.&lt;/p&gt;</translation>
     </message>
@@ -23012,17 +23032,17 @@ Bitte Aktualisieren.</translation>
         <translation>&lt;p&gt;Die Projekt Session Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelöscht werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3590"/>
+        <location filename="Project/Project.py" line="3595"/>
         <source>Delete session</source>
         <translation>Session löschen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3593"/>
+        <location filename="Project/Project.py" line="3598"/>
         <source>Delete the projects session file.</source>
         <translation>Löscht die Projekt Session Datei.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3594"/>
+        <location filename="Project/Project.py" line="3599"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Session löschen&lt;/b&gt;&lt;p&gt;Dies löscht die Session Datei des Projektes.&lt;/p&gt;</translation>
     </message>
@@ -23032,7 +23052,7 @@ Bitte Aktualisieren.</translation>
         <translation>Ruby Dateien (*.rb);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3434"/>
+        <location filename="Project/Project.py" line="3439"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Neue Dateien suchen...&lt;/b&gt;&lt;p&gt;Dies sucht im Projektverzeichnis und in registrierten Unterverzeichnissen nach neuen Dateien (Quellen, *.ui, *.idl).&lt;/p&gt;</translation>
     </message>
@@ -23047,17 +23067,17 @@ Bitte Aktualisieren.</translation>
         <translation>Sonstige</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4362"/>
+        <location filename="Project/Project.py" line="4368"/>
         <source>Include module names?</source>
         <translation>Modulnamen anzeigen?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2218"/>
+        <location filename="Project/Project.py" line="2219"/>
         <source>Delete directory</source>
         <translation>Verzeichnis löschen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2218"/>
+        <location filename="Project/Project.py" line="2219"/>
         <source>&lt;p&gt;The selected directory &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das ausgewählte Verzeichnis &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelöscht werden.&lt;/p&gt;</translation>
     </message>
@@ -23132,152 +23152,152 @@ Bitte Aktualisieren.</translation>
         <translation>&lt;p&gt;Die Datei mit den projektspezifischen Debugger Eigenschaften &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelöscht werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3498"/>
+        <location filename="Project/Project.py" line="3503"/>
         <source>Debugger Properties</source>
         <translation>Debugger Eigenschaften</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3498"/>
+        <location filename="Project/Project.py" line="3503"/>
         <source>Debugger &amp;Properties...</source>
         <translation>Debugger &amp;Eigenschaften...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3501"/>
+        <location filename="Project/Project.py" line="3506"/>
         <source>Show the debugger properties</source>
         <translation>Debugger Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3502"/>
+        <location filename="Project/Project.py" line="3507"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debugger Eigenschaften...&lt;/b&gt;&lt;p&gt;Dies zeigt einen Dialog an, um die projektspezifischen Debugger Einstellungen zu bearbeiten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3509"/>
+        <location filename="Project/Project.py" line="3514"/>
         <source>Load</source>
         <translation>Laden</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3509"/>
+        <location filename="Project/Project.py" line="3514"/>
         <source>&amp;Load</source>
         <translation>&amp;Laden</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3512"/>
+        <location filename="Project/Project.py" line="3517"/>
         <source>Load the debugger properties</source>
         <translation>Debugger Eigenschaften laden</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3520"/>
+        <location filename="Project/Project.py" line="3525"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3523"/>
+        <location filename="Project/Project.py" line="3528"/>
         <source>Save the debugger properties</source>
         <translation>Debugger Eigenschaften speichern</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3531"/>
+        <location filename="Project/Project.py" line="3536"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3531"/>
+        <location filename="Project/Project.py" line="3536"/>
         <source>&amp;Delete</source>
         <translation>&amp;Löschen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3534"/>
+        <location filename="Project/Project.py" line="3539"/>
         <source>Delete the debugger properties</source>
         <translation>Debugger Eigenschaften löschen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3543"/>
+        <location filename="Project/Project.py" line="3548"/>
         <source>Reset</source>
         <translation>Zurücksetzen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3543"/>
+        <location filename="Project/Project.py" line="3548"/>
         <source>&amp;Reset</source>
         <translation>&amp;Zurücksetzen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3546"/>
+        <location filename="Project/Project.py" line="3551"/>
         <source>Reset the debugger properties</source>
         <translation>Debugger Eigenschaften zurücksetzen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3733"/>
+        <location filename="Project/Project.py" line="3738"/>
         <source>Debugger</source>
         <translation>Debugger</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3730"/>
+        <location filename="Project/Project.py" line="3735"/>
         <source>Session</source>
         <translation>Session</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3513"/>
+        <location filename="Project/Project.py" line="3518"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debugger Eigenschaften laden&lt;/b&gt;&lt;p&gt;Dies lädt die projektspezifischen Debugger Einstellungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3524"/>
+        <location filename="Project/Project.py" line="3529"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debugger Eigenschaften speichern&lt;/b&gt;&lt;p&gt;Dies speichert die projektspezifischen Debugger Einstellungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3535"/>
+        <location filename="Project/Project.py" line="3540"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debugger Eigenschaften löschen&lt;/b&gt;&lt;p&gt;Dies löscht die Datei mit den projektspezifischen Debugger Einstellungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3547"/>
+        <location filename="Project/Project.py" line="3552"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debugger Eigenschaften zurücksetzen&lt;/b&gt;&lt;p&gt;Dies setzt die projektspezifischen Debugger Einstellungen zurück.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3465"/>
+        <location filename="Project/Project.py" line="3470"/>
         <source>Filetype Associations</source>
         <translation>Dateitypzuordnungen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3465"/>
+        <location filename="Project/Project.py" line="3470"/>
         <source>Filetype Associations...</source>
         <translation>Dateitypzuordnungen...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3468"/>
+        <location filename="Project/Project.py" line="3473"/>
         <source>Show the project filetype associations</source>
         <translation>Zeigt die Dateitypzuordnungen des Projektes</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3470"/>
+        <location filename="Project/Project.py" line="3475"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dateitypzuordnungen...&lt;/b&gt;&lt;p&gt;Dies zeigt einen Dialog zur Eingabe der Dateitypzuordnungen des Projektes. Diese Zuordnungen bestimmen den Typ (Quellen, Formulare, Schnittstellen oder Sonstige) über ein Dateinamenmuster. Sie werden genutzt, wenn eine Datei zum Projekt hinzugefügt oder wenn nach neuen Dateien gesucht wird.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3734"/>
+        <location filename="Project/Project.py" line="3739"/>
         <source>Pac&amp;kagers</source>
         <translation>Pa&amp;ketierer</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3388"/>
+        <location filename="Project/Project.py" line="3393"/>
         <source>Add files to project</source>
         <translation>Dateien zum Projekt hinzufügen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3388"/>
+        <location filename="Project/Project.py" line="3393"/>
         <source>Add &amp;files...</source>
         <translation>&amp;Dateien hinzufügen...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3392"/>
+        <location filename="Project/Project.py" line="3397"/>
         <source>Add files to the current project</source>
         <translation>Fügt Dateien zum aktuellen Projekt hinzu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3393"/>
+        <location filename="Project/Project.py" line="3398"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dateien hinzufügen...&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog, mit dem Dateien zum aktuellen Projekt hinzugefügt werden kann. Der Ort, an dem sie eingefügt werden, wird durch die Dateinamenerweiterung bestimmt.&lt;/p&gt;</translation>
     </message>
@@ -23292,37 +23312,37 @@ Bitte Aktualisieren.</translation>
         <translation>Qt4 Kommandozeile</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2025"/>
+        <location filename="Project/Project.py" line="2026"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be renamed.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht umbenannt werden.&lt;br /&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2867"/>
+        <location filename="Project/Project.py" line="2872"/>
         <source>Compressed Project Files (*.e4pz)</source>
         <translation>Komprimierte Projektdateien (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2869"/>
+        <location filename="Project/Project.py" line="2874"/>
         <source>Project Files (*.e4p)</source>
         <translation>Projektdateien (*.e4p)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2870"/>
+        <location filename="Project/Project.py" line="2875"/>
         <source>Project Files (*.e4p);;Compressed Project Files (*.e4pz)</source>
         <translation>Projektdateien (*.e4p);;Komprimierte Projektdateien (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3721"/>
+        <location filename="Project/Project.py" line="3726"/>
         <source>&amp;Project</source>
         <translation>&amp;Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3842"/>
+        <location filename="Project/Project.py" line="3847"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3902"/>
+        <location filename="Project/Project.py" line="3908"/>
         <source>&amp;Clear</source>
         <translation>&amp;Löschen</translation>
     </message>
@@ -23352,32 +23372,32 @@ Bitte Aktualisieren.</translation>
         <translation>&lt;p&gt;Die Datei mit den Nutzer bezogenen Projektdaten &lt;b&gt;{0}&lt;/b&gt; konnte nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3453"/>
+        <location filename="Project/Project.py" line="3458"/>
         <source>User project properties</source>
         <translation>Nutzer bezogene Projektdaten</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3453"/>
+        <location filename="Project/Project.py" line="3458"/>
         <source>&amp;User Properties...</source>
         <translation>&amp;Nutzer bezogene Projektdaten...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3456"/>
+        <location filename="Project/Project.py" line="3461"/>
         <source>Show the user specific project properties</source>
         <translation>Zeigt die Nutzer bezogenen Projektdaten an</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3458"/>
+        <location filename="Project/Project.py" line="3463"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nutzer bezogene Projektdaten...&lt;/b&gt;&lt;p&gt;Dies zeigt einen Dialog an, um Nutzer bezogene Projektdaten zu bearbeiten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3062"/>
+        <location filename="Project/Project.py" line="3067"/>
         <source>Syntax errors detected</source>
         <translation>Syntaxfehler gefunden</translation>
     </message>
     <message numerus="yes">
-        <location filename="Project/Project.py" line="3062"/>
+        <location filename="Project/Project.py" line="3067"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation>
             <numerusform>Das Projekt beinhaltet %n Datei mit Syntaxfehlern.</numerusform>
@@ -23385,47 +23405,47 @@ Bitte Aktualisieren.</translation>
         </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4499"/>
+        <location filename="Project/Project.py" line="4505"/>
         <source>Create Package List</source>
         <translation>Erzeuge Paketliste</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3655"/>
+        <location filename="Project/Project.py" line="3660"/>
         <source>Create &amp;Package List</source>
         <translation>Erzeuge &amp;Paketliste</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4678"/>
+        <location filename="Project/Project.py" line="4684"/>
         <source>Create Plugin Archive</source>
         <translation>Erzeuge Plugin Archiv</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3670"/>
+        <location filename="Project/Project.py" line="3675"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Erzeuge Plugin &amp;Archiv</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4469"/>
+        <location filename="Project/Project.py" line="4475"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;PKGLIST&lt;/b&gt; existiert bereits.&lt;/p&gt;&lt;p&gt;Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4499"/>
+        <location filename="Project/Project.py" line="4505"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;PKGLIST&lt;/b&gt; konnte nicht erzeugt werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4518"/>
+        <location filename="Project/Project.py" line="4524"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;PKGLIST&lt;/b&gt; existiert nicht. Abbruch...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4528"/>
+        <location filename="Project/Project.py" line="4534"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>Für das Projekt wurde kein Hauptskript angegeben. Abbruch...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4542"/>
+        <location filename="Project/Project.py" line="4548"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;PKGLIST&lt;/b&gt; konnte nicht gelesen werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
@@ -23435,12 +23455,12 @@ Bitte Aktualisieren.</translation>
         <translation>&lt;p&gt;Das Quellverzeichnis enthält keine Dateien, die zur gewählten Kategorie gehören.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2749"/>
+        <location filename="Project/Project.py" line="2754"/>
         <source>Select Version Control System</source>
         <translation>Versionskontrollsystem auswählen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2431"/>
+        <location filename="Project/Project.py" line="2436"/>
         <source>None</source>
         <translation>Keines</translation>
     </message>
@@ -23455,22 +23475,22 @@ Bitte Aktualisieren.</translation>
         <translation>&lt;p&gt;Der Projekttyp &lt;b&gt;{0}&lt;/b&gt; existiert bereits.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4580"/>
+        <location filename="Project/Project.py" line="4586"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht im Archiv gespeichert werde. Sie wird ignoriert.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3686"/>
+        <location filename="Project/Project.py" line="3691"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Erzeuge Plugin Archiv (Snapshot)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3686"/>
+        <location filename="Project/Project.py" line="3691"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Erzeuge Plugin Archiv (&amp;Snapshot)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4678"/>
+        <location filename="Project/Project.py" line="4684"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Plugindatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelesen werden.&lt;br&gt;Grund: {1}&lt;/p&gt;</translation>
     </message>
@@ -23480,42 +23500,42 @@ Bitte Aktualisieren.</translation>
         <translation>Sie müssen zuerst ein Übersetzungsmuster festlegen.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2523"/>
+        <location filename="Project/Project.py" line="2528"/>
         <source>Translation Pattern</source>
         <translation>Übersetzungsmuster</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2523"/>
+        <location filename="Project/Project.py" line="2528"/>
         <source>Enter the path pattern for translation files (use &apos;%language%&apos; in place of the language code):</source>
         <translation>Gib das Pfadmuster für Übersetzungsdateien ein (benutze &apos;%language%&apos; anstelle des Sprachcodes):</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4141"/>
+        <location filename="Project/Project.py" line="4147"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das ausgewählte Versionskontrollsystem &lt;b&gt;{0}&lt;/b&gt; konnte nicht gefunden werden.&lt;br/&gt;Ignoriere Übersteuerung.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4150"/>
+        <location filename="Project/Project.py" line="4156"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das ausgewählte Versionskontrollsystem &lt;b&gt;{0}&lt;/b&gt; konnte nicht gefunden werden.&lt;br/&gt;Versionskontrolle nicht möglich.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3481"/>
+        <location filename="Project/Project.py" line="3486"/>
         <source>Lexer Associations</source>
         <translation>Lexer Zuordnungen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3481"/>
+        <location filename="Project/Project.py" line="3486"/>
         <source>Lexer Associations...</source>
         <translation>Lexer Zuordnungen...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3484"/>
+        <location filename="Project/Project.py" line="3489"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Zeigt die Projekt spezifischen Lexer Zuordnungen</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3486"/>
+        <location filename="Project/Project.py" line="3491"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lexer Zuordnungen&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog, um die Projekt spezifischen Lexer Zuordnungen zu bearbeiten. Diese Zuordnungen überschreiben die globalen Lexer Zuordnungen. Lexer werden verwendet, um den Editortext einzufärben.&lt;/p&gt;</translation>
     </message>
@@ -23545,47 +23565,47 @@ Bitte Aktualisieren.</translation>
         <translation>Eric Plugin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2704"/>
+        <location filename="Project/Project.py" line="2709"/>
         <source>Project Files (*.e4p *.e4pz)</source>
         <translation>Projekt Dateien (*.e4p *.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3659"/>
+        <location filename="Project/Project.py" line="3664"/>
         <source>Create an initial PKGLIST file for an eric5 plugin.</source>
         <translation>Erzeugt eine erste PKGLIST Datei für ein eric5 Plugin.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3661"/>
+        <location filename="Project/Project.py" line="3666"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Erzeuge Paketliste&lt;/b&gt;&lt;p&gt;Dies erzeugt eine erste List von Dateien, die in ein eric5 Pluginarchive einbezogen werden sollen. Die Liste wird aus der Projektdatei erzeugt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3674"/>
+        <location filename="Project/Project.py" line="3679"/>
         <source>Create an eric5 plugin archive file.</source>
         <translation>Erzeugt eine eric5 Plugin Archivdatei.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3676"/>
+        <location filename="Project/Project.py" line="3681"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Erzeuge Plugin Archiv&lt;/b&gt;&lt;p&gt;Dies erzeugt eine eric5 Plugin Archivdatei mit den Dateien, die in der PKGLIST Datei angegeben wurden. Der Archivname wird aus dem Namen des Hauptskriptes generiert.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3690"/>
+        <location filename="Project/Project.py" line="3695"/>
         <source>Create an eric5 plugin archive file (snapshot release).</source>
         <translation>Erzeugt eine eric5 Plugin Archivdatei (Snapshot Release).</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3692"/>
+        <location filename="Project/Project.py" line="3697"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Erzeuge Plugin Archiv (Snapshot)&lt;/b&gt;&lt;p&gt;Dies erzeugt eine eric5 Plugin Archivdatei mit den Dateien, die in der PKGLIST Datei angegeben wurden. Der Archivname wird aus dem Namen des Hauptskriptes generiert. Der Versionseintrag des Hauptskriptes wird verändert, um ein Snapshot Release anzuzeigen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4558"/>
+        <location filename="Project/Project.py" line="4564"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die eric5 Plugin Archivdatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht erzeugt werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4594"/>
+        <location filename="Project/Project.py" line="4600"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die eric5 Plugin Archivdatei &lt;b&gt;{0}&lt;/b&gt; wurde erfolgreich erzeugt.&lt;/p&gt;</translation>
     </message>
@@ -38609,7 +38629,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
 <context>
     <name>ViewManager</name>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3288"/>
+        <location filename="ViewManager/ViewManager.py" line="3289"/>
         <source>File: {0}</source>
         <translation>Datei: {0}</translation>
     </message>
@@ -40059,17 +40079,17 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Ge&amp;merkte Dateien</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3657"/>
+        <location filename="ViewManager/ViewManager.py" line="3658"/>
         <source>&amp;Clear</source>
         <translation>&amp;Löschen</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3653"/>
+        <location filename="ViewManager/ViewManager.py" line="3654"/>
         <source>&amp;Add</source>
         <translation>&amp;Hinzufügen</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3655"/>
+        <location filename="ViewManager/ViewManager.py" line="3656"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Bearbeiten...</translation>
     </message>
@@ -41092,12 +41112,12 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Rechtschreibung</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3292"/>
+        <location filename="ViewManager/ViewManager.py" line="3293"/>
         <source>Line: {0:5}</source>
         <translation>Zeile: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3297"/>
+        <location filename="ViewManager/ViewManager.py" line="3298"/>
         <source>Pos: {0:5}</source>
         <translation>Pos: {0:5}</translation>
     </message>

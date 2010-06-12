@@ -1686,6 +1686,9 @@ class MiniEditor(QMainWindow):
             self.__textEdit.setFoldMarginColors(
                 Preferences.getEditorColour("FoldmarginBackground"), 
                 Preferences.getEditorColour("FoldmarginBackground"))
+            self.__textEdit.setFoldMarkersColors(
+                Preferences.getEditorColour("FoldMarkersForeground"),
+                Preferences.getEditorColour("FoldMarkersBackground"))
         else:
             self.__textEdit.setFolding(QsciScintilla.NoFoldStyle)
     

@@ -3243,18 +3243,16 @@ class Editor(QsciScintillaCompat):
                 folding = QsciScintilla.FoldStyle(folding)
             except AttributeError:
                 pass
-            try:
-                self.setFolding(folding, self.__foldMargin)
-            except TypeError:
-                self.setFolding(folding)
-            self.setFoldMarginColors(Preferences.getEditorColour("FoldmarginBackground"), 
-                                     Preferences.getEditorColour("FoldmarginBackground"))
+            self.setFolding(folding, self.__foldMargin)
+            self.setFoldMarginColors(
+                Preferences.getEditorColour("FoldmarginBackground"), 
+                Preferences.getEditorColour("FoldmarginBackground"))
+            self.setFoldMarkersColors(
+                Preferences.getEditorColour("FoldMarkersForeground"),
+                Preferences.getEditorColour("FoldMarkersBackground"))
         else:
             self.setMarginWidth(self.__foldMargin, 0)
-            try:
-                self.setFolding(QsciScintilla.NoFoldStyle, self.__foldMargin)
-            except TypeError:
-                self.setFolding(QsciScintilla.NoFoldStyle)
+            self.setFolding(QsciScintilla.NoFoldStyle, self.__foldMargin)
         
     def __setTextDisplay(self):
         """
