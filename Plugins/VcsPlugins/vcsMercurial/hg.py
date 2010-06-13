@@ -1057,7 +1057,10 @@ class Hg(VersionControl):
             if finished and process.exitCode() == 0:
                 output = str(process.readAllStandardOutput(), 
                     Preferences.getSystem("IOEncoding"), 'replace')
-                url = output.splitlines()[0].strip()
+                if output:
+                    url = output.splitlines()[0].strip()
+                else:
+                    url = ""
         
         return QApplication.translate('mercurial',
             """<h3>Repository information</h3>\n"""
@@ -1522,6 +1525,12 @@ class Hg(VersionControl):
                 return
         
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
+        if not os.path.exists(cfgFile):
+            try:
+                cfg = open(cfgFile, "w")
+                cfg.close()
+            except IOError:
+                pass
         self.editor = MiniEditor(cfgFile, "Properties")
         self.editor.show()
     
