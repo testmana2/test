@@ -38,7 +38,7 @@ DefaultBookmarks = """<?xml version="1.0" encoding="UTF-8"?>
             <bookmark href="http://qt-apps.org/">
                 <title>Qt-Apps.org</title>
             </bookmark>
-            <bookmark href="http://www.diotavelli.net/PyQtWiki/"
+            <bookmark href="http://www.diotavelli.net/PyQtWiki/">
                 <title>PyQt Wiki</title>
             </bookmark>
         </folder>
