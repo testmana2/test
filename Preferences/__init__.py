@@ -573,6 +573,7 @@ class Prefs(object):
         "SavePasswords" : False, 
         "AdBlockEnabled" : False, 
         "AdBlockSubscriptions" : [], 
+        "OfflineStorageDatabaseQuota" : 50,     # 50 MB
     }
     
     websettings = QWebSettings.globalSettings()
@@ -597,6 +598,8 @@ class Prefs(object):
             websettings.testAttribute(QWebSettings.JavascriptCanAccessClipboard), 
         "PluginsEnabled" :
             websettings.testAttribute(QWebSettings.PluginsEnabled), 
+        "OfflineStorageDatabaseEnabled" :
+            websettings.testAttribute(QWebSettings.OfflineStorageDatabaseEnabled), 
     })
 
     # defaults for system settings
@@ -1737,14 +1740,16 @@ def getHelp(key, prefClass = Prefs):
         prefClass.settings.endArray()
         return keywords
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies", 
-                 "KeepCookiesUntil", "StartupBehavior", "HistoryLimit"]:
+                 "KeepCookiesUntil", "StartupBehavior", "HistoryLimit", 
+                 "OfflineStorageDatabaseQuota"]:
         return int(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions", 
                  "DiskCacheEnabled", "FilterTrackingCookies", "PrintBackgrounds", 
                  "SavePasswords", "AdBlockEnabled", "AutoLoadImages", 
                  "JavaEnabled", "JavaScriptEnabled", "JavaScriptCanOpenWindows", 
-                 "JavaScriptCanAccessClipboard", "PluginsEnabled"]:
+                 "JavaScriptCanAccessClipboard", "PluginsEnabled", 
+                 "OfflineStorageDatabaseEnabled"]:
         return toBool(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions"]:

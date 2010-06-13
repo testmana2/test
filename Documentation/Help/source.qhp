@@ -240,6 +240,9 @@
               <section title="eric5.Helpviewer.Network.QtHelpAccessHandler" ref="eric5.Helpviewer.Network.QtHelpAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.SchemeAccessHandler" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html" />
             </section>
+            <section title="eric5.Helpviewer.OfflineStorage" ref="index-eric5.Helpviewer.OfflineStorage.html">
+              <section title="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html" />
+            </section>
             <section title="eric5.Helpviewer.OpenSearch" ref="index-eric5.Helpviewer.OpenSearch.html">
               <section title="eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines" ref="eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines.html" />
               <section title="eric5.Helpviewer.OpenSearch.OpenSearchDialog" ref="eric5.Helpviewer.OpenSearch.OpenSearchDialog.html" />
@@ -2695,6 +2698,8 @@
       <keyword name="HelpBrowser.__copyImageLocation" id="HelpBrowser.__copyImageLocation" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__copyImageLocation" />
       <keyword name="HelpBrowser.__copyLink" id="HelpBrowser.__copyLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__copyLink" />
       <keyword name="HelpBrowser.__currentEngineChanged" id="HelpBrowser.__currentEngineChanged" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__currentEngineChanged" />
+      <keyword name="HelpBrowser.__dataString" id="HelpBrowser.__dataString" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__dataString" />
+      <keyword name="HelpBrowser.__databaseQuotaExceeded" id="HelpBrowser.__databaseQuotaExceeded" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__databaseQuotaExceeded" />
       <keyword name="HelpBrowser.__downloadDone" id="HelpBrowser.__downloadDone" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadDone" />
       <keyword name="HelpBrowser.__downloadImage" id="HelpBrowser.__downloadImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadImage" />
       <keyword name="HelpBrowser.__downloadLink" id="HelpBrowser.__downloadLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadLink" />
@@ -2860,6 +2865,7 @@
       <keyword name="HelpWindow.__showInstallationError" id="HelpWindow.__showInstallationError" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showInstallationError" />
       <keyword name="HelpWindow.__showNavigationMenu" id="HelpWindow.__showNavigationMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showNavigationMenu" />
       <keyword name="HelpWindow.__showNetworkMonitor" id="HelpWindow.__showNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showNetworkMonitor" />
+      <keyword name="HelpWindow.__showOfflineStorageConfiguration" id="HelpWindow.__showOfflineStorageConfiguration" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showOfflineStorageConfiguration" />
       <keyword name="HelpWindow.__showPageSource" id="HelpWindow.__showPageSource" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPageSource" />
       <keyword name="HelpWindow.__showPasswordsDialog" id="HelpWindow.__showPasswordsDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPasswordsDialog" />
       <keyword name="HelpWindow.__showPreferences" id="HelpWindow.__showPreferences" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPreferences" />
@@ -6770,6 +6776,11 @@
       <keyword name="PasswordsDialog (Constructor)" id="PasswordsDialog (Constructor)" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.__init__" />
       <keyword name="PasswordsDialog.__calculateHeaderSizes" id="PasswordsDialog.__calculateHeaderSizes" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.__calculateHeaderSizes" />
       <keyword name="PasswordsDialog.on_passwordsButton_clicked" id="PasswordsDialog.on_passwordsButton_clicked" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.on_passwordsButton_clicked" />
+      <keyword name="OfflineStorage (Package)" id="OfflineStorage (Package)" ref="index-eric5.Helpviewer.OfflineStorage.html" />
+      <keyword name="OfflineStorageConfigDialog (Module)" id="OfflineStorageConfigDialog (Module)" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html" />
+      <keyword name="OfflineStorageConfigDialog" id="OfflineStorageConfigDialog" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog" />
+      <keyword name="OfflineStorageConfigDialog (Constructor)" id="OfflineStorageConfigDialog (Constructor)" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog.__init__" />
+      <keyword name="OfflineStorageConfigDialog.storeData" id="OfflineStorageConfigDialog.storeData" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog.storeData" />
       <keyword name="Bookmarks (Package)" id="Bookmarks (Package)" ref="index-eric5.Helpviewer.Bookmarks.html" />
       <keyword name="BookmarksManager (Module)" id="BookmarksManager (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html" />
       <keyword name="BookmarksManager" id="BookmarksManager" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager" />
@@ -9826,6 +9837,7 @@
       <file>eric5.Helpviewer.Network.PyrcAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.QtHelpAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.SchemeAccessHandler.html</file>
+      <file>eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchDialog.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchEditDialog.html</file>
@@ -10226,6 +10238,7 @@
       <file>index-eric5.Helpviewer.CookieJar.html</file>
       <file>index-eric5.Helpviewer.History.html</file>
       <file>index-eric5.Helpviewer.Network.html</file>
+      <file>index-eric5.Helpviewer.OfflineStorage.html</file>
       <file>index-eric5.Helpviewer.OpenSearch.html</file>
       <file>index-eric5.Helpviewer.Passwords.html</file>
       <file>index-eric5.Helpviewer.html</file>

@@ -29,11 +29,13 @@ class HelpClearPrivateDataDialog(QDialog, Ui_HelpClearPrivateDataDialog):
         Public method to get the data from the dialog.
         
         @return tuple of flags indicating which data to clear (browsing history,
-            search history, favicons, disk cache, cookies, passwords) (list of boolean)
+            search history, favicons, disk cache, cookies, passwords, web 
+            databases) (list of boolean)
         """
         return (self.historyCheckBox.isChecked(), 
                 self.searchCheckBox.isChecked(), 
                 self.iconsCheckBox.isChecked(), 
                 self.cacheCheckBox.isChecked(), 
                 self.cookiesCheckBox.isChecked(), 
-                self.passwordsCheckBox.isChecked())
+                self.passwordsCheckBox.isChecked(), 
+                self.databasesCheckBox.isChecked())

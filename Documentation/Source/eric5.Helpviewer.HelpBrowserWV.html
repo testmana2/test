@@ -117,6 +117,12 @@ QWebView
 <td><a href="#HelpBrowser.__currentEngineChanged">__currentEngineChanged</a></td>
 <td>Private slot to track a change of the current search engine.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__dataString">__dataString</a></td>
+<td>Private method to generate a formatted data string.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__databaseQuotaExceeded">__databaseQuotaExceeded</a></td>
+<td>Private slot to handle the case, where the database quota is exceeded.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__downloadDone">__downloadDone</a></td>
 <td>Private slot to handle the done signal of the download dialogs.</td>
 </tr><tr>
@@ -304,7 +310,35 @@ reference to the web frame (QWebFrame)
 <b>__currentEngineChanged</b>(<i></i>)
 <p>
         Private slot to track a change of the current search engine.
-</p><a NAME="HelpBrowser.__downloadDone" ID="HelpBrowser.__downloadDone"></a>
+</p><a NAME="HelpBrowser.__dataString" ID="HelpBrowser.__dataString"></a>
+<h4>HelpBrowser.__dataString</h4>
+<b>__dataString</b>(<i>size</i>)
+<p>
+        Private method to generate a formatted data string.
+</p><dl>
+<dt><i>size</i></dt>
+<dd>
+size to be formatted (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+formatted data string (string)
+</dd>
+</dl><a NAME="HelpBrowser.__databaseQuotaExceeded" ID="HelpBrowser.__databaseQuotaExceeded"></a>
+<h4>HelpBrowser.__databaseQuotaExceeded</h4>
+<b>__databaseQuotaExceeded</b>(<i>frame, databaseName</i>)
+<p>
+        Private slot to handle the case, where the database quota is exceeded.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+reference to the frame (QWebFrame)
+</dd><dt><i>databaseName</i></dt>
+<dd>
+name of the web database (string)
+</dd>
+</dl><a NAME="HelpBrowser.__downloadDone" ID="HelpBrowser.__downloadDone"></a>
 <h4>HelpBrowser.__downloadDone</h4>
 <b>__downloadDone</b>(<i></i>)
 <p>

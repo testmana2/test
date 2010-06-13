@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>305</width>
-    <height>191</height>
+    <height>200</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -96,6 +96,16 @@
     </widget>
    </item>
    <item>
+    <widget class="QCheckBox" name="databasesCheckBox">
+     <property name="toolTip">
+      <string>Select to delete all web databases</string>
+     </property>
+     <property name="text">
+      <string>Web &amp;Databases</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -114,6 +124,7 @@
   <tabstop>cacheCheckBox</tabstop>
   <tabstop>iconsCheckBox</tabstop>
   <tabstop>passwordsCheckBox</tabstop>
+  <tabstop>databasesCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

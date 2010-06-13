@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-from PyQt4.QtWebKit import QWebSettings
+from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin
 from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
 
 from .SearchWidget import SearchWidget
@@ -40,6 +40,7 @@ from .History.HistoryCompleter import HistoryCompletionModel, HistoryCompleter
 from .Passwords.PasswordManager import PasswordManager
 from .Network.NetworkAccessManager import NetworkAccessManager
 from .AdBlock.AdBlockManager import AdBlockManager
+from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
 
 from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui.E5Action import E5Action
@@ -314,6 +315,17 @@ class HelpWindow(QMainWindow):
         if hasattr(QWebSettings, "PrintElementBackgrounds"):
             settings.setAttribute(QWebSettings.PrintElementBackgrounds, 
                 Preferences.getHelp("PrintBackgrounds"))
+        
+        if hasattr(QWebSettings, "setOfflineStoragePath"):
+            settings.setAttribute(QWebSettings.OfflineStorageDatabaseEnabled, 
+                Preferences.getHelp("OfflineStorageDatabaseEnabled"))
+            webDatabaseDir = os.path.join(
+                Utilities.getConfigDir(), "browser", "webdatabases")
+            if not os.path.exists(webDatabaseDir):
+                os.makedirs(webDatabaseDir)
+            settings.setOfflineStoragePath(webDatabaseDir)
+            settings.setOfflineStorageDefaultQuota(
+                Preferences.getHelp("OfflineStorageDatabaseQuota") * 1024 * 1024)
         
     def __initActions(self):
         """
@@ -876,6 +888,19 @@ class HelpWindow(QMainWindow):
                      self.__showCookiesConfiguration)
         self.__actions.append(self.cookiesAct)
         
+        self.offlineStorageAct = E5Action(self.trUtf8('Offline Storage'),
+            UI.PixmapCache.getIcon("preferences-html5.png"),
+            self.trUtf8('Offline &Storage...'), 0, 0, self, 'help_offline_storage')
+        self.offlineStorageAct.setStatusTip(self.trUtf8(
+            'Configure offline storage'))
+        self.offlineStorageAct.setWhatsThis(self.trUtf8(
+            """<b>Offline Storage</b>"""
+            """<p>Opens a dialog to configure offline storage.</p>"""
+        ))
+        self.connect(self.offlineStorageAct, SIGNAL('triggered()'), 
+                     self.__showOfflineStorageConfiguration)
+        self.__actions.append(self.offlineStorageAct)
+        
         self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'), 
             UI.PixmapCache.getIcon("syncToc.png"),
             self.trUtf8('Sync with Table of Contents'), 
@@ -992,7 +1017,7 @@ class HelpWindow(QMainWindow):
         self.__actions.append(self.clearIconsAct)
         
         self.searchEnginesAct = E5Action(self.trUtf8('Configure Search Engines'), 
-                      self.trUtf8('Configure &Search Engines...'), 
+                      self.trUtf8('Configure Search &Engines...'), 
                       0, 0,
                       self, 'help_search_engines')
         self.searchEnginesAct.setStatusTip(self.trUtf8(
@@ -1149,6 +1174,7 @@ class HelpWindow(QMainWindow):
         menu.addAction(self.prefAct)
         menu.addAction(self.acceptedLanguagesAct)
         menu.addAction(self.cookiesAct)
+        menu.addAction(self.offlineStorageAct)
         menu.addSeparator()
         menu.addAction(self.searchEnginesAct)
         menu.addSeparator()
@@ -1279,6 +1305,7 @@ class HelpWindow(QMainWindow):
         settingstb.addAction(self.prefAct)
         settingstb.addAction(self.acceptedLanguagesAct)
         settingstb.addAction(self.cookiesAct)
+        settingstb.addAction(self.offlineStorageAct)
         
         helptb = self.addToolBar(self.trUtf8("Help"))
         helptb.setObjectName("HelpToolBar")
@@ -2036,6 +2063,7 @@ class HelpWindow(QMainWindow):
                               """ web pages are not added to the history, searches"""
                               """ are not added to the list of recent searches and"""
                               """ web site icons and cookies are not stored."""
+                              """ HTML5 offline storage will be deactivated."""
                               """ Until you close the window, you can still click"""
                               """ the Back and Forward buttons to return to the"""
                               """ web pages you have opened.</p>""")
@@ -2274,6 +2302,15 @@ class HelpWindow(QMainWindow):
         """
         dlg = CookiesConfigurationDialog(self)
         dlg.exec_()
+    
+    def __showOfflineStorageConfiguration(self):
+        """
+        Private slot to configure the offline storage.
+        """
+        dlg = OfflineStorageConfigDialog(self)
+        if dlg.exec_() == QDialog.Accepted:
+            dlg.storeData()
+            self.__initWebSettings()
     
     def setLoading(self, widget):
         """
@@ -2713,8 +2750,10 @@ class HelpWindow(QMainWindow):
         """
         dlg = HelpClearPrivateDataDialog(self)
         if dlg.exec_() == QDialog.Accepted:
-            history, searches, favicons, cache, cookies, passwords = dlg.getData()
-            # browsing history, search history, favicons, disk cache, cookies, passwords
+            history, searches, favicons, cache, cookies, passwords, databases = \
+                dlg.getData()
+            # browsing history, search history, favicons, disk cache, cookies, 
+            # passwords, web databases
             if history:
                 self.historyManager().clear()
             if searches:
@@ -2730,6 +2769,13 @@ class HelpWindow(QMainWindow):
                 self.cookieJar().clear()
             if passwords:
                 self.passwordManager().clear()
+            if databases:
+                if hasattr(QWebDatabase, "removeAllDatabases"):
+                    QWebDatabase.removeAllDatabases()
+                else:
+                    for securityOrigin in QWebSecurityOrigin.allOrigins():
+                        for database in securityOrigin.databases():
+                            QWebDatabase.removeDatabase(database)
         
     def __showEnginesConfigurationDialog(self):
         """

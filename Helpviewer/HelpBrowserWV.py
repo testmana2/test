@@ -315,6 +315,9 @@ class HelpBrowser(QWebView):
             self.__addExternalBinding)
         self.__addExternalBinding(self.page().mainFrame())
         
+        self.connect(self.page(), SIGNAL('databaseQuotaExceeded(QWebFrame*, QString)'), 
+            self.__databaseQuotaExceeded)
+        
         self.connect(self.mw.openSearchManager(), 
                      SIGNAL("currentEngineChanged()"), 
                      self.__currentEngineChanged)
@@ -992,6 +995,60 @@ class HelpBrowser(QWebView):
         Private slot to handle the icon change.
         """
         self.mw.iconChanged(self.icon())
+    
+    def __databaseQuotaExceeded(self, frame, databaseName):
+        """
+        Private slot to handle the case, where the database quota is exceeded.
+        
+        @param frame reference to the frame (QWebFrame)
+        @param databaseName name of the web database (string)
+        """
+        securityOrigin = frame.securityOrigin()
+        if securityOrigin.databaseQuota() > 0 and \
+           securityOrigin.databaseUsage() == 0:
+            # cope with a strange behavior of Qt 4.6, if a database is
+            # accessed for the first time
+            return
+        
+        res = QMessageBox.question(self,
+            self.trUtf8("Web Database Quota"),
+            self.trUtf8("""<p>The database quota of <strong>{0}</strong> has"""
+                        """ been exceeded while accessing database <strong>{1}"""
+                        """</strong>.</p><p>Shall it be changed?</p>""")\
+                .format(self.__dataString(securityOrigin.databaseQuota()), databaseName),
+            QMessageBox.StandardButtons(\
+                QMessageBox.No | \
+                QMessageBox.Yes),
+            QMessageBox.Yes)
+        if res == QMessageBox.Yes:
+            newQuota, ok = QInputDialog.getInteger(\
+                self,
+                self.trUtf8("New Web Database Quota"),
+                self.trUtf8("Enter the new quota in MB (current = {0}, used = {1}; "
+                            "step size = 5 MB):"\
+                    .format(self.__dataString(securityOrigin.databaseQuota()), 
+                            self.__dataString(securityOrigin.databaseUsage()))),
+                securityOrigin.databaseQuota() // (1024 * 1024), 0, 2147483647, 5)
+            if ok:
+                securityOrigin.setDatabaseQuota(newQuota * 1024 * 1024)
+    
+    def __dataString(self, size):
+        """
+        Private method to generate a formatted data string.
+        
+        @param size size to be formatted (integer)
+        @return formatted data string (string)
+        """
+        unit = ""
+        if size < 1024:
+            unit = self.trUtf8("bytes")
+        elif size < 1024 * 1024:
+            size /= 1024
+            unit = self.trUtf8("kB")
+        else:
+            size /= 1024 * 1024
+            unit = self.trUtf8("MB")
+        return "{0:.1f} {1}".format(size, unit)
     
     ############################################################################
     ## Miscellaneous methods below

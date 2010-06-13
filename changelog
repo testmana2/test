@@ -9,6 +9,7 @@ Version 5.1-snapshot-2010mmdd:
 - added a branch filter to the Mercurial log browser
 - added additional fold styles
 - added capability to configure the colors of the foldmarkers
+- added support for Web SQL Databases to the web browser
 
 Version 5.0-snapshot-20100523:
 - bug fixes
