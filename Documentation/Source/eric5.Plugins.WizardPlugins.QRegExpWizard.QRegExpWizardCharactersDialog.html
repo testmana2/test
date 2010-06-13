@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog</h1>
+<p>
+Module implementing a dialog for entering character classes.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#QRegExpWizardCharactersDialog">QRegExpWizardCharactersDialog</a></td>
+<td>Class implementing a dialog for entering character classes.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="QRegExpWizardCharactersDialog" ID="QRegExpWizardCharactersDialog"></a>
+<h2>QRegExpWizardCharactersDialog</h2>
+<p>
+    Class implementing a dialog for entering character classes.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_QRegExpWizardCharactersDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>predefinedClasses</td></tr><tr><td>specialChars</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#QRegExpWizardCharactersDialog.__init__">QRegExpWizardCharactersDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#QRegExpWizardCharactersDialog.__addRangesLine">__addRangesLine</a></td>
+<td>Private slot to add a line of entry widgets for character ranges.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardCharactersDialog.__addSinglesLine">__addSinglesLine</a></td>
+<td>Private slot to add a line of entry widgets for single characters.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardCharactersDialog.__formatCharacter">__formatCharacter</a></td>
+<td>Private method to format the characters entered into the dialog.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardCharactersDialog.__performSelectedAction">__performSelectedAction</a></td>
+<td>Private method performing some actions depending on the input.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardCharactersDialog.__rangesCharTypeSelected">__rangesCharTypeSelected</a></td>
+<td>Private slot to handle the activated(int) signal of the char ranges combo boxes.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardCharactersDialog.__singlesCharTypeSelected">__singlesCharTypeSelected</a></td>
+<td>Private slot to handle the activated(int) signal of the single chars combo boxes.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardCharactersDialog.getCharacters">getCharacters</a></td>
+<td>Public method to return the character string assembled via the dialog.</td>
+</tr>
+</table>
+<a NAME="QRegExpWizardCharactersDialog.__init__" ID="QRegExpWizardCharactersDialog.__init__"></a>
+<h4>QRegExpWizardCharactersDialog (Constructor)</h4>
+<b>QRegExpWizardCharactersDialog</b>(<i>parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="QRegExpWizardCharactersDialog.__addRangesLine" ID="QRegExpWizardCharactersDialog.__addRangesLine"></a>
+<h4>QRegExpWizardCharactersDialog.__addRangesLine</h4>
+<b>__addRangesLine</b>(<i></i>)
+<p>
+        Private slot to add a line of entry widgets for character ranges.
+</p><a NAME="QRegExpWizardCharactersDialog.__addSinglesLine" ID="QRegExpWizardCharactersDialog.__addSinglesLine"></a>
+<h4>QRegExpWizardCharactersDialog.__addSinglesLine</h4>
+<b>__addSinglesLine</b>(<i></i>)
+<p>
+        Private slot to add a line of entry widgets for single characters.
+</p><a NAME="QRegExpWizardCharactersDialog.__formatCharacter" ID="QRegExpWizardCharactersDialog.__formatCharacter"></a>
+<h4>QRegExpWizardCharactersDialog.__formatCharacter</h4>
+<b>__formatCharacter</b>(<i>index, char</i>)
+<p>
+        Private method to format the characters entered into the dialog.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+selected list index (integer)
+</dd><dt><i>char</i></dt>
+<dd>
+character string enetered into the dialog (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+formated character string (string)
+</dd>
+</dl><a NAME="QRegExpWizardCharactersDialog.__performSelectedAction" ID="QRegExpWizardCharactersDialog.__performSelectedAction"></a>
+<h4>QRegExpWizardCharactersDialog.__performSelectedAction</h4>
+<b>__performSelectedAction</b>(<i>index, lineedit</i>)
+<p>
+        Private method performing some actions depending on the input.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+selected list index (integer)
+</dd><dt><i>lineedit</i></dt>
+<dd>
+line edit widget to act on (QLineEdit)
+</dd>
+</dl><a NAME="QRegExpWizardCharactersDialog.__rangesCharTypeSelected" ID="QRegExpWizardCharactersDialog.__rangesCharTypeSelected"></a>
+<h4>QRegExpWizardCharactersDialog.__rangesCharTypeSelected</h4>
+<b>__rangesCharTypeSelected</b>(<i>index</i>)
+<p>
+        Private slot to handle the activated(int) signal of the char ranges combo boxes.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+selected list index (integer)
+</dd>
+</dl><a NAME="QRegExpWizardCharactersDialog.__singlesCharTypeSelected" ID="QRegExpWizardCharactersDialog.__singlesCharTypeSelected"></a>
+<h4>QRegExpWizardCharactersDialog.__singlesCharTypeSelected</h4>
+<b>__singlesCharTypeSelected</b>(<i>index</i>)
+<p>
+        Private slot to handle the activated(int) signal of the single chars combo boxes.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+selected list index (integer)
+</dd>
+</dl><a NAME="QRegExpWizardCharactersDialog.getCharacters" ID="QRegExpWizardCharactersDialog.getCharacters"></a>
+<h4>QRegExpWizardCharactersDialog.getCharacters</h4>
+<b>getCharacters</b>(<i></i>)
+<p>
+        Public method to return the character string assembled via the dialog.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+formatted string for character classes (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

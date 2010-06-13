@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog</h1>
+<p>
+Module implementing a dialog to enter the data for a copy or rename operation.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#HgCopyDialog">HgCopyDialog</a></td>
+<td>Class implementing a dialog to enter the data for a copy or rename operation.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="HgCopyDialog" ID="HgCopyDialog"></a>
+<h2>HgCopyDialog</h2>
+<p>
+    Class implementing a dialog to enter the data for a copy or rename operation.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_HgCopyDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HgCopyDialog.__init__">HgCopyDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HgCopyDialog.getData">getData</a></td>
+<td>Public method to retrieve the copy data.</td>
+</tr><tr>
+<td><a href="#HgCopyDialog.on_dirButton_clicked">on_dirButton_clicked</a></td>
+<td>Private slot to handle the button press for selecting the target via a selection dialog.</td>
+</tr>
+</table>
+<a NAME="HgCopyDialog.__init__" ID="HgCopyDialog.__init__"></a>
+<h4>HgCopyDialog (Constructor)</h4>
+<b>HgCopyDialog</b>(<i>source, parent = None, move = False, force = False</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>source</i></dt>
+<dd>
+name of the source file/directory (string)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd><dt><i>move</i></dt>
+<dd>
+flag indicating a move operation
+</dd><dt><i>force</i></dt>
+<dd>
+flag indicating a forced operation (boolean)
+</dd>
+</dl><a NAME="HgCopyDialog.getData" ID="HgCopyDialog.getData"></a>
+<h4>HgCopyDialog.getData</h4>
+<b>getData</b>(<i></i>)
+<p>
+        Public method to retrieve the copy data.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+the target name (string) and a flag indicating
+            the operation should be enforced (boolean)
+</dd>
+</dl><a NAME="HgCopyDialog.on_dirButton_clicked" ID="HgCopyDialog.on_dirButton_clicked"></a>
+<h4>HgCopyDialog.on_dirButton_clicked</h4>
+<b>on_dirButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the button press for selecting the target via a 
+        selection dialog.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Helpviewer.HelpWindow</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Helpviewer.HelpWindow</h1>
+<p>
+Module implementing the helpviewer main window.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#HelpWindow">HelpWindow</a></td>
+<td>Class implementing the web browser main window.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="HelpWindow" ID="HelpWindow"></a>
+<h2>HelpWindow</h2>
+<p>
+    Class implementing the web browser main window.
+</p><h4>Signals</h4>
+<dl>
+<dt>helpClosed()</dt>
+<dd>
+emitted after the window was requested to close down
+</dd><dt>zoomTextOnlyChanged(bool)</dt>
+<dd>
+emitted after the zoom text only setting was
+            changed
+</dd>
+</dl>
+<h3>Derived from</h3>
+QMainWindow
+<h3>Class Attributes</h3>
+<table>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HelpWindow.__init__">HelpWindow</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HelpWindow.__about">__about</a></td>
+<td>Private slot to show the about information.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__aboutQt">__aboutQt</a></td>
+<td>Private slot to show info about Qt.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__activateCurrentBrowser">__activateCurrentBrowser</a></td>
+<td>Private slot to activate the current browser.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__activateDock">__activateDock</a></td>
+<td>Private method to activate the dock widget of the given widget.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__addBookmark">__addBookmark</a></td>
+<td>Private slot called to add the displayed file to the bookmarks.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__addBookmarkFolder">__addBookmarkFolder</a></td>
+<td>Private slot to add a new bookmarks folder.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__backward">__backward</a></td>
+<td>Private slot called to handle the backward action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__bookmarkAll">__bookmarkAll</a></td>
+<td>Private slot to bookmark all open tabs.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__clearIconsDatabase">__clearIconsDatabase</a></td>
+<td>Private slot to clear the icons databse.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__clearPrivateData">__clearPrivateData</a></td>
+<td>Private slot to clear the private data.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__close">__close</a></td>
+<td>Private slot called to handle the close action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__closeAll">__closeAll</a></td>
+<td>Private slot called to handle the close all action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__closeAt">__closeAt</a></td>
+<td>Private slot to close a window based on it's index.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__closeNetworkMonitor">__closeNetworkMonitor</a></td>
+<td>Private slot to close the network monitor dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__copy">__copy</a></td>
+<td>Private slot called to handle the copy action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__currentChanged">__currentChanged</a></td>
+<td>Private slot to handle the currentChanged signal.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__docsInstalled">__docsInstalled</a></td>
+<td>Private slot handling the end of documentation installation.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__elide">__elide</a></td>
+<td>Private method to elide some text.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__filterQtHelpDocumentation">__filterQtHelpDocumentation</a></td>
+<td>Private slot to filter the QtHelp documentation.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__find">__find</a></td>
+<td>Private slot to handle the find action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__forward">__forward</a></td>
+<td>Private slot called to handle the forward action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__getWebIcon">__getWebIcon</a></td>
+<td>Private static method to fetch the icon for a URL.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__guessUrlFromPath">__guessUrlFromPath</a></td>
+<td>Private method to guess an URL given a path string.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__hideIndexWindow">__hideIndexWindow</a></td>
+<td>Private method to hide the index window.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__hideSearchWindow">__hideSearchWindow</a></td>
+<td>Private method to hide the search window.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__hideTocWindow">__hideTocWindow</a></td>
+<td>Private method to hide the table of contents window.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__home">__home</a></td>
+<td>Private slot called to handle the home action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__indexingFinished">__indexingFinished</a></td>
+<td>Private slot to handle the start of the indexing process.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__indexingStarted">__indexingStarted</a></td>
+<td>Private slot to handle the start of the indexing process.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__initActions">__initActions</a></td>
+<td>Private method to define the user interface actions.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__initHelpDb">__initHelpDb</a></td>
+<td>Private slot to initialize the documentation database.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__initMenus">__initMenus</a></td>
+<td>Private method to create the menus.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__initTabContextMenu">__initTabContextMenu</a></td>
+<td>Private mezhod to create the tab context menu.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__initToolbars">__initToolbars</a></td>
+<td>Private method to create the toolbars.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__initWebSettings">__initWebSettings</a></td>
+<td>Private method to set the global web settings.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__isFullScreen">__isFullScreen</a></td>
+<td>Private method to determine, if the window is in full screen mode.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__linkActivated">__linkActivated</a></td>
+<td>Private slot to handle the selection of a link in the TOC window.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__linksActivated">__linksActivated</a></td>
+<td>Private slot to select a topic to be shown.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__lookForNewDocumentation">__lookForNewDocumentation</a></td>
+<td>Private slot to look for new documentation to be loaded into the help database.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__manageQtHelpDocumentation">__manageQtHelpDocumentation</a></td>
+<td>Private slot to manage the QtHelp documentation database.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__manageQtHelpFilters">__manageQtHelpFilters</a></td>
+<td>Private slot to manage the QtHelp filters.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__navigationMenuActionTriggered">__navigationMenuActionTriggered</a></td>
+<td>Private slot to go to the selected page.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__navigationMenuTriggered">__navigationMenuTriggered</a></td>
+<td>Private slot called to handle the navigation button menu selection.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__nextTab">__nextTab</a></td>
+<td>Private slot used to show the next tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__openFile">__openFile</a></td>
+<td>Private slot called to open a file.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__openFileNewTab">__openFileNewTab</a></td>
+<td>Private slot called to open a file in a new tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__openUrl">__openUrl</a></td>
+<td>Private slot to load a URL from the bookmarks menu or bookmarks toolbar in the current tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__openUrlNewTab">__openUrlNewTab</a></td>
+<td>Private slot to load a URL from the bookmarks menu or bookmarks toolbar in a new tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__pathSelected">__pathSelected</a></td>
+<td>Private slot called when a file is selected in the combobox.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__prevTab">__prevTab</a></td>
+<td>Private slot used to show the previous tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__printFile">__printFile</a></td>
+<td>Private slot called to print the displayed file.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__printFilePdf">__printFilePdf</a></td>
+<td>Private slot called to print the displayed file to PDF.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__printPdfRequested">__printPdfRequested</a></td>
+<td>Private slot to handle a print to PDF request.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__printPreview">__printPreview</a></td>
+<td>Public slot to generate a print preview.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__printPreviewFile">__printPreviewFile</a></td>
+<td>Private slot called to show a print preview of the displayed file.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__printRequested">__printRequested</a></td>
+<td>Private slot to handle a print request.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__privateBrowsing">__privateBrowsing</a></td>
+<td>Private slot to switch private browsing.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__reload">__reload</a></td>
+<td>Private slot called to handle the reload action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__savePageAs">__savePageAs</a></td>
+<td>Private slot to save the current page.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__searchForWord">__searchForWord</a></td>
+<td>Private slot to search for a word.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__setBackwardAvailable">__setBackwardAvailable</a></td>
+<td>Private slot called when backward references are available.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__setForwardAvailable">__setForwardAvailable</a></td>
+<td>Private slot called when forward references are available.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__setIconDatabasePath">__setIconDatabasePath</a></td>
+<td>Private method to set the favicons path.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__setLoadingActions">__setLoadingActions</a></td>
+<td>Private slot to set the loading dependent actions.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__setPathComboBackground">__setPathComboBackground</a></td>
+<td>Private slot to change the path combo background to indicate save URLs.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__setupFilterCombo">__setupFilterCombo</a></td>
+<td>Private slot to setup the filter combo box.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showAcceptedLanguages">__showAcceptedLanguages</a></td>
+<td>Private slot to configure the accepted languages for web pages.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showAdBlockDialog">__showAdBlockDialog</a></td>
+<td>Private slot to show the AdBlock configuration dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showBackMenu">__showBackMenu</a></td>
+<td>Private slot showing the backwards navigation menu.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showBookmarksDialog">__showBookmarksDialog</a></td>
+<td>Private slot to show the bookmarks dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showContextMenu">__showContextMenu</a></td>
+<td>Private slot to show the tab context menu.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showCookiesConfiguration">__showCookiesConfiguration</a></td>
+<td>Private slot to configure the cookies handling.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showEnginesConfigurationDialog">__showEnginesConfigurationDialog</a></td>
+<td>Private slot to show the search engines configuration dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showForwardMenu">__showForwardMenu</a></td>
+<td>Private slot showing the forwards navigation menu.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showHistoryMenu">__showHistoryMenu</a></td>
+<td>Private slot called in order to show the history menu.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showIndexWindow">__showIndexWindow</a></td>
+<td>Private method to show the index window.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showInstallationError">__showInstallationError</a></td>
+<td>Private slot to show installation errors.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showNavigationMenu">__showNavigationMenu</a></td>
+<td>Private slot to show the navigation button menu.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showNetworkMonitor">__showNetworkMonitor</a></td>
+<td>Private slot to show the network monitor dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showPageSource">__showPageSource</a></td>
+<td>Private slot to show the source of the current page in  an editor.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showPasswordsDialog">__showPasswordsDialog</a></td>
+<td>Private slot to show the passwords management dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showPreferences">__showPreferences</a></td>
+<td>Private slot to set the preferences.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showSearchWindow">__showSearchWindow</a></td>
+<td>Private method to show the search window.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showTocWindow">__showTocWindow</a></td>
+<td>Private method to show the table of contents window.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__sourceChanged">__sourceChanged</a></td>
+<td>Private slot called when the displayed text of the combobox is changed.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__stopLoading">__stopLoading</a></td>
+<td>Private slot called to handle loading of the current page.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__switchTab">__switchTab</a></td>
+<td>Private slot used to switch between the current and the previous current tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__syncTOC">__syncTOC</a></td>
+<td>Private slot to synchronize the TOC with the currently shown page.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__tabContextMenuClone">__tabContextMenuClone</a></td>
+<td>Private method to clone the selected tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__tabContextMenuClose">__tabContextMenuClose</a></td>
+<td>Private method to close the selected tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__tabContextMenuCloseOthers">__tabContextMenuCloseOthers</a></td>
+<td>Private slot to close all other tabs.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__tabContextMenuMoveLeft">__tabContextMenuMoveLeft</a></td>
+<td>Private method to move a tab one position to the left.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__tabContextMenuMoveRight">__tabContextMenuMoveRight</a></td>
+<td>Private method to move a tab one position to the right.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__tabContextMenuPrint">__tabContextMenuPrint</a></td>
+<td>Private method to print the selected tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__tabContextMenuPrintPdf">__tabContextMenuPrintPdf</a></td>
+<td>Private method to print the selected tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__tabContextMenuPrintPreview">__tabContextMenuPrintPreview</a></td>
+<td>Private method to show a print preview of the selected tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__titleChanged">__titleChanged</a></td>
+<td>Private slot called to handle a change of the current browsers title.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__viewFullScreen">__viewFullScreen</a></td>
+<td>Private slot called to toggle fullscreen mode.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__warning">__warning</a></td>
+<td>Private slot handling warnings from the help engine.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__whatsThis">__whatsThis</a></td>
+<td>Private slot called in to enter Whats This mode.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__windowCloseRequested">__windowCloseRequested</a></td>
+<td>Private slot to handle the windowCloseRequested signal of a browser.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__zoomIn">__zoomIn</a></td>
+<td>Private slot called to handle the zoom in action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__zoomOut">__zoomOut</a></td>
+<td>Private slot called to handle the zoom out action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__zoomReset">__zoomReset</a></td>
+<td>Private slot called to handle the zoom reset action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__zoomTextOnly">__zoomTextOnly</a></td>
+<td>Private slot called to handle the zoom text only action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.adblockManager">adblockManager</a></td>
+<td>Class method to get a reference to the AdBlock manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.bookmarksManager">bookmarksManager</a></td>
+<td>Class method to get a reference to the bookmarks manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.browsers">browsers</a></td>
+<td>Public method to get a list of references to all help browsers.</td>
+</tr><tr>
+<td><a href="#HelpWindow.closeEvent">closeEvent</a></td>
+<td>Private event handler for the close event.</td>
+</tr><tr>
+<td><a href="#HelpWindow.cookieJar">cookieJar</a></td>
+<td>Class method to get a reference to the cookie jar.</td>
+</tr><tr>
+<td><a href="#HelpWindow.currentBrowser">currentBrowser</a></td>
+<td>Public method to get a reference to the current help browser.</td>
+</tr><tr>
+<td><a href="#HelpWindow.getActions">getActions</a></td>
+<td>Public method to get a list of all actions.</td>
+</tr><tr>
+<td><a href="#HelpWindow.getSourceFileList">getSourceFileList</a></td>
+<td>Public method to get a list of all opened source files.</td>
+</tr><tr>
+<td><a href="#HelpWindow.helpEngine">helpEngine</a></td>
+<td>Class method to get a reference to the help engine.</td>
+</tr><tr>
+<td><a href="#HelpWindow.historyManager">historyManager</a></td>
+<td>Class method to get a reference to the history manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.icon">icon</a></td>
+<td>Class method to get the icon for an URL.</td>
+</tr><tr>
+<td><a href="#HelpWindow.iconChanged">iconChanged</a></td>
+<td>Public slot to change the icon shown to the left of the URL entry.</td>
+</tr><tr>
+<td><a href="#HelpWindow.networkAccessManager">networkAccessManager</a></td>
+<td>Class method to get a reference to the network access manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.newBrowser">newBrowser</a></td>
+<td>Public method to create a new help browser tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.newTab">newTab</a></td>
+<td>Public slot called to open a new help window tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.newWindow">newWindow</a></td>
+<td>Public slot called to open a new help browser dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.openSearchManager">openSearchManager</a></td>
+<td>Public method to get a reference to the opensearch manager object.</td>
+</tr><tr>
+<td><a href="#HelpWindow.passwordManager">passwordManager</a></td>
+<td>Class method to get a reference to the password manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.preferencesChanged">preferencesChanged</a></td>
+<td>Public slot to handle a change of preferences.</td>
+</tr><tr>
+<td><a href="#HelpWindow.progressBar">progressBar</a></td>
+<td>Public method to get a reference to the load progress bar.</td>
+</tr><tr>
+<td><a href="#HelpWindow.resetLoading">resetLoading</a></td>
+<td>Public method to reset the loading icon.</td>
+</tr><tr>
+<td><a href="#HelpWindow.search">search</a></td>
+<td>Public method to search for a word.</td>
+</tr><tr>
+<td><a href="#HelpWindow.searchEnginesAction">searchEnginesAction</a></td>
+<td>Public method to get a reference to the search engines configuration action.</td>
+</tr><tr>
+<td><a href="#HelpWindow.setLoading">setLoading</a></td>
+<td>Public method to set the loading icon.</td>
+</tr>
+</table>
+<a NAME="HelpWindow.__init__" ID="HelpWindow.__init__"></a>
+<h4>HelpWindow (Constructor)</h4>
+<b>HelpWindow</b>(<i>home, path, parent, name, fromEric = False, initShortcutsOnly = False, searchWord = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>home</i></dt>
+<dd>
+the URL to be shown (string)
+</dd><dt><i>path</i></dt>
+<dd>
+the path of the working dir (usually '.') (string)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget of this window (QWidget)
+</dd><dt><i>name</i></dt>
+<dd>
+name of this window (string)
+</dd><dt><i>fromEric</i></dt>
+<dd>
+flag indicating whether it was called from within eric5 (boolean)
+</dd><dt><i>initShortcutsOnly=</i></dt>
+<dd>
+flag indicating to just initialize the keyboard
+            shortcuts (boolean)
+</dd><dt><i>searchWord=</i></dt>
+<dd>
+word to search for (string)
+</dd>
+</dl><a NAME="HelpWindow.__about" ID="HelpWindow.__about"></a>
+<h4>HelpWindow.__about</h4>
+<b>__about</b>(<i></i>)
+<p>
+        Private slot to show the about information.
+</p><a NAME="HelpWindow.__aboutQt" ID="HelpWindow.__aboutQt"></a>
+<h4>HelpWindow.__aboutQt</h4>
+<b>__aboutQt</b>(<i></i>)
+<p>
+        Private slot to show info about Qt.
+</p><a NAME="HelpWindow.__activateCurrentBrowser" ID="HelpWindow.__activateCurrentBrowser"></a>
+<h4>HelpWindow.__activateCurrentBrowser</h4>
+<b>__activateCurrentBrowser</b>(<i></i>)
+<p>
+        Private slot to activate the current browser.
+</p><a NAME="HelpWindow.__activateDock" ID="HelpWindow.__activateDock"></a>
+<h4>HelpWindow.__activateDock</h4>
+<b>__activateDock</b>(<i>widget</i>)
+<p>
+        Private method to activate the dock widget of the given widget.
+</p><dl>
+<dt><i>widget</i></dt>
+<dd>
+reference to the widget to be activated (QWidget)
+</dd>
+</dl><a NAME="HelpWindow.__addBookmark" ID="HelpWindow.__addBookmark"></a>
+<h4>HelpWindow.__addBookmark</h4>
+<b>__addBookmark</b>(<i></i>)
+<p>
+        Private slot called to add the displayed file to the bookmarks.
+</p><a NAME="HelpWindow.__addBookmarkFolder" ID="HelpWindow.__addBookmarkFolder"></a>
+<h4>HelpWindow.__addBookmarkFolder</h4>
+<b>__addBookmarkFolder</b>(<i></i>)
+<p>
+        Private slot to add a new bookmarks folder.
+</p><a NAME="HelpWindow.__backward" ID="HelpWindow.__backward"></a>
+<h4>HelpWindow.__backward</h4>
+<b>__backward</b>(<i></i>)
+<p>
+        Private slot called to handle the backward action.
+</p><a NAME="HelpWindow.__bookmarkAll" ID="HelpWindow.__bookmarkAll"></a>
+<h4>HelpWindow.__bookmarkAll</h4>
+<b>__bookmarkAll</b>(<i></i>)
+<p>
+        Private slot to bookmark all open tabs.
+</p><a NAME="HelpWindow.__clearIconsDatabase" ID="HelpWindow.__clearIconsDatabase"></a>
+<h4>HelpWindow.__clearIconsDatabase</h4>
+<b>__clearIconsDatabase</b>(<i></i>)
+<p>
+        Private slot to clear the icons databse.
+</p><a NAME="HelpWindow.__clearPrivateData" ID="HelpWindow.__clearPrivateData"></a>
+<h4>HelpWindow.__clearPrivateData</h4>
+<b>__clearPrivateData</b>(<i></i>)
+<p>
+        Private slot to clear the private data.
+</p><a NAME="HelpWindow.__close" ID="HelpWindow.__close"></a>
+<h4>HelpWindow.__close</h4>
+<b>__close</b>(<i></i>)
+<p>
+        Private slot called to handle the close action.
+</p><a NAME="HelpWindow.__closeAll" ID="HelpWindow.__closeAll"></a>
+<h4>HelpWindow.__closeAll</h4>
+<b>__closeAll</b>(<i></i>)
+<p>
+        Private slot called to handle the close all action.
+</p><a NAME="HelpWindow.__closeAt" ID="HelpWindow.__closeAt"></a>
+<h4>HelpWindow.__closeAt</h4>
+<b>__closeAt</b>(<i>index</i>)
+<p>
+        Private slot to close a window based on it's index.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+index of window to close (integer)
+</dd>
+</dl><a NAME="HelpWindow.__closeNetworkMonitor" ID="HelpWindow.__closeNetworkMonitor"></a>
+<h4>HelpWindow.__closeNetworkMonitor</h4>
+<b>__closeNetworkMonitor</b>(<i></i>)
+<p>
+        Private slot to close the network monitor dialog.
+</p><a NAME="HelpWindow.__copy" ID="HelpWindow.__copy"></a>
+<h4>HelpWindow.__copy</h4>
+<b>__copy</b>(<i></i>)
+<p>
+        Private slot called to handle the copy action.
+</p><a NAME="HelpWindow.__currentChanged" ID="HelpWindow.__currentChanged"></a>
+<h4>HelpWindow.__currentChanged</h4>
+<b>__currentChanged</b>(<i>index</i>)
+<p>
+        Private slot to handle the currentChanged signal.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+index of the current tab (integer)
+</dd>
+</dl><a NAME="HelpWindow.__docsInstalled" ID="HelpWindow.__docsInstalled"></a>
+<h4>HelpWindow.__docsInstalled</h4>
+<b>__docsInstalled</b>(<i>installed</i>)
+<p>
+        Private slot handling the end of documentation installation.
+</p><dl>
+<dt><i>installed</i></dt>
+<dd>
+flag indicating that documents were installed (boolean)
+</dd>
+</dl><a NAME="HelpWindow.__elide" ID="HelpWindow.__elide"></a>
+<h4>HelpWindow.__elide</h4>
+<b>__elide</b>(<i>txt, mode = Qt.ElideRight, length = 40</i>)
+<p>
+        Private method to elide some text.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be elided (string)
+</dd><dt><i>mode=</i></dt>
+<dd>
+elide mode (Qt.TextElideMode)
+</dd><dt><i>length=</i></dt>
+<dd>
+amount of characters to be used (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the elided text (string)
+</dd>
+</dl><a NAME="HelpWindow.__filterQtHelpDocumentation" ID="HelpWindow.__filterQtHelpDocumentation"></a>
+<h4>HelpWindow.__filterQtHelpDocumentation</h4>
+<b>__filterQtHelpDocumentation</b>(<i>customFilter</i>)
+<p>
+        Private slot to filter the QtHelp documentation.
+</p><dl>
+<dt><i>customFilter</i></dt>
+<dd>
+name of filter to be applied (string)
+</dd>
+</dl><a NAME="HelpWindow.__find" ID="HelpWindow.__find"></a>
+<h4>HelpWindow.__find</h4>
+<b>__find</b>(<i></i>)
+<p>
+        Private slot to handle the find action.
+</p><p>
+        It opens the search dialog in order to perform the various
+        search actions and to collect the various search info.
+</p><a NAME="HelpWindow.__forward" ID="HelpWindow.__forward"></a>
+<h4>HelpWindow.__forward</h4>
+<b>__forward</b>(<i></i>)
+<p>
+        Private slot called to handle the forward action.
+</p><a NAME="HelpWindow.__getWebIcon" ID="HelpWindow.__getWebIcon"></a>
+<h4>HelpWindow.__getWebIcon</h4>
+<b>__getWebIcon</b>(<i></i>)
+<p>
+        Private static method to fetch the icon for a URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to get icon for (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+icon for the URL (QIcon)
+</dd>
+</dl><a NAME="HelpWindow.__guessUrlFromPath" ID="HelpWindow.__guessUrlFromPath"></a>
+<h4>HelpWindow.__guessUrlFromPath</h4>
+<b>__guessUrlFromPath</b>(<i>path</i>)
+<p>
+        Private method to guess an URL given a path string.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+path string to guess an URL for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+guessed URL (QUrl)
+</dd>
+</dl><a NAME="HelpWindow.__hideIndexWindow" ID="HelpWindow.__hideIndexWindow"></a>
+<h4>HelpWindow.__hideIndexWindow</h4>
+<b>__hideIndexWindow</b>(<i></i>)
+<p>
+        Private method to hide the index window.
+</p><a NAME="HelpWindow.__hideSearchWindow" ID="HelpWindow.__hideSearchWindow"></a>
+<h4>HelpWindow.__hideSearchWindow</h4>
+<b>__hideSearchWindow</b>(<i></i>)
+<p>
+        Private method to hide the search window.
+</p><a NAME="HelpWindow.__hideTocWindow" ID="HelpWindow.__hideTocWindow"></a>
+<h4>HelpWindow.__hideTocWindow</h4>
+<b>__hideTocWindow</b>(<i></i>)
+<p>
+        Private method to hide the table of contents window.
+</p><a NAME="HelpWindow.__home" ID="HelpWindow.__home"></a>
+<h4>HelpWindow.__home</h4>
+<b>__home</b>(<i></i>)
+<p>
+        Private slot called to handle the home action.
+</p><a NAME="HelpWindow.__indexingFinished" ID="HelpWindow.__indexingFinished"></a>
+<h4>HelpWindow.__indexingFinished</h4>
+<b>__indexingFinished</b>(<i></i>)
+<p>
+        Private slot to handle the start of the indexing process.
+</p><a NAME="HelpWindow.__indexingStarted" ID="HelpWindow.__indexingStarted"></a>
+<h4>HelpWindow.__indexingStarted</h4>
+<b>__indexingStarted</b>(<i></i>)
+<p>
+        Private slot to handle the start of the indexing process.
+</p><a NAME="HelpWindow.__initActions" ID="HelpWindow.__initActions"></a>
+<h4>HelpWindow.__initActions</h4>
+<b>__initActions</b>(<i></i>)
+<p>
+        Private method to define the user interface actions.
+</p><a NAME="HelpWindow.__initHelpDb" ID="HelpWindow.__initHelpDb"></a>
+<h4>HelpWindow.__initHelpDb</h4>
+<b>__initHelpDb</b>(<i></i>)
+<p>
+        Private slot to initialize the documentation database.
+</p><a NAME="HelpWindow.__initMenus" ID="HelpWindow.__initMenus"></a>
+<h4>HelpWindow.__initMenus</h4>
+<b>__initMenus</b>(<i></i>)
+<p>
+        Private method to create the menus.
+</p><a NAME="HelpWindow.__initTabContextMenu" ID="HelpWindow.__initTabContextMenu"></a>
+<h4>HelpWindow.__initTabContextMenu</h4>
+<b>__initTabContextMenu</b>(<i></i>)
+<p>
+        Private mezhod to create the tab context menu.
+</p><a NAME="HelpWindow.__initToolbars" ID="HelpWindow.__initToolbars"></a>
+<h4>HelpWindow.__initToolbars</h4>
+<b>__initToolbars</b>(<i></i>)
+<p>
+        Private method to create the toolbars.
+</p><a NAME="HelpWindow.__initWebSettings" ID="HelpWindow.__initWebSettings"></a>
+<h4>HelpWindow.__initWebSettings</h4>
+<b>__initWebSettings</b>(<i></i>)
+<p>
+        Private method to set the global web settings.
+</p><a NAME="HelpWindow.__isFullScreen" ID="HelpWindow.__isFullScreen"></a>
+<h4>HelpWindow.__isFullScreen</h4>
+<b>__isFullScreen</b>(<i></i>)
+<p>
+        Private method to determine, if the window is in full screen mode.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating full screen mode (boolean)
+</dd>
+</dl><a NAME="HelpWindow.__linkActivated" ID="HelpWindow.__linkActivated"></a>
+<h4>HelpWindow.__linkActivated</h4>
+<b>__linkActivated</b>(<i>url</i>)
+<p>
+        Private slot to handle the selection of a link in the TOC window.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to be shown (QUrl)
+</dd>
+</dl><a NAME="HelpWindow.__linksActivated" ID="HelpWindow.__linksActivated"></a>
+<h4>HelpWindow.__linksActivated</h4>
+<b>__linksActivated</b>(<i>links, keyword</i>)
+<p>
+        Private slot to select a topic to be shown.
+</p><dl>
+<dt><i>links</i></dt>
+<dd>
+dictionary with help topic as key (string) and
+            URL as value (QUrl)
+</dd><dt><i>keyword</i></dt>
+<dd>
+keyword for the link set (string)
+</dd>
+</dl><a NAME="HelpWindow.__lookForNewDocumentation" ID="HelpWindow.__lookForNewDocumentation"></a>
+<h4>HelpWindow.__lookForNewDocumentation</h4>
+<b>__lookForNewDocumentation</b>(<i></i>)
+<p>
+        Private slot to look for new documentation to be loaded into the
+        help database.
+</p><a NAME="HelpWindow.__manageQtHelpDocumentation" ID="HelpWindow.__manageQtHelpDocumentation"></a>
+<h4>HelpWindow.__manageQtHelpDocumentation</h4>
+<b>__manageQtHelpDocumentation</b>(<i></i>)
+<p>
+        Private slot to manage the QtHelp documentation database.
+</p><a NAME="HelpWindow.__manageQtHelpFilters" ID="HelpWindow.__manageQtHelpFilters"></a>
+<h4>HelpWindow.__manageQtHelpFilters</h4>
+<b>__manageQtHelpFilters</b>(<i></i>)
+<p>
+        Private slot to manage the QtHelp filters.
+</p><a NAME="HelpWindow.__navigationMenuActionTriggered" ID="HelpWindow.__navigationMenuActionTriggered"></a>
+<h4>HelpWindow.__navigationMenuActionTriggered</h4>
+<b>__navigationMenuActionTriggered</b>(<i>act</i>)
+<p>
+        Private slot to go to the selected page.
+</p><dl>
+<dt><i>act</i></dt>
+<dd>
+reference to the action selected in the navigation menu (QAction)
+</dd>
+</dl><a NAME="HelpWindow.__navigationMenuTriggered" ID="HelpWindow.__navigationMenuTriggered"></a>
+<h4>HelpWindow.__navigationMenuTriggered</h4>
+<b>__navigationMenuTriggered</b>(<i>act</i>)
+<p>
+        Private slot called to handle the navigation button menu selection.
+</p><dl>
+<dt><i>act</i></dt>
+<dd>
+reference to the selected action (QAction)
+</dd>
+</dl><a NAME="HelpWindow.__nextTab" ID="HelpWindow.__nextTab"></a>
+<h4>HelpWindow.__nextTab</h4>
+<b>__nextTab</b>(<i></i>)
+<p>
+        Private slot used to show the next tab.
+</p><a NAME="HelpWindow.__openFile" ID="HelpWindow.__openFile"></a>
+<h4>HelpWindow.__openFile</h4>
+<b>__openFile</b>(<i></i>)
+<p>
+        Private slot called to open a file.
+</p><a NAME="HelpWindow.__openFileNewTab" ID="HelpWindow.__openFileNewTab"></a>
+<h4>HelpWindow.__openFileNewTab</h4>
+<b>__openFileNewTab</b>(<i></i>)
+<p>
+        Private slot called to open a file in a new tab.
+</p><a NAME="HelpWindow.__openUrl" ID="HelpWindow.__openUrl"></a>
+<h4>HelpWindow.__openUrl</h4>
+<b>__openUrl</b>(<i>url, title</i>)
+<p>
+        Private slot to load a URL from the bookmarks menu or bookmarks toolbar
+        in the current tab.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+url to be opened (QUrl)
+</dd><dt><i>title</i></dt>
+<dd>
+title of the bookmark (string)
+</dd>
+</dl><a NAME="HelpWindow.__openUrlNewTab" ID="HelpWindow.__openUrlNewTab"></a>
+<h4>HelpWindow.__openUrlNewTab</h4>
+<b>__openUrlNewTab</b>(<i>url, title</i>)
+<p>
+        Private slot to load a URL from the bookmarks menu or bookmarks toolbar 
+        in a new tab.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+url to be opened (QUrl)
+</dd><dt><i>title</i></dt>
+<dd>
+title of the bookmark (string)
+</dd>
+</dl><a NAME="HelpWindow.__pathSelected" ID="HelpWindow.__pathSelected"></a>
+<h4>HelpWindow.__pathSelected</h4>
+<b>__pathSelected</b>(<i>path</i>)
+<p>
+        Private slot called when a file is selected in the combobox.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+path to be shown (string)
+</dd>
+</dl><a NAME="HelpWindow.__prevTab" ID="HelpWindow.__prevTab"></a>
+<h4>HelpWindow.__prevTab</h4>
+<b>__prevTab</b>(<i></i>)
+<p>
+        Private slot used to show the previous tab.
+</p><a NAME="HelpWindow.__printFile" ID="HelpWindow.__printFile"></a>
+<h4>HelpWindow.__printFile</h4>
+<b>__printFile</b>(<i>browser = None</i>)
+<p>
+        Private slot called to print the displayed file.
+</p><dl>
+<dt><i>browser</i></dt>
+<dd>
+reference to the browser to be printed (HelpBrowserWV)
+</dd>
+</dl><a NAME="HelpWindow.__printFilePdf" ID="HelpWindow.__printFilePdf"></a>
+<h4>HelpWindow.__printFilePdf</h4>
+<b>__printFilePdf</b>(<i>browser = None</i>)
+<p>
+        Private slot called to print the displayed file to PDF.
+</p><dl>
+<dt><i>browser</i></dt>
+<dd>
+reference to the browser to be printed (HelpBrowserWV)
+</dd>
+</dl><a NAME="HelpWindow.__printPdfRequested" ID="HelpWindow.__printPdfRequested"></a>
+<h4>HelpWindow.__printPdfRequested</h4>
+<b>__printPdfRequested</b>(<i>frame</i>)
+<p>
+        Private slot to handle a print to PDF request.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+reference to the frame to be printed (QWebFrame)
+</dd>
+</dl><a NAME="HelpWindow.__printPreview" ID="HelpWindow.__printPreview"></a>
+<h4>HelpWindow.__printPreview</h4>
+<b>__printPreview</b>(<i>printer</i>)
+<p>
+        Public slot to generate a print preview.
+</p><dl>
+<dt><i>printer</i></dt>
+<dd>
+reference to the printer object (QPrinter)
+</dd>
+</dl><a NAME="HelpWindow.__printPreviewFile" ID="HelpWindow.__printPreviewFile"></a>
+<h4>HelpWindow.__printPreviewFile</h4>
+<b>__printPreviewFile</b>(<i>browser = None</i>)
+<p>
+        Private slot called to show a print preview of the displayed file.
+</p><dl>
+<dt><i>browser</i></dt>
+<dd>
+reference to the browser to be printed (HelpBrowserWV)
+</dd>
+</dl><a NAME="HelpWindow.__printRequested" ID="HelpWindow.__printRequested"></a>
+<h4>HelpWindow.__printRequested</h4>
+<b>__printRequested</b>(<i>frame</i>)
+<p>
+        Private slot to handle a print request.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+reference to the frame to be printed (QWebFrame)
+</dd>
+</dl><a NAME="HelpWindow.__privateBrowsing" ID="HelpWindow.__privateBrowsing"></a>
+<h4>HelpWindow.__privateBrowsing</h4>
+<b>__privateBrowsing</b>(<i></i>)
+<p>
+        Private slot to switch private browsing.
+</p><a NAME="HelpWindow.__reload" ID="HelpWindow.__reload"></a>
+<h4>HelpWindow.__reload</h4>
+<b>__reload</b>(<i></i>)
+<p>
+        Private slot called to handle the reload action.
+</p><a NAME="HelpWindow.__savePageAs" ID="HelpWindow.__savePageAs"></a>
+<h4>HelpWindow.__savePageAs</h4>
+<b>__savePageAs</b>(<i></i>)
+<p>
+        Private slot to save the current page.
+</p><a NAME="HelpWindow.__searchForWord" ID="HelpWindow.__searchForWord"></a>
+<h4>HelpWindow.__searchForWord</h4>
+<b>__searchForWord</b>(<i></i>)
+<p>
+        Private slot to search for a word.
+</p><a NAME="HelpWindow.__setBackwardAvailable" ID="HelpWindow.__setBackwardAvailable"></a>
+<h4>HelpWindow.__setBackwardAvailable</h4>
+<b>__setBackwardAvailable</b>(<i>b</i>)
+<p>
+        Private slot called when backward references are available.
+</p><dl>
+<dt><i>b</i></dt>
+<dd>
+flag indicating availability of the backwards action (boolean)
+</dd>
+</dl><a NAME="HelpWindow.__setForwardAvailable" ID="HelpWindow.__setForwardAvailable"></a>
+<h4>HelpWindow.__setForwardAvailable</h4>
+<b>__setForwardAvailable</b>(<i>b</i>)
+<p>
+        Private slot called when forward references are available.
+</p><dl>
+<dt><i>b</i></dt>
+<dd>
+flag indicating the availability of the forwards action (boolean)
+</dd>
+</dl><a NAME="HelpWindow.__setIconDatabasePath" ID="HelpWindow.__setIconDatabasePath"></a>
+<h4>HelpWindow.__setIconDatabasePath</h4>
+<b>__setIconDatabasePath</b>(<i>enable = True</i>)
+<p>
+        Private method to set the favicons path.
+</p><dl>
+<dt><i>enable</i></dt>
+<dd>
+flag indicating to enabled icon storage (boolean)
+</dd>
+</dl><a NAME="HelpWindow.__setLoadingActions" ID="HelpWindow.__setLoadingActions"></a>
+<h4>HelpWindow.__setLoadingActions</h4>
+<b>__setLoadingActions</b>(<i>b</i>)
+<p>
+        Private slot to set the loading dependent actions.
+</p><dl>
+<dt><i>b</i></dt>
+<dd>
+flag indicating the loading state to consider (boolean)
+</dd>
+</dl><a NAME="HelpWindow.__setPathComboBackground" ID="HelpWindow.__setPathComboBackground"></a>
+<h4>HelpWindow.__setPathComboBackground</h4>
+<b>__setPathComboBackground</b>(<i></i>)
+<p>
+        Private slot to change the path combo background to indicate save URLs.
+</p><a NAME="HelpWindow.__setupFilterCombo" ID="HelpWindow.__setupFilterCombo"></a>
+<h4>HelpWindow.__setupFilterCombo</h4>
+<b>__setupFilterCombo</b>(<i></i>)
+<p>
+        Private slot to setup the filter combo box.
+</p><a NAME="HelpWindow.__showAcceptedLanguages" ID="HelpWindow.__showAcceptedLanguages"></a>
+<h4>HelpWindow.__showAcceptedLanguages</h4>
+<b>__showAcceptedLanguages</b>(<i></i>)
+<p>
+        Private slot to configure the accepted languages for web pages.
+</p><a NAME="HelpWindow.__showAdBlockDialog" ID="HelpWindow.__showAdBlockDialog"></a>
+<h4>HelpWindow.__showAdBlockDialog</h4>
+<b>__showAdBlockDialog</b>(<i></i>)
+<p>
+        Private slot to show the AdBlock configuration dialog.
+</p><a NAME="HelpWindow.__showBackMenu" ID="HelpWindow.__showBackMenu"></a>
+<h4>HelpWindow.__showBackMenu</h4>
+<b>__showBackMenu</b>(<i></i>)
+<p>
+        Private slot showing the backwards navigation menu.
+</p><a NAME="HelpWindow.__showBookmarksDialog" ID="HelpWindow.__showBookmarksDialog"></a>
+<h4>HelpWindow.__showBookmarksDialog</h4>
+<b>__showBookmarksDialog</b>(<i></i>)
+<p>
+        Private slot to show the bookmarks dialog.
+</p><a NAME="HelpWindow.__showContextMenu" ID="HelpWindow.__showContextMenu"></a>
+<h4>HelpWindow.__showContextMenu</h4>
+<b>__showContextMenu</b>(<i>coord, index</i>)
+<p>
+        Private slot to show the tab context menu.
+</p><dl>
+<dt><i>coord</i></dt>
+<dd>
+the position of the mouse pointer (QPoint)
+</dd><dt><i>index</i></dt>
+<dd>
+index of the tab the menu is requested for (integer)
+</dd>
+</dl><a NAME="HelpWindow.__showCookiesConfiguration" ID="HelpWindow.__showCookiesConfiguration"></a>
+<h4>HelpWindow.__showCookiesConfiguration</h4>
+<b>__showCookiesConfiguration</b>(<i></i>)
+<p>
+        Private slot to configure the cookies handling.
+</p><a NAME="HelpWindow.__showEnginesConfigurationDialog" ID="HelpWindow.__showEnginesConfigurationDialog"></a>
+<h4>HelpWindow.__showEnginesConfigurationDialog</h4>
+<b>__showEnginesConfigurationDialog</b>(<i></i>)
+<p>
+        Private slot to show the search engines configuration dialog.
+</p><a NAME="HelpWindow.__showForwardMenu" ID="HelpWindow.__showForwardMenu"></a>
+<h4>HelpWindow.__showForwardMenu</h4>
+<b>__showForwardMenu</b>(<i></i>)
+<p>
+        Private slot showing the forwards navigation menu.
+</p><a NAME="HelpWindow.__showHistoryMenu" ID="HelpWindow.__showHistoryMenu"></a>
+<h4>HelpWindow.__showHistoryMenu</h4>
+<b>__showHistoryMenu</b>(<i></i>)
+<p>
+        Private slot called in order to show the history menu.
+</p><a NAME="HelpWindow.__showIndexWindow" ID="HelpWindow.__showIndexWindow"></a>
+<h4>HelpWindow.__showIndexWindow</h4>
+<b>__showIndexWindow</b>(<i></i>)
+<p>
+        Private method to show the index window.
+</p><a NAME="HelpWindow.__showInstallationError" ID="HelpWindow.__showInstallationError"></a>
+<h4>HelpWindow.__showInstallationError</h4>
+<b>__showInstallationError</b>(<i>message</i>)
+<p>
+        Private slot to show installation errors.
+</p><dl>
+<dt><i>message</i></dt>
+<dd>
+message to be shown (string)
+</dd>
+</dl><a NAME="HelpWindow.__showNavigationMenu" ID="HelpWindow.__showNavigationMenu"></a>
+<h4>HelpWindow.__showNavigationMenu</h4>
+<b>__showNavigationMenu</b>(<i></i>)
+<p>
+        Private slot to show the navigation button menu.
+</p><a NAME="HelpWindow.__showNetworkMonitor" ID="HelpWindow.__showNetworkMonitor"></a>
+<h4>HelpWindow.__showNetworkMonitor</h4>
+<b>__showNetworkMonitor</b>(<i></i>)
+<p>
+        Private slot to show the network monitor dialog.
+</p><a NAME="HelpWindow.__showPageSource" ID="HelpWindow.__showPageSource"></a>
+<h4>HelpWindow.__showPageSource</h4>
+<b>__showPageSource</b>(<i></i>)
+<p>
+        Private slot to show the source of the current page in  an editor.
+</p><a NAME="HelpWindow.__showPasswordsDialog" ID="HelpWindow.__showPasswordsDialog"></a>
+<h4>HelpWindow.__showPasswordsDialog</h4>
+<b>__showPasswordsDialog</b>(<i></i>)
+<p>
+        Private slot to show the passwords management dialog.
+</p><a NAME="HelpWindow.__showPreferences" ID="HelpWindow.__showPreferences"></a>
+<h4>HelpWindow.__showPreferences</h4>
+<b>__showPreferences</b>(<i></i>)
+<p>
+        Private slot to set the preferences.
+</p><a NAME="HelpWindow.__showSearchWindow" ID="HelpWindow.__showSearchWindow"></a>
+<h4>HelpWindow.__showSearchWindow</h4>
+<b>__showSearchWindow</b>(<i></i>)
+<p>
+        Private method to show the search window.
+</p><a NAME="HelpWindow.__showTocWindow" ID="HelpWindow.__showTocWindow"></a>
+<h4>HelpWindow.__showTocWindow</h4>
+<b>__showTocWindow</b>(<i></i>)
+<p>
+        Private method to show the table of contents window.
+</p><a NAME="HelpWindow.__sourceChanged" ID="HelpWindow.__sourceChanged"></a>
+<h4>HelpWindow.__sourceChanged</h4>
+<b>__sourceChanged</b>(<i>url</i>)
+<p>
+        Private slot called when the displayed text of the combobox is changed.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL of the new site (QUrl)
+</dd>
+</dl><a NAME="HelpWindow.__stopLoading" ID="HelpWindow.__stopLoading"></a>
+<h4>HelpWindow.__stopLoading</h4>
+<b>__stopLoading</b>(<i></i>)
+<p>
+        Private slot called to handle loading of the current page.
+</p><a NAME="HelpWindow.__switchTab" ID="HelpWindow.__switchTab"></a>
+<h4>HelpWindow.__switchTab</h4>
+<b>__switchTab</b>(<i></i>)
+<p>
+        Private slot used to switch between the current and the previous current tab.
+</p><a NAME="HelpWindow.__syncTOC" ID="HelpWindow.__syncTOC"></a>
+<h4>HelpWindow.__syncTOC</h4>
+<b>__syncTOC</b>(<i></i>)
+<p>
+        Private slot to synchronize the TOC with the currently shown page.
+</p><a NAME="HelpWindow.__tabContextMenuClone" ID="HelpWindow.__tabContextMenuClone"></a>
+<h4>HelpWindow.__tabContextMenuClone</h4>
+<b>__tabContextMenuClone</b>(<i></i>)
+<p>
+        Private method to clone the selected tab.
+</p><a NAME="HelpWindow.__tabContextMenuClose" ID="HelpWindow.__tabContextMenuClose"></a>
+<h4>HelpWindow.__tabContextMenuClose</h4>
+<b>__tabContextMenuClose</b>(<i></i>)
+<p>
+        Private method to close the selected tab.
+</p><a NAME="HelpWindow.__tabContextMenuCloseOthers" ID="HelpWindow.__tabContextMenuCloseOthers"></a>
+<h4>HelpWindow.__tabContextMenuCloseOthers</h4>
+<b>__tabContextMenuCloseOthers</b>(<i></i>)
+<p>
+        Private slot to close all other tabs.
+</p><a NAME="HelpWindow.__tabContextMenuMoveLeft" ID="HelpWindow.__tabContextMenuMoveLeft"></a>
+<h4>HelpWindow.__tabContextMenuMoveLeft</h4>
+<b>__tabContextMenuMoveLeft</b>(<i></i>)
+<p>
+        Private method to move a tab one position to the left.
+</p><a NAME="HelpWindow.__tabContextMenuMoveRight" ID="HelpWindow.__tabContextMenuMoveRight"></a>
+<h4>HelpWindow.__tabContextMenuMoveRight</h4>
+<b>__tabContextMenuMoveRight</b>(<i></i>)
+<p>
+        Private method to move a tab one position to the right.
+</p><a NAME="HelpWindow.__tabContextMenuPrint" ID="HelpWindow.__tabContextMenuPrint"></a>
+<h4>HelpWindow.__tabContextMenuPrint</h4>
+<b>__tabContextMenuPrint</b>(<i></i>)
+<p>
+        Private method to print the selected tab.
+</p><a NAME="HelpWindow.__tabContextMenuPrintPdf" ID="HelpWindow.__tabContextMenuPrintPdf"></a>
+<h4>HelpWindow.__tabContextMenuPrintPdf</h4>
+<b>__tabContextMenuPrintPdf</b>(<i></i>)
+<p>
+        Private method to print the selected tab.
+</p><a NAME="HelpWindow.__tabContextMenuPrintPreview" ID="HelpWindow.__tabContextMenuPrintPreview"></a>
+<h4>HelpWindow.__tabContextMenuPrintPreview</h4>
+<b>__tabContextMenuPrintPreview</b>(<i></i>)
+<p>
+        Private method to show a print preview of the selected tab.
+</p><a NAME="HelpWindow.__titleChanged" ID="HelpWindow.__titleChanged"></a>
+<h4>HelpWindow.__titleChanged</h4>
+<b>__titleChanged</b>(<i>title</i>)
+<p>
+        Private slot called to handle a change of the current browsers title.
+</p><dl>
+<dt><i>title</i></dt>
+<dd>
+new title (string)
+</dd>
+</dl><a NAME="HelpWindow.__viewFullScreen" ID="HelpWindow.__viewFullScreen"></a>
+<h4>HelpWindow.__viewFullScreen</h4>
+<b>__viewFullScreen</b>(<i></i>)
+<p>
+        Private slot called to toggle fullscreen mode.
+</p><a NAME="HelpWindow.__warning" ID="HelpWindow.__warning"></a>
+<h4>HelpWindow.__warning</h4>
+<b>__warning</b>(<i>msg</i>)
+<p>
+        Private slot handling warnings from the help engine.
+</p><dl>
+<dt><i>msg</i></dt>
+<dd>
+message sent by the help  engine (string)
+</dd>
+</dl><a NAME="HelpWindow.__whatsThis" ID="HelpWindow.__whatsThis"></a>
+<h4>HelpWindow.__whatsThis</h4>
+<b>__whatsThis</b>(<i></i>)
+<p>
+        Private slot called in to enter Whats This mode.
+</p><a NAME="HelpWindow.__windowCloseRequested" ID="HelpWindow.__windowCloseRequested"></a>
+<h4>HelpWindow.__windowCloseRequested</h4>
+<b>__windowCloseRequested</b>(<i></i>)
+<p>
+        Private slot to handle the windowCloseRequested signal of a browser.
+</p><a NAME="HelpWindow.__zoomIn" ID="HelpWindow.__zoomIn"></a>
+<h4>HelpWindow.__zoomIn</h4>
+<b>__zoomIn</b>(<i></i>)
+<p>
+        Private slot called to handle the zoom in action.
+</p><a NAME="HelpWindow.__zoomOut" ID="HelpWindow.__zoomOut"></a>
+<h4>HelpWindow.__zoomOut</h4>
+<b>__zoomOut</b>(<i></i>)
+<p>
+        Private slot called to handle the zoom out action.
+</p><a NAME="HelpWindow.__zoomReset" ID="HelpWindow.__zoomReset"></a>
+<h4>HelpWindow.__zoomReset</h4>
+<b>__zoomReset</b>(<i></i>)
+<p>
+        Private slot called to handle the zoom reset action.
+</p><a NAME="HelpWindow.__zoomTextOnly" ID="HelpWindow.__zoomTextOnly"></a>
+<h4>HelpWindow.__zoomTextOnly</h4>
+<b>__zoomTextOnly</b>(<i>textOnly</i>)
+<p>
+        Private slot called to handle the zoom text only action.
+</p><dl>
+<dt><i>textOnly</i></dt>
+<dd>
+flag indicating to zoom text only (boolean)
+</dd>
+</dl><a NAME="HelpWindow.adblockManager" ID="HelpWindow.adblockManager"></a>
+<h4>HelpWindow.adblockManager</h4>
+<b>adblockManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the AdBlock manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the AdBlock manager (AdBlockManager)
+</dd>
+</dl><a NAME="HelpWindow.bookmarksManager" ID="HelpWindow.bookmarksManager"></a>
+<h4>HelpWindow.bookmarksManager</h4>
+<b>bookmarksManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the bookmarks manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the bookmarks manager (BookmarksManager)
+</dd>
+</dl><a NAME="HelpWindow.browsers" ID="HelpWindow.browsers"></a>
+<h4>HelpWindow.browsers</h4>
+<b>browsers</b>(<i></i>)
+<p>
+        Public method to get a list of references to all help browsers.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of references to help browsers (list of HelpBrowser)
+</dd>
+</dl><a NAME="HelpWindow.closeEvent" ID="HelpWindow.closeEvent"></a>
+<h4>HelpWindow.closeEvent</h4>
+<b>closeEvent</b>(<i>e</i>)
+<p>
+        Private event handler for the close event.
+</p><dl>
+<dt><i>e</i></dt>
+<dd>
+the close event (QCloseEvent)
+                <br />This event is simply accepted after the history has been
+                saved and all window references have been deleted.
+</dd>
+</dl><a NAME="HelpWindow.cookieJar" ID="HelpWindow.cookieJar"></a>
+<h4>HelpWindow.cookieJar</h4>
+<b>cookieJar</b>(<i></i>)
+<p>
+        Class method to get a reference to the cookie jar.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the cookie jar (CookieJar)
+</dd>
+</dl><a NAME="HelpWindow.currentBrowser" ID="HelpWindow.currentBrowser"></a>
+<h4>HelpWindow.currentBrowser</h4>
+<b>currentBrowser</b>(<i></i>)
+<p>
+        Public method to get a reference to the current help browser.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the current help browser (HelpBrowser)
+</dd>
+</dl><a NAME="HelpWindow.getActions" ID="HelpWindow.getActions"></a>
+<h4>HelpWindow.getActions</h4>
+<b>getActions</b>(<i></i>)
+<p>
+        Public method to get a list of all actions.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of all actions (list of E5Action)
+</dd>
+</dl><a NAME="HelpWindow.getSourceFileList" ID="HelpWindow.getSourceFileList"></a>
+<h4>HelpWindow.getSourceFileList</h4>
+<b>getSourceFileList</b>(<i></i>)
+<p>
+        Public method to get a list of all opened source files.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+dictionary with tab id as key and host/namespace as value
+</dd>
+</dl><a NAME="HelpWindow.helpEngine" ID="HelpWindow.helpEngine"></a>
+<h4>HelpWindow.helpEngine</h4>
+<b>helpEngine</b>(<i></i>)
+<p>
+        Class method to get a reference to the help engine.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the help engine (QHelpEngine)
+</dd>
+</dl><a NAME="HelpWindow.historyManager" ID="HelpWindow.historyManager"></a>
+<h4>HelpWindow.historyManager</h4>
+<b>historyManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the history manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the history manager (HistoryManager)
+</dd>
+</dl><a NAME="HelpWindow.icon" ID="HelpWindow.icon"></a>
+<h4>HelpWindow.icon</h4>
+<b>icon</b>(<i>url</i>)
+<p>
+        Class method to get the icon for an URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to get icon for (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+icon for the URL (QIcon)
+</dd>
+</dl><a NAME="HelpWindow.iconChanged" ID="HelpWindow.iconChanged"></a>
+<h4>HelpWindow.iconChanged</h4>
+<b>iconChanged</b>(<i>icon</i>)
+<p>
+        Public slot to change the icon shown to the left of the URL entry.
+</p><dl>
+<dt><i>icon</i></dt>
+<dd>
+icon to be shown (QIcon)
+</dd>
+</dl><a NAME="HelpWindow.networkAccessManager" ID="HelpWindow.networkAccessManager"></a>
+<h4>HelpWindow.networkAccessManager</h4>
+<b>networkAccessManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the network access manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the network access manager (NetworkAccessManager)
+</dd>
+</dl><a NAME="HelpWindow.newBrowser" ID="HelpWindow.newBrowser"></a>
+<h4>HelpWindow.newBrowser</h4>
+<b>newBrowser</b>(<i>link</i>)
+<p>
+        Public method to create a new help browser tab.
+</p><dl>
+<dt><i>link</i></dt>
+<dd>
+link to be shown (string)
+</dd>
+</dl><a NAME="HelpWindow.newTab" ID="HelpWindow.newTab"></a>
+<h4>HelpWindow.newTab</h4>
+<b>newTab</b>(<i>link = None</i>)
+<p>
+        Public slot called to open a new help window tab.
+</p><dl>
+<dt><i>link</i></dt>
+<dd>
+file to be displayed in the new window (string or QUrl)
+</dd>
+</dl><a NAME="HelpWindow.newWindow" ID="HelpWindow.newWindow"></a>
+<h4>HelpWindow.newWindow</h4>
+<b>newWindow</b>(<i>link = None</i>)
+<p>
+        Public slot called to open a new help browser dialog.
+</p><dl>
+<dt><i>link</i></dt>
+<dd>
+file to be displayed in the new window (string or QUrl)
+</dd>
+</dl><a NAME="HelpWindow.openSearchManager" ID="HelpWindow.openSearchManager"></a>
+<h4>HelpWindow.openSearchManager</h4>
+<b>openSearchManager</b>(<i></i>)
+<p>
+        Public method to get a reference to the opensearch manager object.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the opensearch manager object (OpenSearchManager)
+</dd>
+</dl><a NAME="HelpWindow.passwordManager" ID="HelpWindow.passwordManager"></a>
+<h4>HelpWindow.passwordManager</h4>
+<b>passwordManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the password manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the password manager (PasswordManager)
+</dd>
+</dl><a NAME="HelpWindow.preferencesChanged" ID="HelpWindow.preferencesChanged"></a>
+<h4>HelpWindow.preferencesChanged</h4>
+<b>preferencesChanged</b>(<i></i>)
+<p>
+        Public slot to handle a change of preferences.
+</p><a NAME="HelpWindow.progressBar" ID="HelpWindow.progressBar"></a>
+<h4>HelpWindow.progressBar</h4>
+<b>progressBar</b>(<i></i>)
+<p>
+        Public method to get a reference to the load progress bar.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the load progress bar (QProgressBar)
+</dd>
+</dl><a NAME="HelpWindow.resetLoading" ID="HelpWindow.resetLoading"></a>
+<h4>HelpWindow.resetLoading</h4>
+<b>resetLoading</b>(<i>widget, ok</i>)
+<p>
+        Public method to reset the loading icon.
+</p><dl>
+<dt><i>widget</i></dt>
+<dd>
+reference to the widget to reset the icon for (QWidget)
+</dd><dt><i>ok</i></dt>
+<dd>
+flag indicating the result (boolean)
+</dd>
+</dl><a NAME="HelpWindow.search" ID="HelpWindow.search"></a>
+<h4>HelpWindow.search</h4>
+<b>search</b>(<i>word</i>)
+<p>
+        Public method to search for a word.
+</p><dl>
+<dt><i>word</i></dt>
+<dd>
+word to search for (string)
+</dd>
+</dl><a NAME="HelpWindow.searchEnginesAction" ID="HelpWindow.searchEnginesAction"></a>
+<h4>HelpWindow.searchEnginesAction</h4>
+<b>searchEnginesAction</b>(<i></i>)
+<p>
+        Public method to get a reference to the search engines configuration action.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the search engines configuration action (QAction)
+</dd>
+</dl><a NAME="HelpWindow.setLoading" ID="HelpWindow.setLoading"></a>
+<h4>HelpWindow.setLoading</h4>
+<b>setLoading</b>(<i>widget</i>)
+<p>
+        Public method to set the loading icon.
+</p><dl>
+<dt><i>widget</i></dt>
+<dd>
+reference to the widget to set the icon for (QWidget)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
