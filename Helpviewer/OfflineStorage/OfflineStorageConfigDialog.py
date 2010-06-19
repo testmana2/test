@@ -9,6 +9,7 @@ Module implementing a dialog to configure the offline storage.
 
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
+from PyQt4.QtWebKit import QWebSettings
 
 from .WebDatabasesDialog import WebDatabasesDialog
 from .Ui_OfflineStorageConfigDialog import Ui_OfflineStorageConfigDialog
@@ -32,6 +33,20 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
             Preferences.getHelp("OfflineStorageDatabaseEnabled"))
         self.databaseQuotaSpinBox.setValue(
             Preferences.getHelp("OfflineStorageDatabaseQuota"))
+        
+        if hasattr(QWebSettings, "OfflineWebApplicationCacheEnabled"):
+            self.applicationCacheEnabledCheckBox.setChecked(
+                Preferences.getHelp("OfflineWebApplicationCacheEnabled"))
+            self.applicationCacheQuotaSpinBox.setValue(
+                Preferences.getHelp("OfflineWebApplicationCacheQuota"))
+        else:
+            self.applicationCacheGroup.setEnabled(False)
+        
+        if hasattr(QWebSettings, "LocalStorageEnabled"):
+            self.localStorageEnabledCheckBox.setChecked(
+                Preferences.getHelp("LocalStorageEnabled"))
+        else:
+            self.localStorageGroup.setEnabled(False)
     
     def storeData(self):
         """
@@ -41,6 +56,16 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
             self.databaseEnabledCheckBox.isChecked())
         Preferences.setHelp("OfflineStorageDatabaseQuota", 
             self.databaseQuotaSpinBox.value())
+        
+        if self.applicationCacheGroup.isEnabled():
+            Preferences.setHelp("OfflineWebApplicationCacheEnabled", 
+                self.applicationCacheEnabledCheckBox.isChecked())
+            Preferences.setHelp("OfflineWebApplicationCacheQuota", 
+                self.applicationCacheQuotaSpinBox.value())
+        
+        if self.localStorageGroup.isEnabled():
+            Preferences.setHelp("LocalStorageEnabled", 
+                self.localStorageEnabledCheckBox.isChecked())
     
     @pyqtSlot()
     def on_showDatabasesButton_clicked(self):

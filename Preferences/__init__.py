@@ -601,9 +601,18 @@ class Prefs(object):
         "OfflineStorageDatabaseEnabled" :
             websettings.testAttribute(QWebSettings.OfflineStorageDatabaseEnabled), 
     })
+    if hasattr(QWebSettings, "OfflineWebApplicationCacheEnabled"):
+        helpDefaults.update({
+            "OfflineWebApplicationCacheEnabled" :
+                websettings.testAttribute(QWebSettings.OfflineWebApplicationCacheEnabled),
+            "OfflineWebApplicationCacheQuota" : 50,     # 50 MB
+        })
+    if hasattr(QWebSettings, "LocalStorageEnabled"):
+        helpDefaults["LocalStorageEnabled"] = \
+            websettings.testAttribute(QWebSettings.LocalStorageEnabled)
     if hasattr(QWebSettings, "DnsPrefetchEnabled"):
         helpDefaults["DnsPrefetchEnabled"] = \
-                websettings.testAttribute(QWebSettings.DnsPrefetchEnabled)
+            websettings.testAttribute(QWebSettings.DnsPrefetchEnabled)
 
     # defaults for system settings
     sysDefaults = {
@@ -1744,7 +1753,7 @@ def getHelp(key, prefClass = Prefs):
         return keywords
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies", 
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit", 
-                 "OfflineStorageDatabaseQuota"]:
+                 "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota"]:
         return int(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions", 
@@ -1752,7 +1761,8 @@ def getHelp(key, prefClass = Prefs):
                  "SavePasswords", "AdBlockEnabled", "AutoLoadImages", 
                  "JavaEnabled", "JavaScriptEnabled", "JavaScriptCanOpenWindows", 
                  "JavaScriptCanAccessClipboard", "PluginsEnabled", "DnsPrefetchEnabled", 
-                 "OfflineStorageDatabaseEnabled"]:
+                 "OfflineStorageDatabaseEnabled", "OfflineWebApplicationCacheEnabled", 
+                 "LocalStorageEnabled"]:
         return toBool(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions"]:

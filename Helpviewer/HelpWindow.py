@@ -327,6 +327,26 @@ class HelpWindow(QMainWindow):
             settings.setOfflineStorageDefaultQuota(
                 Preferences.getHelp("OfflineStorageDatabaseQuota") * 1024 * 1024)
         
+        if hasattr(QWebSettings, "OfflineWebApplicationCacheEnabled"):
+            settings.setAttribute(QWebSettings.OfflineWebApplicationCacheEnabled, 
+                Preferences.getHelp("OfflineWebApplicationCacheEnabled"))
+            appCacheDir = os.path.join(
+                Utilities.getConfigDir(), "browser", "webappcaches")
+            if not os.path.exists(appCacheDir):
+                os.makedirs(appCacheDir)
+            settings.setOfflineWebApplicationCachePath(appCacheDir)
+            settings.setOfflineWebApplicationCacheQuota(
+                Preferences.getHelp("OfflineWebApplicationCacheQuota") * 1024 * 1024)
+        
+        if hasattr(QWebSettings, "LocalStorageEnabled"):
+            settings.setAttribute(QWebSettings.LocalStorageEnabled, 
+                Preferences.getHelp("LocalStorageEnabled"))
+            localStorageDir = os.path.join(
+                Utilities.getConfigDir(), "browser", "weblocalstorage")
+            if not os.path.exists(localStorageDir):
+                os.makedirs(localStorageDir)
+            settings.setLocalStoragePath(localStorageDir)
+        
         if hasattr(QWebSettings, "DnsPrefetchEnabled"):
             settings.setAttribute(QWebSettings.DnsPrefetchEnabled, 
                 Preferences.getHelp("DnsPrefetchEnabled"))
