@@ -242,6 +242,8 @@
             </section>
             <section title="eric5.Helpviewer.OfflineStorage" ref="index-eric5.Helpviewer.OfflineStorage.html">
               <section title="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html" />
+              <section title="eric5.Helpviewer.OfflineStorage.WebDatabasesDialog" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesDialog.html" />
+              <section title="eric5.Helpviewer.OfflineStorage.WebDatabasesModel" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html" />
             </section>
             <section title="eric5.Helpviewer.OpenSearch" ref="index-eric5.Helpviewer.OpenSearch.html">
               <section title="eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines" ref="eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines.html" />
@@ -6780,7 +6782,23 @@
       <keyword name="OfflineStorageConfigDialog (Module)" id="OfflineStorageConfigDialog (Module)" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html" />
       <keyword name="OfflineStorageConfigDialog" id="OfflineStorageConfigDialog" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog" />
       <keyword name="OfflineStorageConfigDialog (Constructor)" id="OfflineStorageConfigDialog (Constructor)" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog.__init__" />
+      <keyword name="OfflineStorageConfigDialog.on_showDatabasesButton_clicked" id="OfflineStorageConfigDialog.on_showDatabasesButton_clicked" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog.on_showDatabasesButton_clicked" />
       <keyword name="OfflineStorageConfigDialog.storeData" id="OfflineStorageConfigDialog.storeData" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog.storeData" />
+      <keyword name="WebDatabasesModel (Module)" id="WebDatabasesModel (Module)" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html" />
+      <keyword name="WebDatabasesModel" id="WebDatabasesModel" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel" />
+      <keyword name="WebDatabasesModel (Constructor)" id="WebDatabasesModel (Constructor)" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.__init__" />
+      <keyword name="WebDatabasesModel.__dataString" id="WebDatabasesModel.__dataString" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.__dataString" />
+      <keyword name="WebDatabasesModel.columnCount" id="WebDatabasesModel.columnCount" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.columnCount" />
+      <keyword name="WebDatabasesModel.data" id="WebDatabasesModel.data" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.data" />
+      <keyword name="WebDatabasesModel.hasChildren" id="WebDatabasesModel.hasChildren" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.hasChildren" />
+      <keyword name="WebDatabasesModel.headerData" id="WebDatabasesModel.headerData" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.headerData" />
+      <keyword name="WebDatabasesModel.index" id="WebDatabasesModel.index" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.index" />
+      <keyword name="WebDatabasesModel.parent" id="WebDatabasesModel.parent" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.parent" />
+      <keyword name="WebDatabasesModel.removeRows" id="WebDatabasesModel.removeRows" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.removeRows" />
+      <keyword name="WebDatabasesModel.rowCount" id="WebDatabasesModel.rowCount" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.rowCount" />
+      <keyword name="WebDatabasesDialog (Module)" id="WebDatabasesDialog (Module)" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesDialog.html" />
+      <keyword name="WebDatabasesDialog" id="WebDatabasesDialog" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesDialog.html#WebDatabasesDialog" />
+      <keyword name="WebDatabasesDialog (Constructor)" id="WebDatabasesDialog (Constructor)" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesDialog.html#WebDatabasesDialog.__init__" />
       <keyword name="Bookmarks (Package)" id="Bookmarks (Package)" ref="index-eric5.Helpviewer.Bookmarks.html" />
       <keyword name="BookmarksManager (Module)" id="BookmarksManager (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html" />
       <keyword name="BookmarksManager" id="BookmarksManager" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager" />
@@ -9838,6 +9856,8 @@
       <file>eric5.Helpviewer.Network.QtHelpAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.SchemeAccessHandler.html</file>
       <file>eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html</file>
+      <file>eric5.Helpviewer.OfflineStorage.WebDatabasesDialog.html</file>
+      <file>eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchDefaultEngines.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchDialog.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchEditDialog.html</file>

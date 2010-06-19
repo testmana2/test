@@ -21304,6 +21304,16 @@ Do you want to save your changes?</source>
         <source> MB</source>
         <translation type="unfinished"> MB</translation>
     </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="114"/>
+        <source>Press to show the Web SQL Databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="117"/>
+        <source>Show databases...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>OpenSearchDialog</name>
@@ -41604,6 +41614,87 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="Debugger/WatchPointViewer.py" line="228"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Una expresión a examinar &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; para la variable &lt;b&gt;{1}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>WebDatabasesDialog</name>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="14"/>
+        <source>Web SQL Databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="43"/>
+        <source>Enter search term for cookies</source>
+        <translation type="obsolete">Introduzca término de búsqueda para cookies</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="50"/>
+        <source>Press to clear the search edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="74"/>
+        <source>Press to remove the selected entries</source>
+        <translation type="unfinished">Pulse para eliminar las entradas seleccionadas</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="77"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="84"/>
+        <source>Press to remove all entries</source>
+        <translation type="unfinished">Pulse para eliminar todas las entradas</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="87"/>
+        <source>Remove &amp;All</source>
+        <translation type="unfinished">Eliminar &amp;Todas</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="43"/>
+        <source>Enter search term for databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>WebDatabasesModel</name>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="27"/>
+        <source>Name</source>
+        <translation type="unfinished">Nombre</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="28"/>
+        <source>Size</source>
+        <translation type="unfinished">Tamaño</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="99"/>
+        <source>Local</source>
+        <translation type="unfinished">Local</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="117"/>
+        <source>{0} ({1})</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="205"/>
+        <source>bytes</source>
+        <translation type="unfinished">bytes</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="208"/>
+        <source>kB</source>
+        <translation type="unfinished">kB</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="211"/>
+        <source>MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
 </context>
 <context>

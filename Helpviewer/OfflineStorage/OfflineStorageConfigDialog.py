@@ -7,8 +7,10 @@
 Module implementing a dialog to configure the offline storage.
 """
 
+from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
+from .WebDatabasesDialog import WebDatabasesDialog
 from .Ui_OfflineStorageConfigDialog import Ui_OfflineStorageConfigDialog
 
 import Preferences
@@ -39,3 +41,11 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
             self.databaseEnabledCheckBox.isChecked())
         Preferences.setHelp("OfflineStorageDatabaseQuota", 
             self.databaseQuotaSpinBox.value())
+    
+    @pyqtSlot()
+    def on_showDatabasesButton_clicked(self):
+        """
+        Private slot to show a dialog with all databases.
+        """
+        dlg = WebDatabasesDialog(self)
+        dlg.exec_()

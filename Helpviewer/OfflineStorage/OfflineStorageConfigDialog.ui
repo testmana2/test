@@ -82,7 +82,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="2">
+      <item row="1" column="2" colspan="2">
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -94,6 +94,29 @@
          </size>
         </property>
        </spacer>
+      </item>
+      <item row="2" column="0" colspan="3">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>306</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="showDatabasesButton">
+        <property name="toolTip">
+         <string>Press to show the Web SQL Databases</string>
+        </property>
+        <property name="text">
+         <string>Show databases...</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -126,6 +149,7 @@
  <tabstops>
   <tabstop>databaseEnabledCheckBox</tabstop>
   <tabstop>databaseQuotaSpinBox</tabstop>
+  <tabstop>showDatabasesButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

@@ -21294,6 +21294,16 @@ Sollen die Änderungen gesichert werden?</translation>
         <source> MB</source>
         <translation>MB</translation>
     </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="114"/>
+        <source>Press to show the Web SQL Databases</source>
+        <translation>Drücken, um die Web SQL Datenbanken anzuzeigen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="117"/>
+        <source>Show databases...</source>
+        <translation>Zeige Datenbanken...</translation>
+    </message>
 </context>
 <context>
     <name>OpenSearchDialog</name>
@@ -41644,6 +41654,82 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <location filename="Debugger/WatchPointViewer.py" line="180"/>
         <source>Configure...</source>
         <translation>Einstellungen...</translation>
+    </message>
+</context>
+<context>
+    <name>WebDatabasesDialog</name>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="14"/>
+        <source>Web SQL Databases</source>
+        <translation>Web SQL Datenbanken</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="50"/>
+        <source>Press to clear the search edit</source>
+        <translation>Drücken, um den Suchtext zu löschen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="74"/>
+        <source>Press to remove the selected entries</source>
+        <translation>Drücken, um die ausgwählten Einträge zu löschen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="77"/>
+        <source>&amp;Remove</source>
+        <translation>&amp;Entfernen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="84"/>
+        <source>Press to remove all entries</source>
+        <translation>Drücken, um alle Einträge zu löschen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="87"/>
+        <source>Remove &amp;All</source>
+        <translation>&amp;Alle entfernen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="43"/>
+        <source>Enter search term for databases</source>
+        <translation>Gib den Suchbegriff für Datenbanken ein</translation>
+    </message>
+</context>
+<context>
+    <name>WebDatabasesModel</name>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="27"/>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="28"/>
+        <source>Size</source>
+        <translation>Größe</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="99"/>
+        <source>Local</source>
+        <translation>Lokal</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="117"/>
+        <source>{0} ({1})</source>
+        <translation>{0} ({1})</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="205"/>
+        <source>bytes</source>
+        <translation>Bytes</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="208"/>
+        <source>kB</source>
+        <translation>kB</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="211"/>
+        <source>MB</source>
+        <translation>MB</translation>
     </message>
 </context>
 <context>
