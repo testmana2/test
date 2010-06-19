@@ -327,6 +327,10 @@ class HelpWindow(QMainWindow):
             settings.setOfflineStorageDefaultQuota(
                 Preferences.getHelp("OfflineStorageDatabaseQuota") * 1024 * 1024)
         
+        if hasattr(QWebSettings, "DnsPrefetchEnabled"):
+            settings.setAttribute(QWebSettings.DnsPrefetchEnabled, 
+                Preferences.getHelp("DnsPrefetchEnabled"))
+        
     def __initActions(self):
         """
         Private method to define the user interface actions.

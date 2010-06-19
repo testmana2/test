@@ -601,6 +601,9 @@ class Prefs(object):
         "OfflineStorageDatabaseEnabled" :
             websettings.testAttribute(QWebSettings.OfflineStorageDatabaseEnabled), 
     })
+    if hasattr(QWebSettings, "DnsPrefetchEnabled"):
+        helpDefaults["DnsPrefetchEnabled"] = \
+                websettings.testAttribute(QWebSettings.DnsPrefetchEnabled)
 
     # defaults for system settings
     sysDefaults = {
@@ -1748,7 +1751,7 @@ def getHelp(key, prefClass = Prefs):
                  "DiskCacheEnabled", "FilterTrackingCookies", "PrintBackgrounds", 
                  "SavePasswords", "AdBlockEnabled", "AutoLoadImages", 
                  "JavaEnabled", "JavaScriptEnabled", "JavaScriptCanOpenWindows", 
-                 "JavaScriptCanAccessClipboard", "PluginsEnabled", 
+                 "JavaScriptCanAccessClipboard", "PluginsEnabled", "DnsPrefetchEnabled", 
                  "OfflineStorageDatabaseEnabled"]:
         return toBool(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))

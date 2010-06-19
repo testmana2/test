@@ -7,7 +7,8 @@
 Module implementing the Help web browser configuration page.
 """
 
-from PyQt4.QtCore import qVersion, pyqtSlot
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtWebKit import QWebSettings
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage
@@ -61,17 +62,18 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         
         self.savePasswordsCheckBox.setChecked(
             Preferences.getHelp("SavePasswords"))
-        
-        if qVersion() >= '4.5.0':
-            self.diskCacheCheckBox.setChecked(
-                Preferences.getHelp("DiskCacheEnabled"))
-            self.cacheSizeSpinBox.setValue(
-                Preferences.getHelp("DiskCacheSize"))
-            self.printBackgroundsCheckBox.setChecked(
-                Preferences.getHelp("PrintBackgrounds"))
+        if hasattr(QWebSettings, "DnsPrefetchEnabled"):
+            self.dnsPrefetchCheckBox.setChecked(
+            Preferences.getHelp("DnsPrefetchEnabled"))
         else:
-            self.cacheGroup.setEnabled(False)
-            self.printGroup.setEnabled(False)
+            self.dnsPrefetchCheckBox.setEnabled(False)
+        
+        self.diskCacheCheckBox.setChecked(
+            Preferences.getHelp("DiskCacheEnabled"))
+        self.cacheSizeSpinBox.setValue(
+            Preferences.getHelp("DiskCacheSize"))
+        self.printBackgroundsCheckBox.setChecked(
+            Preferences.getHelp("PrintBackgrounds"))
         
         self.startupCombo.setCurrentIndex(
             Preferences.getHelp("StartupBehavior"))
@@ -125,14 +127,16 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         
         Preferences.setHelp("SavePasswords", 
             self.savePasswordsCheckBox.isChecked())
+        if self.dnsPrefetchCheckBox.isEnabled():
+            Preferences.setHelp("DnsPrefetchEnabled", 
+                self.dnsPrefetchCheckBox.isChecked())
         
-        if qVersion() >= '4.5.0':
-            Preferences.setHelp("DiskCacheEnabled",
-                self.diskCacheCheckBox.isChecked())
-            Preferences.setHelp("DiskCacheSize",
-                self.cacheSizeSpinBox.value())
-            Preferences.setHelp("PrintBackgrounds",
-                self.printBackgroundsCheckBox.isChecked())
+        Preferences.setHelp("DiskCacheEnabled",
+            self.diskCacheCheckBox.isChecked())
+        Preferences.setHelp("DiskCacheSize",
+            self.cacheSizeSpinBox.value())
+        Preferences.setHelp("PrintBackgrounds",
+            self.printBackgroundsCheckBox.isChecked())
         
         Preferences.setHelp("StartupBehavior", 
             self.startupCombo.currentIndex())
