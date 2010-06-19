@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea</h1>
+<p>
+Module implementing the mdi area viewmanager class.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#MdiArea">MdiArea</a></td>
+<td>Class implementing the mdi area viewmanager class.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="MdiArea" ID="MdiArea"></a>
+<h2>MdiArea</h2>
+<p>
+    Class implementing the mdi area viewmanager class.
+</p><h4>Signals</h4>
+<dl>
+<dt>editorChanged(string)</dt>
+<dd>
+emitted when the current editor has changed
+</dd>
+</dl>
+<h3>Derived from</h3>
+QMdiArea, ViewManager
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#MdiArea.__init__">MdiArea</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#MdiArea.__iconizeAllWindows">__iconizeAllWindows</a></td>
+<td>Private slot to iconize all windows.</td>
+</tr><tr>
+<td><a href="#MdiArea.__restoreAllWindows">__restoreAllWindows</a></td>
+<td>Private slot to restore all windows.</td>
+</tr><tr>
+<td><a href="#MdiArea.__setSubWindowIcon">__setSubWindowIcon</a></td>
+<td>Private method to set the icon of a subwindow given it's internal widget.</td>
+</tr><tr>
+<td><a href="#MdiArea.__subWindowActivated">__subWindowActivated</a></td>
+<td>Private slot to handle the windowActivated signal.</td>
+</tr><tr>
+<td><a href="#MdiArea._addView">_addView</a></td>
+<td>Protected method to add a view (i.e.</td>
+</tr><tr>
+<td><a href="#MdiArea._initWindowActions">_initWindowActions</a></td>
+<td>Protected method to define the user interface actions for window handling.</td>
+</tr><tr>
+<td><a href="#MdiArea._modificationStatusChanged">_modificationStatusChanged</a></td>
+<td>Protected slot to handle the modificationStatusChanged signal.</td>
+</tr><tr>
+<td><a href="#MdiArea._removeAllViews">_removeAllViews</a></td>
+<td>Protected method to remove all views (i.e.</td>
+</tr><tr>
+<td><a href="#MdiArea._removeView">_removeView</a></td>
+<td>Protected method to remove a view (i.e.</td>
+</tr><tr>
+<td><a href="#MdiArea._showView">_showView</a></td>
+<td>Private method to show a view (i.e.</td>
+</tr><tr>
+<td><a href="#MdiArea._syntaxErrorToggled">_syntaxErrorToggled</a></td>
+<td>Protected slot to handle the syntaxerrorToggled signal.</td>
+</tr><tr>
+<td><a href="#MdiArea.activeWindow">activeWindow</a></td>
+<td>Private method to return the active (i.e.</td>
+</tr><tr>
+<td><a href="#MdiArea.canCascade">canCascade</a></td>
+<td>Public method to signal if cascading of managed windows is available.</td>
+</tr><tr>
+<td><a href="#MdiArea.canSplit">canSplit</a></td>
+<td>public method to signal if splitting of the view is available.</td>
+</tr><tr>
+<td><a href="#MdiArea.canTile">canTile</a></td>
+<td>Public method to signal if tiling of managed windows is available.</td>
+</tr><tr>
+<td><a href="#MdiArea.cascade">cascade</a></td>
+<td>Public method to cascade the managed windows.</td>
+</tr><tr>
+<td><a href="#MdiArea.eventFilter">eventFilter</a></td>
+<td>Public method called to filter the event queue.</td>
+</tr><tr>
+<td><a href="#MdiArea.setEditorName">setEditorName</a></td>
+<td>Public method to change the displayed name of the editor.</td>
+</tr><tr>
+<td><a href="#MdiArea.showWindowMenu">showWindowMenu</a></td>
+<td>Public method to set up the viewmanager part of the Window menu.</td>
+</tr><tr>
+<td><a href="#MdiArea.tile">tile</a></td>
+<td>Public method to tile the managed windows.</td>
+</tr>
+</table>
+<a NAME="MdiArea.__init__" ID="MdiArea.__init__"></a>
+<h4>MdiArea (Constructor)</h4>
+<b>MdiArea</b>(<i>parent</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd><dt><i>ui</i></dt>
+<dd>
+reference to the main user interface
+</dd><dt><i>dbs</i></dt>
+<dd>
+reference to the debug server object
+</dd>
+</dl><a NAME="MdiArea.__iconizeAllWindows" ID="MdiArea.__iconizeAllWindows"></a>
+<h4>MdiArea.__iconizeAllWindows</h4>
+<b>__iconizeAllWindows</b>(<i></i>)
+<p>
+        Private slot to iconize all windows.
+</p><a NAME="MdiArea.__restoreAllWindows" ID="MdiArea.__restoreAllWindows"></a>
+<h4>MdiArea.__restoreAllWindows</h4>
+<b>__restoreAllWindows</b>(<i></i>)
+<p>
+        Private slot to restore all windows.
+</p><a NAME="MdiArea.__setSubWindowIcon" ID="MdiArea.__setSubWindowIcon"></a>
+<h4>MdiArea.__setSubWindowIcon</h4>
+<b>__setSubWindowIcon</b>(<i>widget, icon</i>)
+<p>
+        Private method to set the icon of a subwindow given it's internal widget.
+</p><dl>
+<dt><i>widget</i></dt>
+<dd>
+reference to the internal widget (QWidget)
+</dd><dt><i>icon</i></dt>
+<dd>
+reference to the icon (QIcon)
+</dd>
+</dl><a NAME="MdiArea.__subWindowActivated" ID="MdiArea.__subWindowActivated"></a>
+<h4>MdiArea.__subWindowActivated</h4>
+<b>__subWindowActivated</b>(<i>subWindow</i>)
+<p>
+        Private slot to handle the windowActivated signal.
+</p><dl>
+<dt><i>subWindow</i></dt>
+<dd>
+the activated subwindow (QMdiSubWindow)
+</dd>
+</dl><a NAME="MdiArea._addView" ID="MdiArea._addView"></a>
+<h4>MdiArea._addView</h4>
+<b>_addView</b>(<i>win, fn = None, noName = ""</i>)
+<p>
+        Protected method to add a view (i.e. window)
+</p><dl>
+<dt><i>win</i></dt>
+<dd>
+editor window to be added
+</dd><dt><i>fn</i></dt>
+<dd>
+filename of this editor
+</dd><dt><i>noName</i></dt>
+<dd>
+name to be used for an unnamed editor (string)
+</dd>
+</dl><a NAME="MdiArea._initWindowActions" ID="MdiArea._initWindowActions"></a>
+<h4>MdiArea._initWindowActions</h4>
+<b>_initWindowActions</b>(<i></i>)
+<p>
+        Protected method to define the user interface actions for window handling.
+</p><a NAME="MdiArea._modificationStatusChanged" ID="MdiArea._modificationStatusChanged"></a>
+<h4>MdiArea._modificationStatusChanged</h4>
+<b>_modificationStatusChanged</b>(<i>m, editor</i>)
+<p>
+        Protected slot to handle the modificationStatusChanged signal.
+</p><dl>
+<dt><i>m</i></dt>
+<dd>
+flag indicating the modification status (boolean)
+</dd><dt><i>editor</i></dt>
+<dd>
+editor window changed
+</dd>
+</dl><a NAME="MdiArea._removeAllViews" ID="MdiArea._removeAllViews"></a>
+<h4>MdiArea._removeAllViews</h4>
+<b>_removeAllViews</b>(<i></i>)
+<p>
+        Protected method to remove all views (i.e. windows)
+</p><a NAME="MdiArea._removeView" ID="MdiArea._removeView"></a>
+<h4>MdiArea._removeView</h4>
+<b>_removeView</b>(<i>win</i>)
+<p>
+        Protected method to remove a view (i.e. window)
+</p><dl>
+<dt><i>win</i></dt>
+<dd>
+editor window to be removed
+</dd>
+</dl><a NAME="MdiArea._showView" ID="MdiArea._showView"></a>
+<h4>MdiArea._showView</h4>
+<b>_showView</b>(<i>win, fn = None</i>)
+<p>
+        Private method to show a view (i.e. window)
+</p><dl>
+<dt><i>win</i></dt>
+<dd>
+editor window to be shown
+</dd><dt><i>fn</i></dt>
+<dd>
+filename of this editor (string)
+</dd>
+</dl><a NAME="MdiArea._syntaxErrorToggled" ID="MdiArea._syntaxErrorToggled"></a>
+<h4>MdiArea._syntaxErrorToggled</h4>
+<b>_syntaxErrorToggled</b>(<i>editor</i>)
+<p>
+        Protected slot to handle the syntaxerrorToggled signal.
+</p><dl>
+<dt><i>editor</i></dt>
+<dd>
+editor that sent the signal
+</dd>
+</dl><a NAME="MdiArea.activeWindow" ID="MdiArea.activeWindow"></a>
+<h4>MdiArea.activeWindow</h4>
+<b>activeWindow</b>(<i></i>)
+<p>
+        Private method to return the active (i.e. current) window.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the active editor
+</dd>
+</dl><a NAME="MdiArea.canCascade" ID="MdiArea.canCascade"></a>
+<h4>MdiArea.canCascade</h4>
+<b>canCascade</b>(<i></i>)
+<p>
+        Public method to signal if cascading of managed windows is available.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating cascading of windows is available
+</dd>
+</dl><a NAME="MdiArea.canSplit" ID="MdiArea.canSplit"></a>
+<h4>MdiArea.canSplit</h4>
+<b>canSplit</b>(<i></i>)
+<p>
+        public method to signal if splitting of the view is available.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating splitting of the view is available.
+</dd>
+</dl><a NAME="MdiArea.canTile" ID="MdiArea.canTile"></a>
+<h4>MdiArea.canTile</h4>
+<b>canTile</b>(<i></i>)
+<p>
+        Public method to signal if tiling of managed windows is available.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating tiling of windows is available
+</dd>
+</dl><a NAME="MdiArea.cascade" ID="MdiArea.cascade"></a>
+<h4>MdiArea.cascade</h4>
+<b>cascade</b>(<i></i>)
+<p>
+        Public method to cascade the managed windows.
+</p><a NAME="MdiArea.eventFilter" ID="MdiArea.eventFilter"></a>
+<h4>MdiArea.eventFilter</h4>
+<b>eventFilter</b>(<i>watched, event</i>)
+<p>
+        Public method called to filter the event queue.
+</p><dl>
+<dt><i>watched</i></dt>
+<dd>
+the QObject being watched
+</dd><dt><i>event</i></dt>
+<dd>
+the event that occurred
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, whether the event was handled (boolean)
+</dd>
+</dl><a NAME="MdiArea.setEditorName" ID="MdiArea.setEditorName"></a>
+<h4>MdiArea.setEditorName</h4>
+<b>setEditorName</b>(<i>editor, newName</i>)
+<p>
+        Public method to change the displayed name of the editor.
+</p><dl>
+<dt><i>editor</i></dt>
+<dd>
+editor window to be changed
+</dd><dt><i>newName</i></dt>
+<dd>
+new name to be shown (string)
+</dd>
+</dl><a NAME="MdiArea.showWindowMenu" ID="MdiArea.showWindowMenu"></a>
+<h4>MdiArea.showWindowMenu</h4>
+<b>showWindowMenu</b>(<i>windowMenu</i>)
+<p>
+        Public method to set up the viewmanager part of the Window menu.
+</p><dl>
+<dt><i>windowMenu</i></dt>
+<dd>
+reference to the window menu
+</dd>
+</dl><a NAME="MdiArea.tile" ID="MdiArea.tile"></a>
+<h4>MdiArea.tile</h4>
+<b>tile</b>(<i></i>)
+<p>
+        Public method to tile the managed windows.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
