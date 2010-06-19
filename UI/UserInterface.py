@@ -4438,7 +4438,10 @@ class UserInterface(QMainWindow):
                 return
             
             if not home.endswith(".chm"):
-                home = "file://" + home
+                if Utilities.isWindowsPlatform():
+                    home = "file:///" + Utilities.fromNativeSeparators(home)
+                else:
+                    home = "file://" + home
         else:
             home = pythonDocDir
         
@@ -4486,7 +4489,10 @@ class UserInterface(QMainWindow):
                         .format(home))
                 return
             
-            home = "file://" + home
+            if Utilities.isWindowsPlatform():
+                home = "file:///" + Utilities.fromNativeSeparators(home)
+            else:
+                home = "file://" + home
         
         hvType = Preferences.getHelp("HelpViewerType")
         if hvType == 1:
@@ -4540,7 +4546,10 @@ class UserInterface(QMainWindow):
                         .format(home))
                 return
             
-            home = "file://" + home
+            if Utilities.isWindowsPlatform():
+                home = "file:///" + Utilities.fromNativeSeparators(home)
+            else:
+                home = "file://" + home
         else:
             home = pyqt4DocDir
         
@@ -4617,7 +4626,10 @@ class UserInterface(QMainWindow):
                         .format(home))
                 return
             
-            home = "file://" + home
+            if Utilities.isWindowsPlatform():
+                home = "file:///" + Utilities.fromNativeSeparators(home)
+            else:
+                home = "file://" + home
         else:
             home = pysideDocDir
         
