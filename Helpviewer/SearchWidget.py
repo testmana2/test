@@ -183,7 +183,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         p = le.palette()
         if error:
             p.setBrush(QPalette.Base, QBrush(QColor("#FF6666")))
-            p.setBrush(QPalette.Text, QBrush(QColor("#FFFFFF")))
+            p.setBrush(QPalette.Text, QBrush(QColor("#000000")))
         else:
             p.setBrush(QPalette.Base, self.__defaultBaseColor)
             p.setBrush(QPalette.Text, self.__defaultTextColor)
