@@ -12,6 +12,7 @@ from PyQt4.Qsci import QsciAPIs
 
 from . import Lexers
 import Preferences
+import Utilities
 
 class APIs(QObject):
     """
