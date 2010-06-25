@@ -80,6 +80,8 @@ def installTranslations():
             shutil.copy2(fn, targetDir)
     except IOError as msg:
         sys.stderr.write('IOError: %s\nTry install-i18n as root.\n' % msg)
+    except OSError as msg:
+        sys.stderr.write('OSError: %s\nTry install-i18n with admin rights.\n' % msg)
     
 def main(argv):
     """
