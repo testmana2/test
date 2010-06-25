@@ -367,6 +367,10 @@ def installEric():
     except IOError as msg:
         sys.stderr.write('IOError: %s\nTry install as root.\n' % msg)
         sys.exit(7)
+        
+    except OSError as msg:
+        sys.stderr.write('OSError: %s\nTry install with admin rights.\n' % msg)
+        sys.exit(7)
     
     # copy some text files to the doc area
     for name in ["LICENSE.GPL3", "THANKS", "changelog"]:
