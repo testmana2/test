@@ -13,6 +13,8 @@ Version 5.1-snapshot-2010mmdd:
 - added support for Web SQL Databases to the web browser
 - added support for Web application caches and local web storage to the
   web browser (needs Qt >= 4.6)
+- added a symbols viewer with capability to insert the selected symbol
+  by double-clicking it
 
 Version 5.0-snapshot-20100523:
 - bug fixes

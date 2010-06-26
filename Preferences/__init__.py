@@ -114,15 +114,16 @@ class Prefs(object):
         "TabViewManagerFilenameOnly" : True, 
         # the order in ViewProfiles is Project-Viewer, File-Browser,
         # Debug-Viewer, Python-Shell, Log-Viewer, Task-Viewer,
-        # Templates-Viewer, Multiproject-Viewer, Terminal, Chat
+        # Templates-Viewer, Multiproject-Viewer, Terminal, Chat, Symbols
         "ViewProfiles" : {
             "edit"  : [
                     # visibility (0)
-                    [ True, False, False, True, True, True, True,  True,  True, True],
+                    [ True, False, False, True, True, True, True,  True,  
+                      True, True,  True ],
                     # saved state main window with dock windows (1)
                     b"",
                     # saved states floating windows (2)
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
+                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
                     # saved state main window with floating windows (3)
                     b"", 
                     # saved state main window with toolbox windows (4)
@@ -135,11 +136,12 @@ class Prefs(object):
                 ],
             "debug" : [
                     # visibility (0)
-                    [ False, False, True, True, True, True, False, False, True, True], 
+                    [ False, False, True, True, True, True, False, False, 
+                      True, True, False], 
                     # saved state main window with dock windows (1)
                     b"",
                     # saved states floating windows (2)
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
+                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
                     # saved state main window with floating windows (3)
                     b"", 
                     # saved state main window with toolbox windows (4)

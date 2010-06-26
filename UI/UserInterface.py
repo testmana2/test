@@ -69,6 +69,7 @@ from .CompareDialog import CompareDialog
 from .LogView import LogViewer
 from .FindFileDialog import FindFileDialog
 from .FindFileNameDialog import FindFileNameDialog
+from .SymbolsWidget import SymbolsWidget
 
 from E5Gui.E5SingleApplication import E5SingleApplicationServer
 from E5Gui.E5Action import E5Action, createActionGroup
@@ -493,6 +494,9 @@ class UserInterface(QMainWindow):
                      self.viewmanager.receive)
         self.viewmanager.setCooperationClient(self.cooperation.getClient())
         
+        self.connect(self.symbolsViewer, SIGNAL('insertSymbol(QString)'), 
+                     self.viewmanager.insertSymbol)
+        
         # Generate the unittest dialog
         self.unittestDialog = UnittestDialog(None, self.debuggerUI.debugServer, self)
         self.connect(self.unittestDialog, SIGNAL('unittestFile'),
@@ -553,6 +557,7 @@ class UserInterface(QMainWindow):
         e5App().registerObject("ToolbarManager", self.toolbarManager)
         e5App().registerObject("Terminal", self.terminal)
         e5App().registerObject("Cooperation", self.cooperation)
+        e5App().registerObject("Symbols", self.symbolsViewer)
         
         # Initialize the actions, menus, toolbars and statusbar
         splash.showMessage(self.trUtf8("Initializing Actions..."))
@@ -743,6 +748,10 @@ class UserInterface(QMainWindow):
         self.cooperation = ChatWidget()
         self.cooperation.setWindowTitle(self.trUtf8("Cooperation"))
         
+        # Create the symbols part of the user interface
+        self.symbolsViewer = SymbolsWidget()
+        self.symbolsViewer.setWindowTitle(self.trUtf8("Symbols"))
+        
         # Create the log viewer part of the user interface
         self.logViewer = LogViewer(None)
         self.logViewer.setWindowTitle(self.trUtf8("Log-Viewer"))
@@ -761,7 +770,8 @@ class UserInterface(QMainWindow):
 
         self.windows = [self.projectBrowser, None, self.debugViewer, 
             None, self.logViewer, self.taskViewer, self.templateViewer, 
-            self.multiProjectBrowser, self.terminal, self.cooperation]
+            self.multiProjectBrowser, self.terminal, self.cooperation, 
+            self.symbolsViewer]
 
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
@@ -867,6 +877,13 @@ class UserInterface(QMainWindow):
         else:                               # embedded in project browser
             self.browser = self.projectBrowser.fileBrowser
         
+        # Create the symbols viewer
+        self.symbolsDock = self.__createDockWindow("SymbolsDock")
+        self.symbolsViewer = SymbolsWidget()
+        self.__setupDockWindow(self.symbolsDock, Qt.LeftDockWidgetArea,
+                               self.symbolsViewer, self.trUtf8("Symbols"))
+        self.windows.append(self.symbolsDock)
+        
     def __createToolboxesLayout(self, debugServer):
         """
         Private method to create the Toolboxes layout.
@@ -961,6 +978,12 @@ class UserInterface(QMainWindow):
         else:                               # embedded in project browser
             self.browser = self.projectBrowser.fileBrowser
         
+        # Create the symbols viewer
+        self.symbolsViewer = SymbolsWidget()
+        self.vToolbox.addItem(self.symbolsViewer, 
+                              UI.PixmapCache.getIcon("symbols.png"), 
+                              self.trUtf8("Symbols"))
+        
         self.hToolbox.setCurrentIndex(0)
         
     def __createSidebarsLayout(self, debugServer):
@@ -1053,12 +1076,18 @@ class UserInterface(QMainWindow):
             logging.debug("Creating File Browser...")
             self.browser = Browser()
             self.leftSidebar.addTab(self.browser, 
-                                  UI.PixmapCache.getIcon("browser.png"), 
-                                  self.trUtf8("File-Browser"))
+                                    UI.PixmapCache.getIcon("browser.png"), 
+                                    self.trUtf8("File-Browser"))
         elif self.embeddedFileBrowser == 1: # embedded in debug browser
             self.browser = self.debugViewer.browser
         else:                               # embedded in project browser
             self.browser = self.projectBrowser.fileBrowser
+        
+        # Create the symbols viewer
+        self.symbolsViewer = SymbolsWidget()
+        self.leftSidebar.addTab(self.symbolsViewer, 
+                                UI.PixmapCache.getIcon("symbols.png"), 
+                                self.trUtf8("Symbols"))
         
         self.bottomSidebar.setCurrentIndex(0)
         
@@ -1615,6 +1644,30 @@ class UserInterface(QMainWindow):
                 self.__activateCooperationViewer)
         self.actions.append(self.cooperationViewerActivateAct)
         self.addAction(self.cooperationViewerActivateAct)
+
+        self.symbolsViewerAct = E5Action(self.trUtf8('Symbols'),
+                self.trUtf8('&Symbols'), 0, 0, self, 'symbols_viewer', True)
+        self.symbolsViewerAct.setStatusTip(self.trUtf8(
+            'Toggle the Symbols window'))
+        self.symbolsViewerAct.setWhatsThis(self.trUtf8(
+            """<b>Toggle the Symbols window</b>"""
+            """<p>If the Symbols window is hidden then display it."""
+            """ If it is displayed then close it.</p>"""
+        ))
+        self.connect(self.symbolsViewerAct, SIGNAL('triggered()'), 
+                self.__toggleSymbolsViewer)
+        self.actions.append(self.symbolsViewerAct)
+        
+        self.symbolsViewerActivateAct = E5Action(
+                self.trUtf8('Activate Symbols-Viewer'),
+                self.trUtf8('Activate Symbols-Viewer'),
+                QKeySequence(self.trUtf8("Alt+Shift+Y")),
+                0, self,
+                'symbols_viewer_activate', True)
+        self.connect(self.symbolsViewerActivateAct, SIGNAL('triggered()'), 
+                self.__activateSymbolsViewer)
+        self.actions.append(self.symbolsViewerActivateAct)
+        self.addAction(self.symbolsViewerActivateAct)
 
         self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'),
                 UI.PixmapCache.getIcon("whatsThis.png"),
@@ -3192,6 +3245,12 @@ class UserInterface(QMainWindow):
                 self.cooperationViewerAct.setChecked(not self.cooperationDock.isHidden())
             else:
                 self.cooperationViewerAct.setChecked(not self.cooperation.isHidden())
+            
+            self.__menus["window"].addAction(self.symbolsViewerAct)
+            if self.layout == "DockWindows":
+                self.symbolsViewerAct.setChecked(not self.symbolsDock.isHidden())
+            else:
+                self.symbolsViewerAct.setChecked(not self.symbolsViewer.isHidden())
 
         # Insert menu entry for toolbar settings
         self.__menus["window"].addSeparator()
@@ -3788,6 +3847,38 @@ class UserInterface(QMainWindow):
         else:
             self.cooperation.show()
         self.cooperation.setFocus(Qt.ActiveWindowFocusReason)
+        
+    def __toggleSymbolsViewer(self):
+        """
+        Private slot to handle the toggle of the Symbols Viewer window.
+        """
+        hasFocus = self.symbolsViewer.hasFocus()
+        if self.layout == "DockWindows":
+            shown = self.__toggleWindow(self.symbolsDock)
+        else:
+            shown = self.__toggleWindow(self.symbolsViewer)
+        if shown:
+            self.__activateSymbolsViewer()
+        else:
+            if hasFocus:
+                self.__activateViewmanager()
+
+    def __activateSymbolsViewer(self):
+        """
+        Private slot to handle the activation of the Symbols Viewer.
+        """
+        if self.layout == "DockWindows":
+            self.symbolsDock.show()
+            self.symbolsDock.raise_()
+        elif self.layout == "Toolboxes":
+            self.vToolboxDock.show()
+            self.vToolbox.setCurrentWidget(self.symbolsViewer)
+        elif self.layout == "Sidebars":
+            self.leftSidebar.show()
+            self.leftSidebar.setCurrentWidget(self.symbolsViewer)
+        else:
+            self.symbolsViewer.show()
+        self.symbolsViewer.setFocus(Qt.ActiveWindowFocusReason)
         
     def __activateViewmanager(self):
         """

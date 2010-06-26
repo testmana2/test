@@ -144,6 +144,8 @@ class ViewManager(QObject):
         
         self.__cooperationClient = None
         
+        self.__lastFocusWidget = None
+        
     def setReferences(self, ui, dbs):
         """
         Public method to set some references needed later on.
@@ -3755,6 +3757,9 @@ class ViewManager(QObject):
             self.copyActGrp.setEnabled(False)
             self.viewActGrp.setEnabled(False)
             self.searchActGrp.setEnabled(False)
+        
+        if isinstance(old, (Editor, Shell, Terminal)):
+            self.__lastFocusWidget = old
     
     ##################################################################
     ## Below are the action methods for the edit menu
@@ -5026,3 +5031,24 @@ class ViewManager(QObject):
             fn = aw.getFileName()
             if fn and e5App().getObject("Project").isProjectFile(fn):
                 aw.cancelSharedEdit()
+    
+    #######################################################################
+    ## Symbols viewer related methods
+    #######################################################################
+    
+    def insertSymbol(self, txt):
+        """
+        Private slot to insert a symbol text into the active window.
+        
+        @param txt text to be inserted (string)
+        """
+        if self.__lastFocusWidget == e5App().getObject("Shell"):
+            e5App().getObject("Shell").insert(txt)
+        elif self.__lastFocusWidget == e5App().getObject("Terminal"):
+            e5App().getObject("Terminal").insert(txt)
+        else:
+            aw = self.activeWindow()
+            if aw is not None:
+                curline, curindex = aw.getCursorPosition()
+                aw.insert(txt)
+                aw.setCursorPosition(curline, curindex + len(txt))

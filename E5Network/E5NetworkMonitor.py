@@ -295,7 +295,7 @@ class E5RequestModel(QAbstractTableModel):
             self.requests[offset].info = \
                 self.trUtf8("Redirect: {0}").format(target.toString())
     
-    def headerData(self, section, orientation, role):
+    def headerData(self, section, orientation, role = Qt.DisplayRole):
         """
         Public method to get header data from the model.
         
@@ -309,7 +309,7 @@ class E5RequestModel(QAbstractTableModel):
         
         return QAbstractTableModel.headerData(self, section, orientation, role)
     
-    def data(self, index, role):
+    def data(self, index, role = Qt.DisplayRole):
         """
         Public method to get data from the model.
         

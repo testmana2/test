@@ -807,6 +807,7 @@
     <Source>Helpviewer/OfflineStorage/__init__.py</Source>
     <Source>Helpviewer/OfflineStorage/WebDatabasesModel.py</Source>
     <Source>Helpviewer/OfflineStorage/WebDatabasesDialog.py</Source>
+    <Source>UI/SymbolsWidget.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1033,6 +1034,7 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui</Form>
     <Form>Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui</Form>
     <Form>Helpviewer/OfflineStorage/WebDatabasesDialog.ui</Form>
+    <Form>UI/SymbolsWidget.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
