@@ -13,11 +13,35 @@
   <property name="windowTitle">
    <string>Symbols</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <property name="margin">
     <number>0</number>
    </property>
-   <item row="0" column="0" colspan="3">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Table:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="tableCombo">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Select the table to be shown</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <widget class="QTableView" name="symbolsTable">
      <property name="alternatingRowColors">
       <bool>true</bool>
@@ -42,44 +66,50 @@
      </attribute>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QPushButton" name="unicodeButton">
-     <property name="toolTip">
-      <string>Press to switch to unicode mode</string>
-     </property>
-     <property name="text">
-      <string>Unicode</string>
-     </property>
-     <property name="checkable">
-      <bool>true</bool>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Symbol code:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2">
-    <widget class="QSpinBox" name="symbolSpinBox">
-     <property name="toolTip">
-      <string>Enter the symbol code</string>
-     </property>
-     <property name="maximum">
-      <number>65535</number>
-     </property>
-     <property name="singleStep">
-      <number>32</number>
-     </property>
-    </widget>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>120</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Symbol code:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="symbolSpinBox">
+       <property name="toolTip">
+        <string>Enter the symbol code</string>
+       </property>
+       <property name="maximum">
+        <number>65535</number>
+       </property>
+       <property name="singleStep">
+        <number>32</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>tableCombo</tabstop>
+  <tabstop>symbolsTable</tabstop>
+  <tabstop>symbolSpinBox</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
