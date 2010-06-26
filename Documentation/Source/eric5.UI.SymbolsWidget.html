@@ -81,14 +81,23 @@ QAbstractTableModel
 <td><a href="#SymbolsModel.data">data</a></td>
 <td>Public method to get data from the model.</td>
 </tr><tr>
+<td><a href="#SymbolsModel.getTableBoundaries">getTableBoundaries</a></td>
+<td>Public method to get the first and last character position of the given table.</td>
+</tr><tr>
+<td><a href="#SymbolsModel.getTableIndex">getTableIndex</a></td>
+<td>Private method to get the current table index.</td>
+</tr><tr>
+<td><a href="#SymbolsModel.getTableNames">getTableNames</a></td>
+<td>Public method to get a list of table names.</td>
+</tr><tr>
 <td><a href="#SymbolsModel.headerData">headerData</a></td>
 <td>Public method to get header data from the model.</td>
 </tr><tr>
 <td><a href="#SymbolsModel.rowCount">rowCount</a></td>
 <td>Public method to get the number of rows of the model.</td>
 </tr><tr>
-<td><a href="#SymbolsModel.setUnicode">setUnicode</a></td>
-<td>Public method to set the mode of the model.</td>
+<td><a href="#SymbolsModel.selectTable">selectTable</a></td>
+<td>Public method to select the shown character table.</td>
 </tr>
 </table>
 <a NAME="SymbolsModel.__init__" ID="SymbolsModel.__init__"></a>
@@ -209,6 +218,42 @@ role of the data to retrieve (integer)
 <dd>
 requested data
 </dd>
+</dl><a NAME="SymbolsModel.getTableBoundaries" ID="SymbolsModel.getTableBoundaries"></a>
+<h4>SymbolsModel.getTableBoundaries</h4>
+<b>getTableBoundaries</b>(<i>index</i>)
+<p>
+        Public method to get the first and last character position
+        of the given table.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+index of the character table (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+first and last character position (integer, integer)
+</dd>
+</dl><a NAME="SymbolsModel.getTableIndex" ID="SymbolsModel.getTableIndex"></a>
+<h4>SymbolsModel.getTableIndex</h4>
+<b>getTableIndex</b>(<i></i>)
+<p>
+        Private method to get the current table index.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+current table index (integer)
+</dd>
+</dl><a NAME="SymbolsModel.getTableNames" ID="SymbolsModel.getTableNames"></a>
+<h4>SymbolsModel.getTableNames</h4>
+<b>getTableNames</b>(<i></i>)
+<p>
+        Public method to get a list of table names.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of table names (list of strings)
+</dd>
 </dl><a NAME="SymbolsModel.headerData" ID="SymbolsModel.headerData"></a>
 <h4>SymbolsModel.headerData</h4>
 <b>headerData</b>(<i>section, orientation, role = Qt.DisplayRole</i>)
@@ -245,15 +290,15 @@ parent index (QModelIndex)
 <dd>
 number of columns (integer)
 </dd>
-</dl><a NAME="SymbolsModel.setUnicode" ID="SymbolsModel.setUnicode"></a>
-<h4>SymbolsModel.setUnicode</h4>
-<b>setUnicode</b>(<i>u</i>)
+</dl><a NAME="SymbolsModel.selectTable" ID="SymbolsModel.selectTable"></a>
+<h4>SymbolsModel.selectTable</h4>
+<b>selectTable</b>(<i>index</i>)
 <p>
-        Public method to set the mode of the model.
+        Public method to select the shown character table.
 </p><dl>
-<dt><i>u</i></dt>
+<dt><i>index</i></dt>
 <dd>
-flag indicating unicode mode (boolean)
+index of the character table (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -281,14 +326,17 @@ QWidget, Ui_SymbolsWidget
 <td><a href="#SymbolsWidget.__init__">SymbolsWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#SymbolsWidget.__currentRowChanged">__currentRowChanged</a></td>
+<td>Private slot recording the currently selected row.</td>
+</tr><tr>
 <td><a href="#SymbolsWidget.on_symbolSpinBox_editingFinished">on_symbolSpinBox_editingFinished</a></td>
 <td>Private slot to move the table to the entered symbol id.</td>
 </tr><tr>
 <td><a href="#SymbolsWidget.on_symbolsTable_activated">on_symbolsTable_activated</a></td>
 <td>Private slot to signal the selection of a symbol.</td>
 </tr><tr>
-<td><a href="#SymbolsWidget.on_unicodeButton_toggled">on_unicodeButton_toggled</a></td>
-<td>Private slot to switch unicode mode.</td>
+<td><a href="#SymbolsWidget.on_tableCombo_currentIndexChanged">on_tableCombo_currentIndexChanged</a></td>
+<td>Private slot to select the current character table.</td>
 </tr>
 </table>
 <a NAME="SymbolsWidget.__init__" ID="SymbolsWidget.__init__"></a>
@@ -300,6 +348,19 @@ QWidget, Ui_SymbolsWidget
 <dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="SymbolsWidget.__currentRowChanged" ID="SymbolsWidget.__currentRowChanged"></a>
+<h4>SymbolsWidget.__currentRowChanged</h4>
+<b>__currentRowChanged</b>(<i>current, previous</i>)
+<p>
+        Private slot recording the currently selected row.
+</p><dl>
+<dt><i>current</i></dt>
+<dd>
+current index (QModelIndex)
+</dd><dt><i>previous</i></dt>
+<dd>
+previous current index (QModelIndex)
 </dd>
 </dl><a NAME="SymbolsWidget.on_symbolSpinBox_editingFinished" ID="SymbolsWidget.on_symbolSpinBox_editingFinished"></a>
 <h4>SymbolsWidget.on_symbolSpinBox_editingFinished</h4>
@@ -316,15 +377,15 @@ reference to the parent widget (QWidget)
 <dd>
 index of the selected symbol (QModelIndex)
 </dd>
-</dl><a NAME="SymbolsWidget.on_unicodeButton_toggled" ID="SymbolsWidget.on_unicodeButton_toggled"></a>
-<h4>SymbolsWidget.on_unicodeButton_toggled</h4>
-<b>on_unicodeButton_toggled</b>(<i>checked</i>)
+</dl><a NAME="SymbolsWidget.on_tableCombo_currentIndexChanged" ID="SymbolsWidget.on_tableCombo_currentIndexChanged"></a>
+<h4>SymbolsWidget.on_tableCombo_currentIndexChanged</h4>
+<b>on_tableCombo_currentIndexChanged</b>(<i>index</i>)
 <p>
-        Private slot to switch unicode mode.
+        Private slot to select the current character table.
 </p><dl>
-<dt><i>checked</i></dt>
+<dt><i>index</i></dt>
 <dd>
-flag indicating that the button is pressed (boolean)
+index of the character table (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

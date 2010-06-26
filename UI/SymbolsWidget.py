@@ -163,6 +163,14 @@ class SymbolsModel(QAbstractTableModel):
         """
         return self.__tables[index][0], self.__tables[index][1]
     
+    def getTableIndex(self):
+        """
+        Private method to get the current table index.
+        
+        @return current table index (integer)
+        """
+        return self.__currentTableIndex
+    
     def selectTable(self, index):
         """
         Public method to select the shown character table.
@@ -345,7 +353,7 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
             int(Preferences.Prefs.settings.value("Symbols/Top", 0)), 
             0)
         self.symbolsTable.scrollTo(index, QAbstractItemView.PositionAtTop)
-        self.symbolsTable.selectionModel().select(index, 
+        self.symbolsTable.selectionModel().setCurrentIndex(index, 
             QItemSelectionModel.SelectCurrent | QItemSelectionModel.Rows)
     
     @pyqtSlot(QModelIndex)
@@ -365,9 +373,11 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         Private slot to move the table to the entered symbol id.
         """
         id = self.symbolSpinBox.value()
-        self.symbolsTable.selectRow(id)
+        first, last = self.__model.getTableBoundaries(self.__model.getTableIndex())
+        row = id - first
+        self.symbolsTable.selectRow(row)
         self.symbolsTable.scrollTo(
-            self.__model.index(id, 0), QAbstractItemView.PositionAtCenter)
+            self.__model.index(row, 0), QAbstractItemView.PositionAtCenter)
     
     @pyqtSlot(int)
     def on_tableCombo_currentIndexChanged(self, index):

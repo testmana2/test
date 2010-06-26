@@ -3768,13 +3768,17 @@
       <keyword name="SymbolsModel.__isSymbol" id="SymbolsModel.__isSymbol" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.__isSymbol" />
       <keyword name="SymbolsModel.columnCount" id="SymbolsModel.columnCount" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.columnCount" />
       <keyword name="SymbolsModel.data" id="SymbolsModel.data" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.data" />
+      <keyword name="SymbolsModel.getTableBoundaries" id="SymbolsModel.getTableBoundaries" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.getTableBoundaries" />
+      <keyword name="SymbolsModel.getTableIndex" id="SymbolsModel.getTableIndex" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.getTableIndex" />
+      <keyword name="SymbolsModel.getTableNames" id="SymbolsModel.getTableNames" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.getTableNames" />
       <keyword name="SymbolsModel.headerData" id="SymbolsModel.headerData" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.headerData" />
       <keyword name="SymbolsModel.rowCount" id="SymbolsModel.rowCount" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.rowCount" />
-      <keyword name="SymbolsModel.setUnicode" id="SymbolsModel.setUnicode" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.setUnicode" />
+      <keyword name="SymbolsModel.selectTable" id="SymbolsModel.selectTable" ref="eric5.UI.SymbolsWidget.html#SymbolsModel.selectTable" />
       <keyword name="SymbolsWidget (Constructor)" id="SymbolsWidget (Constructor)" ref="eric5.UI.SymbolsWidget.html#SymbolsWidget.__init__" />
+      <keyword name="SymbolsWidget.__currentRowChanged" id="SymbolsWidget.__currentRowChanged" ref="eric5.UI.SymbolsWidget.html#SymbolsWidget.__currentRowChanged" />
       <keyword name="SymbolsWidget.on_symbolSpinBox_editingFinished" id="SymbolsWidget.on_symbolSpinBox_editingFinished" ref="eric5.UI.SymbolsWidget.html#SymbolsWidget.on_symbolSpinBox_editingFinished" />
       <keyword name="SymbolsWidget.on_symbolsTable_activated" id="SymbolsWidget.on_symbolsTable_activated" ref="eric5.UI.SymbolsWidget.html#SymbolsWidget.on_symbolsTable_activated" />
-      <keyword name="SymbolsWidget.on_unicodeButton_toggled" id="SymbolsWidget.on_unicodeButton_toggled" ref="eric5.UI.SymbolsWidget.html#SymbolsWidget.on_unicodeButton_toggled" />
+      <keyword name="SymbolsWidget.on_tableCombo_currentIndexChanged" id="SymbolsWidget.on_tableCombo_currentIndexChanged" ref="eric5.UI.SymbolsWidget.html#SymbolsWidget.on_tableCombo_currentIndexChanged" />
       <keyword name="FindFileNameDialog (Module)" id="FindFileNameDialog (Module)" ref="eric5.UI.FindFileNameDialog.html" />
       <keyword name="FindFileNameDialog" id="FindFileNameDialog" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog" />
       <keyword name="FindFileNameDialog (Constructor)" id="FindFileNameDialog (Constructor)" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.__init__" />
