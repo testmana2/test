@@ -16,6 +16,7 @@ from PyQt4.QtGui import QWidget, QHeaderView, QAbstractItemView, QColor, \
 
 from .Ui_SymbolsWidget import Ui_SymbolsWidget
 
+import UI.PixmapCache
 import Preferences
 
 class SymbolsModel(QAbstractTableModel):
@@ -329,6 +330,8 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         """
         QWidget.__init__(self, parent)
         self.setupUi(self)
+        
+        self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         
         self.__model = SymbolsModel(self)
         self.symbolsTable.setModel(self.__model)
