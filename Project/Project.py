@@ -3167,7 +3167,9 @@ class Project(QObject):
         
         @param path path to be checked (string)
         """
-        if self.ppathRe:
+        if self.ppath and path == self.ppath:
+            return True
+        elif self.ppathRe:
             return self.ppathRe.match(path) is not None
         else:
             return False
@@ -3209,7 +3211,10 @@ class Project(QObject):
             belong to the project (string)
         """
         if self.startswithProjectPath(path):
-            return self.ppathRe.sub("", path, 1)
+            if self.ppath and path == self.ppath:
+                return ""
+            else:
+                return self.ppathRe.sub("", path, 1)
         else:
             return path
         
