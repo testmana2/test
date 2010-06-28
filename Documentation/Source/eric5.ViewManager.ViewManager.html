@@ -605,6 +605,9 @@ QObject
 <td><a href="#ViewManager.getMostRecent">getMostRecent</a></td>
 <td>Public method to get the most recently opened file.</td>
 </tr><tr>
+<td><a href="#ViewManager.getNumber">getNumber</a></td>
+<td>Public method to get a number from the active window.</td>
+</tr><tr>
 <td><a href="#ViewManager.getOpenEditor">getOpenEditor</a></td>
 <td>Public method to return the editor displaying the given file.</td>
 </tr><tr>
@@ -661,6 +664,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.initViewToolbar">initViewToolbar</a></td>
 <td>Public method to create the View toolbar</td>
+</tr><tr>
+<td><a href="#ViewManager.insertNumber">insertNumber</a></td>
+<td>Private slot to insert a number text into the active window.</td>
 </tr><tr>
 <td><a href="#ViewManager.insertSymbol">insertSymbol</a></td>
 <td>Private slot to insert a symbol text into the active window.</td>
@@ -1938,6 +1944,16 @@ tuple of two values giving a flag indicating a new window creation and
 <dd>
 path of the most recently opened file (string)
 </dd>
+</dl><a NAME="ViewManager.getNumber" ID="ViewManager.getNumber"></a>
+<h4>ViewManager.getNumber</h4>
+<b>getNumber</b>(<i></i>)
+<p>
+        Public method to get a number from the active window.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+selected text of the active window (string)
+</dd>
 </dl><a NAME="ViewManager.getOpenEditor" ID="ViewManager.getOpenEditor"></a>
 <h4>ViewManager.getOpenEditor</h4>
 <b>getOpenEditor</b>(<i>fn</i>)
@@ -2163,6 +2179,16 @@ reference to a toolbar manager object (E5ToolBarManager)
 <dt>Returns:</dt>
 <dd>
 the generated toolbar
+</dd>
+</dl><a NAME="ViewManager.insertNumber" ID="ViewManager.insertNumber"></a>
+<h4>ViewManager.insertNumber</h4>
+<b>insertNumber</b>(<i>txt</i>)
+<p>
+        Private slot to insert a number text into the active window.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be inserted (string)
 </dd>
 </dl><a NAME="ViewManager.insertSymbol" ID="ViewManager.insertSymbol"></a>
 <h4>ViewManager.insertSymbol</h4>

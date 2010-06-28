@@ -70,6 +70,7 @@ class ViewProfileDialog(QDialog):
             self.ui.epmpbCheckBox.setChecked(profile[7])
             self.ui.eptwCheckBox.setChecked(profile[8])
             self.ui.epsyCheckBox.setChecked(profile[10])
+            self.ui.epnuCheckBox.setChecked(profile[11])
         
         # set the debug profile
         profile = self.profiles["debug"][0]
@@ -97,6 +98,7 @@ class ViewProfileDialog(QDialog):
             self.ui.dpmpbCheckBox.setChecked(profile[7])
             self.ui.dptwCheckBox.setChecked(profile[8])
             self.ui.dpsyCheckBox.setChecked(profile[10])
+            self.ui.dpnuCheckBox.setChecked(profile[11])
     
     def getProfiles(self):
         """
@@ -133,7 +135,8 @@ class ViewProfileDialog(QDialog):
                 self.ui.epmpbCheckBox.isChecked(),
                 self.ui.eptwCheckBox.isChecked(),
                 self.ui.epcoCheckBox.isChecked(), 
-                self.ui.epsyCheckBox.isChecked()
+                self.ui.epsyCheckBox.isChecked(), 
+                self.ui.epnuCheckBox.isChecked(), 
             ]
             
             # get the debug profile
@@ -148,7 +151,8 @@ class ViewProfileDialog(QDialog):
                 self.ui.dpmpbCheckBox.isChecked(),
                 self.ui.dptwCheckBox.isChecked(),
                 self.ui.dpcoCheckBox.isChecked(), 
-                self.ui.dpsyCheckBox.isChecked()
+                self.ui.dpsyCheckBox.isChecked(), 
+                self.ui.dpnuCheckBox.isChecked(), 
             ]
         
         return self.profiles

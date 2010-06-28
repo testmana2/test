@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>608</width>
-    <height>345</height>
+    <height>366</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -71,6 +71,16 @@
        <widget class="QCheckBox" name="epmpbCheckBox">
         <property name="text">
          <string>Multiproject-Viewer</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="epnuCheckBox">
+        <property name="text">
+         <string>Numbers</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -188,6 +198,13 @@
        </widget>
       </item>
       <item>
+       <widget class="QCheckBox" name="dpnuCheckBox">
+        <property name="text">
+         <string>Numbers</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QCheckBox" name="dppbCheckBox">
         <property name="text">
          <string>Project-Viewer</string>
@@ -264,6 +281,7 @@
   <tabstop>epfbCheckBox</tabstop>
   <tabstop>eplvCheckBox</tabstop>
   <tabstop>epmpbCheckBox</tabstop>
+  <tabstop>epnuCheckBox</tabstop>
   <tabstop>eppbCheckBox</tabstop>
   <tabstop>eppsCheckBox</tabstop>
   <tabstop>epsyCheckBox</tabstop>
@@ -275,6 +293,7 @@
   <tabstop>dpfbCheckBox</tabstop>
   <tabstop>dplvCheckBox</tabstop>
   <tabstop>dpmpbCheckBox</tabstop>
+  <tabstop>dpnuCheckBox</tabstop>
   <tabstop>dppbCheckBox</tabstop>
   <tabstop>dppsCheckBox</tabstop>
   <tabstop>dpsyCheckBox</tabstop>

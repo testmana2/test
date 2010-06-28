@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Shortcuts SYSTEM "Shortcuts-3.6.dtd">
 <!-- Eric5 keyboard shortcuts -->
-<!-- Saved: 2010-01-07, 16:08:27 -->
+<!-- Saved: 2010-06-28, 19:51:57 -->
 <!-- Author: Detlev Offenbach &lt;detlev@die-offenbachs.de&gt; -->
 <Shortcuts version="3.6">
   <Shortcut category="Project">
@@ -287,6 +287,36 @@
   <Shortcut category="General">
     <Name>bottom_sidebar</Name>
     <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>cooperation_viewer</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>cooperation_viewer_activate</Name>
+    <Accel>Alt+Shift+O</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>symbols_viewer</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>symbols_viewer_activate</Name>
+    <Accel>Alt+Shift+Y</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>numbers_viewer</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>numbers_viewer_activate</Name>
+    <Accel>Alt+Shift+B</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="General">
@@ -736,7 +766,7 @@
   </Shortcut>
   <Shortcut category="Edit">
     <Name>vm_edit_uncomment</Name>
-    <Accel>Ctrl+Alt+M</Accel>
+    <Accel>Ctrl+Shift+M</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Edit">
@@ -1311,7 +1341,7 @@
   </Shortcut>
   <Shortcut category="View">
     <Name>vm_previous_split</Name>
-    <Accel>Ctrl+Alt+P</Accel>
+    <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Macro">
@@ -1375,6 +1405,21 @@
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Bookmarks">
+    <Name>vm_warning_next</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Bookmarks">
+    <Name>vm_warning_previous</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Bookmarks">
+    <Name>vm_warnings_clear</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Bookmarks">
     <Name>vm_uncovered_next</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
@@ -1401,6 +1446,441 @@
   </Shortcut>
   <Shortcut category="Spelling">
     <Name>vm_spelling_autospellcheck</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_new</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_update</Name>
+    <Accel>Ctrl+Alt+U</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_commit</Name>
+    <Accel>Ctrl+Alt+O</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_add</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_remove</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_log</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_log_limited</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_log_browser</Name>
+    <Accel>Ctrl+Alt+G</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_diff</Name>
+    <Accel>Ctrl+Alt+D</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_extendeddiff</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_urldiff</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_status</Name>
+    <Accel>Ctrl+Alt+S</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_tag</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_export</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_options</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_revert</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_merge</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_switch</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_resolve</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_cleanup</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_command</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_list_tags</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_list_branches</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_contents</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_property_set</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_property_list</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_property_delete</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_relocate</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_repo_browser</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Subversion">
+    <Name>subversion_configure</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_new</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_incoming</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_pull</Name>
+    <Accel>Ctrl+Alt+P</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_update</Name>
+    <Accel>Ctrl+Alt+U</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_commit</Name>
+    <Accel>Ctrl+Alt+O</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_outgoing</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_push</Name>
+    <Accel>Ctrl+Alt+H</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_push_forced</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>subversion_export</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_add</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_remove</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_log</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_log_limited</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_log_browser</Name>
+    <Accel>Ctrl+Alt+G</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_diff</Name>
+    <Accel>Ctrl+Alt+D</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_extendeddiff</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_status</Name>
+    <Accel>Ctrl+Alt+S</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_heads</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_parents</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_tip</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_revert</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_merge</Name>
+    <Accel>Ctrl+Alt+M</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_resolve</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_tag</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_list_tags</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_list_branches</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_branch</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_close_branch</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_show_branch</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_switch</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_cleanup</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_command</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_options</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_configure</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_repo_configure</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_show_config</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_show_paths</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_verify</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_recover</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_identify</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_create ignore</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_bundle</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_preview_bundle</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_identify_bundle</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_unbundle</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_bisect_good</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_bisect_bad</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_bisect_skip</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_bisect_reset</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_backout</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Mercurial">
+    <Name>mercurial_serve</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="IssueTracker">
+    <Name>tracker_new_issue</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="IssueTracker">
+    <Name>tracker_list_all_issues</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="IssueTracker">
+    <Name>tracker_list_open_issues</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="IssueTracker">
+    <Name>tracker_list_issues_with_filter</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="IssueTracker">
+    <Name>tracker_manage_filters</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="IssueTracker">
+    <Name>tracker_manage_properties</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
@@ -1441,12 +1921,12 @@
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_log_browser</Name>
-    <Accel></Accel>
+    <Accel>Ctrl+Alt+G</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_diff</Name>
-    <Accel></Accel>
+    <Accel>Ctrl+Alt+D</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
@@ -1597,6 +2077,11 @@
   <Shortcut category="HelpViewer">
     <Name>help_file_print</Name>
     <Accel>Ctrl+P</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="HelpViewer">
+    <Name>help_file_print_pdf</Name>
+    <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
@@ -1761,6 +2246,11 @@
   </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_cookies</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="HelpViewer">
+    <Name>help_offline_storage</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>

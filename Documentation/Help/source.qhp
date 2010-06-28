@@ -125,6 +125,7 @@
             <section title="eric5.E5Gui.E5SqueezeLabels" ref="eric5.E5Gui.E5SqueezeLabels.html" />
             <section title="eric5.E5Gui.E5TabWidget" ref="eric5.E5Gui.E5TabWidget.html" />
             <section title="eric5.E5Gui.E5TableView" ref="eric5.E5Gui.E5TableView.html" />
+            <section title="eric5.E5Gui.E5TextSpinBox" ref="eric5.E5Gui.E5TextSpinBox.html" />
             <section title="eric5.E5Gui.E5ToolBarDialog" ref="eric5.E5Gui.E5ToolBarDialog.html" />
             <section title="eric5.E5Gui.E5ToolBarManager" ref="eric5.E5Gui.E5ToolBarManager.html" />
             <section title="eric5.E5Gui.E5ToolBox" ref="eric5.E5Gui.E5ToolBox.html" />
@@ -678,6 +679,7 @@
             <section title="eric5.UI.FindFileNameDialog" ref="eric5.UI.FindFileNameDialog.html" />
             <section title="eric5.UI.Info" ref="eric5.UI.Info.html" />
             <section title="eric5.UI.LogView" ref="eric5.UI.LogView.html" />
+            <section title="eric5.UI.NumbersWidget" ref="eric5.UI.NumbersWidget.html" />
             <section title="eric5.UI.PixmapCache" ref="eric5.UI.PixmapCache.html" />
             <section title="eric5.UI.SplashScreen" ref="eric5.UI.SplashScreen.html" />
             <section title="eric5.UI.SymbolsWidget" ref="eric5.UI.SymbolsWidget.html" />
@@ -3478,6 +3480,7 @@
       <keyword name="ViewManager.getActiveName" id="ViewManager.getActiveName" ref="eric5.ViewManager.ViewManager.html#ViewManager.getActiveName" />
       <keyword name="ViewManager.getEditor" id="ViewManager.getEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.getEditor" />
       <keyword name="ViewManager.getMostRecent" id="ViewManager.getMostRecent" ref="eric5.ViewManager.ViewManager.html#ViewManager.getMostRecent" />
+      <keyword name="ViewManager.getNumber" id="ViewManager.getNumber" ref="eric5.ViewManager.ViewManager.html#ViewManager.getNumber" />
       <keyword name="ViewManager.getOpenEditor" id="ViewManager.getOpenEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.getOpenEditor" />
       <keyword name="ViewManager.getOpenEditorCount" id="ViewManager.getOpenEditorCount" ref="eric5.ViewManager.ViewManager.html#ViewManager.getOpenEditorCount" />
       <keyword name="ViewManager.getOpenEditors" id="ViewManager.getOpenEditors" ref="eric5.ViewManager.ViewManager.html#ViewManager.getOpenEditors" />
@@ -3497,6 +3500,7 @@
       <keyword name="ViewManager.initSpellingToolbar" id="ViewManager.initSpellingToolbar" ref="eric5.ViewManager.ViewManager.html#ViewManager.initSpellingToolbar" />
       <keyword name="ViewManager.initViewMenu" id="ViewManager.initViewMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.initViewMenu" />
       <keyword name="ViewManager.initViewToolbar" id="ViewManager.initViewToolbar" ref="eric5.ViewManager.ViewManager.html#ViewManager.initViewToolbar" />
+      <keyword name="ViewManager.insertNumber" id="ViewManager.insertNumber" ref="eric5.ViewManager.ViewManager.html#ViewManager.insertNumber" />
       <keyword name="ViewManager.insertSymbol" id="ViewManager.insertSymbol" ref="eric5.ViewManager.ViewManager.html#ViewManager.insertSymbol" />
       <keyword name="ViewManager.isConnected" id="ViewManager.isConnected" ref="eric5.ViewManager.ViewManager.html#ViewManager.isConnected" />
       <keyword name="ViewManager.newEditor" id="ViewManager.newEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.newEditor" />
@@ -3799,6 +3803,39 @@
       <keyword name="DeleteFilesConfirmationDialog" id="DeleteFilesConfirmationDialog" ref="eric5.UI.DeleteFilesConfirmationDialog.html#DeleteFilesConfirmationDialog" />
       <keyword name="DeleteFilesConfirmationDialog (Constructor)" id="DeleteFilesConfirmationDialog (Constructor)" ref="eric5.UI.DeleteFilesConfirmationDialog.html#DeleteFilesConfirmationDialog.__init__" />
       <keyword name="DeleteFilesConfirmationDialog.on_buttonBox_clicked" id="DeleteFilesConfirmationDialog.on_buttonBox_clicked" ref="eric5.UI.DeleteFilesConfirmationDialog.html#DeleteFilesConfirmationDialog.on_buttonBox_clicked" />
+      <keyword name="NumbersWidget (Module)" id="NumbersWidget (Module)" ref="eric5.UI.NumbersWidget.html" />
+      <keyword name="BinaryModel" id="BinaryModel" ref="eric5.UI.NumbersWidget.html#BinaryModel" />
+      <keyword name="NumbersWidget" id="NumbersWidget" ref="eric5.UI.NumbersWidget.html#NumbersWidget" />
+      <keyword name="BinaryModel (Constructor)" id="BinaryModel (Constructor)" ref="eric5.UI.NumbersWidget.html#BinaryModel.__init__" />
+      <keyword name="BinaryModel.columnCount" id="BinaryModel.columnCount" ref="eric5.UI.NumbersWidget.html#BinaryModel.columnCount" />
+      <keyword name="BinaryModel.data" id="BinaryModel.data" ref="eric5.UI.NumbersWidget.html#BinaryModel.data" />
+      <keyword name="BinaryModel.flags" id="BinaryModel.flags" ref="eric5.UI.NumbersWidget.html#BinaryModel.flags" />
+      <keyword name="BinaryModel.getValue" id="BinaryModel.getValue" ref="eric5.UI.NumbersWidget.html#BinaryModel.getValue" />
+      <keyword name="BinaryModel.headerData" id="BinaryModel.headerData" ref="eric5.UI.NumbersWidget.html#BinaryModel.headerData" />
+      <keyword name="BinaryModel.rowCount" id="BinaryModel.rowCount" ref="eric5.UI.NumbersWidget.html#BinaryModel.rowCount" />
+      <keyword name="BinaryModel.setBits" id="BinaryModel.setBits" ref="eric5.UI.NumbersWidget.html#BinaryModel.setBits" />
+      <keyword name="BinaryModel.setBitsAndValue" id="BinaryModel.setBitsAndValue" ref="eric5.UI.NumbersWidget.html#BinaryModel.setBitsAndValue" />
+      <keyword name="BinaryModel.setData" id="BinaryModel.setData" ref="eric5.UI.NumbersWidget.html#BinaryModel.setData" />
+      <keyword name="BinaryModel.setValue" id="BinaryModel.setValue" ref="eric5.UI.NumbersWidget.html#BinaryModel.setValue" />
+      <keyword name="NumbersWidget (Constructor)" id="NumbersWidget (Constructor)" ref="eric5.UI.NumbersWidget.html#NumbersWidget.__init__" />
+      <keyword name="NumbersWidget.__binModelDataChanged" id="NumbersWidget.__binModelDataChanged" ref="eric5.UI.NumbersWidget.html#NumbersWidget.__binModelDataChanged" />
+      <keyword name="NumbersWidget.__block" id="NumbersWidget.__block" ref="eric5.UI.NumbersWidget.html#NumbersWidget.__block" />
+      <keyword name="NumbersWidget.__formatNumbers" id="NumbersWidget.__formatNumbers" ref="eric5.UI.NumbersWidget.html#NumbersWidget.__formatNumbers" />
+      <keyword name="NumbersWidget.on_binEdit_textChanged" id="NumbersWidget.on_binEdit_textChanged" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_binEdit_textChanged" />
+      <keyword name="NumbersWidget.on_binInButton_clicked" id="NumbersWidget.on_binInButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_binInButton_clicked" />
+      <keyword name="NumbersWidget.on_binOutButton_clicked" id="NumbersWidget.on_binOutButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_binOutButton_clicked" />
+      <keyword name="NumbersWidget.on_byteOrderButton_clicked" id="NumbersWidget.on_byteOrderButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_byteOrderButton_clicked" />
+      <keyword name="NumbersWidget.on_decEdit_textChanged" id="NumbersWidget.on_decEdit_textChanged" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_decEdit_textChanged" />
+      <keyword name="NumbersWidget.on_decInButton_clicked" id="NumbersWidget.on_decInButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_decInButton_clicked" />
+      <keyword name="NumbersWidget.on_decOutButton_clicked" id="NumbersWidget.on_decOutButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_decOutButton_clicked" />
+      <keyword name="NumbersWidget.on_hexEdit_textChanged" id="NumbersWidget.on_hexEdit_textChanged" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_hexEdit_textChanged" />
+      <keyword name="NumbersWidget.on_hexInButton_clicked" id="NumbersWidget.on_hexInButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_hexInButton_clicked" />
+      <keyword name="NumbersWidget.on_hexOutButton_clicked" id="NumbersWidget.on_hexOutButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_hexOutButton_clicked" />
+      <keyword name="NumbersWidget.on_octEdit_textChanged" id="NumbersWidget.on_octEdit_textChanged" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_octEdit_textChanged" />
+      <keyword name="NumbersWidget.on_octInButton_clicked" id="NumbersWidget.on_octInButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_octInButton_clicked" />
+      <keyword name="NumbersWidget.on_octOutButton_clicked" id="NumbersWidget.on_octOutButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_octOutButton_clicked" />
+      <keyword name="NumbersWidget.on_sizeBox_valueChanged" id="NumbersWidget.on_sizeBox_valueChanged" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_sizeBox_valueChanged" />
+      <keyword name="NumbersWidget.setNumber" id="NumbersWidget.setNumber" ref="eric5.UI.NumbersWidget.html#NumbersWidget.setNumber" />
       <keyword name="PixmapCache (Module)" id="PixmapCache (Module)" ref="eric5.UI.PixmapCache.html" />
       <keyword name="PixmapCache" id="PixmapCache" ref="eric5.UI.PixmapCache.html#PixmapCache" />
       <keyword name="addSearchPath" id="addSearchPath" ref="eric5.UI.PixmapCache.html#addSearchPath" />
@@ -3983,6 +4020,7 @@
       <keyword name="UserInterface.__activateDebugViewer" id="UserInterface.__activateDebugViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateDebugViewer" />
       <keyword name="UserInterface.__activateLogViewer" id="UserInterface.__activateLogViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateLogViewer" />
       <keyword name="UserInterface.__activateMultiProjectBrowser" id="UserInterface.__activateMultiProjectBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__activateMultiProjectBrowser" />
+      <keyword name="UserInterface.__activateNumbersViewer" id="UserInterface.__activateNumbersViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateNumbersViewer" />
       <keyword name="UserInterface.__activateProjectBrowser" id="UserInterface.__activateProjectBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__activateProjectBrowser" />
       <keyword name="UserInterface.__activateShell" id="UserInterface.__activateShell" ref="eric5.UI.UserInterface.html#UserInterface.__activateShell" />
       <keyword name="UserInterface.__activateSymbolsViewer" id="UserInterface.__activateSymbolsViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateSymbolsViewer" />
@@ -4094,6 +4132,7 @@
       <keyword name="UserInterface.__toggleLeftSidebar" id="UserInterface.__toggleLeftSidebar" ref="eric5.UI.UserInterface.html#UserInterface.__toggleLeftSidebar" />
       <keyword name="UserInterface.__toggleLogViewer" id="UserInterface.__toggleLogViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleLogViewer" />
       <keyword name="UserInterface.__toggleMultiProjectBrowser" id="UserInterface.__toggleMultiProjectBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__toggleMultiProjectBrowser" />
+      <keyword name="UserInterface.__toggleNumbersViewer" id="UserInterface.__toggleNumbersViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleNumbersViewer" />
       <keyword name="UserInterface.__toggleProjectBrowser" id="UserInterface.__toggleProjectBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__toggleProjectBrowser" />
       <keyword name="UserInterface.__toggleShell" id="UserInterface.__toggleShell" ref="eric5.UI.UserInterface.html#UserInterface.__toggleShell" />
       <keyword name="UserInterface.__toggleSymbolsViewer" id="UserInterface.__toggleSymbolsViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleSymbolsViewer" />
@@ -4291,6 +4330,14 @@
       <keyword name="E5TreeView.keyPressEvent" id="E5TreeView.keyPressEvent" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.keyPressEvent" />
       <keyword name="E5TreeView.removeAll" id="E5TreeView.removeAll" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.removeAll" />
       <keyword name="E5TreeView.removeSelected" id="E5TreeView.removeSelected" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.removeSelected" />
+      <keyword name="E5TextSpinBox (Module)" id="E5TextSpinBox (Module)" ref="eric5.E5Gui.E5TextSpinBox.html" />
+      <keyword name="E5TextSpinBox" id="E5TextSpinBox" ref="eric5.E5Gui.E5TextSpinBox.html#E5TextSpinBox" />
+      <keyword name="E5TextSpinBox (Constructor)" id="E5TextSpinBox (Constructor)" ref="eric5.E5Gui.E5TextSpinBox.html#E5TextSpinBox.__init__" />
+      <keyword name="E5TextSpinBox.addItem" id="E5TextSpinBox.addItem" ref="eric5.E5Gui.E5TextSpinBox.html#E5TextSpinBox.addItem" />
+      <keyword name="E5TextSpinBox.currentIndex" id="E5TextSpinBox.currentIndex" ref="eric5.E5Gui.E5TextSpinBox.html#E5TextSpinBox.currentIndex" />
+      <keyword name="E5TextSpinBox.itemData" id="E5TextSpinBox.itemData" ref="eric5.E5Gui.E5TextSpinBox.html#E5TextSpinBox.itemData" />
+      <keyword name="E5TextSpinBox.textFromValue" id="E5TextSpinBox.textFromValue" ref="eric5.E5Gui.E5TextSpinBox.html#E5TextSpinBox.textFromValue" />
+      <keyword name="E5TextSpinBox.valueFromText" id="E5TextSpinBox.valueFromText" ref="eric5.E5Gui.E5TextSpinBox.html#E5TextSpinBox.valueFromText" />
       <keyword name="E5Completers (Module)" id="E5Completers (Module)" ref="eric5.E5Gui.E5Completers.html" />
       <keyword name="E5DirCompleter" id="E5DirCompleter" ref="eric5.E5Gui.E5Completers.html#E5DirCompleter" />
       <keyword name="E5FileCompleter" id="E5FileCompleter" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter" />
@@ -9773,6 +9820,7 @@
       <file>eric5.E5Gui.E5SqueezeLabels.html</file>
       <file>eric5.E5Gui.E5TabWidget.html</file>
       <file>eric5.E5Gui.E5TableView.html</file>
+      <file>eric5.E5Gui.E5TextSpinBox.html</file>
       <file>eric5.E5Gui.E5ToolBarDialog.html</file>
       <file>eric5.E5Gui.E5ToolBarManager.html</file>
       <file>eric5.E5Gui.E5ToolBox.html</file>
@@ -10212,6 +10260,7 @@
       <file>eric5.UI.FindFileNameDialog.html</file>
       <file>eric5.UI.Info.html</file>
       <file>eric5.UI.LogView.html</file>
+      <file>eric5.UI.NumbersWidget.html</file>
       <file>eric5.UI.PixmapCache.html</file>
       <file>eric5.UI.SplashScreen.html</file>
       <file>eric5.UI.SymbolsWidget.html</file>

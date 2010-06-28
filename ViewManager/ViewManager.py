@@ -5052,3 +5052,54 @@ class ViewManager(QObject):
                 curline, curindex = aw.getCursorPosition()
                 aw.insert(txt)
                 aw.setCursorPosition(curline, curindex + len(txt))
+    
+    #######################################################################
+    ## Numbers viewer related methods
+    #######################################################################
+    
+    def insertNumber(self, txt):
+        """
+        Private slot to insert a number text into the active window.
+        
+        @param txt text to be inserted (string)
+        """
+        if self.__lastFocusWidget == e5App().getObject("Shell"):
+            aw = e5App().getObject("Shell")
+            if aw.hasSelectedText():
+                aw.removeSelectedText()
+            aw.insert(txt)
+        elif self.__lastFocusWidget == e5App().getObject("Terminal"):
+            aw = e5App().getObject("Terminal")
+            if aw.hasSelectedText():
+                aw.removeSelectedText()
+            aw.insert(txt)
+        else:
+            aw = self.activeWindow()
+            if aw is not None:
+                if aw.hasSelectedText():
+                    aw.removeSelectedText()
+                curline, curindex = aw.getCursorPosition()
+                aw.insert(txt)
+                aw.setCursorPosition(curline, curindex + len(txt))
+    
+    def getNumber(self):
+        """
+        Public method to get a number from the active window.
+        
+        @return selected text of the active window (string)
+        """
+        txt = ""
+        if self.__lastFocusWidget == e5App().getObject("Shell"):
+            aw = e5App().getObject("Shell")
+            if aw.hasSelectedText():
+                txt = aw.selectedText()
+        elif self.__lastFocusWidget == e5App().getObject("Terminal"):
+            aw = e5App().getObject("Terminal")
+            if aw.hasSelectedText():
+                txt = aw.selectedText()
+        else:
+            aw = self.activeWindow()
+            if aw is not None:
+                if aw.hasSelectedText():
+                    txt = aw.selectedText()
+        return txt

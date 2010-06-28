@@ -15,6 +15,7 @@ Version 5.1-snapshot-2010mmdd:
   web browser (needs Qt >= 4.6)
 - added a symbols viewer with capability to insert the selected symbol
   by double-clicking it
+- added a numbers viewer to convert numbers into various formats
 
 Version 5.0-snapshot-20100523:
 - bug fixes

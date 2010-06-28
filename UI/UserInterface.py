@@ -70,6 +70,7 @@ from .LogView import LogViewer
 from .FindFileDialog import FindFileDialog
 from .FindFileNameDialog import FindFileNameDialog
 from .SymbolsWidget import SymbolsWidget
+from .NumbersWidget import NumbersWidget
 
 from E5Gui.E5SingleApplication import E5SingleApplicationServer
 from E5Gui.E5Action import E5Action, createActionGroup
@@ -497,6 +498,9 @@ class UserInterface(QMainWindow):
         self.connect(self.symbolsViewer, SIGNAL('insertSymbol(QString)'), 
                      self.viewmanager.insertSymbol)
         
+        self.connect(self.numbersViewer, SIGNAL('insertNumber(QString)'), 
+                     self.viewmanager.insertNumber)
+        
         # Generate the unittest dialog
         self.unittestDialog = UnittestDialog(None, self.debuggerUI.debugServer, self)
         self.connect(self.unittestDialog, SIGNAL('unittestFile'),
@@ -558,6 +562,7 @@ class UserInterface(QMainWindow):
         e5App().registerObject("Terminal", self.terminal)
         e5App().registerObject("Cooperation", self.cooperation)
         e5App().registerObject("Symbols", self.symbolsViewer)
+        e5App().registerObject("Numbers", self.numbersViewer)
         
         # Initialize the actions, menus, toolbars and statusbar
         splash.showMessage(self.trUtf8("Initializing Actions..."))
@@ -768,10 +773,14 @@ class UserInterface(QMainWindow):
         self.terminal = Terminal(self.viewmanager)
         self.terminal.setWindowTitle(self.trUtf8("Terminal"))
 
+        # Create the numbers viewer
+        self.numbersViewer = NumbersWidget()
+        self.numbersViewer.setWindowTitle(self.trUtf8("Numbers"))
+        
         self.windows = [self.projectBrowser, None, self.debugViewer, 
             None, self.logViewer, self.taskViewer, self.templateViewer, 
             self.multiProjectBrowser, self.terminal, self.cooperation, 
-            self.symbolsViewer]
+            self.symbolsViewer, self.numbersViewer]
 
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
@@ -884,6 +893,13 @@ class UserInterface(QMainWindow):
                                self.symbolsViewer, self.trUtf8("Symbols"))
         self.windows.append(self.symbolsDock)
         
+        # Create the numbers viewer
+        self.numbersDock = self.__createDockWindow("NumbersDock")
+        self.numbersViewer = NumbersWidget()
+        self.__setupDockWindow(self.numbersDock, Qt.BottomDockWidgetArea,
+                               self.numbersViewer, self.trUtf8("Numbers"))
+        self.windows.append(self.numbersDock)
+        
     def __createToolboxesLayout(self, debugServer):
         """
         Private method to create the Toolboxes layout.
@@ -983,6 +999,12 @@ class UserInterface(QMainWindow):
         self.vToolbox.addItem(self.symbolsViewer, 
                               UI.PixmapCache.getIcon("symbols.png"), 
                               self.trUtf8("Symbols"))
+        
+        # Create the numbers viewer
+        self.numbersViewer = NumbersWidget()
+        self.hToolbox.addItem(self.numbersViewer, 
+                              UI.PixmapCache.getIcon("numbers.png"), 
+                              self.trUtf8("Numbers"))
         
         self.hToolbox.setCurrentIndex(0)
         
@@ -1088,6 +1110,12 @@ class UserInterface(QMainWindow):
         self.leftSidebar.addTab(self.symbolsViewer, 
                                 UI.PixmapCache.getIcon("symbols.png"), 
                                 self.trUtf8("Symbols"))
+        
+        # Create the numbers viewer
+        self.numbersViewer = NumbersWidget()
+        self.bottomSidebar.addTab(self.numbersViewer, 
+                                  UI.PixmapCache.getIcon("numbers.png"), 
+                                  self.trUtf8("Numbers"))
         
         self.bottomSidebar.setCurrentIndex(0)
         
@@ -1668,6 +1696,30 @@ class UserInterface(QMainWindow):
                 self.__activateSymbolsViewer)
         self.actions.append(self.symbolsViewerActivateAct)
         self.addAction(self.symbolsViewerActivateAct)
+
+        self.numbersViewerAct = E5Action(self.trUtf8('Numbers'),
+                self.trUtf8('&Numbers'), 0, 0, self, 'numbers_viewer', True)
+        self.numbersViewerAct.setStatusTip(self.trUtf8(
+            'Toggle the Numbers window'))
+        self.numbersViewerAct.setWhatsThis(self.trUtf8(
+            """<b>Toggle the Numbers window</b>"""
+            """<p>If the Numbers window is hidden then display it."""
+            """ If it is displayed then close it.</p>"""
+        ))
+        self.connect(self.numbersViewerAct, SIGNAL('triggered()'), 
+                self.__toggleNumbersViewer)
+        self.actions.append(self.numbersViewerAct)
+        
+        self.numbersViewerActivateAct = E5Action(
+                self.trUtf8('Activate Numbers-Viewer'),
+                self.trUtf8('Activate Numbers-Viewer'),
+                QKeySequence(self.trUtf8("Alt+Shift+B")),
+                0, self,
+                'numbers_viewer_activate', True)
+        self.connect(self.numbersViewerActivateAct, SIGNAL('triggered()'), 
+                self.__activateNumbersViewer)
+        self.actions.append(self.numbersViewerActivateAct)
+        self.addAction(self.numbersViewerActivateAct)
 
         self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'),
                 UI.PixmapCache.getIcon("whatsThis.png"),
@@ -3879,6 +3931,38 @@ class UserInterface(QMainWindow):
         else:
             self.symbolsViewer.show()
         self.symbolsViewer.setFocus(Qt.ActiveWindowFocusReason)
+        
+    def __toggleNumbersViewer(self):
+        """
+        Private slot to handle the toggle of the Numbers Viewer window.
+        """
+        hasFocus = self.numbersViewer.hasFocus()
+        if self.layout == "DockWindows":
+            shown = self.__toggleWindow(self.numbersDock)
+        else:
+            shown = self.__toggleWindow(self.numbersViewer)
+        if shown:
+            self.__activateNumbersViewer()
+        else:
+            if hasFocus:
+                self.__activateViewmanager()
+
+    def __activateNumbersViewer(self):
+        """
+        Private slot to handle the activation of the Numbers Viewer.
+        """
+        if self.layout == "DockWindows":
+            self.numbersDock.show()
+            self.numbersDock.raise_()
+        elif self.layout == "Toolboxes":
+            self.vToolboxDock.show()
+            self.vToolbox.setCurrentWidget(self.numbersViewer)
+        elif self.layout == "Sidebars":
+            self.bottomSidebar.show()
+            self.bottomSidebar.setCurrentWidget(self.numbersViewer)
+        else:
+            self.numbersViewer.show()
+        self.numbersViewer.setFocus(Qt.ActiveWindowFocusReason)
         
     def __activateViewmanager(self):
         """
