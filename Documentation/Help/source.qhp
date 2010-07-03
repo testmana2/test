@@ -3835,7 +3835,6 @@
       <keyword name="NumbersWidget.on_octInButton_clicked" id="NumbersWidget.on_octInButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_octInButton_clicked" />
       <keyword name="NumbersWidget.on_octOutButton_clicked" id="NumbersWidget.on_octOutButton_clicked" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_octOutButton_clicked" />
       <keyword name="NumbersWidget.on_sizeBox_valueChanged" id="NumbersWidget.on_sizeBox_valueChanged" ref="eric5.UI.NumbersWidget.html#NumbersWidget.on_sizeBox_valueChanged" />
-      <keyword name="NumbersWidget.setNumber" id="NumbersWidget.setNumber" ref="eric5.UI.NumbersWidget.html#NumbersWidget.setNumber" />
       <keyword name="PixmapCache (Module)" id="PixmapCache (Module)" ref="eric5.UI.PixmapCache.html" />
       <keyword name="PixmapCache" id="PixmapCache" ref="eric5.UI.PixmapCache.html#PixmapCache" />
       <keyword name="addSearchPath" id="addSearchPath" ref="eric5.UI.PixmapCache.html#addSearchPath" />

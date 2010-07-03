@@ -454,9 +454,3 @@ class NumbersWidget(QWidget, Ui_NumbersWidget):
         Private slot to send a hexadecimal number.
         """
         self.insertNumber.emit(self.hexEdit.text())
-    
-    def setNumber(self, number):
-        """
-        Public method to set the number.
-        """
-        # TODO: implement this
