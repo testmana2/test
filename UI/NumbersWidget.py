@@ -134,7 +134,6 @@ class BinaryModel(QAbstractTableModel):
         @param role role of the data (integer)
         @return flag indicating success (boolean)
         """
-        print(role, value)
         if role == Qt.CheckStateRole:
             if value == Qt.Checked and not self.data(index, Qt.CheckStateRole):
                 # that seems like a hack; Qt 4.6 always sends Qt.Checked
