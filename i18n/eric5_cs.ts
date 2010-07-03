@@ -11116,7 +11116,7 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="630"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="636"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Otevřít odkaz v novém tab okně<byte value="x9"/>Ctrl+LMB</translation>
     </message>
@@ -11126,62 +11126,62 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>&lt;b&gt;Okno nápovědy&lt;/b&gt;&lt;p&gt;Toto okno zobrazí vybranou informaci nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="689"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="695"/>
         <source>Web Inspector...</source>
         <translation>Web inspektor...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="964"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Zkontrolujte adresu na chyby jako je &lt;b&gt;ww&lt;/b&gt;.example.org místo &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="964"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Je-li adresa vpořádku, prověřte síťové spojení.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="964"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Je-li vaše šíť chráněna firewallem nebo proxy, ujistěte se, že váš prohlížeč má na tuto síť povolen přístup.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="663"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="669"/>
         <source>Bookmark this Page</source>
         <translation>Záložka na tuto stranu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="634"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="640"/>
         <source>Save Lin&amp;k</source>
         <translation>Uložit lin&amp;k</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="635"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="641"/>
         <source>Bookmark this Link</source>
         <translation>Záložka na tento link</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="638"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="644"/>
         <source>Copy Link to Clipboard</source>
         <translation>Kopírovat link do schránky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="643"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="649"/>
         <source>Open Image in New Tab</source>
         <translation>Otevřít obrázek v novém tabu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="647"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="653"/>
         <source>Save Image</source>
         <translation>Uložit obrázek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="648"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="654"/>
         <source>Copy Image to Clipboard</source>
         <translation>Kopíroavt obrázek do schránky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="649"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="655"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Kopírovat cestu obrázku do schránky</translation>
     </message>
@@ -11191,12 +11191,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="653"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="659"/>
         <source>Block Image</source>
         <translation>Blokovat obrázek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="677"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="683"/>
         <source>Search with...</source>
         <translation>Hledat s...</translation>
     </message>
@@ -11216,47 +11216,47 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>&lt;p&gt;Nelze spustit aplikaci pro URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="949"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="955"/>
         <source>Error loading page: {0}</source>
         <translation>Chyba při načítání strany: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="964"/>
         <source>When connecting to: {0}.</source>
         <translation>Při připojení na: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1013"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1019"/>
         <source>Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1013"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1019"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1024"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1030"/>
         <source>New Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1024"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1030"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1044"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1050"/>
         <source>bytes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1047"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1053"/>
         <source>kB</source>
         <translation type="unfinished">kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1050"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1056"/>
         <source>MB</source>
         <translation type="unfinished">MB</translation>
     </message>
@@ -21328,27 +21328,27 @@ Do you want to save your changes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/NumbersWidget.py" line="180"/>
+        <location filename="UI/NumbersWidget.py" line="179"/>
         <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/NumbersWidget.py" line="181"/>
+        <location filename="UI/NumbersWidget.py" line="180"/>
         <source>Dec</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/NumbersWidget.py" line="182"/>
+        <location filename="UI/NumbersWidget.py" line="181"/>
         <source>Hex</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/NumbersWidget.py" line="183"/>
+        <location filename="UI/NumbersWidget.py" line="182"/>
         <source>Oct</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/NumbersWidget.py" line="184"/>
+        <location filename="UI/NumbersWidget.py" line="183"/>
         <source>Bin</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27572,9 +27572,14 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation>Jen výběr</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SearchWidget.py" line="75"/>
+        <location filename="Helpviewer/SearchWidget.py" line="83"/>
         <source>Expression was not found.</source>
         <translation>Výraz nebyl nalezen.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SearchWidget.ui" line="90"/>
+        <source>Highlight all</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

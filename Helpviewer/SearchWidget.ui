@@ -85,6 +85,13 @@
     </widget>
    </item>
    <item>
+    <widget class="QCheckBox" name="highlightAllCheckBox">
+     <property name="text">
+      <string>Highlight all</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="Line" name="infoLine">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -110,6 +117,7 @@
   <tabstop>findtextCombo</tabstop>
   <tabstop>caseCheckBox</tabstop>
   <tabstop>wrapCheckBox</tabstop>
+  <tabstop>highlightAllCheckBox</tabstop>
   <tabstop>findNextButton</tabstop>
   <tabstop>findPrevButton</tabstop>
   <tabstop>closeButton</tabstop>

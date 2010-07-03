@@ -596,7 +596,7 @@ class HelpBrowser(QWebView):
         """
         return self.selectedText() != ""
     
-    def findNextPrev(self, txt, case, backwards, wrap):
+    def findNextPrev(self, txt, case, backwards, wrap, highlightAll):
         """
         Public slot to find the next occurrence of a text.
         
@@ -604,6 +604,7 @@ class HelpBrowser(QWebView):
         @param case flag indicating a case sensitive search (boolean)
         @param backwards flag indicating a backwards search (boolean)
         @param wrap flag indicating to wrap around (boolean)
+        @param highlightAll flag indicating to highlight all occurrences (boolean)
         """
         findFlags = QWebPage.FindFlags()
         if case:
@@ -612,6 +613,11 @@ class HelpBrowser(QWebView):
             findFlags |= QWebPage.FindBackward
         if wrap:
             findFlags |= QWebPage.FindWrapsAroundDocument
+        try:
+            if highlightAll:
+                findFlags |= QWebPage.HighlightAllOccurrences
+        except AttributeError:
+            pass
         
         return self.findText(txt, findFlags)
     

@@ -2682,6 +2682,7 @@
       <keyword name="SearchWidget.on_findNextButton_clicked" id="SearchWidget.on_findNextButton_clicked" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_findNextButton_clicked" />
       <keyword name="SearchWidget.on_findPrevButton_clicked" id="SearchWidget.on_findPrevButton_clicked" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_findPrevButton_clicked" />
       <keyword name="SearchWidget.on_findtextCombo_editTextChanged" id="SearchWidget.on_findtextCombo_editTextChanged" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_findtextCombo_editTextChanged" />
+      <keyword name="SearchWidget.on_highlightAllCheckBox_toggled" id="SearchWidget.on_highlightAllCheckBox_toggled" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_highlightAllCheckBox_toggled" />
       <keyword name="SearchWidget.showFind" id="SearchWidget.showFind" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.showFind" />
       <keyword name="HelpTopicDialog (Module)" id="HelpTopicDialog (Module)" ref="eric5.Helpviewer.HelpTopicDialog.html" />
       <keyword name="HelpTopicDialog" id="HelpTopicDialog" ref="eric5.Helpviewer.HelpTopicDialog.html#HelpTopicDialog" />

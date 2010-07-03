@@ -9,6 +9,7 @@ Module implementing the search bar for the web browser.
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4.QtWebKit import QWebPage
 
 from .Ui_SearchWidget import Ui_SearchWidget
 
@@ -46,6 +47,11 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         
         self.connect(self.findtextCombo.lineEdit(), SIGNAL("returnPressed()"), 
                      self.__findByReturnPressed)
+        
+        if hasattr(QWebPage, "HighlightAllOccurrences"):
+            self.highlightAllCheckBox.setChecked(True)
+        else:
+            self.highlightAllCheckBox.setVisible(False)
 
     def on_findtextCombo_editTextChanged(self, txt):
         """
@@ -55,6 +61,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         """
         self.findPrevButton.setEnabled(txt != "")
         self.findNextButton.setEnabled(txt != "")
+        self.on_highlightAllCheckBox_toggled(True)
+        self.__findNextPrev()
 
     def __findNextPrev(self):
         """
@@ -63,17 +71,33 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         self.infoLabel.clear()
         self.__setFindtextComboBackground(False)
         
-        if not self.havefound or not self.findtextCombo.currentText():
-            self.showFind()
+        if not self.findtextCombo.currentText():
             return
         
         if not self.__mainWindow.currentBrowser().findNextPrev(
                 self.findtextCombo.currentText(), 
                 self.caseCheckBox.isChecked(), 
                 self.__findBackwards, 
-                self.wrapCheckBox.isChecked()):
+                self.wrapCheckBox.isChecked(), 
+                False):
             self.infoLabel.setText(self.trUtf8("Expression was not found."))
             self.__setFindtextComboBackground(True)
+    
+    @pyqtSlot(bool)
+    def on_highlightAllCheckBox_toggled(self, checked):
+        """
+        Private slot to toggle the highlight of all occurences.
+        """
+        cbr = self.__mainWindow.currentBrowser()
+        if cbr is None:
+            return
+        cbr.findNextPrev(
+            "", False, False, False, True)
+        if self.highlightAllCheckBox.isChecked():
+            cbr.findNextPrev(
+                self.findtextCombo.currentText(), 
+                self.caseCheckBox.isChecked(),
+                False, False, True)
     
     @pyqtSlot()
     def on_findNextButton_clicked(self):
@@ -97,6 +121,10 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         """
         Public slot to find the next occurrence.
         """
+        if not self.havefound or not self.findtextCombo.currentText():
+            self.showFind()
+            return
+        
         self.on_findNextButton_clicked()
 
     @pyqtSlot()
@@ -121,6 +149,10 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         """
         Public slot to find the previous occurrence.
         """
+        if not self.havefound or not self.findtextCombo.currentText():
+            self.showFind()
+            return
+        
         self.on_findPrevButton_clicked()
     
     def __findByReturnPressed(self):
