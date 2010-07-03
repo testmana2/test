@@ -1032,16 +1032,10 @@
     <Translation>i18n/eric5_de.ts</Translation>
     <Translation>i18n/eric5_es.qm</Translation>
     <Translation>i18n/eric5_es.ts</Translation>
-    <Translation>i18n/eric5_fr.qm</Translation>
-    <Translation>i18n/eric5_fr.ts</Translation>
     <Translation>i18n/eric5_it.qm</Translation>
     <Translation>i18n/eric5_it.ts</Translation>
     <Translation>i18n/eric5_ru.qm</Translation>
     <Translation>i18n/eric5_ru.ts</Translation>
-    <Translation>i18n/eric5_tr.qm</Translation>
-    <Translation>i18n/eric5_tr.ts</Translation>
-    <Translation>i18n/eric5_zh_CN.GB2312.qm</Translation>
-    <Translation>i18n/eric5_zh_CN.GB2312.ts</Translation>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
