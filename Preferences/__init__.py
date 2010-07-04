@@ -577,6 +577,7 @@ class Prefs(object):
         "AdBlockEnabled" : False, 
         "AdBlockSubscriptions" : [], 
         "OfflineStorageDatabaseQuota" : 50,     # 50 MB
+        "UserAgent" : "", 
     }
     
     websettings = QWebSettings.globalSettings()

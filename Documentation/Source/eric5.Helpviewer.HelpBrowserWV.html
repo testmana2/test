@@ -740,8 +740,17 @@ QWebPage
 <td><a href="#HelpWebPage.populateNetworkRequest">populateNetworkRequest</a></td>
 <td>Public method to add data to a network request.</td>
 </tr><tr>
+<td><a href="#HelpWebPage.setUserAgent">setUserAgent</a></td>
+<td>Public method to set the current user agent string.</td>
+</tr><tr>
 <td><a href="#HelpWebPage.supportsExtension">supportsExtension</a></td>
 <td>Public method to check the support for an extension.</td>
+</tr><tr>
+<td><a href="#HelpWebPage.userAgent">userAgent</a></td>
+<td>Public method to get the current user agent setting.</td>
+</tr><tr>
+<td><a href="#HelpWebPage.userAgentForUrl">userAgentForUrl</a></td>
+<td>Protected method to determine the user agent for the given URL.</td>
 </tr>
 </table>
 <a NAME="HelpWebPage.__init__" ID="HelpWebPage.__init__"></a>
@@ -816,6 +825,16 @@ attribute id of the page attribute (integer)
 <dd>
 reference to the network request object (QNetworkRequest)
 </dd>
+</dl><a NAME="HelpWebPage.setUserAgent" ID="HelpWebPage.setUserAgent"></a>
+<h4>HelpWebPage.setUserAgent</h4>
+<b>setUserAgent</b>(<i>agent</i>)
+<p>
+        Public method to set the current user agent string.
+</p><dl>
+<dt><i>agent</i></dt>
+<dd>
+new current user agent string (string)
+</dd>
 </dl><a NAME="HelpWebPage.supportsExtension" ID="HelpWebPage.supportsExtension"></a>
 <h4>HelpWebPage.supportsExtension</h4>
 <b>supportsExtension</b>(<i>extension</i>)
@@ -830,6 +849,37 @@ extension to test for (QWebPage.Extension)
 <dt>Returns:</dt>
 <dd>
 flag indicating the support of extension (boolean)
+</dd>
+</dl><a NAME="HelpWebPage.userAgent" ID="HelpWebPage.userAgent"></a>
+<h4>HelpWebPage.userAgent</h4>
+<b>userAgent</b>(<i>resolveEmpty = False</i>)
+<p>
+        Public method to get the current user agent setting.
+</p><dl>
+<dt><i>resolveEmpty</i></dt>
+<dd>
+flag indicating to resolve an empty
+            user agent (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+user agent string (string)
+</dd>
+</dl><a NAME="HelpWebPage.userAgentForUrl" ID="HelpWebPage.userAgentForUrl"></a>
+<h4>HelpWebPage.userAgentForUrl</h4>
+<b>userAgentForUrl</b>(<i>url</i>)
+<p>
+        Protected method to determine the user agent for the given URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to determine user agent for (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+user agent string (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

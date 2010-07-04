@@ -41,6 +41,7 @@ from .Passwords.PasswordManager import PasswordManager
 from .Network.NetworkAccessManager import NetworkAccessManager
 from .AdBlock.AdBlockManager import AdBlockManager
 from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
+from .UserAgent.UserAgentMenu import UserAgentMenu
 
 from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui.E5Action import E5Action
@@ -1215,6 +1216,9 @@ class HelpWindow(QMainWindow):
         menu.addAction(self.passwordsAct)
         menu.addSeparator()
         menu.addAction(self.adblockAct)
+        menu.addSeparator()
+        self.__userAgentMenu = UserAgentMenu(self.trUtf8("User Agent"))
+        menu.addMenu(self.__userAgentMenu)
         menu.addSeparator()
         menu.addAction(self.manageQtHelpDocsAct)
         menu.addAction(self.manageQtHelpFiltersAct)

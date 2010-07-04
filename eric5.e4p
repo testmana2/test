@@ -810,6 +810,8 @@
     <Source>UI/SymbolsWidget.py</Source>
     <Source>UI/NumbersWidget.py</Source>
     <Source>E5Gui/E5TextSpinBox.py</Source>
+    <Source>Helpviewer/UserAgent/__init__.py</Source>
+    <Source>Helpviewer/UserAgent/UserAgentMenu.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

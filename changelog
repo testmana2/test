@@ -19,6 +19,7 @@ Version 5.1-snapshot-2010mmdd:
 - extended the Ad-Blocker of the web browser (needs Qt >= 4.6)
 - added capability to configure the text encoding of the web browser 
   (needs Qt >= 4.6)
+- added capability to select the user agent string for the web browser
 
 Version 5.0-snapshot-20100523:
 - bug fixes

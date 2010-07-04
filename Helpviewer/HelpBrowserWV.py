@@ -246,6 +246,39 @@ class HelpWebPage(QWebPage):
             pass
         
         return QWebPage.extension(self, extension, option, output)
+    
+    def userAgent(self, resolveEmpty = False):
+        """
+        Public method to get the current user agent setting.
+        
+        @param resolveEmpty flag indicating to resolve an empty 
+            user agent (boolean)
+        @return user agent string (string)
+        """
+        agent = Preferences.getHelp("UserAgent")
+        if agent == "" and resolveEmpty:
+            agent = self.userAgentForUrl(QUrl())
+        return agent
+    
+    def setUserAgent(self, agent):
+        """
+        Public method to set the current user agent string.
+        
+        @param agent new current user agent string (string)
+        """
+        Preferences.setHelp("UserAgent", agent)
+    
+    def userAgentForUrl(self, url):
+        """
+        Protected method to determine the user agent for the given URL.
+        
+        @param url URL to determine user agent for (QUrl)
+        @return user agent string (string)
+        """
+        agent = Preferences.getHelp("UserAgent")
+        if agent == "":
+            agent = QWebPage.userAgentForUrl(self, url)
+        return agent
 
 ##########################################################################################
 

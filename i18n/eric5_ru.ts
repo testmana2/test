@@ -11184,182 +11184,182 @@ whole selection.&lt;/li&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="491"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="524"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик для файла &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="675"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="708"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Открыть ссылку в новой закладке<byte value="x9"/>Shift+Левая кнопка мыши</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="451"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="484"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; не существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="274"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="307"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Окно помощи&lt;/b&gt;&lt;p&gt;В этом окне отображается имеющаяся помощь.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="745"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
         <source>Web Inspector...</source>
         <translation>WEB проводник...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1102"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1135"/>
         <source>Error loading page: {0}</source>
         <translation>Ошибка при загрузке страницы: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1111"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1144"/>
         <source>When connecting to: {0}.</source>
         <translation>При соединении с {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1111"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1144"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Проверьте адрес на ошибки типа &lt;b&gt;ww&lt;/b&gt;.example.org вместо &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1111"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1144"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Если адрес правильный, проверьте сетевое соединение.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1111"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1144"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Если ваш компьютер или локальная сеть находятся за firewall или proxy, убедитесь что браузеру разрешено подсоединяться к сети.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="473"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="506"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить приложение для URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="708"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="741"/>
         <source>Bookmark this Page</source>
         <translation>Создать закладку для этой страницы</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="679"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="712"/>
         <source>Save Lin&amp;k</source>
         <translation>Сохранить &amp;ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="680"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="713"/>
         <source>Bookmark this Link</source>
         <translation>Сохранить ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="683"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="716"/>
         <source>Copy Link to Clipboard</source>
         <translation>Скопировать ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="688"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="721"/>
         <source>Open Image in New Tab</source>
         <translation>Открыть изображение в новой закладке</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="692"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="725"/>
         <source>Save Image</source>
         <translation>Сохранить изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="693"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="726"/>
         <source>Copy Image to Clipboard</source>
         <translation>Скопировать изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="694"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="727"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Скопировать адрес изображения</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="491"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="524"/>
         <source>Web Browser</source>
         <translation>Просмотрщик Web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="698"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="731"/>
         <source>Block Image</source>
         <translation>Заблокировать изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="722"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="755"/>
         <source>Search with...</source>
         <translation>Искать с...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1166"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
         <source>Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1166"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1177"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1210"/>
         <source>New Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1197"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1230"/>
         <source>bytes</source>
         <translation type="unfinished">байты</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1200"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1233"/>
         <source>kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1203"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1236"/>
         <source>MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1177"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1210"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="740"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="773"/>
         <source>Add to web search toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="853"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="886"/>
         <source>Method not supported</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="853"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="886"/>
         <source>{0} method is not supported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="895"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="928"/>
         <source>Search engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="895"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="928"/>
         <source>Choose the desired search engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="912"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="945"/>
         <source>Engine name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="912"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="945"/>
         <source>Enter a name for the engine</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12093,1306 +12093,1306 @@ whole selection.&lt;/li&gt;
 <context>
     <name>HelpWindow</name>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="378"/>
+        <location filename="Helpviewer/HelpWindow.py" line="379"/>
         <source>New Window</source>
         <translation>Новое окно</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1639"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1643"/>
         <source>Open File</source>
         <translation>Открыть файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="391"/>
+        <location filename="Helpviewer/HelpWindow.py" line="392"/>
         <source>&amp;Open File</source>
         <translation>&amp;Открыть файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="396"/>
+        <location filename="Helpviewer/HelpWindow.py" line="397"/>
         <source>Open a help file for display</source>
         <translation>Открыть файл помощи для дисплея</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="397"/>
+        <location filename="Helpviewer/HelpWindow.py" line="398"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new help file for display. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Открыть файл&lt;/b&gt;&lt;p&gt;Открыть новый файл помощи. Вызывает файловый диалог&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1274"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1278"/>
         <source>Print</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="461"/>
+        <location filename="Helpviewer/HelpWindow.py" line="462"/>
         <source>&amp;Print</source>
         <translation>&amp;Печать</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="466"/>
+        <location filename="Helpviewer/HelpWindow.py" line="467"/>
         <source>Print the displayed help</source>
         <translation>Печатать текущий раздел помощи</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="467"/>
+        <location filename="Helpviewer/HelpWindow.py" line="468"/>
         <source>&lt;b&gt;Print&lt;/b&gt;&lt;p&gt;Print the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Печать&lt;/b&gt;&lt;p&gt;Печатать текущий раздел помощи&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1265"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1269"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="500"/>
+        <location filename="Helpviewer/HelpWindow.py" line="501"/>
         <source>&amp;Close</source>
         <translation>&amp;Закрыть</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="505"/>
+        <location filename="Helpviewer/HelpWindow.py" line="506"/>
         <source>Close the current help window</source>
         <translation>Закрыть это окно помощи</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="539"/>
+        <location filename="Helpviewer/HelpWindow.py" line="540"/>
         <source>Quit</source>
         <translation>Выход</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="539"/>
+        <location filename="Helpviewer/HelpWindow.py" line="540"/>
         <source>&amp;Quit</source>
         <translation>&amp;Выход</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="556"/>
+        <location filename="Helpviewer/HelpWindow.py" line="557"/>
         <source>Backward</source>
         <translation>Назад</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="556"/>
+        <location filename="Helpviewer/HelpWindow.py" line="557"/>
         <source>&amp;Backward</source>
         <translation>&amp;Назад</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="562"/>
+        <location filename="Helpviewer/HelpWindow.py" line="563"/>
         <source>Move one help screen backward</source>
         <translation>Назад на один экран</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="563"/>
+        <location filename="Helpviewer/HelpWindow.py" line="564"/>
         <source>&lt;b&gt;Backward&lt;/b&gt;&lt;p&gt;Moves one help screen backward. If none is available, this action is disabled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Назад&lt;/b&gt;&lt;p&gt;Сместиться на один экран назад. Если это возможно.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="571"/>
+        <location filename="Helpviewer/HelpWindow.py" line="572"/>
         <source>Forward</source>
         <translation>Вперёд</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="571"/>
+        <location filename="Helpviewer/HelpWindow.py" line="572"/>
         <source>&amp;Forward</source>
         <translation>&amp;Вперёд</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="577"/>
+        <location filename="Helpviewer/HelpWindow.py" line="578"/>
         <source>Move one help screen forward</source>
         <translation>Вперёд на один экран</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="578"/>
+        <location filename="Helpviewer/HelpWindow.py" line="579"/>
         <source>&lt;b&gt;Forward&lt;/b&gt;&lt;p&gt;Moves one help screen forward. If none is available, this action is disabled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Вперёд&lt;/b&gt;&lt;p&gt;Сместиться на один экран вперёд, если это возможно.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="586"/>
+        <location filename="Helpviewer/HelpWindow.py" line="587"/>
         <source>Home</source>
         <translation>Домой</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="586"/>
+        <location filename="Helpviewer/HelpWindow.py" line="587"/>
         <source>&amp;Home</source>
         <translation>&amp;Домой</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="591"/>
+        <location filename="Helpviewer/HelpWindow.py" line="592"/>
         <source>Move to the initial help screen</source>
         <translation>Вернуться на первоначальную страницу</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="592"/>
+        <location filename="Helpviewer/HelpWindow.py" line="593"/>
         <source>&lt;b&gt;Home&lt;/b&gt;&lt;p&gt;Moves to the initial help screen.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Домой&lt;/b&gt;&lt;p&gt;Вернуться на первоначальную страницу.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="697"/>
+        <location filename="Helpviewer/HelpWindow.py" line="698"/>
         <source>Add Bookmark</source>
         <translation>Добавить закладку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="738"/>
+        <location filename="Helpviewer/HelpWindow.py" line="739"/>
         <source>What&apos;s This?</source>
         <translation>Что это?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="738"/>
+        <location filename="Helpviewer/HelpWindow.py" line="739"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Что это?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="743"/>
+        <location filename="Helpviewer/HelpWindow.py" line="744"/>
         <source>Context sensitive help</source>
         <translation>Контекстная помощь</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="744"/>
+        <location filename="Helpviewer/HelpWindow.py" line="745"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать контекстную помощь&lt;/b&gt;
 &lt;p&gt;В режиме контекстной помощи курсор мыши выглядит как стрелка со знаком вопроса, и, щёлкнув по элементу интерфейса, Вы можете просмотреть краткую помощь о его роли и его использовании. В диалогах можно воспользоваться кнопкой контекстной помощи в заголовке окна.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="755"/>
+        <location filename="Helpviewer/HelpWindow.py" line="756"/>
         <source>About</source>
         <translation>О</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="755"/>
+        <location filename="Helpviewer/HelpWindow.py" line="756"/>
         <source>&amp;About</source>
         <translation>&amp;О</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="758"/>
+        <location filename="Helpviewer/HelpWindow.py" line="759"/>
         <source>Display information about this software</source>
         <translation>Информация о ПО</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="759"/>
+        <location filename="Helpviewer/HelpWindow.py" line="760"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;О...&lt;/b&gt;&lt;p&gt;Информация об этом программном продукте.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="766"/>
+        <location filename="Helpviewer/HelpWindow.py" line="767"/>
         <source>About Qt</source>
         <translation>О Qt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="766"/>
+        <location filename="Helpviewer/HelpWindow.py" line="767"/>
         <source>About &amp;Qt</source>
         <translation>О &amp;Qt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="769"/>
+        <location filename="Helpviewer/HelpWindow.py" line="770"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Информация о библиотеке Qt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="771"/>
+        <location filename="Helpviewer/HelpWindow.py" line="772"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;О Qt&lt;/b&gt;&lt;p&gt;Информация о библиотеке Qt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="778"/>
+        <location filename="Helpviewer/HelpWindow.py" line="779"/>
         <source>Zoom in</source>
         <translation>Увеличить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="778"/>
+        <location filename="Helpviewer/HelpWindow.py" line="779"/>
         <source>Zoom &amp;in</source>
         <translation>У&amp;величить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="783"/>
+        <location filename="Helpviewer/HelpWindow.py" line="784"/>
         <source>Zoom in on the text</source>
         <translation>Увеличить масштаб текста</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="784"/>
+        <location filename="Helpviewer/HelpWindow.py" line="785"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the text. This makes the text bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Увеличить масштаб&lt;/b&gt;&lt;p&gt;Увеличить масштаб. Размер букв увеличится.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="791"/>
+        <location filename="Helpviewer/HelpWindow.py" line="792"/>
         <source>Zoom out</source>
         <translation>Уменьшить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="791"/>
+        <location filename="Helpviewer/HelpWindow.py" line="792"/>
         <source>Zoom &amp;out</source>
         <translation>У&amp;меньшить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="796"/>
+        <location filename="Helpviewer/HelpWindow.py" line="797"/>
         <source>Zoom out on the text</source>
         <translation>Уменьшить масштаб текста</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="797"/>
+        <location filename="Helpviewer/HelpWindow.py" line="798"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the text. This makes the text smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Уменьшить масштаб&lt;/b&gt;&lt;p&gt;Уменьшить масштаб. Размер букв уменьшится.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="627"/>
+        <location filename="Helpviewer/HelpWindow.py" line="628"/>
         <source>Copy</source>
         <translation>Копировать</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="627"/>
+        <location filename="Helpviewer/HelpWindow.py" line="628"/>
         <source>&amp;Copy</source>
         <translation>&amp;Копировать</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="632"/>
+        <location filename="Helpviewer/HelpWindow.py" line="633"/>
         <source>Copy the selected text</source>
         <translation>Копировать выбранный текст</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="633"/>
+        <location filename="Helpviewer/HelpWindow.py" line="634"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected text to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Копировать&lt;/b&gt;&lt;p&gt;Копировать выбранный текст в буфер обмена.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1122"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1123"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1145"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1146"/>
         <source>&amp;Edit</source>
         <translation>&amp;Правка</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1153"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1154"/>
         <source>&amp;View</source>
         <translation>&amp;Вид</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1170"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1171"/>
         <source>&amp;Go</source>
         <translation>&amp;Перейти</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1183"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1184"/>
         <source>H&amp;istory</source>
         <translation>И&amp;стория</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1192"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1193"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Закладки</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1238"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1242"/>
         <source>&amp;Help</source>
         <translation>&amp;Помощь</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1371"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1375"/>
         <source>&lt;p&gt;Enter the help file to be displayed directly into this edit field. Select a previously shown help file from the drop down list.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Задайте файл помощи для показа.Выберите файл, показанный ранее, из выпадающего списка.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="599"/>
+        <location filename="Helpviewer/HelpWindow.py" line="600"/>
         <source>Reload</source>
         <translation>Переоткрыть</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="599"/>
+        <location filename="Helpviewer/HelpWindow.py" line="600"/>
         <source>&amp;Reload</source>
         <translation>П&amp;ереоткрыть</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="605"/>
+        <location filename="Helpviewer/HelpWindow.py" line="606"/>
         <source>Reload the current help screen</source>
         <translation>Переоткрыть это окно помощи</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="606"/>
+        <location filename="Helpviewer/HelpWindow.py" line="607"/>
         <source>&lt;b&gt;Reload&lt;/b&gt;&lt;p&gt;Reloads the current help screen.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Переоткрыть&lt;/b&gt;&lt;p&gt;Переоткрыть это окно помощи.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="378"/>
+        <location filename="Helpviewer/HelpWindow.py" line="379"/>
         <source>Ctrl+N</source>
         <comment>File|New Window</comment>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="391"/>
+        <location filename="Helpviewer/HelpWindow.py" line="392"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="461"/>
+        <location filename="Helpviewer/HelpWindow.py" line="462"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="500"/>
+        <location filename="Helpviewer/HelpWindow.py" line="501"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="539"/>
+        <location filename="Helpviewer/HelpWindow.py" line="540"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="640"/>
+        <location filename="Helpviewer/HelpWindow.py" line="641"/>
         <source>&amp;Find...</source>
         <translation>&amp;Найти...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="645"/>
+        <location filename="Helpviewer/HelpWindow.py" line="646"/>
         <source>Find text in page</source>
         <translation>Найти далее</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="646"/>
+        <location filename="Helpviewer/HelpWindow.py" line="647"/>
         <source>&lt;b&gt;Find&lt;/b&gt;&lt;p&gt;Find text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Поиск&lt;/b&gt;&lt;p&gt;Искать текст на текущей странице.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="653"/>
+        <location filename="Helpviewer/HelpWindow.py" line="654"/>
         <source>Find &amp;next</source>
         <translation>Найти &amp;далее</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="667"/>
+        <location filename="Helpviewer/HelpWindow.py" line="668"/>
         <source>Find &amp;previous</source>
         <translation>Найти п&amp;редыдущее</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="627"/>
+        <location filename="Helpviewer/HelpWindow.py" line="628"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1285"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1289"/>
         <source>File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1302"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1306"/>
         <source>Edit</source>
         <translation>Редактировать</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1307"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1311"/>
         <source>View</source>
         <translation>Вид</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1316"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1320"/>
         <source>Find</source>
         <translation>Найти</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1344"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1348"/>
         <source>Help</source>
         <translation>Помощь</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1351"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1355"/>
         <source>Go</source>
         <translation>Перейти</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1639"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1643"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Файлы помощи (*.html *.htm);;Файлы PDF (*.pdf);;Файлы CHM (*.chm);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="365"/>
+        <location filename="Helpviewer/HelpWindow.py" line="366"/>
         <source>&amp;New Tab</source>
         <translation>&amp;Новая закладка</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="365"/>
+        <location filename="Helpviewer/HelpWindow.py" line="366"/>
         <source>Ctrl+T</source>
         <comment>File|New Tab</comment>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="371"/>
+        <location filename="Helpviewer/HelpWindow.py" line="372"/>
         <source>&lt;b&gt;New Tab&lt;/b&gt;&lt;p&gt;This opens a new help window tab.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Новая закладка&lt;/b&gt;
 &lt;p&gt;Открывает новую закладку с помощью.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="384"/>
+        <location filename="Helpviewer/HelpWindow.py" line="385"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new help browser window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Новое окно&lt;/b&gt;
 &lt;p&gt;Открывает новое окно просмотрщика.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="506"/>
+        <location filename="Helpviewer/HelpWindow.py" line="507"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;Closes the current help window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Закрыть&lt;/b&gt;
 &lt;p&gt;Закрывает текущее окно просмотрщика помощи.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="513"/>
+        <location filename="Helpviewer/HelpWindow.py" line="514"/>
         <source>Close &amp;All</source>
         <translation>Закрыть &amp;всё</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="517"/>
+        <location filename="Helpviewer/HelpWindow.py" line="518"/>
         <source>&lt;b&gt;Close All&lt;/b&gt;&lt;p&gt;Closes all help windows except the first one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Закрыть все&lt;/b&gt;
 &lt;p&gt;Закрывает все окна просмотрщиков помощи, кроме первого.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1254"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1258"/>
         <source>Move Left</source>
         <translation>Сдвинуть влево</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1257"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1261"/>
         <source>Move Right</source>
         <translation>Сдвинуть вправо</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2152"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2156"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="370"/>
+        <location filename="Helpviewer/HelpWindow.py" line="371"/>
         <source>Open a new help window tab</source>
         <translation>Открыть новую закладку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="383"/>
+        <location filename="Helpviewer/HelpWindow.py" line="384"/>
         <source>Open a new help browser window</source>
         <translation>Открыть новое окно</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="405"/>
+        <location filename="Helpviewer/HelpWindow.py" line="406"/>
         <source>Open File in New &amp;Tab</source>
         <translation>Открыть файл в новой &amp;закладке</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="405"/>
+        <location filename="Helpviewer/HelpWindow.py" line="406"/>
         <source>Shift+Ctrl+O</source>
         <comment>File|Open in new tab</comment>
         <translation>Shift+Ctrl+O</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="410"/>
+        <location filename="Helpviewer/HelpWindow.py" line="411"/>
         <source>Open a help file for display in a new tab</source>
         <translation>Открыть файл для отображения в новой закладке</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="412"/>
+        <location filename="Helpviewer/HelpWindow.py" line="413"/>
         <source>&lt;b&gt;Open File in New Tab&lt;/b&gt;&lt;p&gt;This opens a new help file for display in a new tab. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Открыть файл в новой закладке&lt;/b&gt;
 &lt;p&gt;Открывает файл в новой закладке. Запускает диалог выбора файла&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="365"/>
+        <location filename="Helpviewer/HelpWindow.py" line="366"/>
         <source>New Tab</source>
         <translation>Новая закладка</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="405"/>
+        <location filename="Helpviewer/HelpWindow.py" line="406"/>
         <source>Open File in New Tab</source>
         <translation>Открыть файл в новой закладке</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="513"/>
+        <location filename="Helpviewer/HelpWindow.py" line="514"/>
         <source>Close All</source>
         <translation>Закрыть всё</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="556"/>
+        <location filename="Helpviewer/HelpWindow.py" line="557"/>
         <source>Alt+Left</source>
         <comment>Go|Backward</comment>
         <translation>Alt+Left</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="556"/>
+        <location filename="Helpviewer/HelpWindow.py" line="557"/>
         <source>Backspace</source>
         <comment>Go|Backward</comment>
         <translation>Backspace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="571"/>
+        <location filename="Helpviewer/HelpWindow.py" line="572"/>
         <source>Alt+Right</source>
         <comment>Go|Forward</comment>
         <translation>Alt+Right</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="571"/>
+        <location filename="Helpviewer/HelpWindow.py" line="572"/>
         <source>Shift+Backspace</source>
         <comment>Go|Forward</comment>
         <translation>Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="586"/>
+        <location filename="Helpviewer/HelpWindow.py" line="587"/>
         <source>Ctrl+Home</source>
         <comment>Go|Home</comment>
         <translation>Ctrl+Home</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="599"/>
+        <location filename="Helpviewer/HelpWindow.py" line="600"/>
         <source>Ctrl+R</source>
         <comment>Go|Reload</comment>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="640"/>
+        <location filename="Helpviewer/HelpWindow.py" line="641"/>
         <source>Find...</source>
         <translation>Найти...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="640"/>
+        <location filename="Helpviewer/HelpWindow.py" line="641"/>
         <source>Ctrl+F</source>
         <comment>Edit|Find</comment>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="653"/>
+        <location filename="Helpviewer/HelpWindow.py" line="654"/>
         <source>Find next</source>
         <translation>Найти далее</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="653"/>
+        <location filename="Helpviewer/HelpWindow.py" line="654"/>
         <source>F3</source>
         <comment>Edit|Find next</comment>
         <translation>F3</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="667"/>
+        <location filename="Helpviewer/HelpWindow.py" line="668"/>
         <source>Find previous</source>
         <translation>Найти предыдущее</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="667"/>
+        <location filename="Helpviewer/HelpWindow.py" line="668"/>
         <source>Shift+F3</source>
         <comment>Edit|Find previous</comment>
         <translation>Shift+F3</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="738"/>
+        <location filename="Helpviewer/HelpWindow.py" line="739"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="778"/>
+        <location filename="Helpviewer/HelpWindow.py" line="779"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="791"/>
+        <location filename="Helpviewer/HelpWindow.py" line="792"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="658"/>
+        <location filename="Helpviewer/HelpWindow.py" line="659"/>
         <source>Find next occurrence of text in page</source>
         <translation>Искать далее на странице</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="659"/>
+        <location filename="Helpviewer/HelpWindow.py" line="660"/>
         <source>&lt;b&gt;Find next&lt;/b&gt;&lt;p&gt;Find the next occurrence of text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Искать далее&lt;/b&gt;&lt;p&gt;Искать далее на текущей странице.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="672"/>
+        <location filename="Helpviewer/HelpWindow.py" line="673"/>
         <source>Find previous occurrence of text in page</source>
         <translation>Искать на странице назад</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="674"/>
+        <location filename="Helpviewer/HelpWindow.py" line="675"/>
         <source>&lt;b&gt;Find previous&lt;/b&gt;&lt;p&gt;Find the previous occurrence of text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Искать назад&lt;/b&gt;&lt;p&gt;Искать назад на текущей странице.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1272"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1276"/>
         <source>Print Preview</source>
         <translation>Предварительный просмотр печати</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="490"/>
+        <location filename="Helpviewer/HelpWindow.py" line="491"/>
         <source>Print preview of the displayed help</source>
         <translation>Предварительный просмотр печати помощи</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="492"/>
+        <location filename="Helpviewer/HelpWindow.py" line="493"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предварительный просмотр печати&lt;/b&gt;&lt;p&gt;Предварительный просмотр печати помощи.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1779"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1783"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="857"/>
+        <location filename="Helpviewer/HelpWindow.py" line="858"/>
         <source>Show next tab</source>
         <translation>Показать следующую закладку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="857"/>
+        <location filename="Helpviewer/HelpWindow.py" line="858"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="865"/>
+        <location filename="Helpviewer/HelpWindow.py" line="866"/>
         <source>Show previous tab</source>
         <translation>Показать предыдущую закладку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="865"/>
+        <location filename="Helpviewer/HelpWindow.py" line="866"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="873"/>
+        <location filename="Helpviewer/HelpWindow.py" line="874"/>
         <source>Switch between tabs</source>
         <translation>Переключиться между закладками</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="873"/>
+        <location filename="Helpviewer/HelpWindow.py" line="874"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1035"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1036"/>
         <source>Clear icons database</source>
         <translation>Очистить базу данных иконок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1039"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1040"/>
         <source>Clear the database of favicons</source>
         <translation>Очистить базу данных иконок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1040"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1041"/>
         <source>&lt;b&gt;Clear icons database&lt;/b&gt;&lt;p&gt;Clears the database of favicons of previously visited URLs.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Очистить базу данных иконок&lt;/b&gt;&lt;p&gt;Очистить базу данных иконок ранее посещённых WEB сайтов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="881"/>
+        <location filename="Helpviewer/HelpWindow.py" line="882"/>
         <source>Preferences</source>
         <translation>Предпочтения</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="881"/>
+        <location filename="Helpviewer/HelpWindow.py" line="882"/>
         <source>&amp;Preferences...</source>
         <translation>&amp;Предпочтения...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="884"/>
+        <location filename="Helpviewer/HelpWindow.py" line="885"/>
         <source>Set the prefered configuration</source>
         <translation>Установите предпочтительную конфигурацию</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="885"/>
+        <location filename="Helpviewer/HelpWindow.py" line="886"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предпочтения&lt;/b&gt;
 &lt;p&gt;Настройте Eric по своему вкусу.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="143"/>
+        <location filename="Helpviewer/HelpWindow.py" line="144"/>
         <source>Contents</source>
         <translation>Содержимое</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="516"/>
+        <location filename="Helpviewer/HelpWindow.py" line="517"/>
         <source>Close all help windows</source>
         <translation>Закрыть все окна просмотрщиков помощи</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="932"/>
+        <location filename="Helpviewer/HelpWindow.py" line="933"/>
         <source>Sync with Table of Contents</source>
         <translation>Синхронизировать с содержанием</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="936"/>
+        <location filename="Helpviewer/HelpWindow.py" line="937"/>
         <source>Synchronizes the table of contents with current page</source>
         <translation>Синхронизировать содержание с текущей страницей</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="938"/>
+        <location filename="Helpviewer/HelpWindow.py" line="939"/>
         <source>&lt;b&gt;Sync with Table of Contents&lt;/b&gt;&lt;p&gt;Synchronizes the table of contents with current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Синхронизировать с содержанием&lt;/b&gt;&lt;p&gt;Синхронизировать содержание с текущей страницей.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="945"/>
+        <location filename="Helpviewer/HelpWindow.py" line="946"/>
         <source>Table of Contents</source>
         <translation>Содержание</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="948"/>
+        <location filename="Helpviewer/HelpWindow.py" line="949"/>
         <source>Shows the table of contents window</source>
         <translation>Показывает окно с содержанием</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="950"/>
+        <location filename="Helpviewer/HelpWindow.py" line="951"/>
         <source>&lt;b&gt;Table of Contents&lt;/b&gt;&lt;p&gt;Shows the table of contents window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Содержание&lt;/b&gt;&lt;p&gt;Показывает окно с содержанием.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="981"/>
+        <location filename="Helpviewer/HelpWindow.py" line="982"/>
         <source>Manage QtHelp Documents</source>
         <translation>Управлять документацией Qt4</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="984"/>
+        <location filename="Helpviewer/HelpWindow.py" line="985"/>
         <source>Shows a dialog to manage the QtHelp documentation set</source>
         <translation>Показывает диалог управления документацией Qt4</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="986"/>
+        <location filename="Helpviewer/HelpWindow.py" line="987"/>
         <source>&lt;b&gt;Manage QtHelp Documents&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the QtHelp documentation set.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Управлять документацией Qt4&lt;/b&gt;&lt;p&gt;Показывает диалог управления документацией Qt4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1230"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1234"/>
         <source>&amp;Window</source>
         <translation>&amp;Окно</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1323"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1327"/>
         <source>Filter</source>
         <translation>Фильтр</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1328"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1332"/>
         <source>Filtered by: </source>
         <translation>Фильтровать по:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2489"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2493"/>
         <source>Could not find an associated content.</source>
         <translation>Невозможно найти соответствующее содержание.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="994"/>
+        <location filename="Helpviewer/HelpWindow.py" line="995"/>
         <source>Manage QtHelp Filters</source>
         <translation>Управлять фильтрами документации QtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="997"/>
+        <location filename="Helpviewer/HelpWindow.py" line="998"/>
         <source>Shows a dialog to manage the QtHelp filters</source>
         <translation>Показывает диалог управления фильтрами документации QtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="999"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1000"/>
         <source>&lt;b&gt;Manage QtHelp Filters&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the QtHelp filters.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Управлять фильтрами документации QtHelp&lt;/b&gt;&lt;p&gt;Показывает диалог управления фильтрами документации QtHelp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="957"/>
+        <location filename="Helpviewer/HelpWindow.py" line="958"/>
         <source>Index</source>
         <translation>Индекс</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="960"/>
+        <location filename="Helpviewer/HelpWindow.py" line="961"/>
         <source>Shows the index window</source>
         <translation>Показать окно индексов</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="962"/>
+        <location filename="Helpviewer/HelpWindow.py" line="963"/>
         <source>&lt;b&gt;Index&lt;/b&gt;&lt;p&gt;Shows the index window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Индекс&lt;/b&gt;&lt;p&gt;Показать окно индексов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="969"/>
+        <location filename="Helpviewer/HelpWindow.py" line="970"/>
         <source>Search</source>
         <translation>Поиск</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="972"/>
+        <location filename="Helpviewer/HelpWindow.py" line="973"/>
         <source>Shows the search window</source>
         <translation>Показать окно поиска</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="974"/>
+        <location filename="Helpviewer/HelpWindow.py" line="975"/>
         <source>&lt;b&gt;Search&lt;/b&gt;&lt;p&gt;Shows the search window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Поиск&lt;/b&gt;&lt;p&gt;Показать окно поиска.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1007"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1008"/>
         <source>Reindex Documentation</source>
         <translation>Переиндексировать документацию</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1010"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1011"/>
         <source>Reindexes the documentation set</source>
         <translation>Переиндексировать документацию</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1012"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1013"/>
         <source>&lt;b&gt;Reindex Documentation&lt;/b&gt;&lt;p&gt;Reindexes the documentation set.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Переиндексировать документацию&lt;/b&gt;&lt;p&gt;Переиндексировать документацию.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2605"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2609"/>
         <source>Updating search index</source>
         <translation>Обновление поискового индекса</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2659"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2663"/>
         <source>Looking for Documentation...</source>
         <translation>Идёт поиск помощи...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2689"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2693"/>
         <source>Unfiltered</source>
         <translation>Нефильтрованное</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2708"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2712"/>
         <source>Help Engine</source>
         <translation>Просмотрщик помощи</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="183"/>
+        <location filename="Helpviewer/HelpWindow.py" line="184"/>
         <source>Show a navigation menu</source>
         <translation>Показать меню</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="528"/>
+        <location filename="Helpviewer/HelpWindow.py" line="529"/>
         <source>Private Browsing</source>
         <translation>Личный просмотр</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="524"/>
+        <location filename="Helpviewer/HelpWindow.py" line="525"/>
         <source>Private &amp;Browsing</source>
         <translation>Личный &amp;просмотр</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="529"/>
+        <location filename="Helpviewer/HelpWindow.py" line="530"/>
         <source>&lt;b&gt;Private Browsing&lt;/b&gt;&lt;p&gt;Enables private browsing. In this mode no history is recorded anymore.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Личный просмотр&lt;/b&gt;&lt;p&gt;Разрешает режим личного просмотра. В этом режиме история не сохраняется.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2361"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2365"/>
         <source>Loading...</source>
         <translation>Загружаю...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2376"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2380"/>
         <source>Finished loading</source>
         <translation>Загрузка завершена</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="848"/>
+        <location filename="Helpviewer/HelpWindow.py" line="849"/>
         <source>Full Screen</source>
         <translation>Полный экран</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="848"/>
+        <location filename="Helpviewer/HelpWindow.py" line="849"/>
         <source>&amp;Full Screen</source>
         <translation>Полный &amp;экран</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="848"/>
+        <location filename="Helpviewer/HelpWindow.py" line="849"/>
         <source>F11</source>
         <translation>F11</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="981"/>
+        <location filename="Helpviewer/HelpWindow.py" line="982"/>
         <source>Manage QtHelp &amp;Documents</source>
         <translation>Управлять &amp;документацией QtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="994"/>
+        <location filename="Helpviewer/HelpWindow.py" line="995"/>
         <source>Manage QtHelp &amp;Filters</source>
         <translation>Управлять &amp;фильтрами документации QtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1007"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1008"/>
         <source>&amp;Reindex Documentation</source>
         <translation>&amp;Переиндексировать документацию</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1025"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1026"/>
         <source>Clear private data</source>
         <translation>Очистить личные данные</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1021"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1022"/>
         <source>&amp;Clear private data</source>
         <translation>&amp;Очистить личные данные</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1026"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1027"/>
         <source>&lt;b&gt;Clear private data&lt;/b&gt;&lt;p&gt;Clears the private data like browsing history, search history or the favicons database.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Очистить личные данные&lt;/b&gt;&lt;p&gt;Очистить личные данные: удалить историю просмотров, историю поиска или базу данных иконок.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1035"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1036"/>
         <source>Clear &amp;icons database</source>
         <translation>Очистить базу данных &amp;иконок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1089"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1090"/>
         <source>Show Network Monitor</source>
         <translation>Показать монитор сети</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1089"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1090"/>
         <source>Show &amp;Network Monitor</source>
         <translation>Показать монитор &amp;сети</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1093"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1094"/>
         <source>Show the network monitor dialog</source>
         <translation>Показать диалог монитора сети</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1094"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1095"/>
         <source>&lt;b&gt;Show Network Monitor&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать монитор сети&lt;/b&gt;&lt;p&gt;Показать диалог монитора сети.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1206"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1207"/>
         <source>&amp;Settings</source>
         <translation>&amp;Настройка</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1226"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1230"/>
         <source>&amp;Tools</source>
         <translation>&amp;Инструменты</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="835"/>
+        <location filename="Helpviewer/HelpWindow.py" line="836"/>
         <source>Show page source</source>
         <translation>Показать исходный текст страницы</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="835"/>
+        <location filename="Helpviewer/HelpWindow.py" line="836"/>
         <source>Ctrl+U</source>
         <translation>Ctrl+U</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="839"/>
+        <location filename="Helpviewer/HelpWindow.py" line="840"/>
         <source>Show the page source in an editor</source>
         <translation>Показать исходный текст страницы в редакторе</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="840"/>
+        <location filename="Helpviewer/HelpWindow.py" line="841"/>
         <source>&lt;b&gt;Show page source&lt;/b&gt;&lt;p&gt;Show the page source in an editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать исходный текст страницы&lt;/b&gt;&lt;p&gt;Показать исходный текст страницы в редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="893"/>
+        <location filename="Helpviewer/HelpWindow.py" line="894"/>
         <source>&amp;Languages...</source>
         <translation>&amp;Языки...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="896"/>
+        <location filename="Helpviewer/HelpWindow.py" line="897"/>
         <source>Configure the accepted languages for web pages</source>
         <translation>Настроить допустимые языки для WEB страниц</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="898"/>
+        <location filename="Helpviewer/HelpWindow.py" line="899"/>
         <source>&lt;b&gt;Languages&lt;/b&gt;&lt;p&gt;Configure the accepted languages for web pages.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Языки&lt;/b&gt;&lt;p&gt;Настроить допустимые языки для WEB страниц.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="893"/>
+        <location filename="Helpviewer/HelpWindow.py" line="894"/>
         <source>Languages</source>
         <translation>Языки</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="906"/>
+        <location filename="Helpviewer/HelpWindow.py" line="907"/>
         <source>Cookies</source>
         <translation>Cookies</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="906"/>
+        <location filename="Helpviewer/HelpWindow.py" line="907"/>
         <source>C&amp;ookies...</source>
         <translation>C&amp;ookies...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="909"/>
+        <location filename="Helpviewer/HelpWindow.py" line="910"/>
         <source>Configure cookies handling</source>
         <translation>Настройка cookies</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="911"/>
+        <location filename="Helpviewer/HelpWindow.py" line="912"/>
         <source>&lt;b&gt;Cookies&lt;/b&gt;&lt;p&gt;Configure cookies handling.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cookies&lt;/b&gt;&lt;p&gt;Настройка cookies.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1336"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1340"/>
         <source>Settings</source>
         <translation>Настройка</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="804"/>
+        <location filename="Helpviewer/HelpWindow.py" line="805"/>
         <source>Zoom reset</source>
         <translation>Сбросить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="804"/>
+        <location filename="Helpviewer/HelpWindow.py" line="805"/>
         <source>Zoom &amp;reset</source>
         <translation>&amp;Сбросить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="804"/>
+        <location filename="Helpviewer/HelpWindow.py" line="805"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="809"/>
+        <location filename="Helpviewer/HelpWindow.py" line="810"/>
         <source>Reset the zoom of the text</source>
         <translation>Сбросить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="819"/>
+        <location filename="Helpviewer/HelpWindow.py" line="820"/>
         <source>Zoom text only</source>
         <translation>Масштаб текста</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="819"/>
+        <location filename="Helpviewer/HelpWindow.py" line="820"/>
         <source>Zoom &amp;text only</source>
         <translation>Масштаб &amp;текста</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="823"/>
+        <location filename="Helpviewer/HelpWindow.py" line="824"/>
         <source>Zoom text only; pictures remain constant</source>
         <translation>Масштаб текста; Изображения остаются неизменными</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="825"/>
+        <location filename="Helpviewer/HelpWindow.py" line="826"/>
         <source>&lt;b&gt;Zoom text only&lt;/b&gt;&lt;p&gt;Zoom text only; pictures remain constant.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Масштаб текста&lt;/b&gt;&lt;p&gt;Масштаб текста; Изображения остаются неизменными.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="810"/>
+        <location filename="Helpviewer/HelpWindow.py" line="811"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the text. This sets the zoom factor to 100%.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сбросить масштаб&lt;/b&gt;&lt;p&gt;Сбросить масштаб текста, т.е. установить масштаб в 100%.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="378"/>
+        <location filename="Helpviewer/HelpWindow.py" line="379"/>
         <source>New &amp;Window</source>
         <translation>&amp;Новое окно</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="435"/>
+        <location filename="Helpviewer/HelpWindow.py" line="436"/>
         <source>Import Bookmarks</source>
         <translation>Импортировать закладки</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="435"/>
+        <location filename="Helpviewer/HelpWindow.py" line="436"/>
         <source>&amp;Import Bookmarks...</source>
         <translation>&amp;Импортировать закладки...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="438"/>
+        <location filename="Helpviewer/HelpWindow.py" line="439"/>
         <source>Import bookmarks from other browsers</source>
         <translation>Импортировать закладки из других браузеров</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="440"/>
+        <location filename="Helpviewer/HelpWindow.py" line="441"/>
         <source>&lt;b&gt;Import Bookmarks&lt;/b&gt;&lt;p&gt;Import bookmarks from other browsers.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Импортировать закладки&lt;/b&gt;&lt;p&gt;Импортировать закладки из других браузеров.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="448"/>
+        <location filename="Helpviewer/HelpWindow.py" line="449"/>
         <source>Export Bookmarks</source>
         <translation>Экспорт закладок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="448"/>
+        <location filename="Helpviewer/HelpWindow.py" line="449"/>
         <source>&amp;Export Bookmarks...</source>
         <translation>&amp;Экспорт закладок...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="451"/>
+        <location filename="Helpviewer/HelpWindow.py" line="452"/>
         <source>Export the bookmarks into a file</source>
         <translation>Экспортировать закладки в файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="453"/>
+        <location filename="Helpviewer/HelpWindow.py" line="454"/>
         <source>&lt;b&gt;Export Bookmarks&lt;/b&gt;&lt;p&gt;Export the bookmarks into a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Экспорт закладок&lt;/b&gt;&lt;p&gt;Экспортировать закладки в файл.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="683"/>
+        <location filename="Helpviewer/HelpWindow.py" line="684"/>
         <source>Manage Bookmarks</source>
         <translation>Управлять закладками</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="683"/>
+        <location filename="Helpviewer/HelpWindow.py" line="684"/>
         <source>&amp;Manage Bookmarks...</source>
         <translation>&amp;Управлять закладками...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="683"/>
+        <location filename="Helpviewer/HelpWindow.py" line="684"/>
         <source>Ctrl+Shift+B</source>
         <comment>Help|Manage bookmarks</comment>
         <translation>Ctrl+Shift+B</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="687"/>
+        <location filename="Helpviewer/HelpWindow.py" line="688"/>
         <source>Open a dialog to manage the bookmarks.</source>
         <translation>Показать диалог управления закладками.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="689"/>
+        <location filename="Helpviewer/HelpWindow.py" line="690"/>
         <source>&lt;b&gt;Manage Bookmarks...&lt;/b&gt;&lt;p&gt;Open a dialog to manage the bookmarks.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Управлять закладками...&lt;/b&gt;&lt;p&gt;Показать диалог управления закладками.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="697"/>
+        <location filename="Helpviewer/HelpWindow.py" line="698"/>
         <source>Add &amp;Bookmark...</source>
         <translation>Добавить &amp;закладку...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="697"/>
+        <location filename="Helpviewer/HelpWindow.py" line="698"/>
         <source>Ctrl+D</source>
         <comment>Help|Add bookmark</comment>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="703"/>
+        <location filename="Helpviewer/HelpWindow.py" line="704"/>
         <source>Open a dialog to add a bookmark.</source>
         <translation>Показать диалог добавления закладки.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="704"/>
+        <location filename="Helpviewer/HelpWindow.py" line="705"/>
         <source>&lt;b&gt;Add Bookmark&lt;/b&gt;&lt;p&gt;Open a dialog to add the current URL as a bookmark.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Добавить закладку&lt;/b&gt;&lt;p&gt;Показать диалог добавления текущей страницы в закладки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="711"/>
+        <location filename="Helpviewer/HelpWindow.py" line="712"/>
         <source>Add Folder</source>
         <translation>Добавить папку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="711"/>
+        <location filename="Helpviewer/HelpWindow.py" line="712"/>
         <source>Add &amp;Folder...</source>
         <translation>Добавить &amp;папку...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="714"/>
+        <location filename="Helpviewer/HelpWindow.py" line="715"/>
         <source>Open a dialog to add a new bookmarks folder.</source>
         <translation>Показать диалог добавления новой папки закладок.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="716"/>
+        <location filename="Helpviewer/HelpWindow.py" line="717"/>
         <source>&lt;b&gt;Add Folder...&lt;/b&gt;&lt;p&gt;Open a dialog to add a new bookmarks folder.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Добавить папку&lt;/b&gt;&lt;p&gt;Показать диалог добавления новой папки закладок.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="724"/>
+        <location filename="Helpviewer/HelpWindow.py" line="725"/>
         <source>Bookmark All Tabs</source>
         <translation>Создать закладки для всех открытых страниц</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="724"/>
+        <location filename="Helpviewer/HelpWindow.py" line="725"/>
         <source>Bookmark All Tabs...</source>
         <translation>Создать закладки для всех открытых страниц...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="727"/>
+        <location filename="Helpviewer/HelpWindow.py" line="728"/>
         <source>Bookmark all open tabs.</source>
         <translation>Создать закладки для всех открытых страниц.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="729"/>
+        <location filename="Helpviewer/HelpWindow.py" line="730"/>
         <source>&lt;b&gt;Bookmark All Tabs...&lt;/b&gt;&lt;p&gt;Open a dialog to add a new bookmarks folder for all open tabs.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Создать закладки для всех открытых страниц...&lt;/b&gt;&lt;p&gt;Показать диалог добавления папки для закладок.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1872"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1876"/>
         <source>Saved Tabs</source>
         <translation>Сохраненные закладки</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1268"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1272"/>
         <source>Close Others</source>
         <translation>Закрыть остальные</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="599"/>
+        <location filename="Helpviewer/HelpWindow.py" line="600"/>
         <source>F5</source>
         <comment>Go|Reload</comment>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="613"/>
+        <location filename="Helpviewer/HelpWindow.py" line="614"/>
         <source>Stop</source>
         <translation>Стоп</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="613"/>
+        <location filename="Helpviewer/HelpWindow.py" line="614"/>
         <source>&amp;Stop</source>
         <translation>Ст&amp;оп</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="613"/>
+        <location filename="Helpviewer/HelpWindow.py" line="614"/>
         <source>Ctrl+.</source>
         <comment>Go|Stop</comment>
         <translation>Ctrl+.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="613"/>
+        <location filename="Helpviewer/HelpWindow.py" line="614"/>
         <source>Esc</source>
         <comment>Go|Stop</comment>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="619"/>
+        <location filename="Helpviewer/HelpWindow.py" line="620"/>
         <source>Stop loading</source>
         <translation>Остановить загрузку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="620"/>
+        <location filename="Helpviewer/HelpWindow.py" line="621"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stops loading of the current tab.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Стоп&lt;/b&gt;&lt;p&gt;Остановить загрузку.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1261"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1265"/>
         <source>Duplicate Page</source>
         <translation>Дуплисат</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="420"/>
+        <location filename="Helpviewer/HelpWindow.py" line="421"/>
         <source>Save As </source>
         <translation>Сохранить как</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="420"/>
+        <location filename="Helpviewer/HelpWindow.py" line="421"/>
         <source>&amp;Save As...</source>
         <translation>Сохранить &amp;как...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="420"/>
+        <location filename="Helpviewer/HelpWindow.py" line="421"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation>Shift+Ctrl+S</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="425"/>
+        <location filename="Helpviewer/HelpWindow.py" line="426"/>
         <source>Save the current page to disk</source>
         <translation>Сохранить текущую страницу в файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="427"/>
+        <location filename="Helpviewer/HelpWindow.py" line="428"/>
         <source>&lt;b&gt;Save As...&lt;/b&gt;&lt;p&gt;Saves the current page to disk.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сохранить как...&lt;/b&gt;&lt;p&gt;Сохранить текущую страницу в файл.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1798"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1802"/>
         <source>Eric Web Browser</source>
         <translation>WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1789"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1793"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;О WEB просмотрщике встроенном в Eric&lt;/h3&gt;&lt;p&gt;WEB просмотрщик встроенный в Eric это комбинированный просмотрщик файлов помощи и HTML файлов.&lt;/p&gt;</translation>
     </message>
@@ -13402,17 +13402,17 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;b&gt;Включить режим личного просмотра?&lt;/b&gt;&lt;p&gt;В режиме личного просмотра не сохраняются история просмотренных страниц, история поисков, cookies; иконки посещённых сайтов не запоминаются в базе данных.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="544"/>
+        <location filename="Helpviewer/HelpWindow.py" line="545"/>
         <source>Quit the web browser</source>
         <translation>Закрыть просмотрщик Web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="545"/>
+        <location filename="Helpviewer/HelpWindow.py" line="546"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the web browser.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Выход&lt;/b&gt;&lt;p&gt;Закрыть просмотрщик Web.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1047"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1048"/>
         <source>Configure Search Engines</source>
         <translation>Настройка поисковиков</translation>
     </message>
@@ -13422,119 +13422,124 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">Настройка &amp;поисковиков...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1051"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1052"/>
         <source>Configure the available search engines</source>
         <translation>Настроить все поисковики</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1053"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1054"/>
         <source>&lt;b&gt;Configure Search Engines...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure the available search engines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Настроить все поисковики...&lt;/b&gt;&lt;p&gt;Открыть диалог для настройки поисковиков.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1061"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1062"/>
         <source>Manage Saved Passwords</source>
         <translation>Менеджировать сохранённые пароли</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1061"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1062"/>
         <source>Manage Saved Passwords...</source>
         <translation>Менеджировать сохранённые пароли...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1065"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1066"/>
         <source>Manage the saved passwords</source>
         <translation>Менеджировать сохранённые пароли</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1067"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1068"/>
         <source>&lt;b&gt;Manage Saved Passwords...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved passwords.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Менеджировать сохранённые пароли...&lt;/b&gt;Открыть диалог для менеджирования сохранённых паролей&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1075"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1076"/>
         <source>Ad Block</source>
         <translation>Ad Block</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1075"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1076"/>
         <source>&amp;Ad Block...</source>
         <translation>&amp;Ad Block...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1079"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1080"/>
         <source>Configure AdBlock subscriptions and rules</source>
         <translation>Настроить AdBlock подписки и правила</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1081"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1082"/>
         <source>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure AdBlock subscriptions and rules.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Показать диалог для настройки AdBlock подписок и правил.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2668"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2672"/>
         <source>eric5 Web Browser</source>
         <translation>WEB просмотрщик встроенный в Eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2378"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2382"/>
         <source>Failed to load</source>
         <translation>Загрука не удалась</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1276"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1280"/>
         <source>Print as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="478"/>
+        <location filename="Helpviewer/HelpWindow.py" line="479"/>
         <source>Print the displayed help as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="479"/>
+        <location filename="Helpviewer/HelpWindow.py" line="480"/>
         <source>&lt;b&gt;Print as PDF&lt;/b&gt;&lt;p&gt;Print the displayed help text as a PDF file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="919"/>
+        <location filename="Helpviewer/HelpWindow.py" line="920"/>
         <source>Offline Storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="919"/>
+        <location filename="Helpviewer/HelpWindow.py" line="920"/>
         <source>Offline &amp;Storage...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="922"/>
+        <location filename="Helpviewer/HelpWindow.py" line="923"/>
         <source>Configure offline storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="924"/>
+        <location filename="Helpviewer/HelpWindow.py" line="925"/>
         <source>&lt;b&gt;Offline Storage&lt;/b&gt;&lt;p&gt;Opens a dialog to configure offline storage.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1047"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1048"/>
         <source>Configure Search &amp;Engines...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2095"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2099"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1164"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1165"/>
         <source>Text Encoding</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3000"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3004"/>
         <source>Default</source>
         <translation type="unfinished">По умолчанию</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1220"/>
+        <source>User Agent</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -22655,12 +22660,12 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="861"/>
+        <location filename="Preferences/__init__.py" line="862"/>
         <source>Export Preferences</source>
         <translation>Экспорт предпочтений</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="880"/>
+        <location filename="Preferences/__init__.py" line="881"/>
         <source>Import Preferences</source>
         <translation>Импорт предпочтений</translation>
     </message>
@@ -37023,6 +37028,39 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="PyUnit/UnittestDialog.py" line="390"/>
         <source>Ran {0} tests in {1:.3f}s</source>
         <translation>{0} Тестов пройдено за {1:.3f} секунд</translation>
+    </message>
+</context>
+<context>
+    <name>UserAgentMenu</name>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="41"/>
+        <source>Default</source>
+        <translation type="unfinished">По умолчанию</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="53"/>
+        <source>Other...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="76"/>
+        <source>Custom user agent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="76"/>
+        <source>User agent:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="121"/>
+        <source>Parsing default user agents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="121"/>
+        <source>&lt;p&gt;Error parsing default user agents.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

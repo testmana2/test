@@ -262,6 +262,10 @@
               <section title="eric5.Helpviewer.Passwords.PasswordModel" ref="eric5.Helpviewer.Passwords.PasswordModel.html" />
               <section title="eric5.Helpviewer.Passwords.PasswordsDialog" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html" />
             </section>
+            <section title="eric5.Helpviewer.UserAgent" ref="index-eric5.Helpviewer.UserAgent.html">
+              <section title="eric5.Helpviewer.UserAgent.UserAgentDefaults" ref="eric5.Helpviewer.UserAgent.UserAgentDefaults.html" />
+              <section title="eric5.Helpviewer.UserAgent.UserAgentMenu" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html" />
+            </section>
             <section title="eric5.Helpviewer.DownloadDialog" ref="eric5.Helpviewer.DownloadDialog.html" />
             <section title="eric5.Helpviewer.HTMLResources" ref="eric5.Helpviewer.HTMLResources.html" />
             <section title="eric5.Helpviewer.HelpBrowserWV" ref="eric5.Helpviewer.HelpBrowserWV.html" />
@@ -2754,7 +2758,10 @@
       <keyword name="HelpWebPage.extension" id="HelpWebPage.extension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.extension" />
       <keyword name="HelpWebPage.pageAttributeId" id="HelpWebPage.pageAttributeId" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.pageAttributeId" />
       <keyword name="HelpWebPage.populateNetworkRequest" id="HelpWebPage.populateNetworkRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.populateNetworkRequest" />
+      <keyword name="HelpWebPage.setUserAgent" id="HelpWebPage.setUserAgent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.setUserAgent" />
       <keyword name="HelpWebPage.supportsExtension" id="HelpWebPage.supportsExtension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.supportsExtension" />
+      <keyword name="HelpWebPage.userAgent" id="HelpWebPage.userAgent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.userAgent" />
+      <keyword name="HelpWebPage.userAgentForUrl" id="HelpWebPage.userAgentForUrl" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.userAgentForUrl" />
       <keyword name="JavaScriptEricObject (Constructor)" id="JavaScriptEricObject (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.__init__" />
       <keyword name="JavaScriptEricObject.providerString" id="JavaScriptEricObject.providerString" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.providerString" />
       <keyword name="JavaScriptEricObject.searchUrl" id="JavaScriptEricObject.searchUrl" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.searchUrl" />
@@ -6855,6 +6862,16 @@
       <keyword name="PasswordsDialog (Constructor)" id="PasswordsDialog (Constructor)" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.__init__" />
       <keyword name="PasswordsDialog.__calculateHeaderSizes" id="PasswordsDialog.__calculateHeaderSizes" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.__calculateHeaderSizes" />
       <keyword name="PasswordsDialog.on_passwordsButton_clicked" id="PasswordsDialog.on_passwordsButton_clicked" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.on_passwordsButton_clicked" />
+      <keyword name="UserAgent (Package)" id="UserAgent (Package)" ref="index-eric5.Helpviewer.UserAgent.html" />
+      <keyword name="UserAgentDefaults (Module)" id="UserAgentDefaults (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentDefaults.html" />
+      <keyword name="UserAgentMenu (Module)" id="UserAgentMenu (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html" />
+      <keyword name="UserAgentMenu" id="UserAgentMenu" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu" />
+      <keyword name="UserAgentMenu (Constructor)" id="UserAgentMenu (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__init__" />
+      <keyword name="UserAgentMenu.__addDefaultActions" id="UserAgentMenu.__addDefaultActions" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__addDefaultActions" />
+      <keyword name="UserAgentMenu.__changeUserAgent" id="UserAgentMenu.__changeUserAgent" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__changeUserAgent" />
+      <keyword name="UserAgentMenu.__populateMenu" id="UserAgentMenu.__populateMenu" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__populateMenu" />
+      <keyword name="UserAgentMenu.__switchToDefaultUserAgent" id="UserAgentMenu.__switchToDefaultUserAgent" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__switchToDefaultUserAgent" />
+      <keyword name="UserAgentMenu.__switchToOtherUserAgent" id="UserAgentMenu.__switchToOtherUserAgent" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__switchToOtherUserAgent" />
       <keyword name="OfflineStorage (Package)" id="OfflineStorage (Package)" ref="index-eric5.Helpviewer.OfflineStorage.html" />
       <keyword name="OfflineStorageConfigDialog (Module)" id="OfflineStorageConfigDialog (Module)" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html" />
       <keyword name="OfflineStorageConfigDialog" id="OfflineStorageConfigDialog" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html#OfflineStorageConfigDialog" />
@@ -9951,6 +9968,8 @@
       <file>eric5.Helpviewer.QtHelpDocumentationDialog.html</file>
       <file>eric5.Helpviewer.QtHelpFiltersDialog.html</file>
       <file>eric5.Helpviewer.SearchWidget.html</file>
+      <file>eric5.Helpviewer.UserAgent.UserAgentDefaults.html</file>
+      <file>eric5.Helpviewer.UserAgent.UserAgentMenu.html</file>
       <file>eric5.IconEditor.IconEditorGrid.html</file>
       <file>eric5.IconEditor.IconEditorPalette.html</file>
       <file>eric5.IconEditor.IconEditorWindow.html</file>
@@ -10341,6 +10360,7 @@
       <file>index-eric5.Helpviewer.OfflineStorage.html</file>
       <file>index-eric5.Helpviewer.OpenSearch.html</file>
       <file>index-eric5.Helpviewer.Passwords.html</file>
+      <file>index-eric5.Helpviewer.UserAgent.html</file>
       <file>index-eric5.Helpviewer.html</file>
       <file>index-eric5.IconEditor.cursors.html</file>
       <file>index-eric5.IconEditor.html</file>
