@@ -812,6 +812,7 @@
     <Source>E5Gui/E5TextSpinBox.py</Source>
     <Source>Helpviewer/UserAgent/__init__.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentMenu.py</Source>
+    <Source>Helpviewer/UserAgent/UserAgentDefaults.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
