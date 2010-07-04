@@ -351,6 +351,9 @@ class HelpBrowser(QWebView):
         """
         resources = []
         
+        baseUrlString = self.page().mainFrame().evaluateJavaScript("document.baseURI")
+        baseUrl = QUrl.fromEncoded(baseUrlString)
+        
         lst = self.page().mainFrame().evaluateJavaScript(fetchLinks_js)
         for m in lst:
             rel = m["rel"]
@@ -366,7 +369,7 @@ class HelpBrowser(QWebView):
             resource = LinkedResource()
             resource.rel = rel
             resource.type_ = type_
-            resource.href = href
+            resource.href = baseUrl.resolved(QUrl.fromEncoded(href))
             resource.title = title
             
             resources.append(resource)
