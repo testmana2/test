@@ -149,7 +149,7 @@ def createPyWrapper(pydir, wfile):
         wrapper = \
 '''#!/bin/sh
 
-exec "%s/bin/pythonw" "%s/%s.py" "$@"
+exec "%s/bin/pythonw3" "%s/%s.py" "$@"
 ''' % (sys.exec_prefix, pydir, wfile)
 
     # *nix systems
