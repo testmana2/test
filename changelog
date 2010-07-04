@@ -1,5 +1,8 @@
 Change Log
 ----------
+Version 5.0.0:
+- first formal release of the Python3 variant of eric
+
 Version 5.0.0-RC1:
 - bug fixes
 
