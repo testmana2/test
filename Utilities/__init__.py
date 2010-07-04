@@ -1134,6 +1134,11 @@ def generateVersionInfo(linesep = '\n'):
         (qVersion(), linesep, PYQT_VERSION_STR, linesep)
     info += "  sip %s%s  QScintilla %s%s" % \
         (sip_version_str, linesep, QSCINTILLA_VERSION_STR, linesep)
+    try:
+        from PyQt4.QtWebKit import qWebKitVersion
+        info += "  WebKit %s%s" % (qWebKitVersion(), linesep)
+    except ImportError:
+        pass
     info += "  %s %s%s" % \
         (Program, Version, linesep * 2)
     info += "Platform: %s%s%s%s" % \

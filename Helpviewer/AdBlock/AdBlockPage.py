@@ -8,6 +8,9 @@ Module implementing a class to apply AdBlock rules to a web page.
 """
 
 from PyQt4.QtCore import *
+from PyQt4 import QtWebKit
+
+import Helpviewer.HelpWindow
 
 class AdBlockPage(QObject):
     """
@@ -21,8 +24,42 @@ class AdBlockPage(QObject):
         @param page reference to the web page (QWebPage)
         @param host host name (string)
         """
-        # This is a noop until Qt 4.6 is supported by PyQt4
-        return
+        if hasattr(QtWebKit, 'QWebElement'):
+            if not rule.isEnabled():
+                return
+            
+            filter = rule.filter()
+            offset = filter.find("##")
+            if offset == -1:
+                return
+            
+            selectorQuery = ""
+            if offset > 0:
+                domainRules = filter[:offset]
+                selectorQuery = filter[offset + 2:]
+                domains = domainRules.split(",")
+                
+                match = False
+                for domain in domains:
+                    reverse = domain[0] == '~'
+                    if reverse:
+                        xdomain = domain[1:]
+                        if host.endswith(xdomain):
+                            return
+                        match = True
+                    if host.endswith(domain):
+                        match = True
+                if not match:
+                    return
+            
+            if offset == 0:
+                selectorQuery = filter[2:]
+            
+            document = page.mainFrame().documentElement()
+            elements = document.findAll(selectorQuery)
+            for element in elements.toList():
+                element.setStyleProperty("visibility", "hidden")
+                element.removeFromDocument()
     
     def applyRulesToPage(self, page):
         """
@@ -30,5 +67,17 @@ class AdBlockPage(QObject):
         
         @param page reference to the web page (QWebPage)
         """
-        # This is a noop until Qt 4.6 is supported by PyQt4
-        return
+        if hasattr(QtWebKit, 'QWebElement'):
+            if page is None or page.mainFrame() is None:
+                return
+            
+            manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
+            if not manager.isEnabled():
+                return
+            
+            host = page.mainFrame().url().host()
+            subscriptions = manager.subscriptions()
+            for subscription in subscriptions:
+                rules = subscription.pageRules()
+                for rule in rules:
+                    self.__checkRule(rule, page, host)

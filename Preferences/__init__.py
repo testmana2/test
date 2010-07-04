@@ -616,6 +616,9 @@ class Prefs(object):
     if hasattr(QWebSettings, "DnsPrefetchEnabled"):
         helpDefaults["DnsPrefetchEnabled"] = \
             websettings.testAttribute(QWebSettings.DnsPrefetchEnabled)
+    if hasattr(QWebSettings, "defaultTextEncoding"):
+        helpDefaults["DefaultTextEncoding"] = \
+            websettings.defaultTextEncoding()
 
     # defaults for system settings
     sysDefaults = {

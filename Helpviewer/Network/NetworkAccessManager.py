@@ -18,7 +18,8 @@ try:
 except ImportError:
     SSL_AVAILABLE = False
 
-from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, proxyAuthenticationRequired
+from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
+    proxyAuthenticationRequired
 
 from UI.AuthenticationDialog import AuthenticationDialog
 
@@ -127,11 +128,11 @@ class NetworkAccessManager(QNetworkAccessManager):
         if reply is not None:
             return reply
         
+        req = QNetworkRequest(request)
+        if hasattr(QNetworkRequest, 'HttpPipeliningAllowedAttribute'):
+            req.setAttribute(QNetworkRequest.HttpPipeliningAllowedAttribute, True);
         if not self.__acceptLanguage.isEmpty():
-            req = QNetworkRequest(request)
             req.setRawHeader("Accept-Language", self.__acceptLanguage)
-        else:
-            req = request
         
         # AdBlock code
         if op == QNetworkAccessManager.GetOperation:

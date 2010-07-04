@@ -73,6 +73,9 @@ QMainWindow
 <td><a href="#HelpWindow.__aboutQt">__aboutQt</a></td>
 <td>Private slot to show info about Qt.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__aboutToShowTextEncodingMenu">__aboutToShowTextEncodingMenu</a></td>
+<td>Private slot to populate the text encoding menu.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__activateCurrentBrowser">__activateCurrentBrowser</a></td>
 <td>Private slot to activate the current browser.</td>
 </tr><tr>
@@ -261,6 +264,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__setPathComboBackground">__setPathComboBackground</a></td>
 <td>Private slot to change the path combo background to indicate save URLs.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__setTextEncoding">__setTextEncoding</a></td>
+<td>Private slot to set the selected text encoding as the default for this session.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__setupFilterCombo">__setupFilterCombo</a></td>
 <td>Private slot to setup the filter combo box.</td>
@@ -497,6 +503,11 @@ word to search for (string)
 <b>__aboutQt</b>(<i></i>)
 <p>
         Private slot to show info about Qt.
+</p><a NAME="HelpWindow.__aboutToShowTextEncodingMenu" ID="HelpWindow.__aboutToShowTextEncodingMenu"></a>
+<h4>HelpWindow.__aboutToShowTextEncodingMenu</h4>
+<b>__aboutToShowTextEncodingMenu</b>(<i></i>)
+<p>
+        Private slot to populate the text encoding menu.
 </p><a NAME="HelpWindow.__activateCurrentBrowser" ID="HelpWindow.__activateCurrentBrowser"></a>
 <h4>HelpWindow.__activateCurrentBrowser</h4>
 <b>__activateCurrentBrowser</b>(<i></i>)
@@ -979,7 +990,18 @@ flag indicating the loading state to consider (boolean)
 <b>__setPathComboBackground</b>(<i></i>)
 <p>
         Private slot to change the path combo background to indicate save URLs.
-</p><a NAME="HelpWindow.__setupFilterCombo" ID="HelpWindow.__setupFilterCombo"></a>
+</p><a NAME="HelpWindow.__setTextEncoding" ID="HelpWindow.__setTextEncoding"></a>
+<h4>HelpWindow.__setTextEncoding</h4>
+<b>__setTextEncoding</b>(<i>act</i>)
+<p>
+        Private slot to set the selected text encoding as the default for
+        this session.
+</p><dl>
+<dt><i>act</i></dt>
+<dd>
+reference to the selected action (QAction)
+</dd>
+</dl><a NAME="HelpWindow.__setupFilterCombo" ID="HelpWindow.__setupFilterCombo"></a>
 <h4>HelpWindow.__setupFilterCombo</h4>
 <b>__setupFilterCombo</b>(<i></i>)
 <p>

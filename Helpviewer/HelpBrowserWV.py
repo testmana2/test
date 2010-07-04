@@ -10,7 +10,12 @@ Module implementing the helpbrowser using QWebView.
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from PyQt4 import QtWebKit
 from PyQt4.QtWebKit import QWebView, QWebPage, QWebSettings
+try:
+    from PyQt4.QtWebKit import QWebElement
+except ImportError:
+    pass
 from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
 import sip
 
@@ -25,6 +30,7 @@ import Helpviewer.HelpWindow
 from .Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
 
 from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
+from .OpenSearch.OpenSearchEngine import OpenSearchEngine
 
 ##########################################################################################
 
@@ -328,6 +334,12 @@ class HelpBrowser(QWebView):
         
         @param frame reference to the web frame (QWebFrame)
         """
+        if not hasattr(QtWebKit, 'QWebElement'):
+            # test this only for Qt < 4.6.0
+            if not QWebSettings.globalSettings()\
+                        .testAttribute(QWebSettings.JavascriptEnabled):
+                return
+        
         self.page().settings().setAttribute(QWebSettings.JavascriptEnabled, True)
         if self.__javaScriptBinding is None:
             self.__javaScriptBinding = JavaScriptExternalObject(self.mw, self)
@@ -354,25 +366,52 @@ class HelpBrowser(QWebView):
         """
         resources = []
         
-        lst = self.page().mainFrame().evaluateJavaScript(fetchLinks_js)
-        for m in lst:
-            rel = m["rel"]
-            type_ = m["type"]
-            href = m["href"]
-            title =  m["title"]
+        if hasattr(QtWebKit, 'QWebElement'):
+            baseUrl = self.page().mainFrame().baseUrl()
             
-            if href == "" or type_ == "":
-                continue
-            if relation and rel != relation:
-                continue
+            linkElements = self.page().mainFrame().findAllElements("html > head > link")
             
-            resource = LinkedResource()
-            resource.rel = rel
-            resource.type_ = type_
-            resource.href = href
-            resource.title = title
+            for linkElement in linkElements.toList():
+                rel = linkElement.attribute("rel")
+                href = linkElement.attribute("href")
+                type_ = linkElement.attribute("type")
+                title = linkElement.attribute("title")
+                
+                if href == "" or type_ == "":
+                    continue
+                if relation and rel != relation:
+                    continue
+                
+                resource = LinkedResource()
+                resource.rel = rel
+                resource.type_ = type_
+                resource.href = baseUrl.resolved(QUrl.fromEncoded(href))
+                resource.title = title
+                
+                resources.append(resource)
+        else:
+            baseUrlString = self.page().mainFrame().evaluateJavaScript("document.baseURI")
+            baseUrl = QUrl.fromEncoded(baseUrlString)
             
-            resources.append(resource)
+            lst = self.page().mainFrame().evaluateJavaScript(fetchLinks_js)
+            for m in lst:
+                rel = m["rel"]
+                type_ = m["type"]
+                href = m["href"]
+                title =  m["title"]
+                
+                if href == "" or type_ == "":
+                    continue
+                if relation and rel != relation:
+                    continue
+                
+                resource = LinkedResource()
+                resource.rel = rel
+                resource.type_ = type_
+                resource.href = baseUrl.resolved(QUrl.fromEncoded(href))
+                resource.title = title
+                
+                resources.append(resource)
         
         return resources
     
@@ -692,6 +731,17 @@ class HelpBrowser(QWebView):
                          self.__searchRequested)
             
             menu.addSeparator()
+        
+        if hasattr(QtWebKit, 'QWebElement'):
+            element = hit.element()
+            if not element.isNull() and \
+               element.tagName().lower() == "input" and \
+               element.attribute("type", "text") == "text":
+                act = menu.addAction(self.trUtf8("Add to web search toolbar"), 
+                                     self.__addSearchEngine)
+                act.setData(element)
+                menu.addSeparator()
+        
         menu.addAction(self.trUtf8("Web Inspector..."), self.__webInspector)
         
         menu.exec_(evt.globalPos())
@@ -779,6 +829,102 @@ class HelpBrowser(QWebView):
         if engineName:
             engine = self.mw.openSearchManager().engine(engineName)
             self.emit(SIGNAL("search(const QUrl &)"), engine.searchUrl(searchText))
+    
+    def __addSearchEngine(self):
+        """
+        Private slot to add a new search engine.
+        """
+        act = self.sender()
+        if act is None:
+            return
+        
+        element = act.data()
+        elementName = element.attribute("name")
+        formElement = QWebElement(element)
+        while formElement.tagName().lower() != "form":
+            formElement = formElement.parent()
+        
+        if formElement.isNull() or \
+           formElement.attribute("action") == "":
+            return
+        
+        method = formElement.attribute("method", "get").lower()
+        if method != "get":
+            QMessageBox.warning(self,
+                self.trUtf8("Method not supported"),
+                self.trUtf8("""{0} method is not supported.""").format(method.upper()))
+            return
+        
+        searchUrl = QUrl(self.page().mainFrame().baseUrl().resolved(
+            QUrl(formElement.attribute("action"))))
+        if searchUrl.scheme() != "http":
+            return
+        
+        searchEngines = {}
+        inputFields = formElement.findAll("input")
+        for inputField in inputFields.toList():
+            type_ = inputField.attribute("type", "text")
+            name = inputField.attribute("name")
+            value = inputField.evaluateJavaScript("this.value")
+            
+            if type_ == "submit":
+                searchEngines[value] = name
+            elif type_ == "text":
+                if inputField == element:
+                    value = "{searchTerms}"
+                searchUrl.addQueryItem(name, value)
+            elif type_ == "checkbox" or type_ == "radio":
+                if inputField.evaluateJavaScript("this.checked"):
+                    searchUrl.addQueryItem(name, value)
+            elif type_ == "hidden":
+                searchUrl.addQueryItem(name, value)
+        
+        selectFields = formElement.findAll("select")
+        for selectField in selectFields.toList():
+            name = selectField.attribute("name")
+            selectedIndex = selectField.evaluateJavaScript("this.selectedIndex")
+            if selectedIndex == -1:
+                continue
+            
+            options = selectField.findAll("option")
+            value = options.at(selectedIndex).toPlainText()
+            searchUrl.addQueryItem(name, value)
+        
+        ok = True
+        if len(searchEngines) > 1:
+            searchEngine, ok = QInputDialog.getItem(
+                self, 
+                self.trUtf8("Search engine"), 
+                self.trUtf8("Choose the desired search engine"), 
+                sorted(searchEngines.keys()), 0, False)
+            
+            if not ok:
+                return
+            
+            if searchEngines[searchEngine] != "":
+                searchUrl.addQueryItem(searchEngines[searchEngine], searchEngine)
+        
+        engineName = ""
+        labels = formElement.findAll('label[for="{0}"]'.format(elementName))
+        if labels.count() > 0:
+            engineName = labels.at(0).toPlainText()
+        
+        engineName, ok = QInputDialog.getText(
+            self,
+            self.trUtf8("Engine name"),
+            self.trUtf8("Enter a name for the engine"),
+            QLineEdit.Normal,
+            engineName)
+        if not ok:
+            return
+        
+        engine = OpenSearchEngine()
+        engine.setName(engineName)
+        engine.setDescription(engineName)
+        engine.setSearchUrlTemplate(searchUrl.toString())
+        engine.setImage(self.icon().pixmap(16, 16).toImage())
+        
+        self.mw.openSearchManager().addEngine(engine)
     
     def __webInspector(self):
         """
@@ -890,6 +1036,7 @@ class HelpBrowser(QWebView):
         self.__iconChanged()
         
         if ok:
+            self.mw.adblockManager().page().applyRulesToPage(self.page())
             self.mw.passwordManager().fill(self.page())
     
     def isLoading(self):

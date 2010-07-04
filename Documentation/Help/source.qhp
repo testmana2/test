@@ -2674,6 +2674,7 @@
       <keyword name="SearchWidget (Constructor)" id="SearchWidget (Constructor)" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__init__" />
       <keyword name="SearchWidget.__findByReturnPressed" id="SearchWidget.__findByReturnPressed" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__findByReturnPressed" />
       <keyword name="SearchWidget.__findNextPrev" id="SearchWidget.__findNextPrev" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__findNextPrev" />
+      <keyword name="SearchWidget.__searchTextEdited" id="SearchWidget.__searchTextEdited" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__searchTextEdited" />
       <keyword name="SearchWidget.__setFindtextComboBackground" id="SearchWidget.__setFindtextComboBackground" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__setFindtextComboBackground" />
       <keyword name="SearchWidget.findNext" id="SearchWidget.findNext" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.findNext" />
       <keyword name="SearchWidget.findPrevious" id="SearchWidget.findPrevious" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.findPrevious" />
@@ -2697,6 +2698,7 @@
       <keyword name="HelpBrowser (Constructor)" id="HelpBrowser (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__init__" />
       <keyword name="HelpBrowser.__addBookmark" id="HelpBrowser.__addBookmark" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__addBookmark" />
       <keyword name="HelpBrowser.__addExternalBinding" id="HelpBrowser.__addExternalBinding" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__addExternalBinding" />
+      <keyword name="HelpBrowser.__addSearchEngine" id="HelpBrowser.__addSearchEngine" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__addSearchEngine" />
       <keyword name="HelpBrowser.__applyZoom" id="HelpBrowser.__applyZoom" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__applyZoom" />
       <keyword name="HelpBrowser.__blockImage" id="HelpBrowser.__blockImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__blockImage" />
       <keyword name="HelpBrowser.__bookmarkLink" id="HelpBrowser.__bookmarkLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__bookmarkLink" />
@@ -2794,6 +2796,7 @@
       <keyword name="HelpWindow (Constructor)" id="HelpWindow (Constructor)" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__init__" />
       <keyword name="HelpWindow.__about" id="HelpWindow.__about" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__about" />
       <keyword name="HelpWindow.__aboutQt" id="HelpWindow.__aboutQt" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__aboutQt" />
+      <keyword name="HelpWindow.__aboutToShowTextEncodingMenu" id="HelpWindow.__aboutToShowTextEncodingMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__aboutToShowTextEncodingMenu" />
       <keyword name="HelpWindow.__activateCurrentBrowser" id="HelpWindow.__activateCurrentBrowser" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__activateCurrentBrowser" />
       <keyword name="HelpWindow.__activateDock" id="HelpWindow.__activateDock" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__activateDock" />
       <keyword name="HelpWindow.__addBookmark" id="HelpWindow.__addBookmark" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__addBookmark" />
@@ -2857,6 +2860,7 @@
       <keyword name="HelpWindow.__setIconDatabasePath" id="HelpWindow.__setIconDatabasePath" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setIconDatabasePath" />
       <keyword name="HelpWindow.__setLoadingActions" id="HelpWindow.__setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setLoadingActions" />
       <keyword name="HelpWindow.__setPathComboBackground" id="HelpWindow.__setPathComboBackground" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setPathComboBackground" />
+      <keyword name="HelpWindow.__setTextEncoding" id="HelpWindow.__setTextEncoding" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setTextEncoding" />
       <keyword name="HelpWindow.__setupFilterCombo" id="HelpWindow.__setupFilterCombo" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setupFilterCombo" />
       <keyword name="HelpWindow.__showAcceptedLanguages" id="HelpWindow.__showAcceptedLanguages" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showAcceptedLanguages" />
       <keyword name="HelpWindow.__showAdBlockDialog" id="HelpWindow.__showAdBlockDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showAdBlockDialog" />

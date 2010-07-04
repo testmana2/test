@@ -16,6 +16,9 @@ Version 5.1-snapshot-2010mmdd:
 - added a symbols viewer with capability to insert the selected symbol
   by double-clicking it
 - added a numbers viewer to convert numbers into various formats
+- extended the Ad-Blocker of the web browser (needs Qt >= 4.6)
+- added capability to configure the text encoding of the web browser 
+  (needs Qt >= 4.6)
 
 Version 5.0-snapshot-20100523:
 - bug fixes

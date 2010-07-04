@@ -2795,6 +2795,12 @@ class UserInterface(QMainWindow):
             .format(sip_version_str)
         versionText += """<tr><td><b>QScintilla</b></td><td>{0}</td></tr>"""\
             .format(QSCINTILLA_VERSION_STR)
+        try:
+            from PyQt4.QtWebKit import qWebKitVersion
+            versionText += """<tr><td><b>WebKit</b></td><td>{0}</td></tr>"""\
+            .format(qWebKitVersion())
+        except ImportError:
+            pass
         versionText += """<tr><td><b>{0}</b></td><td>{1}</td></tr>"""\
             .format(Program, Version)
         versionText += self.trUtf8("""</table>""")

@@ -63,6 +63,9 @@ QWidget, Ui_SearchWidget
 <td><a href="#SearchWidget.__findNextPrev">__findNextPrev</a></td>
 <td>Private slot to find the next occurrence of text.</td>
 </tr><tr>
+<td><a href="#SearchWidget.__searchTextEdited">__searchTextEdited</a></td>
+<td>Private slot to perform an incremental search.</td>
+</tr><tr>
 <td><a href="#SearchWidget.__setFindtextComboBackground">__setFindtextComboBackground</a></td>
 <td>Private slot to change the findtext combo background to indicate errors.</td>
 </tr><tr>
@@ -117,7 +120,17 @@ parent widget of this dialog (QWidget)
 <b>__findNextPrev</b>(<i></i>)
 <p>
         Private slot to find the next occurrence of text.
-</p><a NAME="SearchWidget.__setFindtextComboBackground" ID="SearchWidget.__setFindtextComboBackground"></a>
+</p><a NAME="SearchWidget.__searchTextEdited" ID="SearchWidget.__searchTextEdited"></a>
+<h4>SearchWidget.__searchTextEdited</h4>
+<b>__searchTextEdited</b>(<i>txt</i>)
+<p>
+        Private slot to perform an incremental search.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+current text of the search combos line edit (string) (unused)
+</dd>
+</dl><a NAME="SearchWidget.__setFindtextComboBackground" ID="SearchWidget.__setFindtextComboBackground"></a>
 <h4>SearchWidget.__setFindtextComboBackground</h4>
 <b>__setFindtextComboBackground</b>(<i>error</i>)
 <p>

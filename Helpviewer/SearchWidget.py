@@ -47,6 +47,8 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         
         self.connect(self.findtextCombo.lineEdit(), SIGNAL("returnPressed()"), 
                      self.__findByReturnPressed)
+        self.connect(self.findtextCombo.lineEdit(), SIGNAL("textEdited(const QString&)"),
+                     self.__searchTextEdited)
         
         if hasattr(QWebPage, "HighlightAllOccurrences"):
             self.highlightAllCheckBox.setChecked(True)
@@ -61,9 +63,16 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         """
         self.findPrevButton.setEnabled(txt != "")
         self.findNextButton.setEnabled(txt != "")
+    
+    def __searchTextEdited(self, txt):
+        """
+        Private slot to perform an incremental search.
+        
+        @param txt current text of the search combos line edit (string) (unused)
+        """
         self.on_highlightAllCheckBox_toggled(True)
         self.__findNextPrev()
-
+    
     def __findNextPrev(self):
         """
         Private slot to find the next occurrence of text.

@@ -351,6 +351,10 @@ class HelpWindow(QMainWindow):
             settings.setAttribute(QWebSettings.DnsPrefetchEnabled, 
                 Preferences.getHelp("DnsPrefetchEnabled"))
         
+        if hasattr(QWebSettings, "defaultTextEncoding"):
+            settings.setDefaultTextEncoding(
+                Preferences.getHelp("DefaultTextEncoding"))
+        
     def __initActions(self):
         """
         Private method to define the user interface actions.
@@ -1156,6 +1160,12 @@ class HelpWindow(QMainWindow):
         menu.addSeparator()
         menu.addAction(self.pageSourceAct)
         menu.addAction(self.fullScreenAct)
+        if hasattr(QWebSettings, 'defaultTextEncoding'):
+            self.__textEncodingMenu = menu.addMenu(self.trUtf8("Text Encoding"))
+            self.connect(self.__textEncodingMenu, SIGNAL("aboutToShow()"), 
+                         self.__aboutToShowTextEncodingMenu)
+            self.connect(self.__textEncodingMenu, SIGNAL("triggered(QAction*)"), 
+                         self.__setTextEncoding)
         
         menu = mb.addMenu(self.trUtf8('&Go'))
         menu.setTearOffEnabled(True)
@@ -2968,3 +2978,58 @@ class HelpWindow(QMainWindow):
         @return reference to the opensearch manager object (OpenSearchManager)
         """
         return self.searchEdit.openSearchManager()
+    
+    def __aboutToShowTextEncodingMenu(self):
+        """
+        Private slot to populate the text encoding menu.
+        """
+        self.__textEncodingMenu.clear()
+        
+        codecs = []
+        for codec in QTextCodec.availableCodecs():
+            codecs.append(str(codec, encoding = "utf-8").lower())
+        codecs.sort()
+        
+        defaultTextEncoding = QWebSettings.globalSettings().defaultTextEncoding().lower()
+        print(defaultTextEncoding)
+        try:
+            currentCodec = codecs.index(defaultTextEncoding)
+        except ValueError:
+            currentCodec = -1
+        
+        defaultEncodingAct = self.__textEncodingMenu.addAction(self.trUtf8("Default"))
+        defaultEncodingAct.setData(-1)
+        defaultEncodingAct.setCheckable(True)
+        if currentCodec == -1:
+            defaultEncodingAct.setChecked(True)
+        self.__textEncodingMenu.addSeparator()
+        
+        for i in range(len(codecs)):
+            codec = codecs[i]
+            act = self.__textEncodingMenu.addAction(codec)
+            act.setData(i)
+            act.setCheckable(True)
+            if currentCodec == i:
+                act.setChecked(True)
+    
+    def __setTextEncoding(self, act):
+        """
+        Private slot to set the selected text encoding as the default for
+        this session.
+        
+        @param act reference to the selected action (QAction)
+        """
+        codecs = []
+        for codec in QTextCodec.availableCodecs():
+            codecs.append(str(codec, encoding = "utf-8").lower())
+        codecs.sort()
+        
+        offset = act.data()
+        print(offset, len(codecs))
+        if offset < 0 or offset >= len(codecs):
+            QWebSettings.globalSettings().setDefaultTextEncoding("")
+            Preferences.setHelp("DefaultTextEncoding", "")
+        else:
+            print(codecs[offset])
+            QWebSettings.globalSettings().setDefaultTextEncoding(codecs[offset])
+            Preferences.setHelp("DefaultTextEncoding", codecs[offset])
