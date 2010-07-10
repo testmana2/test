@@ -411,8 +411,16 @@ def installEric():
     
     # create menu entry for Linux systems
     if sys.platform.startswith("linux"):
-        shutil.copy(os.path.join("eric", "icons", "default", "eric.png"), "/usr/share/pixmaps")
-        shutil.copy(os.path.join("eric", "eric5.desktop"), "/usr/share/applications")
+        if distDir:
+            shutil.copy(os.path.join("eric", "icons", "default", "eric.png"), 
+                os.path.normpath(os.path.join(distDir, "/usr/share/pixmaps")))
+            shutil.copy(os.path.join("eric", "eric5.desktop"), 
+                os.path.normpath(os.path.join(distDir, "/usr/share/applications")))
+        else:
+            shutil.copy(os.path.join("eric", "icons", "default", "eric.png"), 
+                "/usr/share/pixmaps")
+            shutil.copy(os.path.join("eric", "eric5.desktop"), 
+                "/usr/share/applications")
 
 
 def createInstallConfig():
