@@ -7,8 +7,6 @@
 Module implementing the Email configuration page.
 """
 
-from PyQt4.QtGui import QIntValidator
-
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EmailPage import Ui_EmailPage
 
@@ -26,12 +24,9 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         self.setupUi(self)
         self.setObjectName("EmailPage")
         
-        self.portValidator = QIntValidator(1, 65535, self.portEdit)
-        self.portEdit.setValidator(self.portValidator)
-        
         # set initial values
         self.mailServerEdit.setText(Preferences.getUser("MailServer"))
-        self.portEdit.setText("%d" % Preferences.getUser("MailServerPort"))
+        self.portSpin.setValue(Preferences.getUser("MailServerPort"))
         self.emailEdit.setText(Preferences.getUser("Email"))
         self.signatureEdit.setPlainText(Preferences.getUser("Signature"))
         self.mailAuthenticationCheckBox.setChecked(\
@@ -49,7 +44,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         Preferences.setUser("MailServer",
             self.mailServerEdit.text())
         Preferences.setUser("MailServerPort", 
-            int(self.portEdit.text()))
+            self.portSpin.value())
         Preferences.setUser("Email",
             self.emailEdit.text())
         Preferences.setUser("Signature",
