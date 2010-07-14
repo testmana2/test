@@ -31,6 +31,15 @@ doCompile = True
 cfg = {}
 progLanguages = ["Python", "Ruby"]
 
+def exit(rcode = 0):
+    """
+    Exit the install script.
+    """
+    if sys.platform.startswith("win"):
+        input("Press enter to continue...")
+    
+    sys.exit(rcode)
+
 def usage(rcode = 2):
     """
     Display a usage message and exit.
@@ -69,7 +78,7 @@ def usage(rcode = 2):
     print("These define the directories for the installation of the various parts of"\
           " eric5.")
 
-    sys.exit(rcode)
+    exit(rcode)
 
 
 def initGlobals():
@@ -366,11 +375,11 @@ def installEric():
         
     except IOError as msg:
         sys.stderr.write('IOError: %s\nTry install as root.\n' % msg)
-        sys.exit(7)
+        exit(7)
         
     except OSError as msg:
         sys.stderr.write('OSError: %s\nTry install with admin rights.\n' % msg)
-        sys.exit(7)
+        exit(7)
     
     # copy some text files to the doc area
     for name in ["LICENSE.GPL3", "THANKS", "changelog"]:
@@ -524,10 +533,10 @@ def doDependancyChecks():
     # perform dependency checks
     if sys.version_info < (3, 1, 0):
         print('Sorry, you must have Python 3.1.0 or higher.')
-        sys.exit(5)
+        exit(5)
     if sys.version_info > (3, 9, 9):
         print('Sorry, eric5 requires Python 3 for running.')
-        sys.exit(5)
+        exit(5)
     print("Python Version: %d.%d.%d" % sys.version_info[:3])
     
     try:
@@ -535,7 +544,7 @@ def doDependancyChecks():
     except ImportError as msg:
         print('Sorry, please install PyQt4.')
         print('Error: %s' % msg)
-        sys.exit(1)
+        exit(1)
     print("Found PyQt")
     
     try:
@@ -544,7 +553,7 @@ def doDependancyChecks():
         print("Sorry, please install QScintilla2 and")
         print("it's PyQt4 wrapper.")
         print('Error: %s' % msg)
-        sys.exit(1)
+        exit(1)
     print("Found QScintilla2")
     
     # check version of Qt
@@ -552,7 +561,7 @@ def doDependancyChecks():
     qtMinor = int(qVersion().split('.')[1])
     if qtMajor < 4 or (qtMajor == 4 and qtMinor < 5):
         print('Sorry, you must have Qt version 4.5.0 or higher.')
-        sys.exit(2)
+        exit(2)
     print("Qt Version: %s" % qVersion())
     
     #check version of PyQt
@@ -569,7 +578,7 @@ def doDependancyChecks():
         if maj < 4 or (maj == 4 and min < 7):
             print('Sorry, you must have PyQt 4.7.0 or higher or' \
                   ' a recent snapshot release.')
-            sys.exit(3)
+            exit(3)
     print("PyQt Version: ", pyqtVersion)
     
     #check version of QScintilla
@@ -586,7 +595,7 @@ def doDependancyChecks():
         if maj < 2 or (maj == 2 and min < 4):
             print('Sorry, you must have QScintilla 2.4.0 or higher or' \
                   ' a recent snapshot release.')
-            sys.exit(4)
+            exit(4)
     print("QScintilla Version: ", QSCINTILLA_VERSION_STR)
     print("All dependencies ok.")
     print()
@@ -724,7 +733,7 @@ def main(argv):
                 if len(cfg) != configLength:
                     print("The configuration dictionary in '%s' is incorrect. Aborting"\
                         % arg)
-                    sys.exit(6)
+                    exit(6)
             except:
                 cfg = {}
     
@@ -813,8 +822,7 @@ def main(argv):
             print("See the patches directory for details.")
     
     print()
-    if sys.platform.startswith("win"):
-        input("Press enter to continue...")
+    exit()
     
     
 if __name__ == "__main__":
