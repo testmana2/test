@@ -7,6 +7,8 @@
 Module implementing the Ericdoc plugin.
 """
 
+import os
+
 from PyQt4.QtCore import QObject, SIGNAL
 from PyQt4.QtGui import QDialog, QApplication
 
@@ -18,6 +20,8 @@ from DocumentationPlugins.Ericdoc.EricdocConfigDialog import EricdocConfigDialog
 from DocumentationPlugins.Ericdoc.EricdocExecDialog import EricdocExecDialog
 
 import Utilities
+
+from eric5config import getConfig
 
 # Start-Of-Header
 name = "Ericdoc Plugin"
@@ -45,7 +49,7 @@ def exeDisplayData():
     """
     exe = 'eric5-doc'
     if Utilities.isWindowsPlatform():
-        exe += '.bat'
+        exe = os.path.join(getConfig("bindir"), exe +'.bat')
     
     data = {
         "programEntry"      : True, 

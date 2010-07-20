@@ -21,6 +21,8 @@ from DocumentationPlugins.Ericapi.EricapiExecDialog import EricapiExecDialog
 
 import Utilities
 
+from eric5config import getConfig
+
 # Start-Of-Header
 name = "Ericapi Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
@@ -46,7 +48,7 @@ def exeDisplayData():
     """
     exe = 'eric5-api'
     if Utilities.isWindowsPlatform():
-        exe += '.bat'
+        exe = os.path.join(getConfig("bindir"), exe +'.bat')
     
     data = {
         "programEntry"      : True, 

@@ -21,6 +21,8 @@ from .Ui_ProgramsDialog import Ui_ProgramsDialog
 import Preferences
 import Utilities
 
+from eric5config import getConfig
+
 class ProgramsDialog(QDialog, Ui_ProgramsDialog):
     """
     Class implementing the Programs page.
@@ -137,11 +139,15 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         # 5. do the Eric5 programs
         # 5a. Translation Previewer
         self.__createProgramEntry(self.trUtf8("Eric5 Translation Previewer"), 
-            Utilities.isWindowsPlatform() and "eric5-trpreviewer.bat" or "eric5-trpreviewer", 
+            Utilities.isWindowsPlatform() and \
+                os.path.join(getConfig("bindir"), "eric5-trpreviewer.bat") or \
+                "eric5-trpreviewer", 
             '--version', 'Eric5', -3)
         # 5b. Forms Previewer
         self.__createProgramEntry(self.trUtf8("Eric5 Forms Previewer"), 
-            Utilities.isWindowsPlatform() and "eric5-uipreviewer.bat" or "eric5-uipreviewer", 
+            Utilities.isWindowsPlatform() and \
+                os.path.join(getConfig("bindir"), "eric5-uipreviewer.bat") or \
+                "eric5-uipreviewer", 
             '--version', 'Eric5', -3)
         
         # 6. do the CORBA programs
