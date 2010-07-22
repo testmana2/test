@@ -251,6 +251,9 @@ class TabWidget(E5TabWidget):
         self.__menu.addSeparator()
         self.__menu.addAction(UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__contextMenuPrintFile)
+        self.__menu.addSeparator()
+        self.copyPathAct = self.__menu.addAction(self.trUtf8("Copy Path to Clipboard"), 
+            self.__contextMenuCopyPathToClipboard)
         
     def __showContextMenu(self, coord, index):
         """
@@ -263,6 +266,7 @@ class TabWidget(E5TabWidget):
             self.contextMenuEditor = self.widget(index)
             if self.contextMenuEditor:
                 self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
+                self.copyPathAct.setEnabled(bool(self.contextMenuEditor.getFileName()))
             self.projectMenuAct.setEnabled(e5App().getObject("Project").isOpen())
             
             self.contextMenuIndex = index
@@ -555,6 +559,16 @@ class TabWidget(E5TabWidget):
         """
         if self.contextMenuEditor:
             self.vm.printEditor(self.contextMenuEditor)
+    
+    def __contextMenuCopyPathToClipboard(self):
+        """
+        Private method to copy the file name of the editor to the clipboard.
+        """
+        if self.contextMenuEditor:
+            fn = self.contextMenuEditor.getFileName()
+            if fn:
+                cb = QApplication.clipboard()
+                cb.setText(fn)
         
     def __contextMenuMoveLeft(self):
         """

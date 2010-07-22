@@ -6173,6 +6173,7 @@ eric5.install.distDir?7
 eric5.install.doCleanup?7
 eric5.install.doCompile?7
 eric5.install.doDependancyChecks?4()
+eric5.install.exit?4(rcode = 0)
 eric5.install.initGlobals?4()
 eric5.install.installEric?4()
 eric5.install.main?4(argv)
