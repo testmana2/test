@@ -9283,17 +9283,17 @@ gli elementi visualizzati.&lt;/p&gt;
 <context>
     <name>EmailPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="161"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="183"/>
         <source>Enter your password for accessing the mail server</source>
         <translation>Inserisci la tua password per accedere al server di posta</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="141"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="163"/>
         <source>Enter your mail server username</source>
         <translation>Inserisci il tuo utente sul mail server</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="84"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="106"/>
         <source>Signature:</source>
         <translation>Firma:</translation>
     </message>
@@ -9303,37 +9303,37 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Inserisci l&apos;indirizzo del tuo mail server</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="70"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="92"/>
         <source>Email address:</source>
         <translation>Indirizzo Email:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="94"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="116"/>
         <source>Enter your email signature</source>
         <translation>Inserisci la tua firma per le mail</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="77"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="99"/>
         <source>Enter your email address</source>
         <translation>Inserisci il tuo indirizzo di posta</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="116"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="138"/>
         <source>Select to authenticatate against the mail server</source>
         <translation>Seleziona per autenticarti sul mail server</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="119"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="141"/>
         <source>Mail server needs authentication</source>
         <translation>Il mail server richiede l&apos;autenticazione</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="131"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="153"/>
         <source>Username:</source>
         <translation>Nome Utente:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="151"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="173"/>
         <source>Password:</source>
         <translation>Passoword:</translation>
     </message>
@@ -9343,12 +9343,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>&lt;b&gt;Configura Email&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="106"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="128"/>
         <source>Select to use TLS</source>
         <translation>Seleziona per usare TLS</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="109"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="131"/>
         <source>Use TLS</source>
         <translation>Usa TLS</translation>
     </message>
@@ -34265,9 +34265,14 @@ relativa riga.&lt;/p&gt;</translation>
         <translation>Chiudi altri</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="382"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="386"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="255"/>
+        <source>Copy Path to Clipboard</source>
+        <translation type="unfinished">Copia il path nella Clipboard</translation>
     </message>
 </context>
 <context>
@@ -34348,12 +34353,12 @@ un elemento apre una finestra di edit e posiziona il cursore alla linea corretta
 <context>
     <name>Tabview</name>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="764"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="778"/>
         <source>Untitled {0}</source>
         <translation>Senza titolo {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1074"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1088"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>

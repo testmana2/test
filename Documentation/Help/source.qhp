@@ -850,6 +850,7 @@
       <keyword name="createInstallConfig" id="createInstallConfig" ref="eric5.install.html#createInstallConfig" />
       <keyword name="createPyWrapper" id="createPyWrapper" ref="eric5.install.html#createPyWrapper" />
       <keyword name="doDependancyChecks" id="doDependancyChecks" ref="eric5.install.html#doDependancyChecks" />
+      <keyword name="exit" id="exit" ref="eric5.install.html#exit" />
       <keyword name="initGlobals" id="initGlobals" ref="eric5.install.html#initGlobals" />
       <keyword name="installEric" id="installEric" ref="eric5.install.html#installEric" />
       <keyword name="main" id="main" ref="eric5.install.html#main" />
@@ -9121,6 +9122,7 @@
       <keyword name="TabWidget.__contextMenuClose" id="TabWidget.__contextMenuClose" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuClose" />
       <keyword name="TabWidget.__contextMenuCloseAll" id="TabWidget.__contextMenuCloseAll" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuCloseAll" />
       <keyword name="TabWidget.__contextMenuCloseOthers" id="TabWidget.__contextMenuCloseOthers" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuCloseOthers" />
+      <keyword name="TabWidget.__contextMenuCopyPathToClipboard" id="TabWidget.__contextMenuCopyPathToClipboard" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuCopyPathToClipboard" />
       <keyword name="TabWidget.__contextMenuMoveFirst" id="TabWidget.__contextMenuMoveFirst" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuMoveFirst" />
       <keyword name="TabWidget.__contextMenuMoveLast" id="TabWidget.__contextMenuMoveLast" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuMoveLast" />
       <keyword name="TabWidget.__contextMenuMoveLeft" id="TabWidget.__contextMenuMoveLeft" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuMoveLeft" />

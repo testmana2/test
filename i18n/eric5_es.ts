@@ -9290,17 +9290,17 @@ selección completa.&lt;/li&gt;
         <translation>&lt;b&gt;Configurar Correo electrónico&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="161"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="183"/>
         <source>Enter your password for accessing the mail server</source>
         <translation>Introduzca su contraseña para acceder al servidor de correo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="141"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="163"/>
         <source>Enter your mail server username</source>
         <translation>Introduzca su nombre de usuario en el servidor de correo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="84"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="106"/>
         <source>Signature:</source>
         <translation>Firma:</translation>
     </message>
@@ -9310,47 +9310,47 @@ selección completa.&lt;/li&gt;
         <translation>Introduzca la dirección de su servidor de correo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="70"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="92"/>
         <source>Email address:</source>
         <translation>Dirección de correo electrónico:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="94"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="116"/>
         <source>Enter your email signature</source>
         <translation>Introduzca su firma para los correos</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="77"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="99"/>
         <source>Enter your email address</source>
         <translation>Introduzca su dirección de correo electrónico</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="116"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="138"/>
         <source>Select to authenticatate against the mail server</source>
         <translation>Seleccionar para autenticación contra el servidor de correo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="119"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="141"/>
         <source>Mail server needs authentication</source>
         <translation>El servidor de correo necesita autenticación</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="131"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="153"/>
         <source>Username:</source>
         <translation>Nombre de Usuario:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="151"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="173"/>
         <source>Password:</source>
         <translation>Contraseña:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="106"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="128"/>
         <source>Select to use TLS</source>
         <translation>Seleccionar para usar TLS</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="109"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="131"/>
         <source>Use TLS</source>
         <translation>Usar TLS</translation>
     </message>
@@ -34254,9 +34254,14 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
         <translation>Cerrar Otras</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="382"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="386"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="255"/>
+        <source>Copy Path to Clipboard</source>
+        <translation type="unfinished">Copiar Ruta al Portapapeles</translation>
     </message>
 </context>
 <context>
@@ -34337,12 +34342,12 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
 <context>
     <name>Tabview</name>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="764"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="778"/>
         <source>Untitled {0}</source>
         <translation>Sin título {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1074"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1088"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>

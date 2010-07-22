@@ -10080,62 +10080,62 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation>Posta Sunucu Bağlantı Noktasını Giriniz</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="70"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="92"/>
         <source>Email address:</source>
         <translation>E-posta adresi:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="77"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="99"/>
         <source>Enter your email address</source>
         <translation>E-posta adresini giriniz</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="84"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="106"/>
         <source>Signature:</source>
         <translation>İmza:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="94"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="116"/>
         <source>Enter your email signature</source>
         <translation>Posta imzanızı giriniz</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="106"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="128"/>
         <source>Select to use TLS</source>
         <translation>TLS kullanmak için seç</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="109"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="131"/>
         <source>Use TLS</source>
         <translation>TLS yi Kullan</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="116"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="138"/>
         <source>Select to authenticatate against the mail server</source>
         <translation>Posta sunucusunda yetki kaydı için siçiniz</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="119"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="141"/>
         <source>Mail server needs authentication</source>
         <translation>Posta sunucusu yetki kaydı istiyor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="131"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="153"/>
         <source>Username:</source>
         <translation>Kullanıcı Adı:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="141"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="163"/>
         <source>Enter your mail server username</source>
         <translation>Posta sunucusu kullanıcı adınızı giriniz</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="151"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="173"/>
         <source>Password:</source>
         <translation>Parola:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="161"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="183"/>
         <source>Enter your password for accessing the mail server</source>
         <translation>Posta sunucusunu açmak için parolanızı giriniz</translation>
     </message>
@@ -36965,8 +36965,13 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="382"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="386"/>
         <source>{0} (ro)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="255"/>
+        <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -37054,12 +37059,12 @@ the respective line.&lt;/p&gt;</source>
         <translation type="obsolete">%1 (ro)</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="764"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="778"/>
         <source>Untitled {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1074"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1088"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
