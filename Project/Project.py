@@ -4700,7 +4700,5 @@ class Project(QObject):
                 version = sourceline.replace("version = ", "").strip()\
                             .replace('"', "").replace("'", "")
                 break
-            
-            lineno += 1
         
         return version
