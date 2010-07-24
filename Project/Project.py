@@ -340,7 +340,7 @@ class Project(QObject):
         @param key key of the data entry to get (string).
         @return a copy of the requested data or None
         """
-        if category in ["PROJECTTYPESPECIFICDATA","CHECKERSPARMS", "PACKAGERSPARMS", 
+        if category in ["PROJECTTYPESPECIFICDATA", "CHECKERSPARMS", "PACKAGERSPARMS", 
                         "DOCUMENTATIONPARMS", "OTHERTOOLSPARMS"] and \
            key in self.pdata[category]:
             return copy.deepcopy(self.pdata[category][key])
