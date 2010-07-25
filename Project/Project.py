@@ -2541,10 +2541,12 @@ class Project(QObject):
                 if fnmatch.fnmatch(ts, pattern):
                     self.pdata["TRANSLATIONS"].append(ts)
                     self.emit(SIGNAL('projectLanguageAdded'), ts)
-            if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
-                self.pdata["MAINSCRIPT"] = ['%s.py' % mainscriptname]
-            elif self.pdata["PROGLANGUAGE"][0] == "Ruby":
-                self.pdata["MAINSCRIPT"] = ['%s.rb' % mainscriptname]
+            if len(self.pdata["MAINSCRIPT"]) == 0 or \
+               len(self.pdata["MAINSCRIPT"][0]) == 0:
+                if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+                    self.pdata["MAINSCRIPT"] = ['%s.py' % mainscriptname]
+                elif self.pdata["PROGLANGUAGE"][0] == "Ruby":
+                    self.pdata["MAINSCRIPT"] = ['%s.rb' % mainscriptname]
             if self.pdata["TRANSLATIONSBINPATH"]:
                 tpd = os.path.join(self.ppath, 
                                    self.pdata["TRANSLATIONSBINPATH"][0])
