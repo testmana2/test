@@ -514,6 +514,30 @@ class QsciScintillaCompat(QsciScintilla):
         else:
             return None
     
+    def getCursorFlashTime(self):
+        """
+        Public method to get the flash (blink) time of the cursor in milliseconds.
+        
+        The flash time is the time required to display, invert and restore the 
+        caret display. Usually the text cursor is displayed for half the cursor 
+        flash time, then hidden for the same amount of time.
+        
+        @return flash time of the cursor in milliseconds (integer)
+        """
+        return 2 * self.SendScintilla(QsciScintilla.SCI_GETCARETPERIOD)
+    
+    def setCursorFlashTime(self, time):
+        """
+        Public method to get the flash (blink) time of the cursor in milliseconds.
+        
+        The flash time is the time required to display, invert and restore the 
+        caret display. Usually the text cursor is displayed for half the cursor 
+        flash time, then hidden for the same amount of time.
+        
+        @param time flash time of the cursor in milliseconds (integer)
+        """
+        self.SendScintilla(QsciScintilla.SCI_SETCARETPERIOD, time // 2)
+    
     #####################################################################################
     # methods to perform searches in target range
     #####################################################################################

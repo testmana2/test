@@ -5470,6 +5470,7 @@
       <keyword name="QsciScintillaCompat.foldFlagsAt" id="QsciScintillaCompat.foldFlagsAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldFlagsAt" />
       <keyword name="QsciScintillaCompat.foldHeaderAt" id="QsciScintillaCompat.foldHeaderAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldHeaderAt" />
       <keyword name="QsciScintillaCompat.foldLevelAt" id="QsciScintillaCompat.foldLevelAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldLevelAt" />
+      <keyword name="QsciScintillaCompat.getCursorFlashTime" id="QsciScintillaCompat.getCursorFlashTime" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getCursorFlashTime" />
       <keyword name="QsciScintillaCompat.getEndStyled" id="QsciScintillaCompat.getEndStyled" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getEndStyled" />
       <keyword name="QsciScintillaCompat.getEolIndicator" id="QsciScintillaCompat.getEolIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getEolIndicator" />
       <keyword name="QsciScintillaCompat.getFileName" id="QsciScintillaCompat.getFileName" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getFileName" />
@@ -5497,6 +5498,7 @@
       <keyword name="QsciScintillaCompat.replaceTarget" id="QsciScintillaCompat.replaceTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.replaceTarget" />
       <keyword name="QsciScintillaCompat.scrollVertical" id="QsciScintillaCompat.scrollVertical" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.scrollVertical" />
       <keyword name="QsciScintillaCompat.setCurrentIndicator" id="QsciScintillaCompat.setCurrentIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCurrentIndicator" />
+      <keyword name="QsciScintillaCompat.setCursorFlashTime" id="QsciScintillaCompat.setCursorFlashTime" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCursorFlashTime" />
       <keyword name="QsciScintillaCompat.setEolModeByEolString" id="QsciScintillaCompat.setEolModeByEolString" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setEolModeByEolString" />
       <keyword name="QsciScintillaCompat.setFoldMarkersColors" id="QsciScintillaCompat.setFoldMarkersColors" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setFoldMarkersColors" />
       <keyword name="QsciScintillaCompat.setFolding" id="QsciScintillaCompat.setFolding" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setFolding" />

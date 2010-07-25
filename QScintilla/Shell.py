@@ -326,6 +326,8 @@ class Shell(QsciScintillaCompat):
         self.useMonospaced = Preferences.getShell("UseMonospacedFont")
         self.__setMonospaced(self.useMonospaced)
         
+        self.setCursorFlashTime(QApplication.cursorFlashTime())
+        
     def __setMonospaced(self, on):
         """
         Private method to set/reset a monospaced font.
@@ -1395,6 +1397,8 @@ class Shell(QsciScintillaCompat):
         except AttributeError:
             pass
         self.setCaretWidth(self.caretWidth)
+        self.setCursorFlashTime(QApplication.cursorFlashTime())
+        
         QsciScintillaCompat.focusInEvent(self, event)
         
     def focusOutEvent(self, event):

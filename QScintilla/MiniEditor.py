@@ -68,6 +68,8 @@ class MiniScintilla(QsciScintillaCompat):
         except AttributeError:
             pass
         
+        self.setCursorFlashTime(QApplication.cursorFlashTime())
+        
         QsciScintillaCompat.focusInEvent(self, event)
     
     def focusOutEvent(self, event):
@@ -1767,6 +1769,8 @@ class MiniEditor(QMainWindow):
         self.searchIndicator = QsciScintilla.INDIC_CONTAINER
         self.__textEdit.indicatorDefine(self.searchIndicator, QsciScintilla.INDIC_BOX, 
             Preferences.getEditorColour("SearchMarkers"))
+        
+        self.__textEdit.setCursorFlashTime(QApplication.cursorFlashTime())
     
     def __setEolMode(self):
         """

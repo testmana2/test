@@ -3340,6 +3340,8 @@ class Editor(QsciScintillaCompat):
             Preferences.getEditorColour("SpellingMarkers"))
         self.__setSpelling()
         
+        self.setCursorFlashTime(QApplication.cursorFlashTime())
+        
     def __setEolMode(self):
         """
         Private method to configure the eol mode of the editor.
@@ -4805,6 +4807,8 @@ class Editor(QsciScintillaCompat):
                     # do not prompt for this change again...
                     self.lastModified = QFileInfo(self.fileName).lastModified()
                 self.inReopenPrompt = False
+        
+        self.setCursorFlashTime(QApplication.cursorFlashTime())
         
         QsciScintillaCompat.focusInEvent(self, event)
         
