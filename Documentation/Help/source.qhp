@@ -835,6 +835,7 @@
       <keyword name="createInstallConfig" id="createInstallConfig" ref="eric5.install.html#createInstallConfig" />
       <keyword name="createPyWrapper" id="createPyWrapper" ref="eric5.install.html#createPyWrapper" />
       <keyword name="doDependancyChecks" id="doDependancyChecks" ref="eric5.install.html#doDependancyChecks" />
+      <keyword name="exit" id="exit" ref="eric5.install.html#exit" />
       <keyword name="initGlobals" id="initGlobals" ref="eric5.install.html#initGlobals" />
       <keyword name="installEric" id="installEric" ref="eric5.install.html#installEric" />
       <keyword name="main" id="main" ref="eric5.install.html#main" />
@@ -5365,10 +5366,12 @@
       <keyword name="QsciScintillaCompat.extendSelectionWordRight" id="QsciScintillaCompat.extendSelectionWordRight" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.extendSelectionWordRight" />
       <keyword name="QsciScintillaCompat.findFirstTarget" id="QsciScintillaCompat.findFirstTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.findFirstTarget" />
       <keyword name="QsciScintillaCompat.findNextTarget" id="QsciScintillaCompat.findNextTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.findNextTarget" />
+      <keyword name="QsciScintillaCompat.focusOutEvent" id="QsciScintillaCompat.focusOutEvent" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.focusOutEvent" />
       <keyword name="QsciScintillaCompat.foldExpandedAt" id="QsciScintillaCompat.foldExpandedAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldExpandedAt" />
       <keyword name="QsciScintillaCompat.foldFlagsAt" id="QsciScintillaCompat.foldFlagsAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldFlagsAt" />
       <keyword name="QsciScintillaCompat.foldHeaderAt" id="QsciScintillaCompat.foldHeaderAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldHeaderAt" />
       <keyword name="QsciScintillaCompat.foldLevelAt" id="QsciScintillaCompat.foldLevelAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.foldLevelAt" />
+      <keyword name="QsciScintillaCompat.getCursorFlashTime" id="QsciScintillaCompat.getCursorFlashTime" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getCursorFlashTime" />
       <keyword name="QsciScintillaCompat.getEndStyled" id="QsciScintillaCompat.getEndStyled" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getEndStyled" />
       <keyword name="QsciScintillaCompat.getEolIndicator" id="QsciScintillaCompat.getEolIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getEolIndicator" />
       <keyword name="QsciScintillaCompat.getFileName" id="QsciScintillaCompat.getFileName" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getFileName" />
@@ -5396,6 +5399,7 @@
       <keyword name="QsciScintillaCompat.replaceTarget" id="QsciScintillaCompat.replaceTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.replaceTarget" />
       <keyword name="QsciScintillaCompat.scrollVertical" id="QsciScintillaCompat.scrollVertical" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.scrollVertical" />
       <keyword name="QsciScintillaCompat.setCurrentIndicator" id="QsciScintillaCompat.setCurrentIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCurrentIndicator" />
+      <keyword name="QsciScintillaCompat.setCursorFlashTime" id="QsciScintillaCompat.setCursorFlashTime" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCursorFlashTime" />
       <keyword name="QsciScintillaCompat.setEolModeByEolString" id="QsciScintillaCompat.setEolModeByEolString" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setEolModeByEolString" />
       <keyword name="QsciScintillaCompat.setIndentationGuideView" id="QsciScintillaCompat.setIndentationGuideView" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndentationGuideView" />
       <keyword name="QsciScintillaCompat.setIndicator" id="QsciScintillaCompat.setIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndicator" />

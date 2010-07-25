@@ -145,6 +145,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.findNextTarget">findNextTarget</a></td>
 <td>Public method to find the next occurrence in the target range.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.focusOutEvent">focusOutEvent</a></td>
+<td>Public method called when the editor loses focus.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.foldExpandedAt">foldExpandedAt</a></td>
 <td>Public method to determine, if a fold is expanded.</td>
 </tr><tr>
@@ -156,6 +159,9 @@ QsciScintilla
 </tr><tr>
 <td><a href="#QsciScintillaCompat.foldLevelAt">foldLevelAt</a></td>
 <td>Public method to get the fold level of a line of the document.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.getCursorFlashTime">getCursorFlashTime</a></td>
+<td>Public method to get the flash (blink) time of the cursor in milliseconds.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.getEndStyled">getEndStyled</a></td>
 <td>Public method to get the last styled position.</td>
@@ -237,6 +243,9 @@ QsciScintilla
 </tr><tr>
 <td><a href="#QsciScintillaCompat.setCurrentIndicator">setCurrentIndicator</a></td>
 <td>Public method to set the current indicator.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.setCursorFlashTime">setCursorFlashTime</a></td>
+<td>Public method to get the flash (blink) time of the cursor in milliseconds.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.setEolModeByEolString">setEolModeByEolString</a></td>
 <td>Public method to set the eol mode given the eol string.</td>
@@ -559,6 +568,16 @@ flag indicating a successful search (boolean)
 <dd>
 flag indicating a successful search (boolean)
 </dd>
+</dl><a NAME="QsciScintillaCompat.focusOutEvent" ID="QsciScintillaCompat.focusOutEvent"></a>
+<h4>QsciScintillaCompat.focusOutEvent</h4>
+<b>focusOutEvent</b>(<i>event</i>)
+<p>
+        Public method called when the editor loses focus.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+the event object (QFocusEvent)
+</dd>
 </dl><a NAME="QsciScintillaCompat.foldExpandedAt" ID="QsciScintillaCompat.foldExpandedAt"></a>
 <h4>QsciScintillaCompat.foldExpandedAt</h4>
 <b>foldExpandedAt</b>(<i>line</i>)
@@ -618,6 +637,20 @@ line number (integer)
 <dt>Returns:</dt>
 <dd>
 fold level of the given line (integer)
+</dd>
+</dl><a NAME="QsciScintillaCompat.getCursorFlashTime" ID="QsciScintillaCompat.getCursorFlashTime"></a>
+<h4>QsciScintillaCompat.getCursorFlashTime</h4>
+<b>getCursorFlashTime</b>(<i></i>)
+<p>
+        Public method to get the flash (blink) time of the cursor in milliseconds.
+</p><p>
+        The flash time is the time required to display, invert and restore the 
+        caret display. Usually the text cursor is displayed for half the cursor 
+        flash time, then hidden for the same amount of time.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flash time of the cursor in milliseconds (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.getEndStyled" ID="QsciScintillaCompat.getEndStyled"></a>
 <h4>QsciScintillaCompat.getEndStyled</h4>
@@ -932,6 +965,20 @@ number of the indicator (integer,
 <dt>Raises <b>ValueError</b>:</dt>
 <dd>
 the indicator or style are not valid
+</dd>
+</dl><a NAME="QsciScintillaCompat.setCursorFlashTime" ID="QsciScintillaCompat.setCursorFlashTime"></a>
+<h4>QsciScintillaCompat.setCursorFlashTime</h4>
+<b>setCursorFlashTime</b>(<i>time</i>)
+<p>
+        Public method to get the flash (blink) time of the cursor in milliseconds.
+</p><p>
+        The flash time is the time required to display, invert and restore the 
+        caret display. Usually the text cursor is displayed for half the cursor 
+        flash time, then hidden for the same amount of time.
+</p><dl>
+<dt><i>time</i></dt>
+<dd>
+flash time of the cursor in milliseconds (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.setEolModeByEolString" ID="QsciScintillaCompat.setEolModeByEolString"></a>
 <h4>QsciScintillaCompat.setEolModeByEolString</h4>

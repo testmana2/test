@@ -1,5 +1,9 @@
 Change Log
 ----------
+Version 5.0.1:
+- bug fixes
+- added code to adjust the cursor flash time of the editor to the global settings
+
 Version 5.0.0:
 - first formal release of the Python3 variant of eric
 

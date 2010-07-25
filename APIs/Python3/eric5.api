@@ -4916,10 +4916,12 @@ eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.extendSelectionWordLeft
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.extendSelectionWordRight?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.findFirstTarget?4(expr_, re_, cs_, wo_, begline = -1, begindex = -1, endline = -1, endindex = -1, ws_ = False)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.findNextTarget?4()
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.focusOutEvent?4(event)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.foldExpandedAt?4(line)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.foldFlagsAt?4(line)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.foldHeaderAt?4(line)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.foldLevelAt?4(line)
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.getCursorFlashTime?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.getEndStyled?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.getEolIndicator?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.getFileName?4()
@@ -4947,6 +4949,7 @@ eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.positionFromPoint?4(poi
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.replaceTarget?4(replaceStr)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.scrollVertical?4(lines)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setCurrentIndicator?4(indicator)
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setCursorFlashTime?4(time)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setEolModeByEolString?4(eolStr)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setIndentationGuideView?4(view)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setIndicator?4(indicator, sline, sindex, eline, eindex)
@@ -6084,6 +6087,7 @@ eric5.install.distDir?7
 eric5.install.doCleanup?7
 eric5.install.doCompile?7
 eric5.install.doDependancyChecks?4()
+eric5.install.exit?4(rcode = 0)
 eric5.install.initGlobals?4()
 eric5.install.installEric?4()
 eric5.install.main?4(argv)
