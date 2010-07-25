@@ -49,6 +49,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             Preferences.getUI("BrowsersHideNonPublic"))
         self.uiBrowsersSortByOccurrenceCheckBox.setChecked(
             Preferences.getUI("BrowsersListContentsByOccurrence"))
+        self.uiBrowsersShowHiddenCheckBox.setChecked(
+            Preferences.getUI("BrowsersListHiddenFiles"))
         
         self.lvAutoRaiseCheckBox.setChecked(
             Preferences.getUI("LogViewerAutoRaise"))
@@ -127,6 +129,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             self.uiBrowsersHideNonPublicCheckBox.isChecked())
         Preferences.setUI("BrowsersListContentsByOccurrence", 
             self.uiBrowsersSortByOccurrenceCheckBox.isChecked())
+        Preferences.setUI("BrowsersListHiddenFiles", 
+            self.uiBrowsersShowHiddenCheckBox.isChecked())
         Preferences.setUI("LogViewerAutoRaise", 
             self.lvAutoRaiseCheckBox.isChecked())
         Preferences.setUI("CaptionShowsFilename",

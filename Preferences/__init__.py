@@ -100,7 +100,8 @@ class Prefs(object):
                                             # 2 = embedded in project browser
         "BrowsersListFoldersFirst" : True,
         "BrowsersHideNonPublic" : False,
-        "BrowsersListContentsByOccurrence" : False, 
+        "BrowsersListContentsByOccurrence" : False,
+        "BrowsersListHiddenFiles" : False, 
         "LogViewerAutoRaise" : True, 
         "SingleApplicationMode" : False,
         "CaptionShowsFilename" : True,
@@ -1081,7 +1082,8 @@ def getUI(key, prefClass = Prefs):
     @return the requested UI setting
     """
     if key in ["BrowsersListFoldersFirst", "BrowsersHideNonPublic",
-                "BrowsersListContentsByOccurrence", "LogViewerAutoRaise", 
+                "BrowsersListContentsByOccurrence", "BrowsersListHiddenFiles",
+                "LogViewerAutoRaise", 
                 "SingleApplicationMode", "TabViewManagerFilenameOnly", 
                 "CaptionShowsFilename", "ShowSplash", 
                 "SingleCloseButton", 

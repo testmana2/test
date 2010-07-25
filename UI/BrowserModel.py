@@ -282,13 +282,17 @@ class BrowserModel(QAbstractItemModel):
             # just ignore the situation we don't have a reference to the item
             return
         
+        if Preferences.getUI("BrowsersListHiddenFiles"):
+            filter = QDir.Filters(QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
+        else:
+            filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
+        
         for itm in self.watchedItems[path]:
             oldCnt = itm.childCount()
             
             qdir = QDir(itm.dirName())
             
-            entryInfoList = qdir.entryInfoList(
-                QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot))
+            entryInfoList = qdir.entryInfoList(filter)
             
             # step 1: check for new entries
             children = itm.children()
@@ -468,8 +472,11 @@ class BrowserModel(QAbstractItemModel):
         
         qdir = QDir(parentItem.dirName())
         
-        entryInfoList = \
-            qdir.entryInfoList(QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot))
+        if Preferences.getUI("BrowsersListHiddenFiles"):
+            filter = QDir.Filters(QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
+        else:
+            filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
+        entryInfoList = qdir.entryInfoList(filter)
         if len(entryInfoList) > 0:
             if repopulate:
                 self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),

@@ -4,6 +4,7 @@ Version 5.1-snapshot-2010mmdd:
 - bug fixes
 - added action to copy the editor path to the clipboard to the tab context menu
 - added code to adjust the cursor flash time of the editor to the global settings
+- added code to show hidden files in the various browsers
 
 Version 5.1-snapshot-20100718:
 - bug fixes
