@@ -113,7 +113,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             file, 
             str(statements), 
             str(executed),
-            "{0:d}%".format(coverage), 
+            "{0:.0f}%".format(coverage), 
             excluded, 
             missing
         ])
@@ -204,7 +204,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             itm = QTreeWidgetItem(self.summaryList, [
                 str(total_statements), 
                 str(total_executed),
-                "{0:d}%".format(pc)
+                "{0:.0f}%".format(pc)
             ])
             for col in range(0, 3):
                 itm.setTextAlignment(col, Qt.AlignRight)
