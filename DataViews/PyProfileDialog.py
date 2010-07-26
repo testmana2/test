@@ -104,9 +104,9 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         """
         itm = ProfileTreeWidgetItem(self.resultList, [
             calls, 
-            "% 8.3f" % totalTime, 
+            "{0: 8.3f}".format(totalTime), 
             totalTimePerCall, 
-            "% 8.3f" % cumulativeTime, 
+            "{0: 8.3f}".format(cumulativeTime), 
             cumulativeTimePerCall, 
             file, 
             str(line), 
@@ -170,17 +170,17 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
                         total_tt    += tt
                         
                         if nc != cc:
-                            c = "%d/%d" % (nc, cc)
+                            c = "{0:d}/{1:d}".format(nc, cc)
                         else:
                             c = str(nc)
                         if nc == 0:
-                            tpc = "% 8.3f" % 0.0
+                            tpc = "{0: 8.3f}".format(0.0)
                         else:
-                            tpc = "% 8.3f" % (tt/nc,)
+                            tpc = "{0: 8.3f}".format(tt/nc)
                         if cc == 0:
-                            cpc = "% 8.3f" % 0.0
+                            cpc = "{0: 8.3f}".format(0.0)
                         else:
-                            cpc = "% 8.3f" % (ct/cc,)
+                            cpc = "{0: 8.3f}".format(ct/cc)
                         self.__createResultItem(c, tt, tpc, ct, cpc, func[0], 
                                                 func[1], func[2])
                     
@@ -197,7 +197,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         self.__createSummaryItem(self.trUtf8("function calls"), str(total_calls))
         if total_calls != prim_calls:
             self.__createSummaryItem(self.trUtf8("primitive calls"), str(prim_calls))
-        self.__createSummaryItem(self.trUtf8("CPU seconds"), "%.3f" % total_tt)
+        self.__createSummaryItem(self.trUtf8("CPU seconds"), "{0:.3f}".format(total_tt))
         
     def start(self, pfn, fn=None):
         """
@@ -208,7 +208,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         """
         self.basename = os.path.splitext(pfn)[0]
         
-        fname = "%s.profile" % self.basename
+        fname = "{0}.profile".format(self.basename)
         if not os.path.exists(fname):
             QMessageBox.warning(None,
                 self.trUtf8("Profile Results"),
@@ -280,7 +280,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         """
         Private slot to handle the Erase Profile context menu action.
         """
-        fname = "%s.profile" % self.basename
+        fname = "{0}.profile".format(self.basename)
         if os.path.exists(fname):
             os.remove(fname)
         
@@ -288,7 +288,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         """
         Private slot to handle the Erase Timing context menu action.
         """
-        fname = "%s.timings" % self.basename
+        fname = "{0}.timings".format(self.basename)
         if os.path.exists(fname):
             os.remove(fname)
         

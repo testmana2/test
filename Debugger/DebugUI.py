@@ -1291,10 +1291,10 @@ class DebugUI(QObject):
             if not cond:
                 formattedCond = ""
             else:
-                formattedCond = " : %s" % cond[:20]
-            bpSuffix = " : %d%s" % (line, formattedCond)
+                formattedCond = " : {0}".format(cond[:20])
+            bpSuffix = " : {0:d}{1}".format(line, formattedCond)
             act = self.breakpointsMenu.addAction(
-                "%s%s" % (
+                "{0}{1}".format(
                     Utilities.compactPath(
                         filename,
                         self.ui.maxMenuFilePathLen - len(bpSuffix)), 
@@ -1416,7 +1416,7 @@ class DebugUI(QObject):
             
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
-                    argv = "--plugin=%s %s" % (fn, argv)
+                    argv = "--plugin={0} {1}".format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
                 # Ask the client to open the new program.
@@ -1520,7 +1520,7 @@ class DebugUI(QObject):
             
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
-                    argv = "--plugin=%s %s" % (fn, argv)
+                    argv = "--plugin={0} {1}".format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
                 # Ask the client to open the new program.
@@ -1627,7 +1627,7 @@ class DebugUI(QObject):
             
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
-                    argv = "--plugin=%s %s" % (fn, argv)
+                    argv = "--plugin={0} {1}".format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
                 # Ask the client to open the new program.
@@ -1742,7 +1742,7 @@ class DebugUI(QObject):
             
             if not doNotStart:
                 if debugProject and self.project.getProjectType() == "E4Plugin":
-                    argv = "--plugin=%s %s" % (fn, argv)
+                    argv = "--plugin={0} {1}".format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                     tracePython = True # override flag because it must be true
                 
@@ -1793,7 +1793,7 @@ class DebugUI(QObject):
         
         if not doNotStart:
             if forProject and self.project.getProjectType() == "E4Plugin":
-                argv = "--plugin=%s %s" % (fn, argv)
+                argv = "--plugin={0} {1}".format(fn, argv)
                 fn = os.path.join(getConfig('ericDir'), "eric5.py")
             
             if self.lastStartAction in [1, 2]:

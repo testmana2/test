@@ -180,7 +180,7 @@ class ArrayElementVarItem(VariableItem):
         element 10 with a key of '000010'
         """
         keyStr = self.text(0)
-        self.arrayElementKey = "%.6d" % int(keyStr)
+        self.arrayElementKey = "{0:.6d}".format(int(keyStr))
 
     def key(self, column):
         """
@@ -217,7 +217,7 @@ class SpecialArrayElementVarItem(SpecialVarItem):
         element 10 with a key of '000010'
         """
         keyStr = self.text(0)[:-2] # strip off [], () or {}
-        self.arrayElementKey = "%.6d" % int(keyStr)
+        self.arrayElementKey = "{0:.6d}".format(int(keyStr))
 
     def key(self, column):
         """
@@ -528,7 +528,7 @@ class VariablesViewer(QTreeWidget):
         if parent is None:
             parent = self
         try:
-            dvar = '%s%s' % (var, self.indicators[vtype])
+            dvar = '{0}{1}'.format(var, self.indicators[vtype])
         except KeyError:
             dvar = var
         dvtype = self.__getDispType(vtype)
@@ -617,12 +617,12 @@ class VariablesViewer(QTreeWidget):
             pname = par.text(0)
             if pname[-2:] in ['[]', '{}', '()']:
                 if nlist[0].endswith("."):
-                    nlist[0] = '[%s].' % nlist[0][:-1]
+                    nlist[0] = '[{0}].'.format(nlist[0][:-1])
                 else:
-                    nlist[0] = '[%s]' % nlist[0]
+                    nlist[0] = '[{0}]'.format(nlist[0])
                 nlist.insert(0, pname[:-2])
             else:
-                nlist.insert(0, '%s.' % pname)
+                nlist.insert(0, '{0}.'.format(pname))
             par = par.parent()
             
         name = ''.join(nlist)

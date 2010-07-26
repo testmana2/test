@@ -170,12 +170,12 @@ class DebugServer(QTcpServer):
             if localhost:
                 return "127.0.0.1"
             else:
-                return "%s@@v4" % QHostInfo.localHostName()
+                return "{0}@@v4".format(QHostInfo.localHostName())
         elif self.networkInterface == "allv6":
             if localhost:
                 return "::1"
             else:
-                return "%s@@v6" % QHostInfo.localHostName()
+                return "{0}@@v6".format(QHostInfo.localHostName())
         else:
             return self.networkInterface
         
@@ -193,7 +193,7 @@ class DebugServer(QTcpServer):
         self.__clientAssociations = {}
         
         for interface in DebuggerInterfaces:
-            modName = "Debugger.%s" % interface
+            modName = "Debugger.{0}".format(interface)
             mod = __import__(modName)
             components = modName.split('.')
             for comp in components[1:]:
@@ -438,9 +438,9 @@ class DebugServer(QTcpServer):
             _cond = cond
         else:
             if special == self.watchSpecialCreated:
-                _cond = "%s ??created??" % cond
+                _cond = "{0} ??created??".format(cond)
             elif special == self.watchSpecialChanged:
-                _cond = "%s ??changed??" % cond
+                _cond = "{0} ??changed??".format(cond)
         return _cond
         
     def __splitWatchCondition(self, cond):

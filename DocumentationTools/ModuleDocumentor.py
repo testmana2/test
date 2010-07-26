@@ -108,47 +108,56 @@ class ModuleDocument(object):
             self.seeLinkTemplate = TemplatesListsStyleCSS.seeLinkTemplate
             self.sinceInfoTemplate = TemplatesListsStyleCSS.sinceInfoTemplate
         else:
-            self.headerTemplate = TemplatesListsStyle.headerTemplate % colors
-            self.footerTemplate = TemplatesListsStyle.footerTemplate % colors
-            self.moduleTemplate = TemplatesListsStyle.moduleTemplate % colors
-            self.rbFileTemplate = TemplatesListsStyle.rbFileTemplate % colors
-            self.classTemplate = TemplatesListsStyle.classTemplate % colors
-            self.methodTemplate = TemplatesListsStyle.methodTemplate % colors
-            self.constructorTemplate = TemplatesListsStyle.constructorTemplate % colors
-            self.rbModuleTemplate = TemplatesListsStyle.rbModuleTemplate % colors
+            self.headerTemplate = TemplatesListsStyle.headerTemplate.format(**colors)
+            self.footerTemplate = TemplatesListsStyle.footerTemplate.format(**colors)
+            self.moduleTemplate = TemplatesListsStyle.moduleTemplate.format(**colors)
+            self.rbFileTemplate = TemplatesListsStyle.rbFileTemplate.format(**colors)
+            self.classTemplate = TemplatesListsStyle.classTemplate.format(**colors)
+            self.methodTemplate = TemplatesListsStyle.methodTemplate.format(**colors)
+            self.constructorTemplate = \
+                TemplatesListsStyle.constructorTemplate.format(**colors)
+            self.rbModuleTemplate = TemplatesListsStyle.rbModuleTemplate.format(**colors)
             self.rbModulesClassTemplate = \
-                TemplatesListsStyle.rbModulesClassTemplate % colors
-            self.functionTemplate = TemplatesListsStyle.functionTemplate % colors
-            self.listTemplate = TemplatesListsStyle.listTemplate % colors
-            self.listEntryTemplate = TemplatesListsStyle.listEntryTemplate % colors
+                TemplatesListsStyle.rbModulesClassTemplate.format(**colors)
+            self.functionTemplate = TemplatesListsStyle.functionTemplate.format(**colors)
+            self.listTemplate = TemplatesListsStyle.listTemplate.format(**colors)
+            self.listEntryTemplate = \
+                TemplatesListsStyle.listEntryTemplate.format(**colors)
             self.listEntryNoneTemplate = \
-                TemplatesListsStyle.listEntryNoneTemplate % colors
+                TemplatesListsStyle.listEntryNoneTemplate.format(**colors)
             self.listEntryDeprecatedTemplate = \
-                TemplatesListsStyle.listEntryDeprecatedTemplate % colors
+                TemplatesListsStyle.listEntryDeprecatedTemplate.format(**colors)
             self.listEntrySimpleTemplate = \
-                TemplatesListsStyle.listEntrySimpleTemplate % colors
-            self.paragraphTemplate = TemplatesListsStyle.paragraphTemplate % colors
+                TemplatesListsStyle.listEntrySimpleTemplate.format(**colors)
+            self.paragraphTemplate = \
+                TemplatesListsStyle.paragraphTemplate.format(**colors)
             self.parametersListTemplate = \
-                TemplatesListsStyle.parametersListTemplate % colors
+                TemplatesListsStyle.parametersListTemplate.format(**colors)
             self.parametersListEntryTemplate = \
-                TemplatesListsStyle.parametersListEntryTemplate % colors
-            self.returnsTemplate = TemplatesListsStyle.returnsTemplate % colors
+                TemplatesListsStyle.parametersListEntryTemplate.format(**colors)
+            self.returnsTemplate = TemplatesListsStyle.returnsTemplate.format(**colors)
             self.exceptionsListTemplate = \
-                TemplatesListsStyle.exceptionsListTemplate % colors
+                TemplatesListsStyle.exceptionsListTemplate.format(**colors)
             self.exceptionsListEntryTemplate = \
-                TemplatesListsStyle.exceptionsListEntryTemplate % colors
-            self.signalsListTemplate = TemplatesListsStyle.signalsListTemplate % colors
+                TemplatesListsStyle.exceptionsListEntryTemplate.format(**colors)
+            self.signalsListTemplate = \
+                TemplatesListsStyle.signalsListTemplate.format(**colors)
             self.signalsListEntryTemplate = \
-                TemplatesListsStyle.signalsListEntryTemplate % colors
-            self.eventsListTemplate = TemplatesListsStyle.eventsListTemplate % colors
+                TemplatesListsStyle.signalsListEntryTemplate.format(**colors)
+            self.eventsListTemplate = \
+                TemplatesListsStyle.eventsListTemplate.format(**colors)
             self.eventsListEntryTemplate = \
-                TemplatesListsStyle.eventsListEntryTemplate % colors
-            self.deprecatedTemplate = TemplatesListsStyle.deprecatedTemplate % colors
-            self.authorInfoTemplate = TemplatesListsStyle.authorInfoTemplate % colors
-            self.seeListTemplate = TemplatesListsStyle.seeListTemplate % colors
-            self.seeListEntryTemplate = TemplatesListsStyle.seeListEntryTemplate % colors
-            self.seeLinkTemplate = TemplatesListsStyle.seeLinkTemplate % colors
-            self.sinceInfoTemplate = TemplatesListsStyle.sinceInfoTemplate % colors
+                TemplatesListsStyle.eventsListEntryTemplate.format(**colors)
+            self.deprecatedTemplate = \
+                TemplatesListsStyle.deprecatedTemplate.format(**colors)
+            self.authorInfoTemplate = \
+                TemplatesListsStyle.authorInfoTemplate.format(**colors)
+            self.seeListTemplate = TemplatesListsStyle.seeListTemplate.format(**colors)
+            self.seeListEntryTemplate = \
+                TemplatesListsStyle.seeListEntryTemplate.format(**colors)
+            self.seeLinkTemplate = TemplatesListsStyle.seeLinkTemplate.format(**colors)
+            self.sinceInfoTemplate = \
+                TemplatesListsStyle.sinceInfoTemplate.format(**colors)
         
         self.keywords = []  # list of tuples containing the name (string) and 
                             # the ref (string). The ref is without the filename part.
@@ -196,9 +205,9 @@ class ModuleDocument(object):
         
         @return The source code documentation. (string)
         """
-        doc = self.headerTemplate % { \
+        doc = self.headerTemplate.format(**{ \
                 'Title' : self.module.name,
-                'Style' : self.stylesheet} + \
+                'Style' : self.stylesheet}) + \
               self.__genModuleSection() + \
               self.footerTemplate
         self.generated = True
@@ -216,7 +225,7 @@ class ModuleDocument(object):
         try:
             if self.module.type == RB_SOURCE:
                 rbModulesList = self.__genRbModulesListSection()
-                modBody = self.rbFileTemplate % { \
+                modBody = self.rbFileTemplate.format(**{ \
                     'Module' : self.module.name,
                     'ModuleDescription' : \
                         self.__formatDescription(self.module.description),
@@ -224,20 +233,20 @@ class ModuleDocument(object):
                     'ClassList' : classList,
                     'RbModulesList' : rbModulesList,
                     'FunctionList' : functionList,
-                }
+                })
             else:
-                modBody = self.moduleTemplate % { \
+                modBody = self.moduleTemplate.format(**{ \
                     'Module' : self.module.name,
                     'ModuleDescription' : \
                         self.__formatDescription(self.module.description),
                     'GlobalsList' : globalsList, 
                     'ClassList' : classList,
                     'FunctionList' : functionList,
-                }
+                })
         except TagError as e:
-            sys.stderr.write("Error in tags of description of module %s.\n" % \
-                self.module.name)
-            sys.stderr.write("%s\n" % e)
+            sys.stderr.write("Error in tags of description of module {0}.\n".format(
+                self.module.name))
+            sys.stderr.write("{0}\n".format(e))
             return ""
             
         classesSection = self.__genClassesSection()
@@ -246,7 +255,8 @@ class ModuleDocument(object):
             rbModulesSection = self.__genRbModulesSection()
         else:
             rbModulesSection = ""
-        return "%s%s%s%s" % (modBody, classesSection, rbModulesSection, functionsSection)
+        return "{0}{1}{2}{3}".format(
+            modBody, classesSection, rbModulesSection, functionsSection)
         
     def __genListSection(self, names, dict, kwSuffix = ""):
         """
@@ -259,18 +269,18 @@ class ModuleDocument(object):
         """
         lst = []
         for name in names:
-            lst.append(self.listEntryTemplate % { \
-                'Link' : "%s" % name,
+            lst.append(self.listEntryTemplate.format(**{ \
+                'Link' : "{0}".format(name),
                 'Name' : dict[name].name,
                 'Description' : self.__getShortDescription(dict[name].description),
                 'Deprecated' : self.__checkDeprecated(dict[name].description) and \
                     self.listEntryDeprecatedTemplate or "",
-            })
+            }))
             if kwSuffix:
-                n = "%s (%s)" % (name, kwSuffix)
+                n = "{0} ({1})".format(name, kwSuffix)
             else:
-                n = "%s" % name
-            self.keywords.append((n, "#%s" % name))
+                n = "{0}".format(name)
+            self.keywords.append((n, "#{0}".format(name)))
         return ''.join(lst)
         
     def __genGlobalsListSection(self, class_ = None):
@@ -287,12 +297,13 @@ class ModuleDocument(object):
             attrNames = sorted(self.module.globals.keys())
         if attrNames:
             s = ''.join(
-                [self.listEntrySimpleTemplate % {'Name' : name} for name in attrNames])
+                [self.listEntrySimpleTemplate.format(**{'Name' : name}) \
+                 for name in attrNames])
         else:
             s = self.listEntryNoneTemplate
-        return self.listTemplate % { \
+        return self.listTemplate.format(**{ \
             'Entries' : s,
-        }
+        })
         
     def __genClassListSection(self):
         """
@@ -306,9 +317,9 @@ class ModuleDocument(object):
             s = self.__genListSection(names, self.module.classes)
         else:
             s = self.listEntryNoneTemplate
-        return self.listTemplate % { \
+        return self.listTemplate.format(**{ \
             'Entries' : s,
-        }
+        })
         
     def __genRbModulesListSection(self):
         """
@@ -323,9 +334,9 @@ class ModuleDocument(object):
             s = self.__genListSection(names, self.module.modules)
         else:
             s = self.listEntryNoneTemplate
-        return self.listTemplate % { \
+        return self.listTemplate.format(**{ \
             'Entries' : s,
-        }
+        })
         
     def __genFunctionListSection(self):
         """
@@ -339,9 +350,9 @@ class ModuleDocument(object):
             s = self.__genListSection(names, self.module.functions)
         else:
             s = self.listEntryNoneTemplate
-        return self.listTemplate % { \
+        return self.listTemplate.format(**{ \
             'Entries' : s,
-        }
+        })
         
     def __genClassesSection(self):
         """
@@ -363,7 +374,7 @@ class ModuleDocument(object):
             methList, methBodies = self.__genMethodSection(_class, className)
             
             try:
-                clsBody = self.classTemplate % { \
+                clsBody = self.classTemplate.format(**{ \
                     'Anchor' : className,
                     'Class' : _class.name,
                     'ClassSuper' : supers,
@@ -371,11 +382,11 @@ class ModuleDocument(object):
                     'GlobalsList' : globalsList, 
                     'MethodList' : methList,
                     'MethodDetails' : methBodies,
-                }
+                })
             except TagError as e:
-                sys.stderr.write("Error in tags of description of class %s.\n" % \
-                    className)
-                sys.stderr.write("%s\n" % e)
+                sys.stderr.write("Error in tags of description of class {0}.\n".format(
+                    className))
+                sys.stderr.write("{0}\n".format(e))
                 clsBody = ""
             
             classes.append(clsBody)
@@ -394,28 +405,28 @@ class ModuleDocument(object):
         """
         lst = []
         try:
-            lst.append(self.listEntryTemplate % { \
-                'Link' : "%s.%s" % (className, '__init__'),
+            lst.append(self.listEntryTemplate.format(**{ \
+                'Link' : "{0}.{1}".format(className, '__init__'),
                 'Name' : clsName,
                 'Description' : self.__getShortDescription(dict['__init__'].description),
                 'Deprecated' : self.__checkDeprecated(dict['__init__'].description) and \
                                self.listEntryDeprecatedTemplate or "",
-            })
-            self.keywords.append(("%s (Constructor)" % className, 
-                                  "#%s.%s" % (className, '__init__')))
+            }))
+            self.keywords.append(("{0} (Constructor)".format(className), 
+                                  "#{0}.{1}".format(className, '__init__')))
         except KeyError:
             pass
             
         for name in names:
-            lst.append(self.listEntryTemplate % { \
-                'Link' : "%s.%s" % (className, name),
+            lst.append(self.listEntryTemplate.format(**{ \
+                'Link' : "{0}.{1}".format(className, name),
                 'Name' : dict[name].name,
                 'Description' : self.__getShortDescription(dict[name].description),
                 'Deprecated' : self.__checkDeprecated(dict[name].description) and \
                                self.listEntryDeprecatedTemplate or "",
-            })
-            self.keywords.append(("%s.%s" % (className, name), 
-                                  "#%s.%s" % (className, name)))
+            }))
+            self.keywords.append(("{0}.{1}".format(className, name), 
+                                  "#{0}.{1}".format(className, name)))
         return ''.join(lst)
         
     def __genMethodSection(self, obj, className):
@@ -432,35 +443,37 @@ class ModuleDocument(object):
         if '__init__' in methods:
             methods.remove('__init__')
             try:
-                methBody = self.constructorTemplate % { \
+                methBody = self.constructorTemplate.format(**{ \
                     'Anchor' : className,
                     'Class' : obj.name,
                     'Method' : '__init__',
                     'MethodDescription' : \
                         self.__formatDescription(obj.methods['__init__'].description),
                     'Params' : ', '.join(obj.methods['__init__'].parameters[1:]),
-                }
+                })
             except TagError as e:
-                sys.stderr.write("Error in tags of description of method %s.%s.\n" % \
-                    (className, '__init__'))
-                sys.stderr.write("%s\n" % e)
+                sys.stderr.write(
+                    "Error in tags of description of method {0}.{1}.\n".format(
+                    className, '__init__'))
+                sys.stderr.write("{0}\n".format(e))
                 methBody = ""
             methBodies.append(methBody)
             
         for method in methods:
             try:
-                methBody = self.methodTemplate % { \
+                methBody = self.methodTemplate.format(**{ \
                     'Anchor' : className,
                     'Class' : obj.name,
                     'Method' : obj.methods[method].name,
                     'MethodDescription' : \
                         self.__formatDescription(obj.methods[method].description),
                     'Params' : ', '.join(obj.methods[method].parameters[1:]),
-                }
+                })
             except TagError as e:
-                sys.stderr.write("Error in tags of description of method %s.%s.\n" % \
-                    (className, method))
-                sys.stderr.write("%s\n" % e)
+                sys.stderr.write(
+                    "Error in tags of description of method {0}.{1}.\n".format(
+                    className, method))
+                sys.stderr.write("{0}\n".format(e))
                 methBody = ""
             methBodies.append(methBody)
             
@@ -468,9 +481,9 @@ class ModuleDocument(object):
         
         if not methList:
             methList = self.listEntryNoneTemplate
-        return self.listTemplate % { \
+        return self.listTemplate.format(**{ \
             'Entries' : methList,
-            }, ''.join(methBodies)
+            }), ''.join(methBodies)
         
     def __genRbModulesSection(self):
         """
@@ -488,7 +501,7 @@ class ModuleDocument(object):
                 self.__genRbModulesClassesSection(rbModule, rbModuleName)
             
             try:
-                rbmBody = self.rbModuleTemplate % { \
+                rbmBody = self.rbModuleTemplate.format(**{ \
                     'Anchor' : rbModuleName,
                     'Module' : rbModule.name,
                     'ModuleDescription' : self.__formatDescription(rbModule.description),
@@ -497,11 +510,12 @@ class ModuleDocument(object):
                     'ClassesDetails' : classBodies,
                     'FunctionsList' : methList,
                     'FunctionsDetails' : methBodies,
-                }
+                })
             except TagError as e:
-                sys.stderr.write("Error in tags of description of Ruby module %s.\n" % \
-                    rbModuleName)
-                sys.stderr.write("%s\n" % e)
+                sys.stderr.write(
+                    "Error in tags of description of Ruby module {0}.\n".format(
+                    rbModuleName))
+                sys.stderr.write("{0}\n".format(e))
                 rbmBody = ""
             
             rbModules.append(rbmBody)
@@ -529,18 +543,18 @@ class ModuleDocument(object):
             methList, methBodies = self.__genMethodSection(_class, className)
             
             try:
-                clsBody = self.rbModulesClassTemplate % { \
+                clsBody = self.rbModulesClassTemplate.format(**{ \
                     'Anchor' : className,
                     'Class' : _class.name,
                     'ClassSuper' : supers,
                     'ClassDescription' : self.__formatDescription(_class.description),
                     'MethodList' : methList,
                     'MethodDetails' : methBodies,
-                }
+                })
             except TagError as e:
-                sys.stderr.write("Error in tags of description of class %s.\n" % \
-                    className)
-                sys.stderr.write("%s\n" % e)
+                sys.stderr.write("Error in tags of description of class {0}.\n".format(
+                    className))
+                sys.stderr.write("{0}\n".format(e))
                 clsBody = ""
             
             classes.append(clsBody)
@@ -551,9 +565,9 @@ class ModuleDocument(object):
         
         if not classesList:
             classesList = self.listEntryNoneTemplate
-        return self.listTemplate % { \
+        return self.listTemplate.format(**{ \
             'Entries' : classesList,
-            }, ''.join(classes)
+            }), ''.join(classes)
         
     def __genRbModulesClassesListSection(self, names, dict, moduleName):
         """
@@ -566,15 +580,15 @@ class ModuleDocument(object):
         """
         lst = []
         for name in names:
-            lst.append(self.listEntryTemplate % { \
-                'Link' : "%s.%s" % (moduleName, name),
+            lst.append(self.listEntryTemplate.format(**{ \
+                'Link' : "{0}.{1}".format(moduleName, name),
                 'Name' : dict[name].name,
                 'Description' : self.__getShortDescription(dict[name].description),
                 'Deprecated' : self.__checkDeprecated(dict[name].description) and \
                                self.listEntryDeprecatedTemplate or "",
-            })
-            self.keywords.append(("%s.%s" % (moduleName, name), 
-                                  "#%s.%s" % (moduleName, name)))
+            }))
+            self.keywords.append(("{0}.{1}".format(moduleName, name), 
+                                  "#{0}.{1}".format(moduleName, name)))
         return ''.join(lst)
         
     def __genFunctionsSection(self):
@@ -587,17 +601,17 @@ class ModuleDocument(object):
         funcNames = sorted(list(self.module.functions.keys()))
         for funcName in funcNames:
             try:
-                funcBody = self.functionTemplate % { \
+                funcBody = self.functionTemplate.format(**{ \
                     'Anchor' : funcName,
                     'Function' : self.module.functions[funcName].name,
                     'FunctionDescription' : self.__formatDescription(\
                         self.module.functions[funcName].description),
                     'Params' : ', '.join(self.module.functions[funcName].parameters),
-                }
+                })
             except TagError as e:
-                sys.stderr.write("Error in tags of description of function %s.\n" % \
-                    funcName)
-                sys.stderr.write("%s\n" % e)
+                sys.stderr.write("Error in tags of description of function {0}.\n".format(
+                    funcName))
+                sys.stderr.write("{0}\n".format(e))
                 funcBody = ""
             
             funcBodies.append(funcBody)
@@ -678,14 +692,14 @@ class ModuleDocument(object):
                 else:
                     linelist.append(html_uencode(line))
             else:
-                lst.append(self.paragraphTemplate % { \
+                lst.append(self.paragraphTemplate.format(**{ \
                     'Lines' : '\n'.join(linelist)
-                })
+                }))
                 linelist = []
         if linelist:
-            lst.append(self.paragraphTemplate % { \
+            lst.append(self.paragraphTemplate.format(**{ \
                 'Lines' : '\n'.join(linelist)
-            })
+            }))
         return ''.join(lst)
         
     def __genDescriptionListSection(self, dictionary, template):
@@ -700,10 +714,10 @@ class ModuleDocument(object):
         lst = []
         keys = sorted(list(dictionary.keys()))
         for key in keys:
-            lst.append(template % { \
+            lst.append(template.format(**{ \
                 'Name' : key,
                 'Description' : html_uencode('\n'.join(dictionary[key])),
-            })
+            }))
         return ''.join(lst)
         
     def __genParamDescriptionListSection(self, _list, template):
@@ -717,10 +731,10 @@ class ModuleDocument(object):
         """
         lst = []
         for name, lines in _list:
-            lst.append(template % { \
+            lst.append(template.format(**{ \
                 'Name' : name,
                 'Description' : html_uencode('\n'.join(lines)),
-            })
+            }))
         return ''.join(lst)
         
     def __formatCrossReferenceEntry(self, entry):
@@ -747,14 +761,14 @@ class ModuleDocument(object):
             except ValueError:
                 path = reference
                 anchor = ''
-            reference = path and "%s.html" % path or ''
+            reference = path and "{0}.html".format(path) or ''
             if anchor:
-                reference = "%s#%s" % (reference, anchor)
-            entry = 'href="%s">%s</a>' % (reference, label)
+                reference = "{0}#{1}".format(reference, anchor)
+            entry = 'href="{0}">{1}</a>'.format(reference, label)
         
-        return self.seeLinkTemplate % { \
+        return self.seeLinkTemplate.format(**{ \
             'Link' : entry,
-        }
+        })
         
     def __genSeeListSection(self, _list, template):
         """
@@ -767,9 +781,9 @@ class ModuleDocument(object):
         lst = []
         for seeEntry in _list:
             seeEntryString = ''.join(seeEntry)
-            lst.append(template % { \
+            lst.append(template.format(**{ \
                 'Link' : html_uencode(self.__formatCrossReferenceEntry(seeEntryString)),
-            })
+            }))
         return '\n'.join(lst)
         
     def __processInlineTags(self, desc):
@@ -783,21 +797,21 @@ class ModuleDocument(object):
         while start != -1:
             stop = desc.find('}', start + 2)
             if stop == -1:
-                raise TagError("Unterminated inline tag.\n%s" % desc)
+                raise TagError("Unterminated inline tag.\n{0}".format(desc))
             
             tagText = desc[start + 1:stop]
             if tagText.startswith('@link'):
                 parts = tagText.split(None, 1)
                 if len(parts) < 2:
-                    raise TagError("Wrong format in inline tag %s.\n%s" % \
-                                    (parts[0], desc))
+                    raise TagError("Wrong format in inline tag {0}.\n{1}".format(
+                                   parts[0], desc))
                 
                 formattedTag = self.__formatCrossReferenceEntry(parts[1])
-                desc = desc.replace("{%s}" % tagText, formattedTag)
+                desc = desc.replace("{{{0}}}".format(tagText), formattedTag)
             else:
                 tag = tagText.split(None, 1)[0]
-                raise TagError("Unknown inline tag encountered, %s.\n%s" % \
-                                (tag, desc))
+                raise TagError("Unknown inline tag encountered, {0}.\n{1}".format(
+                               tag, desc))
             
             start = desc.find('{@')
         
@@ -839,7 +853,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     parts = desc.split(None, 2)
                     if len(parts) < 2:
-                        raise TagError("Wrong format in %s line.\n" % parts[0])
+                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     paramName = parts[1]
                     if parts[0] == "@keyparam":
                         paramName += '='
@@ -852,7 +866,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError("Wrong format in %s line.\n" % parts[0])
+                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     returns = [parts[1]]
                     lastItem = returns
                 elif desc.startswith("@exception") or \
@@ -861,7 +875,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     parts = desc.split(None, 2)
                     if len(parts) < 2:
-                        raise TagError("Wrong format in %s line.\n" % parts[0])
+                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     excName = parts[1]
                     try:
                         exceptionDict[excName] = [parts[2]]
@@ -872,7 +886,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     m = _signal(desc,0)
                     if m is None:
-                        raise TagError("Wrong format in %s line.\n" % parts[0])
+                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     signalName = 1 and m.group("SignalName1") \
                                    or m.group("SignalName2")
                     signalDesc = 1 and m.group("SignalDescription1") \
@@ -885,7 +899,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     m = _event(desc,0)
                     if m is None:
-                        raise TagError("Wrong format in %s line.\n" % parts[0])
+                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     eventName = 1 and m.group("EventName1") \
                                    or m.group("EventName2")
                     eventDesc = 1 and m.group("EventDescription1") \
@@ -898,35 +912,35 @@ class ModuleDocument(object):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError("Wrong format in %s line.\n" % parts[0])
+                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     deprecated = [parts[1]]
                     lastItem = deprecated
                 elif desc.startswith("@author"):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError("Wrong format in %s line.\n" % parts[0])
+                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     authorInfo = [parts[1]]
                     lastItem = authorInfo
                 elif desc.startswith("@since"):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError("Wrong format in %s line.\n" % parts[0])
+                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     sinceInfo = [parts[1]]
                     lastItem = sinceInfo
                 elif desc.startswith("@see"):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
-                        raise TagError("Wrong format in %s line.\n" % parts[0])
+                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     seeList.append([parts[1]])
                     lastItem = seeList[-1]
                 elif desc.startswith("@@"):
                     lastItem.append(desc[1:])
                 elif desc.startswith("@"):
                     tag = desc.split(None, 1)[0]
-                    raise TagError("Unknown tag encountered, %s.\n" % tag)
+                    raise TagError("Unknown tag encountered, {0}.\n".format(tag))
                 else:
                     lastItem.append(ditem)
             elif not inTagSection:
@@ -938,71 +952,71 @@ class ModuleDocument(object):
             description = ""
         
         if paramList:
-            parameterSect = self.parametersListTemplate % { \
+            parameterSect = self.parametersListTemplate.format(**{ \
                 'Parameters' : self.__genParamDescriptionListSection(paramList,
                                self.parametersListEntryTemplate)
-            }
+            })
         else:
             parameterSect = ""
         
         if returns:
-            returnSect = self.returnsTemplate % html_uencode('\n'.join(returns))
+            returnSect = self.returnsTemplate.format(html_uencode('\n'.join(returns)))
         else:
             returnSect = ""
         
         if exceptionDict:
-            exceptionSect = self.exceptionsListTemplate % { \
+            exceptionSect = self.exceptionsListTemplate.format(**{ \
                 'Exceptions' : self.__genDescriptionListSection(exceptionDict,
                                self.exceptionsListEntryTemplate)
-            }
+            })
         else:
             exceptionSect = ""
         
         if signalDict:
-            signalSect = self.signalsListTemplate % { \
+            signalSect = self.signalsListTemplate.format(**{ \
                 'Signals' : self.__genDescriptionListSection(signalDict,
                                self.signalsListEntryTemplate)
-            }
+            })
         else:
             signalSect = ""
         
         if eventDict:
-            eventSect = self.eventsListTemplate % { \
+            eventSect = self.eventsListTemplate.format(**{ \
                 'Events' : self.__genDescriptionListSection(eventDict,
                                self.eventsListEntryTemplate)
-            }
+            })
         else:
             eventSect = ""
         
         if deprecated:
-            deprecatedSect = self.deprecatedTemplate % { \
+            deprecatedSect = self.deprecatedTemplate.format(**{ \
                 'Lines' : html_uencode('\n'.join(deprecated)),
-            }
+            })
         else:
             deprecatedSect = ""
         
         if authorInfo:
-            authorInfoSect = self.authorInfoTemplate % { \
+            authorInfoSect = self.authorInfoTemplate.format(**{ \
                 'Authors' : html_uencode('\n'.join(authorInfo)),
-            }
+            })
         else:
             authorInfoSect = ""
         
         if sinceInfo:
-            sinceInfoSect = self.sinceInfoTemplate % { \
+            sinceInfoSect = self.sinceInfoTemplate.format(**{ \
                 'Info' : html_uencode(sinceInfo[0]),
-            }
+            })
         else:
             sinceInfoSect = ""
         
         if seeList:
-            seeSect = self.seeListTemplate % { \
+            seeSect = self.seeListTemplate.format(**{ \
                 'Links' : self.__genSeeListSection(seeList, self.seeListEntryTemplate),
-            }
+            })
         else:
             seeSect = ''
         
-        return "%s%s%s%s%s%s%s%s%s%s" % ( \
+        return "{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}".format(
             deprecatedSect, description, parameterSect, returnSect,
             exceptionSect, signalSect, eventSect, authorInfoSect,
             seeSect, sinceInfoSect

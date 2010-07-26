@@ -57,7 +57,7 @@ class Parser(object):
         text = Utilities.convertLineEnds(text, os.linesep)
         
         if not text.endswith(os.linesep):
-            text = "%s%s" % (text, os.linesep)
+            text = "{0}{1}".format(text, os.linesep)
             
         self.lines = text.count(os.linesep)
         
@@ -77,7 +77,7 @@ class Parser(object):
                 else:
                     self.__addToken(toktype, toktext, srow, scol, line)
         except tokenize.TokenError as msg:
-            print("Token Error: %s" % str(msg))
+            print("Token Error: {0}".format(str(msg)))
             return
         
         return
@@ -175,7 +175,7 @@ class SourceStat(object):
 
             for key in ('start', 'end', 'lines', 'nloc', 'comments', 'empty'):
                 if counters.get(key, 0):
-                    msg += " %5d" % (counters[key],)
+                    msg += " {0:d}".format(counters[key])
                 else:
                     msg += " " * 6
 
@@ -276,7 +276,7 @@ def main():
     print("\nSummary")
     for key in ['files', 'lines', 'bytes', 'comments',
                 'empty lines', 'non-commentary lines']:
-        print(key.ljust(20) + "%6d" % total[key])
+        print(key.ljust(20) + "{0:d}".format(total[key]))
     
     sys.exit(0)
 

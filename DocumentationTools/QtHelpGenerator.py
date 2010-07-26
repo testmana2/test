@@ -19,7 +19,7 @@ HelpCollection = r"""<?xml version="1.0" encoding="utf-8" ?>
 <QHelpCollectionProject version="1.0">
   <docFiles>
     <register>
-      <file>%(helpfile)s</file>
+      <file>{helpfile}</file>
     </register>
   </docFiles>
 </QHelpCollectionProject>
@@ -27,21 +27,21 @@ HelpCollection = r"""<?xml version="1.0" encoding="utf-8" ?>
 
 HelpProject = r"""<?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-  <namespace>%(namespace)s</namespace>
-  <virtualFolder>%(folder)s</virtualFolder>
-  <customFilter name="%(filter_name)s">
-%(filter_attributes)s
+  <namespace>{namespace}</namespace>
+  <virtualFolder>{folder}</virtualFolder>
+  <customFilter name="{filter_name}">
+{filter_attributes}
   </customFilter>
   <filterSection>
-%(filter_attributes)s
+{filter_attributes}
     <toc>
-%(sections)s
+{sections}
     </toc>
     <keywords>
-%(keywords)s
+{keywords}
     </keywords>
     <files>
-%(files)s
+{files}
     </files>
   </filterSection>
 </QtHelpProject>
@@ -125,8 +125,8 @@ class QtHelpGenerator(object):
                 "modules" : {}
             }
             
-            kwEntry = ("%s (Package)" % package.split('.')[-1], 
-                       joinext("index-%s" % package, ".html"))
+            kwEntry = ("{0} (Package)".format(package.split('.')[-1]), 
+                       joinext("index-{0}".format(package), ".html"))
             if kwEntry not in self.keywords:
                 self.keywords.append(kwEntry)
             
@@ -141,12 +141,13 @@ class QtHelpGenerator(object):
         elt["modules"][moduleDocument.name()] = moduleDocument.name()
         
         if "__init__" not in file:
-            kwEntry = ("%s (Module)" % moduleDocument.name().split('.')[-1], 
+            kwEntry = ("{0} (Module)".format(moduleDocument.name().split('.')[-1]), 
                        joinext(moduleDocument.name(), ".html"))
             if kwEntry not in self.keywords:
                 self.keywords.append(kwEntry)
         for kw in moduleDocument.getQtHelpKeywords():
-            kwEntry = (kw[0], "%s%s" % (joinext(moduleDocument.name(), ".html"), kw[1]))
+            kwEntry = (kw[0], "{0}{1}".format(
+                joinext(moduleDocument.name(), ".html"), kw[1]))
             if kwEntry not in self.keywords:
                 self.keywords.append(kwEntry)
     
@@ -160,17 +161,17 @@ class QtHelpGenerator(object):
         """
         indent = level * '  '
         indent1 = indent + '  '
-        s  = indent + '<section title="%s" ref="%s">\n' % \
-            (package == "00index" and self.title or package, 
+        s  = indent + '<section title="{0}" ref="{1}">\n'.format(
+            package == "00index" and self.title or package, 
              package == "00index" and \
                 joinext("index", ".html") or \
-                joinext("index-%s" % package, ".html"))
+                joinext("index-{0}".format(package), ".html"))
         for subpack in sorted(self.packages[package]["subpackages"]):
             s += self.__generateSections(subpack, level + 1)
             s += '\n'
         for mod in sorted(self.packages[package]["modules"]):
-            s += indent1 + '<section title="%s" ref="%s" />\n' % \
-                (mod, joinext(mod, ".html"))
+            s += indent1 + '<section title="{0}" ref="{1}" />\n'.format(
+                mod, joinext(mod, ".html"))
         s += indent + '</section>'
         return s
     
@@ -209,16 +210,16 @@ class QtHelpGenerator(object):
         if basename:
             basename = basename.replace(os.sep, ".")
             if not basename.endswith("."):
-                basename = "%s." % basename
+                basename = "{0}.".format(basename)
         
         sections = self.__generateSections("00index", 3)
         filesList = sorted([e for e in os.listdir(self.htmlDir) if e.endswith('.html')])
-        files = "\n".join(["      <file>%s</file>" % f for f in filesList])
-        filterAttribs = "\n".join(["    <filterAttribute>%s</filterAttribute>" % a \
+        files = "\n".join(["      <file>{0}</file>".format(f) for f in filesList])
+        filterAttribs = "\n".join(["    <filterAttribute>{0}</filterAttribute>".format(a) \
                                   for a in self.filterAttributes])
         keywords = "\n".join(
-            ['      <keyword name="%s" id="%s" ref="%s" />' % \
-             (html_encode(kw[0]), html_encode(kw[0]), html_encode(kw[1])) \
+            ['      <keyword name="{0}" id="{1}" ref="{2}" />'.format(
+             html_encode(kw[0]), html_encode(kw[0]), html_encode(kw[1])) \
              for kw in self.keywords])
         
         helpAttribs = {
@@ -231,7 +232,7 @@ class QtHelpGenerator(object):
             "files" : files, 
         }
         
-        txt = self.__convertEol(HelpProject % helpAttribs, newline)
+        txt = self.__convertEol(HelpProject.format(**helpAttribs), newline)
         f = codecs.open(os.path.join(self.outputDir, HelpProjectFile), 'w', 'utf-8')
         f.write(txt)
         f.close()
@@ -242,7 +243,7 @@ class QtHelpGenerator(object):
                 "helpfile" : HelpHelpFile, 
             }
             
-            txt = self.__convertEol(HelpCollection % collectionAttribs, newline)
+            txt = self.__convertEol(HelpCollection.format(**collectionAttribs), newline)
             f = codecs.open(os.path.join(self.outputDir, HelpCollectionProjectFile), 
                             'w', 'utf-8')
             f.write(txt)

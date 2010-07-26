@@ -38,7 +38,7 @@ def getRegistryData():
         if ext.startswith("."):
             exts.append(ext)
         else:
-            exts.append(".%s" % ext)
+            exts.append(".{0}".format(ext))
     
     if exts:
         return ["Python3", ClientDefaultCapabilities, exts]
@@ -121,7 +121,7 @@ class DebuggerInterfacePython3(QObject):
         if environment is not None:
             env = []
             for key, value in list(environment.items()):
-                env.append("%s=%s" % (key, value))
+                env.append("{0}={1}".format(key, value))
             proc.setEnvironment(env)
         args = []
         for arg in arguments:
@@ -387,7 +387,7 @@ class DebuggerInterfacePython3(QObject):
         self.disconnect(self.qsock, SIGNAL('readyRead()'), self.__parseClientLine)
         
         # close down socket, and shut down client as well.
-        self.__sendCommand('%s\n' % RequestShutdown)
+        self.__sendCommand('{0}\n'.format(RequestShutdown))
         self.qsock.flush()
         
         self.qsock.close()
@@ -410,7 +410,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param env environment settings (dictionary)
         """
-        self.__sendCommand('%s%s\n' % (RequestEnv, str(env)))
+        self.__sendCommand('{0}{1}\n'.format(RequestEnv, str(env)))
     
     def remoteLoad(self, fn, argv, wd, traceInterpreter = False, autoContinue = True, 
                    autoFork = False, forkChild = False):
@@ -431,9 +431,9 @@ class DebuggerInterfacePython3(QObject):
         
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
-        self.__sendCommand('%s%s\n' % (RequestForkMode, repr((autoFork, forkChild))))
-        self.__sendCommand('%s%s|%s|%s|%d\n' % \
-            (RequestLoad, wd, fn, str(Utilities.parseOptionString(argv)), 
+        self.__sendCommand('{0}{1}\n'.format(RequestForkMode, repr((autoFork, forkChild))))
+        self.__sendCommand('{0}{1}|{2}|{3}|{4:d}\n'.format(
+            RequestLoad, wd, fn, str(Utilities.parseOptionString(argv)), 
              traceInterpreter))
     
     def remoteRun(self, fn, argv, wd, autoFork = False, forkChild = False):
@@ -448,9 +448,9 @@ class DebuggerInterfacePython3(QObject):
         """
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
-        self.__sendCommand('%s%s\n' % (RequestForkMode, repr((autoFork, forkChild))))
-        self.__sendCommand('%s%s|%s|%s\n' % \
-            (RequestRun, wd, fn, str(Utilities.parseOptionString(argv))))
+        self.__sendCommand('{0}{1}\n'.format(RequestForkMode, repr((autoFork, forkChild))))
+        self.__sendCommand('{0}{1}|{2}|{3}\n'.format(
+            RequestRun, wd, fn, str(Utilities.parseOptionString(argv))))
     
     def remoteCoverage(self, fn, argv, wd, erase = False):
         """
@@ -464,8 +464,8 @@ class DebuggerInterfacePython3(QObject):
         """
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
-        self.__sendCommand('%s%s@@%s@@%s@@%d\n' % \
-            (RequestCoverage, wd, fn, str(Utilities.parseOptionString(argv)),
+        self.__sendCommand('{0}{1}@@{2}@@{3}@@{4:d}\n'.format(
+            RequestCoverage, wd, fn, str(Utilities.parseOptionString(argv)),
              erase))
 
     def remoteProfile(self, fn, argv, wd, erase = False):
@@ -479,8 +479,8 @@ class DebuggerInterfacePython3(QObject):
         """
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
-        self.__sendCommand('%s%s|%s|%s|%d\n' % \
-            (RequestProfile, wd, fn, str(Utilities.parseOptionString(argv)), erase))
+        self.__sendCommand('{0}{1}|{2}|{3}|{4:d}\n'.format(
+            RequestProfile, wd, fn, str(Utilities.parseOptionString(argv)), erase))
 
     def remoteStatement(self, stmt):
         """
@@ -489,7 +489,7 @@ class DebuggerInterfacePython3(QObject):
         @param stmt the Python statement to execute (string). It
               should not have a trailing newline.
         """
-        self.__sendCommand('%s\n' % stmt)
+        self.__sendCommand('{0}\n'.format(stmt))
         self.__sendCommand(RequestOK + '\n')
 
     def remoteStep(self):
@@ -522,7 +522,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param special flag indicating a special continue operation
         """
-        self.__sendCommand('%s%d\n' % (RequestContinue, special))
+        self.__sendCommand('{0}{1:d}\n'.format(RequestContinue, special))
 
     def remoteBreakpoint(self, fn, line, set, cond = None, temp = False):
         """
@@ -535,8 +535,8 @@ class DebuggerInterfacePython3(QObject):
         @param temp flag indicating a temporary breakpoint (boolean)
         """
         fn = self.translate(fn, False)
-        self.__sendCommand('%s%s@@%d@@%d@@%d@@%s\n' % \
-                           (RequestBreak, fn, line, temp, set, cond))
+        self.__sendCommand('{0}{1}@@{2:d}@@{3:d}@@{4:d}@@{5}\n'.format(
+                           RequestBreak, fn, line, temp, set, cond))
     
     def remoteBreakpointEnable(self, fn, line, enable):
         """
@@ -547,7 +547,8 @@ class DebuggerInterfacePython3(QObject):
         @param enable flag indicating enabling or disabling a breakpoint (boolean)
         """
         fn = self.translate(fn, False)
-        self.__sendCommand('%s%s,%d,%d\n' % (RequestBreakEnable, fn, line, enable))
+        self.__sendCommand('{0}{1},{2:d},{3:d}\n'.format(
+            RequestBreakEnable, fn, line, enable))
     
     def remoteBreakpointIgnore(self, fn, line, count):
         """
@@ -558,7 +559,8 @@ class DebuggerInterfacePython3(QObject):
         @param count number of occurrences to ignore (int)
         """
         fn = self.translate(fn, False)
-        self.__sendCommand('%s%s,%d,%d\n' % (RequestBreakIgnore, fn, line, count))
+        self.__sendCommand('{0}{1},{2:d},{3:d}\n'.format(
+            RequestBreakIgnore, fn, line, count))
     
     def remoteWatchpoint(self, cond, set, temp = False):
         """
@@ -569,7 +571,7 @@ class DebuggerInterfacePython3(QObject):
         @param temp flag indicating a temporary watch expression (boolean)
         """
         # cond is combination of cond and special (s. watch expression viewer)
-        self.__sendCommand('%s%s@@%d@@%d\n' % (RequestWatch, cond, temp, set))
+        self.__sendCommand('{0}{1}@@{2:d}@@{3:d}\n'.format(RequestWatch, cond, temp, set))
     
     def remoteWatchpointEnable(self, cond, enable):
         """
@@ -579,7 +581,7 @@ class DebuggerInterfacePython3(QObject):
         @param enable flag indicating enabling or disabling a watch expression (boolean)
         """
         # cond is combination of cond and special (s. watch expression viewer)
-        self.__sendCommand('%s%s,%d\n' % (RequestWatchEnable, cond, enable))
+        self.__sendCommand('{0}{1},{2:d}\n'.format(RequestWatchEnable, cond, enable))
     
     def remoteWatchpointIgnore(self, cond, count):
         """
@@ -589,7 +591,7 @@ class DebuggerInterfacePython3(QObject):
         @param count number of occurrences to ignore (int)
         """
         # cond is combination of cond and special (s. watch expression viewer)
-        self.__sendCommand('%s%s,%d\n' % (RequestWatchIgnore, cond, count))
+        self.__sendCommand('{0}{1},{2:d}\n'.format(RequestWatchIgnore, cond, count))
     
     def remoteRawInput(self,s):
         """
@@ -603,7 +605,7 @@ class DebuggerInterfacePython3(QObject):
         """
         Public method to request the list of threads from the client.
         """
-        self.__sendCommand('%s\n' % RequestThreadList)
+        self.__sendCommand('{0}\n'.format(RequestThreadList))
         
     def remoteSetThread(self, tid):
         """
@@ -611,7 +613,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param tid id of the thread (integer)
         """
-        self.__sendCommand('%s%d\n' % (RequestThreadSet, tid))
+        self.__sendCommand('{0}{1:d}\n'.format(RequestThreadSet, tid))
         
     def remoteClientVariables(self, scope, filter, framenr = 0):
         """
@@ -621,8 +623,8 @@ class DebuggerInterfacePython3(QObject):
         @param filter list of variable types to filter out (list of int)
         @param framenr framenumber of the variables to retrieve (int)
         """
-        self.__sendCommand('%s%d, %d, %s\n' % \
-            (RequestVariables, framenr, scope, str(filter)))
+        self.__sendCommand('{0}{1:d}, {2:d}, {3}\n'.format(
+            RequestVariables, framenr, scope, str(filter)))
     
     def remoteClientVariable(self, scope, filter, var, framenr = 0):
         """
@@ -633,8 +635,8 @@ class DebuggerInterfacePython3(QObject):
         @param var list encoded name of variable to retrieve (string)
         @param framenr framenumber of the variables to retrieve (int)
         """
-        self.__sendCommand('%s%s, %d, %d, %s\n' % \
-            (RequestVariable, str(var), framenr, scope, str(filter)))
+        self.__sendCommand('{0}{1}, {2:d}, {3:d}, {4}\n'.format(
+            RequestVariable, str(var), framenr, scope, str(filter)))
     
     def remoteClientSetFilter(self, scope, filter):
         """
@@ -643,7 +645,7 @@ class DebuggerInterfacePython3(QObject):
         @param scope the scope of the variables (0 = local, 1 = global)
         @param filter regexp string for variable names to filter out (string)
         """
-        self.__sendCommand('%s%d, "%s"\n' % (RequestSetFilter, scope, filter))
+        self.__sendCommand('{0}{1:d}, "{2}"\n'.format(RequestSetFilter, scope, filter))
     
     def remoteEval(self, arg):
         """
@@ -651,7 +653,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param arg the arguments to evaluate (string)
         """
-        self.__sendCommand('%s%s\n' % (RequestEval, arg))
+        self.__sendCommand('{0}{1}\n'.format(RequestEval, arg))
     
     def remoteExec(self, stmt):
         """
@@ -659,7 +661,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param stmt statement to execute (string)
         """
-        self.__sendCommand('%s%s\n' % (RequestExec, stmt))
+        self.__sendCommand('{0}{1}\n'.format(RequestExec, stmt))
     
     def remoteBanner(self):
         """
@@ -680,7 +682,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param text the text to be completed (string)
         """
-        self.__sendCommand("%s%s\n" % (RequestCompletion, text))
+        self.__sendCommand("{0}{1}\n".format(RequestCompletion, text))
     
     def remoteUTPrepare(self, fn, tn, tfn, cov, covname, coverase):
         """
@@ -695,20 +697,20 @@ class DebuggerInterfacePython3(QObject):
         @param coverase flag indicating erasure of coverage data is requested
         """
         fn = self.translate(os.path.abspath(fn), False)
-        self.__sendCommand('%s%s|%s|%s|%d|%s|%d\n' % \
-            (RequestUTPrepare, fn, tn, tfn, cov, covname, coverase))
+        self.__sendCommand('{0}{1}|{2}|{3}|{4:d}|{5}|{6:d}\n'.format(
+            RequestUTPrepare, fn, tn, tfn, cov, covname, coverase))
     
     def remoteUTRun(self):
         """
         Public method to start a unittest run.
         """
-        self.__sendCommand('%s\n' % RequestUTRun)
+        self.__sendCommand('{0}\n'.format(RequestUTRun))
     
     def remoteUTStop(self):
         """
         Public method to stop a unittest run.
         """
-        self.__sendCommand('%s\n' % RequestUTStop)
+        self.__sendCommand('{0}\n'.format(RequestUTStop))
     
     def __askForkTo(self):
         """

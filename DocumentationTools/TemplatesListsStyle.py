@@ -16,9 +16,9 @@ headerTemplate = \
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>%%(Title)s</title>
+<title>{{Title}}</title>
 </head>
-<body style="background-color:%(BodyBgColor)s;color:%(BodyColor)s">'''
+<body style="background-color:{BodyBgColor};color:{BodyColor}">'''
 
 footerTemplate = '''
 </body></html>'''
@@ -29,104 +29,104 @@ footerTemplate = '''
 
 moduleTemplate = \
 '''<a NAME="top" ID="top"></a>
-<h1 style="background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s">%%(Module)s</h1>
-%%(ModuleDescription)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Global Attributes</h3>
-%%(GlobalsList)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Classes</h3>
-%%(ClassList)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Functions</h3>
-%%(FunctionList)s
+<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">{{Module}}</h1>
+{{ModuleDescription}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Global Attributes</h3>
+{{GlobalsList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Classes</h3>
+{{ClassList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Functions</h3>
+{{FunctionList}}
 <hr />'''
 
 rbFileTemplate = \
 '''<a NAME="top" ID="top"></a>
-<h1 style="background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s">%%(Module)s</h1>
-%%(ModuleDescription)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Global Attributes</h3>
-%%(GlobalsList)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Classes</h3>
-%%(ClassList)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Modules</h3>
-%%(RbModulesList)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Functions</h3>
-%%(FunctionList)s
+<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">{{Module}}</h1>
+{{ModuleDescription}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Global Attributes</h3>
+{{GlobalsList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Classes</h3>
+{{ClassList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Modules</h3>
+{{RbModulesList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Functions</h3>
+{{FunctionList}}
 <hr />'''
 
 classTemplate = \
 '''<hr />
-<a NAME="%%(Anchor)s" ID="%%(Anchor)s"></a>
-<h2 style="background-color:%(CFBgColor)s;color:%(CFColor)s">%%(Class)s</h2>
-%%(ClassDescription)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Derived from</h3>
-%%(ClassSuper)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Class Attributes</h3>
-%%(GlobalsList)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Methods</h3>
-%%(MethodList)s
-%%(MethodDetails)s
-<div align="right"><a style="color:%(LinkColor)s" href="#top">Up</a></div>
+<a NAME="{{Anchor}}" ID="{{Anchor}}"></a>
+<h2 style="background-color:{CFBgColor};color:{CFColor}">{{Class}}</h2>
+{{ClassDescription}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Derived from</h3>
+{{ClassSuper}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Class Attributes</h3>
+{{GlobalsList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Methods</h3>
+{{MethodList}}
+{{MethodDetails}}
+<div align="right"><a style="color:{LinkColor}" href="#top">Up</a></div>
 <hr />'''
 
 methodTemplate = \
-'''<a NAME="%%(Anchor)s.%%(Method)s" ID="%%(Anchor)s.%%(Method)s"></a>
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">%%(Class)s.%%(Method)s</h3>
-<b>%%(Method)s</b>(<i>%%(Params)s</i>)
-%%(MethodDescription)s'''
+'''<a NAME="{{Anchor}}.{{Method}}" ID="{{Anchor}}.{{Method}}"></a>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">{{Class}}.{{Method}}</h3>
+<b>{{Method}}</b>(<i>{{Params}}</i>)
+{{MethodDescription}}'''
 
 constructorTemplate = \
-'''<a NAME="%%(Anchor)s.%%(Method)s" ID="%%(Anchor)s.%%(Method)s"></a>
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">%%(Class)s (Constructor)</h3>
-<b>%%(Class)s</b>(<i>%%(Params)s</i>)
-%%(MethodDescription)s'''
+'''<a NAME="{{Anchor}}.{{Method}}" ID="{{Anchor}}.{{Method}}"></a>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">{{Class}} (Constructor)</h3>
+<b>{{Class}}</b>(<i>{{Params}}</i>)
+{{MethodDescription}}'''
 
 rbModuleTemplate = \
 '''<hr />
-<a NAME="%%(Anchor)s" ID="%%(Anchor)s"></a>
-<h2 style="background-color:%(CFBgColor)s;color:%(CFColor)s">%%(Module)s</h2>
-%%(ModuleDescription)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Module Attributes</h3>
-%%(GlobalsList)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Classes</h3>
-%%(ClassesList)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Functions</h3>
-%%(FunctionsList)s
+<a NAME="{{Anchor}}" ID="{{Anchor}}"></a>
+<h2 style="background-color:{CFBgColor};color:{CFColor}">{{Module}}</h2>
+{{ModuleDescription}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Module Attributes</h3>
+{{GlobalsList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Classes</h3>
+{{ClassesList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Functions</h3>
+{{FunctionsList}}
 <hr />
-%%(ClassesDetails)s
-%%(FunctionsDetails)s
-<div align="right"><a style="color:%(LinkColor)s" href="#top">Up</a></div>
+{{ClassesDetails}}
+{{FunctionsDetails}}
+<div align="right"><a style="color:{LinkColor}" href="#top">Up</a></div>
 <hr />'''
 
 rbModulesClassTemplate = \
-'''<a NAME="%%(Anchor)s" ID="%%(Anchor)s"></a>
-<h2 style="background-color:%(CFBgColor)s;color:%(CFColor)s">%%(Class)s</h2>
-%%(ClassDescription)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Derived from</h3>
-%%(ClassSuper)s
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Methods</h3>
-%%(MethodList)s
-%%(MethodDetails)s
-<div align="right"><a style="color:%(LinkColor)s" href="#top">Up</a></div>
+'''<a NAME="{{Anchor}}" ID="{{Anchor}}"></a>
+<h2 style="background-color:{CFBgColor};color:{CFColor}">{{Class}}</h2>
+{{ClassDescription}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Derived from</h3>
+{{ClassSuper}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Methods</h3>
+{{MethodList}}
+{{MethodDetails}}
+<div align="right"><a style="color:{LinkColor}" href="#top">Up</a></div>
 <hr />'''
 
 functionTemplate = \
 '''<hr />
-<a NAME="%%(Anchor)s" ID="%%(Anchor)s"></a>
-<h2 style="background-color:%(CFBgColor)s;color:%(CFColor)s">%%(Function)s</h2>
-<b>%%(Function)s</b>(<i>%%(Params)s</i>)
-%%(FunctionDescription)s
-<div align="right"><a style="color:%(LinkColor)s" href="#top">Up</a></div>
+<a NAME="{{Anchor}}" ID="{{Anchor}}"></a>
+<h2 style="background-color:{CFBgColor};color:{CFColor}">{{Function}}</h2>
+<b>{{Function}}</b>(<i>{{Params}}</i>)
+{{FunctionDescription}}
+<div align="right"><a style="color:{LinkColor}" href="#top">Up</a></div>
 <hr />'''
 
 listTemplate = \
 '''<table>
-%%(Entries)s
+{{Entries}}
 </table>'''
 
 listEntryTemplate = \
 '''<tr>
-<td><a style="color:%(LinkColor)s" href="#%%(Link)s">%%(Name)s</a></td>
-<td>%%(Deprecated)s%%(Description)s</td>
+<td><a style="color:{LinkColor}" href="#{{Link}}">{{Name}}</a></td>
+<td>{{Deprecated}}{{Description}}</td>
 </tr>'''
 
 listEntryNoneTemplate = \
@@ -136,22 +136,22 @@ listEntryDeprecatedTemplate = \
 '''<b>Deprecated.</b>'''
 
 listEntrySimpleTemplate = \
-'''<tr><td>%%(Name)s</td></tr>'''
+'''<tr><td>{{Name}}</td></tr>'''
 
 paragraphTemplate = \
 '''<p>
-%%(Lines)s
+{{Lines}}
 </p>'''
 
 parametersListTemplate = \
 '''<dl>
-%%(Parameters)s
+{{Parameters}}
 </dl>'''
 
 parametersListEntryTemplate = \
-'''<dt><i>%%(Name)s</i></dt>
+'''<dt><i>{{Name}}</i></dt>
 <dd>
-%%(Description)s
+{{Description}}
 </dd>'''
 
 returnsTemplate = \
@@ -164,68 +164,68 @@ returnsTemplate = \
 
 exceptionsListTemplate = \
 '''<dl>
-%%(Exceptions)s
+{{Exceptions}}
 </dl>'''
 
 exceptionsListEntryTemplate = \
-'''<dt>Raises <b>%%(Name)s</b>:</dt>
+'''<dt>Raises <b>{{Name}}</b>:</dt>
 <dd>
-%%(Description)s
+{{Description}}
 </dd>'''
 
 signalsListTemplate = \
 '''<h4>Signals</h4>
 <dl>
-%%(Signals)s
+{{Signals}}
 </dl>'''
 
 signalsListEntryTemplate = \
-'''<dt>%%(Name)s</dt>
+'''<dt>{{Name}}</dt>
 <dd>
-%%(Description)s
+{{Description}}
 </dd>'''
 
 eventsListTemplate = \
 '''<h4>Events</h4>
 <dl>
-%%(Events)s
+{{Events}}
 </dl>'''
 
 eventsListEntryTemplate = \
-'''<dt>%%(Name)s</dt>
+'''<dt>{{Name}}</dt>
 <dd>
-%%(Description)s
+{{Description}}
 </dd>'''
 
 deprecatedTemplate = \
 '''<p>
 <b>Deprecated.</b>
-%%(Lines)s
+{{Lines}}
 </p>'''
 
 authorInfoTemplate = \
 '''<p>
 <i>Author(s)</i>:
-%%(Authors)s
+{{Authors}}
 </p>'''
 
 seeListTemplate = \
 '''<dl>
 <dt><b>See Also:</b></dt>
-%%(Links)s
+{{Links}}
 </dl>'''
 
 seeListEntryTemplate = \
 '''<dd>
-%%(Link)s
+{{Link}}
 </dd>'''
 
 seeLinkTemplate = \
-'''<a style="color:%(LinkColor)s" %%(Link)s'''
+'''<a style="color:{LinkColor}" {{Link}}'''
 
 sinceInfoTemplate = \
 '''<p>
-<b>since</b> %%(Info)s
+<b>since</b> {{Info}}
 </p>'''
 
 #################################
@@ -233,25 +233,25 @@ sinceInfoTemplate = \
 #################################
 
 indexBodyTemplate = '''
-<h1 style="background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s">%%(Title)s</h1>
-%%(Description)s
-%%(Subpackages)s
-%%(Modules)s'''
+<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">{{Title}}</h1>
+{{Description}}
+{{Subpackages}}
+{{Modules}}'''
 
 indexListPackagesTemplate = '''
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Packages</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Packages</h3>
 <table>
-%%(Entries)s
+{{Entries}}
 </table>'''
 
 indexListModulesTemplate = '''
-<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">Modules</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Modules</h3>
 <table>
-%%(Entries)s
+{{Entries}}
 </table>'''
 
 indexListEntryTemplate = \
 '''<tr>
-<td><a style="color:%(LinkColor)s" href="%%(Link)s">%%(Name)s</a></td>
-<td>%%(Description)s</td>
+<td><a style="color:{LinkColor}" href="{{Link}}">{{Name}}</a></td>
+<td>{{Description}}</td>
 </tr>'''

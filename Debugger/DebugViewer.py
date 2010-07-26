@@ -331,7 +331,7 @@ class DebugViewer(QWidget):
         for s in stack:
             # just show base filename to make it readable
             s = (os.path.basename(s[0]), s[1], s[2])
-            self.stackComboBox.addItem('%s:%s:%s' % s)
+            self.stackComboBox.addItem('{0}:{1}:{2}'.format(*s))
         
     def setVariablesFilter(self, globalsFilter, localsFilter):
         """
@@ -411,7 +411,7 @@ class DebugViewer(QWidget):
             else:
                 state = self.trUtf8("running")
             itm = QTreeWidgetItem(self.__threadList, 
-                                  ["%d" % thread['id'], thread['name'], state])
+                                  ["{0:d}".format(thread['id']), thread['name'], state])
             if thread['id'] == currentID:
                 citm = itm
         

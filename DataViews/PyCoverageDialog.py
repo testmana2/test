@@ -92,9 +92,9 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             """
             start, end = pair
             if start == end:
-                return "%d" % start
+                return "{0:d}".format(start)
             else:
-                return "%d-%d" % (start, end)
+                return "{0:d}-{1:d}".format(start, end)
         
         return ", ".join(map(stringify, pairs))
     
@@ -113,7 +113,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             file, 
             str(statements), 
             str(executed),
-            "%d%%" % coverage, 
+            "{0:d}%".format(coverage), 
             excluded, 
             missing
         ])
@@ -133,7 +133,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         
         self.basename = os.path.splitext(cfn)[0]
         
-        self.cfn = "%s.coverage" % self.basename
+        self.cfn = "{0}.coverage".format(self.basename)
         
         if isinstance(fn, list):
             files = fn
@@ -204,7 +204,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             itm = QTreeWidgetItem(self.summaryList, [
                 str(total_statements), 
                 str(total_executed),
-                "%d%%" % pc
+                "{0:d}%".format(pc)
             ])
             for col in range(0, 3):
                 itm.setTextAlignment(col, Qt.AlignRight)

@@ -16,9 +16,9 @@ headerTemplate = \
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>%(Title)s</title>
+<title>{Title}</title>
 <style>
-%(Style)s
+{Style}
 </style>
 </head>
 <body>'''
@@ -32,104 +32,104 @@ footerTemplate = '''
 
 moduleTemplate = \
 '''<a NAME="top" ID="top"></a>
-<h1>%(Module)s</h1>
-%(ModuleDescription)s
+<h1>{Module}</h1>
+{ModuleDescription}
 <h3>Global Attributes</h3>
-%(GlobalsList)s
+{GlobalsList}
 <h3>Classes</h3>
-%(ClassList)s
+{ClassList}
 <h3>Functions</h3>
-%(FunctionList)s
+{FunctionList}
 <hr />'''
 
 rbFileTemplate = \
 '''<a NAME="top" ID="top"></a>
-<h1>%(Module)s</h1>
-%(ModuleDescription)s
+<h1>{Module}</h1>
+{ModuleDescription}
 <h3>Global Attributes</h3>
-%(GlobalsList)s
+{GlobalsList}
 <h3>Classes</h3>
-%(ClassList)s
+{ClassList}
 <h3>Modules</h3>
-%(RbModulesList)s
+{RbModulesList}
 <h3>Functions</h3>
-%(FunctionList)s
+{FunctionList}
 <hr />'''
 
 classTemplate = \
 '''<hr />
-<a NAME="%(Anchor)s" ID="%(Anchor)s"></a>
-<h2>%(Class)s</h2>
-%(ClassDescription)s
+<a NAME="{Anchor}" ID="{Anchor}"></a>
+<h2>{Class}</h2>
+{ClassDescription}
 <h3>Derived from</h3>
-%(ClassSuper)s
+{ClassSuper}
 <h3>Class Attributes</h3>
-%(GlobalsList)s
+{GlobalsList}
 <h3>Methods</h3>
-%(MethodList)s
-%(MethodDetails)s
+{MethodList}
+{MethodDetails}
 <div align="right"><a href="#top">Up</a></div>
 <hr />'''
 
 methodTemplate = \
-'''<a NAME="%(Anchor)s.%(Method)s" ID="%(Anchor)s.%(Method)s"></a>
-<h4>%(Class)s.%(Method)s</h4>
-<b>%(Method)s</b>(<i>%(Params)s</i>)
-%(MethodDescription)s'''
+'''<a NAME="{Anchor}.{Method}" ID="{Anchor}.{Method}"></a>
+<h4>{Class}.{Method}</h4>
+<b>{Method}</b>(<i>{Params}</i>)
+{MethodDescription}'''
 
 constructorTemplate = \
-'''<a NAME="%(Anchor)s.%(Method)s" ID="%(Anchor)s.%(Method)s"></a>
-<h4>%(Class)s (Constructor)</h4>
-<b>%(Class)s</b>(<i>%(Params)s</i>)
-%(MethodDescription)s'''
+'''<a NAME="{Anchor}.{Method}" ID="{Anchor}.{Method}"></a>
+<h4>{Class} (Constructor)</h4>
+<b>{Class}</b>(<i>{Params}</i>)
+{MethodDescription}'''
 
 rbModuleTemplate = \
 '''<hr />
-<a NAME="%(Anchor)s" ID="%(Anchor)s"></a>
-<h2>%(Module)s</h2>
-%(ModuleDescription)s
+<a NAME="{Anchor}" ID="{Anchor}"></a>
+<h2>{Module}</h2>
+{ModuleDescription}
 <h3>Module Attributes</h3>
-%(GlobalsList)s
+{GlobalsList}
 <h3>Classes</h3>
-%(ClassesList)s
+{ClassesList}
 <h3>Functions</h3>
-%(FunctionsList)s
+{FunctionsList}
 <hr />
-%(ClassesDetails)s
-%(FunctionsDetails)s
+{ClassesDetails}
+{FunctionsDetails}
 <div align="right"><a href="#top">Up</a></div>
 <hr />'''
 
 rbModulesClassTemplate = \
-'''<a NAME="%(Anchor)s" ID="%(Anchor)s"></a>
-<h2>%(Class)s</h2>
-%(ClassDescription)s
+'''<a NAME="{Anchor}" ID="{Anchor}"></a>
+<h2>{Class}</h2>
+{ClassDescription}
 <h3>Derived from</h3>
-%(ClassSuper)s
+{ClassSuper}
 <h3>Methods</h3>
-%(MethodList)s
-%(MethodDetails)s
+{MethodList}
+{MethodDetails}
 <div align="right"><a href="#top">Up</a></div>
 <hr />'''
 
 functionTemplate = \
 '''<hr />
-<a NAME="%(Anchor)s" ID="%(Anchor)s"></a>
-<h2>%(Function)s</h2>
-<b>%(Function)s</b>(<i>%(Params)s</i>)
-%(FunctionDescription)s
+<a NAME="{Anchor}" ID="{Anchor}"></a>
+<h2>{Function}</h2>
+<b>{Function}</b>(<i>{Params}</i>)
+{FunctionDescription}
 <div align="right"><a href="#top">Up</a></div>
 <hr />'''
 
 listTemplate = \
 '''<table>
-%(Entries)s
+{Entries}
 </table>'''
 
 listEntryTemplate = \
 '''<tr>
-<td><a href="#%(Link)s">%(Name)s</a></td>
-<td>%(Deprecated)s%(Description)s</td>
+<td><a href="#{Link}">{Name}</a></td>
+<td>{Deprecated}{Description}</td>
 </tr>'''
 
 listEntryNoneTemplate = \
@@ -139,22 +139,22 @@ listEntryDeprecatedTemplate = \
 '''<b>Deprecated.</b>'''
 
 listEntrySimpleTemplate = \
-'''<tr><td>%(Name)s</td></tr>'''
+'''<tr><td>{Name}</td></tr>'''
 
 paragraphTemplate = \
 '''<p>
-%(Lines)s
+{Lines}
 </p>'''
 
 parametersListTemplate = \
 '''<dl>
-%(Parameters)s
+{Parameters}
 </dl>'''
 
 parametersListEntryTemplate = \
-'''<dt><i>%(Name)s</i></dt>
+'''<dt><i>{Name}</i></dt>
 <dd>
-%(Description)s
+{Description}
 </dd>'''
 
 returnsTemplate = \
@@ -167,68 +167,68 @@ returnsTemplate = \
 
 exceptionsListTemplate = \
 '''<dl>
-%(Exceptions)s
+{Exceptions}
 </dl>'''
 
 exceptionsListEntryTemplate = \
-'''<dt>Raises <b>%(Name)s</b>:</dt>
+'''<dt>Raises <b>{Name}</b>:</dt>
 <dd>
-%(Description)s
+{Description}
 </dd>'''
 
 signalsListTemplate = \
 '''<h4>Signals</h4>
 <dl>
-%(Signals)s
+{Signals}
 </dl>'''
 
 signalsListEntryTemplate = \
-'''<dt>%(Name)s</dt>
+'''<dt>{Name}</dt>
 <dd>
-%(Description)s
+{Description}
 </dd>'''
 
 eventsListTemplate = \
 '''<h4>Events</h4>
 <dl>
-%(Events)s
+{Events}
 </dl>'''
 
 eventsListEntryTemplate = \
-'''<dt>%(Name)s</dt>
+'''<dt>{Name}</dt>
 <dd>
-%(Description)s
+{Description}
 </dd>'''
 
 deprecatedTemplate = \
 '''<p>
 <b>Deprecated.</b>
-%(Lines)s
+{Lines}
 </p>'''
 
 authorInfoTemplate = \
 '''<p>
 <i>Author(s)</i>:
-%(Authors)s
+{Authors}
 </p>'''
 
 seeListTemplate = \
 '''<dl>
 <dt><b>See Also:</b></dt>
-%(Links)s
+{Links}
 </dl>'''
 
 seeListEntryTemplate = \
 '''<dd>
-%(Link)s
+{Link}
 </dd>'''
 
 seeLinkTemplate = \
-'''<a %(Link)s'''
+'''<a {Link}'''
 
 sinceInfoTemplate = \
 '''<p>
-<b>since</b> %(Info)s
+<b>since</b> {Info}
 </p>'''
 
 #################################
@@ -236,25 +236,25 @@ sinceInfoTemplate = \
 #################################
 
 indexBodyTemplate = '''
-<h1>%(Title)s</h1>
-%(Description)s
-%(Subpackages)s
-%(Modules)s'''
+<h1>{Title}</h1>
+{Description}
+{Subpackages}
+{Modules}'''
 
 indexListPackagesTemplate = '''
 <h3>Packages</h3>
 <table>
-%(Entries)s
+{Entries}
 </table>'''
 
 indexListModulesTemplate = '''
 <h3>Modules</h3>
 <table>
-%(Entries)s
+{Entries}
 </table>'''
 
 indexListEntryTemplate = \
 '''<tr>
-<td><a href="%(Link)s">%(Name)s</a></td>
-<td>%(Description)s</td>
+<td><a href="{Link}">{Name}</a></td>
+<td>{Description}</td>
 </tr>'''

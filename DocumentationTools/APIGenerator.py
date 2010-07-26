@@ -39,7 +39,7 @@ class APIGenerator(object):
             del modulePath[-1]
         if basePackage:
             modulePath[0] = basePackage
-        self.moduleName = "%s." % '.'.join(modulePath)
+        self.moduleName = "{0}.".format('.'.join(modulePath))
         self.api = []
         self.__addGlobalsAPI()
         self.__addClassesAPI()
@@ -60,7 +60,7 @@ class APIGenerator(object):
         """
         Private method to generate the api section for global variables. 
         """
-        moduleNameStr = "%s" % self.moduleName
+        moduleNameStr = "{0}".format(self.moduleName)
         
         for globalName in sorted(self.module.globals.keys()):
             if not self.__isPrivate(self.module.globals[globalName]):
@@ -70,7 +70,7 @@ class APIGenerator(object):
                     id = Editor.AttributeProtectedID
                 else:
                     id = Editor.AttributePrivateID
-                self.api.append("%s%s?%d" % (moduleNameStr, globalName, id))
+                self.api.append("{0}{1}?{2:d}".format(moduleNameStr, globalName, id))
         
     def __addClassesAPI(self):
         """
@@ -98,11 +98,11 @@ class APIGenerator(object):
                 id = Editor.ClassProtectedID
             else:
                 id = Editor.ClassPrivateID
-            self.api.append('%s%s?%d(%s)' % \
-                (self.moduleName, _class.name, id, 
+            self.api.append('{0}{1}?{2:d}({3})'.format(
+                self.moduleName, _class.name, id, 
                  ', '.join(_class.methods['__init__'].parameters[1:])))
             
-        classNameStr = "%s%s." % (self.moduleName, className)
+        classNameStr = "{0}{1}.".format(self.moduleName, className)
         for method in methods:
             if not self.__isPrivate(_class.methods[method]): 
                 if _class.methods[method].isPublic():
@@ -111,8 +111,8 @@ class APIGenerator(object):
                     id = Editor.MethodProtectedID
                 else:
                     id = Editor.MethodPrivateID
-                self.api.append('%s%s?%d(%s)' % \
-                    (classNameStr, method, id, 
+                self.api.append('{0}{1}?{2:d}({3})'.format(
+                    classNameStr, method, id, 
                      ', '.join(_class.methods[method].parameters[1:])))
         
     def __addClassVariablesAPI(self, className):
@@ -122,7 +122,7 @@ class APIGenerator(object):
         @param classname Name of the class containing the class variables. (string)
         """
         _class = self.module.classes[className]
-        classNameStr = "%s%s." % (self.moduleName, className)
+        classNameStr = "{0}{1}.".format(self.moduleName, className)
         for variable in sorted(_class.globals.keys()):
             if not self.__isPrivate(_class.globals[variable]): 
                 if _class.globals[variable].isPublic():
@@ -131,7 +131,7 @@ class APIGenerator(object):
                     id = Editor.AttributeProtectedID
                 else:
                     id = Editor.AttributePrivateID
-                self.api.append('%s%s?%d' % (classNameStr, variable, id))
+                self.api.append('{0}{1}?{2:d}'.format(classNameStr, variable, id))
         
     def __addFunctionsAPI(self):
         """
@@ -146,6 +146,6 @@ class APIGenerator(object):
                     id = Editor.MethodProtectedID
                 else:
                     id = Editor.MethodPrivateID
-                self.api.append('%s%s?%d(%s)' % \
-                    (self.moduleName, self.module.functions[funcName].name, id, 
+                self.api.append('{0}{1}?{2:d}({3})'.format(
+                    self.moduleName, self.module.functions[funcName].name, id, 
                      ', '.join(self.module.functions[funcName].parameters)))

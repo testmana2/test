@@ -1485,7 +1485,7 @@ class DebugClientBase(object):
             varlist.append(("user", "str", "{0}".format(value.userName())))
             varlist.append(("password", "str", "{0}".format(value.password())))
             varlist.append(("host", "str", "{0}".format(value.host())))
-            varlist.append(("port", "int", "%d" % value.port()))
+            varlist.append(("port", "int", "{0:d}".format(value.port())))
             varlist.append(("path", "str", "{0}".format(value.path())))
         elif qttype == 'QModelIndex':
             varlist.append(("valid", "bool", "{0}".format(value.isValid())))
