@@ -161,7 +161,7 @@ returnsTemplate = \
 '''<dl>
 <dt>Returns:</dt>
 <dd>
-%s
+{0}
 </dd>
 </dl>'''
 
