@@ -48,7 +48,7 @@ class XMLWriterBase(object):
         @param s string to be written to the XML file
         @param newline flag indicating a linebreak
         """
-        self.pf.write("%s%s" % (s, 
+        self.pf.write("{0}{1}".format(s, 
             newline and "\n" or ""))
         
     def writeXML(self):
@@ -104,7 +104,7 @@ class XMLWriterBase(object):
         @param value value to be dumped (None) (ignored)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<none />' % ("  " * indent))
+        self._write('{0}<none />'.format("  " * indent))
         
     def _write_int(self, value, indent):
         """
@@ -113,7 +113,7 @@ class XMLWriterBase(object):
         @param value value to be dumped (integer)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<int>%s</int>' % ("  " * indent, value))
+        self._write('{0}<int>{1}</int>'.format("  " * indent, value))
         
     def _write_bool(self, value, indent):
         """
@@ -122,7 +122,7 @@ class XMLWriterBase(object):
         @param value value to be dumped (boolean)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<bool>%s</bool>' % ("  " * indent, value))
+        self._write('{0}<bool>{1}</bool>'.format("  " * indent, value))
         
     def _write_float(self, value, indent):
         """
@@ -131,7 +131,7 @@ class XMLWriterBase(object):
         @param value value to be dumped (float)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<float>%s</float>' % ("  " * indent, value))
+        self._write('{0}<float>{1}</float>'.format("  " * indent, value))
         
     def _write_complex(self, value, indent):
         """
@@ -140,8 +140,8 @@ class XMLWriterBase(object):
         @param value value to be dumped (complex)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<complex>%s %s</complex>' % \
-            ("  " * indent, value.real, value.imag))
+        self._write('{0}<complex>{1} {2}</complex>'.format(
+            "  " * indent, value.real, value.imag))
         
     def _write_string(self, value, indent):
         """
@@ -150,7 +150,7 @@ class XMLWriterBase(object):
         @param value value to be dumped (string)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<string>%s</string>' % ("  " * indent, self.escape(value)))
+        self._write('{0}<string>{1}</string>'.format("  " * indent, self.escape(value)))
         
     def _write_bytes(self, value, indent):
         """
@@ -159,8 +159,8 @@ class XMLWriterBase(object):
         @param value value to be dumped (bytes)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<bytes>%s</bytes>' % (
-            " " * indent, ",".join(["%d" % b for b in value])))
+        self._write('{0}<bytes>{1}</bytes>'.format(
+            " " * indent, ",".join(["{0:d}".format(b) for b in value])))
         
     def _write_bytearray(self, value, indent):
         """
@@ -169,8 +169,8 @@ class XMLWriterBase(object):
         @param value value to be dumped (bytearray)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<bytearray>%s</bytearray>' % (
-            " " * indent, ",".join(["%d" % b for b in value])))
+        self._write('{0}<bytearray>{1}</bytearray>'.format(
+            " " * indent, ",".join(["{0:d}".format(b) for b in value])))
         
     def _write_tuple(self, value, indent):
         """
@@ -179,11 +179,11 @@ class XMLWriterBase(object):
         @param value value to be dumped (tuple)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<tuple>' % ("  " * indent))
+        self._write('{0}<tuple>'.format("  " * indent))
         nindent = indent + 1
         for elem in value:
             self._writeBasics(elem, nindent)
-        self._write('%s</tuple>' % ("  " * indent))
+        self._write('{0}</tuple>'.format("  " * indent))
         
     def _write_list(self, value, indent):
         """
@@ -192,11 +192,11 @@ class XMLWriterBase(object):
         @param value value to be dumped (list)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<list>' % ("  " * indent))
+        self._write('{0}<list>'.format("  " * indent))
         nindent = indent + 1
         for elem in value:
             self._writeBasics(elem, nindent)
-        self._write('%s</list>' % ("  " * indent))
+        self._write('{0}</list>'.format("  " * indent))
         
     def _write_dictionary(self, value, indent):
         """
@@ -205,18 +205,18 @@ class XMLWriterBase(object):
         @param value value to be dumped (dictionary)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<dict>' % ("  " * indent))
+        self._write('{0}<dict>'.format("  " * indent))
         nindent1 = indent + 1
         nindent2 = indent + 2
         keys = sorted(list(value.keys()))
         for key in keys:
-            self._write('%s<key>' % ("  " * nindent1))
+            self._write('{0}<key>'.format("  " * nindent1))
             self._writeBasics(key, nindent2)
-            self._write('%s</key>' % ("  " * nindent1))
-            self._write('%s<value>' % ("  " * nindent1))
+            self._write('{0}</key>'.format("  " * nindent1))
+            self._write('{0}<value>'.format("  " * nindent1))
             self._writeBasics(value[key], nindent2)
-            self._write('%s</value>' % ("  " * nindent1))
-        self._write('%s</dict>' % ("  " * indent))
+            self._write('{0}</value>'.format("  " * nindent1))
+        self._write('{0}</dict>'.format("  " * indent))
         
     def _write_set(self, value, indent):
         """
@@ -225,11 +225,11 @@ class XMLWriterBase(object):
         @param value value to be dumped (set)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<set>' % ("  " * indent))
+        self._write('{0}<set>'.format("  " * indent))
         nindent = indent + 1
         for elem in value:
             self._writeBasics(elem, nindent)
-        self._write('%s</set>' % ("  " * indent))
+        self._write('{0}</set>'.format("  " * indent))
         
     def _write_frozenset(self, value, indent):
         """
@@ -238,11 +238,11 @@ class XMLWriterBase(object):
         @param value value to be dumped (frozenset)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<frozenset>' % ("  " * indent))
+        self._write('{0}<frozenset>'.format("  " * indent))
         nindent = indent + 1
         for elem in value:
             self._writeBasics(elem, nindent)
-        self._write('%s</frozenset>' % ("  " * indent))
+        self._write('{0}</frozenset>'.format("  " * indent))
         
     def _write_unimplemented(self, value, indent):
         """
@@ -251,5 +251,5 @@ class XMLWriterBase(object):
         @param value value to be dumped (any pickleable object)
         @param indent indentation level for prettier output (integer)
         """
-        self._write('%s<pickle method="pickle" encoding="base64">%s</pickle>' % \
-            ("  " * indent, str(base64.b64encode(pickle.dumps(value)), "ASCII")))
+        self._write('{0}<pickle method="pickle" encoding="base64">{1}</pickle>'.format(
+            "  " * indent, str(base64.b64encode(pickle.dumps(value)), "ASCII")))

@@ -32,30 +32,30 @@ class TemplatesWriter(XMLWriterBase):
         """
         XMLWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE Templates SYSTEM "Templates-%s.dtd">' % \
-            templatesFileFormatVersion)
+        self._write('<!DOCTYPE Templates SYSTEM "Templates-{0}.dtd">'.format(
+            templatesFileFormatVersion))
         
         # add some generation comments
         self._write("<!-- eric5 templates file -->")
-        self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
+        self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         
         # add the main tag
-        self._write('<Templates version="%s">' % templatesFileFormatVersion)
+        self._write('<Templates version="{0}">'.format(templatesFileFormatVersion))
         
         # do the template groups
         groups = self.templatesViewer.getAllGroups()
         for group in groups:
-            self._write('  <TemplateGroup name="%s" language="%s">' % \
-                        (group.getName(), group.getLanguage()))
+            self._write('  <TemplateGroup name="{0}" language="{1}">'.format(
+                        group.getName(), group.getLanguage()))
             # do the templates
             templates = group.getAllEntries()
             for template in templates:
-                self._write('    <Template name="%s">' % \
-                    self.escape(template.getName(), True))
-                self._write('      <TemplateDescription>%s</TemplateDescription>' % \
-                    self.escape("%s" % template.getDescription()))
-                self._write('      <TemplateText>%s</TemplateText>' % \
-                    self.escape("%s" % template.getTemplateText()))
+                self._write('    <Template name="{0}">'.format(
+                    self.escape(template.getName(), True)))
+                self._write('      <TemplateDescription>{0}</TemplateDescription>'.format(
+                    self.escape("{0}".format(template.getDescription()))))
+                self._write('      <TemplateText>{0}</TemplateText>'.format(
+                    self.escape("{0}".format(template.getTemplateText()))))
                 self._write('    </Template>')
             self._write('  </TemplateGroup>')
         

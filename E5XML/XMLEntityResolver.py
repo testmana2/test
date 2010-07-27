@@ -39,7 +39,7 @@ class XMLEntityResolver(EntityResolver):
             if not os.path.exists(sId):
                 ind = sId.rfind('-')
                 if ind != -1:
-                    sId = "%s.dtd" % sId[:ind]
+                    sId = "{0}.dtd".format(sId[:ind])
                 if not os.path.exists(sId):
                     sId = ""
         

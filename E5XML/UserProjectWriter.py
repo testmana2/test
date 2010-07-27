@@ -39,26 +39,26 @@ class UserProjectWriter(XMLWriterBase):
         """
         XMLWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE UserProject SYSTEM "UserProject-%s.dtd">' % \
-            userProjectFileFormatVersion)
+        self._write('<!DOCTYPE UserProject SYSTEM "UserProject-{0}.dtd">'.format(
+            userProjectFileFormatVersion))
         
         # add some generation comments
-        self._write("<!-- eric5 user project file for project %s -->" % self.name)
+        self._write("<!-- eric5 user project file for project {0} -->".format(self.name))
         if Preferences.getProject("XMLTimestamp"):
-            self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
-            self._write("<!-- Copyright (C) %s %s, %s -->" % \
-                    (time.strftime('%Y'), 
-                     self.escape(self.pdata["AUTHOR"][0]), 
-                     self.escape(self.pdata["EMAIL"][0])))
+            self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self._write("<!-- Copyright (C) {0} {1}, {2} -->".format(
+                    time.strftime('%Y'), 
+                    self.escape(self.pdata["AUTHOR"][0]), 
+                    self.escape(self.pdata["EMAIL"][0])))
         
         # add the main tag
-        self._write('<UserProject version="%s">' % userProjectFileFormatVersion)
+        self._write('<UserProject version="{0}">'.format(userProjectFileFormatVersion))
         
         # do the vcs override stuff
         if self.pudata["VCSOVERRIDE"]:
-            self._write("  <VcsType>%s</VcsType>" % self.pudata["VCSOVERRIDE"][0])
+            self._write("  <VcsType>{0}</VcsType>".format(self.pudata["VCSOVERRIDE"][0]))
         if self.pudata["VCSSTATUSMONITORINTERVAL"]:
-            self._write('  <VcsStatusMonitorInterval value="%d" />' % \
-                self.pudata["VCSSTATUSMONITORINTERVAL"][0])
+            self._write('  <VcsStatusMonitorInterval value="{0:d}" />'.format(
+                self.pudata["VCSSTATUSMONITORINTERVAL"][0]))
         
         self._write("</UserProject>", newline = False)

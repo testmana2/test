@@ -40,19 +40,21 @@ class TasksWriter(XMLWriterBase):
         """
         XMLWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE Tasks SYSTEM "Tasks-%s.dtd">' % tasksFileFormatVersion)
+        self._write('<!DOCTYPE Tasks SYSTEM "Tasks-{0}.dtd">'.format(
+            tasksFileFormatVersion))
         
         # add some generation comments
         if self.forProject:
-            self._write("<!-- eric5 tasks file for project %s -->" % self.name)
+            self._write("<!-- eric5 tasks file for project {0} -->".format(self.name))
             if Preferences.getProject("XMLTimestamp"):
-                self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
+                self._write("<!-- Saved: {0} -->".format(
+                    time.strftime('%Y-%m-%d, %H:%M:%S')))
         else:
             self._write("<!-- eric5 tasks file -->")
-            self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
+            self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         
         # add the main tag
-        self._write('<Tasks version="%s">' % tasksFileFormatVersion)
+        self._write('<Tasks version="{0}">'.format(tasksFileFormatVersion))
         
         # do the tasks
         if self.forProject:
@@ -60,19 +62,19 @@ class TasksWriter(XMLWriterBase):
         else:
             tasks = e5App().getObject("TaskViewer").getGlobalTasks()
         for task in tasks:
-            self._write('  <Task priority="%d" completed="%s" bugfix="%s">' % \
-                        (task.priority, task.completed, task.isBugfixTask))
-            self._write('    <Summary>%s</Summary>' % \
-                        self.escape("%s" % task.description.strip()))
-            self._write('    <Description>%s</Description>' % \
-                        self.escape(self.encodedNewLines(task.longtext.strip())))
-            self._write('    <Created>%s</Created>' % \
-                        time.strftime("%Y-%m-%d, %H:%M:%S", time.localtime(task.created)))
+            self._write('  <Task priority="{0:d}" completed="{1}" bugfix="{2}">'\
+                .format(task.priority, task.completed, task.isBugfixTask))
+            self._write('    <Summary>{0}</Summary>'.format(
+                self.escape("{0}".format(task.description.strip()))))
+            self._write('    <Description>{0}</Description>'.format(
+                self.escape(self.encodedNewLines(task.longtext.strip()))))
+            self._write('    <Created>{0}</Created>'.format(
+                time.strftime("%Y-%m-%d, %H:%M:%S", time.localtime(task.created))))
             if task.filename:
                 self._write('    <Resource>')
-                self._write('      <Filename>%s</Filename>' % \
-                    Utilities.fromNativeSeparators(task.filename))
-                self._write('      <Linenumber>%d</Linenumber>' % task.lineno)
+                self._write('      <Filename>{0}</Filename>'.format(
+                    Utilities.fromNativeSeparators(task.filename)))
+                self._write('      <Linenumber>{0:d}</Linenumber>'.format(task.lineno))
                 self._write('    </Resource>')
             self._write('  </Task>')
         
