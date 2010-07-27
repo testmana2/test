@@ -379,8 +379,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                     QApplication.processEvents()
                     prog += 1
                     if name == pluginFileName or \
-                       name.startswith("%s/" % packageName) or \
-                       name.startswith("%s\\" % packageName):
+                       name.startswith("{0}/".format(packageName)) or \
+                       name.startswith("{0}\\".format(packageName)):
                         outname = name.replace("/", os.sep)
                         outname = os.path.join(destination, outname)
                         if outname.endswith("/") or outname.endswith("\\"):
@@ -489,11 +489,11 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             if packageDir and os.path.exists(packageDir):
                 shutil.rmtree(packageDir)
             
-            fnameo = "%so" % pluginFile
+            fnameo = "{0}o".format(pluginFile)
             if os.path.exists(fnameo):
                 os.remove(fnameo)
             
-            fnamec = "%sc" % pluginFile
+            fnamec = "{0}c".format(pluginFile)
             if os.path.exists(fnamec):
                 os.remove(fnamec)
             

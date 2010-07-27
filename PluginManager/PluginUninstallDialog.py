@@ -61,7 +61,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         pluginNames = sorted(self.__pluginManager.getPluginModules(pluginDirectory))
         self.pluginNameCombo.clear()
         for pluginName in pluginNames:
-            fname = "%s.py" % os.path.join(pluginDirectory, pluginName)
+            fname = "{0}.py".format(os.path.join(pluginDirectory, pluginName))
             self.pluginNameCombo.addItem(pluginName, fname)
         self.buttonBox.button(QDialogButtonBox.Ok)\
             .setEnabled(self.pluginNameCombo.currentText() != "")
@@ -129,11 +129,11 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             if packageDir and os.path.exists(packageDir):
                 shutil.rmtree(packageDir)
             
-            fnameo = "%so" % pluginFile
+            fnameo = "{0}o".format(pluginFile)
             if os.path.exists(fnameo):
                 os.remove(fnameo)
             
-            fnamec = "%sc" % pluginFile
+            fnamec = "{0}c".format(pluginFile)
             if os.path.exists(fnamec):
                 os.remove(fnamec)
             

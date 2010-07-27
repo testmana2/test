@@ -136,7 +136,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         if self.parameters['ignoreFilePatterns'] != self.defaults['ignoreFilePatterns']:
             parms['ignoreFilePatterns'] = self.parameters['ignoreFilePatterns'][:]
             for pattern in self.parameters['ignoreFilePatterns']:
-                args.append("--exclude-file=%s" % pattern)
+                args.append("--exclude-file={0}".format(pattern))
         if self.parameters['useRecursion'] != self.defaults['useRecursion']:
             parms['useRecursion'] = self.parameters['useRecursion']
             args.append('-r')
@@ -150,7 +150,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             args.append('-p')
         parms['languages'] = self.parameters['languages'][:]
         for lang in self.parameters['languages']:
-            args.append('--language=%s' % lang)
+            args.append('--language={0}'.format(lang))
         
         return (args, parms)
 

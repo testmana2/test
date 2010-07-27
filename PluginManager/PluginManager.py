@@ -288,7 +288,7 @@ class PluginManager(QObject):
         @param reload_ flag indicating to reload the module (boolean)
         """
         try:
-            fname = "%s.py" % os.path.join(directory, name)
+            fname = "{0}.py".format(os.path.join(directory, name))
             module = imp.load_source(name, fname)
             if not hasattr(module, "autoactivate"):
                 module.error = \
@@ -330,7 +330,7 @@ class PluginManager(QObject):
         @param directory name of the plugin directory (string)
         @return flag indicating success (boolean)
         """
-        fname = "%s.py" % os.path.join(directory, name)
+        fname = "{0}.py".format(os.path.join(directory, name))
         if name in self.__onDemandActiveModules and \
            self.__onDemandActiveModules[name].eric5PluginModuleFilename == fname:
             # cannot unload an ondemand plugin, that is in use

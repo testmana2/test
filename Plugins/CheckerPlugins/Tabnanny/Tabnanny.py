@@ -107,7 +107,7 @@ def check(file):
     try:
         text = Utilities.readEncodedFile(file)[0]
     except (UnicodeError, IOError) as msg:
-        return (True, file, "1", "Error: %s" % str(msg))
+        return (True, file, "1", "Error: {0}".format(str(msg)))
         
     # convert eols
     text = Utilities.convertLineEnds(text, os.linesep)
@@ -117,10 +117,10 @@ def check(file):
         process_tokens(tokenize.generate_tokens(source.readline))
     
     except tokenize.TokenError as msg:
-        return (True, file, "1", "Token Error: %s" % str(msg))
+        return (True, file, "1", "Token Error: {0}".format(str(msg)))
     
     except IndentationError as err:
-        return (True, file, err.lineno, "Indentation Error: %s" % str(err.msg))
+        return (True, file, err.lineno, "Indentation Error: {0}".format(str(err.msg)))
     
     except NannyNag as nag:
         badline = nag.get_lineno()
@@ -128,7 +128,7 @@ def check(file):
         return (True, file, str(badline), line)
     
     except Exception as err:
-        return (True, file, "1", "Unspecific Error: %s" % str(err))
+        return (True, file, "1", "Unspecific Error: {0}".format(str(err)))
     
     return (False, None, None, None)
 
