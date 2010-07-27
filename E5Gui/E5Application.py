@@ -34,7 +34,7 @@ class E5Application(QApplication):
         @exception KeyError raised when the given name is already in use
         """
         if name in self.__objectRegistry:
-            raise KeyError('Object "%s" already registered.' % name)
+            raise KeyError('Object "{0}" already registered.'.format(name))
         else:
             self.__objectRegistry[name] = object
         
@@ -49,7 +49,7 @@ class E5Application(QApplication):
         if name in self.__objectRegistry:
             return self.__objectRegistry[name]
         else:
-            raise KeyError('Object "%s" is not registered.' % name)
+            raise KeyError('Object "{0}" is not registered.'.format(name))
         
     def registerPluginObject(self, name, object, pluginType = None):
         """
@@ -61,7 +61,7 @@ class E5Application(QApplication):
         @exception KeyError raised when the given name is already in use
         """
         if name in self.__pluginObjectRegistry:
-            raise KeyError('Pluginobject "%s" already registered.' % name)
+            raise KeyError('Pluginobject "{0}" already registered.'.format(name))
         else:
             self.__pluginObjectRegistry[name] = (object, pluginType)
         
@@ -85,7 +85,7 @@ class E5Application(QApplication):
         if name in self.__pluginObjectRegistry:
             return self.__pluginObjectRegistry[name][0]
         else:
-            raise KeyError('Pluginobject "%s" is not registered.' % name)
+            raise KeyError('Pluginobject "{0}" is not registered.'.format(name))
         
     def getPluginObjects(self):
         """
@@ -110,6 +110,6 @@ class E5Application(QApplication):
         if name in self.__pluginObjectRegistry:
             return self.__pluginObjectRegistry[name][1]
         else:
-            raise KeyError('Pluginobject "%s" is not registered.' % name)
+            raise KeyError('Pluginobject "{0}" is not registered.'.format(name))
 
 e5App = QCoreApplication.instance

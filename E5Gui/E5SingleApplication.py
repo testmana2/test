@@ -118,7 +118,7 @@ class E5SingleApplicationClient(SingleApplicationClient):
                 if argsStr is None:
                     argsStr = arg
                 else:
-                    argsStr = "%s %s" % (argsStr, arg)
+                    argsStr = "{0} {1}".format(argsStr, arg)
                 continue
             
             ext = os.path.splitext(arg)[1]
@@ -141,7 +141,7 @@ class E5SingleApplicationClient(SingleApplicationClient):
         
         @param fname name of file to be opened (string)
         """
-        cmd = "%s%s\n" % (SAOpenFile, Utilities.normabspath(fname))
+        cmd = "{0}{1}\n".format(SAOpenFile, Utilities.normabspath(fname))
         self.sendCommand(cmd)
         
     def __openProject(self, pfname):
@@ -150,7 +150,7 @@ class E5SingleApplicationClient(SingleApplicationClient):
         
         @param pfname name of the projectfile to be opened (string)
         """
-        cmd = "%s%s\n" % (SAOpenProject, Utilities.normabspath(pfname))
+        cmd = "{0}{1}\n".format(SAOpenProject, Utilities.normabspath(pfname))
         self.sendCommand(cmd)
         
     def __sendArguments(self, argsStr):
@@ -159,5 +159,5 @@ class E5SingleApplicationClient(SingleApplicationClient):
         
         @param argsStr space delimited list of command args (string)
         """
-        cmd = "%s%s\n" % (SAArguments, argsStr)
+        cmd = "{0}{1}\n".format(SAArguments, argsStr)
         self.sendCommand(cmd)

@@ -303,10 +303,10 @@ class E5ToolBarManager(QObject):
         toolBar.setToolTip(title)
         index = 1
         customPrefix = "__CustomPrefix__"
-        name = "%s%d" % (customPrefix, index)
+        name = "{0}{1:d}".format(customPrefix, index)
         while self.__toolBarByName(name) is not None:
             index += 1
-            name = "%s%d" % (customPrefix, index)
+            name = "{0}{1:d}".format(customPrefix, index)
         toolBar.setObjectName(name)
         self.__mainWindow.addToolBar(toolBar)
         

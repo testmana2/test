@@ -286,7 +286,7 @@ class E5RequestModel(QAbstractTableModel):
         # save reply info to be displayed
         status = reply.attribute(QNetworkRequest.HttpStatusCodeAttribute) or 0
         reason = reply.attribute(QNetworkRequest.HttpReasonPhraseAttribute) or ""
-        self.requests[offset].response = "%d %s" % (status, reason)
+        self.requests[offset].response = "{0:d} {1}".format(status, reason)
         self.requests[offset].length = reply.header(QNetworkRequest.ContentLengthHeader)
         self.requests[offset].contentType = reply.header(QNetworkRequest.ContentTypeHeader)
         

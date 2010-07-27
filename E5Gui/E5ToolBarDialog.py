@@ -54,7 +54,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         self.__currentToolBarItem = None
         self.__removedToolBarIDs = []   # remember custom toolbars to be deleted
         
-        self.__widgetActionToToolBarItemID = {}   # maps widget action IDs to toolbar item IDs
+        self.__widgetActionToToolBarItemID = {} # maps widget action IDs to toolbar item IDs
         self.__toolBarItemToWidgetActionID = {} # maps toolbar item IDs to widget action IDs
         
         self.upButton.setIcon(UI.PixmapCache.getIcon("1uparrow.png"))
@@ -406,7 +406,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 else:
                     action = self.__manager.actionById(actionID)
                     if action is None:
-                        raise RuntimeError("No such action, id: 0x%x" % actionID)
+                        raise RuntimeError("No such action, id: 0x{0:x}".format(actionID))
                     actions.append(action)
             self.__manager.setToolBar(tb, actions)
             tbItem.isChanged = False
