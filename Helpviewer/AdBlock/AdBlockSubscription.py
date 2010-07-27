@@ -185,7 +185,7 @@ class AdBlockSubscription(QObject):
         dataDir = os.path.join(Utilities.getConfigDir(), "browser", "subscriptions")
         if not os.path.exists(dataDir):
             os.makedirs(dataDir)
-        fileName = os.path.join(dataDir, "adblock_subscription_%s" % sha1)
+        fileName = os.path.join(dataDir, "adblock_subscription_{0}".format(sha1))
         return fileName
     
     def __loadRules(self):

@@ -98,7 +98,8 @@ class IconEditorPalette(QWidget):
         self.__color.setPixmap(pm)
         
         self.__colorTxt.setText(
-            "%d, %d, %d, %d" % (color.red(), color.green(), color.blue(), color.alpha()))
+            "{0:d}, {1:d}, {2:d}, {3:d}".format(
+                color.red(), color.green(), color.blue(), color.alpha()))
         
         self.__colorAlpha.setValue(self.__currentAlpha)
     

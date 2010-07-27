@@ -197,7 +197,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         i = 1
         while QFile.exists(name):
             # file exists already, don't overwrite
-            name = directory + baseName + ('-%d' % i)
+            name = directory + baseName + ('-{0:d}'.format(i))
             if endName:
                 name += '.' + endName
             i += 1

@@ -860,11 +860,11 @@ class MultiProject(QObject):
         idx = 1
         for rp in self.recent:
             if idx < 10:
-                formatStr = '&%d. %s'
+                formatStr = '&{0:d}. {1}'
             else:
-                formatStr = '%d. %s'
+                formatStr = '{0:d}. {1}'
             act = self.recentMenu.addAction(\
-                formatStr % (idx, 
+                formatStr.format(idx, 
                     Utilities.compactPath(rp, self.ui.maxMenuFilePathLen)))
             act.setData(rp)
             act.setEnabled(QFileInfo(rp).exists())

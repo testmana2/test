@@ -1177,7 +1177,7 @@ class IconEditorWindow(QMainWindow):
         @param x x-coordinate (integer)
         @param y y-coordinate (integer)
         """
-        self.__sbPos.setText("%d, %d" % (x + 1, y + 1))
+        self.__sbPos.setText("{0:d}, {1:d}".format(x + 1, y + 1))
     
     def __updateSize(self, w, h):
         """
@@ -1186,14 +1186,14 @@ class IconEditorWindow(QMainWindow):
         @param w width of the icon (integer)
         @param h height of the icon (integer)
         """
-        self.__sbSize.setText("%d x %d" % (w, h))
+        self.__sbSize.setText("{0:d} x {1:d}".format(w, h))
     
     def __updateZoom(self):
         """
         Private slot to show the current zoom factor.
         """
         zoom = self.__editor.zoomFactor()
-        self.__sbZoom.setText("%d %%" % (zoom * 100, ))
+        self.__sbZoom.setText("{0:d} %".format(zoom * 100))
         self.zoomOutAct.setEnabled(self.__editor.zoomFactor() > 1)
     
     def __zoomIn(self):

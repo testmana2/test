@@ -64,11 +64,11 @@ class LoginForm(object):
         @param f file or file like object open for writing
         @return flag indicating success (booelan)
         """
-        f.write("%s\n" % self.url.toString())
-        f.write("%s\n" % self.name)
-        f.write("%s\n" % self.hasAPassword)
+        f.write("{0}\n".format(self.url.toString()))
+        f.write("{0}\n".format(self.name))
+        f.write("{0}\n".format(self.hasAPassword))
         for element in self.elements:
-            f.write("%s = %s\n" % (element[0], element[1]))
+            f.write("{0} = {1}\n".format(element[0], element[1]))
 
 class PasswordManager(QObject):
     """
@@ -153,9 +153,9 @@ class PasswordManager(QObject):
         @return key string (string)
         """
         if realm:
-            key = "%s://%s (%s)" % (url.scheme(), url.authority(), realm)
+            key = "{0}://{1} ({2})".format(url.scheme(), url.authority(), realm)
         else:
-            key = "%s://%s" % (url.scheme(), url.authority())
+            key = "{0}://{1}".format(url.scheme(), url.authority())
         return key
     
     def save(self):
@@ -169,20 +169,20 @@ class PasswordManager(QObject):
         try:
             f = open(loginFile, "w", encoding = "utf-8")
             for key, login in list(self.__logins.items()):
-                f.write("%s\n" % key)
-                f.write("%s\n" % login[0])
-                f.write("%s\n" % login[1])
-                f.write("%s\n" % self.SEPARATOR)
+                f.write("{0}\n".format(key))
+                f.write("{0}\n".format(login[0]))
+                f.write("{0}\n".format(login[1]))
+                f.write("{0}\n".format(self.SEPARATOR))
             if self.__loginForms:
-                f.write("%s\n" % self.FORMS)
+                f.write("{0}\n".format(self.FORMS))
                 for key, form in list(self.__loginForms.items()):
-                    f.write("%s\n" % key)
+                    f.write("{0}\n".format(key))
                     form.save(f)
-                    f.write("%s\n" % self.SEPARATOR)
+                    f.write("{0}\n".format(self.SEPARATOR))
             if self.__never:
-                f.write("%s\n" % self.NEVER)
+                f.write("{0}\n".format(self.NEVER))
                 for key in self.__never:
-                    f.write("%s\n") % key
+                    f.write("{0}\n".format(key))
             f.close()
         except IOError as err:
             QMessageBox.critical(None,
@@ -531,25 +531,25 @@ class PasswordManager(QObject):
             formName = "0"
         else:
             try:
-                formName = "%d" % int(form.name)
+                formName = "{0:d}".format(int(form.name))
             except ValueError:
-                formName = '"%s"' % form.name
+                formName = '"{0}"'.format(form.name)
         for element in form.elements:
             name = element[0]
             value = element[1]
             
             disabled = page.mainFrame().evaluateJavaScript(
-                'document.forms[%s].elements["%s"].disabled' % (formName, name))
+                'document.forms[{0}].elements["{1}"].disabled'.format(formName, name))
             if disabled:
                 continue
             
             readOnly = page.mainFrame().evaluateJavaScript(
-                'document.forms[%s].elements["%s"].readOnly' % (formName, name))
+                'document.forms[{0}].elements["{1}"].readOnly'.format(formName, name))
             if readOnly:
                 continue
             
             type_ = page.mainFrame().evaluateJavaScript(
-                'document.forms[%s].elements["%s"].type' % (formName, name))
+                'document.forms[{0}].elements["{1}"].type'.format(formName, name))
             if type_ == "" or \
                type_ in ["hidden", "reset", "submit"]:
                 continue
@@ -558,6 +558,6 @@ class PasswordManager(QObject):
             setType = type_ == "checkbox" and "checked" or "value"
             value = value.replace("\\", "\\\\")
             value = value.replace('"', '\\"')
-            javascript = 'document.forms[%s].elements["%s"].%s="%s";' % \
-                         (formName, name, setType, value)
+            javascript = 'document.forms[{0}].elements["{1}"].{2}="{3}";'.format(
+                         formName, name, setType, value)
             page.mainFrame().evaluateJavaScript(javascript)
