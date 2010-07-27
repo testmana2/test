@@ -328,10 +328,13 @@ class Checker(object):
         # matter what, since there's always a "foo" part.
         self.handleNode(node.context_expr, node)
 
+        arg = None
         if node.optional_vars is not None:
-            self.handleNode(node.optional_vars, node)
-
+            arg = Argument(node.optional_vars.id, node)
+            self.addBinding(node.lineno, arg, reportRedef=False)
         self.handleBody(node)
+        if arg:
+            del self.scope[arg.name]
 
     def GLOBAL(self, node):
         """
