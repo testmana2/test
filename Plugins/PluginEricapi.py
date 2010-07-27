@@ -155,7 +155,7 @@ class EricapiPlugin(QObject):
             
             # add parameter for the eol setting
             if not project.useSystemEol():
-                args.append("--eol=%s" % eolTranslation[project.getEolString()])
+                args.append("--eol={0}".format(eolTranslation[project.getEolString()]))
             
             # now do the call
             dia = EricapiExecDialog("Ericapi")
@@ -174,7 +174,7 @@ class EricapiPlugin(QObject):
                         outfile = outputFileName
                     else:
                         root, ext = os.path.splitext(outputFileName)
-                        outfile = "%s-%s%s" % (root, progLanguage.lower(), ext)
+                        outfile = "{0}-{1}{2}".format(root, progLanguage.lower(), ext)
                 
                 outfile = project.getRelativePath(outfile)
                 if outfile not in project.pdata['OTHERS']:

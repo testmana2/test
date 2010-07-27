@@ -157,7 +157,7 @@ class EricdocPlugin(QObject):
             
             # add parameter for the eol setting
             if not project.useSystemEol():
-                args.append("--eol=%s" % eolTranslation[project.getEolString()])
+                args.append("--eol={0}".format(eolTranslation[project.getEolString()]))
             
             # now do the call
             dia = EricdocExecDialog("Ericdoc")

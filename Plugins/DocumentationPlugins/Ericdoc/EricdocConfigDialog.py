@@ -46,17 +46,17 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"'''
             '''"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'''
             '''<html><head>'''
-            '''<title>%%(Title)s</title>'''
+            '''<title></title>'''
             '''</head>'''
-            '''<body style="background-color:%(BodyBgColor)s;color:%(BodyColor)s">'''
-            '''<h1 style="background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s">'''
+            '''<body style="background-color:{BodyBgColor};color:{BodyColor}">'''
+            '''<h1 style="background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}">'''
             '''Level 1 Header</h1>'''
-            '''<h3 style="background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s">'''
+            '''<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">'''
             '''Level 2 Header</h3>'''
-            '''<h2 style="background-color:%(CFBgColor)s;color:%(CFColor)s">'''
+            '''<h2 style="background-color:{CFBgColor};color:{CFColor}">'''
             '''Class and Function Header</h2>'''
             '''Standard body text with '''
-            '''<a style="color:%(LinkColor)s">some links</a> embedded.'''
+            '''<a style="color:{LinkColor}">some links</a> embedded.'''
             '''</body></html>'''
         )
         
@@ -98,7 +98,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         self.cssEdit.setText(self.parameters['cssFile'])
         self.sourceExtEdit.setText(", ".join(self.parameters['sourceExtensions']))
         self.excludeFilesEdit.setText(", ".join(self.parameters['ignoreFilePatterns']))
-        self.sample.setHtml(self.sampleText % self.colors)
+        self.sample.setHtml(self.sampleText.format(self.colors))
         
         self.qtHelpGroup.setChecked(self.parameters['qtHelpEnabled'])
         self.qtHelpDirEdit.setText(self.parameters['qtHelpOutputDirectory'])
@@ -175,7 +175,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         if self.parameters['ignoreFilePatterns'] != self.defaults['ignoreFilePatterns']:
             parms['ignoreFilePatterns'] = self.parameters['ignoreFilePatterns'][:]
             for pattern in self.parameters['ignoreFilePatterns']:
-                args.append("--exclude-file=%s" % pattern)
+                args.append("--exclude-file={0}".format(pattern))
         if self.parameters['useRecursion'] != self.defaults['useRecursion']:
             parms['useRecursion'] = self.parameters['useRecursion']
             args.append('-r')
@@ -206,8 +206,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         for key, value in list(self.colors.items()):
             if self.colors[key] != eric5docDefaultColors[key]:
                 parms[key] = self.colors[key]
-                args.append("--%s=%s" % \
-                            (eric5docColorParameterNames[key], self.colors[key]))
+                args.append("--{0}={1}".format(
+                            eric5docColorParameterNames[key], self.colors[key]))
         
         # 2c. QtHelp commandline options
         parms['qtHelpEnabled'] = self.parameters['qtHelpEnabled']
@@ -218,27 +218,30 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             parms['qtHelpOutputDirectory'] = Utilities.fromNativeSeparators(
                 self.project.getRelativePath(self.parameters['qtHelpOutputDirectory']))
             if os.path.isabs(self.parameters['outputDirectory']):
-                args.append("--qhp-outdir=%s" % self.parameters['qtHelpOutputDirectory'])
+                args.append("--qhp-outdir={0}".format(
+                    self.parameters['qtHelpOutputDirectory']))
             else:
-                args.append("--qhp-outdir=%s" % \
-                    os.path.join(self.ppath, self.parameters['qtHelpOutputDirectory']))
+                args.append("--qhp-outdir={0}".format(
+                    os.path.join(self.ppath, self.parameters['qtHelpOutputDirectory'])))
         if self.parameters['qtHelpNamespace'] != self.defaults['qtHelpNamespace']:
             parms['qtHelpNamespace'] = self.parameters['qtHelpNamespace']
-            args.append("--qhp-namespace=%s" % self.parameters['qtHelpNamespace'])
+            args.append("--qhp-namespace={0}".format(self.parameters['qtHelpNamespace']))
         if self.parameters['qtHelpVirtualFolder'] != self.defaults['qtHelpVirtualFolder']:
             parms['qtHelpVirtualFolder'] = self.parameters['qtHelpVirtualFolder']
-            args.append("--qhp-virtualfolder=%s" % self.parameters['qtHelpVirtualFolder'])
+            args.append("--qhp-virtualfolder={0}".format(
+                self.parameters['qtHelpVirtualFolder']))
         if self.parameters['qtHelpFilterName'] != self.defaults['qtHelpFilterName']:
             parms['qtHelpFilterName'] = self.parameters['qtHelpFilterName']
-            args.append("--qhp-filtername=%s" % self.parameters['qtHelpFilterName'])
+            args.append("--qhp-filtername={0}".format(
+                self.parameters['qtHelpFilterName']))
         if self.parameters['qtHelpFilterAttributes'] != \
            self.defaults['qtHelpFilterAttributes']:
             parms['qtHelpFilterAttributes'] = self.parameters['qtHelpFilterAttributes']
-            args.append("--qhp-filterattribs=%s" % \
-                self.parameters['qtHelpFilterAttributes'])
+            args.append("--qhp-filterattribs={0}".format(
+                self.parameters['qtHelpFilterAttributes']))
         if self.parameters['qtHelpTitle'] != self.defaults['qtHelpTitle']:
             parms['qtHelpTitle'] = self.parameters['qtHelpTitle']
-            args.append("--qhp-title=%s" % self.parameters['qtHelpTitle'])
+            args.append("--qhp-title={0}".format(self.parameters['qtHelpTitle']))
         if self.parameters['qtHelpCreateCollection'] != \
            self.defaults['qtHelpCreateCollection']:
             parms['qtHelpCreateCollection'] = self.parameters['qtHelpCreateCollection']
@@ -338,7 +341,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         color = QColorDialog.getColor(QColor(self.colors[colorKey]))
         if color.isValid():
             self.colors[colorKey] = color.name()
-            self.sample.setHtml(self.sampleText % self.colors)
+            self.sample.setHtml(self.sampleText.format(self.colors))
 
     @pyqtSlot()
     def on_bodyFgButton_clicked(self):
