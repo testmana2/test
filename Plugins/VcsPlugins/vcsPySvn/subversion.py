@@ -1414,7 +1414,7 @@ class Subversion(VersionControl):
             entry = client.info(path)
             url = entry.url
         except pysvn.ClientError:
-            url = None
+            url = ""
         locker.unlock()
         return url
 

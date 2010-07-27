@@ -1293,7 +1293,7 @@ class Subversion(VersionControl):
                         reposURL = line.replace('<url>', '').replace('</url>', '')
                         return reposURL
         
-        return None
+        return ""
 
     def svnResolve(self, name):
         """
