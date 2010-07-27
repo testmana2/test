@@ -584,8 +584,8 @@ class ProjectHandler(XMLHandlerBase):
         else:
             path = self.__buildPath()
         if not path.endswith("_"):
-            path = "%s_" % path
-        self.project.pdata["TRANSLATIONPATTERN"].append("%s%%language%%.ts" % path)
+            path = "{0}_".format(path)
+        self.project.pdata["TRANSLATIONPATTERN"].append("{0}%language%.ts".format(path))
         
     def startEric4DocParams(self, attrs):
         """

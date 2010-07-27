@@ -36,26 +36,26 @@ class HighlightingStylesWriter(XMLWriterBase):
         """
         XMLWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-%s.dtd">' % \
-            highlightingStylesFileFormatVersion)
+        self._write('<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-{0}.dtd">'\
+            .format(highlightingStylesFileFormatVersion))
         
         # add some generation comments
         self._write("<!-- Eric5 highlighting styles -->")
-        self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
-        self._write("<!-- Author: %s -->" % self.escape("%s" % self.email))
+        self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+        self._write("<!-- Author: {0} -->".format(self.escape("{0}".format(self.email))))
         
         # add the main tag
-        self._write('<HighlightingStyles version="%s">' % \
-            highlightingStylesFileFormatVersion)
+        self._write('<HighlightingStyles version="{0}">'.format(
+            highlightingStylesFileFormatVersion))
         
         for lexer in self.lexers:
-            self._write('  <Lexer name="%s">' % lexer.language())
+            self._write('  <Lexer name="{0}">'.format(lexer.language()))
             for style in lexer.descriptions:
-                self._write('    <Style style="%d" '
-                            'color="%s" paper="%s" font="%s" eolfill="%d">%s</Style>' % \
-                            (style, lexer.color(style).name(), lexer.paper(style).name(), 
-                             lexer.font(style).toString(), lexer.eolFill(style), 
-                             self.escape(lexer.description(style)))
+                self._write('    <Style style="{0:d}" '
+                    'color="{1}" paper="{2}" font="{3}" eolfill="{4:d}">{5}</Style>'\
+                    .format(style, lexer.color(style).name(), lexer.paper(style).name(), 
+                            lexer.font(style).toString(), lexer.eolFill(style), 
+                            self.escape(lexer.description(style)))
                 )
             self._write('  </Lexer>')
         

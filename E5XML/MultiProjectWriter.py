@@ -38,32 +38,33 @@ class MultiProjectWriter(XMLWriterBase):
         """
         XMLWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE MultiProject SYSTEM "MultiProject-%s.dtd">' % \
-            multiProjectFileFormatVersion)
+        self._write('<!DOCTYPE MultiProject SYSTEM "MultiProject-{0}.dtd">'\
+            .format(multiProjectFileFormatVersion))
         
         # add some generation comments
-        self._write("<!-- eric5 multi project file for multi project %s -->" % self.name)
+        self._write("<!-- eric5 multi project file for multi project {0} -->"\
+            .format(self.name))
         if Preferences.getMultiProject("XMLTimestamp"):
-            self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
-            self._write("<!-- Copyright (C) %s -->" % time.strftime('%Y'))
+            self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self._write("<!-- Copyright (C) {0} -->".format(time.strftime('%Y')))
         
         # add the main tag
-        self._write('<MultiProject version="%s">' % multiProjectFileFormatVersion)
+        self._write('<MultiProject version="{0}">'.format(multiProjectFileFormatVersion))
         
         # do description
-        self._write("  <Description>%s</Description>" % \
-            self.escape(self.encodedNewLines(self.multiProject.description)))
+        self._write("  <Description>{0}</Description>".format(
+            self.escape(self.encodedNewLines(self.multiProject.description))))
         
         # do the projects
         self._write("  <Projects>")
         for project in self.multiProject.getProjects():
-            self._write('    <Project isMaster="%s">' % project['master'])
-            self._write("      <ProjectName>%s</ProjectName>" % \
-                self.escape(project['name']))
-            self._write("      <ProjectFile>%s</ProjectFile>" % \
-                Utilities.fromNativeSeparators(project['file']))
-            self._write("      <ProjectDescription>%s</ProjectDescription>" % \
-                self.escape(self.encodedNewLines(project['name'])))
+            self._write('    <Project isMaster="{0}">'.format(project['master']))
+            self._write("      <ProjectName>{0}</ProjectName>".format(
+                self.escape(project['name'])))
+            self._write("      <ProjectFile>{0}</ProjectFile>".format(
+                Utilities.fromNativeSeparators(project['file'])))
+            self._write("      <ProjectDescription>{0}</ProjectDescription>".format(
+                self.escape(self.encodedNewLines(project['name']))))
             self._write("    </Project>")
         self._write("  </Projects>")
         

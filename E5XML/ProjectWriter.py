@@ -39,125 +39,126 @@ class ProjectWriter(XMLWriterBase):
         """
         XMLWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE Project SYSTEM "Project-%s.dtd">' % \
-            projectFileFormatVersion)
+        self._write('<!DOCTYPE Project SYSTEM "Project-{0}.dtd">'.format(
+            projectFileFormatVersion))
         
         # add some generation comments
-        self._write("<!-- eric5 project file for project %s -->" % self.name)
+        self._write("<!-- eric5 project file for project {0} -->".format(self.name))
         if Preferences.getProject("XMLTimestamp"):
-            self._write("<!-- Saved: %s -->" % time.strftime('%Y-%m-%d, %H:%M:%S'))
-            self._write("<!-- Copyright (C) %s %s, %s -->" % \
-                    (time.strftime('%Y'), 
-                     self.escape(self.pdata["AUTHOR"][0]), 
-                     self.escape(self.pdata["EMAIL"][0])))
+            self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self._write("<!-- Copyright (C) {0} {1}, {2} -->".format(
+                    time.strftime('%Y'), 
+                    self.escape(self.pdata["AUTHOR"][0]), 
+                    self.escape(self.pdata["EMAIL"][0])))
         
         # add the main tag
-        self._write('<Project version="%s">' % projectFileFormatVersion)
+        self._write('<Project version="{0}">'.format(projectFileFormatVersion))
         
         # do the language (used for spell checking)
-        self._write('  <Language>%s</Language>' % self.pdata["SPELLLANGUAGE"][0])
+        self._write('  <Language>{0}</Language>'.format(self.pdata["SPELLLANGUAGE"][0]))
         if len(self.pdata["SPELLWORDS"][0]) > 0:
-            self._write("  <ProjectWordList>%s</ProjectWordList>" % \
-                Utilities.fromNativeSeparators(self.pdata["SPELLWORDS"][0]))
+            self._write("  <ProjectWordList>{0}</ProjectWordList>".format(
+                Utilities.fromNativeSeparators(self.pdata["SPELLWORDS"][0])))
         if len(self.pdata["SPELLEXCLUDES"][0]) > 0:
-            self._write("  <ProjectExcludeList>%s</ProjectExcludeList>" % \
-                Utilities.fromNativeSeparators(self.pdata["SPELLEXCLUDES"][0]))
+            self._write("  <ProjectExcludeList>{0}</ProjectExcludeList>".format(
+                Utilities.fromNativeSeparators(self.pdata["SPELLEXCLUDES"][0])))
         
         # do the hash
-        self._write('  <Hash>%s</Hash>' % self.pdata["HASH"][0])
+        self._write('  <Hash>{0}</Hash>'.format(self.pdata["HASH"][0]))
         
         # do the programming language
-        self._write('  <ProgLanguage mixed="%d">%s</ProgLanguage>' % \
-            (self.pdata["MIXEDLANGUAGE"][0], self.pdata["PROGLANGUAGE"][0]))
+        self._write('  <ProgLanguage mixed="{0:d}">{1}</ProgLanguage>'.format(
+            self.pdata["MIXEDLANGUAGE"][0], self.pdata["PROGLANGUAGE"][0]))
         
         # do the UI type
-        self._write('  <ProjectType>%s</ProjectType>' % self.pdata["PROJECTTYPE"][0])
+        self._write('  <ProjectType>{0}</ProjectType>'.format(
+            self.pdata["PROJECTTYPE"][0]))
         
         # do description
         if self.pdata["DESCRIPTION"]:
-            self._write("  <Description>%s</Description>" % \
-                self.escape(self.encodedNewLines(self.pdata["DESCRIPTION"][0])))
+            self._write("  <Description>{0}</Description>".format(
+                self.escape(self.encodedNewLines(self.pdata["DESCRIPTION"][0]))))
         
         # do version, author and email
         for key in ["VERSION", "AUTHOR", "EMAIL"]:
             element = key.capitalize()
             if self.pdata[key]:
-                self._write("  <%s>%s</%s>" % \
-                    (element, self.escape(self.pdata[key][0]), element))
+                self._write("  <{0}>{1}</{0}>".format(
+                    element, self.escape(self.pdata[key][0])))
             
         # do the translation pattern
         if self.pdata["TRANSLATIONPATTERN"]:
-            self._write("  <TranslationPattern>%s</TranslationPattern>" % \
-                Utilities.fromNativeSeparators(self.pdata["TRANSLATIONPATTERN"][0]))
+            self._write("  <TranslationPattern>{0}</TranslationPattern>".format(
+                Utilities.fromNativeSeparators(self.pdata["TRANSLATIONPATTERN"][0])))
         
         # do the binary translations path
         if self.pdata["TRANSLATIONSBINPATH"]:
-            self._write("  <TranslationsBinPath>%s</TranslationsBinPath>" % \
-                Utilities.fromNativeSeparators(self.pdata["TRANSLATIONSBINPATH"][0]))
+            self._write("  <TranslationsBinPath>{0}</TranslationsBinPath>".format(
+                Utilities.fromNativeSeparators(self.pdata["TRANSLATIONSBINPATH"][0])))
         
         # do the eol setting
         if self.pdata["EOL"] and self.pdata["EOL"][0]:
-            self._write('  <Eol index="%d" />' % self.pdata["EOL"][0])
+            self._write('  <Eol index="{0:d}" />'.format(self.pdata["EOL"][0]))
         
         # do the sources
         self._write("  <Sources>")
         for name in self.pdata["SOURCES"]:
-            self._write("    <Source>%s</Source>" % \
-                Utilities.fromNativeSeparators(name))
+            self._write("    <Source>{0}</Source>".format(
+                Utilities.fromNativeSeparators(name)))
         self._write("  </Sources>")
         
         # do the forms
         self._write("  <Forms>")
         for name in self.pdata["FORMS"]:
-            self._write("    <Form>%s</Form>" % \
-                Utilities.fromNativeSeparators(name))
+            self._write("    <Form>{0}</Form>".format(
+                Utilities.fromNativeSeparators(name)))
         self._write("  </Forms>")
         
         # do the translations
         self._write("  <Translations>")
         for name in self.pdata["TRANSLATIONS"]:
-            self._write("    <Translation>%s</Translation>" % \
-                Utilities.fromNativeSeparators(name))
+            self._write("    <Translation>{0}</Translation>".format(
+                Utilities.fromNativeSeparators(name)))
         self._write("  </Translations>")
         
         # do the translation exceptions
         if self.pdata["TRANSLATIONEXCEPTIONS"]:
             self._write("  <TranslationExceptions>")
             for name in self.pdata["TRANSLATIONEXCEPTIONS"]:
-                self._write("    <TranslationException>%s</TranslationException>" % \
-                    Utilities.fromNativeSeparators(name))
+                self._write("    <TranslationException>{0}</TranslationException>".format(
+                    Utilities.fromNativeSeparators(name)))
             self._write("  </TranslationExceptions>")
         
         # do the resources
         self._write("  <Resources>")
         for name in self.pdata["RESOURCES"]:
-            self._write("    <Resource>%s</Resource>" % \
-                Utilities.fromNativeSeparators(name))
+            self._write("    <Resource>{0}</Resource>".format(
+                Utilities.fromNativeSeparators(name)))
         self._write("  </Resources>")
         
         # do the interfaces (IDL)
         self._write("  <Interfaces>")
         for name in self.pdata["INTERFACES"]:
-            self._write("    <Interface>%s</Interface>" % \
-                Utilities.fromNativeSeparators(name))
+            self._write("    <Interface>{0}</Interface>".format(
+                Utilities.fromNativeSeparators(name)))
         self._write("  </Interfaces>")
         
         # do the others
         self._write("  <Others>")
         for name in self.pdata["OTHERS"]:
-            self._write("    <Other>%s</Other>" % \
-                Utilities.fromNativeSeparators(name))
+            self._write("    <Other>{0}</Other>".format(
+                Utilities.fromNativeSeparators(name)))
         self._write("  </Others>")
         
         # do the main script
         if self.pdata["MAINSCRIPT"]:
-            self._write("  <MainScript>%s</MainScript>" % \
-                Utilities.fromNativeSeparators(self.pdata["MAINSCRIPT"][0]))
+            self._write("  <MainScript>{0}</MainScript>".format(
+                Utilities.fromNativeSeparators(self.pdata["MAINSCRIPT"][0])))
         
         # do the vcs stuff
         self._write("  <Vcs>")
         if self.pdata["VCS"]:
-            self._write("    <VcsType>%s</VcsType>" % self.pdata["VCS"][0])
+            self._write("    <VcsType>{0}</VcsType>".format(self.pdata["VCS"][0]))
         if self.pdata["VCSOPTIONS"]:
             self._write("    <VcsOptions>")
             self._writeBasics(self.pdata["VCSOPTIONS"][0], 3)
@@ -171,16 +172,16 @@ class ProjectWriter(XMLWriterBase):
         # do the filetype associations
         self._write("  <FiletypeAssociations>")
         for pattern, filetype in list(self.pdata["FILETYPES"].items()):
-            self._write('    <FiletypeAssociation pattern="%s" type="%s" />' % \
-                (pattern, filetype))
+            self._write('    <FiletypeAssociation pattern="{0}" type="{1}" />'.format(
+                pattern, filetype))
         self._write("  </FiletypeAssociations>")
         
         # do the lexer associations
         if self.pdata["LEXERASSOCS"]:
             self._write("  <LexerAssociations>")
             for pattern, lexer in list(self.pdata["LEXERASSOCS"].items()):
-                self._write('    <LexerAssociation pattern="%s" lexer="%s" />' % \
-                    (pattern, lexer))
+                self._write('    <LexerAssociation pattern="{0}" lexer="{1}" />'.format(
+                    pattern, lexer))
             self._write("  </LexerAssociations>")
         
         # do the extra project data stuff
