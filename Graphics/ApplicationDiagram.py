@@ -116,18 +116,18 @@ class ApplicationDiagram(UMLDialog):
                     impLst.append(i)
                 else:
                     if i.find('.') == -1:
-                        n = "%s.%s" % (modules[module].package, i)
+                        n = "{0}.{1}".format(modules[module].package, i)
                         if n in modules:
                             impLst.append(n)
                         else:
-                            n = "%s.%s" % (project, i)
+                            n = "{0}.{1}".format(project, i)
                             if n in modules:
                                 impLst.append(n)
                             elif n in packages:
-                                n = "%s.<<Dummy>>" % n
+                                n = "{0}.<<Dummy>>".format(n)
                                 impLst.append(n)
                     else:
-                        n = "%s.%s" % (project, i)
+                        n = "{0}.{1}".format(project, i)
                         if n in modules:
                             impLst.append(n)
             for i in list(modules[module].from_imports.keys()):
@@ -153,18 +153,18 @@ class ApplicationDiagram(UMLDialog):
                     impLst.append(i)
                 else:
                     if i.find('.') == -1:
-                        n = "%s.%s" % (modules[module].package, i)
+                        n = "{0}.{1}".format(modules[module].package, i)
                         if n in modules:
                             impLst.append(n)
                         else:
-                            n = "%s.%s" % (project, i)
+                            n = "{0}.{1}".format(project, i)
                             if n in modules:
                                 impLst.append(n)
                             elif n in packages:
-                                n = "%s.<<Dummy>>" % n
+                                n = "{0}.<<Dummy>>".format(n)
                                 impLst.append(n)
                     else:
-                        n = "%s.%s" % (project, i)
+                        n = "{0}.{1}".format(project, i)
                         if n in modules:
                             impLst.append(n)
             for imp in impLst:

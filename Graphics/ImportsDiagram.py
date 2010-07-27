@@ -69,7 +69,7 @@ class ImportsDiagram(UMLDialog):
         for ext in Preferences.getPython("PythonExtensions") + \
                     Preferences.getPython("Python3Extensions"):
             modules.extend(
-                glob.glob(Utilities.normjoinpath(self.packagePath, '*%s' % ext)))
+                glob.glob(Utilities.normjoinpath(self.packagePath, '*{0}'.format(ext))))
         
         tot = len(modules)
         try:

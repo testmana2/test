@@ -211,7 +211,7 @@ class UMLClassDiagram(UMLDialog):
         attrs = sorted(_class.attributes.keys())
         name = _class.name
         if isRbModule:
-            name = "%s (Module)" % name
+            name = "{0} (Module)".format(name)
         cl = ClassModel(name, meths[:], attrs[:])
         cw = ClassItem(cl, False, x, y, noAttrs = self.noAttrs, scene = self.scene)
         self.allClasses[className] = cw

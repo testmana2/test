@@ -65,8 +65,8 @@ class PackageDiagram(UMLDialog):
         @return dictionary of modules contained in the package.
         """
         supportedExt = \
-            ['*%s' % ext for ext in Preferences.getPython("PythonExtensions")] + \
-            ['*%s' % ext for ext in Preferences.getPython("Python3Extensions")] + \
+            ['*{0}'.format(ext) for ext in Preferences.getPython("PythonExtensions")] + \
+            ['*{0}'.format(ext) for ext in Preferences.getPython("Python3Extensions")] + \
             ['*.rb']
         
         moduleDict = {}
@@ -262,7 +262,7 @@ class PackageDiagram(UMLDialog):
         attrs = sorted(_class.attributes.keys())
         name = _class.name
         if isRbModule:
-            name = "%s (Module)" % name
+            name = "{0} (Module)".format(name)
         cl = ClassModel(name, meths[:], attrs[:])
         cw = ClassItem(cl, False, x, y, noAttrs = self.noAttrs, scene = self.scene)
         self.allClasses[className] = cw
