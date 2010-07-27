@@ -1131,6 +1131,7 @@
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/startServer.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/stopServer.png</Other>
     <Other>CSSs/blue.css</Other>
+    <Other>CSSs/default.css</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
