@@ -255,7 +255,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             else:
                 dname, fname = self.vcs.splitPath(self.filename[0])
                 if fname != '.':
-                    fname = "%s.diff" % self.filename[0]
+                    fname = "{0}.diff".format(self.filename[0])
                 else:
                     fname = dname
         else:

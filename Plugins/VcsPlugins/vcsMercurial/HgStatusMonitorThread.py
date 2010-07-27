@@ -96,12 +96,12 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                 for name in states:
                     try:
                         if self.reportedStates[name] != states[name]:
-                            self.statusList.append("%s %s" % (states[name], name))
+                            self.statusList.append("{0} {1}".format(states[name], name))
                     except KeyError:
-                        self.statusList.append("%s %s" % (states[name], name))
+                        self.statusList.append("{0} {1}".format(states[name], name))
                 for name in self.reportedStates.keys():
                     if name not in states:
-                        self.statusList.append("  %s" % name)
+                        self.statusList.append("  {0}".format(name))
                 self.reportedStates = states
                 return True, \
                        self.trUtf8("Mercurial status checked successfully")

@@ -177,7 +177,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         @param name name (path) of the tag (string)
         """
         itm = QTreeWidgetItem(self.annotateList, 
-            [revision, changeset, author, date, "%d" % self.lineno, text])
+            [revision, changeset, author, date, "{0:d}".format(self.lineno), text])
         self.lineno += 1
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(4, Qt.AlignRight)

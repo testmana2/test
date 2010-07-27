@@ -264,9 +264,9 @@ class Hg(VersionControl):
             rev = None
         vcsUrl = self.hgNormalizeURL(vcsDataDict["url"])
         if vcsUrl.startswith('/'):
-            vcsUrl = 'file://%s' % vcsUrl
+            vcsUrl = 'file://{0}'.format(vcsUrl)
         elif vcsUrl[1] in ['|', ':']:
-            vcsUrl = 'file:///%s' % vcsUrl
+            vcsUrl = 'file:///{0}'.format(vcsUrl)
         
         args = []
         args.append('clone')
@@ -1090,19 +1090,20 @@ class Hg(VersionControl):
             user = url[1]
             host = url[2]
             port, path = url[3].split("/",1)
-            return "%s:%s:%s:%s/%s" % (scheme, user, host, port, urllib.parse.quote(path))
+            return "{0}:{1}:{2}:{3}/{4}".format(
+                scheme, user, host, port, urllib.parse.quote(path))
         elif len(url) == 3:
             scheme = url[0]
             host = url[1]
             port, path = url[2].split("/",1)
-            return "%s:%s:%s/%s" % (scheme, host, port, urllib.parse.quote(path))
+            return "{0}:{1}:{2}/{3}".format(scheme, host, port, urllib.parse.quote(path))
         else:
             scheme = url[0]
             if scheme == "file":
-                return "%s:%s" % (scheme, urllib.parse.quote(url[1]))
+                return "{0}:{1}".format(scheme, urllib.parse.quote(url[1]))
             else:
                 host, path = url[1][2:].split("/",1)
-                return "%s://%s/%s" % (scheme, host, urllib.parse.quote(path))
+                return "{0}://{1}/{2}".format(scheme, host, urllib.parse.quote(path))
 
     def hgNormalizeURL(self, url):
         """
@@ -1115,7 +1116,7 @@ class Hg(VersionControl):
         if url.endswith('/'):
             url = url[:-1]
         urll = url.split('//')
-        return "%s//%s" % (urll[0], '/'.join(urll[1:]))
+        return "{0}//{1}".format(urll[0], '/'.join(urll[1:]))
     
     def hgCopy(self, name, project):
         """

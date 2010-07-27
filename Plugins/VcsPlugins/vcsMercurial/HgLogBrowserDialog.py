@@ -952,7 +952,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 fieldIndex = self.RevisionColumn
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):
-                    searchRx = QRegExp("^\s*%s" % txt[1:], Qt.CaseInsensitive)
+                    searchRx = QRegExp("^\s*{0}".format(txt[1:]), Qt.CaseInsensitive)
                 else:
                     searchRx = QRegExp(txt, Qt.CaseInsensitive)
             else:
