@@ -413,7 +413,7 @@ class ConfigurationWidget(QWidget):
         @param name name of the configuration page module (string)
         @return reference to the configuration page module
         """
-        modName = "Preferences.ConfigurationPages.%s" % name
+        modName = "Preferences.ConfigurationPages.{0}".format(name)
         try:
             mod = __import__(modName)
             components = modName.split('.')

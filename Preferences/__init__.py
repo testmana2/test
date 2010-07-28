@@ -757,20 +757,21 @@ def readToolGroups(prefClass = Prefs):
     groups = int(prefClass.settings.value("Toolgroups/Groups", 0))
     for groupIndex in range(groups):
         groupName = \
-            prefClass.settings.value("Toolgroups/%02d/Name" % groupIndex)
+            prefClass.settings.value("Toolgroups/{0:02d}/Name".format(groupIndex))
         group = [groupName, []]
-        items = int(prefClass.settings.value("Toolgroups/%02d/Items" % groupIndex, 0))
+        items = int(prefClass.settings.value(
+            "Toolgroups/{0:02d}/Items".format(groupIndex), 0))
         for ind in range(items):
             menutext = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Menutext" % (groupIndex, ind))
+                "Toolgroups/{0:02d}/{1:02d}/Menutext".format(groupIndex, ind))
             icon = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Icon" % (groupIndex, ind))
+                "Toolgroups/{0:02d}/{1:02d}/Icon".format(groupIndex, ind))
             executable = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Executable" % (groupIndex, ind))
+                "Toolgroups/{0:02d}/{1:02d}/Executable".format(groupIndex, ind))
             arguments = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Arguments" % (groupIndex, ind))
+                "Toolgroups/{0:02d}/{1:02d}/Arguments".format(groupIndex, ind))
             redirect = prefClass.settings.value(\
-                "Toolgroups/%02d/%02d/Redirect" % (groupIndex, ind))
+                "Toolgroups/{0:02d}/{1:02d}/Redirect".format(groupIndex, ind))
             
             if menutext:
                 if menutext == '--':
@@ -810,20 +811,27 @@ def saveToolGroups(toolGroups, currentGroup, prefClass = Prefs):
     prefClass.settings.setValue("Toolgroups/Groups", len(toolGroups))
     groupIndex = 0
     for group in toolGroups:
-        prefClass.settings.setValue("Toolgroups/%02d/Name" % groupIndex, group[0])
-        prefClass.settings.setValue("Toolgroups/%02d/Items" % groupIndex, len(group[1]))
+        prefClass.settings.setValue(
+            "Toolgroups/{0:02d}/Name".format(groupIndex), group[0])
+        prefClass.settings.setValue(
+            "Toolgroups/{0:02d}/Items".format(groupIndex), len(group[1]))
         ind = 0
         for tool in group[1]:
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Menutext" % (groupIndex, ind), tool['menutext'])
+                "Toolgroups/{0:02d}/{1:02d}/Menutext".format(groupIndex, ind), 
+                tool['menutext'])
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Icon" % (groupIndex, ind), tool['icon'])
+                "Toolgroups/{0:02d}/{1:02d}/Icon".format(groupIndex, ind), 
+                tool['icon'])
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Executable" % (groupIndex, ind), tool['executable'])
+                "Toolgroups/{0:02d}/{1:02d}/Executable".format(groupIndex, ind), 
+                tool['executable'])
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Arguments" % (groupIndex, ind), tool['arguments'])
+                "Toolgroups/{0:02d}/{1:02d}/Arguments".format(groupIndex, ind), 
+                tool['arguments'])
             prefClass.settings.setValue(\
-                "Toolgroups/%02d/%02d/Redirect" % (groupIndex, ind), tool['redirect'])
+                "Toolgroups/{0:02d}/{1:02d}/Redirect".format(groupIndex, ind), 
+                tool['redirect'])
             ind += 1
         groupIndex += 1
     prefClass.settings.setValue("Toolgroups/Current Group", currentGroup)
@@ -985,7 +993,7 @@ def getPython(key, prefClass = Prefs):
             if ext.startswith("."):
                 exts.append(ext)
             else:
-                exts.append(".%s" % ext)
+                exts.append(".{0}".format(ext))
         return exts
 
 def setPython(key, value, prefClass = Prefs):

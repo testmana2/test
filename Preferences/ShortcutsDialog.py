@@ -310,7 +310,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                             continue
                         
                         # step 2: check if shortcut hides an already allocated
-                        if itmseq.startswith("%s+" % keystr):
+                        if itmseq.startswith("{0}+".format(keystr)):
                             res = QMessageBox.warning(None,
                                 self.trUtf8("Edit shortcuts"),
                                 self.trUtf8(\
@@ -328,7 +328,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                 return False
                         
                         # step 3: check if shortcut is hidden by an already allocated
-                        if keystr.startswith("%s+" % itmseq):
+                        if keystr.startswith("{0}+".format(itmseq)):
                             res = QMessageBox.warning(None,
                                 self.trUtf8("Edit shortcuts"),
                                 self.trUtf8(\

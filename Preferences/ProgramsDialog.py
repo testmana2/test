@@ -78,23 +78,23 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         # 1. do the Qt4 programs
         # 1a. Translation Converter
         exe = Utilities.isWindowsPlatform() and \
-            "%s.exe" % Utilities.generateQtToolName("lrelease") or \
+            "{0}.exe".format(Utilities.generateQtToolName("lrelease")) or \
             Utilities.generateQtToolName("lrelease")
         version = self.__createProgramEntry(self.trUtf8("Translation Converter (Qt4)"), 
                     exe, '-version', 'lrelease', -1)
         # 1b. Qt4 Designer
         exe = Utilities.isWindowsPlatform() and \
-            "%s.exe" % Utilities.generateQtToolName("designer") or \
+            "{0}.exe".format(Utilities.generateQtToolName("designer")) or \
             Utilities.generateQtToolName("designer")
         self.__createProgramEntry(self.trUtf8("Qt4 Designer"), exe, version = version)
         # 1c. Qt4 Linguist
         exe = Utilities.isWindowsPlatform() and \
-            "%s.exe" % Utilities.generateQtToolName("linguist") or \
+            "{0}.exe".format(Utilities.generateQtToolName("linguist")) or \
             Utilities.generateQtToolName("linguist")
         self.__createProgramEntry(self.trUtf8("Qt4 Linguist"), exe, version = version)
         # 1d. Qt4 Assistant
         exe = Utilities.isWindowsPlatform() and \
-            "%s.exe" % Utilities.generateQtToolName("assistant") or \
+            "{0}.exe".format(Utilities.generateQtToolName("assistant")) or \
             Utilities.generateQtToolName("assistant")
         self.__createProgramEntry(self.trUtf8("Qt4 Assistant"), exe, version = version)
         
@@ -246,7 +246,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                                     Preferences.getSystem("IOEncoding"), 
                                     'replace')
                         if versionRe is None:
-                            versionRe = "^%s" % re.escape(versionStartsWith)
+                            versionRe = "^{0}".format(re.escape(versionStartsWith))
                         versionRe = re.compile(versionRe, re.UNICODE)
                         for line in output.splitlines():
                             if versionRe.search(line):
