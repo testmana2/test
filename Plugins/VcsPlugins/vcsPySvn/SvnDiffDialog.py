@@ -190,8 +190,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
             for name in fnames:
                 self.__showError(self.trUtf8("Processing file '{0}'...\n").format(name))
                 if urls is not None:
-                    url1 = "%s/%s%s" % (urls[0], dname, name)
-                    url2 = "%s/%s%s" % (urls[1], dname, name)
+                    url1 = "{0}/{1}{2}".format(urls[0], dname, name)
+                    url2 = "{0}/{1}{2}".format(urls[1], dname, name)
                     if summary:
                         diff_summary = self.client.diff_summarize(\
                             url1, revision1 = rev1, 
@@ -199,9 +199,9 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                             recurse = recurse)
                         diff_list = []
                         for diff_sum in diff_summary:
-                            diff_list.append("%s %s" % \
-                                (self.__getDiffSummaryKind(diff_sum['summarize_kind']),
-                                 diff_sum['path']))
+                            diff_list.append("{0} {1}".format(
+                                self.__getDiffSummaryKind(diff_sum['summarize_kind']),
+                                diff_sum['path']))
                         diffText = os.linesep.join(diff_list)
                     else:
                         diffText = self.client.diff(tmpdir, 
@@ -218,7 +218,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                             revision1 = rev1, revision2 = rev2, recurse = recurse)
                 counter = 0
                 for line in diffText.splitlines():
-                    self.__appendText("%s%s" % (line, os.linesep))
+                    self.__appendText("{0}{1}".format(line, os.linesep))
                     counter += 1
                     if counter == 30:
                         # check for cancel every 30 lines
@@ -306,7 +306,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
             else:
                 dname, fname = self.vcs.splitPath(self.filename[0])
                 if fname != '.':
-                    fname = "%s.diff" % self.filename[0]
+                    fname = "{0}.diff".format(self.filename[0])
                 else:
                     fname = dname
         else:

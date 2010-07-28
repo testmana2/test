@@ -123,19 +123,19 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
             self.contents.clear()
             self.__pegRev = None
             for log in logs:
-                ver = "%d" % log["revision"].number
+                ver = "{0:d}".format(log["revision"].number)
                 dstr = '<b>{0} {1}</b>'.format(self.revString, ver)
                 if self.__pegRev is None:
                     self.__pegRev = int(ver)
                 try:
-                    lv = "%d" % logs[logs.index(log) + 1]["revision"].number
+                    lv = "{0:d}".format(logs[logs.index(log) + 1]["revision"].number)
                     url = QUrl()
                     url.setScheme("file")
                     url.setPath(self.filename)
                     query = QByteArray()
                     query.append(lv).append('_').append(ver)
                     url.setEncodedQuery(query)
-                    dstr += ' [<a href="%s" name="%s">%s</a>]' % (
+                    dstr += ' [<a href="{0}" name="{1}">{2}</a>]'.format(
                         url.toString(), query, self.trUtf8('diff to {0}').format(lv)
                     )
                 except IndexError:

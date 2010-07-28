@@ -91,9 +91,9 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
             reposRoot = rx_base.cap(1)
             
             if tags:
-                path = "%s/tags" % reposRoot
+                path = "{0}/tags".format(reposRoot)
             else:
-                path = "%s/branches" % reposRoot
+                path = "{0}/branches".format(reposRoot)
         else:
             reposPath, ok = QInputDialog.getText(\
                 self,
@@ -202,7 +202,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         @param date date of the tag (string)
         @param name name (path) of the tag (string)
         """
-        itm = QTreeWidgetItem(self.tagList, ["%6d" % revision, author, date, name])
+        itm = QTreeWidgetItem(self.tagList, 
+                              ["{0:6d}".format(revision), author, date, name])
         itm.setTextAlignment(0, Qt.AlignRight)
         
     def getTagList(self):

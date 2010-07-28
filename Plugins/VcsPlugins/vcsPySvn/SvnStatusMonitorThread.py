@@ -94,12 +94,12 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                     states[file.path] = status
                     try:
                         if self.reportedStates[file.path] != status:
-                            self.statusList.append("%s %s" % (status, file.path))
+                            self.statusList.append("{0} {1}".format(status, file.path))
                     except KeyError:
-                        self.statusList.append("%s %s" % (status, file.path))
+                        self.statusList.append("{0} {1}".format(status, file.path))
             for name in list(self.reportedStates.keys()):
                 if name not in states:
-                    self.statusList.append("  %s" % name)
+                    self.statusList.append("  {0}".format(name))
             self.reportedStates = states
             res = True
             statusStr = \

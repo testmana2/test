@@ -102,7 +102,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         if revision == "":
             rev = ""
         else:
-            rev = "%7d" % revision.number
+            rev = "{0:7d}".format(revision.number)
         if date == "":
             dt = ""
         else:
@@ -110,7 +110,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         if size == 0:
             sz = ""
         else:
-            sz = "%7d" % size
+            sz = "{0:7d}".format(size)
         if author is None:
             author = ""
         
@@ -170,7 +170,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
                             urlPart = repoUrl
                             for element in dirent["repos_path"].split("/")[:-1]:
                                 if element:
-                                    urlPart = "%s/%s" % (urlPart, element)
+                                    urlPart = "{0}/{1}".format(urlPart, element)
                                     itm = self.__generateItem(parent, element, 
                                         "", "", 0, "", pysvn.node_kind.dir, 
                                         urlPart)

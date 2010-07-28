@@ -219,7 +219,7 @@ class Subversion(VersionControl):
             if os.getcwd() == project.ppath:
                 os.chdir(os.path.dirname(project.ppath))
                 cwdIsPpath = True
-            tmpProjectDir = "%s_tmp" % project.ppath
+            tmpProjectDir = "{0}_tmp".format(project.ppath)
             shutil.rmtree(tmpProjectDir, True)
             os.rename(project.ppath, tmpProjectDir)
             os.makedirs(project.ppath)
@@ -270,14 +270,14 @@ class Subversion(VersionControl):
         
         vcsDir = self.svnNormalizeURL(vcsDataDict["url"])
         if vcsDir.startswith('/'):
-            vcsDir = 'file://%s' % vcsDir
+            vcsDir = 'file://{0}'.format(vcsDir)
         elif vcsDir[1] in ['|', ':']:
-            vcsDir = 'file:///%s' % vcsDir
+            vcsDir = 'file:///{0}'.format(vcsDir)
         
         project = vcsDir[vcsDir.rfind('/') + 1:]
         
         # create the dir structure to be imported into the repository
-        tmpDir = '%s_tmp' % projectDir
+        tmpDir = '{0}_tmp'.format(projectDir)
         try:
             os.makedirs(tmpDir)
             if self.otherData["standardLayout"]:
@@ -302,9 +302,9 @@ class Subversion(VersionControl):
         if not noDialog:
             dlg = \
                 SvnDialog(self.trUtf8('Importing project into Subversion repository'),
-                          "import%s --message %s ." % \
-                            ((not recurse) and " --non-recursive" or "", 
-                             msg),
+                          "import{0} --message {1} .".format(
+                            (not recurse) and " --non-recursive" or "", 
+                            msg),
                     client)
             QApplication.processEvents()
         try:
@@ -342,13 +342,13 @@ class Subversion(VersionControl):
             tag = None
         vcsDir = self.svnNormalizeURL(vcsDataDict["url"])
         if vcsDir.startswith('/'):
-            vcsDir = 'file://%s' % vcsDir
+            vcsDir = 'file://{0}'.format(vcsDir)
         elif vcsDir[1] in ['|', ':']:
-            vcsDir = 'file:///%s' % vcsDir
+            vcsDir = 'file:///{0}'.format(vcsDir)
             
         if self.otherData["standardLayout"]:
             if tag is None or tag == '':
-                svnUrl = '%s/trunk' % vcsDir
+                svnUrl = '{0}/trunk'.format(vcsDir)
             else:
                 if not tag.startswith('tags') and not tag.startswith('branches'):
                     type_, ok = QInputDialog.getItem(\
@@ -361,8 +361,8 @@ class Subversion(VersionControl):
                         0, False)
                     if not ok:
                         return False
-                    tag = '%s/%s' % (type_, tag)
-                svnUrl = '%s/%s' % (vcsDir, tag)
+                    tag = '{0}/{1}'.format(type_, tag)
+                svnUrl = '{0}/{1}'.format(vcsDir, tag)
         else:
             svnUrl = vcsDir
         
@@ -373,9 +373,9 @@ class Subversion(VersionControl):
         if not noDialog:
             dlg = \
                 SvnDialog(self.trUtf8('Checking project out of Subversion repository'),
-                          "checkout%s %s %s" % \
-                            ((not recurse) and " --non-recursive" or "", 
-                             url, projectDir),
+                          "checkout{0} {1} {2}".format(
+                            (not recurse) and " --non-recursive" or "", 
+                            url, projectDir),
                     client)
             QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
@@ -406,11 +406,11 @@ class Subversion(VersionControl):
             tag = None
         vcsDir = self.svnNormalizeURL(vcsDataDict["url"])
         if vcsDir.startswith('/') or vcsDir[1] == '|':
-            vcsDir = 'file://%s' % vcsDir
+            vcsDir = 'file://{0}'.format(vcsDir)
             
         if self.otherData["standardLayout"]:
             if tag is None or tag == '':
-                svnUrl = '%s/trunk' % vcsDir
+                svnUrl = '{0}/trunk'.format(vcsDir)
             else:
                 if not tag.startswith('tags') and not tag.startswith('branches'):
                     type_, ok = QInputDialog.getItem(\
@@ -423,8 +423,8 @@ class Subversion(VersionControl):
                         0, False)
                     if not ok:
                         return False
-                    tag = '%s/%s' % (type_, tag)
-                svnUrl = '%s/%s' % (vcsDir, tag)
+                    tag = '{0}/{1}'.format(type_, tag)
+                svnUrl = '{0}/{1}'.format(vcsDir, tag)
         else:
             svnUrl = vcsDir
         
@@ -434,9 +434,9 @@ class Subversion(VersionControl):
         client = self.getClient()
         dlg = \
             SvnDialog(self.trUtf8('Exporting project from Subversion repository'),
-                      "export --force%s %s %s" % \
-                        ((not recurse) and " --non-recursive" or "",
-                         url, projectDir),
+                      "export --force{0} {1} {2}".format(
+                        (not recurse) and " --non-recursive" or "",
+                        url, projectDir),
                 client)
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
@@ -520,13 +520,13 @@ class Subversion(VersionControl):
         if not noDialog:
             dlg = \
                 SvnDialog(self.trUtf8('Commiting changes to Subversion repository'),
-                          "commit%s%s%s%s --message %s %s" % \
-                            ((not recurse) and " --non-recursive" or "",
-                             keeplocks and " --keep-locks" or "",
-                             keepChangelists and " --keep-changelists" or "", 
-                             changelists and \
+                          "commit{0}{1}{2}{3} --message {4} {5}".format(
+                            (not recurse) and " --non-recursive" or "",
+                            keeplocks and " --keep-locks" or "",
+                            keepChangelists and " --keep-changelists" or "", 
+                            changelists and \
                                 " --changelist ".join([""] + changelists) or "", 
-                             msg, " ".join(fnames)),
+                            msg, " ".join(fnames)),
                     client)
             QApplication.processEvents()
         try:
@@ -576,7 +576,8 @@ class Subversion(VersionControl):
         if not noDialog:
             dlg = \
                 SvnDialog(self.trUtf8('Synchronizing with the Subversion repository'),
-                          "update%s %s" % ((not recurse) and " --non-recursive" or "",
+                          "update{0} {1}".format(
+                            (not recurse) and " --non-recursive" or "",
                             " ".join(fnames)),
                     client)
         QApplication.processEvents()
@@ -650,10 +651,10 @@ class Subversion(VersionControl):
             dlg = \
                 SvnDialog(\
                     self.trUtf8('Adding files/directories to the Subversion repository'),
-                        "add --non-recursive%s%s %s" % \
-                            (force and " --force" or "",
-                             noignore and " --no-ignore" or "",
-                             " ".join(names)),
+                        "add --non-recursive{0}{1} {2}".format(
+                            force and " --force" or "",
+                            noignore and " --no-ignore" or "",
+                            " ".join(names)),
                     client)
             QApplication.processEvents()
         try:
@@ -723,10 +724,10 @@ class Subversion(VersionControl):
         dlg = \
             SvnDialog(\
                 self.trUtf8('Adding directory trees to the Subversion repository'),
-                    "add%s%s %s" % \
-                        (force and " --force" or "",
-                         ignore and " --ignore" or "",
-                         " ".join(names)),
+                    "add{0}{1} {2}".format(
+                        force and " --force" or "",
+                        ignore and " --ignore" or "",
+                        " ".join(names)),
                 client)
         QApplication.processEvents()
         try:
@@ -758,9 +759,9 @@ class Subversion(VersionControl):
             dlg = \
                 SvnDialog(\
                     self.trUtf8('Removing files/directories from the Subversion repository'),
-                        "remove%s %s" % \
-                            (force and " --force" or "",
-                             " ".join(name)),
+                        "remove{0} {1}".format(
+                            force and " --force" or "",
+                            " ".join(name)),
                     client)
             QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
@@ -812,7 +813,7 @@ class Subversion(VersionControl):
             client = self.getClient()
             if rx_prot.exactMatch(target):
                 target = self.__svnURL(target)
-                log = "Moving %s to %s" % (name, target)
+                log = "Moving {0} to {1}".format(name, target)
             else:
                 log = ""
                 target = target
@@ -820,9 +821,9 @@ class Subversion(VersionControl):
                 dlg = \
                     SvnDialog(\
                         self.trUtf8('Moving {0}').format(name),
-                            "move%s%s %s %s" % \
-                                (force and " --force" or "",
-                                log and (" --message %s" % log) or "", 
+                            "move{0}{1} {2} {3}".format(
+                                force and " --force" or "",
+                                log and (" --message {0}".format(log)) or "", 
                                 name, target),
                         client, log = log)
                 QApplication.processEvents()
@@ -949,9 +950,9 @@ class Subversion(VersionControl):
             
             reposRoot = rx_base.cap(1)
             if tagOp in [1, 4]:
-                url = '%s/tags/%s' % (reposRoot, urllib.parse.quote(tag))
+                url = '{0}/tags/{1}'.format(reposRoot, urllib.parse.quote(tag))
             elif tagOp in [2, 8]:
-                url = '%s/branches/%s' % (reposRoot, urllib.parse.quote(tag))
+                url = '{0}/branches/{1}'.format(reposRoot, urllib.parse.quote(tag))
         else:
             url = self.__svnURL(tag)
         
@@ -959,11 +960,11 @@ class Subversion(VersionControl):
         client = self.getClient()
         rev = None
         if tagOp in [1, 2]:
-            log = 'Created tag <%s>' % self.tagName
+            log = 'Created tag <{0}>'.format(self.tagName)
             dlg = \
                 SvnDialog(\
                     self.trUtf8('Tagging {0} in the Subversion repository').format(name),
-                        "copy --message %s %s %s" % (log, reposURL, url),
+                        "copy --message {0} {1} {2}".format(log, reposURL, url),
                     client, log = log)
             QApplication.processEvents()
             locker = QMutexLocker(self.vcsExecutionMutex)
@@ -973,11 +974,11 @@ class Subversion(VersionControl):
                 dlg.showError(e.args[0])
             locker.unlock()
         else:
-            log = 'Deleted tag <%s>' % self.tagName
+            log = 'Deleted tag <{0}>'.format(self.tagName)
             dlg = \
                 SvnDialog(\
                     self.trUtf8('Tagging {0} in the Subversion repository').format(name),
-                        "remove --message %s %s" % (log, url),
+                        "remove --message {0} {1}".format(log, url),
                     client, log = log)
             QApplication.processEvents()
             locker = QMutexLocker(self.vcsExecutionMutex)
@@ -1005,7 +1006,7 @@ class Subversion(VersionControl):
         client = self.getClient()
         dlg = \
             SvnDialog(self.trUtf8('Reverting changes'),
-                      "revert %s %s" % ((not recurse) and " --non-recursive" or "",
+                      "revert {0} {1}".format((not recurse) and " --non-recursive" or "",
                         " ".join(name)),
                 client)
         QApplication.processEvents()
@@ -1063,11 +1064,11 @@ class Subversion(VersionControl):
             reposRoot = rx_base.cap(1)
             tn = tag
             if tagType == 1:
-                url = '%s/tags/%s' % (reposRoot, urllib.parse.quote(tag))
+                url = '{0}/tags/{1}'.format(reposRoot, urllib.parse.quote(tag))
             elif tagType == 2:
-                url = '%s/branches/%s' % (reposRoot, urllib.parse.quote(tag))
+                url = '{0}/branches/{1}'.format(reposRoot, urllib.parse.quote(tag))
             elif tagType == 4:
-                url = '%s/trunk' % (reposRoot)
+                url = '{0}/trunk'.format(reposRoot)
                 tn = 'HEAD'
         else:
             url = self.__svnURL(tag)
@@ -1076,7 +1077,7 @@ class Subversion(VersionControl):
         client = self.getClient()
         dlg = \
             SvnDialog(self.trUtf8('Switching to {0}').format(tn),
-                      "switch %s %s" % (url, name),
+                      "switch {0} {1}".format(url, name),
                 client)
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
@@ -1176,12 +1177,12 @@ class Subversion(VersionControl):
         dlg = \
             SvnDialog(\
                 self.trUtf8('Merging {0}').format(name),
-                    "merge%s%s %s %s %s" % \
-                        ((not recurse) and " --non-recursive" or "",
-                         force and " --force" or "",
-                         "%s%s" % (url1, rev1 and ("@"+rev1) or ""),
-                         "%s%s" % (url2, rev2 and ("@"+rev2) or ""),
-                         fname),
+                    "merge{0}{1} {2} {3} {4}".format(
+                        (not recurse) and " --non-recursive" or "",
+                        force and " --force" or "",
+                        "{0}{1}".format(url1, rev1 and ("@"+rev1) or ""),
+                        "{0}{1}".format(url2, rev2 and ("@"+rev2) or ""),
+                        fname),
                 client)
         QApplication.processEvents()
         try:
@@ -1295,7 +1296,7 @@ class Subversion(VersionControl):
         client = self.getClient()
         dlg = \
             SvnDialog(self.trUtf8('Cleaning up {0}').format(name),
-                      "cleanup %s" % name,
+                      "cleanup {0}".format(name),
                 client)
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
@@ -1367,9 +1368,9 @@ class Subversion(VersionControl):
             return e.args[0]
         
         if hasattr(pysvn, 'svn_api_version'):
-            apiVersion = "%s %s" % \
-                (".".join([str(v) for v in pysvn.svn_api_version[:3]]), 
-                 pysvn.svn_api_version[3])
+            apiVersion = "{0} {1}".format(
+                ".".join([str(v) for v in pysvn.svn_api_version[:3]]), 
+                pysvn.svn_api_version[3])
         else:
             apiVersion = QApplication.translate('subversion', "unknown")
         return QApplication.translate('subversion',
@@ -1438,8 +1439,8 @@ class Subversion(VersionControl):
         client = self.getClient()
         dlg = \
             SvnDialog(self.trUtf8('Resolving conficts'),
-                      "resolved%s %s" % \
-                        ((not recurse) and " --non-recursive" or "", 
+                      "resolved{0} {1}".format(
+                        (not recurse) and " --non-recursive" or "", 
                         " ".join(fnames)),
                 client)
         QApplication.processEvents()
@@ -1471,15 +1472,15 @@ class Subversion(VersionControl):
             client = self.getClient()
             if rx_prot.exactMatch(target):
                 target = self.__svnURL(target)
-                log = "Copying %s to %s" % (name, target)
+                log = "Copying {0} to {1}".format(name, target)
             else:
                 log = ""
                 target = target
             dlg = \
                 SvnDialog(\
                     self.trUtf8('Copying {0}').format(name),
-                        "copy%s %s %s" % \
-                            (log and (" --message %s" % log) or "", 
+                        "copy{0} {1} {2}".format(
+                            log and (" --message {0}".format(log)) or "", 
                             name, target),
                     client, log = log)
             QApplication.processEvents()
@@ -1545,11 +1546,11 @@ class Subversion(VersionControl):
             dlg = \
                 SvnDialog(\
                     self.trUtf8('Subversion Set Property'),
-                        "propset%s%s %s %s %s" % \
-                            (recurse and " --recurse" or "",
-                             skipchecks and " --skip-checks" or "",
-                             propName, propValue,
-                             " ".join(fnames)),
+                        "propset{0}{1} {2} {3} {4}".format(
+                            recurse and " --recurse" or "",
+                            skipchecks and " --skip-checks" or "",
+                            propName, propValue,
+                            " ".join(fnames)),
                     client)
             QApplication.processEvents()
             try:
@@ -1596,10 +1597,10 @@ class Subversion(VersionControl):
             dlg = \
                 SvnDialog(\
                     self.trUtf8('Subversion Delete Property'),
-                        "propdel%s%s %s %s" % \
-                            (recurse and " --recurse" or "",
-                             skipchecks and " --skip-checks" or "",
-                             propName, " ".join(fnames)),
+                        "propdel{0}{1} {2} {3}".format(
+                            recurse and " --recurse" or "",
+                            skipchecks and " --skip-checks" or "",
+                            propName, " ".join(fnames)),
                     client)
             QApplication.processEvents()
             try:
@@ -1780,10 +1781,10 @@ class Subversion(VersionControl):
         dlg = \
             SvnDialog(\
                 self.trUtf8('Locking in the Subversion repository'),
-                    "lock%s%s %s" % \
-                        (stealIt and " --force" or "",
-                         comment and (" --message %s" % comment) or "",
-                         " ".join(fnames)),
+                    "lock{0}{1} {2}".format(
+                        stealIt and " --force" or "",
+                        comment and (" --message {0}".format(comment)) or "",
+                        " ".join(fnames)),
                 client, parent = parent)
         QApplication.processEvents()
         try:
@@ -1818,9 +1819,9 @@ class Subversion(VersionControl):
         dlg = \
             SvnDialog(\
                 self.trUtf8('Unlocking in the Subversion repository'),
-                    "unlock%s %s" % \
-                        (breakIt and " --force" or "",
-                         " ".join(fnames)),
+                    "unlock{0} {1}".format(
+                        breakIt and " --force" or "",
+                        " ".join(fnames)),
                 client, parent = parent)
         QApplication.processEvents()
         try:
@@ -1856,9 +1857,9 @@ class Subversion(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             newUrl, inside = dlg.getData()
             if inside:
-                msg = "switch %s %s" % (newUrl, projectPath)
+                msg = "switch {0} {1}".format(newUrl, projectPath)
             else:
-                msg = "relocate %s %s %s" % (currUrl, newUrl, projectPath)
+                msg = "relocate {0} {1} {2}".format(currUrl, newUrl, projectPath)
             client = self.getClient()
             dlg = \
                 SvnDialog(self.trUtf8('Relocating'), msg, client)
@@ -1912,7 +1913,7 @@ class Subversion(VersionControl):
         client = self.getClient()
         dlg = \
             SvnDialog(self.trUtf8('Remove from changelist'),
-                      "changelist --remove %s" % " ".join(names),
+                      "changelist --remove {0}".format(" ".join(names)),
                       client)
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
@@ -1948,7 +1949,7 @@ class Subversion(VersionControl):
         client = self.getClient()
         dlg = \
             SvnDialog(self.trUtf8('Add to changelist'),
-                      "changelist %s" % " ".join(names),
+                      "changelist {0}".format(" ".join(names)),
                       client)
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
@@ -1978,14 +1979,14 @@ class Subversion(VersionControl):
             scheme = url[0]
             host = url[1]
             port, path = url[2].split("/",1)
-            return "%s:%s:%s/%s" % (scheme, host, port, urllib.parse.quote(path))
+            return "{0}:{1}:{2}/{3}".format(scheme, host, port, urllib.parse.quote(path))
         else:
             scheme = url[0]
             if scheme == "file":
-                return "%s:%s" % (scheme, urllib.parse.quote(url[1]))
+                return "{0}:{1}".format(scheme, urllib.parse.quote(url[1]))
             else:
                 host, path = url[1][2:].split("/",1)
-                return "%s://%s/%s" % (scheme, host, urllib.parse.quote(path))
+                return "{0}://{1}/{2}".format(scheme, host, urllib.parse.quote(path))
 
     def svnNormalizeURL(self, url):
         """
@@ -1998,7 +1999,7 @@ class Subversion(VersionControl):
         if url.endswith('/'):
             url = url[:-1]
         urll = url.split('//')
-        return "%s//%s" % (urll[0], '/'.join(urll[1:]))
+        return "{0}//{1}".format(urll[0], '/'.join(urll[1:]))
 
     ############################################################################
     ## Methods to get the helper objects are below.

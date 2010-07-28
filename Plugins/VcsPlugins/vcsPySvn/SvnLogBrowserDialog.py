@@ -138,7 +138,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             rev = ""
             self.__lastRev = 0
         else:
-            rev = "%7d" % revision.number
+            rev = "{0:7d}".format(revision.number)
             self.__lastRev = revision.number
         if date == "":
             dt = ""
@@ -158,7 +158,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             if changedPath["copyfrom_revision"] is None:
                 copyRev = ""
             else:
-                copyRev = "%7d" % changedPath["copyfrom_revision"].number
+                copyRev = "{0:7d}".format(changedPath["copyfrom_revision"].number)
             change = {
                 "action"            : changedPath["action"], 
                 "path"              : changedPath["path"], 
@@ -475,7 +475,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
                 fieldIndex = 0
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):
-                    searchRx = QRegExp("^\s*%s" % txt[1:], Qt.CaseInsensitive)
+                    searchRx = QRegExp("^\s*{0}".format(txt[1:]), Qt.CaseInsensitive)
                 else:
                     searchRx = QRegExp(txt, Qt.CaseInsensitive)
             else:
