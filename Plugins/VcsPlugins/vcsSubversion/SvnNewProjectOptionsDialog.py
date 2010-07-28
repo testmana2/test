@@ -127,9 +127,9 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         scheme = self.protocolCombo.currentText()
         url = self.vcsUrlEdit.text()
         if scheme == "file://" and url[0] not in ["\\", "/"]:
-            url = "/%s" % url
+            url = "/{0}".format(url)
         vcsdatadict = {
-            "url" : '%s%s' % (scheme, url),
+            "url" : '{0}{1}'.format(scheme, url),
             "tag" : self.vcsTagEdit.text(), 
             "standardLayout" : self.layoutCheckBox.isChecked(),
         }

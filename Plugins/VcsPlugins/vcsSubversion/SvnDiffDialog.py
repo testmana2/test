@@ -123,7 +123,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             if rev1 is not None or rev2 is not None:
                 args.append('-r')
                 if rev1 is not None and rev2 is not None:
-                    args.append('%s:%s' % (rev1, rev2))
+                    args.append('{0}:{1}'.format(rev1, rev2))
                 elif rev2 is None:
                     args.append(rev1)
                 elif rev1 is None:
@@ -134,8 +134,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             if summary:
                 args.append("--summarize")
                 self.summaryPath = urls[0]
-            args.append("--old=%s" % urls[0])
-            args.append("--new=%s" % urls[1])
+            args.append("--old={0}".format(urls[0]))
+            args.append("--new={0}".format(urls[1]))
             if isinstance(fn, list):
                 dname, fnames = self.vcs.splitPathList(fn)
             else:
@@ -269,7 +269,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             else:
                 dname, fname = self.vcs.splitPath(self.filename[0])
                 if fname != '.':
-                    fname = "%s.diff" % self.filename[0]
+                    fname = "{0}.diff".format(self.filename[0])
                 else:
                     fname = dname
         else:

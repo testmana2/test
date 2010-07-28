@@ -123,12 +123,12 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         # now generate the code
         code = 'QInputDialog.'
         if self.rText.isChecked():
-            code += 'getText(\\%s%s' % (os.linesep, istring)
-            code += 'None,%s%s' % (os.linesep, istring)
-            code += 'self.trUtf8("%s"),%s%s' % \
-                (self.eCaption.text(), os.linesep, istring)
-            code += 'self.trUtf8("%s"),%s%s' % \
-                (self.eLabel.text(), os.linesep, istring)
+            code += 'getText(\\{0}{1}'.format(os.linesep, istring)
+            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                self.eCaption.text(), os.linesep, istring)
+            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                self.eLabel.text(), os.linesep, istring)
             if self.rEchoNormal.isChecked():
                 code += 'QLineEdit.Normal'
             elif self.rEchoNoEcho.isChecked():
@@ -136,18 +136,18 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
             else:
                 code += 'QLineEdit.Password'
             if self.eTextDefault.text():
-                code += ',%s%sself.trUtf8("%s")' % \
-                    (os.linesep, istring, self.eTextDefault.text())
-            code += ')%s' % os.linesep
+                code += ',{0}{1}self.trUtf8("{2}")'.format(
+                    os.linesep, istring, self.eTextDefault.text())
+            code += '){0}'.format(os.linesep)
         elif self.rInteger.isChecked():
-            code += 'getInteger(\\%s%s' % (os.linesep, istring)
-            code += 'None,%s%s' % (os.linesep, istring)
-            code += 'self.trUtf8("%s"),%s%s' % \
-                (self.eCaption.text(), os.linesep, istring)
-            code += 'self.trUtf8("%s"),%s%s' % \
-                (self.eLabel.text(), os.linesep, istring)
-            code += '%d, %d, %d, %d)%s' % \
-                (self.sIntDefault.value(), self.sIntFrom.value(),
+            code += 'getInteger(\\{0}{1}'.format(os.linesep, istring)
+            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                self.eCaption.text(), os.linesep, istring)
+            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                self.eLabel.text(), os.linesep, istring)
+            code += '{0:d}, {1:d}, {2:d}, {3:d}){4}'.format(
+                self.sIntDefault.value(), self.sIntFrom.value(),
                 self.sIntTo.value(), self.sIntStep.value(), os.linesep)
         elif self.rDouble.isChecked():
             try:
@@ -162,25 +162,25 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 doubleTo = float(self.eDoubleTo.text())
             except ValueError:
                 doubleTo = 2147483647
-            code += 'getDouble(\\%s%s' % (os.linesep, istring)
-            code += 'None,%s%s' % (os.linesep, istring)
-            code += 'self.trUtf8("%s"),%s%s' % \
-                (self.eCaption.text(), os.linesep, istring)
-            code += 'self.trUtf8("%s"),%s%s' % \
-                (self.eLabel.text(), os.linesep, istring)
-            code += '%s, %s, %s, %d)%s' % \
-                (doubleDefault, doubleFrom, doubleTo, 
+            code += 'getDouble(\\{0}{1}'.format(os.linesep, istring)
+            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                self.eCaption.text(), os.linesep, istring)
+            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                self.eLabel.text(), os.linesep, istring)
+            code += '{0}, {1}, {2}, {3:d}){4}'.format(
+                doubleDefault, doubleFrom, doubleTo, 
                 self.sDoubleDecimals.value(), os.linesep)
         elif self.rItem.isChecked():
-            code += 'getItem(\\%s%s' % (os.linesep, istring)
-            code += 'None,%s%s' % (os.linesep, istring)
-            code += 'self.trUtf8("%s"),%s%s' % \
-                (self.eCaption.text(), os.linesep, istring)
-            code += 'self.trUtf8("%s"),%s%s' % \
-                (self.eLabel.text(), os.linesep, istring)
-            code += '%s,%s%s' % (self.eVariable.text(), os.linesep, istring)
-            code += '%d, %s)%s' % \
-                (self.sCurrentItem.value(), self.cEditable.isChecked(), os.linesep)
+            code += 'getItem(\\{0}{1}'.format(os.linesep, istring)
+            code += 'None,{0}{1}'.format(os.linesep, istring)
+            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                self.eCaption.text(), os.linesep, istring)
+            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                self.eLabel.text(), os.linesep, istring)
+            code += '{0},{1}{2}'.format(self.eVariable.text(), os.linesep, istring)
+            code += '{0:d}, {1}){2}'.format(
+                self.sCurrentItem.value(), self.cEditable.isChecked(), os.linesep)
             
         return code
         

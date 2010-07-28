@@ -149,102 +149,102 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         code = 'QFileDialog.'
         if self.rOpenFile.isChecked() or self.rfOpenFile.isChecked():
             if self.rOpenFile.isChecked():
-                code += 'getOpenFileName(\\%s%s' % (os.linesep, istring)
+                code += 'getOpenFileName(\\{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'getOpenFileNameAndFilter(\\%s%s' % (os.linesep, istring)
-            code += 'None,%s%s' % (os.linesep, istring)
+                code += 'getOpenFileNameAndFilter(\\{0}{1}'.format(os.linesep, istring)
+            code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
-                code += '"",%s%s' % (os.linesep, istring)
+                code += '"",{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'self.trUtf8("%s"),%s%s' % \
-                    (self.eCaption.text(), os.linesep, istring)
+                code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                    self.eCaption.text(), os.linesep, istring)
             if not self.eStartWith.text():
-                code += '"",%s%s' % (os.linesep, istring)
+                code += '"",{0}{1}'.format(os.linesep, istring)
             else:
                 if self.cStartWith.isChecked():
-                    fmt = '%s,%s%s'
+                    fmt = '{0},{1}{2}'
                 else:
-                    fmt = 'self.trUtf8("%s"),%s%s'
-                code += fmt % (self.eStartWith.text(), os.linesep, istring)
+                    fmt = 'self.trUtf8("{0}"),{1}{2}'
+                code += fmt.format(self.eStartWith.text(), os.linesep, istring)
             if self.eFilters.text() == "":
                 code += '""'
             else:
                 if self.cFilters.isChecked(): 
-                    fmt = '%s' 
+                    fmt = '{0}' 
                 else: 
-                    fmt = 'self.trUtf8("%s")' 
-                code += fmt % self.eFilters.text()
+                    fmt = 'self.trUtf8("{0}")' 
+                code += fmt.format(self.eFilters.text())
             if self.rfOpenFile.isChecked():
-                code += ',%s%sNone' % (os.linesep, istring)
+                code += ',{0}{1}None'.format(os.linesep, istring)
             if not self.cSymlinks.isChecked():
-                code += ',%s%sQFileDialog.Options(QFileDialog.DontResolveSymlinks)' % \
-                        (os.linesep, istring)
-            code += ')%s' % os.linesep
+                code += ',{0}{1}QFileDialog.Options(QFileDialog.DontResolveSymlinks)'\
+                        .format(os.linesep, istring)
+            code += '){0}'.format(os.linesep)
         elif self.rOpenFiles.isChecked() or self.rfOpenFiles.isChecked():
             if self.rOpenFiles.isChecked():
-                code += 'getOpenFileNames(\\%s%s' % (os.linesep, istring)
+                code += 'getOpenFileNames(\\{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'getOpenFileNamesAndFilter(\\%s%s' % (os.linesep, istring)
-            code += 'None,%s%s' % (os.linesep, istring)
+                code += 'getOpenFileNamesAndFilter(\\{0}{1}'.format(os.linesep, istring)
+            code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
-                code += '"",%s%s' % (os.linesep, istring)
+                code += '"",{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'self.trUtf8("%s"),%s%s' % \
-                    (self.eCaption.text(), os.linesep, istring)
+                code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                    self.eCaption.text(), os.linesep, istring)
             if not self.eStartWith.text():
-                code += '"",%s%s' % (os.linesep, istring)
+                code += '"",{0}{1}'.format(os.linesep, istring)
             else:
                 if self.cStartWith.isChecked():
-                    fmt = '%s,%s%s'
+                    fmt = '{0},{1}{2}'
                 else:
-                    fmt = 'self.trUtf8("%s"),%s%s'
-                code += fmt % (self.eStartWith.text(), os.linesep, istring)
+                    fmt = 'self.trUtf8("{0}"),{1}{2}'
+                code += fmt.format(self.eStartWith.text(), os.linesep, istring)
             if not self.eFilters.text():
                 code += '""'
             else:
                 if self.cFilters.isChecked(): 
-                    fmt = '%s' 
+                    fmt = '{0}' 
                 else: 
-                    fmt = 'self.trUtf8("%s")' 
-                code += fmt % self.eFilters.text()
+                    fmt = 'self.trUtf8("{0}")' 
+                code += fmt.format(self.eFilters.text())
             if self.rfOpenFiles.isChecked():
-                code += ',%s%sNone' % (os.linesep, istring)
+                code += ',{0}{1}None'.format(os.linesep, istring)
             if not self.cSymlinks.isChecked():
-                code += ',%s%sQFileDialog.Options(QFileDialog.DontResolveSymlinks)' % \
-                        (os.linesep, istring)
-            code += ')%s' % os.linesep
+                code += ',{0}{1}QFileDialog.Options(QFileDialog.DontResolveSymlinks)'\
+                        .format(os.linesep, istring)
+            code += '){0}'.format(os.linesep)
         elif self.rSaveFile.isChecked() or self.rfSaveFile.isChecked():
             if self.rSaveFile.isChecked():
-                code += 'getSaveFileName(\\%s%s' % (os.linesep, istring)
+                code += 'getSaveFileName(\\{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'getSaveFileNameAndFilter(\\%s%s' % (os.linesep, istring)
-            code += 'None,%s%s' % (os.linesep, istring)
+                code += 'getSaveFileNameAndFilter(\\{0}{1}'.format(os.linesep, istring)
+            code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
-                code += '"",%s%s' % (os.linesep, istring)
+                code += '"",{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'self.trUtf8("%s"),%s%s' % \
-                    (self.eCaption.text(), os.linesep, istring)
+                code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                    self.eCaption.text(), os.linesep, istring)
             if not self.eStartWith.text():
-                code += '"",%s%s' % (os.linesep, istring)
+                code += '"",{0}{1}'.format(os.linesep, istring)
             else:
                 if self.cStartWith.isChecked():
-                    fmt = '%s,%s%s'
+                    fmt = '{0},{1}{2}'
                 else:
-                    fmt = 'self.trUtf8("%s"),%s%s'
-                code += fmt % (self.eStartWith.text(), os.linesep, istring)
+                    fmt = 'self.trUtf8("{0}"),{1}{2}'
+                code += fmt.format(self.eStartWith.text(), os.linesep, istring)
             if not self.eFilters.text():
                 code += '""'
             else:
                 if self.cFilters.isChecked(): 
-                    fmt = '%s' 
+                    fmt = '{0}' 
                 else: 
-                    fmt = 'self.trUtf8("%s")' 
-                code += fmt % self.eFilters.text()
+                    fmt = 'self.trUtf8("{0}")' 
+                code += fmt.format(self.eFilters.text())
             if self.rfSaveFile.isChecked():
-                code += ',%s%sNone' % (os.linesep, istring)
+                code += ',{0}{1}None'.format(os.linesep, istring)
             if (not self.cSymlinks.isChecked()) or \
                (not self.cConfirmOverwrite.isChecked()):
-                code += ',%s%sQFileDialog.Options(' % (os.linesep, istring)
+                code += ',{0}{1}QFileDialog.Options('.format(os.linesep, istring)
                 if not self.cSymlinks.isChecked():
                     code += 'QFileDialog.DontResolveSymlinks'
                 if (not self.cSymlinks.isChecked()) and \
@@ -253,31 +253,31 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 if not self.cConfirmOverwrite.isChecked():
                     code += 'QFileDialog.DontConfirmOverwrite'
                 code += ')'
-            code += ')%s' % os.linesep
+            code += '){0}'.format(os.linesep)
         elif self.rDirectory.isChecked():
-            code += 'getExistingDirectory(\\%s%s' % (os.linesep, istring)
-            code += 'None,%s%s' % (os.linesep, istring)
+            code += 'getExistingDirectory(\\{0}{1}'.format(os.linesep, istring)
+            code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
-                code += '"",%s%s' % (os.linesep, istring)
+                code += '"",{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'self.trUtf8("%s"),%s%s' % \
-                    (self.eCaption.text(), os.linesep, istring)
+                code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                    self.eCaption.text(), os.linesep, istring)
             if not self.eWorkDir.text():
                 code += '""'
             else:
                 if self.cWorkDir.isChecked():
-                    fmt = '%s'
+                    fmt = '{0}'
                 else:
-                    fmt = 'self.trUtf8("%s")'
-                code += fmt % self.eWorkDir.text()
-            code += ',%s%sQFileDialog.Options(' % (os.linesep, istring)
+                    fmt = 'self.trUtf8("{0}")'
+                code += fmt.format(self.eWorkDir.text())
+            code += ',{0}{1}QFileDialog.Options('.format(os.linesep, istring)
             if not self.cSymlinks.isChecked():
                 code += 'QFileDialog.DontResolveSymlinks | '
             if self.cDirOnly.isChecked():
                 code += 'QFileDialog.ShowDirsOnly'
             else:
                 code += 'QFileDialog.Option(0)'
-            code += '))%s' % os.linesep
+            code += ')){0}'.format(os.linesep)
             
         return code
         

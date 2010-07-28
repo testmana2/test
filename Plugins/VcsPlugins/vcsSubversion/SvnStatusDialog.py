@@ -220,8 +220,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.switched[switched], 
             self.lockinfo[lockinfo], 
             self.uptodate[uptodate], 
-            "%7s" % str(revision), 
-            "%7s" % str(change), 
+            "{0:7}".format(str(revision)), 
+            "{0:7}".format(str(change)), 
             author, 
             path, 
         ])

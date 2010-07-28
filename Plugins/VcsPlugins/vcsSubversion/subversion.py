@@ -212,7 +212,7 @@ class Subversion(VersionControl):
             if os.getcwd() == project.ppath:
                 os.chdir(os.path.dirname(project.ppath))
                 cwdIsPpath = True
-            tmpProjectDir = "%s_tmp" % project.ppath
+            tmpProjectDir = "{0}_tmp".format(project.ppath)
             shutil.rmtree(tmpProjectDir, True)
             os.rename(project.ppath, tmpProjectDir)
             os.makedirs(project.ppath)
@@ -263,14 +263,14 @@ class Subversion(VersionControl):
         
         vcsDir = self.svnNormalizeURL(vcsDataDict["url"])
         if vcsDir.startswith('/'):
-            vcsDir = 'file://%s' % vcsDir
+            vcsDir = 'file://{0}'.format(vcsDir)
         elif vcsDir[1] in ['|', ':']:
-            vcsDir = 'file:///%s' % vcsDir
+            vcsDir = 'file:///{0}'.format(vcsDir)
         
         project = vcsDir[vcsDir.rfind('/')+1:]
         
         # create the dir structure to be imported into the repository
-        tmpDir = '%s_tmp' % projectDir
+        tmpDir = '{0}_tmp'.format(projectDir)
         try:
             os.makedirs(tmpDir)
             if self.otherData["standardLayout"]:
@@ -321,13 +321,13 @@ class Subversion(VersionControl):
             tag = None
         vcsDir = self.svnNormalizeURL(vcsDataDict["url"])
         if vcsDir.startswith('/'):
-            vcsDir = 'file://%s' % vcsDir
+            vcsDir = 'file://{0}'.format(vcsDir)
         elif vcsDir[1] in ['|', ':']:
-            vcsDir = 'file:///%s' % vcsDir
+            vcsDir = 'file:///{0}'.format(vcsDir)
             
         if self.otherData["standardLayout"]:
             if tag is None or tag == '':
-                svnUrl = '%s/trunk' % vcsDir
+                svnUrl = '{0}/trunk'.format(vcsDir)
             else:
                 if not tag.startswith('tags') and not tag.startswith('branches'):
                     type, ok = QInputDialog.getItem(\
@@ -340,8 +340,8 @@ class Subversion(VersionControl):
                         0, False)
                     if not ok:
                         return False
-                    tag = '%s/%s' % (type, tag)
-                svnUrl = '%s/%s' % (vcsDir, tag)
+                    tag = '{0}/{1}'.format(type, tag)
+                svnUrl = '{0}/{1}'.format(vcsDir, tag)
         else:
             svnUrl = vcsDir
         
@@ -375,11 +375,11 @@ class Subversion(VersionControl):
             tag = None
         vcsDir = self.svnNormalizeURL(vcsDataDict["url"])
         if vcsDir.startswith('/') or vcsDir[1] == '|':
-            vcsDir = 'file://%s' % vcsDir
+            vcsDir = 'file://{0}'.format(vcsDir)
             
         if self.otherData["standardLayout"]:
             if tag is None or tag == '':
-                svnUrl = '%s/trunk' % vcsDir
+                svnUrl = '{0}/trunk'.format(vcsDir)
             else:
                 if not tag.startswith('tags') and not tag.startswith('branches'):
                     type, ok = QInputDialog.getItem(\
@@ -392,8 +392,8 @@ class Subversion(VersionControl):
                         0, False)
                     if not ok:
                         return False
-                    tag = '%s/%s' % (type, tag)
-                svnUrl = '%s/%s' % (vcsDir, tag)
+                    tag = '{0}/{1}'.format(type, tag)
+                svnUrl = '{0}/{1}'.format(vcsDir, tag)
         else:
             svnUrl = vcsDir
         
@@ -841,9 +841,9 @@ class Subversion(VersionControl):
             
             reposRoot = rx_base.cap(1)
             if tagOp in [1, 4]:
-                url = '%s/tags/%s' % (reposRoot, urllib.parse.quote(tag))
+                url = '{0}/tags/{1}'.format(reposRoot, urllib.parse.quote(tag))
             elif tagOp in [2, 8]:
-                url = '%s/branches/%s' % (reposRoot, urllib.parse.quote(tag))
+                url = '{0}/branches/{1}'.format(reposRoot, urllib.parse.quote(tag))
         else:
             url = self.__svnURL(tag)
         
@@ -853,7 +853,7 @@ class Subversion(VersionControl):
             self.addArguments(args, self.options['global'])
             self.addArguments(args, self.options['tag'])
             args.append('--message')
-            args.append('Created tag <%s>' % tag)
+            args.append('Created tag <{0}>'.format(tag))
             args.append(reposURL)
             args.append(url)
         else:
@@ -861,7 +861,7 @@ class Subversion(VersionControl):
             self.addArguments(args, self.options['global'])
             self.addArguments(args, self.options['tag'])
             args.append('--message')
-            args.append('Deleted tag <%s>' % tag)
+            args.append('Deleted tag <{0}>'.format(tag))
             args.append(url)
         
         dia = SvnDialog(self.trUtf8('Tagging {0} in the Subversion repository')
@@ -936,11 +936,11 @@ class Subversion(VersionControl):
             reposRoot = rx_base.cap(1)
             tn = tag
             if tagType == 1:
-                url = '%s/tags/%s' % (reposRoot, urllib.parse.quote(tag))
+                url = '{0}/tags/{1}'.format(reposRoot, urllib.parse.quote(tag))
             elif tagType == 2:
-                url = '%s/branches/%s' % (reposRoot, urllib.parse.quote(tag))
+                url = '{0}/branches/{1}'.format(reposRoot, urllib.parse.quote(tag))
             elif tagType == 4:
-                url = '%s/trunk' % (reposRoot)
+                url = '{0}/trunk'.format(reposRoot)
                 tn = 'HEAD'
         else:
             url = self.__svnURL(tag)
@@ -1240,7 +1240,8 @@ class Subversion(VersionControl):
                         value = line.replace('<date>', '').replace('</date>', '')
                         date, time = value.split('T')
                         info['committed-date'] = date
-                        info['committed-time'] = "%s%s" % (time.split('.')[0], time[-1])
+                        info['committed-time'] = "{0}{1}".format(
+                            time.split('.')[0], time[-1])
         
         return QApplication.translate('subversion',
             """<h3>Repository information</h3>"""
@@ -1760,14 +1761,14 @@ class Subversion(VersionControl):
             scheme = url[0]
             host = url[1]
             port, path = url[2].split("/",1)
-            return "%s:%s:%s/%s" % (scheme, host, port, urllib.parse.quote(path))
+            return "{0}:{1}:{2}/{3}".format(scheme, host, port, urllib.parse.quote(path))
         else:
             scheme = url[0]
             if scheme == "file":
-                return "%s:%s" % (scheme, urllib.parse.quote(url[1]))
+                return "{0}:{1}".format(scheme, urllib.parse.quote(url[1]))
             else:
                 host, path = url[1][2:].split("/",1)
-                return "%s://%s/%s" % (scheme, host, urllib.parse.quote(path))
+                return "{0}://{1}/{2}".format(scheme, host, urllib.parse.quote(path))
 
     def svnNormalizeURL(self, url):
         """
@@ -1780,7 +1781,7 @@ class Subversion(VersionControl):
         if url.endswith('/'):
             url = url[:-1]
         urll = url.split('//')
-        return "%s//%s" % (urll[0], '/'.join(urll[1:]))
+        return "{0}//{1}".format(urll[0], '/'.join(urll[1:]))
 
     ############################################################################
     ## Methods to get the helper objects are below.

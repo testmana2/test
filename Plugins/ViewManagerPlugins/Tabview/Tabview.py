@@ -381,7 +381,7 @@ class TabWidget(E5TabWidget):
             
             maxFileNameChars = Preferences.getUI("TabViewManagerFilenameLength")
             if len(txt) > maxFileNameChars:
-                txt = "...%s" % txt[-maxFileNameChars:]
+                txt = "...{0}".format(txt[-maxFileNameChars:])
             if editor.isReadOnly():
                 txt = self.trUtf8("{0} (ro)").format(txt)
             
@@ -747,7 +747,7 @@ class Tabview(QSplitter, ViewManager):
             else:
                 txt = e5App().getObject("Project").getRelativePath(fn)
             if len(txt) > self.maxFileNameChars:
-                txt = "...%s" % txt[-self.maxFileNameChars:]
+                txt = "...{0}".format(txt[-self.maxFileNameChars:])
             if not QFileInfo(fn).isWritable():
                 txt = self.trUtf8("{0} (ro)").format(txt)
             self.currentTabWidget.addTab(win, txt)
@@ -784,7 +784,7 @@ class Tabview(QSplitter, ViewManager):
             else:
                 txt = e5App().getObject("Project").getRelativePath(fn)
             if len(txt) > self.maxFileNameChars:
-                txt = "...%s" % txt[-self.maxFileNameChars:]
+                txt = "...{0}".format(txt[-self.maxFileNameChars:])
             if not QFileInfo(fn).isWritable():
                 txt = self.trUtf8("{0} (ro)").format(txt)
             nindex = tabWidget.insertWidget(index, win, txt)
@@ -852,7 +852,7 @@ class Tabview(QSplitter, ViewManager):
         else:
             tabName = e5App().getObject("Project").getRelativePath(newName)
         if len(tabName) > self.maxFileNameChars:
-            tabName = "...%s" % tabName[-self.maxFileNameChars:]
+            tabName = "...{0}".format(tabName[-self.maxFileNameChars:])
         index = self.currentTabWidget.indexOf(editor)
         self.currentTabWidget.setTabText(index, tabName)
         self.currentTabWidget.setTabToolTip(index, newName)
@@ -1083,7 +1083,7 @@ class Tabview(QSplitter, ViewManager):
                         else:
                             txt = e5App().getObject("Project").getRelativePath(fn)
                         if len(txt) > self.maxFileNameChars:
-                            txt = "...%s" % txt[-self.maxFileNameChars:]
+                            txt = "...{0}".format(txt[-self.maxFileNameChars:])
                         if not QFileInfo(fn).isWritable():
                             txt = self.trUtf8("{0} (ro)").format(txt)
                         tabWidget.setTabText(index, txt)

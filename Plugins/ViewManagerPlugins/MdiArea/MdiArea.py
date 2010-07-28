@@ -188,10 +188,10 @@ class MdiArea(QMdiArea, ViewManager):
                 txt = sv.windowTitle()
             accel = ""
             if idx < 10:
-                accel = "&%d. " % idx
+                accel = "&{0:d}. ".format(idx)
             elif idx < 36:
-                accel = "&%c. " % chr(idx - 9 + ord("@"))
-            act = menu.addAction("%s%s" % (accel, txt))
+                accel = "&{0}. ".format(chr(idx - 9 + ord("@")))
+            act = menu.addAction("{0}{1}".format(accel, txt))
             self.connect(act, SIGNAL("triggered()"), 
                          self.__windowMapper, SLOT("map()"))
             self.__windowMapper.setMapping(act, subWindow)

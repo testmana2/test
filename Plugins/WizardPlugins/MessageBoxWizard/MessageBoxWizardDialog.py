@@ -274,12 +274,12 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
             return ""
         
         istring2 = istring + indString
-        joinstring = ' | \\%s%s' % (os.linesep, istring2)
-        btnCode = ',%s%sQMessageBox.StandardButtons(\\' % (os.linesep, istring)
-        btnCode += '%s%s%s)' % (os.linesep, istring2, joinstring.join(buttons))
+        joinstring = ' | \\{0}{1}'.format(os.linesep, istring2)
+        btnCode = ',{0}{1}QMessageBox.StandardButtons(\\'.format(os.linesep, istring)
+        btnCode += '{0}{1}{2})'.format(os.linesep, istring2, joinstring.join(buttons))
         defaultIndex = self.defaultCombo.currentIndex()
         if defaultIndex:
-            btnCode += ',%s%s%s' % (os.linesep, istring, 
+            btnCode += ',{0}{1}{2}'.format(os.linesep, istring, 
                 self.buttonsCodeListText[defaultIndex])
         return btnCode
     
@@ -298,22 +298,22 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         # now generate the code
         msgdlg = 'QMessageBox.'
         if self.rAbout.isChecked():
-            msgdlg += "about(None,%s" % os.linesep
+            msgdlg += "about(None,{0}".format(os.linesep)
         elif self.rAboutQt.isChecked():
-            msgdlg += "aboutQt(None, %s" % os.linesep
+            msgdlg += "aboutQt(None, {0}".format(os.linesep)
         elif self.rInformation.isChecked():
-            msgdlg += "information(None,%s" % os.linesep
+            msgdlg += "information(None,{0}".format(os.linesep)
         elif self.rQuestion.isChecked():
-            msgdlg += "question(None,%s" % os.linesep
+            msgdlg += "question(None,{0}".format(os.linesep)
         elif self.rWarning.isChecked():
-            msgdlg += "warning(None,%s" % os.linesep
+            msgdlg += "warning(None,{0}".format(os.linesep)
         else:
-            msgdlg +="critical(None,%s" % os.linesep
-        msgdlg += '%sself.trUtf8("%s")' % (istring, self.eCaption.text())
+            msgdlg +="critical(None,{0}".format(os.linesep)
+        msgdlg += '{0}self.trUtf8("{1}")'.format(istring, self.eCaption.text())
         if not self.rAboutQt.isChecked():
-            msgdlg += ',%s%sself.trUtf8("""%s""")' % \
-                (os.linesep, istring, self.eMessage.toPlainText())
+            msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
+                os.linesep, istring, self.eMessage.toPlainText())
         if not self.rAbout.isChecked() and not self.rAboutQt.isChecked():
             msgdlg += self.__getQt42ButtonCode(istring, indString)
-        msgdlg +=')%s' % os.linesep
+        msgdlg +='){0}'.format(os.linesep)
         return msgdlg

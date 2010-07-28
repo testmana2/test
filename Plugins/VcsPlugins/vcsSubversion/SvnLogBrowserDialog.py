@@ -155,7 +155,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             msg.append(line.strip())
         
         itm = QTreeWidgetItem(self.logTree, [
-            "%7s" % revision, 
+            "{0:7}".format(revision), 
             author, 
             date, 
             " ".join(msg), 
@@ -225,10 +225,10 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         self.vcs.addArguments(args, self.vcs.options['log'])
         args.append('--verbose')
         args.append('--limit')
-        args.append('%d' % self.limitSpinBox.value())
+        args.append('{0:d}'.format(self.limitSpinBox.value()))
         if startRev is not None:
             args.append('--revision')
-            args.append('%s:0' % startRev)
+            args.append('{0}:0'.format(startRev))
         if self.stopCheckBox.isChecked():
             args.append('--stop-on-copy')
         args.append(self.fname)
@@ -556,7 +556,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
                 fieldIndex = 0
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):
-                    searchRx = QRegExp("^\s*%s" % txt[1:], Qt.CaseInsensitive)
+                    searchRx = QRegExp("^\s*{0}".format(txt[1:]), Qt.CaseInsensitive)
                 else:
                     searchRx = QRegExp(txt, Qt.CaseInsensitive)
             else:

@@ -61,17 +61,17 @@ class QRegExpWizardRepeatDialog(QDialog, Ui_QRegExpWizardRepeatDialog):
             if reps == 1:
                 return "+"
             else:
-                return "{%d,}" % reps
+                return "{{{0:d},}}".format(reps)
         elif self.maxButton.isChecked():
             reps = self.maxSpin.value()
             if reps == 1:
                 return "?"
             else:
-                return "{,%d}" % reps
+                return "{{,{0:d}}}".format(reps)
         elif self.exactButton.isChecked():
             reps = self.exactSpin.value()
-            return "{%d}" % reps
+            return "{{{0:d}}}".format(reps)
         elif self.betweenButton.isChecked():
             repsMin = self.lowerSpin.value()
             repsMax = self.upperSpin.value()
-            return "{%d,%d}" % (repsMin, repsMax)
+            return "{{{0:d},{1:d}}}".format(repsMin, repsMax)

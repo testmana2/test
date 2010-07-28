@@ -58,15 +58,15 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
             else:
                 coStr = self.eColor.currentText()
                 if coStr.startswith('#'):
-                    coStr = "QColor('%s')" % coStr
+                    coStr = "QColor('{0}')".format(coStr)
                 else:
-                    coStr = "QColor(%s)" % coStr
+                    coStr = "QColor({0})".format(coStr)
                 try:
                     if self.rQt45.isChecked():
-                        exec('QColorDialog.getColor(%s, None, "%s")' % \
-                            (coStr, self.eTitle.text()))
+                        exec('QColorDialog.getColor({0}, None, "{1}")'.format(
+                            coStr, self.eTitle.text()))
                     else:
-                        exec('QColorDialog.getColor(%s)' % coStr)
+                        exec('QColorDialog.getColor({0})'.format(coStr))
                 except:
                     QMessageBox.critical(None,
                         self.trUtf8("QColorDialog Wizard Error"),
@@ -142,41 +142,41 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
             if self.eColor.currentText():
                 col = self.eColor.currentText()
                 if col.startswith('#'):
-                    code += 'QColor("%s")' % col
+                    code += 'QColor("{0}")'.format(col)
                 else:
-                    code += 'QColor(%s)' % col
+                    code += 'QColor({0})'.format(col)
             if self.rQt45.isChecked():
-                code += ', None,%s' % os.linesep
-                code += '%sself.trUtf8("%s"),%s' % \
-                    (istring, self.eTitle.text(), os.linesep)
+                code += ', None,{0}'.format(os.linesep)
+                code += '{0}self.trUtf8("{1}"),{2}'.format(
+                    istring, self.eTitle.text(), os.linesep)
                 code += \
-                    '%sQColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)' % \
-                        istring
-            code += ')%s' % os.linesep
+                    '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
+                        .format(istring)
+            code += '){0}'.format(os.linesep)
         elif self.rRGBA.isChecked():
             if self.rQt45.isChecked():
                 code += 'getColor('
                 if not self.eRGB.text():
-                    code += 'QColor(%d, %d, %d, %d),%s' % \
-                        (self.sRed.value(), self.sGreen.value(), self.sBlue.value(),
+                    code += 'QColor({0:d}, {1:d}, {2:d}, {3:d}),{4}'.format(
+                        self.sRed.value(), self.sGreen.value(), self.sBlue.value(),
                         self.sAlpha.value(), os.linesep)
                 else:
-                    code += '%s,%s' % (self.eRGB.text(), os.linesep)
-                code += '%sNone,%s' % (istring, os.linesep)
-                code += '%sself.trUtf8("%s"),%s' % \
-                    (istring, self.eTitle.text(), os.linesep)
+                    code += '{0},{1}'.format(self.eRGB.text(), os.linesep)
+                code += '{0}None,{1}'.format(istring, os.linesep)
+                code += '{0}self.trUtf8("{1}"),{2}'.format(
+                    istring, self.eTitle.text(), os.linesep)
                 code += \
-                    '%sQColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)' % \
-                        istring
-                code += ')%s' % os.linesep
+                    '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
+                        .format(istring)
+                code += '){0}'.format(os.linesep)
             else:
                 code += 'getRgba('
                 if not self.eRGB.text():
-                    code += 'qRgba(%d, %d, %d, %d)' % \
-                        (self.sRed.value(), self.sGreen.value(), self.sBlue.value(),
+                    code += 'qRgba({0:d}, {1:d}, {2:d}, {3:d})'.format(
+                        self.sRed.value(), self.sGreen.value(), self.sBlue.value(),
                         self.sAlpha.value())
                 else:
                     code += self.eRGB.text()
-                code += ')%s' % os.linesep
+                code += '){0}'.format(os.linesep)
         
         return code

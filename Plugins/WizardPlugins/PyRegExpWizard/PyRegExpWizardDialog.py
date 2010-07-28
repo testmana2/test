@@ -174,7 +174,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
             names,
             0, True)
         if ok and groupName:
-            self.__insertString("(?P=%s)" % groupName)
+            self.__insertString("(?P={0})".format(groupName))
         
     @pyqtSlot()
     def on_altnButton_clicked(self):
@@ -463,13 +463,13 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     self.resultTable.setItem(row, 0, 
                         QTableWidgetItem(self.trUtf8("Offset")))
                     self.resultTable.setItem(row, 1, 
-                        QTableWidgetItem("%d" % matchobj.start(0)))
+                        QTableWidgetItem("{0:d}".format(matchobj.start(0))))
                     
                     row += 1
                     self.resultTable.setItem(row, 0, 
                         QTableWidgetItem(self.trUtf8("Captures")))
                     self.resultTable.setItem(row, 1, 
-                        QTableWidgetItem("%d" % captures))
+                        QTableWidgetItem("{0:d}".format(captures)))
                     row += 1
                     self.resultTable.setItem(row, 1, 
                         QTableWidgetItem(self.trUtf8("Text")))
@@ -482,7 +482,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     self.resultTable.setItem(row, 1, 
                         QTableWidgetItem(matchobj.group(0)))
                     self.resultTable.setItem(row, 2, 
-                        QTableWidgetItem("%d" % len(matchobj.group(0))))
+                        QTableWidgetItem("{0:d}".format(len(matchobj.group(0)))))
                     
                     for i in range(1, captures + 1):
                         if matchobj.group(i) is not None:
@@ -493,7 +493,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                             self.resultTable.setItem(row, 1, 
                                 QTableWidgetItem(matchobj.group(i)))
                             self.resultTable.setItem(row, 2, 
-                                QTableWidgetItem("%d" % len(matchobj.group(i))))
+                                QTableWidgetItem("{0:d}".format(len(matchobj.group(i)))))
                     
                     # highlight the matched text
                     tc = self.textTextEdit.textCursor()
@@ -615,12 +615,12 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         
         code = ''
         if self.importCheckBox.isChecked():
-            code += 'import re%s%s' % (os.linesep, istring)
-        code += '%s = re.compile(r"""%s"""' % \
-            (reVar, regexp.replace('"', '\\"'))
+            code += 'import re{0}{1}'.format(os.linesep, istring)
+        code += '{0} = re.compile(r"""{1}"""'.format(
+            reVar, regexp.replace('"', '\\"'))
         if flags:
-            code += ', \\%s%s%s' % (os.linesep, i1string, flags)
-        code += ')%s' % os.linesep
+            code += ', \\{0}{1}{2}'.format(os.linesep, i1string, flags)
+        code += '){0}'.format(os.linesep)
         return code
 
 class PyRegExpWizardDialog(QDialog):

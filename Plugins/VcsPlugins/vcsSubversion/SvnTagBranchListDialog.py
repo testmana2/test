@@ -115,9 +115,9 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
             reposRoot = rx_base.cap(1)
             
             if tags:
-                args.append("%s/tags" % reposRoot)
+                args.append("{0}/tags".format(reposRoot))
             else:
-                args.append("%s/branches" % reposRoot)
+                args.append("{0}/branches".format(reposRoot))
             self.path = None
         else:
             reposPath, ok = QInputDialog.getText(\
@@ -235,7 +235,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
                     Preferences.getSystem("IOEncoding"), 
                     'replace')
             if self.rx_list.exactMatch(s):
-                rev = "%6s" % self.rx_list.cap(1)
+                rev = "{0:6}".format(self.rx_list.cap(1))
                 author = self.rx_list.cap(2)
                 date = self.rx_list.cap(3)
                 path = self.rx_list.cap(4)

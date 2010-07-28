@@ -171,7 +171,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
                     query = QByteArray()
                     query.append(lv).append('_').append(ver)
                     url.setEncodedQuery(query)
-                    dstr += ' [<a href="%s" name="%s">%s</a>]' % (
+                    dstr += ' [<a href="{0}" name="{1}">{2}</a>]'.format(
                         url.toString(), 
                         query, 
                         self.trUtf8('diff to {0}').format(lv), 

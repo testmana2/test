@@ -204,7 +204,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
             urlPart = repoRoot
             for element in url.replace(repoRoot, "").split("/"):
                 if element:
-                    urlPart = "%s/%s" % (urlPart, element)
+                    urlPart = "{0}/{1}".format(urlPart, element)
                     itm = self.__generateItem(element, "", "", "", "", "dir", urlPart)
                     itm.setExpanded(True)
                     self.parentItem = itm
@@ -389,7 +389,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
                     nodekind = "file"
                 else:
                     continue
-                url = "%s/%s" % (self.repoUrl, name)
+                url = "{0}/{1}".format(self.repoUrl, name)
                 self.__generateItem(name, revision, author, size, date, nodekind, url)
    
     def __readStderr(self):

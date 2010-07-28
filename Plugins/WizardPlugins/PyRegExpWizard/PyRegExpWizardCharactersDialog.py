@@ -247,9 +247,9 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         if index == 0:
             return char
         elif index == 1:
-            return "\\x%s" % char.lower()
+            return "\\x{0}".format(char.lower())
         elif index == 2:
-            return "\\0%s" % char
+            return "\\0{0}".format(char)
         else:
             try:
                 return self.specialChars[index]
@@ -295,7 +295,7 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
                 continue
             index = entrieslist[0].currentIndex()
             char = entrieslist[1].text()
-            regexp += "%s-" % self.__formatCharacter(index, char)
+            regexp += "{0}-".format(self.__formatCharacter(index, char))
             index = entrieslist[2].currentIndex()
             char = entrieslist[3].text()
             regexp += self.__formatCharacter(index, char)
@@ -304,6 +304,6 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
             if len(regexp) == 2 and regexp in self.predefinedClasses:
                 return regexp
             else:
-                return "[%s]" % regexp
+                return "[{0}]".format(regexp)
         else:
             return ""

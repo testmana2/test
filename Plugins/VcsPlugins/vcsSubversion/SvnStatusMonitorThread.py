@@ -96,12 +96,12 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                         states[name] = status
                         try:
                             if self.reportedStates[name] != status:
-                                self.statusList.append("%s %s" % (status, name))
+                                self.statusList.append("{0} {1}".format(status, name))
                         except KeyError:
-                            self.statusList.append("%s %s" % (status, name))
+                            self.statusList.append("{0} {1}".format(status, name))
                 for name in list(self.reportedStates.keys()):
                     if name not in states:
-                        self.statusList.append("  %s" % name)
+                        self.statusList.append("  {0}".format(name))
                 self.reportedStates = states
                 return True, \
                        self.trUtf8("Subversion status checked successfully (using svn)")

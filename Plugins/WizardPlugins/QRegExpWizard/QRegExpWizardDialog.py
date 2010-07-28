@@ -360,14 +360,14 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 self.nextButton.setEnabled(True)
                 row += 1
                 self.resultTable.setItem(row, 0, QTableWidgetItem(self.trUtf8("Offset")))
-                self.resultTable.setItem(row, 1, QTableWidgetItem("%d" % offset))
+                self.resultTable.setItem(row, 1, QTableWidgetItem("{0:d}".format(offset)))
                 
                 if not wildcard:
                     row += 1
                     self.resultTable.setItem(row, 0, 
                         QTableWidgetItem(self.trUtf8("Captures")))
                     self.resultTable.setItem(row, 1, 
-                        QTableWidgetItem("%d" % captures))
+                        QTableWidgetItem("{0:d}".format(captures)))
                     row += 1
                     self.resultTable.setItem(row, 1, 
                         QTableWidgetItem(self.trUtf8("Text")))
@@ -380,7 +380,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 self.resultTable.setItem(row, 1, 
                     QTableWidgetItem(re.cap(0)))
                 self.resultTable.setItem(row, 2, 
-                    QTableWidgetItem("%d" % re.matchedLength()))
+                    QTableWidgetItem("{0:d}".format(re.matchedLength())))
                 
                 if not wildcard:
                     for i in range(1, captures + 1):
@@ -392,7 +392,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                             self.resultTable.setItem(row, 1, 
                                 QTableWidgetItem(re.cap(i)))
                             self.resultTable.setItem(row, 2, 
-                                QTableWidgetItem("%d" % len(re.cap(i))))
+                                QTableWidgetItem("{0:d}".format(len(re.cap(i)))))
                 else:
                     self.resultTable.setRowCount(3)
                 
@@ -459,16 +459,16 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             
         regexp = self.regexpLineEdit.text()
         
-        code = '%s = QRegExp(r"""%s""")%s' % \
-            (reVar, regexp.replace('"', '\\"'), os.linesep)
+        code = '{0} = QRegExp(r"""{1}"""){2}'.format(
+            reVar, regexp.replace('"', '\\"'), os.linesep)
         if not self.caseSensitiveCheckBox.isChecked():
-            code += '%s%s.setCaseSensitivity(Qt.CaseInsensitive)%s' % \
-                    (istring, reVar, os.linesep)
+            code += '{0}{1}.setCaseSensitivity(Qt.CaseInsensitive){2}'.format(
+                    istring, reVar, os.linesep)
         if self.minimalCheckBox.isChecked():
-            code += '%s%s.setMinimal(1)%s' % (istring, reVar, os.linesep)
+            code += '{0}{1}.setMinimal(1){2}'.format(istring, reVar, os.linesep)
         if self.wildcardCheckBox.isChecked():
-            code += '%s%s.setPatternSyntax(QRegExp.Wildcard)%s' % \
-                    (istring, reVar, os.linesep)
+            code += '{0}{1}.setPatternSyntax(QRegExp.Wildcard){2}'.format(
+                    istring, reVar, os.linesep)
         return code
 
 class QRegExpWizardDialog(QDialog):
