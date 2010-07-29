@@ -477,7 +477,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         
         fn = os.path.join(self.project.ppath, fn)
         self.idlFile = fn
-        args.append("-C%s" % os.path.dirname(fn))
+        args.append("-C{0}".format(os.path.dirname(fn)))
         args.append(fn)
         
         self.connect(self.compileProc, SIGNAL('finished(int, QProcess::ExitStatus)'), 

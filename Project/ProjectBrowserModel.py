@@ -786,7 +786,7 @@ class ProjectBrowserModel(BrowserModel):
         if len(statesList) == 1 and statesList[0] == '--RESET--':
             statesList = []
             for name in list(self.__vcsStatus.keys()):
-                statesList.append(" %s" % name)
+                statesList.append(" {0}".format(name))
         
         for name in statesList:
             state = name[0]

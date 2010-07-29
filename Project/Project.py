@@ -391,7 +391,7 @@ class Project(QObject):
         else:
             sourceKey = self.pdata["PROGLANGUAGE"][0]
         for ext in self.sourceExtensions[sourceKey]:
-            self.pdata["FILETYPES"]["*%s" % ext] = "SOURCES"
+            self.pdata["FILETYPES"]["*{0}".format(ext)] = "SOURCES"
         self.pdata["FILETYPES"]["*.idl"] = "INTERFACES"
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "E4Plugin", "PySide"]:
             self.pdata["FILETYPES"]["*.ui"] = "FORMS"
@@ -798,7 +798,7 @@ class Project(QObject):
         
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
         
-        fn = os.path.join(self.getProjectManagementDir(), '%s.e4q' % fn)
+        fn = os.path.join(self.getProjectManagementDir(), '{0}.e4q'.format(fn))
         if os.path.exists(fn):
             try:
                 f = open(fn, "r", encoding = "utf-8")
@@ -841,7 +841,7 @@ class Project(QObject):
         
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
         
-        fn = os.path.join(self.getProjectManagementDir(), '%s.e4q' % fn)
+        fn = os.path.join(self.getProjectManagementDir(), '{0}.e4q'.format(fn))
         
         try:
             f = open(fn, "w", encoding = "utf-8")
@@ -875,7 +875,7 @@ class Project(QObject):
         try:
             if ext.lower() in [".e4pz"]:
                 fn = os.path.join(self.getProjectManagementDir(), 
-                                  '%s%s.e4sz' % (fn, indicator))
+                                  '{0}{1}.e4sz'.format(fn, indicator))
                 try:
                     import gzip
                 except ImportError:
@@ -890,7 +890,7 @@ class Project(QObject):
                 g.close()
             else:
                 fn = os.path.join(self.getProjectManagementDir(), 
-                                  '%s%s.e4s' % (fn, indicator))
+                                  '{0}{1}.e4s'.format(fn, indicator))
                 f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
@@ -1019,7 +1019,7 @@ class Project(QObject):
         try:
             if ext.lower() == ".e4pz":
                 fn = os.path.join(self.getProjectManagementDir(), 
-                                  '%s%s.e4sz' % (fn, indicator))
+                                  '{0}{1}.e4sz'.format(fn, indicator))
                 try:
                     import gzip
                 except ImportError:
@@ -1032,7 +1032,7 @@ class Project(QObject):
                 f = io.StringIO()
             else:
                 fn = os.path.join(self.getProjectManagementDir(), 
-                                  '%s%s.e4s' % (fn, indicator))
+                                  '{0}{1}.e4s'.format(fn, indicator))
                 f = open(fn, "w", encoding = "utf-8")
             
             SessionWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
@@ -1063,8 +1063,8 @@ class Project(QObject):
             
         fname, ext = os.path.splitext(os.path.basename(self.pfile))
         
-        for fn in [os.path.join(self.getProjectManagementDir(), "%s.e4sz" % fname), 
-                   os.path.join(self.getProjectManagementDir(), "%s.e4s" % fname)]:
+        for fn in [os.path.join(self.getProjectManagementDir(), "{0}.e4sz".format(fname)),
+                   os.path.join(self.getProjectManagementDir(), "{0}.e4s".format(fname))]:
             if os.path.exists(fn):
                 try:
                     os.remove(fn)
@@ -1088,7 +1088,7 @@ class Project(QObject):
         
         try:
             if ext.lower() in [".e4pz"]:
-                fn = os.path.join(self.getProjectManagementDir(), '%s.e4tz' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4tz'.format(fn))
                 if not os.path.exists(fn):
                     return
                 try:
@@ -1103,7 +1103,7 @@ class Project(QObject):
                 f = io.StringIO(g.read().decode("utf-8"))
                 g.close()
             else:
-                fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4t'.format(fn))
                 if not os.path.exists(fn):
                     return
                 f = open(fn, "r", encoding = "utf-8")
@@ -1194,7 +1194,7 @@ class Project(QObject):
         
         try:
             if ext.lower() == ".e4pz":
-                fn = os.path.join(self.getProjectManagementDir(), '%s.e4tz' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4tz'.format(fn))
                 try:
                     import gzip
                 except ImportError:
@@ -1205,7 +1205,7 @@ class Project(QObject):
                     return
                 f = io.StringIO()
             else:
-                fn = os.path.join(self.getProjectManagementDir(), '%s.e4t' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4t'.format(fn))
                 f = open(fn, "w", encoding = "utf-8")
             
             TasksWriter(f, True, os.path.splitext(os.path.basename(fn))[0]).writeXML()
@@ -1240,7 +1240,7 @@ class Project(QObject):
         
         try:
             if ext.lower() in [".e4pz"]:
-                fn = os.path.join(self.getProjectManagementDir(), '%s.e4dz' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4dz'.format(fn))
                 try:
                     import gzip
                 except ImportError:
@@ -1255,7 +1255,7 @@ class Project(QObject):
                 f = io.StringIO(g.read().decode("utf-8"))
                 g.close()
             else:
-                fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4d'.format(fn))
                 f = open(fn, "r", encoding = "utf-8")
             line = f.readline()
             dtdLine = f.readline()
@@ -1363,7 +1363,7 @@ class Project(QObject):
         
         try:
             if ext.lower() == ".e4pz":
-                fn = os.path.join(self.getProjectManagementDir(), '%s.e4dz' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4dz'.format(fn))
                 try:
                     import gzip
                 except ImportError:
@@ -1376,7 +1376,7 @@ class Project(QObject):
                     return
                 f = io.StringIO()
             else:
-                fn = os.path.join(self.getProjectManagementDir(), '%s.e4d' % fn)
+                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4d'.format(fn))
                 f = open(fn, "w", encoding = "utf-8")
             
             DebuggerPropertiesWriter(f, os.path.splitext(os.path.basename(fn))[0])\
@@ -1409,8 +1409,8 @@ class Project(QObject):
             
         fname, ext = os.path.splitext(os.path.basename(self.pfile))
         
-        for fn in [os.path.join(self.getProjectManagementDir(), "%s.e4dz" % fname), 
-                   os.path.join(self.getProjectManagementDir(), "%s.e4d" % fname)]:
+        for fn in [os.path.join(self.getProjectManagementDir(), "{0}.e4dz".format(fname)),
+                   os.path.join(self.getProjectManagementDir(), "{0}.e4d".format(fname))]:
             if os.path.exists(fn):
                 try:
                     os.remove(fn)
@@ -1778,7 +1778,7 @@ class Project(QObject):
         
         files = []
         for pattern in patterns:
-            sstring = "%s%s%s" % (source, os.sep, pattern)
+            sstring = "{0}{1}{2}".format(source, os.sep, pattern)
             files.extend(glob.glob(sstring))
         
         if len(files) == 0:
@@ -2189,7 +2189,7 @@ class Project(QObject):
             os.remove(os.path.join(self.ppath, fn))
             dummy, ext = os.path.splitext(fn)
             if ext == '.ui':
-                fn2 = os.path.join(self.ppath, '%s.h' % fn)
+                fn2 = os.path.join(self.ppath, '{0}.h'.format(fn))
                 if os.path.isfile(fn2):
                     os.remove(fn2)
         except EnvironmentError:
@@ -2523,7 +2523,7 @@ class Project(QObject):
                                  os.path.basename(tslist[0]).split('_')[0]
                 self.pdata["TRANSLATIONPATTERN"] = \
                     [os.path.join(os.path.dirname(tslist[0]), 
-                     "%s_%%language%%%s" % (os.path.basename(tslist[0]).split('_')[0], 
+                     "{0}_%language%{1}".format(os.path.basename(tslist[0]).split('_')[0],
                         os.path.splitext(tslist[0])[1]))]
             else:
                 pattern, ok = QInputDialog.getText(\
@@ -2545,9 +2545,9 @@ class Project(QObject):
             if len(self.pdata["MAINSCRIPT"]) == 0 or \
                len(self.pdata["MAINSCRIPT"][0]) == 0:
                 if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
-                    self.pdata["MAINSCRIPT"] = ['%s.py' % mainscriptname]
+                    self.pdata["MAINSCRIPT"] = ['{0}.py'.format(mainscriptname)]
                 elif self.pdata["PROGLANGUAGE"][0] == "Ruby":
-                    self.pdata["MAINSCRIPT"] = ['%s.rb' % mainscriptname]
+                    self.pdata["MAINSCRIPT"] = ['{0}.rb'.format(mainscriptname)]
             if self.pdata["TRANSLATIONSBINPATH"]:
                 tpd = os.path.join(self.ppath, 
                                    self.pdata["TRANSLATIONSBINPATH"][0])
@@ -3902,11 +3902,11 @@ class Project(QObject):
         idx = 1
         for rp in self.recent:
             if idx < 10:
-                formatStr = '&%d. %s'
+                formatStr = '&{0:d}. {1}'
             else:
-                formatStr = '%d. %s'
+                formatStr = '{0:d}. {1}'
             act = self.recentMenu.addAction(\
-                formatStr % (idx, 
+                formatStr.format(idx, 
                     Utilities.compactPath(rp, self.ui.maxMenuFilePathLen)))
             act.setData(rp)
             act.setEnabled(QFileInfo(rp).exists())
@@ -4265,8 +4265,8 @@ class Project(QObject):
         
         # determine name of coverage file to be used
         files = []
-        f = "%s.coverage" % basename
-        tf = "%s.coverage" % tbasename
+        f = "{0}.coverage".format(basename)
+        tf = "{0}.coverage".format(tbasename)
         if os.path.isfile(f):
             files.append(f)
         if os.path.isfile(tf):
@@ -4311,8 +4311,8 @@ class Project(QObject):
         
         # determine name of profile file to be used
         files = []
-        f = "%s.profile" % basename
-        tf = "%s.profile" % tbasename
+        f = "{0}.profile".format(basename)
+        tf = "{0}.profile".format(tbasename)
         if os.path.isfile(f):
             files.append(f)
         if os.path.isfile(tf):
@@ -4347,12 +4347,12 @@ class Project(QObject):
             basename = os.path.splitext(fn)[0]
             tbasename = os.path.splitext(tfn)[0]
             self.codeProfileAct.setEnabled(\
-                os.path.isfile("%s.profile" % basename) or \
-                os.path.isfile("%s.profile" % tbasename))
+                os.path.isfile("{0}.profile".format(basename)) or \
+                os.path.isfile("{0}.profile".format(tbasename)))
             self.codeCoverageAct.setEnabled(\
                 self.pdata["PROGLANGUAGE"][0] == "Python3" and \
-                (os.path.isfile("%s.coverage" % basename) or \
-                 os.path.isfile("%s.coverage" % tbasename)))
+                (os.path.isfile("{0}.coverage".format(basename)) or \
+                 os.path.isfile("{0}.coverage".format(tbasename))))
         else:
             self.codeProfileAct.setEnabled(False)
             self.codeCoverageAct.setEnabled(False)
@@ -4629,7 +4629,7 @@ class Project(QObject):
             return
         
         if not path.endswith("/") and not path.endswith("\\"):
-            path = "%s/" % path
+            path = "{0}/".format(path)
         
         if not path in zipFile.namelist():
             self.__createZipDirEntries(os.path.split(path[:-1])[0], zipFile)
@@ -4665,11 +4665,11 @@ class Project(QObject):
                 # found the line to modify
                 datestr = time.strftime("%Y%m%d")
                 lineend = sourcelines[lineno].replace(sourcelines[lineno].rstrip(), "")
-                sversion = "%s-snapshot-%s" % \
-                    (sourcelines[lineno].replace("version = ", "").strip()[1:-1], 
-                     datestr)
-                sourcelines[lineno] = '%s + "-snapshot-%s"%s' % \
-                    (sourcelines[lineno].rstrip(), datestr, lineend)
+                sversion = "{0}-snapshot-{1}".format(
+                    sourcelines[lineno].replace("version = ", "").strip()[1:-1], 
+                    datestr)
+                sourcelines[lineno] = '{0} + "-snapshot-{1}"{2}'.format(
+                    sourcelines[lineno].rstrip(), datestr, lineend)
                 break
             
             lineno += 1

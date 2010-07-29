@@ -501,11 +501,11 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             basename = os.path.splitext(fn)[0]
             tbasename = os.path.splitext(tfn)[0]
             prEnable = prEnable or \
-                os.path.isfile("%s.profile" % basename) or \
-                os.path.isfile("%s.profile" % tbasename)
+                os.path.isfile("{0}.profile".format(basename)) or \
+                os.path.isfile("{0}.profile".format(tbasename))
             coEnable = coEnable or \
-                os.path.isfile("%s.coverage" % basename) or \
-                os.path.isfile("%s.coverage" % tbasename)
+                os.path.isfile("{0}.coverage".format(basename)) or \
+                os.path.isfile("{0}.coverage".format(tbasename))
         
         # now check the selected item
         itm = self.model().item(self.currentIndex())
@@ -513,9 +513,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         if fn is not None:
             basename = os.path.splitext(fn)[0]
             prEnable = prEnable or \
-                os.path.isfile("%s.profile" % basename)
+                os.path.isfile("{0}.profile".format(basename))
             coEnable = coEnable or \
-                os.path.isfile("%s.coverage" % basename)
+                os.path.isfile("{0}.coverage".format(basename))
         
         self.profileMenuAction.setEnabled(prEnable)
         self.coverageMenuAction.setEnabled(coEnable)
@@ -704,8 +704,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             basename = os.path.splitext(pfn)[0]
             tbasename = os.path.splitext(tpfn)[0]
             
-            f = "%s.coverage" % basename
-            tf = "%s.coverage" % tbasename
+            f = "{0}.coverage".format(basename)
+            tf = "{0}.coverage".format(tbasename)
             if os.path.isfile(f):
                 files.append(f)
             if os.path.isfile(tf):
@@ -716,8 +716,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             basename = os.path.splitext(fn)[0]
             tbasename = os.path.splitext(tfn)[0]
             
-            f = "%s.coverage" % basename
-            tf = "%s.coverage" % tbasename
+            f = "{0}.coverage".format(basename)
+            tf = "{0}.coverage".format(tbasename)
             if os.path.isfile(f) and not f in files:
                 files.append(f)
             if os.path.isfile(tf) and not tf in files:
@@ -757,8 +757,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             basename = os.path.splitext(pfn)[0]
             tbasename = os.path.splitext(tpfn)[0]
             
-            f = "%s.profile" % basename
-            tf = "%s.profile" % tbasename
+            f = "{0}.profile".format(basename)
+            tf = "{0}.profile".format(tbasename)
             if os.path.isfile(f):
                 files.append(f)
             if os.path.isfile(tf):
@@ -769,8 +769,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             basename = os.path.splitext(fn)[0]
             tbasename = os.path.splitext(tfn)[0]
             
-            f = "%s.profile" % basename
-            tf = "%s.profile" % tbasename
+            f = "{0}.profile".format(basename)
+            tf = "{0}.profile".format(tbasename)
             if os.path.isfile(f) and not f in files:
                 files.append(f)
             if os.path.isfile(tf) and not tf in files:

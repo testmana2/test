@@ -51,7 +51,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         
         self.formFile = formName
         filename, ext = os.path.splitext(self.formFile)
-        self.srcFile = '%s%s' % (filename, self.project.getDefaultSourceExtension())
+        self.srcFile = '{0}{1}'.format(filename, self.project.getDefaultSourceExtension())
         
         self.slotsModel = QStandardItemModel()
         self.proxyModel = QSortFilterProxyModel()
@@ -158,7 +158,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     if meth.pyqtSignature is not None:
                         sig = ", ".join([bytes(QMetaObject.normalizedType(t)).decode() \
                                          for t in meth.pyqtSignature.split(",")])
-                        signatures.append("%s(%s)" % (meth.name, sig))
+                        signatures.append("{0}({1})".format(meth.name, sig))
                     else:
                         signatures.append(meth.name)
         return signatures
@@ -208,17 +208,18 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 
                 metaObject = obj.metaObject()
                 className = metaObject.className()
-                itm = QStandardItem("%s (%s)" % (name, className))
+                itm = QStandardItem("{0} ({1})".format(name, className))
                 self.slotsModel.appendRow(itm)
                 for index in range(metaObject.methodCount()):
                     metaMethod = metaObject.method(index)
                     if metaMethod.methodType() == QMetaMethod.Signal:
-                        itm2 = QStandardItem("on_%s_%s" % (name, metaMethod.signature()))
+                        itm2 = QStandardItem("on_{0}_{1}".format(
+                            name, metaMethod.signature()))
                         itm.appendRow(itm2)
                         if self.__module is not None:
-                            method = "on_%s_%s" % \
-                                (name, metaMethod.signature().split("(")[0])
-                            method2 = "%s(%s)" % (method, 
+                            method = "on_{0}_{1}".format(
+                                name, metaMethod.signature().split("(")[0])
+                            method2 = "{0}({1})".format(method, 
                                 ", ".join([self.__mapType(t) 
                                            for t in metaMethod.parameterTypes()]))
                             
@@ -236,21 +237,20 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         if parameterNames:
                             for index in range(len(parameterNames)):
                                 if not parameterNames[index]:
-                                    parameterNames[index] = QByteArray("p%d" % index)
+                                    parameterNames[index] = \
+                                        QByteArray("p{0:d}".format(index))
                         methNamesSig = \
                             ", ".join([bytes(n).decode() for n in parameterNames])
                         
                         if methNamesSig:
-                            pythonSignature = "on_%s_%s(self, %s)" % \
-                                (name, 
-                                 metaMethod.signature().split("(")[0], 
-                                 methNamesSig
-                                )
+                            pythonSignature = "on_{0}_{1}(self, {2})".format(
+                                name, 
+                                metaMethod.signature().split("(")[0], 
+                                methNamesSig)
                         else:
-                            pythonSignature = "on_%s_%s(self)" % \
-                                (name, 
-                                 metaMethod.signature().split("(")[0]
-                                )
+                            pythonSignature = "on_{0}_{1}(self)".format(
+                                name, 
+                                metaMethod.signature().split("(")[0])
                         itm2.setData(pyqtSignature, pyqtSignatureRole)
                         itm2.setData(pythonSignature, pythonSignatureRole)
                         
@@ -340,7 +340,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 sourceImpl = srcFile.readlines()
                 srcFile.close()
                 if not sourceImpl[-1].endswith("\n"):
-                    sourceImpl[-1] = "%s%s" % (sourceImpl[-1], "\n")
+                    sourceImpl[-1] = "{0}{1}".format(sourceImpl[-1], "\n")
             except IOError as why:
                 QMessageBox.critical(self,
                     self.trUtf8("Code Generation"),
@@ -373,18 +373,19 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 child = topItem.child(childRow)
                 if child.checkState() and \
                    child.flags() & Qt.ItemFlags(Qt.ItemIsUserCheckable):
-                    slotsCode.append('%s\n' % indentStr)
-                    slotsCode.append('%s@pyqtSlot(%s)\n' % \
-                        (indentStr, child.data(pyqtSignatureRole)))
-                    slotsCode.append('%sdef %s:\n' % \
-                        (indentStr, child.data(pythonSignatureRole)))
-                    slotsCode.append('%s"""\n' % (indentStr * 2,))
-                    slotsCode.append('%sSlot documentation goes here.\n' % \
-                        (indentStr * 2,))
-                    slotsCode.append('%s"""\n' % (indentStr * 2,))
-                    slotsCode.append('%s# %s: not implemented yet\n' % \
-                        (indentStr * 2, "TODO"))
-                    slotsCode.append('%sraise NotImplementedError\n' % (indentStr * 2,))
+                    slotsCode.append('{0}\n'.format(indentStr))
+                    slotsCode.append('{0}@pyqtSlot({1})\n'.format(
+                        indentStr, child.data(pyqtSignatureRole)))
+                    slotsCode.append('{0}def {1}:\n'.format(
+                        indentStr, child.data(pythonSignatureRole)))
+                    slotsCode.append('{0}"""\n'.format(indentStr * 2))
+                    slotsCode.append('{0}Slot documentation goes here.\n'.format(
+                        indentStr * 2))
+                    slotsCode.append('{0}"""\n'.format(indentStr * 2))
+                    slotsCode.append('{0}# {1}: not implemented yet\n'.format(
+                        indentStr * 2, "TODO"))
+                    slotsCode.append('{0}raise NotImplementedError\n'.format(
+                        indentStr * 2))
         
         if appendAtIndex == -1:
             sourceImpl.extend(slotsCode)

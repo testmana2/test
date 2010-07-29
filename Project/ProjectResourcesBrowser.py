@@ -36,8 +36,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
-    RCFilenameFormatPython = "%s_rc.py"
-    RCFilenameFormatRuby = "%s_rc.rb"
+    RCFilenameFormatPython = "{0}_rc.py"
+    RCFilenameFormatRuby = "{0}_rc.rb"
     
     def __init__(self, project, parent = None):
         """
@@ -585,10 +585,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         dirname, filename = os.path.split(ofn)
         if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
             self.compiledFile = os.path.join(dirname, 
-                                self.RCFilenameFormatPython % filename)
+                                self.RCFilenameFormatPython.format(filename))
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             self.compiledFile = os.path.join(
-                                dirname, self.RCFilenameFormatRuby % filename)
+                                dirname, self.RCFilenameFormatRuby.format(filename))
         
         args.append(fn)
         self.connect(self.compileProc, SIGNAL('finished(int, QProcess::ExitStatus)'),
@@ -716,7 +716,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             if line.lower().startswith("<file>") or line.lower().startswith("<file "):
                 lbuf = line
             elif lbuf:
-                lbuf = "%s%s" % (lbuf, line)
+                lbuf = "{0}{1}".format(lbuf, line)
             if lbuf.lower().endswith("</file>"):
                 rfile = lbuf.split(">", 1)[1].split("<", 1)[0]
                 if not os.path.isabs(rfile):
@@ -751,11 +751,11 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
                     dirname, filename = os.path.split(os.path.splitext(ifn)[0])
                     ofn = os.path.join(dirname, 
-                                       self.RCFilenameFormatPython % filename)
+                                       self.RCFilenameFormatPython.format(filename))
                 elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
                     dirname, filename = os.path.split(os.path.splitext(ifn)[0])
                     ofn = os.path.join(dirname, 
-                                       self.RCFilenameFormatRuby % filename)
+                                       self.RCFilenameFormatRuby.format(filename))
                 else:
                     return
                 if not os.path.exists(ofn) or \
