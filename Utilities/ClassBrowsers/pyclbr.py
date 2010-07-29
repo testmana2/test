@@ -306,7 +306,7 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
                              file, lineno, meth_sig)
                 if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
-                    meth_name = "%s_%d" % (meth_name, dict_counts[meth_name])
+                    meth_name = "{0}_{1:d}".format(meth_name, dict_counts[meth_name])
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
@@ -358,7 +358,7 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
             if not classstack:
                 if class_name in dict_counts:
                     dict_counts[class_name] += 1
-                    class_name = "%s_%d" % (class_name, dict_counts[class_name])
+                    class_name = "{0}_{1:d}".format(class_name, dict_counts[class_name])
                 else:
                     dict_counts[class_name] = 0
                 dict[class_name] = cur_class

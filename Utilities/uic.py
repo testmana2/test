@@ -93,6 +93,6 @@ def compileUiFiles(dir, recurse = False):
         @param py_file suggested name for the compile source file (string)
         @return tuple of directory name (string) and source file name (string)
         """
-        return py_dir, "Ui_%s" % py_file
+        return py_dir, "Ui_{0}".format(py_file)
     
     compileUiDir(dir, recurse, pyName)

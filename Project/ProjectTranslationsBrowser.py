@@ -657,7 +657,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         @return flag indicating success
         """
         path, ext = os.path.splitext(self.project.pfile)
-        pfile = '%s_e4x.pro' % path
+        pfile = '{0}_e4x.pro'.format(path)
         
         # only consider files satisfying the filter criteria
         _sources = [s for s in self.project.pdata["SOURCES"] \
@@ -710,19 +710,19 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             pf = open(pfile, "w", encoding = "utf-8")
             for key, list in sections:
                 if len(list) > 0:
-                    pf.write('%s = ' % key)
+                    pf.write('{0} = '.format(key))
                     last = len(list) - 1
                     if last > 0:
-                        pf.write('%s \\%s' % \
-                            (list[0].replace(os.sep, '/'), "\n"))
+                        pf.write('{0} \\{1}'.format(
+                            list[0].replace(os.sep, '/'), "\n"))
                         for i in range(1, last):
-                            pf.write('\t%s \\%s' % \
-                                (list[i].replace(os.sep, '/'), "\n"))
-                        pf.write('\t%s %s%s' % \
-                            (list[last].replace(os.sep, '/'), "\n", "\n"))
+                            pf.write('\t{0} \\{1}'.format(
+                                list[i].replace(os.sep, '/'), "\n"))
+                        pf.write('\t{0} {1}{2}'.format(
+                            list[last].replace(os.sep, '/'), "\n", "\n"))
                     else:
-                        pf.write('%s %s%s' % \
-                            (list[0].replace(os.sep, '/'), "\n", "\n"))
+                        pf.write('{0} {1}{2}'.format(
+                            list[0].replace(os.sep, '/'), "\n", "\n"))
                 
             pf.close()
             self.tmpProject = pfile
@@ -743,7 +743,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         pylupdate process.
         """
         if self.pylupdateProc is not None:
-            self.__readStdout(self.pylupdateProc, '%s: ' % self.pylupdate)
+            self.__readStdout(self.pylupdateProc, '{0}: '.format(self.pylupdate))
         else:
             return
         
@@ -779,7 +779,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         pylupdate process.
         """
         if self.pylupdateProc is not None:
-            self.__readStderr(self.pylupdateProc, '%s: ' % self.pylupdate)
+            self.__readStderr(self.pylupdateProc, '{0}: '.format(self.pylupdate))
         else:
             return
         

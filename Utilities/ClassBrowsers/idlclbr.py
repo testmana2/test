@@ -242,7 +242,7 @@ def readmodule_ex(module, path=[]):
                              file, lineno, meth_sig)
                 if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
-                    meth_name = "%s_%d" % (meth_name, dict_counts[meth_name])
+                    meth_name = "{0}_{1:d}".format(meth_name, dict_counts[meth_name])
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f

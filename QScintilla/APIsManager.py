@@ -34,7 +34,7 @@ class APIs(QObject):
         @param parent reference to the parent object (QObject)
         """
         QObject.__init__(self, parent)
-        self.setObjectName("APIs_%s" % language)
+        self.setObjectName("APIs_{0}".format(language))
         
         self.__inPreparation = False
         self.__language = language

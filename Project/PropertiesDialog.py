@@ -231,9 +231,9 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         if fn:
             self.project.name = fn
             if Preferences.getProject("CompressedProjectFiles"):
-                fn = "%s.e4pz" % fn
+                fn = "{0}.e4pz".format(fn)
             else:
-                fn = "%s.e4p" % fn
+                fn = "{0}.e4p".format(fn)
             self.project.pfile = os.path.join(self.project.ppath, fn)
         else:
             self.project.pfile = ""

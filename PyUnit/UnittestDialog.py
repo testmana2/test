@@ -153,9 +153,9 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         """
         if self.dbs:
             pyExtensions = \
-                ' '.join(["*%s" % ext for ext in self.dbs.getExtensions('Python')])
+                ' '.join(["*{0}".format(ext) for ext in self.dbs.getExtensions('Python')])
             py3Extensions = \
-                ' '.join(["*%s" % ext for ext in self.dbs.getExtensions('Python3')])
+                ' '.join(["*{0}".format(ext) for ext in self.dbs.getExtensions('Python3')])
             filter = self.trUtf8("Python3 Files ({1});;Python2 Files ({0});;All Files (*)")\
                 .format(pyExtensions, py3Extensions)
         else:
@@ -276,7 +276,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 else:
                     mainScript = os.path.abspath(prog)
                 cover = coverage(
-                    data_file = "%s.coverage" % os.path.splitext(mainScript)[0])
+                    data_file = "{0}.coverage".format(os.path.splitext(mainScript)[0]))
                 cover.use_cache(True)
                 if self.coverageEraseCheckBox.isChecked():
                     cover.erase()
@@ -423,7 +423,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param doc documentation of the started test (string)
         """
         if doc:
-            self.testsListWidget.insertItem(0, "    %s" % doc)
+            self.testsListWidget.insertItem(0, "    {0}".format(doc))
         self.testsListWidget.insertItem(0, test)
         if self.dbs is None or self.localCheckBox.isChecked():
             QApplication.processEvents()

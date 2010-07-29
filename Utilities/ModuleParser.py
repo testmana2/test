@@ -385,7 +385,7 @@ class Module(object):
         """
         if name in self.classes:
             self.classes_counts[name] += 1
-            name = "%s_%d" % (name, self.classes_counts[name])
+            name = "{0}_{1:d}".format(name, self.classes_counts[name])
         else:
             self.classes_counts[name] = 0
         self.classes[name] = _class
@@ -399,7 +399,7 @@ class Module(object):
         """
         if name in self.modules:
             self.modules_counts[name] += 1
-            name = "%s_%d" % (name, self.modules_counts[name])
+            name = "{0}_{1:d}".format(name, self.modules_counts[name])
         else:
             self.modules_counts[name] = 0
         self.modules[name] = module
@@ -413,7 +413,7 @@ class Module(object):
         """
         if name in self.functions:
             self.functions_counts[name] += 1
-            name = "%s_%d" % (name, self.functions_counts[name])
+            name = "{0}_{1:d}".format(name, self.functions_counts[name])
         else:
             self.functions_counts[name] = 0
         self.functions[name] = function

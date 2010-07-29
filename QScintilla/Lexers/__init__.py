@@ -42,7 +42,7 @@ def registerLexer(name, displayString, filenameSample, getLexerFunc,
     """
     global LexerRegistry
     if name in LexerRegistry:
-        raise KeyError('Lexer "%s" already registered.' % name)
+        raise KeyError('Lexer "{0}" already registered.'.format(name))
     else:
         LexerRegistry[name] = [displayString, filenameSample, getLexerFunc, 
                                openFilters, saveFilters, defaultAssocs[:]]

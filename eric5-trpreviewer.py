@@ -63,7 +63,7 @@ def main():
             client.processArgs(sys.argv[1:])
         sys.exit(0)
     elif res < 0:
-        print("eric5-trpreviewer: %s" % client.errstr())
+        print("eric5-trpreviewer: {0}".format(client.errstr()))
         sys.exit(res)
     else:
         res = Startup.simpleAppStartup(sys.argv,

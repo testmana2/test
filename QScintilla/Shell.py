@@ -239,7 +239,7 @@ class Shell(QsciScintillaCompat):
             return
         
         # get the font for style 0 and set it as the default font
-        key = 'Scintilla/%s/style0/font' % self.lexer_.language()
+        key = 'Scintilla/{0}/style0/font'.format(self.lexer_.language())
         fdesc = Preferences.Prefs.settings.value(key)
         if fdesc is not None:
             font = QFont(fdesc[0], int(fdesc[1]))
@@ -1095,7 +1095,7 @@ class Shell(QsciScintillaCompat):
                         return
                     cmd = ''
             elif cmd == 'languages':
-                s = '%s\n' % ', '.join(self.clientLanguages)
+                s = '{0}\n'.format(', '.join(self.clientLanguages))
                 self.__write(s)
                 self.__clientStatement(False)
                 return

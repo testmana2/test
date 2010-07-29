@@ -29,7 +29,7 @@ def usage(rcode = 2):
     global progName
 
     print("Usage:")
-    print("    %s [-h]" % (progName))
+    print("    {0} [-h]".format(progName))
     print("where:")
     print("    -h             display this help message")
 
@@ -140,7 +140,7 @@ def main(argv):
     try:
         uninstallEric()
     except IOError as msg:
-        sys.stderr.write('IOError: %s\nTry uninstall as root.\n' % msg)
+        sys.stderr.write('IOError: {0}\nTry uninstall as root.\n'.format(msg))
     
     
 if __name__ == "__main__":

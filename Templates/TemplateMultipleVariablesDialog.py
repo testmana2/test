@@ -49,7 +49,7 @@ class TemplateMultipleVariablesDialog(QDialog):
         self.variablesEntries = {}
         row = 0
         for var in variables:
-            l = QLabel("%s:" % var, self.top)
+            l = QLabel("{0}:".format(var), self.top)
             self.grid.addWidget(l, row, 0, Qt.Alignment(Qt.AlignTop))
             if var.find(":") >= 0:
                 formatStr = var[1:-1].split(":")[1]

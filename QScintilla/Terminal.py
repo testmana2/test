@@ -251,7 +251,7 @@ class Terminal(QsciScintillaCompat):
             return
         
         # get the font for style 0 and set it as the default font
-        key = 'Scintilla/%s/style0/font' % self.lexer_.language()
+        key = 'Scintilla/{0}/style0/font'.format(self.lexer_.language())
         fdesc = Preferences.Prefs.settings.value(key)
         if fdesc is not None:
             font = QFont(fdesc[0], int(fdesc[1]))
@@ -745,7 +745,7 @@ class Terminal(QsciScintillaCompat):
             return
         else:
             if not cmd.endswith("\n"):
-                cmd = "%s\n" % cmd
+                cmd = "{0}\n".format(cmd)
             self.__send(cmd)
         
     def __useHistory(self):

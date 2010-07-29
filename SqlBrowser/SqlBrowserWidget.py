@@ -125,14 +125,14 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         
         self.__class__.cCount += 1
         db = QSqlDatabase.addDatabase(driver.upper(), 
-                                      "Browser%d" % self.__class__.cCount)
+                                      "Browser{0:d}".format(self.__class__.cCount))
         db.setDatabaseName(dbName)
         db.setHostName(host)
         db.setPort(port)
         if not db.open(user, password):
             err = db.lastError()
             db = QSqlDatabase()
-            QSqlDatabase.removeDatabase("Browser%d" % self.__class__.cCount)
+            QSqlDatabase.removeDatabase("Browser{0:d}".format(self.__class__.cCount))
         
         self.connections.refresh()
         
@@ -203,7 +203,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
                 model.setData(model.index(i, 1), 
                               QVariant.typeToName(fld.type()))
             else:
-                model.setData(model.index(i, 1), "%s1 (%s)" % (\
+                model.setData(model.index(i, 1), "{0} ({1})".format(
                                                  QVariant.typeToName(fld.type()), 
                                                  fld.typeID()))
             if fld.length() < 0:

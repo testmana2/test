@@ -2063,7 +2063,7 @@ class MiniEditor(QMainWindow):
             return
         
         if pyname:
-            self.apiLanguage = "Pygments|%s" % pyname
+            self.apiLanguage = "Pygments|{0}".format(pyname)
         else:
             self.apiLanguage = self.lexer_.language()
         self.__textEdit.setLexer(self.lexer_)
@@ -2073,7 +2073,7 @@ class MiniEditor(QMainWindow):
                          self.__styleNeeded)
         
         # get the font for style 0 and set it as the default font
-        key = 'Scintilla/%s/style0/font' % self.lexer_.language()
+        key = 'Scintilla/{0}/style0/font'.format(self.lexer_.language())
         fdesc = Preferences.Prefs.settings.value(key)
         if fdesc is not None:
             font = QFont(fdesc[0], int(fdesc[1]))
@@ -2187,7 +2187,7 @@ class MiniEditor(QMainWindow):
         if wc is None:
             regExp = QRegExp('[^\w_]', cs)
         else:
-            regExp = QRegExp('[^%s]' % re.escape(wc), cs)
+            regExp = QRegExp('[^{0}]'.format(re.escape(wc)), cs)
         start = regExp.lastIndexIn(text, index) + 1
         end = regExp.indexIn(text, index)
         if start == end + 1 and index > 0:

@@ -92,8 +92,8 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         if not fileName:
             return
         fileExt = self.fileExtEdit.text()
-        patternFormat = fileExt and "%s%s%s*" or "%s*%s%s"
-        fileNamePattern = patternFormat % (fileName, os.extsep,
+        patternFormat = fileExt and "{0}{1}{2}*" or "{0}*{1}{2}"
+        fileNamePattern = patternFormat.format(fileName, os.extsep,
             fileExt and fileExt or '*')
             
         searchPaths = []

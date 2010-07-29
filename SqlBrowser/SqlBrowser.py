@@ -60,7 +60,7 @@ class SqlBrowser(QMainWindow):
                                                url.host(), url.port(-1))
             if err.type() != QSqlError.NoError:
                 self.__warnings.append(
-                    self.trUtf8("Unable to open connection: %s" % err.text()))
+                    self.trUtf8("Unable to open connection: {0}".format(err.text())))
         
         QTimer.singleShot(0, self.__uiStartUp)
     

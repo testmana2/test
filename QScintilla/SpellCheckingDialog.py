@@ -26,7 +26,7 @@ class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
         self.setupUi(self)
         
         self.__spell = spellChecker
-        self.languageLabel.setText("<b>%s</b>" % self.__spell.getLanguage())
+        self.languageLabel.setText("<b>{0}</b>".format(self.__spell.getLanguage()))
         if not self.__spell.initCheck(startPos, endPos):
             self.__enableButtons(False)
         else:

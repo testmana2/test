@@ -108,9 +108,9 @@ class TRSingleApplicationClient(SingleApplicationClient):
             elif ext == '.qm':
                 qmFiles.append(arg)
         
-        cmd = "%s%s\n" % (SALoadForm, str(uiFiles))
+        cmd = "{0}{1}\n".format(SALoadForm, str(uiFiles))
         self.sendCommand(cmd)
-        cmd = "%s%s\n" % (SALoadTranslation, str(qmFiles))
+        cmd = "{0}{1}\n".format(SALoadTranslation, str(qmFiles))
         self.sendCommand(cmd)
         
         self.disconnect()

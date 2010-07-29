@@ -424,7 +424,7 @@ class UIPreviewer(QMainWindow):
         filters = ""
         formats = QImageWriter.supportedImageFormats()
         for format in formats:
-            filters = "%s*.%s " % (filters, bytes(format).decode().lower())
+            filters = "{0}*.{1} ".format(filters, bytes(format).decode().lower())
         filter = self.trUtf8("Images ({0})").format(filters[:-1])
         
         fname = QFileDialog.getSaveFileName(\
@@ -438,7 +438,7 @@ class UIPreviewer(QMainWindow):
         ext = QFileInfo(fname).suffix().upper()
         if not ext:
             ext = defaultExt
-            fname.append(".%s" % defaultExt.lower())
+            fname.append(".{0}".format(defaultExt.lower()))
         
         pix = QPixmap.grabWidget(self.mainWidget)
         self.__updateChildren(self.lastStyle)

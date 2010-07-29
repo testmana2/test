@@ -104,7 +104,8 @@ class Scope(dict):
     importStarred = False       # set to True when import * is found
 
     def __repr__(self):
-        return '<%s at 0x%x %s>' % (self.__class__.__name__, id(self), dict.__repr__(self))
+        return '<{0} at 0x{1:x} {2}>'.format(
+            self.__class__.__name__, id(self), dict.__repr__(self))
 
     def __init__(self):
         super(Scope, self).__init__()

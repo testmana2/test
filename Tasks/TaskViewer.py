@@ -68,7 +68,7 @@ class Task(QTreeWidgetItem):
             self.filename = self.project.getRelativePath(self.filename)
             
         QTreeWidgetItem.__init__(self, ["", "", self.description, self.filename, 
-            (self.lineno and "%6d" % self.lineno or "")])
+            (self.lineno and "{0:6d}".format(self.lineno) or "")])
         
         if self.completed:
             self.setIcon(0, UI.PixmapCache.getIcon("taskCompleted.png"))
