@@ -51,24 +51,24 @@ def sbsdiff(a, b, linenumberwidth = 4):
             .replace('\0^', "")\
             .replace('\1', "")
 
-    linenumberformat = "%%%dd" % linenumberwidth
+    linenumberformat = "{{0:{0:d}d}}".format(linenumberwidth)
     emptylineno = ' ' * linenumberwidth
     
     for (ln1, l1), (ln2, l2), flag in _mdiff(a, b, None, None, IS_CHARACTER_JUNK):
         if not flag:
-            yield ('e', linenumberformat % ln1, l1,
-                        linenumberformat % ln2, l2)
+            yield ('e', linenumberformat.format(ln1), l1,
+                        linenumberformat.format(ln2), l2)
             continue
         if ln2 == "" and l2 == "\n":
-            yield ('d', linenumberformat % ln1, removeMarkers(l1),
+            yield ('d', linenumberformat.format(ln1), removeMarkers(l1),
                         emptylineno, '\n')
             continue
         if ln1 == "" and l1 == "\n":
             yield ('i', emptylineno, '\n',
-                        linenumberformat % ln2, removeMarkers(l2))
+                        linenumberformat.format(ln2), removeMarkers(l2))
             continue
-        yield ('r', linenumberformat % ln1, l1,
-                    linenumberformat % ln2, l2)
+        yield ('r', linenumberformat.format(ln1), l1,
+                    linenumberformat.format(ln2), l2)
 
 class CompareDialog(QWidget, Ui_CompareDialog):
     """
@@ -185,7 +185,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         pane.setTextCursor(tc)
         pane.setCurrentCharFormat(format)
         if interLine:
-            pane.insertPlainText("%s " % linenumber)
+            pane.insertPlainText("{0} ".format(linenumber))
             for txt in re.split(self.markerPattern, line):
                 if txt:
                     if txt.count('\1'):
@@ -201,7 +201,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
                     pane.setCurrentCharFormat(self.cNormalFormat)
                     pane.insertPlainText(txt)
         else:
-            pane.insertPlainText("%s %s" % (linenumber, line))
+            pane.insertPlainText("{0} {1}".format(linenumber, line))
 
     def on_buttonBox_clicked(self, button):
         """

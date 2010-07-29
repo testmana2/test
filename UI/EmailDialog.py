@@ -191,16 +191,16 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
         @return string containing the mail message
         """
-        msgtext = "%s\r\n----\r\n%s----\r\n%s----\r\n%s" % \
-            (self.message.toPlainText(), 
-             Utilities.generateVersionInfo("\r\n"), 
-             Utilities.generatePluginsVersionInfo("\r\n"), 
-             Utilities.generateDistroInfo("\r\n"))
+        msgtext = "{0}\r\n----\r\n{1}----\r\n{2}----\r\n{3}".format(
+            self.message.toPlainText(), 
+            Utilities.generateVersionInfo("\r\n"), 
+            Utilities.generatePluginsVersionInfo("\r\n"), 
+            Utilities.generateDistroInfo("\r\n"))
         
         msg = self.__encodedText(msgtext)
         msg['From']    = Preferences.getUser("Email")
         msg['To']      = self.__toAddress
-        subject = '[eric5] %s' % self.subject.text()
+        subject = '[eric5] {0}'.format(self.subject.text())
         msg['Subject'] = self.__encodedHeader(subject)
         
         return msg.as_string()
@@ -215,17 +215,17 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             "If you see this message, your mail client is not "
             "capable of displaying the attachments.")
         
-        msgtext = "%s\r\n----\r\n%s----\r\n%s----\r\n%s" % \
-            (self.message.toPlainText(), 
-             Utilities.generateVersionInfo("\r\n"), 
-             Utilities.generatePluginsVersionInfo("\r\n"), 
-             Utilities.generateDistroInfo("\r\n"))
+        msgtext = "{0}\r\n----\r\n{1}----\r\n{2}----\r\n{3}".format(
+            self.message.toPlainText(), 
+            Utilities.generateVersionInfo("\r\n"), 
+            Utilities.generatePluginsVersionInfo("\r\n"), 
+            Utilities.generateDistroInfo("\r\n"))
         
         # first part of multipart mail explains format
         msg = MIMEMultipart()
         msg['From']    = Preferences.getUser("Email")
         msg['To']      = self.__toAddress
-        subject = '[eric5] %s' % self.subject.text()
+        subject = '[eric5] {0}'.format(self.subject.text())
         msg['Subject'] = self.__encodedHeader(subject)
         msg.preamble = mpPreamble
         msg.epilogue = ''

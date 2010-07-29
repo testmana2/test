@@ -725,7 +725,7 @@ class UserInterface(QMainWindow):
             self.__createFloatingWindowsLayout(debugServer)
         
         else:
-            raise RuntimeError("wrong layout type given (%s)" % self.layout)
+            raise RuntimeError("wrong layout type given ({0})".format(self.layout))
         logging.debug("Created Layout")
 
     def __createFloatingWindowsLayout(self, debugServer):
@@ -1265,7 +1265,7 @@ class UserInterface(QMainWindow):
                 if argsStr is None:
                     argsStr = arg
                 else:
-                    argsStr = "%s %s" % (argsStr, arg)
+                    argsStr = "{0} {1}".format(argsStr, arg)
                 continue
 
             ext = os.path.splitext(arg)[1]
@@ -1348,12 +1348,12 @@ class UserInterface(QMainWindow):
             if not self.capProject and not self.capEditor:
                 self.setWindowTitle(Program)
             elif self.capProject and not self.capEditor:
-                self.setWindowTitle("%s - %s" % (self.capProject, Program))
+                self.setWindowTitle("{0} - {1}".format(self.capProject, Program))
             elif not self.capProject and self.capEditor:
-                self.setWindowTitle("%s - %s" % (self.capEditor, Program))
+                self.setWindowTitle("{0} - {1}".format(self.capEditor, Program))
             else:
-                self.setWindowTitle("%s - %s - %s" % \
-                    (self.capProject, self.capEditor, Program))
+                self.setWindowTitle("{0} - {1} - {2}".format(
+                    self.capProject, self.capEditor, Program))
         
     def __initActions(self):
         """
@@ -1871,7 +1871,7 @@ class UserInterface(QMainWindow):
         
         # check for Qt4 designer and linguist
         designerExe = Utilities.isWindowsPlatform() and \
-            "%s.exe" % Utilities.generateQtToolName("designer") or \
+            "{0}.exe".format(Utilities.generateQtToolName("designer")) or \
             Utilities.generateQtToolName("designer")
         if Utilities.isinpath(designerExe):
             self.designer4Act = E5Action(self.trUtf8('Qt-Designer 4'), 
@@ -1888,7 +1888,7 @@ class UserInterface(QMainWindow):
             self.designer4Act = None
         
         linguistExe = Utilities.isWindowsPlatform() and \
-            "%s.exe" % Utilities.generateQtToolName("linguist") or \
+            "{0}.exe".format(Utilities.generateQtToolName("linguist")) or \
             Utilities.generateQtToolName("linguist")
         if Utilities.isinpath(linguistExe):
             self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist 4'), 
@@ -2662,7 +2662,7 @@ class UserInterface(QMainWindow):
                 if tool['menutext'] != '--':
                     act = QAction(UI.PixmapCache.getIcon(tool['icon']), tool['menutext'], 
                                   self)
-                    act.setObjectName("%s@@%s" % (toolGroup[0], 
+                    act.setObjectName("{0}@@{1}".format(toolGroup[0], 
                                       tool['menutext']))
                     self.connect(act, SIGNAL("triggered()"), self.__toolActionTriggered)
                     self.toolGroupActions[act.objectName()] = act
@@ -2674,7 +2674,7 @@ class UserInterface(QMainWindow):
         Private method to update the external tools actions for the current tool group.
         """
         toolGroup = self.toolGroups[self.currentToolGroup]
-        groupkey = "%s@@" % toolGroup[0]
+        groupkey = "{0}@@".format(toolGroup[0])
         groupActionKeys = []
         # step 1: get actions for this group
         for key in self.toolGroupActions:
@@ -2685,7 +2685,7 @@ class UserInterface(QMainWindow):
         ckeys = []
         for tool in toolGroup[1]:
             if tool['menutext'] != '--':
-                ckeys.append("%s@@%s" % (toolGroup[0], tool['menutext']))
+                ckeys.append("{0}@@{1}".format(toolGroup[0], tool['menutext']))
         
         # step 3: remove all actions not configured any more
         for key in groupActionKeys:
@@ -2699,7 +2699,7 @@ class UserInterface(QMainWindow):
         category = self.trUtf8("External Tools/{0}").format(toolGroup[0])
         for tool in toolGroup[1]:
             if tool['menutext'] != '--':
-                key = "%s@@%s" % (toolGroup[0], tool['menutext'])
+                key = "{0}@@{1}".format(toolGroup[0], tool['menutext'])
                 if key not in groupActionKeys:
                     act = QAction(UI.PixmapCache.getIcon(tool['icon']), tool['menutext'], 
                                   self)
@@ -2868,12 +2868,12 @@ class UserInterface(QMainWindow):
             if deleteAttachFile:
                 os.remove(attachFile)
         else:
-            body = "\r\n----\r\n%s----\r\n%s----\r\n%s" % \
-                (Utilities.generateVersionInfo("\r\n"), 
-                 Utilities.generatePluginsVersionInfo("\r\n"), 
-                 Utilities.generateDistroInfo("\r\n"))
+            body = "\r\n----\r\n{0}----\r\n{1}----\r\n{2}".format(
+                Utilities.generateVersionInfo("\r\n"), 
+                Utilities.generatePluginsVersionInfo("\r\n"), 
+                Utilities.generateDistroInfo("\r\n"))
         
-        url = QUrl("mailto:%s" % address)
+        url = QUrl("mailto:{0}".format(address))
         url.addQueryItem("subject", subject)
         url.addQueryItem("body", body)
         QDesktopServices.openUrl(url)
@@ -3047,7 +3047,7 @@ class UserInterface(QMainWindow):
             already registered
         """
         if name in self.__toolbars:
-            raise KeyError("Toolbar '%s' already registered." % name)
+            raise KeyError("Toolbar '{0}' already registered.".format(name))
         
         self.__toolbars[name] = [text, toolbar]
         
@@ -4531,7 +4531,7 @@ class UserInterface(QMainWindow):
                toolProcData[1] not in ["insert", "replaceSelection"]: 
                 # not connected to an editor or wrong mode
                 while toolProc.canReadLine():
-                    s = "%s - " % program
+                    s = "{0} - ".format(program)
                     output = str(toolProc.readLine(), ioEncoding, 'replace')
                     s.append(output)
                     self.appendToStdout(s)
@@ -4554,7 +4554,7 @@ class UserInterface(QMainWindow):
             toolProc.setReadChannel(QProcess.StandardError)
             
             while toolProc.canReadLine():
-                s = "%s - " % program
+                s = "{0} - ".format(program)
                 error = str(toolProc.readLine(), ioEncoding, 'replace')
                 s.append(error)
                 self.appendToStderr(s)
@@ -4605,8 +4605,8 @@ class UserInterface(QMainWindow):
                 
                 if Utilities.isWindowsPlatform() and not os.path.exists(home):
                     pyversion = sys.hexversion >> 16
-                    vers = "%d%d" % ((pyversion >> 8) & 0xff, pyversion & 0xff)
-                    home = os.path.join(pythonDocDir, "python%s.chm" % vers)
+                    vers = "{0:d}{1:d}".format((pyversion >> 8) & 0xff, pyversion & 0xff)
+                    home = os.path.join(pythonDocDir, "python{0}.chm".format(vers))
             else:
                 home = pythonDocDir
             

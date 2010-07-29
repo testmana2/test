@@ -62,13 +62,13 @@ def usage(appinfo, optlen = 12):
     options.extend(appinfo["options"])
     
     print("""
-Usage: %(bin)s [OPTIONS] %(arg)s
+Usage: {bin} [OPTIONS] {arg}
 
-%(name)s - %(description)s
+{name} - {description}
     
-Options:""" % appinfo)
+Options:""".format(**appinfo))
     for opt in options:
-        print("  %s  %s" % (opt[0].ljust(optlen), opt[1]))
+        print("  {0}  {1}".format(opt[0].ljust(optlen), opt[1]))
     sys.exit(0)
 
 def version(appinfo):
@@ -78,14 +78,14 @@ def version(appinfo):
     @param appinfo dictionary describing the application
     """
     print("""
-%(name)s %(version)s
+{name} {version}
 
-%(description)s
+{description}
 
 Copyright (c) 2002 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see LICENSE.GPL3 for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.""" % appinfo)
+PARTICULAR PURPOSE.""".format(**appinfo))
     sys.exit(0)
 
 def handleArgs(argv, appinfo):
@@ -182,7 +182,7 @@ def loadTranslators(qtTransDir, app, translationFiles = ()):
             dirs.append(qtTransDir)
 
         loca = loc
-        for tf in ["%s_%s" % (tr, loc) for tr in translations]:
+        for tf in ["{0}_{1}".format(tr, loc) for tr in translations]:
             translator, ok = loadTranslatorForLocale(dirs, tf)
             loaded_translators[tf] = translator
             if ok:

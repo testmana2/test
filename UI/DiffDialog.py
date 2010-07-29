@@ -77,11 +77,12 @@ def unified_diff(a, b, fromfile='', tofile='', fromfiledate='',
     started = False
     for group in SequenceMatcher(None,a,b).get_grouped_opcodes(n):
         if not started:
-            yield '--- %s\t%s%s' % (fromfile, fromfiledate, lineterm)
-            yield '+++ %s\t%s%s' % (tofile, tofiledate, lineterm)
+            yield '--- {0}\t{1}{2}'.format(fromfile, fromfiledate, lineterm)
+            yield '+++ {0}\t{1}{2}'.format(tofile, tofiledate, lineterm)
             started = True
         i1, i2, j1, j2 = group[0][1], group[-1][2], group[0][3], group[-1][4]
-        yield "@@ -%d,%d +%d,%d @@%s" % (i1+1, i2-i1, j1+1, j2-j1, lineterm)
+        yield "@@ -{0:d},{1:d} +{2:d},{3:d} @@{4}".format(
+            i1+1, i2-i1, j1+1, j2-j1, lineterm)
         for tag, i1, i2, j1, j2 in group:
             if tag == 'equal':
                 for line in a[i1:i2]:
@@ -156,15 +157,15 @@ def context_diff(a, b, fromfile='', tofile='',
     prefixmap = {'insert':'+ ', 'delete':'- ', 'replace':'! ', 'equal':'  '}
     for group in SequenceMatcher(None,a,b).get_grouped_opcodes(n):
         if not started:
-            yield '*** %s\t%s%s' % (fromfile, fromfiledate, lineterm)
-            yield '--- %s\t%s%s' % (tofile, tofiledate, lineterm)
+            yield '*** {0}\t{1}{2}'.format(fromfile, fromfiledate, lineterm)
+            yield '--- {0}\t{1}{2}'.format(tofile, tofiledate, lineterm)
             started = True
 
-        yield '***************%s' % (lineterm,)
+        yield '***************{0}'.format(lineterm)
         if group[-1][2] - group[0][1] >= 2:
-            yield '*** %d,%d ****%s' % (group[0][1]+1, group[-1][2], lineterm)
+            yield '*** {0:d},{1:d} ****{2}'.format(group[0][1]+1, group[-1][2], lineterm)
         else:
-            yield '*** %d ****%s' % (group[-1][2], lineterm)
+            yield '*** {0:d} ****{1}'.format(group[-1][2], lineterm)
         visiblechanges = [e for e in group if e[0] in ('replace', 'delete')]
         if visiblechanges:
             for tag, i1, i2, _, _ in group:
@@ -173,9 +174,9 @@ def context_diff(a, b, fromfile='', tofile='',
                         yield prefixmap[tag] + line
 
         if group[-1][4] - group[0][3] >= 2:
-            yield '--- %d,%d ----%s' % (group[0][3]+1, group[-1][4], lineterm)
+            yield '--- {0:d},{1:d} ----{2}'.format(group[0][3]+1, group[-1][4], lineterm)
         else:
-            yield '--- %d ----%s' % (group[-1][4], lineterm)
+            yield '--- {0:d} ----{1}'.format(group[-1][4], lineterm)
         visiblechanges = [e for e in group if e[0] in ('replace', 'insert')]
         if visiblechanges:
             for tag, _, _, j1, j2 in group:
@@ -265,7 +266,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         dname, fname = Utilities.splitPath(self.filename2)
         if fname != '.':
-            fname = "%s.diff" % self.filename2
+            fname = "{0}.diff".format(self.filename2)
         else:
             fname = dname
             

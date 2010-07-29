@@ -135,7 +135,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 # Qt bug: 
                 # item is not user checkable if setFirstColumnSpanned is True (< 4.5.0)
         
-        itm = QTreeWidgetItem(self.__lastFileItem, [' %5d ' % line, text])
+        itm = QTreeWidgetItem(self.__lastFileItem, [' {0:5d} '.format(line), text])
         itm.setTextAlignment(0,  Qt.AlignRight)
         itm.setData(0, self.lineRole, line)
         itm.setData(0, self.startRole, start)
@@ -271,7 +271,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
         if self.filterCheckBox.isChecked():
             fileFilter = self.filterEdit.text()
-            fileFilterList = ["^%s$" % filter.replace(".", "\.").replace("*", ".*") \
+            fileFilterList = ["^{0}$".format(filter.replace(".", "\.").replace("*", ".*")) \
                               for filter in fileFilter.split(";")]
             filterRe = re.compile("|".join(fileFilterList))
         
@@ -295,7 +295,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 filters = []
                 if self.sourcesCheckBox.isChecked():
                     filters.extend(
-                        ["^%s$" % assoc.replace(".", "\.").replace("*", ".*") \
+                        ["^{0}$".format(assoc.replace(".", "\.").replace("*", ".*")) \
                          for assoc in list(Preferences.getEditorLexerAssocs().keys()) \
                          if assoc not in self.formsExt + self.interfacesExt])
                 if self.formsCheckBox.isChecked():
@@ -326,7 +326,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         else:
             txt = re.escape(ct)
         if wo:
-            txt = "\\b%s\\b" % txt
+            txt = "\\b{0}\\b".format(txt)
         flags = re.UNICODE | re.LOCALE
         if not cs:
             flags |= re.IGNORECASE
@@ -413,11 +413,11 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                     else:
                         rline = ""
                     if len(line) > 1024:
-                        line = "%s ..." % line[:1024]
+                        line = "{0} ...".format(line[:1024])
                     if self.__replaceMode:
                         if len(rline) > 1024:
-                            rline = "%s ..." % line[:1024]
-                        line = "- %s\n+ %s" % (line, rline)
+                            rline = "{0} ...".format(line[:1024])
+                        line = "- {0}\n+ {1}".format(line, rline)
                     self.__createItem(file, count, line, start, end, rline)
                     
                     if self.feelLikeCheckBox.isChecked():

@@ -3609,11 +3609,11 @@ class ViewManager(QObject):
         idx = 1
         for rs in self.recent:
             if idx < 10:
-                formatStr = '&%d. %s'
+                formatStr = '&{0:d}. {1}'
             else:
-                formatStr = '%d. %s'
+                formatStr = '{0:d}. {1}'
             act = self.recentMenu.addAction(\
-                formatStr % (idx, 
+                formatStr.format(idx, 
                     Utilities.compactPath(rs, self.ui.maxMenuFilePathLen)))
             act.setData(rs)
             act.setEnabled(QFileInfo(rs).exists())
@@ -4366,9 +4366,9 @@ class ViewManager(QObject):
         for filename in sorted(filenames):
             editor = self.getOpenEditor(filename)
             for bookmark in editor.getBookmarks():
-                bmSuffix = " : %d" % bookmark
+                bmSuffix = " : {0:d}".format(bookmark)
                 act = self.bookmarksMenu.addAction(
-                    "%s%s" % (
+                    "{0}{1}".format(
                         Utilities.compactPath(
                             filename,
                             self.ui.maxMenuFilePathLen - len(bmSuffix)), 
@@ -4905,7 +4905,7 @@ class ViewManager(QObject):
         if self.activeWindow() is not None and \
            self.activeWindow().getFileName():
             ext = os.path.splitext(self.activeWindow().getFileName())[1]
-            rx = QRegExp(".*\*\.%s[ )].*" % ext[1:])
+            rx = QRegExp(".*\*\.{0}[ )].*".format(ext[1:]))
             filters = QScintilla.Lexers.getOpenFileFiltersList()
             index = -1
             for i in range(len(filters)):

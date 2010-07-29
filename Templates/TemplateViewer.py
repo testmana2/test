@@ -292,15 +292,15 @@ class TemplateEntry(QTreeWidgetItem):
             else:
                 txt = txt.replace(var, val)
         sepchar = Preferences.getTemplates("SeparatorChar")
-        txt = txt.replace("%s%s" % (sepchar, sepchar), sepchar)
-        prefix = "%s%s" % (os.linesep, indent)
+        txt = txt.replace("{0}{1}".format(sepchar, sepchar), sepchar)
+        prefix = "{0}{1}".format(os.linesep, indent)
         trailingEol = txt.endswith(os.linesep)
         lines = txt.splitlines()
         lineCount = len(lines)
         lineLen = len(lines[-1])
         txt = prefix.join(lines).lstrip()
         if trailingEol:
-            txt = "%s%s" % (txt, os.linesep)
+            txt = "{0}{1}".format(txt, os.linesep)
             lineCount += 1
             lineLen = 0
         return txt, lineCount, lineLen
@@ -322,7 +322,7 @@ class TemplateEntry(QTreeWidgetItem):
                     prefix = line[:ind]
                     postfix = line [ind + len(var):]
                     for v in val.splitlines():
-                        t = "%s%s%s%s%s" % (t, os.linesep, prefix, v, postfix)
+                        t = "{0}{1}{2}{3}{4}".format(t, os.linesep, prefix, v, postfix)
                 elif format == 'ml':
                     indent = line.replace(line.lstrip(), "")
                     prefix = line[:ind]
@@ -330,15 +330,15 @@ class TemplateEntry(QTreeWidgetItem):
                     count = 0
                     for v in val.splitlines():
                         if count:
-                            t = "%s%s%s%s" % (t, os.linesep, indent, v)
+                            t = "{0}{1}{2}{3}".format(t, os.linesep, indent, v)
                         else:
-                            t = "%s%s%s%s" % (t, os.linesep, prefix, v)
+                            t = "{0}{1}{2}{3}".format(t, os.linesep, prefix, v)
                         count += 1
-                    t = "%s%s" % (t, postfix)
+                    t = "{0}{1}".format(t, postfix)
                 else:
-                    t = "%s%s%s" % (t, os.linesep, line)
+                    t = "{0}{1}{2}".format(t, os.linesep, line)
             else:
-                t = "%s%s%s" % (t, os.linesep, line)
+                t = "{0}{1}{2}".format(t, os.linesep, line)
         return "".join(t.splitlines(1)[1:])
 
     def getVariables(self):
@@ -355,8 +355,8 @@ class TemplateEntry(QTreeWidgetItem):
         """
         sepchar = Preferences.getTemplates("SeparatorChar")
         variablesPattern = \
-            re.compile(r"""\%s[a-zA-Z][a-zA-Z0-9_]*(?::(?:ml|rl))?\%s""" % \
-                       (sepchar, sepchar))
+            re.compile(r"""\{0}[a-zA-Z][a-zA-Z0-9_]*(?::(?:ml|rl))?\{1}""".format(
+                       sepchar, sepchar))
         variables = variablesPattern.findall(self.template)
         self.variables = []
         self.formatedVariables = []
@@ -585,17 +585,15 @@ class TemplateViewer(QTreeWidget):
         editor = self.viewmanager.activeWindow()
         today = datetime.datetime.now().date()
         sepchar = Preferences.getTemplates("SeparatorChar")
-        if sepchar == '%':
-            sepchar = '%%'
-        keyfmt = sepchar + "%s" + sepchar
-        varValues = {keyfmt % 'date': today.isoformat(),
-                     keyfmt % 'year': str(today.year)}
+        keyfmt = sepchar + "{0}" + sepchar
+        varValues = {keyfmt.format('date'): today.isoformat(),
+                     keyfmt.format('year'): str(today.year)}
 
         if project.name:
-            varValues[keyfmt % 'project_name'] = project.name
+            varValues[keyfmt.format('project_name')] = project.name
 
         if project.ppath:
-            varValues[keyfmt % 'project_path'] = project.ppath
+            varValues[keyfmt.format('project_path')] = project.ppath
 
         path_name = editor.getFileName()
         if path_name:
@@ -604,27 +602,27 @@ class TemplateViewer(QTreeWidget):
             if ext:
                 ext = ext[1:]
             varValues.update({
-                    keyfmt % 'path_name': path_name,
-                    keyfmt % 'dir_name': dir_name,
-                    keyfmt % 'file_name': file_name,
-                    keyfmt % 'base_name': base_name,
-                    keyfmt % 'ext': ext
+                    keyfmt.format('path_name'): path_name,
+                    keyfmt.format('dir_name'): dir_name,
+                    keyfmt.format('file_name'): file_name,
+                    keyfmt.format('base_name'): base_name,
+                    keyfmt.format('ext'): ext
             })
         
-        varValues[keyfmt % 'clipboard:ml'] = QApplication.clipboard().text()
-        varValues[keyfmt % 'clipboard'] = QApplication.clipboard().text()
+        varValues[keyfmt.format('clipboard:ml')] = QApplication.clipboard().text()
+        varValues[keyfmt.format('clipboard')] = QApplication.clipboard().text()
 
         if editor.hasSelectedText():
-            varValues[keyfmt % 'cur_select:ml'] = editor.selectedText()
-            varValues[keyfmt % 'cur_select'] = editor.selectedText()
+            varValues[keyfmt.format('cur_select:ml')] = editor.selectedText()
+            varValues[keyfmt.format('cur_select')] = editor.selectedText()
         else:
-            varValues[keyfmt % 'cur_select:ml'] = os.linesep
-            varValues[keyfmt % 'cur_select'] = ""
+            varValues[keyfmt.format('cur_select:ml')] = os.linesep
+            varValues[keyfmt.format('cur_select')] = ""
 
-        varValues[keyfmt % 'insertion'] = "i_n_s_e_r_t_i_o_n"
+        varValues[keyfmt.format('insertion')] = "i_n_s_e_r_t_i_o_n"
         
-        varValues[keyfmt % 'select_start'] = "s_e_l_e_c_t_s_t_a_r_t"
-        varValues[keyfmt % 'select_end'] = "s_e_l_e_c_t_e_n_d"
+        varValues[keyfmt.format('select_start')] = "s_e_l_e_c_t_s_t_a_r_t"
+        varValues[keyfmt.format('select_end')] = "s_e_l_e_c_t_e_n_d"
 
         return varValues
 

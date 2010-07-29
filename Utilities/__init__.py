@@ -189,7 +189,7 @@ def decode(text):
             guess = ThirdParty.CharDet.chardet.detect(text)
             if guess and guess['confidence'] > 0.95 and guess['encoding'] is not None:
                 codec = guess['encoding'].lower()
-                return str(text, codec), '%s-guessed' % codec
+                return str(text, codec), '{0}-guessed'.format(codec)
         except (UnicodeError, LookupError):
             pass
         except ImportError:
@@ -198,7 +198,7 @@ def decode(text):
     # Try default encoding
     try:
         codec = Preferences.getEditor("DefaultEncoding")
-        return str(text, codec), '%s-default' % codec
+        return str(text, codec), '{0}-default'.format(codec)
     except (UnicodeError, LookupError):
         pass
     
@@ -207,7 +207,7 @@ def decode(text):
         if guess and guess['encoding'] is not None:
             try:
                 codec = guess['encoding'].lower()
-                return str(text, codec), '%s-guessed' % codec
+                return str(text, codec), '{0}-guessed'.format(codec)
             except (UnicodeError, LookupError):
                 pass
     
@@ -305,7 +305,7 @@ def escape_entities(m, map=_escape_map):
     char = m.group()
     text = map.get(char)
     if text is None:
-        text = "&#%d;" % ord(char)
+        text = "&#{0:d};".format(ord(char))
     return text
     
 def html_encode(text, pattern=_escape):
@@ -331,7 +331,7 @@ def escape_uentities(m):
     @return the converted text (string)
     """
     char = m.group()
-    text = "&#%d;" % ord(char)
+    text = "&#{0:d};".format(ord(char))
     return text
     
 def html_uencode(text, pattern=_uescape):
@@ -578,7 +578,7 @@ def joinext(prefix, ext):
     @return the complete filename (string)
     """
     if ext[0] != ".":
-        ext = ".%s" % ext # require leading separator, to match os.path.splitext
+        ext = ".{0}".format(ext) # require leading separator, to match os.path.splitext
     return prefix + EXTSEP + ext[1:]
 
 def compactPath(path, width, measure = len):
@@ -601,7 +601,7 @@ def compactPath(path, width, measure = len):
     head2 = head[mid:]
     while head1:
         # head1 is same size as head2 or one shorter
-        path = os.path.join("%s%s%s" % (head1, ellipsis, head2), tail)
+        path = os.path.join("{0}{1}{2}".format(head1, ellipsis, head2), tail)
         if measure(path) <= width:
             return path
         head1 = head1[:-1]
@@ -610,7 +610,7 @@ def compactPath(path, width, measure = len):
     if measure(path) <= width:
         return path
     while tail:
-        path = "%s%s" % (ellipsis, tail)
+        path = "{0}{1}".format(ellipsis, tail)
         if measure(path) <= width:
             return path
         tail = tail[1:]
@@ -708,7 +708,7 @@ def getTestFileName(fn):
     @return filename of the corresponding unittest file (string)
     """
     dn, fn = os.path.split(fn)
-    return os.path.join(dn, "test%s" % fn)
+    return os.path.join(dn, "test{0}".format(fn))
 
 def parseOptionString(s):
     """
@@ -778,7 +778,7 @@ def getPercentReplacement(code):
             column = -1
         else:
             column = aw.getCursorPosition()[1]
-        return "%d" % column
+        return "{0:d}".format(column)
     elif code in ["D", "%D"]:
         # directory of active editor
         aw = e5App().getObject("ViewManager").activeWindow()
@@ -811,7 +811,7 @@ def getPercentReplacement(code):
             line = 0
         else:
             line = aw.getCursorPosition()[0] + 1
-        return "%d" % line
+        return "{0:d}".format(line)
     elif code in ["P", "%P"]:
         # project path
         projectPath = e5App().getObject("Project").getProjectPath()
@@ -961,7 +961,7 @@ def compile(file, codestring = ""):
         import traceback, re
         lines = traceback.format_exception_only(SyntaxError, detail)
         match = re.match('\s*File "(.+)", line (\d+)', 
-            lines[0].replace('<string>', '%s' % file))
+            lines[0].replace('<string>', '{0}'.format(file)))
         if match is not None:
             fn, line = match.group(1, 2)
             if lines[1].startswith('SyntaxError:'):
@@ -1045,7 +1045,7 @@ def getEnvironmentEntry(key, default = None):
     @return the requested entry or the default value, if the entry wasn't 
         found (string or None)
     """
-    filter = QRegExp("^%s[ \t]*=" % key)
+    filter = QRegExp("^{0}[ \t]*=".format(key))
     if isWindowsPlatform():
         filter.setCaseSensitivity(Qt.CaseInsensitive)
     
@@ -1064,7 +1064,7 @@ def hasEnvironmentEntry(key):
     @param key key of the requested environment entry (string)
     @return flag indicating the presence of the requested entry (boolean)
     """
-    filter = QRegExp("^%s[ \t]*=" % key)
+    filter = QRegExp("^{0}[ \t]*=".format(key))
     if isWindowsPlatform():
         filter.setCaseSensitivity(Qt.CaseInsensitive)
     
@@ -1082,10 +1082,10 @@ def generateQtToolName(toolname):
     @param toolname base name of the tool (string)
     @return the Qt tool name without extension (string)
     """
-    return "%s%s%s" % (Preferences.getQt("QtToolsPrefix4"), 
-                       toolname, 
-                       Preferences.getQt("QtToolsPostfix4")
-                      )
+    return "{0}{1}{2}".format(Preferences.getQt("QtToolsPrefix4"), 
+                              toolname, 
+                              Preferences.getQt("QtToolsPostfix4")
+                             )
 
 def prepareQtMacBundle(toolname, version, args):
     """
@@ -1128,21 +1128,21 @@ def generateVersionInfo(linesep = '\n'):
     except ImportError:
         sip_version_str = "sip version not available"
     
-    info =  "Version Numbers:%s  Python %s%s" % \
-        (linesep, sys.version.split()[0], linesep)
-    info += "  Qt %s%s  PyQt4 %s%s" % \
-        (qVersion(), linesep, PYQT_VERSION_STR, linesep)
-    info += "  sip %s%s  QScintilla %s%s" % \
-        (sip_version_str, linesep, QSCINTILLA_VERSION_STR, linesep)
+    info =  "Version Numbers:{0}  Python {1}{2}".format(
+        linesep, sys.version.split()[0], linesep)
+    info += "  Qt {0}{1}  PyQt4 {2}{3}".format(
+        qVersion(), linesep, PYQT_VERSION_STR, linesep)
+    info += "  sip {0}{1}  QScintilla {2}{3}".format(
+        sip_version_str, linesep, QSCINTILLA_VERSION_STR, linesep)
     try:
         from PyQt4.QtWebKit import qWebKitVersion
-        info += "  WebKit %s%s" % (qWebKitVersion(), linesep)
+        info += "  WebKit {0}{1}".format(qWebKitVersion(), linesep)
     except ImportError:
         pass
-    info += "  %s %s%s" % \
-        (Program, Version, linesep * 2)
-    info += "Platform: %s%s%s%s" % \
-        (sys.platform, linesep, sys.version, linesep)
+    info += "  {0} {1}{2}".format(
+        Program, Version, linesep * 2)
+    info += "Platform: {0}{1}{2}{3}".format(
+        sys.platform, linesep, sys.version, linesep)
     
     return info
 
@@ -1162,9 +1162,10 @@ def generatePluginsVersionInfo(linesep = '\n'):
             for info in pm.getPluginInfos():
                 versions[info[0]] = info[2]
             
-            infoStr = "Plugins Version Numbers:%s" % linesep
+            infoStr = "Plugins Version Numbers:{0}".format(linesep)
             for pluginName in sorted(versions.keys()):
-                infoStr += "  %s %s%s" % (pluginName, versions[pluginName], linesep)
+                infoStr += "  {0} {1}{2}".format(
+                           pluginName, versions[pluginName], linesep)
         except KeyError:
             pass
     
@@ -1181,7 +1182,7 @@ def generateDistroInfo(linesep = '\n'):
     if sys.platform.startswith("linux"):
         releaseList = glob.glob("/etc/*-release")
         if releaseList:
-            infoStr = "Distribution Info:%s" % linesep
+            infoStr = "Distribution Info:{0}".format(linesep)
             infoParas = []
             for rfile in releaseList:
                 try:

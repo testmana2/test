@@ -1197,11 +1197,11 @@ class BrowserClassItem(BrowserItem):
                 try:
                     sname = sup.name
                     if sup.module != cl.module:
-                        sname = "%s.%s" % (sup.module, sname)
+                        sname = "{0}.{1}".format(sup.module, sname)
                 except AttributeError:
                     sname = sup
                 supers.append(sname)
-            name = name + "(%s)" % ", ".join(supers)
+            name = name + "({0})".format(", ".join(supers))
         
         BrowserItem.__init__(self, parent, name)
         
@@ -1221,10 +1221,11 @@ class BrowserClassItem(BrowserItem):
                 self.icon = UI.PixmapCache.getIcon("method_protected.png")
             else:
                 self.icon = UI.PixmapCache.getIcon("method.png")
-            self.itemData[0] = "%s(%s)" % (name, ", ".join(self._classObject.parameters))
+            self.itemData[0] = "{0}({1})".format(
+                name, ", ".join(self._classObject.parameters))
             # if no defaults are wanted
-            # ... % (name, ", ".join([e.split('=')[0].strip() \
-            #                        for e in self._classObject.parameters]))
+            # ....format(name, ", ".join([e.split('=')[0].strip() \
+            #                             for e in self._classObject.parameters]))
         elif self.ismodule:
             self.icon = UI.PixmapCache.getIcon("module.png")
         else:
@@ -1319,11 +1320,11 @@ class BrowserMethodItem(BrowserItem):
             self.icon = UI.PixmapCache.getIcon("method_protected.png")
         else:
             self.icon = UI.PixmapCache.getIcon("method.png")
-        self.itemData[0] =  "%s(%s)" % \
-            (name, ", ".join(self._functionObject.parameters))
+        self.itemData[0] =  "{0}({1})".format(
+            name, ", ".join(self._functionObject.parameters))
         # if no defaults are wanted
-        # ... % (name, ", ".join(\
-        #       [e.split('=')[0].strip() for e in self._functionObject.parameters]))
+        # ....format(name, ", ".join(\
+        #            [e.split('=')[0].strip() for e in self._functionObject.parameters]))
         if self._functionObject and \
            (self._functionObject.methods or self._functionObject.classes):
             self._populated = False
