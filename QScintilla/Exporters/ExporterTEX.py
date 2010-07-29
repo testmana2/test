@@ -52,7 +52,8 @@ class ExporterTEX(ExporterBase):
         g = int(gf * 10 + 0.5)
         b = int(bf * 10 + 0.5)
         
-        return "%d.%d, %d.%d, %d.%d" % (r // 10, r % 10, g // 10, g % 10, b // 10, b % 10)
+        return "{0:d}.{1:d}, {2:d}.{3:d}, {4:d}.{5:d}".format(
+               r // 10, r % 10, g // 10, g % 10, b // 10, b % 10)
     
     def __texStyle(self, style):
         """
@@ -81,8 +82,8 @@ class ExporterTEX(ExporterBase):
         @param istyle style number (integer)
         """
         closing_brackets = 3
-        file.write("\\newcommand{\\eric%s}[1]{\\noindent{\\ttfamily{" % \
-                   self.__texStyle(istyle))
+        file.write("\\newcommand{{\\eric{0}}}[1]{{\\noindent{{\\ttfamily{{".format(
+                   self.__texStyle(istyle)))
         if font.italic():
             file.write("\\textit{")
             closing_brackets += 1
@@ -90,12 +91,12 @@ class ExporterTEX(ExporterBase):
             file.write("\\textbf{")
             closing_brackets += 1
         if color != self.defaultColor:
-            file.write("\\textcolor[rgb]{%s}{" % self.__getTexRGB(color))
+            file.write("\\textcolor[rgb]{{{0}}}{{".format(self.__getTexRGB(color)))
             closing_brackets += 1
         if paper != self.defaultPaper:
-            file.write("\\colorbox[rgb]{%s}{" % self.__getTexRGB(paper))
+            file.write("\\colorbox[rgb]{{{0}}}{{".format(self.__getTexRGB(paper)))
             closing_brackets += 1
-        file.write("#1%s\n" % ('}' * closing_brackets))
+        file.write("#1{0}\n".format('}' * closing_brackets))
     
     def exportSource(self):
         """
@@ -186,10 +187,10 @@ class ExporterTEX(ExporterBase):
                     title = self.editor.getFileName()
                 else:
                     title = os.path.basename(self.editor.getFileName())
-                f.write("Source File: %s\n\n\\noindent\n\\tiny{\n" % title)
+                f.write("Source File: {0}\n\n\\noindent\n\\tiny{{\n".format(title))
                 
                 styleCurrent = self.editor.styleAt(0)
-                f.write("\\eric%s{" % self.__texStyle(styleCurrent))
+                f.write("\\eric{0}{{".format(self.__texStyle(styleCurrent)))
                 
                 lineIdx = 0
                 pos = 0
@@ -202,25 +203,26 @@ class ExporterTEX(ExporterBase):
                     style = self.editor.styleAt(pos)
                     if style != styleCurrent:
                         # new style
-                        f.write("}\n\\eric%s{" % self.__texStyle(style))
+                        f.write("}\n\\eric{0}{{".format(self.__texStyle(style)))
                         styleCurrent = style
                     
                     if ch == b'\t':
                         ts = tabSize - (lineIdx % tabSize)
                         lineIdx += ts - 1
-                        f.write("\\hspace*{%dem}" % ts)
+                        f.write("\\hspace*{{{0:d}em}}".format(ts))
                     elif ch == b'\\':
                         f.write("{\\textbackslash}")
                     elif ch in [b'>', b'<', b'@']:
-                        f.write("$%c$" % ch[0])
+                        f.write("${0}$".format(ch[0]))
                     elif ch in [b'{', b'}', b'^', b'_', b'&', b'$', b'#', b'%', b'~']:
-                        f.write("\\%c" % ch[0])
+                        f.write("\\{0}".format(ch[0]))
                     elif ch in [b'\r', b'\n']:
                         lineIdx = -1    # because incremented below
                         if ch == b'\r' and self.editor.byteAt(pos + 1) == b'\n':
                             pos += 1    # skip the LF
                         styleCurrent = self.editor.styleAt(pos + 1)
-                        f.write("} \\\\\n\\eric%s{" % self.__texStyle(styleCurrent))
+                        f.write("}} \\\\\n\\eric{0}{{".format(
+                                self.__texStyle(styleCurrent)))
                     elif ch == b' ':
                         if self.editor.byteAt(pos + 1) == b' ':
                             f.write("{\\hspace*{1em}}")

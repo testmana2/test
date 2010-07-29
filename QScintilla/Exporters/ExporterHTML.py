@@ -83,10 +83,10 @@ class ExporterHTML(ExporterBase):
                 f.write('''<html xmlns="http://www.w3.org/1999/xhtml">\n''')
                 f.write('''<head>\n''')
                 if titleFullPath:
-                    f.write('''<title>%s</title>\n''' % self.editor.getFileName())
+                    f.write('''<title>{0}</title>\n'''.format(self.editor.getFileName()))
                 else:
-                    f.write('''<title>%s</title>\n''' % \
-                        os.path.basename(self.editor.getFileName()))
+                    f.write('''<title>{0}</title>\n'''.format(
+                        os.path.basename(self.editor.getFileName())))
                 f.write('''<meta name="Generator" content="eric5" />\n''')
                 f.write('''<meta http-equiv="Content-Type" '''
                         '''content="text/html; charset=utf-8" />\n''')
@@ -140,22 +140,23 @@ class ExporterHTML(ExporterBase):
                                 if istyle == QsciScintilla.STYLE_DEFAULT:
                                     f.write('''span {\n''')
                                 else:
-                                    f.write('''.S%d {\n''' % istyle)
+                                    f.write('''.S{0:d} {\n'''.format(istyle))
                                 if font.italic():
                                     f.write('''    font-style: italic;\n''')
                                 if font.bold():
                                     f.write('''    font-weight: bold;\n''')
                                 if wysiwyg:
-                                    f.write('''    font-family: '%s';\n''' % \
-                                            font.family())
-                                f.write('''    color: %s;\n''' % colour.name())
+                                    f.write('''    font-family: '{0}';\n'''.format(
+                                            font.family()))
+                                f.write('''    color: {0};\n'''.format(colour.name()))
                                 if istyle != QsciScintilla.STYLE_DEFAULT and \
                                    bgColour != paper.name():
-                                    f.write('''    background: %s;\n''' % paper.name())
+                                    f.write('''    background: {0};\n'''.format(
+                                            paper.name()))
                                     f.write('''    text-decoration: inherit;\n''')
                                 if wysiwyg:
-                                    f.write('''    font-size: %dpt;\n''' % \
-                                            QFontInfo(font).pointSize())
+                                    f.write('''    font-size: {0:d}pt;\n'''.format(
+                                            QFontInfo(font).pointSize()))
                                 f.write('''}\n''')
                             else:
                                 styleIsUsed[istyle] = False
@@ -170,19 +171,19 @@ class ExporterHTML(ExporterBase):
                     if font.bold():
                         f.write('''    font-weight: bold;\n''')
                     if wysiwyg:
-                        f.write('''    font-family: '%s';\n''' % font.family())
-                    f.write('''    color: %s;\n''' % colour.name())
+                        f.write('''    font-family: '{0}';\n'''.format(font.family()))
+                    f.write('''    color: {0};\n'''.format(colour.name()))
                     if bgColour != paper.name():
-                        f.write('''    background: %s;\n''' % paper.name())
+                        f.write('''    background: {0};\n'''.format(paper.name()))
                         f.write('''    text-decoration: inherit;\n''')
                     if wysiwyg:
-                        f.write('''    font-size: %dpt;\n''' % \
-                                QFontInfo(font).pointSize())
+                        f.write('''    font-size: {0:d}pt;\n'''.format(
+                                QFontInfo(font).pointSize()))
                     f.write('''}\n''')
                 f.write('''</style>\n''')
                 f.write('''</head>\n''')
                 
-                f.write('''<body bgcolor="%s">\n''' % bgColour)
+                f.write('''<body bgcolor="{0}">\n'''.format(bgColour))
                 line = self.editor.lineAt(0)
                 level = self.editor.foldLevelAt(line) - QsciScintilla.SC_FOLDLEVELBASE
                 levelStack = [level]
@@ -198,15 +199,15 @@ class ExporterHTML(ExporterBase):
                 if folding:
                     if self.editor.foldFlagsAt(line) & \
                        QsciScintilla.SC_FOLDLEVELHEADERFLAG:
-                        f.write('''<span id="hd%d" onclick="toggle('%d')">''' % \
-                                (line, line + 1))
-                        f.write('''<span id="bt%d">- </span>''' % line)
+                        f.write('''<span id="hd{0:d}" onclick="toggle('{1:d}')">'''\
+                                .format(line, line + 1))
+                        f.write('''<span id="bt{0:d}">- </span>'''.format(line))
                         inFoldSpan = True
                     else:
                         f.write('''&nbsp; ''')
                 
                 if styleIsUsed[styleCurrent]:
-                    f.write('''<span class="S%0d">''' % styleCurrent)
+                    f.write('''<span class="S{0:0d}">'''.format(styleCurrent))
                     inStyleSpan = True
                 
                 column = 0
@@ -224,7 +225,7 @@ class ExporterHTML(ExporterBase):
                             inStyleSpan = False
                         if ch not in [b'\r', b'\n']: # no need of a span for the EOL
                             if styleIsUsed[style]:
-                                f.write('''<span class="S%d">''' % style)
+                                f.write('''<span class="S{0:d}">'''.format(style))
                                 inStyleSpan = True
                             styleCurrent = style
                     
@@ -284,13 +285,14 @@ class ExporterHTML(ExporterBase):
                                     levelStack.pop()
                             f.write('\n') # here to get clean code
                             if newLevel > level:
-                                f.write('''<span id="ln%d">''' % line)
+                                f.write('''<span id="ln{0:d}">'''.format(line))
                                 levelStack.append(newLevel)
                             if self.editor.foldFlagsAt(line) & \
                                QsciScintilla.SC_FOLDLEVELHEADERFLAG:
-                                f.write('''<span id="hd%d" onclick="toggle('%d')">''' % \
-                                        (line, line + 1))
-                                f.write('''<span id="bt%d">- </span>''' % line)
+                                f.write(
+                                    '''<span id="hd{0:d}" onclick="toggle('{1:d}')">'''\
+                                    .format(line, line + 1))
+                                f.write('''<span id="bt{0:d}">- </span>'''.format(line))
                                 inFoldSpan = True
                             else:
                                 f.write('''&nbsp; ''')
@@ -302,7 +304,7 @@ class ExporterHTML(ExporterBase):
                            self.editor.byteAt(pos + 1) not in [b'\r', b'\n']:
                             # We know it's the correct next style,
                             # but no (empty) span for an empty line
-                            f.write('''<span class="S%0d">''' % styleCurrent)
+                            f.write('''<span class="S{0:0d}">'''.format(styleCurrent))
                             inStyleSpan = True
                     else:
                         if ch == b'<':

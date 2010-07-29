@@ -27,10 +27,10 @@ class ExporterRTF(ExporterBase):
     RTF_HEADEROPEN = "{\\rtf1\\ansi\\deff0\\deftab720"
     RTF_HEADERCLOSE = "\n"
     RTF_FONTDEFOPEN = "{\\fonttbl"
-    RTF_FONTDEF = "{\\f%d\\fnil\\fcharset%u %s;}"
+    RTF_FONTDEF = "{\\f{0:d}\\fnil\\fcharset{1:d} {2};}"
     RTF_FONTDEFCLOSE = "}"
     RTF_COLORDEFOPEN = "{\\colortbl"
-    RTF_COLORDEF = "\\red%d\\green%d\\blue%d;"
+    RTF_COLORDEF = "\\red{0:d}\\green{1:d}\\blue{2:d};"
     RTF_COLORDEFCLOSE = "}"
     RTF_INFOOPEN = "{\\info "
     RTF_INFOCLOSE = "}"
@@ -155,7 +155,7 @@ class ExporterRTF(ExporterBase):
                 f.write(self.RTF_HEADEROPEN + self.RTF_FONTDEFOPEN)
                 fonts[0] = fontface
                 fontCount = 1
-                f.write(self.RTF_FONTDEF % (0, characterset, fontface))
+                f.write(self.RTF_FONTDEF.format(0, characterset, fontface))
                 colors[0] = fgColour
                 colors[1] = bgColour
                 colorCount = 2
@@ -175,20 +175,22 @@ class ExporterRTF(ExporterBase):
                                             break
                                     if fontKey is None:
                                         fonts[fontCount] = font.family()
-                                        f.write(self.RTF_FONTDEF % \
-                                            (fontCount, characterset, font.family()))
+                                        f.write(self.RTF_FONTDEF.format(
+                                            fontCount, characterset, font.family()))
                                         fontKey = fontCount
                                         fontCount += 1
-                                    lastStyle = self.RTF_SETFONTFACE + "%d" % fontKey
+                                    lastStyle = self.RTF_SETFONTFACE + "{0:d}".format(
+                                        fontKey)
                                 else:
                                     lastStyle = self.RTF_SETFONTFACE + "0"
                                 
                                 if wysiwyg and QFontInfo(font).pointSize():
                                     lastStyle += self.RTF_SETFONTSIZE + \
-                                                 "%d" % (QFontInfo(font).pointSize() << 1)
+                                                 "{0:d}".format(
+                                                 QFontInfo(font).pointSize() << 1)
                                 else:
                                     lastStyle += self.RTF_SETFONTSIZE + \
-                                                 "%d" % fontsize
+                                                 "{0:d}".format(fontsize)
                                 
                                 sColour = lex.color(istyle)
                                 sColourKey = None
@@ -200,7 +202,8 @@ class ExporterRTF(ExporterBase):
                                     colors[colorCount] = sColour
                                     sColourKey = colorCount
                                     colorCount += 1
-                                lastStyle += self.RTF_SETCOLOR + "%d" % sColourKey
+                                lastStyle += self.RTF_SETCOLOR + \
+                                             "{0:d}".format(sColourKey)
                                 
                                 sColour = lex.paper(istyle)
                                 sColourKey = None
@@ -212,7 +215,8 @@ class ExporterRTF(ExporterBase):
                                     colors[colorCount] = sColour
                                     sColourKey = colorCount
                                     colorCount += 1
-                                lastStyle += self.RTF_SETBACKGROUND + "%d" % sColourKey
+                                lastStyle += self.RTF_SETBACKGROUND + \
+                                             "{0:d}".format(sColourKey)
                                 
                                 if font.bold():
                                     lastStyle += self.RTF_BOLD_ON
@@ -226,7 +230,7 @@ class ExporterRTF(ExporterBase):
                             else:
                                 styles[istyle] = self.RTF_SETFONTFACE + "0" + \
                                                  self.RTF_SETFONTSIZE + \
-                                                 "%d" % fontsize + \
+                                                 "{0:d}".format(fontsize) + \
                                                  self.RTF_SETCOLOR + "0" + \
                                                  self.RTF_SETBACKGROUND + "1" + \
                                                  self.RTF_BOLD_OFF + self.RTF_ITALIC_OFF
@@ -234,25 +238,25 @@ class ExporterRTF(ExporterBase):
                         istyle += 1
                 else:
                     styles[0] = self.RTF_SETFONTFACE + "0" + \
-                                self.RTF_SETFONTSIZE + "%d" % fontsize + \
+                                self.RTF_SETFONTSIZE + "{0:d}".format(fontsize) + \
                                 self.RTF_SETCOLOR + "0" + \
                                 self.RTF_SETBACKGROUND + "1" + \
                                 self.RTF_BOLD_OFF + self.RTF_ITALIC_OFF
                 
                 f.write(self.RTF_FONTDEFCLOSE + self.RTF_COLORDEFOPEN)
                 for value in list(colors.values()):
-                    f.write(self.RTF_COLORDEF % \
-                            (value.red(), value.green(), value.blue()))
+                    f.write(self.RTF_COLORDEF.format(
+                            value.red(), value.green(), value.blue()))
                 f.write(self.RTF_COLORDEFCLOSE)
                 f.write(self.RTF_INFOOPEN + self.RTF_COMMENT)
                 f.write(time.strftime(self.RTF_CREATED))
                 f.write(self.RTF_INFOCLOSE)
                 f.write(self.RTF_HEADERCLOSE + \
                         self.RTF_BODYOPEN + self.RTF_SETFONTFACE + "0" + \
-                        self.RTF_SETFONTSIZE + "%d" % fontsize + \
+                        self.RTF_SETFONTSIZE + "{0:d}".format(fontsize) + \
                         self.RTF_SETCOLOR + "0 ")
                 lastStyle = self.RTF_SETFONTFACE + "0" + \
-                            self.RTF_SETFONTSIZE + "%d" % fontsize + \
+                            self.RTF_SETFONTSIZE + "{0:d}".format(fontsize) + \
                             self.RTF_SETCOLOR + "0" + \
                             self.RTF_SETBACKGROUND + "1" + \
                             self.RTF_BOLD_OFF + self.RTF_ITALIC_OFF
@@ -311,9 +315,10 @@ class ExporterRTF(ExporterBase):
                             elif len(utf8Ch) == utf8Len:
                                 ch = utf8Ch.decode('utf8')
                                 if ord(ch) <= 0xff:
-                                    f.write("\\'%x" % ord(ch))
+                                    f.write("\\'{0:x}".format(ord(ch)))
                                 else:
-                                    f.write("\\u%d\\'%x" % (ord(ch), ord(ch) & 0xFF))
+                                    f.write("\\u{0:d}\\'{1:x}".format(
+                                            ord(ch), ord(ch) & 0xFF))
                                 utf8Ch = b""
                                 utf8Len = 0
                             else:

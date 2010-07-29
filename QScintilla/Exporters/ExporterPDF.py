@@ -74,7 +74,7 @@ class PDFObjectTracker(object):
         @param objectData data to be written (integer or string)
         """
         if isinstance(objectData, int):
-            self.file.write("%d" % objectData)
+            self.file.write("{0:d}".format(objectData))
         else:
             self.file.write(objectData)
         
@@ -108,7 +108,7 @@ class PDFObjectTracker(object):
         self.write("\n0000000000 65535 f \n")
         ind = 0
         while ind < len(self.offsetList):
-            self.write("%010d 00000 n \n" % self.offsetList[ind])
+            self.write("{0:010d} 00000 n \n".format(self.offsetList[ind]))
             ind += 1
         return xrefStart
 
@@ -170,10 +170,11 @@ class PDFRender(object):
         if styleNext != self.styleCurrent or style_ == -1:
             if self.style[self.styleCurrent].font != self.style[styleNext].font or \
                style_ == -1:
-                buf += "/F%d %d Tf " % (self.style[styleNext].font + 1, self.fontSize)
+                buf += "/F{0:d} {1:d} Tf ".format(self.style[styleNext].font + 1, 
+                                                  self.fontSize)
             if self.style[self.styleCurrent].fore != self.style[styleNext].fore or \
                style_ == -1:
-                buf += "%srg " % self.style[styleNext].fore
+                buf += "{0}rg ".format(self.style[styleNext].fore)
         return buf
         
     def startPDF(self):
@@ -206,8 +207,8 @@ class PDFRender(object):
         # to be inserted (PDF1.4Ref(p317))
         for i in range(4):
             buffer = \
-                "<</Type/Font/Subtype/Type1/Name/F%d/BaseFont/%s/Encoding/%s>>\n" % \
-                (i + 1, PDFfontNames[self.fontSet * 4 + i], PDF_ENCODING)
+                "<</Type/Font/Subtype/Type1/Name/F{0:d}/BaseFont/{1}/Encoding/{2}>>\n"\
+                .format(i + 1, PDFfontNames[self.fontSet * 4 + i], PDF_ENCODING)
             self.oT.add(buffer)
         
         self.pageContentStart = self.oT.index
@@ -229,31 +230,31 @@ class PDFRender(object):
         pageObjectStart = self.oT.index
         pagesRef = pageObjectStart + self.pageCount
         for i in range(self.pageCount):
-            buffer = "<</Type/Page/Parent %d 0 R\n" \
-                     "/MediaBox[ 0 0 %d %d]\n" \
-                     "/Contents %d 0 R\n" \
-                     "/Resources %d 0 R\n>>\n" % \
-                     (pagesRef, self.pageWidth, self.pageHeight, 
-                      self.pageContentStart + i, resourceRef)
+            buffer = "<</Type/Page/Parent {0:d} 0 R\n" \
+                     "/MediaBox[ 0 0 {1:d} {2:d}]\n" \
+                     "/Contents {3:d} 0 R\n" \
+                     "/Resources {4:d} 0 R\n>>\n".format(
+                     pagesRef, self.pageWidth, self.pageHeight, 
+                     self.pageContentStart + i, resourceRef)
             self.oT.add(buffer)
         
         # create page tree object (PDF1.4Ref(p86))
         self.pageData = "<</Type/Pages/Kids[\n"
         for i in range(self.pageCount):
-            self.pageData += "%d 0 R\n" % (pageObjectStart + i)
-        self.pageData += "]/Count %d\n>>\n" % self.pageCount
+            self.pageData += "{0:d} 0 R\n".format(pageObjectStart + i)
+        self.pageData += "]/Count {0:d}\n>>\n".format(self.pageCount)
         self.oT.add(self.pageData)
         
         # create catalog object (PDF1.4Ref(p83))
-        buffer = "<</Type/Catalog/Pages %d 0 R >>\n" % pagesRef
+        buffer = "<</Type/Catalog/Pages {0:d} 0 R >>\n".format(pagesRef)
         catalogRef = self.oT.add(buffer)
         
         # append the cross reference table (PDF1.4Ref(p64))
         xref = self.oT.xref()
         
         # end the file with the trailer (PDF1.4Ref(p67))
-        buffer = "trailer\n<< /Size %d /Root %d 0 R\n>>\nstartxref\n%d\n%%%%EOF\n" % \
-                 (self.oT.index, catalogRef, xref)
+        buffer = "trailer\n<< /Size {0:d} /Root {1:d} 0 R\n>>\nstartxref\n{2:d}\n%%EOF\n"\
+                 .format(self.oT.index, catalogRef, xref)
         self.oT.write(buffer)
         
     def add(self, ch, style_):
@@ -299,7 +300,7 @@ class PDFRender(object):
                 self.styleCurrent = self.stylePrev
             else:
                 self.pageData += self.segStyle
-            self.pageData += "(%s)Tj\n" % self.segment
+            self.pageData += "({0})Tj\n".format(self.segment)
             self.segment = ""
             self.segStyle = ""
             self.justWhiteSpace = True
@@ -315,7 +316,8 @@ class PDFRender(object):
         self.yPos = self.pageHeight - self.pageMargins["top"] - fontAscender
         
         # start a new page
-        buffer = "BT 1 0 0 1 %d %d Tm\n" % (self.pageMargins["left"], int(self.yPos))
+        buffer = "BT 1 0 0 1 {0:d} {1:d} Tm\n".format(
+            self.pageMargins["left"], int(self.yPos))
         
         # force setting of initial font, colour
         self.segStyle = self.setStyle(-1)
@@ -334,8 +336,8 @@ class PDFRender(object):
         
         # build actual text object; +3 is for "ET\n"
         # PDF1.4Ref(p38) EOL marker preceding endstream not counted
-        textObj = "<</Length %d>>\nstream\n%sET\nendstream\n" % \
-                  (len(self.pageData) - 1 + 3, self.pageData)
+        textObj = "<</Length {0:d}>>\nstream\n{1}ET\nendstream\n".format(
+                  len(self.pageData) - 1 + 3, self.pageData)
         self.oT.add(textObj)
         
     def nextLine(self):
@@ -359,7 +361,7 @@ class PDFRender(object):
         if self.firstLine:
             # avoid breakage due to locale setting
             f = int(self.leading * 10 + 0.5)
-            buffer = "0 -%d.%d TD\n" % (f // 10, f % 10)
+            buffer = "0 -{0:d}.{1:d} TD\n".format(f // 10, f % 10)
             self.firstLine = False
         else:
             buffer = "T*\n"
@@ -389,9 +391,9 @@ class ExporterPDF(ExporterBase):
         for component in [color.red(), color.green(), color.blue()]:
             c = (component * 1000 + 127) // 255
             if c == 0 or c == 1000:
-                pdfColor += "%d " % (c // 1000)
+                pdfColor += "{0:d} ".format(c // 1000)
             else:
-                pdfColor += "0.%03d " % c
+                pdfColor += "0.{0:03d} ".format(c)
         return pdfColor
         
     def exportSource(self):

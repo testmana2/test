@@ -1246,7 +1246,7 @@ class Editor(QsciScintillaCompat):
         @param act reference to the action that was triggered (QAction)
         """
         encoding = act.data()
-        self.__encodingChanged("%s-selected" % encoding)
+        self.__encodingChanged("{0}-selected".format(encoding))
         
     def __checkEncoding(self):
         """
@@ -1346,7 +1346,7 @@ class Editor(QsciScintillaCompat):
             return
         
         if pyname:
-            self.apiLanguage = "Pygments|%s" % pyname
+            self.apiLanguage = "Pygments|{0}".format(pyname)
         else:
             self.apiLanguage = self.lexer_.language()
             if self.apiLanguage == "POV":
@@ -1358,7 +1358,7 @@ class Editor(QsciScintillaCompat):
             self.connect(self, SIGNAL("SCN_STYLENEEDED(int)"), self.__styleNeeded)
         
         # get the font for style 0 and set it as the default font
-        key = 'Scintilla/%s/style0/font' % self.lexer_.language()
+        key = 'Scintilla/{0}/style0/font'.format(self.lexer_.language())
         fdesc = Preferences.Prefs.settings.value(key)
         if fdesc is not None:
             font = QFont(fdesc[0], int(fdesc[1]))
@@ -2306,7 +2306,7 @@ class Editor(QsciScintillaCompat):
         if createBackup:
             if os.path.islink(fn):
                 fn = os.path.realpath(fn)
-            bfn = '%s~' % fn
+            bfn = '{0}~'.format(fn)
             try:
                 permissions = os.stat(fn).st_mode
                 perms_valid = True
@@ -2551,7 +2551,7 @@ class Editor(QsciScintillaCompat):
         if wc is None or not useWordChars:
             regExp = QRegExp('[^\w_]', cs)
         else:
-            regExp = QRegExp('[^%s]' % re.escape(wc), cs)
+            regExp = QRegExp('[^{0}]'.format(re.escape(wc)), cs)
         start = regExp.lastIndexIn(text, index) + 1
         end = regExp.indexIn(text, index)
         if start == end + 1 and index > 0:
@@ -3833,11 +3833,11 @@ class Editor(QsciScintillaCompat):
                 basename = os.path.splitext(fn)[0]
                 tbasename = os.path.splitext(tfn)[0]
                 prEnable = prEnable or \
-                    os.path.isfile("%s.profile" % basename) or \
-                    os.path.isfile("%s.profile" % tbasename)
+                    os.path.isfile("{0}.profile".format(basename)) or \
+                    os.path.isfile("{0}.profile".format(tbasename))
                 coEnable = coEnable or \
-                    os.path.isfile("%s.coverage" % basename) or \
-                    os.path.isfile("%s.coverage" % tbasename)
+                    os.path.isfile("{0}.coverage".format(basename)) or \
+                    os.path.isfile("{0}.coverage".format(tbasename))
         
         # now check ourself
         fn = self.getFileName()
@@ -3846,11 +3846,11 @@ class Editor(QsciScintillaCompat):
             basename = os.path.splitext(fn)[0]
             tbasename = os.path.splitext(tfn)[0]
             prEnable = prEnable or \
-                os.path.isfile("%s.profile" % basename) or \
-                os.path.isfile("%s.profile" % tbasename)
+                os.path.isfile("{0}.profile".format(basename)) or \
+                os.path.isfile("{0}.profile".format(tbasename))
             coEnable = coEnable or \
-                os.path.isfile("%s.coverage" % basename) or \
-                os.path.isfile("%s.coverage" % tbasename)
+                os.path.isfile("{0}.coverage".format(basename)) or \
+                os.path.isfile("{0}.coverage".format(tbasename))
         
         # now check for syntax errors
         if self.hasSyntaxErrors():
@@ -4111,8 +4111,8 @@ class Editor(QsciScintillaCompat):
                 basename = os.path.splitext(fn)[0]
                 tbasename = os.path.splitext(tfn)[0]
                 
-                f = "%s.coverage" % basename
-                tf = "%s.coverage" % tbasename
+                f = "{0}.coverage".format(basename)
+                tf = "{0}.coverage".format(tbasename)
                 if os.path.isfile(f):
                     files.append(f)
                 if os.path.isfile(tf):
@@ -4125,8 +4125,8 @@ class Editor(QsciScintillaCompat):
             basename = os.path.splitext(fn)[0]
             tbasename = os.path.splitext(tfn)[0]
             
-            f = "%s.coverage" % basename
-            tf = "%s.coverage" % tbasename
+            f = "{0}.coverage".format(basename)
+            tf = "{0}.coverage".format(tbasename)
             if os.path.isfile(f) and not f in files:
                 files.append(f)
             if os.path.isfile(tf) and not tf in files:
@@ -4249,8 +4249,8 @@ class Editor(QsciScintillaCompat):
                 basename = os.path.splitext(fn)[0]
                 tbasename = os.path.splitext(tfn)[0]
                 
-                f = "%s.profile" % basename
-                tf = "%s.profile" % tbasename
+                f = "{0}.profile".format(basename)
+                tf = "{0}.profile".format(tbasename)
                 if os.path.isfile(f):
                     files.append(f)
                 if os.path.isfile(tf):
@@ -4263,8 +4263,8 @@ class Editor(QsciScintillaCompat):
             basename = os.path.splitext(fn)[0]
             tbasename = os.path.splitext(tfn)[0]
             
-            f = "%s.profile" % basename
-            tf = "%s.profile" % tbasename
+            f = "{0}.profile".format(basename)
+            tf = "{0}.profile".format(tbasename)
             if os.path.isfile(f) and not f in files:
                 files.append(f)
             if os.path.isfile(tf) and not tf in files:
@@ -4626,7 +4626,7 @@ class Editor(QsciScintillaCompat):
         
         try:
             f = open(fname, "w", encoding = "utf-8")
-            f.write("%s%s" % (name, "\n"))
+            f.write("{0}{1}".format(name, "\n"))
             f.write(self.macros[name].save())
             f.close()
         except IOError:
@@ -5230,7 +5230,8 @@ class Editor(QsciScintillaCompat):
                         return
                     elif len(templateNames) > 1:
                         self.showUserList(TemplateCompletionListID, 
-                            ["%s?%d" % (t, self.TemplateImageID) for t in templateNames])
+                            ["{0}?{1:d}".format(t, self.TemplateImageID) \
+                             for t in templateNames])
                         return
         
         QsciScintillaCompat.editorCommand(self, cmd)
