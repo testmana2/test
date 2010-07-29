@@ -123,7 +123,8 @@ class CompleterPython(CompleterBase):
         # closing parenthesis
         # skip matching closing parenthesis
         elif char in [')', '}', ']']:
-            if char == self.editor.text(line)[col]:
+            txt = self.editor.text(line)
+            if col < len(txt) and char == txt[col]:
                 if self.__skipBrace:
                     self.editor.setSelection(line, col, line, col + 1)
                     self.editor.removeSelectedText()
