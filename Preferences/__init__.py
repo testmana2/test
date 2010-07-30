@@ -1164,7 +1164,11 @@ def getUI(key, prefClass = Prefs):
         else:
             return prefClass.uiDefaults["ToolbarManagerState"]
     elif key in ["VersionsUrls5"]:
-        return toList(prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
+        urls = toList(prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
+        if len(urls) == 0:
+            return prefClass.uiDefaults[key]
+        else:
+            return urls
     else:
         return prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key])
     
