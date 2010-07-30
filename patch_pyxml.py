@@ -27,11 +27,11 @@ def usage(rcode = 2):
     global progName, pyxmlModDir
     
     print("Usage:")
-    print("    %s [-h] [-d dir]" % (progName))
+    print("    {0} [-h] [-d dir]".format(progName))
     print("where:")
     print("    -h             display this help message")
-    print("    -d dir         where pyXML is installed [default %s]" % \
-        (pyxmlModDir))
+    print("    -d dir         where pyXML is installed [default {0}]".format(
+        pyxmlModDir))
     print()
     print("This script patches the file _xmlplus/parsers/xmlproc/xmlutils.py")
     print("of the pyXML distribution to fix a bug causing it to fail")
@@ -101,7 +101,7 @@ def patchPyXML():
             os.path.join(pyxmlModDir, "parsers", "xmlproc", "xmlutils.py")
         f = open(filename, "r", encoding = "utf-8")
     except EnvironmentError:
-        print("The file %s does not exist. Aborting." % filename)
+        print("The file {0} does not exist. Aborting.".format(filename))
         sys.exit(1)
     
     lines = f.readlines()
@@ -136,28 +136,28 @@ def patchPyXML():
         try:
             py_compile.compile(sn)
         except py_compile.PyCompileError as e:
-            print("Error compiling %s. Aborting" % sn)
+            print("Error compiling {0}. Aborting".format(sn))
             print(e)
             os.remove(sn)
             sys.exit(1)
         except SyntaxError as e:
-            print("Error compiling %s. Aborting" % sn)
+            print("Error compiling {0}. Aborting".format(sn))
             print(e)
             os.remove(sn)
             sys.exit(1)
         
-        shutil.copy(filename, "%s.orig" % filename)
+        shutil.copy(filename, "{0}.orig".format(filename))
         shutil.copy(sn, filename)
         os.remove(sn)
-        if os.path.exists("%sc" % sn):
-            shutil.copy("%sc" % sn, "%sc" % filename)
-            os.remove("%sc" % sn)
-        if os.path.exists("%so" % sn):
-            shutil.copy("%so" % sn, "%so" % filename)
-            os.remove("%so" % sn)
+        if os.path.exists("{0}c".format(sn)):
+            shutil.copy("{0}c".format(sn), "{0}c".format(filename))
+            os.remove("{0}c".format(sn))
+        if os.path.exists("{0}o".format(sn)):
+            shutil.copy("{0}o".format(sn), "{0}o".format(filename))
+            os.remove("{0}o".format(sn))
             
         print("xmlutils.py patched successfully.")
-        print("Unpatched file copied to %s.orig." % filename)
+        print("Unpatched file copied to {0}.orig.".format(filename))
     
 def main(argv):
     """

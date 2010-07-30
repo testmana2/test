@@ -50,22 +50,23 @@ def usage(rcode = 2):
 
     print()
     print("Usage:")
-    print("    %s [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]" % (progName))
+    print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"\
+        .format(progName))
     print("where:")
     print("    -h        display this help message")
     print("    -a dir    where the API files will be installed")
     if apisDir:
-        print("              (default: %s)" % (apisDir))
+        print("              (default: {0})".format(apisDir))
     else:
         print("              (no default value)")
     print("    -b dir    where the binaries will be installed")
-    print("              (default: %s)" % (platBinDir))
+    print("              (default: {0})".format(platBinDir))
     print("    -d dir    where eric5 python files will be installed")
-    print("              (default: %s)" % (modDir))
+    print("              (default: {0})".format(modDir))
     print("    -f file   configuration file naming the various installation paths")
     if not sys.platform.startswith("win"):
         print("    -i dir    temporary install prefix")
-        print("              (default: %s)" % (distDir))
+        print("              (default: {0})".format(distDir))
     print("    -x        don't perform dependency checks (use on your own risk)")
     print("    -c        don't cleanup old installation first")
     print("    -z        don't compile the installed python files")
@@ -149,8 +150,8 @@ def createPyWrapper(pydir, wfile):
     if sys.platform.startswith("win"):
         wname = wfile + ".bat"
         wrapper = \
-'''@"%s\\pythonw" "%s\\%s.py" %%1 %%2 %%3 %%4 %%5 %%6 %%7 %%8 %%9
-''' % (platBinDir, pydir, wfile)
+'''@"{0}\\pythonw" "{1}\\{2}.py" %1 %2 %3 %4 %5 %6 %7 %8 %9
+'''.format(platBinDir, pydir, wfile)
 
     # Mac OS X
     elif sys.platform == "darwin":
@@ -158,8 +159,8 @@ def createPyWrapper(pydir, wfile):
         wrapper = \
 '''#!/bin/sh
 
-exec "%s/bin/pythonw3" "%s/%s.py" "$@"
-''' % (sys.exec_prefix, pydir, wfile)
+exec "{0}/bin/pythonw3" "{1}/{2}.py" "$@"
+'''.format(sys.exec_prefix, pydir, wfile)
 
     # *nix systems
     else:
@@ -167,8 +168,8 @@ exec "%s/bin/pythonw3" "%s/%s.py" "$@"
         wrapper = \
 '''#!/bin/sh
 
-exec "%s" "%s/%s.py" "$@"
-''' % (sys.executable, pydir, wfile)
+exec "{0}" "{1}/{2}.py" "$@"
+'''.format(sys.executable, pydir, wfile)
 
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
@@ -346,59 +347,65 @@ def installEric():
         
         # copy the various parts of eric5
         copyTree('eric', cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'], 
-            ['eric%sExamples' % os.sep])
+            ['eric{0}Examples'.format(os.sep)])
         copyTree('eric', cfg['ericDir'], ['*.rb'], 
-            ['eric%sExamples' % os.sep])
-        copyTree('eric%sPlugins' % os.sep, '%s%sPlugins' % (cfg['ericDir'], os.sep), 
+            ['eric{0}Examples'.format(os.sep)])
+        copyTree('eric{0}Plugins'.format(os.sep), 
+            '{0}{1}Plugins'.format(cfg['ericDir'], os.sep), 
             ['*.png', '*.style'])
-        copyTree('eric%sDocumentation' % os.sep, cfg['ericDocDir'], ['*.html', '*.qch'])
-        copyTree('eric%sDTDs' % os.sep, cfg['ericDTDDir'], ['*.dtd'])
-        copyTree('eric%sCSSs' % os.sep, cfg['ericCSSDir'], ['*.css'])
-        copyTree('eric%sStyles' % os.sep, cfg['ericStylesDir'], ['*.qss'])
-        copyTree('eric%si18n' % os.sep, cfg['ericTranslationsDir'], ['*.qm'])
-        copyTree('eric%sicons' % os.sep, cfg['ericIconDir'], ['*.png', 'LICENSE*.*'])
-        copyTree('eric%spixmaps' % os.sep, cfg['ericPixDir'], ['*.png', '*.xpm', '*.ico'])
-        copyTree('eric%sDesignerTemplates' % os.sep, cfg['ericTemplatesDir'], ['*.tmpl'])
-        copyTree('eric%sCodeTemplates' % os.sep, cfg['ericCodeTemplatesDir'], ['*.tmpl'])
-        copyTree('eric%sExamples' % os.sep, cfg['ericExamplesDir'], 
-                 ['*.py', '*.pyc', '*.pyo'])
+        copyTree('eric{0}Documentation'.format(os.sep), cfg['ericDocDir'], 
+            ['*.html', '*.qch'])
+        copyTree('eric{0}DTDs'.format(os.sep), cfg['ericDTDDir'], ['*.dtd'])
+        copyTree('eric{0}CSSs'.format(os.sep), cfg['ericCSSDir'], ['*.css'])
+        copyTree('eric{0}Styles'.format(os.sep), cfg['ericStylesDir'], ['*.qss'])
+        copyTree('eric{0}i18n'.format(os.sep), cfg['ericTranslationsDir'], ['*.qm'])
+        copyTree('eric{0}icons'.format(os.sep), cfg['ericIconDir'], 
+            ['*.png', 'LICENSE*.*'])
+        copyTree('eric{0}pixmaps'.format(os.sep), cfg['ericPixDir'], 
+            ['*.png', '*.xpm', '*.ico'])
+        copyTree('eric{0}DesignerTemplates'.format(os.sep), cfg['ericTemplatesDir'], 
+            ['*.tmpl'])
+        copyTree('eric{0}CodeTemplates'.format(os.sep), cfg['ericCodeTemplatesDir'], 
+            ['*.tmpl'])
+        copyTree('eric{0}Examples'.format(os.sep), cfg['ericExamplesDir'], 
+            ['*.py', '*.pyc', '*.pyo'])
         
         # copy the wrappers
         for wname in wnames:
             shutil.copy(wname, cfg['bindir'])
         
         # copy the license file
-        shutil.copy('eric%sLICENSE.GPL3' % os.sep, cfg['ericDir'])
+        shutil.copy('eric{0}LICENSE.GPL3'.format(os.sep), cfg['ericDir'])
         
         # create the global plugins directory
         createGlobalPluginsDir()
         
     except IOError as msg:
-        sys.stderr.write('IOError: %s\nTry install as root.\n' % msg)
+        sys.stderr.write('IOError: {0}\nTry install as root.\n'.format(msg))
         exit(7)
         
     except OSError as msg:
-        sys.stderr.write('OSError: %s\nTry install with admin rights.\n' % msg)
+        sys.stderr.write('OSError: {0}\nTry install with admin rights.\n'.format(msg))
         exit(7)
     
     # copy some text files to the doc area
     for name in ["LICENSE.GPL3", "THANKS", "changelog"]:
         try:
-            shutil.copy('eric%s%s' % (os.sep, name), cfg['ericDocDir'])
+            shutil.copy('eric{0}{1}'.format(os.sep, name), cfg['ericDocDir'])
         except EnvironmentError:
-            print("Could not install 'eric%s%s'." % (os.sep, name))
+            print("Could not install 'eric{0}{1}'.".format(os.sep, name))
     for name in glob.glob(os.path.join('eric', 'README*.*')):
         try:
             shutil.copy(name, cfg['ericDocDir'])
         except EnvironmentError:
-            print("Could not install 'eric%s%s'." % (os.sep, name))
+            print("Could not install 'eric{0}{1}'.".format(os.sep, name))
    
     # copy some more stuff
     for name in ['default.e4k']:
         try:
-            shutil.copy('eric%s%s' % (os.sep, name), cfg['ericOthersDir'])
+            shutil.copy('eric{0}{1}'.format(os.sep, name), cfg['ericOthersDir'])
         except EnvironmentError:
-            print("Could not install 'eric%s%s'." % (os.sep, name))
+            print("Could not install 'eric{0}{1}'.".format(os.sep, name))
     
     # install the API file
     for progLanguage in progLanguages:
@@ -409,14 +416,14 @@ def installEric():
             try:
                 shutil.copy(apiName, apidir)
             except EnvironmentError:
-                print("Could not install '%s'." % apiName)
+                print("Could not install '{0}'.".format(apiName))
         if progLanguage == "Python":
             # copy Python3 API files to the same destination
             for apiName in glob.glob(os.path.join("eric", "APIs", "Python3", "*.api")):
                 try:
                     shutil.copy(apiName, apidir)
                 except EnvironmentError:
-                    print("Could not install '%s'." % apiName)
+                    print("Could not install '{0}'.".format(apiName))
     
     # create menu entry for Linux systems
     if sys.platform.startswith("linux"):
@@ -484,22 +491,22 @@ def createConfig():
 #
 
 _pkg_config = {
-    'ericDir'              : r'%s',
-    'ericPixDir'           : r'%s',
-    'ericIconDir'          : r'%s',
-    'ericDTDDir'           : r'%s',
-    'ericCSSDir'           : r'%s',
-    'ericStylesDir'        : r'%s',
-    'ericDocDir'           : r'%s',
-    'ericExamplesDir'      : r'%s',
-    'ericTranslationsDir'  : r'%s',
-    'ericTemplatesDir'     : r'%s',
-    'ericCodeTemplatesDir' : r'%s',
-    'ericOthersDir'        : r'%s',
-    'bindir'               : r'%s',
-    'mdir'                 : r'%s',
-    'apidir'               : r'%s',
-    'apis'                 : %s,
+    'ericDir'              : r'{0}',
+    'ericPixDir'           : r'{1}',
+    'ericIconDir'          : r'{2}',
+    'ericDTDDir'           : r'{3}',
+    'ericCSSDir'           : r'{4}',
+    'ericStylesDir'        : r'{5}',
+    'ericDocDir'           : r'{6}',
+    'ericExamplesDir'      : r'{7}',
+    'ericTranslationsDir'  : r'{8}',
+    'ericTemplatesDir'     : r'{9}',
+    'ericCodeTemplatesDir' : r'{10}',
+    'ericOthersDir'        : r'{11}',
+    'bindir'               : r'{12}',
+    'mdir'                 : r'{13}',
+    'apidir'               : r'{14}',
+    'apis'                 : {15},
 }
 
 def getConfig(name):
@@ -513,15 +520,15 @@ def getConfig(name):
     except KeyError:
         pass
 
-    raise AttributeError('"%%s" is not a valid configuration value' %% name)
-""" % (cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'], 
-       cfg['ericDTDDir'], cfg['ericCSSDir'], 
-       cfg['ericStylesDir'], cfg['ericDocDir'],
-       cfg['ericExamplesDir'], cfg['ericTranslationsDir'],
-       cfg['ericTemplatesDir'],
-       cfg['ericCodeTemplatesDir'], cfg['ericOthersDir'],
-       cfg['bindir'], cfg['mdir'], 
-       cfg['apidir'], apis)
+    raise AttributeError('"{{0}}" is not a valid configuration value'.format(name))
+""".format(cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'], 
+           cfg['ericDTDDir'], cfg['ericCSSDir'], 
+           cfg['ericStylesDir'], cfg['ericDocDir'],
+           cfg['ericExamplesDir'], cfg['ericTranslationsDir'],
+           cfg['ericTemplatesDir'],
+           cfg['ericCodeTemplatesDir'], cfg['ericOthersDir'],
+           cfg['bindir'], cfg['mdir'], 
+           cfg['apidir'], apis)
     copyToFile(fn, config)
 
 def doDependancyChecks():    
@@ -537,13 +544,13 @@ def doDependancyChecks():
     if sys.version_info > (3, 9, 9):
         print('Sorry, eric5 requires Python 3 for running.')
         exit(5)
-    print("Python Version: %d.%d.%d" % sys.version_info[:3])
+    print("Python Version: {0:d}.{1:d}.{2:d}".format(*sys.version_info[:3]))
     
     try:
         from PyQt4.QtCore import qVersion
     except ImportError as msg:
         print('Sorry, please install PyQt4.')
-        print('Error: %s' % msg)
+        print('Error: {0}'.format(msg))
         exit(1)
     print("Found PyQt")
     
@@ -552,7 +559,7 @@ def doDependancyChecks():
     except ImportError as msg:
         print("Sorry, please install QScintilla2 and")
         print("it's PyQt4 wrapper.")
-        print('Error: %s' % msg)
+        print('Error: {0}'.format(msg))
         exit(1)
     print("Found QScintilla2")
     
@@ -562,7 +569,7 @@ def doDependancyChecks():
     if qtMajor < 4 or (qtMajor == 4 and qtMinor < 5):
         print('Sorry, you must have Qt version 4.5.0 or higher.')
         exit(2)
-    print("Qt Version: %s" % qVersion())
+    print("Qt Version: {0}".format(qVersion()))
     
     #check version of PyQt
     from PyQt4.QtCore import PYQT_VERSION_STR
@@ -680,7 +687,7 @@ def compileUiFiles():
         @param py_file suggested name for the compile source file (string)
         @return tuple of directory name (string) and source file name (string)
         """
-        return py_dir, "Ui_%s" % py_file
+        return py_dir, "Ui_{0}".format(py_file)
     
     compileUiDir("eric", True, pyName)
 
@@ -731,8 +738,8 @@ def main(argv):
             try:
                 exec(compile(open(arg).read(), arg, 'exec'), globals())
                 if len(cfg) != configLength:
-                    print("The configuration dictionary in '%s' is incorrect. Aborting"\
-                        % arg)
+                    print("The configuration dictionary in '{0}' is incorrect. Aborting"\
+                        .format(arg))
                     exit(6)
             except:
                 cfg = {}
@@ -757,7 +764,7 @@ def main(argv):
             else:
                 cleanUp()
     except IOError as msg:
-        sys.stderr.write('IOError: %s\nTry install as root.\n' % msg)
+        sys.stderr.write('IOError: {0}\nTry install as root.\n'.format(msg))
 
     # Create a config file and delete the default one
     createConfig()
@@ -795,8 +802,8 @@ def main(argv):
             from eric5.patch_pyxml import isPatched, patchPyXML
             if not isPatched():
                 print("NOTE:")
-                print("    Found PyXML %d.%d.%d, which needs a patch to work correctly" % \
-                    (v[0], v[1], v[2]))
+                print("    Found PyXML {0:d}.{1:d}.{2:d}, which needs a patch "
+                      "to work correctly".format(v[0], v[1], v[2]))
                 print("    with foreign characters. Please see 'README-PyXML.txt' for")
                 print("    details.")
                 res = input("    Shall pyXML be patched now (y/n)? ")

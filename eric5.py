@@ -84,7 +84,7 @@ def handleSingleApplication(ddindex):
             client.processArgs(sys.argv[1:])
         sys.exit(0)
     elif res < 0:
-        print("eric5: %s" % client.errstr())
+        print("eric5: {0}".format(client.errstr()))
         sys.exit(res)
 
 def excepthook(excType, excValue, tracebackobj):
@@ -99,24 +99,24 @@ def excepthook(excType, excValue, tracebackobj):
     logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
     notice = \
         """An unhandled exception occurred. Please report the problem\n"""\
-        """using the error reporting dialog or via email to <%s>.\n"""\
-        """A log has been written to "%s".\n\nError information:\n""" % \
-        (BugAddress, logFile)
+        """using the error reporting dialog or via email to <{0}>.\n"""\
+        """A log has been written to "{1}".\n\nError information:\n""".format(
+        BugAddress, logFile)
     timeString = time.strftime("%Y-%m-%d, %H:%M:%S")
     
-    versionInfo = "\n%s\n%s" % (separator, Utilities.generateVersionInfo())
+    versionInfo = "\n{0}\n{1}".format(separator, Utilities.generateVersionInfo())
     pluginVersionInfo = Utilities.generatePluginsVersionInfo()
     if pluginVersionInfo:
-        versionInfo += "%s\n%s" % (separator, pluginVersionInfo)
+        versionInfo += "{0}\n{1}".format(separator, pluginVersionInfo)
     distroInfo = Utilities.generateDistroInfo()
     if distroInfo:
-        versionInfo += "%s\n%s" % (separator, distroInfo)
+        versionInfo += "{0}\n{1}".format(separator, distroInfo)
     
     tbinfofile = io.StringIO()
     traceback.print_tb(tracebackobj, None, tbinfofile)
     tbinfofile.seek(0)
     tbinfo = tbinfofile.read()
-    errmsg = '%s: \n%s' % (str(excType), str(excValue))
+    errmsg = '{0}: \n{1}'.format(str(excType), str(excValue))
     sections = [separator, timeString, separator, errmsg, separator, tbinfo]
     msg = '\n'.join(sections)
     try:
@@ -240,7 +240,7 @@ def main():
         
         # start the event loop
         res = app.exec_()
-        logging.debug("Shutting down, result %d" % res)
+        logging.debug("Shutting down, result {0:d}".format(res))
         logging.shutdown()
         sys.exit(res)
     except Exception as err:

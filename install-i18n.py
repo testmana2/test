@@ -57,10 +57,10 @@ def usage(rcode = 2):
 
     print()
     print("Usage:")
-    print("    %s [-hp]" % (progName))
+    print("    {0} [-hp]".format(progName))
     print("where:")
     print("    -h        display this help message")
-    print("    -p        install into the private area (%s)" % (configDir))
+    print("    -p        install into the private area ({0})".format(configDir))
 
     sys.exit(rcode)
 
@@ -79,9 +79,11 @@ def installTranslations():
         for fn in glob.glob(os.path.join('eric', 'i18n', '*.qm')):
             shutil.copy2(fn, targetDir)
     except IOError as msg:
-        sys.stderr.write('IOError: %s\nTry install-i18n as root.\n' % msg)
+        sys.stderr.write(
+            'IOError: {0}\nTry install-i18n as root.\n'.format(msg))
     except OSError as msg:
-        sys.stderr.write('OSError: %s\nTry install-i18n with admin rights.\n' % msg)
+        sys.stderr.write(
+            'OSError: {0}\nTry install-i18n with admin rights.\n'.format(msg))
     
 def main(argv):
     """

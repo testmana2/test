@@ -27,11 +27,11 @@ def usage(rcode = 2):
     global progName, modDir
     
     print("Usage:")
-    print("    %s [-h] [-d dir]" % (progName))
+    print("    {0} [-h] [-d dir]".format(progName))
     print("where:")
     print("    -h             display this help message")
-    print("    -d dir         where Mod_python files are installed [default %s]" % \
-        (modDir))
+    print("    -d dir         where Mod_python files are installed [default {0}]".format(
+        modDir))
     print()
     print("This script patches the file apache.py of the Mod_python distribution")
     print("so that it will work with the eric5 debugger instead of pdb.")
@@ -78,7 +78,7 @@ def main(argv):
         filename = os.path.join(modDir, "apache.py")
         f = open(filename, "r", encoding = "utf-8")
     except EnvironmentError:
-        print("The file %s does not exist. Aborting." % filename)
+        print("The file {0} does not exist. Aborting.".format(filename))
         sys.exit(1)
     
     lines = f.readlines()
@@ -118,12 +118,12 @@ def main(argv):
         try:
             py_compile.compile(sn)
         except py_compile.PyCompileError as e:
-            print("Error compiling %s. Aborting" % sn)
+            print("Error compiling {0}. Aborting".format(sn))
             print(e)
             os.remove(sn)
             sys.exit(1)
         except SyntaxError as e:
-            print("Error compiling %s. Aborting" % sn)
+            print("Error compiling {0}. Aborting".format(sn))
             print(e)
             os.remove(sn)
             sys.exit(1)
@@ -132,15 +132,16 @@ def main(argv):
                     os.path.join(modDir, "apache.py.orig"))
         shutil.copy(sn, modDir)
         os.remove(sn)
-        if os.path.exists("%sc" % sn):
-            shutil.copy("%sc" % sn, modDir)
-            os.remove("%sc" % sn)
-        if os.path.exists("%so" % sn):
-            shutil.copy("%so" % sn, modDir)
-            os.remove("%so" % sn)
+        if os.path.exists("{0}c".format(sn)):
+            shutil.copy("{0}c".format(sn), modDir)
+            os.remove("{0}c".format(sn))
+        if os.path.exists("{0}o".format(sn)):
+            shutil.copy("{0}o".format(sn), modDir)
+            os.remove("{0}o".format(sn))
             
         print("Mod_python patched successfully.")
-        print("Unpatched file copied to %s." % os.path.join(modDir, "apache.py.orig"))
+        print("Unpatched file copied to {0}.".format(
+            os.path.join(modDir, "apache.py.orig")))
     
     
 if __name__ == "__main__":

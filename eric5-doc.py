@@ -118,14 +118,14 @@ def version():
     """
     Function to show the version information.
     """
-    print("""eric5-doc  %s
+    print("""eric5-doc  {0}
 
 Eric5 API documentation generator.
 
 Copyright (c) 2003-2010 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see the LICENSE.GPL3 for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.""" % Version)
+PARTICULAR PURPOSE.""".format(Version))
     sys.exit(1)
 
 def main():
@@ -194,7 +194,7 @@ def main():
             stylesheetFile = v
         elif k in ["-t", "--extension"]:
             if not v.startswith("."):
-                v = ".%s" % v
+                v = ".{0}".format(v)
             supportedExtensions.append(v)
         elif k == "--eol":
             if v.lower() == "cr":
@@ -257,7 +257,8 @@ def main():
             try:
                 os.makedirs(outputDir)
             except EnvironmentError:
-                sys.stderr.write("Could not create output directory %s." % outputDir)
+                sys.stderr.write(
+                    "Could not create output directory {0}.".format(outputDir))
                 sys.exit(2)
     else:
         outputDir = os.getcwd()
@@ -269,7 +270,8 @@ def main():
             stylesheet = sf.read()
             sf.close()
         except IOError:
-            sys.stderr.write("The CSS stylesheet '%s' does not exist\n" % stylesheetFile)
+            sys.stderr.write(
+                "The CSS stylesheet '{0}' does not exist\n".format(stylesheetFile))
             sys.stderr.write("Disabling CSS usage.\n")
             stylesheet = None
     else:
@@ -283,8 +285,9 @@ def main():
                 try:
                     os.makedirs(qtHelpOutputDir)
                 except EnvironmentError:
-                    sys.stderr.write("Could not create QtHelp output directory %s." % \
-                        qtHelpOutputDir)
+                    sys.stderr.write(
+                        "Could not create QtHelp output directory {0}.".format(
+                        qtHelpOutputDir))
                     sys.exit(2)
         else:
             qtHelpOutputDir = os.getcwd()
@@ -307,7 +310,7 @@ def main():
             else:
                 basename = arg
             if basename:
-                basename = "%s%s" % (basename, os.sep)
+                basename = "{0}{1}".format(basename, os.sep)
             
             if recursive and not os.path.islink(arg):
                 names = [arg] + Utilities.getDirs(arg, excludeDirs)
@@ -350,10 +353,10 @@ def main():
                     moduleDocument = ModuleDocument(module, colors, stylesheet)
                     doc = moduleDocument.genDocument()
                 except IOError as v:
-                    sys.stderr.write("%s error: %s\n" % (file, v[1]))
+                    sys.stderr.write("{0} error: {1}\n".format(file, v[1]))
                     continue
                 except ImportError as v:
-                    sys.stderr.write("%s error: %s\n" % (file, v))
+                    sys.stderr.write("{0} error: {1}\n".format(file, v))
                     continue
                 
                 input = input + 1
@@ -378,9 +381,9 @@ def main():
                     out.write(doc)
                     out.close()
                 except IOError as v:
-                    sys.stderr.write("%s error: %s\n" % (file, v[1]))
+                    sys.stderr.write("{0} error: {1}\n".format(file, v[1]))
                 else:
-                    sys.stdout.write("%s ok\n" % f)
+                    sys.stdout.write("{0} ok\n".format(f))
                 
                 output = output + 1
     sys.stdout.flush()

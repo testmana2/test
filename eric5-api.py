@@ -72,7 +72,7 @@ def usage():
     print("        Specify a directory basename to be excluded.")
     print("        This option may be repeated multiple times.")
     for lang in sorted(DocumentationTools.supportedExtensionsDictForApis.keys()):
-        print("            * %s" % lang)
+        print("            * {0}".format(lang))
     print("        The default is 'Python'.")
     print("        This option may be repeated multiple times.")
     sys.exit(1)
@@ -81,14 +81,14 @@ def version():
     """
     Function to show the version information.
     """
-    print("""eric5-api  %s
+    print("""eric5-api  {0}
 
 Eric5 API generator.
 
 Copyright (c) 2004 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see the LICENSE.GPL3 for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.""" % Version)
+PARTICULAR PURPOSE.""".format(Version))
     sys.exit(1)
 
 def main():
@@ -133,7 +133,7 @@ def main():
             version()
         elif k in ["-t", "--extension"]:
             if not v.startswith("."):
-                v = ".%s" % v
+                v = ".{0}".format(v)
             extensions.append(v)
         elif k in ["-b", "--base"]:
             basePackage = v
@@ -143,7 +143,7 @@ def main():
             if v not in progLanguages:
                 if v not in \
                    list(DocumentationTools.supportedExtensionsDictForApis.keys()):
-                    sys.stderr.write("Wrong language given: %s. Aborting\n" % v)
+                    sys.stderr.write("Wrong language given: {0}. Aborting\n".format(v))
                     sys.exit(1)
                 else:
                     progLanguages.append(v)
@@ -179,7 +179,7 @@ def main():
                 outputFile = outputFileName
             else:
                 root, ext = os.path.splitext(outputFileName)
-                outputFile = "%s-%s%s" % (root, progLanguage.lower(), ext)
+                outputFile = "{0}-{1}{2}".format(root, progLanguage.lower(), ext)
         
         for arg in args:
             if os.path.isdir(arg):
@@ -194,7 +194,7 @@ def main():
                 else:
                     basename = arg
                 if basename:
-                    basename = "%s%s" % (basename, os.sep)
+                    basename = "{0}{1}".format(basename, os.sep)
                     
                 if recursive and not os.path.islink(arg):
                     names = [arg] + Utilities.getDirs(arg, excludeDirs)
@@ -241,16 +241,16 @@ def main():
                         apiGenerator = APIGenerator(module)
                         api = apiGenerator.genAPI(True, basePackage, includePrivate)
                     except IOError as v:
-                        sys.stderr.write("%s error: %s\n" % (file, v[1]))
+                        sys.stderr.write("{0} error: {1}\n".format(file, v[1]))
                         continue
                     except ImportError as v:
-                        sys.stderr.write("%s error: %s\n" % (file, v))
+                        sys.stderr.write("{0} error: {1}\n".format(file, v))
                         continue
                     
                     for apiEntry in api:
                         if not apiEntry in apis:
                             apis.append(apiEntry)
-                    sys.stdout.write("-- %s -- %s ok\n" % (progLanguage, file))
+                    sys.stdout.write("-- {0} -- {1} ok\n".format(progLanguage, file))
 
         outdir = os.path.dirname(outputFile)
         if outdir and not os.path.exists(outdir):
@@ -260,7 +260,7 @@ def main():
             out.write("\n".join(sorted(apis)) + "\n")
             out.close()
         except IOError as v:
-            sys.stderr.write("%s error: %s\n" % (outputFile, v[1]))
+            sys.stderr.write("{0} error: {1}\n".format(outputFile, v[1]))
             sys.exit(3)
     
     sys.stdout.write('\nDone.\n')
