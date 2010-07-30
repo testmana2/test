@@ -3395,7 +3395,7 @@ to display the configuration page.</source>
         <translation>&amp;Filtr pro:</translation>
     </message>
     <message>
-        <location filename="Project/CreateDialogCodeDialog.py" line="405"/>
+        <location filename="Project/CreateDialogCodeDialog.py" line="406"/>
         <source>Code Generation</source>
         <translation>Generování kódu</translation>
     </message>
@@ -3430,7 +3430,7 @@ to display the configuration page.</source>
         <translation>&lt;p&gt;Nelze ovevřít source soubor &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/CreateDialogCodeDialog.py" line="405"/>
+        <location filename="Project/CreateDialogCodeDialog.py" line="406"/>
         <source>&lt;p&gt;Could not write the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze zapsat do source souboru &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -4551,22 +4551,22 @@ Nepřipojen
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="718"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
         <source>Parent Process</source>
         <translation>Rodičovský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="718"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
         <source>Child process</source>
         <translation>Dětský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="719"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
         <source>Client forking</source>
         <translation>Větvení klienta</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="719"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
         <source>Select the fork branch to follow.</source>
         <translation>Pokračovat ve fork větvi.</translation>
     </message>
@@ -4589,22 +4589,22 @@ Nepřipojen
         <translation>&lt;p&gt;Debugovací backend nelze spustit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython3.py" line="717"/>
+        <location filename="Debugger/DebuggerInterfacePython3.py" line="719"/>
         <source>Parent Process</source>
         <translation>Rodičovský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython3.py" line="717"/>
+        <location filename="Debugger/DebuggerInterfacePython3.py" line="719"/>
         <source>Child process</source>
         <translation>Dětský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython3.py" line="718"/>
+        <location filename="Debugger/DebuggerInterfacePython3.py" line="720"/>
         <source>Client forking</source>
         <translation>Větvení klienta</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython3.py" line="718"/>
+        <location filename="Debugger/DebuggerInterfacePython3.py" line="720"/>
         <source>Select the fork branch to follow.</source>
         <translation>Pokračovat ve fork větvi.</translation>
     </message>
@@ -5195,62 +5195,62 @@ Nepřipojen
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="201"/>
+        <location filename="UI/DiffDialog.py" line="202"/>
         <source>Compare</source>
         <translation>Porovnat</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="202"/>
+        <location filename="UI/DiffDialog.py" line="203"/>
         <source>Press to perform the comparison of the two files</source>
         <translation>Stisknout pro provedení porovnání dvou souborů</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="205"/>
+        <location filename="UI/DiffDialog.py" line="206"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="206"/>
+        <location filename="UI/DiffDialog.py" line="207"/>
         <source>Save the output to a patch file</source>
         <translation>Uložit výstup do path souboru</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="310"/>
+        <location filename="UI/DiffDialog.py" line="311"/>
         <source>Save Diff</source>
         <translation>Uložit Diff</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="272"/>
+        <location filename="UI/DiffDialog.py" line="273"/>
         <source>Patch Files (*.diff)</source>
         <translation>Patch soubory (*.diff)</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="346"/>
+        <location filename="UI/DiffDialog.py" line="347"/>
         <source>Compare Files</source>
         <translation>Porovnat soubory</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="444"/>
+        <location filename="UI/DiffDialog.py" line="445"/>
         <source>There is no difference.</source>
         <translation>Žádné rozdíly nebyly nalezeny.</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="463"/>
+        <location filename="UI/DiffDialog.py" line="464"/>
         <source>Select file to compare</source>
         <translation>Výběr souboru pro porovnání</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="289"/>
+        <location filename="UI/DiffDialog.py" line="290"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Patch soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="310"/>
+        <location filename="UI/DiffDialog.py" line="311"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Patch soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="346"/>
+        <location filename="UI/DiffDialog.py" line="347"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
@@ -6523,7 +6523,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Použít Pygments lexer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5417"/>
+        <location filename="QScintilla/Editor.py" line="5418"/>
         <source>Check spelling...</source>
         <translation>Zatrhnout kontrolu...</translation>
     </message>
@@ -6533,12 +6533,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zatrhnout výběr kontroly...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5419"/>
+        <location filename="QScintilla/Editor.py" line="5420"/>
         <source>Add to dictionary</source>
         <translation>Přidat do slovníku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5421"/>
+        <location filename="QScintilla/Editor.py" line="5422"/>
         <source>Ignore All</source>
         <translation>Ignorovat vše</translation>
     </message>
@@ -9799,25 +9799,25 @@ se zobrazenými položkami.&lt;/p&gt;
     <message>
         <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="44"/>
         <source>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;%%(Title)s&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:%(BodyBgColor)s;color:%(BodyColor)s&quot;&gt;&lt;h1 style=&quot;background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s&quot;&gt;Level 1 Header&lt;/h1&gt;&lt;h3 style=&quot;background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s&quot;&gt;Level 2 Header&lt;/h3&gt;&lt;h2 style=&quot;background-color:%(CFBgColor)s;color:%(CFColor)s&quot;&gt;Class and Function Header&lt;/h2&gt;Standard body text with &lt;a style=&quot;color:%(LinkColor)s&quot;&gt;some links&lt;/a&gt; embedded.&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;    &lt;title&gt;%%(Title)s&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:%(BodyBgColor)s;color:%(BodyColor)s&quot;&gt;&lt;h1 style=&quot;background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s&quot;&gt;Hlavička první úrovně&lt;/h1&gt;&lt;h3 style=&quot;background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s&quot;&gt;Hlavička druhé úrovně&lt;/h3&gt;&lt;h2 style=&quot;background-color:%(CFBgColor)s;color:%(CFColor)s&quot;&gt;Hlavička třídy a funkce&lt;/h2&gt;Standardní text s různými &lt;a style=&quot;color:%(LinkColor)s&quot;&gt;odkazy&lt;/a&gt; v textu.&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;    &lt;title&gt;%%(Title)s&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:%(BodyBgColor)s;color:%(BodyColor)s&quot;&gt;&lt;h1 style=&quot;background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s&quot;&gt;Hlavička první úrovně&lt;/h1&gt;&lt;h3 style=&quot;background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s&quot;&gt;Hlavička druhé úrovně&lt;/h3&gt;&lt;h2 style=&quot;background-color:%(CFBgColor)s;color:%(CFColor)s&quot;&gt;Hlavička třídy a funkce&lt;/h2&gt;Standardní text s různými &lt;a style=&quot;color:%(LinkColor)s&quot;&gt;odkazy&lt;/a&gt; v textu.&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="257"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="260"/>
         <source>Select output directory</source>
         <translation>Výběr výstupního adresáře</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="282"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="285"/>
         <source>Select directory to exclude</source>
         <translation>Vybrat adresář, který bude vyloučen</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="320"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="323"/>
         <source>Select CSS style sheet</source>
         <translation>Vybrat CSS soubor</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="320"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="323"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation>Style sheet (*.css);;Všechny soubory (*)</translation>
     </message>
@@ -9897,7 +9897,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zadejte krátký titulek pro vstup nahoře</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="468"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="471"/>
         <source>Select output directory for QtHelp files</source>
         <translation>Vybrat výstupní adresář pro soubory QtNápovědy</translation>
     </message>
@@ -9910,6 +9910,11 @@ se zobrazenými položkami.&lt;/p&gt;
         <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="493"/>
         <source>Generate QtHelp collection files</source>
         <translation>Generovat kolekci souborů QtNápovědy</translation>
+    </message>
+    <message>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="44"/>
+        <source>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:{BodyBgColor};color:{BodyColor}&quot;&gt;&lt;h1 style=&quot;background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}&quot;&gt;Level 1 Header&lt;/h1&gt;&lt;h3 style=&quot;background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}&quot;&gt;Level 2 Header&lt;/h3&gt;&lt;h2 style=&quot;background-color:{CFBgColor};color:{CFColor}&quot;&gt;Class and Function Header&lt;/h2&gt;Standard body text with &lt;a style=&quot;color:{LinkColor}&quot;&gt;some links&lt;/a&gt; embedded.&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10119,7 +10124,7 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>ExporterHTML</name>
     <message>
-        <location filename="QScintilla/Exporters/ExporterHTML.py" line="355"/>
+        <location filename="QScintilla/Exporters/ExporterHTML.py" line="357"/>
         <source>Export source</source>
         <translation>Zdroj exportu</translation>
     </message>
@@ -10129,7 +10134,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>HTML soubory (*.html)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterHTML.py" line="355"/>
+        <location filename="QScintilla/Exporters/ExporterHTML.py" line="357"/>
         <source>&lt;p&gt;The source could not be exported to &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zdroj nemohl být do &lt;b&gt;{0}&lt;/b&gt; exportován.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -10137,17 +10142,17 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>ExporterPDF</name>
     <message>
-        <location filename="QScintilla/Exporters/ExporterPDF.py" line="403"/>
+        <location filename="QScintilla/Exporters/ExporterPDF.py" line="405"/>
         <source>PDF Files (*.pdf)</source>
         <translation>PDF Soubory (*.pdf)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterPDF.py" line="579"/>
+        <location filename="QScintilla/Exporters/ExporterPDF.py" line="581"/>
         <source>Export source</source>
         <translation>Zdroj exportu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterPDF.py" line="579"/>
+        <location filename="QScintilla/Exporters/ExporterPDF.py" line="581"/>
         <source>&lt;p&gt;The source could not be exported to &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zdroj nemohl být do &lt;b&gt;{0}&lt;/b&gt; exportován.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -10160,12 +10165,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>RTF Soubory (*.rtf)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterRTF.py" line="332"/>
+        <location filename="QScintilla/Exporters/ExporterRTF.py" line="337"/>
         <source>Export source</source>
         <translation>Zdroj exportu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterRTF.py" line="332"/>
+        <location filename="QScintilla/Exporters/ExporterRTF.py" line="337"/>
         <source>&lt;p&gt;The source could not be exported to &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zdroj nemohl být do &lt;b&gt;{0}&lt;/b&gt; exportován.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -10173,17 +10178,17 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>ExporterTEX</name>
     <message>
-        <location filename="QScintilla/Exporters/ExporterTEX.py" line="104"/>
+        <location filename="QScintilla/Exporters/ExporterTEX.py" line="105"/>
         <source>TeX Files (*.tex)</source>
         <translation>TeX soubory (*.tex)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterTEX.py" line="254"/>
+        <location filename="QScintilla/Exporters/ExporterTEX.py" line="256"/>
         <source>Export source</source>
         <translation>Zdroj exportu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterTEX.py" line="254"/>
+        <location filename="QScintilla/Exporters/ExporterTEX.py" line="256"/>
         <source>&lt;p&gt;The source could not be exported to &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zdroj nemohl být do &lt;b&gt;{0}&lt;/b&gt; exportován.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -13545,152 +13550,152 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Mercurial příkaz</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1148"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1149"/>
         <source>Copying {0}</source>
         <translation>Kopírování {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1241"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1242"/>
         <source>Mercurial Log</source>
         <translation>Mercurial log</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1241"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1242"/>
         <source>Select number of entries to show.</source>
         <translation>Vyberte počet položek, které se mají zobrazit.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1314"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1315"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation>Stažení (pull) z Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1342"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1343"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation>Odeslání (push) do Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1451"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1452"/>
         <source>Resolving files/directories</source>
         <translation>Vyřešení souborů/složek</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1473"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1474"/>
         <source>Create Branch</source>
         <translation>Vytvořit větev</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1473"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1474"/>
         <source>Enter branch name</source>
         <translation>Zadejte název větve</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1484"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1485"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation>Vytvoření větve v Mercurial repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1555"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1556"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Ověřit integritu Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1579"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1580"/>
         <source>Showing the combined configuration settings</source>
         <translation>Zobrazení nastavení kombinovaných konfigurací</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1602"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1603"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Zobrazení aliasů pro vzdálené úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1625"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1626"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Obnovení z přerušené transakce</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1850"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1851"/>
         <source>Shall the working directory be updated?</source>
         <translation>Má být pracovní adresář aktualizován?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1507"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1508"/>
         <source>Showing current branch</source>
         <translation>Zobrazení aktuální větve</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1762"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1763"/>
         <source>Create changegroup</source>
         <translation>Vytvořit skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1864"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1865"/>
         <source>Apply changegroups</source>
         <translation>Použít skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1878"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1879"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Neplatný bisect podpříkaz ({0}).</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1905"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1906"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1814"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1815"/>
         <source>Preview changegroup</source>
         <translation>Náhled skupiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1648"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1649"/>
         <source>Identifying project directory</source>
         <translation>Rozpoznat složku projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1673"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1674"/>
         <source>Create .hgignore file</source>
         <translation>Vytvořit soubor .hgignore</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1673"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1674"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1937"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1938"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Odebrat soubory jen z Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1720"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1721"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Soubory Mercurial skupiny změn (*.hg)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1737"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1738"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor Mercurial skupiny změn&lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1844"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1845"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Soubory Mercurial skupiny změn (*.hg);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1824"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1825"/>
         <source>Identifying changegroup file</source>
         <translation>Rozpoznat soubor skupiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1986"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1987"/>
         <source>Backing out changeset</source>
         <translation>Zálohovat skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1966"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1967"/>
         <source>No revision given. Aborting...</source>
         <translation>Nebyla dána žádná revize. Ruším...</translation>
     </message>
@@ -22536,12 +22541,12 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="863"/>
+        <location filename="Preferences/__init__.py" line="871"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="882"/>
+        <location filename="Preferences/__init__.py" line="890"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
@@ -28481,7 +28486,12 @@ Not connected</source>
     <message>
         <location filename="SqlBrowser/SqlBrowser.py" line="62"/>
         <source>Unable to open connection: %s</source>
-        <translation>Nelze otevčít spojení: %s</translation>
+        <translation type="obsolete">Nelze otevčít spojení: %s</translation>
+    </message>
+    <message>
+        <location filename="SqlBrowser/SqlBrowser.py" line="62"/>
+        <source>Unable to open connection: {0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -29461,122 +29471,122 @@ Not connected</source>
         <translation>Synchronizovat se Subversion repozitářem</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="651"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="652"/>
         <source>Adding files/directories to the Subversion repository</source>
         <translation>Přidat soubory/adresáře do Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="724"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="725"/>
         <source>Adding directory trees to the Subversion repository</source>
         <translation>Přidat strom adresářů do Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="759"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="760"/>
         <source>Removing files/directories from the Subversion repository</source>
         <translation>Odebrat soubory/adresáře ze Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1056"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1057"/>
         <source>Subversion Error</source>
         <translation>Subversion chyba</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="919"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="920"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The tag operation will be aborted</source>
         <translation>Z pracovní kopie nelze získat URL repozitáře projektu. Operace tagování bude zrušena</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="943"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="944"/>
         <source>The URL of the project repository has an invalid format. The tag operation will be aborted</source>
         <translation>URL repozitáře projektu má neplatný formát. Operace tagování bude zrušena</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1007"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1008"/>
         <source>Reverting changes</source>
         <translation>Navrácení změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1032"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1033"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The switch operation will be aborted</source>
         <translation>Z pracovní kopie nelze získat URL repozitáře projektu. Operace přepínání bude zrušena</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1056"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1057"/>
         <source>The URL of the project repository has an invalid format. The switch operation will be aborted</source>
         <translation>URL repozitáře projektu má neplatný formát. Operace přepínání bude zrušena</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1333"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1334"/>
         <source>Subversion command</source>
         <translation>Subversion příkaz</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1440"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1441"/>
         <source>Resolving conficts</source>
         <translation>Řešení konfliktů</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1546"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1547"/>
         <source>Subversion Set Property</source>
         <translation>Nastavit Subversion vlastnost</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1579"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1580"/>
         <source>You have to supply a property name. Aborting.</source>
         <translation>Musíte doplnit jméno vlastnosti. Zrušeno.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1597"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1598"/>
         <source>Subversion Delete Property</source>
         <translation>Smazat Subversion vlastnost</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1419"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1420"/>
         <source>Enter property name</source>
         <translation>Zadejte jméno vlastnosti</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1730"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1731"/>
         <source>Subversion Log</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1730"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1731"/>
         <source>Select number of entries to show.</source>
         <translation>Vyberte počet položek, které se mají zobrazit.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1781"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1782"/>
         <source>Locking in the Subversion repository</source>
         <translation>Zamknout v Subversion repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1819"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1820"/>
         <source>Unlocking in the Subversion repository</source>
         <translation>Odemknout v Subversion repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1562"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1563"/>
         <source>Property set.</source>
         <translation>Vlastnost nastavena.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1612"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1613"/>
         <source>Property deleted.</source>
         <translation>Vlastnost smazána.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1761"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1762"/>
         <source>Subversion Lock</source>
         <translation>Subversion zámek</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1761"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1762"/>
         <source>Enter lock comment</source>
         <translation>Zadejte komentář zámku</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1864"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1865"/>
         <source>Relocating</source>
         <translation></translation>
     </message>
@@ -29741,27 +29751,27 @@ Not connected</source>
         <translation>Nelze spustit svn proces.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1890"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1891"/>
         <source>Repository Browser</source>
         <translation>Prohlížeč repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1890"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1891"/>
         <source>Enter the repository URL.</source>
         <translation>Zadejte URL repozitáře.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1914"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1915"/>
         <source>Remove from changelist</source>
         <translation>Odebrat ze seznamu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1950"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1951"/>
         <source>Add to changelist</source>
         <translation>Přidat do seznamu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1940"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1941"/>
         <source>Enter name of the changelist:</source>
         <translation>Zadejte název seznamu změn:</translation>
     </message>
@@ -29786,32 +29796,32 @@ Not connected</source>
         <translation>Proces svn skončil exit kódem {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="821"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="822"/>
         <source>Moving {0}</source>
         <translation>Přesun {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="978"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="979"/>
         <source>Tagging {0} in the Subversion repository</source>
         <translation>Tagování {0} v Subversion repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1078"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1079"/>
         <source>Switching to {0}</source>
         <translation>Přepínání do {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1177"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1178"/>
         <source>Merging {0}</source>
         <translation>Sloučení {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1297"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1298"/>
         <source>Cleaning up {0}</source>
         <translation>Vyčištění {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1479"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1480"/>
         <source>Copying {0}</source>
         <translation>Kopírování {0}</translation>
     </message>
@@ -29827,7 +29837,7 @@ Not connected</source>
         <translation>Zapsaná revize {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1085"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1086"/>
         <source>Revision {0}.
 </source>
         <translation>Revize {0}.</translation>
@@ -34891,17 +34901,17 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Nápověda šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="776"/>
+        <location filename="Templates/TemplateViewer.py" line="774"/>
         <source>Edit Template Group</source>
         <translation>Editovat skupinu šablon</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="871"/>
+        <location filename="Templates/TemplateViewer.py" line="869"/>
         <source>Save templates</source>
         <translation>Uložit šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="931"/>
+        <location filename="Templates/TemplateViewer.py" line="929"/>
         <source>Read templates</source>
         <translation>Načíst šablony</translation>
     </message>
@@ -34922,22 +34932,22 @@ be changed via the preferences dialog.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Záznamy šablon&lt;/b&gt; jsou aktuální šablony. Jsou seskupeny do skupin. Nápověda jak je definovat je dostupná v dialogu editace šablony. V podadresáři distribuce Eric5 je k prostudování jeden příklad šablony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="776"/>
+        <location filename="Templates/TemplateViewer.py" line="774"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Skupina šablon se jménem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="871"/>
+        <location filename="Templates/TemplateViewer.py" line="869"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru se šablonami &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="921"/>
+        <location filename="Templates/TemplateViewer.py" line="919"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor se šablonami &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="931"/>
+        <location filename="Templates/TemplateViewer.py" line="929"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor se šablonami &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
@@ -42619,12 +42629,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Rodič #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Množina změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1404"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1405"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tagy&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1408"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1409"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Větve&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
@@ -42647,23 +42657,23 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Informace o repozitáře&lt;/h3&gt;&lt;p&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;{2}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1398"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1399"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1400"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1401"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Množina změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1412"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1413"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Rodiče&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1415"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1416"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;
@@ -42732,17 +42742,17 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1374"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1375"/>
         <source>unknown</source>
         <translation>neznámý</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1245"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1246"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Informace z repozitáře&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Aktuální revize&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revize zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Datum zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Čas zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Poslední autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1375"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1376"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Informace z repozitáře&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Aktuální revize&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revize zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Datum zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Čas zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Poslední autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
