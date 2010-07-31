@@ -294,13 +294,14 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         # calculate our indentation level and the indentation string
         il = indLevel + 1
         istring = il * indString
+        estring = os.linesep + indLevel * indString
         
         # now generate the code
         msgdlg = 'QMessageBox.'
         if self.rAbout.isChecked():
             msgdlg += "about(None,{0}".format(os.linesep)
         elif self.rAboutQt.isChecked():
-            msgdlg += "aboutQt(None, {0}".format(os.linesep)
+            msgdlg += "aboutQt(None,{0}".format(os.linesep)
         elif self.rInformation.isChecked():
             msgdlg += "information(None,{0}".format(os.linesep)
         elif self.rQuestion.isChecked():
@@ -315,5 +316,5 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
                 os.linesep, istring, self.eMessage.toPlainText())
         if not self.rAbout.isChecked() and not self.rAboutQt.isChecked():
             msgdlg += self.__getQt42ButtonCode(istring, indString)
-        msgdlg +='){0}'.format(os.linesep)
+        msgdlg +='){0}'.format(estring)
         return msgdlg

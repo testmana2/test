@@ -586,6 +586,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         # calculate the indentation string
         istring = indLevel * indString
         i1string = (indLevel + 1) * indString
+        estring = os.linesep + indLevel * indString
         
         # now generate the code
         reVar = self.variableLineEdit.text()
@@ -619,8 +620,8 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         code += '{0} = re.compile(r"""{1}"""'.format(
             reVar, regexp.replace('"', '\\"'))
         if flags:
-            code += ', \\{0}{1}{2}'.format(os.linesep, i1string, flags)
-        code += '){0}'.format(os.linesep)
+            code += ', {0}{1}{2}'.format(os.linesep, i1string, flags)
+        code += '){0}'.format(estring)
         return code
 
 class PyRegExpWizardDialog(QDialog):

@@ -451,6 +451,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         """
         # calculate the indentation string
         istring = indLevel * indString
+        estring = os.linesep + indLevel * indString
         
         # now generate the code
         reVar = self.variableLineEdit.text()
@@ -465,10 +466,10 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             code += '{0}{1}.setCaseSensitivity(Qt.CaseInsensitive){2}'.format(
                     istring, reVar, os.linesep)
         if self.minimalCheckBox.isChecked():
-            code += '{0}{1}.setMinimal(1){2}'.format(istring, reVar, os.linesep)
+            code += '{0}{1}.setMinimal(True){2}'.format(istring, reVar, os.linesep)
         if self.wildcardCheckBox.isChecked():
             code += '{0}{1}.setPatternSyntax(QRegExp.Wildcard){2}'.format(
-                    istring, reVar, os.linesep)
+                    istring, reVar, estring)
         return code
 
 class QRegExpWizardDialog(QDialog):

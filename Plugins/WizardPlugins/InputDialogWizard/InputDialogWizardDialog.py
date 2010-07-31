@@ -119,11 +119,12 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         # calculate our indentation level and the indentation string
         il = indLevel + 1
         istring = il * indString
+        estring = os.linesep + indLevel * indString
         
         # now generate the code
         code = 'QInputDialog.'
         if self.rText.isChecked():
-            code += 'getText(\\{0}{1}'.format(os.linesep, istring)
+            code += 'getText({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
@@ -138,9 +139,9 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
             if self.eTextDefault.text():
                 code += ',{0}{1}self.trUtf8("{2}")'.format(
                     os.linesep, istring, self.eTextDefault.text())
-            code += '){0}'.format(os.linesep)
+            code += '){0}'.format(estring)
         elif self.rInteger.isChecked():
-            code += 'getInteger(\\{0}{1}'.format(os.linesep, istring)
+            code += 'getInteger({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
@@ -148,7 +149,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 self.eLabel.text(), os.linesep, istring)
             code += '{0:d}, {1:d}, {2:d}, {3:d}){4}'.format(
                 self.sIntDefault.value(), self.sIntFrom.value(),
-                self.sIntTo.value(), self.sIntStep.value(), os.linesep)
+                self.sIntTo.value(), self.sIntStep.value(), estring)
         elif self.rDouble.isChecked():
             try:
                 doubleDefault = float(self.eDoubleDefault.text())
@@ -162,7 +163,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 doubleTo = float(self.eDoubleTo.text())
             except ValueError:
                 doubleTo = 2147483647
-            code += 'getDouble(\\{0}{1}'.format(os.linesep, istring)
+            code += 'getDouble({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
@@ -170,9 +171,9 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 self.eLabel.text(), os.linesep, istring)
             code += '{0}, {1}, {2}, {3:d}){4}'.format(
                 doubleDefault, doubleFrom, doubleTo, 
-                self.sDoubleDecimals.value(), os.linesep)
+                self.sDoubleDecimals.value(), estring)
         elif self.rItem.isChecked():
-            code += 'getItem(\\{0}{1}'.format(os.linesep, istring)
+            code += 'getItem({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
@@ -180,7 +181,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 self.eLabel.text(), os.linesep, istring)
             code += '{0},{1}{2}'.format(self.eVariable.text(), os.linesep, istring)
             code += '{0:d}, {1}){2}'.format(
-                self.sCurrentItem.value(), self.cEditable.isChecked(), os.linesep)
+                self.sCurrentItem.value(), self.cEditable.isChecked(), estring)
             
         return code
         

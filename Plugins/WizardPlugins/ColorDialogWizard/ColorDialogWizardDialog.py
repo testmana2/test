@@ -134,6 +134,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         # calculate our indentation level and the indentation string
         il = indLevel + 1
         istring = il * indString
+        estring = os.linesep + indLevel * indString
         
         # now generate the code
         code = 'QColorDialog.'
@@ -152,7 +153,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                 code += \
                     '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
                         .format(istring)
-            code += '){0}'.format(os.linesep)
+            code += '){0}'.format(estring)
         elif self.rRGBA.isChecked():
             if self.rQt45.isChecked():
                 code += 'getColor('
@@ -168,7 +169,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                 code += \
                     '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
                         .format(istring)
-                code += '){0}'.format(os.linesep)
+                code += '){0}'.format(estring)
             else:
                 code += 'getRgba('
                 if not self.eRGB.text():
@@ -177,6 +178,6 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                         self.sAlpha.value())
                 else:
                     code += self.eRGB.text()
-                code += '){0}'.format(os.linesep)
+                code += '){0}'.format(estring)
         
         return code

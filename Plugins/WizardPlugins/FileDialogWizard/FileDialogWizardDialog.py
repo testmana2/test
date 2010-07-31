@@ -144,14 +144,15 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         # calculate our indentation level and the indentation string
         il = indLevel + 1
         istring = il * indString
+        estring = os.linesep + indLevel * indString
         
         # now generate the code
         code = 'QFileDialog.'
         if self.rOpenFile.isChecked() or self.rfOpenFile.isChecked():
             if self.rOpenFile.isChecked():
-                code += 'getOpenFileName(\\{0}{1}'.format(os.linesep, istring)
+                code += 'getOpenFileName({0}{1}'.format(os.linesep, istring)
             else:
-                code += 'getOpenFileNameAndFilter(\\{0}{1}'.format(os.linesep, istring)
+                code += 'getOpenFileNameAndFilter({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -179,12 +180,12 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if not self.cSymlinks.isChecked():
                 code += ',{0}{1}QFileDialog.Options(QFileDialog.DontResolveSymlinks)'\
                         .format(os.linesep, istring)
-            code += '){0}'.format(os.linesep)
+            code += '){0}'.format(estring)
         elif self.rOpenFiles.isChecked() or self.rfOpenFiles.isChecked():
             if self.rOpenFiles.isChecked():
-                code += 'getOpenFileNames(\\{0}{1}'.format(os.linesep, istring)
+                code += 'getOpenFileNames({0}{1}'.format(os.linesep, istring)
             else:
-                code += 'getOpenFileNamesAndFilter(\\{0}{1}'.format(os.linesep, istring)
+                code += 'getOpenFileNamesAndFilter({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -212,12 +213,12 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if not self.cSymlinks.isChecked():
                 code += ',{0}{1}QFileDialog.Options(QFileDialog.DontResolveSymlinks)'\
                         .format(os.linesep, istring)
-            code += '){0}'.format(os.linesep)
+            code += '){0}'.format(estring)
         elif self.rSaveFile.isChecked() or self.rfSaveFile.isChecked():
             if self.rSaveFile.isChecked():
-                code += 'getSaveFileName(\\{0}{1}'.format(os.linesep, istring)
+                code += 'getSaveFileName({0}{1}'.format(os.linesep, istring)
             else:
-                code += 'getSaveFileNameAndFilter(\\{0}{1}'.format(os.linesep, istring)
+                code += 'getSaveFileNameAndFilter({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -253,9 +254,9 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 if not self.cConfirmOverwrite.isChecked():
                     code += 'QFileDialog.DontConfirmOverwrite'
                 code += ')'
-            code += '){0}'.format(os.linesep)
+            code += '){0}'.format(estring)
         elif self.rDirectory.isChecked():
-            code += 'getExistingDirectory(\\{0}{1}'.format(os.linesep, istring)
+            code += 'getExistingDirectory({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -277,7 +278,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 code += 'QFileDialog.ShowDirsOnly'
             else:
                 code += 'QFileDialog.Option(0)'
-            code += ')){0}'.format(os.linesep)
+            code += ')){0}'.format(estring)
             
         return code
         

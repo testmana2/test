@@ -88,6 +88,8 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
         @param indString string used for indentation (space or tab) (string)
         @return generated code (string)
         """
+        estring = os.linesep + indLevel * indString
+        
         # generate the code
         code = 'QFontDialog.getFont('
         if not self.eVariable.text():
@@ -97,6 +99,6 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
                     self.font.weight(), self.font.italic())
         else:
             code += self.eVariable.text()
-        code += '){0}'.format(os.linesep)
+        code += '){0}'.format(estring)
             
         return code
