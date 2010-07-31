@@ -180,7 +180,7 @@ class ArrayElementVarItem(VariableItem):
         element 10 with a key of '000010'
         """
         keyStr = self.text(0)
-        self.arrayElementKey = "{0:.6d}".format(int(keyStr))
+        self.arrayElementKey = "{0:6d}".format(int(keyStr))
 
     def key(self, column):
         """
@@ -217,7 +217,7 @@ class SpecialArrayElementVarItem(SpecialVarItem):
         element 10 with a key of '000010'
         """
         keyStr = self.text(0)[:-2] # strip off [], () or {}
-        self.arrayElementKey = "{0:.6d}".format(int(keyStr))
+        self.arrayElementKey = "{0:6d}".format(int(keyStr))
 
     def key(self, column):
         """
