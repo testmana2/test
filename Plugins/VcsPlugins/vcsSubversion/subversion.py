@@ -1767,7 +1767,11 @@ class Subversion(VersionControl):
             if scheme == "file":
                 return "{0}:{1}".format(scheme, urllib.parse.quote(url[1]))
             else:
-                host, path = url[1][2:].split("/",1)
+                try:
+                    host, path = url[1][2:].split("/", 1)
+                except ValueError:
+                    host = url[1][2:]
+                    path = ""
                 return "{0}://{1}/{2}".format(scheme, host, urllib.parse.quote(path))
 
     def svnNormalizeURL(self, url):
