@@ -219,7 +219,11 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             info (string). Takes precedence over versionStartsWith.
         @return version string of detected or given version (string)
         """
-        itm = QTreeWidgetItem(self.programsList, [description])
+        itmList = self.programsList.findItems(description, Qt.MatchCaseSensitive)
+        if itmList:
+            itm = itmList[0]
+        else:
+            itm = QTreeWidgetItem(self.programsList, [description])
         font = itm.font(0)
         font.setBold(True)
         itm.setFont(0, font)

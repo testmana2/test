@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="de">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1549,8 +1550,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1600,7 +1601,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -9997,24 +9998,29 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Eric5 Dokumentationsgenerator</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate documentation (eric5-doc)</source>
         <translation>Erzeuge Dokumentation (eric5-doc)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate &amp;documentation (eric5-doc)</source>
         <translation>Erzeuge &amp;Dokumentation (eric5-doc)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="100"/>
+        <location filename="Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate API documentation using eric5-doc</source>
         <translation>Erzeuge die API Dokumentation unter Verwendung von eric-doc</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="102"/>
+        <location filename="Plugins/PluginEricdoc.py" line="136"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Erzeuge Dokumentation&lt;/b&gt;&lt;p&gt;Erzeuge die API Dokumentation unter Verwendung von eric5-doc.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="88"/>
+        <source>Qt4 Help Tools</source>
+        <translation>Qt4 Help Werkzeuge</translation>
     </message>
 </context>
 <context>
@@ -11150,7 +11156,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="708"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -22294,12 +22300,12 @@ Ziel:
         <translation>Modul konnte nicht geladen werden. Fehler: {0}</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>Plugin Manager Error</source>
         <translation>Plugin Manager Fehler</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>&lt;p&gt;The plugin download directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Please configure it via the configuration dialog.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Downloadverzeichnis für Plugins &lt;b&gt;{0}&lt;/b&gt; konnte nicht erzeugt werden. Bitte über den Konfigurationsdialog einstellen.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
@@ -22789,17 +22795,17 @@ Bitte Aktualisieren.</translation>
         <translation>CORBA IDL Compiler</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="227"/>
+        <location filename="Preferences/ProgramsDialog.py" line="231"/>
         <source>(not configured)</source>
         <translation>(nicht konfiguriert)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="262"/>
+        <location filename="Preferences/ProgramsDialog.py" line="266"/>
         <source>(not executable)</source>
         <translation>(nicht ausführbar)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="289"/>
+        <location filename="Preferences/ProgramsDialog.py" line="293"/>
         <source>(not found)</source>
         <translation>(nicht gefunden)</translation>
     </message>
@@ -22809,7 +22815,7 @@ Bitte Aktualisieren.</translation>
         <translation>Externe Programme</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="260"/>
+        <location filename="Preferences/ProgramsDialog.py" line="264"/>
         <source>(unknown)</source>
         <translation>(unbekannt)</translation>
     </message>

@@ -9977,24 +9977,29 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Generátor Eric5 dokumentace</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate documentation (eric5-doc)</source>
         <translation>Generovat dokumentaci (eric5-doc)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate &amp;documentation (eric5-doc)</source>
         <translation>Generovat &amp;dokumentaci (eric5-doc)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="100"/>
+        <location filename="Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate API documentation using eric5-doc</source>
         <translation>Generovat API dokumentaci za použití eric5-doc</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="102"/>
+        <location filename="Plugins/PluginEricdoc.py" line="136"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Generovat dokumentaci&lt;/b&gt;&lt;p&gt;Generovat API dokumentaci za použití eric5-doc.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="88"/>
+        <source>Qt4 Help Tools</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -22233,7 +22238,7 @@ Destination:
         <translation>Modulu chybí atributy &apos;pluginType&apos; a/nebo &apos;pluginTypename&apos;.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>Plugin Manager Error</source>
         <translation>Chyba plugin manažeru</translation>
     </message>
@@ -22253,7 +22258,7 @@ Destination:
         <translation>Modul se nepodařilo načíst. Chyba: {0}</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>&lt;p&gt;The plugin download directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Please configure it via the configuration dialog.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Download plugin adresář &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit. Prosím, upravte nastavení přes konfigurační dialog.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -22738,22 +22743,22 @@ Vyberte Obnovit.</translation>
         <translation>CORBA IDL kompilátor</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="227"/>
+        <location filename="Preferences/ProgramsDialog.py" line="231"/>
         <source>(not configured)</source>
         <translation>(nezkonfigurováno)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="262"/>
+        <location filename="Preferences/ProgramsDialog.py" line="266"/>
         <source>(not executable)</source>
         <translation>(nevykonavatelný)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="289"/>
+        <location filename="Preferences/ProgramsDialog.py" line="293"/>
         <source>(not found)</source>
         <translation>(nenalezeno)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="260"/>
+        <location filename="Preferences/ProgramsDialog.py" line="264"/>
         <source>(unknown)</source>
         <translation>(neznámý)</translation>
     </message>

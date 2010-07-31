@@ -10007,24 +10007,29 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Generatore di documentazione di Eric5</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate documentation (eric5-doc)</source>
         <translation>Genera documentazione (eric5-doc) </translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate &amp;documentation (eric5-doc)</source>
         <translation>Genera &amp;documentazione (eric5-doc)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="100"/>
+        <location filename="Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate API documentation using eric5-doc</source>
         <translation>Genera la documentazione delle API usando eric5-doc</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="102"/>
+        <location filename="Plugins/PluginEricdoc.py" line="136"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Genera documentazione&lt;/b&gt;&lt;p&gt;Genera la documentazione delle API usando eric5-doc.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="88"/>
+        <source>Qt4 Help Tools</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -22298,7 +22303,7 @@ Destinazione:
         <translation>Il modulo manca dell&apos;attributo &apos;pluginType&apos; e/oppure &apos;pluginTypename&apos;.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>Plugin Manager Error</source>
         <translation>Errore del gestore dei Plugin</translation>
     </message>
@@ -22318,7 +22323,7 @@ Destinazione:
         <translation>Il modulo ha fallito il caricamento. Errore: {0}</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>&lt;p&gt;The plugin download directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Please configure it via the configuration dialog.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La directory di download dei plugin &lt;b&gt;{0}&lt;/b&gt; non può essere creata. Per favore configurarla con il dialogo di configurazione.&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
@@ -22803,22 +22808,22 @@ Selezionare Aggiorna.</translation>
         <translation>Compilatore CORBA IDL</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="227"/>
+        <location filename="Preferences/ProgramsDialog.py" line="231"/>
         <source>(not configured)</source>
         <translation>(non configurato)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="262"/>
+        <location filename="Preferences/ProgramsDialog.py" line="266"/>
         <source>(not executable)</source>
         <translation>(non eseguibile)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="289"/>
+        <location filename="Preferences/ProgramsDialog.py" line="293"/>
         <source>(not found)</source>
         <translation>(non trovato)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="260"/>
+        <location filename="Preferences/ProgramsDialog.py" line="264"/>
         <source>(unknown)</source>
         <translation>(sconosciuto)</translation>
     </message>

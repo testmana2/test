@@ -10956,24 +10956,29 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation type="unfinished">Générateur de documentation Eric4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate documentation (eric5-doc)</source>
         <translation type="unfinished">Générer la documentation (eric4-doc) {5-?}</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate &amp;documentation (eric5-doc)</source>
         <translation type="unfinished">Générer la &amp;documentation (eric4-doc) {5-?}</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="100"/>
+        <location filename="Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate API documentation using eric5-doc</source>
         <translation type="unfinished">Générer la documentation d&apos;une API en utilisant eric4-doc {5-?}</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="102"/>
+        <location filename="Plugins/PluginEricdoc.py" line="136"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Générer la documentation&lt;/b&gt;&lt;p&gt;Génère la documentation API en utilisant eric4-doc.&lt;/p&gt; {5-?}</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="88"/>
+        <source>Qt4 Help Tools</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -24148,7 +24153,7 @@ Destination:
         <translation type="obsolete">Impossible de charger le module. Erreur : %1</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>Plugin Manager Error</source>
         <translation>Erreur du gestionnaire de plugins</translation>
     </message>
@@ -24173,7 +24178,7 @@ Destination:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>&lt;p&gt;The plugin download directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Please configure it via the configuration dialog.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24773,22 +24778,22 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation>Compilateur CORBA IDL</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="227"/>
+        <location filename="Preferences/ProgramsDialog.py" line="231"/>
         <source>(not configured)</source>
         <translation>(non configuré)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="262"/>
+        <location filename="Preferences/ProgramsDialog.py" line="266"/>
         <source>(not executable)</source>
         <translation>(non executable)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="289"/>
+        <location filename="Preferences/ProgramsDialog.py" line="293"/>
         <source>(not found)</source>
         <translation>(non trouvé)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="260"/>
+        <location filename="Preferences/ProgramsDialog.py" line="264"/>
         <source>(unknown)</source>
         <translation>(inconnu)</translation>
     </message>

@@ -2566,7 +2566,7 @@ eric5.Plugins.PluginEricdoc.autoactivate?7
 eric5.Plugins.PluginEricdoc.className?7
 eric5.Plugins.PluginEricdoc.deactivateable?7
 eric5.Plugins.PluginEricdoc.error?7
-eric5.Plugins.PluginEricdoc.exeDisplayData?4()
+eric5.Plugins.PluginEricdoc.exeDisplayDataList?4()
 eric5.Plugins.PluginEricdoc.longDescription?7
 eric5.Plugins.PluginEricdoc.name?7
 eric5.Plugins.PluginEricdoc.packageName?7

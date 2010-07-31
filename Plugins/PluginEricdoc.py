@@ -40,18 +40,20 @@ pyqtApi = 2
 
 error = ""
 
-def exeDisplayData():
+def exeDisplayDataList():
     """
     Public method to support the display of some executable info.
     
     @return dictionary containing the data to query the presence of
         the executable
     """
+    dataList = []
+    
+    # 1. eric5-doc
     exe = 'eric5-doc'
     if Utilities.isWindowsPlatform():
         exe = os.path.join(getConfig("bindir"), exe +'.bat')
-    
-    data = {
+    dataList.append({
         "programEntry"      : True, 
         "header"            : QApplication.translate("EricdocPlugin",
                                 "Eric5 Documentation Generator"), 
@@ -61,9 +63,41 @@ def exeDisplayData():
         "versionPosition"   : -3, 
         "version"           : "", 
         "versionCleanup"    : None, 
-    }
+    })
     
-    return data
+    # 2. Qt Help Generator
+    exe = 'qhelpgenerator'
+    if Utilities.isWindowsPlatform():
+        exe += '.exe'
+    dataList.append({
+        "programEntry"      : True, 
+        "header"            : QApplication.translate("EricdocPlugin",
+                                "Qt4 Help Tools"), 
+        "exe"               : exe, 
+        "versionCommand"    : '-v', 
+        "versionStartsWith" : 'Qt', 
+        "versionPosition"   : -1, 
+        "version"           : "", 
+        "versionCleanup"    : (0, -1), 
+    })
+    
+    # 3. Qt Collection Generator
+    exe = 'qcollectiongenerator'
+    if Utilities.isWindowsPlatform():
+        exe += '.exe'
+    dataList.append({
+        "programEntry"      : True, 
+        "header"            : QApplication.translate("EricdocPlugin",
+                                "Qt4 Help Tools"), 
+        "exe"               : exe, 
+        "versionCommand"    : '-v', 
+        "versionStartsWith" : 'Qt', 
+        "versionPosition"   : -1, 
+        "version"           : "", 
+        "versionCleanup"    : (0, -1), 
+    })
+    
+    return dataList
 
 class EricdocPlugin(QObject):
     """

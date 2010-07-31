@@ -809,11 +809,15 @@ class PluginManager(QObject):
         
         for module in list(self.__activeModules.values()) + \
                       list(self.__inactiveModules.values()):
-            if hasattr(module, "exeDisplayData"):
+            if hasattr(module, "exeDisplayDataList"):
+                infos.extend(module.exeDisplayDataList())
+            elif hasattr(module, "exeDisplayData"):
                 infos.append(module.exeDisplayData())
         for module in list(self.__onDemandActiveModules.values()) + \
                       list(self.__onDemandInactiveModules.values()):
-            if hasattr(module, "exeDisplayData"):
+            if hasattr(module, "exeDisplayDataList"):
+                infos.extend(module.exeDisplayDataList())
+            elif hasattr(module, "exeDisplayData"):
                 infos.append(module.exeDisplayData())
         
         return infos

@@ -10004,24 +10004,29 @@ selección completa.&lt;/li&gt;
         <translation>Generador de Documentación de Eric5</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate documentation (eric5-doc)</source>
         <translation>Generar documentación (eric5-doc)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="97"/>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate &amp;documentation (eric5-doc)</source>
         <translation>Generar &amp;documentación (eric5-doc)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="100"/>
+        <location filename="Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate API documentation using eric5-doc</source>
         <translation>Generar documentación de API utilizando eric5-doc</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="102"/>
+        <location filename="Plugins/PluginEricdoc.py" line="136"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Generar documentación&lt;/b&gt;&lt;p&gt;Generar documentación de API utilizando eric5-doc.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="88"/>
+        <source>Qt4 Help Tools</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -22303,7 +22308,7 @@ Destination:
         <translation>Metodo de activación del plugin incompatible.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>Plugin Manager Error</source>
         <translation>Error del Gestor de Plugins</translation>
     </message>
@@ -22323,7 +22328,7 @@ Destination:
         <translation>Ha fallado la carga del módulo. Error: {0}</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="938"/>
+        <location filename="PluginManager/PluginManager.py" line="942"/>
         <source>&lt;p&gt;The plugin download directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Please configure it via the configuration dialog.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El directorio de descaga del plugin &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Por favor, configúrelo a través del diálogo de configuración.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
@@ -22808,22 +22813,22 @@ Seleccione Actualizar.</translation>
         <translation>Compilador CORBA IDL</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="227"/>
+        <location filename="Preferences/ProgramsDialog.py" line="231"/>
         <source>(not configured)</source>
         <translation>(no configurado)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="262"/>
+        <location filename="Preferences/ProgramsDialog.py" line="266"/>
         <source>(not executable)</source>
         <translation>(no ejecutable)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="289"/>
+        <location filename="Preferences/ProgramsDialog.py" line="293"/>
         <source>(not found)</source>
         <translation>(no encontrado)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="260"/>
+        <location filename="Preferences/ProgramsDialog.py" line="264"/>
         <source>(unknown)</source>
         <translation>(desconocido)</translation>
     </message>
