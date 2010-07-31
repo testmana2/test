@@ -5082,7 +5082,7 @@
       <keyword name="VcsSubversionPlugin.setPreferences" id="VcsSubversionPlugin.setPreferences" ref="eric5.Plugins.PluginVcsSubversion.html#VcsSubversionPlugin.setPreferences" />
       <keyword name="PluginEricdoc (Module)" id="PluginEricdoc (Module)" ref="eric5.Plugins.PluginEricdoc.html" />
       <keyword name="EricdocPlugin" id="EricdocPlugin" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin" />
-      <keyword name="exeDisplayData" id="exeDisplayData" ref="eric5.Plugins.PluginEricdoc.html#exeDisplayData" />
+      <keyword name="exeDisplayDataList" id="exeDisplayDataList" ref="eric5.Plugins.PluginEricdoc.html#exeDisplayDataList" />
       <keyword name="EricdocPlugin (Constructor)" id="EricdocPlugin (Constructor)" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin.__init__" />
       <keyword name="EricdocPlugin.__doEricdoc" id="EricdocPlugin.__doEricdoc" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin.__doEricdoc" />
       <keyword name="EricdocPlugin.__initialize" id="EricdocPlugin.__initialize" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin.__initialize" />
