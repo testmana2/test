@@ -56,7 +56,7 @@ _getnext = re.compile(r"""
         ^
         (?P<MethodIndent> [ \t]* )
         def [ \t]+
-        (?P<MethodName> [a-zA-Z_] \w* )
+        (?P<MethodName> \w+ )
         (?: [ \t]* \[ (?: plain | html ) \] )?
         [ \t]* \(
         (?P<MethodSignature> (?: [^)] | \)[ \t]*,? )*? )
@@ -67,7 +67,7 @@ _getnext = re.compile(r"""
         ^
         (?P<ClassIndent> [ \t]* )
         class [ \t]+
-        (?P<ClassName> [a-zA-Z_] \w* )
+        (?P<ClassName> \w+ )
         [ \t]*
         (?P<ClassSupers> \( [^)]* \) )?
         [ \t]* :
@@ -77,14 +77,14 @@ _getnext = re.compile(r"""
         ^
         (?P<AttributeIndent> [ \t]* )
         self [ \t]* \. [ \t]*
-        (?P<AttributeName> [a-zA-Z_] \w* )
+        (?P<AttributeName> \w+ )
         [ \t]* =
     )
 
 |   (?P<Variable>
         ^
         (?P<VariableIndent> [ \t]* )
-        (?P<VariableName> [a-zA-Z_] \w* )
+        (?P<VariableName> \w+ )
         [ \t]* =
     )
 
