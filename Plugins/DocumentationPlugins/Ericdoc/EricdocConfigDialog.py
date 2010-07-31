@@ -98,7 +98,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         self.cssEdit.setText(self.parameters['cssFile'])
         self.sourceExtEdit.setText(", ".join(self.parameters['sourceExtensions']))
         self.excludeFilesEdit.setText(", ".join(self.parameters['ignoreFilePatterns']))
-        self.sample.setHtml(self.sampleText.format(self.colors))
+        self.sample.setHtml(self.sampleText.format(**self.colors))
         
         self.qtHelpGroup.setChecked(self.parameters['qtHelpEnabled'])
         self.qtHelpDirEdit.setText(self.parameters['qtHelpOutputDirectory'])
