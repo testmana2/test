@@ -32,7 +32,7 @@
          <string>Python 2</string>
         </property>
         <property name="checked">
-         <bool>true</bool>
+         <bool>false</bool>
         </property>
        </widget>
       </item>
@@ -40,6 +40,9 @@
        <widget class="QRadioButton" name="py3Button">
         <property name="text">
          <string>Python 3</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -485,7 +488,7 @@ expression; '(?&amp;lt;![abc])q' will match a 'q' only if not preceded by either
        <item row="1" column="2">
         <widget class="QCheckBox" name="unicodeCheckBox">
          <property name="text">
-          <string>Unicode</string>
+          <string>ASCII</string>
          </property>
         </widget>
        </item>
