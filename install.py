@@ -490,7 +490,7 @@ def createConfig():
 # This module contains the configuration of the individual eric5 installation
 #
 
-_pkg_config = {
+_pkg_config = {{
     'ericDir'              : r'{0}',
     'ericPixDir'           : r'{1}',
     'ericIconDir'          : r'{2}',
@@ -507,7 +507,7 @@ _pkg_config = {
     'mdir'                 : r'{13}',
     'apidir'               : r'{14}',
     'apis'                 : {15},
-}
+}}
 
 def getConfig(name):
     '''
