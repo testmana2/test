@@ -2184,7 +2184,8 @@ class MiniEditor(QMainWindow):
         if wc is None:
             regExp = QRegExp('[^\w_]', cs)
         else:
-            regExp = QRegExp('[^%s]' % re.escape(wc), cs)
+            wc = re.sub('\w', "", wc)
+            regExp = QRegExp('[^\w%s]' % re.escape(wc), cs)
         start = regExp.lastIndexIn(text, index) + 1
         end = regExp.indexIn(text, index)
         if start == end + 1 and index > 0:

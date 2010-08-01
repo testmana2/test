@@ -56,7 +56,7 @@ Module implementing a compatability interface class to QsciScintilla.
 QsciScintilla
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>UserSeparator</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -267,6 +267,9 @@ QsciScintilla
 </tr><tr>
 <td><a href="#QsciScintillaCompat.setStyling">setStyling</a></td>
 <td>Public method to style some text.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.showUserList">showUserList</a></td>
+<td>Public method to show a user supplied list.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.startStyling">startStyling</a></td>
 <td>Public method to prepare styling.</td>
@@ -1078,6 +1081,19 @@ length of text to style (integer)
 </dd><dt><i>style</i></dt>
 <dd>
 style to set for text (integer)
+</dd>
+</dl><a NAME="QsciScintillaCompat.showUserList" ID="QsciScintillaCompat.showUserList"></a>
+<h4>QsciScintillaCompat.showUserList</h4>
+<b>showUserList</b>(<i>id, lst</i>)
+<p>
+        Public method to show a user supplied list.
+</p><dl>
+<dt><i>id</i></dt>
+<dd>
+id of the list (integer)
+</dd><dt><i>lst</i></dt>
+<dd>
+list to be show (list of strings)
 </dd>
 </dl><a NAME="QsciScintillaCompat.startStyling" ID="QsciScintillaCompat.startStyling"></a>
 <h4>QsciScintillaCompat.startStyling</h4>
