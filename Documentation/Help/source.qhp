@@ -5508,6 +5508,7 @@
       <keyword name="QsciScintillaCompat.setLexer" id="QsciScintillaCompat.setLexer" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setLexer" />
       <keyword name="QsciScintillaCompat.setStyleBits" id="QsciScintillaCompat.setStyleBits" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setStyleBits" />
       <keyword name="QsciScintillaCompat.setStyling" id="QsciScintillaCompat.setStyling" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setStyling" />
+      <keyword name="QsciScintillaCompat.showUserList" id="QsciScintillaCompat.showUserList" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.showUserList" />
       <keyword name="QsciScintillaCompat.startStyling" id="QsciScintillaCompat.startStyling" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.startStyling" />
       <keyword name="QsciScintillaCompat.styleAt" id="QsciScintillaCompat.styleAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.styleAt" />
       <keyword name="QsciScintillaCompat.zoomIn" id="QsciScintillaCompat.zoomIn" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.zoomIn" />

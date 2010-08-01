@@ -42,6 +42,8 @@ class QsciScintillaCompat(QsciScintilla):
     ArrowFoldStyle      = QsciScintilla.BoxedTreeFoldStyle + 1
     ArrowTreeFoldStyle  = ArrowFoldStyle + 1
     
+    UserSeparator = '\x04'
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -1019,6 +1021,28 @@ class QsciScintillaCompat(QsciScintilla):
                 return p.getFileName()
             except AttributeError:
                 return ""
+    
+    #####################################################################################
+    # replacements for buggy methods
+    #####################################################################################
+    
+    def showUserList(self, id, lst):
+        """
+        Public method to show a user supplied list.
+        
+        @param id id of the list (integer)
+        @param lst list to be show (list of strings)
+        """
+        if id <= 0:
+            return
+        
+        self.SendScintilla(QsciScintilla.SCI_AUTOCSETSEPARATOR, 
+                           ord(self.UserSeparator))
+        if self.isUtf8():
+            lst = self.UserSeparator.join(lst).encode("utf-8")
+        else:
+            lst = self.UserSeparator.join(lst).encode("latin-1")
+        self.SendScintilla(QsciScintilla.SCI_USERLISTSHOW, id, lst)
     
 ##    #####################################################################################
 ##    # methods below have been added to QScintilla starting with version after 2.x
