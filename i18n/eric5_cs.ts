@@ -6138,7 +6138,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Editovat breakpoint...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3894"/>
+        <location filename="QScintilla/Editor.py" line="3895"/>
         <source>Enable breakpoint</source>
         <translation>Aktivovat breakpoint</translation>
     </message>
@@ -6228,202 +6228,202 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Soubor je modifikován</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3431"/>
+        <location filename="QScintilla/Editor.py" line="3432"/>
         <source>Autocompletion</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3431"/>
+        <location filename="QScintilla/Editor.py" line="3432"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autodoplňování není dostupné protože zdrojová část autodoplňování nebyla nalezena.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3897"/>
+        <location filename="QScintilla/Editor.py" line="3898"/>
         <source>Disable breakpoint</source>
         <translation>Deaktivovat breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4137"/>
+        <location filename="QScintilla/Editor.py" line="4138"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4137"/>
+        <location filename="QScintilla/Editor.py" line="4138"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor s pokrytím kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4183"/>
+        <location filename="QScintilla/Editor.py" line="4184"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zobrazit poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4179"/>
+        <location filename="QScintilla/Editor.py" line="4180"/>
         <source>All lines have been covered.</source>
         <translation>Všechny řádky byly pokryty.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4183"/>
+        <location filename="QScintilla/Editor.py" line="4184"/>
         <source>There is no coverage file available.</source>
         <translation>Soubor s pokrytím není dostupný.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4275"/>
+        <location filename="QScintilla/Editor.py" line="4276"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4275"/>
+        <location filename="QScintilla/Editor.py" line="4276"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4391"/>
+        <location filename="QScintilla/Editor.py" line="4392"/>
         <source>Syntax Error</source>
         <translation>Chyba syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4391"/>
+        <location filename="QScintilla/Editor.py" line="4392"/>
         <source>No syntax error message available.</source>
         <translation>Hlášení syntaktické chyby není dostupné.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4531"/>
         <source>Macro Name</source>
         <translation>Název makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4531"/>
         <source>Select a macro name:</source>
         <translation>Vyberte název makra:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4558"/>
+        <location filename="QScintilla/Editor.py" line="4559"/>
         <source>Load macro file</source>
         <translation>Načíst soubor makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4599"/>
         <source>Macro files (*.macro)</source>
         <translation>Macro soubory (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4579"/>
+        <location filename="QScintilla/Editor.py" line="4580"/>
         <source>Error loading macro</source>
         <translation>Chyba při načítání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4599"/>
         <source>Save macro file</source>
         <translation>Uložit soubor s makrem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4615"/>
+        <location filename="QScintilla/Editor.py" line="4616"/>
         <source>Save macro</source>
         <translation>Uložit makro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4633"/>
+        <location filename="QScintilla/Editor.py" line="4634"/>
         <source>Error saving macro</source>
         <translation>Chyba při ukládání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4644"/>
+        <location filename="QScintilla/Editor.py" line="4645"/>
         <source>Start Macro Recording</source>
         <translation>Spustit záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4644"/>
+        <location filename="QScintilla/Editor.py" line="4645"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Nahrávání makra již probíhá. Spustit nové?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4671"/>
+        <location filename="QScintilla/Editor.py" line="4672"/>
         <source>Macro Recording</source>
         <translation>Záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4671"/>
+        <location filename="QScintilla/Editor.py" line="4672"/>
         <source>Enter name of the macro:</source>
         <translation>Vložte název makra:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4794"/>
+        <location filename="QScintilla/Editor.py" line="4795"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Pozor:&lt;/b&gt; Ztratíte všechny změny pokud jej znovu otevřete.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4798"/>
+        <location filename="QScintilla/Editor.py" line="4799"/>
         <source>File changed</source>
         <translation>Soubor změněn</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4996"/>
+        <location filename="QScintilla/Editor.py" line="4997"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5014"/>
+        <location filename="QScintilla/Editor.py" line="5015"/>
         <source>Resources</source>
         <translation>Zdroje</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5016"/>
+        <location filename="QScintilla/Editor.py" line="5017"/>
         <source>Add file...</source>
         <translation>Přidat soubor...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5018"/>
+        <location filename="QScintilla/Editor.py" line="5019"/>
         <source>Add files...</source>
         <translation>Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5020"/>
+        <location filename="QScintilla/Editor.py" line="5021"/>
         <source>Add aliased file...</source>
         <translation>Přidat zástupce souboru...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5022"/>
+        <location filename="QScintilla/Editor.py" line="5023"/>
         <source>Add localized resource...</source>
         <translation>Přidat lokalizované resource...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5025"/>
+        <location filename="QScintilla/Editor.py" line="5026"/>
         <source>Add resource frame</source>
         <translation>Přidat resource frame</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5043"/>
+        <location filename="QScintilla/Editor.py" line="5044"/>
         <source>Add file resource</source>
         <translation>Přidat soubor resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5059"/>
+        <location filename="QScintilla/Editor.py" line="5060"/>
         <source>Add file resources</source>
         <translation>Přidat soubory resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5086"/>
+        <location filename="QScintilla/Editor.py" line="5087"/>
         <source>Add aliased file resource</source>
         <translation>Přidat zástupce souboru resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5147"/>
+        <location filename="QScintilla/Editor.py" line="5148"/>
         <source>Package Diagram</source>
         <translation>Diagram balíčku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5147"/>
+        <location filename="QScintilla/Editor.py" line="5148"/>
         <source>Include class attributes?</source>
         <translation>Včetně atributů třídy?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5184"/>
+        <location filename="QScintilla/Editor.py" line="5185"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5184"/>
+        <location filename="QScintilla/Editor.py" line="5185"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
@@ -6443,12 +6443,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Nebyl zadán forám exportu. Zrušeno....</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5168"/>
+        <location filename="QScintilla/Editor.py" line="5169"/>
         <source>Imports Diagram</source>
         <translation>Importovat diagram</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5168"/>
+        <location filename="QScintilla/Editor.py" line="5169"/>
         <source>Include imports from external modules?</source>
         <translation>Zahrnout importy z externích modulů?</translation>
     </message>
@@ -6523,7 +6523,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Použít Pygments lexer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5418"/>
+        <location filename="QScintilla/Editor.py" line="5419"/>
         <source>Check spelling...</source>
         <translation>Zatrhnout kontrolu...</translation>
     </message>
@@ -6533,12 +6533,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zatrhnout výběr kontroly...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5420"/>
+        <location filename="QScintilla/Editor.py" line="5421"/>
         <source>Add to dictionary</source>
         <translation>Přidat do slovníku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5422"/>
+        <location filename="QScintilla/Editor.py" line="5423"/>
         <source>Ignore All</source>
         <translation>Ignorovat vše</translation>
     </message>
@@ -6583,42 +6583,42 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4572"/>
+        <location filename="QScintilla/Editor.py" line="4573"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4579"/>
+        <location filename="QScintilla/Editor.py" line="4580"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; je poškozen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4615"/>
+        <location filename="QScintilla/Editor.py" line="4616"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4633"/>
+        <location filename="QScintilla/Editor.py" line="4634"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;So souboru s makrem &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4789"/>
+        <location filename="QScintilla/Editor.py" line="4790"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; byl změněn po té co již byl načten do eric5. Znovu načíst?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4879"/>
+        <location filename="QScintilla/Editor.py" line="4880"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4996"/>
+        <location filename="QScintilla/Editor.py" line="4997"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5086"/>
+        <location filename="QScintilla/Editor.py" line="5087"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Zástupce pro soubor &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -6643,12 +6643,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Vyčistit varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4511"/>
+        <location filename="QScintilla/Editor.py" line="4512"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4511"/>
+        <location filename="QScintilla/Editor.py" line="4512"/>
         <source>No py3flakes warning message available.</source>
         <translation>Varování py3flakes není dostupné.</translation>
     </message>
@@ -26048,24 +26048,24 @@ Vyberte Obnovit.</translation>
         <translation>Python re průvodce</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="67"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="70"/>
         <source>Variable Name:</source>
         <translation>Jméno proměnné:</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="79"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="82"/>
         <source>Include import statement</source>
         <translation>Vložit výraz import</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="101"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="104"/>
         <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
 &lt;p&gt;Insert some comment inside your regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Komentář (?#)&lt;/b&gt;
 &lt;p&gt;Vložit nějaký komentář dovnitř vašeho regexp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="105"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="108"/>
         <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
 &lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket. 
 The following example could clarify the regexp which match a valid date: &lt;/p&gt;
@@ -26075,29 +26075,29 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
 &lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="413"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="416"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="118"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="121"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jeden znak v rozsahu (např. [abcd])&lt;/b&gt;&lt;p&gt;Výběr jednoho znaku v rozsahu pomocí určeného dialogu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="121"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="124"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</source>
         <translation>&lt;b&gt;Jeden znak v rozsahu (např. [abcd])&lt;/b&gt;&lt;p&gt;Výběr jednoho znaku v rozsahu pomocí určeného dialogu. Tento dialog pomáhá s editací rozsahu znaků a přidání specifických podmínek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="131"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="134"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nějaký znak: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení tečky (.) ve vašem regexp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="135"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="138"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
@@ -26107,21 +26107,21 @@ character class is faster and more precise.&lt;/p&gt;</source>
 Např. &apos;gr.y&apos; vyhodnotí výrazy &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, atd. Používejte tečku střídmě. Často bývá třída znaku nebo negace třídy znaku rychlejší a přesnější.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="152"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="155"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Opakovat obsah&lt;/b&gt;
 &lt;p&gt;Vybrat podmínku opakování přes konkrétní dialog. Tento dialog pomůže specifikovat povolený rozsah pro opakování.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="163"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="166"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nezachycované závorky (?:)&lt;/b&gt;
 &lt;p&gt;Výběr pro vložení závorek, ve kterých jejich obsah nevytváří skupinu (group).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="167"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="170"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
@@ -26130,14 +26130,14 @@ means that the content of the match (called the backreference) is not stored for
 &lt;p&gt;Výběr pro vložení závorek, ve kterých obsah nevytváří skupinu. Může být použit i s regexp kvantifikátorem (např. &apos;?&apos; nebo &apos;+&apos;) pro celou skupinu uvnitř závorek. Např. regexp &apos;Set(?:Value)?&apos; nalezne &apos;Set&apos; nebo &apos;SetValue&apos;. Výraz &apos;?:&apos; za levou závorkou znamená, že obsah v závorkách (nazývaný zpětná reference) nebude uložen pro další použití.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="180"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="183"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Skupina ()&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení závorek, které mají zachytit nějaký obsah.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="184"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="187"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
@@ -26150,14 +26150,14 @@ Jednička v následujícím pžíkladu umožňuje použít výraz nalezený v z�
 &lt;p&gt;Příklad: &apos;([a-c])x\1x\1&apos; vyhledá &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="199"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="202"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pojmenovaná skupina: (?P&amp;lt;&lt;i&gt;jmenoskupiny&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení pojmenované skupiny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="203"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="206"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
 backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
@@ -26168,14 +26168,14 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
 Příklad: (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x nalezne &apos;axaxax&apos;,&apos;bxbxbx&apos; or &apos;cxcxcx&apos; (&apos;foo&apos; je jméno skupiny)&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="217"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="220"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Odkaz na pojmenovanou skupinu: (?P=&lt;i&gt;jmenoskupiny&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení odkazu na pojmenovanou skpinu, která je uvedena v předchozí části výrazu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="221"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="224"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared. Each reference group refers to the match
  found by the corresponding named group. In the following example, (?P=foo) may refer to the charaters &apos;a&apos;,&apos;b&apos; or &apos;c&apos;.&lt;/p&gt;
@@ -26185,14 +26185,14 @@ Příklad: (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x nalezne &apos;axaxax&apos;,&a
 &lt;p&gt;(?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x nalezne &apos;axaxax&apos;,&apos;bxbxbx&apos; nebo &apos;cxcxcx&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="234"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="237"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Alternativy: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení symbol alternativy &apos;|&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="238"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
@@ -26203,14 +26203,14 @@ Be aware that in the above example, the alternatives refer to whole or part of w
 # -*- coding: UTF-8 -*-&lt;br&gt;import re&lt;br&gt;print &apos;\n&apos;.join(re.findall(ur&apos;\b(pes|kočka|myš|ryba)\b&apos;, u&apos;pes, kočka, myš, ryba&apos;, re.U))&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="252"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Začátek řádky: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení znaku začátku řádku (^).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="256"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="259"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
@@ -26218,28 +26218,28 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
 &lt;p&gt;Vybrat pro vložení znaku začátku řádku (^). Používá se na vyhledání výrazů na začátku řádků. Např: &apos;^[A-Z]&apos; nalezne řádky začínající velkými znaky. Pozor! Diakritika do toho nepatří. V takovém případě zadejte např: &apos;[A-ZŽŠČŘĎŤŇ]&apos;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="268"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="271"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konec řádky: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení znaku konce řádku ($).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="272"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="275"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konec řádku: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení znaku konce řádku ($). Používá se pro vyhledání výrazů na konci řádků.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="283"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="286"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okraj slova&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení znaku okraje slova (\b).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="287"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="290"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
@@ -26247,14 +26247,14 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
 &lt;p&gt;Vybrat pro vložení znaku okraje slova (\b). Využívá se k nalezení celých slov. Například  &apos;\bmyš\b&apos; nalezne pouze slovo &apos;myš&apos; ale slovo &apos;zamyšlený&apos; již nalezeno není.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="299"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="302"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ne okraj slova&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení znaku \B, který je negací znaku \b a vyhledává výrazy, které nejsou okraji slova.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="303"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="306"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
@@ -26262,14 +26262,14 @@ does not. Effectively, \B matches at any position between two word characters as
 &lt;p&gt;Vybrat pro vložení znaku \B znamenající ne okraj slova. Je to přesný opak znaku \b. Znak \B nalezne kažodu pozici kde \b není. Výraz \B nalezne účinně každou pozici mezi dvěma znaky slov stejně jako mezi dvěma znaky znamenající ne-slovo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="315"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="318"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pozitivní vyhlížení: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení závorek pro pozitivní vyhlížení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="319"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="322"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
@@ -26279,14 +26279,14 @@ regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will
 Zápis &apos;q(?=u)&apos; znamená, že chcete vyhledat znak &apos;q&apos; pouze v případě, že za ním následuje znak &apos;u&apos;. To je jednoduchý příklad, ale je možné zadat mnohem složitější výraz, například &apos;q(?=[abc])&apos;, který vyhledá znak &apos;q&apos; pokud za ním následují znaky &apos;a&apos;, &apos;b&apos; nebo &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="332"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="335"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Negativní vyhlížení: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Vybrat pro zadání závorek negativního vyhlížení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="336"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="339"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
@@ -26296,14 +26296,14 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
 Zápis &apos;q(?!u)&apos; znamená, že chcete vyhledat znak &apos;q&apos; pouze v případě, že za ním nenásleduje znak &apos;u&apos;. To je jednoduchý příklad, ale je možné zadat mnohem složitější výraz, například &apos;q(?![abc])&apos;, který vyhledá znak &apos;q&apos; jen pokud za ním nenásledují znaky &apos;a&apos;, &apos;b&apos; nebo &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="349"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="352"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pozizivní zpětné vyhlížení: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení závorek pozitivního zpětného vyhlížení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="353"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="356"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
 It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
@@ -26313,14 +26313,14 @@ only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be 
 Používá se k vyhledání znaků, jen pokud před nimi předchází daný výraz. Zápis &apos;(?&amp;lt;=u)q&apos; znamená, že chcete vyhledat znak &apos;q&apos; pouze v případě, že před ním předchází znak &apos;u&apos;. To je jednoduchý příklad, ale je možné zadat mnohem složitější výraz, například &apos;(?&amp;lt;=[abc])q&apos;, který vyhledá znak &apos;q&apos; jen pokud před ním předcházejí znaky &apos;a&apos;, &apos;b&apos; nebo &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="366"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="369"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Negativní zpětné vyhlížení: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Vybrat pro vložení závorek negativního zpětného vyhlížení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="370"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="373"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
 but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
@@ -26331,62 +26331,57 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
 Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný výraz. Zápis &apos;(?&amp;lt;!u)q&apos; znamená, že chcete vyhledat znak &apos;q&apos; pouze v případě, že před ním nepředchází znak &apos;u&apos;. To je jednoduchý příklad, ale je možné zadat mnohem složitější výraz, například &apos;(?&amp;lt;=[abc])q&apos;, který vyhledá znak &apos;q&apos; jen pokud před ním nepředcházejí znaky &apos;a&apos;, &apos;b&apos; nebo &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="400"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="403"/>
         <source>&lt;b&gt;Undo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Vrátit poslední změnu&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="410"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="413"/>
         <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;Znovu použít poslední změnu&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="440"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="443"/>
         <source>Regexp:</source>
         <translation>Regexp:</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="478"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="481"/>
         <source>&quot;^&quot; matches beginning of line, &quot;$&quot; matches end of line</source>
         <translation>&quot;^&quot; se shoduje také se začátkem řádky, &quot;$&quot; se shoduje také s koncem řádky</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="481"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="484"/>
         <source>Match Linebreaks</source>
         <translation>Více řádků</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="488"/>
-        <source>Unicode</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="495"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="498"/>
         <source>Verbose Regexp</source>
         <translation>Mnohomluvný Regexp</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="502"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="505"/>
         <source>Case Sensitive</source>
         <translation>Rozlišování velkých/malých znaků</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="512"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="515"/>
         <source>Observe Locale</source>
         <translation>Zachovat Locale</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="519"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="522"/>
         <source>&quot;.&quot; matches linebreaks as well</source>
         <translation>&quot;.&quot; se shoduje také s konci řádek</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="522"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="525"/>
         <source>Dot matches Linebreak</source>
         <translation>Tečka znamená vše</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="531"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="534"/>
         <source>Text:</source>
         <translation>Text:</translation>
     </message>
@@ -26404,6 +26399,11 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="42"/>
         <source>Python 3</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="491"/>
+        <source>ASCII</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -37443,7 +37443,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Obnovit &amp;API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2049"/>
+        <location filename="UI/UserInterface.py" line="2038"/>
         <source>Reload the API information</source>
         <translation>Obnovit API nastavení</translation>
     </message>
@@ -37783,7 +37783,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Byla nalezena aktualizace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2046"/>
+        <location filename="UI/UserInterface.py" line="2049"/>
         <source>Show external tools</source>
         <translation>Zobrazit externí nástroje</translation>
     </message>

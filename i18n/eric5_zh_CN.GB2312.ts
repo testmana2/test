@@ -6643,7 +6643,7 @@ whole selection.&lt;/li&gt;
         <translation>全部取消选择</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5418"/>
+        <location filename="QScintilla/Editor.py" line="5419"/>
         <source>Check spelling...</source>
         <translation>正在进行拼写检查……</translation>
     </message>
@@ -6898,7 +6898,7 @@ whole selection.&lt;/li&gt;
         <translation>编辑断点……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3894"/>
+        <location filename="QScintilla/Editor.py" line="3895"/>
         <source>Enable breakpoint</source>
         <translation>允许断点</translation>
     </message>
@@ -7053,52 +7053,52 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;文件 &lt;b&gt;%1&lt;/b&gt; 已存在。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3431"/>
+        <location filename="QScintilla/Editor.py" line="3432"/>
         <source>Autocompletion</source>
         <translation>自动完成</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3431"/>
+        <location filename="QScintilla/Editor.py" line="3432"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>自动完成无效，没有设定自动完成源。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3897"/>
+        <location filename="QScintilla/Editor.py" line="3898"/>
         <source>Disable breakpoint</source>
         <translation>去除断点</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4137"/>
+        <location filename="QScintilla/Editor.py" line="4138"/>
         <source>Code Coverage</source>
         <translation>代码覆盖率</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4137"/>
+        <location filename="QScintilla/Editor.py" line="4138"/>
         <source>Please select a coverage file</source>
         <translation>请选择一个覆盖率文件</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4183"/>
+        <location filename="QScintilla/Editor.py" line="4184"/>
         <source>Show Code Coverage Annotations</source>
         <translation>显示代码覆盖率注解</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4179"/>
+        <location filename="QScintilla/Editor.py" line="4180"/>
         <source>All lines have been covered.</source>
         <translation>所有行均被已覆盖。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4183"/>
+        <location filename="QScintilla/Editor.py" line="4184"/>
         <source>There is no coverage file available.</source>
         <translation>没有有效的覆盖率文件。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4275"/>
+        <location filename="QScintilla/Editor.py" line="4276"/>
         <source>Profile Data</source>
         <translation>剖析数据</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4275"/>
+        <location filename="QScintilla/Editor.py" line="4276"/>
         <source>Please select a profile file</source>
         <translation>请选择一个剖析文件</translation>
     </message>
@@ -7123,37 +7123,37 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">请选择要移除的循环报告</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4391"/>
+        <location filename="QScintilla/Editor.py" line="4392"/>
         <source>Syntax Error</source>
         <translation>语法错误</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4391"/>
+        <location filename="QScintilla/Editor.py" line="4392"/>
         <source>No syntax error message available.</source>
         <translation>语法错误消息无效。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4531"/>
         <source>Macro Name</source>
         <translation>宏名称</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4531"/>
         <source>Select a macro name:</source>
         <translation>选择一个宏名称：</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4558"/>
+        <location filename="QScintilla/Editor.py" line="4559"/>
         <source>Load macro file</source>
         <translation>输入宏文件</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4599"/>
         <source>Macro files (*.macro)</source>
         <translation>宏文件 (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4579"/>
+        <location filename="QScintilla/Editor.py" line="4580"/>
         <source>Error loading macro</source>
         <translation>载入宏文件出错</translation>
     </message>
@@ -7168,12 +7168,12 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;宏文件 &lt;b&gt;%1&lt;/b&gt; 已损坏。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4599"/>
         <source>Save macro file</source>
         <translation>保存宏文件</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4615"/>
+        <location filename="QScintilla/Editor.py" line="4616"/>
         <source>Save macro</source>
         <translation>保存宏</translation>
     </message>
@@ -7183,7 +7183,7 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;宏文件 &lt;b&gt;%1&lt;/b&gt; 已存在。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4633"/>
+        <location filename="QScintilla/Editor.py" line="4634"/>
         <source>Error saving macro</source>
         <translation>保存宏出错</translation>
     </message>
@@ -7193,22 +7193,22 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;无法写入宏文件 &lt;b&gt;%1&lt;/b&gt; 。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4644"/>
+        <location filename="QScintilla/Editor.py" line="4645"/>
         <source>Start Macro Recording</source>
         <translation>开始宏录制</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4644"/>
+        <location filename="QScintilla/Editor.py" line="4645"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>宏录制已激活。开始录制新宏？</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4671"/>
+        <location filename="QScintilla/Editor.py" line="4672"/>
         <source>Macro Recording</source>
         <translation>宏录制</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4671"/>
+        <location filename="QScintilla/Editor.py" line="4672"/>
         <source>Enter name of the macro:</source>
         <translation>输入宏名称：</translation>
     </message>
@@ -7218,12 +7218,12 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;在 Eric4 中打开时文件 &lt;b&gt;%1&lt;/b&gt; 已改变。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4794"/>
+        <location filename="QScintilla/Editor.py" line="4795"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;警告：&lt;/b&gt; 重新打开将导致更改丢失。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4798"/>
+        <location filename="QScintilla/Editor.py" line="4799"/>
         <source>File changed</source>
         <translation>文件已改变</translation>
     </message>
@@ -7233,7 +7233,7 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">%1 (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4996"/>
+        <location filename="QScintilla/Editor.py" line="4997"/>
         <source>Drop Error</source>
         <translation>降落误差</translation>
     </message>
@@ -7243,47 +7243,47 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt; 不是一个文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5014"/>
+        <location filename="QScintilla/Editor.py" line="5015"/>
         <source>Resources</source>
         <translation>资源</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5016"/>
+        <location filename="QScintilla/Editor.py" line="5017"/>
         <source>Add file...</source>
         <translation>添加文件……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5018"/>
+        <location filename="QScintilla/Editor.py" line="5019"/>
         <source>Add files...</source>
         <translation>添加文件……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5020"/>
+        <location filename="QScintilla/Editor.py" line="5021"/>
         <source>Add aliased file...</source>
         <translation>添加别名文件……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5022"/>
+        <location filename="QScintilla/Editor.py" line="5023"/>
         <source>Add localized resource...</source>
         <translation>添加本地资源……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5025"/>
+        <location filename="QScintilla/Editor.py" line="5026"/>
         <source>Add resource frame</source>
         <translation>添加资源结构</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5043"/>
+        <location filename="QScintilla/Editor.py" line="5044"/>
         <source>Add file resource</source>
         <translation>添加文件资源</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5059"/>
+        <location filename="QScintilla/Editor.py" line="5060"/>
         <source>Add file resources</source>
         <translation>添加多个文件资源</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5086"/>
+        <location filename="QScintilla/Editor.py" line="5087"/>
         <source>Add aliased file resource</source>
         <translation>添加别名文件资源</translation>
     </message>
@@ -7293,42 +7293,42 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">重命名文件 &lt;b&gt;%1&lt;/b&gt;：</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5147"/>
+        <location filename="QScintilla/Editor.py" line="5148"/>
         <source>Package Diagram</source>
         <translation>程序包图</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5147"/>
+        <location filename="QScintilla/Editor.py" line="5148"/>
         <source>Include class attributes?</source>
         <translation>包含类属性？</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5168"/>
+        <location filename="QScintilla/Editor.py" line="5169"/>
         <source>Imports Diagram</source>
         <translation>引用图</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5168"/>
+        <location filename="QScintilla/Editor.py" line="5169"/>
         <source>Include imports from external modules?</source>
         <translation>从外部模块包含引用？</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5184"/>
+        <location filename="QScintilla/Editor.py" line="5185"/>
         <source>Application Diagram</source>
         <translation>应用程序图</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5184"/>
+        <location filename="QScintilla/Editor.py" line="5185"/>
         <source>Include module names?</source>
         <translation>包含模块名？</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5420"/>
+        <location filename="QScintilla/Editor.py" line="5421"/>
         <source>Add to dictionary</source>
         <translation>添加到文件夹</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5422"/>
+        <location filename="QScintilla/Editor.py" line="5423"/>
         <source>Ignore All</source>
         <translation>全部忽略</translation>
     </message>
@@ -7373,42 +7373,42 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4572"/>
+        <location filename="QScintilla/Editor.py" line="4573"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4579"/>
+        <location filename="QScintilla/Editor.py" line="4580"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4615"/>
+        <location filename="QScintilla/Editor.py" line="4616"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4633"/>
+        <location filename="QScintilla/Editor.py" line="4634"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4789"/>
+        <location filename="QScintilla/Editor.py" line="4790"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4879"/>
+        <location filename="QScintilla/Editor.py" line="4880"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4996"/>
+        <location filename="QScintilla/Editor.py" line="4997"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5086"/>
+        <location filename="QScintilla/Editor.py" line="5087"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7433,12 +7433,12 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4511"/>
+        <location filename="QScintilla/Editor.py" line="4512"/>
         <source>py3flakes Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4511"/>
+        <location filename="QScintilla/Editor.py" line="4512"/>
         <source>No py3flakes warning message available.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28524,24 +28524,24 @@ Select Update.</source>
         <translation>Python 正则向导</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="67"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="70"/>
         <source>Variable Name:</source>
         <translation>变量名：</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="79"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="82"/>
         <source>Include import statement</source>
         <translation>包含 import 语句</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="101"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="104"/>
         <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
 &lt;p&gt;Insert some comment inside your regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;注释： (?#)&lt;/b&gt;
 &lt;p&gt;在正则表达式中插入注释&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="105"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="108"/>
         <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
 &lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket. 
 The following example could clarify the regexp which match a valid date: &lt;/p&gt;
@@ -28552,29 +28552,29 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
 &lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="413"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="416"/>
         <source>...</source>
         <translation>……</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="118"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="121"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;单字符范围（如：[abcd]）&lt;/b&gt;&lt;p&gt;通过特殊对话框选择单字符范围。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="121"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="124"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</source>
         <translation>&lt;b&gt;单字符范围（如：[abcd]）&lt;/b&gt;&lt;p&gt;通过特殊对话框选择单字符范围。该对话框将帮助您编辑字符范围并添加一些特殊条件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="131"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="134"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;任何字符： &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;选择在正则表达式中输入一个点 （.）。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="135"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="138"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
@@ -28584,21 +28584,21 @@ character class is faster and more precise.&lt;/p&gt;</source>
 字符类或非字符类比较快也比较精确。 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="152"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="155"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
         <translation>&lt;b&gt;重复内容&lt;/b&gt;
 &lt;p&gt;通过特殊对话框选择一个重复条件。该对话框将帮助您指定重复的允许范围。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="163"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="166"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;非捕获圆括号： (?:)&lt;/b&gt;
 &lt;p&gt;选择插入一些非捕获括号。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="167"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="170"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
@@ -28609,14 +28609,14 @@ means that the content of the match (called the backreference) is not stored for
 引用）在后续的使用中无效。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="180"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="183"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;组： ()&lt;/b&gt;
 &lt;p&gt;选择插入一些捕获括号。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="184"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="187"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
 characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
@@ -28630,14 +28630,14 @@ One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 &lt;p&gt;例：“([a-c])x\1x\1”将匹配“axaxa”、“bxbxb”和“cxcxc”。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="199"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="202"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;命名的组： (?P&amp;lt;&lt;i&gt;组名&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;选择插入一些被命名的成组的括号。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="203"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="206"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
 backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
@@ -28650,14 +28650,14 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
 例：(?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x 匹配“axaxax”、“bxbxbx”或“cxcxcx” （“foo”为组名）&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="217"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="220"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared.&lt;/p&gt;</source>
         <translation>&lt;b&gt;引用已命名组： (?P=&lt;i&gt;组名&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;选择插入以前声明的已命名组的引用。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="221"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="224"/>
         <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert a reference to named group previously declared. Each reference group refers to the match
  found by the corresponding named group. In the following example, (?P=foo) may refer to the charaters &apos;a&apos;,&apos;b&apos; or &apos;c&apos;.&lt;/p&gt;
@@ -28668,14 +28668,14 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
 例：(?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x 匹配“axaxax”、“bxbxbx”或“cxcxcx”。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="234"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="237"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation>&lt;b&gt;或：“|”&lt;/b&gt;
 &lt;p&gt;选择插入一个或符号“|”。 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="238"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
@@ -28687,14 +28687,14 @@ Be aware that in the above example, the alternatives refer to whole or part of w
 如果你想要精确地匹配文字“cat”、“dog”、……，你应该明确地表示你只想匹配完整的文字：“\b(cat|dog|mouse|fish)\b”&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="252"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
         <translation>&lt;b&gt;行首：“^”&lt;/b&gt;
 &lt;p&gt;选择插入开始行字符 (^)。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="256"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="259"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
@@ -28703,28 +28703,28 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
 如：“^[A-Z]”在行首位置匹配一个大字字母。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="268"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="271"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
         <translation>&lt;b&gt;行尾：“$”&lt;/b&gt;
 &lt;p&gt;选择插入行尾字符 ($)。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="272"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="275"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;行尾：“$”&lt;/b&gt;
 &lt;p&gt;选择插入行尾字符 ($)。用于在行尾查找某些字符。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="283"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="286"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
         <translation>&lt;b&gt;字边界&lt;/b&gt;
 &lt;p&gt;选择插入字边界符号 (\b)。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="287"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="290"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
@@ -28732,14 +28732,14 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
 如：“\bcat\b”精确匹配文字“cat”，而“concatenation”则被忽略。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="299"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="302"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
         <translation>&lt;b&gt;无字边界&lt;/b&gt;
 &lt;p&gt;选择插入字边界符号 (\B)。“\B”是“\b”的否定。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="303"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="306"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
@@ -28748,14 +28748,14 @@ does not. Effectively, \B matches at any position between two word characters as
 事实上，“\B”不但匹配两个文字符号间的任何位置，还匹配两个非文字符号间的任何位置。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="315"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="318"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;正向查找肯定： (?=&lt;i&gt;正则表达式&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;选择插入正向查找肯定括号。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="319"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="322"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
@@ -28766,14 +28766,14 @@ regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will
 可以用更复杂的表达式替换它；“q(?=[abc])”将匹配其后跟随着“a”、“b”或“c”中之一的“q”。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="332"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="335"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;正向查找否定： (?!&lt;i&gt;正则表达式&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;选择插入正向查找否定括号。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="336"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="339"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
@@ -28784,14 +28784,14 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
 可以用更复杂的表达式替换它；“q(?![abc])”将匹配其后没有跟随“a”、“b”或“c”中任何一个的“q”。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="349"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="352"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;反向查找肯定 (?&amp;lt;=&lt;i&gt;正则表达式&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;选择插入反向查找肯定括号。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="353"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="356"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
 It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
@@ -28802,13 +28802,13 @@ only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be 
 与正向查找相同，“u”可以用更复杂的表达式替换它；“(?&amp;lt;=[abc])q”将匹配前面存在“a”、“b”或“c”中之一的“q”。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="366"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="369"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;反向查找否定 (?&amp;lt;!&lt;i&gt;正则表达式&lt;/i&gt;)&lt;/b&gt;&lt;p&gt;选择插入反向查找否定括号。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="370"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="373"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
 but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
@@ -28819,62 +28819,62 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
 查找相同，“u”可以用更复杂的表达式替换它；“(?&amp;lt;![abc])q”将匹配前面不存在“a”、“b”或“c”中任何一个的“q”。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="400"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="403"/>
         <source>&lt;b&gt;Undo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;撤消最后的编辑&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="410"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="413"/>
         <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
         <translation>&lt;b&gt;重做最后的编辑&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="440"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="443"/>
         <source>Regexp:</source>
         <translation>正则表达式：</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="478"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="481"/>
         <source>&quot;^&quot; matches beginning of line, &quot;$&quot; matches end of line</source>
         <translation>“^”匹配行首，“$”匹配行尾</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="481"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="484"/>
         <source>Match Linebreaks</source>
         <translation>匹配换行符</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="488"/>
         <source>Unicode</source>
-        <translation>Unicode</translation>
+        <translation type="obsolete">Unicode</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="495"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="498"/>
         <source>Verbose Regexp</source>
         <translation>松散正则表达式</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="502"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="505"/>
         <source>Case Sensitive</source>
         <translation>区分大小写</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="512"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="515"/>
         <source>Observe Locale</source>
         <translation>观察点</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="519"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="522"/>
         <source>&quot;.&quot; matches linebreaks as well</source>
         <translation>“.”也匹配换行符</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="522"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="525"/>
         <source>Dot matches Linebreak</source>
         <translation>点匹配换行符</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="531"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="534"/>
         <source>Text:</source>
         <translation>文本：</translation>
     </message>
@@ -28891,6 +28891,11 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="42"/>
         <source>Python 3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="491"/>
+        <source>ASCII</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -41572,7 +41577,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>重新载入 &amp;API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2049"/>
+        <location filename="UI/UserInterface.py" line="2038"/>
         <source>Reload the API information</source>
         <translation>重新载入 API 信息</translation>
     </message>
@@ -41582,7 +41587,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;重新载入 API&lt;/b&gt;&lt;p&gt;重新载入 API 信息。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2046"/>
+        <location filename="UI/UserInterface.py" line="2049"/>
         <source>Show external tools</source>
         <translation>显示外部工具</translation>
     </message>

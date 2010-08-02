@@ -2046,7 +2046,7 @@ class UserInterface(QMainWindow):
         self.showExternalToolsAct = E5Action(self.trUtf8('Show external tools'),
                 UI.PixmapCache.getIcon("showPrograms.png"),
                 self.trUtf8('Show external &tools'), 0, 0, self, 'show_external_tools')
-        self.showExternalToolsAct.setStatusTip(self.trUtf8('Reload the API information'))
+        self.showExternalToolsAct.setStatusTip(self.trUtf8('Show external tools'))
         self.showExternalToolsAct.setWhatsThis(self.trUtf8(
             """<b>Show external tools</b>"""
             """<p>Opens a dialog to show the path and versions of all"""
