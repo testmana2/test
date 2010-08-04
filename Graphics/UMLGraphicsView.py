@@ -57,77 +57,76 @@ class UMLGraphicsView(E5GraphicsView):
         self.deleteShapeAct = \
             QAction(UI.PixmapCache.getIcon("deleteShape.png"),
                     self.trUtf8("Delete shapes"), self)
-        self.connect(self.deleteShapeAct, SIGNAL("triggered()"), self.__deleteShape)
+        self.deleteShapeAct.triggered.connect(self.__deleteShape)
         
         self.saveAct = \
             QAction(UI.PixmapCache.getIcon("fileSave.png"),
                     self.trUtf8("Save as PNG"), self)
-        self.connect(self.saveAct, SIGNAL("triggered()"), self.__saveImage)
+        self.saveAct.triggered.connect(self.__saveImage)
         
         self.printAct = \
             QAction(UI.PixmapCache.getIcon("print.png"),
                     self.trUtf8("Print"), self)
-        self.connect(self.printAct, SIGNAL("triggered()"), self.__printDiagram)
+        self.printAct.triggered.connect(self.__printDiagram)
         
         self.printPreviewAct = \
             QAction(UI.PixmapCache.getIcon("printPreview.png"),
                     self.trUtf8("Print Preview"), self)
-        self.connect(self.printPreviewAct, SIGNAL("triggered()"), 
-            self.__printPreviewDiagram)
+        self.printPreviewAct.triggered.connect(self.__printPreviewDiagram)
         
         self.zoomInAct = \
             QAction(UI.PixmapCache.getIcon("zoomIn.png"),
                     self.trUtf8("Zoom in"), self)
-        self.connect(self.zoomInAct, SIGNAL("triggered()"), self.zoomIn)
+        self.zoomInAct.triggered.connect(self.zoomIn)
         
         self.zoomOutAct = \
             QAction(UI.PixmapCache.getIcon("zoomOut.png"),
                     self.trUtf8("Zoom out"), self)
-        self.connect(self.zoomOutAct, SIGNAL("triggered()"), self.zoomOut)
+        self.zoomOutAct.triggered.connect(self.zoomOut)
         
         self.zoomAct = \
             QAction(UI.PixmapCache.getIcon("zoomTo.png"),
                     self.trUtf8("Zoom..."), self)
-        self.connect(self.zoomAct, SIGNAL("triggered()"), self.__zoom)
+        self.zoomAct.triggered.connect(self.__zoom)
         
         self.zoomResetAct = \
             QAction(UI.PixmapCache.getIcon("zoomReset.png"),
                     self.trUtf8("Zoom reset"), self)
-        self.connect(self.zoomResetAct, SIGNAL("triggered()"), self.zoomReset)
+        self.zoomResetAct.triggered.connect(self.zoomReset)
         
         self.incWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthInc.png"),
                     self.trUtf8("Increase width by {0} points").format(self.deltaSize), 
                     self)
-        self.connect(self.incWidthAct, SIGNAL("triggered()"), self.__incWidth)
+        self.incWidthAct.triggered.connect(self.__incWidth)
         
         self.incHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightInc.png"),
                     self.trUtf8("Increase height by {0} points").format(self.deltaSize), 
                     self)
-        self.connect(self.incHeightAct, SIGNAL("triggered()"), self.__incHeight)
+        self.incHeightAct.triggered.connect(self.__incHeight)
         
         self.decWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthDec.png"),
                     self.trUtf8("Decrease width by {0} points").format(self.deltaSize), 
                     self)
-        self.connect(self.decWidthAct, SIGNAL("triggered()"), self.__decWidth)
+        self.decWidthAct.triggered.connect(self.__decWidth)
         
         self.decHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightDec.png"),
                     self.trUtf8("Decrease height by {0} points").format(self.deltaSize), 
                     self)
-        self.connect(self.decHeightAct, SIGNAL("triggered()"), self.__decHeight)
+        self.decHeightAct.triggered.connect(self.__decHeight)
         
         self.setSizeAct = \
             QAction(UI.PixmapCache.getIcon("sceneSize.png"),
                     self.trUtf8("Set size"), self)
-        self.connect(self.setSizeAct, SIGNAL("triggered()"), self.__setSize)
+        self.setSizeAct.triggered.connect(self.__setSize)
         
         self.relayoutAct = \
             QAction(UI.PixmapCache.getIcon("reload.png"),
                     self.trUtf8("Re-Layout"), self)
-        self.connect(self.relayoutAct, SIGNAL("triggered()"), self.__relayout)
+        self.relayoutAct.triggered.connect(self.__relayout)
         
         self.alignLeftAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignLeft"), 

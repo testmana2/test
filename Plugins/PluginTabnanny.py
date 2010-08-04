@@ -82,7 +82,7 @@ class TabnannyPlugin(QObject):
                 """<p>This checks Python files"""
                 """ for bad indentations using tabnanny.</p>"""
             ))
-            self.connect(self.__projectAct, SIGNAL('triggered()'), self.__projectTabnanny)
+            self.__projectAct.triggered.connect(self.__projectTabnanny)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
@@ -94,7 +94,7 @@ class TabnannyPlugin(QObject):
             """<p>This checks Python files"""
             """ for bad indentations using tabnanny.</p>"""
         ))
-        self.connect(self.__editorAct, SIGNAL('triggered()'), self.__editorTabnanny)
+        self.__editorAct.triggered.connect(self.__editorTabnanny)
         
         self.connect(e5App().getObject("Project"), SIGNAL("showMenu"), 
                      self.__projectShowMenu)
@@ -171,8 +171,7 @@ class TabnannyPlugin(QObject):
                     """<p>This checks Python files"""
                     """ for bad indentations using tabnanny.</p>"""
                 ))
-                self.connect(self.__projectBrowserAct, SIGNAL('triggered()'), 
-                             self.__projectBrowserTabnanny)
+                self.__projectBrowserAct.triggered.connect(self.__projectBrowserTabnanny)
             if not self.__projectBrowserAct in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
     

@@ -81,8 +81,7 @@ class SyntaxCheckerPlugin(QObject):
                 """<b>Check Syntax...</b>"""
                 """<p>This checks Python files for syntax errors.</p>"""
             ))
-            self.connect(self.__projectAct, SIGNAL('triggered()'), 
-                         self.__projectSyntaxCheck)
+            self.__projectAct.triggered.connect(self.__projectSyntaxCheck)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
@@ -93,7 +92,7 @@ class SyntaxCheckerPlugin(QObject):
                 """<b>Check Syntax...</b>"""
                 """<p>This checks Python files for syntax errors.</p>"""
         ))
-        self.connect(self.__editorAct, SIGNAL('triggered()'), self.__editorSyntaxCheck)
+        self.__editorAct.triggered.connect(self.__editorSyntaxCheck)
         
         self.connect(e5App().getObject("Project"), SIGNAL("showMenu"), 
                      self.__projectShowMenu)
@@ -169,8 +168,7 @@ class SyntaxCheckerPlugin(QObject):
                     """<b>Check Syntax...</b>"""
                     """<p>This checks Python files for syntax errors.</p>"""
                 ))
-                self.connect(self.__projectBrowserAct, SIGNAL('triggered()'), 
-                             self.__projectBrowserSyntaxCheck)
+                self.__projectBrowserAct.triggered.connect(self.__projectBrowserSyntaxCheck)
             if not self.__projectBrowserAct in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
     

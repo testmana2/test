@@ -469,7 +469,7 @@ class ViewManager(QObject):
             """<b>New</b>"""
             """<p>An empty editor window will be created.</p>"""
         ))
-        self.connect(self.newAct, SIGNAL('triggered()'), self.newEditor)
+        self.newAct.triggered.connect(self.newEditor)
         self.fileActions.append(self.newAct)
         
         self.openAct = E5Action(QApplication.translate('ViewManager', 'Open'),
@@ -484,7 +484,7 @@ class ViewManager(QObject):
             """<p>You will be asked for the name of a file to be opened"""
             """ in an editor window.</p>"""
         ))
-        self.connect(self.openAct, SIGNAL('triggered()'), self.openFiles)
+        self.openAct.triggered.connect(self.openFiles)
         self.fileActions.append(self.openAct)
         
         self.closeActGrp = createActionGroup(self)
@@ -501,7 +501,7 @@ class ViewManager(QObject):
             """<b>Close Window</b>"""
             """<p>Close the current window.</p>"""
         ))
-        self.connect(self.closeAct, SIGNAL('triggered()'), self.closeCurrentWindow)
+        self.closeAct.triggered.connect(self.closeCurrentWindow)
         self.fileActions.append(self.closeAct)
         
         self.closeAllAct = E5Action(QApplication.translate('ViewManager', 'Close All'),
@@ -513,7 +513,7 @@ class ViewManager(QObject):
             """<b>Close All Windows</b>"""
             """<p>Close all editor windows.</p>"""
         ))
-        self.connect(self.closeAllAct, SIGNAL('triggered()'), self.closeAllWindows)
+        self.closeAllAct.triggered.connect(self.closeAllWindows)
         self.fileActions.append(self.closeAllAct)
         
         self.closeActGrp.setEnabled(False)
@@ -532,7 +532,7 @@ class ViewManager(QObject):
             """<b>Save File</b>"""
             """<p>Save the contents of current editor window.</p>"""
         ))
-        self.connect(self.saveAct, SIGNAL('triggered()'), self.saveCurrentEditor)
+        self.saveAct.triggered.connect(self.saveCurrentEditor)
         self.fileActions.append(self.saveAct)
         
         self.saveAsAct = E5Action(QApplication.translate('ViewManager', 'Save as'),
@@ -548,7 +548,7 @@ class ViewManager(QObject):
             """<p>Save the contents of current editor window to a new file."""
             """ The file can be entered in a file selection dialog.</p>"""
         ))
-        self.connect(self.saveAsAct, SIGNAL('triggered()'), self.saveAsCurrentEditor)
+        self.saveAsAct.triggered.connect(self.saveAsCurrentEditor)
         self.fileActions.append(self.saveAsAct)
         
         self.saveAllAct = E5Action(QApplication.translate('ViewManager', 'Save all'),
@@ -561,7 +561,7 @@ class ViewManager(QObject):
             """<b>Save All Files</b>"""
             """<p>Save the contents of all editor windows.</p>"""
         ))
-        self.connect(self.saveAllAct, SIGNAL('triggered()'), self.saveAllEditors)
+        self.saveAllAct.triggered.connect(self.saveAllEditors)
         self.fileActions.append(self.saveAllAct)
         
         self.saveActGrp.setEnabled(False)
@@ -579,8 +579,7 @@ class ViewManager(QObject):
             """ current project. After the file has been saved, it is"""
             """ automatically added to the current project.</p>"""
         ))
-        self.connect(self.saveToProjectAct, SIGNAL('triggered()'), 
-            self.saveCurrentEditorToProject)
+        self.saveToProjectAct.triggered.connect(self.saveCurrentEditorToProject)
         self.saveToProjectAct.setEnabled(False)
         self.fileActions.append(self.saveToProjectAct)
         
@@ -596,7 +595,7 @@ class ViewManager(QObject):
             """<b>Print File</b>"""
             """<p>Print the contents of current editor window.</p>"""
         ))
-        self.connect(self.printAct, SIGNAL('triggered()'), self.printCurrentEditor)
+        self.printAct.triggered.connect(self.printCurrentEditor)
         self.printAct.setEnabled(False)
         self.fileActions.append(self.printAct)
         
@@ -611,8 +610,7 @@ class ViewManager(QObject):
             """<b>Print Preview</b>"""
             """<p>Print preview of the current editor window.</p>"""
         ))
-        self.connect(self.printPreviewAct, SIGNAL('triggered()'), 
-            self.printPreviewCurrentEditor)
+        self.printPreviewAct.triggered.connect(self.printPreviewCurrentEditor)
         self.printPreviewAct.setEnabled(False)
         self.fileActions.append(self.printPreviewAct)
         
@@ -628,7 +626,7 @@ class ViewManager(QObject):
             """<b>Search File</b>"""
             """<p>Search for a file.</p>"""
         ))
-        self.connect(self.findFileNameAct, SIGNAL('triggered()'), self.__findFileName)
+        self.findFileNameAct.triggered.connect(self.__findFileName)
         self.fileActions.append(self.findFileNameAct)
         
     def initFileMenu(self):
@@ -746,7 +744,7 @@ class ViewManager(QObject):
             """<b>Undo</b>"""
             """<p>Undo the last change done in the current editor.</p>"""
         ))
-        self.connect(self.undoAct, SIGNAL('triggered()'), self.__editUndo)
+        self.undoAct.triggered.connect(self.__editUndo)
         self.editActions.append(self.undoAct)
         
         self.redoAct = E5Action(QApplication.translate('ViewManager', 'Redo'),
@@ -761,7 +759,7 @@ class ViewManager(QObject):
             """<b>Redo</b>"""
             """<p>Redo the last change done in the current editor.</p>"""
         ))
-        self.connect(self.redoAct, SIGNAL('triggered()'), self.__editRedo)
+        self.redoAct.triggered.connect(self.__editRedo)
         self.editActions.append(self.redoAct)
         
         self.revertAct = E5Action(QApplication.translate('ViewManager', 
@@ -778,7 +776,7 @@ class ViewManager(QObject):
             """<p>Undo all changes up to the last saved state"""
             """ of the current editor.</p>"""
         ))
-        self.connect(self.revertAct, SIGNAL('triggered()'), self.__editRevert)
+        self.revertAct.triggered.connect(self.__editRevert)
         self.editActions.append(self.revertAct)
         
         self.copyActGrp = createActionGroup(self.editActGrp)
@@ -796,7 +794,7 @@ class ViewManager(QObject):
             """<b>Cut</b>"""
             """<p>Cut the selected text of the current editor to the clipboard.</p>"""
         ))
-        self.connect(self.cutAct, SIGNAL('triggered()'), self.__editCut)
+        self.cutAct.triggered.connect(self.__editCut)
         self.editActions.append(self.cutAct)
         
         self.copyAct = E5Action(QApplication.translate('ViewManager', 'Copy'),
@@ -813,7 +811,7 @@ class ViewManager(QObject):
             """<b>Copy</b>"""
             """<p>Copy the selected text of the current editor to the clipboard.</p>"""
         ))
-        self.connect(self.copyAct, SIGNAL('triggered()'), self.__editCopy)
+        self.copyAct.triggered.connect(self.__editCopy)
         self.editActions.append(self.copyAct)
         
         self.pasteAct = E5Action(QApplication.translate('ViewManager', 'Paste'),
@@ -831,7 +829,7 @@ class ViewManager(QObject):
             """<p>Paste the last cut/copied text from the clipboard to"""
             """ the current editor.</p>"""
         ))
-        self.connect(self.pasteAct, SIGNAL('triggered()'), self.__editPaste)
+        self.pasteAct.triggered.connect(self.__editPaste)
         self.editActions.append(self.pasteAct)
         
         self.deleteAct = E5Action(QApplication.translate('ViewManager', 'Clear'),
@@ -847,7 +845,7 @@ class ViewManager(QObject):
             """<b>Clear</b>"""
             """<p>Delete all text of the current editor.</p>"""
         ))
-        self.connect(self.deleteAct, SIGNAL('triggered()'), self.__editDelete)
+        self.deleteAct.triggered.connect(self.__editDelete)
         self.editActions.append(self.deleteAct)
         
         self.indentAct = E5Action(QApplication.translate('ViewManager', 'Indent'),
@@ -863,7 +861,7 @@ class ViewManager(QObject):
             """<p>Indents the current line or the lines of the"""
             """ selection by one level.</p>"""
         ))
-        self.connect(self.indentAct, SIGNAL('triggered()'), self.__editIndent)
+        self.indentAct.triggered.connect(self.__editIndent)
         self.editActions.append(self.indentAct)
         
         self.unindentAct = E5Action(QApplication.translate('ViewManager', 'Unindent'),
@@ -880,7 +878,7 @@ class ViewManager(QObject):
             """<p>Unindents the current line or the lines of the"""
             """ selection by one level.</p>"""
         ))
-        self.connect(self.unindentAct, SIGNAL('triggered()'), self.__editUnindent)
+        self.unindentAct.triggered.connect(self.__editUnindent)
         self.editActions.append(self.unindentAct)
         
         self.smartIndentAct = E5Action(QApplication.translate('ViewManager', 
@@ -898,7 +896,7 @@ class ViewManager(QObject):
             """<p>Indents the current line or the lines of the"""
             """ current selection smartly.</p>"""
         ))
-        self.connect(self.smartIndentAct, SIGNAL('triggered()'), self.__editSmartIndent)
+        self.smartIndentAct.triggered.connect(self.__editSmartIndent)
         self.editActions.append(self.smartIndentAct)
         
         self.commentAct = E5Action(QApplication.translate('ViewManager', 'Comment'),
@@ -915,7 +913,7 @@ class ViewManager(QObject):
             """<p>Comments the current line or the lines of the"""
             """ current selection.</p>"""
         ))
-        self.connect(self.commentAct, SIGNAL('triggered()'), self.__editComment)
+        self.commentAct.triggered.connect(self.__editComment)
         self.editActions.append(self.commentAct)
         
         self.uncommentAct = E5Action(QApplication.translate('ViewManager', 'Uncomment'),
@@ -932,7 +930,7 @@ class ViewManager(QObject):
             """<p>Uncomments the current line or the lines of the"""
             """ current selection.</p>"""
         ))
-        self.connect(self.uncommentAct, SIGNAL('triggered()'), self.__editUncomment)
+        self.uncommentAct.triggered.connect(self.__editUncomment)
         self.editActions.append(self.uncommentAct)
         
         self.streamCommentAct = E5Action(QApplication.translate('ViewManager', 
@@ -945,8 +943,7 @@ class ViewManager(QObject):
             """<b>Stream Comment</b>"""
             """<p>Stream comments the current line or the current selection.</p>"""
         ))
-        self.connect(self.streamCommentAct, SIGNAL('triggered()'), 
-            self.__editStreamComment)
+        self.streamCommentAct.triggered.connect(self.__editStreamComment)
         self.editActions.append(self.streamCommentAct)
         
         self.boxCommentAct = E5Action(QApplication.translate('ViewManager', 
@@ -960,7 +957,7 @@ class ViewManager(QObject):
             """<p>Box comments the current line or the lines of the"""
             """ current selection.</p>"""
         ))
-        self.connect(self.boxCommentAct, SIGNAL('triggered()'), self.__editBoxComment)
+        self.boxCommentAct.triggered.connect(self.__editBoxComment)
         self.editActions.append(self.boxCommentAct)
         
         self.selectBraceAct = E5Action(QApplication.translate('ViewManager', 
@@ -976,7 +973,7 @@ class ViewManager(QObject):
             """<b>Select to brace</b>"""
             """<p>Select text of the current editor to the matching brace.</p>"""
         ))
-        self.connect(self.selectBraceAct, SIGNAL('triggered()'), self.__editSelectBrace)
+        self.selectBraceAct.triggered.connect(self.__editSelectBrace)
         self.editActions.append(self.selectBraceAct)
         
         self.selectAllAct = E5Action(QApplication.translate('ViewManager', 'Select all'),
@@ -991,7 +988,7 @@ class ViewManager(QObject):
             """<b>Select All</b>"""
             """<p>Select all text of the current editor.</p>"""
         ))
-        self.connect(self.selectAllAct, SIGNAL('triggered()'), self.__editSelectAll)
+        self.selectAllAct.triggered.connect(self.__editSelectAll)
         self.editActions.append(self.selectAllAct)
         
         self.deselectAllAct = E5Action(QApplication.translate('ViewManager', 
@@ -1007,7 +1004,7 @@ class ViewManager(QObject):
             """<b>Deselect All</b>"""
             """<p>Deselect all text of the current editor.</p>"""
         ))
-        self.connect(self.deselectAllAct, SIGNAL('triggered()'), self.__editDeselectAll)
+        self.deselectAllAct.triggered.connect(self.__editDeselectAll)
         self.editActions.append(self.deselectAllAct)
         
         self.convertEOLAct = E5Action(QApplication.translate('ViewManager', 
@@ -1020,7 +1017,7 @@ class ViewManager(QObject):
             """<b>Convert Line End Characters</b>"""
             """<p>Convert the line end characters to the currently set type.</p>"""
         ))
-        self.connect(self.convertEOLAct, SIGNAL('triggered()'), self.__convertEOL)
+        self.convertEOLAct.triggered.connect(self.__convertEOL)
         self.editActions.append(self.convertEOLAct)
         
         self.shortenEmptyAct = E5Action(QApplication.translate('ViewManager', 
@@ -1033,8 +1030,7 @@ class ViewManager(QObject):
             """<b>Shorten empty lines</b>"""
             """<p>Shorten lines consisting solely of whitespace characters.</p>"""
         ))
-        self.connect(self.shortenEmptyAct, SIGNAL('triggered()'), 
-            self.__shortenEmptyLines)
+        self.shortenEmptyAct.triggered.connect(self.__shortenEmptyLines)
         self.editActions.append(self.shortenEmptyAct)
         
         self.autoCompleteAct = E5Action(QApplication.translate('ViewManager', 
@@ -1050,7 +1046,7 @@ class ViewManager(QObject):
             """<b>Autocomplete</b>"""
             """<p>Performs an autocompletion of the word containing the cursor.</p>"""
         ))
-        self.connect(self.autoCompleteAct, SIGNAL('triggered()'), self.__editAutoComplete)
+        self.autoCompleteAct.triggered.connect(self.__editAutoComplete)
         self.editActions.append(self.autoCompleteAct)
         
         self.autoCompleteFromDocAct = E5Action(QApplication.translate('ViewManager', 
@@ -1066,8 +1062,7 @@ class ViewManager(QObject):
             """<p>Performs an autocompletion from document of the word"""
             """ containing the cursor.</p>"""
         ))
-        self.connect(self.autoCompleteFromDocAct, SIGNAL('triggered()'), 
-            self.__editAutoCompleteFromDoc)
+        self.autoCompleteFromDocAct.triggered.connect(self.__editAutoCompleteFromDoc)
         self.editActions.append(self.autoCompleteFromDocAct)
         
         self.autoCompleteFromAPIsAct = E5Action(QApplication.translate('ViewManager', 
@@ -1083,8 +1078,7 @@ class ViewManager(QObject):
             """<p>Performs an autocompletion from APIs of the word containing"""
             """ the cursor.</p>"""
         ))
-        self.connect(self.autoCompleteFromAPIsAct, SIGNAL('triggered()'), 
-            self.__editAutoCompleteFromAPIs)
+        self.autoCompleteFromAPIsAct.triggered.connect(self.__editAutoCompleteFromAPIs)
         self.editActions.append(self.autoCompleteFromAPIsAct)
         
         self.autoCompleteFromAllAct = E5Action(\
@@ -1102,8 +1096,7 @@ class ViewManager(QObject):
             """<p>Performs an autocompletion from document and APIs"""
             """ of the word containing the cursor.</p>"""
         ))
-        self.connect(self.autoCompleteFromAllAct, SIGNAL('triggered()'), 
-            self.__editAutoCompleteFromAll)
+        self.autoCompleteFromAllAct.triggered.connect(self.__editAutoCompleteFromAll)
         self.editActions.append(self.autoCompleteFromAllAct)
         
         self.calltipsAct = E5Action(QApplication.translate('ViewManager', 
@@ -1120,7 +1113,7 @@ class ViewManager(QObject):
             """<p>Show calltips based on the characters immediately to the"""
             """ left of the cursor.</p>"""
         ))
-        self.connect(self.calltipsAct, SIGNAL('triggered()'), self.__editShowCallTips)
+        self.calltipsAct.triggered.connect(self.__editShowCallTips)
         self.editActions.append(self.calltipsAct)
         
         self.editActGrp.setEnabled(False)
@@ -1140,7 +1133,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Left')), 0,
                       self.editorActGrp, 'vm_edit_move_left_char')
         self.esm.setMapping(act, QsciScintilla.SCI_CHARLEFT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move right one character'), 
@@ -1148,7 +1141,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Right')), 0,
                       self.editorActGrp, 'vm_edit_move_right_char')
         self.esm.setMapping(act, QsciScintilla.SCI_CHARRIGHT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move up one line'), 
@@ -1156,7 +1149,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Up')), 0,
                       self.editorActGrp, 'vm_edit_move_up_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEUP)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move down one line'), 
@@ -1164,7 +1157,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Down')), 0,
                       self.editorActGrp, 'vm_edit_move_down_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDOWN)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move left one word part'), 
@@ -1172,7 +1165,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Left')), 0,
                       self.editorActGrp, 'vm_edit_move_left_word_part')
         self.esm.setMapping(act, QsciScintilla.SCI_WORDPARTLEFT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move right one word part'), 
@@ -1180,7 +1173,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Right')), 0,
                       self.editorActGrp, 'vm_edit_move_right_word_part')
         self.esm.setMapping(act, QsciScintilla.SCI_WORDPARTRIGHT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move left one word'), 
@@ -1188,7 +1181,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Left')), 0,
                       self.editorActGrp, 'vm_edit_move_left_word')
         self.esm.setMapping(act, QsciScintilla.SCI_WORDLEFT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move right one word'), 
@@ -1197,7 +1190,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_move_right_word')
         self.esm.setMapping(act, QsciScintilla.SCI_WORDRIGHT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1207,7 +1200,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Home')), 0,
                       self.editorActGrp, 'vm_edit_move_first_visible_char')
         self.esm.setMapping(act, QsciScintilla.SCI_VCHOME)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1217,7 +1210,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Home')), 0,
                       self.editorActGrp, 'vm_edit_move_start_line')
         self.esm.setMapping(act, QsciScintilla.SCI_HOMEDISPLAY)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move to end of line'), 
@@ -1225,7 +1218,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'End')), 0,
                       self.editorActGrp, 'vm_edit_move_end_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Scroll view down one line'),
@@ -1233,7 +1226,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Down')), 0,
                       self.editorActGrp, 'vm_edit_scroll_down_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINESCROLLDOWN)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Scroll view up one line'), 
@@ -1241,7 +1234,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Up')), 0,
                       self.editorActGrp, 'vm_edit_scroll_up_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINESCROLLUP)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move up one paragraph'), 
@@ -1249,7 +1242,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Up')), 0,
                       self.editorActGrp, 'vm_edit_move_up_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARAUP)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move down one paragraph'), 
@@ -1257,7 +1250,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+Down')), 0,
                       self.editorActGrp, 'vm_edit_move_down_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARADOWN)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move up one page'), 
@@ -1265,7 +1258,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'PgUp')), 0,
                       self.editorActGrp, 'vm_edit_move_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUP)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move down one page'), 
@@ -1273,7 +1266,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'PgDown')), 0,
                       self.editorActGrp, 'vm_edit_move_down_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEDOWN)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move to start of text'), 
@@ -1281,7 +1274,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Home')), 0,
                       self.editorActGrp, 'vm_edit_move_start_text')
         self.esm.setMapping(act, QsciScintilla.SCI_DOCUMENTSTART)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Move to end of text'), 
@@ -1289,7 +1282,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+End')), 0,
                       self.editorActGrp, 'vm_edit_move_end_text')
         self.esm.setMapping(act, QsciScintilla.SCI_DOCUMENTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Indent one level'), 
@@ -1297,7 +1290,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Tab')), 0,
                       self.editorActGrp, 'vm_edit_indent_one_level')
         self.esm.setMapping(act, QsciScintilla.SCI_TAB)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Unindent one level'), 
@@ -1305,7 +1298,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Shift+Tab')), 0,
                       self.editorActGrp, 'vm_edit_unindent_one_level')
         self.esm.setMapping(act, QsciScintilla.SCI_BACKTAB)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1316,7 +1309,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_left_char')
         self.esm.setMapping(act, QsciScintilla.SCI_CHARLEFTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1327,7 +1320,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_right_char')
         self.esm.setMapping(act, QsciScintilla.SCI_CHARRIGHTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1337,7 +1330,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Shift+Up')), 0,
                       self.editorActGrp, 'vm_edit_extend_selection_up_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEUPEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1348,7 +1341,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_down_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDOWNEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1360,7 +1353,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_left_word_part')
         self.esm.setMapping(act, QsciScintilla.SCI_WORDPARTLEFTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1372,7 +1365,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_right_word_part')
         self.esm.setMapping(act, QsciScintilla.SCI_WORDPARTRIGHTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1384,7 +1377,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_left_word')
         self.esm.setMapping(act, QsciScintilla.SCI_WORDLEFTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1396,7 +1389,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_right_word')
         self.esm.setMapping(act, QsciScintilla.SCI_WORDRIGHTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1407,7 +1400,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_first_visible_char')
         self.esm.setMapping(act, QsciScintilla.SCI_VCHOMEEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1419,7 +1412,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_start_line')
         self.esm.setMapping(act, QsciScintilla.SCI_HOMEDISPLAYEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1429,7 +1422,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Shift+End')), 0,
                       self.editorActGrp, 'vm_edit_extend_selection_end_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEENDEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1440,7 +1433,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_up_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARAUPEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1452,7 +1445,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_down_para')
         self.esm.setMapping(act, QsciScintilla.SCI_PARADOWNEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1463,7 +1456,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUPEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1474,7 +1467,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_down_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEDOWNEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1486,7 +1479,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_start_text')
         self.esm.setMapping(act, QsciScintilla.SCI_DOCUMENTSTARTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1498,7 +1491,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_selection_end_text')
         self.esm.setMapping(act, QsciScintilla.SCI_DOCUMENTENDEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1509,7 +1502,7 @@ class ViewManager(QObject):
                         'Shift+Backspace')), 
                       self.editorActGrp, 'vm_edit_delete_previous_char')
         self.esm.setMapping(act, QsciScintilla.SCI_DELETEBACK)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1519,7 +1512,7 @@ class ViewManager(QObject):
                       0, 0,
                       self.editorActGrp, 'vm_edit_delet_previous_char_not_line_start')
         self.esm.setMapping(act, QsciScintilla.SCI_DELETEBACKNOTLINE)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Delete current character'), 
@@ -1527,7 +1520,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Del')), 0,
                       self.editorActGrp, 'vm_edit_delete_current_char')
         self.esm.setMapping(act, QsciScintilla.SCI_CLEAR)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Delete word to left'), 
@@ -1537,7 +1530,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_delete_word_left')
         self.esm.setMapping(act, QsciScintilla.SCI_DELWORDLEFT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Delete word to right'), 
@@ -1545,7 +1538,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Del')), 0,
                       self.editorActGrp, 'vm_edit_delete_word_right')
         self.esm.setMapping(act, QsciScintilla.SCI_DELWORDRIGHT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Delete line to left'), 
@@ -1555,7 +1548,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_delete_line_left')
         self.esm.setMapping(act, QsciScintilla.SCI_DELLINELEFT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Delete line to right'), 
@@ -1565,7 +1558,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_delete_line_right')
         self.esm.setMapping(act, QsciScintilla.SCI_DELLINERIGHT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Insert new line'), 
@@ -1574,7 +1567,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Enter')), 
                       self.editorActGrp, 'vm_edit_insert_line')
         self.esm.setMapping(act, QsciScintilla.SCI_NEWLINE)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1584,7 +1577,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Shift+Return')),
                       QKeySequence(QApplication.translate('ViewManager', 'Shift+Enter')), 
                       self.editorActGrp, 'vm_edit_insert_line_below')
-        self.connect(act, SIGNAL('triggered()'), self.__newLineBelow)
+        act.triggered.connect(self.__newLineBelow)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Delete current line'), 
@@ -1593,7 +1586,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+L')),
                       self.editorActGrp, 'vm_edit_delete_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDELETE)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Duplicate current line'), 
@@ -1601,7 +1594,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+D')), 0,
                       self.editorActGrp, 'vm_edit_duplicate_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDUPLICATE)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1611,7 +1604,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+T')), 0,
                       self.editorActGrp, 'vm_edit_swap_current_previous_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINETRANSPOSE)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Cut current line'), 
@@ -1620,7 +1613,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_cut_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINECUT)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Copy current line'), 
@@ -1629,7 +1622,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_copy_current_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINECOPY)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Toggle insert/overtype'), 
@@ -1637,7 +1630,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Ins')), 0,
                       self.editorActGrp, 'vm_edit_toggle_insert_overtype')
         self.esm.setMapping(act, QsciScintilla.SCI_EDITTOGGLEOVERTYPE)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1648,7 +1641,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_convert_selection_lower')
         self.esm.setMapping(act, QsciScintilla.SCI_LOWERCASE)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1659,7 +1652,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_convert_selection_upper')
         self.esm.setMapping(act, QsciScintilla.SCI_UPPERCASE)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1669,7 +1662,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Alt+End')), 0,
                       self.editorActGrp, 'vm_edit_move_end_displayed_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEENDDISPLAY)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1679,7 +1672,7 @@ class ViewManager(QObject):
                       0, 0,
                       self.editorActGrp, 'vm_edit_extend_selection_end_displayed_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEENDDISPLAYEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Formfeed'), 
@@ -1687,7 +1680,7 @@ class ViewManager(QObject):
                       0, 0,
                       self.editorActGrp, 'vm_edit_formfeed')
         self.esm.setMapping(act, QsciScintilla.SCI_FORMFEED)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 'Escape'), 
@@ -1695,7 +1688,7 @@ class ViewManager(QObject):
                       QKeySequence(QApplication.translate('ViewManager', 'Esc')), 0,
                       self.editorActGrp, 'vm_edit_escape')
         self.esm.setMapping(act, QsciScintilla.SCI_CANCEL)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1707,7 +1700,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_rect_selection_down_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEDOWNRECTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1718,7 +1711,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_rect_selection_up_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEUPRECTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1730,7 +1723,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_rect_selection_left_char')
         self.esm.setMapping(act, QsciScintilla.SCI_CHARLEFTRECTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1742,7 +1735,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_rect_selection_right_char')
         self.esm.setMapping(act, QsciScintilla.SCI_CHARRIGHTRECTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1757,7 +1750,7 @@ class ViewManager(QObject):
                       self.editorActGrp, 
                       'vm_edit_extend_rect_selection_first_visible_char')
         self.esm.setMapping(act, QsciScintilla.SCI_VCHOMERECTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1768,7 +1761,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_rect_selection_end_line')
         self.esm.setMapping(act, QsciScintilla.SCI_LINEENDRECTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1780,7 +1773,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_rect_selection_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUPRECTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1792,7 +1785,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_extend_rect_selection_down_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEDOWNRECTEXTEND)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager', 
@@ -1803,7 +1796,7 @@ class ViewManager(QObject):
                       0,
                       self.editorActGrp, 'vm_edit_duplicate_current_selection')
         self.esm.setMapping(act, QsciScintilla.SCI_SELECTIONDUPLICATE)
-        self.connect(act, SIGNAL('triggered()'), self.esm, SLOT('map()'))
+        act.triggered.connect(self.esm.map)
         self.editActions.append(act)
         
         self.editorActGrp.setEnabled(False)
@@ -1931,7 +1924,7 @@ class ViewManager(QObject):
             """ dialog is shown to enter the searchtext and options"""
             """ for the search.</p>"""
         ))
-        self.connect(self.searchAct, SIGNAL('triggered()'), self.__search)
+        self.searchAct.triggered.connect(self.__search)
         self.searchActions.append(self.searchAct)
         
         self.searchNextAct = E5Action(QApplication.translate('ViewManager', 
@@ -1949,7 +1942,7 @@ class ViewManager(QObject):
             """<p>Search the next occurrence of some text in the current editor."""
             """ The previously entered searchtext and options are reused.</p>"""
         ))
-        self.connect(self.searchNextAct, SIGNAL('triggered()'), self.searchDlg.findNext)
+        self.searchNextAct.triggered.connect(self.searchDlg.findNext)
         self.searchActions.append(self.searchNextAct)
         
         self.searchPrevAct = E5Action(QApplication.translate('ViewManager', 
@@ -1967,7 +1960,7 @@ class ViewManager(QObject):
             """<p>Search the previous occurrence of some text in the current editor."""
             """ The previously entered searchtext and options are reused.</p>"""
         ))
-        self.connect(self.searchPrevAct, SIGNAL('triggered()'), self.searchDlg.findPrev)
+        self.searchPrevAct.triggered.connect(self.searchDlg.findPrev)
         self.searchActions.append(self.searchPrevAct)
         
         self.searchClearMarkersAct = E5Action(QApplication.translate('ViewManager', 
@@ -1984,8 +1977,7 @@ class ViewManager(QObject):
             """<b>Clear search markers</b>"""
             """<p>Clear all displayed search markers.</p>"""
         ))
-        self.connect(self.searchClearMarkersAct, SIGNAL('triggered()'), 
-            self.__searchClearMarkers)
+        self.searchClearMarkersAct.triggered.connect(self.__searchClearMarkers)
         self.searchActions.append(self.searchClearMarkersAct)
         
         self.replaceAct = E5Action(QApplication.translate('ViewManager', 'Replace'),
@@ -2002,7 +1994,7 @@ class ViewManager(QObject):
             """ dialog is shown to enter the searchtext, the replacement text"""
             """ and options for the search and replace.</p>"""
         ))
-        self.connect(self.replaceAct, SIGNAL('triggered()'), self.__replace)
+        self.replaceAct.triggered.connect(self.__replace)
         self.searchActions.append(self.replaceAct)
         
         self.quickSearchAct = E5Action(QApplication.translate('ViewManager', 
@@ -2022,7 +2014,7 @@ class ViewManager(QObject):
             """ is already active and contains text, it searches for the"""
             """ next occurrence of this text.</p>"""
         ))
-        self.connect(self.quickSearchAct, SIGNAL('triggered()'), self.__quickSearch)
+        self.quickSearchAct.triggered.connect(self.__quickSearch)
         self.searchActions.append(self.quickSearchAct)
         
         self.quickSearchBackAct = E5Action(QApplication.translate('ViewManager', 
@@ -2038,8 +2030,7 @@ class ViewManager(QObject):
             """<b>Quicksearch backwards</b>"""
             """<p>This searches the previous occurrence of the quicksearch text.</p>"""
         ))
-        self.connect(self.quickSearchBackAct, SIGNAL('triggered()'), 
-            self.__quickSearchPrev)
+        self.quickSearchBackAct.triggered.connect(self.__quickSearchPrev)
         self.searchActions.append(self.quickSearchBackAct)
         
         self.quickSearchExtendAct = E5Action(QApplication.translate('ViewManager', 
@@ -2057,8 +2048,7 @@ class ViewManager(QObject):
             """<p>This extends the quicksearch text to the end of the word"""
             """ currently found.</p>"""
         ))
-        self.connect(self.quickSearchExtendAct, SIGNAL('triggered()'), 
-            self.__quickSearchExtend)
+        self.quickSearchExtendAct.triggered.connect(self.__quickSearchExtend)
         self.searchActions.append(self.quickSearchExtendAct)
         
         self.gotoAct = E5Action(QApplication.translate('ViewManager', 'Goto Line'),
@@ -2074,7 +2064,7 @@ class ViewManager(QObject):
             """<p>Go to a specific line of text in the current editor."""
             """ A dialog is shown to enter the linenumber.</p>"""
         ))
-        self.connect(self.gotoAct, SIGNAL('triggered()'), self.__goto)
+        self.gotoAct.triggered.connect(self.__goto)
         self.searchActions.append(self.gotoAct)
         
         self.gotoBraceAct = E5Action(QApplication.translate('ViewManager', 'Goto Brace'),
@@ -2090,7 +2080,7 @@ class ViewManager(QObject):
             """<b>Goto Brace</b>"""
             """<p>Go to the matching brace in the current editor.</p>"""
         ))
-        self.connect(self.gotoBraceAct, SIGNAL('triggered()'), self.__gotoBrace)
+        self.gotoBraceAct.triggered.connect(self.__gotoBrace)
         self.searchActions.append(self.gotoBraceAct)
         
         self.searchActGrp.setEnabled(False)
@@ -2111,7 +2101,7 @@ class ViewManager(QObject):
             """ or the project. A dialog is shown to enter the searchtext"""
             """ and options for the search and to display the result.</p>"""
         ))
-        self.connect(self.searchFilesAct, SIGNAL('triggered()'), self.__searchFiles)
+        self.searchFilesAct.triggered.connect(self.__searchFiles)
         self.searchActions.append(self.searchFilesAct)
         
         self.replaceFilesAct = E5Action(QApplication.translate('ViewManager', 
@@ -2130,7 +2120,7 @@ class ViewManager(QObject):
             """ the searchtext, the replacement text and options for the"""
             """ search and to display the result.</p>"""
         ))
-        self.connect(self.replaceFilesAct, SIGNAL('triggered()'), self.__replaceFiles)
+        self.replaceFilesAct.triggered.connect(self.__replaceFiles)
         self.searchActions.append(self.replaceFilesAct)
         
     def initSearchToolbars(self, toolbarManager):
@@ -2243,7 +2233,7 @@ class ViewManager(QObject):
                 """<b>Zoom in</b>"""
                 """<p>Zoom in on the text. This makes the text bigger.</p>"""
                 ))
-        self.connect(self.zoomInAct, SIGNAL('triggered()'), self.__zoomIn)
+        self.zoomInAct.triggered.connect(self.__zoomIn)
         self.viewActions.append(self.zoomInAct)
         
         self.zoomOutAct = E5Action(QApplication.translate('ViewManager', 'Zoom out'),
@@ -2259,7 +2249,7 @@ class ViewManager(QObject):
                 """<b>Zoom out</b>"""
                 """<p>Zoom out on the text. This makes the text smaller.</p>"""
                 ))
-        self.connect(self.zoomOutAct, SIGNAL('triggered()'), self.__zoomOut)
+        self.zoomOutAct.triggered.connect(self.__zoomOut)
         self.viewActions.append(self.zoomOutAct)
         
         self.zoomToAct = E5Action(QApplication.translate('ViewManager', 'Zoom'),
@@ -2276,7 +2266,7 @@ class ViewManager(QObject):
                 """<p>Zoom the text. This opens a dialog where the"""
                 """ desired size can be entered.</p>"""
                 ))
-        self.connect(self.zoomToAct, SIGNAL('triggered()'), self.__zoom)
+        self.zoomToAct.triggered.connect(self.__zoom)
         self.viewActions.append(self.zoomToAct)
         
         self.toggleAllAct = E5Action(QApplication.translate('ViewManager', 
@@ -2289,7 +2279,7 @@ class ViewManager(QObject):
                 """<b>Toggle all folds</b>"""
                 """<p>Toggle all folds of the current editor.</p>"""
                 ))
-        self.connect(self.toggleAllAct, SIGNAL('triggered()'), self.__toggleAll)
+        self.toggleAllAct.triggered.connect(self.__toggleAll)
         self.viewActions.append(self.toggleAllAct)
         
         self.toggleAllChildrenAct = \
@@ -2305,8 +2295,7 @@ class ViewManager(QObject):
                 """<p>Toggle all folds of the current editor including"""
                 """ all children.</p>"""
                 ))
-        self.connect(self.toggleAllChildrenAct, SIGNAL('triggered()'), 
-            self.__toggleAllChildren)
+        self.toggleAllChildrenAct.triggered.connect(self.__toggleAllChildren)
         self.viewActions.append(self.toggleAllChildrenAct)
         
         self.toggleCurrentAct = E5Action(QApplication.translate('ViewManager', 
@@ -2319,7 +2308,7 @@ class ViewManager(QObject):
                 """<b>Toggle current fold</b>"""
                 """<p>Toggle the folds of the current line of the current editor.</p>"""
                 ))
-        self.connect(self.toggleCurrentAct, SIGNAL('triggered()'), self.__toggleCurrent)
+        self.toggleCurrentAct.triggered.connect(self.__toggleCurrent)
         self.viewActions.append(self.toggleCurrentAct)
         
         self.unhighlightAct = E5Action(QApplication.translate('ViewManager', 
@@ -2334,7 +2323,7 @@ class ViewManager(QObject):
                 """<b>Remove all highlights</b>"""
                 """<p>Remove the highlights of all editors.</p>"""
                 ))
-        self.connect(self.unhighlightAct, SIGNAL('triggered()'), self.unhighlight)
+        self.unhighlightAct.triggered.connect(self.unhighlight)
         self.viewActions.append(self.unhighlightAct)
         
         self.splitViewAct = E5Action(QApplication.translate('ViewManager', 'Split view'),
@@ -2347,7 +2336,7 @@ class ViewManager(QObject):
                 """<b>Split view</b>"""
                 """<p>Add a split to the view.</p>"""
                 ))
-        self.connect(self.splitViewAct, SIGNAL('triggered()'), self.__splitView)
+        self.splitViewAct.triggered.connect(self.__splitView)
         self.viewActions.append(self.splitViewAct)
         
         self.splitOrientationAct = E5Action(QApplication.translate('ViewManager', 
@@ -2377,7 +2366,7 @@ class ViewManager(QObject):
                 """<b>Remove split</b>"""
                 """<p>Remove the current split.</p>"""
                 ))
-        self.connect(self.splitRemoveAct, SIGNAL('triggered()'), self.removeSplit)
+        self.splitRemoveAct.triggered.connect(self.removeSplit)
         self.viewActions.append(self.splitRemoveAct)
         
         self.nextSplitAct = E5Action(QApplication.translate('ViewManager', 'Next split'),
@@ -2392,7 +2381,7 @@ class ViewManager(QObject):
                 """<b>Next split</b>"""
                 """<p>Move to the next split.</p>"""
                 ))
-        self.connect(self.nextSplitAct, SIGNAL('triggered()'), self.nextSplit)
+        self.nextSplitAct.triggered.connect(self.nextSplit)
         self.viewActions.append(self.nextSplitAct)
         
         self.prevSplitAct = E5Action(QApplication.translate('ViewManager', 
@@ -2407,7 +2396,7 @@ class ViewManager(QObject):
                 """<b>Previous split</b>"""
                 """<p>Move to the previous split.</p>"""
                 ))
-        self.connect(self.prevSplitAct, SIGNAL('triggered()'), self.prevSplit)
+        self.prevSplitAct.triggered.connect(self.prevSplit)
         self.viewActions.append(self.prevSplitAct)
         
         self.viewActGrp.setEnabled(False)
@@ -2484,8 +2473,7 @@ class ViewManager(QObject):
                 """<b>Start Macro Recording</b>"""
                 """<p>Start recording editor commands into a new macro.</p>"""
                 ))
-        self.connect(self.macroStartRecAct, SIGNAL('triggered()'), 
-            self.__macroStartRecording)
+        self.macroStartRecAct.triggered.connect(self.__macroStartRecording)
         self.macroActions.append(self.macroStartRecAct)
         
         self.macroStopRecAct = E5Action(QApplication.translate('ViewManager', 
@@ -2499,8 +2487,7 @@ class ViewManager(QObject):
                 """<b>Stop Macro Recording</b>"""
                 """<p>Stop recording editor commands into a new macro.</p>"""
                 ))
-        self.connect(self.macroStopRecAct, SIGNAL('triggered()'), 
-            self.__macroStopRecording)
+        self.macroStopRecAct.triggered.connect(self.__macroStopRecording)
         self.macroActions.append(self.macroStopRecAct)
         
         self.macroRunAct = E5Action(QApplication.translate('ViewManager', 'Run Macro'),
@@ -2511,7 +2498,7 @@ class ViewManager(QObject):
                 """<b>Run Macro</b>"""
                 """<p>Run a previously recorded editor macro.</p>"""
                 ))
-        self.connect(self.macroRunAct, SIGNAL('triggered()'), self.__macroRun)
+        self.macroRunAct.triggered.connect(self.__macroRun)
         self.macroActions.append(self.macroRunAct)
         
         self.macroDeleteAct = E5Action(QApplication.translate('ViewManager', 
@@ -2524,7 +2511,7 @@ class ViewManager(QObject):
                 """<b>Delete Macro</b>"""
                 """<p>Delete a previously recorded editor macro.</p>"""
                 ))
-        self.connect(self.macroDeleteAct, SIGNAL('triggered()'), self.__macroDelete)
+        self.macroDeleteAct.triggered.connect(self.__macroDelete)
         self.macroActions.append(self.macroDeleteAct)
         
         self.macroLoadAct = E5Action(QApplication.translate('ViewManager', 'Load Macro'),
@@ -2536,7 +2523,7 @@ class ViewManager(QObject):
                 """<b>Load Macro</b>"""
                 """<p>Load an editor macro from a file.</p>"""
                 ))
-        self.connect(self.macroLoadAct, SIGNAL('triggered()'), self.__macroLoad)
+        self.macroLoadAct.triggered.connect(self.__macroLoad)
         self.macroActions.append(self.macroLoadAct)
         
         self.macroSaveAct = E5Action(QApplication.translate('ViewManager', 'Save Macro'),
@@ -2548,7 +2535,7 @@ class ViewManager(QObject):
                 """<b>Save Macro</b>"""
                 """<p>Save a previously recorded editor macro to a file.</p>"""
                 ))
-        self.connect(self.macroSaveAct, SIGNAL('triggered()'), self.__macroSave)
+        self.macroSaveAct.triggered.connect(self.__macroSave)
         self.macroActions.append(self.macroSaveAct)
         
         self.macroActGrp.setEnabled(False)
@@ -2588,7 +2575,7 @@ class ViewManager(QObject):
                 """<b>Toggle Bookmark</b>"""
                 """<p>Toggle a bookmark at the current line of the current editor.</p>"""
                 ))
-        self.connect(self.bookmarkToggleAct, SIGNAL('triggered()'), self.__toggleBookmark)
+        self.bookmarkToggleAct.triggered.connect(self.__toggleBookmark)
         self.bookmarkActions.append(self.bookmarkToggleAct)
         
         self.bookmarkNextAct = E5Action(QApplication.translate('ViewManager', 
@@ -2604,7 +2591,7 @@ class ViewManager(QObject):
                 """<b>Next Bookmark</b>"""
                 """<p>Go to next bookmark of the current editor.</p>"""
                 ))
-        self.connect(self.bookmarkNextAct, SIGNAL('triggered()'), self.__nextBookmark)
+        self.bookmarkNextAct.triggered.connect(self.__nextBookmark)
         self.bookmarkActions.append(self.bookmarkNextAct)
         
         self.bookmarkPreviousAct = E5Action(QApplication.translate('ViewManager', 
@@ -2620,8 +2607,7 @@ class ViewManager(QObject):
                 """<b>Previous Bookmark</b>"""
                 """<p>Go to previous bookmark of the current editor.</p>"""
                 ))
-        self.connect(self.bookmarkPreviousAct, SIGNAL('triggered()'), 
-            self.__previousBookmark)
+        self.bookmarkPreviousAct.triggered.connect(self.__previousBookmark)
         self.bookmarkActions.append(self.bookmarkPreviousAct)
         
         self.bookmarkClearAct = E5Action(QApplication.translate('ViewManager', 
@@ -2637,8 +2623,7 @@ class ViewManager(QObject):
                 """<b>Clear Bookmarks</b>"""
                 """<p>Clear bookmarks of all editors.</p>"""
                 ))
-        self.connect(self.bookmarkClearAct, SIGNAL('triggered()'), 
-            self.__clearAllBookmarks)
+        self.bookmarkClearAct.triggered.connect(self.__clearAllBookmarks)
         self.bookmarkActions.append(self.bookmarkClearAct)
         
         self.syntaxErrorGotoAct = E5Action(QApplication.translate('ViewManager', 
@@ -2653,8 +2638,7 @@ class ViewManager(QObject):
                 """<b>Goto Syntax Error</b>"""
                 """<p>Go to next syntax error of the current editor.</p>"""
                 ))
-        self.connect(self.syntaxErrorGotoAct, SIGNAL('triggered()'), 
-            self.__gotoSyntaxError)
+        self.syntaxErrorGotoAct.triggered.connect(self.__gotoSyntaxError)
         self.bookmarkActions.append(self.syntaxErrorGotoAct)
         
         self.syntaxErrorClearAct = E5Action(QApplication.translate('ViewManager', 
@@ -2668,8 +2652,7 @@ class ViewManager(QObject):
                 """<b>Clear Syntax Errors</b>"""
                 """<p>Clear syntax errors of all editors.</p>"""
                 ))
-        self.connect(self.syntaxErrorClearAct, SIGNAL('triggered()'), 
-            self.__clearAllSyntaxErrors)
+        self.syntaxErrorClearAct.triggered.connect(self.__clearAllSyntaxErrors)
         self.bookmarkActions.append(self.syntaxErrorClearAct)
         
         self.warningsNextAct = E5Action(QApplication.translate('ViewManager', 
@@ -2686,7 +2669,7 @@ class ViewManager(QObject):
                 """<p>Go to next line of the current editor"""
                 """ having a py3flakes warning.</p>"""
                 ))
-        self.connect(self.warningsNextAct, SIGNAL('triggered()'), self.__nextWarning)
+        self.warningsNextAct.triggered.connect(self.__nextWarning)
         self.bookmarkActions.append(self.warningsNextAct)
         
         self.warningsPreviousAct = E5Action(QApplication.translate('ViewManager', 
@@ -2703,8 +2686,7 @@ class ViewManager(QObject):
                 """<p>Go to previous line of the current editor"""
                 """ having a py3flakes warning.</p>"""
                 ))
-        self.connect(self.warningsPreviousAct, SIGNAL('triggered()'), 
-            self.__previousWarning)
+        self.warningsPreviousAct.triggered.connect(self.__previousWarning)
         self.bookmarkActions.append(self.warningsPreviousAct)
         
         self.warningsClearAct = E5Action(QApplication.translate('ViewManager', 
@@ -2719,8 +2701,7 @@ class ViewManager(QObject):
                 """<b>Clear Warning Messages</b>"""
                 """<p>Clear py3flakes warning messages of all editors.</p>"""
                 ))
-        self.connect(self.warningsClearAct, SIGNAL('triggered()'), 
-            self.__clearAllWarnings)
+        self.warningsClearAct.triggered.connect(self.__clearAllWarnings)
         self.bookmarkActions.append(self.warningsClearAct)
         
         self.notcoveredNextAct = E5Action(QApplication.translate('ViewManager', 
@@ -2735,7 +2716,7 @@ class ViewManager(QObject):
                 """<b>Next uncovered line</b>"""
                 """<p>Go to next line of the current editor marked as not covered.</p>"""
                 ))
-        self.connect(self.notcoveredNextAct, SIGNAL('triggered()'), self.__nextUncovered)
+        self.notcoveredNextAct.triggered.connect(self.__nextUncovered)
         self.bookmarkActions.append(self.notcoveredNextAct)
         
         self.notcoveredPreviousAct = E5Action(QApplication.translate('ViewManager', 
@@ -2752,8 +2733,7 @@ class ViewManager(QObject):
                 """<p>Go to previous line of the current editor marked"""
                 """ as not covered.</p>"""
                 ))
-        self.connect(self.notcoveredPreviousAct, SIGNAL('triggered()'), 
-            self.__previousUncovered)
+        self.notcoveredPreviousAct.triggered.connect(self.__previousUncovered)
         self.bookmarkActions.append(self.notcoveredPreviousAct)
         
         self.taskNextAct = E5Action(QApplication.translate('ViewManager', 
@@ -2768,7 +2748,7 @@ class ViewManager(QObject):
                 """<b>Next Task</b>"""
                 """<p>Go to next line of the current editor having a task.</p>"""
                 ))
-        self.connect(self.taskNextAct, SIGNAL('triggered()'), self.__nextTask)
+        self.taskNextAct.triggered.connect(self.__nextTask)
         self.bookmarkActions.append(self.taskNextAct)
         
         self.taskPreviousAct = E5Action(QApplication.translate('ViewManager', 
@@ -2784,7 +2764,7 @@ class ViewManager(QObject):
                 """<b>Previous Task</b>"""
                 """<p>Go to previous line of the current editor having a task.</p>"""
                 ))
-        self.connect(self.taskPreviousAct, SIGNAL('triggered()'), self.__previousTask)
+        self.taskPreviousAct.triggered.connect(self.__previousTask)
         self.bookmarkActions.append(self.taskPreviousAct)
         
         self.bookmarkActGrp.setEnabled(False)
@@ -2883,7 +2863,7 @@ class ViewManager(QObject):
                 """<b>Spell check</b>"""
                 """<p>Perform a spell check of the current editor.</p>"""
                 ))
-        self.connect(self.spellCheckAct, SIGNAL('triggered()'), self.__spellCheck)
+        self.spellCheckAct.triggered.connect(self.__spellCheck)
         self.spellingActions.append(self.spellCheckAct)
         
         self.autoSpellCheckAct = E5Action(QApplication.translate('ViewManager', 
@@ -2903,8 +2883,7 @@ class ViewManager(QObject):
         self.autoSpellCheckAct.setCheckable(True)
         self.autoSpellCheckAct.setChecked(
             Preferences.getEditor("AutoSpellCheckingEnabled"))
-        self.connect(self.autoSpellCheckAct, SIGNAL('triggered()'), 
-                     self.__setAutoSpellChecking)
+        self.autoSpellCheckAct.triggered.connect(self.__setAutoSpellChecking)
         self.spellingActions.append(self.autoSpellCheckAct)
         
         self.__enableSpellingActions()

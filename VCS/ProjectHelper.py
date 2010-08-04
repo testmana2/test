@@ -70,7 +70,7 @@ class VcsProjectHelper(QObject):
             """<b>New from repository</b>"""
             """<p>This creates a new local project from the VCS repository.</p>"""
         ))
-        self.connect(self.vcsNewAct, SIGNAL('triggered()'), self._vcsCheckout)
+        self.vcsNewAct.triggered.connect(self._vcsCheckout)
         self.actions.append(self.vcsNewAct)
         
         self.vcsExportAct = E5Action(self.trUtf8('Export from repository'), 
@@ -82,7 +82,7 @@ class VcsProjectHelper(QObject):
             """<b>Export from repository</b>"""
             """<p>This exports a project from the repository.</p>"""
         ))
-        self.connect(self.vcsExportAct, SIGNAL('triggered()'), self._vcsExport)
+        self.vcsExportAct.triggered.connect(self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
         self.vcsAddAct = E5Action(self.trUtf8('Add to repository'),
@@ -94,7 +94,7 @@ class VcsProjectHelper(QObject):
             """<b>Add to repository</b>"""
             """<p>This adds (imports) the local project to the VCS repository.</p>"""
         ))
-        self.connect(self.vcsAddAct, SIGNAL('triggered()'), self._vcsImport)
+        self.vcsAddAct.triggered.connect(self._vcsImport)
         self.actions.append(self.vcsAddAct)
     
     def initMenu(self, menu):

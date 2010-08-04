@@ -93,7 +93,7 @@ class BookmarksMenu(E5ModelMenu):
         
         self.addSeparator()
         act = self.addAction(self.trUtf8("Open all in Tabs"))
-        self.connect(act, SIGNAL("triggered()"), self.__openAll)
+        act.triggered.connect(self.__openAll)
     
     def __openAll(self):
         """

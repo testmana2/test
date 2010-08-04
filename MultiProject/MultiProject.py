@@ -685,7 +685,7 @@ class MultiProject(QObject):
             """<p>This opens a dialog for entering the info for a"""
             """ new multiproject.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.newMultiProject)
+        act.triggered.connect(self.newMultiProject)
         self.actions.append(act)
 
         act = E5Action(self.trUtf8('Open multiproject'),
@@ -697,7 +697,7 @@ class MultiProject(QObject):
             """<b>Open...</b>"""
             """<p>This opens an existing multiproject.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.openMultiProject)
+        act.triggered.connect(self.openMultiProject)
         self.actions.append(act)
 
         self.closeAct = E5Action(self.trUtf8('Close multiproject'),
@@ -708,7 +708,7 @@ class MultiProject(QObject):
             """<b>Close</b>"""
             """<p>This closes the current multiproject.</p>"""
         ))
-        self.connect(self.closeAct, SIGNAL('triggered()'), self.closeMultiProject)
+        self.closeAct.triggered.connect(self.closeMultiProject)
         self.actions.append(self.closeAct)
 
         self.saveAct = E5Action(self.trUtf8('Save multiproject'),
@@ -719,7 +719,7 @@ class MultiProject(QObject):
             """<b>Save</b>"""
             """<p>This saves the current multiproject.</p>"""
         ))
-        self.connect(self.saveAct, SIGNAL('triggered()'), self.saveMultiProject)
+        self.saveAct.triggered.connect(self.saveMultiProject)
         self.actions.append(self.saveAct)
 
         self.saveasAct = E5Action(self.trUtf8('Save multiproject as'),
@@ -731,7 +731,7 @@ class MultiProject(QObject):
             """<b>Save as</b>"""
             """<p>This saves the current multiproject to a new file.</p>"""
         ))
-        self.connect(self.saveasAct, SIGNAL('triggered()'), self.saveMultiProjectAs)
+        self.saveasAct.triggered.connect(self.saveMultiProjectAs)
         self.actions.append(self.saveasAct)
 
         self.addProjectAct = E5Action(self.trUtf8('Add project to multiproject'),
@@ -745,7 +745,7 @@ class MultiProject(QObject):
             """<p>This opens a dialog for adding a project"""
             """ to the current multiproject.</p>"""
         ))
-        self.connect(self.addProjectAct, SIGNAL('triggered()'), self.addProject)
+        self.addProjectAct.triggered.connect(self.addProject)
         self.actions.append(self.addProjectAct)
 
         self.propsAct = E5Action(self.trUtf8('Multiproject properties'),
@@ -756,7 +756,7 @@ class MultiProject(QObject):
             """<b>Properties...</b>"""
             """<p>This shows a dialog to edit the multiproject properties.</p>"""
         ))
-        self.connect(self.propsAct, SIGNAL('triggered()'), self.__showProperties)
+        self.propsAct.triggered.connect(self.__showProperties)
         self.actions.append(self.propsAct)
 
         self.closeAct.setEnabled(False)

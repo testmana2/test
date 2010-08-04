@@ -82,7 +82,7 @@ class AboutPlugin(QObject):
             """<b>About {0}</b>"""
             """<p>Display some information about this software.</p>"""
                              ).format(Program))
-        self.connect(self.aboutAct, SIGNAL('triggered()'), self.__about)
+        self.aboutAct.triggered.connect(self.__about)
         acts.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
@@ -94,7 +94,7 @@ class AboutPlugin(QObject):
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.connect(self.aboutQtAct, SIGNAL('triggered()'), self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
         acts.append(self.aboutQtAct)
         
         self.__ui.addE5Actions(acts, 'ui')

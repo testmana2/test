@@ -3348,7 +3348,7 @@ class Project(QObject):
             """<p>This opens a dialog for entering the info for a"""
             """ new project.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.newProject)
+        act.triggered.connect(self.newProject)
         self.actions.append(act)
 
         act = E5Action(self.trUtf8('Open project'),
@@ -3360,7 +3360,7 @@ class Project(QObject):
             """<b>Open...</b>"""
             """<p>This opens an existing project.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.openProject)
+        act.triggered.connect(self.openProject)
         self.actions.append(act)
 
         self.closeAct = E5Action(self.trUtf8('Close project'),
@@ -3371,7 +3371,7 @@ class Project(QObject):
             """<b>Close</b>"""
             """<p>This closes the current project.</p>"""
         ))
-        self.connect(self.closeAct, SIGNAL('triggered()'), self.closeProject)
+        self.closeAct.triggered.connect(self.closeProject)
         self.actions.append(self.closeAct)
 
         self.saveAct = E5Action(self.trUtf8('Save project'),
@@ -3382,7 +3382,7 @@ class Project(QObject):
             """<b>Save</b>"""
             """<p>This saves the current project.</p>"""
         ))
-        self.connect(self.saveAct, SIGNAL('triggered()'), self.saveProject)
+        self.saveAct.triggered.connect(self.saveProject)
         self.actions.append(self.saveAct)
 
         self.saveasAct = E5Action(self.trUtf8('Save project as'),
@@ -3393,7 +3393,7 @@ class Project(QObject):
             """<b>Save as</b>"""
             """<p>This saves the current project to a new file.</p>"""
         ))
-        self.connect(self.saveasAct, SIGNAL('triggered()'), self.saveProjectAs)
+        self.saveasAct.triggered.connect(self.saveProjectAs)
         self.actions.append(self.saveasAct)
 
         self.actGrp2 = createActionGroup(self)
@@ -3409,7 +3409,7 @@ class Project(QObject):
             """ to the current project. The place to add is"""
             """ determined by the file extension.</p>"""
         ))
-        self.connect(self.addFilesAct, SIGNAL('triggered()'), self.addFiles)
+        self.addFilesAct.triggered.connect(self.addFiles)
         self.actions.append(self.addFilesAct)
 
         self.addDirectoryAct = E5Action(self.trUtf8('Add directory to project'),
@@ -3423,7 +3423,7 @@ class Project(QObject):
             """<p>This opens a dialog for adding a directory"""
             """ to the current project.</p>"""
         ))
-        self.connect(self.addDirectoryAct, SIGNAL('triggered()'), self.addDirectory)
+        self.addDirectoryAct.triggered.connect(self.addDirectory)
         self.actions.append(self.addDirectoryAct)
 
         self.addLanguageAct = E5Action(self.trUtf8('Add translation to project'),
@@ -3437,7 +3437,7 @@ class Project(QObject):
             """<p>This opens a dialog for add a translation"""
             """ to the current project.</p>"""
         ))
-        self.connect(self.addLanguageAct, SIGNAL('triggered()'), self.addLanguage)
+        self.addLanguageAct.triggered.connect(self.addLanguage)
         self.actions.append(self.addLanguageAct)
 
         act = E5Action(self.trUtf8('Search new files'),
@@ -3449,7 +3449,7 @@ class Project(QObject):
             """<p>This searches for new files (sources, *.ui, *.idl) in the project"""
             """ directory and registered subdirectories.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.__searchNewFiles)
+        act.triggered.connect(self.__searchNewFiles)
         self.actions.append(act)
 
         self.propsAct = E5Action(self.trUtf8('Project properties'),
@@ -3460,7 +3460,7 @@ class Project(QObject):
             """<b>Properties...</b>"""
             """<p>This shows a dialog to edit the project properties.</p>"""
         ))
-        self.connect(self.propsAct, SIGNAL('triggered()'), self.__showProperties)
+        self.propsAct.triggered.connect(self.__showProperties)
         self.actions.append(self.propsAct)
 
         self.userPropsAct = E5Action(self.trUtf8('User project properties'),
@@ -3472,7 +3472,7 @@ class Project(QObject):
             """<b>User Properties...</b>"""
             """<p>This shows a dialog to edit the user specific project properties.</p>"""
         ))
-        self.connect(self.userPropsAct, SIGNAL('triggered()'), self.__showUserProperties)
+        self.userPropsAct.triggered.connect(self.__showUserProperties)
         self.actions.append(self.userPropsAct)
 
         self.filetypesAct = E5Action(self.trUtf8('Filetype Associations'),
@@ -3487,8 +3487,7 @@ class Project(QObject):
             """ or others) with a filename pattern. They are used when adding a file"""
             """ to the project and when performing a search for new files.</p>"""
         ))
-        self.connect(self.filetypesAct, SIGNAL('triggered()'), 
-            self.__showFiletypeAssociations)
+        self.filetypesAct.triggered.connect(self.__showFiletypeAssociations)
         self.actions.append(self.filetypesAct)
 
         self.lexersAct = E5Action(self.trUtf8('Lexer Associations'),
@@ -3502,8 +3501,7 @@ class Project(QObject):
             """ These associations override the global lexer associations. Lexers"""
             """ are used to highlight the editor text.</p>"""
         ))
-        self.connect(self.lexersAct, SIGNAL('triggered()'), 
-            self.__showLexerAssociations)
+        self.lexersAct.triggered.connect(self.__showLexerAssociations)
         self.actions.append(self.lexersAct)
 
         self.dbgActGrp = createActionGroup(self)
@@ -3516,7 +3514,7 @@ class Project(QObject):
             """<b>Debugger Properties...</b>"""
             """<p>This shows a dialog to edit project specific debugger settings.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.__showDebugProperties)
+        act.triggered.connect(self.__showDebugProperties)
         self.actions.append(act)
         
         act = E5Action(self.trUtf8('Load'),
@@ -3527,7 +3525,7 @@ class Project(QObject):
             """<b>Load Debugger Properties</b>"""
             """<p>This loads the project specific debugger settings.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.__readDebugProperties)
+        act.triggered.connect(self.__readDebugProperties)
         self.actions.append(act)
         
         act = E5Action(self.trUtf8('Save'),
@@ -3538,7 +3536,7 @@ class Project(QObject):
             """<b>Save Debugger Properties</b>"""
             """<p>This saves the project specific debugger settings.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.__writeDebugProperties)
+        act.triggered.connect(self.__writeDebugProperties)
         self.actions.append(act)
         
         act = E5Action(self.trUtf8('Delete'),
@@ -3550,7 +3548,7 @@ class Project(QObject):
             """<p>This deletes the file containing the project specific"""
             """ debugger settings.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.__deleteDebugProperties)
+        act.triggered.connect(self.__deleteDebugProperties)
         self.actions.append(act)
         
         act = E5Action(self.trUtf8('Reset'),
@@ -3561,7 +3559,7 @@ class Project(QObject):
             """<b>Reset Debugger Properties</b>"""
             """<p>This resets the project specific debugger settings.</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.__initDebugProperties)
+        act.triggered.connect(self.__initDebugProperties)
         self.actions.append(act)
         
         self.sessActGrp = createActionGroup(self)
@@ -3580,7 +3578,7 @@ class Project(QObject):
             """- the working directory<br>"""
             """- the exception reporting flag</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.__readSession)
+        act.triggered.connect(self.__readSession)
         self.actions.append(act)
 
         act = E5Action(self.trUtf8('Save session'),
@@ -3597,7 +3595,7 @@ class Project(QObject):
             """- the working directory<br>"""
             """- the exception reporting flag</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.__writeSession)
+        act.triggered.connect(self.__writeSession)
         self.actions.append(act)
         
         act = E5Action(self.trUtf8('Delete session'),
@@ -3608,7 +3606,7 @@ class Project(QObject):
             """<b>Delete session</b>"""
             """<p>This deletes the projects session file</p>"""
         ))
-        self.connect(act, SIGNAL('triggered()'), self.__deleteSession)
+        act.triggered.connect(self.__deleteSession)
         self.actions.append(act)
         
         self.chkGrp = createActionGroup(self)
@@ -3622,7 +3620,7 @@ class Project(QObject):
             """<b>Code Metrics...</b>"""
             """<p>This shows some code metrics for all Python files in the project.</p>"""
         ))
-        self.connect(self.codeMetricsAct, SIGNAL('triggered()'), self.__showCodeMetrics)
+        self.codeMetricsAct.triggered.connect(self.__showCodeMetrics)
         self.actions.append(self.codeMetricsAct)
 
         self.codeCoverageAct = E5Action(self.trUtf8('Python Code Coverage'),
@@ -3635,7 +3633,7 @@ class Project(QObject):
             """<p>This shows the code coverage information for all Python files"""
             """ in the project.</p>"""
         ))
-        self.connect(self.codeCoverageAct, SIGNAL('triggered()'), self.__showCodeCoverage)
+        self.codeCoverageAct.triggered.connect(self.__showCodeCoverage)
         self.actions.append(self.codeCoverageAct)
 
         self.codeProfileAct = E5Action(self.trUtf8('Profile Data'),
@@ -3647,7 +3645,7 @@ class Project(QObject):
             """<b>Profile Data...</b>"""
             """<p>This shows the profiling data for the project.</p>"""
         ))
-        self.connect(self.codeProfileAct, SIGNAL('triggered()'), self.__showProfileData)
+        self.codeProfileAct.triggered.connect(self.__showProfileData)
         self.actions.append(self.codeProfileAct)
 
         self.applicationDiagramAct = E5Action(self.trUtf8('Application Diagram'),
@@ -3659,8 +3657,7 @@ class Project(QObject):
             """<b>Application Diagram...</b>"""
             """<p>This shows a diagram of the project.</p>"""
         ))
-        self.connect(self.applicationDiagramAct, 
-            SIGNAL('triggered()'), self.handleApplicationDiagram)
+        self.applicationDiagramAct.triggered.connect(self.handleApplicationDiagram)
         self.actions.append(self.applicationDiagramAct)
 
         self.pluginGrp = createActionGroup(self)
@@ -3676,8 +3673,7 @@ class Project(QObject):
             """<p>This creates an initial list of files to include in an eric5 """
             """plugin archive. The list is created from the project file.</p>"""
         ))
-        self.connect(self.pluginPkgListAct, SIGNAL('triggered()'), 
-            self.__pluginCreatePkgList)
+        self.pluginPkgListAct.triggered.connect(self.__pluginCreatePkgList)
         self.actions.append(self.pluginPkgListAct)
 
         self.pluginArchiveAct = E5Action(self.trUtf8('Create Plugin Archive'),
@@ -3692,8 +3688,7 @@ class Project(QObject):
             """given in the PKGLIST file. The archive name is built from the main """
             """script name.</p>"""
         ))
-        self.connect(self.pluginArchiveAct, SIGNAL('triggered()'), 
-            self.__pluginCreateArchive)
+        self.pluginArchiveAct.triggered.connect(self.__pluginCreateArchive)
         self.actions.append(self.pluginArchiveAct)
     
         self.pluginSArchiveAct = E5Action(self.trUtf8('Create Plugin Archive (Snapshot)'),
@@ -3709,8 +3704,7 @@ class Project(QObject):
             """script name. The version entry of the main script is modified to """
             """reflect a snapshot release.</p>"""
         ))
-        self.connect(self.pluginSArchiveAct, SIGNAL('triggered()'), 
-            self.__pluginCreateSnapshotArchive)
+        self.pluginSArchiveAct.triggered.connect(self.__pluginCreateSnapshotArchive)
         self.actions.append(self.pluginSArchiveAct)
 
         self.closeAct.setEnabled(False)

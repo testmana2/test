@@ -39,7 +39,7 @@ class UMLDialog(QMainWindow):
         self.closeAct = \
             QAction(UI.PixmapCache.getIcon("close.png"),
                     self.trUtf8("Close"), self)
-        self.connect(self.closeAct, SIGNAL("triggered()"), self.close)
+        self.closeAct.triggered.connect(self.close)
         
         self.windowToolBar = QToolBar(self.trUtf8("Window"), self)
         self.windowToolBar.setIconSize(UI.Config.ToolBarIconSize)

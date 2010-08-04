@@ -101,7 +101,7 @@ class EricapiPlugin(QObject):
                 """<b>Generate API file</b>"""
                 """<p>Generate an API file using eric5-api.</p>"""
             ))
-            self.connect(self.__projectAct, SIGNAL('triggered()'), self.__doEricapi)
+            self.__projectAct.triggered.connect(self.__doEricapi)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         

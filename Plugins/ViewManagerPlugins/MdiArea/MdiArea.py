@@ -217,7 +217,7 @@ class MdiArea(QMdiArea, ViewManager):
             """<b>Tile the windows</b>"""
             """<p>Rearrange and resize the windows so that they are tiled.</p>"""
         ))
-        self.connect(self.tileAct, SIGNAL('triggered()'), self.tile)
+        self.tileAct.triggered.connect(self.tile)
         self.windowActions.append(self.tileAct)
         
         self.cascadeAct = E5Action(self.trUtf8('Cascade'),
@@ -227,7 +227,7 @@ class MdiArea(QMdiArea, ViewManager):
             """<b>Cascade the windows</b>"""
             """<p>Rearrange and resize the windows so that they are cascaded.</p>"""
         ))
-        self.connect(self.cascadeAct, SIGNAL('triggered()'), self.cascade)
+        self.cascadeAct.triggered.connect(self.cascade)
         self.windowActions.append(self.cascadeAct)
         
         self.nextChildAct = E5Action(self.trUtf8('Next'),
@@ -237,7 +237,7 @@ class MdiArea(QMdiArea, ViewManager):
             """<b>Next</b>"""
             """<p>Activate the next window of the list of open windows.</p>"""
         ))
-        self.connect(self.nextChildAct, SIGNAL('triggered()'), self.activateNextSubWindow)
+        self.nextChildAct.triggered.connect(self.activateNextSubWindow)
         self.windowActions.append(self.nextChildAct)
         
         self.prevChildAct = E5Action(self.trUtf8('Previous'),
@@ -247,8 +247,7 @@ class MdiArea(QMdiArea, ViewManager):
             """<b>Previous</b>"""
             """<p>Activate the previous window of the list of open windows.</p>"""
         ))
-        self.connect(self.prevChildAct, SIGNAL('triggered()'), 
-            self.activatePreviousSubWindow)
+        self.prevChildAct.triggered.connect(self.activatePreviousSubWindow)
         self.windowActions.append(self.prevChildAct)
         
         self.restoreAllAct = E5Action(self.trUtf8('Restore All'),
@@ -258,7 +257,7 @@ class MdiArea(QMdiArea, ViewManager):
             """<b>Restore All</b>"""
             """<p>Restores all windows to their original size.</p>"""
         ))
-        self.connect(self.restoreAllAct, SIGNAL('triggered()'), self.__restoreAllWindows)
+        self.restoreAllAct.triggered.connect(self.__restoreAllWindows)
         self.windowActions.append(self.restoreAllAct)
         
         self.iconizeAllAct = E5Action(self.trUtf8('Iconize All'),
@@ -268,7 +267,7 @@ class MdiArea(QMdiArea, ViewManager):
             """<b>Iconize All</b>"""
             """<p>Iconizes all windows.</p>"""
         ))
-        self.connect(self.iconizeAllAct, SIGNAL('triggered()'), self.__iconizeAllWindows)
+        self.iconizeAllAct.triggered.connect(self.__iconizeAllWindows)
         self.windowActions.append(self.iconizeAllAct)
         
     def setEditorName(self, editor, newName):

@@ -94,13 +94,13 @@ class Terminal(QsciScintillaCompat):
         self.cmenu = QMenu(self.trUtf8('Ctrl Commands'))
         act = self.cmenu.addAction(self.trUtf8('Ctrl-C'))
         self.csm.setMapping(act, 3)
-        self.connect(act, SIGNAL('triggered()'), self.csm, SLOT('map()'))
+        act.triggered.connect(self.csm.map)
         act = self.cmenu.addAction(self.trUtf8('Ctrl-D'))
         self.csm.setMapping(act, 4)
-        self.connect(act, SIGNAL('triggered()'), self.csm, SLOT('map()'))
+        act.triggered.connect(self.csm.map)
         act = self.cmenu.addAction(self.trUtf8('Ctrl-Z'))
         self.csm.setMapping(act, 26)
-        self.connect(act, SIGNAL('triggered()'), self.csm, SLOT('map()'))
+        act.triggered.connect(self.csm.map)
         
         # Create a little context menu
         self.menu = QMenu(self)

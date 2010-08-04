@@ -67,38 +67,37 @@ class SvgDiagram(QMainWindow):
         self.closeAct = \
             QAction(UI.PixmapCache.getIcon("close.png"),
                     self.trUtf8("Close"), self)
-        self.connect(self.closeAct, SIGNAL("triggered()"), self.close)
+        self.closeAct.triggered.connect(self.close)
         
         self.printAct = \
             QAction(UI.PixmapCache.getIcon("print.png"),
                     self.trUtf8("Print"), self)
-        self.connect(self.printAct, SIGNAL("triggered()"), self.__printDiagram)
+        self.printAct.triggered.connect(self.__printDiagram)
         
         self.printPreviewAct = \
             QAction(UI.PixmapCache.getIcon("printPreview.png"),
                     self.trUtf8("Print Preview"), self)
-        self.connect(self.printPreviewAct, SIGNAL("triggered()"), 
-            self.__printPreviewDiagram)
+        self.printPreviewAct.triggered.connect(self.__printPreviewDiagram)
         
         self.zoomInAct = \
             QAction(UI.PixmapCache.getIcon("zoomIn.png"),
                     self.trUtf8("Zoom in"), self)
-        self.connect(self.zoomInAct, SIGNAL("triggered()"), self.__zoomIn)
+        self.zoomInAct.triggered.connect(self.__zoomIn)
         
         self.zoomOutAct = \
             QAction(UI.PixmapCache.getIcon("zoomOut.png"),
                     self.trUtf8("Zoom out"), self)
-        self.connect(self.zoomOutAct, SIGNAL("triggered()"), self.__zoomOut)
+        self.zoomOutAct.triggered.connect(self.__zoomOut)
         
         self.zoomAct = \
             QAction(UI.PixmapCache.getIcon("zoomTo.png"),
                     self.trUtf8("Zoom..."), self)
-        self.connect(self.zoomAct, SIGNAL("triggered()"), self.__zoom)
+        self.zoomAct.triggered.connect(self.__zoom)
         
         self.zoomResetAct = \
             QAction(UI.PixmapCache.getIcon("zoomReset.png"),
                     self.trUtf8("Zoom reset"), self)
-        self.connect(self.zoomResetAct, SIGNAL("triggered()"), self.__zoomReset)
+        self.zoomResetAct.triggered.connect(self.__zoomReset)
         
     def __initContextMenu(self):
         """

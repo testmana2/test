@@ -116,16 +116,14 @@ character except an alphabetic character.</td></tr>
         self.findNextAct = E5Action(self.trUtf8('Find Next'),
                 self.trUtf8('Find Next'),
                 0, 0, self, 'search_widget_find_next')
-        self.connect(self.findNextAct, SIGNAL('triggered()'), 
-                     self.on_findNextButton_clicked)
+        self.findNextAct.triggered.connect(self.on_findNextButton_clicked)
         self.findNextAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findNextAct)
         
         self.findPrevAct = E5Action(self.trUtf8('Find Prev'),
                 self.trUtf8('Find Prev'),
                 0, 0, self, 'search_widget_find_prev')
-        self.connect(self.findPrevAct, SIGNAL('triggered()'), 
-                     self.on_findPrevButton_clicked)
+        self.findPrevAct.triggered.connect(self.on_findPrevButton_clicked)
         self.findPrevAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findPrevAct)
         

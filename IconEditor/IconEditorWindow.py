@@ -172,7 +172,7 @@ class IconEditorWindow(QMainWindow):
                 """<b>New</b>"""
                 """<p>This creates a new icon.</p>"""
         ))
-        self.connect(self.newAct, SIGNAL('triggered()'), self.__newIcon)
+        self.newAct.triggered.connect(self.__newIcon)
         self.__actions.append(self.newAct)
         
         self.newWindowAct = E5Action(self.trUtf8('New Window'), 
@@ -184,7 +184,7 @@ class IconEditorWindow(QMainWindow):
                 """<b>New Window</b>"""
                 """<p>This opens a new icon editor window.</p>"""
         ))
-        self.connect(self.newWindowAct, SIGNAL('triggered()'), self.__newWindow)
+        self.newWindowAct.triggered.connect(self.__newWindow)
         self.__actions.append(self.newWindowAct)
         
         self.openAct = E5Action(self.trUtf8('Open'), 
@@ -198,7 +198,7 @@ class IconEditorWindow(QMainWindow):
                 """<p>This opens a new icon file for editing."""
                 """ It pops up a file selection dialog.</p>"""
         ))
-        self.connect(self.openAct, SIGNAL('triggered()'), self.__openIcon)
+        self.openAct.triggered.connect(self.__openIcon)
         self.__actions.append(self.openAct)
         
         self.saveAct = E5Action(self.trUtf8('Save'),
@@ -211,7 +211,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Save File</b>"""
             """<p>Save the contents of the icon editor window.</p>"""
         ))
-        self.connect(self.saveAct, SIGNAL('triggered()'), self.__saveIcon)
+        self.saveAct.triggered.connect(self.__saveIcon)
         self.__actions.append(self.saveAct)
         
         self.saveAsAct = E5Action(self.trUtf8('Save As'), 
@@ -225,7 +225,7 @@ class IconEditorWindow(QMainWindow):
                 """<b>Save As...</b>"""
                 """<p>Saves the current icon to a new file.</p>"""
         ))
-        self.connect(self.saveAsAct, SIGNAL('triggered()'), self.__saveIconAs)
+        self.saveAsAct.triggered.connect(self.__saveIconAs)
         self.__actions.append(self.saveAsAct)
         
         self.closeAct = E5Action(self.trUtf8('Close'), 
@@ -238,7 +238,7 @@ class IconEditorWindow(QMainWindow):
                 """<b>Close</b>"""
                 """<p>Closes the current icon editor window.</p>"""
         ))
-        self.connect(self.closeAct, SIGNAL('triggered()'), self.close)
+        self.closeAct.triggered.connect(self.close)
         self.__actions.append(self.closeAct)
         
         self.closeAllAct = E5Action(self.trUtf8('Close All'), 
@@ -249,7 +249,7 @@ class IconEditorWindow(QMainWindow):
                 """<b>Close All</b>"""
                 """<p>Closes all icon editor windows except the first one.</p>"""
         ))
-        self.connect(self.closeAllAct, SIGNAL('triggered()'), self.__closeAll)
+        self.closeAllAct.triggered.connect(self.__closeAll)
         self.__actions.append(self.closeAllAct)
         
         self.exitAct = E5Action(self.trUtf8('Quit'), 
@@ -263,7 +263,7 @@ class IconEditorWindow(QMainWindow):
                 """<p>Quit the icon editor.</p>"""
         ))
         if self.fromEric:
-            self.connect(self.exitAct, SIGNAL('triggered()'), self.close)
+            self.exitAct.triggered.connect(self.close)
         else:
             self.connect(self.exitAct, SIGNAL('triggered()'), 
                          qApp, SLOT('closeAllWindows()'))
@@ -284,7 +284,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Undo</b>"""
             """<p>Undo the last change done.</p>"""
         ))
-        self.connect(self.undoAct, SIGNAL('triggered()'), self.__editor.editUndo)
+        self.undoAct.triggered.connect(self.__editor.editUndo)
         self.__actions.append(self.undoAct)
         
         self.redoAct = E5Action(self.trUtf8('Redo'),
@@ -297,7 +297,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Redo</b>"""
             """<p>Redo the last change done.</p>"""
         ))
-        self.connect(self.redoAct, SIGNAL('triggered()'), self.__editor.editRedo)
+        self.redoAct.triggered.connect(self.__editor.editRedo)
         self.__actions.append(self.redoAct)
         
         self.cutAct = E5Action(self.trUtf8('Cut'),
@@ -311,7 +311,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Cut</b>"""
             """<p>Cut the selected image area to the clipboard.</p>"""
         ))
-        self.connect(self.cutAct, SIGNAL('triggered()'), self.__editor.editCut)
+        self.cutAct.triggered.connect(self.__editor.editCut)
         self.__actions.append(self.cutAct)
         
         self.copyAct = E5Action(self.trUtf8('Copy'),
@@ -325,7 +325,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Copy</b>"""
             """<p>Copy the selected image area to the clipboard.</p>"""
         ))
-        self.connect(self.copyAct, SIGNAL('triggered()'), self.__editor.editCopy)
+        self.copyAct.triggered.connect(self.__editor.editCopy)
         self.__actions.append(self.copyAct)
         
         self.pasteAct = E5Action(self.trUtf8('Paste'),
@@ -339,7 +339,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Paste</b>"""
             """<p>Paste the clipboard image.</p>"""
         ))
-        self.connect(self.pasteAct, SIGNAL('triggered()'), self.__editor.editPaste)
+        self.pasteAct.triggered.connect(self.__editor.editPaste)
         self.__actions.append(self.pasteAct)
         
         self.pasteNewAct = E5Action(self.trUtf8('Paste as New'),
@@ -351,7 +351,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Paste as New</b>"""
             """<p>Paste the clipboard image replacing the current one.</p>"""
         ))
-        self.connect(self.pasteNewAct, SIGNAL('triggered()'), self.__editor.editPasteAsNew)
+        self.pasteNewAct.triggered.connect(self.__editor.editPasteAsNew)
         self.__actions.append(self.pasteNewAct)
         
         self.deleteAct = E5Action(self.trUtf8('Clear'),
@@ -365,7 +365,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Clear</b>"""
             """<p>Clear the icon image and set it to be completely transparent.</p>"""
         ))
-        self.connect(self.deleteAct, SIGNAL('triggered()'), self.__editor.editClear)
+        self.deleteAct.triggered.connect(self.__editor.editClear)
         self.__actions.append(self.deleteAct)
         
         self.selectAllAct = E5Action(self.trUtf8('Select All'),
@@ -378,7 +378,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Select All</b>"""
             """<p>Selects the complete icon image.</p>"""
         ))
-        self.connect(self.selectAllAct, SIGNAL('triggered()'), self.__editor.editSelectAll)
+        self.selectAllAct.triggered.connect(self.__editor.editSelectAll)
         self.__actions.append(self.selectAllAct)
         
         self.resizeAct = E5Action(self.trUtf8('Change Size'),
@@ -391,7 +391,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Change Size...</b>"""
             """<p>Changes the icon size.</p>"""
         ))
-        self.connect(self.resizeAct, SIGNAL('triggered()'), self.__editor.editResize)
+        self.resizeAct.triggered.connect(self.__editor.editResize)
         self.__actions.append(self.resizeAct)
         
         self.grayscaleAct = E5Action(self.trUtf8('Grayscale'),
@@ -404,7 +404,7 @@ class IconEditorWindow(QMainWindow):
             """<b>Grayscale</b>"""
             """<p>Changes the icon to grayscale.</p>"""
         ))
-        self.connect(self.grayscaleAct, SIGNAL('triggered()'), self.__editor.grayScale)
+        self.grayscaleAct.triggered.connect(self.__editor.grayScale)
         self.__actions.append(self.grayscaleAct)
         
         self.redoAct.setEnabled(False)
@@ -443,7 +443,7 @@ class IconEditorWindow(QMainWindow):
                 """<b>Zoom in</b>"""
                 """<p>Zoom in on the icon. This makes the grid bigger.</p>"""
         ))
-        self.connect(self.zoomInAct, SIGNAL('triggered()'), self.__zoomIn)
+        self.zoomInAct.triggered.connect(self.__zoomIn)
         self.__actions.append(self.zoomInAct)
         
         self.zoomOutAct = E5Action(self.trUtf8('Zoom out'), 
@@ -456,7 +456,7 @@ class IconEditorWindow(QMainWindow):
                 """<b>Zoom out</b>"""
                 """<p>Zoom out on the icon. This makes the grid smaller.</p>"""
         ))
-        self.connect(self.zoomOutAct, SIGNAL('triggered()'), self.__zoomOut)
+        self.zoomOutAct.triggered.connect(self.__zoomOut)
         self.__actions.append(self.zoomOutAct)
         
         self.zoomResetAct = E5Action(self.trUtf8('Zoom reset'), 
@@ -470,7 +470,7 @@ class IconEditorWindow(QMainWindow):
                 """<p>Reset the zoom of the icon. """
                 """This sets the zoom factor to 100%.</p>"""
         ))
-        self.connect(self.zoomResetAct, SIGNAL('triggered()'), self.__zoomReset)
+        self.zoomResetAct.triggered.connect(self.__zoomReset)
         self.__actions.append(self.zoomResetAct)
         
         self.zoomToAct = E5Action(self.trUtf8('Zoom'),
@@ -485,7 +485,7 @@ class IconEditorWindow(QMainWindow):
                 """<p>Zoom the icon. This opens a dialog where the"""
                 """ desired zoom factor can be entered.</p>"""
                 ))
-        self.connect(self.zoomToAct, SIGNAL('triggered()'), self.__zoom)
+        self.zoomToAct.triggered.connect(self.__zoom)
         self.__actions.append(self.zoomToAct)
         
         self.showGridAct = E5Action(self.trUtf8('Show Grid'),
@@ -525,8 +525,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawPencilAct.setCheckable(True)
         self.esm.setMapping(self.drawPencilAct, IconEditorGrid.Pencil)
-        self.connect(self.drawPencilAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawPencilAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawPencilAct)
         
         self.drawColorPickerAct = E5Action(self.trUtf8('Color Picker'), 
@@ -541,8 +540,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawColorPickerAct.setCheckable(True)
         self.esm.setMapping(self.drawColorPickerAct, IconEditorGrid.ColorPicker)
-        self.connect(self.drawColorPickerAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawColorPickerAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawColorPickerAct)
         
         self.drawRectangleAct = E5Action(self.trUtf8('Rectangle'), 
@@ -556,8 +554,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawRectangleAct.setCheckable(True)
         self.esm.setMapping(self.drawRectangleAct, IconEditorGrid.Rectangle)
-        self.connect(self.drawRectangleAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawRectangleAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawRectangleAct)
         
         self.drawFilledRectangleAct = E5Action(self.trUtf8('Filled Rectangle'), 
@@ -571,8 +568,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawFilledRectangleAct.setCheckable(True)
         self.esm.setMapping(self.drawFilledRectangleAct, IconEditorGrid.FilledRectangle)
-        self.connect(self.drawFilledRectangleAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawFilledRectangleAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawFilledRectangleAct)
         
         self.drawCircleAct = E5Action(self.trUtf8('Circle'), 
@@ -586,8 +582,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawCircleAct.setCheckable(True)
         self.esm.setMapping(self.drawCircleAct, IconEditorGrid.Circle)
-        self.connect(self.drawCircleAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawCircleAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawCircleAct)
         
         self.drawFilledCircleAct = E5Action(self.trUtf8('Filled Circle'), 
@@ -601,8 +596,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawFilledCircleAct.setCheckable(True)
         self.esm.setMapping(self.drawFilledCircleAct, IconEditorGrid.FilledCircle)
-        self.connect(self.drawFilledCircleAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawFilledCircleAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawFilledCircleAct)
         
         self.drawEllipseAct = E5Action(self.trUtf8('Ellipse'), 
@@ -616,8 +610,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawEllipseAct.setCheckable(True)
         self.esm.setMapping(self.drawEllipseAct, IconEditorGrid.Ellipse)
-        self.connect(self.drawEllipseAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawEllipseAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawEllipseAct)
         
         self.drawFilledEllipseAct = E5Action(self.trUtf8('Filled Ellipse'), 
@@ -631,8 +624,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawFilledEllipseAct.setCheckable(True)
         self.esm.setMapping(self.drawFilledEllipseAct, IconEditorGrid.FilledEllipse)
-        self.connect(self.drawFilledEllipseAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawFilledEllipseAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawFilledEllipseAct)
         
         self.drawFloodFillAct = E5Action(self.trUtf8('Flood Fill'), 
@@ -647,8 +639,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawFloodFillAct.setCheckable(True)
         self.esm.setMapping(self.drawFloodFillAct, IconEditorGrid.Fill)
-        self.connect(self.drawFloodFillAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawFloodFillAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawFloodFillAct)
         
         self.drawLineAct = E5Action(self.trUtf8('Line'), 
@@ -662,8 +653,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawLineAct.setCheckable(True)
         self.esm.setMapping(self.drawLineAct, IconEditorGrid.Line)
-        self.connect(self.drawLineAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawLineAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawLineAct)
         
         self.drawEraserAct = E5Action(self.trUtf8('Eraser (Transparent)'), 
@@ -677,8 +667,7 @@ class IconEditorWindow(QMainWindow):
         ))
         self.drawEraserAct.setCheckable(True)
         self.esm.setMapping(self.drawEraserAct, IconEditorGrid.Rubber)
-        self.connect(self.drawEraserAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawEraserAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawEraserAct)
         
         self.drawRectangleSelectionAct = E5Action(self.trUtf8('Rectangular Selection'), 
@@ -693,8 +682,7 @@ class IconEditorWindow(QMainWindow):
         self.drawRectangleSelectionAct.setCheckable(True)
         self.esm.setMapping(self.drawRectangleSelectionAct, 
                             IconEditorGrid.RectangleSelection)
-        self.connect(self.drawRectangleSelectionAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawRectangleSelectionAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawRectangleSelectionAct)
         
         self.drawCircleSelectionAct = E5Action(self.trUtf8('Circular Selection'), 
@@ -709,8 +697,7 @@ class IconEditorWindow(QMainWindow):
         self.drawCircleSelectionAct.setCheckable(True)
         self.esm.setMapping(self.drawCircleSelectionAct, 
                             IconEditorGrid.CircleSelection)
-        self.connect(self.drawCircleSelectionAct, SIGNAL('triggered()'), 
-                     self.esm, SLOT('map()'))
+        self.drawCircleSelectionAct.triggered.connect(self.esm.map)
         self.__actions.append(self.drawCircleSelectionAct)
         
         self.drawPencilAct.setChecked(True)
@@ -726,7 +713,7 @@ class IconEditorWindow(QMainWindow):
         self.aboutAct.setWhatsThis(self.trUtf8(
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""))
-        self.connect(self.aboutAct, SIGNAL('triggered()'), self.__about)
+        self.aboutAct.triggered.connect(self.__about)
         self.__actions.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
@@ -738,7 +725,7 @@ class IconEditorWindow(QMainWindow):
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.connect(self.aboutQtAct, SIGNAL('triggered()'), self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
         self.__actions.append(self.aboutQtAct)
         
         self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'), 
@@ -755,7 +742,7 @@ class IconEditorWindow(QMainWindow):
                 """ dialogs, this feature can be accessed using the context help button"""
                 """ in the titlebar.</p>"""
         ))
-        self.connect(self.whatsThisAct, SIGNAL('triggered()'), self.__whatsThis)
+        self.whatsThisAct.triggered.connect(self.__whatsThis)
         self.__actions.append(self.whatsThisAct)
     
     def __initMenus(self):

@@ -373,7 +373,7 @@ class HelpWindow(QMainWindow):
                 """<b>New Tab</b>"""
                 """<p>This opens a new help window tab.</p>"""
         ))
-        self.connect(self.newTabAct, SIGNAL('triggered()'), self.newTab)
+        self.newTabAct.triggered.connect(self.newTab)
         self.__actions.append(self.newTabAct)
         
         self.newAct = E5Action(self.trUtf8('New Window'), 
@@ -386,7 +386,7 @@ class HelpWindow(QMainWindow):
                 """<b>New Window</b>"""
                 """<p>This opens a new help browser window.</p>"""
         ))
-        self.connect(self.newAct, SIGNAL('triggered()'), self.newWindow)
+        self.newAct.triggered.connect(self.newWindow)
         self.__actions.append(self.newAct)
         
         self.openAct = E5Action(self.trUtf8('Open File'), 
@@ -400,7 +400,7 @@ class HelpWindow(QMainWindow):
                 """<p>This opens a new help file for display."""
                 """ It pops up a file selection dialog.</p>"""
         ))
-        self.connect(self.openAct, SIGNAL('triggered()'), self.__openFile)
+        self.openAct.triggered.connect(self.__openFile)
         self.__actions.append(self.openAct)
         
         self.openTabAct = E5Action(self.trUtf8('Open File in New Tab'), 
@@ -415,7 +415,7 @@ class HelpWindow(QMainWindow):
                 """<p>This opens a new help file for display in a new tab."""
                 """ It pops up a file selection dialog.</p>"""
         ))
-        self.connect(self.openTabAct, SIGNAL('triggered()'), self.__openFileNewTab)
+        self.openTabAct.triggered.connect(self.__openFileNewTab)
         self.__actions.append(self.openTabAct)
         
         self.saveAsAct = E5Action(self.trUtf8('Save As '), 
@@ -429,7 +429,7 @@ class HelpWindow(QMainWindow):
                 """<b>Save As...</b>"""
                 """<p>Saves the current page to disk.</p>"""
         ))
-        self.connect(self.saveAsAct, SIGNAL('triggered()'), self.__savePageAs)
+        self.saveAsAct.triggered.connect(self.__savePageAs)
         self.__actions.append(self.saveAsAct)
         
         bookmarksManager = self.bookmarksManager()
@@ -442,8 +442,7 @@ class HelpWindow(QMainWindow):
                 """<b>Import Bookmarks</b>"""
                 """<p>Import bookmarks from other browsers.</p>"""
         ))
-        self.connect(self.importBookmarksAct, SIGNAL('triggered()'), 
-                     bookmarksManager.importBookmarks)
+        self.importBookmarksAct.triggered.connect(bookmarksManager.importBookmarks)
         self.__actions.append(self.importBookmarksAct)
         
         self.exportBookmarksAct = E5Action(self.trUtf8('Export Bookmarks'), 
@@ -455,8 +454,7 @@ class HelpWindow(QMainWindow):
                 """<b>Export Bookmarks</b>"""
                 """<p>Export the bookmarks into a file.</p>"""
         ))
-        self.connect(self.exportBookmarksAct, SIGNAL('triggered()'), 
-                     bookmarksManager.exportBookmarks)
+        self.exportBookmarksAct.triggered.connect(bookmarksManager.exportBookmarks)
         self.__actions.append(self.exportBookmarksAct)
         
         self.printAct = E5Action(self.trUtf8('Print'), 
@@ -469,7 +467,7 @@ class HelpWindow(QMainWindow):
                 """<b>Print</b>"""
                 """<p>Print the displayed help text.</p>"""
         ))
-        self.connect(self.printAct, SIGNAL('triggered()'), self.__printFile)
+        self.printAct.triggered.connect(self.__printFile)
         self.__actions.append(self.printAct)
         
         self.printPdfAct = E5Action(self.trUtf8('Print as PDF'), 
@@ -481,7 +479,7 @@ class HelpWindow(QMainWindow):
                 """<b>Print as PDF</b>"""
                 """<p>Print the displayed help text as a PDF file.</p>"""
         ))
-        self.connect(self.printPdfAct, SIGNAL('triggered()'), self.__printFilePdf)
+        self.printPdfAct.triggered.connect(self.__printFilePdf)
         self.__actions.append(self.printPdfAct)
         
         self.printPreviewAct = E5Action(self.trUtf8('Print Preview'), 
@@ -494,8 +492,7 @@ class HelpWindow(QMainWindow):
                 """<b>Print Preview</b>"""
                 """<p>Print preview of the displayed help text.</p>"""
         ))
-        self.connect(self.printPreviewAct, SIGNAL('triggered()'), 
-            self.__printPreviewFile)
+        self.printPreviewAct.triggered.connect(self.__printPreviewFile)
         self.__actions.append(self.printPreviewAct)
         
         self.closeAct = E5Action(self.trUtf8('Close'), 
@@ -508,7 +505,7 @@ class HelpWindow(QMainWindow):
                 """<b>Close</b>"""
                 """<p>Closes the current help window.</p>"""
         ))
-        self.connect(self.closeAct, SIGNAL('triggered()'), self.__close)
+        self.closeAct.triggered.connect(self.__close)
         self.__actions.append(self.closeAct)
         
         self.closeAllAct = E5Action(self.trUtf8('Close All'), 
@@ -519,7 +516,7 @@ class HelpWindow(QMainWindow):
                 """<b>Close All</b>"""
                 """<p>Closes all help windows except the first one.</p>"""
         ))
-        self.connect(self.closeAllAct, SIGNAL('triggered()'), self.__closeAll)
+        self.closeAllAct.triggered.connect(self.__closeAll)
         self.__actions.append(self.closeAllAct)
         
         self.privateBrowsingAct = E5Action(self.trUtf8('Private Browsing'), 
@@ -532,8 +529,7 @@ class HelpWindow(QMainWindow):
                 """<p>Enables private browsing. In this mode no history is"""
                 """ recorded anymore.</p>"""
         ))
-        self.connect(self.privateBrowsingAct, SIGNAL('triggered()'), 
-                     self.__privateBrowsing)
+        self.privateBrowsingAct.triggered.connect(self.__privateBrowsing)
         self.privateBrowsingAct.setCheckable(True)
         self.__actions.append(self.privateBrowsingAct)
         
@@ -548,7 +544,7 @@ class HelpWindow(QMainWindow):
                 """<p>Quit the web browser.</p>"""
         ))
         if self.fromEric:
-            self.connect(self.exitAct, SIGNAL('triggered()'), self, SLOT('close()'))
+            self.exitAct.triggered.connect(self, SLOT('close()'))
         else:
             self.connect(self.exitAct, SIGNAL('triggered()'), 
                          qApp, SLOT('closeAllWindows()'))
@@ -566,7 +562,7 @@ class HelpWindow(QMainWindow):
                 """<p>Moves one help screen backward. If none is"""
                 """ available, this action is disabled.</p>"""
         ))
-        self.connect(self.backAct, SIGNAL('triggered()'), self.__backward)
+        self.backAct.triggered.connect(self.__backward)
         self.__actions.append(self.backAct)
         
         self.forwardAct = E5Action(self.trUtf8('Forward'), 
@@ -581,7 +577,7 @@ class HelpWindow(QMainWindow):
                 """<p>Moves one help screen forward. If none is"""
                 """ available, this action is disabled.</p>"""
         ))
-        self.connect(self.forwardAct, SIGNAL('triggered()'), self.__forward)
+        self.forwardAct.triggered.connect(self.__forward)
         self.__actions.append(self.forwardAct)
         
         self.homeAct = E5Action(self.trUtf8('Home'), 
@@ -594,7 +590,7 @@ class HelpWindow(QMainWindow):
                 """<b>Home</b>"""
                 """<p>Moves to the initial help screen.</p>"""
         ))
-        self.connect(self.homeAct, SIGNAL('triggered()'), self.__home)
+        self.homeAct.triggered.connect(self.__home)
         self.__actions.append(self.homeAct)
         
         self.reloadAct = E5Action(self.trUtf8('Reload'), 
@@ -608,7 +604,7 @@ class HelpWindow(QMainWindow):
                 """<b>Reload</b>"""
                 """<p>Reloads the current help screen.</p>"""
         ))
-        self.connect(self.reloadAct, SIGNAL('triggered()'), self.__reload)
+        self.reloadAct.triggered.connect(self.__reload)
         self.__actions.append(self.reloadAct)
         
         self.stopAct = E5Action(self.trUtf8('Stop'), 
@@ -622,7 +618,7 @@ class HelpWindow(QMainWindow):
                 """<b>Stop</b>"""
                 """<p>Stops loading of the current tab.</p>"""
         ))
-        self.connect(self.stopAct, SIGNAL('triggered()'), self.__stopLoading)
+        self.stopAct.triggered.connect(self.__stopLoading)
         self.__actions.append(self.stopAct)
         
         self.copyAct = E5Action(self.trUtf8('Copy'), 
@@ -635,7 +631,7 @@ class HelpWindow(QMainWindow):
                 """<b>Copy</b>"""
                 """<p>Copy the selected text to the clipboard.</p>"""
         ))
-        self.connect(self.copyAct, SIGNAL('triggered()'), self.__copy)
+        self.copyAct.triggered.connect(self.__copy)
         self.__actions.append(self.copyAct)
         
         self.findAct = E5Action(self.trUtf8('Find...'), 
@@ -648,7 +644,7 @@ class HelpWindow(QMainWindow):
                 """<b>Find</b>"""
                 """<p>Find text in the current page.</p>"""
         ))
-        self.connect(self.findAct, SIGNAL('triggered()'), self.__find)
+        self.findAct.triggered.connect(self.__find)
         self.__actions.append(self.findAct)
         
         self.findNextAct = E5Action(self.trUtf8('Find next'), 
@@ -662,7 +658,7 @@ class HelpWindow(QMainWindow):
                 """<p>Find the next occurrence of text in the current page.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.connect(self.findNextAct, SIGNAL('triggered()'), self.findDlg.findNext)
+            self.findNextAct.triggered.connect(self.findDlg.findNext)
         self.__actions.append(self.findNextAct)
         
         self.findPrevAct = E5Action(self.trUtf8('Find previous'), 
@@ -677,8 +673,7 @@ class HelpWindow(QMainWindow):
                 """<p>Find the previous occurrence of text in the current page.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.connect(self.findPrevAct, SIGNAL('triggered()'), 
-                         self.findDlg.findPrevious)
+            self.findPrevAct.triggered.connect(self.findDlg.findPrevious)
         self.__actions.append(self.findPrevAct)
         
         self.bookmarksManageAct = E5Action(self.trUtf8('Manage Bookmarks'), 
@@ -691,8 +686,7 @@ class HelpWindow(QMainWindow):
                 """<b>Manage Bookmarks...</b>"""
                 """<p>Open a dialog to manage the bookmarks.</p>"""
         ))
-        self.connect(self.bookmarksManageAct, SIGNAL('triggered()'), 
-            self.__showBookmarksDialog)
+        self.bookmarksManageAct.triggered.connect(self.__showBookmarksDialog)
         self.__actions.append(self.bookmarksManageAct)
         
         self.bookmarksAddAct = E5Action(self.trUtf8('Add Bookmark'), 
@@ -706,7 +700,7 @@ class HelpWindow(QMainWindow):
                 """<b>Add Bookmark</b>"""
                 """<p>Open a dialog to add the current URL as a bookmark.</p>"""
         ))
-        self.connect(self.bookmarksAddAct, SIGNAL('triggered()'), self.__addBookmark)
+        self.bookmarksAddAct.triggered.connect(self.__addBookmark)
         self.__actions.append(self.bookmarksAddAct)
         
         self.bookmarksAddFolderAct = E5Action(self.trUtf8('Add Folder'), 
@@ -718,8 +712,7 @@ class HelpWindow(QMainWindow):
                 """<b>Add Folder...</b>"""
                 """<p>Open a dialog to add a new bookmarks folder.</p>"""
         ))
-        self.connect(self.bookmarksAddFolderAct, SIGNAL('triggered()'), 
-            self.__addBookmarkFolder)
+        self.bookmarksAddFolderAct.triggered.connect(self.__addBookmarkFolder)
         self.__actions.append(self.bookmarksAddFolderAct)
         
         self.bookmarksAllTabsAct = E5Action(self.trUtf8('Bookmark All Tabs'), 
@@ -732,8 +725,7 @@ class HelpWindow(QMainWindow):
                 """<p>Open a dialog to add a new bookmarks folder for"""
                 """ all open tabs.</p>"""
         ))
-        self.connect(self.bookmarksAllTabsAct, SIGNAL('triggered()'), 
-            self.__bookmarkAll)
+        self.bookmarksAllTabsAct.triggered.connect(self.__bookmarkAll)
         self.__actions.append(self.bookmarksAllTabsAct)
         
         self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'), 
@@ -750,7 +742,7 @@ class HelpWindow(QMainWindow):
                 """ dialogs, this feature can be accessed using the context help button"""
                 """ in the titlebar.</p>"""
         ))
-        self.connect(self.whatsThisAct, SIGNAL('triggered()'), self.__whatsThis)
+        self.whatsThisAct.triggered.connect(self.__whatsThis)
         self.__actions.append(self.whatsThisAct)
         
         self.aboutAct = E5Action(self.trUtf8('About'), 
@@ -761,7 +753,7 @@ class HelpWindow(QMainWindow):
                 """<b>About</b>"""
                 """<p>Display some information about this software.</p>"""
         ))
-        self.connect(self.aboutAct, SIGNAL('triggered()'), self.__about)
+        self.aboutAct.triggered.connect(self.__about)
         self.__actions.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(self.trUtf8('About Qt'), 
@@ -773,7 +765,7 @@ class HelpWindow(QMainWindow):
                 """<b>About Qt</b>"""
                 """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.connect(self.aboutQtAct, SIGNAL('triggered()'), self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
         self.__actions.append(self.aboutQtAct)
         
         self.zoomInAct = E5Action(self.trUtf8('Zoom in'), 
@@ -786,7 +778,7 @@ class HelpWindow(QMainWindow):
                 """<b>Zoom in</b>"""
                 """<p>Zoom in on the text. This makes the text bigger.</p>"""
         ))
-        self.connect(self.zoomInAct, SIGNAL('triggered()'), self.__zoomIn)
+        self.zoomInAct.triggered.connect(self.__zoomIn)
         self.__actions.append(self.zoomInAct)
         
         self.zoomOutAct = E5Action(self.trUtf8('Zoom out'), 
@@ -799,7 +791,7 @@ class HelpWindow(QMainWindow):
                 """<b>Zoom out</b>"""
                 """<p>Zoom out on the text. This makes the text smaller.</p>"""
         ))
-        self.connect(self.zoomOutAct, SIGNAL('triggered()'), self.__zoomOut)
+        self.zoomOutAct.triggered.connect(self.__zoomOut)
         self.__actions.append(self.zoomOutAct)
         
         self.zoomResetAct = E5Action(self.trUtf8('Zoom reset'), 
@@ -813,7 +805,7 @@ class HelpWindow(QMainWindow):
                 """<p>Reset the zoom of the text. """
                 """This sets the zoom factor to 100%.</p>"""
         ))
-        self.connect(self.zoomResetAct, SIGNAL('triggered()'), self.__zoomReset)
+        self.zoomResetAct.triggered.connect(self.__zoomReset)
         self.__actions.append(self.zoomResetAct)
         
         if hasattr(QWebSettings, 'ZoomTextOnly'):
@@ -842,7 +834,7 @@ class HelpWindow(QMainWindow):
                 """<b>Show page source</b>"""
                 """<p>Show the page source in an editor.</p>"""
         ))
-        self.connect(self.pageSourceAct, SIGNAL('triggered()'), self.__showPageSource)
+        self.pageSourceAct.triggered.connect(self.__showPageSource)
         self.__actions.append(self.pageSourceAct)
         self.addAction(self.pageSourceAct)
         
@@ -851,7 +843,7 @@ class HelpWindow(QMainWindow):
             self.trUtf8('&Full Screen'), 
             QKeySequence(self.trUtf8('F11')), 0,
             self, 'help_view_full_scree')
-        self.connect(self.fullScreenAct, SIGNAL('triggered()'), self.__viewFullScreen)
+        self.fullScreenAct.triggered.connect(self.__viewFullScreen)
         self.__actions.append(self.fullScreenAct)
         self.addAction(self.fullScreenAct)
         
@@ -859,7 +851,7 @@ class HelpWindow(QMainWindow):
             self.trUtf8('Show next tab'), 
             QKeySequence(self.trUtf8('Ctrl+Alt+Tab')), 0,
             self, 'help_view_next_tab')
-        self.connect(self.nextTabAct, SIGNAL('triggered()'), self.__nextTab)
+        self.nextTabAct.triggered.connect(self.__nextTab)
         self.__actions.append(self.nextTabAct)
         self.addAction(self.nextTabAct)
         
@@ -867,7 +859,7 @@ class HelpWindow(QMainWindow):
             self.trUtf8('Show previous tab'), 
             QKeySequence(self.trUtf8('Shift+Ctrl+Alt+Tab')), 0,
             self, 'help_view_previous_tab')
-        self.connect(self.prevTabAct, SIGNAL('triggered()'), self.__prevTab)
+        self.prevTabAct.triggered.connect(self.__prevTab)
         self.__actions.append(self.prevTabAct)
         self.addAction(self.prevTabAct)
         
@@ -875,7 +867,7 @@ class HelpWindow(QMainWindow):
             self.trUtf8('Switch between tabs'), 
             QKeySequence(self.trUtf8('Ctrl+1')), 0,
             self, 'help_switch_tabs')
-        self.connect(self.switchTabAct, SIGNAL('triggered()'), self.__switchTab)
+        self.switchTabAct.triggered.connect(self.__switchTab)
         self.__actions.append(self.switchTabAct)
         self.addAction(self.switchTabAct)
         
@@ -888,7 +880,7 @@ class HelpWindow(QMainWindow):
             """<p>Set the configuration items of the application"""
             """ with your prefered values.</p>"""
         ))
-        self.connect(self.prefAct, SIGNAL('triggered()'), self.__showPreferences)
+        self.prefAct.triggered.connect(self.__showPreferences)
         self.__actions.append(self.prefAct)
 
         self.acceptedLanguagesAct = E5Action(self.trUtf8('Languages'),
@@ -900,8 +892,7 @@ class HelpWindow(QMainWindow):
             """<b>Languages</b>"""
             """<p>Configure the accepted languages for web pages.</p>"""
         ))
-        self.connect(self.acceptedLanguagesAct, SIGNAL('triggered()'), 
-                     self.__showAcceptedLanguages)
+        self.acceptedLanguagesAct.triggered.connect(self.__showAcceptedLanguages)
         self.__actions.append(self.acceptedLanguagesAct)
         
         self.cookiesAct = E5Action(self.trUtf8('Cookies'),
@@ -913,8 +904,7 @@ class HelpWindow(QMainWindow):
             """<b>Cookies</b>"""
             """<p>Configure cookies handling.</p>"""
         ))
-        self.connect(self.cookiesAct, SIGNAL('triggered()'), 
-                     self.__showCookiesConfiguration)
+        self.cookiesAct.triggered.connect(self.__showCookiesConfiguration)
         self.__actions.append(self.cookiesAct)
         
         self.offlineStorageAct = E5Action(self.trUtf8('Offline Storage'),
@@ -926,8 +916,7 @@ class HelpWindow(QMainWindow):
             """<b>Offline Storage</b>"""
             """<p>Opens a dialog to configure offline storage.</p>"""
         ))
-        self.connect(self.offlineStorageAct, SIGNAL('triggered()'), 
-                     self.__showOfflineStorageConfiguration)
+        self.offlineStorageAct.triggered.connect(self.__showOfflineStorageConfiguration)
         self.__actions.append(self.offlineStorageAct)
         
         self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'), 
@@ -940,7 +929,7 @@ class HelpWindow(QMainWindow):
                 """<b>Sync with Table of Contents</b>"""
                 """<p>Synchronizes the table of contents with current page.</p>"""
         ))
-        self.connect(self.syncTocAct, SIGNAL('triggered()'), self.__syncTOC)
+        self.syncTocAct.triggered.connect(self.__syncTOC)
         self.__actions.append(self.syncTocAct)
         
         self.showTocAct = E5Action(self.trUtf8('Table of Contents'), 
@@ -952,7 +941,7 @@ class HelpWindow(QMainWindow):
                 """<b>Table of Contents</b>"""
                 """<p>Shows the table of contents window.</p>"""
         ))
-        self.connect(self.showTocAct, SIGNAL('triggered()'), self.__showTocWindow)
+        self.showTocAct.triggered.connect(self.__showTocWindow)
         self.__actions.append(self.showTocAct)
         
         self.showIndexAct = E5Action(self.trUtf8('Index'), 
@@ -964,7 +953,7 @@ class HelpWindow(QMainWindow):
                 """<b>Index</b>"""
                 """<p>Shows the index window.</p>"""
         ))
-        self.connect(self.showIndexAct, SIGNAL('triggered()'), self.__showIndexWindow)
+        self.showIndexAct.triggered.connect(self.__showIndexWindow)
         self.__actions.append(self.showIndexAct)
         
         self.showSearchAct = E5Action(self.trUtf8('Search'), 
@@ -976,7 +965,7 @@ class HelpWindow(QMainWindow):
                 """<b>Search</b>"""
                 """<p>Shows the search window.</p>"""
         ))
-        self.connect(self.showSearchAct, SIGNAL('triggered()'), self.__showSearchWindow)
+        self.showSearchAct.triggered.connect(self.__showSearchWindow)
         self.__actions.append(self.showSearchAct)
         
         self.manageQtHelpDocsAct = E5Action(self.trUtf8('Manage QtHelp Documents'), 
@@ -988,8 +977,7 @@ class HelpWindow(QMainWindow):
                 """<b>Manage QtHelp Documents</b>"""
                 """<p>Shows a dialog to manage the QtHelp documentation set.</p>"""
         ))
-        self.connect(self.manageQtHelpDocsAct, SIGNAL('triggered()'), 
-                     self.__manageQtHelpDocumentation)
+        self.manageQtHelpDocsAct.triggered.connect(self.__manageQtHelpDocumentation)
         self.__actions.append(self.manageQtHelpDocsAct)
         
         self.manageQtHelpFiltersAct = E5Action(self.trUtf8('Manage QtHelp Filters'), 
@@ -1001,8 +989,7 @@ class HelpWindow(QMainWindow):
                 """<b>Manage QtHelp Filters</b>"""
                 """<p>Shows a dialog to manage the QtHelp filters.</p>"""
         ))
-        self.connect(self.manageQtHelpFiltersAct, SIGNAL('triggered()'), 
-                     self.__manageQtHelpFilters)
+        self.manageQtHelpFiltersAct.triggered.connect(self.__manageQtHelpFilters)
         self.__actions.append(self.manageQtHelpFiltersAct)
         
         self.reindexDocumentationAct = E5Action(self.trUtf8('Reindex Documentation'), 
@@ -1015,8 +1002,7 @@ class HelpWindow(QMainWindow):
                 """<p>Reindexes the documentation set.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.connect(self.reindexDocumentationAct, SIGNAL('triggered()'), 
-                         self.__searchEngine.reindexDocumentation)
+            self.reindexDocumentationAct.triggered.connect(self.__searchEngine.reindexDocumentation)
         self.__actions.append(self.reindexDocumentationAct)
         
         self.clearPrivateDataAct = E5Action(self.trUtf8('Clear private data'), 
@@ -1029,8 +1015,7 @@ class HelpWindow(QMainWindow):
                 """<p>Clears the private data like browsing history, search history"""
                 """ or the favicons database.</p>"""
         ))
-        self.connect(self.clearPrivateDataAct, SIGNAL('triggered()'), 
-                     self.__clearPrivateData)
+        self.clearPrivateDataAct.triggered.connect(self.__clearPrivateData)
         self.__actions.append(self.clearPrivateDataAct)
         
         self.clearIconsAct = E5Action(self.trUtf8('Clear icons database'), 
@@ -1042,7 +1027,7 @@ class HelpWindow(QMainWindow):
                 """<b>Clear icons database</b>"""
                 """<p>Clears the database of favicons of previously visited URLs.</p>"""
         ))
-        self.connect(self.clearIconsAct, SIGNAL('triggered()'), self.__clearIconsDatabase)
+        self.clearIconsAct.triggered.connect(self.__clearIconsDatabase)
         self.__actions.append(self.clearIconsAct)
         
         self.searchEnginesAct = E5Action(self.trUtf8('Configure Search Engines'), 
@@ -1055,8 +1040,7 @@ class HelpWindow(QMainWindow):
                 """<b>Configure Search Engines...</b>"""
                 """<p>Opens a dialog to configure the available search engines.</p>"""
         ))
-        self.connect(self.searchEnginesAct, SIGNAL('triggered()'), 
-                     self.__showEnginesConfigurationDialog)
+        self.searchEnginesAct.triggered.connect(self.__showEnginesConfigurationDialog)
         self.__actions.append(self.searchEnginesAct)
         
         self.passwordsAct = E5Action(self.trUtf8('Manage Saved Passwords'), 
@@ -1069,8 +1053,7 @@ class HelpWindow(QMainWindow):
                 """<b>Manage Saved Passwords...</b>"""
                 """<p>Opens a dialog to manage the saved passwords.</p>"""
         ))
-        self.connect(self.passwordsAct, SIGNAL('triggered()'), 
-                     self.__showPasswordsDialog)
+        self.passwordsAct.triggered.connect(self.__showPasswordsDialog)
         self.__actions.append(self.passwordsAct)
         
         self.adblockAct = E5Action(self.trUtf8('Ad Block'), 
@@ -1083,8 +1066,7 @@ class HelpWindow(QMainWindow):
                 """<b>Ad Block...</b>"""
                 """<p>Opens a dialog to configure AdBlock subscriptions and rules.</p>"""
         ))
-        self.connect(self.adblockAct, SIGNAL('triggered()'), 
-                     self.__showAdBlockDialog)
+        self.adblockAct.triggered.connect(self.__showAdBlockDialog)
         self.__actions.append(self.adblockAct)
         
         self.toolsMonitorAct = E5Action(self.trUtf8('Show Network Monitor'), 
@@ -1096,8 +1078,7 @@ class HelpWindow(QMainWindow):
                 """<b>Show Network Monitor</b>"""
                 """<p>Shows the network monitor dialog.</p>"""
         ))
-        self.connect(self.toolsMonitorAct, SIGNAL('triggered()'), 
-                     self.__showNetworkMonitor)
+        self.toolsMonitorAct.triggered.connect(self.__showNetworkMonitor)
         self.__actions.append(self.toolsMonitorAct)
         
         self.backAct.setEnabled(False)

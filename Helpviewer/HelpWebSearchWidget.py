@@ -240,7 +240,7 @@ class HelpWebSearchWidget(QWidget):
             engine = self.__openSearchManager.engine(engineName)
             action = OpenSearchEngineAction(engine, self.__enginesMenu)
             action.setData(engineName)
-            self.connect(action, SIGNAL("triggered()"), self.__changeCurrentEngine)
+            action.triggered.connect(self.__changeCurrentEngine)
             self.__enginesMenu.addAction(action)
             
             if self.__openSearchManager.currentEngineName() == engineName:

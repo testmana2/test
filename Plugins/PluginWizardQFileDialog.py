@@ -78,7 +78,7 @@ class FileDialogWizard(QObject):
             """ needed to create a QFileDialog. The generated code is inserted"""
             """ at the current cursor position.</p>"""
         ))
-        self.connect(self.action, SIGNAL('triggered()'), self.__handle)
+        self.action.triggered.connect(self.__handle)
         
         self.__ui.addE5Actions([self.action], 'wizards')
 
