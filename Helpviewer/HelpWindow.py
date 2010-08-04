@@ -544,10 +544,9 @@ class HelpWindow(QMainWindow):
                 """<p>Quit the web browser.</p>"""
         ))
         if self.fromEric:
-            self.exitAct.triggered.connect(self, SLOT('close()'))
+            self.exitAct.triggered.connect(self.close)
         else:
-            self.connect(self.exitAct, SIGNAL('triggered()'), 
-                         qApp, SLOT('closeAllWindows()'))
+            self.exitAct.triggered.connect(qApp.closeAllWindows)
         self.__actions.append(self.exitAct)
         
         self.backAct = E5Action(self.trUtf8('Backward'), 

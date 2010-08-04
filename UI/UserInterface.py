@@ -2668,7 +2668,8 @@ class UserInterface(QMainWindow):
         for key in groupActionKeys:
             if key not in ckeys:
                 self.toolbarManager.removeAction(self.toolGroupActions[key])
-                self.toolGroupActions[key].triggered.disconnect(self.__toolActionTriggered)
+                self.toolGroupActions[key].triggered.disconnect(
+                    self.__toolActionTriggered)
                 del self.toolGroupActions[key]
         
         # step 4: add all newly configured tools

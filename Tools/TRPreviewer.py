@@ -176,8 +176,7 @@ class TRPreviewer(QMainWindow):
                 """<b>Quit</b>"""
                 """<p>Quit the application.</p>"""
         ))
-        self.connect(self.exitAct, SIGNAL('triggered()'), 
-                     qApp, SLOT('closeAllWindows()'))
+        self.exitAct.triggered.connect(qApp.closeAllWindows)
         
         self.whatsThisAct = QAction(UI.PixmapCache.getIcon("whatsThis.png"),
                                 self.trUtf8('&What\'s This?'), self)
