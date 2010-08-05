@@ -192,8 +192,7 @@ class MdiArea(QMdiArea, ViewManager):
             elif idx < 36:
                 accel = "&{0}. ".format(chr(idx - 9 + ord("@")))
             act = menu.addAction("{0}{1}".format(accel, txt))
-            self.connect(act, SIGNAL("triggered()"), 
-                         self.__windowMapper, SLOT("map()"))
+            act.triggered.connect(self.__windowMapper.map)
             self.__windowMapper.setMapping(act, subWindow)
             idx += 1
         
