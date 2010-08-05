@@ -160,7 +160,7 @@ class UIPreviewer(QMainWindow):
                 """<b>Quit</b>"""
                 """<p>Quit the application.</p>"""
         ))
-        self.exitAct.triggered.connect(qApp.closeAllWindows)
+        self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         
         self.copyAct = QAction(UI.PixmapCache.getIcon("editCopy.png"),
                             self.trUtf8('&Copy'), self)

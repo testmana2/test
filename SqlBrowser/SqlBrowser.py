@@ -106,7 +106,7 @@ class SqlBrowser(QMainWindow):
                 """<b>Quit</b>"""
                 """<p>Quit the SQL browser.</p>"""
         ))
-        self.exitAct.triggered.connect(qApp.closeAllWindows)
+        self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         
         self.aboutAct = E5Action(self.trUtf8('About'), 
             self.trUtf8('&About'), 

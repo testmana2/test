@@ -135,37 +135,37 @@ class UMLGraphicsView(E5GraphicsView):
             QAction(UI.PixmapCache.getIcon("shapesAlignLeft"), 
                     self.trUtf8("Align Left"), self)
         self.alignMapper.setMapping(self.alignLeftAct, Qt.AlignLeft)
-        self.alignLeftAct.triggered.connect(self.alignMapper.map)
+        self.alignLeftAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignHCenterAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignHCenter"), 
                     self.trUtf8("Align Center Horizontal"), self)
         self.alignMapper.setMapping(self.alignHCenterAct, Qt.AlignHCenter)
-        self.alignHCenterAct.triggered.connect(self.alignMapper.map)
+        self.alignHCenterAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignRightAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignRight"), 
                     self.trUtf8("Align Right"), self)
         self.alignMapper.setMapping(self.alignRightAct, Qt.AlignRight)
-        self.alignRightAct.triggered.connect(self.alignMapper.map)
+        self.alignRightAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignTopAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignTop"), 
                     self.trUtf8("Align Top"), self)
         self.alignMapper.setMapping(self.alignTopAct, Qt.AlignTop)
-        self.alignTopAct.triggered.connect(self.alignMapper.map)
+        self.alignTopAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignVCenterAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignVCenter"), 
                     self.trUtf8("Align Center Vertical"), self)
         self.alignMapper.setMapping(self.alignVCenterAct, Qt.AlignVCenter)
-        self.alignVCenterAct.triggered.connect(self.alignMapper.map)
+        self.alignVCenterAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignBottomAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignBottom"), 
                     self.trUtf8("Align Bottom"), self)
         self.alignMapper.setMapping(self.alignBottomAct, Qt.AlignBottom)
-        self.alignBottomAct.triggered.connect(self.alignMapper.map)
+        self.alignBottomAct.triggered[()].connect(self.alignMapper.map)
         
     def __checkSizeActions(self):
         """

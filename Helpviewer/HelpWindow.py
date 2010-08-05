@@ -546,7 +546,7 @@ class HelpWindow(QMainWindow):
         if self.fromEric:
             self.exitAct.triggered[()].connect(self.close)
         else:
-            self.exitAct.triggered.connect(qApp.closeAllWindows)
+            self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         self.__actions.append(self.exitAct)
         
         self.backAct = E5Action(self.trUtf8('Backward'), 
