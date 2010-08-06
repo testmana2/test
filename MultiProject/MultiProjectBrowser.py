@@ -50,8 +50,7 @@ class MultiProjectBrowser(QListWidget):
         
         self.__createPopupMenu()
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL("customContextMenuRequested(const QPoint &)"),
-                     self.__contextMenuRequested)
+        self.customContextMenuRequested.connect(self.__contextMenuRequested)
         self.connect(self, SIGNAL("itemActivated(QListWidgetItem*)"), self.__openItem)
     
     ############################################################################

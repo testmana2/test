@@ -64,8 +64,7 @@ class Browser(QTreeView):
         self.selectedItemsFilter = [BrowserFileItem]
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL("customContextMenuRequested(const QPoint &)"),
-                     self._contextMenuRequested)
+        self.customContextMenuRequested.connect(self._contextMenuRequested)
         self.connect(self, SIGNAL("activated(const QModelIndex &)"), self._openItem)
         self.connect(self, SIGNAL("expanded(const QModelIndex &)"), self._resizeColumns)
         self.connect(self, SIGNAL("collapsed(const QModelIndex &)"), self._resizeColumns)

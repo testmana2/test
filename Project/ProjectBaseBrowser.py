@@ -54,8 +54,7 @@ class ProjectBaseBrowser(Browser):
             QItemSelectionModel.Deselect | QItemSelectionModel.Rows)
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL("customContextMenuRequested(const QPoint &)"),
-                     self._contextMenuRequested)
+        self.customContextMenuRequested.connect(self._contextMenuRequested)
         self.connect(self, SIGNAL("activated(const QModelIndex &)"), self._openItem)
         self.connect(self._model, SIGNAL("rowsInserted(const QModelIndex &, int, int)"),
                      self.__modelRowsInserted)

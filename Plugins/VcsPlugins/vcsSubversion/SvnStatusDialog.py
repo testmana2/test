@@ -87,9 +87,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             act.setEnabled(False)
         
         self.statusList.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self.statusList, 
-                     SIGNAL("customContextMenuRequested(const QPoint &)"),
-                     self.__showContextMenu)
+        self.statusList.customContextMenuRequested.connect(self.__showContextMenu)
         
         self.modifiedIndicators = [
             self.trUtf8('added'), 

@@ -115,8 +115,7 @@ class SvgDiagram(QMainWindow):
         self.__menu.addAction(self.zoomResetAct)
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL('customContextMenuRequested(const QPoint &)'),
-                     self.__showContextMenu)
+        self.customContextMenuRequested.connect(self.__showContextMenu)
         
     def __showContextMenu(self, coord):
         """

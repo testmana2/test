@@ -42,8 +42,7 @@ class LogViewer(QTextEdit):
         self.__menu.addAction(self.trUtf8("Configure..."), self.__configure)
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL("customContextMenuRequested(const QPoint &)"),
-            self.__handleShowContextMenu)
+        self.customContextMenuRequested.connect(self.__handleShowContextMenu)
         
         self.cNormalFormat = self.currentCharFormat()
         self.cErrorFormat = self.currentCharFormat()

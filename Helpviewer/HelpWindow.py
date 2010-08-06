@@ -123,9 +123,7 @@ class HelpWindow(QMainWindow):
             self.connect(self.tabWidget, SIGNAL('currentChanged(int)'),
                 self.__currentChanged)
             self.tabWidget.setTabContextMenuPolicy(Qt.CustomContextMenu)
-            self.connect(self.tabWidget, 
-                         SIGNAL('customTabContextMenuRequested(const QPoint &, int)'),
-                         self.__showContextMenu)
+            self.tabWidget.customTabContextMenuRequested.connect(self.__showContextMenu)
             
             self.findDlg = SearchWidget(self, self)
             centralWidget = QWidget()

@@ -146,8 +146,7 @@ class Listspace(QSplitter, ViewManager):
                      self.__showSelectedView)
         self.connect(self.viewlist, SIGNAL("itemClicked(QListWidgetItem*)"),
                      self.__showSelectedView)
-        self.connect(self.viewlist, SIGNAL("customContextMenuRequested(const QPoint &)"),
-                     self.__showMenu)
+        self.viewlist.customContextMenuRequested.connect(self.__showMenu)
         
         self.stackArea = QSplitter(self)
         self.addWidget(self.stackArea)
