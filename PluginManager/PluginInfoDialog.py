@@ -8,7 +8,7 @@
 Module implementing the Plugin Info Dialog.
 """
 
-from PyQt4.QtCore import Qt,  SIGNAL
+from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QHeaderView, QMenu, QBrush
 from PyQt4.QtCore import pyqtSlot
 
