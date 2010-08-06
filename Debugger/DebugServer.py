@@ -131,31 +131,17 @@ class DebugServer(QTcpServer):
         self.connect(self, SIGNAL("clientClearWatch"), self.__clientClearWatchPoint)
         self.connect(self, SIGNAL("newConnection()"), self.__newConnection)
         
-        self.connect(self.breakpointModel, 
-            SIGNAL("rowsAboutToBeRemoved(const QModelIndex &, int, int)"), 
-            self.__deleteBreakPoints)
-        self.connect(self.breakpointModel,
-            SIGNAL("dataAboutToBeChanged(const QModelIndex &, const QModelIndex &)"),
+        self.breakpointModel.rowsAboutToBeRemoved.connect(self.__deleteBreakPoints)
+        self.breakpointModel.dataAboutToBeChanged.connect(
             self.__breakPointDataAboutToBeChanged)
-        self.connect(self.breakpointModel,
-            SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-            self.__changeBreakPoints)
-        self.connect(self.breakpointModel,
-            SIGNAL("rowsInserted(const QModelIndex &, int, int)"),
-            self.__addBreakPoints)
+        self.breakpointModel.dataChanged.connect(self.__changeBreakPoints)
+        self.breakpointModel.rowsInserted.connect(self.__addBreakPoints)
         
-        self.connect(self.watchpointModel, 
-            SIGNAL("rowsAboutToBeRemoved(const QModelIndex &, int, int)"), 
-            self.__deleteWatchPoints)
-        self.connect(self.watchpointModel,
-            SIGNAL("dataAboutToBeChanged(const QModelIndex &, const QModelIndex &)"),
+        self.watchpointModel.rowsAboutToBeRemoved.connect(self.__deleteWatchPoints)
+        self.watchpointModel.dataAboutToBeChanged.connect(
             self.__watchPointDataAboutToBeChanged)
-        self.connect(self.watchpointModel, 
-            SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-            self.__changeWatchPoints)
-        self.connect(self.watchpointModel,
-            SIGNAL("rowsInserted(const QModelIndex &, int, int)"),
-            self.__addWatchPoints)
+        self.watchpointModel.dataChanged.connect(self.__changeWatchPoints)
+        self.watchpointModel.rowsInserted.connect(self.__addWatchPoints)
         
         self.__registerDebuggerInterfaces()
         

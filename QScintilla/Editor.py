@@ -366,17 +366,13 @@ class Editor(QsciScintillaCompat):
         # breakpoint handling
         self.breakpointModel = self.dbs.getBreakPointModel()
         self.__restoreBreakpoints()
-        self.connect(self.breakpointModel, 
-            SIGNAL("rowsAboutToBeRemoved(const QModelIndex &, int, int)"), 
+        self.breakpointModel.rowsAboutToBeRemoved.connect(
             self.__deleteBreakPoints)
-        self.connect(self.breakpointModel,
-            SIGNAL("dataAboutToBeChanged(const QModelIndex &, const QModelIndex &)"),
+        self.breakpointModel.dataAboutToBeChanged.connect(
             self.__breakPointDataAboutToBeChanged)
-        self.connect(self.breakpointModel,
-            SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
+        self.breakpointModel.dataChanged.connect(
             self.__changeBreakPoints)
-        self.connect(self.breakpointModel,
-            SIGNAL("rowsInserted(const QModelIndex &, int, int)"),
+        self.breakpointModel.rowsInserted.connect(
             self.__addBreakPoints)
         self.connect(self, SIGNAL("linesChanged()"), self.__linesChanged)
         
@@ -4723,17 +4719,13 @@ class Editor(QsciScintillaCompat):
             self.removeClone(clone)
             clone.removeClone(self)
         
-        self.disconnect(self.breakpointModel, 
-            SIGNAL("rowsAboutToBeRemoved(const QModelIndex &, int, int)"), 
+        self.breakpointModel.rowsAboutToBeRemoved.disconnect(
             self.__deleteBreakPoints)
-        self.disconnect(self.breakpointModel,
-            SIGNAL("dataAboutToBeChanged(const QModelIndex &, const QModelIndex &)"),
+        self.breakpointModel.dataAboutToBeChanged.disconnect(
             self.__breakPointDataAboutToBeChanged)
-        self.disconnect(self.breakpointModel,
-            SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
+        self.breakpointModel.dataChanged.disconnect(
             self.__changeBreakPoints)
-        self.disconnect(self.breakpointModel,
-            SIGNAL("rowsInserted(const QModelIndex &, int, int)"),
+        self.breakpointModel.rowsInserted.disconnect(
             self.__addBreakPoints)
         
         self.disconnect(self.project, SIGNAL("projectPropertiesChanged"), 

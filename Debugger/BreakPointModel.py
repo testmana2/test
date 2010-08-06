@@ -13,6 +13,8 @@ class BreakPointModel(QAbstractItemModel):
     """
     Class implementing a custom model for breakpoints.
     """
+    dataAboutToBeChanged = pyqtSignal(QModelIndex, QModelIndex)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -180,15 +182,12 @@ class BreakPointModel(QAbstractItemModel):
             index1 = self.createIndex(row, 0, self.breakpoints[row])
             index2 = self.createIndex(row, len(self.breakpoints[row]), 
                      self.breakpoints[row])
-            self.emit(\
-                SIGNAL("dataAboutToBeChanged(const QModelIndex &, const QModelIndex &)"),
-                index1, index2)
+            self.dataAboutToBeChanged.emit(index1, index2)
             i = 0
             for value in [fn, line] + list(properties):
                 self.breakpoints[row][i] = value
                 i += 1
-            self.emit(SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-                      index1, index2)
+            self.dataChanged.emit(index1, index2)
 
     def setBreakPointEnabledByIndex(self, index, enabled):
         """
@@ -201,12 +200,9 @@ class BreakPointModel(QAbstractItemModel):
             row = index.row()
             col = 4
             index1 = self.createIndex(row, col, self.breakpoints[row])
-            self.emit(\
-                SIGNAL("dataAboutToBeChanged(const QModelIndex &, const QModelIndex &)"),
-                index1, index1)
+            self.dataAboutToBeChanged.emit(index1, index1)
             self.breakpoints[row][col] = enabled
-            self.emit(SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-                      index1, index1)
+            self.dataChanged.emit(index1, index1)
     
     def deleteBreakPointByIndex(self, index):
         """
