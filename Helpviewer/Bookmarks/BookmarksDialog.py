@@ -62,9 +62,8 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         
         self.connect(self.bookmarksTree, SIGNAL("activated(const QModelIndex&)"), 
                      self.__activated)
-        self.connect(self.bookmarksTree, 
-                     SIGNAL("customContextMenuRequested(const QPoint &)"), 
-                     self.__customContextMenuRequested)
+        self.bookmarksTree.customContextMenuRequested.connect(
+            self.__customContextMenuRequested)
         
         self.connect(self.removeButton, SIGNAL("clicked()"), 
                      self.bookmarksTree.removeSelected)

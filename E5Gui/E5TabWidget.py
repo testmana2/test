@@ -8,7 +8,7 @@ Module implementing a TabWidget class substituting QTabWidget.
 """
 
 from PyQt4.QtGui import QTabWidget, QTabBar, QApplication, QDrag, QStyle, QLabel, QMovie
-from PyQt4.QtCore import Qt, SIGNAL, QPoint, QMimeData, QByteArray
+from PyQt4.QtCore import Qt, SIGNAL, QPoint, QMimeData, QByteArray, pyqtSignal
 
 class E5WheelTabBar(QTabBar):
     """
@@ -124,6 +124,8 @@ class E5TabWidget(QTabWidget):
     @signal customTabContextMenuRequested(const QPoint & point, int index) emitted when
         a context menu for a tab is requested
     """
+    customTabContextMenuRequested = pyqtSignal(QPoint, int)
+    
     def __init__(self, parent = None, dnd = False):
         """
         Constructor
@@ -203,12 +205,10 @@ class E5TabWidget(QTabWidget):
         """
         self.tabBar().setContextMenuPolicy(policy)
         if policy == Qt.CustomContextMenu:
-            self.connect(self.tabBar(), 
-                SIGNAL("customContextMenuRequested(const QPoint &)"),
+            self.tabBar().customContextMenuRequested.connect(
                 self.__handleTabCustomContextMenuRequested)
         else:
-            self.disconnect(self.tabBar(), 
-                SIGNAL("customContextMenuRequested(const QPoint &)"),
+            self.tabBar().customContextMenuRequested.disconnect(
                 self.__handleTabCustomContextMenuRequested)
 
     def __handleTabCustomContextMenuRequested(self, point):
@@ -221,8 +221,7 @@ class E5TabWidget(QTabWidget):
         for index in range(_tabbar.count()):
             rect = _tabbar.tabRect(index)
             if rect.contains(point):
-                self.emit(SIGNAL("customTabContextMenuRequested(const QPoint &, int)"), 
-                          _tabbar.mapToParent(point), index)
+                self.customTabContextMenuRequested.emit(_tabbar.mapToParent(point), index)
                 break
     
     def selectTab(self, pos):

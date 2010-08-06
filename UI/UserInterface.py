@@ -2288,7 +2288,7 @@ class UserInterface(QMainWindow):
         mb.addMenu(self.__menus["file"])
         self.__menus["file"].addSeparator()
         self.__menus["file"].addAction(self.exitAct)
-        self.connect(self.__menus["file"], SIGNAL('aboutToShow()'), self.__showFileMenu)
+        self.__menus["file"].aboutToShow.connect(self.__showFileMenu)
         
         self.__menus["edit"] = self.viewmanager.initEditMenu()
         mb.addMenu(self.__menus["edit"])
@@ -2317,26 +2317,22 @@ class UserInterface(QMainWindow):
         
         self.__menus["extras"] = QMenu(self.trUtf8('E&xtras'), self)
         self.__menus["extras"].setTearOffEnabled(True)
-        self.connect(self.__menus["extras"], SIGNAL('aboutToShow()'), 
-            self.__showExtrasMenu)
+        self.__menus["extras"].aboutToShow.connect(self.__showExtrasMenu)
         mb.addMenu(self.__menus["extras"])
         self.viewmanager.addToExtrasMenu(self.__menus["extras"])
         self.__menus["wizards"] = QMenu(self.trUtf8('Wi&zards'), self)
         self.__menus["wizards"].setTearOffEnabled(True)
-        self.connect(self.__menus["wizards"], SIGNAL('aboutToShow()'), 
-            self.__showWizardsMenu)
+        self.__menus["wizards"].aboutToShow.connect(self.__showWizardsMenu)
         self.wizardsMenuAct = self.__menus["extras"].addMenu(self.__menus["wizards"])
         self.wizardsMenuAct.setEnabled(False)
         self.__menus["macros"] = self.viewmanager.initMacroMenu()
         self.__menus["extras"].addMenu(self.__menus["macros"])
         self.__menus["tools"] = QMenu(self.trUtf8('&Tools'), self)
-        self.connect(self.__menus["tools"], SIGNAL('aboutToShow()'), 
-            self.__showToolsMenu)
+        self.__menus["tools"].aboutToShow.connect(self.__showToolsMenu)
         self.connect(self.__menus["tools"], SIGNAL('triggered(QAction *)'),
             self.__toolExecute)
         self.toolGroupsMenu = QMenu(self.trUtf8("Select Tool Group"), self)
-        self.connect(self.toolGroupsMenu, SIGNAL('aboutToShow()'), 
-            self.__showToolGroupsMenu)
+        self.toolGroupsMenu.aboutToShow.connect(self.__showToolGroupsMenu)
         self.connect(self.toolGroupsMenu, SIGNAL('triggered(QAction *)'),
             self.__toolGroupSelected)
         self.toolGroupsMenuTriggered = False
@@ -2363,14 +2359,12 @@ class UserInterface(QMainWindow):
         self.__menus["window"] = QMenu(self.trUtf8('&Window'), self)
         mb.addMenu(self.__menus["window"])
         self.__menus["window"].setTearOffEnabled(True)
-        self.connect(self.__menus["window"], SIGNAL('aboutToShow()'), 
-            self.__showWindowMenu)
+        self.__menus["window"].aboutToShow.connect(self.__showWindowMenu)
         
         self.__menus["toolbars"] = \
             QMenu(self.trUtf8("&Toolbars"), self.__menus["window"])
         self.__menus["toolbars"].setTearOffEnabled(True)
-        self.connect(self.__menus["toolbars"], SIGNAL('aboutToShow()'), 
-            self.__showToolbarsMenu)
+        self.__menus["toolbars"].aboutToShow.connect(self.__showToolbarsMenu)
         self.connect(self.__menus["toolbars"], SIGNAL('triggered(QAction *)'),
             self.__TBMenuTriggered)
         
@@ -2415,8 +2409,7 @@ class UserInterface(QMainWindow):
         self.__menus["help"].addAction(self.requestFeatureAct)
         self.__menus["help"].addSeparator()
         self.__menus["help"].addAction(self.whatsThisAct)
-        self.connect(self.__menus["help"], SIGNAL('aboutToShow()'), 
-            self.__showHelpMenu)
+        self.__menus["help"].aboutToShow.connect(self.__showHelpMenu)
     
     def getToolBarIconSize(self):
         """
@@ -2668,7 +2661,8 @@ class UserInterface(QMainWindow):
         for key in groupActionKeys:
             if key not in ckeys:
                 self.toolbarManager.removeAction(self.toolGroupActions[key])
-                self.toolGroupActions[key].triggered[()].disconnect(self.__toolActionTriggered)
+                self.toolGroupActions[key].triggered[()].disconnect(
+                    self.__toolActionTriggered)
                 del self.toolGroupActions[key]
         
         # step 4: add all newly configured tools

@@ -48,7 +48,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
                      manager.setEnabled)
         
         menu = QMenu(self)
-        self.connect(menu, SIGNAL("aboutToShow()"), self.__aboutToShowActionMenu)
+        menu.aboutToShow.connect(self.__aboutToShowActionMenu)
         self.actionButton.setMenu(menu)
         self.actionButton.setIcon(UI.PixmapCache.getIcon("adBlockAction.png"))
         self.actionButton.setPopupMode(QToolButton.InstantPopup)
@@ -56,7 +56,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         if self.adBlockGroup.isChecked():
             subscription = manager.customRules()
             subscriptionIndex = self.__adBlockModel.subscriptionIndex(subscription)
-            self.subscriptionsTree.expand(self.__proxyModel.mapFromSource(subscriptionIndex))
+            self.subscriptionsTree.expand(
+                self.__proxyModel.mapFromSource(subscriptionIndex))
     
     def model(self):
         """

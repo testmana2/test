@@ -39,8 +39,7 @@ class ExceptionLogger(QTreeWidget):
         self.setSortingEnabled(False)
 
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self,SIGNAL('customContextMenuRequested(const QPoint &)'),
-                     self.__showContextMenu)
+        self.customContextMenuRequested.connect(self.__showContextMenu)
         self.connect(self,SIGNAL('itemDoubleClicked(QTreeWidgetItem *, int)'),
                      self.__itemDoubleClicked)
 

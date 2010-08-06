@@ -110,8 +110,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.__populating = False
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL("customContextMenuRequested(const QPoint &)"), 
-                     self.__contextMenuRequested)
+        self.customContextMenuRequested.connect(self.__contextMenuRequested)
         
     def __createItem(self, file, line, text, start, end, replTxt = ""):
         """

@@ -8,7 +8,7 @@
 Module implementing the Plugin Info Dialog.
 """
 
-from PyQt4.QtCore import Qt,  SIGNAL
+from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QHeaderView, QMenu, QBrush
 from PyQt4.QtCore import pyqtSlot
 
@@ -48,9 +48,7 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         self.__deactivateAct = \
             self.__menu.addAction(self.trUtf8('Deactivate'), self.__deactivatePlugin)
         self.pluginList.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self.pluginList, 
-                     SIGNAL('customContextMenuRequested(const QPoint &)'),
-                     self.__showContextMenu)
+        self.pluginList.customContextMenuRequested.connect(self.__showContextMenu)
     
     def __populateList(self):
         """

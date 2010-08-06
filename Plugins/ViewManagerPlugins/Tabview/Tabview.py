@@ -171,8 +171,7 @@ class TabWidget(E5TabWidget):
         self.rightCornerWidgetLayout.setSpacing(0)
         
         self.__navigationMenu = QMenu(self)
-        self.connect(self.__navigationMenu, SIGNAL("aboutToShow()"), 
-                     self.__showNavigationMenu)
+        self.__navigationMenu.aboutToShow.connect(self.__showNavigationMenu)
         self.connect(self.__navigationMenu, SIGNAL("triggered(QAction*)"), 
                      self.__navigationMenuTriggered)
         
@@ -205,8 +204,7 @@ class TabWidget(E5TabWidget):
         self.contextMenuIndex = -1
         
         self.setTabContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL('customTabContextMenuRequested(const QPoint &, int)'),
-                     self.__showContextMenu)
+        self.customTabContextMenuRequested.connect(self.__showContextMenu)
         
         ericPic = QPixmap(os.path.join(getConfig('ericPixDir'), 'eric_small.png'))
         self.emptyLabel = QLabel()

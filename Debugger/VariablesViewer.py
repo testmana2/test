@@ -308,8 +308,7 @@ class VariablesViewer(QTreeWidget):
         
         self.__createPopupMenus()
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self,SIGNAL('customContextMenuRequested(const QPoint &)'),
-                     self.__showContextMenu)
+        self.customContextMenuRequested.connect(self.__showContextMenu)
         
         self.connect(self, SIGNAL("itemExpanded(QTreeWidgetItem *)"), 
             self.__expandItemSignal)

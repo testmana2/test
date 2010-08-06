@@ -38,8 +38,7 @@ class BookmarksMenu(E5ModelMenu):
         self.setSeparatorRole(BookmarksModel.SeparatorRole)
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL("customContextMenuRequested(const QPoint &)"), 
-                     self.__contextMenuRequested)
+        self.customContextMenuRequested.connect(self.__contextMenuRequested)
     
     def createBaseMenu(self):
         """

@@ -58,9 +58,8 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         
         self.connect(self.historyTree, SIGNAL("activated(const QModelIndex&)"), 
                      self.__activated)
-        self.connect(self.historyTree, 
-                     SIGNAL("customContextMenuRequested(const QPoint &)"), 
-                     self.__customContextMenuRequested)
+        self.historyTree.customContextMenuRequested.connect(
+            self.__customContextMenuRequested)
         
         self.connect(self.searchEdit, SIGNAL("textChanged(QString)"), 
                      self.__proxyModel.setFilterFixedString)

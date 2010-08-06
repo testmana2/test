@@ -780,11 +780,10 @@ class MultiProject(QObject):
         }
         
         # connect the aboutToShow signals
-        self.connect(self.recentMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuRecent)
+        self.recentMenu.aboutToShow.connect(self.__showContextMenuRecent)
         self.connect(self.recentMenu, SIGNAL('triggered(QAction *)'),
                      self.__openRecent)
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showMenu)
+        menu.aboutToShow.connect(self.__showMenu)
         
         # build the main menu
         menu.setTearOffEnabled(True)

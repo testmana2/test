@@ -111,8 +111,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         Privat method to generate the popup menus for a Python project.
         """
         self.checksMenu = QMenu(self.trUtf8('Check'))
-        self.connect(self.checksMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuCheck)
+        self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
         
         self.showMenu = QMenu(self.trUtf8('Show'))
         self.showMenu.addAction(self.trUtf8('Code metrics...'), self.__showCodeMetrics)
@@ -120,7 +119,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8('Code coverage...'), self.__showCodeCoverage)
         self.profileMenuAction = self.showMenu.addAction(\
             self.trUtf8('Profile data...'), self.__showProfileData)
-        self.connect(self.showMenu, SIGNAL('aboutToShow()'), self.__showContextMenuShow)
+        self.showMenu.aboutToShow.connect(self.__showContextMenuShow)
         
         self.graphicsMenu = QMenu(self.trUtf8('Diagrams'))
         self.classDiagramAction = self.graphicsMenu.addAction(\
@@ -131,8 +130,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Imports Diagram..."), self.__showImportsDiagram)
         self.graphicsMenu.addAction(\
             self.trUtf8("Application Diagram..."), self.__showApplicationDiagram)
-        self.connect(self.graphicsMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuGraphics)
+        self.graphicsMenu.aboutToShow.connect(self.__showContextMenuGraphics)
         
         self.unittestAction = self.sourceMenu.addAction(\
             self.trUtf8('Run unittest...'), self.handleUnittest)
@@ -245,16 +243,11 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
-        self.connect(self.sourceMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenu)
-        self.connect(self.multiMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuMulti)
-        self.connect(self.dirMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuDir)
-        self.connect(self.dirMultiMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuDirMulti)
-        self.connect(self.backMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuBack)
+        self.sourceMenu.aboutToShow.connect(self.__showContextMenu)
+        self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
+        self.dirMenu.aboutToShow.connect(self.__showContextMenuDir)
+        self.dirMultiMenu.aboutToShow.connect(self.__showContextMenuDirMulti)
+        self.backMenu.aboutToShow.connect(self.__showContextMenuBack)
         self.mainMenu = self.sourceMenu
         
     def __createRubyPopupMenus(self):
@@ -357,16 +350,11 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
-        self.connect(self.sourceMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenu)
-        self.connect(self.multiMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuMulti)
-        self.connect(self.dirMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuDir)
-        self.connect(self.dirMultiMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuDirMulti)
-        self.connect(self.backMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuBack)
+        self.sourceMenu.aboutToShow.connect(self.__showContextMenu)
+        self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
+        self.dirMenu.aboutToShow.connect(self.__showContextMenuDir)
+        self.dirMultiMenu.aboutToShow.connect(self.__showContextMenuDirMulti)
+        self.backMenu.aboutToShow.connect(self.__showContextMenuBack)
         self.mainMenu = self.sourceMenu
         
     def _contextMenuRequested(self, coord):

@@ -13,6 +13,8 @@ class WatchPointModel(QAbstractItemModel):
     """
     Class implementing a custom model for watch expressions.
     """
+    dataAboutToBeChanged = pyqtSignal(QModelIndex, QModelIndex)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -175,15 +177,12 @@ class WatchPointModel(QAbstractItemModel):
             index1 = self.createIndex(row, 0, self.watchpoints[row])
             index2 = self.createIndex(row, len(self.watchpoints[row]), 
                      self.watchpoints[row])
-            self.emit(\
-                SIGNAL("dataAboutToBeChanged(const QModelIndex &, const QModelIndex &)"),
-                index1, index2)
+            self.dataAboutToBeChanged.emit(index1, index2)
             i = 0
             for value in [cond, special] + list(properties):
                 self.watchpoints[row][i] = value
                 i += 1
-            self.emit(SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-                      index1, index2)
+            self.dataChanged.emit(index1, index2)
 
     def setWatchPointEnabledByIndex(self, index, enabled):
         """
@@ -196,12 +195,9 @@ class WatchPointModel(QAbstractItemModel):
             row = index.row()
             col = 3
             index1 = self.createIndex(row, col, self.watchpoints[row])
-            self.emit(\
-                SIGNAL("dataAboutToBeChanged(const QModelIndex &, const QModelIndex &)"),
-                index1, index1)
+            self.dataAboutToBeChanged.emit(index1, index1)
             self.watchpoints[row][col] = enabled
-            self.emit(SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-                      index1, index1)
+            self.dataChanged.emit(index1, index1)
     
     def deleteWatchPointByIndex(self, index):
         """

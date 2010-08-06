@@ -43,8 +43,7 @@ class BreakPointViewer(QTreeView):
         self.setWindowTitle(self.trUtf8("Breakpoints"))
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self,SIGNAL('customContextMenuRequested(const QPoint &)'),
-                     self.__showContextMenu)
+        self.customContextMenuRequested.connect(self.__showContextMenu)
         self.connect(self,SIGNAL('doubleClicked(const QModelIndex &)'),
                      self.__doubleClicked)
         
@@ -161,7 +160,7 @@ class BreakPointViewer(QTreeView):
             self.backMenu.addAction(self.trUtf8("Disable all"), self.__disableAllBreaks)
         self.backMenuActions["DeleteAll"] = \
             self.backMenu.addAction(self.trUtf8("Delete all"), self.__deleteAllBreaks)
-        self.connect(self.backMenu, SIGNAL('aboutToShow()'), self.__showBackMenu)
+        self.backMenu.aboutToShow.connect(self.__showBackMenu)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
 

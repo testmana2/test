@@ -81,7 +81,7 @@ class HelpWebSearchWidget(QWidget):
                      self.__completerActivated)
         self.connect(self.__completer, SIGNAL("highlighted(const QModelIndex &)"), 
                      self.__completerHighlighted)
-        self.connect(self.__enginesMenu, SIGNAL("aboutToShow()"), self.__showEnginesMenu)
+        self.__enginesMenu.aboutToShow.connect(self.__showEnginesMenu)
         
         self.__suggestionsItem = None
         self.__suggestions = []

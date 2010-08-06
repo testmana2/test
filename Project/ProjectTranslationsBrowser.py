@@ -379,14 +379,10 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         self.dirMultiMenu = None
         
-        self.connect(self.menu, SIGNAL('aboutToShow()'),
-            self.__showContextMenu)
-        self.connect(self.multiMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuMulti)
-        self.connect(self.dirMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuDir)
-        self.connect(self.backMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuBack)
+        self.menu.aboutToShow.connect(self.__showContextMenu)
+        self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
+        self.dirMenu.aboutToShow.connect(self.__showContextMenuDir)
+        self.backMenu.aboutToShow.connect(self.__showContextMenuBack)
         self.mainMenu = self.menu
         
     def _contextMenuRequested(self, coord):

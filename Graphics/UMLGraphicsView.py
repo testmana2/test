@@ -54,6 +54,9 @@ class UMLGraphicsView(E5GraphicsView):
         """
         Private method to initialize the view actions.
         """
+        self.alignMapper = QSignalMapper(self)
+        self.alignMapper.mapped[int].connect(self.__alignShapes)
+        
         self.deleteShapeAct = \
             QAction(UI.PixmapCache.getIcon("deleteShape.png"),
                     self.trUtf8("Delete shapes"), self)
@@ -131,38 +134,38 @@ class UMLGraphicsView(E5GraphicsView):
         self.alignLeftAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignLeft"), 
                     self.trUtf8("Align Left"), self)
-        self.connect(self.alignLeftAct, SIGNAL("triggered()"), 
-            lambda align=Qt.AlignLeft: self.__alignShapes(align))
+        self.alignMapper.setMapping(self.alignLeftAct, Qt.AlignLeft)
+        self.alignLeftAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignHCenterAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignHCenter"), 
                     self.trUtf8("Align Center Horizontal"), self)
-        self.connect(self.alignHCenterAct, SIGNAL("triggered()"), 
-            lambda align=Qt.AlignHCenter: self.__alignShapes(align))
+        self.alignMapper.setMapping(self.alignHCenterAct, Qt.AlignHCenter)
+        self.alignHCenterAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignRightAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignRight"), 
                     self.trUtf8("Align Right"), self)
-        self.connect(self.alignRightAct, SIGNAL("triggered()"), 
-            lambda align=Qt.AlignRight: self.__alignShapes(align))
+        self.alignMapper.setMapping(self.alignRightAct, Qt.AlignRight)
+        self.alignRightAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignTopAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignTop"), 
                     self.trUtf8("Align Top"), self)
-        self.connect(self.alignTopAct, SIGNAL("triggered()"), 
-            lambda align=Qt.AlignTop: self.__alignShapes(align))
+        self.alignMapper.setMapping(self.alignTopAct, Qt.AlignTop)
+        self.alignTopAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignVCenterAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignVCenter"), 
                     self.trUtf8("Align Center Vertical"), self)
-        self.connect(self.alignVCenterAct, SIGNAL("triggered()"), 
-            lambda align=Qt.AlignVCenter: self.__alignShapes(align))
+        self.alignMapper.setMapping(self.alignVCenterAct, Qt.AlignVCenter)
+        self.alignVCenterAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignBottomAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignBottom"), 
                     self.trUtf8("Align Bottom"), self)
-        self.connect(self.alignBottomAct, SIGNAL("triggered()"), 
-            lambda align=Qt.AlignBottom: self.__alignShapes(align))
+        self.alignMapper.setMapping(self.alignBottomAct, Qt.AlignBottom)
+        self.alignBottomAct.triggered[()].connect(self.alignMapper.map)
         
     def __checkSizeActions(self):
         """

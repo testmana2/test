@@ -164,9 +164,7 @@ class MiniEditor(QMainWindow):
                      self.__cursorPositionChanged)
         
         self.__textEdit.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self.__textEdit, 
-                     SIGNAL("customContextMenuRequested(const QPoint &)"),
-                     self.__contextMenuRequested)
+        self.__textEdit.customContextMenuRequested.connect(self.__contextMenuRequested)
         
         self.connect(self.__textEdit, 
                      SIGNAL("selectionChanged()"), 
@@ -1921,7 +1919,7 @@ class MiniEditor(QMainWindow):
         self.pygmentsSelAct.setData("Alternatives")
         
         self.connect(menu, SIGNAL('triggered(QAction *)'), self.__languageMenuTriggered)
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuLanguages)
+        menu.aboutToShow.connect(self.__showContextMenuLanguages)
         
         return menu
     

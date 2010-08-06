@@ -566,11 +566,10 @@ class DebugUI(QObject):
         dmenu.addAction(self.excFilterAct)
         dmenu.addAction(self.excIgnoreFilterAct)
         
-        self.connect(self.breakpointsMenu, SIGNAL('aboutToShow()'),
-            self.__showBreakpointsMenu)
+        self.breakpointsMenu.aboutToShow.connect(self.__showBreakpointsMenu)
         self.connect(self.breakpointsMenu, SIGNAL('triggered(QAction *)'),
             self.__breakpointSelected)
-        self.connect(dmenu, SIGNAL('aboutToShow()'), self.__showDebugMenu)
+        dmenu.aboutToShow.connect(self.__showDebugMenu)
         
         return smenu, dmenu
         

@@ -43,8 +43,7 @@ class BookmarksToolBar(E5ModelToolBar):
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager().toolbar()))
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL("customContextMenuRequested(const QPoint &)"), 
-                     self.__contextMenuRequested)
+        self.customContextMenuRequested.connect(self.__contextMenuRequested)
         self.connect(self, SIGNAL("activated(const QModelIndex &)"), 
                      self.__bookmarkActivated)
         

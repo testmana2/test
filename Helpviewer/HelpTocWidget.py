@@ -38,8 +38,7 @@ class HelpTocWidget(QWidget):
         self.__layout = QVBoxLayout(self)
         self.__layout.addWidget(self.__tocWidget)
         
-        self.connect(self.__tocWidget, SIGNAL("customContextMenuRequested(QPoint)"), 
-                     self.__showContextMenu)
+        self.__tocWidget.customContextMenuRequested.connect(self.__showContextMenu)
         self.connect(self.__tocWidget, SIGNAL("linkActivated(const QUrl&)"), 
                      self, SIGNAL("linkActivated(const QUrl&)"))
         

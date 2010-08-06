@@ -43,8 +43,7 @@ class WatchPointViewer(QTreeView):
         self.setWindowTitle(self.trUtf8("Watchpoints"))
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self,SIGNAL('customContextMenuRequested(const QPoint &)'),
-                     self.__showContextMenu)
+        self.customContextMenuRequested.connect(self.__showContextMenu)
         self.connect(self,SIGNAL('doubleClicked(const QModelIndex &)'),
                      self.__doubleClicked)
         
@@ -160,7 +159,7 @@ class WatchPointViewer(QTreeView):
                 self.__deleteAllWatchPoints)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
-        self.connect(self.backMenu, SIGNAL('aboutToShow()'), self.__showBackMenu)
+        self.backMenu.aboutToShow.connect(self.__showBackMenu)
 
         self.multiMenu = QMenu()
         self.multiMenu.addAction(self.trUtf8("Add"), self.__addWatchPoint)

@@ -214,16 +214,11 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         self.dirMultiMenu.addAction(self.trUtf8('Configure CORBA...'), 
                                     self.__configureCorba)
         
-        self.connect(self.sourceMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenu)
-        self.connect(self.multiMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuMulti)
-        self.connect(self.dirMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuDir)
-        self.connect(self.dirMultiMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuDirMulti)
-        self.connect(self.backMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuBack)
+        self.sourceMenu.aboutToShow.connect(self.__showContextMenu)
+        self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
+        self.dirMenu.aboutToShow.connect(self.__showContextMenuDir)
+        self.dirMultiMenu.aboutToShow.connect(self.__showContextMenuDirMulti)
+        self.backMenu.aboutToShow.connect(self.__showContextMenuBack)
         self.mainMenu = self.sourceMenu
         
     def _contextMenuRequested(self, coord):

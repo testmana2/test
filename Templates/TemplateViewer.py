@@ -417,8 +417,7 @@ class TemplateViewer(QTreeWidget):
         self.__backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self, SIGNAL("customContextMenuRequested(const QPoint &)"),
-                     self.__showContextMenu)
+        self.customContextMenuRequested.connect(self.__showContextMenu)
         self.connect(self, SIGNAL("itemActivated(QTreeWidgetItem *, int)"),
                      self.__templateItemActivated)
         
