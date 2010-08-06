@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.E5XML.MultiProjectHandler</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.E5XML.MultiProjectHandler</h1>
+<p>
+Module implementing the handler class for reading an XML multi project file.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#MultiProjectHandler">MultiProjectHandler</a></td>
+<td>Class implementing a sax handler to read an XML multi project file.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="MultiProjectHandler" ID="MultiProjectHandler"></a>
+<h2>MultiProjectHandler</h2>
+<p>
+    Class implementing a sax handler to read an XML multi project file.
+</p>
+<h3>Derived from</h3>
+XMLHandlerBase
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#MultiProjectHandler.__init__">MultiProjectHandler</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#MultiProjectHandler.endDescription">endDescription</a></td>
+<td>Handler method for the "Description" end tag.</td>
+</tr><tr>
+<td><a href="#MultiProjectHandler.endProject">endProject</a></td>
+<td>Handler method for the "Project" end tag.</td>
+</tr><tr>
+<td><a href="#MultiProjectHandler.endProjectDescription">endProjectDescription</a></td>
+<td>Handler method for the "ProjectDescription" end tag.</td>
+</tr><tr>
+<td><a href="#MultiProjectHandler.endProjectFile">endProjectFile</a></td>
+<td>Handler method for the "ProjectFile" end tag.</td>
+</tr><tr>
+<td><a href="#MultiProjectHandler.endProjectName">endProjectName</a></td>
+<td>Handler method for the "ProjectName" end tag.</td>
+</tr><tr>
+<td><a href="#MultiProjectHandler.getVersion">getVersion</a></td>
+<td>Public method to retrieve the version of the project.</td>
+</tr><tr>
+<td><a href="#MultiProjectHandler.startDocumentMultiProject">startDocumentMultiProject</a></td>
+<td>Handler called, when the document parsing is started.</td>
+</tr><tr>
+<td><a href="#MultiProjectHandler.startMultiProject">startMultiProject</a></td>
+<td>Handler method for the "MultiProject" start tag.</td>
+</tr><tr>
+<td><a href="#MultiProjectHandler.startProject">startProject</a></td>
+<td>Handler method for the "Project" start tag.</td>
+</tr>
+</table>
+<a NAME="MultiProjectHandler.__init__" ID="MultiProjectHandler.__init__"></a>
+<h4>MultiProjectHandler (Constructor)</h4>
+<b>MultiProjectHandler</b>(<i>multiProject</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>multiProject</i></dt>
+<dd>
+Reference to the multi project object to store the
+                information into.
+</dd>
+</dl><a NAME="MultiProjectHandler.endDescription" ID="MultiProjectHandler.endDescription"></a>
+<h4>MultiProjectHandler.endDescription</h4>
+<b>endDescription</b>(<i></i>)
+<p>
+        Handler method for the "Description" end tag.
+</p><a NAME="MultiProjectHandler.endProject" ID="MultiProjectHandler.endProject"></a>
+<h4>MultiProjectHandler.endProject</h4>
+<b>endProject</b>(<i></i>)
+<p>
+        Handler method for the "Project" end tag.
+</p><a NAME="MultiProjectHandler.endProjectDescription" ID="MultiProjectHandler.endProjectDescription"></a>
+<h4>MultiProjectHandler.endProjectDescription</h4>
+<b>endProjectDescription</b>(<i></i>)
+<p>
+        Handler method for the "ProjectDescription" end tag.
+</p><a NAME="MultiProjectHandler.endProjectFile" ID="MultiProjectHandler.endProjectFile"></a>
+<h4>MultiProjectHandler.endProjectFile</h4>
+<b>endProjectFile</b>(<i></i>)
+<p>
+        Handler method for the "ProjectFile" end tag.
+</p><a NAME="MultiProjectHandler.endProjectName" ID="MultiProjectHandler.endProjectName"></a>
+<h4>MultiProjectHandler.endProjectName</h4>
+<b>endProjectName</b>(<i></i>)
+<p>
+        Handler method for the "ProjectName" end tag.
+</p><a NAME="MultiProjectHandler.getVersion" ID="MultiProjectHandler.getVersion"></a>
+<h4>MultiProjectHandler.getVersion</h4>
+<b>getVersion</b>(<i></i>)
+<p>
+        Public method to retrieve the version of the project.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+String containing the version number.
+</dd>
+</dl><a NAME="MultiProjectHandler.startDocumentMultiProject" ID="MultiProjectHandler.startDocumentMultiProject"></a>
+<h4>MultiProjectHandler.startDocumentMultiProject</h4>
+<b>startDocumentMultiProject</b>(<i></i>)
+<p>
+        Handler called, when the document parsing is started.
+</p><a NAME="MultiProjectHandler.startMultiProject" ID="MultiProjectHandler.startMultiProject"></a>
+<h4>MultiProjectHandler.startMultiProject</h4>
+<b>startMultiProject</b>(<i>attrs</i>)
+<p>
+        Handler method for the "MultiProject" start tag.
+</p><dl>
+<dt><i>attrs</i></dt>
+<dd>
+list of tag attributes
+</dd>
+</dl><a NAME="MultiProjectHandler.startProject" ID="MultiProjectHandler.startProject"></a>
+<h4>MultiProjectHandler.startProject</h4>
+<b>startProject</b>(<i>attrs</i>)
+<p>
+        Handler method for the "Project" start tag.
+</p><dl>
+<dt><i>attrs</i></dt>
+<dd>
+list of tag attributes
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

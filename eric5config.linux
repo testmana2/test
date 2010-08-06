@@ -1,0 +1,16 @@
+cfg = {
+    'ericDir'              : "/usr/lib64/python3/site-packages/eric5",
+    'ericPixDir'           : "/usr/share/eric5/pixmaps",
+    'ericIconDir'          : "/usr/share/eric5/icons",
+    'ericDTDDir'           : "/usr/share/eric5/DTDs",
+    'ericCSSDir'           : "/usr/share/eric5/CSSs",
+    'ericStylesDir'        : "/usr/share/eric5/Styles",
+    'ericDocDir'           : "/usr/share/doc/eric5",
+    'ericExamplesDir'      : "/usr/share/doc/eric5/Examples",
+    'ericTranslationsDir'  : "/usr/share/qt4/translations",
+    'ericTemplatesDir'     : "/usr/share/eric5/DesignerTemplates",
+    'ericCodeTemplatesDir' : "/usr/share/eric5/CodeTemplates",
+    'ericOthersDir'        : "/usr/share/eric5",
+    'bindir'               : "/usr/bin",
+    'mdir'                 : "/usr/lib64/python3/site-packages",
+}

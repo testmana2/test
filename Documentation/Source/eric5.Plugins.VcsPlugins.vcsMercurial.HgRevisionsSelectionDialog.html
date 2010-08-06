@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog</h1>
+<p>
+Module implementing a dialog to enter the revisions for the hg diff command.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#HgRevisionsSelectionDialog">HgRevisionsSelectionDialog</a></td>
+<td>Class implementing a dialog to enter the revisions for the hg diff command.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="HgRevisionsSelectionDialog" ID="HgRevisionsSelectionDialog"></a>
+<h2>HgRevisionsSelectionDialog</h2>
+<p>
+    Class implementing a dialog to enter the revisions for the hg diff command.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_HgRevisionsSelectionDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HgRevisionsSelectionDialog.__init__">HgRevisionsSelectionDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HgRevisionsSelectionDialog.__getRevision">__getRevision</a></td>
+<td>Private method to generate the revision.</td>
+</tr><tr>
+<td><a href="#HgRevisionsSelectionDialog.getRevisions">getRevisions</a></td>
+<td>Public method to get the revisions.</td>
+</tr>
+</table>
+<a NAME="HgRevisionsSelectionDialog.__init__" ID="HgRevisionsSelectionDialog.__init__"></a>
+<h4>HgRevisionsSelectionDialog (Constructor)</h4>
+<b>HgRevisionsSelectionDialog</b>(<i>tagsList, branchesList, parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>tagsList</i></dt>
+<dd>
+list of tags (list of strings)
+</dd><dt><i>branchesList</i></dt>
+<dd>
+list of branches (list of strings)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget of the dialog (QWidget)
+</dd>
+</dl><a NAME="HgRevisionsSelectionDialog.__getRevision" ID="HgRevisionsSelectionDialog.__getRevision"></a>
+<h4>HgRevisionsSelectionDialog.__getRevision</h4>
+<b>__getRevision</b>(<i>no</i>)
+<p>
+        Private method to generate the revision.
+</p><dl>
+<dt><i>no</i></dt>
+<dd>
+revision number to generate (1 or 2)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+revision (string)
+</dd>
+</dl><a NAME="HgRevisionsSelectionDialog.getRevisions" ID="HgRevisionsSelectionDialog.getRevisions"></a>
+<h4>HgRevisionsSelectionDialog.getRevisions</h4>
+<b>getRevisions</b>(<i></i>)
+<p>
+        Public method to get the revisions.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list two strings
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
