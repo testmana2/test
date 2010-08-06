@@ -3755,21 +3755,16 @@ class Project(QObject):
         }
         
         # connect the aboutToShow signals
-        self.connect(self.recentMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuRecent)
+        self.recentMenu.aboutToShow.connect(self.__showContextMenuRecent)
         self.connect(self.recentMenu, SIGNAL('triggered(QAction *)'),
                      self.__openRecent)
-        self.connect(self.vcsMenu, SIGNAL('aboutToShow()'), self.__showContextMenuVCS)
-        self.connect(self.checksMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuChecks)
-        self.connect(self.showMenu, SIGNAL('aboutToShow()'), self.__showContextMenuShow)
-        self.connect(self.graphicsMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuGraphics)
-        self.connect(self.apidocMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuApiDoc)
-        self.connect(self.packagersMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuPackagers)
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showMenu)
+        self.vcsMenu.aboutToShow.connect(self.__showContextMenuVCS)
+        self.checksMenu.aboutToShow.connect(self.__showContextMenuChecks)
+        self.showMenu.aboutToShow.connect(self.__showContextMenuShow)
+        self.graphicsMenu.aboutToShow.connect(self.__showContextMenuGraphics)
+        self.apidocMenu.aboutToShow.connect(self.__showContextMenuApiDoc)
+        self.packagersMenu.aboutToShow.connect(self.__showContextMenuPackagers)
+        menu.aboutToShow.connect(self.__showMenu)
         
         # build the show menu
         self.showMenu.setTearOffEnabled(True)

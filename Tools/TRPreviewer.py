@@ -262,7 +262,7 @@ class TRPreviewer(QMainWindow):
         
         self.windowMenu = mb.addMenu(self.trUtf8('&Window'))
         self.windowMenu.setTearOffEnabled(True)
-        self.connect(self.windowMenu, SIGNAL('aboutToShow()'), self.__showWindowMenu)
+        self.windowMenu.aboutToShow.connect(self.__showWindowMenu)
         self.connect(self.windowMenu, SIGNAL('triggered(QAction *)'),
                      self.preview.toggleSelectedWidget)
         

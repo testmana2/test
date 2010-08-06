@@ -1919,7 +1919,7 @@ class MiniEditor(QMainWindow):
         self.pygmentsSelAct.setData("Alternatives")
         
         self.connect(menu, SIGNAL('triggered(QAction *)'), self.__languageMenuTriggered)
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuLanguages)
+        menu.aboutToShow.connect(self.__showContextMenuLanguages)
         
         return menu
     

@@ -172,8 +172,7 @@ class HelpWindow(QMainWindow):
             self.rightCornerWidgetLayout.setSpacing(0)
             
             self.__navigationMenu = QMenu(self)
-            self.connect(self.__navigationMenu, SIGNAL("aboutToShow()"), 
-                         self.__showNavigationMenu)
+            self.__navigationMenu.aboutToShow.connect(self.__showNavigationMenu)
             self.connect(self.__navigationMenu, SIGNAL("triggered(QAction*)"), 
                          self.__navigationMenuTriggered)
             
@@ -1141,8 +1140,8 @@ class HelpWindow(QMainWindow):
         menu.addAction(self.fullScreenAct)
         if hasattr(QWebSettings, 'defaultTextEncoding'):
             self.__textEncodingMenu = menu.addMenu(self.trUtf8("Text Encoding"))
-            self.connect(self.__textEncodingMenu, SIGNAL("aboutToShow()"), 
-                         self.__aboutToShowTextEncodingMenu)
+            self.__textEncodingMenu.aboutToShow.connect(
+                self.__aboutToShowTextEncodingMenu)
             self.connect(self.__textEncodingMenu, SIGNAL("triggered(QAction*)"), 
                          self.__setTextEncoding)
         
@@ -1385,7 +1384,7 @@ class HelpWindow(QMainWindow):
         gotb.addWidget(self.searchEdit)
         
         self.backMenu = QMenu(self)
-        self.connect(self.backMenu, SIGNAL("aboutToShow()"), self.__showBackMenu)
+        self.backMenu.aboutToShow.connect(self.__showBackMenu)
         self.connect(self.backMenu, SIGNAL("triggered(QAction*)"), 
                      self.__navigationMenuActionTriggered)
         backButton = gotb.widgetForAction(self.backAct)
@@ -1393,7 +1392,7 @@ class HelpWindow(QMainWindow):
         backButton.setPopupMode(QToolButton.MenuButtonPopup)
         
         self.forwardMenu = QMenu(self)
-        self.connect(self.forwardMenu, SIGNAL("aboutToShow()"), self.__showForwardMenu)
+        self.forwardMenu.aboutToShow.connect(self.__showForwardMenu)
         self.connect(self.forwardMenu, SIGNAL("triggered(QAction*)"), 
                      self.__navigationMenuActionTriggered)
         forwardButton = gotb.widgetForAction(self.forwardAct)

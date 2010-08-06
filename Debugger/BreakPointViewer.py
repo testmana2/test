@@ -160,7 +160,7 @@ class BreakPointViewer(QTreeView):
             self.backMenu.addAction(self.trUtf8("Disable all"), self.__disableAllBreaks)
         self.backMenuActions["DeleteAll"] = \
             self.backMenu.addAction(self.trUtf8("Delete all"), self.__deleteAllBreaks)
-        self.connect(self.backMenu, SIGNAL('aboutToShow()'), self.__showBackMenu)
+        self.backMenu.aboutToShow.connect(self.__showBackMenu)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
 

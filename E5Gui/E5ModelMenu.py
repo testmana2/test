@@ -42,7 +42,7 @@ class E5ModelMenu(QMenu):
         self.__dropRow = -1
         self.__dropIndex = None
         
-        self.connect(self, SIGNAL("aboutToShow()"), self.__aboutToShow)
+        self.aboutToShow.connect(self.__aboutToShow)
         self.connect(self, SIGNAL("triggered(QAction*)"), self.__actionTriggered)
     
     def prePopulated(self):
@@ -387,7 +387,7 @@ class E5ModelMenu(QMenu):
             if not self.isAncestorOf(drag.target()):
                 self.close()
             else:
-                self.emit(SIGNAL("aboutToShow()"))
+                self.aboutToShow.emit()
     
     def mouseReleaseEvent(self, evt):
         """
@@ -414,4 +414,4 @@ class E5ModelMenu(QMenu):
         """
         row = idx.row()
         self.__model.removeRow(row, self.__root)
-        self.emit(SIGNAL("aboutToShow()"))
+        self.aboutToShow.emit()

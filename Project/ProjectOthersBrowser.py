@@ -121,12 +121,9 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
-        self.connect(self.menu, SIGNAL('aboutToShow()'),
-            self.__showContextMenu)
-        self.connect(self.multiMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuMulti)
-        self.connect(self.backMenu, SIGNAL('aboutToShow()'),
-            self.__showContextMenuBack)
+        self.menu.aboutToShow.connect(self.__showContextMenu)
+        self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
+        self.backMenu.aboutToShow.connect(self.__showContextMenuBack)
         self.mainMenu = self.menu
         
     def _contextMenuRequested(self, coord):

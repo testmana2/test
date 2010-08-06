@@ -662,15 +662,13 @@ class ViewManager(QObject):
         menu.addAction(self.printPreviewAct)
         menu.addAction(self.printAct)
         
-        self.connect(self.recentMenu, SIGNAL('aboutToShow()'), 
-            self.__showRecentMenu)
+        self.recentMenu.aboutToShow.connect(self.__showRecentMenu)
         self.connect(self.recentMenu, SIGNAL('triggered(QAction *)'),
             self.__openSourceFile)
-        self.connect(self.bookmarkedMenu, SIGNAL('aboutToShow()'), 
-            self.__showBookmarkedMenu)
+        self.bookmarkedMenu.aboutToShow.connect(self.__showBookmarkedMenu)
         self.connect(self.bookmarkedMenu, SIGNAL('triggered(QAction *)'),
             self.__openSourceFile)
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showFileMenu)
+        menu.aboutToShow.connect(self.__showFileMenu)
         
         self.exportersMenuAct.setEnabled(False)
         
@@ -2800,11 +2798,10 @@ class ViewManager(QObject):
         menu.addAction(self.taskNextAct)
         menu.addAction(self.taskPreviousAct)
         
-        self.connect(self.bookmarksMenu, SIGNAL('aboutToShow()'), 
-            self.__showBookmarksMenu)
+        self.bookmarksMenu.aboutToShow.connect(self.__showBookmarksMenu)
         self.connect(self.bookmarksMenu, SIGNAL('triggered(QAction *)'), 
             self.__bookmarkSelected)
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showBookmarkMenu)
+        menu.aboutToShow.connect(self.__showBookmarkMenu)
         
         return menu
         

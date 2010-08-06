@@ -171,8 +171,7 @@ class TabWidget(E5TabWidget):
         self.rightCornerWidgetLayout.setSpacing(0)
         
         self.__navigationMenu = QMenu(self)
-        self.connect(self.__navigationMenu, SIGNAL("aboutToShow()"), 
-                     self.__showNavigationMenu)
+        self.__navigationMenu.aboutToShow.connect(self.__showNavigationMenu)
         self.connect(self.__navigationMenu, SIGNAL("triggered(QAction*)"), 
                      self.__navigationMenuTriggered)
         

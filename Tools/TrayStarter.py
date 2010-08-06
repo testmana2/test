@@ -50,21 +50,19 @@ class TrayStarter(QSystemTrayIcon):
         self.__menu = QMenu(self.trUtf8("Eric5 tray starter"))
         
         self.recentProjectsMenu = QMenu(self.trUtf8('Recent Projects'), self.__menu)
-        self.connect(self.recentProjectsMenu, SIGNAL('aboutToShow()'), 
-                     self.__showRecentProjectsMenu)
+        self.recentProjectsMenu.aboutToShow.connect(self.__showRecentProjectsMenu)
         self.connect(self.recentProjectsMenu, SIGNAL('triggered(QAction *)'),
                      self.__openRecent)
         
         self.recentMultiProjectsMenu = \
             QMenu(self.trUtf8('Recent Multiprojects'), self.__menu)
-        self.connect(self.recentMultiProjectsMenu, SIGNAL('aboutToShow()'), 
-                     self.__showRecentMultiProjectsMenu)
+        self.recentMultiProjectsMenu.aboutToShow.connect(
+            self.__showRecentMultiProjectsMenu)
         self.connect(self.recentMultiProjectsMenu, SIGNAL('triggered(QAction *)'),
                      self.__openRecent)
         
         self.recentFilesMenu = QMenu(self.trUtf8('Recent Files'), self.__menu)
-        self.connect(self.recentFilesMenu, SIGNAL('aboutToShow()'), 
-                     self.__showRecentFilesMenu)
+        self.recentFilesMenu.aboutToShow.connect(self.__showRecentFilesMenu)
         self.connect(self.recentFilesMenu, SIGNAL('triggered(QAction *)'),
                      self.__openRecent)
         

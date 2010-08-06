@@ -658,13 +658,12 @@ class Editor(QsciScintillaCompat):
             self.menu.addAction(UI.PixmapCache.getIcon("print.png"),
                 self.trUtf8('Print'), self.printFile)
         
-        self.connect(self.menu, SIGNAL('aboutToShow()'), self.__showContextMenu)
+        self.menu.aboutToShow.connect(self.__showContextMenu)
         
         self.spellingMenu = QMenu()
         self.__menus["Spelling"] = self.spellingMenu
         
-        self.connect(self.spellingMenu, SIGNAL('aboutToShow()'), 
-                     self.__showContextMenuSpelling)
+        self.spellingMenu.aboutToShow.connect(self.__showContextMenuSpelling)
         self.connect(self.spellingMenu, SIGNAL('triggered(QAction *)'), 
                      self.__contextMenuSpellingTriggered)
 
@@ -690,7 +689,7 @@ class Editor(QsciScintillaCompat):
         self.menuActs["calltip"] = \
             menu.addAction(self.trUtf8('Calltip'), self.callTip)
         
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuAutocompletion)
+        menu.aboutToShow.connect(self.__showContextMenuAutocompletion)
         
         return menu
 
@@ -699,7 +698,7 @@ class Editor(QsciScintillaCompat):
         Private method used to setup the Checks context sub menu.
         """
         menu = QMenu(self.trUtf8('Check'))
-        self.connect(menu, SIGNAL("aboutToShow()"), self.__showContextMenuChecks)
+        menu.aboutToShow.connect(self.__showContextMenuChecks)
         return menu
 
     def __initContextMenuShow(self):
@@ -720,7 +719,7 @@ class Editor(QsciScintillaCompat):
         self.profileMenuAct = \
             menu.addAction(self.trUtf8('Profile data...'), self.__showProfileData)
         
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuShow)
+        menu.aboutToShow.connect(self.__showContextMenuShow)
         
         return menu
         
@@ -740,7 +739,7 @@ class Editor(QsciScintillaCompat):
             menu.addAction(self.trUtf8('Application Diagram...'), 
                 self.__showApplicationDiagram)
         
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuGraphics)
+        menu.aboutToShow.connect(self.__showContextMenuGraphics)
         
         return menu
 
@@ -778,7 +777,7 @@ class Editor(QsciScintillaCompat):
         self.pygmentsSelAct.setData("Alternatives")
         
         self.connect(menu, SIGNAL('triggered(QAction *)'), self.__languageMenuTriggered)
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuLanguages)
+        menu.aboutToShow.connect(self.__showContextMenuLanguages)
         
         return menu
         
@@ -800,7 +799,7 @@ class Editor(QsciScintillaCompat):
             self.encodingsActGrp.addAction(act)
         
         self.connect(menu, SIGNAL('triggered(QAction *)'), self.__encodingsMenuTriggered)
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuEncodings)
+        menu.aboutToShow.connect(self.__showContextMenuEncodings)
         
         return menu
         
@@ -833,7 +832,7 @@ class Editor(QsciScintillaCompat):
         self.eolActGrp.addAction(act)
         
         self.connect(menu, SIGNAL('triggered(QAction *)'), self.__eolMenuTriggered)
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuEol)
+        menu.aboutToShow.connect(self.__showContextMenuEol)
         
         return menu
         
@@ -883,8 +882,7 @@ class Editor(QsciScintillaCompat):
             self.bmMarginMenu.addAction(self.trUtf8('Clear all bookmarks'),
                 self.clearBookmarks)
         
-        self.connect(self.bmMarginMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuMargin)
+        self.bmMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
         # breakpoint margin
         self.bpMarginMenu = QMenu()
@@ -911,8 +909,7 @@ class Editor(QsciScintillaCompat):
             self.bpMarginMenu.addAction(self.trUtf8('Clear all breakpoints'), 
                 self.__menuClearBreakpoints)
         
-        self.connect(self.bpMarginMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuMargin)
+        self.bpMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
         # indicator margin
         self.indicMarginMenu = QMenu()
@@ -954,8 +951,7 @@ class Editor(QsciScintillaCompat):
             self.indicMarginMenu.addAction(self.trUtf8('Previous task'),
                 self.previousTask)
         
-        self.connect(self.indicMarginMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuMargin)
+        self.indicMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
     def __initContextMenuUnifiedMargins(self):
         """
@@ -1045,8 +1041,7 @@ class Editor(QsciScintillaCompat):
         self.marginMenuActs["LMBbreakpoints"].setCheckable(True)
         self.marginMenuActs["LMBbreakpoints"].setChecked(True)
         
-        self.connect(self.marginMenu, SIGNAL('aboutToShow()'), 
-            self.__showContextMenuMargin)
+        self.marginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
     def __exportMenuTriggered(self, act):
         """
@@ -5018,7 +5013,7 @@ class Editor(QsciScintillaCompat):
         menu.addAction(self.trUtf8('Add resource frame'),
             self.__addResourceFrame)
         
-        self.connect(menu, SIGNAL('aboutToShow()'), self.__showContextMenuResources)
+        menu.aboutToShow.connect(self.__showContextMenuResources)
         
         return menu
         
