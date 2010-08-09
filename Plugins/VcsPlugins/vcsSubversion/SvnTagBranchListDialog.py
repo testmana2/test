@@ -41,7 +41,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
-        self.process.readyReadStandardOutput.connect(self.__readStderr)
+        self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.rx_list = \
             QRegExp(r"""\w*\s*(\d+)\s+(\w+)\s+\d*\s*((?:\w+\s+\d+|[0-9.]+\s+\w+)\s+[0-9:]+)\s+(.+)/\s*""")

@@ -270,7 +270,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.process = QProcess()
             self.process.finished.connect(self.__procFinished)
             self.process.readyReadStandardOutput.connect(self.__readStdout)
-            self.process.readyReadStandardOutput.connect(self.__readStderr)
+            self.process.readyReadStandardError.connect(self.__readStderr)
         
         args = []
         args.append('status')

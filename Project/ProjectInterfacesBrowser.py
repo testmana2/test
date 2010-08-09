@@ -477,7 +477,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         
         self.compileProc.finished.connect(self.__compileIDLDone)
         self.compileProc.readyReadStandardOutput.connect(self.__readStdout)
-        self.compileProc.readyReadStandardOutput.connect(self.__readStderr)
+        self.compileProc.readyReadStandardError.connect(self.__readStderr)
         
         self.noDialog = noDialog
         self.compileProc.start(self.omniidl, args)

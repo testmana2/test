@@ -50,7 +50,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
-        self.process.readyReadStandardOutput.connect(self.__readStderr)
+        self.process.readyReadStandardError.connect(self.__readStderr)
     
     def closeEvent(self, e):
         """

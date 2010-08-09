@@ -688,7 +688,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         args.append(fn)
         self.compileProc.finished.connect(self.__compileUIDone)
         self.compileProc.readyReadStandardOutput.connect(self.__readStdout)
-        self.compileProc.readyReadStandardOutput.connect(self.__readStderr)
+        self.compileProc.readyReadStandardError.connect(self.__readStderr)
         
         self.noDialog = noDialog
         self.compileProc.start(uic, args)

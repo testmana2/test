@@ -287,8 +287,10 @@ class DebugServer(QTcpServer):
         # only start the client, if we are not in passive mode
         if not self.passive:
             if self.clientProcess:
-                self.clientProcess.readyReadStandardOutput.disconnect(self.__clientProcessError)
-                self.clientProcess.readyReadStandardOutput.disconnect(self.__clientProcessOutput)
+                self.clientProcess.readyReadStandardError.disconnect(
+                    self.__clientProcessError)
+                self.clientProcess.readyReadStandardOutput.disconnect(
+                    self.__clientProcessOutput)
                 self.clientProcess.close()
                 self.clientProcess.kill()
                 self.clientProcess.waitForFinished(10000)
@@ -310,8 +312,10 @@ class DebugServer(QTcpServer):
                     self.debuggerInterface.startRemote(self.serverPort(), runInConsole)
             
             if self.clientProcess:
-                self.clientProcess.readyReadStandardOutput.connect(self.__clientProcessError)
-                self.clientProcess.readyReadStandardOutput.connect(self.__clientProcessOutput)
+                self.clientProcess.readyReadStandardError.connect(
+                    self.__clientProcessError)
+                self.clientProcess.readyReadStandardOutput.connect(
+                    self.__clientProcessOutput)
                 
                 if not isNetworked:
                     # the client is connected through stdin and stdout

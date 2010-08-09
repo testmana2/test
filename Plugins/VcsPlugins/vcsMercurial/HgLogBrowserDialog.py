@@ -86,7 +86,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.process = QProcess()
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
-        self.process.readyReadStandardOutput.connect(self.__readStderr)
+        self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.flags = {
             'A' : self.trUtf8('Added'),

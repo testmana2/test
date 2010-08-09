@@ -4462,7 +4462,7 @@ class UserInterface(QMainWindow):
         proc.finished.connect(self.__toolFinished)
         if tool['redirect'] != 'no':
             proc.readyReadStandardOutput.connect(self.__processToolStdout)
-            proc.readyReadStandardOutput.connect(self.__processToolStderr)
+            proc.readyReadStandardError.connect(self.__processToolStderr)
             if tool['redirect'] in ["insert", "replaceSelection"]:
                 aw = self.viewmanager.activeWindow()
                 procData = (aw, tool['redirect'], [])

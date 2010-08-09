@@ -908,7 +908,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.pylupdateProc.setWorkingDirectory(self.project.ppath)
         self.pylupdateProc.finished.connect(self.__generateTSFileDone)
         self.pylupdateProc.readyReadStandardOutput.connect(self.__readStdoutLupdate)
-        self.pylupdateProc.readyReadStandardOutput.connect(self.__readStderrLupdate)
+        self.pylupdateProc.readyReadStandardError.connect(self.__readStderrLupdate)
         
         self.pylupdateProc.start(self.pylupdate, args)
         procStarted = self.pylupdateProc.waitForStarted()
@@ -1037,7 +1037,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.lreleaseProc.setWorkingDirectory(self.project.ppath)
         self.lreleaseProc.finished.connect(self.__releaseTSFileDone)
         self.lreleaseProc.readyReadStandardOutput.connect(self.__readStdoutLrelease)
-        self.lreleaseProc.readyReadStandardOutput.connect(self.__readStderrLrelease)
+        self.lreleaseProc.readyReadStandardError.connect(self.__readStderrLrelease)
         
         self.lreleaseProc.start(lrelease, args)
         procStarted = self.lreleaseProc.waitForStarted()

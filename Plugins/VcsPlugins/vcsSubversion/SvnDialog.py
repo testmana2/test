@@ -118,7 +118,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         
         self.proc.finished.connect(self.__procFinished)
         self.proc.readyReadStandardOutput.connect(self.__readStdout)
-        self.proc.readyReadStandardOutput.connect(self.__readStderr)
+        self.proc.readyReadStandardError.connect(self.__readStderr)
         
         if workingDir:
             self.proc.setWorkingDirectory(workingDir)
