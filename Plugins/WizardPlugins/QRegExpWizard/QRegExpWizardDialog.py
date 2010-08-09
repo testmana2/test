@@ -496,8 +496,8 @@ class QRegExpWizardDialog(QDialog):
         self.__layout.addWidget(self.cw)
         self.resize(size)
         
-        self.connect(self.cw.buttonBox, SIGNAL("accepted()"), self.accept)
-        self.connect(self.cw.buttonBox, SIGNAL("rejected()"), self.reject)
+        self.cw.buttonBox.accepted[()].connect(self.accept)
+        self.cw.buttonBox.rejected[()].connect(self.reject)
     
     def getCode(self, indLevel, indString):
         """
@@ -525,5 +525,5 @@ class QRegExpWizardWindow(QMainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.connect(self.cw.buttonBox, SIGNAL("accepted()"), self.close)
-        self.connect(self.cw.buttonBox, SIGNAL("rejected()"), self.close)
+        self.cw.buttonBox.accepted[()].connect(self.close)
+        self.cw.buttonBox.rejected[()].connect(self.close)

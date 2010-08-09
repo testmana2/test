@@ -545,8 +545,8 @@ class PluginRepositoryDialog(QDialog):
         self.__layout.addWidget(self.cw)
         self.resize(size)
         
-        self.connect(self.cw.buttonBox, SIGNAL("accepted()"), self.accept)
-        self.connect(self.cw.buttonBox, SIGNAL("rejected()"), self.reject)
+        self.cw.buttonBox.accepted[()].connect(self.accept)
+        self.cw.buttonBox.rejected[()].connect(self.reject)
         self.connect(self.cw, SIGNAL("closeAndInstall"), self.__closeAndInstall)
         
     def __closeAndInstall(self):
@@ -579,8 +579,8 @@ class PluginRepositoryWindow(QMainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.connect(self.cw.buttonBox, SIGNAL("accepted()"), self.close)
-        self.connect(self.cw.buttonBox, SIGNAL("rejected()"), self.close)
+        self.cw.buttonBox.accepted[()].connect(self.close)
+        self.cw.buttonBox.rejected[()].connect(self.close)
         self.connect(self.cw, SIGNAL("closeAndInstall"), self.__startPluginInstall)
     
     def __startPluginInstall(self):

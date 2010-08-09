@@ -610,8 +610,8 @@ class ConfigurationDialog(QDialog):
         self.layout.addWidget(self.cw)
         self.resize(size)
         
-        self.connect(self.cw.buttonBox, SIGNAL("accepted()"), self.accept)
-        self.connect(self.cw.buttonBox, SIGNAL("rejected()"), self.reject)
+        self.cw.buttonBox.accepted[()].connect(self.accept)
+        self.cw.buttonBox.rejected[()].connect(self.reject)
         self.connect(self.cw, SIGNAL('preferencesChanged'), 
                      self.__preferencesChanged)
         
@@ -652,8 +652,8 @@ class ConfigurationWindow(QMainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.connect(self.cw.buttonBox, SIGNAL("accepted()"), self.accept)
-        self.connect(self.cw.buttonBox, SIGNAL("rejected()"), self.close)
+        self.cw.buttonBox.accepted[()].connect(self.accept)
+        self.cw.buttonBox.rejected[()].connect(self.close)
         
     def showConfigurationPageByName(self, pageName):
         """

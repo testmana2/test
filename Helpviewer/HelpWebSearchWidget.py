@@ -76,7 +76,7 @@ class HelpWebSearchWidget(QWidget):
         self.connect(self.__searchEdit, SIGNAL("textEdited(const QString&)"), 
                      self.__textEdited)
         self.__clearButton.clicked[()].connect(self.__searchEdit.clear)
-        self.connect(self.__searchEdit, SIGNAL("returnPressed()"), self.__searchNow)
+        self.__searchEdit.returnPressed[()].connect(self.__searchNow)
         self.connect(self.__completer, SIGNAL("activated(const QModelIndex &)"), 
                      self.__completerActivated)
         self.connect(self.__completer, SIGNAL("highlighted(const QModelIndex &)"), 

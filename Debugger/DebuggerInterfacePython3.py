@@ -352,8 +352,8 @@ class DebuggerInterfacePython3(QObject):
         if self.qsock is not None:
             return False
         
-        self.connect(sock, SIGNAL('disconnected()'), self.debugServer.startClient)
-        self.connect(sock, SIGNAL('readyRead()'), self.__parseClientLine)
+        sock.disconnected[()].connect(self.debugServer.startClient)
+        sock.readyRead[()].connect(self.__parseClientLine)
         
         self.qsock = sock
         
@@ -384,7 +384,7 @@ class DebuggerInterfacePython3(QObject):
         # do not want any slots called during shutdown
         self.disconnect(self.qsock, SIGNAL('disconnected()'), 
             self.debugServer.startClient)
-        self.disconnect(self.qsock, SIGNAL('readyRead()'), self.__parseClientLine)
+        self.qsock.readyRead[()].disconnect(self.__parseClientLine)
         
         # close down socket, and shut down client as well.
         self.__sendCommand('{0}\n'.format(RequestShutdown))
