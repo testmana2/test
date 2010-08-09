@@ -7,7 +7,7 @@
 Module implementing the QInputDialog wizard plugin.
 """
 
-from PyQt4.QtCore import QObject, SIGNAL
+from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog, QMessageBox
 
 from E5Gui.E5Application import e5App

@@ -8,7 +8,6 @@ Module implementing the editor highlighter keywords configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QWidget
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorKeywordsPage import Ui_EditorKeywordsPage

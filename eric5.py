@@ -18,8 +18,7 @@ import io
 import time
 import logging
 
-from PyQt4.QtCore import QTextCodec, SIGNAL, SLOT, qWarning, \
-    QLibraryInfo, QTimer
+from PyQt4.QtCore import QTextCodec, qWarning, QLibraryInfo, QTimer
 from PyQt4.QtGui import QApplication, QErrorMessage
 
 # some global variables needed to start the application
