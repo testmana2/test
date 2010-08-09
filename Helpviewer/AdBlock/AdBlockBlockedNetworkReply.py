@@ -34,7 +34,7 @@ class AdBlockBlockedNetworkReply(QNetworkReply):
         """
         Private method to send some signals to end the connection.
         """
-        self.error[QNetworkReply::NetworkError].emit(QNetworkReply.ContentAccessDenied)
+        self.error[QNetworkReply.NetworkError].emit(QNetworkReply.ContentAccessDenied)
         self.finished.emit()
     
     def readData(self, maxlen):
