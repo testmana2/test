@@ -130,7 +130,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     try:
                         source = Utilities.readEncodedFile(file)[0]
                         # convert eols
-                        source = Utilities.convertLineEnds(source, os.linesep)
+                        source = Utilities.convertLineEnds(source, "\n")
                     except (UnicodeDecodeError, IOError):
                         continue    # just ignore it
                 
