@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Graphics.ImportsDiagram</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Graphics.ImportsDiagram</h1>
+<p>
+Module implementing a dialog showing an imports diagram of a package.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#ImportsDiagram">ImportsDiagram</a></td>
+<td>Class implementing a dialog showing an imports diagram of a package.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="ImportsDiagram" ID="ImportsDiagram"></a>
+<h2>ImportsDiagram</h2>
+<p>
+    Class implementing a dialog showing an imports diagram of a package.
+</p><p>
+    Note: Only package internal imports are show in order to maintain
+    some readability.
+</p>
+<h3>Derived from</h3>
+UMLDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#ImportsDiagram.__init__">ImportsDiagram</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#ImportsDiagram.__addModule">__addModule</a></td>
+<td>Private method to add a module to the diagram.</td>
+</tr><tr>
+<td><a href="#ImportsDiagram.__buildImports">__buildImports</a></td>
+<td>Private method to build the modules shapes of the diagram.</td>
+</tr><tr>
+<td><a href="#ImportsDiagram.__buildModulesDict">__buildModulesDict</a></td>
+<td>Private method to build a dictionary of modules contained in the package.</td>
+</tr><tr>
+<td><a href="#ImportsDiagram.__createAssociations">__createAssociations</a></td>
+<td>Private method to generate the associations between the module shapes.</td>
+</tr><tr>
+<td><a href="#ImportsDiagram.relayout">relayout</a></td>
+<td>Method to relayout the diagram.</td>
+</tr><tr>
+<td><a href="#ImportsDiagram.show">show</a></td>
+<td>Overriden method to show the dialog.</td>
+</tr>
+</table>
+<a NAME="ImportsDiagram.__init__" ID="ImportsDiagram.__init__"></a>
+<h4>ImportsDiagram (Constructor)</h4>
+<b>ImportsDiagram</b>(<i>package, parent = None, name = None, showExternalImports = False</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>package</i></dt>
+<dd>
+name of a python package to show the import
+            relationships (string)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget of the view (QWidget)
+</dd><dt><i>name</i></dt>
+<dd>
+name of the view widget (string)
+</dd><dt><i>showExternalImports=</i></dt>
+<dd>
+flag indicating to show exports from outside
+            the package (boolean)
+</dd>
+</dl><a NAME="ImportsDiagram.__addModule" ID="ImportsDiagram.__addModule"></a>
+<h4>ImportsDiagram.__addModule</h4>
+<b>__addModule</b>(<i>name, classes, x, y</i>)
+<p>
+        Private method to add a module to the diagram.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+module name to be shown (string)
+</dd><dt><i>classes</i></dt>
+<dd>
+list of class names contained in the module
+            (list of strings)
+</dd><dt><i>x</i></dt>
+<dd>
+x-coordinate (float)
+</dd><dt><i>y</i></dt>
+<dd>
+y-coordinate (float)
+</dd>
+</dl><a NAME="ImportsDiagram.__buildImports" ID="ImportsDiagram.__buildImports"></a>
+<h4>ImportsDiagram.__buildImports</h4>
+<b>__buildImports</b>(<i></i>)
+<p>
+        Private method to build the modules shapes of the diagram.
+</p><a NAME="ImportsDiagram.__buildModulesDict" ID="ImportsDiagram.__buildModulesDict"></a>
+<h4>ImportsDiagram.__buildModulesDict</h4>
+<b>__buildModulesDict</b>(<i></i>)
+<p>
+        Private method to build a dictionary of modules contained in the package.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+dictionary of modules contained in the package.
+</dd>
+</dl><a NAME="ImportsDiagram.__createAssociations" ID="ImportsDiagram.__createAssociations"></a>
+<h4>ImportsDiagram.__createAssociations</h4>
+<b>__createAssociations</b>(<i>shapes</i>)
+<p>
+        Private method to generate the associations between the module shapes.
+</p><dl>
+<dt><i>shapes</i></dt>
+<dd>
+list of shapes
+</dd>
+</dl><a NAME="ImportsDiagram.relayout" ID="ImportsDiagram.relayout"></a>
+<h4>ImportsDiagram.relayout</h4>
+<b>relayout</b>(<i></i>)
+<p>
+        Method to relayout the diagram.
+</p><a NAME="ImportsDiagram.show" ID="ImportsDiagram.show"></a>
+<h4>ImportsDiagram.show</h4>
+<b>show</b>(<i></i>)
+<p>
+        Overriden method to show the dialog.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
