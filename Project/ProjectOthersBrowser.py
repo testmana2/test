@@ -33,6 +33,8 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    sourceFile = pyqtSignal(str)
+    
     def __init__(self, project, parent=None):
         """
         Constructor
@@ -231,7 +233,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
                 else:
                     type_ = mimetypes.guess_type(itm.fileName())[0]
                     if type_ is None or type_.split("/")[0] == "text":
-                        self.emit(SIGNAL('sourceFile'), itm.fileName())
+                        self.sourceFile.emit(itm.fileName())
                     else:
                         QDesktopServices.openUrl(QUrl(itm.fileName()))
         

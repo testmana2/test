@@ -3103,14 +3103,15 @@ class ViewManager(QObject):
             
         self.__setSbFile()
         
-    def openSourceFile(self, fn, lineno = None, filetype = "", selection = None):
+    def openSourceFile(self, fn, lineno = None, filetype = "", selStart = 0, selEnd = 0):
         """
         Public slot to display a file in an editor.
         
-        @param fn name of file to be opened
-        @param lineno line number to place the cursor at
+        @param fn name of file to be opened (string)
+        @param lineno line number to place the cursor at (integer)
         @param filetype type of the source file (string)
-        @param selection tuple (start, end) of an area to be selected
+        @param selStart start of an area to be selected (integer)
+        @param selEnd end of an area to be selected (integer)
         """
         try:
             newWin, editor = self.getEditor(fn, filetype = filetype)
@@ -3125,8 +3126,8 @@ class ViewManager(QObject):
             editor.ensureVisibleTop(lineno)
             editor.gotoLine(lineno)
         
-        if selection is not None:
-            editor.setSelection(lineno - 1, selection[0], lineno - 1, selection[1])
+        if selStart != selEnd:
+            editor.setSelection(lineno - 1, selStart, lineno - 1, selEnd)
         
         # insert filename into list of recently opened files
         self.addToRecentList(fn)

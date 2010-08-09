@@ -42,6 +42,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    sourceFile = pyqtSignal(str)
+    
     def __init__(self, project, parent=None):
         """
         Constructor
@@ -561,7 +563,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     else:
                         self.emit(SIGNAL('trpreview'), [itm.fileName()])
                 else:
-                    self.emit(SIGNAL('sourceFile'), itm.fileName())
+                    self.sourceFile.emit(itm.fileName())
         
     def __openFileInEditor(self):
         """
@@ -569,7 +571,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         itmList = self.getSelectedItems()
         for itm in itmList[:]:
-            self.emit(SIGNAL('sourceFile'), itm.fileName())
+            self.sourceFile.emit(itm.fileName())
         
     def __removeLanguageFile(self):
         """

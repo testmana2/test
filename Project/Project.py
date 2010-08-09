@@ -112,6 +112,8 @@ class Project(QObject):
     @signal lexerAssociationsChanged() emitted after the lexer associations have been
             changed
     """
+    sourceFile = pyqtSignal(str)
+    
     keynames = [
         "PROGLANGUAGE", "MIXEDLANGUAGE", "PROJECTTYPE",
         "SPELLLANGUAGE", "SPELLWORDS", "SPELLEXCLUDES", 
@@ -2814,7 +2816,7 @@ class Project(QObject):
                     if restoreSession:
                         # open the main script
                         if len(self.pdata["MAINSCRIPT"]) == 1:
-                            self.emit(SIGNAL('sourceFile'), 
+                            self.sourceFile.emit(
                                 os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0]))
                         
                         # open a project session file being quiet about errors

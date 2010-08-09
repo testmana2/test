@@ -265,10 +265,14 @@ class UserInterface(QMainWindow):
         
         # now setup the connections
         splash.showMessage(self.trUtf8("Setting up connections..."))
-        self.connect(app, SIGNAL("focusChanged(QWidget*, QWidget*)"), 
-                     self.viewmanager.appFocusChanged)
-        self.connect(self.browser, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        app.focusChanged.connect(
+            self.viewmanager.appFocusChanged)
+        self.browser.sourceFile[str].connect(
+            self.viewmanager.openSourceFile)
+        self.browser.sourceFile[str, int].connect(
+            self.viewmanager.openSourceFile)
+        self.browser.sourceFile[str, int, str].connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.browser, SIGNAL('designerFile'),
                      self.__designer)
         self.connect(self.browser, SIGNAL('linguistFile'),
@@ -288,17 +292,20 @@ class UserInterface(QMainWindow):
         self.connect(self.browser, SIGNAL('trpreview'),
                      self.__TRPreviewer)
         
-        self.connect(self.debugViewer.exceptionLogger, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.debugViewer.exceptionLogger.sourceFile.connect(
+            self.viewmanager.openSourceFile)
         
-        self.connect(self.debugViewer, SIGNAL('sourceFile'),
-                     self.viewmanager.showDebugSource)
+        self.debugViewer.sourceFile.connect(self.viewmanager.showDebugSource)
         
         self.connect(self.taskViewer, SIGNAL('displayFile'),
                      self.viewmanager.openSourceFile)
         
-        self.connect(self.projectBrowser.psBrowser, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.projectBrowser.psBrowser.sourceFile[str].connect(
+            self.viewmanager.openSourceFile)
+        self.projectBrowser.psBrowser.sourceFile[str, int].connect(
+            self.viewmanager.openSourceFile)
+        self.projectBrowser.psBrowser.sourceFile[str, int, str].connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.projectBrowser.psBrowser, SIGNAL('closeSourceWindow'),
                      self.viewmanager.closeWindow)
         self.connect(self.projectBrowser.psBrowser, SIGNAL('unittestOpen'),
@@ -306,8 +313,8 @@ class UserInterface(QMainWindow):
         
         self.connect(self.projectBrowser.pfBrowser, SIGNAL('designerFile'),
                      self.__designer)
-        self.connect(self.projectBrowser.pfBrowser, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.projectBrowser.pfBrowser.sourceFile.connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.projectBrowser.pfBrowser, SIGNAL('uipreview'),
                      self.__UIPreviewer)
         self.connect(self.projectBrowser.pfBrowser, SIGNAL('trpreview'),
@@ -319,8 +326,8 @@ class UserInterface(QMainWindow):
         self.connect(self.projectBrowser.pfBrowser, SIGNAL('appendStderr'),
                      self.appendToStderr)
         
-        self.connect(self.projectBrowser.prBrowser, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.projectBrowser.prBrowser.sourceFile.connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.projectBrowser.prBrowser, SIGNAL('closeSourceWindow'),
                      self.viewmanager.closeWindow)
         self.connect(self.projectBrowser.prBrowser, SIGNAL('appendStdout'),
@@ -330,8 +337,8 @@ class UserInterface(QMainWindow):
         
         self.connect(self.projectBrowser.ptBrowser, SIGNAL('linguistFile'),
                      self.__linguist4)
-        self.connect(self.projectBrowser.ptBrowser, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.projectBrowser.ptBrowser.sourceFile.connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.projectBrowser.ptBrowser, SIGNAL('trpreview'),
                      self.__TRPreviewer)
         self.connect(self.projectBrowser.ptBrowser, SIGNAL('closeSourceWindow'),
@@ -341,8 +348,10 @@ class UserInterface(QMainWindow):
         self.connect(self.projectBrowser.ptBrowser, SIGNAL('appendStderr'),
                      self.appendToStderr)
         
-        self.connect(self.projectBrowser.piBrowser, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.projectBrowser.piBrowser.sourceFile[str].connect(
+            self.viewmanager.openSourceFile)
+        self.projectBrowser.piBrowser.sourceFile[str, int].connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.projectBrowser.piBrowser, SIGNAL('closeSourceWindow'),
                      self.viewmanager.closeWindow)
         self.connect(self.projectBrowser.piBrowser, SIGNAL('appendStdout'),
@@ -350,8 +359,8 @@ class UserInterface(QMainWindow):
         self.connect(self.projectBrowser.piBrowser, SIGNAL('appendStderr'),
                      self.appendToStderr)
         
-        self.connect(self.projectBrowser.poBrowser, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.projectBrowser.poBrowser.sourceFile.connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.projectBrowser.poBrowser, SIGNAL('closeSourceWindow'),
                      self.viewmanager.closeWindow)
         self.connect(self.projectBrowser.poBrowser, SIGNAL('pixmapEditFile'),
@@ -361,8 +370,8 @@ class UserInterface(QMainWindow):
         self.connect(self.projectBrowser.poBrowser, SIGNAL('svgFile'),
                      self.__showSvg)
         
-        self.connect(self.project, SIGNAL('sourceFile'),
-                    self.viewmanager.openSourceFile)
+        self.project.sourceFile.connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.project, SIGNAL('newProject'),
                      self.viewmanager.newProject)
         self.connect(self.project, SIGNAL('projectOpened'),
@@ -508,20 +517,19 @@ class UserInterface(QMainWindow):
         
         # Generate the find in project files dialog
         self.findFilesDialog = FindFileDialog(self.project)
-        self.connect(self.findFilesDialog, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.findFilesDialog.sourceFile.connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.findFilesDialog, SIGNAL('designerFile'),
                      self.__designer)
         self.replaceFilesDialog = FindFileDialog(self.project, replaceMode = True)
-        self.connect(self.replaceFilesDialog, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.replaceFilesDialog.sourceFile.connect(
+            self.viewmanager.openSourceFile)
         self.connect(self.replaceFilesDialog, SIGNAL('designerFile'),
                      self.__designer)
         
         # generate the find file dialog
         self.findFileNameDialog = FindFileNameDialog(self.project)
-        self.connect(self.findFileNameDialog, SIGNAL('sourceFile'),
-                     self.viewmanager.openSourceFile)
+        self.findFileNameDialog.sourceFile.connect(self.viewmanager.openSourceFile)
         self.connect(self.findFileNameDialog, SIGNAL('designerFile'),
                      self.__designer)
         

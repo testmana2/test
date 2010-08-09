@@ -31,6 +31,8 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
     @signal sourceFile(string) emitted to open a file in the editor
     @signal designerFile(string) emitted to open a Qt-Designer file
     """
+    sourceFile = pyqtSignal(str)
+    
     def __init__(self, project, parent = None):
         """
         Constructor
@@ -82,7 +84,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         if fileName.endswith('.ui'):
             self.emit(SIGNAL('designerFile'), os.path.join(filePath, fileName))
         else:
-            self.emit(SIGNAL('sourceFile'), os.path.join(filePath, fileName))
+            self.sourceFile.emit(os.path.join(filePath, fileName))
 
     def __searchFile(self):
         """

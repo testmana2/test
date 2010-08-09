@@ -43,6 +43,8 @@ class Browser(QTreeView):
     @signal svgFile(string) emitted to open a SVG file
     @signal unittestOpen(string) emitted to open a Python file for a unittest
     """
+    sourceFile = pyqtSignal((str, ), (str, int), (str, int, str))
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -270,7 +272,7 @@ class Browser(QTreeView):
                 itm = self.model().item(index)
                 coord = self.mapToGlobal(coord)
                 if isinstance(itm, BrowserFileItem):
-                    if itm.isPythonFile():
+                    if itm.isPython3File():
                         if itm.fileName().endswith('.py'):
                             self.unittestAct.setEnabled(True)
                         else:
@@ -313,13 +315,13 @@ class Browser(QTreeView):
         for itm in itmList:
             if isinstance(itm, BrowserFileItem):
                 if itm.isPythonFile():
-                    self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "Python")
+                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Python")
                 elif itm.isPython3File():
-                    self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "Python3")
+                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Python3")
                 elif itm.isRubyFile():
-                    self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "Ruby")
+                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Ruby")
                 elif itm.isDFile():
-                    self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "D")
+                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "D")
                 elif itm.isDesignerFile():
                     self.emit(SIGNAL('designerFile'), itm.fileName())
                 elif itm.isLinguistFile():
@@ -332,9 +334,9 @@ class Browser(QTreeView):
                 elif itm.isMultiProjectFile():
                     self.emit(SIGNAL('multiProjectFile'), itm.fileName())
                 elif itm.isIdlFile():
-                    self.emit(SIGNAL('sourceFile'), itm.fileName())
+                    self.sourceFile[str].emit(itm.fileName())
                 elif itm.isResourcesFile():
-                    self.emit(SIGNAL('sourceFile'), itm.fileName())
+                    self.sourceFile[str].emit(itm.fileName())
                 elif itm.isPixmapFile():
                     self.emit(SIGNAL('pixmapFile'), itm.fileName())
                 elif itm.isSvgFile():
@@ -342,17 +344,17 @@ class Browser(QTreeView):
                 else:
                     type_ = mimetypes.guess_type(itm.fileName())[0]
                     if type_ is None or type_.split("/")[0] == "text":
-                        self.emit(SIGNAL('sourceFile'), itm.fileName())
+                        self.sourceFile[str].emit(itm.fileName())
                     else:
                         QDesktopServices.openUrl(QUrl(itm.fileName()))
             elif isinstance(itm, BrowserClassItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName(), 
+                self.sourceFile[str, int].emit(itm.fileName(), 
                     itm.classObject().lineno)
             elif isinstance(itm, BrowserMethodItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName(), 
+                self.sourceFile[str, int].emit(itm.fileName(), 
                     itm.functionObject().lineno)
             elif isinstance(itm, BrowserClassAttributeItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName(), 
+                self.sourceFile[str, int].emit(itm.fileName(), 
                     itm.attributeObject().lineno)
         
     def _editPixmap(self):

@@ -23,6 +23,8 @@ class BreakPointViewer(QTreeView):
     
     @signal sourceFile(string, int) emitted to show the source of a breakpoint
     """
+    sourceFile = pyqtSignal(str, int)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -383,7 +385,7 @@ class BreakPointViewer(QTreeView):
             return
         
         fn, line = bp[:2]
-        self.emit(SIGNAL("sourceFile"), fn, line)
+        self.sourceFile.emit(fn, line)
     
     def highlightBreakpoint(self, fn, lineno):
         """

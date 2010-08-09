@@ -40,6 +40,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    sourceFile = pyqtSignal((str, ), (str, int))
+    
     def __init__(self, project, parent = None):
         """
         Constructor
@@ -323,15 +325,15 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         
         for itm in itmList:
             if isinstance(itm, BrowserFileItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName())
+                self.sourceFile[str].emit(itm.fileName())
             elif isinstance(itm, BrowserClassItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName(), 
+                self.sourceFile[str, int].emit(itm.fileName(), 
                     itm.classObject().lineno)
             elif isinstance(itm,BrowserMethodItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName(), 
+                self.sourceFile[str, int].emit(itm.fileName(), 
                     itm.functionObject().lineno)
             elif isinstance(itm, BrowserClassAttributeItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName(), 
+                self.sourceFile[str, int].emit(itm.fileName(), 
                     itm.attributeObject().lineno)
         
     def __addInterfaceFiles(self):

@@ -42,6 +42,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    sourceFile = pyqtSignal((str, ), (str, int), (str, int, str))
+    
     def __init__(self, project, parent = None):
         """
         Constructor
@@ -521,22 +523,23 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         for itm in itmList:
             if isinstance(itm, BrowserFileItem):
                 if itm.isPythonFile():
-                    self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "Python")
+                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Python")
+                elif itm.isPython3File():
+                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Python3")
                 elif itm.isRubyFile():
-                    self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "Ruby")
+                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Ruby")
                 elif itm.isDFile():
-                    self.emit(SIGNAL('sourceFile'), itm.fileName(), 1, "D")
+                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "D")
                 else:
-                    self.emit(SIGNAL('sourceFile'), itm.fileName())
+                    self.sourceFile[str].emit(itm.fileName())
             elif isinstance(itm, BrowserClassItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName(), 
-                    itm.classObject().lineno)
+                self.sourceFile[str, int].emit(itm.fileName(), itm.classObject().lineno)
             elif isinstance(itm,BrowserMethodItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName(), 
-                    itm.functionObject().lineno)
+                self.sourceFile[str, int].emit(
+                    itm.fileName(), itm.functionObject().lineno)
             elif isinstance(itm, BrowserClassAttributeItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName(), 
-                    itm.attributeObject().lineno)
+                self.sourceFile[str, int].emit(
+                    itm.fileName(), itm.attributeObject().lineno)
         
     def __addNewPackage(self):
         """
@@ -594,7 +597,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                         return
                 self.project.appendFile(packageFile)
             if packageFile:
-                self.emit(SIGNAL('sourceFile'), packageFile)
+                self.sourceFile[str].emit(packageFile)
         
     def __addSourceFiles(self):
         """

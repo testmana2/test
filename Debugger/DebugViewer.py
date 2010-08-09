@@ -45,6 +45,8 @@ class DebugViewer(QWidget):
     
     @signal sourceFile(string, int) emitted to open a source file at a line
     """
+    sourceFile = pyqtSignal(str, int)
+    
     def __init__(self, debugServer, docked, vm, parent = None, 
                  embeddedShell = True, embeddedBrowser = True):
         """
@@ -186,8 +188,7 @@ class DebugViewer(QWidget):
         index = self.__tabWidget.addTab(self.breakpointViewer,
             UI.PixmapCache.getIcon("breakpoints.png"), '')
         self.__tabWidget.setTabToolTip(index, self.breakpointViewer.windowTitle())
-        self.connect(self.breakpointViewer, SIGNAL("sourceFile"),
-                     self, SIGNAL("sourceFile"))
+        self.breakpointViewer.sourceFile.connect(self.sourceFile)
         
         # add the watch expression viewer
         self.watchpointViewer = WatchPointViewer()
@@ -345,7 +346,7 @@ class DebugViewer(QWidget):
         Private slot to handle the source button press to show the selected file.
         """
         s = self.currentStack[self.stackComboBox.currentIndex()]
-        self.emit(SIGNAL('sourceFile'), s[0], int(s[1]))
+        self.sourceFile.emit(s[0], int(s[1]))
         
     def __frameSelected(self, frmnr):
         """

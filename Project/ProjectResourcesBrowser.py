@@ -36,6 +36,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    sourceFile = pyqtSignal(str)
+    
     RCFilenameFormatPython = "{0}_rc.py"
     RCFilenameFormatRuby = "{0}_rc.rb"
     
@@ -362,7 +364,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         itmList = self.getSelectedItems()
         for itm in itmList[:]:
             if isinstance(itm, ProjectBrowserFileItem):
-                self.emit(SIGNAL('sourceFile'), itm.fileName())
+                self.sourceFile.emit(itm.fileName())
         
     def __newResource(self):
         """
@@ -431,7 +433,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 return
             
             self.project.appendFile(fname)
-            self.emit(SIGNAL('sourceFile'), fname)
+            self.sourceFile.emit(fname)
         
     def __deleteFile(self):
         """

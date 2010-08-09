@@ -45,6 +45,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
     @signal menusAboutToBeCreated emitted when the context menu are about to
             be created. This is the right moment to add or remove hook methods.
     """
+    sourceFile = pyqtSignal(str)
+    
     def __init__(self, project, parent = None):
         """
         Constructor
@@ -418,7 +420,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         """
         itmList = self.getSelectedItems()
         for itm in itmList[:]:
-            self.emit(SIGNAL('sourceFile'), itm.fileName())
+            self.sourceFile.emit(itm.fileName())
         
     def _openItem(self):
         """
@@ -431,7 +433,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 if itm.isDesignerFile():
                     self.emit(SIGNAL('designerFile'), itm.fileName())
                 else:
-                    self.emit(SIGNAL('sourceFile'), itm.fileName())
+                    self.sourceFile.emit(itm.fileName())
         
     def __UIPreview(self):
         """

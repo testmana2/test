@@ -32,6 +32,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         source file at a line
     @signal designerFile(string) emitted to open a Qt-Designer file
     """
+    sourceFile = pyqtSignal(str, int, str, int, int)
+    
     lineRole    = Qt.UserRole + 1
     startRole   = Qt.UserRole + 2
     endRole     = Qt.UserRole + 3
@@ -421,7 +423,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                     
                     if self.feelLikeCheckBox.isChecked():
                         fn = os.path.join(self.project.ppath, file)
-                        self.emit(SIGNAL('sourceFile'), fn, count, "", (start, end))
+                        self.sourceFile.emit(fn, count, "", start, end)
                         QApplication.processEvents()
                         breakSearch = True
                         break
@@ -481,7 +483,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         if fn.endswith('.ui'):
             self.emit(SIGNAL('designerFile'), fn)
         else:
-            self.emit(SIGNAL('sourceFile'), fn, line, "", (start, end))
+            self.sourceFile.emit(fn, line, "", start, end)
         
     @pyqtSlot()
     def on_dirSelectButton_clicked(self):

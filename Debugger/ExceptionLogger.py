@@ -22,6 +22,8 @@ class ExceptionLogger(QTreeWidget):
     
     @signal sourceFile(string, int) emitted to open a source file at a line
     """
+    sourceFile = pyqtSignal(str, int)
+    
     def __init__(self, parent=None):
         """
         Constructor
@@ -127,7 +129,7 @@ class ExceptionLogger(QTreeWidget):
         entry = itm.text(0)
         entryList = entry.split(",")
         try:
-            self.emit(SIGNAL('sourceFile'), entryList[0], int(entryList[1]))
+            self.sourceFile.emit(entryList[0], int(entryList[1]))
         except (IndexError, ValueError):
             pass
         
