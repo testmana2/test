@@ -9,7 +9,7 @@ Module implementing a dialog to browse the log history.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, SIGNAL, Qt, QDate, QProcess, QTimer, QRegExp, QSize
+from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, QSize
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
     QApplication, QMessageBox, QCursor, QWidget, QLineEdit, QColor, QPixmap, \
     QPainter, QPen, QBrush, QIcon
@@ -84,12 +84,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__parentsRole = Qt.UserRole + 3
         
         self.process = QProcess()
-        self.connect(self.process, SIGNAL('finished(int, QProcess::ExitStatus)'),
-            self.__procFinished)
-        self.connect(self.process, SIGNAL('readyReadStandardOutput()'),
-            self.__readStdout)
-        self.connect(self.process, SIGNAL('readyReadStandardError()'),
-            self.__readStderr)
+        self.process.finished.connect(self.__procFinished)
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardOutput.connect(self.__readStderr)
         
         self.flags = {
             'A' : self.trUtf8('Added'),

@@ -116,12 +116,9 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         self.resultbox.append(' '.join(nargs))
         self.resultbox.append('')
         
-        self.connect(self.proc, SIGNAL('finished(int, QProcess::ExitStatus)'),
-            self.__procFinished)
-        self.connect(self.proc, SIGNAL('readyReadStandardOutput()'),
-            self.__readStdout)
-        self.connect(self.proc, SIGNAL('readyReadStandardError()'),
-            self.__readStderr)
+        self.proc.finished.connect(self.__procFinished)
+        self.proc.readyReadStandardOutput.connect(self.__readStdout)
+        self.proc.readyReadStandardOutput.connect(self.__readStderr)
         
         if workingDir:
             self.proc.setWorkingDirectory(workingDir)

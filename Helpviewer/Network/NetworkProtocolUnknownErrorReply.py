@@ -32,7 +32,7 @@ class NetworkProtocolUnknownErrorReply(QNetworkReply):
         """
         self.emit(SIGNAL("error(QNetworkReply::NetworkError)"), 
                          QNetworkReply.ProtocolUnknownError)
-        self.emit(SIGNAL("finished()"))
+        self.finished[()].emit()
     
     def abort(self):
         """

@@ -243,7 +243,7 @@ class AdBlockSubscription(QObject):
         request = QNetworkRequest(self.location())
         self.__downloading = \
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(request)
-        self.connect(self.__downloading, SIGNAL("finished()"), self.__rulesDownloaded)
+        self.__downloading.finished[()].connect(self.__rulesDownloaded)
     
     def __rulesDownloaded(self):
         """
@@ -267,7 +267,7 @@ class AdBlockSubscription(QObject):
             request = QNetworkRequest(redirect)
             self.__downloading = \
                 Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(request)
-            self.connect(self.__downloading, SIGNAL("finished()"), self.__rulesDownloaded)
+            self.__downloading.finished[()].connect(self.__rulesDownloaded)
             return
         
         if response.isEmpty():

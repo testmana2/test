@@ -906,12 +906,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         args.append('-verbose')
         args.append(self.tmpProject)
         self.pylupdateProc.setWorkingDirectory(self.project.ppath)
-        self.connect(self.pylupdateProc, SIGNAL('finished(int, QProcess::ExitStatus)'), 
-            self.__generateTSFileDone)
-        self.connect(self.pylupdateProc, SIGNAL('readyReadStandardOutput()'), 
-            self.__readStdoutLupdate)
-        self.connect(self.pylupdateProc, SIGNAL('readyReadStandardError()'), 
-            self.__readStderrLupdate)
+        self.pylupdateProc.finished.connect(self.__generateTSFileDone)
+        self.pylupdateProc.readyReadStandardOutput.connect(self.__readStdoutLupdate)
+        self.pylupdateProc.readyReadStandardOutput.connect(self.__readStderrLupdate)
         
         self.pylupdateProc.start(self.pylupdate, args)
         procStarted = self.pylupdateProc.waitForStarted()
@@ -1038,12 +1035,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         args.append('-verbose')
         args.append(self.tmpProject)
         self.lreleaseProc.setWorkingDirectory(self.project.ppath)
-        self.connect(self.lreleaseProc, SIGNAL('finished(int, QProcess::ExitStatus)'), 
-            self.__releaseTSFileDone)
-        self.connect(self.lreleaseProc, SIGNAL('readyReadStandardOutput()'), 
-            self.__readStdoutLrelease)
-        self.connect(self.lreleaseProc, SIGNAL('readyReadStandardError()'), 
-            self.__readStderrLrelease)
+        self.lreleaseProc.finished.connect(self.__releaseTSFileDone)
+        self.lreleaseProc.readyReadStandardOutput.connect(self.__readStdoutLrelease)
+        self.lreleaseProc.readyReadStandardOutput.connect(self.__readStderrLrelease)
         
         self.lreleaseProc.start(lrelease, args)
         procStarted = self.lreleaseProc.waitForStarted()

@@ -9,7 +9,7 @@ Module implementing a dialog to show a list of tags or branches.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, SIGNAL, QProcess, Qt, QTimer
+from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
     QMessageBox, QLineEdit
 
@@ -42,12 +42,9 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.tagList.headerItem().setText(self.tagList.columnCount(), "")
         self.tagList.header().setSortIndicator(3, Qt.AscendingOrder)
         
-        self.connect(self.process, SIGNAL('finished(int, QProcess::ExitStatus)'),
-            self.__procFinished)
-        self.connect(self.process, SIGNAL('readyReadStandardOutput()'),
-            self.__readStdout)
-        self.connect(self.process, SIGNAL('readyReadStandardError()'),
-            self.__readStderr)
+        self.process.finished.connect(self.__procFinished)
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardOutput.connect(self.__readStderr)
     
     def closeEvent(self, e):
         """

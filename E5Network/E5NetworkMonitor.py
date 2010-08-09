@@ -98,10 +98,8 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         self.connect(self.searchEdit, SIGNAL("textChanged(QString)"), 
                      self.__proxyModel.setFilterFixedString)
         
-        self.connect(self.removeButton, SIGNAL("clicked()"), 
-            self.requestsList.removeSelected)
-        self.connect(self.removeAllButton, SIGNAL("clicked()"), 
-            self.requestsList.removeAll)
+        self.removeButton.clicked[()].connect(self.requestsList.removeSelected)
+        self.removeAllButton.clicked[()].connect(self.requestsList.removeAll)
         
         self.__model = E5RequestModel(networkAccessManager, self)
         self.__proxyModel.setSourceModel(self.__model)
@@ -256,7 +254,7 @@ class E5RequestModel(QAbstractTableModel):
         """
         self.beginInsertRows(QModelIndex(), len(self.requests), len(self.requests))
         self.requests.append(req)
-        self.connect(req.reply, SIGNAL("finished()"), self.__addReply)
+        req.reply.finished[()].connect(self.__addReply)
         self.endInsertRows()
     
     def __addReply(self):

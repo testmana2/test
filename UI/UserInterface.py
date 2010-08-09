@@ -4459,13 +4459,10 @@ class UserInterface(QMainWindow):
             .format(program, tool['arguments'])
         self.appendToStdout(t)
         
-        self.connect(proc, SIGNAL('finished(int, QProcess::ExitStatus)'), 
-            self.__toolFinished)
+        proc.finished.connect(self.__toolFinished)
         if tool['redirect'] != 'no':
-            self.connect(proc, SIGNAL('readyReadStandardOutput()'), 
-                self.__processToolStdout)
-            self.connect(proc, SIGNAL('readyReadStandardError()'), 
-                self.__processToolStderr)
+            proc.readyReadStandardOutput.connect(self.__processToolStdout)
+            proc.readyReadStandardOutput.connect(self.__processToolStderr)
             if tool['redirect'] in ["insert", "replaceSelection"]:
                 aw = self.viewmanager.activeWindow()
                 procData = (aw, tool['redirect'], [])
@@ -5527,7 +5524,7 @@ class UserInterface(QMainWindow):
                 .format(url.host()))
             self.__versionCheckProgress.setValue(alternative)
         reply = self.__networkManager.get(QNetworkRequest(url))
-        self.connect(reply, SIGNAL("finished()"), self.__versionsDownloadDone)
+        reply.finished[()].connect(self.__versionsDownloadDone)
         self.__replies.append(reply)
         
     def __versionsDownloadDone(self):

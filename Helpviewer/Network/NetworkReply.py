@@ -64,5 +64,5 @@ class NetworkReply(QNetworkReply):
         buffer = bytes(self.__data[:len_])
         self.__data.remove(0, len_)
         if self.__data.length() == 0:
-            QTimer.singleShot(0, self, SIGNAL("finished()"))
+            QTimer.singleShot(0, self.finished)
         return buffer

@@ -9,7 +9,7 @@ Module implementing a dialog starting a process and showing its output.
 
 import os
 
-from PyQt4.QtCore import QProcess, QTimer, SIGNAL, pyqtSlot, Qt
+from PyQt4.QtCore import QProcess, QTimer, pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QMessageBox, QLineEdit
 
 from .Ui_HgDialog import Ui_HgDialog
@@ -119,12 +119,9 @@ class HgDialog(QDialog, Ui_HgDialog):
             self.resultbox.append(' '.join(args))
             self.resultbox.append('')
         
-        self.connect(self.proc, SIGNAL('finished(int, QProcess::ExitStatus)'),
-            self.__procFinished)
-        self.connect(self.proc, SIGNAL('readyReadStandardOutput()'),
-            self.__readStdout)
-        self.connect(self.proc, SIGNAL('readyReadStandardError()'),
-            self.__readStderr)
+        self.proc.finished.connect(self.__procFinished)
+        self.proc.readyReadStandardOutput.connect(self.__readStdout)
+        self.proc.readyReadStandardOutput.connect(self.__readStderr)
         
         if workingDir:
             self.proc.setWorkingDirectory(workingDir)

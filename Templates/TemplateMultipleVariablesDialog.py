@@ -100,8 +100,8 @@ class TemplateMultipleVariablesDialog(QDialog):
         # polish up the dialog
         self.resize(QSize(400, 480).expandedTo(self.minimumSizeHint()))
 
-        self.connect(self.okButton, SIGNAL("clicked()"), self.accept)
-        self.connect(self.cancelButton, SIGNAL("clicked()"), self.reject)
+        self.okButton.clicked[()].connect(self.accept)
+        self.cancelButton.clicked[()].connect(self.reject)
 
     def getVariables(self):
         """

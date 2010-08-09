@@ -125,8 +125,7 @@ class DebugViewer(QWidget):
             UI.PixmapCache.getIcon("globalVariables.png"), '')
         self.__tabWidget.setTabToolTip(index, self.globalsViewer.windowTitle())
         
-        self.connect(self.setGlobalsFilterButton, SIGNAL('clicked()'),
-                     self.__setGlobalsFilter)
+        self.setGlobalsFilterButton.clicked[()].connect(self.__setGlobalsFilter)
         self.connect(self.globalsFilterEdit, SIGNAL('returnPressed()'),
                      self.__setGlobalsFilter)
         
@@ -174,12 +173,10 @@ class DebugViewer(QWidget):
             UI.PixmapCache.getIcon("localVariables.png"), '')
         self.__tabWidget.setTabToolTip(index, self.localsViewer.windowTitle())
         
-        self.connect(self.sourceButton, SIGNAL('clicked()'), 
-                     self.__showSource)
+        self.sourceButton.clicked[()].connect(self.__showSource)
         self.connect(self.stackComboBox, SIGNAL('activated(int)'), 
                      self.__frameSelected)
-        self.connect(self.setLocalsFilterButton, SIGNAL('clicked()'),
-                     self.__setLocalsFilter)
+        self.setLocalsFilterButton.clicked[()].connect(self.__setLocalsFilter)
         self.connect(self.localsFilterEdit, SIGNAL('returnPressed()'),
                      self.__setLocalsFilter)
         

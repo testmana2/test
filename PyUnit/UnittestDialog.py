@@ -480,8 +480,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         # one more button if called from eric
         if self.dbs:
-            self.dlg.connect(ui.showButton, SIGNAL("clicked()"),
-                            self.__showSource)
+            ui.showButton.clicked[()].connect(self.__showSource)
         else:
             ui.showButton.hide()
 

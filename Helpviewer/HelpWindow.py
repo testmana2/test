@@ -190,7 +190,7 @@ class HelpWindow(QMainWindow):
                 self.closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
                 self.closeButton.setToolTip(self.trUtf8("Close the current help window"))
                 self.closeButton.setEnabled(False)
-                self.connect(self.closeButton, SIGNAL("clicked(bool)"), self.__close)
+                self.closeButton.clicked[bool].connect(self.__close)
                 self.rightCornerWidgetLayout.addWidget(self.closeButton)
             else:
                 self.tabWidget.setTabsClosable(True)
@@ -204,7 +204,7 @@ class HelpWindow(QMainWindow):
             self.newTabButton.setIcon(UI.PixmapCache.getIcon("new.png"))
             self.newTabButton.setToolTip(self.trUtf8("Open a new help window tab"))
             self.tabWidget.setCornerWidget(self.newTabButton, Qt.TopLeftCorner)
-            self.connect(self.newTabButton, SIGNAL("clicked(bool)"), self.newTab)
+            self.newTabButton.clicked[bool].connect(self.newTab)
             
             if Preferences.getHelp("SaveGeometry"):
                 g = Preferences.getGeometry("HelpViewerGeometry")

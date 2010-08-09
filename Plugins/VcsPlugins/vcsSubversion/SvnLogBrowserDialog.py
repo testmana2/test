@@ -59,12 +59,9 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         self.__changesRole = Qt.UserRole + 1
         
         self.process = QProcess()
-        self.connect(self.process, SIGNAL('finished(int, QProcess::ExitStatus)'),
-            self.__procFinished)
-        self.connect(self.process, SIGNAL('readyReadStandardOutput()'),
-            self.__readStdout)
-        self.connect(self.process, SIGNAL('readyReadStandardError()'),
-            self.__readStderr)
+        self.process.finished.connect(self.__procFinished)
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardOutput.connect(self.__readStderr)
         
         self.rx_sep1 = QRegExp('\\-+\\s*')
         self.rx_sep2 = QRegExp('=+\\s*')

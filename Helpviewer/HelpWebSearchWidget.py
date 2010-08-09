@@ -72,10 +72,10 @@ class HelpWebSearchWidget(QWidget):
         self.__completer.setCompletionMode(QCompleter.UnfilteredPopupCompletion)
         self.__completer.setWidget(self.__searchEdit)
         
-        self.connect(self.__searchButton, SIGNAL("clicked()"), self.__searchButtonClicked)
+        self.__searchButton.clicked[()].connect(self.__searchButtonClicked)
         self.connect(self.__searchEdit, SIGNAL("textEdited(const QString&)"), 
                      self.__textEdited)
-        self.connect(self.__clearButton, SIGNAL("clicked()"), self.__searchEdit.clear)
+        self.__clearButton.clicked[()].connect(self.__searchEdit.clear)
         self.connect(self.__searchEdit, SIGNAL("returnPressed()"), self.__searchNow)
         self.connect(self.__completer, SIGNAL("activated(const QModelIndex &)"), 
                      self.__completerActivated)

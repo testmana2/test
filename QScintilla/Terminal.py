@@ -161,10 +161,9 @@ class Terminal(QsciScintillaCompat):
         self.__process.setProcessChannelMode(QProcess.MergedChannels)
         self.__process.setReadChannel(QProcess.StandardOutput)
         
-        self.connect(self.__process, SIGNAL("readyReadStandardOutput()"), 
-                     self.__readOutput)
-        self.connect(self.__process, SIGNAL("started()"), self.__started)
-        self.connect(self.__process, SIGNAL("finished(int)"), self.__finished)
+        self.__process.readyReadStandardOutput.connect(self.__readOutput)
+        self.__process.started.connect(self.__started)
+        self.__process.finished.connect(self.__finished)
         
         self.__ctrl = {}
         for ascii_number, letter in enumerate("abcdefghijklmnopqrstuvwxyz"):

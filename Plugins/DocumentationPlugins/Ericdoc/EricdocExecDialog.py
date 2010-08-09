@@ -71,13 +71,10 @@ class EricdocExecDialog(QDialog, Ui_EricdocExecDialog):
         self.process = QProcess()
         self.process.setWorkingDirectory(dname)
         
-        self.connect(self.process, SIGNAL('readyReadStandardOutput()'),
-            self.__readStdout)
-        self.connect(self.process, SIGNAL('readyReadStandardError()'),
-            self.__readStderr)
-        self.connect(self.process, SIGNAL('finished(int, QProcess::ExitStatus)'),
-            self.__finish)
-            
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardOutput.connect(self.__readStderr)
+        self.process.finished.connect(self.__finish)
+        
         self.setWindowTitle(self.trUtf8('{0} - {1}').format(self.cmdname, self.filename))
         self.process.start(program, args)
         procStarted = self.process.waitForStarted()

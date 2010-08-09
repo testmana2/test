@@ -189,8 +189,7 @@ class TabWidget(E5TabWidget):
             self.closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
             self.closeButton.setToolTip(self.trUtf8("Close the current editor"))
             self.closeButton.setEnabled(False)
-            self.connect(self.closeButton, SIGNAL("clicked(bool)"),
-                self.__closeButtonClicked)
+            self.closeButton.clicked[bool].connect(self.__closeButtonClicked)
             self.rightCornerWidgetLayout.addWidget(self.closeButton)
         else:
             self.connect(self, SIGNAL("tabCloseRequested(int)"), 

@@ -63,10 +63,8 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         
         self.connect(self.searchEdit, SIGNAL("textChanged(QString)"), 
                      self.__proxyModel.setFilterFixedString)
-        self.connect(self.removeButton, SIGNAL("clicked()"), 
-                     self.historyTree.removeSelected)
-        self.connect(self.removeAllButton, SIGNAL("clicked()"), 
-                     self.__historyManager.clear)
+        self.removeButton.clicked[()].connect(self.historyTree.removeSelected)
+        self.removeAllButton.clicked[()].connect(self.__historyManager.clear)
         
         self.connect(self.__proxyModel, SIGNAL("modelReset()"), self.__modelReset)
     

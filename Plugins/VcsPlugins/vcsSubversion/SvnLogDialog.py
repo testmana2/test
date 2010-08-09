@@ -43,12 +43,9 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         self.contents.setHtml(\
             self.trUtf8('<b>Processing your request, please wait...</b>'))
         
-        self.connect(self.process, SIGNAL('finished(int, QProcess::ExitStatus)'),
-            self.__procFinished)
-        self.connect(self.process, SIGNAL('readyReadStandardOutput()'),
-            self.__readStdout)
-        self.connect(self.process, SIGNAL('readyReadStandardError()'),
-            self.__readStderr)
+        self.process.finished.connect(self.__procFinished)
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardOutput.connect(self.__readStderr)
         
         self.connect(self.contents, SIGNAL('anchorClicked(const QUrl&)'),
             self.__sourceChanged)

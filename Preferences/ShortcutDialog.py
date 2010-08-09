@@ -38,10 +38,10 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         self.noCheck = False
         self.objectType = None
         
-        self.connect(self.primaryClearButton, SIGNAL("clicked()"), self.__clear)
-        self.connect(self.alternateClearButton, SIGNAL("clicked()"), self.__clear)
-        self.connect(self.primaryButton, SIGNAL("clicked()"), self.__typeChanged)
-        self.connect(self.alternateButton, SIGNAL("clicked()"), self.__typeChanged)
+        self.primaryClearButton.clicked[()].connect(self.__clear)
+        self.alternateClearButton.clicked[()].connect(self.__clear)
+        self.primaryButton.clicked[()].connect(self.__typeChanged)
+        self.alternateButton.clicked[()].connect(self.__typeChanged)
         
         self.shortcutsGroup.installEventFilter(self)
         self.primaryButton.installEventFilter(self)

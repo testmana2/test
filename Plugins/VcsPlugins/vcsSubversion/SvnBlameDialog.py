@@ -45,12 +45,9 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         
         self.__ioEncoding = Preferences.getSystem("IOEncoding")
         
-        self.connect(self.process, SIGNAL('finished(int, QProcess::ExitStatus)'),
-            self.__procFinished)
-        self.connect(self.process, SIGNAL('readyReadStandardOutput()'),
-            self.__readStdout)
-        self.connect(self.process, SIGNAL('readyReadStandardError()'),
-            self.__readStderr)
+        self.process.finished.connect(self.__procFinished)
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardOutput.connect(self.__readStderr)
         
     def closeEvent(self, e):
         """

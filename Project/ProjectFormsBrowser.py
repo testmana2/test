@@ -686,12 +686,9 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             args.append('-x')
         
         args.append(fn)
-        self.connect(self.compileProc, SIGNAL('finished(int, QProcess::ExitStatus)'),
-            self.__compileUIDone)
-        self.connect(self.compileProc, SIGNAL('readyReadStandardOutput()'), 
-            self.__readStdout)
-        self.connect(self.compileProc, SIGNAL('readyReadStandardError()'), 
-            self.__readStderr)
+        self.compileProc.finished.connect(self.__compileUIDone)
+        self.compileProc.readyReadStandardOutput.connect(self.__readStdout)
+        self.compileProc.readyReadStandardOutput.connect(self.__readStderr)
         
         self.noDialog = noDialog
         self.compileProc.start(uic, args)

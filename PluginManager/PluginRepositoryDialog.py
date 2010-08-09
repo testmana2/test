@@ -344,7 +344,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadCancelled = False
         
         reply = self.__networkManager.get(QNetworkRequest(QUrl(url)))
-        self.connect(reply, SIGNAL("finished()"), self.__downloadFileDone)
+        reply.finished[()].connect(self.__downloadFileDone)
         self.connect(reply, SIGNAL("downloadProgress(qint64, qint64)"), 
             self.__downloadProgress)
         self.__replies.append(reply)

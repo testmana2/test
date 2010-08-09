@@ -89,7 +89,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
                      self.__downloadProgress)
         self.connect(self.__reply, SIGNAL("metaDataChanged()"), 
                      self.__metaDataChanged)
-        self.connect(self.__reply, SIGNAL("finished()"), self.__finished)
+        self.__reply.finished[()].connect(self.__finished)
         
         # reset info
         self.infoLabel.clear()
@@ -425,14 +425,11 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         """
         self.__output.close()
         
-        self.disconnect(self.__reply, SIGNAL("readyRead()"), self.__readyRead)
-        self.disconnect(self.__reply, SIGNAL("error(QNetworkReply::NetworkError)"), 
-                        self.__networkError)
-        self.disconnect(self.__reply, SIGNAL("downloadProgress(qint64, qint64)"), 
-                        self.__downloadProgress)
-        self.disconnect(self.__reply, SIGNAL("metaDataChanged()"), 
-                        self.__metaDataChanged)
-        self.disconnect(self.__reply, SIGNAL("finished()"), self.__finished)
+        self.__reply.readyRead[()].disconnect(self.__readyRead)
+        self.__reply.error[QNetworkReply.NetworkError].disconnect(self.__networkError)
+        self.__reply.downloadProgress[int, int].disconnect(self.__downloadProgress)
+        self.__reply.metaDataChanged[()].disconnect(self.__metaDataChanged)
+        self.__reply.finished[()].disconnect(self.__finished)
         self.__reply.close()
         self.__reply.deleteLater()
         

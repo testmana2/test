@@ -307,7 +307,7 @@ class OpenSearchEngine(QObject):
         
         reply = self.__networkAccessManager.get(
             QNetworkRequest(QUrl.fromEncoded(self._imageUrl)))
-        self.connect(reply, SIGNAL("finished()"), self.__imageObtained)
+        reply.finished[()].connect(self.__imageObtained)
         self.__replies.append(reply)
     
     def __imageObtained(self):
@@ -413,8 +413,7 @@ class OpenSearchEngine(QObject):
             return
         
         if self.__suggestionsReply is not None:
-            self.disconnect(self.__suggestionsReply, SIGNAL("finished()"), 
-                            self.__suggestionsObtained)
+            self.__suggestionsReply.finished[()].disconnect(self.__suggestionsObtained)
             self.__suggestionsReply.abort()
             self.__suggestionsReply = None
         
@@ -432,8 +431,7 @@ class OpenSearchEngine(QObject):
             data = "&".join(parameters)
             self.__suggestionsReply = self.networkAccessManager().post(
                 QNetworkRequest(self.suggestionsUrl(searchTerm)), data)
-        self.connect(self.__suggestionsReply, SIGNAL("finished()"), 
-                     self.__suggestionsObtained)
+        self.__suggestionsReply.finished[()].connect(self.__suggestionsObtained)
     
     def __suggestionsObtained(self):
         """

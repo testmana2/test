@@ -37,10 +37,8 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         self.__hidePasswordsText = self.trUtf8("Hide Passwords")
         self.passwordsButton.setText(self.__showPasswordsText)
         
-        self.connect(self.removeButton, SIGNAL("clicked()"), 
-                     self.passwordsTable.removeSelected)
-        self.connect(self.removeAllButton, SIGNAL("clicked()"), 
-                     self.passwordsTable.removeAll)
+        self.removeButton.clicked[()].connect(self.passwordsTable.removeSelected)
+        self.removeAllButton.clicked[()].connect(self.passwordsTable.removeAll)
         
         self.passwordsTable.verticalHeader().hide()
         self.__passwordModel = \
