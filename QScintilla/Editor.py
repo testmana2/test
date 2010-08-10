@@ -4009,6 +4009,37 @@ class Editor(QsciScintillaCompat):
         """
         self.selectAll(False)
         
+    def joinLines(self):
+        """
+        Public slot to join the current line with the next one.
+        """
+        curLine = self.getCursorPosition()[0]
+        if curLine == self.lines() - 1:
+            return
+        
+        line0Text = self.text(curLine)
+        line1Text = self.text(curLine + 1)
+        if line1Text in ["", "\r", "\n", "\r\n"]:
+            return
+        
+        # determine start index
+        startIndex = len(line0Text)
+        while startIndex > 0 and line0Text[startIndex - 1] in "\r\n\\ \t":
+            startIndex -= 1
+        if startIndex == 0:
+            return
+        
+        # determine end index
+        endIndex = 0
+        while line1Text[endIndex] in " \t":
+            endIndex += 1
+        
+        self.setSelection(curLine, startIndex, curLine + 1, endIndex)
+        self.beginUndoAction()
+        self.removeSelectedText()
+        self.insertAt(" ", curLine, startIndex)
+        self.endUndoAction()
+        
     def shortenEmptyLines(self):
         """
         Public slot to compress lines consisting solely of whitespace characters.

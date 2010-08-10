@@ -846,6 +846,21 @@ class ViewManager(QObject):
         self.deleteAct.triggered[()].connect(self.__editDelete)
         self.editActions.append(self.deleteAct)
         
+        self.joinAct = E5Action(QApplication.translate('ViewManager', 'Join Lines'),
+                QApplication.translate('ViewManager', 'Join Lines'),
+                QKeySequence(QApplication.translate('ViewManager', 
+                    "Ctrl+J", "Edit|Join Lines")), 
+                0,
+                self.copyActGrp, 'vm_edit_join_lines')
+        self.joinAct.setStatusTip(QApplication.translate('ViewManager', 
+            'Join Lines'))
+        self.joinAct.setWhatsThis(QApplication.translate('ViewManager', 
+            """<b>Join Lines</b>"""
+            """<p>Join the current and the next lines.</p>"""
+        ))
+        self.joinAct.triggered[()].connect(self.__editJoin)
+        self.editActions.append(self.joinAct)
+        
         self.indentAct = E5Action(QApplication.translate('ViewManager', 'Indent'),
                 UI.PixmapCache.getIcon("editIndent.png"),
                 QApplication.translate('ViewManager', '&Indent'),
@@ -3803,6 +3818,12 @@ class ViewManager(QObject):
             e5App().getObject("Terminal").clear()
         else:
             self.activeWindow().clear()
+        
+    def __editJoin(self):
+        """
+        Private method to handle the join action.
+        """
+        self.activeWindow().joinLines()
         
     def __editIndent(self):
         """
