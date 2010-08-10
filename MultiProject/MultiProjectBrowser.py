@@ -45,8 +45,7 @@ class MultiProjectBrowser(QListWidget):
                      self.__projectAdded)
         self.connect(self.multiProject, SIGNAL("projectRemoved"), 
                      self.__projectRemoved)
-        self.connect(self.multiProject, SIGNAL("projectOpened"), 
-                     self.__projectOpened)
+        self.multiProject.projectOpened.connect(self.__projectOpened)
         
         self.__createPopupMenu()
         self.setContextMenuPolicy(Qt.CustomContextMenu)

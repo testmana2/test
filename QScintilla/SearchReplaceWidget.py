@@ -13,6 +13,8 @@ from PyQt4.QtGui import *
 from .Ui_SearchWidget import Ui_SearchWidget
 from .Ui_ReplaceWidget import Ui_ReplaceWidget
 
+from .Editor import Editor
+
 from E5Gui.E5Action import E5Action
 
 import Preferences
@@ -419,6 +421,7 @@ character except an alphabetic character.</td></tr>
         aw = self.sender()
         self.updateSelectionCheckBox(aw)
     
+    @pyqtSlot(Editor)
     def updateSelectionCheckBox(self, editor):
         """
         Public slot to update the selection check box.

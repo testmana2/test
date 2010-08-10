@@ -125,18 +125,16 @@ class DebugUI(QObject):
         debugServer.clientThreadList.connect(debugViewer.showThreadList)
         
         # Connect the signals emitted by the viewmanager
-        self.connect(vm, SIGNAL('editorOpened'), self.__editorOpened)
-        self.connect(vm, SIGNAL('lastEditorClosed'), self.__lastEditorClosed)
-        self.connect(vm, SIGNAL('checkActions'), self.__checkActions)
-        self.connect(vm, SIGNAL('cursorChanged'), self.__cursorChanged)
-        self.connect(vm, SIGNAL('breakpointToggled'), self.__cursorChanged)
+        vm.editorOpened.connect(self.__editorOpened)
+        vm.lastEditorClosed.connect(self.__lastEditorClosed)
+        vm.checkActions.connect(self.__checkActions)
+        vm.cursorChanged.connect(self.__cursorChanged)
+        vm.breakpointToggled.connect(self.__cursorChanged)
         
         # Connect the signals emitted by the project
-        self.connect(project, SIGNAL('projectOpened'), self.__projectOpened)
-        self.connect(project, SIGNAL('newProject'), self.__projectOpened)
-        self.connect(project, SIGNAL('projectClosed'), self.__projectClosed)
-        self.connect(project, SIGNAL('projectSessionLoaded'),
-            self.__projectSessionLoaded)
+        project.projectOpened.connect(self.__projectOpened)
+        project.newProject.connect(self.__projectOpened)
+        project.projectClosed.connect(self.__projectClosed)
         
         # Set a flag for the passive debug mode
         self.passive = Preferences.getDebugger("PassiveDbgEnabled")
@@ -842,16 +840,6 @@ class DebugUI(QObject):
             self.restartAct.setEnabled(False)
             self.lastDebuggedFile = None
             self.lastStartAction = 0
-        
-    def __projectSessionLoaded(self):
-        """
-        Private slot to handle the projectSessionLoaded signal.
-        """
-        fn = self.project.getMainScript(True)
-        if fn is not None:
-            self.lastStartAction = 2
-            self.lastDebuggedFile = fn
-            self.restartAct.setEnabled(True)
         
     def shutdown(self):
         """

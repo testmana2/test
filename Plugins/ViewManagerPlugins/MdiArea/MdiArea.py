@@ -26,6 +26,12 @@ class MdiArea(QMdiArea, ViewManager):
     
     @signal editorChanged(string) emitted when the current editor has changed
     """
+    editorOpened = pyqtSignal(str)
+    lastEditorClosed = pyqtSignal()
+    checkActions = pyqtSignal(Editor)
+    cursorChanged = pyqtSignal(Editor)
+    breakpointToggled = pyqtSignal(Editor)
+    
     def __init__(self, parent):
         """
         Constructor

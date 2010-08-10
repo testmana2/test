@@ -52,6 +52,8 @@ class MultiProject(QObject):
             has been removed
     @signal projectOpened(filename) emitted after the project has been opened
     """
+    projectOpened = pyqtSignal(str)
+    
     def __init__(self, project, parent = None, filename = None):
         """
         Constructor
@@ -936,7 +938,7 @@ class MultiProject(QObject):
         @param filename filename of the project file (string)
         """
         self.projectObject.openProject(filename)
-        self.emit(SIGNAL('projectOpened'), filename)
+        self.projectOpened.emit(filename)
     
     def __openMasterProject(self, reopen = True):
         """

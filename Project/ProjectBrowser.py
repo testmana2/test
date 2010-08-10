@@ -99,72 +99,51 @@ class ProjectBrowser(E5TabWidget):
         
         # step 2: connect all the browsers
         # connect the sources browser
-        self.connect(self.project, SIGNAL('projectClosed'),
-                self.psBrowser._projectClosed)
-        self.connect(self.project, SIGNAL('projectOpened'),
-                self.psBrowser._projectOpened)
-        self.connect(self.project, SIGNAL('newProject'),
-                self.psBrowser._newProject)
+        self.project.projectClosed.connect(self.psBrowser._projectClosed)
+        self.project.projectOpened.connect(self.psBrowser._projectOpened)
+        self.project.newProject.connect(self.psBrowser._newProject)
         self.connect(self.project, SIGNAL('reinitVCS'),
                 self.psBrowser._initMenusAndVcs)
         
         # connect the forms browser
-        self.connect(self.project, SIGNAL('projectClosed'),
-                self.pfBrowser._projectClosed)
-        self.connect(self.project, SIGNAL('projectOpened'),
-                self.pfBrowser._projectOpened)
-        self.connect(self.project, SIGNAL('newProject'),
-                self.pfBrowser._newProject)
+        self.project.projectClosed.connect(self.pfBrowser._projectClosed)
+        self.project.projectOpened.connect(self.pfBrowser._projectOpened)
+        self.project.newProject.connect(self.pfBrowser._newProject)
         self.connect(self.project, SIGNAL('reinitVCS'),
                 self.pfBrowser._initMenusAndVcs)
         
         # connect the resources browser
-        self.connect(self.project, SIGNAL('projectClosed'),
-                self.prBrowser._projectClosed)
-        self.connect(self.project, SIGNAL('projectOpened'),
-                self.prBrowser._projectOpened)
-        self.connect(self.project, SIGNAL('newProject'),
-                self.prBrowser._newProject)
+        self.project.projectClosed.connect(self.prBrowser._projectClosed)
+        self.project.projectOpened.connect(self.prBrowser._projectOpened)
+        self.project.newProject.connect(self.prBrowser._newProject)
         self.connect(self.project, SIGNAL('reinitVCS'),
                 self.prBrowser._initMenusAndVcs)
         
         # connect the translations browser
-        self.connect(self.project, SIGNAL('projectClosed'),
-                self.ptBrowser._projectClosed)
-        self.connect(self.project, SIGNAL('projectOpened'),
-                self.ptBrowser._projectOpened)
-        self.connect(self.project, SIGNAL('newProject'),
-                self.ptBrowser._newProject)
+        self.project.projectClosed.connect(self.ptBrowser._projectClosed)
+        self.project.projectOpened.connect(self.ptBrowser._projectOpened)
+        self.project.newProject.connect(self.ptBrowser._newProject)
         self.connect(self.project, SIGNAL('reinitVCS'),
                 self.ptBrowser._initMenusAndVcs)
         
         # connect the interfaces (IDL)  browser
-        self.connect(self.project, SIGNAL('projectClosed'),
-                self.piBrowser._projectClosed)
-        self.connect(self.project, SIGNAL('projectOpened'),
-                self.piBrowser._projectOpened)
-        self.connect(self.project, SIGNAL('newProject'),
-                self.piBrowser._newProject)
+        self.project.projectClosed.connect(self.piBrowser._projectClosed)
+        self.project.projectOpened.connect(self.piBrowser._projectOpened)
+        self.project.newProject.connect(self.piBrowser._newProject)
         self.connect(self.project, SIGNAL('reinitVCS'),
                 self.piBrowser._initMenusAndVcs)
         
         # connect the others browser
-        self.connect(self.project, SIGNAL('projectClosed'),
-                self.poBrowser._projectClosed)
-        self.connect(self.project, SIGNAL('projectOpened'),
-                self.poBrowser._projectOpened)
-        self.connect(self.project, SIGNAL('newProject'),
-                self.poBrowser._newProject)
+        self.project.projectClosed.connect(self.poBrowser._projectClosed)
+        self.project.projectOpened.connect(self.poBrowser._projectOpened)
+        self.project.newProject.connect(self.poBrowser._newProject)
         self.connect(self.project, SIGNAL('reinitVCS'),
                 self.poBrowser._initMenusAndVcs)
         
         # add signal connection to ourself
-        self.connect(self.project, SIGNAL('projectOpened'),
-                self.__projectOpened)
-        self.connect(self.project, SIGNAL('projectClosed'),
-                self.__projectClosed)
-        self.connect(self.project, SIGNAL('newProject'),
-                self.__newProject)
+        self.project.projectOpened.connect(self.__projectOpened)
+        self.project.projectClosed.connect(self.__projectClosed)
+        self.project.newProject.connect(self.__newProject)
         self.connect(self.project, SIGNAL('projectPropertiesChanged'),
                 self.__projectPropertiesChanged)
         self.connect(self, SIGNAL("currentChanged(int)"), self.__currentChanged)

@@ -108,6 +108,12 @@ class ViewManager(QObject):
     @signal breakpointToggled(editor) emitted when a breakpoint is toggled.
     @signal bookmarkToggled(editor) emitted when a bookmark is toggled.
     """
+    editorOpened = pyqtSignal(str)
+    lastEditorClosed = pyqtSignal()
+    checkActions = pyqtSignal(Editor)
+    cursorChanged = pyqtSignal(Editor)
+    breakpointToggled = pyqtSignal(Editor)
+    
     def __init__(self):
         """
         Constructor
@@ -162,10 +168,8 @@ class ViewManager(QObject):
         self.searchDlg = SearchReplaceWidget(False, self, ui)
         self.replaceDlg = SearchReplaceWidget(True, self, ui)
         
-        self.connect(self, SIGNAL("checkActions"), 
-            self.searchDlg.updateSelectionCheckBox)
-        self.connect(self, SIGNAL("checkActions"), 
-            self.replaceDlg.updateSelectionCheckBox)
+        self.checkActions.connect(self.searchDlg.updateSelectionCheckBox)
+        self.checkActions.connect(self.replaceDlg.updateSelectionCheckBox)
         
     def __loadRecent(self):
         """
@@ -3047,7 +3051,7 @@ class ViewManager(QObject):
         # send a signal, if it was the very last editor
         if not len(self.editors):
             self.__lastEditorClosed()
-            self.emit(SIGNAL('lastEditorClosed'))
+            self.lastEditorClosed.emit()
         
         return True
         
@@ -3154,9 +3158,9 @@ class ViewManager(QObject):
         """
         self.connect(editor, SIGNAL('modificationStatusChanged'),
             self._modificationStatusChanged)
-        self.connect(editor, SIGNAL('cursorChanged'), self.__cursorChanged)
+        editor.cursorChanged.connect(self.__cursorChanged)
         self.connect(editor, SIGNAL('editorSaved'), self.__editorSaved)
-        self.connect(editor, SIGNAL('breakpointToggled'), self.__breakpointToggled)
+        editor.breakpointToggled.connect(self.__breakpointToggled)
         self.connect(editor, SIGNAL('bookmarkToggled'), self.__bookmarkToggled)
         self.connect(editor, SIGNAL('syntaxerrorToggled'), self._syntaxErrorToggled)
         self.connect(editor, SIGNAL('coverageMarkersShown'), 
@@ -3202,7 +3206,7 @@ class ViewManager(QObject):
         self.editors.append(editor)
         self.__connectEditor(editor)
         self.__editorOpened()
-        self.emit(SIGNAL('editorOpened'), fn)
+        self.editorOpened.emit(fn)
         self.emit(SIGNAL('editorOpenedEd'), editor)
 
         return editor
@@ -3355,7 +3359,7 @@ class ViewManager(QObject):
                 self.editors.append(editor)
                 self.__connectEditor(editor)
                 self.__editorOpened()
-                self.emit(SIGNAL('editorOpened'), fn)
+                self.editorOpened.emit(fn)
                 self.emit(SIGNAL('editorOpenedEd'), editor)
                 newWin = True
         
@@ -3554,7 +3558,7 @@ class ViewManager(QObject):
         self._addView(editor, None)
         self.__editorOpened()
         self._checkActions(editor)
-        self.emit(SIGNAL('editorOpened'), "")
+        self.editorOpened.emit("")
         self.emit(SIGNAL('editorOpenedEd'), editor)
         
     def printEditor(self, editor):
@@ -4722,7 +4726,7 @@ class ViewManager(QObject):
                 eol = editor.getEolIndicator()
                 self.__setSbFile(editor.getFileName(), line + 1, pos, enc, lang, eol)
             
-            self.emit(SIGNAL('checkActions'), editor)
+            self.checkActions.emit(editor)
         
     def preferencesChanged(self):
         """
@@ -4789,7 +4793,7 @@ class ViewManager(QObject):
             lang = None
             eol = None
         self.__setSbFile(fn, line, pos, enc, lang, eol)
-        self.emit(SIGNAL('cursorChanged'), editor)
+        self.cursorChanged.emit(editor)
         
     def __breakpointToggled(self, editor):
         """
@@ -4799,7 +4803,7 @@ class ViewManager(QObject):
         
         @param editor editor that sent the signal
         """
-        self.emit(SIGNAL('breakpointToggled'), editor)
+        self.breakpointToggled.emit(editor)
         
     def getActions(self, type):
         """

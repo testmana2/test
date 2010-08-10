@@ -370,26 +370,18 @@ class UserInterface(QMainWindow):
         self.connect(self.projectBrowser.poBrowser, SIGNAL('svgFile'),
                      self.__showSvg)
         
-        self.project.sourceFile.connect(
-            self.viewmanager.openSourceFile)
-        self.connect(self.project, SIGNAL('newProject'),
-                     self.viewmanager.newProject)
-        self.connect(self.project, SIGNAL('projectOpened'),
-                     self.viewmanager.projectOpened)
-        self.connect(self.project, SIGNAL('projectClosed'),
-                     self.viewmanager.projectClosed)
+        self.project.sourceFile.connect(self.viewmanager.openSourceFile)
+        self.project.newProject.connect(self.viewmanager.newProject)
+        self.project.projectOpened.connect(self.viewmanager.projectOpened)
+        self.project.projectClosed.connect(self.viewmanager.projectClosed)
         self.connect(self.project, SIGNAL('projectFileRenamed'),
                      self.viewmanager.projectFileRenamed)
         self.connect(self.project, SIGNAL('lexerAssociationsChanged'),
                      self.viewmanager.projectLexerAssociationsChanged)
-        self.connect(self.project, SIGNAL('newProject'),
-                     self.__newProject)
-        self.connect(self.project, SIGNAL('projectOpened'),
-                     self.__projectOpened)
-        self.connect(self.project, SIGNAL('projectOpened'),
-                     self.__activateProjectBrowser)
-        self.connect(self.project, SIGNAL('projectClosed'),
-                     self.__projectClosed)
+        self.project.newProject.connect(self.__newProject)
+        self.project.projectOpened.connect(self.__projectOpened)
+        self.project.projectOpened.connect(self.__activateProjectBrowser)
+        self.project.projectClosed.connect(self.__projectClosed)
         
         self.connect(self.multiProject, SIGNAL("multiProjectOpened"), 
                      self.__activateMultiProjectBrowser)
@@ -466,18 +458,14 @@ class UserInterface(QMainWindow):
         
         self.connect(self.viewmanager, SIGNAL('editorSaved'),
                      self.project.repopulateItem)
-        self.connect(self.viewmanager, SIGNAL('lastEditorClosed'),
-                     self.__lastEditorClosed)
-        self.connect(self.viewmanager, SIGNAL('editorOpened'),
-                     self.__editorOpened)
+        self.viewmanager.lastEditorClosed.connect(self.__lastEditorClosed)
+        self.viewmanager.editorOpened.connect(self.__editorOpened)
         self.connect(self.viewmanager, SIGNAL('changeCaption'),
                      self.__setWindowCaption)
-        self.connect(self.viewmanager, SIGNAL('checkActions'),
-                     self.__checkActions)
+        self.viewmanager.checkActions.connect(self.__checkActions)
         self.connect(self.viewmanager, SIGNAL('editorChanged'),
                      self.projectBrowser.handleEditorChanged)
-        self.connect(self.viewmanager, SIGNAL('checkActions'),
-                     self.cooperation.checkEditorActions)
+        self.viewmanager.checkActions.connect(self.cooperation.checkEditorActions)
         
         self.connect(self.cooperation, SIGNAL('shareEditor(bool)'),
                      self.viewmanager.shareEditor)

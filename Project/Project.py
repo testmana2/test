@@ -73,7 +73,6 @@ class Project(QObject):
     Class implementing the project management functionality.
     
     @signal dirty(int) emitted when the dirty state changes
-    @signal projectSessionLoaded() emitted after a project session file was loaded
     @signal projectLanguageAdded(string) emitted after a new language was added
     @signal projectLanguageAddedByCode(string) emitted after a new language was added.
         The language code is sent by this signal.
@@ -113,6 +112,9 @@ class Project(QObject):
             changed
     """
     sourceFile = pyqtSignal(str)
+    projectOpened = pyqtSignal()
+    newProject = pyqtSignal()
+    projectClosed = pyqtSignal()
     
     keynames = [
         "PROGLANGUAGE", "MIXEDLANGUAGE", "PROJECTTYPE",
@@ -2244,7 +2246,7 @@ class Project(QObject):
         else:
             return False
         
-    def newProject(self):
+    def createNewProject(self):
         """
         Public slot to built a new project.
         
@@ -2475,11 +2477,11 @@ class Project(QObject):
                     self.vcs.vcsConvertProject(vcsDataDict, self)
                 else:
                     self.emit(SIGNAL('newProjectHooks'))
-                    self.emit(SIGNAL('newProject'))
+                    self.newProject.emit()
             
             else:
                 self.emit(SIGNAL('newProjectHooks'))
-                self.emit(SIGNAL('newProject'))
+                self.newProject.emit()
             
 
     def newProjectAddFiles(self, mainscript):
@@ -2802,7 +2804,7 @@ class Project(QObject):
                     
                     self.__model.projectOpened()
                     self.emit(SIGNAL('projectOpenedHooks'))
-                    self.emit(SIGNAL('projectOpened'))
+                    self.projectOpened.emit()
                     
                     QApplication.restoreOverrideCursor()
                     
@@ -2914,9 +2916,9 @@ class Project(QObject):
             self.sessActGrp.setEnabled(ok)
             self.menuSessionAct.setEnabled(ok)
             self.emit(SIGNAL('projectClosedHooks'))
-            self.emit(SIGNAL('projectClosed'))
+            self.projectClosed.emit()
             self.emit(SIGNAL('projectOpenedHooks'))
-            self.emit(SIGNAL('projectOpened'))
+            self.projectOpened.emit()
             return True
         else:
             return False
@@ -3045,7 +3047,7 @@ class Project(QObject):
         
         self.__model.projectClosed()
         self.emit(SIGNAL('projectClosedHooks'))
-        self.emit(SIGNAL('projectClosed'))
+        self.projectClosed.emit()
         
         return True
 
@@ -3350,7 +3352,7 @@ class Project(QObject):
             """<p>This opens a dialog for entering the info for a"""
             """ new project.</p>"""
         ))
-        act.triggered[()].connect(self.newProject)
+        act.triggered[()].connect(self.createNewProject)
         self.actions.append(act)
 
         act = E5Action(self.trUtf8('Open project'),

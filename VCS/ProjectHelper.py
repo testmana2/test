@@ -194,7 +194,7 @@ class VcsProjectHelper(QObject):
                     if len(plist):
                         if len(plist) == 1:
                             self.project.openProject(plist[0].absoluteFilePath())
-                            self.project.emit(SIGNAL('newProject'))
+                            self.project.newProject.emit()
                         else:
                             pfilenamelist = d.entryList(filters)
                             pfilename, ok = QInputDialog.getItem(
@@ -205,7 +205,7 @@ class VcsProjectHelper(QObject):
                             if ok:
                                 self.project.openProject(\
                                     QFileInfo(d, pfilename).absoluteFilePath())
-                                self.project.emit(SIGNAL('newProject'))
+                                self.project.newProject.emit()
                         if export:
                             self.project.pdata["VCS"] = ['None']
                             self.project.vcs = self.project.initVCS()

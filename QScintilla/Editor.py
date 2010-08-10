@@ -78,6 +78,9 @@ class Editor(QsciScintillaCompat):
     @signal encodingChanged(encoding) emitted when the editors encoding was set. The 
             encoding name is passed as a parameter.
     """
+    cursorChanged = pyqtSignal(str, int, int)
+    breakpointToggled = pyqtSignal(QsciScintillaCompat)
+    
     # Autocompletion icon definitions
     ClassID              = 1
     ClassProtectedID     = 2
@@ -1446,7 +1449,7 @@ class Editor(QsciScintillaCompat):
         @param line line number of the cursor
         @param index position in line of the cursor
         """
-        self.emit(SIGNAL('cursorChanged'), self.fileName, line+1, index)
+        self.cursorChanged.emit(self.fileName, line + 1, index)
         
         if Preferences.getEditor("MarkOccurrencesEnabled"):
             self.__markOccurrencesTimer.stop()
@@ -1721,7 +1724,7 @@ class Editor(QsciScintillaCompat):
             
         handle = self.markerAdd(line-1, marker)
         self.breaks[handle] = (line,) + properties
-        self.emit(SIGNAL('breakpointToggled'), self)
+        self.breakpointToggled.emit(self)
         
     def __toggleBreakpoint(self, line, temporary = False):
         """
@@ -1740,7 +1743,7 @@ class Editor(QsciScintillaCompat):
                     self.__addBreakPoint(line, True)
                 else:
                     self.breakpointModel.deleteBreakPointByIndex(index)
-                    self.emit(SIGNAL('breakpointToggled'), self)
+                    self.breakpointToggled.emit(self)
                 break
         else:
             self.__addBreakPoint(line, temporary)
@@ -1756,7 +1759,7 @@ class Editor(QsciScintillaCompat):
            (self.isPyFile() or self.isPy3File() or self.isRubyFile()):
             self.breakpointModel.addBreakPoint(self.fileName, line,
                 ('', temporary, True, 0))
-            self.emit(SIGNAL('breakpointToggled'), self)
+            self.breakpointToggled.emit(self)
         
     def __toggleBreakpointEnabled(self, line):
         """
