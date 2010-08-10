@@ -310,10 +310,8 @@ class VariablesViewer(QTreeWidget):
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
         
-        self.connect(self, SIGNAL("itemExpanded(QTreeWidgetItem *)"), 
-            self.__expandItemSignal)
-        self.connect(self, SIGNAL("itemCollapsed(QTreeWidgetItem *)"), 
-            self.collapseItem)
+        self.itemExpanded.connect(self.__expandItemSignal)
+        self.itemCollapsed.connect(self.collapseItem)
         
         self.resortEnabled = True
         

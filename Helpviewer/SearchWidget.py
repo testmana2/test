@@ -45,8 +45,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         self.havefound = False
         self.__findBackwards = False
         
-        self.connect(self.findtextCombo.lineEdit(), SIGNAL("returnPressed()"), 
-                     self.__findByReturnPressed)
+        self.findtextCombo.lineEdit().returnPressed.connect(self.__findByReturnPressed)
         self.connect(self.findtextCombo.lineEdit(), SIGNAL("textEdited(const QString&)"),
                      self.__searchTextEdited)
         

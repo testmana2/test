@@ -359,8 +359,7 @@ class DebuggerInterfaceRuby(QObject):
             return
         
         # do not want any slots called during shutdown
-        self.disconnect(self.qsock, SIGNAL('disconnected()'), 
-            self.debugServer.startClient)
+        self.qsock.disconnected.disconnect(self.debugServer.startClient)
         self.qsock.readyRead[()].disconnect(self.__parseClientLine)
         
         # close down socket, and shut down client as well.

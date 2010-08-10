@@ -109,7 +109,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                     QColor(Qt.darkGreen), Qt.ForegroundRole)
         self.toolbarComboBox.model().sort(0)
         
-        self.connect(self.toolbarComboBox, SIGNAL("currentIndexChanged(int)"), 
+        self.toolbarComboBox.currentIndexChanged[int].connect(
             self.__toolbarComboBox_currentIndexChanged)
         self.toolbarComboBox.setCurrentIndex(0)
     

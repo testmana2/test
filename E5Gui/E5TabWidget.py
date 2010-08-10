@@ -8,7 +8,7 @@ Module implementing a TabWidget class substituting QTabWidget.
 """
 
 from PyQt4.QtGui import QTabWidget, QTabBar, QApplication, QDrag, QStyle, QLabel, QMovie
-from PyQt4.QtCore import Qt, SIGNAL, QPoint, QMimeData, QByteArray, pyqtSignal
+from PyQt4.QtCore import Qt, QPoint, QMimeData, QByteArray, pyqtSignal
 
 class E5WheelTabBar(QTabBar):
     """
@@ -46,6 +46,8 @@ class E5DnDTabBar(E5WheelTabBar):
     @signal tabMoveRequested(int, int) emitted to signal a tab move request giving
         the old and new index position
     """
+    tabMoveRequested = pyqtSignal(int, int)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -110,7 +112,7 @@ class E5DnDTabBar(E5WheelTabBar):
         fromIndex = self.tabAt(self.__dragStartPos)
         toIndex = self.tabAt(event.pos())
         if fromIndex != toIndex:
-            self.emit(SIGNAL("tabMoveRequested(int, int)"), fromIndex, toIndex)
+            self.tabMoveRequested.emit(fromIndex, toIndex)
             event.acceptProposedAction()
         E5WheelTabBar.dropEvent(self, event)
 
@@ -138,8 +140,7 @@ class E5TabWidget(QTabWidget):
         if dnd:
             if not hasattr(self, 'setMovable'):
                 self.__tabBar = E5DnDTabBar(self)
-                self.connect(self.__tabBar, SIGNAL("tabMoveRequested(int, int)"), 
-                             self.moveTab)
+                self.__tabBar.tabMoveRequested.connect(self.moveTab)
                 self.setTabBar(self.__tabBar)
             else:
                 self.__tabBar = E5WheelTabBar(self)
@@ -151,7 +152,7 @@ class E5TabWidget(QTabWidget):
         
         self.__lastCurrentIndex = -1
         self.__currentIndex = -1
-        self.connect(self, SIGNAL("currentChanged(int)"), self.__currentChanged)
+        self.currentChanged.connect(self.__currentChanged)
     
     def __currentChanged(self, index):
         """

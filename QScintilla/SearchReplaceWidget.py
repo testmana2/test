@@ -107,11 +107,10 @@ character except an alphabetic character.</td></tr>
             self.ui.replaceButton.setIcon(UI.PixmapCache.getIcon("editReplace.png"))
             self.ui.replaceAllButton.setIcon(UI.PixmapCache.getIcon("editReplaceAll.png"))
         
-        self.connect(self.ui.findtextCombo.lineEdit(), SIGNAL("returnPressed()"), 
-                     self.__findByReturnPressed)
+        self.ui.findtextCombo.lineEdit().returnPressed.connect(self.__findByReturnPressed)
         if replace:
-            self.connect(self.ui.replacetextCombo.lineEdit(), SIGNAL("returnPressed()"), 
-                         self.on_replaceButton_clicked)
+            self.ui.replacetextCombo.lineEdit().returnPressed.connect(
+                self.on_replaceButton_clicked)
         
         self.findNextAct = E5Action(self.trUtf8('Find Next'),
                 self.trUtf8('Find Next'),

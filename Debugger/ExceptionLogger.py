@@ -42,8 +42,7 @@ class ExceptionLogger(QTreeWidget):
 
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
-        self.connect(self,SIGNAL('itemDoubleClicked(QTreeWidgetItem *, int)'),
-                     self.__itemDoubleClicked)
+        self.itemDoubleClicked.connect(self.__itemDoubleClicked)
 
         self.setWhatsThis(self.trUtf8(
             """<b>Exceptions Logger</b>"""

@@ -15,7 +15,11 @@ from .E5ModelMenu import E5ModelMenu
 class E5ModelToolBar(QToolBar):
     """
     Class implementing a tool bar populated from a QAbstractItemModel.
+    
+    @signal activated(QModelIndex) emitted when an action has been triggered
     """
+    activated = pyqtSignal(QModelIndex)
+    
     def __init__(self, title = None, parent = None):
         """
         Constructor
@@ -50,34 +54,18 @@ class E5ModelToolBar(QToolBar):
         @param model reference to the model (QAbstractItemModel)
         """
         if self.__model is not None:
-            self.disconnect(self.__model, 
-                            SIGNAL("modelReset()"), 
-                            self._build)
-            self.disconnect(self.__model, 
-                            SIGNAL("rowsInserted(const QModelIndex&, int, int)"), 
-                            self._build)
-            self.disconnect(self.__model, 
-                            SIGNAL("rowsRemoved(const QModelIndex&, int, int)"), 
-                            self._build)
-            self.disconnect(self.__model, 
-                            SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"),
-                            self._build)
+            self.__model.modelReset[()].disconnect(self._build)
+            self.__model.rowsInserted[QModelIndex, int, int].disconnect(self._build)
+            self.__model.rowsRemoved[QModelIndex, int, int].disconnect(self._build)
+            self.__model.dataChanged[QModelIndex, QModelIndex].disconnect(self._build)
         
         self.__model = model
         
         if self.__model is not None:
-            self.connect(self.__model, 
-                         SIGNAL("modelReset()"), 
-                         self._build)
-            self.connect(self.__model, 
-                         SIGNAL("rowsInserted(const QModelIndex&, int, int)"), 
-                         self._build)
-            self.connect(self.__model, 
-                         SIGNAL("rowsRemoved(const QModelIndex&, int, int)"), 
-                         self._build)
-            self.connect(self.__model, 
-                         SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
-                         self._build)
+            self.__model.modelReset[()].connect(self._build)
+            self.__model.rowsInserted[QModelIndex, int, int].connect(self._build)
+            self.__model.rowsRemoved[QModelIndex, int, int].connect(self._build)
+            self.__model.dataChanged[QModelIndex, QModelIndex].connect(self._build)
     
     def model(self):
         """
@@ -176,7 +164,7 @@ class E5ModelToolBar(QToolBar):
             act = obj.defaultAction()
             idx = self.index(act)
             if idx.isValid():
-                self.emit(SIGNAL("activated(const QModelIndex&)"), idx)
+                self.activated[QModelIndex].emit(idx)
         elif evt.type() == QEvent.MouseButtonPress:
             if evt.buttons() & Qt.LeftButton:
                 self.__dragStartPosition = self.mapFromGlobal(evt.globalPos())

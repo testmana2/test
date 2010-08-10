@@ -7,8 +7,7 @@
 Module implementing a sidebar class.
 """
 
-from PyQt4.QtCore import SIGNAL,  SLOT, QEvent, QSize, Qt, QByteArray, \
-                         QDataStream, QIODevice
+from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, QIODevice
 from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, QToolButton
 
 from E5Gui.E5Application import e5App
@@ -76,12 +75,9 @@ class E5SideBar(QWidget):
             orientation = E5SideBar.North
         self.setOrientation(orientation)
         
-        self.connect(self.__tabBar, SIGNAL("currentChanged(int)"), 
-                     self.__stackedWidget, SLOT("setCurrentIndex(int)"))
-        self.connect(e5App(), SIGNAL("focusChanged(QWidget*, QWidget*)"), 
-                     self.__appFocusChanged)
-        self.connect(self.__autoHideButton, SIGNAL("toggled(bool)"), 
-                     self.__autoHideToggled)
+        self.__tabBar.currentChanged[int].connect(self.__stackedWidget.setCurrentIndex)
+        e5App().focusChanged[QWidget, QWidget].connect(self.__appFocusChanged)
+        self.__autoHideButton.toggled[bool].connect(self.__autoHideToggled)
     
     def setSplitter(self, splitter):
         """

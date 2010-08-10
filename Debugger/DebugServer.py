@@ -116,7 +116,7 @@ class DebugServer(QTcpServer):
     utStartTest = pyqtSignal(str, str)
     utStopTest = pyqtSignal()
     utTestFailed = pyqtSignal(str, str)
-    utTestFailed = pyqtSignal(str, str)
+    utTestErrored = pyqtSignal(str, str)
     utFinished = pyqtSignal()
     passiveDebugStarted = pyqtSignal(str, bool)
     

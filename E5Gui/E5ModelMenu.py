@@ -16,8 +16,10 @@ class E5ModelMenu(QMenu):
     """
     Class implementing a menu populated from a QAbstractItemModel.
     
-    @signal activated(const QModelIndex&) emitted when an action has been triggered
+    @signal activated(QModelIndex) emitted when an action has been triggered
     """
+    activated = pyqtSignal(QModelIndex)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -43,7 +45,7 @@ class E5ModelMenu(QMenu):
         self.__dropIndex = None
         
         self.aboutToShow.connect(self.__aboutToShow)
-        self.connect(self, SIGNAL("triggered(QAction*)"), self.__actionTriggered)
+        self.triggered.connect(self.__actionTriggered)
     
     def prePopulated(self):
         """
@@ -192,8 +194,7 @@ class E5ModelMenu(QMenu):
             title = parent.data()
             modelMenu = self.createBaseMenu()
             # triggered goes all the way up the menu structure
-            self.disconnect(modelMenu, SIGNAL("triggered(QAction*)"), 
-                            modelMenu.__actionTriggered)
+            modelMenu.triggered.disconnect(modelMenu.__actionTriggered)
             modelMenu.setTitle(title)
             
             icon = parent.data(Qt.DecorationRole)
@@ -268,7 +269,7 @@ class E5ModelMenu(QMenu):
         """
         idx = self.index(action)
         if idx.isValid():
-            self.emit(SIGNAL("activated(const QModelIndex&)"), idx)
+            self.activated[QModelIndex].emit(idx)
     
     def index(self, action):
         """

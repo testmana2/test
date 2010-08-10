@@ -383,7 +383,7 @@ class Shell(QsciScintillaCompat):
         
         @param ui reference to the debugger UI object (DebugUI)
         """
-        self.connect(ui, SIGNAL('exceptionInterrupt'), self.__writePrompt)
+        ui.exceptionInterrupt.connect(self.__writePrompt)
         
     def __initialise(self):
         """

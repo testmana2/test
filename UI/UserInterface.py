@@ -394,26 +394,19 @@ class UserInterface(QMainWindow):
         self.connect(self.multiProject, SIGNAL("multiProjectOpened"), 
                      self.__activateMultiProjectBrowser)
         
-        self.connect(self.debuggerUI, SIGNAL('resetUI'),
-                     self.viewmanager.handleResetUI)
-        self.connect(self.debuggerUI, SIGNAL('resetUI'),
-                     self.debugViewer.handleResetUI)
-        self.connect(self.debuggerUI, SIGNAL('resetUI'),
-                     self.__setEditProfile)
-        self.connect(self.debuggerUI, SIGNAL('debuggingStarted'),
-                     self.browser.handleProgramChange)
-        self.connect(self.debuggerUI, SIGNAL('debuggingStarted'),
-                     self.debugViewer.exceptionLogger.debuggingStarted)
-        self.connect(self.debuggerUI, SIGNAL('debuggingStarted'),
-                     self.debugViewer.handleDebuggingStarted)
-        self.connect(self.debuggerUI, SIGNAL('debuggingStarted'),
-                     self.__programChange)
-        self.connect(self.debuggerUI, SIGNAL('debuggingStarted'),
-                     self.__debuggingStarted)
-        self.connect(self.debuggerUI, SIGNAL('compileForms'),
-                     self.projectBrowser.pfBrowser.compileChangedForms)
-        self.connect(self.debuggerUI, SIGNAL('compileResources'),
-                     self.projectBrowser.prBrowser.compileChangedResources)
+        self.debuggerUI.resetUI.connect(self.viewmanager.handleResetUI)
+        self.debuggerUI.resetUI.connect(self.debugViewer.handleResetUI)
+        self.debuggerUI.resetUI.connect(self.__setEditProfile)
+        self.debuggerUI.debuggingStarted.connect(self.browser.handleProgramChange)
+        self.debuggerUI.debuggingStarted.connect(
+            self.debugViewer.exceptionLogger.debuggingStarted)
+        self.debuggerUI.debuggingStarted.connect(self.debugViewer.handleDebuggingStarted)
+        self.debuggerUI.debuggingStarted.connect(self.__programChange)
+        self.debuggerUI.debuggingStarted.connect(self.__debuggingStarted)
+        self.debuggerUI.compileForms.connect(
+            self.projectBrowser.pfBrowser.compileChangedForms)
+        self.debuggerUI.compileResources.connect(
+            self.projectBrowser.prBrowser.compileChangedResources)
         
         debugServer.passiveDebugStarted.connect(
             self.debugViewer.exceptionLogger.debuggingStarted)

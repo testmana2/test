@@ -56,8 +56,7 @@ class HelpIndexWidget(QWidget):
                      self.__enableSearchEdit)
         self.connect(self.__index, SIGNAL("activated(const QModelIndex&)"), 
                      self.__activated)
-        self.connect(self.__searchEdit, SIGNAL("returnPressed()"), 
-                     self.__index, SLOT("activateCurrentItem()"))
+        self.__searchEdit.returnPressed.connect(self.__index.activateCurrentItem)
         self.__layout.addWidget(self.__index)
         
         self.__index.viewport().installEventFilter(self)

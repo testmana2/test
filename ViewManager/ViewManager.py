@@ -47,6 +47,9 @@ class QuickSearchLineEdit(QLineEdit):
     @signal returnPressed() emitted after a newline command was activated
     @signal gotFocus() emitted when the focus is changed to this widget
     """
+    escPressed = pyqtSignal()
+    gotFocus = pyqtSignal()
+    
     def editorCommand(self, cmd):
         """
         Public method to perform an editor command.
@@ -61,9 +64,9 @@ class QuickSearchLineEdit(QLineEdit):
                     cb.insertItem(0, self.text())
                 else:
                     cb.addItem(self.text())
-            self.emit(SIGNAL("returnPressed()"))
+            self.returnPressed.emit()
         elif cmd == QsciScintilla.SCI_CANCEL:
-            self.emit(SIGNAL("escPressed()"))
+            self.escPressed.emit()
     
     def keyPressEvent(self, evt):
         """
@@ -72,7 +75,7 @@ class QuickSearchLineEdit(QLineEdit):
         @param evt key event (QKeyPressEvent)
         """
         if evt.key() == Qt.Key_Escape:
-            self.emit(SIGNAL("escPressed()"))
+            self.escPressed.emit()
         else:
             QLineEdit.keyPressEvent(self, evt)  # pass it on
     
@@ -82,7 +85,7 @@ class QuickSearchLineEdit(QLineEdit):
         
         @param evt focus event (QFocusEvent)
         """
-        self.emit(SIGNAL("gotFocus()"))
+        self.gotFocus.emit()
         QLineEdit.focusInEvent(self, evt)   # pass it on
 
 class ViewManager(QObject):
@@ -2182,14 +2185,10 @@ class ViewManager(QObject):
                 """ The quicksearch can be ended by pressing the Return key"""
                 """ while the quicksearch entry has the the input focus.</p>"""
         ))
-        self.connect(self.quickFindtextCombo._editor, SIGNAL('returnPressed()'),
-            self.__quickSearchEnter)
-        self.connect(self.quickFindtextCombo._editor, 
-            SIGNAL('textChanged(const QString&)'), self.__quickSearchText)
-        self.connect(self.quickFindtextCombo._editor, SIGNAL('escPressed()'),
-            self.__quickSearchEscape)
-        self.connect(self.quickFindtextCombo._editor, SIGNAL('gotFocus()'), 
-            self.__quickSearchFocusIn)
+        self.quickFindtextCombo._editor.returnPressed.connect(self.__quickSearchEnter)
+        self.quickFindtextCombo._editor.textChanged.connect(self.__quickSearchText)
+        self.quickFindtextCombo._editor.escPressed.connect(self.__quickSearchEscape)
+        self.quickFindtextCombo._editor.gotFocus.connect(self.__quickSearchFocusIn)
         self.quickFindtextAction = QWidgetAction(self)
         self.quickFindtextAction.setDefaultWidget(self.quickFindtextCombo)
         self.quickFindtextAction.setObjectName("vm_quickfindtext_action")

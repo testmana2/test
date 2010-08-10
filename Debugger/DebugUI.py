@@ -41,6 +41,11 @@ class DebugUI(QObject):
         exception and acknowledged by the user
     """
     clientStack = pyqtSignal(list)
+    resetUI = pyqtSignal()
+    exceptionInterrupt = pyqtSignal()
+    compileForms = pyqtSignal()
+    compileResources = pyqtSignal()
+    debuggingStarted = pyqtSignal(str)
     
     def __init__(self, ui, vm, debugServer, debugViewer, project):
         """
@@ -565,8 +570,7 @@ class DebugUI(QObject):
         dmenu.addAction(self.excIgnoreFilterAct)
         
         self.breakpointsMenu.aboutToShow.connect(self.__showBreakpointsMenu)
-        self.connect(self.breakpointsMenu, SIGNAL('triggered(QAction *)'),
-            self.__breakpointSelected)
+        self.breakpointsMenu.triggered.connect(self.__breakpointSelected)
         dmenu.aboutToShow.connect(self.__showDebugMenu)
         
         return smenu, dmenu
@@ -916,7 +920,7 @@ class DebugUI(QObject):
             else:
                 self.restartAct.setEnabled(False)
             self.stopAct.setEnabled(False)
-        self.emit(SIGNAL('resetUI'))
+        self.resetUI.emit()
         
     def __clientLine(self, fn, line, forStack):
         """
@@ -1035,7 +1039,7 @@ class DebugUI(QObject):
                             .format(exceptionType, 
                                     Utilities.html_encode(exceptionMessage)))
             if res == QMessageBox.Yes:
-                self.emit(SIGNAL('exceptionInterrupt'))
+                self.exceptionInterrupt.emit()
                 stack = []
                 for fn, ln in stackTrace:
                     stack.append((fn, ln, ''))
@@ -1312,9 +1316,9 @@ class DebugUI(QObject):
         is wanted.
         """
         if Preferences.getProject("AutoCompileForms"):
-            self.emit(SIGNAL('compileForms'))
+            self.compileForms.emit()
         if Preferences.getProject("AutoCompileResources"):
-            self.emit(SIGNAL('compileResources'))
+            self.compileResources.emit()
         QApplication.processEvents()
         
     def __coverageScript(self):
@@ -1748,7 +1752,7 @@ class DebugUI(QObject):
                     forkChild = forkIntoChild)
                 
                 # Signal that we have started a debugging session
-                self.emit(SIGNAL('debuggingStarted'), fn)
+                self.debuggingStarted.emit(fn)
                 
                 self.stopAct.setEnabled(True)
         
@@ -1799,7 +1803,7 @@ class DebugUI(QObject):
                     forkChild = self.forkIntoChild)
                 
                 # Signal that we have started a debugging session
-                self.emit(SIGNAL('debuggingStarted'), fn)
+                self.debuggingStarted.emit(fn)
             
             elif self.lastStartAction in [3, 4]:
                 # Ask the client to run the new program.
@@ -1845,7 +1849,7 @@ class DebugUI(QObject):
         self.setExceptionReporting(exc)
         
         # Signal that we have started a debugging session
-        self.emit(SIGNAL('debuggingStarted'), fn)
+        self.debuggingStarted.emit(fn)
         
     def __continue(self):
         """

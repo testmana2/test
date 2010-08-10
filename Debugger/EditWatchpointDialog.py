@@ -36,10 +36,8 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         
         # connect our widgets
-        self.connect(self.conditionEdit, SIGNAL("textChanged(const QString &)"),
-            self.__textChanged)
-        self.connect(self.specialEdit, SIGNAL("textChanged(const QString &)"),
-            self.__textChanged)
+        self.conditionEdit.textChanged.connect(self.__textChanged)
+        self.specialEdit.textChanged.connect(self.__textChanged)
         
         cond, temp, enabled, count, special = properties
         

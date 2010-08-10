@@ -128,8 +128,7 @@ class DebugViewer(QWidget):
         self.__tabWidget.setTabToolTip(index, self.globalsViewer.windowTitle())
         
         self.setGlobalsFilterButton.clicked[()].connect(self.__setGlobalsFilter)
-        self.connect(self.globalsFilterEdit, SIGNAL('returnPressed()'),
-                     self.__setGlobalsFilter)
+        self.globalsFilterEdit.returnPressed.connect(self.__setGlobalsFilter)
         
         # add the local variables viewer
         self.lvWidget = QWidget()
@@ -176,11 +175,9 @@ class DebugViewer(QWidget):
         self.__tabWidget.setTabToolTip(index, self.localsViewer.windowTitle())
         
         self.sourceButton.clicked[()].connect(self.__showSource)
-        self.connect(self.stackComboBox, SIGNAL('activated(int)'), 
-                     self.__frameSelected)
+        self.stackComboBox.activated[int].connect(self.__frameSelected)
         self.setLocalsFilterButton.clicked[()].connect(self.__setLocalsFilter)
-        self.connect(self.localsFilterEdit, SIGNAL('returnPressed()'),
-                     self.__setLocalsFilter)
+        self.localsFilterEdit.returnPressed.connect(self.__setLocalsFilter)
         
         # add the breakpoint viewer
         self.breakpointViewer = BreakPointViewer()
@@ -221,9 +218,7 @@ class DebugViewer(QWidget):
         
         self.__doThreadListUpdate = True
         
-        self.connect(self.__threadList, 
-                     SIGNAL('currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)'), 
-                     self.__threadSelected)
+        self.__threadList.currentItemChanged.connect(self.__threadSelected)
         
         self.__mainLayout.setStretchFactor(self.__tabWidget, 5)
         self.__mainLayout.setStretchFactor(self.__threadList, 1)
