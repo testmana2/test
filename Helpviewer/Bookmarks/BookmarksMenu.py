@@ -25,6 +25,9 @@ class BookmarksMenu(E5ModelMenu):
             tab
     @signal newUrl(const QUrl&, const QString&) emitted to open a URL in a new tab
     """
+    openUrl = pyqtSignal(QUrl, str)
+    newUrl = pyqtSignal(QUrl, str)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -33,7 +36,7 @@ class BookmarksMenu(E5ModelMenu):
         """
         E5ModelMenu.__init__(self, parent)
         
-        self.connect(self, SIGNAL("activated(const QModelIndex&)"), self.__activated)
+        self.activated.connect(self.__activated)
         self.setStatusBarTextRole(BookmarksModel.UrlStringRole)
         self.setSeparatorRole(BookmarksModel.SeparatorRole)
         
@@ -47,10 +50,8 @@ class BookmarksMenu(E5ModelMenu):
         @return reference to the menu (BookmarksMenu)
         """
         menu = BookmarksMenu(self)
-        self.connect(menu, SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                     self, SIGNAL("openUrl(const QUrl&, const QString&)"))
-        self.connect(menu, SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                     self, SIGNAL("newUrl(const QUrl&, const QString&)"))
+        menu.openUrl.connect(self.openUrl)
+        menu.newUrl.connect(self.newUrl)
         return menu
     
     def __activated(self, idx):
@@ -60,13 +61,13 @@ class BookmarksMenu(E5ModelMenu):
         @param idx index of the activated item (QModelIndex)
         """
         if self._keyboardModifiers & Qt.ControlModifier:
-            self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                      idx.data(BookmarksModel.UrlRole), 
-                      idx.data(Qt.DisplayRole))
+            self.newUrl.emit(
+                idx.data(BookmarksModel.UrlRole), 
+                idx.data(Qt.DisplayRole))
         else:
-            self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                      idx.data(BookmarksModel.UrlRole), 
-                      idx.data(Qt.DisplayRole))
+            self.openUrl.emit(
+                idx.data(BookmarksModel.UrlRole), 
+                idx.data(Qt.DisplayRole))
         self.resetFlags()
     
     def postPopulated(self):
@@ -113,13 +114,13 @@ class BookmarksMenu(E5ModelMenu):
                 continue
             
             if i == 0:
-                self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"),
-                          child.data(BookmarksModel.UrlRole), 
-                          child.data(Qt.DisplayRole))
+                self.openUrl.emit(
+                    child.data(BookmarksModel.UrlRole), 
+                    child.data(Qt.DisplayRole))
             else:
-                self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"),
-                          child.data(BookmarksModel.UrlRole), 
-                          child.data(Qt.DisplayRole))
+                self.newUrl.emit(
+                    child.data(BookmarksModel.UrlRole), 
+                    child.data(Qt.DisplayRole))
     
     def __contextMenuRequested(self, pos):
         """
@@ -159,9 +160,9 @@ class BookmarksMenu(E5ModelMenu):
         """
         idx = self.index(self.sender())
         
-        self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                  idx.data(BookmarksModel.UrlRole), 
-                  idx.data(Qt.DisplayRole))
+        self.openUrl.emit(
+            idx.data(BookmarksModel.UrlRole), 
+            idx.data(Qt.DisplayRole))
     
     def __openBookmarkInNewTab(self):
         """
@@ -169,9 +170,9 @@ class BookmarksMenu(E5ModelMenu):
         """
         idx = self.index(self.sender())
         
-        self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                  idx.data(BookmarksModel.UrlRole), 
-                  idx.data(Qt.DisplayRole))
+        self.newUrl.emit(
+            idx.data(BookmarksModel.UrlRole), 
+            idx.data(Qt.DisplayRole))
     
     def __removeBookmark(self):
         """

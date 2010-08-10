@@ -25,7 +25,7 @@ class AdBlockModel(QAbstractItemModel):
         QAbstractItemModel.__init__(self, parent)
         
         self.__manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
-        self.connect(self.__manager, SIGNAL("rulesChanged()"), self.__rulesChanged)
+        self.__manager.rulesChanged.connect(self.__rulesChanged)
     
     def __rulesChanged(self):
         """
@@ -230,26 +230,22 @@ class AdBlockModel(QAbstractItemModel):
             return False
         
         if not parent.isValid():
-            self.disconnect(self.__manager, SIGNAL("rulesChanged()"), 
-                            self.__rulesChanged)
+            self.__manager.rulesChanged.disconnect(self.__rulesChanged)
             self.beginRemoveRows(QModelIndex(), row, row + count - 1)
             for subscription in self.__manager.subscriptions()[row:row + count]:
                 self.__manager.removeSubscription(subscription)
             self.endRemoveRows()
-            self.connect(self.__manager, SIGNAL("rulesChanged()"), 
-                         self.__rulesChanged)
+            self.__manager.rulesChanged.connect(self.__rulesChanged)
             return True
         else:
             sub = self.subscription(parent)
             if sub is not None:
-                self.disconnect(self.__manager, SIGNAL("rulesChanged()"), 
-                                self.__rulesChanged)
+                self.__manager.rulesChanged.disconnect(self.__rulesChanged)
                 self.beginRemoveRows(parent, row, row + count - 1)
                 for i in reversed(list(range(row, row + count))):
                     sub.removeRule(i)
                 self.endRemoveRows()
-                self.connect(self.__manager, SIGNAL("rulesChanged()"), 
-                             self.__rulesChanged)
+                self.__manager.rulesChanged.connect(self.__rulesChanged)
                 return True
         
         return False
@@ -269,7 +265,7 @@ class AdBlockModel(QAbstractItemModel):
            (self.flags(index) & Qt.ItemIsEditable) == 0:
             return False
         
-        self.disconnect(self.__manager, SIGNAL("rulesChanged()"), self.__rulesChanged)
+        self.__manager.rulesChanged.disconnect(self.__rulesChanged)
         changed = False
         
         if role in [Qt.EditRole, Qt.DisplayRole]:
@@ -279,15 +275,13 @@ class AdBlockModel(QAbstractItemModel):
                     r = self.rule(index)
                     r.setFilter(value)
                     sub.replaceRule(r, index.row())
-                    self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
-                        index, index)
+                    self.dataChanged.emit(index, index)
                     changed = True
             else:
                 sub = self.subscription(index)
                 if sub is not None:
                     sub.setTitle(value)
-                    self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
-                        index, index)
+                    self.dataChanged.emit(index, index)
                     changed = True
         
         elif role == Qt.CheckStateRole:
@@ -297,18 +291,16 @@ class AdBlockModel(QAbstractItemModel):
                     r = self.rule(index)
                     r.setEnabled(value == Qt.Checked)
                     sub.replaceRule(r, index.row())
-                    self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
-                        index, index)
+                    self.dataChanged.emit(index, index)
                     changed = True
             else:
                 sub = self.subscription(index)
                 if sub is not None:
                     sub.setEnabled(value == Qt.Checked)
-                    self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
-                        index, index)
+                    self.dataChanged.emit(index, index)
                     changed = True
         
-        self.connect(self.__manager, SIGNAL("rulesChanged()"), self.__rulesChanged)
+        self.__manager.rulesChanged.connect(self.__rulesChanged)
         return changed
     
     def hasChildren(self, parent = QModelIndex()):

@@ -26,6 +26,9 @@ class AdBlockSubscription(QObject):
     @signal changed() emitted after the subscription has changed
     @signal rulesChanged() emitted after the subscription's rules have changed
     """
+    changed = pyqtSignal()
+    rulesChanged = pyqtSignal()
+    
     def __init__(self, url, parent = None):
         """
         Constructor
@@ -116,7 +119,7 @@ class AdBlockSubscription(QObject):
         
         self.__enabled = enabled
         self.__populateCache()
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
     
     def title(self):
         """
@@ -136,7 +139,7 @@ class AdBlockSubscription(QObject):
             return
         
         self.__title = title
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
     
     def location(self):
         """
@@ -157,7 +160,7 @@ class AdBlockSubscription(QObject):
         
         self.__location = url.toEncoded()
         self.__lastUpdate = QDateTime()
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
     
     def lastUpdate(self):
         """
@@ -218,7 +221,7 @@ class AdBlockSubscription(QObject):
                         line = textStream.readLine()
                         self.__rules.append(AdBlockRule(line))
                     self.__populateCache()
-                    self.emit(SIGNAL("changed()"))
+                    self.changed.emit()
         
         if not self.__lastUpdate.isValid() or \
            self.__lastUpdate.addDays(7) < QDateTime.currentDateTime():
@@ -237,7 +240,7 @@ class AdBlockSubscription(QObject):
         if self.location().scheme() == "file":
             self.__lastUpdate = QDateTime.currentDateTime()
             self.__loadRules()
-            self.emit(SIGNAL("changed()"))
+            self.changed.emit()
             return
         
         request = QNetworkRequest(self.location())
@@ -287,7 +290,7 @@ class AdBlockSubscription(QObject):
         f.write(response)
         self.__lastUpdate = QDateTime.currentDateTime()
         self.__loadRules()
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
         self.__downloading = None
     
     def saveRules(self):
@@ -359,7 +362,7 @@ class AdBlockSubscription(QObject):
         """
         self.__rules.append(rule)
         self.__populateCache()
-        self.emit(SIGNAL("rulesChanged()"))
+        self.rulesChanged.emit()
     
     def removeRule(self, offset):
         """
@@ -372,7 +375,7 @@ class AdBlockSubscription(QObject):
         
         del self.__rules[offset]
         self.__populateCache()
-        self.emit(SIGNAL("rulesChanged()"))
+        self.rulesChanged.emit()
     
     def replaceRule(self, rule, offset):
         """
@@ -383,7 +386,7 @@ class AdBlockSubscription(QObject):
         """
         self.__rules[offset] = rule
         self.__populateCache()
-        self.emit(SIGNAL("rulesChanged()"))
+        self.rulesChanged.emit()
     
     def __populateCache(self):
         """

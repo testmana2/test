@@ -90,6 +90,10 @@ class BookmarksManager(QObject):
         node has been removed
     @signal entryChanged emitted after a bookmark node has been changed
     """
+    entryAdded = pyqtSignal(BookmarkNode)
+    entryRemoved = pyqtSignal(BookmarkNode, int, BookmarkNode)
+    entryChanged = pyqtSignal(BookmarkNode)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -106,12 +110,9 @@ class BookmarksManager(QObject):
         self.__bookmarksModel = None
         self.__commands = QUndoStack()
         
-        self.connect(self, SIGNAL("entryAdded"), 
-                     self.__saveTimer.changeOccurred)
-        self.connect(self, SIGNAL("entryRemoved"), 
-                     self.__saveTimer.changeOccurred)
-        self.connect(self, SIGNAL("entryChanged"), 
-                     self.__saveTimer.changeOccurred)
+        self.entryAdded.connect(self.__saveTimer.changeOccurred)
+        self.entryRemoved.connect(self.__saveTimer.changeOccurred)
+        self.entryChanged.connect(self.__saveTimer.changeOccurred)
     
     def close(self):
         """
@@ -447,16 +448,14 @@ class RemoveBookmarksCommand(QUndoCommand):
         Public slot to perform the undo action.
         """
         self._parent.add(self._node, self._row)
-        self._bookmarksManager.emit(SIGNAL("entryAdded"), self._node)
+        self._bookmarksManager.entryAdded.emit(self._node)
     
     def redo(self):
         """
         Public slot to perform the redo action.
         """
         self._parent.remove(self._node)
-        self._bookmarksManager.emit(
-            SIGNAL("entryRemoved"), 
-            self._parent, self._row, self._node)
+        self._bookmarksManager.entryRemoved.emit(self._parent, self._row, self._node)
 
 class InsertBookmarksCommand(RemoveBookmarksCommand):
     """
@@ -523,7 +522,7 @@ class ChangeBookmarkCommand(QUndoCommand):
             self._node.title = self._oldValue
         else:
             self._node.url = self._oldValue
-        self._bookmarksManager.emit(SIGNAL("entryChanged"), self._node)
+        self._bookmarksManager.entryChanged.emit(self._node)
     
     def redo(self):
         """
@@ -533,4 +532,4 @@ class ChangeBookmarkCommand(QUndoCommand):
             self._node.title = self._newValue
         else:
             self._node.url = self._newValue
-        self._bookmarksManager.emit(SIGNAL("entryChanged"), self._node)
+        self._bookmarksManager.entryChanged.emit(self._node)

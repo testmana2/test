@@ -26,6 +26,8 @@ class AdBlockManager(QObject):
     
     @signal rulesChanged() emitted after some rule has changed
     """
+    rulesChanged = pyqtSignal()
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -43,7 +45,7 @@ class AdBlockManager(QObject):
         self.__subscriptions = []
         self.__saveTimer = AutoSaver(self, self.save)
         
-        self.connect(self, SIGNAL("rulesChanged()"), self.__saveTimer.changeOccurred)
+        self.rulesChanged.connect(self.__saveTimer.changeOccurred)
     
     def close(self):
         """
@@ -74,7 +76,7 @@ class AdBlockManager(QObject):
         self.__enabled = enabled
         if enabled:
             self.__loadSubscriptions()
-        self.emit(SIGNAL("rulesChanged()"))
+        self.rulesChanged.emit()
     
     def network(self):
         """
@@ -160,7 +162,7 @@ class AdBlockManager(QObject):
             self.__subscriptions.remove(subscription)
             rulesFileName = subscription.rulesFileName()
             QFile.remove(rulesFileName)
-            self.emit(SIGNAL("rulesChanged()"))
+            self.rulesChanged.emit()
         except ValueError:
             pass
     
@@ -175,12 +177,10 @@ class AdBlockManager(QObject):
         
         self.__subscriptions.append(subscription)
         
-        self.connect(subscription, SIGNAL("rulesChanged()"), 
-                     self, SIGNAL("rulesChanged()"))
-        self.connect(subscription, SIGNAL("changed()"), 
-                     self, SIGNAL("rulesChanged()"))
+        subscription.rulesChanged.connect(self.rulesChanged)
+        subscription.changed.connect(self.rulesChanged)
         
-        self.emit(SIGNAL("rulesChanged()"))
+        self.rulesChanged.emit()
     
     def save(self):
         """
@@ -231,10 +231,8 @@ class AdBlockManager(QObject):
         for subscription in subscriptions:
             url = QUrl.fromEncoded(subscription.encode())
             adBlockSubscription = AdBlockSubscription(url, self)
-            self.connect(adBlockSubscription, SIGNAL("rulesChanged()"), 
-                         self, SIGNAL("rulesChanged()"))
-            self.connect(adBlockSubscription, SIGNAL("changed()"), 
-                         self, SIGNAL("rulesChanged()"))
+            adBlockSubscription.rulesChanged.connect(self.rulesChanged)
+            adBlockSubscription.changed.connect(self.rulesChanged)
             self.__subscriptions.append(adBlockSubscription)
         
         self.__subscriptionsLoaded = True

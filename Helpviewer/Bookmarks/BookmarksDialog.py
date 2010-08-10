@@ -28,6 +28,9 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
             tab
     @signal newUrl(const QUrl&, const QString&) emitted to open a URL in a new tab
     """
+    openUrl = pyqtSignal(QUrl, str)
+    newUrl = pyqtSignal(QUrl, str)
+    
     def __init__(self, parent = None, manager = None):
         """
         Constructor
@@ -49,8 +52,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         self.__proxyModel.setFilterKeyColumn(-1)
         self.__proxyModel.setSourceModel(self.__bookmarksModel)
         
-        self.connect(self.searchEdit, SIGNAL("textChanged(QString)"), 
-                     self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
         
         self.bookmarksTree.setModel(self.__proxyModel)
         self.bookmarksTree.setExpanded(self.__proxyModel.index(0, 0), True)
@@ -60,8 +62,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         self.bookmarksTree.header().setStretchLastSection(True)
         self.bookmarksTree.setContextMenuPolicy(Qt.CustomContextMenu)
         
-        self.connect(self.bookmarksTree, SIGNAL("activated(const QModelIndex&)"), 
-                     self.__activated)
+        self.bookmarksTree.activated.connect(self.__activated)
         self.bookmarksTree.customContextMenuRequested.connect(
             self.__customContextMenuRequested)
         
@@ -185,13 +186,13 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
            node.type() == BookmarkNode.Folder:
             return
         if newTab:
-            self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                      idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole), 
-                      idx.sibling(idx.row(), 0).data(Qt.DisplayRole))
+            self.newUrl.emit(
+                idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole), 
+                idx.sibling(idx.row(), 0).data(Qt.DisplayRole))
         else:
-            self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                      idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole), 
-                      idx.sibling(idx.row(), 0).data(Qt.DisplayRole))
+            self.openUrl.emit(
+                idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole), 
+                idx.sibling(idx.row(), 0).data(Qt.DisplayRole))
     
     def __editName(self):
         """

@@ -45,7 +45,7 @@ class UMLClassDiagram(UMLDialog):
         self.allClasses = {}
         self.allModules = {}
         
-        self.connect(self.umlView, SIGNAL("relayout()"), self.relayout)
+        self.umlView.relayout.connect(self.relayout)
         
     def __getCurrentShape(self, name):
         """

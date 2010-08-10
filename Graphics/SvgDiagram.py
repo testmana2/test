@@ -248,7 +248,7 @@ class SvgDiagram(QMainWindow):
         printer.setPrinterName(Preferences.getPrinter("PrinterName"))
         
         preview = QPrintPreviewDialog(printer, self)
-        self.connect(preview, SIGNAL("paintRequested(QPrinter*)"), self.__print)
+        preview.paintRequested[QPrinter].connect(self.__print)
         preview.exec_()
         
     def __print(self, printer):

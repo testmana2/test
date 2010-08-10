@@ -39,13 +39,11 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         self.__proxyModel.setSourceModel(self.__adBlockModel)
         self.subscriptionsTree.setModel(self.__proxyModel)
         
-        self.connect(self.searchEdit, SIGNAL("textChanged(QString)"), 
-                     self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
         
         manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
         self.adBlockGroup.setChecked(manager.isEnabled())
-        self.connect(self.adBlockGroup, SIGNAL("toggled(bool)"), 
-                     manager.setEnabled)
+        self.adBlockGroup.toggled[bool].connect(manager.setEnabled)
         
         menu = QMenu(self)
         menu.aboutToShow.connect(self.__aboutToShowActionMenu)

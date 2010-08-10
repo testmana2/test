@@ -28,6 +28,8 @@ class UMLGraphicsView(E5GraphicsView):
     @signal relayout() emitted to indicate a relayout of the diagram
         is requested
     """
+    relayout = pyqtSignal()
+    
     def __init__(self, scene, diagramName = "Unnamed", parent = None, name = None):
         """
         Constructor
@@ -48,7 +50,7 @@ class UMLGraphicsView(E5GraphicsView):
         
         self.__initActions()
         
-        self.connect(scene, SIGNAL("changed(const QList<QRectF> &)"), self.__sceneChanged)
+        scene.changed.connect(self.__sceneChanged)
         
     def __initActions(self):
         """
@@ -359,7 +361,7 @@ class UMLGraphicsView(E5GraphicsView):
         for itm in list(scene.items())[:]:
             if itm.scene() == scene:
                 scene.removeItem(itm)
-        self.emit(SIGNAL("relayout()"))
+        self.relayout.emit()
         
     def __printDiagram(self):
         """
@@ -400,7 +402,7 @@ class UMLGraphicsView(E5GraphicsView):
         printer.setPrinterName(Preferences.getPrinter("PrinterName"))
         
         preview = QPrintPreviewDialog(printer, self)
-        self.connect(preview, SIGNAL("paintRequested(QPrinter*)"), self.printDiagram)
+        preview.paintRequested[QPrinter].connect(self.printDiagram)
         preview.exec_()
         
     def __zoom(self):

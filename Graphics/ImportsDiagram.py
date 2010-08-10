@@ -56,7 +56,7 @@ class ImportsDiagram(UMLDialog):
         else:
             self.setObjectName(name)
         
-        self.connect(self.umlView, SIGNAL("relayout()"), self.relayout)
+        self.umlView.relayout.connect(self.relayout)
         
     def __buildModulesDict(self):
         """

@@ -40,15 +40,9 @@ class BookmarksModel(QAbstractItemModel):
         self.__endMacro = False
         self.__bookmarksManager = manager
         
-        self.connect(manager, 
-                     SIGNAL("entryAdded"), 
-                     self.entryAdded)
-        self.connect(manager, 
-                     SIGNAL("entryRemoved"), 
-                     self.entryRemoved)
-        self.connect(manager, 
-                     SIGNAL("entryChanged"), 
-                     self.entryChanged)
+        manager.entryAdded.connect(self.entryAdded)
+        manager.entryRemoved.connect(self.entryRemoved)
+        manager.entryChanged.connect(self.entryChanged)
         
         self.__headers = [
             self.trUtf8("Title"), 
@@ -113,8 +107,7 @@ class BookmarksModel(QAbstractItemModel):
         @param node reference to the bookmark node to change (BookmarkNode)
         """
         idx = self.nodeIndex(node)
-        self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
-                  idx, idx)
+        self.dataChanged.emit(idx, idx)
     
     def removeRows(self, row, count, parent = QModelIndex()):
         """
