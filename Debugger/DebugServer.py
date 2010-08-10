@@ -70,7 +70,7 @@ class DebugServer(QTcpServer):
             a syntax error in a watch expression
     @signal clientRawInput(prompt, echo) emitted after a raw input request was received
     @signal clientBanner(banner) emitted after the client banner was received
-    @signal clientCapabilities(int capabilities, QString cltype) emitted after the clients
+    @signal clientCapabilities(int capabilities, string cltype) emitted after the clients
             capabilities were received
     @signal clientCompletionList(completionList, text) emitted after the client
             the commandline completion list and the reworked searchstring was
@@ -89,6 +89,37 @@ class DebugServer(QTcpServer):
     @signal utTestErrored(testname, exc_info) emitted after the client reported 
             an errored test
     """
+    clientClearBreak = pyqtSignal(str, int)
+    clientClearWatch = pyqtSignal(str)
+    clientGone = pyqtSignal(bool)
+    clientProcessStdout = pyqtSignal(str)
+    clientProcessStderr = pyqtSignal(str)
+    clientRawInputSent = pyqtSignal()
+    clientOutput = pyqtSignal(str)
+    clientLine = pyqtSignal(str, int, bool)
+    clientStack = pyqtSignal(list)
+    clientThreadList = pyqtSignal(int, list)
+    clientThreadSet = pyqtSignal()
+    clientVariables = pyqtSignal(int, list)
+    clientVariable = pyqtSignal(int, list)
+    clientStatement = pyqtSignal(bool)
+    clientException = pyqtSignal(str, str, list)
+    clientSyntaxError = pyqtSignal(str, str, int, int)
+    clientExit = pyqtSignal(int)
+    clientBreakConditionError = pyqtSignal(str, int)
+    clientWatchConditionError = pyqtSignal(str)
+    clientRawInput = pyqtSignal(str, bool)
+    clientBanner = pyqtSignal(str, str, str)
+    clientCapabilities = pyqtSignal(int, str)
+    clientCompletionList = pyqtSignal(list, str)
+    utPrepared = pyqtSignal(int, str, str)
+    utStartTest = pyqtSignal(str, str)
+    utStopTest = pyqtSignal()
+    utTestFailed = pyqtSignal(str, str)
+    utTestFailed = pyqtSignal(str, str)
+    utFinished = pyqtSignal()
+    passiveDebugStarted = pyqtSignal(str, bool)
+    
     def __init__(self):
         """
         Constructor
@@ -127,8 +158,8 @@ class DebugServer(QTcpServer):
         self.lastClientType = ''
         self.__autoClearShell = False
         
-        self.connect(self, SIGNAL("clientClearBreak"), self.__clientClearBreakPoint)
-        self.connect(self, SIGNAL("clientClearWatch"), self.__clientClearWatchPoint)
+        self.clientClearBreak.connect(self.__clientClearBreakPoint)
+        self.clientClearWatch.connect(self.__clientClearWatchPoint)
         self.newConnection[()].connect(self.__newConnection)
         
         self.breakpointModel.rowsAboutToBeRemoved.connect(self.__deleteBreakPoints)
@@ -279,7 +310,7 @@ class DebugServer(QTcpServer):
         if not self.passive or not self.passiveClientExited: 
             if self.debuggerInterface and self.debuggerInterface.isConnected():
                 self.shutdownServer()
-                self.emit(SIGNAL('clientGone'), unplanned & self.debugging)
+                self.clientGone.emit(unplanned and self.debugging)
         
         if clType:
             self.__setClientType(clType)
@@ -338,7 +369,7 @@ class DebugServer(QTcpServer):
         output = str(self.clientProcess.readAllStandardOutput(), 
                      Preferences.getSystem("IOEncoding"), 
                      'replace')
-        self.emit(SIGNAL("clientProcessStdout"), output)
+        self.clientProcessStdout.emit(output)
         
     def __clientProcessError(self):
         """
@@ -347,7 +378,7 @@ class DebugServer(QTcpServer):
         error = str(self.clientProcess.readAllStandardError(), 
                     Preferences.getSystem("IOEncoding"), 
                     'replace')
-        self.emit(SIGNAL("clientProcessStderr"), error)
+        self.clientProcessStderr.emit(error)
         
     def __clientClearBreakPoint(self, fn, lineno):
         """
@@ -842,7 +873,7 @@ class DebugServer(QTcpServer):
         @param s the raw input (string)
         """
         self.debuggerInterface.remoteRawInput(s)
-        self.emit(SIGNAL('clientRawInputSent'))
+        self.clientRawInputSent.emit()
         
     def remoteThreadList(self):
         """
@@ -959,15 +990,15 @@ class DebugServer(QTcpServer):
         """
         self.debuggerInterface.remoteUTStop()
         
-    def clientOutput(self, line):
+    def signalClientOutput(self, line):
         """
         Public method to process a line of client output.
         
         @param line client output (string)
         """
-        self.emit(SIGNAL('clientOutput'), line)
+        self.clientOutput.emit(line)
         
-    def clientLine(self, filename, lineno, forStack = False):
+    def signalClientLine(self, filename, lineno, forStack = False):
         """
         Public method to process client position feedback.
         
@@ -975,9 +1006,9 @@ class DebugServer(QTcpServer):
         @param lineno line of code currently being executed (integer)
         @param forStack flag indicating this is for a stack dump (boolean)
         """
-        self.emit(SIGNAL('clientLine'), filename, lineno, forStack)
+        self.clientLine.emit(filename, lineno, forStack)
         
-    def clientStack(self, stack):
+    def signalClientStack(self, stack):
         """
         Public method to process a client's stack information.
         
@@ -985,50 +1016,50 @@ class DebugServer(QTcpServer):
             values giving the filename, linenumber and method
             (list of lists of (string, integer, string))
         """
-        self.emit(SIGNAL('clientStack'), stack)
+        self.clientStack.emit(stack)
         
-    def clientThreadList(self, currentId, threadList):
+    def signalClientThreadList(self, currentId, threadList):
         """
         Public method to process the client thread list info.
         
         @param currentID id of the current thread (integer)
         @param threadList list of dictionaries containing the thread data
         """
-        self.emit(SIGNAL('clientThreadList'), currentId, threadList)
+        self.clientThreadList.emit(currentId, threadList)
         
-    def clientThreadSet(self):
+    def signalClientThreadSet(self):
         """
         Public method to handle the change of the client thread.
         """
-        self.emit(SIGNAL('clientThreadSet'))
+        self.clientThreadSet.emit()
         
-    def clientVariables(self, scope, variables):
+    def signalClientVariables(self, scope, variables):
         """
         Public method to process the client variables info.
         
         @param scope scope of the variables (-1 = empty global, 1 = global, 0 = local)
         @param variables the list of variables from the client
         """
-        self.emit(SIGNAL('clientVariables'), scope, variables)
+        self.clientVariables.emit(scope, variables)
         
-    def clientVariable(self, scope, variables):
+    def signalClientVariable(self, scope, variables):
         """
         Public method to process the client variable info.
         
         @param scope scope of the variables (-1 = empty global, 1 = global, 0 = local)
         @param variables the list of members of a classvariable from the client
         """
-        self.emit(SIGNAL('clientVariable'), scope, variables)
+        self.clientVariable.emit(scope, variables)
         
-    def clientStatement(self, more):
+    def signalClientStatement(self, more):
         """
         Public method to process the input response from the client.
         
         @param more flag indicating that more user input is required
         """
-        self.emit(SIGNAL('clientStatement'), more)
+        self.clientStatement.emit(more)
         
-    def clientException(self, exceptionType, exceptionMessage, stackTrace):
+    def signalClientException(self, exceptionType, exceptionMessage, stackTrace):
         """
         Public method to process the exception info from the client.
         
@@ -1037,9 +1068,9 @@ class DebugServer(QTcpServer):
         @param stackTrace list of stack entries with the exception position
             first. Each stack entry is a list giving the filename and the linenumber.
         """
-        self.emit(SIGNAL('clientException'), exceptionType, exceptionMessage, stackTrace)
+        self.clientException.emit(exceptionType, exceptionMessage, stackTrace)
         
-    def clientSyntaxError(self, message, filename, lineNo, characterNo):
+    def signalClientSyntaxError(self, message, filename, lineNo, characterNo):
         """
         Public method to process the syntax error info from the client.
         
@@ -1048,9 +1079,9 @@ class DebugServer(QTcpServer):
         @param lineNo line number of the syntax error position (integer)
         @param characterNo character number of the syntax error position (integer)
         """
-        self.emit(SIGNAL('clientSyntaxError'), message, filename, lineNo, characterNo)
+        self.clientSyntaxError.emit(message, filename, lineNo, characterNo)
         
-    def clientExit(self, status):
+    def signalClientExit(self, status):
         """
         Public method to process the client exit status.
         
@@ -1058,58 +1089,58 @@ class DebugServer(QTcpServer):
         """
         if self.passive:
             self.__passiveShutDown()
-        self.emit(SIGNAL('clientExit(int)'), int(status))
+        self.clientExit.emit(int(status))
         if Preferences.getDebugger("AutomaticReset"):
             self.startClient(False)
         if self.passive:
             self.__createDebuggerInterface("None")
-            self.clientOutput(self.trUtf8('\nNot connected\n'))
-            self.clientStatement(False)
+            self.signalClientOutput(self.trUtf8('\nNot connected\n'))
+            self.signalClientStatement(False)
         
-    def clientClearBreak(self, filename, lineno):
+    def signalClientClearBreak(self, filename, lineno):
         """
         Public method to process the client clear breakpoint command.
         
         @param filename filename of the breakpoint (string)
         @param lineno line umber of the breakpoint (integer)
         """
-        self.emit(SIGNAL('clientClearBreak'), filename, lineno)
+        self.clientClearBreak.emit(filename, lineno)
         
-    def clientBreakConditionError(self, filename, lineno):
+    def signalClientBreakConditionError(self, filename, lineno):
         """
         Public method to process the client breakpoint condition error info.
         
         @param filename filename of the breakpoint (string)
         @param lineno line umber of the breakpoint (integer)
         """
-        self.emit(SIGNAL('clientBreakConditionError'), filename, lineno)
+        self.clientBreakConditionError.emit(filename, lineno)
         
-    def clientClearWatch(self, condition):
+    def signalClientClearWatch(self, condition):
         """
         Public slot to handle the clientClearWatch signal.
         
         @param condition expression of watch expression to clear (string)
         """
-        self.emit(SIGNAL('clientClearWatch'), condition)
+        self.clientClearWatch.emit(condition)
         
-    def clientWatchConditionError(self, condition):
+    def signalClientWatchConditionError(self, condition):
         """
         Public method to process the client watch expression error info.
         
         @param condition expression of watch expression to clear (string)
         """
-        self.emit(SIGNAL('clientWatchConditionError'), condition)
+        self.clientWatchConditionError.emit(condition)
         
-    def clientRawInput(self, prompt, echo):
+    def signalClientRawInput(self, prompt, echo):
         """
         Public method to process the client raw input command.
         
         @param prompt the input prompt (string)
         @param echo flag indicating an echoing of the input (boolean)
         """
-        self.emit(SIGNAL('clientRawInput'), prompt, echo)
+        self.clientRawInput.emit(prompt, echo)
         
-    def clientBanner(self, version, platform, debugClient):
+    def signalClientBanner(self, version, platform, debugClient):
         """
         Public method to process the client banner info.
         
@@ -1117,9 +1148,9 @@ class DebugServer(QTcpServer):
         @param platform hostname of the client (string)
         @param debugClient additional debugger type info (string)
         """
-        self.emit(SIGNAL('clientBanner'), version, platform, debugClient)
+        self.clientBanner.emit(version, platform, debugClient)
         
-    def clientCapabilities(self, capabilities, clientType):
+    def signalClientCapabilities(self, capabilities, clientType):
         """
         Public method to process the client capabilities info.
         
@@ -1127,16 +1158,16 @@ class DebugServer(QTcpServer):
         @param clientType type of the debug client (string)
         """
         self.__clientCapabilities[clientType] = capabilities
-        self.emit(SIGNAL('clientCapabilities'), capabilities, clientType)
+        self.clientCapabilities.emit(capabilities, clientType)
         
-    def clientCompletionList(self, completionList, text):
+    def signalClientCompletionList(self, completionList, text):
         """
         Public method to process the client auto completion info.
         
         @param completionList list of possible completions (list of strings)
         @param text the text to be completed (string)
         """
-        self.emit(SIGNAL('clientCompletionList'), completionList, text)
+        self.clientCompletionList.emit(completionList, text)
         
     def clientUtPrepared(self, result, exceptionType, exceptionValue):
         """
@@ -1146,7 +1177,7 @@ class DebugServer(QTcpServer):
         @param exceptionType exception type (string)
         @param exceptionValue exception message (string)
         """
-        self.emit(SIGNAL('utPrepared'), result, exceptionType, exceptionValue)
+        self.utPrepared.emit(result, exceptionType, exceptionValue)
         
     def clientUtStartTest(self, testname, doc):
         """
@@ -1155,13 +1186,13 @@ class DebugServer(QTcpServer):
         @param testname name of the test (string)
         @param doc short description of the test (string)
         """
-        self.emit(SIGNAL('utStartTest'), testname, doc)
+        self.utStartTest.emit(testname, doc)
         
     def clientUtStopTest(self):
         """
         Public method to process the client stop test info.
         """
-        self.emit(SIGNAL('utStopTest'))
+        self.utStopTest.emit()
         
     def clientUtTestFailed(self, testname, traceback):
         """
@@ -1170,7 +1201,7 @@ class DebugServer(QTcpServer):
         @param testname name of the test (string)
         @param traceback lines of traceback info (string)
         """
-        self.emit(SIGNAL('utTestFailed'), testname, traceback)
+        self.utTestFailed.emit(testname, traceback)
         
     def clientUtTestErrored(self, testname, traceback):
         """
@@ -1179,13 +1210,13 @@ class DebugServer(QTcpServer):
         @param testname name of the test (string)
         @param traceback lines of traceback info (string)
         """
-        self.emit(SIGNAL('utTestErrored'), testname, traceback)
+        self.utTestErrored.emit(testname, traceback)
         
     def clientUtFinished(self):
         """
         Public method to process the client unit test finished info.
         """
-        self.emit(SIGNAL('utFinished'))
+        self.utFinished.emit()
         
     def passiveStartUp(self, fn, exc):
         """
@@ -1199,7 +1230,7 @@ class DebugServer(QTcpServer):
         self.debugging = True
         self.__restoreBreakpoints()
         self.__restoreWatchpoints()
-        self.emit(SIGNAL('passiveDebugStarted'), fn, exc)
+        self.passiveDebugStarted.emit(fn, exc)
         
     def __passiveShutDown(self):
         """

@@ -85,17 +85,17 @@ class Shell(QsciScintillaCompat):
         
         self.__showStdOutErr = Preferences.getShell("ShowStdOutErr")
         if self.__showStdOutErr:
-            self.connect(dbs, SIGNAL('clientProcessStdout'), self.__writeStdOut)
-            self.connect(dbs, SIGNAL('clientProcessStderr'), self.__writeStdErr)
-        self.connect(dbs, SIGNAL('clientOutput'), self.__write)
-        self.connect(dbs, SIGNAL('clientStatement'), self.__clientStatement)
-        self.connect(dbs, SIGNAL('clientGone'), self.__initialise)
-        self.connect(dbs, SIGNAL('clientRawInput'), self.__raw_input)
-        self.connect(dbs, SIGNAL('clientBanner'), self.__writeBanner)
-        self.connect(dbs, SIGNAL('clientCompletionList'), self.__showCompletions)
-        self.connect(dbs, SIGNAL('clientCapabilities'), self.__clientCapabilities)
-        self.connect(dbs, SIGNAL('clientException'), self.__clientError)
-        self.connect(dbs, SIGNAL('clientSyntaxError'), self.__clientError)
+            dbs.clientProcessStdout.connect(self.__writeStdOut)
+            dbs.clientProcessStderr.connect(self.__writeStdErr)
+        dbs.clientOutput.connect(self.__write)
+        dbs.clientStatement.connect(self.__clientStatement)
+        dbs.clientGone.connect(self.__initialise)
+        dbs.clientRawInput.connect(self.__raw_input)
+        dbs.clientBanner.connect(self.__writeBanner)
+        dbs.clientCompletionList.connect(self.__showCompletions)
+        dbs.clientCapabilities.connect(self.__clientCapabilities)
+        dbs.clientException.connect(self.__clientError)
+        dbs.clientSyntaxError.connect(self.__clientError)
         self.dbs = dbs
         
         # Initialise instance variables.
@@ -1264,15 +1264,11 @@ class Shell(QsciScintillaCompat):
         showStdOutErr = Preferences.getShell("ShowStdOutErr")
         if self.__showStdOutErr != showStdOutErr:
             if showStdOutErr:
-                self.connect(self.dbs, SIGNAL('clientProcessStdout'), 
-                             self.__writeStdOut)
-                self.connect(self.dbs, SIGNAL('clientProcessStderr'), 
-                             self.__writeStdErr)
+                self.dbs.clientProcessStdout.connect(self.__writeStdOut)
+                self.dbs.clientProcessStderr.connect(self.__writeStdErr)
             else:
-                self.disconnect(self.dbs, SIGNAL('clientProcessStdout'), 
-                                self.__writeStdOut)
-                self.disconnect(self.dbs, SIGNAL('clientProcessStderr'), 
-                                self.__writeStdErr)
+                self.dbs.clientProcessStdout.disconnect(self.__writeStdOut)
+                self.dbs.clientProcessStderr.disconnect(self.__writeStdErr)
             self.__showStdOutErr = showStdOutErr
         
     def __showCompletions(self, completions, text):

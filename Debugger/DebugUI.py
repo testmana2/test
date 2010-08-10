@@ -40,6 +40,8 @@ class DebugUI(QObject):
     @signal exceptionInterrupt() emitted after the execution was interrupted by an
         exception and acknowledged by the user
     """
+    clientStack = pyqtSignal(list)
+    
     def __init__(self, ui, vm, debugServer, debugViewer, project):
         """
         Constructor
@@ -101,25 +103,21 @@ class DebugUI(QObject):
         self.debugViewer.setVariablesFilter(self.globalsVarFilter, self.localsVarFilter)
         
         # Connect the signals emitted by the debug-server
-        self.connect(debugServer, SIGNAL('clientGone'), self.__clientGone)
-        self.connect(debugServer, SIGNAL('clientLine'), self.__clientLine)
-        self.connect(debugServer, SIGNAL('clientExit(int)'), self.__clientExit)
-        self.connect(debugServer, SIGNAL('clientSyntaxError'), self.__clientSyntaxError)
-        self.connect(debugServer, SIGNAL('clientException'), self.__clientException)
-        self.connect(debugServer, SIGNAL('clientVariables'), self.__clientVariables)
-        self.connect(debugServer, SIGNAL('clientVariable'), self.__clientVariable)
-        self.connect(debugServer, SIGNAL('clientBreakConditionError'),
-            self.__clientBreakConditionError)
-        self.connect(debugServer, SIGNAL('clientWatchConditionError'),
-            self.__clientWatchConditionError)
-        self.connect(debugServer, SIGNAL('passiveDebugStarted'),
-            self.__passiveDebugStarted)
-        self.connect(debugServer, SIGNAL('clientThreadSet'), self.__clientThreadSet)
+        debugServer.clientGone.connect(self.__clientGone)
+        debugServer.clientLine.connect(self.__clientLine)
+        debugServer.clientExit.connect(self.__clientExit)
+        debugServer.clientSyntaxError.connect(self.__clientSyntaxError)
+        debugServer.clientException.connect(self.__clientException)
+        debugServer.clientVariables.connect(self.__clientVariables)
+        debugServer.clientVariable.connect(self.__clientVariable)
+        debugServer.clientBreakConditionError.connect(self.__clientBreakConditionError)
+        debugServer.clientWatchConditionError.connect(self.__clientWatchConditionError)
+        debugServer.passiveDebugStarted.connect(self.__passiveDebugStarted)
+        debugServer.clientThreadSet.connect(self.__clientThreadSet)
         
-        self.connect(debugServer, SIGNAL('clientRawInput'), debugViewer.handleRawInput)
-        self.connect(debugServer, SIGNAL('clientRawInputSent'),
-            debugViewer.restoreCurrentPage)
-        self.connect(debugServer, SIGNAL('clientThreadList'), debugViewer.showThreadList)
+        debugServer.clientRawInput.connect(debugViewer.handleRawInput)
+        debugServer.clientRawInputSent.connect(debugViewer.restoreCurrentPage)
+        debugServer.clientThreadList.connect(debugViewer.showThreadList)
         
         # Connect the signals emitted by the viewmanager
         self.connect(vm, SIGNAL('editorOpened'), self.__editorOpened)
@@ -1041,7 +1039,7 @@ class DebugUI(QObject):
                 stack = []
                 for fn, ln in stackTrace:
                     stack.append((fn, ln, ''))
-                self.emit(SIGNAL('clientStack'), stack)
+                self.clientStack.emit(stack)
                 self.__getClientVariables()
                 self.ui.setDebugProfile()
                 return
@@ -1057,11 +1055,11 @@ class DebugUI(QObject):
         else:
             self.__continue()
         
-    def __clientGone(self,unplanned):
+    def __clientGone(self, unplanned):
         """
         Private method to handle the disconnection of the debugger client.
         
-        @param unplanned 1 if the client died, 0 otherwise
+        @param unplanned True if the client died, False otherwise
         """
         self.__resetUI()
         if unplanned:

@@ -176,7 +176,7 @@ class DebuggerInterfaceNone(QObject):
         @param stmt the Python statement to execute (string). It
               should not have a trailing newline.
         """
-        self.debugServer.clientStatement(False)
+        self.debugServer.signalClientStatement(False)
         return
 
     def remoteStep(self):
@@ -343,7 +343,7 @@ class DebuggerInterfaceNone(QObject):
         """
         Public slot to get the banner info of the remote client.
         """
-        self.debugServer.clientBanner("No backend", "", "")
+        self.debugServer.signalClientBanner("No backend", "", "")
         return
         
     def remoteCapabilities(self):

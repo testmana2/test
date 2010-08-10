@@ -232,7 +232,7 @@ class DebugViewer(QWidget):
         self.currentStack = None
         self.framenr = 0
         
-        self.connect(self.debugServer, SIGNAL('clientStack'), self.handleClientStack)
+        self.debugServer.clientStack.connect(self.handleClientStack)
         
     def setDebugger(self, debugUI):
         """
@@ -241,7 +241,7 @@ class DebugViewer(QWidget):
         @param debugUI reference to the DebugUI objectTrees
         """
         self.debugUI = debugUI
-        self.connect(self.debugUI, SIGNAL('clientStack'), self.handleClientStack)
+        self.debugUI.clientStack.connect(self.handleClientStack)
         
     def handleResetUI(self):
         """

@@ -95,18 +95,12 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         # now connect the debug server signals if called from the eric5 IDE
         if self.dbs:
-            self.connect(self.dbs, SIGNAL('utPrepared'),
-                self.__UTPrepared)
-            self.connect(self.dbs, SIGNAL('utFinished'),
-                self.__setStoppedMode)
-            self.connect(self.dbs, SIGNAL('utStartTest'),
-                self.testStarted)
-            self.connect(self.dbs, SIGNAL('utStopTest'),
-                self.testFinished)
-            self.connect(self.dbs, SIGNAL('utTestFailed'),
-                self.testFailed)
-            self.connect(self.dbs, SIGNAL('utTestErrored'),
-                self.testErrored)
+            self.dbs.utPrepared.connect(self.__UTPrepared)
+            self.dbs.utFinished.connect(self.__setStoppedMode)
+            self.dbs.utStartTest.connect(self.testStarted)
+            self.dbs.utStopTest.connect(self.testFinished)
+            self.dbs.utTestFailed.connect(self.testFailed)
+            self.dbs.utTestErrored.connect(self.testErrored)
         
     def __setProgressColor(self, color):
         """

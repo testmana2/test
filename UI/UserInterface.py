@@ -415,18 +415,14 @@ class UserInterface(QMainWindow):
         self.connect(self.debuggerUI, SIGNAL('compileResources'),
                      self.projectBrowser.prBrowser.compileChangedResources)
         
-        self.connect(debugServer, SIGNAL('passiveDebugStarted'),
-                     self.debugViewer.exceptionLogger.debuggingStarted)
-        self.connect(debugServer, SIGNAL('passiveDebugStarted'),
-                     self.debugViewer.handleDebuggingStarted)
-        self.connect(debugServer, SIGNAL('clientException'),
-                     self.debugViewer.exceptionLogger.addException)
-        self.connect(debugServer, SIGNAL('clientLine'),
-                     self.debugViewer.breakpointViewer.highlightBreakpoint)
-        self.connect(debugServer, SIGNAL('clientProcessStdout'),
-                     self.appendToStdout)
-        self.connect(debugServer, SIGNAL('clientProcessStderr'),
-                     self.appendToStderr)
+        debugServer.passiveDebugStarted.connect(
+            self.debugViewer.exceptionLogger.debuggingStarted)
+        debugServer.passiveDebugStarted.connect(self.debugViewer.handleDebuggingStarted)
+        debugServer.clientException.connect(self.debugViewer.exceptionLogger.addException)
+        debugServer.clientLine.connect(
+            self.debugViewer.breakpointViewer.highlightBreakpoint)
+        debugServer.clientProcessStdout.connect(self.appendToStdout)
+        debugServer.clientProcessStderr.connect(self.appendToStderr)
         
         self.connect(self.stdout, SIGNAL('appendStdout'),
                      self.appendToStdout)

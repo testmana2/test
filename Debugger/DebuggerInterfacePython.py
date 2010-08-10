@@ -754,7 +754,7 @@ class DebuggerInterfacePython(QObject):
             # string read from the socket...
             boc = line.find('>')
             if boc > 0 and eoc > boc:
-                self.debugServer.clientOutput(line[:boc])
+                self.debugServer.signalClientOutput(line[:boc])
                 line = line[boc:]
                 eoc = line.find('<') + 1
                 boc = line.find('>')
@@ -771,18 +771,18 @@ class DebuggerInterfacePython(QObject):
                         self.__autoContinue = False
                         QTimer.singleShot(0, self.remoteContinue)
                     else:
-                        self.debugServer.clientLine(cf[0], int(cf[1]), 
+                        self.debugServer.signalClientLine(cf[0], int(cf[1]), 
                                                     resp == ResponseStack)
-                        self.debugServer.clientStack(stack)
+                        self.debugServer.signalClientStack(stack)
                     continue
                 
                 if resp == ResponseThreadList:
                     currentId, threadList = eval(line[eoc:-1])
-                    self.debugServer.clientThreadList(currentId, threadList)
+                    self.debugServer.signalClientThreadList(currentId, threadList)
                     continue
                 
                 if resp == ResponseThreadSet:
-                    self.debugServer.clientThreadSet()
+                    self.debugServer.signalClientThreadSet()
                     continue
                 
                 if resp == ResponseVariables:
@@ -792,7 +792,7 @@ class DebuggerInterfacePython(QObject):
                         variables = vlist[1:]
                     except IndexError:
                         variables = []
-                    self.debugServer.clientVariables(scope, variables)
+                    self.debugServer.signalClientVariables(scope, variables)
                     continue
                 
                 if resp == ResponseVariable:
@@ -802,15 +802,15 @@ class DebuggerInterfacePython(QObject):
                         variables = vlist[1:]
                     except IndexError:
                         variables = []
-                    self.debugServer.clientVariable(scope, variables)
+                    self.debugServer.signalClientVariable(scope, variables)
                     continue
                 
                 if resp == ResponseOK:
-                    self.debugServer.clientStatement(False)
+                    self.debugServer.signalClientStatement(False)
                     continue
                 
                 if resp == ResponseContinue:
-                    self.debugServer.clientStatement(True)
+                    self.debugServer.signalClientStatement(True)
                     continue
                 
                 if resp == ResponseException:
@@ -825,7 +825,7 @@ class DebuggerInterfacePython(QObject):
                         exctype = None
                         excmessage = ''
                         stack = []
-                    self.debugServer.clientException(exctype, excmessage, stack)
+                    self.debugServer.signalClientException(exctype, excmessage, stack)
                     continue
                 
                 if resp == ResponseSyntax:
@@ -842,57 +842,57 @@ class DebuggerInterfacePython(QObject):
                         cn = 0
                     if cn is None:
                         cn = 0
-                    self.debugServer.clientSyntaxError(message, fn, ln, cn)
+                    self.debugServer.signalClientSyntaxError(message, fn, ln, cn)
                     continue
                 
                 if resp == ResponseExit:
-                    self.debugServer.clientExit(line[eoc:-1])
+                    self.debugServer.signalClientExit(line[eoc:-1])
                     continue
                 
                 if resp == ResponseClearBreak:
                     fn, lineno = line[eoc:-1].split(',')
                     lineno = int(lineno)
                     fn = self.translate(fn, True)
-                    self.debugServer.clientClearBreak(fn, lineno)
+                    self.debugServer.signalClientClearBreak(fn, lineno)
                     continue
                 
                 if resp == ResponseBPConditionError:
                     fn, lineno = line[eoc:-1].split(',')
                     lineno = int(lineno)
                     fn = self.translate(fn, True)
-                    self.debugServer.clientBreakConditionError(fn, lineno)
+                    self.debugServer.signalClientBreakConditionError(fn, lineno)
                     continue
                 
                 if resp == ResponseClearWatch:
                     cond = line[eoc:-1]
-                    self.debugServer.clientClearWatch(cond)
+                    self.debugServer.signalClientClearWatch(cond)
                     continue
                 
                 if resp == ResponseWPConditionError:
                     cond = line[eoc:-1]
-                    self.debugServer.clientWatchConditionError(cond)
+                    self.debugServer.signalClientWatchConditionError(cond)
                     continue
                 
                 if resp == ResponseRaw:
                     prompt, echo = eval(line[eoc:-1])
-                    self.debugServer.clientRawInput(prompt, echo)
+                    self.debugServer.signalClientRawInput(prompt, echo)
                     continue
                 
                 if resp == ResponseBanner:
                     version, platform, dbgclient = eval(line[eoc:-1])
-                    self.debugServer.clientBanner(version, platform, dbgclient)
+                    self.debugServer.signalClientBanner(version, platform, dbgclient)
                     continue
                 
                 if resp == ResponseCapabilities:
                     cap, clType = eval(line[eoc:-1])
                     self.clientCapabilities = cap
-                    self.debugServer.clientCapabilities(cap, clType)
+                    self.debugServer.signalClientCapabilities(cap, clType)
                     continue
                 
                 if resp == ResponseCompletion:
                     clstring, text = line[eoc:-1].split('||')
                     cl = eval(clstring)
-                    self.debugServer.clientCompletionList(cl, text)
+                    self.debugServer.signalClientCompletionList(cl, text)
                     continue
                 
                 if resp == PassiveStartup:
@@ -934,7 +934,7 @@ class DebuggerInterfacePython(QObject):
                     self.__askForkTo()
                     continue
                 
-            self.debugServer.clientOutput(line)
+            self.debugServer.signalClientOutput(line)
 
     def __sendCommand(self, cmd):
         """
