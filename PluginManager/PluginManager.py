@@ -40,11 +40,11 @@ class PluginManager(QObject):
         was deactivated
     """
     shutdown = pyqtSignal()
-    pluginAboutToBeActivated = pyqtSignal(str, QObject)
-    pluginActivated = pyqtSignal(str, QObject)
+    pluginAboutToBeActivated = pyqtSignal(str, object)
+    pluginActivated = pyqtSignal(str, object)
     allPlugginsActivated = pyqtSignal()
-    pluginAboutToBeDeactivated = pyqtSignal(str, QObject)
-    pluginDeactivated = pyqtSignal(str, QObject)
+    pluginAboutToBeDeactivated = pyqtSignal(str, object)
+    pluginDeactivated = pyqtSignal(str, object)
     
     def __init__(self, parent = None, doLoadPlugins = True, develPlugin = None):
         """
@@ -708,7 +708,7 @@ class PluginManager(QObject):
         
         return details
     
-    def shutdown(self):
+    def doShutdown(self):
         """
         Public method called to perform actions upon shutdown of the IDE.
         """

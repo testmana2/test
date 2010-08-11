@@ -7,7 +7,7 @@
 Module implementing a dialog to enter the commit message.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt
 from PyQt4.QtGui import QWidget, QDialogButtonBox
 
 from .Ui_HgCommitDialog import Ui_HgCommitDialog
@@ -21,6 +21,9 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
     @signal accepted() emitted, if the dialog was accepted
     @signal rejected() emitted, if the dialog was rejected
     """
+    accepted = pyqtSignal()
+    rejected = pyqtSignal()
+    
     def __init__(self, vcs, parent = None):
         """
         Constructor

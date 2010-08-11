@@ -9,6 +9,7 @@ Module implementing the PySvn version control plugin.
 
 import os
 
+from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QApplication
 
 from E5Gui.E5Application import e5App
@@ -127,7 +128,7 @@ def prepareUninstall():
     if not e5App().getObject("PluginManager").isPluginLoaded("PluginVcsSubversion"):
         Preferences.Prefs.settings.remove("Subversion")
     
-class VcsPySvnPlugin(object):
+class VcsPySvnPlugin(QObject):
     """
     Class implementing the PySvn version control plugin.
     """

@@ -9,7 +9,7 @@ Module implementing the Tabview view manager plugin.
 
 import os
 
-from PyQt4.QtCore import QT_TRANSLATE_NOOP
+from PyQt4.QtCore import QT_TRANSLATE_NOOP, QObject
 from PyQt4.QtGui import QPixmap
 
 # Start-Of-Header
@@ -40,7 +40,7 @@ def previewPix():
                          "ViewManagerPlugins", "Listspace", "preview.png")
     return QPixmap(fname)
     
-class VmListspacePlugin(object):
+class VmListspacePlugin(QObject):
     """
     Class implementing the Listspace view manager plugin.
     """

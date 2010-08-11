@@ -5401,7 +5401,7 @@ class UserInterface(QMainWindow):
             return False
         self.debuggerUI.shutdown()
         
-        self.pluginManager.shutdown()
+        self.pluginManager.doShutdown()
         
         if self.SAServer is not None:
             self.SAServer.shutdown()

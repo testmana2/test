@@ -9,7 +9,7 @@ Module implementing the mdi area view manager plugin.
 
 import os
 
-from PyQt4.QtCore import QT_TRANSLATE_NOOP
+from PyQt4.QtCore import QT_TRANSLATE_NOOP, QObject
 from PyQt4.QtGui import QPixmap
 
 # Start-Of-Header
@@ -40,7 +40,7 @@ def previewPix():
                          "ViewManagerPlugins", "MdiArea", "preview.png")
     return QPixmap(fname)
     
-class VmMdiAreaPlugin(object):
+class VmMdiAreaPlugin(QObject):
     """
     Class implementing the Workspace view manager plugin.
     """

@@ -23,6 +23,9 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
     @signal accepted() emitted, if the dialog was accepted
     @signal rejected() emitted, if the dialog was rejected
     """
+    accepted = pyqtSignal()
+    rejected = pyqtSignal()
+    
     def __init__(self, parent = None):
         """
         Constructor

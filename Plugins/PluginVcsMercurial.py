@@ -9,6 +9,7 @@ Module implementing the Mercurial version control plugin.
 
 import os
 
+from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QApplication
 
 from E5Gui.E5Application import e5App
@@ -129,7 +130,7 @@ def prepareUninstall():
     if not e5App().getObject("PluginManager").isPluginLoaded("PluginVcsMercurial"):
         Preferences.Prefs.settings.remove("Mercurial")
     
-class VcsMercurialPlugin(object):
+class VcsMercurialPlugin(QObject):
     """
     Class implementing the Mercurial version control plugin.
     """
