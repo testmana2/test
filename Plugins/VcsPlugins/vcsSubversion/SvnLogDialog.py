@@ -47,8 +47,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         self.process.readyReadStandardOutput.connect(self.__readStdout)
         self.process.readyReadStandardError.connect(self.__readStderr)
         
-        self.connect(self.contents, SIGNAL('anchorClicked(const QUrl&)'),
-            self.__sourceChanged)
+        self.contents.anchorClicked.connect(self.__sourceChanged)
         
         self.rx_sep = QRegExp('\\-+\\s*')
         self.rx_sep2 = QRegExp('=+\\s*')

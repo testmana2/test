@@ -27,6 +27,8 @@ class IconEditorWindow(QMainWindow):
     
     @signal editorClosed() emitted after the window was requested to close down
     """
+    editorClosed = pyqtSignal()
+    
     windows = []
     
     def __init__(self, fileName = "", parent = None, fromEric = False, 
@@ -36,7 +38,8 @@ class IconEditorWindow(QMainWindow):
         
         @param fileName name of a file to load on startup (string)
         @param parent parent widget of this window (QWidget)
-        @keyparam fromEric flag indicating whether it was called from within eric5 (boolean)
+        @keyparam fromEric flag indicating whether it was called from within 
+            eric5 (boolean)
         @keyparam initShortcutsOnly flag indicating to just initialize the keyboard
             shortcuts (boolean)
         """
@@ -80,18 +83,12 @@ class IconEditorWindow(QMainWindow):
             state = Preferences.getIconEditor("IconEditorState")
             self.restoreState(state)
             
-            self.connect(self.__editor, SIGNAL("imageChanged(bool)"), 
-                         self.__modificationChanged)
-            self.connect(self.__editor, SIGNAL("positionChanged(int, int)"), 
-                         self.__updatePosition)
-            self.connect(self.__editor, SIGNAL("sizeChanged(int, int)"), 
-                         self.__updateSize)
-            self.connect(self.__editor, SIGNAL("previewChanged(const QPixmap&)"), 
-                         self.__palette.previewChanged)
-            self.connect(self.__editor, SIGNAL("colorChanged(const QColor&)"), 
-                         self.__palette.colorChanged)
-            self.connect(self.__palette, SIGNAL("colorSelected(QColor)"), 
-                         self.__editor.setPenColor)
+            self.__editor.imageChanged.connect(self.__modificationChanged)
+            self.__editor.positionChanged.connect(self.__updatePosition)
+            self.__editor.sizeChanged.connect(self.__updateSize)
+            self.__editor.previewChanged.connect(self.__palette.previewChanged)
+            self.__editor.colorChanged.connect(self.__palette.colorChanged)
+            self.__palette.colorSelected.connect(self.__editor.setPenColor)
             
             self.__setCurrentFile("")
             if fileName:
@@ -407,26 +404,22 @@ class IconEditorWindow(QMainWindow):
         self.__actions.append(self.grayscaleAct)
         
         self.redoAct.setEnabled(False)
-        self.connect(self.__editor, SIGNAL("canRedoChanged(bool)"), 
-                     self.redoAct, SLOT("setEnabled(bool)"))
+        self.__editor.canRedoChanged.connect(self.redoAct.setEnabled)
         
         self.undoAct.setEnabled(False)
-        self.connect(self.__editor, SIGNAL("canUndoChanged(bool)"), 
-                     self.undoAct, SLOT("setEnabled(bool)"))
+        self.__editor.canUndoChanged.connect(self.undoAct.setEnabled)
         
         self.cutAct.setEnabled(False)
         self.copyAct.setEnabled(False)
-        self.connect(self.__editor, SIGNAL("selectionAvailable(bool)"), 
-                     self.cutAct, SLOT("setEnabled(bool)"))
-        self.connect(self.__editor, SIGNAL("selectionAvailable(bool)"), 
-                     self.copyAct, SLOT("setEnabled(bool)"))
+        self.__editor.selectionAvailable.connect(self.cutAct.setEnabled)
+        self.__editor.selectionAvailable.connect(self.copyAct.setEnabled)
         
         self.pasteAct.setEnabled(self.__editor.canPaste())
         self.pasteNewAct.setEnabled(self.__editor.canPaste())
-        self.connect(self.__editor, SIGNAL("clipboardImageAvailable(bool)"), 
-                     self.pasteAct, SLOT("setEnabled(bool)"))
-        self.connect(self.__editor, SIGNAL("clipboardImageAvailable(bool)"), 
-                     self.pasteNewAct, SLOT("setEnabled(bool)"))
+        self.__editor.clipboardImageAvailable.connect(
+            self.pasteAct.setEnabled)
+        self.__editor.clipboardImageAvailable.connect(
+            self.pasteNewAct.setEnabled)
     
     def __initViewActions(self):
         """
@@ -497,8 +490,7 @@ class IconEditorWindow(QMainWindow):
                 """<b>Show Grid</b>"""
                 """<p>Toggle the display of the grid.</p>"""
                 ))
-        self.connect(self.showGridAct, SIGNAL('triggered(bool)'), 
-                     self.__editor.setGridEnabled)
+        self.showGridAct.triggered[bool].connect(self.__editor.setGridEnabled)
         self.__actions.append(self.showGridAct)
         self.showGridAct.setCheckable(True)
         self.showGridAct.setChecked(self.__editor.isGridEnabled())
@@ -508,7 +500,7 @@ class IconEditorWindow(QMainWindow):
         Private method to create the View actions.
         """
         self.esm = QSignalMapper(self)
-        self.connect(self.esm, SIGNAL('mapped(int)'), self.__editor.setTool)
+        self.esm.mapped[int].connect(self.__editor.setTool)
         
         self.drawingActGrp = createActionGroup(self)
         self.drawingActGrp.setExclusive(True)
@@ -943,7 +935,7 @@ class IconEditorWindow(QMainWindow):
                 Preferences.syncPreferences()
             
             evt.accept()
-            self.emit(SIGNAL("editorClosed"))
+            self.editorClosed.emit()
         else:
             evt.ignore()
     

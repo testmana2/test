@@ -16,6 +16,8 @@ class IconEditorPalette(QWidget):
     
     @signal colorSelected(QColor) emitted after a new color has been selected
     """
+    colorSelected = pyqtSignal(QColor)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -74,8 +76,7 @@ class IconEditorPalette(QWidget):
             """<p>Select the value for the alpha channel of the current color.</p>"""
         ))
         self.__layout.addWidget(self.__colorAlpha)
-        self.connect(self.__colorAlpha, SIGNAL("valueChanged(int)"), 
-                     self.__alphaChanged)
+        self.__colorAlpha.valueChanged[int].connect(self.__alphaChanged)
         
         spacer = QSpacerItem(10, 10, QSizePolicy.Minimum, QSizePolicy.Expanding)
         self.__layout.addItem(spacer)
@@ -111,7 +112,7 @@ class IconEditorPalette(QWidget):
         col.setAlpha(self.__currentAlpha)
         
         if col.isValid():
-            self.emit(SIGNAL("colorSelected(QColor)"), col)
+            self.colorSelected.emit(col)
     
     def __alphaChanged(self, val):
         """
@@ -122,4 +123,4 @@ class IconEditorPalette(QWidget):
         if val != self.__currentAlpha:
            col = QColor(self.__currentColor) 
            col.setAlpha(val)
-           self.emit(SIGNAL("colorSelected(QColor)"), col)
+           self.colorSelected.emit(col)

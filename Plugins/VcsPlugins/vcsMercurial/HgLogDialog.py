@@ -9,7 +9,7 @@ Module implementing a dialog to show the output of the hg log command process.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QProcess, SIGNAL, QTimer, QUrl, QByteArray
+from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QUrl, QByteArray
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QApplication, QMessageBox, \
     QLineEdit, QTextCursor
 
@@ -57,8 +57,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.process.readyReadStandardOutput.connect(self.__readStdout)
         self.process.readyReadStandardError.connect(self.__readStderr)
         
-        self.connect(self.contents, SIGNAL('anchorClicked(const QUrl&)'),
-            self.__sourceChanged)
+        self.contents.anchorClicked.connect(self.__sourceChanged)
         
         self.revisions = []  # stack of remembered revisions
         self.revString = self.trUtf8('Revision')

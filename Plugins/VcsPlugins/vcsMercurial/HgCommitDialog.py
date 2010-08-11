@@ -7,7 +7,7 @@
 Module implementing a dialog to enter the commit message.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt, SIGNAL
+from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QWidget, QDialogButtonBox
 
 from .Ui_HgCommitDialog import Ui_HgCommitDialog
@@ -75,14 +75,14 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
         Private slot called by the buttonBox accepted signal.
         """
         self.close()
-        self.emit(SIGNAL("accepted()"))
+        self.accepted.emit()
     
     def on_buttonBox_rejected(self):
         """
         Private slot called by the buttonBox rejected signal.
         """
         self.close()
-        self.emit(SIGNAL("rejected()"))
+        self.rejected.emit()
     
     @pyqtSlot(str)
     def on_recentComboBox_activated(self, txt):

@@ -39,6 +39,13 @@ class PluginManager(QObject):
     @signal pluginDeactivated(modulName, pluginObject) emitted just after a plugin
         was deactivated
     """
+    shutdown = pyqtSignal()
+    pluginAboutToBeActivated = pyqtSignal(str, QObject)
+    pluginActivated = pyqtSignal(str, QObject)
+    allPlugginsActivated = pyqtSignal()
+    pluginAboutToBeDeactivated = pyqtSignal(str, QObject)
+    pluginDeactivated = pyqtSignal(str, QObject)
+    
     def __init__(self, parent = None, doLoadPlugins = True, develPlugin = None):
         """
         Constructor
@@ -430,7 +437,7 @@ class PluginManager(QObject):
         for name in names:
             if savedInactiveList is None or name not in savedInactiveList:
                 self.activatePlugin(name)
-        self.emit(SIGNAL("allPlugginsActivated()"))
+        self.allPlugginsActivated.emit()
     
     def activatePlugin(self, name, onDemand = False):
         """
@@ -462,7 +469,7 @@ class PluginManager(QObject):
                 pluginObject = self.__inactivePlugins[name]
             else:
                 pluginObject = pluginClass(self.__ui)
-            self.emit(SIGNAL("pluginAboutToBeActivated"), name, pluginObject)
+            self.pluginAboutToBeActivated.emit(name, pluginObject)
             try:
                 obj, ok = pluginObject.activate()
             except TypeError:
@@ -476,7 +483,7 @@ class PluginManager(QObject):
             if not ok:
                 return None
             
-            self.emit(SIGNAL("pluginActivated"), name, pluginObject)
+            self.pluginActivated.emit(name, pluginObject)
             pluginObject.eric5PluginModule = module
             pluginObject.eric5PluginName = className
             pluginObject.eric5PluginVersion = version
@@ -558,9 +565,9 @@ class PluginManager(QObject):
             elif not onDemand and name in self.__activePlugins:
                 pluginObject = self.__activePlugins[name]
             if pluginObject:
-                self.emit(SIGNAL("pluginAboutToBeDeactivated"), name, pluginObject)
+                self.pluginAboutToBeDeactivated.emit(name, pluginObject)
                 pluginObject.deactivate()
-                self.emit(SIGNAL("pluginDeactivated"), name, pluginObject)
+                self.pluginDeactivated.emit(name, pluginObject)
                 
                 if onDemand:
                     self.__onDemandActiveModules.pop(name)
@@ -710,7 +717,7 @@ class PluginManager(QObject):
             names.append(name)
         Preferences.Prefs.settings.setValue(self.__inactivePluginsKey, names)
         
-        self.emit(SIGNAL("shutdown()"))
+        self.shutdown.emit()
 
     def getPluginDisplayStrings(self, type_):
         """

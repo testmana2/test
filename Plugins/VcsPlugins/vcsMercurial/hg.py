@@ -11,7 +11,7 @@ import os
 import shutil
 import urllib.request, urllib.parse, urllib.error
 
-from PyQt4.QtCore import QProcess, SIGNAL, QFileInfo
+from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo
 from PyQt4.QtGui import QMessageBox, QApplication, QDialog, QInputDialog, QFileDialog
 
 from E5Gui.E5Application import e5App
@@ -53,6 +53,8 @@ class Hg(VersionControl):
     
     @signal committed() emitted after the commit action has completed
     """
+    committed = pyqtSignal()
+    
     def __init__(self, plugin, parent = None, name = None):
         """
         Constructor
@@ -317,8 +319,7 @@ class Hg(VersionControl):
             # call CommitDialog and get message from there
             if self.__commitDialog is None:
                 self.__commitDialog = HgCommitDialog(self, self.__ui)
-                self.connect(self.__commitDialog, SIGNAL("accepted()"), 
-                             self.__vcsCommit_Step2)
+                self.__commitDialog.accepted.connect(self.__vcsCommit_Step2)
             self.__commitDialog.show()
             self.__commitDialog.raise_()
             self.__commitDialog.activateWindow()
@@ -342,8 +343,7 @@ class Hg(VersionControl):
         
         if self.__commitDialog is not None:
             msg = self.__commitDialog.logMessage()
-            self.disconnect(self.__commitDialog, SIGNAL("accepted()"), 
-                            self.__vcsCommit_Step2)
+            self.__commitDialog.accepted.disconnect(self.__vcsCommit_Step2)
             self.__commitDialog = None
         
         if not msg:
@@ -383,7 +383,7 @@ class Hg(VersionControl):
             res = dia.startProcess(args, dname)
             if res:
                 dia.exec_()
-        self.emit(SIGNAL("committed()"))
+        self.committed.emit()
         if self.__forgotNames:
             model = e5App().getObject("Project").getModel()
             for name in self.__forgotNames:

@@ -9,7 +9,7 @@ Module implementing a dialog to show the output of the hg status command process
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, SIGNAL, Qt, QProcess, QTimer
+from PyQt4.QtCore import pyqtSlot, Qt, QProcess, QTimer
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
     QMessageBox, QLineEdit
 
@@ -46,7 +46,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         self.process = None
         self.vcs = vcs
-        self.connect(self.vcs, SIGNAL("committed()"), self.__committed)
+        self.vcs.committed.connect(self.__committed)
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(self.__pathColumn, Qt.AscendingOrder)

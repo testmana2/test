@@ -105,14 +105,14 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         Private slot called by the buttonBox accepted signal.
         """
         self.close()
-        self.emit(SIGNAL("accepted()"))
+        self.accepted.emit()
         
     def on_buttonBox_rejected(self):
         """
         Private slot called by the buttonBox rejected signal.
         """
         self.close()
-        self.emit(SIGNAL("rejected()"))
+        self.rejected.emit()
     
     @pyqtSlot(str)
     def on_recentComboBox_activated(self, txt):

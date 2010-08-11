@@ -69,6 +69,16 @@ class IconEditorGrid(QWidget):
     @signal selectionAvailable(bool) emitted to signal a change of the selection
     @signal sizeChanged(int, int) emitted after the size has been changed
     """
+    canRedoChanged = pyqtSignal(bool)
+    canUndoChanged = pyqtSignal(bool)
+    clipboardImageAvailable = pyqtSignal(bool)
+    colorChanged = pyqtSignal(QColor)
+    imageChanged = pyqtSignal(bool)
+    positionChanged = pyqtSignal(int, int)
+    previewChanged = pyqtSignal(QPixmap)
+    selectionAvailable = pyqtSignal(bool)
+    sizeChanged = pyqtSignal(int, int)
+    
     Pencil = 1
     Rubber = 2
     Line = 3
@@ -126,16 +136,12 @@ class IconEditorGrid(QWidget):
         
         self.setMouseTracking(True)
         
-        self.connect(self.__undoStack, SIGNAL("canRedoChanged(bool)"), 
-                     self, SIGNAL("canRedoChanged(bool)"))
-        self.connect(self.__undoStack, SIGNAL("canUndoChanged(bool)"), 
-                     self, SIGNAL("canUndoChanged(bool)"))
-        self.connect(self.__undoStack, SIGNAL("cleanChanged(bool)"), 
-                     self.__cleanChanged)
+        self.__undoStack.canRedoChanged.connect(self.canRedoChanged)
+        self.__undoStack.canUndoChanged.connect(self.canUndoChanged)
+        self.__undoStack.cleanChanged.connect(elf.__cleanChanged)
         
-        self.connect(self, SIGNAL("imageChanged(bool)"), self.__updatePreviewPixmap)
-        self.connect(QApplication.clipboard(), SIGNAL("dataChanged()"), 
-                     self.__checkClipboard)
+        self.imageChanged.connect(self.__updatePreviewPixmap)
+        QApplication.clipboard().dataChanged.connect(self.__checkClipboard)
         
         self.__checkClipboard()
     
@@ -204,7 +210,7 @@ class IconEditorGrid(QWidget):
         @param setCleanState flag indicating to set the undo stack to clean (boolean)
         """
         self.__dirty = dirty
-        self.emit(SIGNAL("imageChanged(bool)"), dirty)
+        self.imageChanged.emit(dirty)
         
         if not dirty and setCleanState:
             self.__undoStack.setClean()
@@ -227,7 +233,7 @@ class IconEditorGrid(QWidget):
         @param newColor reference to the new color (QColor)
         """
         self.__curColor = QColor(newColor)
-        self.emit(SIGNAL("colorChanged(const QColor&)"), QColor(newColor))
+        self.colorChanged.emit(QColor(newColor))
     
     def penColor(self):
         """
@@ -301,7 +307,7 @@ class IconEditorGrid(QWidget):
             if clearUndo:
                 self.__undoStack.clear()
             
-            self.emit(SIGNAL("sizeChanged(int, int)"), *self.iconSize())
+            self.sizeChanged.emit(*self.iconSize())
     
     def iconImage(self):
         """
@@ -463,8 +469,7 @@ class IconEditorGrid(QWidget):
         
         @param evt reference to the mouse event object (QMouseEvent)
         """
-        self.emit(SIGNAL("positionChanged(int, int)"), 
-                  *self.__imageCoordinates(evt.pos()))
+        self.positionChanged.emit(*self.__imageCoordinates(evt.pos()))
         
         if self.__isPasting and not (evt.buttons() & Qt.LeftButton):
             self.__drawPasteRect(evt.pos())
@@ -608,7 +613,7 @@ class IconEditorGrid(QWidget):
             if self.__selecting:
                 self.__selRect = QRect(l, t, r - l + 1, b - t + 1)
                 self.__selectionAvailable = True
-                self.emit(SIGNAL("selectionAvailable(bool)"), True)
+                self.selectionAvailable.emit(True)
         
         elif self.__curTool in [self.Circle, self.FilledCircle, 
                                 self.CircleSelection]:
@@ -619,7 +624,7 @@ class IconEditorGrid(QWidget):
             if self.__selecting:
                 self.__selRect = QRect(start.x() - r, start.y() - r, 2 * r + 1, 2 * r + 1)
                 self.__selectionAvailable = True
-                self.emit(SIGNAL("selectionAvailable(bool)"), True)
+                self.selectionAvailable.emit(True)
         
         elif self.__curTool in [self.Ellipse, self.FilledEllipse]:
             r1 = abs(start.x() - end.x())
@@ -706,7 +711,7 @@ class IconEditorGrid(QWidget):
         if self.__selecting:
             self.__selRect = QRect()
             self.__selectionAvailable = False
-            self.emit(SIGNAL("selectionAvailable(bool)"), False)
+            self.selectionAvailable.emit(False)
     
     def __isMarked(self, i, j):
         """
@@ -723,7 +728,7 @@ class IconEditorGrid(QWidget):
         Private slot to generate and signal an updated preview pixmap.
         """
         p = QPixmap.fromImage(self.__image)
-        self.emit(SIGNAL("previewChanged(const QPixmap&)"), p)
+        self.previewChanged.emit(p)
     
     def previewPixmap(self):
         """
@@ -741,7 +746,7 @@ class IconEditorGrid(QWidget):
         """
         ok = self.__clipboardImage()[1]
         self.__clipboardImageAvailable = ok
-        self.emit(SIGNAL("clipboardImageAvailable(bool)"), ok)
+        self.clipboardImageAvailable.emit(ok)
     
     def canPaste(self):
         """
@@ -935,7 +940,7 @@ class IconEditorGrid(QWidget):
         self.__markImage.fill(self.MarkColor.rgba())
         self.__selRect = self.__image.rect()
         self.__selectionAvailable = True
-        self.emit(SIGNAL("selectionAvailable(bool)"), True)
+        self.selectionAvailable.emit(True)
         
         self.update()
     
@@ -1039,12 +1044,9 @@ class IconEditorGrid(QWidget):
         """
         Public slot to perform some shutdown actions.
         """
-        self.disconnect(self.__undoStack, SIGNAL("canRedoChanged(bool)"), 
-                        self, SIGNAL("canRedoChanged(bool)"))
-        self.disconnect(self.__undoStack, SIGNAL("canUndoChanged(bool)"), 
-                        self, SIGNAL("canUndoChanged(bool)"))
-        self.disconnect(self.__undoStack, SIGNAL("cleanChanged(bool)"), 
-                        self.__cleanChanged)
+        self.__undoStack.canRedoChanged.disconnect(self.canRedoChanged)
+        self.__undoStack.canUndoChanged.disconnect(self.canUndoChanged)
+        self.__undoStack.cleanChanged.disconnect(self.__cleanChanged)
     
     def isSelectionAvailable(self):
         """

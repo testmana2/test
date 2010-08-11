@@ -9,7 +9,6 @@ Module implementing the VCS project browser helper for Mercurial.
 
 import os
 
-from PyQt4.QtCore import SIGNAL
 from PyQt4.QtGui import QMenu, QDialog
 
 from Project.ProjectBrowserModel import ProjectBrowserFileItem
@@ -541,10 +540,10 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         movefiles = self.browser.project.getFiles(fn)
         if self.vcs.vcsMove(fn, self.project):
             if isFile:
-                self.browser.emit(SIGNAL('closeSourceWindow'), fn)
+                self.browser.closeSourceWindow.emit(fn)
             else:
                 for mf in movefiles:
-                    self.browser.emit(SIGNAL('closeSourceWindow'), mf)
+                    self.browser.closeSourceWindow.emit(mf)
     
     def __HgExtendedDiff(self):
         """

@@ -48,8 +48,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         self.contents.setHtml(\
             self.trUtf8('<b>Processing your request, please wait...</b>'))
         
-        self.connect(self.contents, SIGNAL('anchorClicked(const QUrl&)'),
-            self.__sourceChanged)
+        self.contents.anchorClicked.connect(self.__sourceChanged)
         
         self.flags = {
             'A' : self.trUtf8('Added'),

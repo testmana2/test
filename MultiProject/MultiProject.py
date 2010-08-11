@@ -36,7 +36,7 @@ class MultiProject(QObject):
     """
     Class implementing the project management functionality.
     
-    @signal dirty(int) emitted when the dirty state changes
+    @signal dirty(bool) emitted when the dirty state changes
     @signal newMultiProject() emitted after a new multi project was generated
     @signal multiProjectOpened() emitted after a multi project file was read
     @signal multiProjectClosed() emitted after a multi project was closed
@@ -52,6 +52,15 @@ class MultiProject(QObject):
             has been removed
     @signal projectOpened(filename) emitted after the project has been opened
     """
+    dirty = pyqtSignal(bool)
+    newMultiProject = pyqtSignal()
+    multiProjectOpened = pyqtSignal()
+    multiProjectClosed = pyqtSignal()
+    multiProjectPropertiesChanged = pyqtSignal()
+    showMenu = pyqtSignal(str, QMenu)
+    projectDataChanged = pyqtSignal(dict)
+    projectAdded = pyqtSignal(dict)
+    projectRemoved = pyqtSignal(dict)
     projectOpened = pyqtSignal(str)
     
     def __init__(self, project, parent = None, filename = None):
@@ -132,7 +141,7 @@ class MultiProject(QObject):
         """
         self.dirty = b
         self.saveAct.setEnabled(b)
-        self.emit(SIGNAL("dirty"), bool(b))
+        self.dirty.emit(bool(b))
     
     def isDirty(self):
         """
@@ -397,7 +406,7 @@ class MultiProject(QObject):
                 for project in self.projects:
                     if project['master']:
                         project['master'] = False
-                        self.emit(SIGNAL("projectDataChanged"), project)
+                        self.projectDataChanged.emit(project)
                         self.setDirty(True)
                         break
             
@@ -409,7 +418,7 @@ class MultiProject(QObject):
                 'description' : description, 
             }
             self.projects.append(project)
-            self.emit(SIGNAL("projectAdded"), project)
+            self.projectAdded.emit(project)
             self.setDirty(True)
     
     def changeProjectProperties(self, pro):
@@ -424,7 +433,7 @@ class MultiProject(QObject):
                 if project['master']:
                     if project['file'] != pro['file']:
                         project['master'] = False
-                        self.emit(SIGNAL("projectDataChanged"), project)
+                        self.projectDataChanged.emit(project)
                         self.setDirty(True)
                     break
         
@@ -435,7 +444,7 @@ class MultiProject(QObject):
                 project['name'] = pro['name']
                 project['master'] = pro['master']
                 project['description'] = pro['description']
-                self.emit(SIGNAL("projectDataChanged"), project)
+                self.projectDataChanged.emit(project)
                 self.setDirty(True)
     
     def getProjects(self):
@@ -468,13 +477,13 @@ class MultiProject(QObject):
         for project in self.projects:
             if project['file'] == fn:
                 self.projects.remove(project)
-                self.emit(SIGNAL("projectRemoved"), project)
+                self.projectRemoved.emit(project)
                 self.setDirty(True)
                 break
     
-    def newMultiProject(self):
+    def __newMultiProject(self):
         """
-        Public slot to build a new multi project.
+        Private slot to build a new multi project.
         
         This method displays the new multi project dialog and initializes
         the multi project object with the data entered.
@@ -492,7 +501,7 @@ class MultiProject(QObject):
             self.saveasAct.setEnabled(True)
             self.addProjectAct.setEnabled(True)
             self.propsAct.setEnabled(True)
-            self.emit(SIGNAL('newMultiProject'))
+            self.newMultiProject.emit()
     
     def __showProperties(self):
         """
@@ -502,7 +511,7 @@ class MultiProject(QObject):
         if dlg.exec_() == QDialog.Accepted:
             dlg.storeData()
             self.setDirty(True)
-            self.emit(SIGNAL('multiProjectPropertiesChanged'))
+            self.multiProjectPropertiesChanged.emit()
     
     def openMultiProject(self, fn = None, openMaster = True):
         """
@@ -541,7 +550,7 @@ class MultiProject(QObject):
                 self.addProjectAct.setEnabled(True)
                 self.propsAct.setEnabled(True)
                 
-                self.emit(SIGNAL('multiProjectOpened'))
+                self.multiProjectOpened.emit()
                 
                 if openMaster and Preferences.getMultiProject("OpenMasterAutomatically"):
                     self.__openMasterProject(False)
@@ -603,8 +612,8 @@ class MultiProject(QObject):
             self.name = QFileInfo(fn).baseName()
             self.__writeMultiProject(fn)
             
-            self.emit(SIGNAL('multiProjectClosed'))
-            self.emit(SIGNAL('multiProjectOpened'))
+            self.multiProjectClosed.emit()
+            self.multiProjectOpened.emit()
             return True
         else:
             return False
@@ -665,7 +674,7 @@ class MultiProject(QObject):
         self.addProjectAct.setEnabled(False)
         self.propsAct.setEnabled(False)
         
-        self.emit(SIGNAL('multiProjectClosed'))
+        self.multiProjectClosed.emit()
         
         return True
 
@@ -687,7 +696,7 @@ class MultiProject(QObject):
             """<p>This opens a dialog for entering the info for a"""
             """ new multiproject.</p>"""
         ))
-        act.triggered[()].connect(self.newMultiProject)
+        act.triggered[()].connect(self.__newMultiProject)
         self.actions.append(act)
 
         act = E5Action(self.trUtf8('Open multiproject'),
@@ -783,8 +792,7 @@ class MultiProject(QObject):
         
         # connect the aboutToShow signals
         self.recentMenu.aboutToShow.connect(self.__showContextMenuRecent)
-        self.connect(self.recentMenu, SIGNAL('triggered(QAction *)'),
-                     self.__openRecent)
+        self.recentMenu.triggered.connect(self.__openRecent)
         menu.aboutToShow.connect(self.__showMenu)
         
         # build the main menu
@@ -834,7 +842,7 @@ class MultiProject(QObject):
         """
         self.menuRecentAct.setEnabled(len(self.recent) > 0)
         
-        self.emit(SIGNAL("showMenu"), "Main", self.__menus["Main"])
+        self.showMenu.emit("Main", self.__menus["Main"])
     
     def __syncRecent(self):
         """

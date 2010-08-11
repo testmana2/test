@@ -33,24 +33,18 @@ class MultiProjectBrowser(QListWidget):
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         self.setAlternatingRowColors(True)
         
-        self.connect(self.multiProject, SIGNAL("newMultiProject"), 
-                     self.__newMultiProject)
-        self.connect(self.multiProject, SIGNAL("multiProjectOpened"), 
-                     self.__multiProjectOpened)
-        self.connect(self.multiProject, SIGNAL("multiProjectClosed"), 
-                     self.__multiProjectClosed)
-        self.connect(self.multiProject, SIGNAL("projectDataChanged"), 
-                     self.__projectDataChanged)
-        self.connect(self.multiProject, SIGNAL("projectAdded"), 
-                     self.__projectAdded)
-        self.connect(self.multiProject, SIGNAL("projectRemoved"), 
-                     self.__projectRemoved)
+        self.multiProject.newMultiProject.connect(self.__newMultiProject)
+        self.multiProject.multiProjectOpened.connect(self.__multiProjectOpened)
+        self.multiProject.multiProjectClosed.connect(self.__multiProjectClosed)
+        self.multiProject.projectDataChanged.connect(self.__projectDataChanged)
+        self.multiProject.projectAdded.connect(self.__projectAdded)
+        self.multiProject.projectRemoved.connect(self.__projectRemoved)
         self.multiProject.projectOpened.connect(self.__projectOpened)
         
         self.__createPopupMenu()
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__contextMenuRequested)
-        self.connect(self, SIGNAL("itemActivated(QListWidgetItem*)"), self.__openItem)
+        self.itemActivated.connect(self.__openItem)
     
     ############################################################################
     ## Slot handling methods below

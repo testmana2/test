@@ -9,7 +9,7 @@ Module implementing the Ericapi plugin.
 
 import os
 
-from PyQt4.QtCore import QObject, SIGNAL
+from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog, QApplication
 
 from E5Gui.E5Application import e5App
@@ -105,8 +105,7 @@ class EricapiPlugin(QObject):
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
-        self.connect(e5App().getObject("Project"), SIGNAL("showMenu"), 
-                     self.__projectShowMenu)
+        e5App().getObject("Project").showMenu.connect(self.__projectShowMenu)
         
         return None, True
 
@@ -114,8 +113,7 @@ class EricapiPlugin(QObject):
         """
         Public method to deactivate this plugin.
         """
-        self.disconnect(e5App().getObject("Project"), SIGNAL("showMenu"), 
-                        self.__projectShowMenu)
+        e5App().getObject("Project").showMenu.disconnect(self.__projectShowMenu)
         
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:

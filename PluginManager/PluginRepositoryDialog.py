@@ -44,6 +44,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
     
     @signal closeAndInstall emitted when the Close & Install button is pressed
     """
+    closeAndInstall = pyqtSignal()
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -74,12 +76,9 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         
         # attributes for the network objects
         self.__networkManager = QNetworkAccessManager(self)
-        self.connect(self.__networkManager, 
-            SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
+        self.__networkManager.proxyAuthenticationRequired.connect(
             proxyAuthenticationRequired)
-        self.connect(self.__networkManager, 
-            SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
-            self.__sslErrors)
+        self.__networkManager.sslErrors.connect(self.__sslErrors)
         self.__replies = []
         
         self.__doneMethod = None
@@ -101,7 +100,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         elif button == self.__downloadCancelButton:
             self.__downloadCancel()
         elif button == self.__installButton:
-            self.emit(SIGNAL("closeAndInstall"))
+            self.closeAndInstall.emit()
     
     def __formatDescription(self, lines):
         """
@@ -345,8 +344,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         
         reply = self.__networkManager.get(QNetworkRequest(QUrl(url)))
         reply.finished[()].connect(self.__downloadFileDone)
-        self.connect(reply, SIGNAL("downloadProgress(qint64, qint64)"), 
-            self.__downloadProgress)
+        reply.downloadProgress.connect(self.__downloadProgress)
         self.__replies.append(reply)
     
     def __downloadFileDone(self):
@@ -547,7 +545,7 @@ class PluginRepositoryDialog(QDialog):
         
         self.cw.buttonBox.accepted[()].connect(self.accept)
         self.cw.buttonBox.rejected[()].connect(self.reject)
-        self.connect(self.cw, SIGNAL("closeAndInstall"), self.__closeAndInstall)
+        self.cw.closeAndInstall.connect(self.__closeAndInstall)
         
     def __closeAndInstall(self):
         """
@@ -581,7 +579,7 @@ class PluginRepositoryWindow(QMainWindow):
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)
-        self.connect(self.cw, SIGNAL("closeAndInstall"), self.__startPluginInstall)
+        self.cw.closeAndInstall.connect(self.__startPluginInstall)
     
     def __startPluginInstall(self):
         """

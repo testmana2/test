@@ -26,6 +26,7 @@ class MdiArea(QMdiArea, ViewManager):
     
     @signal editorChanged(string) emitted when the current editor has changed
     """
+    editorChanged = pyqtSignal(str)
     editorOpened = pyqtSignal(str)
     lastEditorClosed = pyqtSignal()
     checkActions = pyqtSignal(Editor)
@@ -50,10 +51,8 @@ class MdiArea(QMdiArea, ViewManager):
         
         self.__windowMapper = QSignalMapper(self)
         
-        self.connect(self.__windowMapper, SIGNAL('mapped(QWidget*)'), 
-            self.setActiveSubWindow)
-        self.connect(self, SIGNAL('subWindowActivated(QMdiSubWindow*)'),
-            self.__subWindowActivated)
+        self.__windowMapper.mapped[QWidget].connect(self.setActiveSubWindow)
+        self.subWindowActivated.connect(self.__subWindowActivated)
         
     def canCascade(self):
         """
@@ -339,7 +338,7 @@ class MdiArea(QMdiArea, ViewManager):
             self._checkActions(editor)
             if editor is not None:
                 fn = editor.getFileName()
-                self.emit(SIGNAL('editorChanged'), fn)
+                self.editorChanged.emit(fn)
         
     def eventFilter(self, watched, event):
         """

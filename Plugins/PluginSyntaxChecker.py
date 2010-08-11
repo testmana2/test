@@ -9,7 +9,7 @@ Module implementing the Tabnanny plugin.
 
 import os
 
-from PyQt4.QtCore import QObject, SIGNAL
+from PyQt4.QtCore import QObject
 
 from E5Gui.E5Application import e5App
 
@@ -94,14 +94,11 @@ class SyntaxCheckerPlugin(QObject):
         ))
         self.__editorAct.triggered[()].connect(self.__editorSyntaxCheck)
         
-        self.connect(e5App().getObject("Project"), SIGNAL("showMenu"), 
-                     self.__projectShowMenu)
-        self.connect(e5App().getObject("ProjectBrowser").getProjectBrowser("sources"), 
-                     SIGNAL("showMenu"), self.__projectBrowserShowMenu)
-        self.connect(e5App().getObject("ViewManager"), SIGNAL("editorOpenedEd"), 
-                     self.__editorOpened)
-        self.connect(e5App().getObject("ViewManager"), SIGNAL("editorClosedEd"), 
-                     self.__editorClosed)
+        e5App().getObject("Project").showMenu.connect(self.__projectShowMenu)
+        e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
+            .showMenu.connect(self.__projectBrowserShowMenu)
+        e5App().getObject("ViewManager").editorOpenedEd.connect(self.__editorOpened)
+        e5App().getObject("ViewManager").editorClosedEd.connect(self.__editorClosed)
         
         for editor in e5App().getObject("ViewManager").getOpenEditors():
             self.__editorOpened(editor)
@@ -112,14 +109,11 @@ class SyntaxCheckerPlugin(QObject):
         """
         Public method to deactivate this plugin.
         """
-        self.disconnect(e5App().getObject("Project"), SIGNAL("showMenu"), 
-                        self.__projectShowMenu)
-        self.disconnect(e5App().getObject("ProjectBrowser").getProjectBrowser("sources"), 
-                        SIGNAL("showMenu"), self.__projectBrowserShowMenu)
-        self.disconnect(e5App().getObject("ViewManager"), SIGNAL("editorOpenedEd"), 
-                        self.__editorOpened)
-        self.disconnect(e5App().getObject("ViewManager"), SIGNAL("editorClosedEd"), 
-                        self.__editorClosed)
+        e5App().getObject("Project").showMenu.disconnect(self.__projectShowMenu)
+        e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
+            .showMenu.disconnect(self.__projectBrowserShowMenu)
+        e5App().getObject("ViewManager").editorOpenedEd.disconnect(self.__editorOpened)
+        e5App().getObject("ViewManager").editorClosedEd.disconnect(self.__editorClosed)
         
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
@@ -130,7 +124,7 @@ class SyntaxCheckerPlugin(QObject):
                 self.__projectBrowserMenu.removeAction(self.__projectBrowserAct)
         
         for editor in self.__editors:
-            self.disconnect(editor, SIGNAL("showMenu"), self.__editorShowMenu)
+            editor.showMenu.disconnect(self.__editorShowMenu)
             menu = editor.getMenu("Checks")
             if menu is not None:
                 menu.removeAction(self.__editorAct)
@@ -211,7 +205,7 @@ class SyntaxCheckerPlugin(QObject):
         menu = editor.getMenu("Checks")
         if menu is not None:
             menu.addAction(self.__editorAct)
-            self.connect(editor, SIGNAL("showMenu"), self.__editorShowMenu)
+            editor.showMenu.connect(self.__editorShowMenu)
             self.__editors.append(editor)
     
     def __editorClosed(self, editor):

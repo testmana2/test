@@ -48,7 +48,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
         self.process = None
         self.vcs = vcs
-        self.connect(self.vcs, SIGNAL("committed()"), self.__committed)
+        self.vcs.committed.connect(self.__committed)
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(self.__pathColumn, Qt.AscendingOrder)

@@ -123,6 +123,8 @@ class Listspace(QSplitter, ViewManager):
     @signal changeCaption(string) emitted if a change of the caption is necessary
     @signal editorChanged(string) emitted when the current editor has changed
     """
+    changeCaption = pyqtSignal(str)
+    editorChanged = pyqtSignal(str)
     editorOpened = pyqtSignal(str)
     lastEditorClosed = pyqtSignal()
     checkActions = pyqtSignal(Editor)
@@ -148,10 +150,8 @@ class Listspace(QSplitter, ViewManager):
         self.viewlist.setSizePolicy(policy)
         self.addWidget(self.viewlist)
         self.viewlist.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.connect(self.viewlist, SIGNAL("itemActivated(QListWidgetItem*)"),
-                     self.__showSelectedView)
-        self.connect(self.viewlist, SIGNAL("itemClicked(QListWidgetItem*)"),
-                     self.__showSelectedView)
+        self.viewlist.itemActivated.connect(self.__showSelectedView)
+        self.viewlist.itemClicked.connect(self.__showSelectedView)
         self.viewlist.customContextMenuRequested.connect(self.__showMenu)
         
         self.stackArea = QSplitter(self)
@@ -161,8 +161,7 @@ class Listspace(QSplitter, ViewManager):
         self.stackArea.addWidget(stack)
         self.stacks.append(stack)
         self.currentStack = stack
-        self.connect(stack, SIGNAL('currentChanged(int)'),
-            self.__currentChanged)
+        stack.currentChanged.connect(self.__currentChanged)
         stack.installEventFilter(self)
         self.setSizes([int(self.width() * 0.2), int(self.width() * 0.8)]) # 20% for viewlist
         self.__inRemoveView = False
@@ -285,10 +284,10 @@ class Listspace(QSplitter, ViewManager):
         aw = self.activeWindow()
         fn = aw and aw.getFileName() or None
         if fn:
-            self.emit(SIGNAL('changeCaption'), fn)
-            self.emit(SIGNAL('editorChanged'), fn)
+            self.changeCaption.emit(fn)
+            self.editorChanged.emit(fn)
         else:
-            self.emit(SIGNAL('changeCaption'), "")
+            self.changeCaption.emit("")
         
     def _addView(self, win, fn = None, noName = ""):
         """
@@ -313,17 +312,16 @@ class Listspace(QSplitter, ViewManager):
             self.viewlist.addItem(itm)
         self.currentStack.addWidget(win)
         self.currentStack.setCurrentWidget(win)
-        self.connect(win, SIGNAL('captionChanged'),
-            self.__captionChange)
+        win.captionChanged.connect(self.__captionChange)
         
         index = self.editors.index(win)
         self.viewlist.setCurrentRow(index)
         win.setFocus()
         if fn:
-            self.emit(SIGNAL('changeCaption'), fn)
-            self.emit(SIGNAL('editorChanged'), fn)
+            self.changeCaption.emit(fn)
+            self.editorChanged.emit(fn)
         else:
-            self.emit(SIGNAL('changeCaption'), "")
+            self.changeCaption.emit("")
         
     def __captionChange(self, cap, editor):
         """
@@ -355,10 +353,10 @@ class Listspace(QSplitter, ViewManager):
         win.setFocus()
         fn = win.getFileName()
         if fn:
-            self.emit(SIGNAL('changeCaption'), fn)
-            self.emit(SIGNAL('editorChanged'), fn)
+            self.changeCaption.emit(fn)
+            self.editorChanged.emit(fn)
         else:
-            self.emit(SIGNAL('changeCaption'), "")
+            self.changeCaption.emit("")
         
     def __showSelectedView(self, itm):
         """
@@ -409,7 +407,7 @@ class Listspace(QSplitter, ViewManager):
         itm.setText(txt)
         itm.setToolTip(newName)
         self.viewlist.setCurrentRow(currentRow)
-        self.emit(SIGNAL('changeCaption'), newName)
+        self.changeCaption.emit(newName)
         
     def _modificationStatusChanged(self, m, editor):
         """
@@ -458,8 +456,7 @@ class Listspace(QSplitter, ViewManager):
         self.stackArea.addWidget(stack)
         self.stacks.append(stack)
         self.currentStack = stack
-        self.connect(stack, SIGNAL('currentChanged(int)'),
-            self.__currentChanged)
+        stack.currentChanged.connect(self.__currentChanged)
         stack.installEventFilter(self)
         if self.stackArea.orientation() == Qt.Horizontal:
             size = self.stackArea.width()
@@ -612,11 +609,11 @@ class Listspace(QSplitter, ViewManager):
         editor.setFocus()
         fn = editor.getFileName()
         if fn:
-            self.emit(SIGNAL('changeCaption'), fn)
+            self.changeCaption.emit(fn)
             if not self.__inRemoveView:
-                self.emit(SIGNAL('editorChanged'), fn)
+                self.editorChanged.emit(fn)
         else:
-            self.emit(SIGNAL('changeCaption'), "")
+            self.changeCaption.emit("")
         
         cindex = self.editors.index(editor)
         self.viewlist.setCurrentRow(cindex)
@@ -651,10 +648,10 @@ class Listspace(QSplitter, ViewManager):
                 aw.setFocus()
                 fn = aw.getFileName()
                 if fn:
-                    self.emit(SIGNAL('changeCaption'), fn)
+                    self.changeCaption.emit(fn)
                     if switched:
-                        self.emit(SIGNAL('editorChanged'), fn)
+                        self.editorChanged.emit(fn)
                 else:
-                    self.emit(SIGNAL('changeCaption'), "")
+                    self.changeCaption.emit("")
         
         return False

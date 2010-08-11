@@ -72,7 +72,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         Private slot to handle the accepted signal of the button box.
         """
         if self.__uninstallPlugin():
-            self.emit(SIGNAL("accepted()"))
+            self.accepted.emit()
     
     def __uninstallPlugin(self):
         """

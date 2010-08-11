@@ -52,7 +52,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
         self.vcs = vcs
-        self.connect(self.vcs, SIGNAL("committed()"), self.__committed)
+        self.vcs.committed.connect(self.__committed)
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(self.__pathColumn, Qt.AscendingOrder)

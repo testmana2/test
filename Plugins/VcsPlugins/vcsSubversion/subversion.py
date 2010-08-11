@@ -52,6 +52,8 @@ class Subversion(VersionControl):
     
     @signal committed() emitted after the commit action has completed
     """
+    committed = pyqtSignal()
+    
     def __init__(self, plugin, parent=None, name=None):
         """
         Constructor
@@ -425,8 +427,7 @@ class Subversion(VersionControl):
             # call CommitDialog and get message from there
             if self.__commitDialog is None:
                 self.__commitDialog = SvnCommitDialog(self, self.__ui)
-                self.connect(self.__commitDialog, SIGNAL("accepted()"), 
-                             self.__vcsCommit_Step2)
+                self.__commitDialog.accepted.connect(self.__vcsCommit_Step2)
             self.__commitDialog.show()
             self.__commitDialog.raise_()
             self.__commitDialog.activateWindow()
@@ -452,8 +453,7 @@ class Subversion(VersionControl):
                 changelists, keepChangelists = self.__commitDialog.changelistsData()
             else:
                 changelists, keepChangelists = [], False
-            self.disconnect(self.__commitDialog, SIGNAL("accepted()"), 
-                            self.__vcsCommit_Step2)
+            self.__commitDialog.accepted.disconnect(self.__vcsCommit_Step2)
             self.__commitDialog = None
         else:
             changelists, keepChangelists = [], False
@@ -490,7 +490,7 @@ class Subversion(VersionControl):
             res = dia.startProcess(args, dname)
             if res:
                 dia.exec_()
-        self.emit(SIGNAL("committed()"))
+        self.committed.emit()
         self.checkVCSStatus()
         
     def vcsUpdate(self, name, noDialog = False):

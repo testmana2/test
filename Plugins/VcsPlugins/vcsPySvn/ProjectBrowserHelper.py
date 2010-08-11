@@ -690,10 +690,10 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         movefiles = self.browser.project.getFiles(fn)
         if self.vcs.vcsMove(fn, self.project):
             if isFile:
-                self.browser.emit(SIGNAL('closeSourceWindow'), fn)
+                self.browser.closeSourceWindow.emit(fn)
             else:
                 for mf in movefiles:
-                    self.browser.emit(SIGNAL('closeSourceWindow'), mf)
+                    self.browser.closeSourceWindow.emit(mf)
         
     def __SVNResolve(self):
         """
