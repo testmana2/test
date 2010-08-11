@@ -265,9 +265,6 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             return
         
         self.__cancelSearch = False
-        self.stopButton.setEnabled(True)
-        self.stopButton.setDefault(True)
-        self.findButton.setEnabled(False)
         
         if self.filterCheckBox.isChecked():
             fileFilter = self.filterEdit.text()
@@ -371,6 +368,11 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.dirCombo.addItems(self.dirHistory)
             Preferences.Prefs.settings.setValue("FindFileDialog/DirectoryHistory", 
                                                 self.dirHistory[:30])
+        
+        # set the button states
+        self.stopButton.setEnabled(True)
+        self.stopButton.setDefault(True)
+        self.findButton.setEnabled(False)
         
         # now go through all the files
         self.__populating = True
