@@ -17,6 +17,9 @@ class HelpTocWidget(QWidget):
     @signal linkActivated(const QUrl&) emitted when a TOC entry is activated
     @signal escapePressed() emitted when the ESC key was pressed
     """
+    linkActivated = pyqtSignal(QUrl)
+    escapePressed = pyqtSignal()
+    
     def __init__(self, engine, mainWindow, parent = None):
         """
         Constructor
@@ -39,11 +42,10 @@ class HelpTocWidget(QWidget):
         self.__layout.addWidget(self.__tocWidget)
         
         self.__tocWidget.customContextMenuRequested.connect(self.__showContextMenu)
-        self.connect(self.__tocWidget, SIGNAL("linkActivated(const QUrl&)"), 
-                     self, SIGNAL("linkActivated(const QUrl&)"))
+        self.__tocWidget.linkActivated.connect(self.linkActivated)
         
         model = self.__tocWidget.model()
-        self.connect(model, SIGNAL("contentsCreated()"), self.__expandTOC)
+        model.contentsCreated.connect(self.__expandTOC)
     
     def __expandTOC(self):
         """
@@ -81,7 +83,7 @@ class HelpTocWidget(QWidget):
         @param evt reference to the key press event (QKeyEvent)
         """
         if evt.key() == Qt.Key_Escape:
-            self.emit(SIGNAL("escapePressed()"))
+            self.escapePressed.emit()
     
     def eventFilter(self, watched, event):
         """
@@ -116,7 +118,7 @@ class HelpTocWidget(QWidget):
         model = self.__tocWidget.model()
         itm = model.contentItemAt(index)
         if itm:
-            self.emit(SIGNAL("linkActivated(const QUrl&)"), itm.url())
+            self.linkActivated.emit(itm.url())
     
     def syncToContent(self, url):
         """
@@ -150,6 +152,6 @@ class HelpTocWidget(QWidget):
         
         act = menu.exec_()
         if act == curTab:
-            self.emit(SIGNAL("linkActivated(const QUrl&)"), itm.url())
+            self.linkActivated.emit(itm.url())
         elif act == newTab:
             self.__mw.newTab(itm.url())

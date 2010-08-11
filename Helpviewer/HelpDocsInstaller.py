@@ -23,6 +23,9 @@ class HelpDocsInstaller(QThread):
         the installation of the documentation
     @signal docsInstalled(bool) emitted after the installation has finished
     """
+    errorMessage = pyqtSignal(str)
+    docsInstalled = pyqtSignal(bool)
+    
     def __init__(self, collection):
         """
         Constructor
@@ -74,7 +77,7 @@ class HelpDocsInstaller(QThread):
         changes |= self.__installEric5Doc(engine)
         engine = None
         del engine
-        self.emit(SIGNAL("docsInstalled(bool)"), changes)
+        self.docsInstalled.emit(changes)
     
     def __installQtDoc(self, name, engine):
         """
@@ -122,7 +125,7 @@ class HelpDocsInstaller(QThread):
                     engine.unregisterDocumentation(namespace)
                 
                 if not engine.registerDocumentation(fi.absoluteFilePath()):
-                    self.emit(SIGNAL("errorMessage(const QString&)"), 
+                    self.errorMessage.emit(
                         self.trUtf8("""<p>The file <b>{0}</b> could not be registered."""
                                     """<br/>Reason: {1}</p>""")\
                             .format(fi.absoluteFilePath, engine.error())
@@ -179,7 +182,7 @@ class HelpDocsInstaller(QThread):
                     engine.unregisterDocumentation(namespace)
                 
                 if not engine.registerDocumentation(fi.absoluteFilePath()):
-                    self.emit(SIGNAL("errorMessage(const QString&)"), 
+                    self.errorMessage.emit(
                         self.trUtf8("""<p>The file <b>{0}</b> could not be registered."""
                                     """<br/>Reason: {1}</p>""")\
                             .format(fi.absoluteFilePath, engine.error())

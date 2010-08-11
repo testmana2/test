@@ -67,6 +67,9 @@ class HelpWindow(QMainWindow):
     @signal zoomTextOnlyChanged(bool) emitted after the zoom text only setting was
             changed
     """
+    zoomTextOnlyChanged = pyqtSignal(bool)
+    helpClosed = pyqtSignal()
+    
     helpwindows = []
 
     maxMenuFilePathLen = 75
@@ -243,9 +246,7 @@ class HelpWindow(QMainWindow):
             # index window
             self.connect(self.__indexWindow, SIGNAL("linkActivated(const QUrl&)"), 
                          self.__linkActivated)
-            self.connect(self.__indexWindow, 
-                         SIGNAL("linksActivated"),
-                         self.__linksActivated)
+            self.__indexWindow.linksActivated.connect(self.__linksActivated)
             self.connect(self.__indexWindow, SIGNAL("escapePressed()"), 
                          self.__activateCurrentBrowser)
             # search window
@@ -2126,8 +2127,7 @@ class HelpWindow(QMainWindow):
         """
         browser = HelpBrowser(self)
         
-        self.connect(browser, SIGNAL('sourceChanged(const QUrl &)'),
-                     self.__sourceChanged)
+        browser.sourceChanged.connect(self.__sourceChanged)
         self.connect(browser, SIGNAL("titleChanged(const QString&)"), self.__titleChanged)
         
         index = self.tabWidget.addTab(browser, self.trUtf8("..."))
@@ -2146,18 +2146,14 @@ class HelpWindow(QMainWindow):
                     self.__elide(browser.documentTitle().replace("&", "&&")))
                 self.tabWidget.setTabToolTip(index, browser.documentTitle())
         
-        self.connect(browser, SIGNAL('highlighted(const QString&)'),
-                     self.statusBar(), SLOT('showMessage(const QString&)'))
-        self.connect(browser, SIGNAL('backwardAvailable(bool)'),
-                     self.__setBackwardAvailable)
-        self.connect(browser, SIGNAL('forwardAvailable(bool)'),
-                     self.__setForwardAvailable)
+        browser.highlighted.connect(self.statusBar().showMessage)
+        browser.backwardAvailable.connect(self.__setBackwardAvailable)
+        browser.forwardAvailable.connect(self.__setForwardAvailable)
         self.connect(browser.page(), SIGNAL('windowCloseRequested()'), 
                      self.__windowCloseRequested)
         self.connect(browser.page(), SIGNAL('printRequested(QWebFrame*)'), 
                      self.__printRequested)
-        self.connect(browser, SIGNAL("search(const QUrl &)"), 
-                     self.newTab)
+        browser.search.connect(self.newTab)
         
         self.closeAct.setEnabled(True)
         self.closeAllAct.setEnabled(True)

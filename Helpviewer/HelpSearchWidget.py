@@ -17,6 +17,9 @@ class HelpSearchWidget(QWidget):
     @signal linkActivated(const QUrl&) emitted when a search result entry is activated
     @signal escapePressed() emitted when the ESC key was pressed
     """
+    linkActivated = pyqtSignal(QUrl)
+    escapePressed = pyqtSignal()
+    
     def __init__(self, engine, mainWindow, parent = None):
         """
         Constructor
@@ -40,15 +43,11 @@ class HelpSearchWidget(QWidget):
         
         self.setFocusProxy(self.__query)
         
-        self.connect(self.__query, SIGNAL("search()"), 
-                     self.__search)
-        self.connect(self.__result, SIGNAL("requestShowLink(const QUrl&)"), 
-                     self, SIGNAL("linkActivated(const QUrl&)"))
+        self.__query.search.connect(self.__search)
+        self.__result.requestShowLink.connect(self.linkActivated)
         
-        self.connect(self.__engine, SIGNAL("searchingStarted()"), 
-                     self.__searchingStarted)
-        self.connect(self.__engine, SIGNAL("searchingFinished(int)"), 
-                     self.__searchingFinished)
+        self.__engine.searchingStarted.connect(self.__searchingStarted)
+        self.__engine.searchingFinished.connect(self.__searchingFinished)
         
         self.__browser = self.__result.findChildren(QTextBrowser)[0]
         if self.__browser:
@@ -101,7 +100,7 @@ class HelpSearchWidget(QWidget):
         @param evt reference to the key press event (QKeyEvent)
         """
         if evt.key() == Qt.Key_Escape:
-            self.emit(SIGNAL("escapePressed()"))
+            self.escapePressed.emit()
         else:
             evt.ignore()
     
@@ -131,6 +130,6 @@ class HelpSearchWidget(QWidget):
         menu.move(evt.globalPos())
         act = menu.exec_()
         if act == curTab:
-            self.emit(SIGNAL("linkActivated(const QUrl&)"), link)
+            self.linkActivated.emit(link)
         elif act == newTab:
             self.__mw.newTab(link)

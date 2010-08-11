@@ -83,12 +83,9 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         self.__url = self.__reply.url()
         self.__reply.setParent(self)
         self.__reply.readyRead[()].connect(self.__readyRead)
-        self.connect(self.__reply, SIGNAL("error(QNetworkReply::NetworkError)"), 
-                     self.__networkError)
-        self.connect(self.__reply, SIGNAL("downloadProgress(qint64, qint64)"), 
-                     self.__downloadProgress)
-        self.connect(self.__reply, SIGNAL("metaDataChanged()"), 
-                     self.__metaDataChanged)
+        self.__reply.error.connect(self.__networkError)
+        self.__reply.downloadProgress.connect(self.__downloadProgress)
+        self.__reply.metaDataChanged.connect(self.__metaDataChanged)
         self.__reply.finished[()].connect(self.__finished)
         
         # reset info

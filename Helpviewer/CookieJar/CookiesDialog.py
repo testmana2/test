@@ -44,16 +44,12 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         model = CookieModel(cookieJar, self)
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setSourceModel(model)
-        self.connect(self.searchEdit, SIGNAL("textChanged(QString)"), 
-                     self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
         self.cookiesTable.setModel(self.__proxyModel)
         self.cookiesTable.doubleClicked.connect(self.__showCookieDetails)
-        self.connect(self.cookiesTable.selectionModel(), 
-                     SIGNAL("selectionChanged(const QItemSelection&, const QItemSelection&)"), 
-                     self.__tableSelectionChanged)
-        self.connect(self.cookiesTable.model(), 
-                     SIGNAL("modelReset()"), 
-                     self.__tableModelReset)
+        self.cookiesTable.selectionModel().selectionChanged.connect(
+            self.__tableSelectionChanged)
+        self.cookiesTable.model().modelReset.connect(self.__tableModelReset)
         
         fm = QFontMetrics(QFont())
         height = fm.height() + fm.height() // 3

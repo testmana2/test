@@ -24,6 +24,8 @@ class CookieJar(QNetworkCookieJar):
     
     @signal cookiesChanged() emitted after the cookies have been changed
     """
+    cookiesChanged = pyqtSignal()
+    
     JAR_VERSION = 23
     
     AcceptAlways                    = 0
@@ -115,7 +117,7 @@ class CookieJar(QNetworkCookieJar):
         
         self.setAllCookies([])
         self.__saveTimer.changeOccurred()
-        self.emit(SIGNAL("cookiesChanged()"))
+        self.cookiesChanged.emit()
     
     def load(self):
         """
@@ -154,7 +156,7 @@ class CookieJar(QNetworkCookieJar):
             Preferences.getHelp("FilterTrackingCookies"))
         
         self.__loaded = True
-        self.emit(SIGNAL("cookiesChanged()"))
+        self.cookiesChanged.emit()
     
     def save(self):
         """
@@ -200,7 +202,7 @@ class CookieJar(QNetworkCookieJar):
         if oldCount == len(cookies):
             return
         self.setAllCookies(cookies)
-        self.emit(SIGNAL("cookiesChanged()"))
+        self.cookiesChanged.emit()
     
     def cookiesForUrl(self, url):
         """
@@ -278,7 +280,7 @@ class CookieJar(QNetworkCookieJar):
         
         if addedCookies:
             self.__saveTimer.changeOccurred()
-            self.emit(SIGNAL("cookiesChanged()"))
+            self.cookiesChanged.emit()
         
         return addedCookies
     
@@ -463,7 +465,7 @@ class CookieJar(QNetworkCookieJar):
         if changed:
             self.setAllCookies(cookiesList)
             self.__saveTimer.changeOccurred()
-            self.emit(SIGNAL("cookiesChanged()"))
+            self.cookiesChanged.emit()
     
     def cookies(self):
         """
@@ -487,4 +489,4 @@ class CookieJar(QNetworkCookieJar):
         
         self.setAllCookies(cookies)
         self.__saveTimer.changeOccurred()
-        self.emit(SIGNAL("cookiesChanged()"))
+        self.cookiesChanged.emit()

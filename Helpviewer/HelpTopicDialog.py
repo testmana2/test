@@ -8,7 +8,7 @@ Module implementing a dialog to select a help topic to display.
 """
 
 from PyQt4.QtGui import QDialog
-from PyQt4.QtCore import SIGNAL, QUrl
+from PyQt4.QtCore import QUrl
 
 from .Ui_HelpTopicDialog import Ui_HelpTopicDialog
 
@@ -38,8 +38,7 @@ class HelpTopicDialog(QDialog, Ui_HelpTopicDialog):
             self.topicsList.setCurrentRow(0)
         self.topicsList.setFocus()
         
-        self.connect(self.topicsList, SIGNAL("itemActivated(QListWidgetItem*)"), 
-                     self.accept)
+        self.topicsList.itemActivated.connect(self.accept)
     
     def link(self):
         """

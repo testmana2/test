@@ -32,7 +32,7 @@ class CookieModel(QAbstractTableModel):
             self.trUtf8("Contents"), 
         ]
         self.__cookieJar = cookieJar
-        self.connect(self.__cookieJar, SIGNAL("cookiesChanged()"), self.__cookiesChanged)
+        self.__cookieJar.cookiesChanged.connect(self.__cookiesChanged)
         self.__cookieJar.load()
     
     def headerData(self, section, orientation, role):

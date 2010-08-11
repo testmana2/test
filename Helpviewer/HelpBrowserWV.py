@@ -295,6 +295,12 @@ class HelpBrowser(QWebView):
     @signal highlighted(const QString&) emitted, when the mouse hovers over a link
     @signal search(const QUrl &) emitted, when a search is requested
     """
+    sourceChanged = pyqtSignal(QUrl)
+    forwardAvailable = pyqtSignal(bool)
+    backwardAvailable = pyqtSignal(bool)
+    highlighted = pyqtSignal(str)
+    search = pyqtSignal(QUrl)
+    
     def __init__(self, parent = None, name = ""):
         """
         Constructor
@@ -327,39 +333,31 @@ class HelpBrowser(QWebView):
         self.__javaScriptBinding = None
         self.__javaScriptEricObject = None
         
-        self.connect(self.mw, SIGNAL("zoomTextOnlyChanged(bool)"), self.__applyZoom)
+        self.mw.zoomTextOnlyChanged.connect(self.__applyZoom)
         
         self.page().setLinkDelegationPolicy(QWebPage.DelegateAllLinks)
-        self.connect(self, SIGNAL('linkClicked(const QUrl &)'), self.setSource)
-        self.connect(self, SIGNAL('iconChanged()'), self.__iconChanged)
+        self.linkClicked.connect(self.setSource)
+        self.iconChanged.connect(self.__iconChanged)
         
-        self.connect(self, SIGNAL('urlChanged(const QUrl &)'), self.__urlChanged)
-        self.connect(self, SIGNAL('statusBarMessage(const QString &)'), 
-            self.__statusBarMessage)
-        self.connect(self.page(), 
-            SIGNAL('linkHovered(const QString &, const QString &, const QString &)'), 
-            self.__linkHovered)
+        self.urlChanged.connect(self.__urlChanged)
+        self.statusBarMessage.connect(self.__statusBarMessage)
+        self.page().linkHovered.connect(self.__linkHovered)
         
-        self.connect(self, SIGNAL('loadStarted()'), self.__loadStarted)
-        self.connect(self, SIGNAL('loadProgress(int)'), self.__loadProgress)
-        self.connect(self, SIGNAL('loadFinished(bool)'), self.__loadFinished)
+        self.loadStarted.connect(self.__loadStarted)
+        self.loadProgress.connect(self.__loadProgress)
+        self.loadFinished.connect(self.__loadFinished)
         
         self.page().setForwardUnsupportedContent(True)
-        self.connect(self.page(), SIGNAL('unsupportedContent(QNetworkReply *)'), 
-            self.__unsupportedContent)
+        self.page().unsupportedContent.connect(self.__unsupportedContent)
         
-        self.connect(self.page(), SIGNAL('downloadRequested(const QNetworkRequest &)'), 
-            self.__downloadRequested)
-        self.connect(self.page(), SIGNAL("frameCreated(QWebFrame *)"), 
-            self.__addExternalBinding)
+        self.page().downloadRequested.connect(self.__downloadRequested)
+        self.page().frameCreated.connect(self.__addExternalBinding)
         self.__addExternalBinding(self.page().mainFrame())
         
-        self.connect(self.page(), SIGNAL('databaseQuotaExceeded(QWebFrame*, QString)'), 
-            self.__databaseQuotaExceeded)
+        self.page().databaseQuotaExceeded.connect(self.__databaseQuotaExceeded)
         
-        self.connect(self.mw.openSearchManager(), 
-                     SIGNAL("currentEngineChanged()"), 
-                     self.__currentEngineChanged)
+        self.mw.openSearchManager().currentEngineChanged.connect(
+            self.__currentEngineChanged)
     
     def __addExternalBinding(self, frame = None):
         """
@@ -386,8 +384,7 @@ class HelpBrowser(QWebView):
                 frame.addToJavaScriptWindowObject("eric", self.__javaScriptEricObject)
         else:
             # called from QWebPage.frameCreated
-            self.connect(frame, SIGNAL("javaScriptWindowObjectCleared()"), 
-                self.__addExternalBinding)
+            frame.javaScriptWindowObjectCleared.connect(self.__addExternalBinding)
         frame.addToJavaScriptWindowObject("external", self.__javaScriptBinding)
     
     def linkedResources(self, relation = ""):
@@ -760,8 +757,7 @@ class HelpBrowser(QWebView):
                 act = OpenSearchEngineAction(engine, self.__searchMenu)
                 self.__searchMenu.addAction(act)
                 act.setData(engineName)
-            self.connect(self.__searchMenu, SIGNAL("triggered(QAction *)"), 
-                         self.__searchRequested)
+            self.__searchMenu.triggered.connect(self.__searchRequested)
             
             menu.addSeparator()
         
@@ -861,7 +857,7 @@ class HelpBrowser(QWebView):
         engineName = act.data()
         if engineName:
             engine = self.mw.openSearchManager().engine(engineName)
-            self.emit(SIGNAL("search(const QUrl &)"), engine.searchUrl(searchText))
+            self.search.connect(engine.searchUrl(searchText))
     
     def __addSearchEngine(self):
         """
@@ -1013,10 +1009,10 @@ class HelpBrowser(QWebView):
         
         @param url the new url (QUrl)
         """
-        self.emit(SIGNAL('sourceChanged(const QUrl &)'), url)
+        self.sourceChanged.emit(url)
         
-        self.emit(SIGNAL('forwardAvailable(bool)'), self.isForwardAvailable())
-        self.emit(SIGNAL('backwardAvailable(bool)'), self.isBackwardAvailable())
+        self.forwardAvailable.emit(self.isForwardAvailable())
+        self.backwardAvailable.emit(self.isBackwardAvailable())
     
     def __statusBarMessage(self, text):
         """
@@ -1034,7 +1030,7 @@ class HelpBrowser(QWebView):
         @param title the link title (string)
         @param textContent text content of the link (string)
         """
-        self.emit(SIGNAL('highlighted(const QString&)'), link)
+        self.highlighted.emit(link)
     
     ############################################################################
     ## Signal handlers below
@@ -1121,7 +1117,7 @@ class HelpBrowser(QWebView):
                 requestFilename = Preferences.getUI("RequestDownloadFilename")
             dlg = DownloadDialog(reply, requestFilename, self.page(), download)
             if dlg.initialize():
-                self.connect(dlg, SIGNAL("done()"), self.__downloadDone)
+                dlg.done[()].connect(self.__downloadDone)
                 self.__downloadWindows.append(dlg)
                 dlg.show()
             self.setUrl(self.url())
@@ -1155,7 +1151,7 @@ class HelpBrowser(QWebView):
             )
             self.setHtml(html, replyUrl)
             self.mw.historyManager().removeHistoryEntry(replyUrl, self.title())
-            self.emit(SIGNAL('loadFinished(bool)'), False)
+            self.loadFinished.emit(False)
     
     def __downloadDone(self):
         """
@@ -1163,7 +1159,7 @@ class HelpBrowser(QWebView):
         """
         dlg = self.sender()
         if dlg in self.__downloadWindows:
-            self.disconnect(dlg, SIGNAL("done()"), self.__downloadDone)
+            dlg.done[()].disconnect(self.__downloadDone)
     
     def __downloadRequested(self, request):
         """

@@ -21,6 +21,10 @@ class HelpIndexWidget(QWidget):
             multiple targets is activated
     @signal escapePressed() emitted when the ESC key was pressed
     """
+    linkActivated = pyqtSignal(QUrl)
+    linksActivated = pyqtSignal(dict, str)
+    escapePressed = pyqtSignal()
+    
     def __init__(self, engine, mainWindow, parent = None):
         """
         Constructor
@@ -43,19 +47,15 @@ class HelpIndexWidget(QWidget):
         
         self.__searchEdit = QLineEdit()
         l.setBuddy(self.__searchEdit)
-        self.connect(self.__searchEdit, SIGNAL("textChanged(QString)"), 
-                     self.__filterIndices)
+        self.__searchEdit.textChanged.connect(self.__filterIndices)
         self.__searchEdit.installEventFilter(self)
         self.__layout.addWidget(self.__searchEdit)
         
         self.__index = self.__engine.indexWidget()
         self.__index.installEventFilter(self)
-        self.connect(self.__engine.indexModel(), SIGNAL("indexCreationStarted()"), 
-                     self.__disableSearchEdit)
-        self.connect(self.__engine.indexModel(), SIGNAL("indexCreated()"), 
-                     self.__enableSearchEdit)
-        self.connect(self.__index, SIGNAL("activated(const QModelIndex&)"), 
-                     self.__activated)
+        self.__engine.indexModel().indexCreationStarted.connect(self.__disableSearchEdit)
+        self.__engine.indexModel().indexCreated.connect(self.__enableSearchEdit)
+        self.__index.activated.connect(self.__activated)
         self.__searchEdit.returnPressed.connect(self.__index.activateCurrentItem)
         self.__layout.addWidget(self.__index)
         
@@ -72,10 +72,9 @@ class HelpIndexWidget(QWidget):
             keyword = model.data(idx, Qt.DisplayRole)
             links = model.linksForKeyword(keyword)
             if len(links) == 1:
-                self.emit(SIGNAL("linkActivated(const QUrl&)"), 
-                          QUrl(links[list(links.keys())[0]]))
+                self.linkActivated.emit(QUrl(links[list(links.keys())[0]]))
             else:
-                self.emit(SIGNAL("linksActivated"), links, keyword)
+                self.linksActivated.emit(links, keyword)
     
     def __filterIndices(self, filter):
         """
@@ -133,7 +132,7 @@ class HelpIndexWidget(QWidget):
                 if idx.isValid():
                     self.__index.setCurrentIndex(idx)
             elif event.key() == Qt.Key_Escape:
-                self.emit(SIGNAL("escapePressed()"))
+                self.escapePressed.emit()
         elif self.__index and watched == self.__index and \
              event.type() == QEvent.ContextMenu:
             idx = self.__index.indexAt(event.pos())

@@ -32,6 +32,9 @@ class OpenSearchManager(QObject):
     @signal currentEngineChanged() emitted to indicate a change of 
             the current search engine
     """
+    changed = pyqtSignal()
+    currentEngineChanged = pyqtSignal()
+    
     def __init__(self, parent = None):
         """
         Constructor

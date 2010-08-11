@@ -43,8 +43,7 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         self.__exceptionsModel = CookieExceptionsModel(cookieJar)
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setSourceModel(self.__exceptionsModel)
-        self.connect(self.searchEdit, SIGNAL("textChanged(QString)"), 
-                     self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
         self.exceptionsTable.setModel(self.__proxyModel)
         
         cookieModel = CookieModel(cookieJar, self)
