@@ -26,6 +26,8 @@ class HelpWebSearchWidget(QWidget):
     
     @signal search(url) emitted when the search should be done
     """
+    search = pyqtSignal(QUrl)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -38,9 +40,7 @@ class HelpWebSearchWidget(QWidget):
         self.mw = parent
         
         self.__openSearchManager = OpenSearchManager(self)
-        self.connect(self.__openSearchManager, 
-                     SIGNAL("currentEngineChanged()"), 
-                     self.__currentEngineChanged)
+        self.__openSearchManager.currentEngineChanged.connect(self.__currentEngineChanged)
         self.__currentEngine = ""
         
         self.__layout = QHBoxLayout(self)
@@ -73,14 +73,11 @@ class HelpWebSearchWidget(QWidget):
         self.__completer.setWidget(self.__searchEdit)
         
         self.__searchButton.clicked[()].connect(self.__searchButtonClicked)
-        self.connect(self.__searchEdit, SIGNAL("textEdited(const QString&)"), 
-                     self.__textEdited)
+        self.__searchEdit.textEdited.connect(self.__textEdited)
         self.__clearButton.clicked[()].connect(self.__searchEdit.clear)
         self.__searchEdit.returnPressed[()].connect(self.__searchNow)
-        self.connect(self.__completer, SIGNAL("activated(const QModelIndex &)"), 
-                     self.__completerActivated)
-        self.connect(self.__completer, SIGNAL("highlighted(const QModelIndex &)"), 
-                     self.__completerHighlighted)
+        self.__completer.activated[QModelIndex].connect(self.__completerActivated)
+        self.__completer.highlighted[QModelIndex].connect(self.__completerHighlighted)
         self.__enginesMenu.aboutToShow.connect(self.__showEnginesMenu)
         
         self.__suggestionsItem = None
@@ -115,7 +112,7 @@ class HelpWebSearchWidget(QWidget):
             self.__setupCompleterMenu()
         
         url = self.__openSearchManager.currentEngine().searchUrl(searchText)
-        self.emit(SIGNAL("search"), url)
+        self.search.emit(url)
     
     def __setupCompleterMenu(self):
         """
@@ -204,8 +201,7 @@ class HelpWebSearchWidget(QWidget):
                 self.__suggestTimer = QTimer(self)
                 self.__suggestTimer.setSingleShot(True)
                 self.__suggestTimer.setInterval(200)
-                self.connect(self.__suggestTimer, SIGNAL("timeout()"), 
-                             self.__getSuggestions)
+                self.__suggestTimer.timeout.connect(self.__getSuggestions)
             self.__suggestTimer.start()
         else:
             self.__completer.setCompletionPrefix(txt)
@@ -359,20 +355,16 @@ class HelpWebSearchWidget(QWidget):
         """
         if self.__openSearchManager.engineExists(self.__currentEngine):
             oldEngine = self.__openSearchManager.engine(self.__currentEngine)
-            self.disconnect(oldEngine, SIGNAL("imageChanged()"), 
-                            self.__engineImageChanged)
+            oldEngine.imageChanged.disconnect(self.__engineImageChanged)
             if self.__suggestionsEnabled:
-                self.disconnect(oldEngine, SIGNAL("suggestions(const QStringList&)"), 
-                                self.__newSuggestions)
+                oldEngine.suggestions.disconnect(self.__newSuggestions)
         
         newEngine = self.__openSearchManager.currentEngine()
         if newEngine.networkAccessManager() is None:
             newEngine.setNetworkAccessManager(self.mw.networkAccessManager())
-        self.connect(newEngine, SIGNAL("imageChanged()"), 
-                     self.__engineImageChanged)
+        newEngine.imageChanged.connect(self.__engineImageChanged)
         if self.__suggestionsEnabled:
-            self.connect(newEngine, SIGNAL("suggestions(const QStringList&)"), 
-                         self.__newSuggestions)
+            newEngine.suggestions.connect(self.__newSuggestions)
         
         self.__searchEdit.setInactiveText(self.__openSearchManager.currentEngineName())
         self.__currentEngine = self.__openSearchManager.currentEngineName()

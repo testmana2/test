@@ -207,6 +207,9 @@ class HistoryMenu(E5ModelMenu):
             tab
     @signal newUrl(const QUrl&, const QString&) emitted to open a URL in a new tab
     """
+    openUrl = pyqtSignal(QUrl, str)
+    newUrl = pyqtSignal(QUrl, str)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -221,7 +224,7 @@ class HistoryMenu(E5ModelMenu):
         
         self.setMaxRows(7)
         
-        self.connect(self, SIGNAL("activated(const QModelIndex&)"), self.__activated)
+        self.activated.connect(self.__activated)
         self.setStatusBarTextRole(HistoryModel.UrlStringRole)
     
     def __activated(self, idx):
@@ -231,11 +234,11 @@ class HistoryMenu(E5ModelMenu):
         @param idx index of the activated item (QModelIndex)
         """
         if self._keyboardModifiers & Qt.ControlModifier:
-            self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
+            self.newUrl.emit(
                       idx.data(HistoryModel.UrlRole), 
                       idx.data(HistoryModel.TitleRole))
         else:
-            self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
+            self.openUrl.emit(
                       idx.data(HistoryModel.UrlRole), 
                       idx.data(HistoryModel.TitleRole))
     
@@ -290,10 +293,8 @@ class HistoryMenu(E5ModelMenu):
         """
         dlg = HistoryDialog(self)
         dlg.setAttribute(Qt.WA_DeleteOnClose)
-        self.connect(dlg,  SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                     self, SIGNAL("newUrl(const QUrl&, const QString&)"))
-        self.connect(dlg,  SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                     self, SIGNAL("openUrl(const QUrl&, const QString&)"))
+        dlg.newUrl.connect(self.newUrl)
+        dlg.openUrl.connect(self.openUrl)
         dlg.show()
     
     def __clearHistoryDialog(self):

@@ -219,35 +219,19 @@ class HistoryTreeModel(QAbstractProxyModel):
         @param sourceModel reference to the source model (QAbstractItemModel)
         """
         if self.sourceModel() is not None:
-            self.disconnect(self.sourceModel(), 
-                            SIGNAL("modelReset()"), 
-                            self.__sourceReset)
-            self.disconnect(self.sourceModel(), 
-                            SIGNAL("layoutChanged()"), 
-                            self.__sourceReset)
-            self.disconnect(self.sourceModel(), 
-                            SIGNAL("rowsInserted(const QModelIndex &, int, int)"), 
-                            self.__sourceRowsInserted)
-            self.disconnect(self.sourceModel(), 
-                            SIGNAL("rowsRemoved(const QModelIndex &, int, int)"), 
-                            self.__sourceRowsRemoved)
+            self.sourceModel().modelReset.disconnect(self.__sourceReset)
+            self.sourceModel().layoutChanged.disconnect(self.__sourceReset)
+            self.sourceModel().rowsInserted.disconnect(self.__sourceRowsInserted)
+            self.sourceModel().rowsRemoved.disconnect(self.__sourceRowsRemoved)
         
         QAbstractProxyModel.setSourceModel(self, sourceModel)
         
         if self.sourceModel() is not None:
             self.__loaded = False
-            self.connect(self.sourceModel(), 
-                         SIGNAL("modelReset()"), 
-                         self.__sourceReset)
-            self.connect(self.sourceModel(), 
-                         SIGNAL("layoutChanged()"), 
-                         self.__sourceReset)
-            self.connect(self.sourceModel(), 
-                         SIGNAL("rowsInserted(const QModelIndex &, int, int)"), 
-                         self.__sourceRowsInserted)
-            self.connect(self.sourceModel(), 
-                         SIGNAL("rowsRemoved(const QModelIndex &, int, int)"), 
-                         self.__sourceRowsRemoved)
+            self.sourceModel().modelReset.connect(self.__sourceReset)
+            self.sourceModel().layoutChanged.connect(self.__sourceReset)
+            self.sourceModel().rowsInserted.connect(self.__sourceRowsInserted)
+            self.sourceModel().rowsRemoved.connect(self.__sourceRowsRemoved)
         
         self.reset()
     

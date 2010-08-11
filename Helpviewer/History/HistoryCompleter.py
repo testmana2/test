@@ -144,8 +144,7 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         self.__isValid = valid
         
         # tell the history completer that the model has changed
-        self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
-                  self.index(0, 0), self.index(0, self.rowCount() - 1))
+        self.dataChanged.emit(self.index(0, 0), self.index(0, self.rowCount() - 1))
     
     def filterAcceptsRow(self, sourceRow, sourceParent):
         """
@@ -230,7 +229,7 @@ class HistoryCompleter(QCompleter):
         self.__searchString = ""
         self.__filterTimer = QTimer(self)
         self.__filterTimer.setSingleShot(True)
-        self.connect(self.__filterTimer, SIGNAL("timeout()"), self.__updateFilter)
+        self.__filterTimer.timeout.connect(self.__updateFilter)
     
     def pathFromIndex(self, idx):
         """

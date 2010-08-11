@@ -26,6 +26,9 @@ class OpenSearchEngine(QObject):
     @signal suggestions(const QStringList&) emitted after the suggestions have 
             been received
     """
+    imageChanged = pyqtSignal()
+    suggestions = pyqtSignal(list)
+    
     loc = Preferences.getUILanguage()
     if loc == "System":
         loc = QLocale.system().name()

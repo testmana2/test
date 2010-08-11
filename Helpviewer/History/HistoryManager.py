@@ -82,6 +82,12 @@ class HistoryManager(QWebHistoryInterface):
     @signal entryRemoved emitted after a history entry has been removed
     @signal entryUpdated(int) emitted after a history entry has been updated
     """
+    historyCleared = pyqtSignal()
+    historyReset = pyqtSignal()
+    entryAdded = pyqtSignal(HistoryEntry)
+    entryRemoved = pyqtSignal(HistoryEntry)
+    entryUpdated = pyqtSignal(int)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -97,18 +103,14 @@ class HistoryManager(QWebHistoryInterface):
         
         self.__expiredTimer = QTimer(self)
         self.__expiredTimer.setSingleShot(True)
-        self.connect(self.__expiredTimer, SIGNAL("timeout()"), 
-                     self.__checkForExpired)
+        self.__expiredTimer.timeout.connect(self.__checkForExpired)
         
         self.__frequencyTimer = QTimer(self)
         self.__frequencyTimer.setSingleShot(True)
-        self.connect(self.__frequencyTimer, SIGNAL("timeout()"), 
-                     self.__refreshFrequencies)
+        self.__frequencyTimer.timeout.connect(self.__refreshFrequencies)
         
-        self.connect(self, SIGNAL("entryAdded"), 
-                     self.__saveTimer.changeOccurred)
-        self.connect(self, SIGNAL("entryRemoved"), 
-                     self.__saveTimer.changeOccurred)
+        self.entryAdded.connect(self.__saveTimer.changeOccurred)
+        self.entryRemoved.connect(self.__saveTimer.changeOccurred)
         
         self.__load()
         
@@ -158,7 +160,7 @@ class HistoryManager(QWebHistoryInterface):
         else:
             self.__lastSavedUrl = ""
             self.__saveTimer.changeOccurred()
-        self.emit(SIGNAL("historyReset()"))
+        self.historyReset.emit()
     
     def historyContains(self, url):
         """
@@ -180,7 +182,7 @@ class HistoryManager(QWebHistoryInterface):
             return
         
         self.__history.insert(0, itm)
-        self.emit(SIGNAL("entryAdded"), itm)
+        self.entryAdded.emit(itm)
         if len(self.__history) == 1:
             self.__checkForExpired()
     
@@ -192,7 +194,7 @@ class HistoryManager(QWebHistoryInterface):
         """
         self.__lastSavedUrl = ""
         self.__history.remove(itm)
-        self.emit(SIGNAL("entryRemoved"), itm)
+        self.entryRemoved.emit(itm)
     
     def addHistoryEntry(self, url):
         """
@@ -220,7 +222,7 @@ class HistoryManager(QWebHistoryInterface):
                 self.__saveTimer.changeOccurred()
                 if not self.__lastSavedUrl:
                     self.__lastSavedUrl = self.__history[index].url
-                self.emit(SIGNAL("entryUpdated(int)"), index)
+                self.entryUpdated.emit(index)
                 break
     
     def removeHistoryEntry(self, url, title = ""):
@@ -282,7 +284,7 @@ class HistoryManager(QWebHistoryInterface):
             
             itm = self.__history.pop(-1)
             self.__lastSavedUrl = ""
-            self.emit(SIGNAL("entryRemoved"), itm)
+            self.entryRemoved.emit(itm)
         self.__saveTimer.saveIfNeccessary()
         
         if nextTimeout > 0:
@@ -323,8 +325,8 @@ class HistoryManager(QWebHistoryInterface):
         self.__lastSavedUrl = ""
         self.__saveTimer.changeOccurred()
         self.__saveTimer.saveIfNeccessary()
-        self.emit(SIGNAL("historyReset()"))
-        self.emit(SIGNAL("historyCleared()"))
+        self.historyReset.emit()
+        self.historyCleared.emit()
     
     def __load(self):
         """

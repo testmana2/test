@@ -27,6 +27,9 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
             tab
     @signal newUrl(const QUrl&, const QString&) emitted to open a URL in a new tab
     """
+    openUrl = pyqtSignal(QUrl, str)
+    newUrl = pyqtSignal(QUrl, str)
+    
     def __init__(self, parent = None, manager = None):
         """
         Constructor
@@ -56,17 +59,15 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         self.historyTree.header().setStretchLastSection(True)
         self.historyTree.setContextMenuPolicy(Qt.CustomContextMenu)
         
-        self.connect(self.historyTree, SIGNAL("activated(const QModelIndex&)"), 
-                     self.__activated)
+        self.historyTree.activated.connect(self.__activated)
         self.historyTree.customContextMenuRequested.connect(
             self.__customContextMenuRequested)
         
-        self.connect(self.searchEdit, SIGNAL("textChanged(QString)"), 
-                     self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
         self.removeButton.clicked[()].connect(self.historyTree.removeSelected)
         self.removeAllButton.clicked[()].connect(self.__historyManager.clear)
         
-        self.connect(self.__proxyModel, SIGNAL("modelReset()"), self.__modelReset)
+        self.__proxyModel.modelReset.connect(self.__modelReset)
     
     def __modelReset(self):
         """
@@ -119,13 +120,13 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         """
         idx = self.historyTree.currentIndex()
         if newTab:
-            self.emit(SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                      idx.data(HistoryModel.UrlRole), 
-                      idx.data(HistoryModel.TitleRole))
+            self.newUrl.emit(
+                idx.data(HistoryModel.UrlRole), 
+                idx.data(HistoryModel.TitleRole))
         else:
-            self.emit(SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                      idx.data(HistoryModel.UrlRole), 
-                      idx.data(HistoryModel.TitleRole))
+            self.openUrl.emit(
+                idx.data(HistoryModel.UrlRole), 
+                idx.data(HistoryModel.TitleRole))
     
     def __copyHistory(self):
         """

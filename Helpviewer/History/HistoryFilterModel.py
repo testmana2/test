@@ -116,35 +116,19 @@ class HistoryFilterModel(QAbstractProxyModel):
         @param sourceModel reference to the source model (QAbstractItemModel)
         """
         if self.sourceModel() is not None:
-            self.disconnect(self.sourceModel(), 
-                            SIGNAL("modelReset()"), 
-                            self.__sourceReset)
-            self.disconnect(self.sourceModel(), 
-                            SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"),
-                            self.__sourceDataChanged)
-            self.disconnect(self.sourceModel(), 
-                            SIGNAL("rowsInserted(const QModelIndex &, int, int)"), 
-                            self.__sourceRowsInserted)
-            self.disconnect(self.sourceModel(), 
-                            SIGNAL("rowsRemoved(const QModelIndex &, int, int)"), 
-                            self.__sourceRowsRemoved)
+            self.sourceModel().modelReset.disconnect(self.__sourceReset)
+            self.sourceModel().dataChanged.disconnect(self.__sourceDataChanged)
+            self.sourceModel().rowsInserted.disconnect(self.__sourceRowsInserted)
+            self.sourceModel().rowsRemoved.disconnect(self.__sourceRowsRemoved)
         
         QAbstractProxyModel.setSourceModel(self, sourceModel)
         
         if self.sourceModel() is not None:
             self.__loaded = False
-            self.connect(self.sourceModel(), 
-                         SIGNAL("modelReset()"), 
-                         self.__sourceReset)
-            self.connect(self.sourceModel(), 
-                         SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"),
-                         self.__sourceDataChanged)
-            self.connect(self.sourceModel(), 
-                         SIGNAL("rowsInserted(const QModelIndex &, int, int)"), 
-                         self.__sourceRowsInserted)
-            self.connect(self.sourceModel(), 
-                         SIGNAL("rowsRemoved(const QModelIndex &, int, int)"), 
-                         self.__sourceRowsRemoved)
+            self.sourceModel().modelReset.connect(self.__sourceReset)
+            self.sourceModel().dataChanged.connect(self.__sourceDataChanged)
+            self.sourceModel().rowsInserted.connect(self.__sourceRowsInserted)
+            self.sourceModel().rowsRemoved.connect(self.__sourceRowsRemoved)
     
     def __sourceDataChanged(self, topLeft, bottomRight):
         """
@@ -153,8 +137,8 @@ class HistoryFilterModel(QAbstractProxyModel):
         @param topLeft index of top left data element (QModelIndex)
         @param bottomRight index of bottom right data element (QModelIndex)
         """
-        self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
-                  self.mapFromSource(topLeft), self.mapFromSource(bottomRight))
+        self.dataChanged.emit(
+            self.mapFromSource(topLeft), self.mapFromSource(bottomRight))
     
     def headerData(self, section, orientation, role = Qt.DisplayRole):
         """
@@ -339,18 +323,14 @@ class HistoryFilterModel(QAbstractProxyModel):
             return False
         
         lastRow = row + count - 1
-        self.disconnect(self.sourceModel(), 
-                        SIGNAL("rowsRemoved(const QModelIndex &, int, int)"), 
-                        self.__sourceRowsRemoved)
+        self.sourceModel().rowsRemoved.disconnect(self.__sourceRowsRemoved)
         self.beginRemoveRows(parent, row, lastRow)
         oldCount = self.rowCount()
         start = self.sourceModel().rowCount() - self.__filteredRows[row].tailOffset
         end = self.sourceModel().rowCount() - self.__filteredRows[lastRow].tailOffset
         self.sourceModel().removeRows(start, end - start + 1)
         self.endRemoveRows()
-        self.connect(self.sourceModel(), 
-                     SIGNAL("rowsRemoved(const QModelIndex &, int, int)"), 
-                     self.__sourceRowsRemoved)
+        self.sourceModel().rowsRemoved.connect(self.__sourceRowsRemoved)
         self.__loaded = False
         if oldCount - count != self.rowCount():
             self.reset()

@@ -38,14 +38,10 @@ class HistoryModel(QAbstractTableModel):
             self.trUtf8("Address"), 
         ]
         
-        self.connect(self.__historyManager, SIGNAL("historyReset()"), 
-                     self.historyReset)
-        self.connect(self.__historyManager, SIGNAL("entryRemoved"), 
-                     self.historyReset)
-        self.connect(self.__historyManager, SIGNAL("entryAdded"), 
-                     self.entryAdded)
-        self.connect(self.__historyManager, SIGNAL("entryUpdated(int)"), 
-                     self.entryUpdated)
+        self.__historyManager.historyReset.connect(self.historyReset)
+        self.__historyManager.entryRemoved.connect(self.historyReset)
+        self.__historyManager.entryAdded.connect(self.entryAdded)
+        self.__historyManager.entryUpdated.connect(self.entryUpdated)
     
     def historyReset(self):
         """
@@ -67,8 +63,7 @@ class HistoryModel(QAbstractTableModel):
         @param row row number of the updated entry (integer)
         """
         idx = self.index(row, 0)
-        self.emit(SIGNAL("dataChanged(const QModelIndex&, const QModelIndex&)"), 
-            idx, idx)
+        self.dataChanged.emit(idx, idx)
     
     def headerData(self, section, orientation, role = Qt.DisplayRole):
         """
@@ -161,10 +156,8 @@ class HistoryModel(QAbstractTableModel):
         lst = self.__historyManager.history()[:]
         for index in range(lastRow, row - 1, -1):
             del lst[index]
-        self.disconnect(self.__historyManager, SIGNAL("historyReset()"), 
-                        self.historyReset)
+        self.__historyManager.historyReset.disconnect(self.historyReset)
         self.__historyManager.setHistory(lst)
-        self.connect(self.__historyManager, SIGNAL("historyReset()"), 
-                     self.historyReset)
+        self.__historyManager.historyReset.connect(self.historyReset)
         self.endRemoveRows()
         return True
