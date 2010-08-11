@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Graphics.UMLItem</title>
+<style>
+body {
+    background:white;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #4FA4FF; }
+h2 { color: white; background: #4FA4FF; }
+h3 { color: white; background: #00557F; }
+h4 { color: white; background: #00557F; }
+    
+a { color: #AA5500; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Graphics.UMLItem</h1>
+<p>
+Module implementing the UMLWidget base class.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#UMLItem">UMLItem</a></td>
+<td>Class implementing the UMLItem base class.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="UMLItem" ID="UMLItem"></a>
+<h2>UMLItem</h2>
+<p>
+    Class implementing the UMLItem base class.
+</p>
+<h3>Derived from</h3>
+QGraphicsRectItem
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#UMLItem.__init__">UMLItem</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#UMLItem.addAssociation">addAssociation</a></td>
+<td>Method to add an association to this widget.</td>
+</tr><tr>
+<td><a href="#UMLItem.adjustAssociations">adjustAssociations</a></td>
+<td>Method to adjust the associations to widget movements.</td>
+</tr><tr>
+<td><a href="#UMLItem.itemChange">itemChange</a></td>
+<td>Protected method called when an items state changes.</td>
+</tr><tr>
+<td><a href="#UMLItem.moveBy">moveBy</a></td>
+<td>Overriden method to move the widget relative.</td>
+</tr><tr>
+<td><a href="#UMLItem.paint">paint</a></td>
+<td>Public method to paint the item in local coordinates.</td>
+</tr><tr>
+<td><a href="#UMLItem.removeAssociation">removeAssociation</a></td>
+<td>Method to remove an association to this widget.</td>
+</tr><tr>
+<td><a href="#UMLItem.removeAssociations">removeAssociations</a></td>
+<td>Method to remove all associations of this widget.</td>
+</tr><tr>
+<td><a href="#UMLItem.setPos">setPos</a></td>
+<td>Overriden method to set the items position.</td>
+</tr><tr>
+<td><a href="#UMLItem.setSize">setSize</a></td>
+<td>Public method to set the rectangles size.</td>
+</tr>
+</table>
+<a NAME="UMLItem.__init__" ID="UMLItem.__init__"></a>
+<h4>UMLItem (Constructor)</h4>
+<b>UMLItem</b>(<i>x = 0, y = 0, rounded = False, parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>x</i></dt>
+<dd>
+x-coordinate (integer)
+</dd><dt><i>y</i></dt>
+<dd>
+y-coordinate (integer)
+</dd><dt><i>rounded</i></dt>
+<dd>
+flag indicating a rounded corner (boolean)
+</dd><dt><i>parent=</i></dt>
+<dd>
+reference to the parent object (QGraphicsItem)
+</dd>
+</dl><a NAME="UMLItem.addAssociation" ID="UMLItem.addAssociation"></a>
+<h4>UMLItem.addAssociation</h4>
+<b>addAssociation</b>(<i>assoc</i>)
+<p>
+        Method to add an association to this widget.
+</p><dl>
+<dt><i>assoc</i></dt>
+<dd>
+association to be added (AssociationWidget)
+</dd>
+</dl><a NAME="UMLItem.adjustAssociations" ID="UMLItem.adjustAssociations"></a>
+<h4>UMLItem.adjustAssociations</h4>
+<b>adjustAssociations</b>(<i></i>)
+<p>
+        Method to adjust the associations to widget movements.
+</p><a NAME="UMLItem.itemChange" ID="UMLItem.itemChange"></a>
+<h4>UMLItem.itemChange</h4>
+<b>itemChange</b>(<i>change, value</i>)
+<p>
+        Protected method called when an items state changes.
+</p><dl>
+<dt><i>change</i></dt>
+<dd>
+the item's change (QGraphicsItem.GraphicsItemChange)
+</dd><dt><i>value</i></dt>
+<dd>
+the value of the change
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+adjusted values
+</dd>
+</dl><a NAME="UMLItem.moveBy" ID="UMLItem.moveBy"></a>
+<h4>UMLItem.moveBy</h4>
+<b>moveBy</b>(<i>dx, dy</i>)
+<p>
+        Overriden method to move the widget relative.
+</p><dl>
+<dt><i>dx</i></dt>
+<dd>
+relative movement in x-direction (float)
+</dd><dt><i>dy</i></dt>
+<dd>
+relative movement in y-direction (float)
+</dd>
+</dl><a NAME="UMLItem.paint" ID="UMLItem.paint"></a>
+<h4>UMLItem.paint</h4>
+<b>paint</b>(<i>painter, option, widget = None</i>)
+<p>
+        Public method to paint the item in local coordinates.
+</p><dl>
+<dt><i>painter</i></dt>
+<dd>
+reference to the painter object (QPainter)
+</dd><dt><i>option</i></dt>
+<dd>
+style options (QStyleOptionGraphicsItem)
+</dd><dt><i>widget</i></dt>
+<dd>
+optional reference to the widget painted on (QWidget)
+</dd>
+</dl><a NAME="UMLItem.removeAssociation" ID="UMLItem.removeAssociation"></a>
+<h4>UMLItem.removeAssociation</h4>
+<b>removeAssociation</b>(<i>assoc</i>)
+<p>
+        Method to remove an association to this widget.
+</p><dl>
+<dt><i>assoc</i></dt>
+<dd>
+association to be removed (AssociationWidget)
+</dd>
+</dl><a NAME="UMLItem.removeAssociations" ID="UMLItem.removeAssociations"></a>
+<h4>UMLItem.removeAssociations</h4>
+<b>removeAssociations</b>(<i></i>)
+<p>
+        Method to remove all associations of this widget.
+</p><a NAME="UMLItem.setPos" ID="UMLItem.setPos"></a>
+<h4>UMLItem.setPos</h4>
+<b>setPos</b>(<i>x, y</i>)
+<p>
+        Overriden method to set the items position.
+</p><dl>
+<dt><i>x</i></dt>
+<dd>
+absolute x-position (float)
+</dd><dt><i>y</i></dt>
+<dd>
+absolute y-position (float)
+</dd>
+</dl><a NAME="UMLItem.setSize" ID="UMLItem.setSize"></a>
+<h4>UMLItem.setSize</h4>
+<b>setSize</b>(<i>width, height</i>)
+<p>
+        Public method to set the rectangles size.
+</p><dl>
+<dt><i>width</i></dt>
+<dd>
+width of the rectangle (float)
+</dd><dt><i>height</i></dt>
+<dd>
+height of the rectangle (float)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

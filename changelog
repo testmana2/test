@@ -1,0 +1,58 @@
+Change Log
+----------
+Version 5.0.1:
+- bug fixes
+- added code to adjust the cursor flash time of the editor to the global settings
+
+Version 5.0.0:
+- first formal release of the Python3 variant of eric
+
+Version 5.0.0-RC1:
+- bug fixes
+
+Version 5.0-snapshot-20100523:
+- bug fixes
+- added code to save the editor zoom factor in the session file
+- added code to configure the zoom factor a file is opened with
+- added code to update the file browser window (mostly) automatically
+- added code to update the Others tab of the project browser (mostly) automatically
+- added a menu to the highlighting styles config page to change individual
+  aspects of a font only
+- changed code to improve development on multiple platforms
+- added code to show the keyboard shortcut to the tooltip of an action
+- changed the Find in Files dialog to remember the history of the search string,
+  replace string and the search directory
+- added code to enhance the proxy configuration and removed the usage of QHttp
+
+Version 5.0-snapshot-20100508:
+- bug fixes
+- added administration actions to the Mercurial plug-in
+- added changegroup related actions to the Mercurial plug-in
+- added bisect commands to the Mercurial plug-in
+
+Version 5.0-snapshot-20100418:
+- bug fixes
+- added plugin for Mercurial version control system
+
+Version 5.0-snapshot-20100401:
+- bug fixes
+- added installation of a .desktop file for Linux systems
+- added shared editor functions and a simple chat system
+
+Version 5.0-snapshot-20100306:
+- bug fixes
+- added code to indicate directories and files being symbolic links
+- extendend the predefined template variables by "project_path",
+  "clipboard", "cur_select", "insertion", "select_start" and
+  "select_end"
+- added the auto fork options to the run dialog
+- added capability to change the keywords of a syntax highlighter
+
+Version 5.0-snapshot-20100206:
+- bug fixes
+- added code to use the PYTHONPATH environment setting in the debuggers
+- added my own Python3 port of pyflakes
+- integrated py3flakes into syntax checker dialog and editor
+
+Version 5.0-snapshot-20100116:
+- first snapshot of eric5
