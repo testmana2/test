@@ -26,7 +26,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
         QAbstractTableModel.__init__(self, parent)
         
         self.__manager = manager
-        self.connect(manager, SIGNAL("changed()"), self.__enginesChanged)
+        manager.changed.connect(self.__enginesChanged)
         
         self.__headers = [
             self.trUtf8("Name"), 

@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QDialog, QMessageBox
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
+from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:
     from PyQt4.QtNetwork import QSsl, QSslCertificate, QSslConfiguration, QSslSocket
     SSL_AVAILABLE = True
@@ -46,6 +46,9 @@ class NetworkAccessManager(QNetworkAccessManager):
     @signal requestCreated(QNetworkAccessManager::Operation, const QNetworkRequest&, QNetworkReply*)
         emitted after the request has been created
     """
+    requestCreated = pyqtSignal(
+        QNetworkAccessManager.Operation, QNetworkRequest, QNetworkReply)
+    
     def __init__(self, engine, parent = None):
         """
         Constructor
@@ -75,16 +78,10 @@ class NetworkAccessManager(QNetworkAccessManager):
             sslCfg.setCaCertificates(caList)
             QSslConfiguration.setDefaultConfiguration(sslCfg)
             
-            self.connect(self, 
-                SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
-                self.__sslErrors)
+            self.sslErrors.connect(self.__sslErrors)
         
-        self.connect(self, 
-            SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
-            proxyAuthenticationRequired)
-        self.connect(self, 
-            SIGNAL('authenticationRequired(QNetworkReply *, QAuthenticator *)'), 
-            self.__authenticationRequired)
+        self.proxyAuthenticationRequired.connect(proxyAuthenticationRequired)
+        self.authenticationRequired.connect(self.__authenticationRequired)
         
         # register scheme handlers
         self.setSchemeHandler("qthelp", QtHelpAccessHandler(engine, self))
@@ -144,8 +141,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                 return reply
         
         reply = QNetworkAccessManager.createRequest(self, op, req, outgoingData)
-        self.emit(SIGNAL("requestCreated(QNetworkAccessManager::Operation, const QNetworkRequest&, QNetworkReply*)"), 
-                  op, req, reply)
+        self.requestCreated.emit(op, req, reply)
         
         return reply
     

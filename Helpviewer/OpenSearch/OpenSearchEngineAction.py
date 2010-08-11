@@ -7,7 +7,7 @@
 Module implementing a QAction subclass for open search.
 """
 
-from PyQt4.QtCore import SIGNAL, QUrl
+from PyQt4.QtCore import QUrl
 from PyQt4.QtGui import QPixmap, QIcon, QAction
 
 import Helpviewer.HelpWindow
@@ -33,7 +33,7 @@ class OpenSearchEngineAction(QAction):
         self.setText(engine.name())
         self.__imageChanged()
         
-        self.connect(engine, SIGNAL("imageChanged()"), self.__imageChanged)
+        engine.imageChanged.connect(self.__imageChanged)
     
     def __imageChanged(self):
         """

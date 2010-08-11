@@ -8,7 +8,7 @@ Module implementing a dialog for the configuration of search engines.
 """
 
 from PyQt4.QtGui import QDialog, QFileDialog, QMessageBox
-from PyQt4.QtCore import pyqtSlot, SIGNAL
+from PyQt4.QtCore import pyqtSlot
 
 from .OpenSearchEngineModel import OpenSearchEngineModel
 from .OpenSearchEditDialog import OpenSearchEditDialog
@@ -39,9 +39,8 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         self.enginesTable.verticalHeader().setDefaultSectionSize(
             1.2 * self.fontMetrics().height())
         
-        self.connect(self.enginesTable.selectionModel(), 
-                     SIGNAL("selectionChanged(const QItemSelection&, const QItemSelection&)"), 
-                     self.__selectionChanged)
+        self.enginesTable.selectionModel().selectionChanged.connect(
+            self.__selectionChanged)
         self.editButton.setEnabled(False)
     
     @pyqtSlot()

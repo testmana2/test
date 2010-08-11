@@ -23,7 +23,7 @@ class PasswordModel(QAbstractTableModel):
         QAbstractTableModel.__init__(self, parent)
         
         self.__manager = manager
-        self.connect(manager, SIGNAL("changed()"), self.__passwordsChanged)
+        manager.changed.connect(self.__passwordsChanged)
         
         self.__headers = [
             self.trUtf8("Website"), 

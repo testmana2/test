@@ -45,8 +45,7 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
             PasswordModel(Helpviewer.HelpWindow.HelpWindow.passwordManager(), self)
         self.__proxyModel = QSortFilterProxyModel(self)
         self.__proxyModel.setSourceModel(self.__passwordModel)
-        self.connect(self.searchEdit, SIGNAL("textChanged(QString)"), 
-                     self.__proxyModel.setFilterFixedString)
+        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
         self.passwordsTable.setModel(self.__proxyModel)
         
         fm = QFontMetrics(QFont())

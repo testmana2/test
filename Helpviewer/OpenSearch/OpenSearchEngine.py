@@ -336,7 +336,7 @@ class OpenSearchEngine(QObject):
             self.__image = QImage()
         else:
             self.__image.loadFromData(response)
-        self.emit(SIGNAL("imageChanged()"))
+        self.imageChanged.emit()
     
     def image(self):
         """
@@ -363,7 +363,7 @@ class OpenSearchEngine(QObject):
                                 .format(bytes(imageBuffer.buffer().toBase64()).decode())
         
         self.__image = QImage(image)
-        self.emit(SIGNAL("imageChanged()"))
+        self.imageChanged.emit()
     
     def isValid(self):
         """
@@ -459,7 +459,7 @@ class OpenSearchEngine(QObject):
         except IndexError:
             return
         
-        self.emit(SIGNAL("suggestions(const QStringList&)"), suggestions)
+        self.suggestions.emit(suggestions)
     
     def networkAccessManager(self):
         """

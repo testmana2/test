@@ -7,7 +7,6 @@
 Module implementing a network access manager proxy for web pages.
 """
 
-from PyQt4.QtCore import SIGNAL
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 
 class NetworkAccessManagerProxy(QNetworkAccessManager):
@@ -48,18 +47,11 @@ class NetworkAccessManagerProxy(QNetworkAccessManager):
         # do not steal ownership
         self.cookieJar().setParent(self.__class__.primaryManager)
         
-        self.connect(self, 
-            SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
-            self.__class__.primaryManager, 
-            SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'))
-        self.connect(self, 
-            SIGNAL('proxyAuthenticationRequired(const QNetworkProxy &, QAuthenticator *)'),
-            self.__class__.primaryManager, 
-            SIGNAL('proxyAuthenticationRequired(const QNetworkProxy &, QAuthenticator *)'))
-        self.connect(self, 
-            SIGNAL('authenticationRequired(QNetworkReply *, QAuthenticator *)'), 
-            self.__class__.primaryManager, 
-            SIGNAL('authenticationRequired(QNetworkReply *, QAuthenticator *)'))
+        self.sslErrors.connect(self.__class__.primaryManager.sslErrors)
+        self.proxyAuthenticationRequired.connect(
+            self.__class__.primaryManager.proxyAuthenticationRequired)
+        self.authenticationRequired.connect(
+            self.__class__.primaryManager.authenticationRequired)
         self.finished[QNetworkReply].connect(self.__class__.primaryManager.finished)
     
     def createRequest(self, op, request, outgoingData = None):
