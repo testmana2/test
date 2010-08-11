@@ -217,7 +217,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.__enableFindButton()
         
     @pyqtSlot(str)
-    def on_filterEdit_textEdited(self, p0):
+    def on_filterEdit_textEdited(self, text):
         """
         Private slot to handle the textChanged signal of the file filter edit.
         
@@ -266,14 +266,12 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             return
         
         self.__cancelSearch = False
-        self.stopButton.setEnabled(True)
-        self.stopButton.setDefault(True)
-        self.findButton.setEnabled(False)
         
         if self.filterCheckBox.isChecked():
             fileFilter = self.filterEdit.text()
-            fileFilterList = ["^{0}$".format(filter.replace(".", "\.").replace("*", ".*")) \
-                              for filter in fileFilter.split(";")]
+            fileFilterList = \
+                ["^{0}$".format(filter.replace(".", "\.").replace("*", ".*")) \
+                 for filter in fileFilter.split(";")]
             filterRe = re.compile("|".join(fileFilterList))
         
         if self.projectButton.isChecked():
@@ -372,6 +370,11 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.dirCombo.addItems(self.dirHistory)
             Preferences.Prefs.settings.setValue("FindFileDialog/DirectoryHistory", 
                                                 self.dirHistory[:30])
+        
+        # set the button states
+        self.stopButton.setEnabled(True)
+        self.stopButton.setDefault(True)
+        self.findButton.setEnabled(False)
         
         # now go through all the files
         self.__populating = True
