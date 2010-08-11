@@ -56,6 +56,8 @@ class ConfigurationWidget(QWidget):
     
     @signal preferencesChanged emitted after settings have been changed
     """
+    preferencesChanged = pyqtSignal()
+    
     def __init__(self, parent = None, fromEric = True, helpBrowserMode = False):
         """
         Constructor
@@ -555,7 +557,7 @@ class ConfigurationWidget(QWidget):
             page = self.configStack.currentWidget()
             savedState = page.saveState()
             page.save()
-            self.emit(SIGNAL('preferencesChanged'))
+            self.preferencesChanged.emit()
             if savedState is not None:
                 page.setState(savedState)
         
@@ -583,6 +585,8 @@ class ConfigurationDialog(QDialog):
     
     @signal preferencesChanged emitted after settings have been changed
     """
+    preferencesChanged = pyqtSignal()
+    
     def __init__(self, parent = None, name = None, modal = False, 
                  fromEric = True, helpBrowserMode = False):
         """
@@ -612,14 +616,13 @@ class ConfigurationDialog(QDialog):
         
         self.cw.buttonBox.accepted[()].connect(self.accept)
         self.cw.buttonBox.rejected[()].connect(self.reject)
-        self.connect(self.cw, SIGNAL('preferencesChanged'), 
-                     self.__preferencesChanged)
+        self.cw.preferencesChanged.connect(self.__preferencesChanged)
         
     def __preferencesChanged(self):
         """
         Private slot to handle a change of the preferences.
         """
-        self.emit(SIGNAL('preferencesChanged'))
+        self.preferencesChanged.emit()
         
     def showConfigurationPageByName(self, pageName):
         """

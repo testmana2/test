@@ -76,6 +76,8 @@ class PasswordManager(QObject):
     
     @signal changed() emitted to indicate a change
     """
+    changed = pyqtSignal()
+    
     SEPARATOR = "===================="
     FORMS = "=====FORMS====="
     NEVER = "=====NEVER====="
@@ -94,7 +96,7 @@ class PasswordManager(QObject):
         self.__loaded = False
         self.__saveTimer = AutoSaver(self, self.save)
         
-        self.connect(self, SIGNAL("changed()"), self.__saveTimer.changeOccurred)
+        self.changed.connect(self.__saveTimer.changeOccurred)
     
     def clear(self):
         """
@@ -109,7 +111,7 @@ class PasswordManager(QObject):
         self.__saveTimer.changeOccurred()
         self.__saveTimer.saveIfNeccessary()
         
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
     
     def getLogin(self, url, realm):
         """
@@ -142,7 +144,7 @@ class PasswordManager(QObject):
         
         key = self.__createKey(url, realm)
         self.__logins[key] = (username, Utilities.pwEncode(password))
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
     
     def __createKey(self, url, realm):
         """
@@ -266,7 +268,7 @@ class PasswordManager(QObject):
             del self.__logins[site]
             if site in self.__loginForms:
                 del self.__loginForms[site]
-            self.emit(SIGNAL("changed()"))
+            self.changed.emit()
     
     def allSiteNames(self):
         """
@@ -403,7 +405,7 @@ class PasswordManager(QObject):
         if user and password:
             self.__logins[key] = (user, Utilities.pwEncode(password))
             self.__loginForms[key] = form
-            self.emit(SIGNAL("changed()"))
+            self.changed.emit()
     
     def __stripUrl(self, url):
         """

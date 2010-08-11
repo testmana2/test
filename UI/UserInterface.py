@@ -171,6 +171,8 @@ class UserInterface(QMainWindow):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    preferencesChanged = pyqtSignal()
+    
     maxFilePathLen = 100
     maxSbFilePathLen = 150
     maxMenuFilePathLen = 75
@@ -415,46 +417,35 @@ class UserInterface(QMainWindow):
         self.connect(self.stderr, SIGNAL('appendStderr'),
                      self.appendToStderr)
         
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.viewmanager.preferencesChanged)
+        self.preferencesChanged.connect(self.viewmanager.preferencesChanged)
         self.connect(self, SIGNAL('reloadAPIs'),
                      self.viewmanager.getAPIsManager().reloadAPIs)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.logViewer.preferencesChanged)
+        self.preferencesChanged.connect(self.logViewer.preferencesChanged)
         self.connect(self, SIGNAL('appendStdout'),
                      self.logViewer.appendToStdout)
         self.connect(self, SIGNAL('appendStderr'),
                      self.logViewer.appendToStderr)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.shell.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.terminal.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.project.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.projectBrowser.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.projectBrowser.psBrowser.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.projectBrowser.pfBrowser.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.projectBrowser.prBrowser.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.projectBrowser.ptBrowser.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.projectBrowser.piBrowser.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.projectBrowser.poBrowser.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.browser.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.taskViewer.handlePreferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.pluginManager.preferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     debugServer.preferencesChanged)
-        self.connect(self, SIGNAL('preferencesChanged'),
-                     self.cooperation.preferencesChanged)
+        self.preferencesChanged.connect(self.shell.handlePreferencesChanged)
+        self.preferencesChanged.connect(self.terminal.handlePreferencesChanged)
+        self.preferencesChanged.connect(self.project.handlePreferencesChanged)
+        self.preferencesChanged.connect(self.projectBrowser.handlePreferencesChanged)
+        self.preferencesChanged.connect(
+            self.projectBrowser.psBrowser.handlePreferencesChanged)
+        self.preferencesChanged.connect(
+            self.projectBrowser.pfBrowser.handlePreferencesChanged)
+        self.preferencesChanged.connect(
+            self.projectBrowser.prBrowser.handlePreferencesChanged)
+        self.preferencesChanged.connect(
+            self.projectBrowser.ptBrowser.handlePreferencesChanged)
+        self.preferencesChanged.connect(
+            self.projectBrowser.piBrowser.handlePreferencesChanged)
+        self.preferencesChanged.connect(
+            self.projectBrowser.poBrowser.handlePreferencesChanged)
+        self.preferencesChanged.connect(self.browser.handlePreferencesChanged)
+        self.preferencesChanged.connect(self.taskViewer.handlePreferencesChanged)
+        self.preferencesChanged.connect(self.pluginManager.preferencesChanged)
+        self.preferencesChanged.connect(debugServer.preferencesChanged)
+        self.preferencesChanged.connect(self.cooperation.preferencesChanged)
         
         self.connect(self.viewmanager, SIGNAL('editorSaved'),
                      self.project.repopulateItem)
@@ -4799,9 +4790,8 @@ class UserInterface(QMainWindow):
             
             if Preferences.getHelp("SingleHelpWindow"):
                 self.helpWindow = help
-                self.connect(self.helpWindow, SIGNAL("helpClosed"), self.__helpClosed)
-                self.connect(self, SIGNAL("preferencesChanged"), 
-                             self.helpWindow.preferencesChanged)
+                self.helpWindow.helpClosed.connect(self.__helpClosed)
+                self.preferencesChanged.connect(self.helpWindow.preferencesChanged)
         elif searchWord is not None:
             self.helpWindow.search(searchWord)
             self.helpWindow.raise_()
@@ -4814,8 +4804,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the helpClosed signal of the help window.
         """
         if Preferences.getHelp("SingleHelpWindow"):
-            self.disconnect(self, SIGNAL("preferencesChanged"), 
-                            self.helpWindow.preferencesChanged)
+            self.preferencesChanged.disconnect(self.helpWindow.preferencesChanged)
             self.helpWindow = None
     
     def __helpViewer(self):
@@ -4841,8 +4830,7 @@ class UserInterface(QMainWindow):
         @param pageName name of the configuration page to show (string)
         """
         dlg = ConfigurationDialog(self, 'Configuration', True)
-        self.connect(dlg, SIGNAL('preferencesChanged'), 
-                     self.__preferencesChanged)
+        dlg.preferencesChanged.connect(self.__preferencesChanged)
         dlg.show()
         if pageName is not None:
             dlg.showConfigurationPageByName(pageName)
@@ -4902,7 +4890,7 @@ class UserInterface(QMainWindow):
         SpellChecker.setDefaultLanguage(
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
         
-        self.emit(SIGNAL('preferencesChanged'))
+        self.preferencesChanged.emit()
         
     def __reloadAPIs(self):
         """

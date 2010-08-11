@@ -52,7 +52,7 @@ class OpenSearchManager(QObject):
         self.__loading = False
         self.__saveTimer = AutoSaver(self, self.save)
         
-        self.connect(self, SIGNAL("changed()"), self.__saveTimer.changeOccurred)
+        self.changed.connect(self.__saveTimer.changeOccurred)
         
         self.load()
     
@@ -80,8 +80,8 @@ class OpenSearchManager(QObject):
             return
         
         self.__current = name
-        self.emit(SIGNAL("currentEngineChanged()"))
-        self.emit(SIGNAL("changed()"))
+        self.currentEngineChanged.emit()
+        self.changed.emit()
     
     def currentEngine(self):
         """
@@ -217,7 +217,7 @@ class OpenSearchManager(QObject):
         engine.setParent(self)
         self.__engines[engine.name()] = engine
         
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
         
         return True
     
@@ -244,7 +244,7 @@ class OpenSearchManager(QObject):
         if name == self.__current:
             self.setCurrentEngineName(list(self.__engines.keys())[0])
         
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
     
     def generateEngineFileName(self, engineName):
         """
@@ -346,7 +346,7 @@ class OpenSearchManager(QObject):
             self.__current = list(self.__engines.keys())[0]
         
         self.__loading = False
-        self.emit(SIGNAL("currentEngineChanged()"))
+        self.currentEngineChanged.emit()
     
     def restoreDefaults(self):
         """
@@ -481,7 +481,7 @@ class OpenSearchManager(QObject):
         else:
             self.__keywords[keyword] = engine
         
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
     
     def keywordsForEngine(self, engine):
         """
@@ -511,10 +511,10 @@ class OpenSearchManager(QObject):
             
             self.__keywords[keyword] = engine
         
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()
     
     def enginesChanged(self):
         """
         Public slot to tell the search engine manager, that something has changed.
         """
-        self.emit(SIGNAL("changed()"))
+        self.changed.emit()

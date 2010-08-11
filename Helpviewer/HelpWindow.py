@@ -114,8 +114,7 @@ class HelpWindow(QMainWindow):
             self.__helpEngine = \
                 QHelpEngine(os.path.join(Utilities.getConfigDir(), 
                                          "browser", "eric5help.qhc"), self)
-            self.connect(self.__helpEngine, SIGNAL("warning(const QString&)"), 
-                         self.__warning)
+            self.__helpEngine.warning.connect(self.__warning)
             self.__helpInstaller = None
             
             # Attributes for WebKit based browser
@@ -123,8 +122,7 @@ class HelpWindow(QMainWindow):
             
             self.tabContextMenuIndex = -1
             self.tabWidget = E5TabWidget(self, dnd = True)
-            self.connect(self.tabWidget, SIGNAL('currentChanged(int)'),
-                self.__currentChanged)
+            self.tabWidget.currentChanged[int].connect(self.__currentChanged)
             self.tabWidget.setTabContextMenuPolicy(Qt.CustomContextMenu)
             self.tabWidget.customTabContextMenuRequested.connect(self.__showContextMenu)
             
@@ -159,10 +157,8 @@ class HelpWindow(QMainWindow):
             self.__indexing = False
             self.__indexingProgress = None
             self.__searchEngine = self.__helpEngine.searchEngine()
-            self.connect(self.__searchEngine, SIGNAL("indexingStarted()"), 
-                         self.__indexingStarted)
-            self.connect(self.__searchEngine, SIGNAL("indexingFinished()"), 
-                         self.__indexingFinished)
+            self.__searchEngine.indexingStarted.connect(self.__indexingStarted)
+            self.__searchEngine.indexingFinished.connect(self.__indexingFinished)
             self.__searchWindow = HelpSearchWidget(self.__searchEngine, self)
             self.__searchDock = QDockWidget(self.trUtf8("Search"), self)
             self.__searchDock.setObjectName("SearchWindow")
@@ -176,8 +172,7 @@ class HelpWindow(QMainWindow):
             
             self.__navigationMenu = QMenu(self)
             self.__navigationMenu.aboutToShow.connect(self.__showNavigationMenu)
-            self.connect(self.__navigationMenu, SIGNAL("triggered(QAction*)"), 
-                         self.__navigationMenuTriggered)
+            self.__navigationMenu.triggered.connect(self.__navigationMenuTriggered)
             
             self.navigationButton = QToolButton(self.tabWidget)
             self.navigationButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))
@@ -197,8 +192,7 @@ class HelpWindow(QMainWindow):
                 self.rightCornerWidgetLayout.addWidget(self.closeButton)
             else:
                 self.tabWidget.setTabsClosable(True)
-                self.connect(self.tabWidget, SIGNAL("tabCloseRequested(int)"), 
-                    self.__closeAt)
+                self.tabWidget.tabCloseRequested.connect(self.__closeAt)
                 self.closeButton = None
             
             self.tabWidget.setCornerWidget(self.rightCornerWidget, Qt.TopRightCorner)
@@ -239,21 +233,15 @@ class HelpWindow(QMainWindow):
             
             # setup connections
             # TOC window
-            self.connect(self.__tocWindow, SIGNAL("linkActivated(const QUrl&)"), 
-                         self.__linkActivated)
-            self.connect(self.__tocWindow, SIGNAL("escapePressed()"), 
-                         self.__activateCurrentBrowser)
+            self.__tocWindow.linkActivated.connect(self.__linkActivated)
+            self.__tocWindow.escapePressed.connect(self.__activateCurrentBrowser)
             # index window
-            self.connect(self.__indexWindow, SIGNAL("linkActivated(const QUrl&)"), 
-                         self.__linkActivated)
+            self.__indexWindow.linkActivated.connect(self.__linkActivated)
             self.__indexWindow.linksActivated.connect(self.__linksActivated)
-            self.connect(self.__indexWindow, SIGNAL("escapePressed()"), 
-                         self.__activateCurrentBrowser)
+            self.__indexWindow.escapePressed.connect(self.__activateCurrentBrowser)
             # search window
-            self.connect(self.__searchWindow, SIGNAL("linkActivated(const QUrl&)"), 
-                         self.__linkActivated)
-            self.connect(self.__searchWindow, SIGNAL("escapePressed()"), 
-                         self.__activateCurrentBrowser)
+            self.__searchWindow.linkActivated.connect(self.__linkActivated)
+            self.__searchWindow.escapePressed.connect(self.__activateCurrentBrowser)
             
             state = Preferences.getHelp("HelpViewerState")
             self.restoreState(state)
@@ -816,8 +804,7 @@ class HelpWindow(QMainWindow):
                     """<b>Zoom text only</b>"""
                     """<p>Zoom text only; pictures remain constant.</p>"""
             ))
-            self.connect(self.zoomTextOnlyAct, SIGNAL('triggered(bool)'), 
-                self.__zoomTextOnly)
+            self.zoomTextOnlyAct.triggered[bool].connect(self.__zoomTextOnly)
             self.__actions.append(self.zoomTextOnlyAct)
         else:
             self.zoomTextOnlyAct = None
@@ -1143,8 +1130,7 @@ class HelpWindow(QMainWindow):
             self.__textEncodingMenu = menu.addMenu(self.trUtf8("Text Encoding"))
             self.__textEncodingMenu.aboutToShow.connect(
                 self.__aboutToShowTextEncodingMenu)
-            self.connect(self.__textEncodingMenu, SIGNAL("triggered(QAction*)"), 
-                         self.__setTextEncoding)
+            self.__textEncodingMenu.triggered.connect(self.__setTextEncoding)
         
         menu = mb.addMenu(self.trUtf8('&Go'))
         menu.setTearOffEnabled(True)
@@ -1160,19 +1146,15 @@ class HelpWindow(QMainWindow):
         self.historyMenu = HistoryMenu(self)
         self.historyMenu.setTearOffEnabled(True)
         self.historyMenu.setTitle(self.trUtf8('H&istory'))
-        self.connect(self.historyMenu, SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                     self.__openUrl)
-        self.connect(self.historyMenu, SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                     self.__openUrlNewTab)
+        self.historyMenu.openUrl.connect(self.__openUrl)
+        self.historyMenu.newUrl.connect(self.__openUrlNewTab)
         mb.addMenu(self.historyMenu)
         
         self.bookmarksMenu = BookmarksMenuBarMenu(self)
         self.bookmarksMenu.setTearOffEnabled(True)
         self.bookmarksMenu.setTitle(self.trUtf8('&Bookmarks'))
-        self.connect(self.bookmarksMenu, SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                     self.__openUrl)
-        self.connect(self.bookmarksMenu, SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                     self.__openUrlNewTab)
+        self.bookmarksMenu.openUrl.connect(self.__openUrl)
+        self.bookmarksMenu.newUrl.connect(self.__openUrlNewTab)
         mb.addMenu(self.bookmarksMenu)
         
         bookmarksActions = []
@@ -1309,10 +1291,8 @@ class HelpWindow(QMainWindow):
             QFontMetrics(QFont()).width("ComboBoxWithEnoughWidth"))
         filtertb.addWidget(QLabel(self.trUtf8("Filtered by: ")))
         filtertb.addWidget(self.filterCombo)
-        self.connect(self.__helpEngine, SIGNAL("setupFinished()"), 
-                     self.__setupFilterCombo)
-        self.connect(self.filterCombo, SIGNAL("activated(const QString&)"), 
-                     self.__filterQtHelpDocumentation)
+        self.__helpEngine.setupFinished.connect(self.__setupFilterCombo)
+        self.filterCombo.activated[str].connect(self.__filterQtHelpDocumentation)
         self.__setupFilterCombo()
         
         settingstb = self.addToolBar(self.trUtf8("Settings"))
@@ -1348,8 +1328,7 @@ class HelpWindow(QMainWindow):
         self.pathCombo.setInsertPolicy(QComboBox.InsertAtTop)
         self.pathCombo.setEditable(1)
         self.pathCombo.setAutoCompletion(True)
-        self.connect(self.pathCombo, SIGNAL('activated(const QString&)'),
-                     self.__pathSelected)
+        self.pathCombo.activated[str].connect(self.__pathSelected)
         self.pathCombo.setWhatsThis(self.trUtf8(
                 """<p>Enter the help file to be displayed directly into this"""
                 """ edit field. Select a previously shown help file from the"""
@@ -1367,8 +1346,7 @@ class HelpWindow(QMainWindow):
         self.__historyCompletionModel.setSourceModel(
             self.historyManager().historyFilterModel())
         self.__historyCompleter = HistoryCompleter(self.__historyCompletionModel, self)
-        self.connect(self.__historyCompleter, SIGNAL("activated(const QString&)"), 
-                     self.__pathSelected)
+        self.__historyCompleter.activated[str].connect(self.__pathSelected)
         self.pathCombo.setCompleter(self.__historyCompleter)
         
         self.privacyLabel = QLabel()
@@ -1381,21 +1359,19 @@ class HelpWindow(QMainWindow):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.searchEdit.sizePolicy().hasHeightForWidth())
         self.searchEdit.setSizePolicy(sizePolicy)
-        self.connect(self.searchEdit, SIGNAL("search"), self.__linkActivated)
+        self.searchEdit.search.connect(self.__linkActivated)
         gotb.addWidget(self.searchEdit)
         
         self.backMenu = QMenu(self)
         self.backMenu.aboutToShow.connect(self.__showBackMenu)
-        self.connect(self.backMenu, SIGNAL("triggered(QAction*)"), 
-                     self.__navigationMenuActionTriggered)
+        self.backMenu.triggered.connect(self.__navigationMenuActionTriggered)
         backButton = gotb.widgetForAction(self.backAct)
         backButton.setMenu(self.backMenu)
         backButton.setPopupMode(QToolButton.MenuButtonPopup)
         
         self.forwardMenu = QMenu(self)
         self.forwardMenu.aboutToShow.connect(self.__showForwardMenu)
-        self.connect(self.forwardMenu, SIGNAL("triggered(QAction*)"), 
-                     self.__navigationMenuActionTriggered)
+        self.forwardMenu.triggered.connect(self.__navigationMenuActionTriggered)
         forwardButton = gotb.widgetForAction(self.forwardAct)
         forwardButton.setMenu(self.forwardMenu)
         forwardButton.setPopupMode(QToolButton.MenuButtonPopup)
@@ -1404,12 +1380,8 @@ class HelpWindow(QMainWindow):
         self.bookmarksToolBar = BookmarksToolBar(bookmarksModel)
         self.bookmarksToolBar.setObjectName("BookmarksToolBar")
         self.bookmarksToolBar.setIconSize(UI.Config.ToolBarIconSize)
-        self.connect(self.bookmarksToolBar, 
-                     SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                     self.__openUrl)
-        self.connect(self.bookmarksToolBar, 
-                     SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                     self.__openUrlNewTab)
+        self.bookmarksToolBar.openUrl.connect(self.__openUrl)
+        self.bookmarksToolBar.newUrl.connect(self.__openUrlNewTab)
         self.addToolBarBreak()
         self.addToolBar(self.bookmarksToolBar)
         
@@ -1746,7 +1718,7 @@ class HelpWindow(QMainWindow):
         
         self.__printPreviewBrowser = browser
         preview = QPrintPreviewDialog(printer, self)
-        self.connect(preview, SIGNAL("paintRequested(QPrinter*)"), self.__printPreview)
+        preview.paintRequested.connect(self.__printPreview)
         preview.exec_()
         
     def __printPreview(self, printer):
@@ -1837,12 +1809,8 @@ class HelpWindow(QMainWindow):
         """
         self.__bookmarksDialog = BookmarksDialog(self)
         self.__bookmarksDialog.setAttribute(Qt.WA_DeleteOnClose)
-        self.connect(self.__bookmarksDialog, 
-                     SIGNAL("openUrl(const QUrl&, const QString&)"), 
-                     self.__openUrl)
-        self.connect(self.__bookmarksDialog, 
-                     SIGNAL("newUrl(const QUrl&, const QString&)"), 
-                     self.__openUrlNewTab)
+        self.__bookmarksDialog.openUrl.connect(self.__openUrl)
+        self.__bookmarksDialog.newUrl.connect(self.__openUrlNewTab)
         self.__bookmarksDialog.show()
         
     def __bookmarkAll(self):
@@ -1926,7 +1894,7 @@ class HelpWindow(QMainWindow):
             Preferences.syncPreferences()
         
         e.accept()
-        self.emit(SIGNAL("helpClosed"))
+        self.helpClosed.emit()
 
     def __backward(self):
         """
@@ -1983,7 +1951,7 @@ class HelpWindow(QMainWindow):
         @param textOnly flag indicating to zoom text only (boolean)
         """
         QWebSettings.globalSettings().setAttribute(QWebSettings.ZoomTextOnly, textOnly)
-        self.emit(SIGNAL("zoomTextOnlyChanged(bool)"), textOnly)
+        self.zoomTextOnlyChanged.emit(textOnly)
     
     def __viewFullScreen(self,):
         """
@@ -2128,7 +2096,7 @@ class HelpWindow(QMainWindow):
         browser = HelpBrowser(self)
         
         browser.sourceChanged.connect(self.__sourceChanged)
-        self.connect(browser, SIGNAL("titleChanged(const QString&)"), self.__titleChanged)
+        browser.titleChanged.connect(self.__titleChanged)
         
         index = self.tabWidget.addTab(browser, self.trUtf8("..."))
         self.tabWidget.setCurrentIndex(index)
@@ -2149,10 +2117,8 @@ class HelpWindow(QMainWindow):
         browser.highlighted.connect(self.statusBar().showMessage)
         browser.backwardAvailable.connect(self.__setBackwardAvailable)
         browser.forwardAvailable.connect(self.__setForwardAvailable)
-        self.connect(browser.page(), SIGNAL('windowCloseRequested()'), 
-                     self.__windowCloseRequested)
-        self.connect(browser.page(), SIGNAL('printRequested(QWebFrame*)'), 
-                     self.__printRequested)
+        browser.page().windowCloseRequested.connect(self.__windowCloseRequested)
+        browser.page().printRequested.connect(self.__printRequested)
         browser.search.connect(self.newTab)
         
         self.closeAct.setEnabled(True)
@@ -2271,8 +2237,7 @@ class HelpWindow(QMainWindow):
         dlg = ConfigurationDialog(self, 'Configuration', True, 
                                   fromEric = self.fromEric, 
                                   helpBrowserMode = True)
-        self.connect(dlg, SIGNAL('preferencesChanged'), 
-                     self.preferencesChanged)
+        dlg.preferencesChanged.connect(self.preferencesChanged)
         dlg.show()
         dlg.showConfigurationPageByName("empty")
         dlg.exec_()
@@ -2628,10 +2593,8 @@ class HelpWindow(QMainWindow):
         help database.
         """
         self.__helpInstaller = HelpDocsInstaller(self.__helpEngine.collectionFile())
-        self.connect(self.__helpInstaller, SIGNAL("errorMessage(const QString&)"), 
-                     self.__showInstallationError)
-        self.connect(self.__helpInstaller, SIGNAL("docsInstalled(bool)"), 
-                     self.__docsInstalled)
+        self.__helpInstaller.errorMessage.connect(self.__showInstallationError)
+        self.__helpInstaller.docsInstalled.connect(self.__docsInstalled)
         
         self.statusBar().showMessage(self.trUtf8("Looking for Documentation..."))
         self.__helpInstaller.installDocs()
