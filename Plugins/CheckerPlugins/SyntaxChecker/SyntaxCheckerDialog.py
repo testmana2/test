@@ -86,7 +86,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             itm.setIcon(0, UI.PixmapCache.getIcon("syntaxError.png"))
 ##        itm.setToolTip(0, file)
         itm.setData(0, self.filenameRole, file)
-        itm.setData(0, self.lineRole, line)
+        itm.setData(0, self.lineRole, int(line))
         itm.setData(0, self.errorRole, error)
         itm.setData(0, self.warningRole, isWarning)
         
