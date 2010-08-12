@@ -73,18 +73,18 @@ class Project(QObject):
     Class implementing the project management functionality.
     
     @signal dirty(int) emitted when the dirty state changes
-    @signal projectLanguageAdded(string) emitted after a new language was added
-    @signal projectLanguageAddedByCode(string) emitted after a new language was added.
+    @signal projectLanguageAdded(str) emitted after a new language was added
+    @signal projectLanguageAddedByCode(str) emitted after a new language was added.
         The language code is sent by this signal.
-    @signal projectFormAdded(string) emitted after a new form was added
-    @signal projectSourceAdded(string) emitted after a new source file was added
-    @signal projectInterfaceAdded(string) emitted after a new IDL file was added
-    @signal projectResourceAdded(string) emitted after a new resource file was added
+    @signal projectFormAdded(str) emitted after a new form was added
+    @signal projectSourceAdded(str) emitted after a new source file was added
+    @signal projectInterfaceAdded(str) emitted after a new IDL file was added
+    @signal projectResourceAdded(str) emitted after a new resource file was added
     @signal projectAboutToBeCreated() emitted just before the project will be created
     @signal newProjectHooks() emitted after a new project was generated but before
             the newProject() signal is sent
     @signal newProject() emitted after a new project was generated
-    @signal sourceFile(string) emitted after a project file was read to 
+    @signal sourceFile(str) emitted after a project file was read to 
             open the main script
     @signal projectOpenedHooks() emitted after a project file was read but before the
             projectOpened() signal is sent
@@ -92,21 +92,21 @@ class Project(QObject):
     @signal projectClosedHooks() emitted after a project file was closed but before the
             projectClosed() signal is sent
     @signal projectClosed() emitted after a project was closed
-    @signal projectOthersAdded(string) emitted after a file or directory was added
+    @signal projectOthersAdded(str) emitted after a file or directory was added
             to the OTHERS project data area
-    @signal projectFileRenamed(string, string) emitted after a file of the project
+    @signal projectFileRenamed(str, str) emitted after a file of the project
             has been renamed
     @signal projectPropertiesChanged() emitted after the project properties were changed
-    @signal directoryRemoved(string) emitted after a directory has been removed from
+    @signal directoryRemoved(str) emitted after a directory has been removed from
             the project
-    @signal prepareRepopulateItem(string) emitted before an item of the model is
+    @signal prepareRepopulateItem(str) emitted before an item of the model is
             repopulated
-    @signal completeRepopulateItem(string) emitted after an item of the model was
+    @signal completeRepopulateItem(str) emitted after an item of the model was
             repopulated
-    @signal vcsStatusMonitorStatus(string, string) emitted to signal the status of the
+    @signal vcsStatusMonitorStatus(str, str) emitted to signal the status of the
             monitoring thread (ok, nok, op, off) and a status message
     @signal reinitVCS() emitted after the VCS has been reinitialized
-    @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     @signal lexerAssociationsChanged() emitted after the lexer associations have been
             changed

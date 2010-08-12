@@ -64,7 +64,7 @@ emitted after a newline command was activated
 QLineEdit
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>escPressed</td></tr><tr><td>gotFocus</td></tr><tr><td>returnPressed</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -121,36 +121,36 @@ key event (QKeyPressEvent)
     viewmanager classes and all common methods.
 </p><h4>Signals</h4>
 <dl>
-<dt>bookmarkToggled(editor)</dt>
+<dt>bookmarkToggled(Editor)</dt>
 <dd>
 emitted when a bookmark is toggled.
-</dd><dt>breakpointToggled(editor)</dt>
+</dd><dt>breakpointToggled(Editor)</dt>
 <dd>
 emitted when a breakpoint is toggled.
-</dd><dt>checkActions(editor)</dt>
+</dd><dt>checkActions(Editor)</dt>
 <dd>
 emitted when some actions should be checked
             for their status
-</dd><dt>cursorChanged(editor)</dt>
+</dd><dt>cursorChanged(Editor)</dt>
 <dd>
 emitted after the cursor position of the active
             window has changed
-</dd><dt>editorClosed(string)</dt>
+</dd><dt>editorClosed(str)</dt>
 <dd>
 emitted just before an editor window gets closed
-</dd><dt>editorClosedEd(editor)</dt>
+</dd><dt>editorClosedEd(Editor)</dt>
 <dd>
 emitted just before an editor window gets closed
-</dd><dt>editorOpened(string)</dt>
+</dd><dt>editorOpened(str)</dt>
 <dd>
 emitted after an editor window was opened
-</dd><dt>editorOpenedEd(editor)</dt>
+</dd><dt>editorOpenedEd(Editor)</dt>
 <dd>
 emitted after an editor window was opened
-</dd><dt>editorSaved(string)</dt>
+</dd><dt>editorSaved(str)</dt>
 <dd>
 emitted after an editor window was saved
-</dd><dt>lastEditorClosed</dt>
+</dd><dt>lastEditorClosed()</dt>
 <dd>
 emitted after the last editor window was closed
 </dd>
@@ -159,7 +159,7 @@ emitted after the last editor window was closed
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>bookmarkToggled</td></tr><tr><td>breakpointToggled</td></tr><tr><td>checkActions</td></tr><tr><td>cursorChanged</td></tr><tr><td>editorClosed</td></tr><tr><td>editorClosedEd</td></tr><tr><td>editorOpened</td></tr><tr><td>editorOpenedEd</td></tr><tr><td>editorSaved</td></tr><tr><td>lastEditorClosed</td></tr><tr><td>syntaxerrorToggled</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -244,6 +244,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.__editIndent">__editIndent</a></td>
 <td>Private method to handle the indent action.</td>
+</tr><tr>
+<td><a href="#ViewManager.__editJoin">__editJoin</a></td>
+<td>Private method to handle the join action.</td>
 </tr><tr>
 <td><a href="#ViewManager.__editPaste">__editPaste</a></td>
 <td>Private method to handle the paste action.</td>
@@ -375,7 +378,7 @@ QObject
 <td>Private method to handle the next warning action.</td>
 </tr><tr>
 <td><a href="#ViewManager.__openSourceFile">__openSourceFile</a></td>
-<td>Private method to open a file from the list of rencently opened files.</td>
+<td>Private method to open a file from the list of recently opened files.</td>
 </tr><tr>
 <td><a href="#ViewManager.__previousBookmark">__previousBookmark</a></td>
 <td>Private method to handle the previous bookmark action.</td>
@@ -468,7 +471,7 @@ QObject
 <td>Private method to handle the split view action.</td>
 </tr><tr>
 <td><a href="#ViewManager.__taskMarkersUpdated">__taskMarkersUpdated</a></td>
-<td>Protected slot to handle the syntaxerrorToggled signal.</td>
+<td>Protected slot to handle the taskMarkersUpdated signal.</td>
 </tr><tr>
 <td><a href="#ViewManager.__toggleAll">__toggleAll</a></td>
 <td>Private method to handle the toggle all folds action.</td>
@@ -988,6 +991,11 @@ position in line of the cursor (int)
 <b>__editIndent</b>(<i></i>)
 <p>
         Private method to handle the indent action.
+</p><a NAME="ViewManager.__editJoin" ID="ViewManager.__editJoin"></a>
+<h4>ViewManager.__editJoin</h4>
+<b>__editJoin</b>(<i></i>)
+<p>
+        Private method to handle the join action.
 </p><a NAME="ViewManager.__editPaste" ID="ViewManager.__editPaste"></a>
 <h4>ViewManager.__editPaste</h4>
 <b>__editPaste</b>(<i></i>)
@@ -1225,7 +1233,7 @@ reference to the action that was triggered (QAction)
 <h4>ViewManager.__openSourceFile</h4>
 <b>__openSourceFile</b>(<i>act</i>)
 <p>
-        Private method to open a file from the list of rencently opened files.
+        Private method to open a file from the list of recently opened files.
 </p><dl>
 <dt><i>act</i></dt>
 <dd>
@@ -1420,9 +1428,7 @@ eol indicator to display (string)
 <h4>ViewManager.__taskMarkersUpdated</h4>
 <b>__taskMarkersUpdated</b>(<i>editor</i>)
 <p>
-        Protected slot to handle the syntaxerrorToggled signal.
-</p><p>
-        It checks some syntax error actions and reemits the signal.
+        Protected slot to handle the taskMarkersUpdated signal.
 </p><dl>
 <dt><i>editor</i></dt>
 <dd>
@@ -2253,22 +2259,25 @@ name of file to be opened (string)
 </dd>
 </dl><a NAME="ViewManager.openSourceFile" ID="ViewManager.openSourceFile"></a>
 <h4>ViewManager.openSourceFile</h4>
-<b>openSourceFile</b>(<i>fn, lineno = None, filetype = "", selection = None</i>)
+<b>openSourceFile</b>(<i>fn, lineno = None, filetype = "", selStart = 0, selEnd = 0</i>)
 <p>
         Public slot to display a file in an editor.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
-name of file to be opened
+name of file to be opened (string)
 </dd><dt><i>lineno</i></dt>
 <dd>
-line number to place the cursor at
+line number to place the cursor at (integer)
 </dd><dt><i>filetype</i></dt>
 <dd>
 type of the source file (string)
-</dd><dt><i>selection</i></dt>
+</dd><dt><i>selStart</i></dt>
 <dd>
-tuple (start, end) of an area to be selected
+start of an area to be selected (integer)
+</dd><dt><i>selEnd</i></dt>
+<dd>
+end of an area to be selected (integer)
 </dd>
 </dl><a NAME="ViewManager.preferencesChanged" ID="ViewManager.preferencesChanged"></a>
 <h4>ViewManager.preferencesChanged</h4>

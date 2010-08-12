@@ -14,7 +14,7 @@ class HelpTocWidget(QWidget):
     """
     Class implementing a window for showing the QtHelp TOC.
     
-    @signal linkActivated(const QUrl&) emitted when a TOC entry is activated
+    @signal linkActivated(QUrl) emitted when a TOC entry is activated
     @signal escapePressed() emitted when the ESC key was pressed
     """
     linkActivated = pyqtSignal(QUrl)

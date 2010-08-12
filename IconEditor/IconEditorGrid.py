@@ -62,10 +62,10 @@ class IconEditorGrid(QWidget):
     @signal canUndoChanged(bool) emitted after the undo status has changed
     @signal clipboardImageAvailable(bool) emitted to signal the availability of an 
         image to be pasted
-    @signal colorChanged(const QColor&) emitted after the drawing color was changed
+    @signal colorChanged(QColor) emitted after the drawing color was changed
     @signal imageChanged(bool) emitted after the image was modified
     @signal positionChanged(int, int) emitted after the cursor poition was changed
-    @signal previewChanged(const QPixmap&) emitted to signal a new preview pixmap
+    @signal previewChanged(QPixmap) emitted to signal a new preview pixmap
     @signal selectionAvailable(bool) emitted to signal a change of the selection
     @signal sizeChanged(int, int) emitted after the size has been changed
     """

@@ -51,10 +51,10 @@ VCS interfaces.
     and the common methods.
 </p><h4>Signals</h4>
 <dl>
-<dt>vcsStatusMonitorData(QStringList)</dt>
+<dt>vcsStatusMonitorData(list of str)</dt>
 <dd>
 emitted to update the VCS status
-</dd><dt>vcsStatusMonitorStatus(QString, QString)</dt>
+</dd><dt>vcsStatusMonitorStatus(str, str)</dt>
 <dd>
 emitted to signal the status of the
         monitoring thread (ok, nok, op, off) and a status message
@@ -64,7 +64,7 @@ emitted to signal the status of the
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>canBeAdded</td></tr><tr><td>canBeCommitted</td></tr>
+<tr><td>canBeAdded</td></tr><tr><td>canBeCommitted</td></tr><tr><td>vcsStatusMonitorData</td></tr><tr><td>vcsStatusMonitorStatus</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

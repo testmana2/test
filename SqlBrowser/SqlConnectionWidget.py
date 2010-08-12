@@ -15,8 +15,8 @@ class SqlConnectionWidget(QWidget):
     """
     Class implementing a widget showing the SQL connections.
     
-    @signal tableActivated(string) emitted after the entry for a table has been activated
-    @signal schemaRequested(string) emitted when the schema display is requested
+    @signal tableActivated(str) emitted after the entry for a table has been activated
+    @signal schemaRequested(str) emitted when the schema display is requested
     @signal cleared() emitted after the connection tree has been cleared
     """
     tableActivated = pyqtSignal(str)

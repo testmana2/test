@@ -46,11 +46,11 @@ Module implementing the project management functionality.
     Class implementing the project management functionality.
 </p><h4>Signals</h4>
 <dl>
-<dt>completeRepopulateItem(string)</dt>
+<dt>completeRepopulateItem(str)</dt>
 <dd>
 emitted after an item of the model was
             repopulated
-</dd><dt>directoryRemoved(string)</dt>
+</dd><dt>directoryRemoved(str)</dt>
 <dd>
 emitted after a directory has been removed from
             the project
@@ -68,7 +68,7 @@ emitted after a new project was generated
 <dd>
 emitted after a new project was generated but before
             the newProject() signal is sent
-</dd><dt>prepareRepopulateItem(string)</dt>
+</dd><dt>prepareRepopulateItem(str)</dt>
 <dd>
 emitted before an item of the model is
             repopulated
@@ -82,20 +82,20 @@ emitted after a project was closed
 <dd>
 emitted after a project file was closed but before the
             projectClosed() signal is sent
-</dd><dt>projectFileRenamed(string, string)</dt>
+</dd><dt>projectFileRenamed(str, str)</dt>
 <dd>
 emitted after a file of the project
             has been renamed
-</dd><dt>projectFormAdded(string)</dt>
+</dd><dt>projectFormAdded(str)</dt>
 <dd>
 emitted after a new form was added
-</dd><dt>projectInterfaceAdded(string)</dt>
+</dd><dt>projectInterfaceAdded(str)</dt>
 <dd>
 emitted after a new IDL file was added
-</dd><dt>projectLanguageAdded(string)</dt>
+</dd><dt>projectLanguageAdded(str)</dt>
 <dd>
 emitted after a new language was added
-</dd><dt>projectLanguageAddedByCode(string)</dt>
+</dd><dt>projectLanguageAddedByCode(str)</dt>
 <dd>
 emitted after a new language was added.
         The language code is sent by this signal.
@@ -106,34 +106,31 @@ emitted after a project file was read
 <dd>
 emitted after a project file was read but before the
             projectOpened() signal is sent
-</dd><dt>projectOthersAdded(string)</dt>
+</dd><dt>projectOthersAdded(str)</dt>
 <dd>
 emitted after a file or directory was added
             to the OTHERS project data area
 </dd><dt>projectPropertiesChanged()</dt>
 <dd>
 emitted after the project properties were changed
-</dd><dt>projectResourceAdded(string)</dt>
+</dd><dt>projectResourceAdded(str)</dt>
 <dd>
 emitted after a new resource file was added
-</dd><dt>projectSessionLoaded()</dt>
-<dd>
-emitted after a project session file was loaded
-</dd><dt>projectSourceAdded(string)</dt>
+</dd><dt>projectSourceAdded(str)</dt>
 <dd>
 emitted after a new source file was added
 </dd><dt>reinitVCS()</dt>
 <dd>
 emitted after the VCS has been reinitialized
-</dd><dt>showMenu(string, QMenu)</dt>
+</dd><dt>showMenu(str, QMenu)</dt>
 <dd>
 emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
-</dd><dt>sourceFile(string)</dt>
+</dd><dt>sourceFile(str)</dt>
 <dd>
 emitted after a project file was read to
             open the main script
-</dd><dt>vcsStatusMonitorStatus(QString, QString)</dt>
+</dd><dt>vcsStatusMonitorStatus(str, str)</dt>
 <dd>
 emitted to signal the status of the
             monitoring thread (ok, nok, op, off) and a status message
@@ -143,7 +140,7 @@ emitted to signal the status of the
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>dbgKeynames</td></tr><tr><td>eols</td></tr><tr><td>keynames</td></tr><tr><td>userKeynames</td></tr>
+<tr><td>completeRepopulateItem</td></tr><tr><td>dbgKeynames</td></tr><tr><td>directoryRemoved</td></tr><tr><td>dirty</td></tr><tr><td>eols</td></tr><tr><td>keynames</td></tr><tr><td>lexerAssociationsChanged</td></tr><tr><td>newProject</td></tr><tr><td>newProjectHooks</td></tr><tr><td>prepareRepopulateItem</td></tr><tr><td>projectAboutToBeCreated</td></tr><tr><td>projectClosed</td></tr><tr><td>projectClosedHooks</td></tr><tr><td>projectFileRenamed</td></tr><tr><td>projectFormAdded</td></tr><tr><td>projectInterfaceAdded</td></tr><tr><td>projectLanguageAdded</td></tr><tr><td>projectLanguageAddedByCode</td></tr><tr><td>projectOpened</td></tr><tr><td>projectOpenedHooks</td></tr><tr><td>projectOthersAdded</td></tr><tr><td>projectPropertiesChanged</td></tr><tr><td>projectResourceAdded</td></tr><tr><td>projectSourceAdded</td></tr><tr><td>reinitVCS</td></tr><tr><td>showMenu</td></tr><tr><td>sourceFile</td></tr><tr><td>userKeynames</td></tr><tr><td>vcsStatusMonitorStatus</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -382,6 +379,9 @@ QObject
 <td><a href="#Project.copyDirectory">copyDirectory</a></td>
 <td>Public slot to copy a directory.</td>
 </tr><tr>
+<td><a href="#Project.createNewProject">createNewProject</a></td>
+<td>Public slot to built a new project.</td>
+</tr><tr>
 <td><a href="#Project.deleteDirectory">deleteDirectory</a></td>
 <td>Public slot to delete a directory from the project directory.</td>
 </tr><tr>
@@ -525,9 +525,6 @@ QObject
 </tr><tr>
 <td><a href="#Project.moveDirectory">moveDirectory</a></td>
 <td>Public slot to move a directory.</td>
-</tr><tr>
-<td><a href="#Project.newProject">newProject</a></td>
-<td>Public slot to built a new project.</td>
 </tr><tr>
 <td><a href="#Project.newProjectAddFiles">newProjectAddFiles</a></td>
 <td>Public method to add files to a new project.</td>
@@ -1334,7 +1331,15 @@ original directory name (string)
 <dd>
 new directory name (string)
 </dd>
-</dl><a NAME="Project.deleteDirectory" ID="Project.deleteDirectory"></a>
+</dl><a NAME="Project.createNewProject" ID="Project.createNewProject"></a>
+<h4>Project.createNewProject</h4>
+<b>createNewProject</b>(<i></i>)
+<p>
+        Public slot to built a new project.
+</p><p>
+        This method displays the new project dialog and initializes
+        the project object with the data entered.
+</p><a NAME="Project.deleteDirectory" ID="Project.deleteDirectory"></a>
 <h4>Project.deleteDirectory</h4>
 <b>deleteDirectory</b>(<i>dn</i>)
 <p>
@@ -1911,15 +1916,7 @@ old directory name (string)
 <dd>
 new directory name (string)
 </dd>
-</dl><a NAME="Project.newProject" ID="Project.newProject"></a>
-<h4>Project.newProject</h4>
-<b>newProject</b>(<i></i>)
-<p>
-        Public slot to built a new project.
-</p><p>
-        This method displays the new project dialog and initializes
-        the project object with the data entered.
-</p><a NAME="Project.newProjectAddFiles" ID="Project.newProjectAddFiles"></a>
+</dl><a NAME="Project.newProjectAddFiles" ID="Project.newProjectAddFiles"></a>
 <h4>Project.newProjectAddFiles</h4>
 <b>newProjectAddFiles</b>(<i>mainscript</i>)
 <p>

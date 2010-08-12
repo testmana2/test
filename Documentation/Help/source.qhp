@@ -1434,6 +1434,7 @@
       <keyword name="PluginManager.activatePlugins" id="PluginManager.activatePlugins" ref="eric5.PluginManager.PluginManager.html#PluginManager.activatePlugins" />
       <keyword name="PluginManager.deactivatePlugin" id="PluginManager.deactivatePlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.deactivatePlugin" />
       <keyword name="PluginManager.deactivateVcsPlugins" id="PluginManager.deactivateVcsPlugins" ref="eric5.PluginManager.PluginManager.html#PluginManager.deactivateVcsPlugins" />
+      <keyword name="PluginManager.doShutdown" id="PluginManager.doShutdown" ref="eric5.PluginManager.PluginManager.html#PluginManager.doShutdown" />
       <keyword name="PluginManager.finalizeSetup" id="PluginManager.finalizeSetup" ref="eric5.PluginManager.PluginManager.html#PluginManager.finalizeSetup" />
       <keyword name="PluginManager.getPluginApiFiles" id="PluginManager.getPluginApiFiles" ref="eric5.PluginManager.PluginManager.html#PluginManager.getPluginApiFiles" />
       <keyword name="PluginManager.getPluginConfigData" id="PluginManager.getPluginConfigData" ref="eric5.PluginManager.PluginManager.html#PluginManager.getPluginConfigData" />
@@ -1454,7 +1455,6 @@
       <keyword name="PluginManager.loadPlugin" id="PluginManager.loadPlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.loadPlugin" />
       <keyword name="PluginManager.preferencesChanged" id="PluginManager.preferencesChanged" ref="eric5.PluginManager.PluginManager.html#PluginManager.preferencesChanged" />
       <keyword name="PluginManager.removePluginFromSysModules" id="PluginManager.removePluginFromSysModules" ref="eric5.PluginManager.PluginManager.html#PluginManager.removePluginFromSysModules" />
-      <keyword name="PluginManager.shutdown" id="PluginManager.shutdown" ref="eric5.PluginManager.PluginManager.html#PluginManager.shutdown" />
       <keyword name="PluginManager.unloadPlugin" id="PluginManager.unloadPlugin" ref="eric5.PluginManager.PluginManager.html#PluginManager.unloadPlugin" />
       <keyword name="PluginInstallDialog (Module)" id="PluginInstallDialog (Module)" ref="eric5.PluginManager.PluginInstallDialog.html" />
       <keyword name="PluginInstallDialog" id="PluginInstallDialog" ref="eric5.PluginManager.PluginInstallDialog.html#PluginInstallDialog" />
@@ -1558,6 +1558,7 @@
       <keyword name="MultiProject.__clearRecent" id="MultiProject.__clearRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__clearRecent" />
       <keyword name="MultiProject.__initData" id="MultiProject.__initData" ref="eric5.MultiProject.MultiProject.html#MultiProject.__initData" />
       <keyword name="MultiProject.__loadRecent" id="MultiProject.__loadRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__loadRecent" />
+      <keyword name="MultiProject.__newMultiProject" id="MultiProject.__newMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__newMultiProject" />
       <keyword name="MultiProject.__openMasterProject" id="MultiProject.__openMasterProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__openMasterProject" />
       <keyword name="MultiProject.__openRecent" id="MultiProject.__openRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__openRecent" />
       <keyword name="MultiProject.__readMultiProject" id="MultiProject.__readMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__readMultiProject" />
@@ -1588,7 +1589,6 @@
       <keyword name="MultiProject.initToolbar" id="MultiProject.initToolbar" ref="eric5.MultiProject.MultiProject.html#MultiProject.initToolbar" />
       <keyword name="MultiProject.isDirty" id="MultiProject.isDirty" ref="eric5.MultiProject.MultiProject.html#MultiProject.isDirty" />
       <keyword name="MultiProject.isOpen" id="MultiProject.isOpen" ref="eric5.MultiProject.MultiProject.html#MultiProject.isOpen" />
-      <keyword name="MultiProject.newMultiProject" id="MultiProject.newMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.newMultiProject" />
       <keyword name="MultiProject.openMultiProject" id="MultiProject.openMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.openMultiProject" />
       <keyword name="MultiProject.openProject" id="MultiProject.openProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.openProject" />
       <keyword name="MultiProject.removeE5Actions" id="MultiProject.removeE5Actions" ref="eric5.MultiProject.MultiProject.html#MultiProject.removeE5Actions" />
@@ -1886,7 +1886,6 @@
       <keyword name="DebugUI.__profileScript" id="DebugUI.__profileScript" ref="eric5.Debugger.DebugUI.html#DebugUI.__profileScript" />
       <keyword name="DebugUI.__projectClosed" id="DebugUI.__projectClosed" ref="eric5.Debugger.DebugUI.html#DebugUI.__projectClosed" />
       <keyword name="DebugUI.__projectOpened" id="DebugUI.__projectOpened" ref="eric5.Debugger.DebugUI.html#DebugUI.__projectOpened" />
-      <keyword name="DebugUI.__projectSessionLoaded" id="DebugUI.__projectSessionLoaded" ref="eric5.Debugger.DebugUI.html#DebugUI.__projectSessionLoaded" />
       <keyword name="DebugUI.__resetUI" id="DebugUI.__resetUI" ref="eric5.Debugger.DebugUI.html#DebugUI.__resetUI" />
       <keyword name="DebugUI.__runProject" id="DebugUI.__runProject" ref="eric5.Debugger.DebugUI.html#DebugUI.__runProject" />
       <keyword name="DebugUI.__runScript" id="DebugUI.__runScript" ref="eric5.Debugger.DebugUI.html#DebugUI.__runScript" />
@@ -2145,31 +2144,12 @@
       <keyword name="DebugServer.__setClientType" id="DebugServer.__setClientType" ref="eric5.Debugger.DebugServer.html#DebugServer.__setClientType" />
       <keyword name="DebugServer.__splitWatchCondition" id="DebugServer.__splitWatchCondition" ref="eric5.Debugger.DebugServer.html#DebugServer.__splitWatchCondition" />
       <keyword name="DebugServer.__watchPointDataAboutToBeChanged" id="DebugServer.__watchPointDataAboutToBeChanged" ref="eric5.Debugger.DebugServer.html#DebugServer.__watchPointDataAboutToBeChanged" />
-      <keyword name="DebugServer.clientBanner" id="DebugServer.clientBanner" ref="eric5.Debugger.DebugServer.html#DebugServer.clientBanner" />
-      <keyword name="DebugServer.clientBreakConditionError" id="DebugServer.clientBreakConditionError" ref="eric5.Debugger.DebugServer.html#DebugServer.clientBreakConditionError" />
-      <keyword name="DebugServer.clientCapabilities" id="DebugServer.clientCapabilities" ref="eric5.Debugger.DebugServer.html#DebugServer.clientCapabilities" />
-      <keyword name="DebugServer.clientClearBreak" id="DebugServer.clientClearBreak" ref="eric5.Debugger.DebugServer.html#DebugServer.clientClearBreak" />
-      <keyword name="DebugServer.clientClearWatch" id="DebugServer.clientClearWatch" ref="eric5.Debugger.DebugServer.html#DebugServer.clientClearWatch" />
-      <keyword name="DebugServer.clientCompletionList" id="DebugServer.clientCompletionList" ref="eric5.Debugger.DebugServer.html#DebugServer.clientCompletionList" />
-      <keyword name="DebugServer.clientException" id="DebugServer.clientException" ref="eric5.Debugger.DebugServer.html#DebugServer.clientException" />
-      <keyword name="DebugServer.clientExit" id="DebugServer.clientExit" ref="eric5.Debugger.DebugServer.html#DebugServer.clientExit" />
-      <keyword name="DebugServer.clientLine" id="DebugServer.clientLine" ref="eric5.Debugger.DebugServer.html#DebugServer.clientLine" />
-      <keyword name="DebugServer.clientOutput" id="DebugServer.clientOutput" ref="eric5.Debugger.DebugServer.html#DebugServer.clientOutput" />
-      <keyword name="DebugServer.clientRawInput" id="DebugServer.clientRawInput" ref="eric5.Debugger.DebugServer.html#DebugServer.clientRawInput" />
-      <keyword name="DebugServer.clientStack" id="DebugServer.clientStack" ref="eric5.Debugger.DebugServer.html#DebugServer.clientStack" />
-      <keyword name="DebugServer.clientStatement" id="DebugServer.clientStatement" ref="eric5.Debugger.DebugServer.html#DebugServer.clientStatement" />
-      <keyword name="DebugServer.clientSyntaxError" id="DebugServer.clientSyntaxError" ref="eric5.Debugger.DebugServer.html#DebugServer.clientSyntaxError" />
-      <keyword name="DebugServer.clientThreadList" id="DebugServer.clientThreadList" ref="eric5.Debugger.DebugServer.html#DebugServer.clientThreadList" />
-      <keyword name="DebugServer.clientThreadSet" id="DebugServer.clientThreadSet" ref="eric5.Debugger.DebugServer.html#DebugServer.clientThreadSet" />
       <keyword name="DebugServer.clientUtFinished" id="DebugServer.clientUtFinished" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtFinished" />
       <keyword name="DebugServer.clientUtPrepared" id="DebugServer.clientUtPrepared" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtPrepared" />
       <keyword name="DebugServer.clientUtStartTest" id="DebugServer.clientUtStartTest" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtStartTest" />
       <keyword name="DebugServer.clientUtStopTest" id="DebugServer.clientUtStopTest" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtStopTest" />
       <keyword name="DebugServer.clientUtTestErrored" id="DebugServer.clientUtTestErrored" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtTestErrored" />
       <keyword name="DebugServer.clientUtTestFailed" id="DebugServer.clientUtTestFailed" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtTestFailed" />
-      <keyword name="DebugServer.clientVariable" id="DebugServer.clientVariable" ref="eric5.Debugger.DebugServer.html#DebugServer.clientVariable" />
-      <keyword name="DebugServer.clientVariables" id="DebugServer.clientVariables" ref="eric5.Debugger.DebugServer.html#DebugServer.clientVariables" />
-      <keyword name="DebugServer.clientWatchConditionError" id="DebugServer.clientWatchConditionError" ref="eric5.Debugger.DebugServer.html#DebugServer.clientWatchConditionError" />
       <keyword name="DebugServer.getBreakPointModel" id="DebugServer.getBreakPointModel" ref="eric5.Debugger.DebugServer.html#DebugServer.getBreakPointModel" />
       <keyword name="DebugServer.getClientCapabilities" id="DebugServer.getClientCapabilities" ref="eric5.Debugger.DebugServer.html#DebugServer.getClientCapabilities" />
       <keyword name="DebugServer.getExtensions" id="DebugServer.getExtensions" ref="eric5.Debugger.DebugServer.html#DebugServer.getExtensions" />
@@ -2206,6 +2186,25 @@
       <keyword name="DebugServer.remoteUTRun" id="DebugServer.remoteUTRun" ref="eric5.Debugger.DebugServer.html#DebugServer.remoteUTRun" />
       <keyword name="DebugServer.remoteUTStop" id="DebugServer.remoteUTStop" ref="eric5.Debugger.DebugServer.html#DebugServer.remoteUTStop" />
       <keyword name="DebugServer.shutdownServer" id="DebugServer.shutdownServer" ref="eric5.Debugger.DebugServer.html#DebugServer.shutdownServer" />
+      <keyword name="DebugServer.signalClientBanner" id="DebugServer.signalClientBanner" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientBanner" />
+      <keyword name="DebugServer.signalClientBreakConditionError" id="DebugServer.signalClientBreakConditionError" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientBreakConditionError" />
+      <keyword name="DebugServer.signalClientCapabilities" id="DebugServer.signalClientCapabilities" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientCapabilities" />
+      <keyword name="DebugServer.signalClientClearBreak" id="DebugServer.signalClientClearBreak" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientClearBreak" />
+      <keyword name="DebugServer.signalClientClearWatch" id="DebugServer.signalClientClearWatch" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientClearWatch" />
+      <keyword name="DebugServer.signalClientCompletionList" id="DebugServer.signalClientCompletionList" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientCompletionList" />
+      <keyword name="DebugServer.signalClientException" id="DebugServer.signalClientException" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientException" />
+      <keyword name="DebugServer.signalClientExit" id="DebugServer.signalClientExit" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientExit" />
+      <keyword name="DebugServer.signalClientLine" id="DebugServer.signalClientLine" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientLine" />
+      <keyword name="DebugServer.signalClientOutput" id="DebugServer.signalClientOutput" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientOutput" />
+      <keyword name="DebugServer.signalClientRawInput" id="DebugServer.signalClientRawInput" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientRawInput" />
+      <keyword name="DebugServer.signalClientStack" id="DebugServer.signalClientStack" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientStack" />
+      <keyword name="DebugServer.signalClientStatement" id="DebugServer.signalClientStatement" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientStatement" />
+      <keyword name="DebugServer.signalClientSyntaxError" id="DebugServer.signalClientSyntaxError" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientSyntaxError" />
+      <keyword name="DebugServer.signalClientThreadList" id="DebugServer.signalClientThreadList" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientThreadList" />
+      <keyword name="DebugServer.signalClientThreadSet" id="DebugServer.signalClientThreadSet" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientThreadSet" />
+      <keyword name="DebugServer.signalClientVariable" id="DebugServer.signalClientVariable" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientVariable" />
+      <keyword name="DebugServer.signalClientVariables" id="DebugServer.signalClientVariables" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientVariables" />
+      <keyword name="DebugServer.signalClientWatchConditionError" id="DebugServer.signalClientWatchConditionError" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientWatchConditionError" />
       <keyword name="DebugServer.startClient" id="DebugServer.startClient" ref="eric5.Debugger.DebugServer.html#DebugServer.startClient" />
       <keyword name="BreakPointViewer (Module)" id="BreakPointViewer (Module)" ref="eric5.Debugger.BreakPointViewer.html" />
       <keyword name="BreakPointViewer" id="BreakPointViewer" ref="eric5.Debugger.BreakPointViewer.html#BreakPointViewer" />
@@ -3373,6 +3372,7 @@
       <keyword name="ViewManager.__editDelete" id="ViewManager.__editDelete" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editDelete" />
       <keyword name="ViewManager.__editDeselectAll" id="ViewManager.__editDeselectAll" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editDeselectAll" />
       <keyword name="ViewManager.__editIndent" id="ViewManager.__editIndent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editIndent" />
+      <keyword name="ViewManager.__editJoin" id="ViewManager.__editJoin" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editJoin" />
       <keyword name="ViewManager.__editPaste" id="ViewManager.__editPaste" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editPaste" />
       <keyword name="ViewManager.__editRedo" id="ViewManager.__editRedo" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editRedo" />
       <keyword name="ViewManager.__editRevert" id="ViewManager.__editRevert" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editRevert" />
@@ -4659,6 +4659,7 @@
       <keyword name="Project.clearStatusMonitorCachedState" id="Project.clearStatusMonitorCachedState" ref="eric5.Project.Project.html#Project.clearStatusMonitorCachedState" />
       <keyword name="Project.closeProject" id="Project.closeProject" ref="eric5.Project.Project.html#Project.closeProject" />
       <keyword name="Project.copyDirectory" id="Project.copyDirectory" ref="eric5.Project.Project.html#Project.copyDirectory" />
+      <keyword name="Project.createNewProject" id="Project.createNewProject" ref="eric5.Project.Project.html#Project.createNewProject" />
       <keyword name="Project.deleteDirectory" id="Project.deleteDirectory" ref="eric5.Project.Project.html#Project.deleteDirectory" />
       <keyword name="Project.deleteFile" id="Project.deleteFile" ref="eric5.Project.Project.html#Project.deleteFile" />
       <keyword name="Project.deleteLanguageFile" id="Project.deleteLanguageFile" ref="eric5.Project.Project.html#Project.deleteLanguageFile" />
@@ -4707,7 +4708,6 @@
       <keyword name="Project.isProjectResource" id="Project.isProjectResource" ref="eric5.Project.Project.html#Project.isProjectResource" />
       <keyword name="Project.isProjectSource" id="Project.isProjectSource" ref="eric5.Project.Project.html#Project.isProjectSource" />
       <keyword name="Project.moveDirectory" id="Project.moveDirectory" ref="eric5.Project.Project.html#Project.moveDirectory" />
-      <keyword name="Project.newProject" id="Project.newProject" ref="eric5.Project.Project.html#Project.newProject" />
       <keyword name="Project.newProjectAddFiles" id="Project.newProjectAddFiles" ref="eric5.Project.Project.html#Project.newProjectAddFiles" />
       <keyword name="Project.openProject" id="Project.openProject" ref="eric5.Project.Project.html#Project.openProject" />
       <keyword name="Project.othersAdded" id="Project.othersAdded" ref="eric5.Project.Project.html#Project.othersAdded" />
@@ -5735,6 +5735,7 @@
       <keyword name="Editor.__initContextMenuShow" id="Editor.__initContextMenuShow" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuShow" />
       <keyword name="Editor.__initContextMenuUnifiedMargins" id="Editor.__initContextMenuUnifiedMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuUnifiedMargins" />
       <keyword name="Editor.__isStartChar" id="Editor.__isStartChar" ref="eric5.QScintilla.Editor.html#Editor.__isStartChar" />
+      <keyword name="Editor.__languageChanged" id="Editor.__languageChanged" ref="eric5.QScintilla.Editor.html#Editor.__languageChanged" />
       <keyword name="Editor.__languageMenuTriggered" id="Editor.__languageMenuTriggered" ref="eric5.QScintilla.Editor.html#Editor.__languageMenuTriggered" />
       <keyword name="Editor.__linesChanged" id="Editor.__linesChanged" ref="eric5.QScintilla.Editor.html#Editor.__linesChanged" />
       <keyword name="Editor.__lmBbookmarks" id="Editor.__lmBbookmarks" ref="eric5.QScintilla.Editor.html#Editor.__lmBbookmarks" />
@@ -5876,8 +5877,8 @@
       <keyword name="Editor.isPyFile" id="Editor.isPyFile" ref="eric5.QScintilla.Editor.html#Editor.isPyFile" />
       <keyword name="Editor.isRubyFile" id="Editor.isRubyFile" ref="eric5.QScintilla.Editor.html#Editor.isRubyFile" />
       <keyword name="Editor.isSpellCheckRegion" id="Editor.isSpellCheckRegion" ref="eric5.QScintilla.Editor.html#Editor.isSpellCheckRegion" />
+      <keyword name="Editor.joinLines" id="Editor.joinLines" ref="eric5.QScintilla.Editor.html#Editor.joinLines" />
       <keyword name="Editor.keyPressEvent" id="Editor.keyPressEvent" ref="eric5.QScintilla.Editor.html#Editor.keyPressEvent" />
-      <keyword name="Editor.languageChanged" id="Editor.languageChanged" ref="eric5.QScintilla.Editor.html#Editor.languageChanged" />
       <keyword name="Editor.macroDelete" id="Editor.macroDelete" ref="eric5.QScintilla.Editor.html#Editor.macroDelete" />
       <keyword name="Editor.macroLoad" id="Editor.macroLoad" ref="eric5.QScintilla.Editor.html#Editor.macroLoad" />
       <keyword name="Editor.macroRecordingStart" id="Editor.macroRecordingStart" ref="eric5.QScintilla.Editor.html#Editor.macroRecordingStart" />

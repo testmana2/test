@@ -13,8 +13,8 @@ class VcsStatusMonitorThread(QThread):
     """
     Class implementing the VCS status monitor thread base class.
     
-    @signal vcsStatusMonitorData(QStringList) emitted to update the VCS status
-    @signal vcsStatusMonitorStatus(QString, QString) emitted to signal the status of the
+    @signal vcsStatusMonitorData(list of str) emitted to update the VCS status
+    @signal vcsStatusMonitorStatus(str, str) emitted to signal the status of the
         monitoring thread (ok, nok, op) and a status message
     """
     vcsStatusMonitorData = pyqtSignal(list)

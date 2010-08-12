@@ -19,7 +19,7 @@ class HelpDocsInstaller(QThread):
     Class implementing the worker thread populating and updating the QtHelp
     documentation database.
     
-    @signal errorMessage(const QString&) emitted, if an error occurred during
+    @signal errorMessage(str) emitted, if an error occurred during
         the installation of the documentation
     @signal docsInstalled(bool) emitted after the installation has finished
     """

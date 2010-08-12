@@ -14,7 +14,7 @@ class HelpSearchWidget(QWidget):
     """
     Class implementing a window for showing the QtHelp index.
     
-    @signal linkActivated(const QUrl&) emitted when a search result entry is activated
+    @signal linkActivated(QUrl) emitted when a search result entry is activated
     @signal escapePressed() emitted when the ESC key was pressed
     """
     linkActivated = pyqtSignal(QUrl)

@@ -75,7 +75,7 @@ emitted at shutdown of the IDE
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>allPlugginsActivated</td></tr><tr><td>pluginAboutToBeActivated</td></tr><tr><td>pluginAboutToBeDeactivated</td></tr><tr><td>pluginActivated</td></tr><tr><td>pluginDeactivated</td></tr><tr><td>shutdown</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -118,6 +118,9 @@ QObject
 </tr><tr>
 <td><a href="#PluginManager.deactivateVcsPlugins">deactivateVcsPlugins</a></td>
 <td>Public method to deactivated all activated VCS plugins.</td>
+</tr><tr>
+<td><a href="#PluginManager.doShutdown">doShutdown</a></td>
+<td>Public method called to perform actions upon shutdown of the IDE.</td>
 </tr><tr>
 <td><a href="#PluginManager.finalizeSetup">finalizeSetup</a></td>
 <td>Public method to finalize the setup of the plugin manager.</td>
@@ -178,9 +181,6 @@ QObject
 </tr><tr>
 <td><a href="#PluginManager.removePluginFromSysModules">removePluginFromSysModules</a></td>
 <td>Public method to remove a plugin and all related modules from sys.modules.</td>
-</tr><tr>
-<td><a href="#PluginManager.shutdown">shutdown</a></td>
-<td>Public method called to perform actions upon shutdown of the IDE.</td>
 </tr><tr>
 <td><a href="#PluginManager.unloadPlugin">unloadPlugin</a></td>
 <td>Public method to unload a plugin module.</td>
@@ -342,6 +342,11 @@ flag indicating deactivation of an
 <b>deactivateVcsPlugins</b>(<i></i>)
 <p>
         Public method to deactivated all activated VCS plugins.
+</p><a NAME="PluginManager.doShutdown" ID="PluginManager.doShutdown"></a>
+<h4>PluginManager.doShutdown</h4>
+<b>doShutdown</b>(<i></i>)
+<p>
+        Public method called to perform actions upon shutdown of the IDE.
 </p><a NAME="PluginManager.finalizeSetup" ID="PluginManager.finalizeSetup"></a>
 <h4>PluginManager.finalizeSetup</h4>
 <b>finalizeSetup</b>(<i></i>)
@@ -656,12 +661,7 @@ list of intenal packages (list of string)
 <dd>
 flag indicating the plugin module was found in sys.modules (boolean)
 </dd>
-</dl><a NAME="PluginManager.shutdown" ID="PluginManager.shutdown"></a>
-<h4>PluginManager.shutdown</h4>
-<b>shutdown</b>(<i></i>)
-<p>
-        Public method called to perform actions upon shutdown of the IDE.
-</p><a NAME="PluginManager.unloadPlugin" ID="PluginManager.unloadPlugin"></a>
+</dl><a NAME="PluginManager.unloadPlugin" ID="PluginManager.unloadPlugin"></a>
 <h4>PluginManager.unloadPlugin</h4>
 <b>unloadPlugin</b>(<i>name, directory</i>)
 <p>

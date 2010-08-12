@@ -24,8 +24,8 @@ class VersionControl(QObject):
     It defines the vcs interface to be implemented by subclasses
     and the common methods.
     
-    @signal vcsStatusMonitorData(QStringList) emitted to update the VCS status
-    @signal vcsStatusMonitorStatus(QString, QString) emitted to signal the status of the
+    @signal vcsStatusMonitorData(list of str) emitted to update the VCS status
+    @signal vcsStatusMonitorStatus(str, str) emitted to signal the status of the
         monitoring thread (ok, nok, op, off) and a status message
     """
     vcsStatusMonitorData = pyqtSignal(list)

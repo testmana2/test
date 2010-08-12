@@ -24,13 +24,13 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
     """
     A class used to display the parts of the project, that don't fit the other categories.
     
-    @signal sourceFile(string) emitted to open a file
-    @signal pixmapFile(string) emitted to open a pixmap file
-    @signal pixmapEditFile(string) emitted to edit a pixmap file
-    @signal svgFile(string) emitted to open a SVG file
-    @signal closeSourceWindow(string) emitted after a file has been removed/deleted
+    @signal sourceFile(str) emitted to open a file
+    @signal pixmapFile(str) emitted to open a pixmap file
+    @signal pixmapEditFile(str) emitted to edit a pixmap file
+    @signal svgFile(str) emitted to open a SVG file
+    @signal closeSourceWindow(str) emitted after a file has been removed/deleted
             from the project
-    @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
     sourceFile = pyqtSignal(str)

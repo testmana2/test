@@ -46,30 +46,30 @@ Module implementing a class used to display the translations part of the project
     A class used to display the translations part of the project. 
 </p><h4>Signals</h4>
 <dl>
-<dt>appendStderr(string)</dt>
+<dt>appendStderr(str)</dt>
 <dd>
 emitted after something was received from
             a QProcess on stderr
-</dd><dt>appendStdout(string)</dt>
+</dd><dt>appendStdout(str)</dt>
 <dd>
 emitted after something was received from
             a QProcess on stdout
-</dd><dt>closeSourceWindow(string)</dt>
+</dd><dt>closeSourceWindow(str)</dt>
 <dd>
 emitted after a file has been removed/deleted
             from the project
-</dd><dt>linguistFile(string)</dt>
+</dd><dt>linguistFile(str)</dt>
 <dd>
 emitted to open a translation file with
             Qt-Linguist
-</dd><dt>showMenu(string, QMenu)</dt>
+</dd><dt>showMenu(str, QMenu)</dt>
 <dd>
 emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
-</dd><dt>sourceFile(string)</dt>
+</dd><dt>sourceFile(str)</dt>
 <dd>
 emitted to open a translation file in an editor
-</dd><dt>trpreview(string list)</dt>
+</dd><dt>trpreview(list of str, bool = False)</dt>
 <dd>
 emitted to preview translations in the
             translations previewer
@@ -79,7 +79,7 @@ emitted to preview translations in the
 ProjectBaseBrowser
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>appendStderr</td></tr><tr><td>appendStdout</td></tr><tr><td>closeSourceWindow</td></tr><tr><td>linguistFile</td></tr><tr><td>showMenu</td></tr><tr><td>sourceFile</td></tr><tr><td>trpreview</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

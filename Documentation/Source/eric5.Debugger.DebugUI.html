@@ -71,7 +71,7 @@ emitted to reset the UI
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>clientStack</td></tr><tr><td>compileForms</td></tr><tr><td>compileResources</td></tr><tr><td>debuggingStarted</td></tr><tr><td>exceptionInterrupt</td></tr><tr><td>resetUI</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -207,9 +207,6 @@ QObject
 </tr><tr>
 <td><a href="#DebugUI.__projectOpened">__projectOpened</a></td>
 <td>Private slot to handle the projectOpened signal.</td>
-</tr><tr>
-<td><a href="#DebugUI.__projectSessionLoaded">__projectSessionLoaded</a></td>
-<td>Private slot to handle the projectSessionLoaded signal.</td>
 </tr><tr>
 <td><a href="#DebugUI.__resetUI">__resetUI</a></td>
 <td>Private slot to reset the user interface.</td>
@@ -393,7 +390,7 @@ exit code of the debugged program (int)
 </p><dl>
 <dt><i>unplanned</i></dt>
 <dd>
-1 if the client died, 0 otherwise
+True if the client died, False otherwise
 </dd>
 </dl><a NAME="DebugUI.__clientLine" ID="DebugUI.__clientLine"></a>
 <h4>DebugUI.__clientLine</h4>
@@ -674,11 +671,6 @@ flag to enable exception reporting of the IDE (boolean)
 <b>__projectOpened</b>(<i></i>)
 <p>
         Private slot to handle the projectOpened signal.
-</p><a NAME="DebugUI.__projectSessionLoaded" ID="DebugUI.__projectSessionLoaded"></a>
-<h4>DebugUI.__projectSessionLoaded</h4>
-<b>__projectSessionLoaded</b>(<i></i>)
-<p>
-        Private slot to handle the projectSessionLoaded signal.
 </p><a NAME="DebugUI.__resetUI" ID="DebugUI.__resetUI"></a>
 <h4>DebugUI.__resetUI</h4>
 <b>__resetUI</b>(<i></i>)

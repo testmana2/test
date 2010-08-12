@@ -50,34 +50,34 @@ Module implementing a browser with class browsing capabilities.
     the selected file.
 </p><h4>Signals</h4>
 <dl>
-<dt>designerFile(string)</dt>
+<dt>designerFile(str)</dt>
 <dd>
 emitted to open a Qt-Designer file
-</dd><dt>linguistFile(string)</dt>
+</dd><dt>linguistFile(str)</dt>
 <dd>
 emitted to open a Qt-Linguist (*.ts) file
-</dd><dt>multiProjectFile(string)</dt>
+</dd><dt>multiProjectFile(str)</dt>
 <dd>
 emitted to open an eric4/5 multi project file
-</dd><dt>pixmapEditFile(string)</dt>
+</dd><dt>pixmapEditFile(str)</dt>
 <dd>
 emitted to edit a pixmap file
-</dd><dt>pixmapFile(string)</dt>
+</dd><dt>pixmapFile(str)</dt>
 <dd>
 emitted to open a pixmap file
-</dd><dt>projectFile(string)</dt>
+</dd><dt>projectFile(str)</dt>
 <dd>
 emitted to open an eric4/5 project file
-</dd><dt>sourceFile(string, int, string)</dt>
+</dd><dt>sourceFile(str, int = 0, str = "")</dt>
 <dd>
 emitted to open a Python file at a line
-</dd><dt>svgFile(string)</dt>
+</dd><dt>svgFile(str)</dt>
 <dd>
 emitted to open a SVG file
-</dd><dt>trpreview(string list)</dt>
+</dd><dt>trpreview(list of str)</dt>
 <dd>
 emitted to preview a Qt-Linguist (*.qm) file
-</dd><dt>unittestOpen(string)</dt>
+</dd><dt>unittestOpen(str)</dt>
 <dd>
 emitted to open a Python file for a unittest
 </dd>
@@ -86,7 +86,7 @@ emitted to open a Python file for a unittest
 QTreeView
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>designerFile</td></tr><tr><td>linguistFile</td></tr><tr><td>multiProjectFile</td></tr><tr><td>pixmapEditFile</td></tr><tr><td>pixmapFile</td></tr><tr><td>projectFile</td></tr><tr><td>sourceFile</td></tr><tr><td>svgFile</td></tr><tr><td>trpreview</td></tr><tr><td>unittestOpen</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

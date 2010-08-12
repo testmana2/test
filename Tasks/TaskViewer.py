@@ -329,7 +329,7 @@ class TaskViewer(QTreeWidget):
     """
     Class implementing the task viewer.
     
-    @signal displayFile(string, integer) emitted to go to a file task
+    @signal displayFile(str, int) emitted to go to a file task
     """
     displayFile = pyqtSignal(str, int)
     

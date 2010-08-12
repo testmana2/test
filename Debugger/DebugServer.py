@@ -34,25 +34,25 @@ class DebugServer(QTcpServer):
     """
     Class implementing the debug server embedded within the IDE.
     
-    @signal clientProcessStdout emitted after the client has sent some output
+    @signal clientProcessStdout(str) emitted after the client has sent some output
             via stdout
-    @signal clientProcessStderr emitted after the client has sent some output
+    @signal clientProcessStderr(str) emitted after the client has sent some output
             via stderr
-    @signal clientOutput emitted after the client has sent some output
-    @signal clientRawInputSent emitted after the data was sent to the debug client
+    @signal clientOutput(str) emitted after the client has sent some output
+    @signal clientRawInputSent() emitted after the data was sent to the debug client
     @signal clientLine(filename, lineno, forStack) emitted after the debug client 
             has executed a line of code
     @signal clientStack(stack) emitted after the debug client has executed a
             line of code
     @signal clientThreadList(currentId, threadList) emitted after a thread list
             has been received
-    @signal clientThreadSet emitted after the client has acknowledged the change
+    @signal clientThreadSet() emitted after the client has acknowledged the change
             of the current thread
     @signal clientVariables(scope, variables) emitted after a variables dump has 
             been received
     @signal clientVariable(scope, variables) emitted after a dump for one class 
             variable has been received
-    @signal clientStatement(boolean) emitted after an interactive command has
+    @signal clientStatement(bool) emitted after an interactive command has
             been executed. The parameter is 0 to indicate that the command is
             complete and 1 if it needs more input.
     @signal clientException(exception) emitted after an exception occured on the 
@@ -75,15 +75,15 @@ class DebugServer(QTcpServer):
     @signal clientCompletionList(completionList, text) emitted after the client
             the commandline completion list and the reworked searchstring was
             received from the client
-    @signal passiveDebugStarted emitted after the debug client has connected in
+    @signal passiveDebugStarted(str, bool) emitted after the debug client has connected in
             passive debug mode
-    @signal clientGone emitted if the client went away (planned or unplanned)
+    @signal clientGone(bool) emitted if the client went away (planned or unplanned)
     @signal utPrepared(nrTests, exc_type, exc_value) emitted after the client has
             loaded a unittest suite
-    @signal utFinished emitted after the client signalled the end of the unittest
+    @signal utFinished() emitted after the client signalled the end of the unittest
     @signal utStartTest(testname, testdocu) emitted after the client has started 
             a test
-    @signal utStopTest emitted after the client has finished a test
+    @signal utStopTest() emitted after the client has finished a test
     @signal utTestFailed(testname, exc_info) emitted after the client reported 
             a failed test
     @signal utTestErrored(testname, exc_info) emitted after the client reported 

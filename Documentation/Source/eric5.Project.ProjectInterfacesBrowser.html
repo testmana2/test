@@ -46,29 +46,32 @@ Module implementing the a class used to display the interfaces (IDL) part of the
     A class used to display the interfaces (IDL) part of the project. 
 </p><h4>Signals</h4>
 <dl>
-<dt>appendStderr(string)</dt>
+<dt>appendStderr(str)</dt>
 <dd>
 emitted after something was received from
             a QProcess on stderr
-</dd><dt>appendStdout(string)</dt>
+</dd><dt>appendStdout(str)</dt>
 <dd>
 emitted after something was received from
             a QProcess on stdout
-</dd><dt>closeSourceWindow(string)</dt>
+</dd><dt>closeSourceWindow(str)</dt>
 <dd>
 emitted after a file has been removed/deleted
             from the project
-</dd><dt>showMenu(string, QMenu)</dt>
+</dd><dt>showMenu(str, QMenu)</dt>
 <dd>
 emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
+</dd><dt>sourceFile(str, int = 0)</dt>
+<dd>
+emitted to open a file
 </dd>
 </dl>
 <h3>Derived from</h3>
 ProjectBaseBrowser
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>appendStderr</td></tr><tr><td>appendStdout</td></tr><tr><td>closeSourceWindow</td></tr><tr><td>showMenu</td></tr><tr><td>sourceFile</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

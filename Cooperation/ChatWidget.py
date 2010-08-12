@@ -30,7 +30,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
     Class implementing the chat dialog.
     
     @signal connected(connected) emitted to signal a change of the connected
-            state (boole)
+            state (bool)
     @signal editorCommand(hash, filename, message) emitted when an editor command
             has been received (string, string, string)
     @signal shareEditor(share) emitted to signal a share is requested (bool)

@@ -205,7 +205,7 @@ class ProjectBrowserModel(BrowserModel):
     """
     Class implementing the project browser model.
     
-    @signal vcsStateChanged(string) emitted after the VCS state has changed
+    @signal vcsStateChanged(str) emitted after the VCS state has changed
     """
     vcsStateChanged = pyqtSignal(str)
     

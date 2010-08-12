@@ -137,10 +137,10 @@ title of the entry (string)
     Class implementing the history manager.
 </p><h4>Signals</h4>
 <dl>
-<dt>entryAdded</dt>
+<dt>entryAdded(HistoryEntry)</dt>
 <dd>
 emitted after a history entry has been added
-</dd><dt>entryRemoved</dt>
+</dd><dt>entryRemoved(HistoryEntry)</dt>
 <dd>
 emitted after a history entry has been removed
 </dd><dt>entryUpdated(int)</dt>
@@ -158,7 +158,7 @@ emitted after the history has been reset
 QWebHistoryInterface
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>entryAdded</td></tr><tr><td>entryRemoved</td></tr><tr><td>entryUpdated</td></tr><tr><td>historyCleared</td></tr><tr><td>historyReset</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

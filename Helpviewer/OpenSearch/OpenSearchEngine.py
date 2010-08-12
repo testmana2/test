@@ -23,7 +23,7 @@ class OpenSearchEngine(QObject):
     Class implementing the open search engine.
     
     @signal imageChanged() emitted after the icon has been changed
-    @signal suggestions(const QStringList&) emitted after the suggestions have 
+    @signal suggestions(list of strings) emitted after the suggestions have 
             been received
     """
     imageChanged = pyqtSignal()

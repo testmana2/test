@@ -46,16 +46,48 @@ Module implementing the mdi area viewmanager class.
     Class implementing the mdi area viewmanager class.
 </p><h4>Signals</h4>
 <dl>
-<dt>editorChanged(string)</dt>
+<dt>bookmarkToggled(Editor)</dt>
+<dd>
+emitted when a bookmark is toggled.
+</dd><dt>breakpointToggled(Editor)</dt>
+<dd>
+emitted when a breakpoint is toggled.
+</dd><dt>checkActions(Editor)</dt>
+<dd>
+emitted when some actions should be checked
+            for their status
+</dd><dt>cursorChanged(Editor)</dt>
+<dd>
+emitted after the cursor position of the active
+            window has changed
+</dd><dt>editorChanged(str)</dt>
 <dd>
 emitted when the current editor has changed
+</dd><dt>editorClosed(str)</dt>
+<dd>
+emitted just before an editor window gets closed
+</dd><dt>editorClosedEd(Editor)</dt>
+<dd>
+emitted just before an editor window gets closed
+</dd><dt>editorOpened(str)</dt>
+<dd>
+emitted after an editor window was opened
+</dd><dt>editorOpenedEd(Editor)</dt>
+<dd>
+emitted after an editor window was opened
+</dd><dt>editorSaved(str)</dt>
+<dd>
+emitted after an editor window was saved
+</dd><dt>lastEditorClosed()</dt>
+<dd>
+emitted after the last editor window was closed
 </dd>
 </dl>
 <h3>Derived from</h3>
 QMdiArea, ViewManager
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>bookmarkToggled</td></tr><tr><td>breakpointToggled</td></tr><tr><td>checkActions</td></tr><tr><td>cursorChanged</td></tr><tr><td>editorChanged</td></tr><tr><td>editorClosed</td></tr><tr><td>editorClosedEd</td></tr><tr><td>editorOpened</td></tr><tr><td>editorOpenedEd</td></tr><tr><td>editorSaved</td></tr><tr><td>lastEditorClosed</td></tr><tr><td>syntaxerrorToggled</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

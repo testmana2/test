@@ -53,7 +53,7 @@ emitted after the client banner was received
 <dd>
 emitted after the client has signaled
             a syntax error in a breakpoint condition
-</dd><dt>clientCapabilities(int capabilities, QString cltype)</dt>
+</dd><dt>clientCapabilities(int capabilities, string cltype)</dt>
 <dd>
 emitted after the clients
             capabilities were received
@@ -77,35 +77,35 @@ emitted after an exception occured on the
 </dd><dt>clientExit(int)</dt>
 <dd>
 emitted with the exit status after the client has exited
-</dd><dt>clientGone</dt>
+</dd><dt>clientGone(bool)</dt>
 <dd>
 emitted if the client went away (planned or unplanned)
 </dd><dt>clientLine(filename, lineno, forStack)</dt>
 <dd>
 emitted after the debug client
             has executed a line of code
-</dd><dt>clientOutput</dt>
+</dd><dt>clientOutput(str)</dt>
 <dd>
 emitted after the client has sent some output
-</dd><dt>clientProcessStderr</dt>
+</dd><dt>clientProcessStderr(str)</dt>
 <dd>
 emitted after the client has sent some output
             via stderr
-</dd><dt>clientProcessStdout</dt>
+</dd><dt>clientProcessStdout(str)</dt>
 <dd>
 emitted after the client has sent some output
             via stdout
 </dd><dt>clientRawInput(prompt, echo)</dt>
 <dd>
 emitted after a raw input request was received
-</dd><dt>clientRawInputSent</dt>
+</dd><dt>clientRawInputSent()</dt>
 <dd>
 emitted after the data was sent to the debug client
 </dd><dt>clientStack(stack)</dt>
 <dd>
 emitted after the debug client has executed a
             line of code
-</dd><dt>clientStatement(boolean)</dt>
+</dd><dt>clientStatement(bool)</dt>
 <dd>
 emitted after an interactive command has
             been executed. The parameter is 0 to indicate that the command is
@@ -118,7 +118,7 @@ emitted after a syntax error has been detected
 <dd>
 emitted after a thread list
             has been received
-</dd><dt>clientThreadSet</dt>
+</dd><dt>clientThreadSet()</dt>
 <dd>
 emitted after the client has acknowledged the change
             of the current thread
@@ -134,11 +134,11 @@ emitted after a variables dump has
 <dd>
 emitted after the client has signaled
             a syntax error in a watch expression
-</dd><dt>passiveDebugStarted</dt>
+</dd><dt>passiveDebugStarted(str, bool)</dt>
 <dd>
 emitted after the debug client has connected in
             passive debug mode
-</dd><dt>utFinished</dt>
+</dd><dt>utFinished()</dt>
 <dd>
 emitted after the client signalled the end of the unittest
 </dd><dt>utPrepared(nrTests, exc_type, exc_value)</dt>
@@ -149,7 +149,7 @@ emitted after the client has
 <dd>
 emitted after the client has started
             a test
-</dd><dt>utStopTest</dt>
+</dd><dt>utStopTest()</dt>
 <dd>
 emitted after the client has finished a test
 </dd><dt>utTestErrored(testname, exc_info)</dt>
@@ -166,7 +166,7 @@ emitted after the client reported
 QTcpServer
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>clientBanner</td></tr><tr><td>clientBreakConditionError</td></tr><tr><td>clientCapabilities</td></tr><tr><td>clientClearBreak</td></tr><tr><td>clientClearWatch</td></tr><tr><td>clientCompletionList</td></tr><tr><td>clientException</td></tr><tr><td>clientExit</td></tr><tr><td>clientGone</td></tr><tr><td>clientLine</td></tr><tr><td>clientOutput</td></tr><tr><td>clientProcessStderr</td></tr><tr><td>clientProcessStdout</td></tr><tr><td>clientRawInput</td></tr><tr><td>clientRawInputSent</td></tr><tr><td>clientStack</td></tr><tr><td>clientStatement</td></tr><tr><td>clientSyntaxError</td></tr><tr><td>clientThreadList</td></tr><tr><td>clientThreadSet</td></tr><tr><td>clientVariable</td></tr><tr><td>clientVariables</td></tr><tr><td>clientWatchConditionError</td></tr><tr><td>passiveDebugStarted</td></tr><tr><td>utFinished</td></tr><tr><td>utPrepared</td></tr><tr><td>utStartTest</td></tr><tr><td>utStopTest</td></tr><tr><td>utTestErrored</td></tr><tr><td>utTestFailed</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -252,54 +252,6 @@ QTcpServer
 <td><a href="#DebugServer.__watchPointDataAboutToBeChanged">__watchPointDataAboutToBeChanged</a></td>
 <td>Private slot to handle the dataAboutToBeChanged signal of the watch expression model.</td>
 </tr><tr>
-<td><a href="#DebugServer.clientBanner">clientBanner</a></td>
-<td>Public method to process the client banner info.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientBreakConditionError">clientBreakConditionError</a></td>
-<td>Public method to process the client breakpoint condition error info.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientCapabilities">clientCapabilities</a></td>
-<td>Public method to process the client capabilities info.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientClearBreak">clientClearBreak</a></td>
-<td>Public method to process the client clear breakpoint command.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientClearWatch">clientClearWatch</a></td>
-<td>Public slot to handle the clientClearWatch signal.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientCompletionList">clientCompletionList</a></td>
-<td>Public method to process the client auto completion info.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientException">clientException</a></td>
-<td>Public method to process the exception info from the client.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientExit">clientExit</a></td>
-<td>Public method to process the client exit status.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientLine">clientLine</a></td>
-<td>Public method to process client position feedback.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientOutput">clientOutput</a></td>
-<td>Public method to process a line of client output.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientRawInput">clientRawInput</a></td>
-<td>Public method to process the client raw input command.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientStack">clientStack</a></td>
-<td>Public method to process a client's stack information.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientStatement">clientStatement</a></td>
-<td>Public method to process the input response from the client.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientSyntaxError">clientSyntaxError</a></td>
-<td>Public method to process the syntax error info from the client.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientThreadList">clientThreadList</a></td>
-<td>Public method to process the client thread list info.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientThreadSet">clientThreadSet</a></td>
-<td>Public method to handle the change of the client thread.</td>
-</tr><tr>
 <td><a href="#DebugServer.clientUtFinished">clientUtFinished</a></td>
 <td>Public method to process the client unit test finished info.</td>
 </tr><tr>
@@ -317,15 +269,6 @@ QTcpServer
 </tr><tr>
 <td><a href="#DebugServer.clientUtTestFailed">clientUtTestFailed</a></td>
 <td>Public method to process the client test failed info.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientVariable">clientVariable</a></td>
-<td>Public method to process the client variable info.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientVariables">clientVariables</a></td>
-<td>Public method to process the client variables info.</td>
-</tr><tr>
-<td><a href="#DebugServer.clientWatchConditionError">clientWatchConditionError</a></td>
-<td>Public method to process the client watch expression error info.</td>
 </tr><tr>
 <td><a href="#DebugServer.getBreakPointModel">getBreakPointModel</a></td>
 <td>Public slot to get a reference to the breakpoint model object.</td>
@@ -434,6 +377,63 @@ QTcpServer
 </tr><tr>
 <td><a href="#DebugServer.shutdownServer">shutdownServer</a></td>
 <td>Public method to cleanly shut down.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientBanner">signalClientBanner</a></td>
+<td>Public method to process the client banner info.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientBreakConditionError">signalClientBreakConditionError</a></td>
+<td>Public method to process the client breakpoint condition error info.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientCapabilities">signalClientCapabilities</a></td>
+<td>Public method to process the client capabilities info.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientClearBreak">signalClientClearBreak</a></td>
+<td>Public method to process the client clear breakpoint command.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientClearWatch">signalClientClearWatch</a></td>
+<td>Public slot to handle the clientClearWatch signal.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientCompletionList">signalClientCompletionList</a></td>
+<td>Public method to process the client auto completion info.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientException">signalClientException</a></td>
+<td>Public method to process the exception info from the client.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientExit">signalClientExit</a></td>
+<td>Public method to process the client exit status.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientLine">signalClientLine</a></td>
+<td>Public method to process client position feedback.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientOutput">signalClientOutput</a></td>
+<td>Public method to process a line of client output.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientRawInput">signalClientRawInput</a></td>
+<td>Public method to process the client raw input command.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientStack">signalClientStack</a></td>
+<td>Public method to process a client's stack information.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientStatement">signalClientStatement</a></td>
+<td>Public method to process the input response from the client.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientSyntaxError">signalClientSyntaxError</a></td>
+<td>Public method to process the syntax error info from the client.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientThreadList">signalClientThreadList</a></td>
+<td>Public method to process the client thread list info.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientThreadSet">signalClientThreadSet</a></td>
+<td>Public method to handle the change of the client thread.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientVariable">signalClientVariable</a></td>
+<td>Public method to process the client variable info.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientVariables">signalClientVariables</a></td>
+<td>Public method to process the client variables info.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientWatchConditionError">signalClientWatchConditionError</a></td>
+<td>Public method to process the client watch expression error info.</td>
 </tr><tr>
 <td><a href="#DebugServer.startClient">startClient</a></td>
 <td>Public method to start a debug client.</td>
@@ -743,210 +743,7 @@ start index of the rows to be changed (QModelIndex)
 <dd>
 end index of the rows to be changed (QModelIndex)
 </dd>
-</dl><a NAME="DebugServer.clientBanner" ID="DebugServer.clientBanner"></a>
-<h4>DebugServer.clientBanner</h4>
-<b>clientBanner</b>(<i>version, platform, debugClient</i>)
-<p>
-        Public method to process the client banner info.
-</p><dl>
-<dt><i>version</i></dt>
-<dd>
-interpreter version info (string)
-</dd><dt><i>platform</i></dt>
-<dd>
-hostname of the client (string)
-</dd><dt><i>debugClient</i></dt>
-<dd>
-additional debugger type info (string)
-</dd>
-</dl><a NAME="DebugServer.clientBreakConditionError" ID="DebugServer.clientBreakConditionError"></a>
-<h4>DebugServer.clientBreakConditionError</h4>
-<b>clientBreakConditionError</b>(<i>filename, lineno</i>)
-<p>
-        Public method to process the client breakpoint condition error info.
-</p><dl>
-<dt><i>filename</i></dt>
-<dd>
-filename of the breakpoint (string)
-</dd><dt><i>lineno</i></dt>
-<dd>
-line umber of the breakpoint (integer)
-</dd>
-</dl><a NAME="DebugServer.clientCapabilities" ID="DebugServer.clientCapabilities"></a>
-<h4>DebugServer.clientCapabilities</h4>
-<b>clientCapabilities</b>(<i>capabilities, clientType</i>)
-<p>
-        Public method to process the client capabilities info.
-</p><dl>
-<dt><i>capabilities</i></dt>
-<dd>
-bitmaks with the client capabilities (integer)
-</dd><dt><i>clientType</i></dt>
-<dd>
-type of the debug client (string)
-</dd>
-</dl><a NAME="DebugServer.clientClearBreak" ID="DebugServer.clientClearBreak"></a>
-<h4>DebugServer.clientClearBreak</h4>
-<b>clientClearBreak</b>(<i>filename, lineno</i>)
-<p>
-        Public method to process the client clear breakpoint command.
-</p><dl>
-<dt><i>filename</i></dt>
-<dd>
-filename of the breakpoint (string)
-</dd><dt><i>lineno</i></dt>
-<dd>
-line umber of the breakpoint (integer)
-</dd>
-</dl><a NAME="DebugServer.clientClearWatch" ID="DebugServer.clientClearWatch"></a>
-<h4>DebugServer.clientClearWatch</h4>
-<b>clientClearWatch</b>(<i>condition</i>)
-<p>
-        Public slot to handle the clientClearWatch signal.
-</p><dl>
-<dt><i>condition</i></dt>
-<dd>
-expression of watch expression to clear (string)
-</dd>
-</dl><a NAME="DebugServer.clientCompletionList" ID="DebugServer.clientCompletionList"></a>
-<h4>DebugServer.clientCompletionList</h4>
-<b>clientCompletionList</b>(<i>completionList, text</i>)
-<p>
-        Public method to process the client auto completion info.
-</p><dl>
-<dt><i>completionList</i></dt>
-<dd>
-list of possible completions (list of strings)
-</dd><dt><i>text</i></dt>
-<dd>
-the text to be completed (string)
-</dd>
-</dl><a NAME="DebugServer.clientException" ID="DebugServer.clientException"></a>
-<h4>DebugServer.clientException</h4>
-<b>clientException</b>(<i>exceptionType, exceptionMessage, stackTrace</i>)
-<p>
-        Public method to process the exception info from the client.
-</p><dl>
-<dt><i>exceptionType</i></dt>
-<dd>
-type of exception raised (string)
-</dd><dt><i>exceptionMessage</i></dt>
-<dd>
-message given by the exception (string)
-</dd><dt><i>stackTrace</i></dt>
-<dd>
-list of stack entries with the exception position
-            first. Each stack entry is a list giving the filename and the linenumber.
-</dd>
-</dl><a NAME="DebugServer.clientExit" ID="DebugServer.clientExit"></a>
-<h4>DebugServer.clientExit</h4>
-<b>clientExit</b>(<i>status</i>)
-<p>
-        Public method to process the client exit status.
-</p><dl>
-<dt><i>status</i></dt>
-<dd>
-exit code as a string (string)
-</dd>
-</dl><a NAME="DebugServer.clientLine" ID="DebugServer.clientLine"></a>
-<h4>DebugServer.clientLine</h4>
-<b>clientLine</b>(<i>filename, lineno, forStack = False</i>)
-<p>
-        Public method to process client position feedback.
-</p><dl>
-<dt><i>filename</i></dt>
-<dd>
-name of the file currently being executed (string)
-</dd><dt><i>lineno</i></dt>
-<dd>
-line of code currently being executed (integer)
-</dd><dt><i>forStack</i></dt>
-<dd>
-flag indicating this is for a stack dump (boolean)
-</dd>
-</dl><a NAME="DebugServer.clientOutput" ID="DebugServer.clientOutput"></a>
-<h4>DebugServer.clientOutput</h4>
-<b>clientOutput</b>(<i>line</i>)
-<p>
-        Public method to process a line of client output.
-</p><dl>
-<dt><i>line</i></dt>
-<dd>
-client output (string)
-</dd>
-</dl><a NAME="DebugServer.clientRawInput" ID="DebugServer.clientRawInput"></a>
-<h4>DebugServer.clientRawInput</h4>
-<b>clientRawInput</b>(<i>prompt, echo</i>)
-<p>
-        Public method to process the client raw input command.
-</p><dl>
-<dt><i>prompt</i></dt>
-<dd>
-the input prompt (string)
-</dd><dt><i>echo</i></dt>
-<dd>
-flag indicating an echoing of the input (boolean)
-</dd>
-</dl><a NAME="DebugServer.clientStack" ID="DebugServer.clientStack"></a>
-<h4>DebugServer.clientStack</h4>
-<b>clientStack</b>(<i>stack</i>)
-<p>
-        Public method to process a client's stack information.
-</p><dl>
-<dt><i>stack</i></dt>
-<dd>
-list of stack entries. Each entry is a tuple of three
-            values giving the filename, linenumber and method
-            (list of lists of (string, integer, string))
-</dd>
-</dl><a NAME="DebugServer.clientStatement" ID="DebugServer.clientStatement"></a>
-<h4>DebugServer.clientStatement</h4>
-<b>clientStatement</b>(<i>more</i>)
-<p>
-        Public method to process the input response from the client.
-</p><dl>
-<dt><i>more</i></dt>
-<dd>
-flag indicating that more user input is required
-</dd>
-</dl><a NAME="DebugServer.clientSyntaxError" ID="DebugServer.clientSyntaxError"></a>
-<h4>DebugServer.clientSyntaxError</h4>
-<b>clientSyntaxError</b>(<i>message, filename, lineNo, characterNo</i>)
-<p>
-        Public method to process the syntax error info from the client.
-</p><dl>
-<dt><i>message</i></dt>
-<dd>
-message of the syntax error (string)
-</dd><dt><i>filename</i></dt>
-<dd>
-translated filename of the syntax error position (string)
-</dd><dt><i>lineNo</i></dt>
-<dd>
-line number of the syntax error position (integer)
-</dd><dt><i>characterNo</i></dt>
-<dd>
-character number of the syntax error position (integer)
-</dd>
-</dl><a NAME="DebugServer.clientThreadList" ID="DebugServer.clientThreadList"></a>
-<h4>DebugServer.clientThreadList</h4>
-<b>clientThreadList</b>(<i>currentId, threadList</i>)
-<p>
-        Public method to process the client thread list info.
-</p><dl>
-<dt><i>currentID</i></dt>
-<dd>
-id of the current thread (integer)
-</dd><dt><i>threadList</i></dt>
-<dd>
-list of dictionaries containing the thread data
-</dd>
-</dl><a NAME="DebugServer.clientThreadSet" ID="DebugServer.clientThreadSet"></a>
-<h4>DebugServer.clientThreadSet</h4>
-<b>clientThreadSet</b>(<i></i>)
-<p>
-        Public method to handle the change of the client thread.
-</p><a NAME="DebugServer.clientUtFinished" ID="DebugServer.clientUtFinished"></a>
+</dl><a NAME="DebugServer.clientUtFinished" ID="DebugServer.clientUtFinished"></a>
 <h4>DebugServer.clientUtFinished</h4>
 <b>clientUtFinished</b>(<i></i>)
 <p>
@@ -1010,42 +807,6 @@ name of the test (string)
 </dd><dt><i>traceback</i></dt>
 <dd>
 lines of traceback info (string)
-</dd>
-</dl><a NAME="DebugServer.clientVariable" ID="DebugServer.clientVariable"></a>
-<h4>DebugServer.clientVariable</h4>
-<b>clientVariable</b>(<i>scope, variables</i>)
-<p>
-        Public method to process the client variable info.
-</p><dl>
-<dt><i>scope</i></dt>
-<dd>
-scope of the variables (-1 = empty global, 1 = global, 0 = local)
-</dd><dt><i>variables</i></dt>
-<dd>
-the list of members of a classvariable from the client
-</dd>
-</dl><a NAME="DebugServer.clientVariables" ID="DebugServer.clientVariables"></a>
-<h4>DebugServer.clientVariables</h4>
-<b>clientVariables</b>(<i>scope, variables</i>)
-<p>
-        Public method to process the client variables info.
-</p><dl>
-<dt><i>scope</i></dt>
-<dd>
-scope of the variables (-1 = empty global, 1 = global, 0 = local)
-</dd><dt><i>variables</i></dt>
-<dd>
-the list of variables from the client
-</dd>
-</dl><a NAME="DebugServer.clientWatchConditionError" ID="DebugServer.clientWatchConditionError"></a>
-<h4>DebugServer.clientWatchConditionError</h4>
-<b>clientWatchConditionError</b>(<i>condition</i>)
-<p>
-        Public method to process the client watch expression error info.
-</p><dl>
-<dt><i>condition</i></dt>
-<dd>
-expression of watch expression to clear (string)
 </dd>
 </dl><a NAME="DebugServer.getBreakPointModel" ID="DebugServer.getBreakPointModel"></a>
 <h4>DebugServer.getBreakPointModel</h4>
@@ -1534,7 +1295,246 @@ flag indicating erasure of coverage data is requested (boolean)
 </p><p>
         It closes our socket and shuts down
         the debug client. (Needed on Win OS)
-</p><a NAME="DebugServer.startClient" ID="DebugServer.startClient"></a>
+</p><a NAME="DebugServer.signalClientBanner" ID="DebugServer.signalClientBanner"></a>
+<h4>DebugServer.signalClientBanner</h4>
+<b>signalClientBanner</b>(<i>version, platform, debugClient</i>)
+<p>
+        Public method to process the client banner info.
+</p><dl>
+<dt><i>version</i></dt>
+<dd>
+interpreter version info (string)
+</dd><dt><i>platform</i></dt>
+<dd>
+hostname of the client (string)
+</dd><dt><i>debugClient</i></dt>
+<dd>
+additional debugger type info (string)
+</dd>
+</dl><a NAME="DebugServer.signalClientBreakConditionError" ID="DebugServer.signalClientBreakConditionError"></a>
+<h4>DebugServer.signalClientBreakConditionError</h4>
+<b>signalClientBreakConditionError</b>(<i>filename, lineno</i>)
+<p>
+        Public method to process the client breakpoint condition error info.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+filename of the breakpoint (string)
+</dd><dt><i>lineno</i></dt>
+<dd>
+line umber of the breakpoint (integer)
+</dd>
+</dl><a NAME="DebugServer.signalClientCapabilities" ID="DebugServer.signalClientCapabilities"></a>
+<h4>DebugServer.signalClientCapabilities</h4>
+<b>signalClientCapabilities</b>(<i>capabilities, clientType</i>)
+<p>
+        Public method to process the client capabilities info.
+</p><dl>
+<dt><i>capabilities</i></dt>
+<dd>
+bitmaks with the client capabilities (integer)
+</dd><dt><i>clientType</i></dt>
+<dd>
+type of the debug client (string)
+</dd>
+</dl><a NAME="DebugServer.signalClientClearBreak" ID="DebugServer.signalClientClearBreak"></a>
+<h4>DebugServer.signalClientClearBreak</h4>
+<b>signalClientClearBreak</b>(<i>filename, lineno</i>)
+<p>
+        Public method to process the client clear breakpoint command.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+filename of the breakpoint (string)
+</dd><dt><i>lineno</i></dt>
+<dd>
+line umber of the breakpoint (integer)
+</dd>
+</dl><a NAME="DebugServer.signalClientClearWatch" ID="DebugServer.signalClientClearWatch"></a>
+<h4>DebugServer.signalClientClearWatch</h4>
+<b>signalClientClearWatch</b>(<i>condition</i>)
+<p>
+        Public slot to handle the clientClearWatch signal.
+</p><dl>
+<dt><i>condition</i></dt>
+<dd>
+expression of watch expression to clear (string)
+</dd>
+</dl><a NAME="DebugServer.signalClientCompletionList" ID="DebugServer.signalClientCompletionList"></a>
+<h4>DebugServer.signalClientCompletionList</h4>
+<b>signalClientCompletionList</b>(<i>completionList, text</i>)
+<p>
+        Public method to process the client auto completion info.
+</p><dl>
+<dt><i>completionList</i></dt>
+<dd>
+list of possible completions (list of strings)
+</dd><dt><i>text</i></dt>
+<dd>
+the text to be completed (string)
+</dd>
+</dl><a NAME="DebugServer.signalClientException" ID="DebugServer.signalClientException"></a>
+<h4>DebugServer.signalClientException</h4>
+<b>signalClientException</b>(<i>exceptionType, exceptionMessage, stackTrace</i>)
+<p>
+        Public method to process the exception info from the client.
+</p><dl>
+<dt><i>exceptionType</i></dt>
+<dd>
+type of exception raised (string)
+</dd><dt><i>exceptionMessage</i></dt>
+<dd>
+message given by the exception (string)
+</dd><dt><i>stackTrace</i></dt>
+<dd>
+list of stack entries with the exception position
+            first. Each stack entry is a list giving the filename and the linenumber.
+</dd>
+</dl><a NAME="DebugServer.signalClientExit" ID="DebugServer.signalClientExit"></a>
+<h4>DebugServer.signalClientExit</h4>
+<b>signalClientExit</b>(<i>status</i>)
+<p>
+        Public method to process the client exit status.
+</p><dl>
+<dt><i>status</i></dt>
+<dd>
+exit code as a string (string)
+</dd>
+</dl><a NAME="DebugServer.signalClientLine" ID="DebugServer.signalClientLine"></a>
+<h4>DebugServer.signalClientLine</h4>
+<b>signalClientLine</b>(<i>filename, lineno, forStack = False</i>)
+<p>
+        Public method to process client position feedback.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file currently being executed (string)
+</dd><dt><i>lineno</i></dt>
+<dd>
+line of code currently being executed (integer)
+</dd><dt><i>forStack</i></dt>
+<dd>
+flag indicating this is for a stack dump (boolean)
+</dd>
+</dl><a NAME="DebugServer.signalClientOutput" ID="DebugServer.signalClientOutput"></a>
+<h4>DebugServer.signalClientOutput</h4>
+<b>signalClientOutput</b>(<i>line</i>)
+<p>
+        Public method to process a line of client output.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+client output (string)
+</dd>
+</dl><a NAME="DebugServer.signalClientRawInput" ID="DebugServer.signalClientRawInput"></a>
+<h4>DebugServer.signalClientRawInput</h4>
+<b>signalClientRawInput</b>(<i>prompt, echo</i>)
+<p>
+        Public method to process the client raw input command.
+</p><dl>
+<dt><i>prompt</i></dt>
+<dd>
+the input prompt (string)
+</dd><dt><i>echo</i></dt>
+<dd>
+flag indicating an echoing of the input (boolean)
+</dd>
+</dl><a NAME="DebugServer.signalClientStack" ID="DebugServer.signalClientStack"></a>
+<h4>DebugServer.signalClientStack</h4>
+<b>signalClientStack</b>(<i>stack</i>)
+<p>
+        Public method to process a client's stack information.
+</p><dl>
+<dt><i>stack</i></dt>
+<dd>
+list of stack entries. Each entry is a tuple of three
+            values giving the filename, linenumber and method
+            (list of lists of (string, integer, string))
+</dd>
+</dl><a NAME="DebugServer.signalClientStatement" ID="DebugServer.signalClientStatement"></a>
+<h4>DebugServer.signalClientStatement</h4>
+<b>signalClientStatement</b>(<i>more</i>)
+<p>
+        Public method to process the input response from the client.
+</p><dl>
+<dt><i>more</i></dt>
+<dd>
+flag indicating that more user input is required
+</dd>
+</dl><a NAME="DebugServer.signalClientSyntaxError" ID="DebugServer.signalClientSyntaxError"></a>
+<h4>DebugServer.signalClientSyntaxError</h4>
+<b>signalClientSyntaxError</b>(<i>message, filename, lineNo, characterNo</i>)
+<p>
+        Public method to process the syntax error info from the client.
+</p><dl>
+<dt><i>message</i></dt>
+<dd>
+message of the syntax error (string)
+</dd><dt><i>filename</i></dt>
+<dd>
+translated filename of the syntax error position (string)
+</dd><dt><i>lineNo</i></dt>
+<dd>
+line number of the syntax error position (integer)
+</dd><dt><i>characterNo</i></dt>
+<dd>
+character number of the syntax error position (integer)
+</dd>
+</dl><a NAME="DebugServer.signalClientThreadList" ID="DebugServer.signalClientThreadList"></a>
+<h4>DebugServer.signalClientThreadList</h4>
+<b>signalClientThreadList</b>(<i>currentId, threadList</i>)
+<p>
+        Public method to process the client thread list info.
+</p><dl>
+<dt><i>currentID</i></dt>
+<dd>
+id of the current thread (integer)
+</dd><dt><i>threadList</i></dt>
+<dd>
+list of dictionaries containing the thread data
+</dd>
+</dl><a NAME="DebugServer.signalClientThreadSet" ID="DebugServer.signalClientThreadSet"></a>
+<h4>DebugServer.signalClientThreadSet</h4>
+<b>signalClientThreadSet</b>(<i></i>)
+<p>
+        Public method to handle the change of the client thread.
+</p><a NAME="DebugServer.signalClientVariable" ID="DebugServer.signalClientVariable"></a>
+<h4>DebugServer.signalClientVariable</h4>
+<b>signalClientVariable</b>(<i>scope, variables</i>)
+<p>
+        Public method to process the client variable info.
+</p><dl>
+<dt><i>scope</i></dt>
+<dd>
+scope of the variables (-1 = empty global, 1 = global, 0 = local)
+</dd><dt><i>variables</i></dt>
+<dd>
+the list of members of a classvariable from the client
+</dd>
+</dl><a NAME="DebugServer.signalClientVariables" ID="DebugServer.signalClientVariables"></a>
+<h4>DebugServer.signalClientVariables</h4>
+<b>signalClientVariables</b>(<i>scope, variables</i>)
+<p>
+        Public method to process the client variables info.
+</p><dl>
+<dt><i>scope</i></dt>
+<dd>
+scope of the variables (-1 = empty global, 1 = global, 0 = local)
+</dd><dt><i>variables</i></dt>
+<dd>
+the list of variables from the client
+</dd>
+</dl><a NAME="DebugServer.signalClientWatchConditionError" ID="DebugServer.signalClientWatchConditionError"></a>
+<h4>DebugServer.signalClientWatchConditionError</h4>
+<b>signalClientWatchConditionError</b>(<i>condition</i>)
+<p>
+        Public method to process the client watch expression error info.
+</p><dl>
+<dt><i>condition</i></dt>
+<dd>
+expression of watch expression to clear (string)
+</dd>
+</dl><a NAME="DebugServer.startClient" ID="DebugServer.startClient"></a>
 <h4>DebugServer.startClient</h4>
 <b>startClient</b>(<i>unplanned = True, clType = None, forProject = False, runInConsole = False</i>)
 <p>

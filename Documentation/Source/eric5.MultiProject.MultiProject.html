@@ -46,7 +46,7 @@ Module implementing the multi project management functionality.
     Class implementing the project management functionality.
 </p><h4>Signals</h4>
 <dl>
-<dt>dirty(int)</dt>
+<dt>dirty(bool)</dt>
 <dd>
 emitted when the dirty state changes
 </dd><dt>multiProjectClosed()</dt>
@@ -87,7 +87,7 @@ emitted when a menu is about to be shown.
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>dirty</td></tr><tr><td>multiProjectClosed</td></tr><tr><td>multiProjectOpened</td></tr><tr><td>multiProjectPropertiesChanged</td></tr><tr><td>newMultiProject</td></tr><tr><td>projectAdded</td></tr><tr><td>projectDataChanged</td></tr><tr><td>projectOpened</td></tr><tr><td>projectRemoved</td></tr><tr><td>showMenu</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -106,6 +106,9 @@ QObject
 </tr><tr>
 <td><a href="#MultiProject.__loadRecent">__loadRecent</a></td>
 <td>Private method to load the recently opened multi project filenames.</td>
+</tr><tr>
+<td><a href="#MultiProject.__newMultiProject">__newMultiProject</a></td>
+<td>Private slot to build a new multi project.</td>
 </tr><tr>
 <td><a href="#MultiProject.__openMasterProject">__openMasterProject</a></td>
 <td>Public slot to open the master project.</td>
@@ -197,9 +200,6 @@ QObject
 <td><a href="#MultiProject.isOpen">isOpen</a></td>
 <td>Public method to return the opened state.</td>
 </tr><tr>
-<td><a href="#MultiProject.newMultiProject">newMultiProject</a></td>
-<td>Public slot to build a new multi project.</td>
-</tr><tr>
 <td><a href="#MultiProject.openMultiProject">openMultiProject</a></td>
 <td>Public slot to open a multi project.</td>
 </tr><tr>
@@ -262,6 +262,14 @@ optional filename of a multi project file to open (string)
 <b>__loadRecent</b>(<i></i>)
 <p>
         Private method to load the recently opened multi project filenames.
+</p><a NAME="MultiProject.__newMultiProject" ID="MultiProject.__newMultiProject"></a>
+<h4>MultiProject.__newMultiProject</h4>
+<b>__newMultiProject</b>(<i></i>)
+<p>
+        Private slot to build a new multi project.
+</p><p>
+        This method displays the new multi project dialog and initializes
+        the multi project object with the data entered.
 </p><a NAME="MultiProject.__openMasterProject" ID="MultiProject.__openMasterProject"></a>
 <h4>MultiProject.__openMasterProject</h4>
 <b>__openMasterProject</b>(<i>reopen = True</i>)
@@ -573,15 +581,7 @@ dirty state (boolean)
 <dd>
 open state (boolean)
 </dd>
-</dl><a NAME="MultiProject.newMultiProject" ID="MultiProject.newMultiProject"></a>
-<h4>MultiProject.newMultiProject</h4>
-<b>newMultiProject</b>(<i></i>)
-<p>
-        Public slot to build a new multi project.
-</p><p>
-        This method displays the new multi project dialog and initializes
-        the multi project object with the data entered.
-</p><a NAME="MultiProject.openMultiProject" ID="MultiProject.openMultiProject"></a>
+</dl><a NAME="MultiProject.openMultiProject" ID="MultiProject.openMultiProject"></a>
 <h4>MultiProject.openMultiProject</h4>
 <b>openMultiProject</b>(<i>fn = None, openMaster = True</i>)
 <p>

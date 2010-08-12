@@ -32,16 +32,16 @@ class Browser(QTreeView):
     is displayed by a right click the user can select various actions on
     the selected file.
     
-    @signal sourceFile(string, int, string) emitted to open a Python file at a line 
-    @signal designerFile(string) emitted to open a Qt-Designer file
-    @signal linguistFile(string) emitted to open a Qt-Linguist (*.ts) file
-    @signal trpreview(string list) emitted to preview a Qt-Linguist (*.qm) file
-    @signal projectFile(string) emitted to open an eric4/5 project file
-    @signal multiProjectFile(string) emitted to open an eric4/5 multi project file
-    @signal pixmapFile(string) emitted to open a pixmap file
-    @signal pixmapEditFile(string) emitted to edit a pixmap file
-    @signal svgFile(string) emitted to open a SVG file
-    @signal unittestOpen(string) emitted to open a Python file for a unittest
+    @signal sourceFile(str, int = 0, str = "") emitted to open a Python file at a line 
+    @signal designerFile(str) emitted to open a Qt-Designer file
+    @signal linguistFile(str) emitted to open a Qt-Linguist (*.ts) file
+    @signal trpreview(list of str) emitted to preview a Qt-Linguist (*.qm) file
+    @signal projectFile(str) emitted to open an eric4/5 project file
+    @signal multiProjectFile(str) emitted to open an eric4/5 multi project file
+    @signal pixmapFile(str) emitted to open a pixmap file
+    @signal pixmapEditFile(str) emitted to edit a pixmap file
+    @signal svgFile(str) emitted to open a SVG file
+    @signal unittestOpen(str) emitted to open a Python file for a unittest
     """
     sourceFile = pyqtSignal((str, ), (str, int), (str, int, str))
     designerFile = pyqtSignal(str)

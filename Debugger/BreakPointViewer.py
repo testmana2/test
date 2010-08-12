@@ -21,7 +21,7 @@ class BreakPointViewer(QTreeView):
     Breakpoints will be shown with all their details. They can be modified through
     the context menu of this widget.
     
-    @signal sourceFile(string, int) emitted to show the source of a breakpoint
+    @signal sourceFile(str, int) emitted to show the source of a breakpoint
     """
     sourceFile = pyqtSignal(str, int)
     

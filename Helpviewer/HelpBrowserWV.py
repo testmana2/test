@@ -289,11 +289,11 @@ class HelpBrowser(QWebView):
     This is a subclass of the Qt QWebView to implement an
     interface compatible with the QTextBrowser based variant.
     
-    @signal sourceChanged(const QUrl &) emitted after the current URL has changed
+    @signal sourceChanged(QUrl) emitted after the current URL has changed
     @signal forwardAvailable(bool) emitted after the current URL has changed
     @signal backwardAvailable(bool) emitted after the current URL has changed
-    @signal highlighted(const QString&) emitted, when the mouse hovers over a link
-    @signal search(const QUrl &) emitted, when a search is requested
+    @signal highlighted(str) emitted, when the mouse hovers over a link
+    @signal search(QUrl) emitted, when a search is requested
     """
     sourceChanged = pyqtSignal(QUrl)
     forwardAvailable = pyqtSignal(bool)

@@ -22,9 +22,8 @@ class BookmarksToolBar(E5ModelToolBar):
     """
     Class implementing a tool bar showing bookmarks.
     
-    @signal openUrl(const QUrl&, const QString&) emitted to open a URL in the current
-            tab
-    @signal newUrl(const QUrl&, const QString&) emitted to open a URL in a new tab
+    @signal openUrl(QUrl, str) emitted to open a URL in the current tab
+    @signal newUrl(QUrl, str) emitted to open a URL in a new tab
     """
     openUrl = pyqtSignal(QUrl, str)
     newUrl = pyqtSignal(QUrl, str)

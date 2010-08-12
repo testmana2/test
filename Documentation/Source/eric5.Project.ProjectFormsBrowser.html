@@ -46,30 +46,30 @@ Module implementing a class used to display the forms part of the project.
     A class used to display the forms part of the project. 
 </p><h4>Signals</h4>
 <dl>
-<dt>appendStderr(string)</dt>
+<dt>appendStderr(str)</dt>
 <dd>
 emitted after something was received from
             a QProcess on stderr
-</dd><dt>closeSourceWindow(string)</dt>
+</dd><dt>closeSourceWindow(str)</dt>
 <dd>
 emitted after a file has been removed/deleted
             from the project
-</dd><dt>menusAboutToBeCreated</dt>
+</dd><dt>menusAboutToBeCreated()</dt>
 <dd>
-emitted when the context menu are about to
+emitted when the context menus are about to
             be created. This is the right moment to add or remove hook methods.
-</dd><dt>showMenu(string, QMenu)</dt>
+</dd><dt>showMenu(str, QMenu)</dt>
 <dd>
 emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
-</dd><dt>sourceFile(string)</dt>
+</dd><dt>sourceFile(str)</dt>
 <dd>
 emitted to open a forms file in an editor
-</dd><dt>trpreview(string list)</dt>
+</dd><dt>trpreview(list of str)</dt>
 <dd>
 emitted to preview form files in the
             translations previewer
-</dd><dt>uipreview(string)</dt>
+</dd><dt>uipreview(str)</dt>
 <dd>
 emitted to preview a forms file
 </dd>
@@ -78,7 +78,7 @@ emitted to preview a forms file
 ProjectBaseBrowser
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>appendStderr</td></tr><tr><td>closeSourceWindow</td></tr><tr><td>menusAboutToBeCreated</td></tr><tr><td>showMenu</td></tr><tr><td>sourceFile</td></tr><tr><td>trpreview</td></tr><tr><td>uipreview</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -283,9 +283,6 @@ full directory path for the new form file (string)
 <b>__openFile</b>(<i></i>)
 <p>
         Private slot to handle the Open menu action.
-</p><p>
-        This uses the projects UI type to determine the Qt Designer
-        version to use.
 </p><a NAME="ProjectFormsBrowser.__openFileInEditor" ID="ProjectFormsBrowser.__openFileInEditor"></a>
 <h4>ProjectFormsBrowser.__openFileInEditor</h4>
 <b>__openFileInEditor</b>(<i></i>)

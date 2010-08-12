@@ -48,34 +48,36 @@ class Editor(QsciScintillaCompat):
     """
     Class implementing the editor component of the eric5 IDE.
     
-    @signal modificationStatusChanged(boolean, editor) emitted when the
+    @signal modificationStatusChanged(bool, QsciScintillaCompat) emitted when the
             modification status has changed
-    @signal undoAvailable(boolean) emitted to signal the undo availability
-    @signal redoAvailable(boolean) emitted to signal the redo availability
-    @signal cursorChanged(string, int, int) emitted when the cursor position
+    @signal undoAvailable(bool) emitted to signal the undo availability
+    @signal redoAvailable(bool) emitted to signal the redo availability
+    @signal cursorChanged(str, int, int) emitted when the cursor position
             was changed
-    @signal editorAboutToBeSaved(string) emitted before the editor is saved
-    @signal editorSaved(string) emitted after the editor has been saved
-    @signal editorRenamed(string) emitted after the editor got a new name
+    @signal editorAboutToBeSaved(str) emitted before the editor is saved
+    @signal editorSaved(str) emitted after the editor has been saved
+    @signal editorRenamed(str) emitted after the editor got a new name
             (i.e. after a 'Save As')
-    @signal captionChanged(string, editor) emitted when the caption is
+    @signal captionChanged(str, QsciScintillaCompat) emitted when the caption is
             updated. Typically due to a readOnly attribute change.
-    @signal breakpointToggled(editor) emitted when a breakpoint is toggled
-    @signal bookmarkToggled(editor) emitted when a bookmark is toggled
-    @signal syntaxerrorToggled(editor) emitted when a syntax error was discovered
+    @signal breakpointToggled(QsciScintillaCompat) emitted when a breakpoint is toggled
+    @signal bookmarkToggled(QsciScintillaCompat) emitted when a bookmark is toggled
+    @signal syntaxerrorToggled(QsciScintillaCompat) emitted when a syntax error 
+            was discovered
     @signal autoCompletionAPIsAvailable(bool) emitted after the autocompletion
             function has been configured
-    @signal coverageMarkersShown(boolean) emitted after the coverage markers have been 
+    @signal coverageMarkersShown(bool) emitted after the coverage markers have been 
             shown or cleared
-    @signal taskMarkersUpdated(editor) emitted when the task markers were updated
-    @signal showMenu(string, QMenu, editor) emitted when a menu is about to be shown.
-            The name of the menu, a reference to the menu and a reference to the
-            editor are given.
-    @signal languageChanged(string) emitted when the editors language was set. The
+    @signal taskMarkersUpdated(QsciScintillaCompat) emitted when the task markers 
+            were updated
+    @signal showMenu(str, QMenu, QsciScintillaCompat) emitted when a menu is about 
+            to be shown. The name of the menu, a reference to the menu and a reference
+            to the editor are given.
+    @signal languageChanged(str) emitted when the editors language was set. The
             language is passed as a parameter.
-    @signal eolChanged(string) emitted when the editors eol type was set. The eol string
+    @signal eolChanged(str) emitted when the editors eol type was set. The eol string
             is passed as a parameter.
-    @signal encodingChanged(string) emitted when the editors encoding was set. The 
+    @signal encodingChanged(str) emitted when the editors encoding was set. The 
             encoding name is passed as a parameter.
     """
     modificationStatusChanged = pyqtSignal(bool, QsciScintillaCompat)

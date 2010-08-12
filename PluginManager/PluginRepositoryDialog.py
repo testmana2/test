@@ -42,7 +42,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
     """
     Class implementing a dialog showing the available plugins.
     
-    @signal closeAndInstall emitted when the Close & Install button is pressed
+    @signal closeAndInstall() emitted when the Close & Install button is pressed
     """
     closeAndInstall = pyqtSignal()
     

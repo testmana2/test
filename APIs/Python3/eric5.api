@@ -521,6 +521,7 @@ eric5.DebugClients.Python3.getpass.win_getpass?7
 eric5.Debugger.BreakPointModel.BreakPointModel.addBreakPoint?4(fn, line, properties)
 eric5.Debugger.BreakPointModel.BreakPointModel.columnCount?4(parent = QModelIndex())
 eric5.Debugger.BreakPointModel.BreakPointModel.data?4(index, role)
+eric5.Debugger.BreakPointModel.BreakPointModel.dataAboutToBeChanged?7
 eric5.Debugger.BreakPointModel.BreakPointModel.deleteAll?4()
 eric5.Debugger.BreakPointModel.BreakPointModel.deleteBreakPointByIndex?4(index)
 eric5.Debugger.BreakPointModel.BreakPointModel.deleteBreakPoints?4(idxList)
@@ -539,6 +540,7 @@ eric5.Debugger.BreakPointModel.BreakPointModel?1(parent = None)
 eric5.Debugger.BreakPointViewer.BreakPointViewer.handleResetUI?4()
 eric5.Debugger.BreakPointViewer.BreakPointViewer.highlightBreakpoint?4(fn, lineno)
 eric5.Debugger.BreakPointViewer.BreakPointViewer.setModel?4(model)
+eric5.Debugger.BreakPointViewer.BreakPointViewer.sourceFile?7
 eric5.Debugger.BreakPointViewer.BreakPointViewer?1(parent = None)
 eric5.Debugger.DebugClientCapabilities.HasAll?7
 eric5.Debugger.DebugClientCapabilities.HasCompleter?7
@@ -609,31 +611,35 @@ eric5.Debugger.DebugProtocol.ResponseUTTestFailed?7
 eric5.Debugger.DebugProtocol.ResponseVariable?7
 eric5.Debugger.DebugProtocol.ResponseVariables?7
 eric5.Debugger.DebugProtocol.ResponseWPConditionError?7
-eric5.Debugger.DebugServer.DebugServer.clientBanner?4(version, platform, debugClient)
-eric5.Debugger.DebugServer.DebugServer.clientBreakConditionError?4(filename, lineno)
-eric5.Debugger.DebugServer.DebugServer.clientCapabilities?4(capabilities, clientType)
-eric5.Debugger.DebugServer.DebugServer.clientClearBreak?4(filename, lineno)
-eric5.Debugger.DebugServer.DebugServer.clientClearWatch?4(condition)
-eric5.Debugger.DebugServer.DebugServer.clientCompletionList?4(completionList, text)
-eric5.Debugger.DebugServer.DebugServer.clientException?4(exceptionType, exceptionMessage, stackTrace)
-eric5.Debugger.DebugServer.DebugServer.clientExit?4(status)
-eric5.Debugger.DebugServer.DebugServer.clientLine?4(filename, lineno, forStack = False)
-eric5.Debugger.DebugServer.DebugServer.clientOutput?4(line)
-eric5.Debugger.DebugServer.DebugServer.clientRawInput?4(prompt, echo)
-eric5.Debugger.DebugServer.DebugServer.clientStack?4(stack)
-eric5.Debugger.DebugServer.DebugServer.clientStatement?4(more)
-eric5.Debugger.DebugServer.DebugServer.clientSyntaxError?4(message, filename, lineNo, characterNo)
-eric5.Debugger.DebugServer.DebugServer.clientThreadList?4(currentId, threadList)
-eric5.Debugger.DebugServer.DebugServer.clientThreadSet?4()
+eric5.Debugger.DebugServer.DebugServer.clientBanner?7
+eric5.Debugger.DebugServer.DebugServer.clientBreakConditionError?7
+eric5.Debugger.DebugServer.DebugServer.clientCapabilities?7
+eric5.Debugger.DebugServer.DebugServer.clientClearBreak?7
+eric5.Debugger.DebugServer.DebugServer.clientClearWatch?7
+eric5.Debugger.DebugServer.DebugServer.clientCompletionList?7
+eric5.Debugger.DebugServer.DebugServer.clientException?7
+eric5.Debugger.DebugServer.DebugServer.clientExit?7
+eric5.Debugger.DebugServer.DebugServer.clientGone?7
+eric5.Debugger.DebugServer.DebugServer.clientLine?7
+eric5.Debugger.DebugServer.DebugServer.clientOutput?7
+eric5.Debugger.DebugServer.DebugServer.clientProcessStderr?7
+eric5.Debugger.DebugServer.DebugServer.clientProcessStdout?7
+eric5.Debugger.DebugServer.DebugServer.clientRawInput?7
+eric5.Debugger.DebugServer.DebugServer.clientRawInputSent?7
+eric5.Debugger.DebugServer.DebugServer.clientStack?7
+eric5.Debugger.DebugServer.DebugServer.clientStatement?7
+eric5.Debugger.DebugServer.DebugServer.clientSyntaxError?7
+eric5.Debugger.DebugServer.DebugServer.clientThreadList?7
+eric5.Debugger.DebugServer.DebugServer.clientThreadSet?7
 eric5.Debugger.DebugServer.DebugServer.clientUtFinished?4()
 eric5.Debugger.DebugServer.DebugServer.clientUtPrepared?4(result, exceptionType, exceptionValue)
 eric5.Debugger.DebugServer.DebugServer.clientUtStartTest?4(testname, doc)
 eric5.Debugger.DebugServer.DebugServer.clientUtStopTest?4()
 eric5.Debugger.DebugServer.DebugServer.clientUtTestErrored?4(testname, traceback)
 eric5.Debugger.DebugServer.DebugServer.clientUtTestFailed?4(testname, traceback)
-eric5.Debugger.DebugServer.DebugServer.clientVariable?4(scope, variables)
-eric5.Debugger.DebugServer.DebugServer.clientVariables?4(scope, variables)
-eric5.Debugger.DebugServer.DebugServer.clientWatchConditionError?4(condition)
+eric5.Debugger.DebugServer.DebugServer.clientVariable?7
+eric5.Debugger.DebugServer.DebugServer.clientVariables?7
+eric5.Debugger.DebugServer.DebugServer.clientWatchConditionError?7
 eric5.Debugger.DebugServer.DebugServer.getBreakPointModel?4()
 eric5.Debugger.DebugServer.DebugServer.getClientCapabilities?4(type)
 eric5.Debugger.DebugServer.DebugServer.getExtensions?4(language)
@@ -641,6 +647,7 @@ eric5.Debugger.DebugServer.DebugServer.getHostAddress?4(localhost)
 eric5.Debugger.DebugServer.DebugServer.getSupportedLanguages?4(shellOnly = False)
 eric5.Debugger.DebugServer.DebugServer.getWatchPointModel?4()
 eric5.Debugger.DebugServer.DebugServer.isConnected?4()
+eric5.Debugger.DebugServer.DebugServer.passiveDebugStarted?7
 eric5.Debugger.DebugServer.DebugServer.passiveStartUp?4(fn, exc)
 eric5.Debugger.DebugServer.DebugServer.preferencesChanged?4()
 eric5.Debugger.DebugServer.DebugServer.remoteBanner?4()
@@ -670,13 +677,44 @@ eric5.Debugger.DebugServer.DebugServer.remoteUTPrepare?4(fn, tn, tfn, cov, covna
 eric5.Debugger.DebugServer.DebugServer.remoteUTRun?4()
 eric5.Debugger.DebugServer.DebugServer.remoteUTStop?4()
 eric5.Debugger.DebugServer.DebugServer.shutdownServer?4()
+eric5.Debugger.DebugServer.DebugServer.signalClientBanner?4(version, platform, debugClient)
+eric5.Debugger.DebugServer.DebugServer.signalClientBreakConditionError?4(filename, lineno)
+eric5.Debugger.DebugServer.DebugServer.signalClientCapabilities?4(capabilities, clientType)
+eric5.Debugger.DebugServer.DebugServer.signalClientClearBreak?4(filename, lineno)
+eric5.Debugger.DebugServer.DebugServer.signalClientClearWatch?4(condition)
+eric5.Debugger.DebugServer.DebugServer.signalClientCompletionList?4(completionList, text)
+eric5.Debugger.DebugServer.DebugServer.signalClientException?4(exceptionType, exceptionMessage, stackTrace)
+eric5.Debugger.DebugServer.DebugServer.signalClientExit?4(status)
+eric5.Debugger.DebugServer.DebugServer.signalClientLine?4(filename, lineno, forStack = False)
+eric5.Debugger.DebugServer.DebugServer.signalClientOutput?4(line)
+eric5.Debugger.DebugServer.DebugServer.signalClientRawInput?4(prompt, echo)
+eric5.Debugger.DebugServer.DebugServer.signalClientStack?4(stack)
+eric5.Debugger.DebugServer.DebugServer.signalClientStatement?4(more)
+eric5.Debugger.DebugServer.DebugServer.signalClientSyntaxError?4(message, filename, lineNo, characterNo)
+eric5.Debugger.DebugServer.DebugServer.signalClientThreadList?4(currentId, threadList)
+eric5.Debugger.DebugServer.DebugServer.signalClientThreadSet?4()
+eric5.Debugger.DebugServer.DebugServer.signalClientVariable?4(scope, variables)
+eric5.Debugger.DebugServer.DebugServer.signalClientVariables?4(scope, variables)
+eric5.Debugger.DebugServer.DebugServer.signalClientWatchConditionError?4(condition)
 eric5.Debugger.DebugServer.DebugServer.startClient?4(unplanned = True, clType = None, forProject = False, runInConsole = False)
+eric5.Debugger.DebugServer.DebugServer.utFinished?7
+eric5.Debugger.DebugServer.DebugServer.utPrepared?7
+eric5.Debugger.DebugServer.DebugServer.utStartTest?7
+eric5.Debugger.DebugServer.DebugServer.utStopTest?7
+eric5.Debugger.DebugServer.DebugServer.utTestErrored?7
+eric5.Debugger.DebugServer.DebugServer.utTestFailed?7
 eric5.Debugger.DebugServer.DebugServer?1()
 eric5.Debugger.DebugServer.DebuggerInterfaces?7
+eric5.Debugger.DebugUI.DebugUI.clientStack?7
+eric5.Debugger.DebugUI.DebugUI.compileForms?7
+eric5.Debugger.DebugUI.DebugUI.compileResources?7
+eric5.Debugger.DebugUI.DebugUI.debuggingStarted?7
+eric5.Debugger.DebugUI.DebugUI.exceptionInterrupt?7
 eric5.Debugger.DebugUI.DebugUI.getActions?4()
 eric5.Debugger.DebugUI.DebugUI.initActions?4()
 eric5.Debugger.DebugUI.DebugUI.initMenus?4()
 eric5.Debugger.DebugUI.DebugUI.initToolbars?4(toolbarManager)
+eric5.Debugger.DebugUI.DebugUI.resetUI?7
 eric5.Debugger.DebugUI.DebugUI.setArgvHistory?4(argsStr, clearHistories = False)
 eric5.Debugger.DebugUI.DebugUI.setAutoClearShell?4(autoClearShell)
 eric5.Debugger.DebugUI.DebugUI.setAutoContinue?4(autoContinue)
@@ -703,6 +741,7 @@ eric5.Debugger.DebugViewer.DebugViewer.showThreadList?4(currentID, threadList)
 eric5.Debugger.DebugViewer.DebugViewer.showVariable?4(vlist, globals)
 eric5.Debugger.DebugViewer.DebugViewer.showVariables?4(vlist, globals)
 eric5.Debugger.DebugViewer.DebugViewer.showVariablesTab?4(globals)
+eric5.Debugger.DebugViewer.DebugViewer.sourceFile?7
 eric5.Debugger.DebugViewer.DebugViewer?1(debugServer, docked, vm, parent = None, embeddedShell = True, embeddedBrowser = True)
 eric5.Debugger.DebuggerInterfaceNone.ClientDefaultCapabilities?7
 eric5.Debugger.DebuggerInterfaceNone.ClientTypeAssociations?7
@@ -879,6 +918,7 @@ eric5.Debugger.EditWatchpointDialog.EditWatchpointDialog.getData?4()
 eric5.Debugger.EditWatchpointDialog.EditWatchpointDialog?1(properties, parent = None, name = None, modal = False)
 eric5.Debugger.ExceptionLogger.ExceptionLogger.addException?4(exceptionType, exceptionMessage, stackTrace)
 eric5.Debugger.ExceptionLogger.ExceptionLogger.debuggingStarted?4()
+eric5.Debugger.ExceptionLogger.ExceptionLogger.sourceFile?7
 eric5.Debugger.ExceptionLogger.ExceptionLogger?1(parent=None)
 eric5.Debugger.ExceptionsFilterDialog.ExceptionsFilterDialog.getExceptionsList?4()
 eric5.Debugger.ExceptionsFilterDialog.ExceptionsFilterDialog.on_addButton_clicked?4()
@@ -925,6 +965,7 @@ eric5.Debugger.VariablesViewer.VariablesViewer?1(parent=None, scope=1)
 eric5.Debugger.WatchPointModel.WatchPointModel.addWatchPoint?4(cond, special, properties)
 eric5.Debugger.WatchPointModel.WatchPointModel.columnCount?4(parent = QModelIndex())
 eric5.Debugger.WatchPointModel.WatchPointModel.data?4(index, role)
+eric5.Debugger.WatchPointModel.WatchPointModel.dataAboutToBeChanged?7
 eric5.Debugger.WatchPointModel.WatchPointModel.deleteAll?4()
 eric5.Debugger.WatchPointModel.WatchPointModel.deleteWatchPointByIndex?4(index)
 eric5.Debugger.WatchPointModel.WatchPointModel.deleteWatchPoints?4(idxList)
@@ -1107,6 +1148,7 @@ eric5.E5Gui.E5LineEdit.E5LineEdit?1(parent = None, inactiveText = "")
 eric5.E5Gui.E5ListView.E5ListView.keyPressEvent?4(evt)
 eric5.E5Gui.E5ListView.E5ListView.removeAll?4()
 eric5.E5Gui.E5ListView.E5ListView.removeSelected?4()
+eric5.E5Gui.E5ModelMenu.E5ModelMenu.activated?7
 eric5.E5Gui.E5ModelMenu.E5ModelMenu.createBaseMenu?4()
 eric5.E5Gui.E5ModelMenu.E5ModelMenu.createMenu?4(parent, max_, parentMenu = None, menu = None)
 eric5.E5Gui.E5ModelMenu.E5ModelMenu.dragEnterEvent?4(evt)
@@ -1135,6 +1177,7 @@ eric5.E5Gui.E5ModelMenu.E5ModelMenu.statusBarTextRole?4()
 eric5.E5Gui.E5ModelMenu.E5ModelMenu?1(parent = None)
 eric5.E5Gui.E5ModelToolBar.E5ModelToolBar._build?5()
 eric5.E5Gui.E5ModelToolBar.E5ModelToolBar._createMenu?5()
+eric5.E5Gui.E5ModelToolBar.E5ModelToolBar.activated?7
 eric5.E5Gui.E5ModelToolBar.E5ModelToolBar.dragEnterEvent?4(evt)
 eric5.E5Gui.E5ModelToolBar.E5ModelToolBar.dropEvent?4(evt)
 eric5.E5Gui.E5ModelToolBar.E5ModelToolBar.eventFilter?4(obj, evt)
@@ -1210,8 +1253,10 @@ eric5.E5Gui.E5TabWidget.E5DnDTabBar.dragEnterEvent?4(event)
 eric5.E5Gui.E5TabWidget.E5DnDTabBar.dropEvent?4(event)
 eric5.E5Gui.E5TabWidget.E5DnDTabBar.mouseMoveEvent?4(event)
 eric5.E5Gui.E5TabWidget.E5DnDTabBar.mousePressEvent?4(event)
+eric5.E5Gui.E5TabWidget.E5DnDTabBar.tabMoveRequested?7
 eric5.E5Gui.E5TabWidget.E5DnDTabBar?1(parent = None)
 eric5.E5Gui.E5TabWidget.E5TabWidget.animationLabel?4(index, animationFile)
+eric5.E5Gui.E5TabWidget.E5TabWidget.customTabContextMenuRequested?7
 eric5.E5Gui.E5TabWidget.E5TabWidget.moveTab?4(curIndex, newIndex)
 eric5.E5Gui.E5TabWidget.E5TabWidget.nextTab?4()
 eric5.E5Gui.E5TabWidget.E5TabWidget.prevTab?4()
@@ -1652,6 +1697,7 @@ eric5.Graphics.UMLClassDiagram.UMLClassDiagram?1(file, parent = None, name = Non
 eric5.Graphics.UMLDialog.UMLDialog?1(diagramName = "Unnamed", parent = None, name = None)
 eric5.Graphics.UMLGraphicsView.UMLGraphicsView.filteredItems?4(items)
 eric5.Graphics.UMLGraphicsView.UMLGraphicsView.initToolBar?4()
+eric5.Graphics.UMLGraphicsView.UMLGraphicsView.relayout?7
 eric5.Graphics.UMLGraphicsView.UMLGraphicsView.selectItem?4(item)
 eric5.Graphics.UMLGraphicsView.UMLGraphicsView.selectItems?4(items)
 eric5.Graphics.UMLGraphicsView.UMLGraphicsView.setDiagramName?4(name)
@@ -1686,6 +1732,7 @@ eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.load?4()
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.network?4()
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.page?4()
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.removeSubscription?4(subscription)
+eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.rulesChanged?7
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.save?4()
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.setEnabled?4(enabled)
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.showDialog?4()
@@ -1722,12 +1769,14 @@ eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.addRule?4(rule)
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.allRules?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.allow?4(urlString)
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.block?4(urlString)
+eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.changed?7
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.isEnabled?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.lastUpdate?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.location?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.pageRules?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.removeRule?4(offset)
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.replaceRule?4(rule, offset)
+eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.rulesChanged?7
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.rulesFileName?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.saveRules?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.setEnabled?4(enabled)
@@ -1765,6 +1814,8 @@ eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.setType?4(type_)
 eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.type?4()
 eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode?1(type_ = Root, parent = None)
 eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog.closeEvent?4(evt)
+eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog.newUrl?7
+eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog.openUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog.reject?4()
 eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog?1(parent = None, manager = None)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BOOKMARKBAR?7
@@ -1774,6 +1825,9 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarksModel?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.changeExpanded?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.close?4()
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryAdded?7
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryChanged?7
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryRemoved?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.exportBookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.importBookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.load?4()
@@ -1796,6 +1850,8 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.RemoveBookmarksCommand.undo?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.RemoveBookmarksCommand?1(bookmarksManager, parent, row)
 eric5.Helpviewer.Bookmarks.BookmarksManager.extract_js?7
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.createBaseMenu?4()
+eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.newUrl?7
+eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.openUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.postPopulated?4()
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu?1(parent = None)
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenuBarMenu.prePopulated?4()
@@ -1828,6 +1884,8 @@ eric5.Helpviewer.Bookmarks.BookmarksModel.BookmarksModel.setData?4(index, value,
 eric5.Helpviewer.Bookmarks.BookmarksModel.BookmarksModel.supportedDropActions?4()
 eric5.Helpviewer.Bookmarks.BookmarksModel.BookmarksModel?1(manager, parent = None)
 eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar._createMenu?5()
+eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar.newUrl?7
+eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar.openUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar?1(model, parent = None)
 eric5.Helpviewer.Bookmarks.DefaultBookmarks.DefaultBookmarks?7
 eric5.Helpviewer.Bookmarks.XbelReader.XbelReader.read?4(fileNameOrDevice)
@@ -1861,6 +1919,7 @@ eric5.Helpviewer.CookieJar.CookieJar.CookieJar.blockedCookies?4()
 eric5.Helpviewer.CookieJar.CookieJar.CookieJar.clear?4()
 eric5.Helpviewer.CookieJar.CookieJar.CookieJar.close?4()
 eric5.Helpviewer.CookieJar.CookieJar.CookieJar.cookies?4()
+eric5.Helpviewer.CookieJar.CookieJar.CookieJar.cookiesChanged?7
 eric5.Helpviewer.CookieJar.CookieJar.CookieJar.cookiesForUrl?4(url)
 eric5.Helpviewer.CookieJar.CookieJar.CookieJar.filterTrackingCookies?4()
 eric5.Helpviewer.CookieJar.CookieJar.CookieJar.keepPolicy?4()
@@ -1903,6 +1962,7 @@ eric5.Helpviewer.DownloadDialog.DownloadDialog?1(reply = None, requestFilename =
 eric5.Helpviewer.HTMLResources.notFoundPage_html?7
 eric5.Helpviewer.HTMLResources.startPage_html?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backward?4()
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backwardAvailable?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.clearHistory?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.contextMenuEvent?4(evt)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.copy?4()
@@ -1910,7 +1970,9 @@ eric5.Helpviewer.HelpBrowserWV.HelpBrowser.createWindow?4(windowType)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.documentTitle?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.findNextPrev?4(txt, case, backwards, wrap, highlightAll)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.forward?4()
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.forwardAvailable?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.hasSelection?4()
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.highlighted?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.home?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.isBackwardAvailable?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.isForwardAvailable?4()
@@ -1921,8 +1983,10 @@ eric5.Helpviewer.HelpBrowserWV.HelpBrowser.linkedResources?4(relation = "")
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.preferencesChanged?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.reload?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.saveAs?4()
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.search?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.setSource?4(name)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.source?4()
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.sourceChanged?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.wheelEvent?4(evt)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.zoomIn?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.zoomOut?4()
@@ -1947,12 +2011,17 @@ eric5.Helpviewer.HelpBrowserWV.JavaScriptExternalObject?1(mw, parent = None)
 eric5.Helpviewer.HelpBrowserWV.LinkedResource?1()
 eric5.Helpviewer.HelpClearPrivateDataDialog.HelpClearPrivateDataDialog.getData?4()
 eric5.Helpviewer.HelpClearPrivateDataDialog.HelpClearPrivateDataDialog?1(parent = None)
+eric5.Helpviewer.HelpDocsInstaller.HelpDocsInstaller.docsInstalled?7
+eric5.Helpviewer.HelpDocsInstaller.HelpDocsInstaller.errorMessage?7
 eric5.Helpviewer.HelpDocsInstaller.HelpDocsInstaller.installDocs?4()
 eric5.Helpviewer.HelpDocsInstaller.HelpDocsInstaller.run?4()
 eric5.Helpviewer.HelpDocsInstaller.HelpDocsInstaller.stop?4()
 eric5.Helpviewer.HelpDocsInstaller.HelpDocsInstaller?1(collection)
+eric5.Helpviewer.HelpIndexWidget.HelpIndexWidget.escapePressed?7
 eric5.Helpviewer.HelpIndexWidget.HelpIndexWidget.eventFilter?4(watched, event)
 eric5.Helpviewer.HelpIndexWidget.HelpIndexWidget.focusInEvent?4(evt)
+eric5.Helpviewer.HelpIndexWidget.HelpIndexWidget.linkActivated?7
+eric5.Helpviewer.HelpIndexWidget.HelpIndexWidget.linksActivated?7
 eric5.Helpviewer.HelpIndexWidget.HelpIndexWidget?1(engine, mainWindow, parent = None)
 eric5.Helpviewer.HelpLanguagesDialog.HelpLanguagesDialog.accept?4()
 eric5.Helpviewer.HelpLanguagesDialog.HelpLanguagesDialog.defaultAcceptLanguages?4()
@@ -1964,14 +2033,18 @@ eric5.Helpviewer.HelpLanguagesDialog.HelpLanguagesDialog.on_removeButton_clicked
 eric5.Helpviewer.HelpLanguagesDialog.HelpLanguagesDialog.on_upButton_clicked?4()
 eric5.Helpviewer.HelpLanguagesDialog.HelpLanguagesDialog?1(parent = None)
 eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget.contextMenuEvent?4(evt)
+eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget.escapePressed?7
 eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget.eventFilter?4(watched, event)
 eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget.keyPressEvent?4(evt)
+eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget.linkActivated?7
 eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget?1(engine, mainWindow, parent = None)
+eric5.Helpviewer.HelpTocWidget.HelpTocWidget.escapePressed?7
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget.eventFilter?4(watched, event)
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget.expandToDepth?4(depth)
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget.focusInEvent?4(evt)
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget.itemClicked?4(index)
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget.keyPressEvent?4(evt)
+eric5.Helpviewer.HelpTocWidget.HelpTocWidget.linkActivated?7
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget.syncToContent?4(url)
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget?1(engine, mainWindow, parent = None)
 eric5.Helpviewer.HelpTopicDialog.HelpTopicDialog.link?4()
@@ -1980,6 +2053,7 @@ eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget.clear?4()
 eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget.openSearchManager?4()
 eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget.preferencesChanged?4()
 eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget.saveSearches?4()
+eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget.search?7
 eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget?1(parent = None)
 eric5.Helpviewer.HelpWindow.HelpWindow._adblockManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._bookmarksManager?8
@@ -1996,6 +2070,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.cookieJar?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.currentBrowser?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.getActions?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.getSourceFileList?4()
+eric5.Helpviewer.HelpWindow.HelpWindow.helpClosed?7
 eric5.Helpviewer.HelpWindow.HelpWindow.helpEngine?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.helpwindows?7
 eric5.Helpviewer.HelpWindow.HelpWindow.historyManager?4()
@@ -2014,6 +2089,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.resetLoading?4(widget, ok)
 eric5.Helpviewer.HelpWindow.HelpWindow.search?4(word)
 eric5.Helpviewer.HelpWindow.HelpWindow.searchEnginesAction?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.setLoading?4(widget)
+eric5.Helpviewer.HelpWindow.HelpWindow.zoomTextOnlyChanged?7
 eric5.Helpviewer.HelpWindow.HelpWindow?1(home, path, parent, name, fromEric = False, initShortcutsOnly = False, searchWord = None)
 eric5.Helpviewer.History.HistoryCompleter.HistoryCompleter.pathFromIndex?4(idx)
 eric5.Helpviewer.History.HistoryCompleter.HistoryCompleter.splitPath?4(path)
@@ -2030,6 +2106,8 @@ eric5.Helpviewer.History.HistoryCompleter.HistoryCompletionModel?1(parent = None
 eric5.Helpviewer.History.HistoryCompleter.HistoryCompletionView.resizeEvent?4(evt)
 eric5.Helpviewer.History.HistoryCompleter.HistoryCompletionView.sizeHintForRow?4(row)
 eric5.Helpviewer.History.HistoryCompleter.HistoryCompletionView?1(parent = None)
+eric5.Helpviewer.History.HistoryDialog.HistoryDialog.newUrl?7
+eric5.Helpviewer.History.HistoryDialog.HistoryDialog.openUrl?7
 eric5.Helpviewer.History.HistoryDialog.HistoryDialog?1(parent = None, manager = None)
 eric5.Helpviewer.History.HistoryFilterModel.HistoryData?1(offset, frequency = 0)
 eric5.Helpviewer.History.HistoryFilterModel.HistoryFilterModel.FrequencyRole?7
@@ -2057,10 +2135,15 @@ eric5.Helpviewer.History.HistoryManager.HistoryManager.addHistoryEntry?4(url)
 eric5.Helpviewer.History.HistoryManager.HistoryManager.clear?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.close?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.daysToExpire?4()
+eric5.Helpviewer.History.HistoryManager.HistoryManager.entryAdded?7
+eric5.Helpviewer.History.HistoryManager.HistoryManager.entryRemoved?7
+eric5.Helpviewer.History.HistoryManager.HistoryManager.entryUpdated?7
 eric5.Helpviewer.History.HistoryManager.HistoryManager.history?4()
+eric5.Helpviewer.History.HistoryManager.HistoryManager.historyCleared?7
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyContains?4(url)
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyFilterModel?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyModel?4()
+eric5.Helpviewer.History.HistoryManager.HistoryManager.historyReset?7
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyTreeModel?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.preferencesChanged?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.removeHistoryEntry?4(url, title = "")
@@ -2069,6 +2152,8 @@ eric5.Helpviewer.History.HistoryManager.HistoryManager.setDaysToExpire?4(limit)
 eric5.Helpviewer.History.HistoryManager.HistoryManager.setHistory?4(history, loadedAndSorted = False)
 eric5.Helpviewer.History.HistoryManager.HistoryManager.updateHistoryEntry?4(url, title)
 eric5.Helpviewer.History.HistoryManager.HistoryManager?1(parent = None)
+eric5.Helpviewer.History.HistoryMenu.HistoryMenu.newUrl?7
+eric5.Helpviewer.History.HistoryMenu.HistoryMenu.openUrl?7
 eric5.Helpviewer.History.HistoryMenu.HistoryMenu.postPopulated?4()
 eric5.Helpviewer.History.HistoryMenu.HistoryMenu.prePopulated?4()
 eric5.Helpviewer.History.HistoryMenu.HistoryMenu.setInitialActions?4(actions)
@@ -2124,6 +2209,7 @@ eric5.Helpviewer.Network.FtpReply.ftpListPage_html?7
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.createRequest?4(op, request, outgoingData = None)
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.languagesChanged?4()
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.preferencesChanged?4()
+eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.requestCreated?7
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.setSchemeHandler?4(scheme, handler)
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager?1(engine, parent = None)
 eric5.Helpviewer.Network.NetworkAccessManagerProxy.NetworkAccessManagerProxy.createRequest?4(op, request, outgoingData = None)
@@ -2168,6 +2254,7 @@ eric5.Helpviewer.OpenSearch.OpenSearchEditDialog.OpenSearchEditDialog?1(engine, 
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine._language?8
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.description?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.image?4()
+eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.imageChanged?7
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.imageUrl?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.isValid?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.loadImage?4()
@@ -2193,6 +2280,7 @@ eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.setSearchUrlTempla
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.setSuggestionsMethod?4(method)
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.setSuggestionsParameters?4(suggestionsParameters)
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.setSuggestionsUrlTemplate?4(suggestionsUrlTemplate)
+eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.suggestions?7
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.suggestionsMethod?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.suggestionsParameters?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.suggestionsUrl?4(searchTerm)
@@ -2209,9 +2297,11 @@ eric5.Helpviewer.OpenSearch.OpenSearchEngineModel.OpenSearchEngineModel.setData?
 eric5.Helpviewer.OpenSearch.OpenSearchEngineModel.OpenSearchEngineModel?1(manager, parent = None)
 eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.addEngine?4(engine)
 eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.allEnginesNames?4()
+eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.changed?7
 eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.close?4()
 eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.convertKeywordSearchToUrl?4(keywordSearch)
 eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.currentEngine?4()
+eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.currentEngineChanged?7
 eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.currentEngineName?4()
 eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.engine?4(name)
 eric5.Helpviewer.OpenSearch.OpenSearchManager.OpenSearchManager.engineExists?4(name)
@@ -2243,6 +2333,7 @@ eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.FORMS?7
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.NEVER?7
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.SEPARATOR?7
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.allSiteNames?4()
+eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.changed?7
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.clear?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.close?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.fill?4(page)
@@ -2309,7 +2400,11 @@ eric5.IconEditor.IconEditorGrid.IconEditorGrid.RectangleSelection?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.Rubber?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.canPaste?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.canRedo?4()
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.canRedoChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.canUndo?4()
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.canUndoChanged?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.clipboardImageAvailable?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.colorChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.editClear?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.editCopy?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.editCut?4()
@@ -2323,6 +2418,7 @@ eric5.IconEditor.IconEditorGrid.IconEditorGrid.editUndo?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.grayScale?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.iconImage?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.iconSize?4()
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.imageChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.isDirty?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.isGridEnabled?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.isSelectionAvailable?4()
@@ -2331,7 +2427,10 @@ eric5.IconEditor.IconEditorGrid.IconEditorGrid.mousePressEvent?4(evt)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.mouseReleaseEvent?4(evt)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.paintEvent?4(evt)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.penColor?4()
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.positionChanged?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.previewChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.previewPixmap?4()
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.selectionAvailable?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.setDirty?4(dirty, setCleanState = False)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.setGridEnabled?4(enable)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.setIconImage?4(newImage, undoRedo = False, clearUndo = False)
@@ -2339,14 +2438,17 @@ eric5.IconEditor.IconEditorGrid.IconEditorGrid.setPenColor?4(newColor)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.setTool?4(tool)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.setZoomFactor?4(newZoom)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.shutdown?4()
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.sizeChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.sizeHint?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.tool?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.zoomFactor?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid?1(parent = None)
 eric5.IconEditor.IconEditorPalette.IconEditorPalette.colorChanged?4(color)
+eric5.IconEditor.IconEditorPalette.IconEditorPalette.colorSelected?7
 eric5.IconEditor.IconEditorPalette.IconEditorPalette.previewChanged?4(pixmap)
 eric5.IconEditor.IconEditorPalette.IconEditorPalette?1(parent = None)
 eric5.IconEditor.IconEditorWindow.IconEditorWindow.closeEvent?4(evt)
+eric5.IconEditor.IconEditorWindow.IconEditorWindow.editorClosed?7
 eric5.IconEditor.IconEditorWindow.IconEditorWindow.windows?7
 eric5.IconEditor.IconEditorWindow.IconEditorWindow?1(fileName = "", parent = None, fromEric = False, initShortcutsOnly = False)
 eric5.IconEditor.IconSizeDialog.IconSizeDialog.getData?4()
@@ -2368,6 +2470,7 @@ eric5.MultiProject.MultiProject.MultiProject.addProject?4(startdir = None)
 eric5.MultiProject.MultiProject.MultiProject.changeProjectProperties?4(pro)
 eric5.MultiProject.MultiProject.MultiProject.checkDirty?4()
 eric5.MultiProject.MultiProject.MultiProject.closeMultiProject?4()
+eric5.MultiProject.MultiProject.MultiProject.dirty?7
 eric5.MultiProject.MultiProject.MultiProject.getActions?4()
 eric5.MultiProject.MultiProject.MultiProject.getDependantProjectFiles?4()
 eric5.MultiProject.MultiProject.MultiProject.getMasterProjectFile?4()
@@ -2382,14 +2485,22 @@ eric5.MultiProject.MultiProject.MultiProject.initMenu?4()
 eric5.MultiProject.MultiProject.MultiProject.initToolbar?4(toolbarManager)
 eric5.MultiProject.MultiProject.MultiProject.isDirty?4()
 eric5.MultiProject.MultiProject.MultiProject.isOpen?4()
-eric5.MultiProject.MultiProject.MultiProject.newMultiProject?4()
+eric5.MultiProject.MultiProject.MultiProject.multiProjectClosed?7
+eric5.MultiProject.MultiProject.MultiProject.multiProjectOpened?7
+eric5.MultiProject.MultiProject.MultiProject.multiProjectPropertiesChanged?7
+eric5.MultiProject.MultiProject.MultiProject.newMultiProject?7
 eric5.MultiProject.MultiProject.MultiProject.openMultiProject?4(fn = None, openMaster = True)
 eric5.MultiProject.MultiProject.MultiProject.openProject?4(filename)
+eric5.MultiProject.MultiProject.MultiProject.projectAdded?7
+eric5.MultiProject.MultiProject.MultiProject.projectDataChanged?7
+eric5.MultiProject.MultiProject.MultiProject.projectOpened?7
+eric5.MultiProject.MultiProject.MultiProject.projectRemoved?7
 eric5.MultiProject.MultiProject.MultiProject.removeE5Actions?4(actions)
 eric5.MultiProject.MultiProject.MultiProject.removeProject?4(fn)
 eric5.MultiProject.MultiProject.MultiProject.saveMultiProject?4()
 eric5.MultiProject.MultiProject.MultiProject.saveMultiProjectAs?4()
 eric5.MultiProject.MultiProject.MultiProject.setDirty?4(b)
+eric5.MultiProject.MultiProject.MultiProject.showMenu?7
 eric5.MultiProject.MultiProject.MultiProject?1(project, parent = None, filename = None)
 eric5.MultiProject.MultiProjectBrowser.MultiProjectBrowser?1(multiProject, parent = None)
 eric5.MultiProject.PropertiesDialog.PropertiesDialog.storeData?4()
@@ -2417,8 +2528,10 @@ eric5.PluginManager.PluginInstallDialog.PluginInstallWidget?1(pluginManager, plu
 eric5.PluginManager.PluginInstallDialog.PluginInstallWindow?1(pluginFileNames, parent = None)
 eric5.PluginManager.PluginManager.PluginManager.activatePlugin?4(name, onDemand = False)
 eric5.PluginManager.PluginManager.PluginManager.activatePlugins?4()
+eric5.PluginManager.PluginManager.PluginManager.allPlugginsActivated?7
 eric5.PluginManager.PluginManager.PluginManager.deactivatePlugin?4(name, onDemand = False)
 eric5.PluginManager.PluginManager.PluginManager.deactivateVcsPlugins?4()
+eric5.PluginManager.PluginManager.PluginManager.doShutdown?4()
 eric5.PluginManager.PluginManager.PluginManager.finalizeSetup?4()
 eric5.PluginManager.PluginManager.PluginManager.getPluginApiFiles?4(language)
 eric5.PluginManager.PluginManager.PluginManager.getPluginConfigData?4()
@@ -2437,14 +2550,19 @@ eric5.PluginManager.PluginManager.PluginManager.isPluginActive?4(pluginName)
 eric5.PluginManager.PluginManager.PluginManager.isPluginLoaded?4(pluginName)
 eric5.PluginManager.PluginManager.PluginManager.isValidPluginName?4(pluginName)
 eric5.PluginManager.PluginManager.PluginManager.loadPlugin?4(name, directory, reload_ = False)
+eric5.PluginManager.PluginManager.PluginManager.pluginAboutToBeActivated?7
+eric5.PluginManager.PluginManager.PluginManager.pluginAboutToBeDeactivated?7
+eric5.PluginManager.PluginManager.PluginManager.pluginActivated?7
+eric5.PluginManager.PluginManager.PluginManager.pluginDeactivated?7
 eric5.PluginManager.PluginManager.PluginManager.preferencesChanged?4()
 eric5.PluginManager.PluginManager.PluginManager.removePluginFromSysModules?4(pluginName, package, internalPackages)
-eric5.PluginManager.PluginManager.PluginManager.shutdown?4()
+eric5.PluginManager.PluginManager.PluginManager.shutdown?7
 eric5.PluginManager.PluginManager.PluginManager.unloadPlugin?4(name, directory)
 eric5.PluginManager.PluginManager.PluginManager?1(parent = None, doLoadPlugins = True, develPlugin = None)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryDialog.getDownloadedPlugins?4()
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryDialog?1(parent = None)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.addEntry?4(name, short, description, url, author, version, filename, status)
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.closeAndInstall?7
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.getDownloadedPlugins?4()
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_buttonBox_clicked?4(button)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryList_currentItemChanged?4(current, previous)
@@ -2859,11 +2977,13 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.HgBundleDialog?1(tagsList, 
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.HgCommandDialog.getData?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.HgCommandDialog.on_commandCombo_editTextChanged?4(text)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.HgCommandDialog?1(argvList, ppath, parent = None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.accepted?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.logMessage?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.on_buttonBox_accepted?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.on_buttonBox_rejected?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.on_recentComboBox_activated?4(txt)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.rejected?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.showEvent?4(evt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog?1(vcs, parent = None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.HgCopyDialog.getData?4()
@@ -2984,6 +3104,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.HgProjectHelper.initMenu?4(m
 eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.HgProjectHelper?1(vcsObject, projectObject, parent = None, name = None)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg._createStatusMonitorThread?5(interval, project)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.clearStatusCache?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.committed?7
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.getPlugin?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgAnnotate?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgBackout?4(name)
@@ -3073,6 +3194,7 @@ eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.SvnCommandDialog.getData?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.SvnCommandDialog.on_commandCombo_editTextChanged?4(text)
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.SvnCommandDialog.on_dirButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.SvnCommandDialog?1(argvList, wdList, ppath, parent = None)
+eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.accepted?7
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.changelistsData?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.hasChangelists?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.logMessage?4()
@@ -3080,6 +3202,7 @@ eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.on_buttonBox_a
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.on_buttonBox_rejected?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.on_recentComboBox_activated?4(txt)
+eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.rejected?7
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog.showEvent?4(evt)
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.SvnCommitDialog?1(parent = None)
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnConst.svnNotifyActionMap?7
@@ -3186,6 +3309,7 @@ eric5.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.getConfigPath?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.getServersPath?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion._createStatusMonitorThread?5(interval, project)
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.clearStatusCache?4()
+eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.committed?7
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.getClient?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.getPlugin?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.subversion.Subversion.svnAddToChangelist?4(names)
@@ -3271,6 +3395,7 @@ eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.SvnCommandDialog.getData
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.SvnCommandDialog.on_commandCombo_editTextChanged?4(text)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.SvnCommandDialog.on_dirButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.SvnCommandDialog?1(argvList, wdList, ppath, parent = None)
+eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.accepted?7
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.changelistsData?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.hasChangelists?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.logMessage?4()
@@ -3278,6 +3403,7 @@ eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.on_button
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.on_buttonBox_rejected?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.on_recentComboBox_activated?4(txt)
+eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.rejected?7
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.showEvent?4(evt)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog?1(vcs, parent = None)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.SvnCopyDialog.getData?4()
@@ -3397,6 +3523,7 @@ eric5.Plugins.VcsPlugins.vcsSubversion.SvnUtilities.getConfigPath?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnUtilities.getServersPath?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion._createStatusMonitorThread?5(interval, project)
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.clearStatusCache?4()
+eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.committed?7
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.getPlugin?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.svnAddToChangelist?4(names)
 eric5.Plugins.VcsPlugins.vcsSubversion.subversion.Subversion.svnBlame?4(name)
@@ -3458,17 +3585,30 @@ eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace._showView?5(win, 
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace._syntaxErrorToggled?5(editor)
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.activeWindow?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.addSplit?4()
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.bookmarkToggled?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.breakpointToggled?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.canCascade?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.canSplit?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.canTile?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.cascade?4()
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.changeCaption?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.checkActions?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.cursorChanged?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorChanged?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorClosed?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorClosedEd?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpened?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpenedEd?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorSaved?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.eventFilter?4(watched, event)
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.lastEditorClosed?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.nextSplit?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.prevSplit?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.removeSplit?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.setEditorName?4(editor, newName)
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.setSplitOrientation?4(orientation)
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.showWindowMenu?4(windowMenu)
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.syntaxerrorToggled?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.tile?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace?1(parent)
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget.addWidget?4(editor)
@@ -3488,19 +3628,34 @@ eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._removeView?5(win)
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._showView?5(win, fn = None)
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._syntaxErrorToggled?5(editor)
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.activeWindow?4()
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.bookmarkToggled?7
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.breakpointToggled?7
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.canCascade?4()
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.canSplit?4()
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.canTile?4()
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.cascade?4()
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.checkActions?7
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.cursorChanged?7
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorChanged?7
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorClosed?7
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorClosedEd?7
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorOpened?7
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorOpenedEd?7
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorSaved?7
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.eventFilter?4(watched, event)
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.lastEditorClosed?7
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.setEditorName?4(editor, newName)
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.showWindowMenu?4(windowMenu)
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.syntaxerrorToggled?7
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.tile?4()
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea?1(parent)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.dragEnterEvent?4(event)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.dropEvent?4(event)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.mouseMoveEvent?4(event)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.mousePressEvent?4(event)
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.tabCopyRequested?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.tabMoveRequested?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.tabRelocateRequested?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar?1(parent = None)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.addTab?4(editor, title)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.copyTab?4(sourceIndex, targetIndex)
@@ -3523,13 +3678,25 @@ eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview._showView?5(win, fn = N
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview._syntaxErrorToggled?5(editor)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.activeWindow?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.addSplit?4()
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.bookmarkToggled?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.breakpointToggled?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.canCascade?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.canSplit?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.canTile?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.cascade?4()
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.changeCaption?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.checkActions?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.cursorChanged?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorChanged?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorClosed?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorClosedEd?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpened?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpenedEd?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorSaved?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.eventFilter?4(watched, event)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.getTabWidgetById?4(id_)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.insertView?4(win, tabWidget, index, fn = None, noName = "")
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.lastEditorClosed?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.nextSplit?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.preferencesChanged?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.prevSplit?4()
@@ -3537,6 +3704,7 @@ eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.removeSplit?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.setEditorName?4(editor, newName)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.setSplitOrientation?4(orientation)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.showWindowMenu?4(windowMenu)
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.syntaxerrorToggled?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.tile?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview?1(parent)
 eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.getCode?4(indLevel, indString)
@@ -3641,6 +3809,7 @@ eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizar
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizardRepeatDialog.on_lowerSpin_valueChanged?4(value)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizardRepeatDialog.on_upperSpin_valueChanged?4(value)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizardRepeatDialog?1(parent = None)
+eric5.Preferences.ConfigurationDialog.ConfigurationDialog.preferencesChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.setPreferences?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.showConfigurationPageByName?4(pageName)
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog?1(parent = None, name = None, modal = False, fromEric = True, helpBrowserMode = False)
@@ -3652,6 +3821,7 @@ eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getPage?4(pageName)
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_applyButton_clicked?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_buttonBox_clicked?4(button)
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_resetButton_clicked?4()
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.preferencesChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.setPreferences?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.showConfigurationPageByName?4(pageName)
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget?1(parent = None, fromEric = True, helpBrowserMode = False)
@@ -3998,6 +4168,7 @@ eric5.Preferences.ShortcutDialog.ShortcutDialog.eventFilter?4(watched, event)
 eric5.Preferences.ShortcutDialog.ShortcutDialog.keyPressEvent?4(evt)
 eric5.Preferences.ShortcutDialog.ShortcutDialog.on_buttonBox_accepted?4()
 eric5.Preferences.ShortcutDialog.ShortcutDialog.setKeys?4(key, alternateKey, noCheck, objectType)
+eric5.Preferences.ShortcutDialog.ShortcutDialog.shortcutChanged?7
 eric5.Preferences.ShortcutDialog.ShortcutDialog?1(parent = None, name = None, modal = False)
 eric5.Preferences.Shortcuts.exportShortcuts?4(fn)
 eric5.Preferences.Shortcuts.importShortcuts?4(fn)
@@ -4016,6 +4187,7 @@ eric5.Preferences.ShortcutsDialog.ShortcutsDialog.on_shortcutsList_itemChanged?4
 eric5.Preferences.ShortcutsDialog.ShortcutsDialog.on_shortcutsList_itemClicked?4(itm, column)
 eric5.Preferences.ShortcutsDialog.ShortcutsDialog.on_shortcutsList_itemDoubleClicked?4(itm, column)
 eric5.Preferences.ShortcutsDialog.ShortcutsDialog.populate?4()
+eric5.Preferences.ShortcutsDialog.ShortcutsDialog.updateShortcuts?7
 eric5.Preferences.ShortcutsDialog.ShortcutsDialog?1(parent = None, name = None, modal = False)
 eric5.Preferences.ToolConfigurationDialog.ToolConfigurationDialog.getToollist?4()
 eric5.Preferences.ToolConfigurationDialog.ToolConfigurationDialog.on_addButton_clicked?4()
@@ -4213,11 +4385,15 @@ eric5.Project.Project.Project.checkLanguageFiles?4()
 eric5.Project.Project.Project.checkVCSStatus?4()
 eric5.Project.Project.Project.clearStatusMonitorCachedState?4(name)
 eric5.Project.Project.Project.closeProject?4(reopen = False, noSave = False)
+eric5.Project.Project.Project.completeRepopulateItem?7
 eric5.Project.Project.Project.copyDirectory?4(olddn, newdn)
+eric5.Project.Project.Project.createNewProject?4()
 eric5.Project.Project.Project.dbgKeynames?7
 eric5.Project.Project.Project.deleteDirectory?4(dn)
 eric5.Project.Project.Project.deleteFile?4(fn)
 eric5.Project.Project.Project.deleteLanguageFile?4(langFile)
+eric5.Project.Project.Project.directoryRemoved?7
+eric5.Project.Project.Project.dirty?7
 eric5.Project.Project.Project.eols?7
 eric5.Project.Project.Project.getAbsoluteUniversalPath?4(fn)
 eric5.Project.Project.Project.getActions?4()
@@ -4264,12 +4440,30 @@ eric5.Project.Project.Project.isProjectInterface?4(fn)
 eric5.Project.Project.Project.isProjectResource?4(fn)
 eric5.Project.Project.Project.isProjectSource?4(fn)
 eric5.Project.Project.Project.keynames?7
+eric5.Project.Project.Project.lexerAssociationsChanged?7
 eric5.Project.Project.Project.moveDirectory?4(olddn, newdn)
-eric5.Project.Project.Project.newProject?4()
+eric5.Project.Project.Project.newProject?7
 eric5.Project.Project.Project.newProjectAddFiles?4(mainscript)
+eric5.Project.Project.Project.newProjectHooks?7
 eric5.Project.Project.Project.openProject?4(fn = None, restoreSession = True, reopen = False)
 eric5.Project.Project.Project.othersAdded?4(fn, updateModel = True)
+eric5.Project.Project.Project.prepareRepopulateItem?7
+eric5.Project.Project.Project.projectAboutToBeCreated?7
+eric5.Project.Project.Project.projectClosed?7
+eric5.Project.Project.Project.projectClosedHooks?7
+eric5.Project.Project.Project.projectFileRenamed?7
+eric5.Project.Project.Project.projectFormAdded?7
+eric5.Project.Project.Project.projectInterfaceAdded?7
+eric5.Project.Project.Project.projectLanguageAdded?7
+eric5.Project.Project.Project.projectLanguageAddedByCode?7
+eric5.Project.Project.Project.projectOpened?7
+eric5.Project.Project.Project.projectOpenedHooks?7
+eric5.Project.Project.Project.projectOthersAdded?7
+eric5.Project.Project.Project.projectPropertiesChanged?7
+eric5.Project.Project.Project.projectResourceAdded?7
+eric5.Project.Project.Project.projectSourceAdded?7
 eric5.Project.Project.Project.registerProjectType?4(type_, description, fileTypeCallback = None, binaryTranslationsCallback = None, lexerAssociationCallback = None)
+eric5.Project.Project.Project.reinitVCS?7
 eric5.Project.Project.Project.removeDirectory?4(dn)
 eric5.Project.Project.Project.removeE5Actions?4(actions)
 eric5.Project.Project.Project.removeFile?4(fn, updateModel = True)
@@ -4287,6 +4481,8 @@ eric5.Project.Project.Project.setDbgInfo?4(argv, wd, env, excReporting, excList,
 eric5.Project.Project.Project.setDirty?4(b)
 eric5.Project.Project.Project.setStatusMonitorAutoUpdate?4(auto)
 eric5.Project.Project.Project.setStatusMonitorInterval?4(interval)
+eric5.Project.Project.Project.showMenu?7
+eric5.Project.Project.Project.sourceFile?7
 eric5.Project.Project.Project.startStatusMonitor?4()
 eric5.Project.Project.Project.startswithProjectPath?4(path)
 eric5.Project.Project.Project.stopStatusMonitor?4()
@@ -4294,6 +4490,7 @@ eric5.Project.Project.Project.unregisterProjectType?4(type_)
 eric5.Project.Project.Project.updateFileTypes?4()
 eric5.Project.Project.Project.useSystemEol?4()
 eric5.Project.Project.Project.userKeynames?7
+eric5.Project.Project.Project.vcsStatusMonitorStatus?7
 eric5.Project.Project.Project?1(parent = None, filename = None)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._collapseAllDirs?5()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._completeRepopulateItem?5(name)
@@ -4324,6 +4521,7 @@ eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._showContextMenuDirMulti?5(m
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._showContextMenuMulti?5(menu)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.addHookMethod?4(key, method)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.addHookMethodAndMenuEntry?4(key, method, menuEntry)
+eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.closeSourceWindow?7
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.currentItem?4()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.removeHookMethod?4(key)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectFile?4(fn)
@@ -4377,6 +4575,7 @@ eric5.Project.ProjectBrowserModel.ProjectBrowserModel.removeItem?4(name)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.renameItem?4(name, newFilename)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.repopulateItem?4(name)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.updateVCSStatus?4(name, recursive = True)
+eric5.Project.ProjectBrowserModel.ProjectBrowserModel.vcsStateChanged?7
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel?1(parent)
 eric5.Project.ProjectBrowserModel.ProjectBrowserNoType?7
 eric5.Project.ProjectBrowserModel.ProjectBrowserOthersType?7
@@ -4394,18 +4593,36 @@ eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser._contextMenuRequested?5(co
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser._createPopupMenus?5()
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser._initHookMethods?5()
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser._openItem?5()
+eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.appendStderr?7
+eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.closeSourceWindow?7
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.compileChangedForms?4()
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.handlePreferencesChanged?4()
+eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.menusAboutToBeCreated?7
+eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.showMenu?7
+eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.sourceFile?7
+eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.trpreview?7
+eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.uipreview?7
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser?1(project, parent = None)
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser._contextMenuRequested?5(coord)
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser._createPopupMenus?5()
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser._openItem?5()
+eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.appendStderr?7
+eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.appendStdout?7
+eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.closeSourceWindow?7
+eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.showMenu?7
+eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.sourceFile?7
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser?1(project, parent = None)
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._contextMenuRequested?5(coord)
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._createPopupMenus?5()
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._editPixmap?5()
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._openItem?5()
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._showContextMenu?5(menu)
+eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.closeSourceWindow?7
+eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.pixmapEditFile?7
+eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.pixmapFile?7
+eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.showMenu?7
+eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.sourceFile?7
+eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.svgFile?7
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser?1(project, parent=None)
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.RCFilenameFormatPython?7
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.RCFilenameFormatRuby?7
@@ -4413,18 +4630,32 @@ eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser._contextMenuReques
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser._createPopupMenus?5()
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser._initHookMethods?5()
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser._openItem?5()
+eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.appendStderr?7
+eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.closeSourceWindow?7
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.compileChangedResources?4()
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.handlePreferencesChanged?4()
+eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.showMenu?7
+eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.sourceFile?7
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser?1(project, parent = None)
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser._contextMenuRequested?5(coord)
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser._createPopupMenus?5()
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser._openItem?5()
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser._projectClosed?5()
+eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser.closeSourceWindow?7
+eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser.showMenu?7
+eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser.sourceFile?7
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser?1(project, parent = None)
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser._contextMenuRequested?5(coord)
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser._createPopupMenus?5()
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser._initHookMethods?5()
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser._openItem?5()
+eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.appendStderr?7
+eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.appendStdout?7
+eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.closeSourceWindow?7
+eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.linguistFile?7
+eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.showMenu?7
+eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.sourceFile?7
+eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.trpreview?7
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser?1(project, parent=None)
 eric5.Project.PropertiesDialog.PropertiesDialog.getPPath?4()
 eric5.Project.PropertiesDialog.PropertiesDialog.getProjectType?4()
@@ -4473,9 +4704,13 @@ eric5.PyUnit.UnittestDialog.UnittestDialog.testErrored?4(test, exc)
 eric5.PyUnit.UnittestDialog.UnittestDialog.testFailed?4(test, exc)
 eric5.PyUnit.UnittestDialog.UnittestDialog.testFinished?4()
 eric5.PyUnit.UnittestDialog.UnittestDialog.testStarted?4(test, doc)
+eric5.PyUnit.UnittestDialog.UnittestDialog.unittestFile?7
 eric5.PyUnit.UnittestDialog.UnittestDialog?1(prog = None, dbs = None, ui = None, parent = None, name = None)
 eric5.PyUnit.UnittestDialog.UnittestWindow.eventFilter?4(obj, event)
 eric5.PyUnit.UnittestDialog.UnittestWindow?1(prog = None, parent = None)
+eric5.QScintilla.APIsManager.APIs.apiPreparationCancelled?7
+eric5.QScintilla.APIsManager.APIs.apiPreparationFinished?7
+eric5.QScintilla.APIsManager.APIs.apiPreparationStarted?7
 eric5.QScintilla.APIsManager.APIs.cancelPreparation?4()
 eric5.QScintilla.APIsManager.APIs.getQsciAPIs?4()
 eric5.QScintilla.APIsManager.APIs.installedAPIFiles?4()
@@ -4507,14 +4742,18 @@ eric5.QScintilla.Editor.Editor.addClone?4(editor)
 eric5.QScintilla.Editor.Editor.addedToProject?4()
 eric5.QScintilla.Editor.Editor.autoComplete?4(auto = False, context = True)
 eric5.QScintilla.Editor.Editor.autoCompleteQScintilla?4()
+eric5.QScintilla.Editor.Editor.autoCompletionAPIsAvailable?7
 eric5.QScintilla.Editor.Editor.autoCompletionHook?4()
+eric5.QScintilla.Editor.Editor.bookmarkToggled?7
 eric5.QScintilla.Editor.Editor.boxCommentLine?4()
 eric5.QScintilla.Editor.Editor.boxCommentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.boxCommentSelection?4()
+eric5.QScintilla.Editor.Editor.breakpointToggled?7
 eric5.QScintilla.Editor.Editor.callTip?4()
 eric5.QScintilla.Editor.Editor.callTipHook?4()
 eric5.QScintilla.Editor.Editor.canAutoCompleteFromAPIs?4()
 eric5.QScintilla.Editor.Editor.cancelSharedEdit?4(send = True)
+eric5.QScintilla.Editor.Editor.captionChanged?7
 eric5.QScintilla.Editor.Editor.changeEvent?4(evt)
 eric5.QScintilla.Editor.Editor.checkDirty?4()
 eric5.QScintilla.Editor.Editor.checkSpelling?4()
@@ -4529,14 +4768,21 @@ eric5.QScintilla.Editor.Editor.commentLine?4()
 eric5.QScintilla.Editor.Editor.commentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.commentSelection?4()
 eric5.QScintilla.Editor.Editor.contextMenuEvent?4(evt)
+eric5.QScintilla.Editor.Editor.coverageMarkersShown?7
 eric5.QScintilla.Editor.Editor.curLineHasBreakpoint?4()
+eric5.QScintilla.Editor.Editor.cursorChanged?7
 eric5.QScintilla.Editor.Editor.dragEnterEvent?4(event)
 eric5.QScintilla.Editor.Editor.dragLeaveEvent?4(event)
 eric5.QScintilla.Editor.Editor.dragMoveEvent?4(event)
 eric5.QScintilla.Editor.Editor.dropEvent?4(event)
+eric5.QScintilla.Editor.Editor.editorAboutToBeSaved?7
 eric5.QScintilla.Editor.Editor.editorCommand?4(cmd)
+eric5.QScintilla.Editor.Editor.editorRenamed?7
+eric5.QScintilla.Editor.Editor.editorSaved?7
+eric5.QScintilla.Editor.Editor.encodingChanged?7
 eric5.QScintilla.Editor.Editor.ensureVisible?4(line)
 eric5.QScintilla.Editor.Editor.ensureVisibleTop?4(line)
+eric5.QScintilla.Editor.Editor.eolChanged?7
 eric5.QScintilla.Editor.Editor.exportFile?4(exporterFormat)
 eric5.QScintilla.Editor.Editor.extractTasks?4()
 eric5.QScintilla.Editor.Editor.fileRenamed?4(fn)
@@ -4580,8 +4826,9 @@ eric5.QScintilla.Editor.Editor.isPy3File?4()
 eric5.QScintilla.Editor.Editor.isPyFile?4()
 eric5.QScintilla.Editor.Editor.isRubyFile?4()
 eric5.QScintilla.Editor.Editor.isSpellCheckRegion?4(pos)
+eric5.QScintilla.Editor.Editor.joinLines?4()
 eric5.QScintilla.Editor.Editor.keyPressEvent?4(ev)
-eric5.QScintilla.Editor.Editor.languageChanged?4(language, propagate = True)
+eric5.QScintilla.Editor.Editor.languageChanged?7
 eric5.QScintilla.Editor.Editor.macroDelete?4()
 eric5.QScintilla.Editor.Editor.macroLoad?4()
 eric5.QScintilla.Editor.Editor.macroRecordingStart?4()
@@ -4593,6 +4840,7 @@ eric5.QScintilla.Editor.Editor.menuNextBreakpoint?4()
 eric5.QScintilla.Editor.Editor.menuPreviousBreakpoint?4()
 eric5.QScintilla.Editor.Editor.menuToggleBookmark?4()
 eric5.QScintilla.Editor.Editor.menuToggleBreakpoint?4()
+eric5.QScintilla.Editor.Editor.modificationStatusChanged?7
 eric5.QScintilla.Editor.Editor.mousePressEvent?4(event)
 eric5.QScintilla.Editor.Editor.newBreakpointWithProperties?4(line, properties)
 eric5.QScintilla.Editor.Editor.nextBookmark?4()
@@ -4610,6 +4858,7 @@ eric5.QScintilla.Editor.Editor.readFile?4(fn, createIt = False)
 eric5.QScintilla.Editor.Editor.readSettings?4()
 eric5.QScintilla.Editor.Editor.receive?4(command)
 eric5.QScintilla.Editor.Editor.redo?4()
+eric5.QScintilla.Editor.Editor.redoAvailable?7
 eric5.QScintilla.Editor.Editor.refresh?4()
 eric5.QScintilla.Editor.Editor.removeClone?4(editor)
 eric5.QScintilla.Editor.Editor.revertToUnmodified?4()
@@ -4631,11 +4880,14 @@ eric5.QScintilla.Editor.Editor.shareConnected?4(connected)
 eric5.QScintilla.Editor.Editor.shareEditor?4(share)
 eric5.QScintilla.Editor.Editor.shortenEmptyLines?4()
 eric5.QScintilla.Editor.Editor.shouldAutosave?4()
+eric5.QScintilla.Editor.Editor.showMenu?7
 eric5.QScintilla.Editor.Editor.smartIndentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.startSharedEdit?4()
 eric5.QScintilla.Editor.Editor.streamCommentLine?4()
 eric5.QScintilla.Editor.Editor.streamCommentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.streamCommentSelection?4()
+eric5.QScintilla.Editor.Editor.syntaxerrorToggled?7
+eric5.QScintilla.Editor.Editor.taskMarkersUpdated?7
 eric5.QScintilla.Editor.Editor.toggleBookmark?4(line)
 eric5.QScintilla.Editor.Editor.toggleFlakesWarning?4(line, warning, msg = "")
 eric5.QScintilla.Editor.Editor.toggleSyntaxError?4(line, error, msg = "")
@@ -4643,6 +4895,7 @@ eric5.QScintilla.Editor.Editor.uncommentLine?4()
 eric5.QScintilla.Editor.Editor.uncommentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.uncommentSelection?4()
 eric5.QScintilla.Editor.Editor.undo?4()
+eric5.QScintilla.Editor.Editor.undoAvailable?7
 eric5.QScintilla.Editor.Editor.unindentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.unsetAutoCompletionHook?4()
 eric5.QScintilla.Editor.Editor.unsetCallTipHook?4()
@@ -4915,6 +5168,7 @@ eric5.QScintilla.Lexers.unregisterLexer?4(name)
 eric5.QScintilla.MiniEditor.MiniEditor.activeWindow?4()
 eric5.QScintilla.MiniEditor.MiniEditor.clearSearchIndicators?4()
 eric5.QScintilla.MiniEditor.MiniEditor.closeEvent?4(event)
+eric5.QScintilla.MiniEditor.MiniEditor.editorSaved?7
 eric5.QScintilla.MiniEditor.MiniEditor.getFileName?4()
 eric5.QScintilla.MiniEditor.MiniEditor.getLanguage?4()
 eric5.QScintilla.MiniEditor.MiniEditor.getSRHistory?4(key)
@@ -5018,6 +5272,7 @@ eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.on_findPrevButton_click
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.on_findtextCombo_editTextChanged?4(txt)
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.on_replaceAllButton_clicked?4()
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.on_replaceButton_clicked?4()
+eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.searchListChanged?7
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.selectionChanged?4()
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.show?4(text = '')
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.updateSelectionCheckBox?4(editor)
@@ -5132,6 +5387,7 @@ eric5.SqlBrowser.SqlBrowserWidget.SqlBrowserWidget.on_executeButton_clicked?4()
 eric5.SqlBrowser.SqlBrowserWidget.SqlBrowserWidget.on_insertRowAction_triggered?4()
 eric5.SqlBrowser.SqlBrowserWidget.SqlBrowserWidget.showSchema?4(table)
 eric5.SqlBrowser.SqlBrowserWidget.SqlBrowserWidget.showTable?4(table)
+eric5.SqlBrowser.SqlBrowserWidget.SqlBrowserWidget.statusMessage?7
 eric5.SqlBrowser.SqlBrowserWidget.SqlBrowserWidget.updateActions?4()
 eric5.SqlBrowser.SqlBrowserWidget.SqlBrowserWidget?1(parent = None)
 eric5.SqlBrowser.SqlConnectionDialog.SqlConnectionDialog.getData?4()
@@ -5139,9 +5395,12 @@ eric5.SqlBrowser.SqlConnectionDialog.SqlConnectionDialog.on_databaseEdit_textCha
 eric5.SqlBrowser.SqlConnectionDialog.SqlConnectionDialog.on_databaseFileButton_clicked?4()
 eric5.SqlBrowser.SqlConnectionDialog.SqlConnectionDialog.on_driverCombo_activated?4(txt)
 eric5.SqlBrowser.SqlConnectionDialog.SqlConnectionDialog?1(parent = None)
+eric5.SqlBrowser.SqlConnectionWidget.SqlConnectionWidget.cleared?7
 eric5.SqlBrowser.SqlConnectionWidget.SqlConnectionWidget.currentDatabase?4()
 eric5.SqlBrowser.SqlConnectionWidget.SqlConnectionWidget.refresh?4()
+eric5.SqlBrowser.SqlConnectionWidget.SqlConnectionWidget.schemaRequested?7
 eric5.SqlBrowser.SqlConnectionWidget.SqlConnectionWidget.showSchema?4()
+eric5.SqlBrowser.SqlConnectionWidget.SqlConnectionWidget.tableActivated?7
 eric5.SqlBrowser.SqlConnectionWidget.SqlConnectionWidget?1(parent = None)
 eric5.Tasks.TaskFilterConfigDialog.TaskFilterConfigDialog.configureTaskFilter?4(taskFilter)
 eric5.Tasks.TaskFilterConfigDialog.TaskFilterConfigDialog?1(taskFilter, parent = None)
@@ -5174,6 +5433,7 @@ eric5.Tasks.TaskViewer.TaskViewer.addTask?4(description, priority = 1, filename 
 eric5.Tasks.TaskViewer.TaskViewer.clearFileTasks?4(filename)
 eric5.Tasks.TaskViewer.TaskViewer.clearProjectTasks?4()
 eric5.Tasks.TaskViewer.TaskViewer.clearTasks?4()
+eric5.Tasks.TaskViewer.TaskViewer.displayFile?7
 eric5.Tasks.TaskViewer.TaskViewer.getGlobalTasks?4()
 eric5.Tasks.TaskViewer.TaskViewer.getProjectTasks?4()
 eric5.Tasks.TaskViewer.TaskViewer.handlePreferencesChanged?4()
@@ -5236,6 +5496,7 @@ eric5.Tools.TRPreviewer.TranslationsDict.hasTranslations?4()
 eric5.Tools.TRPreviewer.TranslationsDict.loadTransFile?4(transFileName)
 eric5.Tools.TRPreviewer.TranslationsDict.reload?4()
 eric5.Tools.TRPreviewer.TranslationsDict.set?4(name)
+eric5.Tools.TRPreviewer.TranslationsDict.translationChanged?7
 eric5.Tools.TRPreviewer.TranslationsDict?1(selector, parent)
 eric5.Tools.TRPreviewer.WidgetView.buildWidget?4()
 eric5.Tools.TRPreviewer.WidgetView.isValid?4()
@@ -5245,6 +5506,7 @@ eric5.Tools.TRPreviewer.WidgetWorkspace.closeAllWidgets?4()
 eric5.Tools.TRPreviewer.WidgetWorkspace.closeWidget?4()
 eric5.Tools.TRPreviewer.WidgetWorkspace.eventFilter?4(obj, ev)
 eric5.Tools.TRPreviewer.WidgetWorkspace.hasWidgets?4()
+eric5.Tools.TRPreviewer.WidgetWorkspace.lastWidgetClosed?7
 eric5.Tools.TRPreviewer.WidgetWorkspace.loadWidget?4(uiFileName)
 eric5.Tools.TRPreviewer.WidgetWorkspace.showWindowMenu?4(windowMenu)
 eric5.Tools.TRPreviewer.WidgetWorkspace.toggleSelectedWidget?4(act)
@@ -5256,6 +5518,8 @@ eric5.Tools.TRSingleApplication.SALoadTranslation?7
 eric5.Tools.TRSingleApplication.TRSingleApplicationClient.processArgs?4(args)
 eric5.Tools.TRSingleApplication.TRSingleApplicationClient?1()
 eric5.Tools.TRSingleApplication.TRSingleApplicationServer.handleCommand?4(cmd, params)
+eric5.Tools.TRSingleApplication.TRSingleApplicationServer.loadForm?7
+eric5.Tools.TRSingleApplication.TRSingleApplicationServer.loadTranslation?7
 eric5.Tools.TRSingleApplication.TRSingleApplicationServer?1(parent)
 eric5.Tools.TrayStarter.TrayStarter?1()
 eric5.Tools.UIPreviewer.UIPreviewer.eventFilter?4(obj, ev)
@@ -5272,6 +5536,7 @@ eric5.UI.Browser.Browser._init?5()
 eric5.UI.Browser.Browser._openItem?5()
 eric5.UI.Browser.Browser._resizeColumns?5(index)
 eric5.UI.Browser.Browser._resort?5()
+eric5.UI.Browser.Browser.designerFile?7
 eric5.UI.Browser.Browser.getSelectedItems?4(filter=None)
 eric5.UI.Browser.Browser.getSelectedItemsCount?4(filter=None)
 eric5.UI.Browser.Browser.getSelectedItemsCountCategorized?4(filter=None)
@@ -5279,8 +5544,17 @@ eric5.UI.Browser.Browser.handlePreferencesChanged?4()
 eric5.UI.Browser.Browser.handleProgramChange?4(fn)
 eric5.UI.Browser.Browser.handleUnittest?4()
 eric5.UI.Browser.Browser.layoutDisplay?4()
+eric5.UI.Browser.Browser.linguistFile?7
 eric5.UI.Browser.Browser.mouseDoubleClickEvent?4(mouseEvent)
+eric5.UI.Browser.Browser.multiProjectFile?7
+eric5.UI.Browser.Browser.pixmapEditFile?7
+eric5.UI.Browser.Browser.pixmapFile?7
+eric5.UI.Browser.Browser.projectFile?7
 eric5.UI.Browser.Browser.saveToplevelDirs?4()
+eric5.UI.Browser.Browser.sourceFile?7
+eric5.UI.Browser.Browser.svgFile?7
+eric5.UI.Browser.Browser.trpreview?7
+eric5.UI.Browser.Browser.unittestOpen?7
 eric5.UI.Browser.Browser.wantedItem?4(itm, filter=None)
 eric5.UI.Browser.Browser?1(parent = None)
 eric5.UI.BrowserModel.BrowserClassAttributeItem.attributeObject?4()
@@ -5433,6 +5707,7 @@ eric5.UI.EmailDialog.EmailDialog.on_sendButton_clicked?4()
 eric5.UI.EmailDialog.EmailDialog.on_subject_textChanged?4(txt)
 eric5.UI.EmailDialog.EmailDialog?1(mode = "bug", parent = None)
 eric5.UI.EmailDialog._encode_base64?5(msg)
+eric5.UI.FindFileDialog.FindFileDialog.designerFile?7
 eric5.UI.FindFileDialog.FindFileDialog.endRole?7
 eric5.UI.FindFileDialog.FindFileDialog.lineRole?7
 eric5.UI.FindFileDialog.FindFileDialog.on_buttonBox_clicked?4(button)
@@ -5440,7 +5715,7 @@ eric5.UI.FindFileDialog.FindFileDialog.on_dirButton_clicked?4()
 eric5.UI.FindFileDialog.FindFileDialog.on_dirCombo_editTextChanged?4(text)
 eric5.UI.FindFileDialog.FindFileDialog.on_dirSelectButton_clicked?4()
 eric5.UI.FindFileDialog.FindFileDialog.on_filterCheckBox_clicked?4()
-eric5.UI.FindFileDialog.FindFileDialog.on_filterEdit_textEdited?4(p0)
+eric5.UI.FindFileDialog.FindFileDialog.on_filterEdit_textEdited?4(text)
 eric5.UI.FindFileDialog.FindFileDialog.on_findList_itemDoubleClicked?4(itm, column)
 eric5.UI.FindFileDialog.FindFileDialog.on_findtextCombo_editTextChanged?4(text)
 eric5.UI.FindFileDialog.FindFileDialog.on_projectButton_clicked?4()
@@ -5449,9 +5724,11 @@ eric5.UI.FindFileDialog.FindFileDialog.on_replacetextCombo_editTextChanged?4(tex
 eric5.UI.FindFileDialog.FindFileDialog.replaceRole?7
 eric5.UI.FindFileDialog.FindFileDialog.setSearchDirectory?4(searchDir)
 eric5.UI.FindFileDialog.FindFileDialog.show?4(txt = "")
+eric5.UI.FindFileDialog.FindFileDialog.sourceFile?7
 eric5.UI.FindFileDialog.FindFileDialog.startRole?7
 eric5.UI.FindFileDialog.FindFileDialog?1(project, replaceMode = False, parent=None)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.checkStop?4()
+eric5.UI.FindFileNameDialog.FindFileNameDialog.designerFile?7
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_buttonBox_clicked?4(button)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileExtEdit_textChanged?4(text)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileList_itemActivated?4(itm, column)
@@ -5462,6 +5739,7 @@ eric5.UI.FindFileNameDialog.FindFileNameDialog.on_searchDirCheckBox_toggled?4(ch
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_searchDirEdit_textChanged?4(text)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_syspathCheckBox_toggled?4(checked)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.show?4()
+eric5.UI.FindFileNameDialog.FindFileNameDialog.sourceFile?7
 eric5.UI.FindFileNameDialog.FindFileNameDialog?1(project, parent = None)
 eric5.UI.Info.BugAddress?7
 eric5.UI.Info.Copyright?7
@@ -5529,10 +5807,14 @@ eric5.UI.SymbolsWidget.SymbolsWidget.on_symbolSpinBox_editingFinished?4()
 eric5.UI.SymbolsWidget.SymbolsWidget.on_symbolsTable_activated?4(index)
 eric5.UI.SymbolsWidget.SymbolsWidget.on_tableCombo_currentIndexChanged?4(index)
 eric5.UI.SymbolsWidget.SymbolsWidget?1(parent = None)
+eric5.UI.UserInterface.Redirector.appendStderr?7
+eric5.UI.UserInterface.Redirector.appendStdout?7
 eric5.UI.UserInterface.Redirector.flush?4()
 eric5.UI.UserInterface.Redirector.write?4(s)
 eric5.UI.UserInterface.Redirector?1(stderr)
 eric5.UI.UserInterface.UserInterface.addE5Actions?4(actions, type)
+eric5.UI.UserInterface.UserInterface.appendStderr?7
+eric5.UI.UserInterface.UserInterface.appendStdout?7
 eric5.UI.UserInterface.UserInterface.appendToStderr?4(s)
 eric5.UI.UserInterface.UserInterface.appendToStdout?4(s)
 eric5.UI.UserInterface.UserInterface.checkConfigurationStatus?4()
@@ -5555,14 +5837,17 @@ eric5.UI.UserInterface.UserInterface.maxFilePathLen?7
 eric5.UI.UserInterface.UserInterface.maxMenuFilePathLen?7
 eric5.UI.UserInterface.UserInterface.maxSbFilePathLen?7
 eric5.UI.UserInterface.UserInterface.performVersionCheck?4(manual = True, alternative = 0, showVersions = False)
+eric5.UI.UserInterface.UserInterface.preferencesChanged?7
 eric5.UI.UserInterface.UserInterface.processArgs?4(args)
 eric5.UI.UserInterface.UserInterface.registerToolbar?4(name, text, toolbar)
+eric5.UI.UserInterface.UserInterface.reloadAPIs?7
 eric5.UI.UserInterface.UserInterface.removeE5Actions?4(actions, type = 'ui')
 eric5.UI.UserInterface.UserInterface.reregisterToolbar?4(name, text)
 eric5.UI.UserInterface.UserInterface.setDebugProfile?4(save = True)
 eric5.UI.UserInterface.UserInterface.showAvailableVersionsInfo?4()
 eric5.UI.UserInterface.UserInterface.showEvent?4(evt)
 eric5.UI.UserInterface.UserInterface.showLogTab?4(tabname)
+eric5.UI.UserInterface.UserInterface.showMenu?7
 eric5.UI.UserInterface.UserInterface.showPreferences?4(pageName = None)
 eric5.UI.UserInterface.UserInterface.unregisterToolbar?4(name)
 eric5.UI.UserInterface.UserInterface.versionIsNewer?4(required, snapshot = None)
@@ -5922,6 +6207,8 @@ eric5.VCS.StatusMonitorThread.VcsStatusMonitorThread.run?4()
 eric5.VCS.StatusMonitorThread.VcsStatusMonitorThread.setAutoUpdate?4(auto)
 eric5.VCS.StatusMonitorThread.VcsStatusMonitorThread.setInterval?4(interval)
 eric5.VCS.StatusMonitorThread.VcsStatusMonitorThread.stop?4()
+eric5.VCS.StatusMonitorThread.VcsStatusMonitorThread.vcsStatusMonitorData?7
+eric5.VCS.StatusMonitorThread.VcsStatusMonitorThread.vcsStatusMonitorStatus?7
 eric5.VCS.StatusMonitorThread.VcsStatusMonitorThread?1(interval, project, vcs, parent = None)
 eric5.VCS.VersionControl.VersionControl._createStatusMonitorThread?5(interval, project)
 eric5.VCS.VersionControl.VersionControl.addArguments?4(args, argslist)
@@ -5975,6 +6262,8 @@ eric5.VCS.VersionControl.VersionControl.vcsSetOptions?4(options)
 eric5.VCS.VersionControl.VersionControl.vcsSetOtherData?4(data)
 eric5.VCS.VersionControl.VersionControl.vcsShutdown?4()
 eric5.VCS.VersionControl.VersionControl.vcsStatus?4(name)
+eric5.VCS.VersionControl.VersionControl.vcsStatusMonitorData?7
+eric5.VCS.VersionControl.VersionControl.vcsStatusMonitorStatus?7
 eric5.VCS.VersionControl.VersionControl.vcsSwitch?4(name)
 eric5.VCS.VersionControl.VersionControl.vcsTag?4(name)
 eric5.VCS.VersionControl.VersionControl.vcsUpdate?4(name, noDialog = False)
@@ -5991,8 +6280,11 @@ eric5.ViewManager.BookmarkedFilesDialog.BookmarkedFilesDialog.on_filesList_curre
 eric5.ViewManager.BookmarkedFilesDialog.BookmarkedFilesDialog.on_upButton_clicked?4()
 eric5.ViewManager.BookmarkedFilesDialog.BookmarkedFilesDialog?1(bookmarks, parent = None)
 eric5.ViewManager.ViewManager.QuickSearchLineEdit.editorCommand?4(cmd)
+eric5.ViewManager.ViewManager.QuickSearchLineEdit.escPressed?7
 eric5.ViewManager.ViewManager.QuickSearchLineEdit.focusInEvent?4(evt)
+eric5.ViewManager.ViewManager.QuickSearchLineEdit.gotFocus?7
 eric5.ViewManager.ViewManager.QuickSearchLineEdit.keyPressEvent?4(evt)
+eric5.ViewManager.ViewManager.QuickSearchLineEdit.returnPressed?7
 eric5.ViewManager.ViewManager.ViewManager._addView?5(win, fn=None, noName="")
 eric5.ViewManager.ViewManager.ViewManager._checkActions?5(editor, setSb = True)
 eric5.ViewManager.ViewManager.ViewManager._getOpenFileFilter?5()
@@ -6008,11 +6300,14 @@ eric5.ViewManager.ViewManager.ViewManager.addSplit?4()
 eric5.ViewManager.ViewManager.ViewManager.addToExtrasMenu?4(menu)
 eric5.ViewManager.ViewManager.ViewManager.addToRecentList?4(fn)
 eric5.ViewManager.ViewManager.ViewManager.appFocusChanged?4(old, now)
+eric5.ViewManager.ViewManager.ViewManager.bookmarkToggled?7
+eric5.ViewManager.ViewManager.ViewManager.breakpointToggled?7
 eric5.ViewManager.ViewManager.ViewManager.canCascade?4()
 eric5.ViewManager.ViewManager.ViewManager.canSplit?4()
 eric5.ViewManager.ViewManager.ViewManager.canTile?4()
 eric5.ViewManager.ViewManager.ViewManager.cancelSharedEdit?4()
 eric5.ViewManager.ViewManager.ViewManager.cascade?4()
+eric5.ViewManager.ViewManager.ViewManager.checkActions?7
 eric5.ViewManager.ViewManager.ViewManager.checkAllDirty?4()
 eric5.ViewManager.ViewManager.ViewManager.checkDirty?4(editor, autosave = False)
 eric5.ViewManager.ViewManager.ViewManager.cloneEditor?4(caller, filetype, fn)
@@ -6022,6 +6317,12 @@ eric5.ViewManager.ViewManager.ViewManager.closeEditor?4(editor)
 eric5.ViewManager.ViewManager.ViewManager.closeEditorWindow?4(editor)
 eric5.ViewManager.ViewManager.ViewManager.closeViewManager?4()
 eric5.ViewManager.ViewManager.ViewManager.closeWindow?4(fn)
+eric5.ViewManager.ViewManager.ViewManager.cursorChanged?7
+eric5.ViewManager.ViewManager.ViewManager.editorClosed?7
+eric5.ViewManager.ViewManager.ViewManager.editorClosedEd?7
+eric5.ViewManager.ViewManager.ViewManager.editorOpened?7
+eric5.ViewManager.ViewManager.ViewManager.editorOpenedEd?7
+eric5.ViewManager.ViewManager.ViewManager.editorSaved?7
 eric5.ViewManager.ViewManager.ViewManager.editorsCheckFocusInEnabled?4()
 eric5.ViewManager.ViewManager.ViewManager.enableEditorsCheckFocusIn?4(enabled)
 eric5.ViewManager.ViewManager.ViewManager.eventFilter?4(object, event)
@@ -6054,12 +6355,13 @@ eric5.ViewManager.ViewManager.ViewManager.initViewToolbar?4(toolbarManager)
 eric5.ViewManager.ViewManager.ViewManager.insertNumber?4(txt)
 eric5.ViewManager.ViewManager.ViewManager.insertSymbol?4(txt)
 eric5.ViewManager.ViewManager.ViewManager.isConnected?4()
+eric5.ViewManager.ViewManager.ViewManager.lastEditorClosed?7
 eric5.ViewManager.ViewManager.ViewManager.newEditor?4()
 eric5.ViewManager.ViewManager.ViewManager.newEditorView?4(fn, caller, filetype = "")
 eric5.ViewManager.ViewManager.ViewManager.newProject?4()
 eric5.ViewManager.ViewManager.ViewManager.nextSplit?4()
 eric5.ViewManager.ViewManager.ViewManager.openFiles?4(prog = None)
-eric5.ViewManager.ViewManager.ViewManager.openSourceFile?4(fn, lineno = None, filetype = "", selection = None)
+eric5.ViewManager.ViewManager.ViewManager.openSourceFile?4(fn, lineno = None, filetype = "", selStart = 0, selEnd = 0)
 eric5.ViewManager.ViewManager.ViewManager.preferencesChanged?4()
 eric5.ViewManager.ViewManager.ViewManager.prevSplit?4()
 eric5.ViewManager.ViewManager.ViewManager.printCurrentEditor?4()
@@ -6093,6 +6395,7 @@ eric5.ViewManager.ViewManager.ViewManager.shareEditor?4(share)
 eric5.ViewManager.ViewManager.ViewManager.showDebugSource?4(fn, line)
 eric5.ViewManager.ViewManager.ViewManager.showWindowMenu?4(windowMenu)
 eric5.ViewManager.ViewManager.ViewManager.startSharedEdit?4()
+eric5.ViewManager.ViewManager.ViewManager.syntaxerrorToggled?7
 eric5.ViewManager.ViewManager.ViewManager.textForFind?4(getCurrentWord = True)
 eric5.ViewManager.ViewManager.ViewManager.tile?4()
 eric5.ViewManager.ViewManager.ViewManager.unhighlight?4(current = False)

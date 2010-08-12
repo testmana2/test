@@ -24,7 +24,7 @@ class HelpWebSearchWidget(QWidget):
     """
     Class implementing a web search widget for the web browser.
     
-    @signal search(url) emitted when the search should be done
+    @signal search(QUrl) emitted when the search should be done
     """
     search = pyqtSignal(QUrl)
     

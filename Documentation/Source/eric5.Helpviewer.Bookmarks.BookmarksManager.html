@@ -55,13 +55,13 @@ Module implementing the bookmarks manager.
     Class implementing the bookmarks manager.
 </p><h4>Signals</h4>
 <dl>
-<dt>entryAdded</dt>
+<dt>entryAdded(BookmarkNode)</dt>
 <dd>
 emitted after a bookmark node has been added
-</dd><dt>entryChanged</dt>
+</dd><dt>entryChanged(BookmarkNode)</dt>
 <dd>
 emitted after a bookmark node has been changed
-</dd><dt>entryRemoved</dt>
+</dd><dt>entryRemoved(BookmarkNode, int, BookmarkNode)</dt>
 <dd>
 emitted after a bookmark
         node has been removed
@@ -71,7 +71,7 @@ emitted after a bookmark
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>entryAdded</td></tr><tr><td>entryChanged</td></tr><tr><td>entryRemoved</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

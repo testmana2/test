@@ -28,12 +28,12 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
     """
     A class used to display the resources part of the project. 
     
-    @signal appendStderr(string) emitted after something was received from
+    @signal appendStderr(str) emitted after something was received from
             a QProcess on stderr
-    @signal sourceFile(string) emitted to open a resources file in an editor
-    @signal closeSourceWindow(string) emitted after a file has been removed/deleted 
+    @signal sourceFile(str) emitted to open a resources file in an editor
+    @signal closeSourceWindow(str) emitted after a file has been removed/deleted 
             from the project
-    @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
     appendStderr = pyqtSignal(str)

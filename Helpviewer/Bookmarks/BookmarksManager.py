@@ -85,10 +85,10 @@ class BookmarksManager(QObject):
     """
     Class implementing the bookmarks manager.
     
-    @signal entryAdded emitted after a bookmark node has been added
-    @signal entryRemoved emitted after a bookmark
+    @signal entryAdded(BookmarkNode) emitted after a bookmark node has been added
+    @signal entryRemoved(BookmarkNode, int, BookmarkNode) emitted after a bookmark
         node has been removed
-    @signal entryChanged emitted after a bookmark node has been changed
+    @signal entryChanged(BookmarkNode) emitted after a bookmark node has been changed
     """
     entryAdded = pyqtSignal(BookmarkNode)
     entryRemoved = pyqtSignal(BookmarkNode, int, BookmarkNode)

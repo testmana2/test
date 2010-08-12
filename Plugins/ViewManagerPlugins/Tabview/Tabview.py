@@ -613,20 +613,20 @@ class Tabview(QSplitter, ViewManager):
     """
     Class implementing a tabbed viewmanager class embedded in a splitter.
     
-    @signal changeCaption(string) emitted if a change of the caption is necessary
-    @signal editorChanged(string) emitted when the current editor has changed
+    @signal changeCaption(str) emitted if a change of the caption is necessary
+    @signal editorChanged(str) emitted when the current editor has changed
     @signal lastEditorClosed() emitted after the last editor window was closed
-    @signal editorOpened(string) emitted after an editor window was opened
-    @signal editorOpenedEd(editor) emitted after an editor window was opened
-    @signal editorClosed(string) emitted just before an editor window gets closed
-    @signal editorClosedEd(editor) emitted just before an editor window gets closed
-    @signal editorSaved(string) emitted after an editor window was saved
-    @signal checkActions(editor) emitted when some actions should be checked
+    @signal editorOpened(str) emitted after an editor window was opened
+    @signal editorOpenedEd(Editor) emitted after an editor window was opened
+    @signal editorClosed(str) emitted just before an editor window gets closed
+    @signal editorClosedEd(Editor) emitted just before an editor window gets closed
+    @signal editorSaved(str) emitted after an editor window was saved
+    @signal checkActions(Editor) emitted when some actions should be checked
             for their status
-    @signal cursorChanged(editor) emitted after the cursor position of the active
+    @signal cursorChanged(Editor) emitted after the cursor position of the active
             window has changed
-    @signal breakpointToggled(editor) emitted when a breakpoint is toggled.
-    @signal bookmarkToggled(editor) emitted when a bookmark is toggled.
+    @signal breakpointToggled(Editor) emitted when a breakpoint is toggled.
+    @signal bookmarkToggled(Editor) emitted when a bookmark is toggled.
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)

@@ -28,8 +28,8 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
     filename and the pathname. The file will be opened upon a double click
     onto the respective entry of the list.
     
-    @signal sourceFile(string) emitted to open a file in the editor
-    @signal designerFile(string) emitted to open a Qt-Designer file
+    @signal sourceFile(str) emitted to open a file in the editor
+    @signal designerFile(str) emitted to open a Qt-Designer file
     """
     sourceFile = pyqtSignal(str)
     designerFile = pyqtSignal(str)

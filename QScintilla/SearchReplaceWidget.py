@@ -25,7 +25,7 @@ class SearchReplaceWidget(QWidget):
     """
     Class implementing the search and replace widget.
     
-    @signal searchListChanged emitted to indicate a change of the search list
+    @signal searchListChanged() emitted to indicate a change of the search list
     """
     searchListChanged = pyqtSignal()
     

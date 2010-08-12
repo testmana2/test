@@ -19,7 +19,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
     """
     Class implementing the SQL Browser widget.
     
-    @signal statusMessage(string) emitted to show a status message
+    @signal statusMessage(str) emitted to show a status message
     """
     statusMessage = pyqtSignal(str)
     

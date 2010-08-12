@@ -50,20 +50,19 @@ Module implementing a dialog to search for text in files.
     the respective entry of the list.
 </p><h4>Signals</h4>
 <dl>
-<dt>designerFile(string)</dt>
+<dt>designerFile(str)</dt>
 <dd>
 emitted to open a Qt-Designer file
-</dd><dt>sourceFile(string, int, string, (int, int)</dt>
+</dd><dt>sourceFile(str, int, str, int, int)</dt>
 <dd>
-) emitted to open a
-        source file at a line
+emitted to open a source file at a line
 </dd>
 </dl>
 <h3>Derived from</h3>
 QDialog, Ui_FindFileDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>endRole</td></tr><tr><td>lineRole</td></tr><tr><td>replaceRole</td></tr><tr><td>startRole</td></tr>
+<tr><td>designerFile</td></tr><tr><td>endRole</td></tr><tr><td>lineRole</td></tr><tr><td>replaceRole</td></tr><tr><td>sourceFile</td></tr><tr><td>startRole</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -263,7 +262,7 @@ button that was clicked (QAbstractButton)
         Private slot to handle the selection of the file filter check box.
 </p><a NAME="FindFileDialog.on_filterEdit_textEdited" ID="FindFileDialog.on_filterEdit_textEdited"></a>
 <h4>FindFileDialog.on_filterEdit_textEdited</h4>
-<b>on_filterEdit_textEdited</b>(<i>p0</i>)
+<b>on_filterEdit_textEdited</b>(<i>text</i>)
 <p>
         Private slot to handle the textChanged signal of the file filter edit.
 </p><dl>

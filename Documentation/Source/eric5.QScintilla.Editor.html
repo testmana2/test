@@ -46,69 +46,71 @@ Module implementing the editor component of the eric5 IDE.
     Class implementing the editor component of the eric5 IDE.
 </p><h4>Signals</h4>
 <dl>
-<dt>autoCompletionAPIsAvailable(avail)</dt>
+<dt>autoCompletionAPIsAvailable(bool)</dt>
 <dd>
 emitted after the autocompletion
             function has been configured
-</dd><dt>bookmarkToggled(editor)</dt>
+</dd><dt>bookmarkToggled(QsciScintillaCompat)</dt>
 <dd>
 emitted when a bookmark is toggled
-</dd><dt>breakpointToggled(editor)</dt>
+</dd><dt>breakpointToggled(QsciScintillaCompat)</dt>
 <dd>
 emitted when a breakpoint is toggled
-</dd><dt>captionChanged(string, editor)</dt>
+</dd><dt>captionChanged(str, QsciScintillaCompat)</dt>
 <dd>
 emitted when the caption is
             updated. Typically due to a readOnly attribute change.
-</dd><dt>coverageMarkersShown(boolean)</dt>
+</dd><dt>coverageMarkersShown(bool)</dt>
 <dd>
 emitted after the coverage markers have been
             shown or cleared
-</dd><dt>cursorChanged(string, int, int)</dt>
+</dd><dt>cursorChanged(str, int, int)</dt>
 <dd>
 emitted when the cursor position
             was changed
-</dd><dt>editorAboutToBeSaved(string)</dt>
+</dd><dt>editorAboutToBeSaved(str)</dt>
 <dd>
 emitted before the editor is saved
-</dd><dt>editorRenamed(string)</dt>
+</dd><dt>editorRenamed(str)</dt>
 <dd>
 emitted after the editor got a new name
             (i.e. after a 'Save As')
-</dd><dt>editorSaved(string)</dt>
+</dd><dt>editorSaved(str)</dt>
 <dd>
 emitted after the editor has been saved
-</dd><dt>encodingChanged(encoding)</dt>
+</dd><dt>encodingChanged(str)</dt>
 <dd>
 emitted when the editors encoding was set. The
             encoding name is passed as a parameter.
-</dd><dt>eolChanged(eol)</dt>
+</dd><dt>eolChanged(str)</dt>
 <dd>
 emitted when the editors eol type was set. The eol string
             is passed as a parameter.
-</dd><dt>languageChanged(language)</dt>
+</dd><dt>languageChanged(str)</dt>
 <dd>
 emitted when the editors language was set. The
             language is passed as a parameter.
-</dd><dt>modificationStatusChanged(boolean, editor)</dt>
+</dd><dt>modificationStatusChanged(bool, QsciScintillaCompat)</dt>
 <dd>
 emitted when the
             modification status has changed
-</dd><dt>redoAvailable(boolean)</dt>
+</dd><dt>redoAvailable(bool)</dt>
 <dd>
 emitted to signal the redo availability
-</dd><dt>showMenu(string, QMenu, editor)</dt>
+</dd><dt>showMenu(str, QMenu, QsciScintillaCompat)</dt>
 <dd>
-emitted when a menu is about to be shown.
-            The name of the menu, a reference to the menu and a reference to the
-            editor are given.
-</dd><dt>syntaxerrorToggled(editor)</dt>
+emitted when a menu is about
+            to be shown. The name of the menu, a reference to the menu and a reference
+            to the editor are given.
+</dd><dt>syntaxerrorToggled(QsciScintillaCompat)</dt>
 <dd>
-emitted when a syntax error was discovered
-</dd><dt>taskMarkersUpdated(editor)</dt>
+emitted when a syntax error
+            was discovered
+</dd><dt>taskMarkersUpdated(QsciScintillaCompat)</dt>
 <dd>
-emitted when the task markers were updated
-</dd><dt>undoAvailable(boolean)</dt>
+emitted when the task markers
+            were updated
+</dd><dt>undoAvailable(bool)</dt>
 <dd>
 emitted to signal the undo availability
 </dd>
@@ -117,7 +119,7 @@ emitted to signal the undo availability
 QsciScintillaCompat
 <h3>Class Attributes</h3>
 <table>
-<tr><td>AttributeID</td></tr><tr><td>AttributePrivateID</td></tr><tr><td>AttributeProtectedID</td></tr><tr><td>CancelEditToken</td></tr><tr><td>ClassID</td></tr><tr><td>ClassPrivateID</td></tr><tr><td>ClassProtectedID</td></tr><tr><td>EndEditToken</td></tr><tr><td>EnumID</td></tr><tr><td>FromDocumentID</td></tr><tr><td>MethodID</td></tr><tr><td>MethodPrivateID</td></tr><tr><td>MethodProtectedID</td></tr><tr><td>RequestSyncToken</td></tr><tr><td>Separator</td></tr><tr><td>StartEditToken</td></tr><tr><td>SyncToken</td></tr><tr><td>TemplateImageID</td></tr>
+<tr><td>AttributeID</td></tr><tr><td>AttributePrivateID</td></tr><tr><td>AttributeProtectedID</td></tr><tr><td>CancelEditToken</td></tr><tr><td>ClassID</td></tr><tr><td>ClassPrivateID</td></tr><tr><td>ClassProtectedID</td></tr><tr><td>EndEditToken</td></tr><tr><td>EnumID</td></tr><tr><td>FromDocumentID</td></tr><tr><td>MethodID</td></tr><tr><td>MethodPrivateID</td></tr><tr><td>MethodProtectedID</td></tr><tr><td>RequestSyncToken</td></tr><tr><td>Separator</td></tr><tr><td>StartEditToken</td></tr><tr><td>SyncToken</td></tr><tr><td>TemplateImageID</td></tr><tr><td>autoCompletionAPIsAvailable</td></tr><tr><td>bookmarkToggled</td></tr><tr><td>breakpointToggled</td></tr><tr><td>captionChanged</td></tr><tr><td>coverageMarkersShown</td></tr><tr><td>cursorChanged</td></tr><tr><td>editorAboutToBeSaved</td></tr><tr><td>editorRenamed</td></tr><tr><td>editorSaved</td></tr><tr><td>encodingChanged</td></tr><tr><td>eolChanged</td></tr><tr><td>languageChanged</td></tr><tr><td>modificationStatusChanged</td></tr><tr><td>redoAvailable</td></tr><tr><td>showMenu</td></tr><tr><td>syntaxerrorToggled</td></tr><tr><td>taskMarkersUpdated</td></tr><tr><td>undoAvailable</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -310,6 +312,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__isStartChar">__isStartChar</a></td>
 <td>Private method to check, if a character is an autocompletion start character.</td>
+</tr><tr>
+<td><a href="#Editor.__languageChanged">__languageChanged</a></td>
+<td>Private slot handling a change of a connected editor's language.</td>
 </tr><tr>
 <td><a href="#Editor.__languageMenuTriggered">__languageMenuTriggered</a></td>
 <td>Private method to handle the selection of a lexer language.</td>
@@ -734,11 +739,11 @@ QsciScintillaCompat
 <td><a href="#Editor.isSpellCheckRegion">isSpellCheckRegion</a></td>
 <td>Public method to check, if the given position is within a region, that should be spell checked.</td>
 </tr><tr>
+<td><a href="#Editor.joinLines">joinLines</a></td>
+<td>Public slot to join the current line with the next one.</td>
+</tr><tr>
 <td><a href="#Editor.keyPressEvent">keyPressEvent</a></td>
 <td>Re-implemented to handle the user input a key at a time.</td>
-</tr><tr>
-<td><a href="#Editor.languageChanged">languageChanged</a></td>
-<td>Public slot handling a change of a connected editor's language.</td>
 </tr><tr>
 <td><a href="#Editor.macroDelete">macroDelete</a></td>
 <td>Public method to delete a macro.</td>
@@ -1466,6 +1471,19 @@ character to be checked (one character string)
 <dt>Returns:</dt>
 <dd>
 flag indicating the result (boolean)
+</dd>
+</dl><a NAME="Editor.__languageChanged" ID="Editor.__languageChanged"></a>
+<h4>Editor.__languageChanged</h4>
+<b>__languageChanged</b>(<i>language, propagate = True</i>)
+<p>
+        Private slot handling a change of a connected editor's language.
+</p><dl>
+<dt><i>language</i></dt>
+<dd>
+language to be set (string)
+</dd><dt><i>propagate=</i></dt>
+<dd>
+flag indicating to propagate the change (boolean)
 </dd>
 </dl><a NAME="Editor.__languageMenuTriggered" ID="Editor.__languageMenuTriggered"></a>
 <h4>Editor.__languageMenuTriggered</h4>
@@ -2692,7 +2710,12 @@ position to be checked (integer)
 <dd>
 flag indicating pos is in a spell check region (boolean)
 </dd>
-</dl><a NAME="Editor.keyPressEvent" ID="Editor.keyPressEvent"></a>
+</dl><a NAME="Editor.joinLines" ID="Editor.joinLines"></a>
+<h4>Editor.joinLines</h4>
+<b>joinLines</b>(<i></i>)
+<p>
+        Public slot to join the current line with the next one.
+</p><a NAME="Editor.keyPressEvent" ID="Editor.keyPressEvent"></a>
 <h4>Editor.keyPressEvent</h4>
 <b>keyPressEvent</b>(<i>ev</i>)
 <p>
@@ -2701,19 +2724,6 @@ flag indicating pos is in a spell check region (boolean)
 <dt><i>ev</i></dt>
 <dd>
 key event (QKeyEvent)
-</dd>
-</dl><a NAME="Editor.languageChanged" ID="Editor.languageChanged"></a>
-<h4>Editor.languageChanged</h4>
-<b>languageChanged</b>(<i>language, propagate = True</i>)
-<p>
-        Public slot handling a change of a connected editor's language.
-</p><dl>
-<dt><i>language</i></dt>
-<dd>
-language to be set (string)
-</dd><dt><i>propagate=</i></dt>
-<dd>
-flag indicating to propagate the change (boolean)
 </dd>
 </dl><a NAME="Editor.macroDelete" ID="Editor.macroDelete"></a>
 <h4>Editor.macroDelete</h4>

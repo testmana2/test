@@ -54,7 +54,7 @@ class ConfigurationWidget(QWidget):
     """
     Class implementing a dialog for the configuration of eric5.
     
-    @signal preferencesChanged emitted after settings have been changed
+    @signal preferencesChanged() emitted after settings have been changed
     """
     preferencesChanged = pyqtSignal()
     
@@ -581,7 +581,7 @@ class ConfigurationDialog(QDialog):
     """
     Class for the dialog variant.
     
-    @signal preferencesChanged emitted after settings have been changed
+    @signal preferencesChanged() emitted after settings have been changed
     """
     preferencesChanged = pyqtSignal()
     

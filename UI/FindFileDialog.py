@@ -28,9 +28,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
     linenumber and the found text. The file will be opened upon a double click onto 
     the respective entry of the list.
     
-    @signal sourceFile(string, int, string, (int, int)) emitted to open a 
-        source file at a line
-    @signal designerFile(string) emitted to open a Qt-Designer file
+    @signal sourceFile(str, int, str, int, int) emitted to open a source file at a line
+    @signal designerFile(str) emitted to open a Qt-Designer file
     """
     sourceFile = pyqtSignal(str, int, str, int, int)
     designerFile = pyqtSignal(str)

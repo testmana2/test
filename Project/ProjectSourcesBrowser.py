@@ -37,9 +37,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
     """
     A class used to display the Sources part of the project. 
     
-    @signal closeSourceWindow(string) emitted after a file has been removed/deleted 
+    @signal closeSourceWindow(str) emitted after a file has been removed/deleted 
             from the project
-    @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
     closeSourceWindow = pyqtSignal(str)

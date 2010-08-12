@@ -78,8 +78,8 @@ class HistoryManager(QWebHistoryInterface):
     
     @signal historyCleared() emitted after the history has been cleared
     @signal historyReset() emitted after the history has been reset
-    @signal entryAdded emitted after a history entry has been added
-    @signal entryRemoved emitted after a history entry has been removed
+    @signal entryAdded(HistoryEntry) emitted after a history entry has been added
+    @signal entryRemoved(HistoryEntry) emitted after a history entry has been removed
     @signal entryUpdated(int) emitted after a history entry has been updated
     """
     historyCleared = pyqtSignal()

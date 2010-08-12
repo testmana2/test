@@ -28,18 +28,18 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
     """
     A class used to display the translations part of the project. 
     
-    @signal linguistFile(string) emitted to open a translation file with
+    @signal linguistFile(str) emitted to open a translation file with
             Qt-Linguist
-    @signal appendStdout(string) emitted after something was received from
+    @signal appendStdout(str) emitted after something was received from
             a QProcess on stdout
-    @signal appendStderr(string) emitted after something was received from
+    @signal appendStderr(str) emitted after something was received from
             a QProcess on stderr
-    @signal sourceFile(string) emitted to open a translation file in an editor
-    @signal closeSourceWindow(string) emitted after a file has been removed/deleted 
+    @signal sourceFile(str) emitted to open a translation file in an editor
+    @signal closeSourceWindow(str) emitted after a file has been removed/deleted 
             from the project
-    @signal trpreview(string list) emitted to preview translations in the 
+    @signal trpreview(list of str, bool = False) emitted to preview translations in the 
             translations previewer
-    @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
     sourceFile = pyqtSignal(str)

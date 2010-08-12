@@ -32,17 +32,17 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
     """
     A class used to display the forms part of the project. 
     
-    @signal appendStderr(string) emitted after something was received from
+    @signal appendStderr(str) emitted after something was received from
             a QProcess on stderr
-    @signal sourceFile(string) emitted to open a forms file in an editor
-    @signal uipreview(string) emitted to preview a forms file
-    @signal trpreview(string list) emitted to preview form files in the 
+    @signal sourceFile(str) emitted to open a forms file in an editor
+    @signal uipreview(str) emitted to preview a forms file
+    @signal trpreview(list of str) emitted to preview form files in the 
             translations previewer
-    @signal closeSourceWindow(string) emitted after a file has been removed/deleted 
+    @signal closeSourceWindow(str) emitted after a file has been removed/deleted 
             from the project
-    @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
-    @signal menusAboutToBeCreated emitted when the context menus are about to
+    @signal menusAboutToBeCreated() emitted when the context menus are about to
             be created. This is the right moment to add or remove hook methods.
     """
     appendStderr = pyqtSignal(str)

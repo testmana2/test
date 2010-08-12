@@ -46,20 +46,19 @@ Module implementing a dialog to manage history.
     Class implementing a dialog to manage history.
 </p><h4>Signals</h4>
 <dl>
-<dt>newUrl(const QUrl&, const QString&)</dt>
+<dt>newUrl(QUrl, str)</dt>
 <dd>
 emitted to open a URL in a new tab
-</dd><dt>openUrl(const QUrl&, const QString&)</dt>
+</dd><dt>openUrl(QUrl, str)</dt>
 <dd>
-emitted to open a URL in the current
-            tab
+emitted to open a URL in the current tab
 </dd>
 </dl>
 <h3>Derived from</h3>
 QDialog, Ui_HistoryDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>newUrl</td></tr><tr><td>openUrl</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

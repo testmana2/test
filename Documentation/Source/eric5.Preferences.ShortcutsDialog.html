@@ -44,12 +44,18 @@ Module implementing a dialog for the configuration of eric5s keyboard shortcuts.
 <h2>ShortcutsDialog</h2>
 <p>
     Class implementing a dialog for the configuration of eric5s keyboard shortcuts.
-</p>
+</p><h4>Signals</h4>
+<dl>
+<dt>updateShortcuts()</dt>
+<dd>
+emitted when the user pressed the dialogs OK button
+</dd>
+</dl>
 <h3>Derived from</h3>
 QDialog, Ui_ShortcutsDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>noCheckRole</td></tr><tr><td>objectNameRole</td></tr><tr><td>objectTypeRole</td></tr>
+<tr><td>noCheckRole</td></tr><tr><td>objectNameRole</td></tr><tr><td>objectTypeRole</td></tr><tr><td>updateShortcuts</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -162,7 +168,7 @@ reference to the category item (QTreeWidgetItem)
 </dd>
 </dl><a NAME="ShortcutsDialog.__generateShortcutItem" ID="ShortcutsDialog.__generateShortcutItem"></a>
 <h4>ShortcutsDialog.__generateShortcutItem</h4>
-<b>__generateShortcutItem</b>(<i>category, action, noCheck = False, objectType = None</i>)
+<b>__generateShortcutItem</b>(<i>category, action, noCheck = False, objectType = ""</i>)
 <p>
         Private method to generate a keyboard shortcut item.
 </p><dl>

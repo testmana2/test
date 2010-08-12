@@ -16,7 +16,7 @@ class HelpIndexWidget(QWidget):
     """
     Class implementing a window for showing the QtHelp index.
     
-    @signal linkActivated(const QUrl&) emitted when an index entry is activated
+    @signal linkActivated(QUrl) emitted when an index entry is activated
     @signal linksActivated(links, keyword) emitted when an index entry referencing
             multiple targets is activated
     @signal escapePressed() emitted when the ESC key was pressed

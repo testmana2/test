@@ -49,10 +49,10 @@ Module implementing the main user interface.
     Helper class used to redirect stdout and stderr to the log window
 </p><h4>Signals</h4>
 <dl>
-<dt>appendStderr(string)</dt>
+<dt>appendStderr(str)</dt>
 <dd>
 emitted to write data to stderr logger
-</dd><dt>appendStdout(string)</dt>
+</dd><dt>appendStdout(str)</dt>
 <dd>
 emitted to write data to stdout logger
 </dd>
@@ -61,7 +61,7 @@ emitted to write data to stdout logger
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>appendStderr</td></tr><tr><td>appendStdout</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -136,10 +136,10 @@ data to be written (it must support the str-method)
     Class implementing the main user interface.
 </p><h4>Signals</h4>
 <dl>
-<dt>appendStderr(QString)</dt>
+<dt>appendStderr(str)</dt>
 <dd>
 emitted to write data to stderr logger
-</dd><dt>appendStdout(QString)</dt>
+</dd><dt>appendStdout(str)</dt>
 <dd>
 emitted to write data to stdout logger
 </dd><dt>preferencesChanged()</dt>
@@ -148,7 +148,7 @@ emitted after the preferences were changed
 </dd><dt>reloadAPIs()</dt>
 <dd>
 emitted to reload the api information
-</dd><dt>showMenu(string, QMenu)</dt>
+</dd><dt>showMenu(str, QMenu)</dt>
 <dd>
 emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
@@ -158,7 +158,7 @@ emitted when a menu is about to be shown. The name
 QMainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>maxFilePathLen</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>maxSbFilePathLen</td></tr>
+<tr><td>appendStderr</td></tr><tr><td>appendStdout</td></tr><tr><td>maxFilePathLen</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>maxSbFilePathLen</td></tr><tr><td>preferencesChanged</td></tr><tr><td>reloadAPIs</td></tr><tr><td>showMenu</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

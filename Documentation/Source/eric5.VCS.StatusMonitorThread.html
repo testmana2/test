@@ -46,10 +46,10 @@ Module implementing the VCS status monitor thread base class.
     Class implementing the VCS status monitor thread base class.
 </p><h4>Signals</h4>
 <dl>
-<dt>vcsStatusMonitorData(QStringList)</dt>
+<dt>vcsStatusMonitorData(list of str)</dt>
 <dd>
 emitted to update the VCS status
-</dd><dt>vcsStatusMonitorStatus(QString, QString)</dt>
+</dd><dt>vcsStatusMonitorStatus(str, str)</dt>
 <dd>
 emitted to signal the status of the
         monitoring thread (ok, nok, op) and a status message
@@ -59,7 +59,7 @@ emitted to signal the status of the
 QThread
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>vcsStatusMonitorData</td></tr><tr><td>vcsStatusMonitorStatus</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

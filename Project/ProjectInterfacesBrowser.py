@@ -31,14 +31,14 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
     """
     A class used to display the interfaces (IDL) part of the project. 
     
-    @signal sourceFile(string, int = 0) emitted to open a file
-    @signal closeSourceWindow(string) emitted after a file has been removed/deleted 
+    @signal sourceFile(str, int = 0) emitted to open a file
+    @signal closeSourceWindow(str) emitted after a file has been removed/deleted 
             from the project
-    @signal appendStdout(string) emitted after something was received from
+    @signal appendStdout(str) emitted after something was received from
             a QProcess on stdout
-    @signal appendStderr(string) emitted after something was received from
+    @signal appendStderr(str) emitted after something was received from
             a QProcess on stderr
-    @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
     closeSourceWindow = pyqtSignal(str)

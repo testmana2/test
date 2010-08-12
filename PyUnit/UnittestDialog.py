@@ -33,7 +33,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
     """
     Class implementing the UI to the pyunit package.
     
-    @signal unittestFile(string, int, int) emitted to show the source of a unittest file
+    @signal unittestFile(str, int, int) emitted to show the source of a unittest file
     """
     unittestFile = pyqtSignal(str, int, int)
     
