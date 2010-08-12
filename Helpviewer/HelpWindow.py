@@ -1507,7 +1507,7 @@ class HelpWindow(QMainWindow):
         @param url URL of the new site (QUrl)
         """
         selectedURL = url.toString()
-        if selectedURL and self.pathCombo:
+        if selectedURL != "" and self.pathCombo is not None:
             i = self.pathCombo.findText(selectedURL)
             if i == -1:
                 if not QWebSettings.globalSettings()\
