@@ -99,7 +99,8 @@ from E5XML.TasksWriter import TasksWriter
 from E5XML.SessionWriter import SessionWriter
 from E5XML.SessionHandler import SessionHandler
 
-from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, proxyAuthenticationRequired
+from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
+    proxyAuthenticationRequired
 
 from IconEditor.IconEditorWindow import IconEditorWindow
 
@@ -110,9 +111,12 @@ class Redirector(QObject):
     """
     Helper class used to redirect stdout and stderr to the log window
     
-    @signal appendStderr(string) emitted to write data to stderr logger
-    @signal appendStdout(string) emitted to write data to stdout logger
+    @signal appendStderr(str) emitted to write data to stderr logger
+    @signal appendStdout(str) emitted to write data to stdout logger
     """
+    appendStderr = pyqtSignal(str)
+    appendStdout = pyqtSignal(str)
+    
     def __init__(self, stderr):
         """
         Constructor
@@ -132,9 +136,9 @@ class Redirector(QObject):
         if n:
             line = self.buffer[:n]
             if self.stderr:
-                self.emit(SIGNAL('appendStderr'), line)
+                self.appendStderr.emit(line)
             else:
-                self.emit(SIGNAL('appendStdout'), line)
+                self.appendStdout.emit(line)
             self.buffer = self.buffer[n:]
             
     def __bufferedWrite(self):
@@ -164,14 +168,18 @@ class UserInterface(QMainWindow):
     """
     Class implementing the main user interface.
     
-    @signal appendStderr(QString) emitted to write data to stderr logger
-    @signal appendStdout(QString) emitted to write data to stdout logger
+    @signal appendStderr(str) emitted to write data to stderr logger
+    @signal appendStdout(str) emitted to write data to stdout logger
     @signal preferencesChanged() emitted after the preferences were changed
     @signal reloadAPIs() emitted to reload the api information
-    @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
+    @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    appendStderr = pyqtSignal(str)
+    appendStdout = pyqtSignal(str)
     preferencesChanged = pyqtSignal()
+    reloadAPIs = pyqtSignal()
+    showMenu = pyqtSignal(str, QMenu)
     
     maxFilePathLen = 100
     maxSbFilePathLen = 150
@@ -275,32 +283,22 @@ class UserInterface(QMainWindow):
             self.viewmanager.openSourceFile)
         self.browser.sourceFile[str, int, str].connect(
             self.viewmanager.openSourceFile)
-        self.connect(self.browser, SIGNAL('designerFile'),
-                     self.__designer)
-        self.connect(self.browser, SIGNAL('linguistFile'),
-                     self.__linguist4)
-        self.connect(self.browser, SIGNAL('projectFile'),
-                     self.project.openProject)
-        self.connect(self.browser, SIGNAL('multiProjectFile'),
-                     self.multiProject.openMultiProject)
-        self.connect(self.browser, SIGNAL('pixmapEditFile'),
-                     self.__editPixmap)
-        self.connect(self.browser, SIGNAL('pixmapFile'),
-                     self.__showPixmap)
-        self.connect(self.browser, SIGNAL('svgFile'),
-                     self.__showSvg)
-        self.connect(self.browser, SIGNAL('unittestOpen'),
-                     self.__unittestScript)
-        self.connect(self.browser, SIGNAL('trpreview'),
-                     self.__TRPreviewer)
+        self.browser.designerFile.connect(self.__designer)
+        self.browser.linguistFile.connect(self.__linguist4)
+        self.browser.projectFile.connect(self.project.openProject)
+        self.browser.multiProjectFile.connect(self.multiProject.openMultiProject)
+        self.browser.pixmapEditFile.connect(self.__editPixmap)
+        self.browser.pixmapFile.connect(self.__showPixmap)
+        self.browser.svgFile.connect(self.__showSvg)
+        self.browser.unittestOpen.connect(self.__unittestScript)
+        self.browser.trpreview.connect(self.__TRPreviewer)
         
         self.debugViewer.exceptionLogger.sourceFile.connect(
             self.viewmanager.openSourceFile)
         
         self.debugViewer.sourceFile.connect(self.viewmanager.showDebugSource)
         
-        self.connect(self.taskViewer, SIGNAL('displayFile'),
-                     self.viewmanager.openSourceFile)
+        self.taskViewer.displayFile.connect(self.viewmanager.openSourceFile)
         
         self.projectBrowser.psBrowser.sourceFile[str].connect(
             self.viewmanager.openSourceFile)
@@ -308,85 +306,65 @@ class UserInterface(QMainWindow):
             self.viewmanager.openSourceFile)
         self.projectBrowser.psBrowser.sourceFile[str, int, str].connect(
             self.viewmanager.openSourceFile)
-        self.connect(self.projectBrowser.psBrowser, SIGNAL('closeSourceWindow'),
-                     self.viewmanager.closeWindow)
-        self.connect(self.projectBrowser.psBrowser, SIGNAL('unittestOpen'),
-                     self.__unittestScript)
+        self.projectBrowser.psBrowser.closeSourceWindow.connect(
+            self.viewmanager.closeWindow)
+        self.projectBrowser.psBrowser.unittestOpen.connect(self.__unittestScript)
         
-        self.connect(self.projectBrowser.pfBrowser, SIGNAL('designerFile'),
-                     self.__designer)
+        self.projectBrowser.pfBrowser.designerFile.connect(self.__designer)
         self.projectBrowser.pfBrowser.sourceFile.connect(
             self.viewmanager.openSourceFile)
-        self.connect(self.projectBrowser.pfBrowser, SIGNAL('uipreview'),
-                     self.__UIPreviewer)
-        self.connect(self.projectBrowser.pfBrowser, SIGNAL('trpreview'),
-                     self.__TRPreviewer)
-        self.connect(self.projectBrowser.pfBrowser, SIGNAL('closeSourceWindow'),
-                     self.viewmanager.closeWindow)
-        self.connect(self.projectBrowser.pfBrowser, SIGNAL('appendStdout'),
-                     self.appendToStdout)
-        self.connect(self.projectBrowser.pfBrowser, SIGNAL('appendStderr'),
-                     self.appendToStderr)
+        self.projectBrowser.pfBrowser.uipreview.connect(self.__UIPreviewer)
+        self.projectBrowser.pfBrowser.trpreview.connect(self.__TRPreviewer)
+        self.projectBrowser.pfBrowser.closeSourceWindow.connect(
+            self.viewmanager.closeWindow)
+        self.projectBrowser.pfBrowser.appendStderr.connect(self.appendToStderr)
         
         self.projectBrowser.prBrowser.sourceFile.connect(
             self.viewmanager.openSourceFile)
-        self.connect(self.projectBrowser.prBrowser, SIGNAL('closeSourceWindow'),
-                     self.viewmanager.closeWindow)
-        self.connect(self.projectBrowser.prBrowser, SIGNAL('appendStdout'),
-                     self.appendToStdout)
-        self.connect(self.projectBrowser.prBrowser, SIGNAL('appendStderr'),
-                     self.appendToStderr)
+        self.projectBrowser.prBrowser.closeSourceWindow.connect(
+            self.viewmanager.closeWindow)
+        self.projectBrowser.prBrowser.appendStderr.connect(self.appendToStderr)
         
-        self.connect(self.projectBrowser.ptBrowser, SIGNAL('linguistFile'),
-                     self.__linguist4)
+        self.projectBrowser.ptBrowser.linguistFile.connect(self.__linguist4)
         self.projectBrowser.ptBrowser.sourceFile.connect(
             self.viewmanager.openSourceFile)
-        self.connect(self.projectBrowser.ptBrowser, SIGNAL('trpreview'),
-                     self.__TRPreviewer)
-        self.connect(self.projectBrowser.ptBrowser, SIGNAL('closeSourceWindow'),
-                     self.viewmanager.closeWindow)
-        self.connect(self.projectBrowser.ptBrowser, SIGNAL('appendStdout'),
-                     self.appendToStdout)
-        self.connect(self.projectBrowser.ptBrowser, SIGNAL('appendStderr'),
-                     self.appendToStderr)
+        self.projectBrowser.ptBrowser.trpreview[list].connect(self.__TRPreviewer)
+        self.projectBrowser.ptBrowser.trpreview[list, bool].connect(self.__TRPreviewer)
+        self.projectBrowser.ptBrowser.closeSourceWindow.connect(
+            self.viewmanager.closeWindow)
+        self.projectBrowser.ptBrowser.appendStdout.connect(self.appendToStdout)
+        self.projectBrowser.ptBrowser.appendStderr.connect(self.appendToStderr)
         
         self.projectBrowser.piBrowser.sourceFile[str].connect(
             self.viewmanager.openSourceFile)
         self.projectBrowser.piBrowser.sourceFile[str, int].connect(
             self.viewmanager.openSourceFile)
-        self.connect(self.projectBrowser.piBrowser, SIGNAL('closeSourceWindow'),
-                     self.viewmanager.closeWindow)
-        self.connect(self.projectBrowser.piBrowser, SIGNAL('appendStdout'),
-                     self.appendToStdout)
-        self.connect(self.projectBrowser.piBrowser, SIGNAL('appendStderr'),
-                     self.appendToStderr)
+        self.projectBrowser.piBrowser.closeSourceWindow.connect(
+            self.viewmanager.closeWindow)
+        self.projectBrowser.piBrowser.appendStdout.connect(self.appendToStdout)
+        self.projectBrowser.piBrowser.appendStderr.connect(self.appendToStderr)
         
         self.projectBrowser.poBrowser.sourceFile.connect(
             self.viewmanager.openSourceFile)
-        self.connect(self.projectBrowser.poBrowser, SIGNAL('closeSourceWindow'),
-                     self.viewmanager.closeWindow)
-        self.connect(self.projectBrowser.poBrowser, SIGNAL('pixmapEditFile'),
-                     self.__editPixmap)
-        self.connect(self.projectBrowser.poBrowser, SIGNAL('pixmapFile'),
-                     self.__showPixmap)
-        self.connect(self.projectBrowser.poBrowser, SIGNAL('svgFile'),
-                     self.__showSvg)
+        self.projectBrowser.poBrowser.closeSourceWindow.connect(
+            self.viewmanager.closeWindow)
+        self.projectBrowser.poBrowser.pixmapEditFile.connect(self.__editPixmap)
+        self.projectBrowser.poBrowser.pixmapFile.connect(self.__showPixmap)
+        self.projectBrowser.poBrowser.svgFile.connect(self.__showSvg)
         
         self.project.sourceFile.connect(self.viewmanager.openSourceFile)
         self.project.newProject.connect(self.viewmanager.newProject)
         self.project.projectOpened.connect(self.viewmanager.projectOpened)
         self.project.projectClosed.connect(self.viewmanager.projectClosed)
-        self.connect(self.project, SIGNAL('projectFileRenamed'),
-                     self.viewmanager.projectFileRenamed)
-        self.connect(self.project, SIGNAL('lexerAssociationsChanged'),
-                     self.viewmanager.projectLexerAssociationsChanged)
+        self.project.projectFileRenamed.connect(self.viewmanager.projectFileRenamed)
+        self.project.lexerAssociationsChanged.connect(
+            self.viewmanager.projectLexerAssociationsChanged)
         self.project.newProject.connect(self.__newProject)
         self.project.projectOpened.connect(self.__projectOpened)
         self.project.projectOpened.connect(self.__activateProjectBrowser)
         self.project.projectClosed.connect(self.__projectClosed)
         
-        self.connect(self.multiProject, SIGNAL("multiProjectOpened"), 
-                     self.__activateMultiProjectBrowser)
+        self.multiProject.multiProjectOpened.connect(self.__activateMultiProjectBrowser)
         
         self.debuggerUI.resetUI.connect(self.viewmanager.handleResetUI)
         self.debuggerUI.resetUI.connect(self.debugViewer.handleResetUI)
@@ -411,20 +389,14 @@ class UserInterface(QMainWindow):
         debugServer.clientProcessStdout.connect(self.appendToStdout)
         debugServer.clientProcessStderr.connect(self.appendToStderr)
         
-        self.connect(self.stdout, SIGNAL('appendStdout'),
-                     self.appendToStdout)
-        
-        self.connect(self.stderr, SIGNAL('appendStderr'),
-                     self.appendToStderr)
+        self.stdout.appendStdout.connect(self.appendToStdout)
+        self.stderr.appendStderr.connect(self.appendToStderr)
         
         self.preferencesChanged.connect(self.viewmanager.preferencesChanged)
-        self.connect(self, SIGNAL('reloadAPIs'),
-                     self.viewmanager.getAPIsManager().reloadAPIs)
+        self.reloadAPIs.connect(self.viewmanager.getAPIsManager().reloadAPIs)
         self.preferencesChanged.connect(self.logViewer.preferencesChanged)
-        self.connect(self, SIGNAL('appendStdout'),
-                     self.logViewer.appendToStdout)
-        self.connect(self, SIGNAL('appendStderr'),
-                     self.logViewer.appendToStderr)
+        self.appendStdout.connect(self.logViewer.appendToStdout)
+        self.appendStderr.connect(self.logViewer.appendToStderr)
         self.preferencesChanged.connect(self.shell.handlePreferencesChanged)
         self.preferencesChanged.connect(self.terminal.handlePreferencesChanged)
         self.preferencesChanged.connect(self.project.handlePreferencesChanged)
@@ -447,59 +419,44 @@ class UserInterface(QMainWindow):
         self.preferencesChanged.connect(debugServer.preferencesChanged)
         self.preferencesChanged.connect(self.cooperation.preferencesChanged)
         
-        self.connect(self.viewmanager, SIGNAL('editorSaved'),
-                     self.project.repopulateItem)
+        self.viewmanager.editorSaved.connect(self.project.repopulateItem)
         self.viewmanager.lastEditorClosed.connect(self.__lastEditorClosed)
         self.viewmanager.editorOpened.connect(self.__editorOpened)
-        self.connect(self.viewmanager, SIGNAL('changeCaption'),
-                     self.__setWindowCaption)
+        self.viewmanager.changeCaption.connect(self.__setWindowCaption)
         self.viewmanager.checkActions.connect(self.__checkActions)
-        self.connect(self.viewmanager, SIGNAL('editorChanged'),
-                     self.projectBrowser.handleEditorChanged)
+        self.viewmanager.editorChanged.connect(self.projectBrowser.handleEditorChanged)
         self.viewmanager.checkActions.connect(self.cooperation.checkEditorActions)
         
-        self.connect(self.cooperation, SIGNAL('shareEditor(bool)'),
-                     self.viewmanager.shareEditor)
-        self.connect(self.cooperation, SIGNAL('startEdit()'),
-                     self.viewmanager.startSharedEdit)
-        self.connect(self.cooperation, SIGNAL('sendEdit()'),
-                     self.viewmanager.sendSharedEdit)
-        self.connect(self.cooperation, SIGNAL('cancelEdit()'),
-                     self.viewmanager.cancelSharedEdit)
-        self.connect(self.cooperation, SIGNAL('connected(bool)'),
-                     self.viewmanager.shareConnected)
-        self.connect(self.cooperation, SIGNAL('editorCommand(QString, QString, QString)'),
-                     self.viewmanager.receive)
+        self.cooperation.shareEditor.connect(self.viewmanager.shareEditor)
+        self.cooperation.startEdit.connect(self.viewmanager.startSharedEdit)
+        self.cooperation.sendEdit.connect(self.viewmanager.sendSharedEdit)
+        self.cooperation.cancelEdit.connect(self.viewmanager.cancelSharedEdit)
+        self.cooperation.connected.connect(self.viewmanager.shareConnected)
+        self.cooperation.editorCommand.connect(self.viewmanager.receive)
         self.viewmanager.setCooperationClient(self.cooperation.getClient())
         
-        self.connect(self.symbolsViewer, SIGNAL('insertSymbol(QString)'), 
-                     self.viewmanager.insertSymbol)
+        self.symbolsViewer.insertSymbol.connect(self.viewmanager.insertSymbol)
         
-        self.connect(self.numbersViewer, SIGNAL('insertNumber(QString)'), 
-                     self.viewmanager.insertNumber)
+        self.numbersViewer.insertNumber.connect(self.viewmanager.insertNumber)
         
         # Generate the unittest dialog
         self.unittestDialog = UnittestDialog(None, self.debuggerUI.debugServer, self)
-        self.connect(self.unittestDialog, SIGNAL('unittestFile'),
-                     self.viewmanager.setFileLine)
+        self.unittestDialog.unittestFile.connect(self.viewmanager.setFileLine)
         
         # Generate the find in project files dialog
         self.findFilesDialog = FindFileDialog(self.project)
         self.findFilesDialog.sourceFile.connect(
             self.viewmanager.openSourceFile)
-        self.connect(self.findFilesDialog, SIGNAL('designerFile'),
-                     self.__designer)
+        self.findFilesDialog.designerFile.connect(self.__designer)
         self.replaceFilesDialog = FindFileDialog(self.project, replaceMode = True)
         self.replaceFilesDialog.sourceFile.connect(
             self.viewmanager.openSourceFile)
-        self.connect(self.replaceFilesDialog, SIGNAL('designerFile'),
-                     self.__designer)
+        self.replaceFilesDialog.designerFile.connect(self.__designer)
         
         # generate the find file dialog
         self.findFileNameDialog = FindFileNameDialog(self.project)
         self.findFileNameDialog.sourceFile.connect(self.viewmanager.openSourceFile)
-        self.connect(self.findFileNameDialog, SIGNAL('designerFile'),
-                     self.__designer)
+        self.findFileNameDialog.designerFile.connect(self.__designer)
         
         # generate the diff dialogs
         self.diffDlg = DiffDialog()
@@ -603,12 +560,9 @@ class UserInterface(QMainWindow):
         
         # attributes for the network objects
         self.__networkManager = QNetworkAccessManager(self)
-        self.connect(self.__networkManager, 
-            SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
+        self.__networkManager.proxyAuthenticationRequired.connect(
             proxyAuthenticationRequired)
-        self.connect(self.__networkManager, 
-                SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
-            self.__sslErrors)
+        self.__networkManager.sslErrors.connect(self.__sslErrors)
         self.__replies = []
         
         # attribute for the help window
@@ -2305,12 +2259,10 @@ class UserInterface(QMainWindow):
         self.__menus["extras"].addMenu(self.__menus["macros"])
         self.__menus["tools"] = QMenu(self.trUtf8('&Tools'), self)
         self.__menus["tools"].aboutToShow.connect(self.__showToolsMenu)
-        self.connect(self.__menus["tools"], SIGNAL('triggered(QAction *)'),
-            self.__toolExecute)
+        self.__menus["tools"].triggered.connect(self.__toolExecute)
         self.toolGroupsMenu = QMenu(self.trUtf8("Select Tool Group"), self)
         self.toolGroupsMenu.aboutToShow.connect(self.__showToolGroupsMenu)
-        self.connect(self.toolGroupsMenu, SIGNAL('triggered(QAction *)'),
-            self.__toolGroupSelected)
+        self.toolGroupsMenu.triggered.connect(self.__toolGroupSelected)
         self.toolGroupsMenuTriggered = False
         self.__menus["extras"].addMenu(self.__menus["tools"])
         
@@ -2341,8 +2293,7 @@ class UserInterface(QMainWindow):
             QMenu(self.trUtf8("&Toolbars"), self.__menus["window"])
         self.__menus["toolbars"].setTearOffEnabled(True)
         self.__menus["toolbars"].aboutToShow.connect(self.__showToolbarsMenu)
-        self.connect(self.__menus["toolbars"], SIGNAL('triggered(QAction *)'),
-            self.__TBMenuTriggered)
+        self.__menus["toolbars"].triggered.connect(self.__TBMenuTriggered)
         
         self.__showWindowMenu() # to initialize these actions
 
@@ -2659,19 +2610,19 @@ class UserInterface(QMainWindow):
         """
         Private slot to display the File menu.
         """
-        self.emit(SIGNAL("showMenu"), "File", self.__menus["file"])
+        self.showMenu.emit("File", self.__menus["file"])
     
     def __showExtrasMenu(self):
         """
         Private slot to display the Extras menu.
         """
-        self.emit(SIGNAL("showMenu"), "Extras", self.__menus["extras"])
+        self.showMenu.emit("Extras", self.__menus["extras"])
     
     def __showWizardsMenu(self):
         """
         Private slot to display the Wizards menu.
         """
-        self.emit(SIGNAL("showMenu"), "Wizards", self.__menus["wizards"])
+        self.showMenu.emit("Wizards", self.__menus["wizards"])
     
     def __showHelpMenu(self):
         """
@@ -2680,7 +2631,7 @@ class UserInterface(QMainWindow):
         self.checkUpdateAct.setEnabled(not self.__inVersionCheck)
         self.showVersionsAct.setEnabled(not self.__inVersionCheck)
         
-        self.emit(SIGNAL("showMenu"), "Help", self.__menus["help"])
+        self.showMenu.emit("Help", self.__menus["help"])
     
     def __showNext(self):
         """
@@ -3098,7 +3049,7 @@ class UserInterface(QMainWindow):
         elif self.currentToolGroup == -2:
             act.setEnabled(False)
             # add the plugin entries
-            self.emit(SIGNAL("showMenu"), "Tools", self.__menus["tools"])
+            self.showMenu.emit("Tools", self.__menus["tools"])
         else:
             # add the configurable entries
             idx = 0
@@ -3263,7 +3214,7 @@ class UserInterface(QMainWindow):
         # Now do any Source Viewer related stuff.
         self.viewmanager.showWindowMenu(self.__menus["window"])
         
-        self.emit(SIGNAL("showMenu"), "Window", self.__menus["window"])
+        self.showMenu.emit("Window", self.__menus["window"])
         
     def __showToolbarsMenu(self):
         """
@@ -4896,7 +4847,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to reload the api information.
         """
-        self.emit(SIGNAL('reloadAPIs'))
+        self.reloadAPIs.emit()
         
     def __showExternalTools(self):
         """
@@ -5242,7 +5193,7 @@ class UserInterface(QMainWindow):
         @param s output to be appended (string)
         """
         self.showLogTab("stdout")
-        self.emit(SIGNAL('appendStdout'), s)
+        self.appendStdout.emit(s)
     
     def appendToStderr(self, s):
         """
@@ -5251,7 +5202,7 @@ class UserInterface(QMainWindow):
         @param s output to be appended (string)
         """
         self.showLogTab("stderr")
-        self.emit(SIGNAL('appendStderr'), s)
+        self.appendStderr.emit(s)
     
     ##########################################################
     ## Below are slots needed by the plugin menu
@@ -5491,10 +5442,10 @@ class UserInterface(QMainWindow):
                     QProgressDialog("", self.trUtf8("&Cancel"),  
                                      0,  len(self.__httpAlternatives),  self)
                 self.__versionCheckProgress.setMinimumDuration(0)
-                self.connect(self.__versionCheckProgress, SIGNAL("canceled()"), 
+                self.__versionCheckProgress.canceled.connect(
                     self.__versionsDownloadCanceled)
-            self.__versionCheckProgress.setLabelText(self.trUtf8("Trying host {0}")\
-                .format(url.host()))
+            self.__versionCheckProgress.setLabelText(
+                self.trUtf8("Trying host {0}").format(url.host()))
             self.__versionCheckProgress.setValue(alternative)
         reply = self.__networkManager.get(QNetworkRequest(url))
         reply.finished[()].connect(self.__versionsDownloadDone)

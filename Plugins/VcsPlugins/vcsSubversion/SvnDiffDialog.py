@@ -65,7 +65,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
             self.process.terminate()
-            QTimer.singleShot(2000, self.process, SLOT('kill()'))
+            QTimer.singleShot(2000, self.process.kill)
             self.process.waitForFinished(3000)
         
         e.accept()

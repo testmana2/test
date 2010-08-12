@@ -67,8 +67,7 @@ class StatusMonitorLed(E5Led):
         # connect signals to our slots
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self._showContextMenu)
-        self.connect(self.project, SIGNAL('vcsStatusMonitorStatus(QString, QString)'),
-                     self.__projectVcsMonitorStatus)
+        self.project.vcsStatusMonitorStatus.connect(self.__projectVcsMonitorStatus)
     
     def __checkActions(self):
         """

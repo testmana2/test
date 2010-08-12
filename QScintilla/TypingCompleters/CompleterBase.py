@@ -11,7 +11,7 @@ that are performed while the user is typing (e.g. insert ')' when the
 user types '(').
 """
 
-from PyQt4.QtCore import QObject, SIGNAL
+from PyQt4.QtCore import QObject
 
 class CompleterBase(QObject):
     """
@@ -41,10 +41,10 @@ class CompleterBase(QObject):
         """
         if enable:
             if not self.enabled:
-                self.connect(self.editor, SIGNAL("SCN_CHARADDED(int)"), self.charAdded)
+                self.editor.SCN_CHARADDED.connect(self.charAdded)
         else:
             if self.enabled:
-                self.disconnect(self.editor, SIGNAL("SCN_CHARADDED(int)"), self.charAdded)
+                self.editor.SCN_CHARADDED.disconnect(self.charAdded)
         self.enabled = enable
     
     def isEnabled(self):

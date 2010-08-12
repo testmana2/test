@@ -230,10 +230,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.cLineNoFormat.setBackground(QBrush(QColor(255, 220, 168)))
         
         # connect some of our widgets explicitly
-        self.connect(self.file1Edit, SIGNAL("textChanged(const QString &)"), 
-                     self.__fileChanged)
-        self.connect(self.file2Edit, SIGNAL("textChanged(const QString &)"), 
-                     self.__fileChanged)
+        self.file1Edit.textChanged.connect(self.__fileChanged)
+        self.file2Edit.textChanged.connect(self.__fileChanged)
         
     def show(self, filename = None):
         """

@@ -10,8 +10,7 @@ Module implementing some startup helper funcions
 import os
 import sys
 
-from PyQt4.QtCore import QTranslator, QTextCodec, QLocale, SIGNAL, SLOT, \
-    QLibraryInfo
+from PyQt4.QtCore import QTranslator, QTextCodec, QLocale, QLibraryInfo
 from PyQt4.QtGui import QApplication
 
 from E5Gui.E5Application import E5Application
@@ -230,7 +229,7 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True):
     )
     
     w = mwFactory(argv)
-    app.connect(app, SIGNAL("lastWindowClosed()"), app, SLOT("quit()"))
+    app.lastWindowClosed.connect(app.quit)
     w.show()
     
     return app.exec_()

@@ -103,7 +103,7 @@ class Project(QObject):
             repopulated
     @signal completeRepopulateItem(string) emitted after an item of the model was
             repopulated
-    @signal vcsStatusMonitorStatus(QString, QString) emitted to signal the status of the
+    @signal vcsStatusMonitorStatus(string, string) emitted to signal the status of the
             monitoring thread (ok, nok, op, off) and a status message
     @signal reinitVCS() emitted after the VCS has been reinitialized
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
@@ -111,10 +111,31 @@ class Project(QObject):
     @signal lexerAssociationsChanged() emitted after the lexer associations have been
             changed
     """
-    sourceFile = pyqtSignal(str)
-    projectOpened = pyqtSignal()
+    dirty = pyqtSignal(int)
+    projectLanguageAdded = pyqtSignal(str)
+    projectLanguageAddedByCode = pyqtSignal(str)
+    projectFormAdded = pyqtSignal(str)
+    projectSourceAdded = pyqtSignal(str)
+    projectInterfaceAdded = pyqtSignal(str)
+    projectResourceAdded = pyqtSignal(str)
+    projectOthersAdded = pyqtSignal(str)
+    projectAboutToBeCreated = pyqtSignal()
+    newProjectHooks = pyqtSignal()
     newProject = pyqtSignal()
+    sourceFile = pyqtSignal(str)
+    projectOpenedHooks = pyqtSignal()
+    projectOpened = pyqtSignal()
+    projectClosedHooks = pyqtSignal()
     projectClosed = pyqtSignal()
+    projectFileRenamed = pyqtSignal(str, str)
+    projectPropertiesChanged = pyqtSignal()
+    directoryRemoved = pyqtSignal(str)
+    prepareRepopulateItem = pyqtSignal(str)
+    completeRepopulateItem = pyqtSignal(str)
+    vcsStatusMonitorStatus = pyqtSignal(str, str)
+    reinitVCS = pyqtSignal()
+    showMenu = pyqtSignal(str, QMenu)
+    lexerAssociationsChanged = pyqtSignal()
     
     keynames = [
         "PROGLANGUAGE", "MIXEDLANGUAGE", "PROJECTTYPE",
@@ -504,7 +525,7 @@ class Project(QObject):
         """
         self.dirty = b
         self.saveAct.setEnabled(b)
-        self.emit(SIGNAL("dirty"), bool(b))
+        self.dirty.emit(bool(b))
         
     def isDirty(self):
         """
@@ -1515,7 +1536,7 @@ class Project(QObject):
                     ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
                 langFile = self.pdata["TRANSLATIONPATTERN"][0].replace("%language%", lang)
                 self.appendFile(langFile)
-            self.emit(SIGNAL("projectLanguageAddedByCode"), lang)
+            self.projectLanguageAddedByCode.emit(lang)
         
     def __binaryTranslationFile(self, langFile):
         """
@@ -1657,7 +1678,7 @@ class Project(QObject):
             if filetype == "SOURCES":
                 if newfn not in self.pdata["SOURCES"]:
                     self.pdata["SOURCES"].append(newfn)
-                    self.emit(SIGNAL('projectSourceAdded'), newfn)
+                    self.projectSourceAdded.emit(newfn)
                     updateModel and self.__model.addNewItem("SOURCES", newfn)
                     dirty = True
                 else:
@@ -1665,7 +1686,7 @@ class Project(QObject):
             elif filetype == "FORMS":
                 if newfn not in self.pdata["FORMS"]:
                     self.pdata["FORMS"].append(newfn)
-                    self.emit(SIGNAL('projectFormAdded'), newfn)
+                    self.projectFormAdded.emit(newfn)
                     updateModel and self.__model.addNewItem("FORMS", newfn)
                     dirty = True
                 else:
@@ -1673,7 +1694,7 @@ class Project(QObject):
             elif filetype == "INTERFACES":
                 if newfn not in self.pdata["INTERFACES"]:
                     self.pdata["INTERFACES"].append(newfn)
-                    self.emit(SIGNAL('projectInterfaceAdded'), newfn)
+                    self.projectInterfaceAdded.emit(newfn)
                     updateModel and self.__model.addNewItem("INTERFACES", newfn)
                     dirty = True
                 else:
@@ -1681,7 +1702,7 @@ class Project(QObject):
             elif filetype == "RESOURCES":
                 if newfn not in self.pdata["RESOURCES"]:
                     self.pdata["RESOURCES"].append(newfn)
-                    self.emit(SIGNAL('projectResourceAdded'), newfn)
+                    self.projectResourceAdded.emit(newfn)
                     updateModel and self.__model.addNewItem("RESOURCES", newfn)
                     dirty = True
                 else:
@@ -1692,7 +1713,7 @@ class Project(QObject):
             if newfn not in self.pdata["TRANSLATIONS"]:
                 self.pdata["TRANSLATIONS"].append(newfn)
                 updateModel and self.__model.addNewItem("TRANSLATIONS", newfn)
-                self.emit(SIGNAL('projectLanguageAdded'), newfn)
+                self.projectLanguageAdded.emit(newfn)
                 dirty = True
             else:
                 updateModel and self.repopulateItem(newfn)
@@ -2060,7 +2081,7 @@ class Project(QObject):
         else:
             self.removeFile(oldname)
             self.appendFile(newname, isSourceFile)
-        self.emit(SIGNAL('projectFileRenamed'), oldname, newname)
+        self.projectFileRenamed.emit(oldname, newname)
         
         self.renameMainScript(fn, newname)
         
@@ -2123,7 +2144,7 @@ class Project(QObject):
         del typeStrings[0]
         self.__model.removeItem(olddn)
         self.__model.addNewItem(typeString, newdn, typeStrings)
-        self.emit(SIGNAL('directoryRemoved'), olddn)
+        self.directoryRemoved.emit(olddn)
         
     def removeFile(self, fn, updateModel = True):
         """
@@ -2180,7 +2201,7 @@ class Project(QObject):
         self.__model.removeItem(dn)
         if dirty:
             self.setDirty(True)
-        self.emit(SIGNAL('directoryRemoved'), dn)
+        self.directoryRemoved.emit(dn)
         
     def deleteFile(self, fn):
         """
@@ -2287,7 +2308,7 @@ class Project(QObject):
             self.menuPackagersAct.setEnabled(True)
             self.pluginGrp.setEnabled(self.pdata["PROJECTTYPE"][0] == "E4Plugin")
             
-            self.emit(SIGNAL("projectAboutToBeCreated"))
+            self.projectAboutToBeCreated.emit()
             
             hash = str(QCryptographicHash.hash(
                 QByteArray(self.ppath), QCryptographicHash.Sha1).toHex(),
@@ -2476,11 +2497,11 @@ class Project(QObject):
                     self.saveProject()
                     self.vcs.vcsConvertProject(vcsDataDict, self)
                 else:
-                    self.emit(SIGNAL('newProjectHooks'))
+                    self.newProjectHooks.emit()
                     self.newProject.emit()
             
             else:
-                self.emit(SIGNAL('newProjectHooks'))
+                self.newProjectHooks.emit()
                 self.newProject.emit()
             
 
@@ -2545,7 +2566,7 @@ class Project(QObject):
             for ts in tslist:
                 if fnmatch.fnmatch(ts, pattern):
                     self.pdata["TRANSLATIONS"].append(ts)
-                    self.emit(SIGNAL('projectLanguageAdded'), ts)
+                    self.projectLanguageAdded.emit(ts)
             if len(self.pdata["MAINSCRIPT"]) == 0 or \
                len(self.pdata["MAINSCRIPT"][0]) == 0:
                 if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
@@ -2561,7 +2582,7 @@ class Project(QObject):
                 qmlist = Utilities.direntries(tpd, True, pattern)
                 for qm in qmlist:
                     self.pdata["TRANSLATIONS"].append(qm)
-                    self.emit(SIGNAL('projectLanguageAdded'), qm)
+                    self.projectLanguageAdded.emit(qm)
         self.setDirty(True)
         QApplication.restoreOverrideCursor()
     
@@ -2606,7 +2627,7 @@ class Project(QObject):
             self.pluginGrp.setEnabled(self.pdata["PROJECTTYPE"][0] == "E4Plugin")
             
             self.__model.projectPropertiesChanged()
-            self.emit(SIGNAL('projectPropertiesChanged'))
+            self.projectPropertiesChanged.emit()
         
     def __showUserProperties(self):
         """
@@ -2629,12 +2650,8 @@ class Project(QObject):
                 # stop the VCS monitor thread and shutdown VCS
                 if self.vcs is not None:
                     self.vcs.stopStatusMonitor()
-                    self.disconnect(self.vcs, 
-                        SIGNAL("vcsStatusMonitorData(QStringList)"),
-                        self.__model.changeVCSStates)
-                    self.disconnect(self.vcs, 
-                        SIGNAL("vcsStatusMonitorStatus(QString, QString)"),
-                        self.__statusMonitorStatus)
+                    self.vcs.vcsStatusMonitorData.disconnect(self.__model.changeVCSStates)
+                    self.vcs.vcsStatusMonitorStatus.disconnect(self.__statusMonitorStatus)
                     self.vcs.vcsShutdown()
                     self.vcs = None
                     e5App().getObject("PluginManager").deactivateVcsPlugins()
@@ -2643,13 +2660,9 @@ class Project(QObject):
                 # start the VCS monitor thread
                 if self.vcs is not None:
                     self.vcs.startStatusMonitor(self)
-                    self.connect(self.vcs, 
-                         SIGNAL("vcsStatusMonitorData(QStringList)"),
-                         self.__model.changeVCSStates)
-                    self.connect(self.vcs, 
-                         SIGNAL("vcsStatusMonitorStatus(QString, QString)"),
-                         self.__statusMonitorStatus)
-                self.emit(SIGNAL("reinitVCS"))
+                    self.vcs.vcsStatusMonitorData.connect(self.__model.changeVCSStates)
+                    self.vcs.vcsStatusMonitorStatus.connect(self.__statusMonitorStatus)
+                self.reinitVCS.emit()
             
             if self.pudata["VCSSTATUSMONITORINTERVAL"]:
                 self.setStatusMonitorInterval(\
@@ -2675,7 +2688,7 @@ class Project(QObject):
         if dlg.exec_() == QDialog.Accepted:
             dlg.transferData()
             self.setDirty(True)
-            self.emit(SIGNAL("lexerAssociationsChanged"))
+            self.lexerAssociationsChanged.emit()
         
     def getEditorLexerAssoc(self, filename):
         """
@@ -2803,7 +2816,7 @@ class Project(QObject):
                     self.pluginGrp.setEnabled(self.pdata["PROJECTTYPE"][0] == "E4Plugin")
                     
                     self.__model.projectOpened()
-                    self.emit(SIGNAL('projectOpenedHooks'))
+                    self.projectOpenedHooks.emit()
                     self.projectOpened.emit()
                     
                     QApplication.restoreOverrideCursor()
@@ -2834,12 +2847,10 @@ class Project(QObject):
                     # start the VCS monitor thread
                     if self.vcs is not None:
                         self.vcs.startStatusMonitor(self)
-                        self.connect(self.vcs, 
-                             SIGNAL("vcsStatusMonitorData(QStringList)"),
-                             self.__model.changeVCSStates)
-                        self.connect(self.vcs, 
-                             SIGNAL("vcsStatusMonitorStatus(QString, QString)"),
-                             self.__statusMonitorStatus)
+                        self.vcs.vcsStatusMonitorData.connect(
+                            self.__model.changeVCSStates)
+                        self.vcs.vcsStatusMonitorStatus.connect(
+                            self.__statusMonitorStatus)
                 else:
                     QApplication.restoreOverrideCursor()
         
@@ -2915,9 +2926,9 @@ class Project(QObject):
             
             self.sessActGrp.setEnabled(ok)
             self.menuSessionAct.setEnabled(ok)
-            self.emit(SIGNAL('projectClosedHooks'))
+            self.projectClosedHooks.emit()
             self.projectClosed.emit()
-            self.emit(SIGNAL('projectOpenedHooks'))
+            self.projectOpenedHooks.emit()
             self.projectOpened.emit()
             return True
         else:
@@ -3003,12 +3014,8 @@ class Project(QObject):
         # stop the VCS monitor thread
         if self.vcs is not None:
             self.vcs.stopStatusMonitor()
-            self.disconnect(self.vcs, 
-                SIGNAL("vcsStatusMonitorData(QStringList)"),
-                self.__model.changeVCSStates)
-            self.disconnect(self.vcs, 
-                SIGNAL("vcsStatusMonitorStatus(QString, QString)"),
-                self.__statusMonitorStatus)
+            self.vcs.vcsStatusMonitorData.disconnect(self.__model.changeVCSStates)
+            self.vcs.vcsStatusMonitorStatus.disconnect(self.__statusMonitorStatus)
         
         # now save the tasks
         if not noSave:
@@ -3046,7 +3053,7 @@ class Project(QObject):
         self.pluginGrp.setEnabled(False)
         
         self.__model.projectClosed()
-        self.emit(SIGNAL('projectClosedHooks'))
+        self.projectClosedHooks.emit()
         self.projectClosed.emit()
         
         return True
@@ -3736,7 +3743,7 @@ class Project(QObject):
         self.vcsProjectHelper.initMenu(self.vcsMenu)
         self.checksMenu = QMenu(self.trUtf8('Chec&k'), menu)
         self.checksMenu.setTearOffEnabled(True)
-        self.showMenu = QMenu(self.trUtf8('Sho&w'), menu)
+        self.menuShow = QMenu(self.trUtf8('Sho&w'), menu)
         self.graphicsMenu = QMenu(self.trUtf8('&Diagrams'), menu)
         self.sessionMenu = QMenu(self.trUtf8('Session'), menu)
         self.apidocMenu = QMenu(self.trUtf8('Source &Documentation'), menu)
@@ -3750,7 +3757,7 @@ class Project(QObject):
             "Recent"    : self.recentMenu, 
             "VCS"       : self.vcsMenu, 
             "Checks"    : self.checksMenu, 
-            "Show"      : self.showMenu, 
+            "Show"      : self.menuShow, 
             "Graphics"  : self.graphicsMenu, 
             "Session"   : self.sessionMenu, 
             "Apidoc"    : self.apidocMenu, 
@@ -3760,21 +3767,20 @@ class Project(QObject):
         
         # connect the aboutToShow signals
         self.recentMenu.aboutToShow.connect(self.__showContextMenuRecent)
-        self.connect(self.recentMenu, SIGNAL('triggered(QAction *)'),
-                     self.__openRecent)
+        self.recentMenu.triggered.connect(self.__openRecent)
         self.vcsMenu.aboutToShow.connect(self.__showContextMenuVCS)
         self.checksMenu.aboutToShow.connect(self.__showContextMenuChecks)
-        self.showMenu.aboutToShow.connect(self.__showContextMenuShow)
+        self.menuShow.aboutToShow.connect(self.__showContextMenuShow)
         self.graphicsMenu.aboutToShow.connect(self.__showContextMenuGraphics)
         self.apidocMenu.aboutToShow.connect(self.__showContextMenuApiDoc)
         self.packagersMenu.aboutToShow.connect(self.__showContextMenuPackagers)
         menu.aboutToShow.connect(self.__showMenu)
         
         # build the show menu
-        self.showMenu.setTearOffEnabled(True)
-        self.showMenu.addAction(self.codeMetricsAct)
-        self.showMenu.addAction(self.codeCoverageAct)
-        self.showMenu.addAction(self.codeProfileAct)
+        self.menuShow.setTearOffEnabled(True)
+        self.menuShow.addAction(self.codeMetricsAct)
+        self.menuShow.addAction(self.codeCoverageAct)
+        self.menuShow.addAction(self.codeProfileAct)
         
         # build the diagrams menu
         self.graphicsMenu.setTearOffEnabled(True)
@@ -3813,7 +3819,7 @@ class Project(QObject):
         menu.addSeparator()
         menu.addMenu(self.vcsMenu)
         menu.addSeparator()
-        self.menuShowAct = menu.addMenu(self.showMenu)
+        self.menuShowAct = menu.addMenu(self.menuShow)
         menu.addSeparator()
         self.menuApidocAct = menu.addMenu(self.apidocMenu)
         menu.addSeparator()
@@ -3868,7 +3874,7 @@ class Project(QObject):
         """
         self.menuRecentAct.setEnabled(len(self.recent) > 0)
         
-        self.emit(SIGNAL("showMenu"), "Main", self.__menus["Main"])
+        self.showMenu.emit("Main", self.__menus["Main"])
         
     def __syncRecent(self):
         """
@@ -4043,7 +4049,7 @@ class Project(QObject):
         @param fn filename or directory name added (string)
         @param updateModel flag indicating an update of the model is requested (boolean)
         """
-        self.emit(SIGNAL('projectOthersAdded'), fn)
+        self.projectOthersAdded.emit(fn)
         updateModel and self.__model.addNewItem("OTHERS", fn)
         
     def getActions(self):
@@ -4096,9 +4102,9 @@ class Project(QObject):
             return
         
         name = self.getRelativePath(fullname)
-        self.emit(SIGNAL("prepareRepopulateItem"), name)
+        self.prepareRepopulateItem.emit(name)
         self.__model.repopulateItem(name)
-        self.emit(SIGNAL("completeRepopulateItem"), name)
+        self.completeRepopulateItem.emit(name)
     
     ##############################################################
     ## Below is the VCS interface
@@ -4194,7 +4200,7 @@ class Project(QObject):
         """
         self.vcsProjectHelper.showMenu()
         if self.vcsBasicHelper:
-            self.emit(SIGNAL("showMenu"), "VCS", self.vcsMenu)
+            self.showMenu.emit("VCS", self.vcsMenu)
     
     #########################################################################
     ## Below is the interface to the checker tools
@@ -4204,7 +4210,7 @@ class Project(QObject):
         """
         Private slot called before the checks menu is shown.
         """
-        self.emit(SIGNAL("showMenu"), "Checks", self.checksMenu)
+        self.showMenu.emit("Checks", self.checksMenu)
     
     #########################################################################
     ## Below is the interface to the packagers tools
@@ -4214,7 +4220,7 @@ class Project(QObject):
         """
         Private slot called before the packagers menu is shown.
         """
-        self.emit(SIGNAL("showMenu"), "Packagers", self.packagersMenu)
+        self.showMenu.emit("Packagers", self.packagersMenu)
     
     #########################################################################
     ## Below is the interface to the apidoc tools
@@ -4224,7 +4230,7 @@ class Project(QObject):
         """
         Private slot called before the apidoc menu is shown.
         """
-        self.emit(SIGNAL("showMenu"), "Apidoc", self.apidocMenu)
+        self.showMenu.emit("Apidoc", self.apidocMenu)
     
     #########################################################################
     ## Below is the interface to the show tools
@@ -4350,7 +4356,7 @@ class Project(QObject):
             self.codeProfileAct.setEnabled(False)
             self.codeCoverageAct.setEnabled(False)
         
-        self.emit(SIGNAL("showMenu"), "Show", self.showMenu)
+        self.showMenu.emit("Show", self.menuShow)
     
     #########################################################################
     ## Below is the interface to the diagrams
@@ -4360,7 +4366,7 @@ class Project(QObject):
         """
         Private slot called before the graphics menu is shown.
         """
-        self.emit(SIGNAL("showMenu"), "Graphics", self.graphicsMenu)
+        self.showMenu.emit("Graphics", self.graphicsMenu)
     
     def handleApplicationDiagram(self):
         """
@@ -4391,7 +4397,7 @@ class Project(QObject):
         @param status status of the monitoring thread (string, ok, nok or off)
         @param statusMsg explanotory text for the signaled status (string)
         """
-        self.emit(SIGNAL("vcsStatusMonitorStatus(QString, QString)"), status, statusMsg)
+        self.vcsStatusMonitorStatus.emit(status, statusMsg)
         
     def setStatusMonitorInterval(self, interval):
         """

@@ -31,6 +31,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
     """
     A class used to display the interfaces (IDL) part of the project. 
     
+    @signal sourceFile(string, int = 0) emitted to open a file
     @signal closeSourceWindow(string) emitted after a file has been removed/deleted 
             from the project
     @signal appendStdout(string) emitted after something was received from
@@ -40,6 +41,10 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    closeSourceWindow = pyqtSignal(str)
+    appendStdout = pyqtSignal(str)
+    appendStderr = pyqtSignal(str)
+    showMenu = pyqtSignal(str, QMenu)
     sourceFile = pyqtSignal((str, ), (str, int))
     
     def __init__(self, project, parent = None):
@@ -69,10 +74,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             """ via the context menu.</p>"""
         ))
         
-        self.connect(project, SIGNAL("prepareRepopulateItem"), 
-            self._prepareRepopulateItem)
-        self.connect(project, SIGNAL("completeRepopulateItem"),
-            self._completeRepopulateItem)
+        project.prepareRepopulateItem.connect(self._prepareRepopulateItem)
+        project.completeRepopulateItem.connect(self._completeRepopulateItem)
         
     def _createPopupMenus(self):
         """
@@ -281,7 +284,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenu(self, self.menu)
         
-        self.emit(SIGNAL("showMenu"), "Main", self.menu)
+        self.showMenu.emit("Main", self.menu)
         
     def __showContextMenuMulti(self):
         """
@@ -289,7 +292,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuMulti(self, self.multiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainMulti", self.multiMenu)
+        self.showMenu.emit("MainMulti", self.multiMenu)
         
     def __showContextMenuDir(self):
         """
@@ -297,7 +300,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuDir(self, self.dirMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainDir", self.dirMenu)
+        self.showMenu.emit("MainDir", self.dirMenu)
         
     def __showContextMenuDirMulti(self):
         """
@@ -305,7 +308,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuDirMulti(self, self.dirMultiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainDirMulti", self.dirMultiMenu)
+        self.showMenu.emit("MainDirMulti", self.dirMultiMenu)
         
     def __showContextMenuBack(self):
         """
@@ -313,7 +316,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuBack(self, self.backMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainBack", self.backMenu)
+        self.showMenu.emit("MainBack", self.backMenu)
         
     def _openItem(self):
         """
@@ -390,7 +393,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         
         if dlg.exec_() == QDialog.Accepted:
             for fn2, fn in zip(fullNames, files):
-                self.emit(SIGNAL('closeSourceWindow'), fn2)
+                self.closeSourceWindow.emit(fn2)
                 self.project.deleteFile(fn)
     
     ############################################################################
@@ -411,7 +414,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             s = 'omniidl: '
             output = str(self.compileProc.readLine(), ioEncoding, 'replace')
             s += output
-            self.emit(SIGNAL('appendStdout'), s)
+            self.appendStdout.emit(s)
         
     def __readStderr(self):
         """
@@ -427,7 +430,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             s = 'omniidl: '
             error = str(self.compileProc.readLine(), ioEncoding, 'replace')
             s += error
-            self.emit(SIGNAL('appendStderr'), s)
+            self.appendStderr.emit(s)
         
     def __compileIDLDone(self, exitCode, exitStatus):
         """

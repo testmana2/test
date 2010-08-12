@@ -162,7 +162,8 @@ class SyntaxCheckerPlugin(QObject):
                     """<b>Check Syntax...</b>"""
                     """<p>This checks Python files for syntax errors.</p>"""
                 ))
-                self.__projectBrowserAct.triggered[()].connect(self.__projectBrowserSyntaxCheck)
+                self.__projectBrowserAct.triggered[()].connect(
+                    self.__projectBrowserSyntaxCheck)
             if not self.__projectBrowserAct in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
     

@@ -34,6 +34,11 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
             of the menu and a reference to the menu are given.
     """
     sourceFile = pyqtSignal(str)
+    pixmapFile = pyqtSignal(str)
+    pixmapEditFile = pyqtSignal(str)
+    svgFile = pyqtSignal(str)
+    closeSourceWindow = pyqtSignal(str)
+    showMenu = pyqtSignal(str, QMenu)
     
     def __init__(self, project, parent=None):
         """
@@ -57,10 +62,8 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
             """ in the project is shown in a different colour.</p>"""
         ))
         
-        self.connect(project, SIGNAL("prepareRepopulateItem"), 
-            self._prepareRepopulateItem)
-        self.connect(project, SIGNAL("completeRepopulateItem"),
-            self._completeRepopulateItem)
+        project.prepareRepopulateItem.connect(self._prepareRepopulateItem)
+        project.completeRepopulateItem.connect(self._completeRepopulateItem)
         
     def _createPopupMenus(self):
         """
@@ -170,7 +173,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         """
         self._showContextMenu(self.menu)
         
-        self.emit(SIGNAL("showMenu"), "Main", self.menu)
+        self.showMenu.emit("Main", self.menu)
         
     def __showContextMenuMulti(self):
         """
@@ -178,7 +181,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuMulti(self, self.multiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainMulti", self.multiMenu)
+        self.showMenu.emit("MainMulti", self.multiMenu)
         
     def __showContextMenuBack(self):
         """
@@ -186,7 +189,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuBack(self, self.backMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainBack", self.backMenu)
+        self.showMenu.emit("MainBack", self.backMenu)
         
     def _showContextMenu(self, menu):
         """
@@ -216,7 +219,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         for itm in itmList:
             if isinstance(itm, ProjectBrowserFileItem):
                 if itm.isPixmapFile():
-                    self.emit(SIGNAL('pixmapEditFile'), itm.fileName())
+                    self.pixmapEditFile.emit(itm.fileName())
         
     def _openItem(self):
         """
@@ -227,9 +230,9 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         for itm in itmList:
             if isinstance(itm, ProjectBrowserFileItem):
                 if itm.isPixmapFile():
-                    self.emit(SIGNAL('pixmapFile'), itm.fileName())
+                    self.pixmapFile.emit(itm.fileName())
                 elif itm.isSvgFile():
-                    self.emit(SIGNAL('svgFile'), itm.fileName())
+                    self.svgFile.emit(itm.fileName())
                 else:
                     type_ = mimetypes.guess_type(itm.fileName())[0]
                     if type_ is None or type_.split("/")[0] == "text":
@@ -246,7 +249,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         for itm in itmList[:]:
             if isinstance(itm, ProjectBrowserFileItem):
                 fn = itm.fileName()
-                self.emit(SIGNAL('closeSourceWindow'), fn)
+                self.closeSourceWindow.emit(fn)
                 self.project.removeFile(fn)
             else:
                 dn = itm.dirName()
@@ -292,7 +295,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         if dlg.exec_() == QDialog.Accepted:
             for itm, fn2, fn in zip(items[:], fullNames, names):
                 if isinstance(itm, ProjectBrowserFileItem):
-                    self.emit(SIGNAL('closeSourceWindow'), fn2)
+                    self.closeSourceWindow.emit(fn2)
                     self.project.deleteFile(fn)
                 elif isinstance(itm, ProjectBrowserDirectoryItem):
                     self.project.deleteDirectory(fn2)

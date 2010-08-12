@@ -33,6 +33,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
     @signal designerFile(string) emitted to open a Qt-Designer file
     """
     sourceFile = pyqtSignal(str, int, str, int, int)
+    designerFile = pyqtSignal(str)
     
     lineRole    = Qt.UserRole + 1
     startRole   = Qt.UserRole + 2
@@ -484,7 +485,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         else:
             fn = file
         if fn.endswith('.ui'):
-            self.emit(SIGNAL('designerFile'), fn)
+            self.designerFile.emit(fn)
         else:
             self.sourceFile.emit(fn, line, "", start, end)
         

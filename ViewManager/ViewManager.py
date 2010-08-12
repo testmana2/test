@@ -48,6 +48,7 @@ class QuickSearchLineEdit(QLineEdit):
     @signal gotFocus() emitted when the focus is changed to this widget
     """
     escPressed = pyqtSignal()
+    returnPressed = pyqtSignal()
     gotFocus = pyqtSignal()
     
     def editorCommand(self, cmd):
@@ -95,7 +96,7 @@ class ViewManager(QObject):
     It defines the interface to be implemented by specific
     viewmanager classes and all common methods.
     
-    @signal lastEditorClosed emitted after the last editor window was closed
+    @signal lastEditorClosed() emitted after the last editor window was closed
     @signal editorOpened(string) emitted after an editor window was opened
     @signal editorOpenedEd(editor) emitted after an editor window was opened
     @signal editorClosed(string) emitted just before an editor window gets closed
@@ -108,11 +109,17 @@ class ViewManager(QObject):
     @signal breakpointToggled(editor) emitted when a breakpoint is toggled.
     @signal bookmarkToggled(editor) emitted when a bookmark is toggled.
     """
-    editorOpened = pyqtSignal(str)
     lastEditorClosed = pyqtSignal()
+    editorOpened = pyqtSignal(str)
+    editorOpenedEd = pyqtSignal(Editor)
+    editorClosed = pyqtSignal(str)
+    editorClosedEd = pyqtSignal(Editor)
+    editorSaved = pyqtSignal(str)
     checkActions = pyqtSignal(Editor)
     cursorChanged = pyqtSignal(Editor)
     breakpointToggled = pyqtSignal(Editor)
+    bookmarkToggled = pyqtSignal(Editor)
+    syntaxerrorToggled = pyqtSignal(Editor)
     
     def __init__(self):
         """
@@ -146,7 +153,7 @@ class ViewManager(QObject):
         self.autosaveTimer = QTimer(self)
         self.autosaveTimer.setObjectName("AutosaveTimer")
         self.autosaveTimer.setSingleShot(True)
-        self.connect(self.autosaveTimer, SIGNAL('timeout()'), self.__autosave)
+        self.autosaveTimer.timeout.connect(self.__autosave)
         
         # initialize the APIs manager
         self.apisManager = APIsManager(parent = self)
@@ -670,11 +677,9 @@ class ViewManager(QObject):
         menu.addAction(self.printAct)
         
         self.recentMenu.aboutToShow.connect(self.__showRecentMenu)
-        self.connect(self.recentMenu, SIGNAL('triggered(QAction *)'),
-            self.__openSourceFile)
+        self.recentMenu.triggered.connect(self.__openSourceFile)
         self.bookmarkedMenu.aboutToShow.connect(self.__showBookmarkedMenu)
-        self.connect(self.bookmarkedMenu, SIGNAL('triggered(QAction *)'),
-            self.__openSourceFile)
+        self.bookmarkedMenu.triggered.connect(self.__openSourceFile)
         menu.aboutToShow.connect(self.__showFileMenu)
         
         self.exportersMenuAct.setEnabled(False)
@@ -721,7 +726,7 @@ class ViewManager(QObject):
             act = menu.addAction(supportedExporters[exporter])
             act.setData(exporter)
         
-        self.connect(menu, SIGNAL('triggered(QAction *)'), self.__exportMenuTriggered)
+        menu.triggered.connect(self.__exportMenuTriggered)
         
         return menu
     
@@ -1144,7 +1149,7 @@ class ViewManager(QObject):
         ####################################################################
         
         self.esm = QSignalMapper(self)
-        self.connect(self.esm, SIGNAL('mapped(int)'), self.__editorCommand)
+        self.esm.mapped[int].connect(self.__editorCommand)
         
         self.editorActGrp = createActionGroup(self.editActGrp)
         
@@ -2367,8 +2372,7 @@ class ViewManager(QObject):
                 """<p>Arrange the splitted views horizontally.</p>"""
                 ))
         self.splitOrientationAct.setChecked(False)
-        self.connect(self.splitOrientationAct, SIGNAL('toggled(bool)'), 
-            self.__splitOrientation)
+        self.splitOrientationAct.toggled[bool].connect(self.__splitOrientation)
         self.viewActions.append(self.splitOrientationAct)
         
         self.splitRemoveAct = E5Action(QApplication.translate('ViewManager', 
@@ -2817,8 +2821,7 @@ class ViewManager(QObject):
         menu.addAction(self.taskPreviousAct)
         
         self.bookmarksMenu.aboutToShow.connect(self.__showBookmarksMenu)
-        self.connect(self.bookmarksMenu, SIGNAL('triggered(QAction *)'), 
-            self.__bookmarkSelected)
+        self.bookmarksMenu.triggered.connect(self.__bookmarkSelected)
         menu.aboutToShow.connect(self.__showBookmarkMenu)
         
         return menu
@@ -3045,8 +3048,8 @@ class ViewManager(QObject):
         
         # send a signal, if it was the last editor for this filename
         if fn and self.getOpenEditor(fn) is None:
-            self.emit(SIGNAL('editorClosed'), fn)
-        self.emit(SIGNAL('editorClosedEd'), editor)
+            self.editorClosed.emit(fn)
+        self.editorClosedEd.emit(editor)
         
         # send a signal, if it was the very last editor
         if not len(self.editors):
@@ -3156,27 +3159,23 @@ class ViewManager(QObject):
         
         @param editor reference to the editor object to be connected
         """
-        self.connect(editor, SIGNAL('modificationStatusChanged'),
-            self._modificationStatusChanged)
+        editor.modificationStatusChanged.connect(self._modificationStatusChanged)
         editor.cursorChanged.connect(self.__cursorChanged)
-        self.connect(editor, SIGNAL('editorSaved'), self.__editorSaved)
+        editor.editorSaved.connect(self.__editorSaved)
         editor.breakpointToggled.connect(self.__breakpointToggled)
-        self.connect(editor, SIGNAL('bookmarkToggled'), self.__bookmarkToggled)
-        self.connect(editor, SIGNAL('syntaxerrorToggled'), self._syntaxErrorToggled)
-        self.connect(editor, SIGNAL('coverageMarkersShown'), 
-            self.__coverageMarkersShown)
-        self.connect(editor, SIGNAL('autoCompletionAPIsAvailable'), 
+        editor.bookmarkToggled.connect(self.__bookmarkToggled)
+        editor.syntaxerrorToggled.connect(self._syntaxErrorToggled)
+        editor.coverageMarkersShown.connect(self.__coverageMarkersShown)
+        editor.autoCompletionAPIsAvailable.connect(
             self.__editorAutoCompletionAPIsAvailable)
-        self.connect(editor, SIGNAL('undoAvailable'), self.undoAct.setEnabled)
-        self.connect(editor, SIGNAL('redoAvailable'), self.redoAct.setEnabled)
-        self.connect(editor, SIGNAL('taskMarkersUpdated'), self.__taskMarkersUpdated)
-        self.connect(editor, SIGNAL('languageChanged'), self.__editorConfigChanged)
-        self.connect(editor, SIGNAL('eolChanged'), self.__editorConfigChanged)
-        self.connect(editor, SIGNAL('encodingChanged'), self.__editorConfigChanged)
-        self.connect(editor, SIGNAL("selectionChanged()"), 
-            self.searchDlg.selectionChanged)
-        self.connect(editor, SIGNAL("selectionChanged()"), 
-            self.replaceDlg.selectionChanged)
+        editor.undoAvailable.connect(self.undoAct.setEnabled)
+        editor.redoAvailable.connect(self.redoAct.setEnabled)
+        editor.taskMarkersUpdated.connect(self.__taskMarkersUpdated)
+        editor.languageChanged.connect(self.__editorConfigChanged)
+        editor.eolChanged.connect(self.__editorConfigChanged)
+        editor.encodingChanged.connect(self.__editorConfigChanged)
+        editor.selectionChanged.connect(self.searchDlg.selectionChanged)
+        editor.selectionChanged.connect(self.replaceDlg.selectionChanged)
         
     def newEditorView(self, fn, caller, filetype = ""):
         """
@@ -3207,7 +3206,7 @@ class ViewManager(QObject):
         self.__connectEditor(editor)
         self.__editorOpened()
         self.editorOpened.emit(fn)
-        self.emit(SIGNAL('editorOpenedEd'), editor)
+        self.editorOpenedEd.emit(editor)
 
         return editor
         
@@ -3360,7 +3359,7 @@ class ViewManager(QObject):
                 self.__connectEditor(editor)
                 self.__editorOpened()
                 self.editorOpened.emit(fn)
-                self.emit(SIGNAL('editorOpenedEd'), editor)
+                self.editorOpenedEd.emit(editor)
                 newWin = True
         
         if newWin:
@@ -3559,7 +3558,7 @@ class ViewManager(QObject):
         self.__editorOpened()
         self._checkActions(editor)
         self.editorOpened.emit("")
-        self.emit(SIGNAL('editorOpenedEd'), editor)
+        self.editorOpenedEd.emit(editor)
         
     def printEditor(self, editor):
         """
@@ -3620,7 +3619,7 @@ class ViewManager(QObject):
         
     def __openSourceFile(self, act):
         """
-        Private method to open a file from the list of rencently opened files.
+        Private method to open a file from the list of recently opened files.
         
         @param act reference to the action that triggered (QAction)
         """
@@ -4403,7 +4402,7 @@ class ViewManager(QObject):
             self.bookmarkNextAct.setEnabled(False)
             self.bookmarkPreviousAct.setEnabled(False)
             self.bookmarkClearAct.setEnabled(False)
-        self.emit(SIGNAL('bookmarkToggled'), editor)
+        self.bookmarkToggled.emit(editor)
         
     def __gotoSyntaxError(self):
         """
@@ -4440,7 +4439,7 @@ class ViewManager(QObject):
             self.warningsNextAct.setEnabled(False)
             self.warningsPreviousAct.setEnabled(False)
             self.warningsClearAct.setEnabled(False)
-        self.emit(SIGNAL('syntaxerrorToggled'), editor)
+        self.syntaxerrorToggled.emit(editor)
         
     def __nextWarning(self):
         """
@@ -4488,9 +4487,7 @@ class ViewManager(QObject):
         
     def __taskMarkersUpdated(self, editor):
         """
-        Protected slot to handle the syntaxerrorToggled signal.
-        
-        It checks some syntax error actions and reemits the signal.
+        Protected slot to handle the taskMarkersUpdated signal.
         
         @param editor editor that sent the signal
         """
@@ -4768,7 +4765,7 @@ class ViewManager(QObject):
         
         @param fn filename of the saved editor
         """
-        self.emit(SIGNAL('editorSaved'), fn)
+        self.editorSaved.emit(fn)
         
     def __cursorChanged(self, fn, line, pos):
         """

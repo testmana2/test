@@ -33,8 +33,10 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
     """
     Class implementing the UI to the pyunit package.
     
-    @signal unittestFile(string,int,int) emitted to show the source of a unittest file
+    @signal unittestFile(string, int, int) emitted to show the source of a unittest file
     """
+    unittestFile = pyqtSignal(str, int, int)
+    
     def __init__(self,prog = None,dbs = None,ui = None,parent = None,name = None):
         """
         Constructor
@@ -498,7 +500,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 break
         if fmatch:
             fn, ln = fmatch.group(1, 2)
-            self.emit(SIGNAL('unittestFile'), fn, int(ln), 1)
+            self.unittestFile.emit(fn, int(ln), 1)
 
 class QtTestResult(unittest.TestResult):
     """

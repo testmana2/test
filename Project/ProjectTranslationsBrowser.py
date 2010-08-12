@@ -43,6 +43,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             of the menu and a reference to the menu are given.
     """
     sourceFile = pyqtSignal(str)
+    linguistFile = pyqtSignal(str)
+    appendStdout = pyqtSignal(str)
+    appendStderr = pyqtSignal(str)
+    closeSourceWindow = pyqtSignal(str)
+    trpreview = pyqtSignal((list, ), (list, bool))
+    showMenu = pyqtSignal(str, QMenu)
     
     def __init__(self, project, parent=None):
         """
@@ -463,7 +469,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         ProjectBaseBrowser._showContextMenu(self, self.menu)
         
-        self.emit(SIGNAL("showMenu"), "Main", self.menu)
+        self.showMenu.emit("Main", self.menu)
         
     def __showContextMenuMulti(self):
         """
@@ -502,7 +508,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         ProjectBaseBrowser._showContextMenuMulti(self, self.multiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainMulti", self.multiMenu)
+        self.showMenu.emit("MainMulti", self.multiMenu)
         
     def __showContextMenuDir(self):
         """
@@ -519,7 +525,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         ProjectBaseBrowser._showContextMenuDir(self, self.dirMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainDir", self.dirMenu)
+        self.showMenu.emit("MainDir", self.dirMenu)
         
     def __showContextMenuBack(self):
         """
@@ -534,7 +540,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 for act in self.qmprocBackMenuActions:
                     act.setEnabled(True)
         
-        self.emit(SIGNAL("showMenu"), "MainBack", self.backMenu)
+        self.showMenu.emit("MainBack", self.backMenu)
         
     def __addTranslationFiles(self):
         """
@@ -559,9 +565,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if isinstance(itm, ProjectBrowserFileItem):
                 if itm.isLinguistFile():
                     if itm.fileExt() == '.ts':
-                        self.emit(SIGNAL('linguistFile'), itm.fileName())
+                        self.linguistFile.emit(itm.fileName())
                     else:
-                        self.emit(SIGNAL('trpreview'), [itm.fileName()])
+                        self.trpreview.emit([itm.fileName()])
                 else:
                     self.sourceFile.emit(itm.fileName())
         
@@ -581,7 +587,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         for itm in itmList[:]:
             fn = itm.fileName()
-            self.emit(SIGNAL('closeSourceWindow'), fn)
+            self.closeSourceWindow.emit(fn)
             self.project.removeLanguageFile(fn)
         
     def __deleteLanguageFile(self):
@@ -600,7 +606,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         if dlg.exec_() == QDialog.Accepted:
             for fn in translationFiles:
-                self.emit(SIGNAL('closeSourceWindow'), fn)
+                self.closeSourceWindow.emit(fn)
                 self.project.deleteLanguageFile(fn)
         
     def __TRPreview(self, previewAll = False):
@@ -630,7 +636,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             fileNames.extend([os.path.join(self.project.ppath, trfile) \
                               for trfile in trfiles \
                               if trfile.endswith('.qm')])
-        self.emit(SIGNAL('trpreview'), fileNames, True)
+        self.trpreview[list, bool].emit(fileNames, True)
         
     def __TRPreviewAll(self):
         """
@@ -769,7 +775,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             s = ps
             output = str(proc.readLine(), ioEncoding, 'replace')
             s += output
-            self.emit(SIGNAL('appendStdout'), s)
+            self.appendStdout.emit(s)
         
     def __readStderrLupdate(self):
         """
@@ -805,7 +811,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             s = ps
             error = str(proc.readLine(), ioEncoding, 'replace')
             s += error
-            self.emit(SIGNAL('appendStderr'), s)
+            self.appendStderr.emit(s)
     
     ############################################################################
     ##  Methods for the generation commands

@@ -50,7 +50,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         if self.proc is not None and \
            self.proc.state() != QProcess.NotRunning:
             self.proc.terminate()
-            QTimer.singleShot(2000, self.proc, SLOT('kill()'))
+            QTimer.singleShot(2000, self.proc.kill)
             self.proc.waitForFinished(3000)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)

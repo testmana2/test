@@ -24,6 +24,10 @@ class APIs(QObject):
     @signal apiPreparationCancelled() emitted after the API preparation has been cancelled
     @signal apiPreparationStarted() emitted after the API preparation has started
     """
+    apiPreparationFinished = pyqtSignal()
+    apiPreparationCancelled = pyqtSignal()
+    apiPreparationStarted = pyqtSignal()
+    
     def __init__(self, language, forPreparation = False, parent = None):
         """
         Constructor
@@ -46,12 +50,9 @@ class APIs(QObject):
             self.__apis = None
         else:
             self.__apis = QsciAPIs(self.__lexer)
-            self.connect(self.__apis, SIGNAL("apiPreparationFinished()"),
-                         self.__apiPreparationFinished)
-            self.connect(self.__apis, SIGNAL("apiPreparationCancelled()"),
-                         self.__apiPreparationCancelled)
-            self.connect(self.__apis, SIGNAL("apiPreparationStarted()"),
-                         self.__apiPreparationStarted)
+            self.__apis.apiPreparationFinished.connect(self.__apiPreparationFinished)
+            self.__apis.apiPreparationCancelled.connect(self.__apiPreparationCancelled)
+            self.__apis.apiPreparationStarted.connect(self.__apiPreparationStarted)
             self.__loadAPIs()
         
     def __loadAPIs(self):
@@ -92,21 +93,21 @@ class APIs(QObject):
         """
         self.__apis.savePrepared()
         self.__inPreparation = False
-        self.emit(SIGNAL('apiPreparationFinished()'))
+        self.apiPreparationFinished.emit()
     
     def __apiPreparationCancelled(self):
         """
         Private method called, after the API preparation process has been cancelled.
         """
         self.__inPreparation = False
-        self.emit(SIGNAL('apiPreparationCancelled()'))
+        self.apiPreparationCancelled.emit()
     
     def __apiPreparationStarted(self):
         """
         Private method called, when the API preparation process started.
         """
         self.__inPreparation = True
-        self.emit(SIGNAL('apiPreparationStarted()'))
+        self.apiPreparationStarted.emit()
     
     def prepareAPIs(self, ondemand = False, rawList = None):
         """

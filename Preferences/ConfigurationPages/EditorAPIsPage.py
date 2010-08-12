@@ -7,7 +7,7 @@
 Module implementing the Editor APIs configuration page.
 """
 
-from PyQt4.QtCore import QDir, pyqtSlot, SIGNAL, QFileInfo
+from PyQt4.QtCore import QDir, pyqtSlot, QFileInfo
 from PyQt4.QtGui import QFileDialog, QInputDialog
 
 from E5Gui.E5Application import e5App
@@ -95,12 +95,12 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
                 self.apiList.addItem(api)
         self.__currentAPI = self.__apisManager.getAPIs(self.currentApiLanguage)
         if self.__currentAPI is not None:
-            self.connect(self.__currentAPI, SIGNAL('apiPreparationFinished()'),
-                         self.__apiPreparationFinished)
-            self.connect(self.__currentAPI, SIGNAL('apiPreparationCancelled()'),
-                         self.__apiPreparationCancelled)
-            self.connect(self.__currentAPI, SIGNAL('apiPreparationStarted()'),
-                         self.__apiPreparationStarted)
+            self.__currentAPI.apiPreparationFinished.connect(
+                self.__apiPreparationFinished)
+            self.__currentAPI.apiPreparationCancelled.connect(
+                self.__apiPreparationCancelled)
+            self.__currentAPI.apiPreparationStarted.connect(
+                self.__apiPreparationStarted)
             self.addInstalledApiFileButton.setEnabled(\
                 self.__currentAPI.installedAPIFiles() != "")
         else:

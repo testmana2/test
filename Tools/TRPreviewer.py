@@ -79,16 +79,14 @@ class TRPreviewer(QMainWindow):
         self.preview = WidgetWorkspace(self.cw)
         self.preview.setObjectName("preview")
         self.TRPreviewerLayout.addWidget(self.preview)
-        self.connect(self.preview, SIGNAL('lastWidgetClosed'), self.__updateActions)
+        self.preview.lastWidgetClosed.connect(self.__updateActions)
 
         self.setCentralWidget(self.cw)
         
-        self.connect(self.languageCombo,SIGNAL("activated(const QString&)"),
-                     self.setTranslation)
+        self.languageComboactivated[str].connect(self.setTranslation)
         
         self.translations = TranslationsDict(self.languageCombo, self)
-        self.connect(self.translations, SIGNAL('translationChanged'),
-                     self.preview, SIGNAL('rebuildWidgets'))
+        self.translations.translationChanged.connect(self.preview.rebuildWidgets)
         
         self.__initActions()
         self.__initMenus()
@@ -98,8 +96,8 @@ class TRPreviewer(QMainWindow):
         
         # fire up the single application server
         self.SAServer = TRSingleApplicationServer(self)
-        self.connect(self.SAServer, SIGNAL('loadForm'), self.preview.loadWidget)
-        self.connect(self.SAServer, SIGNAL('loadTranslation'), self.translations.add)
+        self.SAServer.loadForm.connect(self.preview.loadWidget)
+        self.SAServer.loadTranslation.connect(self.translations.add)
         
         # defere loading of a UI file until we are shown
         self.filesToLoad = filenames[:]
@@ -263,8 +261,7 @@ class TRPreviewer(QMainWindow):
         self.windowMenu = mb.addMenu(self.trUtf8('&Window'))
         self.windowMenu.setTearOffEnabled(True)
         self.windowMenu.aboutToShow.connect(self.__showWindowMenu)
-        self.connect(self.windowMenu, SIGNAL('triggered(QAction *)'),
-                     self.preview.toggleSelectedWidget)
+        self.windowMenu.triggered.connect(self.preview.toggleSelectedWidget)
         
         mb.addSeparator()
         
@@ -410,6 +407,8 @@ class TranslationsDict(QObject):
     
     @signal translationChanged() emit after a translator was set
     """
+    translationChanged = pyqtSignal()
+    
     def __init__(self, selector, parent):
         """
         Constructor
@@ -490,7 +489,7 @@ class TranslationsDict(QObject):
         self.selector.setCurrentIndex(self.selector.findText(name))
         self.selector.blockSignals(False)
         
-        self.emit(SIGNAL('translationChanged'))
+        self.translationChanged.emit()
     
     def reload(self):
         """
@@ -647,7 +646,7 @@ class WidgetView(QWidget):
         self.__valid = False
         self.__timer = QTimer(self)
         self.__timer.setSingleShot(True)
-        self.connect(self.__timer, SIGNAL('timeout()'), self.buildWidget)
+        self.__timer.timeout.connect(self.buildWidget)
     
     def isValid(self):
         """
@@ -708,6 +707,8 @@ class WidgetWorkspace(QWorkspace):
     
     @signal lastWidgetClosed() emitted after last widget was closed
     """
+    lastWidgetClosed = pyqtSignal()
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -749,7 +750,7 @@ class WidgetWorkspace(QWorkspace):
                 del wview
                 return
             
-            self.connect(self, SIGNAL("rebuildWidgets"), wview.buildWidget)
+            self.rebuildWidgets.connect(wview.buildWidget)
             wview.installEventFilter(self)
             
             self.addWindow(wview)
@@ -775,7 +776,7 @@ class WidgetWorkspace(QWorkspace):
             try:
                 self.widgets.remove(obj)
                 if len(self.widgets) == 0:
-                    self.emit(SIGNAL('lastWidgetClosed'))
+                    self.lastWidgetClosed.emit()
             except ValueError:
                 pass
         

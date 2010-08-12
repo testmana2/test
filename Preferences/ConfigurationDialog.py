@@ -309,10 +309,8 @@ class ConfigurationWidget(QWidget):
         # set the initial size of the splitter
         self.configSplitter.setSizes([200, 600])
         
-        self.connect(self.configList, SIGNAL("itemActivated(QTreeWidgetItem *, int)"),
-            self.__showConfigurationPage)
-        self.connect(self.configList, SIGNAL("itemClicked(QTreeWidgetItem *, int)"),
-            self.__showConfigurationPage)
+        self.configList.itemActivated.connect(self.__showConfigurationPage)
+        self.configList.itemClicked.connect(self.__showConfigurationPage)
         
         self.__initLexers()
         

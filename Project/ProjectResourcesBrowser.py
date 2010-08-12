@@ -36,7 +36,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    appendStderr = pyqtSignal(str)
     sourceFile = pyqtSignal(str)
+    closeSourceWindow = pyqtSignal(str)
+    showMenu = pyqtSignal(str, QMenu)
     
     RCFilenameFormatPython = "{0}_rc.py"
     RCFilenameFormatRuby = "{0}_rc.rb"
@@ -289,7 +292,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenu(self, self.menu)
         
-        self.emit(SIGNAL("showMenu"), "Main", self.menu)
+        self.showMenu.emit("Main", self.menu)
         
     def __showContextMenuMulti(self):
         """
@@ -297,7 +300,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuMulti(self, self.multiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainMulti", self.multiMenu)
+        self.showMenu.emit("MainMulti", self.multiMenu)
         
     def __showContextMenuDir(self):
         """
@@ -305,7 +308,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuDir(self, self.dirMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainDir", self.dirMenu)
+        self.showMenu.emit("MainDir", self.dirMenu)
         
     def __showContextMenuDirMulti(self):
         """
@@ -313,7 +316,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuDirMulti(self, self.dirMultiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainDirMulti", self.dirMultiMenu)
+        self.showMenu.emit("MainDirMulti", self.dirMultiMenu)
         
     def __showContextMenuBack(self):
         """
@@ -321,7 +324,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuBack(self, self.backMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainBack", self.backMenu)
+        self.showMenu.emit("MainBack", self.backMenu)
         
     def __addResourceFiles(self):
         """
@@ -456,7 +459,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         if dlg.exec_() == QDialog.Accepted:
             for fn2, fn in zip(fullNames, files):
-                self.emit(SIGNAL('closeSourceWindow'), fn2)
+                self.closeSourceWindow.emit(fn2)
                 self.project.deleteFile(fn)
     
     ############################################################################
@@ -493,7 +496,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             error = str(self.compileProc.readLine(), 
                             ioEncoding, 'replace')
             s += error
-            self.emit(SIGNAL('appendStderr'), s)
+            self.appendStderr.emit(s)
         
     def __compileQRCDone(self, exitCode, exitStatus):
         """

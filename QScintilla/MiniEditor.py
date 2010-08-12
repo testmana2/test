@@ -87,8 +87,10 @@ class MiniEditor(QMainWindow):
     """
     Class implementing a minimalistic editor for simple editing tasks.
     
-    @signal editorSaved emitted after the file has been saved
+    @signal editorSaved() emitted after the file has been saved
     """
+    editorSaved = pyqtSignal()
+    
     def __init__(self, filename = "", filetype = "", parent = None, name = None):
         """
         Constructor
@@ -153,25 +155,18 @@ class MiniEditor(QMainWindow):
         self.__markOccurrencesTimer.setSingleShot(True)
         self.__markOccurrencesTimer.setInterval(
             Preferences.getEditor("MarkOccurrencesTimeout"))
-        self.connect(self.__markOccurrencesTimer, SIGNAL("timeout()"), 
-                     self.__markOccurrences)
+        self.__markOccurrencesTimer.timeout.connect(self.__markOccurrences)
         self.__markedText = ""
         
-        self.connect(self.__textEdit, SIGNAL("textChanged()"), self.__documentWasModified)
-        self.connect(self.__textEdit, SIGNAL('modificationChanged(bool)'), 
-                     self.__modificationChanged)
-        self.connect(self.__textEdit, SIGNAL('cursorPositionChanged(int, int)'),
-                     self.__cursorPositionChanged)
+        self.__textEdit.textChanged.connect(self.__documentWasModified)
+        self.__textEdit.modificationChanged.connect(self.__modificationChanged)
+        self.__textEdit.cursorPositionChanged.connect(self.__cursorPositionChanged)
         
         self.__textEdit.setContextMenuPolicy(Qt.CustomContextMenu)
         self.__textEdit.customContextMenuRequested.connect(self.__contextMenuRequested)
         
-        self.connect(self.__textEdit, 
-                     SIGNAL("selectionChanged()"), 
-                     self.searchDlg.selectionChanged)
-        self.connect(self.__textEdit, 
-                     SIGNAL("selectionChanged()"), 
-                     self.replaceDlg.selectionChanged)
+        self.__textEdit.selectionChanged.connect(self.searchDlg.selectionChanged)
+        self.__textEdit.selectionChanged.connect(self.replaceDlg.selectionChanged)
         
         self.__setCurrentFile("")
         if filename:
@@ -529,17 +524,15 @@ class MiniEditor(QMainWindow):
         
         self.cutAct.setEnabled(False);
         self.copyAct.setEnabled(False);
-        self.connect(self.__textEdit, SIGNAL("copyAvailable(bool)"),
-                self.cutAct, SLOT("setEnabled(bool)"))
-        self.connect(self.__textEdit, SIGNAL("copyAvailable(bool)"),
-                self.copyAct, SLOT("setEnabled(bool)"))
+        self.__textEdit.copyAvailable.connect(self.cutAct.setEnabled)
+        self.__textEdit.copyAvailable.connect(self.copyAct.setEnabled)
         
         ####################################################################
         ## Below follow the actions for qscintilla standard commands.
         ####################################################################
         
         self.esm = QSignalMapper(self)
-        self.connect(self.esm, SIGNAL('mapped(int)'), self.__textEdit.editorCommand)
+        self.esm.mapped[int].connect(self.__textEdit.editorCommand)
         
         self.editorActGrp = createActionGroup(self)
         
@@ -1554,7 +1547,7 @@ class MiniEditor(QMainWindow):
             return False
         
         QApplication.restoreOverrideCursor()
-        self.emit(SIGNAL("editorSaved"))
+        self.editorSaved.emit()
         
         self.__setCurrentFile(fileName)
         self.__statusBar.showMessage(self.trUtf8("File saved"), 2000)
@@ -1839,7 +1832,7 @@ class MiniEditor(QMainWindow):
         else:
             printer.setDocName(self.trUtf8("Untitled"))
         preview = QPrintPreviewDialog(printer, self)
-        self.connect(preview, SIGNAL("paintRequested(QPrinter*)"), self.__printPreview)
+        preview.paintRequested.connect(self.__printPreview)
         preview.exec_()
     
     def __printPreview(self, printer):
@@ -1918,7 +1911,7 @@ class MiniEditor(QMainWindow):
         self.pygmentsSelAct = menu.addAction(self.trUtf8("Alternatives"))
         self.pygmentsSelAct.setData("Alternatives")
         
-        self.connect(menu, SIGNAL('triggered(QAction *)'), self.__languageMenuTriggered)
+        menu.triggered.connect(self.__languageMenuTriggered)
         menu.aboutToShow.connect(self.__showContextMenuLanguages)
         
         return menu
@@ -1982,8 +1975,7 @@ class MiniEditor(QMainWindow):
         """
         if self.lexer_ is not None and \
            (self.lexer_.lexer() == "container" or self.lexer_.lexer() is None):
-            self.disconnect(self.__textEdit, SIGNAL("SCN_STYLENEEDED(int)"), 
-                            self.__styleNeeded)
+            self.__textEdit.SCN_STYLENEEDED.disconnect(self.__styleNeeded)
         
         self.apiLanguage = ""
         self.lexer_ = None
@@ -2043,8 +2035,7 @@ class MiniEditor(QMainWindow):
         """
         if self.lexer_ is not None and \
            (self.lexer_.lexer() == "container" or self.lexer_.lexer() is None):
-            self.disconnect(self.__textEdit, SIGNAL("SCN_STYLENEEDED(int)"), 
-                            self.__styleNeeded)
+            self.__textEdit.SCN_STYLENEEDED.disconnect(self.__styleNeeded)
         
         filename = os.path.basename(filename)
         language = Preferences.getEditorLexerAssoc(filename)
@@ -2065,8 +2056,7 @@ class MiniEditor(QMainWindow):
         self.__textEdit.setLexer(self.lexer_)
         if self.lexer_.lexer() == "container" or self.lexer_.lexer() is None:
             self.__textEdit.setStyleBits(self.lexer_.styleBitsNeeded())
-            self.connect(self.__textEdit, SIGNAL("SCN_STYLENEEDED(int)"), 
-                         self.__styleNeeded)
+            self.__textEdit.SCN_STYLENEEDED.connect(self.__styleNeeded)
         
         # get the font for style 0 and set it as the default font
         key = 'Scintilla/{0}/style0/font'.format(self.lexer_.language())

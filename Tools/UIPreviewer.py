@@ -82,8 +82,7 @@ class UIPreviewer(QMainWindow):
 
         self.setCentralWidget(self.cw)
         
-        self.connect(self.styleCombo,SIGNAL("activated(const QString&)"),
-                     self.__guiStyleSelected)
+        self.styleCombo.activated[str].connect(self.__guiStyleSelected)
         
         self.__initActions()
         self.__initMenus()
@@ -524,7 +523,7 @@ class UIPreviewer(QMainWindow):
             QPrinter.ColorMode(int(settings.value("UIPreviewer/colormode"))))
         
         preview = QPrintPreviewDialog(printer, self)
-        self.connect(preview, SIGNAL("paintRequested(QPrinter*)"), self.__print)
+        preview.paintRequested.connect(self.__print)
         preview.exec_()
         
     def __print(self, printer):

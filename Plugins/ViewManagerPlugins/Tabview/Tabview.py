@@ -43,6 +43,11 @@ class TabBar(E5WheelTabBar):
     @signal tabCopyRequested(int, int) emitted to signal a clone request giving
         the old and new index position
     """
+    tabMoveRequested = pyqtSignal(int, int)
+    tabRelocateRequested = pyqtSignal(int, int, int)
+    tabCopyRequested = pyqtSignal(int, int, int)
+    tabCopyRequested = pyqtSignal(int, int)
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -118,20 +123,18 @@ class TabBar(E5WheelTabBar):
         if oldID != id(self):
             parentID = mimeData.data("tabwidget-id").toLong()[0]
             if event.proposedAction() == Qt.MoveAction:
-                self.emit(SIGNAL("tabRelocateRequested(long, int, int)"), 
-                          parentID, fromIndex, toIndex)
+                self.tabRelocateRequested.emit(parentID, fromIndex, toIndex)
                 event.acceptProposedAction()
             elif event.proposedAction() == Qt.CopyAction:
-                self.emit(SIGNAL("tabCopyRequested(long, int, int)"), 
-                          parentID, fromIndex, toIndex)
+                self.tabCopyRequested.emit(parentID, fromIndex, toIndex)
                 event.acceptProposedAction()
         else:
             if fromIndex != toIndex:
                 if event.proposedAction() == Qt.MoveAction:
-                    self.emit(SIGNAL("tabMoveRequested(int, int)"), fromIndex, toIndex)
+                    self.tabMoveRequested.emit(fromIndex, toIndex)
                     event.acceptProposedAction()
                 elif event.proposedAction() == Qt.CopyAction:
-                    self.emit(SIGNAL("tabCopyRequested(int, int)"), fromIndex, toIndex)
+                    self.tabCopyRequested.emit(fromIndex, toIndex)
                     event.acceptProposedAction()
         E5WheelTabBar.dropEvent(self, event)
 
@@ -151,14 +154,10 @@ class TabWidget(E5TabWidget):
         self.__tabBar = TabBar(self)
         self.setTabBar(self.__tabBar)
         
-        self.connect(self.__tabBar, SIGNAL("tabMoveRequested(int, int)"), 
-                     self.moveTab)
-        self.connect(self.__tabBar, SIGNAL("tabRelocateRequested(long, int, int)"), 
-                     self.relocateTab)
-        self.connect(self.__tabBar, SIGNAL("tabCopyRequested(long, int, int)"), 
-                     self.copyTabOther)
-        self.connect(self.__tabBar, SIGNAL("tabCopyRequested(int, int)"), 
-                     self.copyTab)
+        self.__tabBar.tabMoveRequested.connect(self.moveTab)
+        self.__tabBar.tabRelocateRequested.connect(self.relocateTab)
+        self.__tabBar.tabCopyRequested.connect(self.copyTabOther)
+        self.__tabBar.tabCopyRequested.connect(self.copyTab)
         
         self.vm = vm
         self.editors = []
@@ -173,8 +172,7 @@ class TabWidget(E5TabWidget):
         
         self.__navigationMenu = QMenu(self)
         self.__navigationMenu.aboutToShow.connect(self.__showNavigationMenu)
-        self.connect(self.__navigationMenu, SIGNAL("triggered(QAction*)"), 
-                     self.__navigationMenuTriggered)
+        self.__navigationMenu.triggered.connect(self.__navigationMenuTriggered)
         
         self.navigationButton = QToolButton(self)
         self.navigationButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))
@@ -193,8 +191,7 @@ class TabWidget(E5TabWidget):
             self.closeButton.clicked[bool].connect(self.__closeButtonClicked)
             self.rightCornerWidgetLayout.addWidget(self.closeButton)
         else:
-            self.connect(self, SIGNAL("tabCloseRequested(int)"), 
-                self.__closeRequested)
+            self.tabCloseRequested.connect(self.__closeRequested)
             self.closeButton = None
         
         self.setCornerWidget(self.rightCornerWidget, Qt.TopRightCorner)
@@ -325,8 +322,7 @@ class TabWidget(E5TabWidget):
         
         if not editor in self.editors:
             self.editors.append(editor)
-            self.connect(editor, SIGNAL('captionChanged'),
-                self.__captionChange)
+            editor.captionChanged.connect(self.__captionChange)
         
         emptyIndex = self.indexOf(self.emptyLabel)
         if emptyIndex > -1:
@@ -352,8 +348,7 @@ class TabWidget(E5TabWidget):
         
         if not editor in self.editors:
             self.editors.append(editor)
-            self.connect(editor, SIGNAL('captionChanged'),
-                self.__captionChange)
+            editor.captionChanged.connect(self.__captionChange)
         
         emptyIndex = self.indexOf(self.emptyLabel)
         if emptyIndex > -1:
@@ -399,8 +394,7 @@ class TabWidget(E5TabWidget):
             self.removeTab(index)
         
         if isinstance(object, QScintilla.Editor.Editor):
-            self.disconnect(object, SIGNAL('captionChanged'),
-                self.__captionChange)
+            object.captionChanged.disconnect(self.__captionChange)
             self.editors.remove(object)
         
         if not self.editors:
@@ -621,12 +615,33 @@ class Tabview(QSplitter, ViewManager):
     
     @signal changeCaption(string) emitted if a change of the caption is necessary
     @signal editorChanged(string) emitted when the current editor has changed
+    @signal lastEditorClosed() emitted after the last editor window was closed
+    @signal editorOpened(string) emitted after an editor window was opened
+    @signal editorOpenedEd(editor) emitted after an editor window was opened
+    @signal editorClosed(string) emitted just before an editor window gets closed
+    @signal editorClosedEd(editor) emitted just before an editor window gets closed
+    @signal editorSaved(string) emitted after an editor window was saved
+    @signal checkActions(editor) emitted when some actions should be checked
+            for their status
+    @signal cursorChanged(editor) emitted after the cursor position of the active
+            window has changed
+    @signal breakpointToggled(editor) emitted when a breakpoint is toggled.
+    @signal bookmarkToggled(editor) emitted when a bookmark is toggled.
     """
-    editorOpened = pyqtSignal(str)
+    changeCaption = pyqtSignal(str)
+    editorChanged = pyqtSignal(str)
+    
     lastEditorClosed = pyqtSignal()
+    editorOpened = pyqtSignal(str)
+    editorOpenedEd = pyqtSignal(Editor)
+    editorClosed = pyqtSignal(str)
+    editorClosedEd = pyqtSignal(Editor)
+    editorSaved = pyqtSignal(str)
     checkActions = pyqtSignal(Editor)
     cursorChanged = pyqtSignal(Editor)
     breakpointToggled = pyqtSignal(Editor)
+    bookmarkToggled = pyqtSignal(Editor)
+    syntaxerrorToggled = pyqtSignal(Editor)
     
     def __init__(self, parent):
         """
@@ -645,8 +660,7 @@ class Tabview(QSplitter, ViewManager):
         self.tabWidgets.append(tw)
         self.currentTabWidget = tw
         self.currentTabWidget.showIndicator(True)
-        self.connect(tw, SIGNAL('currentChanged(int)'),
-            self.__currentChanged)
+        tw.currentChanged.connect(self.__currentChanged)
         tw.installEventFilter(self)
         tw.tabBar().installEventFilter(self)
         self.setOrientation(Qt.Vertical)
@@ -726,10 +740,10 @@ class Tabview(QSplitter, ViewManager):
         aw = self.activeWindow()
         fn = aw and aw.getFileName() or None
         if fn:
-            self.emit(SIGNAL('changeCaption'), fn)
-            self.emit(SIGNAL('editorChanged'), fn)
+            self.changeCaption.emit(fn)
+            self.editorChanged.emit(fn)
         else:
-            self.emit(SIGNAL('changeCaption'), "")
+            self.changeCaption.emit("")
         
     def _addView(self, win, fn = None, noName = ""):
         """
@@ -761,10 +775,10 @@ class Tabview(QSplitter, ViewManager):
         win.show()
         win.setFocus()
         if fn:
-            self.emit(SIGNAL('changeCaption'), fn)
-            self.emit(SIGNAL('editorChanged'), fn)
+            self.changeCaption.emit(fn)
+            self.editorChanged.emit(fn)
         else:
-            self.emit(SIGNAL('changeCaption'), "")
+            self.changeCaption.emit("")
         
     def insertView(self, win, tabWidget, index, fn = None, noName = ""):
         """
@@ -797,10 +811,10 @@ class Tabview(QSplitter, ViewManager):
         win.show()
         win.setFocus()
         if fn:
-            self.emit(SIGNAL('changeCaption'), fn)
-            self.emit(SIGNAL('editorChanged'), fn)
+            self.changeCaption.emit(fn)
+            self.editorChanged.emit(fn)
         else:
-            self.emit(SIGNAL('changeCaption'), "")
+            self.changeCaption.emit("")
         
         self._modificationStatusChanged(win.isModified(), win)
         self._checkActions(win)
@@ -860,7 +874,7 @@ class Tabview(QSplitter, ViewManager):
         index = self.currentTabWidget.indexOf(editor)
         self.currentTabWidget.setTabText(index, tabName)
         self.currentTabWidget.setTabToolTip(index, newName)
-        self.emit(SIGNAL('changeCaption'), newName)
+        self.changeCaption.emit(newName)
 
     def _modificationStatusChanged(self, m, editor):
         """
@@ -913,8 +927,7 @@ class Tabview(QSplitter, ViewManager):
         self.currentTabWidget.showIndicator(False)
         self.currentTabWidget = self.tabWidgets[-1]
         self.currentTabWidget.showIndicator(True)
-        self.connect(tw, SIGNAL('currentChanged(int)'),
-            self.__currentChanged)
+        tw.currentChanged.connect(self.__currentChanged)
         tw.installEventFilter(self)
         tw.tabBar().installEventFilter(self)
         if self.orientation() == Qt.Horizontal:
@@ -1019,11 +1032,11 @@ class Tabview(QSplitter, ViewManager):
         editor.setFocus()
         fn = editor.getFileName()
         if fn:
-            self.emit(SIGNAL('changeCaption'), fn)
+            self.changeCaption.emit(fn)
             if not self.__inRemoveView:
-                self.emit(SIGNAL('editorChanged'), fn)
+                self.editorChanged.emit(fn)
         else:
-            self.emit(SIGNAL('changeCaption'), "")
+            self.changeCaption.emit("")
         
     def eventFilter(self, watched, event):
         """
@@ -1059,11 +1072,11 @@ class Tabview(QSplitter, ViewManager):
                 aw.setFocus()
                 fn = aw.getFileName()
                 if fn:
-                    self.emit(SIGNAL('changeCaption'), fn)
+                    self.changeCaption.emit(fn)
                     if switched:
-                        self.emit(SIGNAL('editorChanged'), fn)
+                        self.editorChanged.emit(fn)
                 else:
-                    self.emit(SIGNAL('changeCaption'), "")
+                    self.changeCaption.emit("")
         
         return False
         

@@ -42,6 +42,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
+    closeSourceWindow = pyqtSignal(str)
+    showMenu = pyqtSignal(str, QMenu)
     sourceFile = pyqtSignal((str, ), (str, int), (str, int, str))
     
     def __init__(self, project, parent = None):
@@ -64,10 +66,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             """ project. Several actions can be executed via the context menu.</p>"""
         ))
         
-        self.connect(project, SIGNAL("prepareRepopulateItem"), 
-            self._prepareRepopulateItem)
-        self.connect(project, SIGNAL("completeRepopulateItem"),
-            self._completeRepopulateItem)
+        project.prepareRepopulateItem.connect(self._prepareRepopulateItem)
+        project.completeRepopulateItem.connect(self._completeRepopulateItem)
         
         self.codemetrics        = None
         self.codecoverage       = None
@@ -115,13 +115,13 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.checksMenu = QMenu(self.trUtf8('Check'))
         self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
         
-        self.showMenu = QMenu(self.trUtf8('Show'))
-        self.showMenu.addAction(self.trUtf8('Code metrics...'), self.__showCodeMetrics)
-        self.coverageMenuAction = self.showMenu.addAction(\
+        self.menuShow = QMenu(self.trUtf8('Show'))
+        self.menuShow.addAction(self.trUtf8('Code metrics...'), self.__showCodeMetrics)
+        self.coverageMenuAction = self.menuShow.addAction(\
             self.trUtf8('Code coverage...'), self.__showCodeCoverage)
-        self.profileMenuAction = self.showMenu.addAction(\
+        self.profileMenuAction = self.menuShow.addAction(\
             self.trUtf8('Profile data...'), self.__showProfileData)
-        self.showMenu.aboutToShow.connect(self.__showContextMenuShow)
+        self.menuShow.aboutToShow.connect(self.__showContextMenuShow)
         
         self.graphicsMenu = QMenu(self.trUtf8('Diagrams'))
         self.classDiagramAction = self.graphicsMenu.addAction(\
@@ -157,7 +157,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.sourceMenu.addMenu(self.checksMenu)
         self.sourceMenu.addSeparator()
         self.sourceMenuActions["Show"] = \
-            self.sourceMenu.addMenu(self.showMenu)
+            self.sourceMenu.addMenu(self.menuShow)
         self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(self.trUtf8('Copy Path to Clipboard'), 
             self._copyToClipboard)
@@ -442,7 +442,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenu(self, self.sourceMenu)
         
-        self.emit(SIGNAL("showMenu"), "Main", self.sourceMenu)
+        self.showMenu.emit("Main", self.sourceMenu)
         
     def __showContextMenuMulti(self):
         """
@@ -450,7 +450,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuMulti(self, self.multiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainMulti", self.multiMenu)
+        self.showMenu.emit("MainMulti", self.multiMenu)
         
     def __showContextMenuDir(self):
         """
@@ -458,7 +458,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuDir(self, self.dirMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainDir", self.dirMenu)
+        self.showMenu.emit("MainDir", self.dirMenu)
         
     def __showContextMenuDirMulti(self):
         """
@@ -466,7 +466,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuDirMulti(self, self.dirMultiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainDirMulti", self.dirMultiMenu)
+        self.showMenu.emit("MainDirMulti", self.dirMultiMenu)
         
     def __showContextMenuBack(self):
         """
@@ -474,7 +474,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuBack(self, self.backMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainBack", self.backMenu)
+        self.showMenu.emit("MainBack", self.backMenu)
         
     def __showContextMenuShow(self):
         """
@@ -510,7 +510,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.profileMenuAction.setEnabled(prEnable)
         self.coverageMenuAction.setEnabled(coEnable)
         
-        self.emit(SIGNAL("showMenu"), "Show", self.showMenu)
+        self.showMenu.emit("Show", self.menuShow)
         
     def _openItem(self):
         """
@@ -652,7 +652,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         
         if dlg.exec_() == QDialog.Accepted:
             for fn2, fn in zip(fullNames, files):
-                self.emit(SIGNAL('closeSourceWindow'), fn2)
+                self.closeSourceWindow.emit(fn2)
                 self.project.deleteFile(fn)
     
     ############################################################################
@@ -663,7 +663,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Private slot called before the checks menu is shown.
         """
-        self.emit(SIGNAL("showMenu"), "Checks", self.checksMenu)
+        self.showMenu.emit("Checks", self.checksMenu)
     
     ############################################################################
     ## Methods for the Show submenu
@@ -794,7 +794,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Private slot called before the checks menu is shown.
         """
-        self.emit(SIGNAL("showMenu"), "Graphics", self.graphicsMenu)
+        self.showMenu.emit("Graphics", self.graphicsMenu)
     
     def __showClassDiagram(self):
         """

@@ -9,7 +9,7 @@ Module implementing the single application server and client.
 
 import os
 
-from PyQt4.QtCore import SIGNAL
+from PyQt4.QtCore import pyqtSignal
 
 from Utilities.SingleApplication import SingleApplicationClient, SingleApplicationServer
 
@@ -28,9 +28,12 @@ class TRSingleApplicationServer(SingleApplicationServer):
     Class implementing the single application server embedded within the 
     Translations Previewer.
     
-    @signal loadForm(fname) emitted to load a form file
-    @signal loadTranslation(fname, first) emitted to load a translation file
+    @signal loadForm(str) emitted to load a form file
+    @signal loadTranslation(str, bool) emitted to load a translation file
     """
+    loadForm = pyqtSignal(str)
+    loadTranslation = pyqtSignal(str, bool)
+    
     def __init__(self, parent):
         """
         Constructor
@@ -63,7 +66,7 @@ class TRSingleApplicationServer(SingleApplicationServer):
         @param fnames filenames of the forms to be loaded (list of strings)
         """
         for fname in fnames:
-            self.emit(SIGNAL('loadForm'), fname)
+            self.loadForm.emit(fname)
         
     def __saLoadTranslation(self, fnames):
         """
@@ -73,7 +76,7 @@ class TRSingleApplicationServer(SingleApplicationServer):
         """
         first = True
         for fname in fnames:
-            self.emit(SIGNAL('loadTranslation'), fname, first)
+            self.loadTranslation.emit(fname, first)
             first = False
 
 class TRSingleApplicationClient(SingleApplicationClient):

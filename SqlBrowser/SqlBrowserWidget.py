@@ -21,6 +21,8 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
     
     @signal statusMessage(string) emitted to show a status message
     """
+    statusMessage = pyqtSignal(str)
+    
     cCount = 0
     
     def __init__(self, parent = None):
@@ -42,14 +44,11 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
                 """Please check the Qt documentation how to build the """
                 """Qt SQL plugins."""))
         
-        self.connect(self.connections, SIGNAL("tableActivated(QString)"), 
-                     self.on_connections_tableActivated)
-        self.connect(self.connections, SIGNAL("schemaRequested(QString)"), 
-                     self.on_connections_schemaRequested)
-        self.connect(self.connections, SIGNAL("cleared()"), 
-                     self.on_connections_cleared)
+        self.connections.tableActivated.connect(self.on_connections_tableActivated)
+        self.connections.schemaRequested.connect(self.on_connections_schemaRequested)
+        self.connections.cleared.connect(self.on_connections_cleared)
         
-        self.emit(SIGNAL("statusMessage(QString)"), self.trUtf8("Ready"))
+        self.statusMessage.emit(self.trUtf8("Ready"))
     
     @pyqtSlot()
     def on_clearButton_clicked(self):
@@ -163,16 +162,14 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         model.setTable(table)
         model.select()
         if model.lastError().type() != QSqlError.NoError:
-            self.emit(SIGNAL("statusMessage(QString)"), model.lastError().text())
+            self.statusMessage.emit(model.lastError().text())
         self.table.setModel(model)
         self.table.setEditTriggers(
             QAbstractItemView.DoubleClicked | QAbstractItemView.EditKeyPressed)
         
         self.table.resizeColumnsToContents()
         
-        self.connect(self.table.selectionModel(), 
-                     SIGNAL("currentRowChanged(QModelIndex, QModelIndex)"), 
-                     self.updateActions)
+        self.table.selectionModel().currentRowChanged.connect(self.updateActions)
         
         self.updateActions()
     
@@ -287,11 +284,11 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         self.table.setModel(model)
         
         if model.lastError().type() != QSqlError.NoError:
-            self.emit(SIGNAL("statusMessage(QString)"), model.lastError().text())
+            self.statusMessage.emit(model.lastError().text())
         elif model.query().isSelect():
-            self.emit(SIGNAL("statusMessage(QString)"), self.trUtf8("Query OK."))
+            self.statusMessage.emit(self.trUtf8("Query OK."))
         else:
-            self.emit(SIGNAL("statusMessage(QString)"), 
+            self.statusMessage.emit(
                 self.trUtf8("Query OK, number of affected rows: {0}")\
                     .format(model.query().numRowsAffected()))
         

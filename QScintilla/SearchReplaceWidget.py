@@ -27,6 +27,8 @@ class SearchReplaceWidget(QWidget):
     
     @signal searchListChanged emitted to indicate a change of the search list
     """
+    searchListChanged = pyqtSignal()
+    
     def __init__(self, replace, vm, parent = None):
         """
         Constructor
@@ -180,7 +182,7 @@ character except an alphabetic character.</td></tr>
         self.findHistory.insert(0, txt)
         self.ui.findtextCombo.clear()
         self.ui.findtextCombo.addItems(self.findHistory)
-        self.emit(SIGNAL('searchListChanged'))
+        self.searchListChanged.emit()
         
         ok = self.__findNextPrev(txt, False)
         if ok:
@@ -215,7 +217,7 @@ character except an alphabetic character.</td></tr>
         self.findHistory.insert(0, txt)
         self.ui.findtextCombo.clear()
         self.ui.findtextCombo.addItems(self.findHistory)
-        self.emit(SIGNAL('searchListChanged'))
+        self.searchListChanged.emit()
         
         ok = self.__findNextPrev(txt, True)
         if ok:

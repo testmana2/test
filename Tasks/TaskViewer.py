@@ -331,6 +331,8 @@ class TaskViewer(QTreeWidget):
     
     @signal displayFile(string, integer) emitted to go to a file task
     """
+    displayFile = pyqtSignal(str, int)
+    
     def __init__(self, parent, project):
         """
         Constructor
@@ -384,8 +386,7 @@ class TaskViewer(QTreeWidget):
         self.__menuFilteredAct = self.__menu.addAction(self.trUtf8("&Filtered display")) 
         self.__menuFilteredAct.setCheckable(True)
         self.__menuFilteredAct.setChecked(False)
-        self.connect(self.__menuFilteredAct, SIGNAL("triggered(bool)"), 
-                     self.__activateFilter)
+        self.__menuFilteredAct.triggered[bool].connect(self.__activateFilter)
         self.__menu.addAction(self.trUtf8("Filter c&onfiguration..."), 
                               self.__configureFilter)
         self.__menu.addSeparator()
@@ -410,8 +411,7 @@ class TaskViewer(QTreeWidget):
             self.__backMenu.addAction(self.trUtf8("&Filtered display")) 
         self.__backMenuFilteredAct.setCheckable(True)
         self.__backMenuFilteredAct.setChecked(False)
-        self.connect(self.__backMenuFilteredAct, SIGNAL("triggered(bool)"), 
-                     self.__activateFilter)
+        self.__backMenuFilteredAct.triggered[bool].connect(self.__activateFilter)
         self.__backMenu.addAction(self.trUtf8("Filter c&onfiguration..."), 
                               self.__configureFilter)
         self.__backMenu.addSeparator()
@@ -421,8 +421,7 @@ class TaskViewer(QTreeWidget):
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
-        self.connect(self, SIGNAL("itemActivated(QTreeWidgetItem *, int)"),
-                     self.__taskItemActivated)
+        self.itemActivated.connect(self.__taskItemActivated)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
     
@@ -465,7 +464,7 @@ class TaskViewer(QTreeWidget):
         """
         fn = itm.getFilename()
         if fn:
-            self.emit(SIGNAL("displayFile"), fn, itm.getLineno())
+            self.displayFile.emit(fn, itm.getLineno())
         else:
             self.__editTaskProperties()
 
@@ -696,7 +695,7 @@ class TaskViewer(QTreeWidget):
         Private slot to handle the "Go To" context menu entry.
         """
         task = self.currentItem()
-        self.emit(SIGNAL('displayFile'), task.getFilename(), task.getLineno())
+        self.displayFile.emit(task.getFilename(), task.getLineno())
 
     def handlePreferencesChanged(self):
         """

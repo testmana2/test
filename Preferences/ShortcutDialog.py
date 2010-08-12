@@ -16,9 +16,11 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
     """
     Class implementing a dialog for the configuration of a keyboard shortcut.
     
-    @signal shortcutChanged(QKeySequence, QKeySequence, bool, objectType) emitted 
+    @signal shortcutChanged(QKeySequence, QKeySequence, bool, string) emitted 
         after the OK button was pressed
     """
+    shortcutChanged = pyqtSignal(QKeySequence, QKeySequence, bool, str)
+    
     def __init__(self, parent = None, name = None, modal = False):
         """
         Constructor
@@ -36,7 +38,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         self.keyIndex = 0
         self.keys = [0, 0, 0, 0]
         self.noCheck = False
-        self.objectType = None
+        self.objectType = ""
         
         self.primaryClearButton.clicked[()].connect(self.__clear)
         self.alternateClearButton.clicked[()].connect(self.__clear)
@@ -75,7 +77,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         Private slot to handle the OK button press.
         """
         self.hide()
-        self.emit(SIGNAL('shortcutChanged'), 
+        self.shortcutChanged.emit(
                   QKeySequence(self.keyLabel.text()),
                   QKeySequence(self.alternateKeyLabel.text()), 
                   self.noCheck, self.objectType)

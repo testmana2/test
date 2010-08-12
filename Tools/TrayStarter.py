@@ -10,7 +10,7 @@ Module implementing a starter for the system tray.
 import sys
 import os
 
-from PyQt4.QtCore import SIGNAL, QProcess, QSettings, QFileInfo
+from PyQt4.QtCore import QProcess, QSettings, QFileInfo
 from PyQt4.QtGui  import QSystemTrayIcon, QMenu, qApp, QCursor, QMessageBox
 
 import Globals
@@ -44,27 +44,23 @@ class TrayStarter(QSystemTrayIcon):
         self.recentFiles = []
         self.__loadRecentFiles()
         
-        self.connect(self, SIGNAL("activated(QSystemTrayIcon::ActivationReason)"),
-                     self.__activated)
+        self.activated.connect(self.__activated)
         
         self.__menu = QMenu(self.trUtf8("Eric5 tray starter"))
         
         self.recentProjectsMenu = QMenu(self.trUtf8('Recent Projects'), self.__menu)
         self.recentProjectsMenu.aboutToShow.connect(self.__showRecentProjectsMenu)
-        self.connect(self.recentProjectsMenu, SIGNAL('triggered(QAction *)'),
-                     self.__openRecent)
+        self.recentProjectsMenu.triggered.connect(self.__openRecent)
         
         self.recentMultiProjectsMenu = \
             QMenu(self.trUtf8('Recent Multiprojects'), self.__menu)
         self.recentMultiProjectsMenu.aboutToShow.connect(
             self.__showRecentMultiProjectsMenu)
-        self.connect(self.recentMultiProjectsMenu, SIGNAL('triggered(QAction *)'),
-                     self.__openRecent)
+        self.recentMultiProjectsMenu.triggered.connect(self.__openRecent)
         
         self.recentFilesMenu = QMenu(self.trUtf8('Recent Files'), self.__menu)
         self.recentFilesMenu.aboutToShow.connect(self.__showRecentFilesMenu)
-        self.connect(self.recentFilesMenu, SIGNAL('triggered(QAction *)'),
-                     self.__openRecent)
+        self.recentFilesMenu.triggered.connect(self.__openRecent)
         
         act = self.__menu.addAction(self.trUtf8("Eric5 tray starter"))
         font = act.font()

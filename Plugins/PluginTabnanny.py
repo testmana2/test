@@ -165,7 +165,8 @@ class TabnannyPlugin(QObject):
                     """<p>This checks Python files"""
                     """ for bad indentations using tabnanny.</p>"""
                 ))
-                self.__projectBrowserAct.triggered[()].connect(self.__projectBrowserTabnanny)
+                self.__projectBrowserAct.triggered[()].connect(
+                    self.__projectBrowserTabnanny)
             if not self.__projectBrowserAct in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
     

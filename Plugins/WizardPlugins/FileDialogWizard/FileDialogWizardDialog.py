@@ -35,18 +35,12 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         self.eStartWithCompleter = E5FileCompleter(self.eStartWith)
         self.eWorkDirCompleter = E5DirCompleter(self.eWorkDir)
         
-        self.connect(self.rSaveFile, SIGNAL("toggled(bool)"), 
-            self.__toggleConfirmCheckBox)
-        self.connect(self.rfSaveFile, SIGNAL("toggled(bool)"), 
-            self.__toggleConfirmCheckBox)
-        self.connect(self.rDirectory, SIGNAL("toggled(bool)"), 
-            self.__toggleGroupsAndTest)
-        self.connect(self.cStartWith, SIGNAL("toggled(bool)"), 
-            self.__toggleGroupsAndTest)
-        self.connect(self.cWorkDir, SIGNAL("toggled(bool)"), 
-            self.__toggleGroupsAndTest)
-        self.connect(self.cFilters, SIGNAL("toggled(bool)"), 
-            self.__toggleGroupsAndTest)
+        self.rSaveFile.toggled[bool].connect(self.__toggleConfirmCheckBox)
+        self.rfSaveFile.toggled[bool].connect(self.__toggleConfirmCheckBox)
+        self.rDirectory.toggled[bool].connect(self.__toggleGroupsAndTest)
+        self.cStartWith.toggled[bool].connect(self.__toggleGroupsAndTest)
+        self.cWorkDir.toggled[bool].connect(self.__toggleGroupsAndTest)
+        self.cFilters.toggled[bool].connect(self.__toggleGroupsAndTest)
         
         self.bTest = \
             self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)

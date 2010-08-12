@@ -11,7 +11,7 @@ VCS interfaces.
 import os
 
 from PyQt4.QtCore import QObject, QThread, QMutex, QProcess, \
-    SIGNAL, Qt
+    Qt, pyqtSignal
 from PyQt4.QtGui import QApplication, QMessageBox
 
 import Preferences
@@ -28,6 +28,8 @@ class VersionControl(QObject):
     @signal vcsStatusMonitorStatus(QString, QString) emitted to signal the status of the
         monitoring thread (ok, nok, op, off) and a status message
     """
+    vcsStatusMonitorData = pyqtSignal(list)
+    vcsStatusMonitorStatus = pyqtSignal(str, str)
     
     canBeCommitted = 1  # Indicates that a file/directory is in the vcs.
     canBeAdded = 2      # Indicates that a file/directory is not in vcs.
@@ -596,7 +598,7 @@ class VersionControl(QObject):
         @param status status of the monitoring thread (string, ok, nok or off)
         @param statusMsg explanotory text for the signaled status (string)
         """
-        self.emit(SIGNAL("vcsStatusMonitorStatus(QString, QString)"), status, statusMsg)
+        self.vcsStatusMonitorStatus.emit(status, statusMsg)
         QApplication.flush()
 
     def __statusMonitorData(self, statusList):
@@ -607,7 +609,7 @@ class VersionControl(QObject):
         
         @param statusList list of status records (list of strings)
         """
-        self.emit(SIGNAL("vcsStatusMonitorData(QStringList)"), statusList)
+        self.vcsStatusMonitorData.emit(statusList)
         QApplication.flush()
 
     def startStatusMonitor(self, project):
@@ -625,12 +627,10 @@ class VersionControl(QObject):
             self.statusMonitorThread = \
                 self._createStatusMonitorThread(vcsStatusMonitorInterval, project)
             if self.statusMonitorThread is not None:
-                self.connect(self.statusMonitorThread, 
-                             SIGNAL("vcsStatusMonitorData(QStringList)"),
-                             self.__statusMonitorData, Qt.QueuedConnection)
-                self.connect(self.statusMonitorThread, 
-                             SIGNAL("vcsStatusMonitorStatus(QString, QString)"),
-                             self.__statusMonitorStatus, Qt.QueuedConnection)
+                self.statusMonitorThread.vcsStatusMonitorData.connect(
+                    self.__statusMonitorData, Qt.QueuedConnection)
+                self.statusMonitorThread.vcsStatusMonitorStatus.connect(
+                    self.__statusMonitorStatus, Qt.QueuedConnection)
                 self.statusMonitorThread.setAutoUpdate(
                     Preferences.getVCS("AutoUpdate"))
                 self.statusMonitorThread.start()
@@ -644,11 +644,9 @@ class VersionControl(QObject):
         """
         if self.statusMonitorThread is not None:
             self.__statusMonitorData(["--RESET--"])
-            self.disconnect(self.statusMonitorThread, 
-                SIGNAL("vcsStatusMonitorData(QStringList)"),
+            self.statusMonitorThread.vcsStatusMonitorData.disconnect(
                 self.__statusMonitorData)
-            self.disconnect(self.statusMonitorThread, 
-                SIGNAL("vcsStatusMonitorStatus(QString, QString)"),
+            self.statusMonitorThread.vcsStatusMonitorStatus.disconnect(
                 self.__statusMonitorStatus)
             self.statusMonitorThread.stop()
             self.statusMonitorThread.wait(10000)

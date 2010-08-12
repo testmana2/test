@@ -38,8 +38,7 @@ class SqlBrowser(QMainWindow):
         self.__browser = SqlBrowserWidget(self)
         self.setCentralWidget(self.__browser)
         
-        self.connect(self.__browser, SIGNAL("statusMessage(QString)"), 
-                     self.statusBar().showMessage)
+        self.__browser.statusMessage.connect(self.statusBar().showMessage)
         
         self.__initActions()
         self.__initMenus()

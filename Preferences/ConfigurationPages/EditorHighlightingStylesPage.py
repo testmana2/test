@@ -54,7 +54,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         act.setData(self.FAMILYONLY)
         act = self.__fontButtonMenu.addAction(self.trUtf8("Size only"))
         act.setData(self.SIZEONLY)
-        self.__fontButtonMenu.triggered[()].connect(self.__fontButtonMenuTriggered)
+        self.__fontButtonMenu.triggered.connect(self.__fontButtonMenuTriggered)
         self.fontButton.setMenu(self.__fontButtonMenu)
         
         self.__allFontsButtonMenu = QMenu()
@@ -67,7 +67,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         act.setData(self.FAMILYONLY)
         act = self.__allFontsButtonMenu.addAction(self.trUtf8("Size only"))
         act.setData(self.SIZEONLY)
-        self.__allFontsButtonMenu.triggered[()].connect(self.__allFontsButtonMenuTriggered)
+        self.__allFontsButtonMenu.triggered.connect(self.__allFontsButtonMenuTriggered)
         self.allFontsButton.setMenu(self.__allFontsButtonMenu)
         
         self.lexer = None

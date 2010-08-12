@@ -7,7 +7,7 @@
 Module implementing the VCS status monitor thread base class.
 """
 
-from PyQt4.QtCore import QThread, QMutex, QWaitCondition, SIGNAL
+from PyQt4.QtCore import QThread, QMutex, QWaitCondition, pyqtSignal
 
 class VcsStatusMonitorThread(QThread):
     """
@@ -17,6 +17,9 @@ class VcsStatusMonitorThread(QThread):
     @signal vcsStatusMonitorStatus(QString, QString) emitted to signal the status of the
         monitoring thread (ok, nok, op) and a status message
     """
+    vcsStatusMonitorData = pyqtSignal(list)
+    vcsStatusMonitorStatus = pyqtSignal(str, str)
+    
     def __init__(self, interval, project, vcs, parent = None):
         """
         Constructor
@@ -53,16 +56,15 @@ class VcsStatusMonitorThread(QThread):
         while not self.__stopIt:
             # perform the checking task
             self.statusList = []
-            self.emit(SIGNAL("vcsStatusMonitorStatus(QString, QString)"), 
-                      "wait", self.trUtf8("Waiting for lock"))
+            self.vcsStatusMonitorStatus.emit("wait", self.trUtf8("Waiting for lock"))
             try:
                 locked = self.vcs.vcsExecutionMutex.tryLock(5000)
             except TypeError:
                 locked = self.vcs.vcsExecutionMutex.tryLock()
             if locked:
                 try:
-                    self.emit(SIGNAL("vcsStatusMonitorStatus(QString, QString)"), 
-                              "op", self.trUtf8("Checking repository status"))
+                    self.vcsStatusMonitorStatus.emit(
+                        "op", self.trUtf8("Checking repository status"))
                     res, statusMsg = self._performMonitor()
                 finally:
                     self.vcs.vcsExecutionMutex.unlock()
@@ -70,15 +72,12 @@ class VcsStatusMonitorThread(QThread):
                     status = "ok"
                 else:
                     status = "nok"
-                self.emit(SIGNAL("vcsStatusMonitorStatus(QString, QString)"), 
-                          "send", self.trUtf8("Sending data"))
-                self.emit(SIGNAL("vcsStatusMonitorData(QStringList)"), 
-                          self.statusList)
-                self.emit(SIGNAL("vcsStatusMonitorStatus(QString, QString)"), 
-                          status, statusMsg)
+                self.vcsStatusMonitorStatus.emit("send", self.trUtf8("Sending data"))
+                self.vcsStatusMonitorData.emit(self.statusList)
+                self.vcsStatusMonitorStatus.emit(status, statusMsg)
             else:
-                self.emit(SIGNAL("vcsStatusMonitorStatus(QString, QString)"), 
-                          "timeout", self.trUtf8("Timed out waiting for lock"))
+                self.vcsStatusMonitorStatus.emit(
+                    "timeout", self.trUtf8("Timed out waiting for lock"))
             
             if self.autoUpdate and self.shouldUpdate:
                 try:

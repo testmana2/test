@@ -205,8 +205,10 @@ class ProjectBrowserModel(BrowserModel):
     """
     Class implementing the project browser model.
     
-    @signal vcsStateChanged(QString) emitted after the VCS state has changed
+    @signal vcsStateChanged(string) emitted after the VCS state has changed
     """
+    vcsStateChanged = pyqtSignal(str)
+    
     def __init__(self, parent):
         """
         Constructor
@@ -465,9 +467,7 @@ class ProjectBrowserModel(BrowserModel):
                     if type_ and type_ not in itm.getProjectTypes():
                         itm.addProjectType(type_)
                         index = self.createIndex(itm.row(), 0, itm)
-                        self.emit(SIGNAL(\
-                            "dataChanged(const QModelIndex &, const QModelIndex &)"),
-                            index, index)
+                        self.dataChanged.emit(index, index)
                 olditem = itm
             return (itm, pathlist[-1])
         else:
@@ -543,8 +543,7 @@ class ProjectBrowserModel(BrowserModel):
         
         index = self.createIndex(itm.row(), 0, itm)
         itm.setName(newFilename)
-        self.emit(SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-                  index, index)
+        self.dataChanged.emit(index, index)
         self.repopulateItem(newFilename)
     
     def findItem(self, name):
@@ -698,8 +697,7 @@ class ProjectBrowserModel(BrowserModel):
             item.setVcsStatus("")
         
         index = self.createIndex(item.row(), 0, item)
-        self.emit(SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-                  index, index)
+        self.dataChanged.emit(index, index)
     
     def updateVCSStatus(self, name, recursive = True):
         """
@@ -808,9 +806,7 @@ class ProjectBrowserModel(BrowserModel):
                 index1 = self.createIndex(itm.row(), 0, itm)
                 index2 = self.createIndex(itm.row(), 
                     self.rootItem.columnCount(), itm)
-                self.emit(\
-                    SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-                    index1, index2)
+                self.dataChanged.emit(index1, index2)
             
             head, tail = os.path.split(name)
             if head != lastHead:
@@ -823,7 +819,7 @@ class ProjectBrowserModel(BrowserModel):
             globalVcsStatus = sorted(self.__vcsStatus.values())[-1]
         except IndexError:
             globalVcsStatus = ' '
-        self.emit(SIGNAL("vcsStateChanged"), globalVcsStatus)
+        self.vcsStateChanged.emit(globalVcsStatus)
 
     def __changeParentsVCSState(self, path, itemCache):
         """
@@ -850,9 +846,7 @@ class ProjectBrowserModel(BrowserModel):
                     index1 = self.createIndex(itm.row(), 0, itm)
                     index2 = self.createIndex(itm.row(), 
                         self.rootItem.columnCount(), itm)
-                    self.emit(\
-                        SIGNAL("dataChanged(const QModelIndex &, const QModelIndex &)"),
-                        index1, index2)
+                    self.dataChanged.emit(index1, index2)
             path, tail = os.path.split(path)
     
     def preferencesChanged(self):

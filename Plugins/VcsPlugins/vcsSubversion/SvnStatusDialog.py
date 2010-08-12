@@ -246,7 +246,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
             self.process.terminate()
-            QTimer.singleShot(2000, self.process, SLOT('kill()'))
+            QTimer.singleShot(2000, self.process.kill)
             self.process.waitForFinished(3000)
         
         e.accept()
@@ -317,7 +317,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
             self.process.terminate()
-            QTimer.singleShot(2000, self.process, SLOT('kill()'))
+            QTimer.singleShot(2000, self.process.kill)
             self.process.waitForFinished(3000)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)

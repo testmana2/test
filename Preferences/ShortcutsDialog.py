@@ -24,7 +24,11 @@ from Preferences import Shortcuts
 class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
     """
     Class implementing a dialog for the configuration of eric5s keyboard shortcuts.
+    
+    @signal updateShortcuts() emitted when the user pressed the dialogs OK button
     """
+    updateShortcuts = pyqtSignal()
+    
     objectNameRole = Qt.UserRole
     noCheckRole    = Qt.UserRole + 1
     objectTypeRole = Qt.UserRole + 2
@@ -48,8 +52,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         self.shortcutsList.header().setSortIndicator(0, Qt.AscendingOrder)
         
         self.shortcutDialog = ShortcutDialog()
-        self.connect(self.shortcutDialog, SIGNAL('shortcutChanged'),
-                     self.__shortcutChanged)
+        self.shortcutDialog.shortcutChanged.connect(self.__shortcutChanged)
         
     def __resort(self):
         """
@@ -77,7 +80,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         return itm
         
     def __generateShortcutItem(self, category, action, 
-                               noCheck = False, objectType = None):
+                               noCheck = False, objectType = ""):
         """
         Private method to generate a keyboard shortcut item.
         
@@ -407,7 +410,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         Shortcuts.saveShortcuts()
         Preferences.syncPreferences()
         
-        self.emit(SIGNAL('updateShortcuts'))
+        self.updateShortcuts.emit()
         self.hide()
     
     @pyqtSlot(str)

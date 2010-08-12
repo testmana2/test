@@ -42,10 +42,16 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             from the project
     @signal showMenu(string, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
-    @signal menusAboutToBeCreated emitted when the context menu are about to
+    @signal menusAboutToBeCreated emitted when the context menus are about to
             be created. This is the right moment to add or remove hook methods.
     """
+    appendStderr = pyqtSignal(str)
     sourceFile = pyqtSignal(str)
+    uipreview = pyqtSignal(str)
+    trpreview = pyqtSignal(list)
+    closeSourceWindow = pyqtSignal(str)
+    showMenu = pyqtSignal(str, QMenu)
+    menusAboutToBeCreated = pyqtSignal()
     
     def __init__(self, project, parent = None):
         """
@@ -95,7 +101,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.dirMenuActions = []
         self.dirMultiMenuActions = []
         
-        self.emit(SIGNAL("menusAboutToBeCreated"))
+        self.menusAboutToBeCreated.emit()
         
         self.menu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
@@ -332,7 +338,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenu(self, self.menu)
         
-        self.emit(SIGNAL("showMenu"), "Main", self.menu)
+        self.showMenu.emit("Main", self.menu)
         
     def __showContextMenuMulti(self):
         """
@@ -340,7 +346,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuMulti(self, self.multiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainMulti", self.multiMenu)
+        self.showMenu.emit("MainMulti", self.multiMenu)
         
     def __showContextMenuDir(self):
         """
@@ -348,7 +354,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuDir(self, self.dirMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainDir", self.dirMenu)
+        self.showMenu.emit("MainDir", self.dirMenu)
         
     def __showContextMenuDirMulti(self):
         """
@@ -356,7 +362,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuDirMulti(self, self.dirMultiMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainDirMulti", self.dirMultiMenu)
+        self.showMenu.emit("MainDirMulti", self.dirMultiMenu)
         
     def __showContextMenuBack(self):
         """
@@ -364,7 +370,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         """
         ProjectBaseBrowser._showContextMenuBack(self, self.backMenu)
         
-        self.emit(SIGNAL("showMenu"), "MainBack", self.backMenu)
+        self.showMenu.emit("MainBack", self.backMenu)
         
     def __addFormFiles(self):
         """
@@ -397,20 +403,12 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
     def __openFile(self):
         """
         Private slot to handle the Open menu action.
-        
-        This uses the projects UI type to determine the Qt Designer
-        version to use.
         """
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
-            version = 4
-        else:
-            version = 0
-        
         itmList = self.getSelectedItems()
         for itm in itmList[:]:
             try:
                 if isinstance(itm, ProjectBrowserFileItem):
-                    self.emit(SIGNAL('designerFile'), itm.fileName(), version)
+                    self.designerFile.emit(itm.fileName())
             except:
                 pass
         
@@ -427,11 +425,10 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         Protected slot to handle the open popup menu entry.
         """
         itmList = self.getSelectedItems()
-        
         for itm in itmList:
             if isinstance(itm, ProjectBrowserFileItem):
                 if itm.isDesignerFile():
-                    self.emit(SIGNAL('designerFile'), itm.fileName())
+                    self.designerFile.emit(itm.fileName())
                 else:
                     self.sourceFile.emit(itm.fileName())
         
@@ -440,7 +437,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         Private slot to handle the Preview menu action.
         """
         itmList = self.getSelectedItems()
-        self.emit(SIGNAL('uipreview'), itmList[0].fileName())
+        self.uipreview.emit(itmList[0].fileName())
         
     def __TRPreview(self):
         """
@@ -453,7 +450,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         fileNames.extend([os.path.join(self.project.ppath, trfile) \
                           for trfile in trfiles \
                           if trfile.endswith('.qm')])
-        self.emit(SIGNAL('trpreview'), fileNames)
+        self.trpreview[list].emit(fileNames)
         
     def __newForm(self):
         """
@@ -534,7 +531,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             return
         
         self.project.appendFile(fname)
-        self.emit(SIGNAL('designerFile'), fname)
+        self.designerFile.emit(fname)
         
     def __deleteFile(self):
         """
@@ -557,7 +554,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         if dlg.exec_() == QDialog.Accepted:
             for fn2, fn in zip(fullNames, files):
-                self.emit(SIGNAL('closeSourceWindow'), fn2)
+                self.closeSourceWindow.emit(fn2)
                 self.project.deleteFile(fn)
     
     ############################################################################
@@ -594,7 +591,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             error = str(self.compileProc.readLine(), 
                             ioEncoding, 'replace')
             s += error
-            self.emit(SIGNAL('appendStderr'), s)
+            self.appendStderr.emit(s)
         
     def __compileUIDone(self, exitCode, exitStatus):
         """

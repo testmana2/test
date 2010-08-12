@@ -122,14 +122,33 @@ class Listspace(QSplitter, ViewManager):
     
     @signal changeCaption(string) emitted if a change of the caption is necessary
     @signal editorChanged(string) emitted when the current editor has changed
+    @signal lastEditorClosed() emitted after the last editor window was closed
+    @signal editorOpened(string) emitted after an editor window was opened
+    @signal editorOpenedEd(editor) emitted after an editor window was opened
+    @signal editorClosed(string) emitted just before an editor window gets closed
+    @signal editorClosedEd(editor) emitted just before an editor window gets closed
+    @signal editorSaved(string) emitted after an editor window was saved
+    @signal checkActions(editor) emitted when some actions should be checked
+            for their status
+    @signal cursorChanged(editor) emitted after the cursor position of the active
+            window has changed
+    @signal breakpointToggled(editor) emitted when a breakpoint is toggled.
+    @signal bookmarkToggled(editor) emitted when a bookmark is toggled.
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
-    editorOpened = pyqtSignal(str)
+    
     lastEditorClosed = pyqtSignal()
+    editorOpened = pyqtSignal(str)
+    editorOpenedEd = pyqtSignal(Editor)
+    editorClosed = pyqtSignal(str)
+    editorClosedEd = pyqtSignal(Editor)
+    editorSaved = pyqtSignal(str)
     checkActions = pyqtSignal(Editor)
     cursorChanged = pyqtSignal(Editor)
     breakpointToggled = pyqtSignal(Editor)
+    bookmarkToggled = pyqtSignal(Editor)
+    syntaxerrorToggled = pyqtSignal(Editor)
     
     def __init__(self, parent):
         """

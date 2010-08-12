@@ -418,8 +418,7 @@ class TemplateViewer(QTreeWidget):
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
-        self.connect(self, SIGNAL("itemActivated(QTreeWidgetItem *, int)"),
-                     self.__templateItemActivated)
+        self.itemActivated.connect(self.__templateItemActivated)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         

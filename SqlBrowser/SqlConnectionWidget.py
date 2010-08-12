@@ -15,10 +15,14 @@ class SqlConnectionWidget(QWidget):
     """
     Class implementing a widget showing the SQL connections.
     
-    @signal tableActivated(QString) emitted after the entry for a table has been activated
-    @signal schemaRequested(QString) emitted when the schema display is requested
+    @signal tableActivated(string) emitted after the entry for a table has been activated
+    @signal schemaRequested(string) emitted when the schema display is requested
     @signal cleared() emitted after the connection tree has been cleared
     """
+    tableActivated = pyqtSignal(str)
+    schemaRequested = pyqtSignal(str)
+    cleared = pyqtSignal()
+    
     def __init__(self, parent = None):
         """
         Constructor
@@ -46,12 +50,8 @@ class SqlConnectionWidget(QWidget):
         
         layout.addWidget(self.__connectionTree)
         
-        self.connect(self.__connectionTree, 
-                     SIGNAL("itemActivated(QTreeWidgetItem*, int)"), 
-                     self.__itemActivated)
-        self.connect(self.__connectionTree, 
-                     SIGNAL("currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)"), 
-                     self.__currentItemChanged)
+        self.__connectionTree.itemActivated.connect(self.__itemActivated)
+        self.__connectionTree.currentItemChanged.connect(self.__currentItemChanged)
         
         self.__activeDb = ""
     
@@ -60,7 +60,7 @@ class SqlConnectionWidget(QWidget):
         Public slot to refresh the connection tree.
         """
         self.__connectionTree.clear()
-        self.emit(SIGNAL("cleared()"))
+        self.cleared.emit()
         
         connectionNames = QSqlDatabase.connectionNames()
         
@@ -92,7 +92,7 @@ class SqlConnectionWidget(QWidget):
         if cItm is None or cItm.parent() is None:
             return
         self.__setActive(cItm.parent())
-        self.emit(SIGNAL("schemaRequested(QString)"), cItm.text(0))
+        self.schemaRequested.emit(cItm.text(0))
     
     def __itemActivated(self, itm, column):
         """
@@ -108,7 +108,7 @@ class SqlConnectionWidget(QWidget):
             self.__setActive(itm)
         else:
             self.__setActive(itm.parent())
-            self.emit(SIGNAL("tableActivated(QString)"), itm.text(0))
+            self.tableActivated.emit(itm.text(0))
     
     def __currentItemChanged(self, current, previous):
         """

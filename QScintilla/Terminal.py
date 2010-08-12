@@ -89,7 +89,7 @@ class Terminal(QsciScintillaCompat):
         
         # Create a little context menu to send Ctrl-C, Ctrl-D or Ctrl-Z
         self.csm = QSignalMapper(self)
-        self.connect(self.csm, SIGNAL('mapped(int)'), self.__sendCtrl)
+        self.csm.mapped[int].connect(self.__sendCtrl)
         
         self.cmenu = QMenu(self.trUtf8('Ctrl Commands'))
         act = self.cmenu.addAction(self.trUtf8('Ctrl-C'))

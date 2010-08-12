@@ -80,8 +80,7 @@ class Shell(QsciScintillaCompat):
             """ window caption.</p>"""
         ))
         
-        self.connect(self, SIGNAL('userListActivated(int, const QString)'),
-                     self.__completionListSelected)
+        self.userListActivated.connect(self.__completionListSelected)
         
         self.__showStdOutErr = Preferences.getShell("ShowStdOutErr")
         if self.__showStdOutErr:
@@ -143,7 +142,7 @@ class Shell(QsciScintillaCompat):
         for language in self.clientLanguages:
             act = self.lmenu.addAction(language)
             act.setData(language)
-        self.connect(self.lmenu, SIGNAL("triggered(QAction *)"), self.__startDebugClient)
+        self.lmenu.triggered.connect(self.__startDebugClient)
         
         # Create the history context menu
         self.hmenu = QMenu(self.trUtf8('History'))

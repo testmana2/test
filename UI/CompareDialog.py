@@ -131,17 +131,13 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.cReplacedFormat.setBackground(QBrush(QColor(190, 190, 237)))
         
         # connect some of our widgets explicitly
-        self.connect(self.file1Edit, SIGNAL("textChanged(const QString &)"), 
-                     self.__fileChanged)
-        self.connect(self.file2Edit, SIGNAL("textChanged(const QString &)"), 
-                     self.__fileChanged)
-        self.connect(self.synchronizeCheckBox, SIGNAL("toggled(bool)"), 
-                     self.on_synchronizeCheckBox_toggled)
-        self.connect(self.vsb1, SIGNAL("valueChanged(int)"), self.__scrollBarMoved)
-        self.connect(self.vsb1, SIGNAL('valueChanged(int)'),
-            self.vsb2, SLOT('setValue(int)'))
-        self.connect(self.vsb2, SIGNAL('valueChanged(int)'),
-            self.vsb1, SLOT('setValue(int)'))
+        self.file1Edit.textChanged.connect(self.__fileChanged)
+        self.file2Edit.textChanged.connect(self.__fileChanged)
+        self.synchronizeCheckBox.toggled[bool].connect(
+            self.on_synchronizeCheckBox_toggled)
+        self.vsb1.valueChanged.connect(self.__scrollBarMoved)
+        self.vsb1.valueChanged.connect(self.vsb2.setValue)
+        self.vsb2.valueChanged.connect(self.vsb1.setValue)
         
         self.diffParas = []
         self.currentDiffPos = -1
@@ -416,15 +412,11 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         if sync:
             self.hsb2.setValue(self.hsb1.value())
-            self.connect(self.hsb1, SIGNAL('valueChanged(int)'),
-                self.hsb2, SLOT('setValue(int)'))
-            self.connect(self.hsb2, SIGNAL('valueChanged(int)'),
-                self.hsb1, SLOT('setValue(int)'))
+            self.hsb1.valueChanged.connect(self.hsb2.setValue)
+            self.hsb2.valueChanged.connect(self.hsb1.setValue)
         else:
-            self.disconnect(self.hsb1, SIGNAL('valueChanged(int)'),
-                self.hsb2, SLOT('setValue(int)'))
-            self.disconnect(self.hsb2, SIGNAL('valueChanged(int)'),
-                self.hsb1, SLOT('setValue(int)'))
+            self.hsb1.valueChanged.disconnect(self.hsb2.setValue)
+            self.hsb2.valueChanged.disconnect(self.hsb1.setValue)
 
 class CompareWindow(QMainWindow):
     """

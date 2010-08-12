@@ -7,7 +7,6 @@
 Module implementing the single application server and client.
 """
 
-from PyQt4.QtCore import SIGNAL
 from PyQt4.QtNetwork import QLocalServer, QLocalSocket
 
 class SingleApplicationServer(QLocalServer):
@@ -79,7 +78,7 @@ class SingleApplicationServer(QLocalServer):
         """
         if self.qsock is not None:
             self.qsock.readyRead[()].disconnect(self.__parseLine)
-            self.disconnect(self.qsock, SIGNAL('disconnected()'), self.__disconnected)
+            self.qsock.disconnected.disconnect(self.__disconnected)
         
         self.qsock = None
         

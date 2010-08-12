@@ -144,8 +144,8 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         hboxLayout.addWidget(le2)
         self.singlesItemsBoxLayout.addWidget(hbox)
         
-        self.connect(cb1, SIGNAL('activated(int)'), self.__singlesCharTypeSelected)
-        self.connect(cb2, SIGNAL('activated(int)'), self.__singlesCharTypeSelected)
+        cb1.activated[int].connect(self.__singlesCharTypeSelected)
+        cb2.activated[int].connect(self.__singlesCharTypeSelected)
         hbox.show()
         
         self.singlesItemsBox.adjustSize()
@@ -182,8 +182,8 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         hboxLayout.addWidget(le2)
         self.rangesItemsBoxLayout.addWidget(hbox)
         
-        self.connect(cb1, SIGNAL('activated(int)'), self.__rangesCharTypeSelected)
-        self.connect(cb2, SIGNAL('activated(int)'), self.__rangesCharTypeSelected)
+        cb1.activated[int].connect(self.__rangesCharTypeSelected)
+        cb2.activated[int].connect(self.__rangesCharTypeSelected)
         hbox.show()
         
         self.rangesItemsBox.adjustSize()

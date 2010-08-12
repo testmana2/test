@@ -44,6 +44,15 @@ class Browser(QTreeView):
     @signal unittestOpen(string) emitted to open a Python file for a unittest
     """
     sourceFile = pyqtSignal((str, ), (str, int), (str, int, str))
+    designerFile = pyqtSignal(str)
+    linguistFile = pyqtSignal(str)
+    trpreview = pyqtSignal(list)
+    projectFile = pyqtSignal(str)
+    multiProjectFile = pyqtSignal(str)
+    pixmapFile = pyqtSignal(str)
+    pixmapEditFile = pyqtSignal(str)
+    svgFile = pyqtSignal(str)
+    unittestOpen = pyqtSignal(str)
     
     def __init__(self, parent = None):
         """
@@ -67,9 +76,9 @@ class Browser(QTreeView):
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self._contextMenuRequested)
-        self.connect(self, SIGNAL("activated(const QModelIndex &)"), self._openItem)
-        self.connect(self, SIGNAL("expanded(const QModelIndex &)"), self._resizeColumns)
-        self.connect(self, SIGNAL("collapsed(const QModelIndex &)"), self._resizeColumns)
+        self.activated.connect(self._openItem)
+        self.expanded.connect(self._resizeColumns)
+        self.collapsed.connect(self._resizeColumns)
         
         self.setWhatsThis(QApplication.translate('Browser', 
             """<b>The Browser Window</b>"""
@@ -323,24 +332,24 @@ class Browser(QTreeView):
                 elif itm.isDFile():
                     self.sourceFile[str, int, str].emit(itm.fileName(), 1, "D")
                 elif itm.isDesignerFile():
-                    self.emit(SIGNAL('designerFile'), itm.fileName())
+                    self.designerFile.emit(itm.fileName())
                 elif itm.isLinguistFile():
                     if itm.fileExt() == '.ts':
-                        self.emit(SIGNAL('linguistFile'), itm.fileName())
+                        self.linguistFile.emit(itm.fileName())
                     else:
-                        self.emit(SIGNAL('trpreview'), [itm.fileName()])
+                        self.trpreview.emit([itm.fileName()])
                 elif itm.isProjectFile():
-                    self.emit(SIGNAL('projectFile'), itm.fileName())
+                    self.projectFile.emit(itm.fileName())
                 elif itm.isMultiProjectFile():
-                    self.emit(SIGNAL('multiProjectFile'), itm.fileName())
+                    self.multiProjectFile.emit(itm.fileName())
                 elif itm.isIdlFile():
                     self.sourceFile[str].emit(itm.fileName())
                 elif itm.isResourcesFile():
                     self.sourceFile[str].emit(itm.fileName())
                 elif itm.isPixmapFile():
-                    self.emit(SIGNAL('pixmapFile'), itm.fileName())
+                    self.pixmapFile.emit(itm.fileName())
                 elif itm.isSvgFile():
-                    self.emit(SIGNAL('svgFile'), itm.fileName())
+                    self.svgFile.emit(itm.fileName())
                 else:
                     type_ = mimetypes.guess_type(itm.fileName())[0]
                     if type_ is None or type_.split("/")[0] == "text":
@@ -366,7 +375,7 @@ class Browser(QTreeView):
         for itm in itmList:
             if isinstance(itm, BrowserFileItem):
                 if itm.isPixmapFile():
-                    self.emit(SIGNAL('pixmapEditFile'), itm.fileName())
+                    self.pixmapEditFile.emit(itm.fileName())
         
     def _copyToClipboard(self):
         """
@@ -397,7 +406,7 @@ class Browser(QTreeView):
             pyfn = None
 
         if pyfn is not None:
-            self.emit(SIGNAL('unittestOpen'), pyfn)
+            self.unittestOpen.emit(pyfn)
         
     def __newToplevelDir(self):
         """

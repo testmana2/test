@@ -22,7 +22,11 @@ from .ProjectBrowserSortFilterProxyModel import ProjectBrowserSortFilterProxyMod
 class ProjectBaseBrowser(Browser):
     """
     Baseclass implementing common functionality for the various project browsers.
+    
+    @signal closeSourceWindow(str) emitted to close a source file
     """
+    closeSourceWindow = pyqtSignal(str)
+    
     def __init__(self, project, type_, parent = None):
         """
         Constructor
@@ -55,9 +59,8 @@ class ProjectBaseBrowser(Browser):
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self._contextMenuRequested)
-        self.connect(self, SIGNAL("activated(const QModelIndex &)"), self._openItem)
-        self.connect(self._model, SIGNAL("rowsInserted(const QModelIndex &, int, int)"),
-                     self.__modelRowsInserted)
+        self.activated.connect(self._openItem)
+        self._model.rowsInserted.connect(self.__modelRowsInserted)
         self._connectExpandedCollapsed()
         
         self._createPopupMenus()
@@ -73,19 +76,15 @@ class ProjectBaseBrowser(Browser):
         """
         Protected method to connect the expanded and collapsed signals.
         """
-        self.connect(self, SIGNAL("expanded(const QModelIndex &)"), 
-            self._resizeColumns)
-        self.connect(self, SIGNAL("collapsed(const QModelIndex &)"), 
-            self._resizeColumns)
+        self.expanded.connect(self._resizeColumns)
+        self.collapsed.connect(self._resizeColumns)
         
     def _disconnectExpandedCollapsed(self):
         """
         Protected method to disconnect the expanded and collapsed signals.
         """
-        self.disconnect(self, SIGNAL("expanded(const QModelIndex &)"), 
-            self._resizeColumns)
-        self.disconnect(self, SIGNAL("collapsed(const QModelIndex &)"), 
-            self._resizeColumns)
+        self.expanded.disconnect(self._resizeColumns)
+        self.collapsed.disconnect(self._resizeColumns)
         
     def _createPopupMenus(self):
         """
@@ -259,7 +258,7 @@ class ProjectBaseBrowser(Browser):
         
         for itm in itmList[:]:
             fn = itm.fileName()
-            self.emit(SIGNAL('closeSourceWindow'), fn)
+            self.closeSourceWindow.emit(fn)
             self.project.removeFile(fn)
         
     def _removeDir(self):

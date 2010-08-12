@@ -111,14 +111,10 @@ class PreferencesLexer(QsciLexer):
                 self.ind2style[index] = i
                 index += 1
         
-        self.connect(self, SIGNAL("colorChanged (const QColor&, int)"), 
-                     self.setColor)
-        self.connect(self, SIGNAL("eolFillChanged (bool, int)"), 
-                     self.setEolFill)
-        self.connect(self, SIGNAL("fontChanged (const QFont&, int)"), 
-                     self.setFont)
-        self.connect(self, SIGNAL("paperChanged (const QColor&, int )"), 
-                     self.setPaper)
+        self.colorChanged.connect(self.setColor)
+        self.eolFillChanged.connect(self.setEolFill)
+        self.fontChanged.connect(self.setFont)
+        self.paperChanged.connect(self.setPaper)
         
         # read the last stored values from preferences file
         self.readSettings(Preferences.Prefs.settings, "Scintilla")
