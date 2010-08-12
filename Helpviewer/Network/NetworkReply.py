@@ -35,8 +35,8 @@ class NetworkReply(QNetworkReply):
                        QByteArray.number(fileData.length()))
         self.setAttribute(QNetworkRequest.HttpStatusCodeAttribute, 200)
         self.setAttribute(QNetworkRequest.HttpReasonPhraseAttribute, "OK")
-        QTimer.singleShot(0, self, SIGNAL("metaDataChanged()"))
-        QTimer.singleShot(0, self, SIGNAL("readyRead()"))
+        QTimer.singleShot(0, lambda: self.metaDataChanged.emit())
+        QTimer.singleShot(0, lambda: self.readyRead.emit())
     
     def abort(self):
         """
@@ -64,5 +64,5 @@ class NetworkReply(QNetworkReply):
         buffer = bytes(self.__data[:len_])
         self.__data.remove(0, len_)
         if self.__data.length() == 0:
-            QTimer.singleShot(0, self, SIGNAL("finished()"))
+            QTimer.singleShot(0, lambda: self.finished.emit())
         return buffer
