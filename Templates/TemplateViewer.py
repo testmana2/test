@@ -670,13 +670,16 @@ class TemplateViewer(QTreeWidget):
             # It should be done in this way to allow undo
             editor.beginUndoAction()
             if editor.hasSelectedText():
-                line = editor.getSelection()[0]
+                line, index = editor.getSelection()[0:2]
                 editor.removeSelectedText()
             else:
-                line = editor.getCursorPosition()[0]
+                line, index = editor.getCursorPosition()
             
-            if len(indent) > 0:
-                count += len(indent)
+            if lines == 1:
+                count += index
+            else:
+                if len(indent) > 0:
+                    count += len(indent)
             
             if "i_n_s_e_r_t_i_o_n" in txt and "s_e_l_e_c_t" in txt:
                 txt = "'Insertion and selection can not be in template together'"
@@ -687,8 +690,11 @@ class TemplateViewer(QTreeWidget):
                     count =  aline.find("i_n_s_e_r_t_i_o_n")
                     if count >= 0:
                         txt = txt.replace("i_n_s_e_r_t_i_o_n",  "")
-                        if len(indent) > 0:
-                            count += len(indent)
+                        if lines == 1:
+                            count += index
+                        else:
+                            if len(indent) > 0:
+                                count += len(indent)
                         break
                     else:
                         lines += 1
