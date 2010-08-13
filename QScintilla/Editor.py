@@ -3636,24 +3636,24 @@ class Editor(QsciScintillaCompat):
         cv = self.callTipsVisible()
         if cv > 0:
             # this is just a safe guard
-            ct = "\n".join(callTips[:cv])
+            ct = self._encodeString("\n".join(callTips[:cv]))
         else:
             # until here and unindent below
-            ct = "\n".join(callTips)
+            ct = self._encodeString("\n".join(callTips))
         
         self.SendScintilla(QsciScintilla.SCI_CALLTIPSHOW, 
                            self.__adjustedCallTipPosition(ctshift, pos), ct)
-        if '\n' in ct:
+        if b'\n' in ct:
             return
         
         # Highlight the current argument
         if commas == 0:
-            astart = ct.find('(')
+            astart = ct.find(b'(')
         else:
-            astart = ct.find(',')
+            astart = ct.find(b',')
             commas -= 1
             while astart != -1 and commas > 0:
-                astart = ct.find(',', astart + 1)
+                astart = ct.find(b',', astart + 1)
                 commas -= 1
         
         if astart == -1:
@@ -3661,20 +3661,20 @@ class Editor(QsciScintillaCompat):
         
         depth = 0
         for aend in range(astart + 1, len(ct)):
-            ch = ct[aend]
+            ch = ct[aend:aend + 1]
             
-            if ch == ',' and depth == 0:
+            if ch == b',' and depth == 0:
                 break
-            elif ch == '(':
+            elif ch == b'(':
                 depth += 1
-            elif ch == ')':
+            elif ch == b')':
                 if depth == 0:
                     break
                 
                 depth -= 1
         
         if astart != aend:
-            self.SendScintilla(QsciScintilla.SCI_CALLTIPSETHLT, astart, aend)
+            self.SendScintilla(QsciScintilla.SCI_CALLTIPSETHLT, astart + 1, aend)
     
     def __adjustedCallTipPosition(self, ctshift, pos):
         """

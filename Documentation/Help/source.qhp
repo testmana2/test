@@ -5439,6 +5439,7 @@
       <keyword name="QsciScintillaCompat (Constructor)" id="QsciScintillaCompat (Constructor)" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__init__" />
       <keyword name="QsciScintillaCompat.__doSearchTarget" id="QsciScintillaCompat.__doSearchTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__doSearchTarget" />
       <keyword name="QsciScintillaCompat.__setFoldMarker" id="QsciScintillaCompat.__setFoldMarker" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__setFoldMarker" />
+      <keyword name="QsciScintillaCompat._encodeString" id="QsciScintillaCompat._encodeString" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat._encodeString" />
       <keyword name="QsciScintillaCompat.byteAt" id="QsciScintillaCompat.byteAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.byteAt" />
       <keyword name="QsciScintillaCompat.charAt" id="QsciScintillaCompat.charAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.charAt" />
       <keyword name="QsciScintillaCompat.clearAllIndicators" id="QsciScintillaCompat.clearAllIndicators" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.clearAllIndicators" />

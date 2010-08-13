@@ -70,6 +70,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.__setFoldMarker">__setFoldMarker</a></td>
 <td>Private method to define a fold marker.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat._encodeString">_encodeString</a></td>
+<td>Protected method to encode a string depending on the current mode.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.byteAt">byteAt</a></td>
 <td>Public method to get the raw character (bytes) at a position in the text.</td>
 </tr><tr>
@@ -335,6 +338,21 @@ marker number to define (integer)
 <dd>
 fold mark symbol to be used (integer)
 </dd>
+</dl><a NAME="QsciScintillaCompat._encodeString" ID="QsciScintillaCompat._encodeString"></a>
+<h4>QsciScintillaCompat._encodeString</h4>
+<b>_encodeString</b>(<i>string</i>)
+<p>
+        Protected method to encode a string depending on the current mode.
+</p><dl>
+<dt><i>string</i></dt>
+<dd>
+string to be encoded (str)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+encoded string (bytes)
+</dd>
 </dl><a NAME="QsciScintillaCompat.byteAt" ID="QsciScintillaCompat.byteAt"></a>
 <h4>QsciScintillaCompat.byteAt</h4>
 <b>byteAt</b>(<i>pos</i>)
@@ -507,7 +525,7 @@ eol string (string)
 </p><dl>
 <dt><i>cmd</i></dt>
 <dd>
-the scintilla command to be performed
+the scintilla command to be performed (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.extendSelectionLeft" ID="QsciScintillaCompat.extendSelectionLeft"></a>
 <h4>QsciScintillaCompat.extendSelectionLeft</h4>
@@ -1118,7 +1136,12 @@ the lexer to be set or None to reset it.
 <b>setStyleBits</b>(<i>bits</i>)
 <p>
         Public method to set the number of bits to be used for styling.
-</p><a NAME="QsciScintillaCompat.setStyling" ID="QsciScintillaCompat.setStyling"></a>
+</p><dl>
+<dt><i>bits</i></dt>
+<dd>
+number of style bits (integer)
+</dd>
+</dl><a NAME="QsciScintillaCompat.setStyling" ID="QsciScintillaCompat.setStyling"></a>
 <h4>QsciScintillaCompat.setStyling</h4>
 <b>setStyling</b>(<i>length, style</i>)
 <p>

@@ -5187,6 +5187,7 @@ eric5.QScintilla.QsciScintillaCompat.QSCINTILLA_VERSION?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.ArrowFoldStyle?7
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.ArrowTreeFoldStyle?7
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.UserSeparator?7
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat._encodeString?5(string)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.byteAt?4(pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.charAt?4(pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.clearAllIndicators?4(indicator)
