@@ -184,6 +184,8 @@ class QsciScintillaCompat(QsciScintilla):
     def setStyleBits(self, bits):
         """
         Public method to set the number of bits to be used for styling.
+        
+        @param bits number of style bits (integer)
         """
         self.SendScintilla(QsciScintilla.SCI_SETSTYLEBITS, bits)
     
@@ -327,7 +329,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to perform a simple editor command.
         
-        @param cmd the scintilla command to be performed
+        @param cmd the scintilla command to be performed (integer)
         """
         self.SendScintilla(cmd)
     
@@ -635,9 +637,10 @@ class QsciScintillaCompat(QsciScintilla):
         self.SendScintilla(QsciScintilla.SCI_SETTARGETSTART, self.__targetSearchStart)
         self.SendScintilla(QsciScintilla.SCI_SETTARGETEND, self.__targetSearchEnd)
         self.SendScintilla(QsciScintilla.SCI_SETSEARCHFLAGS, self.__targetSearchFlags)
-        pos = self.SendScintilla(QsciScintilla.SCI_SEARCHINTARGET, 
-                                 len(self.__targetSearchExpr), 
-                                 self.__targetSearchExpr)
+        targetSearchExpr = self._encodeString(self.__targetSearchExpr)
+        pos = self.SendScintilla(QsciScintilla.SCI_SEARCHINTARGET,
+                                 len(targetSearchExpr), 
+                                 targetSearchExpr)
         
         if pos == -1:
             self.__targetSearchActive = False
@@ -735,16 +738,15 @@ class QsciScintillaCompat(QsciScintilla):
         
         if self.__targetSearchFlags & QsciScintilla.SCFIND_REGEXP:
             cmd = QsciScintilla.SCI_REPLACETARGETRE
+            r = replaceStr
         else:
             cmd = QsciScintilla.SCI_REPLACETARGET
+            r = self._encodeString(replaceStr)
         
         start = self.SendScintilla(QsciScintilla.SCI_GETTARGETSTART)
-        
-        r = replaceStr
-        
         self.SendScintilla(cmd, len(r), r)
         
-        self.__targetSearchStart = start + len(replaceStr)
+        self.__targetSearchStart = start + len(r)
     
     #####################################################################################
     # indicator handling methods
@@ -933,11 +935,27 @@ class QsciScintillaCompat(QsciScintilla):
         
         self.SendScintilla(QsciScintilla.SCI_AUTOCSETSEPARATOR, 
                            ord(self.UserSeparator))
-        if self.isUtf8():
-            lst = self.UserSeparator.join(lst).encode("utf-8")
+        self.SendScintilla(QsciScintilla.SCI_USERLISTSHOW, id, 
+            self._encodeString(self.UserSeparator.join(lst)))
+    
+    #####################################################################################
+    # utility methods
+    #####################################################################################
+    
+    def _encodeString(self, string):
+        """
+        Protected method to encode a string depending on the current mode.
+        
+        @param string string to be encoded (str)
+        @return encoded string (bytes)
+        """
+        if isinstance(string, bytes):
+            return string
         else:
-            lst = self.UserSeparator.join(lst).encode("latin-1")
-        self.SendScintilla(QsciScintilla.SCI_USERLISTSHOW, id, lst)
+            if self.isUtf8():
+                return string.encode("utf-8")
+            else:
+                return string.encode("latin-1")
     
 ##    #####################################################################################
 ##    # methods below have been added to QScintilla starting with version after 2.x
