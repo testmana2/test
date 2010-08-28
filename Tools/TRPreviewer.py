@@ -83,7 +83,7 @@ class TRPreviewer(QMainWindow):
 
         self.setCentralWidget(self.cw)
         
-        self.languageComboactivated[str].connect(self.setTranslation)
+        self.languageCombo.activated[str].connect(self.setTranslation)
         
         self.translations = TranslationsDict(self.languageCombo, self)
         self.translations.translationChanged.connect(self.preview.rebuildWidgets)
@@ -708,6 +708,7 @@ class WidgetWorkspace(QWorkspace):
     @signal lastWidgetClosed() emitted after last widget was closed
     """
     lastWidgetClosed = pyqtSignal()
+    rebuildWidgets = pyqtSignal()
     
     def __init__(self, parent = None):
         """
