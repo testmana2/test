@@ -738,10 +738,9 @@ class QsciScintillaCompat(QsciScintilla):
         
         if self.__targetSearchFlags & QsciScintilla.SCFIND_REGEXP:
             cmd = QsciScintilla.SCI_REPLACETARGETRE
-            r = replaceStr
         else:
             cmd = QsciScintilla.SCI_REPLACETARGET
-            r = self._encodeString(replaceStr)
+        r = self._encodeString(replaceStr)
         
         start = self.SendScintilla(QsciScintilla.SCI_GETTARGETSTART)
         self.SendScintilla(cmd, len(r), r)
