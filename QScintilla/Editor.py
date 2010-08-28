@@ -4738,11 +4738,10 @@ class Editor(QsciScintillaCompat):
             SIGNAL("rowsInserted(const QModelIndex &, int, int)"),
             self.__addBreakPoints)
         
-        self.disconnect(self.project, SIGNAL("projectPropertiesChanged"), 
-                        self.__projectPropertiesChanged)
-        
         if self.spell:
             self.spell.stopIncrementalCheck()
+            self.disconnect(self.project, SIGNAL("projectPropertiesChanged"), 
+                            self.__projectPropertiesChanged)
         
         QsciScintillaCompat.close(self)
         
