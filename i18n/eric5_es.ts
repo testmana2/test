@@ -9935,7 +9935,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="44"/>
         <source>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:{BodyBgColor};color:{BodyColor}&quot;&gt;&lt;h1 style=&quot;background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}&quot;&gt;Level 1 Header&lt;/h1&gt;&lt;h3 style=&quot;background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}&quot;&gt;Level 2 Header&lt;/h3&gt;&lt;h2 style=&quot;background-color:{CFBgColor};color:{CFColor}&quot;&gt;Class and Function Header&lt;/h2&gt;Standard body text with &lt;a style=&quot;color:{LinkColor}&quot;&gt;some links&lt;/a&gt; embedded.&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:{BodyBgColor};color:{BodyColor}&quot;&gt;&lt;h1 style=&quot;background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}&quot;&gt;Encabezado de Nivel 1&lt;/h1&gt;&lt;h3 style=&quot;background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}&quot;&gt;Encabezado de Nivel 2&lt;/h3&gt;&lt;h2 style=&quot;background-color:{CFBgColor};color:{CFColor}&quot;&gt;Clase y Encabezado de Función&lt;/h2&gt;Texto estándar del cuerpo con &lt;a style=&quot;color:{LinkColor}&quot;&gt;algunos enlaces&lt;/a&gt; embebidos.&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -10022,7 +10022,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="88"/>
         <source>Qt4 Help Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Herramientas de Ayuda de Qt4</translation>
     </message>
 </context>
 <context>
@@ -18710,12 +18710,12 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="73"/>
         <source>Select to show hidden files in the various browsers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para mostrar archivos ocultos en los distintos navegadores</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="76"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar archivos ocultos</translation>
     </message>
 </context>
 <context>
@@ -28577,7 +28577,7 @@ Not connected</source>
     <message>
         <location filename="SqlBrowser/SqlBrowser.py" line="62"/>
         <source>Unable to open connection: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha podido abrir la conexión {0}</translation>
     </message>
 </context>
 <context>
@@ -42155,7 +42155,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="ViewManager/ViewManager.py" line="858"/>
         <source>Join Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Unir Líneas</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="852"/>
@@ -42166,7 +42166,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="ViewManager/ViewManager.py" line="860"/>
         <source>&lt;b&gt;Join Lines&lt;/b&gt;&lt;p&gt;Join the current and the next lines.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Unir Lineas&lt;/b&gt;&lt;p&gt;Unir las líneas actual y siguiente.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
