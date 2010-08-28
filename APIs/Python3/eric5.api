@@ -4891,6 +4891,7 @@ eric5.QScintilla.Printer.Printer.formatPage?4(painter, drawing, area, pagenr)
 eric5.QScintilla.Printer.Printer?1(mode = QPrinter.ScreenResolution)
 eric5.QScintilla.QsciScintillaCompat.QSCINTILLA_VERSION?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.UserSeparator?7
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat._encodeString?5(string)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.byteAt?4(pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.charAt?4(pos)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.clearAllIndicators?4(indicator)

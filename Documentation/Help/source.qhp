@@ -4114,6 +4114,7 @@
       <keyword name="UnittestWindow (Constructor)" id="UnittestWindow (Constructor)" ref="eric5.PyUnit.UnittestDialog.html#UnittestWindow.__init__" />
       <keyword name="UnittestWindow.eventFilter" id="UnittestWindow.eventFilter" ref="eric5.PyUnit.UnittestDialog.html#UnittestWindow.eventFilter" />
       <keyword name="QScintilla (Package)" id="QScintilla (Package)" ref="index-eric5.QScintilla.html" />
+      <keyword name="QsciScintillaCompat._encodeString" id="QsciScintillaCompat._encodeString" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat._encodeString" />
       <keyword name="APIsManager (Module)" id="APIsManager (Module)" ref="eric5.QScintilla.APIsManager.html" />
       <keyword name="APIs" id="APIs" ref="eric5.QScintilla.APIsManager.html#APIs" />
       <keyword name="APIsManager" id="APIsManager" ref="eric5.QScintilla.APIsManager.html#APIsManager" />
