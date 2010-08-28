@@ -4768,10 +4768,10 @@ class Editor(QsciScintillaCompat):
         self.breakpointModel.rowsInserted.disconnect(
             self.__addBreakPoints)
         
-        self.project.projectPropertiesChanged.disconnect(self.__projectPropertiesChanged)
-        
         if self.spell:
             self.spell.stopIncrementalCheck()
+            self.project.projectPropertiesChanged.disconnect(
+                self.__projectPropertiesChanged)
         
         QsciScintillaCompat.close(self)
         
