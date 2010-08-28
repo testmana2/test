@@ -22,6 +22,8 @@ for arg in sys.argv:
         sys.argv.remove(arg)
         break
 
+from E5Gui.E5Application import E5Application
+
 from Tools.TRSingleApplication import TRSingleApplicationClient
 from Utilities import Startup
 
@@ -56,6 +58,7 @@ def main():
                                   "TR file previewer",
                                   options)
     
+    app = E5Application(sys.argv)
     client = TRSingleApplicationClient()
     res = client.connect()
     if res > 0:
@@ -68,7 +71,8 @@ def main():
     else:
         res = Startup.simpleAppStartup(sys.argv,
                                        appinfo,
-                                       createMainWidget)
+                                       createMainWidget, 
+                                       app = app)
         sys.exit(res)
 
 if __name__ == '__main__':

@@ -5509,6 +5509,7 @@ eric5.Tools.TRPreviewer.WidgetWorkspace.eventFilter?4(obj, ev)
 eric5.Tools.TRPreviewer.WidgetWorkspace.hasWidgets?4()
 eric5.Tools.TRPreviewer.WidgetWorkspace.lastWidgetClosed?7
 eric5.Tools.TRPreviewer.WidgetWorkspace.loadWidget?4(uiFileName)
+eric5.Tools.TRPreviewer.WidgetWorkspace.rebuildWidgets?7
 eric5.Tools.TRPreviewer.WidgetWorkspace.showWindowMenu?4(windowMenu)
 eric5.Tools.TRPreviewer.WidgetWorkspace.toggleSelectedWidget?4(act)
 eric5.Tools.TRPreviewer.WidgetWorkspace?1(parent = None)
@@ -5982,7 +5983,7 @@ eric5.Utilities.Startup.loadTranslators?4(qtTransDir, app, translationFiles = ()
 eric5.Utilities.Startup.loaded_translators?7
 eric5.Utilities.Startup.makeAppInfo?4(argv, name, arg, description, options = [])
 eric5.Utilities.Startup.setLibraryPaths?4()
-eric5.Utilities.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed = True)
+eric5.Utilities.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed = True, app = None)
 eric5.Utilities.Startup.usage?4(appinfo, optlen = 12)
 eric5.Utilities.Startup.version?4(appinfo)
 eric5.Utilities._escape?8

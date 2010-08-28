@@ -170,10 +170,10 @@ def main():
                                   options)
     ddindex = Startup.handleArgs(sys.argv, appinfo)
     
+    app = E5Application(sys.argv)
+    
     if Preferences.getUI("SingleApplicationMode"):
         handleSingleApplication(ddindex)
-    
-    app = E5Application(sys.argv)
     
     # set the library paths for plugins
     Startup.setLibraryPaths()

@@ -184,7 +184,7 @@ dictionary describing the application
 <hr /><hr />
 <a NAME="simpleAppStartup" ID="simpleAppStartup"></a>
 <h2>simpleAppStartup</h2>
-<b>simpleAppStartup</b>(<i>argv, appinfo, mwFactory, quitOnLastWindowClosed = True</i>)
+<b>simpleAppStartup</b>(<i>argv, appinfo, mwFactory, quitOnLastWindowClosed = True, app = None</i>)
 <p>
     Module function to start up an application that doesn't need a specialized start up.
 </p><p>
@@ -208,6 +208,9 @@ factory function generating the main widget. This
 <dd>
 flag indicating to quit the application,
         if the last window was closed (boolean)
+</dd><dt><i>app=</i></dt>
+<dd>
+reference to the application object (QApplication or None)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

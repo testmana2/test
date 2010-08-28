@@ -194,7 +194,8 @@ def loadTranslators(qtTransDir, app, translationFiles = ()):
         loc = None
     return loc
 
-def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True):
+def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True, 
+    app = None):
     """
     Module function to start up an application that doesn't need a specialized start up.
     
@@ -210,9 +211,11 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True):
         </dl>
     @keyparam quitOnLastWindowClosed flag indicating to quit the application,
         if the last window was closed (boolean)
+    @keyparam app reference to the application object (QApplication or None)
     """
     handleArgs(argv, appinfo)
-    app = E5Application(argv)
+    if app is None:
+        app = E5Application(argv)
     app.setQuitOnLastWindowClosed(quitOnLastWindowClosed)
     
     setLibraryPaths()
