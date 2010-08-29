@@ -21,7 +21,7 @@ def __reorderFilter(filter, initialFilter = ""):
     """
     if initialFilter:
         fileFilters = filter.split(';;')
-        if len(fileFilters < 10) and initialFilter in fileFilters:
+        if len(fileFilters) < 10 and initialFilter in fileFilters:
             fileFilters.remove(initialFilter)
         fileFilters.insert(0, initialFilter)
         return ";;".join(fileFilters)
