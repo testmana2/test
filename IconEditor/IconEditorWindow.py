@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Action import E5Action, createActionGroup
+from E5Gui import E5FileDialog
 
 from .IconEditorGrid import IconEditorGrid
 from .IconZoomDialog import IconZoomDialog
@@ -983,7 +984,7 @@ class IconEditorWindow(QMainWindow):
         Private slot to open an icon file.
         """
         if self.__maybeSave():
-            fileName = QFileDialog.getOpenFileNameAndFilter(
+            fileName = E5FileDialog.getOpenFileNameAndFilter(
                 self,
                 self.trUtf8("Open icon file"),
                 "",

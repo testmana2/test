@@ -14,6 +14,7 @@ from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5FileDialog
 
 from Globals import recentNameFiles
 
@@ -2960,7 +2961,7 @@ class ViewManager(QObject):
             #     2: Directory of currently active project
             #     3: CWD
             filter = self._getOpenFileFilter()
-            progs = QFileDialog.getOpenFileNamesAndFilter(\
+            progs = E5FileDialog.getOpenFileNamesAndFilter(\
                 self.ui,
                 QApplication.translate('ViewManager', "Open files"),
                 self._getOpenStartDir(),

@@ -16,6 +16,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5FileDialog
 
 from . import Exporters
 from . import Lexers
@@ -2357,7 +2358,7 @@ class Editor(QsciScintillaCompat):
             if path is None:
                 path = ""
             defaultFilter = Preferences.getEditor("DefaultSaveFilter")
-            fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+            fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
                 self.trUtf8("Save File"),
                 path,

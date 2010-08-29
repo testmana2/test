@@ -21,6 +21,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5FileDialog
 
 from Globals import recentNameProject
 
@@ -2874,7 +2875,7 @@ class Project(QObject):
             defaultFilter = self.trUtf8("Compressed Project Files (*.e4pz)")
         else:
             defaultFilter = self.trUtf8("Project Files (*.e4p)")
-        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(\
             self.parent(),
             self.trUtf8("Save project as"),
             self.ppath,
