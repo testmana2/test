@@ -17,6 +17,7 @@ from E5Gui.E5Application import e5App
 from ViewManager.ViewManager import ViewManager
 
 import QScintilla.Editor
+from QScintilla.Editor import Editor
 
 import UI.PixmapCache
 

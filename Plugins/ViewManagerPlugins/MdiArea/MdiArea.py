@@ -13,6 +13,7 @@ from PyQt4.QtGui import *
 from ViewManager.ViewManager import ViewManager
 
 import QScintilla.Editor
+from QScintilla.Editor import Editor
 
 import UI.PixmapCache
 
