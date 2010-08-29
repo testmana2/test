@@ -5269,8 +5269,8 @@
       <keyword name="TRPreviewer" id="TRPreviewer" ref="eric5.Tools.TRPreviewer.html#TRPreviewer" />
       <keyword name="Translation" id="Translation" ref="eric5.Tools.TRPreviewer.html#Translation" />
       <keyword name="TranslationsDict" id="TranslationsDict" ref="eric5.Tools.TRPreviewer.html#TranslationsDict" />
+      <keyword name="WidgetArea" id="WidgetArea" ref="eric5.Tools.TRPreviewer.html#WidgetArea" />
       <keyword name="WidgetView" id="WidgetView" ref="eric5.Tools.TRPreviewer.html#WidgetView" />
-      <keyword name="WidgetWorkspace" id="WidgetWorkspace" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace" />
       <keyword name="TRPreviewer (Constructor)" id="TRPreviewer (Constructor)" ref="eric5.Tools.TRPreviewer.html#TRPreviewer.__init__" />
       <keyword name="TRPreviewer.__about" id="TRPreviewer.__about" ref="eric5.Tools.TRPreviewer.html#TRPreviewer.__about" />
       <keyword name="TRPreviewer.__aboutQt" id="TRPreviewer.__aboutQt" ref="eric5.Tools.TRPreviewer.html#TRPreviewer.__aboutQt" />
@@ -5299,21 +5299,21 @@
       <keyword name="TranslationsDict.loadTransFile" id="TranslationsDict.loadTransFile" ref="eric5.Tools.TRPreviewer.html#TranslationsDict.loadTransFile" />
       <keyword name="TranslationsDict.reload" id="TranslationsDict.reload" ref="eric5.Tools.TRPreviewer.html#TranslationsDict.reload" />
       <keyword name="TranslationsDict.set" id="TranslationsDict.set" ref="eric5.Tools.TRPreviewer.html#TranslationsDict.set" />
+      <keyword name="WidgetArea (Constructor)" id="WidgetArea (Constructor)" ref="eric5.Tools.TRPreviewer.html#WidgetArea.__init__" />
+      <keyword name="WidgetArea.__findWidget" id="WidgetArea.__findWidget" ref="eric5.Tools.TRPreviewer.html#WidgetArea.__findWidget" />
+      <keyword name="WidgetArea.__toggleWidget" id="WidgetArea.__toggleWidget" ref="eric5.Tools.TRPreviewer.html#WidgetArea.__toggleWidget" />
+      <keyword name="WidgetArea.closeAllWidgets" id="WidgetArea.closeAllWidgets" ref="eric5.Tools.TRPreviewer.html#WidgetArea.closeAllWidgets" />
+      <keyword name="WidgetArea.closeWidget" id="WidgetArea.closeWidget" ref="eric5.Tools.TRPreviewer.html#WidgetArea.closeWidget" />
+      <keyword name="WidgetArea.eventFilter" id="WidgetArea.eventFilter" ref="eric5.Tools.TRPreviewer.html#WidgetArea.eventFilter" />
+      <keyword name="WidgetArea.hasWidgets" id="WidgetArea.hasWidgets" ref="eric5.Tools.TRPreviewer.html#WidgetArea.hasWidgets" />
+      <keyword name="WidgetArea.loadWidget" id="WidgetArea.loadWidget" ref="eric5.Tools.TRPreviewer.html#WidgetArea.loadWidget" />
+      <keyword name="WidgetArea.showWindowMenu" id="WidgetArea.showWindowMenu" ref="eric5.Tools.TRPreviewer.html#WidgetArea.showWindowMenu" />
+      <keyword name="WidgetArea.toggleSelectedWidget" id="WidgetArea.toggleSelectedWidget" ref="eric5.Tools.TRPreviewer.html#WidgetArea.toggleSelectedWidget" />
       <keyword name="WidgetView (Constructor)" id="WidgetView (Constructor)" ref="eric5.Tools.TRPreviewer.html#WidgetView.__init__" />
       <keyword name="WidgetView.__rebuildWidget" id="WidgetView.__rebuildWidget" ref="eric5.Tools.TRPreviewer.html#WidgetView.__rebuildWidget" />
       <keyword name="WidgetView.buildWidget" id="WidgetView.buildWidget" ref="eric5.Tools.TRPreviewer.html#WidgetView.buildWidget" />
       <keyword name="WidgetView.isValid" id="WidgetView.isValid" ref="eric5.Tools.TRPreviewer.html#WidgetView.isValid" />
       <keyword name="WidgetView.uiFileName" id="WidgetView.uiFileName" ref="eric5.Tools.TRPreviewer.html#WidgetView.uiFileName" />
-      <keyword name="WidgetWorkspace (Constructor)" id="WidgetWorkspace (Constructor)" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.__init__" />
-      <keyword name="WidgetWorkspace.__findWidget" id="WidgetWorkspace.__findWidget" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.__findWidget" />
-      <keyword name="WidgetWorkspace.__toggleWidget" id="WidgetWorkspace.__toggleWidget" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.__toggleWidget" />
-      <keyword name="WidgetWorkspace.closeAllWidgets" id="WidgetWorkspace.closeAllWidgets" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.closeAllWidgets" />
-      <keyword name="WidgetWorkspace.closeWidget" id="WidgetWorkspace.closeWidget" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.closeWidget" />
-      <keyword name="WidgetWorkspace.eventFilter" id="WidgetWorkspace.eventFilter" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.eventFilter" />
-      <keyword name="WidgetWorkspace.hasWidgets" id="WidgetWorkspace.hasWidgets" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.hasWidgets" />
-      <keyword name="WidgetWorkspace.loadWidget" id="WidgetWorkspace.loadWidget" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.loadWidget" />
-      <keyword name="WidgetWorkspace.showWindowMenu" id="WidgetWorkspace.showWindowMenu" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.showWindowMenu" />
-      <keyword name="WidgetWorkspace.toggleSelectedWidget" id="WidgetWorkspace.toggleSelectedWidget" ref="eric5.Tools.TRPreviewer.html#WidgetWorkspace.toggleSelectedWidget" />
       <keyword name="UIPreviewer (Module)" id="UIPreviewer (Module)" ref="eric5.Tools.UIPreviewer.html" />
       <keyword name="UIPreviewer" id="UIPreviewer" ref="eric5.Tools.UIPreviewer.html#UIPreviewer" />
       <keyword name="UIPreviewer (Constructor)" id="UIPreviewer (Constructor)" ref="eric5.Tools.UIPreviewer.html#UIPreviewer.__init__" />
@@ -9189,6 +9189,7 @@
       <keyword name="MdiArea" id="MdiArea" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea" />
       <keyword name="MdiArea (Constructor)" id="MdiArea (Constructor)" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__init__" />
       <keyword name="MdiArea.__iconizeAllWindows" id="MdiArea.__iconizeAllWindows" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__iconizeAllWindows" />
+      <keyword name="MdiArea.__mapped" id="MdiArea.__mapped" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__mapped" />
       <keyword name="MdiArea.__restoreAllWindows" id="MdiArea.__restoreAllWindows" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__restoreAllWindows" />
       <keyword name="MdiArea.__setSubWindowIcon" id="MdiArea.__setSubWindowIcon" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__setSubWindowIcon" />
       <keyword name="MdiArea.__subWindowActivated" id="MdiArea.__subWindowActivated" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__subWindowActivated" />

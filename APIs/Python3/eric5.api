@@ -3637,6 +3637,7 @@ eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.canCascade?4()
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.canSplit?4()
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.canTile?4()
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.cascade?4()
+eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.changeCaption?7
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.checkActions?7
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.cursorChanged?7
 eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorChanged?7
@@ -5502,20 +5503,20 @@ eric5.Tools.TRPreviewer.TranslationsDict.reload?4()
 eric5.Tools.TRPreviewer.TranslationsDict.set?4(name)
 eric5.Tools.TRPreviewer.TranslationsDict.translationChanged?7
 eric5.Tools.TRPreviewer.TranslationsDict?1(selector, parent)
+eric5.Tools.TRPreviewer.WidgetArea.closeAllWidgets?4()
+eric5.Tools.TRPreviewer.WidgetArea.closeWidget?4()
+eric5.Tools.TRPreviewer.WidgetArea.eventFilter?4(obj, ev)
+eric5.Tools.TRPreviewer.WidgetArea.hasWidgets?4()
+eric5.Tools.TRPreviewer.WidgetArea.lastWidgetClosed?7
+eric5.Tools.TRPreviewer.WidgetArea.loadWidget?4(uiFileName)
+eric5.Tools.TRPreviewer.WidgetArea.rebuildWidgets?7
+eric5.Tools.TRPreviewer.WidgetArea.showWindowMenu?4(windowMenu)
+eric5.Tools.TRPreviewer.WidgetArea.toggleSelectedWidget?4(act)
+eric5.Tools.TRPreviewer.WidgetArea?1(parent = None)
 eric5.Tools.TRPreviewer.WidgetView.buildWidget?4()
 eric5.Tools.TRPreviewer.WidgetView.isValid?4()
 eric5.Tools.TRPreviewer.WidgetView.uiFileName?4()
 eric5.Tools.TRPreviewer.WidgetView?1(uiFileName, parent = None, name = None)
-eric5.Tools.TRPreviewer.WidgetWorkspace.closeAllWidgets?4()
-eric5.Tools.TRPreviewer.WidgetWorkspace.closeWidget?4()
-eric5.Tools.TRPreviewer.WidgetWorkspace.eventFilter?4(obj, ev)
-eric5.Tools.TRPreviewer.WidgetWorkspace.hasWidgets?4()
-eric5.Tools.TRPreviewer.WidgetWorkspace.lastWidgetClosed?7
-eric5.Tools.TRPreviewer.WidgetWorkspace.loadWidget?4(uiFileName)
-eric5.Tools.TRPreviewer.WidgetWorkspace.rebuildWidgets?7
-eric5.Tools.TRPreviewer.WidgetWorkspace.showWindowMenu?4(windowMenu)
-eric5.Tools.TRPreviewer.WidgetWorkspace.toggleSelectedWidget?4(act)
-eric5.Tools.TRPreviewer.WidgetWorkspace?1(parent = None)
 eric5.Tools.TRPreviewer.noTranslationName?7
 eric5.Tools.TRSingleApplication.SAFile?7
 eric5.Tools.TRSingleApplication.SALoadForm?7

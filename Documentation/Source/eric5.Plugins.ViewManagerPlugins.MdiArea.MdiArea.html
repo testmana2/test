@@ -52,6 +52,9 @@ emitted when a bookmark is toggled.
 </dd><dt>breakpointToggled(Editor)</dt>
 <dd>
 emitted when a breakpoint is toggled.
+</dd><dt>changeCaption(str)</dt>
+<dd>
+emitted if a change of the caption is necessary
 </dd><dt>checkActions(Editor)</dt>
 <dd>
 emitted when some actions should be checked
@@ -87,7 +90,7 @@ emitted after the last editor window was closed
 QMdiArea, ViewManager
 <h3>Class Attributes</h3>
 <table>
-<tr><td>bookmarkToggled</td></tr><tr><td>breakpointToggled</td></tr><tr><td>checkActions</td></tr><tr><td>cursorChanged</td></tr><tr><td>editorChanged</td></tr><tr><td>editorClosed</td></tr><tr><td>editorClosedEd</td></tr><tr><td>editorOpened</td></tr><tr><td>editorOpenedEd</td></tr><tr><td>editorSaved</td></tr><tr><td>lastEditorClosed</td></tr><tr><td>syntaxerrorToggled</td></tr>
+<tr><td>bookmarkToggled</td></tr><tr><td>breakpointToggled</td></tr><tr><td>changeCaption</td></tr><tr><td>checkActions</td></tr><tr><td>cursorChanged</td></tr><tr><td>editorChanged</td></tr><tr><td>editorClosed</td></tr><tr><td>editorClosedEd</td></tr><tr><td>editorOpened</td></tr><tr><td>editorOpenedEd</td></tr><tr><td>editorSaved</td></tr><tr><td>lastEditorClosed</td></tr><tr><td>syntaxerrorToggled</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -97,6 +100,9 @@ QMdiArea, ViewManager
 </tr><tr>
 <td><a href="#MdiArea.__iconizeAllWindows">__iconizeAllWindows</a></td>
 <td>Private slot to iconize all windows.</td>
+</tr><tr>
+<td><a href="#MdiArea.__mapped">__mapped</a></td>
+<td>Private slot to handle the activation of a sub window.</td>
 </tr><tr>
 <td><a href="#MdiArea.__restoreAllWindows">__restoreAllWindows</a></td>
 <td>Private slot to restore all windows.</td>
@@ -177,7 +183,17 @@ reference to the debug server object
 <b>__iconizeAllWindows</b>(<i></i>)
 <p>
         Private slot to iconize all windows.
-</p><a NAME="MdiArea.__restoreAllWindows" ID="MdiArea.__restoreAllWindows"></a>
+</p><a NAME="MdiArea.__mapped" ID="MdiArea.__mapped"></a>
+<h4>MdiArea.__mapped</h4>
+<b>__mapped</b>(<i>subWindow</i>)
+<p>
+        Private slot to handle the activation of a sub window.
+</p><dl>
+<dt><i>subWindow</i></dt>
+<dd>
+sub window to be activated (QMdiSubWindow)
+</dd>
+</dl><a NAME="MdiArea.__restoreAllWindows" ID="MdiArea.__restoreAllWindows"></a>
 <h4>MdiArea.__restoreAllWindows</h4>
 <b>__restoreAllWindows</b>(<i></i>)
 <p>

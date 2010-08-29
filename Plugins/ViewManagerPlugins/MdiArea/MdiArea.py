@@ -25,6 +25,7 @@ class MdiArea(QMdiArea, ViewManager):
     """
     Class implementing the mdi area viewmanager class.
     
+    @signal changeCaption(str) emitted if a change of the caption is necessary
     @signal editorChanged(str) emitted when the current editor has changed
     @signal lastEditorClosed() emitted after the last editor window was closed
     @signal editorOpened(str) emitted after an editor window was opened
@@ -39,6 +40,7 @@ class MdiArea(QMdiArea, ViewManager):
     @signal breakpointToggled(Editor) emitted when a breakpoint is toggled.
     @signal bookmarkToggled(Editor) emitted when a bookmark is toggled.
     """
+    changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
     
     lastEditorClosed = pyqtSignal()
@@ -71,9 +73,17 @@ class MdiArea(QMdiArea, ViewManager):
         
         self.__windowMapper = QSignalMapper(self)
         
-        self.__windowMapper.mapped[QWidget].connect(self.setActiveSubWindow)
+        self.__windowMapper.mapped[QWidget].connect(self.__mapped)
         self.subWindowActivated.connect(self.__subWindowActivated)
         
+    def __mapped(self, subWindow):
+        """
+        Private slot to handle the activation of a sub window.
+        
+        @param subWindow sub window to be activated (QMdiSubWindow)
+        """
+        self.setActiveSubWindow(subWindow)
+    
     def canCascade(self):
         """
         Public method to signal if cascading of managed windows is available.

@@ -76,7 +76,7 @@ class TRPreviewer(QMainWindow):
         self.languageLayout.addItem(languageSpacer)
         self.TRPreviewerLayout.addLayout(self.languageLayout)
 
-        self.preview = WidgetWorkspace(self.cw)
+        self.preview = WidgetArea(self.cw)
         self.preview.setObjectName("preview")
         self.TRPreviewerLayout.addWidget(self.preview)
         self.preview.lastWidgetClosed.connect(self.__updateActions)
@@ -213,7 +213,7 @@ class TRPreviewer(QMainWindow):
                 """<b>Tile the windows</b>"""
                 """<p>Rearrange and resize the windows so that they are tiled.</p>"""
         ))
-        self.tileAct.triggered[()].connect(self.preview.tile)
+        self.tileAct.triggered[()].connect(self.preview.tileSubWindows)
         
         self.cascadeAct = QAction(self.trUtf8('&Cascade'), self)
         self.cascadeAct.setStatusTip(self.trUtf8('Cascade the windows'))
@@ -221,7 +221,7 @@ class TRPreviewer(QMainWindow):
                 """<b>Cascade the windows</b>"""
                 """<p>Rearrange and resize the windows so that they are cascaded.</p>"""
         ))
-        self.cascadeAct.triggered[()].connect(self.preview.cascade)
+        self.cascadeAct.triggered[()].connect(self.preview.cascadeSubWindows)
         
         self.closeAct = QAction(UI.PixmapCache.getIcon("close.png"),
                             self.trUtf8('&Close'), self)
@@ -701,9 +701,9 @@ class WidgetView(QWidget):
         """
         self.__timer.start(0)
 
-class WidgetWorkspace(QWorkspace):
+class WidgetArea(QMdiArea):
     """
-    Specialized workspace to show the loaded widgets.
+    Specialized MDI area to show the loaded widgets.
     
     @signal lastWidgetClosed() emitted after last widget was closed
     """
@@ -716,9 +716,10 @@ class WidgetWorkspace(QWorkspace):
         
         @param parent parent widget (QWidget)
         """
-        QWorkspace.__init__(self, parent)
+        QMdiArea.__init__(self, parent)
         
-        self.setScrollBarsEnabled(True)
+        self.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         
         self.widgets = []
     
@@ -728,8 +729,8 @@ class WidgetWorkspace(QWorkspace):
         
         @param uiFileName name of the UI file to load (string)
         """
-        widget = self.__findWidget(uiFileName)
-        if widget is None:
+        wview = self.__findWidget(uiFileName)
+        if wview is None:
             name = os.path.basename(uiFileName)
             if not name:
                 QMessageBox.warning(None,
@@ -754,8 +755,8 @@ class WidgetWorkspace(QWorkspace):
             self.rebuildWidgets.connect(wview.buildWidget)
             wview.installEventFilter(self)
             
-            self.addWindow(wview)
-            self.widgets.append(wview)
+            win = self.addSubWindow(wview)
+            self.widgets.append(win)
         
         wview.showNormal()
     
@@ -804,7 +805,7 @@ class WidgetWorkspace(QWorkspace):
         """
         Public slot to close the active window.
         """
-        aw = self.activeWindow()
+        aw = self.activeSubWindow()
         if aw is not None:
             aw.close()
     
@@ -836,7 +837,8 @@ class WidgetWorkspace(QWorkspace):
         @param act reference to the action that triggered (QAction)
         """
         idx = act.data()
-        self.__toggleWidget(self.widgets[idx])
+        if idx is not None:
+            self.__toggleWidget(self.widgets[idx])
     
     def __toggleWidget(self, w):
         """
