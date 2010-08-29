@@ -813,6 +813,7 @@
     <Source>Helpviewer/UserAgent/__init__.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentMenu.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentDefaults.py</Source>
+    <Source>E5Gui/E5FileDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

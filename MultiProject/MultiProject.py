@@ -18,6 +18,9 @@ from Globals import recentNameMultiProject
 from .PropertiesDialog import PropertiesDialog
 from .AddProjectDialog import AddProjectDialog
 
+from E5Gui.E5Action import E5Action, createActionGroup
+from E5Gui import E5FileDialog
+
 from E5XML.XMLUtilities import make_parser
 from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
 from E5XML.XMLEntityResolver import XMLEntityResolver
@@ -26,8 +29,6 @@ from E5XML.MultiProjectHandler import MultiProjectHandler
 from E5XML.MultiProjectWriter import MultiProjectWriter
 
 import UI.PixmapCache
-
-from E5Gui.E5Action import E5Action, createActionGroup
 
 import Preferences
 import Utilities
@@ -582,7 +583,7 @@ class MultiProject(QObject):
             defaultFilter = self.trUtf8("Compressed Multiproject Files (*.e4mz)")
         else:
             defaultFilter = self.trUtf8("Multiproject Files (*.e4m)")
-        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.parent(),
             self.trUtf8("Save multiproject as"),
             self.ppath,
