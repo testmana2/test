@@ -138,7 +138,7 @@ class IconEditorGrid(QWidget):
         
         self.__undoStack.canRedoChanged.connect(self.canRedoChanged)
         self.__undoStack.canUndoChanged.connect(self.canUndoChanged)
-        self.__undoStack.cleanChanged.connect(elf.__cleanChanged)
+        self.__undoStack.cleanChanged.connect(self.__cleanChanged)
         
         self.imageChanged.connect(self.__updatePreviewPixmap)
         QApplication.clipboard().dataChanged.connect(self.__checkClipboard)
