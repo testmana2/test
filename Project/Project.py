@@ -2906,6 +2906,11 @@ class Project(QObject):
             ok = self.__writeProject(fn)
             
             if ok:
+                # create management directory if not present
+                mgmtDir = self.getProjectManagementDir()
+                if not os.path.exists(mgmtDir):
+                    os.makedirs(mgmtDir)
+                
                 # now save the tasks
                 self.__writeTasks()
             

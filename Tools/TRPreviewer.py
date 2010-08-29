@@ -728,8 +728,8 @@ class WidgetWorkspace(QWorkspace):
         
         @param uiFileName name of the UI file to load (string)
         """
-        widget = self.__findWidget(uiFileName)
-        if widget is None:
+        wview = self.__findWidget(uiFileName)
+        if wview is None:
             name = os.path.basename(uiFileName)
             if not name:
                 QMessageBox.warning(None,
