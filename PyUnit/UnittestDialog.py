@@ -149,10 +149,13 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         """
         if self.dbs:
             pyExtensions = \
-                ' '.join(["*{0}".format(ext) for ext in self.dbs.getExtensions('Python')])
+                ' '.join(["*{0}".format(ext) 
+                          for ext in self.dbs.getExtensions('Python')])
             py3Extensions = \
-                ' '.join(["*{0}".format(ext) for ext in self.dbs.getExtensions('Python3')])
-            filter = self.trUtf8("Python3 Files ({1});;Python2 Files ({0});;All Files (*)")\
+                ' '.join(["*{0}".format(ext) 
+                          for ext in self.dbs.getExtensions('Python3')])
+            filter = self.trUtf8(
+                "Python3 Files ({1});;Python2 Files ({0});;All Files (*)")\
                 .format(pyExtensions, py3Extensions)
         else:
             filter = self.trUtf8("Python Files (*.py);;All Files (*)")

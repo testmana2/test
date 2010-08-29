@@ -74,7 +74,9 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self,
             self.trUtf8("Select Python documentation entry"),
             QUrl(self.pythonDocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+            self.trUtf8("HTML Files (*.html *.htm);;"
+                "Compressed Help Files (*.chm);;"
+                "All Files (*)"))
         
         if entry:
             self.pythonDocDirEdit.setText(Utilities.toNativeSeparators(entry))
