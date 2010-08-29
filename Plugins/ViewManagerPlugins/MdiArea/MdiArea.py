@@ -236,6 +236,12 @@ class MdiArea(QMdiArea, ViewManager):
                     self.tileAct, self.cascadeAct, 
                     self.restoreAllAct, self.iconizeAllAct, 
                     None])
+        for act in [self.restoreAllAct, self.iconizeAllAct]:
+            act.setEnabled(len(self.editors) != 0)
+        for act in [self.nextChildAct, self.prevChildAct, self.tileAct, 
+                    self.cascadeAct]:
+            act.setEnabled(len(self.editors) > 1)
+        
         act = windowMenu.addMenu(self.windowsMenu)
         if len(self.editors) == 0:
             act.setEnabled(False)
@@ -384,7 +390,7 @@ class MdiArea(QMdiArea, ViewManager):
             watched.close()
             return True
         
-        return False
+        return QMdiArea.eventFilter(self, watched, event)
         
     def __restoreAllWindows(self):
         """
