@@ -305,7 +305,7 @@ class Project(QObject):
         Private method to initialize the project data part.
         """
         self.loaded = False     # flag for the loaded status
-        self.dirty = False      # dirty flag
+        self.__dirty = False      # dirty flag
         self.pfile = ""         # name of the project file
         self.ppath = ""         # name of the project directory
         self.ppathRe = None
@@ -523,7 +523,7 @@ class Project(QObject):
         
         @param b dirty state (boolean)
         """
-        self.dirty = b
+        self.__dirty = b
         self.saveAct.setEnabled(b)
         self.dirty.emit(bool(b))
         
@@ -533,7 +533,7 @@ class Project(QObject):
         
         @return dirty state (boolean)
         """
-        return self.dirty
+        return self.__dirty
         
     def isOpen(self):
         """

@@ -89,7 +89,7 @@ class MultiProject(QObject):
         Private method to initialize the multi project data part.
         """
         self.loaded = False     # flag for the loaded status
-        self.dirty = False      # dirty flag
+        self.__dirty = False      # dirty flag
         self.pfile = ""         # name of the multi project file
         self.ppath = ""         # name of the multi project directory
         self.description = ""   # description of the multi project
@@ -139,7 +139,7 @@ class MultiProject(QObject):
         
         @param b dirty state (boolean)
         """
-        self.dirty = b
+        self.__dirty = b
         self.saveAct.setEnabled(b)
         self.dirty.emit(bool(b))
     
@@ -149,7 +149,7 @@ class MultiProject(QObject):
         
         @return dirty state (boolean)
         """
-        return self.dirty
+        return self.__dirty
     
     def isOpen(self):
         """
