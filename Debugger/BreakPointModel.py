@@ -47,7 +47,7 @@ class BreakPointModel(QAbstractItemModel):
         
         @return column count (integer)
         """
-        return len(self.header) + 1
+        return len(self.header)
     
     def rowCount(self, parent = QModelIndex()):
         """
@@ -72,8 +72,16 @@ class BreakPointModel(QAbstractItemModel):
         if not index.isValid():
             return None
         
-        if role == Qt.DisplayRole or role == Qt.ToolTipRole:
-            if index.column() < len(self.header):
+        if role == Qt.DisplayRole:
+            if index.column() in [0, 1, 2, 5]:
+                return self.breakpoints[index.row()][index.column()]
+        
+        if role == Qt.CheckStateRole:
+            if index.column() in [3, 4]:
+                return self.breakpoints[index.row()][index.column()]
+        
+        if role == Qt.ToolTipRole:
+            if index.column() in [0, 2]:
                 return self.breakpoints[index.row()][index.column()]
         
         if role == Qt.TextAlignmentRole:
