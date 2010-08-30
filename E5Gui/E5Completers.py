@@ -7,8 +7,10 @@
 Module implementing various kinds of completers.
 """
 
-from PyQt4.QtCore import QDir
+from PyQt4.QtCore import QDir, Qt
 from PyQt4.QtGui import QCompleter, QDirModel, QStringListModel
+
+from Globals import isWindowsPlatform
 
 class E5FileCompleter(QCompleter):
     """
@@ -36,6 +38,8 @@ class E5FileCompleter(QCompleter):
                 QDir.Filters(QDir.Dirs | QDir.Files | QDir.Drives | QDir.AllDirs))
         self.setModel(self.__model)
         self.setCompletionMode(completionMode)
+        if isWindowsPlatform():
+            self.setCaseSensitivity(Qt.CaseInsensitive)
         if parent:
             parent.setCompleter(self)
 
@@ -64,12 +68,14 @@ class E5DirCompleter(QCompleter):
                 QDir.Filters(QDir.Drives | QDir.AllDirs))
         self.setModel(self.__model)
         self.setCompletionMode(completionMode)
+        if isWindowsPlatform():
+            self.setCaseSensitivity(Qt.CaseInsensitive)
         if parent:
             parent.setCompleter(self)
 
 class E5StringListCompleter(QCompleter):
     """
-    Class implementing a completer for strings lists.
+    Class implementing a completer for string lists.
     """
     def __init__(self, parent = None, strings = [],
                  completionMode = QCompleter.PopupCompletion):
