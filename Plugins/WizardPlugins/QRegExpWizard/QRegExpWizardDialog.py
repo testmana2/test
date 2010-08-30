@@ -12,6 +12,8 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_QRegExpWizardDialog import Ui_QRegExpWizardDialog
 
 from .QRegExpWizardRepeatDialog import QRegExpWizardRepeatDialog
@@ -239,7 +241,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 f.write(self.regexpLineEdit.text())
                 f.close()
             except IOError as err:
-                QMessageBox.information(self,
+                E5MessageBox.information(self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("""<p>The regular expression could not be saved.</p>"""
                                 """<p>Reason: {0}</p>""").format(str(err)))
@@ -261,7 +263,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 f.close()
                 self.regexpLineEdit.setText(regexp)
             except IOError as err:
-                QMessageBox.information(self,
+                E5MessageBox.information(self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("""<p>The regular expression could not be saved.</p>"""
                                 """<p>Reason: {0}</p>""").format(str(err)))
@@ -299,17 +301,17 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             else:
                 re.setPatternSyntax(QRegExp.RegExp)
             if re.isValid():
-                QMessageBox.information(None,
+                E5MessageBox.information(self,
                     self.trUtf8(""),
                     self.trUtf8("""The regular expression is valid."""))
             else:
-                QMessageBox.critical(None,
+                QMessageBox.critical(self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
                         .format(re.errorString()))
                 return
         else:
-            QMessageBox.critical(None,
+            QMessageBox.critical(self,
                 self.trUtf8("Error"),
                 self.trUtf8("""A regular expression must be given."""))
 

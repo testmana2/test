@@ -11,6 +11,8 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from PyQt4.QtHelp import QHelpEngineCore
 
+from E5Gui import E5MessageBox
+
 from .Ui_QtHelpDocumentationDialog import Ui_QtHelpDocumentationDialog
 
 class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
@@ -105,7 +107,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         for item in items:
             ns = item.text()
             if ns in list(openedDocs.values()):
-                res = QMessageBox.information(self,
+                res = QMessageBox.warning(self,
                     self.trUtf8("Remove Documentation"),
                     self.trUtf8("""Some documents currently opened reference the """
                                 """documentation you are attempting to remove. """

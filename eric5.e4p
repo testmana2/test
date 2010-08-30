@@ -815,6 +815,7 @@
     <Source>Helpviewer/UserAgent/UserAgentDefaults.py</Source>
     <Source>E5Gui/E5FileDialog.py</Source>
     <Source>QScintilla/Exporters/ExporterODT.py</Source>
+    <Source>E5Gui/E5MessageBox.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

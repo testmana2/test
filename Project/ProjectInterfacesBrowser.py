@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -450,12 +451,12 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             for file in fileList:
                 self.project.appendFile(file)
             if not self.noDialog:
-                QMessageBox.information(None,
+                E5MessageBox.information(self,
                     self.trUtf8("Interface Compilation"),
                     self.trUtf8("The compilation of the interface file was successful."))
         else:
             if not self.noDialog:
-                QMessageBox.information(None,
+                E5MessageBox.information(self,
                     self.trUtf8("Interface Compilation"),
                     self.trUtf8("The compilation of the interface file failed."))
         self.compileProc = None

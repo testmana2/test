@@ -16,6 +16,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .TemplatePropertiesDialog import TemplatePropertiesDialog
 from .TemplateMultipleVariablesDialog import TemplateMultipleVariablesDialog
@@ -560,7 +561,7 @@ class TemplateViewer(QTreeWidget):
         """
         Private method to show some help.
         """
-        QMessageBox.information(self,
+        E5MessageBox.information(self,
             self.trUtf8("Template Help"),
             self.trUtf8("""<p><b>Template groups</b> are a means of grouping individual"""
                         """ templates. Groups have an attribute that specifies,"""

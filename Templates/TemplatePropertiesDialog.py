@@ -14,6 +14,7 @@ import QScintilla.Lexers
 
 from .Ui_TemplatePropertiesDialog import Ui_TemplatePropertiesDialog
 
+from E5Gui import E5MessageBox
 
 class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
     """
@@ -106,7 +107,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         """
         Public slot to show some help.
         """
-        QMessageBox.information(self,
+        E5MessageBox.information(self,
             self.trUtf8("Template Help"),
             self.trUtf8(\
                 """<p>To use variables in a template, you just have to enclose"""

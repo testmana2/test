@@ -21,7 +21,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5FileDialog
+from E5Gui import E5FileDialog, E5MessageBox
 
 from Globals import recentNameProject
 
@@ -1805,7 +1805,7 @@ class Project(QObject):
         
         if len(files) == 0:
             if not quiet:
-                QMessageBox.information(None,
+                E5MessageBox.information(self.ui,
                     self.trUtf8("Add directory"),
                     self.trUtf8("<p>The source directory doesn't contain"
                         " any files belonging to the selected category.</p>"))
@@ -1815,7 +1815,7 @@ class Project(QObject):
             try:
                 os.makedirs(target)
             except IOError as why:
-                QMessageBox.critical(None,
+                QMessageBox.critical(self.ui,
                     self.trUtf8("Add directory"),
                     self.trUtf8("<p>The target directory <b>{0}</b> could not be"
                         " created.</p><p>Reason: {1}</p>")
@@ -1831,7 +1831,7 @@ class Project(QObject):
             if not Utilities.samepath(target, source):
                 try:
                     if os.path.exists(targetfile):
-                        res = QMessageBox.warning(None,
+                        res = QMessageBox.warning(self.ui,
                             self.trUtf8("Add directory"),
                             self.trUtf8("<p>The file <b>{0}</b> already exists.</p>"
                                         "<p>Overwrite it?</p>")
@@ -4018,7 +4018,7 @@ class Project(QObject):
         # if newfiles is empty, put up message box informing user nothing found
         if not newFiles:
             if onUserDemand:
-                QMessageBox.information(None,
+                E5MessageBox.information(self.ui,
                     self.trUtf8("Search New Files"),
                     self.trUtf8("There were no new files found to be added."))
             return
@@ -4588,7 +4588,7 @@ class Project(QObject):
         if not archive in self.pdata["OTHERS"]:
             self.appendFile(archive)
         
-        QMessageBox.information(None,
+        E5MessageBox.information(self.ui,
             self.trUtf8("Create Plugin Archive"),
             self.trUtf8("""<p>The eric5 plugin archive file <b>{0}</b> was """
                         """created successfully.</p>""").format(archive))

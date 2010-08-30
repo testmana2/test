@@ -16,6 +16,7 @@ from .Ui_ReplaceWidget import Ui_ReplaceWidget
 from .Editor import Editor
 
 from E5Gui.E5Action import E5Action
+from E5Gui import E5MessageBox
 
 import Preferences
 
@@ -189,7 +190,7 @@ character except an alphabetic character.</td></tr>
             if self.replace:
                 self.ui.replaceButton.setEnabled(True)
         else:
-            QMessageBox.information(self, self.windowTitle(),
+            E5MessageBox.information(self, self.windowTitle(),
                 self.trUtf8("'{0}' was not found.").format(txt))
 
     @pyqtSlot()
@@ -224,7 +225,7 @@ character except an alphabetic character.</td></tr>
             if self.replace:
                 self.ui.replaceButton.setEnabled(True)
         else:
-            QMessageBox.information(self, self.windowTitle(),
+            E5MessageBox.information(self, self.windowTitle(),
                 self.trUtf8("'{0}' was not found.").format(txt))
     
     def __findByReturnPressed(self):
@@ -471,7 +472,7 @@ character except an alphabetic character.</td></tr>
         
         if not ok:
             self.ui.replaceButton.setEnabled(False)
-            QMessageBox.information(self, self.windowTitle(),
+            E5MessageBox.information(self, self.windowTitle(),
                 self.trUtf8("'{0}' was not found.").format(ftxt))
         
         self.__finding = False
@@ -543,11 +544,11 @@ character except an alphabetic character.</td></tr>
         self.ui.replaceButton.setEnabled(False)
         
         if found:
-            QMessageBox.information(self, self.windowTitle(),
+            E5MessageBox.information(self, self.windowTitle(),
                 self.trUtf8("Replaced {0} occurrences.")
                     .format(replacements))
         else:
-            QMessageBox.information(self, self.windowTitle(),
+            E5MessageBox.information(self, self.windowTitle(),
                 self.trUtf8("Nothing replaced because '{0}' was not found.")
                     .format(ftxt))
         

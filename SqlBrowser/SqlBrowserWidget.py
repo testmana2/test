@@ -11,8 +11,9 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtSql import QSqlDatabase, QSqlError, QSqlTableModel, QSqlQueryModel, QSqlQuery
 
-from .SqlConnectionDialog import SqlConnectionDialog
+from E5Gui import E5MessageBox
 
+from .SqlConnectionDialog import SqlConnectionDialog
 from .Ui_SqlBrowserWidget import Ui_SqlBrowserWidget
 
 class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
@@ -38,7 +39,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         self.table.addAction(self.deleteRowAction)
         
         if len(QSqlDatabase.drivers()) == 0:
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
                 self.trUtf8("No database drivers found"),
                 self.trUtf8("""This tool requires at least one Qt database driver. """
                 """Please check the Qt documentation how to build the """

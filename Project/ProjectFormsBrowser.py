@@ -15,6 +15,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -616,19 +617,19 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 if self.compiledFile not in self.project.pdata["SOURCES"]:
                     self.project.appendFile(ofn)
                 if not self.noDialog:
-                    QMessageBox.information(None,
+                    E5MessageBox.information(self,
                         self.trUtf8("Form Compilation"),
                         self.trUtf8("The compilation of the form file"
                             " was successful."))
             except IOError as msg:
                 if not self.noDialog:
-                    QMessageBox.information(None,
+                    E5MessageBox.information(self,
                         self.trUtf8("Form Compilation"),
                         self.trUtf8("<p>The compilation of the form file failed.</p>"
                             "<p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
-                QMessageBox.information(None,
+                E5MessageBox.information(self,
                     self.trUtf8("Form Compilation"),
                     self.trUtf8("The compilation of the form file failed."))
         self.compileProc = None

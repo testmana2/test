@@ -18,6 +18,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .TaskPropertiesDialog import TaskPropertiesDialog
 from .TaskFilterConfigDialog import TaskFilterConfigDialog
@@ -711,7 +712,7 @@ class TaskViewer(QTreeWidget):
         @param on flag indicating the filter state (boolean)
         """
         if on and not self.taskFilter.hasActiveFilter():
-            res = QMessageBox.information(None,
+            res = QMessageBox.question(self,
                 self.trUtf8("Activate task filter"),
                 self.trUtf8("""The task filter doesn't have any active filters."""
                             """ Do you want to configure the filter settings?"""),

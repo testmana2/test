@@ -79,6 +79,7 @@ from E5Gui.E5ToolBarDialog import E5ToolBarDialog
 from E5Gui.E5SqueezeLabels import E5SqueezeLabelPath
 from E5Gui.E5ToolBox import E5VerticalToolBox, E5HorizontalToolBox
 from E5Gui.E5SideBar import E5SideBar
+from E5Gui import E5MessageBox
 
 from VCS.StatusMonitorLed import StatusMonitorLed
 
@@ -3990,7 +3991,7 @@ class UserInterface(QMainWindow):
                 pass
         
         if version == 3:
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
                 self.trUtf8("Qt 3 support"),
                 self.trUtf8("""Qt v.3 is not supported by eric5."""))
             return
@@ -4046,7 +4047,7 @@ class UserInterface(QMainWindow):
         @param version indication for the requested version (Qt 4) (integer)
         """
         if version < 4:
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
                 self.trUtf8("Qt 3 support"),
                 self.trUtf8("""Qt v.3 is not supported by eric5."""))
             return
@@ -4105,7 +4106,7 @@ class UserInterface(QMainWindow):
         @param version indication for the requested version (Qt 4) (integer)
         """
         if version < 4:
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
                 self.trUtf8("Qt 3 support"),
                 self.trUtf8("""Qt v.3 is not supported by eric5."""))
             return
@@ -4155,7 +4156,7 @@ class UserInterface(QMainWindow):
         """
         customViewer = Preferences.getHelp("CustomViewer")
         if not customViewer:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Help"),
                 self.trUtf8("""Currently no custom viewer is selected."""
                             """ Please use the preferences dialog to specify one."""))
@@ -4338,13 +4339,13 @@ class UserInterface(QMainWindow):
                         self.__startToolProcess(tool)
                         return
                 
-                QMessageBox.information(self,
+                E5MessageBox.information(self,
                     self.trUtf8("External Tools"),
                     self.trUtf8("""No tool entry found for external tool '{0}' """
                         """in tool group '{1}'.""").format(toolMenuText, toolGroupName))
                 return
         
-        QMessageBox.information(self,
+        E5MessageBox.information(self,
             self.trUtf8("External Tools"),
             self.trUtf8("""No toolgroup entry '{0}' found.""").format(toolGroupName))
     
@@ -5293,7 +5294,7 @@ class UserInterface(QMainWindow):
                     if QFileInfo(fname).isFile():
                         self.viewmanager.openSourceFile(fname)
                     else:
-                        QMessageBox.information(None,
+                        E5MessageBox.information(self,
                             self.trUtf8("Drop Error"),
                             self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
                                 .format(fname))
@@ -5520,7 +5521,7 @@ class UserInterface(QMainWindow):
             if "-snapshot-" in Version:
                 # check snapshot version
                 if versions[2] > Version:
-                    res = QMessageBox.information(None,
+                    res = QMessageBox.question(self,
                         self.trUtf8("Update available"),
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
@@ -5531,7 +5532,7 @@ class UserInterface(QMainWindow):
                         QMessageBox.Yes)
                     url = res == QMessageBox.Yes and versions[3] or ''
                 elif versions[0] > Version:
-                    res = QMessageBox.information(None,
+                    res = QMessageBox.question(self,
                         self.trUtf8("Update available"),
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
@@ -5543,13 +5544,13 @@ class UserInterface(QMainWindow):
                     url = res == QMessageBox.Yes and versions[1] or ''
                 else:
                     if self.manualUpdatesCheck:
-                        QMessageBox.information(None,
+                        E5MessageBox.information(self,
                             self.trUtf8("Eric5 is up to date"),
                             self.trUtf8("""You are using the latest version of eric5"""))
             else:
                 # check release version
                 if versions[0] > Version:
-                    res = QMessageBox.information(None,
+                    res = QMessageBox.question(self,
                         self.trUtf8("Update available"),
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
@@ -5561,11 +5562,11 @@ class UserInterface(QMainWindow):
                     url = res == QMessageBox.Yes and versions[1] or ''
                 else:
                     if self.manualUpdatesCheck:
-                        QMessageBox.information(None,
+                        E5MessageBox.information(self,
                             self.trUtf8("Eric5 is up to date"),
                             self.trUtf8("""You are using the latest version of eric5"""))
         except IndexError:
-            QMessageBox.warning(None,
+            QMessageBox.warning(self,
                 self.trUtf8("Error during updates check"),
                 self.trUtf8("""Could not perform updates check."""))
         
@@ -5640,7 +5641,7 @@ class UserInterface(QMainWindow):
         the configuration dialog is shown.
         """
         if not Preferences.isConfigured():
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
                 self.trUtf8("First time usage"),
                 self.trUtf8("""eric5 has not been configured yet. """
                             """The configuration dialog will be started."""))

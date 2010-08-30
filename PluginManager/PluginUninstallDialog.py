@@ -15,6 +15,8 @@ import shutil
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
+from E5Gui import E5MessageBox
+
 from .PluginManager import PluginManager
 from .Ui_PluginUninstallDialog import Ui_PluginUninstallDialog
 
@@ -135,14 +137,14 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             
             os.remove(pluginFile)
         except OSError as err:
-            QMessageBox.critical(None,
+            QMessageBox.critical(self,
                 self.trUtf8("Plugin Uninstallation"),
                 self.trUtf8("""<p>The plugin package <b>{0}</b> could not be"""
                             """ removed. Aborting...</p>"""
                             """<p>Reason: {1}</p>""").format(packageDir, str(err)))
             return False
         
-        QMessageBox.information(None,
+        E5MessageBox.information(self,
             self.trUtf8("Plugin Uninstallation"),
             self.trUtf8("""<p>The plugin <b>{0}</b> was uninstalled successfully"""
                         """ from {1}.</p>""")\

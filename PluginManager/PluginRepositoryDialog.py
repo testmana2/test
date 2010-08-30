@@ -19,6 +19,8 @@ from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkRepl
 
 from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
+from E5Gui import E5MessageBox
+
 from E5XML.XMLUtilities import make_parser
 from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
 from E5XML.XMLEntityResolver import XMLEntityResolver
@@ -228,7 +230,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadButton.setEnabled(len(self.__selectedItems()))
         self.__installButton.setEnabled(True)
         self.__doneMethod = None
-        QMessageBox.information(None,
+        E5MessageBox.information(self,
             self.trUtf8("Download Plugin Files"),
             self.trUtf8("""The requested plugins were downloaded."""))
         self.downloadProgress.setValue(0)

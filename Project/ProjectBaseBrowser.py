@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from UI.Browser import *
 
@@ -477,7 +478,7 @@ class ProjectBaseBrowser(Browser):
         QApplication.processEvents()
         
         if selectedEntries == 0:
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
             QApplication.translate('ProjectBaseBrowser', "Select entries"),
             QApplication.translate('ProjectBaseBrowser', 
                 """There were no matching entries found."""))

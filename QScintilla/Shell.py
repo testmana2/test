@@ -15,6 +15,7 @@ from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat
@@ -1356,7 +1357,7 @@ class Shell(QsciScintillaCompat):
                     if not QFileInfo(fname).isDir():
                         self.vm.openSourceFile(fname)
                     else:
-                        QMessageBox.information(None,
+                        E5MessageBox.information(self,
                             self.trUtf8("Drop Error"),
                             self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
                                 .format(fname))

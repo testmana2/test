@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .Ui_SvnStatusDialog import Ui_SvnStatusDialog
 
@@ -495,7 +496,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getModifiedItems()]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Commit"),
                 self.trUtf8("""There are no uncommitted changes available/selected."""))
             return
@@ -521,7 +522,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getUnversionedItems()]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Add"),
                 self.trUtf8("""There are no unversioned entries available/selected."""))
             return
@@ -541,7 +542,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getModifiedItems()]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Revert"),
                 self.trUtf8("""There are no uncommitted changes available/selected."""))
             return
@@ -561,7 +562,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getLockActionItems(self.unlockedIndicators)]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Lock"),
                 self.trUtf8("""There are no unlocked files available/selected."""))
             return
@@ -576,7 +577,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getLockActionItems(self.lockedIndicators)]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Unlock"),
                 self.trUtf8("""There are no locked files available/selected."""))
             return
@@ -591,7 +592,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getLockActionItems(self.stealBreakLockIndicators)]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Break Lock"),
                 self.trUtf8("""There are no locked files available/selected."""))
             return
@@ -606,7 +607,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getLockActionItems(self.stealBreakLockIndicators)]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Steal Lock"),
                 self.trUtf8("""There are no locked files available/selected."""))
             return
@@ -621,7 +622,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getNonChangelistItems()]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Remove from Changelist"),
                 self.trUtf8(
                     """There are no files available/selected not """
@@ -639,7 +640,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getChangelistItems()]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Remove from Changelist"),
                 self.trUtf8(
                     """There are no files available/selected belonging to a changelist."""

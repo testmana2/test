@@ -14,6 +14,8 @@ import fnmatch
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserTranslationType
@@ -829,12 +831,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         self.pylupdateProcRunning = False
         if exitStatus == QProcess.NormalExit and exitCode == 0:
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
                 self.trUtf8("Translation file generation"),
                 self.trUtf8("The generation of the translation files (*.ts)"
                     " was successful."))
         else:
-            QMessageBox.critical(None,
+            QMessageBox.critical(self,
                 self.trUtf8("Translation file generation"),
                 self.trUtf8("The generation of the translation files (*.ts) has failed."))
         self.pylupdateProc = None
@@ -968,7 +970,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         self.lreleaseProcRunning = False
         if exitStatus == QProcess.NormalExit and exitCode == 0:
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
                 self.trUtf8("Translation file release"),
                 self.trUtf8("The release of the translation files (*.qm)"
                     " was successful."))
@@ -982,7 +984,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                         if os.path.exists(qmFile):
                             shutil.move(qmFile, target)
         else:
-            QMessageBox.critical(None,
+            QMessageBox.critical(self,
                 self.trUtf8("Translation file release"),
                 self.trUtf8("The release of the translation files (*.qm) has failed."))
         self.lreleaseProc = None

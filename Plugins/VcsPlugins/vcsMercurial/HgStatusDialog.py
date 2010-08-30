@@ -14,6 +14,7 @@ from PyQt4.QtGui import QWidget, QDialogButtonBox, QMenu, QHeaderView, QTreeWidg
     QMessageBox, QLineEdit
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .Ui_HgStatusDialog import Ui_HgStatusDialog
 
@@ -367,7 +368,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getModifiedItems()]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Commit"),
                 self.trUtf8("""There are no uncommitted changes available/selected."""))
             return
@@ -393,7 +394,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getUnversionedItems()]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Add"),
                 self.trUtf8("""There are no unversioned entries available/selected."""))
             return
@@ -413,7 +414,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getMissingItems()]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Remove"),
                 self.trUtf8("""There are no missing entries available/selected."""))
             return
@@ -428,7 +429,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
                  for itm in self.__getModifiedItems()]
         if not names:
-            QMessageBox.information(self,
+            E5MessageBox.information(self,
                 self.trUtf8("Revert"),
                 self.trUtf8("""There are no uncommitted changes available/selected."""))
             return

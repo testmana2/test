@@ -16,7 +16,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5FileDialog
+from E5Gui import E5FileDialog, E5MessageBox
 
 from . import Exporters
 from . import Lexers
@@ -3431,7 +3431,7 @@ class Editor(QsciScintillaCompat):
         elif acs == QsciScintilla.AcsAll:
             self.autoCompleteFromAll()
         else:
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
                 self.trUtf8("Autocompletion"),
                 self.trUtf8("""Autocompletion is not available because"""
                     """ there is no autocompletion source set."""))
@@ -4210,11 +4210,11 @@ class Editor(QsciScintillaCompat):
                     self.coverageMarkersShown.emit(True)
                     self.__coverageMarkersShown = True
             else:
-                QMessageBox.information(None,
+                E5MessageBox.information(self,
                     self.trUtf8("Show Code Coverage Annotations"),
                     self.trUtf8("""All lines have been covered."""))
         else:
-            QMessageBox.warning(None,
+            QMessageBox.warning(self,
                 self.trUtf8("Show Code Coverage Annotations"),
                 self.trUtf8("""There is no coverage file available."""))
         
@@ -5022,7 +5022,7 @@ class Editor(QsciScintillaCompat):
                     if not QFileInfo(fname).isDir():
                         self.vm.openSourceFile(fname)
                     else:
-                        QMessageBox.information(None,
+                        E5MessageBox.information(self,
                             self.trUtf8("Drop Error"),
                             self.trUtf8("""<p><b>{0}</b> is not a file.</p>""")
                                 .format(fname))

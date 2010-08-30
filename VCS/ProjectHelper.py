@@ -20,6 +20,7 @@ from .CommandOptionsDialog import vcsCommandOptionsDialog
 from .RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 from E5Gui.E5Action import E5Action
+from E5Gui import E5MessageBox
 
 import Preferences
 
@@ -155,7 +156,7 @@ class VcsProjectHelper(QObject):
                 self.project.pdata["VCS"] = [vcsSystem]
                 self.project.vcs = self.project.initVCS(vcsSystem)
                 # edit VCS command options
-                vcores = QMessageBox.question(None,
+                vcores = QMessageBox.question(self.parent(),
                     self.trUtf8("New Project"),
                     self.trUtf8("""Would you like to edit the VCS command options?"""),
                     QMessageBox.StandardButtons(\
@@ -172,7 +173,7 @@ class VcsProjectHelper(QObject):
                     try:
                         os.makedirs(projectdir)
                     except EnvironmentError:
-                        QMessageBox.critical(None,
+                        QMessageBox.critical(self.parent(),
                             self.trUtf8("Create project directory"),
                             self.trUtf8("<p>The project directory <b>{0}</b> could not"
                                 " be created.</p>").format(projectdir))
@@ -212,7 +213,7 @@ class VcsProjectHelper(QObject):
                             self.project.setDirty(True)
                             self.project.saveProject()
                     else:
-                        res = QMessageBox.question(None,
+                        res = QMessageBox.question(self.parent(),
                             self.trUtf8("New project from repository"),
                             self.trUtf8("The project retrieved from the repository"
                                 " does not contain an eric project file"
@@ -243,7 +244,7 @@ class VcsProjectHelper(QObject):
                                 self.project.saveProject()
                                 self.project.openProject(self.project.pfile)
                                 if not export:
-                                    res = QMessageBox.question(None,
+                                    res = QMessageBox.question(self.parent(),
                                         self.trUtf8("New project from repository"),
                                         self.trUtf8("Shall the project file be added to"
                                             " the repository?"),
@@ -254,7 +255,7 @@ class VcsProjectHelper(QObject):
                                     if res == QMessageBox.Yes:
                                         self.project.vcs.vcsAdd(self.project.pfile)
                 else:
-                    QMessageBox.critical(None,
+                    QMessageBox.critical(self.parent(),
                         self.trUtf8("New project from repository"),
                         self.trUtf8("""The project could not be retrieved from"""
                             """ the repository."""))
@@ -323,7 +324,7 @@ class VcsProjectHelper(QObject):
             if vcsdlg.exec_() == QDialog.Accepted:
                 vcsDataDict = vcsdlg.getData()
                 # edit VCS command options
-                vcores = QMessageBox.question(None,
+                vcores = QMessageBox.question(self.parent(),
                     self.trUtf8("Import Project"),
                     self.trUtf8("""Would you like to edit the VCS command options?"""),
                     QMessageBox.StandardButtons(\
@@ -356,7 +357,7 @@ class VcsProjectHelper(QObject):
         """
         shouldReopen = self.vcs.vcsUpdate(self.project.ppath)
         if shouldReopen:
-            res = QMessageBox.information(None,
+            res = QMessageBox.question(self.parent(),
                 self.trUtf8("Update"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 QMessageBox.StandardButtons(\
@@ -383,7 +384,7 @@ class VcsProjectHelper(QObject):
         Depending on the parameters set in the vcs object the project
         may be removed from the local disk as well.
         """
-        res = QMessageBox.warning(None,
+        res = QMessageBox.question(self.parent(),
             self.trUtf8("Remove project from repository"),
             self.trUtf8("Dou you really want to remove this project from"
                 " the repository (and disk)?"),

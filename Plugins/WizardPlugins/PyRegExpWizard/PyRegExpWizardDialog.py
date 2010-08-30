@@ -13,6 +13,8 @@ import re
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_PyRegExpWizardDialog import Ui_PyRegExpWizardDialog
 
 from .PyRegExpWizardRepeatDialog import PyRegExpWizardRepeatDialog
@@ -162,13 +164,13 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         regex = self.regexpTextEdit.toPlainText()[:length]
         names = self.namedGroups(regex)
         if not names:
-            QMessageBox.information(None,
+            E5MessageBox.information(self,
                 self.trUtf8("Named reference"),
                 self.trUtf8("""No named groups have been defined yet."""))
             return
         
         groupName, ok = QInputDialog.getItem(\
-            None,
+            self,
             self.trUtf8("Named reference"),
             self.trUtf8("Select group name:"),
             names,
@@ -325,7 +327,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 f.write(self.regexpTextEdit.toPlainText())
                 f.close()
             except IOError as err:
-                QMessageBox.information(self,
+                E5MessageBox.information(self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("""<p>The regular expression could not be saved.</p>"""
                                 """<p>Reason: {0}</p>""").format(str(err)))
@@ -347,7 +349,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 f.close()
                 self.regexpTextEdit.setPlainText(regexp)
             except IOError as err:
-                QMessageBox.information(self,
+                E5MessageBox.information(self,
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("""<p>The regular expression could not be saved.</p>"""
                                 """<p>Reason: {0}</p>""").format(str(err)))
@@ -390,22 +392,22 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                         self.dotallCheckBox.isChecked() and re.DOTALL or 0 | \
                         self.verboseCheckBox.isChecked() and re.VERBOSE or 0 | \
                         (not self.unicodeCheckBox.isChecked() and re.UNICODE or 0))
-                QMessageBox.information(None,
+                E5MessageBox.information(self,
                     self.trUtf8(""),
                     self.trUtf8("""The regular expression is valid."""))
             except re.error as e:
-                QMessageBox.critical(None,
+                QMessageBox.critical(self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
                         .format(str(e)))
                 return
             except IndexError:
-                QMessageBox.critical(None,
+                QMessageBox.critical(self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: missing group name"""))
                 return
         else:
-            QMessageBox.critical(None,
+            QMessageBox.critical(self,
                 self.trUtf8("Error"),
                 self.trUtf8("""A regular expression must be given."""))
 

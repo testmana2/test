@@ -25,6 +25,7 @@ import UI.PixmapCache
 import UI.Config
 
 from E5Gui.E5Action import E5Action, createActionGroup
+from E5Gui import E5MessageBox
 
 from eric5config import getConfig
 
@@ -939,11 +940,11 @@ class DebugUI(QObject):
         
         if not Preferences.getDebugger("SuppressClientExit") or status != 0:
             if self.ui.currentProg is None:
-                QMessageBox.information(self.ui,Program,
+                E5MessageBox.information(self.ui,Program,
                     self.trUtf8('<p>The program has terminated with an exit'
                                 ' status of {0}.</p>').format(status))
             else:
-                QMessageBox.information(self.ui,Program,
+                E5MessageBox.information(self.ui,Program,
                     self.trUtf8('<p><b>{0}</b> has terminated with an exit'
                                 ' status of {1}.</p>')
                         .format(Utilities.normabspath(self.ui.currentProg), status))
@@ -1055,7 +1056,7 @@ class DebugUI(QObject):
         """
         self.__resetUI()
         if unplanned:
-            QMessageBox.information(self.ui,Program,
+            E5MessageBox.information(self.ui,Program,
                 self.trUtf8('The program being debugged has terminated unexpectedly.'))
         
     def __getThreadList(self):
