@@ -1771,18 +1771,14 @@ class Project(QObject):
                                 self.trUtf8("Add file"),
                                 self.trUtf8("<p>The selected file <b>{0}</b> could not be"
                                     " added to <b>{1}</b>.</p><p>Reason: {2}</p>")
-                                    .format(fn, target, str(why)),
-                                QMessageBox.StandardButtons(\
-                                    QMessageBox.Abort))
+                                    .format(fn, target, str(why)))
                             return
                             
                     self.appendFile(targetfile, isSource or filter == 'source')
             else:
                 QMessageBox.critical(None,
                     self.trUtf8("Add file"),
-                    self.trUtf8("The target directory must not be empty."),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Abort))
+                    self.trUtf8("The target directory must not be empty."))
         
     def __addSingleDirectory(self, filetype, source, target, quiet = False):
         """
@@ -1823,9 +1819,7 @@ class Project(QObject):
                     self.trUtf8("Add directory"),
                     self.trUtf8("<p>The target directory <b>{0}</b> could not be"
                         " created.</p><p>Reason: {1}</p>")
-                        .format(target, str(why)),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Abort))
+                        .format(target, str(why)))
                 return
         
         for file in files:
@@ -1891,9 +1885,7 @@ class Project(QObject):
             if target == '':
                 QMessageBox.critical(None,
                     self.trUtf8("Add directory"),
-                    self.trUtf8("The target directory must not be empty."),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Abort))
+                    self.trUtf8("The target directory must not be empty."))
                 return
             
             if filetype == 'OTHERS':
@@ -1903,9 +1895,7 @@ class Project(QObject):
             if source == '':
                 QMessageBox.critical(None,
                     self.trUtf8("Add directory"),
-                    self.trUtf8("The source directory must not be empty."),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Abort))
+                    self.trUtf8("The source directory must not be empty."))
                 return
             
             if recursive:
@@ -4518,9 +4508,7 @@ class Project(QObject):
             QMessageBox.critical(None,
                 self.trUtf8("Create Package List"),
                 self.trUtf8("""<p>The file <b>PKGLIST</b> could not be created.</p>"""
-                            """<p>Reason: {0}</p>""").format(str(why)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """<p>Reason: {0}</p>""").format(str(why)))
             return
         
         if not "PKGLIST" in self.pdata["OTHERS"]:
@@ -4537,9 +4525,7 @@ class Project(QObject):
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The file <b>PKGLIST</b> does not exist. """
-                            """Aborting...</p>"""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """Aborting...</p>"""))
             return
         
         if len(self.pdata["MAINSCRIPT"]) == 0 or \
@@ -4547,9 +4533,7 @@ class Project(QObject):
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""The project does not have a main script defined. """
-                            """Aborting..."""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """Aborting..."""))
             return
         
         try:
@@ -4561,9 +4545,7 @@ class Project(QObject):
             QMessageBox.critical(None,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The file <b>PKGLIST</b> could not be read.</p>"""
-                            """<p>Reason: {0}</p>""").format(str(why)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """<p>Reason: {0}</p>""").format(str(why)))
             return
         
         archive = \
@@ -4578,9 +4560,7 @@ class Project(QObject):
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The eric5 plugin archive file <b>{0}</b> could """
                             """not be created.</p>"""
-                            """<p>Reason: {1}</p>""").format(archive, str(why)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """<p>Reason: {1}</p>""").format(archive, str(why)))
             return
         
         for name in names:
@@ -4601,9 +4581,7 @@ class Project(QObject):
                     self.trUtf8("""<p>The file <b>{0}</b> could not be stored """
                                 """in the archive. Ignoring it.</p>"""
                                 """<p>Reason: {1}</p>""")\
-                                .format(os.path.join(self.ppath, name), str(why)),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Ok))
+                                .format(os.path.join(self.ppath, name), str(why)))
         archiveFile.writestr("VERSION", version.encode("utf-8"))
         archiveFile.close()
         
@@ -4613,9 +4591,7 @@ class Project(QObject):
         QMessageBox.information(None,
             self.trUtf8("Create Plugin Archive"),
             self.trUtf8("""<p>The eric5 plugin archive file <b>{0}</b> was """
-                        """created successfully.</p>""").format(archive),
-            QMessageBox.StandardButtons(\
-                QMessageBox.Ok))
+                        """created successfully.</p>""").format(archive))
     
     def __pluginCreateSnapshotArchive(self):
         """
@@ -4659,9 +4635,7 @@ class Project(QObject):
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""
-                            """<p>Reason: {1}</p>""").format(archive, str(why)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """<p>Reason: {1}</p>""").format(archive, str(why)))
             return b"", ""
         
         lineno = 0
@@ -4698,9 +4672,7 @@ class Project(QObject):
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""
-                            """<p>Reason: {1}</p>""").format(archive, str(why)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """<p>Reason: {1}</p>""").format(archive, str(why)))
             return ""
         
         for sourceline in sourcelines:

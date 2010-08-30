@@ -583,8 +583,6 @@ class ExporterPDF(ExporterBase):
                     self.trUtf8(
                         """<p>The source could not be exported to <b>{0}</b>.</p>"""
                         """<p>Reason: {1}</p>""")\
-                        .format(filename, str(err)),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Ok))
+                        .format(filename, str(err)))
         finally:
             QApplication.restoreOverrideCursor()

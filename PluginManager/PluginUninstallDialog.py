@@ -90,9 +90,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             QMessageBox.critical(None,
                 self.trUtf8("Plugin Uninstallation"),
                 self.trUtf8("""<p>The plugin <b>{0}</b> could not be unloaded."""
-                            """ Aborting...</p>""").format(pluginName),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """ Aborting...</p>""").format(pluginName))
             return False
         
         if not pluginDirectory in sys.path:
@@ -102,9 +100,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             QMessageBox.critical(None,
                 self.trUtf8("Plugin Uninstallation"),
                 self.trUtf8("""<p>The plugin <b>{0}</b> has no 'packageName' attribute."""
-                            """ Aborting...</p>""").format(pluginName),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """ Aborting...</p>""").format(pluginName))
             return False
         
         package = getattr(module, "packageName")
@@ -143,18 +139,14 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
                 self.trUtf8("Plugin Uninstallation"),
                 self.trUtf8("""<p>The plugin package <b>{0}</b> could not be"""
                             """ removed. Aborting...</p>"""
-                            """<p>Reason: {1}</p>""").format(packageDir, str(err)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """<p>Reason: {1}</p>""").format(packageDir, str(err)))
             return False
         
         QMessageBox.information(None,
             self.trUtf8("Plugin Uninstallation"),
             self.trUtf8("""<p>The plugin <b>{0}</b> was uninstalled successfully"""
                         """ from {1}.</p>""")\
-                .format(pluginName, pluginDirectory),
-            QMessageBox.StandardButtons(\
-                QMessageBox.Ok))
+                .format(pluginName, pluginDirectory))
         return True
 
 class PluginUninstallDialog(QDialog):

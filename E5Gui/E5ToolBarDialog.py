@@ -129,9 +129,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 QMessageBox.critical(self,
                 self.trUtf8("New Toolbar"),
                 self.trUtf8("""A toolbar with the name <b>{0}</b> already exists.""")\
-                    .format(name),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort))
+                    .format(name))
                 return
             
             tbItem = E5ToolBarItem(None, [], False)
@@ -190,9 +188,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 QMessageBox.critical(self,
                 self.trUtf8("Rename Toolbar"),
                 self.trUtf8("""A toolbar with the name <b>{0}</b> already exists.""")\
-                    .format(newName),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort))
+                    .format(newName))
                 return
             index = self.toolbarComboBox.currentIndex()
             self.toolbarComboBox.setItemText(index, newName)

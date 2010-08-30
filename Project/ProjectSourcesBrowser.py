@@ -576,9 +576,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                             self.trUtf8("""<p>The package directory <b>{0}</b> could"""
                                         """ not be created. Aborting...</p>"""
                                         """<p>Reason: {1}</p>""")\
-                                .format(packagePath, str(err)),
-                            QMessageBox.StandardButtons(\
-                                QMessageBox.Ok))
+                                .format(packagePath, str(err)))
                         return
                 packageFile = os.path.join(packagePath, "__init__.py")
                 if not os.path.exists(packageFile):
@@ -591,9 +589,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                             self.trUtf8("""<p>The package file <b>{0}</b> could"""
                                         """ not be created. Aborting...</p>"""
                                         """<p>Reason: {1}</p>""")\
-                                .format(packageFile, str(err)),
-                            QMessageBox.StandardButtons(\
-                                QMessageBox.Ok))
+                                .format(packageFile, str(err)))
                         return
                 self.project.appendFile(packageFile)
             if packageFile:

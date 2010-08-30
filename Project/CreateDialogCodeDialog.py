@@ -88,9 +88,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             QMessageBox.critical(None,
                 self.trUtf8("Create Dialog Code"),
                 self.trUtf8("""The file <b>{0}</b> exists but does not contain"""
-                            """ any classes.""").format(self.srcFile),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort))
+                            """ any classes.""").format(self.srcFile))
         
         self.okButton.setEnabled(self.classNameCombo.count() > 0)
         
@@ -117,9 +115,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             QMessageBox.critical(self,
                 self.trUtf8("uic error"),
                 self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
-                            """<p>{1}</p>""").format(self.formFile, str(err)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """<p>{1}</p>""").format(self.formFile, str(err)))
             return ""
         
     def __className(self):
@@ -135,9 +131,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             QMessageBox.critical(self,
                 self.trUtf8("uic error"),
                 self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
-                            """<p>{1}</p>""").format(self.formFile, str(err)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """<p>{1}</p>""").format(self.formFile, str(err)))
             return ""
         
     def __signatures(self):
@@ -266,9 +260,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             QMessageBox.critical(self,
                 self.trUtf8("uic error"),
                 self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
-                            """<p>{1}</p>""").format(self.formFile, str(err)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """<p>{1}</p>""").format(self.formFile, str(err)))
         
     def __generateCode(self):
         """
@@ -311,9 +303,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     self.trUtf8("Code Generation"),
                     self.trUtf8("""<p>Could not open the code template file "{0}".</p>"""
                                 """<p>Reason: {1}</p>""")\
-                        .format(tmplName, str(why)),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Ok))
+                        .format(tmplName, str(why)))
                 return
             
             objName = self.__objectName()
@@ -346,9 +336,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     self.trUtf8("Code Generation"),
                     self.trUtf8("""<p>Could not open the source file "{0}".</p>"""
                                 """<p>Reason: {1}</p>""")\
-                        .format(self.srcFile, str(why)),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Ok))
+                        .format(self.srcFile, str(why)))
                 return
             
             cls = self.__module.classes[self.classNameCombo.currentText()]
@@ -407,9 +395,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 self.trUtf8("Code Generation"),
                 self.trUtf8("""<p>Could not write the source file "{0}".</p>"""
                             """<p>Reason: {1}</p>""")\
-                    .format(self.filenameEdit.text(), str(why)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                    .format(self.filenameEdit.text(), str(why)))
             return
         
         self.project.appendFile(self.filenameEdit.text())

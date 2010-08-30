@@ -481,9 +481,7 @@ class HelpBrowser(QWebView):
                 QMessageBox.critical(None,
                     self.trUtf8("Web Browser"),
                     self.trUtf8("""<p>The file <b>{0}</b> does not exist.</p>""")\
-                        .format(name.toLocalFile()),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Ok))
+                        .format(name.toLocalFile()))
                 return
 
             if name.toLocalFile().endswith(".pdf") or \

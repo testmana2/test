@@ -69,6 +69,4 @@ class ExporterODT(ExporterBase):
                 self.trUtf8("Export source"),
                 self.trUtf8(\
                     """<p>The source could not be exported to <b>{0}</b>.</p>""")\
-                    .format(filename),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                    .format(filename))

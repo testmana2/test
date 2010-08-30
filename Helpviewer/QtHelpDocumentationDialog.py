@@ -110,11 +110,12 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
                     self.trUtf8("""Some documents currently opened reference the """
                                 """documentation you are attempting to remove. """
                                 """Removing the documentation will close those """
-                                """documents."""),
+                                """documents. Remove anyway?"""),
                     QMessageBox.StandardButtons(\
-                        QMessageBox.Cancel | \
-                        QMessageBox.Ok))
-                if res == QMessageBox.Cancel:
+                        QMessageBox.Yes | \
+                        QMessageBox.No), 
+                    QMessageBox.No)
+                if res == QMessageBox.No:
                     return
             self.__unregisteredDocs.append(ns)
             for id in openedDocs:

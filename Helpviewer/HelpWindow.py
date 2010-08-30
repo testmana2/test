@@ -2053,10 +2053,10 @@ class HelpWindow(QMainWindow):
                               """ web pages you have opened.</p>""")
             res = QMessageBox.question(self, "", txt,
                 QMessageBox.StandardButtons(\
-                    QMessageBox.Cancel | \
-                    QMessageBox.Ok),
-                QMessageBox.Ok)
-            if res == QMessageBox.Ok:
+                    QMessageBox.Yes | \
+                    QMessageBox.No),
+                QMessageBox.No)
+            if res == QMessageBox.Yes:
                 settings.setAttribute(QWebSettings.PrivateBrowsingEnabled, True)
                 self.pathCombo.setInsertPolicy(QComboBox.NoInsert)
                 self.privacyLabel.setPixmap(

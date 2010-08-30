@@ -603,9 +603,7 @@ class UserInterface(QMainWindow):
                     self.trUtf8("Loading Style Sheet"),
                     self.trUtf8("""<p>The Qt Style Sheet file <b>{0}</b> could"""
                                 """ not be read.<br>Reason: {1}</p>""")
-                        .format(styleSheetFile, str(msg)),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Ok))
+                        .format(styleSheetFile, str(msg)))
                 return
         else:
             styleSheet = ""
@@ -5645,9 +5643,7 @@ class UserInterface(QMainWindow):
             QMessageBox.information(None,
                 self.trUtf8("First time usage"),
                 self.trUtf8("""eric5 has not been configured yet. """
-                            """The configuration dialog will be started."""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                            """The configuration dialog will be started."""))
             self.showPreferences()
     
     def versionIsNewer(self, required, snapshot = None):

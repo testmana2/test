@@ -1082,15 +1082,11 @@ class Editor(QsciScintillaCompat):
                     self.trUtf8("Export source"),
                     self.trUtf8("""<p>No exporter available for the """
                                 """export format <b>{0}</b>. Aborting...</p>""")\
-                        .format(exporterFormat),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Ok))
+                        .format(exporterFormat))
         else:
             QMessageBox.critical(self,
                 self.trUtf8("Export source"),
-                self.trUtf8("""No export format given. Aborting..."""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Ok))
+                self.trUtf8("""No export format given. Aborting..."""))
         
     def __showContextMenuLanguages(self):
         """

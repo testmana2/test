@@ -705,9 +705,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         else:
             QMessageBox.warning(None,
                 self.trUtf8("Write temporary project file"),
-                self.trUtf8("""No translation files (*.ts) selected."""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort))
+                self.trUtf8("""No translation files (*.ts) selected."""))
             return False
         
         try:
@@ -735,9 +733,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             QMessageBox.critical(None,
                 self.trUtf8("Write temporary project file"),
                 self.trUtf8("<p>The temporary project file <b>{0}</b> could not"
-                    " be written.</p>").format(pfile),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort))
+                    " be written.</p>").format(pfile))
             self.tmpProject = None
             return False
         
