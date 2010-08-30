@@ -42,7 +42,7 @@ class WatchPointModel(QAbstractItemModel):
         
         @return column count (integer)
         """
-        return len(self.header) + 1
+        return len(self.header)
     
     def rowCount(self, parent = QModelIndex()):
         """

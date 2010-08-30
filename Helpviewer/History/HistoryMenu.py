@@ -173,7 +173,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         treeIndex = self.__treeModel.mapFromSource(historyIndex)
         treeIndexParent = treeIndex.parent()
         
-        soureRow = self.sourceModel().mapToSource(treeIndexParent).row()
+        sourceRow = self.sourceModel().mapToSource(treeIndexParent).row()
         bumpedItems = self.bumpedRows()
         if bumpedItems <= self.MOVEDROWS and \
            bumpedItems == self.sourceModel().rowCount(self.sourceModel().index(0, 0)):
