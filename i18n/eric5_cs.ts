@@ -120,27 +120,27 @@
         <translation>Akce</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="83"/>
+        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="81"/>
         <source>Add Custom Rule</source>
         <translation>Přidat vlastní pravidlo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="85"/>
+        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="83"/>
         <source>Learn more about writing rules...</source>
         <translation>Další informace o pravidlech psaní...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="92"/>
+        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="90"/>
         <source>Update Subscription</source>
         <translation>Aktualizovat odběr</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="96"/>
+        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="94"/>
         <source>Browse Subscriptions...</source>
         <translation>Procházet odběry...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="100"/>
+        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="98"/>
         <source>Remove Subscription</source>
         <translation>Odebrat odběr</translation>
     </message>
@@ -153,7 +153,7 @@
 <context>
     <name>AdBlockManager</name>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockManager.py" line="119"/>
+        <location filename="Helpviewer/AdBlock/AdBlockManager.py" line="121"/>
         <source>Custom Rules</source>
         <translation>Vlastní pravidla</translation>
     </message>
@@ -169,42 +169,42 @@
 <context>
     <name>AdBlockSubscription</name>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="207"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="210"/>
         <source>Load subscription rules</source>
         <translation>Nahrát odebíraná pravidla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="282"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="285"/>
         <source>Downloading subscription rules</source>
         <translation>Stažení odebíraných pravidel</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="274"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="277"/>
         <source>Got empty subscription rules.</source>
         <translation>Odebíraná pravidla jsou prázdná.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="303"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="306"/>
         <source>Saving subscription rules</source>
         <translation>Ukládání odebíraných pravidel</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="199"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="202"/>
         <source>Unable to open adblock file &apos;{0}&apos; for reading.</source>
         <translation>Nelze otevřít adblock soubor &apos;{0}&apos; pro čtení.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="207"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="210"/>
         <source>Adblock file &apos;{0}&apos; does not start with [Adblock.</source>
         <translation>Adblock soubor &apos;{0}&apos; nezačíná s [Adblock.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="260"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="263"/>
         <source>&lt;p&gt;Subscription rules could not be downloaded.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pravidla pro předplatné nelze stáhnout.&lt;/p&gt;&lt;p&gt;Chyba: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="303"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="306"/>
         <source>Unable to open adblock file &apos;{0}&apos; for writing.</source>
         <translation>Nelze otevřít adblock soubor &apos;{0}&apos; pro zápis.</translation>
     </message>
@@ -1420,108 +1420,108 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Menu záložek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="154"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="155"/>
         <source>Loading Bookmarks</source>
         <translation>Nahrání záložek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="166"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="167"/>
         <source>Toolbar Bookmarks</source>
         <translation>Panel nástrojů záložek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="172"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="173"/>
         <source>Menu</source>
         <translation>Menu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="215"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="216"/>
         <source>Saving Bookmarks</source>
         <translation>Ukládání záložek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="326"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="327"/>
         <source>XBEL bookmarks</source>
         <translation>XBEL záložky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="327"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="328"/>
         <source>HTML Netscape bookmarks</source>
         <translation>HTML Netscape záložky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="360"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="361"/>
         <source>Import Bookmarks</source>
         <translation>Importovat záložky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="378"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="379"/>
         <source>Export Bookmarks</source>
         <translation>Export záložek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="394"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="395"/>
         <source>Exporting Bookmarks</source>
         <translation>Exportování záložek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="434"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="435"/>
         <source>Remove Bookmark</source>
         <translation>Odebrat záložku</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="475"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="474"/>
         <source>Insert Bookmark</source>
         <translation>Vložit záložku</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="513"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="512"/>
         <source>Name Change</source>
         <translation>Změnit název</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="516"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="515"/>
         <source>Address Change</source>
         <translation>Změnit adresu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="215"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="216"/>
         <source>Error saving bookmarks to &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Chyba při ukládání záložek do &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="344"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="345"/>
         <source>Error opening bookmarks file &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Chyba při otevírání souboru záložek &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="360"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="361"/>
         <source>Error when importing bookmarks on line {0}, column [1}:
 {2}</source>
         <translation>Chyba při importu záložek na řádce {0}, sloupci {1}:{2}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="370"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="371"/>
         <source>Imported {0}</source>
         <translation>Importováno {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="394"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="395"/>
         <source>Error exporting bookmarks to &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Chyba při exportu záložek &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="409"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="410"/>
         <source>Converted {0}</source>
         <translation>Konvertováno {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="378"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="379"/>
         <source>XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)</source>
         <translation>XBEL záložky (*.xbel);;XBEL záložky (*.xml)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="154"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="155"/>
         <source>Error when loading bookmarks on line {0}, column {1}:
 {2}</source>
         <translation>Chyba při načítání záložek na řádce {0}, sloupci {1}:
@@ -1554,12 +1554,12 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksModel.py" line="54"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksModel.py" line="48"/>
         <source>Title</source>
         <translation>Titulek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksModel.py" line="55"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksModel.py" line="49"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
@@ -1567,32 +1567,32 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BookmarksToolBar</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="36"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="38"/>
         <source>Bookmarks</source>
         <translation>Záložky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="68"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="69"/>
         <source>&amp;Open</source>
         <translation>&amp;Otevřít</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="77"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="78"/>
         <source>&amp;Remove</source>
         <translation>Odeb&amp;rat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="82"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="83"/>
         <source>Add &amp;Bookmark...</source>
         <translation>Přidat &amp;záložku...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="83"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="84"/>
         <source>Add &amp;Folder...</source>
         <translation>Přidat s&amp;ložku...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="71"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
         <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Otevřít nový &amp;Tab<byte value="x9"/><byte value="x9"/></translation>
     </message>
@@ -1706,72 +1706,72 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>Browser</name>
     <message>
-        <location filename="UI/Browser.py" line="56"/>
+        <location filename="UI/Browser.py" line="65"/>
         <source>File-Browser</source>
         <translation>Prohlížeč souborů</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="74"/>
+        <location filename="UI/Browser.py" line="83"/>
         <source>&lt;b&gt;The Browser Window&lt;/b&gt;&lt;p&gt;This allows you to easily navigate the hierachy of directories and files on your system, identify the Python programs and open them up in a Source Viewer window. The window displays several separate hierachies.&lt;/p&gt;&lt;p&gt;The first hierachy is only shown if you have opened a program for debugging and it&apos;s root is the directory containing that program. Usually all of the separate files that make up a Python application are held in the same directory, so this hierachy gives you easy access to most of what you will need.&lt;/p&gt;&lt;p&gt;The next hierachy is used to easily navigate the directories that are specified in the Python &lt;tt&gt;sys.path&lt;/tt&gt; variable.&lt;/p&gt;&lt;p&gt;The remaining hierachies allow you navigate your system as a whole. On a UNIX system there will be a hierachy with &lt;tt&gt;/&lt;/tt&gt; at its root and another with the user home directory. On a Windows system there will be a hierachy for each drive on the system.&lt;/p&gt;&lt;p&gt;Python programs (i.e. those with a &lt;tt&gt;.py&lt;/tt&gt; file name suffix) are identified in the hierachies with a Python icon. The right mouse button will popup a menu which lets you open the file in a Source Viewer window, open the file for debugging or use it for a unittest run.&lt;/p&gt;&lt;p&gt;The context menu of a class, function or method allows you to open the file defining this class, function or method and will ensure, that the correct source line is visible.&lt;/p&gt;&lt;p&gt;Qt-Designer files (i.e. those with a &lt;tt&gt;.ui&lt;/tt&gt; file name suffix) are shown with a Designer icon. The context menu of these files allows you to start Qt-Designer with that file.&lt;/p&gt;&lt;p&gt;Qt-Linguist files (i.e. those with a &lt;tt&gt;.ts&lt;/tt&gt; file name suffix) are shown with a Linguist icon. The context menu of these files allows you to start Qt-Linguist with that file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč&lt;/b&gt;&lt;p&gt;Prohlížeč umožňuje jednoduše procházet strukturu adresářů a souborů ve vašem systému, rozpoznat Python programy a otevřít je do okna Zobrazení zdrojového kódu. Prohlížeč zobrazuje několik samostatných hierarchií.&lt;/p&gt;&lt;p&gt;První hierarchie zobrazuje pouze otevřenou aplikaci pro debugování a její kořen je adresář obsahující tuto aplikaci. Všechny Python soubory, které tvoří aplikaci, jsou obvykle ve stejném adresáři, takže tato hierarchie umožňuje rychlý přístup ke všemu, co je třeba.&lt;/p&gt;&lt;p&gt;Další hierarchie se používá k rychlé navigaci v adresářích, které jsou uvedeny v Python proměnné &lt;tt&gt;sys.path&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;Zbývající hierarchie umožňují procházet operační systém jako celek. Na UNIX systémech bude hierarchie s kořenem &lt;tt&gt;/&lt;/tt&gt; a další s user home adresářem. Ve Windows zde bude hierarchie pro každý disk v systému.&lt;/p&gt;&lt;p&gt;Python programy (mají extenzi &lt;tt&gt;.py&lt;/tt&gt;) jsou v hierarchii zobrazeny s Python ikonou. Pravé tlačítko myši otevře popup menu, které umožňuje otevřít soubor do okna Zobrazení zdrojového kódu, otevřít soubor pro debugging nebo jej použít pro spuštění unittestu.&lt;/p&gt;&lt;p&gt;Kontextové menu s třídami, funkcemi a metodami umožňuje otevřít soubor na pozici vybrané třídy, funkci nebo metody a zajišťuje zobrazení kódu na požadovaném řádku.&lt;/p&gt;&lt;p&gt;Qt-Designer soubory (mají extenzi &lt;tt&gt;.ui&lt;/tt&gt;) jsou zobrazeny s ikonou Designeru. Kontextové menu umožňuje otevřít tyto soubory přímo do Qt-Designeru.&lt;/p&gt;&lt;p&gt;Qt-Linguist soubory (mají extenzi &lt;tt&gt;.ts&lt;/tt&gt;) jsou zobrazeny s Linguist ikonou. Kontextové menu umožňuje otevřít tyto soubory přímo do Qt-Linguistu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="190"/>
+        <location filename="UI/Browser.py" line="199"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="168"/>
+        <location filename="UI/Browser.py" line="177"/>
         <source>Run unittest...</source>
         <translation>Spustit unittest...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="229"/>
+        <location filename="UI/Browser.py" line="238"/>
         <source>New toplevel directory...</source>
         <translation>Nový adresář toplevel...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="202"/>
+        <location filename="UI/Browser.py" line="211"/>
         <source>Add as toplevel directory</source>
         <translation>Přidat jako toplevel adresář</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="205"/>
+        <location filename="UI/Browser.py" line="214"/>
         <source>Remove from toplevel</source>
         <translation>Odebrat z toplevelu</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="213"/>
+        <location filename="UI/Browser.py" line="222"/>
         <source>Find in this directory</source>
         <translation>Hledat v tomto adresáři</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="406"/>
+        <location filename="UI/Browser.py" line="415"/>
         <source>New toplevel directory</source>
         <translation>Nový toplevel adresář</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="216"/>
+        <location filename="UI/Browser.py" line="225"/>
         <source>Find&amp;&amp;Replace in this directory</source>
         <translation>Najít &amp;&amp; nahradit v tomto adresáři</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="234"/>
+        <location filename="UI/Browser.py" line="243"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="178"/>
+        <location filename="UI/Browser.py" line="187"/>
         <source>Open in Icon Editor</source>
         <translation>Otevřit v editoru ikon</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="219"/>
+        <location filename="UI/Browser.py" line="228"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="209"/>
+        <location filename="UI/Browser.py" line="218"/>
         <source>Refresh directory</source>
         <translation>Obnovit složku</translation>
     </message>
@@ -2526,12 +2526,12 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Stisknout pro provedení porovnání dvou souborů</translation>
     </message>
     <message>
-        <location filename="UI/CompareDialog.py" line="238"/>
+        <location filename="UI/CompareDialog.py" line="234"/>
         <source>Compare Files</source>
         <translation>Porovnat soubory</translation>
     </message>
     <message>
-        <location filename="UI/CompareDialog.py" line="387"/>
+        <location filename="UI/CompareDialog.py" line="383"/>
         <source>Select file to compare</source>
         <translation>Výběr souboru pro porovnání</translation>
     </message>
@@ -2546,27 +2546,27 @@ the button to the right.&lt;/p&gt;</source>
         <translation>&amp;Synchronizovat vodorovné posuvníky</translation>
     </message>
     <message>
-        <location filename="UI/CompareDialog.py" line="300"/>
+        <location filename="UI/CompareDialog.py" line="296"/>
         <source>Total: {0}</source>
         <translation>Celkem: {0}</translation>
     </message>
     <message>
-        <location filename="UI/CompareDialog.py" line="302"/>
+        <location filename="UI/CompareDialog.py" line="298"/>
         <source>Changed: {0}</source>
         <translation>Změněno: {0}</translation>
     </message>
     <message>
-        <location filename="UI/CompareDialog.py" line="303"/>
+        <location filename="UI/CompareDialog.py" line="299"/>
         <source>Added: {0}</source>
         <translation>Přidáno: {0}</translation>
     </message>
     <message>
-        <location filename="UI/CompareDialog.py" line="304"/>
+        <location filename="UI/CompareDialog.py" line="300"/>
         <source>Deleted: {0}</source>
         <translation>Smazáno: {0}</translation>
     </message>
     <message>
-        <location filename="UI/CompareDialog.py" line="238"/>
+        <location filename="UI/CompareDialog.py" line="234"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
@@ -2574,167 +2574,167 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>ConfigurationWidget</name>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="94"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="96"/>
         <source>Application</source>
         <translation>Aplikace</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="100"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="102"/>
         <source>CORBA</source>
         <translation>CORBA</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="103"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="105"/>
         <source>Email</source>
         <translation>Email</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="106"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="108"/>
         <source>Graphics</source>
         <translation>Grafika</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="109"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="111"/>
         <source>Icons</source>
         <translation>Ikony</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="115"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="117"/>
         <source>Plugin Manager</source>
         <translation>Plugin Manažer</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="118"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="120"/>
         <source>Printer</source>
         <translation>Tiskárna</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="275"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="277"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="127"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="129"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="130"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="132"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="133"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="135"/>
         <source>Tasks</source>
         <translation>Úlohy</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="136"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="138"/>
         <source>Templates</source>
         <translation>Šablony</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="142"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="144"/>
         <source>Version Control Systems</source>
         <translation>Version Control Systems</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="146"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="148"/>
         <source>Debugger</source>
         <translation>Debugger</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="158"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="160"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="162"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="164"/>
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="165"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="167"/>
         <source>APIs</source>
         <translation>APIs</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="168"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="170"/>
         <source>Autocompletion</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="175"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="177"/>
         <source>Calltips</source>
         <translation>Rychlé tipy</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="181"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="183"/>
         <source>General</source>
         <translation>Hlavní</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="196"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="198"/>
         <source>Typing</source>
         <translation>Psaní</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="199"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="201"/>
         <source>Exporters</source>
         <translation>Exportery</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="203"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="205"/>
         <source>Highlighters</source>
         <translation>Zvýrazňovače</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="206"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="208"/>
         <source>Filetype Associations</source>
         <translation>Asociace typů souborů</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="210"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="212"/>
         <source>Styles</source>
         <translation>Styly</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="279"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="281"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="285"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="287"/>
         <source>Help Documentation</source>
         <translation>Dokumenty nápovědy</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="289"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="291"/>
         <source>Help Viewers</source>
         <translation>Prohlížeče nápovědy</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="244"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="246"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="241"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="243"/>
         <source>Project Viewer</source>
         <translation>Prohlížeč projektu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="247"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="249"/>
         <source>Multiproject</source>
         <translation>Multiprojekt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="254"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="256"/>
         <source>Interface</source>
         <translation>Interface</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="257"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="259"/>
         <source>Viewmanager</source>
         <translation>Viewmanager</translation>
     </message>
@@ -2744,32 +2744,32 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Chyba na straně konfigurace</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="184"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="186"/>
         <source>Filehandling</source>
         <translation>Manažer souborů</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="187"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="189"/>
         <source>Searching</source>
         <translation>Vyhledávání</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="282"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="284"/>
         <source>Appearance</source>
         <translation>Vzhled</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="178"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="180"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="193"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="195"/>
         <source>Style</source>
         <translation>Styl</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="217"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
         <source>Properties</source>
         <translation>Nastavení</translation>
     </message>
@@ -2785,27 +2785,27 @@ to display the configuration page.</source>
         <translation>Pro zobrazení strany s konfigurací vyberte položku ze seznamu.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="139"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="141"/>
         <source>Terminal</source>
         <translation>Terminál</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="272"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="274"/>
         <source>Network</source>
         <translation>Síť</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="190"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="192"/>
         <source>Spell checking</source>
         <translation>Kontrola pravopisu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="155"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="157"/>
         <source>Python3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="292"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="294"/>
         <source>Eric Web Browser</source>
         <translation>Eric web prohlížeč</translation>
     </message>
@@ -2815,17 +2815,17 @@ to display the configuration page.</source>
         <translation>&lt;p&gt;Konfigurační stranu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="121"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="123"/>
         <source>Py3Flakes</source>
         <translation>Py3Flakes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="214"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="216"/>
         <source>Keywords</source>
         <translation>Klíčová slova</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="97"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="99"/>
         <source>Cooperation</source>
         <translation>Spolupráce</translation>
     </message>
@@ -3191,7 +3191,7 @@ to display the configuration page.</source>
         <translation>Odebr&amp;at vše</translation>
     </message>
     <message>
-        <location filename="Helpviewer/CookieJar/CookiesExceptionsDialog.py" line="64"/>
+        <location filename="Helpviewer/CookieJar/CookiesExceptionsDialog.py" line="63"/>
         <source>Allow For Session</source>
         <translation>Povolit pro relaci</translation>
     </message>
@@ -3438,34 +3438,34 @@ to display the configuration page.</source>
 <context>
     <name>DebugServer</name>
     <message>
-        <location filename="Debugger/DebugServer.py" line="102"/>
+        <location filename="Debugger/DebugServer.py" line="133"/>
         <source>created</source>
         <comment>must be same as in EditWatchpointDialog</comment>
         <translation>vytvořeno</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="104"/>
+        <location filename="Debugger/DebugServer.py" line="135"/>
         <source>changed</source>
         <comment>must be same as in EditWatchpointDialog</comment>
         <translation>změněno</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="538"/>
+        <location filename="Debugger/DebugServer.py" line="569"/>
         <source>Connection from illegal host</source>
         <translation>Spojení z ilegálního hosta</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1197"/>
+        <location filename="Debugger/DebugServer.py" line="1228"/>
         <source>Passive debug connection received</source>
         <translation>Spojení pasivního debugeru přijato</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1210"/>
+        <location filename="Debugger/DebugServer.py" line="1241"/>
         <source>Passive debug connection closed</source>
         <translation>Spojení pasivního debugeru uzavřeno</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1066"/>
+        <location filename="Debugger/DebugServer.py" line="1097"/>
         <source>
 Not connected
 </source>
@@ -3474,7 +3474,7 @@ Nepřipojen
 </translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="538"/>
+        <location filename="Debugger/DebugServer.py" line="569"/>
         <source>&lt;p&gt;A connection was attempted by the illegal host &lt;b&gt;{0}&lt;/b&gt;. Accept this connection?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pokus o spojení z ilegálního hosta &lt;b&gt;{0}&lt;/b&gt;. Přijmout toto spojení?&lt;/p&gt;</translation>
     </message>
@@ -3482,460 +3482,460 @@ Nepřipojen
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1557"/>
+        <location filename="Debugger/DebugUI.py" line="1547"/>
         <source>Run Script</source>
         <translation>Spustit skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="159"/>
+        <location filename="Debugger/DebugUI.py" line="160"/>
         <source>&amp;Run Script...</source>
         <translation>Spustit sk&amp;ript...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="162"/>
+        <location filename="Debugger/DebugUI.py" line="163"/>
         <source>Run the current Script</source>
         <translation>Spustit aktuální skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="163"/>
+        <location filename="Debugger/DebugUI.py" line="164"/>
         <source>&lt;b&gt;Run Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the script outside the debugger. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit skript&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a spuštění skriptu bez debugeru. Pokud jsou v souboru neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1570"/>
+        <location filename="Debugger/DebugUI.py" line="1560"/>
         <source>Run Project</source>
         <translation>Spustit projekt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="171"/>
+        <location filename="Debugger/DebugUI.py" line="172"/>
         <source>Run &amp;Project...</source>
         <translation>Spustit &amp;projekt...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="175"/>
+        <location filename="Debugger/DebugUI.py" line="176"/>
         <source>Run the current Project</source>
         <translation>Spustit aktuální projekt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="176"/>
+        <location filename="Debugger/DebugUI.py" line="177"/>
         <source>&lt;b&gt;Run Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the current project outside the debugger. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit projekt&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a spuštění projektu bez debugeru. Pokud jsou v projektu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="186"/>
+        <location filename="Debugger/DebugUI.py" line="187"/>
         <source>Coverage run of Script</source>
         <translation>Spustit skript s kontrolou pokrytí</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="186"/>
+        <location filename="Debugger/DebugUI.py" line="187"/>
         <source>Coverage run of Script...</source>
         <translation>Spustit skript s kontrolou pokrytí...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="189"/>
+        <location filename="Debugger/DebugUI.py" line="190"/>
         <source>Perform a coverage run of the current Script</source>
         <translation>Provede se spuštění běhu aktuálního skriptu s kontrolou pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="191"/>
+        <location filename="Debugger/DebugUI.py" line="192"/>
         <source>&lt;b&gt;Coverage run of Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the script under the control of a coverage analysis tool. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit skript s kontrolou pokrytí&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a spuštění projektu pod kontrolou nástroje analýzy pokrytí kódu. Pokud jsou v souboru neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="200"/>
+        <location filename="Debugger/DebugUI.py" line="201"/>
         <source>Coverage run of Project</source>
         <translation>Spustit projekt s kontrolou pokrytí</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="200"/>
+        <location filename="Debugger/DebugUI.py" line="201"/>
         <source>Coverage run of Project...</source>
         <translation>Spustit projekt s kontrolou pokrytí...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="203"/>
+        <location filename="Debugger/DebugUI.py" line="204"/>
         <source>Perform a coverage run of the current Project</source>
         <translation>Provede se spuštění běhu aktuálního projektu s kontrolou pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="205"/>
+        <location filename="Debugger/DebugUI.py" line="206"/>
         <source>&lt;b&gt;Coverage run of Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the current project under the control of a coverage analysis tool. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit projekt s kontrolou pokrytí&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a spuštění projektu pod kontrolou nástroje analýzy pokrytí kódu. Pokud jsou v projektu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="215"/>
+        <location filename="Debugger/DebugUI.py" line="216"/>
         <source>Profile Script</source>
         <translation>Profilovat skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="215"/>
+        <location filename="Debugger/DebugUI.py" line="216"/>
         <source>Profile Script...</source>
         <translation>Profilovat skript...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="218"/>
+        <location filename="Debugger/DebugUI.py" line="219"/>
         <source>Profile the current Script</source>
         <translation>Profilovat aktuální skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="219"/>
+        <location filename="Debugger/DebugUI.py" line="220"/>
         <source>&lt;b&gt;Profile Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and profile the script. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profilovat skript&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a spuštění projektu s profilováním kódu. Pokud jsou ve skriptu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="227"/>
+        <location filename="Debugger/DebugUI.py" line="228"/>
         <source>Profile Project</source>
         <translation>Profilovat projekt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="227"/>
+        <location filename="Debugger/DebugUI.py" line="228"/>
         <source>Profile Project...</source>
         <translation>Profilovat projekt...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="230"/>
+        <location filename="Debugger/DebugUI.py" line="231"/>
         <source>Profile the current Project</source>
         <translation>Profilovat aktuální projekt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="231"/>
+        <location filename="Debugger/DebugUI.py" line="232"/>
         <source>&lt;b&gt;Profile Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and profile the current project. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profilovat projekt&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a spuštění projektu s profilováním kódu. Pokud jsou v projektu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1665"/>
+        <location filename="Debugger/DebugUI.py" line="1655"/>
         <source>Debug Script</source>
         <translation>Debugovat skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="240"/>
+        <location filename="Debugger/DebugUI.py" line="241"/>
         <source>&amp;Debug Script...</source>
         <translation>&amp;Debugovat skript...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="243"/>
+        <location filename="Debugger/DebugUI.py" line="244"/>
         <source>Debug the current Script</source>
         <translation>Debugovat aktuální skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="244"/>
+        <location filename="Debugger/DebugUI.py" line="245"/>
         <source>&lt;b&gt;Debug Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the current editor window. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debugovat skript&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a aktuální řádky jako první python příkaz v aktuálním editačním okně. Pokud jsou ve skriptu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1678"/>
+        <location filename="Debugger/DebugUI.py" line="1668"/>
         <source>Debug Project</source>
         <translation>Debugovat projekt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="253"/>
+        <location filename="Debugger/DebugUI.py" line="254"/>
         <source>Debug &amp;Project...</source>
         <translation>Debugovat pro&amp;jekt...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="257"/>
+        <location filename="Debugger/DebugUI.py" line="258"/>
         <source>Debug the current Project</source>
         <translation>Debugovat aktuální projekt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="258"/>
+        <location filename="Debugger/DebugUI.py" line="259"/>
         <source>&lt;b&gt;Debug Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the main script of the current project. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debugovat projekt&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a nastavení aktuální řádky jako první python příkaz hlavního skriptu v aktuálním projektu. Pokud jsou v projektu neuložené změny, měly by se měly nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="268"/>
+        <location filename="Debugger/DebugUI.py" line="269"/>
         <source>Restart Script</source>
         <translation>Restartovat skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="271"/>
+        <location filename="Debugger/DebugUI.py" line="272"/>
         <source>Restart the last debugged script</source>
         <translation>Restartovat posledně debugovaný skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="272"/>
+        <location filename="Debugger/DebugUI.py" line="273"/>
         <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Restart skript&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a aktuální řádky jako první python příkaz v naposled debugovaném skriptu. Pokud jsou ve skriptu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="295"/>
+        <location filename="Debugger/DebugUI.py" line="296"/>
         <source>Continue</source>
         <translation>Pokračovat</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="295"/>
+        <location filename="Debugger/DebugUI.py" line="296"/>
         <source>&amp;Continue</source>
         <translation>&amp;Pokračovat</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="299"/>
+        <location filename="Debugger/DebugUI.py" line="300"/>
         <source>Continue running the program from the current line</source>
         <translation>Pokračovat v běhu programu od aktuální řádky</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="301"/>
+        <location filename="Debugger/DebugUI.py" line="302"/>
         <source>&lt;b&gt;Continue&lt;/b&gt;&lt;p&gt;Continue running the program from the current line. The program will stop when it terminates or when a breakpoint is reached.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pokračovat&lt;/b&gt;&lt;p&gt;Pokračovat v běhu programu od aktuální řádky. Program se zastaví na nejbližším breakpointu nebo běží až do konce.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="309"/>
+        <location filename="Debugger/DebugUI.py" line="310"/>
         <source>Continue to Cursor</source>
         <translation>Pokračovat až na kurzor</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="309"/>
+        <location filename="Debugger/DebugUI.py" line="310"/>
         <source>Continue &amp;To Cursor</source>
         <translation>Pokračova&amp;t až na kurzor</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="313"/>
+        <location filename="Debugger/DebugUI.py" line="314"/>
         <source>Continue running the program from the current line to the current cursor position</source>
         <translation>Pokračovat v běhu programu od aktuální řádky až na pozici kurzoru</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="315"/>
+        <location filename="Debugger/DebugUI.py" line="316"/>
         <source>&lt;b&gt;Continue To Cursor&lt;/b&gt;&lt;p&gt;Continue running the program from the current line to the current cursor position.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pokračovat až na kurzor&lt;/b&gt;&lt;p&gt;Běh programu pokračuje až na řádek, na kterém se nachází kurzor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="323"/>
+        <location filename="Debugger/DebugUI.py" line="324"/>
         <source>Single Step</source>
         <translation>Krok dovnitř</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="323"/>
+        <location filename="Debugger/DebugUI.py" line="324"/>
         <source>Sin&amp;gle Step</source>
         <translation>&amp;Krok dovnitř</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="327"/>
+        <location filename="Debugger/DebugUI.py" line="328"/>
         <source>Execute a single Python statement</source>
         <translation>Vykonat jen jeden python příkaz</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="328"/>
+        <location filename="Debugger/DebugUI.py" line="329"/>
         <source>&lt;b&gt;Single Step&lt;/b&gt;&lt;p&gt;Execute a single Python statement. If the statement is an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger at the next statement.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Krok dovnitř&lt;/b&gt;&lt;p&gt;Vykoná se jen jeden python příkaz. Pokud je příkaz &lt;tt&gt;import&lt;/tt&gt;, konstruktor třídy, metoda nebo funkce, tak debuger vstoupí dovnitř funkce a zastaví se na prvním příkazu v těle funkce.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="338"/>
+        <location filename="Debugger/DebugUI.py" line="339"/>
         <source>Step Over</source>
         <translation>Krok přes</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="338"/>
+        <location filename="Debugger/DebugUI.py" line="339"/>
         <source>Step &amp;Over</source>
         <translation>Kr&amp;ok přes</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="342"/>
+        <location filename="Debugger/DebugUI.py" line="343"/>
         <source>Execute a single Python statement staying in the current frame</source>
         <translation>Vykonat jeden python příkaz ale nevstupovat do něj</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="344"/>
+        <location filename="Debugger/DebugUI.py" line="345"/>
         <source>&lt;b&gt;Step Over&lt;/b&gt;&lt;p&gt;Execute a single Python statement staying in the same frame. If the statement is an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger after the statement has completed.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Krok přes&lt;/b&gt;&lt;p&gt;Vykoná se jeden python příkaz. Pokud je příkaz &lt;tt&gt;import&lt;/tt&gt;, konstruktor třídy, metoda nebo funkce, tak debuger nevstupuje dovnitř funkce, ale vykoná ji celou a zastaví se až na následujícím příkazu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="354"/>
+        <location filename="Debugger/DebugUI.py" line="355"/>
         <source>Step Out</source>
         <translation>Krok ven</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="354"/>
+        <location filename="Debugger/DebugUI.py" line="355"/>
         <source>Step Ou&amp;t</source>
         <translation>Krok &amp;ven</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="358"/>
+        <location filename="Debugger/DebugUI.py" line="359"/>
         <source>Execute Python statements until leaving the current frame</source>
         <translation>Vykonávat python příkazy tak dlouho, dokud nedojde k opuštění těla kódu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="360"/>
+        <location filename="Debugger/DebugUI.py" line="361"/>
         <source>&lt;b&gt;Step Out&lt;/b&gt;&lt;p&gt;Execute Python statements until leaving the current frame. If the statements are inside an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger after the current frame has been left.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Krok ven&lt;/b&gt;&lt;p&gt;Provádí se python příkazy tak dlouho, dokud nedojde k opuštění těla aktuálního bloku kódu. Pokud je příkaz &lt;tt&gt;import&lt;/tt&gt;, konstruktor třídy, metoda nebo funkce, tak debuger provádí příkazy tak dlouho, dokud z daného bloku nevystoupí. Zastaví se až na příkazu následujícím za daným blokem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="370"/>
+        <location filename="Debugger/DebugUI.py" line="371"/>
         <source>Stop</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="370"/>
+        <location filename="Debugger/DebugUI.py" line="371"/>
         <source>&amp;Stop</source>
         <translation>&amp;Stop</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="374"/>
+        <location filename="Debugger/DebugUI.py" line="375"/>
         <source>Stop debugging</source>
         <translation>Stop debugování</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="375"/>
+        <location filename="Debugger/DebugUI.py" line="376"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stop the running debugging session.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stop běhu aktuální debug relace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1923"/>
+        <location filename="Debugger/DebugUI.py" line="1913"/>
         <source>Evaluate</source>
         <translation>Evaluate</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="384"/>
+        <location filename="Debugger/DebugUI.py" line="385"/>
         <source>E&amp;valuate...</source>
         <translation>V&amp;yhodnotit...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="387"/>
+        <location filename="Debugger/DebugUI.py" line="388"/>
         <source>Evaluate in current context</source>
         <translation>Vyhodnotit aktuální kontext</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1952"/>
+        <location filename="Debugger/DebugUI.py" line="1942"/>
         <source>Execute</source>
         <translation>Vykonat</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="397"/>
+        <location filename="Debugger/DebugUI.py" line="398"/>
         <source>E&amp;xecute...</source>
         <translation>Vykon&amp;at...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="400"/>
+        <location filename="Debugger/DebugUI.py" line="401"/>
         <source>Execute a one line statement in the current context</source>
         <translation>Vykonat jednu řádku kódu v aktuálním kontextu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="402"/>
+        <location filename="Debugger/DebugUI.py" line="403"/>
         <source>&lt;b&gt;Execute&lt;/b&gt;&lt;p&gt;Execute a one line statement in the current context of the debugged program.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Execute&lt;/b&gt;&lt;p&gt;Vykonat jednu řádku kódu v aktuálním kontextu debugovaného programu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="410"/>
+        <location filename="Debugger/DebugUI.py" line="411"/>
         <source>Variables Type Filter</source>
         <translation>Filtr typů proměnných</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="410"/>
+        <location filename="Debugger/DebugUI.py" line="411"/>
         <source>Varia&amp;bles Type Filter...</source>
         <translation>&amp;Filtr typů proměnných...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="413"/>
+        <location filename="Debugger/DebugUI.py" line="414"/>
         <source>Configure variables type filter</source>
         <translation>Nastavit filtr typů proměnných</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="414"/>
+        <location filename="Debugger/DebugUI.py" line="415"/>
         <source>&lt;b&gt;Variables Type Filter&lt;/b&gt;&lt;p&gt;Configure the variables type filter. Only variable types that are not selected are displayed in the global or local variables window during a debugging session.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Filtr typů proměnných&lt;/b&gt;&lt;p&gt;Nastavení filtru typů proměnných. Během debugování jsou v okně globálních nebo lokálních proměnných zobrazovány jen ty typy proměnných, které nebyly vybrány.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="423"/>
+        <location filename="Debugger/DebugUI.py" line="424"/>
         <source>Exceptions Filter</source>
         <translation>Filtr výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="423"/>
+        <location filename="Debugger/DebugUI.py" line="424"/>
         <source>&amp;Exceptions Filter...</source>
         <translation>Filtr výjim&amp;ek...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="425"/>
+        <location filename="Debugger/DebugUI.py" line="426"/>
         <source>Configure exceptions filter</source>
         <translation>Konfigurace filtru výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="426"/>
+        <location filename="Debugger/DebugUI.py" line="427"/>
         <source>&lt;b&gt;Exceptions Filter&lt;/b&gt;&lt;p&gt;Configure the exceptions filter. Only exception types that are listed are highlighted during a debugging session.&lt;/p&gt;&lt;p&gt;Please note, that all unhandled exceptions are highlighted indepent from the filter list.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Filtr výjimek&lt;/b&gt;&lt;p&gt;Nastavení filtru výjimek. Během debugování jsou zvýrazněny jen ty výjimky, které jsou uvedeny v seznamu.&lt;/p&gt;&lt;p&gt;Všimněte si, že neošetřené výjimky jsou zvýrazněny nezávisle na seznamu filtru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="456"/>
+        <location filename="Debugger/DebugUI.py" line="457"/>
         <source>Toggle Breakpoint</source>
         <translation>Přepnout breakpoint</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="457"/>
+        <location filename="Debugger/DebugUI.py" line="458"/>
         <source>&lt;b&gt;Toggle Breakpoint&lt;/b&gt;&lt;p&gt;Toggles a breakpoint at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout breakpoint&lt;/b&gt;&lt;p&gt;Zapíná/vypíná breakpoint na aktuální řádce v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="470"/>
+        <location filename="Debugger/DebugUI.py" line="471"/>
         <source>Edit Breakpoint</source>
         <translation>Editovat breakpoint</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="465"/>
+        <location filename="Debugger/DebugUI.py" line="466"/>
         <source>Edit Breakpoint...</source>
         <translation>Editovat breakpoint...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="471"/>
+        <location filename="Debugger/DebugUI.py" line="472"/>
         <source>&lt;b&gt;Edit Breakpoint&lt;/b&gt;&lt;p&gt;Opens a dialog to edit the breakpoints properties. It works at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Editovat breakpoint&lt;/b&gt;&lt;p&gt;Otevře dialog s editací vlastností breakpointů. Zpracovává aktuální řádku v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="484"/>
+        <location filename="Debugger/DebugUI.py" line="485"/>
         <source>Next Breakpoint</source>
         <translation>Následující breakpoint</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="479"/>
+        <location filename="Debugger/DebugUI.py" line="480"/>
         <source>Ctrl+Shift+PgDown</source>
         <comment>Debug|Next Breakpoint</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="485"/>
+        <location filename="Debugger/DebugUI.py" line="486"/>
         <source>&lt;b&gt;Next Breakpoint&lt;/b&gt;&lt;p&gt;Go to next breakpoint of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Následující breakpoint&lt;/b&gt;&lt;p&gt;Jít na následující breakpoint v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="497"/>
+        <location filename="Debugger/DebugUI.py" line="498"/>
         <source>Previous Breakpoint</source>
         <translation>Předchozí breakpoint</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="492"/>
+        <location filename="Debugger/DebugUI.py" line="493"/>
         <source>Ctrl+Shift+PgUp</source>
         <comment>Debug|Previous Breakpoint</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="498"/>
+        <location filename="Debugger/DebugUI.py" line="499"/>
         <source>&lt;b&gt;Previous Breakpoint&lt;/b&gt;&lt;p&gt;Go to previous breakpoint of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí breakpoint&lt;/b&gt;&lt;p&gt;Jít na předchozí brakpoint v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="509"/>
+        <location filename="Debugger/DebugUI.py" line="510"/>
         <source>Clear Breakpoints</source>
         <translation>Zrušit breakpointy</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="505"/>
+        <location filename="Debugger/DebugUI.py" line="506"/>
         <source>Ctrl+Shift+C</source>
         <comment>Debug|Clear Breakpoints</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="510"/>
+        <location filename="Debugger/DebugUI.py" line="511"/>
         <source>&lt;b&gt;Clear Breakpoints&lt;/b&gt;&lt;p&gt;Clear breakpoints of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zrušit breakpointy&lt;/b&gt;&lt;p&gt;Zrušení breakpointů ve všech editorech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="537"/>
+        <location filename="Debugger/DebugUI.py" line="538"/>
         <source>&amp;Debug</source>
         <translation>&amp;Debugování</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="539"/>
+        <location filename="Debugger/DebugUI.py" line="540"/>
         <source>&amp;Start</source>
         <translation>&amp;Start</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="541"/>
+        <location filename="Debugger/DebugUI.py" line="542"/>
         <source>&amp;Breakpoints</source>
         <translation>&amp;Breakpointy</translation>
     </message>
@@ -3950,169 +3950,169 @@ Nepřipojen
         <translation>Debug</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="975"/>
+        <location filename="Debugger/DebugUI.py" line="965"/>
         <source>The program being debugged contains an unspecified syntax error.</source>
         <translation>Program, který je právě debugován, obsahuje nespecifikovanou syntaktickou chybu.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="998"/>
+        <location filename="Debugger/DebugUI.py" line="988"/>
         <source>An unhandled exception occured. See the shell window for details.</source>
         <translation>Objevila se neošetřená výjimka. Detaily naleznete v shell okně.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1068"/>
+        <location filename="Debugger/DebugUI.py" line="1058"/>
         <source>The program being debugged has terminated unexpectedly.</source>
         <translation>Debugovaný program byl neočekávaně ukončen.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1137"/>
+        <location filename="Debugger/DebugUI.py" line="1127"/>
         <source>Breakpoint Condition Error</source>
         <translation>Chyba v podmíněném breakpointu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1360"/>
+        <location filename="Debugger/DebugUI.py" line="1350"/>
         <source>Coverage of Project</source>
         <translation>Pokrytí projektu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1350"/>
+        <location filename="Debugger/DebugUI.py" line="1340"/>
         <source>Coverage of Script</source>
         <translation>Pokrytí skriptu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1570"/>
+        <location filename="Debugger/DebugUI.py" line="1560"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>V aktuálním projektu není definován hlavní skript. Zrušeno</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1464"/>
+        <location filename="Debugger/DebugUI.py" line="1454"/>
         <source>Profile of Project</source>
         <translation>Profilovat projekt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1453"/>
+        <location filename="Debugger/DebugUI.py" line="1443"/>
         <source>Profile of Script</source>
         <translation>Profilovat skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1678"/>
+        <location filename="Debugger/DebugUI.py" line="1668"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>V aktuálním projektu není definován hlavní skript. Debugování není možné.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1923"/>
+        <location filename="Debugger/DebugUI.py" line="1913"/>
         <source>Enter the statement to evaluate</source>
         <translation>Zadejte příkaz pro vyhodnocení</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1952"/>
+        <location filename="Debugger/DebugUI.py" line="1942"/>
         <source>Enter the statement to execute</source>
         <translation>Zadejte příkaz pro vykonání</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="281"/>
+        <location filename="Debugger/DebugUI.py" line="282"/>
         <source>Stop Script</source>
         <translation>Stopnout skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="285"/>
+        <location filename="Debugger/DebugUI.py" line="286"/>
         <source>Stop the running script.</source>
         <translation>Zastavit běžící skript.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="286"/>
+        <location filename="Debugger/DebugUI.py" line="287"/>
         <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stopnout skript&lt;/b&gt;&lt;p&gt;Zastaví skript, který běží v debugeru na pozadí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="388"/>
+        <location filename="Debugger/DebugUI.py" line="389"/>
         <source>&lt;b&gt;Evaluate&lt;/b&gt;&lt;p&gt;Evaluate an expression in the current context of the debugged program. The result is displayed in the shell window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyhodnotit&lt;/b&gt;&lt;p&gt;Vyhodnotit výraz aktuálního kontextu debugovaného programu. Výsledek je zobrazen v shell okně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1168"/>
+        <location filename="Debugger/DebugUI.py" line="1158"/>
         <source>Watch Expression Error</source>
         <translation>Chyba sledovacího bodu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1203"/>
+        <location filename="Debugger/DebugUI.py" line="1193"/>
         <source>Watch expression already exists</source>
         <translation>Sledovací bod již existuje</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="436"/>
+        <location filename="Debugger/DebugUI.py" line="437"/>
         <source>Ignored Exceptions</source>
         <translation>Ignorované výjimky</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="436"/>
+        <location filename="Debugger/DebugUI.py" line="437"/>
         <source>&amp;Ignored Exceptions...</source>
         <translation>&amp;Ignorované výjimky...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="439"/>
+        <location filename="Debugger/DebugUI.py" line="440"/>
         <source>Configure ignored exceptions</source>
         <translation>Konfigurovat ignorované výjimky</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="440"/>
+        <location filename="Debugger/DebugUI.py" line="441"/>
         <source>&lt;b&gt;Ignored Exceptions&lt;/b&gt;&lt;p&gt;Configure the ignored exceptions. Only exception types that are not listed are highlighted during a debugging session.&lt;/p&gt;&lt;p&gt;Please note, that unhandled exceptions cannot be ignored.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ignorované výjimky&lt;/b&gt;&lt;p&gt;Seznam ignorovaných výjimek. Během debugování jsou zvýrazněny jen ty typy výjimek, které nejsou uvedeny v tomto seznamu.&lt;/p&gt;&lt;p&gt;Všimněte si prosím, že výjimky typu unhalted nelze ignorovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="451"/>
+        <location filename="Debugger/DebugUI.py" line="452"/>
         <source>Shift+F11</source>
         <comment>Debug|Toggle Breakpoint</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="465"/>
+        <location filename="Debugger/DebugUI.py" line="466"/>
         <source>Shift+F12</source>
         <comment>Debug|Edit Breakpoint</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="952"/>
+        <location filename="Debugger/DebugUI.py" line="942"/>
         <source>&lt;p&gt;The program has terminated with an exit status of {0}.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Program byl ukončen s exit statusem {0}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="956"/>
+        <location filename="Debugger/DebugUI.py" line="946"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; has terminated with an exit status of {1}.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; byl ukončen s exit statusem {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="981"/>
+        <location filename="Debugger/DebugUI.py" line="971"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; contains the syntax error &lt;b&gt;{1}&lt;/b&gt; at line &lt;b&gt;{2}&lt;/b&gt;, character &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; na řádce &lt;b&gt;{1}&lt;/b&gt;, písmeno &lt;b&gt;{2}&lt;/b&gt;, obsahuje syntaktickou chybu &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1023"/>
+        <location filename="Debugger/DebugUI.py" line="1013"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Line: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Break here?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Debugovaný program vyvolal výjimku  &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;Soubor: &lt;b&gt;{2}&lt;/b&gt;, řádek: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zastavit zde?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1034"/>
+        <location filename="Debugger/DebugUI.py" line="1024"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Debugovaný program vyvolal výjimku  &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1137"/>
+        <location filename="Debugger/DebugUI.py" line="1127"/>
         <source>&lt;p&gt;The condition of the breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Podmínka breakpointu &lt;b&gt;{0}, {1}&lt;/b&gt; obsahuje syntaktickou chybu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1168"/>
+        <location filename="Debugger/DebugUI.py" line="1158"/>
         <source>&lt;p&gt;The watch expression &lt;b&gt;{0}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sledovací bod &lt;b&gt;{0}&lt;/b&gt; obsahuje syntaktickou chybu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1195"/>
+        <location filename="Debugger/DebugUI.py" line="1185"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sledovací bod &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1199"/>
+        <location filename="Debugger/DebugUI.py" line="1189"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sledovací bod &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; pro proměnnou &lt;b&gt;{1}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
@@ -4120,52 +4120,52 @@ Nepřipojen
 <context>
     <name>DebugViewer</name>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="162"/>
+        <location filename="Debugger/DebugViewer.py" line="161"/>
         <source>Enter regular expression patterns separated by &apos;;&apos; to define variable filters. </source>
         <translation>Zadání vzorků regulárních výrazů oddělených &apos;;&apos; pro definování proměnných filtrů.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="165"/>
+        <location filename="Debugger/DebugViewer.py" line="164"/>
         <source>Enter regular expression patterns separated by &apos;;&apos; to define variable filters. All variables and class attributes matched by one of the expressions are not shown in the list above.</source>
         <translation>Zadání vzorků regulárních výrazů oddělených &apos;;&apos; pro definování proměnných filtrů. Proměnné a atributy tříd nalezené jedním z uvedených výrazů, nejsou zobrazovány v seznamu nahoře.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="170"/>
+        <location filename="Debugger/DebugViewer.py" line="169"/>
         <source>Set</source>
         <translation>Množina</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="148"/>
+        <location filename="Debugger/DebugViewer.py" line="147"/>
         <source>Source</source>
         <translation>Zdroj</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="215"/>
+        <location filename="Debugger/DebugViewer.py" line="212"/>
         <source>Threads:</source>
         <translation>Thready:</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="217"/>
+        <location filename="Debugger/DebugViewer.py" line="214"/>
         <source>ID</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="217"/>
+        <location filename="Debugger/DebugViewer.py" line="214"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="217"/>
+        <location filename="Debugger/DebugViewer.py" line="214"/>
         <source>State</source>
         <translation>Stav</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="408"/>
+        <location filename="Debugger/DebugViewer.py" line="403"/>
         <source>waiting at breakpoint</source>
         <translation>čekající na breakpoint</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="410"/>
+        <location filename="Debugger/DebugViewer.py" line="405"/>
         <source>running</source>
         <translation>běžící</translation>
     </message>
@@ -4551,22 +4551,22 @@ Nepřipojen
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="719"/>
         <source>Parent Process</source>
         <translation>Rodičovský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="719"/>
         <source>Child process</source>
         <translation>Dětský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
         <source>Client forking</source>
         <translation>Větvení klienta</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
         <source>Select the fork branch to follow.</source>
         <translation>Pokračovat ve fork větvi.</translation>
     </message>
@@ -4589,22 +4589,22 @@ Nepřipojen
         <translation>&lt;p&gt;Debugovací backend nelze spustit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython3.py" line="719"/>
+        <location filename="Debugger/DebuggerInterfacePython3.py" line="718"/>
         <source>Parent Process</source>
         <translation>Rodičovský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython3.py" line="719"/>
+        <location filename="Debugger/DebuggerInterfacePython3.py" line="718"/>
         <source>Child process</source>
         <translation>Dětský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython3.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython3.py" line="719"/>
         <source>Client forking</source>
         <translation>Větvení klienta</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython3.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython3.py" line="719"/>
         <source>Select the fork branch to follow.</source>
         <translation>Pokračovat ve fork větvi.</translation>
     </message>
@@ -5058,7 +5058,7 @@ Nepřipojen
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.py" line="97"/>
         <source>Python Files (*.py)</source>
-        <translation>Python soubory (*.py)</translation>
+        <translation type="obsolete">Python soubory (*.py)</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="129"/>
@@ -5074,6 +5074,11 @@ Nepřipojen
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="151"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation>Vyberte pro přesměrování stdin, stdout, a stderr programu, který je debugován v eric5 IDE</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.py" line="97"/>
+        <source>Python Files (*.py *.py2)</source>
+        <translation type="unfinished">Python soubory (*.py *.py3) {2)?}</translation>
     </message>
 </context>
 <context>
@@ -5215,42 +5220,42 @@ Nepřipojen
         <translation>Uložit výstup do path souboru</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="311"/>
+        <location filename="UI/DiffDialog.py" line="309"/>
         <source>Save Diff</source>
         <translation>Uložit Diff</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="273"/>
+        <location filename="UI/DiffDialog.py" line="271"/>
         <source>Patch Files (*.diff)</source>
         <translation>Patch soubory (*.diff)</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="347"/>
+        <location filename="UI/DiffDialog.py" line="345"/>
         <source>Compare Files</source>
         <translation>Porovnat soubory</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="445"/>
+        <location filename="UI/DiffDialog.py" line="443"/>
         <source>There is no difference.</source>
         <translation>Žádné rozdíly nebyly nalezeny.</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="464"/>
+        <location filename="UI/DiffDialog.py" line="462"/>
         <source>Select file to compare</source>
         <translation>Výběr souboru pro porovnání</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="290"/>
+        <location filename="UI/DiffDialog.py" line="288"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Patch soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="311"/>
+        <location filename="UI/DiffDialog.py" line="309"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Patch soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="347"/>
+        <location filename="UI/DiffDialog.py" line="345"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
@@ -5293,32 +5298,32 @@ Nepřipojen
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="145"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="142"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="356"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="384"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="381"/>
         <source>bytes</source>
         <translation>bajtů</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="387"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="384"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="390"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="387"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="124"/>
         <source>Downloading</source>
         <translation>Stahování</translation>
     </message>
@@ -5328,52 +5333,52 @@ Nepřipojen
         <translation>Eric5 Download</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="124"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Chystáte se stáhnout soubor &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Co chcete udělat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="156"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="153"/>
         <source>Download canceled: {0}</source>
         <translation>Download zrušen: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="269"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="266"/>
         <source>Error opening save file: {0}</source>
         <translation>Chyba při otvírání uloženého souboru: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="276"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="273"/>
         <source>Error saving: {0}</source>
         <translation>Chyba při ukládání: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="293"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="290"/>
         <source>Network Error: {0}</source>
         <translation>Chyba sítě: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="349"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="346"/>
         <source>- {0}:{1:02} minutes remaining</source>
         <translation>- {0}:{1:02} zbývá minut</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="356"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="353"/>
         <source>- {0} seconds remaining</source>
         <translation>- {0} zbývá vteřin</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="358"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="355"/>
         <source>{0} of {1} ({2}/sec) {3}</source>
         <translation>{0} of {1} ({2}/sek) {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="367"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="364"/>
         <source>{0} downloaded</source>
         <translation>{0} staženo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="370"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="367"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} z {1} - zastaveno</translation>
     </message>
@@ -5523,42 +5528,42 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>E5RequestModel</name>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="215"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="213"/>
         <source>Method</source>
         <translation>Metoda</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="216"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="214"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="217"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="215"/>
         <source>Response</source>
         <translation>Odpověď</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="218"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="216"/>
         <source>Length</source>
         <translation>Délka</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="219"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="217"/>
         <source>Content Type</source>
         <translation>Typ obsahu</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="220"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="218"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="290"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="288"/>
         <source>Redirect: {0}</source>
         <translation>Přesměrování: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="323"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="321"/>
         <source>Unknown</source>
         <translation>Neznámý</translation>
     </message>
@@ -5566,7 +5571,7 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>E5SideBar</name>
     <message>
-        <location filename="E5Gui/E5SideBar.py" line="48"/>
+        <location filename="E5Gui/E5SideBar.py" line="47"/>
         <source>Deselect to activate automatic collapsing</source>
         <translation>Zrušit aktivaci automatického zmizení</translation>
     </message>
@@ -5868,787 +5873,787 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="2227"/>
+        <location filename="QScintilla/Editor.py" line="2242"/>
         <source>Open File</source>
         <translation>Otevřít soubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="546"/>
+        <location filename="QScintilla/Editor.py" line="562"/>
         <source>Undo</source>
         <translation>Vrátit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="549"/>
+        <location filename="QScintilla/Editor.py" line="565"/>
         <source>Redo</source>
         <translation>Znovu použít</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="552"/>
+        <location filename="QScintilla/Editor.py" line="568"/>
         <source>Revert to last saved state</source>
         <translation>Vrátit k poslednímu uloženému stavu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="556"/>
+        <location filename="QScintilla/Editor.py" line="572"/>
         <source>Cut</source>
         <translation>Vyjmout</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="559"/>
+        <location filename="QScintilla/Editor.py" line="575"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="561"/>
+        <location filename="QScintilla/Editor.py" line="577"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="565"/>
+        <location filename="QScintilla/Editor.py" line="581"/>
         <source>Indent</source>
         <translation>Odsadit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="567"/>
+        <location filename="QScintilla/Editor.py" line="583"/>
         <source>Unindent</source>
         <translation>Zrušit odsazení</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="570"/>
+        <location filename="QScintilla/Editor.py" line="586"/>
         <source>Comment</source>
         <translation>Vytvořit komentář</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="573"/>
+        <location filename="QScintilla/Editor.py" line="589"/>
         <source>Uncomment</source>
         <translation>Zrušit komentář</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="576"/>
+        <location filename="QScintilla/Editor.py" line="592"/>
         <source>Stream Comment</source>
         <translation>Proudový komentář</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="579"/>
+        <location filename="QScintilla/Editor.py" line="595"/>
         <source>Box Comment</source>
         <translation>Obdélníkový komentář</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="582"/>
+        <location filename="QScintilla/Editor.py" line="598"/>
         <source>Select to brace</source>
         <translation>Vybrat až po závorku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="584"/>
+        <location filename="QScintilla/Editor.py" line="600"/>
         <source>Select all</source>
         <translation>Vybrat vše</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="585"/>
+        <location filename="QScintilla/Editor.py" line="601"/>
         <source>Deselect all</source>
         <translation>Zrušit celý výběr</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="598"/>
+        <location filename="QScintilla/Editor.py" line="614"/>
         <source>Shorten empty lines</source>
         <translation>Zkrátit prázdné řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="606"/>
+        <location filename="QScintilla/Editor.py" line="622"/>
         <source>Use Monospaced Font</source>
         <translation>Použít neporoporcionální font</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="611"/>
+        <location filename="QScintilla/Editor.py" line="627"/>
         <source>Autosave enabled</source>
         <translation>Zapnout autosave</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="623"/>
+        <location filename="QScintilla/Editor.py" line="639"/>
         <source>Autocompletion enabled</source>
         <translation>Zapnout autodoplňování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="640"/>
+        <location filename="QScintilla/Editor.py" line="656"/>
         <source>New view</source>
         <translation>Nový pohled</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="641"/>
+        <location filename="QScintilla/Editor.py" line="657"/>
         <source>New view (with new split)</source>
         <translation>Nový pohled (s novým rozdělením)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="645"/>
+        <location filename="QScintilla/Editor.py" line="661"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="649"/>
+        <location filename="QScintilla/Editor.py" line="665"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="651"/>
+        <location filename="QScintilla/Editor.py" line="667"/>
         <source>Save As...</source>
         <translation>Uložit jako...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="658"/>
+        <location filename="QScintilla/Editor.py" line="674"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="674"/>
+        <location filename="QScintilla/Editor.py" line="689"/>
         <source>Autocomplete</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="680"/>
+        <location filename="QScintilla/Editor.py" line="695"/>
         <source>from Document</source>
         <translation>z dokumentu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="683"/>
+        <location filename="QScintilla/Editor.py" line="698"/>
         <source>from APIs</source>
         <translation>z API</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="686"/>
+        <location filename="QScintilla/Editor.py" line="701"/>
         <source>from Document and APIs</source>
         <translation>z dokumentu a API</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="700"/>
+        <location filename="QScintilla/Editor.py" line="715"/>
         <source>Check</source>
         <translation>Zkontrolovat</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="708"/>
+        <location filename="QScintilla/Editor.py" line="723"/>
         <source>Show</source>
         <translation>Zobrazit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="710"/>
+        <location filename="QScintilla/Editor.py" line="725"/>
         <source>Code metrics...</source>
         <translation>Metrika kódu...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="712"/>
+        <location filename="QScintilla/Editor.py" line="727"/>
         <source>Code coverage...</source>
         <translation>Pokrytí kódu...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="714"/>
+        <location filename="QScintilla/Editor.py" line="729"/>
         <source>Show code coverage annotations</source>
         <translation>Zobrazit poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="717"/>
+        <location filename="QScintilla/Editor.py" line="732"/>
         <source>Hide code coverage annotations</source>
         <translation>Skrýt poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="720"/>
+        <location filename="QScintilla/Editor.py" line="735"/>
         <source>Profile data...</source>
         <translation>Profilovat data...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="730"/>
+        <location filename="QScintilla/Editor.py" line="745"/>
         <source>Diagrams</source>
         <translation>Diagramy</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="732"/>
+        <location filename="QScintilla/Editor.py" line="747"/>
         <source>Class Diagram...</source>
         <translation>Diagram třídy...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="734"/>
+        <location filename="QScintilla/Editor.py" line="749"/>
         <source>Package Diagram...</source>
         <translation>Diagram balíčku...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="736"/>
+        <location filename="QScintilla/Editor.py" line="751"/>
         <source>Imports Diagram...</source>
         <translation>Diagram importů...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="739"/>
+        <location filename="QScintilla/Editor.py" line="754"/>
         <source>Application Diagram...</source>
         <translation>Diagram aplikace...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="750"/>
+        <location filename="QScintilla/Editor.py" line="765"/>
         <source>Languages</source>
         <translation>Jazyky</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="753"/>
+        <location filename="QScintilla/Editor.py" line="768"/>
         <source>No Language</source>
         <translation>Žádný jazyk</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="962"/>
+        <location filename="QScintilla/Editor.py" line="977"/>
         <source>Toggle bookmark</source>
         <translation>Přepnout záložku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="965"/>
+        <location filename="QScintilla/Editor.py" line="980"/>
         <source>Next bookmark</source>
         <translation>Následující záložka</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="968"/>
+        <location filename="QScintilla/Editor.py" line="983"/>
         <source>Previous bookmark</source>
         <translation>Předchozí záložka</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="971"/>
+        <location filename="QScintilla/Editor.py" line="986"/>
         <source>Clear all bookmarks</source>
         <translation>Zrušit všechny záložky</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="975"/>
+        <location filename="QScintilla/Editor.py" line="990"/>
         <source>Goto syntax error</source>
         <translation>Jít na chybu syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="978"/>
+        <location filename="QScintilla/Editor.py" line="993"/>
         <source>Show syntax error message</source>
         <translation>Zobrazit hlášení syntaktické chyby</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="981"/>
+        <location filename="QScintilla/Editor.py" line="996"/>
         <source>Clear syntax error</source>
         <translation>Zrušit chybu syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="998"/>
+        <location filename="QScintilla/Editor.py" line="1013"/>
         <source>Toggle breakpoint</source>
         <translation>Přepnout breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1001"/>
+        <location filename="QScintilla/Editor.py" line="1016"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Přepnout dočasný breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1004"/>
+        <location filename="QScintilla/Editor.py" line="1019"/>
         <source>Edit breakpoint...</source>
         <translation>Editovat breakpoint...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3886"/>
+        <location filename="QScintilla/Editor.py" line="3901"/>
         <source>Enable breakpoint</source>
         <translation>Aktivovat breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1010"/>
+        <location filename="QScintilla/Editor.py" line="1025"/>
         <source>Next breakpoint</source>
         <translation>Následující breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1013"/>
+        <location filename="QScintilla/Editor.py" line="1028"/>
         <source>Previous breakpoint</source>
         <translation>Předchozí breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1016"/>
+        <location filename="QScintilla/Editor.py" line="1031"/>
         <source>Clear all breakpoints</source>
         <translation>Zrušit všechny breakpointy</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1020"/>
+        <location filename="QScintilla/Editor.py" line="1035"/>
         <source>Next uncovered line</source>
         <translation>Následující odkrytá řádka</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1023"/>
+        <location filename="QScintilla/Editor.py" line="1038"/>
         <source>Previous uncovered line</source>
         <translation>Předchozí odkrytá řádka</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1027"/>
+        <location filename="QScintilla/Editor.py" line="1042"/>
         <source>Next task</source>
         <translation>Následující úloha</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1030"/>
+        <location filename="QScintilla/Editor.py" line="1045"/>
         <source>Previous task</source>
         <translation>Předchozí úloha</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1034"/>
+        <location filename="QScintilla/Editor.py" line="1049"/>
         <source>LMB toggles bookmarks</source>
         <translation>LMB přepínač záložek</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1039"/>
+        <location filename="QScintilla/Editor.py" line="1054"/>
         <source>LMB toggles breakpoints</source>
         <translation>LMB přepínač breakpointů</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1473"/>
+        <location filename="QScintilla/Editor.py" line="1488"/>
         <source>Modification of Read Only file</source>
         <translation>Modifikace souboru otevřeného jen pro čtení</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1473"/>
+        <location filename="QScintilla/Editor.py" line="1488"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Pokoušíte se změnit soubor, který je otevřen jen pro čtení. Prosím, uložte jej nejdříve do jiného souboru.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2020"/>
+        <location filename="QScintilla/Editor.py" line="2035"/>
         <source>Printing...</source>
         <translation>Tisk...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2037"/>
+        <location filename="QScintilla/Editor.py" line="2052"/>
         <source>Printing completed</source>
         <translation>Tisk je hotov</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2039"/>
+        <location filename="QScintilla/Editor.py" line="2054"/>
         <source>Error while printing</source>
         <translation>Chyba během tisku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2042"/>
+        <location filename="QScintilla/Editor.py" line="2057"/>
         <source>Printing aborted</source>
         <translation>Tisk byl zrušen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2366"/>
+        <location filename="QScintilla/Editor.py" line="2381"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2171"/>
+        <location filename="QScintilla/Editor.py" line="2186"/>
         <source>File Modified</source>
         <translation>Soubor je modifikován</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3423"/>
+        <location filename="QScintilla/Editor.py" line="3438"/>
         <source>Autocompletion</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3423"/>
+        <location filename="QScintilla/Editor.py" line="3438"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autodoplňování není dostupné protože zdrojová část autodoplňování nebyla nalezena.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3889"/>
+        <location filename="QScintilla/Editor.py" line="3904"/>
         <source>Disable breakpoint</source>
         <translation>Deaktivovat breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4160"/>
+        <location filename="QScintilla/Editor.py" line="4175"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4160"/>
+        <location filename="QScintilla/Editor.py" line="4175"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor s pokrytím kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4206"/>
+        <location filename="QScintilla/Editor.py" line="4221"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zobrazit poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4202"/>
+        <location filename="QScintilla/Editor.py" line="4217"/>
         <source>All lines have been covered.</source>
         <translation>Všechny řádky byly pokryty.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4206"/>
+        <location filename="QScintilla/Editor.py" line="4221"/>
         <source>There is no coverage file available.</source>
         <translation>Soubor s pokrytím není dostupný.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4298"/>
+        <location filename="QScintilla/Editor.py" line="4313"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4298"/>
+        <location filename="QScintilla/Editor.py" line="4313"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4414"/>
+        <location filename="QScintilla/Editor.py" line="4429"/>
         <source>Syntax Error</source>
         <translation>Chyba syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4414"/>
+        <location filename="QScintilla/Editor.py" line="4429"/>
         <source>No syntax error message available.</source>
         <translation>Hlášení syntaktické chyby není dostupné.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4553"/>
+        <location filename="QScintilla/Editor.py" line="4568"/>
         <source>Macro Name</source>
         <translation>Název makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4553"/>
+        <location filename="QScintilla/Editor.py" line="4568"/>
         <source>Select a macro name:</source>
         <translation>Vyberte název makra:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4581"/>
+        <location filename="QScintilla/Editor.py" line="4596"/>
         <source>Load macro file</source>
         <translation>Načíst soubor makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4621"/>
+        <location filename="QScintilla/Editor.py" line="4636"/>
         <source>Macro files (*.macro)</source>
         <translation>Macro soubory (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4602"/>
+        <location filename="QScintilla/Editor.py" line="4617"/>
         <source>Error loading macro</source>
         <translation>Chyba při načítání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4621"/>
+        <location filename="QScintilla/Editor.py" line="4636"/>
         <source>Save macro file</source>
         <translation>Uložit soubor s makrem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4638"/>
+        <location filename="QScintilla/Editor.py" line="4653"/>
         <source>Save macro</source>
         <translation>Uložit makro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4656"/>
+        <location filename="QScintilla/Editor.py" line="4671"/>
         <source>Error saving macro</source>
         <translation>Chyba při ukládání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4667"/>
+        <location filename="QScintilla/Editor.py" line="4682"/>
         <source>Start Macro Recording</source>
         <translation>Spustit záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4667"/>
+        <location filename="QScintilla/Editor.py" line="4682"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Nahrávání makra již probíhá. Spustit nové?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4694"/>
+        <location filename="QScintilla/Editor.py" line="4709"/>
         <source>Macro Recording</source>
         <translation>Záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4694"/>
+        <location filename="QScintilla/Editor.py" line="4709"/>
         <source>Enter name of the macro:</source>
         <translation>Vložte název makra:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4813"/>
+        <location filename="QScintilla/Editor.py" line="4827"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Pozor:&lt;/b&gt; Ztratíte všechny změny pokud jej znovu otevřete.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4817"/>
+        <location filename="QScintilla/Editor.py" line="4831"/>
         <source>File changed</source>
         <translation>Soubor změněn</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5015"/>
+        <location filename="QScintilla/Editor.py" line="5029"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5033"/>
+        <location filename="QScintilla/Editor.py" line="5047"/>
         <source>Resources</source>
         <translation>Zdroje</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5035"/>
+        <location filename="QScintilla/Editor.py" line="5049"/>
         <source>Add file...</source>
         <translation>Přidat soubor...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5037"/>
+        <location filename="QScintilla/Editor.py" line="5051"/>
         <source>Add files...</source>
         <translation>Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5039"/>
+        <location filename="QScintilla/Editor.py" line="5053"/>
         <source>Add aliased file...</source>
         <translation>Přidat zástupce souboru...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5041"/>
+        <location filename="QScintilla/Editor.py" line="5055"/>
         <source>Add localized resource...</source>
         <translation>Přidat lokalizované resource...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5044"/>
+        <location filename="QScintilla/Editor.py" line="5058"/>
         <source>Add resource frame</source>
         <translation>Přidat resource frame</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5062"/>
+        <location filename="QScintilla/Editor.py" line="5076"/>
         <source>Add file resource</source>
         <translation>Přidat soubor resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5078"/>
+        <location filename="QScintilla/Editor.py" line="5092"/>
         <source>Add file resources</source>
         <translation>Přidat soubory resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5105"/>
+        <location filename="QScintilla/Editor.py" line="5119"/>
         <source>Add aliased file resource</source>
         <translation>Přidat zástupce souboru resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5166"/>
+        <location filename="QScintilla/Editor.py" line="5180"/>
         <source>Package Diagram</source>
         <translation>Diagram balíčku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5166"/>
+        <location filename="QScintilla/Editor.py" line="5180"/>
         <source>Include class attributes?</source>
         <translation>Včetně atributů třídy?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5203"/>
+        <location filename="QScintilla/Editor.py" line="5217"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5203"/>
+        <location filename="QScintilla/Editor.py" line="5217"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="843"/>
+        <location filename="QScintilla/Editor.py" line="858"/>
         <source>Export as</source>
         <translation>Exportovat jako</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1074"/>
+        <location filename="QScintilla/Editor.py" line="1089"/>
         <source>Export source</source>
         <translation>Export zdroj</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1074"/>
+        <location filename="QScintilla/Editor.py" line="1089"/>
         <source>No export format given. Aborting...</source>
         <translation>Nebyl zadán forám exportu. Zrušeno....</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5187"/>
+        <location filename="QScintilla/Editor.py" line="5201"/>
         <source>Imports Diagram</source>
         <translation>Importovat diagram</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5187"/>
+        <location filename="QScintilla/Editor.py" line="5201"/>
         <source>Include imports from external modules?</source>
         <translation>Zahrnout importy z externích modulů?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="677"/>
+        <location filename="QScintilla/Editor.py" line="692"/>
         <source>dynamic</source>
         <translation>dynamický</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="690"/>
+        <location filename="QScintilla/Editor.py" line="705"/>
         <source>Calltip</source>
         <translation>Rychlé tipy</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="656"/>
+        <location filename="QScintilla/Editor.py" line="672"/>
         <source>Print Preview</source>
         <translation>Náhled tisku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="322"/>
+        <location filename="QScintilla/Editor.py" line="338"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okno editoru zdrojového kódu&lt;/b&gt;&lt;p&gt;V tomto okně se zobrazuje a edituje soubor se zdrojovým kódem. Můžete otevřít oken podle libosti. Jméno souboru se zobrazuje v titlebaru okna.&lt;/p&gt;&lt;p&gt;Kliknutím do prostoru mezi čísly řádku a značkami skládání nastavíte breakpoint. Přes kontextové menu je pak lze editovat.&lt;/p&gt;&lt;p&gt;Záložka se vkládá kliknutím na stejné místo se stisknutou klávesou Shift.&lt;/p&gt;&lt;p&gt;Tyto akce mohou být navráceny zpět i opětovným kliknutím nebo přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="616"/>
+        <location filename="QScintilla/Editor.py" line="632"/>
         <source>Typing aids enabled</source>
         <translation>Pomůcky při psaní zapnuty</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="812"/>
+        <location filename="QScintilla/Editor.py" line="827"/>
         <source>End-of-Line Type</source>
         <translation>Typ Konec-řádku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="816"/>
+        <location filename="QScintilla/Editor.py" line="831"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="822"/>
+        <location filename="QScintilla/Editor.py" line="837"/>
         <source>Windows</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="828"/>
+        <location filename="QScintilla/Editor.py" line="843"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="790"/>
+        <location filename="QScintilla/Editor.py" line="805"/>
         <source>Encodings</source>
         <translation>Kódování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="772"/>
+        <location filename="QScintilla/Editor.py" line="787"/>
         <source>Guessed</source>
         <translation>Odhadem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1088"/>
+        <location filename="QScintilla/Editor.py" line="1103"/>
         <source>Alternatives</source>
         <translation>Alternativy</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1103"/>
+        <location filename="QScintilla/Editor.py" line="1118"/>
         <source>Pygments Lexer</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1103"/>
+        <location filename="QScintilla/Editor.py" line="1118"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Použít Pygments lexer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5437"/>
+        <location filename="QScintilla/Editor.py" line="5449"/>
         <source>Check spelling...</source>
         <translation>Zatrhnout kontrolu...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="591"/>
+        <location filename="QScintilla/Editor.py" line="607"/>
         <source>Check spelling of selection...</source>
         <translation>Zatrhnout výběr kontroly...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5439"/>
+        <location filename="QScintilla/Editor.py" line="5451"/>
         <source>Add to dictionary</source>
         <translation>Přidat do slovníku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5441"/>
+        <location filename="QScintilla/Editor.py" line="5453"/>
         <source>Ignore All</source>
         <translation>Ignorovat vše</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="595"/>
+        <location filename="QScintilla/Editor.py" line="611"/>
         <source>Remove from dictionary</source>
         <translation>Odebrat ze slovníku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="267"/>
+        <location filename="QScintilla/Editor.py" line="283"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Velikost souboru &lt;b&gt;{0}&lt;/b&gt; je &lt;b&gt;{1} KB&lt;/b&gt;. Opravdu jej chcete načíst?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1066"/>
+        <location filename="QScintilla/Editor.py" line="1081"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pro formát exportu &lt;b&gt;{0}&lt;/b&gt; není exportér dostupný. Zrušeno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1085"/>
+        <location filename="QScintilla/Editor.py" line="1100"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativy ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2171"/>
+        <location filename="QScintilla/Editor.py" line="2186"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; obsahuje neuložené změny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2227"/>
+        <location filename="QScintilla/Editor.py" line="2242"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nemůže být přejmenován.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2325"/>
+        <location filename="QScintilla/Editor.py" line="2340"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nemůže být přejmenován.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2366"/>
+        <location filename="QScintilla/Editor.py" line="2381"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4595"/>
+        <location filename="QScintilla/Editor.py" line="4610"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4602"/>
+        <location filename="QScintilla/Editor.py" line="4617"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; je poškozen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4638"/>
+        <location filename="QScintilla/Editor.py" line="4653"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4656"/>
+        <location filename="QScintilla/Editor.py" line="4671"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;So souboru s makrem &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4808"/>
+        <location filename="QScintilla/Editor.py" line="4822"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; byl změněn po té co již byl načten do eric5. Znovu načíst?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4898"/>
+        <location filename="QScintilla/Editor.py" line="4912"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5015"/>
+        <location filename="QScintilla/Editor.py" line="5029"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5105"/>
+        <location filename="QScintilla/Editor.py" line="5119"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Zástupce pro soubor &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="985"/>
+        <location filename="QScintilla/Editor.py" line="1000"/>
         <source>Next warning</source>
         <translation>Následující varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="988"/>
+        <location filename="QScintilla/Editor.py" line="1003"/>
         <source>Previous warning</source>
         <translation>Předchozí varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="991"/>
+        <location filename="QScintilla/Editor.py" line="1006"/>
         <source>Show warning message</source>
         <translation>Zobrazit varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="994"/>
+        <location filename="QScintilla/Editor.py" line="1009"/>
         <source>Clear warnings</source>
         <translation>Vyčistit varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4534"/>
+        <location filename="QScintilla/Editor.py" line="4549"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4534"/>
+        <location filename="QScintilla/Editor.py" line="4549"/>
         <source>No py3flakes warning message available.</source>
         <translation>Varování py3flakes není dostupné.</translation>
     </message>
@@ -7031,167 +7036,167 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>EditorExportersPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="19"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="20"/>
         <source>&lt;b&gt;Configure exporters&lt;/b&gt;</source>
         <translation>&lt;b&gt;Konfigurace exporterů&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="41"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="42"/>
         <source>Exporter Type:</source>
         <translation>Typ exportera:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="57"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="58"/>
         <source>Select the exporter to be configured.</source>
         <translation>Výběr exportera pro konfiguraci.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="294"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="342"/>
         <source>Select to export in WYSIWYG mode</source>
         <translation>Vybrat pro export ve WYSIWYG módu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="297"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="345"/>
         <source>Use WYSIWYG mode</source>
         <translation>Použít WYSIWYG mód</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="87"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="88"/>
         <source>Select to include folding functionality</source>
         <translation>Vybrat pro vložení funkcionality skládání kódu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="90"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="91"/>
         <source>Include folding functionality</source>
         <translation>Vložit funkcionalitu skládání kódu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="364"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="412"/>
         <source>Select to include only used styles</source>
         <translation>Vybrat pro vložení pouze použitých stlů</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="367"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="415"/>
         <source>Include only used styles</source>
         <translation>Vložit jen použité styly</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="374"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="422"/>
         <source>Select to use the full pathname as the document title</source>
         <translation>Vybrat pro použití plné cesty k souboru jako nadpisu dokumentu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="377"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="425"/>
         <source>Use full pathname as document title</source>
         <translation>Použít plnou cestu k souboru jako nadpis dokumentu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="334"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="382"/>
         <source>Select to use tabs in the generated file</source>
         <translation>Vybrat pro použití štítků v generovaném souboru</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="337"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="385"/>
         <source>Use tabs</source>
         <translation>Použít štítky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="306"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="354"/>
         <source>Press to select the font for the RTF export</source>
         <translation>Stisknout pro výběr fontu pro RTF export</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="309"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="357"/>
         <source>Select Font</source>
         <translation>Vybrat font</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="319"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="367"/>
         <source>Font for RTF export</source>
         <translation>Font pro RTF export</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="147"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="195"/>
         <source>Magnification:</source>
         <translation>Zvětšení:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="154"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="202"/>
         <source>Select the magnification value to be added to the font sizes of the styles</source>
         <translation>Vybrat hodnotu zvětšení, která bude ve stylech přičtena k velikosti fontu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="167"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="215"/>
         <source>Displays the selected magnification value</source>
         <translation>Zobrazit vybranou hodnotu zvětšení</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="180"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="228"/>
         <source>Font:</source>
         <translation>Font:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="187"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="235"/>
         <source>Select the font from the list</source>
         <translation>Výběr fontu ze seznamu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="194"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="242"/>
         <source>Pagesize:</source>
         <translation>Velikost strany:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="201"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="249"/>
         <source>Select the page size from the list</source>
         <translation>Vybrat velikost strany ze seznamu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="210"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="258"/>
         <source>Margins</source>
         <translation>Okraje</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="216"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="264"/>
         <source>Select the top margin in points (72 pt == 1&quot;)</source>
         <translation>Vybrat horní okraj v bodech (72 pt == 1&quot;)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="226"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="274"/>
         <source>Select the left margin in points (72 pt == 1&quot;)</source>
         <translation>Vybrat levý okraj v bodech (72 pt == 1&quot;)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="236"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="284"/>
         <source>Select the right margin in points (72 pt == 1&quot;)</source>
         <translation>Vybrat pravý okraj v bodech (72 pt == 1&quot;)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="246"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.ui" line="294"/>
         <source>Select the bottom margin in points (72 pt == 1&quot;)</source>
         <translation>Vybrat dolní okraj v bodech (72 pt == 1&quot;)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="41"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="42"/>
         <source>Courier</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="42"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="43"/>
         <source>Helvetica</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="43"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="44"/>
         <source>Times</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="45"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="46"/>
         <source>A4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="46"/>
+        <location filename="Preferences/ConfigurationPages/EditorExportersPage.py" line="47"/>
         <source>Letter</source>
         <translation></translation>
     </message>
@@ -10015,27 +10020,27 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Výjimka</translation>
     </message>
     <message>
-        <location filename="Debugger/ExceptionLogger.py" line="48"/>
+        <location filename="Debugger/ExceptionLogger.py" line="47"/>
         <source>&lt;b&gt;Exceptions Logger&lt;/b&gt;&lt;p&gt;This windows shows a trace of all exceptions, that have occured during the last debugging session. Initially only the exception type and exception message are shown. After the expansion of this entry, the complete call stack as reported by the client is show with the most recent call first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Záznam výjimek&lt;/b&gt;&lt;p&gt;Toto okno zobrazuje trasování všech výjimek, které se objevily během posledního debugování. Nejdříve jsou zobrazovány pouze typy výjimek a hlášení. Po rozbalení záznamu výjimky se zobrazí kompletní výpis zásobníku s posledními voláními na začátku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/ExceptionLogger.py" line="58"/>
+        <location filename="Debugger/ExceptionLogger.py" line="57"/>
         <source>Show source</source>
         <translation>Zobrazit zdroj</translation>
     </message>
     <message>
-        <location filename="Debugger/ExceptionLogger.py" line="64"/>
+        <location filename="Debugger/ExceptionLogger.py" line="63"/>
         <source>Clear</source>
         <translation>Vyčistit</translation>
     </message>
     <message>
-        <location filename="Debugger/ExceptionLogger.py" line="99"/>
+        <location filename="Debugger/ExceptionLogger.py" line="98"/>
         <source>An unhandled exception occured. See the shell window for details.</source>
         <translation>Objevila se neošetřená výjimka. Detaily naleznete v shell okně.</translation>
     </message>
     <message>
-        <location filename="Debugger/ExceptionLogger.py" line="66"/>
+        <location filename="Debugger/ExceptionLogger.py" line="65"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
@@ -10129,19 +10134,37 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>ExporterHTML</name>
     <message>
-        <location filename="QScintilla/Exporters/ExporterHTML.py" line="357"/>
+        <location filename="QScintilla/Exporters/ExporterHTML.py" line="394"/>
         <source>Export source</source>
         <translation>Zdroj exportu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterHTML.py" line="41"/>
+        <location filename="QScintilla/Exporters/ExporterHTML.py" line="361"/>
         <source>HTML Files (*.html)</source>
         <translation>HTML soubory (*.html)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterHTML.py" line="357"/>
+        <location filename="QScintilla/Exporters/ExporterHTML.py" line="394"/>
         <source>&lt;p&gt;The source could not be exported to &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zdroj nemohl být do &lt;b&gt;{0}&lt;/b&gt; exportován.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>ExporterODT</name>
+    <message>
+        <location filename="QScintilla/Exporters/ExporterODT.py" line="36"/>
+        <source>ODT Files (*.odt)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Exporters/ExporterODT.py" line="68"/>
+        <source>Export source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Exporters/ExporterODT.py" line="68"/>
+        <source>&lt;p&gt;The source could not be exported to &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10219,6 +10242,11 @@ se zobrazenými položkami.&lt;/p&gt;
         <location filename="QScintilla/Exporters/__init__.py" line="24"/>
         <source>TeX</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Exporters/__init__.py" line="25"/>
+        <source>ODT</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10392,7 +10420,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zobrazit jen adresáře</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="52"/>
+        <location filename="Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="46"/>
         <source>Test</source>
         <translation></translation>
     </message>
@@ -10658,7 +10686,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Hledat</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="493"/>
+        <location filename="UI/FindFileDialog.py" line="496"/>
         <source>Select directory</source>
         <translation>Výběr adresáře</translation>
     </message>
@@ -10718,7 +10746,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Nahradit</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="577"/>
+        <location filename="UI/FindFileDialog.py" line="580"/>
         <source>Replace in Files</source>
         <translation>Nahradit v souborech</translation>
     </message>
@@ -10743,32 +10771,32 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Pocit jako</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="602"/>
+        <location filename="UI/FindFileDialog.py" line="605"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="603"/>
+        <location filename="UI/FindFileDialog.py" line="606"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="337"/>
+        <location filename="UI/FindFileDialog.py" line="335"/>
         <source>Invalid search expression</source>
         <translation>Neplatný výraz hledání</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="337"/>
+        <location filename="UI/FindFileDialog.py" line="335"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Výraz hledná není platný. &lt;/p&gt;&lt;p&gt;Chyba: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="554"/>
+        <location filename="UI/FindFileDialog.py" line="557"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze číst ze souboru  &lt;b&gt;{0}&lt;/b&gt;. Přeskočeno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="577"/>
+        <location filename="UI/FindFileDialog.py" line="580"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze uložit do souboru  &lt;b&gt;{0}&lt;/b&gt;. Přeskočeno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -10866,22 +10894,22 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Cesta</translation>
     </message>
     <message>
-        <location filename="UI/FindFileNameDialog.py" line="51"/>
+        <location filename="UI/FindFileNameDialog.py" line="52"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="UI/FindFileNameDialog.py" line="52"/>
+        <location filename="UI/FindFileNameDialog.py" line="53"/>
         <source>Press to stop the search</source>
         <translation>Stisknout pro ukončení hledání</translation>
     </message>
     <message>
-        <location filename="UI/FindFileNameDialog.py" line="54"/>
+        <location filename="UI/FindFileNameDialog.py" line="55"/>
         <source>Opens the selected file</source>
         <translation>Otevřít vybraný soubor</translation>
     </message>
     <message>
-        <location filename="UI/FindFileNameDialog.py" line="182"/>
+        <location filename="UI/FindFileNameDialog.py" line="183"/>
         <source>Select search directory</source>
         <translation>Vybrat hledaný adresář</translation>
     </message>
@@ -11126,182 +11154,182 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="708"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="705"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Otevřít odkaz v novém tab okně<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="307"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="313"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okno nápovědy&lt;/b&gt;&lt;p&gt;Toto okno zobrazí vybranou informaci nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="774"/>
         <source>Web Inspector...</source>
         <translation>Web inspektor...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1144"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Zkontrolujte adresu na chyby jako je &lt;b&gt;ww&lt;/b&gt;.example.org místo &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1144"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Je-li adresa vpořádku, prověřte síťové spojení.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1144"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Je-li vaše šíť chráněna firewallem nebo proxy, ujistěte se, že váš prohlížeč má na tuto síť povolen přístup.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="741"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="738"/>
         <source>Bookmark this Page</source>
         <translation>Záložka na tuto stranu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="712"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="709"/>
         <source>Save Lin&amp;k</source>
         <translation>Uložit lin&amp;k</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="713"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="710"/>
         <source>Bookmark this Link</source>
         <translation>Záložka na tento link</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="716"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="713"/>
         <source>Copy Link to Clipboard</source>
         <translation>Kopírovat link do schránky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="721"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="718"/>
         <source>Open Image in New Tab</source>
         <translation>Otevřít obrázek v novém tabu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="725"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="722"/>
         <source>Save Image</source>
         <translation>Uložit obrázek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="726"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="723"/>
         <source>Copy Image to Clipboard</source>
         <translation>Kopíroavt obrázek do schránky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="727"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="724"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Kopírovat cestu obrázku do schránky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="524"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="521"/>
         <source>Web Browser</source>
         <translation>Web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="731"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="728"/>
         <source>Block Image</source>
         <translation>Blokovat obrázek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="755"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="752"/>
         <source>Search with...</source>
         <translation>Hledat s...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="484"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="481"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{}&lt;/b&gt; neexistuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="524"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="521"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit prohlížeč se souborem &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="506"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="503"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit aplikaci pro URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1135"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1131"/>
         <source>Error loading page: {0}</source>
         <translation>Chyba při načítání strany: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1144"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
         <source>When connecting to: {0}.</source>
         <translation>Při připojení na: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1195"/>
         <source>Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1195"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1210"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1206"/>
         <source>New Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1210"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1206"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1230"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1226"/>
         <source>bytes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1233"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1229"/>
         <source>kB</source>
         <translation type="unfinished">kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1236"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1232"/>
         <source>MB</source>
         <translation type="unfinished">MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="773"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="769"/>
         <source>Add to web search toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="886"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="882"/>
         <source>Method not supported</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="886"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="882"/>
         <source>{0} method is not supported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="928"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="924"/>
         <source>Search engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="928"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="924"/>
         <source>Choose the desired search engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="945"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="941"/>
         <source>Engine name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="945"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="941"/>
         <source>Enter a name for the engine</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11387,7 +11415,7 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>HelpDocsInstaller</name>
     <message>
-        <location filename="Helpviewer/HelpDocsInstaller.py" line="182"/>
+        <location filename="Helpviewer/HelpDocsInstaller.py" line="185"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be registered.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nemůže být registrován.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -11490,40 +11518,45 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Vyberte pro vstup do Python dokumentace</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="115"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="117"/>
         <source>HTML Files (*.html *.htm);;All Files (*)</source>
         <translation>HTML soubory (*.html *.htm);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="87"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="89"/>
         <source>Select Qt4 documentation entry</source>
         <translation>Vyberte pro vstup do Qt4 dokumentace</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="101"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="103"/>
         <source>Select PyQt4 documentation entry</source>
         <translation>Vyberte pro vstup do PyQt4 dokumentace</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="115"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="117"/>
         <source>Select PySide documentation entry</source>
         <translation>Vyberte pro vstup do PySide dokumentace</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
+        <source>HTML Files (*.html *.htm);;Compressed Help Files (*.chm);;All Files (*)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>HelpIndexWidget</name>
     <message>
-        <location filename="Helpviewer/HelpIndexWidget.py" line="41"/>
+        <location filename="Helpviewer/HelpIndexWidget.py" line="45"/>
         <source>&amp;Look for:</source>
         <translation>H&amp;ledat:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpIndexWidget.py" line="143"/>
+        <location filename="Helpviewer/HelpIndexWidget.py" line="141"/>
         <source>Open Link</source>
         <translation>Otevřít link</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpIndexWidget.py" line="144"/>
+        <location filename="Helpviewer/HelpIndexWidget.py" line="142"/>
         <source>Open Link in New Tab</source>
         <translation>Otevřít link v novém tabu</translation>
     </message>
@@ -11564,12 +11597,12 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>HelpSearchWidget</name>
     <message>
-        <location filename="Helpviewer/HelpSearchWidget.py" line="129"/>
+        <location filename="Helpviewer/HelpSearchWidget.py" line="128"/>
         <source>Open Link</source>
         <translation>Otevřít link</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpSearchWidget.py" line="130"/>
+        <location filename="Helpviewer/HelpSearchWidget.py" line="129"/>
         <source>Open Link in New Tab</source>
         <translation>Otevřít link v novém tabu</translation>
     </message>
@@ -11577,12 +11610,12 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>HelpTocWidget</name>
     <message>
-        <location filename="Helpviewer/HelpTocWidget.py" line="144"/>
+        <location filename="Helpviewer/HelpTocWidget.py" line="146"/>
         <source>Open Link</source>
         <translation>Otevřít link</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTocWidget.py" line="145"/>
+        <location filename="Helpviewer/HelpTocWidget.py" line="147"/>
         <source>Open Link in New Tab</source>
         <translation>Otevřít link v novém tabu</translation>
     </message>
@@ -12007,27 +12040,27 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>HelpWebSearchWidget</name>
     <message>
-        <location filename="Helpviewer/HelpWebSearchWidget.py" line="138"/>
+        <location filename="Helpviewer/HelpWebSearchWidget.py" line="135"/>
         <source>Suggestions</source>
         <translation>Návrhy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWebSearchWidget.py" line="146"/>
+        <location filename="Helpviewer/HelpWebSearchWidget.py" line="143"/>
         <source>No Recent Searches</source>
         <translation>Žádné poslední hledání</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWebSearchWidget.py" line="150"/>
+        <location filename="Helpviewer/HelpWebSearchWidget.py" line="147"/>
         <source>Recent Searches</source>
         <translation>Poslení hledání</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWebSearchWidget.py" line="284"/>
+        <location filename="Helpviewer/HelpWebSearchWidget.py" line="280"/>
         <source>Clear Recent Searches</source>
         <translation>Smazat poslední vyhledávání</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWebSearchWidget.py" line="275"/>
+        <location filename="Helpviewer/HelpWebSearchWidget.py" line="271"/>
         <source>Add &apos;{0}&apos;</source>
         <translation>Přidat &apos;{0}&apos;</translation>
     </message>
@@ -12035,1434 +12068,1434 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>HelpWindow</name>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="500"/>
+        <location filename="Helpviewer/HelpWindow.py" line="489"/>
         <source>Close the current help window</source>
         <translation>Zavřít aktuální okno nápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="368"/>
+        <location filename="Helpviewer/HelpWindow.py" line="357"/>
         <source>Open a new help window tab</source>
         <translation>Otevřít nový tab nápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="363"/>
+        <location filename="Helpviewer/HelpWindow.py" line="352"/>
         <source>&amp;New Tab</source>
         <translation>&amp;Nový tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="363"/>
+        <location filename="Helpviewer/HelpWindow.py" line="352"/>
         <source>Ctrl+T</source>
         <comment>File|New Tab</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="369"/>
+        <location filename="Helpviewer/HelpWindow.py" line="358"/>
         <source>&lt;b&gt;New Tab&lt;/b&gt;&lt;p&gt;This opens a new help window tab.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nový tab&lt;/b&gt;&lt;p&gt;Otevře nový tab v okně nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="376"/>
+        <location filename="Helpviewer/HelpWindow.py" line="365"/>
         <source>Ctrl+N</source>
         <comment>File|New Window</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="381"/>
+        <location filename="Helpviewer/HelpWindow.py" line="370"/>
         <source>Open a new help browser window</source>
         <translation>Otevřít nové okno nápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="382"/>
+        <location filename="Helpviewer/HelpWindow.py" line="371"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new help browser window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nové okno&lt;/b&gt;&lt;p&gt;Otevře nové okno nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="389"/>
+        <location filename="Helpviewer/HelpWindow.py" line="378"/>
         <source>&amp;Open File</source>
         <translation>&amp;Otevřít soubor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="389"/>
+        <location filename="Helpviewer/HelpWindow.py" line="378"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="394"/>
+        <location filename="Helpviewer/HelpWindow.py" line="383"/>
         <source>Open a help file for display</source>
         <translation>Otevřít soubor s nápovědou</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="395"/>
+        <location filename="Helpviewer/HelpWindow.py" line="384"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new help file for display. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít soubor&lt;/b&gt;&lt;p&gt;Zobrazí nové okno s nápovědou. Otevře dialog pro výběr souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="403"/>
+        <location filename="Helpviewer/HelpWindow.py" line="392"/>
         <source>Open File in New &amp;Tab</source>
         <translation>Otevřít soubor do nového &amp;tabu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="403"/>
+        <location filename="Helpviewer/HelpWindow.py" line="392"/>
         <source>Shift+Ctrl+O</source>
         <comment>File|Open in new tab</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="408"/>
+        <location filename="Helpviewer/HelpWindow.py" line="397"/>
         <source>Open a help file for display in a new tab</source>
         <translation>Otevřít nápovědu do nového tabu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="410"/>
+        <location filename="Helpviewer/HelpWindow.py" line="399"/>
         <source>&lt;b&gt;Open File in New Tab&lt;/b&gt;&lt;p&gt;This opens a new help file for display in a new tab. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít soubor do nového tabu&lt;/b&gt;&lt;p&gt;Zobrazí se nápověda a zobrazí se v novém tabu. Otevře dialog pro výběr souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="457"/>
+        <location filename="Helpviewer/HelpWindow.py" line="446"/>
         <source>&amp;Print</source>
         <translation>&amp;Tisk</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="457"/>
+        <location filename="Helpviewer/HelpWindow.py" line="446"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="462"/>
+        <location filename="Helpviewer/HelpWindow.py" line="451"/>
         <source>Print the displayed help</source>
         <translation>Tisknout zobrazenou nápovědu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="463"/>
+        <location filename="Helpviewer/HelpWindow.py" line="452"/>
         <source>&lt;b&gt;Print&lt;/b&gt;&lt;p&gt;Print the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tisk&lt;/b&gt;&lt;p&gt;Tisknout zobrazenou nápovědu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="495"/>
+        <location filename="Helpviewer/HelpWindow.py" line="484"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="495"/>
+        <location filename="Helpviewer/HelpWindow.py" line="484"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="501"/>
+        <location filename="Helpviewer/HelpWindow.py" line="490"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;Closes the current help window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít&lt;/b&gt;&lt;p&gt;Zavře aktuální okno s nápovědou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="508"/>
+        <location filename="Helpviewer/HelpWindow.py" line="497"/>
         <source>Close &amp;All</source>
         <translation>Z&amp;avřít vše</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="512"/>
+        <location filename="Helpviewer/HelpWindow.py" line="501"/>
         <source>&lt;b&gt;Close All&lt;/b&gt;&lt;p&gt;Closes all help windows except the first one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít vše&lt;/b&gt;&lt;p&gt;Zavřít všechna okna s nápovědou kromě prvního.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="533"/>
+        <location filename="Helpviewer/HelpWindow.py" line="522"/>
         <source>&amp;Quit</source>
         <translation>&amp;Konec</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="533"/>
+        <location filename="Helpviewer/HelpWindow.py" line="522"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="549"/>
+        <location filename="Helpviewer/HelpWindow.py" line="538"/>
         <source>&amp;Backward</source>
         <translation>&amp;Nazpět</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="555"/>
+        <location filename="Helpviewer/HelpWindow.py" line="544"/>
         <source>Move one help screen backward</source>
         <translation>Posun o jednu obrazovku nápovědy nazpět</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="556"/>
+        <location filename="Helpviewer/HelpWindow.py" line="545"/>
         <source>&lt;b&gt;Backward&lt;/b&gt;&lt;p&gt;Moves one help screen backward. If none is available, this action is disabled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nazpět&lt;/b&gt;&lt;p&gt;Posun o jednu obrazovku nazpět. Pokud není taková k dispozici, je tato akce vypnuta.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="564"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>&amp;Forward</source>
         <translation>&amp;Dopředu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="570"/>
+        <location filename="Helpviewer/HelpWindow.py" line="559"/>
         <source>Move one help screen forward</source>
         <translation>Posun o jednu obrazovku dopředu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="571"/>
+        <location filename="Helpviewer/HelpWindow.py" line="560"/>
         <source>&lt;b&gt;Forward&lt;/b&gt;&lt;p&gt;Moves one help screen forward. If none is available, this action is disabled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dopředu&lt;/b&gt;&lt;p&gt;Posun o jednu obrazovku dopředu. Pokud není taková k dispozici, je tato akce vypnuta.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="579"/>
+        <location filename="Helpviewer/HelpWindow.py" line="568"/>
         <source>&amp;Home</source>
         <translation>&amp;Hlavní strana</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="584"/>
+        <location filename="Helpviewer/HelpWindow.py" line="573"/>
         <source>Move to the initial help screen</source>
         <translation>Posun na hlavní stranu nápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="585"/>
+        <location filename="Helpviewer/HelpWindow.py" line="574"/>
         <source>&lt;b&gt;Home&lt;/b&gt;&lt;p&gt;Moves to the initial help screen.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hlavní strana&lt;/b&gt;&lt;p&gt;Posun na hlavní stranu nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="592"/>
+        <location filename="Helpviewer/HelpWindow.py" line="581"/>
         <source>&amp;Reload</source>
         <translation>&amp;Obnovit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="598"/>
+        <location filename="Helpviewer/HelpWindow.py" line="587"/>
         <source>Reload the current help screen</source>
         <translation>Obsah aktuální nápovědy se obnoví</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="599"/>
+        <location filename="Helpviewer/HelpWindow.py" line="588"/>
         <source>&lt;b&gt;Reload&lt;/b&gt;&lt;p&gt;Reloads the current help screen.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Obnovit&lt;/b&gt;&lt;p&gt;Znovu načte aktuální obrazovku nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="633"/>
+        <location filename="Helpviewer/HelpWindow.py" line="622"/>
         <source>&amp;Find...</source>
         <translation>&amp;Hledat...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="638"/>
+        <location filename="Helpviewer/HelpWindow.py" line="627"/>
         <source>Find text in page</source>
         <translation>Hledat text na stránce</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="639"/>
+        <location filename="Helpviewer/HelpWindow.py" line="628"/>
         <source>&lt;b&gt;Find&lt;/b&gt;&lt;p&gt;Find text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat&lt;/b&gt;&lt;p&gt;Hledá se text na aktuální straně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="646"/>
+        <location filename="Helpviewer/HelpWindow.py" line="635"/>
         <source>Find &amp;next</source>
         <translation>Hledat &amp;následující</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="660"/>
+        <location filename="Helpviewer/HelpWindow.py" line="649"/>
         <source>Find &amp;previous</source>
         <translation>Hledat &amp;předchozí</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="727"/>
+        <location filename="Helpviewer/HelpWindow.py" line="716"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Co je to?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="732"/>
+        <location filename="Helpviewer/HelpWindow.py" line="721"/>
         <source>Context sensitive help</source>
         <translation>Kontextově senzitivní nápověda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="733"/>
+        <location filename="Helpviewer/HelpWindow.py" line="722"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit kontextově senzitivní nápovědu&lt;/b&gt;&lt;p&gt;V režimu &quot;Co je to?&quot; se nad různými prvky aplikace u kurzoru zobrazí otazník. Když pak kliknete na tyto prvky, zobrazí se krátký popis co daný prvek znamená a jak jej použít. V dialogových oknech se tato funkce spustí tlačítkem kontextové nápovědy na horní liště.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="744"/>
+        <location filename="Helpviewer/HelpWindow.py" line="733"/>
         <source>&amp;About</source>
         <translation>O &amp;aplikaci</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="747"/>
+        <location filename="Helpviewer/HelpWindow.py" line="736"/>
         <source>Display information about this software</source>
         <translation>Zobrazit informace a tomto software</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="748"/>
+        <location filename="Helpviewer/HelpWindow.py" line="737"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O aplikaci&lt;/b&gt;&lt;p&gt;Zobrazí se informace o tomto software.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="755"/>
+        <location filename="Helpviewer/HelpWindow.py" line="744"/>
         <source>About &amp;Qt</source>
         <translation>O &amp;Qt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="758"/>
+        <location filename="Helpviewer/HelpWindow.py" line="747"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Zobrazit informace o Qt toolkitu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="760"/>
+        <location filename="Helpviewer/HelpWindow.py" line="749"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;A Qt&lt;/b&gt;&lt;p&gt;Zobrazit informace o Qt toolkitu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="767"/>
+        <location filename="Helpviewer/HelpWindow.py" line="756"/>
         <source>Zoom &amp;in</source>
         <translation>Př&amp;iblížit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="772"/>
+        <location filename="Helpviewer/HelpWindow.py" line="761"/>
         <source>Zoom in on the text</source>
         <translation>Zvětšovací lupa</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="773"/>
+        <location filename="Helpviewer/HelpWindow.py" line="762"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the text. This makes the text bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přiblížit&lt;/b&gt;&lt;p&gt;Přiblížit text. Text bude větší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="780"/>
+        <location filename="Helpviewer/HelpWindow.py" line="769"/>
         <source>Zoom &amp;out</source>
         <translation>&amp;Oddálit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="785"/>
+        <location filename="Helpviewer/HelpWindow.py" line="774"/>
         <source>Zoom out on the text</source>
         <translation>Zmenšovací lupa</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="786"/>
+        <location filename="Helpviewer/HelpWindow.py" line="775"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the text. This makes the text smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Oddálit&lt;/b&gt;&lt;p&gt;Lupa na oddálení textu. Text bude menší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="620"/>
+        <location filename="Helpviewer/HelpWindow.py" line="609"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopírovat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="620"/>
+        <location filename="Helpviewer/HelpWindow.py" line="609"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="625"/>
+        <location filename="Helpviewer/HelpWindow.py" line="614"/>
         <source>Copy the selected text</source>
         <translation>Kopírovat vybraný text</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="626"/>
+        <location filename="Helpviewer/HelpWindow.py" line="615"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected text to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopírovat&lt;/b&gt;&lt;p&gt;Kopírovat vybraný text do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1100"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1088"/>
         <source>&amp;File</source>
         <translation>S&amp;oubor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1123"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1111"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1131"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1119"/>
         <source>&amp;View</source>
         <translation>Poh&amp;led</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1148"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1135"/>
         <source>&amp;Go</source>
         <translation>&amp;Jít</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1161"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1148"/>
         <source>H&amp;istory</source>
         <translation>H&amp;istorie</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1170"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1155"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Záložky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1219"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1202"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1235"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1218"/>
         <source>Move Left</source>
         <translation>Posun doleva</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1238"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1221"/>
         <source>Move Right</source>
         <translation>Posun doprava</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1246"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1229"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1255"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1238"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1266"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1249"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1283"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1266"/>
         <source>Edit</source>
         <translation>Editovat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1288"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1271"/>
         <source>View</source>
         <translation>Pohled</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1297"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1280"/>
         <source>Find</source>
         <translation>Hledat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1325"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1306"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1332"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1313"/>
         <source>Go</source>
         <translation>Jít</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1352"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1332"/>
         <source>&lt;p&gt;Enter the help file to be displayed directly into this edit field. Select a previously shown help file from the drop down list.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zadání souboru s nápovědou, který se zobrazí přímo do tohoto editačního okna. Výběr předchozí zobrazené nápovědy z drop down seznamu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1620"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1593"/>
         <source>Open File</source>
         <translation>Otevřít soubor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1620"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1593"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Help soubory (*.html *.htm);;PDF soubory (*.pdf);;CHM soubory (*.chm);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2133"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2101"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="363"/>
+        <location filename="Helpviewer/HelpWindow.py" line="352"/>
         <source>New Tab</source>
         <translation>Nový Tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="376"/>
+        <location filename="Helpviewer/HelpWindow.py" line="365"/>
         <source>New Window</source>
         <translation>Nové okno</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="403"/>
+        <location filename="Helpviewer/HelpWindow.py" line="392"/>
         <source>Open File in New Tab</source>
         <translation>Otevřít soubor v novém tabu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="508"/>
+        <location filename="Helpviewer/HelpWindow.py" line="497"/>
         <source>Close All</source>
         <translation>Zavřít vše</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="533"/>
+        <location filename="Helpviewer/HelpWindow.py" line="522"/>
         <source>Quit</source>
         <translation>Konec</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="549"/>
+        <location filename="Helpviewer/HelpWindow.py" line="538"/>
         <source>Backward</source>
         <translation>Nazpět</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="549"/>
+        <location filename="Helpviewer/HelpWindow.py" line="538"/>
         <source>Alt+Left</source>
         <comment>Go|Backward</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="549"/>
+        <location filename="Helpviewer/HelpWindow.py" line="538"/>
         <source>Backspace</source>
         <comment>Go|Backward</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="564"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>Forward</source>
         <translation>Dopředu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="564"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>Alt+Right</source>
         <comment>Go|Forward</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="564"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>Shift+Backspace</source>
         <comment>Go|Forward</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="579"/>
+        <location filename="Helpviewer/HelpWindow.py" line="568"/>
         <source>Home</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="579"/>
+        <location filename="Helpviewer/HelpWindow.py" line="568"/>
         <source>Ctrl+Home</source>
         <comment>Go|Home</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="592"/>
+        <location filename="Helpviewer/HelpWindow.py" line="581"/>
         <source>Reload</source>
         <translation>Obnovit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="592"/>
+        <location filename="Helpviewer/HelpWindow.py" line="581"/>
         <source>Ctrl+R</source>
         <comment>Go|Reload</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="620"/>
+        <location filename="Helpviewer/HelpWindow.py" line="609"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="633"/>
+        <location filename="Helpviewer/HelpWindow.py" line="622"/>
         <source>Find...</source>
         <translation>Hledat...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="633"/>
+        <location filename="Helpviewer/HelpWindow.py" line="622"/>
         <source>Ctrl+F</source>
         <comment>Edit|Find</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="646"/>
+        <location filename="Helpviewer/HelpWindow.py" line="635"/>
         <source>Find next</source>
         <translation>Najít další</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="646"/>
+        <location filename="Helpviewer/HelpWindow.py" line="635"/>
         <source>F3</source>
         <comment>Edit|Find next</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="660"/>
+        <location filename="Helpviewer/HelpWindow.py" line="649"/>
         <source>Find previous</source>
         <translation>Najít předchozí</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="660"/>
+        <location filename="Helpviewer/HelpWindow.py" line="649"/>
         <source>Shift+F3</source>
         <comment>Edit|Find previous</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="688"/>
+        <location filename="Helpviewer/HelpWindow.py" line="677"/>
         <source>Add Bookmark</source>
         <translation>Přidat záložku</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="727"/>
+        <location filename="Helpviewer/HelpWindow.py" line="716"/>
         <source>What&apos;s This?</source>
         <translation>Co je to?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="727"/>
+        <location filename="Helpviewer/HelpWindow.py" line="716"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="744"/>
+        <location filename="Helpviewer/HelpWindow.py" line="733"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="755"/>
+        <location filename="Helpviewer/HelpWindow.py" line="744"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="767"/>
+        <location filename="Helpviewer/HelpWindow.py" line="756"/>
         <source>Zoom in</source>
         <translation>Přiblížit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="767"/>
+        <location filename="Helpviewer/HelpWindow.py" line="756"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="780"/>
+        <location filename="Helpviewer/HelpWindow.py" line="769"/>
         <source>Zoom out</source>
         <translation>Oddálit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="780"/>
+        <location filename="Helpviewer/HelpWindow.py" line="769"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="651"/>
+        <location filename="Helpviewer/HelpWindow.py" line="640"/>
         <source>Find next occurrence of text in page</source>
         <translation>Hledat následující výskyt textu na straně</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="652"/>
+        <location filename="Helpviewer/HelpWindow.py" line="641"/>
         <source>&lt;b&gt;Find next&lt;/b&gt;&lt;p&gt;Find the next occurrence of text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat následující&lt;/b&gt;&lt;p&gt;Vyhledá se následující výskyt textu na aktuální straně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="665"/>
+        <location filename="Helpviewer/HelpWindow.py" line="654"/>
         <source>Find previous occurrence of text in page</source>
         <translation>Hledat předchozí výskyt textu na stránce</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="667"/>
+        <location filename="Helpviewer/HelpWindow.py" line="656"/>
         <source>&lt;b&gt;Find previous&lt;/b&gt;&lt;p&gt;Find the previous occurrence of text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat předchozí&lt;/b&gt;&lt;p&gt;Vyhledá předchozí výskyt textu na aktuální straně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1253"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1236"/>
         <source>Print Preview</source>
         <translation>Náhled tisku</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="486"/>
+        <location filename="Helpviewer/HelpWindow.py" line="475"/>
         <source>Print preview of the displayed help</source>
         <translation>Tisknout náhled zobrazené nápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="488"/>
+        <location filename="Helpviewer/HelpWindow.py" line="477"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytisknout náhled&lt;/b&gt;&lt;p&gt;Tisknout náhled zobrazeného textu nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1760"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1733"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tisk není dostupný kvůli bugu v PyQt4.Please upgrade.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="846"/>
+        <location filename="Helpviewer/HelpWindow.py" line="834"/>
         <source>Show next tab</source>
         <translation>Zobrazit následující tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="846"/>
+        <location filename="Helpviewer/HelpWindow.py" line="834"/>
         <source>Ctrl+Alt+Tab</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="854"/>
+        <location filename="Helpviewer/HelpWindow.py" line="842"/>
         <source>Show previous tab</source>
         <translation>Zobrazit předchozí tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="854"/>
+        <location filename="Helpviewer/HelpWindow.py" line="842"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="862"/>
+        <location filename="Helpviewer/HelpWindow.py" line="850"/>
         <source>Switch between tabs</source>
         <translation>Přepnout mezi taby</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="862"/>
+        <location filename="Helpviewer/HelpWindow.py" line="850"/>
         <source>Ctrl+1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1017"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1005"/>
         <source>Clear icons database</source>
         <translation>Vyčistit ikony databáze</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1021"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1009"/>
         <source>Clear the database of favicons</source>
         <translation>Vyčistit databázi favicons</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1022"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1010"/>
         <source>&lt;b&gt;Clear icons database&lt;/b&gt;&lt;p&gt;Clears the database of favicons of previously visited URLs.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit databázi favicons&lt;/b&gt;&lt;p&gt;Vyčistit databázi favicons navštívených URL.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="870"/>
+        <location filename="Helpviewer/HelpWindow.py" line="858"/>
         <source>Preferences</source>
         <translation>Předvolby</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="870"/>
+        <location filename="Helpviewer/HelpWindow.py" line="858"/>
         <source>&amp;Preferences...</source>
         <translation>&amp;Předvolby...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="873"/>
+        <location filename="Helpviewer/HelpWindow.py" line="861"/>
         <source>Set the prefered configuration</source>
         <translation>Nastavit preferovanou konfiguraci</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="874"/>
+        <location filename="Helpviewer/HelpWindow.py" line="862"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předvolby&lt;/b&gt;&lt;p&gt;Upravit položky konfigurace aplikace podle vašich předvoleb.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="142"/>
+        <location filename="Helpviewer/HelpWindow.py" line="143"/>
         <source>Contents</source>
         <translation>Obsah</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="511"/>
+        <location filename="Helpviewer/HelpWindow.py" line="500"/>
         <source>Close all help windows</source>
         <translation>Zavřít všechna okna s nápovědou</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="918"/>
+        <location filename="Helpviewer/HelpWindow.py" line="906"/>
         <source>Sync with Table of Contents</source>
         <translation>Sync obsahu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="922"/>
+        <location filename="Helpviewer/HelpWindow.py" line="910"/>
         <source>Synchronizes the table of contents with current page</source>
         <translation>Synchronizuje obsah s aktuální stranou</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="924"/>
+        <location filename="Helpviewer/HelpWindow.py" line="912"/>
         <source>&lt;b&gt;Sync with Table of Contents&lt;/b&gt;&lt;p&gt;Synchronizes the table of contents with current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sync obsah&lt;/b&gt;&lt;p&gt;Synchronizuje obsah s aktuální stranou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="931"/>
+        <location filename="Helpviewer/HelpWindow.py" line="919"/>
         <source>Table of Contents</source>
         <translation>Obsah</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="934"/>
+        <location filename="Helpviewer/HelpWindow.py" line="922"/>
         <source>Shows the table of contents window</source>
         <translation>Zobrazit okno s obsahem</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="936"/>
+        <location filename="Helpviewer/HelpWindow.py" line="924"/>
         <source>&lt;b&gt;Table of Contents&lt;/b&gt;&lt;p&gt;Shows the table of contents window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Obsah&lt;/b&gt;&lt;p&gt;Zobrazit okno s obsahem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="967"/>
+        <location filename="Helpviewer/HelpWindow.py" line="955"/>
         <source>Manage QtHelp Documents</source>
         <translation>Uspořádat dokumenty QtNápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="970"/>
+        <location filename="Helpviewer/HelpWindow.py" line="958"/>
         <source>Shows a dialog to manage the QtHelp documentation set</source>
         <translation>Zobrazit dialog pro uspořádání QtNápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="972"/>
+        <location filename="Helpviewer/HelpWindow.py" line="960"/>
         <source>&lt;b&gt;Manage QtHelp Documents&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the QtHelp documentation set.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uspořádat dokumenty QtNápovědy&lt;/b&gt;&lt;p&gt;Zobrazit dialog pro uspořádání QtNápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1211"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1194"/>
         <source>&amp;Window</source>
         <translation>O&amp;kno</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1304"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1287"/>
         <source>Filter</source>
         <translation>Filtr</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1309"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1292"/>
         <source>Filtered by: </source>
         <translation>Filtrováno: </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2470"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2431"/>
         <source>Could not find an associated content.</source>
         <translation>Asociovaný obsah nelze nalézt.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="979"/>
+        <location filename="Helpviewer/HelpWindow.py" line="967"/>
         <source>Manage QtHelp Filters</source>
         <translation>Uspořádat filtry QtNápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="982"/>
+        <location filename="Helpviewer/HelpWindow.py" line="970"/>
         <source>Shows a dialog to manage the QtHelp filters</source>
         <translation>Zobrazit dialog pro uspořádání filtrů QtNápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="984"/>
+        <location filename="Helpviewer/HelpWindow.py" line="972"/>
         <source>&lt;b&gt;Manage QtHelp Filters&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the QtHelp filters.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uspořádat filtry QtNápovědy&lt;/b&gt;&lt;p&gt;Zobrazit dialog pro uspořádání filtrů QtNápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="943"/>
+        <location filename="Helpviewer/HelpWindow.py" line="931"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="946"/>
+        <location filename="Helpviewer/HelpWindow.py" line="934"/>
         <source>Shows the index window</source>
         <translation>Zobrazit index okna</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="948"/>
+        <location filename="Helpviewer/HelpWindow.py" line="936"/>
         <source>&lt;b&gt;Index&lt;/b&gt;&lt;p&gt;Shows the index window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Index&lt;/b&gt;&lt;p&gt;Zobrazit index okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="955"/>
+        <location filename="Helpviewer/HelpWindow.py" line="943"/>
         <source>Search</source>
         <translation>Hledat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="958"/>
+        <location filename="Helpviewer/HelpWindow.py" line="946"/>
         <source>Shows the search window</source>
         <translation>Zobrazit okno hledání</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="960"/>
+        <location filename="Helpviewer/HelpWindow.py" line="948"/>
         <source>&lt;b&gt;Search&lt;/b&gt;&lt;p&gt;Shows the search window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledání&lt;/b&gt;&lt;p&gt;Zobrazit okno hledání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="991"/>
+        <location filename="Helpviewer/HelpWindow.py" line="979"/>
         <source>Reindex Documentation</source>
         <translation>Znovu indexovat dokumentaci</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="994"/>
+        <location filename="Helpviewer/HelpWindow.py" line="982"/>
         <source>Reindexes the documentation set</source>
         <translation>Přeindexuje dokumentaci</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="996"/>
+        <location filename="Helpviewer/HelpWindow.py" line="984"/>
         <source>&lt;b&gt;Reindex Documentation&lt;/b&gt;&lt;p&gt;Reindexes the documentation set.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Znovu indexovat dokumentaci&lt;/b&gt;&lt;p&gt;Přeindexuje dokumentaci.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2586"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2547"/>
         <source>Updating search index</source>
         <translation>Aktualizovat index pro hledání</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2640"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2599"/>
         <source>Looking for Documentation...</source>
         <translation>Vyhledat dokumentaci...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2670"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2629"/>
         <source>Unfiltered</source>
         <translation>Nefiltrováno</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2689"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2648"/>
         <source>Help Engine</source>
         <translation>Engine nápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="181"/>
+        <location filename="Helpviewer/HelpWindow.py" line="179"/>
         <source>Show a navigation menu</source>
         <translation>Zobrazit menu navigace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="523"/>
+        <location filename="Helpviewer/HelpWindow.py" line="512"/>
         <source>Private Browsing</source>
         <translation>Mód soukromí</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="519"/>
+        <location filename="Helpviewer/HelpWindow.py" line="508"/>
         <source>Private &amp;Browsing</source>
         <translation>Mód &amp;soukromí</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="524"/>
+        <location filename="Helpviewer/HelpWindow.py" line="513"/>
         <source>&lt;b&gt;Private Browsing&lt;/b&gt;&lt;p&gt;Enables private browsing. In this mode no history is recorded anymore.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mód soukromí&lt;/b&gt;&lt;p&gt;Zapne mód soukromí. V tomto módu není zaznamenávána historie stran.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2342"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2303"/>
         <source>Loading...</source>
         <translation>Načítám...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2357"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2318"/>
         <source>Finished loading</source>
         <translation>Načteno</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="837"/>
+        <location filename="Helpviewer/HelpWindow.py" line="825"/>
         <source>Full Screen</source>
         <translation>Celá obrazovka</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="837"/>
+        <location filename="Helpviewer/HelpWindow.py" line="825"/>
         <source>&amp;Full Screen</source>
         <translation>&amp;Celá obrazovka</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="837"/>
+        <location filename="Helpviewer/HelpWindow.py" line="825"/>
         <source>F11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="967"/>
+        <location filename="Helpviewer/HelpWindow.py" line="955"/>
         <source>Manage QtHelp &amp;Documents</source>
         <translation>Uspořádat QtHelp &amp;dokumenty</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="979"/>
+        <location filename="Helpviewer/HelpWindow.py" line="967"/>
         <source>Manage QtHelp &amp;Filters</source>
         <translation>Uspořádat QtHelp &amp;filtry</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="991"/>
+        <location filename="Helpviewer/HelpWindow.py" line="979"/>
         <source>&amp;Reindex Documentation</source>
         <translation>Přeinde&amp;xovat dokumentaci</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1008"/>
+        <location filename="Helpviewer/HelpWindow.py" line="996"/>
         <source>Clear private data</source>
         <translation>Smazat soukromá data</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1004"/>
+        <location filename="Helpviewer/HelpWindow.py" line="992"/>
         <source>&amp;Clear private data</source>
         <translation>Smazat &amp;soukromá data</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1009"/>
+        <location filename="Helpviewer/HelpWindow.py" line="997"/>
         <source>&lt;b&gt;Clear private data&lt;/b&gt;&lt;p&gt;Clears the private data like browsing history, search history or the favicons database.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat soukromá data&lt;/b&gt;&lt;p&gt;Smaže soukromá data jako je historie prohlížení, vyhledávání a databáze favicon.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1017"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1005"/>
         <source>Clear &amp;icons database</source>
         <translation>Smazat databázi &amp;ikon</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1068"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1056"/>
         <source>Show Network Monitor</source>
         <translation>Zobrazit monitor sítě</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1068"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1056"/>
         <source>Show &amp;Network Monitor</source>
         <translation>Zobrazit mo&amp;nitor sítě</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1072"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1060"/>
         <source>Show the network monitor dialog</source>
         <translation>Zobrazit dialog monitoru sítě</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1073"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1061"/>
         <source>&lt;b&gt;Show Network Monitor&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit monitor sítě&lt;/b&gt;&lt;p&gt;Zobrazit dialog monitoru sítě.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1184"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1167"/>
         <source>&amp;Settings</source>
         <translation>Na&amp;stavení</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1207"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1190"/>
         <source>&amp;Tools</source>
         <translation>&amp;Nástroje</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="824"/>
+        <location filename="Helpviewer/HelpWindow.py" line="812"/>
         <source>Show page source</source>
         <translation>Zobrazit zdroj strany</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="824"/>
+        <location filename="Helpviewer/HelpWindow.py" line="812"/>
         <source>Ctrl+U</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="828"/>
+        <location filename="Helpviewer/HelpWindow.py" line="816"/>
         <source>Show the page source in an editor</source>
         <translation>Zobrazit zdroj strany v editoru</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="829"/>
+        <location filename="Helpviewer/HelpWindow.py" line="817"/>
         <source>&lt;b&gt;Show page source&lt;/b&gt;&lt;p&gt;Show the page source in an editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit zdroj strany&lt;/b&gt;&lt;p&gt;Zobrazit zdroj strany v editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="882"/>
+        <location filename="Helpviewer/HelpWindow.py" line="870"/>
         <source>&amp;Languages...</source>
         <translation>&amp;Jazyky...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="885"/>
+        <location filename="Helpviewer/HelpWindow.py" line="873"/>
         <source>Configure the accepted languages for web pages</source>
         <translation>Nastavit polovené jazyky pro web strany</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="887"/>
+        <location filename="Helpviewer/HelpWindow.py" line="875"/>
         <source>&lt;b&gt;Languages&lt;/b&gt;&lt;p&gt;Configure the accepted languages for web pages.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jazyky&lt;/b&gt;&lt;p&gt;Nastavit polovené jazyky pro web strany.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="882"/>
+        <location filename="Helpviewer/HelpWindow.py" line="870"/>
         <source>Languages</source>
         <translation>Jazyky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="894"/>
+        <location filename="Helpviewer/HelpWindow.py" line="882"/>
         <source>Cookies</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="894"/>
+        <location filename="Helpviewer/HelpWindow.py" line="882"/>
         <source>C&amp;ookies...</source>
         <translation>C&amp;ookies...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="897"/>
+        <location filename="Helpviewer/HelpWindow.py" line="885"/>
         <source>Configure cookies handling</source>
         <translation>Nastavit ovládání cookies</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="899"/>
+        <location filename="Helpviewer/HelpWindow.py" line="887"/>
         <source>&lt;b&gt;Cookies&lt;/b&gt;&lt;p&gt;Configure cookies handling.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cookies&lt;/b&gt;&lt;p&gt;Nastavit ovládání cookies.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1317"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1298"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="793"/>
+        <location filename="Helpviewer/HelpWindow.py" line="782"/>
         <source>Zoom reset</source>
         <translation>Resetovat lupu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="793"/>
+        <location filename="Helpviewer/HelpWindow.py" line="782"/>
         <source>Zoom &amp;reset</source>
         <translation>&amp;Resetovat lupu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="793"/>
+        <location filename="Helpviewer/HelpWindow.py" line="782"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="798"/>
+        <location filename="Helpviewer/HelpWindow.py" line="787"/>
         <source>Reset the zoom of the text</source>
         <translation>Resetovat lupu textu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="808"/>
+        <location filename="Helpviewer/HelpWindow.py" line="797"/>
         <source>Zoom text only</source>
         <translation>Jen lupa textu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="808"/>
+        <location filename="Helpviewer/HelpWindow.py" line="797"/>
         <source>Zoom &amp;text only</source>
         <translation>Jen lupa &amp;textu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="812"/>
+        <location filename="Helpviewer/HelpWindow.py" line="801"/>
         <source>Zoom text only; pictures remain constant</source>
         <translation>Jen lupa textu; obrázky zůstávají beze změn</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="814"/>
+        <location filename="Helpviewer/HelpWindow.py" line="803"/>
         <source>&lt;b&gt;Zoom text only&lt;/b&gt;&lt;p&gt;Zoom text only; pictures remain constant.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jen lupa textu&lt;/b&gt;&lt;p&gt;Jen lupa textu; Obrázky zůstávají beze změn.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="799"/>
+        <location filename="Helpviewer/HelpWindow.py" line="788"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the text. This sets the zoom factor to 100%.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reset lupy&lt;/b&gt;&lt;p&gt;Reset lupy pro text. Nastaví se lupa na hodnotu 100%.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="376"/>
+        <location filename="Helpviewer/HelpWindow.py" line="365"/>
         <source>New &amp;Window</source>
         <translation>&amp;Nové okno</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="433"/>
+        <location filename="Helpviewer/HelpWindow.py" line="422"/>
         <source>Import Bookmarks</source>
         <translation>Importovat záložky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="433"/>
+        <location filename="Helpviewer/HelpWindow.py" line="422"/>
         <source>&amp;Import Bookmarks...</source>
         <translation>&amp;Importovat záložky...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="436"/>
+        <location filename="Helpviewer/HelpWindow.py" line="425"/>
         <source>Import bookmarks from other browsers</source>
         <translation>Import záložek z jiných prohlížečů</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="438"/>
+        <location filename="Helpviewer/HelpWindow.py" line="427"/>
         <source>&lt;b&gt;Import Bookmarks&lt;/b&gt;&lt;p&gt;Import bookmarks from other browsers.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Import záložek&lt;/b&gt;&lt;p&gt;Import záložek z jiných prohlížečů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="445"/>
+        <location filename="Helpviewer/HelpWindow.py" line="434"/>
         <source>Export Bookmarks</source>
         <translation>Export záložek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="445"/>
+        <location filename="Helpviewer/HelpWindow.py" line="434"/>
         <source>&amp;Export Bookmarks...</source>
         <translation>&amp;Exportovat záložky...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="448"/>
+        <location filename="Helpviewer/HelpWindow.py" line="437"/>
         <source>Export the bookmarks into a file</source>
         <translation>Export záložek do souboru</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="450"/>
+        <location filename="Helpviewer/HelpWindow.py" line="439"/>
         <source>&lt;b&gt;Export Bookmarks&lt;/b&gt;&lt;p&gt;Export the bookmarks into a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Export záložek&lt;/b&gt;&lt;p&gt;Export záložek do souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="675"/>
+        <location filename="Helpviewer/HelpWindow.py" line="664"/>
         <source>Manage Bookmarks</source>
         <translation>Správa záložek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="675"/>
+        <location filename="Helpviewer/HelpWindow.py" line="664"/>
         <source>&amp;Manage Bookmarks...</source>
         <translation>&amp;Správa záložek...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="675"/>
+        <location filename="Helpviewer/HelpWindow.py" line="664"/>
         <source>Ctrl+Shift+B</source>
         <comment>Help|Manage bookmarks</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="679"/>
+        <location filename="Helpviewer/HelpWindow.py" line="668"/>
         <source>Open a dialog to manage the bookmarks.</source>
         <translation>Otevřít dialog pro správu záložek.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="681"/>
+        <location filename="Helpviewer/HelpWindow.py" line="670"/>
         <source>&lt;b&gt;Manage Bookmarks...&lt;/b&gt;&lt;p&gt;Open a dialog to manage the bookmarks.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Správa záložek&lt;/b&gt;&lt;p&gt;Otevřít dialog pro správu záložek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="688"/>
+        <location filename="Helpviewer/HelpWindow.py" line="677"/>
         <source>Add &amp;Bookmark...</source>
         <translation>Přid&amp;at záložku...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="688"/>
+        <location filename="Helpviewer/HelpWindow.py" line="677"/>
         <source>Ctrl+D</source>
         <comment>Help|Add bookmark</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="694"/>
+        <location filename="Helpviewer/HelpWindow.py" line="683"/>
         <source>Open a dialog to add a bookmark.</source>
         <translation>Otevřít dialog pro přidání záložky.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="695"/>
+        <location filename="Helpviewer/HelpWindow.py" line="684"/>
         <source>&lt;b&gt;Add Bookmark&lt;/b&gt;&lt;p&gt;Open a dialog to add the current URL as a bookmark.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat záložku&lt;/b&gt;&lt;p&gt;Otevřít dialog pro přidání aktuální URL jako záložky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="702"/>
+        <location filename="Helpviewer/HelpWindow.py" line="691"/>
         <source>Add Folder</source>
         <translation>Přidat složku</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="702"/>
+        <location filename="Helpviewer/HelpWindow.py" line="691"/>
         <source>Add &amp;Folder...</source>
         <translation>Přidat s&amp;ložku...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="705"/>
+        <location filename="Helpviewer/HelpWindow.py" line="694"/>
         <source>Open a dialog to add a new bookmarks folder.</source>
         <translation>Otevřít dialog pro přidání nové složky záložek.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="707"/>
+        <location filename="Helpviewer/HelpWindow.py" line="696"/>
         <source>&lt;b&gt;Add Folder...&lt;/b&gt;&lt;p&gt;Open a dialog to add a new bookmarks folder.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat složku...&lt;/b&gt;&lt;p&gt;Otevřít dialog pro přidání nové složky záložek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="714"/>
+        <location filename="Helpviewer/HelpWindow.py" line="703"/>
         <source>Bookmark All Tabs</source>
         <translation>Vytvořit záložky pro všechny taby</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="714"/>
+        <location filename="Helpviewer/HelpWindow.py" line="703"/>
         <source>Bookmark All Tabs...</source>
         <translation>Vytvořit záložky pro všechny taby...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="717"/>
+        <location filename="Helpviewer/HelpWindow.py" line="706"/>
         <source>Bookmark all open tabs.</source>
         <translation>Vytvořit záložky pro všechny otevřené taby.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="719"/>
+        <location filename="Helpviewer/HelpWindow.py" line="708"/>
         <source>&lt;b&gt;Bookmark All Tabs...&lt;/b&gt;&lt;p&gt;Open a dialog to add a new bookmarks folder for all open tabs.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit záložky pro všechny taby...&lt;/b&gt;&lt;p&gt;Otevřít dialog pro přidání nové složky záložek pro všechny otevřené taby.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1853"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1822"/>
         <source>Saved Tabs</source>
         <translation>Uložkt taby</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1249"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1232"/>
         <source>Close Others</source>
         <translation>Zavřít ostatní</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="592"/>
+        <location filename="Helpviewer/HelpWindow.py" line="581"/>
         <source>F5</source>
         <comment>Go|Reload</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="606"/>
+        <location filename="Helpviewer/HelpWindow.py" line="595"/>
         <source>Stop</source>
         <translation>Zastavit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="606"/>
+        <location filename="Helpviewer/HelpWindow.py" line="595"/>
         <source>&amp;Stop</source>
         <translation>Za&amp;stavit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="606"/>
+        <location filename="Helpviewer/HelpWindow.py" line="595"/>
         <source>Ctrl+.</source>
         <comment>Go|Stop</comment>
         <translation>Ctrl+.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="606"/>
+        <location filename="Helpviewer/HelpWindow.py" line="595"/>
         <source>Esc</source>
         <comment>Go|Stop</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="612"/>
+        <location filename="Helpviewer/HelpWindow.py" line="601"/>
         <source>Stop loading</source>
         <translation>Zastavit načítání</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="613"/>
+        <location filename="Helpviewer/HelpWindow.py" line="602"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stops loading of the current tab.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zastavit&lt;/b&gt;&lt;p&gt;Zastavit načítání aktuálního tabu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1242"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1225"/>
         <source>Duplicate Page</source>
         <translation>Duplikovat stranu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="418"/>
+        <location filename="Helpviewer/HelpWindow.py" line="407"/>
         <source>Save As </source>
         <translation>Uložit jako </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="418"/>
+        <location filename="Helpviewer/HelpWindow.py" line="407"/>
         <source>&amp;Save As...</source>
         <translation>Uložit j&amp;ako...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="418"/>
+        <location filename="Helpviewer/HelpWindow.py" line="407"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="423"/>
+        <location filename="Helpviewer/HelpWindow.py" line="412"/>
         <source>Save the current page to disk</source>
         <translation>Uložit aktuální stranu na disk</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="425"/>
+        <location filename="Helpviewer/HelpWindow.py" line="414"/>
         <source>&lt;b&gt;Save As...&lt;/b&gt;&lt;p&gt;Saves the current page to disk.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit jako...&lt;/b&gt;&lt;p&gt;Uložit aktuální stranu na disk.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1779"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1752"/>
         <source>Eric Web Browser</source>
         <translation>Eric web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1770"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1743"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;O Eric web prohlížeči&lt;/h3&gt;&lt;p&gt;Eric web prohlížeč je kombinace souboru nápovědy a HTML prohlížeče.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="538"/>
+        <location filename="Helpviewer/HelpWindow.py" line="527"/>
         <source>Quit the web browser</source>
         <translation>Ukončit web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="539"/>
+        <location filename="Helpviewer/HelpWindow.py" line="528"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the web browser.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ukončit&lt;/b&gt;&lt;p&gt;Ukončit web prohlížeč.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1029"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1017"/>
         <source>Configure Search Engines</source>
         <translation>Konfigurovat vyhledávací enginy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1033"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1021"/>
         <source>Configure the available search engines</source>
         <translation>Konfigurovat dostupné vyhledávací enginy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1035"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1023"/>
         <source>&lt;b&gt;Configure Search Engines...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure the available search engines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konfigurivat vyhledávací enginy...&lt;/b&gt;&lt;p&gt;Otevře dialog pro konfiguraci dostupných vyhledávacích enginů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1042"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1030"/>
         <source>Manage Saved Passwords</source>
         <translation>Spravovat uložená hesla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1042"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1030"/>
         <source>Manage Saved Passwords...</source>
         <translation>Spravovat uložená hesla...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1046"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1034"/>
         <source>Manage the saved passwords</source>
         <translation>Spravovat vaše uložená hesla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1048"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1036"/>
         <source>&lt;b&gt;Manage Saved Passwords...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved passwords.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spravovat uložená hesla...&lt;/b&gt;&lt;p&gt;Otevře dialog pro spravování uložených hesel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1055"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1043"/>
         <source>Ad Block</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1055"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1043"/>
         <source>&amp;Ad Block...</source>
         <translation>&amp;Ad Block...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1059"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1047"/>
         <source>Configure AdBlock subscriptions and rules</source>
         <translation>Konfigurovat AdBlock odebírání a pravidla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1061"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1049"/>
         <source>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure AdBlock subscriptions and rules.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Otevře dialog pro konfiguraci AdBlock odebírání a pravidel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2649"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2608"/>
         <source>eric5 Web Browser</source>
         <translation>eric5 web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2359"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2320"/>
         <source>Failed to load</source>
         <translation>Načtení selhalo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1257"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1240"/>
         <source>Print as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="474"/>
+        <location filename="Helpviewer/HelpWindow.py" line="463"/>
         <source>Print the displayed help as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="475"/>
+        <location filename="Helpviewer/HelpWindow.py" line="464"/>
         <source>&lt;b&gt;Print as PDF&lt;/b&gt;&lt;p&gt;Print the displayed help text as a PDF file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="906"/>
+        <location filename="Helpviewer/HelpWindow.py" line="894"/>
         <source>Offline Storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="906"/>
+        <location filename="Helpviewer/HelpWindow.py" line="894"/>
         <source>Offline &amp;Storage...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="909"/>
+        <location filename="Helpviewer/HelpWindow.py" line="897"/>
         <source>Configure offline storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="911"/>
+        <location filename="Helpviewer/HelpWindow.py" line="899"/>
         <source>&lt;b&gt;Offline Storage&lt;/b&gt;&lt;p&gt;Opens a dialog to configure offline storage.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1029"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1017"/>
         <source>Configure Search &amp;Engines...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2076"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2045"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1142"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1130"/>
         <source>Text Encoding</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2981"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2940"/>
         <source>Default</source>
         <translation type="unfinished">Výchozí</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1197"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1180"/>
         <source>User Agent</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13470,42 +13503,42 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>Hg</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="169"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="171"/>
         <source>The hg process finished with the exit code {0}</source>
         <translation>hg proces skončil s exit kódem {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="172"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="174"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>hg proces neskončil do 30s.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="174"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="176"/>
         <source>Could not start the hg executable.</source>
         <translation>Nelze spustit hg program.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="200"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="202"/>
         <source>Create project repository</source>
         <translation>Vytvořit repozitář projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="200"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="202"/>
         <source>The project repository could not be created.</source>
         <translation>Úložiště projektu nelze vytvořit.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="227"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="229"/>
         <source>Creating Mercurial repository</source>
         <translation>Vytváření Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="243"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="245"/>
         <source>Initial commit to Mercurial repository</source>
         <translation>Úvodní zápis změn (commit) do Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="284"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="286"/>
         <source>Cloning project from a Mercurial repository</source>
         <translation>Naklonovat projekt z Mercurial úložiště</translation>
     </message>
@@ -14665,96 +14698,96 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zpracovávám váš požadavek, prosím čekejte...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="64"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="63"/>
         <source>Revision</source>
         <translation>Revize</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="148"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="147"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="148"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="147"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="219"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="218"/>
         <source>No log available for &apos;{0}&apos;</source>
         <translation>Log není pro &apos;{0}&apos; dostupný</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="252"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="251"/>
         <source>diff to {0}</source>
         <translation>diff na {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="260"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="259"/>
         <source>Branches: {0}&lt;br /&gt;
 </source>
         <translation>Větve: {0}&lt;br/&gt;
 </translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="262"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="261"/>
         <source>Tags: {0}&lt;br /&gt;
 </source>
         <translation>Tagy: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="264"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="263"/>
         <source>Parents: {0}&lt;br /&gt;
 </source>
         <translation>Rodiče: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="266"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="265"/>
         <source>&lt;i&gt;Author: {0}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;Autor: {0}&lt;/i&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="269"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="268"/>
         <source>&lt;i&gt;Date: {0}, {1}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;Datum: {0}, {1}&lt;/i&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="283"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="282"/>
         <source>Added {0}&lt;br /&gt;
 </source>
         <translation>Přidáno: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="289"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="288"/>
         <source>Modified {0}&lt;br /&gt;
 </source>
         <translation>Změněno: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="295"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="294"/>
         <source>Deleted {0}&lt;br /&gt;
 </source>
         <translation>Smazáno: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="195"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="194"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Hg proces neskončil do 30s.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="197"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="196"/>
         <source>Could not start the hg executable.</source>
         <translation>Nelze spustit hg program.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="200"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="199"/>
         <source>Mercurial Error</source>
         <translation>Mercurial chyba</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="279"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="278"/>
         <source>Added {0} (copied from {1})&lt;br /&gt;
 </source>
         <translation>Přidáno {0} (zkopírováno z {1})&lt;br /&gt;
@@ -14975,112 +15008,112 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HgProjectBrowserHelper</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="460"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="459"/>
         <source>Version Control</source>
         <translation>Kontrola verzí</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="471"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="470"/>
         <source>Commit changes to repository...</source>
         <translation>Zapsat změny do repozitáře...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="476"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="475"/>
         <source>Add to repository</source>
         <translation>Přidat do repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="479"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="478"/>
         <source>Remove from repository (and disk)</source>
         <translation>Odebrat z repozitáře (a z disku)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="401"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="400"/>
         <source>Copy in repository</source>
         <translation>Kopírovat v repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="403"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="402"/>
         <source>Move in repository</source>
         <translation>Přesunout v repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="406"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="405"/>
         <source>Show log</source>
         <translation>Zobrazit log</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="409"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="408"/>
         <source>Show limited log</source>
         <translation>Zobrazit limitovaný log</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="412"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="411"/>
         <source>Show log browser</source>
         <translation>Zobrazit log prohlížeč</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="484"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="483"/>
         <source>Show status</source>
         <translation>Zobrazit status</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="488"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="487"/>
         <source>Show difference</source>
         <translation>Zobrazit odlišnosti</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="491"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="490"/>
         <source>Show difference (extended)</source>
         <translation>Zobrazit odlišnosti (rozšířeně)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="240"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="239"/>
         <source>Show annotated file</source>
         <translation>Zobrazit komentované soubory</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="496"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="495"/>
         <source>Revert changes</source>
         <translation>Vrátit změny</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="499"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="498"/>
         <source>Resolve conflict</source>
         <translation>Vyřešit konflikty</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="502"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="501"/>
         <source>Select all local file entries</source>
         <translation>Vybrat všechny lokální soubory</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="504"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="503"/>
         <source>Select all versioned file entries</source>
         <translation>Vybrat všechny soubory ve správě verzí</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="506"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="505"/>
         <source>Select all local directory entries</source>
         <translation>Vybrat všechny lokální adresáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="508"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="507"/>
         <source>Select all versioned directory entries</source>
         <translation>Vybrat všechny adresáře ve správě verzí</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="626"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="625"/>
         <source>Remove from repository only</source>
         <translation>Odebrat jen z repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="615"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="614"/>
         <source>Do you really want to remove these translation files from the repository?</source>
         <translation>Opravdu chcete odebrat tyto soubory s překlady z repozitáře?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="626"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="625"/>
         <source>Do you really want to remove these files from the repository?</source>
         <translation>Opravdu chcete odebrat tyto soubory z repozitáře?</translation>
     </message>
@@ -16733,27 +16766,27 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HistoryManager</name>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="337"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="339"/>
         <source>Loading History</source>
         <translation>Načíst historii</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="439"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="441"/>
         <source>Saving History</source>
         <translation>Uložit historii</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="413"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="415"/>
         <source>&lt;p&gt;Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze otevřít soubor s historií &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="433"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="435"/>
         <source>&lt;p&gt;Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Chyba při odebírání starého souboru historie &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="439"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="441"/>
         <source>&lt;p&gt;Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Chyba při přesouvání nového souboru historie z původního (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -16761,12 +16794,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HistoryMenu</name>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="270"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="272"/>
         <source>Show All History...</source>
         <translation>Zobrazit celou historii...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="273"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="275"/>
         <source>Clear History...</source>
         <translation>Vyčistit historii...</translation>
     </message>
@@ -16814,102 +16847,102 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>IconEditorGrid</name>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="179"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="185"/>
         <source>Set Pixel</source>
         <translation>Nastavit pixel</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="180"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="186"/>
         <source>Erase Pixel</source>
         <translation>Vymazat pixel</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="181"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="187"/>
         <source>Draw Line</source>
         <translation>Nakreslit linku</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="182"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="188"/>
         <source>Draw Rectangle</source>
         <translation>Nakreslit obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="183"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="189"/>
         <source>Draw Filled Rectangle</source>
         <translation>Nakreslit vyplněný obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="184"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="190"/>
         <source>Draw Circle</source>
         <translation>Nakreslit kruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="185"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="191"/>
         <source>Draw Filled Circle</source>
         <translation>Nakreslit vyplněný kruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="186"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="192"/>
         <source>Draw Ellipse</source>
         <translation>Nakreslit elipsu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="187"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="193"/>
         <source>Draw Filled Ellipse</source>
         <translation>Nakreslit vyplněnou elipsu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="188"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="194"/>
         <source>Fill Region</source>
         <translation>Vyplnit oblast</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="776"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="781"/>
         <source>Cut Selection</source>
         <translation>Odebrat výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="828"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="833"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="828"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="833"/>
         <source>&lt;p&gt;The clipboard image is larger than the current image.&lt;br/&gt;Paste as new image?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Obrázek ze schránky je větší než aktuální obrázek.&lt;br/&gt;Vložit jako nový obrázek?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="843"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="848"/>
         <source>Paste Clipboard</source>
         <translation>Vložit ze schránky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="910"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="915"/>
         <source>Pasting Image</source>
         <translation>Vkládání obrázku</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="910"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="915"/>
         <source>Invalid image data in clipboard.</source>
         <translation>Neplatná data obrázku ve schránce.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="920"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="925"/>
         <source>Paste Clipboard as New Image</source>
         <translation>Vložit ze schránky jako nový obrázek</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="948"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="953"/>
         <source>Clear Image</source>
         <translation>Vyčistit obrázek</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="964"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="969"/>
         <source>Resize Image</source>
         <translation>Změnit velikost obrázku</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="988"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="993"/>
         <source>Convert to Grayscale</source>
         <translation>Převést do šedi</translation>
     </message>
@@ -16917,32 +16950,32 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>IconEditorPalette</name>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="38"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="40"/>
         <source>&lt;b&gt;Preview&lt;/b&gt;&lt;p&gt;This is a 1:1 preview of the current icon.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Náhled&lt;/b&gt;&lt;p&gt;Toto je náhled 1:1 aktuální ikony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="48"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="50"/>
         <source>&lt;b&gt;Current Color&lt;/b&gt;&lt;p&gt;This is the currently selected color used for drawing.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aktuální barva&lt;/b&gt;&lt;p&gt;Toto je aktuálně vybraná barva určená ke kreslení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="56"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="58"/>
         <source>&lt;b&gt;Current Color Value&lt;/b&gt;&lt;p&gt;This is the currently selected color value used for drawing.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hodnota aktuální barvy&lt;/b&gt;&lt;p&gt;Toto je hodnota aktuálně vybrané barvy určené ke kreslení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="62"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="64"/>
         <source>Select Color</source>
         <translation>Výběr barvy</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="63"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="65"/>
         <source>&lt;b&gt;Select Color&lt;/b&gt;&lt;p&gt;Select the current drawing color via a color selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Výběr barvy&lt;/b&gt;&lt;p&gt;Výběr bary pro kreslení před dialog výběru barvy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="72"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="74"/>
         <source>&lt;b&gt;Select alpha channel value&lt;/b&gt;&lt;p&gt;Select the value for the alpha channel of the current color.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Výběr hodnoty alfa kanálu&lt;/b&gt;&lt;p&gt;Výběr hodnoty alfa kanálu aktuální barvy.&lt;/p&gt;</translation>
     </message>
@@ -16950,1064 +16983,1064 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>IconEditorWindow</name>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="107"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="105"/>
         <source>Windows Bitmap File (*.bmp)</source>
         <translation>Windows Bitmap soubor (*.bmp)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="108"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="106"/>
         <source>Graphic Interchange Format File (*.gif)</source>
         <translation>Graphic Interchange Format soubor (*.gif)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="109"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="107"/>
         <source>Windows Icon File (*.ico)</source>
         <translation>Windows Icon soubor (*.ico)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="110"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="108"/>
         <source>JPEG File (*.jpg)</source>
         <translation>JPEG soubor (*.jpg)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="112"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="110"/>
         <source>Portable Bitmap File (*.pbm)</source>
         <translation>Portable Bitmap soubor (*.pbm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="114"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="112"/>
         <source>Portable Graymap File (*.pgm)</source>
         <translation>Portable Graymap soubor (*.pgm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="115"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="113"/>
         <source>Portable Network Graphics File (*.png)</source>
         <translation>Portable Network Graphics soubor (*.png)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="116"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="114"/>
         <source>Portable Pixmap File (*.ppm)</source>
         <translation>Portable Pixmap soubor (*.ppm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="118"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="116"/>
         <source>Scalable Vector Graphics File (*.svg)</source>
         <translation>Scalable Vector Graphics soubor (*.svg)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="120"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="118"/>
         <source>TIFF File (*.tif)</source>
         <translation>TIFF soubor (*.tif)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="121"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="119"/>
         <source>X11 Bitmap File (*.xbm)</source>
         <translation>X11 Bitmap soubor (*.xbm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="122"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="120"/>
         <source>X11 Pixmap File (*.xpm)</source>
         <translation>X11 Pixmap soubor (*.xpm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="133"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="131"/>
         <source>All Files (*)</source>
         <translation>Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="165"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="163"/>
         <source>New</source>
         <translation>Nový</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="165"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="163"/>
         <source>&amp;New</source>
         <translation>&amp;Nový</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="165"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="163"/>
         <source>Ctrl+N</source>
         <comment>File|New</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="170"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="168"/>
         <source>Create a new icon</source>
         <translation>Vytvořit novou ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="171"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="169"/>
         <source>&lt;b&gt;New&lt;/b&gt;&lt;p&gt;This creates a new icon.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nová&lt;/b&gt;&lt;p&gt;Vytvoří se nová ikona.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="178"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="176"/>
         <source>New Window</source>
         <translation>Nové okno</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="178"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="176"/>
         <source>New &amp;Window</source>
         <translation>&amp;Nové okno</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="182"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="180"/>
         <source>Open a new icon editor window</source>
         <translation>Otevřít nové editační okno s ikonou</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="183"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="181"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nové okno&lt;/b&gt;&lt;p&gt;Otevřít nové editační okno s ikonou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="190"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="188"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="190"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="188"/>
         <source>&amp;Open...</source>
         <translation>&amp;Otevřít...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="190"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="188"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="195"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="193"/>
         <source>Open an icon file for editing</source>
         <translation>Otevřít soubor s ikonou pro editaci</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="196"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="194"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new icon file for editing. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít soubor&lt;/b&gt;&lt;p&gt;Otevře soubor s ikonou pro editaci. Spustí se přes dialog pro výběr souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="204"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="202"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="204"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="202"/>
         <source>&amp;Save</source>
         <translation>&amp;Uložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="204"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="202"/>
         <source>Ctrl+S</source>
         <comment>File|Save</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="209"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="207"/>
         <source>Save the current icon</source>
         <translation>Uložit aktuální ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="210"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="208"/>
         <source>&lt;b&gt;Save File&lt;/b&gt;&lt;p&gt;Save the contents of the icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit soubor&lt;/b&gt;&lt;p&gt;Uložit obsah aktuálního editačního okna s ikonou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="217"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="215"/>
         <source>Save As</source>
         <translation>Uložit jako</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="217"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="215"/>
         <source>Save &amp;As...</source>
         <translation>Uložit j&amp;ako...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="217"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="215"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="222"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="220"/>
         <source>Save the current icon to a new file</source>
         <translation>Uložit aktuální ikonu do nového souboru</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="224"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="222"/>
         <source>&lt;b&gt;Save As...&lt;/b&gt;&lt;p&gt;Saves the current icon to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit jako&lt;/b&gt;&lt;p&gt;Uloží aktuální ikonu do nového souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="231"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="229"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="231"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="229"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="231"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="229"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="236"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="234"/>
         <source>Close the current icon editor window</source>
         <translation>Zavřít aktuální okno editoru ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="237"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="235"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;Closes the current icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít&lt;/b&gt;&lt;p&gt;Zavře aktuální okno editoru ikon.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="244"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="242"/>
         <source>Close All</source>
         <translation>Zavřít vše</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="244"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="242"/>
         <source>Close &amp;All</source>
         <translation>Z&amp;avřít vše</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="247"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="245"/>
         <source>Close all icon editor windows</source>
         <translation>Zavřít všechny editační okna ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="248"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="246"/>
         <source>&lt;b&gt;Close All&lt;/b&gt;&lt;p&gt;Closes all icon editor windows except the first one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít vše&lt;/b&gt;&lt;p&gt;Zavřít všechna okna editorů ikon kromě prvního.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="255"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="253"/>
         <source>Quit</source>
         <translation>Konec</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="255"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="253"/>
         <source>&amp;Quit</source>
         <translation>&amp;Konec</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="255"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="253"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="260"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="258"/>
         <source>Quit the icon editor</source>
         <translation>Ukončit editor ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="261"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="259"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the icon editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konec&lt;/b&gt;&lt;p&gt;Ukončit editor ikon.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="275"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="273"/>
         <source>Undo</source>
         <translation>Vrátit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="275"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="273"/>
         <source>&amp;Undo</source>
         <translation>&amp;Vrátit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="275"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="273"/>
         <source>Ctrl+Z</source>
         <comment>Edit|Undo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="275"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="273"/>
         <source>Alt+Backspace</source>
         <comment>Edit|Undo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="281"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="279"/>
         <source>Undo the last change</source>
         <translation>Vrátit poslední změnu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="282"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="280"/>
         <source>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Undo the last change done.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vrátit&lt;/b&gt;&lt;p&gt;Vrátit poslední změnu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="289"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="287"/>
         <source>Redo</source>
         <translation>Znovu použít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="289"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="287"/>
         <source>&amp;Redo</source>
         <translation>&amp;Znovu použít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="289"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="287"/>
         <source>Ctrl+Shift+Z</source>
         <comment>Edit|Redo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="294"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="292"/>
         <source>Redo the last change</source>
         <translation>Znovu použít poslední změnu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="295"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="293"/>
         <source>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Redo the last change done.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Znovu použít&lt;/b&gt;&lt;p&gt;Znovu použít poslední změnu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="302"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="300"/>
         <source>Cut</source>
         <translation>Vyjmout</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="302"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="300"/>
         <source>Cu&amp;t</source>
         <translation>Vyjmou&amp;t</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="302"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="300"/>
         <source>Ctrl+X</source>
         <comment>Edit|Cut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="302"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="300"/>
         <source>Shift+Del</source>
         <comment>Edit|Cut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="308"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="306"/>
         <source>Cut the selection</source>
         <translation>Vyjmout výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="309"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="307"/>
         <source>&lt;b&gt;Cut&lt;/b&gt;&lt;p&gt;Cut the selected image area to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyjmout&lt;/b&gt;&lt;p&gt;Vyjme vybranou oblast obrázku a vloží jej do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="316"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="314"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="316"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="314"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopírovat</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="316"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="314"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="316"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="314"/>
         <source>Ctrl+Ins</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="322"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="320"/>
         <source>Copy the selection</source>
         <translation>Kopírovat výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="323"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="321"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected image area to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopírovat&lt;/b&gt;&lt;p&gt;Kopíruje vybranou oblast obrázku a vloží ji do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="330"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="328"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="330"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="328"/>
         <source>&amp;Paste</source>
         <translation>V&amp;ložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="330"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="328"/>
         <source>Ctrl+V</source>
         <comment>Edit|Paste</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="330"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="328"/>
         <source>Shift+Ins</source>
         <comment>Edit|Paste</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="336"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="334"/>
         <source>Paste the clipboard image</source>
         <translation>Vložit obrázek ze schránky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="337"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="335"/>
         <source>&lt;b&gt;Paste&lt;/b&gt;&lt;p&gt;Paste the clipboard image.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vložit&lt;/b&gt;&lt;p&gt;Vložit obrázek ze schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="344"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="342"/>
         <source>Paste as New</source>
         <translation>Vložit jako nový</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="344"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="342"/>
         <source>Paste as &amp;New</source>
         <translation>Vložit jako &amp;nový</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="347"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="345"/>
         <source>Paste the clipboard image replacing the current one</source>
         <translation>Nahradit aktuální obrázek tím ze schránky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="349"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="347"/>
         <source>&lt;b&gt;Paste as New&lt;/b&gt;&lt;p&gt;Paste the clipboard image replacing the current one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vložit jako nový&lt;/b&gt;&lt;p&gt;Obrázek ze schránky nahradí aktuální obrázek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="356"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="354"/>
         <source>Clear</source>
         <translation>Vyčistit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="356"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="354"/>
         <source>Cl&amp;ear</source>
         <translation>Vyči&amp;stit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="356"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="354"/>
         <source>Alt+Shift+C</source>
         <comment>Edit|Clear</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="362"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="360"/>
         <source>Clear the icon image</source>
         <translation>Vymazat obrázek ikony</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="363"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="361"/>
         <source>&lt;b&gt;Clear&lt;/b&gt;&lt;p&gt;Clear the icon image and set it to be completely transparent.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vymazat&lt;/b&gt;&lt;p&gt;Vymaže obrázek ikony a nastaví jej jako zcela průhledný.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="370"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="368"/>
         <source>Select All</source>
         <translation>Vybrat vše</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="370"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="368"/>
         <source>&amp;Select All</source>
         <translation>Vybrat vš&amp;e</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="370"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="368"/>
         <source>Ctrl+A</source>
         <comment>Edit|Select All</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="375"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="373"/>
         <source>Select the complete icon image</source>
         <translation>Vybrat celý obrázek ikony</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="376"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="374"/>
         <source>&lt;b&gt;Select All&lt;/b&gt;&lt;p&gt;Selects the complete icon image.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vybrat celý&lt;/b&gt;&lt;p&gt;Vybere kopletně celý obrázek ikony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="383"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="381"/>
         <source>Change Size</source>
         <translation>Změnit velikost</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="383"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="381"/>
         <source>Change Si&amp;ze...</source>
         <translation>&amp;Změnit velikost...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="388"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="386"/>
         <source>Change the icon size</source>
         <translation>Změnit velikost ikony</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="389"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="387"/>
         <source>&lt;b&gt;Change Size...&lt;/b&gt;&lt;p&gt;Changes the icon size.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Změnit velikost......&lt;/b&gt;&lt;p&gt;Změnit velikost ikony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="396"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="394"/>
         <source>Grayscale</source>
         <translation>Stupnice šedi</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="396"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="394"/>
         <source>&amp;Grayscale</source>
         <translation>&amp;Stupnice šedi</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="401"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="399"/>
         <source>Change the icon to grayscale</source>
         <translation>Převést ikonu do šedi</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="402"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="400"/>
         <source>&lt;b&gt;Grayscale&lt;/b&gt;&lt;p&gt;Changes the icon to grayscale.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stupnice šedi&lt;/b&gt;&lt;p&gt;Převést ikonu do šedi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="435"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="429"/>
         <source>Zoom in</source>
         <translation>Přiblížit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="435"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="429"/>
         <source>Zoom &amp;in</source>
         <translation>Př&amp;iblížit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="435"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="429"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="440"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="434"/>
         <source>Zoom in on the icon</source>
         <translation>Přiblížit ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="441"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="435"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the icon. This makes the grid bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přiblížit&lt;/b&gt;&lt;p&gt;Přiblížit ikonu. Pomocná síť bude větší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="448"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="442"/>
         <source>Zoom out</source>
         <translation>Oddálit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="448"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="442"/>
         <source>Zoom &amp;out</source>
         <translation>&amp;Oddálit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="448"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="442"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="453"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="447"/>
         <source>Zoom out on the icon</source>
         <translation>Oddálit ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="454"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="448"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the icon. This makes the grid smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Oddálit&lt;/b&gt;&lt;p&gt;Lupa na oddálení ikony. Pomocná síť bude menší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="461"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="455"/>
         <source>Zoom reset</source>
         <translation>Resetovat lupu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="461"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="455"/>
         <source>Zoom &amp;reset</source>
         <translation>&amp;Resetovat lupu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="461"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="455"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="475"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="469"/>
         <source>Zoom</source>
         <translation>Lupa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="475"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="469"/>
         <source>&amp;Zoom...</source>
         <translation>&amp;Lupa...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="475"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="469"/>
         <source>Ctrl+#</source>
         <comment>View|Zoom</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="481"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="475"/>
         <source>Zoom the icon</source>
         <translation>Přiblížit ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="482"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="476"/>
         <source>&lt;b&gt;Zoom&lt;/b&gt;&lt;p&gt;Zoom the icon. This opens a dialog where the desired zoom factor can be entered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lupa&lt;/b&gt;&lt;p&gt;Lupa na ikonu. Otevře se dialogové okno kde se zadá požadovaná hodnota zvětšení/zmenšení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="490"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="484"/>
         <source>Show Grid</source>
         <translation>Zobrazit pomocnou síť</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="490"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="484"/>
         <source>Show &amp;Grid</source>
         <translation>Zobrazit pomocnou &amp;síť</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="495"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="489"/>
         <source>Toggle the display of the grid</source>
         <translation>Přepnout zobrazování pomocné sítě</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="496"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="490"/>
         <source>&lt;b&gt;Show Grid&lt;/b&gt;&lt;p&gt;Toggle the display of the grid.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit pomocnou síť&lt;/b&gt;&lt;p&gt;Přepíná zobrazování pomocné sítě.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="516"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="509"/>
         <source>Freehand</source>
         <translation>Od ruky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="516"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="509"/>
         <source>&amp;Freehand</source>
         <translation>Od &amp;ruky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="521"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="514"/>
         <source>&lt;b&gt;Free hand&lt;/b&gt;&lt;p&gt;Draws non linear lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Od ruky&lt;/b&gt;&lt;p&gt;Kreslí čáry od ruky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="530"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="523"/>
         <source>Color Picker</source>
         <translation>Barvítko</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="530"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="523"/>
         <source>&amp;Color Picker</source>
         <translation>&amp;Barvítko</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="535"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="528"/>
         <source>&lt;b&gt;Color Picker&lt;/b&gt;&lt;p&gt;The color of the pixel clicked on will become the current draw color.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Barvítko&lt;/b&gt;&lt;p&gt;Barva pixelu, na kterou se klikne, se změní na aktuálně nastavenou barvu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="545"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="538"/>
         <source>Rectangle</source>
         <translation>Obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="545"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="538"/>
         <source>&amp;Rectangle</source>
         <translation>&amp;Obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="550"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="543"/>
         <source>&lt;b&gt;Rectangle&lt;/b&gt;&lt;p&gt;Draw a rectangle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Obdélník&lt;/b&gt;&lt;p&gt;Kreslit obdélník.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="559"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="552"/>
         <source>Filled Rectangle</source>
         <translation>Vyplněný obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="559"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="552"/>
         <source>F&amp;illed Rectangle</source>
         <translation>Vyplněný o&amp;bdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="564"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="557"/>
         <source>&lt;b&gt;Filled Rectangle&lt;/b&gt;&lt;p&gt;Draw a filled rectangle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;vyplněný obdélník&lt;/b&gt;&lt;p&gt;Kreslit obdélník vyplněný barvou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="573"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="566"/>
         <source>Circle</source>
         <translation>Kruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="578"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="571"/>
         <source>&lt;b&gt;Circle&lt;/b&gt;&lt;p&gt;Draw a circle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kruh&lt;/b&gt;&lt;p&gt;Nakreslit kruh.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="587"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="580"/>
         <source>Filled Circle</source>
         <translation>Vyplněný kruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="587"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="580"/>
         <source>Fille&amp;d Circle</source>
         <translation>Vyplněný k&amp;ruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="592"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="585"/>
         <source>&lt;b&gt;Filled Circle&lt;/b&gt;&lt;p&gt;Draw a filled circle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyplněný kruh&lt;/b&gt;&lt;p&gt;Nakreslit kruh vypněný barvou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="601"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="594"/>
         <source>Ellipse</source>
         <translation>Elipsa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="601"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="594"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elipsa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="606"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="599"/>
         <source>&lt;b&gt;Ellipse&lt;/b&gt;&lt;p&gt;Draw an ellipse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Elipsa&lt;/b&gt;&lt;p&gt;Nakreslit elipsu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="615"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="608"/>
         <source>Filled Ellipse</source>
         <translation>Vyplněná elipsa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="615"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="608"/>
         <source>Fille&amp;d Elli&amp;pse</source>
         <translation>Vyplněná e&amp;lipsa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="620"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="613"/>
         <source>&lt;b&gt;Filled Ellipse&lt;/b&gt;&lt;p&gt;Draw a filled ellipse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyplněná elipsa&lt;/b&gt;&lt;p&gt;Nakreslit elipsu vypněnou barvou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="629"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="622"/>
         <source>Flood Fill</source>
         <translation>Vyplnit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="629"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="622"/>
         <source>Fl&amp;ood Fill</source>
         <translation>&amp;Vyplnit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="634"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="627"/>
         <source>&lt;b&gt;Flood Fill&lt;/b&gt;&lt;p&gt;Fill adjoining pixels with the same color with the current color.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyplit&lt;/b&gt;&lt;p&gt;Vyplní barvou celou ohraničenou plochu, ve které se nachází počáteční pixel (semínkové vyplňování).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="644"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="637"/>
         <source>Line</source>
         <translation>Linka</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="644"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="637"/>
         <source>&amp;Line</source>
         <translation>&amp;Linka</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="649"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="642"/>
         <source>&lt;b&gt;Line&lt;/b&gt;&lt;p&gt;Draw a line.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Linka&lt;/b&gt;&lt;p&gt;Nakreslit linku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="658"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="651"/>
         <source>Eraser (Transparent)</source>
         <translation>Guma (průhlednost)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="658"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="651"/>
         <source>Eraser (&amp;Transparent)</source>
         <translation>Guma (průhlednos&amp;t)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="663"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="656"/>
         <source>&lt;b&gt;Eraser (Transparent)&lt;/b&gt;&lt;p&gt;Erase pixels by setting them to transparent.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guma (průhlednost)&lt;/b&gt;&lt;p&gt;Vymaže pixely tak, že budou průhledné.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="672"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="665"/>
         <source>Rectangular Selection</source>
         <translation>Obdélníkový výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="687"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="680"/>
         <source>Rect&amp;angular Selection</source>
         <translation>&amp;Obdélníkový výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="677"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="670"/>
         <source>&lt;b&gt;Rectangular Selection&lt;/b&gt;&lt;p&gt;Select a rectangular section of the icon using the mouse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Obdélníkový výběr&lt;/b&gt;&lt;p&gt;Vybrat obdélníkovou oblast v ikoně pomocí myši.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="687"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="680"/>
         <source>Circular Selection</source>
         <translation>Kruhový výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="692"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="685"/>
         <source>&lt;b&gt;Circular Selection&lt;/b&gt;&lt;p&gt;Select a circular section of the icon using the mouse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kruhový výběr&lt;/b&gt;&lt;p&gt;Vybrat kruhovou oblast v ikoně pomocí myši.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="708"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="701"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="708"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="701"/>
         <source>&amp;About</source>
         <translation>O &amp;aplikaci</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="711"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="704"/>
         <source>Display information about this software</source>
         <translation>Zobrazit informace a tomto software</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="712"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="705"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O aplikaci&lt;/b&gt;&lt;p&gt;Zobrazí se informace o tomto software.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="718"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="711"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="718"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="711"/>
         <source>About &amp;Qt</source>
         <translation>O &amp;Qt</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="721"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="714"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Zobrazit informace o Qt toolkitu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="723"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="716"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O Qt&lt;/b&gt;&lt;p&gt;Zobrazit informace o Qt toolkitu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="730"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="723"/>
         <source>What&apos;s This?</source>
         <translation>Co je to?</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="730"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="723"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Co je to?</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="730"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="723"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="735"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="728"/>
         <source>Context sensitive help</source>
         <translation>Kontextově senzitivní nápověda</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="736"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="729"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit kontextově senzitivní nápovědu&lt;/b&gt;&lt;p&gt;V režimu &quot;Co je to?&quot; se nad různými prvky aplikace u kurzoru zobrazí otazník. Když pak kliknete na tyto prvky, zobrazí se krátký popis co daný prvek znamená a jak jej použít. V dialogových oknech se tato funkce spustí tlačítkem kontextové nápovědy na horní liště.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="753"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="746"/>
         <source>&amp;File</source>
         <translation>S&amp;oubor</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="767"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="760"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="783"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="776"/>
         <source>&amp;View</source>
         <translation>Poh&amp;led</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="792"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="785"/>
         <source>&amp;Tools</source>
         <translation>&amp;Nástroje</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="811"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="804"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="821"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="814"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="834"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="827"/>
         <source>Edit</source>
         <translation>Editovat</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="847"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="840"/>
         <source>View</source>
         <translation>Pohled</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="857"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="850"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="875"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="868"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="889"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="882"/>
         <source>&lt;p&gt;This part of the status bar displays the current zoom factor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje aktuální velikost lupy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="896"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="889"/>
         <source>&lt;p&gt;This part of the status bar displays the icon size.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje velikost ikony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="903"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="896"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje pozici kurzoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="972"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="965"/>
         <source>Open icon file</source>
         <translation>Otevřít soubor s ikonou</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1011"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1004"/>
         <source>Save icon file</source>
         <translation>Uložit ikonu do souboru</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1089"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1082"/>
         <source>Icon saved</source>
         <translation>Ikona uložena</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1104"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1097"/>
         <source>Untitled</source>
         <translation>Beze jména</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1108"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1101"/>
         <source>Icon Editor</source>
         <translation>Editor ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1129"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1122"/>
         <source>The icon image has been modified.
 Do you want to save your changes?</source>
         <translation>Obrázek ikony byl změněn.
 Chcete uložit změny?</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="111"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="109"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation>Multiple-Image Network Graphics soubor (*.mng)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="466"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="460"/>
         <source>Reset the zoom of the icon</source>
         <translation>Resetovat lupu ikony</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="467"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="461"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the icon. This sets the zoom factor to 100%.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reset lupy&lt;/b&gt;&lt;p&gt;Reset lupy pro ikonu. Nastaví se lupa na hodnotu 100%.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="113"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="111"/>
         <source>Paintbrush Bitmap File (*.pcx)</source>
         <translation>Paintbrush Bitmap soubor (*.pcx)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="117"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="115"/>
         <source>Silicon Graphics Image File (*.sgi)</source>
         <translation>Silicon Graphics Image soubor (*.sgi)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="119"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="117"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation>Targa Graphic soubor (*.tga)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1011"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1004"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1129"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1122"/>
         <source>eric5 Icon Editor</source>
         <translation>eric5 editor ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1040"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1033"/>
         <source>The file &apos;{0}&apos; does not exist.</source>
         <translation>Soubor &apos;{0}&apos; neexistuje.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1046"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1039"/>
         <source>Cannot read file &apos;{0}:
 {1}.</source>
         <translation>Nelze číst soubor &apos;{0}:{1}.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1078"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1071"/>
         <source>Cannot write file &apos;{0}:
 {1}.</source>
         <translation>Nelze zapsat do souboru &apos;{0}:
 {1}.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1108"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1101"/>
         <source>{0}[*] - {1}</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1219"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1212"/>
         <source>About eric5 Icon Editor</source>
         <translation>O eric5 editoru ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1219"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1212"/>
         <source>The eric5 Icon Editor is a simple editor component to perform icon drawing tasks.</source>
         <translation>Eric5 editor ikon je jednoduchý editor pro kreslení ikon.</translation>
     </message>
@@ -19475,47 +19508,47 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>Listspace</name>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="172"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="197"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="174"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="199"/>
         <source>Close All</source>
         <translation>Zavřít vše</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="177"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="202"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="179"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="204"/>
         <source>Save As...</source>
         <translation>Uložit jako...</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="181"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="206"/>
         <source>Save All</source>
         <translation>Uložit vše</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="184"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="209"/>
         <source>Save to Project</source>
         <translation>Uložit do projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="187"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="212"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="298"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="323"/>
         <source>Untitled {0}</source>
         <translation>Beze jména {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="401"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="425"/>
         <source>{0} (ro)</source>
         <translation></translation>
     </message>
@@ -19546,137 +19579,137 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>MdiArea</name>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="175"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="210"/>
         <source>&amp;Windows</source>
         <translation>&amp;Windows</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="183"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="218"/>
         <source>&amp;More</source>
         <translation>&amp;Více</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="212"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="253"/>
         <source>Tile</source>
         <translation>Dlaždice</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="212"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="253"/>
         <source>&amp;Tile</source>
         <translation>&amp;Dlaždice</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="214"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="255"/>
         <source>Tile the windows</source>
         <translation>Okna do dlaždic</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="215"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="256"/>
         <source>&lt;b&gt;Tile the windows&lt;/b&gt;&lt;p&gt;Rearrange and resize the windows so that they are tiled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okna do dlaždic&lt;/b&gt;&lt;p&gt;Rozmístit okna do dlaždic.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="222"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="263"/>
         <source>Cascade</source>
         <translation>Kaskáda</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="222"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="263"/>
         <source>&amp;Cascade</source>
         <translation>&amp;Kaskáda</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="224"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="265"/>
         <source>Cascade the windows</source>
         <translation>Okna do kaskády</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="225"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="266"/>
         <source>&lt;b&gt;Cascade the windows&lt;/b&gt;&lt;p&gt;Rearrange and resize the windows so that they are cascaded.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okna do kaskády&lt;/b&gt;&lt;p&gt;Rozmístit okna do kaskády.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="232"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="273"/>
         <source>Next</source>
         <translation>Další</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="232"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="273"/>
         <source>&amp;Next</source>
         <translation>&amp;Další</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="234"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="275"/>
         <source>Activate next window</source>
         <translation>Aktivovat další okno</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="235"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="276"/>
         <source>&lt;b&gt;Next&lt;/b&gt;&lt;p&gt;Activate the next window of the list of open windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Další&lt;/b&gt;&lt;p&gt;Aktivovat další okno ze seznamu otevřených oken.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="242"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="283"/>
         <source>Previous</source>
         <translation>Předchozí</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="242"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="283"/>
         <source>&amp;Previous</source>
         <translation>&amp;Předchozí</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="244"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="285"/>
         <source>Activate previous window</source>
         <translation>Aktivovat předchozí okno</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="245"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="286"/>
         <source>&lt;b&gt;Previous&lt;/b&gt;&lt;p&gt;Activate the previous window of the list of open windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí&lt;/b&gt;&lt;p&gt;Aktivovat předchozí okno ze seznamu otevřených oken.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="252"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="293"/>
         <source>Restore All</source>
         <translation>Obnovit vše</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="252"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="293"/>
         <source>&amp;Restore All</source>
         <translation>&amp;Obnovit vše</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="254"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="295"/>
         <source>Restore all windows</source>
         <translation>Obnovit všechna okna</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="255"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="296"/>
         <source>&lt;b&gt;Restore All&lt;/b&gt;&lt;p&gt;Restores all windows to their original size.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Obnovit vše&lt;/b&gt;&lt;p&gt;Obnoví se všechna okna do jejich původní velikosti.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="262"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="303"/>
         <source>Iconize All</source>
         <translation>Zmenšit vše</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="262"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="303"/>
         <source>&amp;Iconize All</source>
         <translation>Zmenš&amp;it vše</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="264"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="305"/>
         <source>Iconize all windows</source>
         <translation>Zmenšit všechna okna do ikon</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="265"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="306"/>
         <source>&lt;b&gt;Iconize All&lt;/b&gt;&lt;p&gt;Iconizes all windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zmenšit vše&lt;/b&gt;&lt;p&gt;Všechna okna se zmenší do ikon.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="120"/>
+        <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="155"/>
         <source>Untitled {0}</source>
         <translation>Beze jména {0}</translation>
     </message>
@@ -20083,615 +20116,615 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>MiniEditor</name>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="349"/>
+        <location filename="QScintilla/MiniEditor.py" line="344"/>
         <source>New</source>
         <translation>Nový</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="349"/>
+        <location filename="QScintilla/MiniEditor.py" line="344"/>
         <source>&amp;New</source>
         <translation>&amp;Nový</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="349"/>
+        <location filename="QScintilla/MiniEditor.py" line="344"/>
         <source>Ctrl+N</source>
         <comment>File|New</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="354"/>
+        <location filename="QScintilla/MiniEditor.py" line="349"/>
         <source>Open an empty editor window</source>
         <translation>Otevřít prázdné editační okno</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="355"/>
+        <location filename="QScintilla/MiniEditor.py" line="350"/>
         <source>&lt;b&gt;New&lt;/b&gt;&lt;p&gt;An empty editor window will be created.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nový&lt;/b&gt;&lt;p&gt;Bude otevřeno prázdné editační okno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="362"/>
+        <location filename="QScintilla/MiniEditor.py" line="357"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="362"/>
+        <location filename="QScintilla/MiniEditor.py" line="357"/>
         <source>&amp;Open...</source>
         <translation>&amp;Otevřít...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="362"/>
+        <location filename="QScintilla/MiniEditor.py" line="357"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="367"/>
+        <location filename="QScintilla/MiniEditor.py" line="362"/>
         <source>Open a file</source>
         <translation>Otevřít soubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="368"/>
+        <location filename="QScintilla/MiniEditor.py" line="363"/>
         <source>&lt;b&gt;Open a file&lt;/b&gt;&lt;p&gt;You will be asked for the name of a file to be opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít soubor&lt;/b&gt;&lt;p&gt;Budete dotázáni na jméno souboru, který se má otevřít do editačního okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="375"/>
+        <location filename="QScintilla/MiniEditor.py" line="370"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="375"/>
+        <location filename="QScintilla/MiniEditor.py" line="370"/>
         <source>&amp;Save</source>
         <translation>&amp;Uložit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="375"/>
+        <location filename="QScintilla/MiniEditor.py" line="370"/>
         <source>Ctrl+S</source>
         <comment>File|Save</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="380"/>
+        <location filename="QScintilla/MiniEditor.py" line="375"/>
         <source>Save the current file</source>
         <translation>Uložit aktuální soubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="381"/>
+        <location filename="QScintilla/MiniEditor.py" line="376"/>
         <source>&lt;b&gt;Save File&lt;/b&gt;&lt;p&gt;Save the contents of current editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit soubor&lt;/b&gt;&lt;p&gt;Uložit obsah aktuálního editačního okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="388"/>
+        <location filename="QScintilla/MiniEditor.py" line="383"/>
         <source>Save as</source>
         <translation>Uložit jako</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="388"/>
+        <location filename="QScintilla/MiniEditor.py" line="383"/>
         <source>Save &amp;as...</source>
         <translation>Uložit j&amp;ako...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="388"/>
+        <location filename="QScintilla/MiniEditor.py" line="383"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="393"/>
+        <location filename="QScintilla/MiniEditor.py" line="388"/>
         <source>Save the current file to a new one</source>
         <translation>Uložit aktuální soubor do nového</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="394"/>
+        <location filename="QScintilla/MiniEditor.py" line="389"/>
         <source>&lt;b&gt;Save File as&lt;/b&gt;&lt;p&gt;Save the contents of current editor window to a new file. The file can be entered in a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit soubor jako&lt;/b&gt;&lt;p&gt;Uložit obsah aktuálního editačního okna do nového souboru. Název souboru bude zadán v dialogu výběru souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="402"/>
+        <location filename="QScintilla/MiniEditor.py" line="397"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="402"/>
+        <location filename="QScintilla/MiniEditor.py" line="397"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="402"/>
+        <location filename="QScintilla/MiniEditor.py" line="397"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="407"/>
+        <location filename="QScintilla/MiniEditor.py" line="402"/>
         <source>Close the editor window</source>
         <translation>Zavřít editační okno</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="408"/>
+        <location filename="QScintilla/MiniEditor.py" line="403"/>
         <source>&lt;b&gt;Close Window&lt;/b&gt;&lt;p&gt;Close the current window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít okno&lt;/b&gt;&lt;p&gt;Zavřít aktuální okno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="446"/>
+        <location filename="QScintilla/MiniEditor.py" line="441"/>
         <source>Undo</source>
         <translation>Vrátit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="446"/>
+        <location filename="QScintilla/MiniEditor.py" line="441"/>
         <source>&amp;Undo</source>
         <translation>&amp;Vrátit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="446"/>
+        <location filename="QScintilla/MiniEditor.py" line="441"/>
         <source>Ctrl+Z</source>
         <comment>Edit|Undo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="446"/>
+        <location filename="QScintilla/MiniEditor.py" line="441"/>
         <source>Alt+Backspace</source>
         <comment>Edit|Undo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="452"/>
+        <location filename="QScintilla/MiniEditor.py" line="447"/>
         <source>Undo the last change</source>
         <translation>Vrátit poslední změnu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="453"/>
+        <location filename="QScintilla/MiniEditor.py" line="448"/>
         <source>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Undo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Vrátit poslední změnu v aktuálním editačním okně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="460"/>
+        <location filename="QScintilla/MiniEditor.py" line="455"/>
         <source>Redo</source>
         <translation>Znovu použít</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="460"/>
+        <location filename="QScintilla/MiniEditor.py" line="455"/>
         <source>&amp;Redo</source>
         <translation>&amp;Znovu použít</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="460"/>
+        <location filename="QScintilla/MiniEditor.py" line="455"/>
         <source>Ctrl+Shift+Z</source>
         <comment>Edit|Redo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="465"/>
+        <location filename="QScintilla/MiniEditor.py" line="460"/>
         <source>Redo the last change</source>
         <translation>Znovu použít poslední změnu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="466"/>
+        <location filename="QScintilla/MiniEditor.py" line="461"/>
         <source>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Redo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Znovu použít poslení změnu, která byla provedena v aktuálním editačním okně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="473"/>
+        <location filename="QScintilla/MiniEditor.py" line="468"/>
         <source>Cut</source>
         <translation>Vyjmout</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="473"/>
+        <location filename="QScintilla/MiniEditor.py" line="468"/>
         <source>Cu&amp;t</source>
         <translation>Vyjmou&amp;t</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="473"/>
+        <location filename="QScintilla/MiniEditor.py" line="468"/>
         <source>Ctrl+X</source>
         <comment>Edit|Cut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="473"/>
+        <location filename="QScintilla/MiniEditor.py" line="468"/>
         <source>Shift+Del</source>
         <comment>Edit|Cut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="479"/>
+        <location filename="QScintilla/MiniEditor.py" line="474"/>
         <source>Cut the selection</source>
         <translation>Vyjmout výběr</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="480"/>
+        <location filename="QScintilla/MiniEditor.py" line="475"/>
         <source>&lt;b&gt;Cut&lt;/b&gt;&lt;p&gt;Cut the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyjmout&lt;/b&gt;&lt;p&gt;Vyjme vybraný text z aktuálního editačního okna a vloží jej do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="487"/>
+        <location filename="QScintilla/MiniEditor.py" line="482"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="487"/>
+        <location filename="QScintilla/MiniEditor.py" line="482"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopírovat</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="487"/>
+        <location filename="QScintilla/MiniEditor.py" line="482"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="487"/>
+        <location filename="QScintilla/MiniEditor.py" line="482"/>
         <source>Ctrl+Ins</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="493"/>
+        <location filename="QScintilla/MiniEditor.py" line="488"/>
         <source>Copy the selection</source>
         <translation>Kopírovat výběr</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="494"/>
+        <location filename="QScintilla/MiniEditor.py" line="489"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopírovat&lt;/b&gt;&lt;p&gt;Zkopíruje vybraný text v aktuálním editačním okně a uloží jej do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="501"/>
+        <location filename="QScintilla/MiniEditor.py" line="496"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="501"/>
+        <location filename="QScintilla/MiniEditor.py" line="496"/>
         <source>&amp;Paste</source>
         <translation>V&amp;ložit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="501"/>
+        <location filename="QScintilla/MiniEditor.py" line="496"/>
         <source>Ctrl+V</source>
         <comment>Edit|Paste</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="501"/>
+        <location filename="QScintilla/MiniEditor.py" line="496"/>
         <source>Shift+Ins</source>
         <comment>Edit|Paste</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="507"/>
+        <location filename="QScintilla/MiniEditor.py" line="502"/>
         <source>Paste the last cut/copied text</source>
         <translation>Vložit text ze schránky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="508"/>
+        <location filename="QScintilla/MiniEditor.py" line="503"/>
         <source>&lt;b&gt;Paste&lt;/b&gt;&lt;p&gt;Paste the last cut/copied text from the clipboard to the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vložit&lt;/b&gt;&lt;p&gt;Vloží text, který byl uložen do schránky při předchozím kroku Vyjmout nebo Kopírovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="516"/>
+        <location filename="QScintilla/MiniEditor.py" line="511"/>
         <source>Clear</source>
         <translation>Vyčistit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="516"/>
+        <location filename="QScintilla/MiniEditor.py" line="511"/>
         <source>Cl&amp;ear</source>
         <translation>Vyči&amp;stit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="516"/>
+        <location filename="QScintilla/MiniEditor.py" line="511"/>
         <source>Alt+Shift+C</source>
         <comment>Edit|Clear</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="522"/>
+        <location filename="QScintilla/MiniEditor.py" line="517"/>
         <source>Clear all text</source>
         <translation>Vyčistit všechen text</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="523"/>
+        <location filename="QScintilla/MiniEditor.py" line="518"/>
         <source>&lt;b&gt;Clear&lt;/b&gt;&lt;p&gt;Delete all text of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit&lt;/b&gt;&lt;p&gt;Smazat všechnen text v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1315"/>
+        <location filename="QScintilla/MiniEditor.py" line="1308"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1315"/>
+        <location filename="QScintilla/MiniEditor.py" line="1308"/>
         <source>&amp;About</source>
         <translation>O &amp;aplikaci</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1318"/>
+        <location filename="QScintilla/MiniEditor.py" line="1311"/>
         <source>Display information about this software</source>
         <translation>Zobrazit informace a tomto software</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1319"/>
+        <location filename="QScintilla/MiniEditor.py" line="1312"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O aplikaci&lt;/b&gt;&lt;p&gt;Zobrazí se informace o tomto software.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1325"/>
+        <location filename="QScintilla/MiniEditor.py" line="1318"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1325"/>
+        <location filename="QScintilla/MiniEditor.py" line="1318"/>
         <source>About &amp;Qt</source>
         <translation>O &amp;Qt</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1327"/>
+        <location filename="QScintilla/MiniEditor.py" line="1320"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Zobrazit informace o Qt toolkitu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1329"/>
+        <location filename="QScintilla/MiniEditor.py" line="1322"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O Qt&lt;/b&gt;&lt;p&gt;Zobrazit informace o Qt toolkitu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1357"/>
+        <location filename="QScintilla/MiniEditor.py" line="1350"/>
         <source>&amp;File</source>
         <translation>S&amp;oubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1368"/>
+        <location filename="QScintilla/MiniEditor.py" line="1361"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1385"/>
+        <location filename="QScintilla/MiniEditor.py" line="1378"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1446"/>
+        <location filename="QScintilla/MiniEditor.py" line="1439"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje číslo řádku v editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1453"/>
+        <location filename="QScintilla/MiniEditor.py" line="1446"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje pozici kurzoru v editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1458"/>
+        <location filename="QScintilla/MiniEditor.py" line="1451"/>
         <source>Ready</source>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1485"/>
+        <location filename="QScintilla/MiniEditor.py" line="1478"/>
         <source>The document has been modified.
 Do you want to save your changes?</source>
         <translation>Dokument byl změněn.Chcete vaše změny uložit?</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1532"/>
+        <location filename="QScintilla/MiniEditor.py" line="1525"/>
         <source>File loaded</source>
         <translation>Soubor načten</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1840"/>
+        <location filename="QScintilla/MiniEditor.py" line="1833"/>
         <source>Untitled</source>
         <translation>Beze jména</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1579"/>
+        <location filename="QScintilla/MiniEditor.py" line="1572"/>
         <source>Mini Editor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1880"/>
+        <location filename="QScintilla/MiniEditor.py" line="1873"/>
         <source>Select all</source>
         <translation>Vybrat vše</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1881"/>
+        <location filename="QScintilla/MiniEditor.py" line="1874"/>
         <source>Deselect all</source>
         <translation>Zrušit celý výběr</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1892"/>
+        <location filename="QScintilla/MiniEditor.py" line="1885"/>
         <source>Languages</source>
         <translation>Jazyky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1895"/>
+        <location filename="QScintilla/MiniEditor.py" line="1888"/>
         <source>No Language</source>
         <translation>Žádný jazyk</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1513"/>
+        <location filename="QScintilla/MiniEditor.py" line="1506"/>
         <source>Open File</source>
         <translation>Otevřít soubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1560"/>
+        <location filename="QScintilla/MiniEditor.py" line="1553"/>
         <source>File saved</source>
         <translation>Soubor uložen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1439"/>
+        <location filename="QScintilla/MiniEditor.py" line="1432"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část statusbaru zobrazuje indikátor práva zápisu editoru do souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1336"/>
+        <location filename="QScintilla/MiniEditor.py" line="1329"/>
         <source>What&apos;s This?</source>
         <translation>Co je to?</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1336"/>
+        <location filename="QScintilla/MiniEditor.py" line="1329"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Co je to?</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1336"/>
+        <location filename="QScintilla/MiniEditor.py" line="1329"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1341"/>
+        <location filename="QScintilla/MiniEditor.py" line="1334"/>
         <source>Context sensitive help</source>
         <translation>Kontextově senzitivní nápověda</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1342"/>
+        <location filename="QScintilla/MiniEditor.py" line="1335"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit kontextově senzitivní nápovědu&lt;/b&gt;&lt;p&gt;V režimu &quot;Co je to?&quot; se nad různými prvky aplikace u kurzoru zobrazí otazník. Když pak kliknete na tyto prvky, zobrazí se krátký popis co daný prvek znamená a jak jej použít. V dialogových oknech se tato funkce spustí tlačítkem kontextové nápovědy na horní liště.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1397"/>
+        <location filename="QScintilla/MiniEditor.py" line="1390"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1409"/>
+        <location filename="QScintilla/MiniEditor.py" line="1402"/>
         <source>Edit</source>
         <translation>Editovat</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1419"/>
+        <location filename="QScintilla/MiniEditor.py" line="1412"/>
         <source>Find</source>
         <translation>Hledat</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1426"/>
+        <location filename="QScintilla/MiniEditor.py" line="1419"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="415"/>
+        <location filename="QScintilla/MiniEditor.py" line="410"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="415"/>
+        <location filename="QScintilla/MiniEditor.py" line="410"/>
         <source>&amp;Print</source>
         <translation>&amp;Tisk</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="415"/>
+        <location filename="QScintilla/MiniEditor.py" line="410"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="420"/>
+        <location filename="QScintilla/MiniEditor.py" line="415"/>
         <source>Print the current file</source>
         <translation>Tisk aktuálního souboru</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1806"/>
+        <location filename="QScintilla/MiniEditor.py" line="1799"/>
         <source>Printing...</source>
         <translation>Tisk...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1822"/>
+        <location filename="QScintilla/MiniEditor.py" line="1815"/>
         <source>Printing completed</source>
         <translation>Tisk je hotov</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1824"/>
+        <location filename="QScintilla/MiniEditor.py" line="1817"/>
         <source>Error while printing</source>
         <translation>Chyba během tisku</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1827"/>
+        <location filename="QScintilla/MiniEditor.py" line="1820"/>
         <source>Printing aborted</source>
         <translation>Tisk byl zrušen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="421"/>
+        <location filename="QScintilla/MiniEditor.py" line="416"/>
         <source>&lt;b&gt;Print File&lt;/b&gt;&lt;p&gt;Print the contents of the current file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tisk souboru&lt;/b&gt;&lt;p&gt;Tisk obsahu aktuálního souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="429"/>
+        <location filename="QScintilla/MiniEditor.py" line="424"/>
         <source>Print Preview</source>
         <translation>Náhled tisku</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="433"/>
+        <location filename="QScintilla/MiniEditor.py" line="428"/>
         <source>Print preview of the current file</source>
         <translation>Náhled tisku aktuálního souboru</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="435"/>
+        <location filename="QScintilla/MiniEditor.py" line="430"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the current file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Náhkled tisku&lt;/b&gt;&lt;p&gt;Náhkled tisku aktuálního souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1914"/>
+        <location filename="QScintilla/MiniEditor.py" line="1907"/>
         <source>Guessed</source>
         <translation>Odhadem</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1934"/>
+        <location filename="QScintilla/MiniEditor.py" line="1927"/>
         <source>Alternatives</source>
         <translation>Alternativy</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1948"/>
+        <location filename="QScintilla/MiniEditor.py" line="1941"/>
         <source>Pygments Lexer</source>
         <translation>Pygments Lexer</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1948"/>
+        <location filename="QScintilla/MiniEditor.py" line="1941"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Použít Pygments lexer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="237"/>
+        <location filename="QScintilla/MiniEditor.py" line="232"/>
         <source>About eric5 Mini Editor</source>
         <translation>O eric5 Mini Editoru</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="237"/>
+        <location filename="QScintilla/MiniEditor.py" line="232"/>
         <source>The eric5 Mini Editor is an editor component based on QScintilla. It may be used for simple editing tasks, that don&apos;t need the power of a full blown editor.</source>
         <translation>Eric5 Mini editor je odvozen od modulu QScintilla. Lze jej použít pro jednoduché úpravy, kde není nutné mít k dispozici všechny vlastnosti plného editoru.</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="296"/>
+        <location filename="QScintilla/MiniEditor.py" line="291"/>
         <source>Line: {0:5}</source>
         <translation>Řádek: {0:5}</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="300"/>
+        <location filename="QScintilla/MiniEditor.py" line="295"/>
         <source>Pos: {0:5}</source>
         <translation>Poz: {0:5}</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1485"/>
+        <location filename="QScintilla/MiniEditor.py" line="1478"/>
         <source>eric5 Mini Editor</source>
         <translation>eric5 Mini Editor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1513"/>
+        <location filename="QScintilla/MiniEditor.py" line="1506"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze otevřít.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1546"/>
+        <location filename="QScintilla/MiniEditor.py" line="1539"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1546"/>
+        <location filename="QScintilla/MiniEditor.py" line="1539"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1579"/>
+        <location filename="QScintilla/MiniEditor.py" line="1572"/>
         <source>{0}[*] - {1}</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1931"/>
+        <location filename="QScintilla/MiniEditor.py" line="1924"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativy ({0})</translation>
     </message>
@@ -20699,237 +20732,237 @@ Do you want to save your changes?</source>
 <context>
     <name>MultiProject</name>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="590"/>
+        <location filename="MultiProject/MultiProject.py" line="602"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="678"/>
+        <location filename="MultiProject/MultiProject.py" line="690"/>
         <source>&amp;New...</source>
         <translation>&amp;Nový...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="691"/>
+        <location filename="MultiProject/MultiProject.py" line="703"/>
         <source>&amp;Open...</source>
         <translation>&amp;Otevřít...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="703"/>
+        <location filename="MultiProject/MultiProject.py" line="715"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="714"/>
+        <location filename="MultiProject/MultiProject.py" line="726"/>
         <source>&amp;Save</source>
         <translation>&amp;Uložit</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="725"/>
+        <location filename="MultiProject/MultiProject.py" line="737"/>
         <source>Save &amp;as...</source>
         <translation>Uložit j&amp;ako...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="737"/>
+        <location filename="MultiProject/MultiProject.py" line="749"/>
         <source>Add &amp;project...</source>
         <translation>Přidat &amp;projekt...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="751"/>
+        <location filename="MultiProject/MultiProject.py" line="763"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Natavení...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="774"/>
+        <location filename="MultiProject/MultiProject.py" line="786"/>
         <source>&amp;Multiproject</source>
         <translation>&amp;Multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="775"/>
+        <location filename="MultiProject/MultiProject.py" line="787"/>
         <source>Open &amp;Recent Multiprojects</source>
         <translation>Otevřít poslední multip&amp;rojekty</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="815"/>
+        <location filename="MultiProject/MultiProject.py" line="826"/>
         <source>Multiproject</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="873"/>
+        <location filename="MultiProject/MultiProject.py" line="884"/>
         <source>&amp;Clear</source>
         <translation>&amp;Vyčistit</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="299"/>
+        <location filename="MultiProject/MultiProject.py" line="311"/>
         <source>Read multiproject file</source>
         <translation>Načíst soubor multiprojektu</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="350"/>
+        <location filename="MultiProject/MultiProject.py" line="362"/>
         <source>Compressed multiproject files not supported. The compression library is missing.</source>
         <translation>Komprimované multiprojektové soubory nejsou podporovány. Kompresní knihovna chybí.</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="368"/>
+        <location filename="MultiProject/MultiProject.py" line="380"/>
         <source>Save multiproject file</source>
         <translation>Uložit soubor multiprojektu</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="691"/>
+        <location filename="MultiProject/MultiProject.py" line="703"/>
         <source>Open multiproject</source>
         <translation>Otevřít multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="517"/>
+        <location filename="MultiProject/MultiProject.py" line="529"/>
         <source>Multiproject Files (*.e4m *.e4mz)</source>
         <translation>Soubory multiprojektu (*.e4m *.e4mz)</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="571"/>
+        <location filename="MultiProject/MultiProject.py" line="583"/>
         <source>Compressed Multiproject Files (*.e4mz)</source>
         <translation>Komprimované soubory multiprojektu (*.e4mz)</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="573"/>
+        <location filename="MultiProject/MultiProject.py" line="585"/>
         <source>Multiproject Files (*.e4m)</source>
         <translation>Soubory multiprojektu (*.e4m)</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="725"/>
+        <location filename="MultiProject/MultiProject.py" line="737"/>
         <source>Save multiproject as</source>
         <translation>Uložit multiprojekt jako</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="574"/>
+        <location filename="MultiProject/MultiProject.py" line="586"/>
         <source>Multiproject Files (*.e4m);;Compressed Multiproject Files (*.e4mz)</source>
         <translation>Soubory multiprojektu (*.e4m);;Komprimované soubory multiprojektu (*.e4mz)</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="617"/>
+        <location filename="MultiProject/MultiProject.py" line="629"/>
         <source>Close Multiproject</source>
         <translation>Zavřít multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="617"/>
+        <location filename="MultiProject/MultiProject.py" line="629"/>
         <source>The current multiproject has unsaved changes.</source>
         <translation>Aktuální multiprojekt obsahuje neuložené změny.</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="678"/>
+        <location filename="MultiProject/MultiProject.py" line="690"/>
         <source>New multiproject</source>
         <translation>Nový multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="682"/>
+        <location filename="MultiProject/MultiProject.py" line="694"/>
         <source>Generate a new multiproject</source>
         <translation>Vygenerovat nový multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="683"/>
+        <location filename="MultiProject/MultiProject.py" line="695"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nový...&lt;/b&gt;&lt;p&gt;Otevře se dialogové okno pro zadání informací o novém multiprojektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="695"/>
+        <location filename="MultiProject/MultiProject.py" line="707"/>
         <source>Open an existing multiproject</source>
         <translation>Otevřít existující multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="696"/>
+        <location filename="MultiProject/MultiProject.py" line="708"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít....&lt;/b&gt;&lt;p&gt;Otevře existující multiprojekt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="703"/>
+        <location filename="MultiProject/MultiProject.py" line="715"/>
         <source>Close multiproject</source>
         <translation>Zavřít multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="706"/>
+        <location filename="MultiProject/MultiProject.py" line="718"/>
         <source>Close the current multiproject</source>
         <translation>Uzavře aktuální multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="707"/>
+        <location filename="MultiProject/MultiProject.py" line="719"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít&lt;/b&gt;&lt;p&gt;Aktuální multiprojekt se uzavře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="714"/>
+        <location filename="MultiProject/MultiProject.py" line="726"/>
         <source>Save multiproject</source>
         <translation>Uložit multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="717"/>
+        <location filename="MultiProject/MultiProject.py" line="729"/>
         <source>Save the current multiproject</source>
         <translation>Uložit aktuální multiprojekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="718"/>
+        <location filename="MultiProject/MultiProject.py" line="730"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit&lt;/b&gt;&lt;p&gt;Aktuální multiprojekt se uloží.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="728"/>
+        <location filename="MultiProject/MultiProject.py" line="740"/>
         <source>Save the current multiproject to a new file</source>
         <translation>Uloží aktuální multiprojekt do nového souboru</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="730"/>
+        <location filename="MultiProject/MultiProject.py" line="742"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current multiproject to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit jako&lt;/b&gt;&lt;p&gt;Uloží aktuální mulktiprojekt do nového souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="737"/>
+        <location filename="MultiProject/MultiProject.py" line="749"/>
         <source>Add project to multiproject</source>
         <translation>Přidat projekt do multiprojektu</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="741"/>
+        <location filename="MultiProject/MultiProject.py" line="753"/>
         <source>Add a project to the current multiproject</source>
         <translation>Projekt se přidá do aktuálního multiprojektu</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="743"/>
+        <location filename="MultiProject/MultiProject.py" line="755"/>
         <source>&lt;b&gt;Add project...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a project to the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat projekt...&lt;/b&gt;&lt;p&gt;Otevře dialog pro přidání projektu do aktuálního multiprojektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="751"/>
+        <location filename="MultiProject/MultiProject.py" line="763"/>
         <source>Multiproject properties</source>
         <translation>Nastavení multiprojektu</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="754"/>
+        <location filename="MultiProject/MultiProject.py" line="766"/>
         <source>Show the multiproject properties</source>
         <translation>Zobrazit nastavení projektu</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="755"/>
+        <location filename="MultiProject/MultiProject.py" line="767"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the multiproject properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nastavení...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací nastavení multiprojektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="292"/>
+        <location filename="MultiProject/MultiProject.py" line="304"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor multiprojektu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="225"/>
+        <location filename="MultiProject/MultiProject.py" line="237"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor multiprojektu &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="299"/>
+        <location filename="MultiProject/MultiProject.py" line="311"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor multiprojektu &lt;b&gt;{0}&lt;/b&gt; má neplatný obsah.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="368"/>
+        <location filename="MultiProject/MultiProject.py" line="380"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru multiprojektu &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="590"/>
+        <location filename="MultiProject/MultiProject.py" line="602"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
@@ -20937,22 +20970,22 @@ Do you want to save your changes?</source>
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="235"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="228"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="236"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="229"/>
         <source>Remove</source>
         <translation>Odebrat</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="237"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="230"/>
         <source>Properties</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="242"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="235"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
@@ -21013,47 +21046,47 @@ Do you want to save your changes?</source>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="208"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="204"/>
         <source>SSL Errors</source>
         <translation>SSL chyby</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="224"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="220"/>
         <source>Certificates</source>
         <translation>Certifikáty</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="162"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="158"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Zadejte uživatelské jméno a heslo pro &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="165"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="161"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Zadejte uživatelské jméno a heslo pro {0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="208"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="204"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;SSL chyby pro &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Chcete tyto chyby ignorovat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="224"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="220"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Certifikáty:&lt;br/&gt;{0}&lt;br/&gt;Chcete akceptovat všechny certifikáty?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="263"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="259"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Vydatavel: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="266"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="262"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Neplatný před: {0}&lt;br/&gt;Platný do: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="273"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="269"/>
         <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>&lt;br/&gt;Alternativní jména:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
@@ -21549,22 +21582,22 @@ Do you want to save your changes?</source>
         <translation>&amp;Obnovit výchozí</translation>
     </message>
     <message>
-        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="61"/>
+        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="60"/>
         <source>Add search engine</source>
         <translation>Přidat vyhledávač</translation>
     </message>
     <message>
-        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="52"/>
+        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="51"/>
         <source>OpenSearch (*.xml);;All Files (*)</source>
         <translation>OpenSearch (*.xml);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="72"/>
+        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="71"/>
         <source>Delete selected engines</source>
         <translation>Smazat vybrané enginy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="72"/>
+        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="71"/>
         <source>You must have at least one search engine.</source>
         <translation>Musíte mít alespoň jeden vyhledávací engine.</translation>
     </message>
@@ -21579,7 +21612,7 @@ Do you want to save your changes?</source>
         <translation>Editovat...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="61"/>
+        <location filename="Helpviewer/OpenSearch/OpenSearchDialog.py" line="60"/>
         <source>{0} is not a valid OpenSearch 1.1 description or is already on your list.</source>
         <translation>{0} není platný popis OpenSearch 1.1 nebo se již v seznamu nachází.</translation>
     </message>
@@ -21673,7 +21706,7 @@ Do you want to save your changes?</source>
 <context>
     <name>OpenSearchManager</name>
     <message>
-        <location filename="Helpviewer/OpenSearch/OpenSearchManager.py" line="384"/>
+        <location filename="Helpviewer/OpenSearch/OpenSearchManager.py" line="387"/>
         <source>&lt;p&gt;Do you want to add the following engine to your list of search engines?&lt;br/&gt;&lt;br/&gt;Name: {0}&lt;br/&gt;Searches on: {1}&lt;/p&gt;</source>
         <translation>Chcete přidat následující enginy do vašeho seznamu vyhledávacích enginů?&lt;br/&gt;&lt;br/&gt;Jméno: {0}&lt;br/&gt;Hledá v: {1}</translation>
     </message>
@@ -21712,42 +21745,42 @@ Do you want to save your changes?</source>
 <context>
     <name>PasswordManager</name>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="188"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="190"/>
         <source>Saving login data</source>
         <translation>Uložit login data</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="228"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="230"/>
         <source>Loading login data</source>
         <translation>Nahrávání login dat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="374"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="376"/>
         <source>&lt;b&gt;Would you like to save this password?&lt;/b&gt;&lt;br/&gt;To review passwords you have saved and remove them, use the password management dialog of the Settings menu.</source>
         <translation>&lt;b&gt;Chcete uložit toto heslo?&lt;/b&gt;&lt;br/&gt;Pro kontrolu uložených a odebraných hesel použijte dialog správce hesel v menu nastavení.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="379"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="381"/>
         <source>Never for this site</source>
         <translation>Nikdy pro tento web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="381"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="383"/>
         <source>Not now</source>
         <translation>Teď ne</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="188"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="190"/>
         <source>&lt;p&gt;Login data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Login data nelze uložit do &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="205"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="207"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Login data nelze z &lt;b&gt;{0}&lt;/b&gt; nahrát&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="228"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="230"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: Wrong input format&lt;/p&gt;</source>
         <translation>&lt;p&gt;Login data nelze z &lt;b&gt;{0}&lt;/b&gt; nahrát&lt;/p&gt;&lt;p&gt;Důvod: Chybný vstupní formát&lt;/p&gt;</translation>
     </message>
@@ -21773,7 +21806,7 @@ Do you want to save your changes?</source>
 <context>
     <name>PasswordsDialog</name>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordsDialog.py" line="86"/>
+        <location filename="Helpviewer/Passwords/PasswordsDialog.py" line="85"/>
         <source>Saved Passwords</source>
         <translation>Uložená hesla</translation>
     </message>
@@ -21823,7 +21856,7 @@ Do you want to save your changes?</source>
         <translation>Skrýt hesla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordsDialog.py" line="86"/>
+        <location filename="Helpviewer/Passwords/PasswordsDialog.py" line="85"/>
         <source>Do you really want to show passwords?</source>
         <translation>Opravdu chcete zobrazit hesla?</translation>
     </message>
@@ -22223,42 +22256,42 @@ Destination:
 <context>
     <name>PluginManager</name>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="469"/>
+        <location filename="PluginManager/PluginManager.py" line="476"/>
         <source>Incompatible plugin activation method.</source>
         <translation>Nekompatibilní metoda aktivace pluginu.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="295"/>
+        <location filename="PluginManager/PluginManager.py" line="302"/>
         <source>Module is missing the &apos;autoactivate&apos; attribute.</source>
         <translation>Modulu chybí atribut &apos;autoaktivace&apos;.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="304"/>
+        <location filename="PluginManager/PluginManager.py" line="311"/>
         <source>Module is missing the &apos;pluginType&apos; and/or &apos;pluginTypename&apos; attributes.</source>
         <translation>Modulu chybí atributy &apos;pluginType&apos; a/nebo &apos;pluginTypename&apos;.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="942"/>
+        <location filename="PluginManager/PluginManager.py" line="949"/>
         <source>Plugin Manager Error</source>
         <translation>Chyba plugin manažeru</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="147"/>
+        <location filename="PluginManager/PluginManager.py" line="154"/>
         <source>Could not create a package for {0}.</source>
         <translation>Nelze vytvořit balíček pro {0}.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="181"/>
+        <location filename="PluginManager/PluginManager.py" line="188"/>
         <source>The internal plugin directory &lt;b&gt;{0}&lt;/b&gt; does not exits.</source>
         <translation>Interní adresář zásuvných modulů &lt;b&gt;{0}&lt;/b&gt; neexistuje.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="320"/>
+        <location filename="PluginManager/PluginManager.py" line="327"/>
         <source>Module failed to load. Error: {0}</source>
         <translation>Modul se nepodařilo načíst. Chyba: {0}</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginManager.py" line="942"/>
+        <location filename="PluginManager/PluginManager.py" line="949"/>
         <source>&lt;p&gt;The plugin download directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Please configure it via the configuration dialog.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Download plugin adresář &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit. Prosím, upravte nastavení přes konfigurační dialog.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -22372,89 +22405,89 @@ Destination:
 <context>
     <name>PluginRepositoryWidget</name>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="57"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="59"/>
         <source>Update</source>
         <translation>Obnovit</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="59"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="61"/>
         <source>Download</source>
         <translation>Download</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="62"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="64"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="64"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="66"/>
         <source>Close &amp;&amp; Install</source>
         <translation>Zavřít &amp;&amp; Instalovat</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="232"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="231"/>
         <source>Download Plugin Files</source>
         <translation>Download plugin soubory</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="232"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="231"/>
         <source>The requested plugins were downloaded.</source>
         <translation>Požadované pluginy byly staženy.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="313"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="312"/>
         <source>Read plugins repository file</source>
         <translation>Číst soubor repozitáře pluginů</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="320"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="319"/>
         <source>No plugin repository file available.
 Select Update.</source>
         <translation>Soubor repozitáře pluginů není k dispozici.
 Vyberte Obnovit.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="368"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="366"/>
         <source>Error downloading file</source>
         <translation>Chyba při stahování souboru</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="436"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="434"/>
         <source>Stable</source>
         <translation>Stabilní</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="442"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="440"/>
         <source>Unstable</source>
         <translation>Nestabilní</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="448"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="446"/>
         <source>Unknown</source>
         <translation>Neznámý</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="502"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="500"/>
         <source>SSL Errors</source>
         <translation>SSL chyby</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="297"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="296"/>
         <source>&lt;p&gt;The plugins repository file &lt;b&gt;{0}&lt;/b&gt; could not be read. Select Update&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor repozitáře pluginů &lt;b&gt;{0}&lt;/b&gt; nelze přečíst. Vyberte Obnovit&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="313"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="312"/>
         <source>&lt;p&gt;The plugins repository file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor repozitáře pluginů &lt;b&gt;{0}&lt;/b&gt; má nepodporovaný formát.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="368"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="366"/>
         <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze stáhnout požadovaný soubor z {0}.&lt;/p&gt;&lt;p&gt;Chyba: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="502"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="500"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;SSL chyby:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Chcete tyto chyby ignorovat?&lt;/p&gt;</translation>
     </message>
@@ -22462,17 +22495,17 @@ Vyberte Obnovit.</translation>
 <context>
     <name>PluginRepositoryWindow</name>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="598"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="596"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="598"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="596"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="598"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="596"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit zveřejnění.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -22546,12 +22579,12 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="871"/>
+        <location filename="Preferences/__init__.py" line="875"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="890"/>
+        <location filename="Preferences/__init__.py" line="894"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
@@ -22796,247 +22829,247 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Project</name>
     <message>
-        <location filename="Project/Project.py" line="176"/>
+        <location filename="Project/Project.py" line="200"/>
         <source>Ruby Files (*.rb);;</source>
         <translation>Ruby soubory (*.rb);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="208"/>
+        <location filename="Project/Project.py" line="232"/>
         <source>Qt4 GUI</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="209"/>
+        <location filename="Project/Project.py" line="233"/>
         <source>Qt4 Console</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="211"/>
+        <location filename="Project/Project.py" line="235"/>
         <source>Console</source>
         <translation>Konzole</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="212"/>
+        <location filename="Project/Project.py" line="236"/>
         <source>Other</source>
         <translation>Ostatní</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="704"/>
+        <location filename="Project/Project.py" line="728"/>
         <source>Read project file</source>
         <translation>Načíst soubor projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="768"/>
+        <location filename="Project/Project.py" line="792"/>
         <source>Compressed project files not supported. The compression library is missing.</source>
         <translation>Komprimované soubory nejsou podporovány. Kompresní knihovna chybí.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="786"/>
+        <location filename="Project/Project.py" line="810"/>
         <source>Save project file</source>
         <translation>Uložit soubor projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="827"/>
+        <location filename="Project/Project.py" line="851"/>
         <source>Read user project properties</source>
         <translation>Načíst uživatelská nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="855"/>
+        <location filename="Project/Project.py" line="879"/>
         <source>Save user project properties</source>
         <translation>Uložit uživatelská nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1126"/>
+        <location filename="Project/Project.py" line="1150"/>
         <source>Read project session</source>
         <translation>Načíst relaci projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1407"/>
+        <location filename="Project/Project.py" line="1431"/>
         <source>Please save the project first.</source>
         <translation>Prosím, nejdříve uložte projekt.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1250"/>
+        <location filename="Project/Project.py" line="1274"/>
         <source>Compressed project session files not supported. The compression library is missing.</source>
         <translation>Soubor s komprimovanou relací projektu není podporován. Kompresní knihovna chybí.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1050"/>
+        <location filename="Project/Project.py" line="1074"/>
         <source>Save project session</source>
         <translation>Uložit relaci projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1074"/>
+        <location filename="Project/Project.py" line="1098"/>
         <source>Delete project session</source>
         <translation>Smazat relaci projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1178"/>
+        <location filename="Project/Project.py" line="1202"/>
         <source>Read tasks</source>
         <translation>Načíst úlohy</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1203"/>
+        <location filename="Project/Project.py" line="1227"/>
         <source>Compressed tasks files not supported. The compression library is missing.</source>
         <translation>Soubor s komprimovanými úlohami není podporován. Kompresní knihovna chybí.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1222"/>
+        <location filename="Project/Project.py" line="1246"/>
         <source>Save tasks</source>
         <translation>Uložit úlohy</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1338"/>
+        <location filename="Project/Project.py" line="1362"/>
         <source>Read debugger properties</source>
         <translation>Načíst nastavení debuggeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1395"/>
+        <location filename="Project/Project.py" line="1419"/>
         <source>Save debugger properties</source>
         <translation>Uložit nastavení debuggeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1373"/>
+        <location filename="Project/Project.py" line="1397"/>
         <source>Compressed project debugger properties files not supported. The compression library is missing.</source>
         <translation>Soubor s komprimovanými nastaveními debuggeru není podporován. Kompresní knihovna chybí.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1420"/>
+        <location filename="Project/Project.py" line="1444"/>
         <source>Delete debugger properties</source>
         <translation>Smazat nastavení debuggeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1504"/>
+        <location filename="Project/Project.py" line="1528"/>
         <source>Add Language</source>
         <translation>Přidat jazyk</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1613"/>
+        <location filename="Project/Project.py" line="1637"/>
         <source>Delete translation</source>
         <translation>Smazat překlad</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1757"/>
+        <location filename="Project/Project.py" line="1781"/>
         <source>Add file</source>
         <translation>Přidat soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1868"/>
+        <location filename="Project/Project.py" line="1892"/>
         <source>The target directory must not be empty.</source>
         <translation>Cílový adresář nesmí být prázdný.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1880"/>
+        <location filename="Project/Project.py" line="1904"/>
         <source>Add directory</source>
         <translation>Přidat adresář</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1880"/>
+        <location filename="Project/Project.py" line="1904"/>
         <source>The source directory must not be empty.</source>
         <translation>Cílový adresář nesmí být prázdný.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2002"/>
+        <location filename="Project/Project.py" line="2026"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2028"/>
+        <location filename="Project/Project.py" line="2052"/>
         <source>Rename File</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2198"/>
+        <location filename="Project/Project.py" line="2222"/>
         <source>Delete file</source>
         <translation>Smazat soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2221"/>
+        <location filename="Project/Project.py" line="2245"/>
         <source>Delete directory</source>
         <translation>Smazat adresář</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2300"/>
+        <location filename="Project/Project.py" line="2324"/>
         <source>Create project directory</source>
         <translation>Vytvořit adresář projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2759"/>
+        <location filename="Project/Project.py" line="2775"/>
         <source>New Project</source>
         <translation>Nový projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2344"/>
+        <location filename="Project/Project.py" line="2368"/>
         <source>Add existing files to the project?</source>
         <translation>Přidat existující soubory do projektu?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2459"/>
+        <location filename="Project/Project.py" line="2483"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation>Chcete editovat parametry VCS příkazu?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3343"/>
+        <location filename="Project/Project.py" line="3358"/>
         <source>New project</source>
         <translation>Nový projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2409"/>
+        <location filename="Project/Project.py" line="2433"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>Má být projekt přidán do repozitáře?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2433"/>
+        <location filename="Project/Project.py" line="2457"/>
         <source>Select version control system for the project</source>
         <translation>Výběr verzovacího systému projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3356"/>
+        <location filename="Project/Project.py" line="3371"/>
         <source>Open project</source>
         <translation>Otevřít projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2877"/>
+        <location filename="Project/Project.py" line="2891"/>
         <source>Compressed Project Files (*.e4pz)</source>
         <translation>Komprimované soubory projektu (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2879"/>
+        <location filename="Project/Project.py" line="2893"/>
         <source>Project Files (*.e4p)</source>
         <translation>Soubory projektu (*.e4p)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3390"/>
+        <location filename="Project/Project.py" line="3405"/>
         <source>Save project as</source>
         <translation>Uložit projekt jako</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2880"/>
+        <location filename="Project/Project.py" line="2894"/>
         <source>Project Files (*.e4p);;Compressed Project Files (*.e4pz)</source>
         <translation>Soubory projektu (*.e4p);;Komprimované soubory projektu (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2896"/>
+        <location filename="Project/Project.py" line="2910"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2931"/>
+        <location filename="Project/Project.py" line="2950"/>
         <source>Close Project</source>
         <translation>Zavřít projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2931"/>
+        <location filename="Project/Project.py" line="2950"/>
         <source>The current project has unsaved changes.</source>
         <translation>Aktuální projekt obsahuje neuložené změny.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3072"/>
+        <location filename="Project/Project.py" line="3087"/>
         <source>Syntax errors detected</source>
         <translation>Zjištěny syntaktické chyby</translation>
     </message>
     <message numerus="yes">
-        <location filename="Project/Project.py" line="3072"/>
+        <location filename="Project/Project.py" line="3087"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation>
             <numerusform>Projekt obsahuje %n soubor se syntaktickými chybami.</numerusform>
@@ -23045,897 +23078,897 @@ Vyberte Obnovit.</translation>
         </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3343"/>
+        <location filename="Project/Project.py" line="3358"/>
         <source>&amp;New...</source>
         <translation>&amp;Nový...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3347"/>
+        <location filename="Project/Project.py" line="3362"/>
         <source>Generate a new project</source>
         <translation>Vygenerovat nový projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3348"/>
+        <location filename="Project/Project.py" line="3363"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nový...&lt;/b&gt;&lt;p&gt;Otevře se dialogové okno pro zadání informací o novém projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3356"/>
+        <location filename="Project/Project.py" line="3371"/>
         <source>&amp;Open...</source>
         <translation>&amp;Otevřít...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3360"/>
+        <location filename="Project/Project.py" line="3375"/>
         <source>Open an existing project</source>
         <translation>Otevřít existující projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3361"/>
+        <location filename="Project/Project.py" line="3376"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít....&lt;/b&gt;&lt;p&gt;Otevře existující projekt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3368"/>
+        <location filename="Project/Project.py" line="3383"/>
         <source>Close project</source>
         <translation>Zavřít projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3368"/>
+        <location filename="Project/Project.py" line="3383"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3371"/>
+        <location filename="Project/Project.py" line="3386"/>
         <source>Close the current project</source>
         <translation>Uzavře aktuální projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3372"/>
+        <location filename="Project/Project.py" line="3387"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít&lt;/b&gt;&lt;p&gt;Aktuální projekt se uzavře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3379"/>
+        <location filename="Project/Project.py" line="3394"/>
         <source>Save project</source>
         <translation>Uložit projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3533"/>
+        <location filename="Project/Project.py" line="3548"/>
         <source>&amp;Save</source>
         <translation>&amp;Uložit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3382"/>
+        <location filename="Project/Project.py" line="3397"/>
         <source>Save the current project</source>
         <translation>Uložit aktuální projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3383"/>
+        <location filename="Project/Project.py" line="3398"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit&lt;/b&gt;&lt;p&gt;Aktuální projekt se uloží.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3390"/>
+        <location filename="Project/Project.py" line="3405"/>
         <source>Save &amp;as...</source>
         <translation>Uložit j&amp;ako...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3393"/>
+        <location filename="Project/Project.py" line="3408"/>
         <source>Save the current project to a new file</source>
         <translation>Uloží aktuální projekt do nového souboru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3394"/>
+        <location filename="Project/Project.py" line="3409"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit jako&lt;/b&gt;&lt;p&gt;Uloží aktuální projekt do nového souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3403"/>
+        <location filename="Project/Project.py" line="3418"/>
         <source>Add files to project</source>
         <translation>Přidat soubory do projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3403"/>
+        <location filename="Project/Project.py" line="3418"/>
         <source>Add &amp;files...</source>
         <translation>&amp;Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3407"/>
+        <location filename="Project/Project.py" line="3422"/>
         <source>Add files to the current project</source>
         <translation>Přidat soubory do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3408"/>
+        <location filename="Project/Project.py" line="3423"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat soubory...&lt;/b&gt;&lt;p&gt;Otevře dialog pri přidání souborů do aktuálního projektu. Místo pro přidání je definováno extenzí souborů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3417"/>
+        <location filename="Project/Project.py" line="3432"/>
         <source>Add directory to project</source>
         <translation>Přidat adresář do projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3417"/>
+        <location filename="Project/Project.py" line="3432"/>
         <source>Add directory...</source>
         <translation>Přidat adresář...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3421"/>
+        <location filename="Project/Project.py" line="3436"/>
         <source>Add a directory to the current project</source>
         <translation>Přidat adresář do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3423"/>
+        <location filename="Project/Project.py" line="3438"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat adresář...&lt;/b&gt;&lt;p&gt;Otevře dialog pro přičtení adresáře do aktuálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3431"/>
+        <location filename="Project/Project.py" line="3446"/>
         <source>Add translation to project</source>
         <translation>Přidat překlad do projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3431"/>
+        <location filename="Project/Project.py" line="3446"/>
         <source>Add &amp;translation...</source>
         <translation>Přida&amp;t překlad...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3435"/>
+        <location filename="Project/Project.py" line="3450"/>
         <source>Add a translation to the current project</source>
         <translation>Přidat překlad do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3437"/>
+        <location filename="Project/Project.py" line="3452"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat překlad&lt;/b&gt;&lt;p&gt;Otevře dialog pro přidání překladu do aktuálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3445"/>
+        <location filename="Project/Project.py" line="3460"/>
         <source>Search new files</source>
         <translation>Hledat nové soubory</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3445"/>
+        <location filename="Project/Project.py" line="3460"/>
         <source>Searc&amp;h new files...</source>
         <translation>&amp;Hledat nové soubory...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3448"/>
+        <location filename="Project/Project.py" line="3463"/>
         <source>Search new files in the project directory.</source>
         <translation>Hledat nové soubory v adresáři projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3449"/>
+        <location filename="Project/Project.py" line="3464"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat nové soubory...&lt;/b&gt;&lt;p&gt;Hledají se nové soubory (zdrojové, *.ui, *.idl) v adresáři projektu a v registrovaných podadresářích.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3457"/>
+        <location filename="Project/Project.py" line="3472"/>
         <source>Project properties</source>
         <translation>Nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3457"/>
+        <location filename="Project/Project.py" line="3472"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Natavení...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3460"/>
+        <location filename="Project/Project.py" line="3475"/>
         <source>Show the project properties</source>
         <translation>Zobrazit nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3461"/>
+        <location filename="Project/Project.py" line="3476"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nastavení...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací nastavení projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3468"/>
+        <location filename="Project/Project.py" line="3483"/>
         <source>User project properties</source>
         <translation>Uživatelská nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3468"/>
+        <location filename="Project/Project.py" line="3483"/>
         <source>&amp;User Properties...</source>
         <translation>Uživat&amp;elská nastavení...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3471"/>
+        <location filename="Project/Project.py" line="3486"/>
         <source>Show the user specific project properties</source>
         <translation>Zobrazit uživatelem definovaná nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3473"/>
+        <location filename="Project/Project.py" line="3488"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uživatelská nastavení...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací uživatelských nastavení projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3480"/>
+        <location filename="Project/Project.py" line="3495"/>
         <source>Filetype Associations</source>
         <translation>Asociace typů souborů</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3480"/>
+        <location filename="Project/Project.py" line="3495"/>
         <source>Filetype Associations...</source>
         <translation>Asociace typů souborů...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3483"/>
+        <location filename="Project/Project.py" line="3498"/>
         <source>Show the project filetype associations</source>
         <translation>Zobrazit asociace typů souborů</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3485"/>
+        <location filename="Project/Project.py" line="3500"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociace typů souborů...&lt;/b&gt;&lt;p&gt;Zobrazí se dialog s editací asociace typů souborů v projektu. Na základě vzorku souborového jména tyto asociace určují typ souboru (zdrojový kód, formulář, interface nebo jiné). Tyto asociace jsou použity při přidávání souborů do projektu a při vyhledávání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3511"/>
+        <location filename="Project/Project.py" line="3526"/>
         <source>Debugger Properties</source>
         <translation>Nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3511"/>
+        <location filename="Project/Project.py" line="3526"/>
         <source>Debugger &amp;Properties...</source>
         <translation>Nastavení &amp;debuggeru...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3514"/>
+        <location filename="Project/Project.py" line="3529"/>
         <source>Show the debugger properties</source>
         <translation>Zobrazit nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3515"/>
+        <location filename="Project/Project.py" line="3530"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nastavení debugeru...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací nastavení debugeru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3522"/>
+        <location filename="Project/Project.py" line="3537"/>
         <source>Load</source>
         <translation>Načíst</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3522"/>
+        <location filename="Project/Project.py" line="3537"/>
         <source>&amp;Load</source>
         <translation>&amp;Načíst</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3525"/>
+        <location filename="Project/Project.py" line="3540"/>
         <source>Load the debugger properties</source>
         <translation>Načíst nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3526"/>
+        <location filename="Project/Project.py" line="3541"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Načíst nastavení debugeru&lt;/b&gt;&lt;p&gt;Načtou se nastavení debugeru do projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3533"/>
+        <location filename="Project/Project.py" line="3548"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3536"/>
+        <location filename="Project/Project.py" line="3551"/>
         <source>Save the debugger properties</source>
         <translation>Uložit nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3537"/>
+        <location filename="Project/Project.py" line="3552"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit nastavení debugeru&lt;/b&gt;&lt;p&gt;Uloží nastavení debugeru definovaná v projektu..&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3544"/>
+        <location filename="Project/Project.py" line="3559"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3544"/>
+        <location filename="Project/Project.py" line="3559"/>
         <source>&amp;Delete</source>
         <translation>Sma&amp;zat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3547"/>
+        <location filename="Project/Project.py" line="3562"/>
         <source>Delete the debugger properties</source>
         <translation>Smazat nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3548"/>
+        <location filename="Project/Project.py" line="3563"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat nastavení debugeru&lt;/b&gt;&lt;p&gt;Smaže se soubor obsahující nastavení debugeru v daném projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3556"/>
+        <location filename="Project/Project.py" line="3571"/>
         <source>Reset</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3556"/>
+        <location filename="Project/Project.py" line="3571"/>
         <source>&amp;Reset</source>
         <translation>&amp;Reset</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3559"/>
+        <location filename="Project/Project.py" line="3574"/>
         <source>Reset the debugger properties</source>
         <translation>Reset nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3560"/>
+        <location filename="Project/Project.py" line="3575"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reset nastavení debugeru&lt;/b&gt;&lt;p&gt;Zresetuje nastavení debugeru v projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3569"/>
+        <location filename="Project/Project.py" line="3584"/>
         <source>Load session</source>
         <translation>Načíst relaci</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3572"/>
+        <location filename="Project/Project.py" line="3587"/>
         <source>Load the projects session file.</source>
         <translation>Načíst soubor s relací projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3573"/>
+        <location filename="Project/Project.py" line="3588"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Načíst relaci&lt;/b&gt;&lt;p&gt;Načte soubor s relací projektu. Relace obsahuje následující údaje:&lt;br&gt;- všechny otevřené zdrojové soubory&lt;br&gt;- všechny breakpointy&lt;br&gt;- argumenty příkazové řádky &lt;br&gt;- pracovní adresář&lt;br&gt;- příznak výjimky&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3586"/>
+        <location filename="Project/Project.py" line="3601"/>
         <source>Save session</source>
         <translation>Uložit relaci</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3589"/>
+        <location filename="Project/Project.py" line="3604"/>
         <source>Save the projects session file.</source>
         <translation>Uložit soubor s relací projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3590"/>
+        <location filename="Project/Project.py" line="3605"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit relaci&lt;/b&gt;&lt;p&gt;Uloží soubor s relací projektu. Relace obsahuje následující údaje:&lt;br&gt;- všechny otevřené zdrojové soubory&lt;br&gt;- všechny breakpointy&lt;br&gt;- argumenty příkazové řádky &lt;br&gt;- pracovní adresář&lt;br&gt;- příznak výjimky&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3603"/>
+        <location filename="Project/Project.py" line="3618"/>
         <source>Delete session</source>
         <translation>Smazat relaci</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3606"/>
+        <location filename="Project/Project.py" line="3621"/>
         <source>Delete the projects session file.</source>
         <translation>Smaže soubor s relací projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3607"/>
+        <location filename="Project/Project.py" line="3622"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat relaci&lt;/b&gt;&lt;p&gt;Smaže soubor s relací projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3616"/>
+        <location filename="Project/Project.py" line="3631"/>
         <source>Code Metrics</source>
         <translation>Metriky kódu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3616"/>
+        <location filename="Project/Project.py" line="3631"/>
         <source>&amp;Code Metrics...</source>
         <translation>Metriky &amp;kódu...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3619"/>
+        <location filename="Project/Project.py" line="3634"/>
         <source>Show some code metrics for the project.</source>
         <translation>Zobrazit metriky kódu projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3621"/>
+        <location filename="Project/Project.py" line="3636"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Metriky kódu...&lt;/b&gt;&lt;p&gt;Zobrazí se metriky kódu všech python souborů v projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3628"/>
+        <location filename="Project/Project.py" line="3643"/>
         <source>Python Code Coverage</source>
         <translation>Pokrytí python kódu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3628"/>
+        <location filename="Project/Project.py" line="3643"/>
         <source>Code Co&amp;verage...</source>
         <translation>Pokr&amp;ytí kódu...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3631"/>
+        <location filename="Project/Project.py" line="3646"/>
         <source>Show code coverage information for the project.</source>
         <translation>Zobrazit informace pokrytí kódu projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3633"/>
+        <location filename="Project/Project.py" line="3648"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pokrytí kódu...&lt;/b&gt;&lt;p&gt;Zobrazí informace o pokrytí kódu ve všech python souborech projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4314"/>
+        <location filename="Project/Project.py" line="4328"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3641"/>
+        <location filename="Project/Project.py" line="3656"/>
         <source>&amp;Profile Data...</source>
         <translation>&amp;Profilovat data...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3644"/>
+        <location filename="Project/Project.py" line="3659"/>
         <source>Show profiling data for the project.</source>
         <translation>Zobrazit profilování dat projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3646"/>
+        <location filename="Project/Project.py" line="3661"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profilovat data&lt;/b&gt;&lt;p&gt;Zobrazí se profilování dat projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4367"/>
+        <location filename="Project/Project.py" line="4381"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3653"/>
+        <location filename="Project/Project.py" line="3668"/>
         <source>&amp;Application Diagram...</source>
         <translation>Diagram &amp;aplikace...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3656"/>
+        <location filename="Project/Project.py" line="3671"/>
         <source>Show a diagram of the project.</source>
         <translation>Zobrazit diagram projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3658"/>
+        <location filename="Project/Project.py" line="3673"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diagram aplikace...&lt;/b&gt;&lt;p&gt;Zobrazí diagram projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3730"/>
+        <location filename="Project/Project.py" line="3745"/>
         <source>&amp;Project</source>
         <translation>&amp;Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3731"/>
+        <location filename="Project/Project.py" line="3746"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Otevřít poslední p&amp;rojekty</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3732"/>
+        <location filename="Project/Project.py" line="3747"/>
         <source>&amp;Version Control</source>
         <translation>Kontrola &amp;verzí</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3735"/>
+        <location filename="Project/Project.py" line="3750"/>
         <source>Chec&amp;k</source>
         <translation>Zkontro&amp;lovat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3737"/>
+        <location filename="Project/Project.py" line="3752"/>
         <source>Sho&amp;w</source>
         <translation>Zo&amp;brazit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3738"/>
+        <location filename="Project/Project.py" line="3753"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagramy</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3739"/>
+        <location filename="Project/Project.py" line="3754"/>
         <source>Session</source>
         <translation>Relace</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3740"/>
+        <location filename="Project/Project.py" line="3755"/>
         <source>Source &amp;Documentation</source>
         <translation>Zd&amp;rojová dokumentace</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3742"/>
+        <location filename="Project/Project.py" line="3757"/>
         <source>Debugger</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3743"/>
+        <location filename="Project/Project.py" line="3758"/>
         <source>Pac&amp;kagers</source>
         <translation>Balíč&amp;ky</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3846"/>
+        <location filename="Project/Project.py" line="3860"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3907"/>
+        <location filename="Project/Project.py" line="3921"/>
         <source>&amp;Clear</source>
         <translation>&amp;Vyčistit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4017"/>
+        <location filename="Project/Project.py" line="4031"/>
         <source>Search New Files</source>
         <translation>Hledat nové soubory</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4017"/>
+        <location filename="Project/Project.py" line="4031"/>
         <source>There were no new files found to be added.</source>
         <translation>Nebyly nalezeny žádné soubory, které je možné přidat.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4155"/>
+        <location filename="Project/Project.py" line="4169"/>
         <source>Version Control System</source>
         <translation>Version Control System</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4247"/>
+        <location filename="Project/Project.py" line="4261"/>
         <source>Coverage Data</source>
         <translation>Datové pokrytí</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4293"/>
+        <location filename="Project/Project.py" line="4307"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>V aktuálním projektu nebyl určen hlavní skript. Zrušeno</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4268"/>
+        <location filename="Project/Project.py" line="4282"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4268"/>
+        <location filename="Project/Project.py" line="4282"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor pokrytí</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4314"/>
+        <location filename="Project/Project.py" line="4328"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4367"/>
+        <location filename="Project/Project.py" line="4381"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4504"/>
+        <location filename="Project/Project.py" line="4518"/>
         <source>Create Package List</source>
         <translation>Vytvořit seznam balíčků</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3667"/>
+        <location filename="Project/Project.py" line="3682"/>
         <source>Create &amp;Package List</source>
         <translation>Vytvořit seznam &amp;balíčků</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4683"/>
+        <location filename="Project/Project.py" line="4697"/>
         <source>Create Plugin Archive</source>
         <translation>Vytvořit Plugin archiv</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3681"/>
+        <location filename="Project/Project.py" line="3696"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Vytvořit Plugin &amp;archiv</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4474"/>
+        <location filename="Project/Project.py" line="4488"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Přepsat jej?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4523"/>
+        <location filename="Project/Project.py" line="4537"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; neexistuje. Zrušeno...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4533"/>
+        <location filename="Project/Project.py" line="4547"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>Projekt nemá definován hlavní skript. Zrušeno...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1788"/>
+        <location filename="Project/Project.py" line="1812"/>
         <source>&lt;p&gt;The source directory doesn&apos;t contain any files belonging to the selected category.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zdrojový adresář neobsahuje žádné soubory související s danou kategorií.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2759"/>
+        <location filename="Project/Project.py" line="2775"/>
         <source>Select Version Control System</source>
         <translation>Vybrat Version Control System</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2439"/>
+        <location filename="Project/Project.py" line="2463"/>
         <source>None</source>
         <translation>None</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="254"/>
+        <location filename="Project/Project.py" line="278"/>
         <source>Registering Project Type</source>
         <translation>Zaregistrovat typ projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3696"/>
+        <location filename="Project/Project.py" line="3711"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Vytvořit archiv pluginů (snímek)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3696"/>
+        <location filename="Project/Project.py" line="3711"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Vytvořit archiv pluginů (&amp;snímek)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1504"/>
+        <location filename="Project/Project.py" line="1528"/>
         <source>You have to specify a translation pattern first.</source>
         <translation>Nejdříve musíte specifikovat vzor překladu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2531"/>
+        <location filename="Project/Project.py" line="2555"/>
         <source>Translation Pattern</source>
         <translation>Vzor překladu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2531"/>
+        <location filename="Project/Project.py" line="2555"/>
         <source>Enter the path pattern for translation files (use &apos;%language%&apos; in place of the language code):</source>
         <translation>Zadejte vzor cesty pro soubory s překlady (použijte  &apos;%language%&apos; na místě s kódem jazyka):</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3495"/>
+        <location filename="Project/Project.py" line="3510"/>
         <source>Lexer Associations</source>
         <translation>Spojení lexeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3495"/>
+        <location filename="Project/Project.py" line="3510"/>
         <source>Lexer Associations...</source>
         <translation>Spojení lexeru...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3498"/>
+        <location filename="Project/Project.py" line="3513"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Zobrazit spojení lexeru projektu (přepíše výchozí)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3500"/>
+        <location filename="Project/Project.py" line="3515"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spojení lexeru...&lt;/b&gt;&lt;p&gt;Zobrazuje dialog s editací spojení lexeru projektu. Tato spojení přepisují globální lexer spojení. Lexer je použit pro zvýraznění textu v editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="215"/>
+        <location filename="Project/Project.py" line="239"/>
         <source>PySide GUI</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="216"/>
+        <location filename="Project/Project.py" line="240"/>
         <source>PySide Console</source>
         <translation>PySide konzole</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="170"/>
+        <location filename="Project/Project.py" line="194"/>
         <source>Python Files (*.py2);;Python GUI Files (*.pyw2);;</source>
         <translation>Python soubory (*.py2);;Python GUI soubory (*.pyw2);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="173"/>
+        <location filename="Project/Project.py" line="197"/>
         <source>Python3 Files (*.py *.py3);;Python3 GUI Files (*.pyw *.pyw3);;</source>
         <translation>Python3 soubory (*.py *.py3);;Python3 GUI soubory (*.pyw *.pyw3);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="210"/>
+        <location filename="Project/Project.py" line="234"/>
         <source>Eric Plugin</source>
         <translation>Eric Plugin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="254"/>
+        <location filename="Project/Project.py" line="278"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Typ projektu &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="697"/>
+        <location filename="Project/Project.py" line="721"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor projektu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="592"/>
+        <location filename="Project/Project.py" line="616"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor projektu &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="704"/>
+        <location filename="Project/Project.py" line="728"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor projektu &lt;b&gt;{0}&lt;/b&gt; má neplatný obsah.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="786"/>
+        <location filename="Project/Project.py" line="810"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru projektu &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="827"/>
+        <location filename="Project/Project.py" line="851"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Uživatelská nastavení projektu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="855"/>
+        <location filename="Project/Project.py" line="879"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s uživatelskými nastaveními  &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="960"/>
+        <location filename="Project/Project.py" line="984"/>
         <source>&lt;p&gt;The project session &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Relaci projektu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="914"/>
+        <location filename="Project/Project.py" line="938"/>
         <source>&lt;p&gt;The project session &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Relace projektu &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="981"/>
+        <location filename="Project/Project.py" line="1005"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s relací projektu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1050"/>
+        <location filename="Project/Project.py" line="1074"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s relací projektu &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1074"/>
+        <location filename="Project/Project.py" line="1098"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s relací projektu &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1178"/>
+        <location filename="Project/Project.py" line="1202"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1126"/>
+        <location filename="Project/Project.py" line="1150"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s úlohami &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1222"/>
+        <location filename="Project/Project.py" line="1246"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1338"/>
+        <location filename="Project/Project.py" line="1362"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s nastaveními debuggeru &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1278"/>
+        <location filename="Project/Project.py" line="1302"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s nastaveními debuggeru &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1395"/>
+        <location filename="Project/Project.py" line="1419"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s nastaveními debuggeru &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1420"/>
+        <location filename="Project/Project.py" line="1444"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s nastaveními debuggeru &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1613"/>
+        <location filename="Project/Project.py" line="1637"/>
         <source>&lt;p&gt;The selected translation file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybraný soubor s překladem &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1816"/>
+        <location filename="Project/Project.py" line="1840"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2013"/>
+        <location filename="Project/Project.py" line="2037"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2028"/>
+        <location filename="Project/Project.py" line="2052"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be renamed.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nemůže být přejmenován.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2198"/>
+        <location filename="Project/Project.py" line="2222"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybraný soubor &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2221"/>
+        <location filename="Project/Project.py" line="2245"/>
         <source>&lt;p&gt;The selected directory &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybraný adresář &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2300"/>
+        <location filename="Project/Project.py" line="2324"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář projektu &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2714"/>
+        <location filename="Project/Project.py" line="2730"/>
         <source>Project Files (*.e4p *.e4pz)</source>
         <translation>Soubory projektu (*.e4p *.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2896"/>
+        <location filename="Project/Project.py" line="2910"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3671"/>
+        <location filename="Project/Project.py" line="3686"/>
         <source>Create an initial PKGLIST file for an eric5 plugin.</source>
         <translation>Vytvořit počáteční soubor PKGLIST pro eric5 plugin.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3673"/>
+        <location filename="Project/Project.py" line="3688"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit seznam balíčků&lt;/b&gt;&lt;p&gt;Vytvoří počáteční seznam souborů pro vložení do eric5 plugin archivu. Seznam je vytvořen ze souboru projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3685"/>
+        <location filename="Project/Project.py" line="3700"/>
         <source>Create an eric5 plugin archive file.</source>
         <translation>Vytvořit soubor eric5 plugin archivu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3687"/>
+        <location filename="Project/Project.py" line="3702"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit Plugin archiv&lt;/b&gt;&lt;p&gt;Vytvoří soubor s eric5 plugin archivem za použití seznamu souborů daných v PKGLIST souboru. Jméno archivu je odvozeno ze jména hlavního skriptu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3700"/>
+        <location filename="Project/Project.py" line="3715"/>
         <source>Create an eric5 plugin archive file (snapshot release).</source>
         <translation>Vytvoří se soubor eric5 plugin archívu (snímek vydání).</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3702"/>
+        <location filename="Project/Project.py" line="3717"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit Plugin archiv (Snímek)&lt;/b&gt;&lt;p&gt;Vytvoří soubor s eric5 plugin archivem za použití seznamu souborů daných v PKGLIST souboru. Údaj o verzi hlavního skriptu je změněn v souladu se snímkem vydání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4146"/>
+        <location filename="Project/Project.py" line="4160"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybrané VCS &lt;b&gt;{0}&lt;/b&gt; nebylo nalezeno.&lt;br/&gt;Navrácení do původního stavu.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4155"/>
+        <location filename="Project/Project.py" line="4169"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybrané VCS &lt;b&gt;{0}&lt;/b&gt; nebylo nalezeno.&lt;br/&gt;Kontrola verzí vypnuta.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4504"/>
+        <location filename="Project/Project.py" line="4518"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; nelze vytvořit.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4547"/>
+        <location filename="Project/Project.py" line="4561"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; nelze načíst.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4563"/>
+        <location filename="Project/Project.py" line="4577"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s eric5 plugin archivem &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit. Zrušeno...&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4585"/>
+        <location filename="Project/Project.py" line="4599"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit do archivu. Ingorováno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4599"/>
+        <location filename="Project/Project.py" line="4613"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s eric5 plugin archivem &lt;b&gt;{0}&lt;/b&gt; byl úspěšně vytvořen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4683"/>
+        <location filename="Project/Project.py" line="4697"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Plugin soubor &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1746"/>
+        <location filename="Project/Project.py" line="1770"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be added to &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybraný soubor &lt;b&gt;{0}&lt;/b&gt; nelze přidat do &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Důvod: {2}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1798"/>
+        <location filename="Project/Project.py" line="1822"/>
         <source>&lt;p&gt;The target directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Cílový adresář &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -23943,22 +23976,22 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectBaseBrowser</name>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="108"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="107"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="441"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="440"/>
         <source>local</source>
         <translation>lokální</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="481"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="480"/>
         <source>Select entries</source>
         <translation>Vybrat vstupy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="481"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="480"/>
         <source>There were no matching entries found.</source>
         <translation>Hledané vstupy nebyly nalezeny.</translation>
     </message>
@@ -24004,17 +24037,17 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectBrowserModel</name>
     <message>
-        <location filename="Project/ProjectBrowserModel.py" line="218"/>
+        <location filename="Project/ProjectBrowserModel.py" line="220"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBrowserModel.py" line="220"/>
+        <location filename="Project/ProjectBrowserModel.py" line="222"/>
         <source>VCS Status</source>
         <translation>VCS Status</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBrowserModel.py" line="691"/>
+        <location filename="Project/ProjectBrowserModel.py" line="690"/>
         <source>local</source>
         <translation>lokální</translation>
     </message>
@@ -24140,232 +24173,232 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectFormsBrowser</name>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="62"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="68"/>
         <source>Forms</source>
         <translation>Formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="64"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="70"/>
         <source>&lt;b&gt;Project Forms Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all forms contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč formulářů projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny formuláře aktuálního projektu. Několik akcí lze provést i přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="77"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="83"/>
         <source>Dialog</source>
         <translation>Dialog</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="78"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="84"/>
         <source>Widget</source>
         <translation>Widget</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="82"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="88"/>
         <source>Dialog with Buttons (Bottom)</source>
         <translation>Dialog s tlačítky (dole)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="84"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="90"/>
         <source>Dialog with Buttons (Right)</source>
         <translation>Dialog s tlačítky (vpravo)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="79"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="85"/>
         <source>Main Window</source>
         <translation>Hlavní okno aplikace</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="80"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="86"/>
         <source>Dialog with Buttonbox (Bottom)</source>
         <translation>Dialog s boxem s tlačítky (dole)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="81"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="87"/>
         <source>Dialog with Buttonbox (Right)</source>
         <translation>Dialog s boxem s tlačítky (vpravo)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="83"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="89"/>
         <source>Dialog with Buttons (Bottom-Center)</source>
         <translation>Dialog s tlačítky (dole uprostřed)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="115"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="121"/>
         <source>Compile form</source>
         <translation>Kompilovat formulář</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="264"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="270"/>
         <source>Compile all forms</source>
         <translation>Kompilovat všechny formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="192"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="198"/>
         <source>Open in Qt-Designer</source>
         <translation>Otevřít v Qt-Designeru</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="194"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="200"/>
         <source>Open in Editor</source>
         <translation>Otevřít v editoru</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="111"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="117"/>
         <source>Preview form</source>
         <translation>Náhled formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="197"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="203"/>
         <source>Preview translations</source>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="134"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="140"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="233"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="239"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="211"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="217"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="240"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="246"/>
         <source>New form...</source>
         <translation>Nový formulář...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="269"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="275"/>
         <source>Add forms...</source>
         <translation>Přidat formuláře...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="271"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="277"/>
         <source>Add forms directory...</source>
         <translation>Přidat adresář s formuláři...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="274"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="280"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="276"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="282"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="201"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="207"/>
         <source>Compile forms</source>
         <translation>Kompilovat formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="530"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="527"/>
         <source>New Form</source>
         <translation>Nový formulář</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="483"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="480"/>
         <source>Select a form type:</source>
         <translation>Vybrat typ formuláře:</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="516"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="513"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Soubor již existuje! Přepsat jej?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="553"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="550"/>
         <source>Delete forms</source>
         <translation>Smazat formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="553"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="550"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>Opravdu chcete odebrat tyto formuláře z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="634"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="631"/>
         <source>Form Compilation</source>
         <translation>Kompilace formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="622"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="619"/>
         <source>The compilation of the form file was successful.</source>
         <translation>Kompilace souboru s formulářem byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="634"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="631"/>
         <source>The compilation of the form file failed.</source>
         <translation>Kompilace souboru s formulářem selhala.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="706"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="703"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="794"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="791"/>
         <source>Compiling forms...</source>
         <translation>Kompilovat formuláře...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="794"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="791"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="829"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="826"/>
         <source>Determining changed forms...</source>
         <translation>Určení změněných formulářů...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="855"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="852"/>
         <source>Compiling changed forms...</source>
         <translation>Kompilování změněných formulářů...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="124"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="130"/>
         <source>Generate Dialog Code...</source>
         <translation>Generovat kód Dialog...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="206"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="212"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="497"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="494"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>Qt User-Interface soubory (*.ui);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="279"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="285"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="247"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="253"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="530"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="527"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nový soubor s formulářem &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit..&lt;br&gt;Problém: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="628"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="625"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kompilace formuláře se nepodařila.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="706"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="703"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -24373,127 +24406,127 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectInterfacesBrowser</name>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="63"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="68"/>
         <source>Interfaces (IDL)</source>
         <translation>Interfaces (IDL)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="65"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="70"/>
         <source>&lt;b&gt;Project Interfaces Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all interfaces (CORBA IDL files) contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč Interfaces projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny interface (CORBA IDL soubory) nacházející se v aktuálním projektu. Několik akcí je možné provést přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="120"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="123"/>
         <source>Compile interface</source>
         <translation>Kompilovat interface</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="202"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="205"/>
         <source>Compile all interfaces</source>
         <translation>Kompilovat všechny interface</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="161"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="164"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="94"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="97"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="182"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="185"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="166"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="169"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="205"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="208"/>
         <source>Add interfaces...</source>
         <translation>Přidat interfaces...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="207"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="210"/>
         <source>Add interfaces directory...</source>
         <translation>Přidat adresář s interaces...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="210"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="213"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="212"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="215"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="159"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="162"/>
         <source>Compile interfaces</source>
         <translation>Kompilovat interfaces</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="385"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="388"/>
         <source>Delete interfaces</source>
         <translation>Smazat interfaces</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="385"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="388"/>
         <source>Do you really want to delete these interfaces from the project?</source>
         <translation>Opravdu chcete odebrat tyto interfaces z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="455"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="458"/>
         <source>Interface Compilation</source>
         <translation>Kompilace interface</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="450"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="453"/>
         <source>The compilation of the interface file was successful.</source>
         <translation>Kompilace souboru interface byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="455"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="458"/>
         <source>The compilation of the interface file failed.</source>
         <translation>Kompliace interface souboru selhala.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="494"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="497"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="550"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="553"/>
         <source>Compiling interfaces...</source>
         <translation>Kompilovat interfaces...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="550"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="553"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="215"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="218"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="216"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="219"/>
         <source>Configure CORBA...</source>
         <translation>Konfigurovat CORBA...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="189"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="192"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="494"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="497"/>
         <source>&lt;p&gt;Could not start {0}.&lt;br&gt;Ensure that it is in the search path.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.&lt;/p&gt;</translation>
     </message>
@@ -24501,77 +24534,77 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectOthersBrowser</name>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="50"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="55"/>
         <source>Others</source>
         <translation>Ostatní</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="52"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="57"/>
         <source>&lt;b&gt;Project Others Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all other files and directories contained in the current project. Several actions can be executed via the context menu. The entry which is registered in the project is shown in a different colour.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč Ostatní projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny adresáře nacházející se v aktuálním projektu. Několik akcí je možné provést přes kontextové menu. Položky, které jsou registrovány v projektu, jsou zobrazeny odlišnou barvou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="75"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="78"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="113"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="116"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="116"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="119"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="99"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="102"/>
         <source>Add files...</source>
         <translation>Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="101"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="104"/>
         <source>Add directory...</source>
         <translation>Přidat adresář...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="86"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="89"/>
         <source>Refresh</source>
         <translation>Obnovit</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="119"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="122"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="121"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="124"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="287"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="290"/>
         <source>Delete files/directories</source>
         <translation>Smazat soubory/adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="287"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="290"/>
         <source>Do you really want to delete these entries from the project?</source>
         <translation>Opravdu chcete odebrat tyto položky z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="124"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="127"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="72"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="75"/>
         <source>Open in Icon Editor</source>
         <translation>Otevřit v editoru ikon</translation>
     </message>
     <message>
-        <location filename="Project/ProjectOthersBrowser.py" line="88"/>
+        <location filename="Project/ProjectOthersBrowser.py" line="91"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
@@ -24747,162 +24780,162 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectResourcesBrowser</name>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="56"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="59"/>
         <source>Resources</source>
         <translation>Resources</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="58"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="61"/>
         <source>&lt;b&gt;Project Resources Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all resources contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč Resources projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny Resources aktuálního projektu. Několik akcí lze provést i přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="84"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="87"/>
         <source>Compile resource</source>
         <translation>Kompilovat Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="221"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="224"/>
         <source>Compile all resources</source>
         <translation>Kompilovat všechny Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="169"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="172"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="98"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="101"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="196"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="199"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="174"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="177"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="199"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="202"/>
         <source>New resource...</source>
         <translation>Nový Resource...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="226"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="229"/>
         <source>Add resources...</source>
         <translation>Přidat resources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="228"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="231"/>
         <source>Add resources directory...</source>
         <translation>Přidat adresář se zdroji...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="231"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="234"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="233"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="236"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="164"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="167"/>
         <source>Compile resources</source>
         <translation>Kompilovat Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="428"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="431"/>
         <source>New Resource</source>
         <translation>Nový Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="385"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="388"/>
         <source>Qt Resource Files (*.qrc)</source>
         <translation>Qt Resource soubory (*.qrc)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="404"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="407"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Soubor již existuje! Přepsat jej?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="452"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="455"/>
         <source>Delete resources</source>
         <translation>Smazat Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="452"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="455"/>
         <source>Do you really want to delete these resources from the project?</source>
         <translation>Opravdu chcete odebrat tyto Resource z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="533"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="536"/>
         <source>Resource Compilation</source>
         <translation>Kompilovat Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="521"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="524"/>
         <source>The compilation of the resource file was successful.</source>
         <translation>Kompilace souboru Resource byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="533"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="536"/>
         <source>The compilation of the resource file failed.</source>
         <translation>Kompliace Resource souboru selhala.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="606"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="609"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="668"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="671"/>
         <source>Compiling resources...</source>
         <translation>Kompilovat resources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="668"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="671"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="733"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="736"/>
         <source>Determining changed resources...</source>
         <translation>Určení změněných resources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="765"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="768"/>
         <source>Compiling changed resources...</source>
         <translation>Kompilování změněných resources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="236"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="239"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="204"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="207"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="428"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="431"/>
         <source>&lt;p&gt;The new resource file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nový soubor s resource &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit..&lt;br&gt;Problém: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="527"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="530"/>
         <source>&lt;p&gt;The compilation of the resource file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kompilace Resource se nepodařila.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="606"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="609"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -24910,12 +24943,12 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectSourcesBrowser</name>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="59"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="61"/>
         <source>Sources</source>
         <translation>Zdrojové kódy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="61"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="63"/>
         <source>&lt;b&gt;Project Sources Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all sources contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč zdrojových kódů projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny zdrojové soubory aktuálního projektu. Několik akcí lze provést i přes kontextové menu.&lt;/p&gt;</translation>
     </message>
@@ -25108,187 +25141,187 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectTranslationsBrowser</name>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="60"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="66"/>
         <source>Translations</source>
         <translation>Překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="62"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="68"/>
         <source>&lt;b&gt;Project Translations Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all translations contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč jazykových překladů projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny překlady aktuálního projektu. Několik akcí lze provést i přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="148"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="154"/>
         <source>Generate translation</source>
         <translation>Generovat překlad</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="155"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="161"/>
         <source>Generate translation (with obsolete)</source>
         <translation>Generovat překlad (původní)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="354"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="360"/>
         <source>Generate all translations</source>
         <translation>Generovat všechny překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="360"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="366"/>
         <source>Generate all translations (with obsolete)</source>
         <translation>Generovat všechny překlady (původní)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="271"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="277"/>
         <source>Open in Qt-Linguist</source>
         <translation>Otevřít v  Qt-Linguist</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="309"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="315"/>
         <source>Open in Editor</source>
         <translation>Otevřít v editoru</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="179"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="185"/>
         <source>Release translation</source>
         <translation>Zveřejnit překlad</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="366"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="372"/>
         <source>Release all translations</source>
         <translation>Zveřejnit všechny překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="133"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="139"/>
         <source>Preview translation</source>
         <translation>Náhled překladu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="343"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="349"/>
         <source>Preview all translations</source>
         <translation>Náhled všech překladů</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="321"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="327"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="324"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="330"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="372"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="378"/>
         <source>Add translation...</source>
         <translation>Přidat překlad...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="374"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
         <source>Add translation files...</source>
         <translation>Přidat soubory s překladem...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="295"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="301"/>
         <source>Generate translations</source>
         <translation>Generovat překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="302"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="308"/>
         <source>Generate translations (with obsolete)</source>
         <translation>Generovat překlady (původní)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="314"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="320"/>
         <source>Release translations</source>
         <translation>Zveřejnit překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="283"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="289"/>
         <source>Preview translations</source>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="595"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="601"/>
         <source>Delete translation files</source>
         <translation>Smazat soubory s překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="595"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="601"/>
         <source>Do you really want to delete these translation files from the project?</source>
         <translation>Opravdu chcete odebrat tyto soubory s překlady z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="729"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="735"/>
         <source>Write temporary project file</source>
         <translation>Zapsat dočasný soubor projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="700"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="706"/>
         <source>No translation files (*.ts) selected.</source>
         <translation>Nebyly vybrány žádné soubory s překlady (*.ts).</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="835"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="841"/>
         <source>Translation file generation</source>
         <translation>Generování souboru s překladem</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="830"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="836"/>
         <source>The generation of the translation files (*.ts) was successful.</source>
         <translation>Generování souboru s překladem (*.ts) bylo úspěšné.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="835"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="841"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
         <translation>Generování souboru s překladem (*.ts) selhalo.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1049"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1055"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="983"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="989"/>
         <source>Translation file release</source>
         <translation>Zveřejnění souboru s překladem</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="969"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="975"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>Zveřejnění souboru s překladem (*.qm) bylo úspěšné.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="983"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="989"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>Zveřejnění souboru s překladem (*.qm) selhalo.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="386"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="347"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="353"/>
         <source>Extract messages</source>
         <translation>Extrahovat zprávy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="377"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="383"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="729"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="735"/>
         <source>&lt;p&gt;The temporary project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do dočasného souboru projektu &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="920"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="926"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1049"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1055"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit zveřejnění.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -27564,27 +27597,27 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="470"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="474"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; nebyl nalezen.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="542"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="546"/>
         <source>Replaced {0} occurrences.</source>
         <translation>Nahrazeno {0} výskytů.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="546"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="550"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>Nebylo nic nahrazeno, protože &apos;{0}&apos; nebyl nalezen.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="116"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="119"/>
         <source>Find Next</source>
         <translation>Najít další</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="123"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="126"/>
         <source>Find Prev</source>
         <translation>Najít předchozí</translation>
     </message>
@@ -27642,7 +27675,7 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation>Jen výběr</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SearchWidget.py" line="92"/>
+        <location filename="Helpviewer/SearchWidget.py" line="90"/>
         <source>Expression was not found.</source>
         <translation>Výraz nebyl nalezen.</translation>
     </message>
@@ -27665,47 +27698,47 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="125"/>
+        <location filename="QScintilla/Shell.py" line="124"/>
         <source>Passive &gt;&gt;&gt; </source>
         <translation>Pasivní &gt;&gt;&gt; </translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="140"/>
+        <location filename="QScintilla/Shell.py" line="139"/>
         <source>Start</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="157"/>
+        <location filename="QScintilla/Shell.py" line="156"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="158"/>
+        <location filename="QScintilla/Shell.py" line="157"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="161"/>
+        <location filename="QScintilla/Shell.py" line="160"/>
         <source>Clear</source>
         <translation>Vyčistit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="162"/>
+        <location filename="QScintilla/Shell.py" line="161"/>
         <source>Reset</source>
         <translation>Reset</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="163"/>
+        <location filename="QScintilla/Shell.py" line="162"/>
         <source>Reset and Clear</source>
         <translation>Reset a vyčistit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="528"/>
+        <location filename="QScintilla/Shell.py" line="527"/>
         <source>No.</source>
         <translation>Č.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1364"/>
+        <location filename="QScintilla/Shell.py" line="1359"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
@@ -27715,74 +27748,74 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation>&lt;b&gt;Okno Shellu&lt;/b&gt;&lt;p&gt;Toto je jednoduchý interpretr běžící v okně. Interpretr běží nezávisle na programu, který je debugován. To znamená, že můžete spustit jakýkoliv příkaz i během debugování.&lt;/p&gt;&lt;p&gt;Během vkládání příkazu můžete použít kurzorové klávesy. Je zde také historie příkazů, která se aktivuje klávesami up a down. Stisknutím up nebo down klávesy po textu, který byl zadán se spustí inkrementální vyhledávání.&lt;/p&gt;&lt;p&gt;Shell má několik speciálních příkazů. &apos;reset&apos; zabije shell a spustí nový. &apos;clear&apos; vyčistí obsah shell okna.&apos;start&apos; se používá pro přepnutí shell jazyka a musí za ním následovat jméno podporovaného jazyka. Podporované jazyky jsou zobrazeny v seznamu, který vrací příkaz &apos;languages&apos;. Tyto příkazy (kromě &apos;languages&apos;) jsou také dostupné přes kontextové menu.&lt;/p&gt;&lt;p&gt;Stisknutím tab klávesy po nějakém vloženém textu se zobrazí seznam s nabídkou možných zakončení výrazu. Odpovídající zadání pak může být vybráno z tohoto listu. Pokud je existuje jen jedna možnost, je vložena automaticky.&lt;/p&gt;&lt;p&gt;Dokud se program neukončí, je shell v pasivním módu dostupný jen pokud se debugovaný program připojil k IDE. To je oznámeno odlišným promptem a dále v názvu titulku okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="525"/>
+        <location filename="QScintilla/Shell.py" line="524"/>
         <source>Passive Debug Mode</source>
         <translation>Pasivní debug mód</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="149"/>
+        <location filename="QScintilla/Shell.py" line="148"/>
         <source>History</source>
         <translation>Historie</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="150"/>
+        <location filename="QScintilla/Shell.py" line="149"/>
         <source>Select entry</source>
         <translation>Vybrat vstupy</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="151"/>
+        <location filename="QScintilla/Shell.py" line="150"/>
         <source>Show</source>
         <translation>Zobrazit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="476"/>
+        <location filename="QScintilla/Shell.py" line="475"/>
         <source>Select History</source>
         <translation>Vybrat historii</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="476"/>
+        <location filename="QScintilla/Shell.py" line="475"/>
         <source>Select the history entry to execute (most recent shown last).</source>
         <translation>Vybrat vstup historie pro vykonání (nejaktuálnější zobrazen poslední).</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="526"/>
+        <location filename="QScintilla/Shell.py" line="525"/>
         <source>
 Not connected</source>
         <translation>Nepřipojen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="168"/>
+        <location filename="QScintilla/Shell.py" line="167"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="156"/>
+        <location filename="QScintilla/Shell.py" line="155"/>
         <source>Cut</source>
         <translation>Vyjmout</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="530"/>
+        <location filename="QScintilla/Shell.py" line="529"/>
         <source>{0} on {1}, {2}</source>
         <translation>{0} na {1}, {2}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="591"/>
+        <location filename="QScintilla/Shell.py" line="590"/>
         <source>StdOut: {0}</source>
         <translation>StdOut: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="599"/>
+        <location filename="QScintilla/Shell.py" line="598"/>
         <source>StdErr: {0}</source>
         <translation>StdErr: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1091"/>
+        <location filename="QScintilla/Shell.py" line="1090"/>
         <source>Shell language &quot;{0}&quot; not supported.
 </source>
         <translation>Shell jazyk &quot;{0}&quot; není podporován.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1364"/>
+        <location filename="QScintilla/Shell.py" line="1359"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
@@ -28079,62 +28112,62 @@ Not connected</source>
         <translation>Alternativní</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="116"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="119"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="120"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="123"/>
         <source>General</source>
         <translation>Hlavní</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="128"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="131"/>
         <source>Debug</source>
         <translation>Debug</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="124"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="127"/>
         <source>Wizards</source>
         <translation>Průvodci</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="132"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="135"/>
         <source>Edit</source>
         <translation>Editace</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="136"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="139"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="140"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="143"/>
         <source>Search</source>
         <translation>Hledat</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="144"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="147"/>
         <source>View</source>
         <translation>Pohled</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="148"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="151"/>
         <source>Macro</source>
         <translation>Makro</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="152"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="155"/>
         <source>Bookmarks</source>
         <translation>Záložky</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="162"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="165"/>
         <source>Window</source>
         <translation>Okno</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="332"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="335"/>
         <source>Edit shortcuts</source>
         <translation>Editovat kláv.zkratky</translation>
     </message>
@@ -28179,27 +28212,27 @@ Not connected</source>
         <translation>Vybrat filtr založený na zkratkách nebo alternativních zkratkách</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="156"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="159"/>
         <source>Spelling</source>
         <translation>Pravopis</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="176"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="179"/>
         <source>Web Browser</source>
         <translation>Web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="292"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="295"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; has already been allocated to the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; byla již spojena s akcí &lt;b&gt;{1}&lt;/b&gt;. Odebrat toto spojení?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="314"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="317"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; hides the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; skrývá akci &lt;b&gt;{1}&lt;/b&gt;. Odebrat toto spojení?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="332"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="335"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is hidden by the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; je skrytá v akci &lt;b&gt;{1}&lt;/b&gt;. Odebrat toto spojení?&lt;/p&gt;</translation>
     </message>
@@ -28368,123 +28401,123 @@ Not connected</source>
 <context>
     <name>SqlBrowser</name>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="179"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="178"/>
         <source>SQL Browser</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="72"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="71"/>
         <source>SQL Browser startup problem</source>
         <translation>SQL Browser problém při spuštění</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="86"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="85"/>
         <source>Add Connection</source>
         <translation>Přidat spojení</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="86"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="85"/>
         <source>Add &amp;Connection...</source>
         <translation>Přidat &amp;spojení...</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="90"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="89"/>
         <source>Open a dialog to add a new database connection</source>
         <translation>Otevře dialog pro přidání nového spojení do databáze</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="92"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="91"/>
         <source>&lt;b&gt;Add Connection&lt;/b&gt;&lt;p&gt;This opens a dialog to add a new database connection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat spojení&lt;/b&gt;&lt;p&gt;Otevře dialog pro přidání spojení do databáze.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="99"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="98"/>
         <source>Quit</source>
         <translation>Konec</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="99"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="98"/>
         <source>&amp;Quit</source>
         <translation>&amp;Konec</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="99"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="98"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="104"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="103"/>
         <source>Quit the SQL browser</source>
         <translation>Ukončit SQL browser</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="105"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="104"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the SQL browser.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konec&lt;/b&gt;&lt;p&gt;Ukončit SQL browser.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="111"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="110"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="111"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="110"/>
         <source>&amp;About</source>
         <translation>O &amp;aplikaci</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="114"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="113"/>
         <source>Display information about this software</source>
         <translation>Zobrazit informace a tomto software</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="115"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="114"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O aplikaci&lt;/b&gt;&lt;p&gt;Zobrazí se informace o tomto software.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="122"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="121"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="122"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="121"/>
         <source>About &amp;Qt</source>
         <translation>O &amp;Qt</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="125"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="124"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Zobrazit informace o Qt toolkitu</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="127"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="126"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O Qt&lt;/b&gt;&lt;p&gt;Zobrazit informace o Qt toolkitu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="140"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="139"/>
         <source>&amp;File</source>
         <translation>S&amp;oubor</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="148"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="147"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="157"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="156"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="168"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="167"/>
         <source>&lt;h3&gt;About SQL Browser&lt;/h3&gt;&lt;p&gt;The SQL browser window is a little tool to examine the data and the schema of a database and to execute queries on a database.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;O SQL Browseru&lt;/h3&gt;&lt;p&gt;SQL Browser je malý nástroj pro zkoušení databázových dat a schémat a provádění dotazů do databáze.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="55"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="54"/>
         <source>Invalid URL: {0}</source>
         <translation>Neplatný URL: {0}</translation>
     </message>
@@ -28494,7 +28527,7 @@ Not connected</source>
         <translation type="obsolete">Nelze otevčít spojení: %s</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="62"/>
+        <location filename="SqlBrowser/SqlBrowser.py" line="61"/>
         <source>Unable to open connection: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28552,27 +28585,27 @@ Not connected</source>
         <translation>Smaže aktuální řádek</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowserWidget.py" line="39"/>
+        <location filename="SqlBrowser/SqlBrowserWidget.py" line="41"/>
         <source>No database drivers found</source>
         <translation>Ovladač databáze nebyl nalezen</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowserWidget.py" line="39"/>
+        <location filename="SqlBrowser/SqlBrowserWidget.py" line="41"/>
         <source>This tool requires at least one Qt database driver. Please check the Qt documentation how to build the Qt SQL plugins.</source>
         <translation>Tento nástroj požaduje alespoň jeden Qt databázový ovladač. Prosím, zjistěte si v Ot dokumentaci jak vytvořit Qt SQL pluginy.</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowserWidget.py" line="52"/>
+        <location filename="SqlBrowser/SqlBrowserWidget.py" line="51"/>
         <source>Ready</source>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowserWidget.py" line="151"/>
+        <location filename="SqlBrowser/SqlBrowserWidget.py" line="150"/>
         <source>Unable to open database</source>
         <translation>Databázi nelze otevřít</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowserWidget.py" line="292"/>
+        <location filename="SqlBrowser/SqlBrowserWidget.py" line="289"/>
         <source>Query OK.</source>
         <translation>Dotaz OK.</translation>
     </message>
@@ -28582,12 +28615,12 @@ Not connected</source>
         <translation>eric5 SQL prohlížeč</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowserWidget.py" line="151"/>
+        <location filename="SqlBrowser/SqlBrowserWidget.py" line="150"/>
         <source>An error occurred while opening the connection.</source>
         <translation>Během otevírání spojení se objevila chyba.</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlBrowserWidget.py" line="294"/>
+        <location filename="SqlBrowser/SqlBrowserWidget.py" line="291"/>
         <source>Query OK, number of affected rows: {0}</source>
         <translation>Dotaz OK, počet dotčených řádek: {0}</translation>
     </message>
@@ -28683,17 +28716,17 @@ Not connected</source>
 <context>
     <name>SqlConnectionWidget</name>
     <message>
-        <location filename="SqlBrowser/SqlConnectionWidget.py" line="35"/>
+        <location filename="SqlBrowser/SqlConnectionWidget.py" line="39"/>
         <source>Database</source>
         <translation>Databáze</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlConnectionWidget.py" line="37"/>
+        <location filename="SqlBrowser/SqlConnectionWidget.py" line="41"/>
         <source>Refresh</source>
         <translation>Obnovit</translation>
     </message>
     <message>
-        <location filename="SqlBrowser/SqlConnectionWidget.py" line="38"/>
+        <location filename="SqlBrowser/SqlConnectionWidget.py" line="42"/>
         <source>Show Schema</source>
         <translation>Zobrazit schéma</translation>
     </message>
@@ -29393,12 +29426,12 @@ Not connected</source>
         <translation>Nastavit interval...</translation>
     </message>
     <message>
-        <location filename="VCS/StatusMonitorLed.py" line="120"/>
+        <location filename="VCS/StatusMonitorLed.py" line="119"/>
         <source>VCS Status Monitor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="VCS/StatusMonitorLed.py" line="120"/>
+        <location filename="VCS/StatusMonitorLed.py" line="119"/>
         <source>Enter monitor interval [s]</source>
         <translation>Zadejte interval monitoringu (s)</translation>
     </message>
@@ -29416,52 +29449,52 @@ Not connected</source>
 <context>
     <name>Subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="212"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="214"/>
         <source>Create project in repository</source>
         <translation>Vytvořit projekt v repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="212"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="214"/>
         <source>The project could not be created in the repository. Maybe the given repository doesn&apos;t exist or the repository server is down.</source>
         <translation>Projekt nemůže být v repozitáři vytvořen. Buďto daný repozitář neexistuje nebo se nelze připojit k serveru s repozitářem.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="234"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="236"/>
         <source>New project</source>
         <translation>Nový projekt</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="234"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="236"/>
         <source>The project could not be checked out of the repository.&lt;br /&gt;Restoring the original contents.</source>
         <translation>Projekt se nepodařilo stáhnout (checkout) z repozitáře. &lt;br /&gt;Obnovuji původní obsah.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="304"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="306"/>
         <source>Importing project into Subversion repository</source>
         <translation>Importovat projekt do Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="354"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="356"/>
         <source>Subversion Checkout</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="416"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="418"/>
         <source>The tag must be a normal tag (tags) or a branch tag (branches). Please select from the list.</source>
         <translation>Tag musí být normální tag (tagy) nebo tag větve (větví). Prosím vyberte ze seznamu.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="375"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="377"/>
         <source>Checking project out of Subversion repository</source>
         <translation>Checkout projektu ze Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="416"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="418"/>
         <source>Subversion Export</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="436"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="438"/>
         <source>Exporting project from Subversion repository</source>
         <translation>Exportuje projekt z Subversion repozitáře</translation>
     </message>
@@ -29746,12 +29779,12 @@ Not connected</source>
         <translation>mimo verzi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="176"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="178"/>
         <source>The svn process did not finish within 30s.</source>
         <translation>Proces svn neskončil do 30s.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="178"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="180"/>
         <source>Could not start the svn executable.</source>
         <translation>Nelze spustit svn proces.</translation>
     </message>
@@ -29796,7 +29829,7 @@ Not connected</source>
         <translation>Seznam změn byl přesunut</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="173"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="175"/>
         <source>The svn process finished with the exit code {0}</source>
         <translation>Proces svn skončil exit kódem {0}</translation>
     </message>
@@ -29831,7 +29864,7 @@ Not connected</source>
         <translation>Kopírování {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="320"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="322"/>
         <source>Imported revision {0}.
 </source>
         <translation>Inportovaná revize {0}.</translation>
@@ -30908,56 +30941,56 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zpracovávám váš požadavek, prosím čekejte...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="55"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="54"/>
         <source>Added</source>
         <translation>Přidáno</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="56"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="55"/>
         <source>Deleted</source>
         <translation>Smazáno</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="57"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="56"/>
         <source>Modified</source>
         <translation>Změněno</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="60"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="59"/>
         <source>revision</source>
         <translation>revize</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="126"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="125"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="126"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="125"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="138"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="137"/>
         <source>diff to {0}</source>
         <translation>diff na {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="146"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="145"/>
         <source>&lt;i&gt;author: {0}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;Autor: {0}&lt;/i&gt;&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="149"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="148"/>
         <source>&lt;i&gt;date: {0}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;datum: {0}&lt;/i&gt;&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="166"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="165"/>
         <source> (copied from {0}, revision {1})</source>
         <translation> (zkopírováno z {0}, revize {1})</translation>
     </message>
@@ -33795,12 +33828,12 @@ na položku otevře okno editoru a kurzor nastaví na příslušnou řádku.&lt;
 <context>
     <name>SyntaxCheckerPlugin</name>
     <message>
-        <location filename="Plugins/PluginSyntaxChecker.py" line="164"/>
+        <location filename="Plugins/PluginSyntaxChecker.py" line="158"/>
         <source>Check Syntax</source>
         <translation>Kontrola syntaxe</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginSyntaxChecker.py" line="164"/>
+        <location filename="Plugins/PluginSyntaxChecker.py" line="158"/>
         <source>&amp;Syntax...</source>
         <translation>&amp;Syntaxe...</translation>
     </message>
@@ -33810,7 +33843,7 @@ na položku otevře okno editoru a kurzor nastaví na příslušnou řádku.&lt;
         <translation>Kontrola syntaxe.</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginSyntaxChecker.py" line="167"/>
+        <location filename="Plugins/PluginSyntaxChecker.py" line="161"/>
         <source>&lt;b&gt;Check Syntax...&lt;/b&gt;&lt;p&gt;This checks Python files for syntax errors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kontrola Syntaxe...&lt;/b&gt;&lt;p&gt;Zkontroluje všechny Python soubory na syntaktické chyby.&lt;/p&gt;</translation>
     </message>
@@ -33833,239 +33866,239 @@ na položku otevře okno editoru a kurzor nastaví na příslušnou řádku.&lt;
         <translation>Vybrat jazykový soubor</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="144"/>
+        <location filename="Tools/TRPreviewer.py" line="142"/>
         <source>&amp;Open UI Files...</source>
         <translation>&amp;Otevřít UI soubory...</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="146"/>
+        <location filename="Tools/TRPreviewer.py" line="144"/>
         <source>Open UI files for display</source>
         <translation>Otevřít UI soubory pro zobrazení</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="147"/>
+        <location filename="Tools/TRPreviewer.py" line="145"/>
         <source>&lt;b&gt;Open UI Files&lt;/b&gt;&lt;p&gt;This opens some UI files for display.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít UI soubory&lt;/b&gt;&lt;p&gt;Toto otevře a zobrazí vybrané UI soubory.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="153"/>
+        <location filename="Tools/TRPreviewer.py" line="151"/>
         <source>Open &amp;Translation Files...</source>
         <translation>O&amp;tevřít soubory s překlady...</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="155"/>
+        <location filename="Tools/TRPreviewer.py" line="153"/>
         <source>Open Translation files for display</source>
         <translation>Otevřou se a zobrazí soubory s překlady</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="156"/>
+        <location filename="Tools/TRPreviewer.py" line="154"/>
         <source>&lt;b&gt;Open Translation Files&lt;/b&gt;&lt;p&gt;This opens some translation files for display.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít soubory s překlady&lt;/b&gt;&lt;p&gt;Toto otevře a zobrazí vybrané soubory s překlady.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="162"/>
+        <location filename="Tools/TRPreviewer.py" line="160"/>
         <source>&amp;Reload Translations</source>
         <translation>&amp;Znovu načíst překlady</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="164"/>
+        <location filename="Tools/TRPreviewer.py" line="162"/>
         <source>Reload the loaded translations</source>
         <translation>Znovu načíst načtené překlady</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="165"/>
+        <location filename="Tools/TRPreviewer.py" line="163"/>
         <source>&lt;b&gt;Reload Translations&lt;/b&gt;&lt;p&gt;This reloads the translations for the loaded languages.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Znovu načíst překlady&lt;/b&gt;&lt;p&gt;Znovu načte překlady pro načtené jazyky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="171"/>
+        <location filename="Tools/TRPreviewer.py" line="169"/>
         <source>&amp;Quit</source>
         <translation>&amp;Konec</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="173"/>
+        <location filename="Tools/TRPreviewer.py" line="171"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="174"/>
+        <location filename="Tools/TRPreviewer.py" line="172"/>
         <source>Quit the application</source>
         <translation>Ukončit aplikaci</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="175"/>
+        <location filename="Tools/TRPreviewer.py" line="173"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konec&lt;/b&gt;&lt;p&gt;Aplikace se ukončí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="181"/>
+        <location filename="Tools/TRPreviewer.py" line="179"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Co je to?</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="183"/>
+        <location filename="Tools/TRPreviewer.py" line="181"/>
         <source>Shift+F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="184"/>
+        <location filename="Tools/TRPreviewer.py" line="182"/>
         <source>Context sensitive help</source>
         <translation>Kontextově senzitivní nápověda</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="185"/>
+        <location filename="Tools/TRPreviewer.py" line="183"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit kontextově senzitivní nápovědu&lt;/b&gt;&lt;p&gt;V režimu &quot;Co je to?&quot; se nad různými prvky aplikace u kurzoru zobrazí otazník. Když pak kliknete na tyto prvky, zobrazí se krátký popis co daný prvek znamená a jak jej použít. V dialogových oknech se tato funkce spustí tlačítkem kontextové nápovědy na horní liště.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="195"/>
+        <location filename="Tools/TRPreviewer.py" line="193"/>
         <source>&amp;About</source>
         <translation>O &amp;aplikaci</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="196"/>
+        <location filename="Tools/TRPreviewer.py" line="194"/>
         <source>Display information about this software</source>
         <translation>Zobrazit informace a tomto software</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="197"/>
+        <location filename="Tools/TRPreviewer.py" line="195"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O aplikaci&lt;/b&gt;&lt;p&gt;Zobrazí se informace o tomto software.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="203"/>
+        <location filename="Tools/TRPreviewer.py" line="201"/>
         <source>About &amp;Qt</source>
         <translation>O &amp;Qt</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="204"/>
+        <location filename="Tools/TRPreviewer.py" line="202"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Zobrazit informace o Qt toolkitu</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="206"/>
+        <location filename="Tools/TRPreviewer.py" line="204"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;A Qt&lt;/b&gt;&lt;p&gt;Zobrazit informace o Qt toolkitu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="212"/>
+        <location filename="Tools/TRPreviewer.py" line="210"/>
         <source>&amp;Tile</source>
         <translation>&amp;Dlaždice</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="213"/>
+        <location filename="Tools/TRPreviewer.py" line="211"/>
         <source>Tile the windows</source>
         <translation>Okna do dlaždic</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="214"/>
+        <location filename="Tools/TRPreviewer.py" line="212"/>
         <source>&lt;b&gt;Tile the windows&lt;/b&gt;&lt;p&gt;Rearrange and resize the windows so that they are tiled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okna do dlaždic&lt;/b&gt;&lt;p&gt;Umístit okna do dlaždic.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="220"/>
+        <location filename="Tools/TRPreviewer.py" line="218"/>
         <source>&amp;Cascade</source>
         <translation>&amp;Kaskáda</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="221"/>
+        <location filename="Tools/TRPreviewer.py" line="219"/>
         <source>Cascade the windows</source>
         <translation>Okna do kaskády</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="222"/>
+        <location filename="Tools/TRPreviewer.py" line="220"/>
         <source>&lt;b&gt;Cascade the windows&lt;/b&gt;&lt;p&gt;Rearrange and resize the windows so that they are cascaded.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okna do kaskády&lt;/b&gt;&lt;p&gt;Umístit okna do kaskády.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="228"/>
+        <location filename="Tools/TRPreviewer.py" line="226"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="230"/>
+        <location filename="Tools/TRPreviewer.py" line="228"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="231"/>
+        <location filename="Tools/TRPreviewer.py" line="229"/>
         <source>Close the current window</source>
         <translation>Zavřít aktuální okno</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="232"/>
+        <location filename="Tools/TRPreviewer.py" line="230"/>
         <source>&lt;b&gt;Close Window&lt;/b&gt;&lt;p&gt;Close the current window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít okno&lt;/b&gt;&lt;p&gt;Zavřít aktuální okno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="238"/>
+        <location filename="Tools/TRPreviewer.py" line="236"/>
         <source>Clos&amp;e All</source>
         <translation>Zavřít vš&amp;e</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="239"/>
+        <location filename="Tools/TRPreviewer.py" line="237"/>
         <source>Close all windows</source>
         <translation>Zavřít všechna okna</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="240"/>
+        <location filename="Tools/TRPreviewer.py" line="238"/>
         <source>&lt;b&gt;Close All Windows&lt;/b&gt;&lt;p&gt;Close all windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít všechna okna&lt;/b&gt;&lt;p&gt;Zavřou se všechna okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="252"/>
+        <location filename="Tools/TRPreviewer.py" line="250"/>
         <source>&amp;File</source>
         <translation>S&amp;oubor</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="271"/>
+        <location filename="Tools/TRPreviewer.py" line="268"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="282"/>
+        <location filename="Tools/TRPreviewer.py" line="279"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="292"/>
+        <location filename="Tools/TRPreviewer.py" line="289"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="336"/>
+        <location filename="Tools/TRPreviewer.py" line="333"/>
         <source>TR Previewer</source>
         <translation>TR náhled</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="326"/>
+        <location filename="Tools/TRPreviewer.py" line="323"/>
         <source>&lt;h3&gt; About TR Previewer &lt;/h3&gt;&lt;p&gt;The TR Previewer loads and displays Qt User-Interface files and translation files and shows dialogs for a selected language.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;O TR náhledu&lt;/h3&gt;&lt;p&gt;TR náhled načte a zobrazí Qt User-Interface soubory a překlady a zobrazí dialog pro vybraný jazyk.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="342"/>
+        <location filename="Tools/TRPreviewer.py" line="339"/>
         <source>Select UI files</source>
         <translation>Vybrat UI soubory</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="342"/>
+        <location filename="Tools/TRPreviewer.py" line="339"/>
         <source>Qt User-Interface Files (*.ui)</source>
         <translation>Qt User-Interface soubory (*.ui)</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="357"/>
+        <location filename="Tools/TRPreviewer.py" line="354"/>
         <source>Select translation files</source>
         <translation>Výběr souborů s překlady</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="357"/>
+        <location filename="Tools/TRPreviewer.py" line="354"/>
         <source>Qt Translation Files (*.qm)</source>
         <translation>Qt soubory s překlady (*.ts *.qm)</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="263"/>
+        <location filename="Tools/TRPreviewer.py" line="261"/>
         <source>&amp;Window</source>
         <translation>O&amp;kno</translation>
     </message>
@@ -34073,82 +34106,82 @@ na položku otevře okno editoru a kurzor nastaví na příslušnou řádku.&lt;
 <context>
     <name>TabWidget</name>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="190"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="189"/>
         <source>Close the current editor</source>
         <translation>Zavřít aktuální editor</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="220"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="218"/>
         <source>Move Left</source>
         <translation>Posun doleva</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="223"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="221"/>
         <source>Move Right</source>
         <translation>Posun doprava</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="232"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="230"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="236"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="234"/>
         <source>Close All</source>
         <translation>Zavřít vše</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="239"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="237"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="241"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="239"/>
         <source>Save As...</source>
         <translation>Uložit jako...</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="243"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="241"/>
         <source>Save All</source>
         <translation>Uložit vše</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="246"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="244"/>
         <source>Save to Project</source>
         <translation>Uložit do projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="249"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="247"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="226"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="224"/>
         <source>Move First</source>
         <translation>Jít na první</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="229"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="227"/>
         <source>Move Last</source>
         <translation>Jít na poslední</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="180"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="179"/>
         <source>Show a navigation menu</source>
         <translation>Zobrazit menu navigace</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="234"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="232"/>
         <source>Close Others</source>
         <translation>Zavřít ostatní</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="383"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="379"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="252"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="250"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished">Kopírovat cestu do schránky</translation>
     </message>
@@ -34206,12 +34239,12 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TabnannyPlugin</name>
     <message>
-        <location filename="Plugins/PluginTabnanny.py" line="166"/>
+        <location filename="Plugins/PluginTabnanny.py" line="160"/>
         <source>Check Indentations</source>
         <translation>Kontrola odsazení</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginTabnanny.py" line="166"/>
+        <location filename="Plugins/PluginTabnanny.py" line="160"/>
         <source>&amp;Indentations...</source>
         <translation>&amp;Odsazení...</translation>
     </message>
@@ -34221,7 +34254,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Kontrola odsazení za použití tabnanny.</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginTabnanny.py" line="169"/>
+        <location filename="Plugins/PluginTabnanny.py" line="163"/>
         <source>&lt;b&gt;Check Indentations...&lt;/b&gt;&lt;p&gt;This checks Python files for bad indentations using tabnanny.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kontrola odsazení....&lt;/b&gt;&lt;p&gt;Zkontroluje všechny Python soubory na správné odsazení za použití funkce tabnanny.&lt;/p&gt;</translation>
     </message>
@@ -34229,12 +34262,12 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>Tabview</name>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="775"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="796"/>
         <source>Untitled {0}</source>
         <translation>Beze jména {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1085"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1105"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
@@ -34503,57 +34536,57 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="347"/>
+        <location filename="Tasks/TaskViewer.py" line="349"/>
         <source>Filename</source>
         <translation>Jméno souboru</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="347"/>
+        <location filename="Tasks/TaskViewer.py" line="349"/>
         <source>Line</source>
         <translation>Řádek</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="397"/>
+        <location filename="Tasks/TaskViewer.py" line="398"/>
         <source>&amp;New Task...</source>
         <translation>&amp;Nová úloha...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="371"/>
+        <location filename="Tasks/TaskViewer.py" line="373"/>
         <source>&amp;Go To</source>
         <translation>&amp;Jít na</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="373"/>
+        <location filename="Tasks/TaskViewer.py" line="375"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopírovat</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="403"/>
+        <location filename="Tasks/TaskViewer.py" line="404"/>
         <source>&amp;Paste</source>
         <translation>V&amp;ložit</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="375"/>
+        <location filename="Tasks/TaskViewer.py" line="377"/>
         <source>&amp;Delete</source>
         <translation>Sma&amp;zat</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="377"/>
+        <location filename="Tasks/TaskViewer.py" line="379"/>
         <source>&amp;Mark Completed</source>
         <translation>Značka &amp;Hotovo</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="406"/>
+        <location filename="Tasks/TaskViewer.py" line="407"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>Smaza&amp;t hotové úlohy</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="382"/>
+        <location filename="Tasks/TaskViewer.py" line="384"/>
         <source>P&amp;roperties...</source>
         <translation>&amp;Natavení...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="410"/>
+        <location filename="Tasks/TaskViewer.py" line="411"/>
         <source>&amp;Filtered display</source>
         <translation>&amp;Filtrovaný výstup</translation>
     </message>
@@ -34568,32 +34601,32 @@ the respective line.&lt;/p&gt;</source>
         <translation>&amp;Změnit šířky sloupců</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="715"/>
+        <location filename="Tasks/TaskViewer.py" line="714"/>
         <source>Activate task filter</source>
         <translation>Aktivovat filtr úloh</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="715"/>
+        <location filename="Tasks/TaskViewer.py" line="714"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Filtr úloh nemá žádný aktivní. Chcete konfigurovat nastavení filtru?</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="400"/>
+        <location filename="Tasks/TaskViewer.py" line="401"/>
         <source>&amp;Regenerate project tasks</source>
         <translation>Znovu vygene&amp;rovat úlohy projektu</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <location filename="Tasks/TaskViewer.py" line="754"/>
         <source>Extracting project tasks...</source>
         <translation>Extrahovat úlohy projektu...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <location filename="Tasks/TaskViewer.py" line="754"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="347"/>
+        <location filename="Tasks/TaskViewer.py" line="349"/>
         <source>Summary</source>
         <translation>Souhrn</translation>
     </message>
@@ -34603,7 +34636,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="761"/>
+        <location filename="Tasks/TaskViewer.py" line="760"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation>Extrahování úloh projektu....{0}</translation>
@@ -34881,42 +34914,42 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Nápověda o šablonách...</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="505"/>
+        <location filename="Templates/TemplateViewer.py" line="504"/>
         <source>Remove Template</source>
         <translation>Odebrat šablonu</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="531"/>
+        <location filename="Templates/TemplateViewer.py" line="530"/>
         <source>Import Templates</source>
         <translation>Importovat šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="544"/>
+        <location filename="Templates/TemplateViewer.py" line="543"/>
         <source>Export Templates</source>
         <translation>Exportovat šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="544"/>
+        <location filename="Templates/TemplateViewer.py" line="543"/>
         <source>Templates Files (*.e4c);; All Files (*)</source>
         <translation>Soubory šablon (*.e4c);; Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="564"/>
+        <location filename="Templates/TemplateViewer.py" line="563"/>
         <source>Template Help</source>
         <translation>Nápověda šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="773"/>
+        <location filename="Templates/TemplateViewer.py" line="778"/>
         <source>Edit Template Group</source>
         <translation>Editovat skupinu šablon</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="868"/>
+        <location filename="Templates/TemplateViewer.py" line="873"/>
         <source>Save templates</source>
         <translation>Uložit šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="928"/>
+        <location filename="Templates/TemplateViewer.py" line="933"/>
         <source>Read templates</source>
         <translation>Načíst šablony</translation>
     </message>
@@ -34926,33 +34959,33 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="505"/>
+        <location filename="Templates/TemplateViewer.py" line="504"/>
         <source>&lt;p&gt;Do you really want to remove &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Opravdu chcete odebrat &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="564"/>
+        <location filename="Templates/TemplateViewer.py" line="563"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog. There is an example template available in the Examples subdirectory of the eric5 distribution.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Skupiny šablon&lt;/b&gt; znamenají seskupování jednotlivých šablon. Skupiny mají atributy, které specifikují použitý programovací jazyk. Aby se mohly zadat údaje šablony, musí být definována alespoň jedna šablona.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Záznamy šablon&lt;/b&gt; jsou aktuální šablony. Jsou seskupeny do skupin. Nápověda jak je definovat je dostupná v dialogu editace šablony. V podadresáři distribuce Eric5 je k prostudování jeden příklad šablony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="773"/>
+        <location filename="Templates/TemplateViewer.py" line="778"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Skupina šablon se jménem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="868"/>
+        <location filename="Templates/TemplateViewer.py" line="873"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru se šablonami &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="918"/>
+        <location filename="Templates/TemplateViewer.py" line="923"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor se šablonami &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="928"/>
+        <location filename="Templates/TemplateViewer.py" line="933"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor se šablonami &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
@@ -35945,27 +35978,27 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TranslationsDict</name>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="472"/>
+        <location filename="Tools/TRPreviewer.py" line="471"/>
         <source>Set Translator</source>
         <translation>Nastavit překladatele</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="612"/>
+        <location filename="Tools/TRPreviewer.py" line="611"/>
         <source>Load Translator</source>
         <translation>Načíst překladatele</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="444"/>
+        <location filename="Tools/TRPreviewer.py" line="443"/>
         <source>&lt;p&gt;The translation filename &lt;b&gt;{0}&lt;/b&gt; is invalid.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Jméno souboru s překladem &lt;b&gt;{0}&lt;/b&gt; je neplatné.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="472"/>
+        <location filename="Tools/TRPreviewer.py" line="471"/>
         <source>&lt;p&gt;The translator &lt;b&gt;{0}&lt;/b&gt; is not known.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Překladatel &lt;b&gt;{0}&lt;/b&gt; není znám.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="612"/>
+        <location filename="Tools/TRPreviewer.py" line="611"/>
         <source>&lt;p&gt;The translation file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s překladem &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
@@ -35973,117 +36006,117 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TrayStarter</name>
     <message>
-        <location filename="Tools/TrayStarter.py" line="52"/>
+        <location filename="Tools/TrayStarter.py" line="51"/>
         <source>Recent Projects</source>
         <translation>Poslední projekty</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="64"/>
+        <location filename="Tools/TrayStarter.py" line="61"/>
         <source>Recent Files</source>
         <translation>Poslední soubory</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="75"/>
+        <location filename="Tools/TrayStarter.py" line="71"/>
         <source>QRegExp editor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="76"/>
+        <location filename="Tools/TrayStarter.py" line="72"/>
         <source>Python re editor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="79"/>
+        <location filename="Tools/TrayStarter.py" line="75"/>
         <source>UI Previewer</source>
         <translation>UI náhled</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="81"/>
+        <location filename="Tools/TrayStarter.py" line="77"/>
         <source>Translations Previewer</source>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="83"/>
+        <location filename="Tools/TrayStarter.py" line="79"/>
         <source>Unittest</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="89"/>
+        <location filename="Tools/TrayStarter.py" line="85"/>
         <source>Compare Files</source>
         <translation>Porovnání souborů</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="91"/>
+        <location filename="Tools/TrayStarter.py" line="87"/>
         <source>Compare Files side by side</source>
         <translation>Porovnat soubory stranu proti straně</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="107"/>
+        <location filename="Tools/TrayStarter.py" line="103"/>
         <source>Preferences</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="124"/>
+        <location filename="Tools/TrayStarter.py" line="120"/>
         <source>Quit</source>
         <translation>Konec</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="200"/>
+        <location filename="Tools/TrayStarter.py" line="196"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="200"/>
+        <location filename="Tools/TrayStarter.py" line="196"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="99"/>
+        <location filename="Tools/TrayStarter.py" line="95"/>
         <source>Install Plugin</source>
         <translation>Instalovat plugin</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="101"/>
+        <location filename="Tools/TrayStarter.py" line="97"/>
         <source>Uninstall Plugin</source>
         <translation>Odinstalovat plugin</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="103"/>
+        <location filename="Tools/TrayStarter.py" line="99"/>
         <source>Plugin Repository</source>
         <translation>Plugin repozitář</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="58"/>
+        <location filename="Tools/TrayStarter.py" line="56"/>
         <source>Recent Multiprojects</source>
         <translation>Poslední multiprojekty</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="95"/>
+        <location filename="Tools/TrayStarter.py" line="91"/>
         <source>SQL Browser</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="85"/>
+        <location filename="Tools/TrayStarter.py" line="81"/>
         <source>Web Browser</source>
         <translation>Web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="69"/>
+        <location filename="Tools/TrayStarter.py" line="65"/>
         <source>Eric5 tray starter</source>
         <translation>Eric5 tray startér</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="109"/>
+        <location filename="Tools/TrayStarter.py" line="105"/>
         <source>eric5 IDE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="111"/>
+        <location filename="Tools/TrayStarter.py" line="107"/>
         <source>eric5 Mini Editor</source>
         <translation>eric5 Mini Editor</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="200"/>
+        <location filename="Tools/TrayStarter.py" line="196"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit proces.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -36091,7 +36124,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UIPreviewer</name>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="286"/>
+        <location filename="Tools/UIPreviewer.py" line="285"/>
         <source>UI Previewer</source>
         <translation>UI náhled</translation>
     </message>
@@ -36106,262 +36139,262 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Výběr GUI tématu</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="114"/>
+        <location filename="Tools/UIPreviewer.py" line="113"/>
         <source>&amp;Open File</source>
         <translation>&amp;Otevřít soubor</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="116"/>
+        <location filename="Tools/UIPreviewer.py" line="115"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="117"/>
+        <location filename="Tools/UIPreviewer.py" line="116"/>
         <source>Open a UI file for display</source>
         <translation>Otevřít UI soubory pro zobrazení</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="118"/>
+        <location filename="Tools/UIPreviewer.py" line="117"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new UI file for display.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít soubor&lt;/b&gt;&lt;p&gt;Toto otevře a zobrazí nový UI soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="124"/>
+        <location filename="Tools/UIPreviewer.py" line="123"/>
         <source>&amp;Print</source>
         <translation>&amp;Tisk</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="126"/>
+        <location filename="Tools/UIPreviewer.py" line="125"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="127"/>
+        <location filename="Tools/UIPreviewer.py" line="126"/>
         <source>Print a screen capture</source>
         <translation>Vytisknout sejmutou obrazovku</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="128"/>
+        <location filename="Tools/UIPreviewer.py" line="127"/>
         <source>&lt;b&gt;Print&lt;/b&gt;&lt;p&gt;Print a screen capture.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tisk&lt;/b&gt;&lt;p&gt;Vytiskne sejmutou obrazovku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="144"/>
+        <location filename="Tools/UIPreviewer.py" line="143"/>
         <source>&amp;Screen Capture</source>
         <translation>&amp;Sejmout obrazovku</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="146"/>
+        <location filename="Tools/UIPreviewer.py" line="145"/>
         <source>Ctrl+S</source>
         <comment>File|Screen Capture</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="148"/>
+        <location filename="Tools/UIPreviewer.py" line="147"/>
         <source>Save a screen capture to an image file</source>
         <translation>Uložit sejmutou obrazovku jako obrázek</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="149"/>
+        <location filename="Tools/UIPreviewer.py" line="148"/>
         <source>&lt;b&gt;Screen Capture&lt;/b&gt;&lt;p&gt;Save a screen capture to an image file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sejmout obrazovku&lt;/b&gt;&lt;p&gt;Vytvoří se otisk obrazovky a uloží se do souboru jako obrázek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="155"/>
+        <location filename="Tools/UIPreviewer.py" line="154"/>
         <source>&amp;Quit</source>
         <translation>&amp;Konec</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="157"/>
+        <location filename="Tools/UIPreviewer.py" line="156"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="158"/>
+        <location filename="Tools/UIPreviewer.py" line="157"/>
         <source>Quit the application</source>
         <translation>Ukončit aplikaci</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="159"/>
+        <location filename="Tools/UIPreviewer.py" line="158"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konec&lt;/b&gt;&lt;p&gt;Aplikace se ukončí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="165"/>
+        <location filename="Tools/UIPreviewer.py" line="164"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopírovat</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="167"/>
+        <location filename="Tools/UIPreviewer.py" line="166"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="168"/>
+        <location filename="Tools/UIPreviewer.py" line="167"/>
         <source>Copy screen capture to clipboard</source>
         <translation>Uložit sejmutou obrazovku do schránky</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="169"/>
+        <location filename="Tools/UIPreviewer.py" line="168"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy screen capture to clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopírovat&lt;/b&gt;&lt;p&gt;Kopírovat sejmutou obrazovku do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="175"/>
+        <location filename="Tools/UIPreviewer.py" line="174"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Co je to?</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="177"/>
+        <location filename="Tools/UIPreviewer.py" line="176"/>
         <source>Shift+F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="178"/>
+        <location filename="Tools/UIPreviewer.py" line="177"/>
         <source>Context sensitive help</source>
         <translation>Kontextově senzitivní nápověda</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="179"/>
+        <location filename="Tools/UIPreviewer.py" line="178"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit kontextově senzitivní nápovědu&lt;/b&gt;&lt;p&gt;V režimu &quot;Co je to?&quot; se nad různými prvky aplikace u kurzoru zobrazí otazník. Když pak kliknete na tyto prvky, zobrazí se krátký popis co daný prvek znamená a jak jej použít. V dialogových oknech se tato funkce spustí tlačítkem kontextové nápovědy na horní liště.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="189"/>
+        <location filename="Tools/UIPreviewer.py" line="188"/>
         <source>&amp;About</source>
         <translation>O &amp;aplikaci</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="190"/>
+        <location filename="Tools/UIPreviewer.py" line="189"/>
         <source>Display information about this software</source>
         <translation>Zobrazit informace a tomto software</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="191"/>
+        <location filename="Tools/UIPreviewer.py" line="190"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O aplikaci&lt;/b&gt;&lt;p&gt;Zobrazí se informace o tomto software.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="197"/>
+        <location filename="Tools/UIPreviewer.py" line="196"/>
         <source>About &amp;Qt</source>
         <translation>O &amp;Qt</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="198"/>
+        <location filename="Tools/UIPreviewer.py" line="197"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Zobrazit informace o Qt toolkitu</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="200"/>
+        <location filename="Tools/UIPreviewer.py" line="199"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;A Qt&lt;/b&gt;&lt;p&gt;Zobrazit informace o Qt toolkitu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="212"/>
+        <location filename="Tools/UIPreviewer.py" line="211"/>
         <source>&amp;File</source>
         <translation>S&amp;oubor</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="222"/>
+        <location filename="Tools/UIPreviewer.py" line="221"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="228"/>
+        <location filename="Tools/UIPreviewer.py" line="227"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="239"/>
+        <location filename="Tools/UIPreviewer.py" line="238"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="249"/>
+        <location filename="Tools/UIPreviewer.py" line="248"/>
         <source>Edit</source>
         <translation>Editovat</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="253"/>
+        <location filename="Tools/UIPreviewer.py" line="252"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="276"/>
+        <location filename="Tools/UIPreviewer.py" line="275"/>
         <source>&lt;h3&gt; About UI Previewer &lt;/h3&gt;&lt;p&gt;The UI Previewer loads and displays Qt User-Interface files with various styles, which are selectable via a selection list.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;O UI náhledu&lt;/h3&gt;&lt;p&gt;UI náhled načte a zobrazí Qt User-Interface soubory s různými styly, které lze vybrat ze seznamu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="292"/>
+        <location filename="Tools/UIPreviewer.py" line="291"/>
         <source>Select UI file</source>
         <translation>Vybrat UI soubor</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="292"/>
+        <location filename="Tools/UIPreviewer.py" line="291"/>
         <source>Qt User-Interface Files (*.ui)</source>
         <translation>Qt User-Interface soubory (*.ui)</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="329"/>
+        <location filename="Tools/UIPreviewer.py" line="328"/>
         <source>Load UI File</source>
         <translation>Načíst UI soubor</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="454"/>
+        <location filename="Tools/UIPreviewer.py" line="453"/>
         <source>Save Image</source>
         <translation>Uložit obrázek</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="507"/>
+        <location filename="Tools/UIPreviewer.py" line="506"/>
         <source>There is no UI file loaded.</source>
         <translation>Žádný UI soubor nebyl načten.</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="489"/>
+        <location filename="Tools/UIPreviewer.py" line="488"/>
         <source>Printing the image...</source>
         <translation>Tisknu obrázek...</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="498"/>
+        <location filename="Tools/UIPreviewer.py" line="497"/>
         <source>Image sent to printer...</source>
         <translation>Obrázek byl odeslán na tiskárnu...</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="507"/>
+        <location filename="Tools/UIPreviewer.py" line="506"/>
         <source>Print Preview</source>
         <translation>Náhled tisku</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="136"/>
+        <location filename="Tools/UIPreviewer.py" line="135"/>
         <source>Print preview a screen capture</source>
         <translation>Náhled zachycené obrazovky</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="138"/>
+        <location filename="Tools/UIPreviewer.py" line="137"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview a screen capture.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Náhkled tisku&lt;/b&gt;&lt;p&gt;Náhkled tisku zachycené obrazovky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="468"/>
+        <location filename="Tools/UIPreviewer.py" line="467"/>
         <source>Print Image</source>
         <translation>Tisk obrázku</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="329"/>
+        <location filename="Tools/UIPreviewer.py" line="328"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="426"/>
+        <location filename="Tools/UIPreviewer.py" line="425"/>
         <source>Images ({0})</source>
         <translation>Obrázky ({0})</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="444"/>
+        <location filename="Tools/UIPreviewer.py" line="443"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit.&lt;/p&gt;</translation>
     </message>
@@ -36395,127 +36428,127 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UMLGraphicsView</name>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="61"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="63"/>
         <source>Delete shapes</source>
         <translation>Smazat tvary</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="66"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="68"/>
         <source>Save as PNG</source>
         <translation>Uložit jako PNG</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="71"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="73"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="81"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="83"/>
         <source>Zoom in</source>
         <translation>Přiblížit</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="86"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="88"/>
         <source>Zoom out</source>
         <translation>Oddálit</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="91"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="93"/>
         <source>Zoom...</source>
         <translation>Lupa...</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="96"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="98"/>
         <source>Zoom reset</source>
         <translation>Resetovat lupu</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="125"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="127"/>
         <source>Set size</source>
         <translation>Nastavit velikost</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="130"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="132"/>
         <source>Re-Layout</source>
         <translation>Znovu-Layout</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="202"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="204"/>
         <source>Graphics</source>
         <translation>Grafika</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="349"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="351"/>
         <source>Save Diagram</source>
         <translation>Uložit diagram</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="135"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="137"/>
         <source>Align Left</source>
         <translation>Zarovnat vlevo</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="141"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="143"/>
         <source>Align Center Horizontal</source>
         <translation>Zarovnat vodorovně na střed</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="147"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="149"/>
         <source>Align Right</source>
         <translation>Zarovnat vpravo</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="153"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="155"/>
         <source>Align Top</source>
         <translation>Zarovnat nahoru</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="159"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="161"/>
         <source>Align Center Vertical</source>
         <translation>Zarovnat svisle na střed</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="165"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="167"/>
         <source>Align Bottom</source>
         <translation>Zarovnat dolu</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="321"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="323"/>
         <source>Portable Network Graphics (*.png);;Scalable Vector Graphics (*.svg)</source>
         <translation>Portable Network Graphics (*.png);;Scalable Vector Graphics (*.svg)</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="76"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="78"/>
         <source>Print Preview</source>
         <translation>Náhled tisku</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="101"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="103"/>
         <source>Increase width by {0} points</source>
         <translation>Zvětšit šířku o {0} body</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="107"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="109"/>
         <source>Increase height by {0} points</source>
         <translation>Zvětšit výšku o {0} body</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="113"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="115"/>
         <source>Decrease width by {0} points</source>
         <translation>Zmenšit šířku o {0} body</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="119"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="121"/>
         <source>Decrease height by {0} points</source>
         <translation>Zmenšit výšku o {0} body</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="336"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="338"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="349"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="351"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit.&lt;/p&gt;</translation>
     </message>
@@ -36551,7 +36584,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UnittestDialog</name>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="310"/>
+        <location filename="PyUnit/UnittestDialog.py" line="309"/>
         <source>Unittest</source>
         <translation></translation>
     </message>
@@ -36711,97 +36744,97 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>V běhu</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="54"/>
+        <location filename="PyUnit/UnittestDialog.py" line="56"/>
         <source>Start</source>
         <translation>Spustit</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="56"/>
+        <location filename="PyUnit/UnittestDialog.py" line="58"/>
         <source>Start the selected testsuite</source>
         <translation>Spustit vybranou soupravu testů</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="57"/>
+        <location filename="PyUnit/UnittestDialog.py" line="59"/>
         <source>&lt;b&gt;Start Test&lt;/b&gt;&lt;p&gt;This button starts the selected testsuite.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit test&lt;/b&gt;&lt;p&gt;Toto tlačítko spustí vybranou soupravu testů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="60"/>
+        <location filename="PyUnit/UnittestDialog.py" line="62"/>
         <source>Stop</source>
         <translation>Zastavit</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="62"/>
+        <location filename="PyUnit/UnittestDialog.py" line="64"/>
         <source>Stop the running unittest</source>
         <translation>Zastaví běžící unittest</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="63"/>
+        <location filename="PyUnit/UnittestDialog.py" line="65"/>
         <source>&lt;b&gt;Stop Test&lt;/b&gt;&lt;p&gt;This button stops a running unittest.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zastavit test&lt;/b&gt;&lt;p&gt;Toto tlačítko zastaví běžící unittest.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="93"/>
+        <location filename="PyUnit/UnittestDialog.py" line="95"/>
         <source>^Failure: </source>
         <translation>^Selhalo: </translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="94"/>
+        <location filename="PyUnit/UnittestDialog.py" line="96"/>
         <source>^Error: </source>
         <translation>^Chyby: </translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="214"/>
+        <location filename="PyUnit/UnittestDialog.py" line="213"/>
         <source>You must enter a test suite file.</source>
         <translation>Musíte zadat soubor soupravy testu.</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="221"/>
+        <location filename="PyUnit/UnittestDialog.py" line="220"/>
         <source>Preparing Testsuite</source>
         <translation>Příprava soupravy testu</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="369"/>
+        <location filename="PyUnit/UnittestDialog.py" line="368"/>
         <source>Running</source>
         <translation>Běží</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="473"/>
+        <location filename="PyUnit/UnittestDialog.py" line="472"/>
         <source>Show Source</source>
         <translation>Zobrazit zdroj</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="162"/>
+        <location filename="PyUnit/UnittestDialog.py" line="161"/>
         <source>Python Files (*.py);;All Files (*)</source>
         <translation>Python soubory (*.py);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="159"/>
+        <location filename="PyUnit/UnittestDialog.py" line="157"/>
         <source>Python3 Files ({1});;Python2 Files ({0});;All Files (*)</source>
         <translation>Python3 soubory ({1});;Python2 soubory ({0});;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="310"/>
+        <location filename="PyUnit/UnittestDialog.py" line="309"/>
         <source>&lt;p&gt;Unable to run test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="387"/>
+        <location filename="PyUnit/UnittestDialog.py" line="386"/>
         <source>Ran {0} test in {1:.3f}s</source>
         <translation>Doběhl {0} test za {1:.3f}s</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="390"/>
+        <location filename="PyUnit/UnittestDialog.py" line="389"/>
         <source>Ran {0} tests in {1:.3f}s</source>
         <translation>Doběhlo {0} testů za {1:.3f}s</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="403"/>
+        <location filename="PyUnit/UnittestDialog.py" line="402"/>
         <source>Failure: {0}</source>
         <translation>Selhalo: {0}</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="415"/>
+        <location filename="PyUnit/UnittestDialog.py" line="414"/>
         <source>Error: {0}</source>
         <translation>Chyby: {0}</translation>
     </message>
@@ -36842,1887 +36875,1887 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>UserInterface</name>
     <message>
-        <location filename="UI/UserInterface.py" line="241"/>
+        <location filename="UI/UserInterface.py" line="251"/>
         <source>Generating Main User Interface...</source>
         <translation>Generování hlavního uživatelského rozhraní...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="267"/>
+        <location filename="UI/UserInterface.py" line="277"/>
         <source>Setting up connections...</source>
         <translation>Nastavení připojení...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="545"/>
+        <location filename="UI/UserInterface.py" line="470"/>
         <source>Initializing Tools...</source>
         <translation>Inicializace nástrojů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="554"/>
+        <location filename="UI/UserInterface.py" line="479"/>
         <source>Registering Objects...</source>
         <translation>Registrování objektů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="576"/>
+        <location filename="UI/UserInterface.py" line="501"/>
         <source>Initializing Actions...</source>
         <translation>Inicializace akcí...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="578"/>
+        <location filename="UI/UserInterface.py" line="503"/>
         <source>Initializing Menus...</source>
         <translation>Inicializace menu...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="580"/>
+        <location filename="UI/UserInterface.py" line="505"/>
         <source>Initializing Toolbars...</source>
         <translation>Inicializace nástrojových lišt...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="582"/>
+        <location filename="UI/UserInterface.py" line="507"/>
         <source>Initializing Statusbar...</source>
         <translation>Inicializace statusbaru...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="606"/>
+        <location filename="UI/UserInterface.py" line="531"/>
         <source>Initializing Single Application Server...</source>
         <translation>Inicializace jednouživatelského aplikačního serveru...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="680"/>
+        <location filename="UI/UserInterface.py" line="602"/>
         <source>Loading Style Sheet</source>
         <translation>Načtení kaskádového stylu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1421"/>
+        <location filename="UI/UserInterface.py" line="1343"/>
         <source>Project-Viewer</source>
         <translation>Prohlížeč projektu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1462"/>
+        <location filename="UI/UserInterface.py" line="1384"/>
         <source>Debug-Viewer</source>
         <translation>Prohlížeč debugeru</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1544"/>
+        <location filename="UI/UserInterface.py" line="1466"/>
         <source>Log-Viewer</source>
         <translation>Prohlížeč logu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1564"/>
+        <location filename="UI/UserInterface.py" line="1486"/>
         <source>Task-Viewer</source>
         <translation>Prohlížeč úloh</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1584"/>
+        <location filename="UI/UserInterface.py" line="1506"/>
         <source>Template-Viewer</source>
         <translation>Prohlížeč šablon</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1482"/>
+        <location filename="UI/UserInterface.py" line="1404"/>
         <source>Shell</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1523"/>
+        <location filename="UI/UserInterface.py" line="1445"/>
         <source>File-Browser</source>
         <translation>Browser souborů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1373"/>
+        <location filename="UI/UserInterface.py" line="1295"/>
         <source>Quit</source>
         <translation>Konec</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1373"/>
+        <location filename="UI/UserInterface.py" line="1295"/>
         <source>&amp;Quit</source>
         <translation>&amp;Konec</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1373"/>
+        <location filename="UI/UserInterface.py" line="1295"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1378"/>
+        <location filename="UI/UserInterface.py" line="1300"/>
         <source>Quit the IDE</source>
         <translation>Ukončit IDE</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1379"/>
+        <location filename="UI/UserInterface.py" line="1301"/>
         <source>&lt;b&gt;Quit the IDE&lt;/b&gt;&lt;p&gt;This quits the IDE. Any unsaved changes may be saved first. Any Python program being debugged will be stopped and the preferences will be written to disc.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ukončit IDE&lt;/b&gt;&lt;p&gt;Ukončí se IDE. Nejdříve by se měly uložit neuložené změny. Python programy běžící v debug procesu budou ukončeny a nastavení budou uložena.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1390"/>
+        <location filename="UI/UserInterface.py" line="1312"/>
         <source>Edit Profile</source>
         <translation>Editační profil</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1395"/>
+        <location filename="UI/UserInterface.py" line="1317"/>
         <source>Activate the edit view profile</source>
         <translation>Aktivovat profil editace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1396"/>
+        <location filename="UI/UserInterface.py" line="1318"/>
         <source>&lt;b&gt;Edit Profile&lt;/b&gt;&lt;p&gt;Activate the &quot;Edit View Profile&quot;. Windows being shown, if this profile is active, may be configured with the &quot;View Profile Configuration&quot; dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Editační profil&lt;/b&gt;&lt;p&gt;Aktivování skupiny &apos;Editační profil&apos;. Okna, která se v tomto profilu zobrazí lze nastavit v dialogu &apos;Konfigurace profilu pohledů&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1405"/>
+        <location filename="UI/UserInterface.py" line="1327"/>
         <source>Debug Profile</source>
         <translation>Debugovací profil</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1410"/>
+        <location filename="UI/UserInterface.py" line="1332"/>
         <source>Activate the debug view profile</source>
         <translation>Aktivovat debugovací profil</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1412"/>
+        <location filename="UI/UserInterface.py" line="1334"/>
         <source>&lt;b&gt;Debug Profile&lt;/b&gt;&lt;p&gt;Activate the &quot;Debug View Profile&quot;. Windows being shown, if this profile is active, may be configured with the &quot;View Profile Configuration&quot; dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debugovací profil&lt;/b&gt;&lt;p&gt;Aktivování skupiny &apos;Debugovací profil&apos;. Okna, která se v tomto profilu zobrazí lze nastavit v dialogu &apos;Konfigurace profilu pohledů&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1421"/>
+        <location filename="UI/UserInterface.py" line="1343"/>
         <source>&amp;Project-Viewer</source>
         <translation>Prohlížeč &amp;projektu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1423"/>
+        <location filename="UI/UserInterface.py" line="1345"/>
         <source>Toggle the Project-Viewer window</source>
         <translation>Přepnout okno Prohlížeč projektu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1424"/>
+        <location filename="UI/UserInterface.py" line="1346"/>
         <source>&lt;b&gt;Toggle the Project-Viewer window&lt;/b&gt;&lt;p&gt;If the Project-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout okno Prohlížeč projektu&lt;/b&gt;&lt;p&gt;Pokud bylo okno skryto, tak se zobrazí. Pokud se zobrazovalo, tak se skryje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1432"/>
+        <location filename="UI/UserInterface.py" line="1354"/>
         <source>Activate Project-Viewer</source>
         <translation>Aktivovat prohlížeč projektu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1432"/>
+        <location filename="UI/UserInterface.py" line="1354"/>
         <source>Alt+Shift+P</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1473"/>
+        <location filename="UI/UserInterface.py" line="1395"/>
         <source>Alt+Shift+D</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1482"/>
+        <location filename="UI/UserInterface.py" line="1404"/>
         <source>&amp;Shell</source>
         <translation>&amp;Shell</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1484"/>
+        <location filename="UI/UserInterface.py" line="1406"/>
         <source>Toggle the Shell window</source>
         <translation>Zobrazit/skrýt Shell okno</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1485"/>
+        <location filename="UI/UserInterface.py" line="1407"/>
         <source>&lt;b&gt;Toggle the Shell window&lt;/b&gt;&lt;p&gt;If the Shell window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit/skrýt Shell okno&lt;/b&gt;&lt;p&gt;Pokud je shell okno skryté zobrazí se. Pokud se okno zobrazuje, tak se skryje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1494"/>
+        <location filename="UI/UserInterface.py" line="1416"/>
         <source>Activate Shell</source>
         <translation>Aktivovat Shell</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1494"/>
+        <location filename="UI/UserInterface.py" line="1416"/>
         <source>Alt+Shift+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1523"/>
+        <location filename="UI/UserInterface.py" line="1445"/>
         <source>File-&amp;Browser</source>
         <translation>&amp;Browser souborů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1525"/>
+        <location filename="UI/UserInterface.py" line="1447"/>
         <source>Toggle the File-Browser window</source>
         <translation>Zobrazit/skrýt browser souborů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1526"/>
+        <location filename="UI/UserInterface.py" line="1448"/>
         <source>&lt;b&gt;Toggle the File-Browser window&lt;/b&gt;&lt;p&gt;If the File-Browser window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit/skrýt browser souborů&lt;/b&gt;&lt;p&gt;Pokud je okno skryté zobrazí se. Pokud se okno zobrazuje, tak se skryje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1535"/>
+        <location filename="UI/UserInterface.py" line="1457"/>
         <source>Activate File-Browser</source>
         <translation>Aktivovat Browser souborů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1535"/>
+        <location filename="UI/UserInterface.py" line="1457"/>
         <source>Alt+Shift+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1544"/>
+        <location filename="UI/UserInterface.py" line="1466"/>
         <source>&amp;Log-Viewer</source>
         <translation>&amp;Log prohlížeč</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1546"/>
+        <location filename="UI/UserInterface.py" line="1468"/>
         <source>Toggle the Log-Viewer window</source>
         <translation>Zobrazit/skrýt Log prohlížeč</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1547"/>
+        <location filename="UI/UserInterface.py" line="1469"/>
         <source>&lt;b&gt;Toggle the Log-Viewer window&lt;/b&gt;&lt;p&gt;If the Log-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit/skrýt Log prohlížeč&lt;/b&gt;&lt;p&gt;Pokud je okno skryté zobrazí se. Pokud se okno zobrazuje, tak se skryje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1555"/>
+        <location filename="UI/UserInterface.py" line="1477"/>
         <source>Activate Log-Viewer</source>
         <translation>Aktivovat Log prohlížeč</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1555"/>
+        <location filename="UI/UserInterface.py" line="1477"/>
         <source>Alt+Shift+G</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1564"/>
+        <location filename="UI/UserInterface.py" line="1486"/>
         <source>T&amp;ask-Viewer</source>
         <translation>Pr&amp;ohlížeč úloh</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1566"/>
+        <location filename="UI/UserInterface.py" line="1488"/>
         <source>Toggle the Task-Viewer window</source>
         <translation>Zobrazit/skrýt prohlížeč úloh</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1567"/>
+        <location filename="UI/UserInterface.py" line="1489"/>
         <source>&lt;b&gt;Toggle the Task-Viewer window&lt;/b&gt;&lt;p&gt;If the Task-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit/skrýt prohlížeč úloh&lt;/b&gt;&lt;p&gt;Pokud je okno skryté zobrazí se. Pokud se okno zobrazuje, tak se skryje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1575"/>
+        <location filename="UI/UserInterface.py" line="1497"/>
         <source>Activate Task-Viewer</source>
         <translation>Aktivovat prohlížeč úloh</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1575"/>
+        <location filename="UI/UserInterface.py" line="1497"/>
         <source>Alt+Shift+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1586"/>
+        <location filename="UI/UserInterface.py" line="1508"/>
         <source>Toggle the Template-Viewer window</source>
         <translation>Zobrazit/skrýt prohlížeč šablon</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1588"/>
+        <location filename="UI/UserInterface.py" line="1510"/>
         <source>&lt;b&gt;Toggle the Template-Viewer window&lt;/b&gt;&lt;p&gt;If the Template-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit/skrýt prohlížeč šablon&lt;/b&gt;&lt;p&gt;Pokud je okno skryté zobrazí se. Pokud se okno zobrazuje, tak se skryje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1596"/>
+        <location filename="UI/UserInterface.py" line="1518"/>
         <source>Activate Template-Viewer</source>
         <translation>Aktivovat prohlížeč šablon</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1453"/>
+        <location filename="UI/UserInterface.py" line="1375"/>
         <source>Alt+Shift+M</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1717"/>
+        <location filename="UI/UserInterface.py" line="1639"/>
         <source>What&apos;s This?</source>
         <translation>Co je to?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1717"/>
+        <location filename="UI/UserInterface.py" line="1639"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Co je to?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1717"/>
+        <location filename="UI/UserInterface.py" line="1639"/>
         <source>Shift+F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1722"/>
+        <location filename="UI/UserInterface.py" line="1644"/>
         <source>Context sensitive help</source>
         <translation>Kontextově senzitivní nápověda</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1723"/>
+        <location filename="UI/UserInterface.py" line="1645"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit kontextově senzitivní nápovědu&lt;/b&gt;&lt;p&gt;V režimu &quot;Co je to?&quot; se nad různými prvky aplikace u kurzoru zobrazí otazník. Když pak kliknete na tyto prvky, zobrazí se krátký popis co daný prvek znamená a jak jej použít. V dialogových oknech se tato funkce spustí tlačítkem kontextové nápovědy na horní liště.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1734"/>
+        <location filename="UI/UserInterface.py" line="1656"/>
         <source>Helpviewer</source>
         <translation>Prohlížeč nápovědy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1734"/>
+        <location filename="UI/UserInterface.py" line="1656"/>
         <source>&amp;Helpviewer...</source>
         <translation>Pro&amp;hlížeč nápovědy...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1734"/>
+        <location filename="UI/UserInterface.py" line="1656"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1739"/>
+        <location filename="UI/UserInterface.py" line="1661"/>
         <source>Open the helpviewer window</source>
         <translation>Otevřít okno prohlížeče nápovědy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1757"/>
+        <location filename="UI/UserInterface.py" line="1679"/>
         <source>Show Versions</source>
         <translation>Zobrazit verze</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1757"/>
+        <location filename="UI/UserInterface.py" line="1679"/>
         <source>Show &amp;Versions</source>
         <translation>Zobrazit &amp;verze</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1759"/>
+        <location filename="UI/UserInterface.py" line="1681"/>
         <source>Display version information</source>
         <translation>Zobrazit informace o verzích</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1760"/>
+        <location filename="UI/UserInterface.py" line="1682"/>
         <source>&lt;b&gt;Show Versions&lt;/b&gt;&lt;p&gt;Display version information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit verze&lt;/b&gt;&lt;p&gt;Zobrazí informace o verzích.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1769"/>
+        <location filename="UI/UserInterface.py" line="1691"/>
         <source>Check for Updates</source>
         <translation>Zjistit aktualizace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1767"/>
+        <location filename="UI/UserInterface.py" line="1689"/>
         <source>Check for &amp;Updates...</source>
         <translation>Zjistit akt&amp;ualizace...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2814"/>
+        <location filename="UI/UserInterface.py" line="2733"/>
         <source>Report Bug</source>
         <translation>Reportovat Bugy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1790"/>
+        <location filename="UI/UserInterface.py" line="1712"/>
         <source>Report &amp;Bug...</source>
         <translation>Reportovat &amp;Bugy...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1792"/>
+        <location filename="UI/UserInterface.py" line="1714"/>
         <source>Report a bug</source>
         <translation>Reportovat bug</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1793"/>
+        <location filename="UI/UserInterface.py" line="1715"/>
         <source>&lt;b&gt;Report Bug...&lt;/b&gt;&lt;p&gt;Opens a dialog to report a bug.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reportovat bug...&lt;/b&gt;&lt;p&gt;Otevře se dialog pro reportování bugu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2465"/>
+        <location filename="UI/UserInterface.py" line="2384"/>
         <source>Unittest</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1812"/>
+        <location filename="UI/UserInterface.py" line="1734"/>
         <source>&amp;Unittest...</source>
         <translation>&amp;Unittest...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1816"/>
+        <location filename="UI/UserInterface.py" line="1738"/>
         <source>Start unittest dialog</source>
         <translation>Otevřít dialog unittestu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1817"/>
+        <location filename="UI/UserInterface.py" line="1739"/>
         <source>&lt;b&gt;Unittest&lt;/b&gt;&lt;p&gt;Perform unit tests. The dialog gives you the ability to select and run a unittest suite.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Unittest&lt;/b&gt;&lt;p&gt;Provést unittesty. V dialogovém okně se nastaví který test se má provést.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1825"/>
+        <location filename="UI/UserInterface.py" line="1747"/>
         <source>Unittest Restart</source>
         <translation>Restart unittestu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1825"/>
+        <location filename="UI/UserInterface.py" line="1747"/>
         <source>&amp;Restart Unittest...</source>
         <translation>&amp;Restart unittestu...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1829"/>
+        <location filename="UI/UserInterface.py" line="1751"/>
         <source>Restart last unittest</source>
         <translation>Restart posledního unittestu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1830"/>
+        <location filename="UI/UserInterface.py" line="1752"/>
         <source>&lt;b&gt;Restart Unittest&lt;/b&gt;&lt;p&gt;Restart the unittest performed last.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Restart unittestu&lt;/b&gt;&lt;p&gt;Restartuje se poslední provedený unittest.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1838"/>
+        <location filename="UI/UserInterface.py" line="1760"/>
         <source>Unittest Script</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1838"/>
+        <location filename="UI/UserInterface.py" line="1760"/>
         <source>Unittest &amp;Script...</source>
         <translation>Unittest &amp;Script...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1842"/>
+        <location filename="UI/UserInterface.py" line="1764"/>
         <source>Run unittest with current script</source>
         <translation>Spustit unittest s aktuálním skriptem</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1843"/>
+        <location filename="UI/UserInterface.py" line="1765"/>
         <source>&lt;b&gt;Unittest Script&lt;/b&gt;&lt;p&gt;Run unittest with current script.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Unittest Script&lt;/b&gt;&lt;p&gt;Spustit unittest s aktuálním skriptem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4029"/>
+        <location filename="UI/UserInterface.py" line="3948"/>
         <source>Unittest Project</source>
         <translation>Unittest Projekt</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1851"/>
+        <location filename="UI/UserInterface.py" line="1773"/>
         <source>Unittest &amp;Project...</source>
         <translation>Unittest &amp;Projekt...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1855"/>
+        <location filename="UI/UserInterface.py" line="1777"/>
         <source>Run unittest with current project</source>
         <translation>Spustit unittest s aktuálním projektem</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1856"/>
+        <location filename="UI/UserInterface.py" line="1778"/>
         <source>&lt;b&gt;Unittest Project&lt;/b&gt;&lt;p&gt;Run unittest with current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Unittest projekt&lt;/b&gt;&lt;p&gt;Spustit unittest s aktuálním projektem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1869"/>
+        <location filename="UI/UserInterface.py" line="1791"/>
         <source>Qt-Designer 4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1872"/>
+        <location filename="UI/UserInterface.py" line="1794"/>
         <source>Start Qt-Designer 4</source>
         <translation>Spustit Qt-Designer 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1873"/>
+        <location filename="UI/UserInterface.py" line="1795"/>
         <source>&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Start Qt-Designer 4.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Spustit Qt-Designer 4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1886"/>
+        <location filename="UI/UserInterface.py" line="1808"/>
         <source>Qt-Linguist 4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1889"/>
+        <location filename="UI/UserInterface.py" line="1811"/>
         <source>Start Qt-Linguist 4</source>
         <translation>Spustit Qt-Linguist 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1890"/>
+        <location filename="UI/UserInterface.py" line="1812"/>
         <source>&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Start Qt-Linguist 4.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Spustit Qt-Linguist 4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1899"/>
+        <location filename="UI/UserInterface.py" line="1821"/>
         <source>UI Previewer</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1899"/>
+        <location filename="UI/UserInterface.py" line="1821"/>
         <source>&amp;UI Previewer...</source>
         <translation>&amp;UI Previewer...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1902"/>
+        <location filename="UI/UserInterface.py" line="1824"/>
         <source>Start the UI Previewer</source>
         <translation>Spustit UI Previewer</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1903"/>
+        <location filename="UI/UserInterface.py" line="1825"/>
         <source>&lt;b&gt;UI Previewer&lt;/b&gt;&lt;p&gt;Start the UI Previewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;UI Previewer&lt;/b&gt;&lt;p&gt;Spustit UI Previewer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1910"/>
+        <location filename="UI/UserInterface.py" line="1832"/>
         <source>Translations Previewer</source>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1910"/>
+        <location filename="UI/UserInterface.py" line="1832"/>
         <source>&amp;Translations Previewer...</source>
         <translation>Náhled &amp;překladů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1913"/>
+        <location filename="UI/UserInterface.py" line="1835"/>
         <source>Start the Translations Previewer</source>
         <translation>Spustit Previewer překladů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1914"/>
+        <location filename="UI/UserInterface.py" line="1836"/>
         <source>&lt;b&gt;Translations Previewer&lt;/b&gt;&lt;p&gt;Start the Translations Previewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Previewer překladů&lt;/b&gt;&lt;p&gt;Spustit Previewer překladů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1921"/>
+        <location filename="UI/UserInterface.py" line="1843"/>
         <source>Compare Files</source>
         <translation>Porovnat soubory</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1921"/>
+        <location filename="UI/UserInterface.py" line="1843"/>
         <source>&amp;Compare Files...</source>
         <translation>&amp;Porovnat soubory...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1936"/>
+        <location filename="UI/UserInterface.py" line="1858"/>
         <source>Compare two files</source>
         <translation>Porovnat dva soubory</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1925"/>
+        <location filename="UI/UserInterface.py" line="1847"/>
         <source>&lt;b&gt;Compare Files&lt;/b&gt;&lt;p&gt;Open a dialog to compare two files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Porovnat soubory&lt;/b&gt;&lt;p&gt;Otevře dialog pro porovnání dvou souborů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1932"/>
+        <location filename="UI/UserInterface.py" line="1854"/>
         <source>Compare Files side by side</source>
         <translation>Porovnat soubory stranu proti straně</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1932"/>
+        <location filename="UI/UserInterface.py" line="1854"/>
         <source>Compare Files &amp;side by side...</source>
         <translation>Porovnat soubory &amp;stranu proti straně...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1937"/>
+        <location filename="UI/UserInterface.py" line="1859"/>
         <source>&lt;b&gt;Compare Files side by side&lt;/b&gt;&lt;p&gt;Open a dialog to compare two files and show the result side by side.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Porovnat soubory stranu proti straně&lt;/b&gt;&lt;p&gt;Otevře dialog pro porovnání souborů a zobrazení rozdílů strany proti straně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1993"/>
+        <location filename="UI/UserInterface.py" line="1915"/>
         <source>Preferences</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1993"/>
+        <location filename="UI/UserInterface.py" line="1915"/>
         <source>&amp;Preferences...</source>
         <translation>Na&amp;stavení...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1996"/>
+        <location filename="UI/UserInterface.py" line="1918"/>
         <source>Set the prefered configuration</source>
         <translation>Nastavení konfigurace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1997"/>
+        <location filename="UI/UserInterface.py" line="1919"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nastavení&lt;/b&gt;&lt;p&gt;Upravit konfiguraci aplikace podle požadavků uživatele.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2028"/>
+        <location filename="UI/UserInterface.py" line="1950"/>
         <source>Reload APIs</source>
         <translation>Obnovit API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2028"/>
+        <location filename="UI/UserInterface.py" line="1950"/>
         <source>Reload &amp;APIs</source>
         <translation>Obnovit &amp;API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2030"/>
+        <location filename="UI/UserInterface.py" line="1952"/>
         <source>Reload the API information</source>
         <translation>Obnovit API nastavení</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2031"/>
+        <location filename="UI/UserInterface.py" line="1953"/>
         <source>&lt;b&gt;Reload APIs&lt;/b&gt;&lt;p&gt;Reload the API information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Obnovit API&lt;/b&gt;&lt;p&gt;Obnovit API nastavení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2050"/>
+        <location filename="UI/UserInterface.py" line="1972"/>
         <source>View Profiles</source>
         <translation>Profily pohledů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2050"/>
+        <location filename="UI/UserInterface.py" line="1972"/>
         <source>&amp;View Profiles...</source>
         <translation>Profily &amp;pohledů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2053"/>
+        <location filename="UI/UserInterface.py" line="1975"/>
         <source>Configure view profiles</source>
         <translation>Konfigurace profilů pohledů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2054"/>
+        <location filename="UI/UserInterface.py" line="1976"/>
         <source>&lt;b&gt;View Profiles&lt;/b&gt;&lt;p&gt;Configure the view profiles. With this dialog you may set the visibility of the various windows for the predetermined view profiles.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profily pohledů&lt;/b&gt;&lt;p&gt;Konfigurace profilu pohledů. V tomto dialogu můžete nastavit zobrazování různých typů pohledů - editačních oken.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2076"/>
+        <location filename="UI/UserInterface.py" line="1998"/>
         <source>Keyboard Shortcuts</source>
         <translation>Klávesové zkratky</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2076"/>
+        <location filename="UI/UserInterface.py" line="1998"/>
         <source>Keyboard &amp;Shortcuts...</source>
         <translation>Klávesové &amp;zkratky...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2079"/>
+        <location filename="UI/UserInterface.py" line="2001"/>
         <source>Set the keyboard shortcuts</source>
         <translation>Nastavení klávesových zkratek</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2080"/>
+        <location filename="UI/UserInterface.py" line="2002"/>
         <source>&lt;b&gt;Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Set the keyboard shortcuts of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Klávesové zkratky&lt;/b&gt;&lt;p&gt;Nastavení klávesových zkratek aplikace podle zvyklostí uživatele.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4995"/>
+        <location filename="UI/UserInterface.py" line="4911"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportovat klávesové zkratky</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2088"/>
+        <location filename="UI/UserInterface.py" line="2010"/>
         <source>&amp;Export Keyboard Shortcuts...</source>
         <translation>&amp;Exportovat klávesové zkratky...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2092"/>
+        <location filename="UI/UserInterface.py" line="2014"/>
         <source>Export the keyboard shortcuts</source>
         <translation>Export klávesových zkratek</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2093"/>
+        <location filename="UI/UserInterface.py" line="2015"/>
         <source>&lt;b&gt;Export Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Export the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Export klávesových zkratek&lt;/b&gt;&lt;p&gt;Exportují se klávesové zkratky z aplikace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5004"/>
+        <location filename="UI/UserInterface.py" line="4920"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Import klávesových zkratek</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2100"/>
+        <location filename="UI/UserInterface.py" line="2022"/>
         <source>&amp;Import Keyboard Shortcuts...</source>
         <translation>&amp;Import klávesových zkratek...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2104"/>
+        <location filename="UI/UserInterface.py" line="2026"/>
         <source>Import the keyboard shortcuts</source>
         <translation>Import klávesových zkratek</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2105"/>
+        <location filename="UI/UserInterface.py" line="2027"/>
         <source>&lt;b&gt;Import Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Import the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Import klávesových zkratek&lt;/b&gt;&lt;p&gt;Do aplikace se importují klávesové zkratky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2112"/>
+        <location filename="UI/UserInterface.py" line="2034"/>
         <source>Activate current editor</source>
         <translation>Aktivovat aktuální editor</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2112"/>
+        <location filename="UI/UserInterface.py" line="2034"/>
         <source>Alt+Shift+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2121"/>
+        <location filename="UI/UserInterface.py" line="2043"/>
         <source>Ctrl+Alt+Tab</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2129"/>
+        <location filename="UI/UserInterface.py" line="2051"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2208"/>
+        <location filename="UI/UserInterface.py" line="2130"/>
         <source>Qt4 Documentation</source>
         <translation>Qt4 dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2208"/>
+        <location filename="UI/UserInterface.py" line="2130"/>
         <source>Qt&amp;4 Documentation</source>
         <translation>Qt&amp;4 dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2210"/>
+        <location filename="UI/UserInterface.py" line="2132"/>
         <source>Open Qt4 Documentation</source>
         <translation>Otevřít Qt4 dokumentaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2211"/>
+        <location filename="UI/UserInterface.py" line="2133"/>
         <source>&lt;b&gt;Qt4 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt4 dokumentace&lt;/b&gt;&lt;p&gt;Zobrazit Qt4 dokumentaci. V závislosti na vašich nastaveních zobrazí interní Eric prohlížeč nápovědy nebo spustí webový prohlížeč nebo Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2220"/>
+        <location filename="UI/UserInterface.py" line="2142"/>
         <source>PyQt4 Documentation</source>
         <translation>PyQt4 dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2220"/>
+        <location filename="UI/UserInterface.py" line="2142"/>
         <source>P&amp;yQt4 Documentation</source>
         <translation>P&amp;yQt4 dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2222"/>
+        <location filename="UI/UserInterface.py" line="2144"/>
         <source>Open PyQt4 Documentation</source>
         <translation>Otevřít PyQt4 dokumentaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2223"/>
+        <location filename="UI/UserInterface.py" line="2145"/>
         <source>&lt;b&gt;PyQt4 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;PyQt4 dokumentace&lt;/b&gt;&lt;p&gt;Zobrazit PyQt4 dokumentaci. V závislosti na vašich nastaveních zobrazí interní Eric prohlížeč nápovědy nebo spustí webový prohlížeč nebo Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2236"/>
+        <location filename="UI/UserInterface.py" line="2158"/>
         <source>Python Documentation</source>
         <translation>Python dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2236"/>
+        <location filename="UI/UserInterface.py" line="2158"/>
         <source>&amp;Python Documentation</source>
         <translation>&amp;Python dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2238"/>
+        <location filename="UI/UserInterface.py" line="2160"/>
         <source>Open Python Documentation</source>
         <translation>Otevřít Python dokumentaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2239"/>
+        <location filename="UI/UserInterface.py" line="2161"/>
         <source>&lt;b&gt;Python Documentation&lt;/b&gt;&lt;p&gt;Display the python documentation. If no documentation directory is configured, the location of the python documentation is assumed to be the doc directory underneath the location of the python executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHONDOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Python dokumentace&lt;/b&gt;&lt;p&gt;Zobrazí python dokumentaci. Pokud není adresář dokumentace nastaven, tak ve Windows se dokumentace hledá v adresáři odkud se python spouští a na Unixu v doc adresáři &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt;. Pokud chcete jiný, nastavte si proměnnou prostředí PYTHONDOCDIR.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2255"/>
+        <location filename="UI/UserInterface.py" line="2177"/>
         <source>Eric API Documentation</source>
         <translation>Eric API dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2255"/>
+        <location filename="UI/UserInterface.py" line="2177"/>
         <source>&amp;Eric API Documentation</source>
         <translation>&amp;Eric API dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2257"/>
+        <location filename="UI/UserInterface.py" line="2179"/>
         <source>Open Eric API Documentation</source>
         <translation>Otevřít Eric API dokumentaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2311"/>
+        <location filename="UI/UserInterface.py" line="2233"/>
         <source>&amp;Unittest</source>
         <translation>&amp;Unittest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2326"/>
+        <location filename="UI/UserInterface.py" line="2248"/>
         <source>E&amp;xtras</source>
         <translation>E&amp;xtra funkce</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2338"/>
+        <location filename="UI/UserInterface.py" line="2260"/>
         <source>&amp;Tools</source>
         <translation>&amp;Nástroje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2342"/>
+        <location filename="UI/UserInterface.py" line="2263"/>
         <source>Select Tool Group</source>
         <translation>Vybrat skupinu nástrojů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2349"/>
+        <location filename="UI/UserInterface.py" line="2269"/>
         <source>Se&amp;ttings</source>
         <translation>Nas&amp;tavení</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2367"/>
+        <location filename="UI/UserInterface.py" line="2287"/>
         <source>&amp;Window</source>
         <translation>O&amp;kno</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2373"/>
+        <location filename="UI/UserInterface.py" line="2293"/>
         <source>&amp;Toolbars</source>
         <translation>&amp;Toolbary</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2399"/>
+        <location filename="UI/UserInterface.py" line="2318"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2464"/>
+        <location filename="UI/UserInterface.py" line="2383"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2466"/>
+        <location filename="UI/UserInterface.py" line="2385"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4241"/>
+        <location filename="UI/UserInterface.py" line="4160"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2468"/>
+        <location filename="UI/UserInterface.py" line="2387"/>
         <source>Profiles</source>
         <translation>Profily</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2763"/>
+        <location filename="UI/UserInterface.py" line="2682"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Čísla verzí&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5688"/>
+        <location filename="UI/UserInterface.py" line="5604"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2814"/>
+        <location filename="UI/UserInterface.py" line="2733"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>Emailová adresa nebo mail server adresa jsou prázdné. Prosím, nastavte váš email v dialogovém okně Nastavení.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3106"/>
+        <location filename="UI/UserInterface.py" line="3025"/>
         <source>Configure Tool Groups ...</source>
         <translation>Konfigurace Skupin nástrojů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3109"/>
+        <location filename="UI/UserInterface.py" line="3028"/>
         <source>Configure current Tool Group ...</source>
         <translation>Konfigurace aktuální skupiny nástrojů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3157"/>
+        <location filename="UI/UserInterface.py" line="3076"/>
         <source>&amp;Builtin Tools</source>
         <translation>&amp;Vestavěné nástroje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4029"/>
+        <location filename="UI/UserInterface.py" line="3948"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>V aktuálním projektu není definován hlavní skript. Zrušeno</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4349"/>
+        <location filename="UI/UserInterface.py" line="4268"/>
         <source>Problem</source>
         <translation>Problém</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4482"/>
+        <location filename="UI/UserInterface.py" line="4401"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4241"/>
+        <location filename="UI/UserInterface.py" line="4160"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Aktuálně není vybrán žádný prohlížeč. Prosím otevřete Nastavení a nějaký vyberte.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4272"/>
+        <location filename="UI/UserInterface.py" line="4191"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit prohlížeč nápovědy.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4778"/>
+        <location filename="UI/UserInterface.py" line="4697"/>
         <source>Documentation Missing</source>
         <translation>Dokumentace chybí</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4763"/>
+        <location filename="UI/UserInterface.py" line="4682"/>
         <source>Documentation</source>
         <translation>Dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4672"/>
+        <location filename="UI/UserInterface.py" line="4591"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář PyQt4 dokumentace není nakonfigurován.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5128"/>
+        <location filename="UI/UserInterface.py" line="5044"/>
         <source>Save tasks</source>
         <translation>Uložit úlohy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5185"/>
+        <location filename="UI/UserInterface.py" line="5101"/>
         <source>Read tasks</source>
         <translation>Načíst úlohy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5382"/>
+        <location filename="UI/UserInterface.py" line="5298"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5654"/>
+        <location filename="UI/UserInterface.py" line="5570"/>
         <source>Error during updates check</source>
         <translation>Chyba během zjišťování aktualizací</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5638"/>
+        <location filename="UI/UserInterface.py" line="5554"/>
         <source>Update available</source>
         <translation>Byla nalezena aktualizace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2041"/>
+        <location filename="UI/UserInterface.py" line="1963"/>
         <source>Show external tools</source>
         <translation>Zobrazit externí nástroje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2038"/>
+        <location filename="UI/UserInterface.py" line="1960"/>
         <source>Show external &amp;tools</source>
         <translation>Zobrazit externí nás&amp;troje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5654"/>
+        <location filename="UI/UserInterface.py" line="5570"/>
         <source>Could not perform updates check.</source>
         <translation>Kontrolu updatů nelze provést.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5526"/>
+        <location filename="UI/UserInterface.py" line="5442"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Zrušit</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5729"/>
+        <location filename="UI/UserInterface.py" line="5645"/>
         <source>First time usage</source>
         <translation>Spuštěno poprvé</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="236"/>
+        <location filename="UI/UserInterface.py" line="246"/>
         <source>Initializing Plugin Manager...</source>
         <translation>Inicializace Plugin manažera...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2385"/>
+        <location filename="UI/UserInterface.py" line="2304"/>
         <source>P&amp;lugins</source>
         <translation>P&amp;luginy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2469"/>
+        <location filename="UI/UserInterface.py" line="2388"/>
         <source>Plugins</source>
         <translation>Pluginy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2145"/>
+        <location filename="UI/UserInterface.py" line="2067"/>
         <source>Plugin Infos</source>
         <translation>Plugin Infa</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2148"/>
+        <location filename="UI/UserInterface.py" line="2070"/>
         <source>Show Plugin Infos</source>
         <translation>Zobrazit Plugin infa</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2149"/>
+        <location filename="UI/UserInterface.py" line="2071"/>
         <source>&lt;b&gt;Plugin Infos...&lt;/b&gt;&lt;p&gt;This opens a dialog, that show some information about loaded plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Plugin Infa&lt;/b&gt;&lt;p&gt;Otevře dialog, který zobrazí informace o načtených pluginech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2145"/>
+        <location filename="UI/UserInterface.py" line="2067"/>
         <source>&amp;Plugin Infos...</source>
         <translation>&amp;Plugin Infa...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3165"/>
+        <location filename="UI/UserInterface.py" line="3084"/>
         <source>&amp;Plugin Tools</source>
         <translation>&amp;Plugin nástroje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2171"/>
+        <location filename="UI/UserInterface.py" line="2093"/>
         <source>Uninstall Plugin</source>
         <translation>Odinstalovat plugin</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2168"/>
+        <location filename="UI/UserInterface.py" line="2090"/>
         <source>&amp;Uninstall Plugin...</source>
         <translation>&amp;Odinstalovat plugin...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2172"/>
+        <location filename="UI/UserInterface.py" line="2094"/>
         <source>&lt;b&gt;Uninstall Plugin...&lt;/b&gt;&lt;p&gt;This opens a dialog to uninstall a plugin.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Odinstalovat plugin...&lt;/b&gt;&lt;p&gt;Otevře dialog pro odinstalaci pluginu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3318"/>
+        <location filename="UI/UserInterface.py" line="3237"/>
         <source>&amp;Show all</source>
         <translation>&amp;Zobrazit vše</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3320"/>
+        <location filename="UI/UserInterface.py" line="3239"/>
         <source>&amp;Hide all</source>
         <translation>&amp;Skrýt vše</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="614"/>
+        <location filename="UI/UserInterface.py" line="539"/>
         <source>Activating Plugins...</source>
         <translation>Aktivace pluginů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2331"/>
+        <location filename="UI/UserInterface.py" line="2253"/>
         <source>Wi&amp;zards</source>
         <translation>&amp;Průvodci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1777"/>
+        <location filename="UI/UserInterface.py" line="1699"/>
         <source>Show downloadable versions</source>
         <translation>Zobrazit verze ke stažení</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1777"/>
+        <location filename="UI/UserInterface.py" line="1699"/>
         <source>Show &amp;downloadable versions...</source>
         <translation>Zobrazit verze pro &amp;download...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1780"/>
+        <location filename="UI/UserInterface.py" line="1702"/>
         <source>Show the versions available for download</source>
         <translation>Zobrazit dostupné verze ke stažení</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5560"/>
+        <location filename="UI/UserInterface.py" line="5476"/>
         <source>Error downloading versions file</source>
         <translation>Chyba v souboru stahování verzí</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5560"/>
+        <location filename="UI/UserInterface.py" line="5476"/>
         <source>Could not download the versions file.</source>
         <translation>Nelze stáhnout soubor s verzemi.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5675"/>
+        <location filename="UI/UserInterface.py" line="5591"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Dostupné verze&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2179"/>
+        <location filename="UI/UserInterface.py" line="2101"/>
         <source>Plugin Repository</source>
         <translation>Repozitář pluginů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2179"/>
+        <location filename="UI/UserInterface.py" line="2101"/>
         <source>Plugin &amp;Repository...</source>
         <translation>&amp;Repozitář pluginů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2182"/>
+        <location filename="UI/UserInterface.py" line="2104"/>
         <source>Show Plugins available for download</source>
         <translation>Zobrazit pluginy dostupné ke stažení</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2184"/>
+        <location filename="UI/UserInterface.py" line="2106"/>
         <source>&lt;b&gt;Plugin Repository...&lt;/b&gt;&lt;p&gt;This opens a dialog, that shows a list of plugins available on the Internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Repozitář pluginů...&lt;/b&gt;&lt;p&gt;Otevře se dialog, který zobrazí seznam pluginů dostupných ke stažení přes internet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2160"/>
+        <location filename="UI/UserInterface.py" line="2082"/>
         <source>Install Plugins</source>
         <translation>Instalovat pluginy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2157"/>
+        <location filename="UI/UserInterface.py" line="2079"/>
         <source>&amp;Install Plugins...</source>
         <translation>&amp;Instalovat pluginy...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2161"/>
+        <location filename="UI/UserInterface.py" line="2083"/>
         <source>&lt;b&gt;Install Plugins...&lt;/b&gt;&lt;p&gt;This opens a dialog to install or update plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Instalovat pluginy...&lt;/b&gt;&lt;p&gt;Otevře dialog pro instalaci nebo aktualizaci pluginů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1961"/>
+        <location filename="UI/UserInterface.py" line="1883"/>
         <source>Mini Editor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1957"/>
+        <location filename="UI/UserInterface.py" line="1879"/>
         <source>Mini &amp;Editor...</source>
         <translation>Mini &amp;Editor...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1962"/>
+        <location filename="UI/UserInterface.py" line="1884"/>
         <source>&lt;b&gt;Mini Editor&lt;/b&gt;&lt;p&gt;Open a dialog with a simplified editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mini editor&lt;/b&gt;&lt;p&gt;Otevře se okno s jednoduchým editorem&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1869"/>
+        <location filename="UI/UserInterface.py" line="1791"/>
         <source>&amp;Designer 4...</source>
         <translation>&amp;Designer 4...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1886"/>
+        <location filename="UI/UserInterface.py" line="1808"/>
         <source>&amp;Linguist 4...</source>
         <translation>&amp;Linguist 4...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2063"/>
+        <location filename="UI/UserInterface.py" line="1985"/>
         <source>Toolbars</source>
         <translation>Lišty nástrojů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2063"/>
+        <location filename="UI/UserInterface.py" line="1985"/>
         <source>Tool&amp;bars...</source>
         <translation>&amp;Lišty nástrojů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2066"/>
+        <location filename="UI/UserInterface.py" line="1988"/>
         <source>Configure toolbars</source>
         <translation>Konfigurace lišt nástrojů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2067"/>
+        <location filename="UI/UserInterface.py" line="1989"/>
         <source>&lt;b&gt;Toolbars&lt;/b&gt;&lt;p&gt;Configure the toolbars. With this dialog you may change the actions shown on the various toolbars and define your own toolbars.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listy nástrojů&lt;/b&gt;&lt;p&gt;Konfigurace lišt nástrojů. S tímto dialogem můžete změnit akce zobrazené v různých nástrojových lištách nebo definovat své vlastní nástrojové lišty.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="621"/>
+        <location filename="UI/UserInterface.py" line="546"/>
         <source>Restoring Toolbarmanager...</source>
         <translation>Obnovit manažer nástrojových lišt...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4430"/>
+        <location filename="UI/UserInterface.py" line="4349"/>
         <source>External Tools</source>
         <translation>Externí nástroje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1441"/>
+        <location filename="UI/UserInterface.py" line="1363"/>
         <source>Multiproject-Viewer</source>
         <translation>Prohlížeč multiprojektu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1441"/>
+        <location filename="UI/UserInterface.py" line="1363"/>
         <source>&amp;Multiproject-Viewer</source>
         <translation>Prohlížeč &amp;multiprojektu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1444"/>
+        <location filename="UI/UserInterface.py" line="1366"/>
         <source>Toggle the Multiproject-Viewer window</source>
         <translation>Přepnout okno Prohlížeč multiprojektu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1445"/>
+        <location filename="UI/UserInterface.py" line="1367"/>
         <source>&lt;b&gt;Toggle the Multiproject-Viewer window&lt;/b&gt;&lt;p&gt;If the Multiproject-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout okno Prohlížeče multiprojektu&lt;/b&gt;&lt;p&gt;Pokud bylo okno skryto, tak se zobrazí. Pokud se zobrazovalo, tak se skryje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1453"/>
+        <location filename="UI/UserInterface.py" line="1375"/>
         <source>Activate Multiproject-Viewer</source>
         <translation>Aktivovat prohlížeč multiprojektu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1584"/>
+        <location filename="UI/UserInterface.py" line="1506"/>
         <source>Temp&amp;late-Viewer</source>
         <translation>Proh&amp;lížeč šablon</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5203"/>
+        <location filename="UI/UserInterface.py" line="5119"/>
         <source>Save session</source>
         <translation>Uložit relaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5264"/>
+        <location filename="UI/UserInterface.py" line="5180"/>
         <source>Read session</source>
         <translation>Načíst relaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2583"/>
+        <location filename="UI/UserInterface.py" line="2502"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje aktuální kódování editorů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2597"/>
+        <location filename="UI/UserInterface.py" line="2516"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje indikátor práva zápisu editoru do souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5703"/>
+        <location filename="UI/UserInterface.py" line="5619"/>
         <source>SSL Errors</source>
         <translation>SSL chyby</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1800"/>
+        <location filename="UI/UserInterface.py" line="1722"/>
         <source>Request Feature</source>
         <translation>Požadavek na vlastnost</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1800"/>
+        <location filename="UI/UserInterface.py" line="1722"/>
         <source>Request &amp;Feature...</source>
         <translation>&amp;Požadavek na vlastnost...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1802"/>
+        <location filename="UI/UserInterface.py" line="1724"/>
         <source>Send a feature request</source>
         <translation>Poslat požadavek na vlastnost</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1803"/>
+        <location filename="UI/UserInterface.py" line="1725"/>
         <source>&lt;b&gt;Request Feature...&lt;/b&gt;&lt;p&gt;Opens a dialog to send a feature request.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Požadavek na vlastnost...&lt;/b&gt;&lt;p&gt;Otevře dialog pro odeslání požadavku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2576"/>
+        <location filename="UI/UserInterface.py" line="2495"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje aktuální jazyk editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2606"/>
+        <location filename="UI/UserInterface.py" line="2525"/>
         <source>&lt;p&gt;This part of the status bar displays the name of the file of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část statusbaru zobrazuje jméno souboru v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2613"/>
+        <location filename="UI/UserInterface.py" line="2532"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje číslo řádku v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2620"/>
+        <location filename="UI/UserInterface.py" line="2539"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje pozici kurzoru v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1605"/>
+        <location filename="UI/UserInterface.py" line="1527"/>
         <source>Vertical Toolbox</source>
         <translation>Svislá nástrojová lišta</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1616"/>
+        <location filename="UI/UserInterface.py" line="1538"/>
         <source>Horizontal Toolbox</source>
         <translation>Vodorovná nástrojová lišta</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1605"/>
+        <location filename="UI/UserInterface.py" line="1527"/>
         <source>&amp;Vertical Toolbox</source>
         <translation>S&amp;vislá nástrojová lišta</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1607"/>
+        <location filename="UI/UserInterface.py" line="1529"/>
         <source>Toggle the Vertical Toolbox window</source>
         <translation>Přepnout na svislou nástrojovou lištu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1608"/>
+        <location filename="UI/UserInterface.py" line="1530"/>
         <source>&lt;b&gt;Toggle the Vertical Toolbox window&lt;/b&gt;&lt;p&gt;If the Vertical Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout svislou nástrojovou lištu&lt;/b&gt;&lt;p&gt;Pokud je svislá nástrojová lišta skryta, tak se zobrazí. Je-li zobrazena, skryje se.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1616"/>
+        <location filename="UI/UserInterface.py" line="1538"/>
         <source>&amp;Horizontal Toolbox</source>
         <translation>&amp;Horizontální lista nástrojů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1619"/>
+        <location filename="UI/UserInterface.py" line="1541"/>
         <source>Toggle the Horizontal Toolbox window</source>
         <translation>Přepnout na vodorovnou lištu nástrojů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1620"/>
+        <location filename="UI/UserInterface.py" line="1542"/>
         <source>&lt;b&gt;Toggle the Horizontal Toolbox window&lt;/b&gt;&lt;p&gt;If the Horizontal Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout vodorovnou nástrojovou lištu&lt;/b&gt;&lt;p&gt;Pokud je vodorovná nástrojová lišta skryta, tak se zobrazí. Je-li zobrazena, skryje se.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3082"/>
+        <location filename="UI/UserInterface.py" line="3001"/>
         <source>Restart application</source>
         <translation>Restartovat aplikaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3082"/>
+        <location filename="UI/UserInterface.py" line="3001"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>Aplikace potřebuje restartovat. Má se provést nyní?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1503"/>
+        <location filename="UI/UserInterface.py" line="1425"/>
         <source>Terminal</source>
         <translation>Terminál</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1503"/>
+        <location filename="UI/UserInterface.py" line="1425"/>
         <source>Te&amp;rminal</source>
         <translation>Te&amp;rminál</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1505"/>
+        <location filename="UI/UserInterface.py" line="1427"/>
         <source>Toggle the Terminal window</source>
         <translation>Přepnout do okna s terminálem</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1506"/>
+        <location filename="UI/UserInterface.py" line="1428"/>
         <source>&lt;b&gt;Toggle the Terminal window&lt;/b&gt;&lt;p&gt;If the Terminal window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout do okna s terminálem&lt;/b&gt;&lt;p&gt;Pokud je okno skryto, tak se zobrazí. Je-li zobrazeno, skryje se.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1514"/>
+        <location filename="UI/UserInterface.py" line="1436"/>
         <source>Activate Terminal</source>
         <translation>Aktivovat terminál</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1514"/>
+        <location filename="UI/UserInterface.py" line="1436"/>
         <source>Alt+Shift+R</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1596"/>
+        <location filename="UI/UserInterface.py" line="1518"/>
         <source>Alt+Shift+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2394"/>
+        <location filename="UI/UserInterface.py" line="2313"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2590"/>
+        <location filename="UI/UserInterface.py" line="2509"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje eol nastavení v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2137"/>
+        <location filename="UI/UserInterface.py" line="2059"/>
         <source>Switch between tabs</source>
         <translation>Přepnout mezi taby</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2137"/>
+        <location filename="UI/UserInterface.py" line="2059"/>
         <source>Ctrl+1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2005"/>
+        <location filename="UI/UserInterface.py" line="1927"/>
         <source>Export Preferences</source>
         <translation>Exportovat předvolby</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2005"/>
+        <location filename="UI/UserInterface.py" line="1927"/>
         <source>E&amp;xport Preferences...</source>
         <translation>E&amp;xportovat předvolby...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2008"/>
+        <location filename="UI/UserInterface.py" line="1930"/>
         <source>Export the current configuration</source>
         <translation>Export aktuální konfigurace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2009"/>
+        <location filename="UI/UserInterface.py" line="1931"/>
         <source>&lt;b&gt;Export Preferences&lt;/b&gt;&lt;p&gt;Export the current configuration to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Export předvoleb&lt;/b&gt;&lt;p&gt;Export aktuální konfigurace do souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2016"/>
+        <location filename="UI/UserInterface.py" line="1938"/>
         <source>Import Preferences</source>
         <translation>Import předvoleb</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2016"/>
+        <location filename="UI/UserInterface.py" line="1938"/>
         <source>I&amp;mport Preferences...</source>
         <translation>I&amp;mport předvoleb...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2019"/>
+        <location filename="UI/UserInterface.py" line="1941"/>
         <source>Import a previously exported configuration</source>
         <translation>Import dříve exportované konfigurace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2021"/>
+        <location filename="UI/UserInterface.py" line="1943"/>
         <source>&lt;b&gt;Import Preferences&lt;/b&gt;&lt;p&gt;Import a previously exported configuration.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Import předvoleb&lt;/b&gt;&lt;p&gt;Import dříve exportované konfigurace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2121"/>
+        <location filename="UI/UserInterface.py" line="2043"/>
         <source>Show next</source>
         <translation>Zobrazit další</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2129"/>
+        <location filename="UI/UserInterface.py" line="2051"/>
         <source>Show previous</source>
         <translation>Zobrazit předchozí</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1628"/>
+        <location filename="UI/UserInterface.py" line="1550"/>
         <source>Left Sidebar</source>
         <translation>Levé menu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1628"/>
+        <location filename="UI/UserInterface.py" line="1550"/>
         <source>&amp;Left Sidebar</source>
         <translation>&amp;Levé menu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1630"/>
+        <location filename="UI/UserInterface.py" line="1552"/>
         <source>Toggle the left sidebar window</source>
         <translation>Přepnout okno levého menu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1631"/>
+        <location filename="UI/UserInterface.py" line="1553"/>
         <source>&lt;b&gt;Toggle the left sidebar window&lt;/b&gt;&lt;p&gt;If the left sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout okno levého menu&lt;/b&gt;&lt;p&gt;Je-li okno levého menu skryto, tak se zobrazí. Je-li zobrazeno, skryje se.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1639"/>
+        <location filename="UI/UserInterface.py" line="1561"/>
         <source>Bottom Sidebar</source>
         <translation>Dolní menu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1639"/>
+        <location filename="UI/UserInterface.py" line="1561"/>
         <source>&amp;Bottom Sidebar</source>
         <translation>&amp;Dolní menu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1642"/>
+        <location filename="UI/UserInterface.py" line="1564"/>
         <source>Toggle the bottom sidebar window</source>
         <translation>Přepnout okno dolního menu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1643"/>
+        <location filename="UI/UserInterface.py" line="1565"/>
         <source>&lt;b&gt;Toggle the bottom sidebar window&lt;/b&gt;&lt;p&gt;If the bottom sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout okno dolního menu&lt;/b&gt;&lt;p&gt;Je-li okno dolního menu skryto, tak se zobrazí. Je-li zobrazeno, skryje se.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1462"/>
+        <location filename="UI/UserInterface.py" line="1384"/>
         <source>&amp;Debug-Viewer</source>
         <translation>Prohlížeč &amp;debugeru</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1464"/>
+        <location filename="UI/UserInterface.py" line="1386"/>
         <source>Toggle the Debug-Viewer window</source>
         <translation>Přepnout okno debug prohlížeče</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1465"/>
+        <location filename="UI/UserInterface.py" line="1387"/>
         <source>&lt;b&gt;Toggle the Debug-Viewer window&lt;/b&gt;&lt;p&gt;If the Debug-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout okno debug prohlížeče&lt;/b&gt;&lt;p&gt;Je-li okno debug prohlížeče skryto, zobrazí se. Je-li zobrazeno, skryje se.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1473"/>
+        <location filename="UI/UserInterface.py" line="1395"/>
         <source>Activate Debug-Viewer</source>
         <translation>Aktivní debug prohlížeč</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1945"/>
+        <location filename="UI/UserInterface.py" line="1867"/>
         <source>SQL Browser</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1945"/>
+        <location filename="UI/UserInterface.py" line="1867"/>
         <source>SQL &amp;Browser...</source>
         <translation>SQL &amp;Browser...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1949"/>
+        <location filename="UI/UserInterface.py" line="1871"/>
         <source>Browse a SQL database</source>
         <translation>Procházet SQL databázi</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1950"/>
+        <location filename="UI/UserInterface.py" line="1872"/>
         <source>&lt;b&gt;SQL Browser&lt;/b&gt;&lt;p&gt;Browse a SQL database.&lt;/p&gt;</source>
         <translation>&lt;b&gt;SQL Browser&lt;/b&gt;&lt;p&gt;Procházet SQL databázi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2867"/>
+        <location filename="UI/UserInterface.py" line="2786"/>
         <source>Error log found</source>
         <translation>Nalezen záznam o chybě</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2867"/>
+        <location filename="UI/UserInterface.py" line="2786"/>
         <source>An error log file was found. What should be done with it?</source>
         <translation>Nalezen záznam o chybě. Co by se s tím mělo dělat?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2878"/>
+        <location filename="UI/UserInterface.py" line="2797"/>
         <source>Send Bug Email</source>
         <translation>Poslat email s chybou</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2881"/>
+        <location filename="UI/UserInterface.py" line="2800"/>
         <source>Ignore and Delete</source>
         <translation>Ignotovat a smazat</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2884"/>
+        <location filename="UI/UserInterface.py" line="2803"/>
         <source>Ignore but Keep</source>
         <translation>Ignorovat ale zachovat</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1969"/>
+        <location filename="UI/UserInterface.py" line="1891"/>
         <source>Web Browser</source>
         <translation>Web prohlížeč</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1969"/>
+        <location filename="UI/UserInterface.py" line="1891"/>
         <source>&amp;Web Browser...</source>
         <translation>&amp;Web prohlížeč...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1981"/>
+        <location filename="UI/UserInterface.py" line="1903"/>
         <source>Icon Editor</source>
         <translation>Editor ikon</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1981"/>
+        <location filename="UI/UserInterface.py" line="1903"/>
         <source>&amp;Icon Editor...</source>
         <translation>Editor &amp;ikon...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4191"/>
+        <location filename="UI/UserInterface.py" line="4110"/>
         <source>Qt 3 support</source>
         <translation>Qt 3 podpora</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2273"/>
+        <location filename="UI/UserInterface.py" line="2195"/>
         <source>PySide Documentation</source>
         <translation>PySide dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2273"/>
+        <location filename="UI/UserInterface.py" line="2195"/>
         <source>Py&amp;Side Documentation</source>
         <translation>Py&amp;Side dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2275"/>
+        <location filename="UI/UserInterface.py" line="2197"/>
         <source>Open PySide Documentation</source>
         <translation>Otevřít PySide dokumentaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2276"/>
+        <location filename="UI/UserInterface.py" line="2198"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;PySide dokumentace&lt;/b&gt;&lt;p&gt;Zobrazit PySide dokumentaci. V závislosti na vašich nastaveních zobrazí interní Eric prohlížeč nápovědy nebo spustí webový prohlížeč nebo Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4763"/>
+        <location filename="UI/UserInterface.py" line="4682"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Počátek dokumentace PySide nebyl nastaven.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="680"/>
+        <location filename="UI/UserInterface.py" line="602"/>
         <source>&lt;p&gt;The Qt Style Sheet file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor Qt Style Sheet &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1345"/>
+        <location filename="UI/UserInterface.py" line="1267"/>
         <source>{0} - Passive Mode</source>
         <translation>{0} - Pasivní mód</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1350"/>
+        <location filename="UI/UserInterface.py" line="1272"/>
         <source>{0} - {1} - Passive Mode</source>
         <translation>{0} - {1} - pasivní mód</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1353"/>
+        <location filename="UI/UserInterface.py" line="1275"/>
         <source>{0} - {1} - {2} - Passive Mode</source>
         <translation>{0} - {1} - {2} - pasivní mód</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1740"/>
+        <location filename="UI/UserInterface.py" line="1662"/>
         <source>&lt;b&gt;Helpviewer&lt;/b&gt;&lt;p&gt;Display the eric5 web browser. This window will show HTML help files and help from Qt help collections. It has the capability to navigate to links, set bookmarks, print the displayed help and some more features. You may use it to browse the internet as well&lt;/p&gt;&lt;p&gt;If called with a word selected, this word is search in the Qt help collection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč nápovědy&lt;/b&gt;&lt;p&gt;Otevře se eric5 web prohlížeč. Toto okno zobrazuje HTML soubory s nápovědou z Qt kolekce. Má schopnosti navigovat přes odkazy, nastavovat záložky, tisknout zobrazenou nápovědu a další možnosti. Můžete jej také použít pro procházení internetem&lt;/p&gt;&lt;p&gt;Je-li otevřen s hledaným slovem, je toto slovo hledáno v Qt nápovědách.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1770"/>
+        <location filename="UI/UserInterface.py" line="1692"/>
         <source>&lt;b&gt;Check for Updates...&lt;/b&gt;&lt;p&gt;Checks the internet for updates of eric5.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zjistit aktualizace&lt;/b&gt;&lt;p&gt;Zkontroluje přes internet jestli existují nějaké aktualizace Eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1782"/>
+        <location filename="UI/UserInterface.py" line="1704"/>
         <source>&lt;b&gt;Show downloadable versions...&lt;/b&gt;&lt;p&gt;Shows the eric5 versions available for download from the internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit dostupné verze ke stažení&lt;/b&gt;&lt;p&gt;Zobrazit dostupné verze eric5 pro stažení z internetu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1973"/>
+        <location filename="UI/UserInterface.py" line="1895"/>
         <source>Start the eric5 Web Browser</source>
         <translation>Spustit eric5 web prohlížeč</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1974"/>
+        <location filename="UI/UserInterface.py" line="1896"/>
         <source>&lt;b&gt;Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Web prohlížeč&lt;/b&gt;&lt;p&gt;Procházet internet pomocí eric5 web prohlížeče.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1985"/>
+        <location filename="UI/UserInterface.py" line="1907"/>
         <source>Start the eric5 Icon Editor</source>
         <translation>Spustit eric5 editor ikon</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1986"/>
+        <location filename="UI/UserInterface.py" line="1908"/>
         <source>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Starts the eric5 Icon Editor for editing simple icons.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Editor ikon&lt;/b&gt;&lt;p&gt;Spustí se eric5 editor ikon pro jednoduchou editaci ikon.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2042"/>
+        <location filename="UI/UserInterface.py" line="1964"/>
         <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric5.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit externí nástroje&lt;/b&gt;&lt;p&gt;Otevře dialog pro zobrazení cesty a verze externích nástrojů používaných Eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2258"/>
+        <location filename="UI/UserInterface.py" line="2180"/>
         <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eric API dokumentace&lt;/b&gt;&lt;p&gt;Zobrazit Eric API dokumentaci. Umístění dokumentace je v podadresáři Documentation/Source v instalačním adresáři eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2677"/>
+        <location filename="UI/UserInterface.py" line="2596"/>
         <source>External Tools/{0}</source>
         <translation>Externí nástroje/{0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4191"/>
+        <location filename="UI/UserInterface.py" line="4110"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation>Qt v.3 není podporováno v eric5.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4349"/>
+        <location filename="UI/UserInterface.py" line="4268"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; neexistuje nebo má nulovou délku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4111"/>
+        <location filename="UI/UserInterface.py" line="4030"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Qt-Designer.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4168"/>
+        <location filename="UI/UserInterface.py" line="4087"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Qt-Linguist.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4212"/>
+        <location filename="UI/UserInterface.py" line="4131"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Qt-Assistant.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4253"/>
+        <location filename="UI/UserInterface.py" line="4172"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit aktuální prohlížeč.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4312"/>
+        <location filename="UI/UserInterface.py" line="4231"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit UI Previewer.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4357"/>
+        <location filename="UI/UserInterface.py" line="4276"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Previewer překladů.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4376"/>
+        <location filename="UI/UserInterface.py" line="4295"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit SQL Browser.&lt;br&gt;Ujistěte se, že je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4424"/>
+        <location filename="UI/UserInterface.py" line="4343"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>V externím nástroji  &apos;{0}&apos; ve skupině &apos;{1}&apos; nebyl záznam nástroje nalezen.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4430"/>
+        <location filename="UI/UserInterface.py" line="4349"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>Skupina nástrojů &apos;{0}&apos; nenalezena. </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4466"/>
+        <location filename="UI/UserInterface.py" line="4385"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Spouštím proces &apos;{0} {1}&apos;.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4482"/>
+        <location filename="UI/UserInterface.py" line="4401"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit příkaz &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{1}&lt;/b&gt;. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4559"/>
+        <location filename="UI/UserInterface.py" line="4478"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>Proces &apos;{0}&apos; byl ukončen.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4778"/>
+        <location filename="UI/UserInterface.py" line="4697"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář dokumentace &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; nebyl nalezen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4975"/>
+        <location filename="UI/UserInterface.py" line="4891"/>
         <source>Keyboard shortcut file (*.e4k);;Compressed keyboard shortcut file (*.e4kz)</source>
         <translation>Soubor eric4 klávesových zkratek (*.e4k);;Komprimovaný soubor eric4 klávesových zkratek (*.e4kz)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4995"/>
+        <location filename="UI/UserInterface.py" line="4911"/>
         <source>&lt;p&gt;The keyboard shortcuts could not be written to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Klávesové zkratky nelze do souboru &lt;b&gt;{0}&lt;/b&gt; zapsat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5004"/>
+        <location filename="UI/UserInterface.py" line="4920"/>
         <source>Keyboard shortcut file (*.e4k *.e4kz)</source>
         <translation>Soubor klávesových zkratek (*.e4k *.e4kz)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5128"/>
+        <location filename="UI/UserInterface.py" line="5044"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5175"/>
+        <location filename="UI/UserInterface.py" line="5091"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5185"/>
+        <location filename="UI/UserInterface.py" line="5101"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s úlohami &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5203"/>
+        <location filename="UI/UserInterface.py" line="5119"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zápis do souboru relace session &lt;b&gt;{0}&lt;/b&gt; se nezdařil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5254"/>
+        <location filename="UI/UserInterface.py" line="5170"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor relace session &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5264"/>
+        <location filename="UI/UserInterface.py" line="5180"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor relace (session) &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5382"/>
+        <location filename="UI/UserInterface.py" line="5298"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5531"/>
+        <location filename="UI/UserInterface.py" line="5447"/>
         <source>Trying host {0}</source>
         <translation>Zkouším host {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5638"/>
+        <location filename="UI/UserInterface.py" line="5554"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>Aktualizace &lt;b&gt;{0}&lt;/b&gt; eric5 je připravena na &lt;b&gt;{1}&lt;/b&gt;. Chcete ji stáhnout a nainstalovat?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5650"/>
+        <location filename="UI/UserInterface.py" line="5566"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 je aktuální</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5650"/>
+        <location filename="UI/UserInterface.py" line="5566"/>
         <source>You are using the latest version of eric5</source>
         <translation>Používáte poslední verzi eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5703"/>
+        <location filename="UI/UserInterface.py" line="5619"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;SSL chyby:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Chcete tyto chyby ignorovat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5729"/>
+        <location filename="UI/UserInterface.py" line="5645"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>eric5 nebyl ještě nakonfigurován. Bude spuštěn konfigurační dialog.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1651"/>
+        <location filename="UI/UserInterface.py" line="1573"/>
         <source>Cooperation</source>
         <translation>Spolupráce</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1651"/>
+        <location filename="UI/UserInterface.py" line="1573"/>
         <source>&amp;Cooperation</source>
         <translation>Spoluprá&amp;ce</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1653"/>
+        <location filename="UI/UserInterface.py" line="1575"/>
         <source>Toggle the Cooperation window</source>
         <translation>Zobrazit/skrýt okno spolupráce</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1655"/>
+        <location filename="UI/UserInterface.py" line="1577"/>
         <source>&lt;b&gt;Toggle the Cooperation window&lt;/b&gt;&lt;p&gt;If the Cooperation window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit/skrýt okno spolupráce&lt;/b&gt;&lt;p&gt;Pokud je okno skryté zobrazí se. Pokud se okno zobrazuje, tak se skryje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1663"/>
+        <location filename="UI/UserInterface.py" line="1585"/>
         <source>Activate Cooperation-Viewer</source>
         <translation>Aktivovat náhled spolupráce</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1663"/>
+        <location filename="UI/UserInterface.py" line="1585"/>
         <source>Alt+Shift+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1673"/>
+        <location filename="UI/UserInterface.py" line="1595"/>
         <source>Symbols</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1673"/>
+        <location filename="UI/UserInterface.py" line="1595"/>
         <source>&amp;Symbols</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1675"/>
+        <location filename="UI/UserInterface.py" line="1597"/>
         <source>Toggle the Symbols window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1677"/>
+        <location filename="UI/UserInterface.py" line="1599"/>
         <source>&lt;b&gt;Toggle the Symbols window&lt;/b&gt;&lt;p&gt;If the Symbols window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1685"/>
+        <location filename="UI/UserInterface.py" line="1607"/>
         <source>Activate Symbols-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1685"/>
+        <location filename="UI/UserInterface.py" line="1607"/>
         <source>Alt+Shift+Y</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1695"/>
+        <location filename="UI/UserInterface.py" line="1617"/>
         <source>Numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1695"/>
+        <location filename="UI/UserInterface.py" line="1617"/>
         <source>&amp;Numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1697"/>
+        <location filename="UI/UserInterface.py" line="1619"/>
         <source>Toggle the Numbers window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1699"/>
+        <location filename="UI/UserInterface.py" line="1621"/>
         <source>&lt;b&gt;Toggle the Numbers window&lt;/b&gt;&lt;p&gt;If the Numbers window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1707"/>
+        <location filename="UI/UserInterface.py" line="1629"/>
         <source>Activate Numbers-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1707"/>
+        <location filename="UI/UserInterface.py" line="1629"/>
         <source>Alt+Shift+B</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39072,17 +39105,17 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Prohlížeč lokálních proměnných&lt;/b&gt;&lt;p&gt;Toto okno zobrazuje lokální proměnné debugovénho programu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="325"/>
+        <location filename="Debugger/VariablesViewer.py" line="323"/>
         <source>Show Details...</source>
         <translation>Zobrazit detaily...</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="330"/>
+        <location filename="Debugger/VariablesViewer.py" line="328"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="536"/>
+        <location filename="Debugger/VariablesViewer.py" line="534"/>
         <source>{0} items</source>
         <translation>{0} položek</translation>
     </message>
@@ -39090,12 +39123,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>VcsMercurialPlugin</name>
     <message>
-        <location filename="Plugins/PluginVcsMercurial.py" line="53"/>
+        <location filename="Plugins/PluginVcsMercurial.py" line="54"/>
         <source>Version Control - Mercurial</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginVcsMercurial.py" line="119"/>
+        <location filename="Plugins/PluginVcsMercurial.py" line="120"/>
         <source>Mercurial</source>
         <translation></translation>
     </message>
@@ -39397,17 +39430,17 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>VcsPySvnPlugin</name>
     <message>
-        <location filename="Plugins/PluginVcsPySvn.py" line="90"/>
+        <location filename="Plugins/PluginVcsPySvn.py" line="91"/>
         <source>Subversion (pysvn)</source>
         <translation>Subversion (pysvn)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginVcsPySvn.py" line="57"/>
+        <location filename="Plugins/PluginVcsPySvn.py" line="58"/>
         <source>Version Control - Subversion (pysvn)</source>
         <translation>Správa verzí - Subversion (pysvn)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginVcsPySvn.py" line="117"/>
+        <location filename="Plugins/PluginVcsPySvn.py" line="118"/>
         <source>Subversion</source>
         <translation></translation>
     </message>
@@ -39423,22 +39456,22 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>VcsStatusMonitorThread</name>
     <message>
-        <location filename="VCS/StatusMonitorThread.py" line="64"/>
+        <location filename="VCS/StatusMonitorThread.py" line="66"/>
         <source>Checking repository status</source>
         <translation>Zkontrolovat status repozitáře</translation>
     </message>
     <message>
-        <location filename="VCS/StatusMonitorThread.py" line="73"/>
+        <location filename="VCS/StatusMonitorThread.py" line="75"/>
         <source>Sending data</source>
         <translation>Odeslat data</translation>
     </message>
     <message>
-        <location filename="VCS/StatusMonitorThread.py" line="56"/>
+        <location filename="VCS/StatusMonitorThread.py" line="59"/>
         <source>Waiting for lock</source>
         <translation>Čekám na zámek</translation>
     </message>
     <message>
-        <location filename="VCS/StatusMonitorThread.py" line="80"/>
+        <location filename="VCS/StatusMonitorThread.py" line="79"/>
         <source>Timed out waiting for lock</source>
         <translation>Časový limit čekání na zámek vypršel</translation>
     </message>
@@ -39446,17 +39479,17 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>VcsSubversionPlugin</name>
     <message>
-        <location filename="Plugins/PluginVcsSubversion.py" line="92"/>
+        <location filename="Plugins/PluginVcsSubversion.py" line="93"/>
         <source>Subversion (svn)</source>
         <translation>Subversion (svn)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginVcsSubversion.py" line="53"/>
+        <location filename="Plugins/PluginVcsSubversion.py" line="54"/>
         <source>Version Control - Subversion (svn)</source>
         <translation>Správa verzí - Subversion (svn)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginVcsSubversion.py" line="119"/>
+        <location filename="Plugins/PluginVcsSubversion.py" line="120"/>
         <source>Subversion</source>
         <translation></translation>
     </message>
@@ -39464,17 +39497,17 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>VersionControl</name>
     <message>
-        <location filename="VCS/VersionControl.py" line="529"/>
+        <location filename="VCS/VersionControl.py" line="531"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="VCS/VersionControl.py" line="659"/>
+        <location filename="VCS/VersionControl.py" line="657"/>
         <source>Repository status checking is switched off</source>
         <translation>Kontrolování stavu v repozitáři je vypnuto</translation>
     </message>
     <message>
-        <location filename="VCS/VersionControl.py" line="529"/>
+        <location filename="VCS/VersionControl.py" line="531"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -39482,2592 +39515,2592 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>ViewManager</name>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="461"/>
+        <location filename="ViewManager/ViewManager.py" line="476"/>
         <source>New</source>
         <translation>Nový</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="461"/>
+        <location filename="ViewManager/ViewManager.py" line="476"/>
         <source>&amp;New</source>
         <translation>&amp;Nový</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="461"/>
+        <location filename="ViewManager/ViewManager.py" line="476"/>
         <source>Ctrl+N</source>
         <comment>File|New</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="466"/>
+        <location filename="ViewManager/ViewManager.py" line="481"/>
         <source>Open an empty editor window</source>
         <translation>Otevřít prázdné editační okno</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="468"/>
+        <location filename="ViewManager/ViewManager.py" line="483"/>
         <source>&lt;b&gt;New&lt;/b&gt;&lt;p&gt;An empty editor window will be created.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nový&lt;/b&gt;
 &lt;p&gt;Bude otevřeno prázdné editační okno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="475"/>
+        <location filename="ViewManager/ViewManager.py" line="490"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="475"/>
+        <location filename="ViewManager/ViewManager.py" line="490"/>
         <source>&amp;Open...</source>
         <translation>&amp;Otevřít...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="475"/>
+        <location filename="ViewManager/ViewManager.py" line="490"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="481"/>
+        <location filename="ViewManager/ViewManager.py" line="496"/>
         <source>Open a file</source>
         <translation>Otevřít soubor</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="482"/>
+        <location filename="ViewManager/ViewManager.py" line="497"/>
         <source>&lt;b&gt;Open a file&lt;/b&gt;&lt;p&gt;You will be asked for the name of a file to be opened in an editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít soubor&lt;/b&gt;
 &lt;p&gt;Budete dotázáni na jméno souboru, který se má otevřít do editačního okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="492"/>
+        <location filename="ViewManager/ViewManager.py" line="507"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="492"/>
+        <location filename="ViewManager/ViewManager.py" line="507"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="492"/>
+        <location filename="ViewManager/ViewManager.py" line="507"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="498"/>
+        <location filename="ViewManager/ViewManager.py" line="513"/>
         <source>Close the current window</source>
         <translation>Zavřít aktuální okno</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="500"/>
+        <location filename="ViewManager/ViewManager.py" line="515"/>
         <source>&lt;b&gt;Close Window&lt;/b&gt;&lt;p&gt;Close the current window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít okno&lt;/b&gt;
 &lt;p&gt;Zavřít aktuální okno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="507"/>
+        <location filename="ViewManager/ViewManager.py" line="522"/>
         <source>Close All</source>
         <translation>Zavřít vše</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="507"/>
+        <location filename="ViewManager/ViewManager.py" line="522"/>
         <source>Clos&amp;e All</source>
         <translation>Zavřít vš&amp;e</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="510"/>
+        <location filename="ViewManager/ViewManager.py" line="525"/>
         <source>Close all editor windows</source>
         <translation>Zavřít všechny editační okna</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="512"/>
+        <location filename="ViewManager/ViewManager.py" line="527"/>
         <source>&lt;b&gt;Close All Windows&lt;/b&gt;&lt;p&gt;Close all editor windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít všechna okna&lt;/b&gt;
 &lt;p&gt;Zavřít všechna editační okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="523"/>
+        <location filename="ViewManager/ViewManager.py" line="538"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="523"/>
+        <location filename="ViewManager/ViewManager.py" line="538"/>
         <source>&amp;Save</source>
         <translation>&amp;Uložit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="523"/>
+        <location filename="ViewManager/ViewManager.py" line="538"/>
         <source>Ctrl+S</source>
         <comment>File|Save</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="529"/>
+        <location filename="ViewManager/ViewManager.py" line="544"/>
         <source>Save the current file</source>
         <translation>Uložit aktuální soubor</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="531"/>
+        <location filename="ViewManager/ViewManager.py" line="546"/>
         <source>&lt;b&gt;Save File&lt;/b&gt;&lt;p&gt;Save the contents of current editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit soubor&lt;/b&gt;
 &lt;p&gt;Uložit obsah aktuálního editačního okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="538"/>
+        <location filename="ViewManager/ViewManager.py" line="553"/>
         <source>Save as</source>
         <translation>Uložit jako</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="538"/>
+        <location filename="ViewManager/ViewManager.py" line="553"/>
         <source>Save &amp;as...</source>
         <translation>U&amp;ložit jako...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="538"/>
+        <location filename="ViewManager/ViewManager.py" line="553"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="544"/>
+        <location filename="ViewManager/ViewManager.py" line="559"/>
         <source>Save the current file to a new one</source>
         <translation>Uložit aktuální soubor do nového</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="546"/>
+        <location filename="ViewManager/ViewManager.py" line="561"/>
         <source>&lt;b&gt;Save File as&lt;/b&gt;&lt;p&gt;Save the contents of current editor window to a new file. The file can be entered in a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit soubor jako&lt;/b&gt;
 &lt;p&gt;Uložit obsah aktuálního editačního okna do nového souboru. Název souboru bude zadán v dialogu výběru souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="554"/>
+        <location filename="ViewManager/ViewManager.py" line="569"/>
         <source>Save all</source>
         <translation>Uložit vše</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="554"/>
+        <location filename="ViewManager/ViewManager.py" line="569"/>
         <source>Save a&amp;ll...</source>
         <translation>Uložit &amp;vše...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="558"/>
+        <location filename="ViewManager/ViewManager.py" line="573"/>
         <source>Save all files</source>
         <translation>Uložit všechny soubory</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="560"/>
+        <location filename="ViewManager/ViewManager.py" line="575"/>
         <source>&lt;b&gt;Save All Files&lt;/b&gt;&lt;p&gt;Save the contents of all editor windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit všechny soubory&lt;/b&gt;
 &lt;p&gt;Uložit obsah všech editačních oken.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="569"/>
+        <location filename="ViewManager/ViewManager.py" line="584"/>
         <source>Save to Project</source>
         <translation>Uložit do projektu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="569"/>
+        <location filename="ViewManager/ViewManager.py" line="584"/>
         <source>Save to Pro&amp;ject</source>
         <translation>Uložit do pro&amp;jektu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="574"/>
+        <location filename="ViewManager/ViewManager.py" line="589"/>
         <source>Save the current file to the current project</source>
         <translation>Uložit aktuální soubor do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="576"/>
+        <location filename="ViewManager/ViewManager.py" line="591"/>
         <source>&lt;b&gt;Save to Project&lt;/b&gt;&lt;p&gt;Save the contents of the current editor window to the current project. After the file has been saved, it is automatically added to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit do projektu&lt;/b&gt;
 &lt;p&gt;Uložit obsah aktuálního editačního okna do projektu. Po uložení bude soubor automaticky přidán do aktuálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="586"/>
+        <location filename="ViewManager/ViewManager.py" line="601"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="586"/>
+        <location filename="ViewManager/ViewManager.py" line="601"/>
         <source>&amp;Print</source>
         <translation>&amp;Tisk</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="586"/>
+        <location filename="ViewManager/ViewManager.py" line="601"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="592"/>
+        <location filename="ViewManager/ViewManager.py" line="607"/>
         <source>Print the current file</source>
         <translation>Tisk aktuálního souboru</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="594"/>
+        <location filename="ViewManager/ViewManager.py" line="609"/>
         <source>&lt;b&gt;Print File&lt;/b&gt;&lt;p&gt;Print the contents of current editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tisk souboru&lt;/b&gt;
 &lt;p&gt;Tisk obsahu aktuálního editačního okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="617"/>
+        <location filename="ViewManager/ViewManager.py" line="632"/>
         <source>Search File</source>
         <translation>Najít soubor</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="617"/>
+        <location filename="ViewManager/ViewManager.py" line="632"/>
         <source>Search &amp;File...</source>
         <translation>N&amp;ajít soubor...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="617"/>
+        <location filename="ViewManager/ViewManager.py" line="632"/>
         <source>Alt+Ctrl+F</source>
         <comment>File|Search File</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="623"/>
+        <location filename="ViewManager/ViewManager.py" line="638"/>
         <source>Search for a file</source>
         <translation>Vyhledat soubor</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="625"/>
+        <location filename="ViewManager/ViewManager.py" line="640"/>
         <source>&lt;b&gt;Search File&lt;/b&gt;&lt;p&gt;Search for a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Najít soubor&lt;/b&gt;
 &lt;p&gt;Hledání souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="638"/>
+        <location filename="ViewManager/ViewManager.py" line="653"/>
         <source>&amp;File</source>
         <translation>S&amp;oubor</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="639"/>
+        <location filename="ViewManager/ViewManager.py" line="654"/>
         <source>Open &amp;Recent Files</source>
         <translation>Otevřít poslední soubo&amp;ry</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="641"/>
+        <location filename="ViewManager/ViewManager.py" line="656"/>
         <source>Open &amp;Bookmarked Files</source>
         <translation>Otevřít sou&amp;bory ze záložek</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="687"/>
+        <location filename="ViewManager/ViewManager.py" line="700"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="731"/>
+        <location filename="ViewManager/ViewManager.py" line="744"/>
         <source>Undo</source>
         <translation>Undo</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="731"/>
+        <location filename="ViewManager/ViewManager.py" line="744"/>
         <source>&amp;Undo</source>
         <translation>&amp;Vrátit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="731"/>
+        <location filename="ViewManager/ViewManager.py" line="744"/>
         <source>Ctrl+Z</source>
         <comment>Edit|Undo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="731"/>
+        <location filename="ViewManager/ViewManager.py" line="744"/>
         <source>Alt+Backspace</source>
         <comment>Edit|Undo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="739"/>
+        <location filename="ViewManager/ViewManager.py" line="752"/>
         <source>Undo the last change</source>
         <translation>Vrátit poslední změnu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="741"/>
+        <location filename="ViewManager/ViewManager.py" line="754"/>
         <source>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Undo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Undo&lt;/b&gt;
 &lt;p&gt;Vrátit poslední změnu v aktuálním editačním okně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="748"/>
+        <location filename="ViewManager/ViewManager.py" line="761"/>
         <source>Redo</source>
         <translation>Redo</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="748"/>
+        <location filename="ViewManager/ViewManager.py" line="761"/>
         <source>&amp;Redo</source>
         <translation>&amp;Znovu použít</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="748"/>
+        <location filename="ViewManager/ViewManager.py" line="761"/>
         <source>Ctrl+Shift+Z</source>
         <comment>Edit|Redo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="754"/>
+        <location filename="ViewManager/ViewManager.py" line="767"/>
         <source>Redo the last change</source>
         <translation>Znovu použít poslední změnu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="756"/>
+        <location filename="ViewManager/ViewManager.py" line="769"/>
         <source>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Redo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Redo&lt;/b&gt;
 &lt;p&gt;Znovu použít poslení změnu, která byla provedena v aktuálním editačním okně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="770"/>
+        <location filename="ViewManager/ViewManager.py" line="783"/>
         <source>Revert to last saved state</source>
         <translation>Vrátit se k poslednímu uloženému stavu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="763"/>
+        <location filename="ViewManager/ViewManager.py" line="776"/>
         <source>Re&amp;vert to last saved state</source>
         <translation>Vrátit se k &amp;poslednímu uloženému stavu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="763"/>
+        <location filename="ViewManager/ViewManager.py" line="776"/>
         <source>Ctrl+Y</source>
         <comment>Edit|Revert</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="772"/>
+        <location filename="ViewManager/ViewManager.py" line="785"/>
         <source>&lt;b&gt;Revert to last saved state&lt;/b&gt;&lt;p&gt;Undo all changes up to the last saved state of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vrátit poslwední uložený stav&lt;/b&gt;
 &lt;p&gt;Zruší všechny změny, které byly provedeny od posledního uložení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="782"/>
+        <location filename="ViewManager/ViewManager.py" line="795"/>
         <source>Cut</source>
         <translation>Vyjmout</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="782"/>
+        <location filename="ViewManager/ViewManager.py" line="795"/>
         <source>Cu&amp;t</source>
         <translation>Vyjmou&amp;t</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="782"/>
+        <location filename="ViewManager/ViewManager.py" line="795"/>
         <source>Ctrl+X</source>
         <comment>Edit|Cut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="782"/>
+        <location filename="ViewManager/ViewManager.py" line="795"/>
         <source>Shift+Del</source>
         <comment>Edit|Cut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="789"/>
+        <location filename="ViewManager/ViewManager.py" line="802"/>
         <source>Cut the selection</source>
         <translation>Vyjmout výběr</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="791"/>
+        <location filename="ViewManager/ViewManager.py" line="804"/>
         <source>&lt;b&gt;Cut&lt;/b&gt;&lt;p&gt;Cut the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyjmout&lt;/b&gt;
 &lt;p&gt;Vyjme vybraný text z aktuálního editačního okna a vloží jej do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="798"/>
+        <location filename="ViewManager/ViewManager.py" line="811"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="798"/>
+        <location filename="ViewManager/ViewManager.py" line="811"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopírovat</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="798"/>
+        <location filename="ViewManager/ViewManager.py" line="811"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="798"/>
+        <location filename="ViewManager/ViewManager.py" line="811"/>
         <source>Ctrl+Ins</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="806"/>
+        <location filename="ViewManager/ViewManager.py" line="819"/>
         <source>Copy the selection</source>
         <translation>Kopírovat výběr</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="808"/>
+        <location filename="ViewManager/ViewManager.py" line="821"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopírovat&lt;/b&gt;
 &lt;p&gt;Zkopíruje vybraný text v aktuálním editačním okně a uloží jej do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="815"/>
+        <location filename="ViewManager/ViewManager.py" line="828"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="815"/>
+        <location filename="ViewManager/ViewManager.py" line="828"/>
         <source>&amp;Paste</source>
         <translation>V&amp;ložit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="815"/>
+        <location filename="ViewManager/ViewManager.py" line="828"/>
         <source>Ctrl+V</source>
         <comment>Edit|Paste</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="815"/>
+        <location filename="ViewManager/ViewManager.py" line="828"/>
         <source>Shift+Ins</source>
         <comment>Edit|Paste</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="823"/>
+        <location filename="ViewManager/ViewManager.py" line="836"/>
         <source>Paste the last cut/copied text</source>
         <translation>Vložit text ze schránky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="825"/>
+        <location filename="ViewManager/ViewManager.py" line="838"/>
         <source>&lt;b&gt;Paste&lt;/b&gt;&lt;p&gt;Paste the last cut/copied text from the clipboard to the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vložit&lt;/b&gt;
 &lt;p&gt;Vloží text, který byl uložen do schránky při předchozím kroku Vyjmout nebo Kopírovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="833"/>
+        <location filename="ViewManager/ViewManager.py" line="846"/>
         <source>Clear</source>
         <translation>Vyčistit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="833"/>
+        <location filename="ViewManager/ViewManager.py" line="846"/>
         <source>Cl&amp;ear</source>
         <translation>Vyči&amp;stit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="833"/>
+        <location filename="ViewManager/ViewManager.py" line="846"/>
         <source>Alt+Shift+C</source>
         <comment>Edit|Clear</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="840"/>
+        <location filename="ViewManager/ViewManager.py" line="853"/>
         <source>Clear all text</source>
         <translation>Vyčistit všechen text</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="842"/>
+        <location filename="ViewManager/ViewManager.py" line="855"/>
         <source>&lt;b&gt;Clear&lt;/b&gt;&lt;p&gt;Delete all text of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit&lt;/b&gt;
 &lt;p&gt;Smazat všechnen text v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="864"/>
+        <location filename="ViewManager/ViewManager.py" line="877"/>
         <source>Indent</source>
         <translation>Odsadit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="864"/>
+        <location filename="ViewManager/ViewManager.py" line="877"/>
         <source>&amp;Indent</source>
         <translation>Odsad&amp;it</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="864"/>
+        <location filename="ViewManager/ViewManager.py" line="877"/>
         <source>Ctrl+I</source>
         <comment>Edit|Indent</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="871"/>
+        <location filename="ViewManager/ViewManager.py" line="884"/>
         <source>Indent line</source>
         <translation>Odsadit řádek</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="872"/>
+        <location filename="ViewManager/ViewManager.py" line="885"/>
         <source>&lt;b&gt;Indent&lt;/b&gt;&lt;p&gt;Indents the current line or the lines of the selection by one level.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Odsadit&lt;/b&gt;
 &lt;p&gt;Odsadí aktuální řádek nebo vybrané řádky o jednu úroveň.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="880"/>
+        <location filename="ViewManager/ViewManager.py" line="893"/>
         <source>Unindent</source>
         <translation>Zrušit odsazení</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="880"/>
+        <location filename="ViewManager/ViewManager.py" line="893"/>
         <source>U&amp;nindent</source>
         <translation>Zrušit odsaze&amp;ní</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="880"/>
+        <location filename="ViewManager/ViewManager.py" line="893"/>
         <source>Ctrl+Shift+I</source>
         <comment>Edit|Unindent</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="887"/>
+        <location filename="ViewManager/ViewManager.py" line="900"/>
         <source>Unindent line</source>
         <translation>Zrušit odsazení řádku</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="889"/>
+        <location filename="ViewManager/ViewManager.py" line="902"/>
         <source>&lt;b&gt;Unindent&lt;/b&gt;&lt;p&gt;Unindents the current line or the lines of the selection by one level.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zrušit odsazení&lt;/b&gt;
 &lt;p&gt;Zruší odsazení akruálního řádku nebo vybraných řádků o jednu úroveň.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="897"/>
+        <location filename="ViewManager/ViewManager.py" line="910"/>
         <source>Smart indent</source>
         <translation>Chytré odsazení</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="897"/>
+        <location filename="ViewManager/ViewManager.py" line="910"/>
         <source>Ctrl+Alt+I</source>
         <comment>Edit|Smart indent</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="905"/>
+        <location filename="ViewManager/ViewManager.py" line="918"/>
         <source>Smart indent Line or Selection</source>
         <translation>Chytré odsazení řádku nebo výběru</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="907"/>
+        <location filename="ViewManager/ViewManager.py" line="920"/>
         <source>&lt;b&gt;Smart indent&lt;/b&gt;&lt;p&gt;Indents the current line or the lines of the current selection smartly.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Chytré odsazení&lt;/b&gt;
 &lt;p&gt;Odsadí aktuální řádek nebo výběr podle významu předchozího kódu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="915"/>
+        <location filename="ViewManager/ViewManager.py" line="928"/>
         <source>Comment</source>
         <translation>Vytvořit Komentář</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="915"/>
+        <location filename="ViewManager/ViewManager.py" line="928"/>
         <source>C&amp;omment</source>
         <translation>Vytvořit K&amp;omentář</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="915"/>
+        <location filename="ViewManager/ViewManager.py" line="928"/>
         <source>Ctrl+M</source>
         <comment>Edit|Comment</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="922"/>
+        <location filename="ViewManager/ViewManager.py" line="935"/>
         <source>Comment Line or Selection</source>
         <translation>Vytvořit z řádky nebo výběru komentář</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="924"/>
+        <location filename="ViewManager/ViewManager.py" line="937"/>
         <source>&lt;b&gt;Comment&lt;/b&gt;&lt;p&gt;Comments the current line or the lines of the current selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Komentář&lt;/b&gt;
 &lt;p&gt;Z aktuální řádky nebo vybraných řádků vytvoří komentář.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="932"/>
+        <location filename="ViewManager/ViewManager.py" line="945"/>
         <source>Uncomment</source>
         <translation>Zrušit komentář</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="932"/>
+        <location filename="ViewManager/ViewManager.py" line="945"/>
         <source>Unco&amp;mment</source>
         <translation>Zrušit ko&amp;mentář</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="932"/>
+        <location filename="ViewManager/ViewManager.py" line="945"/>
         <source>Alt+Ctrl+M</source>
         <comment>Edit|Uncomment</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="939"/>
+        <location filename="ViewManager/ViewManager.py" line="952"/>
         <source>Uncomment Line or Selection</source>
         <translation>Zrušit komentář na řádce nebo výběru</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="941"/>
+        <location filename="ViewManager/ViewManager.py" line="954"/>
         <source>&lt;b&gt;Uncomment&lt;/b&gt;&lt;p&gt;Uncomments the current line or the lines of the current selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zrušit komentář&lt;/b&gt;
 &lt;p&gt;Zruší komentář na aktuálním řádku nebo výběru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="949"/>
+        <location filename="ViewManager/ViewManager.py" line="962"/>
         <source>Stream Comment</source>
         <translation>Stream komentář</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="953"/>
+        <location filename="ViewManager/ViewManager.py" line="966"/>
         <source>Stream Comment Line or Selection</source>
         <translation>Steram komentář řádky nebo výběru</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="955"/>
+        <location filename="ViewManager/ViewManager.py" line="968"/>
         <source>&lt;b&gt;Stream Comment&lt;/b&gt;&lt;p&gt;Stream comments the current line or the current selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stream komentář&lt;/b&gt;
 &lt;p&gt;Stream zakomentuje aktuální řádku nebo výběr.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="962"/>
+        <location filename="ViewManager/ViewManager.py" line="975"/>
         <source>Box Comment</source>
         <translation>Box komentář</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="966"/>
+        <location filename="ViewManager/ViewManager.py" line="979"/>
         <source>Box Comment Line or Selection</source>
         <translation>Box komentář řádku nebo výběru</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="968"/>
+        <location filename="ViewManager/ViewManager.py" line="981"/>
         <source>&lt;b&gt;Box Comment&lt;/b&gt;&lt;p&gt;Box comments the current line or the lines of the current selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Box komentář&lt;/b&gt;
 &lt;p&gt;Bok komentář vytvoří komnetář z aktuálního řádku nebo výběru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="976"/>
+        <location filename="ViewManager/ViewManager.py" line="989"/>
         <source>Select to brace</source>
         <translation>Vybrat obsah závorek</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="976"/>
+        <location filename="ViewManager/ViewManager.py" line="989"/>
         <source>Select to &amp;brace</source>
         <translation>Vy&amp;brat obsah závorek</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="976"/>
+        <location filename="ViewManager/ViewManager.py" line="989"/>
         <source>Ctrl+E</source>
         <comment>Edit|Select to brace</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="983"/>
+        <location filename="ViewManager/ViewManager.py" line="996"/>
         <source>Select text to the matching brace</source>
         <translation>Výběr textu, který je mezi závorkami</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="992"/>
+        <location filename="ViewManager/ViewManager.py" line="1005"/>
         <source>Select all</source>
         <translation>Vybrat vše</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="992"/>
+        <location filename="ViewManager/ViewManager.py" line="1005"/>
         <source>&amp;Select all</source>
         <translation>Vybrat vš&amp;e</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="992"/>
+        <location filename="ViewManager/ViewManager.py" line="1005"/>
         <source>Ctrl+A</source>
         <comment>Edit|Select all</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="998"/>
+        <location filename="ViewManager/ViewManager.py" line="1011"/>
         <source>Select all text</source>
         <translation>Vybrat všechen text</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1007"/>
+        <location filename="ViewManager/ViewManager.py" line="1020"/>
         <source>Deselect all</source>
         <translation>Zrušit celý výběr</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1007"/>
+        <location filename="ViewManager/ViewManager.py" line="1020"/>
         <source>&amp;Deselect all</source>
         <translation>Z&amp;rušit celý výběr</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1007"/>
+        <location filename="ViewManager/ViewManager.py" line="1020"/>
         <source>Alt+Ctrl+A</source>
         <comment>Edit|Deselect all</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1014"/>
+        <location filename="ViewManager/ViewManager.py" line="1027"/>
         <source>Deselect all text</source>
         <translation>Zrušit výběr</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1027"/>
+        <location filename="ViewManager/ViewManager.py" line="1040"/>
         <source>Convert Line End Characters</source>
         <translation>Konvertovat znaky konce řádků</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1023"/>
+        <location filename="ViewManager/ViewManager.py" line="1036"/>
         <source>Convert &amp;Line End Characters</source>
         <translation>Konvertovat znaky konce řá&amp;dků</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1029"/>
+        <location filename="ViewManager/ViewManager.py" line="1042"/>
         <source>&lt;b&gt;Convert Line End Characters&lt;/b&gt;&lt;p&gt;Convert the line end characters to the currently set type.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konvertovet znaky konce řádků&lt;/b&gt;
 &lt;p&gt;Konvertuje znaky konců řádků na aktuální nastavený typ.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1040"/>
+        <location filename="ViewManager/ViewManager.py" line="1053"/>
         <source>Shorten empty lines</source>
         <translation>Zkrátit prázdné řádky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1042"/>
+        <location filename="ViewManager/ViewManager.py" line="1055"/>
         <source>&lt;b&gt;Shorten empty lines&lt;/b&gt;&lt;p&gt;Shorten lines consisting solely of whitespace characters.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zkrátit prázné řádky&lt;/b&gt;
 &lt;p&gt;Zkrátí řádky, které obsabují jen prázdné znaky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1049"/>
+        <location filename="ViewManager/ViewManager.py" line="1062"/>
         <source>Autocomplete</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1824"/>
+        <location filename="ViewManager/ViewManager.py" line="1837"/>
         <source>&amp;Autocomplete</source>
         <translation>&amp;Autodoplňování</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1049"/>
+        <location filename="ViewManager/ViewManager.py" line="1062"/>
         <source>Ctrl+Space</source>
         <comment>Edit|Autocomplete</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1056"/>
+        <location filename="ViewManager/ViewManager.py" line="1069"/>
         <source>Autocomplete current word</source>
         <translation>Automaticky doplní aktuální slovo</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1058"/>
+        <location filename="ViewManager/ViewManager.py" line="1071"/>
         <source>&lt;b&gt;Autocomplete&lt;/b&gt;&lt;p&gt;Performs an autocompletion of the word containing the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Autodoplňování&lt;/b&gt;
 &lt;p&gt;Provádí automatické doplňování slova, na kterém je kurzor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1065"/>
+        <location filename="ViewManager/ViewManager.py" line="1078"/>
         <source>Autocomplete from Document</source>
         <translation>Autodoplňování z dokumentu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1065"/>
+        <location filename="ViewManager/ViewManager.py" line="1078"/>
         <source>Ctrl+Shift+Space</source>
         <comment>Edit|Autocomplete from Document</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1071"/>
+        <location filename="ViewManager/ViewManager.py" line="1084"/>
         <source>Autocomplete current word from Document</source>
         <translation>Autodoplnit aktuální slovo z dokumentu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1073"/>
+        <location filename="ViewManager/ViewManager.py" line="1086"/>
         <source>&lt;b&gt;Autocomplete from Document&lt;/b&gt;&lt;p&gt;Performs an autocompletion from document of the word containing the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Autodoplnit z dokumentu&lt;/b&gt;
 &lt;p&gt;Provede automatické doplnění z dokumentu na slově, ve kterém je kurzor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1081"/>
+        <location filename="ViewManager/ViewManager.py" line="1094"/>
         <source>Autocomplete from APIs</source>
         <translation>Autodopňování z API</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1081"/>
+        <location filename="ViewManager/ViewManager.py" line="1094"/>
         <source>Ctrl+Alt+Space</source>
         <comment>Edit|Autocomplete from APIs</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1087"/>
+        <location filename="ViewManager/ViewManager.py" line="1100"/>
         <source>Autocomplete current word from APIs</source>
         <translation>Autodoplňování aktuálního slova z API</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1089"/>
+        <location filename="ViewManager/ViewManager.py" line="1102"/>
         <source>&lt;b&gt;Autocomplete from APIs&lt;/b&gt;&lt;p&gt;Performs an autocompletion from APIs of the word containing the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Autodoplňování z AIP&lt;/b&gt;
 &lt;p&gt;Provede automatické doplnění z AIP na slově, na kterém je kurzor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1097"/>
+        <location filename="ViewManager/ViewManager.py" line="1110"/>
         <source>Autocomplete from Document and APIs</source>
         <translation>Autodopňování z dokumentu a API</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1097"/>
+        <location filename="ViewManager/ViewManager.py" line="1110"/>
         <source>Alt+Shift+Space</source>
         <comment>Edit|Autocomplete from Document and APIs</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1105"/>
+        <location filename="ViewManager/ViewManager.py" line="1118"/>
         <source>Autocomplete current word from Document and APIs</source>
         <translation>Autodoplnit aktuální slovo z dokumentu a z API</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1107"/>
+        <location filename="ViewManager/ViewManager.py" line="1120"/>
         <source>&lt;b&gt;Autocomplete from Document and APIs&lt;/b&gt;&lt;p&gt;Performs an autocompletion from document and APIs of the word containing the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Autodoplňování z dokumentu a z API&lt;/b&gt;
 &lt;p&gt;Provede automatické doplnění z dokumentu a z API na slově, na kterém je kurzor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="546"/>
+        <location filename="QScintilla/MiniEditor.py" line="539"/>
         <source>Move left one character</source>
         <translation>Posun o jeden znak doleva</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="546"/>
+        <location filename="QScintilla/MiniEditor.py" line="539"/>
         <source>Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="554"/>
+        <location filename="QScintilla/MiniEditor.py" line="547"/>
         <source>Move right one character</source>
         <translation>Posun o jeden znak doprava</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="554"/>
+        <location filename="QScintilla/MiniEditor.py" line="547"/>
         <source>Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="562"/>
+        <location filename="QScintilla/MiniEditor.py" line="555"/>
         <source>Move up one line</source>
         <translation>Posun o jeden řádek nahoru</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="562"/>
+        <location filename="QScintilla/MiniEditor.py" line="555"/>
         <source>Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="570"/>
+        <location filename="QScintilla/MiniEditor.py" line="563"/>
         <source>Move down one line</source>
         <translation>Posun o jeden řádek dolu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="570"/>
+        <location filename="QScintilla/MiniEditor.py" line="563"/>
         <source>Down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="578"/>
+        <location filename="QScintilla/MiniEditor.py" line="571"/>
         <source>Move left one word part</source>
         <translation>Posun o jednu část slova doleva</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="578"/>
+        <location filename="QScintilla/MiniEditor.py" line="571"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="586"/>
+        <location filename="QScintilla/MiniEditor.py" line="579"/>
         <source>Move right one word part</source>
         <translation>Posun o jednu část slova doprava</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="586"/>
+        <location filename="QScintilla/MiniEditor.py" line="579"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="594"/>
+        <location filename="QScintilla/MiniEditor.py" line="587"/>
         <source>Move left one word</source>
         <translation>Posun o jedno slovo doleva</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="594"/>
+        <location filename="QScintilla/MiniEditor.py" line="587"/>
         <source>Ctrl+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="602"/>
+        <location filename="QScintilla/MiniEditor.py" line="595"/>
         <source>Move right one word</source>
         <translation>Posun o jedno slovo doprava</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="602"/>
+        <location filename="QScintilla/MiniEditor.py" line="595"/>
         <source>Ctrl+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="611"/>
+        <location filename="QScintilla/MiniEditor.py" line="604"/>
         <source>Move to first visible character in line</source>
         <translation>Posun na první viditelný znak na řádce</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="611"/>
+        <location filename="QScintilla/MiniEditor.py" line="604"/>
         <source>Home</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="621"/>
+        <location filename="QScintilla/MiniEditor.py" line="614"/>
         <source>Move to start of displayed line</source>
         <translation>Posun na začátek zobrazené řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="621"/>
+        <location filename="QScintilla/MiniEditor.py" line="614"/>
         <source>Alt+Home</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="631"/>
+        <location filename="QScintilla/MiniEditor.py" line="624"/>
         <source>Move to end of line</source>
         <translation>Posun na konec řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="631"/>
+        <location filename="QScintilla/MiniEditor.py" line="624"/>
         <source>End</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="639"/>
+        <location filename="QScintilla/MiniEditor.py" line="632"/>
         <source>Scroll view down one line</source>
         <translation>Posun pohledu  jeden řádek dolů</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="639"/>
+        <location filename="QScintilla/MiniEditor.py" line="632"/>
         <source>Ctrl+Down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="647"/>
+        <location filename="QScintilla/MiniEditor.py" line="640"/>
         <source>Scroll view up one line</source>
         <translation>Posun pohledu o jeden řádek nahoru</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="647"/>
+        <location filename="QScintilla/MiniEditor.py" line="640"/>
         <source>Ctrl+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="655"/>
+        <location filename="QScintilla/MiniEditor.py" line="648"/>
         <source>Move up one paragraph</source>
         <translation>Posun na předchozí odstavec</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="655"/>
+        <location filename="QScintilla/MiniEditor.py" line="648"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="663"/>
+        <location filename="QScintilla/MiniEditor.py" line="656"/>
         <source>Move down one paragraph</source>
         <translation>Posun na následující odstavec</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="663"/>
+        <location filename="QScintilla/MiniEditor.py" line="656"/>
         <source>Alt+Down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="671"/>
+        <location filename="QScintilla/MiniEditor.py" line="664"/>
         <source>Move up one page</source>
         <translation>Posun na předchozí stranu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="671"/>
+        <location filename="QScintilla/MiniEditor.py" line="664"/>
         <source>PgUp</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="679"/>
+        <location filename="QScintilla/MiniEditor.py" line="672"/>
         <source>Move down one page</source>
         <translation>Posun na následující stranu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="679"/>
+        <location filename="QScintilla/MiniEditor.py" line="672"/>
         <source>PgDown</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="687"/>
+        <location filename="QScintilla/MiniEditor.py" line="680"/>
         <source>Move to start of text</source>
         <translation>Posun na začátek textu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="687"/>
+        <location filename="QScintilla/MiniEditor.py" line="680"/>
         <source>Ctrl+Home</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="695"/>
+        <location filename="QScintilla/MiniEditor.py" line="688"/>
         <source>Move to end of text</source>
         <translation>Posun na konec textu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="695"/>
+        <location filename="QScintilla/MiniEditor.py" line="688"/>
         <source>Ctrl+End</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="703"/>
+        <location filename="QScintilla/MiniEditor.py" line="696"/>
         <source>Indent one level</source>
         <translation>Odsadit o jednu úroveň</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="703"/>
+        <location filename="QScintilla/MiniEditor.py" line="696"/>
         <source>Tab</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="711"/>
+        <location filename="QScintilla/MiniEditor.py" line="704"/>
         <source>Unindent one level</source>
         <translation>Zrušit odsazení o jednu úroveň</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="711"/>
+        <location filename="QScintilla/MiniEditor.py" line="704"/>
         <source>Shift+Tab</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="719"/>
+        <location filename="QScintilla/MiniEditor.py" line="712"/>
         <source>Extend selection left one character</source>
         <translation>Rozšířit výběr o jeden znak vlevo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="719"/>
+        <location filename="QScintilla/MiniEditor.py" line="712"/>
         <source>Shift+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="730"/>
+        <location filename="QScintilla/MiniEditor.py" line="723"/>
         <source>Extend selection right one character</source>
         <translation>Rozšířit výběr o jeden znak vpravo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="730"/>
+        <location filename="QScintilla/MiniEditor.py" line="723"/>
         <source>Shift+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="741"/>
+        <location filename="QScintilla/MiniEditor.py" line="734"/>
         <source>Extend selection up one line</source>
         <translation>Rozšířit výběr o řádku nahoru</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="741"/>
+        <location filename="QScintilla/MiniEditor.py" line="734"/>
         <source>Shift+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="751"/>
+        <location filename="QScintilla/MiniEditor.py" line="744"/>
         <source>Extend selection down one line</source>
         <translation>Rozšířit výběr o jednu řádku dolů</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="751"/>
+        <location filename="QScintilla/MiniEditor.py" line="744"/>
         <source>Shift+Down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="762"/>
+        <location filename="QScintilla/MiniEditor.py" line="755"/>
         <source>Extend selection left one word part</source>
         <translation>Rozšířit výběr o jednu část slova vlevo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="762"/>
+        <location filename="QScintilla/MiniEditor.py" line="755"/>
         <source>Alt+Shift+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="774"/>
+        <location filename="QScintilla/MiniEditor.py" line="767"/>
         <source>Extend selection right one word part</source>
         <translation>Rozšířit výběr o jednu část slova vpravo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="774"/>
+        <location filename="QScintilla/MiniEditor.py" line="767"/>
         <source>Alt+Shift+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="786"/>
+        <location filename="QScintilla/MiniEditor.py" line="779"/>
         <source>Extend selection left one word</source>
         <translation>Rozšířit výběr o jedno slovo vlevo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="786"/>
+        <location filename="QScintilla/MiniEditor.py" line="779"/>
         <source>Ctrl+Shift+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="798"/>
+        <location filename="QScintilla/MiniEditor.py" line="791"/>
         <source>Extend selection right one word</source>
         <translation>Rozšířit výběr o jedno slovo vpravo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="798"/>
+        <location filename="QScintilla/MiniEditor.py" line="791"/>
         <source>Ctrl+Shift+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="810"/>
+        <location filename="QScintilla/MiniEditor.py" line="803"/>
         <source>Extend selection to first visible character in line</source>
         <translation>Rozšířit výběr na první viditelný znak na řádce</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="810"/>
+        <location filename="QScintilla/MiniEditor.py" line="803"/>
         <source>Shift+Home</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="821"/>
+        <location filename="QScintilla/MiniEditor.py" line="814"/>
         <source>Extend selection to start of line</source>
         <translation>Rozšířit výběr na začátek řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="821"/>
+        <location filename="QScintilla/MiniEditor.py" line="814"/>
         <source>Alt+Shift+Home</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="833"/>
+        <location filename="QScintilla/MiniEditor.py" line="826"/>
         <source>Extend selection to end of line</source>
         <translation>Rozšířit výběr na konec řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="833"/>
+        <location filename="QScintilla/MiniEditor.py" line="826"/>
         <source>Shift+End</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="843"/>
+        <location filename="QScintilla/MiniEditor.py" line="836"/>
         <source>Extend selection up one paragraph</source>
         <translation>Rozšířit výběr o předchozí odstavec</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="843"/>
+        <location filename="QScintilla/MiniEditor.py" line="836"/>
         <source>Alt+Shift+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="854"/>
+        <location filename="QScintilla/MiniEditor.py" line="847"/>
         <source>Extend selection down one paragraph</source>
         <translation>Rozšířit výběr o následující odstavec</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="854"/>
+        <location filename="QScintilla/MiniEditor.py" line="847"/>
         <source>Alt+Shift+Down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="866"/>
+        <location filename="QScintilla/MiniEditor.py" line="859"/>
         <source>Extend selection up one page</source>
         <translation>Rozšířit výběr na předchozí stranu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="866"/>
+        <location filename="QScintilla/MiniEditor.py" line="859"/>
         <source>Shift+PgUp</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="877"/>
+        <location filename="QScintilla/MiniEditor.py" line="870"/>
         <source>Extend selection down one page</source>
         <translation>Rozšířit výběr na následující stranu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="877"/>
+        <location filename="QScintilla/MiniEditor.py" line="870"/>
         <source>Shift+PgDown</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="888"/>
+        <location filename="QScintilla/MiniEditor.py" line="881"/>
         <source>Extend selection to start of text</source>
         <translation>Rozšířit výběr na začátek textu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="888"/>
+        <location filename="QScintilla/MiniEditor.py" line="881"/>
         <source>Ctrl+Shift+Home</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="900"/>
+        <location filename="QScintilla/MiniEditor.py" line="893"/>
         <source>Extend selection to end of text</source>
         <translation>Rozšířit výběr na konec textu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="900"/>
+        <location filename="QScintilla/MiniEditor.py" line="893"/>
         <source>Ctrl+Shift+End</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="912"/>
+        <location filename="QScintilla/MiniEditor.py" line="905"/>
         <source>Delete previous character</source>
         <translation>Smazat předchozí znak</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="912"/>
+        <location filename="QScintilla/MiniEditor.py" line="905"/>
         <source>Backspace</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="912"/>
+        <location filename="QScintilla/MiniEditor.py" line="905"/>
         <source>Shift+Backspace</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="923"/>
+        <location filename="QScintilla/MiniEditor.py" line="916"/>
         <source>Delete previous character if not at line start</source>
         <translation>Smazat předchozí znak pokud není na začátku řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="933"/>
+        <location filename="QScintilla/MiniEditor.py" line="926"/>
         <source>Delete current character</source>
         <translation>Smazat aktuální znak</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="933"/>
+        <location filename="QScintilla/MiniEditor.py" line="926"/>
         <source>Del</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="941"/>
+        <location filename="QScintilla/MiniEditor.py" line="934"/>
         <source>Delete word to left</source>
         <translation>Smazat slovo doleva</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="941"/>
+        <location filename="QScintilla/MiniEditor.py" line="934"/>
         <source>Ctrl+Backspace</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="951"/>
+        <location filename="QScintilla/MiniEditor.py" line="944"/>
         <source>Delete word to right</source>
         <translation>Smazat slovo doprava</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="951"/>
+        <location filename="QScintilla/MiniEditor.py" line="944"/>
         <source>Ctrl+Del</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="959"/>
+        <location filename="QScintilla/MiniEditor.py" line="952"/>
         <source>Delete line to left</source>
         <translation>Smazat řádku doleva</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="959"/>
+        <location filename="QScintilla/MiniEditor.py" line="952"/>
         <source>Ctrl+Shift+Backspace</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="969"/>
+        <location filename="QScintilla/MiniEditor.py" line="962"/>
         <source>Delete line to right</source>
         <translation>Smazat řádku doprava</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="969"/>
+        <location filename="QScintilla/MiniEditor.py" line="962"/>
         <source>Ctrl+Shift+Del</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="979"/>
+        <location filename="QScintilla/MiniEditor.py" line="972"/>
         <source>Insert new line</source>
         <translation>Vložit nový řádek</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="979"/>
+        <location filename="QScintilla/MiniEditor.py" line="972"/>
         <source>Return</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="979"/>
+        <location filename="QScintilla/MiniEditor.py" line="972"/>
         <source>Enter</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="998"/>
+        <location filename="QScintilla/MiniEditor.py" line="991"/>
         <source>Delete current line</source>
         <translation>Smazat aktuální řádek</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="998"/>
+        <location filename="QScintilla/MiniEditor.py" line="991"/>
         <source>Ctrl+U</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="998"/>
+        <location filename="QScintilla/MiniEditor.py" line="991"/>
         <source>Ctrl+Shift+L</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1007"/>
+        <location filename="QScintilla/MiniEditor.py" line="1000"/>
         <source>Duplicate current line</source>
         <translation>Duplikovat aktuální řádek</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1007"/>
+        <location filename="QScintilla/MiniEditor.py" line="1000"/>
         <source>Ctrl+D</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1015"/>
+        <location filename="QScintilla/MiniEditor.py" line="1008"/>
         <source>Swap current and previous lines</source>
         <translation>Prohodit aktuální řádek s předchozím</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1015"/>
+        <location filename="QScintilla/MiniEditor.py" line="1008"/>
         <source>Ctrl+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1025"/>
+        <location filename="QScintilla/MiniEditor.py" line="1018"/>
         <source>Cut current line</source>
         <translation>Vyjmout aktuální řádek</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1025"/>
+        <location filename="QScintilla/MiniEditor.py" line="1018"/>
         <source>Alt+Shift+L</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1034"/>
+        <location filename="QScintilla/MiniEditor.py" line="1027"/>
         <source>Copy current line</source>
         <translation>Kopírovat aktuální řádek</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1034"/>
+        <location filename="QScintilla/MiniEditor.py" line="1027"/>
         <source>Ctrl+Shift+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1043"/>
+        <location filename="QScintilla/MiniEditor.py" line="1036"/>
         <source>Toggle insert/overtype</source>
         <translation>Přepnout vkládání/přepisování</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1043"/>
+        <location filename="QScintilla/MiniEditor.py" line="1036"/>
         <source>Ins</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1051"/>
+        <location filename="QScintilla/MiniEditor.py" line="1044"/>
         <source>Convert selection to lower case</source>
         <translation>Převést výběr na minusky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1051"/>
+        <location filename="QScintilla/MiniEditor.py" line="1044"/>
         <source>Alt+Shift+U</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1062"/>
+        <location filename="QScintilla/MiniEditor.py" line="1055"/>
         <source>Convert selection to upper case</source>
         <translation>Převést výběr na verzálky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1062"/>
+        <location filename="QScintilla/MiniEditor.py" line="1055"/>
         <source>Ctrl+Shift+U</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1073"/>
+        <location filename="QScintilla/MiniEditor.py" line="1066"/>
         <source>Move to end of displayed line</source>
         <translation>Posun na konec zobrazované řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1073"/>
+        <location filename="QScintilla/MiniEditor.py" line="1066"/>
         <source>Alt+End</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1083"/>
+        <location filename="QScintilla/MiniEditor.py" line="1076"/>
         <source>Extend selection to end of displayed line</source>
         <translation>Rozšířit výběr na konec zobrazené řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1093"/>
+        <location filename="QScintilla/MiniEditor.py" line="1086"/>
         <source>Formfeed</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1101"/>
+        <location filename="QScintilla/MiniEditor.py" line="1094"/>
         <source>Escape</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1101"/>
+        <location filename="QScintilla/MiniEditor.py" line="1094"/>
         <source>Esc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1109"/>
+        <location filename="QScintilla/MiniEditor.py" line="1102"/>
         <source>Extend rectangular selection down one line</source>
         <translation>Rozšířit obdélníkový výběr o řádek dolů</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1109"/>
+        <location filename="QScintilla/MiniEditor.py" line="1102"/>
         <source>Alt+Ctrl+Down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1121"/>
+        <location filename="QScintilla/MiniEditor.py" line="1114"/>
         <source>Extend rectangular selection up one line</source>
         <translation>Rozšířit obdélníkový výběr o řádek nahoru</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1121"/>
+        <location filename="QScintilla/MiniEditor.py" line="1114"/>
         <source>Alt+Ctrl+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1132"/>
+        <location filename="QScintilla/MiniEditor.py" line="1125"/>
         <source>Extend rectangular selection left one character</source>
         <translation>Rozšířit obdélníkový výběr o jeden znak vlevo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1132"/>
+        <location filename="QScintilla/MiniEditor.py" line="1125"/>
         <source>Alt+Ctrl+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1144"/>
+        <location filename="QScintilla/MiniEditor.py" line="1137"/>
         <source>Extend rectangular selection right one character</source>
         <translation>Rozšířit obdélníkový výběr o jeden znak vpravo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1144"/>
+        <location filename="QScintilla/MiniEditor.py" line="1137"/>
         <source>Alt+Ctrl+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1156"/>
+        <location filename="QScintilla/MiniEditor.py" line="1149"/>
         <source>Extend rectangular selection to first visible character in line</source>
         <translation>Rozšířit obdélníkový výběr na první viditelný znak na řádce</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1156"/>
+        <location filename="QScintilla/MiniEditor.py" line="1149"/>
         <source>Alt+Ctrl+Home</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1171"/>
+        <location filename="QScintilla/MiniEditor.py" line="1164"/>
         <source>Extend rectangular selection to end of line</source>
         <translation>Rozšířit obdélníkový výběr o na konec řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1171"/>
+        <location filename="QScintilla/MiniEditor.py" line="1164"/>
         <source>Alt+Ctrl+End</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1182"/>
+        <location filename="QScintilla/MiniEditor.py" line="1175"/>
         <source>Extend rectangular selection up one page</source>
         <translation>Rozšířit obdélníkový výběr o předchozí stranu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1182"/>
+        <location filename="QScintilla/MiniEditor.py" line="1175"/>
         <source>Alt+Ctrl+PgUp</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1194"/>
+        <location filename="QScintilla/MiniEditor.py" line="1187"/>
         <source>Extend rectangular selection down one page</source>
         <translation>Rozšířit obdélníkový výběr o následující stranu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1194"/>
+        <location filename="QScintilla/MiniEditor.py" line="1187"/>
         <source>Alt+Ctrl+PgDown</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1206"/>
+        <location filename="QScintilla/MiniEditor.py" line="1199"/>
         <source>Duplicate current selection</source>
         <translation>Duplikovat aktuální výběr</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1206"/>
+        <location filename="QScintilla/MiniEditor.py" line="1199"/>
         <source>Ctrl+Shift+D</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1834"/>
+        <location filename="ViewManager/ViewManager.py" line="1847"/>
         <source>&amp;Search</source>
         <translation>V&amp;yhledat</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1848"/>
+        <location filename="ViewManager/ViewManager.py" line="1861"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1894"/>
+        <location filename="ViewManager/ViewManager.py" line="1907"/>
         <source>Edit</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1223"/>
+        <location filename="QScintilla/MiniEditor.py" line="1216"/>
         <source>Search</source>
         <translation>Vyhledat</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1223"/>
+        <location filename="QScintilla/MiniEditor.py" line="1216"/>
         <source>&amp;Search...</source>
         <translation>V&amp;yhledat...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1223"/>
+        <location filename="QScintilla/MiniEditor.py" line="1216"/>
         <source>Ctrl+F</source>
         <comment>Search|Search</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1230"/>
+        <location filename="QScintilla/MiniEditor.py" line="1223"/>
         <source>Search for a text</source>
         <translation>Hledat text</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1232"/>
+        <location filename="QScintilla/MiniEditor.py" line="1225"/>
         <source>&lt;b&gt;Search&lt;/b&gt;&lt;p&gt;Search for some text in the current editor. A dialog is shown to enter the searchtext and options for the search.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat&lt;/b&gt;
 &lt;p&gt;Hledat text v aktuálním editoru. Zobrazí se dialogové okno, do kterého se zadá hledaný text a další nastavení.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1241"/>
+        <location filename="QScintilla/MiniEditor.py" line="1234"/>
         <source>Search next</source>
         <translation>Hledat text</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1241"/>
+        <location filename="QScintilla/MiniEditor.py" line="1234"/>
         <source>Search &amp;next</source>
         <translation>Hledat &amp;další</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1241"/>
+        <location filename="QScintilla/MiniEditor.py" line="1234"/>
         <source>F3</source>
         <comment>Search|Search next</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1259"/>
+        <location filename="QScintilla/MiniEditor.py" line="1252"/>
         <source>Search previous</source>
         <translation>Hledat předchozí</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1259"/>
+        <location filename="QScintilla/MiniEditor.py" line="1252"/>
         <source>Search &amp;previous</source>
         <translation>Hledat &amp;předchozí</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1259"/>
+        <location filename="QScintilla/MiniEditor.py" line="1252"/>
         <source>Shift+F3</source>
         <comment>Search|Search previous</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1294"/>
+        <location filename="QScintilla/MiniEditor.py" line="1287"/>
         <source>Replace</source>
         <translation>Nahradit</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1294"/>
+        <location filename="QScintilla/MiniEditor.py" line="1287"/>
         <source>&amp;Replace...</source>
         <translation>Nah&amp;radit...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1294"/>
+        <location filename="QScintilla/MiniEditor.py" line="1287"/>
         <source>Ctrl+R</source>
         <comment>Search|Replace</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1300"/>
+        <location filename="QScintilla/MiniEditor.py" line="1293"/>
         <source>Replace some text</source>
         <translation>Hledat nějaký text</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1302"/>
+        <location filename="QScintilla/MiniEditor.py" line="1295"/>
         <source>&lt;b&gt;Replace&lt;/b&gt;&lt;p&gt;Search for some text in the current editor and replace it. A dialog is shown to enter the searchtext, the replacement text and options for the search and replace.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nahradit&lt;/b&gt;
 &lt;p&gt;Vyhledá va ktuálním editoru text a nahradí jej. Je zobrazeno dialogové okno, kde se zadá text, který se má nahradit, nový text a nastavení pro vyhledávání a nahrazení.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2149"/>
+        <location filename="ViewManager/ViewManager.py" line="2162"/>
         <source>Quicksearch</source>
         <translation>Rychlé hledání</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2013"/>
+        <location filename="ViewManager/ViewManager.py" line="2026"/>
         <source>&amp;Quicksearch</source>
         <translation>Rychlé hl&amp;edání</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2013"/>
+        <location filename="ViewManager/ViewManager.py" line="2026"/>
         <source>Ctrl+Shift+K</source>
         <comment>Search|Quicksearch</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2021"/>
+        <location filename="ViewManager/ViewManager.py" line="2034"/>
         <source>Perform a quicksearch</source>
         <translation>Provést rychlé hledání</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2033"/>
+        <location filename="ViewManager/ViewManager.py" line="2046"/>
         <source>Quicksearch backwards</source>
         <translation>Rychlé hledání zpět</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2033"/>
+        <location filename="ViewManager/ViewManager.py" line="2046"/>
         <source>Quicksearch &amp;backwards</source>
         <translation>Rychlé hledání &amp;zpět</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2033"/>
+        <location filename="ViewManager/ViewManager.py" line="2046"/>
         <source>Ctrl+Shift+J</source>
         <comment>Search|Quicksearch backwards</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2040"/>
+        <location filename="ViewManager/ViewManager.py" line="2053"/>
         <source>Perform a quicksearch backwards</source>
         <translation>Provést rychlé hledání zpět</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2049"/>
+        <location filename="ViewManager/ViewManager.py" line="2062"/>
         <source>Quicksearch extend</source>
         <translation>Rychlé hledání rozšířit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2049"/>
+        <location filename="ViewManager/ViewManager.py" line="2062"/>
         <source>Quicksearch e&amp;xtend</source>
         <translation>Rychlé hl&amp;edání rozšířit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2049"/>
+        <location filename="ViewManager/ViewManager.py" line="2062"/>
         <source>Ctrl+Shift+H</source>
         <comment>Search|Quicksearch extend</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2057"/>
+        <location filename="ViewManager/ViewManager.py" line="2070"/>
         <source>Extend the quicksearch to the end of the current word</source>
         <translation>Rozšířit rychlé hledání na konec aktuálního slova</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2059"/>
+        <location filename="ViewManager/ViewManager.py" line="2072"/>
         <source>&lt;b&gt;Quicksearch extend&lt;/b&gt;&lt;p&gt;This extends the quicksearch text to the end of the word currently found.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rychlé hlednání rozšířit&lt;/b&gt;
 &lt;p&gt;Rychlé hledání se rozšíří na konec aktuálně nalezeného slova.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2074"/>
+        <location filename="ViewManager/ViewManager.py" line="2087"/>
         <source>Goto Line</source>
         <translation>Jít na řádek</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2067"/>
+        <location filename="ViewManager/ViewManager.py" line="2080"/>
         <source>&amp;Goto Line...</source>
         <translation>&amp;Jít na řádek...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2067"/>
+        <location filename="ViewManager/ViewManager.py" line="2080"/>
         <source>Ctrl+G</source>
         <comment>Search|Goto Line</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2075"/>
+        <location filename="ViewManager/ViewManager.py" line="2088"/>
         <source>&lt;b&gt;Goto Line&lt;/b&gt;&lt;p&gt;Go to a specific line of text in the current editor. A dialog is shown to enter the linenumber.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jít na řádek&lt;/b&gt;
 &lt;p&gt;Jít na určený řádek. Zobrazí se dialogové okno, kde se zadá číslo požadovaného řádku.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2090"/>
+        <location filename="ViewManager/ViewManager.py" line="2103"/>
         <source>Goto Brace</source>
         <translation>Jít na závorku</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2083"/>
+        <location filename="ViewManager/ViewManager.py" line="2096"/>
         <source>Goto &amp;Brace</source>
         <translation>Jít na závork&amp;u</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2083"/>
+        <location filename="ViewManager/ViewManager.py" line="2096"/>
         <source>Ctrl+L</source>
         <comment>Search|Goto Brace</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2092"/>
+        <location filename="ViewManager/ViewManager.py" line="2105"/>
         <source>&lt;b&gt;Goto Brace&lt;/b&gt;&lt;p&gt;Go to the matching brace in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jít na závorku&lt;/b&gt;
 &lt;p&gt;Jíta na závoku, která patří do páru s tou, na které se nachází kurzor.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2101"/>
+        <location filename="ViewManager/ViewManager.py" line="2114"/>
         <source>Search in Files</source>
         <translation>Hledat v souborech</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2101"/>
+        <location filename="ViewManager/ViewManager.py" line="2114"/>
         <source>Search in &amp;Files...</source>
         <translation>&amp;Hledat v souborech...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2101"/>
+        <location filename="ViewManager/ViewManager.py" line="2114"/>
         <source>Shift+Ctrl+F</source>
         <comment>Search|Search Files</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2109"/>
+        <location filename="ViewManager/ViewManager.py" line="2122"/>
         <source>Search for a text in files</source>
         <translation>Hledat text v souborech</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2111"/>
+        <location filename="ViewManager/ViewManager.py" line="2124"/>
         <source>&lt;b&gt;Search in Files&lt;/b&gt;&lt;p&gt;Search for some text in the files of a directory tree or the project. A dialog is shown to enter the searchtext and options for the search and to display the result.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat v souborech&lt;/b&gt;
 &lt;p&gt;Hledat text v souborech v adresářích nebo projektu. Je zobrazeno dialogové okno, do kterého se zadá hledaný text a nastavení a ve kterém se zobrazuje výsledek hledání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2236"/>
+        <location filename="ViewManager/ViewManager.py" line="2245"/>
         <source>Zoom in</source>
         <translation>Přiblížit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2236"/>
+        <location filename="ViewManager/ViewManager.py" line="2245"/>
         <source>Zoom &amp;in</source>
         <translation>Př&amp;iblížit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2236"/>
+        <location filename="ViewManager/ViewManager.py" line="2245"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2243"/>
+        <location filename="ViewManager/ViewManager.py" line="2252"/>
         <source>Zoom in on the text</source>
         <translation>Zvětšovací lupa</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2245"/>
+        <location filename="ViewManager/ViewManager.py" line="2254"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the text. This makes the text bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přiblížit&lt;/b&gt;&lt;p&gt;Přiblížit text. Text bude větší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2252"/>
+        <location filename="ViewManager/ViewManager.py" line="2261"/>
         <source>Zoom out</source>
         <translation>Oddálit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2252"/>
+        <location filename="ViewManager/ViewManager.py" line="2261"/>
         <source>Zoom &amp;out</source>
         <translation>&amp;Oddálit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2252"/>
+        <location filename="ViewManager/ViewManager.py" line="2261"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2259"/>
+        <location filename="ViewManager/ViewManager.py" line="2268"/>
         <source>Zoom out on the text</source>
         <translation>Zmenšovací lupa</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2261"/>
+        <location filename="ViewManager/ViewManager.py" line="2270"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the text. This makes the text smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Oddálit&lt;/b&gt;&lt;p&gt;Lupa na oddálení textu. Text bude menší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2268"/>
+        <location filename="ViewManager/ViewManager.py" line="2277"/>
         <source>Zoom</source>
         <translation>Lupa</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2268"/>
+        <location filename="ViewManager/ViewManager.py" line="2277"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Lupa</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2268"/>
+        <location filename="ViewManager/ViewManager.py" line="2277"/>
         <source>Ctrl+#</source>
         <comment>View|Zoom</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2275"/>
+        <location filename="ViewManager/ViewManager.py" line="2284"/>
         <source>Zoom the text</source>
         <translation>Lupa na text</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2277"/>
+        <location filename="ViewManager/ViewManager.py" line="2286"/>
         <source>&lt;b&gt;Zoom&lt;/b&gt;&lt;p&gt;Zoom the text. This opens a dialog where the desired size can be entered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lupa&lt;/b&gt;&lt;p&gt;Lupa na text. Otevře se dialogové okno kde se zadá požadovaná hodnota zvětšení/zmenšení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2289"/>
+        <location filename="ViewManager/ViewManager.py" line="2298"/>
         <source>Toggle all folds</source>
         <translation>Složit/rozložit všechna skládání</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2285"/>
+        <location filename="ViewManager/ViewManager.py" line="2294"/>
         <source>Toggle &amp;all folds</source>
         <translation>Složit/rozložit všechn&amp;a skládání</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2291"/>
+        <location filename="ViewManager/ViewManager.py" line="2300"/>
         <source>&lt;b&gt;Toggle all folds&lt;/b&gt;&lt;p&gt;Toggle all folds of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Složit/rozložit všechna skládání&lt;/b&gt;&lt;p&gt;Složí/rozloží všechna skládání v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2304"/>
+        <location filename="ViewManager/ViewManager.py" line="2313"/>
         <source>Toggle all folds (including children)</source>
         <translation>Složit/rozložit všechna skládání (i s podsložkami)</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2299"/>
+        <location filename="ViewManager/ViewManager.py" line="2308"/>
         <source>Toggle all &amp;folds (including children)</source>
         <translation>Složit/rozložit všechna &amp;skládání (i s podsložkami)</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2306"/>
+        <location filename="ViewManager/ViewManager.py" line="2315"/>
         <source>&lt;b&gt;Toggle all folds (including children)&lt;/b&gt;&lt;p&gt;Toggle all folds of the current editor including all children.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Složit/rozložit všechna skládání (i s podsložkami)&lt;/b&gt;&lt;p&gt;Složí nebo rozloží všechna skládání i s podsložkami.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2318"/>
+        <location filename="ViewManager/ViewManager.py" line="2327"/>
         <source>Toggle current fold</source>
         <translation>Složit/rozložit aktuální složený blok</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2314"/>
+        <location filename="ViewManager/ViewManager.py" line="2323"/>
         <source>Toggle &amp;current fold</source>
         <translation>Složit/rozložit aktuální složený &amp;blok</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2320"/>
+        <location filename="ViewManager/ViewManager.py" line="2329"/>
         <source>&lt;b&gt;Toggle current fold&lt;/b&gt;&lt;p&gt;Toggle the folds of the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Složit/rozložit aktuální složený blok&lt;/b&gt;&lt;p&gt;Složí nebo rozloží aktuální složený blok v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2333"/>
+        <location filename="ViewManager/ViewManager.py" line="2342"/>
         <source>Remove all highlights</source>
         <translation>Odebrat všechna zvýraznění</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2335"/>
+        <location filename="ViewManager/ViewManager.py" line="2344"/>
         <source>&lt;b&gt;Remove all highlights&lt;/b&gt;&lt;p&gt;Remove the highlights of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Odebrat všechna zvýraznění&lt;/b&gt;&lt;p&gt;Odebrat zvýraznění ve všech editorech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2342"/>
+        <location filename="ViewManager/ViewManager.py" line="2351"/>
         <source>Split view</source>
         <translation>Rozdělit pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2342"/>
+        <location filename="ViewManager/ViewManager.py" line="2351"/>
         <source>&amp;Split view</source>
         <translation>&amp;Rozdělit pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2346"/>
+        <location filename="ViewManager/ViewManager.py" line="2355"/>
         <source>Add a split to the view</source>
         <translation>Přidat další rozdělení pohledu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2348"/>
+        <location filename="ViewManager/ViewManager.py" line="2357"/>
         <source>&lt;b&gt;Split view&lt;/b&gt;&lt;p&gt;Add a split to the view.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rozdělit pohled&lt;/b&gt;&lt;p&gt;Přidá další okno na aktuální pohled.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2355"/>
+        <location filename="ViewManager/ViewManager.py" line="2364"/>
         <source>Arrange horizontally</source>
         <translation>Uspořádat horizontálně</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2355"/>
+        <location filename="ViewManager/ViewManager.py" line="2364"/>
         <source>Arrange &amp;horizontally</source>
         <translation>Uspořádat &amp;horizontálně</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2360"/>
+        <location filename="ViewManager/ViewManager.py" line="2369"/>
         <source>Arrange the splitted views horizontally</source>
         <translation>Uspořádat rozdělené pohledy horizontálně</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2362"/>
+        <location filename="ViewManager/ViewManager.py" line="2371"/>
         <source>&lt;b&gt;Arrange horizontally&lt;/b&gt;&lt;p&gt;Arrange the splitted views horizontally.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uspořádat horizontálně&lt;/b&gt;&lt;p&gt;Uspořádat rozdělené pohledy horizontálně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2371"/>
+        <location filename="ViewManager/ViewManager.py" line="2379"/>
         <source>Remove split</source>
         <translation>Odebrat rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2371"/>
+        <location filename="ViewManager/ViewManager.py" line="2379"/>
         <source>&amp;Remove split</source>
         <translation>Odebra&amp;t rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2376"/>
+        <location filename="ViewManager/ViewManager.py" line="2384"/>
         <source>Remove the current split</source>
         <translation>Odebrat aktuální rozdělení pohledu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2378"/>
+        <location filename="ViewManager/ViewManager.py" line="2386"/>
         <source>&lt;b&gt;Remove split&lt;/b&gt;&lt;p&gt;Remove the current split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Odebrat rozdělený pohled&lt;/b&gt;&lt;p&gt;Odebrat aktuální rozdělený pohled.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2385"/>
+        <location filename="ViewManager/ViewManager.py" line="2393"/>
         <source>Next split</source>
         <translation>Další rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2385"/>
+        <location filename="ViewManager/ViewManager.py" line="2393"/>
         <source>&amp;Next split</source>
         <translation>Další rozděle&amp;ný pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2385"/>
+        <location filename="ViewManager/ViewManager.py" line="2393"/>
         <source>Ctrl+Alt+N</source>
         <comment>View|Next split</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2391"/>
+        <location filename="ViewManager/ViewManager.py" line="2399"/>
         <source>Move to the next split</source>
         <translation>Posun na další rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2393"/>
+        <location filename="ViewManager/ViewManager.py" line="2401"/>
         <source>&lt;b&gt;Next split&lt;/b&gt;&lt;p&gt;Move to the next split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Další rozdělený pohled&lt;/b&gt;&lt;p&gt;Posun na další rozdělený pohled.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2400"/>
+        <location filename="ViewManager/ViewManager.py" line="2408"/>
         <source>Previous split</source>
         <translation>Předchozí rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2400"/>
+        <location filename="ViewManager/ViewManager.py" line="2408"/>
         <source>&amp;Previous split</source>
         <translation>&amp;Předchozí rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2400"/>
+        <location filename="ViewManager/ViewManager.py" line="2408"/>
         <source>Ctrl+Alt+P</source>
         <comment>View|Previous split</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2406"/>
+        <location filename="ViewManager/ViewManager.py" line="2414"/>
         <source>Move to the previous split</source>
         <translation>Posun na předchozí rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2408"/>
+        <location filename="ViewManager/ViewManager.py" line="2416"/>
         <source>&lt;b&gt;Previous split&lt;/b&gt;&lt;p&gt;Move to the previous split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí rozdělený pohled&lt;/b&gt;&lt;p&gt;Posun na předchozí rozdělený pohled.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2430"/>
+        <location filename="ViewManager/ViewManager.py" line="2438"/>
         <source>&amp;View</source>
         <translation>Poh&amp;led</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2457"/>
+        <location filename="ViewManager/ViewManager.py" line="2465"/>
         <source>View</source>
         <translation>Pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2483"/>
+        <location filename="ViewManager/ViewManager.py" line="2491"/>
         <source>Start Macro Recording</source>
         <translation>Spustit záznam makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2478"/>
+        <location filename="ViewManager/ViewManager.py" line="2486"/>
         <source>S&amp;tart Macro Recording</source>
         <translation>Spus&amp;tit záznam makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2485"/>
+        <location filename="ViewManager/ViewManager.py" line="2493"/>
         <source>&lt;b&gt;Start Macro Recording&lt;/b&gt;&lt;p&gt;Start recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit záznam makra&lt;/b&gt;&lt;p&gt;Spustí se záznam příkazů do nového makra.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2497"/>
+        <location filename="ViewManager/ViewManager.py" line="2505"/>
         <source>Stop Macro Recording</source>
         <translation>Zastavit záznam makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2492"/>
+        <location filename="ViewManager/ViewManager.py" line="2500"/>
         <source>Sto&amp;p Macro Recording</source>
         <translation>Sto&amp;p záznamu makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2499"/>
+        <location filename="ViewManager/ViewManager.py" line="2507"/>
         <source>&lt;b&gt;Stop Macro Recording&lt;/b&gt;&lt;p&gt;Stop recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stop záznamu makra&lt;/b&gt;&lt;p&gt;Zastaví se nahrávání příkazů do makra.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2509"/>
+        <location filename="ViewManager/ViewManager.py" line="2517"/>
         <source>Run Macro</source>
         <translation>Spustit makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2506"/>
+        <location filename="ViewManager/ViewManager.py" line="2514"/>
         <source>&amp;Run Macro</source>
         <translation>Spustit mak&amp;ro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2510"/>
+        <location filename="ViewManager/ViewManager.py" line="2518"/>
         <source>&lt;b&gt;Run Macro&lt;/b&gt;&lt;p&gt;Run a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit makro&lt;/b&gt;&lt;p&gt;Spustit nahrané makro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2521"/>
+        <location filename="ViewManager/ViewManager.py" line="2529"/>
         <source>Delete Macro</source>
         <translation>Smazat makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2517"/>
+        <location filename="ViewManager/ViewManager.py" line="2525"/>
         <source>&amp;Delete Macro</source>
         <translation>Smazat makr&amp;o</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2523"/>
+        <location filename="ViewManager/ViewManager.py" line="2531"/>
         <source>&lt;b&gt;Delete Macro&lt;/b&gt;&lt;p&gt;Delete a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat makro&lt;/b&gt;&lt;p&gt;Smaže se nahrané makro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2533"/>
+        <location filename="ViewManager/ViewManager.py" line="2541"/>
         <source>Load Macro</source>
         <translation>Načíst makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2530"/>
+        <location filename="ViewManager/ViewManager.py" line="2538"/>
         <source>&amp;Load Macro</source>
         <translation>&amp;Načíst makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2535"/>
+        <location filename="ViewManager/ViewManager.py" line="2543"/>
         <source>&lt;b&gt;Load Macro&lt;/b&gt;&lt;p&gt;Load an editor macro from a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Načíst makro&lt;/b&gt;&lt;p&gt;Načte se makro ze souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2545"/>
+        <location filename="ViewManager/ViewManager.py" line="2553"/>
         <source>Save Macro</source>
         <translation>Uložit makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2542"/>
+        <location filename="ViewManager/ViewManager.py" line="2550"/>
         <source>&amp;Save Macro</source>
         <translation>&amp;Uložit makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2547"/>
+        <location filename="ViewManager/ViewManager.py" line="2555"/>
         <source>&lt;b&gt;Save Macro&lt;/b&gt;&lt;p&gt;Save a previously recorded editor macro to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit makro&lt;/b&gt;&lt;p&gt;Nahrané makro se uloží do souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2562"/>
+        <location filename="ViewManager/ViewManager.py" line="2570"/>
         <source>&amp;Macros</source>
         <translation>&amp;Makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2585"/>
+        <location filename="ViewManager/ViewManager.py" line="2593"/>
         <source>Toggle Bookmark</source>
         <translation>Přepnout záložku</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2578"/>
+        <location filename="ViewManager/ViewManager.py" line="2586"/>
         <source>&amp;Toggle Bookmark</source>
         <translation>Přepnou&amp;t záložku</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2578"/>
+        <location filename="ViewManager/ViewManager.py" line="2586"/>
         <source>Alt+Ctrl+T</source>
         <comment>Bookmark|Toggle</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2587"/>
+        <location filename="ViewManager/ViewManager.py" line="2595"/>
         <source>&lt;b&gt;Toggle Bookmark&lt;/b&gt;&lt;p&gt;Toggle a bookmark at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout záložku&lt;/b&gt;&lt;p&gt;Vytvoří/zruší záložku na aktuálním řádku v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2601"/>
+        <location filename="ViewManager/ViewManager.py" line="2609"/>
         <source>Next Bookmark</source>
         <translation>Následující záložka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2594"/>
+        <location filename="ViewManager/ViewManager.py" line="2602"/>
         <source>&amp;Next Bookmark</source>
         <translation>&amp;Následující záložka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2594"/>
+        <location filename="ViewManager/ViewManager.py" line="2602"/>
         <source>Ctrl+PgDown</source>
         <comment>Bookmark|Next</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2603"/>
+        <location filename="ViewManager/ViewManager.py" line="2611"/>
         <source>&lt;b&gt;Next Bookmark&lt;/b&gt;&lt;p&gt;Go to next bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Následující záložka&lt;/b&gt;&lt;p&gt;Přesun na následující záložku v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2617"/>
+        <location filename="ViewManager/ViewManager.py" line="2625"/>
         <source>Previous Bookmark</source>
         <translation>Předchozí záložka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2610"/>
+        <location filename="ViewManager/ViewManager.py" line="2618"/>
         <source>&amp;Previous Bookmark</source>
         <translation>&amp;Předchozí záložka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2610"/>
+        <location filename="ViewManager/ViewManager.py" line="2618"/>
         <source>Ctrl+PgUp</source>
         <comment>Bookmark|Previous</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2619"/>
+        <location filename="ViewManager/ViewManager.py" line="2627"/>
         <source>&lt;b&gt;Previous Bookmark&lt;/b&gt;&lt;p&gt;Go to previous bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí záložka&lt;/b&gt;&lt;p&gt;Přesun na předchozí záložku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2633"/>
+        <location filename="ViewManager/ViewManager.py" line="2641"/>
         <source>Clear Bookmarks</source>
         <translation>Vyčistit záložky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2626"/>
+        <location filename="ViewManager/ViewManager.py" line="2634"/>
         <source>&amp;Clear Bookmarks</source>
         <translation>Vyčistit (zr&amp;ušit) záložky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2626"/>
+        <location filename="ViewManager/ViewManager.py" line="2634"/>
         <source>Alt+Ctrl+C</source>
         <comment>Bookmark|Clear</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2635"/>
+        <location filename="ViewManager/ViewManager.py" line="2643"/>
         <source>&lt;b&gt;Clear Bookmarks&lt;/b&gt;&lt;p&gt;Clear bookmarks of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit (zrušit) záložky&lt;/b&gt;&lt;p&gt;Zruší se všechny záložky ve všech editorech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2648"/>
+        <location filename="ViewManager/ViewManager.py" line="2656"/>
         <source>Goto Syntax Error</source>
         <translation>Jít na Syntaktickou chybu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2642"/>
+        <location filename="ViewManager/ViewManager.py" line="2650"/>
         <source>&amp;Goto Syntax Error</source>
         <translation>&amp;Jít na Syntaktickou chybu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2650"/>
+        <location filename="ViewManager/ViewManager.py" line="2658"/>
         <source>&lt;b&gt;Goto Syntax Error&lt;/b&gt;&lt;p&gt;Go to next syntax error of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jít na Syntax error&lt;/b&gt;&lt;p&gt;Přesun na syntaktickou chybu v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2662"/>
+        <location filename="ViewManager/ViewManager.py" line="2670"/>
         <source>Clear Syntax Errors</source>
         <translation>Vyčistit Syntaktické chyby</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2657"/>
+        <location filename="ViewManager/ViewManager.py" line="2665"/>
         <source>Clear &amp;Syntax Errors</source>
         <translation>V&amp;yčistit Syntaktické chyby</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2664"/>
+        <location filename="ViewManager/ViewManager.py" line="2672"/>
         <source>&lt;b&gt;Clear Syntax Errors&lt;/b&gt;&lt;p&gt;Clear syntax errors of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit syntaktické chyby&lt;/b&gt;&lt;p&gt;Smažou se záznamy o syntaktických chybách ve všech editorech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2726"/>
+        <location filename="ViewManager/ViewManager.py" line="2734"/>
         <source>Next uncovered line</source>
         <translation>Následují problémová řádka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2720"/>
+        <location filename="ViewManager/ViewManager.py" line="2728"/>
         <source>&amp;Next uncovered line</source>
         <translation>Nás&amp;ledující problémová řádka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2728"/>
+        <location filename="ViewManager/ViewManager.py" line="2736"/>
         <source>&lt;b&gt;Next uncovered line&lt;/b&gt;&lt;p&gt;Go to next line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Následující problémová řádka&lt;/b&gt;&lt;p&gt;Jít na řádku v aktuálním editoru, která byla nalezena jako problémová.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2742"/>
+        <location filename="ViewManager/ViewManager.py" line="2750"/>
         <source>Previous uncovered line</source>
         <translation>Předchozí problémová řádka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2735"/>
+        <location filename="ViewManager/ViewManager.py" line="2743"/>
         <source>&amp;Previous uncovered line</source>
         <translation>Př&amp;edchozí problémová řádka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2744"/>
+        <location filename="ViewManager/ViewManager.py" line="2752"/>
         <source>&lt;b&gt;Previous uncovered line&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí problémová řádka&lt;/b&gt;&lt;p&gt;Jít na předchozí řádku v aktuálním editoru, která byla nalezena jako problémová.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2758"/>
+        <location filename="ViewManager/ViewManager.py" line="2766"/>
         <source>Next Task</source>
         <translation>Následující úloha</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2752"/>
+        <location filename="ViewManager/ViewManager.py" line="2760"/>
         <source>&amp;Next Task</source>
         <translation>Následující úlo&amp;ha</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2760"/>
+        <location filename="ViewManager/ViewManager.py" line="2768"/>
         <source>&lt;b&gt;Next Task&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Následující úloha&lt;/b&gt;&lt;p&gt;Jít na řádek v aktuálním editoru, na kterém je následující úloha.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2774"/>
+        <location filename="ViewManager/ViewManager.py" line="2782"/>
         <source>Previous Task</source>
         <translation>Předchozí úloha</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2767"/>
+        <location filename="ViewManager/ViewManager.py" line="2775"/>
         <source>&amp;Previous Task</source>
         <translation>Předchozí úl&amp;oha</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2776"/>
+        <location filename="ViewManager/ViewManager.py" line="2784"/>
         <source>&lt;b&gt;Previous Task&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí úloha&lt;/b&gt;&lt;p&gt;Jít na řádek, na kterém se nachází předchozí úloha.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2792"/>
+        <location filename="ViewManager/ViewManager.py" line="2800"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Záložky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2833"/>
+        <location filename="ViewManager/ViewManager.py" line="2840"/>
         <source>Bookmarks</source>
         <translation>Záložky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2956"/>
+        <location filename="ViewManager/ViewManager.py" line="2963"/>
         <source>Open files</source>
         <translation>Otevřené soubory</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2993"/>
+        <location filename="ViewManager/ViewManager.py" line="3000"/>
         <source>File Modified</source>
         <translation>Soubor změněn</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3652"/>
+        <location filename="ViewManager/ViewManager.py" line="3655"/>
         <source>&amp;Clear</source>
         <translation>&amp;Vyčistit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3648"/>
+        <location filename="ViewManager/ViewManager.py" line="3651"/>
         <source>&amp;Add</source>
         <translation>Přid&amp;at</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3650"/>
+        <location filename="ViewManager/ViewManager.py" line="3653"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Edit...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="985"/>
+        <location filename="ViewManager/ViewManager.py" line="998"/>
         <source>&lt;b&gt;Select to brace&lt;/b&gt;&lt;p&gt;Select text of the current editor to the matching brace.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vybrat obsah závorek&lt;/b&gt;&lt;p&gt;Vybere se text, který se nachází mezi závorkami.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1000"/>
+        <location filename="ViewManager/ViewManager.py" line="1013"/>
         <source>&lt;b&gt;Select All&lt;/b&gt;&lt;p&gt;Select all text of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vybrat vše&lt;/b&gt;&lt;p&gt;Vybere se všechen text v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1016"/>
+        <location filename="ViewManager/ViewManager.py" line="1029"/>
         <source>&lt;b&gt;Deselect All&lt;/b&gt;&lt;p&gt;Deselect all text of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zrušit výběr&lt;/b&gt;&lt;p&gt;Zruší výběr textu v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="709"/>
+        <location filename="ViewManager/ViewManager.py" line="722"/>
         <source>Export as</source>
         <translation>Exportovat jako</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2196"/>
+        <location filename="ViewManager/ViewManager.py" line="2205"/>
         <source>Quicksearch Textedit</source>
         <translation>Rychlé hledání texteditoru</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1277"/>
+        <location filename="QScintilla/MiniEditor.py" line="1270"/>
         <source>Clear search markers</source>
         <translation>Vyčistit značky hledání</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1277"/>
+        <location filename="QScintilla/MiniEditor.py" line="1270"/>
         <source>Ctrl+3</source>
         <comment>Search|Clear search markers</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1285"/>
+        <location filename="QScintilla/MiniEditor.py" line="1278"/>
         <source>Clear all displayed search markers</source>
         <translation>Vyčistit všechny zobrazené začky hledání</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1287"/>
+        <location filename="QScintilla/MiniEditor.py" line="1280"/>
         <source>&lt;b&gt;Clear search markers&lt;/b&gt;&lt;p&gt;Clear all displayed search markers.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit značky hledání&lt;/b&gt;&lt;p&gt;Smažou všechny zabrazené značky hledání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1249"/>
+        <location filename="QScintilla/MiniEditor.py" line="1242"/>
         <source>Search next occurrence of text</source>
         <translation>Hledat další výskyt textu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1251"/>
+        <location filename="QScintilla/MiniEditor.py" line="1244"/>
         <source>&lt;b&gt;Search next&lt;/b&gt;&lt;p&gt;Search the next occurrence of some text in the current editor. The previously entered searchtext and options are reused.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat další&lt;/b&gt;&lt;p&gt;Hledá se další výskyt hledaného textu v aktuálním editoru. Stále platí nastavení, která byla nastavena při zadání hledaného textu.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1267"/>
+        <location filename="QScintilla/MiniEditor.py" line="1260"/>
         <source>Search previous occurrence of text</source>
         <translation>Hledat předchozí výskyt textu</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1269"/>
+        <location filename="QScintilla/MiniEditor.py" line="1262"/>
         <source>&lt;b&gt;Search previous&lt;/b&gt;&lt;p&gt;Search the previous occurrence of some text in the current editor. The previously entered searchtext and options are reused.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat předchozí&lt;/b&gt;&lt;p&gt;Hledá se předchozí výskyt hledaného textu v aktuálním editoru. Stále platí nastavení, která byla nastavena při zadání hledaného textu.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2023"/>
+        <location filename="ViewManager/ViewManager.py" line="2036"/>
         <source>&lt;b&gt;Quicksearch&lt;/b&gt;&lt;p&gt;This activates the quicksearch function of the IDE by giving focus to the quicksearch entry field. If this field is already active and contains text, it searches for the next occurrence of this text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rychlé hledání&lt;/b&gt;&lt;p&gt;Aktivuje se funkce rychlého hledání. Kurzor se přemístí do okna zadání hledaného výrazu. Je-li toto okno aktivní a obsahuje-li text, vyhledává v textu výskyt tohoto výrazu.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2042"/>
+        <location filename="ViewManager/ViewManager.py" line="2055"/>
         <source>&lt;b&gt;Quicksearch backwards&lt;/b&gt;&lt;p&gt;This searches the previous occurrence of the quicksearch text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rychlé hledání zpět&lt;/b&gt;&lt;p&gt;Vyhledává se předchozí výskyt výrazu v rychlém hledání.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2170"/>
+        <location filename="ViewManager/ViewManager.py" line="2183"/>
         <source>&lt;p&gt;Enter the searchtext directly into this field. The search will be performed case insensitive. The quicksearch function is activated upon activation of the quicksearch next action (default key Ctrl+Shift+K), if this entry field does not have the input focus. Otherwise it searches for the next occurrence of the text entered. The quicksearch backwards action (default key Ctrl+Shift+J) searches backward. Activating the &apos;quicksearch extend&apos; action (default key Ctrl+Shift+H) extends the current searchtext to the end of the currently found word. The quicksearch can be ended by pressing the Return key while the quicksearch entry has the the input focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pište hledaný text přímo do okna Rychlého hledání. Při zadávání se neberou na zřetel velké/malé znaky. Pokud okno nemá fokus, aktivujte jej příkazem Rychlé hledání (defaultně Ctrl+Shift+K). Jinak se pokračuje v hledání dalšího výskytu zadaného textu. Rychlé hledání nazpět (defaultně Ctr+Shift+J) prohledává text směrem k začátku dokumentu. Rozšířené rychlé hledání (defaultně Ctrl+Shift+H) rozšíří hledaný text na celé slovo, na kterém je kurzor. Rychlé hledání je ukončeno stiskem klávesy Enter za předpokladu, že fokus se nachází v okně Rychlého hledání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1115"/>
+        <location filename="ViewManager/ViewManager.py" line="1128"/>
         <source>Calltip</source>
         <translation>Rychlé tipy</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1115"/>
+        <location filename="ViewManager/ViewManager.py" line="1128"/>
         <source>&amp;Calltip</source>
         <translation>&amp;Rychlé tipy</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1115"/>
+        <location filename="ViewManager/ViewManager.py" line="1128"/>
         <source>Alt+Space</source>
         <comment>Edit|Calltip</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1122"/>
+        <location filename="ViewManager/ViewManager.py" line="1135"/>
         <source>Show Calltips</source>
         <translation>Zobrazit Rychlé tipy</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="1124"/>
+        <location filename="ViewManager/ViewManager.py" line="1137"/>
         <source>&lt;b&gt;Calltip&lt;/b&gt;&lt;p&gt;Show calltips based on the characters immediately to the left of the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rychlé tipy&lt;/b&gt;&lt;p&gt;Zobrazit Rychlé typy založené na znacích hned vlevo vedle kurzoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="429"/>
+        <location filename="QScintilla/MiniEditor.py" line="424"/>
         <source>Print Preview</source>
         <translation>Náhled tisku</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="607"/>
+        <location filename="ViewManager/ViewManager.py" line="622"/>
         <source>Print preview of the current file</source>
         <translation>Náhled tisku aktuálního souboru</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="609"/>
+        <location filename="ViewManager/ViewManager.py" line="624"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the current editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Náhled tisku&lt;/b&gt;&lt;p&gt;Náhled tisku aktuálního editačního okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="988"/>
+        <location filename="QScintilla/MiniEditor.py" line="981"/>
         <source>Insert new line below current line</source>
         <translation>Vložit nový řádek pod aktuální</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="988"/>
+        <location filename="QScintilla/MiniEditor.py" line="981"/>
         <source>Shift+Return</source>
         <translation>Shift+Return</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="988"/>
+        <location filename="QScintilla/MiniEditor.py" line="981"/>
         <source>Shift+Enter</source>
         <translation>Shift+Enter</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2120"/>
+        <location filename="ViewManager/ViewManager.py" line="2133"/>
         <source>Replace in Files</source>
         <translation>Nahradit v souborech</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2120"/>
+        <location filename="ViewManager/ViewManager.py" line="2133"/>
         <source>Replace in F&amp;iles...</source>
         <translation>Nahrad&amp;it v souborech...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2120"/>
+        <location filename="ViewManager/ViewManager.py" line="2133"/>
         <source>Shift+Ctrl+R</source>
         <comment>Search|Replace in Files</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2127"/>
+        <location filename="ViewManager/ViewManager.py" line="2140"/>
         <source>Search for a text in files and replace it</source>
         <translation>Hledat text v souborech a nahradit jej</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2129"/>
+        <location filename="ViewManager/ViewManager.py" line="2142"/>
         <source>&lt;b&gt;Replace in Files&lt;/b&gt;&lt;p&gt;Search for some text in the files of a directory tree or the project and replace it. A dialog is shown to enter the searchtext, the replacement text and options for the search and to display the result.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nahradit v souborech&lt;/b&gt;&lt;p&gt;Hledání zadaného textu v souborech v adresářovém stromu projektu a jeho nahrazení. Je zobrazeno dialogové okno pro zadání hledaného textu, textu nahrazujícího a volby pro hledání a zobrazní výsledku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2863"/>
+        <location filename="ViewManager/ViewManager.py" line="2870"/>
         <source>Spell check</source>
         <translation>Kontola pravopisu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2863"/>
+        <location filename="ViewManager/ViewManager.py" line="2870"/>
         <source>&amp;Spell Check...</source>
         <translation>Kontrola pravopi&amp;su...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2863"/>
+        <location filename="ViewManager/ViewManager.py" line="2870"/>
         <source>Shift+F7</source>
         <comment>Spelling|Spell Check</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2872"/>
+        <location filename="ViewManager/ViewManager.py" line="2879"/>
         <source>Perform spell check of current editor</source>
         <translation>Spustit kontrolu pravopisu v aktuálním editoru</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2874"/>
+        <location filename="ViewManager/ViewManager.py" line="2881"/>
         <source>&lt;b&gt;Spell check&lt;/b&gt;&lt;p&gt;Perform a spell check of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kontrola pravopisu&lt;/b&gt;&lt;p&gt;Spustí se kontrola pravopisu v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2881"/>
+        <location filename="ViewManager/ViewManager.py" line="2888"/>
         <source>Automatic spell checking</source>
         <translation>Automatická kontrola pravopisu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2881"/>
+        <location filename="ViewManager/ViewManager.py" line="2888"/>
         <source>&amp;Automatic spell checking</source>
         <translation>&amp;Automatická kontrola pravopisu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2888"/>
+        <location filename="ViewManager/ViewManager.py" line="2895"/>
         <source>(De-)Activate automatic spell checking</source>
         <translation>(De-)aktivovat akutomatickou kontrolu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2890"/>
+        <location filename="ViewManager/ViewManager.py" line="2897"/>
         <source>&lt;b&gt;Automatic spell checking&lt;/b&gt;&lt;p&gt;Activate or deactivate the automatic spell checking function of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Automatická kontrola pravopisu&lt;/b&gt;&lt;p&gt;Zapnout neobo vypnout automatickou kontrolu pravopisu ve všech editorech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2930"/>
+        <location filename="ViewManager/ViewManager.py" line="2937"/>
         <source>Spelling</source>
         <translation>Pravopis</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2993"/>
+        <location filename="ViewManager/ViewManager.py" line="3000"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; obsahuje neuložené změny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3283"/>
+        <location filename="ViewManager/ViewManager.py" line="3286"/>
         <source>File: {0}</source>
         <translation>Soubor: {0}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3287"/>
+        <location filename="ViewManager/ViewManager.py" line="3290"/>
         <source>Line: {0:5}</source>
         <translation>Řádek: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3292"/>
+        <location filename="ViewManager/ViewManager.py" line="3295"/>
         <source>Pos: {0:5}</source>
         <translation>Poz: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2678"/>
+        <location filename="ViewManager/ViewManager.py" line="2686"/>
         <source>Next warning message</source>
         <translation>Další varování</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2671"/>
+        <location filename="ViewManager/ViewManager.py" line="2679"/>
         <source>&amp;Next warning message</source>
         <translation>Další varová&amp;ní</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2680"/>
+        <location filename="ViewManager/ViewManager.py" line="2688"/>
         <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Další varování&lt;/b&gt;&lt;p&gt;Jít na další řádku v aktuálním editoru, která obsahuje py3flakes varovné hlášení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2695"/>
+        <location filename="ViewManager/ViewManager.py" line="2703"/>
         <source>Previous warning message</source>
         <translation>Předchozí varování</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2688"/>
+        <location filename="ViewManager/ViewManager.py" line="2696"/>
         <source>&amp;Previous warning message</source>
         <translation>&amp;Předchozí varování</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2697"/>
+        <location filename="ViewManager/ViewManager.py" line="2705"/>
         <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí varování&lt;/b&gt;&lt;p&gt;Jít na předchozí řádku v aktuálním editoru, která obsahuje py3flakes varovné hlášení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2711"/>
+        <location filename="ViewManager/ViewManager.py" line="2719"/>
         <source>Clear Warning Messages</source>
         <translation>Vyčistit varovná hlášení</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2705"/>
+        <location filename="ViewManager/ViewManager.py" line="2713"/>
         <source>Clear &amp;Warning Messages</source>
         <translation>&amp;Vyčistit varovná hlášení</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2713"/>
+        <location filename="ViewManager/ViewManager.py" line="2721"/>
         <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit varovná hlášení&lt;/b&gt;&lt;p&gt;Vyčistí všechna py3flakes varovná hlášení ze všech editorů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="855"/>
+        <location filename="ViewManager/ViewManager.py" line="868"/>
         <source>Join Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="849"/>
+        <location filename="ViewManager/ViewManager.py" line="862"/>
         <source>Ctrl+J</source>
         <comment>Edit|Join Lines</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="857"/>
+        <location filename="ViewManager/ViewManager.py" line="870"/>
         <source>&lt;b&gt;Join Lines&lt;/b&gt;&lt;p&gt;Join the current and the next lines.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -42536,14 +42569,27 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
+    <name>WidgetArea</name>
+    <message>
+        <location filename="Tools/TRPreviewer.py" line="736"/>
+        <source>Load UI File</source>
+        <translation type="unfinished">Načíst UI soubor</translation>
+    </message>
+    <message>
+        <location filename="Tools/TRPreviewer.py" line="736"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
     <name>WidgetView</name>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="684"/>
+        <location filename="Tools/TRPreviewer.py" line="683"/>
         <source>Load UI File</source>
         <translation>Načíst UI soubor</translation>
     </message>
     <message>
-        <location filename="Tools/TRPreviewer.py" line="684"/>
+        <location filename="Tools/TRPreviewer.py" line="683"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
@@ -42553,12 +42599,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="Tools/TRPreviewer.py" line="733"/>
         <source>Load UI File</source>
-        <translation>Načíst UI soubor</translation>
+        <translation type="obsolete">Načíst UI soubor</translation>
     </message>
     <message>
         <location filename="Tools/TRPreviewer.py" line="733"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
