@@ -587,6 +587,7 @@
             <section title="eric5.QScintilla.Exporters" ref="index-eric5.QScintilla.Exporters.html">
               <section title="eric5.QScintilla.Exporters.ExporterBase" ref="eric5.QScintilla.Exporters.ExporterBase.html" />
               <section title="eric5.QScintilla.Exporters.ExporterHTML" ref="eric5.QScintilla.Exporters.ExporterHTML.html" />
+              <section title="eric5.QScintilla.Exporters.ExporterODT" ref="eric5.QScintilla.Exporters.ExporterODT.html" />
               <section title="eric5.QScintilla.Exporters.ExporterPDF" ref="eric5.QScintilla.Exporters.ExporterPDF.html" />
               <section title="eric5.QScintilla.Exporters.ExporterRTF" ref="eric5.QScintilla.Exporters.ExporterRTF.html" />
               <section title="eric5.QScintilla.Exporters.ExporterTEX" ref="eric5.QScintilla.Exporters.ExporterTEX.html" />
@@ -9722,6 +9723,10 @@
       <keyword name="ExporterTEX.__getTexRGB" id="ExporterTEX.__getTexRGB" ref="eric5.QScintilla.Exporters.ExporterTEX.html#ExporterTEX.__getTexRGB" />
       <keyword name="ExporterTEX.__texStyle" id="ExporterTEX.__texStyle" ref="eric5.QScintilla.Exporters.ExporterTEX.html#ExporterTEX.__texStyle" />
       <keyword name="ExporterTEX.exportSource" id="ExporterTEX.exportSource" ref="eric5.QScintilla.Exporters.ExporterTEX.html#ExporterTEX.exportSource" />
+      <keyword name="ExporterODT (Module)" id="ExporterODT (Module)" ref="eric5.QScintilla.Exporters.ExporterODT.html" />
+      <keyword name="ExporterODT" id="ExporterODT" ref="eric5.QScintilla.Exporters.ExporterODT.html#ExporterODT" />
+      <keyword name="ExporterODT (Constructor)" id="ExporterODT (Constructor)" ref="eric5.QScintilla.Exporters.ExporterODT.html#ExporterODT.__init__" />
+      <keyword name="ExporterODT.exportSource" id="ExporterODT.exportSource" ref="eric5.QScintilla.Exporters.ExporterODT.html#ExporterODT.exportSource" />
       <keyword name="ExporterBase (Module)" id="ExporterBase (Module)" ref="eric5.QScintilla.Exporters.ExporterBase.html" />
       <keyword name="ExporterBase" id="ExporterBase" ref="eric5.QScintilla.Exporters.ExporterBase.html#ExporterBase" />
       <keyword name="ExporterBase (Constructor)" id="ExporterBase (Constructor)" ref="eric5.QScintilla.Exporters.ExporterBase.html#ExporterBase.__init__" />
@@ -9735,8 +9740,11 @@
       <keyword name="ExporterRTF.exportSource" id="ExporterRTF.exportSource" ref="eric5.QScintilla.Exporters.ExporterRTF.html#ExporterRTF.exportSource" />
       <keyword name="ExporterHTML (Module)" id="ExporterHTML (Module)" ref="eric5.QScintilla.Exporters.ExporterHTML.html" />
       <keyword name="ExporterHTML" id="ExporterHTML" ref="eric5.QScintilla.Exporters.ExporterHTML.html#ExporterHTML" />
+      <keyword name="HTMLGenerator" id="HTMLGenerator" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator" />
       <keyword name="ExporterHTML (Constructor)" id="ExporterHTML (Constructor)" ref="eric5.QScintilla.Exporters.ExporterHTML.html#ExporterHTML.__init__" />
       <keyword name="ExporterHTML.exportSource" id="ExporterHTML.exportSource" ref="eric5.QScintilla.Exporters.ExporterHTML.html#ExporterHTML.exportSource" />
+      <keyword name="HTMLGenerator (Constructor)" id="HTMLGenerator (Constructor)" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator.__init__" />
+      <keyword name="HTMLGenerator.generate" id="HTMLGenerator.generate" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator.generate" />
       <keyword name="ExporterPDF (Module)" id="ExporterPDF (Module)" ref="eric5.QScintilla.Exporters.ExporterPDF.html" />
       <keyword name="ExporterPDF" id="ExporterPDF" ref="eric5.QScintilla.Exporters.ExporterPDF.html#ExporterPDF" />
       <keyword name="PDFObjectTracker" id="PDFObjectTracker" ref="eric5.QScintilla.Exporters.ExporterPDF.html#PDFObjectTracker" />
@@ -10218,6 +10226,7 @@
       <file>eric5.QScintilla.Editor.html</file>
       <file>eric5.QScintilla.Exporters.ExporterBase.html</file>
       <file>eric5.QScintilla.Exporters.ExporterHTML.html</file>
+      <file>eric5.QScintilla.Exporters.ExporterODT.html</file>
       <file>eric5.QScintilla.Exporters.ExporterPDF.html</file>
       <file>eric5.QScintilla.Exporters.ExporterRTF.html</file>
       <file>eric5.QScintilla.Exporters.ExporterTEX.html</file>

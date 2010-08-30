@@ -9,6 +9,7 @@ Version 5.1-snapshot-2010mmdd:
 - added an editor action to join the current line with the next one
 - added code to cope with Linux distributor's usage of KDE wrapper dialogs
   for the Qt file dialogs
+- added a source code exporter for the Open Document Text (ODT) format
 
 Version 5.1-snapshot-20100718:
 - bug fixes

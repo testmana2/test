@@ -31,6 +31,7 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         self.pageIds = {}
         self.pageIds[' '] = self.stackedWidget.indexOf(self.emptyPage)
         self.pageIds['HTML'] = self.stackedWidget.indexOf(self.htmlPage)
+        self.pageIds['ODT'] = self.stackedWidget.indexOf(self.odtPage)
         self.pageIds['PDF'] = self.stackedWidget.indexOf(self.pdfPage)
         self.pageIds['RTF'] = self.stackedWidget.indexOf(self.rtfPage)
         self.pageIds['TeX'] = self.stackedWidget.indexOf(self.texPage)
@@ -56,6 +57,14 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
             Preferences.getEditorExporter("HTML/FullPathAsTitle"))
         self.htmlTabsCheckBox.setChecked(\
             Preferences.getEditorExporter("HTML/UseTabs"))
+        
+        # ODT
+        self.odtWysiwygCheckBox.setChecked(\
+            Preferences.getEditorExporter("ODT/WYSIWYG"))
+        self.odtStylesCheckBox.setChecked(\
+            Preferences.getEditorExporter("ODT/OnlyStylesUsed"))
+        self.odtTabsCheckBox.setChecked(\
+            Preferences.getEditorExporter("ODT/UseTabs"))
         
         # PDF
         self.pdfMagnificationSlider.setValue(\
@@ -106,6 +115,14 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
             self.htmlTitleCheckBox.isChecked())
         Preferences.setEditorExporter("HTML/UseTabs",
             self.htmlTabsCheckBox.isChecked())
+        
+        # ODT
+        Preferences.setEditorExporter("ODT/WYSIWYG",
+            self.odtWysiwygCheckBox.isChecked())
+        Preferences.setEditorExporter("ODT/OnlyStylesUsed",
+            self.odtStylesCheckBox.isChecked())
+        Preferences.setEditorExporter("ODT/UseTabs",
+            self.odtTabsCheckBox.isChecked())
         
         # PDF
         Preferences.setEditorExporter("PDF/Magnification", 

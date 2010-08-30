@@ -449,6 +449,10 @@ class Prefs(object):
         
         "TeX/OnlyStylesUsed"    : False, 
         "TeX/FullPathAsTitle"   : False, 
+        
+        "ODT/WYSIWYG"           : True, 
+        "ODT/OnlyStylesUsed"    : False, 
+        "ODT/UseTabs"           : False, 
     }
     
     # defaults for the printer settings
@@ -1478,7 +1482,8 @@ def getEditorExporter(key, prefClass = Prefs):
         return f
     elif key in ["HTML/WYSIWYG", "HTML/Folding", "HTML/OnlyStylesUsed", 
                  "HTML/FullPathAsTitle", "HTML/UseTabs", "RTF/WYSIWYG", 
-                 "RTF/UseTabs", "TeX/OnlyStylesUsed", "TeX/FullPathAsTitle"]:
+                 "RTF/UseTabs", "TeX/OnlyStylesUsed", "TeX/FullPathAsTitle", 
+                 "ODT/WYSIWYG", "ODT/OnlyStylesUsed", "ODT/UseTabs"]:
         return toBool(prefClass.settings.value("Editor/Exporters/" + key,
             prefClass.editorExporterDefaults[key]))
     elif key in ["PDF/Magnification", "PDF/MarginLeft", "PDF/MarginRight", 

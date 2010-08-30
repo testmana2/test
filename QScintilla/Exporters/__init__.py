@@ -22,6 +22,7 @@ def getSupportedFormats():
         "RTF"  : QApplication.translate('Exporters', "RTF"), 
         "PDF"  : QApplication.translate('Exporters', "PDF"), 
         "TeX"  : QApplication.translate('Exporters', "TeX"), 
+        "ODT"  : QApplication.translate('Exporters', "ODT"), 
     }
     
     return supportedFormats
@@ -47,5 +48,8 @@ def getExporter(format, editor):
         elif format == "TeX":
             from .ExporterTEX import ExporterTEX
             return ExporterTEX(editor)
+        elif format == "ODT":
+            from .ExporterODT import ExporterODT
+            return ExporterODT(editor)
     except ImportError:
         return None
