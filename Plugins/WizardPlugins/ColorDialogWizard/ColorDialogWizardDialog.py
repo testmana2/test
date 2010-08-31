@@ -12,6 +12,8 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_ColorDialogWizardDialog import Ui_ColorDialogWizardDialog
 
 class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
@@ -68,7 +70,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                     else:
                         exec('QColorDialog.getColor({0})'.format(coStr))
                 except:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self,
                         self.trUtf8("QColorDialog Wizard Error"),
                         self.trUtf8("""<p>The colour <b>{0}</b> is not valid.</p>""")
                             .format(coStr))

@@ -15,6 +15,7 @@ from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Action import E5Action, createActionGroup
+from E5Gui import E5MessageBox
 
 from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat
@@ -1503,7 +1504,7 @@ class MiniEditor(QMainWindow):
             txt, self.encoding = Utilities.readEncodedFile(fileName)
         except (UnicodeDecodeError, IOError) as why:
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(self, self.trUtf8('Open File'),
+            E5MessageBox.critical(self, self.trUtf8('Open File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
                             '<p>Reason: {1}</p>')
                     .format(fileName, str(why)))
@@ -1536,7 +1537,7 @@ class MiniEditor(QMainWindow):
         try:
             self.encoding = Utilities.writeEncodedFile(fileName, txt, self.encoding)
         except (IOError, Utilities.CodingError, UnicodeError) as why:
-            QMessageBox.critical(self, self.trUtf8('Save File'),
+            E5MessageBox.critical(self, self.trUtf8('Save File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
                             'Reason: {1}</p>')
                     .format(fileName, str(why)))

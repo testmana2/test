@@ -12,7 +12,9 @@ import sys
 import imp
 
 from PyQt4.QtCore import *
-from PyQt4.QtGui import QPixmap, QMessageBox
+from PyQt4.QtGui import QPixmap
+
+from E5Gui import E5MessageBox
 
 from .PluginExceptions import *
 
@@ -946,7 +948,7 @@ class PluginManager(QObject):
                     try:
                         os.mkdir(downloadDir, 0o755)
                     except (OSError, IOError) as err:
-                        QMessageBox.critical(self.__ui,
+                        E5MessageBox.critical(self.__ui,
                             self.trUtf8("Plugin Manager Error"),
                             self.trUtf8("""<p>The plugin download directory <b>{0}</b> """
                                         """could not be created. Please configure it """

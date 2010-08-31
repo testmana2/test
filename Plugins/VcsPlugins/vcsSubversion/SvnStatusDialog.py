@@ -302,7 +302,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

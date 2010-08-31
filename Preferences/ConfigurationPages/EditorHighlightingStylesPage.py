@@ -11,10 +11,12 @@ import io
 
 from PyQt4.QtCore import pyqtSlot, QFileInfo
 from PyQt4.QtGui import QPalette, QFileDialog, QColorDialog, QFontDialog, \
-                        QInputDialog, QMessageBox, QFont, QMenu
+                        QInputDialog, QFont, QMenu
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage
+
+from E5Gui import E5MessageBox
 
 from E5XML.XMLUtilities import make_parser
 from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
@@ -388,7 +390,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             HighlightingStylesWriter(f, lexers).writeXML()
             f.close()
         except IOError as err:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Export Highlighting Styles"),
                 self.trUtf8("""<p>The highlighting styles could not be exported"""
                             """ to file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
@@ -418,7 +420,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             finally:
                 f.close()
         except IOError as err:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Import Highlighting Styles"),
                 self.trUtf8("""<p>The highlighting styles could not be read"""
                             """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
@@ -448,7 +450,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             finally:
                 f.close()
         except IOError as err:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Import Highlighting Styles"),
                 self.trUtf8("""<p>The highlighting styles could not be read"""
                             """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
@@ -456,7 +458,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             )
             return
         except XMLFatalParseError:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Import Highlighting Styles"),
                 self.trUtf8("""<p>The highlighting styles file <b>{0}</b>"""
                             """ has invalid contents.</p>""").format(fn))

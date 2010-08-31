@@ -305,13 +305,13 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                     self.trUtf8(""),
                     self.trUtf8("""The regular expression is valid."""))
             else:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
                         .format(re.errorString()))
                 return
         else:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Error"),
                 self.trUtf8("""A regular expression must be given."""))
 
@@ -340,7 +340,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             else:
                 re.setPatternSyntax(QRegExp.RegExp)
             if not re.isValid():
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
                         .format(re.errorString()))
@@ -424,7 +424,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             self.resultTable.verticalHeader().hide()
             self.resultTable.horizontalHeader().hide()
         else:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Error"),
                 self.trUtf8("""A regular expression and a text must be given."""))
         

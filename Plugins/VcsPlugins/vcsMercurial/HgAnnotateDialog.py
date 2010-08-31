@@ -10,8 +10,10 @@ Module implementing a dialog to show the output of the hg annotate command.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, Qt
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QFont, QMessageBox, QHeaderView, \
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QFont, QHeaderView, \
     QTreeWidgetItem, QLineEdit
+
+from E5Gui import E5MessageBox
 
 from .Ui_HgAnnotateDialog import Ui_HgAnnotateDialog
 
@@ -104,7 +106,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         if not procStarted:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

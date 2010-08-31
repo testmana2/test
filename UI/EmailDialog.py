@@ -15,6 +15,8 @@ import socket
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_EmailDialog import Ui_EmailDialog
 
 from .Info import BugAddress, FeatureAddress
@@ -288,7 +290,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                     server.login(Preferences.getUser("MailServerUser"),
                                  password)
                 except (smtplib.SMTPException, socket.error) as e:
-                    res = QMessageBox.critical(self,
+                    res = E5MessageBox.critical(self,
                         self.trUtf8("Send bug report"),
                         self.trUtf8("""<p>Authentication failed.<br>Reason: {0}</p>""")
                             .format(str(e)),
@@ -308,7 +310,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             QApplication.restoreOverrideCursor()
         except (smtplib.SMTPException, socket.error) as e:
             QApplication.restoreOverrideCursor()
-            res = QMessageBox.critical(self,
+            res = E5MessageBox.critical(self,
                 self.trUtf8("Send bug report"),
                 self.trUtf8("""<p>Message could not be sent.<br>Reason: {0}</p>""")
                     .format(str(e)),

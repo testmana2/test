@@ -10,6 +10,8 @@ Module implementing a dialog to show a list of tags or branches.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_SvnTagBranchListDialog import Ui_SvnTagBranchListDialog
 
 import Preferences
@@ -85,7 +87,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         
         reposURL = self.vcs.svnGetReposName(dname)
         if reposURL is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Subversion Error"),
                 self.trUtf8("""The URL of the project repository could not be"""
                     """ retrieved from the working copy. The list operation will"""
@@ -102,7 +104,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
             # determine the base path of the project in the repository
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
             if not rx_base.exactMatch(reposURL):
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Subversion Error"),
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The list operation will"""
@@ -127,7 +129,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
                 self.close()
                 return
             if not reposPath:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Subversion List"),
                     self.trUtf8("""The repository URL is empty. Aborting..."""))
                 self.close()
@@ -141,7 +143,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

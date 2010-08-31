@@ -13,6 +13,8 @@ import pickle
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_PyProfileDialog import Ui_PyProfileDialog
 import Utilities
 
@@ -218,7 +220,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
             self.stats = pickle.load(f)
             f.close()
         except (EnvironmentError, pickle.PickleError):
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Loading Profiling Data"),
                 self.trUtf8("""<p>The profiling data could not be"""
                             """ read from file <b>{0}</b>.</p>""")

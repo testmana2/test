@@ -429,7 +429,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 rcfile.write('</RCC>\n')
                 rcfile.close()
             except IOError as e:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("New Resource"),
                     self.trUtf8("<p>The new resource file <b>{0}</b> could not"
                         " be created.<br>Problem: {1}</p>")\
@@ -607,7 +607,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.compileRunning = False
             if progress is not None:
                 progress.cancel()
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'Could not start {0}.<br>'

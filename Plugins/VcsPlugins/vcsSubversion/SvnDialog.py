@@ -12,6 +12,8 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_SvnDialog import Ui_SvnDialog
 
 import Preferences
@@ -127,7 +129,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         if not procStarted:
             self.buttonBox.setFocus()
             self.inputGroup.setEnabled(False)
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

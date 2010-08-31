@@ -45,6 +45,7 @@ from .UserAgent.UserAgentMenu import UserAgentMenu
 
 from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui.E5Action import E5Action
+from E5Gui import E5MessageBox
 
 from E5Network.E5NetworkMonitor import E5NetworkMonitor
 
@@ -1647,7 +1648,7 @@ class HelpWindow(QMainWindow):
             try:
                 frame.print_(printer)
             except AttributeError:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("Eric Web Browser"),
                     self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
                                 """Please upgrade.</p>"""))
@@ -1688,7 +1689,7 @@ class HelpWindow(QMainWindow):
             try:
                 frame.print_(printer)
             except AttributeError:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("Eric Web Browser"),
                     self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
                                 """Please upgrade.</p>"""))
@@ -1730,7 +1731,7 @@ class HelpWindow(QMainWindow):
         try:
             self.__printPreviewBrowser.print_(printer)
         except AttributeError:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Eric Web Browser"),
                 self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
                             """Please upgrade.</p>"""))

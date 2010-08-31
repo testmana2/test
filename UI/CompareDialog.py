@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5MessageBox
 
 import UI.PixmapCache
 
@@ -219,7 +220,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             lines1 = f1.readlines()
             f1.close()
         except IOError:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Compare Files"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(filename1))
@@ -231,7 +232,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             lines2 = f2.readlines()
             f2.close()
         except IOError:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Compare Files"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(filename2))

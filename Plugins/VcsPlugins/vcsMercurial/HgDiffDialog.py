@@ -13,6 +13,8 @@ from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QFileInfo
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QBrush, QColor, QMessageBox, \
     QTextCursor, QFileDialog, QLineEdit
 
+from E5Gui import E5MessageBox
+
 from .Ui_HgDiffDialog import Ui_HgDiffDialog
 
 import Utilities
@@ -149,7 +151,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '
@@ -292,7 +294,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             f.write(self.contents.toPlainText())
             f.close()
         except IOError as why:
-            QMessageBox.critical(self, self.trUtf8('Save Diff'),
+            E5MessageBox.critical(self, self.trUtf8('Save Diff'),
                 self.trUtf8('<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
                     .format(fname, str(why)))

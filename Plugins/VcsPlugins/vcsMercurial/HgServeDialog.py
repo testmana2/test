@@ -11,9 +11,10 @@ import os
 
 from PyQt4.QtCore import QProcess, Qt, QSize
 from PyQt4.QtGui import QMainWindow, QAction, QToolBar, QPlainTextEdit, \
-    QMessageBox, QTextCursor, QBrush, QSpinBox, QComboBox
+    QTextCursor, QBrush, QSpinBox, QComboBox
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 import UI.PixmapCache
 
@@ -128,7 +129,7 @@ class HgServeDialog(QMainWindow):
             self.vcs.getPlugin().setPreferences("ServerPort", port)
             self.vcs.getPlugin().setPreferences("ServerStyle", style)
         else:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

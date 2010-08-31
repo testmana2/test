@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .Ui_SvnUrlSelectionDialog import Ui_SvnUrlSelectionDialog
 
@@ -45,7 +46,7 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         
         reposURL = self.vcs.svnGetReposName(path)
         if reposURL is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Subversion Error"),
                 self.trUtf8("""The URL of the project repository could not be"""
                     """ retrieved from the working copy. The operation will"""
@@ -57,7 +58,7 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
             # determine the base path of the project in the repository
             rx_base = QRegExp('(.+/)(trunk|tags|branches).*')
             if not rx_base.exactMatch(reposURL):
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Subversion Error"),
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The list operation will"""

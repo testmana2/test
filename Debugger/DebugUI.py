@@ -963,13 +963,13 @@ class DebugUI(QObject):
         self.ui.activateWindow()
         
         if message is None:
-            QMessageBox.critical(self.ui,Program,
+            E5MessageBox.critical(self.ui,Program,
                 self.trUtf8('The program being debugged contains an unspecified'
                             ' syntax error.'))
             return
             
         self.viewmanager.setFileLine(filename, lineNo, True, True)
-        QMessageBox.critical(self.ui,Program,
+        E5MessageBox.critical(self.ui,Program,
             self.trUtf8('<p>The file <b>{0}</b> contains the syntax error'
                         ' <b>{1}</b> at line <b>{2}</b>, character <b>{3}</b>.</p>')
                 .format(filename, message, lineNo, characterNo))
@@ -986,7 +986,7 @@ class DebugUI(QObject):
         self.ui.activateWindow()
         QApplication.processEvents()
         if exceptionType is None:
-            QMessageBox.critical(self.ui,Program,
+            E5MessageBox.critical(self.ui,Program,
                 self.trUtf8('An unhandled exception occured.'
                             ' See the shell window for details.'))
             return
@@ -1011,7 +1011,7 @@ class DebugUI(QObject):
                             QMessageBox.No | \
                             QMessageBox.Yes | \
                             QMessageBox.Ignore)
-                    res = QMessageBox.critical(self.ui, Program,
+                    res = E5MessageBox.critical(self.ui, Program,
                         self.trUtf8('<p>The debugged program raised the exception'
                                     ' <b>{0}</b><br>"<b>{1}</b>"<br>File: <b>{2}</b>,'
                                     ' Line: <b>{3}</b></p><p>Break here?</p>')
@@ -1022,7 +1022,7 @@ class DebugUI(QObject):
                         buttons,
                         QMessageBox.No)
                 else:
-                    res = QMessageBox.critical(self.ui, Program,
+                    res = E5MessageBox.critical(self.ui, Program,
                         self.trUtf8('<p>The debugged program raised the exception'
                                     ' <b>{0}</b><br>"<b>{1}</b>"</p>')
                             .format(exceptionType, 
@@ -1125,7 +1125,7 @@ class DebugUI(QObject):
         @param filename filename of the breakpoint (string)
         @param lineno linenumber of the breakpoint (integer)
         """
-        QMessageBox.critical(None,
+        E5MessageBox.critical(self.ui,
             self.trUtf8("Breakpoint Condition Error"),
             self.trUtf8("""<p>The condition of the breakpoint <b>{0}, {1}</b>"""
                         """ contains a syntax error.</p>""")\
@@ -1156,7 +1156,7 @@ class DebugUI(QObject):
         
         @param cond expression of the watch expression (string)
         """
-        QMessageBox.critical(None,
+        E5MessageBox.critical(self.ui,
             self.trUtf8("Watch Expression Error"),
             self.trUtf8("""<p>The watch expression <b>{0}</b>"""
                         """ contains a syntax error.</p>""")\
@@ -1348,7 +1348,7 @@ class DebugUI(QObject):
             if runProject:
                 fn = self.project.getMainScript(1)
                 if fn is None:
-                    QMessageBox.critical(self.ui,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Coverage of Project"),
                         self.trUtf8("There is no main script defined for the"
                             " current project. Aborting"))
@@ -1452,7 +1452,7 @@ class DebugUI(QObject):
             if runProject:
                 fn = self.project.getMainScript(1)
                 if fn is None:
-                    QMessageBox.critical(self.ui,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Profile of Project"),
                         self.trUtf8("There is no main script defined for the"
                             " current project. Aborting"))
@@ -1558,7 +1558,7 @@ class DebugUI(QObject):
             if runProject:
                 fn = self.project.getMainScript(1)
                 if fn is None:
-                    QMessageBox.critical(self.ui,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Run Project"),
                         self.trUtf8("There is no main script defined for the"
                             " current project. Aborting"))
@@ -1666,7 +1666,7 @@ class DebugUI(QObject):
             if debugProject:
                 fn = self.project.getMainScript(True)
                 if fn is None:
-                    QMessageBox.critical(self.ui,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Debug Project"),
                         self.trUtf8("There is no main script defined for the"
                             " current project. No debugging possible."))

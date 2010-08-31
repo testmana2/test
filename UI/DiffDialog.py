@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5MessageBox
 
 from .Ui_DiffDialog import Ui_DiffDialog
 import Utilities
@@ -306,7 +307,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 pass
             f.close()
         except IOError as why:
-            QMessageBox.critical(self, self.trUtf8('Save Diff'),
+            E5MessageBox.critical(self, self.trUtf8('Save Diff'),
                 self.trUtf8('<p>The patch file <b>{0}</b> could not be saved.<br />'
                             'Reason: {1}</p>')
                     .format(fname, str(why)))
@@ -326,7 +327,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             lines1 = f1.readlines()
             f1.close()
         except IOError:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Compare Files"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(self.filename1))
@@ -342,7 +343,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             lines2 = f2.readlines()
             f2.close()
         except IOError:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Compare Files"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(self.filename2))

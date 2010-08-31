@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QProcess, QTimer
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
-    QMessageBox, QLineEdit
+    QLineEdit
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -186,7 +186,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not procStarted:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

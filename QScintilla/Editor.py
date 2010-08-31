@@ -1078,13 +1078,13 @@ class Editor(QsciScintillaCompat):
             if exporter:
                 exporter.exportSource()
             else:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("Export source"),
                     self.trUtf8("""<p>No exporter available for the """
                                 """export format <b>{0}</b>. Aborting...</p>""")\
                         .format(exporterFormat))
         else:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Export source"),
                 self.trUtf8("""No export format given. Aborting..."""))
         
@@ -2235,7 +2235,7 @@ class Editor(QsciScintillaCompat):
             txt, self.encoding = Utilities.readEncodedFile(fn)
         except (UnicodeDecodeError, IOError) as why:
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(self.vm, self.trUtf8('Open File'),
+            E5MessageBox.critical(self.vm, self.trUtf8('Open File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be opened.</p>'
                             '<p>Reason: {1}</p>')
                     .format(fn, str(why)))
@@ -2333,7 +2333,7 @@ class Editor(QsciScintillaCompat):
                 os.chmod(fn, permissions)
             return True
         except (IOError, Utilities.CodingError, UnicodeError) as why:
-            QMessageBox.critical(self, self.trUtf8('Save File'),
+            E5MessageBox.critical(self, self.trUtf8('Save File'),
                 self.trUtf8('<p>The file <b>{0}</b> could not be saved.<br/>'
                             'Reason: {1}</p>')
                     .format(fn, str(why)))
@@ -4417,12 +4417,12 @@ class Editor(QsciScintillaCompat):
         
         for handle in list(self.syntaxerrors.keys()):
             if self.markerLine(handle) == line:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Syntax Error"),
                     self.syntaxerrors[handle])
                 break
         else:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Syntax Error"),
                 self.trUtf8("No syntax error message available."))
     
@@ -4603,14 +4603,14 @@ class Editor(QsciScintillaCompat):
             lines = f.readlines()
             f.close()
         except IOError:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Error loading macro"),
                 self.trUtf8("<p>The macro file <b>{0}</b> could not be read.</p>")
                     .format(fname))
             return
         
         if len(lines) != 2:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Error loading macro"),
                 self.trUtf8("<p>The macro file <b>{0}</b> is corrupt.</p>")
                     .format(fname))
@@ -4664,7 +4664,7 @@ class Editor(QsciScintillaCompat):
             f.write(self.macros[name].save())
             f.close()
         except IOError:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Error saving macro"),
                 self.trUtf8("<p>The macro file <b>{0}</b> could not be written.</p>")
                     .format(fname))

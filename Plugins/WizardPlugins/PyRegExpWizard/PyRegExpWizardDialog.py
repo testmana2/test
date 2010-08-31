@@ -396,18 +396,18 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     self.trUtf8(""),
                     self.trUtf8("""The regular expression is valid."""))
             except re.error as e:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
                         .format(str(e)))
                 return
             except IndexError:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: missing group name"""))
                 return
         else:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Error"),
                 self.trUtf8("""A regular expression must be given."""))
 
@@ -523,18 +523,18 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 self.resultTable.verticalHeader().hide()
                 self.resultTable.horizontalHeader().hide()
             except re.error as e:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: {0}""")
                         .format(str(e)))
                 return
             except IndexError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Error"),
                     self.trUtf8("""Invalid regular expression: missing group name"""))
                 return
         else:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Error"),
                 self.trUtf8("""A regular expression and a text must be given."""))
         

@@ -12,6 +12,8 @@ import os
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_SvnRepoBrowserDialog import Ui_SvnRepoBrowserDialog
 
 import UI.PixmapCache
@@ -166,7 +168,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
                     self.errors.ensureCursorVisible()
         else:
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '
@@ -235,7 +237,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         if not procStarted:
             self.__finish()
             self.inputGroup.setEnabled(False)
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

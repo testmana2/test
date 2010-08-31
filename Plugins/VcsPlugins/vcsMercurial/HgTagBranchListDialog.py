@@ -11,7 +11,9 @@ import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
-    QMessageBox, QLineEdit
+    QLineEdit
+
+from E5Gui import E5MessageBox
 
 from .Ui_HgTagBranchListDialog import Ui_HgTagBranchListDialog
 
@@ -106,7 +108,7 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         if not procStarted:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

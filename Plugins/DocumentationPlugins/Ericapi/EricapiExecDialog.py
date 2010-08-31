@@ -12,6 +12,8 @@ import os.path
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_EricapiExecDialog import Ui_EricapiExecDialog
 
 import Preferences
@@ -79,7 +81,7 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         self.process.start(program, args)
         procStarted = self.process.waitForStarted()
         if not procStarted:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

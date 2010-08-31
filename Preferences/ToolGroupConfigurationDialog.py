@@ -12,6 +12,8 @@ import copy
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_ToolGroupConfigurationDialog import Ui_ToolGroupConfigurationDialog
 
 class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
@@ -53,13 +55,13 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
         groupName = self.nameEdit.text()
         
         if not groupName:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("You have to give a name for the group to add."))
             return
         
         if len(self.groupsList.findItems(groupName, Qt.MatchFlags(Qt.MatchExactly))):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("An entry for the group name {0} already exists.")\
                     .format(groupName))
@@ -80,13 +82,13 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
         groupName = self.nameEdit.text()
         
         if not groupName:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("You have to give a name for the group to add."))
             return
         
         if len(self.groupsList.findItems(groupName, Qt.MatchFlags(Qt.MatchExactly))):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Add tool group entry"),
                 self.trUtf8("An entry for the group name {0} already exists.")\
                     .format(groupName))

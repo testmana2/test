@@ -20,6 +20,7 @@ from .AddProjectDialog import AddProjectDialog
 
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5FileDialog
+from E5Gui import E5MessageBox
 
 from E5XML.XMLUtilities import make_parser
 from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
@@ -207,7 +208,7 @@ class MultiProject(QObject):
                     import gzip
                 except ImportError:
                     QApplication.restoreOverrideCursor()
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Read multiproject file"),
                         self.trUtf8("""Compressed multiproject files not supported."""
                                     """ The compression library is missing."""))
@@ -222,7 +223,7 @@ class MultiProject(QObject):
             f.close()
         except EnvironmentError:
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read multiproject file"),
                 self.trUtf8("<p>The multiproject file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
@@ -234,7 +235,7 @@ class MultiProject(QObject):
         # now read the file
         if not line.startswith('<?xml'):
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read multiproject file"),
                 self.trUtf8("<p>The multiproject file <b>{0}</b> has an unsupported"
                             " format.</p>").format(fn))
@@ -280,7 +281,7 @@ class MultiProject(QObject):
                     import gzip
                 except ImportError:
                     QApplication.restoreOverrideCursor()
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Read multiproject file"),
                         self.trUtf8("""Compressed multiproject files not supported."""
                                     """ The compression library is missing."""))
@@ -301,14 +302,14 @@ class MultiProject(QObject):
                 f.close()
         except IOError:
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read multiproject file"),
                 self.trUtf8("<p>The multiproject file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
             return False
         except XMLFatalParseError:
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read multiproject file"),
                 self.trUtf8("<p>The multiproject file <b>{0}</b> has invalid "
                     "contents.</p>").format(fn))
@@ -359,7 +360,7 @@ class MultiProject(QObject):
                 try:
                     import gzip
                 except ImportError:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Save multiproject file"),
                         self.trUtf8("""Compressed multiproject files not supported."""
                                     """ The compression library is missing."""))
@@ -377,7 +378,7 @@ class MultiProject(QObject):
                 g.close()
             f.close()
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Save multiproject file"),
                 self.trUtf8("<p>The multiproject file <b>{0}</b> could not be "
                     "written.</p>").format(fn))

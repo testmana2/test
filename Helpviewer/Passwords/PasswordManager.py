@@ -14,6 +14,8 @@ from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import *
 
+from E5Gui import E5MessageBox
+
 from Helpviewer.JavaScriptResources import parseForms_js
 
 from Utilities.AutoSaver import AutoSaver
@@ -187,7 +189,7 @@ class PasswordManager(QObject):
                     f.write("{0}\n".format(key))
             f.close()
         except IOError as err:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(None,
                 self.trUtf8("Saving login data"),
                 self.trUtf8("""<p>Login data could not be saved to <b>{0}</b></p>"""
                             """<p>Reason: {1}</p>""").format(loginFile, str(err)))
@@ -204,7 +206,7 @@ class PasswordManager(QObject):
                 lines = f.read()
                 f.close()
             except IOError as err:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(None,
                     self.trUtf8("Loading login data"),
                     self.trUtf8("""<p>Login data could not be loaded """
                                 """from <b>{0}</b></p>"""
@@ -227,7 +229,7 @@ class PasswordManager(QObject):
                         data.append(line)
                     else:
                         if len(data) != 3:
-                            QMessageBox.critical(None,
+                            E5MessageBox.critical(None,
                                 self.trUtf8("Loading login data"),
                                 self.trUtf8("""<p>Login data could not be loaded """
                                             """from <b>{0}</b></p>"""

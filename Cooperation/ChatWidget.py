@@ -12,6 +12,7 @@ from PyQt4.QtGui import QWidget, QColor, QListWidgetItem, QMenu, QFileDialog, \
     QMessageBox, QApplication
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from Globals import recentNameHosts
 
@@ -560,7 +561,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                     f.write(txt)
                     f.close()
                 except IOError as err:
-                    QMessageBox.critical(self,
+                    E5MessageBox.critical(self,
                         self.trUtf8("Error saving Chat"),
                         self.trUtf8("""<p>The chat contents could not be written"""
                                     """ to <b>{0}</b></p><p>Reason: {1}</p>""")\

@@ -11,8 +11,10 @@ import sys
 import os
 
 from PyQt4.QtCore import QUrl, Qt, QCoreApplication
-from PyQt4.QtGui import QMessageBox, QDialog
+from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkProxy, QNetworkProxyQuery
+
+from E5Gui import E5MessageBox
 
 from UI.AuthenticationDialog import AuthenticationDialog
 
@@ -124,7 +126,7 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                     protocol = query.protocolTag().capitalize()
                 host = Preferences.getUI("ProxyHost/{0}".format(protocol))
                 if not host:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(None,
                         QCoreApplication.translate("E5NetworkProxyFactory", 
                             "Proxy Configuration Error"),
                         QCoreApplication.translate("E5NetworkProxyFactory", 

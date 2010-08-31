@@ -147,28 +147,28 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         defaultButton = self.buttonsCodeListBinary[self.defaultCombo.currentIndex()]
         
         if self.rInformation.isChecked():
-            QMessageBox.information(None,
+            QMessageBox.information(self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 QMessageBox.StandardButtons(buttons),
                 defaultButton
             )
         elif self.rQuestion.isChecked():
-            QMessageBox.question(None,
+            QMessageBox.question(self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 QMessageBox.StandardButtons(buttons),
                 defaultButton
             )
         elif self.rWarning.isChecked(): 
-            QMessageBox.warning(None,
+            QMessageBox.warning(self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 QMessageBox.StandardButtons(buttons),
                 defaultButton
             )
         elif self.rCritical.isChecked():
-            QMessageBox.critical(None,
+            QMessageBox.critical(self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 QMessageBox.StandardButtons(buttons),

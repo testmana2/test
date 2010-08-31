@@ -10,6 +10,8 @@ Module implementing a dialog to show the output of the svn proplist command proc
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_SvnPropListDialog import Ui_SvnPropListDialog
 
 import Preferences
@@ -114,7 +116,7 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         self.process.start('svn', args)
         procStarted = self.process.waitForStarted()
         if not procStarted:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

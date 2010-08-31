@@ -16,6 +16,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from VCS.VersionControl import VersionControl
 
@@ -211,7 +212,7 @@ class Subversion(VersionControl):
         """
         success = self.vcsImport(vcsDataDict, project.ppath)[0]
         if not success:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.__ui,
                 self.trUtf8("Create project in repository"),
                 self.trUtf8("""The project could not be created in the repository."""
                             """ Maybe the given repository doesn't exist or the"""
@@ -233,7 +234,7 @@ class Subversion(VersionControl):
             if not os.path.isfile(pfn):
                 pfn += "z"
             if not os.path.isfile(pfn):
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.__ui,
                     self.trUtf8("New project"),
                     self.trUtf8("""The project could not be checked out of the"""
                                 """ repository.<br />"""
@@ -917,7 +918,7 @@ class Subversion(VersionControl):
         
         reposURL = self.svnGetReposName(dname)
         if reposURL is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.__ui,
                 self.trUtf8("Subversion Error"),
                 self.trUtf8("""The URL of the project repository could not be"""
                     """ retrieved from the working copy. The tag operation will"""
@@ -941,7 +942,7 @@ class Subversion(VersionControl):
         if self.otherData["standardLayout"]:
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
             if not rx_base.exactMatch(reposURL):
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.__ui,
                     self.trUtf8("Subversion Error"),
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The tag operation will"""
@@ -1030,7 +1031,7 @@ class Subversion(VersionControl):
         
         reposURL = self.svnGetReposName(dname)
         if reposURL is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.__ui,
                 self.trUtf8("Subversion Error"),
                 self.trUtf8("""The URL of the project repository could not be"""
                     """ retrieved from the working copy. The switch operation will"""
@@ -1054,7 +1055,7 @@ class Subversion(VersionControl):
         if self.otherData["standardLayout"]:
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
             if not rx_base.exactMatch(reposURL):
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.__ui,
                     self.trUtf8("Subversion Error"),
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The switch operation will"""
@@ -1526,7 +1527,7 @@ class Subversion(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             propName, propValue, recurse = dlg.getData()
             if not propName:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.__ui,
                     self.trUtf8("Subversion Set Property"),
                     self.trUtf8("""You have to supply a property name. Aborting."""))
                 return
@@ -1577,7 +1578,7 @@ class Subversion(VersionControl):
             propName, recurse = dlg.getData()
             
             if not propName:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.__ui,
                     self.trUtf8("Subversion Delete Property"),
                     self.trUtf8("""You have to supply a property name. Aborting."""))
                 return

@@ -8,8 +8,9 @@ Module implementing a menu to select the user agent string.
 """
 
 from PyQt4.QtCore import QByteArray, QXmlStreamReader
-from PyQt4.QtGui import QMenu, QAction, QActionGroup, QMessageBox, QInputDialog, \
-    QLineEdit
+from PyQt4.QtGui import QMenu, QAction, QActionGroup, QInputDialog, QLineEdit
+
+from E5Gui import E5MessageBox
 
 from .UserAgentDefaults import UserAgentDefaults
 
@@ -118,7 +119,7 @@ class UserAgentMenu(QMenu):
                 self.addAction(act)
         
         if xml.hasError():
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Parsing default user agents"),
                 self.trUtf8("""<p>Error parsing default user agents.</p><p>{0}</p>""")\
                     .format(xml.errorString()))

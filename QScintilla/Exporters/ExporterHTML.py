@@ -16,6 +16,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
+from E5Gui import E5MessageBox
+
 from .ExporterBase import ExporterBase
 
 import Preferences
@@ -391,7 +393,7 @@ class ExporterHTML(ExporterBase):
                 f.close()
             except IOError as err:
                 QApplication.restoreOverrideCursor()
-                QMessageBox.critical(self.editor,
+                E5MessageBox.critical(self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8(\
                         """<p>The source could not be exported to <b>{0}</b>.</p>"""

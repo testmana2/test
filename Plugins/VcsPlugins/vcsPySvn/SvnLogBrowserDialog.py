@@ -14,6 +14,8 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .SvnUtilities import formatTime, dateFromTime_t
 from .SvnDialogMixin import SvnDialogMixin
 from .SvnDiffDialog import SvnDiffDialog
@@ -420,7 +422,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         
         @param msg error message to show (string)
         """
-        QMessageBox.critical(self,
+        E5MessageBox.critical(self,
             self.trUtf8("Subversion Error"),
             msg)
     

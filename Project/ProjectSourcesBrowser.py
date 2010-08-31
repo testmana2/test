@@ -12,6 +12,8 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from UI.BrowserModel import BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
@@ -571,7 +573,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                     try:
                         os.mkdir(packagePath)
                     except IOError as err:
-                        QMessageBox.critical(None,
+                        E5MessageBox.critical(self,
                             self.trUtf8("Add new Python package"),
                             self.trUtf8("""<p>The package directory <b>{0}</b> could"""
                                         """ not be created. Aborting...</p>"""
@@ -584,7 +586,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                         f = open(packageFile, "w", encoding = "utf-8")
                         f.close()
                     except IOError as err:
-                        QMessageBox.critical(None,
+                        E5MessageBox.critical(self,
                             self.trUtf8("Add new Python package"),
                             self.trUtf8("""<p>The package file <b>{0}</b> could"""
                                         """ not be created. Aborting...</p>"""

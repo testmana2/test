@@ -265,7 +265,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 dtdLine = f.readline()
                 f.close()
             except IOError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Read plugins repository file"),
                     self.trUtf8("<p>The plugins repository file <b>{0}</b> "
                                 "could not be read. Select Update</p>")\
@@ -295,7 +295,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                     finally:
                         f.close()
                 except IOError:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self,
                         self.trUtf8("Read plugins repository file"),
                         self.trUtf8("<p>The plugins repository file <b>{0}</b> "
                                     "could not be read. Select Update</p>")\
@@ -311,7 +311,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 self.repositoryList.resizeColumnToContents(2)
                 self.__resortRepositoryList()
             else:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Read plugins repository file"),
                     self.trUtf8("<p>The plugins repository file <b>{0}</b> "
                                 "has an unsupported format.</p>")\
@@ -595,7 +595,7 @@ class PluginRepositoryWindow(QMainWindow):
         args += self.cw.getDownloadedPlugins()
         
         if not os.path.isfile(applPath) or not proc.startDetached(sys.executable, args):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start the process.<br>'

@@ -12,6 +12,8 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .SvnDiffDialog import SvnDiffDialog
 
 from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
@@ -236,7 +238,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .Ui_FindFileDialog import Ui_FindFileDialog
 
@@ -332,7 +333,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         try:
             search = re.compile(txt, flags)
         except re.error as why:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Invalid search expression"),
                 self.trUtf8("""<p>The search expression is not valid.</p>"""
                             """<p>Error: {0}</p>""").format(str(why)))
@@ -554,7 +555,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                     text, encoding = Utilities.readEncodedFile(fn)
                     lines = text.splitlines()
                 except (UnicodeError, IOError):
-                    QMessageBox.critical(self,
+                    E5MessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8("""<p>Could not read the file <b>{0}</b>."""
                                     """ Skipping it.</p><p>Reason: {1}</p>""")\
@@ -577,7 +578,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 try:
                     Utilities.writeEncodedFile(fn, txt, encoding)
                 except (IOError, Utilities.CodingError, UnicodeError) as err:
-                    QMessageBox.critical(self,
+                    E5MessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8("""<p>Could not save the file <b>{0}</b>."""
                                     """ Skipping it.</p><p>Reason: {1}</p>""")\

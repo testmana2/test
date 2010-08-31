@@ -19,6 +19,8 @@ except ImportError:
 from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
 import sip
 
+from E5Gui import E5MessageBox
+
 import Preferences
 
 from .DownloadDialog import DownloadDialog
@@ -478,7 +480,7 @@ class HelpBrowser(QWebView):
                 name = QUrl.fromLocalFile(name.toString())
             
             if not QFileInfo(name.toLocalFile()).exists():
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Web Browser"),
                     self.trUtf8("""<p>The file <b>{0}</b> does not exist.</p>""")\
                         .format(name.toLocalFile()))
@@ -490,7 +492,7 @@ class HelpBrowser(QWebView):
                name.toLocalFile().endswith(".CHM"):
                 started = QDesktopServices.openUrl(name)
                 if not started:
-                    QMessageBox.critical(self,
+                    E5MessageBox.critical(self,
                         self.trUtf8("Web Browser"),
                         self.trUtf8("""<p>Could not start a viewer"""
                         """ for file <b>{0}</b>.</p>""").format(name.path()))
@@ -498,7 +500,7 @@ class HelpBrowser(QWebView):
         elif name.scheme() in ["mailto"]:
             started = QDesktopServices.openUrl(name)
             if not started:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("Web Browser"),
                     self.trUtf8("""<p>Could not start an application"""
                     """ for URL <b>{0}</b>.</p>""").format(name.toString()))
@@ -516,7 +518,7 @@ class HelpBrowser(QWebView):
                name.toString().endswith(".CHM"):
                 started = QDesktopServices.openUrl(name)
                 if not started:
-                    QMessageBox.critical(self,
+                    E5MessageBox.critical(self,
                         self.trUtf8("Web Browser"),
                         self.trUtf8("""<p>Could not start a viewer"""
                         """ for file <b>{0}</b>.</p>""").format(name.path()))

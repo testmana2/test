@@ -7,8 +7,10 @@
 Module implementing a dialog for the configuration of search engines.
 """
 
-from PyQt4.QtGui import QDialog, QFileDialog, QMessageBox
+from PyQt4.QtGui import QDialog, QFileDialog
 from PyQt4.QtCore import pyqtSlot
+
+from E5Gui import E5MessageBox
 
 from .OpenSearchEngineModel import OpenSearchEngineModel
 from .OpenSearchEditDialog import OpenSearchEditDialog
@@ -57,7 +59,7 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         osm = self.__mw.openSearchManager()
         for fileName in fileNames:
             if not osm.addEngine(fileName):
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("Add search engine"),
                     self.trUtf8("""{0} is not a valid OpenSearch 1.1 description or"""
                                 """ is already on your list.""").format(fileName))
@@ -68,7 +70,7 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         Private slot to delete the selected search engines.
         """
         if self.enginesTable.model().rowCount() == 1:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Delete selected engines"),
                 self.trUtf8("""You must have at least one search engine."""))
         

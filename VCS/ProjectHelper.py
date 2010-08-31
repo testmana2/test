@@ -14,13 +14,12 @@ import copy
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E5Gui.E5Application import e5App
-
 from .CommandOptionsDialog import vcsCommandOptionsDialog
 from .RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
+from E5Gui.E5Application import e5App
 
 import Preferences
 
@@ -173,7 +172,7 @@ class VcsProjectHelper(QObject):
                     try:
                         os.makedirs(projectdir)
                     except EnvironmentError:
-                        QMessageBox.critical(self.parent(),
+                        E5MessageBox.critical(self.parent(),
                             self.trUtf8("Create project directory"),
                             self.trUtf8("<p>The project directory <b>{0}</b> could not"
                                 " be created.</p>").format(projectdir))
@@ -255,7 +254,7 @@ class VcsProjectHelper(QObject):
                                     if res == QMessageBox.Yes:
                                         self.project.vcs.vcsAdd(self.project.pfile)
                 else:
-                    QMessageBox.critical(self.parent(),
+                    E5MessageBox.critical(self.parent(),
                         self.trUtf8("New project from repository"),
                         self.trUtf8("""The project could not be retrieved from"""
                             """ the repository."""))

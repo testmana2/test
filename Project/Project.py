@@ -275,7 +275,7 @@ class Project(QObject):
             a file
         """
         if type_ in self.__projectTypes:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Registering Project Type"),
                 self.trUtf8("""<p>The Project type <b>{0}</b> already exists.</p>""")\
                     .format(type_)
@@ -579,7 +579,7 @@ class Project(QObject):
                     import gzip
                 except ImportError:
                     QApplication.restoreOverrideCursor()
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Read project file"),
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
@@ -594,7 +594,7 @@ class Project(QObject):
             f.close()
         except EnvironmentError:
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read project file"),
                 self.trUtf8("<p>The project file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
@@ -613,7 +613,7 @@ class Project(QObject):
         # now read the file
         if not line.startswith('<?xml'):
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read project file"),
                 self.trUtf8("<p>The project file <b>{0}</b> has an unsupported"
                             " format.</p>").format(fn))
@@ -697,7 +697,7 @@ class Project(QObject):
                     import gzip
                 except ImportError:
                     QApplication.restoreOverrideCursor()
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Read project file"),
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
@@ -718,14 +718,14 @@ class Project(QObject):
                 f.close()
         except IOError:
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read project file"),
                 self.trUtf8("<p>The project file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
             return False
         except XMLFatalParseError:
             QApplication.restoreOverrideCursor()
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read project file"),
                 self.trUtf8("<p>The project file <b>{0}</b> has invalid contents.</p>")\
                     .format(fn))
@@ -789,7 +789,7 @@ class Project(QObject):
                 try:
                     import gzip
                 except ImportError:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Save project file"),
                         self.trUtf8("""Compressed project files not supported."""
                                     """ The compression library is missing."""))
@@ -807,7 +807,7 @@ class Project(QObject):
             f.close()
             
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Save project file"),
                 self.trUtf8("<p>The project file <b>{0}</b> could not be written.</p>")\
                     .format(fn))
@@ -848,7 +848,7 @@ class Project(QObject):
                 finally:
                     f.close()
             except IOError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Read user project properties"),
                     self.trUtf8("<p>The user specific project properties file <b>{0}</b>"
                         " could not be read.</p>").format(fn))
@@ -876,7 +876,7 @@ class Project(QObject):
             
             f.close()
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Save user project properties"),
                 self.trUtf8("<p>The user specific project properties file <b>{0}</b>"
                     " could not be written.</p>").format(fn))
@@ -891,7 +891,7 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Read project session"),
                     self.trUtf8("Please save the project first."))
             return
@@ -906,7 +906,7 @@ class Project(QObject):
                     import gzip
                 except ImportError:
                     if not quiet:
-                        QMessageBox.critical(None,
+                        E5MessageBox.critical(self.ui,
                             self.trUtf8("Read project session"),
                             self.trUtf8("""Compressed project session files not"""
                                 """ supported. The compression library is missing."""))
@@ -923,7 +923,7 @@ class Project(QObject):
             f.close()
         except EnvironmentError:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Read project session"),
                     self.trUtf8("<p>The project session <b>{0}</b>"
                                 " could not be read.</p>")\
@@ -935,7 +935,7 @@ class Project(QObject):
             self.__readXMLSession(fn, dtdLine.startswith("<!DOCTYPE"), quiet)
         else:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Read project session"),
                     self.trUtf8("<p>The project session <b>{0}</b> has an unsupported"
                         " format.</p>").format(fn))
@@ -981,7 +981,7 @@ class Project(QObject):
                     import gzip
                 except ImportError:
                     if not quiet:
-                        QMessageBox.critical(None,
+                        E5MessageBox.critical(self.ui,
                             self.trUtf8("Read project session"),
                             self.trUtf8("<p>The project session <b>{0}</b> could not"
                                 " be read.</p>").format(fn))
@@ -1002,7 +1002,7 @@ class Project(QObject):
                 f.close()
         except IOError:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Read project session"),
                     self.trUtf8("<p>The project session file <b>{0}</b> could not be"
                         " read.</p>").format(fn))
@@ -1035,7 +1035,7 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Save project session"),
                     self.trUtf8("Please save the project first."))
             return
@@ -1050,7 +1050,7 @@ class Project(QObject):
                     import gzip
                 except ImportError:
                     if not quiet:
-                        QMessageBox.critical(None,
+                        E5MessageBox.critical(self.ui,
                             self.trUtf8("Save project session"),
                             self.trUtf8("""Compressed project session files not"""
                                 """ supported. The compression library is missing."""))
@@ -1071,7 +1071,7 @@ class Project(QObject):
             
         except IOError:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Save project session"),
                     self.trUtf8("<p>The project session file <b>{0}</b> could not be"
                         " written.</p>").format(fn))
@@ -1082,7 +1082,7 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Delete project session"),
                     self.trUtf8("Please save the project first."))
             return
@@ -1095,7 +1095,7 @@ class Project(QObject):
                 try:
                     os.remove(fn)
                 except OSError:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Delete project session"),
                         self.trUtf8("<p>The project session file <b>{0}</b> could not be"
                             " deleted.</p>").format(fn))
@@ -1105,7 +1105,7 @@ class Project(QObject):
         Private method to read in the project tasks file (.e4t)
         """
         if self.pfile is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read tasks"),
                 self.trUtf8("Please save the project first."))
             return
@@ -1120,7 +1120,7 @@ class Project(QObject):
                 try:
                     import gzip
                 except ImportError:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Read tasks"),
                         self.trUtf8("""Compressed tasks files not supported."""
                             """ The compression library is missing."""))
@@ -1137,7 +1137,7 @@ class Project(QObject):
             dtdLine = f.readline()
             f.close()
         except EnvironmentError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read tasks"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
@@ -1147,7 +1147,7 @@ class Project(QObject):
         if line.startswith('<?xml'):
             self.__readXMLTasks(fn, dtdLine.startswith("<!DOCTYPE"))
         else:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read project session"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> has an unsupported"
                             " format.</p>")\
@@ -1179,7 +1179,7 @@ class Project(QObject):
                 try:
                     import gzip
                 except ImportError:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Read tasks"),
                         self.trUtf8("""Compressed tasks files not supported."""
                             """ The compression library is missing."""))
@@ -1199,7 +1199,7 @@ class Project(QObject):
             finally:
                 f.close()
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read tasks"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
@@ -1224,7 +1224,7 @@ class Project(QObject):
                 try:
                     import gzip
                 except ImportError:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Save tasks"),
                         self.trUtf8("""Compressed tasks files not supported."""
                             """ The compression library is missing."""))
@@ -1243,7 +1243,7 @@ class Project(QObject):
             f.close()
             
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Save tasks"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be written.</p>")
                     .format(fn))
@@ -1257,7 +1257,7 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Read debugger properties"),
                     self.trUtf8("Please save the project first."))
             return
@@ -1271,7 +1271,7 @@ class Project(QObject):
                     import gzip
                 except ImportError:
                     if not quiet:
-                        QMessageBox.critical(None,
+                        E5MessageBox.critical(self.ui,
                             self.trUtf8("Read debugger properties"),
                             self.trUtf8("""Compressed project session files not"""
                                         """ supported. The compression library is"""
@@ -1288,7 +1288,7 @@ class Project(QObject):
             f.close()
         except EnvironmentError:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Read debugger properties"),
                     self.trUtf8("<p>The project debugger properties file <b>{0}</b> could"
                                 " not be read.</p>").format(fn))
@@ -1299,7 +1299,7 @@ class Project(QObject):
             self.__readXMLDebugProperties(fn, dtdLine.startswith("<!DOCTYPE"), quiet)
         else:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Read debugger properties"),
                     self.trUtf8("<p>The project debugger properties file <b>{0}</b> has"
                                 " an unsupported format.</p>").format(fn))
@@ -1334,7 +1334,7 @@ class Project(QObject):
                     import gzip
                 except ImportError:
                     if not quiet:
-                        QMessageBox.critical(None,
+                        E5MessageBox.critical(self.ui,
                             self.trUtf8("Read debugger properties"),
                             self.trUtf8("<p>The project debugger properties file"
                                         " <b>{0}</b> could not be read.</p>").format(fn))
@@ -1359,7 +1359,7 @@ class Project(QObject):
                 f.close()
         except IOError:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Read debugger properties"),
                     self.trUtf8("<p>The project debugger properties file <b>{0}</b> could"
                                 " not be read.</p>")
@@ -1380,7 +1380,7 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Save debugger properties"),
                     self.trUtf8("Please save the project first."))
             return
@@ -1394,7 +1394,7 @@ class Project(QObject):
                     import gzip
                 except ImportError:
                     if not quiet:
-                        QMessageBox.critical(None,
+                        E5MessageBox.critical(self.ui,
                             self.trUtf8("Save debugger properties"),
                             self.trUtf8("""Compressed project debugger properties files"""
                                         """ not supported. The compression library is"""
@@ -1416,7 +1416,7 @@ class Project(QObject):
             
         except IOError:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Save debugger properties"),
                     self.trUtf8("<p>The project debugger properties file <b>{0}</b> could"
                                 " not be written.</p>")
@@ -1428,7 +1428,7 @@ class Project(QObject):
         """
         if self.pfile is None:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Delete debugger properties"),
                     self.trUtf8("Please save the project first."))
             return
@@ -1441,7 +1441,7 @@ class Project(QObject):
                 try:
                     os.remove(fn)
                 except OSError:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Delete debugger properties"),
                         self.trUtf8("<p>The project debugger properties file <b>{0}</b>"
                                     " could not be deleted.</p>")
@@ -1525,7 +1525,7 @@ class Project(QObject):
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"] and \
            (len(self.pdata["TRANSLATIONPATTERN"]) == 0 or \
             self.pdata["TRANSLATIONPATTERN"][0] == ''):
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Add Language"),
                 self.trUtf8("You have to specify a translation pattern first."))
             return
@@ -1615,7 +1615,7 @@ class Project(QObject):
             if os.path.exists(fn):
                 os.remove(fn)
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Delete translation"),
                 self.trUtf8("<p>The selected translation file <b>{0}</b> could not be"
                     " deleted.</p>").format(langFile))
@@ -1634,7 +1634,7 @@ class Project(QObject):
                 if os.path.exists(fn):
                     os.remove(fn)
             except IOError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Delete translation"),
                     self.trUtf8("<p>The selected translation file <b>{0}</b> could not be"
                         " deleted.</p>").format(qmFile))
@@ -1767,7 +1767,7 @@ class Project(QObject):
                                     
                             shutil.copy(fn, target)
                         except IOError as why:
-                            QMessageBox.critical(None,
+                            E5MessageBox.critical(self.ui,
                                 self.trUtf8("Add file"),
                                 self.trUtf8("<p>The selected file <b>{0}</b> could not be"
                                     " added to <b>{1}</b>.</p><p>Reason: {2}</p>")
@@ -1776,7 +1776,7 @@ class Project(QObject):
                             
                     self.appendFile(targetfile, isSource or filter == 'source')
             else:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Add file"),
                     self.trUtf8("The target directory must not be empty."))
         
@@ -1815,7 +1815,7 @@ class Project(QObject):
             try:
                 os.makedirs(target)
             except IOError as why:
-                QMessageBox.critical(self.ui,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Add directory"),
                     self.trUtf8("<p>The target directory <b>{0}</b> could not be"
                         " created.</p><p>Reason: {1}</p>")
@@ -1883,7 +1883,7 @@ class Project(QObject):
         if dlg.exec_() == QDialog.Accepted:
             filetype, source, target, recursive = dlg.getData()
             if target == '':
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Add directory"),
                     self.trUtf8("The target directory must not be empty."))
                 return
@@ -1893,7 +1893,7 @@ class Project(QObject):
                 return
             
             if source == '':
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Add directory"),
                     self.trUtf8("The source directory must not be empty."))
                 return
@@ -2039,7 +2039,7 @@ class Project(QObject):
         try:
             os.rename(oldfn, newfn)
         except OSError as msg:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Rename File"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be renamed.<br />"""
                     """Reason: {1}</p>""").format(oldfn, str(msg)))
@@ -2209,7 +2209,7 @@ class Project(QObject):
                 if os.path.isfile(fn2):
                     os.remove(fn2)
         except EnvironmentError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Delete file"),
                 self.trUtf8("<p>The selected file <b>{0}</b> could not be deleted.</p>")
                     .format(fn))
@@ -2232,7 +2232,7 @@ class Project(QObject):
         try:
             shutil.rmtree(dn, True)
         except EnvironmentError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Delete directory"),
                 self.trUtf8("<p>The selected directory <b>{0}</b> could not be"
                     " deleted.</p>").format(fn))
@@ -2311,7 +2311,7 @@ class Project(QObject):
                 try:
                     os.makedirs(self.ppath)
                 except EnvironmentError:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Create project directory"),
                         self.trUtf8("<p>The project directory <b>{0}</b> could not"
                             " be created.</p>")
@@ -3074,7 +3074,7 @@ class Project(QObject):
                     filesWithSyntaxErrors += 1
         
         if reportSyntaxErrors and filesWithSyntaxErrors > 0:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Syntax errors detected"),
                 self.trUtf8("""The project contains %n file(s) with syntax errors.""",
                     "", filesWithSyntaxErrors)
@@ -4147,7 +4147,7 @@ class Project(QObject):
                 if override:
                     # override failed, revert to original
                     QApplication.restoreOverrideCursor()
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(self.ui,
                         self.trUtf8("Version Control System"),
                         self.trUtf8("<p>The selected VCS <b>{0}</b> could not be found."
                                     "<br/>Reverting override.</p><p>{1}</p>")\
@@ -4156,7 +4156,7 @@ class Project(QObject):
                     return self.initVCS(nooverride = True)
                 
                 QApplication.restoreOverrideCursor()
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Version Control System"),
                     self.trUtf8("<p>The selected VCS <b>{0}</b> could not be found.<br/>"
                                 "Disabling version control.</p><p>{1}</p>")\
@@ -4248,7 +4248,7 @@ class Project(QObject):
         """
         fn = self.getMainScript(True)
         if fn is None:
-            QMessageBox.critical(self.ui,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Coverage Data"),
                 self.trUtf8("There is no main script defined for the"
                     " current project. Aborting"))
@@ -4294,7 +4294,7 @@ class Project(QObject):
         """
         fn = self.getMainScript(True)
         if fn is None:
-            QMessageBox.critical(self.ui,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Profile Data"),
                 self.trUtf8("There is no main script defined for the"
                     " current project. Aborting"))
@@ -4505,7 +4505,7 @@ class Project(QObject):
             pkglistFile.write("\n".join(lst))
             pkglistFile.close()
         except IOError as why:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Create Package List"),
                 self.trUtf8("""<p>The file <b>PKGLIST</b> could not be created.</p>"""
                             """<p>Reason: {0}</p>""").format(str(why)))
@@ -4522,7 +4522,7 @@ class Project(QObject):
         """
         pkglist = os.path.join(self.ppath, "PKGLIST")
         if not os.path.exists(pkglist):
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The file <b>PKGLIST</b> does not exist. """
                             """Aborting...</p>"""))
@@ -4530,7 +4530,7 @@ class Project(QObject):
         
         if len(self.pdata["MAINSCRIPT"]) == 0 or \
            len(self.pdata["MAINSCRIPT"][0]) == 0:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""The project does not have a main script defined. """
                             """Aborting..."""))
@@ -4542,7 +4542,7 @@ class Project(QObject):
             pkglistFile.close()
             names = sorted(names.splitlines())
         except IOError as why:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The file <b>PKGLIST</b> could not be read.</p>"""
                             """<p>Reason: {0}</p>""").format(str(why)))
@@ -4556,7 +4556,7 @@ class Project(QObject):
             except RuntimeError:
                 archiveFile = zipfile.ZipFile(archive, "w")
         except IOError as why:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The eric5 plugin archive file <b>{0}</b> could """
                             """not be created.</p>"""
@@ -4576,7 +4576,7 @@ class Project(QObject):
                         version = self.__pluginExtractVersion(\
                             os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0]))
             except OSError as why:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self.ui,
                     self.trUtf8("Create Plugin Archive"),
                     self.trUtf8("""<p>The file <b>{0}</b> could not be stored """
                                 """in the archive. Ignoring it.</p>"""
@@ -4631,7 +4631,7 @@ class Project(QObject):
             sourcelines, encoding = Utilities.readEncodedFile(filename)
             sourcelines = sourcelines.splitlines(True)
         except (IOError, UnicodeError) as why:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""
@@ -4668,7 +4668,7 @@ class Project(QObject):
             sourcelines = Utilities.readEncodedFile(filename)[0]
             sourcelines = sourcelines.splitlines(True)
         except (IOError, UnicodeError) as why:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.ui,
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""

@@ -10,10 +10,11 @@ Module implementing a dialog to show the output of the hg log command process.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QUrl, QByteArray
-from PyQt4.QtGui import QWidget, QDialogButtonBox, QApplication, QMessageBox, \
+from PyQt4.QtGui import QWidget, QDialogButtonBox, QApplication, \
     QLineEdit, QTextCursor
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .Ui_HgLogDialog import Ui_HgLogDialog
 from .HgDiffDialog import HgDiffDialog
@@ -144,7 +145,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '
@@ -196,7 +197,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             errMsg = self.trUtf8("Could not start the hg executable.")
         
         if errMsg:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Mercurial Error"),
                 errMsg)
         

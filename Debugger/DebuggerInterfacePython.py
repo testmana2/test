@@ -11,9 +11,10 @@ import sys
 import os
 
 from PyQt4.QtCore import *
-from PyQt4.QtGui import QInputDialog, QMessageBox
+from PyQt4.QtGui import QInputDialog
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .DebugProtocol import *
 from . import DebugClientCapabilities
@@ -144,7 +145,7 @@ class DebuggerInterfacePython(QObject):
         """
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "":
-            QMessageBox.critical(None,
+            E5MessageBox.critical(None,
                 self.trUtf8("Start Debugger"),
                 self.trUtf8(\
                     """<p>No Python2 interpreter configured.</p>"""))
@@ -180,7 +181,7 @@ class DebuggerInterfacePython(QObject):
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:])
                 if process is None:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(\
                             """<p>The debugger backend could not be started.</p>"""))
@@ -225,7 +226,7 @@ class DebuggerInterfacePython(QObject):
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:], clientEnv)
                 if process is None:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(\
                             """<p>The debugger backend could not be started.</p>"""))
@@ -235,7 +236,7 @@ class DebuggerInterfacePython(QObject):
             [debugClient, noencoding, str(port), redirect, ipaddr], 
             clientEnv)
         if process is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(None,
                 self.trUtf8("Start Debugger"),
                 self.trUtf8("""<p>The debugger backend could not be started.</p>"""))
         return process, self.__isNetworked
@@ -275,7 +276,7 @@ class DebuggerInterfacePython(QObject):
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:])
                 if process is None:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(\
                             """<p>The debugger backend could not be started.</p>"""))
@@ -318,7 +319,7 @@ class DebuggerInterfacePython(QObject):
                 args[0] = Utilities.getExecutablePath(args[0])
                 process = self.__startProcess(args[0], args[1:], clientEnv)
                 if process is None:
-                    QMessageBox.critical(None,
+                    E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
                         self.trUtf8(\
                             """<p>The debugger backend could not be started.</p>"""))
@@ -328,7 +329,7 @@ class DebuggerInterfacePython(QObject):
             [debugClient, noencoding, str(port), redirect, ipaddr], 
             clientEnv)
         if process is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(None,
                 self.trUtf8("Start Debugger"),
                 self.trUtf8("""<p>The debugger backend could not be started.</p>"""))
         return process, self.__isNetworked

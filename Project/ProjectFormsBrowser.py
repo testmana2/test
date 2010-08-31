@@ -525,7 +525,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         try:
             shutil.copy(templateFile, fname)
         except IOError as e:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("New Form"),
                 self.trUtf8("<p>The new form file <b>{0}</b> could not be created.<br>"
                     "Problem: {1}</p>").format(fname, str(e)))
@@ -701,7 +701,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.compileRunning = False
             if progress is not None:
                 progress.cancel()
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'Could not start {0}.<br>'

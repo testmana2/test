@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5MessageBox
 
 from .Ui_ToolConfigurationDialog import Ui_ToolConfigurationDialog
 import Utilities
@@ -94,21 +95,21 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         redirect = self.redirectionModes[self.redirectCombo.currentIndex()][0]
         
         if not executable:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Add tool entry"),
                 self.trUtf8("You have to set an executable to add to the"
                     " Tools-Menu first."))
             return
         
         if not menutext:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Add tool entry"),
                 self.trUtf8("You have to insert a menuentry text to add the"
                     " selected program to the Tools-Menu first."))
             return
         
         if not Utilities.isinpath(executable):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Add tool entry"),
                 self.trUtf8("The selected file could not be found or"
                     " is not an executable."
@@ -116,7 +117,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             return
         
         if len(self.toolsList.findItems(menutext, Qt.MatchFlags(Qt.MatchExactly))):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Add tool entry"),
                 self.trUtf8("An entry for the menu text {0} already exists.")\
                     .format(menutext))
@@ -148,21 +149,21 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         redirect = self.redirectionModes[self.redirectCombo.currentIndex()][0]
         
         if not executable:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Change tool entry"),
                 self.trUtf8("You have to set an executable to change the"
                     " Tools-Menu entry."))
             return
             
         if not menutext:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Change tool entry"),
                 self.trUtf8("You have to insert a menuentry text to change the"
                     " selected Tools-Menu entry."))
             return
             
         if not Utilities.isinpath(executable):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Change tool entry"),
                 self.trUtf8("The selected file could not be found or"
                     " is not an executable."
@@ -254,7 +255,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         if execfile:
             execfile = Utilities.toNativeSeparators(execfile)
             if not Utilities.isinpath(execfile):
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8("Select executable"),
                     self.trUtf8("The selected file is not an executable."
                         " Please choose an executable filename."))

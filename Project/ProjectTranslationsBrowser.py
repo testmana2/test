@@ -732,7 +732,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             self.tmpProject = pfile
             return True
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Write temporary project file"),
                 self.trUtf8("<p>The temporary project file <b>{0}</b> could not"
                     " be written.</p>").format(pfile))
@@ -836,7 +836,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 self.trUtf8("The generation of the translation files (*.ts)"
                     " was successful."))
         else:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Translation file generation"),
                 self.trUtf8("The generation of the translation files (*.ts) has failed."))
         self.pylupdateProc = None
@@ -921,7 +921,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if procStarted:
             self.pylupdateProcRunning = True
         else:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'Could not start {0}.<br>'
@@ -984,7 +984,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                         if os.path.exists(qmFile):
                             shutil.move(qmFile, target)
         else:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Translation file release"),
                 self.trUtf8("The release of the translation files (*.qm) has failed."))
         self.lreleaseProc = None
@@ -1050,7 +1050,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if procStarted:
             self.lreleaseProcRunning = True
         else:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start lrelease.<br>'

@@ -11,10 +11,11 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4 import uic
 
+from E5Gui import E5MessageBox
+
 import Preferences
 import UI.PixmapCache
 import UI.Config
-
 
 class UIPreviewer(QMainWindow):
     """
@@ -412,7 +413,7 @@ class UIPreviewer(QMainWindow):
         Private slot to handle the Save Image menu action.
         """
         if self.mainWidget is None:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Save Image"),
                 self.trUtf8("""There is no UI file loaded."""))
             return
@@ -440,7 +441,7 @@ class UIPreviewer(QMainWindow):
         pix = QPixmap.grabWidget(self.mainWidget)
         self.__updateChildren(self.lastStyle)
         if not pix.save(fname, str(ext)):
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Save Image"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be saved.</p>""")
                     .format(fname))
@@ -450,7 +451,7 @@ class UIPreviewer(QMainWindow):
         Private slot to handle the Copy Image menu action.
         """
         if self.mainWidget is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Save Image"),
                 self.trUtf8("""There is no UI file loaded."""))
             return
@@ -464,7 +465,7 @@ class UIPreviewer(QMainWindow):
         Private slot to handle the Print Image menu action.
         """
         if self.mainWidget is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Print Image"),
                 self.trUtf8("""There is no UI file loaded."""))
             return
@@ -503,7 +504,7 @@ class UIPreviewer(QMainWindow):
         from PyQt4.QtGui import QPrintPreviewDialog
         
         if self.mainWidget is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Print Preview"),
                 self.trUtf8("""There is no UI file loaded."""))
             return

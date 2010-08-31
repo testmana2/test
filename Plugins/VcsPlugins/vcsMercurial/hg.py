@@ -15,6 +15,7 @@ from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo
 from PyQt4.QtGui import QMessageBox, QApplication, QDialog, QInputDialog, QFileDialog
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from QScintilla.MiniEditor import MiniEditor
 
@@ -199,7 +200,7 @@ class Hg(VersionControl):
         """
         success = self.vcsImport(vcsDataDict, project.ppath)[0]
         if not success:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self.__ui,
                 self.trUtf8("Create project repository"),
                 self.trUtf8("""The project repository could not be created."""))
         else:

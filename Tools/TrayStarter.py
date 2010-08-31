@@ -13,6 +13,8 @@ import os
 from PyQt4.QtCore import QProcess, QSettings, QFileInfo
 from PyQt4.QtGui  import QSystemTrayIcon, QMenu, qApp, QCursor, QMessageBox
 
+from E5Gui import E5MessageBox
+
 import Globals
 import UI.PixmapCache
 
@@ -193,7 +195,7 @@ class TrayStarter(QSystemTrayIcon):
             args.append(arg)
         
         if not os.path.isfile(applPath) or not proc.startDetached(sys.executable, args):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start the process.<br>'

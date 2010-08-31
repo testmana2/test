@@ -100,7 +100,7 @@ class TemplateGroup(QTreeWidgetItem):
         """
         if name in self.entries:
             if not quiet:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(None,
                     QApplication.translate("TemplateGroup", "Add Template"),
                     QApplication.translate("TemplateGroup",
                                 """<p>The group <b>{0}</b> already contains a"""
@@ -871,7 +871,7 @@ class TemplateViewer(QTreeWidget):
             
             f.close()
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Save templates"),
                 self.trUtf8("<p>The templates file <b>{0}</b> could not be written.</p>")
                     .format(filename))
@@ -892,7 +892,7 @@ class TemplateViewer(QTreeWidget):
             dtdLine = f.readline()
             f.close()
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Read templates"),
                 self.trUtf8("<p>The templates file <b>{0}</b> could not be read.</p>")
                     .format(filename))
@@ -921,7 +921,7 @@ class TemplateViewer(QTreeWidget):
                 finally:
                     f.close()
             except IOError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Read templates"),
                     self.trUtf8("<p>The templates file <b>{0}</b> could not be read.</p>")
                         .format(filename))
@@ -931,7 +931,7 @@ class TemplateViewer(QTreeWidget):
                 
             eh.showParseMessages()
         else:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Read templates"),
                 self.trUtf8("<p>The templates file <b>{0}</b> has an"
                             " unsupported format.</p>")

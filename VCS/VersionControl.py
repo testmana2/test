@@ -12,7 +12,9 @@ import os
 
 from PyQt4.QtCore import QObject, QThread, QMutex, QProcess, \
     Qt, pyqtSignal
-from PyQt4.QtGui import QApplication, QMessageBox
+from PyQt4.QtGui import QApplication
+
+from E5Gui import E5MessageBox
 
 import Preferences
 
@@ -34,7 +36,7 @@ class VersionControl(QObject):
     canBeCommitted = 1  # Indicates that a file/directory is in the vcs.
     canBeAdded = 2      # Indicates that a file/directory is not in vcs.
     
-    def __init__(self, parent=None, name=None):
+    def __init__(self, parent = None, name = None):
         """
         Constructor
         
@@ -528,7 +530,7 @@ class VersionControl(QObject):
         proc.start(program, arguments)
         procStarted = proc.waitForStarted()
         if not procStarted:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(None,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

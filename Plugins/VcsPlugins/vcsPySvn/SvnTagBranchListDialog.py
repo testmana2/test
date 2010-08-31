@@ -14,6 +14,8 @@ import pysvn
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .SvnUtilities import formatTime
 
 from .SvnDialogMixin import SvnDialogMixin
@@ -69,7 +71,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         
         reposURL = self.vcs.svnGetReposName(dname)
         if reposURL is None:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Subversion Error"),
                 self.trUtf8("""The URL of the project repository could not be"""
                     """ retrieved from the working copy. The list operation will"""
@@ -81,7 +83,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
             # determine the base path of the project in the repository
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
             if not rx_base.exactMatch(reposURL):
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Subversion Error"),
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The list operation will"""
@@ -105,7 +107,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
                 self.close()
                 return False
             if not reposPath:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Subversion List"),
                     self.trUtf8("""The repository URL is empty. Aborting..."""))
                 self.close()

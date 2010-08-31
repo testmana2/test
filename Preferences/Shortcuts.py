@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from Preferences import Prefs, syncPreferences
 
@@ -195,7 +196,7 @@ def exportShortcuts(fn):
             try:
                 import gzip
             except ImportError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(None,
                     QApplication.translate("Shortcuts", "Export Keyboard Shortcuts"),
                     QApplication.translate("Shortcuts", 
                         """Compressed keyboard shortcut files"""
@@ -228,7 +229,7 @@ def importShortcuts(fn):
             try:
                 import gzip
             except ImportError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(None,
                     QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
                     QApplication.translate("Shortcuts", 
                         """Compressed keyboard shortcut files"""
@@ -245,7 +246,7 @@ def importShortcuts(fn):
         finally:
             f.close()
     except IOError:
-        QMessageBox.critical(None,
+        E5MessageBox.critical(None,
             QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
             QApplication.translate("Shortcuts", 
                 "<p>The keyboard shortcuts could not be read from file <b>{0}</b>.</p>")
@@ -271,7 +272,7 @@ def importShortcuts(fn):
             try:
                 import gzip
             except ImportError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(None,
                     QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
                     QApplication.translate("Shortcuts", 
                         """Compressed keyboard shortcut files"""
@@ -292,7 +293,7 @@ def importShortcuts(fn):
         finally:
             f.close()
     except IOError:
-        QMessageBox.critical(None,
+        E5MessageBox.critical(None,
             QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
             QApplication.translate("Shortcuts", 
                 "<p>The keyboard shortcuts could not be read from file <b>{0}</b>.</p>")
@@ -300,7 +301,7 @@ def importShortcuts(fn):
         return False
         
     except XMLFatalParseError:
-        QMessageBox.critical(None,
+        E5MessageBox.critical(None,
             QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
             QApplication.translate("Shortcuts", 
                 "<p>The keyboard shortcuts file <b>{0}</b> has invalid contents.</p>")

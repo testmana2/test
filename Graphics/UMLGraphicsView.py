@@ -12,6 +12,8 @@ from PyQt4.QtGui import *
 
 from E5Graphics.E5GraphicsView import E5GraphicsView
 
+from E5Gui import E5MessageBox
+
 from .UMLItem import UMLItem
 from .UMLSceneSizeDialog import UMLSceneSizeDialog
 from .ZoomDialog import ZoomDialog
@@ -348,7 +350,7 @@ class UMLGraphicsView(E5GraphicsView):
             
             success = self.saveImage(fname, QFileInfo(fname).suffix().upper())
             if not success:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Save Diagram"),
                     self.trUtf8("""<p>The file <b>{0}</b> could not be saved.</p>""")
                         .format(fname))

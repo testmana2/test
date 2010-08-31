@@ -11,10 +11,11 @@ import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, QSize
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
-    QApplication, QMessageBox, QCursor, QWidget, QLineEdit, QColor, QPixmap, \
+    QApplication, QCursor, QWidget, QLineEdit, QColor, QPixmap, \
     QPainter, QPen, QBrush, QIcon
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .Ui_HgLogBrowserDialog import Ui_HgLogBrowserDialog
 from .HgDiffDialog import HgDiffDialog
@@ -342,7 +343,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             errMsg = self.trUtf8("Could not start the hg executable.")
         
         if errMsg:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Mercurial Error"),
                 errMsg)
         
@@ -379,7 +380,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             errMsg = self.trUtf8("Could not start the hg executable.")
         
         if errMsg:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Mercurial Error"),
                 errMsg)
     
@@ -529,7 +530,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '

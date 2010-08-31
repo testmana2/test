@@ -15,6 +15,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
@@ -146,7 +147,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         elif os.path.exists('/tmp'):
             tmpdir = '/tmp'
         else:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Subversion Diff"),
                 self.trUtf8("""There is no temporary directory available."""))
             return
@@ -346,7 +347,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
             f.write(self.contents.toPlainText())
             f.close()
         except IOError as why:
-            QMessageBox.critical(self, self.trUtf8('Save Diff'),
+            E5MessageBox.critical(self, self.trUtf8('Save Diff'),
                 self.trUtf8('<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
                     .format(fname, str(why)))

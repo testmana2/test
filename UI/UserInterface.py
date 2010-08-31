@@ -18,8 +18,6 @@ from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
 
-from E5Gui.E5Application import e5App
-
 from Debugger.DebugUI import DebugUI
 from Debugger.DebugServer import DebugServer
 from Debugger.DebugViewer import DebugViewer
@@ -80,6 +78,7 @@ from E5Gui.E5SqueezeLabels import E5SqueezeLabelPath
 from E5Gui.E5ToolBox import E5VerticalToolBox, E5HorizontalToolBox
 from E5Gui.E5SideBar import E5SideBar
 from E5Gui import E5MessageBox
+from E5Gui.E5Application import e5App
 
 from VCS.StatusMonitorLed import StatusMonitorLed
 
@@ -2729,7 +2728,7 @@ class UserInterface(QMainWindow):
         else:
             if Preferences.getUser("Email") == "" or \
                Preferences.getUser("MailServer") == "":
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Report Bug"),
                     self.trUtf8("""Email address or mail server address is empty.""" 
                                 """ Please configure your Email settings in the"""
@@ -3944,7 +3943,7 @@ class UserInterface(QMainWindow):
             else:
                 prog = fn
         else:
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8("Unittest Project"),
                 self.trUtf8("There is no main script defined for the"
                     " current project. Aborting"))
@@ -4002,14 +4001,14 @@ class UserInterface(QMainWindow):
                 if os.path.isfile(fn) and os.path.getsize(fn):
                     args.append(fn)
                 else:
-                    QMessageBox.critical(self,
+                    E5MessageBox.critical(self,
                         self.trUtf8('Problem'),
                         self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                             ' is zero length.</p>')
                             .format(fn))
                     return
             except EnvironmentError:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8('Problem'),
                     self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                         ' is zero length.</p>')
@@ -4026,7 +4025,7 @@ class UserInterface(QMainWindow):
         
         proc = QProcess()
         if not proc.startDetached(designer, args):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start Qt-Designer.<br>'
@@ -4059,14 +4058,14 @@ class UserInterface(QMainWindow):
                 if os.path.isfile(fn) and os.path.getsize(fn) and fn not in args:
                     args.append(fn)
                 else:
-                    QMessageBox.critical(self,
+                    E5MessageBox.critical(self,
                         self.trUtf8('Problem'),
                         self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                             ' is zero length.</p>')
                             .format(fn))
                     return
             except EnvironmentError:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8('Problem'),
                     self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                         ' is zero length.</p>')
@@ -4083,7 +4082,7 @@ class UserInterface(QMainWindow):
         
         proc = QProcess()
         if not proc.startDetached(linguist, args):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start Qt-Linguist.<br>'
@@ -4127,7 +4126,7 @@ class UserInterface(QMainWindow):
         
         proc = QProcess()
         if not proc.startDetached(assistant, args):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start Qt-Assistant.<br>'
@@ -4168,7 +4167,7 @@ class UserInterface(QMainWindow):
             args.append(home)
         
         if not proc.startDetached(customViewer, args):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start custom viewer.<br>'
@@ -4187,7 +4186,7 @@ class UserInterface(QMainWindow):
             args.append(home)
             
             if not proc.startDetached("hh", args):
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(
                         '<p>Could not start the help viewer.<br>'
@@ -4212,14 +4211,14 @@ class UserInterface(QMainWindow):
                 if os.path.isfile(fn) and os.path.getsize(fn):
                     args.append(fn)
                 else:
-                    QMessageBox.critical(self,
+                    E5MessageBox.critical(self,
                         self.trUtf8('Problem'),
                         self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                             ' is zero length.</p>')
                             .format(fn))
                     return
             except EnvironmentError:
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                     self.trUtf8('Problem'),
                     self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                         ' is zero length.</p>')
@@ -4227,7 +4226,7 @@ class UserInterface(QMainWindow):
                 return
                 
         if not os.path.isfile(viewer) or not proc.startDetached(sys.executable, args):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start UI Previewer.<br>'
@@ -4256,7 +4255,7 @@ class UserInterface(QMainWindow):
                         args.append(fn)
                     else:
                         if not ignore:
-                            QMessageBox.critical(self,
+                            E5MessageBox.critical(self,
                                 self.trUtf8('Problem'),
                                 self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                                     ' is zero length.</p>')
@@ -4264,7 +4263,7 @@ class UserInterface(QMainWindow):
                             return
                 except EnvironmentError:
                     if not ignore:
-                        QMessageBox.critical(self,
+                        E5MessageBox.critical(self,
                             self.trUtf8('Problem'),
                             self.trUtf8('<p>The file <b>{0}</b> does not exist or'
                                 ' is zero length.</p>')
@@ -4272,7 +4271,7 @@ class UserInterface(QMainWindow):
                         return
         
         if not os.path.isfile(viewer) or not proc.startDetached(sys.executable, args):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start Translation Previewer.<br>'
@@ -4291,7 +4290,7 @@ class UserInterface(QMainWindow):
         args.append(browser)
         
         if not os.path.isfile(browser) or not proc.startDetached(sys.executable, args):
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start SQL Browser.<br>'
@@ -4397,7 +4396,7 @@ class UserInterface(QMainWindow):
         
         proc.start(program, args)
         if not proc.waitForStarted():
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start the tool entry <b>{0}</b>.<br>'
@@ -4907,7 +4906,7 @@ class UserInterface(QMainWindow):
         
         res = Shortcuts.exportShortcuts(fn)
         if not res:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Export Keyboard Shortcuts"),
                 self.trUtf8("<p>The keyboard shortcuts could not be written to file"
                     " <b>{0}</b>.</p>").format(fn))
@@ -5040,7 +5039,7 @@ class UserInterface(QMainWindow):
             f.close()
             
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Save tasks"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be written.</p>")
                     .format(fn))
@@ -5058,7 +5057,7 @@ class UserInterface(QMainWindow):
             dtdLine = f.readline()
             f.close()
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Read tasks"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")
                     .format(fn))
@@ -5087,7 +5086,7 @@ class UserInterface(QMainWindow):
                 finally:
                     f.close()
             except IOError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Read tasks"),
                     self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")\
                         .format(fn))
@@ -5097,10 +5096,10 @@ class UserInterface(QMainWindow):
                 
             eh.showParseMessages()
         else:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Read tasks"),
-                self.trUtf8("<p>The tasks file <b>{0}</b> has an unsupported format.</p>")\
-                    .format(fn))
+                self.trUtf8("<p>The tasks file <b>{0}</b> has an unsupported"
+                            " format.</p>").format(fn))
         
     def __writeSession(self):
         """
@@ -5115,7 +5114,7 @@ class UserInterface(QMainWindow):
             f.close()
             
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Save session"),
                 self.trUtf8("<p>The session file <b>{0}</b> could not be written.</p>")
                     .format(fn))
@@ -5127,7 +5126,7 @@ class UserInterface(QMainWindow):
         try:
             fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
             if not os.path.exists(fn):
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Read session"),
                     self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
                         .format(fn))
@@ -5137,7 +5136,7 @@ class UserInterface(QMainWindow):
             dtdLine = f.readline()
             f.close()
         except IOError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Read session"),
                 self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
@@ -5166,7 +5165,7 @@ class UserInterface(QMainWindow):
                 finally:
                     f.close()
             except IOError:
-                QMessageBox.critical(None,
+                E5MessageBox.critical(self,
                     self.trUtf8("Read session"),
                     self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
                         .format(fn))
@@ -5176,7 +5175,7 @@ class UserInterface(QMainWindow):
                 
             eh.showParseMessages()
         else:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Read session"),
                 self.trUtf8("<p>The session file <b>{0}</b> has an unsupported"
                     " format.</p>").format(fn))

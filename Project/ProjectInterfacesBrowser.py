@@ -495,7 +495,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             self.compileRunning = False
             if progress is not None:
                 progress.cancel()
-            QMessageBox.critical(self,
+            E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     '<p>Could not start {0}.<br>'

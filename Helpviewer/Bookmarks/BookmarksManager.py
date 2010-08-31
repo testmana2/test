@@ -13,6 +13,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtWebKit import QWebPage
 
+from E5Gui import E5MessageBox
+
 from .BookmarkNode import BookmarkNode
 from .BookmarksModel import BookmarksModel
 from .DefaultBookmarks import DefaultBookmarks
@@ -392,7 +394,7 @@ class BookmarksManager(QObject):
         
         writer = XbelWriter()
         if not writer.write(fileName, self.__bookmarkRootNode):
-            QMessageBox.critical(None,
+            E5MessageBox.critical(None,
                 self.trUtf8("Exporting Bookmarks"),
                 self.trUtf8("""Error exporting bookmarks to <b>{0}</b>.""")\
                     .format(bookmarkFile))

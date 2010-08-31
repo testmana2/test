@@ -10,6 +10,8 @@ Module implementing a toolbar configuration dialog.
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
+from E5Gui import E5MessageBox
+
 from .Ui_E5ToolBarDialog import Ui_E5ToolBarDialog
 
 import UI.PixmapCache
@@ -126,7 +128,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         if ok and name:
             if self.toolbarComboBox.findText(name) != -1:
                 # toolbar with this name already exists
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                 self.trUtf8("New Toolbar"),
                 self.trUtf8("""A toolbar with the name <b>{0}</b> already exists.""")\
                     .format(name))
@@ -185,7 +187,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 return
             if self.toolbarComboBox.findText(newName) != -1:
                 # toolbar with this name already exists
-                QMessageBox.critical(self,
+                E5MessageBox.critical(self,
                 self.trUtf8("Rename Toolbar"),
                 self.trUtf8("""A toolbar with the name <b>{0}</b> already exists.""")\
                     .format(newName))

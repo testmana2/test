@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 import QScintilla.Lexers
 
@@ -421,7 +422,7 @@ class ConfigurationWidget(QWidget):
                 mod = getattr(mod, comp)
             return mod
         except ImportError:
-            QMessageBox.critical(None,
+            E5MessageBox.critical(self,
                 self.trUtf8("Configuration Page Error"),
                 self.trUtf8("""<p>The configuration page <b>{0}</b>"""
                             """ could not be loaded.</p>""").format(name))

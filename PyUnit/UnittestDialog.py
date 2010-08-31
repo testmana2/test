@@ -19,6 +19,7 @@ from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5MessageBox
 
 from .Ui_UnittestDialog import Ui_UnittestDialog
 from .Ui_UnittestStacktraceDialog import Ui_UnittestStacktraceDialog
@@ -210,7 +211,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         prog = self.testsuiteComboBox.currentText()
         if not prog:
-            QMessageBox.critical(self, 
+            E5MessageBox.critical(self, 
                     self.trUtf8("Unittest"), 
                     self.trUtf8("You must enter a test suite file."))
             return
@@ -257,7 +258,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                     test = unittest.defaultTestLoader.loadTestsFromModule(module)
             except:
                 exc_type, exc_value, exc_tb = sys.exc_info()
-                QMessageBox.critical(self, 
+                E5MessageBox.critical(self, 
                         self.trUtf8("Unittest"),
                         self.trUtf8("<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
                             .format(self.testName, str(exc_type), str(exc_value)))
@@ -306,7 +307,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param exc_value value of exception occured during preparation (string)
         """
         if nrTests == 0:
-            QMessageBox.critical(self, 
+            E5MessageBox.critical(self, 
                     self.trUtf8("Unittest"),
                     self.trUtf8("<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
                         .format(self.testName, exc_type, exc_value))
