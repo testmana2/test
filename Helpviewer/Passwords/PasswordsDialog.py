@@ -10,6 +10,8 @@ Module implementing a dialog to show all saved logins.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 import Helpviewer.HelpWindow
 
 from .PasswordModel import PasswordModel
@@ -82,7 +84,7 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
             self.__passwordModel.setShowPasswords(False)
             self.passwordsButton.setText(self.__showPasswordsText)
         else:
-            res = QMessageBox.question(self,
+            res = E5MessageBox.question(self,
                 self.trUtf8("Saved Passwords"),
                 self.trUtf8("""Do you really want to show passwords?"""),
                 QMessageBox.StandardButtons(\

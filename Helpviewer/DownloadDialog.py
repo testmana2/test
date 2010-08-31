@@ -11,6 +11,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtNetwork import QNetworkReply, QNetworkAccessManager, QNetworkRequest
 
+from E5Gui import E5MessageBox
+
 import Preferences
 
 import Helpviewer.HelpWindow
@@ -121,7 +123,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         fileName = defaultFileName
         self.__autoOpen = False
         if not self.__toDownload:
-            res = QMessageBox.question(None,
+            res = E5MessageBox.question(self,
                 self.trUtf8("Downloading"),
                 self.trUtf8("""<p>You are about to download the file <b>{0}</b>.</p>"""
                             """<p>What do you want to do?</p>""").format(fileName),

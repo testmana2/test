@@ -1849,7 +1849,7 @@ class Hg(VersionControl):
             repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if files:
-            update = QMessageBox.question(None,
+            update = E5MessageBox.question(self.__ui,
                 self.trUtf8("Apply changegroups"),
                 self.trUtf8("""Shall the working directory be updated?"""),
                 QMessageBox.StandardButtons(\

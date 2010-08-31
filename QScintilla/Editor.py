@@ -5173,7 +5173,7 @@ class Editor(QsciScintillaCompat):
         
         package = os.path.isdir(self.fileName) and self.fileName \
                                                or os.path.dirname(self.fileName)
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(self,
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             QMessageBox.StandardButtons(\
@@ -5194,7 +5194,7 @@ class Editor(QsciScintillaCompat):
         
         package = os.path.isdir(self.fileName) and self.fileName \
                                                or os.path.dirname(self.fileName)
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""),
             QMessageBox.StandardButtons(\
@@ -5210,7 +5210,7 @@ class Editor(QsciScintillaCompat):
         Private method to handle the Imports Diagram context menu action.
         """
         from Graphics.ApplicationDiagram import ApplicationDiagram
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(self,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             QMessageBox.StandardButtons(\

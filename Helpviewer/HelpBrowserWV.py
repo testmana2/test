@@ -1192,7 +1192,7 @@ class HelpBrowser(QWebView):
             # accessed for the first time
             return
         
-        res = QMessageBox.question(self,
+        res = E5MessageBox.question(self,
             self.trUtf8("Web Database Quota"),
             self.trUtf8("""<p>The database quota of <strong>{0}</strong> has"""
                         """ been exceeded while accessing database <strong>{1}"""

@@ -2052,7 +2052,7 @@ class HelpWindow(QMainWindow):
                               """ Until you close the window, you can still click"""
                               """ the Back and Forward buttons to return to the"""
                               """ web pages you have opened.</p>""")
-            res = QMessageBox.question(self, "", txt,
+            res = E5MessageBox.question(self, "", txt,
                 QMessageBox.StandardButtons(\
                     QMessageBox.Yes | \
                     QMessageBox.No),

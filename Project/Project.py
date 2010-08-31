@@ -2355,7 +2355,7 @@ class Project(QObject):
                     ms = ""
                 
                 # add existing files to the project
-                res = QMessageBox.question(None,
+                res = E5MessageBox.question(self.ui,
                     self.trUtf8("New Project"),
                     self.trUtf8("""Add existing files to the project?"""),
                     QMessageBox.StandardButtons(\
@@ -2406,7 +2406,7 @@ class Project(QObject):
                         self.setDirty(True)
                         if self.vcs is not None:
                             # edit VCS command options
-                            vcores = QMessageBox.question(None,
+                            vcores = E5MessageBox.question(self.ui,
                                 self.trUtf8("New Project"),
                                 self.trUtf8("""Would you like to edit the VCS"""
                                     """ command options?"""),
@@ -2420,7 +2420,7 @@ class Project(QObject):
                                     self.vcs.vcsSetOptions(codlg.getOptions())
                             # add project file to repository
                             if res == 0:
-                                apres = QMessageBox.question(None,
+                                apres = E5MessageBox.question(self.ui,
                                     self.trUtf8("New project"),
                                     self.trUtf8("Shall the project file be added"
                                         " to the repository?"),
@@ -2470,7 +2470,7 @@ class Project(QObject):
                 self.setDirty(True)
                 if self.vcs is not None:
                     # edit VCS command options
-                    vcores = QMessageBox.question(None,
+                    vcores = E5MessageBox.question(self.ui,
                         self.trUtf8("New Project"),
                         self.trUtf8("""Would you like to edit the VCS command"""
                                     """ options?"""),
@@ -4368,7 +4368,7 @@ class Project(QObject):
         """
         Private method to handle the application diagram context menu action.
         """
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(self.ui,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             QMessageBox.StandardButtons(\

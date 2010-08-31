@@ -18,6 +18,8 @@ try:
 except ImportError:
     SSL_AVAILABLE = False
 
+from E5Gui import E5MessageBox
+
 from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
     proxyAuthenticationRequired
 
@@ -217,7 +219,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                 certinfos = []
                 for cert in caNew:
                     certinfos.append(self.__certToString(cert))
-                ret = QMessageBox.question(None,
+                ret = E5MessageBox.question(None,
                     self.trUtf8("Certificates"),
                     self.trUtf8("""<p>Certificates:<br/>{0}<br/>"""
                                 """Do you want to accept all these certificates?</p>""")\

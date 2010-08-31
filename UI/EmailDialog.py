@@ -106,7 +106,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @param ev key event (QKeyEvent)
         """
         if ev.key() == Qt.Key_Escape:
-            res = QMessageBox.question(self,
+            res = E5MessageBox.question(self,
                 self.trUtf8("Close dialog"),
                 self.trUtf8("""Do you really want to close the dialog?"""),
                 QMessageBox.StandardButtons(\
@@ -129,7 +129,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         Private slot to handle the rejected signal of the button box.
         """
-        res = QMessageBox.question(self,
+        res = E5MessageBox.question(self,
             self.trUtf8("Close dialog"),
             self.trUtf8("""Do you really want to close the dialog?"""),
             QMessageBox.StandardButtons(\

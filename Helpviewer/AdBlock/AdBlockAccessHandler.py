@@ -10,6 +10,8 @@ Module implementing a scheme access handler for AdBlock URLs.
 from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QNetworkAccessManager
 
+from E5Gui import E5MessageBox
+
 from .AdBlockSubscription import AdBlockSubscription
 
 import Helpviewer.HelpWindow
@@ -38,7 +40,7 @@ class AdBlockAccessHandler(SchemeAccessHandler):
         subscription = AdBlockSubscription(request.url(), 
                             Helpviewer.HelpWindow.HelpWindow.adblockManager())
         
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(None,
             self.trUtf8("Subscribe?"),
             self.trUtf8("""<p>Subscribe to this AdBlock subscription?</p><p>{0}</p>""")\
                 .format(subscription.title()),

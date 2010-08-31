@@ -2996,7 +2996,7 @@ class UserInterface(QMainWindow):
         """
         Private method to restart the application.
         """
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(self,
             self.trUtf8("Restart application"),
             self.trUtf8("""The application needs to be restarted. Do it now?"""),
             QMessageBox.StandardButtons(\
@@ -5520,7 +5520,7 @@ class UserInterface(QMainWindow):
             if "-snapshot-" in Version:
                 # check snapshot version
                 if versions[2] > Version:
-                    res = QMessageBox.question(self,
+                    res = E5MessageBox.question(self,
                         self.trUtf8("Update available"),
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
@@ -5531,7 +5531,7 @@ class UserInterface(QMainWindow):
                         QMessageBox.Yes)
                     url = res == QMessageBox.Yes and versions[3] or ''
                 elif versions[0] > Version:
-                    res = QMessageBox.question(self,
+                    res = E5MessageBox.question(self,
                         self.trUtf8("Update available"),
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
@@ -5549,7 +5549,7 @@ class UserInterface(QMainWindow):
             else:
                 # check release version
                 if versions[0] > Version:
-                    res = QMessageBox.question(self,
+                    res = E5MessageBox.question(self,
                         self.trUtf8("Update available"),
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\

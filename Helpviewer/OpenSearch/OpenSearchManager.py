@@ -19,6 +19,7 @@ from .OpenSearchReader import OpenSearchReader
 from .OpenSearchWriter import OpenSearchWriter
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -384,7 +385,7 @@ class OpenSearchManager(QObject):
         
         host = QUrl(engine.searchUrlTemplate()).host()
         
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(None,
             "",
             self.trUtf8("""<p>Do you want to add the following engine to your list of"""
                         """ search engines?<br/><br/>Name: {0}<br/>"""

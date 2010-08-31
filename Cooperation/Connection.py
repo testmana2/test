@@ -11,6 +11,8 @@ from PyQt4.QtCore import pyqtSignal, QTimer, QTime, QByteArray
 from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QTcpSocket
 
+from E5Gui import E5MessageBox
+
 import Preferences
 
 MaxBufferSize   = 1024 * 1024
@@ -191,7 +193,7 @@ class Connection(QTcpSocket):
                not Preferences.getCooperation("AutoAcceptConnections"):
                 # don't ask for reverse connections or 
                 # if we shall accept automatically
-                res = QMessageBox.question(None,
+                res = E5MessageBox.question(None,
                     self.trUtf8("New Connection"),
                     self.trUtf8("""<p>Accept connection from """
                                 """<strong>{0}@{1}</strong>?</p>""").format(

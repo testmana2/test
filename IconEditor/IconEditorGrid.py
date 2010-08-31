@@ -10,6 +10,8 @@ Module implementing the icon editor grid.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .cursors import cursors_rc
 
 from .IconSizeDialog import IconSizeDialog
@@ -830,7 +832,7 @@ class IconEditorGrid(QWidget):
         img, ok  = self.__clipboardImage()
         if ok:
             if img.width() > self.__image.width() or img.height() > self.__image.height():
-                res = QMessageBox.question(self,
+                res = E5MessageBox.question(self,
                     self.trUtf8("Paste"),
                     self.trUtf8("""<p>The clipboard image is larger than the current """
                                 """image.<br/>Paste as new image?</p>"""),

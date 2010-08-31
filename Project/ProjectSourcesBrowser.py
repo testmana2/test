@@ -803,7 +803,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             fn = itm.fileName()
         except AttributeError:
             fn = itm.dirName()
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(self,
             self.trUtf8("Class Diagram"),
             self.trUtf8("""Include class attributes?"""),
             QMessageBox.StandardButtons(\
@@ -824,7 +824,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         except AttributeError:
             fn = itm.dirName()
         package = os.path.isdir(fn) and fn or os.path.dirname(fn)
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""),
             QMessageBox.StandardButtons(\
@@ -845,7 +845,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         except AttributeError:
             fn = itm.dirName()
         package = os.path.isdir(fn) and fn or os.path.dirname(fn)
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(self,
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             QMessageBox.StandardButtons(\
@@ -860,7 +860,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Private method to handle the application diagram context menu action.
         """
-        res = QMessageBox.question(None,
+        res = E5MessageBox.question(self,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             QMessageBox.StandardButtons(\

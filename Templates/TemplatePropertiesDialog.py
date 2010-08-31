@@ -92,7 +92,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         @param ev key event (QKeyEvent)
         """
         if ev.key() == Qt.Key_Escape:
-            res = QMessageBox.question(self,
+            res = E5MessageBox.question(self,
                 self.trUtf8("Close dialog"),
                 self.trUtf8("""Do you really want to close the dialog?"""),
                 QMessageBox.StandardButtons(\
