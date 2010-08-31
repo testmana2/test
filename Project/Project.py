@@ -1753,16 +1753,13 @@ class Project(QObject):
                                 os.makedirs(target)
                                 
                             if os.path.exists(targetfile):
-                                res = E5MessageBox.warning(self.ui,
+                                res = E5MessageBox.yesNo(self.ui,
                                     self.trUtf8("Add file"),
                                     self.trUtf8("<p>The file <b>{0}</b> already"
                                         " exists.</p><p>Overwrite it?</p>")
                                         .format(targetfile),
-                                    QMessageBox.StandardButtons(\
-                                        QMessageBox.No | \
-                                        QMessageBox.Yes),
-                                    QMessageBox.No)
-                                if res != QMessageBox.Yes:
+                                    type_ = E5MessageBox.Warning)
+                                if not res:
                                     return  # don't overwrite
                                     
                             shutil.copy(fn, target)
@@ -1831,16 +1828,13 @@ class Project(QObject):
             if not Utilities.samepath(target, source):
                 try:
                     if os.path.exists(targetfile):
-                        res = E5MessageBox.warning(self.ui,
+                        res = E5MessageBox.yesNo(self.ui,
                             self.trUtf8("Add directory"),
                             self.trUtf8("<p>The file <b>{0}</b> already exists.</p>"
                                         "<p>Overwrite it?</p>")
                                 .format(targetfile),
-                            QMessageBox.StandardButtons(\
-                                QMessageBox.No | \
-                                QMessageBox.Yes),
-                            QMessageBox.No)
-                        if res != QMessageBox.Yes:
+                            type_ = E5MessageBox.Warning)
+                        if not res:
                             continue  # don't overwrite, carry on with next file
                             
                     shutil.copy(file, target)
@@ -2024,16 +2018,13 @@ class Project(QObject):
             newfn = Utilities.toNativeSeparators(newfn)
         
         if os.path.exists(newfn):
-            canceled = E5MessageBox.warning(self.ui,
+            res = E5MessageBox.yesNo(self.ui,
                 self.trUtf8("Rename File"),
                 self.trUtf8("""<p>The file <b>{0}</b> already exists."""
                             """ Overwrite it?</p>""")
                     .format(newfn),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.No)
-            if canceled != QMessageBox.Yes:
+                type_ = E5MessageBox.Warning)
+            if not res:
                 return False
         
         try:
@@ -2355,14 +2346,11 @@ class Project(QObject):
                     ms = ""
                 
                 # add existing files to the project
-                res = E5MessageBox.question(self.ui,
+                res = E5MessageBox.yesNo(self.ui,
                     self.trUtf8("New Project"),
                     self.trUtf8("""Add existing files to the project?"""),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.No | \
-                        QMessageBox.Yes),
-                    QMessageBox.Yes)
-                if res == QMessageBox.Yes:
+                    yesDefault = True)
+                if res:
                     self.newProjectAddFiles(ms)
                 # create an empty __init__.py file to make it a Python package
                 # if none exists (only for Python and Python3)
@@ -2406,29 +2394,22 @@ class Project(QObject):
                         self.setDirty(True)
                         if self.vcs is not None:
                             # edit VCS command options
-                            vcores = E5MessageBox.question(self.ui,
+                            vcores = E5MessageBox.yesNo(self.ui,
                                 self.trUtf8("New Project"),
                                 self.trUtf8("""Would you like to edit the VCS"""
-                                    """ command options?"""),
-                                QMessageBox.StandardButtons(\
-                                    QMessageBox.No | \
-                                    QMessageBox.Yes),
-                                QMessageBox.No)
-                            if vcores == QMessageBox.Yes:
+                                    """ command options?"""))
+                            if vcores:
                                 codlg = vcsCommandOptionsDialog(self.vcs)
                                 if codlg.exec_() == QDialog.Accepted:
                                     self.vcs.vcsSetOptions(codlg.getOptions())
                             # add project file to repository
                             if res == 0:
-                                apres = E5MessageBox.question(self.ui,
+                                apres = E5MessageBox.yesNo(self.ui,
                                     self.trUtf8("New project"),
                                     self.trUtf8("Shall the project file be added"
                                         " to the repository?"),
-                                    QMessageBox.StandardButtons(\
-                                        QMessageBox.No | \
-                                        QMessageBox.Yes),
-                                    QMessageBox.Yes)
-                                if apres == QMessageBox.Yes:
+                                    yesDefault = True)
+                                if apres:
                                     self.saveProject()
                                     self.vcs.vcsAdd(self.pfile)
                         else:
@@ -2470,15 +2451,11 @@ class Project(QObject):
                 self.setDirty(True)
                 if self.vcs is not None:
                     # edit VCS command options
-                    vcores = E5MessageBox.question(self.ui,
+                    vcores = E5MessageBox.yesNo(self.ui,
                         self.trUtf8("New Project"),
                         self.trUtf8("""Would you like to edit the VCS command"""
-                                    """ options?"""),
-                        QMessageBox.StandardButtons(\
-                            QMessageBox.No | \
-                            QMessageBox.Yes),
-                        QMessageBox.No)
-                    if vcores == QMessageBox.Yes:
+                                    """ options?"""))
+                    if vcores:
                         codlg = vcsCommandOptionsDialog(self.vcs)
                         if codlg.exec_() == QDialog.Accepted:
                             self.vcs.vcsSetOptions(codlg.getOptions())
@@ -4368,16 +4345,13 @@ class Project(QObject):
         """
         Private method to handle the application diagram context menu action.
         """
-        res = E5MessageBox.question(self.ui,
+        res = E5MessageBox.yesNo(self.ui,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.Yes)
+            yesDefault = True)
         
         self.applicationDiagram = ApplicationDiagram(self, self.parent(), 
-            noModules = (res != QMessageBox.Yes))
+            noModules = not res)
         self.applicationDiagram.show()
     
     #########################################################################
@@ -4475,15 +4449,12 @@ class Project(QObject):
         """
         pkglist = os.path.join(self.ppath, "PKGLIST")
         if os.path.exists(pkglist):
-            res = E5MessageBox.warning(self.ui,
+            res = E5MessageBox.yesNo(self.ui,
                 self.trUtf8("Create Package List"),
                 self.trUtf8("<p>The file <b>PKGLIST</b> already"
                     " exists.</p><p>Overwrite it?</p>"),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.No)
-            if res != QMessageBox.Yes:
+                type_ = E5MessageBox.Warning)
+            if not res:
                 return  # don't overwrite
         
         # build the list of entries

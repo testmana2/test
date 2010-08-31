@@ -84,14 +84,10 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
             self.__passwordModel.setShowPasswords(False)
             self.passwordsButton.setText(self.__showPasswordsText)
         else:
-            res = E5MessageBox.question(self,
+            res = E5MessageBox.yesNo(self,
                 self.trUtf8("Saved Passwords"),
-                self.trUtf8("""Do you really want to show passwords?"""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.No)
-            if res == QMessageBox.Yes:
+                self.trUtf8("""Do you really want to show passwords?"""))
+            if res:
                 self.__passwordModel.setShowPasswords(True)
                 self.passwordsButton.setText(self.__hidePasswordsText)
         self.__calculateHeaderSizes()

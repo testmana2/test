@@ -1672,17 +1672,14 @@ class Hg(VersionControl):
         
         ignoreName = os.path.join(name, ".hgignore")
         if os.path.exists(ignoreName):
-            res = E5MessageBox.warning(self.__ui,
+            res = E5MessageBox.yesNo(self.__ui,
                 self.trUtf8("Create .hgignore file"),
                 self.trUtf8("""<p>The file <b>{0}</b> exists already."""
                             """ Overwrite it?</p>""").format(ignoreName),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.No)
+                type_ = E5MessageBox.Warning)
         else:
-            res = QMessageBox.Yes
-        if res == QMessageBox.Yes:
+            res = True
+        if res:
             try:
                 # create a .hgignore file
                 ignore = open(ignoreName, "w")
@@ -1849,13 +1846,10 @@ class Hg(VersionControl):
             repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if files:
-            update = E5MessageBox.question(self.__ui,
+            update = E5MessageBox.yesNo(self.__ui,
                 self.trUtf8("Apply changegroups"),
                 self.trUtf8("""Shall the working directory be updated?"""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.Yes) == QMessageBox.Yes
+                yesDefault = True)
             
             args = []
             args.append('unbundle')

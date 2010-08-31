@@ -832,15 +832,11 @@ class IconEditorGrid(QWidget):
         img, ok  = self.__clipboardImage()
         if ok:
             if img.width() > self.__image.width() or img.height() > self.__image.height():
-                res = E5MessageBox.question(self,
+                res = E5MessageBox.yesNo(self,
                     self.trUtf8("Paste"),
                     self.trUtf8("""<p>The clipboard image is larger than the current """
-                                """image.<br/>Paste as new image?</p>"""),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.No | \
-                        QMessageBox.Yes),
-                    QMessageBox.No)
-                if res == QMessageBox.Yes:
+                                """image.<br/>Paste as new image?</p>"""))
+                if res:
                     self.editPasteAsNew()
                 return
             elif not pasting:

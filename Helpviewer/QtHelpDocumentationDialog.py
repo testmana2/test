@@ -93,12 +93,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         res = E5MessageBox.question(self,
             self.trUtf8("Remove Documentation"),
             self.trUtf8("""Do you really want to remove the selected documentation """
-                        """sets from the database?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
-        if res == QMessageBox.No:
+                        """sets from the database?"""))
+        if not res:
             return
         
         openedDocs = self.__mw.getSourceFileList()
@@ -107,17 +103,14 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         for item in items:
             ns = item.text()
             if ns in list(openedDocs.values()):
-                res = E5MessageBox.warning(self,
+                res = E5MessageBox.yesNo(self,
                     self.trUtf8("Remove Documentation"),
                     self.trUtf8("""Some documents currently opened reference the """
                                 """documentation you are attempting to remove. """
                                 """Removing the documentation will close those """
                                 """documents. Remove anyway?"""),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Yes | \
-                        QMessageBox.No), 
-                    QMessageBox.No)
-                if res == QMessageBox.No:
+                    type_ = E5MessageBox.Warning)
+                if not res:
                     return
             self.__unregisteredDocs.append(ns)
             for id in openedDocs:

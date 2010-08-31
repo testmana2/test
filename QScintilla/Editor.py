@@ -280,18 +280,15 @@ class Editor(QsciScintillaCompat):
             if self.fileName is not None:
                 if (QFileInfo(self.fileName).size() // 1024) > \
                    Preferences.getEditor("WarnFilesize"):
-                    res = E5MessageBox.warning(self,
+                    res = E5MessageBox.yesNo(self,
                         self.trUtf8("Open File"),
                         self.trUtf8("""<p>The size of the file <b>{0}</b>"""
                                     """ is <b>{1} KB</b>."""
                                     """ Do you really want to load it?</p>""")\
                                     .format(self.fileName, 
                                             QFileInfo(self.fileName).size() // 1024),
-                        QMessageBox.StandardButtons(\
-                            QMessageBox.No | \
-                            QMessageBox.Yes),
-                        QMessageBox.No)
-                    if res == QMessageBox.No or res == QMessageBox.Cancel:
+                        type_ = E5MessageBox.Warning)
+                    if not res:
                         raise IOError()
                 self.readFile(self.fileName, True)
                 bindName = self.__bindName(self.text(0))
@@ -4675,14 +4672,12 @@ class Editor(QsciScintillaCompat):
         Public method to start macro recording.
         """
         if self.recording:
-            res = E5MessageBox.warning(self, 
+            res = E5MessageBox.yesNo(self, 
                 self.trUtf8("Start Macro Recording"),
                 self.trUtf8("Macro recording is already active. Start new?"),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.Yes)
-            if res == QMessageBox.Yes:
+                type_ = E5MessageBox.Warning, 
+                yesDefault = True)
+            if res:
                 self.macroRecordingStop()
             else:
                 return
@@ -4818,19 +4813,17 @@ class Editor(QsciScintillaCompat):
                 msg = self.trUtf8(\
                     """<p>The file <b>{0}</b> has been changed while it was opened in"""
                     """ eric5. Reread it?</p>""").format(self.fileName)
-                default = QMessageBox.Yes
+                yesDefault = True
                 if self.isModified():
                     msg += self.trUtf8(\
                         """<br><b>Warning:</b> You will loose"""
                         """ your changes upon reopening it.""")
-                    default = QMessageBox.No
-                res = E5MessageBox.warning(self,
+                    yesDefault = False
+                res = E5MessageBox.yesNo(self,
                     self.trUtf8("File changed"), msg,
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Yes | \
-                        QMessageBox.No),
-                    default)
-                if res == QMessageBox.Yes:
+                    type_ = E5MessageBox.Warning, 
+                    yesDefault = yesDefault)
+                if res:
                     self.refresh()
                 else:
                     # do not prompt for this change again...
@@ -5173,15 +5166,11 @@ class Editor(QsciScintillaCompat):
         
         package = os.path.isdir(self.fileName) and self.fileName \
                                                or os.path.dirname(self.fileName)
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.Yes)
-        self.packageDiagram = PackageDiagram(package, self, 
-            noAttrs = (res == QMessageBox.No))
+            yesDefault = True)
+        self.packageDiagram = PackageDiagram(package, self, noAttrs = not res)
         self.packageDiagram.show()
         
     def __showImportsDiagram(self):
@@ -5194,15 +5183,11 @@ class Editor(QsciScintillaCompat):
         
         package = os.path.isdir(self.fileName) and self.fileName \
                                                or os.path.dirname(self.fileName)
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Imports Diagram"),
-            self.trUtf8("""Include imports from external modules?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
+            self.trUtf8("""Include imports from external modules?"""))
         self.importsDiagram = ImportsDiagram(package, self, 
-            showExternalImports = (res == QMessageBox.Yes))
+            showExternalImports = res)
         self.importsDiagram.show()
         
     def __showApplicationDiagram(self):
@@ -5210,15 +5195,12 @@ class Editor(QsciScintillaCompat):
         Private method to handle the Imports Diagram context menu action.
         """
         from Graphics.ApplicationDiagram import ApplicationDiagram
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.Yes)
+            yesDefault = True)
         self.applicationDiagram = ApplicationDiagram(self.project, 
-                                    self, noModules = (res == QMessageBox.No))
+                                    self, noModules = not res)
         self.applicationDiagram.show()
     
     #######################################################################

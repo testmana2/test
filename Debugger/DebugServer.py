@@ -10,7 +10,6 @@ Module implementing the debug server.
 import os
 
 from PyQt4.QtCore import *
-from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QTcpServer, QHostAddress, QHostInfo
 
 from E5Gui.E5Application import e5App
@@ -567,16 +566,13 @@ class DebugServer(QTcpServer):
         peerAddress = sock.peerAddress().toString()
         if peerAddress not in Preferences.getDebugger("AllowedHosts"):
             # the peer is not allowed to connect
-            res = E5MessageBox.warning(None,
+            res = E5MessageBox.yesNo(None,
                 self.trUtf8("Connection from illegal host"),
                 self.trUtf8("""<p>A connection was attempted by the"""
                     """ illegal host <b>{0}</b>. Accept this connection?</p>""")\
                     .format(peerAddress),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.No)
-            if res == QMessageBox.No:
+                type_ = E5MessageBox.Warning)
+            if not res:
                 sock.abort()
                 return
             else:

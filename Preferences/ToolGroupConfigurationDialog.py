@@ -106,16 +106,13 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
         if row < 0:
             return
         
-        res = E5MessageBox.warning(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Delete tool group entry"),
             self.trUtf8("""<p>Do you really want to delete the tool group"""
                         """ <b>"{0}"</b>?</p>""")\
                 .format(self.groupsList.currentItem().text()),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
-        if res != QMessageBox.Yes:
+            type_ = E5MessageBox.Warning)
+        if not res:
             return
         
         if row == self.currentGroup:

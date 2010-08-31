@@ -106,14 +106,10 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @param ev key event (QKeyEvent)
         """
         if ev.key() == Qt.Key_Escape:
-            res = E5MessageBox.question(self,
+            res = E5MessageBox.yesNo(self,
                 self.trUtf8("Close dialog"),
-                self.trUtf8("""Do you really want to close the dialog?"""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.No)
-            if res == QMessageBox.Yes:
+                self.trUtf8("""Do you really want to close the dialog?"""))
+            if res:
                 self.reject()
         
     def on_buttonBox_clicked(self, button):
@@ -129,14 +125,10 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         Private slot to handle the rejected signal of the button box.
         """
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Close dialog"),
-            self.trUtf8("""Do you really want to close the dialog?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
-        if res == QMessageBox.Yes:
+            self.trUtf8("""Do you really want to close the dialog?"""))
+        if res:
             self.reject()
         
     @pyqtSlot()

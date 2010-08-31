@@ -511,14 +511,11 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 fname += ex
         
         if os.path.exists(fname):
-            res = E5MessageBox.warning(self,
+            res = E5MessageBox.yesNo(self,
                 self.trUtf8("New Form"),
                 self.trUtf8("The file already exists! Overwrite it?"),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.No)
-            if res != QMessageBox.Yes:
+                type_ = E5MessageBox.Warning)
+            if not res:
                 # user selected to not overwrite
                 return
         

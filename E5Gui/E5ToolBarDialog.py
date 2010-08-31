@@ -149,15 +149,11 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         Private slot to remove a custom toolbar
         """
         name = self.toolbarComboBox.currentText()
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Remove Toolbar"),
             self.trUtf8("""Should the toolbar <b>{0}</b> really be removed?""")\
-                .format(name),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
-        if res == QMessageBox.Yes:
+                .format(name))
+        if res:
             index = self.toolbarComboBox.currentIndex()
             tbItemID = self.toolbarComboBox.itemData(index)
             tbItem = self.__toolbarItems[tbItemID]

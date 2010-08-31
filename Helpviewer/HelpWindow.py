@@ -2052,12 +2052,8 @@ class HelpWindow(QMainWindow):
                               """ Until you close the window, you can still click"""
                               """ the Back and Forward buttons to return to the"""
                               """ web pages you have opened.</p>""")
-            res = E5MessageBox.question(self, "", txt,
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Yes | \
-                    QMessageBox.No),
-                QMessageBox.No)
-            if res == QMessageBox.Yes:
+            res = E5MessageBox.yesNo(self, "", txt)
+            if res:
                 settings.setAttribute(QWebSettings.PrivateBrowsingEnabled, True)
                 self.pathCombo.setInsertPolicy(QComboBox.NoInsert)
                 self.privacyLabel.setPixmap(

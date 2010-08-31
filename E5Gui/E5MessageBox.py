@@ -113,3 +113,36 @@ def warning(parent, title, text,
     """
     return __messageBox(parent, title, text, QMessageBox.Warning, 
                         buttons, defaultButton)
+
+Critical    = 0
+Information = 1
+Question    = 2
+Warning     = 3
+
+def yesNo(parent, title, text, type_ = Question, yesDefault = False):
+    """
+    Function to show a model yes/no message box.
+    
+    @param parent parent widget of the message box (QWidget)
+    @param title caption of the message box (string)
+    @param text text to be shown by the message box (string)
+    @keyparam type_ type of the dialog (Critical, Information, Question or Warning)
+    @keyparam yesDefault flag indicating that the Yes button should be the default
+        button (boolean)
+    @return flag indicating the selection of the Yes button (boolean)
+    """
+    assert type_ in [Critical, Information, Question, Warning]
+    
+    if type_ == Question:
+        icon = QMessageBox.Question
+    elif type_ == Warning:
+        icon = QMessageBox.Warning
+    elif type_ == Critical:        
+        icon = QMessageBox.Critical
+    elif type_ == Information:
+        icon = QMessageBox.Information
+    
+    res = __messageBox(parent, title, text, icon, 
+                       QMessageBox.StandardButtons(QMessageBox.Yes | QMessageBox.No), 
+                       yesDefault and QMessageBox.Yes or QMessageBox.No)
+    return res == QMessageBox.Yes

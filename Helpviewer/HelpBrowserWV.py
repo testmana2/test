@@ -1192,17 +1192,14 @@ class HelpBrowser(QWebView):
             # accessed for the first time
             return
         
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Web Database Quota"),
             self.trUtf8("""<p>The database quota of <strong>{0}</strong> has"""
                         """ been exceeded while accessing database <strong>{1}"""
                         """</strong>.</p><p>Shall it be changed?</p>""")\
                 .format(self.__dataString(securityOrigin.databaseQuota()), databaseName),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.Yes)
-        if res == QMessageBox.Yes:
+            yesDefault = True)
+        if res:
             newQuota, ok = QInputDialog.getInteger(\
                 self,
                 self.trUtf8("New Web Database Quota"),

@@ -502,15 +502,11 @@ class TemplateViewer(QTreeWidget):
         Private slot to handle the Remove context menu action.
         """
         itm = self.currentItem()
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Remove Template"),
             self.trUtf8("""<p>Do you really want to remove <b>{0}</b>?</p>""")\
-                .format(itm.getName()),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
-        if res != QMessageBox.Yes:
+                .format(itm.getName()))
+        if not res:
             return
 
         if isinstance(itm, TemplateGroup):

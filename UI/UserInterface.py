@@ -2781,9 +2781,12 @@ class UserInterface(QMainWindow):
         if Preferences.getUI("CheckErrorLog"):
             logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
             if os.path.exists(logFile):
-                dlg = QMessageBox(QMessageBox.Question, self.trUtf8("Error log found"), 
+                dlg = QMessageBox(QMessageBox.Question, 
+                    self.trUtf8("Error log found"), 
                     self.trUtf8("An error log file was found. "
                                 "What should be done with it?"))
+                dlg.setParent(self)
+                dlg.setWindowModality(Qt.WindowModal)
                 try:
                     f = open(logFile, "r", encoding = "utf-8")
                     txt = f.read()

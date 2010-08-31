@@ -10,7 +10,6 @@ Module implementing a manager for open search engines.
 import os
 
 from PyQt4.QtCore import *
-from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
 from .OpenSearchDefaultEngines import OpenSearchDefaultEngines
@@ -385,17 +384,13 @@ class OpenSearchManager(QObject):
         
         host = QUrl(engine.searchUrlTemplate()).host()
         
-        res = E5MessageBox.question(None,
+        res = E5MessageBox.yesNo(None,
             "",
             self.trUtf8("""<p>Do you want to add the following engine to your list of"""
                         """ search engines?<br/><br/>Name: {0}<br/>"""
                         """Searches on: {1}</p>""")\
-                .format(engine.name(), host),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
-        return res == QMessageBox.Yes
+                .format(engine.name(), host))
+        return res
     
     def __engineFromUrlAvailable(self):
         """

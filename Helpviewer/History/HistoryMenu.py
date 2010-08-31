@@ -301,11 +301,7 @@ class HistoryMenu(E5ModelMenu):
         Private slot to clear the history.
         """
         if self.__historyManager is not None and \
-           E5MessageBox.question(self,
+           E5MessageBox.yesNo(self,
                 self.trUtf8("Clear History"),
-                self.trUtf8("""Do you want to clear the history?"""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.No | \
-                    QMessageBox.Yes),
-                QMessageBox.No) == QMessageBox.Yes:
+                self.trUtf8("""Do you want to clear the history?""")):
             self.__historyManager.clear()

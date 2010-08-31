@@ -10,7 +10,7 @@ Module implementing a QNetworkAccessManager subclass.
 import os
 
 from PyQt4.QtCore import *
-from PyQt4.QtGui import QDialog, QMessageBox
+from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:
     from PyQt4.QtNetwork import QSsl, QSslCertificate, QSslConfiguration, QSslSocket
@@ -203,32 +203,25 @@ class NetworkAccessManager(QNetworkAccessManager):
             return
         
         errorString = '.</li><li>'.join(errorStrings)
-        ret = E5MessageBox.warning(None,
+        ret = E5MessageBox.yesNo(None,
             self.trUtf8("SSL Errors"),
             self.trUtf8("""<p>SSL Errors for <br /><b>{0}</b>"""
                         """<ul><li>{1}</li></ul></p>"""
                         """<p>Do you want to ignore these errors?</p>""")\
                 .format(reply.url().toString(), errorString),
-            QMessageBox.StandardButtons(
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
+            type_ = E5MessageBox.Warning)
         
-        if ret == QMessageBox.Yes:
+        if ret:
             if len(caNew) > 0:
                 certinfos = []
                 for cert in caNew:
                     certinfos.append(self.__certToString(cert))
-                ret = E5MessageBox.question(None,
+                ret = E5MessageBox.yesNo(None,
                     self.trUtf8("Certificates"),
                     self.trUtf8("""<p>Certificates:<br/>{0}<br/>"""
                                 """Do you want to accept all these certificates?</p>""")\
-                        .format("".join(certinfos)),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.No | \
-                        QMessageBox.Yes),
-                    QMessageBox.No)
-                if ret == QMessageBox.Yes:
+                        .format("".join(certinfos)))
+                if ret:
                     for cert in caNew:
                         caMerge.append(cert)
                     

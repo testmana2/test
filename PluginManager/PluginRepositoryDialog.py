@@ -499,17 +499,14 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         for err in errors:
             errorStrings.append(err.errorString())
         errorString = '.<br />'.join(errorStrings)
-        ret = E5MessageBox.warning(self,
+        ret = E5MessageBox.yesNo(self,
             self.trUtf8("SSL Errors"),
             self.trUtf8("""<p>SSL Errors:</p>"""
                         """<p>{0}</p>"""
                         """<p>Do you want to ignore these errors?</p>""")\
                 .format(errorString),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
-        if ret == QMessageBox.Yes:
+            type_ = E5MessageBox.Warning)
+        if ret:
             reply.ignoreSslErrors()
         else:
             self.__downloadCancelled = True

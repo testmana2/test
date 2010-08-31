@@ -803,15 +803,11 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             fn = itm.fileName()
         except AttributeError:
             fn = itm.dirName()
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Class Diagram"),
             self.trUtf8("""Include class attributes?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.Yes)
-        self.classDiagram = UMLClassDiagram(fn, self, 
-            noAttrs = (res != QMessageBox.Yes))
+            yesDefault = True)
+        self.classDiagram = UMLClassDiagram(fn, self, noAttrs = not res)
         self.classDiagram.show()
         
     def __showImportsDiagram(self):
@@ -824,15 +820,11 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         except AttributeError:
             fn = itm.dirName()
         package = os.path.isdir(fn) and fn or os.path.dirname(fn)
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Imports Diagram"),
-            self.trUtf8("""Include imports from external modules?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.No)
+            self.trUtf8("""Include imports from external modules?"""))
         self.importsDiagram = ImportsDiagram(package, self, 
-            showExternalImports = (res == QMessageBox.Yes))
+            showExternalImports = res)
         self.importsDiagram.show()
         
     def __showPackageDiagram(self):
@@ -845,28 +837,21 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         except AttributeError:
             fn = itm.dirName()
         package = os.path.isdir(fn) and fn or os.path.dirname(fn)
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.Yes)
-        self.packageDiagram = PackageDiagram(package, self, 
-            noAttrs = (res != QMessageBox.Yes))
+            yesDefault = True)
+        self.packageDiagram = PackageDiagram(package, self, noAttrs = not res)
         self.packageDiagram.show()
         
     def __showApplicationDiagram(self):
         """
         Private method to handle the application diagram context menu action.
         """
-        res = E5MessageBox.question(self,
+        res = E5MessageBox.yesNo(self,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
-            QMessageBox.StandardButtons(\
-                QMessageBox.No | \
-                QMessageBox.Yes),
-            QMessageBox.Yes)
+            yesDefault = True)
         self.applicationDiagram = ApplicationDiagram(self.project, self, 
-            noModules = (res != QMessageBox.Yes))
+            noModules = not res)
         self.applicationDiagram.show()

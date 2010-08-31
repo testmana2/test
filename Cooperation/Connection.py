@@ -8,7 +8,6 @@ Module implementing a class representing a peer connection.
 """
 
 from PyQt4.QtCore import pyqtSignal, QTimer, QTime, QByteArray
-from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QTcpSocket
 
 from E5Gui import E5MessageBox
@@ -193,16 +192,13 @@ class Connection(QTcpSocket):
                not Preferences.getCooperation("AutoAcceptConnections"):
                 # don't ask for reverse connections or 
                 # if we shall accept automatically
-                res = E5MessageBox.question(None,
+                res = E5MessageBox.yesNo(None,
                     self.trUtf8("New Connection"),
                     self.trUtf8("""<p>Accept connection from """
                                 """<strong>{0}@{1}</strong>?</p>""").format(
                         user, self.peerAddress().toString()),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.No | \
-                        QMessageBox.Yes),
-                    QMessageBox.Yes)
-                if res == QMessageBox.No:
+                    yesDefault = True)
+                if not res:
                     self.abort()
                     return
 
