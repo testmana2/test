@@ -10,6 +10,8 @@ Module implementing a dialog showing a pixmap.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 from .ZoomDialog import ZoomDialog
 
 import UI.Config
@@ -154,7 +156,7 @@ class PixmapDiagram(QMainWindow):
         """
         image = QImage(filename)
         if image.isNull():
-            QMessageBox.warning(self,
+            E5MessageBox.warning(self,
                 self.trUtf8("Pixmap-Viewer"),
                 self.trUtf8("""<p>The file <b>{0}</b> cannot be displayed."""
                     """ The format is not supported.</p>""").format(filename))

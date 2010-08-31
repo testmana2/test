@@ -203,7 +203,7 @@ class NetworkAccessManager(QNetworkAccessManager):
             return
         
         errorString = '.</li><li>'.join(errorStrings)
-        ret = QMessageBox.warning(None,
+        ret = E5MessageBox.warning(None,
             self.trUtf8("SSL Errors"),
             self.trUtf8("""<p>SSL Errors for <br /><b>{0}</b>"""
                         """<ul><li>{1}</li></ul></p>"""

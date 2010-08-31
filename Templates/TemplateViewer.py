@@ -776,7 +776,7 @@ class TemplateViewer(QTreeWidget):
         """
         if oldname != newname:
             if newname in self.groups:
-                QMessageBox.warning(self,
+                E5MessageBox.warning(self,
                     self.trUtf8("Edit Template Group"),
                     self.trUtf8("""<p>A template group with the name"""
                                 """ <b>{0}</b> already exists.</p>""")\

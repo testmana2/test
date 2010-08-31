@@ -11,7 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Action import E5Action, createActionGroup
-from E5Gui import E5FileDialog
+from E5Gui import E5FileDialog, E5MessageBox
 
 from .IconEditorGrid import IconEditorGrid
 from .IconZoomDialog import IconZoomDialog
@@ -1001,7 +1001,7 @@ class IconEditorWindow(QMainWindow):
             if ex:
                 fileName += ex
         if QFileInfo(fileName).exists():
-            res = QMessageBox.warning(self,
+            res = E5MessageBox.warning(self,
                 self.trUtf8("Save icon file"),
                 self.trUtf8("<p>The file <b>{0}</b> already exists.</p>")
                     .format(fileName),
@@ -1030,13 +1030,13 @@ class IconEditorWindow(QMainWindow):
         """
         file= QFile(fileName)
         if not file.exists():
-            QMessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
+            E5MessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
                                 self.trUtf8("The file '{0}' does not exist.")\
                                     .format(fileName))
             return
         
         if not file.open(QFile.ReadOnly):
-            QMessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
+            E5MessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
                                 self.trUtf8("Cannot read file '{0}:\n{1}.")\
                                     .format(fileName, file.errorString()))
             return
@@ -1055,7 +1055,7 @@ class IconEditorWindow(QMainWindow):
         """
         file = QFile(fileName)
         if not file.open(QFile.WriteOnly):
-            QMessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
+            E5MessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
                                 self.trUtf8("Cannot write file '{0}:\n{1}.")\
                                     .format(fileName, file.errorString()))
         
@@ -1068,7 +1068,7 @@ class IconEditorWindow(QMainWindow):
         file.close()
         
         if not res:
-            QMessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
+            E5MessageBox.warning(self, self.trUtf8("eric5 Icon Editor"),
                                 self.trUtf8("Cannot write file '{0}:\n{1}.")\
                                     .format(fileName, file.errorString()))
         
@@ -1119,7 +1119,7 @@ class IconEditorWindow(QMainWindow):
         @return flag indicating, if it is ok to continue (boolean)
         """
         if self.__editor.isDirty():
-            ret = QMessageBox.warning(self,
+            ret = E5MessageBox.warning(self,
                 self.trUtf8("eric5 Icon Editor"),
                 self.trUtf8("""The icon image has been modified.\n"""
                             """Do you want to save your changes?"""),

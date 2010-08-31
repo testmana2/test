@@ -10,6 +10,8 @@ Module implementing the exporter base class.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+from E5Gui import E5MessageBox
+
 import Utilities
 
 class ExporterBase(QObject):
@@ -51,7 +53,7 @@ class ExporterBase(QObject):
                 if ex:
                     fn += ex
             if QFileInfo(fn).exists():
-                res = QMessageBox.warning(self.editor,
+                res = E5MessageBox.warning(self.editor,
                     self.trUtf8("Export source"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists.</p>")
                         .format(fn),

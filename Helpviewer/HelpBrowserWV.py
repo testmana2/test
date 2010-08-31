@@ -879,7 +879,7 @@ class HelpBrowser(QWebView):
         
         method = formElement.attribute("method", "get").lower()
         if method != "get":
-            QMessageBox.warning(self,
+            E5MessageBox.warning(self,
                 self.trUtf8("Method not supported"),
                 self.trUtf8("""{0} method is not supported.""").format(method.upper()))
             return

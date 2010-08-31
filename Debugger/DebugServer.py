@@ -14,6 +14,7 @@ from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QTcpServer, QHostAddress, QHostInfo
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .BreakPointModel import BreakPointModel
 from .WatchPointModel import WatchPointModel
@@ -566,7 +567,7 @@ class DebugServer(QTcpServer):
         peerAddress = sock.peerAddress().toString()
         if peerAddress not in Preferences.getDebugger("AllowedHosts"):
             # the peer is not allowed to connect
-            res = QMessageBox.warning(None,
+            res = E5MessageBox.warning(None,
                 self.trUtf8("Connection from illegal host"),
                 self.trUtf8("""<p>A connection was attempted by the"""
                     """ illegal host <b>{0}</b>. Accept this connection?</p>""")\

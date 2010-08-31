@@ -13,6 +13,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4 import uic
 
+from E5Gui import E5MessageBox
+
 from .TRSingleApplication import TRSingleApplicationServer
 
 import UI.PixmapCache
@@ -440,7 +442,7 @@ class TranslationsDict(QObject):
             ntr.fileName = fileName
             ntr.name = self.__uniqueName(fileName)
             if ntr.name is None:
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self.parent(),
                     self.trUtf8("Set Translator"),
                     self.trUtf8("""<p>The translation filename <b>{0}</b>"""
                         """ is invalid.</p>""").format(fileName))
@@ -468,7 +470,7 @@ class TranslationsDict(QObject):
         if name != noTranslationName:
             trans = self.__findName(name)
             if trans is None:
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self.parent(),
                     self.trUtf8("Set Translator"),
                     self.trUtf8("""<p>The translator <b>{0}</b> is not known.</p>""")\
                         .format(name))
@@ -608,10 +610,10 @@ class TranslationsDict(QObject):
         if tr.load(transFileName):
             return tr
         
-        QMessageBox.warning(None,
+        E5MessageBox.warning(self.parent(),
             self.trUtf8("Load Translator"),
-            self.trUtf8("""<p>The translation file <b>{0}</b> could not be loaded.</p>""")\
-                .format(transFileName))
+            self.trUtf8("""<p>The translation file <b>{0}</b> could"""
+                        """ not be loaded.</p>""").format(transFileName))
         return None
 
     def hasTranslations(self):
@@ -680,7 +682,7 @@ class WidgetView(QWidget):
             pass
         
         if not self.__widget:
-            QMessageBox.warning(None,
+            E5MessageBox.warning(self,
                 self.trUtf8("Load UI File"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be loaded.</p>""")\
                     .format(self.__uiFileName))
@@ -733,7 +735,7 @@ class WidgetArea(QMdiArea):
         if wview is None:
             name = os.path.basename(uiFileName)
             if not name:
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Load UI File"),
                     self.trUtf8("""<p>The file <b>{0}</b> could not be loaded.</p>""")\
                         .format(uiFileName))

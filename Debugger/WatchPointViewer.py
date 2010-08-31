@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5MessageBox
 
 from .EditWatchpointDialog import EditWatchpointDialog
 
@@ -226,7 +227,7 @@ class WatchPointViewer(QTreeView):
                 msg = self.trUtf8("""<p>A watch expression '<b>{0}</b>'"""
                                   """ for the variable <b>{1}</b> already exists.</p>""")\
                         .format(special, Utilities.html_encode(cond))
-            QMessageBox.warning(None,
+            E5MessageBox.warning(self,
                 self.trUtf8("Watch expression already exists"),
                 msg)
         

@@ -1672,7 +1672,7 @@ class Hg(VersionControl):
         
         ignoreName = os.path.join(name, ".hgignore")
         if os.path.exists(ignoreName):
-            res = QMessageBox.warning(None,
+            res = E5MessageBox.warning(self.__ui,
                 self.trUtf8("Create .hgignore file"),
                 self.trUtf8("""<p>The file <b>{0}</b> exists already."""
                             """ Overwrite it?</p>""").format(ignoreName),
@@ -1736,7 +1736,7 @@ class Hg(VersionControl):
                 if ex:
                     fname += ex
             if QFileInfo(fname).exists():
-                res = QMessageBox.warning(None,
+                res = E5MessageBox.warning(self.__ui,
                     self.trUtf8("Create changegroup"),
                     self.trUtf8("<p>The Mercurial changegroup file <b>{0}</b> "
                                 "already exists.</p>")
@@ -1965,7 +1965,7 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             rev, merge, date, user, message = dlg.getParameters()
             if not rev:
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self.__ui,
                     self.trUtf8("Backing out changeset"),
                     self.trUtf8("""No revision given. Aborting..."""))
                 return

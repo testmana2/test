@@ -1753,7 +1753,7 @@ class Project(QObject):
                                 os.makedirs(target)
                                 
                             if os.path.exists(targetfile):
-                                res = QMessageBox.warning(None,
+                                res = E5MessageBox.warning(self.ui,
                                     self.trUtf8("Add file"),
                                     self.trUtf8("<p>The file <b>{0}</b> already"
                                         " exists.</p><p>Overwrite it?</p>")
@@ -1831,7 +1831,7 @@ class Project(QObject):
             if not Utilities.samepath(target, source):
                 try:
                     if os.path.exists(targetfile):
-                        res = QMessageBox.warning(self.ui,
+                        res = E5MessageBox.warning(self.ui,
                             self.trUtf8("Add directory"),
                             self.trUtf8("<p>The file <b>{0}</b> already exists.</p>"
                                         "<p>Overwrite it?</p>")
@@ -2024,7 +2024,7 @@ class Project(QObject):
             newfn = Utilities.toNativeSeparators(newfn)
         
         if os.path.exists(newfn):
-            canceled = QMessageBox.warning(None,
+            canceled = E5MessageBox.warning(self.ui,
                 self.trUtf8("Rename File"),
                 self.trUtf8("""<p>The file <b>{0}</b> already exists."""
                             """ Overwrite it?</p>""")
@@ -2897,7 +2897,7 @@ class Project(QObject):
                 if ex:
                     fn += ex
             if QFileInfo(fn).exists():
-                res = QMessageBox.warning(None,
+                res = E5MessageBox.warning(self.ui,
                     self.trUtf8("Save File"),
                     self.trUtf8("""<p>The file <b>{0}</b> already exists.</p>""")
                         .format(fn),
@@ -2937,7 +2937,7 @@ class Project(QObject):
         @return flag indicating whether this operation was successful (boolean)
         """
         if self.isDirty():
-            res = QMessageBox.warning(self.parent(), 
+            res = E5MessageBox.warning(self.parent(), 
                 self.trUtf8("Close Project"),
                 self.trUtf8("The current project has unsaved changes."),
                 QMessageBox.StandardButtons(\
@@ -4475,7 +4475,7 @@ class Project(QObject):
         """
         pkglist = os.path.join(self.ppath, "PKGLIST")
         if os.path.exists(pkglist):
-            res = QMessageBox.warning(None,
+            res = E5MessageBox.warning(self.ui,
                 self.trUtf8("Create Package List"),
                 self.trUtf8("<p>The file <b>PKGLIST</b> already"
                     " exists.</p><p>Overwrite it?</p>"),

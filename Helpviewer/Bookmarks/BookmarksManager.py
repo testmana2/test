@@ -154,7 +154,7 @@ class BookmarksManager(QObject):
         reader = XbelReader()
         self.__bookmarkRootNode = reader.read(bookmarkFile)
         if reader.error() != QXmlStreamReader.NoError:
-            QMessageBox.warning(None,
+            E5MessageBox.warning(None,
                 self.trUtf8("Loading Bookmarks"),
                 self.trUtf8("""Error when loading bookmarks on line {0}, column {1}:\n"""
                             """{2}""")\
@@ -215,7 +215,7 @@ class BookmarksManager(QObject):
         self.__menu.title = BOOKMARKMENU
         self.__toolbar.title = BOOKMARKBAR
         if not writer.write(bookmarkFile, self.__bookmarkRootNode):
-            QMessageBox.warning(None,
+            E5MessageBox.warning(None,
                 self.trUtf8("Saving Bookmarks"),
                 self.trUtf8("""Error saving bookmarks to <b>{0}</b>.""")\
                     .format(bookmarkFile))
@@ -344,7 +344,7 @@ class BookmarksManager(QObject):
             inFile = QFile(fileName)
             inFile.open(QIODevice.ReadOnly)
             if inFile.openMode == QIODevice.NotOpen:
-                QMessageBox.warning(None,
+                E5MessageBox.warning(None,
                     self.trUtf8("Import Bookmarks"),
                     self.trUtf8("""Error opening bookmarks file <b>{0}</b>.""")\
                         .format(fileName))
@@ -360,7 +360,7 @@ class BookmarksManager(QObject):
             importRootNode = reader.read(fileName)
         
         if reader.error() != QXmlStreamReader.NoError:
-            QMessageBox.warning(None,
+            E5MessageBox.warning(None,
                 self.trUtf8("Import Bookmarks"),
                 self.trUtf8("""Error when importing bookmarks on"""
                             """ line {0}, column [1}:\n{2}""")\

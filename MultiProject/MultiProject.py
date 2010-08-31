@@ -600,7 +600,7 @@ class MultiProject(QObject):
                 if ex:
                     fn += ex
             if QFileInfo(fn).exists():
-                res = QMessageBox.warning(None,
+                res = E5MessageBox.warning(self.parent(),
                     self.trUtf8("Save File"),
                     self.trUtf8("""<p>The file <b>{0}</b> already exists.</p>""")
                         .format(fn),
@@ -627,7 +627,7 @@ class MultiProject(QObject):
         @return flag indicating whether this operation was successful (boolean)
         """
         if self.isDirty():
-            res = QMessageBox.warning(self.parent(), 
+            res = E5MessageBox.warning(self.parent(), 
                 self.trUtf8("Close Multiproject"),
                 self.trUtf8("The current multiproject has unsaved changes."),
                 QMessageBox.StandardButtons(\

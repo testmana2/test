@@ -365,7 +365,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if reply.error() != QNetworkReply.NoError:
             ok = False
             if not self.__downloadCancelled:
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Error downloading file"),
                     self.trUtf8(
                         """<p>Could not download the requested file from {0}.</p>"""
@@ -499,7 +499,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         for err in errors:
             errorStrings.append(err.errorString())
         errorString = '.<br />'.join(errorStrings)
-        ret = QMessageBox.warning(self,
+        ret = E5MessageBox.warning(self,
             self.trUtf8("SSL Errors"),
             self.trUtf8("""<p>SSL Errors:</p>"""
                         """<p>{0}</p>"""

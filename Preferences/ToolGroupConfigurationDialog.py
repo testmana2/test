@@ -106,7 +106,7 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
         if row < 0:
             return
         
-        res = QMessageBox.warning(None,
+        res = E5MessageBox.warning(self,
             self.trUtf8("Delete tool group entry"),
             self.trUtf8("""<p>Do you really want to delete the tool group"""
                         """ <b>"{0}"</b>?</p>""")\

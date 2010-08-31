@@ -599,7 +599,7 @@ class UserInterface(QMainWindow):
                 styleSheet = f.read()
                 f.close()
             except IOError as msg:
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Loading Style Sheet"),
                     self.trUtf8("""<p>The Qt Style Sheet file <b>{0}</b> could"""
                                 """ not be read.<br>Reason: {1}</p>""")
@@ -4503,7 +4503,7 @@ class UserInterface(QMainWindow):
                 home = pythonDocDir
             
             if not os.path.exists(home):
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4555,7 +4555,7 @@ class UserInterface(QMainWindow):
                 home = qt4DocDir
             
             if not os.path.exists(home):
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4586,7 +4586,7 @@ class UserInterface(QMainWindow):
             pyqt4DocDir = Utilities.getEnvironmentEntry("PYQT4DOCDIR", None)
         
         if not pyqt4DocDir:
-            QMessageBox.warning(None,
+            E5MessageBox.warning(self,
                 self.trUtf8("Documentation"),
                 self.trUtf8("""<p>The PyQt4 documentation starting point"""
                             """ has not been configured.</p>"""))
@@ -4612,7 +4612,7 @@ class UserInterface(QMainWindow):
                     home = pyqt4DocDir
             
             if not home or not os.path.exists(home):
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4646,7 +4646,7 @@ class UserInterface(QMainWindow):
         if not home.startswith("http://") and \
            not home.startswith("https://"):
             if not os.path.exists(home):
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -4677,7 +4677,7 @@ class UserInterface(QMainWindow):
             pysideDocDir = Utilities.getEnvironmentEntry("PYSIDEDOCDIR", None)
         
         if not pysideDocDir:
-            QMessageBox.warning(None,
+            E5MessageBox.warning(self,
                 self.trUtf8("Documentation"),
                 self.trUtf8("""<p>The PySide documentation starting point"""
                             """ has not been configured.</p>"""))
@@ -4692,7 +4692,7 @@ class UserInterface(QMainWindow):
             else:
                 home = pysideDocDir
             if not os.path.exists(home):
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Documentation Missing"),
                     self.trUtf8("""<p>The documentation starting point"""
                                 """ "<b>{0}</b>" could not be found.</p>""")\
@@ -5471,7 +5471,7 @@ class UserInterface(QMainWindow):
                 if self.__versionCheckProgress is not None:
                     self.__versionCheckProgress.reset()
                     self.__versionCheckProgress = None
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Error downloading versions file"),
                     self.trUtf8("""Could not download the versions file."""))
                 return
@@ -5565,7 +5565,7 @@ class UserInterface(QMainWindow):
                             self.trUtf8("Eric5 is up to date"),
                             self.trUtf8("""You are using the latest version of eric5"""))
         except IndexError:
-            QMessageBox.warning(self,
+            E5MessageBox.warning(self,
                 self.trUtf8("Error during updates check"),
                 self.trUtf8("""Could not perform updates check."""))
         
@@ -5614,7 +5614,7 @@ class UserInterface(QMainWindow):
         for err in sslErrors:
             errorStrings.append(err.errorString())
         errorString = '.<br />'.join(errorStrings)
-        ret = QMessageBox.warning(self,
+        ret = E5MessageBox.warning(self,
             self.trUtf8("SSL Errors"),
             self.trUtf8("""<p>SSL Errors:</p>"""
                         """<p>{0}</p>"""

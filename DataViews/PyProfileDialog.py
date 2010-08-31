@@ -208,7 +208,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         
         fname = "{0}.profile".format(self.basename)
         if not os.path.exists(fname):
-            QMessageBox.warning(None,
+            E5MessageBox.warning(self,
                 self.trUtf8("Profile Results"),
                 self.trUtf8("""<p>There is no profiling data"""
                             """ available for <b>{0}</b>.</p>""")

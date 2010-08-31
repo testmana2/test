@@ -2606,7 +2606,7 @@ class HelpWindow(QMainWindow):
         
         @param message message to be shown (string)
         """
-        QMessageBox.warning(self,
+        E5MessageBox.warning(self,
             self.trUtf8("eric5 Web Browser"),
             message)
         
@@ -2646,7 +2646,7 @@ class HelpWindow(QMainWindow):
         
         @param msg message sent by the help  engine (string)
         """
-        QMessageBox.warning(self,
+        E5MessageBox.warning(self,
             self.trUtf8("Help Engine"), msg)
         
     def __showNavigationMenu(self):

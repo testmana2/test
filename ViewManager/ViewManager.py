@@ -2997,7 +2997,7 @@ class ViewManager(QObject):
             if autosave:
                 res = QMessageBox.Save
             else:
-                res = QMessageBox.warning(self.ui,
+                res = E5MessageBox.warning(self.ui,
                     QApplication.translate('ViewManager', "File Modified"),
                     QApplication.translate('ViewManager', 
                         """<p>The file <b>{0}</b> has unsaved changes.</p>""")

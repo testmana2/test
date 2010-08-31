@@ -13,6 +13,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 from PyQt4.QtGui import QMessageBox
 
+from E5Gui import E5MessageBox
+
 from .AdBlockRule import AdBlockRule
 
 import Helpviewer.HelpWindow
@@ -199,7 +201,7 @@ class AdBlockSubscription(QObject):
         f = QFile(fileName)
         if f.exists():
             if not f.open(QIODevice.ReadOnly):
-                QMessageBox.warning(None,
+                E5MessageBox.warning(None,
                     self.trUtf8("Load subscription rules"),
                     self.trUtf8("""Unable to open adblock file '{0}' for reading.""")\
                         .format(fileName))
@@ -207,7 +209,7 @@ class AdBlockSubscription(QObject):
                 textStream = QTextStream(f)
                 header = textStream.readLine(1024)
                 if not header.startswith("[Adblock"):
-                    QMessageBox.warning(None,
+                    E5MessageBox.warning(None,
                         self.trUtf8("Load subscription rules"),
                         self.trUtf8("""Adblock file '{0}' does not start"""
                                     """ with [Adblock.""")\
@@ -260,7 +262,7 @@ class AdBlockSubscription(QObject):
         self.__downloading = None
         
         if reply.error() != QNetworkReply.NoError:
-            QMessageBox.warning(None,
+            E5MessageBox.warning(None,
                 self.trUtf8("Downloading subscription rules"),
                 self.trUtf8("""<p>Subscription rules could not be downloaded.</p>"""
                             """<p>Error: {0}</p>""").format(reply.errorString()))
@@ -274,7 +276,7 @@ class AdBlockSubscription(QObject):
             return
         
         if response.isEmpty():
-            QMessageBox.warning(None,
+            E5MessageBox.warning(None,
                 self.trUtf8("Downloading subscription rules"),
                 self.trUtf8("""Got empty subscription rules."""))
             return
@@ -282,7 +284,7 @@ class AdBlockSubscription(QObject):
         fileName = self.rulesFileName()
         f = QFile(fileName)
         if not f.open(QIODevice.ReadWrite):
-            QMessageBox.warning(None,
+            E5MessageBox.warning(None,
                 self.trUtf8("Downloading subscription rules"),
                 self.trUtf8("""Unable to open adblock file '{0}' for writing.""")\
                     .file(fileName))
@@ -303,7 +305,7 @@ class AdBlockSubscription(QObject):
         
         f = QFile(fileName)
         if not f.open(QIODevice.ReadWrite | QIODevice.Truncate):
-            QMessageBox.warning(None,
+            E5MessageBox.warning(None,
                 self.trUtf8("Saving subscription rules"),
                 self.trUtf8("""Unable to open adblock file '{0}' for writing.""")\
                     .format(fileName))

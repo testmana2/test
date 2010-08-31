@@ -12,6 +12,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtSql import QSqlError, QSqlDatabase
 
 from E5Gui.E5Action import E5Action
+from E5Gui import E5MessageBox
 
 from .SqlBrowserWidget import SqlBrowserWidget
 
@@ -68,7 +69,7 @@ class SqlBrowser(QMainWindow):
         Private slot to do some actions after the UI has started and the main loop is up.
         """
         for warning in self.__warnings:
-            QMessageBox.warning(self,
+            E5MessageBox.warning(self,
                 self.trUtf8("SQL Browser startup problem"),
                 warning)
         

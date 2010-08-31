@@ -64,7 +64,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         for fileName in fileNames:
             ns = QHelpEngineCore.namespaceName(fileName)
             if not ns:
-                QMessageBox.warning(self,
+                E5MessageBox.warning(self,
                     self.trUtf8("Add Documentation"),
                     self.trUtf8("""The file <b>{0}</b> is not a valid Qt Help File.""")\
                         .format(fileName)
@@ -72,7 +72,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
                 continue
             
             if len(self.documentsList.findItems(ns, Qt.MatchFixedString)):
-                QMessageBox.warning(self,
+                E5MessageBox.warning(self,
                     self.trUtf8("Add Documentation"),
                     self.trUtf8("""The namespace <b>{0}</b> is already registered.""")\
                         .format(ns)
@@ -107,7 +107,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         for item in items:
             ns = item.text()
             if ns in list(openedDocs.values()):
-                res = QMessageBox.warning(self,
+                res = E5MessageBox.warning(self,
                     self.trUtf8("Remove Documentation"),
                     self.trUtf8("""Some documents currently opened reference the """
                                 """documentation you are attempting to remove. """

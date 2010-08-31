@@ -326,7 +326,7 @@ class UIPreviewer(QMainWindow):
                 self.previewSV.setWidget(self.mainWidget)
                 self.mainWidget.show()
         else:
-            QMessageBox.warning(self,
+            E5MessageBox.warning(self,
                 self.trUtf8("Load UI File"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be loaded.</p>""")\
                     .format(fn))

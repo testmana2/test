@@ -337,7 +337,7 @@ class UMLGraphicsView(E5GraphicsView):
                 if ex:
                     fname += ex
             if QFileInfo(fname).exists():
-                res = QMessageBox.warning(self,
+                res = E5MessageBox.warning(self,
                     self.trUtf8("Save Diagram"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists.</p>")
                         .format(fname),

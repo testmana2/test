@@ -914,7 +914,7 @@ class IconEditorGrid(QWidget):
                 self.__updateImageRect(self.__pasteRect.topLeft(), 
                                        self.__pasteRect.bottomRight() + QPoint(1, 1))
         else:
-            QMessageBox.warning(self,
+            E5MessageBox.warning(self,
                 self.trUtf8("Pasting Image"),
                 self.trUtf8("""Invalid image data in clipboard."""))
     

@@ -1476,7 +1476,7 @@ class MiniEditor(QMainWindow):
         @return flag indicating, if it is ok to continue (boolean)
         """
         if self.__textEdit.isModified():
-            ret = QMessageBox.warning(self, 
+            ret = E5MessageBox.warning(self, 
                     self.trUtf8("eric5 Mini Editor"),
                     self.trUtf8("The document has been modified.\n"
                             "Do you want to save your changes?"),

@@ -1191,7 +1191,7 @@ class DebugUI(QObject):
                                 """ for the variable <b>{1}</b> already exists.</p>""")\
                             .format(special, 
                                     Utilities.html_encode(cond))
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("Watch expression already exists"),
                     msg)
                 model.deleteWatchPointByIndex(index)

@@ -148,7 +148,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
             err = self.addConnection(driver, dbName, user, password, host, port)
             
             if err.type() != QSqlError.NoError:
-                QMessageBox.warning(self,
+                E5MessageBox.warning(self,
                     self.trUtf8("Unable to open database"),
                     self.trUtf8("""An error occurred while opening the connection."""))
     

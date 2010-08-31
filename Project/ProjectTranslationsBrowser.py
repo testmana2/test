@@ -705,7 +705,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if l:
             sections.append(("TRANSLATIONS", l))
         else:
-            QMessageBox.warning(None,
+            E5MessageBox.warning(self,
                 self.trUtf8("Write temporary project file"),
                 self.trUtf8("""No translation files (*.ts) selected."""))
             return False

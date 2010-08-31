@@ -280,7 +280,7 @@ class Editor(QsciScintillaCompat):
             if self.fileName is not None:
                 if (QFileInfo(self.fileName).size() // 1024) > \
                    Preferences.getEditor("WarnFilesize"):
-                    res = QMessageBox.warning(None,
+                    res = E5MessageBox.warning(self,
                         self.trUtf8("Open File"),
                         self.trUtf8("""<p>The size of the file <b>{0}</b>"""
                                     """ is <b>{1} KB</b>."""
@@ -1481,7 +1481,7 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to handle the modificationAttempted signal.
         """
-        QMessageBox.warning(None,
+        E5MessageBox.warning(self,
             self.trUtf8("Modification of Read Only file"),
             self.trUtf8("""You are attempting to change a read only file. """
                         """Please save to a different file first."""))
@@ -2179,7 +2179,7 @@ class Editor(QsciScintillaCompat):
             fn = self.fileName
             if fn is None:
                 fn = self.noName
-            res = QMessageBox.warning(self.vm, 
+            res = E5MessageBox.warning(self.vm, 
                 self.trUtf8("File Modified"),
                 self.trUtf8("<p>The file <b>{0}</b> has unsaved changes.</p>")
                     .format(fn),
@@ -2374,7 +2374,7 @@ class Editor(QsciScintillaCompat):
                     if ex:
                         fn += ex
                 if QFileInfo(fn).exists():
-                    res = QMessageBox.warning(self,
+                    res = E5MessageBox.warning(self,
                         self.trUtf8("Save File"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists.</p>")
                             .format(fn),
@@ -4214,7 +4214,7 @@ class Editor(QsciScintillaCompat):
                     self.trUtf8("Show Code Coverage Annotations"),
                     self.trUtf8("""All lines have been covered."""))
         else:
-            QMessageBox.warning(self,
+            E5MessageBox.warning(self,
                 self.trUtf8("Show Code Coverage Annotations"),
                 self.trUtf8("""There is no coverage file available."""))
         
@@ -4537,12 +4537,12 @@ class Editor(QsciScintillaCompat):
         
         for handle in list(self.warnings.keys()):
             if self.markerLine(handle) == line:
-                QMessageBox.warning(None,
+                E5MessageBox.warning(self,
                     self.trUtf8("py3flakes Warning"),
                     '\n'.join(self.warnings[handle]))
                 break
         else:
-            QMessageBox.warning(None,
+            E5MessageBox.warning(self,
                 self.trUtf8("py3flakes Warning"),
                 self.trUtf8("No py3flakes warning message available."))
     
@@ -4646,7 +4646,7 @@ class Editor(QsciScintillaCompat):
             if ex:
                 fname += ex
         if QFileInfo(fname).exists():
-            res = QMessageBox.warning(self,
+            res = E5MessageBox.warning(self,
                 self.trUtf8("Save macro"),
                 self.trUtf8("<p>The macro file <b>{0}</b> already exists.</p>")
                     .format(fname),
@@ -4675,7 +4675,7 @@ class Editor(QsciScintillaCompat):
         Public method to start macro recording.
         """
         if self.recording:
-            res = QMessageBox.warning(self, 
+            res = E5MessageBox.warning(self, 
                 self.trUtf8("Start Macro Recording"),
                 self.trUtf8("Macro recording is already active. Start new?"),
                 QMessageBox.StandardButtons(\
@@ -4824,7 +4824,7 @@ class Editor(QsciScintillaCompat):
                         """<br><b>Warning:</b> You will loose"""
                         """ your changes upon reopening it.""")
                     default = QMessageBox.No
-                res = QMessageBox.warning(None,
+                res = E5MessageBox.warning(self,
                     self.trUtf8("File changed"), msg,
                     QMessageBox.StandardButtons(\
                         QMessageBox.Yes | \
