@@ -3012,7 +3012,7 @@ class ViewManager(QObject):
                 if ok:
                     self.setEditorName(editor, newName)
                 return ok
-            elif res == QMessageBox.Abort or res == QMessageBox.Cancel:
+            elif res == QMessageBox.Abort:
                 return False
         
         return True

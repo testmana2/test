@@ -11,7 +11,6 @@ import os
 
 from PyQt4.QtCore import *
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
-from PyQt4.QtGui import QMessageBox
 
 from E5Gui import E5MessageBox
 

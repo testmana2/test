@@ -8,6 +8,7 @@ Module implementing a dialog mixin class providing common callback methods for
 the pysvn client.
 """
 
+from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QApplication, QDialog, QWidget, QCursor
 
 class SvnDialogMixin(object):
@@ -110,6 +111,8 @@ class SvnDialogMixin(object):
                         trust_dict["issuer_dname"]),
             QMessageBox.StandardButtons(QMessageBox.NoButton),
             parent)
+        if parent is not None:
+            msgBox.setWindowModality(Qt.WindowModal)
         permButton = msgBox.addButton(self.trUtf8("&Permanent accept"), 
                                       QMessageBox.AcceptRole)
         tempButton = msgBox.addButton(self.trUtf8("&Temporary accept"), 
