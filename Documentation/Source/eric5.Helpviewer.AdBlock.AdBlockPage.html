@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Helpviewer.AdBlock.AdBlockPage</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Helpviewer.AdBlock.AdBlockPage</h1>
+<p>
+Module implementing a class to apply AdBlock rules to a web page.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#AdBlockPage">AdBlockPage</a></td>
+<td>Class to apply AdBlock rules to a web page.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="AdBlockPage" ID="AdBlockPage"></a>
+<h2>AdBlockPage</h2>
+<p>
+    Class to apply AdBlock rules to a web page.
+</p>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#AdBlockPage.__checkRule">__checkRule</a></td>
+<td>Private method to check, if a rule applies to the given web page and host.</td>
+</tr><tr>
+<td><a href="#AdBlockPage.applyRulesToPage">applyRulesToPage</a></td>
+<td>Public method to applay AdBlock rules to a web page.</td>
+</tr>
+</table>
+<a NAME="AdBlockPage.__checkRule" ID="AdBlockPage.__checkRule"></a>
+<h4>AdBlockPage.__checkRule</h4>
+<b>__checkRule</b>(<i>rule, page, host</i>)
+<p>
+        Private method to check, if a rule applies to the given web page and host.
+</p><dl>
+<dt><i>rule</i></dt>
+<dd>
+reference to the rule to check (AdBlockRule)
+</dd><dt><i>page</i></dt>
+<dd>
+reference to the web page (QWebPage)
+</dd><dt><i>host</i></dt>
+<dd>
+host name (string)
+</dd>
+</dl><a NAME="AdBlockPage.applyRulesToPage" ID="AdBlockPage.applyRulesToPage"></a>
+<h4>AdBlockPage.applyRulesToPage</h4>
+<b>applyRulesToPage</b>(<i>page</i>)
+<p>
+        Public method to applay AdBlock rules to a web page.
+</p><dl>
+<dt><i>page</i></dt>
+<dd>
+reference to the web page (QWebPage)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.E5XML.XMLErrorHandler</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.E5XML.XMLErrorHandler</h1>
+<p>
+Module implementing an error handler class.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#XMLErrorHandler">XMLErrorHandler</a></td>
+<td>Class implementing an error handler class.</td>
+</tr><tr>
+<td><a href="#XMLFatalParseError">XMLFatalParseError</a></td>
+<td>Class implementing an exception for recoverable parse errors.</td>
+</tr><tr>
+<td><a href="#XMLParseError">XMLParseError</a></td>
+<td>Class implementing an exception for recoverable parse errors.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="XMLErrorHandler" ID="XMLErrorHandler"></a>
+<h2>XMLErrorHandler</h2>
+<p>
+    Class implementing an error handler class.
+</p>
+<h3>Derived from</h3>
+ErrorHandler
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#XMLErrorHandler.__init__">XMLErrorHandler</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#XMLErrorHandler.error">error</a></td>
+<td>Public method to handle a recoverable error.</td>
+</tr><tr>
+<td><a href="#XMLErrorHandler.fatalError">fatalError</a></td>
+<td>Public method to handle a non-recoverable error.</td>
+</tr><tr>
+<td><a href="#XMLErrorHandler.getParseMessages">getParseMessages</a></td>
+<td>Public method to retrieve all messages.</td>
+</tr><tr>
+<td><a href="#XMLErrorHandler.showParseMessages">showParseMessages</a></td>
+<td>Public method to show the parse messages (if any) in a dialog.</td>
+</tr><tr>
+<td><a href="#XMLErrorHandler.warning">warning</a></td>
+<td>Public method to handle a warning.</td>
+</tr>
+</table>
+<a NAME="XMLErrorHandler.__init__" ID="XMLErrorHandler.__init__"></a>
+<h4>XMLErrorHandler (Constructor)</h4>
+<b>XMLErrorHandler</b>(<i></i>)
+<p>
+        Constructor
+</p><a NAME="XMLErrorHandler.error" ID="XMLErrorHandler.error"></a>
+<h4>XMLErrorHandler.error</h4>
+<b>error</b>(<i>exception</i>)
+<p>
+        Public method to handle a recoverable error.
+</p><dl>
+<dt><i>exception</i></dt>
+<dd>
+Exception object describing the error (SAXParseException)
+</dd>
+</dl><a NAME="XMLErrorHandler.fatalError" ID="XMLErrorHandler.fatalError"></a>
+<h4>XMLErrorHandler.fatalError</h4>
+<b>fatalError</b>(<i>exception</i>)
+<p>
+        Public method to handle a non-recoverable error.
+</p><dl>
+<dt><i>exception</i></dt>
+<dd>
+Exception object describing the error (SAXParseException)
+</dd>
+</dl><dl>
+<dt>Raises <b>XMLFatalParseError</b>:</dt>
+<dd>
+a fatal parse error has occured
+</dd>
+</dl><a NAME="XMLErrorHandler.getParseMessages" ID="XMLErrorHandler.getParseMessages"></a>
+<h4>XMLErrorHandler.getParseMessages</h4>
+<b>getParseMessages</b>(<i></i>)
+<p>
+        Public method to retrieve all messages.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of tuples of (message type, system id, line no, column no,
+            message)
+</dd>
+</dl><a NAME="XMLErrorHandler.showParseMessages" ID="XMLErrorHandler.showParseMessages"></a>
+<h4>XMLErrorHandler.showParseMessages</h4>
+<b>showParseMessages</b>(<i></i>)
+<p>
+        Public method to show the parse messages (if any) in a dialog.
+</p><a NAME="XMLErrorHandler.warning" ID="XMLErrorHandler.warning"></a>
+<h4>XMLErrorHandler.warning</h4>
+<b>warning</b>(<i>exception</i>)
+<p>
+        Public method to handle a warning.
+</p><dl>
+<dt><i>exception</i></dt>
+<dd>
+Exception object describing the error (SAXParseException)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="XMLFatalParseError" ID="XMLFatalParseError"></a>
+<h2>XMLFatalParseError</h2>
+<p>
+    Class implementing an exception for recoverable parse errors.
+</p>
+<h3>Derived from</h3>
+XMLParseError
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="XMLParseError" ID="XMLParseError"></a>
+<h2>XMLParseError</h2>
+<p>
+    Class implementing an exception for recoverable parse errors.
+</p>
+<h3>Derived from</h3>
+Exception
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
