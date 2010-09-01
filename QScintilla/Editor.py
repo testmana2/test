@@ -5348,7 +5348,10 @@ class Editor(QsciScintillaCompat):
             self.SCN_CHARADDED.connect(self.__spellCharAdded)
             self.spell.checkDocumentIncrementally()
         else:
-            self.SCN_CHARADDED.disconnect(self.__spellCharAdded)
+            try:
+                self.SCN_CHARADDED.disconnect(self.__spellCharAdded)
+            except TypeError:
+                pass
             self.clearAllIndicators(self.spellingIndicator)
     
     def isSpellCheckRegion(self, pos):
