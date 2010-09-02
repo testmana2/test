@@ -2371,15 +2371,12 @@ class Editor(QsciScintillaCompat):
                     if ex:
                         fn += ex
                 if QFileInfo(fn).exists():
-                    res = E5MessageBox.warning(self,
+                    res = E5MessageBox.yesNo(self,
                         self.trUtf8("Save File"),
-                        self.trUtf8("<p>The file <b>{0}</b> already exists.</p>")
-                            .format(fn),
-                        QMessageBox.StandardButtons(\
-                            QMessageBox.Abort | \
-                            QMessageBox.Save),
-                        QMessageBox.Abort)
-                    if res == QMessageBox.Abort or res == QMessageBox.Cancel:
+                        self.trUtf8("<p>The file <b>{0}</b> already exists."
+                                    " Overwrite it?</p>").format(fn),
+                        type_ = E5MessageBox.Warning)
+                    if not res:
                         return (False, None)
                 fn = Utilities.toNativeSeparators(fn)
                 newName = fn
@@ -4643,15 +4640,12 @@ class Editor(QsciScintillaCompat):
             if ex:
                 fname += ex
         if QFileInfo(fname).exists():
-            res = E5MessageBox.warning(self,
+            res = E5MessageBox.yesNo(self,
                 self.trUtf8("Save macro"),
-                self.trUtf8("<p>The macro file <b>{0}</b> already exists.</p>")
-                    .format(fname),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort | \
-                    QMessageBox.Save),
-                QMessageBox.Abort)
-            if res == QMessageBox.Abort or res == QMessageBox.Cancel:
+                self.trUtf8("<p>The macro file <b>{0}</b> already exists."
+                            " Overwrite it?</p>").format(fname),
+                type_ = E5MessageBox.Warning)
+            if not res:
                 return
         fname = Utilities.toNativeSeparators(fname)
         

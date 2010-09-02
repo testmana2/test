@@ -8,8 +8,7 @@ Module implementing the chat dialog.
 """
 
 from PyQt4.QtCore import Qt, pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo
-from PyQt4.QtGui import QWidget, QColor, QListWidgetItem, QMenu, QFileDialog, \
-    QMessageBox, QApplication
+from PyQt4.QtGui import QWidget, QColor, QListWidgetItem, QMenu, QFileDialog, QApplication
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -544,15 +543,12 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                     if ex:
                         fname += ex
                 if QFileInfo(fname).exists():
-                    res = E5MessageBox.warning(self,
+                    res = E5MessageBox.yesNo(self,
                         self.trUtf8("Save Chat"),
-                        self.trUtf8("<p>The file <b>{0}</b> already exists.</p>")
-                            .format(fname),
-                        QMessageBox.StandardButtons(\
-                            QMessageBox.Abort | \
-                            QMessageBox.Save),
-                        QMessageBox.Abort)
-                    if res != QMessageBox.Save:
+                        self.trUtf8("<p>The file <b>{0}</b> already exists."
+                                    " Overwrite it?</p>").format(fname),
+                        type_ = E5MessageBox.Warning)
+                    if not res:
                         return
                     fname = Utilities.toNativeSeparators(fname)
                 

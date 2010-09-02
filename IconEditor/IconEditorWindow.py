@@ -1001,15 +1001,12 @@ class IconEditorWindow(QMainWindow):
             if ex:
                 fileName += ex
         if QFileInfo(fileName).exists():
-            res = E5MessageBox.warning(self,
+            res = E5MessageBox.yesNo(self,
                 self.trUtf8("Save icon file"),
-                self.trUtf8("<p>The file <b>{0}</b> already exists.</p>")
-                    .format(fileName),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort | \
-                    QMessageBox.Save),
-                QMessageBox.Abort)
-            if res == QMessageBox.Abort or res == QMessageBox.Cancel:
+                self.trUtf8("<p>The file <b>{0}</b> already exists."
+                            " Overwrite it?</p>").format(fileName),
+                type_ = E5MessageBox.Warning)
+            if not res:
                 return False
         
         return self.__saveIconFile(fileName)

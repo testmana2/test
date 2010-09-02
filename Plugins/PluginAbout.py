@@ -8,7 +8,6 @@ Module implementing the About plugin.
 """
 
 from PyQt4.QtCore import QObject
-from PyQt4.QtGui import QMessageBox
 
 from UI.Info import *
 import UI.PixmapCache

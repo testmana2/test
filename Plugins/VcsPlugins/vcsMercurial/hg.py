@@ -12,7 +12,7 @@ import shutil
 import urllib.request, urllib.parse, urllib.error
 
 from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo
-from PyQt4.QtGui import QMessageBox, QApplication, QDialog, QInputDialog, QFileDialog
+from PyQt4.QtGui import QApplication, QDialog, QInputDialog, QFileDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -1733,16 +1733,13 @@ class Hg(VersionControl):
                 if ex:
                     fname += ex
             if QFileInfo(fname).exists():
-                res = E5MessageBox.warning(self.__ui,
+                res = E5MessageBox.yesNo(self.__ui,
                     self.trUtf8("Create changegroup"),
                     self.trUtf8("<p>The Mercurial changegroup file <b>{0}</b> "
-                                "already exists.</p>")
+                                "already exists. Overwrite it?</p>")
                         .format(fname),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Abort | \
-                        QMessageBox.Save),
-                    QMessageBox.Abort)
-                if res != QMessageBox.Save:
+                    type_ = E5MessageBox.Warning)
+                if not res:
                     return
             fname = Utilities.toNativeSeparators(fname)
             

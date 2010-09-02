@@ -53,15 +53,12 @@ class ExporterBase(QObject):
                 if ex:
                     fn += ex
             if QFileInfo(fn).exists():
-                res = E5MessageBox.warning(self.editor,
+                res = E5MessageBox.yesNo(self.editor,
                     self.trUtf8("Export source"),
-                    self.trUtf8("<p>The file <b>{0}</b> already exists.</p>")
-                        .format(fn),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Abort | \
-                        QMessageBox.Save),
-                    QMessageBox.Abort)
-                if res == QMessageBox.Abort or res == QMessageBox.Cancel:
+                    self.trUtf8("<p>The file <b>{0}</b> already exists."
+                                " Overwrite it?</p>").format(fn),
+                    type_ = E5MessageBox.Warning)
+                if not res:
                     return ""
             
             fn = Utilities.toNativeSeparators(fn)
