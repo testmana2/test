@@ -1741,7 +1741,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot to show the about information.
         """
-        QMessageBox.about(self, self.trUtf8("Eric Web Browser"), self.trUtf8(
+        E5MessageBox.about(self, self.trUtf8("Eric Web Browser"), self.trUtf8(
             """<h3>About Eric Web Browser</h3>"""
             """<p>The Eric Web Browser is a combined help file and HTML browser.</p>"""
         ))
@@ -1750,7 +1750,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot to show info about Qt.
         """
-        QMessageBox.aboutQt(self, self.trUtf8("Eric Web Browser"))
+        E5MessageBox.aboutQt(self, self.trUtf8("Eric Web Browser"))
 
     def __setBackwardAvailable(self, b):
         """

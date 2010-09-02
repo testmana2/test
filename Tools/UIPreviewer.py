@@ -273,7 +273,7 @@ class UIPreviewer(QMainWindow):
         """
         Private slot to show the about information.
         """
-        QMessageBox.about(self, self.trUtf8("UI Previewer"), self.trUtf8(
+        E5MessageBox.about(self, self.trUtf8("UI Previewer"), self.trUtf8(
             """<h3> About UI Previewer </h3>"""
             """<p>The UI Previewer loads and displays Qt User-Interface files"""
             """ with various styles, which are selectable via a selection list.</p>"""
@@ -283,7 +283,7 @@ class UIPreviewer(QMainWindow):
         """
         Private slot to show info about Qt.
         """
-        QMessageBox.aboutQt(self, self.trUtf8("UI Previewer"))
+        E5MessageBox.aboutQt(self, self.trUtf8("UI Previewer"))
 
     def __openFile(self):
         """

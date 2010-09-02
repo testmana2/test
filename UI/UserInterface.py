@@ -2700,7 +2700,7 @@ class UserInterface(QMainWindow):
             .format(Program, Version)
         versionText += self.trUtf8("""</table>""")
         
-        QMessageBox.about(self, Program, versionText)
+        E5MessageBox.about(self, Program, versionText)
         
     def __reportBug(self):
         """
@@ -5592,7 +5592,7 @@ class UserInterface(QMainWindow):
             line += 2
         versionText += self.trUtf8("""</table>""")
         
-        QMessageBox.about(self, Program, versionText)
+        E5MessageBox.about(self, Program, versionText)
         
     def __sslErrors(self, reply, errors):
         """

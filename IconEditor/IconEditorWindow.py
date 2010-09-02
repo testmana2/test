@@ -1209,7 +1209,7 @@ class IconEditorWindow(QMainWindow):
         """
         Private slot to show a little About message.
         """
-        QMessageBox.about(self, self.trUtf8("About eric5 Icon Editor"),
+        E5MessageBox.about(self, self.trUtf8("About eric5 Icon Editor"),
             self.trUtf8("The eric5 Icon Editor is a simple editor component"
                         " to perform icon drawing tasks."))
     
@@ -1217,7 +1217,7 @@ class IconEditorWindow(QMainWindow):
         """
         Private slot to handle the About Qt dialog.
         """
-        QMessageBox.aboutQt(self, "eric5 Icon Editor")
+        E5MessageBox.aboutQt(self, "eric5 Icon Editor")
     
     def __whatsThis(self):
         """

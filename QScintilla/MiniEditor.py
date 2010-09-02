@@ -230,7 +230,7 @@ class MiniEditor(QMainWindow):
         """
         Private slot to show a little About message.
         """
-        QMessageBox.about(self, self.trUtf8("About eric5 Mini Editor"),
+        E5MessageBox.about(self, self.trUtf8("About eric5 Mini Editor"),
             self.trUtf8("The eric5 Mini Editor is an editor component"
                 " based on QScintilla. It may be used for simple"
                 " editing tasks, that don't need the power of"
@@ -240,7 +240,7 @@ class MiniEditor(QMainWindow):
         """
         Private slot to handle the About Qt dialog.
         """
-        QMessageBox.aboutQt(self, "eric5 Mini Editor")
+        E5MessageBox.aboutQt(self, "eric5 Mini Editor")
     
     def __whatsThis(self):
         """

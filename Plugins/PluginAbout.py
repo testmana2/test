@@ -14,6 +14,7 @@ from UI.Info import *
 import UI.PixmapCache
 
 from E5Gui.E5Action import E5Action
+from E5Gui import E5MessageBox
 
 from AboutPlugin.AboutDialog import AboutDialog
 
@@ -124,4 +125,4 @@ class AboutPlugin(QObject):
         """
         Private slot to handle the About Qt dialog.
         """
-        QMessageBox.aboutQt(self.__ui, Program)
+        E5MessageBox.aboutQt(self.__ui, Program)

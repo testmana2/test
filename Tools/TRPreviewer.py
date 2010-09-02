@@ -322,7 +322,7 @@ class TRPreviewer(QMainWindow):
         """
         Private slot to show the about information.
         """
-        QMessageBox.about(self, self.trUtf8("TR Previewer"), self.trUtf8(
+        E5MessageBox.about(self, self.trUtf8("TR Previewer"), self.trUtf8(
             """<h3> About TR Previewer </h3>"""
             """<p>The TR Previewer loads and displays Qt User-Interface files"""
             """ and translation files and shows dialogs for a selected language.</p>"""
@@ -332,7 +332,7 @@ class TRPreviewer(QMainWindow):
         """
         Private slot to show info about Qt.
         """
-        QMessageBox.aboutQt(self, self.trUtf8("TR Previewer"))
+        E5MessageBox.aboutQt(self, self.trUtf8("TR Previewer"))
     
     def __openWidget(self):
         """

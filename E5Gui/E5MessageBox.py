@@ -42,6 +42,10 @@ def __messageBox(parent, title, text, icon,
     else:
         return messageBox.standardButton(clickedButton)
 
+# the about functions are here for consistancy
+about = QMessageBox.about
+aboutQt = QMessageBox.aboutQt
+
 def critical(parent, title, text, 
              buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton):
     """

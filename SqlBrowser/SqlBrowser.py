@@ -165,7 +165,7 @@ class SqlBrowser(QMainWindow):
         """
         Private slot to show the about information.
         """
-        QMessageBox.about(self, self.trUtf8("SQL Browser"), self.trUtf8(
+        E5MessageBox.about(self, self.trUtf8("SQL Browser"), self.trUtf8(
             """<h3>About SQL Browser</h3>"""
             """<p>The SQL browser window is a little tool to examine """
             """the data and the schema of a database and to execute """
@@ -176,4 +176,4 @@ class SqlBrowser(QMainWindow):
         """
         Private slot to show info about Qt.
         """
-        QMessageBox.aboutQt(self, self.trUtf8("SQL Browser"))
+        E5MessageBox.aboutQt(self, self.trUtf8("SQL Browser"))
