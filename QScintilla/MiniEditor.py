@@ -1478,7 +1478,7 @@ class MiniEditor(QMainWindow):
         if self.__textEdit.isModified():
             ret = E5MessageBox.okToClearData(self, 
                     self.trUtf8("eric5 Mini Editor"),
-                    self.trUtf8("The document has been unsaved changes."),
+                    self.trUtf8("The document has unsaved changes."),
                     self.__save)
             return ret
         return True
