@@ -505,7 +505,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                         """<p>{0}</p>"""
                         """<p>Do you want to ignore these errors?</p>""")\
                 .format(errorString),
-            type_ = E5MessageBox.Warning)
+            icon = E5MessageBox.Warning)
         if ret:
             reply.ignoreSslErrors()
         else:

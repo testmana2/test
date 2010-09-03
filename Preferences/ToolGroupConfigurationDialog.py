@@ -111,7 +111,7 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
             self.trUtf8("""<p>Do you really want to delete the tool group"""
                         """ <b>"{0}"</b>?</p>""")\
                 .format(self.groupsList.currentItem().text()),
-            type_ = E5MessageBox.Warning)
+            icon = E5MessageBox.Warning)
         if not res:
             return
         

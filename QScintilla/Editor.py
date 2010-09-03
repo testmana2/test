@@ -287,7 +287,7 @@ class Editor(QsciScintillaCompat):
                                     """ Do you really want to load it?</p>""")\
                                     .format(self.fileName, 
                                             QFileInfo(self.fileName).size() // 1024),
-                        type_ = E5MessageBox.Warning)
+                        icon = E5MessageBox.Warning)
                     if not res:
                         raise IOError()
                 self.readFile(self.fileName, True)
@@ -2366,7 +2366,7 @@ class Editor(QsciScintillaCompat):
                         self.trUtf8("Save File"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fn),
-                        type_ = E5MessageBox.Warning)
+                        icon = E5MessageBox.Warning)
                     if not res:
                         return False
                 fn = Utilities.toNativeSeparators(fn)
@@ -4635,7 +4635,7 @@ class Editor(QsciScintillaCompat):
                 self.trUtf8("Save macro"),
                 self.trUtf8("<p>The macro file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
-                type_ = E5MessageBox.Warning)
+                icon = E5MessageBox.Warning)
             if not res:
                 return
         fname = Utilities.toNativeSeparators(fname)
@@ -4660,7 +4660,7 @@ class Editor(QsciScintillaCompat):
             res = E5MessageBox.yesNo(self, 
                 self.trUtf8("Start Macro Recording"),
                 self.trUtf8("Macro recording is already active. Start new?"),
-                type_ = E5MessageBox.Warning, 
+                icon = E5MessageBox.Warning, 
                 yesDefault = True)
             if res:
                 self.macroRecordingStop()
@@ -4806,7 +4806,7 @@ class Editor(QsciScintillaCompat):
                     yesDefault = False
                 res = E5MessageBox.yesNo(self,
                     self.trUtf8("File changed"), msg,
-                    type_ = E5MessageBox.Warning, 
+                    icon = E5MessageBox.Warning, 
                     yesDefault = yesDefault)
                 if res:
                     self.refresh()

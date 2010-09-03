@@ -10,6 +10,86 @@ Module implementing QMessageBox replacements and more convenience function.
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QMessageBox, QApplication
 
+################################################################################
+##  Mappings to standard QMessageBox                                          ##
+################################################################################
+
+# QMessageBox.Icon
+Critical    = QMessageBox.Critical
+Information = QMessageBox.Information
+Question    = QMessageBox.Question
+Warning     = QMessageBox.Warning
+
+StandardButtons = QMessageBox.StandardButtons
+
+# QMessageBox.StandardButton
+Abort           = QMessageBox.Abort
+Apply           = QMessageBox.Apply
+Cancel          = QMessageBox.Cancel
+Close           = QMessageBox.Close
+Discard         = QMessageBox.Discard
+Help            = QMessageBox.Help
+Ignore          = QMessageBox.Ignore
+No              = QMessageBox.No
+NoToAll         = QMessageBox.NoToAll
+Ok              = QMessageBox.Ok
+Open            = QMessageBox.Open
+Reset           = QMessageBox.Reset
+RestoreDefaults = QMessageBox.RestoreDefaults
+Retry           = QMessageBox.Retry
+Save            = QMessageBox.Save
+SaveAll         = QMessageBox.SaveAll
+Yes             = QMessageBox.Yes
+YesToAll        = QMessageBox.YesToAll
+NoButton        = QMessageBox.NoButton
+
+# QMessageBox.ButtonRole
+AcceptRole      = QMessageBox.AcceptRole
+ActionRole      = QMessageBox.ActionRole
+ApplyRole       = QMessageBox.ApplyRole
+DestructiveRole = QMessageBox.DestructiveRole
+InvalidRole     = QMessageBox.InvalidRole
+HelpRole        = QMessageBox.HelpRole
+NoRole          = QMessageBox.NoRole
+RejectRole      = QMessageBox.RejectRole
+ResetRole       = QMessageBox.ResetRole
+YesRole         = QMessageBox.YesRole
+
+################################################################################
+##  Replacement for the QMessageBox class                                     ##
+################################################################################
+
+class E5MessageBox(QMessageBox):
+    """
+    Class implementing a replacement for QMessageBox.
+    """
+    def __init__(self, icon, title, text, modal = False, 
+                 buttons = QMessageBox.StandardButtons(QMessageBox.NoButton), 
+                 parent = None):
+        """
+        Constructor
+        
+        @param icon type of icon to be shown (QMessageBox.Icon)
+        @param title caption of the message box (string)
+        @param text text to be shown by the message box (string)
+        @keyparam modal flag indicating a modal dialog (boolean)
+        @keyparam buttons set of standard buttons to generate (StandardButtons)
+        @keyparam parent parent widget of the message box (QWidget)
+        """
+        QMessageBox.__init__(self, parent)
+        self.setIcon(icon)
+        if modal and parent is not None:
+            self.setWindowModality(Qt.WindowModal)
+        self.setWindowTitle("{0} - {1}".format(
+            QApplication.applicationName(), title))
+        self.setText(text)
+        if buttons != QMessageBox.NoButton:
+            self.setStandardButtons(buttons)
+
+################################################################################
+##  Replacements for QMessageBox static methods                               ##
+################################################################################
+
 def __messageBox(parent, title, text, icon, 
                  buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton):
     """
@@ -118,59 +198,40 @@ def warning(parent, title, text,
     return __messageBox(parent, title, text, QMessageBox.Warning, 
                         buttons, defaultButton)
 
-Critical    = 0
-Information = 1
-Question    = 2
-Warning     = 3
+################################################################################
+##  Additional convenience functions                                          ##
+################################################################################
 
-def yesNo(parent, title, text, type_ = Question, yesDefault = False):
+def yesNo(parent, title, text, icon = Question, yesDefault = False):
     """
     Function to show a model yes/no message box.
     
     @param parent parent widget of the message box (QWidget)
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
-    @keyparam type_ type of the dialog (Critical, Information, Question or Warning)
+    @keyparam icon icon for the dialog (Critical, Information, Question or Warning)
     @keyparam yesDefault flag indicating that the Yes button should be the default
         button (boolean)
     @return flag indicating the selection of the Yes button (boolean)
     """
-    assert type_ in [Critical, Information, Question, Warning]
-    
-    if type_ == Question:
-        icon = QMessageBox.Question
-    elif type_ == Warning:
-        icon = QMessageBox.Warning
-    elif type_ == Critical:        
-        icon = QMessageBox.Critical
-    elif type_ == Information:
-        icon = QMessageBox.Information
+    assert icon in [Critical, Information, Question, Warning]
     
     res = __messageBox(parent, title, text, icon, 
                        QMessageBox.StandardButtons(QMessageBox.Yes | QMessageBox.No), 
                        yesDefault and QMessageBox.Yes or QMessageBox.No)
     return res == QMessageBox.Yes
 
-def retryAbort(parent, title, text, type_ = Question):
+def retryAbort(parent, title, text, icon = Question):
     """
     Function to show a model abort/retry message box.
     
     @param parent parent widget of the message box (QWidget)
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
-    @keyparam type_ type of the dialog (Critical, Information, Question or Warning)
+    @keyparam icon icon for the dialog (Critical, Information, Question or Warning)
     @return flag indicating the selection of the Retry button (boolean)
     """
-    assert type_ in [Critical, Information, Question, Warning]
-    
-    if type_ == Question:
-        icon = QMessageBox.Question
-    elif type_ == Warning:
-        icon = QMessageBox.Warning
-    elif type_ == Critical:        
-        icon = QMessageBox.Critical
-    elif type_ == Information:
-        icon = QMessageBox.Information
+    assert icon in [Critical, Information, Question, Warning]
     
     res = __messageBox(parent, title, text, icon, 
                     QMessageBox.StandardButtons(QMessageBox.Retry | QMessageBox.Abort), 

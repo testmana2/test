@@ -2781,12 +2781,11 @@ class UserInterface(QMainWindow):
         if Preferences.getUI("CheckErrorLog"):
             logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
             if os.path.exists(logFile):
-                dlg = QMessageBox(QMessageBox.Question, 
+                dlg = E5MessageBox.E5MessageBox(E5MessageBox.Question, 
                     self.trUtf8("Error log found"), 
                     self.trUtf8("An error log file was found. "
-                                "What should be done with it?"))
-                dlg.setParent(self)
-                dlg.setWindowModality(Qt.WindowModal)
+                                "What should be done with it?"), 
+                    modal = True, parent = self)
                 try:
                     f = open(logFile, "r", encoding = "utf-8")
                     txt = f.read()
@@ -2796,13 +2795,13 @@ class UserInterface(QMainWindow):
                     pass
                 emailButton = \
                     dlg.addButton(self.trUtf8("Send Bug Email"), 
-                                  QMessageBox.AcceptRole)
+                                  E5MessageBox.AcceptRole)
                 deleteButton = \
                     dlg.addButton(self.trUtf8("Ignore and Delete"), 
-                                  QMessageBox.AcceptRole)
+                                  E5MessageBox.AcceptRole)
                 keepButton = \
                     dlg.addButton(self.trUtf8("Ignore but Keep"), 
-                                  QMessageBox.AcceptRole)
+                                  E5MessageBox.AcceptRole)
                 dlg.setDefaultButton(emailButton)
                 dlg.setEscapeButton(keepButton)
                 dlg.exec_()
@@ -5611,7 +5610,7 @@ class UserInterface(QMainWindow):
                         """<p>{0}</p>"""
                         """<p>Do you want to ignore these errors?</p>""")\
                 .format(errorString),
-            type_ = E5MessageBox.Warning)
+            icon = E5MessageBox.Warning)
         if ret:
             reply.ignoreSslErrors()
         else:

@@ -1005,7 +1005,7 @@ class IconEditorWindow(QMainWindow):
                 self.trUtf8("Save icon file"),
                 self.trUtf8("<p>The file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fileName),
-                type_ = E5MessageBox.Warning)
+                icon = E5MessageBox.Warning)
             if not res:
                 return False
         

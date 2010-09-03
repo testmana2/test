@@ -571,7 +571,7 @@ class DebugServer(QTcpServer):
                 self.trUtf8("""<p>A connection was attempted by the"""
                     """ illegal host <b>{0}</b>. Accept this connection?</p>""")\
                     .format(peerAddress),
-                type_ = E5MessageBox.Warning)
+                icon = E5MessageBox.Warning)
             if not res:
                 sock.abort()
                 return

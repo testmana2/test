@@ -547,7 +547,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                         self.trUtf8("Save Chat"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fname),
-                        type_ = E5MessageBox.Warning)
+                        icon = E5MessageBox.Warning)
                     if not res:
                         return
                     fname = Utilities.toNativeSeparators(fname)

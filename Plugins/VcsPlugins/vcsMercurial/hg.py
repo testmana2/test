@@ -1676,7 +1676,7 @@ class Hg(VersionControl):
                 self.trUtf8("Create .hgignore file"),
                 self.trUtf8("""<p>The file <b>{0}</b> exists already."""
                             """ Overwrite it?</p>""").format(ignoreName),
-                type_ = E5MessageBox.Warning)
+                icon = E5MessageBox.Warning)
         else:
             res = True
         if res:
@@ -1738,7 +1738,7 @@ class Hg(VersionControl):
                     self.trUtf8("<p>The Mercurial changegroup file <b>{0}</b> "
                                 "already exists. Overwrite it?</p>")
                         .format(fname),
-                    type_ = E5MessageBox.Warning)
+                    icon = E5MessageBox.Warning)
                 if not res:
                     return
             fname = Utilities.toNativeSeparators(fname)

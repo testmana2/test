@@ -514,7 +514,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             res = E5MessageBox.yesNo(self,
                 self.trUtf8("New Form"),
                 self.trUtf8("The file already exists! Overwrite it?"),
-                type_ = E5MessageBox.Warning)
+                icon = E5MessageBox.Warning)
             if not res:
                 # user selected to not overwrite
                 return

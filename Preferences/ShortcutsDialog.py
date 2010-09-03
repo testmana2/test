@@ -300,7 +300,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                     """ to the <b>{1}</b> action. """
                                     """Remove this binding?</p>""")
                                     .format(keystr, itm.text(0)),
-                                type_ = E5MessageBox.Warning)
+                                icon = E5MessageBox.Warning)
                             if res:
                                 itm.setText(col, "")
                                 return True
@@ -318,7 +318,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                     """<p><b>{0}</b> hides the <b>{1}</b> action. """
                                     """Remove this binding?</p>""")
                                     .format(keystr, itm.text(0)),
-                                type_ = E5MessageBox.Warning)
+                                icon = E5MessageBox.Warning)
                             if res:
                                 itm.setText(col, "")
                                 return True
@@ -334,7 +334,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                     """<b>{1}</b> action. """
                                     """Remove this binding?</p>""")
                                     .format(keystr, itm.text(0)),
-                                type_ = E5MessageBox.Warning)
+                                icon = E5MessageBox.Warning)
                             if res:
                                 itm.setText(col, "")
                                 return True

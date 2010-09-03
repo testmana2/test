@@ -10,7 +10,6 @@ Module implementing the password manager.
 import os
 
 from PyQt4.QtCore import *
-from PyQt4.QtGui import QMessageBox
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import *
 
@@ -374,16 +373,17 @@ class PasswordManager(QObject):
         # prompt, if the form has never be seen
         key = self.__createKey(url, "")
         if key not in self.__loginForms:
-            mb = QMessageBox()
-            mb.setText(self.trUtf8(
-                """<b>Would you like to save this password?</b><br/>"""
-                """To review passwords you have saved and remove them, """
-                """use the password management dialog of the Settings menu."""
-            ))
+            mb = E5MessageBox.E5MessageBox(E5MessageBox.Question,
+                self.trUtf8("Save password"), 
+                self.trUtf8(
+                    """<b>Would you like to save this password?</b><br/>"""
+                    """To review passwords you have saved and remove them, """
+                    """use the password management dialog of the Settings menu."""), 
+                modal = True)
             neverButton = mb.addButton(
-                self.trUtf8("Never for this site"), QMessageBox.DestructiveRole)
-            noButton = mb.addButton(self.trUtf8("Not now"), QMessageBox.RejectRole)
-            mb.addButton(QMessageBox.Yes)
+                self.trUtf8("Never for this site"), E5MessageBox.DestructiveRole)
+            noButton = mb.addButton(self.trUtf8("Not now"), E5MessageBox.RejectRole)
+            mb.addButton(E5MessageBox.Yes)
             mb.exec_()
             if mb.clickedButton() == neverButton:
                 self.__never.append(url.toString())

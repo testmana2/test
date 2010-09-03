@@ -341,7 +341,7 @@ class UMLGraphicsView(E5GraphicsView):
                     self.trUtf8("Save Diagram"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                                 " Overwrite it?</p>").format(fname),
-                    type_ = E5MessageBox.Warning)
+                    icon = E5MessageBox.Warning)
                 if not res:
                     return
             

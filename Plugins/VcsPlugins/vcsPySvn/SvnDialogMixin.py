@@ -8,7 +8,6 @@ Module implementing a dialog mixin class providing common callback methods for
 the pysvn client.
 """
 
-from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QApplication, QDialog, QWidget, QCursor
 
 class SvnDialogMixin(object):
@@ -86,13 +85,13 @@ class SvnDialogMixin(object):
             acceptedFailures should indicate the accepted certificate failures
             and save should be True, if subversion should save the certificate.
         """
-        from PyQt4.QtGui import QMessageBox
-        
+        from E5Gui import E5MessageBox
+
         cursor = QCursor(QApplication.overrideCursor())
         if cursor is not None:
             QApplication.restoreOverrideCursor()
         parent = isinstance(self, QWidget) and self or None
-        msgBox = QMessageBox.QMessageBox(QMessageBox.Question,
+        msgBox = E5MessageBox.E5MessageBox(E5MessageBox.Question,
             self.trUtf8("Subversion SSL Server Certificate"),
             self.trUtf8("""<p>Accept the following SSL certificate?</p>"""
                         """<table>"""
@@ -109,15 +108,12 @@ class SvnDialogMixin(object):
                         trust_dict["valid_from"], 
                         trust_dict["valid_until"], 
                         trust_dict["issuer_dname"]),
-            QMessageBox.StandardButtons(QMessageBox.NoButton),
-            parent)
-        if parent is not None:
-            msgBox.setWindowModality(Qt.WindowModal)
+            modal = True, parent = parent)
         permButton = msgBox.addButton(self.trUtf8("&Permanent accept"), 
-                                      QMessageBox.AcceptRole)
+                                      E5MessageBox.AcceptRole)
         tempButton = msgBox.addButton(self.trUtf8("&Temporary accept"), 
-                                      QMessageBox.AcceptRole)
-        msgBox.addButton(self.trUtf8("&Reject"), QMessageBox.RejectRole)
+                                      E5MessageBox.AcceptRole)
+        msgBox.addButton(self.trUtf8("&Reject"), E5MessageBox.RejectRole)
         msgBox.exec_()
         if cursor is not None:
             QApplication.setOverrideCursor(cursor)

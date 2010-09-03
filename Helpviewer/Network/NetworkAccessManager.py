@@ -209,7 +209,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                         """<ul><li>{1}</li></ul></p>"""
                         """<p>Do you want to ignore these errors?</p>""")\
                 .format(reply.url().toString(), errorString),
-            type_ = E5MessageBox.Warning)
+            icon = E5MessageBox.Warning)
         
         if ret:
             if len(caNew) > 0:

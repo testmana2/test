@@ -1758,7 +1758,7 @@ class Project(QObject):
                                     self.trUtf8("<p>The file <b>{0}</b> already"
                                         " exists.</p><p>Overwrite it?</p>")
                                         .format(targetfile),
-                                    type_ = E5MessageBox.Warning)
+                                    icon = E5MessageBox.Warning)
                                 if not res:
                                     return  # don't overwrite
                                     
@@ -1833,7 +1833,7 @@ class Project(QObject):
                             self.trUtf8("<p>The file <b>{0}</b> already exists.</p>"
                                         "<p>Overwrite it?</p>")
                                 .format(targetfile),
-                            type_ = E5MessageBox.Warning)
+                            icon = E5MessageBox.Warning)
                         if not res:
                             continue  # don't overwrite, carry on with next file
                             
@@ -2023,7 +2023,7 @@ class Project(QObject):
                 self.trUtf8("""<p>The file <b>{0}</b> already exists."""
                             """ Overwrite it?</p>""")
                     .format(newfn),
-                type_ = E5MessageBox.Warning)
+                icon = E5MessageBox.Warning)
             if not res:
                 return False
         
@@ -2878,7 +2878,7 @@ class Project(QObject):
                     self.trUtf8("Save File"),
                     self.trUtf8("""<p>The file <b>{0}</b> already exists."""
                                 """ Overwrite it?</p>""").format(fn),
-                    type_ = E5MessageBox.Warning)
+                    icon = E5MessageBox.Warning)
                 if not res:
                     return False
                 
@@ -4442,7 +4442,7 @@ class Project(QObject):
                 self.trUtf8("Create Package List"),
                 self.trUtf8("<p>The file <b>PKGLIST</b> already"
                     " exists.</p><p>Overwrite it?</p>"),
-                type_ = E5MessageBox.Warning)
+                icon = E5MessageBox.Warning)
             if not res:
                 return  # don't overwrite
         

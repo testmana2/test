@@ -109,7 +109,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
                                 """documentation you are attempting to remove. """
                                 """Removing the documentation will close those """
                                 """documents. Remove anyway?"""),
-                    type_ = E5MessageBox.Warning)
+                    icon = E5MessageBox.Warning)
                 if not res:
                     return
             self.__unregisteredDocs.append(ns)

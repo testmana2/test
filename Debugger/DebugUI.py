@@ -999,18 +999,18 @@ class DebugUI(QObject):
             if stackTrace:
                 self.viewmanager.setFileLine(stackTrace[0][0], stackTrace[0][1], True)
             if Preferences.getDebugger("BreakAlways"):
-                res = QMessageBox.Yes
+                res = E5MessageBox.Yes
             else:
                 if stackTrace:
                     if exceptionType.startswith('unhandled'):
-                        buttons = QMessageBox.StandardButtons(\
-                            QMessageBox.No | \
-                            QMessageBox.Yes)
+                        buttons = E5MessageBox.StandardButtons(\
+                            E5MessageBox.No | \
+                            E5MessageBox.Yes)
                     else:
-                        buttons = QMessageBox.StandardButtons(\
-                            QMessageBox.No | \
-                            QMessageBox.Yes | \
-                            QMessageBox.Ignore)
+                        buttons = E5MessageBox.StandardButtons(\
+                            E5MessageBox.No | \
+                            E5MessageBox.Yes | \
+                            E5MessageBox.Ignore)
                     res = E5MessageBox.critical(self.ui, Program,
                         self.trUtf8('<p>The debugged program raised the exception'
                                     ' <b>{0}</b><br>"<b>{1}</b>"<br>File: <b>{2}</b>,'
@@ -1020,14 +1020,14 @@ class DebugUI(QObject):
                                     stackTrace[0][0], 
                                     stackTrace[0][1]),
                         buttons,
-                        QMessageBox.No)
+                        E5MessageBox.No)
                 else:
                     res = E5MessageBox.critical(self.ui, Program,
                         self.trUtf8('<p>The debugged program raised the exception'
                                     ' <b>{0}</b><br>"<b>{1}</b>"</p>')
                             .format(exceptionType, 
                                     Utilities.html_encode(exceptionMessage)))
-            if res == QMessageBox.Yes:
+            if res == E5MessageBox.Yes:
                 self.exceptionInterrupt.emit()
                 stack = []
                 for fn, ln in stackTrace:
@@ -1036,7 +1036,7 @@ class DebugUI(QObject):
                 self.__getClientVariables()
                 self.ui.setDebugProfile()
                 return
-            elif res == QMessageBox.Ignore:
+            elif res == E5MessageBox.Ignore:
                 if exceptionType not in self.excIgnoreList:
                     self.excIgnoreList.append(exceptionType)
         
