@@ -96,7 +96,7 @@ class QsciScintillaCompat(QsciScintilla):
         except AttributeError:
             rangeHigh = list(range(40, 128))
         
-        f = font.family()
+        f = font.family().encode()
         ps = font.pointSize()
         for style in rangeLow + rangeHigh:
             self.SendScintilla(QsciScintilla.SCI_STYLESETFONT, style, f)
