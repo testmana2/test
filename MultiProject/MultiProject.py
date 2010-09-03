@@ -624,21 +624,13 @@ class MultiProject(QObject):
         @return flag indicating whether this operation was successful (boolean)
         """
         if self.isDirty():
-            res = E5MessageBox.warning(self.parent(), 
+            res = E5MessageBox.okToClearData(self.parent(), 
                 self.trUtf8("Close Multiproject"),
                 self.trUtf8("The current multiproject has unsaved changes."),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort | \
-                    QMessageBox.Discard | \
-                    QMessageBox.Save),
-                QMessageBox.Save)
-            if res == QMessageBox.Save:
-                return self.saveMultiProject()
-            elif res == QMessageBox.Discard:
+                self.saveMultiProject)
+            if res:
                 self.setDirty(False)
-                return True
-            elif res == QMessageBox.Abort:
-                return False
+            return res
         
         return True
     

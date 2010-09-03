@@ -1116,17 +1116,11 @@ class IconEditorWindow(QMainWindow):
         @return flag indicating, if it is ok to continue (boolean)
         """
         if self.__editor.isDirty():
-            ret = E5MessageBox.warning(self,
+            ret = E5MessageBox.okToClearData(self,
                 self.trUtf8("eric5 Icon Editor"),
-                self.trUtf8("""The icon image has unsaved changes."""),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort | \
-                    QMessageBox.Discard | \
-                    QMessageBox.Save),
-                QMessageBox.Save)
-            if ret == QMessageBox.Save:
-                return self.__saveIcon()
-            elif ret == QMessageBox.Abort:
+                self.trUtf8("""The icon image has unsaved changes."""), 
+                self.__saveIcon)
+            if not ret:
                 return False
         return True
     

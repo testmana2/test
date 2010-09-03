@@ -1476,18 +1476,11 @@ class MiniEditor(QMainWindow):
         @return flag indicating, if it is ok to continue (boolean)
         """
         if self.__textEdit.isModified():
-            ret = E5MessageBox.warning(self, 
+            ret = E5MessageBox.okToClearData(self, 
                     self.trUtf8("eric5 Mini Editor"),
                     self.trUtf8("The document has been unsaved changes."),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Abort | \
-                        QMessageBox.Discard | \
-                        QMessageBox.Save),
-                    QMessageBox.Save)
-            if ret == QMessageBox.Save:
-                return self.__save()
-            elif ret == QMessageBox.Abort:
-                return False
+                    self.__save)
+            return ret
         return True
     
     def __loadFile(self, fileName, filetype = None):

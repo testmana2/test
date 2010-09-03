@@ -14,7 +14,7 @@ from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5FileDialog
+from E5Gui import E5FileDialog, E5MessageBox
 
 from Globals import recentNameFiles
 
@@ -2995,25 +2995,17 @@ class ViewManager(QObject):
                 fn = editor.getNoName()
                 autosave = False
             if autosave:
-                res = QMessageBox.Save
+                res = editor.saveFile()
             else:
-                res = E5MessageBox.warning(self.ui,
+                res = E5MessageBox.okToClearData(self.ui,
                     QApplication.translate('ViewManager', "File Modified"),
                     QApplication.translate('ViewManager', 
                         """<p>The file <b>{0}</b> has unsaved changes.</p>""")
                         .format(fn),
-                    QMessageBox.StandardButtons(\
-                        QMessageBox.Abort | \
-                        QMessageBox.Discard | \
-                        QMessageBox.Save),
-                    QMessageBox.Save)
-            if res == QMessageBox.Save:
-                ok = editor.saveFile()
-                if ok:
-                    self.setEditorName(editor, editor.getFileName())
-                return ok
-            elif res == QMessageBox.Abort:
-                return False
+                    editor.saveFile)
+            if res:
+                self.setEditorName(editor, editor.getFileName())
+            return res
         
         return True
         

@@ -2176,22 +2176,14 @@ class Editor(QsciScintillaCompat):
             fn = self.fileName
             if fn is None:
                 fn = self.noName
-            res = E5MessageBox.warning(self.vm, 
+            res = E5MessageBox.okToClearData(self, 
                 self.trUtf8("File Modified"),
                 self.trUtf8("<p>The file <b>{0}</b> has unsaved changes.</p>")
                     .format(fn),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort | \
-                    QMessageBox.Discard | \
-                    QMessageBox.Save),
-                QMessageBox.Save)
-            if res == QMessageBox.Save:
-                ok = self.saveFile()
-                if ok:
-                    self.vm.setEditorName(self, self.fileName)
-                return ok
-            elif res == QMessageBox.Abort:
-                return False
+                self.saveFile)
+            if res:
+                self.vm.setEditorName(self, self.fileName)
+            return res
         
         return True
         

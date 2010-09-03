@@ -150,3 +150,24 @@ def yesNo(parent, title, text, type_ = Question, yesDefault = False):
                        QMessageBox.StandardButtons(QMessageBox.Yes | QMessageBox.No), 
                        yesDefault and QMessageBox.Yes or QMessageBox.No)
     return res == QMessageBox.Yes
+
+def okToClearData(parent, title, text, saveFunc):
+    """
+    Function to show a model message box to ask for clearing the data.
+    
+    @param parent parent widget of the message box (QWidget)
+    @param title caption of the message box (string)
+    @param text text to be shown by the message box (string)
+    @param saveFunc reference to a function performing the save action. It
+        must be a parameterless function returning a flag indicating success.
+    @return flag indicating that it is ok to clear the data (boolean)
+    """
+    res = __messageBox(parent, title, text, QMessageBox.Warning, 
+        QMessageBox.StandardButtons(
+            QMessageBox.Abort | QMessageBox.Discard | QMessageBox.Save), 
+        QMessageBox.Save)
+    if res == QMessageBox.Abort:
+        return False
+    if res == QMessageBox.Save:
+        return saveFunc()
+    return True
