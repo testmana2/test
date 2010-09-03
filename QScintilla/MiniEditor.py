@@ -1478,16 +1478,15 @@ class MiniEditor(QMainWindow):
         if self.__textEdit.isModified():
             ret = E5MessageBox.warning(self, 
                     self.trUtf8("eric5 Mini Editor"),
-                    self.trUtf8("The document has been modified.\n"
-                            "Do you want to save your changes?"),
+                    self.trUtf8("The document has been unsaved changes."),
                     QMessageBox.StandardButtons(\
-                        QMessageBox.Cancel | \
-                        QMessageBox.No | \
-                        QMessageBox.Yes),
-                    QMessageBox.Cancel)
-            if ret == QMessageBox.Yes:
+                        QMessageBox.Abort | \
+                        QMessageBox.Discard | \
+                        QMessageBox.Save),
+                    QMessageBox.Save)
+            if ret == QMessageBox.Save:
                 return self.__save()
-            elif ret == QMessageBox.Cancel:
+            elif ret == QMessageBox.Abort:
                 return False
         return True
     

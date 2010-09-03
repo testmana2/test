@@ -639,7 +639,7 @@ class MultiProject(QObject):
                 return True
             elif res == QMessageBox.Abort:
                 return False
-            
+        
         return True
     
     def closeMultiProject(self):

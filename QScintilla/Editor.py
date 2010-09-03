@@ -2190,7 +2190,7 @@ class Editor(QsciScintillaCompat):
                 if ok:
                     self.vm.setEditorName(self, newName)
                 return ok
-            elif res == QMessageBox.Abort or res == QMessageBox.Cancel:
+            elif res == QMessageBox.Abort:
                 return False
         
         return True
