@@ -3008,9 +3008,9 @@ class ViewManager(QObject):
                         QMessageBox.Save),
                     QMessageBox.Save)
             if res == QMessageBox.Save:
-                ok, newName = editor.saveFile()
+                ok = editor.saveFile()
                 if ok:
-                    self.setEditorName(editor, newName)
+                    self.setEditorName(editor, editor.getFileName())
                 return ok
             elif res == QMessageBox.Abort:
                 return False
@@ -3441,7 +3441,7 @@ class ViewManager(QObject):
         if not editor.isModified():
             return True
         else:
-            ok = editor.saveFile()[0]
+            ok = editor.saveFile()
             return ok
         
     def saveEditorEd(self, ed):
@@ -3455,9 +3455,9 @@ class ViewManager(QObject):
             if not ed.isModified():
                 return True
             else:
-                ok, newName = ed.saveFile()
+                ok = ed.saveFile()
                 if ok:
-                    self.setEditorName(ed, newName)
+                    self.setEditorName(ed, ed.getFileName())
                 return ok
         else:
             return False
@@ -3496,18 +3496,18 @@ class ViewManager(QObject):
         @param editors list of editors to be saved
         """
         for editor in editors:
-            ok, newName = editor.saveFile()
+            ok = editor.saveFile()
             if ok:
-                self.setEditorName(editor, newName)
+                self.setEditorName(editor, editor.getFileName())
         
     def saveAllEditors(self):
         """
         Public slot to save the contents of all editors.
         """
         for editor in self.editors:
-            ok, newName = editor.saveFile()
+            ok = editor.saveFile()
             if ok:
-                self.setEditorName(editor, newName)
+                self.setEditorName(editor, editor.getFileName())
         
         # restart autosave timer
         if self.autosaveInterval > 0:
@@ -4638,9 +4638,9 @@ class ViewManager(QObject):
         """
         for editor in self.editors:
             if editor.shouldAutosave():
-                ok, newName = editor.saveFile()
+                ok = editor.saveFile()
                 if ok:
-                    self.setEditorName(editor, newName)
+                    self.setEditorName(editor, editor.getFileName())
         
         # restart autosave timer
         if self.autosaveInterval > 0:

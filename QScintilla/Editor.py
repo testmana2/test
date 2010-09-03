@@ -2186,9 +2186,9 @@ class Editor(QsciScintillaCompat):
                     QMessageBox.Save),
                 QMessageBox.Save)
             if res == QMessageBox.Save:
-                ok, newName = self.saveFile()
+                ok = self.saveFile()
                 if ok:
-                    self.vm.setEditorName(self, newName)
+                    self.vm.setEditorName(self, self.fileName)
                 return ok
             elif res == QMessageBox.Abort:
                 return False
@@ -2342,11 +2342,10 @@ class Editor(QsciScintillaCompat):
         
         @param saveas flag indicating a 'save as' action (boolean)
         @param path directory to save the file in (string)
-        @return tuple of two values (boolean, string) giving a success indicator and
-            the name of the saved file
+        @return flag indicating success (boolean)
         """
         if not saveas and not self.isModified():
-            return (False, None)      # do nothing if text wasn't changed
+            return False      # do nothing if text wasn't changed
             
         newName = None
         if saveas or self.fileName is None:
@@ -2377,11 +2376,11 @@ class Editor(QsciScintillaCompat):
                                     " Overwrite it?</p>").format(fn),
                         type_ = E5MessageBox.Warning)
                     if not res:
-                        return (False, None)
+                        return False
                 fn = Utilities.toNativeSeparators(fn)
                 newName = fn
             else:
-                return (False, None)
+                return False
         else:
             fn = self.fileName
         
@@ -2406,10 +2405,10 @@ class Editor(QsciScintillaCompat):
             self.editorSaved.emit(self.fileName)
             self.__autoSyntaxCheck()
             self.extractTasks()
-            return (True, self.fileName)
+            return True
         else:
             self.lastModified = QFileInfo(fn).lastModified()
-            return (False, None)
+            return False
         
     def saveFileAs(self, path = None, toProject = False):
         """
@@ -3971,9 +3970,9 @@ class Editor(QsciScintillaCompat):
         """
         Private slot handling the save context menu entry.
         """
-        ok, newName = self.saveFile()
+        ok = self.saveFile()
         if ok:
-            self.vm.setEditorName(self, newName)
+            self.vm.setEditorName(self, self.fileName)
         
     def __contextSaveAs(self):
         """
