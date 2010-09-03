@@ -119,6 +119,7 @@
             <section title="eric5.E5Gui.E5Led" ref="eric5.E5Gui.E5Led.html" />
             <section title="eric5.E5Gui.E5LineEdit" ref="eric5.E5Gui.E5LineEdit.html" />
             <section title="eric5.E5Gui.E5ListView" ref="eric5.E5Gui.E5ListView.html" />
+            <section title="eric5.E5Gui.E5MessageBox" ref="eric5.E5Gui.E5MessageBox.html" />
             <section title="eric5.E5Gui.E5ModelMenu" ref="eric5.E5Gui.E5ModelMenu.html" />
             <section title="eric5.E5Gui.E5ModelToolBar" ref="eric5.E5Gui.E5ModelToolBar.html" />
             <section title="eric5.E5Gui.E5SideBar" ref="eric5.E5Gui.E5SideBar.html" />
@@ -4439,6 +4440,17 @@
       <keyword name="E5TreeSortFilterProxyModel (Constructor)" id="E5TreeSortFilterProxyModel (Constructor)" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html#E5TreeSortFilterProxyModel.__init__" />
       <keyword name="E5TreeSortFilterProxyModel.filterAcceptsRow" id="E5TreeSortFilterProxyModel.filterAcceptsRow" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html#E5TreeSortFilterProxyModel.filterAcceptsRow" />
       <keyword name="E5TreeSortFilterProxyModel.hasChildren" id="E5TreeSortFilterProxyModel.hasChildren" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html#E5TreeSortFilterProxyModel.hasChildren" />
+      <keyword name="E5MessageBox (Module)" id="E5MessageBox (Module)" ref="eric5.E5Gui.E5MessageBox.html" />
+      <keyword name="E5MessageBox" id="E5MessageBox" ref="eric5.E5Gui.E5MessageBox.html#E5MessageBox" />
+      <keyword name="__messageBox" id="__messageBox" ref="eric5.E5Gui.E5MessageBox.html#__messageBox" />
+      <keyword name="critical" id="critical" ref="eric5.E5Gui.E5MessageBox.html#critical" />
+      <keyword name="information" id="information" ref="eric5.E5Gui.E5MessageBox.html#information" />
+      <keyword name="okToClearData" id="okToClearData" ref="eric5.E5Gui.E5MessageBox.html#okToClearData" />
+      <keyword name="question" id="question" ref="eric5.E5Gui.E5MessageBox.html#question" />
+      <keyword name="retryAbort" id="retryAbort" ref="eric5.E5Gui.E5MessageBox.html#retryAbort" />
+      <keyword name="warning" id="warning" ref="eric5.E5Gui.E5MessageBox.html#warning" />
+      <keyword name="yesNo" id="yesNo" ref="eric5.E5Gui.E5MessageBox.html#yesNo" />
+      <keyword name="E5MessageBox (Constructor)" id="E5MessageBox (Constructor)" ref="eric5.E5Gui.E5MessageBox.html#E5MessageBox.__init__" />
       <keyword name="E5TabWidget (Module)" id="E5TabWidget (Module)" ref="eric5.E5Gui.E5TabWidget.html" />
       <keyword name="E5DnDTabBar" id="E5DnDTabBar" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar" />
       <keyword name="E5TabWidget" id="E5TabWidget" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget" />
@@ -9857,6 +9869,7 @@
       <file>eric5.E5Gui.E5Led.html</file>
       <file>eric5.E5Gui.E5LineEdit.html</file>
       <file>eric5.E5Gui.E5ListView.html</file>
+      <file>eric5.E5Gui.E5MessageBox.html</file>
       <file>eric5.E5Gui.E5ModelMenu.html</file>
       <file>eric5.E5Gui.E5ModelToolBar.html</file>
       <file>eric5.E5Gui.E5SideBar.html</file>

@@ -1151,6 +1151,50 @@ eric5.E5Gui.E5LineEdit.E5LineEdit?1(parent = None, inactiveText = "")
 eric5.E5Gui.E5ListView.E5ListView.keyPressEvent?4(evt)
 eric5.E5Gui.E5ListView.E5ListView.removeAll?4()
 eric5.E5Gui.E5ListView.E5ListView.removeSelected?4()
+eric5.E5Gui.E5MessageBox.Abort?7
+eric5.E5Gui.E5MessageBox.AcceptRole?7
+eric5.E5Gui.E5MessageBox.ActionRole?7
+eric5.E5Gui.E5MessageBox.Apply?7
+eric5.E5Gui.E5MessageBox.ApplyRole?7
+eric5.E5Gui.E5MessageBox.Cancel?7
+eric5.E5Gui.E5MessageBox.Close?7
+eric5.E5Gui.E5MessageBox.Critical?7
+eric5.E5Gui.E5MessageBox.DestructiveRole?7
+eric5.E5Gui.E5MessageBox.Discard?7
+eric5.E5Gui.E5MessageBox.E5MessageBox?1(icon, title, text, modal = False, buttons = QMessageBox.StandardButtons(QMessageBox.NoButton), parent = None)
+eric5.E5Gui.E5MessageBox.Help?7
+eric5.E5Gui.E5MessageBox.HelpRole?7
+eric5.E5Gui.E5MessageBox.Ignore?7
+eric5.E5Gui.E5MessageBox.Information?7
+eric5.E5Gui.E5MessageBox.InvalidRole?7
+eric5.E5Gui.E5MessageBox.No?7
+eric5.E5Gui.E5MessageBox.NoButton?7
+eric5.E5Gui.E5MessageBox.NoRole?7
+eric5.E5Gui.E5MessageBox.NoToAll?7
+eric5.E5Gui.E5MessageBox.Ok?7
+eric5.E5Gui.E5MessageBox.Open?7
+eric5.E5Gui.E5MessageBox.Question?7
+eric5.E5Gui.E5MessageBox.RejectRole?7
+eric5.E5Gui.E5MessageBox.Reset?7
+eric5.E5Gui.E5MessageBox.ResetRole?7
+eric5.E5Gui.E5MessageBox.RestoreDefaults?7
+eric5.E5Gui.E5MessageBox.Retry?7
+eric5.E5Gui.E5MessageBox.Save?7
+eric5.E5Gui.E5MessageBox.SaveAll?7
+eric5.E5Gui.E5MessageBox.StandardButtons?7
+eric5.E5Gui.E5MessageBox.Warning?7
+eric5.E5Gui.E5MessageBox.Yes?7
+eric5.E5Gui.E5MessageBox.YesRole?7
+eric5.E5Gui.E5MessageBox.YesToAll?7
+eric5.E5Gui.E5MessageBox.about?7
+eric5.E5Gui.E5MessageBox.aboutQt?7
+eric5.E5Gui.E5MessageBox.critical?4(parent, title, text, buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton)
+eric5.E5Gui.E5MessageBox.information?4(parent, title, text, buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton)
+eric5.E5Gui.E5MessageBox.okToClearData?4(parent, title, text, saveFunc)
+eric5.E5Gui.E5MessageBox.question?4(parent, title, text, buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton)
+eric5.E5Gui.E5MessageBox.retryAbort?4(parent, title, text, icon = Question)
+eric5.E5Gui.E5MessageBox.warning?4(parent, title, text, buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton)
+eric5.E5Gui.E5MessageBox.yesNo?4(parent, title, text, icon = Question, yesDefault = False)
 eric5.E5Gui.E5ModelMenu.E5ModelMenu.activated?7
 eric5.E5Gui.E5ModelMenu.E5ModelMenu.createBaseMenu?4()
 eric5.E5Gui.E5ModelMenu.E5ModelMenu.createMenu?4(parent, max_, parentMenu = None, menu = None)
@@ -6277,7 +6321,7 @@ eric5.VCS.VersionControl.VersionControl.vcsStatusMonitorStatus?7
 eric5.VCS.VersionControl.VersionControl.vcsSwitch?4(name)
 eric5.VCS.VersionControl.VersionControl.vcsTag?4(name)
 eric5.VCS.VersionControl.VersionControl.vcsUpdate?4(name, noDialog = False)
-eric5.VCS.VersionControl.VersionControl?1(parent=None, name=None)
+eric5.VCS.VersionControl.VersionControl?1(parent = None, name = None)
 eric5.VCS.factory?4(vcs)
 eric5.ViewManager.BookmarkedFilesDialog.BookmarkedFilesDialog.getBookmarkedFiles?4()
 eric5.ViewManager.BookmarkedFilesDialog.BookmarkedFilesDialog.on_addButton_clicked?4()
