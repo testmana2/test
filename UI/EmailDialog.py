@@ -282,15 +282,12 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                     server.login(Preferences.getUser("MailServerUser"),
                                  password)
                 except (smtplib.SMTPException, socket.error) as e:
-                    res = E5MessageBox.critical(self,
+                    res = E5MessageBox.retryAbort(self,
                         self.trUtf8("Send bug report"),
                         self.trUtf8("""<p>Authentication failed.<br>Reason: {0}</p>""")
                             .format(str(e)),
-                        QMessageBox.StandardButtons(\
-                            QMessageBox.Abort | \
-                            QMessageBox.Retry),
-                        QMessageBox.Retry)
-                    if res == QMessageBox.Retry:
+                        E5MessageBox.Critical)
+                    if res:
                         return self.__sendmail(msg)
                     else:
                         return False
@@ -306,11 +303,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 self.trUtf8("Send bug report"),
                 self.trUtf8("""<p>Message could not be sent.<br>Reason: {0}</p>""")
                     .format(str(e)),
-                QMessageBox.StandardButtons(\
-                    QMessageBox.Abort | \
-                    QMessageBox.Retry),
-                QMessageBox.Retry)
-            if res == QMessageBox.Retry:
+                E5MessageBox.Critical)
+            if res:
                 return self.__sendmail(msg)
             else:
                 return False

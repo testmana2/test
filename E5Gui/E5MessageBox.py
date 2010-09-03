@@ -151,6 +151,32 @@ def yesNo(parent, title, text, type_ = Question, yesDefault = False):
                        yesDefault and QMessageBox.Yes or QMessageBox.No)
     return res == QMessageBox.Yes
 
+def retryAbort(parent, title, text, type_ = Question):
+    """
+    Function to show a model abort/retry message box.
+    
+    @param parent parent widget of the message box (QWidget)
+    @param title caption of the message box (string)
+    @param text text to be shown by the message box (string)
+    @keyparam type_ type of the dialog (Critical, Information, Question or Warning)
+    @return flag indicating the selection of the Retry button (boolean)
+    """
+    assert type_ in [Critical, Information, Question, Warning]
+    
+    if type_ == Question:
+        icon = QMessageBox.Question
+    elif type_ == Warning:
+        icon = QMessageBox.Warning
+    elif type_ == Critical:        
+        icon = QMessageBox.Critical
+    elif type_ == Information:
+        icon = QMessageBox.Information
+    
+    res = __messageBox(parent, title, text, icon, 
+                    QMessageBox.StandardButtons(QMessageBox.Retry | QMessageBox.Abort), 
+                    QMessageBox.Retry)
+    return res == QMessageBox.Retry
+
 def okToClearData(parent, title, text, saveFunc):
     """
     Function to show a model message box to ask for clearing the data.
