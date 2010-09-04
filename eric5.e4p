@@ -816,6 +816,9 @@
     <Source>E5Gui/E5FileDialog.py</Source>
     <Source>QScintilla/Exporters/ExporterODT.py</Source>
     <Source>E5Gui/E5MessageBox.py</Source>
+    <Source>Plugins/WizardPlugins/E5MessageBoxWizard/__init__.py</Source>
+    <Source>Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py</Source>
+    <Source>Plugins/PluginWizardE5MessageBox.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1044,6 +1047,7 @@
     <Form>Helpviewer/OfflineStorage/WebDatabasesDialog.ui</Form>
     <Form>UI/SymbolsWidget.ui</Form>
     <Form>UI/NumbersWidget.ui</Form>
+    <Form>Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

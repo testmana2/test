@@ -10,6 +10,9 @@ Version 5.1-snapshot-2010mmdd:
 - added code to cope with Linux distributor's usage of KDE wrapper dialogs
   for the Qt file dialogs
 - added a source code exporter for the Open Document Text (ODT) format
+- changed all calls to QMessageBox to some eric5 replacements and convenience
+  functions
+- added a wizard for the eric5 message box (E5MessageBox)
 
 Version 5.1-snapshot-20100718:
 - bug fixes

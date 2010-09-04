@@ -6099,6 +6099,377 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
     </message>
 </context>
 <context>
+    <name>E5MessageBoxWizard</name>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="75"/>
+        <source>E5MessageBox Wizard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="72"/>
+        <source>&amp;E5MessageBox Wizard...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="76"/>
+        <source>&lt;b&gt;E5MessageBox Wizard&lt;/b&gt;&lt;p&gt;This wizard opens a dialog for entering all the parameters needed to create an E5MessageBox. The generated code is inserted at the current cursor position.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="120"/>
+        <source>No current editor</source>
+        <translation type="unfinished">Geçerli düzenleyici yok</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="120"/>
+        <source>Please open or create a file first.</source>
+        <translation type="unfinished">Lütfen ilkönce bir dosya açın yada oluşturun.</translation>
+    </message>
+</context>
+<context>
+    <name>E5MessageBoxWizardDialog</name>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="14"/>
+        <source>E5MessageBox Wizard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="23"/>
+        <source>Type</source>
+        <translation type="unfinished">Tür</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="29"/>
+        <source>Generate an Information message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="403"/>
+        <source>Information</source>
+        <translation type="unfinished">Bilgi</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="45"/>
+        <source>Generate a Question message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="419"/>
+        <source>Question</source>
+        <translation type="unfinished">Soru</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="58"/>
+        <source>Generate a Warning message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="435"/>
+        <source>Warning</source>
+        <translation type="unfinished">Dikkat</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="71"/>
+        <source>Generate a Critical message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="448"/>
+        <source>Critical</source>
+        <translation type="unfinished">Kritik</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="81"/>
+        <source>Generate a Yes/No message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="84"/>
+        <source>Yes/No</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="91"/>
+        <source>Generate a retry/abort message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="94"/>
+        <source>Retry/Abort</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="101"/>
+        <source>Generate an &quot;ok to clear data&quot; message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="104"/>
+        <source>OK to clear data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="114"/>
+        <source>Generate an About message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="117"/>
+        <source>About</source>
+        <translation type="unfinished">Hakkında</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="127"/>
+        <source>Generate an AboutQt message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="130"/>
+        <source>About Qt</source>
+        <translation type="unfinished">Qt Hakkında</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="137"/>
+        <source>Generate a standard message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="140"/>
+        <source>Standard message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="150"/>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="157"/>
+        <source>Enter the title for the message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="164"/>
+        <source>Message</source>
+        <translation type="unfinished">Mesaj</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="171"/>
+        <source>Enter the message to be shown in the message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="181"/>
+        <source>Parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="187"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="190"/>
+        <source>self</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="200"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="203"/>
+        <source>None</source>
+        <translation type="unfinished">Yok</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="212"/>
+        <source>Select to enter a parent expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="215"/>
+        <source>Expression:</source>
+        <translation type="unfinished">İfade:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="225"/>
+        <source>Enter the parent expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="237"/>
+        <source>Standard Buttons</source>
+        <translation type="unfinished">Standart Düğmeler</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="35"/>
+        <source>Abort</source>
+        <translation type="unfinished">Durdur</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="36"/>
+        <source>Apply</source>
+        <translation type="unfinished">Kullan</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="37"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Vazgeç</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="38"/>
+        <source>Close</source>
+        <translation type="unfinished">Kapat</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="39"/>
+        <source>Discard</source>
+        <translation type="unfinished">Iskartaya ayırmak</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="40"/>
+        <source>Help</source>
+        <translation type="unfinished">Yardım</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="41"/>
+        <source>Ignore</source>
+        <translation type="unfinished">Görmezden gelmek</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="42"/>
+        <source>No</source>
+        <translation type="unfinished">Hayır</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="43"/>
+        <source>No to all</source>
+        <translation type="unfinished">Hepsini değil</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="44"/>
+        <source>Ok</source>
+        <translation type="unfinished">Tamam</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="45"/>
+        <source>Open</source>
+        <translation type="unfinished">Aç</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="46"/>
+        <source>Reset</source>
+        <translation type="unfinished">Başadön</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="47"/>
+        <source>Restore defaults</source>
+        <translation type="unfinished">Öntanımlı değerlere geridön</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="48"/>
+        <source>Retry</source>
+        <translation type="unfinished">Tekrar Dene</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="49"/>
+        <source>Save</source>
+        <translation type="unfinished">Kaydet</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="50"/>
+        <source>Save all</source>
+        <translation type="unfinished">Hepsini kaydet</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="51"/>
+        <source>Yes</source>
+        <translation type="unfinished">Evet</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="52"/>
+        <source>Yes to all</source>
+        <translation type="unfinished">Evet hepsini</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="372"/>
+        <source>Default Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="384"/>
+        <source>Select the default button</source>
+        <translation type="unfinished">Varsayılan düğmeyi seçiniz</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="394"/>
+        <source>Icon</source>
+        <translation type="unfinished">İcon</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="400"/>
+        <source>Show an Information icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="416"/>
+        <source>Show a Question icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="432"/>
+        <source>Show a Warning icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="445"/>
+        <source>Show a Critical icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="463"/>
+        <source>Select to generate a modal message box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="466"/>
+        <source>Modal Message Box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="476"/>
+        <source>Select to make &apos;Yes&apos; the default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="479"/>
+        <source>Yes is default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="489"/>
+        <source>Save function:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="499"/>
+        <source>Enter the name of the save function</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="34"/>
+        <source>No button</source>
+        <translation type="unfinished">Düğme yok</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="100"/>
+        <source>Test</source>
+        <translation type="unfinished">Test</translation>
+    </message>
+</context>
+<context>
     <name>E5NetworkHeaderDetailsDialog</name>
     <message>
         <location filename="E5Network/E5NetworkHeaderDetailsDialog.ui" line="14"/>
@@ -6235,12 +6606,12 @@ Gösterilen eleman üzerinde çeşetle ayarlamalar yapma imkanınız vardır.&lt
         <translation type="unfinished">Bilgi</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="288"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="289"/>
         <source>Redirect: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="321"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="322"/>
         <source>Unknown</source>
         <translation type="unfinished">Bilinmeyen</translation>
     </message>
@@ -21032,7 +21403,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="425"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="426"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21419,7 +21790,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Caption</source>
-        <translation>Başlık</translation>
+        <translation type="obsolete">Başlık</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
@@ -21439,95 +21810,95 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="144"/>
         <source>Buttons</source>
-        <translation>Düğmeler</translation>
+        <translation type="obsolete">Düğmeler</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="155"/>
         <source>Enter the text of button 1</source>
-        <translation>Düğme 1 in metnini girin</translation>
+        <translation type="obsolete">Düğme 1 in metnini girin</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="277"/>
         <source>&amp;OK</source>
-        <translation>TA&amp;MAM</translation>
+        <translation type="obsolete">TA&amp;MAM</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="282"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Vazgeç</translation>
+        <translation type="obsolete">&amp;Vazgeç</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="287"/>
         <source>&amp;Yes</source>
-        <translation>&amp;Evet</translation>
+        <translation type="obsolete">&amp;Evet</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
         <source>&amp;No</source>
-        <translation>&amp;Hayır</translation>
+        <translation type="obsolete">&amp;Hayır</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="297"/>
         <source>&amp;Abort</source>
-        <translation>&amp;Durdur</translation>
+        <translation type="obsolete">&amp;Durdur</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="302"/>
         <source>&amp;Retry</source>
-        <translation>Tek&amp;rar Dene</translation>
+        <translation type="obsolete">Tek&amp;rar Dene</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="307"/>
         <source>&amp;Ignore</source>
-        <translation>&amp;Yoksay</translation>
+        <translation type="obsolete">&amp;Yoksay</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="205"/>
         <source>Enter the text of button 0</source>
-        <translation>Düğme 0 in metnini girin</translation>
+        <translation type="obsolete">Düğme 0 in metnini girin</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="255"/>
         <source>Button 2</source>
-        <translation>Düğme 2</translation>
+        <translation type="obsolete">Düğme 2</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="265"/>
         <source>Enter the text of button 2</source>
-        <translation>Düğme 2 nin metnini giriniz</translation>
+        <translation type="obsolete">Düğme 2 nin metnini giriniz</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="315"/>
         <source>Button 1</source>
-        <translation>Düğme 1</translation>
+        <translation type="obsolete">Düğme 1</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="322"/>
         <source>Button 0</source>
-        <translation>Düğme 0</translation>
+        <translation type="obsolete">Düğme 0</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="516"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="279"/>
         <source>Default Button:</source>
         <translation>Varsayılan Düğme:</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="340"/>
         <source>Enter the index of the default button</source>
-        <translation>Varsayılan düğmenin dizinini giriniz</translation>
+        <translation type="obsolete">Varsayılan düğmenin dizinini giriniz</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="350"/>
         <source>Escape Button:</source>
-        <translation>Kaçış Düğmesi:</translation>
+        <translation type="obsolete">Kaçış Düğmesi:</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="357"/>
         <source>Enter the index of the button to be activated upon pressing Esc or -1 to ignore</source>
-        <translation>Basıldığında Esc yada -1 iptal etmek için etkinleşecek olan düğmelerini dizinini giriniz</translation>
+        <translation type="obsolete">Basıldığında Esc yada -1 iptal etmek için etkinleşecek olan düğmelerini dizinini giriniz</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="378"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
         <source>Standard Buttons</source>
         <translation>Standart Düğmeler</translation>
     </message>
@@ -21622,7 +21993,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="529"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
         <source>Select the default button</source>
         <translation>Varsayılan düğmeyi seçiniz</translation>
     </message>
@@ -21635,6 +22006,11 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.py" line="101"/>
         <source>Test</source>
         <translation>Test</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -37121,7 +37497,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1105"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1106"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>

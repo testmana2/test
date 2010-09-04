@@ -449,6 +449,9 @@
               <section title="eric5.Plugins.WizardPlugins.ColorDialogWizard" ref="index-eric5.Plugins.WizardPlugins.ColorDialogWizard.html">
                 <section title="eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog" ref="eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.html" />
               </section>
+              <section title="eric5.Plugins.WizardPlugins.E5MessageBoxWizard" ref="index-eric5.Plugins.WizardPlugins.E5MessageBoxWizard.html">
+                <section title="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html" />
+              </section>
               <section title="eric5.Plugins.WizardPlugins.FileDialogWizard" ref="index-eric5.Plugins.WizardPlugins.FileDialogWizard.html">
                 <section title="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html" />
               </section>
@@ -483,6 +486,7 @@
             <section title="eric5.Plugins.PluginVmListspace" ref="eric5.Plugins.PluginVmListspace.html" />
             <section title="eric5.Plugins.PluginVmMdiArea" ref="eric5.Plugins.PluginVmMdiArea.html" />
             <section title="eric5.Plugins.PluginVmTabview" ref="eric5.Plugins.PluginVmTabview.html" />
+            <section title="eric5.Plugins.PluginWizardE5MessageBox" ref="eric5.Plugins.PluginWizardE5MessageBox.html" />
             <section title="eric5.Plugins.PluginWizardPyRegExp" ref="eric5.Plugins.PluginWizardPyRegExp.html" />
             <section title="eric5.Plugins.PluginWizardQColorDialog" ref="eric5.Plugins.PluginWizardQColorDialog.html" />
             <section title="eric5.Plugins.PluginWizardQFileDialog" ref="eric5.Plugins.PluginWizardQFileDialog.html" />
@@ -5226,6 +5230,15 @@
       <keyword name="TabnannyPlugin.__projectTabnanny" id="TabnannyPlugin.__projectTabnanny" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.__projectTabnanny" />
       <keyword name="TabnannyPlugin.activate" id="TabnannyPlugin.activate" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.activate" />
       <keyword name="TabnannyPlugin.deactivate" id="TabnannyPlugin.deactivate" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.deactivate" />
+      <keyword name="PluginWizardE5MessageBox (Module)" id="PluginWizardE5MessageBox (Module)" ref="eric5.Plugins.PluginWizardE5MessageBox.html" />
+      <keyword name="E5MessageBoxWizard" id="E5MessageBoxWizard" ref="eric5.Plugins.PluginWizardE5MessageBox.html#E5MessageBoxWizard" />
+      <keyword name="E5MessageBoxWizard (Constructor)" id="E5MessageBoxWizard (Constructor)" ref="eric5.Plugins.PluginWizardE5MessageBox.html#E5MessageBoxWizard.__init__" />
+      <keyword name="E5MessageBoxWizard.__callForm" id="E5MessageBoxWizard.__callForm" ref="eric5.Plugins.PluginWizardE5MessageBox.html#E5MessageBoxWizard.__callForm" />
+      <keyword name="E5MessageBoxWizard.__handle" id="E5MessageBoxWizard.__handle" ref="eric5.Plugins.PluginWizardE5MessageBox.html#E5MessageBoxWizard.__handle" />
+      <keyword name="E5MessageBoxWizard.__initAction" id="E5MessageBoxWizard.__initAction" ref="eric5.Plugins.PluginWizardE5MessageBox.html#E5MessageBoxWizard.__initAction" />
+      <keyword name="E5MessageBoxWizard.__initMenu" id="E5MessageBoxWizard.__initMenu" ref="eric5.Plugins.PluginWizardE5MessageBox.html#E5MessageBoxWizard.__initMenu" />
+      <keyword name="E5MessageBoxWizard.activate" id="E5MessageBoxWizard.activate" ref="eric5.Plugins.PluginWizardE5MessageBox.html#E5MessageBoxWizard.activate" />
+      <keyword name="E5MessageBoxWizard.deactivate" id="E5MessageBoxWizard.deactivate" ref="eric5.Plugins.PluginWizardE5MessageBox.html#E5MessageBoxWizard.deactivate" />
       <keyword name="PluginEricapi (Module)" id="PluginEricapi (Module)" ref="eric5.Plugins.PluginEricapi.html" />
       <keyword name="EricapiPlugin" id="EricapiPlugin" ref="eric5.Plugins.PluginEricapi.html#EricapiPlugin" />
       <keyword name="exeDisplayData" id="exeDisplayData" ref="eric5.Plugins.PluginEricapi.html#exeDisplayData" />
@@ -9269,6 +9282,26 @@
       <keyword name="QRegExpWizardRepeatDialog.getRepeat" id="QRegExpWizardRepeatDialog.getRepeat" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.html#QRegExpWizardRepeatDialog.getRepeat" />
       <keyword name="QRegExpWizardRepeatDialog.on_lowerSpin_valueChanged" id="QRegExpWizardRepeatDialog.on_lowerSpin_valueChanged" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.html#QRegExpWizardRepeatDialog.on_lowerSpin_valueChanged" />
       <keyword name="QRegExpWizardRepeatDialog.on_upperSpin_valueChanged" id="QRegExpWizardRepeatDialog.on_upperSpin_valueChanged" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.html#QRegExpWizardRepeatDialog.on_upperSpin_valueChanged" />
+      <keyword name="E5MessageBoxWizard (Package)" id="E5MessageBoxWizard (Package)" ref="index-eric5.Plugins.WizardPlugins.E5MessageBoxWizard.html" />
+      <keyword name="E5MessageBoxWizardDialog (Module)" id="E5MessageBoxWizardDialog (Module)" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html" />
+      <keyword name="E5MessageBoxWizardDialog" id="E5MessageBoxWizardDialog" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog" />
+      <keyword name="E5MessageBoxWizardDialog (Constructor)" id="E5MessageBoxWizardDialog (Constructor)" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.__init__" />
+      <keyword name="E5MessageBoxWizardDialog.__enabledGroups" id="E5MessageBoxWizardDialog.__enabledGroups" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.__enabledGroups" />
+      <keyword name="E5MessageBoxWizardDialog.__getDefaultButtonCode" id="E5MessageBoxWizardDialog.__getDefaultButtonCode" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.__getDefaultButtonCode" />
+      <keyword name="E5MessageBoxWizardDialog.__getStandardButtonCode" id="E5MessageBoxWizardDialog.__getStandardButtonCode" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.__getStandardButtonCode" />
+      <keyword name="E5MessageBoxWizardDialog.getCode" id="E5MessageBoxWizardDialog.getCode" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.getCode" />
+      <keyword name="E5MessageBoxWizardDialog.on_bTest_clicked" id="E5MessageBoxWizardDialog.on_bTest_clicked" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_bTest_clicked" />
+      <keyword name="E5MessageBoxWizardDialog.on_buttonBox_clicked" id="E5MessageBoxWizardDialog.on_buttonBox_clicked" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_buttonBox_clicked" />
+      <keyword name="E5MessageBoxWizardDialog.on_rAboutQt_toggled" id="E5MessageBoxWizardDialog.on_rAboutQt_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rAboutQt_toggled" />
+      <keyword name="E5MessageBoxWizardDialog.on_rAbout_toggled" id="E5MessageBoxWizardDialog.on_rAbout_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rAbout_toggled" />
+      <keyword name="E5MessageBoxWizardDialog.on_rCritical_toggled" id="E5MessageBoxWizardDialog.on_rCritical_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rCritical_toggled" />
+      <keyword name="E5MessageBoxWizardDialog.on_rInformation_toggled" id="E5MessageBoxWizardDialog.on_rInformation_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rInformation_toggled" />
+      <keyword name="E5MessageBoxWizardDialog.on_rOkToClearData_toggled" id="E5MessageBoxWizardDialog.on_rOkToClearData_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rOkToClearData_toggled" />
+      <keyword name="E5MessageBoxWizardDialog.on_rQuestion_toggled" id="E5MessageBoxWizardDialog.on_rQuestion_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rQuestion_toggled" />
+      <keyword name="E5MessageBoxWizardDialog.on_rRetryAbort_toggled" id="E5MessageBoxWizardDialog.on_rRetryAbort_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rRetryAbort_toggled" />
+      <keyword name="E5MessageBoxWizardDialog.on_rStandard_toggled" id="E5MessageBoxWizardDialog.on_rStandard_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rStandard_toggled" />
+      <keyword name="E5MessageBoxWizardDialog.on_rWarning_toggled" id="E5MessageBoxWizardDialog.on_rWarning_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rWarning_toggled" />
+      <keyword name="E5MessageBoxWizardDialog.on_rYesNo_toggled" id="E5MessageBoxWizardDialog.on_rYesNo_toggled" ref="eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html#E5MessageBoxWizardDialog.on_rYesNo_toggled" />
       <keyword name="ColorDialogWizard (Package)" id="ColorDialogWizard (Package)" ref="index-eric5.Plugins.WizardPlugins.ColorDialogWizard.html" />
       <keyword name="ColorDialogWizardDialog (Module)" id="ColorDialogWizardDialog (Module)" ref="eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.html" />
       <keyword name="ColorDialogWizardDialog" id="ColorDialogWizardDialog" ref="eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.html#ColorDialogWizardDialog" />
@@ -10042,6 +10075,7 @@
       <file>eric5.Plugins.PluginVmListspace.html</file>
       <file>eric5.Plugins.PluginVmMdiArea.html</file>
       <file>eric5.Plugins.PluginVmTabview.html</file>
+      <file>eric5.Plugins.PluginWizardE5MessageBox.html</file>
       <file>eric5.Plugins.PluginWizardPyRegExp.html</file>
       <file>eric5.Plugins.PluginWizardQColorDialog.html</file>
       <file>eric5.Plugins.PluginWizardQFileDialog.html</file>
@@ -10140,6 +10174,7 @@
       <file>eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html</file>
       <file>eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html</file>
       <file>eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.html</file>
+      <file>eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html</file>
       <file>eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html</file>
       <file>eric5.Plugins.WizardPlugins.FontDialogWizard.FontDialogWizardDialog.html</file>
       <file>eric5.Plugins.WizardPlugins.InputDialogWizard.InputDialogWizardDialog.html</file>
@@ -10422,6 +10457,7 @@
       <file>index-eric5.Plugins.ViewManagerPlugins.Tabview.html</file>
       <file>index-eric5.Plugins.ViewManagerPlugins.html</file>
       <file>index-eric5.Plugins.WizardPlugins.ColorDialogWizard.html</file>
+      <file>index-eric5.Plugins.WizardPlugins.E5MessageBoxWizard.html</file>
       <file>index-eric5.Plugins.WizardPlugins.FileDialogWizard.html</file>
       <file>index-eric5.Plugins.WizardPlugins.FontDialogWizard.html</file>
       <file>index-eric5.Plugins.WizardPlugins.InputDialogWizard.html</file>

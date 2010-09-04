@@ -2906,6 +2906,20 @@ eric5.Plugins.PluginVmTabview.previewPix?4()
 eric5.Plugins.PluginVmTabview.pyqtApi?7
 eric5.Plugins.PluginVmTabview.shortDescription?7
 eric5.Plugins.PluginVmTabview.version?7
+eric5.Plugins.PluginWizardE5MessageBox.E5MessageBoxWizard.activate?4()
+eric5.Plugins.PluginWizardE5MessageBox.E5MessageBoxWizard.deactivate?4()
+eric5.Plugins.PluginWizardE5MessageBox.E5MessageBoxWizard?1(ui)
+eric5.Plugins.PluginWizardE5MessageBox.author?7
+eric5.Plugins.PluginWizardE5MessageBox.autoactivate?7
+eric5.Plugins.PluginWizardE5MessageBox.className?7
+eric5.Plugins.PluginWizardE5MessageBox.deactivateable?7
+eric5.Plugins.PluginWizardE5MessageBox.error?7
+eric5.Plugins.PluginWizardE5MessageBox.longDescription?7
+eric5.Plugins.PluginWizardE5MessageBox.name?7
+eric5.Plugins.PluginWizardE5MessageBox.packageName?7
+eric5.Plugins.PluginWizardE5MessageBox.pyqtApi?7
+eric5.Plugins.PluginWizardE5MessageBox.shortDescription?7
+eric5.Plugins.PluginWizardE5MessageBox.version?7
 eric5.Plugins.PluginWizardPyRegExp.PyRegExpWizard.activate?4()
 eric5.Plugins.PluginWizardPyRegExp.PyRegExpWizard.deactivate?4()
 eric5.Plugins.PluginWizardPyRegExp.PyRegExpWizard?1(ui)
@@ -3762,6 +3776,20 @@ eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialo
 eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.on_eRGB_textChanged?4(text)
 eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.on_rQt45_toggled?4(on)
 eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog?1(parent=None)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.getCode?4(indLevel, indString)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_bTest_clicked?4()
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_buttonBox_clicked?4(button)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rAboutQt_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rAbout_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rCritical_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rInformation_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rOkToClearData_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rQuestion_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rRetryAbort_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rStandard_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rWarning_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_rYesNo_toggled?4(checked)
+eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog?1(parent = None)
 eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.FileDialogWizardDialog.getCode?4(indLevel, indString)
 eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.FileDialogWizardDialog.on_bTest_clicked?4()
 eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.FileDialogWizardDialog.on_buttonBox_clicked?4(button)

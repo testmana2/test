@@ -5441,6 +5441,377 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>E5MessageBoxWizard</name>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="75"/>
+        <source>E5MessageBox Wizard</source>
+        <translation>E5MessageBox Autopilot</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="72"/>
+        <source>&amp;E5MessageBox Wizard...</source>
+        <translation>&amp;E5MessageBox Autopilot...</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="76"/>
+        <source>&lt;b&gt;E5MessageBox Wizard&lt;/b&gt;&lt;p&gt;This wizard opens a dialog for entering all the parameters needed to create an E5MessageBox. The generated code is inserted at the current cursor position.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;E5MessageBox Autopilot&lt;/b&gt;&lt;p&gt;Dieser Autopilot öffnet einen Dialog zur Eingabe der Parameter, die zur Erzeugung einer E5MessageBox benötigt werden. Der erzeugte Quelltext wird an der aktuellen Cursorposition eingefügt.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="120"/>
+        <source>No current editor</source>
+        <translation>Kein aktueller Editor</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardE5MessageBox.py" line="120"/>
+        <source>Please open or create a file first.</source>
+        <translation>Bitte öffnen oder erzeugen Sie zuerst eine Datei.</translation>
+    </message>
+</context>
+<context>
+    <name>E5MessageBoxWizardDialog</name>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="14"/>
+        <source>E5MessageBox Wizard</source>
+        <translation>E5MessageBox Autopilot</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="23"/>
+        <source>Type</source>
+        <translation>Typ</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="29"/>
+        <source>Generate an Information message box</source>
+        <translation>Erzeuge einen Nachrichtendialog vom Typ Information</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="403"/>
+        <source>Information</source>
+        <translation>Information</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="45"/>
+        <source>Generate a Question message box</source>
+        <translation>Erzeuge einen Nachrichtendialog vom Typ Frage</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="419"/>
+        <source>Question</source>
+        <translation>Frage</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="58"/>
+        <source>Generate a Warning message box</source>
+        <translation>Erzeuge einen Nachrichtendialog vom Typ Warnung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="435"/>
+        <source>Warning</source>
+        <translation>Warnung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="71"/>
+        <source>Generate a Critical message box</source>
+        <translation>Erzeuge einen Nachrichtendialog vom Typ Kritischer Fehler</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="448"/>
+        <source>Critical</source>
+        <translation>Kritischer Fehler</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="81"/>
+        <source>Generate a Yes/No message box</source>
+        <translation>Erzeuge einen Nachrichtendialog vom Typ Ja/Nein</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="84"/>
+        <source>Yes/No</source>
+        <translation>Ja/Nein</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="91"/>
+        <source>Generate a retry/abort message box</source>
+        <translation>Erzeuge einen Nachrichtendialog vom Typ Wiederholen/Abbrechen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="94"/>
+        <source>Retry/Abort</source>
+        <translation>Wiederholen/Abbrechen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="101"/>
+        <source>Generate an &quot;ok to clear data&quot; message box</source>
+        <translation>Erzeuge einen Nachrichtendialog vom Typ &quot;Daten löschen OK&quot;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="104"/>
+        <source>OK to clear data</source>
+        <translation>Daten löschen OK</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="114"/>
+        <source>Generate an About message box</source>
+        <translation>Erzeuge einen Nachrichtendialog vom Typ Über</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="117"/>
+        <source>About</source>
+        <translation>Über</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="127"/>
+        <source>Generate an AboutQt message box</source>
+        <translation>Erzeuge einen Nachrichtendialog vom Typ Über Qt</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="130"/>
+        <source>About Qt</source>
+        <translation>Über Qt</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="137"/>
+        <source>Generate a standard message box</source>
+        <translation>Erzeuge einen Standard Nachrichtendialog</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="140"/>
+        <source>Standard message box</source>
+        <translation>Standard Dialog</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="150"/>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="157"/>
+        <source>Enter the title for the message box</source>
+        <translation>Gib den Fenstertitel für den Nachrichtendialog ein</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="164"/>
+        <source>Message</source>
+        <translation>Nachricht</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="171"/>
+        <source>Enter the message to be shown in the message box</source>
+        <translation>Gib die anzuzeigende Nachricht des Nachrichtendialoges ein</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="181"/>
+        <source>Parent</source>
+        <translation>Vorgänger</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="187"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation>Wähle &quot;self&quot; als Vorgänger</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="190"/>
+        <source>self</source>
+        <translation>self</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="200"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation>Wähle &quot;None&quot; als Vorgänger</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="203"/>
+        <source>None</source>
+        <translation>None</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="212"/>
+        <source>Select to enter a parent expression</source>
+        <translation>Auswählen, um einen Ausdruck für den Vorgänger einzugeben</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="215"/>
+        <source>Expression:</source>
+        <translation>Ausdruck:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="225"/>
+        <source>Enter the parent expression</source>
+        <translation>Gib den Ausdruck für den Vorgänger ein</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="237"/>
+        <source>Standard Buttons</source>
+        <translation>Standard Knöpfe</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="35"/>
+        <source>Abort</source>
+        <translation>Abbrechen (Abort)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="36"/>
+        <source>Apply</source>
+        <translation>Anwenden</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="37"/>
+        <source>Cancel</source>
+        <translation>Abbrechen (Cancel)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="38"/>
+        <source>Close</source>
+        <translation>Schließen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="39"/>
+        <source>Discard</source>
+        <translation>Verwerfen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="40"/>
+        <source>Help</source>
+        <translation>Hilfe</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="41"/>
+        <source>Ignore</source>
+        <translation>Ignorieren</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="42"/>
+        <source>No</source>
+        <translation>Nein</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="43"/>
+        <source>No to all</source>
+        <translation>Nein zu allen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="44"/>
+        <source>Ok</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="45"/>
+        <source>Open</source>
+        <translation>Öffnen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="46"/>
+        <source>Reset</source>
+        <translation>Zurücksetzen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="47"/>
+        <source>Restore defaults</source>
+        <translation>Auf Standardwerte zurücksetzen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="48"/>
+        <source>Retry</source>
+        <translation>Wiederholen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="49"/>
+        <source>Save</source>
+        <translation>Speichern</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="50"/>
+        <source>Save all</source>
+        <translation>Alles speichern</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="51"/>
+        <source>Yes</source>
+        <translation>Ja</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="52"/>
+        <source>Yes to all</source>
+        <translation>Ja zu allen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="372"/>
+        <source>Default Button</source>
+        <translation>Standardknopf</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="384"/>
+        <source>Select the default button</source>
+        <translation>Wähle den Standardknopf</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="394"/>
+        <source>Icon</source>
+        <translation>Symbol</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="400"/>
+        <source>Show an Information icon</source>
+        <translation>Zeige Symbol vom Typ Information</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="416"/>
+        <source>Show a Question icon</source>
+        <translation>Zeige Symbol vom Typ Frage</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="432"/>
+        <source>Show a Warning icon</source>
+        <translation>Zeige Symbol vom Typ Warnung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="445"/>
+        <source>Show a Critical icon</source>
+        <translation>Zeige Symbol vom Typ Kritischer Fehler</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="463"/>
+        <source>Select to generate a modal message box</source>
+        <translation>Auswählen, um einen modalen Nachrichtendialog zu erzeugen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="466"/>
+        <source>Modal Message Box</source>
+        <translation>Modaler Nachrichtendialog</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="476"/>
+        <source>Select to make &apos;Yes&apos; the default</source>
+        <translation>Auswählen, um &apos;Ja&apos; zum Standard zu machen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="479"/>
+        <source>Yes is default</source>
+        <translation>Ja als Standard</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="489"/>
+        <source>Save function:</source>
+        <translation>Sichern-Funktion:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="499"/>
+        <source>Enter the name of the save function</source>
+        <translation>Gib den Namen der Sichern-Funktion ein</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="34"/>
+        <source>No button</source>
+        <translation>kein Knopf</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="100"/>
+        <source>Test</source>
+        <translation>Test</translation>
+    </message>
+</context>
+<context>
     <name>E5NetworkHeaderDetailsDialog</name>
     <message>
         <location filename="E5Network/E5NetworkHeaderDetailsDialog.ui" line="14"/>
@@ -5572,12 +5943,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="288"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="289"/>
         <source>Redirect: {0}</source>
         <translation>Redirect: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5NetworkMonitor.py" line="321"/>
+        <location filename="E5Network/E5NetworkMonitor.py" line="322"/>
         <source>Unknown</source>
         <translation>Unbekannt</translation>
     </message>
@@ -19592,7 +19963,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Drucken</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="425"/>
+        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="426"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
@@ -19937,11 +20308,6 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Über Qt</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
-        <source>Caption</source>
-        <translation>Titel</translation>
-    </message>
-    <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
         <source>Enter the caption for the QMessageBox</source>
         <translation>Gib den Fenstertitel der QMessageBox ein</translation>
@@ -19957,97 +20323,12 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Gib die anzuzeigende Nachricht der QMessageBox ein</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="144"/>
-        <source>Buttons</source>
-        <translation>Knöpfe</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="155"/>
-        <source>Enter the text of button 1</source>
-        <translation>Gib den Text für Knopf 1 ein</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="277"/>
-        <source>&amp;OK</source>
-        <translation>&amp;OK</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="282"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Abbrechen</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="287"/>
-        <source>&amp;Yes</source>
-        <translation>&amp;Ja</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
-        <source>&amp;No</source>
-        <translation>&amp;Nein</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="297"/>
-        <source>&amp;Abort</source>
-        <translation>&amp;Abbrechen</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="302"/>
-        <source>&amp;Retry</source>
-        <translation>&amp;Wiederholen</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="307"/>
-        <source>&amp;Ignore</source>
-        <translation>&amp;Ignorieren</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="205"/>
-        <source>Enter the text of button 0</source>
-        <translation>Gib den Text für Knopf 0 ein</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="255"/>
-        <source>Button 2</source>
-        <translation>Knopf 2</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="265"/>
-        <source>Enter the text of button 2</source>
-        <translation>Gib den Text für Knopf 2 ein</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="315"/>
-        <source>Button 1</source>
-        <translation>Knopf 1</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="322"/>
-        <source>Button 0</source>
-        <translation>Knopf 0</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="516"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="279"/>
         <source>Default Button:</source>
         <translation>Standardknopf:</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="340"/>
-        <source>Enter the index of the default button</source>
-        <translation>Gib den Index des Standardknopfes ein</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="350"/>
-        <source>Escape Button:</source>
-        <translation>Abbruch Knopf:</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="357"/>
-        <source>Enter the index of the button to be activated upon pressing Esc or -1 to ignore</source>
-        <translation>Gib den Index des Knopfes an, der beim Drücken der Esc Taste ausgelöst wird, oder -1, um dies zu ignorieren</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="378"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
         <source>Standard Buttons</source>
         <translation>Standard Knöpfe</translation>
     </message>
@@ -20142,7 +20423,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="529"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
         <source>Select the default button</source>
         <translation>Wähle den Standardknopf</translation>
     </message>
@@ -20155,6 +20436,11 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.py" line="101"/>
         <source>Test</source>
         <translation>Test</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
+        <source>Title</source>
+        <translation>Titel</translation>
     </message>
 </context>
 <context>
@@ -34418,7 +34704,7 @@ Zeile.&lt;/p&gt;</translation>
         <translation>Unbenannt {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1105"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1106"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>

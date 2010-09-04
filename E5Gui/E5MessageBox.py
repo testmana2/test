@@ -103,8 +103,7 @@ def __messageBox(parent, title, text, icon,
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
-    @return button pressed by the user 
-        (QMessageBox.StandardButton)
+    @return button pressed by the user (QMessageBox.StandardButton)
     """
     messageBox = QMessageBox(parent)
     messageBox.setIcon(icon)
@@ -138,8 +137,7 @@ def critical(parent, title, text,
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
-    @return button pressed by the user 
-        (QMessageBox.StandardButton)
+    @return button pressed by the user (QMessageBox.StandardButton)
     """
     return __messageBox(parent, title, text, QMessageBox.Critical, 
                         buttons, defaultButton)
@@ -156,8 +154,7 @@ def information(parent, title, text,
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
-    @return button pressed by the user 
-        (QMessageBox.StandardButton)
+    @return button pressed by the user (QMessageBox.StandardButton)
     """
     return __messageBox(parent, title, text, QMessageBox.Information, 
                         buttons, defaultButton)
@@ -174,8 +171,7 @@ def question(parent, title, text,
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
-    @return button pressed by the user 
-        (QMessageBox.StandardButton)
+    @return button pressed by the user (QMessageBox.StandardButton)
     """
     return __messageBox(parent, title, text, QMessageBox.Question, 
                         buttons, defaultButton)
@@ -192,8 +188,7 @@ def warning(parent, title, text,
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
-    @return button pressed by the user 
-        (QMessageBox.StandardButton)
+    @return button pressed by the user (QMessageBox.StandardButton)
     """
     return __messageBox(parent, title, text, QMessageBox.Warning, 
                         buttons, defaultButton)
