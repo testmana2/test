@@ -322,7 +322,7 @@ class UMLGraphicsView(E5GraphicsView):
         """
         Private method to handle the save context menu entry.
         """
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save Diagram"),
             "",

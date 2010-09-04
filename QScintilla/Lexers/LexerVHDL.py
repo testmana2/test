@@ -34,7 +34,7 @@ class LexerVHDL(QsciLexerVHDL, Lexer):
         self.setFoldComments(Preferences.getEditor("VHDLFoldComment"))
         self.setFoldAtElse(Preferences.getEditor("VHDLFoldAtElse"))
         self.setFoldAtBegin(Preferences.getEditor("VHDLFoldAtBegin"))
-        self.setFoldAtParenthesis(\
+        self.setFoldAtParenthesis(
             Preferences.getEditor("VHDLFoldAtParenthesis"))
         self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
     

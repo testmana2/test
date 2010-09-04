@@ -155,7 +155,7 @@ class SpecialVarItem(VariableItem):
         
         # step 2: request the variable from the debugger
         filter = e5App().getObject("DebugUI").variablesFilter(self.scope)
-        e5App().getObject("DebugServer").remoteClientVariable(\
+        e5App().getObject("DebugServer").remoteClientVariable(
             self.scope, filter, pathlist, self.framenr)
 
 class ArrayElementVarItem(VariableItem):
@@ -562,7 +562,7 @@ class VariablesViewer(QTreeWidget):
             dvtype = self.trUtf8(ConfigVarTypeDispStrings[i])
         except ValueError:
             if vtype == 'classobj':
-                dvtype = self.trUtf8(\
+                dvtype = self.trUtf8(
                     ConfigVarTypeDispStrings[ConfigVarTypeStrings.index('instance')]\
                 )
             else:

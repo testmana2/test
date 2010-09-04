@@ -304,11 +304,11 @@ class MiniEditor(QMainWindow):
         @param prefClass preferences class used as the storage area
         """
         if act.objectName():
-            accel = Preferences.Prefs.settings.value(\
+            accel = Preferences.Prefs.settings.value(
                 "Shortcuts/{0}/{1}/Accel".format(category, act.objectName()))
             if accel is not None:
                 act.setShortcut(QKeySequence(accel))
-            accel = Preferences.Prefs.settings.value(\
+            accel = Preferences.Prefs.settings.value(
                 "Shortcuts/{0}/{1}/AltAccel".format(category, act.objectName()))
             if accel is not None:
                 act.setAlternateShortcut(QKeySequence(accel))
@@ -348,7 +348,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Ctrl+N", "File|New")),
                 0, self, 'vm_file_new')
         self.newAct.setStatusTip(self.trUtf8('Open an empty editor window'))
-        self.newAct.setWhatsThis(self.trUtf8(\
+        self.newAct.setWhatsThis(self.trUtf8(
             """<b>New</b>"""
             """<p>An empty editor window will be created.</p>"""
         ))
@@ -361,7 +361,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Ctrl+O", "File|Open")), 
                 0, self, 'vm_file_open')
         self.openAct.setStatusTip(self.trUtf8('Open a file'))
-        self.openAct.setWhatsThis(self.trUtf8(\
+        self.openAct.setWhatsThis(self.trUtf8(
             """<b>Open a file</b>"""
             """<p>You will be asked for the name of a file to be opened.</p>"""
         ))
@@ -374,7 +374,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Ctrl+S", "File|Save")), 
                 0, self, 'vm_file_save')
         self.saveAct.setStatusTip(self.trUtf8('Save the current file'))
-        self.saveAct.setWhatsThis(self.trUtf8(\
+        self.saveAct.setWhatsThis(self.trUtf8(
             """<b>Save File</b>"""
             """<p>Save the contents of current editor window.</p>"""
         ))
@@ -387,7 +387,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Shift+Ctrl+S", "File|Save As")), 
                 0, self, 'vm_file_save_as')
         self.saveAsAct.setStatusTip(self.trUtf8('Save the current file to a new one'))
-        self.saveAsAct.setWhatsThis(self.trUtf8(\
+        self.saveAsAct.setWhatsThis(self.trUtf8(
             """<b>Save File as</b>"""
             """<p>Save the contents of current editor window to a new file."""
             """ The file can be entered in a file selection dialog.</p>"""
@@ -401,7 +401,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Ctrl+W", "File|Close")), 
                 0, self, 'vm_file_close')
         self.closeAct.setStatusTip(self.trUtf8('Close the editor window'))
-        self.closeAct.setWhatsThis(self.trUtf8(\
+        self.closeAct.setWhatsThis(self.trUtf8(
             """<b>Close Window</b>"""
             """<p>Close the current window.</p>"""
         ))
@@ -446,7 +446,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Alt+Backspace", "Edit|Undo")), 
                 self, 'vm_edit_undo')
         self.undoAct.setStatusTip(self.trUtf8('Undo the last change'))
-        self.undoAct.setWhatsThis(self.trUtf8(\
+        self.undoAct.setWhatsThis(self.trUtf8(
             """<b>Undo</b>"""
             """<p>Undo the last change done in the current editor.</p>"""
         ))
@@ -459,7 +459,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Ctrl+Shift+Z", "Edit|Redo")), 
                 0, self, 'vm_edit_redo')
         self.redoAct.setStatusTip(self.trUtf8('Redo the last change'))
-        self.redoAct.setWhatsThis(self.trUtf8(\
+        self.redoAct.setWhatsThis(self.trUtf8(
             """<b>Redo</b>"""
             """<p>Redo the last change done in the current editor.</p>"""
         ))
@@ -473,7 +473,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Shift+Del", "Edit|Cut")),
                 self, 'vm_edit_cut')
         self.cutAct.setStatusTip(self.trUtf8('Cut the selection'))
-        self.cutAct.setWhatsThis(self.trUtf8(\
+        self.cutAct.setWhatsThis(self.trUtf8(
             """<b>Cut</b>"""
             """<p>Cut the selected text of the current editor to the clipboard.</p>"""
         ))
@@ -487,7 +487,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Ctrl+Ins", "Edit|Copy")), 
                 self, 'vm_edit_copy')
         self.copyAct.setStatusTip(self.trUtf8('Copy the selection'))
-        self.copyAct.setWhatsThis(self.trUtf8(\
+        self.copyAct.setWhatsThis(self.trUtf8(
             """<b>Copy</b>"""
             """<p>Copy the selected text of the current editor to the clipboard.</p>"""
         ))
@@ -501,7 +501,7 @@ class MiniEditor(QMainWindow):
                 QKeySequence(self.trUtf8("Shift+Ins", "Edit|Paste")), 
                 self, 'vm_edit_paste')
         self.pasteAct.setStatusTip(self.trUtf8('Paste the last cut/copied text'))
-        self.pasteAct.setWhatsThis(self.trUtf8(\
+        self.pasteAct.setWhatsThis(self.trUtf8(
             """<b>Paste</b>"""
             """<p>Paste the last cut/copied text from the clipboard to"""
             """ the current editor.</p>"""
@@ -516,7 +516,7 @@ class MiniEditor(QMainWindow):
                 0,
                 self, 'vm_edit_clear')
         self.deleteAct.setStatusTip(self.trUtf8('Clear all text'))
-        self.deleteAct.setWhatsThis(self.trUtf8(\
+        self.deleteAct.setWhatsThis(self.trUtf8(
             """<b>Clear</b>"""
             """<p>Delete all text of the current editor.</p>"""
         ))
@@ -1318,7 +1318,7 @@ class MiniEditor(QMainWindow):
         
         self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
                 self.trUtf8('About &Qt'), 0, 0, self, 'about_qt')
-        self.aboutQtAct.setStatusTip(\
+        self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
             """<b>About Qt</b>"""
@@ -1685,7 +1685,7 @@ class MiniEditor(QMainWindow):
         if self.lexer_ and self.lexer_.alwaysKeepTabs():
             self.__textEdit.setIndentationsUseTabs(True)
         else:
-            self.__textEdit.setIndentationsUseTabs(\
+            self.__textEdit.setIndentationsUseTabs(
                 Preferences.getEditor("TabForIndentation"))
         self.__textEdit.setTabIndents(Preferences.getEditor("TabIndents"))
         self.__textEdit.setBackspaceUnindents(Preferences.getEditor("TabIndents"))
@@ -1709,18 +1709,18 @@ class MiniEditor(QMainWindow):
         self.__textEdit.setUnmatchedBraceBackgroundColor(
             Preferences.getEditorColour("NonmatchingBraceBack"))
         if Preferences.getEditor("CustomSelectionColours"):
-            self.__textEdit.setSelectionBackgroundColor(\
+            self.__textEdit.setSelectionBackgroundColor(
                 Preferences.getEditorColour("SelectionBackground"))
         else:
-            self.__textEdit.setSelectionBackgroundColor(\
+            self.__textEdit.setSelectionBackgroundColor(
                 QApplication.palette().color(QPalette.Highlight))
         if Preferences.getEditor("ColourizeSelText"):
             self.__textEdit.resetSelectionForegroundColor()
         elif Preferences.getEditor("CustomSelectionColours"):
-            self.__textEdit.setSelectionForegroundColor(\
+            self.__textEdit.setSelectionForegroundColor(
                 Preferences.getEditorColour("SelectionForeground"))
         else:
-            self.__textEdit.setSelectionForegroundColor(\
+            self.__textEdit.setSelectionForegroundColor(
                 QApplication.palette().color(QPalette.HighlightedText))
         self.__textEdit.setSelectionToEol(Preferences.getEditor("ExtendSelectionToEol"))
         self.__textEdit.setCaretForegroundColor(
@@ -1741,11 +1741,11 @@ class MiniEditor(QMainWindow):
         
         if Preferences.getEditor("WrapLongLines"):
             self.__textEdit.setWrapMode(QsciScintilla.WrapWord)
-            self.__textEdit.setWrapVisualFlags(\
+            self.__textEdit.setWrapVisualFlags(
                 QsciScintilla.WrapFlagByBorder, QsciScintilla.WrapFlagByBorder)
         else:
             self.__textEdit.setWrapMode(QsciScintilla.WrapNone)
-            self.__textEdit.setWrapVisualFlags(\
+            self.__textEdit.setWrapVisualFlags(
                 QsciScintilla.WrapFlagNone, QsciScintilla.WrapFlagNone)
         
         self.searchIndicator = QsciScintilla.INDIC_CONTAINER
@@ -1931,7 +1931,7 @@ class MiniEditor(QMainWindow):
             lexerSel = lexerList.index(self.getLanguage())
         except ValueError:
             lexerSel = 0
-        lexerName, ok = QInputDialog.getItem(\
+        lexerName, ok = QInputDialog.getItem(
             self,
             self.trUtf8("Pygments Lexer"),
             self.trUtf8("Select the Pygments lexer to apply."),

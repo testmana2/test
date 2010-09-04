@@ -169,7 +169,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.inputGroup.hide()
         
         if self.paras == 0:
-            self.contents.insertPlainText(\
+            self.contents.insertPlainText(
                 self.trUtf8('There is no difference.'))
             return
         
@@ -260,7 +260,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         else:
             fname = self.vcs.splitPath(self.filename)[0]
         
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save Diff"),
             fname,

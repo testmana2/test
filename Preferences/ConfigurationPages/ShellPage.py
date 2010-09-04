@@ -46,7 +46,7 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
         
         self.monospacedFont = Preferences.getShell("MonospacedFont")
         self.monospacedFontSample.setFont(self.monospacedFont)
-        self.monospacedCheckBox.setChecked(\
+        self.monospacedCheckBox.setChecked(
             Preferences.getShell("UseMonospacedFont"))
         self.marginsFont = Preferences.getShell("MarginsFont")
         self.marginsFontSample.setFont(self.marginsFont)

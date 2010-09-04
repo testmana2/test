@@ -76,7 +76,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         self.nextButton = \
             self.buttonBox.addButton(self.trUtf8("Next match"), 
                                      QDialogButtonBox.ActionRole)
-        self.nextButton.setToolTip(\
+        self.nextButton.setToolTip(
             self.trUtf8("Show the next match of the regular expression"))
         self.nextButton.setEnabled(False)
         
@@ -86,7 +86,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         else:
             self.copyButton = \
                 self.buttonBox.addButton(self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
-            self.copyButton.setToolTip(\
+            self.copyButton.setToolTip(
                 self.trUtf8("Copy the regular expression to the clipboard"))
             self.buttonBox.button(QDialogButtonBox.Ok).hide()
             self.buttonBox.button(QDialogButtonBox.Cancel).hide()
@@ -169,7 +169,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 self.trUtf8("""No named groups have been defined yet."""))
             return
         
-        groupName, ok = QInputDialog.getItem(\
+        groupName, ok = QInputDialog.getItem(
             self,
             self.trUtf8("Named reference"),
             self.trUtf8("Select group name:"),
@@ -297,7 +297,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         """
         Private slot to save the regexp to a file.
         """
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save regular expression"),
             "",
@@ -334,7 +334,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         """
         Private slot to load a regexp from a file.
         """
-        fname = QFileDialog.getOpenFileName(\
+        fname = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Load regular expression"),
             "",
@@ -390,7 +390,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                         self.verboseCheckBox.isChecked() and re.VERBOSE or 0 | \
                         (not self.unicodeCheckBox.isChecked() and re.UNICODE or 0))
                 E5MessageBox.information(self,
-                    self.trUtf8(""),
+                    self.trUtf8("Validation"),
                     self.trUtf8("""The regular expression is valid."""))
             except re.error as e:
                 E5MessageBox.critical(self,

@@ -218,7 +218,7 @@ def createGlobalPluginsDir():
         if not os.path.exists(pdir):
             os.mkdir(pdir,  0o755)
         f = open(fname, "w", encoding = "utf-8")
-        f.write(\
+        f.write(
 '''# -*- coding: utf-8 -*-
 
 """

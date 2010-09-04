@@ -62,12 +62,12 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         if not new:
             name = os.path.splitext(self.project.pfile)[0]
             self.nameEdit.setText(os.path.basename(name))
-            self.languageComboBox.setCurrentIndex(\
+            self.languageComboBox.setCurrentIndex(
                 self.languageComboBox.findText(self.project.pdata["PROGLANGUAGE"][0]))
             self.mixedLanguageCheckBox.setChecked(self.project.pdata["MIXEDLANGUAGE"][0])
             try:
                 curIndex = \
-                    self.projectTypeComboBox.findText(\
+                    self.projectTypeComboBox.findText(
                         projectTypes[self.project.pdata["PROJECTTYPE"][0]])
             except KeyError:
                 curIndex = -1
@@ -107,18 +107,18 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                     vcsSystemDisplay = vcsSystemsDict[self.project.pdata["VCS"][0]]
                 except KeyError:
                     vcsSystemDisplay = "None"
-                self.vcsLabel.setText(\
+                self.vcsLabel.setText(
                     self.trUtf8("The project is version controlled by <b>{0}</b>.")
                     .format(vcsSystemDisplay))
                 self.vcsInfoButton.show()
             else:
-                self.vcsLabel.setText(\
+                self.vcsLabel.setText(
                     self.trUtf8("The project is not version controlled."))
                 self.vcsInfoButton.hide()
         else:
-            self.languageComboBox.setCurrentIndex(\
+            self.languageComboBox.setCurrentIndex(
                 self.languageComboBox.findText("Python3"))
-            self.projectTypeComboBox.setCurrentIndex(\
+            self.projectTypeComboBox.setCurrentIndex(
                 self.projectTypeComboBox.findText(projectTypes["Qt4"]))
             hp = os.getcwd()
             hp = hp + os.sep
@@ -132,7 +132,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         """
         Private slot to display a directory selection dialog.
         """
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select project directory"),
             self.dirEdit.text(),
@@ -181,7 +181,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 patterns.append(pattern)
         filters = self.trUtf8("Source Files ({0});;All Files (*)")\
             .format(" ".join(patterns))
-        fn = QFileDialog.getOpenFileName(\
+        fn = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select main script file"),
             dir,

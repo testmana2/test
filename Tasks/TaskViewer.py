@@ -755,7 +755,7 @@ class TaskViewer(QTreeWidget):
         count = 0
         
         for file in files:
-            progress.setLabelText(\
+            progress.setLabelText(
                 self.trUtf8("Extracting project tasks...\n{0}").format(file))
             progress.setValue(count)
             QApplication.processEvents()

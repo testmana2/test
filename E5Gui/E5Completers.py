@@ -30,11 +30,11 @@ class E5FileCompleter(QCompleter):
         QCompleter.__init__(self, parent)
         self.__model = QDirModel(self)
         if showHidden:
-            self.__model.setFilter(\
+            self.__model.setFilter(
                 QDir.Filters(QDir.Dirs | QDir.Files | QDir.Drives | \
                              QDir.AllDirs | QDir.Hidden))
         else:
-            self.__model.setFilter(\
+            self.__model.setFilter(
                 QDir.Filters(QDir.Dirs | QDir.Files | QDir.Drives | QDir.AllDirs))
         self.setModel(self.__model)
         self.setCompletionMode(completionMode)
@@ -61,10 +61,10 @@ class E5DirCompleter(QCompleter):
         QCompleter.__init__(self, parent)
         self.__model = QDirModel(self)
         if showHidden:
-            self.__model.setFilter(\
+            self.__model.setFilter(
                 QDir.Filters(QDir.Drives | QDir.AllDirs | QDir.Hidden))
         else:
-            self.__model.setFilter(\
+            self.__model.setFilter(
                 QDir.Filters(QDir.Drives | QDir.AllDirs))
         self.setModel(self.__model)
         self.setCompletionMode(completionMode)

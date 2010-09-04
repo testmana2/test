@@ -47,55 +47,55 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         self.pdfPageSizeCombo.addItem(self.trUtf8("Letter"), "Letter")
         
         # HTML
-        self.htmlWysiwygCheckBox.setChecked(\
+        self.htmlWysiwygCheckBox.setChecked(
             Preferences.getEditorExporter("HTML/WYSIWYG"))
-        self.htmlFoldingCheckBox.setChecked(\
+        self.htmlFoldingCheckBox.setChecked(
             Preferences.getEditorExporter("HTML/Folding"))
-        self.htmlStylesCheckBox.setChecked(\
+        self.htmlStylesCheckBox.setChecked(
             Preferences.getEditorExporter("HTML/OnlyStylesUsed"))
-        self.htmlTitleCheckBox.setChecked(\
+        self.htmlTitleCheckBox.setChecked(
             Preferences.getEditorExporter("HTML/FullPathAsTitle"))
-        self.htmlTabsCheckBox.setChecked(\
+        self.htmlTabsCheckBox.setChecked(
             Preferences.getEditorExporter("HTML/UseTabs"))
         
         # ODT
-        self.odtWysiwygCheckBox.setChecked(\
+        self.odtWysiwygCheckBox.setChecked(
             Preferences.getEditorExporter("ODT/WYSIWYG"))
-        self.odtStylesCheckBox.setChecked(\
+        self.odtStylesCheckBox.setChecked(
             Preferences.getEditorExporter("ODT/OnlyStylesUsed"))
-        self.odtTabsCheckBox.setChecked(\
+        self.odtTabsCheckBox.setChecked(
             Preferences.getEditorExporter("ODT/UseTabs"))
         
         # PDF
-        self.pdfMagnificationSlider.setValue(\
+        self.pdfMagnificationSlider.setValue(
             Preferences.getEditorExporter("PDF/Magnification"))
-        ind = self.pdfFontCombo.findData(\
+        ind = self.pdfFontCombo.findData(
             Preferences.getEditorExporter("PDF/Font"))
         self.pdfFontCombo.setCurrentIndex(ind)
-        ind = self.pdfPageSizeCombo.findData(\
+        ind = self.pdfPageSizeCombo.findData(
             Preferences.getEditorExporter("PDF/PageSize"))
         self.pdfPageSizeCombo.setCurrentIndex(ind)
-        self.pdfMarginTopSpin.setValue(\
+        self.pdfMarginTopSpin.setValue(
             Preferences.getEditorExporter("PDF/MarginTop"))
-        self.pdfMarginBottomSpin.setValue(\
+        self.pdfMarginBottomSpin.setValue(
             Preferences.getEditorExporter("PDF/MarginBottom"))
-        self.pdfMarginLeftSpin.setValue(\
+        self.pdfMarginLeftSpin.setValue(
             Preferences.getEditorExporter("PDF/MarginLeft"))
-        self.pdfMarginRightSpin.setValue(\
+        self.pdfMarginRightSpin.setValue(
             Preferences.getEditorExporter("PDF/MarginRight"))
         
         # RTF
-        self.rtfWysiwygCheckBox.setChecked(\
+        self.rtfWysiwygCheckBox.setChecked(
             Preferences.getEditorExporter("RTF/WYSIWYG"))
-        self.rtfTabsCheckBox.setChecked(\
+        self.rtfTabsCheckBox.setChecked(
             Preferences.getEditorExporter("RTF/UseTabs"))
         self.rtfFont = Preferences.getEditorExporter("RTF/Font")
         self.rtfFontSample.setFont(self.rtfFont)
         
         # TeX
-        self.texStylesCheckBox.setChecked(\
+        self.texStylesCheckBox.setChecked(
             Preferences.getEditorExporter("TeX/OnlyStylesUsed"))
-        self.texTitleCheckBox.setChecked(\
+        self.texTitleCheckBox.setChecked(
             Preferences.getEditorExporter("TeX/FullPathAsTitle"))
         
         self.on_exportersCombo_activated(' ')

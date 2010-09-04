@@ -59,7 +59,7 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         Private slot to handle the Qt4 directory selection.
         """
-        dir = QFileDialog.getExistingDirectory(\
+        dir = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select Qt4 Directory"),
             self.qt4Edit.text(),
@@ -73,7 +73,7 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         Private slot to handle the Qt4 translations directory selection.
         """
-        dir = QFileDialog.getExistingDirectory(\
+        dir = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select Qt4 Translations Directory"),
             self.qt4TransEdit.text(),

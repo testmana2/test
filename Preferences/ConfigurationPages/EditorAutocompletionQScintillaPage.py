@@ -28,9 +28,9 @@ class EditorAutocompletionQScintillaPage(ConfigurationPageBase,
         self.setObjectName("EditorAutocompletionQScintillaPage")
         
         # set initial values
-        self.acShowSingleCheckBox.setChecked(\
+        self.acShowSingleCheckBox.setChecked(
             Preferences.getEditor("AutoCompletionShowSingle"))
-        self.acFillupsCheckBox.setChecked(\
+        self.acFillupsCheckBox.setChecked(
             Preferences.getEditor("AutoCompletionFillups"))
         
         acSource = Preferences.getEditor("AutoCompletionSource")

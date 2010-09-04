@@ -29,12 +29,12 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         self.portSpin.setValue(Preferences.getUser("MailServerPort"))
         self.emailEdit.setText(Preferences.getUser("Email"))
         self.signatureEdit.setPlainText(Preferences.getUser("Signature"))
-        self.mailAuthenticationCheckBox.setChecked(\
+        self.mailAuthenticationCheckBox.setChecked(
             Preferences.getUser("MailServerAuthentication"))
         self.mailUserEdit.setText(Preferences.getUser("MailServerUser"))
-        self.mailPasswordEdit.setText(\
+        self.mailPasswordEdit.setText(
             Preferences.getUser("MailServerPassword"))
-        self.useTlsCheckBox.setChecked(\
+        self.useTlsCheckBox.setChecked(
             Preferences.getUser("MailServerUseTLS"))
         
     def save(self):

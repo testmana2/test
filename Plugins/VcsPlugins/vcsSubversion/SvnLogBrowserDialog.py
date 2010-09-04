@@ -452,7 +452,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             self.__resizeColumnsFiles()
             self.__resortFiles()
         
-        self.diffPreviousButton.setEnabled(\
+        self.diffPreviousButton.setEnabled(
             current != self.logTree.topLevelItem(self.logTree.topLevelItemCount() - 1))
     
     @pyqtSlot()

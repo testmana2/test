@@ -65,7 +65,7 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         cwd = self.workdirCombo.currentText()
         if not cwd:
             cwd = self.projectDirLabel.text()
-        d = QFileDialog.getExistingDirectory(\
+        d = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Working directory"),
             cwd,

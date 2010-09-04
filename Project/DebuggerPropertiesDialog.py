@@ -67,29 +67,29 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
             else:
                 debugClient = ""
             self.debugClientEdit.setText(debugClient)
-        self.debugEnvironmentOverrideCheckBox.setChecked(\
+        self.debugEnvironmentOverrideCheckBox.setChecked(
             self.project.debugProperties["ENVIRONMENTOVERRIDE"])
-        self.debugEnvironmentEdit.setText(\
+        self.debugEnvironmentEdit.setText(
             self.project.debugProperties["ENVIRONMENTSTRING"])
-        self.remoteDebuggerGroup.setChecked(\
+        self.remoteDebuggerGroup.setChecked(
             self.project.debugProperties["REMOTEDEBUGGER"])
-        self.remoteHostEdit.setText(\
+        self.remoteHostEdit.setText(
             self.project.debugProperties["REMOTEHOST"])
-        self.remoteCommandEdit.setText(\
+        self.remoteCommandEdit.setText(
             self.project.debugProperties["REMOTECOMMAND"])
-        self.pathTranslationGroup.setChecked(\
+        self.pathTranslationGroup.setChecked(
             self.project.debugProperties["PATHTRANSLATION"])
-        self.translationRemoteEdit.setText(\
+        self.translationRemoteEdit.setText(
             self.project.debugProperties["REMOTEPATH"])
-        self.translationLocalEdit.setText(\
+        self.translationLocalEdit.setText(
             self.project.debugProperties["LOCALPATH"])
-        self.consoleDebuggerGroup.setChecked(\
+        self.consoleDebuggerGroup.setChecked(
             self.project.debugProperties["CONSOLEDEBUGGER"])
-        self.consoleCommandEdit.setText(\
+        self.consoleCommandEdit.setText(
             self.project.debugProperties["CONSOLECOMMAND"])
-        self.redirectCheckBox.setChecked(\
+        self.redirectCheckBox.setChecked(
             self.project.debugProperties["REDIRECT"])
-        self.noEncodingCheckBox.setChecked(\
+        self.noEncodingCheckBox.setChecked(
             self.project.debugProperties["NOENCODING"])
         
     @pyqtSlot()
@@ -97,7 +97,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         """
         Private slot to handle the interpreter selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select interpreter for Debug Client"),
             self.interpreterEdit.text(),
@@ -113,7 +113,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         """
         filters = self.project.dbgFilters[self.project.pdata["PROGLANGUAGE"][0]]
         filters += self.trUtf8("All Files (*)")
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Debug Client"),
             self.debugClientEdit.text(),

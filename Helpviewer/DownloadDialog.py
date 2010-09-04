@@ -127,7 +127,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
                 self.trUtf8("Downloading"),
                 self.trUtf8("""<p>You are about to download the file <b>{0}</b>.</p>"""
                             """<p>What do you want to do?</p>""").format(fileName),
-                E5MessageBox.StandardButtons(\
+                E5MessageBox.StandardButtons(
                     E5MessageBox.Open | \
                     E5MessageBox.Save | \
                     E5MessageBox.Cancel))

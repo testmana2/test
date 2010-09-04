@@ -62,13 +62,13 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
         selection dialog.
         """
         if os.path.isdir(self.source):
-            target = QFileDialog.getExistingDirectory(\
+            target = QFileDialog.getExistingDirectory(
                 self,
                 self.trUtf8("Select target"),
                 self.targetEdit.text(),
                 QFileDialog.Options(QFileDialog.ShowDirsOnly))
         else:
-            target = QFileDialog.getSaveFileName(\
+            target = QFileDialog.getSaveFileName(
                 self,
                 self.trUtf8("Select target"),
                 self.targetEdit.text(),

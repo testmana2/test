@@ -62,13 +62,13 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         selection dialog.
         """
         if os.path.isdir(self.source):
-            target = QFileDialog.getExistingDirectory(\
+            target = QFileDialog.getExistingDirectory(
                 None,
                 self.trUtf8("Select target"),
                 self.targetEdit.text(),
                 QFileDialog.Options(QFileDialog.ShowDirsOnly))
         else:
-            target = QFileDialog.getSaveFileName(\
+            target = QFileDialog.getSaveFileName(
                 None,
                 self.trUtf8("Select target"),
                 self.targetEdit.text(),

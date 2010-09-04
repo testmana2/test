@@ -174,7 +174,7 @@ class Browser(QTreeView):
         self.sourceMenu = QMenu(self)
         self.sourceMenu.addAction(QApplication.translate('Browser', 'Open'), 
             self._openItem)
-        self.unittestAct = self.sourceMenu.addAction(\
+        self.unittestAct = self.sourceMenu.addAction(
             QApplication.translate('Browser', 'Run unittest...'), self.handleUnittest)
         self.sourceMenu.addAction(
             QApplication.translate('Browser', 'Copy Path to Clipboard'), 
@@ -208,10 +208,10 @@ class Browser(QTreeView):
         self.dirMenu.addAction(QApplication.translate('Browser', 
             'New toplevel directory...'), 
             self.__newToplevelDir)
-        self.addAsTopLevelAct = self.dirMenu.addAction(\
+        self.addAsTopLevelAct = self.dirMenu.addAction(
             QApplication.translate('Browser', 'Add as toplevel directory'),
             self.__addAsToplevelDir)
-        self.removeFromToplevelAct = self.dirMenu.addAction(\
+        self.removeFromToplevelAct = self.dirMenu.addAction(
             QApplication.translate('Browser', 'Remove from toplevel'),
             self.__removeToplevel)
         self.dirMenu.addSeparator()
@@ -262,7 +262,7 @@ class Browser(QTreeView):
         
         @param coord the position of the mouse pointer (QPoint)
         """
-        categories = self.getSelectedItemsCountCategorized(\
+        categories = self.getSelectedItemsCountCategorized(
             [BrowserDirectoryItem, BrowserFileItem, 
              BrowserClassItem, BrowserMethodItem])
         cnt = categories["sum"]
@@ -274,7 +274,7 @@ class Browser(QTreeView):
             
             if index.isValid():
                 self.setCurrentIndex(index)
-                flags = QItemSelectionModel.SelectionFlags(\
+                flags = QItemSelectionModel.SelectionFlags(
                     QItemSelectionModel.ClearAndSelect | QItemSelectionModel.Rows)
                 self.selectionModel().select(index, flags)
                 
@@ -317,7 +317,7 @@ class Browser(QTreeView):
         """
         Protected slot to handle the open popup menu entry.
         """
-        itmList = self.getSelectedItems(\
+        itmList = self.getSelectedItems(
             [BrowserFileItem, BrowserClassItem, 
              BrowserMethodItem, BrowserClassAttributeItem])
         
@@ -412,7 +412,7 @@ class Browser(QTreeView):
         """
         Private slot to handle the New toplevel directory popup menu entry.
         """
-        dname = QFileDialog.getExistingDirectory(\
+        dname = QFileDialog.getExistingDirectory(
             None,
             QApplication.translate('Browser', "New toplevel directory"),
             "",

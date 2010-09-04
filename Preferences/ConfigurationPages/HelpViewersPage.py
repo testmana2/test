@@ -48,7 +48,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
             self.webBrowserButton.setChecked(True)
         else:
             self.customViewerButton.setChecked(True)
-        self.customViewerEdit.setText(\
+        self.customViewerEdit.setText(
             Preferences.getHelp("CustomViewer"))
         
     def save(self):
@@ -72,7 +72,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         Private slot to handle the custom viewer selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Custom Viewer"),
             self.customViewerEdit.text(),
@@ -86,7 +86,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         Private slot to handle the Web browser selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Web-Browser"),
             self.webbrowserEdit.text(),
@@ -100,7 +100,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         Private slot to handle the PDF viewer selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select PDF-Viewer"),
             self.pdfviewerEdit.text(),
@@ -114,7 +114,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         Private slot to handle the CHM viewer selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select CHM-Viewer"),
             self.chmviewerEdit.text(),

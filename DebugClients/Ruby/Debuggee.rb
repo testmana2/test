@@ -583,7 +583,7 @@ debugger that are called from the application being debugged.
             
             if ["AsyncFile.rb", "AsyncIO.rb", "Config.rb", "DebugClient.rb",
                 "DebugClientBaseModule.rb", "DebugClientCapabilities.rb",
-                "DebugProtocol.rb", "DebugQuit.rb", "Debuggee.rb"].include?(\
+                "DebugProtocol.rb", "DebugQuit.rb", "Debuggee.rb"].include?(
                     File.basename(file))
                 return true
             end

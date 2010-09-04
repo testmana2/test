@@ -59,26 +59,26 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.defaultFontSample.setFont(self.defaultFont)
         self.monospacedFont = Preferences.getEditorOtherFonts("MonospacedFont")
         self.monospacedFontSample.setFont(self.monospacedFont)
-        self.monospacedCheckBox.setChecked(\
+        self.monospacedCheckBox.setChecked(
             Preferences.getEditor("UseMonospacedFont"))
-        self.linenowidthSlider.setValue(\
+        self.linenowidthSlider.setValue(
             Preferences.getEditor("LinenoWidth"))
-        self.linenoCheckBox.setChecked(\
+        self.linenoCheckBox.setChecked(
             Preferences.getEditor("LinenoMargin"))
-        self.foldingCheckBox.setChecked(\
+        self.foldingCheckBox.setChecked(
             Preferences.getEditor("FoldingMargin"))
-        self.unifiedMarginsCheckBox.setChecked(\
+        self.unifiedMarginsCheckBox.setChecked(
             Preferences.getEditor("UnifiedMargins"))
         
-        self.caretlineVisibleCheckBox.setChecked(\
+        self.caretlineVisibleCheckBox.setChecked(
             Preferences.getEditor("CaretLineVisible"))
-        self.caretWidthSpinBox.setValue(\
+        self.caretWidthSpinBox.setValue(
             Preferences.getEditor("CaretWidth"))
-        self.colourizeSelTextCheckBox.setChecked(\
+        self.colourizeSelTextCheckBox.setChecked(
             Preferences.getEditor("ColourizeSelText"))
-        self.customSelColourCheckBox.setChecked(\
+        self.customSelColourCheckBox.setChecked(
             Preferences.getEditor("CustomSelectionColours"))
-        self.extentSelEolCheckBox.setChecked(\
+        self.extentSelEolCheckBox.setChecked(
             Preferences.getEditor("ExtendSelectionToEol"))
         
         self.editorColours["CaretForeground"] = \
@@ -116,18 +116,18 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
                 Preferences.getEditorColour)
         
         self.eolCheckBox.setChecked(Preferences.getEditor("ShowEOL"))
-        self.wrapLongLinesCheckBox.setChecked(\
+        self.wrapLongLinesCheckBox.setChecked(
             Preferences.getEditor("WrapLongLines"))
         
         self.edgeModeCombo.setCurrentIndex(
             self.edgeModes.index(Preferences.getEditor("EdgeMode")))
-        self.edgeLineColumnSlider.setValue(\
+        self.edgeLineColumnSlider.setValue(
             Preferences.getEditor("EdgeColumn"))
         self.editorColours["Edge"] = \
             self.initColour("Edge", self.edgeBackgroundColorButton, 
                 Preferences.getEditorColour)
         
-        self.bracehighlightingCheckBox.setChecked(\
+        self.bracehighlightingCheckBox.setChecked(
             Preferences.getEditor("BraceHighlighting"))
         self.editorColours["MatchingBrace"] = \
             self.initColour("MatchingBrace", self.matchingBracesButton, 
@@ -145,9 +145,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.zoomfactorSlider.setValue(
             Preferences.getEditor("ZoomFactor"))
         
-        self.whitespaceCheckBox.setChecked(\
+        self.whitespaceCheckBox.setChecked(
             Preferences.getEditor("ShowWhitespace"))
-        self.miniMenuCheckBox.setChecked(\
+        self.miniMenuCheckBox.setChecked(
             Preferences.getEditor("MiniContextMenu"))
         
     def save(self):

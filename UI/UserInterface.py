@@ -1227,7 +1227,7 @@ class UserInterface(QMainWindow):
         """
         dock = QDockWidget()
         dock.setObjectName(name)
-        dock.setFeatures(\
+        dock.setFeatures(
             QDockWidget.DockWidgetFeatures(QDockWidget.AllDockWidgetFeatures))
         return dock
 
@@ -1327,7 +1327,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Debug Profile'),
                 0, 0,
                 self.viewProfileActGrp, 'debug_profile', True)
-        self.setDebugProfileAct.setStatusTip(\
+        self.setDebugProfileAct.setStatusTip(
             self.trUtf8('Activate the debug view profile'))
         self.setDebugProfileAct.setWhatsThis(self.trUtf8(
             """<b>Debug Profile</b>"""
@@ -1503,7 +1503,7 @@ class UserInterface(QMainWindow):
 
         self.templateViewerAct = E5Action(self.trUtf8('Template-Viewer'),
                 self.trUtf8('Temp&late-Viewer'), 0, 0, self, 'template_viewer', True)
-        self.templateViewerAct.setStatusTip(\
+        self.templateViewerAct.setStatusTip(
             self.trUtf8('Toggle the Template-Viewer window'))
         self.templateViewerAct.setWhatsThis(self.trUtf8(
             """<b>Toggle the Template-Viewer window</b>"""
@@ -1697,7 +1697,7 @@ class UserInterface(QMainWindow):
         self.showVersionsAct = E5Action(self.trUtf8('Show downloadable versions'),
                 self.trUtf8('Show &downloadable versions...'), 
                 0, 0, self, 'show_downloadable_versions')
-        self.showVersionsAct.setStatusTip(\
+        self.showVersionsAct.setStatusTip(
             self.trUtf8('Show the versions available for download'))
         self.showVersionsAct.setWhatsThis(self.trUtf8(
             """<b>Show downloadable versions...</b>"""
@@ -3022,7 +3022,7 @@ class UserInterface(QMainWindow):
         act = self.__menus["tools"].addAction(self.trUtf8("Configure Tool Groups ..."),
             self.__toolGroupsConfiguration)
         act.setData(-1)
-        act = self.__menus["tools"].addAction(\
+        act = self.__menus["tools"].addAction(
             self.trUtf8("Configure current Tool Group ..."), 
             self.__toolsConfiguration)
         act.setData(-2)
@@ -3055,7 +3055,7 @@ class UserInterface(QMainWindow):
                     if tool['menutext'] == '--':
                         self.__menus["tools"].addSeparator()
                     else:
-                        act = self.__menus["tools"].addAction(\
+                        act = self.__menus["tools"].addAction(
                             UI.PixmapCache.getIcon(tool['icon']), tool['menutext'])
                         act.setData(idx)
                     idx += 1
@@ -4885,7 +4885,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to export the keyboard shortcuts.
         """
-        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             None,
             self.trUtf8("Export Keyboard Shortcuts"),
             "",
@@ -4914,7 +4914,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to import the keyboard shortcuts.
         """
-        fn = QFileDialog.getOpenFileName(\
+        fn = QFileDialog.getOpenFileName(
             None,
             self.trUtf8("Import Keyboard Shortcuts"),
             "",
@@ -5413,7 +5413,7 @@ class UserInterface(QMainWindow):
                 if period == 0:
                     return
                 elif period in [2, 3, 4]:
-                    lastCheck = Preferences.Prefs.settings.value(\
+                    lastCheck = Preferences.Prefs.settings.value(
                         "Updates/LastCheckDate", QDate(1970, 1, 1))
                     if lastCheck.isValid():
                         now = QDate.currentDate()
@@ -5489,7 +5489,7 @@ class UserInterface(QMainWindow):
         if self.showAvailableVersions:
             self.__showAvailableVersionInfos(versions)
         else:
-            Preferences.Prefs.settings.setValue(\
+            Preferences.Prefs.settings.setValue(
                 "Updates/LastCheckDate", QDate.currentDate())
             self.__versionCheckResult(versions)
         

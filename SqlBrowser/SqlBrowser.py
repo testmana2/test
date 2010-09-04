@@ -122,7 +122,7 @@ class SqlBrowser(QMainWindow):
         self.aboutQtAct = E5Action(self.trUtf8('About Qt'), 
             self.trUtf8('About &Qt'), 
             0, 0, self, 'sql_help_about_qt')
-        self.aboutQtAct.setStatusTip(\
+        self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
                 """<b>About Qt</b>"""

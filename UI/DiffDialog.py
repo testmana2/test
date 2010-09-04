@@ -201,7 +201,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         
         self.diffButton = \
             self.buttonBox.addButton(self.trUtf8("Compare"), QDialogButtonBox.ActionRole)
-        self.diffButton.setToolTip(\
+        self.diffButton.setToolTip(
             self.trUtf8("Press to perform the comparison of the two files"))
         self.saveButton = \
             self.buttonBox.addButton(self.trUtf8("Save"), QDialogButtonBox.ActionRole)

@@ -97,7 +97,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
             else:
                 path = "{0}/branches".format(reposRoot)
         else:
-            reposPath, ok = QInputDialog.getText(\
+            reposPath, ok = QInputDialog.getText(
                 self,
                 self.trUtf8("Subversion List"),
                 self.trUtf8("Enter the repository URL containing the tags or branches"),
@@ -138,7 +138,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
             self.__showError(e.args[0])
             res = False
         except AttributeError:
-            self.__showError(\
+            self.__showError(
                 self.trUtf8("The installed version of PySvn should be 1.4.0 or better."))
             res = False
         locker.unlock()

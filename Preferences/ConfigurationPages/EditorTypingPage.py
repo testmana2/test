@@ -36,49 +36,49 @@ class EditorTypingPage(ConfigurationPageBase, Ui_EditorTypingPage):
             self.languageCombo.addItem(language, self.pageIds[language])
         
         # Python
-        self.pythonGroup.setChecked(\
+        self.pythonGroup.setChecked(
             Preferences.getEditorTyping("Python/EnabledTypingAids"))
-        self.pythonInsertClosingBraceCheckBox.setChecked(\
+        self.pythonInsertClosingBraceCheckBox.setChecked(
             Preferences.getEditorTyping("Python/InsertClosingBrace"))
-        self.pythonSkipBraceCheckBox.setChecked(\
+        self.pythonSkipBraceCheckBox.setChecked(
             Preferences.getEditorTyping("Python/SkipBrace"))
-        self.pythonIndentBraceCheckBox.setChecked(\
+        self.pythonIndentBraceCheckBox.setChecked(
             Preferences.getEditorTyping("Python/IndentBrace"))
-        self.pythonInsertQuoteCheckBox.setChecked(\
+        self.pythonInsertQuoteCheckBox.setChecked(
             Preferences.getEditorTyping("Python/InsertQuote"))
-        self.pythonDedentElseCheckBox.setChecked(\
+        self.pythonDedentElseCheckBox.setChecked(
             Preferences.getEditorTyping("Python/DedentElse"))
-        self.pythonDedentExceptCheckBox.setChecked(\
+        self.pythonDedentExceptCheckBox.setChecked(
             Preferences.getEditorTyping("Python/DedentExcept"))
-        self.pythonDedentExceptPy24CheckBox.setChecked(\
+        self.pythonDedentExceptPy24CheckBox.setChecked(
             Preferences.getEditorTyping("Python/Py24StyleTry"))
-        self.pythonInsertImportCheckBox.setChecked(\
+        self.pythonInsertImportCheckBox.setChecked(
             Preferences.getEditorTyping("Python/InsertImport"))
-        self.pythonInsertSelfCheckBox.setChecked(\
+        self.pythonInsertSelfCheckBox.setChecked(
             Preferences.getEditorTyping("Python/InsertSelf"))
-        self.pythonInsertBlankCheckBox.setChecked(\
+        self.pythonInsertBlankCheckBox.setChecked(
             Preferences.getEditorTyping("Python/InsertBlank"))
-        self.pythonColonDetectionCheckBox.setChecked(\
+        self.pythonColonDetectionCheckBox.setChecked(
             Preferences.getEditorTyping("Python/ColonDetection"))
         self.pythonDedentDefCheckBox.setChecked(
             Preferences.getEditorTyping("Python/DedentDef"))
         
         # Ruby
-        self.rubyGroup.setChecked(\
+        self.rubyGroup.setChecked(
             Preferences.getEditorTyping("Ruby/EnabledTypingAids"))
-        self.rubyInsertClosingBraceCheckBox.setChecked(\
+        self.rubyInsertClosingBraceCheckBox.setChecked(
             Preferences.getEditorTyping("Ruby/InsertClosingBrace"))
-        self.rubySkipBraceCheckBox.setChecked(\
+        self.rubySkipBraceCheckBox.setChecked(
             Preferences.getEditorTyping("Ruby/SkipBrace"))
-        self.rubyIndentBraceCheckBox.setChecked(\
+        self.rubyIndentBraceCheckBox.setChecked(
             Preferences.getEditorTyping("Ruby/IndentBrace"))
-        self.rubyInsertQuoteCheckBox.setChecked(\
+        self.rubyInsertQuoteCheckBox.setChecked(
             Preferences.getEditorTyping("Ruby/InsertQuote"))
-        self.rubyInsertBlankCheckBox.setChecked(\
+        self.rubyInsertBlankCheckBox.setChecked(
             Preferences.getEditorTyping("Ruby/InsertBlank"))
-        self.rubyInsertHereDocCheckBox.setChecked(\
+        self.rubyInsertHereDocCheckBox.setChecked(
             Preferences.getEditorTyping("Ruby/InsertHereDoc"))
-        self.rubyInsertInlineDocCheckBox.setChecked(\
+        self.rubyInsertInlineDocCheckBox.setChecked(
             Preferences.getEditorTyping("Ruby/InsertInlineDoc"))
         
         self.on_languageCombo_activated(' ')

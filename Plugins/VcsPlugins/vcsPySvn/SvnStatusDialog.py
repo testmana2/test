@@ -62,12 +62,12 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         
         self.menuactions = []
         self.menu = QMenu()
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Commit changes to repository..."), self.__commit))
         self.menu.addSeparator()
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Add to repository"), self.__add))
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Revert changes"), self.__revert))
         if pysvn.svn_version >= (1, 5, 0) and pysvn.version >= (1, 6, 0):
             self.menu.addSeparator()
@@ -278,7 +278,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                     else:
                         changelist = ""
                     
-                    self.__generateItem(\
+                    self.__generateItem(
                         changelist, 
                         file.text_status, 
                         file.prop_status,

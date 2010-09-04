@@ -227,7 +227,7 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True,
         qt4TransDir = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
     loadTranslators(qt4TransDir, app)
     
-    QTextCodec.setCodecForCStrings(\
+    QTextCodec.setCodecForCStrings(
         QTextCodec.codecForName(Preferences.getSystem("StringEncoding"))
     )
     

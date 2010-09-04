@@ -25,13 +25,13 @@ class EditorAutocompletionPage(ConfigurationPageBase, Ui_EditorAutocompletionPag
         self.setObjectName("EditorAutocompletionPage")
         
         # set initial values
-        self.acEnabledCheckBox.setChecked(\
+        self.acEnabledCheckBox.setChecked(
             Preferences.getEditor("AutoCompletionEnabled"))
-        self.acCaseSensitivityCheckBox.setChecked(\
+        self.acCaseSensitivityCheckBox.setChecked(
             Preferences.getEditor("AutoCompletionCaseSensitivity"))
-        self.acReplaceWordCheckBox.setChecked(\
+        self.acReplaceWordCheckBox.setChecked(
             Preferences.getEditor("AutoCompletionReplaceWord"))
-        self.acThresholdSlider.setValue(\
+        self.acThresholdSlider.setValue(
             Preferences.getEditor("AutoCompletionThreshold"))
         
     def save(self):

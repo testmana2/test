@@ -630,13 +630,13 @@ class Editor(QsciScintillaCompat):
                 self.__toggleTypingAids)
         self.menuActs["TypingAidsEnabled"].setCheckable(True)
         self.menuActs["TypingAidsEnabled"].setEnabled(self.completer is not None)
-        self.menuActs["TypingAidsEnabled"].setChecked(\
+        self.menuActs["TypingAidsEnabled"].setChecked(
             self.completer is not None and self.completer.isEnabled())
         self.menuActs["AutoCompletionEnable"] = \
             self.menu.addAction(self.trUtf8("Autocompletion enabled"),
                 self.__toggleAutoCompletionEnable)
         self.menuActs["AutoCompletionEnable"].setCheckable(True)
-        self.menuActs["AutoCompletionEnable"].setChecked(\
+        self.menuActs["AutoCompletionEnable"].setChecked(
             self.autoCompletionThreshold() != -1)
         if not self.isResourcesFile:
             self.menu.addMenu(self.autocompletionMenu)
@@ -1108,7 +1108,7 @@ class Editor(QsciScintillaCompat):
             lexerSel = lexerList.index(self.getLanguage())
         except ValueError:
             lexerSel = 0
-        lexerName, ok = QInputDialog.getItem(\
+        lexerName, ok = QInputDialog.getItem(
             self,
             self.trUtf8("Pygments Lexer"),
             self.trUtf8("Select the Pygments lexer to apply."),
@@ -3116,11 +3116,11 @@ class Editor(QsciScintillaCompat):
             self.__initContextMenu()
         else:
             # set checked context menu items
-            self.menuActs["AutoCompletionEnable"].setChecked(\
+            self.menuActs["AutoCompletionEnable"].setChecked(
                 self.autoCompletionThreshold() != -1)
-            self.menuActs["MonospacedFont"].setChecked(\
+            self.menuActs["MonospacedFont"].setChecked(
                 self.useMonospaced)
-            self.menuActs["AutosaveEnable"].setChecked(\
+            self.menuActs["AutosaveEnable"].setChecked(
                 self.autosaveEnabled and not self.autosaveManuallyDisabled)
         
         # regenerate the margins context menu(s)
@@ -3274,18 +3274,18 @@ class Editor(QsciScintillaCompat):
         self.setUnmatchedBraceBackgroundColor(
             Preferences.getEditorColour("NonmatchingBraceBack"))
         if Preferences.getEditor("CustomSelectionColours"):
-            self.setSelectionBackgroundColor(\
+            self.setSelectionBackgroundColor(
                 Preferences.getEditorColour("SelectionBackground"))
         else:
-            self.setSelectionBackgroundColor(\
+            self.setSelectionBackgroundColor(
                 QApplication.palette().color(QPalette.Highlight))
         if Preferences.getEditor("ColourizeSelText"):
             self.resetSelectionForegroundColor()
         elif Preferences.getEditor("CustomSelectionColours"):
-            self.setSelectionForegroundColor(\
+            self.setSelectionForegroundColor(
                 Preferences.getEditorColour("SelectionForeground"))
         else:
-            self.setSelectionForegroundColor(\
+            self.setSelectionForegroundColor(
                 QApplication.palette().color(QPalette.HighlightedText))
         self.setSelectionToEol(Preferences.getEditor("ExtendSelectionToEol"))
         self.setCaretForegroundColor(
@@ -3306,11 +3306,11 @@ class Editor(QsciScintillaCompat):
         
         if Preferences.getEditor("WrapLongLines"):
             self.setWrapMode(QsciScintilla.WrapWord)
-            self.setWrapVisualFlags(\
+            self.setWrapVisualFlags(
                 QsciScintilla.WrapFlagByBorder, QsciScintilla.WrapFlagByBorder)
         else:
             self.setWrapMode(QsciScintilla.WrapNone)
-            self.setWrapVisualFlags(\
+            self.setWrapVisualFlags(
                 QsciScintilla.WrapFlagNone, QsciScintilla.WrapFlagNone)
         
         self.zoomTo(Preferences.getEditor("ZoomFactor"))
@@ -3782,7 +3782,7 @@ class Editor(QsciScintillaCompat):
                 self.menuActs["BoxComment"].setEnabled(False)
         
         self.menuActs["TypingAidsEnabled"].setEnabled(self.completer is not None)
-        self.menuActs["TypingAidsEnabled"].setChecked(\
+        self.menuActs["TypingAidsEnabled"].setChecked(
             self.completer is not None and self.completer.isEnabled())
         
         spellingAvailable = SpellChecker.isAvailable()
@@ -3846,9 +3846,9 @@ class Editor(QsciScintillaCompat):
         
         self.profileMenuAct.setEnabled(prEnable)
         self.coverageMenuAct.setEnabled(coEnable)
-        self.coverageShowAnnotationMenuAct.setEnabled(\
+        self.coverageShowAnnotationMenuAct.setEnabled(
             coEnable and not self.__coverageMarkersShown)
-        self.coverageHideAnnotationMenuAct.setEnabled(\
+        self.coverageHideAnnotationMenuAct.setEnabled(
             self.__coverageMarkersShown)
         
         self.showMenu.emit("Show", self.menuShow,  self)
@@ -3879,10 +3879,10 @@ class Editor(QsciScintillaCompat):
                 self.marginMenuActs["EditBreakpoint"].setEnabled(False)
                 self.marginMenuActs["EnableBreakpoint"].setEnabled(False)
             if self.markersAtLine(self.line) & (1 << self.dbreakpoint):
-                self.marginMenuActs["EnableBreakpoint"].setText(\
+                self.marginMenuActs["EnableBreakpoint"].setText(
                     self.trUtf8('Enable breakpoint'))
             else:
-                self.marginMenuActs["EnableBreakpoint"].setText(\
+                self.marginMenuActs["EnableBreakpoint"].setText(
                     self.trUtf8('Disable breakpoint'))
             if self.breaks:
                 self.marginMenuActs["NextBreakpoint"].setEnabled(True)
@@ -4153,7 +4153,7 @@ class Editor(QsciScintillaCompat):
         
         if files:
             if len(files) > 1:
-                fn, ok = QInputDialog.getItem(\
+                fn, ok = QInputDialog.getItem(
                     self,
                     self.trUtf8("Code Coverage"),
                     self.trUtf8("Please select a coverage file"),
@@ -4291,7 +4291,7 @@ class Editor(QsciScintillaCompat):
         
         if files:
             if len(files) > 1:
-                fn, ok = QInputDialog.getItem(\
+                fn, ok = QInputDialog.getItem(
                     self,
                     self.trUtf8("Profile Data"),
                     self.trUtf8("Please select a profile file"),
@@ -4546,7 +4546,7 @@ class Editor(QsciScintillaCompat):
         for s in list(self.macros.keys()):
             qs.append(s)
         qs.sort()
-        return QInputDialog.getItem(\
+        return QInputDialog.getItem(
             self,
             self.trUtf8("Macro Name"),
             self.trUtf8("Select a macro name:"),
@@ -4614,7 +4614,7 @@ class Editor(QsciScintillaCompat):
         if not ok or not name:
             return  # user abort
         
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save macro file"),
             configDir,
@@ -4682,7 +4682,7 @@ class Editor(QsciScintillaCompat):
         self.curMacro.endRecording()
         self.recording = False
         
-        name, ok = QInputDialog.getText(\
+        name, ok = QInputDialog.getText(
             self,
             self.trUtf8("Macro Recording"),
             self.trUtf8("Enter name of the macro:"),
@@ -4795,12 +4795,12 @@ class Editor(QsciScintillaCompat):
                 self.refresh()
             else:
                 self.inReopenPrompt = True
-                msg = self.trUtf8(\
+                msg = self.trUtf8(
                     """<p>The file <b>{0}</b> has been changed while it was opened in"""
                     """ eric5. Reread it?</p>""").format(self.fileName)
                 yesDefault = True
                 if self.isModified():
-                    msg += self.trUtf8(\
+                    msg += self.trUtf8(
                         """<br><b>Warning:</b> You will loose"""
                         """ your changes upon reopening it.""")
                     yesDefault = False
@@ -5047,7 +5047,7 @@ class Editor(QsciScintillaCompat):
         Private method to handle the Add file context menu action.
         """
         dirStr = os.path.dirname(self.fileName)
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Add file resource"),
             dirStr,
@@ -5063,7 +5063,7 @@ class Editor(QsciScintillaCompat):
         Private method to handle the Add files context menu action.
         """
         dirStr = os.path.dirname(self.fileName)
-        files = QFileDialog.getOpenFileNames(\
+        files = QFileDialog.getOpenFileNames(
             self,
             self.trUtf8("Add file resources"),
             dirStr,
@@ -5083,14 +5083,14 @@ class Editor(QsciScintillaCompat):
         Private method to handle the Add aliased file context menu action.
         """
         dirStr = os.path.dirname(self.fileName)
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Add aliased file resource"),
             dirStr,
             "")
         if file:
             relFile = QDir(dirStr).relativeFilePath(file)
-            alias, ok = QInputDialog.getText(\
+            alias, ok = QInputDialog.getText(
                 self,
                 self.trUtf8("Add aliased file resource"),
                 self.trUtf8("Alias for file <b>{0}</b>:").format(relFile),

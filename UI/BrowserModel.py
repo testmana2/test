@@ -352,7 +352,7 @@ class BrowserModel(QAbstractItemModel):
         else:
             self.toplevelDirs.append(Utilities.toNativeSeparators(QDir.homePath()))
             for d in QDir.drives():
-                self.toplevelDirs.append(Utilities.toNativeSeparators(\
+                self.toplevelDirs.append(Utilities.toNativeSeparators(
                     d.absoluteFilePath()))
         
         for d in self.toplevelDirs:
@@ -523,7 +523,7 @@ class BrowserModel(QAbstractItemModel):
         moduleName = parentItem.moduleName()
         fileName = parentItem.fileName()
         try:
-            dict = Utilities.ClassBrowsers.readmodule(\
+            dict = Utilities.ClassBrowsers.readmodule(
                 moduleName, [parentItem.dirName()], 
                 parentItem.isPythonFile() or parentItem.isPython3File())
         except ImportError:
@@ -592,7 +592,7 @@ class BrowserModel(QAbstractItemModel):
                 self.endInsertRows()
         
         if len(cl.attributes):
-            node = BrowserClassAttributesItem(\
+            node = BrowserClassAttributesItem(
                 parentItem, cl.attributes, 
                 QApplication.translate("BrowserModel", "Attributes"))
             if repopulate:
@@ -602,7 +602,7 @@ class BrowserModel(QAbstractItemModel):
                 self._addItem(node, parentItem)
         
         if len(cl.globals):
-            node = BrowserClassAttributesItem(\
+            node = BrowserClassAttributesItem(
                 parentItem, cl.globals, 
                 QApplication.translate("BrowserModel", "Attributes (global)"))
             if repopulate:
@@ -1323,7 +1323,7 @@ class BrowserMethodItem(BrowserItem):
         self.itemData[0] =  "{0}({1})".format(
             name, ", ".join(self._functionObject.parameters))
         # if no defaults are wanted
-        # ....format(name, ", ".join(\
+        # ....format(name, ", ".join(
         #            [e.split('=')[0].strip() for e in self._functionObject.parameters]))
         if self._functionObject and \
            (self._functionObject.methods or self._functionObject.classes):

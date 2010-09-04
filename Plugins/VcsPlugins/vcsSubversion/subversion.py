@@ -333,7 +333,7 @@ class Subversion(VersionControl):
                 svnUrl = '{0}/trunk'.format(vcsDir)
             else:
                 if not tag.startswith('tags') and not tag.startswith('branches'):
-                    type, ok = QInputDialog.getItem(\
+                    type, ok = QInputDialog.getItem(
                         None,
                         self.trUtf8("Subversion Checkout"),
                         self.trUtf8("The tag must be a normal tag (tags) or"
@@ -385,7 +385,7 @@ class Subversion(VersionControl):
                 svnUrl = '{0}/trunk'.format(vcsDir)
             else:
                 if not tag.startswith('tags') and not tag.startswith('branches'):
-                    type, ok = QInputDialog.getItem(\
+                    type, ok = QInputDialog.getItem(
                         None,
                         self.trUtf8("Subversion Export"),
                         self.trUtf8("The tag must be a normal tag (tags) or"
@@ -582,7 +582,7 @@ class Subversion(VersionControl):
         if noDialog:
             self.startSynchronizedProcess(QProcess(), "svn", args, wdir)
         else:
-            dia = SvnDialog(\
+            dia = SvnDialog(
                 self.trUtf8('Adding files/directories to the Subversion repository'))
             res = dia.startProcess(args, wdir)
             if res:
@@ -637,7 +637,7 @@ class Subversion(VersionControl):
         else:
             args.append(path)
         
-        dia = SvnDialog(\
+        dia = SvnDialog(
             self.trUtf8('Adding directory trees to the Subversion repository'))
         res = dia.startProcess(args, dname)
         if res:
@@ -669,7 +669,7 @@ class Subversion(VersionControl):
         if noDialog:
             res = self.startSynchronizedProcess(QProcess(), "svn", args)
         else:
-            dia = SvnDialog(\
+            dia = SvnDialog(
                 self.trUtf8('Removing files/directories from the Subversion repository'))
             res = dia.startProcess(args)
             if res:
@@ -1418,7 +1418,7 @@ class Subversion(VersionControl):
         @param name file/directory name (string or list of strings)
         @param recursive flag indicating a recursive list is requested
         """
-        propName, ok = QInputDialog.getText(\
+        propName, ok = QInputDialog.getText(
             None,
             self.trUtf8("Subversion Delete Property"),
             self.trUtf8("Enter property name"),
@@ -1567,7 +1567,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
-        noEntries, ok = QInputDialog.getInteger(\
+        noEntries, ok = QInputDialog.getInteger(
             None,
             self.trUtf8("Subversion Log"),
             self.trUtf8("Select number of entries to show."),
@@ -1673,7 +1673,7 @@ class Subversion(VersionControl):
             url = None
         
         if url is None:
-            url, ok = QInputDialog.getText(\
+            url, ok = QInputDialog.getText(
                 None,
                 self.trUtf8("Repository Browser"),
                 self.trUtf8("Enter the repository URL."),
@@ -1720,7 +1720,7 @@ class Subversion(VersionControl):
         @param names name or list of names of file or directory to add
             (string)
         """
-        clname, ok = QInputDialog.getText(\
+        clname, ok = QInputDialog.getText(
             None,
             self.trUtf8("Add to changelist"),
             self.trUtf8("Enter name of the changelist:"),

@@ -350,6 +350,6 @@ class ProjectBrowser(E5TabWidget):
         if state == " " or state not in self.vcsStatusColorNames:
             self.vcsStatusIndicator.setColor(QColor(Qt.lightGray))
         else:
-            self.vcsStatusIndicator.setColor(\
+            self.vcsStatusIndicator.setColor(
                 Preferences.getProjectBrowserColour(self.vcsStatusColorNames[state]))
         self.vcsStatusIndicator.setToolTip(self.vcsStatusText[state])

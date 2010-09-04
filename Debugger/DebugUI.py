@@ -188,7 +188,7 @@ class DebugUI(QObject):
         self.coverageAct = E5Action(self.trUtf8('Coverage run of Script'),
                 UI.PixmapCache.getIcon("coverageScript.png"),
                 self.trUtf8('Coverage run of Script...'),0,0,self,'dbg_coverage_script')
-        self.coverageAct.setStatusTip(\
+        self.coverageAct.setStatusTip(
             self.trUtf8('Perform a coverage run of the current Script'))
         self.coverageAct.setWhatsThis(self.trUtf8(
             """<b>Coverage run of Script</b>"""
@@ -202,7 +202,7 @@ class DebugUI(QObject):
         self.coverageProjectAct = E5Action(self.trUtf8('Coverage run of Project'),
                 UI.PixmapCache.getIcon("coverageProject.png"),
                 self.trUtf8('Coverage run of Project...'),0,0,self,'dbg_coverage_project')
-        self.coverageProjectAct.setStatusTip(\
+        self.coverageProjectAct.setStatusTip(
             self.trUtf8('Perform a coverage run of the current Project'))
         self.coverageProjectAct.setWhatsThis(self.trUtf8(
             """<b>Coverage run of Project</b>"""
@@ -298,7 +298,7 @@ class DebugUI(QObject):
                 UI.PixmapCache.getIcon("continue.png"),
                 self.trUtf8('&Continue'),Qt.Key_F6,0,
                 self.debugActGrp,'dbg_continue')
-        act.setStatusTip(\
+        act.setStatusTip(
             self.trUtf8('Continue running the program from the current line'))
         act.setWhatsThis(self.trUtf8(
             """<b>Continue</b>"""
@@ -399,7 +399,7 @@ class DebugUI(QObject):
         act = E5Action(self.trUtf8('Execute'),
                 self.trUtf8('E&xecute...'),
                 0,0,self.debugActGrp2,'dbg_execute')
-        act.setStatusTip(\
+        act.setStatusTip(
             self.trUtf8('Execute a one line statement in the current context'))
         act.setWhatsThis(self.trUtf8(
             """<b>Execute</b>"""
@@ -819,7 +819,7 @@ class DebugUI(QObject):
         Private slot to handle the projectOpened signal.
         """
         self.projectOpen = True
-        cap = self.debugServer.getClientCapabilities(\
+        cap = self.debugServer.getClientCapabilities(
             self.project.pdata["PROGLANGUAGE"][0])
         if not self.passive:
             self.debugProjectAct.setEnabled(cap & HasDebugger)
@@ -1003,11 +1003,11 @@ class DebugUI(QObject):
             else:
                 if stackTrace:
                     if exceptionType.startswith('unhandled'):
-                        buttons = E5MessageBox.StandardButtons(\
+                        buttons = E5MessageBox.StandardButtons(
                             E5MessageBox.No | \
                             E5MessageBox.Yes)
                     else:
-                        buttons = E5MessageBox.StandardButtons(\
+                        buttons = E5MessageBox.StandardButtons(
                             E5MessageBox.No | \
                             E5MessageBox.Yes | \
                             E5MessageBox.Ignore)
@@ -1173,7 +1173,7 @@ class DebugUI(QObject):
         
         cond, special, temp, enabled, count = wp[:5]
         
-        dlg = EditWatchpointDialog(\
+        dlg = EditWatchpointDialog(
             (cond, temp, enabled, count, special), self)
         if dlg.exec_() == QDialog.Accepted:
             cond, temp, enabled, count, special = dlg.getData()
@@ -1911,7 +1911,7 @@ class DebugUI(QObject):
         else:
             curr = -1
 
-        arg, ok = QInputDialog.getItem(\
+        arg, ok = QInputDialog.getItem(
                             self.ui,
                             self.trUtf8("Evaluate"),
                             self.trUtf8("Enter the statement to evaluate"),
@@ -1940,7 +1940,7 @@ class DebugUI(QObject):
         else:
             curr = -1
 
-        stmt, ok = QInputDialog.getItem(\
+        stmt, ok = QInputDialog.getItem(
                             self.ui,
                             self.trUtf8("Execute"),
                             self.trUtf8("Enter the statement to execute"),

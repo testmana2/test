@@ -66,7 +66,7 @@ class UMLClassDiagram(UMLDialog):
             module = Utilities.ModuleParser.readModule(self.file)
         except ImportError:
             ct = QGraphicsTextItem(None, self.scene)
-            ct.setHtml(\
+            ct.setHtml(
                 self.trUtf8("The module <b>'{0}'</b> could not be found.")
                     .format(self.file))
             return
@@ -103,11 +103,11 @@ class UMLClassDiagram(UMLDialog):
                 else:
                     if className in module.classes:
                         # this is a local class (defined in this module)
-                        self.__addLocalClass(\
+                        self.__addLocalClass(
                             className, module.classes[className], 0, 0)
                     elif className in module.modules:
                         # this is a local module (defined in this module)
-                        self.__addLocalClass(\
+                        self.__addLocalClass(
                             className, module.modules[className], 0, 0, True)
                     else:
                         self.__addExternalClass(className, 0, 0)
@@ -127,7 +127,7 @@ class UMLClassDiagram(UMLDialog):
             self.__createAssociations(routes)
         else:
             ct = QGraphicsTextItem(None, self.scene)
-            ct.setHtml(\
+            ct.setHtml(
                 self.trUtf8("The module <b>'{0}'</b> does not contain any classes.")\
                 .format(self.file))
         
@@ -243,7 +243,7 @@ class UMLClassDiagram(UMLDialog):
         """
         for route in routes:
             if len(route) > 1:
-                assoc = AssociationItem(\
+                assoc = AssociationItem(
                         self.__getCurrentShape(route[1]),
                         self.__getCurrentShape(route[0]),
                         Generalisation)

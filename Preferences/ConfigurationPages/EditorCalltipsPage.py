@@ -27,10 +27,10 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         self.setObjectName("EditorCalltipsPage")
         
         # set initial values
-        self.ctEnabledCheckBox.setChecked(\
+        self.ctEnabledCheckBox.setChecked(
             Preferences.getEditor("CallTipsEnabled"))
         
-        self.ctVisibleSlider.setValue(\
+        self.ctVisibleSlider.setValue(
             Preferences.getEditor("CallTipsVisible"))
         self.callTipsBackgroundColour = \
             self.initColour("CallTipsBackground", self.calltipsBackgroundButton, 

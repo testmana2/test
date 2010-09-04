@@ -75,7 +75,7 @@ class TabnannyPlugin(QObject):
             self.__projectAct = E5Action(self.trUtf8('Check Indentations'),
                     self.trUtf8('&Indentations...'), 0, 0,
                     self,'project_check_indentations')
-            self.__projectAct.setStatusTip(\
+            self.__projectAct.setStatusTip(
                 self.trUtf8('Check indentations using tabnanny.'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Check Indentations...</b>"""
@@ -142,7 +142,7 @@ class TabnannyPlugin(QObject):
         @param menu reference to the menu (QMenu)
         """
         if menuName == "Checks" and self.__projectAct is not None:
-            self.__projectAct.setEnabled(\
+            self.__projectAct.setEnabled(
                 e5App().getObject("Project").getProjectLanguage() == "Python3")
     
     def __projectBrowserShowMenu(self, menuName, menu):

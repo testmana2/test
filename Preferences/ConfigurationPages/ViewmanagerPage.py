@@ -37,7 +37,7 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         keys = sorted(self.viewmanagers.keys())
         for key in keys:
             self.windowComboBox.addItem(self.trUtf8(self.viewmanagers[key]), key)
-        currentIndex = self.windowComboBox.findText(\
+        currentIndex = self.windowComboBox.findText(
             self.trUtf8(self.viewmanagers[currentVm]))
         self.windowComboBox.setCurrentIndex(currentIndex)
         self.on_windowComboBox_activated(currentIndex)

@@ -71,7 +71,7 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         pwl = self.pwlEdit.text()
         if not pwl:
             pwl = self.project.ppath
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select project word list"),
             pwl,
@@ -88,7 +88,7 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         pel = self.pelEdit.text()
         if not pel:
             pel = self.project.ppath
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select project exclude list"),
             pel,

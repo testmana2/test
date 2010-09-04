@@ -215,10 +215,10 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 self.__restartNeeded = True
         self.summaryEdit.append("\n")
         if res:
-            self.summaryEdit.append(self.trUtf8(\
+            self.summaryEdit.append(self.trUtf8(
                 """The plugins were installed successfully."""))
         else:
-            self.summaryEdit.append(self.trUtf8(\
+            self.summaryEdit.append(self.trUtf8(
                 """Some plugins could not be installed."""))
         
         return res

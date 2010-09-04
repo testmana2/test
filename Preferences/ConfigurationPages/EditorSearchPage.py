@@ -29,11 +29,11 @@ class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
         self.editorColours = {}
         
         # set initial values
-        self.searchMarkersEnabledCheckBox.setChecked(\
+        self.searchMarkersEnabledCheckBox.setChecked(
             Preferences.getEditor("SearchMarkersEnabled"))
-        self.quicksearchMarkersEnabledCheckBox.setChecked(\
+        self.quicksearchMarkersEnabledCheckBox.setChecked(
             Preferences.getEditor("QuickSearchMarkersEnabled"))
-        self.occurrencesMarkersEnabledCheckBox.setChecked(\
+        self.occurrencesMarkersEnabledCheckBox.setChecked(
             Preferences.getEditor("MarkOccurrencesEnabled"))
         
         self.markOccurrencesTimeoutSpinBox.setValue(

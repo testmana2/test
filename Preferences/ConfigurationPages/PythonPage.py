@@ -29,10 +29,10 @@ class PythonPage(ConfigurationPageBase, Ui_PythonPage):
         self.ioEncodingComboBox.addItems(sorted(supportedCodecs))
         
         # set initial values
-        index = self.stringEncodingComboBox.findText(\
+        index = self.stringEncodingComboBox.findText(
             Preferences.getSystem("StringEncoding"))
         self.stringEncodingComboBox.setCurrentIndex(index)
-        index = self.ioEncodingComboBox.findText(\
+        index = self.ioEncodingComboBox.findText(
             Preferences.getSystem("IOEncoding"))
         self.ioEncodingComboBox.setCurrentIndex(index)
         

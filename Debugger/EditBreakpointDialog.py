@@ -110,7 +110,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         """
         Private slot to select a file via a file selection dialog.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select filename of the breakpoint"),
             self.filenameCombo.currentText(),

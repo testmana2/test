@@ -39,7 +39,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.requestFilenameCheckBox.setChecked(
             Preferences.getUI("RequestDownloadFilename"))
         
-        self.proxyGroup.setChecked(\
+        self.proxyGroup.setChecked(
             Preferences.getUI("UseProxy"))
         if Preferences.getUI("UseSystemProxy"):
             self.systemProxyButton.setChecked(True)
@@ -47,17 +47,17 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.manualProxyButton.setChecked(True)
         self.httpProxyForAllCheckBox.setChecked(
             Preferences.getUI("UseHttpProxyForAll"))
-        self.httpProxyHostEdit.setText(\
+        self.httpProxyHostEdit.setText(
             Preferences.getUI("ProxyHost/Http"))
-        self.httpsProxyHostEdit.setText(\
+        self.httpsProxyHostEdit.setText(
             Preferences.getUI("ProxyHost/Https"))
-        self.ftpProxyHostEdit.setText(\
+        self.ftpProxyHostEdit.setText(
             Preferences.getUI("ProxyHost/Ftp"))
-        self.httpProxyPortSpin.setValue(\
+        self.httpProxyPortSpin.setValue(
             Preferences.getUI("ProxyPort/Http"))
-        self.httpsProxyPortSpin.setValue(\
+        self.httpsProxyPortSpin.setValue(
             Preferences.getUI("ProxyPort/Https"))
-        self.ftpProxyPortSpin.setValue(\
+        self.ftpProxyPortSpin.setValue(
             Preferences.getUI("ProxyPort/Ftp"))
         
     def save(self):
@@ -93,7 +93,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         """
         Private slot to handle the directory selection via dialog.
         """
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select download directory"),
             self.downloadDirEdit.text(),

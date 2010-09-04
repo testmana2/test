@@ -72,7 +72,7 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
             else:
                 lexer = "Pygments|{0}".format(pygmentsLexer)
         if ext and lexer:
-            itmList = self.editorLexerList.findItems(\
+            itmList = self.editorLexerList.findItems(
                 ext, Qt.MatchFlags(Qt.MatchExactly), 0)
             if itmList:
                 index = self.editorLexerList.indexOfTopLevelItem(itmList[0])

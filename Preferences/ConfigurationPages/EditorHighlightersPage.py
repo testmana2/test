@@ -61,7 +61,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         Public slot to save the Editor Highlighter Associations configuration.
         """
         lexerAssocs = {}
-        for index in range(\
+        for index in range(
             self.editorLexerList.topLevelItemCount()):
             itm = self.editorLexerList.topLevelItem(index)
             lexerAssocs[itm.text(0)] = itm.text(1)
@@ -83,7 +83,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
             else:
                 lexer = "Pygments|{0}".format(pygmentsLexer)
         if ext and lexer:
-            itmList = self.editorLexerList.findItems(\
+            itmList = self.editorLexerList.findItems(
                 ext, Qt.MatchFlags(Qt.MatchExactly), 0)
             if itmList:
                 index = self.editorLexerList.indexOfTopLevelItem(itmList[0])

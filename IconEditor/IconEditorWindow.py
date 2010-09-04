@@ -217,7 +217,7 @@ class IconEditorWindow(QMainWindow):
             self.trUtf8('Save &As...'), 
             QKeySequence(self.trUtf8("Shift+Ctrl+S","File|Save As")), 
             0, self, 'iconEditor_file_save_as')
-        self.saveAsAct.setStatusTip(\
+        self.saveAsAct.setStatusTip(
             self.trUtf8('Save the current icon to a new file'))
         self.saveAsAct.setWhatsThis(self.trUtf8(
                 """<b>Save As...</b>"""
@@ -277,7 +277,7 @@ class IconEditorWindow(QMainWindow):
                 QKeySequence(self.trUtf8("Alt+Backspace", "Edit|Undo")), 
                 self, 'iconEditor_edit_undo')
         self.undoAct.setStatusTip(self.trUtf8('Undo the last change'))
-        self.undoAct.setWhatsThis(self.trUtf8(\
+        self.undoAct.setWhatsThis(self.trUtf8(
             """<b>Undo</b>"""
             """<p>Undo the last change done.</p>"""
         ))
@@ -290,7 +290,7 @@ class IconEditorWindow(QMainWindow):
                 QKeySequence(self.trUtf8("Ctrl+Shift+Z", "Edit|Redo")), 
                 0, self, 'iconEditor_edit_redo')
         self.redoAct.setStatusTip(self.trUtf8('Redo the last change'))
-        self.redoAct.setWhatsThis(self.trUtf8(\
+        self.redoAct.setWhatsThis(self.trUtf8(
             """<b>Redo</b>"""
             """<p>Redo the last change done.</p>"""
         ))
@@ -304,7 +304,7 @@ class IconEditorWindow(QMainWindow):
                 QKeySequence(self.trUtf8("Shift+Del", "Edit|Cut")),
                 self, 'iconEditor_edit_cut')
         self.cutAct.setStatusTip(self.trUtf8('Cut the selection'))
-        self.cutAct.setWhatsThis(self.trUtf8(\
+        self.cutAct.setWhatsThis(self.trUtf8(
             """<b>Cut</b>"""
             """<p>Cut the selected image area to the clipboard.</p>"""
         ))
@@ -318,7 +318,7 @@ class IconEditorWindow(QMainWindow):
                 QKeySequence(self.trUtf8("Ctrl+Ins", "Edit|Copy")), 
                 self, 'iconEditor_edit_copy')
         self.copyAct.setStatusTip(self.trUtf8('Copy the selection'))
-        self.copyAct.setWhatsThis(self.trUtf8(\
+        self.copyAct.setWhatsThis(self.trUtf8(
             """<b>Copy</b>"""
             """<p>Copy the selected image area to the clipboard.</p>"""
         ))
@@ -332,7 +332,7 @@ class IconEditorWindow(QMainWindow):
                 QKeySequence(self.trUtf8("Shift+Ins", "Edit|Paste")), 
                 self, 'iconEditor_edit_paste')
         self.pasteAct.setStatusTip(self.trUtf8('Paste the clipboard image'))
-        self.pasteAct.setWhatsThis(self.trUtf8(\
+        self.pasteAct.setWhatsThis(self.trUtf8(
             """<b>Paste</b>"""
             """<p>Paste the clipboard image.</p>"""
         ))
@@ -344,7 +344,7 @@ class IconEditorWindow(QMainWindow):
                 0, 0, self, 'iconEditor_edit_paste_as_new')
         self.pasteNewAct.setStatusTip(self.trUtf8(
             'Paste the clipboard image replacing the current one'))
-        self.pasteNewAct.setWhatsThis(self.trUtf8(\
+        self.pasteNewAct.setWhatsThis(self.trUtf8(
             """<b>Paste as New</b>"""
             """<p>Paste the clipboard image replacing the current one.</p>"""
         ))
@@ -358,7 +358,7 @@ class IconEditorWindow(QMainWindow):
                 0,
                 self, 'iconEditor_edit_clear')
         self.deleteAct.setStatusTip(self.trUtf8('Clear the icon image'))
-        self.deleteAct.setWhatsThis(self.trUtf8(\
+        self.deleteAct.setWhatsThis(self.trUtf8(
             """<b>Clear</b>"""
             """<p>Clear the icon image and set it to be completely transparent.</p>"""
         ))
@@ -371,7 +371,7 @@ class IconEditorWindow(QMainWindow):
                 0,
                 self, 'iconEditor_edit_select_all')
         self.selectAllAct.setStatusTip(self.trUtf8('Select the complete icon image'))
-        self.selectAllAct.setWhatsThis(self.trUtf8(\
+        self.selectAllAct.setWhatsThis(self.trUtf8(
             """<b>Select All</b>"""
             """<p>Selects the complete icon image.</p>"""
         ))
@@ -384,7 +384,7 @@ class IconEditorWindow(QMainWindow):
                 0, 0,
                 self, 'iconEditor_edit_change_size')
         self.resizeAct.setStatusTip(self.trUtf8('Change the icon size'))
-        self.resizeAct.setWhatsThis(self.trUtf8(\
+        self.resizeAct.setWhatsThis(self.trUtf8(
             """<b>Change Size...</b>"""
             """<p>Changes the icon size.</p>"""
         ))
@@ -397,7 +397,7 @@ class IconEditorWindow(QMainWindow):
                 0, 0,
                 self, 'iconEditor_edit_grayscale')
         self.grayscaleAct.setStatusTip(self.trUtf8('Change the icon to grayscale'))
-        self.grayscaleAct.setWhatsThis(self.trUtf8(\
+        self.grayscaleAct.setWhatsThis(self.trUtf8(
             """<b>Grayscale</b>"""
             """<p>Changes the icon to grayscale.</p>"""
         ))
@@ -711,7 +711,7 @@ class IconEditorWindow(QMainWindow):
         self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
                 self.trUtf8('About &Qt'), 
                 0, 0, self, 'iconEditor_help_about_qt')
-        self.aboutQtAct.setStatusTip(\
+        self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
             """<b>About Qt</b>"""

@@ -298,18 +298,18 @@ class Shell(QsciScintillaCompat):
         self.setUnmatchedBraceBackgroundColor(
             Preferences.getEditorColour("NonmatchingBraceBack"))
         if Preferences.getEditor("CustomSelectionColours"):
-            self.setSelectionBackgroundColor(\
+            self.setSelectionBackgroundColor(
                 Preferences.getEditorColour("SelectionBackground"))
         else:
-            self.setSelectionBackgroundColor(\
+            self.setSelectionBackgroundColor(
                 QApplication.palette().color(QPalette.Highlight))
         if Preferences.getEditor("ColourizeSelText"):
             self.resetSelectionForegroundColor()
         elif Preferences.getEditor("CustomSelectionColours"):
-            self.setSelectionForegroundColor(\
+            self.setSelectionForegroundColor(
                 Preferences.getEditorColour("SelectionForeground"))
         else:
-            self.setSelectionForegroundColor(\
+            self.setSelectionForegroundColor(
                 QApplication.palette().color(QPalette.HighlightedText))
         self.setSelectionToEol(Preferences.getEditor("ExtendSelectionToEol"))
         self.setCaretForegroundColor(
@@ -445,7 +445,7 @@ class Shell(QsciScintillaCompat):
         @param clientType type of the debug client (string)
         """
         if clientType in self.historyLists:
-            Preferences.Prefs.settings.setValue(\
+            Preferences.Prefs.settings.setValue(
                 "Shell/Histories/" + clientType, self.historyLists[clientType])
         
     def getHistory(self, clientType):
@@ -473,7 +473,7 @@ class Shell(QsciScintillaCompat):
         """
         Private slot to select a history entry to execute.
         """
-        cmd, ok = QInputDialog.getItem(\
+        cmd, ok = QInputDialog.getItem(
             self,
             self.trUtf8("Select History"),
             self.trUtf8("Select the history entry to execute (most recent shown last)."),
@@ -1088,7 +1088,7 @@ class Shell(QsciScintillaCompat):
                             self.dbs.startClient(False, language)
                         else:
                             # language not supported or typo
-                            self.__write(\
+                            self.__write(
                                 self.trUtf8('Shell language "{0}" not supported.\n')\
                                     .format(cmdList[1]))
                             self.__clientStatement(False)

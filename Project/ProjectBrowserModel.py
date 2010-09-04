@@ -748,7 +748,7 @@ class ProjectBrowserModel(BrowserModel):
                 self.beginRemoveRows(index, 0, itm.childCount() - 1)
                 itm.removeChildren()
                 self.endRemoveRows()
-                Utilities.ModuleParser.resetParsedModule(\
+                Utilities.ModuleParser.resetParsedModule(
                     os.path.join(self.project.ppath, name))
                 
                 self.populateItem(itm, True)

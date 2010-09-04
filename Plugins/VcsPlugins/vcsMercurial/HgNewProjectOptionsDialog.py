@@ -54,7 +54,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         Private slot to display a selection dialog.
         """
         if self.protocolCombo.currentText() == "file://":
-            directory = QFileDialog.getExistingDirectory(\
+            directory = QFileDialog.getExistingDirectory(
                 self,
                 self.trUtf8("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
@@ -68,7 +68,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         """
         Private slot to display a directory selection dialog.
         """
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select Project Directory"),
             self.vcsProjectDirEdit.text(),

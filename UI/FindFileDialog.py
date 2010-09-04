@@ -494,7 +494,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         Private slot to display a directory selection dialog.
         """
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory"),
             self.dirCombo.currentText(),

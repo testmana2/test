@@ -46,7 +46,7 @@ class StatusMonitorLed(E5Led):
             """ yellow = checking VCS status). A status description is given"""
             """ in the tooltip.</p>"""
         ))
-        self.setToolTip(\
+        self.setToolTip(
             self.trUtf8("Repository status checking is switched off")
         )
         self.setColor(self.vcsMonitorLedColors["off"])
@@ -116,7 +116,7 @@ class StatusMonitorLed(E5Led):
         """
         Private slot to change the status check interval.
         """
-        interval,  ok = QInputDialog.getInteger(\
+        interval,  ok = QInputDialog.getInteger(
             None,
             self.trUtf8("VCS Status Monitor"),
             self.trUtf8("Enter monitor interval [s]"),

@@ -354,7 +354,7 @@ class Subversion(VersionControl):
                 svnUrl = '{0}/trunk'.format(vcsDir)
             else:
                 if not tag.startswith('tags') and not tag.startswith('branches'):
-                    type_, ok = QInputDialog.getItem(\
+                    type_, ok = QInputDialog.getItem(
                         None,
                         self.trUtf8("Subversion Checkout"),
                         self.trUtf8("The tag must be a normal tag (tags) or"
@@ -416,7 +416,7 @@ class Subversion(VersionControl):
                 svnUrl = '{0}/trunk'.format(vcsDir)
             else:
                 if not tag.startswith('tags') and not tag.startswith('branches'):
-                    type_, ok = QInputDialog.getItem(\
+                    type_, ok = QInputDialog.getItem(
                         None,
                         self.trUtf8("Subversion Export"),
                         self.trUtf8("The tag must be a normal tag (tags) or"
@@ -650,7 +650,7 @@ class Subversion(VersionControl):
         client = self.getClient()
         if not noDialog:
             dlg = \
-                SvnDialog(\
+                SvnDialog(
                     self.trUtf8('Adding files/directories to the Subversion repository'),
                         "add --non-recursive{0}{1} {2}".format(
                             force and " --force" or "",
@@ -723,7 +723,7 @@ class Subversion(VersionControl):
         ignore = "--ignore" in opts
         client = self.getClient()
         dlg = \
-            SvnDialog(\
+            SvnDialog(
                 self.trUtf8('Adding directory trees to the Subversion repository'),
                     "add{0}{1} {2}".format(
                         force and " --force" or "",
@@ -758,7 +758,7 @@ class Subversion(VersionControl):
         client = self.getClient()
         if not noDialog:
             dlg = \
-                SvnDialog(\
+                SvnDialog(
                     self.trUtf8('Removing files/directories from the Subversion repository'),
                         "remove{0} {1}".format(
                             force and " --force" or "",
@@ -820,7 +820,7 @@ class Subversion(VersionControl):
                 target = target
             if not noDialog:
                 dlg = \
-                    SvnDialog(\
+                    SvnDialog(
                         self.trUtf8('Moving {0}').format(name),
                             "move{0}{1} {2} {3}".format(
                                 force and " --force" or "",
@@ -963,7 +963,7 @@ class Subversion(VersionControl):
         if tagOp in [1, 2]:
             log = 'Created tag <{0}>'.format(self.tagName)
             dlg = \
-                SvnDialog(\
+                SvnDialog(
                     self.trUtf8('Tagging {0} in the Subversion repository').format(name),
                         "copy --message {0} {1} {2}".format(log, reposURL, url),
                     client, log = log)
@@ -977,7 +977,7 @@ class Subversion(VersionControl):
         else:
             log = 'Deleted tag <{0}>'.format(self.tagName)
             dlg = \
-                SvnDialog(\
+                SvnDialog(
                     self.trUtf8('Tagging {0} in the Subversion repository').format(name),
                         "remove --message {0} {1}".format(log, url),
                     client, log = log)
@@ -988,7 +988,7 @@ class Subversion(VersionControl):
             except pysvn.ClientError as e:
                 dlg.showError(e.args[0])
             locker.unlock()
-        rev and dlg.showMessage(\
+        rev and dlg.showMessage(
             self.trUtf8("Revision {0}.\n").format(rev.number))
         dlg.finish()
         dlg.exec_()
@@ -1176,7 +1176,7 @@ class Subversion(VersionControl):
                 rev2 = ""
         client = self.getClient()
         dlg = \
-            SvnDialog(\
+            SvnDialog(
                 self.trUtf8('Merging {0}').format(name),
                     "merge{0}{1} {2} {3} {4}".format(
                         (not recurse) and " --non-recursive" or "",
@@ -1478,7 +1478,7 @@ class Subversion(VersionControl):
                 log = ""
                 target = target
             dlg = \
-                SvnDialog(\
+                SvnDialog(
                     self.trUtf8('Copying {0}').format(name),
                         "copy{0} {1} {2}".format(
                             log and (" --message {0}".format(log)) or "", 
@@ -1545,7 +1545,7 @@ class Subversion(VersionControl):
             skipchecks = "--skip-checks" in opts
             client = self.getClient()
             dlg = \
-                SvnDialog(\
+                SvnDialog(
                     self.trUtf8('Subversion Set Property'),
                         "propset{0}{1} {2} {3} {4}".format(
                             recurse and " --recurse" or "",
@@ -1596,7 +1596,7 @@ class Subversion(VersionControl):
             skipchecks = "--skip-checks" in opts
             client = self.getClient()
             dlg = \
-                SvnDialog(\
+                SvnDialog(
                     self.trUtf8('Subversion Delete Property'),
                         "propdel{0}{1} {2} {3}".format(
                             recurse and " --recurse" or "",
@@ -1729,7 +1729,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
-        noEntries, ok = QInputDialog.getInteger(\
+        noEntries, ok = QInputDialog.getInteger(
             None,
             self.trUtf8("Subversion Log"),
             self.trUtf8("Select number of entries to show."),
@@ -1760,7 +1760,7 @@ class Subversion(VersionControl):
         @param stealIt flag indicating a forced operation (boolean)
         @param parent reference to the parent object of the subversion dialog (QWidget)
         """
-        comment, ok = QInputDialog.getText(\
+        comment, ok = QInputDialog.getText(
             None,
             self.trUtf8("Subversion Lock"),
             self.trUtf8("Enter lock comment"),
@@ -1780,7 +1780,7 @@ class Subversion(VersionControl):
         os.chdir(dname)
         client = self.getClient()
         dlg = \
-            SvnDialog(\
+            SvnDialog(
                 self.trUtf8('Locking in the Subversion repository'),
                     "lock{0}{1} {2}".format(
                         stealIt and " --force" or "",
@@ -1818,7 +1818,7 @@ class Subversion(VersionControl):
         os.chdir(dname)
         client = self.getClient()
         dlg = \
-            SvnDialog(\
+            SvnDialog(
                 self.trUtf8('Unlocking in the Subversion repository'),
                     "unlock{0} {1}".format(
                         breakIt and " --force" or "",
@@ -1889,7 +1889,7 @@ class Subversion(VersionControl):
             url = None
         
         if url is None:
-            url, ok = QInputDialog.getText(\
+            url, ok = QInputDialog.getText(
                 None,
                 self.trUtf8("Repository Browser"),
                 self.trUtf8("Enter the repository URL."),
@@ -1939,7 +1939,7 @@ class Subversion(VersionControl):
         if not isinstance(names, list):
             names = [names]
         
-        clname, ok = QInputDialog.getText(\
+        clname, ok = QInputDialog.getText(
             None,
             self.trUtf8("Add to changelist"),
             self.trUtf8("Enter name of the changelist:"),

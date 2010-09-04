@@ -110,7 +110,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 self.__generateSelected)
             self.tsMenuActions.append(act)
             self.tsprocMenuActions.append(act)
-            act = self.menu.addAction(\
+            act = self.menu.addAction(
                 self.trUtf8('Generate translation (with obsolete)'), 
                 self.__generateObsoleteSelected)
             self.tsMenuActions.append(act)
@@ -118,7 +118,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             act = self.menu.addAction(self.trUtf8('Generate all translations'), 
                 self.__generateAll)
             self.tsprocMenuActions.append(act)
-            act = self.menu.addAction(\
+            act = self.menu.addAction(
                 self.trUtf8('Generate all translations (with obsolete)'), 
                 self.__generateObsoleteAll)
             self.tsprocMenuActions.append(act)
@@ -218,7 +218,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             act = self.backMenu.addAction(self.trUtf8('Generate all translations'), 
                 self.__generateAll)
             self.tsprocBackMenuActions.append(act)
-            act = self.backMenu.addAction(\
+            act = self.backMenu.addAction(
                 self.trUtf8('Generate all translations (with obsolete)'), 
                 self.__generateObsoleteAll)
             self.tsprocBackMenuActions.append(act)
@@ -270,13 +270,13 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 self.__generateSelected)
             self.tsMultiMenuActions.append(act)
             self.tsprocMultiMenuActions.append(act)
-            act = self.multiMenu.addAction(\
+            act = self.multiMenu.addAction(
                 self.trUtf8('Generate translations (with obsolete)'),
                 self.__generateObsoleteSelected)
             self.tsMultiMenuActions.append(act)
             self.tsprocMultiMenuActions.append(act)
             self.multiMenu.addSeparator()
-            act = self.multiMenu.addAction(\
+            act = self.multiMenu.addAction(
                 self.trUtf8('Open in Qt-Linguist'), self._openItem)
             self.tsMultiMenuActions.append(act)
             act = self.multiMenu.addAction(self.trUtf8('Open in Editor'), 
@@ -340,7 +340,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             act = self.dirMenu.addAction(self.trUtf8('Generate all translations'), 
                 self.__generateAll)
             self.tsprocDirMenuActions.append(act)
-            act = self.dirMenu.addAction(\
+            act = self.dirMenu.addAction(
                 self.trUtf8('Generate all translations (with obsolete)'), 
                 self.__generateObsoleteAll)
             self.tsprocDirMenuActions.append(act)
@@ -405,14 +405,14 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             return
         
         try:
-            categories = self.getSelectedItemsCountCategorized(\
+            categories = self.getSelectedItemsCountCategorized(
                 [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
             cnt = categories["sum"]
             if cnt <= 1:
                 index = self.indexAt(coord)
                 if index.isValid():
                     self._selectSingleItem(index)
-                    categories = self.getSelectedItemsCountCategorized(\
+                    categories = self.getSelectedItemsCountCategorized(
                         [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
                         

@@ -111,10 +111,10 @@ class DebugViewer(QWidget):
         self.globalsFilterEdit = QLineEdit(self.glvWidget)
         self.globalsFilterEdit.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.glvWidgetHLayout.addWidget(self.globalsFilterEdit)
-        self.globalsFilterEdit.setToolTip(\
+        self.globalsFilterEdit.setToolTip(
             self.trUtf8("Enter regular expression patterns separated by ';' to define "
                 "variable filters. "))
-        self.globalsFilterEdit.setWhatsThis(\
+        self.globalsFilterEdit.setWhatsThis(
             self.trUtf8("Enter regular expression patterns separated by ';' to define "
                 "variable filters. All variables and class attributes matched by one of "
                 "the expressions are not shown in the list above."))
@@ -158,10 +158,10 @@ class DebugViewer(QWidget):
         self.localsFilterEdit = QLineEdit(self.lvWidget)
         self.localsFilterEdit.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.lvWidgetHLayout2.addWidget(self.localsFilterEdit)
-        self.localsFilterEdit.setToolTip(\
+        self.localsFilterEdit.setToolTip(
             self.trUtf8("Enter regular expression patterns separated by ';' to define "
                 "variable filters. "))
-        self.localsFilterEdit.setWhatsThis(\
+        self.localsFilterEdit.setWhatsThis(
             self.trUtf8("Enter regular expression patterns separated by ';' to define "
                 "variable filters. All variables and class attributes matched by one of "
                 "the expressions are not shown in the list above."))

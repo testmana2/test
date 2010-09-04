@@ -48,7 +48,7 @@ class XMLErrorHandler(ErrorHandler):
         """
         self.errors += 1
         self.totals += 1
-        self.msgs.append((\
+        self.msgs.append((
             "E",
             exception.getSystemId(),
             exception.getLineNumber(),
@@ -65,7 +65,7 @@ class XMLErrorHandler(ErrorHandler):
         """
         self.fatals += 1
         self.totals += 1
-        self.msgs.append((\
+        self.msgs.append((
             "F",
             exception.getSystemId(),
             exception.getLineNumber(),
@@ -82,7 +82,7 @@ class XMLErrorHandler(ErrorHandler):
         """
         self.warnings += 1
         self.totals += 1
-        self.msgs.append((\
+        self.msgs.append((
             "W",
             exception.getSystemId(),
             exception.getLineNumber(),

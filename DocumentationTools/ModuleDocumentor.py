@@ -604,7 +604,7 @@ class ModuleDocument(object):
                 funcBody = self.functionTemplate.format(**{ \
                     'Anchor' : funcName,
                     'Function' : self.module.functions[funcName].name,
-                    'FunctionDescription' : self.__formatDescription(\
+                    'FunctionDescription' : self.__formatDescription(
                         self.module.functions[funcName].description),
                     'Params' : ', '.join(self.module.functions[funcName].parameters),
                 })

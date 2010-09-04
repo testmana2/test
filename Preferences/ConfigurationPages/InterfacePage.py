@@ -57,7 +57,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         
         self.uiCaptionShowsFilenameGroupBox.setChecked(
             Preferences.getUI("CaptionShowsFilename"))
-        self.filenameLengthSpinBox.setValue(\
+        self.filenameLengthSpinBox.setValue(
             Preferences.getUI("CaptionFilenameLength"))
         self.styleSheetEdit.setText(Preferences.getUI("StyleSheet"))
         
@@ -247,7 +247,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         """
         Private method to select the style sheet file via a dialog.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select style sheet file"),
             self.styleSheetEdit.text(),

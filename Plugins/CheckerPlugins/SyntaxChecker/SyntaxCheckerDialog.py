@@ -40,9 +40,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.showButton = self.buttonBox.addButton(\
+        self.showButton = self.buttonBox.addButton(
             self.trUtf8("Show"), QDialogButtonBox.ActionRole)
-        self.showButton.setToolTip(\
+        self.showButton.setToolTip(
             self.trUtf8("Press to show all files containing an issue"))
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)

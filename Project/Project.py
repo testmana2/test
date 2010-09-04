@@ -191,10 +191,10 @@ class Project(QObject):
         }
         
         self.dbgFilters = {
-            "Python"  : self.trUtf8(\
+            "Python"  : self.trUtf8(
                          "Python Files (*.py2);;"
                          "Python GUI Files (*.pyw2);;"),
-            "Python3" : self.trUtf8(\
+            "Python3" : self.trUtf8(
                          "Python3 Files (*.py *.py3);;"
                          "Python3 GUI Files (*.pyw *.pyw3);;"),
             "Ruby"    : self.trUtf8("Ruby Files (*.rb);;"),
@@ -508,10 +508,10 @@ class Project(QObject):
         Public slot used to handle the preferencesChanged signal.
         """
         if self.pudata["VCSSTATUSMONITORINTERVAL"]:
-            self.setStatusMonitorInterval(\
+            self.setStatusMonitorInterval(
                 self.pudata["VCSSTATUSMONITORINTERVAL"][0])
         else:
-            self.setStatusMonitorInterval(\
+            self.setStatusMonitorInterval(
                 Preferences.getVCS("StatusMonitorInterval"))
         
         self.__model.preferencesChanged()
@@ -2007,7 +2007,7 @@ class Project(QObject):
         isSourceFile = fn in self.pdata["SOURCES"]
         
         if newfn is None:
-            newfn = QFileDialog.getSaveFileName(\
+            newfn = QFileDialog.getSaveFileName(
                 None,
                 self.trUtf8("Rename file"),
                 os.path.dirname(oldfn),
@@ -2372,7 +2372,7 @@ class Project(QObject):
                             vcsList = []
                             for vcsSystemStr, vcsSystemDisplay in vcsData:
                                 vcsList.append(vcsSystemDisplay)
-                            res, vcs_ok = QInputDialog.getItem(\
+                            res, vcs_ok = QInputDialog.getItem(
                                 None,
                                 self.trUtf8("New Project"),
                                 self.trUtf8("Select Version Control System"),
@@ -2425,7 +2425,7 @@ class Project(QObject):
                 keys = sorted(vcsSystemsDict.keys())
                 for key in keys:
                     vcsSystemsDisplay.append(vcsSystemsDict[key])
-                vcsSelected, ok = QInputDialog.getItem(\
+                vcsSelected, ok = QInputDialog.getItem(
                     None,
                     self.trUtf8("New Project"),
                     self.trUtf8("Select version control system for the project"),
@@ -2519,7 +2519,7 @@ class Project(QObject):
                      "{0}_%language%{1}".format(os.path.basename(tslist[0]).split('_')[0],
                         os.path.splitext(tslist[0])[1]))]
             else:
-                pattern, ok = QInputDialog.getText(\
+                pattern, ok = QInputDialog.getText(
                     None,
                     self.trUtf8("Translation Pattern"),
                     self.trUtf8("Enter the path pattern for translation files "
@@ -2633,10 +2633,10 @@ class Project(QObject):
                 self.reinitVCS.emit()
             
             if self.pudata["VCSSTATUSMONITORINTERVAL"]:
-                self.setStatusMonitorInterval(\
+                self.setStatusMonitorInterval(
                     self.pudata["VCSSTATUSMONITORINTERVAL"][0])
             else:
-                self.setStatusMonitorInterval(\
+                self.setStatusMonitorInterval(
                     Preferences.getVCS("StatusMonitorInterval"))
         
     def __showFiletypeAssociations(self):
@@ -2694,7 +2694,7 @@ class Project(QObject):
             return
         
         if fn is None:
-            fn = QFileDialog.getOpenFileName(\
+            fn = QFileDialog.getOpenFileName(
                 self.parent(),
                 self.trUtf8("Open project"),
                 "",
@@ -2739,7 +2739,7 @@ class Project(QObject):
                                     for vcsSystemStr, vcsSystemDisplay in vcsData:
                                         vcsList.append(vcsSystemDisplay)
                                     QApplication.restoreOverrideCursor()
-                                    res, vcs_ok = QInputDialog.getItem(\
+                                    res, vcs_ok = QInputDialog.getItem(
                                         None,
                                         self.trUtf8("New Project"),
                                         self.trUtf8("Select Version Control System"),
@@ -2858,7 +2858,7 @@ class Project(QObject):
             defaultFilter = self.trUtf8("Compressed Project Files (*.e4pz)")
         else:
             defaultFilter = self.trUtf8("Project Files (*.e4p)")
-        fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(\
+        fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.parent(),
             self.trUtf8("Save project as"),
             self.ppath,
@@ -3451,7 +3451,7 @@ class Project(QObject):
         self.filetypesAct = E5Action(self.trUtf8('Filetype Associations'),
                 self.trUtf8('Filetype Associations...'), 0, 0,
                 self, 'project_filetype_associatios')
-        self.filetypesAct.setStatusTip(\
+        self.filetypesAct.setStatusTip(
             self.trUtf8('Show the project filetype associations'))
         self.filetypesAct.setWhatsThis(self.trUtf8(
             """<b>Filetype Associations...</b>"""
@@ -3466,7 +3466,7 @@ class Project(QObject):
         self.lexersAct = E5Action(self.trUtf8('Lexer Associations'),
                 self.trUtf8('Lexer Associations...'), 0, 0,
                 self, 'project_lexer_associatios')
-        self.lexersAct.setStatusTip(\
+        self.lexersAct.setStatusTip(
             self.trUtf8('Show the project lexer associations (overriding defaults)'))
         self.lexersAct.setWhatsThis(self.trUtf8(
             """<b>Lexer Associations...</b>"""
@@ -3587,7 +3587,7 @@ class Project(QObject):
         self.codeMetricsAct = E5Action(self.trUtf8('Code Metrics'),
                 self.trUtf8('&Code Metrics...'), 0, 0,
                 self.chkGrp,'project_code_metrics')
-        self.codeMetricsAct.setStatusTip(\
+        self.codeMetricsAct.setStatusTip(
             self.trUtf8('Show some code metrics for the project.'))
         self.codeMetricsAct.setWhatsThis(self.trUtf8(
             """<b>Code Metrics...</b>"""
@@ -3599,7 +3599,7 @@ class Project(QObject):
         self.codeCoverageAct = E5Action(self.trUtf8('Python Code Coverage'),
                 self.trUtf8('Code Co&verage...'), 0, 0,
                 self.chkGrp,'project_code_coverage')
-        self.codeCoverageAct.setStatusTip(\
+        self.codeCoverageAct.setStatusTip(
             self.trUtf8('Show code coverage information for the project.'))
         self.codeCoverageAct.setWhatsThis(self.trUtf8(
             """<b>Code Coverage...</b>"""
@@ -3612,7 +3612,7 @@ class Project(QObject):
         self.codeProfileAct = E5Action(self.trUtf8('Profile Data'),
                 self.trUtf8('&Profile Data...'), 0, 0,
                 self.chkGrp,'project_profile_data')
-        self.codeProfileAct.setStatusTip(\
+        self.codeProfileAct.setStatusTip(
             self.trUtf8('Show profiling data for the project.'))
         self.codeProfileAct.setWhatsThis(self.trUtf8(
             """<b>Profile Data...</b>"""
@@ -3624,7 +3624,7 @@ class Project(QObject):
         self.applicationDiagramAct = E5Action(self.trUtf8('Application Diagram'),
                 self.trUtf8('&Application Diagram...'), 0, 0,
                 self.chkGrp,'project_application_diagram')
-        self.applicationDiagramAct.setStatusTip(\
+        self.applicationDiagramAct.setStatusTip(
             self.trUtf8('Show a diagram of the project.'))
         self.applicationDiagramAct.setWhatsThis(self.trUtf8(
             """<b>Application Diagram...</b>"""
@@ -3639,7 +3639,7 @@ class Project(QObject):
                 UI.PixmapCache.getIcon("pluginArchiveList.png"),
                 self.trUtf8('Create &Package List'), 0, 0,
                 self.pluginGrp,'project_plugin_pkglist')
-        self.pluginPkgListAct.setStatusTip(\
+        self.pluginPkgListAct.setStatusTip(
             self.trUtf8('Create an initial PKGLIST file for an eric5 plugin.'))
         self.pluginPkgListAct.setWhatsThis(self.trUtf8(
             """<b>Create Package List</b>"""
@@ -3653,7 +3653,7 @@ class Project(QObject):
                 UI.PixmapCache.getIcon("pluginArchive.png"),
                 self.trUtf8('Create Plugin &Archive'), 0, 0,
                 self.pluginGrp,'project_plugin_archive')
-        self.pluginArchiveAct.setStatusTip(\
+        self.pluginArchiveAct.setStatusTip(
             self.trUtf8('Create an eric5 plugin archive file.'))
         self.pluginArchiveAct.setWhatsThis(self.trUtf8(
             """<b>Create Plugin Archive</b>"""
@@ -3668,7 +3668,7 @@ class Project(QObject):
                 UI.PixmapCache.getIcon("pluginArchiveSnapshot.png"),
                 self.trUtf8('Create Plugin Archive (&Snapshot)'), 0, 0,
                 self.pluginGrp,'project_plugin_sarchive')
-        self.pluginSArchiveAct.setStatusTip(\
+        self.pluginSArchiveAct.setStatusTip(
             self.trUtf8('Create an eric5 plugin archive file (snapshot release).'))
         self.pluginSArchiveAct.setWhatsThis(self.trUtf8(
             """<b>Create Plugin Archive (Snapshot)</b>"""
@@ -3866,7 +3866,7 @@ class Project(QObject):
                 formatStr = '&{0:d}. {1}'
             else:
                 formatStr = '{0:d}. {1}'
-            act = self.recentMenu.addAction(\
+            act = self.recentMenu.addAction(
                 formatStr.format(idx, 
                     Utilities.compactPath(rp, self.ui.maxMenuFilePathLen)))
             act.setData(rp)
@@ -4235,7 +4235,7 @@ class Project(QObject):
         
         if files:
             if len(files) > 1:
-                fn, ok = QInputDialog.getItem(\
+                fn, ok = QInputDialog.getItem(
                     None,
                     self.trUtf8("Code Coverage"),
                     self.trUtf8("Please select a coverage file"),
@@ -4281,7 +4281,7 @@ class Project(QObject):
         
         if files:
             if len(files) > 1:
-                fn, ok = QInputDialog.getItem(\
+                fn, ok = QInputDialog.getItem(
                     None,
                     self.trUtf8("Profile Data"),
                     self.trUtf8("Please select a profile file"),
@@ -4307,10 +4307,10 @@ class Project(QObject):
             tfn = Utilities.getTestFileName(fn)
             basename = os.path.splitext(fn)[0]
             tbasename = os.path.splitext(tfn)[0]
-            self.codeProfileAct.setEnabled(\
+            self.codeProfileAct.setEnabled(
                 os.path.isfile("{0}.profile".format(basename)) or \
                 os.path.isfile("{0}.profile".format(tbasename)))
-            self.codeCoverageAct.setEnabled(\
+            self.codeCoverageAct.setEnabled(
                 self.pdata["PROGLANGUAGE"][0] == "Python3" and \
                 (os.path.isfile("{0}.coverage".format(basename)) or \
                  os.path.isfile("{0}.coverage".format(tbasename))))
@@ -4527,13 +4527,13 @@ class Project(QObject):
             try:
                 self.__createZipDirEntries(os.path.split(name)[0], archiveFile)
                 if snapshot and name == self.pdata["MAINSCRIPT"][0]:
-                    snapshotSource, version = self.__createSnapshotSource(\
+                    snapshotSource, version = self.__createSnapshotSource(
                         os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0]))
                     archiveFile.writestr(name, snapshotSource)
                 else:
                     archiveFile.write(os.path.join(self.ppath, name), name)
                     if name == self.pdata["MAINSCRIPT"][0]:
-                        version = self.__pluginExtractVersion(\
+                        version = self.__pluginExtractVersion(
                             os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0]))
             except OSError as why:
                 E5MessageBox.critical(self.ui,

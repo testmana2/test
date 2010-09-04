@@ -395,7 +395,7 @@ class HelpWindow(QMainWindow):
             self.trUtf8('Open File in New &Tab'), 
             QKeySequence(self.trUtf8("Shift+Ctrl+O","File|Open in new tab")), 
             0, self, 'help_file_open_tab')
-        self.openTabAct.setStatusTip(\
+        self.openTabAct.setStatusTip(
             self.trUtf8('Open a help file for display in a new tab'))
         self.openTabAct.setWhatsThis(self.trUtf8(
                 """<b>Open File in New Tab</b>"""
@@ -410,7 +410,7 @@ class HelpWindow(QMainWindow):
             self.trUtf8('&Save As...'), 
             QKeySequence(self.trUtf8("Shift+Ctrl+S","File|Save As")), 
             0, self, 'help_file_save_as')
-        self.saveAsAct.setStatusTip(\
+        self.saveAsAct.setStatusTip(
             self.trUtf8('Save the current page to disk'))
         self.saveAsAct.setWhatsThis(self.trUtf8(
                 """<b>Save As...</b>"""
@@ -423,7 +423,7 @@ class HelpWindow(QMainWindow):
         self.importBookmarksAct = E5Action(self.trUtf8('Import Bookmarks'), 
             self.trUtf8('&Import Bookmarks...'), 
             0, 0, self, 'help_file_import_bookmarks')
-        self.importBookmarksAct.setStatusTip(\
+        self.importBookmarksAct.setStatusTip(
             self.trUtf8('Import bookmarks from other browsers'))
         self.importBookmarksAct.setWhatsThis(self.trUtf8(
                 """<b>Import Bookmarks</b>"""
@@ -435,7 +435,7 @@ class HelpWindow(QMainWindow):
         self.exportBookmarksAct = E5Action(self.trUtf8('Export Bookmarks'), 
             self.trUtf8('&Export Bookmarks...'), 
             0, 0, self, 'help_file_export_bookmarks')
-        self.exportBookmarksAct.setStatusTip(\
+        self.exportBookmarksAct.setStatusTip(
             self.trUtf8('Export the bookmarks into a file'))
         self.exportBookmarksAct.setWhatsThis(self.trUtf8(
                 """<b>Export Bookmarks</b>"""
@@ -652,7 +652,7 @@ class HelpWindow(QMainWindow):
             self.trUtf8('Find &previous'), 
             QKeySequence(self.trUtf8("Shift+F3","Edit|Find previous")), 
             0, self, 'help_edit_find_previous')
-        self.findPrevAct.setStatusTip(\
+        self.findPrevAct.setStatusTip(
             self.trUtf8('Find previous occurrence of text in page'))
         self.findPrevAct.setWhatsThis(self.trUtf8(
                 """<b>Find previous</b>"""
@@ -745,7 +745,7 @@ class HelpWindow(QMainWindow):
         self.aboutQtAct = E5Action(self.trUtf8('About Qt'), 
             self.trUtf8('About &Qt'), 
             0, 0, self, 'help_help_about_qt')
-        self.aboutQtAct.setStatusTip(\
+        self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
                 """<b>About Qt</b>"""
@@ -1571,7 +1571,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot called to open a file.
         """
-        fn = QFileDialog.getOpenFileName(\
+        fn = QFileDialog.getOpenFileName(
             self, 
             self.trUtf8("Open File"),
             "",
@@ -1591,7 +1591,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot called to open a file in a new tab.
         """
-        fn = QFileDialog.getOpenFileName(\
+        fn = QFileDialog.getOpenFileName(
             self, 
             self.trUtf8("Open File"),
             "",

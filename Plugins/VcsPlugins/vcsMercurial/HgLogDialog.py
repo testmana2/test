@@ -51,7 +51,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             self.mode = "log"
         self.bundle = bundle
         
-        self.contents.setHtml(\
+        self.contents.setHtml(
             self.trUtf8('<b>Processing your request, please wait...</b>'))
         
         self.process.finished.connect(self.__procFinished)

@@ -478,7 +478,7 @@ class ViewManager(QObject):
                 QApplication.translate('ViewManager', '&New'),
                 QKeySequence(QApplication.translate('ViewManager', "Ctrl+N", "File|New")),
                 0, self, 'vm_file_new')
-        self.newAct.setStatusTip(\
+        self.newAct.setStatusTip(
             QApplication.translate('ViewManager', 'Open an empty editor window'))
         self.newAct.setWhatsThis(QApplication.translate('ViewManager', 
             """<b>New</b>"""
@@ -490,7 +490,7 @@ class ViewManager(QObject):
         self.openAct = E5Action(QApplication.translate('ViewManager', 'Open'),
                 UI.PixmapCache.getIcon("open.png"),
                 QApplication.translate('ViewManager', '&Open...'),
-                QKeySequence(\
+                QKeySequence(
                     QApplication.translate('ViewManager', "Ctrl+O", "File|Open")), 
                 0, self, 'vm_file_open')
         self.openAct.setStatusTip(QApplication.translate('ViewManager', 'Open a file'))
@@ -507,10 +507,10 @@ class ViewManager(QObject):
         self.closeAct = E5Action(QApplication.translate('ViewManager', 'Close'),
                 UI.PixmapCache.getIcon("close.png"),
                 QApplication.translate('ViewManager', '&Close'),
-                QKeySequence(\
+                QKeySequence(
                     QApplication.translate('ViewManager', "Ctrl+W", "File|Close")), 
                 0, self.closeActGrp, 'vm_file_close')
-        self.closeAct.setStatusTip(\
+        self.closeAct.setStatusTip(
             QApplication.translate('ViewManager', 'Close the current window'))
         self.closeAct.setWhatsThis(QApplication.translate('ViewManager', 
             """<b>Close Window</b>"""
@@ -522,7 +522,7 @@ class ViewManager(QObject):
         self.closeAllAct = E5Action(QApplication.translate('ViewManager', 'Close All'),
                 QApplication.translate('ViewManager', 'Clos&e All'),
                 0, 0, self.closeActGrp, 'vm_file_close_all')
-        self.closeAllAct.setStatusTip(\
+        self.closeAllAct.setStatusTip(
             QApplication.translate('ViewManager', 'Close all editor windows'))
         self.closeAllAct.setWhatsThis(QApplication.translate('ViewManager', 
             """<b>Close All Windows</b>"""
@@ -538,10 +538,10 @@ class ViewManager(QObject):
         self.saveAct = E5Action(QApplication.translate('ViewManager', 'Save'),
                 UI.PixmapCache.getIcon("fileSave.png"),
                 QApplication.translate('ViewManager', '&Save'),
-                QKeySequence(\
+                QKeySequence(
                     QApplication.translate('ViewManager', "Ctrl+S", "File|Save")), 
                 0, self.saveActGrp, 'vm_file_save')
-        self.saveAct.setStatusTip(\
+        self.saveAct.setStatusTip(
             QApplication.translate('ViewManager', 'Save the current file'))
         self.saveAct.setWhatsThis(QApplication.translate('ViewManager', 
             """<b>Save File</b>"""
@@ -1107,7 +1107,7 @@ class ViewManager(QObject):
         self.autoCompleteFromAPIsAct.triggered[()].connect(self.__editAutoCompleteFromAPIs)
         self.editActions.append(self.autoCompleteFromAPIsAct)
         
-        self.autoCompleteFromAllAct = E5Action(\
+        self.autoCompleteFromAllAct = E5Action(
                 QApplication.translate('ViewManager', 
                     'Autocomplete from Document and APIs'),
                 QApplication.translate('ViewManager', 
@@ -2960,7 +2960,7 @@ class ViewManager(QObject):
             #     2: Directory of currently active project
             #     3: CWD
             filter = self._getOpenFileFilter()
-            progs = E5FileDialog.getOpenFileNamesAndFilter(\
+            progs = E5FileDialog.getOpenFileNamesAndFilter(
                 self.ui,
                 QApplication.translate('ViewManager', "Open files"),
                 self._getOpenStartDir(),
@@ -3599,7 +3599,7 @@ class ViewManager(QObject):
                 formatStr = '&{0:d}. {1}'
             else:
                 formatStr = '{0:d}. {1}'
-            act = self.recentMenu.addAction(\
+            act = self.recentMenu.addAction(
                 formatStr.format(idx, 
                     Utilities.compactPath(rs, self.ui.maxMenuFilePathLen)))
             act.setData(rs)
@@ -3607,7 +3607,7 @@ class ViewManager(QObject):
             idx += 1
         
         self.recentMenu.addSeparator()
-        self.recentMenu.addAction(\
+        self.recentMenu.addAction(
             QApplication.translate('ViewManager', '&Clear'), self.__clearRecent)
         
     def __openSourceFile(self, act):
@@ -3633,18 +3633,18 @@ class ViewManager(QObject):
         self.bookmarkedMenu.clear()
         
         for rp in self.bookmarked:
-            act = self.bookmarkedMenu.addAction(\
+            act = self.bookmarkedMenu.addAction(
                 Utilities.compactPath(rp, self.ui.maxMenuFilePathLen))
             act.setData(rp)
             act.setEnabled(QFileInfo(rp).exists())
         
         if len(self.bookmarked):
             self.bookmarkedMenu.addSeparator()
-        self.bookmarkedMenu.addAction(\
+        self.bookmarkedMenu.addAction(
             QApplication.translate('ViewManager', '&Add'), self.__addBookmarked)
-        self.bookmarkedMenu.addAction(\
+        self.bookmarkedMenu.addAction(
             QApplication.translate('ViewManager', '&Edit...'), self.__editBookmarked)
-        self.bookmarkedMenu.addAction(\
+        self.bookmarkedMenu.addAction(
             QApplication.translate('ViewManager', '&Clear'), self.__clearBookmarked)
         
     def __addBookmarked(self):
@@ -4251,15 +4251,15 @@ class ViewManager(QObject):
         """
         if checked:
             self.setSplitOrientation(Qt.Horizontal)
-            self.splitViewAct.setIcon(\
+            self.splitViewAct.setIcon(
                 UI.PixmapCache.getIcon("splitHorizontal.png"))
-            self.splitRemoveAct.setIcon(\
+            self.splitRemoveAct.setIcon(
                 UI.PixmapCache.getIcon("remsplitHorizontal.png"))
         else:
             self.setSplitOrientation(Qt.Vertical)
-            self.splitViewAct.setIcon(\
+            self.splitViewAct.setIcon(
                 UI.PixmapCache.getIcon("splitVertical.png"))
-            self.splitRemoveAct.setIcon(\
+            self.splitRemoveAct.setIcon(
                 UI.PixmapCache.getIcon("remsplitVertical.png"))
     
     ##################################################################

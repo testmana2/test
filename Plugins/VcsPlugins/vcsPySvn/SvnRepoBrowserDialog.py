@@ -188,7 +188,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
             except pysvn.ClientError as e:
                 self.__showError(e.args[0])
             except AttributeError:
-                self.__showError(\
+                self.__showError(
                     self.trUtf8("The installed version of PySvn should be "
                                 "1.4.0 or better."))
         finally:

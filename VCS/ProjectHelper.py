@@ -133,7 +133,7 @@ class VcsProjectHelper(QObject):
         keys = sorted(vcsSystemsDict.keys())
         for key in keys:
             vcsSystemsDisplay.append(vcsSystemsDict[key])
-        vcsSelected, ok = QInputDialog.getItem(\
+        vcsSelected, ok = QInputDialog.getItem(
             None,
             self.trUtf8("New Project"),
             self.trUtf8("Select version control system for the project"),
@@ -199,7 +199,7 @@ class VcsProjectHelper(QObject):
                                 self.trUtf8("Select a project file to open."),
                                 pfilenamelist, 0, False)
                             if ok:
-                                self.project.openProject(\
+                                self.project.openProject(
                                     QFileInfo(d, pfilename).absoluteFilePath())
                                 self.project.newProject.emit()
                         if export:
@@ -294,7 +294,7 @@ class VcsProjectHelper(QObject):
         keys = sorted(list(vcsSystemsDict.keys()))
         for key in keys:
             vcsSystemsDisplay.append(vcsSystemsDict[key])
-        vcsSelected, ok = QInputDialog.getItem(\
+        vcsSelected, ok = QInputDialog.getItem(
             None,
             self.trUtf8("Import Project"),
             self.trUtf8("Select version control system for the project"),

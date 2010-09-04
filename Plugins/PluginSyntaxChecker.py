@@ -75,7 +75,7 @@ class SyntaxCheckerPlugin(QObject):
             self.__projectAct = E5Action(self.trUtf8('Check Syntax'),
                     self.trUtf8('&Syntax...'), 0, 0,
                     self, 'project_check_syntax')
-            self.__projectAct.setStatusTip(\
+            self.__projectAct.setStatusTip(
                 self.trUtf8('Check syntax.'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Check Syntax...</b>"""
@@ -140,7 +140,7 @@ class SyntaxCheckerPlugin(QObject):
         @param menu reference to the menu (QMenu)
         """
         if menuName == "Checks" and self.__projectAct is not None:
-            self.__projectAct.setEnabled(\
+            self.__projectAct.setEnabled(
                 e5App().getObject("Project").getProjectLanguage() == "Python3")
     
     def __projectBrowserShowMenu(self, menuName, menu):

@@ -99,7 +99,7 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         """
         Private slot to add a new filter.
         """
-        filter, ok = QInputDialog.getText(\
+        filter, ok = QInputDialog.getText(
             None,
             self.trUtf8("Add Filter"),
             self.trUtf8("Filter name:"),

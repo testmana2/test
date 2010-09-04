@@ -76,12 +76,12 @@ def isPatched():
     
     for line in lines:
         if patchPositionFound and \
-            (line.startswith(\
+            (line.startswith(
                 "                # patched by eric5 install script.") or \
-             line.startswith(\
+             line.startswith(
                 "                self.datasize = len(self.data)")):
                 return True
-        if line.startswith(\
+        if line.startswith(
               "                self.data = self.charset_converter(self.data)"):
             patchPositionFound = True
             continue
@@ -114,16 +114,16 @@ def patchPyXML():
     s = open(sn, "w", encoding = "utf-8")
     for line in lines:
         if patchPositionFound:
-            if not line.startswith(\
+            if not line.startswith(
                     "                # patched by eric5 install script.") and \
-               not line.startswith(\
+               not line.startswith(
                     "                self.datasize = len(self.data)"):
                 s.write("                # patched by eric5 install script.\n")
                 s.write("                self.datasize = len(self.data)\n")
                 patched = True
             patchPositionFound = False
         s.write(line)
-        if line.startswith(\
+        if line.startswith(
               "                self.data = self.charset_converter(self.data)"):
             patchPositionFound = True
             continue

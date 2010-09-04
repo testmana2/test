@@ -46,7 +46,7 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         """
         Private slot called to open a directory selection dialog.
         """
-        path = QFileDialog.getExistingDirectory(\
+        path = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select source directory"),
             QDir.fromNativeSeparators(self.pathnameEdit.text()),
@@ -58,7 +58,7 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         """
         Private slot to set the enable state of theok button.
         """
-        self.okButton.setEnabled(\
+        self.okButton.setEnabled(
             self.classnameEdit.text() != "" and \
             self.filenameEdit.text()  != "" and \
             self.pathnameEdit.text()  != "")

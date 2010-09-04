@@ -32,51 +32,51 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         
         # set initial values
         # All
-        self.allFoldCompactCheckBox.setChecked(\
+        self.allFoldCompactCheckBox.setChecked(
             Preferences.getEditor("AllFoldCompact"))
         
         # Bash
-        self.foldBashCommentCheckBox.setChecked(\
+        self.foldBashCommentCheckBox.setChecked(
             Preferences.getEditor("BashFoldComment"))
         
         # CMake
-        self.cmakeFoldAtElseCheckBox.setChecked(\
+        self.cmakeFoldAtElseCheckBox.setChecked(
             Preferences.getEditor("CMakeFoldAtElse"))
         
         # C++
-        self.foldCppCommentCheckBox.setChecked(\
+        self.foldCppCommentCheckBox.setChecked(
             Preferences.getEditor("CppFoldComment"))
-        self.foldCppPreprocessorCheckBox.setChecked(\
+        self.foldCppPreprocessorCheckBox.setChecked(
             Preferences.getEditor("CppFoldPreprocessor"))
-        self.foldCppAtElseCheckBox.setChecked(\
+        self.foldCppAtElseCheckBox.setChecked(
             Preferences.getEditor("CppFoldAtElse"))
-        self.cppIndentOpeningBraceCheckBox.setChecked(\
+        self.cppIndentOpeningBraceCheckBox.setChecked(
             Preferences.getEditor("CppIndentOpeningBrace"))
-        self.cppIndentClosingBraceCheckBox.setChecked(\
+        self.cppIndentClosingBraceCheckBox.setChecked(
             Preferences.getEditor("CppIndentClosingBrace"))
-        self.cppCaseInsensitiveCheckBox.setChecked(\
+        self.cppCaseInsensitiveCheckBox.setChecked(
             Preferences.getEditor("CppCaseInsensitiveKeywords"))
         self.cppDollarAllowedCheckBox.setChecked(
             Preferences.getEditor("CppDollarsAllowed"))
         
         # CSS
-        self.foldCssCommentCheckBox.setChecked(\
+        self.foldCssCommentCheckBox.setChecked(
             Preferences.getEditor("CssFoldComment"))
         
         # D
-        self.foldDCommentCheckBox.setChecked(\
+        self.foldDCommentCheckBox.setChecked(
             Preferences.getEditor("DFoldComment"))
-        self.foldDAtElseCheckBox.setChecked(\
+        self.foldDAtElseCheckBox.setChecked(
             Preferences.getEditor("DFoldAtElse"))
-        self.dIndentOpeningBraceCheckBox.setChecked(\
+        self.dIndentOpeningBraceCheckBox.setChecked(
             Preferences.getEditor("DIndentOpeningBrace"))
-        self.dIndentClosingBraceCheckBox.setChecked(\
+        self.dIndentClosingBraceCheckBox.setChecked(
             Preferences.getEditor("DIndentClosingBrace"))
         
         # HTML
-        self.foldHtmlPreprocessorCheckBox.setChecked(\
+        self.foldHtmlPreprocessorCheckBox.setChecked(
             Preferences.getEditor("HtmlFoldPreprocessor"))
-        self.htmlCaseSensitiveTagsCheckBox.setChecked(\
+        self.htmlCaseSensitiveTagsCheckBox.setChecked(
             Preferences.getEditor("HtmlCaseSensitiveTags"))
         self.foldHtmlScriptCommentsCheckBox.setChecked(
             Preferences.getEditor("HtmlFoldScriptComments"))
@@ -86,9 +86,9 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         # Pascal
         if "Pascal" in self.languages:
             self.pascalGroup.setEnabled(True)
-            self.foldPascalCommentCheckBox.setChecked(\
+            self.foldPascalCommentCheckBox.setChecked(
                 Preferences.getEditor("PascalFoldComment"))
-            self.foldPascalPreprocessorCheckBox.setChecked(\
+            self.foldPascalPreprocessorCheckBox.setChecked(
                 Preferences.getEditor("PascalFoldPreprocessor"))
             if QSCINTILLA_VERSION() >= 0x020400:
                 self.pascalSmartHighlightingCheckBox.setChecked(
@@ -99,7 +99,7 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             self.pascalGroup.setEnabled(False)
         
         # Perl
-        self.foldPerlCommentCheckBox.setChecked(\
+        self.foldPerlCommentCheckBox.setChecked(
             Preferences.getEditor("PerlFoldComment"))
         self.foldPerlPackagesCheckBox.setChecked(
             Preferences.getEditor("PerlFoldPackages"))
@@ -109,29 +109,29 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         # PostScript
         if "PostScript" in self.languages:
             self.postscriptGroup.setEnabled(True)
-            self.psFoldAtElseCheckBox.setChecked(\
+            self.psFoldAtElseCheckBox.setChecked(
                 Preferences.getEditor("PostScriptFoldAtElse"))
-            self.psMarkTokensCheckBox.setChecked(\
+            self.psMarkTokensCheckBox.setChecked(
                 Preferences.getEditor("PostScriptTokenize"))
-            self.psLevelSpinBox.setValue(\
+            self.psLevelSpinBox.setValue(
                 Preferences.getEditor("PostScriptLevel"))
         else:
             self.postscriptGroup.setEnabled(False)
         
         # Povray
-        self.foldPovrayCommentCheckBox.setChecked(\
+        self.foldPovrayCommentCheckBox.setChecked(
             Preferences.getEditor("PovFoldComment"))
-        self.foldPovrayDirectivesCheckBox.setChecked(\
+        self.foldPovrayDirectivesCheckBox.setChecked(
             Preferences.getEditor("PovFoldDirectives"))
         
         # Python
-        self.foldPythonCommentCheckBox.setChecked(\
+        self.foldPythonCommentCheckBox.setChecked(
             Preferences.getEditor("PythonFoldComment"))
-        self.foldPythonStringCheckBox.setChecked(\
+        self.foldPythonStringCheckBox.setChecked(
             Preferences.getEditor("PythonFoldString"))
-        self.pythonBadIndentationCheckBox.setChecked(\
+        self.pythonBadIndentationCheckBox.setChecked(
             Preferences.getEditor("PythonBadIndentation"))
-        self.pythonAutoindentCheckBox.setChecked(\
+        self.pythonAutoindentCheckBox.setChecked(
             Preferences.getEditor("PythonAutoIndent"))
         self.pythonV2UnicodeAllowedCheckBox.setChecked(
             Preferences.getEditor("PythonAllowV2Unicode"))
@@ -141,19 +141,19 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             Preferences.getEditor("PythonAllowV3Bytes"))
         
         # SQL
-        self.foldSqlCommentCheckBox.setChecked(\
+        self.foldSqlCommentCheckBox.setChecked(
             Preferences.getEditor("SqlFoldComment"))
-        self.sqlBackslashEscapesCheckBox.setChecked(\
+        self.sqlBackslashEscapesCheckBox.setChecked(
             Preferences.getEditor("SqlBackslashEscapes"))
         
         # VHDL
-        self.vhdlFoldCommentCheckBox.setChecked(\
+        self.vhdlFoldCommentCheckBox.setChecked(
             Preferences.getEditor("VHDLFoldComment"))
-        self.vhdlFoldAtElseCheckBox.setChecked(\
+        self.vhdlFoldAtElseCheckBox.setChecked(
             Preferences.getEditor("VHDLFoldAtElse"))
-        self.vhdlFoldAtBeginCheckBox.setChecked(\
+        self.vhdlFoldAtBeginCheckBox.setChecked(
             Preferences.getEditor("VHDLFoldAtBegin"))
-        self.vhdlFoldAtParenthesisCheckBox.setChecked(\
+        self.vhdlFoldAtParenthesisCheckBox.setChecked(
             Preferences.getEditor("VHDLFoldAtParenthesis"))
         
         # XML
@@ -163,7 +163,7 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         # YAML
         if "YAML" in self.languages:
             self.yamlGroup.setEnabled(True)
-            self.foldYamlCommentCheckBox.setChecked(\
+            self.foldYamlCommentCheckBox.setChecked(
                 Preferences.getEditor("YAMLFoldComment"))
         else:
             self.yamlGroup.setEnabled(False)

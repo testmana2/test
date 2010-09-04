@@ -35,7 +35,7 @@ class LexerXML(QsciLexerXML, Lexer):
         Public slot to initialize the properties.
         """
         self.setFoldPreprocessor(Preferences.getEditor("HtmlFoldPreprocessor"))
-        self.setCaseSensitiveTags(\
+        self.setCaseSensitiveTags(
             Preferences.getEditor("HtmlCaseSensitiveTags"))
         self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
         try:

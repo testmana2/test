@@ -302,14 +302,14 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             return
         
         try:
-            categories = self.getSelectedItemsCountCategorized(\
+            categories = self.getSelectedItemsCountCategorized(
                 [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
             cnt = categories["sum"]
             if cnt <= 1:
                 index = self.indexAt(coord)
                 if index.isValid():
                     self._selectSingleItem(index)
-                    categories = self.getSelectedItemsCountCategorized(\
+                    categories = self.getSelectedItemsCountCategorized(
                         [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
             
@@ -478,7 +478,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         @param path full directory path for the new form file (string)
         """
-        selectedForm, ok = QInputDialog.getItem(\
+        selectedForm, ok = QInputDialog.getItem(
             None,
             self.trUtf8("New Form"),
             self.trUtf8("Select a form type:"),
@@ -492,7 +492,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         templateFile = os.path.join(getConfig('ericTemplatesDir'),
             self.templates4[templateIndex])
         
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("New Form"),
             path,

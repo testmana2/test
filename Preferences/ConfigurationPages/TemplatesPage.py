@@ -25,15 +25,15 @@ class TemplatesPage(ConfigurationPageBase, Ui_TemplatesPage):
         self.setObjectName("TemplatesPage")
         
         # set initial values
-        self.templatesAutoOpenGroupsCheckBox.setChecked(\
+        self.templatesAutoOpenGroupsCheckBox.setChecked(
             Preferences.getTemplates("AutoOpenGroups"))
-        self.templatesSeparatorCharEdit.setText(\
+        self.templatesSeparatorCharEdit.setText(
             Preferences.getTemplates("SeparatorChar"))
         if Preferences.getTemplates("SingleDialog"):
             self.templatesSingleDialogButton.setChecked(True)
         else:
             self.templatesMultiDialogButton.setChecked(True)
-        self.templatesToolTipCheckBox.setChecked(\
+        self.templatesToolTipCheckBox.setChecked(
             Preferences.getTemplates("ShowTooltip"))
         
     def save(self):

@@ -43,7 +43,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         
         # set initial values
         self.pluginManager = e5App().getObject("PluginManager")
-        self.apiAutoPrepareCheckBox.setChecked(\
+        self.apiAutoPrepareCheckBox.setChecked(
             Preferences.getEditor("AutoPrepareAPIs"))
         
         self.apis = {}
@@ -101,7 +101,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
                 self.__apiPreparationCancelled)
             self.__currentAPI.apiPreparationStarted.connect(
                 self.__apiPreparationStarted)
-            self.addInstalledApiFileButton.setEnabled(\
+            self.addInstalledApiFileButton.setEnabled(
                 self.__currentAPI.installedAPIFiles() != "")
         else:
             self.addInstalledApiFileButton.setEnabled(False)
@@ -125,7 +125,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         """
         Private method to select an api file.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select API file"),
             self.apiFileEdit.text(),
@@ -165,14 +165,14 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         installedAPIFilesShort = []
         for installedAPIFile in installedAPIFiles:
             installedAPIFilesShort.append(QFileInfo(installedAPIFile).fileName())
-        file, ok = QInputDialog.getItem(\
+        file, ok = QInputDialog.getItem(
             self,
             self.trUtf8("Add from installed APIs"),
             self.trUtf8("Select from the list of installed API files"),
             installedAPIFilesShort,
             0, False)
         if ok:
-            self.apiList.addItem(Utilities.toNativeSeparators(\
+            self.apiList.addItem(Utilities.toNativeSeparators(
                 QFileInfo(QDir(installedAPIFilesPath), file).absoluteFilePath()))
         
     @pyqtSlot()
@@ -185,7 +185,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         pluginAPIFilesDict = {}
         for apiFile in pluginAPIFiles:
             pluginAPIFilesDict[QFileInfo(apiFile).fileName()] = apiFile
-        file, ok = QInputDialog.getItem(\
+        file, ok = QInputDialog.getItem(
             self,
             self.trUtf8("Add from Plugin APIs"),
             self.trUtf8(
@@ -193,7 +193,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             sorted(pluginAPIFilesDict.keys()),
             0, False)
         if ok:
-            self.apiList.addItem(Utilities.toNativeSeparators(\
+            self.apiList.addItem(Utilities.toNativeSeparators(
                 pluginAPIFilesDict[file]))
         
     @pyqtSlot()
@@ -205,7 +205,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             self.__currentAPI and self.__currentAPI.cancelPreparation()
         else:
             if self.__currentAPI is not None:
-                self.__currentAPI.prepareAPIs(\
+                self.__currentAPI.prepareAPIs(
                     ondemand = True, 
                     rawList = self.__editorGetApisFromApiList())
         

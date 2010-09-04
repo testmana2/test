@@ -95,7 +95,7 @@ class EricapiPlugin(QObject):
             self.__projectAct = E5Action(self.trUtf8('Generate API file (eric5-api)'),
                     self.trUtf8('Generate &API file (eric5-api)'), 0, 0,
                     self, 'doc_eric5_api')
-            self.__projectAct.setStatusTip(\
+            self.__projectAct.setStatusTip(
                 self.trUtf8('Generate an API file using eric5-api'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Generate API file</b>"""
@@ -131,7 +131,7 @@ class EricapiPlugin(QObject):
         """
         if menuName == "Apidoc":
             if self.__projectAct is not None:
-                self.__projectAct.setEnabled(\
+                self.__projectAct.setEnabled(
                     e5App().getObject("Project").getProjectLanguage() in \
                         ["Python", "Python3", "Ruby"])
     

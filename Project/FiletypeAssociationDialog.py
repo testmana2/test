@@ -99,10 +99,10 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         pattern = self.filePatternEdit.text()
         filetype = self.filetypeCombo.currentText()
         if pattern:
-            items = self.filetypeAssociationList.findItems(\
+            items = self.filetypeAssociationList.findItems(
                 pattern, Qt.MatchFlags(Qt.MatchExactly), 0)
             for itm in items:
-                itm = self.filetypeAssociationList.takeTopLevelItem(\
+                itm = self.filetypeAssociationList.takeTopLevelItem(
                     self.filetypeAssociationList.indexOfTopLevelItem(itm))
                 del itm
             itm = self.__createItem(pattern, filetype)
@@ -118,7 +118,7 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         Private slot to delete the currently selected association of the listbox.
         """
         for itm in self.filetypeAssociationList.selectedItems():
-            itm = self.filetypeAssociationList.takeTopLevelItem(\
+            itm = self.filetypeAssociationList.takeTopLevelItem(
                 self.filetypeAssociationList.indexOfTopLevelItem(itm))
             del itm
             
@@ -140,7 +140,7 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
             if len(self.filetypeAssociationList.selectedItems()) == 0:
                 self.deleteAssociationButton.setEnabled(False)
             else:
-                self.deleteAssociationButton.setEnabled(\
+                self.deleteAssociationButton.setEnabled(
                     self.filetypeAssociationList.selectedItems()[0].text(0) == txt)
 
     def transferData(self):

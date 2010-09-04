@@ -34,9 +34,9 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
         
         # set initial values
-        self.customPyCheckBox.setChecked(\
+        self.customPyCheckBox.setChecked(
             Preferences.getDebugger("CustomPython3Interpreter"))
-        self.interpreterEdit.setText(\
+        self.interpreterEdit.setText(
             Preferences.getDebugger("Python3Interpreter"))
         dct = Preferences.getDebugger("DebugClientType3")
         if dct == "standard":
@@ -83,14 +83,14 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         Private slot to handle the Python interpreter selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Python interpreter for Debug Client"),
             self.interpreterEdit.text(),
             "")
             
         if file:
-            self.interpreterEdit.setText(\
+            self.interpreterEdit.setText(
                 Utilities.toNativeSeparators(file))
         
     @pyqtSlot()
@@ -98,14 +98,14 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         Private slot to handle the Debug Client selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             None,
             self.trUtf8("Select Debug Client"),
             self.debugClientEdit.text(),
             self.trUtf8("Python Files (*.py *.py3)"))
             
         if file:
-            self.debugClientEdit.setText(\
+            self.debugClientEdit.setText(
                 Utilities.toNativeSeparators(file))
     
 def create(dlg):

@@ -119,7 +119,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
                 args.append("{0}/branches".format(reposRoot))
             self.path = None
         else:
-            reposPath, ok = QInputDialog.getText(\
+            reposPath, ok = QInputDialog.getText(
                 self,
                 self.trUtf8("Subversion List"),
                 self.trUtf8("Enter the repository URL containing the tags or branches"),

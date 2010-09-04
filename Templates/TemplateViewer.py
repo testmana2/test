@@ -524,7 +524,7 @@ class TemplateViewer(QTreeWidget):
         """
         Private slot to handle the Import context menu action.
         """
-        fn = QFileDialog.getOpenFileName(\
+        fn = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Import Templates"),
             "",
@@ -537,7 +537,7 @@ class TemplateViewer(QTreeWidget):
         """
         Private slot to handle the Export context menu action.
         """
-        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Export Templates"),
             "",

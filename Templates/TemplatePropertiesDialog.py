@@ -105,7 +105,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         """
         E5MessageBox.information(self,
             self.trUtf8("Template Help"),
-            self.trUtf8(\
+            self.trUtf8(
                 """<p>To use variables in a template, you just have to enclose"""
                 """ the variablename with $-characters. When you use the template,"""
                 """ you will then be asked for a value for this variable.</p>"""

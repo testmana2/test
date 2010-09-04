@@ -37,7 +37,7 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
         self.setModal(modal)
         self.setupUi(self)
 
-        self.defaultButton = self.buttonBox.addButton(\
+        self.defaultButton = self.buttonBox.addButton(
             self.trUtf8("Save Default"), QDialogButtonBox.ActionRole)
         
         lDefaultFilter, gDefaultFilter = Preferences.getVarFilters()

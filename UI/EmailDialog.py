@@ -270,7 +270,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 # mail server needs authentication
                 password = Preferences.getUser("MailServerPassword")
                 if not password:
-                    password, ok = QInputDialog.getText(\
+                    password, ok = QInputDialog.getText(
                         self, 
                         self.trUtf8("Mail Server Password"),
                         self.trUtf8("Enter your mail server password"),
@@ -315,7 +315,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         Private slot to handle the Add... button.
         """
-        fname = QFileDialog.getOpenFileName(\
+        fname = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Attach file"))
         if fname:
@@ -346,7 +346,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         itm = self.attachments.currentItem()
         if itm is not None:
-            itm = self.attachments.takeTopLevelItem(\
+            itm = self.attachments.takeTopLevelItem(
                 self.attachments.indexOfTopLevelItem(itm))
             del itm
         
@@ -356,7 +356,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
         @param txt changed text (string)
         """
-        self.sendButton.setEnabled(\
+        self.sendButton.setEnabled(
             self.subject.text() != "" and \
             self.message.toPlainText() != "")
         
@@ -366,6 +366,6 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
         @param txt changed text (string)
         """
-        self.sendButton.setEnabled(\
+        self.sendButton.setEnabled(
             self.subject.text() != "" and \
             self.message.toPlainText() != "")

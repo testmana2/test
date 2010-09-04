@@ -120,7 +120,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         """
         Private slot to create a new toolbar.
         """
-        name, ok = QInputDialog.getText(\
+        name, ok = QInputDialog.getText(
             self,
             self.trUtf8("New Toolbar"),
             self.trUtf8("Toolbar Name:"),
@@ -172,7 +172,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         Private slot to rename a custom toolbar.
         """
         oldName = self.toolbarComboBox.currentText()
-        newName, ok = QInputDialog.getText(\
+        newName, ok = QInputDialog.getText(
             self,
             self.trUtf8("Rename Toolbar"),
             self.trUtf8("New Toolbar Name:"),

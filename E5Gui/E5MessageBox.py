@@ -80,11 +80,14 @@ class E5MessageBox(QMessageBox):
         self.setIcon(icon)
         if modal and parent is not None:
             self.setWindowModality(Qt.WindowModal)
-        self.setWindowTitle("{0} - {1}".format(
-            QApplication.applicationName(), title))
+        if title == "":
+            self.setWindowTitle("{0}".format(
+                QApplication.applicationName()))
+        else:
+            self.setWindowTitle("{0} - {1}".format(
+                QApplication.applicationName(), title))
         self.setText(text)
-        if buttons != QMessageBox.NoButton:
-            self.setStandardButtons(buttons)
+        self.setStandardButtons(buttons)
 
 ################################################################################
 ##  Replacements for QMessageBox static methods                               ##
@@ -109,8 +112,12 @@ def __messageBox(parent, title, text, icon,
     messageBox.setIcon(icon)
     if parent is not None:
         messageBox.setWindowModality(Qt.WindowModal)
-    messageBox.setWindowTitle("{0} - {1}".format(
-        QApplication.applicationName(), title))
+    if title == "":
+        messageBox.setWindowTitle("{0}".format(
+            QApplication.applicationName()))
+    else:
+        messageBox.setWindowTitle("{0} - {1}".format(
+            QApplication.applicationName(), title))
     messageBox.setText(text)
     messageBox.setStandardButtons(buttons)
     messageBox.setDefaultButton(defaultButton)

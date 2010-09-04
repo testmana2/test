@@ -68,7 +68,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         self.nextButton = \
             self.buttonBox.addButton(self.trUtf8("Next match"), 
                                      QDialogButtonBox.ActionRole)
-        self.nextButton.setToolTip(\
+        self.nextButton.setToolTip(
             self.trUtf8("Show the next match of the regular expression"))
         self.nextButton.setEnabled(False)
         
@@ -78,7 +78,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         else:
             self.copyButton = \
                 self.buttonBox.addButton(self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
-            self.copyButton.setToolTip(\
+            self.copyButton.setToolTip(
                 self.trUtf8("Copy the regular expression to the clipboard"))
             self.buttonBox.button(QDialogButtonBox.Ok).hide()
             self.buttonBox.button(QDialogButtonBox.Cancel).hide()
@@ -211,7 +211,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         """
         Private slot to save the regexp to a file.
         """
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save regular expression"),
             "",
@@ -248,7 +248,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         """
         Private slot to load a regexp from a file.
         """
-        fname = QFileDialog.getOpenFileName(\
+        fname = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Load regular expression"),
             "",
@@ -299,7 +299,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 re.setPatternSyntax(QRegExp.RegExp)
             if re.isValid():
                 E5MessageBox.information(self,
-                    self.trUtf8(""),
+                    self.trUtf8("Validation"),
                     self.trUtf8("""The regular expression is valid."""))
             else:
                 E5MessageBox.critical(self,

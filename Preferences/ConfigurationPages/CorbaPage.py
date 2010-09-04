@@ -46,7 +46,7 @@ class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
         """
         Private slot to handle the IDL compiler selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select IDL compiler"),
             self.idlEdit.text(),

@@ -41,7 +41,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         
         self.__initializeDefaults()
         
-        self.sampleText = self.trUtf8(\
+        self.sampleText = self.trUtf8(
             '''<?xml version="1.0" encoding="utf-8"?>'''
             '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"'''
             '''"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'''
@@ -257,7 +257,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         It displays a directory selection dialog to
         select the directory the documentations is written to.
         """
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select output directory"),
             self.outputDirEdit.text(),
@@ -282,7 +282,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         startDir = self.ignoreDirEdit.text()
         if not startDir:
             startDir = self.ppath
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory to exclude"),
             startDir,
@@ -320,7 +320,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         Private slot to select a css style sheet.
         """
-        cssFile = QFileDialog.getOpenFileName(\
+        cssFile = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select CSS style sheet"),
             getConfig('ericCSSDir'),
@@ -468,7 +468,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         It displays a directory selection dialog to
         select the directory the QtHelp files are written to.
         """
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select output directory for QtHelp files"),
             self.qtHelpDirEdit.text(),
@@ -500,7 +500,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         self.parameters['ignoreDirectories'] = []
         for row in range(0, self.ignoreDirsList.count()):
             itm = self.ignoreDirsList.item(row)
-            self.parameters['ignoreDirectories'].append(\
+            self.parameters['ignoreDirectories'].append(
                 os.path.normpath(itm.text()))
         cssFile = self.cssEdit.text()
         if cssFile != '':

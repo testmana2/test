@@ -100,7 +100,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         """
         Private slot to handle the user style sheet selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Style Sheet"),
             self.styleSheetEdit.text(),

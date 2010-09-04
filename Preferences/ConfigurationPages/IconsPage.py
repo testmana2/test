@@ -58,7 +58,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
             self.deleteIconDirectoryButton.setEnabled(False)
             self.upButton.setEnabled(False)
             self.downButton.setEnabled(False)
-            self.showIconsButton.setEnabled(\
+            self.showIconsButton.setEnabled(
                 self.iconDirectoryEdit.text() != "")
         else:
             maxIndex = self.iconDirectoryList.count() - 1
@@ -121,7 +121,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         """
         Private slot to select an icon directory.
         """
-        dir = QFileDialog.getExistingDirectory(\
+        dir = QFileDialog.getExistingDirectory(
             None,
             self.trUtf8("Select icon directory"),
             "",

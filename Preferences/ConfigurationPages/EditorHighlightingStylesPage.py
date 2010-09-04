@@ -289,7 +289,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         on = self.trUtf8("Enabled")
         off = self.trUtf8("Disabled")
-        selection, ok = QInputDialog.getItem(\
+        selection, ok = QInputDialog.getItem(
             self,
             self.trUtf8("Fill to end of line"),
             self.trUtf8("Select fill to end of line for all styles"),
@@ -368,7 +368,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
         @param lexers list of lexer objects for which to export the styles
         """
-        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Export Highlighting Styles"),
             "",
@@ -403,7 +403,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
         @param lexers dictionary of lexer objects for which to import the styles
         """
-        fn = QFileDialog.getOpenFileName(\
+        fn = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Import Highlighting Styles"),
             "",

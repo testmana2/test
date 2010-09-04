@@ -129,7 +129,7 @@ class VcsProjectBrowserHelper(QObject):
         """
         if self.isTranslationsBrowser:
             names = [itm.dirName() \
-                for itm in self.browser.getSelectedItems(\
+                for itm in self.browser.getSelectedItems(
                     [ProjectBrowserSimpleDirectoryItem])]
             if not names:
                 names = [itm.fileName() \
@@ -151,7 +151,7 @@ class VcsProjectBrowserHelper(QObject):
         """
         if self.isTranslationsBrowser:
             names = [itm.dirName() \
-                for itm in self.browser.getSelectedItems(\
+                for itm in self.browser.getSelectedItems(
                     [ProjectBrowserSimpleDirectoryItem])]
             if not names:
                 names = [itm.fileName() \
@@ -261,7 +261,7 @@ class VcsProjectBrowserHelper(QObject):
         else:
             items = self.browser.getSelectedItems()
             isRemoveDirs = len(items) == \
-                self.browser.getSelectedItemsCount(\
+                self.browser.getSelectedItemsCount(
                 [ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem])
             if isRemoveDirs:
                 names = [itm.dirName() for itm in items]

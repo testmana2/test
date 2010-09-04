@@ -106,7 +106,7 @@ class PackageDiagram(UMLDialog):
         initlist = glob.glob(os.path.join(self.package, '__init__.*'))
         if len(initlist) == 0:
             ct = QGraphicsTextItem(None, self.scene)
-            ct.setHtml(\
+            ct.setHtml(
                 self.trUtf8("The directory <b>'{0}'</b> is not a package.")\
                     .format(self.package))
             return
@@ -114,7 +114,7 @@ class PackageDiagram(UMLDialog):
         modules = self.__buildModulesDict()
         if not modules:
             ct = QGraphicsTextItem(None, self.scene)
-            ct.setHtml(\
+            ct.setHtml(
                 self.trUtf8("The package <b>'{0}'</b> does not contain any modules.")
                     .format(self.package))
             return
@@ -129,7 +129,7 @@ class PackageDiagram(UMLDialog):
                 self.__addLocalClass(cls, module.classes[cls], 0, 0)
         if not classesFound:
             ct = QGraphicsTextItem(None, self.scene)
-            ct.setHtml(\
+            ct.setHtml(
                 self.trUtf8("The package <b>'{0}'</b> does not contain any classes.")
                     .format(self.package))
             return
@@ -290,7 +290,7 @@ class PackageDiagram(UMLDialog):
         """
         for route in routes:
             if len(route) > 1:
-                assoc = AssociationItem(\
+                assoc = AssociationItem(
                         self.__getCurrentShape(route[1]),
                         self.__getCurrentShape(route[0]),
                         Generalisation)

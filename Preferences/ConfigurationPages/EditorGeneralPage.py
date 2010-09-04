@@ -25,19 +25,19 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
         self.setObjectName("EditorGeneralPage")
         
         # set initial values
-        self.tabwidthSlider.setValue(\
+        self.tabwidthSlider.setValue(
             Preferences.getEditor("TabWidth"))
-        self.indentwidthSlider.setValue(\
+        self.indentwidthSlider.setValue(
             Preferences.getEditor("IndentWidth"))
-        self.indentguidesCheckBox.setChecked(\
+        self.indentguidesCheckBox.setChecked(
             Preferences.getEditor("IndentationGuides"))
-        self.tabforindentationCheckBox.setChecked(\
+        self.tabforindentationCheckBox.setChecked(
             Preferences.getEditor("TabForIndentation"))
-        self.tabindentsCheckBox.setChecked(\
+        self.tabindentsCheckBox.setChecked(
             Preferences.getEditor("TabIndents"))
-        self.converttabsCheckBox.setChecked(\
+        self.converttabsCheckBox.setChecked(
             Preferences.getEditor("ConvertTabsOnLoad"))
-        self.autoindentCheckBox.setChecked(\
+        self.autoindentCheckBox.setChecked(
             Preferences.getEditor("AutoIndentation"))
         self.comment0CheckBox.setChecked(
             Preferences.getEditor("CommentColumn0"))

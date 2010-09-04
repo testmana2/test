@@ -766,15 +766,15 @@ def readToolGroups(prefClass = Prefs):
         items = int(prefClass.settings.value(
             "Toolgroups/{0:02d}/Items".format(groupIndex), 0))
         for ind in range(items):
-            menutext = prefClass.settings.value(\
+            menutext = prefClass.settings.value(
                 "Toolgroups/{0:02d}/{1:02d}/Menutext".format(groupIndex, ind))
-            icon = prefClass.settings.value(\
+            icon = prefClass.settings.value(
                 "Toolgroups/{0:02d}/{1:02d}/Icon".format(groupIndex, ind))
-            executable = prefClass.settings.value(\
+            executable = prefClass.settings.value(
                 "Toolgroups/{0:02d}/{1:02d}/Executable".format(groupIndex, ind))
-            arguments = prefClass.settings.value(\
+            arguments = prefClass.settings.value(
                 "Toolgroups/{0:02d}/{1:02d}/Arguments".format(groupIndex, ind))
-            redirect = prefClass.settings.value(\
+            redirect = prefClass.settings.value(
                 "Toolgroups/{0:02d}/{1:02d}/Redirect".format(groupIndex, ind))
             
             if menutext:
@@ -821,19 +821,19 @@ def saveToolGroups(toolGroups, currentGroup, prefClass = Prefs):
             "Toolgroups/{0:02d}/Items".format(groupIndex), len(group[1]))
         ind = 0
         for tool in group[1]:
-            prefClass.settings.setValue(\
+            prefClass.settings.setValue(
                 "Toolgroups/{0:02d}/{1:02d}/Menutext".format(groupIndex, ind), 
                 tool['menutext'])
-            prefClass.settings.setValue(\
+            prefClass.settings.setValue(
                 "Toolgroups/{0:02d}/{1:02d}/Icon".format(groupIndex, ind), 
                 tool['icon'])
-            prefClass.settings.setValue(\
+            prefClass.settings.setValue(
                 "Toolgroups/{0:02d}/{1:02d}/Executable".format(groupIndex, ind), 
                 tool['executable'])
-            prefClass.settings.setValue(\
+            prefClass.settings.setValue(
                 "Toolgroups/{0:02d}/{1:02d}/Arguments".format(groupIndex, ind), 
                 tool['arguments'])
-            prefClass.settings.setValue(\
+            prefClass.settings.setValue(
                 "Toolgroups/{0:02d}/{1:02d}/Redirect".format(groupIndex, ind), 
                 tool['redirect'])
             ind += 1
@@ -872,7 +872,7 @@ def exportPreferences(prefClass = Prefs):
     
     @param prefClass preferences class used as the storage area
     """
-    filename = QtGui.QFileDialog.getSaveFileName(\
+    filename = QtGui.QFileDialog.getSaveFileName(
         None,
         QtCore.QCoreApplication.translate("Preferences", "Export Preferences"),
         "",
@@ -891,7 +891,7 @@ def importPreferences(prefClass = Prefs):
     
     @param prefClass preferences class used as the storage area
     """
-    filename = QtGui.QFileDialog.getOpenFileName(\
+    filename = QtGui.QFileDialog.getOpenFileName(
         None,
         QtCore.QCoreApplication.translate("Preferences", "Import Preferences"),
         "",
@@ -1045,7 +1045,7 @@ def getUILayout(prefClass = Prefs):
     @return the UI layout as a tuple of main layout, flag for
         an embedded shell and a value for an embedded file browser
     """
-    layout = (\
+    layout = (
         prefClass.settings.value("UI/LayoutType", 
             prefClass.uiDefaults["LayoutType"]), 
         toBool(prefClass.settings.value("UI/LayoutShellEmbedded", 
@@ -1135,12 +1135,12 @@ def getUI(key, prefClass = Prefs):
                 # adjust entries for individual windows
                 vpLength = len(viewProfiles[name][0])
                 if vpLength < prefClass.viewProfilesLength:
-                    viewProfiles[name][0].extend(\
+                    viewProfiles[name][0].extend(
                         prefClass.uiDefaults["ViewProfiles"][name][0][vpLength:])
                 
                 vpLength = len(viewProfiles[name][2])
                 if vpLength < prefClass.viewProfilesLength:
-                    viewProfiles[name][2].extend(\
+                    viewProfiles[name][2].extend(
                         prefClass.uiDefaults["ViewProfiles"][name][2][vpLength:])
                 
                 # adjust profile
@@ -1152,11 +1152,11 @@ def getUI(key, prefClass = Prefs):
                 # adjust entries for toolboxes and sidebars
                 vpLength = len(viewProfiles[name][5])
                 if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name][5]):
-                    viewProfiles[name][5].extend(\
+                    viewProfiles[name][5].extend(
                         prefClass.uiDefaults["ViewProfiles"][name][5][vpLength:])
                 vpLength = len(viewProfiles[name][6])
                 if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name][6]):
-                    viewProfiles[name][6].extend(\
+                    viewProfiles[name][6].extend(
                         prefClass.uiDefaults["ViewProfiles"][name][6][vpLength:])
         else:
             viewProfiles = prefClass.uiDefaults["ViewProfiles"]

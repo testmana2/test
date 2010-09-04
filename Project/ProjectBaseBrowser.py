@@ -53,9 +53,9 @@ class ProjectBaseBrowser(Browser):
         self.isTranslationsBrowser = False
         self.expandedNames = []
         
-        self.SelectFlags = QItemSelectionModel.SelectionFlags(\
+        self.SelectFlags = QItemSelectionModel.SelectionFlags(
             QItemSelectionModel.Select | QItemSelectionModel.Rows)
-        self.DeselectFlags = QItemSelectionModel.SelectionFlags(\
+        self.DeselectFlags = QItemSelectionModel.SelectionFlags(
             QItemSelectionModel.Deselect | QItemSelectionModel.Rows)
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
@@ -152,7 +152,7 @@ class ProjectBaseBrowser(Browser):
         """
         if index.isValid():
             self.setCurrentIndex(index)
-            flags = QItemSelectionModel.SelectionFlags(\
+            flags = QItemSelectionModel.SelectionFlags(
                 QItemSelectionModel.ClearAndSelect | QItemSelectionModel.Rows)
             self.selectionModel().select(index, flags)
         
@@ -266,7 +266,7 @@ class ProjectBaseBrowser(Browser):
         """
         Protected method to remove a (single) directory from the project.
         """
-        itmList = self.getSelectedItems(\
+        itmList = self.getSelectedItems(
             [ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem])
         for itm in itmList[:]:
             dn = itm.dirName()

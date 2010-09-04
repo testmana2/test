@@ -33,18 +33,18 @@ class TerminalPage(ConfigurationPageBase, Ui_TerminalPage):
             self.shellCombo.addItems(["ash", "bash", "csh", "ksh", "sh", "tcsh", "zsh"])
         
         # set initial values
-        self.linenowidthSlider.setValue(\
+        self.linenowidthSlider.setValue(
             Preferences.getTerminal("LinenoWidth"))
-        self.linenoCheckBox.setChecked(\
+        self.linenoCheckBox.setChecked(
             Preferences.getTerminal("LinenoMargin"))
-        self.syntaxHighlightingCheckBox.setChecked(\
+        self.syntaxHighlightingCheckBox.setChecked(
             Preferences.getTerminal("SyntaxHighlightingEnabled"))
-        self.historySpinBox.setValue(\
+        self.historySpinBox.setValue(
             Preferences.getTerminal("MaxHistoryEntries"))
         
         self.monospacedFont = Preferences.getTerminal("MonospacedFont")
         self.monospacedFontSample.setFont(self.monospacedFont)
-        self.monospacedCheckBox.setChecked(\
+        self.monospacedCheckBox.setChecked(
             Preferences.getTerminal("UseMonospacedFont"))
         self.marginsFont = Preferences.getTerminal("MarginsFont")
         self.marginsFontSample.setFont(self.marginsFont)

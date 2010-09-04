@@ -29,40 +29,40 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         self.setupUi(self)
         self.setObjectName("EditorFilePage")
         
-        self.openFilesFilterComboBox.addItems(\
+        self.openFilesFilterComboBox.addItems(
             QScintilla.Lexers.getOpenFileFiltersList(True))
-        self.saveFilesFilterComboBox.addItems(\
+        self.saveFilesFilterComboBox.addItems(
             QScintilla.Lexers.getSaveFileFiltersList(True))
         
         self.defaultEncodingComboBox.addItems(sorted(supportedCodecs))
         
         # set initial values
-        self.autosaveSlider.setValue(\
+        self.autosaveSlider.setValue(
             Preferences.getEditor("AutosaveInterval"))
-        self.createBackupFileCheckBox.setChecked(\
+        self.createBackupFileCheckBox.setChecked(
             Preferences.getEditor("CreateBackupFile"))
-        self.automaticSyntaxCheckCheckBox.setChecked(\
+        self.automaticSyntaxCheckCheckBox.setChecked(
             Preferences.getEditor("AutoCheckSyntax"))
-        self.defaultEncodingComboBox.setCurrentIndex(\
-            self.defaultEncodingComboBox.findText(\
+        self.defaultEncodingComboBox.setCurrentIndex(
+            self.defaultEncodingComboBox.findText(
                 Preferences.getEditor("DefaultEncoding")))
-        self.advEncodingCheckBox.setChecked(\
+        self.advEncodingCheckBox.setChecked(
             Preferences.getEditor("AdvancedEncodingDetection"))
-        self.warnFilesizeSpinBox.setValue(\
+        self.warnFilesizeSpinBox.setValue(
             Preferences.getEditor("WarnFilesize"))
-        self.clearBreakpointsCheckBox.setChecked(\
+        self.clearBreakpointsCheckBox.setChecked(
             Preferences.getEditor("ClearBreaksOnClose"))
-        self.automaticReopenCheckBox.setChecked(\
+        self.automaticReopenCheckBox.setChecked(
             Preferences.getEditor("AutoReopen"))
-        self.stripWhitespaceCheckBox.setChecked(\
+        self.stripWhitespaceCheckBox.setChecked(
             Preferences.getEditor("StripTrailingWhitespace"))
-        self.openFilesFilterComboBox.setCurrentIndex(\
-            self.openFilesFilterComboBox.findText(\
+        self.openFilesFilterComboBox.setCurrentIndex(
+            self.openFilesFilterComboBox.findText(
                 Preferences.getEditor("DefaultOpenFilter")))
-        self.saveFilesFilterComboBox.setCurrentIndex(\
-            self.saveFilesFilterComboBox.findText(\
+        self.saveFilesFilterComboBox.setCurrentIndex(
+            self.saveFilesFilterComboBox.findText(
                 Preferences.getEditor("DefaultSaveFilter")))
-        self.automaticEolConversionCheckBox.setChecked(\
+        self.automaticEolConversionCheckBox.setChecked(
             Preferences.getEditor("AutomaticEOLConversion"))
         
         eolMode = Preferences.getEditor("EOLMode")

@@ -194,7 +194,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                     url1 = "{0}/{1}{2}".format(urls[0], dname, name)
                     url2 = "{0}/{1}{2}".format(urls[1], dname, name)
                     if summary:
-                        diff_summary = self.client.diff_summarize(\
+                        diff_summary = self.client.diff_summarize(
                             url1, revision1 = rev1, 
                             url_or_path2 = url2, revision2 = rev2, 
                             recurse = recurse)
@@ -235,7 +235,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         self.__finish()
         
         if self.paras == 0:
-            self.contents.insertPlainText(\
+            self.contents.insertPlainText(
                 self.trUtf8('There is no difference.'))
             return
         
@@ -313,7 +313,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         else:
             fname = self.vcs.splitPath(self.filename)[0]
         
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save Diff"),
             fname,

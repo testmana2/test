@@ -52,7 +52,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
             self.buttonBox.addButton(self.trUtf8("Stop"), QDialogButtonBox.ActionRole)
         self.stopButton.setToolTip(self.trUtf8("Press to stop the search"))
         self.stopButton.setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Open).setToolTip(\
+        self.buttonBox.button(QDialogButtonBox.Open).setToolTip(
             self.trUtf8("Opens the selected file"))
         
         self.project = project
@@ -180,7 +180,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         Private slot to handle the clicked signal of the search directory selection 
         button.
         """
-        searchDir = QFileDialog.getExistingDirectory(\
+        searchDir = QFileDialog.getExistingDirectory(
             None,
             self.trUtf8("Select search directory"),
             self.searchDirEdit.text(),

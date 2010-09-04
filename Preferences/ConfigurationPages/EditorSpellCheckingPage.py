@@ -65,7 +65,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         self.pelEdit.setText(Preferences.getEditor("SpellCheckingPersonalExcludeList"))
         
         if self.spellingFrame.isEnabled():
-            self.enabledCheckBox.setChecked(\
+            self.enabledCheckBox.setChecked(
                 Preferences.getEditor("AutoSpellCheckingEnabled"))
         else:
             self.enabledCheckBox.setChecked(False)  # not available
@@ -110,7 +110,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         """
         Private method to select the personal word list file.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select personal word list"),
             self.pwlEdit.text(),
@@ -124,7 +124,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         """
         Private method to select the personal exclude list file.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select personal exclude list"),
             self.pelEdit.text(),

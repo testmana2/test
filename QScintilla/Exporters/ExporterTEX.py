@@ -257,7 +257,7 @@ class ExporterTEX(ExporterBase):
                 QApplication.restoreOverrideCursor()
                 E5MessageBox.critical(self.editor,
                     self.trUtf8("Export source"),
-                    self.trUtf8(\
+                    self.trUtf8(
                         """<p>The source could not be exported to <b>{0}</b>.</p>"""
                         """<p>Reason: {1}</p>""")\
                         .format(filename, str(err)))

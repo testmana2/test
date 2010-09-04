@@ -58,12 +58,12 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
         self.menuactions = []
         self.menu = QMenu()
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Commit changes to repository..."), self.__commit))
         self.menu.addSeparator()
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Add to repository"), self.__add))
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Revert changes"), self.__revert))
         if self.vcs.versionStr >= '1.5.0':
             self.menu.addSeparator()

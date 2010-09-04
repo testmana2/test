@@ -527,7 +527,7 @@ class MultiProject(QObject):
             return
         
         if fn is None:
-            fn = QFileDialog.getOpenFileName(\
+            fn = QFileDialog.getOpenFileName(
                 self.parent(),
                 self.trUtf8("Open multiproject"),
                 "",
@@ -863,7 +863,7 @@ class MultiProject(QObject):
                 formatStr = '&{0:d}. {1}'
             else:
                 formatStr = '{0:d}. {1}'
-            act = self.recentMenu.addAction(\
+            act = self.recentMenu.addAction(
                 formatStr.format(idx, 
                     Utilities.compactPath(rp, self.ui.maxMenuFilePathLen)))
             act.setData(rp)

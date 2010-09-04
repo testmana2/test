@@ -50,7 +50,7 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         """
         Private slot to add a new search engine.
         """
-        fileNames = QFileDialog.getOpenFileNames(\
+        fileNames = QFileDialog.getOpenFileNames(
             self,
             self.trUtf8("Add search engine"),
             "",

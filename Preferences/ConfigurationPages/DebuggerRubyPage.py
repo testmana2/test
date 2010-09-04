@@ -33,9 +33,9 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         self.rubyInterpreterCompleter = E5FileCompleter(self.rubyInterpreterEdit)
         
         # set initial values
-        self.rubyInterpreterEdit.setText(\
+        self.rubyInterpreterEdit.setText(
             Preferences.getDebugger("RubyInterpreter"))
-        self.rbRedirectCheckBox.setChecked(\
+        self.rbRedirectCheckBox.setChecked(
             Preferences.getDebugger("RubyRedirect"))
         
     def save(self):
@@ -52,13 +52,13 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         """
         Private slot to handle the Ruby interpreter selection.
         """
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Ruby interpreter for Debug Client"),
             self.rubyInterpreterEdit.text())
             
         if file:
-            self.rubyInterpreterEdit.setText(\
+            self.rubyInterpreterEdit.setText(
                 Utilities.toNativeSeparators(file))
     
 def create(dlg):

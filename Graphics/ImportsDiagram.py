@@ -102,7 +102,7 @@ class ImportsDiagram(UMLDialog):
         initlist = glob.glob(os.path.join(self.packagePath, '__init__.*'))
         if len(initlist) == 0:
             ct = QGraphicsTextItem(None, self.scene)
-            ct.setHtml(\
+            ct.setHtml(
                 self.trUtf8("The directory <b>'{0}'</b> is not a Python package.")\
                     .format(self.package))
             return
@@ -139,7 +139,7 @@ class ImportsDiagram(UMLDialog):
                         i = n
                     else:
                         if self.showExternalImports:
-                            n = '.'.join(\
+                            n = '.'.join(
                                 packageList[:packageListLen - dots + 1] + [i[dots:]])
                         else:
                             n = i
@@ -222,7 +222,7 @@ class ImportsDiagram(UMLDialog):
         """
         for module in list(shapes.keys()):
             for rel in shapes[module][1]:
-                assoc = AssociationItem(\
+                assoc = AssociationItem(
                         shapes[module][0], shapes[rel][0],
                         Imports)
                 self.scene.addItem(assoc)

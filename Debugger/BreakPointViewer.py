@@ -124,10 +124,10 @@ class BreakPointViewer(QTreeView):
             return
         
         if selected:
-            flags = QItemSelectionModel.SelectionFlags(\
+            flags = QItemSelectionModel.SelectionFlags(
                 QItemSelectionModel.ClearAndSelect | QItemSelectionModel.Rows)
         else:
-            flags = QItemSelectionModel.SelectionFlags(\
+            flags = QItemSelectionModel.SelectionFlags(
                 QItemSelectionModel.Deselect | QItemSelectionModel.Rows)
         self.selectionModel().select(index, flags)
         

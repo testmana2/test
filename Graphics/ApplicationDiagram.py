@@ -231,7 +231,7 @@ class ApplicationDiagram(UMLDialog):
         """
         for package in shapes:
             for rel in shapes[package][1]:
-                assoc = AssociationItem(\
+                assoc = AssociationItem(
                         shapes[package][0], shapes[rel][0],
                         Imports)
                 self.scene.addItem(assoc)

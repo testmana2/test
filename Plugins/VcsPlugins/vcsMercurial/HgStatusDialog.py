@@ -54,14 +54,14 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         self.menuactions = []
         self.menu = QMenu()
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Commit changes to repository..."), self.__commit))
         self.menu.addSeparator()
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Add to repository"), self.__add))
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Remove from repository"), self.__forget))
-        self.menuactions.append(self.menu.addAction(\
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Revert changes"), self.__revert))
         self.menu.addSeparator()
         self.menuactions.append(self.menu.addAction(self.trUtf8("Adjust column sizes"),

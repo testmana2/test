@@ -9327,7 +9327,7 @@
       <keyword name="MessageBoxWizardDialog" id="MessageBoxWizardDialog" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog" />
       <keyword name="MessageBoxWizardDialog (Constructor)" id="MessageBoxWizardDialog (Constructor)" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.__init__" />
       <keyword name="MessageBoxWizardDialog.__enabledGroups" id="MessageBoxWizardDialog.__enabledGroups" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.__enabledGroups" />
-      <keyword name="MessageBoxWizardDialog.__getQt42ButtonCode" id="MessageBoxWizardDialog.__getQt42ButtonCode" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.__getQt42ButtonCode" />
+      <keyword name="MessageBoxWizardDialog.__getButtonCode" id="MessageBoxWizardDialog.__getButtonCode" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.__getButtonCode" />
       <keyword name="MessageBoxWizardDialog.__testQt42" id="MessageBoxWizardDialog.__testQt42" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.__testQt42" />
       <keyword name="MessageBoxWizardDialog.getCode" id="MessageBoxWizardDialog.getCode" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.getCode" />
       <keyword name="MessageBoxWizardDialog.on_bTest_clicked" id="MessageBoxWizardDialog.on_bTest_clicked" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.on_bTest_clicked" />

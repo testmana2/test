@@ -127,6 +127,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         )
         
         self.bTest.setEnabled(not self.rStandard.isChecked())
+        
+        self.eMessage.setEnabled(not self.rAboutQt.isChecked())
     
     @pyqtSlot(bool)
     def on_rInformation_toggled(self, checked):

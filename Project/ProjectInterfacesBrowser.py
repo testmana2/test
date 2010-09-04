@@ -237,7 +237,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             return
         
         try:
-            categories = self.getSelectedItemsCountCategorized(\
+            categories = self.getSelectedItemsCountCategorized(
                 [ProjectBrowserFileItem, BrowserClassItem, 
                  BrowserMethodItem, ProjectBrowserSimpleDirectoryItem])
             cnt = categories["sum"]
@@ -245,7 +245,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                 index = self.indexAt(coord)
                 if index.isValid():
                     self._selectSingleItem(index)
-                    categories = self.getSelectedItemsCountCategorized(\
+                    categories = self.getSelectedItemsCountCategorized(
                         [ProjectBrowserFileItem, BrowserClassItem, 
                          BrowserMethodItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
@@ -323,7 +323,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         """
         Protected slot to handle the open popup menu entry.
         """
-        itmList = self.getSelectedItems(\
+        itmList = self.getSelectedItems(
             [BrowserFileItem, BrowserClassItem, BrowserMethodItem, 
              BrowserClassAttributeItem])
         

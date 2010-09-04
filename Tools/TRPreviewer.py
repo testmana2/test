@@ -201,7 +201,7 @@ class TRPreviewer(QMainWindow):
         self.aboutAct.triggered[()].connect(self.__about)
         
         self.aboutQtAct = QAction(self.trUtf8('About &Qt'), self)
-        self.aboutQtAct.setStatusTip(\
+        self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
                 """<b>About Qt</b>"""

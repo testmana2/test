@@ -54,16 +54,16 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
-        self.startButton = self.buttonBox.addButton(\
+        self.startButton = self.buttonBox.addButton(
             self.trUtf8("Start"), QDialogButtonBox.ActionRole)
         self.startButton.setToolTip(self.trUtf8("Start the selected testsuite"))
-        self.startButton.setWhatsThis(self.trUtf8(\
+        self.startButton.setWhatsThis(self.trUtf8(
             """<b>Start Test</b>"""
             """<p>This button starts the selected testsuite.</p>"""))
-        self.stopButton = self.buttonBox.addButton(\
+        self.stopButton = self.buttonBox.addButton(
             self.trUtf8("Stop"), QDialogButtonBox.ActionRole)
         self.stopButton.setToolTip(self.trUtf8("Stop the running unittest"))
-        self.stopButton.setWhatsThis(self.trUtf8(\
+        self.stopButton.setWhatsThis(self.trUtf8(
             """<b>Stop Test</b>"""
             """<p>This button stops a running unittest.</p>"""))
         self.stopButton.setEnabled(False)
@@ -71,7 +71,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         self.dbs = dbs
         
-        self.setWindowFlags(\
+        self.setWindowFlags(
             self.windowFlags() | Qt.WindowFlags(Qt.WindowContextHelpButtonHint))
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         self.setWindowTitle(self.trUtf8("Unittest"))
@@ -160,7 +160,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 .format(pyExtensions, py3Extensions)
         else:
             filter = self.trUtf8("Python Files (*.py);;All Files (*)")
-        prog = QFileDialog.getOpenFileName(\
+        prog = QFileDialog.getOpenFileName(
             self,
             "",
             self.testsuiteComboBox.currentText(),
@@ -252,7 +252,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             try:
                 module = __import__(self.testName)
                 try:
-                    test = unittest.defaultTestLoader.loadTestsFromName(\
+                    test = unittest.defaultTestLoader.loadTestsFromName(
                         testFunctionName, module)
                 except AttributeError:
                     test = unittest.defaultTestLoader.loadTestsFromModule(module)
@@ -470,7 +470,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         ui = Ui_UnittestStacktraceDialog()
         ui.setupUi(self.dlg)
         
-        ui.showButton = ui.buttonBox.addButton(\
+        ui.showButton = ui.buttonBox.addButton(
             self.trUtf8("Show Source"), QDialogButtonBox.ActionRole)
         ui.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         

@@ -42,7 +42,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         self.process = QProcess()
         self.vcs = vcs
         
-        self.contents.setHtml(\
+        self.contents.setHtml(
             self.trUtf8('<b>Processing your request, please wait...</b>'))
         
         self.process.finished.connect(self.__procFinished)

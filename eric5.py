@@ -217,7 +217,7 @@ def main():
     # Load translation files and install them
     loc = Startup.loadTranslators(qt4TransDir, app, ("qscintilla",))
     
-    QTextCodec.setCodecForCStrings(QTextCodec.codecForName(\
+    QTextCodec.setCodecForCStrings(QTextCodec.codecForName(
         str(Preferences.getSystem("StringEncoding"))))
     
     splash.showMessage(QApplication.translate("eric5", "Importing packages..."))

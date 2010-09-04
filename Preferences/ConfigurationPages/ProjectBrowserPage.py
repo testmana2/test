@@ -52,9 +52,9 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
             self.initColour("Highlighted", self.pbHighlightedButton, 
                 Preferences.getProjectBrowserColour)
         
-        self.followEditorCheckBox.setChecked(\
+        self.followEditorCheckBox.setChecked(
             Preferences.getProject("FollowEditor"))
-        self.hideGeneratedCheckBox.setChecked(\
+        self.hideGeneratedCheckBox.setChecked(
             Preferences.getProject("HideGeneratedForms"))
         
     def save(self):
@@ -70,7 +70,7 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
             self.hideGeneratedCheckBox.isChecked())
         
         if self.pbGroup.isEnabled():
-            self.__storeProjectBrowserFlags(\
+            self.__storeProjectBrowserFlags(
                 self.projectTypeCombo.itemData(self.__currentProjectTypeIndex))
             for projectType, flags in list(self.__projectBrowserFlags.items()):
                 if projectType != '':
@@ -134,9 +134,9 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         if self.__currentProjectTypeIndex == index:
            return
         
-        self.__storeProjectBrowserFlags(\
+        self.__storeProjectBrowserFlags(
             self.projectTypeCombo.itemData(self.__currentProjectTypeIndex))
-        self.__setProjectBrowsersCheckBoxes(\
+        self.__setProjectBrowsersCheckBoxes(
             self.projectTypeCombo.itemData(index))
         self.__currentProjectTypeIndex = index
     

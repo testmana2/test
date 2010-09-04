@@ -31,11 +31,11 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         self.setupUi(self)
         
         # set the validators for the double line edots
-        self.eDoubleDefault.setValidator(\
+        self.eDoubleDefault.setValidator(
             QDoubleValidator(-2147483647, 2147483647, 99, self.eDoubleDefault))
-        self.eDoubleFrom.setValidator(\
+        self.eDoubleFrom.setValidator(
             QDoubleValidator(-2147483647, 2147483647, 99, self.eDoubleFrom))
-        self.eDoubleTo.setValidator(\
+        self.eDoubleTo.setValidator(
             QDoubleValidator(-2147483647, 2147483647, 99, self.eDoubleTo))
         
         self.bTest = \
@@ -71,14 +71,14 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 echomode = QLineEdit.NoEcho
             else:
                 echomode = QLineEdit.Password
-            QInputDialog.getText(\
+            QInputDialog.getText(
                 None,
                 self.eCaption.text(),
                 self.eLabel.text(),
                 echomode,
                 self.eTextDefault.text())
         elif self.rInteger.isChecked():
-            QInputDialog.getInteger(\
+            QInputDialog.getInteger(
                 None,
                 self.eCaption.text(),
                 self.eLabel.text(),
@@ -99,7 +99,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 doubleTo = float(self.eDoubleTo.text())
             except ValueError:
                 doubleTo = 2147483647
-            QInputDialog.getDouble(\
+            QInputDialog.getDouble(
                 None,
                 self.eCaption.text(),
                 self.eLabel.text(),

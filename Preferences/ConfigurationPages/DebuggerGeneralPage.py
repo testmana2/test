@@ -87,20 +87,20 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                     break
             self.interfacesCombo.setCurrentIndex(index)
         
-        self.allowedHostsList.addItems(\
+        self.allowedHostsList.addItems(
             Preferences.getDebugger("AllowedHosts"))
         
-        self.remoteCheckBox.setChecked(\
+        self.remoteCheckBox.setChecked(
             Preferences.getDebugger("RemoteDbgEnabled"))
-        self.hostLineEdit.setText(\
+        self.hostLineEdit.setText(
             Preferences.getDebugger("RemoteHost"))
-        self.execLineEdit.setText(\
+        self.execLineEdit.setText(
             Preferences.getDebugger("RemoteExecution"))
         
         if self.passiveDbgGroup.isEnabled():
-            self.passiveDbgCheckBox.setChecked(\
+            self.passiveDbgCheckBox.setChecked(
                 Preferences.getDebugger("PassiveDbgEnabled"))
-            self.passiveDbgPortSpinBox.setValue(\
+            self.passiveDbgPortSpinBox.setValue(
                 Preferences.getDebugger("PassiveDbgPort"))
             index = self.passiveDbgBackendCombo.findText(
                 Preferences.getDebugger("PassiveDbgType"))
@@ -108,29 +108,29 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                 index = 0
             self.passiveDbgBackendCombo.setCurrentIndex(index)
         
-        self.debugEnvironReplaceCheckBox.setChecked(\
+        self.debugEnvironReplaceCheckBox.setChecked(
             Preferences.getDebugger("DebugEnvironmentReplace"))
-        self.debugEnvironEdit.setText(\
+        self.debugEnvironEdit.setText(
             Preferences.getDebugger("DebugEnvironment"))
-        self.automaticResetCheckBox.setChecked(\
+        self.automaticResetCheckBox.setChecked(
             Preferences.getDebugger("AutomaticReset"))
-        self.debugAutoSaveScriptsCheckBox.setChecked(\
+        self.debugAutoSaveScriptsCheckBox.setChecked(
             Preferences.getDebugger("Autosave"))
-        self.consoleDbgCheckBox.setChecked(\
+        self.consoleDbgCheckBox.setChecked(
             Preferences.getDebugger("ConsoleDbgEnabled"))
-        self.consoleDbgEdit.setText(\
+        self.consoleDbgEdit.setText(
             Preferences.getDebugger("ConsoleDbgCommand"))
-        self.dbgPathTranslationCheckBox.setChecked(\
+        self.dbgPathTranslationCheckBox.setChecked(
             Preferences.getDebugger("PathTranslation"))
-        self.dbgTranslationRemoteEdit.setText(\
+        self.dbgTranslationRemoteEdit.setText(
             Preferences.getDebugger("PathTranslationRemote"))
-        self.dbgTranslationLocalEdit.setText(\
+        self.dbgTranslationLocalEdit.setText(
             Preferences.getDebugger("PathTranslationLocal"))
-        self.debugThreeStateBreakPoint.setChecked(\
+        self.debugThreeStateBreakPoint.setChecked(
             Preferences.getDebugger("ThreeStateBreakPoints"))
-        self.dontShowClientExitCheckBox.setChecked(\
+        self.dontShowClientExitCheckBox.setChecked(
             Preferences.getDebugger("SuppressClientExit"))
-        self.exceptionBreakCheckBox.setChecked(\
+        self.exceptionBreakCheckBox.setChecked(
             Preferences.getDebugger("BreakAlways"))
         
     def save(self):
@@ -208,7 +208,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         """
         Private slot called to add a new allowed host.
         """
-        allowedHost, ok = QInputDialog.getText(\
+        allowedHost, ok = QInputDialog.getText(
             None,
             self.trUtf8("Add allowed host"),
             self.trUtf8("Enter the IP address of an allowed host"),
@@ -237,7 +237,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         Private slot called to edit an allowed host.
         """
         allowedHost = self.allowedHostsList.currentItem().text()
-        allowedHost, ok = QInputDialog.getText(\
+        allowedHost, ok = QInputDialog.getText(
             None,
             self.trUtf8("Edit allowed host"),
             self.trUtf8("Enter the IP address of an allowed host"),

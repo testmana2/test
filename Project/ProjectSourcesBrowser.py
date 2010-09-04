@@ -119,24 +119,24 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         
         self.menuShow = QMenu(self.trUtf8('Show'))
         self.menuShow.addAction(self.trUtf8('Code metrics...'), self.__showCodeMetrics)
-        self.coverageMenuAction = self.menuShow.addAction(\
+        self.coverageMenuAction = self.menuShow.addAction(
             self.trUtf8('Code coverage...'), self.__showCodeCoverage)
-        self.profileMenuAction = self.menuShow.addAction(\
+        self.profileMenuAction = self.menuShow.addAction(
             self.trUtf8('Profile data...'), self.__showProfileData)
         self.menuShow.aboutToShow.connect(self.__showContextMenuShow)
         
         self.graphicsMenu = QMenu(self.trUtf8('Diagrams'))
-        self.classDiagramAction = self.graphicsMenu.addAction(\
+        self.classDiagramAction = self.graphicsMenu.addAction(
             self.trUtf8("Class Diagram..."), self.__showClassDiagram)
-        self.graphicsMenu.addAction(\
+        self.graphicsMenu.addAction(
             self.trUtf8("Package Diagram..."), self.__showPackageDiagram)
-        self.importsDiagramAction = self.graphicsMenu.addAction(\
+        self.importsDiagramAction = self.graphicsMenu.addAction(
             self.trUtf8("Imports Diagram..."), self.__showImportsDiagram)
-        self.graphicsMenu.addAction(\
+        self.graphicsMenu.addAction(
             self.trUtf8("Application Diagram..."), self.__showApplicationDiagram)
         self.graphicsMenu.aboutToShow.connect(self.__showContextMenuGraphics)
         
-        self.unittestAction = self.sourceMenu.addAction(\
+        self.unittestAction = self.sourceMenu.addAction(
             self.trUtf8('Run unittest...'), self.handleUnittest)
         self.sourceMenu.addSeparator()
         act = self.sourceMenu.addAction(self.trUtf8('Rename file'), self._renameFile)
@@ -259,7 +259,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         Privat method to generate the popup menus for a Ruby project.
         """
         self.graphicsMenu = QMenu(self.trUtf8('Diagrams'))
-        self.classDiagramAction = self.graphicsMenu.addAction(\
+        self.classDiagramAction = self.graphicsMenu.addAction(
             self.trUtf8("Class Diagram..."), self.__showClassDiagram)
         self.graphicsMenu.addAction(self.trUtf8("Package Diagram..."), 
             self.__showPackageDiagram)
@@ -371,7 +371,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             return
         
         try:
-            categories = self.getSelectedItemsCountCategorized(\
+            categories = self.getSelectedItemsCountCategorized(
                 [ProjectBrowserFileItem, BrowserClassItem, 
                  BrowserMethodItem, ProjectBrowserSimpleDirectoryItem])
             cnt = categories["sum"]
@@ -379,7 +379,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                 index = self.indexAt(coord)
                 if index.isValid():
                     self._selectSingleItem(index)
-                    categories = self.getSelectedItemsCountCategorized(\
+                    categories = self.getSelectedItemsCountCategorized(
                         [ProjectBrowserFileItem, BrowserClassItem, 
                          BrowserMethodItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
@@ -518,7 +518,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Protected slot to handle the open popup menu entry.
         """
-        itmList = self.getSelectedItems(\
+        itmList = self.getSelectedItems(
             [BrowserFileItem, BrowserClassItem, BrowserMethodItem, 
              BrowserClassAttributeItem])
         
@@ -714,7 +714,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         
         if files:
             if len(files) > 1:
-                pfn, ok = QInputDialog.getItem(\
+                pfn, ok = QInputDialog.getItem(
                     None,
                     self.trUtf8("Code Coverage"),
                     self.trUtf8("Please select a coverage file"),
@@ -767,7 +767,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                 
         if files:
             if len(files) > 1:
-                pfn, ok = QInputDialog.getItem(\
+                pfn, ok = QInputDialog.getItem(
                     None,
                     self.trUtf8("Profile Data"),
                     self.trUtf8("Please select a profile file"),

@@ -45,7 +45,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         
         self.vcs = vcs
         
-        self.contents.setHtml(\
+        self.contents.setHtml(
             self.trUtf8('<b>Processing your request, please wait...</b>'))
         
         self.contents.anchorClicked.connect(self.__sourceChanged)
@@ -103,7 +103,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                 if fetched == 0:
                     revstart = pysvn.Revision(pysvn.opt_revision_kind.head)
                 else:
-                    revstart = pysvn.Revision(\
+                    revstart = pysvn.Revision(
                         pysvn.opt_revision_kind.number, nextRev)
                 allLogs = self.client.log(fname, 
                                           revision_start = revstart, 

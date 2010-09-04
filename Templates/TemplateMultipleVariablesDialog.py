@@ -26,7 +26,7 @@ class TemplateMultipleVariablesDialog(QDialog):
         self.TemplateMultipleVariablesDialogLayout = QVBoxLayout(self)
         self.TemplateMultipleVariablesDialogLayout.setMargin(6)
         self.TemplateMultipleVariablesDialogLayout.setSpacing(6)
-        self.TemplateMultipleVariablesDialogLayout.setObjectName(\
+        self.TemplateMultipleVariablesDialogLayout.setObjectName(
             "TemplateMultipleVariablesDialogLayout")
         self.setLayout(self.TemplateMultipleVariablesDialogLayout)
 

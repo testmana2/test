@@ -368,7 +368,7 @@ class TrayStarter(QSystemTrayIcon):
                 formatStr = '&{0:d}. {1}'
             else:
                 formatStr = '{0:d}. {1}'
-            act = self.recentFilesMenu.addAction(\
+            act = self.recentFilesMenu.addAction(
                 formatStr.format(idx, 
                     Utilities.compactPath(rf, self.maxMenuFilePathLen)))
             act.setData(rf)

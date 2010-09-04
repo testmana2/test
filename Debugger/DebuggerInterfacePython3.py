@@ -182,7 +182,7 @@ class DebuggerInterfacePython3(QObject):
                 if process is None:
                     E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
-                        self.trUtf8(\
+                        self.trUtf8(
                             """<p>The debugger backend could not be started.</p>"""))
                 
                 # set translation function
@@ -204,7 +204,7 @@ class DebuggerInterfacePython3(QObject):
             clientEnv = {}
         else:
             clientEnv = os.environ.copy()
-        envlist = Utilities.parseEnvironmentString(\
+        envlist = Utilities.parseEnvironmentString(
             Preferences.getDebugger("DebugEnvironment"))
         for el in envlist:
             try:
@@ -227,7 +227,7 @@ class DebuggerInterfacePython3(QObject):
                 if process is None:
                     E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
-                        self.trUtf8(\
+                        self.trUtf8(
                             """<p>The debugger backend could not be started.</p>"""))
                 return process, self.__isNetworked
         
@@ -277,7 +277,7 @@ class DebuggerInterfacePython3(QObject):
                 if process is None:
                     E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
-                        self.trUtf8(\
+                        self.trUtf8(
                             """<p>The debugger backend could not be started.</p>"""))
                 # set translation function
                 if project.getDebugProperty("PATHTRANSLATION"):
@@ -296,7 +296,7 @@ class DebuggerInterfacePython3(QObject):
             clientEnv = {}
         else:
             clientEnv = os.environ.copy()
-        envlist = Utilities.parseEnvironmentString(\
+        envlist = Utilities.parseEnvironmentString(
             project.getDebugProperty("ENVIRONMENTSTRING"))
         for el in envlist:
             try:
@@ -320,7 +320,7 @@ class DebuggerInterfacePython3(QObject):
                 if process is None:
                     E5MessageBox.critical(None,
                         self.trUtf8("Start Debugger"),
-                        self.trUtf8(\
+                        self.trUtf8(
                             """<p>The debugger backend could not be started.</p>"""))
                 return process, self.__isNetworked
         
@@ -717,7 +717,7 @@ class DebuggerInterfacePython3(QObject):
         Private method to ask the user which branch of a fork to follow.
         """
         selections = [self.trUtf8("Parent Process"), self.trUtf8("Child process")]
-        res, ok = QInputDialog.getItem(\
+        res, ok = QInputDialog.getItem(
             None,
             self.trUtf8("Client forking"),
             self.trUtf8("Select the fork branch to follow."),

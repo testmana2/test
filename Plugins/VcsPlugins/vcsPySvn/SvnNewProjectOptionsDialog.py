@@ -55,7 +55,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         Private slot to display a selection dialog.
         """
         if self.protocolCombo.currentText() == "file://":
-            directory = QFileDialog.getExistingDirectory(\
+            directory = QFileDialog.getExistingDirectory(
                 self,
                 self.trUtf8("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
@@ -71,7 +71,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
                 if url:
                     protocol = url.split("://")[0]
                     path = url.split("://")[1]
-                    self.protocolCombo.setCurrentIndex(\
+                    self.protocolCombo.setCurrentIndex(
                         self.protocolCombo.findText(protocol + "://"))
                     self.vcsUrlEdit.setText(path)
         
@@ -80,7 +80,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         """
         Private slot to display a directory selection dialog.
         """
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select Project Directory"),
             self.vcsProjectDirEdit.text(),

@@ -249,7 +249,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         itm2.setData(pyqtSignature, pyqtSignatureRole)
                         itm2.setData(pythonSignature, pythonSignatureRole)
                         
-                        itm2.setFlags(Qt.ItemFlags(\
+                        itm2.setFlags(Qt.ItemFlags(
                             Qt.ItemIsUserCheckable | \
                             Qt.ItemIsEnabled | \
                             Qt.ItemIsSelectable)

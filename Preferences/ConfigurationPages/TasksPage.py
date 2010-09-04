@@ -30,7 +30,7 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         
         # set initial values
         self.tasksMarkerEdit.setText(Preferences.getTasks("TasksMarkers"))
-        self.tasksMarkerBugfixEdit.setText(\
+        self.tasksMarkerBugfixEdit.setText(
             Preferences.getTasks("TasksMarkersBugfix"))
         
         self.tasksColours["TasksColour"] = \

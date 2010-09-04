@@ -295,7 +295,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         if keystr == itmseq:
                             res = E5MessageBox.yesNo(self,
                                 self.trUtf8("Edit shortcuts"),
-                                self.trUtf8(\
+                                self.trUtf8(
                                     """<p><b>{0}</b> has already been allocated"""
                                     """ to the <b>{1}</b> action. """
                                     """Remove this binding?</p>""")
@@ -314,7 +314,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         if itmseq.startswith("{0}+".format(keystr)):
                             res = E5MessageBox.yesNo(self,
                                 self.trUtf8("Edit shortcuts"),
-                                self.trUtf8(\
+                                self.trUtf8(
                                     """<p><b>{0}</b> hides the <b>{1}</b> action. """
                                     """Remove this binding?</p>""")
                                     .format(keystr, itm.text(0)),
@@ -329,7 +329,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         if keystr.startswith("{0}+".format(itmseq)):
                             res = E5MessageBox.yesNo(self,
                                 self.trUtf8("Edit shortcuts"),
-                                self.trUtf8(\
+                                self.trUtf8(
                                     """<p><b>{0}</b> is hidden by the """
                                     """<b>{1}</b> action. """
                                     """Remove this binding?</p>""")

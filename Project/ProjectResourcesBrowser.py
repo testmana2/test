@@ -256,14 +256,14 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             return
         
         try:
-            categories = self.getSelectedItemsCountCategorized(\
+            categories = self.getSelectedItemsCountCategorized(
                 [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
             cnt = categories["sum"]
             if cnt <= 1:
                 index = self.indexAt(coord)
                 if index.isValid():
                     self._selectSingleItem(index)
-                    categories = self.getSelectedItemsCountCategorized(\
+                    categories = self.getSelectedItemsCountCategorized(
                         [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem])
                     cnt = categories["sum"]
                         
@@ -386,7 +386,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         if self.hooks["newResource"] is not None:
             self.hooks["newResource"](path)
         else:
-            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
                 self,
                 self.trUtf8("New Resource"),
                 path,

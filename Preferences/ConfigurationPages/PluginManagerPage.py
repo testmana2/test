@@ -35,9 +35,9 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         
         # set initial values
-        self.activateExternalPluginsCheckBox.setChecked(\
+        self.activateExternalPluginsCheckBox.setChecked(
             Preferences.getPluginManager("ActivateExternal"))
-        self.downloadDirEdit.setText(\
+        self.downloadDirEdit.setText(
             Preferences.getPluginManager("DownloadPath"))
         
     def save(self):
@@ -54,7 +54,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         """
         Private slot to handle the directory selection via dialog.
         """
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select plugins download directory"),
             self.downloadDirEdit.text(),

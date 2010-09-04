@@ -162,7 +162,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         It displays a file selection dialog to
         select the file the api is written to.
         """
-        filename = QFileDialog.getSaveFileName(\
+        filename = QFileDialog.getSaveFileName(
             self,
             self.trUtf8("Select output file"),
             self.outputFileEdit.text(),
@@ -193,7 +193,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         startDir = self.ignoreDirEdit.text()
         if not startDir:
             startDir = self.ppath
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory to exclude"),
             startDir,
@@ -242,7 +242,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         self.parameters['ignoreDirectories'] = []
         for row in range(0, self.ignoreDirsList.count()):
             itm = self.ignoreDirsList.item(row)
-            self.parameters['ignoreDirectories'].append(\
+            self.parameters['ignoreDirectories'].append(
                 os.path.normpath(itm.text()))
         extensions = self.sourceExtEdit.text().split(',')
         self.parameters['sourceExtensions'] = \

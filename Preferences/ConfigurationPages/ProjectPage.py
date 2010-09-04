@@ -25,29 +25,29 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
         self.setObjectName("ProjectPage")
         
         # set initial values
-        self.projectCompressedProjectFilesCheckBox.setChecked(\
+        self.projectCompressedProjectFilesCheckBox.setChecked(
             Preferences.getProject("CompressedProjectFiles"))
-        self.projectSearchNewFilesRecursiveCheckBox.setChecked(\
+        self.projectSearchNewFilesRecursiveCheckBox.setChecked(
             Preferences.getProject("SearchNewFilesRecursively"))
-        self.projectSearchNewFilesCheckBox.setChecked(\
+        self.projectSearchNewFilesCheckBox.setChecked(
             Preferences.getProject("SearchNewFiles"))
-        self.projectAutoIncludeNewFilesCheckBox.setChecked(\
+        self.projectAutoIncludeNewFilesCheckBox.setChecked(
             Preferences.getProject("AutoIncludeNewFiles"))
-        self.projectLoadSessionCheckBox.setChecked(\
+        self.projectLoadSessionCheckBox.setChecked(
             Preferences.getProject("AutoLoadSession"))
-        self.projectSaveSessionCheckBox.setChecked(\
+        self.projectSaveSessionCheckBox.setChecked(
             Preferences.getProject("AutoSaveSession"))
-        self.projectSessionAllBpCheckBox.setChecked(\
+        self.projectSessionAllBpCheckBox.setChecked(
             Preferences.getProject("SessionAllBreakpoints"))
-        self.projectLoadDebugPropertiesCheckBox.setChecked(\
+        self.projectLoadDebugPropertiesCheckBox.setChecked(
             Preferences.getProject("AutoLoadDbgProperties"))
-        self.projectSaveDebugPropertiesCheckBox.setChecked(\
+        self.projectSaveDebugPropertiesCheckBox.setChecked(
             Preferences.getProject("AutoSaveDbgProperties"))
-        self.projectAutoCompileFormsCheckBox.setChecked(\
+        self.projectAutoCompileFormsCheckBox.setChecked(
             Preferences.getProject("AutoCompileForms"))
-        self.projectAutoCompileResourcesCheckBox.setChecked(\
+        self.projectAutoCompileResourcesCheckBox.setChecked(
             Preferences.getProject("AutoCompileResources"))
-        self.projectTimestampCheckBox.setChecked(\
+        self.projectTimestampCheckBox.setChecked(
             Preferences.getProject("XMLTimestamp"))
         self.projectRecentSpinBox.setValue(
             Preferences.getProject("RecentNumber"))

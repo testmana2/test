@@ -230,7 +230,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
                 if fetched == 0:
                     revstart = start
                 else:
-                    revstart = pysvn.Revision(\
+                    revstart = pysvn.Revision(
                         pysvn.opt_revision_kind.number, nextRev)
                 allLogs = self.client.log(self.fname, 
                             revision_start = revstart, 
@@ -352,7 +352,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             self.__resizeColumnsFiles()
             self.__resortFiles()
         
-        self.diffPreviousButton.setEnabled(\
+        self.diffPreviousButton.setEnabled(
             current != self.logTree.topLevelItem(self.logTree.topLevelItemCount() - 1))
     
     @pyqtSlot()

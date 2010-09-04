@@ -474,7 +474,7 @@ class Hg(VersionControl):
         if noDialog:
             self.startSynchronizedProcess(QProcess(), "hg", args, repodir)
         else:
-            dia = HgDialog(\
+            dia = HgDialog(
                 self.trUtf8('Adding files/directories to the Mercurial repository'))
             res = dia.startProcess(args, repodir)
             if res:
@@ -534,7 +534,7 @@ class Hg(VersionControl):
         if noDialog:
             res = self.startSynchronizedProcess(QProcess(), "hg", args, repodir)
         else:
-            dia = HgDialog(\
+            dia = HgDialog(
                 self.trUtf8('Removing files/directories from the Mercurial repository'))
             res = dia.startProcess(args, repodir)
             if res:
@@ -1240,7 +1240,7 @@ class Hg(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
-        noEntries, ok = QInputDialog.getInteger(\
+        noEntries, ok = QInputDialog.getInteger(
             None,
             self.trUtf8("Mercurial Log"),
             self.trUtf8("Select number of entries to show."),
@@ -1716,7 +1716,7 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             rev, compression, all = dlg.getParameters()
             
-            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
                 None,
                 self.trUtf8("Create changegroup"),
                 repodir,
@@ -1776,7 +1776,7 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             None,
             self.trUtf8("Preview changegroup"),
             repodir,
@@ -1807,7 +1807,7 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        file = QFileDialog.getOpenFileName(\
+        file = QFileDialog.getOpenFileName(
             None,
             self.trUtf8("Preview changegroup"),
             repodir,
@@ -1837,7 +1837,7 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        files = QFileDialog.getOpenFileNames(\
+        files = QFileDialog.getOpenFileNames(
             None,
             self.trUtf8("Apply changegroups"),
             repodir,
@@ -1927,7 +1927,7 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        dia = HgDialog(\
+        dia = HgDialog(
             self.trUtf8('Removing files from the Mercurial repository only'))
         res = dia.startProcess(args, repodir)
         if res:

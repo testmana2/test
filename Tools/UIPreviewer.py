@@ -67,7 +67,7 @@ class UIPreviewer(QMainWindow):
         self.styleCombo.setToolTip(self.trUtf8("Select the GUI Theme"))
         self.styleLayout.addWidget(self.styleCombo)
         self.styleCombo.addItems(list(QStyleFactory().keys()))
-        self.styleCombo.setCurrentIndex(\
+        self.styleCombo.setCurrentIndex(
             int(Preferences.Prefs.settings.value('UIPreviewer/style')))
         
         styleSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
@@ -143,7 +143,7 @@ class UIPreviewer(QMainWindow):
         
         self.imageAct = QAction(UI.PixmapCache.getIcon("screenCapture.png"), 
                         self.trUtf8('&Screen Capture'), self)
-        self.imageAct.setShortcut(\
+        self.imageAct.setShortcut(
             QKeySequence(self.trUtf8("Ctrl+S", "File|Screen Capture")))
         self.imageAct.setStatusTip(self.trUtf8('Save a screen capture to an image file'))
         self.imageAct.setWhatsThis(self.trUtf8(
@@ -195,7 +195,7 @@ class UIPreviewer(QMainWindow):
         self.aboutAct.triggered[()].connect(self.__about)
                      
         self.aboutQtAct = QAction(self.trUtf8('About &Qt'), self)
-        self.aboutQtAct.setStatusTip(\
+        self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))
         self.aboutQtAct.setWhatsThis(self.trUtf8(
                 """<b>About Qt</b>"""
@@ -425,7 +425,7 @@ class UIPreviewer(QMainWindow):
             filters = "{0}*.{1} ".format(filters, bytes(format).decode().lower())
         filter = self.trUtf8("Images ({0})").format(filters[:-1])
         
-        fname = QFileDialog.getSaveFileName(\
+        fname = QFileDialog.getSaveFileName(
             self,
             self.trUtf8("Save Image"),
             "",

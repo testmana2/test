@@ -71,7 +71,7 @@ class StartDialog(QDialog):
             self.ui = Ui_StartProfileDialog()
         self.ui.setupUi(self)
         
-        self.clearButton = self.ui.buttonBox.addButton(\
+        self.clearButton = self.ui.buttonBox.addButton(
             self.trUtf8("Clear Histories"), QDialogButtonBox.ActionRole)
         
         self.workdirCompleter = E5DirCompleter(self.ui.workdirCombo)
@@ -115,7 +115,7 @@ class StartDialog(QDialog):
         Private method used to open a directory selection dialog.
         """
         cwd = self.ui.workdirCombo.currentText()
-        d = QFileDialog.getExistingDirectory(\
+        d = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Working directory"),
             cwd,
@@ -128,7 +128,7 @@ class StartDialog(QDialog):
         """
         Private slot to enable/disable the OK button.
         """
-        self.ui.buttonBox.button(QDialogButtonBox.Ok).setDisabled(\
+        self.ui.buttonBox.button(QDialogButtonBox.Ok).setDisabled(
             self.ui.modFuncCombo.currentText() == "")
         
     def getData(self):

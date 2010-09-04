@@ -119,10 +119,10 @@ class WatchPointViewer(QTreeView):
             return
         
         if selected:
-            flags = QItemSelectionModel.SelectionFlags(\
+            flags = QItemSelectionModel.SelectionFlags(
                 QItemSelectionModel.ClearAndSelect | QItemSelectionModel.Rows)
         else:
-            flags = QItemSelectionModel.SelectionFlags(\
+            flags = QItemSelectionModel.SelectionFlags(
                 QItemSelectionModel.Deselect | QItemSelectionModel.Rows)
         self.selectionModel().select(index, flags)
         
@@ -276,7 +276,7 @@ class WatchPointViewer(QTreeView):
             
             cond, special, temp, enabled, count = wp[:5]
             
-            dlg = EditWatchpointDialog(\
+            dlg = EditWatchpointDialog(
                 (cond, temp, enabled, count, special), self)
             if dlg.exec_() == QDialog.Accepted:
                 cond, temp, enabled, count, special = dlg.getData()

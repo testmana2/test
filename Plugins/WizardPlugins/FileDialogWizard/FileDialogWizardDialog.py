@@ -64,7 +64,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
-            QFileDialog.getOpenFileName(\
+            QFileDialog.getOpenFileName(
                 None,
                 self.eCaption.text(),
                 self.eStartWith.text(),
@@ -75,7 +75,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
-            QFileDialog.getOpenFileNames(\
+            QFileDialog.getOpenFileNames(
                 None,
                 self.eCaption.text(),
                 self.eStartWith.text(),
@@ -86,7 +86,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
-            QFileDialog.getSaveFileName(\
+            QFileDialog.getSaveFileName(
                 None,
                 self.eCaption.text(),
                 self.eStartWith.text(),
@@ -100,7 +100,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options |= QFileDialog.Options(QFileDialog.ShowDirsOnly)
             else:
                 options |= QFileDialog.Options(QFileDialog.Option(0))
-            QFileDialog.getExistingDirectory(\
+            QFileDialog.getExistingDirectory(
                 None,
                 self.eCaption.text(),
                 self.eWorkDir.text(),
@@ -124,7 +124,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         else:
             self.filePropertiesGroup.setEnabled(True)
             self.dirPropertiesGroup.setEnabled(False)
-            self.bTest.setDisabled(\
+            self.bTest.setDisabled(
                 self.cStartWith.isChecked() or self.cFilters.isChecked())
         
     def __getCode4(self, indLevel, indString):

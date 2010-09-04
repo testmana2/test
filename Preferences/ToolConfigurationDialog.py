@@ -247,7 +247,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         Private slot to handle the executable selection via a file selection dialog.
         """
-        execfile = QFileDialog.getOpenFileName(\
+        execfile = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select executable"),
             self.executableEdit.text(),
@@ -268,7 +268,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         Private slot to handle the icon selection via a file selection dialog.
         """
-        icon = QFileDialog.getOpenFileName(\
+        icon = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select icon file"),
             self.iconEdit.text(),

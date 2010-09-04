@@ -25,9 +25,9 @@ class ApplicationPage(ConfigurationPageBase, Ui_ApplicationPage):
         self.setObjectName("ApplicationPage")
         
         # set initial values
-        self.singleApplicationCheckBox.setChecked(\
+        self.singleApplicationCheckBox.setChecked(
             Preferences.getUI("SingleApplicationMode"))
-        self.splashScreenCheckBox.setChecked(\
+        self.splashScreenCheckBox.setChecked(
             Preferences.getUI("ShowSplash"))
         
         openOnStartup = Preferences.getUI("OpenOnStartup")

@@ -25,9 +25,9 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
         self.setObjectName("MultiProjectPage")
         
         # set initial values
-        self.openMasterAutomaticallyCheckBox.setChecked(\
+        self.openMasterAutomaticallyCheckBox.setChecked(
             Preferences.getMultiProject("OpenMasterAutomatically"))
-        self.multiProjectTimestampCheckBox.setChecked(\
+        self.multiProjectTimestampCheckBox.setChecked(
             Preferences.getMultiProject("XMLTimestamp"))
         self.multiProjectRecentSpinBox.setValue(
             Preferences.getMultiProject("RecentNumber"))

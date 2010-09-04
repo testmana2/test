@@ -302,18 +302,18 @@ class Terminal(QsciScintillaCompat):
         self.setUnmatchedBraceBackgroundColor(
             Preferences.getEditorColour("NonmatchingBraceBack"))
         if Preferences.getEditor("CustomSelectionColours"):
-            self.setSelectionBackgroundColor(\
+            self.setSelectionBackgroundColor(
                 Preferences.getEditorColour("SelectionBackground"))
         else:
-            self.setSelectionBackgroundColor(\
+            self.setSelectionBackgroundColor(
                 QApplication.palette().color(QPalette.Highlight))
         if Preferences.getEditor("ColourizeSelText"):
             self.resetSelectionForegroundColor()
         elif Preferences.getEditor("CustomSelectionColours"):
-            self.setSelectionForegroundColor(\
+            self.setSelectionForegroundColor(
                 Preferences.getEditorColour("SelectionForeground"))
         else:
-            self.setSelectionForegroundColor(\
+            self.setSelectionForegroundColor(
                 QApplication.palette().color(QPalette.HighlightedText))
         self.setSelectionToEol(Preferences.getEditor("ExtendSelectionToEol"))
         self.setCaretForegroundColor(
@@ -388,7 +388,7 @@ class Terminal(QsciScintillaCompat):
         """
         Private slot to select a history entry to execute.
         """
-        cmd, ok = QInputDialog.getItem(\
+        cmd, ok = QInputDialog.getItem(
             self,
             self.trUtf8("Select History"),
             self.trUtf8("Select the history entry to execute (most recent shown last)."),

@@ -68,12 +68,12 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         try:
-            self.transPatternEdit.setText(os.path.join(\
+            self.transPatternEdit.setText(os.path.join(
                 self.project.ppath, self.project.pdata["TRANSLATIONPATTERN"][0]))
         except IndexError:
             pass
         try:
-            self.transBinPathEdit.setText(os.path.join(\
+            self.transBinPathEdit.setText(os.path.join(
                 self.project.ppath, self.project.pdata["TRANSLATIONSBINPATH"][0]))
         except IndexError:
             pass
@@ -90,7 +90,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         tp = self.transPatternEdit.text()
         if "%language%" in tp:
             tp = tp.split("%language%")[0]
-        tsfile = QFileDialog.getOpenFileName(\
+        tsfile = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select translation file"),
             tp,
@@ -114,7 +114,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Private slot to display a directory selection dialog.
         """
-        directory = QFileDialog.getExistingDirectory(\
+        directory = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory for binary translations"),
             self.transBinPathEdit.text(),
@@ -157,7 +157,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Private slot to select a file to exempt from translation.
         """
-        texcept = QFileDialog.getOpenFileName(\
+        texcept = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Exempt file from translation"),
             self.project.ppath,
@@ -170,7 +170,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Private slot to select a file to exempt from translation.
         """
-        texcept = QFileDialog.getExistingDirectory(\
+        texcept = QFileDialog.getExistingDirectory(
             self,
             self.trUtf8("Exempt directory from translation"),
             self.project.ppath,

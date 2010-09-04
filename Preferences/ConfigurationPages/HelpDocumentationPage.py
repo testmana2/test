@@ -43,13 +43,13 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self.pysideGroup.setEnabled(False)
         
         # set initial values
-        self.pythonDocDirEdit.setText(\
+        self.pythonDocDirEdit.setText(
             Preferences.getHelp("PythonDocDir"))
-        self.qt4DocDirEdit.setText(\
+        self.qt4DocDirEdit.setText(
             Preferences.getHelp("Qt4DocDir"))
-        self.pyqt4DocDirEdit.setText(\
+        self.pyqt4DocDirEdit.setText(
             Preferences.getHelp("PyQt4DocDir"))
-        self.pysideDocDirEdit.setText(\
+        self.pysideDocDirEdit.setText(
             Preferences.getHelp("PySideDocDir"))
         
     def save(self):
@@ -70,7 +70,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the Python documentation directory.
         """
-        entry = QFileDialog.getOpenFileName(\
+        entry = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Python documentation entry"),
             QUrl(self.pythonDocDirEdit.text()).path(),
@@ -86,7 +86,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the Qt4 documentation directory.
         """
-        entry = QFileDialog.getOpenFileName(\
+        entry = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Qt4 documentation entry"),
             QUrl(self.qt4DocDirEdit.text()).path(),
@@ -100,7 +100,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the PyQt4 documentation directory.
         """
-        entry = QFileDialog.getOpenFileName(\
+        entry = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select PyQt4 documentation entry"),
             QUrl(self.pyqt4DocDirEdit.text()).path(),
@@ -114,7 +114,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the PySide documentation directory.
         """
-        entry = QFileDialog.getOpenFileName(\
+        entry = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select PySide documentation entry"),
             QUrl(self.pysideDocDirEdit.text()).path(),

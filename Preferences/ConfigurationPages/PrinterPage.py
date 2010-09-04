@@ -27,7 +27,7 @@ class PrinterPage(ConfigurationPageBase, Ui_PrinterPage):
         self.setObjectName("PrinterPage")
         
         # set initial values
-        self.printerNameEdit.setText(\
+        self.printerNameEdit.setText(
             Preferences.getPrinter("PrinterName"))
         if Preferences.getPrinter("ColorMode"):
             self.printerColorButton.setChecked(True)
@@ -37,17 +37,17 @@ class PrinterPage(ConfigurationPageBase, Ui_PrinterPage):
             self.printFirstPageFirstButton.setChecked(True)
         else:
             self.printFirstPageLastButton.setChecked(True)
-        self.printMagnificationSpinBox.setValue(\
+        self.printMagnificationSpinBox.setValue(
             Preferences.getPrinter("Magnification"))
         self.printheaderFont = Preferences.getPrinter("HeaderFont")
         self.printheaderFontSample.setFont(self.printheaderFont)
-        self.leftMarginSpinBox.setValue(\
+        self.leftMarginSpinBox.setValue(
             Preferences.getPrinter("LeftMargin"))
-        self.rightMarginSpinBox.setValue(\
+        self.rightMarginSpinBox.setValue(
             Preferences.getPrinter("RightMargin"))
-        self.topMarginSpinBox.setValue(\
+        self.topMarginSpinBox.setValue(
             Preferences.getPrinter("TopMargin"))
-        self.bottomMarginSpinBox.setValue(\
+        self.bottomMarginSpinBox.setValue(
             Preferences.getPrinter("BottomMargin"))
         
     def save(self):

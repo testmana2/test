@@ -131,7 +131,7 @@ class EricdocPlugin(QObject):
                 E5Action(self.trUtf8('Generate documentation (eric5-doc)'),
                     self.trUtf8('Generate &documentation (eric5-doc)'), 0, 0,
                     self, 'doc_eric5_doc')
-            self.__projectAct.setStatusTip(\
+            self.__projectAct.setStatusTip(
                 self.trUtf8('Generate API documentation using eric5-doc'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Generate documentation</b>"""
@@ -167,7 +167,7 @@ class EricdocPlugin(QObject):
         """
         if menuName == "Apidoc":
             if self.__projectAct is not None:
-                self.__projectAct.setEnabled(\
+                self.__projectAct.setEnabled(
                     e5App().getObject("Project").getProjectLanguage() in \
                         ["Python", "Python3", "Ruby"])
     

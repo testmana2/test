@@ -36,7 +36,7 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         """
         Private slot called by pressing the file selection button.
         """
-        fn = QFileDialog.getOpenFileName(\
+        fn = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select file for property"),
             self.propFileEdit.text(),

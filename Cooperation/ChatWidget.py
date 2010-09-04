@@ -529,7 +529,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         """
         txt = self.chatEdit.toPlainText()
         if txt:
-            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(\
+            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
                 self,
                 self.trUtf8("Save Chat"),
                 "",
