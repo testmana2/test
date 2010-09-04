@@ -418,17 +418,18 @@ class Listspace(QSplitter, ViewManager):
         @param editor editor window to be changed
         @param newName new name to be shown (string)
         """
-        currentRow = self.viewlist.currentRow()
-        index = self.editors.index(editor)
-        txt = os.path.basename(newName)
-        if not QFileInfo(newName).isWritable():
-            txt = self.trUtf8("{0} (ro)").format(txt)
-        itm = self.viewlist.item(index)
-        itm.setText(txt)
-        itm.setToolTip(newName)
-        self.viewlist.setCurrentRow(currentRow)
-        self.changeCaption.emit(newName)
-        
+        if newName:
+            currentRow = self.viewlist.currentRow()
+            index = self.editors.index(editor)
+            txt = os.path.basename(newName)
+            if not QFileInfo(newName).isWritable():
+                txt = self.trUtf8("{0} (ro)").format(txt)
+            itm = self.viewlist.item(index)
+            itm.setText(txt)
+            itm.setToolTip(newName)
+            self.viewlist.setCurrentRow(currentRow)
+            self.changeCaption.emit(newName)
+            
     def _modificationStatusChanged(self, m, editor):
         """
         Protected slot to handle the modificationStatusChanged signal.

@@ -865,16 +865,17 @@ class Tabview(QSplitter, ViewManager):
         @param editor editor window to be changed
         @param newName new name to be shown (string)
         """
-        if self.filenameOnly:
-            tabName = os.path.basename(newName)
-        else:
-            tabName = e5App().getObject("Project").getRelativePath(newName)
-        if len(tabName) > self.maxFileNameChars:
-            tabName = "...{0}".format(tabName[-self.maxFileNameChars:])
-        index = self.currentTabWidget.indexOf(editor)
-        self.currentTabWidget.setTabText(index, tabName)
-        self.currentTabWidget.setTabToolTip(index, newName)
-        self.changeCaption.emit(newName)
+        if newName:
+            if self.filenameOnly:
+                tabName = os.path.basename(newName)
+            else:
+                tabName = e5App().getObject("Project").getRelativePath(newName)
+            if len(tabName) > self.maxFileNameChars:
+                tabName = "...{0}".format(tabName[-self.maxFileNameChars:])
+            index = self.currentTabWidget.indexOf(editor)
+            self.currentTabWidget.setTabText(index, tabName)
+            self.currentTabWidget.setTabToolTip(index, newName)
+            self.changeCaption.emit(newName)
 
     def _modificationStatusChanged(self, m, editor):
         """
