@@ -3468,9 +3468,9 @@ class ViewManager(QObject):
         @param ed editor to be saved
         """
         if ed:
-            ok, newName = ed.saveFileAs()
+            ok = ed.saveFileAs()
             if ok:
-                self.setEditorName(ed, newName)
+                self.setEditorName(ed, ed.getFileName())
         else:
             return
         
@@ -3514,10 +3514,10 @@ class ViewManager(QObject):
         pro = e5App().getObject("Project")
         path = pro.ppath
         if ed:
-            ok, newName = ed.saveFileAs(path, toProject = True)
+            ok = ed.saveFileAs(path, toProject = True)
             if ok:
-                self.setEditorName(ed, newName)
-                pro.appendFile(newName)
+                self.setEditorName(ed, ed.getFileName())
+                pro.appendFile(ed.getFileName())
                 ed.addedToProject()
         else:
             return

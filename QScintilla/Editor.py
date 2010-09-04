@@ -3970,9 +3970,9 @@ class Editor(QsciScintillaCompat):
         """
         Private slot handling the save as context menu entry.
         """
-        ok, newName = self.saveFileAs()
+        ok = self.saveFileAs()
         if ok:
-            self.vm.setEditorName(self, newName)
+            self.vm.setEditorName(self, self.fileName)
         
     def __contextClose(self):
         """
