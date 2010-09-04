@@ -9,7 +9,7 @@ Module implementing a network monitor dialog.
 
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
-from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
+from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply, QNetworkAccessManager
 
 import UI.PixmapCache
 
@@ -152,10 +152,10 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
             self.__requestHeaders.insertRows(0, 1, QModelIndex())
             self.__requestHeaders.setData(
                 self.__requestHeaders.index(0, 0), 
-                header)
+                str(header, "utf-8"))
             self.__requestHeaders.setData(
                 self.__requestHeaders.index(0, 1), 
-                req.rawHeader(header))
+                str(req.rawHeader(header), "utf-8"))
             self.__requestHeaders.item(0, 0).setFlags(
                 Qt.ItemIsSelectable | Qt.ItemIsEnabled)
             self.__requestHeaders.item(0, 1).setFlags(
@@ -273,7 +273,8 @@ class E5RequestModel(QAbstractTableModel):
         
         # save the reply header data
         for header in reply.rawHeaderList():
-            self.requests[offset].replyHeaders.append((header, reply.rawHeader(header)))
+            self.requests[offset].replyHeaders.append((
+                str(header, "utf-8"), str(reply.rawHeader(header), "utf-8")))
         
         # save reply info to be displayed
         status = reply.attribute(QNetworkRequest.HttpStatusCodeAttribute) or 0
