@@ -20399,7 +20399,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Tlačítko 0</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="279"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="335"/>
         <source>Default Button:</source>
         <translation>Defaultní tlačítko:</translation>
     </message>
@@ -20419,7 +20419,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Zadejte číslo tlačítka, které bude aktivováno po stisku Esc nebo -1 má-li být toto stisknutí ignorováno</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="197"/>
         <source>Standard Buttons</source>
         <translation>Standardní tlačítka</translation>
     </message>
@@ -20514,7 +20514,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="348"/>
         <source>Select the default button</source>
         <translation>Vybrat defaultní tlačítko</translation>
     </message>
@@ -20532,6 +20532,46 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Title</source>
         <translation type="unfinished">Titulek</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
+        <source>Parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="147"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="150"/>
+        <source>self</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="160"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="163"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="172"/>
+        <source>Select to enter a parent expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="175"/>
+        <source>Expression:</source>
+        <translation type="unfinished">Sledovací bod:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="185"/>
+        <source>Enter the parent expression</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -27115,6 +27155,11 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="392"/>
+        <source>Validation</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PythonPage</name>
@@ -27746,6 +27791,11 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="228"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="301"/>
+        <source>Validation</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

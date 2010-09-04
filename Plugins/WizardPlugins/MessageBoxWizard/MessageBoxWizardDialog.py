@@ -99,7 +99,7 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         
         self.bTest = \
             self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
-        
+    
     def __testQt42(self):
         """
         Private method to test the selected options for Qt 4.2.0.
@@ -200,7 +200,7 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
             )
         else:
             self.__testQt42()
-        
+    
     def __enabledGroups(self):
         """
         Private method to enable/disable some group boxes.
@@ -208,6 +208,8 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         self.standardButtons.setEnabled(not self.rAbout.isChecked() and \
                                         not self.rAboutQt.isChecked()
         )
+        
+        self.eMessage.setEnabled(not self.rAboutQt.isChecked())
     
     def on_rAbout_toggled(self, on):
         """
@@ -225,9 +227,9 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         """
         self.__enabledGroups()
     
-    def __getQt42ButtonCode(self, istring, indString):
+    def __getButtonCode(self, istring, indString):
         """
-        Private method to generate the button code for Qt 4.2.0.
+        Private method to generate the button code.
         
         @param istring indentation string (string)
         @param indString string used for indentation (space or tab) (string)
@@ -275,7 +277,7 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         
         istring2 = istring + indString
         joinstring = ' | \\{0}{1}'.format(os.linesep, istring2)
-        btnCode = ',{0}{1}QMessageBox.StandardButtons(\\'.format(os.linesep, istring)
+        btnCode = ',{0}{1}QMessageBox.StandardButtons('.format(os.linesep, istring)
         btnCode += '{0}{1}{2})'.format(os.linesep, istring2, joinstring.join(buttons))
         defaultIndex = self.defaultCombo.currentIndex()
         if defaultIndex:
@@ -297,24 +299,33 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         estring = os.linesep + indLevel * indString
         
         # now generate the code
-        msgdlg = 'QMessageBox.'
+        if self.parentSelf.isChecked():
+            parent = "self"
+        elif self.parentNone.isChecked():
+            parent = "None"
+        elif self.parentOther.isChecked():
+            parent = self.parentEdit.text()
+            if parent == "":
+                parent = "None"
+        
         if self.rAbout.isChecked():
-            msgdlg += "about(None,{0}".format(os.linesep)
+            msgdlg = "QMessageBox.about({0},{1}".format(parent, os.linesep)
         elif self.rAboutQt.isChecked():
-            msgdlg += "aboutQt(None,{0}".format(os.linesep)
+            msgdlg = "QMessageBox.aboutQt({0},{1}".format(parent, os.linesep)
         elif self.rInformation.isChecked():
-            msgdlg += "information(None,{0}".format(os.linesep)
+            msgdlg = "res = QMessageBox.information({0},{1}".format(parent, os.linesep)
         elif self.rQuestion.isChecked():
-            msgdlg += "question(None,{0}".format(os.linesep)
+            msgdlg = "res = QMessageBox.question({0},{1}".format(parent, os.linesep)
         elif self.rWarning.isChecked():
-            msgdlg += "warning(None,{0}".format(os.linesep)
+            msgdlg = "res = QMessageBox.warning({0},{1}".format(parent, os.linesep)
         else:
-            msgdlg +="critical(None,{0}".format(os.linesep)
+            msgdlg ="res = QMessageBox.critical({0},{1}".format(parent, os.linesep)
+        
         msgdlg += '{0}self.trUtf8("{1}")'.format(istring, self.eCaption.text())
         if not self.rAboutQt.isChecked():
             msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
                 os.linesep, istring, self.eMessage.toPlainText())
         if not self.rAbout.isChecked() and not self.rAboutQt.isChecked():
-            msgdlg += self.__getQt42ButtonCode(istring, indString)
+            msgdlg += self.__getButtonCode(istring, indString)
         msgdlg +='){0}'.format(estring)
         return msgdlg

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>535</width>
-    <height>521</height>
+    <height>539</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
@@ -133,6 +133,62 @@
      <property name="tabChangesFocus">
       <bool>true</bool>
      </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="parentGroup">
+     <property name="title">
+      <string>Parent</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="parentSelf">
+        <property name="toolTip">
+         <string>Select &quot;self&quot; as parent</string>
+        </property>
+        <property name="text">
+         <string>self</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QRadioButton" name="parentNone">
+        <property name="toolTip">
+         <string>Select &quot;None&quot; as parent</string>
+        </property>
+        <property name="text">
+         <string>None</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="parentOther">
+          <property name="toolTip">
+           <string>Select to enter a parent expression</string>
+          </property>
+          <property name="text">
+           <string>Expression:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="parentEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>Enter the parent expression</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>
@@ -321,6 +377,10 @@
   <tabstop>rAboutQt</tabstop>
   <tabstop>eCaption</tabstop>
   <tabstop>eMessage</tabstop>
+  <tabstop>parentSelf</tabstop>
+  <tabstop>parentNone</tabstop>
+  <tabstop>parentOther</tabstop>
+  <tabstop>parentEdit</tabstop>
   <tabstop>abortCheck</tabstop>
   <tabstop>applyCheck</tabstop>
   <tabstop>cancelCheck</tabstop>
@@ -340,6 +400,7 @@
   <tabstop>yesCheck</tabstop>
   <tabstop>yestoallCheck</tabstop>
   <tabstop>defaultCombo</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -350,12 +411,12 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>34</x>
-     <y>582</y>
+     <x>43</x>
+     <y>529</y>
     </hint>
     <hint type="destinationlabel">
      <x>34</x>
-     <y>604</y>
+     <y>538</y>
     </hint>
    </hints>
   </connection>
@@ -366,12 +427,28 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>126</x>
-     <y>584</y>
+     <x>135</x>
+     <y>529</y>
     </hint>
     <hint type="destinationlabel">
      <x>126</x>
-     <y>605</y>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>parentOther</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>parentEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>140</x>
+     <y>309</y>
     </hint>
    </hints>
   </connection>

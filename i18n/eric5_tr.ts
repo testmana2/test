@@ -21878,7 +21878,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Düğme 0</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="279"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="335"/>
         <source>Default Button:</source>
         <translation>Varsayılan Düğme:</translation>
     </message>
@@ -21898,7 +21898,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Basıldığında Esc yada -1 iptal etmek için etkinleşecek olan düğmelerini dizinini giriniz</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="197"/>
         <source>Standard Buttons</source>
         <translation>Standart Düğmeler</translation>
     </message>
@@ -21993,7 +21993,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="348"/>
         <source>Select the default button</source>
         <translation>Varsayılan düğmeyi seçiniz</translation>
     </message>
@@ -22010,6 +22010,46 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
+        <source>Parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="147"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="150"/>
+        <source>self</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="160"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="163"/>
+        <source>None</source>
+        <translation type="unfinished">Yok</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="172"/>
+        <source>Select to enter a parent expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="175"/>
+        <source>Expression:</source>
+        <translation type="unfinished">İfade:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="185"/>
+        <source>Enter the parent expression</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -29148,6 +29188,11 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="392"/>
+        <source>Validation</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PythonPage</name>
@@ -29818,6 +29863,11 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="228"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="301"/>
+        <source>Validation</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

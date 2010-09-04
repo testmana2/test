@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="de">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1549,8 +1550,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
@@ -1600,7 +1601,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -11549,7 +11550,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="705"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -20323,12 +20324,12 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Gib die anzuzeigende Nachricht der QMessageBox ein</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="279"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="335"/>
         <source>Default Button:</source>
         <translation>Standardknopf:</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="197"/>
         <source>Standard Buttons</source>
         <translation>Standard Knöpfe</translation>
     </message>
@@ -20423,7 +20424,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="348"/>
         <source>Select the default button</source>
         <translation>Wähle den Standardknopf</translation>
     </message>
@@ -20441,6 +20442,46 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Title</source>
         <translation>Titel</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
+        <source>Parent</source>
+        <translation>Vorgänger</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="147"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation>Wähle &quot;self&quot; als Vorgänger</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="150"/>
+        <source>self</source>
+        <translation>self</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="160"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation>Wähle &quot;None&quot; als Vorgänger</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="163"/>
+        <source>None</source>
+        <translation>None</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="172"/>
+        <source>Select to enter a parent expression</source>
+        <translation>Auswählen, um einen Ausdruck für den Vorgänger einzugeben</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="175"/>
+        <source>Expression:</source>
+        <translation>Ausdruck:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="185"/>
+        <source>Enter the parent expression</source>
+        <translation>Gib den Ausdruck für den Vorgänger ein</translation>
     </message>
 </context>
 <context>
@@ -27026,6 +27067,11 @@ Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &ap
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="392"/>
+        <source>Validation</source>
+        <translation>Validation</translation>
+    </message>
 </context>
 <context>
     <name>PythonPage</name>
@@ -27690,6 +27736,11 @@ innerhalb der Klammern bedeutet, dass die gefundene Übereinstimmung nicht zur w
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="228"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="301"/>
+        <source>Validation</source>
+        <translation>Validation</translation>
     </message>
 </context>
 <context>

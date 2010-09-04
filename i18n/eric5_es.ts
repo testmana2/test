@@ -20451,7 +20451,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation type="obsolete">Botón 0</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="279"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="335"/>
         <source>Default Button:</source>
         <translation>Botón de acción por Defecto:</translation>
     </message>
@@ -20471,7 +20471,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation type="obsolete">Introduzca el índice d el boton que será activado al pulsar Esc o -1 para ignorar este parámetro</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="197"/>
         <source>Standard Buttons</source>
         <translation>Botones Estándar</translation>
     </message>
@@ -20566,7 +20566,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="348"/>
         <source>Select the default button</source>
         <translation>Seleccionar el botón por defecto</translation>
     </message>
@@ -20584,6 +20584,46 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Title</source>
         <translation type="unfinished">Título</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
+        <source>Parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="147"/>
+        <source>Select &quot;self&quot; as parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="150"/>
+        <source>self</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="160"/>
+        <source>Select &quot;None&quot; as parent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="163"/>
+        <source>None</source>
+        <translation type="unfinished">Ninguno</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="172"/>
+        <source>Select to enter a parent expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="175"/>
+        <source>Expression:</source>
+        <translation type="unfinished">Expresión:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="185"/>
+        <source>Enter the parent expression</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -27164,6 +27204,11 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="392"/>
+        <source>Validation</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PythonPage</name>
@@ -27830,6 +27875,11 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="228"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="301"/>
+        <source>Validation</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
