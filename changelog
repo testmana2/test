@@ -13,7 +13,7 @@ Version 5.1-snapshot-2010mmdd:
 - changed all calls to QMessageBox to some eric5 replacements and convenience
   functions
 - added a wizard for the eric5 message box (E5MessageBox)
-- added a filename filter to the code metrics dialog
+- added filename filters to the code metrics, syntax checker and tabnanny dialogs
 
 Version 5.1-snapshot-20100718:
 - bug fixes

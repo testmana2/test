@@ -1479,6 +1479,38 @@
       </dict>
     </DocumentationParams>
   </Documentation>
+  <Checkers>
+    <CheckersParams>
+      <dict>
+        <key>
+          <string>SyntaxChecker</string>
+        </key>
+        <value>
+          <dict>
+            <key>
+              <string>ExcludeFiles</string>
+            </key>
+            <value>
+              <string>*/DebugClients/Python/*, */coverage/*, */ThirdParty/*</string>
+            </value>
+          </dict>
+        </value>
+        <key>
+          <string>Tabnanny</string>
+        </key>
+        <value>
+          <dict>
+            <key>
+              <string>ExcludeFiles</string>
+            </key>
+            <value>
+              <string>*/DebugClients/Python/*, */coverage/*, */ThirdParty/*</string>
+            </value>
+          </dict>
+        </value>
+      </dict>
+    </CheckersParams>
+  </Checkers>
   <OtherTools>
     <OtherToolsParams>
       <dict>

@@ -9070,6 +9070,8 @@
       <keyword name="SyntaxCheckerDialog.on_buttonBox_clicked" id="SyntaxCheckerDialog.on_buttonBox_clicked" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.on_buttonBox_clicked" />
       <keyword name="SyntaxCheckerDialog.on_resultList_itemActivated" id="SyntaxCheckerDialog.on_resultList_itemActivated" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.on_resultList_itemActivated" />
       <keyword name="SyntaxCheckerDialog.on_showButton_clicked" id="SyntaxCheckerDialog.on_showButton_clicked" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.on_showButton_clicked" />
+      <keyword name="SyntaxCheckerDialog.on_startButton_clicked" id="SyntaxCheckerDialog.on_startButton_clicked" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.on_startButton_clicked" />
+      <keyword name="SyntaxCheckerDialog.prepare" id="SyntaxCheckerDialog.prepare" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.prepare" />
       <keyword name="SyntaxCheckerDialog.start" id="SyntaxCheckerDialog.start" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.start" />
       <keyword name="Tabnanny (Package)" id="Tabnanny (Package)" ref="index-eric5.Plugins.CheckerPlugins.Tabnanny.html" />
       <keyword name="TabnannyDialog (Module)" id="TabnannyDialog (Module)" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html" />
@@ -9080,6 +9082,8 @@
       <keyword name="TabnannyDialog.__resort" id="TabnannyDialog.__resort" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__resort" />
       <keyword name="TabnannyDialog.on_buttonBox_clicked" id="TabnannyDialog.on_buttonBox_clicked" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.on_buttonBox_clicked" />
       <keyword name="TabnannyDialog.on_resultList_itemActivated" id="TabnannyDialog.on_resultList_itemActivated" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.on_resultList_itemActivated" />
+      <keyword name="TabnannyDialog.on_startButton_clicked" id="TabnannyDialog.on_startButton_clicked" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.on_startButton_clicked" />
+      <keyword name="TabnannyDialog.prepare" id="TabnannyDialog.prepare" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.prepare" />
       <keyword name="TabnannyDialog.start" id="TabnannyDialog.start" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.start" />
       <keyword name="Tabnanny (Module)" id="Tabnanny (Module)" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html" />
       <keyword name="NannyNag" id="NannyNag" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#NannyNag" />

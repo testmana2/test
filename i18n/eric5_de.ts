@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="1.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1550,8 +1549,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
@@ -1601,7 +1600,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -2125,7 +2124,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     <message>
         <location filename="DataViews/CodeMetricsDialog.ui" line="99"/>
         <source>Start</source>
-        <translation>Start</translation>
+        <translation>Starten</translation>
     </message>
     <message>
         <location filename="DataViews/CodeMetricsDialog.ui" line="104"/>
@@ -11570,7 +11569,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="705"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -34283,7 +34282,7 @@ einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die ents
 Zeile.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="28"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="87"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the syntax check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -34294,39 +34293,64 @@ einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die ents
 Zeile.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="51"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="110"/>
         <source>Source</source>
         <translation>Quelltext</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="59"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="118"/>
         <source>Shows the progress of the syntax check action</source>
         <translation>Zeigt den Fortschritt der Syntaxprüfung an</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="43"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="44"/>
         <source>Show</source>
         <translation>Zeige</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="41"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="100"/>
         <source>File/Line</source>
         <translation>Datei/Zeile</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="46"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="105"/>
         <source>Message</source>
         <translation>Nachricht</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="45"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="46"/>
         <source>Press to show all files containing an issue</source>
         <translation>Drücken, um alle Dateien mit Problemen anzuzeigen</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="179"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="212"/>
         <source>No issues found.</source>
         <translation>Keine Probleme gefunden.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="40"/>
+        <source>Exclude Files:</source>
+        <translation>Ignoriere Dateien:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="47"/>
+        <source>Enter filename patterns of files to be excluded separated by a comma</source>
+        <translation>Gib Dateimuster getrennt durch Komma von Dateien ein, die ignoriert werden sollen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="54"/>
+        <source>Press to clear the filter edit</source>
+        <translation>Drücken, um den Filtertext zu löschen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="74"/>
+        <source>Press to start the syntax check run</source>
+        <translation>Drücken, um die Syntaxprüfung zu starten</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="77"/>
+        <source>Start</source>
+        <translation>Starten</translation>
     </message>
 </context>
 <context>
@@ -34693,17 +34717,17 @@ Zeile.&lt;/p&gt;</translation>
 <context>
     <name>TabnannyDialog</name>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="114"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="148"/>
         <source>No indentation errors found.</source>
         <translation>Keine Einrückungsfehler gefunden.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="13"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="14"/>
         <source>Tabnanny Result</source>
         <translation>Tabnanny Resultat</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="16"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="17"/>
         <source>&lt;b&gt;Tabnanny Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the tabnanny command. Double clicking an
 entry will open an editor window and position the cursor at the respective line.&lt;/p&gt;</source>
@@ -34713,7 +34737,7 @@ einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die ents
 Zeile.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="27"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="87"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the tabnanny command. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -34724,24 +34748,49 @@ einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die ents
 Zeile.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="46"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="106"/>
         <source>Filename</source>
         <translation>Dateiname</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="51"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="111"/>
         <source>#</source>
         <translation>#</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="56"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="116"/>
         <source>Source</source>
         <translation>Quelltext</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="64"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="124"/>
         <source>Shows the progress of the tabnanny action</source>
         <translation>Zeigt den Fortschritt der Tabnanny Prüfung an</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="40"/>
+        <source>Exclude Files:</source>
+        <translation>Ignoriere Dateien:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="47"/>
+        <source>Enter filename patterns of files to be excluded separated by a comma</source>
+        <translation>Gib Dateimuster getrennt durch Komma von Dateien ein, die ignoriert werden sollen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="54"/>
+        <source>Press to clear the filter edit</source>
+        <translation>Drücken, um den Filtertext zu löschen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="74"/>
+        <source>Press to start the tabnanny run</source>
+        <translation>Drücken, um den Tabnanny Lauf zu starten</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="77"/>
+        <source>Start</source>
+        <translation>Starten</translation>
     </message>
 </context>
 <context>

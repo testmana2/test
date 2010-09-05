@@ -176,13 +176,14 @@ class TabnannyPlugin(QObject):
         """
         project = e5App().getObject("Project")
         project.saveAllScripts()
-        files = [os.path.join(project.ppath, file) \
+        ppath = project.getProjectPath()
+        files = [os.path.join(ppath, file) \
             for file in project.pdata["SOURCES"] \
                 if file.endswith(tuple(Preferences.getPython("Python3Extensions")))]
         
         self.__projectTabnannyDialog = TabnannyDialog()
         self.__projectTabnannyDialog.show()
-        self.__projectTabnannyDialog.start(files)
+        self.__projectTabnannyDialog.prepare(files, project)
     
     def __projectBrowserTabnanny(self):
         """

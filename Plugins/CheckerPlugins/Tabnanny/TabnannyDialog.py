@@ -8,6 +8,7 @@ Module implementing a dialog to show the output of the tabnanny command process.
 """
 
 import os
+import fnmatch
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -19,6 +20,7 @@ from .Ui_TabnannyDialog import Ui_TabnannyDialog
 from . import Tabnanny
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 class TabnannyDialog(QDialog, Ui_TabnannyDialog):
     """
@@ -42,6 +44,11 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.noResults = True
         self.cancelled = False
         
+        self.__fileList = []
+        self.__project = None
+        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
+        self.filterFrame.setVisible(False)
+        
     def __resort(self):
         """
         Private method to resort the tree.
@@ -60,6 +67,27 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         itm = QTreeWidgetItem(self.resultList, [file, str(line), sourcecode])
         itm.setTextAlignment(1, Qt.AlignRight)
         
+    def prepare(self, fileList, project):
+        """
+        Public method to prepare the dialog with a list of filenames.
+        
+        @param fileList list of filenames (list of strings)
+        @param project reference to the project object (Project)
+        """
+        self.__fileList = fileList[:]
+        self.__project = project
+        
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        
+        self.filterFrame.setVisible(True)
+        
+        self.__data = self.__project.getData("CHECKERSPARMS", "Tabnanny")
+        if self.__data is None or "ExcludeFiles" not in self.__data:
+            self.__data = {"ExcludeFiles" : ""}
+        self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
+        
     def start(self, fn):
         """
         Public slot to start the tabnanny check.
@@ -67,6 +95,12 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         @param fn File or list of files or directory to be checked
                 (string or list of strings)
         """
+        self.cancelled = False
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+        QApplication.processEvents()
+        
         if isinstance(fn, list):
             files = fn
         elif os.path.isdir(fn):
@@ -126,6 +160,27 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
             self.__finish()
+        
+    @pyqtSlot()
+    def on_startButton_clicked(self):
+        """
+        Private slot to start a code metrics run.
+        """
+        fileList = self.__fileList[:]
+        
+        filterString = self.excludeFilesEdit.text()
+        if "ExcludeFiles" not in self.__data or \
+           filterString != self.__data["ExcludeFiles"]:
+            self.__data["ExcludeFiles"] = filterString
+            self.__project.setData("CHECKERSPARMS", "Tabnanny", self.__data)
+        filterList = filterString.split(",")
+        if filterList:
+            for filter in filterList:
+                fileList = \
+                    [f for f in fileList if not fnmatch.fnmatch(f, filter.strip())]
+        
+        self.resultList.clear()
+        self.start(fileList)
         
     def on_resultList_itemActivated(self, itm, col):
         """

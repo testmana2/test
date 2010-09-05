@@ -78,6 +78,12 @@ QDialog, Ui_SyntaxCheckerDialog
 <td><a href="#SyntaxCheckerDialog.on_showButton_clicked">on_showButton_clicked</a></td>
 <td>Private slot to handle the "Show" button press.</td>
 </tr><tr>
+<td><a href="#SyntaxCheckerDialog.on_startButton_clicked">on_startButton_clicked</a></td>
+<td>Private slot to start a code metrics run.</td>
+</tr><tr>
+<td><a href="#SyntaxCheckerDialog.prepare">prepare</a></td>
+<td>Public method to prepare the dialog with a list of filenames.</td>
+</tr><tr>
 <td><a href="#SyntaxCheckerDialog.start">start</a></td>
 <td>Public slot to start the syntax check.</td>
 </tr>
@@ -157,7 +163,25 @@ column the item was activated in (integer)
 <b>on_showButton_clicked</b>(<i></i>)
 <p>
         Private slot to handle the "Show" button press.
-</p><a NAME="SyntaxCheckerDialog.start" ID="SyntaxCheckerDialog.start"></a>
+</p><a NAME="SyntaxCheckerDialog.on_startButton_clicked" ID="SyntaxCheckerDialog.on_startButton_clicked"></a>
+<h4>SyntaxCheckerDialog.on_startButton_clicked</h4>
+<b>on_startButton_clicked</b>(<i></i>)
+<p>
+        Private slot to start a code metrics run.
+</p><a NAME="SyntaxCheckerDialog.prepare" ID="SyntaxCheckerDialog.prepare"></a>
+<h4>SyntaxCheckerDialog.prepare</h4>
+<b>prepare</b>(<i>fileList, project</i>)
+<p>
+        Public method to prepare the dialog with a list of filenames.
+</p><dl>
+<dt><i>fileList</i></dt>
+<dd>
+list of filenames (list of strings)
+</dd><dt><i>project</i></dt>
+<dd>
+reference to the project object (Project)
+</dd>
+</dl><a NAME="SyntaxCheckerDialog.start" ID="SyntaxCheckerDialog.start"></a>
 <h4>SyntaxCheckerDialog.start</h4>
 <b>start</b>(<i>fn, codestring = ""</i>)
 <p>

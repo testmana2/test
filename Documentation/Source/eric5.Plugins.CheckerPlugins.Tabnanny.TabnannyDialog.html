@@ -72,6 +72,12 @@ QDialog, Ui_TabnannyDialog
 <td><a href="#TabnannyDialog.on_resultList_itemActivated">on_resultList_itemActivated</a></td>
 <td>Private slot to handle the activation of an item.</td>
 </tr><tr>
+<td><a href="#TabnannyDialog.on_startButton_clicked">on_startButton_clicked</a></td>
+<td>Private slot to start a code metrics run.</td>
+</tr><tr>
+<td><a href="#TabnannyDialog.prepare">prepare</a></td>
+<td>Public method to prepare the dialog with a list of filenames.</td>
+</tr><tr>
 <td><a href="#TabnannyDialog.start">start</a></td>
 <td>Public slot to start the tabnanny check.</td>
 </tr>
@@ -134,6 +140,24 @@ reference to the activated item (QTreeWidgetItem)
 </dd><dt><i>col</i></dt>
 <dd>
 column the item was activated in (integer)
+</dd>
+</dl><a NAME="TabnannyDialog.on_startButton_clicked" ID="TabnannyDialog.on_startButton_clicked"></a>
+<h4>TabnannyDialog.on_startButton_clicked</h4>
+<b>on_startButton_clicked</b>(<i></i>)
+<p>
+        Private slot to start a code metrics run.
+</p><a NAME="TabnannyDialog.prepare" ID="TabnannyDialog.prepare"></a>
+<h4>TabnannyDialog.prepare</h4>
+<b>prepare</b>(<i>fileList, project</i>)
+<p>
+        Public method to prepare the dialog with a list of filenames.
+</p><dl>
+<dt><i>fileList</i></dt>
+<dd>
+list of filenames (list of strings)
+</dd><dt><i>project</i></dt>
+<dd>
+reference to the project object (Project)
 </dd>
 </dl><a NAME="TabnannyDialog.start" ID="TabnannyDialog.start"></a>
 <h4>TabnannyDialog.start</h4>

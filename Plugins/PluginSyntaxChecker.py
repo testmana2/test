@@ -173,13 +173,14 @@ class SyntaxCheckerPlugin(QObject):
         """
         project = e5App().getObject("Project")
         project.saveAllScripts()
-        files = [os.path.join(project.ppath, file) \
+        ppath = project.getProjectPath()
+        files = [os.path.join(ppath, file) \
             for file in project.pdata["SOURCES"] \
                 if file.endswith(tuple(Preferences.getPython("Python3Extensions")))]
         
         self.__projectSyntaxCheckerDialog = SyntaxCheckerDialog()
         self.__projectSyntaxCheckerDialog.show()
-        self.__projectSyntaxCheckerDialog.start(files)
+        self.__projectSyntaxCheckerDialog.prepare(files, project)
     
     def __projectBrowserSyntaxCheck(self):
         """
