@@ -4206,7 +4206,7 @@ class Project(QObject):
             for file in self.pdata["SOURCES"] if file.endswith(".py")]
         self.codemetrics = CodeMetricsDialog()
         self.codemetrics.show()
-        self.codemetrics.start(files)
+        self.codemetrics.prepare(files, self)
 
     def __showCodeCoverage(self):
         """

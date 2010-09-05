@@ -2068,125 +2068,145 @@ el botón de la derecha.&lt;/p&gt;</translation>
 <context>
     <name>CodeMetricsDialog</name>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="13"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="14"/>
         <source>Code Metrics</source>
         <translation>Métricas del código</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="16"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="17"/>
         <source>&lt;b&gt;Code Metrics&lt;/b&gt;
 &lt;p&gt;This dialog shows some code metrics.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Métricas del código&lt;/b&gt;
 &lt;p&gt;Este diálogo muestra algunas métricas del código.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="26"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="86"/>
         <source>&lt;b&gt;Code metrics&lt;/b&gt;
 &lt;p&gt;This list shows some code metrics.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Métricas de código&lt;/b&gt;
 &lt;p&gt;Esta lista muestra algunas métricas del código.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="34"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="94"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="39"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="99"/>
         <source>Start</source>
         <translation>Comienzo</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="44"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="104"/>
         <source>End</source>
         <translation>Final</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="49"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="109"/>
         <source>Lines</source>
         <translation>Líneas</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="54"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="114"/>
         <source>Lines of code</source>
         <translation>Líneas de código</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="59"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="119"/>
         <source>Comments</source>
         <translation>Comentarios</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="64"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="124"/>
         <source>Empty</source>
         <translation>Vacias</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="78"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="138"/>
         <source>&lt;b&gt;Summary&lt;/b&gt;
 &lt;p&gt;This shows some overall code metrics.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Resumen&lt;/b&gt;
 &lt;p&gt;Muestra algunas métricas globales.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="86"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="146"/>
         <source>Summary</source>
         <translation>Resumen</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="91"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="151"/>
         <source>#</source>
         <translation>#</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="99"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="159"/>
         <source>Shows the progress of the code metrics action</source>
         <translation>Muestra el progreso del cálculo de métricas</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="149"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="185"/>
         <source>files</source>
         <translation>archivos</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="150"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="186"/>
         <source>lines</source>
         <translation>líneas</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="151"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="187"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="152"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="188"/>
         <source>comments</source>
         <translation>comentarios</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="153"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="189"/>
         <source>empty lines</source>
         <translation>líneas vacias</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="155"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="191"/>
         <source>non-commentary lines</source>
         <translation>líneas no comentadas</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="157"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="193"/>
         <source>documentation lines</source>
         <translation>líneas de documentación</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="44"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="48"/>
         <source>Collapse all</source>
         <translation>Contraer todo</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="45"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="49"/>
         <source>Expand all</source>
         <translation>Expandir todo</translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="39"/>
+        <source>Exclude Files:</source>
+        <translation type="unfinished">Excluir archivos:</translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="46"/>
+        <source>Enter filename patterns of files to be excluded separated by a comma</source>
+        <translation type="unfinished">Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="53"/>
+        <source>Press to clear the filter edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="73"/>
+        <source>Press to start the code metrics run</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -43281,12 +43301,12 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="223"/>
+        <location filename="eric5.py" line="226"/>
         <source>Importing packages...</source>
         <translation>Importando paquetes...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="228"/>
+        <location filename="eric5.py" line="231"/>
         <source>Generating Main Window...</source>
         <translation>Generando Ventana Principal...</translation>
     </message>

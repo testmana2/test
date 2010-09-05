@@ -2063,124 +2063,144 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>CodeMetricsDialog</name>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="13"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="14"/>
         <source>Code Metrics</source>
         <translation>Metrika kódu</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="16"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="17"/>
         <source>&lt;b&gt;Code Metrics&lt;/b&gt;
 &lt;p&gt;This dialog shows some code metrics.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Metrika kódu&lt;/b&gt;
 &lt;p&gt;Tento dialog zobrazuje metriku kódu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="26"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="86"/>
         <source>&lt;b&gt;Code metrics&lt;/b&gt;
 &lt;p&gt;This list shows some code metrics.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Metriky kódu&lt;/b&gt;&lt;p&gt;Tento dialog zobrazuje metriky kódu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="34"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="94"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="39"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="99"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="44"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="104"/>
         <source>End</source>
         <translation>Konec</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="49"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="109"/>
         <source>Lines</source>
         <translation>Řádky</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="54"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="114"/>
         <source>Lines of code</source>
         <translation>Řádky kódu</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="59"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="119"/>
         <source>Comments</source>
         <translation>Komentáře</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="64"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="124"/>
         <source>Empty</source>
         <translation>Prázdné</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="78"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="138"/>
         <source>&lt;b&gt;Summary&lt;/b&gt;
 &lt;p&gt;This shows some overall code metrics.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sumarizace&lt;/b&gt;
 &lt;p&gt;Zde se zobrazují výsledky sumarizace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="86"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="146"/>
         <source>Summary</source>
         <translation>Sumarizace</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="91"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="151"/>
         <source>#</source>
         <translation>#</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="99"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="159"/>
         <source>Shows the progress of the code metrics action</source>
         <translation>Zobrazuje průběh procesu měření metriky kódu</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="149"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="185"/>
         <source>files</source>
         <translation>soubory</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="150"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="186"/>
         <source>lines</source>
         <translation>řádky</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="151"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="187"/>
         <source>bytes</source>
         <translation>bajty</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="152"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="188"/>
         <source>comments</source>
         <translation>komentáře</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="153"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="189"/>
         <source>empty lines</source>
         <translation>prázdné řádky</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="155"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="191"/>
         <source>non-commentary lines</source>
         <translation>nekomentované řádky</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="157"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="193"/>
         <source>documentation lines</source>
         <translation>řádky dokumentace</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="44"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="48"/>
         <source>Collapse all</source>
         <translation>Složit vše</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="45"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="49"/>
         <source>Expand all</source>
         <translation>Rozbalit vše</translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="39"/>
+        <source>Exclude Files:</source>
+        <translation type="unfinished">Nevkládat soubory:</translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="46"/>
+        <source>Enter filename patterns of files to be excluded separated by a comma</source>
+        <translation type="unfinished">Zadejte patterny jmen souborů oddělené čárkami, které se nemají vkládat</translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="53"/>
+        <source>Press to clear the filter edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="73"/>
+        <source>Press to start the code metrics run</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -43188,12 +43208,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="223"/>
+        <location filename="eric5.py" line="226"/>
         <source>Importing packages...</source>
         <translation>Importování balíčků...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="228"/>
+        <location filename="eric5.py" line="231"/>
         <source>Generating Main Window...</source>
         <translation>Generování hlavního okna...</translation>
     </message>

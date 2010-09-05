@@ -1373,6 +1373,8 @@
       <keyword name="CodeMetricsDialog.__resultExpand" id="CodeMetricsDialog.__resultExpand" ref="eric5.DataViews.CodeMetricsDialog.html#CodeMetricsDialog.__resultExpand" />
       <keyword name="CodeMetricsDialog.__showContextMenu" id="CodeMetricsDialog.__showContextMenu" ref="eric5.DataViews.CodeMetricsDialog.html#CodeMetricsDialog.__showContextMenu" />
       <keyword name="CodeMetricsDialog.on_buttonBox_clicked" id="CodeMetricsDialog.on_buttonBox_clicked" ref="eric5.DataViews.CodeMetricsDialog.html#CodeMetricsDialog.on_buttonBox_clicked" />
+      <keyword name="CodeMetricsDialog.on_startButton_clicked" id="CodeMetricsDialog.on_startButton_clicked" ref="eric5.DataViews.CodeMetricsDialog.html#CodeMetricsDialog.on_startButton_clicked" />
+      <keyword name="CodeMetricsDialog.prepare" id="CodeMetricsDialog.prepare" ref="eric5.DataViews.CodeMetricsDialog.html#CodeMetricsDialog.prepare" />
       <keyword name="CodeMetricsDialog.start" id="CodeMetricsDialog.start" ref="eric5.DataViews.CodeMetricsDialog.html#CodeMetricsDialog.start" />
       <keyword name="PyProfileDialog (Module)" id="PyProfileDialog (Module)" ref="eric5.DataViews.PyProfileDialog.html" />
       <keyword name="ProfileTreeWidgetItem" id="ProfileTreeWidgetItem" ref="eric5.DataViews.PyProfileDialog.html#ProfileTreeWidgetItem" />

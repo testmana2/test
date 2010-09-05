@@ -87,6 +87,12 @@ QDialog, Ui_CodeMetricsDialog
 <td><a href="#CodeMetricsDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
 </tr><tr>
+<td><a href="#CodeMetricsDialog.on_startButton_clicked">on_startButton_clicked</a></td>
+<td>Private slot to start a code metrics run.</td>
+</tr><tr>
+<td><a href="#CodeMetricsDialog.prepare">prepare</a></td>
+<td>Public method to prepare the dialog with a list of filenames.</td>
+</tr><tr>
 <td><a href="#CodeMetricsDialog.start">start</a></td>
 <td>Public slot to start the code metrics determination.</td>
 </tr>
@@ -198,6 +204,24 @@ the position of the mouse pointer (QPoint)
 <dd>
 button that was clicked (QAbstractButton)
 </dd>
+</dl><a NAME="CodeMetricsDialog.on_startButton_clicked" ID="CodeMetricsDialog.on_startButton_clicked"></a>
+<h4>CodeMetricsDialog.on_startButton_clicked</h4>
+<b>on_startButton_clicked</b>(<i></i>)
+<p>
+        Private slot to start a code metrics run.
+</p><a NAME="CodeMetricsDialog.prepare" ID="CodeMetricsDialog.prepare"></a>
+<h4>CodeMetricsDialog.prepare</h4>
+<b>prepare</b>(<i>fileList, project</i>)
+<p>
+        Public method to prepare the dialog with a list of filenames.
+</p><dl>
+<dt><i>fileList</i></dt>
+<dd>
+list of filenames (list of strings)
+</dd><dt><i>project</i></dt>
+<dd>
+reference to the project object (Project)
+</dd>
 </dl><a NAME="CodeMetricsDialog.start" ID="CodeMetricsDialog.start"></a>
 <h4>CodeMetricsDialog.start</h4>
 <b>start</b>(<i>fn</i>)
@@ -206,7 +230,7 @@ button that was clicked (QAbstractButton)
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
-file or list of files or directory to be show
+file or list of files or directory to show
                 the code metrics for (string or list of strings)
 </dd>
 </dl>

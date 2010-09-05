@@ -1479,4 +1479,23 @@
       </dict>
     </DocumentationParams>
   </Documentation>
+  <OtherTools>
+    <OtherToolsParams>
+      <dict>
+        <key>
+          <string>CodeMetrics</string>
+        </key>
+        <value>
+          <dict>
+            <key>
+              <string>ExcludeFiles</string>
+            </key>
+            <value>
+              <string>*/ThirdParty/*, */coverage/*</string>
+            </value>
+          </dict>
+        </value>
+      </dict>
+    </OtherToolsParams>
+  </OtherTools>
 </Project>

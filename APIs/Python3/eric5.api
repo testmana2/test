@@ -101,6 +101,8 @@ eric5.DataViews.CodeMetrics.main?4()
 eric5.DataViews.CodeMetrics.spacer?7
 eric5.DataViews.CodeMetrics.summarize?4(total, key, value)
 eric5.DataViews.CodeMetricsDialog.CodeMetricsDialog.on_buttonBox_clicked?4(button)
+eric5.DataViews.CodeMetricsDialog.CodeMetricsDialog.on_startButton_clicked?4()
+eric5.DataViews.CodeMetricsDialog.CodeMetricsDialog.prepare?4(fileList, project)
 eric5.DataViews.CodeMetricsDialog.CodeMetricsDialog.start?4(fn)
 eric5.DataViews.CodeMetricsDialog.CodeMetricsDialog?1(parent = None)
 eric5.DataViews.PyCoverageDialog.PyCoverageDialog.on_buttonBox_clicked?4(button)

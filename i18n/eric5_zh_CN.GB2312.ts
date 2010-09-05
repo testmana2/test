@@ -2238,125 +2238,145 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>CodeMetricsDialog</name>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="13"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="14"/>
         <source>Code Metrics</source>
         <translation>代码度量</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="16"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="17"/>
         <source>&lt;b&gt;Code Metrics&lt;/b&gt;
 &lt;p&gt;This dialog shows some code metrics.&lt;/p&gt;</source>
         <translation>&lt;b&gt;代码度量&lt;/b&gt;
 &lt;p&gt;该对话框显示部分代码度量。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="26"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="86"/>
         <source>&lt;b&gt;Code metrics&lt;/b&gt;
 &lt;p&gt;This list shows some code metrics.&lt;/p&gt;</source>
         <translation>&lt;b&gt;代码度量&lt;/b&gt;
 &lt;p&gt;该列表显示部分代码度量。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="34"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="94"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="39"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="99"/>
         <source>Start</source>
         <translation>开始</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="44"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="104"/>
         <source>End</source>
         <translation>结束</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="49"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="109"/>
         <source>Lines</source>
         <translation>行</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="54"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="114"/>
         <source>Lines of code</source>
         <translation>代码行</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="59"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="119"/>
         <source>Comments</source>
         <translation>注释</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="64"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="124"/>
         <source>Empty</source>
         <translation>空</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="78"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="138"/>
         <source>&lt;b&gt;Summary&lt;/b&gt;
 &lt;p&gt;This shows some overall code metrics.&lt;/p&gt;</source>
         <translation>&lt;b&gt;摘要&lt;/b&gt;
 &lt;p&gt;显示部分全面代码度量。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="86"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="146"/>
         <source>Summary</source>
         <translation>摘要</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="91"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="151"/>
         <source>#</source>
         <translation>#</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="99"/>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="159"/>
         <source>Shows the progress of the code metrics action</source>
         <translation>显示代码度量行为进程</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="44"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="48"/>
         <source>Collapse all</source>
         <translation>折叠所有</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="45"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="49"/>
         <source>Expand all</source>
         <translation>展开所有</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="149"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="185"/>
         <source>files</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="150"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="186"/>
         <source>lines</source>
         <translation>行</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="151"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="187"/>
         <source>bytes</source>
         <translation>字节</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="152"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="188"/>
         <source>comments</source>
         <translation>注释</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="153"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="189"/>
         <source>empty lines</source>
         <translation>空行</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="155"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="191"/>
         <source>non-commentary lines</source>
         <translation>没有注释的行</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="157"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="193"/>
         <source>documentation lines</source>
         <translation>文件行</translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="39"/>
+        <source>Exclude Files:</source>
+        <translation type="unfinished">排除文件：</translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="46"/>
+        <source>Enter filename patterns of files to be excluded separated by a comma</source>
+        <translation type="unfinished">输入要排除文件的文件名样式，用逗号分隔</translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="53"/>
+        <source>Press to clear the filter edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="DataViews/CodeMetricsDialog.ui" line="73"/>
+        <source>Press to start the code metrics run</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -47496,12 +47516,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="223"/>
+        <location filename="eric5.py" line="226"/>
         <source>Importing packages...</source>
         <translation type="unfinished">正在导入程序包……</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="228"/>
+        <location filename="eric5.py" line="231"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">正在产生主窗口……</translation>
     </message>
