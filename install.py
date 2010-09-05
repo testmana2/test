@@ -31,6 +31,13 @@ doCompile = True
 cfg = {}
 progLanguages = ["Python", "Ruby"]
 
+# Define blacklisted versions of the prerequisites
+BlackLists = {
+    "sip"         : ["4.11"], 
+    "PyQt4"       : ["4.7.5"], 
+    "QScintilla2" : [], 
+}
+
 def exit(rcode = 0):
     """
     Exit the install script.
@@ -568,6 +575,22 @@ def doDependancyChecks():
         exit(2)
     print("Qt Version: %s" % qVersion())
     
+    # check version of sip
+    try:
+        import sipconfig
+        sipVersion = sipconfig.Configuration().sip_version_str
+        # always assume, that snapshots are new enough
+        if "snapshot" not in sipVersion:
+            # check for blacklisted versions
+            for vers in BlackLists["sip"]:
+                if vers == sipVersion:
+                    print('Sorry, sip version {0} is not compatible with eric5.'\
+                          .format(vers))
+                    print('Please install another version.')
+                    exit(3)
+    except ImportError:
+        pass
+    
     #check version of PyQt
     from PyQt4.QtCore import PYQT_VERSION_STR
     pyqtVersion = PYQT_VERSION_STR
@@ -582,7 +605,14 @@ def doDependancyChecks():
         if maj < 4 or (maj == 4 and min < 7):
             print('Sorry, you must have PyQt 4.7.0 or higher or' \
                   ' a recent snapshot release.')
-            exit(3)
+            exit(4)
+        # check for blacklisted versions
+        for vers in BlackLists["PyQt4"]:
+            if vers == pyqtVersion:
+                print('Sorry, PyQt4 version {0} is not compatible with eric5.'\
+                      .format(vers))
+                print('Please install another version.')
+                exit(4)
     print("PyQt Version: ", pyqtVersion)
     
     #check version of QScintilla
@@ -599,7 +629,14 @@ def doDependancyChecks():
         if maj < 2 or (maj == 2 and min < 4):
             print('Sorry, you must have QScintilla 2.4.0 or higher or' \
                   ' a recent snapshot release.')
-            exit(4)
+            exit(5)
+        # check for blacklisted versions
+        for vers in BlackLists["QScintilla2"]:
+            if vers == scintillaVersion:
+                print('Sorry, QScintilla2 version {0} is not compatible with eric5.'\
+                      .format(vers))
+                print('Please install another version.')
+                exit(5)
     print("QScintilla Version: ", QSCINTILLA_VERSION_STR)
     print("All dependencies ok.")
     print()

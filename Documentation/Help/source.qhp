@@ -2471,6 +2471,7 @@
       <keyword name="CodingError" id="CodingError" ref="eric5.Utilities.__init__.html#CodingError" />
       <keyword name="__showwarning" id="__showwarning" ref="eric5.Utilities.__init__.html#__showwarning" />
       <keyword name="_percentReplacementFunc" id="_percentReplacementFunc" ref="eric5.Utilities.__init__.html#_percentReplacementFunc" />
+      <keyword name="checkBlacklistedVersions" id="checkBlacklistedVersions" ref="eric5.Utilities.__init__.html#checkBlacklistedVersions" />
       <keyword name="compactPath" id="compactPath" ref="eric5.Utilities.__init__.html#compactPath" />
       <keyword name="compile" id="compile" ref="eric5.Utilities.__init__.html#compile" />
       <keyword name="convertLineEnds" id="convertLineEnds" ref="eric5.Utilities.__init__.html#convertLineEnds" />

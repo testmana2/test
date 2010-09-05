@@ -70,6 +70,10 @@ def main():
                                   "file",
                                   "web browser",
                                   options)
+    
+    if not Utilities.checkBlacklistedVersions():
+        sys.exit(100)
+    
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,
                                    createMainWidget)
