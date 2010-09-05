@@ -6070,6 +6070,7 @@ eric5.Utilities._escape?8
 eric5.Utilities._escape_map?8
 eric5.Utilities._percentReplacementFunc?5(matchobj)
 eric5.Utilities._uescape?8
+eric5.Utilities.checkBlacklistedVersions?4()
 eric5.Utilities.codingBytes_regexps?7
 eric5.Utilities.coding_regexps?7
 eric5.Utilities.compactPath?4(path, width, measure = len)
@@ -6545,6 +6546,7 @@ eric5.install-i18n.main?4(argv)
 eric5.install-i18n.privateInstall?7
 eric5.install-i18n.progName?7
 eric5.install-i18n.usage?4(rcode = 2)
+eric5.install.BlackLists?7
 eric5.install.apisDir?7
 eric5.install.cfg?7
 eric5.install.cleanUp?4()

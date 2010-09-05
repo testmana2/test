@@ -170,6 +170,9 @@ def main():
                                   options)
     ddindex = Startup.handleArgs(sys.argv, appinfo)
     
+    if not Utilities.checkBlacklistedVersions():
+        sys.exit(100)
+    
     app = E5Application(sys.argv)
     
     if Preferences.getUI("SingleApplicationMode"):
