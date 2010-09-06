@@ -375,7 +375,7 @@ class IconEditorGrid(QWidget):
         painter = QPainter(self)
         
         if self.__zoom >= 3 and self.__gridEnabled:
-            painter.setPen(self.palette().foreground().color())
+            painter.setPen(self.palette().windowText().color())
             i = 0
             while i <= self.__image.width():
                 painter.drawLine(self.__zoom * i, 0, 
@@ -387,6 +387,7 @@ class IconEditorGrid(QWidget):
                                  self.__zoom * self.__image.width(), self.__zoom * j)
                 j += 1
         
+        col = QColor("#aaa")
         painter.setPen(Qt.DashLine)
         for i in range(0, self.__image.width()):
             for j in range(0, self.__image.height()):
@@ -394,7 +395,8 @@ class IconEditorGrid(QWidget):
                 if evt.region().intersects(rect):
                     color = QColor.fromRgba(self.__image.pixel(i, j))
                     painter.fillRect(rect, QBrush(Qt.white))
-                    painter.fillRect(rect, QBrush(Qt.Dense5Pattern))
+                    painter.fillRect(QRect(rect.topLeft(), rect.center()), col)
+                    painter.fillRect(QRect(rect.center(), rect.bottomRight()), col)
                     painter.fillRect(rect, QBrush(color))
                 
                     if self.__isMarked(i, j):
