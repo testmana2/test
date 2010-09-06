@@ -819,6 +819,7 @@
     <Source>Plugins/WizardPlugins/E5MessageBoxWizard/__init__.py</Source>
     <Source>Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py</Source>
     <Source>Plugins/PluginWizardE5MessageBox.py</Source>
+    <Source>E5XML/XMLStreamWriterBase.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
