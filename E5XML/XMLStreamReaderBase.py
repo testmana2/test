@@ -52,7 +52,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
     
     def _readBasics(self):
         """
-        Protected method to read am object of a basic Python type.
+        Protected method to read an object of a basic Python type.
         
         @return Python object read
         """
@@ -61,31 +61,50 @@ class XMLStreamReaderBase(QXmlStreamReader):
             if self.isStartElement():
                 try:
                     if self.name() == "none":
-                        return None
+                        val =  None
                     elif self.name() == "int":
-                        return int(self.readElementText())
+                        val =  int(self.readElementText())
                     elif self.name() == "bool":
                         b = self.readElementText()
                         if b == "True":
-                            return True
+                            val =  True
                         else:
-                            return False
+                            val =  False
                     elif self.name() == "float":
-                        return float(self.readElementText())
+                        val =  float(self.readElementText())
                     elif self.name() == "complex":
                         real, imag = self.readElementText().split()
-                        return float(real) + float(imag)*1j
+                        val =  float(real) + float(imag)*1j
                     elif self.name() == "string":
-                        return self.readElementText()
+                        val =  self.readElementText()
                     elif self.name() == "bytes":
                         by = bytes(
                             [int(b) for b in self.readElementText().split(",")])
-                        return by
+                        val =  by
                     elif self.name() == "bytearray":
                         by = bytearray(
                             [int(b) for b in self.readElementText().split(",")])
-                        return by
+                        val =  by
+                    elif self.name() == "tuple":
+                        val = self.__readTuple()
                     else:
                         self._skipUnknownElement()
                 except ValueError as err:
                     self.raiseError(str(err))
+            
+            if self.isEndElement():
+                return val
+    
+    def __readTuple(self):
+        """
+        Private method to read a Python tuple.
+        
+        @return Python tuple
+        """
+        l = []
+        while not self.atEnd():
+            val = self._readBasics()
+            if self.isEndElement() and self.name() == "tuple":
+                return tuple(l)
+            else:
+                l.append(val)
