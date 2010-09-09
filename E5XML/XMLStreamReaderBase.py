@@ -61,39 +61,43 @@ class XMLStreamReaderBase(QXmlStreamReader):
             if self.isStartElement():
                 try:
                     if self.name() == "none":
-                        val =  None
+                        val = None
                     elif self.name() == "int":
-                        val =  int(self.readElementText())
+                        val = int(self.readElementText())
                     elif self.name() == "bool":
                         b = self.readElementText()
                         if b == "True":
-                            val =  True
+                            val = True
                         else:
-                            val =  False
+                            val = False
                     elif self.name() == "float":
-                        val =  float(self.readElementText())
+                        val = float(self.readElementText())
                     elif self.name() == "complex":
                         real, imag = self.readElementText().split()
-                        val =  float(real) + float(imag)*1j
+                        val = float(real) + float(imag)*1j
                     elif self.name() == "string":
-                        val =  self.readElementText()
+                        val = self.readElementText()
                     elif self.name() == "bytes":
                         by = bytes(
                             [int(b) for b in self.readElementText().split(",")])
-                        val =  by
+                        val = by
                     elif self.name() == "bytearray":
                         by = bytearray(
                             [int(b) for b in self.readElementText().split(",")])
-                        val =  by
+                        val = by
                     elif self.name() == "tuple":
                         val = self.__readTuple()
+                        return val
                     else:
                         self._skipUnknownElement()
                 except ValueError as err:
                     self.raiseError(str(err))
             
             if self.isEndElement():
-                return val
+                if self.name() in ["tuple"]:
+                    return None
+                else:
+                    return val
     
     def __readTuple(self):
         """
@@ -104,7 +108,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
         l = []
         while not self.atEnd():
             val = self._readBasics()
-            if self.isEndElement() and self.name() == "tuple":
+            if self.isEndElement() and self.name() == "tuple" and val is None:
                 return tuple(l)
             else:
                 l.append(val)
