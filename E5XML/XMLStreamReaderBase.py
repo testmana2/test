@@ -12,6 +12,8 @@ import base64
 
 from PyQt4.QtCore import QXmlStreamReader, QCoreApplication
 
+from E5Gui import E5MessageBox
+
 class XMLStreamReaderBase(QXmlStreamReader):
     """
     Class implementing a base class for all of eric5s XML stream readers.
@@ -34,6 +36,20 @@ class XMLStreamReaderBase(QXmlStreamReader):
         @param text text to decode (string)
         """
         return text.replace(self.NEWPARA, "\n\n").replace(self.NEWLINE, "\n")
+    
+    def showErrorMessage(self):
+        """
+        Public method to show an error message.
+        """
+        if self.hasError():
+            msg = QCoreApplication.translate("XMLStreamReaderBase",
+                "<p>XML parse error in file <b>{0}</b>, line {1}, column {2}<p>"
+                "<p>Error: {3}").format(self.device.fileName(), 
+                    self.lineNumber(), self.columnNumber(), self.errorString())
+            E5MessageBox.warning(None,
+                self.trUtf8("XML parse error"),
+                self.trUtf8(msg))
+        
     
     def _skipUnknownElement(self):
         """
@@ -88,13 +104,37 @@ class XMLStreamReaderBase(QXmlStreamReader):
                     elif self.name() == "tuple":
                         val = self.__readTuple()
                         return val
+                    elif self.name() == "list":
+                        val = self.__readList()
+                        return val
+                    elif self.name() == "dict":
+                        val = self.__readDict()
+                        return val
+                    elif self.name() == "set":
+                        val = self.__readSet()
+                        return val
+                    elif self.name() == "frozenset":
+                        val = self.__readFrozenset()
+                        return val
+                    elif self.name() == "pickle":
+                        encoding = self.attributes().value("encoding")
+                        if encoding != "base64":
+                            self.raiseError(QCoreApplication.translate(
+                                "XMLStreamReaderBase", 
+                                "Pickle data encoding '{0}' is not supported.")\
+                                    .format(encoding))
+                            continue
+                        b64 = self.readElementText()
+                        pic = base64.b64decode(b64.encode("ASCII"))
+                        val = pickle.loads(pic)
                     else:
                         self._skipUnknownElement()
                 except ValueError as err:
                     self.raiseError(str(err))
+                    continue
             
             if self.isEndElement():
-                if self.name() in ["tuple"]:
+                if self.name() in ["tuple", "list", "dict", "set", "frozenset"]:
                     return None
                 else:
                     return val
@@ -110,5 +150,67 @@ class XMLStreamReaderBase(QXmlStreamReader):
             val = self._readBasics()
             if self.isEndElement() and self.name() == "tuple" and val is None:
                 return tuple(l)
+            else:
+                l.append(val)
+    
+    def __readList(self):
+        """
+        Private method to read a Python list.
+        
+        @return Python list
+        """
+        l = []
+        while not self.atEnd():
+            val = self._readBasics()
+            if self.isEndElement() and self.name() == "list" and val is None:
+                return l
+            else:
+                l.append(val)
+    
+    def __readDict(self):
+        """
+        Private method to read a Python dictionary.
+        
+        @return Python dictionary
+        """
+        d = {}
+        while not self.atEnd():
+            self.readNext()
+            if self.isStartElement():
+                if self.name() == "key":
+                    key = self._readBasics()
+                elif self.name() == "value":
+                    d[key] = self._readBasics()
+                    if self.isEndElement() and self.name() == "dict":
+                        self.readNext()
+            
+            if self.isEndElement() and self.name() == "dict":
+                return d
+    
+    def __readSet(self):
+        """
+        Private method to read a Python set.
+        
+        @return Python set
+        """
+        l = []
+        while not self.atEnd():
+            val = self._readBasics()
+            if self.isEndElement() and self.name() == "set" and val is None:
+                return set(l)
+            else:
+                l.append(val)
+    
+    def __readFrozenset(self):
+        """
+        Private method to read a Python set.
+        
+        @return Python set
+        """
+        l = []
+        while not self.atEnd():
+            val = self._readBasics()
+            if self.isEndElement() and self.name() == "frozenset" and val is None:
+                return frozenset(l)
             else:
                 l.append(val)
