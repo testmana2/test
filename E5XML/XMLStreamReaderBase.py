@@ -51,6 +51,24 @@ class XMLStreamReaderBase(QXmlStreamReader):
                 self.trUtf8(msg))
         
     
+    def readXML(self):
+        """
+        Public method to read and parse the XML document.
+        """
+        pass
+    
+    def attribute(self, name, default = ""):
+        """
+        Public method to read the given attribute of the current tag.
+        
+        @param name name of the attribute (string)
+        @param default default value (string)
+        """
+        att = self.attributes().value(name)
+        if att == "":
+            att = default
+        return att
+    
     def _skipUnknownElement(self):
         """
         Protected method to skip over all unknown elements.
@@ -117,7 +135,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
                         val = self.__readFrozenset()
                         return val
                     elif self.name() == "pickle":
-                        encoding = self.attributes().value("encoding")
+                        encoding = self.attribute("encoding")
                         if encoding != "base64":
                             self.raiseError(QCoreApplication.translate(
                                 "XMLStreamReaderBase", 
