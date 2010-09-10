@@ -858,20 +858,20 @@ class TemplateViewer(QTreeWidget):
         
         @param filename name of a templates file to read (string)
         """
-        try:
-            if filename is None:
-                filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
-            f = open(filename, "w", encoding = "utf-8")
-            
-            TemplatesWriter(f, self).writeXML()
-            
-            f.close()
-        except IOError:
+        if filename is None:
+            filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
+        f = QFile(filename)
+        ok = f.open(QIODevice.WriteOnly)
+        if not ok:
             E5MessageBox.critical(self,
                 self.trUtf8("Save templates"),
                 self.trUtf8("<p>The templates file <b>{0}</b> could not be written.</p>")
                     .format(filename))
+            return
         
+        TemplatesWriter(f, self).writeXML()
+        f.close()
+    
     def readTemplates(self, filename = None):
         """
         Public method to read in the templates file (.e4c)
