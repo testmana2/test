@@ -821,6 +821,7 @@
     <Source>Plugins/PluginWizardE5MessageBox.py</Source>
     <Source>E5XML/XMLStreamWriterBase.py</Source>
     <Source>E5XML/XMLStreamReaderBase.py</Source>
+    <Source>E5XML/PluginRepositoryReader.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
