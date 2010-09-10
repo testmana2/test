@@ -43,34 +43,32 @@ class PluginRepositoryReader(XMLStreamReaderBase):
                     url = self.readElementText()
                     Preferences.setUI("PluginRepositoryUrl5", url)
                 elif self.name() == "Plugin":
-                    info = {"name"         : "",
-                            "short"        : "",
-                            "description"  : "",
-                            "url"          : "",
-                            "author"       : "",
-                            "version"      : "", 
-                            "filename"     : "",
-                    }
-                    info["status"] = self.attribute("status", "unknown")
-                    self.__readPlugin(info)
-                    self.dlg.addEntry(info["name"], info["short"], 
-                                      info["description"], info["url"], 
-                                      info["author"], info["version"],
-                                      info["filename"], info["status"])
+                    self.__readPlugin()
         
         self.showErrorMessage()
     
-    def __readPlugin(self, pluginInfo):
+    def __readPlugin(self):
         """
         Private method to read the plug-in info.
-        
-        @param pluginInfo reference to the dictionary to hold the result
-        @return reference to the populated dictionary
         """
+        pluginInfo = {"name"         : "",
+                      "short"        : "",
+                      "description"  : "",
+                      "url"          : "",
+                      "author"       : "",
+                      "version"      : "", 
+                      "filename"     : "",
+        }
+        pluginInfo["status"] = self.attribute("status", "unknown")
+        
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Plugin":
-                return pluginInfo
+                self.dlg.addEntry(pluginInfo["name"], pluginInfo["short"], 
+                                  pluginInfo["description"], pluginInfo["url"], 
+                                  pluginInfo["author"], pluginInfo["version"],
+                                  pluginInfo["filename"], pluginInfo["status"])
+                break
             
             if self.isStartElement():
                 if self.name() == "Name":
