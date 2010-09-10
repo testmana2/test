@@ -11,7 +11,6 @@ Module implementing a dialog showing the available plugins.
 import sys
 import os
 import zipfile
-import io
 
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
@@ -21,10 +20,7 @@ from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
 from E5Gui import E5MessageBox
 
-from E5XML.XMLUtilities import make_parser
-from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E5XML.XMLEntityResolver import XMLEntityResolver
-from E5XML.PluginRepositoryHandler import PluginRepositoryHandler
+from E5XML.PluginRepositoryReader import PluginRepositoryReader
 
 from E5Network.E5NetworkProxyFactory import proxyAuthenticationRequired
 
@@ -259,53 +255,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         
         if os.path.exists(self.pluginRepositoryFile):
             self.__repositoryMissing = False
-            try:
-                f = open(self.pluginRepositoryFile, "r", encoding = "utf-8")
-                line = f.readline()
-                dtdLine = f.readline()
-                f.close()
-            except IOError:
-                E5MessageBox.critical(self,
-                    self.trUtf8("Read plugins repository file"),
-                    self.trUtf8("<p>The plugins repository file <b>{0}</b> "
-                                "could not be read. Select Update</p>")\
-                        .format(self.pluginRepositoryFile))
-                return
-            
-            # now read the file
-            if line.startswith('<?xml'):
-                parser = make_parser(dtdLine.startswith("<!DOCTYPE"))
-                handler = PluginRepositoryHandler(self)
-                er = XMLEntityResolver()
-                eh = XMLErrorHandler()
-                
-                parser.setContentHandler(handler)
-                parser.setEntityResolver(er)
-                parser.setErrorHandler(eh)
-                
-                try:
-                    f = open(self.pluginRepositoryFile, "r", encoding = "utf-8")
-                    try:
-                        try:
-                            parser.parse(f)
-                        except UnicodeEncodeError:
-                            f.seek(0)
-                            buf = io.StringIO(f.read())
-                            parser.parse(buf)
-                    finally:
-                        f.close()
-                except IOError:
-                    E5MessageBox.critical(self,
-                        self.trUtf8("Read plugins repository file"),
-                        self.trUtf8("<p>The plugins repository file <b>{0}</b> "
-                                    "could not be read. Select Update</p>")\
-                            .format(self.pluginRepositoryFile))
-                    return
-                except XMLFatalParseError:
-                    pass
-                
-                eh.showParseMessages()
-                
+            f = QFile(self.pluginRepositoryFile)
+            if f.open(QIODevice.ReadOnly):
+                reader = PluginRepositoryReader(f, self)
+                reader.readXML()
                 self.repositoryList.resizeColumnToContents(0)
                 self.repositoryList.resizeColumnToContents(1)
                 self.repositoryList.resizeColumnToContents(2)
@@ -314,8 +267,9 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 E5MessageBox.critical(self,
                     self.trUtf8("Read plugins repository file"),
                     self.trUtf8("<p>The plugins repository file <b>{0}</b> "
-                                "has an unsupported format.</p>")\
+                                "could not be read. Select Update</p>")\
                         .format(self.pluginRepositoryFile))
+                return
         else:
             self.__repositoryMissing = True
             QTreeWidgetItem(self.repositoryList, 
