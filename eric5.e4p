@@ -724,7 +724,6 @@
     <Source>E5XML/SessionHandler.py</Source>
     <Source>E5XML/UserProjectWriter.py</Source>
     <Source>E5XML/UserProjectHandler.py</Source>
-    <Source>E5XML/PluginRepositoryHandler.py</Source>
     <Source>E5XML/MultiProjectWriter.py</Source>
     <Source>E5XML/MultiProjectHandler.py</Source>
     <Source>E5XML/HighlightingStylesWriter.py</Source>
