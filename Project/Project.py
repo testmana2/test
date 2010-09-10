@@ -1218,35 +1218,18 @@ class Project(QObject):
             
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
         
-        try:
-            if ext.lower() == ".e4pz":
-                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4tz'.format(fn))
-                try:
-                    import gzip
-                except ImportError:
-                    E5MessageBox.critical(self.ui,
-                        self.trUtf8("Save tasks"),
-                        self.trUtf8("""Compressed tasks files not supported."""
-                            """ The compression library is missing."""))
-                    return
-                f = io.StringIO()
-            else:
-                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4t'.format(fn))
-                f = open(fn, "w", encoding = "utf-8")
-            
-            TasksWriter(f, True, os.path.splitext(os.path.basename(fn))[0]).writeXML()
-            
-            if fn.lower().endswith("e4tz"):
-                g = gzip.open(fn, "wb")
-                g.write(f.getvalue().encode("utf-8"))
-                g.close()
-            f.close()
-            
-        except IOError:
+        fn = os.path.join(self.getProjectManagementDir(), '{0}.e4t'.format(fn))
+        f = QFile(fn)
+        ok = f.open(QIODevice.WriteOnly)
+        if not ok:
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Save tasks"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be written.</p>")
                     .format(fn))
+            return
+        
+        TasksWriter(f, True, os.path.splitext(os.path.basename(fn))[0]).writeXML()
+        f.close()
         
     def __readDebugProperties(self, quiet = False):
         """

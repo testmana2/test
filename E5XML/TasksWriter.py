@@ -11,25 +11,25 @@ import time
 
 from E5Gui.E5Application import e5App
 
-from .XMLWriterBase import XMLWriterBase
+from .XMLStreamWriterBase import XMLStreamWriterBase
 from .Config import tasksFileFormatVersion
 
 import Preferences
 import Utilities
 
-class TasksWriter(XMLWriterBase):
+class TasksWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML tasks file.
     """
-    def __init__(self, file, forProject = False, projectName=""):
+    def __init__(self, device, forProject = False, projectName = ""):
         """
         Constructor
         
-        @param file open file (like) object for writing
+        @param device reference to the I/O device to write to (QIODevice)
         @param forProject flag indicating project related mode (boolean)
         @param projectName name of the project (string)
         """
-        XMLWriterBase.__init__(self, file)
+        XMLStreamWriterBase.__init__(self, device)
         
         self.name = projectName
         self.forProject = forProject
@@ -38,23 +38,24 @@ class TasksWriter(XMLWriterBase):
         """
         Public method to write the XML to the file.
         """
-        XMLWriterBase.writeXML(self)
+        XMLStreamWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE Tasks SYSTEM "Tasks-{0}.dtd">'.format(
+        self.writeDTD('<!DOCTYPE Tasks SYSTEM "Tasks-{0}.dtd">'.format(
             tasksFileFormatVersion))
         
         # add some generation comments
         if self.forProject:
-            self._write("<!-- eric5 tasks file for project {0} -->".format(self.name))
+            self.writeComment(" eric5 tasks file for project {0} ".format(self.name))
             if Preferences.getProject("XMLTimestamp"):
-                self._write("<!-- Saved: {0} -->".format(
+                self.writeComment(" Saved: {0} ".format(
                     time.strftime('%Y-%m-%d, %H:%M:%S')))
         else:
-            self._write("<!-- eric5 tasks file -->")
-            self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(" eric5 tasks file ")
+            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         
         # add the main tag
-        self._write('<Tasks version="{0}">'.format(tasksFileFormatVersion))
+        self.writeStartElement("Tasks")
+        self.writeAttribute("version", tasksFileFormatVersion)
         
         # do the tasks
         if self.forProject:
@@ -62,20 +63,21 @@ class TasksWriter(XMLWriterBase):
         else:
             tasks = e5App().getObject("TaskViewer").getGlobalTasks()
         for task in tasks:
-            self._write('  <Task priority="{0:d}" completed="{1}" bugfix="{2}">'\
-                .format(task.priority, task.completed, task.isBugfixTask))
-            self._write('    <Summary>{0}</Summary>'.format(
-                self.escape("{0}".format(task.description.strip()))))
-            self._write('    <Description>{0}</Description>'.format(
-                self.escape(self.encodedNewLines(task.longtext.strip()))))
-            self._write('    <Created>{0}</Created>'.format(
-                time.strftime("%Y-%m-%d, %H:%M:%S", time.localtime(task.created))))
+            self.writeStartElement("Task")
+            self.writeAttribute("priority", str(task.priority))
+            self.writeAttribute("completed", str(task.completed))
+            self.writeAttribute("bugfix", str(task.isBugfixTask))
+            self.writeTextElement("Summary", task.description.strip())
+            self.writeTextElement("Description", task.longtext.strip())
+            self.writeTextElement("Created", 
+                time.strftime("%Y-%m-%d, %H:%M:%S", time.localtime(task.created)))
             if task.filename:
-                self._write('    <Resource>')
-                self._write('      <Filename>{0}</Filename>'.format(
-                    Utilities.fromNativeSeparators(task.filename)))
-                self._write('      <Linenumber>{0:d}</Linenumber>'.format(task.lineno))
-                self._write('    </Resource>')
-            self._write('  </Task>')
+                self.writeStartElement("Resource")
+                self.writeTextElement("Filename", 
+                    Utilities.fromNativeSeparators(task.filename))
+                self.writeTextElement("Linenumber", str(task.lineno))
+                self.writeEndElement()
+            self.writeEndElement()
         
-        self._write('</Tasks>', newline = False)
+        self.writeEndElement()
+        self.writeEndDocument()

@@ -5029,19 +5029,18 @@ class UserInterface(QMainWindow):
         """
         Private slot to write the tasks data to an XML file (.e4t).
         """
-        try:
-            fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
-            f = open(fn, "w", encoding = "utf-8")
-            
-            TasksWriter(f, False).writeXML()
-            
-            f.close()
-            
-        except IOError:
+        fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
+        f = QFile(fn)
+        ok = f.open(QIODevice.WriteOnly)
+        if not ok:
             E5MessageBox.critical(self,
                 self.trUtf8("Save tasks"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be written.</p>")
                     .format(fn))
+            return
+        
+        TasksWriter(f, False).writeXML()
+        f.close()
         
     def __readTasks(self):
         """
