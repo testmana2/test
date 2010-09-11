@@ -16,6 +16,8 @@ class PluginRepositoryReader(XMLStreamReaderBase):
     """
     Class to read the plug-in repository contents file.
     """
+    supportedVersions = ["4.1", "4.2"]
+    
     def __init__(self, device, dlg):
         """
         Constructor
@@ -39,6 +41,8 @@ class PluginRepositoryReader(XMLStreamReaderBase):
                 if self.name() == "Plugins":
                     self.version = self.attribute("version", 
                         pluginRepositoryFileFormatVersion)
+                    if self.version not in self.supportedVersions:
+                        self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "RepositoryUrl":
                     url = self.readElementText()
                     Preferences.setUI("PluginRepositoryUrl5", url)

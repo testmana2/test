@@ -59,6 +59,15 @@ class XMLStreamReaderBase(QXmlStreamReader):
         self.raiseError(QCoreApplication.translate("XMLStreamReaderBase",
             "Unexpected start tag '{0}'.".format(tag)))
     
+    def raiseUnsupportedFormatVersion(self, version):
+        """
+        Public method to raise an error for an unsupported file format version.
+        
+        @param version unsupported version (string)
+        """
+        self.raiseError(QCoreApplication.translate("XMLStreamReaderBase",
+            "File format version '{0}' is not supported.".format(version)))
+    
     def readXML(self):
         """
         Public method to read and parse the XML document.

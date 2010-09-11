@@ -16,6 +16,8 @@ class TemplatesReader(XMLStreamReaderBase):
     """
     Class for reading an XML tasks file.
     """
+    supportedVersions = ["4.0"]
+    
     def __init__(self, device, viewer = None):
         """
         Constructor
@@ -42,6 +44,8 @@ class TemplatesReader(XMLStreamReaderBase):
             if self.isStartElement():
                 if self.name() == "Templates":
                     self.version = self.attribute("version", templatesFileFormatVersion)
+                    if self.version not in self.supportedVersions:
+                        self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "TemplateGroup":
                     self.__readTemplateGroup()
                 else:
