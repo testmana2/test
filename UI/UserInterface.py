@@ -94,7 +94,7 @@ import UI.PixmapCache
 from E5XML.XMLUtilities import make_parser
 from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
 from E5XML.XMLEntityResolver import XMLEntityResolver
-from E5XML.TasksHandler import TasksHandler
+from E5XML.TasksReader import TasksReader
 from E5XML.TasksWriter import TasksWriter
 from E5XML.SessionWriter import SessionWriter
 from E5XML.SessionHandler import SessionHandler
@@ -5046,58 +5046,18 @@ class UserInterface(QMainWindow):
         """
         Private slot to read in the tasks file (.e4t)
         """
-        try:
-            fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
-            if not os.path.exists(fn):
-                return
-            f = open(fn, "r", encoding = "utf-8")
-            line = f.readline()
-            dtdLine = f.readline()
-            f.close()
-        except IOError:
+        fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
+        if not os.path.exists(fn):
+            return
+        f = QFile(fn)
+        if f.open(QIODevice.ReadOnly):
+            reader = TasksReader(f, viewer = self.taskViewer)
+            reader.readXML()
+        else:
             E5MessageBox.critical(self,
                 self.trUtf8("Read tasks"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")
                     .format(fn))
-            return
-            
-        # now read the file
-        if line.startswith('<?xml'):
-            parser = make_parser(dtdLine.startswith("<!DOCTYPE"))
-            handler = TasksHandler(taskViewer = self.taskViewer)
-            er = XMLEntityResolver()
-            eh = XMLErrorHandler()
-            
-            parser.setContentHandler(handler)
-            parser.setEntityResolver(er)
-            parser.setErrorHandler(eh)
-            
-            try:
-                f = open(fn, "r", encoding = "utf-8")
-                try:
-                    try:
-                        parser.parse(f)
-                    except UnicodeEncodeError:
-                        f.seek(0)
-                        buf = io.StringIO(f.read())
-                        parser.parse(buf)
-                finally:
-                    f.close()
-            except IOError:
-                E5MessageBox.critical(self,
-                    self.trUtf8("Read tasks"),
-                    self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")\
-                        .format(fn))
-                return
-            except XMLFatalParseError:
-                pass
-                
-            eh.showParseMessages()
-        else:
-            E5MessageBox.critical(self,
-                self.trUtf8("Read tasks"),
-                self.trUtf8("<p>The tasks file <b>{0}</b> has an unsupported"
-                            " format.</p>").format(fn))
         
     def __writeSession(self):
         """

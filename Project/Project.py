@@ -47,7 +47,7 @@ from E5XML.UserProjectHandler import UserProjectHandler
 from E5XML.UserProjectWriter import UserProjectWriter
 from E5XML.SessionHandler import SessionHandler
 from E5XML.SessionWriter import SessionWriter
-from E5XML.TasksHandler import TasksHandler
+from E5XML.TasksReader import TasksReader
 from E5XML.TasksWriter import TasksWriter
 from E5XML.DebuggerPropertiesHandler import DebuggerPropertiesHandler
 from E5XML.DebuggerPropertiesWriter import DebuggerPropertiesWriter
@@ -1111,103 +1111,18 @@ class Project(QObject):
             return
             
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
-        
-        try:
-            if ext.lower() in [".e4pz"]:
-                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4tz'.format(fn))
-                if not os.path.exists(fn):
-                    return
-                try:
-                    import gzip
-                except ImportError:
-                    E5MessageBox.critical(self.ui,
-                        self.trUtf8("Read tasks"),
-                        self.trUtf8("""Compressed tasks files not supported."""
-                            """ The compression library is missing."""))
-                    return
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4t'.format(fn))
-                if not os.path.exists(fn):
-                    return
-                f = open(fn, "r", encoding = "utf-8")
-            line = f.readline()
-            dtdLine = f.readline()
-            f.close()
-        except EnvironmentError:
-            E5MessageBox.critical(self.ui,
-                self.trUtf8("Read tasks"),
-                self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")\
-                    .format(fn))
+        fn = os.path.join(self.getProjectManagementDir(), '{0}.e4t'.format(fn))
+        if not os.path.exists(fn):
             return
-            
-        # now read the file
-        if line.startswith('<?xml'):
-            self.__readXMLTasks(fn, dtdLine.startswith("<!DOCTYPE"))
+        f = QFile(fn)
+        if f.open(QIODevice.ReadOnly):
+            reader = TasksReader(f, True)
+            reader.readXML()
         else:
             E5MessageBox.critical(self.ui,
-                self.trUtf8("Read project session"),
-                self.trUtf8("<p>The tasks file <b>{0}</b> has an unsupported"
-                            " format.</p>")\
-                    .format(fn))
-    
-    def __readXMLTasks(self, fn, validating):
-        """
-        Private method to read the project tasks data from an XML file.
-        
-        @param fn filename of the project tasks file to be read (string)
-        @param validating flag indicating a validation of the XML file is
-            requested (boolean)
-        """
-        if fn.lower().endswith("e4tz"):
-            # work around for a bug in xmlproc
-            validating = False
-        
-        parser = make_parser(validating)
-        handler = TasksHandler(1)
-        er = XMLEntityResolver()
-        eh = XMLErrorHandler()
-        
-        parser.setContentHandler(handler)
-        parser.setEntityResolver(er)
-        parser.setErrorHandler(eh)
-        
-        try:
-            if fn.lower().endswith("e4tz"):
-                try:
-                    import gzip
-                except ImportError:
-                    E5MessageBox.critical(self.ui,
-                        self.trUtf8("Read tasks"),
-                        self.trUtf8("""Compressed tasks files not supported."""
-                            """ The compression library is missing."""))
-                    return
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                f = open(fn, "r", encoding = "utf-8")
-            try:
-                try:
-                    parser.parse(f)
-                except UnicodeEncodeError:
-                    f.seek(0)
-                    buf = io.StringIO(f.read())
-                    parser.parse(buf)
-            finally:
-                f.close()
-        except IOError:
-            E5MessageBox.critical(self.ui,
                 self.trUtf8("Read tasks"),
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
-            return
-        except XMLFatalParseError:
-            pass
-            
-        eh.showParseMessages()
         
     def __writeTasks(self):
         """
