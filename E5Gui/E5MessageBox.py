@@ -78,8 +78,13 @@ class E5MessageBox(QMessageBox):
         """
         QMessageBox.__init__(self, parent)
         self.setIcon(icon)
-        if modal and parent is not None:
-            self.setWindowModality(Qt.WindowModal)
+        if modal:
+            if parent is not None:
+                self.setWindowModality(Qt.WindowModal)
+            else:
+                self.setWindowModality(Qt.ApplicationModal)
+        else:
+            self.setWindowModality(Qt.NonModal)
         if title == "":
             self.setWindowTitle("{0}".format(
                 QApplication.applicationName()))
@@ -87,6 +92,8 @@ class E5MessageBox(QMessageBox):
             self.setWindowTitle("{0} - {1}".format(
                 QApplication.applicationName(), title))
         self.setText(text)
+        if buttons == QMessageBox.NoButton:
+            buttons = QMessageBox.StandardButtons(QMessageBox.Ok)
         self.setStandardButtons(buttons)
 
 ################################################################################
