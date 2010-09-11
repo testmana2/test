@@ -44,6 +44,8 @@ class TemplatesReader(XMLStreamReaderBase):
                     self.version = self.attribute("version", templatesFileFormatVersion)
                 elif self.name() == "TemplateGroup":
                     self.__readTemplateGroup()
+                else:
+                    self.raiseUnexpectedStartTag(self.name())
         
         self.showErrorMessage()
     
@@ -63,6 +65,8 @@ class TemplatesReader(XMLStreamReaderBase):
             if self.isStartElement():
                 if self.name() == "Template":
                     self.__readTemplate()
+                else:
+                    self.raiseUnexpectedStartTag(self.name())
     
     def __readTemplate(self):
         """
@@ -85,3 +89,5 @@ class TemplatesReader(XMLStreamReaderBase):
                     templateDescription = self.readElementText()
                 elif self.name() == "TemplateText":
                     templateText = self.readElementText()
+                else:
+                    self.raiseUnexpectedStartTag(self.name())

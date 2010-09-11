@@ -44,6 +44,8 @@ class PluginRepositoryReader(XMLStreamReaderBase):
                     Preferences.setUI("PluginRepositoryUrl5", url)
                 elif self.name() == "Plugin":
                     self.__readPlugin()
+                else:
+                    self._skipUnknownElement()
         
         self.showErrorMessage()
     
@@ -87,3 +89,5 @@ class PluginRepositoryReader(XMLStreamReaderBase):
                     pluginInfo["version"] = self.readElementText()
                 elif self.name() == "Filename":
                     pluginInfo["filename"] = self.readElementText()
+                else:
+                    self.raiseUnexpectedStartTag(self.name())

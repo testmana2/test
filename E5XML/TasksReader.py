@@ -51,6 +51,8 @@ class TasksReader(XMLStreamReaderBase):
                     self.version = self.attribute("version", tasksFileFormatVersion)
                 elif self.name() == "Task":
                     self.__readTask()
+                else:
+                    self.raiseUnexpectedStartTag(self.name())
         
         self.showErrorMessage()
     
@@ -101,6 +103,8 @@ class TasksReader(XMLStreamReaderBase):
                 elif self.name() == "Created":
                     task["created"] = time.mktime(
                         time.strptime(self.readElementText(), "%Y-%m-%d, %H:%M:%S"))
+                elif self.name() == "Resource":
+                    continue    # handle but ignore this tag
                 elif self.name() == "Filename":
                     task["filename"] = \
                         Utilities.toNativeSeparators(self.readElementText())
@@ -109,3 +113,5 @@ class TasksReader(XMLStreamReaderBase):
                         task["linenumber"] = int(self.readElementText())
                     except ValueError:
                         pass
+                else:
+                    self.raiseUnexpectedStartTag(self.name())
