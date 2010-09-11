@@ -10,7 +10,6 @@ Module implementing a template viewer and associated classes.
 import datetime
 import os
 import re
-import io
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -24,10 +23,7 @@ from .TemplateSingleVariableDialog import TemplateSingleVariableDialog
 
 import Preferences
 
-from E5XML.XMLUtilities import make_parser
-from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E5XML.XMLEntityResolver import XMLEntityResolver
-from E5XML.TemplatesHandler import TemplatesHandler
+from E5XML.TemplatesReader import TemplatesReader
 from E5XML.TemplatesWriter import TemplatesWriter
 
 import UI.PixmapCache
@@ -878,59 +874,19 @@ class TemplateViewer(QTreeWidget):
         
         @param filename name of a templates file to read (string)
         """
-        try:
-            if filename is None:
-                filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
-                if not os.path.exists(filename):
-                    return
-            f = open(filename, "r", encoding = "utf-8")
-            line = f.readline()
-            dtdLine = f.readline()
-            f.close()
-        except IOError:
-            E5MessageBox.critical(self,
-                self.trUtf8("Read templates"),
-                self.trUtf8("<p>The templates file <b>{0}</b> could not be read.</p>")
-                    .format(filename))
-            return
-            
-        # now read the file
-        if line.startswith('<?xml'):
-            parser = make_parser(dtdLine.startswith("<!DOCTYPE"))
-            handler = TemplatesHandler(templateViewer = self)
-            er = XMLEntityResolver()
-            eh = XMLErrorHandler()
-            
-            parser.setContentHandler(handler)
-            parser.setEntityResolver(er)
-            parser.setErrorHandler(eh)
-            
-            try:
-                f = open(filename, "r", encoding = "utf-8")
-                try:
-                    try:
-                        parser.parse(f)
-                    except UnicodeEncodeError:
-                        f.seek(0)
-                        buf = io.StringIO(f.read())
-                        parser.parse(buf)
-                finally:
-                    f.close()
-            except IOError:
-                E5MessageBox.critical(self,
-                    self.trUtf8("Read templates"),
-                    self.trUtf8("<p>The templates file <b>{0}</b> could not be read.</p>")
-                        .format(filename))
+        if filename is None:
+            filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
+            if not os.path.exists(filename):
                 return
-            except XMLFatalParseError:
-                pass
-                
-            eh.showParseMessages()
+        
+        f = QFile(filename)
+        if f.open(QIODevice.ReadOnly):
+            reader = TemplatesReader(f, viewer = self)
+            reader.readXML()
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Read templates"),
-                self.trUtf8("<p>The templates file <b>{0}</b> has an"
-                            " unsupported format.</p>")
+                self.trUtf8("<p>The templates file <b>{0}</b> could not be read.</p>")
                     .format(filename))
     
     def __configure(self):

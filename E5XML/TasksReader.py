@@ -48,8 +48,7 @@ class TasksReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "Tasks":
-                    self.version = self.attribute("version", 
-                        tasksFileFormatVersion)
+                    self.version = self.attribute("version", tasksFileFormatVersion)
                 elif self.name() == "Task":
                     self.__readTask()
         
