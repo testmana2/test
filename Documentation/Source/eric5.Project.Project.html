@@ -229,12 +229,6 @@ QObject
 <td><a href="#Project.__readXMLProject">__readXMLProject</a></td>
 <td>Private method to read the project data from an XML file.</td>
 </tr><tr>
-<td><a href="#Project.__readXMLSession">__readXMLSession</a></td>
-<td>Private method to read the session data from an XML file.</td>
-</tr><tr>
-<td><a href="#Project.__readXMLTasks">__readXMLTasks</a></td>
-<td>Private method to read the project tasks data from an XML file.</td>
-</tr><tr>
 <td><a href="#Project.__saveRecent">__saveRecent</a></td>
 <td>Private method to save the list of recently opened filenames.</td>
 </tr><tr>
@@ -914,50 +908,6 @@ flag indicating a validation of the XML file is
 <dd>
 flag indicating success (boolean)
 </dd>
-</dl><a NAME="Project.__readXMLSession" ID="Project.__readXMLSession"></a>
-<h4>Project.__readXMLSession</h4>
-<b>__readXMLSession</b>(<i>fn, validating, quiet</i>)
-<p>
-        Private method to read the session data from an XML file.
-</p><p>
-        The data read is:
-            <ul>
-            <li>all open source filenames</li>
-            <li>the active window</li>
-            <li>all breakpoints</li>
-            <li>the commandline</li>
-            <li>the working directory</li>
-            <li>the exception reporting flag</li>
-            <li>the list of exception types to be highlighted</li>
-            <li>all bookmarks</li>
-            </ul>
-</p><dl>
-<dt><i>fn</i></dt>
-<dd>
-filename of the project session file to be read (string)
-</dd><dt><i>validating</i></dt>
-<dd>
-flag indicating a validation of the XML file is
-            requested (boolean)
-</dd><dt><i>quiet</i></dt>
-<dd>
-flag indicating quiet operations.
-            If this flag is true, no errors are reported.
-</dd>
-</dl><a NAME="Project.__readXMLTasks" ID="Project.__readXMLTasks"></a>
-<h4>Project.__readXMLTasks</h4>
-<b>__readXMLTasks</b>(<i>fn, validating</i>)
-<p>
-        Private method to read the project tasks data from an XML file.
-</p><dl>
-<dt><i>fn</i></dt>
-<dd>
-filename of the project tasks file to be read (string)
-</dd><dt><i>validating</i></dt>
-<dd>
-flag indicating a validation of the XML file is
-            requested (boolean)
-</dd>
 </dl><a NAME="Project.__saveRecent" ID="Project.__saveRecent"></a>
 <h4>Project.__saveRecent</h4>
 <b>__saveRecent</b>(<i></i>)
@@ -1104,18 +1054,6 @@ flag indicating success
 <b>__writeSession</b>(<i>quiet = False, indicator = ""</i>)
 <p>
         Private method to write the session data to an XML file (.e4s).
-</p><p>
-        The data saved is:
-            <ul>
-            <li>all open source filenames belonging to the project</li>
-            <li>the active window, if it belongs to the project</li>
-            <li>all breakpoints</li>
-            <li>the commandline</li>
-            <li>the working directory</li>
-            <li>the exception reporting flag</li>
-            <li>the list of exception types to be highlighted</li>
-            <li>all bookmarks of files belonging to the project</li>
-            </ul>
 </p><dl>
 <dt><i>quiet</i></dt>
 <dd>

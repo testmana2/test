@@ -46,7 +46,7 @@ Module implementing the writer class for writing an XML templates file.
     Class implementing the writer class for writing an XML templates file.
 </p>
 <h3>Derived from</h3>
-XMLWriterBase
+XMLStreamWriterBase
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -63,13 +63,16 @@ XMLWriterBase
 </table>
 <a NAME="TemplatesWriter.__init__" ID="TemplatesWriter.__init__"></a>
 <h4>TemplatesWriter (Constructor)</h4>
-<b>TemplatesWriter</b>(<i>file, templatesViewer</i>)
+<b>TemplatesWriter</b>(<i>device, templatesViewer</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>file</i></dt>
+<dt><i>device</i></dt>
 <dd>
-open file (like) object for writing
+reference to the I/O device to write to (QIODevice)
+</dd><dt><i>templatesViewer</i></dt>
+<dd>
+reference to the templates viewer object (TemplateViewer)
 </dd>
 </dl><a NAME="TemplatesWriter.writeXML" ID="TemplatesWriter.writeXML"></a>
 <h4>TemplatesWriter.writeXML</h4>

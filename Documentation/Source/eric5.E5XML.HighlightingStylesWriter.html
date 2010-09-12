@@ -46,7 +46,7 @@ Module implementing the writer class for writing a highlighting styles XML file.
     Class implementing the writer class for writing a highlighting styles XML file.
 </p>
 <h3>Derived from</h3>
-XMLWriterBase
+XMLStreamWriterBase
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -63,13 +63,13 @@ XMLWriterBase
 </table>
 <a NAME="HighlightingStylesWriter.__init__" ID="HighlightingStylesWriter.__init__"></a>
 <h4>HighlightingStylesWriter (Constructor)</h4>
-<b>HighlightingStylesWriter</b>(<i>file, lexers</i>)
+<b>HighlightingStylesWriter</b>(<i>device, lexers</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>file</i></dt>
+<dt><i>device</i></dt>
 <dd>
-open file (like) object for writing
+reference to the I/O device to write to (QIODevice)
 </dd><dt><i>lexers</i></dt>
 <dd>
 list of lexer objects for which to export the styles

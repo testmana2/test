@@ -46,7 +46,7 @@ Module implementing the writer class for writing an XML multi project file.
     Class implementing the writer class for writing an XML project file.
 </p>
 <h3>Derived from</h3>
-XMLWriterBase
+XMLStreamWriterBase
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -63,17 +63,17 @@ XMLWriterBase
 </table>
 <a NAME="MultiProjectWriter.__init__" ID="MultiProjectWriter.__init__"></a>
 <h4>MultiProjectWriter (Constructor)</h4>
-<b>MultiProjectWriter</b>(<i>multiProject, file, multiProjectName</i>)
+<b>MultiProjectWriter</b>(<i>device, multiProject, multiProjectName</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>multiProject</i></dt>
+<dt><i>device</i></dt>
+<dd>
+reference to the I/O device to write to (QIODevice)
+</dd><dt><i>multiProject</i></dt>
 <dd>
 Reference to the multi project object
-</dd><dt><i>file</i></dt>
-<dd>
-open file (like) object for writing
-</dd><dt><i>projectName</i></dt>
+</dd><dt><i>multiProjectName</i></dt>
 <dd>
 name of the project (string)
 </dd>

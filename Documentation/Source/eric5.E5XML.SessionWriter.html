@@ -22,7 +22,7 @@ a { color: #BA6D36; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.E5XML.SessionWriter</h1>
 <p>
-Module implementing the writer class for writing an XML project session file.
+Module implementing the writer class for writing an XML session file.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ Module implementing the writer class for writing an XML project session file.
 <table>
 <tr>
 <td><a href="#SessionWriter">SessionWriter</a></td>
-<td>Class implementing the writer class for writing an XML project session file.</td>
+<td>Class implementing the writer class for writing an XML session file.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -43,10 +43,10 @@ Module implementing the writer class for writing an XML project session file.
 <a NAME="SessionWriter" ID="SessionWriter"></a>
 <h2>SessionWriter</h2>
 <p>
-    Class implementing the writer class for writing an XML project session file.
+    Class implementing the writer class for writing an XML session file.
 </p>
 <h3>Derived from</h3>
-XMLWriterBase
+XMLStreamWriterBase
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -63,13 +63,13 @@ XMLWriterBase
 </table>
 <a NAME="SessionWriter.__init__" ID="SessionWriter.__init__"></a>
 <h4>SessionWriter (Constructor)</h4>
-<b>SessionWriter</b>(<i>file, projectName</i>)
+<b>SessionWriter</b>(<i>device, projectName</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>file</i></dt>
+<dt><i>device</i></dt>
 <dd>
-open file (like) object for writing
+reference to the I/O device to write to (QIODevice)
 </dd><dt><i>projectName</i></dt>
 <dd>
 name of the project (string) or None for the

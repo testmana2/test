@@ -117,10 +117,7 @@ QObject
 <td>Private method to open a multi project from the list of rencently opened multi projects.</td>
 </tr><tr>
 <td><a href="#MultiProject.__readMultiProject">__readMultiProject</a></td>
-<td>Private method to read in a multi project (.e4m, .e4mz) file.</td>
-</tr><tr>
-<td><a href="#MultiProject.__readXMLMultiProject">__readXMLMultiProject</a></td>
-<td>Private method to read the multi project data from an XML file.</td>
+<td>Private method to read in a multi project (.e4m) file.</td>
 </tr><tr>
 <td><a href="#MultiProject.__saveRecent">__saveRecent</a></td>
 <td>Private method to save the list of recently opened filenames.</td>
@@ -139,9 +136,6 @@ QObject
 </tr><tr>
 <td><a href="#MultiProject.__writeMultiProject">__writeMultiProject</a></td>
 <td>Private method to save the multi project infos to a multi project file.</td>
-</tr><tr>
-<td><a href="#MultiProject.__writeXMLMultiProject">__writeXMLMultiProject</a></td>
-<td>Private method to write the multi project data to an XML file.</td>
 </tr><tr>
 <td><a href="#MultiProject.addE5Actions">addE5Actions</a></td>
 <td>Public method to add actions to the list of actions.</td>
@@ -296,30 +290,11 @@ reference to the action that triggered (QAction)
 <h4>MultiProject.__readMultiProject</h4>
 <b>__readMultiProject</b>(<i>fn</i>)
 <p>
-        Private method to read in a multi project (.e4m, .e4mz) file.
+        Private method to read in a multi project (.e4m) file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
 filename of the multi project file to be read (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating success
-</dd>
-</dl><a NAME="MultiProject.__readXMLMultiProject" ID="MultiProject.__readXMLMultiProject"></a>
-<h4>MultiProject.__readXMLMultiProject</h4>
-<b>__readXMLMultiProject</b>(<i>fn, validating</i>)
-<p>
-        Private method to read the multi project data from an XML file.
-</p><dl>
-<dt><i>fn</i></dt>
-<dd>
-filename of the multi project file to be read (string)
-</dd><dt><i>validating</i></dt>
-<dd>
-flag indicating a validation of the XML file is
-            requested (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -370,16 +345,6 @@ optional filename of the multi project file to be written.
 <dt>Returns:</dt>
 <dd>
 flag indicating success
-</dd>
-</dl><a NAME="MultiProject.__writeXMLMultiProject" ID="MultiProject.__writeXMLMultiProject"></a>
-<h4>MultiProject.__writeXMLMultiProject</h4>
-<b>__writeXMLMultiProject</b>(<i>fn = None</i>)
-<p>
-        Private method to write the multi project data to an XML file.
-</p><dl>
-<dt><i>fn</i></dt>
-<dd>
-the filename of the multi project file (string)
 </dd>
 </dl><a NAME="MultiProject.addE5Actions" ID="MultiProject.addE5Actions"></a>
 <h4>MultiProject.addE5Actions</h4>

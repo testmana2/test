@@ -143,20 +143,20 @@
             <section title="eric5.E5XML.Config" ref="eric5.E5XML.Config.html" />
             <section title="eric5.E5XML.DebuggerPropertiesHandler" ref="eric5.E5XML.DebuggerPropertiesHandler.html" />
             <section title="eric5.E5XML.DebuggerPropertiesWriter" ref="eric5.E5XML.DebuggerPropertiesWriter.html" />
-            <section title="eric5.E5XML.HighlightingStylesHandler" ref="eric5.E5XML.HighlightingStylesHandler.html" />
+            <section title="eric5.E5XML.HighlightingStylesReader" ref="eric5.E5XML.HighlightingStylesReader.html" />
             <section title="eric5.E5XML.HighlightingStylesWriter" ref="eric5.E5XML.HighlightingStylesWriter.html" />
-            <section title="eric5.E5XML.MultiProjectHandler" ref="eric5.E5XML.MultiProjectHandler.html" />
+            <section title="eric5.E5XML.MultiProjectReader" ref="eric5.E5XML.MultiProjectReader.html" />
             <section title="eric5.E5XML.MultiProjectWriter" ref="eric5.E5XML.MultiProjectWriter.html" />
-            <section title="eric5.E5XML.PluginRepositoryHandler" ref="eric5.E5XML.PluginRepositoryHandler.html" />
+            <section title="eric5.E5XML.PluginRepositoryReader" ref="eric5.E5XML.PluginRepositoryReader.html" />
             <section title="eric5.E5XML.ProjectHandler" ref="eric5.E5XML.ProjectHandler.html" />
             <section title="eric5.E5XML.ProjectWriter" ref="eric5.E5XML.ProjectWriter.html" />
-            <section title="eric5.E5XML.SessionHandler" ref="eric5.E5XML.SessionHandler.html" />
+            <section title="eric5.E5XML.SessionReader" ref="eric5.E5XML.SessionReader.html" />
             <section title="eric5.E5XML.SessionWriter" ref="eric5.E5XML.SessionWriter.html" />
-            <section title="eric5.E5XML.ShortcutsHandler" ref="eric5.E5XML.ShortcutsHandler.html" />
+            <section title="eric5.E5XML.ShortcutsReader" ref="eric5.E5XML.ShortcutsReader.html" />
             <section title="eric5.E5XML.ShortcutsWriter" ref="eric5.E5XML.ShortcutsWriter.html" />
-            <section title="eric5.E5XML.TasksHandler" ref="eric5.E5XML.TasksHandler.html" />
+            <section title="eric5.E5XML.TasksReader" ref="eric5.E5XML.TasksReader.html" />
             <section title="eric5.E5XML.TasksWriter" ref="eric5.E5XML.TasksWriter.html" />
-            <section title="eric5.E5XML.TemplatesHandler" ref="eric5.E5XML.TemplatesHandler.html" />
+            <section title="eric5.E5XML.TemplatesReader" ref="eric5.E5XML.TemplatesReader.html" />
             <section title="eric5.E5XML.TemplatesWriter" ref="eric5.E5XML.TemplatesWriter.html" />
             <section title="eric5.E5XML.UserProjectHandler" ref="eric5.E5XML.UserProjectHandler.html" />
             <section title="eric5.E5XML.UserProjectWriter" ref="eric5.E5XML.UserProjectWriter.html" />
@@ -164,6 +164,8 @@
             <section title="eric5.E5XML.XMLErrorHandler" ref="eric5.E5XML.XMLErrorHandler.html" />
             <section title="eric5.E5XML.XMLHandlerBase" ref="eric5.E5XML.XMLHandlerBase.html" />
             <section title="eric5.E5XML.XMLMessageDialog" ref="eric5.E5XML.XMLMessageDialog.html" />
+            <section title="eric5.E5XML.XMLStreamReaderBase" ref="eric5.E5XML.XMLStreamReaderBase.html" />
+            <section title="eric5.E5XML.XMLStreamWriterBase" ref="eric5.E5XML.XMLStreamWriterBase.html" />
             <section title="eric5.E5XML.XMLUtilities" ref="eric5.E5XML.XMLUtilities.html" />
             <section title="eric5.E5XML.XMLWriterBase" ref="eric5.E5XML.XMLWriterBase.html" />
           </section>
@@ -985,29 +987,43 @@
       <keyword name="IconEditorWindow.__zoomReset" id="IconEditorWindow.__zoomReset" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__zoomReset" />
       <keyword name="IconEditorWindow.closeEvent" id="IconEditorWindow.closeEvent" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.closeEvent" />
       <keyword name="E5XML (Package)" id="E5XML (Package)" ref="index-eric5.E5XML.html" />
+      <keyword name="XMLStreamReaderBase (Module)" id="XMLStreamReaderBase (Module)" ref="eric5.E5XML.XMLStreamReaderBase.html" />
+      <keyword name="XMLStreamReaderBase" id="XMLStreamReaderBase" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase" />
+      <keyword name="XMLStreamReaderBase (Constructor)" id="XMLStreamReaderBase (Constructor)" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.__init__" />
+      <keyword name="XMLStreamReaderBase.__readDict" id="XMLStreamReaderBase.__readDict" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.__readDict" />
+      <keyword name="XMLStreamReaderBase.__readFrozenset" id="XMLStreamReaderBase.__readFrozenset" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.__readFrozenset" />
+      <keyword name="XMLStreamReaderBase.__readList" id="XMLStreamReaderBase.__readList" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.__readList" />
+      <keyword name="XMLStreamReaderBase.__readSet" id="XMLStreamReaderBase.__readSet" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.__readSet" />
+      <keyword name="XMLStreamReaderBase.__readTuple" id="XMLStreamReaderBase.__readTuple" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.__readTuple" />
+      <keyword name="XMLStreamReaderBase._readBasics" id="XMLStreamReaderBase._readBasics" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase._readBasics" />
+      <keyword name="XMLStreamReaderBase._skipUnknownElement" id="XMLStreamReaderBase._skipUnknownElement" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase._skipUnknownElement" />
+      <keyword name="XMLStreamReaderBase.attribute" id="XMLStreamReaderBase.attribute" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.attribute" />
+      <keyword name="XMLStreamReaderBase.decodedNewLines" id="XMLStreamReaderBase.decodedNewLines" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.decodedNewLines" />
+      <keyword name="XMLStreamReaderBase.raiseBadValue" id="XMLStreamReaderBase.raiseBadValue" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.raiseBadValue" />
+      <keyword name="XMLStreamReaderBase.raiseUnexpectedStartTag" id="XMLStreamReaderBase.raiseUnexpectedStartTag" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.raiseUnexpectedStartTag" />
+      <keyword name="XMLStreamReaderBase.raiseUnsupportedFormatVersion" id="XMLStreamReaderBase.raiseUnsupportedFormatVersion" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.raiseUnsupportedFormatVersion" />
+      <keyword name="XMLStreamReaderBase.readXML" id="XMLStreamReaderBase.readXML" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.readXML" />
+      <keyword name="XMLStreamReaderBase.showErrorMessage" id="XMLStreamReaderBase.showErrorMessage" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.showErrorMessage" />
+      <keyword name="XMLStreamReaderBase.toBool" id="XMLStreamReaderBase.toBool" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase.toBool" />
       <keyword name="TemplatesWriter (Module)" id="TemplatesWriter (Module)" ref="eric5.E5XML.TemplatesWriter.html" />
       <keyword name="TemplatesWriter" id="TemplatesWriter" ref="eric5.E5XML.TemplatesWriter.html#TemplatesWriter" />
       <keyword name="TemplatesWriter (Constructor)" id="TemplatesWriter (Constructor)" ref="eric5.E5XML.TemplatesWriter.html#TemplatesWriter.__init__" />
       <keyword name="TemplatesWriter.writeXML" id="TemplatesWriter.writeXML" ref="eric5.E5XML.TemplatesWriter.html#TemplatesWriter.writeXML" />
-      <keyword name="PluginRepositoryHandler (Module)" id="PluginRepositoryHandler (Module)" ref="eric5.E5XML.PluginRepositoryHandler.html" />
-      <keyword name="PluginRepositoryHandler" id="PluginRepositoryHandler" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler" />
-      <keyword name="PluginRepositoryHandler (Constructor)" id="PluginRepositoryHandler (Constructor)" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.__init__" />
-      <keyword name="PluginRepositoryHandler.endAuthor" id="PluginRepositoryHandler.endAuthor" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.endAuthor" />
-      <keyword name="PluginRepositoryHandler.endDescription" id="PluginRepositoryHandler.endDescription" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.endDescription" />
-      <keyword name="PluginRepositoryHandler.endFilename" id="PluginRepositoryHandler.endFilename" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.endFilename" />
-      <keyword name="PluginRepositoryHandler.endName" id="PluginRepositoryHandler.endName" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.endName" />
-      <keyword name="PluginRepositoryHandler.endPlugin" id="PluginRepositoryHandler.endPlugin" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.endPlugin" />
-      <keyword name="PluginRepositoryHandler.endRepositoryUrl" id="PluginRepositoryHandler.endRepositoryUrl" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.endRepositoryUrl" />
-      <keyword name="PluginRepositoryHandler.endShort" id="PluginRepositoryHandler.endShort" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.endShort" />
-      <keyword name="PluginRepositoryHandler.endUrl" id="PluginRepositoryHandler.endUrl" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.endUrl" />
-      <keyword name="PluginRepositoryHandler.endVersion" id="PluginRepositoryHandler.endVersion" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.endVersion" />
-      <keyword name="PluginRepositoryHandler.getVersion" id="PluginRepositoryHandler.getVersion" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.getVersion" />
-      <keyword name="PluginRepositoryHandler.startDocumentPlugins" id="PluginRepositoryHandler.startDocumentPlugins" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.startDocumentPlugins" />
-      <keyword name="PluginRepositoryHandler.startPlugin" id="PluginRepositoryHandler.startPlugin" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.startPlugin" />
-      <keyword name="PluginRepositoryHandler.startPlugins" id="PluginRepositoryHandler.startPlugins" ref="eric5.E5XML.PluginRepositoryHandler.html#PluginRepositoryHandler.startPlugins" />
+      <keyword name="PluginRepositoryReader (Module)" id="PluginRepositoryReader (Module)" ref="eric5.E5XML.PluginRepositoryReader.html" />
+      <keyword name="PluginRepositoryReader" id="PluginRepositoryReader" ref="eric5.E5XML.PluginRepositoryReader.html#PluginRepositoryReader" />
+      <keyword name="PluginRepositoryReader (Constructor)" id="PluginRepositoryReader (Constructor)" ref="eric5.E5XML.PluginRepositoryReader.html#PluginRepositoryReader.__init__" />
+      <keyword name="PluginRepositoryReader.__readPlugin" id="PluginRepositoryReader.__readPlugin" ref="eric5.E5XML.PluginRepositoryReader.html#PluginRepositoryReader.__readPlugin" />
+      <keyword name="PluginRepositoryReader.readXML" id="PluginRepositoryReader.readXML" ref="eric5.E5XML.PluginRepositoryReader.html#PluginRepositoryReader.readXML" />
+      <keyword name="MultiProjectReader (Module)" id="MultiProjectReader (Module)" ref="eric5.E5XML.MultiProjectReader.html" />
+      <keyword name="MultiProjectReader" id="MultiProjectReader" ref="eric5.E5XML.MultiProjectReader.html#MultiProjectReader" />
+      <keyword name="MultiProjectReader (Constructor)" id="MultiProjectReader (Constructor)" ref="eric5.E5XML.MultiProjectReader.html#MultiProjectReader.__init__" />
+      <keyword name="MultiProjectReader.__readProject" id="MultiProjectReader.__readProject" ref="eric5.E5XML.MultiProjectReader.html#MultiProjectReader.__readProject" />
+      <keyword name="MultiProjectReader.__readProjects" id="MultiProjectReader.__readProjects" ref="eric5.E5XML.MultiProjectReader.html#MultiProjectReader.__readProjects" />
+      <keyword name="MultiProjectReader.readXML" id="MultiProjectReader.readXML" ref="eric5.E5XML.MultiProjectReader.html#MultiProjectReader.readXML" />
       <keyword name="ShortcutsWriter (Module)" id="ShortcutsWriter (Module)" ref="eric5.E5XML.ShortcutsWriter.html" />
       <keyword name="ShortcutsWriter" id="ShortcutsWriter" ref="eric5.E5XML.ShortcutsWriter.html#ShortcutsWriter" />
       <keyword name="ShortcutsWriter (Constructor)" id="ShortcutsWriter (Constructor)" ref="eric5.E5XML.ShortcutsWriter.html#ShortcutsWriter.__init__" />
+      <keyword name="ShortcutsWriter.__writeActions" id="ShortcutsWriter.__writeActions" ref="eric5.E5XML.ShortcutsWriter.html#ShortcutsWriter.__writeActions" />
       <keyword name="ShortcutsWriter.writeXML" id="ShortcutsWriter.writeXML" ref="eric5.E5XML.ShortcutsWriter.html#ShortcutsWriter.writeXML" />
       <keyword name="UserProjectHandler (Module)" id="UserProjectHandler (Module)" ref="eric5.E5XML.UserProjectHandler.html" />
       <keyword name="UserProjectHandler" id="UserProjectHandler" ref="eric5.E5XML.UserProjectHandler.html#UserProjectHandler" />
@@ -1113,17 +1129,24 @@
       <keyword name="UserProjectWriter" id="UserProjectWriter" ref="eric5.E5XML.UserProjectWriter.html#UserProjectWriter" />
       <keyword name="UserProjectWriter (Constructor)" id="UserProjectWriter (Constructor)" ref="eric5.E5XML.UserProjectWriter.html#UserProjectWriter.__init__" />
       <keyword name="UserProjectWriter.writeXML" id="UserProjectWriter.writeXML" ref="eric5.E5XML.UserProjectWriter.html#UserProjectWriter.writeXML" />
-      <keyword name="TemplatesHandler (Module)" id="TemplatesHandler (Module)" ref="eric5.E5XML.TemplatesHandler.html" />
-      <keyword name="TemplatesHandler" id="TemplatesHandler" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler" />
-      <keyword name="TemplatesHandler (Constructor)" id="TemplatesHandler (Constructor)" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler.__init__" />
-      <keyword name="TemplatesHandler.endTemplate" id="TemplatesHandler.endTemplate" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler.endTemplate" />
-      <keyword name="TemplatesHandler.endTemplateDescription" id="TemplatesHandler.endTemplateDescription" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler.endTemplateDescription" />
-      <keyword name="TemplatesHandler.endTemplateText" id="TemplatesHandler.endTemplateText" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler.endTemplateText" />
-      <keyword name="TemplatesHandler.getVersion" id="TemplatesHandler.getVersion" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler.getVersion" />
-      <keyword name="TemplatesHandler.startDocumentTemplates" id="TemplatesHandler.startDocumentTemplates" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler.startDocumentTemplates" />
-      <keyword name="TemplatesHandler.startTemplate" id="TemplatesHandler.startTemplate" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler.startTemplate" />
-      <keyword name="TemplatesHandler.startTemplateGroup" id="TemplatesHandler.startTemplateGroup" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler.startTemplateGroup" />
-      <keyword name="TemplatesHandler.startTemplates" id="TemplatesHandler.startTemplates" ref="eric5.E5XML.TemplatesHandler.html#TemplatesHandler.startTemplates" />
+      <keyword name="TemplatesReader (Module)" id="TemplatesReader (Module)" ref="eric5.E5XML.TemplatesReader.html" />
+      <keyword name="TemplatesReader" id="TemplatesReader" ref="eric5.E5XML.TemplatesReader.html#TemplatesReader" />
+      <keyword name="TemplatesReader (Constructor)" id="TemplatesReader (Constructor)" ref="eric5.E5XML.TemplatesReader.html#TemplatesReader.__init__" />
+      <keyword name="TemplatesReader.__readTemplate" id="TemplatesReader.__readTemplate" ref="eric5.E5XML.TemplatesReader.html#TemplatesReader.__readTemplate" />
+      <keyword name="TemplatesReader.__readTemplateGroup" id="TemplatesReader.__readTemplateGroup" ref="eric5.E5XML.TemplatesReader.html#TemplatesReader.__readTemplateGroup" />
+      <keyword name="TemplatesReader.readXML" id="TemplatesReader.readXML" ref="eric5.E5XML.TemplatesReader.html#TemplatesReader.readXML" />
+      <keyword name="SessionReader (Module)" id="SessionReader (Module)" ref="eric5.E5XML.SessionReader.html" />
+      <keyword name="SessionReader" id="SessionReader" ref="eric5.E5XML.SessionReader.html#SessionReader" />
+      <keyword name="SessionReader (Constructor)" id="SessionReader (Constructor)" ref="eric5.E5XML.SessionReader.html#SessionReader.__init__" />
+      <keyword name="SessionReader.__readBookmark" id="SessionReader.__readBookmark" ref="eric5.E5XML.SessionReader.html#SessionReader.__readBookmark" />
+      <keyword name="SessionReader.__readBookmarks" id="SessionReader.__readBookmarks" ref="eric5.E5XML.SessionReader.html#SessionReader.__readBookmarks" />
+      <keyword name="SessionReader.__readBreakpoint" id="SessionReader.__readBreakpoint" ref="eric5.E5XML.SessionReader.html#SessionReader.__readBreakpoint" />
+      <keyword name="SessionReader.__readBreakpoints" id="SessionReader.__readBreakpoints" ref="eric5.E5XML.SessionReader.html#SessionReader.__readBreakpoints" />
+      <keyword name="SessionReader.__readDebugInfo" id="SessionReader.__readDebugInfo" ref="eric5.E5XML.SessionReader.html#SessionReader.__readDebugInfo" />
+      <keyword name="SessionReader.__readFilenames" id="SessionReader.__readFilenames" ref="eric5.E5XML.SessionReader.html#SessionReader.__readFilenames" />
+      <keyword name="SessionReader.__readWatchexpression" id="SessionReader.__readWatchexpression" ref="eric5.E5XML.SessionReader.html#SessionReader.__readWatchexpression" />
+      <keyword name="SessionReader.__readWatchexpressions" id="SessionReader.__readWatchexpressions" ref="eric5.E5XML.SessionReader.html#SessionReader.__readWatchexpressions" />
+      <keyword name="SessionReader.readXML" id="SessionReader.readXML" ref="eric5.E5XML.SessionReader.html#SessionReader.readXML" />
       <keyword name="XMLErrorHandler (Module)" id="XMLErrorHandler (Module)" ref="eric5.E5XML.XMLErrorHandler.html" />
       <keyword name="XMLErrorHandler" id="XMLErrorHandler" ref="eric5.E5XML.XMLErrorHandler.html#XMLErrorHandler" />
       <keyword name="XMLFatalParseError" id="XMLFatalParseError" ref="eric5.E5XML.XMLErrorHandler.html#XMLFatalParseError" />
@@ -1170,103 +1193,49 @@
       <keyword name="MultiProjectWriter" id="MultiProjectWriter" ref="eric5.E5XML.MultiProjectWriter.html#MultiProjectWriter" />
       <keyword name="MultiProjectWriter (Constructor)" id="MultiProjectWriter (Constructor)" ref="eric5.E5XML.MultiProjectWriter.html#MultiProjectWriter.__init__" />
       <keyword name="MultiProjectWriter.writeXML" id="MultiProjectWriter.writeXML" ref="eric5.E5XML.MultiProjectWriter.html#MultiProjectWriter.writeXML" />
-      <keyword name="MultiProjectHandler (Module)" id="MultiProjectHandler (Module)" ref="eric5.E5XML.MultiProjectHandler.html" />
-      <keyword name="MultiProjectHandler" id="MultiProjectHandler" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler" />
-      <keyword name="MultiProjectHandler (Constructor)" id="MultiProjectHandler (Constructor)" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.__init__" />
-      <keyword name="MultiProjectHandler.endDescription" id="MultiProjectHandler.endDescription" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.endDescription" />
-      <keyword name="MultiProjectHandler.endProject" id="MultiProjectHandler.endProject" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.endProject" />
-      <keyword name="MultiProjectHandler.endProjectDescription" id="MultiProjectHandler.endProjectDescription" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.endProjectDescription" />
-      <keyword name="MultiProjectHandler.endProjectFile" id="MultiProjectHandler.endProjectFile" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.endProjectFile" />
-      <keyword name="MultiProjectHandler.endProjectName" id="MultiProjectHandler.endProjectName" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.endProjectName" />
-      <keyword name="MultiProjectHandler.getVersion" id="MultiProjectHandler.getVersion" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.getVersion" />
-      <keyword name="MultiProjectHandler.startDocumentMultiProject" id="MultiProjectHandler.startDocumentMultiProject" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.startDocumentMultiProject" />
-      <keyword name="MultiProjectHandler.startMultiProject" id="MultiProjectHandler.startMultiProject" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.startMultiProject" />
-      <keyword name="MultiProjectHandler.startProject" id="MultiProjectHandler.startProject" ref="eric5.E5XML.MultiProjectHandler.html#MultiProjectHandler.startProject" />
+      <keyword name="XMLStreamWriterBase (Module)" id="XMLStreamWriterBase (Module)" ref="eric5.E5XML.XMLStreamWriterBase.html" />
+      <keyword name="XMLStreamWriterBase" id="XMLStreamWriterBase" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase" />
+      <keyword name="XMLStreamWriterBase (Constructor)" id="XMLStreamWriterBase (Constructor)" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase.__init__" />
+      <keyword name="XMLStreamWriterBase._writeBasics" id="XMLStreamWriterBase._writeBasics" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._writeBasics" />
+      <keyword name="XMLStreamWriterBase._write_bool" id="XMLStreamWriterBase._write_bool" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_bool" />
+      <keyword name="XMLStreamWriterBase._write_bytearray" id="XMLStreamWriterBase._write_bytearray" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_bytearray" />
+      <keyword name="XMLStreamWriterBase._write_bytes" id="XMLStreamWriterBase._write_bytes" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_bytes" />
+      <keyword name="XMLStreamWriterBase._write_complex" id="XMLStreamWriterBase._write_complex" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_complex" />
+      <keyword name="XMLStreamWriterBase._write_dictionary" id="XMLStreamWriterBase._write_dictionary" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_dictionary" />
+      <keyword name="XMLStreamWriterBase._write_float" id="XMLStreamWriterBase._write_float" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_float" />
+      <keyword name="XMLStreamWriterBase._write_frozenset" id="XMLStreamWriterBase._write_frozenset" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_frozenset" />
+      <keyword name="XMLStreamWriterBase._write_int" id="XMLStreamWriterBase._write_int" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_int" />
+      <keyword name="XMLStreamWriterBase._write_list" id="XMLStreamWriterBase._write_list" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_list" />
+      <keyword name="XMLStreamWriterBase._write_none" id="XMLStreamWriterBase._write_none" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_none" />
+      <keyword name="XMLStreamWriterBase._write_set" id="XMLStreamWriterBase._write_set" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_set" />
+      <keyword name="XMLStreamWriterBase._write_string" id="XMLStreamWriterBase._write_string" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_string" />
+      <keyword name="XMLStreamWriterBase._write_tuple" id="XMLStreamWriterBase._write_tuple" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_tuple" />
+      <keyword name="XMLStreamWriterBase._write_unimplemented" id="XMLStreamWriterBase._write_unimplemented" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_unimplemented" />
+      <keyword name="XMLStreamWriterBase.encodedNewLines" id="XMLStreamWriterBase.encodedNewLines" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase.encodedNewLines" />
+      <keyword name="XMLStreamWriterBase.writeXML" id="XMLStreamWriterBase.writeXML" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase.writeXML" />
       <keyword name="DebuggerPropertiesWriter (Module)" id="DebuggerPropertiesWriter (Module)" ref="eric5.E5XML.DebuggerPropertiesWriter.html" />
       <keyword name="DebuggerPropertiesWriter" id="DebuggerPropertiesWriter" ref="eric5.E5XML.DebuggerPropertiesWriter.html#DebuggerPropertiesWriter" />
       <keyword name="DebuggerPropertiesWriter (Constructor)" id="DebuggerPropertiesWriter (Constructor)" ref="eric5.E5XML.DebuggerPropertiesWriter.html#DebuggerPropertiesWriter.__init__" />
       <keyword name="DebuggerPropertiesWriter.writeXML" id="DebuggerPropertiesWriter.writeXML" ref="eric5.E5XML.DebuggerPropertiesWriter.html#DebuggerPropertiesWriter.writeXML" />
-      <keyword name="SessionHandler (Module)" id="SessionHandler (Module)" ref="eric5.E5XML.SessionHandler.html" />
-      <keyword name="SessionHandler" id="SessionHandler" ref="eric5.E5XML.SessionHandler.html#SessionHandler" />
-      <keyword name="SessionHandler (Constructor)" id="SessionHandler (Constructor)" ref="eric5.E5XML.SessionHandler.html#SessionHandler.__init__" />
-      <keyword name="SessionHandler.endBFilename" id="SessionHandler.endBFilename" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endBFilename" />
-      <keyword name="SessionHandler.endBookmark" id="SessionHandler.endBookmark" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endBookmark" />
-      <keyword name="SessionHandler.endBreakpoint" id="SessionHandler.endBreakpoint" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endBreakpoint" />
-      <keyword name="SessionHandler.endCommandLine" id="SessionHandler.endCommandLine" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endCommandLine" />
-      <keyword name="SessionHandler.endCondition" id="SessionHandler.endCondition" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endCondition" />
-      <keyword name="SessionHandler.endEnvironment" id="SessionHandler.endEnvironment" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endEnvironment" />
-      <keyword name="SessionHandler.endException" id="SessionHandler.endException" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endException" />
-      <keyword name="SessionHandler.endExceptions" id="SessionHandler.endExceptions" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endExceptions" />
-      <keyword name="SessionHandler.endFilename" id="SessionHandler.endFilename" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endFilename" />
-      <keyword name="SessionHandler.endIgnoredException" id="SessionHandler.endIgnoredException" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endIgnoredException" />
-      <keyword name="SessionHandler.endIgnoredExceptions" id="SessionHandler.endIgnoredExceptions" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endIgnoredExceptions" />
-      <keyword name="SessionHandler.endMultiProject" id="SessionHandler.endMultiProject" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endMultiProject" />
-      <keyword name="SessionHandler.endProject" id="SessionHandler.endProject" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endProject" />
-      <keyword name="SessionHandler.endSpecial" id="SessionHandler.endSpecial" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endSpecial" />
-      <keyword name="SessionHandler.endWatchexpression" id="SessionHandler.endWatchexpression" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endWatchexpression" />
-      <keyword name="SessionHandler.endWorkingDirectory" id="SessionHandler.endWorkingDirectory" ref="eric5.E5XML.SessionHandler.html#SessionHandler.endWorkingDirectory" />
-      <keyword name="SessionHandler.getVersion" id="SessionHandler.getVersion" ref="eric5.E5XML.SessionHandler.html#SessionHandler.getVersion" />
-      <keyword name="SessionHandler.startAutoClearShell" id="SessionHandler.startAutoClearShell" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startAutoClearShell" />
-      <keyword name="SessionHandler.startAutoContinue" id="SessionHandler.startAutoContinue" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startAutoContinue" />
-      <keyword name="SessionHandler.startBookmark" id="SessionHandler.startBookmark" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startBookmark" />
-      <keyword name="SessionHandler.startBreakpoint" id="SessionHandler.startBreakpoint" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startBreakpoint" />
-      <keyword name="SessionHandler.startCount" id="SessionHandler.startCount" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startCount" />
-      <keyword name="SessionHandler.startDocumentSession" id="SessionHandler.startDocumentSession" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startDocumentSession" />
-      <keyword name="SessionHandler.startEnabled" id="SessionHandler.startEnabled" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startEnabled" />
-      <keyword name="SessionHandler.startExceptions" id="SessionHandler.startExceptions" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startExceptions" />
-      <keyword name="SessionHandler.startFilename" id="SessionHandler.startFilename" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startFilename" />
-      <keyword name="SessionHandler.startIgnoredExceptions" id="SessionHandler.startIgnoredExceptions" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startIgnoredExceptions" />
-      <keyword name="SessionHandler.startLinenumber" id="SessionHandler.startLinenumber" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startLinenumber" />
-      <keyword name="SessionHandler.startReportExceptions" id="SessionHandler.startReportExceptions" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startReportExceptions" />
-      <keyword name="SessionHandler.startSession" id="SessionHandler.startSession" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startSession" />
-      <keyword name="SessionHandler.startTemporary" id="SessionHandler.startTemporary" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startTemporary" />
-      <keyword name="SessionHandler.startTracePython" id="SessionHandler.startTracePython" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startTracePython" />
-      <keyword name="SessionHandler.startWatchexpression" id="SessionHandler.startWatchexpression" ref="eric5.E5XML.SessionHandler.html#SessionHandler.startWatchexpression" />
       <keyword name="ProjectWriter (Module)" id="ProjectWriter (Module)" ref="eric5.E5XML.ProjectWriter.html" />
       <keyword name="ProjectWriter" id="ProjectWriter" ref="eric5.E5XML.ProjectWriter.html#ProjectWriter" />
       <keyword name="ProjectWriter (Constructor)" id="ProjectWriter (Constructor)" ref="eric5.E5XML.ProjectWriter.html#ProjectWriter.__init__" />
       <keyword name="ProjectWriter.writeXML" id="ProjectWriter.writeXML" ref="eric5.E5XML.ProjectWriter.html#ProjectWriter.writeXML" />
-      <keyword name="TasksHandler (Module)" id="TasksHandler (Module)" ref="eric5.E5XML.TasksHandler.html" />
-      <keyword name="TasksHandler" id="TasksHandler" ref="eric5.E5XML.TasksHandler.html#TasksHandler" />
-      <keyword name="TasksHandler (Constructor)" id="TasksHandler (Constructor)" ref="eric5.E5XML.TasksHandler.html#TasksHandler.__init__" />
-      <keyword name="TasksHandler.__buildPath" id="TasksHandler.__buildPath" ref="eric5.E5XML.TasksHandler.html#TasksHandler.__buildPath" />
-      <keyword name="TasksHandler.endCreated" id="TasksHandler.endCreated" ref="eric5.E5XML.TasksHandler.html#TasksHandler.endCreated" />
-      <keyword name="TasksHandler.endDescription" id="TasksHandler.endDescription" ref="eric5.E5XML.TasksHandler.html#TasksHandler.endDescription" />
-      <keyword name="TasksHandler.endDir" id="TasksHandler.endDir" ref="eric5.E5XML.TasksHandler.html#TasksHandler.endDir" />
-      <keyword name="TasksHandler.endFilename" id="TasksHandler.endFilename" ref="eric5.E5XML.TasksHandler.html#TasksHandler.endFilename" />
-      <keyword name="TasksHandler.endLinenumber" id="TasksHandler.endLinenumber" ref="eric5.E5XML.TasksHandler.html#TasksHandler.endLinenumber" />
-      <keyword name="TasksHandler.endName" id="TasksHandler.endName" ref="eric5.E5XML.TasksHandler.html#TasksHandler.endName" />
-      <keyword name="TasksHandler.endSummary" id="TasksHandler.endSummary" ref="eric5.E5XML.TasksHandler.html#TasksHandler.endSummary" />
-      <keyword name="TasksHandler.endTask" id="TasksHandler.endTask" ref="eric5.E5XML.TasksHandler.html#TasksHandler.endTask" />
-      <keyword name="TasksHandler.getVersion" id="TasksHandler.getVersion" ref="eric5.E5XML.TasksHandler.html#TasksHandler.getVersion" />
-      <keyword name="TasksHandler.startDocumentTasks" id="TasksHandler.startDocumentTasks" ref="eric5.E5XML.TasksHandler.html#TasksHandler.startDocumentTasks" />
-      <keyword name="TasksHandler.startFilename" id="TasksHandler.startFilename" ref="eric5.E5XML.TasksHandler.html#TasksHandler.startFilename" />
-      <keyword name="TasksHandler.startTask" id="TasksHandler.startTask" ref="eric5.E5XML.TasksHandler.html#TasksHandler.startTask" />
-      <keyword name="TasksHandler.startTasks" id="TasksHandler.startTasks" ref="eric5.E5XML.TasksHandler.html#TasksHandler.startTasks" />
-      <keyword name="HighlightingStylesHandler (Module)" id="HighlightingStylesHandler (Module)" ref="eric5.E5XML.HighlightingStylesHandler.html" />
-      <keyword name="HighlightingStylesHandler" id="HighlightingStylesHandler" ref="eric5.E5XML.HighlightingStylesHandler.html#HighlightingStylesHandler" />
-      <keyword name="HighlightingStylesHandler (Constructor)" id="HighlightingStylesHandler (Constructor)" ref="eric5.E5XML.HighlightingStylesHandler.html#HighlightingStylesHandler.__init__" />
-      <keyword name="HighlightingStylesHandler.getVersion" id="HighlightingStylesHandler.getVersion" ref="eric5.E5XML.HighlightingStylesHandler.html#HighlightingStylesHandler.getVersion" />
-      <keyword name="HighlightingStylesHandler.startDocumentHighlightingStyles" id="HighlightingStylesHandler.startDocumentHighlightingStyles" ref="eric5.E5XML.HighlightingStylesHandler.html#HighlightingStylesHandler.startDocumentHighlightingStyles" />
-      <keyword name="HighlightingStylesHandler.startHighlightingStyles" id="HighlightingStylesHandler.startHighlightingStyles" ref="eric5.E5XML.HighlightingStylesHandler.html#HighlightingStylesHandler.startHighlightingStyles" />
-      <keyword name="HighlightingStylesHandler.startLexer" id="HighlightingStylesHandler.startLexer" ref="eric5.E5XML.HighlightingStylesHandler.html#HighlightingStylesHandler.startLexer" />
-      <keyword name="HighlightingStylesHandler.startStyle" id="HighlightingStylesHandler.startStyle" ref="eric5.E5XML.HighlightingStylesHandler.html#HighlightingStylesHandler.startStyle" />
-      <keyword name="ShortcutsHandler (Module)" id="ShortcutsHandler (Module)" ref="eric5.E5XML.ShortcutsHandler.html" />
-      <keyword name="ShortcutsHandler" id="ShortcutsHandler" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler" />
-      <keyword name="ShortcutsHandler (Constructor)" id="ShortcutsHandler (Constructor)" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.__init__" />
-      <keyword name="ShortcutsHandler.endAccel" id="ShortcutsHandler.endAccel" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.endAccel" />
-      <keyword name="ShortcutsHandler.endAltAccel" id="ShortcutsHandler.endAltAccel" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.endAltAccel" />
-      <keyword name="ShortcutsHandler.endName" id="ShortcutsHandler.endName" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.endName" />
-      <keyword name="ShortcutsHandler.endShortcut" id="ShortcutsHandler.endShortcut" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.endShortcut" />
-      <keyword name="ShortcutsHandler.getShortcuts" id="ShortcutsHandler.getShortcuts" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.getShortcuts" />
-      <keyword name="ShortcutsHandler.getVersion" id="ShortcutsHandler.getVersion" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.getVersion" />
-      <keyword name="ShortcutsHandler.startDocumentShortcuts" id="ShortcutsHandler.startDocumentShortcuts" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.startDocumentShortcuts" />
-      <keyword name="ShortcutsHandler.startShortcut" id="ShortcutsHandler.startShortcut" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.startShortcut" />
-      <keyword name="ShortcutsHandler.startShortcuts" id="ShortcutsHandler.startShortcuts" ref="eric5.E5XML.ShortcutsHandler.html#ShortcutsHandler.startShortcuts" />
       <keyword name="XMLEntityResolver (Module)" id="XMLEntityResolver (Module)" ref="eric5.E5XML.XMLEntityResolver.html" />
       <keyword name="XMLEntityResolver" id="XMLEntityResolver" ref="eric5.E5XML.XMLEntityResolver.html#XMLEntityResolver" />
       <keyword name="XMLEntityResolver.resolveEntity" id="XMLEntityResolver.resolveEntity" ref="eric5.E5XML.XMLEntityResolver.html#XMLEntityResolver.resolveEntity" />
       <keyword name="Config (Module)" id="Config (Module)" ref="eric5.E5XML.Config.html" />
+      <keyword name="TasksReader (Module)" id="TasksReader (Module)" ref="eric5.E5XML.TasksReader.html" />
+      <keyword name="TasksReader" id="TasksReader" ref="eric5.E5XML.TasksReader.html#TasksReader" />
+      <keyword name="TasksReader (Constructor)" id="TasksReader (Constructor)" ref="eric5.E5XML.TasksReader.html#TasksReader.__init__" />
+      <keyword name="TasksReader.__readTask" id="TasksReader.__readTask" ref="eric5.E5XML.TasksReader.html#TasksReader.__readTask" />
+      <keyword name="TasksReader.readXML" id="TasksReader.readXML" ref="eric5.E5XML.TasksReader.html#TasksReader.readXML" />
+      <keyword name="ShortcutsReader (Module)" id="ShortcutsReader (Module)" ref="eric5.E5XML.ShortcutsReader.html" />
+      <keyword name="ShortcutsReader" id="ShortcutsReader" ref="eric5.E5XML.ShortcutsReader.html#ShortcutsReader" />
+      <keyword name="ShortcutsReader (Constructor)" id="ShortcutsReader (Constructor)" ref="eric5.E5XML.ShortcutsReader.html#ShortcutsReader.__init__" />
+      <keyword name="ShortcutsReader.__readShortCut" id="ShortcutsReader.__readShortCut" ref="eric5.E5XML.ShortcutsReader.html#ShortcutsReader.__readShortCut" />
+      <keyword name="ShortcutsReader.getShortcuts" id="ShortcutsReader.getShortcuts" ref="eric5.E5XML.ShortcutsReader.html#ShortcutsReader.getShortcuts" />
+      <keyword name="ShortcutsReader.readXML" id="ShortcutsReader.readXML" ref="eric5.E5XML.ShortcutsReader.html#ShortcutsReader.readXML" />
       <keyword name="XMLUtilities (Module)" id="XMLUtilities (Module)" ref="eric5.E5XML.XMLUtilities.html" />
       <keyword name="make_parser" id="make_parser" ref="eric5.E5XML.XMLUtilities.html#make_parser" />
       <keyword name="HighlightingStylesWriter (Module)" id="HighlightingStylesWriter (Module)" ref="eric5.E5XML.HighlightingStylesWriter.html" />
@@ -1303,6 +1272,12 @@
       <keyword name="XMLWriterBase.encodedNewLines" id="XMLWriterBase.encodedNewLines" ref="eric5.E5XML.XMLWriterBase.html#XMLWriterBase.encodedNewLines" />
       <keyword name="XMLWriterBase.escape" id="XMLWriterBase.escape" ref="eric5.E5XML.XMLWriterBase.html#XMLWriterBase.escape" />
       <keyword name="XMLWriterBase.writeXML" id="XMLWriterBase.writeXML" ref="eric5.E5XML.XMLWriterBase.html#XMLWriterBase.writeXML" />
+      <keyword name="HighlightingStylesReader (Module)" id="HighlightingStylesReader (Module)" ref="eric5.E5XML.HighlightingStylesReader.html" />
+      <keyword name="HighlightingStylesReader" id="HighlightingStylesReader" ref="eric5.E5XML.HighlightingStylesReader.html#HighlightingStylesReader" />
+      <keyword name="HighlightingStylesReader (Constructor)" id="HighlightingStylesReader (Constructor)" ref="eric5.E5XML.HighlightingStylesReader.html#HighlightingStylesReader.__init__" />
+      <keyword name="HighlightingStylesReader.__readLexer" id="HighlightingStylesReader.__readLexer" ref="eric5.E5XML.HighlightingStylesReader.html#HighlightingStylesReader.__readLexer" />
+      <keyword name="HighlightingStylesReader.__readStyle" id="HighlightingStylesReader.__readStyle" ref="eric5.E5XML.HighlightingStylesReader.html#HighlightingStylesReader.__readStyle" />
+      <keyword name="HighlightingStylesReader.readXML" id="HighlightingStylesReader.readXML" ref="eric5.E5XML.HighlightingStylesReader.html#HighlightingStylesReader.readXML" />
       <keyword name="E5Graphics (Package)" id="E5Graphics (Package)" ref="index-eric5.E5Graphics.html" />
       <keyword name="E5GraphicsView (Module)" id="E5GraphicsView (Module)" ref="eric5.E5Graphics.E5GraphicsView.html" />
       <keyword name="E5GraphicsView" id="E5GraphicsView" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView" />
@@ -1571,14 +1546,12 @@
       <keyword name="MultiProject.__openMasterProject" id="MultiProject.__openMasterProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__openMasterProject" />
       <keyword name="MultiProject.__openRecent" id="MultiProject.__openRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__openRecent" />
       <keyword name="MultiProject.__readMultiProject" id="MultiProject.__readMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__readMultiProject" />
-      <keyword name="MultiProject.__readXMLMultiProject" id="MultiProject.__readXMLMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__readXMLMultiProject" />
       <keyword name="MultiProject.__saveRecent" id="MultiProject.__saveRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__saveRecent" />
       <keyword name="MultiProject.__showContextMenuRecent" id="MultiProject.__showContextMenuRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__showContextMenuRecent" />
       <keyword name="MultiProject.__showMenu" id="MultiProject.__showMenu" ref="eric5.MultiProject.MultiProject.html#MultiProject.__showMenu" />
       <keyword name="MultiProject.__showProperties" id="MultiProject.__showProperties" ref="eric5.MultiProject.MultiProject.html#MultiProject.__showProperties" />
       <keyword name="MultiProject.__syncRecent" id="MultiProject.__syncRecent" ref="eric5.MultiProject.MultiProject.html#MultiProject.__syncRecent" />
       <keyword name="MultiProject.__writeMultiProject" id="MultiProject.__writeMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__writeMultiProject" />
-      <keyword name="MultiProject.__writeXMLMultiProject" id="MultiProject.__writeXMLMultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.__writeXMLMultiProject" />
       <keyword name="MultiProject.addE5Actions" id="MultiProject.addE5Actions" ref="eric5.MultiProject.MultiProject.html#MultiProject.addE5Actions" />
       <keyword name="MultiProject.addProject" id="MultiProject.addProject" ref="eric5.MultiProject.MultiProject.html#MultiProject.addProject" />
       <keyword name="MultiProject.changeProjectProperties" id="MultiProject.changeProjectProperties" ref="eric5.MultiProject.MultiProject.html#MultiProject.changeProjectProperties" />
@@ -4635,8 +4608,6 @@
       <keyword name="Project.__readUserProperties" id="Project.__readUserProperties" ref="eric5.Project.Project.html#Project.__readUserProperties" />
       <keyword name="Project.__readXMLDebugProperties" id="Project.__readXMLDebugProperties" ref="eric5.Project.Project.html#Project.__readXMLDebugProperties" />
       <keyword name="Project.__readXMLProject" id="Project.__readXMLProject" ref="eric5.Project.Project.html#Project.__readXMLProject" />
-      <keyword name="Project.__readXMLSession" id="Project.__readXMLSession" ref="eric5.Project.Project.html#Project.__readXMLSession" />
-      <keyword name="Project.__readXMLTasks" id="Project.__readXMLTasks" ref="eric5.Project.Project.html#Project.__readXMLTasks" />
       <keyword name="Project.__saveRecent" id="Project.__saveRecent" ref="eric5.Project.Project.html#Project.__saveRecent" />
       <keyword name="Project.__searchNewFiles" id="Project.__searchNewFiles" ref="eric5.Project.Project.html#Project.__searchNewFiles" />
       <keyword name="Project.__showCodeCoverage" id="Project.__showCodeCoverage" ref="eric5.Project.Project.html#Project.__showCodeCoverage" />
@@ -9929,20 +9900,20 @@
       <file>eric5.E5XML.Config.html</file>
       <file>eric5.E5XML.DebuggerPropertiesHandler.html</file>
       <file>eric5.E5XML.DebuggerPropertiesWriter.html</file>
-      <file>eric5.E5XML.HighlightingStylesHandler.html</file>
+      <file>eric5.E5XML.HighlightingStylesReader.html</file>
       <file>eric5.E5XML.HighlightingStylesWriter.html</file>
-      <file>eric5.E5XML.MultiProjectHandler.html</file>
+      <file>eric5.E5XML.MultiProjectReader.html</file>
       <file>eric5.E5XML.MultiProjectWriter.html</file>
-      <file>eric5.E5XML.PluginRepositoryHandler.html</file>
+      <file>eric5.E5XML.PluginRepositoryReader.html</file>
       <file>eric5.E5XML.ProjectHandler.html</file>
       <file>eric5.E5XML.ProjectWriter.html</file>
-      <file>eric5.E5XML.SessionHandler.html</file>
+      <file>eric5.E5XML.SessionReader.html</file>
       <file>eric5.E5XML.SessionWriter.html</file>
-      <file>eric5.E5XML.ShortcutsHandler.html</file>
+      <file>eric5.E5XML.ShortcutsReader.html</file>
       <file>eric5.E5XML.ShortcutsWriter.html</file>
-      <file>eric5.E5XML.TasksHandler.html</file>
+      <file>eric5.E5XML.TasksReader.html</file>
       <file>eric5.E5XML.TasksWriter.html</file>
-      <file>eric5.E5XML.TemplatesHandler.html</file>
+      <file>eric5.E5XML.TemplatesReader.html</file>
       <file>eric5.E5XML.TemplatesWriter.html</file>
       <file>eric5.E5XML.UserProjectHandler.html</file>
       <file>eric5.E5XML.UserProjectWriter.html</file>
@@ -9950,6 +9921,8 @@
       <file>eric5.E5XML.XMLErrorHandler.html</file>
       <file>eric5.E5XML.XMLHandlerBase.html</file>
       <file>eric5.E5XML.XMLMessageDialog.html</file>
+      <file>eric5.E5XML.XMLStreamReaderBase.html</file>
+      <file>eric5.E5XML.XMLStreamWriterBase.html</file>
       <file>eric5.E5XML.XMLUtilities.html</file>
       <file>eric5.E5XML.XMLWriterBase.html</file>
       <file>eric5.Globals.__init__.html</file>
