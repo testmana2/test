@@ -92,8 +92,6 @@ class E5MessageBox(QMessageBox):
             self.setWindowTitle("{0} - {1}".format(
                 QApplication.applicationName(), title))
         self.setText(text)
-        if buttons == QMessageBox.NoButton:
-            buttons = QMessageBox.StandardButtons(QMessageBox.Ok)
         self.setStandardButtons(buttons)
 
 ################################################################################
