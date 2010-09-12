@@ -4,31 +4,31 @@
 #
 
 """
-Module implementing the writer class for writing an XML project session file.
+Module implementing the writer class for writing an XML session file.
 """
 
 import time
 
 from E5Gui.E5Application import e5App
 
-from .XMLWriterBase import XMLWriterBase
+from .XMLStreamWriterBase import XMLStreamWriterBase
 from .Config import sessionFileFormatVersion
 
 import Preferences
 
-class SessionWriter(XMLWriterBase):
+class SessionWriter(XMLStreamWriterBase):
     """
-    Class implementing the writer class for writing an XML project session file.
+    Class implementing the writer class for writing an XML session file.
     """
-    def __init__(self, file, projectName):
+    def __init__(self, device, projectName):
         """
         Constructor
         
-        @param file open file (like) object for writing
+        @param device reference to the I/O device to write to (QIODevice)
         @param projectName name of the project (string) or None for the
             global session
         """
-        XMLWriterBase.__init__(self, file)
+        XMLStreamWriterBase.__init__(self, device)
         
         self.name = projectName
         self.project = e5App().getObject("Project")
@@ -43,33 +43,33 @@ class SessionWriter(XMLWriterBase):
         """
         isGlobal = self.name is None
         
-        XMLWriterBase.writeXML(self)
+        XMLStreamWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE Session SYSTEM "Session-{0}.dtd">'.format(
+        self.writeDTD('<!DOCTYPE Session SYSTEM "Session-{0}.dtd">'.format(
             sessionFileFormatVersion))
         
         # add some generation comments
         if not isGlobal:
-            self._write("<!-- eric5 session file for project {0} -->".format(self.name))
-        self._write("<!-- This file was generated automatically, do not edit. -->")
+            self.writeComment(" eric5 session file for project {0} ".format(self.name))
+        self.writeComment(" This file was generated automatically, do not edit. ")
         if Preferences.getProject("XMLTimestamp") or isGlobal:
-            self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         
         # add the main tag
-        self._write('<Session version="{0}">'.format(sessionFileFormatVersion))
+        self.writeStartElement("Session")
+        self.writeAttribute("version", sessionFileFormatVersion)
         
         # step 0: save open multi project and project for the global session
         if isGlobal:
             if self.multiProject.isOpen():
-                self._write('    <MultiProject>{0}</MultiProject>'.format(
-                    self.multiProject.getMultiProjectFile()))
+                self.writeTextElement("MultiProject", 
+                    self.multiProject.getMultiProjectFile())
             if self.project.isOpen():
-                self._write('    <Project>{0}</Project>'.format(
-                    self.project.getProjectFile()))
+                self.writeTextElement("Project", self.project.getProjectFile())
         
         # step 1: save all open (project) filenames and the active window
         allOpenFiles = self.vm.getOpenFilenames()
-        self._write("  <Filenames>")
+        self.writeStartElement("Filenames")
         for of in allOpenFiles:
             if isGlobal or of.startswith(self.project.ppath):
                 ed = self.vm.getOpenEditor(of)
@@ -81,10 +81,14 @@ class SessionWriter(XMLWriterBase):
                     line, index = 0, 0
                     folds = ''
                     zoom = -9999
-                self._write(
-                    '    <Filename cline="{0:d}" cindex="{1:d}" folds="{2}" zoom="{3:d}">'
-                    '{4}</Filename>'.format(line, index, folds, zoom, of))
-        self._write("  </Filenames>")
+                self.writeStartElement("Filename")
+                self.writeAttribute("cline", str(line))
+                self.writeAttribute("cindex", str(index))
+                self.writeAttribute("folds", folds)
+                self.writeAttribute("zoom", str(zoom))
+                self.writeCharacters(of)
+                self.writeEndElement()
+        self.writeEndElement()
         
         aw = self.vm.getActiveName()
         if aw and aw.startswith(self.project.ppath):
@@ -93,47 +97,56 @@ class SessionWriter(XMLWriterBase):
                 line, index = ed.getCursorPosition()
             else:
                 line, index = 0, 0
-            self._write('  <ActiveWindow cline="{0:d}" cindex="{1:d}">{2}</ActiveWindow>'\
-                .format(line, index, aw))
+            self.writeStartElement("ActiveWindow")
+            self.writeAttribute("cline", str(line))
+            self.writeAttribute("cindex", str(index))
+            self.writeCharacters(aw)
+            self.writeEndElement()
         
         # step 2a: save all breakpoints
         allBreaks = Preferences.getProject("SessionAllBreakpoints")
         projectFiles = self.project.getSources(True)
         bpModel = self.dbs.getBreakPointModel()
-        self._write("  <Breakpoints>")
+        self.writeStartElement("Breakpoints")
         for row in range(bpModel.rowCount()):
             index = bpModel.index(row, 0)
             fname, lineno, cond, temp, enabled, count = \
                 bpModel.getBreakPointByIndex(index)[:6]
             if isGlobal or allBreaks or fname in projectFiles:
-                self._write("    <Breakpoint>")
-                self._write("      <BpFilename>{0}</BpFilename>".format(fname))
-                self._write('      <Linenumber value="{0:d}" />'.format(lineno))
-                self._write("      <Condition>{0}</Condition>".format(
-                    self.escape(str(cond))))
-                self._write('      <Temporary value="{0}" />'.format(temp))
-                self._write('      <Enabled value="{0}" />'.format(enabled))
-                self._write('      <Count value="{0:d}" />'.format(count))
-                self._write("    </Breakpoint>")
-        self._write("  </Breakpoints>")
+                self.writeStartElement("Breakpoint")
+                self.writeTextElement("BpFilename", fname)
+                self.writeEmptyElement("Linenumber")
+                self.writeAttribute("value", str(lineno))
+                self.writeTextElement("Condition", str(cond))
+                self.writeEmptyElement("Temporary")
+                self.writeAttribute("value", str(temp))
+                self.writeEmptyElement("Enabled")
+                self.writeAttribute("value", str(enabled))
+                self.writeEmptyElement("Count")
+                self.writeAttribute("value", str(count))
+                self.writeEndElement()
+        self.writeEndElement()
         
         # step 2b: save all watch expressions
-        self._write("  <Watchexpressions>")
+        self.writeStartElement("Watchexpressions")
         wpModel = self.dbs.getWatchPointModel()
         for row in range(wpModel.rowCount()):
             index = wpModel.index(row, 0)
             cond, temp, enabled, count, special = wpModel.getWatchPointByIndex(index)[:5]
-            self._write('    <Watchexpression>')
-            self._write("      <Condition>{0}</Condition>".format(self.escape(str(cond))))
-            self._write('      <Temporary value="{0}" />'.format(temp))
-            self._write('      <Enabled value="{0}" />'.format(enabled))
-            self._write('      <Count value="{0:d}" />'.format(count))
-            self._write('      <Special>{0}</Special>'.format(special))
-            self._write('    </Watchexpression>')
-        self._write('  </Watchexpressions>')
+            self.writeStartElement("Watchexpression")
+            self.writeTextElement("Condition", str(cond))
+            self.writeEmptyElement("Temporary")
+            self.writeAttribute("value", str(temp))
+            self.writeEmptyElement("Enabled")
+            self.writeAttribute("value", str(enabled))
+            self.writeEmptyElement("Count")
+            self.writeAttribute("value", str(count))
+            self.writeTextElement("Special", special)
+            self.writeEndElement()
+        self.writeEndElement()
         
         # step 3: save the debug info
-        self._write("  <DebugInfo>")
+        self.writeStartElement("DebugInfo")
         if isGlobal:
             if len(self.dbg.argvHistory):
                 dbgCmdline = str(self.dbg.argvHistory[0])
@@ -147,61 +160,62 @@ class SessionWriter(XMLWriterBase):
                 dbgEnv = self.dbg.envHistory[0]
             else:
                 dbgEnv = ""
-            self._write("    <CommandLine>{0}</CommandLine>"\
-                .format(self.escape(dbgCmdline)))
-            self._write("    <WorkingDirectory>{0}</WorkingDirectory>".format(dbgWd))
-            self._write("    <Environment>{0}</Environment>".format(dbgEnv))
-            self._write('    <ReportExceptions value="{0}" />'\
-                .format(self.dbg.exceptions))
-            self._write("    <Exceptions>")
+            self.writeTextElement("CommandLine", dbgCmdline)
+            self.writeTextElement("WorkingDirectory", dbgWd)
+            self.writeTextElement("Environment", dbgEnv)
+            self.writeEmptyElement("ReportExceptions")
+            self.writeAttribute("value", str(self.dbg.exceptions))
+            self.writeStartElement("Exceptions")
             for exc in self.dbg.excList:
-                self._write("      <Exception>{0}</Exception>".format(exc))
-            self._write("    </Exceptions>")
-            self._write("    <IgnoredExceptions>")
+                self.writeTextElement("Exception", exc)
+            self.writeEndElement()
+            self.writeStartElement("IgnoredExceptions")
             for iexc in self.dbg.excIgnoreList:
-                self._write("      <IgnoredException>{0}</IgnoredException>".format(iexc))
-            self._write("    </IgnoredExceptions>")
-            self._write('    <AutoClearShell value="{0}" />'\
-                .format(self.dbg.autoClearShell))
-            self._write('    <TracePython value="{0}" />'.format(self.dbg.tracePython))
-            self._write('    <AutoContinue value="{0}" />'.format(self.dbg.autoContinue))
-            self._write("    <CovexcPattern></CovexcPattern>")  # kept for compatibility
+                self.writeTextElement("IgnoredException", iexc)
+            self.writeEndElement()
+            self.writeEmptyElement("AutoClearShell")
+            self.writeAttribute("value", str(self.dbg.autoClearShell))
+            self.writeEmptyElement("TracePython")
+            self.writeAttribute("value", str(self.dbg.tracePython))
+            self.writeEmptyElement("AutoContinue")
+            self.writeAttribute("value", str(self.dbg.autoContinue))
+            self.writeEmptyElement("CovexcPattern")     # kept for compatibility
         else:
-            self._write("    <CommandLine>{0}</CommandLine>".format(
-                self.escape(str(self.project.dbgCmdline))))
-            self._write("    <WorkingDirectory>{0}</WorkingDirectory>".format(
-                self.project.dbgWd))
-            self._write("    <Environment>{0}</Environment>".format(
-                self.project.dbgEnv))
-            self._write('    <ReportExceptions value="{0}" />'.format(
-                self.project.dbgReportExceptions))
-            self._write("    <Exceptions>")
+            self.writeTextElement("CommandLine", self.project.dbgCmdline)
+            self.writeTextElement("WorkingDirectory", self.project.dbgWd)
+            self.writeTextElement("Environment", self.project.dbgEnv)
+            self.writeEmptyElement("ReportExceptions")
+            self.writeAttribute("value", str(self.project.dbgReportExceptions))
+            self.writeStartElement("Exceptions")
             for exc in self.project.dbgExcList:
-                self._write("      <Exception>{0}</Exception>".format(exc))
-            self._write("    </Exceptions>")
-            self._write("    <IgnoredExceptions>")
+                self.writeTextElement("Exception", exc)
+            self.writeEndElement()
+            self.writeStartElement("IgnoredExceptions")
             for iexc in self.project.dbgExcIgnoreList:
-                self._write("      <IgnoredException>{0}</IgnoredException>".format(iexc))
-            self._write("    </IgnoredExceptions>")
-            self._write('    <AutoClearShell value="{0}" />'.format(
-                self.project.dbgAutoClearShell))
-            self._write('    <TracePython value="{0}" />'.format(
-                self.project.dbgTracePython))
-            self._write('    <AutoContinue value="{0}" />'.format(
-                self.project.dbgAutoContinue))
-            self._write("    <CovexcPattern></CovexcPattern>")  # kept for compatibility
-        self._write("  </DebugInfo>")
+                self.writeTextElement("IgnoredException", iexc)
+            self.writeEndElement()
+            self.writeEmptyElement("AutoClearShell")
+            self.writeAttribute("value", str(self.project.dbgAutoClearShell))
+            self.writeEmptyElement("TracePython")
+            self.writeAttribute("value", str(self.project.dbgTracePython))
+            self.writeEmptyElement("AutoContinue")
+            self.writeAttribute("value", str(self.project.dbgAutoContinue))
+            self.writeEmptyElement("CovexcPattern")     # kept for compatibility
+        self.writeEndElement()
         
         # step 4: save bookmarks of all open (project) files
-        self._write("  <Bookmarks>")
+        self.writeStartElement("Bookmarks")
         for of in allOpenFiles:
             if isGlobal or of.startswith(self.project.ppath):
                 editor = self.vm.getOpenEditor(of)
                 for bookmark in editor.getBookmarks():
-                    self._write("    <Bookmark>")
-                    self._write("      <BmFilename>{0}</BmFilename>".format(of))
-                    self._write('      <Linenumber value="{0:d}" />'.format(bookmark))
-                    self._write("    </Bookmark>")
-        self._write("  </Bookmarks>")
+                    self.writeStartElement("Bookmark")
+                    self.writeTextElement("BmFilename", of)
+                    self.writeEmptyElement("Linenumber")
+                    self.writeAttribute("value", str(bookmark))
+                    self.writeEndElement()
+        self.writeEndElement()
         
-        self._write("</Session>", newline = False)
+        # add the main end tag
+        self.writeEndElement()
+        self.writeEndDocument()

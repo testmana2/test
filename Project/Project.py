@@ -45,7 +45,7 @@ from E5XML.ProjectHandler import ProjectHandler
 from E5XML.ProjectWriter import ProjectWriter
 from E5XML.UserProjectHandler import UserProjectHandler
 from E5XML.UserProjectWriter import UserProjectWriter
-from E5XML.SessionHandler import SessionHandler
+from E5XML.SessionReader import SessionReader
 from E5XML.SessionWriter import SessionWriter
 from E5XML.TasksReader import TasksReader
 from E5XML.TasksWriter import TasksWriter
@@ -897,137 +897,24 @@ class Project(QObject):
             return
             
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
+        fn = os.path.join(self.getProjectManagementDir(), 
+                          '{0}{1}.e4s'.format(fn, indicator))
         
-        try:
-            if ext.lower() in [".e4pz"]:
-                fn = os.path.join(self.getProjectManagementDir(), 
-                                  '{0}{1}.e4sz'.format(fn, indicator))
-                try:
-                    import gzip
-                except ImportError:
-                    if not quiet:
-                        E5MessageBox.critical(self.ui,
-                            self.trUtf8("Read project session"),
-                            self.trUtf8("""Compressed project session files not"""
-                                """ supported. The compression library is missing."""))
-                    return
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                fn = os.path.join(self.getProjectManagementDir(), 
-                                  '{0}{1}.e4s'.format(fn, indicator))
-                f = open(fn, "r", encoding = "utf-8")
-            line = f.readline()
-            dtdLine = f.readline()
+        f = QFile(fn)
+        if f.open(QIODevice.ReadOnly):
+            reader = SessionReader(f, False)
+            reader.readXML(quiet = quiet)
             f.close()
-        except EnvironmentError:
-            if not quiet:
-                E5MessageBox.critical(self.ui,
-                    self.trUtf8("Read project session"),
-                    self.trUtf8("<p>The project session <b>{0}</b>"
-                                " could not be read.</p>")\
-                        .format(fn))
-            return
-            
-        # now read the file
-        if line.startswith('<?xml'):
-            self.__readXMLSession(fn, dtdLine.startswith("<!DOCTYPE"), quiet)
         else:
-            if not quiet:
-                E5MessageBox.critical(self.ui,
-                    self.trUtf8("Read project session"),
-                    self.trUtf8("<p>The project session <b>{0}</b> has an unsupported"
-                        " format.</p>").format(fn))
-    
-    def __readXMLSession(self, fn, validating, quiet):
-        """
-        Private method to read the session data from an XML file.
-        
-        The data read is:
-            <ul>
-            <li>all open source filenames</li>
-            <li>the active window</li>
-            <li>all breakpoints</li>
-            <li>the commandline</li>
-            <li>the working directory</li>
-            <li>the exception reporting flag</li>
-            <li>the list of exception types to be highlighted</li>
-            <li>all bookmarks</li>
-            </ul>
-            
-        @param fn filename of the project session file to be read (string)
-        @param validating flag indicating a validation of the XML file is
-            requested (boolean)
-        @param quiet flag indicating quiet operations.
-            If this flag is true, no errors are reported.
-        """
-        if fn.lower().endswith("e4sz"):
-            # work around for a bug in xmlproc
-            validating = False
-        
-        parser = make_parser(validating)
-        handler = SessionHandler(self)
-        er = XMLEntityResolver()
-        eh = XMLErrorHandler()
-        
-        parser.setContentHandler(handler)
-        parser.setEntityResolver(er)
-        parser.setErrorHandler(eh)
-        
-        try:
-            if fn.lower().endswith("e4sz"):
-                try:
-                    import gzip
-                except ImportError:
-                    if not quiet:
-                        E5MessageBox.critical(self.ui,
-                            self.trUtf8("Read project session"),
-                            self.trUtf8("<p>The project session <b>{0}</b> could not"
-                                " be read.</p>").format(fn))
-                    return
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                f = open(fn, "r", encoding = "utf-8")
-            try:
-                try:
-                    parser.parse(f)
-                except UnicodeEncodeError:
-                    f.seek(0)
-                    buf = io.StringIO(f.read())
-                    parser.parse(buf)
-            finally:
-                f.close()
-        except IOError:
             if not quiet:
                 E5MessageBox.critical(self.ui,
                     self.trUtf8("Read project session"),
                     self.trUtf8("<p>The project session file <b>{0}</b> could not be"
                         " read.</p>").format(fn))
-            return
-        except XMLFatalParseError:
-            pass
-        
-        if not quiet:
-            eh.showParseMessages()
         
     def __writeSession(self, quiet = False, indicator = ""):
         """
         Private method to write the session data to an XML file (.e4s).
-        
-        The data saved is:
-            <ul>
-            <li>all open source filenames belonging to the project</li>
-            <li>the active window, if it belongs to the project</li>
-            <li>all breakpoints</li>
-            <li>the commandline</li>
-            <li>the working directory</li>
-            <li>the exception reporting flag</li>
-            <li>the list of exception types to be highlighted</li>
-            <li>all bookmarks of files belonging to the project</li>
-            </ul>
         
         @param quiet flag indicating quiet operations.
                 If this flag is true, no errors are reported.
@@ -1041,35 +928,14 @@ class Project(QObject):
             return
         
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
+        fn = os.path.join(self.getProjectManagementDir(), 
+                          '{0}{1}.e4s'.format(fn, indicator))
         
-        try:
-            if ext.lower() == ".e4pz":
-                fn = os.path.join(self.getProjectManagementDir(), 
-                                  '{0}{1}.e4sz'.format(fn, indicator))
-                try:
-                    import gzip
-                except ImportError:
-                    if not quiet:
-                        E5MessageBox.critical(self.ui,
-                            self.trUtf8("Save project session"),
-                            self.trUtf8("""Compressed project session files not"""
-                                """ supported. The compression library is missing."""))
-                    return
-                f = io.StringIO()
-            else:
-                fn = os.path.join(self.getProjectManagementDir(), 
-                                  '{0}{1}.e4s'.format(fn, indicator))
-                f = open(fn, "w", encoding = "utf-8")
-            
+        f = QFile(fn)
+        if f.open(QIODevice.WriteOnly):
             SessionWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
-            
-            if fn.lower().endswith("e4sz"):
-                g = gzip.open(fn, "wb")
-                g.write(f.getvalue().encode("utf-8"))
-                g.close()
             f.close()
-            
-        except IOError:
+        else:
             if not quiet:
                 E5MessageBox.critical(self.ui,
                     self.trUtf8("Save project session"),

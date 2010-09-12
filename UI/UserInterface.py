@@ -9,7 +9,6 @@ Module implementing the main user interface.
 
 import os
 import sys
-import io
 import logging
 
 from PyQt4.QtCore import *
@@ -91,13 +90,10 @@ from Graphics.SvgDiagram import SvgDiagram
 
 import UI.PixmapCache
 
-from E5XML.XMLUtilities import make_parser
-from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E5XML.XMLEntityResolver import XMLEntityResolver
 from E5XML.TasksReader import TasksReader
 from E5XML.TasksWriter import TasksWriter
+from E5XML.SessionReader import SessionReader
 from E5XML.SessionWriter import SessionWriter
-from E5XML.SessionHandler import SessionHandler
 
 from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
     proxyAuthenticationRequired
@@ -5059,15 +5055,12 @@ class UserInterface(QMainWindow):
         """
         Private slot to write the session data to an XML file (.e4s).
         """
-        try:
-            fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
-            f = open(fn, "w", encoding = "utf-8")
-            
+        fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
+        f = QFile(fn)
+        if f.open(QIODevice.WriteOnly):
             SessionWriter(f, None).writeXML()
-            
             f.close()
-            
-        except IOError:
+        else:
             E5MessageBox.critical(self,
                 self.trUtf8("Save session"),
                 self.trUtf8("<p>The session file <b>{0}</b> could not be written.</p>")
@@ -5077,62 +5070,24 @@ class UserInterface(QMainWindow):
         """
         Private slot to read in the session file (.e4s)
         """
-        try:
-            fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
-            if not os.path.exists(fn):
-                E5MessageBox.critical(self,
-                    self.trUtf8("Read session"),
-                    self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
-                        .format(fn))
-                return
-            f = open(fn, "r", encoding = "utf-8")
-            line = f.readline()
-            dtdLine = f.readline()
-            f.close()
-        except IOError:
+        fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
+        if not os.path.exists(fn):
             E5MessageBox.critical(self,
                 self.trUtf8("Read session"),
                 self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
             return
-            
-        # now read the file
-        if line.startswith('<?xml'):
-            parser = make_parser(dtdLine.startswith("<!DOCTYPE"))
-            handler = SessionHandler(None)
-            er = XMLEntityResolver()
-            eh = XMLErrorHandler()
-            
-            parser.setContentHandler(handler)
-            parser.setEntityResolver(er)
-            parser.setErrorHandler(eh)
-            
-            try:
-                f = open(fn, "r", encoding = "utf-8")
-                try:
-                    try:
-                        parser.parse(f)
-                    except UnicodeEncodeError:
-                        f.seek(0)
-                        buf = io.StringIO(f.read())
-                        parser.parse(buf)
-                finally:
-                    f.close()
-            except IOError:
-                E5MessageBox.critical(self,
-                    self.trUtf8("Read session"),
-                    self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
-                        .format(fn))
-                return
-            except XMLFatalParseError:
-                pass
-                
-            eh.showParseMessages()
+        
+        f = QFile(fn)
+        if f.open(QIODevice.ReadOnly):
+            reader = SessionReader(f, True)
+            reader.readXML()
+            f.close()
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Read session"),
-                self.trUtf8("<p>The session file <b>{0}</b> has an unsupported"
-                    " format.</p>").format(fn))
+                self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
+                    .format(fn))
     
     ##########################################################
     ## Below are slots to handle StdOut and StdErr
