@@ -27,12 +27,9 @@ class ShortcutsReader(XMLStreamReaderBase):
         self.version = ""
         self.shortcuts = {}
     
-    def readXML(self, quiet = False):
+    def readXML(self):
         """
         Public method to read and parse the XML document.
-        
-        @param quiet flag indicating quiet operations.
-                If this flag is true, no errors are reported.
         """
         while not self.atEnd():
             self.readNext()
@@ -46,8 +43,7 @@ class ShortcutsReader(XMLStreamReaderBase):
                 else:
                     self.raiseUnexpectedStartTag(self.name())
         
-        if not quiet:
-            self.showErrorMessage()
+        self.showErrorMessage()
     
     def __readShortCut(self):
         """
