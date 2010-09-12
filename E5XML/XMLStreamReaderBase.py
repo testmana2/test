@@ -59,8 +59,8 @@ class XMLStreamReaderBase(QXmlStreamReader):
         """
         if self.hasError():
             msg = QCoreApplication.translate("XMLStreamReaderBase",
-                "<p>XML parse error in file <b>{0}</b>, line {1}, column {2}<p>"
-                "<p>Error: {3}").format(self.device().fileName(), 
+                "<p>XML parse error in file <b>{0}</b>, line {1}, column {2}</p>"
+                "<p>Error: {3}</p>").format(self.device().fileName(), 
                     self.lineNumber(), self.columnNumber(), self.errorString())
             E5MessageBox.warning(None,
                 QCoreApplication.translate("XMLStreamReaderBase", "XML parse error"),
@@ -82,7 +82,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
         @param version unsupported version (string)
         """
         self.raiseError(QCoreApplication.translate("XMLStreamReaderBase",
-            "File format version '{0}' is not supported.".format(version)))
+            "File format version '{0}' is not supported.").format(version))
     
     def raiseBadValue(self, value):
         """
@@ -91,7 +91,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
         @param value bad value (string)
         """
         self.raiseError(QCoreApplication.translate("XMLStreamReaderBase",
-            "Bad value: {0}".format(value)))
+            "Bad value: {0}").format(value))
     
     def readXML(self):
         """
