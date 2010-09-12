@@ -411,6 +411,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         if f.open(QIODevice.ReadOnly):
             reader = HighlightingStylesReader(f, lexers)
             reader.readXML()
+            f.close()
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Import Highlighting Styles"),

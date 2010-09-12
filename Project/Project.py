@@ -1118,6 +1118,7 @@ class Project(QObject):
         if f.open(QIODevice.ReadOnly):
             reader = TasksReader(f, True)
             reader.readXML()
+            f.close()
         else:
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Read tasks"),

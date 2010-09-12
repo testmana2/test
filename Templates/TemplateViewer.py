@@ -883,6 +883,7 @@ class TemplateViewer(QTreeWidget):
         if f.open(QIODevice.ReadOnly):
             reader = TemplatesReader(f, viewer = self)
             reader.readXML()
+            f.close()
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Read templates"),
