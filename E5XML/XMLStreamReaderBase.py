@@ -37,6 +37,22 @@ class XMLStreamReaderBase(QXmlStreamReader):
         """
         return text.replace(self.NEWPARA, "\n\n").replace(self.NEWLINE, "\n")
     
+    def toBool(self, value):
+        """
+        Public method to convert the given value to bool.
+        
+        @param value value to be converted ("True", "False", "1", "0")
+        @return converted value (boolean) or None in case of an error
+        """
+        if value.lower() in ["true", "false"]:
+            return value.lower() == "true"
+        
+        if value in ["1", "0"]:
+            return bool(int(value))
+        
+        self.raiseBadValue(value)
+        return None
+    
     def showErrorMessage(self):
         """
         Public method to show an error message.
@@ -67,6 +83,15 @@ class XMLStreamReaderBase(QXmlStreamReader):
         """
         self.raiseError(QCoreApplication.translate("XMLStreamReaderBase",
             "File format version '{0}' is not supported.".format(version)))
+    
+    def raiseBadValue(self, value):
+        """
+        Public method to raise an error for a bad value.
+        
+        @param value bad value (string)
+        """
+        self.raiseError(QCoreApplication.translate("XMLStreamReaderBase",
+            "Bad value: {0}".format(value)))
     
     def readXML(self):
         """

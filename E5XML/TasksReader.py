@@ -74,20 +74,8 @@ class TasksReader(XMLStreamReaderBase):
                 "description" : "",
                }
         task["priority"] = int(self.attribute("priority", "1"))
-        
-        val = self.attribute("completed", "False")
-        if val in ["True", "False"]:
-            val = (val == "True")
-        else:
-            val = bool(int(val))
-        task["completed"] = val
-        
-        val = self.attribute("bugfix", "False")
-        if val in ["True", "False"]:
-            val = (val == "True")
-        else:
-            val = bool(int(val))
-        task["bugfix"] = val
+        task["completed"] = self.toBool(self.attribute("completed", "False"))
+        task["bugfix"] = self.toBool(self.attribute("bugfix", "False"))
         
         while not self.atEnd():
             self.readNext()
