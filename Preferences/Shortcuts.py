@@ -190,6 +190,10 @@ def exportShortcuts(fn):
     @param fn filename of the export file (string)
     @return flag indicating success
     """
+    # let the plugin manager create on demand plugin objects
+    pm = e5App().getObject("PluginManager")
+    pm.initOnDemandPlugins()
+    
     try:
         if fn.lower().endswith("e4kz"):
             try:
@@ -223,6 +227,10 @@ def importShortcuts(fn):
     @param fn filename of the import file (string)
     @return flag indicating success
     """
+    # let the plugin manager create on demand plugin objects
+    pm = e5App().getObject("PluginManager")
+    pm.initOnDemandPlugins()
+    
     try:
         if fn.lower().endswith("kz"):
             try:

@@ -85,6 +85,7 @@ class SessionHandler(XMLHandlerBase):
                 if editor is not None:
                     editor.clearBookmarks()
             self.dbs.getBreakPointModel().deleteAll()
+            self.dbs.getWatchPointModel().deleteAll()
         self.version = ''
     
     ###################################################
