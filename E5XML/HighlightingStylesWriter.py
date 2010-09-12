@@ -9,54 +9,58 @@ Module implementing the writer class for writing a highlighting styles XML file.
 
 import time
 
-from .XMLWriterBase import XMLWriterBase
+from .XMLStreamWriterBase import XMLStreamWriterBase
 from .Config import highlightingStylesFileFormatVersion
 
 import Preferences
 
-class HighlightingStylesWriter(XMLWriterBase):
+class HighlightingStylesWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing a highlighting styles XML file.
     """
-    def __init__(self, file, lexers):
+    def __init__(self, device, lexers):
         """
         Constructor
         
-        @param file open file (like) object for writing
+        @param device reference to the I/O device to write to (QIODevice)
         @param lexers list of lexer objects for which to export the styles
         """
-        XMLWriterBase.__init__(self, file)
+        XMLStreamWriterBase.__init__(self, device)
         
         self.lexers = lexers
         self.email = Preferences.getUser("Email")
-        
+    
     def writeXML(self):
         """
         Public method to write the XML to the file.
         """
-        XMLWriterBase.writeXML(self)
+        XMLStreamWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-{0}.dtd">'\
+        self.writeDTD('<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-{0}.dtd">'\
             .format(highlightingStylesFileFormatVersion))
         
         # add some generation comments
-        self._write("<!-- Eric5 highlighting styles -->")
-        self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
-        self._write("<!-- Author: {0} -->".format(self.escape("{0}".format(self.email))))
+        self.writeComment(" Eric5 highlighting styles ")
+        self.writeComment(" Saved: {0}".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+        self.writeComment(" Author: {0} ".format(self.email))
         
         # add the main tag
-        self._write('<HighlightingStyles version="{0}">'.format(
-            highlightingStylesFileFormatVersion))
+        self.writeStartElement("HighlightingStyles")
+        self.writeAttribute("version", highlightingStylesFileFormatVersion)
         
         for lexer in self.lexers:
-            self._write('  <Lexer name="{0}">'.format(lexer.language()))
+            self.writeStartElement("Lexer")
+            self.writeAttribute("name", lexer.language())
             for style in lexer.descriptions:
-                self._write('    <Style style="{0:d}" '
-                    'color="{1}" paper="{2}" font="{3}" eolfill="{4:d}">{5}</Style>'\
-                    .format(style, lexer.color(style).name(), lexer.paper(style).name(), 
-                            lexer.font(style).toString(), lexer.eolFill(style), 
-                            self.escape(lexer.description(style)))
-                )
-            self._write('  </Lexer>')
+                self.writeStartElement("Style")
+                self.writeAttribute("style", str(style))
+                self.writeAttribute("color", lexer.color(style).name())
+                self.writeAttribute("paper", lexer.paper(style).name())
+                self.writeAttribute("font", lexer.font(style).toString())
+                self.writeAttribute("eolfill", str(lexer.eolFill(style)))
+                self.writeCharacters(lexer.description(style))
+                self.writeEndElement()
+            self.writeEndElement()
         
-        self._write("</HighlightingStyles>", newline = False)
+        self.writeEndElement()
+        self.writeEndDocument()

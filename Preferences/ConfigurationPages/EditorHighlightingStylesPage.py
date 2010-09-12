@@ -7,9 +7,7 @@
 Module implementing the Editor Highlighting Styles configuration page.
 """
 
-import io
-
-from PyQt4.QtCore import pyqtSlot, QFileInfo
+from PyQt4.QtCore import pyqtSlot, QFileInfo, QFile, QIODevice
 from PyQt4.QtGui import QPalette, QFileDialog, QColorDialog, QFontDialog, \
                         QInputDialog, QFont, QMenu
 
@@ -18,11 +16,8 @@ from .Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage
 
 from E5Gui import E5MessageBox
 
-from E5XML.XMLUtilities import make_parser
-from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E5XML.XMLEntityResolver import XMLEntityResolver
 from E5XML.HighlightingStylesWriter import HighlightingStylesWriter
-from E5XML.HighlightingStylesHandler import HighlightingStylesHandler
+from E5XML.HighlightingStylesReader import HighlightingStylesReader
 
 import Preferences
 
@@ -385,16 +380,16 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             if ex:
                 fn += ex
         
-        try:
-            f = open(fn, "w", encoding = "utf-8")
+        f = QFile(fn)
+        if f.open(QIODevice.WriteOnly):
             HighlightingStylesWriter(f, lexers).writeXML()
             f.close()
-        except IOError as err:
+        else:
             E5MessageBox.critical(self,
                 self.trUtf8("Export Highlighting Styles"),
                 self.trUtf8("""<p>The highlighting styles could not be exported"""
                             """ to file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
-                    .format(fn, str(err))
+                    .format(fn, f.errorString())
             )
         
     def __importStyles(self, lexers):
@@ -412,60 +407,18 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         if not fn:
             return
         
-        try:
-            f = open(fn, "r", encoding = "utf-8")
-            try:
-                f.readline()
-                dtdLine = f.readline()
-            finally:
-                f.close()
-        except IOError as err:
+        f = QFile(fn)
+        if f.open(QIODevice.ReadOnly):
+            reader = HighlightingStylesReader(f, lexers)
+            reader.readXML()
+        else:
             E5MessageBox.critical(self,
                 self.trUtf8("Import Highlighting Styles"),
                 self.trUtf8("""<p>The highlighting styles could not be read"""
                             """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
-                    .format(fn, str(err))
+                    .format(fn, f.errorString())
             )
             return
-        
-        validating = dtdLine.startswith("<!DOCTYPE")
-        parser = make_parser(validating)
-        handler = HighlightingStylesHandler(lexers)
-        er = XMLEntityResolver()
-        eh = XMLErrorHandler()
-        
-        parser.setContentHandler(handler)
-        parser.setEntityResolver(er)
-        parser.setErrorHandler(eh)
-        
-        try:
-            f = open(fn, "r", encoding = "utf-8")
-            try:
-                try:
-                    parser.parse(f)
-                except UnicodeEncodeError:
-                    f.seek(0)
-                    buf = io.StringIO(f.read())
-                    parser.parse(buf)
-            finally:
-                f.close()
-        except IOError as err:
-            E5MessageBox.critical(self,
-                self.trUtf8("Import Highlighting Styles"),
-                self.trUtf8("""<p>The highlighting styles could not be read"""
-                            """ from file <b>{0}</b>.</p><p>Reason: {1}</p>""")\
-                    .format(fn, str(err))
-            )
-            return
-        except XMLFatalParseError:
-            E5MessageBox.critical(self,
-                self.trUtf8("Import Highlighting Styles"),
-                self.trUtf8("""<p>The highlighting styles file <b>{0}</b>"""
-                            """ has invalid contents.</p>""").format(fn))
-            eh.showParseMessages()
-            return
-        
-        eh.showParseMessages()
         
         if self.lexer:
             colour = self.lexer.color(self.style)

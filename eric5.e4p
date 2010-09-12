@@ -725,7 +725,6 @@
     <Source>E5XML/MultiProjectWriter.py</Source>
     <Source>E5XML/MultiProjectHandler.py</Source>
     <Source>E5XML/HighlightingStylesWriter.py</Source>
-    <Source>E5XML/HighlightingStylesHandler.py</Source>
     <Source>E5XML/XMLUtilities.py</Source>
     <Source>E5XML/XMLHandlerBase.py</Source>
     <Source>E5XML/XMLWriterBase.py</Source>
@@ -821,6 +820,7 @@
     <Source>E5XML/PluginRepositoryReader.py</Source>
     <Source>E5XML/TasksReader.py</Source>
     <Source>E5XML/TemplatesReader.py</Source>
+    <Source>E5XML/HighlightingStylesReader.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
