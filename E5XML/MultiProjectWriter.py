@@ -63,7 +63,7 @@ class MultiProjectWriter(XMLWriterBase):
             self._write("      <ProjectFile>%s</ProjectFile>" % \
                 Utilities.fromNativeSeparators(project['file']))
             self._write("      <ProjectDescription>%s</ProjectDescription>" % \
-                self.escape(self.encodedNewLines(project['name'])))
+                self.escape(self.encodedNewLines(project['description'])))
             self._write("    </Project>")
         self._write("  </Projects>")
         
