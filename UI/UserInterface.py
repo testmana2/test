@@ -4903,12 +4903,7 @@ class UserInterface(QMainWindow):
             if ex:
                 fn += ex
         
-        res = Shortcuts.exportShortcuts(fn)
-        if not res:
-            E5MessageBox.critical(self,
-                self.trUtf8("Export Keyboard Shortcuts"),
-                self.trUtf8("<p>The keyboard shortcuts could not be written to file"
-                    " <b>{0}</b>.</p>").format(fn))
+        Shortcuts.exportShortcuts(fn)
 
     def __importShortcuts(self):
         """
@@ -5053,6 +5048,7 @@ class UserInterface(QMainWindow):
         if f.open(QIODevice.ReadOnly):
             reader = TasksReader(f, viewer = self.taskViewer)
             reader.readXML()
+            f.close()
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Read tasks"),

@@ -715,7 +715,6 @@
     <Source>E5XML/DebuggerPropertiesWriter.py</Source>
     <Source>E5XML/TemplatesWriter.py</Source>
     <Source>E5XML/DebuggerPropertiesHandler.py</Source>
-    <Source>E5XML/ShortcutsHandler.py</Source>
     <Source>E5XML/Config.py</Source>
     <Source>E5XML/__init__.py</Source>
     <Source>E5XML/TasksWriter.py</Source>
@@ -821,6 +820,7 @@
     <Source>E5XML/TasksReader.py</Source>
     <Source>E5XML/TemplatesReader.py</Source>
     <Source>E5XML/HighlightingStylesReader.py</Source>
+    <Source>E5XML/ShortcutsReader.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

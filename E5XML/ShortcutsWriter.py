@@ -11,22 +11,22 @@ import time
 
 from E5Gui.E5Application import e5App
 
-from .XMLWriterBase import XMLWriterBase
+from .XMLStreamWriterBase import XMLStreamWriterBase
 from .Config import shortcutsFileFormatVersion
 
 import Preferences
 
-class ShortcutsWriter(XMLWriterBase):
+class ShortcutsWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML shortcuts file.
     """
-    def __init__(self, file):
+    def __init__(self, device):
         """
         Constructor
         
-        @param file open file (like) object for writing
+        @param device reference to the I/O device to write to (QIODevice)
         """
-        XMLWriterBase.__init__(self, file)
+        XMLStreamWriterBase.__init__(self, device)
         
         self.email = Preferences.getUser("Email")
         
@@ -34,151 +34,69 @@ class ShortcutsWriter(XMLWriterBase):
         """
         Public method to write the XML to the file.
         """
-        XMLWriterBase.writeXML(self)
+        XMLStreamWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE Shortcuts SYSTEM "Shortcuts-{0}.dtd">'.format(
+        self.writeDTD('<!DOCTYPE Shortcuts SYSTEM "Shortcuts-{0}.dtd">'.format(
             shortcutsFileFormatVersion))
         
         # add some generation comments
-        self._write("<!-- Eric5 keyboard shortcuts -->")
-        self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
-        self._write("<!-- Author: {0} -->".format(self.escape("{0}".format(self.email))))
+        self.writeComment(" Eric5 keyboard shortcuts ")
+        self.writeComment(" Saved: {0}".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+        self.writeComment(" Author: {0} ".format(self.email))
         
         # add the main tag
-        self._write('<Shortcuts version="{0}">'.format(shortcutsFileFormatVersion))
+        self.writeStartElement("Shortcuts")
+        self.writeAttribute("version", shortcutsFileFormatVersion)
         
-        for act in e5App().getObject("Project").getActions():
-            self._write('  <Shortcut category="Project">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>' \
-               .format(self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("UserInterface").getActions('ui'):
-            self._write('  <Shortcut category="General">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("UserInterface").getActions('wizards'):
-            self._write('  <Shortcut category="Wizards">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("DebugUI").getActions():
-            self._write('  <Shortcut category="Debug">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("ViewManager").getActions('edit'):
-            self._write('  <Shortcut category="Edit">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("ViewManager").getActions('file'):
-            self._write('  <Shortcut category="File">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("ViewManager").getActions('search'):
-            self._write('  <Shortcut category="Search">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("ViewManager").getActions('view'):
-            self._write('  <Shortcut category="View">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("ViewManager").getActions('macro'):
-            self._write('  <Shortcut category="Macro">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("ViewManager").getActions('bookmark'):
-            self._write('  <Shortcut category="Bookmarks">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        for act in e5App().getObject("ViewManager").getActions('spelling'):
-            self._write('  <Shortcut category="Spelling">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
-        
-        actions = e5App().getObject("ViewManager").getActions('window')
-        for act in actions:
-            self._write('  <Shortcut category="Window">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>'.format(
-                self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
+        self.__writeActions("Project", 
+            e5App().getObject("Project").getActions())
+        self.__writeActions("General", 
+            e5App().getObject("UserInterface").getActions('ui'))
+        self.__writeActions("Wizards", 
+            e5App().getObject("UserInterface").getActions('wizards'))
+        self.__writeActions("Debug", 
+            e5App().getObject("DebugUI").getActions())
+        self.__writeActions("Edit", 
+            e5App().getObject("ViewManager").getActions('edit'))
+        self.__writeActions("File", 
+            e5App().getObject("ViewManager").getActions('file'))
+        self.__writeActions("Search", 
+            e5App().getObject("ViewManager").getActions('search'))
+        self.__writeActions("View", 
+            e5App().getObject("ViewManager").getActions('view'))
+        self.__writeActions("Macro", 
+            e5App().getObject("ViewManager").getActions('macro'))
+        self.__writeActions("Bookmarks", 
+            e5App().getObject("ViewManager").getActions('bookmark'))
+        self.__writeActions("Spelling", 
+            e5App().getObject("ViewManager").getActions('spelling'))
+        self.__writeActions("Window", 
+            e5App().getObject("ViewManager").getActions('window'))
         
         for category, ref in e5App().getPluginObjects():
             if hasattr(ref, "getActions"):
-                actions = ref.getActions()
-                for act in actions:
-                    if act.objectName():
-                        # shortcuts are only exported, if their objectName is set
-                        self._write('  <Shortcut category="{0}">'.format(category))
-                        self._write('    <Name>{0}</Name>'.format(act.objectName()))
-                        self._write('    <Accel>{0}</Accel>'.format(
-                            self.escape("{0}".format(act.shortcut().toString()))))
-                        self._write('    <AltAccel>{0}</AltAccel>'\
-                            .format(self.escape("{0}".format(
-                                act.alternateShortcut().toString()))))
-                        self._write('  </Shortcut>')
+                self.__writeActions(category, ref.getActions())
     
-        for act in e5App().getObject("DummyHelpViewer").getActions():
-            self._write('  <Shortcut category="HelpViewer">')
-            self._write('    <Name>{0}</Name>'.format(act.objectName()))
-            self._write('    <Accel>{0}</Accel>'.format(
-                self.escape("{0}".format(act.shortcut().toString()))))
-            self._write('    <AltAccel>{0}</AltAccel>' \
-               .format(self.escape("{0}".format(act.alternateShortcut().toString()))))
-            self._write('  </Shortcut>')
+        self.__writeActions("HelpViewer", 
+            e5App().getObject("DummyHelpViewer").getActions())
     
         # add the main end tag
-        self._write("</Shortcuts>", newline = False)
+        self.writeEndElement()
+        self.writeEndDocument()
+    
+    def __writeActions(self, category, actions):
+        """
+        Private method to write the shortcuts for the given actions.
+        
+        @param category category the actions belong to (string)
+        @param actions list of actions to write (E5Action)
+        """
+        for act in actions:
+            if act.objectName():
+                # shortcuts are only exported, if their objectName is set
+                self.writeStartElement("Shortcut")
+                self.writeAttribute("category", category)
+                self.writeTextElement("Name", act.objectName())
+                self.writeTextElement("Accel", act.shortcut().toString())
+                self.writeTextElement("AltAccel", act.alternateShortcut().toString())
+                self.writeEndElement()

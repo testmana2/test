@@ -7,8 +7,6 @@
 Module implementing functions dealing with keyboard shortcuts.
 """
 
-import io
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
@@ -17,11 +15,8 @@ from E5Gui import E5MessageBox
 
 from Preferences import Prefs, syncPreferences
 
-from E5XML.XMLUtilities import make_parser
-from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E5XML.ShortcutsHandler import ShortcutsHandler
+from E5XML.ShortcutsReader import ShortcutsReader
 from E5XML.ShortcutsWriter import ShortcutsWriter
-from E5XML.XMLEntityResolver import XMLEntityResolver
 
 def __readShortcut(act, category, prefClass):
     """
@@ -189,136 +184,49 @@ def exportShortcuts(fn):
     Module function to export the keyboard shortcuts for the defined QActions.
     
     @param fn filename of the export file (string)
-    @return flag indicating success
     """
-    try:
-        if fn.lower().endswith("e4kz"):
-            try:
-                import gzip
-            except ImportError:
-                E5MessageBox.critical(None,
-                    QApplication.translate("Shortcuts", "Export Keyboard Shortcuts"),
-                    QApplication.translate("Shortcuts", 
-                        """Compressed keyboard shortcut files"""
-                        """ not supported. The compression library is missing."""))
-                return 0
-            f = io.StringIO()
-        else:
-            f = open(fn, "w", encoding = "utf-8")
-        
+    # let the plugin manager create on demand plugin objects
+    pm = e5App().getObject("PluginManager")
+    pm.initOnDemandPlugins()
+    
+    f = QFile(fn)
+    if f.open(QIODevice.WriteOnly):
         ShortcutsWriter(f).writeXML()
-        
-        if fn.lower().endswith("e4kz"):
-            g = gzip.open(fn, "wb")
-            g.write(f.getvalue().encode("utf-8"))
-            g.close()
         f.close()
-        return True
-    except IOError:
-        return False
+    else:
+        E5MessageBox.critical(None,
+            QApplication.translate("Shortcuts", "Export Keyboard Shortcuts"),
+            QApplication.translate("Shortcuts", 
+                "<p>The keyboard shortcuts could not be written to file <b>{0}</b>.</p>")
+                .format(fn))
 
 def importShortcuts(fn):
     """
     Module function to import the keyboard shortcuts for the defined E5Actions.
     
     @param fn filename of the import file (string)
-    @return flag indicating success
     """
-    try:
-        if fn.lower().endswith("kz"):
-            try:
-                import gzip
-            except ImportError:
-                E5MessageBox.critical(None,
-                    QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
-                    QApplication.translate("Shortcuts", 
-                        """Compressed keyboard shortcut files"""
-                        """ not supported. The compression library is missing."""))
-                return False
-            g = gzip.open(fn, "rb")
-            f = io.StringIO(g.read().decode("utf-8"))
-            g.close()
-        else:
-            f = open(fn, "r", encoding = "utf-8")
-        try:
-            f.readline()
-            dtdLine = f.readline()
-        finally:
-            f.close()
-    except IOError:
-        E5MessageBox.critical(None,
-            QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
-            QApplication.translate("Shortcuts", 
-                "<p>The keyboard shortcuts could not be read from file <b>{0}</b>.</p>")
-                .format(fn))
-        return False
+    # let the plugin manager create on demand plugin objects
+    pm = e5App().getObject("PluginManager")
+    pm.initOnDemandPlugins()
     
-    if fn.lower().endswith("kz"):
-        # work around for a bug in xmlproc
-        validating = False
+    f = QFile(fn)
+    if f.open(QIODevice.ReadOnly):
+        reader = ShortcutsReader(f)
+        reader.readXML()
+        f.close()
+        if not reader.hasError():
+            shortcuts = reader.getShortcuts()
+            setActions(shortcuts)
+            saveShortcuts()
+            syncPreferences()
     else:
-        validating = dtdLine.startswith("<!DOCTYPE")
-    parser = make_parser(validating)
-    handler = ShortcutsHandler()
-    er = XMLEntityResolver()
-    eh = XMLErrorHandler()
-    
-    parser.setContentHandler(handler)
-    parser.setEntityResolver(er)
-    parser.setErrorHandler(eh)
-    
-    try:
-        if fn.lower().endswith("kz"):
-            try:
-                import gzip
-            except ImportError:
-                E5MessageBox.critical(None,
-                    QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
-                    QApplication.translate("Shortcuts", 
-                        """Compressed keyboard shortcut files"""
-                        """ not supported. The compression library is missing."""))
-                return False
-            g = gzip.open(fn, "rb")
-            f = io.StringIO(g.read().decode("utf-8"))
-            g.close()
-        else:
-            f = open(fn, "r", encoding = "utf-8")
-        try:
-            try:
-                parser.parse(f)
-            except UnicodeEncodeError:
-                f.seek(0)
-                buf = io.StringIO(f.read())
-                parser.parse(buf)
-        finally:
-            f.close()
-    except IOError:
         E5MessageBox.critical(None,
             QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
             QApplication.translate("Shortcuts", 
                 "<p>The keyboard shortcuts could not be read from file <b>{0}</b>.</p>")
                 .format(fn))
-        return False
-        
-    except XMLFatalParseError:
-        E5MessageBox.critical(None,
-            QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
-            QApplication.translate("Shortcuts", 
-                "<p>The keyboard shortcuts file <b>{0}</b> has invalid contents.</p>")
-                .format(fn))
-        eh.showParseMessages()
-        return False
-        
-    eh.showParseMessages()
-    
-    shortcuts = handler.getShortcuts()
-    
-    setActions(shortcuts)
-    
-    saveShortcuts()
-    syncPreferences()
-    
-    return True
+        return
 
 def __setAction(actions, sdict):
     """

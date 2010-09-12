@@ -269,7 +269,6 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                     self.trUtf8("<p>The plugins repository file <b>{0}</b> "
                                 "could not be read. Select Update</p>")\
                         .format(self.pluginRepositoryFile))
-                return
         else:
             self.__repositoryMissing = True
             QTreeWidgetItem(self.repositoryList, 
