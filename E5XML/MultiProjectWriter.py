@@ -9,25 +9,25 @@ Module implementing the writer class for writing an XML multi project file.
 
 import time
 
-from .XMLWriterBase import XMLWriterBase
+from .XMLStreamWriterBase import XMLStreamWriterBase
 from .Config import multiProjectFileFormatVersion
 
 import Preferences
 import Utilities
 
-class MultiProjectWriter(XMLWriterBase):
+class MultiProjectWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML project file.
     """
-    def __init__(self, multiProject, file, multiProjectName):
+    def __init__(self, device, multiProject, multiProjectName):
         """
         Constructor
         
+        @param device reference to the I/O device to write to (QIODevice)
         @param multiProject Reference to the multi project object
-        @param file open file (like) object for writing
-        @param projectName name of the project (string)
+        @param multiProjectName name of the project (string)
         """
-        XMLWriterBase.__init__(self, file)
+        XMLStreamWriterBase.__init__(self, device)
         
         self.name = multiProjectName
         self.multiProject = multiProject
@@ -36,36 +36,38 @@ class MultiProjectWriter(XMLWriterBase):
         """
         Public method to write the XML to the file.
         """
-        XMLWriterBase.writeXML(self)
+        XMLStreamWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE MultiProject SYSTEM "MultiProject-{0}.dtd">'\
+        self.writeDTD('<!DOCTYPE MultiProject SYSTEM "MultiProject-{0}.dtd">'\
             .format(multiProjectFileFormatVersion))
         
         # add some generation comments
-        self._write("<!-- eric5 multi project file for multi project {0} -->"\
+        self.writeComment(" eric5 multi project file for multi project {0} "\
             .format(self.name))
         if Preferences.getMultiProject("XMLTimestamp"):
-            self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
-            self._write("<!-- Copyright (C) {0} -->".format(time.strftime('%Y')))
+            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(" Copyright (C) {0} ".format(time.strftime('%Y')))
         
         # add the main tag
-        self._write('<MultiProject version="{0}">'.format(multiProjectFileFormatVersion))
+        self.writeStartElement("MultiProject")
+        self.writeAttribute("version", multiProjectFileFormatVersion)
         
         # do description
-        self._write("  <Description>{0}</Description>".format(
-            self.escape(self.encodedNewLines(self.multiProject.description))))
+        self.writeTextElement("Description", 
+            self.encodedNewLines(self.multiProject.description))
         
         # do the projects
-        self._write("  <Projects>")
+        self.writeStartElement("Projects")
         for project in self.multiProject.getProjects():
-            self._write('    <Project isMaster="{0}">'.format(project['master']))
-            self._write("      <ProjectName>{0}</ProjectName>".format(
-                self.escape(project['name'])))
-            self._write("      <ProjectFile>{0}</ProjectFile>".format(
-                Utilities.fromNativeSeparators(project['file'])))
-            self._write("      <ProjectDescription>{0}</ProjectDescription>".format(
-                self.escape(self.encodedNewLines(project['name']))))
-            self._write("    </Project>")
-        self._write("  </Projects>")
+            self.writeStartElement("Project")
+            self.writeAttribute("isMaster", str(project['master']))
+            self.writeTextElement("ProjectName", project['name'])
+            self.writeTextElement("ProjectFile", 
+                Utilities.fromNativeSeparators(project['file']))
+            self.writeTextElement("ProjectDescription", 
+                self.encodedNewLines(project['description']))
+            self.writeEndElement()
+        self.writeEndElement()
         
-        self._write("</MultiProject>", newline = False)
+        self.writeEndElement()
+        self.writeEndDocument()

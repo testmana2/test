@@ -8,7 +8,6 @@ Module implementing the multi project management functionality.
 """
 
 import os
-import io
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -22,11 +21,7 @@ from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5FileDialog
 from E5Gui import E5MessageBox
 
-from E5XML.XMLUtilities import make_parser
-from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E5XML.XMLEntityResolver import XMLEntityResolver
-
-from E5XML.MultiProjectHandler import MultiProjectHandler
+from E5XML.MultiProjectReader import MultiProjectReader
 from E5XML.MultiProjectWriter import MultiProjectWriter
 
 import UI.PixmapCache
@@ -197,31 +192,19 @@ class MultiProject(QObject):
     
     def __readMultiProject(self, fn):
         """
-        Private method to read in a multi project (.e4m, .e4mz) file.
+        Private method to read in a multi project (.e4m) file.
         
         @param fn filename of the multi project file to be read (string)
         @return flag indicating success
         """
-        try:
-            if fn.lower().endswith("e4mz"):
-                try:
-                    import gzip
-                except ImportError:
-                    QApplication.restoreOverrideCursor()
-                    E5MessageBox.critical(self.ui,
-                        self.trUtf8("Read multiproject file"),
-                        self.trUtf8("""Compressed multiproject files not supported."""
-                                    """ The compression library is missing."""))
-                    return False
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                f = open(fn, "r", encoding = "utf-8")
-            line = f.readline()
-            dtdLine = f.readline()
+        f = QFile(fn)
+        if f.open(QIODevice.ReadOnly):
+            reader = MultiProjectReader(f, self)
+            reader.readXML()
             f.close()
-        except EnvironmentError:
+            if reader.hasError():
+                return False
+        else:
             QApplication.restoreOverrideCursor()
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Read multiproject file"),
@@ -232,96 +215,16 @@ class MultiProject(QObject):
         self.pfile = os.path.abspath(fn)
         self.ppath = os.path.abspath(os.path.dirname(fn))
         
-        # now read the file
-        if not line.startswith('<?xml'):
-            QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self.ui,
-                self.trUtf8("Read multiproject file"),
-                self.trUtf8("<p>The multiproject file <b>{0}</b> has an unsupported"
-                            " format.</p>").format(fn))
-            return False
-            
         # insert filename into list of recently opened multi projects
         self.__syncRecent()
         
-        res = self.__readXMLMultiProject(fn, dtdLine.startswith("<!DOCTYPE"))
-        if res:
-            self.name = os.path.splitext(os.path.basename(fn))[0]
-            
-            # check, if the files of the multi project still exist
-            self.__checkFilesExist()
-            
-        return res
-
-    def __readXMLMultiProject(self, fn, validating):
-        """
-        Private method to read the multi project data from an XML file.
+        self.name = os.path.splitext(os.path.basename(fn))[0]
         
-        @param fn filename of the multi project file to be read (string)
-        @param validating flag indicating a validation of the XML file is
-            requested (boolean)
-        @return flag indicating success
-        """
-        if fn.lower().endswith("e4mz"):
-            # work around for a bug in xmlproc
-            validating = False
+        # check, if the files of the multi project still exist
+        self.__checkFilesExist()
         
-        parser = make_parser(validating)
-        handler = MultiProjectHandler(self)
-        er = XMLEntityResolver()
-        eh = XMLErrorHandler()
-        
-        parser.setContentHandler(handler)
-        parser.setEntityResolver(er)
-        parser.setErrorHandler(eh)
-        
-        try:
-            if fn.lower().endswith("e4mz"):
-                try:
-                    import gzip
-                except ImportError:
-                    QApplication.restoreOverrideCursor()
-                    E5MessageBox.critical(self.ui,
-                        self.trUtf8("Read multiproject file"),
-                        self.trUtf8("""Compressed multiproject files not supported."""
-                                    """ The compression library is missing."""))
-                    return False
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                f = open(fn, "r", encoding = "utf-8")
-            try:
-                try:
-                    parser.parse(f)
-                except UnicodeEncodeError:
-                    f.seek(0)
-                    buf = io.StringIO(f.read())
-                    parser.parse(buf)
-            finally:
-                f.close()
-        except IOError:
-            QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self.ui,
-                self.trUtf8("Read multiproject file"),
-                self.trUtf8("<p>The multiproject file <b>{0}</b> could not be read.</p>")\
-                    .format(fn))
-            return False
-        except XMLFatalParseError:
-            QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self.ui,
-                self.trUtf8("Read multiproject file"),
-                self.trUtf8("<p>The multiproject file <b>{0}</b> has invalid "
-                    "contents.</p>").format(fn))
-            eh.showParseMessages()
-            return False
-        
-        QApplication.restoreOverrideCursor()
-        eh.showParseMessages()
-        QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
-        QApplication.processEvents()
         return True
-    
+
     def __writeMultiProject(self, fn = None):
         """
         Private method to save the multi project infos to a multi project file.
@@ -336,7 +239,17 @@ class MultiProject(QObject):
         if fn is None:
             fn = self.pfile
         
-        res = self.__writeXMLMultiProject(fn)
+        f = QFile(fn)
+        if f.open(QIODevice.WriteOnly):
+            MultiProjectWriter(f, self, os.path.splitext(os.path.basename(fn))[0])\
+                .writeXML()
+            res = True
+        else:
+            E5MessageBox.critical(self.ui,
+                self.trUtf8("Save multiproject file"),
+                self.trUtf8("<p>The multiproject file <b>{0}</b> could not be "
+                    "written.</p>").format(fn))
+            res = False
         
         if res:
             self.pfile = os.path.abspath(fn)
@@ -348,43 +261,6 @@ class MultiProject(QObject):
             self.__syncRecent()
         
         return res
-    
-    def __writeXMLMultiProject(self, fn = None):
-        """
-        Private method to write the multi project data to an XML file.
-        
-        @param fn the filename of the multi project file (string)
-        """
-        try:
-            if fn.lower().endswith("e4mz"):
-                try:
-                    import gzip
-                except ImportError:
-                    E5MessageBox.critical(self.ui,
-                        self.trUtf8("Save multiproject file"),
-                        self.trUtf8("""Compressed multiproject files not supported."""
-                                    """ The compression library is missing."""))
-                    return False
-                f = io.StringIO()
-            else:
-                f = open(fn, "w", encoding = "utf-8")
-            
-            MultiProjectWriter(self, f, os.path.splitext(os.path.basename(fn))[0])\
-                .writeXML()
-            
-            if fn.lower().endswith("e4mz"):
-                g = gzip.open(fn, "wb")
-                g.write(f.getvalue().encode("utf-8"))
-                g.close()
-            f.close()
-        except IOError:
-            E5MessageBox.critical(self.ui,
-                self.trUtf8("Save multiproject file"),
-                self.trUtf8("<p>The multiproject file <b>{0}</b> could not be "
-                    "written.</p>").format(fn))
-            return False
-        
-        return True
     
     def addProject(self, startdir = None):
         """
