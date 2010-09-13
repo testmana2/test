@@ -722,7 +722,6 @@
     <Source>E5XML/HighlightingStylesWriter.py</Source>
     <Source>E5XML/XMLUtilities.py</Source>
     <Source>E5XML/XMLHandlerBase.py</Source>
-    <Source>E5XML/XMLWriterBase.py</Source>
     <Source>E5XML/XMLMessageDialog.py</Source>
     <Source>E5XML/XMLEntityResolver.py</Source>
     <Source>E5XML/XMLErrorHandler.py</Source>
