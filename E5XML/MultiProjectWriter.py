@@ -53,8 +53,7 @@ class MultiProjectWriter(XMLStreamWriterBase):
         self.writeAttribute("version", multiProjectFileFormatVersion)
         
         # do description
-        self.writeTextElement("Description", 
-            self.encodedNewLines(self.multiProject.description))
+        self.writeTextElement("Description", self.multiProject.description)
         
         # do the projects
         self.writeStartElement("Projects")
@@ -64,8 +63,7 @@ class MultiProjectWriter(XMLStreamWriterBase):
             self.writeTextElement("ProjectName", project['name'])
             self.writeTextElement("ProjectFile", 
                 Utilities.fromNativeSeparators(project['file']))
-            self.writeTextElement("ProjectDescription", 
-                self.encodedNewLines(project['description']))
+            self.writeTextElement("ProjectDescription", project['description'])
             self.writeEndElement()
         self.writeEndElement()
         

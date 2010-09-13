@@ -40,9 +40,6 @@ class XMLStreamWriterBase(QXmlStreamWriter):
             frozenset  : self._write_frozenset, 
         }
         
-        self.NEWPARA = chr(0x2029)
-        self.NEWLINE = chr(0x2028)
-        
         self.setAutoFormatting(True)
         self.setAutoFormattingIndent(2)
     
@@ -52,14 +49,6 @@ class XMLStreamWriterBase(QXmlStreamWriter):
         """
         # write the XML header
         self.writeStartDocument()
-    
-    def encodedNewLines(self, text):
-        """
-        Public method to encode newlines and paragraph breaks.
-        
-        @param text text to encode (string)
-        """
-        return text.replace("\n\n", self.NEWPARA).replace("\n", self.NEWLINE)
     
     def _writeBasics(self, pyobject):
         """

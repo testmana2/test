@@ -45,8 +45,7 @@ class MultiProjectReader(XMLStreamReaderBase):
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "Description":
-                    self.multiProject.description = self.decodedNewLines(
-                        self.readElementText())
+                    self.multiProject.description = self.readElementText()
                 elif self.name() == "Projects":
                     self.__readProjects()
                 else:
@@ -89,6 +88,6 @@ class MultiProjectReader(XMLStreamReaderBase):
                 elif self.name() == "ProjectFile":
                     project["file"] = Utilities.toNativeSeparators(self.readElementText())
                 elif self.name() == "ProjectDescription":
-                    project["description"] = self.decodedNewLines(self.readElementText())
+                    project["description"] = self.readElementText()
                 else:
                     self.raiseUnexpectedStartTag(self.name())

@@ -25,17 +25,6 @@ class XMLStreamReaderBase(QXmlStreamReader):
         @param device reference to the I/O device to read from (QIODevice)
         """
         QXmlStreamReader.__init__(self, device)
-        
-        self.NEWPARA = chr(0x2029)
-        self.NEWLINE = chr(0x2028)
-    
-    def decodedNewLines(self, text):
-        """
-        Public method to decode newlines and paragraph breaks.
-        
-        @param text text to decode (string)
-        """
-        return text.replace(self.NEWPARA, "\n\n").replace(self.NEWLINE, "\n")
     
     def toBool(self, value):
         """
