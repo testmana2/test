@@ -49,7 +49,7 @@ from E5XML.SessionReader import SessionReader
 from E5XML.SessionWriter import SessionWriter
 from E5XML.TasksReader import TasksReader
 from E5XML.TasksWriter import TasksWriter
-from E5XML.DebuggerPropertiesHandler import DebuggerPropertiesHandler
+from E5XML.DebuggerPropertiesReader import DebuggerPropertiesReader
 from E5XML.DebuggerPropertiesWriter import DebuggerPropertiesWriter
 
 import VCS
@@ -1003,115 +1003,21 @@ class Project(QObject):
             return
             
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
+        fn = os.path.join(self.getProjectManagementDir(), '{0}.e4d'.format(fn))
         
-        try:
-            if ext.lower() in [".e4pz"]:
-                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4dz'.format(fn))
-                try:
-                    import gzip
-                except ImportError:
-                    if not quiet:
-                        E5MessageBox.critical(self.ui,
-                            self.trUtf8("Read debugger properties"),
-                            self.trUtf8("""Compressed project session files not"""
-                                        """ supported. The compression library is"""
-                                        """ missing."""))
-                    return
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4d'.format(fn))
-                f = open(fn, "r", encoding = "utf-8")
-            line = f.readline()
-            dtdLine = f.readline()
+        f = QFile(fn)
+        if f.open(QIODevice.ReadOnly):
+            reader = DebuggerPropertiesReader(f, self)
+            reader.readXML(quiet = quiet)
             f.close()
-        except EnvironmentError:
+        else:
             if not quiet:
                 E5MessageBox.critical(self.ui,
                     self.trUtf8("Read debugger properties"),
                     self.trUtf8("<p>The project debugger properties file <b>{0}</b> could"
                                 " not be read.</p>").format(fn))
-            return
-            
-        # now read the file
-        if line.startswith('<?xml'):
-            self.__readXMLDebugProperties(fn, dtdLine.startswith("<!DOCTYPE"), quiet)
-        else:
-            if not quiet:
-                E5MessageBox.critical(self.ui,
-                    self.trUtf8("Read debugger properties"),
-                    self.trUtf8("<p>The project debugger properties file <b>{0}</b> has"
-                                " an unsupported format.</p>").format(fn))
         
-    def __readXMLDebugProperties(self, fn, validating, quiet):
-        """
-        Public method to read the debugger properties from an XML file.
-        
-        @param fn filename of the project debugger properties file to be read
-            (string)
-        @param validating flag indicating a validation of the XML file is
-            requested (boolean)
-        @param quiet flag indicating quiet operations.
-            If this flag is true, no errors are reported.
-        """
-        if fn.lower().endswith("e4dz"):
-            # work around for a bug in xmlproc
-            validating = False
-        
-        parser = make_parser(validating)
-        handler = DebuggerPropertiesHandler(self)
-        er = XMLEntityResolver()
-        eh = XMLErrorHandler()
-        
-        parser.setContentHandler(handler)
-        parser.setEntityResolver(er)
-        parser.setErrorHandler(eh)
-        
-        try:
-            if fn.lower().endswith("e4dz"):
-                try:
-                    import gzip
-                except ImportError:
-                    if not quiet:
-                        E5MessageBox.critical(self.ui,
-                            self.trUtf8("Read debugger properties"),
-                            self.trUtf8("<p>The project debugger properties file"
-                                        " <b>{0}</b> could not be read.</p>").format(fn))
-                    return
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                f = open(fn, "r", encoding = "utf-8")
-            try:
-                try:
-                    parser.parse(f)
-                except UnicodeEncodeError:
-                    f.seek(0)
-                    buf = io.StringIO(f.read())
-                    parser.parse(buf)
-                if self.debugProperties["INTERPRETER"]:
-                    self.debugPropertiesLoaded = True
-                else:
-                    self.debugPropertiesLoaded = False
-            finally:
-                f.close()
-        except IOError:
-            if not quiet:
-                E5MessageBox.critical(self.ui,
-                    self.trUtf8("Read debugger properties"),
-                    self.trUtf8("<p>The project debugger properties file <b>{0}</b> could"
-                                " not be read.</p>")
-                        .format(fn))
-            return
-        except XMLFatalParseError:
-            pass
-            
-        if not quiet:
-            eh.showParseMessages()
-        
-    def __writeDebugProperties(self, quiet=0):
+    def __writeDebugProperties(self, quiet = False):
         """
         Private method to write the project debugger properties file (.e4d)
         
@@ -1126,35 +1032,14 @@ class Project(QObject):
             return
             
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
+        fn = os.path.join(self.getProjectManagementDir(), '{0}.e4d'.format(fn))
         
-        try:
-            if ext.lower() == ".e4pz":
-                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4dz'.format(fn))
-                try:
-                    import gzip
-                except ImportError:
-                    if not quiet:
-                        E5MessageBox.critical(self.ui,
-                            self.trUtf8("Save debugger properties"),
-                            self.trUtf8("""Compressed project debugger properties files"""
-                                        """ not supported. The compression library is"""
-                                        """ missing."""))
-                    return
-                f = io.StringIO()
-            else:
-                fn = os.path.join(self.getProjectManagementDir(), '{0}.e4d'.format(fn))
-                f = open(fn, "w", encoding = "utf-8")
-            
+        f = QFile(fn)
+        if f.open(QIODevice.WriteOnly):
             DebuggerPropertiesWriter(f, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()
-            
-            if fn.lower().endswith("e4dz"):
-                g = gzip.open(fn, "wb")
-                g.write(f.getvalue().encode("utf-8"))
-                g.close()
             f.close()
-            
-        except IOError:
+        else:
             if not quiet:
                 E5MessageBox.critical(self.ui,
                     self.trUtf8("Save debugger properties"),

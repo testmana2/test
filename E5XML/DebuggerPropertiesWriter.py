@@ -11,24 +11,24 @@ import time
 
 from E5Gui.E5Application import e5App
 
-from .XMLWriterBase import XMLWriterBase
+from .XMLStreamWriterBase import XMLStreamWriterBase
 from .Config import debuggerPropertiesFileFormatVersion
 
 import Preferences
 
-class DebuggerPropertiesWriter(XMLWriterBase):
+class DebuggerPropertiesWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML project debugger properties
     file.
     """
-    def __init__(self, file, projectName):
+    def __init__(self, device, projectName):
         """
         Constructor
         
-        @param file open file (like) object for writing
+        @param device reference to the I/O device to write to (QIODevice)
         @param projectName name of the project (string)
         """
-        XMLWriterBase.__init__(self, file)
+        XMLStreamWriterBase.__init__(self, device)
         
         self.name = projectName
         self.project = e5App().getObject("Project")
@@ -37,56 +37,63 @@ class DebuggerPropertiesWriter(XMLWriterBase):
         """
         Public method to write the XML to the file.
         """
-        XMLWriterBase.writeXML(self)
+        XMLStreamWriterBase.writeXML(self)
         
-        self._write('<!DOCTYPE DebuggerProperties SYSTEM "DebuggerProperties-{0}.dtd">'\
+        self.writeDTD('<!DOCTYPE DebuggerProperties SYSTEM "DebuggerProperties-{0}.dtd">'\
             .format(debuggerPropertiesFileFormatVersion))
         
         # add some generation comments
-        self._write("<!-- eric5 debugger properties file for project {0} -->"\
+        self.writeComment(" eric5 debugger properties file for project {0} "\
             .format(self.name))
-        self._write("<!-- This file was generated automatically, do not edit. -->")
+        self.writeComment(" This file was generated automatically, do not edit. ")
         if Preferences.getProject("XMLTimestamp"):
-            self._write("<!-- Saved: {0} -->".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
+            self.writeComment(" Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         
         # add the main tag
-        self._write('<DebuggerProperties version="{0}">'.format(
-            debuggerPropertiesFileFormatVersion))
+        self.writeStartElement("DebuggerProperties")
+        self.writeAttribute("version", debuggerPropertiesFileFormatVersion)
         
-        self._write('  <Interpreter>{0}</Interpreter>'.format(
-            self.project.debugProperties["INTERPRETER"]))
+        self.writeTextElement("Interpreter", self.project.debugProperties["INTERPRETER"])
         
-        self._write('  <DebugClient>{0}</DebugClient>'.format(
-            self.project.debugProperties["DEBUGCLIENT"]))
+        self.writeTextElement("DebugClient", self.project.debugProperties["DEBUGCLIENT"])
         
-        self._write('  <Environment override="{0:d}">{1}</Environment>'.format(
-            self.project.debugProperties["ENVIRONMENTOVERRIDE"],
-            self.escape(self.project.debugProperties["ENVIRONMENTSTRING"])))
+        self.writeStartElement("Environment")
+        self.writeAttribute("override", 
+            str(int(self.project.debugProperties["ENVIRONMENTOVERRIDE"])))
+        self.writeCharacters(self.project.debugProperties["ENVIRONMENTSTRING"])
+        self.writeEndElement()
         
-        self._write('  <RemoteDebugger on="{0:d}">'.format(
-            self.project.debugProperties["REMOTEDEBUGGER"]))
-        self._write('    <RemoteHost>{0}</RemoteHost>'.format(
-            self.project.debugProperties["REMOTEHOST"]))
-        self._write('    <RemoteCommand>{0}</RemoteCommand>'.format(
-            self.escape(self.project.debugProperties["REMOTECOMMAND"])))
-        self._write('  </RemoteDebugger>')
+        self.writeStartElement("RemoteDebugger")
+        self.writeAttribute("on", 
+            str(int(self.project.debugProperties["REMOTEDEBUGGER"])))
+        self.writeTextElement("RemoteHost", 
+            self.project.debugProperties["REMOTEHOST"])
+        self.writeTextElement("RemoteCommand", 
+            self.project.debugProperties["REMOTECOMMAND"])
+        self.writeEndElement()
         
-        self._write('  <PathTranslation on="{0:d}">'.format(
-            self.project.debugProperties["PATHTRANSLATION"]))
-        self._write('    <RemotePath>{0}</RemotePath>'.format(
-            self.project.debugProperties["REMOTEPATH"]))
-        self._write('    <LocalPath>{0}</LocalPath>'.format(
-            self.project.debugProperties["LOCALPATH"]))
-        self._write('  </PathTranslation>')
+        self.writeStartElement("PathTranslation")
+        self.writeAttribute("on", 
+            str(int(self.project.debugProperties["PATHTRANSLATION"])))
+        self.writeTextElement("RemotePath", 
+            self.project.debugProperties["REMOTEPATH"])
+        self.writeTextElement("LocalPath", 
+            self.project.debugProperties["LOCALPATH"])
+        self.writeEndElement()
         
-        self._write('  <ConsoleDebugger on="{0:d}">{1}</ConsoleDebugger>'.format(
-            self.project.debugProperties["CONSOLEDEBUGGER"],
-            self.escape(self.project.debugProperties["CONSOLECOMMAND"])))
+        self.writeStartElement("ConsoleDebugger")
+        self.writeAttribute("on", 
+            str(int(self.project.debugProperties["CONSOLEDEBUGGER"])))
+        self.writeCharacters(self.project.debugProperties["CONSOLECOMMAND"])
+        self.writeEndElement()
         
-        self._write('  <Redirect on="{0:d}" />'.format(
-            self.project.debugProperties["REDIRECT"]))
+        self.writeEmptyElement("Redirect")
+        self.writeAttribute("on", 
+            str(int(self.project.debugProperties["REDIRECT"])))
         
-        self._write('  <Noencoding on="{0:d}" />'.format(
-            self.project.debugProperties["NOENCODING"]))
+        self.writeEmptyElement("Noencoding")
+        self.writeAttribute("on", 
+            str(int(self.project.debugProperties["NOENCODING"])))
         
-        self._write("</DebuggerProperties>", newline = False)
+        self.writeEndElement()
+        self.writeEndDocument()
