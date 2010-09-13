@@ -719,7 +719,6 @@
     <Source>E5XML/__init__.py</Source>
     <Source>E5XML/TasksWriter.py</Source>
     <Source>E5XML/UserProjectWriter.py</Source>
-    <Source>E5XML/UserProjectHandler.py</Source>
     <Source>E5XML/MultiProjectWriter.py</Source>
     <Source>E5XML/HighlightingStylesWriter.py</Source>
     <Source>E5XML/XMLUtilities.py</Source>
@@ -821,6 +820,7 @@
     <Source>E5XML/ShortcutsReader.py</Source>
     <Source>E5XML/SessionReader.py</Source>
     <Source>E5XML/MultiProjectReader.py</Source>
+    <Source>E5XML/UserProjectReader.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

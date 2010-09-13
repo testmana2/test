@@ -43,7 +43,7 @@ from E5XML.XMLEntityResolver import XMLEntityResolver
 
 from E5XML.ProjectHandler import ProjectHandler
 from E5XML.ProjectWriter import ProjectWriter
-from E5XML.UserProjectHandler import UserProjectHandler
+from E5XML.UserProjectReader import UserProjectReader
 from E5XML.UserProjectWriter import UserProjectWriter
 from E5XML.SessionReader import SessionReader
 from E5XML.SessionWriter import SessionWriter
@@ -823,40 +823,18 @@ class Project(QObject):
             return
         
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
-        
         fn = os.path.join(self.getProjectManagementDir(), '{0}.e4q'.format(fn))
         if os.path.exists(fn):
-            try:
-                f = open(fn, "r", encoding = "utf-8")
-                
-                parser = make_parser(True)
-                handler = UserProjectHandler(self)
-                er = XMLEntityResolver()
-                eh = XMLErrorHandler()
-                
-                parser.setContentHandler(handler)
-                parser.setEntityResolver(er)
-                parser.setErrorHandler(eh)
-                
-                try:
-                    try:
-                        parser.parse(f)
-                    except UnicodeEncodeError:
-                        f.seek(0)
-                        buf = io.StringIO(f.read())
-                        parser.parse(buf)
-                finally:
-                    f.close()
-            except IOError:
+            f = QFile(fn)
+            if f.open(QIODevice.ReadOnly):
+                reader = UserProjectReader(f, self)
+                reader.readXML()
+                f.close()
+            else:
                 E5MessageBox.critical(self.ui,
                     self.trUtf8("Read user project properties"),
                     self.trUtf8("<p>The user specific project properties file <b>{0}</b>"
                         " could not be read.</p>").format(fn))
-                return
-            except XMLFatalParseError:
-                pass
-            
-            eh.showParseMessages()
         
     def __writeUserProperties(self):
         """
@@ -866,16 +844,13 @@ class Project(QObject):
             return
         
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
-        
         fn = os.path.join(self.getProjectManagementDir(), '{0}.e4q'.format(fn))
         
-        try:
-            f = open(fn, "w", encoding = "utf-8")
-            
+        f = QFile(fn)
+        if f.open(QIODevice.WriteOnly):
             UserProjectWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
-            
             f.close()
-        except IOError:
+        else:
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Save user project properties"),
                 self.trUtf8("<p>The user specific project properties file <b>{0}</b>"
