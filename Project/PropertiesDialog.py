@@ -22,7 +22,6 @@ from .SpellingPropertiesDialog import SpellingPropertiesDialog
 
 from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
 
-import Preferences
 import Utilities
 
 class PropertiesDialog(QDialog, Ui_PropertiesDialog):
@@ -230,10 +229,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         fn = self.nameEdit.text()
         if fn:
             self.project.name = fn
-            if Preferences.getProject("CompressedProjectFiles"):
-                fn = "{0}.e4pz".format(fn)
-            else:
-                fn = "{0}.e4p".format(fn)
+            fn = "{0}.e4p".format(fn)
             self.project.pfile = os.path.join(self.project.ppath, fn)
         else:
             self.project.pfile = ""

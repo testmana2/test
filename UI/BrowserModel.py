@@ -1112,7 +1112,7 @@ class BrowserFileItem(BrowserItem):
         
         @return flag indicating an eric project file (boolean)
         """
-        return self.fileext in ['.e4p', '.e4pz']
+        return self.fileext in ['.e4p']
     
     def isMultiProjectFile(self):
         """
@@ -1120,7 +1120,7 @@ class BrowserFileItem(BrowserItem):
         
         @return flag indicating an eric project file (boolean)
         """
-        return self.fileext in ['.e4m', '.e4mz']
+        return self.fileext in ['.e4m']
     
     def isIdlFile(self):
         """

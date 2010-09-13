@@ -25,8 +25,6 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
         self.setObjectName("ProjectPage")
         
         # set initial values
-        self.projectCompressedProjectFilesCheckBox.setChecked(
-            Preferences.getProject("CompressedProjectFiles"))
         self.projectSearchNewFilesRecursiveCheckBox.setChecked(
             Preferences.getProject("SearchNewFilesRecursively"))
         self.projectSearchNewFilesCheckBox.setChecked(
@@ -56,8 +54,6 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
         """
         Public slot to save the Project configuration.
         """
-        Preferences.setProject("CompressedProjectFiles",
-            self.projectCompressedProjectFilesCheckBox.isChecked())
         Preferences.setProject("SearchNewFilesRecursively",
             self.projectSearchNewFilesRecursiveCheckBox.isChecked())
         Preferences.setProject("SearchNewFiles",

@@ -568,7 +568,7 @@ class Project(QObject):
         
     def __readProject(self, fn):
         """
-        Private method to read in a project (.e4p, .e4pz) file.
+        Private method to read in a project (.e4p) file.
         
         @param fn filename of the project file to be read (string)
         @return flag indicating success
@@ -930,8 +930,7 @@ class Project(QObject):
             
         fname, ext = os.path.splitext(os.path.basename(self.pfile))
         
-        for fn in [os.path.join(self.getProjectManagementDir(), "{0}.e4sz".format(fname)),
-                   os.path.join(self.getProjectManagementDir(), "{0}.e4s".format(fname))]:
+        for fn in [os.path.join(self.getProjectManagementDir(), "{0}.e4s".format(fname))]:
             if os.path.exists(fn):
                 try:
                     os.remove(fn)
@@ -1060,8 +1059,7 @@ class Project(QObject):
             
         fname, ext = os.path.splitext(os.path.basename(self.pfile))
         
-        for fn in [os.path.join(self.getProjectManagementDir(), "{0}.e4dz".format(fname)),
-                   os.path.join(self.getProjectManagementDir(), "{0}.e4d".format(fname))]:
+        for fn in [os.path.join(self.getProjectManagementDir(), "{0}.e4d".format(fname))]:
             if os.path.exists(fn):
                 try:
                     os.remove(fn)
@@ -2323,7 +2321,7 @@ class Project(QObject):
                 self.parent(),
                 self.trUtf8("Open project"),
                 "",
-                self.trUtf8("Project Files (*.e4p *.e4pz)"))
+                self.trUtf8("Project Files (*.e4p)"))
         
         QApplication.processEvents()
         
@@ -2479,16 +2477,12 @@ class Project(QObject):
         
         @return flag indicating success (boolean)
         """
-        if Preferences.getProject("CompressedProjectFiles"):
-            defaultFilter = self.trUtf8("Compressed Project Files (*.e4pz)")
-        else:
-            defaultFilter = self.trUtf8("Project Files (*.e4p)")
+        defaultFilter = self.trUtf8("Project Files (*.e4p)")
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.parent(),
             self.trUtf8("Save project as"),
             self.ppath,
-            self.trUtf8("Project Files (*.e4p);;"
-                "Compressed Project Files (*.e4pz)"),
+            self.trUtf8("Project Files (*.e4p)"),
             defaultFilter,
             QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
         

@@ -184,7 +184,7 @@ class VcsProjectHelper(QObject):
                     ok = self.project.vcs.vcsCheckout(vcsDataDict, projectdir, False)
                 if ok:
                     projectdir = os.path.normpath(projectdir)
-                    filters = ["*.e4p", "*.e4pz"]
+                    filters = ["*.e4p"]
                     d = QDir(projectdir)
                     plist = d.entryInfoList(filters)
                     if len(plist):
@@ -212,8 +212,7 @@ class VcsProjectHelper(QObject):
                             self.trUtf8("New project from repository"),
                             self.trUtf8("The project retrieved from the repository"
                                 " does not contain an eric project file"
-                                " (*.e4p *.e4pz)."
-                                " Create it?"),
+                                " (*.e4p). Create it?"),
                             yesDefault = True)
                         if res:
                             self.project.ppath = projectdir

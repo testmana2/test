@@ -478,7 +478,6 @@ class Prefs(object):
         "AutoLoadSession" : False,
         "AutoSaveSession" : False,
         "SessionAllBreakpoints" : False,
-        "CompressedProjectFiles" : False,
         "XMLTimestamp" : True,
         "AutoCompileForms" : False,
         "AutoCompileResources" : False,

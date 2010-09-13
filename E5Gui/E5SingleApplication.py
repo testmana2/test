@@ -124,7 +124,7 @@ class E5SingleApplicationClient(SingleApplicationClient):
             ext = os.path.splitext(arg)[1]
             ext = os.path.normcase(ext)
             
-            if ext in ['.e4p', '.e4pz']:
+            if ext in ['.e4p']:
                 self.__openProject(arg)
             else:
                 self.__openFile(arg)

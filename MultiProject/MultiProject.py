@@ -407,7 +407,7 @@ class MultiProject(QObject):
                 self.parent(),
                 self.trUtf8("Open multiproject"),
                 "",
-                self.trUtf8("Multiproject Files (*.e4m *.e4mz)"))
+                self.trUtf8("Multiproject Files (*.e4m)"))
             
             if fn == "":
                 fn = None
@@ -456,16 +456,12 @@ class MultiProject(QObject):
         
         @return flag indicating success (boolean)
         """
-        if Preferences.getProject("CompressedProjectFiles"):
-            defaultFilter = self.trUtf8("Compressed Multiproject Files (*.e4mz)")
-        else:
-            defaultFilter = self.trUtf8("Multiproject Files (*.e4m)")
+        defaultFilter = self.trUtf8("Multiproject Files (*.e4m)")
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.parent(),
             self.trUtf8("Save multiproject as"),
             self.ppath,
-            self.trUtf8("Multiproject Files (*.e4m);;"
-                "Compressed Multiproject Files (*.e4mz)"),
+            self.trUtf8("Multiproject Files (*.e4m)"),
             defaultFilter,
             QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
         

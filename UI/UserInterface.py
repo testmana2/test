@@ -1153,8 +1153,8 @@ class UserInterface(QMainWindow):
             '--' option are considered debug arguments to the program 
             for the debugger. All files named before the '--' option
             are opened in a text editor, unless the argument ends in 
-            .e4p or .e4pz, then it is opened as a project file.
-            If it ends in .e4m or .e4mz, it is opened as a multiproject.
+            .e4p, then it is opened as a project file. If it ends in 
+            .e4m, it is opened as a multiproject.
         """
         # no args, return
         if args is None:
@@ -1195,10 +1195,10 @@ class UserInterface(QMainWindow):
             ext = os.path.splitext(arg)[1]
             ext = os.path.normcase(ext)
 
-            if ext in ['.e4p', '.e4pz']:
+            if ext in ['.e4p']:
                 self.project.openProject(arg)
                 opens += 1
-            elif ext in ['.e4m', '.e4mz']:
+            elif ext in ['.e4m']:
                 self.multiProject.openMultiProject(arg)
                 opens += 1
             else:
@@ -4885,8 +4885,7 @@ class UserInterface(QMainWindow):
             None,
             self.trUtf8("Export Keyboard Shortcuts"),
             "",
-            self.trUtf8("Keyboard shortcut file (*.e4k);;"
-                "Compressed keyboard shortcut file (*.e4kz)"),
+            self.trUtf8("Keyboard shortcut file (*.e4k)"),
             "",
             QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
         
@@ -4909,7 +4908,7 @@ class UserInterface(QMainWindow):
             None,
             self.trUtf8("Import Keyboard Shortcuts"),
             "",
-            self.trUtf8("Keyboard shortcut file (*.e4k *.e4kz)"))
+            self.trUtf8("Keyboard shortcut file (*.e4k)"))
         
         if fn:
             Shortcuts.importShortcuts(fn)
