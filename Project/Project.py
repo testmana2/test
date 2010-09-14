@@ -37,11 +37,7 @@ from .FiletypeAssociationDialog import FiletypeAssociationDialog
 from .LexerAssociationDialog import LexerAssociationDialog
 from .UserPropertiesDialog import UserPropertiesDialog
 
-from E5XML.XMLUtilities import make_parser
-from E5XML.XMLErrorHandler import XMLErrorHandler, XMLFatalParseError
-from E5XML.XMLEntityResolver import XMLEntityResolver
-
-from E5XML.ProjectHandler import ProjectHandler
+from E5XML.ProjectReader import ProjectReader
 from E5XML.ProjectWriter import ProjectWriter
 from E5XML.UserProjectReader import UserProjectReader
 from E5XML.UserProjectWriter import UserProjectWriter
@@ -573,33 +569,20 @@ class Project(QObject):
         @param fn filename of the project file to be read (string)
         @return flag indicating success
         """
-        try:
-            if fn.lower().endswith("e4pz"):
-                try:
-                    import gzip
-                except ImportError:
-                    QApplication.restoreOverrideCursor()
-                    E5MessageBox.critical(self.ui,
-                        self.trUtf8("Read project file"),
-                        self.trUtf8("""Compressed project files not supported."""
-                                    """ The compression library is missing."""))
-                    return False
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                f = open(fn, "r", encoding = "utf-8")
-            line = f.readline()
-            dtdLine = f.readline()
+        f = QFile(fn)
+        if f.open(QIODevice.ReadOnly):
+            reader = ProjectReader(f, self)
+            reader.readXML()
+            res = not reader.hasError()
             f.close()
-        except EnvironmentError:
+        else:
             QApplication.restoreOverrideCursor()
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Read project file"),
                 self.trUtf8("<p>The project file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
             return False
-            
+        
         self.pfile = os.path.abspath(fn)
         self.ppath = os.path.abspath(os.path.dirname(fn))
         if Utilities.isWindowsPlatform():
@@ -610,16 +593,6 @@ class Project(QObject):
         # insert filename into list of recently opened projects
         self.__syncRecent()
         
-        # now read the file
-        if not line.startswith('<?xml'):
-            QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self.ui,
-                self.trUtf8("Read project file"),
-                self.trUtf8("<p>The project file <b>{0}</b> has an unsupported"
-                            " format.</p>").format(fn))
-            return False
-            
-        res = self.__readXMLProject(fn, dtdLine.startswith("<!DOCTYPE"))
         if res:
             if len(self.pdata["TRANSLATIONPATTERN"]) == 1:
                 self.translationsRoot = \
@@ -669,75 +642,6 @@ class Project(QObject):
             
         return res
 
-    def __readXMLProject(self, fn, validating):
-        """
-        Private method to read the project data from an XML file.
-        
-        @param fn filename of the project file to be read (string)
-        @param validating flag indicating a validation of the XML file is
-            requested (boolean)
-        @return flag indicating success (boolean)
-        """
-        if fn.lower().endswith("e4pz"):
-            # work around for a bug in xmlproc
-            validating = False
-        
-        parser = make_parser(validating)
-        handler = ProjectHandler(self)
-        er = XMLEntityResolver()
-        eh = XMLErrorHandler()
-        
-        parser.setContentHandler(handler)
-        parser.setEntityResolver(er)
-        parser.setErrorHandler(eh)
-        
-        try:
-            if fn.lower().endswith("e4pz"):
-                try:
-                    import gzip
-                except ImportError:
-                    QApplication.restoreOverrideCursor()
-                    E5MessageBox.critical(self.ui,
-                        self.trUtf8("Read project file"),
-                        self.trUtf8("""Compressed project files not supported."""
-                                    """ The compression library is missing."""))
-                    return False
-                g = gzip.open(fn, "rb")
-                f = io.StringIO(g.read().decode("utf-8"))
-                g.close()
-            else:
-                f = open(fn, "r", encoding = "utf-8")
-            try:
-                try:
-                    parser.parse(f)
-                except UnicodeEncodeError:
-                    f.seek(0)
-                    buf = io.StringIO(f.read())
-                    parser.parse(buf)
-            finally:
-                f.close()
-        except IOError:
-            QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self.ui,
-                self.trUtf8("Read project file"),
-                self.trUtf8("<p>The project file <b>{0}</b> could not be read.</p>")\
-                    .format(fn))
-            return False
-        except XMLFatalParseError:
-            QApplication.restoreOverrideCursor()
-            E5MessageBox.critical(self.ui,
-                self.trUtf8("Read project file"),
-                self.trUtf8("<p>The project file <b>{0}</b> has invalid contents.</p>")\
-                    .format(fn))
-            eh.showParseMessages()
-            return False
-        
-        QApplication.restoreOverrideCursor()
-        eh.showParseMessages()
-        QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
-        QApplication.processEvents()
-        return True
-        
     def __writeProject(self, fn = None):
         """
         Private method to save the project infos to a project file.

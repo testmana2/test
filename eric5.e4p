@@ -710,7 +710,6 @@
     <Source>DebugClients/Python/coverage/results.py</Source>
     <Source>E5XML/ProjectWriter.py</Source>
     <Source>E5XML/SessionWriter.py</Source>
-    <Source>E5XML/ProjectHandler.py</Source>
     <Source>E5XML/ShortcutsWriter.py</Source>
     <Source>E5XML/DebuggerPropertiesWriter.py</Source>
     <Source>E5XML/TemplatesWriter.py</Source>
@@ -720,11 +719,7 @@
     <Source>E5XML/UserProjectWriter.py</Source>
     <Source>E5XML/MultiProjectWriter.py</Source>
     <Source>E5XML/HighlightingStylesWriter.py</Source>
-    <Source>E5XML/XMLUtilities.py</Source>
-    <Source>E5XML/XMLHandlerBase.py</Source>
-    <Source>E5XML/XMLMessageDialog.py</Source>
-    <Source>E5XML/XMLEntityResolver.py</Source>
-    <Source>E5XML/XMLErrorHandler.py</Source>
+    <Source>E5XML/XMLWriterBase.py</Source>
     <Source>E5Graphics/__init__.py</Source>
     <Source>E5Graphics/E5ArrowItem.py</Source>
     <Source>E5Graphics/E5GraphicsView.py</Source>
@@ -820,6 +815,7 @@
     <Source>E5XML/MultiProjectReader.py</Source>
     <Source>E5XML/UserProjectReader.py</Source>
     <Source>E5XML/DebuggerPropertiesReader.py</Source>
+    <Source>E5XML/ProjectReader.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1017,7 +1013,6 @@
     <Form>Helpviewer/Passwords/PasswordsDialog.ui</Form>
     <Form>Helpviewer/AdBlock/AdBlockDialog.ui</Form>
     <Form>Helpviewer/OpenSearch/OpenSearchEditDialog.ui</Form>
-    <Form>E5XML/XMLMessageDialog.ui</Form>
     <Form>E5Network/E5NetworkMonitor.ui</Form>
     <Form>E5Network/E5NetworkHeaderDetailsDialog.ui</Form>
     <Form>E5Gui/E5ToolBarDialog.ui</Form>
