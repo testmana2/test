@@ -1408,7 +1408,7 @@
               <string>qtHelpFilterAttributes</string>
             </key>
             <value>
-              <string>eric5:ide:5.0</string>
+              <string>eric5:ide:5.1</string>
             </value>
             <key>
               <string>qtHelpFilterName</string>
@@ -1420,7 +1420,7 @@
               <string>qtHelpNamespace</string>
             </key>
             <value>
-              <string>org.eric5.ide.50</string>
+              <string>org.eric5.ide.51</string>
             </value>
             <key>
               <string>qtHelpOutputDirectory</string>
