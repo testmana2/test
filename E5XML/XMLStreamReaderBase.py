@@ -129,6 +129,8 @@ class XMLStreamReaderBase(QXmlStreamReader):
                         val = None
                     elif self.name() == "int":
                         val = int(self.readElementText())
+                    elif self.name() == "long":     # backward compatibility to 4.6
+                        val = int(self.readElementText())
                     elif self.name() == "bool":
                         b = self.readElementText()
                         if b == "True":
@@ -141,6 +143,8 @@ class XMLStreamReaderBase(QXmlStreamReader):
                         real, imag = self.readElementText().split()
                         val = float(real) + float(imag)*1j
                     elif self.name() == "string":
+                        val = self.readElementText()
+                    elif self.name() == "unicode":  # backward compatibility to 4.6
                         val = self.readElementText()
                     elif self.name() == "bytes":
                         by = bytes(
