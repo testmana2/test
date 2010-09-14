@@ -102,8 +102,8 @@ QXmlStreamWriter
 <td><a href="#XMLStreamWriterBase._write_unimplemented">_write_unimplemented</a></td>
 <td>Protected method to dump a type, that has no special method.</td>
 </tr><tr>
-<td><a href="#XMLStreamWriterBase.encodedNewLines">encodedNewLines</a></td>
-<td>Public method to encode newlines and paragraph breaks.</td>
+<td><a href="#XMLStreamWriterBase.writeBasics">writeBasics</a></td>
+<td>Public method to write a tag with a basic Python object dump.</td>
 </tr><tr>
 <td><a href="#XMLStreamWriterBase.writeXML">writeXML</a></td>
 <td>Public method to write the XML to the file.</td>
@@ -269,15 +269,18 @@ value to be dumped (tuple)
 <dd>
 value to be dumped (any pickleable object)
 </dd>
-</dl><a NAME="XMLStreamWriterBase.encodedNewLines" ID="XMLStreamWriterBase.encodedNewLines"></a>
-<h4>XMLStreamWriterBase.encodedNewLines</h4>
-<b>encodedNewLines</b>(<i>text</i>)
+</dl><a NAME="XMLStreamWriterBase.writeBasics" ID="XMLStreamWriterBase.writeBasics"></a>
+<h4>XMLStreamWriterBase.writeBasics</h4>
+<b>writeBasics</b>(<i>tag, pyobject</i>)
 <p>
-        Public method to encode newlines and paragraph breaks.
+        Public method to write a tag with a basic Python object dump.
 </p><dl>
-<dt><i>text</i></dt>
+<dt><i>tag</i></dt>
 <dd>
-text to encode (string)
+tag name (string)
+</dd><dt><i>pyobject</i></dt>
+<dd>
+object to be dumped
 </dd>
 </dl><a NAME="XMLStreamWriterBase.writeXML" ID="XMLStreamWriterBase.writeXML"></a>
 <h4>XMLStreamWriterBase.writeXML</h4>

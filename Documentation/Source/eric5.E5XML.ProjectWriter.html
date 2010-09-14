@@ -46,7 +46,7 @@ Module implementing the writer class for writing an XML project file.
     Class implementing the writer class for writing an XML project file.
 </p>
 <h3>Derived from</h3>
-XMLWriterBase
+XMLStreamWriterBase
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -63,13 +63,13 @@ XMLWriterBase
 </table>
 <a NAME="ProjectWriter.__init__" ID="ProjectWriter.__init__"></a>
 <h4>ProjectWriter (Constructor)</h4>
-<b>ProjectWriter</b>(<i>file, projectName</i>)
+<b>ProjectWriter</b>(<i>device, projectName</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>file</i></dt>
+<dt><i>device</i></dt>
 <dd>
-open file (like) object for writing
+reference to the I/O device to write to (QIODevice)
 </dd><dt><i>projectName</i></dt>
 <dd>
 name of the project (string)

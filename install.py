@@ -835,24 +835,6 @@ def main(argv):
     print("\nInstallation complete.")
     print()
     
-    # check PyXML version and output a message for broken PyXML (< 0.8.6)
-    try:
-        import _xmlplus
-        v = _xmlplus.version_info
-        if v < (0, 8, 6):
-            from eric5.patch_pyxml import isPatched, patchPyXML
-            if not isPatched():
-                print("NOTE:")
-                print("    Found PyXML {0:d}.{1:d}.{2:d}, which needs a patch "
-                      "to work correctly".format(v[0], v[1], v[2]))
-                print("    with foreign characters. Please see 'README-PyXML.txt' for")
-                print("    details.")
-                res = input("    Shall pyXML be patched now (y/n)? ")
-                if res in ["Y", "y"]:
-                    patchPyXML()
-    except ImportError:
-        pass
-    
     #check version of PyQt
     from PyQt4.QtCore import PYQT_VERSION_STR
     pyqtVersion = PYQT_VERSION_STR

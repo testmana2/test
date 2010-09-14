@@ -212,7 +212,7 @@ QObject
 <td>Private method to read in the project debugger properties file (.e4d)</td>
 </tr><tr>
 <td><a href="#Project.__readProject">__readProject</a></td>
-<td>Private method to read in a project (.e4p, .e4pz) file.</td>
+<td>Private method to read in a project (.e4p) file.</td>
 </tr><tr>
 <td><a href="#Project.__readSession">__readSession</a></td>
 <td>Private method to read in the project session file (.e4s)</td>
@@ -222,12 +222,6 @@ QObject
 </tr><tr>
 <td><a href="#Project.__readUserProperties">__readUserProperties</a></td>
 <td>Private method to read in the user specific project file (.e4q)</td>
-</tr><tr>
-<td><a href="#Project.__readXMLDebugProperties">__readXMLDebugProperties</a></td>
-<td>Public method to read the debugger properties from an XML file.</td>
-</tr><tr>
-<td><a href="#Project.__readXMLProject">__readXMLProject</a></td>
-<td>Private method to read the project data from an XML file.</td>
 </tr><tr>
 <td><a href="#Project.__saveRecent">__saveRecent</a></td>
 <td>Private method to save the list of recently opened filenames.</td>
@@ -302,9 +296,6 @@ QObject
 <td>Private method to write the tasks data to an XML file (.e4t).</td>
 </tr><tr>
 <td><a href="#Project.__writeUserProperties">__writeUserProperties</a></td>
-<td>Private method to write the project data to an XML file.</td>
-</tr><tr>
-<td><a href="#Project.__writeXMLProject">__writeXMLProject</a></td>
 <td>Private method to write the project data to an XML file.</td>
 </tr><tr>
 <td><a href="#Project.addDirectory">addDirectory</a></td>
@@ -835,7 +826,7 @@ flag indicating quiet operations.
 <h4>Project.__readProject</h4>
 <b>__readProject</b>(<i>fn</i>)
 <p>
-        Private method to read in a project (.e4p, .e4pz) file.
+        Private method to read in a project (.e4p) file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -870,45 +861,7 @@ indicator string (string)
 <b>__readUserProperties</b>(<i></i>)
 <p>
         Private method to read in the user specific project file (.e4q)
-</p><a NAME="Project.__readXMLDebugProperties" ID="Project.__readXMLDebugProperties"></a>
-<h4>Project.__readXMLDebugProperties</h4>
-<b>__readXMLDebugProperties</b>(<i>fn, validating, quiet</i>)
-<p>
-        Public method to read the debugger properties from an XML file.
-</p><dl>
-<dt><i>fn</i></dt>
-<dd>
-filename of the project debugger properties file to be read
-            (string)
-</dd><dt><i>validating</i></dt>
-<dd>
-flag indicating a validation of the XML file is
-            requested (boolean)
-</dd><dt><i>quiet</i></dt>
-<dd>
-flag indicating quiet operations.
-            If this flag is true, no errors are reported.
-</dd>
-</dl><a NAME="Project.__readXMLProject" ID="Project.__readXMLProject"></a>
-<h4>Project.__readXMLProject</h4>
-<b>__readXMLProject</b>(<i>fn, validating</i>)
-<p>
-        Private method to read the project data from an XML file.
-</p><dl>
-<dt><i>fn</i></dt>
-<dd>
-filename of the project file to be read (string)
-</dd><dt><i>validating</i></dt>
-<dd>
-flag indicating a validation of the XML file is
-            requested (boolean)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating success (boolean)
-</dd>
-</dl><a NAME="Project.__saveRecent" ID="Project.__saveRecent"></a>
+</p><a NAME="Project.__saveRecent" ID="Project.__saveRecent"></a>
 <h4>Project.__saveRecent</h4>
 <b>__saveRecent</b>(<i></i>)
 <p>
@@ -1021,7 +974,7 @@ explanotory text for the signaled status (string)
         with the central store.
 </p><a NAME="Project.__writeDebugProperties" ID="Project.__writeDebugProperties"></a>
 <h4>Project.__writeDebugProperties</h4>
-<b>__writeDebugProperties</b>(<i>quiet=0</i>)
+<b>__writeDebugProperties</b>(<i>quiet = False</i>)
 <p>
         Private method to write the project debugger properties file (.e4d)
 </p><dl>
@@ -1073,22 +1026,7 @@ indicator string (string)
 <b>__writeUserProperties</b>(<i></i>)
 <p>
         Private method to write the project data to an XML file.
-</p><a NAME="Project.__writeXMLProject" ID="Project.__writeXMLProject"></a>
-<h4>Project.__writeXMLProject</h4>
-<b>__writeXMLProject</b>(<i>fn = None</i>)
-<p>
-        Private method to write the project data to an XML file.
-</p><dl>
-<dt><i>fn</i></dt>
-<dd>
-the filename of the project file (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating success (boolean)
-</dd>
-</dl><a NAME="Project.addDirectory" ID="Project.addDirectory"></a>
+</p><a NAME="Project.addDirectory" ID="Project.addDirectory"></a>
 <h4>Project.addDirectory</h4>
 <b>addDirectory</b>(<i>filter = None, startdir = None</i>)
 <p>
