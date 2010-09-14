@@ -719,7 +719,6 @@
     <Source>E5XML/UserProjectWriter.py</Source>
     <Source>E5XML/MultiProjectWriter.py</Source>
     <Source>E5XML/HighlightingStylesWriter.py</Source>
-    <Source>E5XML/XMLWriterBase.py</Source>
     <Source>E5Graphics/__init__.py</Source>
     <Source>E5Graphics/E5ArrowItem.py</Source>
     <Source>E5Graphics/E5GraphicsView.py</Source>
