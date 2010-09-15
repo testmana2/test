@@ -78,6 +78,7 @@ class IconEditorWindow(QMainWindow):
             
             self.__palette.previewChanged(self.__editor.previewPixmap())
             self.__palette.colorChanged(self.__editor.penColor())
+            self.__palette.setCompositingMode(self.__editor.compositingMode())
             
             self.__class__.windows.append(self)
             

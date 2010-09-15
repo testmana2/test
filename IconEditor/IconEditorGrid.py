@@ -131,7 +131,6 @@ class IconEditorGrid(QWidget):
         self.__markImage.fill(self.NoMarkColor.rgba())
         
         self.__compositingMode = QPainter.CompositionMode_SourceOver
-##        self.__compositingMode = QPainter.CompositionMode_Source
         self.__lastPos = (-1, -1)
         
         self.__gridEnabled = True

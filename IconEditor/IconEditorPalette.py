@@ -150,6 +150,17 @@ class IconEditorPalette(QWidget):
            col.setAlpha(val)
            self.colorSelected.emit(col)
     
+    def setCompositingMode(self, mode):
+        """
+        Public method to set the compositing mode.
+        
+        @param mode compositing mode to set (QPainter.CompositionMode)
+        """
+        if mode == QPainter.CompositionMode_Source:
+            self.__sourceButton.setChecked(True)
+        elif mode == QPainter.CompositionMode_SourceOver:
+            self.__sourceOverButton.setChecked(True)
+    
     def __compositingChanged(self, on):
         """
         Private slot to handle a change of the compositing mode.
