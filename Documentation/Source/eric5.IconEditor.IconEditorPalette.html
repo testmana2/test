@@ -49,13 +49,17 @@ Module implementing a palette widget for the icon editor.
 <dt>colorSelected(QColor)</dt>
 <dd>
 emitted after a new color has been selected
+</dd><dt>compositingChanged(QPainter.CompositionMode)</dt>
+<dd>
+emitted to signal a change
+            of the compositing mode
 </dd>
 </dl>
 <h3>Derived from</h3>
 QWidget
 <h3>Class Attributes</h3>
 <table>
-<tr><td>colorSelected</td></tr>
+<tr><td>colorSelected</td></tr><tr><td>compositingChanged</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -65,6 +69,9 @@ QWidget
 </tr><tr>
 <td><a href="#IconEditorPalette.__alphaChanged">__alphaChanged</a></td>
 <td>Private slot to track changes of the alpha channel.</td>
+</tr><tr>
+<td><a href="#IconEditorPalette.__compositingChanged">__compositingChanged</a></td>
+<td>Private slot to handle a change of the compositing mode.</td>
 </tr><tr>
 <td><a href="#IconEditorPalette.__selectColor">__selectColor</a></td>
 <td>Private slot to select a new drawing color.</td>
@@ -95,6 +102,16 @@ reference to the parent widget (QWidget)
 <dt><i>val</i></dt>
 <dd>
 value of the alpha channel
+</dd>
+</dl><a NAME="IconEditorPalette.__compositingChanged" ID="IconEditorPalette.__compositingChanged"></a>
+<h4>IconEditorPalette.__compositingChanged</h4>
+<b>__compositingChanged</b>(<i>on</i>)
+<p>
+        Private slot to handle a change of the compositing mode.
+</p><dl>
+<dt><i>on</i></dt>
+<dd>
+flag indicating the checked state of the compositing button (boolean)
 </dd>
 </dl><a NAME="IconEditorPalette.__selectColor" ID="IconEditorPalette.__selectColor"></a>
 <h4>IconEditorPalette.__selectColor</h4>

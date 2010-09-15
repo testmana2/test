@@ -130,6 +130,10 @@ class IconEditorGrid(QWidget):
         self.__markImage = QImage(self.__image)
         self.__markImage.fill(self.NoMarkColor.rgba())
         
+        self.__compositingMode = QPainter.CompositionMode_SourceOver
+##        self.__compositingMode = QPainter.CompositionMode_Source
+        self.__lastPos = (-1, -1)
+        
         self.__gridEnabled = True
         self.__selectionAvailable = False
         
@@ -245,6 +249,22 @@ class IconEditorGrid(QWidget):
         """
         return QColor(self.__curColor)
     
+    def setCompositingMode(self, mode):
+        """
+        Public method to set the compositing mode.
+        
+        @param mode compositing mode to set (QPainter.CompositionMode)
+        """
+        self.__compositingMode = mode
+    
+    def compositingMode(self):
+        """
+        Public method to get the compositing mode.
+        
+        @return compositing mode (QPainter.CompositionMode)
+        """
+        return self.__compositingMode
+    
     def setTool(self, tool):
         """
         Public method to set the current drawing tool.
@@ -253,6 +273,7 @@ class IconEditorGrid(QWidget):
             (IconEditorGrid.Pencil ... IconEditorGrid.CircleSelection)
         """
         self.__curTool = tool
+        self.__lastPos = (-1, -1)
         
         if self.__curTool in [self.RectangleSelection, self.CircleSelection]:
             self.__selecting = True
@@ -522,13 +543,19 @@ class IconEditorGrid(QWidget):
         """
         i, j = self.__imageCoordinates(pos)
         
-        if self.__image.rect().contains(i, j):
+        if self.__image.rect().contains(i, j) and (i, j) != self.__lastPos:
             if opaque:
-                self.__image.setPixel(i, j, self.penColor().rgba())
+                painter = QPainter(self.__image)
+                painter.setPen(self.penColor())
+                painter.setCompositionMode(self.__compositingMode)
+                painter.drawPoint(i, j)
+##            if opaque:
+##                self.__image.setPixel(i, j, self.penColor().rgba())
             else:
                 self.__image.setPixel(i, j, qRgba(0, 0, 0, 0))
+            self.__lastPos = (i, j)
         
-        self.update(self.__pixelRect(i, j))
+            self.update(self.__pixelRect(i, j))
     
     def __imageCoordinates(self, pos):
         """
@@ -596,7 +623,7 @@ class IconEditorGrid(QWidget):
         
         painter = QPainter(img)
         painter.setPen(drawColor)
-        painter.setCompositionMode(QPainter.CompositionMode_Source)
+        painter.setCompositionMode(self.__compositingMode)
         
         if self.__curTool == self.Line:
             painter.drawLine(start, end)
@@ -847,64 +874,11 @@ class IconEditorGrid(QWidget):
             else:
                 cmd = IconEditCommand(self, self.trUtf8("Paste Clipboard"), self.__image)
                 self.__markImage.fill(self.NoMarkColor.rgba())
-                for sx in range(self.__pasteRect.width() + 1):
-                    for sy in range(self.__pasteRect.height() + 1):
-                        dx = self.__pasteRect.x() + sx
-                        dy = self.__pasteRect.y() + sy
-                        if True:    # TODO: insert code to test for compositing
-                            # Porter-Duff Over composition
-                            colorS = img.pixel(sx, sy)
-                            colorD = self.__image.pixel(dx, dy)
-                            
-                            alphaS = qAlpha(colorS) / 255.0
-                            alphaD = qAlpha(colorD) / 255.0
-                            
-                            r = qRed(colorS) * alphaS + \
-                                (1 - alphaS) * qRed(colorD) * alphaD
-                            g = qGreen(colorS) * alphaS + \
-                                (1 - alphaS) * qGreen(colorD) * alphaD
-                            b = qBlue(colorS) * alphaS + \
-                                (1 - alphaS) * qBlue(colorD) * alphaD
-                            a = alphaS + \
-                                (1 - alphaS) * alphaD
-                            
-                            # Remove multiplication by alpha
-                            if a > 0:
-                                r /= a
-                                g /= a
-                                b /= a
-                            else:
-                                r = 0
-                                g = 0
-                                b = 0
-                            
-                            ir = int(r + 0.5)
-                            if ir < 0:
-                                ir = 0
-                            elif ir > 255:
-                                ir = 255
-                            
-                            ig = int(g + 0.5)
-                            if ig < 0:
-                                ig = 0
-                            elif ig > 255:
-                                ig = 255
-                            
-                            ib = int(b + 0.5)
-                            if ib < 0:
-                                ib = 0
-                            elif ib > 255:
-                                ib = 255
-                            
-                            ia = int(a * 255 + 0.5)
-                            if ia < 0:
-                                ia = 0
-                            elif ia > 255:
-                                ia = 255
-                            
-                            self.__image.setPixel(dx, dy, qRgba(ir, ig, ib, ia))
-                        else:
-                            self.__image.setPixel(dx, dy, img.pixel(sx, sy))
+                painter = QPainter(self.__image)
+                painter.setPen(self.penColor())
+                painter.setCompositionMode(self.__compositingMode)
+                painter.drawImage(self.__pasteRect.x(), self.__pasteRect.y(), img, 0, 0, 
+                    self.__pasteRect.width() + 1, self.__pasteRect.height() + 1)
                 
                 self.__undoStack.push(cmd)
                 cmd.setAfterImage(self.__image)

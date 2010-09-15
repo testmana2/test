@@ -90,6 +90,7 @@ class IconEditorWindow(QMainWindow):
             self.__editor.previewChanged.connect(self.__palette.previewChanged)
             self.__editor.colorChanged.connect(self.__palette.colorChanged)
             self.__palette.colorSelected.connect(self.__editor.setPenColor)
+            self.__palette.compositingChanged.connect(self.__editor.setCompositingMode)
             
             self.__setCurrentFile("")
             if fileName:

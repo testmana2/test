@@ -15,8 +15,11 @@ class IconEditorPalette(QWidget):
     Class implementing a palette widget for the icon editor.
     
     @signal colorSelected(QColor) emitted after a new color has been selected
+    @signal compositingChanged(QPainter.CompositionMode) emitted to signal a change
+            of the compositing mode
     """
     colorSelected = pyqtSignal(QColor)
+    compositingChanged = pyqtSignal(QPainter.CompositionMode)
     
     def __init__(self, parent = None):
         """
@@ -78,6 +81,28 @@ class IconEditorPalette(QWidget):
         self.__layout.addWidget(self.__colorAlpha)
         self.__colorAlpha.valueChanged[int].connect(self.__alphaChanged)
         
+        self.__compositingGroup = QGroupBox(self.trUtf8("Compositing"), self)
+        self.__compositingGroupLayout = QVBoxLayout(self.__compositingGroup)
+        self.__compositingGroup.setLayout(self.__compositingGroupLayout)
+        self.__sourceButton = QRadioButton(self.trUtf8("Replace"), 
+                                           self.__compositingGroup)
+        self.__sourceButton.setWhatsThis(self.trUtf8(
+            """<b>Replace</b>"""
+            """<p>Replace the existing pixel with a new color.</p>"""
+        ))
+        self.__sourceButton.clicked[bool].connect(self.__compositingChanged)
+        self.__compositingGroupLayout.addWidget(self.__sourceButton)
+        self.__sourceOverButton = QRadioButton(self.trUtf8("Blend"), 
+                                               self.__compositingGroup)
+        self.__sourceOverButton.setWhatsThis(self.trUtf8(
+            """<b>Blend</b>"""
+            """<p>Blend the new color over the existing pixel.</p>"""
+        ))
+        self.__sourceOverButton.setChecked(True)
+        self.__sourceOverButton.clicked[bool].connect(self.__compositingChanged)
+        self.__compositingGroupLayout.addWidget(self.__sourceOverButton)
+        self.__layout.addWidget(self.__compositingGroup)
+        
         spacer = QSpacerItem(10, 10, QSizePolicy.Minimum, QSizePolicy.Expanding)
         self.__layout.addItem(spacer)
     
@@ -124,3 +149,15 @@ class IconEditorPalette(QWidget):
            col = QColor(self.__currentColor) 
            col.setAlpha(val)
            self.colorSelected.emit(col)
+    
+    def __compositingChanged(self, on):
+        """
+        Private slot to handle a change of the compositing mode.
+        
+        @param on flag indicating the checked state of the compositing button (boolean)
+        """
+        if on:
+            if self.__sourceButton.isChecked():
+                self.compositingChanged.emit(QPainter.CompositionMode_Source)
+            elif self.__sourceOverButton.isChecked():
+                self.compositingChanged.emit(QPainter.CompositionMode_SourceOver)

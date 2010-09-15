@@ -2268,6 +2268,7 @@ eric5.IconEditor.IconEditorGrid.IconEditorGrid.canUndo?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.canUndoChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.clipboardImageAvailable?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.colorChanged?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.compositingMode?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.editClear?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.editCopy?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.editCut?4()
@@ -2294,6 +2295,7 @@ eric5.IconEditor.IconEditorGrid.IconEditorGrid.positionChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.previewChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.previewPixmap?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.selectionAvailable?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.setCompositingMode?4(mode)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.setDirty?4(dirty, setCleanState = False)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.setGridEnabled?4(enable)
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.setIconImage?4(newImage, undoRedo = False, clearUndo = False)
@@ -2308,6 +2310,7 @@ eric5.IconEditor.IconEditorGrid.IconEditorGrid.zoomFactor?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid?1(parent = None)
 eric5.IconEditor.IconEditorPalette.IconEditorPalette.colorChanged?4(color)
 eric5.IconEditor.IconEditorPalette.IconEditorPalette.colorSelected?7
+eric5.IconEditor.IconEditorPalette.IconEditorPalette.compositingChanged?7
 eric5.IconEditor.IconEditorPalette.IconEditorPalette.previewChanged?4(pixmap)
 eric5.IconEditor.IconEditorPalette.IconEditorPalette?1(parent = None)
 eric5.IconEditor.IconEditorWindow.IconEditorWindow.closeEvent?4(evt)

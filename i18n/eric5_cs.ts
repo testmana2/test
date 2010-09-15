@@ -17278,102 +17278,102 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>IconEditorGrid</name>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="187"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="191"/>
         <source>Set Pixel</source>
         <translation>Nastavit pixel</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="188"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="192"/>
         <source>Erase Pixel</source>
         <translation>Vymazat pixel</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="189"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="193"/>
         <source>Draw Line</source>
         <translation>Nakreslit linku</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="190"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="194"/>
         <source>Draw Rectangle</source>
         <translation>Nakreslit obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="191"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="195"/>
         <source>Draw Filled Rectangle</source>
         <translation>Nakreslit vyplněný obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="192"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="196"/>
         <source>Draw Circle</source>
         <translation>Nakreslit kruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="193"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="197"/>
         <source>Draw Filled Circle</source>
         <translation>Nakreslit vyplněný kruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="194"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="198"/>
         <source>Draw Ellipse</source>
         <translation>Nakreslit elipsu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="195"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="199"/>
         <source>Draw Filled Ellipse</source>
         <translation>Nakreslit vyplněnou elipsu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="196"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="200"/>
         <source>Fill Region</source>
         <translation>Vyplnit oblast</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="785"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="812"/>
         <source>Cut Selection</source>
         <translation>Odebrat výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="837"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="864"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="837"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="864"/>
         <source>&lt;p&gt;The clipboard image is larger than the current image.&lt;br/&gt;Paste as new image?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Obrázek ze schránky je větší než aktuální obrázek.&lt;br/&gt;Vložit jako nový obrázek?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="848"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="875"/>
         <source>Paste Clipboard</source>
         <translation>Vložit ze schránky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="915"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="889"/>
         <source>Pasting Image</source>
         <translation>Vkládání obrázku</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="915"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="889"/>
         <source>Invalid image data in clipboard.</source>
         <translation>Neplatná data obrázku ve schránce.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="925"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="899"/>
         <source>Paste Clipboard as New Image</source>
         <translation>Vložit ze schránky jako nový obrázek</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="953"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="927"/>
         <source>Clear Image</source>
         <translation>Vyčistit obrázek</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="969"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="943"/>
         <source>Resize Image</source>
         <translation>Změnit velikost obrázku</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="993"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="967"/>
         <source>Convert to Grayscale</source>
         <translation>Převést do šedi</translation>
     </message>
@@ -17381,1017 +17381,1042 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>IconEditorPalette</name>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="40"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="43"/>
         <source>&lt;b&gt;Preview&lt;/b&gt;&lt;p&gt;This is a 1:1 preview of the current icon.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Náhled&lt;/b&gt;&lt;p&gt;Toto je náhled 1:1 aktuální ikony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="50"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="53"/>
         <source>&lt;b&gt;Current Color&lt;/b&gt;&lt;p&gt;This is the currently selected color used for drawing.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aktuální barva&lt;/b&gt;&lt;p&gt;Toto je aktuálně vybraná barva určená ke kreslení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="58"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="61"/>
         <source>&lt;b&gt;Current Color Value&lt;/b&gt;&lt;p&gt;This is the currently selected color value used for drawing.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hodnota aktuální barvy&lt;/b&gt;&lt;p&gt;Toto je hodnota aktuálně vybrané barvy určené ke kreslení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="64"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="67"/>
         <source>Select Color</source>
         <translation>Výběr barvy</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="65"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="68"/>
         <source>&lt;b&gt;Select Color&lt;/b&gt;&lt;p&gt;Select the current drawing color via a color selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Výběr barvy&lt;/b&gt;&lt;p&gt;Výběr bary pro kreslení před dialog výběru barvy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorPalette.py" line="74"/>
+        <location filename="IconEditor/IconEditorPalette.py" line="77"/>
         <source>&lt;b&gt;Select alpha channel value&lt;/b&gt;&lt;p&gt;Select the value for the alpha channel of the current color.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Výběr hodnoty alfa kanálu&lt;/b&gt;&lt;p&gt;Výběr hodnoty alfa kanálu aktuální barvy.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="IconEditor/IconEditorPalette.py" line="84"/>
+        <source>Compositing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="IconEditor/IconEditorPalette.py" line="87"/>
+        <source>Replace</source>
+        <translation type="unfinished">Nahradit</translation>
+    </message>
+    <message>
+        <location filename="IconEditor/IconEditorPalette.py" line="89"/>
+        <source>&lt;b&gt;Replace&lt;/b&gt;&lt;p&gt;Replace the existing pixel with a new color.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="IconEditor/IconEditorPalette.py" line="95"/>
+        <source>Blend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="IconEditor/IconEditorPalette.py" line="97"/>
+        <source>&lt;b&gt;Blend&lt;/b&gt;&lt;p&gt;Blend the new color over the existing pixel.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>IconEditorWindow</name>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="105"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="106"/>
         <source>Windows Bitmap File (*.bmp)</source>
         <translation>Windows Bitmap soubor (*.bmp)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="106"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="107"/>
         <source>Graphic Interchange Format File (*.gif)</source>
         <translation>Graphic Interchange Format soubor (*.gif)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="107"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="108"/>
         <source>Windows Icon File (*.ico)</source>
         <translation>Windows Icon soubor (*.ico)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="108"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="109"/>
         <source>JPEG File (*.jpg)</source>
         <translation>JPEG soubor (*.jpg)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="110"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="111"/>
         <source>Portable Bitmap File (*.pbm)</source>
         <translation>Portable Bitmap soubor (*.pbm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="112"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="113"/>
         <source>Portable Graymap File (*.pgm)</source>
         <translation>Portable Graymap soubor (*.pgm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="113"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="114"/>
         <source>Portable Network Graphics File (*.png)</source>
         <translation>Portable Network Graphics soubor (*.png)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="114"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="115"/>
         <source>Portable Pixmap File (*.ppm)</source>
         <translation>Portable Pixmap soubor (*.ppm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="116"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="117"/>
         <source>Scalable Vector Graphics File (*.svg)</source>
         <translation>Scalable Vector Graphics soubor (*.svg)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="118"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="119"/>
         <source>TIFF File (*.tif)</source>
         <translation>TIFF soubor (*.tif)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="119"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="120"/>
         <source>X11 Bitmap File (*.xbm)</source>
         <translation>X11 Bitmap soubor (*.xbm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="120"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="121"/>
         <source>X11 Pixmap File (*.xpm)</source>
         <translation>X11 Pixmap soubor (*.xpm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="131"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="132"/>
         <source>All Files (*)</source>
         <translation>Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="163"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="164"/>
         <source>New</source>
         <translation>Nový</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="163"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="164"/>
         <source>&amp;New</source>
         <translation>&amp;Nový</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="163"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="164"/>
         <source>Ctrl+N</source>
         <comment>File|New</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="168"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="169"/>
         <source>Create a new icon</source>
         <translation>Vytvořit novou ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="169"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="170"/>
         <source>&lt;b&gt;New&lt;/b&gt;&lt;p&gt;This creates a new icon.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nová&lt;/b&gt;&lt;p&gt;Vytvoří se nová ikona.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="176"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="177"/>
         <source>New Window</source>
         <translation>Nové okno</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="176"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="177"/>
         <source>New &amp;Window</source>
         <translation>&amp;Nové okno</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="180"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="181"/>
         <source>Open a new icon editor window</source>
         <translation>Otevřít nové editační okno s ikonou</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="181"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="182"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nové okno&lt;/b&gt;&lt;p&gt;Otevřít nové editační okno s ikonou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="188"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="189"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="188"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="189"/>
         <source>&amp;Open...</source>
         <translation>&amp;Otevřít...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="188"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="189"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="193"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="194"/>
         <source>Open an icon file for editing</source>
         <translation>Otevřít soubor s ikonou pro editaci</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="194"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="195"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new icon file for editing. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít soubor&lt;/b&gt;&lt;p&gt;Otevře soubor s ikonou pro editaci. Spustí se přes dialog pro výběr souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="202"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="203"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="202"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="203"/>
         <source>&amp;Save</source>
         <translation>&amp;Uložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="202"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="203"/>
         <source>Ctrl+S</source>
         <comment>File|Save</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="207"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="208"/>
         <source>Save the current icon</source>
         <translation>Uložit aktuální ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="208"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="209"/>
         <source>&lt;b&gt;Save File&lt;/b&gt;&lt;p&gt;Save the contents of the icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit soubor&lt;/b&gt;&lt;p&gt;Uložit obsah aktuálního editačního okna s ikonou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="215"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="216"/>
         <source>Save As</source>
         <translation>Uložit jako</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="215"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="216"/>
         <source>Save &amp;As...</source>
         <translation>Uložit j&amp;ako...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="215"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="216"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="220"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="221"/>
         <source>Save the current icon to a new file</source>
         <translation>Uložit aktuální ikonu do nového souboru</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="222"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="223"/>
         <source>&lt;b&gt;Save As...&lt;/b&gt;&lt;p&gt;Saves the current icon to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit jako&lt;/b&gt;&lt;p&gt;Uloží aktuální ikonu do nového souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="229"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="230"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="229"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="230"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="229"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="230"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="234"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="235"/>
         <source>Close the current icon editor window</source>
         <translation>Zavřít aktuální okno editoru ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="235"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="236"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;Closes the current icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít&lt;/b&gt;&lt;p&gt;Zavře aktuální okno editoru ikon.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="242"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="243"/>
         <source>Close All</source>
         <translation>Zavřít vše</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="242"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="243"/>
         <source>Close &amp;All</source>
         <translation>Z&amp;avřít vše</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="245"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="246"/>
         <source>Close all icon editor windows</source>
         <translation>Zavřít všechny editační okna ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="246"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="247"/>
         <source>&lt;b&gt;Close All&lt;/b&gt;&lt;p&gt;Closes all icon editor windows except the first one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít vše&lt;/b&gt;&lt;p&gt;Zavřít všechna okna editorů ikon kromě prvního.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="253"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="254"/>
         <source>Quit</source>
         <translation>Konec</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="253"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="254"/>
         <source>&amp;Quit</source>
         <translation>&amp;Konec</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="253"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="254"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="258"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="259"/>
         <source>Quit the icon editor</source>
         <translation>Ukončit editor ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="259"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="260"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the icon editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konec&lt;/b&gt;&lt;p&gt;Ukončit editor ikon.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="273"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="274"/>
         <source>Undo</source>
         <translation>Vrátit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="273"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="274"/>
         <source>&amp;Undo</source>
         <translation>&amp;Vrátit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="273"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="274"/>
         <source>Ctrl+Z</source>
         <comment>Edit|Undo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="273"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="274"/>
         <source>Alt+Backspace</source>
         <comment>Edit|Undo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="279"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="280"/>
         <source>Undo the last change</source>
         <translation>Vrátit poslední změnu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="280"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="281"/>
         <source>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Undo the last change done.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vrátit&lt;/b&gt;&lt;p&gt;Vrátit poslední změnu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="287"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="288"/>
         <source>Redo</source>
         <translation>Znovu použít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="287"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="288"/>
         <source>&amp;Redo</source>
         <translation>&amp;Znovu použít</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="287"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="288"/>
         <source>Ctrl+Shift+Z</source>
         <comment>Edit|Redo</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="292"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="293"/>
         <source>Redo the last change</source>
         <translation>Znovu použít poslední změnu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="293"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="294"/>
         <source>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Redo the last change done.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Znovu použít&lt;/b&gt;&lt;p&gt;Znovu použít poslední změnu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="300"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="301"/>
         <source>Cut</source>
         <translation>Vyjmout</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="300"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="301"/>
         <source>Cu&amp;t</source>
         <translation>Vyjmou&amp;t</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="300"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="301"/>
         <source>Ctrl+X</source>
         <comment>Edit|Cut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="300"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="301"/>
         <source>Shift+Del</source>
         <comment>Edit|Cut</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="306"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="307"/>
         <source>Cut the selection</source>
         <translation>Vyjmout výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="307"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="308"/>
         <source>&lt;b&gt;Cut&lt;/b&gt;&lt;p&gt;Cut the selected image area to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyjmout&lt;/b&gt;&lt;p&gt;Vyjme vybranou oblast obrázku a vloží jej do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="314"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="315"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="314"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="315"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopírovat</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="314"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="315"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="314"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="315"/>
         <source>Ctrl+Ins</source>
         <comment>Edit|Copy</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="320"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="321"/>
         <source>Copy the selection</source>
         <translation>Kopírovat výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="321"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="322"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected image area to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopírovat&lt;/b&gt;&lt;p&gt;Kopíruje vybranou oblast obrázku a vloží ji do schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="328"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="329"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="328"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="329"/>
         <source>&amp;Paste</source>
         <translation>V&amp;ložit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="328"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="329"/>
         <source>Ctrl+V</source>
         <comment>Edit|Paste</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="328"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="329"/>
         <source>Shift+Ins</source>
         <comment>Edit|Paste</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="334"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="335"/>
         <source>Paste the clipboard image</source>
         <translation>Vložit obrázek ze schránky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="335"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="336"/>
         <source>&lt;b&gt;Paste&lt;/b&gt;&lt;p&gt;Paste the clipboard image.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vložit&lt;/b&gt;&lt;p&gt;Vložit obrázek ze schránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="342"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="343"/>
         <source>Paste as New</source>
         <translation>Vložit jako nový</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="342"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="343"/>
         <source>Paste as &amp;New</source>
         <translation>Vložit jako &amp;nový</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="345"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="346"/>
         <source>Paste the clipboard image replacing the current one</source>
         <translation>Nahradit aktuální obrázek tím ze schránky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="347"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="348"/>
         <source>&lt;b&gt;Paste as New&lt;/b&gt;&lt;p&gt;Paste the clipboard image replacing the current one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vložit jako nový&lt;/b&gt;&lt;p&gt;Obrázek ze schránky nahradí aktuální obrázek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="354"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="355"/>
         <source>Clear</source>
         <translation>Vyčistit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="354"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="355"/>
         <source>Cl&amp;ear</source>
         <translation>Vyči&amp;stit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="354"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="355"/>
         <source>Alt+Shift+C</source>
         <comment>Edit|Clear</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="360"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="361"/>
         <source>Clear the icon image</source>
         <translation>Vymazat obrázek ikony</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="361"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="362"/>
         <source>&lt;b&gt;Clear&lt;/b&gt;&lt;p&gt;Clear the icon image and set it to be completely transparent.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vymazat&lt;/b&gt;&lt;p&gt;Vymaže obrázek ikony a nastaví jej jako zcela průhledný.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="368"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="369"/>
         <source>Select All</source>
         <translation>Vybrat vše</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="368"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="369"/>
         <source>&amp;Select All</source>
         <translation>Vybrat vš&amp;e</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="368"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="369"/>
         <source>Ctrl+A</source>
         <comment>Edit|Select All</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="373"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="374"/>
         <source>Select the complete icon image</source>
         <translation>Vybrat celý obrázek ikony</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="374"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="375"/>
         <source>&lt;b&gt;Select All&lt;/b&gt;&lt;p&gt;Selects the complete icon image.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vybrat celý&lt;/b&gt;&lt;p&gt;Vybere kopletně celý obrázek ikony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="381"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="382"/>
         <source>Change Size</source>
         <translation>Změnit velikost</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="381"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="382"/>
         <source>Change Si&amp;ze...</source>
         <translation>&amp;Změnit velikost...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="386"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="387"/>
         <source>Change the icon size</source>
         <translation>Změnit velikost ikony</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="387"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="388"/>
         <source>&lt;b&gt;Change Size...&lt;/b&gt;&lt;p&gt;Changes the icon size.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Změnit velikost......&lt;/b&gt;&lt;p&gt;Změnit velikost ikony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="394"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="395"/>
         <source>Grayscale</source>
         <translation>Stupnice šedi</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="394"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="395"/>
         <source>&amp;Grayscale</source>
         <translation>&amp;Stupnice šedi</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="399"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="400"/>
         <source>Change the icon to grayscale</source>
         <translation>Převést ikonu do šedi</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="400"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="401"/>
         <source>&lt;b&gt;Grayscale&lt;/b&gt;&lt;p&gt;Changes the icon to grayscale.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stupnice šedi&lt;/b&gt;&lt;p&gt;Převést ikonu do šedi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="429"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="430"/>
         <source>Zoom in</source>
         <translation>Přiblížit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="429"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="430"/>
         <source>Zoom &amp;in</source>
         <translation>Př&amp;iblížit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="429"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="430"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="434"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="435"/>
         <source>Zoom in on the icon</source>
         <translation>Přiblížit ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="435"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="436"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the icon. This makes the grid bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přiblížit&lt;/b&gt;&lt;p&gt;Přiblížit ikonu. Pomocná síť bude větší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="442"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="443"/>
         <source>Zoom out</source>
         <translation>Oddálit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="442"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="443"/>
         <source>Zoom &amp;out</source>
         <translation>&amp;Oddálit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="442"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="443"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="447"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="448"/>
         <source>Zoom out on the icon</source>
         <translation>Oddálit ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="448"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="449"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the icon. This makes the grid smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Oddálit&lt;/b&gt;&lt;p&gt;Lupa na oddálení ikony. Pomocná síť bude menší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="455"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="456"/>
         <source>Zoom reset</source>
         <translation>Resetovat lupu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="455"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="456"/>
         <source>Zoom &amp;reset</source>
         <translation>&amp;Resetovat lupu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="455"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="456"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="469"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="470"/>
         <source>Zoom</source>
         <translation>Lupa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="469"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="470"/>
         <source>&amp;Zoom...</source>
         <translation>&amp;Lupa...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="469"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="470"/>
         <source>Ctrl+#</source>
         <comment>View|Zoom</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="475"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="476"/>
         <source>Zoom the icon</source>
         <translation>Přiblížit ikonu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="476"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="477"/>
         <source>&lt;b&gt;Zoom&lt;/b&gt;&lt;p&gt;Zoom the icon. This opens a dialog where the desired zoom factor can be entered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lupa&lt;/b&gt;&lt;p&gt;Lupa na ikonu. Otevře se dialogové okno kde se zadá požadovaná hodnota zvětšení/zmenšení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="484"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="485"/>
         <source>Show Grid</source>
         <translation>Zobrazit pomocnou síť</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="484"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="485"/>
         <source>Show &amp;Grid</source>
         <translation>Zobrazit pomocnou &amp;síť</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="489"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="490"/>
         <source>Toggle the display of the grid</source>
         <translation>Přepnout zobrazování pomocné sítě</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="490"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="491"/>
         <source>&lt;b&gt;Show Grid&lt;/b&gt;&lt;p&gt;Toggle the display of the grid.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit pomocnou síť&lt;/b&gt;&lt;p&gt;Přepíná zobrazování pomocné sítě.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="509"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="510"/>
         <source>Freehand</source>
         <translation>Od ruky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="509"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="510"/>
         <source>&amp;Freehand</source>
         <translation>Od &amp;ruky</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="514"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="515"/>
         <source>&lt;b&gt;Free hand&lt;/b&gt;&lt;p&gt;Draws non linear lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Od ruky&lt;/b&gt;&lt;p&gt;Kreslí čáry od ruky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="523"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="524"/>
         <source>Color Picker</source>
         <translation>Barvítko</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="523"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="524"/>
         <source>&amp;Color Picker</source>
         <translation>&amp;Barvítko</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="528"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="529"/>
         <source>&lt;b&gt;Color Picker&lt;/b&gt;&lt;p&gt;The color of the pixel clicked on will become the current draw color.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Barvítko&lt;/b&gt;&lt;p&gt;Barva pixelu, na kterou se klikne, se změní na aktuálně nastavenou barvu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="538"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="539"/>
         <source>Rectangle</source>
         <translation>Obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="538"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="539"/>
         <source>&amp;Rectangle</source>
         <translation>&amp;Obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="543"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="544"/>
         <source>&lt;b&gt;Rectangle&lt;/b&gt;&lt;p&gt;Draw a rectangle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Obdélník&lt;/b&gt;&lt;p&gt;Kreslit obdélník.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="552"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="553"/>
         <source>Filled Rectangle</source>
         <translation>Vyplněný obdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="552"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="553"/>
         <source>F&amp;illed Rectangle</source>
         <translation>Vyplněný o&amp;bdélník</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="557"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="558"/>
         <source>&lt;b&gt;Filled Rectangle&lt;/b&gt;&lt;p&gt;Draw a filled rectangle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;vyplněný obdélník&lt;/b&gt;&lt;p&gt;Kreslit obdélník vyplněný barvou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="566"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="567"/>
         <source>Circle</source>
         <translation>Kruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="571"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="572"/>
         <source>&lt;b&gt;Circle&lt;/b&gt;&lt;p&gt;Draw a circle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kruh&lt;/b&gt;&lt;p&gt;Nakreslit kruh.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="580"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="581"/>
         <source>Filled Circle</source>
         <translation>Vyplněný kruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="580"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="581"/>
         <source>Fille&amp;d Circle</source>
         <translation>Vyplněný k&amp;ruh</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="585"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="586"/>
         <source>&lt;b&gt;Filled Circle&lt;/b&gt;&lt;p&gt;Draw a filled circle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyplněný kruh&lt;/b&gt;&lt;p&gt;Nakreslit kruh vypněný barvou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="594"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="595"/>
         <source>Ellipse</source>
         <translation>Elipsa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="594"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="595"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elipsa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="599"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="600"/>
         <source>&lt;b&gt;Ellipse&lt;/b&gt;&lt;p&gt;Draw an ellipse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Elipsa&lt;/b&gt;&lt;p&gt;Nakreslit elipsu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="608"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="609"/>
         <source>Filled Ellipse</source>
         <translation>Vyplněná elipsa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="608"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="609"/>
         <source>Fille&amp;d Elli&amp;pse</source>
         <translation>Vyplněná e&amp;lipsa</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="613"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="614"/>
         <source>&lt;b&gt;Filled Ellipse&lt;/b&gt;&lt;p&gt;Draw a filled ellipse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyplněná elipsa&lt;/b&gt;&lt;p&gt;Nakreslit elipsu vypněnou barvou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="622"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="623"/>
         <source>Flood Fill</source>
         <translation>Vyplnit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="622"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="623"/>
         <source>Fl&amp;ood Fill</source>
         <translation>&amp;Vyplnit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="627"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="628"/>
         <source>&lt;b&gt;Flood Fill&lt;/b&gt;&lt;p&gt;Fill adjoining pixels with the same color with the current color.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyplit&lt;/b&gt;&lt;p&gt;Vyplní barvou celou ohraničenou plochu, ve které se nachází počáteční pixel (semínkové vyplňování).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="637"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="638"/>
         <source>Line</source>
         <translation>Linka</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="637"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="638"/>
         <source>&amp;Line</source>
         <translation>&amp;Linka</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="642"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="643"/>
         <source>&lt;b&gt;Line&lt;/b&gt;&lt;p&gt;Draw a line.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Linka&lt;/b&gt;&lt;p&gt;Nakreslit linku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="651"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="652"/>
         <source>Eraser (Transparent)</source>
         <translation>Guma (průhlednost)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="651"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="652"/>
         <source>Eraser (&amp;Transparent)</source>
         <translation>Guma (průhlednos&amp;t)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="656"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="657"/>
         <source>&lt;b&gt;Eraser (Transparent)&lt;/b&gt;&lt;p&gt;Erase pixels by setting them to transparent.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guma (průhlednost)&lt;/b&gt;&lt;p&gt;Vymaže pixely tak, že budou průhledné.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="665"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="666"/>
         <source>Rectangular Selection</source>
         <translation>Obdélníkový výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="680"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="681"/>
         <source>Rect&amp;angular Selection</source>
         <translation>&amp;Obdélníkový výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="670"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="671"/>
         <source>&lt;b&gt;Rectangular Selection&lt;/b&gt;&lt;p&gt;Select a rectangular section of the icon using the mouse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Obdélníkový výběr&lt;/b&gt;&lt;p&gt;Vybrat obdélníkovou oblast v ikoně pomocí myši.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="680"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="681"/>
         <source>Circular Selection</source>
         <translation>Kruhový výběr</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="685"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="686"/>
         <source>&lt;b&gt;Circular Selection&lt;/b&gt;&lt;p&gt;Select a circular section of the icon using the mouse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kruhový výběr&lt;/b&gt;&lt;p&gt;Vybrat kruhovou oblast v ikoně pomocí myši.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="701"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="702"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="701"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="702"/>
         <source>&amp;About</source>
         <translation>O &amp;aplikaci</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="704"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="705"/>
         <source>Display information about this software</source>
         <translation>Zobrazit informace a tomto software</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="705"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="706"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O aplikaci&lt;/b&gt;&lt;p&gt;Zobrazí se informace o tomto software.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="711"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="712"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="711"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="712"/>
         <source>About &amp;Qt</source>
         <translation>O &amp;Qt</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="714"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="715"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Zobrazit informace o Qt toolkitu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="716"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="717"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;O Qt&lt;/b&gt;&lt;p&gt;Zobrazit informace o Qt toolkitu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="723"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="724"/>
         <source>What&apos;s This?</source>
         <translation>Co je to?</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="723"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="724"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Co je to?</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="723"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="724"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="728"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="729"/>
         <source>Context sensitive help</source>
         <translation>Kontextově senzitivní nápověda</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="729"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="730"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit kontextově senzitivní nápovědu&lt;/b&gt;&lt;p&gt;V režimu &quot;Co je to?&quot; se nad různými prvky aplikace u kurzoru zobrazí otazník. Když pak kliknete na tyto prvky, zobrazí se krátký popis co daný prvek znamená a jak jej použít. V dialogových oknech se tato funkce spustí tlačítkem kontextové nápovědy na horní liště.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="746"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="747"/>
         <source>&amp;File</source>
         <translation>S&amp;oubor</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="760"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="761"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="776"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="777"/>
         <source>&amp;View</source>
         <translation>Poh&amp;led</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="785"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="786"/>
         <source>&amp;Tools</source>
         <translation>&amp;Nástroje</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="804"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="805"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="814"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="815"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="827"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="828"/>
         <source>Edit</source>
         <translation>Editovat</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="840"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="841"/>
         <source>View</source>
         <translation>Pohled</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="850"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="851"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="868"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="869"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="882"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="883"/>
         <source>&lt;p&gt;This part of the status bar displays the current zoom factor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje aktuální velikost lupy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="889"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="890"/>
         <source>&lt;p&gt;This part of the status bar displays the icon size.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje velikost ikony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="896"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="897"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje pozici kurzoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="965"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="966"/>
         <source>Open icon file</source>
         <translation>Otevřít soubor s ikonou</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1004"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1005"/>
         <source>Save icon file</source>
         <translation>Uložit ikonu do souboru</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1079"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1080"/>
         <source>Icon saved</source>
         <translation>Ikona uložena</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1094"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1095"/>
         <source>Untitled</source>
         <translation>Beze jména</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1098"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1099"/>
         <source>Icon Editor</source>
         <translation>Editor ikon</translation>
     </message>
@@ -18403,32 +18428,32 @@ Do you want to save your changes?</source>
 Chcete uložit změny?</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="109"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="110"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation>Multiple-Image Network Graphics soubor (*.mng)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="460"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="461"/>
         <source>Reset the zoom of the icon</source>
         <translation>Resetovat lupu ikony</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="461"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="462"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the icon. This sets the zoom factor to 100%.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reset lupy&lt;/b&gt;&lt;p&gt;Reset lupy pro ikonu. Nastaví se lupa na hodnotu 100%.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="111"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="112"/>
         <source>Paintbrush Bitmap File (*.pcx)</source>
         <translation>Paintbrush Bitmap soubor (*.pcx)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="115"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="116"/>
         <source>Silicon Graphics Image File (*.sgi)</source>
         <translation>Silicon Graphics Image soubor (*.sgi)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="117"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="118"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation>Targa Graphic soubor (*.tga)</translation>
     </message>
@@ -18438,50 +18463,50 @@ Chcete uložit změny?</translation>
         <translation type="obsolete">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1119"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1120"/>
         <source>eric5 Icon Editor</source>
         <translation>eric5 editor ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1030"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1031"/>
         <source>The file &apos;{0}&apos; does not exist.</source>
         <translation>Soubor &apos;{0}&apos; neexistuje.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1036"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1037"/>
         <source>Cannot read file &apos;{0}:
 {1}.</source>
         <translation>Nelze číst soubor &apos;{0}:{1}.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1068"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1069"/>
         <source>Cannot write file &apos;{0}:
 {1}.</source>
         <translation>Nelze zapsat do souboru &apos;{0}:
 {1}.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1098"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1099"/>
         <source>{0}[*] - {1}</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1202"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1203"/>
         <source>About eric5 Icon Editor</source>
         <translation>O eric5 editoru ikon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1202"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1203"/>
         <source>The eric5 Icon Editor is a simple editor component to perform icon drawing tasks.</source>
         <translation>Eric5 editor ikon je jednoduchý editor pro kreslení ikon.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1004"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1005"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1119"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1120"/>
         <source>The icon image has unsaved changes.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43244,7 +43269,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5XML/XMLStreamReaderBase.py" line="171"/>
+        <location filename="E5XML/XMLStreamReaderBase.py" line="175"/>
         <source>Pickle data encoding &apos;{0}&apos; is not supported.</source>
         <translation type="unfinished"></translation>
     </message>

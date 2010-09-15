@@ -220,6 +220,9 @@ QWidget
 <td><a href="#IconEditorGrid.canUndo">canUndo</a></td>
 <td>Public method to return the undo status.</td>
 </tr><tr>
+<td><a href="#IconEditorGrid.compositingMode">compositingMode</a></td>
+<td>Public method to get the compositing mode.</td>
+</tr><tr>
 <td><a href="#IconEditorGrid.editClear">editClear</a></td>
 <td>Public slot to clear the image.</td>
 </tr><tr>
@@ -285,6 +288,9 @@ QWidget
 </tr><tr>
 <td><a href="#IconEditorGrid.previewPixmap">previewPixmap</a></td>
 <td>Public method to generate a preview pixmap.</td>
+</tr><tr>
+<td><a href="#IconEditorGrid.setCompositingMode">setCompositingMode</a></td>
+<td>Public method to set the compositing mode.</td>
 </tr><tr>
 <td><a href="#IconEditorGrid.setDirty">setDirty</a></td>
 <td>Public slot to set the dirty flag.</td>
@@ -552,6 +558,16 @@ flag indicating the availability of redo (boolean)
 <dd>
 flag indicating the availability of undo (boolean)
 </dd>
+</dl><a NAME="IconEditorGrid.compositingMode" ID="IconEditorGrid.compositingMode"></a>
+<h4>IconEditorGrid.compositingMode</h4>
+<b>compositingMode</b>(<i></i>)
+<p>
+        Public method to get the compositing mode.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+compositing mode (QPainter.CompositionMode)
+</dd>
 </dl><a NAME="IconEditorGrid.editClear" ID="IconEditorGrid.editClear"></a>
 <h4>IconEditorGrid.editClear</h4>
 <b>editClear</b>(<i></i>)
@@ -721,6 +737,16 @@ current drawing color (QColor)
 <dt>Returns:</dt>
 <dd>
 preview pixmap (QPixmap)
+</dd>
+</dl><a NAME="IconEditorGrid.setCompositingMode" ID="IconEditorGrid.setCompositingMode"></a>
+<h4>IconEditorGrid.setCompositingMode</h4>
+<b>setCompositingMode</b>(<i>mode</i>)
+<p>
+        Public method to set the compositing mode.
+</p><dl>
+<dt><i>mode</i></dt>
+<dd>
+compositing mode to set (QPainter.CompositionMode)
 </dd>
 </dl><a NAME="IconEditorGrid.setDirty" ID="IconEditorGrid.setDirty"></a>
 <h4>IconEditorGrid.setDirty</h4>
