@@ -30,6 +30,8 @@ doCleanup = True
 doCompile = True
 cfg = {}
 progLanguages = ["Python", "Ruby"]
+sourceDir = "eric"
+configName = 'eric5config.py'
 
 # Define blacklisted versions of the prerequisites
 BlackLists = {
@@ -307,7 +309,7 @@ def installEric():
     """
     Actually perform the installation steps.
     """
-    global distDir, doCleanup, cfg, progLanguages
+    global distDir, doCleanup, cfg, progLanguages, sourceDir, configName
     
     # Create the platform specific wrappers.
     wnames = []
@@ -344,45 +346,52 @@ def installEric():
         
         # copy the eric5 config file
         if distDir:
-            shutil.copy('eric5config.py', cfg['mdir'])
-            if os.path.exists('eric5config.pyc'):
-                shutil.copy('eric5config.pyc', cfg['mdir'])
+            shutil.copy(configName, cfg['mdir'])
+            if os.path.exists(configName + 'c'):
+                shutil.copy(configName + 'c', cfg['mdir'])
         else:
-            shutil.copy('eric5config.py', modDir)
-            if os.path.exists('eric5config.pyc'):
-                shutil.copy('eric5config.pyc', modDir)
+            shutil.copy(configName, modDir)
+            if os.path.exists(configName + 'c'):
+                shutil.copy(configName + 'c', modDir)
         
         # copy the various parts of eric5
-        copyTree('eric', cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'], 
-            ['eric{0}Examples'.format(os.sep)])
-        copyTree('eric', cfg['ericDir'], ['*.rb'], 
-            ['eric{0}Examples'.format(os.sep)])
-        copyTree('eric{0}Plugins'.format(os.sep), 
+        copyTree(sourceDir, cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'], 
+            ['{1}{0}Examples'.format(os.sep, sourceDir)])
+        copyTree(sourceDir, cfg['ericDir'], ['*.rb'], 
+            ['{1}{0}Examples'.format(os.sep, sourceDir)])
+        copyTree('{1}{0}Plugins'.format(os.sep, sourceDir), 
             '{0}{1}Plugins'.format(cfg['ericDir'], os.sep), 
             ['*.png', '*.style'])
-        copyTree('eric{0}Documentation'.format(os.sep), cfg['ericDocDir'], 
+        copyTree('{1}{0}Documentation'.format(os.sep, sourceDir), cfg['ericDocDir'], 
             ['*.html', '*.qch'])
-        copyTree('eric{0}DTDs'.format(os.sep), cfg['ericDTDDir'], ['*.dtd'])
-        copyTree('eric{0}CSSs'.format(os.sep), cfg['ericCSSDir'], ['*.css'])
-        copyTree('eric{0}Styles'.format(os.sep), cfg['ericStylesDir'], ['*.qss'])
-        copyTree('eric{0}i18n'.format(os.sep), cfg['ericTranslationsDir'], ['*.qm'])
-        copyTree('eric{0}icons'.format(os.sep), cfg['ericIconDir'], 
+        copyTree('{1}{0}DTDs'.format(os.sep, sourceDir), cfg['ericDTDDir'], 
+            ['*.dtd'])
+        copyTree('{1}{0}CSSs'.format(os.sep, sourceDir), cfg['ericCSSDir'], 
+            ['*.css'])
+        copyTree('{1}{0}Styles'.format(os.sep, sourceDir), cfg['ericStylesDir'], 
+            ['*.qss'])
+        copyTree('{1}{0}i18n'.format(os.sep, sourceDir), cfg['ericTranslationsDir'], 
+            ['*.qm'])
+        copyTree('{1}{0}icons'.format(os.sep, sourceDir), cfg['ericIconDir'], 
             ['*.png', 'LICENSE*.*'])
-        copyTree('eric{0}pixmaps'.format(os.sep), cfg['ericPixDir'], 
+        copyTree('{1}{0}pixmaps'.format(os.sep, sourceDir), cfg['ericPixDir'], 
             ['*.png', '*.xpm', '*.ico'])
-        copyTree('eric{0}DesignerTemplates'.format(os.sep), cfg['ericTemplatesDir'], 
+        copyTree('{1}{0}DesignerTemplates'.format(os.sep, sourceDir), 
+            cfg['ericTemplatesDir'], 
             ['*.tmpl'])
-        copyTree('eric{0}CodeTemplates'.format(os.sep), cfg['ericCodeTemplatesDir'], 
+        copyTree('{1}{0}CodeTemplates'.format(os.sep, sourceDir), 
+            cfg['ericCodeTemplatesDir'], 
             ['*.tmpl'])
-        copyTree('eric{0}Examples'.format(os.sep), cfg['ericExamplesDir'], 
+        copyTree('{1}{0}Examples'.format(os.sep, sourceDir), cfg['ericExamplesDir'], 
             ['*.py', '*.pyc', '*.pyo'])
         
         # copy the wrappers
         for wname in wnames:
             shutil.copy(wname, cfg['bindir'])
+            os.remove(wname)
         
         # copy the license file
-        shutil.copy('eric{0}LICENSE.GPL3'.format(os.sep), cfg['ericDir'])
+        shutil.copy('{1}{0}LICENSE.GPL3'.format(os.sep, sourceDir), cfg['ericDir'])
         
         # create the global plugins directory
         createGlobalPluginsDir()
@@ -398,35 +407,35 @@ def installEric():
     # copy some text files to the doc area
     for name in ["LICENSE.GPL3", "THANKS", "changelog"]:
         try:
-            shutil.copy('eric{0}{1}'.format(os.sep, name), cfg['ericDocDir'])
+            shutil.copy('{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericDocDir'])
         except EnvironmentError:
-            print("Could not install 'eric{0}{1}'.".format(os.sep, name))
-    for name in glob.glob(os.path.join('eric', 'README*.*')):
+            print("Could not install '{2}{0}{1}'.".format(os.sep, name, sourceDir))
+    for name in glob.glob(os.path.join(sourceDir, 'README*.*')):
         try:
             shutil.copy(name, cfg['ericDocDir'])
         except EnvironmentError:
-            print("Could not install 'eric{0}{1}'.".format(os.sep, name))
+            print("Could not install '{1}'.".format(name))
    
     # copy some more stuff
     for name in ['default.e4k']:
         try:
-            shutil.copy('eric{0}{1}'.format(os.sep, name), cfg['ericOthersDir'])
+            shutil.copy('{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericOthersDir'])
         except EnvironmentError:
-            print("Could not install 'eric{0}{1}'.".format(os.sep, name))
+            print("Could not install '{2}{0}{1}'.".format(os.sep, name, sourceDir))
     
     # install the API file
     for progLanguage in progLanguages:
         apidir = os.path.join(cfg['apidir'], progLanguage.lower())
         if not os.path.exists(apidir):
             os.makedirs(apidir)
-        for apiName in glob.glob(os.path.join("eric", "APIs", progLanguage, "*.api")):
+        for apiName in glob.glob(os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
             try:
                 shutil.copy(apiName, apidir)
             except EnvironmentError:
                 print("Could not install '{0}'.".format(apiName))
         if progLanguage == "Python":
             # copy Python3 API files to the same destination
-            for apiName in glob.glob(os.path.join("eric", "APIs", "Python3", "*.api")):
+            for apiName in glob.glob(os.path.join(sourceDir, "APIs", "Python3", "*.api")):
                 try:
                     shutil.copy(apiName, apidir)
                 except EnvironmentError:
@@ -438,15 +447,15 @@ def installEric():
             dst = os.path.normpath(os.path.join(distDir, "usr/share/pixmaps"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutil.copy(os.path.join("eric", "icons", "default", "eric.png"), dst)
+            shutil.copy(os.path.join(sourceDir, "icons", "default", "eric.png"), dst)
             dst = os.path.normpath(os.path.join(distDir, "usr/share/applications"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutil.copy(os.path.join("eric", "eric5.desktop"), dst)
+            shutil.copy(os.path.join(sourceDir, "eric5.desktop"), dst)
         else:
-            shutil.copy(os.path.join("eric", "icons", "default", "eric.png"), 
+            shutil.copy(os.path.join(sourceDir, "icons", "default", "eric.png"), 
                 "/usr/share/pixmaps")
-            shutil.copy(os.path.join("eric", "eric5.desktop"), 
+            shutil.copy(os.path.join(sourceDir, "eric5.desktop"), 
                 "/usr/share/applications")
 
 
@@ -742,6 +751,8 @@ def main(argv):
 
     # Parse the command line.
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
+    global sourceDir, configName
+    
     progName = os.path.basename(argv[0])
 
     initGlobals()
@@ -785,6 +796,11 @@ def main(argv):
             except:
                 cfg = {}
     
+    installFromSource = not os.path.isdir(sourceDir)
+    if installFromSource:
+        sourceDir = os.path.dirname(__file__) or "."
+        configName = os.path.join(sourceDir, "eric5config.py")
+    
     if len(cfg) == 0:
         createInstallConfig()
     
@@ -793,7 +809,9 @@ def main(argv):
     
     # get rid of development config file, if it exists
     try:
-        os.remove(os.path.join("eric", "eric5config.py"))
+        if installFromSource:
+            os.rename(configName, configName + ".orig")
+        os.remove(configName)
     except EnvironmentError:
         pass
     
@@ -817,21 +835,30 @@ def main(argv):
     if doCompile:
         print("\nCompiling source files...")
         if distDir:
-            compileall.compile_dir("eric", 
+            compileall.compile_dir(sourceDir, 
                                    ddir = os.path.join(distDir, modDir, cfg['ericDir']), 
                                    rx = re.compile(r"DebugClients[\\/]Python[\\/]"), 
                                    quiet = True)
-            py_compile.compile("eric5config.py", 
+            py_compile.compile(configName, 
                                dfile = os.path.join(distDir, modDir, "eric5config.py"))
         else:
-            compileall.compile_dir("eric", 
+            compileall.compile_dir(sourceDir, 
                                    ddir = os.path.join(modDir, cfg['ericDir']), 
                                    rx = re.compile(r"DebugClients[\\/]Python[\\/]"), 
                                    quiet = True)
-            py_compile.compile("eric5config.py", 
+            py_compile.compile(configName, 
                                dfile = os.path.join(modDir, "eric5config.py"))
     print("\nInstalling eric5 ...")
     installEric()
+    
+    # do some cleanup
+    try:
+        if installFromSource:
+            os.remove(configName)
+            os.rename(configName + ".orig", configName)
+    except EnvironmentError:
+        pass
+    
     print("\nInstallation complete.")
     print()
     
