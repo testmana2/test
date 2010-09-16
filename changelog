@@ -16,6 +16,8 @@ Version 5.1-snapshot-2010mmdd:
 - added filename filters to the code metrics, syntax checker and tabnanny dialogs
 - changed XML handling code to use QXmlStreamReader and QXmlStreamWriter
 - added use of compositing modes to the icon editor
+- modified install script such, that it allows an installation from source as well.
+  The situation will be determined automatically.
 
 Version 5.1-snapshot-20100718:
 - bug fixes
