@@ -835,23 +835,6 @@ def main(argv):
     print("\nInstallation complete.")
     print()
     
-    #check version of PyQt
-    from PyQt4.QtCore import PYQT_VERSION_STR
-    pyqtVersion = PYQT_VERSION_STR
-    # always assume, that snapshots are new enough
-    if pyqtVersion.find("snapshot-") == -1:
-        while pyqtVersion.count('.') < 2:
-            pyqtVersion += '.0'
-        (maj, min, pat) = pyqtVersion.split('.')
-        maj = int(maj)
-        min = int(min)
-        pat = int(pat)
-        if min < 5:
-            print()
-            print("You have to patch PyQt QNetworkAccessManager.")
-            print("See the patches directory for details.")
-    
-    print()
     exit()
     
     
