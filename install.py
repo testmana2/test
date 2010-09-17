@@ -492,15 +492,15 @@ def createConfig():
     """
     Create a config file with the respective config entries.
     """
-    global cfg
+    global cfg, sourceDir
     
     apis = []
     for progLanguage in progLanguages:
-        for apiName in glob.glob(os.path.join("eric", "APIs", progLanguage, "*.api")):
+        for apiName in glob.glob(os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
             apis.append(os.path.basename(apiName))
         if progLanguage == "Python":
             # treat Python3 API files the same as Python API files
-            for apiName in glob.glob(os.path.join("eric", "APIs", "Python3", "*.api")):
+            for apiName in glob.glob(os.path.join(sourceDir, "APIs", "Python3", "*.api")):
                 apis.append(os.path.basename(apiName))
     
     fn = 'eric5config.py'
