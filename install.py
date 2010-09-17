@@ -661,6 +661,7 @@ def compileUiFiles():
     """
     Compile the .ui files to Python sources.
     """
+    global sourceDir
     try:
         from PyQt4.uic import compileUiDir
     except ImportError:
@@ -739,7 +740,7 @@ def compileUiFiles():
         """
         return py_dir, "Ui_{0}".format(py_file)
     
-    compileUiDir("eric", True, pyName)
+    compileUiDir(sourceDir, True, pyName)
 
 def main(argv):
     """
