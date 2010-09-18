@@ -133,6 +133,10 @@ class NetworkAccessManager(QNetworkAccessManager):
         if not self.__acceptLanguage.isEmpty():
             req.setRawHeader("Accept-Language", self.__acceptLanguage)
         
+        # set cache policy
+        req.setAttribute(QNetworkRequest.CacheLoadControlAttribute, 
+            Preferences.getHelp("CachePolicy"))
+        
         # AdBlock code
         if op == QNetworkAccessManager.GetOperation:
             if self.__adblockNetwork is None:

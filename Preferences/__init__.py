@@ -21,7 +21,7 @@ import os
 import fnmatch
 import shutil
 
-from PyQt4 import QtCore, QtGui
+from PyQt4 import QtCore, QtGui, QtNetwork
 from PyQt4 import Qsci
 from PyQt4.QtWebKit import QWebSettings
 
@@ -569,6 +569,7 @@ class Prefs(object):
         "WebSearchKeywords" : [],   # array of two tuples (keyword, search engine name)
         "DiskCacheEnabled" : True, 
         "DiskCacheSize" : 50,       # 50 MB
+        "CachePolicy" : QtNetwork.QNetworkRequest.PreferNetwork, 
         "AcceptCookies" : 2,        # CookieJar.AcceptOnlyFromSitesNavigatedTo
         "KeepCookiesUntil" : 0,     # CookieJar.KeepUntilExpire
         "FilterTrackingCookies" : True, 
@@ -1778,7 +1779,8 @@ def getHelp(key, prefClass = Prefs):
         return keywords
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies", 
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit", 
-                 "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota"]:
+                 "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota", 
+                 "CachePolicy"]:
         return int(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions", 

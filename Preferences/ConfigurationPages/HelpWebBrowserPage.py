@@ -9,6 +9,7 @@ Module implementing the Help web browser configuration page.
 
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtWebKit import QWebSettings
+from PyQt4.QtNetwork import QNetworkRequest
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage
@@ -72,6 +73,14 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             Preferences.getHelp("DiskCacheEnabled"))
         self.cacheSizeSpinBox.setValue(
             Preferences.getHelp("DiskCacheSize"))
+        cachePolicy = Preferences.getHelp("CachePolicy")
+        if cachePolicy == QNetworkRequest.PreferNetwork:
+            self.cacheKeepButton.setChecked(True)
+        elif cachePolicy == QNetworkRequest.PreferCache:
+            self.cachePreferButton.setChecked(True)
+        elif cachePolicy == QNetworkRequest.AlwaysCache:
+            self.cacheOfflineButton.setChecked(True)
+        
         self.printBackgroundsCheckBox.setChecked(
             Preferences.getHelp("PrintBackgrounds"))
         
@@ -135,6 +144,16 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.diskCacheCheckBox.isChecked())
         Preferences.setHelp("DiskCacheSize",
             self.cacheSizeSpinBox.value())
+        if self.cacheKeepButton.isChecked():
+            Preferences.setHelp("CachePolicy", 
+                QNetworkRequest.PreferNetwork)
+        elif self.cachePreferButton.isChecked():
+            Preferences.setHelp("CachePolicy", 
+                QNetworkRequest.PreferCache)
+        elif self.cacheOfflineButton.isChecked():
+            Preferences.setHelp("CachePolicy", 
+                QNetworkRequest.AlwaysCache)
+        
         Preferences.setHelp("PrintBackgrounds",
             self.printBackgroundsCheckBox.isChecked())
         

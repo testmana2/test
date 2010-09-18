@@ -241,7 +241,9 @@ class HelpWebPage(QWebPage):
                                 "connection."), 
                     self.trUtf8("If your computer or network is protected by a firewall "
                                 "or proxy, make sure that the browser is permitted to "
-                                "access the network.")
+                                "access the network."), 
+                    self.trUtf8("If your cache policy is set to offline browsing,"
+                                "only pages in the local cache are available.")
                 ).encode("utf8"))
                 return True
         except AttributeError:
@@ -1147,7 +1149,9 @@ class HelpBrowser(QWebView):
                             "connection."), 
                 self.trUtf8("If your computer or network is protected by a firewall or "
                             "proxy, make sure that the browser is permitted to access "
-                            "the network.")
+                            "the network."), 
+                self.trUtf8("If your cache policy is set to offline browsing,"
+                            "only pages in the local cache are available.")
             )
             self.setHtml(html, replyUrl)
             self.mw.historyManager().removeHistoryEntry(replyUrl, self.title())

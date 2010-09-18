@@ -11559,184 +11559,189 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="521"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="523"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Es konnte kein Betrachter für die Datei &lt;b&gt;{0}&lt;/b&gt; gestartet werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="705"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="707"/>
         <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="483"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="485"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert nicht.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="315"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="317"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hilfe Fenster&lt;/b&gt;&lt;p&gt;Dieses Fenster zeigt die ausgewählte Hilfe an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="774"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="776"/>
         <source>Web Inspector...</source>
         <translation>Web Inspektor...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1131"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1133"/>
         <source>Error loading page: {0}</source>
         <translation>Fehler beim Laden von: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1142"/>
         <source>When connecting to: {0}.</source>
         <translation>Beim Verbinden zu: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1142"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Überprüfen Sie die Adresse auf Fehler wie &lt;b&gt;ww&lt;/b&gt;.example.org statt &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1142"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Falls die Adresse stimmt, versuchen Sie, die Netzwerkverbindung zu überprüfen.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1142"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Wenn Ihr Computer oder Ihr Netzwerk durch eine Firewall oder einen Proxy geschützt ist, stellen Sie sicher, dass der Browser auf das Netzwerk zugreifen darf.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="503"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="505"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Es konnte keine Anwendung für die URL &lt;b&gt;{0}&lt;/b&gt; gestartet werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="738"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="740"/>
         <source>Bookmark this Page</source>
         <translation>Lesezeichen für diese Seite hinzufügen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="709"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="711"/>
         <source>Save Lin&amp;k</source>
         <translation>Lin&amp;k speichern</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="710"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="712"/>
         <source>Bookmark this Link</source>
         <translation>Lesezeichen für diesen Link hinzufügen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="713"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="715"/>
         <source>Copy Link to Clipboard</source>
         <translation>Link in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="718"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="720"/>
         <source>Open Image in New Tab</source>
         <translation>Bild in neuem Register öffnen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="722"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="724"/>
         <source>Save Image</source>
         <translation>Bild speichern</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="723"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="725"/>
         <source>Copy Image to Clipboard</source>
         <translation>Bild in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="724"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="726"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Bildadresse in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="521"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="523"/>
         <source>Web Browser</source>
         <translation>Web-Browser</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="728"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="730"/>
         <source>Block Image</source>
         <translation>Bild blockieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="752"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="754"/>
         <source>Search with...</source>
         <translation>Suchen mit...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1195"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
         <source>Web Database Quota</source>
         <translation>Webdatenbankquota</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1195"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Datenbankquota von &lt;strong&gt;{0}&lt;/strong&gt; wurde beim Zugriff auf die Datenbank &lt;strong&gt;{1}&lt;/strong&gt; überschritten.&lt;/p&gt;&lt;p&gt;Soll es geändert werden?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1203"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1207"/>
         <source>New Web Database Quota</source>
         <translation>Neues Datenbankquota</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1223"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1227"/>
         <source>bytes</source>
         <translation>Bytes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1226"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1230"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1229"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1233"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1203"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1207"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Gib das neue Quota in MB ein (aktuell = {0}, verbraucht = {1}; Schrittweite = 5 MB):</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="769"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="771"/>
         <source>Add to web search toolbar</source>
         <translation>Zur Websuchleiste hinzufügen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="882"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="884"/>
         <source>Method not supported</source>
         <translation>Methode nicht unterstützt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="882"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="884"/>
         <source>{0} method is not supported.</source>
         <translation>{0} Methode wird nicht unterstützt.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="924"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="926"/>
         <source>Search engine</source>
         <translation>Suchmaschine</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="924"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="926"/>
         <source>Choose the desired search engine</source>
         <translation>Wähle die gewünschte Suchmaschine aus</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="941"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="943"/>
         <source>Engine name</source>
         <translation>Suchmaschinenname</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="941"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="943"/>
         <source>Enter a name for the engine</source>
         <translation>Gib einen Namen für die Suchmaschine ein</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1142"/>
+        <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
+        <translation>Wenn die Zwischenspeicher-Regelung auf Offline-Browsing steht, sind nur Seiten im lokalen Zwischenspeicher verfügbar.</translation>
     </message>
 </context>
 <context>
@@ -12234,32 +12239,32 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Offline-Speicher aktivieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="347"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="386"/>
         <source>Cache size:</source>
         <translation>Speichergröße:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="354"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="393"/>
         <source>Enter the maximum size of the disk cache</source>
         <translation>Gib die Maximalgröße des Offline-Speichers ein</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="360"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="399"/>
         <source> MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="389"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="428"/>
         <source>Printing</source>
         <translation>Drucken</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="395"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="434"/>
         <source>Select to print background colours and images</source>
         <translation>Auswählen, um Hintergrundfarben und -bilder zu drucken</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="398"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="437"/>
         <source>Print background colours and images</source>
         <translation>Hintergrundfarben und -bilder drucken</translation>
     </message>
@@ -12413,6 +12418,41 @@ gesamte Auswahl.&lt;/li&gt;
         <source>Use DNS prefetching to improve page loading</source>
         <translation>DNS-Vorabruf zur Verbesserung der Seitenladeleistung verwenden</translation>
     </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="347"/>
+        <source>Policy</source>
+        <translation>Regelung</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="353"/>
+        <source>Select to prefer the network</source>
+        <translation>Auswählen, um zuerst im Netzwerk zu suchen</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="356"/>
+        <source>Keep cache in sync</source>
+        <translation>Zwischenspeicher aktuell halten</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="363"/>
+        <source>Select to prefer cached data</source>
+        <translation>Auswählen, um Daten im Zwischenspeicher zu bevorzugen</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="366"/>
+        <source>Use cache whenever possible</source>
+        <translation>Zwischenspeicher verwenden, wenn möglich</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="373"/>
+        <source>Select to use cached data only</source>
+        <translation>Auswählen, um nur Daten aus dem Zwischenspeicher zu verwenden</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="376"/>
+        <source>Offline browsing mode</source>
+        <translation>Offline-Browsing Modus</translation>
+    </message>
 </context>
 <context>
     <name>HelpWebPage</name>
@@ -12440,6 +12480,11 @@ gesamte Auswahl.&lt;/li&gt;
         <location filename="Helpviewer/HelpBrowserWV.py" line="233"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Wenn Ihr Computer oder Ihr Netzwerk durch eine Firewall oder einen Proxy geschützt ist, stellen Sie sicher, dass der Browser auf das Netzwerk zugreifen darf.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="233"/>
+        <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
+        <translation>Wenn die Zwischenspeicher-Regelung auf Offline-Browsing steht, sind nur Seiten im lokalen Zwischenspeicher verfügbar.</translation>
     </message>
 </context>
 <context>
@@ -17276,102 +17321,102 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
 <context>
     <name>IconEditorGrid</name>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="191"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="190"/>
         <source>Set Pixel</source>
         <translation>Pixel setzen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="192"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="191"/>
         <source>Erase Pixel</source>
         <translation>Pixel löschen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="193"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="192"/>
         <source>Draw Line</source>
         <translation>Linie zeichnen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="194"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="193"/>
         <source>Draw Rectangle</source>
         <translation>Rechteck zeichnen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="195"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="194"/>
         <source>Draw Filled Rectangle</source>
         <translation>Gefülltes Rechteck zeichnen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="196"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="195"/>
         <source>Draw Circle</source>
         <translation>Kreis zeichnen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="197"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="196"/>
         <source>Draw Filled Circle</source>
         <translation>Gefüllten Kreis zeichnen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="198"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="197"/>
         <source>Draw Ellipse</source>
         <translation>Ellipse zeichnen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="199"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="198"/>
         <source>Draw Filled Ellipse</source>
         <translation>Gefüllte Ellipse zeichnen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="200"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="199"/>
         <source>Fill Region</source>
         <translation>Bereich füllen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="812"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="811"/>
         <source>Cut Selection</source>
         <translation>Auswahl ausschneiden</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="864"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="863"/>
         <source>Paste</source>
         <translation>Einfügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="864"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="863"/>
         <source>&lt;p&gt;The clipboard image is larger than the current image.&lt;br/&gt;Paste as new image?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Bild der zwischenablage ist größer als das aktuelle Bild.&lt;br/&gt;Als neues Bild einfügen?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="875"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="874"/>
         <source>Paste Clipboard</source>
         <translation>Zwischenablage einfügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="889"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="888"/>
         <source>Pasting Image</source>
         <translation>Einfügen des Bildes</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="889"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="888"/>
         <source>Invalid image data in clipboard.</source>
         <translation>Die Zwischenablage enthält ungültige Bilddaten.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="899"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="898"/>
         <source>Paste Clipboard as New Image</source>
         <translation>Zwischenablage als neues Bild einfügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="927"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="926"/>
         <source>Clear Image</source>
         <translation>Bild löschen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="943"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="942"/>
         <source>Resize Image</source>
         <translation>Bildgröße ändern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="967"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="966"/>
         <source>Convert to Grayscale</source>
         <translation>In Grauwerte umwandeln</translation>
     </message>
@@ -17437,1063 +17482,1063 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
 <context>
     <name>IconEditorWindow</name>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="106"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="107"/>
         <source>Windows Bitmap File (*.bmp)</source>
         <translation>Windows Bitmap Datei (*.bmp)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="107"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="108"/>
         <source>Graphic Interchange Format File (*.gif)</source>
         <translation>Graphic Interchange Format Datei (*.gif)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="108"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="109"/>
         <source>Windows Icon File (*.ico)</source>
         <translation>Windows Icon Datei (*.ico)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="109"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="110"/>
         <source>JPEG File (*.jpg)</source>
         <translation>JPEG Datei (*.jpg)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="111"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="112"/>
         <source>Portable Bitmap File (*.pbm)</source>
         <translation>Portable Bitmap Datei (*.pbm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="113"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="114"/>
         <source>Portable Graymap File (*.pgm)</source>
         <translation>Portable Graymap Datei (*.pgm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="114"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="115"/>
         <source>Portable Network Graphics File (*.png)</source>
         <translation>Portable Network Graphics Datei (*.png)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="115"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="116"/>
         <source>Portable Pixmap File (*.ppm)</source>
         <translation>Portable Pixmap Datei (*.ppm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="117"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="118"/>
         <source>Scalable Vector Graphics File (*.svg)</source>
         <translation>Scalable Vector Graphics Datei (*.svg)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="119"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="120"/>
         <source>TIFF File (*.tif)</source>
         <translation>TIFF Datei (*.tif)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="120"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="121"/>
         <source>X11 Bitmap File (*.xbm)</source>
         <translation>X11 Bitmap Datei (*.xbm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="121"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="122"/>
         <source>X11 Pixmap File (*.xpm)</source>
         <translation>X11 Pixmap Datei (*.xpm)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="132"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="133"/>
         <source>All Files (*)</source>
         <translation>Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="164"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="165"/>
         <source>New</source>
         <translation>Neu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="164"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="165"/>
         <source>&amp;New</source>
         <translation>&amp;Neu</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="164"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="165"/>
         <source>Ctrl+N</source>
         <comment>File|New</comment>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="169"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="170"/>
         <source>Create a new icon</source>
         <translation>Erzeuge ein neues Icon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="170"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="171"/>
         <source>&lt;b&gt;New&lt;/b&gt;&lt;p&gt;This creates a new icon.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Neu&lt;/b&gt;&lt;p&gt;Dies erzeugt ein neues Icon.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="177"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="178"/>
         <source>New Window</source>
         <translation>Neues Fenster</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="177"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="178"/>
         <source>New &amp;Window</source>
         <translation>Neues &amp;Fenster</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="181"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="182"/>
         <source>Open a new icon editor window</source>
         <translation>Öffne ein neues Icon Editor Fenster</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="182"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="183"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Neues fenster&lt;/b&gt;&lt;p&gt;Dies öffnet ein neues Icon Editor Fenster.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="189"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="190"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="189"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="190"/>
         <source>&amp;Open...</source>
         <translation>&amp;Öffnen...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="189"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="190"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="194"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="195"/>
         <source>Open an icon file for editing</source>
         <translation>Öffne eine Icon Datei zum editieren</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="195"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="196"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new icon file for editing. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datei öffnen&lt;/b&gt;&lt;p&gt;Dies öffnet eine neue Icon Datei zum editieren. Es wird zunächst ein Dateiauswahldialog angezeigt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="203"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="204"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="203"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="204"/>
         <source>&amp;Save</source>
         <translation>&amp;Speichern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="203"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="204"/>
         <source>Ctrl+S</source>
         <comment>File|Save</comment>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="208"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="209"/>
         <source>Save the current icon</source>
         <translation>Speichert das aktuelle Icon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="209"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="210"/>
         <source>&lt;b&gt;Save File&lt;/b&gt;&lt;p&gt;Save the contents of the icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datei speichern&lt;/b&gt;&lt;p&gt;Dies speichert den Inhalt des Icon Editor Fensters.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="216"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="217"/>
         <source>Save As</source>
         <translation>Speichern unter</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="216"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="217"/>
         <source>Save &amp;As...</source>
         <translation>Speichern &amp;unter...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="216"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="217"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation>Shift+Ctrl+S</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="221"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="222"/>
         <source>Save the current icon to a new file</source>
         <translation>Speichert das aktuelle Icon in eine neue Datei</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="223"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="224"/>
         <source>&lt;b&gt;Save As...&lt;/b&gt;&lt;p&gt;Saves the current icon to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Speichern unter&lt;/b&gt;&lt;p&gt;Dies speichert das aktuelle Icon in eine Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="230"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="231"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="230"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="231"/>
         <source>&amp;Close</source>
         <translation>Schl&amp;ießen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="230"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="231"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="235"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="236"/>
         <source>Close the current icon editor window</source>
         <translation>Schließt das aktuelle Icon Editor Fenster</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="236"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="237"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;Closes the current icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schließen&lt;/b&gt;&lt;p&gt;Schließt das aktuelle Icon Editor Fenster.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="243"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="244"/>
         <source>Close All</source>
         <translation>Alle schließen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="243"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="244"/>
         <source>Close &amp;All</source>
         <translation>Alle &amp;schließen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="246"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="247"/>
         <source>Close all icon editor windows</source>
         <translation>Schließt alle Icon Editor Fenster</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="247"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="248"/>
         <source>&lt;b&gt;Close All&lt;/b&gt;&lt;p&gt;Closes all icon editor windows except the first one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Alle schließen&lt;/b&gt;&lt;p&gt;Schließt alle Icon Editor Fenster mit Ausnahme des ersten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="254"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="255"/>
         <source>Quit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="254"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="255"/>
         <source>&amp;Quit</source>
         <translation>B&amp;eenden</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="254"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="255"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="259"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="260"/>
         <source>Quit the icon editor</source>
         <translation>Beendet den Icon Editor</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="260"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="261"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the icon editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Beenden&lt;/b&gt;&lt;p&gt;Beendet den Icon Editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="274"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="275"/>
         <source>Undo</source>
         <translation>Rückgängig</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="274"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="274"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="275"/>
         <source>Ctrl+Z</source>
         <comment>Edit|Undo</comment>
         <translation>Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="274"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="275"/>
         <source>Alt+Backspace</source>
         <comment>Edit|Undo</comment>
         <translation>Alt+Backspace</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="280"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="281"/>
         <source>Undo the last change</source>
         <translation>Die letzte Änderung rückgängig machen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="281"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="282"/>
         <source>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Undo the last change done.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rückgängig&lt;/b&gt;&lt;p&gt;Dies macht die letzte Änderung rückgängig.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="288"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="289"/>
         <source>Redo</source>
         <translation>Wiederherstellen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="288"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="289"/>
         <source>&amp;Redo</source>
         <translation>Wieder&amp;herstellen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="288"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="289"/>
         <source>Ctrl+Shift+Z</source>
         <comment>Edit|Redo</comment>
         <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="293"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="294"/>
         <source>Redo the last change</source>
         <translation>Die letzte Änderung wiederherstellen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="294"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="295"/>
         <source>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Redo the last change done.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Wiederherstellen&lt;/b&gt;&lt;p&gt;Dies stellt die letzte Änderung wieder her.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="301"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="302"/>
         <source>Cut</source>
         <translation>Ausschneiden</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="301"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="302"/>
         <source>Cu&amp;t</source>
         <translation>&amp;Ausschneiden</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="301"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="302"/>
         <source>Ctrl+X</source>
         <comment>Edit|Cut</comment>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="301"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="302"/>
         <source>Shift+Del</source>
         <comment>Edit|Cut</comment>
         <translation>Shift+Del</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="307"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="308"/>
         <source>Cut the selection</source>
         <translation>Schneidet die Auswahl aus</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="308"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="309"/>
         <source>&lt;b&gt;Cut&lt;/b&gt;&lt;p&gt;Cut the selected image area to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ausschneiden&lt;/b&gt;&lt;p&gt;Dies schneidet den ausgewählten Bildbereich aus.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="315"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="316"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="315"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="316"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopieren</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="315"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="316"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="315"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="316"/>
         <source>Ctrl+Ins</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+Einfg</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="321"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="322"/>
         <source>Copy the selection</source>
         <translation>Kopiert die Auswahl</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="322"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="323"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected image area to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopieren&lt;/b&gt;&lt;p&gt;Dies kopiert den ausgewählten Bildbereich in die Zwischenablage.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="329"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="330"/>
         <source>Paste</source>
         <translation>Einfügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="329"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="330"/>
         <source>&amp;Paste</source>
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="329"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="330"/>
         <source>Ctrl+V</source>
         <comment>Edit|Paste</comment>
         <translation>Ctrl+V</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="329"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="330"/>
         <source>Shift+Ins</source>
         <comment>Edit|Paste</comment>
         <translation>Shift+Ins</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="335"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="336"/>
         <source>Paste the clipboard image</source>
         <translation>Fügt das Bild der Zwischenablage ein</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="336"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="337"/>
         <source>&lt;b&gt;Paste&lt;/b&gt;&lt;p&gt;Paste the clipboard image.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Einfügen&lt;/b&gt;&lt;p&gt;Fügt das Bild der Zwischenablage ein.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="343"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="344"/>
         <source>Paste as New</source>
         <translation>Als Neu einfügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="343"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="344"/>
         <source>Paste as &amp;New</source>
         <translation>Als &amp;Neu einfügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="346"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="347"/>
         <source>Paste the clipboard image replacing the current one</source>
         <translation>Fügt das Bild der Zwischenablage ein und ersetzt das aktuelle Bild</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="348"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="349"/>
         <source>&lt;b&gt;Paste as New&lt;/b&gt;&lt;p&gt;Paste the clipboard image replacing the current one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Als Neu einfügen&lt;/b&gt;&lt;p&gt;Fügt das Bild der Zwischenablage ein und ersetzt das aktuelle Bild.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="355"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="356"/>
         <source>Clear</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="355"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="356"/>
         <source>Cl&amp;ear</source>
         <translation>&amp;Löschen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="355"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="356"/>
         <source>Alt+Shift+C</source>
         <comment>Edit|Clear</comment>
         <translation>Alt+Shift+C</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="361"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="362"/>
         <source>Clear the icon image</source>
         <translation>Löscht das Icon</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="362"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="363"/>
         <source>&lt;b&gt;Clear&lt;/b&gt;&lt;p&gt;Clear the icon image and set it to be completely transparent.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Löschen&lt;/b&gt;&lt;p&gt;Löscht das Icon und setzt es auf vollständig transparent.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="369"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="370"/>
         <source>Select All</source>
         <translation>Alles auswählen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="369"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="370"/>
         <source>&amp;Select All</source>
         <translation>&amp;Alles auswählen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="369"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="370"/>
         <source>Ctrl+A</source>
         <comment>Edit|Select All</comment>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="374"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="375"/>
         <source>Select the complete icon image</source>
         <translation>Wählt das komplette Icon aus</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="375"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="376"/>
         <source>&lt;b&gt;Select All&lt;/b&gt;&lt;p&gt;Selects the complete icon image.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Alles auswählen&lt;/b&gt;&lt;p&gt;Wählt das komplette Icon aus.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="382"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="383"/>
         <source>Change Size</source>
         <translation>Größe ändern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="382"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="383"/>
         <source>Change Si&amp;ze...</source>
         <translation>&amp;Größe ändern...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="387"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="388"/>
         <source>Change the icon size</source>
         <translation>Ändert die Größe des Icons</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="388"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="389"/>
         <source>&lt;b&gt;Change Size...&lt;/b&gt;&lt;p&gt;Changes the icon size.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Größe ändern...&lt;/b&gt;&lt;p&gt;Ändert die Größe des Icons.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="395"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="396"/>
         <source>Grayscale</source>
         <translation>Graustufen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="395"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="396"/>
         <source>&amp;Grayscale</source>
         <translation>Gra&amp;ustufen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="400"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="401"/>
         <source>Change the icon to grayscale</source>
         <translation>Konvertiert das Icon in Graustufen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="401"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="402"/>
         <source>&lt;b&gt;Grayscale&lt;/b&gt;&lt;p&gt;Changes the icon to grayscale.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Graustufen&lt;/b&gt;&lt;p&gt;Konvertiert das Icon in Graustufen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="430"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="431"/>
         <source>Zoom in</source>
         <translation>Vergrößern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="430"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="431"/>
         <source>Zoom &amp;in</source>
         <translation>Ver&amp;größern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="430"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="431"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="435"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="436"/>
         <source>Zoom in on the icon</source>
         <translation>Iconansicht vergrößern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="436"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="437"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the icon. This makes the grid bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vergrößern&lt;/b&gt;&lt;p&gt;Das angezeigte Icon vergrößern. Dies stellt das Gitter größer dar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="443"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="444"/>
         <source>Zoom out</source>
         <translation>Verkleinern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="443"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="444"/>
         <source>Zoom &amp;out</source>
         <translation>Ver&amp;kleinern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="443"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="444"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="448"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="449"/>
         <source>Zoom out on the icon</source>
         <translation>Iconansicht verkleinern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="449"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="450"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the icon. This makes the grid smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Verkleinern&lt;/b&gt;&lt;p&gt;Das angezeigte Icon verkleinern. Dies stellt das Gitter kleiner dar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="456"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="457"/>
         <source>Zoom reset</source>
         <translation>Vergrößerung zurücksetzen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="456"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="457"/>
         <source>Zoom &amp;reset</source>
         <translation>Vergrößerung &amp;zurücksetzen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="456"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="457"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="470"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="471"/>
         <source>Zoom</source>
         <translation>Maßstab</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="470"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="471"/>
         <source>&amp;Zoom...</source>
         <translation>&amp;Maßstab...</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="470"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="471"/>
         <source>Ctrl+#</source>
         <comment>View|Zoom</comment>
         <translation>Ctrl+#</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="476"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="477"/>
         <source>Zoom the icon</source>
         <translation>Den Maßstab des Icons ändern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="477"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="478"/>
         <source>&lt;b&gt;Zoom&lt;/b&gt;&lt;p&gt;Zoom the icon. This opens a dialog where the desired zoom factor can be entered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Maßstab&lt;/b&gt;&lt;p&gt;Dies ändert den Iconmaßstab. Es wird ein Dialog eingeblendet, in dem der Maßstab eingegeben werden kann.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="485"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="486"/>
         <source>Show Grid</source>
         <translation>Gitter anzeigen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="485"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="486"/>
         <source>Show &amp;Grid</source>
         <translation>&amp;Gitter anzeigen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="490"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="491"/>
         <source>Toggle the display of the grid</source>
         <translation>Schaltet die Anzeige des Gitters um</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="491"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="492"/>
         <source>&lt;b&gt;Show Grid&lt;/b&gt;&lt;p&gt;Toggle the display of the grid.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gitter anzeigen&lt;/b&gt;&lt;p&gt;Schaltet die Anzeige des Gitters um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="510"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="511"/>
         <source>Freehand</source>
         <translation>Freihand</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="510"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="511"/>
         <source>&amp;Freehand</source>
         <translation>&amp;Freihand</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="515"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="516"/>
         <source>&lt;b&gt;Free hand&lt;/b&gt;&lt;p&gt;Draws non linear lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Freihand&lt;/b&gt;&lt;p&gt;Zeichnet nichtlineare Linien.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="524"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="525"/>
         <source>Color Picker</source>
         <translation>Farbauswahl</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="524"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="525"/>
         <source>&amp;Color Picker</source>
         <translation>Far&amp;bauswahl</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="529"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="530"/>
         <source>&lt;b&gt;Color Picker&lt;/b&gt;&lt;p&gt;The color of the pixel clicked on will become the current draw color.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Farbauswahl&lt;/b&gt;&lt;p&gt;Die farbe des Pixels, auf das geklickt wurde, wird die aktuelle Zeichenfarbe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="539"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="540"/>
         <source>Rectangle</source>
         <translation>Rechteck</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="539"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="540"/>
         <source>&amp;Rectangle</source>
         <translation>&amp;Rechteck</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="544"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="545"/>
         <source>&lt;b&gt;Rectangle&lt;/b&gt;&lt;p&gt;Draw a rectangle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rechteck&lt;/b&gt;&lt;p&gt;Zeichnet ein Rechteck.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="553"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="554"/>
         <source>Filled Rectangle</source>
         <translation>Gefülltes Rechteck</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="553"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="554"/>
         <source>F&amp;illed Rectangle</source>
         <translation>&amp;Gefülltes Rechteck</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="558"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="559"/>
         <source>&lt;b&gt;Filled Rectangle&lt;/b&gt;&lt;p&gt;Draw a filled rectangle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gefülltes Rechteck&lt;/b&gt;&lt;p&gt;Zeichnet ein gefülltes Rechteck.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="567"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="568"/>
         <source>Circle</source>
         <translation>Kreis</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="572"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="573"/>
         <source>&lt;b&gt;Circle&lt;/b&gt;&lt;p&gt;Draw a circle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kreis&lt;/b&gt;&lt;p&gt;Zeichnet einen Kreis.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="581"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="582"/>
         <source>Filled Circle</source>
         <translation>Gefüllter Kreis</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="581"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="582"/>
         <source>Fille&amp;d Circle</source>
         <translation>Gef&amp;üllter Kreis</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="586"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="587"/>
         <source>&lt;b&gt;Filled Circle&lt;/b&gt;&lt;p&gt;Draw a filled circle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gefüllter Kreis&lt;/b&gt;&lt;p&gt;Zeichnet einen gefüllten Kreis.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="595"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="596"/>
         <source>Ellipse</source>
         <translation>Ellipse</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="595"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="596"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellipse</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="600"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="601"/>
         <source>&lt;b&gt;Ellipse&lt;/b&gt;&lt;p&gt;Draw an ellipse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ellipse&lt;/b&gt;&lt;p&gt;Zeichnet eine Ellipse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="609"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="610"/>
         <source>Filled Ellipse</source>
         <translation>Gefüllte Ellipse</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="609"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="610"/>
         <source>Fille&amp;d Elli&amp;pse</source>
         <translation>Gefüllte Elli&amp;pse</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="614"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="615"/>
         <source>&lt;b&gt;Filled Ellipse&lt;/b&gt;&lt;p&gt;Draw a filled ellipse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gefüllte Ellipse&lt;/b&gt;&lt;p&gt;Zeichnet eine gefüllte Ellipse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="623"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="624"/>
         <source>Flood Fill</source>
         <translation>Durchgehende Füllung</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="623"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="624"/>
         <source>Fl&amp;ood Fill</source>
         <translation>&amp;Durchgehende Füllung</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="628"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="629"/>
         <source>&lt;b&gt;Flood Fill&lt;/b&gt;&lt;p&gt;Fill adjoining pixels with the same color with the current color.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Durchgehende Füllung&lt;/b&gt;&lt;p&gt;Benchbarte Pixel der selben Farbe werden mit der aktuellen Farbe gefüllt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="638"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="639"/>
         <source>Line</source>
         <translation>Linie</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="638"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="639"/>
         <source>&amp;Line</source>
         <translation>&amp;Linie</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="643"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="644"/>
         <source>&lt;b&gt;Line&lt;/b&gt;&lt;p&gt;Draw a line.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Linie&lt;/b&gt;&lt;p&gt;Zeichnet eine Linie.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="652"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="653"/>
         <source>Eraser (Transparent)</source>
         <translation>Radierer (transparent)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="652"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="653"/>
         <source>Eraser (&amp;Transparent)</source>
         <translation>Radierer (&amp;transparent)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="657"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="658"/>
         <source>&lt;b&gt;Eraser (Transparent)&lt;/b&gt;&lt;p&gt;Erase pixels by setting them to transparent.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Radierer (transparent)&lt;/b&gt;&lt;p&gt;Löscht Pixel indem sie auf transparent gesetzt werden.&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="666"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="667"/>
         <source>Rectangular Selection</source>
         <translation>Rechteck-Auswahl</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="681"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="682"/>
         <source>Rect&amp;angular Selection</source>
         <translation>Rechteck-&amp;Auswahl</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="671"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="672"/>
         <source>&lt;b&gt;Rectangular Selection&lt;/b&gt;&lt;p&gt;Select a rectangular section of the icon using the mouse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rechteck-Auswahl&lt;/b&gt;&lt;p&gt;Wählt einen rechteckigen Bereich des Icons mit der Maus aus.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="681"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="682"/>
         <source>Circular Selection</source>
         <translation>Kreisförmige Auswahl</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="686"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="687"/>
         <source>&lt;b&gt;Circular Selection&lt;/b&gt;&lt;p&gt;Select a circular section of the icon using the mouse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kreisförmige Auswahl&lt;/b&gt;&lt;p&gt;Wählt einen kreisförmigen Bereich des Icons mit der Maus aus.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="702"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="703"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="702"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="703"/>
         <source>&amp;About</source>
         <translation>Ü&amp;ber</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="705"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="706"/>
         <source>Display information about this software</source>
         <translation>Zeigt Informationen zu diesem Programm an</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="706"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="707"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Über&lt;/b&gt;&lt;p&gt;Zeigt einige Informationen über dieses Programm an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="712"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="713"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="712"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="713"/>
         <source>About &amp;Qt</source>
         <translation>Über &amp;Qt</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="715"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="716"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Zeige Informationen über das Qt Toolkit an</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="717"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="718"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Über Qt&lt;/b&gt;&lt;p&gt;Zeige Informationen über das Qt Toolkit an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="724"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="725"/>
         <source>What&apos;s This?</source>
         <translation>Was ist das?</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="724"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="725"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Was ist das?</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="724"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="725"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="729"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="730"/>
         <source>Context sensitive help</source>
         <translation>Kontextsensitive Hilfe</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="730"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="731"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zeige kontextsensitive Hilfe an&lt;b&gt;&lt;/p&gt;Im &quot;Was ist das?&quot; Modus (der Mauszeiger stellt einen Pfeil mit Fragezeichen dar) wird auf einen Mausklick eine kurze Hilfebeschreibung zu dem ausgewählten MMI-Element angezeigt. In Dialogen kann diese Funktionalität durch den entsprechenden Knopf im Fensterkopf erreicht werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="747"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="748"/>
         <source>&amp;File</source>
         <translation>&amp;Datei</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="761"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="762"/>
         <source>&amp;Edit</source>
         <translation>&amp;Bearbeiten</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="777"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="778"/>
         <source>&amp;View</source>
         <translation>&amp;Ansicht</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="786"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="787"/>
         <source>&amp;Tools</source>
         <translation>&amp;Werkzeuge</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="805"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="806"/>
         <source>&amp;Help</source>
         <translation>&amp;Hilfe</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="815"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="816"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="828"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="829"/>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="841"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="842"/>
         <source>View</source>
         <translation>Ansicht</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="851"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="852"/>
         <source>Tools</source>
         <translation>Werkzeuge</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="869"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="870"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="883"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="884"/>
         <source>&lt;p&gt;This part of the status bar displays the current zoom factor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt den aktuellen Vergrößerungsfaktor an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="890"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="891"/>
         <source>&lt;p&gt;This part of the status bar displays the icon size.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt die aktuelle Icongröße an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="897"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="898"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt die Cursorposition an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="966"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="967"/>
         <source>Open icon file</source>
         <translation>Icon Datei öffnen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1005"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1006"/>
         <source>Save icon file</source>
         <translation>Icon Datei speichern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1080"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1081"/>
         <source>Icon saved</source>
         <translation>Icon gespeichert</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1095"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1096"/>
         <source>Untitled</source>
         <translation>Unbenannt</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1099"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1100"/>
         <source>{0}[*] - {1}</source>
         <translation>{0}[*] - {1}</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1099"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1100"/>
         <source>Icon Editor</source>
         <translation>Icon Editor</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="110"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="111"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation>Multiple-Image Network Graphics Datei (*.mng)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="461"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="462"/>
         <source>Reset the zoom of the icon</source>
         <translation>Die Vergrößerung des Icons zurücksetzen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="462"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="463"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the icon. This sets the zoom factor to 100%.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vergrößerung zurücksetzen&lt;/b&gt;&lt;p&gt;Setzt die Vergrößerung des Icons zurück. Es setzt die Vergrößerung auf den Wert 100% zurück.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="112"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="113"/>
         <source>Paintbrush Bitmap File (*.pcx)</source>
         <translation>Paintbrush Bitmap Datei (*.pcx)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="116"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="117"/>
         <source>Silicon Graphics Image File (*.sgi)</source>
         <translation>Silicon Graphics Bild Datei (*.sgi)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="118"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="119"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation>Targa Grapfik Datei (*.tga)</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1120"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1121"/>
         <source>eric5 Icon Editor</source>
         <translation>eric5 Icon Editor</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1031"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1032"/>
         <source>The file &apos;{0}&apos; does not exist.</source>
         <translation>Die Datei &apos;{0}&apos; existiert nicht.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1037"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1038"/>
         <source>Cannot read file &apos;{0}:
 {1}.</source>
         <translation>Datei {0} kann nicht gelesen werden:
 {1}.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1069"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1070"/>
         <source>Cannot write file &apos;{0}:
 {1}.</source>
         <translation>Datei {0} kann nicht geschrieben werden:
 {1}.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1203"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1204"/>
         <source>About eric5 Icon Editor</source>
         <translation>Über den eric5 Icon Editor</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1203"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1204"/>
         <source>The eric5 Icon Editor is a simple editor component to perform icon drawing tasks.</source>
         <translation>Der eric5 Icon Editor ist ein Komponente zur Ausführung einfacher Icon Bearbeitungsfunktionen.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1005"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1006"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1120"/>
+        <location filename="IconEditor/IconEditorWindow.py" line="1121"/>
         <source>The icon image has unsaved changes.</source>
         <translation>Das Icon Bild hat ungesicherte Änderungen.</translation>
     </message>
@@ -21426,47 +21471,47 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="160"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="164"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Gib Nutzernamen und Passwort für &apos;{0}&apos; ein&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="163"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="167"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Gib Nutzernamen und Passwort für &apos;{0}&apos; und Realm &apos;{1}&apos; ein&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="206"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="210"/>
         <source>SSL Errors</source>
         <translation>SSL Fehler</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="206"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="210"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;SSL Fehler für &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Sollen diese Fehler ignoriert werden?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="219"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="223"/>
         <source>Certificates</source>
         <translation>Zertifikate</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="219"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="223"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zertifikate:&lt;br/&gt;{0}&lt;br/&gt;Sollen alle diese Zertifikate akzeptiert werden?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="254"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="258"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Aussteller: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="257"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="261"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Gültig ab: {0}&lt;br/&gt;Gültig bis: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="264"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="268"/>
         <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>&lt;br/&gt;Alternative Namen:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
@@ -22963,12 +23008,12 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="874"/>
+        <location filename="Preferences/__init__.py" line="875"/>
         <source>Export Preferences</source>
         <translation>Konfiguration exportieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="893"/>
+        <location filename="Preferences/__init__.py" line="894"/>
         <source>Import Preferences</source>
         <translation>Konfiguration importieren</translation>
     </message>

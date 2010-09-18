@@ -1,5 +1,9 @@
 Change Log
 ----------
+Version 5.1-snapshot-2010mmdd:
+- bug fixes
+- added configuration options for the web browser cache policy
+
 Version 5.1-snapshot-20100918:
 - bug fixes
 - converted all signal/slot code to use the new API
