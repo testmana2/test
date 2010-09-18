@@ -1,6 +1,6 @@
 Change Log
 ----------
-Version 5.1-snapshot-2010mmdd:
+Version 5.1-snapshot-20100918:
 - bug fixes
 - converted all signal/slot code to use the new API
 - added action to copy the editor path to the clipboard to the tab context menu
