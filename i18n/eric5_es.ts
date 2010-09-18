@@ -974,7 +974,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="MultiProject/AddProjectDialog.py" line="60"/>
         <source>Project Files (*.e4p)</source>
-        <translation type="unfinished">Archivos de proyecto (*.e4p)</translation>
+        <translation>Archivos de proyecto (*.e4p)</translation>
     </message>
 </context>
 <context>
@@ -2067,7 +2067,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Cooperation/ChatWidget.py" line="546"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -2196,22 +2196,22 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="DataViews/CodeMetricsDialog.ui" line="39"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Excluir archivos:</translation>
+        <translation>Excluir Archivos:</translation>
     </message>
     <message>
         <location filename="DataViews/CodeMetricsDialog.ui" line="46"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished">Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
+        <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
         <location filename="DataViews/CodeMetricsDialog.ui" line="53"/>
         <source>Press to clear the filter edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para limpiar la caja de filtro</translation>
     </message>
     <message>
         <location filename="DataViews/CodeMetricsDialog.ui" line="73"/>
         <source>Press to start the code metrics run</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para comenzar la ejecución de métricas del código</translation>
     </message>
 </context>
 <context>
@@ -5122,7 +5122,7 @@ Not connected
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.py" line="97"/>
         <source>Python Files (*.py *.py2)</source>
-        <translation type="unfinished">Archivos Python (*.py, *.py3) {2)?}</translation>
+        <translation>Archivos Python (*.py *.py2)</translation>
     </message>
 </context>
 <context>
@@ -5306,7 +5306,7 @@ Not connected
     <message>
         <location filename="UI/DiffDialog.py" line="289"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -5482,27 +5482,27 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Plugins/PluginWizardE5MessageBox.py" line="75"/>
         <source>E5MessageBox Wizard</source>
-        <translation type="unfinished"></translation>
+        <translation>Asistente para E5MessageBox</translation>
     </message>
     <message>
         <location filename="Plugins/PluginWizardE5MessageBox.py" line="72"/>
         <source>&amp;E5MessageBox Wizard...</source>
-        <translation type="unfinished"></translation>
+        <translation>Asistente para &amp;E5MessageBox...</translation>
     </message>
     <message>
         <location filename="Plugins/PluginWizardE5MessageBox.py" line="76"/>
         <source>&lt;b&gt;E5MessageBox Wizard&lt;/b&gt;&lt;p&gt;This wizard opens a dialog for entering all the parameters needed to create an E5MessageBox. The generated code is inserted at the current cursor position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Asistente para E5MessageBox&lt;/b&gt;&lt;p&gt;Este asistente abre un diálogo para introducir todos los parámetros necesarios para crear un E5MessageBox. El código generado se inserta en la posición actual del cursor.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/PluginWizardE5MessageBox.py" line="120"/>
         <source>No current editor</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay editor actual</translation>
     </message>
     <message>
         <location filename="Plugins/PluginWizardE5MessageBox.py" line="120"/>
         <source>Please open or create a file first.</source>
-        <translation type="unfinished">Por favor, abra o cree un archivo primero.</translation>
+        <translation>Por favor, abra o cree un archivo primero.</translation>
     </message>
 </context>
 <context>
@@ -5510,342 +5510,342 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="14"/>
         <source>E5MessageBox Wizard</source>
-        <translation type="unfinished"></translation>
+        <translation>Asistente para E5MessageBox</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="23"/>
         <source>Type</source>
-        <translation type="unfinished">Tipo</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="29"/>
         <source>Generate an Information message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje de Información</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="403"/>
         <source>Information</source>
-        <translation type="unfinished">Información</translation>
+        <translation>Información</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="45"/>
         <source>Generate a Question message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje de Cuestión</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="419"/>
         <source>Question</source>
-        <translation type="unfinished">Cuestión</translation>
+        <translation>Cuestión</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="58"/>
         <source>Generate a Warning message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje de Advertencia</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="435"/>
         <source>Warning</source>
-        <translation type="unfinished">Advertencia</translation>
+        <translation>Advertencia</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="71"/>
         <source>Generate a Critical message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje de Aviso Crítico</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="448"/>
         <source>Critical</source>
-        <translation type="unfinished">Aviso Crítico</translation>
+        <translation>Aviso Crítico</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="81"/>
         <source>Generate a Yes/No message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje de Si/No</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="84"/>
         <source>Yes/No</source>
-        <translation type="unfinished"></translation>
+        <translation>Si/No</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="91"/>
         <source>Generate a retry/abort message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje de reintentar/abortar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="94"/>
         <source>Retry/Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Reintentar/Abortar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="101"/>
         <source>Generate an &quot;ok to clear data&quot; message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje de &apos;de acuerdo, borrar datos&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="104"/>
         <source>OK to clear data</source>
-        <translation type="unfinished"></translation>
+        <translation>De acuerdo, borrar datos</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="114"/>
         <source>Generate an About message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje de Acerca de</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="117"/>
         <source>About</source>
-        <translation type="unfinished">Acerca de</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="127"/>
         <source>Generate an AboutQt message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje de Acerca de Qt</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="130"/>
         <source>About Qt</source>
-        <translation type="unfinished">Acerca de Qt</translation>
+        <translation>Acerca de Qt</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="137"/>
         <source>Generate a standard message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar una ventana de mensaje estándar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="140"/>
         <source>Standard message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Ventana de mensaje estándar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="150"/>
         <source>Title</source>
-        <translation type="unfinished">Título</translation>
+        <translation>Título</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="157"/>
         <source>Enter the title for the message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el título para la ventana de mensaje</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="164"/>
         <source>Message</source>
-        <translation type="unfinished">Mensaje</translation>
+        <translation>Mensaje</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="171"/>
         <source>Enter the message to be shown in the message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el mensaje que debe mostrar la ventana de mensaje</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="181"/>
         <source>Parent</source>
-        <translation type="unfinished"></translation>
+        <translation>Padre</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="187"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar &quot;self&quot; como padre</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="190"/>
         <source>self</source>
-        <translation type="unfinished"></translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="200"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar &quot;None&quot; como padre</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="203"/>
         <source>None</source>
-        <translation type="unfinished">Ninguno</translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="212"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para introducir una expresión padre</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="215"/>
         <source>Expression:</source>
-        <translation type="unfinished">Expresión:</translation>
+        <translation>Expresión:</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="225"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca la expresión padre</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="237"/>
         <source>Standard Buttons</source>
-        <translation type="unfinished">Botones Estándar</translation>
+        <translation>Botones Estándar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="35"/>
         <source>Abort</source>
-        <translation type="unfinished">Abortar</translation>
+        <translation>Abortar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="36"/>
         <source>Apply</source>
-        <translation type="unfinished">Aplicar</translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="37"/>
         <source>Cancel</source>
-        <translation type="unfinished">Cancelar</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="38"/>
         <source>Close</source>
-        <translation type="unfinished">Cerrar</translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="39"/>
         <source>Discard</source>
-        <translation type="unfinished">Descartar</translation>
+        <translation>Descartar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="40"/>
         <source>Help</source>
-        <translation type="unfinished">Ayuda</translation>
+        <translation>Ayuda</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="41"/>
         <source>Ignore</source>
-        <translation type="unfinished">Ignorar</translation>
+        <translation>Ignorar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="42"/>
         <source>No</source>
-        <translation type="unfinished">No</translation>
+        <translation>No</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="43"/>
         <source>No to all</source>
-        <translation type="unfinished">No a todo</translation>
+        <translation>No a todo</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="44"/>
         <source>Ok</source>
-        <translation type="unfinished">Ok</translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="45"/>
         <source>Open</source>
-        <translation type="unfinished">Abrir</translation>
+        <translation>Abrir</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="46"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="47"/>
         <source>Restore defaults</source>
-        <translation type="unfinished">Restaurar valores por defecto</translation>
+        <translation>Restaurar valores por defecto</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="48"/>
         <source>Retry</source>
-        <translation type="unfinished">Reintentar</translation>
+        <translation>Reintentar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="49"/>
         <source>Save</source>
-        <translation type="unfinished">Guardar</translation>
+        <translation>Guardar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="50"/>
         <source>Save all</source>
-        <translation type="unfinished">Guardar todo</translation>
+        <translation>Guardar todo</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="51"/>
         <source>Yes</source>
-        <translation type="unfinished">Si</translation>
+        <translation>Si</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="52"/>
         <source>Yes to all</source>
-        <translation type="unfinished">Si a todo</translation>
+        <translation>Si a todo</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="372"/>
         <source>Default Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Botón por Defecto</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="384"/>
         <source>Select the default button</source>
-        <translation type="unfinished">Seleccionar el botón por defecto</translation>
+        <translation>Seleccionar el botón por defecto</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="394"/>
         <source>Icon</source>
-        <translation type="unfinished">Icono</translation>
+        <translation>Icono</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="400"/>
         <source>Show an Information icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar un icono de Información</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="416"/>
         <source>Show a Question icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar un icono de Cuestión</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="432"/>
         <source>Show a Warning icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar un icono de Advertencia</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="445"/>
         <source>Show a Critical icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar un icono de Aviso Crítico</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="463"/>
         <source>Select to generate a modal message box</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para generar una ventana de mensaje modal</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="466"/>
         <source>Modal Message Box</source>
-        <translation type="unfinished"></translation>
+        <translation>Ventana de Mensaje Modal</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="476"/>
         <source>Select to make &apos;Yes&apos; the default</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para hacer &apos;Si&apos; el valor por defecto</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="479"/>
         <source>Yes is default</source>
-        <translation type="unfinished"></translation>
+        <translation>Si por defecto</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="489"/>
         <source>Save function:</source>
-        <translation type="unfinished"></translation>
+        <translation>Función de Guardar:</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="499"/>
         <source>Enter the name of the save function</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca el nombre de la función de guardar</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="34"/>
         <source>No button</source>
-        <translation type="unfinished">Sin botón</translation>
+        <translation>Sin botón</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.py" line="100"/>
         <source>Test</source>
-        <translation type="unfinished">Probar</translation>
+        <translation>Probar</translation>
     </message>
 </context>
 <context>
@@ -7082,12 +7082,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Editor.py" line="2365"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="QScintilla/Editor.py" line="4634"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -10571,7 +10571,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Exporters/ExporterBase.py" line="56"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -10597,17 +10597,17 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Exporters/ExporterODT.py" line="37"/>
         <source>ODT Files (*.odt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos ODT (*.odt)</translation>
     </message>
     <message>
         <location filename="QScintilla/Exporters/ExporterODT.py" line="69"/>
         <source>Export source</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar fuente</translation>
     </message>
     <message>
         <location filename="QScintilla/Exporters/ExporterODT.py" line="69"/>
         <source>&lt;p&gt;The source could not be exported to &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;La fuente no se ha podido exportar a &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -10689,7 +10689,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Exporters/__init__.py" line="25"/>
         <source>ODT</source>
-        <translation type="unfinished"></translation>
+        <translation>ODT</translation>
     </message>
 </context>
 <context>
@@ -11989,7 +11989,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
         <source>HTML Files (*.html *.htm);;Compressed Help Files (*.chm);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos HTML (*.html *.htm);;Archivos Comprimidos de Ayuda (*.chm);;Todos los Archivos(*)</translation>
     </message>
 </context>
 <context>
@@ -14229,7 +14229,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1736"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo changegroup de Mercurial &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -14879,7 +14879,7 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="280"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -17506,27 +17506,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="84"/>
         <source>Compositing</source>
-        <translation type="unfinished"></translation>
+        <translation>Composición</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="87"/>
         <source>Replace</source>
-        <translation type="unfinished">Reemplazar</translation>
+        <translation>Reemplazar</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="89"/>
         <source>&lt;b&gt;Replace&lt;/b&gt;&lt;p&gt;Replace the existing pixel with a new color.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Reemplazar&lt;/b&gt;&lt;p&gt;Reemplazar el pixel existente con un nuevo color.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="95"/>
         <source>Blend</source>
-        <translation type="unfinished"></translation>
+        <translation>Mezclar</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="97"/>
         <source>&lt;b&gt;Blend&lt;/b&gt;&lt;p&gt;Blend the new color over the existing pixel.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mezclar&lt;/b&gt;&lt;p&gt;Mezclar el nuevo color con el pixel existente.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -18597,12 +18597,12 @@ Do you want to save your changes?</source>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="1006"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="1121"/>
         <source>The icon image has unsaved changes.</source>
-        <translation type="unfinished"></translation>
+        <translation>La imagen de icono tiene cambios sin guardar.</translation>
     </message>
 </context>
 <context>
@@ -20678,47 +20678,47 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Title</source>
-        <translation type="unfinished">Título</translation>
+        <translation>Título</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
         <source>Parent</source>
-        <translation type="unfinished"></translation>
+        <translation>Padre</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="147"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar &quot;self&quot; como padre</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="150"/>
         <source>self</source>
-        <translation type="unfinished"></translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="160"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar &quot;None&quot; como padre</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="163"/>
         <source>None</source>
-        <translation type="unfinished">Ninguno</translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="172"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para introducir una expresión padre</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="175"/>
         <source>Expression:</source>
-        <translation type="unfinished">Expresión:</translation>
+        <translation>Expresión:</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="185"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca la expresión padre</translation>
     </message>
 </context>
 <context>
@@ -21340,7 +21340,7 @@ Do you want to save your changes?</source>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1479"/>
         <source>The document has unsaved changes.</source>
-        <translation type="unfinished"></translation>
+        <translation>El documento tiene cambios sin guardar.</translation>
     </message>
 </context>
 <context>
@@ -21583,7 +21583,7 @@ Do you want to save your changes?</source>
     <message>
         <location filename="MultiProject/MultiProject.py" line="475"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -22406,7 +22406,7 @@ Do you want to save your changes?</source>
     <message>
         <location filename="Helpviewer/Passwords/PasswordManager.py" line="376"/>
         <source>Save password</source>
-        <translation type="unfinished"></translation>
+        <translation>Almacenar contraseña</translation>
     </message>
 </context>
 <context>
@@ -27297,12 +27297,12 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="314"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="392"/>
         <source>Validation</source>
-        <translation type="unfinished"></translation>
+        <translation>Validación</translation>
     </message>
 </context>
 <context>
@@ -27969,12 +27969,12 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="228"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="301"/>
         <source>Validation</source>
-        <translation type="unfinished"></translation>
+        <translation>Validación</translation>
     </message>
 </context>
 <context>
@@ -28047,7 +28047,7 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
     <message>
         <location filename="Helpviewer/QtHelpDocumentationDialog.py" line="106"/>
         <source>Some documents currently opened reference the documentation you are attempting to remove. Removing the documentation will close those documents. Remove anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Algunos documentos actualmente abiertos hacen referencia a la documentación que está tratando de eliminar. La eliminación de la documentación cerrará estos documentos. ¿Desea eliminarlos de todos modos?</translation>
     </message>
 </context>
 <context>
@@ -28760,7 +28760,7 @@ Not connected</source>
     <message>
         <location filename="Preferences/Shortcuts.py" line="197"/>
         <source>&lt;p&gt;The keyboard shortcuts could not be written to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Los atajos de teclado no se han podido escribir en el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Los atajos de teclado no se han podido escribir en el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -31229,7 +31229,7 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="333"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -34545,27 +34545,27 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="40"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Excluir archivos:</translation>
+        <translation>Excluir Archivos:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="47"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished">Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
+        <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="54"/>
         <source>Press to clear the filter edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para limpiar la caja de filtro</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="74"/>
         <source>Press to start the syntax check run</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para comenzar la ejecución de la revisión de sintaxis</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="77"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar</translation>
     </message>
 </context>
 <context>
@@ -34983,27 +34983,27 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="40"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Excluir archivos:</translation>
+        <translation>Excluir archivos:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="47"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished">Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
+        <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="54"/>
         <source>Press to clear the filter edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para limpiar la caja de filtro</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="74"/>
         <source>Press to start the tabnanny run</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para comenzar la ejecución de tabnanny</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="77"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar</translation>
     </message>
 </context>
 <context>
@@ -37338,7 +37338,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Graphics/UMLGraphicsView.py" line="340"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -39551,7 +39551,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="4907"/>
         <source>Keyboard shortcut file (*.e4k)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de atajos de teclado (*.e4k)</translation>
     </message>
 </context>
 <context>
@@ -40227,7 +40227,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="VCS/ProjectHelper.py" line="211"/>
         <source>The project retrieved from the repository does not contain an eric project file (*.e4p). Create it?</source>
-        <translation type="unfinished"></translation>
+        <translation>El proyecto recuperado del repositorio no contiene un archivo de proyecto de eric (*.e4p). ¿Desea crearlo?</translation>
     </message>
 </context>
 <context>
@@ -43335,12 +43335,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Tools/TRPreviewer.py" line="738"/>
         <source>Load UI File</source>
-        <translation type="unfinished">Cargar archivo UI </translation>
+        <translation>Cargar archivo UI </translation>
     </message>
     <message>
         <location filename="Tools/TRPreviewer.py" line="738"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser cargado.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser cargado.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -43402,27 +43402,27 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="54"/>
         <source>XML parse error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de interpretación de XML</translation>
     </message>
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="175"/>
         <source>Pickle data encoding &apos;{0}&apos; is not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>La codificación de datos de Pickle {0}no está soportada.</translation>
     </message>
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="50"/>
         <source>&lt;p&gt;XML parse error in file &lt;b&gt;{0}&lt;/b&gt;, line {1}, column {2}&lt;/p&gt;&lt;p&gt;Error: {3}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Error de interpretación de XML en el archivo &lt;b&gt;{0}&lt;/b&gt;, line {1}, column {2}&lt;/p&gt;&lt;p&gt;Error: {3}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="73"/>
         <source>File format version &apos;{0}&apos; is not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>La versión {0} del formato de archivo no esta soportada.</translation>
     </message>
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="82"/>
         <source>Bad value: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Valor erróneo: {0}</translation>
     </message>
 </context>
 <context>
