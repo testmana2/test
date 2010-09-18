@@ -812,6 +812,9 @@ def main(argv):
     try:
         if installFromSource:
             os.rename(configName, configName + ".orig")
+            configNameC = configName + 'c'
+            if os.path.exists(configNameC):
+                os.remove(configNameC)
         os.remove(configName)
     except EnvironmentError:
         pass
@@ -856,6 +859,9 @@ def main(argv):
     try:
         if installFromSource:
             os.remove(configName)
+            configNameC = configName + 'c'
+            if os.path.exists(configNameC):
+                os.remove(configNameC)
             os.rename(configName + ".orig", configName)
     except EnvironmentError:
         pass
