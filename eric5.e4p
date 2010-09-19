@@ -814,6 +814,9 @@
     <Source>E5XML/UserProjectReader.py</Source>
     <Source>E5XML/DebuggerPropertiesReader.py</Source>
     <Source>E5XML/ProjectReader.py</Source>
+    <Source>E5Gui/E5PassivePopup.py</Source>
+    <Source>Helpviewer/HelpTabBar.py</Source>
+    <Source>Helpviewer/HelpSnap.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

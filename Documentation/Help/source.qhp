@@ -122,6 +122,7 @@
             <section title="eric5.E5Gui.E5MessageBox" ref="eric5.E5Gui.E5MessageBox.html" />
             <section title="eric5.E5Gui.E5ModelMenu" ref="eric5.E5Gui.E5ModelMenu.html" />
             <section title="eric5.E5Gui.E5ModelToolBar" ref="eric5.E5Gui.E5ModelToolBar.html" />
+            <section title="eric5.E5Gui.E5PassivePopup" ref="eric5.E5Gui.E5PassivePopup.html" />
             <section title="eric5.E5Gui.E5SideBar" ref="eric5.E5Gui.E5SideBar.html" />
             <section title="eric5.E5Gui.E5SingleApplication" ref="eric5.E5Gui.E5SingleApplication.html" />
             <section title="eric5.E5Gui.E5SqueezeLabels" ref="eric5.E5Gui.E5SqueezeLabels.html" />
@@ -272,6 +273,8 @@
             <section title="eric5.Helpviewer.HelpIndexWidget" ref="eric5.Helpviewer.HelpIndexWidget.html" />
             <section title="eric5.Helpviewer.HelpLanguagesDialog" ref="eric5.Helpviewer.HelpLanguagesDialog.html" />
             <section title="eric5.Helpviewer.HelpSearchWidget" ref="eric5.Helpviewer.HelpSearchWidget.html" />
+            <section title="eric5.Helpviewer.HelpSnap" ref="eric5.Helpviewer.HelpSnap.html" />
+            <section title="eric5.Helpviewer.HelpTabBar" ref="eric5.Helpviewer.HelpTabBar.html" />
             <section title="eric5.Helpviewer.HelpTocWidget" ref="eric5.Helpviewer.HelpTocWidget.html" />
             <section title="eric5.Helpviewer.HelpTopicDialog" ref="eric5.Helpviewer.HelpTopicDialog.html" />
             <section title="eric5.Helpviewer.HelpWebSearchWidget" ref="eric5.Helpviewer.HelpWebSearchWidget.html" />
@@ -2512,6 +2515,18 @@
       <keyword name="SearchWidget.on_findtextCombo_editTextChanged" id="SearchWidget.on_findtextCombo_editTextChanged" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_findtextCombo_editTextChanged" />
       <keyword name="SearchWidget.on_highlightAllCheckBox_toggled" id="SearchWidget.on_highlightAllCheckBox_toggled" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_highlightAllCheckBox_toggled" />
       <keyword name="SearchWidget.showFind" id="SearchWidget.showFind" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.showFind" />
+      <keyword name="HelpSnap (Module)" id="HelpSnap (Module)" ref="eric5.Helpviewer.HelpSnap.html" />
+      <keyword name="__render" id="__render" ref="eric5.Helpviewer.HelpSnap.html#__render" />
+      <keyword name="renderTabPreview" id="renderTabPreview" ref="eric5.Helpviewer.HelpSnap.html#renderTabPreview" />
+      <keyword name="HelpTabBar (Module)" id="HelpTabBar (Module)" ref="eric5.Helpviewer.HelpTabBar.html" />
+      <keyword name="HelpTabBar" id="HelpTabBar" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar" />
+      <keyword name="HelpTabBar (Constructor)" id="HelpTabBar (Constructor)" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.__init__" />
+      <keyword name="HelpTabBar.__showTabPreview" id="HelpTabBar.__showTabPreview" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.__showTabPreview" />
+      <keyword name="HelpTabBar.event" id="HelpTabBar.event" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.event" />
+      <keyword name="HelpTabBar.leaveEvent" id="HelpTabBar.leaveEvent" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.leaveEvent" />
+      <keyword name="HelpTabBar.mouseMoveEvent" id="HelpTabBar.mouseMoveEvent" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.mouseMoveEvent" />
+      <keyword name="HelpTabBar.mousePressEvent" id="HelpTabBar.mousePressEvent" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.mousePressEvent" />
+      <keyword name="HelpTabBar.tabRemoved" id="HelpTabBar.tabRemoved" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.tabRemoved" />
       <keyword name="HelpTopicDialog (Module)" id="HelpTopicDialog (Module)" ref="eric5.Helpviewer.HelpTopicDialog.html" />
       <keyword name="HelpTopicDialog" id="HelpTopicDialog" ref="eric5.Helpviewer.HelpTopicDialog.html#HelpTopicDialog" />
       <keyword name="HelpTopicDialog (Constructor)" id="HelpTopicDialog (Constructor)" ref="eric5.Helpviewer.HelpTopicDialog.html#HelpTopicDialog.__init__" />
@@ -2568,6 +2583,7 @@
       <keyword name="HelpBrowser.keyReleaseEvent" id="HelpBrowser.keyReleaseEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.keyReleaseEvent" />
       <keyword name="HelpBrowser.linkedResources" id="HelpBrowser.linkedResources" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.linkedResources" />
       <keyword name="HelpBrowser.preferencesChanged" id="HelpBrowser.preferencesChanged" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.preferencesChanged" />
+      <keyword name="HelpBrowser.progress" id="HelpBrowser.progress" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.progress" />
       <keyword name="HelpBrowser.reload" id="HelpBrowser.reload" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.reload" />
       <keyword name="HelpBrowser.saveAs" id="HelpBrowser.saveAs" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.saveAs" />
       <keyword name="HelpBrowser.setSource" id="HelpBrowser.setSource" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.setSource" />
@@ -2734,6 +2750,7 @@
       <keyword name="HelpWindow.__zoomTextOnly" id="HelpWindow.__zoomTextOnly" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomTextOnly" />
       <keyword name="HelpWindow.adblockManager" id="HelpWindow.adblockManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adblockManager" />
       <keyword name="HelpWindow.bookmarksManager" id="HelpWindow.bookmarksManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarksManager" />
+      <keyword name="HelpWindow.browserAt" id="HelpWindow.browserAt" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.browserAt" />
       <keyword name="HelpWindow.browsers" id="HelpWindow.browsers" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.browsers" />
       <keyword name="HelpWindow.closeEvent" id="HelpWindow.closeEvent" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.closeEvent" />
       <keyword name="HelpWindow.cookieJar" id="HelpWindow.cookieJar" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.cookieJar" />
@@ -4185,6 +4202,21 @@
       <keyword name="E5DirCompleter (Constructor)" id="E5DirCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5DirCompleter.__init__" />
       <keyword name="E5FileCompleter (Constructor)" id="E5FileCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter.__init__" />
       <keyword name="E5StringListCompleter (Constructor)" id="E5StringListCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5StringListCompleter.__init__" />
+      <keyword name="E5PassivePopup (Module)" id="E5PassivePopup (Module)" ref="eric5.E5Gui.E5PassivePopup.html" />
+      <keyword name="E5PassivePopup" id="E5PassivePopup" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup" />
+      <keyword name="E5PassivePopup (Constructor)" id="E5PassivePopup (Constructor)" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.__init__" />
+      <keyword name="E5PassivePopup.__calculateNearbyPoint" id="E5PassivePopup.__calculateNearbyPoint" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.__calculateNearbyPoint" />
+      <keyword name="E5PassivePopup.__defaultArea" id="E5PassivePopup.__defaultArea" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.__defaultArea" />
+      <keyword name="E5PassivePopup.__moveNear" id="E5PassivePopup.__moveNear" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.__moveNear" />
+      <keyword name="E5PassivePopup.__positionSelf" id="E5PassivePopup.__positionSelf" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.__positionSelf" />
+      <keyword name="E5PassivePopup.hideEvent" id="E5PassivePopup.hideEvent" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.hideEvent" />
+      <keyword name="E5PassivePopup.mouseReleaseEvent" id="E5PassivePopup.mouseReleaseEvent" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.mouseReleaseEvent" />
+      <keyword name="E5PassivePopup.setTimeout" id="E5PassivePopup.setTimeout" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.setTimeout" />
+      <keyword name="E5PassivePopup.setView" id="E5PassivePopup.setView" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.setView" />
+      <keyword name="E5PassivePopup.setVisible" id="E5PassivePopup.setVisible" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.setVisible" />
+      <keyword name="E5PassivePopup.show" id="E5PassivePopup.show" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.show" />
+      <keyword name="E5PassivePopup.timeout" id="E5PassivePopup.timeout" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.timeout" />
+      <keyword name="E5PassivePopup.view" id="E5PassivePopup.view" ref="eric5.E5Gui.E5PassivePopup.html#E5PassivePopup.view" />
       <keyword name="E5ListView (Module)" id="E5ListView (Module)" ref="eric5.E5Gui.E5ListView.html" />
       <keyword name="E5ListView" id="E5ListView" ref="eric5.E5Gui.E5ListView.html#E5ListView" />
       <keyword name="E5ListView.keyPressEvent" id="E5ListView.keyPressEvent" ref="eric5.E5Gui.E5ListView.html#E5ListView.keyPressEvent" />
@@ -9720,6 +9752,7 @@
       <file>eric5.E5Gui.E5MessageBox.html</file>
       <file>eric5.E5Gui.E5ModelMenu.html</file>
       <file>eric5.E5Gui.E5ModelToolBar.html</file>
+      <file>eric5.E5Gui.E5PassivePopup.html</file>
       <file>eric5.E5Gui.E5SideBar.html</file>
       <file>eric5.E5Gui.E5SingleApplication.html</file>
       <file>eric5.E5Gui.E5SqueezeLabels.html</file>
@@ -9807,6 +9840,8 @@
       <file>eric5.Helpviewer.HelpIndexWidget.html</file>
       <file>eric5.Helpviewer.HelpLanguagesDialog.html</file>
       <file>eric5.Helpviewer.HelpSearchWidget.html</file>
+      <file>eric5.Helpviewer.HelpSnap.html</file>
+      <file>eric5.Helpviewer.HelpTabBar.html</file>
       <file>eric5.Helpviewer.HelpTocWidget.html</file>
       <file>eric5.Helpviewer.HelpTopicDialog.html</file>
       <file>eric5.Helpviewer.HelpWebSearchWidget.html</file>

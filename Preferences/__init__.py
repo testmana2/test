@@ -583,6 +583,7 @@ class Prefs(object):
         "AdBlockSubscriptions" : [], 
         "OfflineStorageDatabaseQuota" : 50,     # 50 MB
         "UserAgent" : "", 
+        "ShowPreview" : True, 
     }
     
     websettings = QWebSettings.globalSettings()
@@ -1789,7 +1790,7 @@ def getHelp(key, prefClass = Prefs):
                  "JavaEnabled", "JavaScriptEnabled", "JavaScriptCanOpenWindows", 
                  "JavaScriptCanAccessClipboard", "PluginsEnabled", "DnsPrefetchEnabled", 
                  "OfflineStorageDatabaseEnabled", "OfflineWebApplicationCacheEnabled", 
-                 "LocalStorageEnabled"]:
+                 "LocalStorageEnabled", "ShowPreview"]:
         return toBool(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions"]:

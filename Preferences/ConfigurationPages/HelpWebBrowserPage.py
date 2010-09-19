@@ -49,6 +49,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             Preferences.getHelp("SaveGeometry"))
         self.webSuggestionsCheckBox.setChecked(
             Preferences.getHelp("WebSearchSuggestions"))
+        self.showTabPreviews.setChecked(
+            Preferences.getHelp("ShowPreview"))
         
         self.javaCheckBox.setChecked(
             Preferences.getHelp("JavaEnabled"))
@@ -122,6 +124,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.saveGeometryCheckBox.isChecked())
         Preferences.setHelp("WebSearchSuggestions",
             self.webSuggestionsCheckBox.isChecked())
+        Preferences.setHelp("ShowPreview", 
+            self.showTabPreviews.isChecked())
         
         Preferences.setHelp("JavaEnabled",
             self.javaCheckBox.isChecked())

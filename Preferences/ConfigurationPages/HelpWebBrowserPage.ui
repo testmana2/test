@@ -32,34 +32,48 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="singleHelpWindowCheckBox">
-     <property name="toolTip">
-      <string>Select to use a single help browser window only</string>
-     </property>
-     <property name="text">
-      <string>Use single web browser window</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="saveGeometryCheckBox">
-     <property name="toolTip">
-      <string>Select to save the window size and position</string>
-     </property>
-     <property name="text">
-      <string>Save size and position upon exit</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="webSuggestionsCheckBox">
-     <property name="toolTip">
-      <string>Select to enable suggestions for web searches</string>
-     </property>
-     <property name="text">
-      <string>Show suggestions for web searches</string>
-     </property>
-    </widget>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="0" column="0">
+      <widget class="QCheckBox" name="singleHelpWindowCheckBox">
+       <property name="toolTip">
+        <string>Select to use a single help browser window only</string>
+       </property>
+       <property name="text">
+        <string>Use single web browser window</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="webSuggestionsCheckBox">
+       <property name="toolTip">
+        <string>Select to enable suggestions for web searches</string>
+       </property>
+       <property name="text">
+        <string>Show suggestions for web searches</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QCheckBox" name="saveGeometryCheckBox">
+       <property name="toolTip">
+        <string>Select to save the window size and position</string>
+       </property>
+       <property name="text">
+        <string>Save size and position upon exit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QCheckBox" name="showTabPreviews">
+       <property name="toolTip">
+        <string>Select to show a page preview when the mouse hovers over the tab</string>
+       </property>
+       <property name="text">
+        <string>Show preview when hovering tab</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item>
     <widget class="QGroupBox" name="startupGroupBox">
@@ -460,6 +474,7 @@
   <tabstop>singleHelpWindowCheckBox</tabstop>
   <tabstop>saveGeometryCheckBox</tabstop>
   <tabstop>webSuggestionsCheckBox</tabstop>
+  <tabstop>showTabPreviews</tabstop>
   <tabstop>startupCombo</tabstop>
   <tabstop>homePageEdit</tabstop>
   <tabstop>setCurrentPageButton</tabstop>

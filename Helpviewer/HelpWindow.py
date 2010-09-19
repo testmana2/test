@@ -42,6 +42,7 @@ from .Network.NetworkAccessManager import NetworkAccessManager
 from .AdBlock.AdBlockManager import AdBlockManager
 from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
 from .UserAgent.UserAgentMenu import UserAgentMenu
+from .HelpTabBar import HelpTabBar
 
 from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui.E5Action import E5Action
@@ -122,7 +123,7 @@ class HelpWindow(QMainWindow):
             self.__progressBar = None
             
             self.tabContextMenuIndex = -1
-            self.tabWidget = E5TabWidget(self, dnd = True)
+            self.tabWidget = E5TabWidget(self, dnd = True, tabBar = HelpTabBar(self))
             self.tabWidget.currentChanged[int].connect(self.__currentChanged)
             self.tabWidget.setTabContextMenuPolicy(Qt.CustomContextMenu)
             self.tabWidget.customTabContextMenuRequested.connect(self.__showContextMenu)
@@ -2072,6 +2073,15 @@ class HelpWindow(QMainWindow):
         @return reference to the current help browser (HelpBrowser)
         """
         return self.tabWidget.currentWidget()
+    
+    def browserAt(self, index):
+        """
+        Public method to get a reference to the help browser with the given index.
+        
+        @param index index of the browser to get (integer)
+        @return reference to the indexed help browser (HelpBrowser)
+        """
+        return self.tabWidget.widget(index)
     
     def browsers(self):
         """

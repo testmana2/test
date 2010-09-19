@@ -326,6 +326,7 @@ class HelpBrowser(QWebView):
         self.ctrlPressed = False
         self.__downloadWindows = []
         self.__isLoading = False
+        self.__progress = 0
         
         self.__currentZoom = 100
         self.__zoomLevels = [
@@ -1043,6 +1044,7 @@ class HelpBrowser(QWebView):
         Private method to handle the loadStarted signal.
         """
         self.__isLoading = True
+        self.__progress = 0
         self.mw.setLoading(self)
         self.mw.progressBar().show()
     
@@ -1052,6 +1054,7 @@ class HelpBrowser(QWebView):
         
         @param progress progress value (integer)
         """
+        self.__progress = progress
         self.mw.progressBar().setValue(progress)
     
     def __loadFinished(self, ok):
@@ -1061,6 +1064,7 @@ class HelpBrowser(QWebView):
         @param ok flag indicating the result (boolean)
         """
         self.__isLoading = False
+        self.__progress = 0
         self.mw.progressBar().hide()
         self.mw.resetLoading(self, ok)
         
@@ -1077,6 +1081,12 @@ class HelpBrowser(QWebView):
         @return flag indicating the loading state (boolean)
         """
         return self.__isLoading
+    
+    def progress(self):
+        """
+        Public method to get the load progress.
+        """
+        return self.__progress
     
     def saveAs(self):
         """

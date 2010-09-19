@@ -1240,6 +1240,21 @@ eric5.E5Gui.E5ModelToolBar.E5ModelToolBar.setModel?4(model)
 eric5.E5Gui.E5ModelToolBar.E5ModelToolBar.setRootIndex?4(idx)
 eric5.E5Gui.E5ModelToolBar.E5ModelToolBar.showEvent?4(evt)
 eric5.E5Gui.E5ModelToolBar.E5ModelToolBar?1(title = None, parent = None)
+eric5.E5Gui.E5PassivePopup.DEFAULT_POPUP_TIME?7
+eric5.E5Gui.E5PassivePopup.DEFAULT_POPUP_TYPE?7
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.Boxed?7
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.Custom?7
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.clicked?7
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.hideEvent?4(evt)
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.mouseReleaseEvent?4(evt)
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.setTimeout?4(delay)
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.setView?4(child)
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.setVisible?4(visible)
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.show?4(p = None)
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.timeout?4()
+eric5.E5Gui.E5PassivePopup.E5PassivePopup.view?4()
+eric5.E5Gui.E5PassivePopup.E5PassivePopup?1(parent = None)
+eric5.E5Gui.E5PassivePopup.POPUP_FLAGS?7
 eric5.E5Gui.E5SideBar.E5SideBar.East?7
 eric5.E5Gui.E5SideBar.E5SideBar.North?7
 eric5.E5Gui.E5SideBar.E5SideBar.South?7
@@ -1313,7 +1328,7 @@ eric5.E5Gui.E5TabWidget.E5TabWidget.resetAnimation?4(index)
 eric5.E5Gui.E5TabWidget.E5TabWidget.selectTab?4(pos)
 eric5.E5Gui.E5TabWidget.E5TabWidget.setTabContextMenuPolicy?4(policy)
 eric5.E5Gui.E5TabWidget.E5TabWidget.switchTab?4()
-eric5.E5Gui.E5TabWidget.E5TabWidget?1(parent = None, dnd = False)
+eric5.E5Gui.E5TabWidget.E5TabWidget?1(parent = None, dnd = False, tabBar = None)
 eric5.E5Gui.E5TabWidget.E5WheelTabBar.wheelEvent?4(event)
 eric5.E5Gui.E5TabWidget.E5WheelTabBar?1(parent = None)
 eric5.E5Gui.E5TableView.E5TableView.keyPressEvent?4(evt)
@@ -1844,6 +1859,7 @@ eric5.Helpviewer.HelpBrowserWV.HelpBrowser.keyPressEvent?4(evt)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.keyReleaseEvent?4(evt)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.linkedResources?4(relation = "")
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.preferencesChanged?4()
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.progress?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.reload?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.saveAs?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.search?7
@@ -1901,6 +1917,13 @@ eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget.eventFilter?4(watched, event)
 eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget.keyPressEvent?4(evt)
 eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget.linkActivated?7
 eric5.Helpviewer.HelpSearchWidget.HelpSearchWidget?1(engine, mainWindow, parent = None)
+eric5.Helpviewer.HelpSnap.renderTabPreview?4(page, w, h)
+eric5.Helpviewer.HelpTabBar.HelpTabBar.event?4(evt)
+eric5.Helpviewer.HelpTabBar.HelpTabBar.leaveEvent?4(evt)
+eric5.Helpviewer.HelpTabBar.HelpTabBar.mouseMoveEvent?4(evt)
+eric5.Helpviewer.HelpTabBar.HelpTabBar.mousePressEvent?4(evt)
+eric5.Helpviewer.HelpTabBar.HelpTabBar.tabRemoved?4(index)
+eric5.Helpviewer.HelpTabBar.HelpTabBar?1(parent = None)
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget.escapePressed?7
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget.eventFilter?4(watched, event)
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget.expandToDepth?4(depth)
@@ -1927,6 +1950,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow._networkAccessManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._passwordManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow.adblockManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.bookmarksManager?4()
+eric5.Helpviewer.HelpWindow.HelpWindow.browserAt?4(index)
 eric5.Helpviewer.HelpWindow.HelpWindow.browsers?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.closeEvent?4(e)
 eric5.Helpviewer.HelpWindow.HelpWindow.cookieJar?4()
@@ -6378,6 +6402,7 @@ eric5.install.compileUiDir?4(dir, recurse = False, map = None, **compileUi_args)
 eric5.install.compileUiFiles?4()
 eric5.install.compile_ui?4(ui_dir, ui_file)
 eric5.install.configLength?7
+eric5.install.configName?7
 eric5.install.copyToFile?4(name, text)
 eric5.install.copyTree?4(src, dst, filters, excludeDirs=[])
 eric5.install.createConfig?4()
@@ -6398,6 +6423,7 @@ eric5.install.progLanguages?7
 eric5.install.progName?7
 eric5.install.pyModDir?7
 eric5.install.pyName?4(py_dir, py_file)
+eric5.install.sourceDir?7
 eric5.install.usage?4(rcode = 2)
 eric5.install.wrapperName?4(dname, wfile)
 eric5.patch_modpython.initGlobals?4()
