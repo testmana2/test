@@ -101,7 +101,6 @@ class E5ModelToolBar(QToolBar):
         
         for i in range(self.__model.rowCount(self.__root)):
             idx = self.__model.index(i, 0, self.__root)
-            v = idx
             
             title = idx.data(Qt.DisplayRole)
             icon = idx.data(Qt.DecorationRole)
@@ -110,7 +109,7 @@ class E5ModelToolBar(QToolBar):
             folder = self.__model.hasChildren(idx)
             
             act = self.addAction(icon, title)
-            act.setData(v)
+            act.setData(idx)
             
             button = self.widgetForAction(act)
             button.installEventFilter(self)

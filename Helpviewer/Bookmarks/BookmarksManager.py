@@ -180,7 +180,7 @@ class BookmarksManager(QObject):
             else:
                 others.append(node)
             self.__bookmarkRootNode.remove(node)
-            
+        
         if len(self.__bookmarkRootNode.children()) > 0:
             raise RuntimeError("Error loading bookmarks.")
         

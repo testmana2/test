@@ -261,14 +261,14 @@ def cleanUp():
     rem_wnames = [
         "eric5-api", "eric5-compare",
         "eric5-configure", "eric5-diff",
-        "eric5-doc", "eric5-helpviewer",
+        "eric5-doc", 
         "eric5-qregexp", "eric5-re", 
         "eric5-trpreviewer", "eric5-uipreviewer",
         "eric5-unittest", "eric5",
         "eric5-tray", "eric5-editor", 
         "eric5-plugininstall", "eric5-pluginuninstall", 
         "eric5-pluginrepository", "eric5-sqlbrowser", 
-        "eric5-webbrowser", 
+        "eric5-webbrowser", "eric5-iconeditor", 
     ]
     for rem_wname in rem_wnames:
         rwname = wrapperName(getConfig('bindir'), rem_wname)
@@ -318,18 +318,19 @@ def installEric():
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5-configure"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5-diff"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5-doc"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-webbrowser"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-editor"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-iconeditor"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-plugininstall"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-pluginrepository"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-pluginuninstall"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5-qregexp"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5-re"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-sqlbrowser"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-tray"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5-trpreviewer"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5-uipreviewer"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5-unittest"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-tray"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-editor"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-plugininstall"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-pluginuninstall"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-pluginrepository"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-sqlbrowser"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-webbrowser"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5"))
     
     # set install prefix, if not None
