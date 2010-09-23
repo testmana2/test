@@ -2213,7 +2213,8 @@ class HelpWindow(QMainWindow):
         Private slot to close all other tabs.
         """
         index = self.tabContextMenuIndex
-        for i in list(range(self.tabWidget.count() - 1, index, -1)) + list(range(index - 1, -1, -1)):
+        for i in list(range(self.tabWidget.count() - 1, index, -1)) + \
+                 list(range(index - 1, -1, -1)):
             self.__closeAt(i)
     
     def __tabContextMenuPrint(self):
@@ -2938,25 +2939,23 @@ class HelpWindow(QMainWindow):
         codecs.sort()
         
         defaultTextEncoding = QWebSettings.globalSettings().defaultTextEncoding().lower()
-        print(defaultTextEncoding)
-        try:
-            currentCodec = codecs.index(defaultTextEncoding)
-        except ValueError:
-            currentCodec = -1
+        if defaultTextEncoding in codecs:
+            currentCodec = defaultTextEncoding
+        else:
+            currentCodec = ""
         
         defaultEncodingAct = self.__textEncodingMenu.addAction(self.trUtf8("Default"))
-        defaultEncodingAct.setData(-1)
+        defaultEncodingAct.setData("")
         defaultEncodingAct.setCheckable(True)
-        if currentCodec == -1:
+        if currentCodec == "":
             defaultEncodingAct.setChecked(True)
         self.__textEncodingMenu.addSeparator()
         
-        for i in range(len(codecs)):
-            codec = codecs[i]
+        for codec in codecs:
             act = self.__textEncodingMenu.addAction(codec)
-            act.setData(i)
+            act.setData(codec)
             act.setCheckable(True)
-            if currentCodec == i:
+            if currentCodec == codec:
                 act.setChecked(True)
     
     def __setTextEncoding(self, act):
@@ -2966,17 +2965,8 @@ class HelpWindow(QMainWindow):
         
         @param act reference to the selected action (QAction)
         """
-        codecs = []
-        for codec in QTextCodec.availableCodecs():
-            codecs.append(str(codec, encoding = "utf-8").lower())
-        codecs.sort()
-        
-        offset = act.data()
-        print(offset, len(codecs))
-        if offset < 0 or offset >= len(codecs):
+        codec = act.data()
+        if codec == "":
             QWebSettings.globalSettings().setDefaultTextEncoding("")
-            Preferences.setHelp("DefaultTextEncoding", "")
         else:
-            print(codecs[offset])
-            QWebSettings.globalSettings().setDefaultTextEncoding(codecs[offset])
-            Preferences.setHelp("DefaultTextEncoding", codecs[offset])
+            QWebSettings.globalSettings().setDefaultTextEncoding(codec)
