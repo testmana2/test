@@ -25,11 +25,11 @@ class HelpTabBar(E5WheelTabBar):
         """
         Constructor
         
-        @param parent reference to the parent widget (QWidget)
+        @param parent reference to the parent widget (HelpTabWidget)
         """
         E5WheelTabBar.__init__(self, parent)
         
-        self.__helpWindow = parent
+        self.__tabWidget = parent
         
         self.__previewPopup = None
         self.__currentTabPreviewIndex = -1
@@ -40,8 +40,8 @@ class HelpTabBar(E5WheelTabBar):
         """
         Private slot to show the tab preview.
         """
-        indexedBrowser = self.__helpWindow.browserAt(self.__currentTabPreviewIndex)
-        currentBrowser = self.__helpWindow.currentBrowser()
+        indexedBrowser = self.__tabWidget.browserAt(self.__currentTabPreviewIndex)
+        currentBrowser = self.__tabWidget.currentBrowser()
         
         if indexedBrowser is None or currentBrowser is None:
             return

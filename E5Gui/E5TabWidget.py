@@ -128,7 +128,7 @@ class E5TabWidget(QTabWidget):
     """
     customTabContextMenuRequested = pyqtSignal(QPoint, int)
     
-    def __init__(self, parent = None, dnd = False, tabBar = None):
+    def __init__(self, parent = None, dnd = False):
         """
         Constructor
         
@@ -137,28 +137,37 @@ class E5TabWidget(QTabWidget):
         """
         QTabWidget.__init__(self, parent)
         
-        if tabBar is not None:
-            self.__tabBar = tabBar
-            self.setTabBar(self.__tabBar)
-            if dnd:
-                self.setMovable(True)
-        else:
-            if dnd:
-                if not hasattr(self, 'setMovable'):
-                    self.__tabBar = E5DnDTabBar(self)
-                    self.__tabBar.tabMoveRequested.connect(self.moveTab)
-                    self.setTabBar(self.__tabBar)
-                else:
-                    self.__tabBar = E5WheelTabBar(self)
-                    self.setTabBar(self.__tabBar)
-                    self.setMovable(True)
+        if dnd:
+            if not hasattr(self, 'setMovable'):
+                self.__tabBar = E5DnDTabBar(self)
+                self.__tabBar.tabMoveRequested.connect(self.moveTab)
+                self.setTabBar(self.__tabBar)
             else:
                 self.__tabBar = E5WheelTabBar(self)
                 self.setTabBar(self.__tabBar)
+                self.setMovable(True)
+        else:
+            self.__tabBar = E5WheelTabBar(self)
+            self.setTabBar(self.__tabBar)
         
         self.__lastCurrentIndex = -1
         self.__currentIndex = -1
         self.currentChanged.connect(self.__currentChanged)
+    
+    def setCustomTabBar(self, dnd, tabBar):
+        """
+        Public method to set a custom tab bar.
+        
+        @param dnd flag indicating the support for Drag & Drop (boolean)
+        @param tabBar reference to the tab bar to set (QTabBar)
+        """
+        self.__tabBar = tabBar
+        self.setTabBar(self.__tabBar)
+        if dnd:
+            if isinstance(tabBar, E5DnDTabBar):
+                self.__tabBar.tabMoveRequested.connect(self.moveTab)
+            else:
+                self.setMovable(True)
     
     def __currentChanged(self, index):
         """

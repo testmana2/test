@@ -305,10 +305,11 @@ class HelpBrowser(QWebView):
     highlighted = pyqtSignal(str)
     search = pyqtSignal(QUrl)
     
-    def __init__(self, parent = None, name = ""):
+    def __init__(self, mainWindow, parent = None, name = ""):
         """
         Constructor
         
+        @param mainWindow reference to the main window (HelpWindow)
         @param parent parent widget of this window (QWidget)
         @param name name of this window (string)
         """
@@ -322,7 +323,7 @@ class HelpBrowser(QWebView):
         self.__page = HelpWebPage(self)
         self.setPage(self.__page)
         
-        self.mw = parent
+        self.mw = mainWindow
         self.ctrlPressed = False
         self.__downloadWindows = []
         self.__isLoading = False
@@ -342,7 +343,6 @@ class HelpBrowser(QWebView):
         
         self.page().setLinkDelegationPolicy(QWebPage.DelegateAllLinks)
         self.linkClicked.connect(self.setSource)
-        self.iconChanged.connect(self.__iconChanged)
         
         self.urlChanged.connect(self.__urlChanged)
         self.statusBarMessage.connect(self.__statusBarMessage)
@@ -1045,7 +1045,6 @@ class HelpBrowser(QWebView):
         """
         self.__isLoading = True
         self.__progress = 0
-        self.mw.setLoading(self)
         self.mw.progressBar().show()
     
     def __loadProgress(self, progress):
@@ -1066,9 +1065,8 @@ class HelpBrowser(QWebView):
         self.__isLoading = False
         self.__progress = 0
         self.mw.progressBar().hide()
-        self.mw.resetLoading(self, ok)
         
-        self.__iconChanged()
+##        self.__iconChanged()
         
         if ok:
             self.mw.adblockManager().page().applyRulesToPage(self.page())
@@ -1185,12 +1183,6 @@ class HelpBrowser(QWebView):
             return
         mgr = self.page().networkAccessManager()
         self.__unsupportedContent(mgr.get(request), download = True)
-    
-    def __iconChanged(self):
-        """
-        Private slot to handle the icon change.
-        """
-        self.mw.iconChanged(self.icon())
     
     def __databaseQuotaExceeded(self, frame, databaseName):
         """

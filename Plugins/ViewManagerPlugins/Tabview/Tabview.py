@@ -227,9 +227,10 @@ class TabWidget(E5TabWidget):
             self.__menu.addAction(UI.PixmapCache.getIcon("2rightarrow.png"),
             self.trUtf8('Move Last'), self.__contextMenuMoveLast)
         self.__menu.addSeparator()
-        self.__menu.addAction(UI.PixmapCache.getIcon("close.png"),
+        self.__menu.addAction(UI.PixmapCache.getIcon("tabClose.png"),
             self.trUtf8('Close'), self.__contextMenuClose)
-        self.closeOthersMenuAct = self.__menu.addAction(self.trUtf8("Close Others"), 
+        self.closeOthersMenuAct = self.__menu.addAction(
+            UI.PixmapCache.getIcon("tabCloseOther.png"), self.trUtf8("Close Others"), 
             self.__contextMenuCloseOthers)
         self.__menu.addAction(self.trUtf8('Close All'), self.__contextMenuCloseAll)
         self.__menu.addSeparator()

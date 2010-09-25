@@ -15,7 +15,6 @@ from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin
 from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
 
 from .SearchWidget import SearchWidget
-from .HelpBrowserWV import HelpBrowser
 from .HelpTocWidget import HelpTocWidget
 from .HelpIndexWidget import HelpIndexWidget
 from .HelpSearchWidget import HelpSearchWidget
@@ -42,9 +41,8 @@ from .Network.NetworkAccessManager import NetworkAccessManager
 from .AdBlock.AdBlockManager import AdBlockManager
 from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
 from .UserAgent.UserAgentMenu import UserAgentMenu
-from .HelpTabBar import HelpTabBar
+from .HelpTabWidget import HelpTabWidget
 
-from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
 
@@ -58,8 +56,6 @@ import Utilities
 
 import UI.PixmapCache
 import UI.Config
-
-from eric5config import getConfig
 
 class HelpWindow(QMainWindow):
     """
@@ -122,11 +118,11 @@ class HelpWindow(QMainWindow):
             # Attributes for WebKit based browser
             self.__progressBar = None
             
-            self.tabContextMenuIndex = -1
-            self.tabWidget = E5TabWidget(self, dnd = True, tabBar = HelpTabBar(self))
+            self.tabWidget = HelpTabWidget(self)
             self.tabWidget.currentChanged[int].connect(self.__currentChanged)
-            self.tabWidget.setTabContextMenuPolicy(Qt.CustomContextMenu)
-            self.tabWidget.customTabContextMenuRequested.connect(self.__showContextMenu)
+            self.tabWidget.sourceChanged.connect(self.__sourceChanged)
+            self.tabWidget.titleChanged.connect(self.__titleChanged)
+            self.tabWidget.showMessage.connect(self.statusBar().showMessage)
             
             self.findDlg = SearchWidget(self, self)
             centralWidget = QWidget()
@@ -167,44 +163,6 @@ class HelpWindow(QMainWindow):
             self.__searchDock.setWidget(self.__searchWindow)
             self.addDockWidget(Qt.LeftDockWidgetArea, self.__searchDock)
             
-            self.rightCornerWidget = QWidget(self)
-            self.rightCornerWidgetLayout = QHBoxLayout(self.rightCornerWidget)
-            self.rightCornerWidgetLayout.setMargin(0)
-            self.rightCornerWidgetLayout.setSpacing(0)
-            
-            self.__navigationMenu = QMenu(self)
-            self.__navigationMenu.aboutToShow.connect(self.__showNavigationMenu)
-            self.__navigationMenu.triggered.connect(self.__navigationMenuTriggered)
-            
-            self.navigationButton = QToolButton(self.tabWidget)
-            self.navigationButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))
-            self.navigationButton.setToolTip(self.trUtf8("Show a navigation menu"))
-            self.navigationButton.setPopupMode(QToolButton.InstantPopup)
-            self.navigationButton.setMenu(self.__navigationMenu)
-            self.navigationButton.setEnabled(False)
-            self.rightCornerWidgetLayout.addWidget(self.navigationButton)
-            
-            if Preferences.getUI("SingleCloseButton") or \
-               not hasattr(self.tabWidget, 'setTabsClosable'):
-                self.closeButton = QToolButton(self.tabWidget)
-                self.closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
-                self.closeButton.setToolTip(self.trUtf8("Close the current help window"))
-                self.closeButton.setEnabled(False)
-                self.closeButton.clicked[bool].connect(self.__close)
-                self.rightCornerWidgetLayout.addWidget(self.closeButton)
-            else:
-                self.tabWidget.setTabsClosable(True)
-                self.tabWidget.tabCloseRequested.connect(self.__closeAt)
-                self.closeButton = None
-            
-            self.tabWidget.setCornerWidget(self.rightCornerWidget, Qt.TopRightCorner)
-            
-            self.newTabButton = QToolButton(self.tabWidget)
-            self.newTabButton.setIcon(UI.PixmapCache.getIcon("new.png"))
-            self.newTabButton.setToolTip(self.trUtf8("Open a new help window tab"))
-            self.tabWidget.setCornerWidget(self.newTabButton, Qt.TopLeftCorner)
-            self.newTabButton.clicked[bool].connect(self.newTab)
-            
             if Preferences.getHelp("SaveGeometry"):
                 g = Preferences.getGeometry("HelpViewerGeometry")
             else:
@@ -221,12 +179,11 @@ class HelpWindow(QMainWindow):
             self.__initActions()
             self.__initMenus()
             self.__initToolbars()
-            self.__initTabContextMenu()
             
             self.historyManager()
             
-            self.newBrowser(home)
-            self.currentBrowser().setFocus()
+            self.tabWidget.newBrowser(home)
+            self.tabWidget.currentBrowser().setFocus()
             
             self.__class__.helpwindows.append(self)
             
@@ -352,7 +309,7 @@ class HelpWindow(QMainWindow):
         self.__actions = []
         
         self.newTabAct = E5Action(self.trUtf8('New Tab'), 
-            UI.PixmapCache.getIcon("new.png"),
+            UI.PixmapCache.getIcon("tabNew.png"),
             self.trUtf8('&New Tab'), 
             QKeySequence(self.trUtf8("Ctrl+T","File|New Tab")), 
             0, self, 'help_file_new_tab')
@@ -361,7 +318,8 @@ class HelpWindow(QMainWindow):
                 """<b>New Tab</b>"""
                 """<p>This opens a new help window tab.</p>"""
         ))
-        self.newTabAct.triggered[()].connect(self.newTab)
+        if not self.initShortcutsOnly:
+            self.newTabAct.triggered[()].connect(self.newTab)
         self.__actions.append(self.newTabAct)
         
         self.newAct = E5Action(self.trUtf8('New Window'), 
@@ -374,7 +332,8 @@ class HelpWindow(QMainWindow):
                 """<b>New Window</b>"""
                 """<p>This opens a new help browser window.</p>"""
         ))
-        self.newAct.triggered[()].connect(self.newWindow)
+        if not self.initShortcutsOnly:
+            self.newAct.triggered[()].connect(self.newWindow)
         self.__actions.append(self.newAct)
         
         self.openAct = E5Action(self.trUtf8('Open File'), 
@@ -388,7 +347,8 @@ class HelpWindow(QMainWindow):
                 """<p>This opens a new help file for display."""
                 """ It pops up a file selection dialog.</p>"""
         ))
-        self.openAct.triggered[()].connect(self.__openFile)
+        if not self.initShortcutsOnly:
+            self.openAct.triggered[()].connect(self.__openFile)
         self.__actions.append(self.openAct)
         
         self.openTabAct = E5Action(self.trUtf8('Open File in New Tab'), 
@@ -403,7 +363,8 @@ class HelpWindow(QMainWindow):
                 """<p>This opens a new help file for display in a new tab."""
                 """ It pops up a file selection dialog.</p>"""
         ))
-        self.openTabAct.triggered[()].connect(self.__openFileNewTab)
+        if not self.initShortcutsOnly:
+            self.openTabAct.triggered[()].connect(self.__openFileNewTab)
         self.__actions.append(self.openTabAct)
         
         self.saveAsAct = E5Action(self.trUtf8('Save As '), 
@@ -417,7 +378,8 @@ class HelpWindow(QMainWindow):
                 """<b>Save As...</b>"""
                 """<p>Saves the current page to disk.</p>"""
         ))
-        self.saveAsAct.triggered[()].connect(self.__savePageAs)
+        if not self.initShortcutsOnly:
+            self.saveAsAct.triggered[()].connect(self.__savePageAs)
         self.__actions.append(self.saveAsAct)
         
         bookmarksManager = self.bookmarksManager()
@@ -430,7 +392,9 @@ class HelpWindow(QMainWindow):
                 """<b>Import Bookmarks</b>"""
                 """<p>Import bookmarks from other browsers.</p>"""
         ))
-        self.importBookmarksAct.triggered[()].connect(bookmarksManager.importBookmarks)
+        if not self.initShortcutsOnly:
+            self.importBookmarksAct.triggered[()].connect(
+                bookmarksManager.importBookmarks)
         self.__actions.append(self.importBookmarksAct)
         
         self.exportBookmarksAct = E5Action(self.trUtf8('Export Bookmarks'), 
@@ -442,7 +406,9 @@ class HelpWindow(QMainWindow):
                 """<b>Export Bookmarks</b>"""
                 """<p>Export the bookmarks into a file.</p>"""
         ))
-        self.exportBookmarksAct.triggered[()].connect(bookmarksManager.exportBookmarks)
+        if not self.initShortcutsOnly:
+            self.exportBookmarksAct.triggered[()].connect(
+                bookmarksManager.exportBookmarks)
         self.__actions.append(self.exportBookmarksAct)
         
         self.printAct = E5Action(self.trUtf8('Print'), 
@@ -455,7 +421,8 @@ class HelpWindow(QMainWindow):
                 """<b>Print</b>"""
                 """<p>Print the displayed help text.</p>"""
         ))
-        self.printAct.triggered[()].connect(self.__printFile)
+        if not self.initShortcutsOnly:
+            self.printAct.triggered[()].connect(self.tabWidget.printBrowser)
         self.__actions.append(self.printAct)
         
         self.printPdfAct = E5Action(self.trUtf8('Print as PDF'), 
@@ -467,7 +434,8 @@ class HelpWindow(QMainWindow):
                 """<b>Print as PDF</b>"""
                 """<p>Print the displayed help text as a PDF file.</p>"""
         ))
-        self.printPdfAct.triggered[()].connect(self.__printFilePdf)
+        if not self.initShortcutsOnly:
+            self.printPdfAct.triggered[()].connect(self.tabWidget.printBrowserPdf)
         self.__actions.append(self.printPdfAct)
         
         self.printPreviewAct = E5Action(self.trUtf8('Print Preview'), 
@@ -480,7 +448,8 @@ class HelpWindow(QMainWindow):
                 """<b>Print Preview</b>"""
                 """<p>Print preview of the displayed help text.</p>"""
         ))
-        self.printPreviewAct.triggered[()].connect(self.__printPreviewFile)
+        if not self.initShortcutsOnly:
+            self.printPreviewAct.triggered[()].connect(self.tabWidget.printPreviewBrowser)
         self.__actions.append(self.printPreviewAct)
         
         self.closeAct = E5Action(self.trUtf8('Close'), 
@@ -493,7 +462,8 @@ class HelpWindow(QMainWindow):
                 """<b>Close</b>"""
                 """<p>Closes the current help window.</p>"""
         ))
-        self.closeAct.triggered[()].connect(self.__close)
+        if not self.initShortcutsOnly:
+            self.closeAct.triggered[()].connect(self.tabWidget.closeBrowser)
         self.__actions.append(self.closeAct)
         
         self.closeAllAct = E5Action(self.trUtf8('Close All'), 
@@ -504,7 +474,8 @@ class HelpWindow(QMainWindow):
                 """<b>Close All</b>"""
                 """<p>Closes all help windows except the first one.</p>"""
         ))
-        self.closeAllAct.triggered[()].connect(self.__closeAll)
+        if not self.initShortcutsOnly:
+            self.closeAllAct.triggered[()].connect(self.tabWidget.closeAllBrowsers)
         self.__actions.append(self.closeAllAct)
         
         self.privateBrowsingAct = E5Action(self.trUtf8('Private Browsing'), 
@@ -517,7 +488,8 @@ class HelpWindow(QMainWindow):
                 """<p>Enables private browsing. In this mode no history is"""
                 """ recorded anymore.</p>"""
         ))
-        self.privateBrowsingAct.triggered[()].connect(self.__privateBrowsing)
+        if not self.initShortcutsOnly:
+            self.privateBrowsingAct.triggered[()].connect(self.__privateBrowsing)
         self.privateBrowsingAct.setCheckable(True)
         self.__actions.append(self.privateBrowsingAct)
         
@@ -531,10 +503,11 @@ class HelpWindow(QMainWindow):
                 """<b>Quit</b>"""
                 """<p>Quit the web browser.</p>"""
         ))
-        if self.fromEric:
-            self.exitAct.triggered[()].connect(self.close)
-        else:
-            self.exitAct.triggered[()].connect(qApp.closeAllWindows)
+        if not self.initShortcutsOnly:
+            if self.fromEric:
+                self.exitAct.triggered[()].connect(self.close)
+            else:
+                self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         self.__actions.append(self.exitAct)
         
         self.backAct = E5Action(self.trUtf8('Backward'), 
@@ -549,7 +522,8 @@ class HelpWindow(QMainWindow):
                 """<p>Moves one help screen backward. If none is"""
                 """ available, this action is disabled.</p>"""
         ))
-        self.backAct.triggered[()].connect(self.__backward)
+        if not self.initShortcutsOnly:
+            self.backAct.triggered[()].connect(self.__backward)
         self.__actions.append(self.backAct)
         
         self.forwardAct = E5Action(self.trUtf8('Forward'), 
@@ -564,7 +538,8 @@ class HelpWindow(QMainWindow):
                 """<p>Moves one help screen forward. If none is"""
                 """ available, this action is disabled.</p>"""
         ))
-        self.forwardAct.triggered[()].connect(self.__forward)
+        if not self.initShortcutsOnly:
+            self.forwardAct.triggered[()].connect(self.__forward)
         self.__actions.append(self.forwardAct)
         
         self.homeAct = E5Action(self.trUtf8('Home'), 
@@ -577,7 +552,8 @@ class HelpWindow(QMainWindow):
                 """<b>Home</b>"""
                 """<p>Moves to the initial help screen.</p>"""
         ))
-        self.homeAct.triggered[()].connect(self.__home)
+        if not self.initShortcutsOnly:
+            self.homeAct.triggered[()].connect(self.__home)
         self.__actions.append(self.homeAct)
         
         self.reloadAct = E5Action(self.trUtf8('Reload'), 
@@ -591,7 +567,8 @@ class HelpWindow(QMainWindow):
                 """<b>Reload</b>"""
                 """<p>Reloads the current help screen.</p>"""
         ))
-        self.reloadAct.triggered[()].connect(self.__reload)
+        if not self.initShortcutsOnly:
+            self.reloadAct.triggered[()].connect(self.__reload)
         self.__actions.append(self.reloadAct)
         
         self.stopAct = E5Action(self.trUtf8('Stop'), 
@@ -605,7 +582,8 @@ class HelpWindow(QMainWindow):
                 """<b>Stop</b>"""
                 """<p>Stops loading of the current tab.</p>"""
         ))
-        self.stopAct.triggered[()].connect(self.__stopLoading)
+        if not self.initShortcutsOnly:
+            self.stopAct.triggered[()].connect(self.__stopLoading)
         self.__actions.append(self.stopAct)
         
         self.copyAct = E5Action(self.trUtf8('Copy'), 
@@ -618,7 +596,8 @@ class HelpWindow(QMainWindow):
                 """<b>Copy</b>"""
                 """<p>Copy the selected text to the clipboard.</p>"""
         ))
-        self.copyAct.triggered[()].connect(self.__copy)
+        if not self.initShortcutsOnly:
+            self.copyAct.triggered[()].connect(self.__copy)
         self.__actions.append(self.copyAct)
         
         self.findAct = E5Action(self.trUtf8('Find...'), 
@@ -631,7 +610,8 @@ class HelpWindow(QMainWindow):
                 """<b>Find</b>"""
                 """<p>Find text in the current page.</p>"""
         ))
-        self.findAct.triggered[()].connect(self.__find)
+        if not self.initShortcutsOnly:
+            self.findAct.triggered[()].connect(self.__find)
         self.__actions.append(self.findAct)
         
         self.findNextAct = E5Action(self.trUtf8('Find next'), 
@@ -673,7 +653,8 @@ class HelpWindow(QMainWindow):
                 """<b>Manage Bookmarks...</b>"""
                 """<p>Open a dialog to manage the bookmarks.</p>"""
         ))
-        self.bookmarksManageAct.triggered[()].connect(self.__showBookmarksDialog)
+        if not self.initShortcutsOnly:
+            self.bookmarksManageAct.triggered[()].connect(self.__showBookmarksDialog)
         self.__actions.append(self.bookmarksManageAct)
         
         self.bookmarksAddAct = E5Action(self.trUtf8('Add Bookmark'), 
@@ -687,7 +668,8 @@ class HelpWindow(QMainWindow):
                 """<b>Add Bookmark</b>"""
                 """<p>Open a dialog to add the current URL as a bookmark.</p>"""
         ))
-        self.bookmarksAddAct.triggered[()].connect(self.__addBookmark)
+        if not self.initShortcutsOnly:
+            self.bookmarksAddAct.triggered[()].connect(self.__addBookmark)
         self.__actions.append(self.bookmarksAddAct)
         
         self.bookmarksAddFolderAct = E5Action(self.trUtf8('Add Folder'), 
@@ -699,7 +681,8 @@ class HelpWindow(QMainWindow):
                 """<b>Add Folder...</b>"""
                 """<p>Open a dialog to add a new bookmarks folder.</p>"""
         ))
-        self.bookmarksAddFolderAct.triggered[()].connect(self.__addBookmarkFolder)
+        if not self.initShortcutsOnly:
+            self.bookmarksAddFolderAct.triggered[()].connect(self.__addBookmarkFolder)
         self.__actions.append(self.bookmarksAddFolderAct)
         
         self.bookmarksAllTabsAct = E5Action(self.trUtf8('Bookmark All Tabs'), 
@@ -712,7 +695,8 @@ class HelpWindow(QMainWindow):
                 """<p>Open a dialog to add a new bookmarks folder for"""
                 """ all open tabs.</p>"""
         ))
-        self.bookmarksAllTabsAct.triggered[()].connect(self.__bookmarkAll)
+        if not self.initShortcutsOnly:
+            self.bookmarksAllTabsAct.triggered[()].connect(self.bookmarkAll)
         self.__actions.append(self.bookmarksAllTabsAct)
         
         self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'), 
@@ -729,7 +713,8 @@ class HelpWindow(QMainWindow):
                 """ dialogs, this feature can be accessed using the context help button"""
                 """ in the titlebar.</p>"""
         ))
-        self.whatsThisAct.triggered[()].connect(self.__whatsThis)
+        if not self.initShortcutsOnly:
+            self.whatsThisAct.triggered[()].connect(self.__whatsThis)
         self.__actions.append(self.whatsThisAct)
         
         self.aboutAct = E5Action(self.trUtf8('About'), 
@@ -740,7 +725,8 @@ class HelpWindow(QMainWindow):
                 """<b>About</b>"""
                 """<p>Display some information about this software.</p>"""
         ))
-        self.aboutAct.triggered[()].connect(self.__about)
+        if not self.initShortcutsOnly:
+            self.aboutAct.triggered[()].connect(self.__about)
         self.__actions.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(self.trUtf8('About Qt'), 
@@ -752,7 +738,8 @@ class HelpWindow(QMainWindow):
                 """<b>About Qt</b>"""
                 """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+        if not self.initShortcutsOnly:
+            self.aboutQtAct.triggered[()].connect(self.__aboutQt)
         self.__actions.append(self.aboutQtAct)
         
         self.zoomInAct = E5Action(self.trUtf8('Zoom in'), 
@@ -765,7 +752,8 @@ class HelpWindow(QMainWindow):
                 """<b>Zoom in</b>"""
                 """<p>Zoom in on the text. This makes the text bigger.</p>"""
         ))
-        self.zoomInAct.triggered[()].connect(self.__zoomIn)
+        if not self.initShortcutsOnly:
+            self.zoomInAct.triggered[()].connect(self.__zoomIn)
         self.__actions.append(self.zoomInAct)
         
         self.zoomOutAct = E5Action(self.trUtf8('Zoom out'), 
@@ -778,7 +766,8 @@ class HelpWindow(QMainWindow):
                 """<b>Zoom out</b>"""
                 """<p>Zoom out on the text. This makes the text smaller.</p>"""
         ))
-        self.zoomOutAct.triggered[()].connect(self.__zoomOut)
+        if not self.initShortcutsOnly:
+            self.zoomOutAct.triggered[()].connect(self.__zoomOut)
         self.__actions.append(self.zoomOutAct)
         
         self.zoomResetAct = E5Action(self.trUtf8('Zoom reset'), 
@@ -792,7 +781,8 @@ class HelpWindow(QMainWindow):
                 """<p>Reset the zoom of the text. """
                 """This sets the zoom factor to 100%.</p>"""
         ))
-        self.zoomResetAct.triggered[()].connect(self.__zoomReset)
+        if not self.initShortcutsOnly:
+            self.zoomResetAct.triggered[()].connect(self.__zoomReset)
         self.__actions.append(self.zoomResetAct)
         
         if hasattr(QWebSettings, 'ZoomTextOnly'):
@@ -806,7 +796,8 @@ class HelpWindow(QMainWindow):
                     """<b>Zoom text only</b>"""
                     """<p>Zoom text only; pictures remain constant.</p>"""
             ))
-            self.zoomTextOnlyAct.triggered[bool].connect(self.__zoomTextOnly)
+            if not self.initShortcutsOnly:
+                self.zoomTextOnlyAct.triggered[bool].connect(self.__zoomTextOnly)
             self.__actions.append(self.zoomTextOnlyAct)
         else:
             self.zoomTextOnlyAct = None
@@ -820,7 +811,8 @@ class HelpWindow(QMainWindow):
                 """<b>Show page source</b>"""
                 """<p>Show the page source in an editor.</p>"""
         ))
-        self.pageSourceAct.triggered[()].connect(self.__showPageSource)
+        if not self.initShortcutsOnly:
+            self.pageSourceAct.triggered[()].connect(self.__showPageSource)
         self.__actions.append(self.pageSourceAct)
         self.addAction(self.pageSourceAct)
         
@@ -829,7 +821,8 @@ class HelpWindow(QMainWindow):
             self.trUtf8('&Full Screen'), 
             QKeySequence(self.trUtf8('F11')), 0,
             self, 'help_view_full_scree')
-        self.fullScreenAct.triggered[()].connect(self.__viewFullScreen)
+        if not self.initShortcutsOnly:
+            self.fullScreenAct.triggered[()].connect(self.__viewFullScreen)
         self.__actions.append(self.fullScreenAct)
         self.addAction(self.fullScreenAct)
         
@@ -837,7 +830,8 @@ class HelpWindow(QMainWindow):
             self.trUtf8('Show next tab'), 
             QKeySequence(self.trUtf8('Ctrl+Alt+Tab')), 0,
             self, 'help_view_next_tab')
-        self.nextTabAct.triggered[()].connect(self.__nextTab)
+        if not self.initShortcutsOnly:
+            self.nextTabAct.triggered[()].connect(self.__nextTab)
         self.__actions.append(self.nextTabAct)
         self.addAction(self.nextTabAct)
         
@@ -845,7 +839,8 @@ class HelpWindow(QMainWindow):
             self.trUtf8('Show previous tab'), 
             QKeySequence(self.trUtf8('Shift+Ctrl+Alt+Tab')), 0,
             self, 'help_view_previous_tab')
-        self.prevTabAct.triggered[()].connect(self.__prevTab)
+        if not self.initShortcutsOnly:
+            self.prevTabAct.triggered[()].connect(self.__prevTab)
         self.__actions.append(self.prevTabAct)
         self.addAction(self.prevTabAct)
         
@@ -853,7 +848,8 @@ class HelpWindow(QMainWindow):
             self.trUtf8('Switch between tabs'), 
             QKeySequence(self.trUtf8('Ctrl+1')), 0,
             self, 'help_switch_tabs')
-        self.switchTabAct.triggered[()].connect(self.__switchTab)
+        if not self.initShortcutsOnly:
+            self.switchTabAct.triggered[()].connect(self.__switchTab)
         self.__actions.append(self.switchTabAct)
         self.addAction(self.switchTabAct)
         
@@ -866,7 +862,8 @@ class HelpWindow(QMainWindow):
             """<p>Set the configuration items of the application"""
             """ with your prefered values.</p>"""
         ))
-        self.prefAct.triggered[()].connect(self.__showPreferences)
+        if not self.initShortcutsOnly:
+            self.prefAct.triggered[()].connect(self.__showPreferences)
         self.__actions.append(self.prefAct)
 
         self.acceptedLanguagesAct = E5Action(self.trUtf8('Languages'),
@@ -878,7 +875,8 @@ class HelpWindow(QMainWindow):
             """<b>Languages</b>"""
             """<p>Configure the accepted languages for web pages.</p>"""
         ))
-        self.acceptedLanguagesAct.triggered[()].connect(self.__showAcceptedLanguages)
+        if not self.initShortcutsOnly:
+            self.acceptedLanguagesAct.triggered[()].connect(self.__showAcceptedLanguages)
         self.__actions.append(self.acceptedLanguagesAct)
         
         self.cookiesAct = E5Action(self.trUtf8('Cookies'),
@@ -890,7 +888,8 @@ class HelpWindow(QMainWindow):
             """<b>Cookies</b>"""
             """<p>Configure cookies handling.</p>"""
         ))
-        self.cookiesAct.triggered[()].connect(self.__showCookiesConfiguration)
+        if not self.initShortcutsOnly:
+            self.cookiesAct.triggered[()].connect(self.__showCookiesConfiguration)
         self.__actions.append(self.cookiesAct)
         
         self.offlineStorageAct = E5Action(self.trUtf8('Offline Storage'),
@@ -902,7 +901,8 @@ class HelpWindow(QMainWindow):
             """<b>Offline Storage</b>"""
             """<p>Opens a dialog to configure offline storage.</p>"""
         ))
-        self.offlineStorageAct.triggered[()].connect(self.__showOfflineStorageConfiguration)
+        if not self.initShortcutsOnly:
+            self.offlineStorageAct.triggered[()].connect(self.__showOfflineStorageConfiguration)
         self.__actions.append(self.offlineStorageAct)
         
         self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'), 
@@ -915,7 +915,8 @@ class HelpWindow(QMainWindow):
                 """<b>Sync with Table of Contents</b>"""
                 """<p>Synchronizes the table of contents with current page.</p>"""
         ))
-        self.syncTocAct.triggered[()].connect(self.__syncTOC)
+        if not self.initShortcutsOnly:
+            self.syncTocAct.triggered[()].connect(self.__syncTOC)
         self.__actions.append(self.syncTocAct)
         
         self.showTocAct = E5Action(self.trUtf8('Table of Contents'), 
@@ -927,7 +928,8 @@ class HelpWindow(QMainWindow):
                 """<b>Table of Contents</b>"""
                 """<p>Shows the table of contents window.</p>"""
         ))
-        self.showTocAct.triggered[()].connect(self.__showTocWindow)
+        if not self.initShortcutsOnly:
+            self.showTocAct.triggered[()].connect(self.__showTocWindow)
         self.__actions.append(self.showTocAct)
         
         self.showIndexAct = E5Action(self.trUtf8('Index'), 
@@ -939,7 +941,8 @@ class HelpWindow(QMainWindow):
                 """<b>Index</b>"""
                 """<p>Shows the index window.</p>"""
         ))
-        self.showIndexAct.triggered[()].connect(self.__showIndexWindow)
+        if not self.initShortcutsOnly:
+            self.showIndexAct.triggered[()].connect(self.__showIndexWindow)
         self.__actions.append(self.showIndexAct)
         
         self.showSearchAct = E5Action(self.trUtf8('Search'), 
@@ -951,7 +954,8 @@ class HelpWindow(QMainWindow):
                 """<b>Search</b>"""
                 """<p>Shows the search window.</p>"""
         ))
-        self.showSearchAct.triggered[()].connect(self.__showSearchWindow)
+        if not self.initShortcutsOnly:
+            self.showSearchAct.triggered[()].connect(self.__showSearchWindow)
         self.__actions.append(self.showSearchAct)
         
         self.manageQtHelpDocsAct = E5Action(self.trUtf8('Manage QtHelp Documents'), 
@@ -963,7 +967,8 @@ class HelpWindow(QMainWindow):
                 """<b>Manage QtHelp Documents</b>"""
                 """<p>Shows a dialog to manage the QtHelp documentation set.</p>"""
         ))
-        self.manageQtHelpDocsAct.triggered[()].connect(self.__manageQtHelpDocumentation)
+        if not self.initShortcutsOnly:
+            self.manageQtHelpDocsAct.triggered[()].connect(self.__manageQtHelpDocumentation)
         self.__actions.append(self.manageQtHelpDocsAct)
         
         self.manageQtHelpFiltersAct = E5Action(self.trUtf8('Manage QtHelp Filters'), 
@@ -975,7 +980,8 @@ class HelpWindow(QMainWindow):
                 """<b>Manage QtHelp Filters</b>"""
                 """<p>Shows a dialog to manage the QtHelp filters.</p>"""
         ))
-        self.manageQtHelpFiltersAct.triggered[()].connect(self.__manageQtHelpFilters)
+        if not self.initShortcutsOnly:
+            self.manageQtHelpFiltersAct.triggered[()].connect(self.__manageQtHelpFilters)
         self.__actions.append(self.manageQtHelpFiltersAct)
         
         self.reindexDocumentationAct = E5Action(self.trUtf8('Reindex Documentation'), 
@@ -988,7 +994,8 @@ class HelpWindow(QMainWindow):
                 """<p>Reindexes the documentation set.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.reindexDocumentationAct.triggered[()].connect(self.__searchEngine.reindexDocumentation)
+            self.reindexDocumentationAct.triggered[()].connect(
+                self.__searchEngine.reindexDocumentation)
         self.__actions.append(self.reindexDocumentationAct)
         
         self.clearPrivateDataAct = E5Action(self.trUtf8('Clear private data'), 
@@ -1001,7 +1008,8 @@ class HelpWindow(QMainWindow):
                 """<p>Clears the private data like browsing history, search history"""
                 """ or the favicons database.</p>"""
         ))
-        self.clearPrivateDataAct.triggered[()].connect(self.__clearPrivateData)
+        if not self.initShortcutsOnly:
+            self.clearPrivateDataAct.triggered[()].connect(self.__clearPrivateData)
         self.__actions.append(self.clearPrivateDataAct)
         
         self.clearIconsAct = E5Action(self.trUtf8('Clear icons database'), 
@@ -1013,7 +1021,8 @@ class HelpWindow(QMainWindow):
                 """<b>Clear icons database</b>"""
                 """<p>Clears the database of favicons of previously visited URLs.</p>"""
         ))
-        self.clearIconsAct.triggered[()].connect(self.__clearIconsDatabase)
+        if not self.initShortcutsOnly:
+            self.clearIconsAct.triggered[()].connect(self.__clearIconsDatabase)
         self.__actions.append(self.clearIconsAct)
         
         self.searchEnginesAct = E5Action(self.trUtf8('Configure Search Engines'), 
@@ -1026,7 +1035,8 @@ class HelpWindow(QMainWindow):
                 """<b>Configure Search Engines...</b>"""
                 """<p>Opens a dialog to configure the available search engines.</p>"""
         ))
-        self.searchEnginesAct.triggered[()].connect(self.__showEnginesConfigurationDialog)
+        if not self.initShortcutsOnly:
+            self.searchEnginesAct.triggered[()].connect(self.__showEnginesConfigurationDialog)
         self.__actions.append(self.searchEnginesAct)
         
         self.passwordsAct = E5Action(self.trUtf8('Manage Saved Passwords'), 
@@ -1039,7 +1049,8 @@ class HelpWindow(QMainWindow):
                 """<b>Manage Saved Passwords...</b>"""
                 """<p>Opens a dialog to manage the saved passwords.</p>"""
         ))
-        self.passwordsAct.triggered[()].connect(self.__showPasswordsDialog)
+        if not self.initShortcutsOnly:
+            self.passwordsAct.triggered[()].connect(self.__showPasswordsDialog)
         self.__actions.append(self.passwordsAct)
         
         self.adblockAct = E5Action(self.trUtf8('Ad Block'), 
@@ -1052,7 +1063,8 @@ class HelpWindow(QMainWindow):
                 """<b>Ad Block...</b>"""
                 """<p>Opens a dialog to configure AdBlock subscriptions and rules.</p>"""
         ))
-        self.adblockAct.triggered[()].connect(self.__showAdBlockDialog)
+        if not self.initShortcutsOnly:
+            self.adblockAct.triggered[()].connect(self.__showAdBlockDialog)
         self.__actions.append(self.adblockAct)
         
         self.toolsMonitorAct = E5Action(self.trUtf8('Show Network Monitor'), 
@@ -1064,7 +1076,8 @@ class HelpWindow(QMainWindow):
                 """<b>Show Network Monitor</b>"""
                 """<p>Shows the network monitor dialog.</p>"""
         ))
-        self.toolsMonitorAct.triggered[()].connect(self.__showNetworkMonitor)
+        if not self.initShortcutsOnly:
+            self.toolsMonitorAct.triggered[()].connect(self.__showNetworkMonitor)
         self.__actions.append(self.toolsMonitorAct)
         
         self.backAct.setEnabled(False)
@@ -1207,42 +1220,6 @@ class HelpWindow(QMainWindow):
         menu.addAction(self.aboutQtAct)
         menu.addSeparator()
         menu.addAction(self.whatsThisAct)
-    
-    def __initTabContextMenu(self):
-        """
-        Private mezhod to create the tab context menu.
-        """
-        self.__tabContextMenu = QMenu(self.tabWidget)
-        self.tabContextNewAct = \
-            self.__tabContextMenu.addAction(self.newTabAct)
-        self.__tabContextMenu.addSeparator()
-        self.leftMenuAct = \
-            self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("1leftarrow.png"),
-            self.trUtf8('Move Left'), self.__tabContextMenuMoveLeft)
-        self.rightMenuAct = \
-            self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("1rightarrow.png"),
-            self.trUtf8('Move Right'), self.__tabContextMenuMoveRight)
-        self.__tabContextMenu.addSeparator()
-        self.tabContextCloneAct = \
-            self.__tabContextMenu.addAction(self.trUtf8("Duplicate Page"), 
-                self.__tabContextMenuClone)
-        self.__tabContextMenu.addSeparator()
-        self.tabContextCloseAct = \
-            self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("close.png"),
-                self.trUtf8('Close'), self.__tabContextMenuClose)
-        self.tabContextCloseOthersAct = \
-            self.__tabContextMenu.addAction(self.trUtf8("Close Others"), 
-                self.__tabContextMenuCloseOthers)
-        self.__tabContextMenu.addAction(self.closeAllAct)
-        self.__tabContextMenu.addSeparator()
-        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("printPreview.png"),
-            self.trUtf8('Print Preview'), self.__tabContextMenuPrintPreview)
-        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("print.png"),
-            self.trUtf8('Print'), self.__tabContextMenuPrint)
-        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("printPdf.png"),
-            self.trUtf8('Print as PDF'), self.__tabContextMenuPrintPdf)
-        self.__tabContextMenu.addSeparator()
-        self.__tabContextMenu.addAction(self.bookmarksAllTabsAct)
     
     def __initToolbars(self):
         """
@@ -1481,27 +1458,6 @@ class HelpWindow(QMainWindow):
         le.setPalette(p)
         le.update()
     
-    def __elide(self, txt, mode = Qt.ElideRight, length = 40):
-        """
-        Private method to elide some text.
-        
-        @param txt text to be elided (string)
-        @keyparam mode elide mode (Qt.TextElideMode)
-        @keyparam length amount of characters to be used (integer)
-        @return the elided text (string)
-        """
-        if mode == Qt.ElideNone or len(txt) < length:
-            return txt
-        elif mode == Qt.ElideLeft:
-            return "...{0}".format(txt[-length:])
-        elif mode == Qt.ElideMiddle:
-            return "{0}...{1}".format(txt[:length // 2], txt[-(length // 2):])
-        elif mode == Qt.ElideRight:
-            return "{0}...".format(txt[:length])
-        else:
-            # just in case
-            return txt
-    
     def __sourceChanged(self, url):
         """
         Private slot called when the displayed text of the combobox is changed.
@@ -1529,13 +1485,6 @@ class HelpWindow(QMainWindow):
         
         @param title new title (string)
         """
-        if title == "":
-            title = self.currentBrowser().url().toString()
-        
-        self.tabWidget.setTabText(self.tabWidget.currentIndex(), 
-            self.__elide(title.replace("&", "&&")))
-        self.tabWidget.setTabToolTip(self.tabWidget.currentIndex(), 
-            title)
         self.historyManager().updateHistoryEntry(
             self.currentBrowser().url().toString(), title)
     
@@ -1545,13 +1494,7 @@ class HelpWindow(QMainWindow):
         
         @param link file to be displayed in the new window (string or QUrl)
         """
-        if link is None:
-            linkName = ""
-        elif isinstance(link, QUrl):
-            linkName = link.toString()
-        else:
-            linkName = link
-        self.newBrowser(linkName)
+        self.tabWidget.newBrowser(link)
     
     def newWindow(self, link = None):
         """
@@ -1616,128 +1559,6 @@ class HelpWindow(QMainWindow):
         if browser is not None:
             browser.saveAs()
         
-    def __printFile(self, browser = None):
-        """
-        Private slot called to print the displayed file.
-        
-        @param browser reference to the browser to be printed (HelpBrowserWV)
-        """
-        if browser is None:
-            browser = self.currentBrowser()
-        
-        self.__printRequested(browser.page().mainFrame())
-        
-    def __printRequested(self, frame):
-        """
-        Private slot to handle a print request.
-        
-        @param frame reference to the frame to be printed (QWebFrame)
-        """
-        printer = QPrinter(mode = QPrinter.HighResolution)
-        if Preferences.getPrinter("ColorMode"):
-            printer.setColorMode(QPrinter.Color)
-        else:
-            printer.setColorMode(QPrinter.GrayScale)
-        if Preferences.getPrinter("FirstPageFirst"):
-            printer.setPageOrder(QPrinter.FirstPageFirst)
-        else:
-            printer.setPageOrder(QPrinter.LastPageFirst)
-        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
-        
-        printDialog = QPrintDialog(printer, self)
-        if printDialog.exec_() == QDialog.Accepted:
-            try:
-                frame.print_(printer)
-            except AttributeError:
-                E5MessageBox.critical(self,
-                    self.trUtf8("Eric Web Browser"),
-                    self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
-                                """Please upgrade.</p>"""))
-                return
-        
-    def __printFilePdf(self, browser = None):
-        """
-        Private slot called to print the displayed file to PDF.
-        
-        @param browser reference to the browser to be printed (HelpBrowserWV)
-        """
-        if browser is None:
-            browser = self.currentBrowser()
-        
-        self.__printPdfRequested(browser.page().mainFrame())
-        
-    def __printPdfRequested(self, frame):
-        """
-        Private slot to handle a print to PDF request.
-        
-        @param frame reference to the frame to be printed (QWebFrame)
-        """
-        printer = QPrinter(mode = QPrinter.HighResolution)
-        if Preferences.getPrinter("ColorMode"):
-            printer.setColorMode(QPrinter.Color)
-        else:
-            printer.setColorMode(QPrinter.GrayScale)
-        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
-        printer.setOutputFormat(QPrinter.PdfFormat)
-        name = frame.url().path().rsplit('/', 1)[-1]
-        if name:
-            name = name.rsplit('.', 1)[0]
-            name += '.pdf'
-            printer.setOutputFileName(name)
-        
-        printDialog = QPrintDialog(printer, self)
-        if printDialog.exec_() == QDialog.Accepted:
-            try:
-                frame.print_(printer)
-            except AttributeError:
-                E5MessageBox.critical(self,
-                    self.trUtf8("Eric Web Browser"),
-                    self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
-                                """Please upgrade.</p>"""))
-                return
-        
-    def __printPreviewFile(self, browser = None):
-        """
-        Private slot called to show a print preview of the displayed file.
-        
-        @param browser reference to the browser to be printed (HelpBrowserWV)
-        """
-        from PyQt4.QtGui import QPrintPreviewDialog
-        
-        if browser is None:
-            browser = self.currentBrowser()
-        
-        printer = QPrinter(mode = QPrinter.HighResolution)
-        if Preferences.getPrinter("ColorMode"):
-            printer.setColorMode(QPrinter.Color)
-        else:
-            printer.setColorMode(QPrinter.GrayScale)
-        if Preferences.getPrinter("FirstPageFirst"):
-            printer.setPageOrder(QPrinter.FirstPageFirst)
-        else:
-            printer.setPageOrder(QPrinter.LastPageFirst)
-        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
-        
-        self.__printPreviewBrowser = browser
-        preview = QPrintPreviewDialog(printer, self)
-        preview.paintRequested.connect(self.__printPreview)
-        preview.exec_()
-        
-    def __printPreview(self, printer):
-        """
-        Public slot to generate a print preview.
-        
-        @param printer reference to the printer object (QPrinter)
-        """
-        try:
-            self.__printPreviewBrowser.print_(printer)
-        except AttributeError:
-            E5MessageBox.critical(self,
-                self.trUtf8("Eric Web Browser"),
-                self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
-                            """Please upgrade.</p>"""))
-            return
-        
     def __about(self):
         """
         Private slot to show the about information.
@@ -1753,25 +1574,25 @@ class HelpWindow(QMainWindow):
         """
         E5MessageBox.aboutQt(self, self.trUtf8("Eric Web Browser"))
 
-    def __setBackwardAvailable(self, b):
+    def setBackwardAvailable(self, b):
         """
-        Private slot called when backward references are available.
+        Public slot called when backward references are available.
         
         @param b flag indicating availability of the backwards action (boolean)
         """
         self.backAct.setEnabled(b)
         
-    def __setForwardAvailable(self, b):
+    def setForwardAvailable(self, b):
         """
-        Private slot called when forward references are available.
+        Public slot called when forward references are available.
         
         @param b flag indicating the availability of the forwards action (boolean)
         """
         self.forwardAct.setEnabled(b)
         
-    def __setLoadingActions(self, b):
+    def setLoadingActions(self, b):
         """
-        Private slot to set the loading dependent actions.
+        Public slot to set the loading dependent actions.
         
         @param b flag indicating the loading state to consider (boolean)
         """
@@ -1815,9 +1636,9 @@ class HelpWindow(QMainWindow):
         self.__bookmarksDialog.newUrl.connect(self.__openUrlNewTab)
         self.__bookmarksDialog.show()
         
-    def __bookmarkAll(self):
+    def bookmarkAll(self):
         """
-        Private slot to bookmark all open tabs.
+        Public slot to bookmark all open tabs.
         """
         dlg = AddBookmarkDialog()
         dlg.setFolder(True)
@@ -1828,14 +1649,10 @@ class HelpWindow(QMainWindow):
         if folder is None:
             return
         
-        for index in range(self.tabWidget.count()):
-            tab = self.tabWidget.widget(index)
-            if tab is None:
-                continue
-            
+        for browser in self.tabWidget.browsers():
             bookmark = BookmarkNode(BookmarkNode.Bookmark)
-            bookmark.url = bytes(tab.url().toEncoded()).decode()
-            bookmark.title = tab.title()
+            bookmark.url = bytes(browser.url().toEncoded()).decode()
+            bookmark.title = browser.title()
             
             self.bookmarksManager().addBookmark(folder, bookmark)
         
@@ -1856,6 +1673,10 @@ class HelpWindow(QMainWindow):
                 <br />This event is simply accepted after the history has been
                 saved and all window references have been deleted.
         """
+        if not self.tabWidget.shallShutDown():
+            e.ignore()
+            return
+        
         self.__closeNetworkMonitor()
         
         self.cookieJar().close()
@@ -1984,59 +1805,6 @@ class HelpWindow(QMainWindow):
         """
         self.currentBrowser().copy()
     
-    def __close(self):
-        """
-        Private slot called to handle the close action.
-        """
-        browser = self.currentBrowser()
-        self.tabWidget.removeTab(self.tabWidget.currentIndex())
-        del browser
-        if self.tabWidget.count() == 0:
-            self.newTab()
-        else:
-            self.__currentChanged(self.tabWidget.currentIndex())
-    
-    def __closeAll(self):
-        """
-        Private slot called to handle the close all action.
-        """
-        for index in range(self.tabWidget.count() - 1, -1, -1):
-            self.__closeAt(index)
-    
-    def __closeAt(self, index):
-        """
-        Private slot to close a window based on it's index.
-        
-        @param index index of window to close (integer)
-        """
-        browser = self.tabWidget.widget(index)
-        self.tabWidget.removeTab(index)
-        del browser
-        if self.tabWidget.count() == 0:
-            self.newTab()
-        else:
-            self.__currentChanged(self.tabWidget.currentIndex())
-    
-    def __windowCloseRequested(self):
-        """
-        Private slot to handle the windowCloseRequested signal of a browser.
-        """
-        page = self.sender()
-        if page is None:
-            return
-        
-        browser = page.view()
-        if browser is None:
-            return
-        
-        index = self.tabWidget.indexOf(browser)
-        self.tabWidget.removeTab(index)
-        del browser
-        if self.tabWidget.count() == 0:
-            self.newTab()
-        else:
-            self.__currentChanged(self.tabWidget.currentIndex())
-    
     def __privateBrowsing(self):
         """
         Private slot to switch private browsing.
@@ -2072,7 +1840,7 @@ class HelpWindow(QMainWindow):
         
         @return reference to the current help browser (HelpBrowser)
         """
-        return self.tabWidget.currentWidget()
+        return self.tabWidget.currentBrowser()
     
     def browserAt(self, index):
         """
@@ -2081,7 +1849,7 @@ class HelpWindow(QMainWindow):
         @param index index of the browser to get (integer)
         @return reference to the indexed help browser (HelpBrowser)
         """
-        return self.tabWidget.widget(index)
+        return self.tabWidget.browserAt(index)
     
     def browsers(self):
         """
@@ -2089,49 +1857,7 @@ class HelpWindow(QMainWindow):
         
         @return list of references to help browsers (list of HelpBrowser)
         """
-        l = []
-        for index in range(self.tabWidget.count()):
-            l.append(self.tabWidget.widget(index))
-        return l
-    
-    def newBrowser(self, link):
-        """
-        Public method to create a new help browser tab.
-        
-        @param link link to be shown (string)
-        """
-        browser = HelpBrowser(self)
-        
-        browser.sourceChanged.connect(self.__sourceChanged)
-        browser.titleChanged.connect(self.__titleChanged)
-        
-        index = self.tabWidget.addTab(browser, self.trUtf8("..."))
-        self.tabWidget.setCurrentIndex(index)
-        
-        if not link and Preferences.getHelp("StartupBehavior") == 0:
-            link = Preferences.getHelp("HomePage")
-        
-        if link:
-            browser.setSource(QUrl(link))
-            if not browser.documentTitle():
-                self.tabWidget.setTabText(index, self.__elide(link, Qt.ElideMiddle))
-                self.tabWidget.setTabToolTip(index, link)
-            else:
-                self.tabWidget.setTabText(index, 
-                    self.__elide(browser.documentTitle().replace("&", "&&")))
-                self.tabWidget.setTabToolTip(index, browser.documentTitle())
-        
-        browser.highlighted.connect(self.statusBar().showMessage)
-        browser.backwardAvailable.connect(self.__setBackwardAvailable)
-        browser.forwardAvailable.connect(self.__setForwardAvailable)
-        browser.page().windowCloseRequested.connect(self.__windowCloseRequested)
-        browser.page().printRequested.connect(self.__printRequested)
-        browser.search.connect(self.newTab)
-        
-        self.closeAct.setEnabled(True)
-        self.closeAllAct.setEnabled(True)
-        self.closeButton and self.closeButton.setEnabled(True)
-        self.navigationButton.setEnabled(True)
+        return self.tabWidget.browsers()
     
     def __currentChanged(self, index):
         """
@@ -2142,9 +1868,9 @@ class HelpWindow(QMainWindow):
         if index > -1:
             cb = self.currentBrowser()
             if cb is not None:
-                self.__setForwardAvailable(cb.isForwardAvailable())
-                self.__setBackwardAvailable(cb.isBackwardAvailable())
-                self.__setLoadingActions(cb.isLoading())
+                self.setForwardAvailable(cb.isForwardAvailable())
+                self.setBackwardAvailable(cb.isBackwardAvailable())
+                self.setLoadingActions(cb.isLoading())
                 
                 url = cb.source().toString()
                 index2 = self.pathCombo.findText(url)
@@ -2155,88 +1881,7 @@ class HelpWindow(QMainWindow):
                 
                 self.__setPathComboBackground()
                 
-                self.printAct.setEnabled(hasattr(cb, 'print_'))
-                self.printPdfAct.setEnabled(hasattr(cb, 'print_'))
-                if self.printPreviewAct:
-                    self.printPreviewAct.setEnabled(hasattr(cb, 'print_'))
-                
                 self.iconChanged(cb.icon())
-    
-    def __showContextMenu(self, coord, index):
-        """
-        Private slot to show the tab context menu.
-        
-        @param coord the position of the mouse pointer (QPoint)
-        @param index index of the tab the menu is requested for (integer)
-        """
-        self.tabContextMenuIndex = index
-        self.leftMenuAct.setEnabled(index > 0)
-        self.rightMenuAct.setEnabled(index < self.tabWidget.count() - 1)
-        
-        self.tabContextCloseOthersAct.setEnabled(self.tabWidget.count() > 1)
-        
-        coord = self.tabWidget.mapToGlobal(coord)
-        self.__tabContextMenu.popup(coord)
-    
-    def __tabContextMenuMoveLeft(self):
-        """
-        Private method to move a tab one position to the left.
-        """
-        self.tabWidget.moveTab(self.tabContextMenuIndex, self.tabContextMenuIndex - 1)
-    
-    def __tabContextMenuMoveRight(self):
-        """
-        Private method to move a tab one position to the right.
-        """
-        self.tabWidget.moveTab(self.tabContextMenuIndex, self.tabContextMenuIndex + 1)
-    
-    def __tabContextMenuClone(self):
-        """
-        Private method to clone the selected tab.
-        """
-        idx = self.tabContextMenuIndex
-        if idx < 0:
-            idx = self.tabWidget.currentIndex()
-        if idx < 0 or idx > self.tabWidget.count():
-            return
-        
-        self.newTab(self.tabWidget.widget(idx).url())
-    
-    def __tabContextMenuClose(self):
-        """
-        Private method to close the selected tab.
-        """
-        self.__closeAt(self.tabContextMenuIndex)
-    
-    def __tabContextMenuCloseOthers(self):
-        """
-        Private slot to close all other tabs.
-        """
-        index = self.tabContextMenuIndex
-        for i in list(range(self.tabWidget.count() - 1, index, -1)) + \
-                 list(range(index - 1, -1, -1)):
-            self.__closeAt(i)
-    
-    def __tabContextMenuPrint(self):
-        """
-        Private method to print the selected tab.
-        """
-        browser = self.tabWidget.widget(self.tabContextMenuIndex)
-        self.__printFile(browser)
-        
-    def __tabContextMenuPrintPdf(self):
-        """
-        Private method to print the selected tab.
-        """
-        browser = self.tabWidget.widget(self.tabContextMenuIndex)
-        self.__printFilePdf(browser)
-        
-    def __tabContextMenuPrintPreview(self):
-        """
-        Private method to show a print preview of the selected tab.
-        """
-        browser = self.tabWidget.widget(self.tabContextMenuIndex)
-        self.__printPreviewFile(browser)
     
     def __showPreferences(self):
         """
@@ -2267,8 +1912,7 @@ class HelpWindow(QMainWindow):
         
         self.historyManager().preferencesChanged()
         
-        for index in range(self.tabWidget.count()):
-            self.tabWidget.widget(index).preferencesChanged()
+        self.tabWidget.preferencesChanged()
         
         self.searchEdit.preferencesChanged()
     
@@ -2295,39 +1939,6 @@ class HelpWindow(QMainWindow):
         if dlg.exec_() == QDialog.Accepted:
             dlg.storeData()
             self.__initWebSettings()
-    
-    def setLoading(self, widget):
-        """
-        Public method to set the loading icon.
-        
-        @param widget reference to the widget to set the icon for (QWidget)
-        """
-        index = self.tabWidget.indexOf(widget)
-        anim = self.tabWidget.animationLabel(
-            index, os.path.join(getConfig("ericPixDir"), "loading.gif"))
-        if not anim:
-            loading = QIcon(os.path.join(getConfig("ericPixDir"), "loading.gif"))
-            self.tabWidget.setTabIcon(index, loading)
-        self.statusBar().showMessage(self.trUtf8("Loading..."))
-        
-        self.__setLoadingActions(True)
-    
-    def resetLoading(self, widget, ok):
-        """
-        Public method to reset the loading icon.
-        
-        @param widget reference to the widget to reset the icon for (QWidget)
-        @param ok flag indicating the result (boolean)
-        """
-        index = self.tabWidget.indexOf(widget)
-        self.tabWidget.resetAnimation(index)
-        self.tabWidget.setTabIcon(index, widget.icon())
-        if ok:
-            self.statusBar().showMessage(self.trUtf8("Finished loading"))
-        else:
-            self.statusBar().showMessage(self.trUtf8("Failed to load"))
-        
-        self.__setLoadingActions(False)
     
     ############################################################################
     ## Methods to support Webkit based browser below.
@@ -2392,7 +2003,6 @@ class HelpWindow(QMainWindow):
         
         @param icon icon to be shown (QIcon)
         """
-        self.tabWidget.setTabIcon(self.tabWidget.currentIndex(), icon)
         self.iconLabel.setPixmap(icon.pixmap(16, 16))
         
     def __clearIconsDatabase(self):
@@ -2516,7 +2126,7 @@ class HelpWindow(QMainWindow):
         dlg.exec_()
         if dlg.hasChanges():
             for i in sorted(dlg.getTabsToClose(), reverse = True):
-                self.__closeAt(i)
+                self.tabWidget.closeBrowserAt(i)
             self.__helpEngine.setupData()
         
     def getSourceFileList(self):
@@ -2525,14 +2135,7 @@ class HelpWindow(QMainWindow):
         
         @return dictionary with tab id as key and host/namespace as value
         """
-        sourceList = {}
-        for i in range(self.tabWidget.count()):
-            viewer = self.tabWidget.widget(i)
-            if viewer is not None and \
-               viewer.source().isValid():
-                sourceList[i] = viewer.source().host()
-        
-        return sourceList
+        return self.tabWidget.getSourceFileList()
         
     def __manageQtHelpFilters(self):
         """
@@ -2655,26 +2258,6 @@ class HelpWindow(QMainWindow):
         """
         E5MessageBox.warning(self,
             self.trUtf8("Help Engine"), msg)
-        
-    def __showNavigationMenu(self):
-        """
-        Private slot to show the navigation button menu.
-        """
-        self.__navigationMenu.clear()
-        for index in range(self.tabWidget.count()):
-            act = self.__navigationMenu.addAction(self.tabWidget.tabIcon(index), 
-                                              self.tabWidget.tabText(index))
-            act.setData(index)
-        
-    def __navigationMenuTriggered(self, act):
-        """
-        Private slot called to handle the navigation button menu selection.
-        
-        @param act reference to the selected action (QAction)
-        """
-        index = act.data()
-        if index is not None:
-            self.tabWidget.setCurrentIndex(index)
         
     def __showBackMenu(self):
         """
@@ -2944,19 +2527,44 @@ class HelpWindow(QMainWindow):
         else:
             currentCodec = ""
         
-        defaultEncodingAct = self.__textEncodingMenu.addAction(self.trUtf8("Default"))
-        defaultEncodingAct.setData("")
-        defaultEncodingAct.setCheckable(True)
-        if currentCodec == "":
-            defaultEncodingAct.setChecked(True)
-        self.__textEncodingMenu.addSeparator()
+        isDefaultEncodingUsed = True
+        isoMenu = QMenu(self.trUtf8("ISO"), self.__textEncodingMenu)
+        winMenu = QMenu(self.trUtf8("Windows"), self.__textEncodingMenu)
+        isciiMenu = QMenu(self.trUtf8("ISCII"), self.__textEncodingMenu)
+        uniMenu = QMenu(self.trUtf8("Unicode"), self.__textEncodingMenu)
+        otherMenu = QMenu(self.trUtf8("Other"), self.__textEncodingMenu)
+        ibmMenu = QMenu(self.trUtf8("IBM"), self.__textEncodingMenu)
         
         for codec in codecs:
-            act = self.__textEncodingMenu.addAction(codec)
+            if codec.startswith(("iso", "latin", "csisolatin")):
+                act = isoMenu.addAction(codec)
+            elif codec.startswith(("windows", "cp1")):
+                act = winMenu.addAction(codec)
+            elif codec.startswith("iscii"):
+                act = isciiMenu.addAction(codec)
+            elif codec.startswith("utf"):
+                act = uniMenu.addAction(codec)
+            elif codec.startswith(("ibm", "csibm", "cp")):
+                act = ibmMenu.addAction(codec)
+            else:
+                act = otherMenu.addAction(codec)
+            
             act.setData(codec)
             act.setCheckable(True)
             if currentCodec == codec:
                 act.setChecked(True)
+                isDefaultEncodingUsed = False
+        
+        act = self.__textEncodingMenu.addAction(self.trUtf8("Default Encoding"))
+        act.setData("")
+        act.setCheckable(True)
+        act.setChecked(isDefaultEncodingUsed)
+        self.__textEncodingMenu.addMenu(uniMenu)
+        self.__textEncodingMenu.addMenu(isoMenu)
+        self.__textEncodingMenu.addMenu(winMenu)
+        self.__textEncodingMenu.addMenu(ibmMenu)
+        self.__textEncodingMenu.addMenu(isciiMenu)
+        self.__textEncodingMenu.addMenu(otherMenu)
     
     def __setTextEncoding(self, act):
         """

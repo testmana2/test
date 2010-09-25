@@ -138,9 +138,6 @@ QWebView
 <td><a href="#HelpBrowser.__downloadRequested">__downloadRequested</a></td>
 <td>Private slot to handle a download request.</td>
 </tr><tr>
-<td><a href="#HelpBrowser.__iconChanged">__iconChanged</a></td>
-<td>Private slot to handle the icon change.</td>
-</tr><tr>
 <td><a href="#HelpBrowser.__levelForZoom">__levelForZoom</a></td>
 <td>Private method determining the zoom level index given a zoom factor.</td>
 </tr><tr>
@@ -255,11 +252,14 @@ QWebView
 </table>
 <a NAME="HelpBrowser.__init__" ID="HelpBrowser.__init__"></a>
 <h4>HelpBrowser (Constructor)</h4>
-<b>HelpBrowser</b>(<i>parent = None, name = ""</i>)
+<b>HelpBrowser</b>(<i>mainWindow, parent = None, name = ""</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>parent</i></dt>
+<dt><i>mainWindow</i></dt>
+<dd>
+reference to the main window (HelpWindow)
+</dd><dt><i>parent</i></dt>
 <dd>
 parent widget of this window (QWidget)
 </dd><dt><i>name</i></dt>
@@ -374,12 +374,7 @@ name of the web database (string)
 <dd>
 reference to the request object (QNetworkRequest)
 </dd>
-</dl><a NAME="HelpBrowser.__iconChanged" ID="HelpBrowser.__iconChanged"></a>
-<h4>HelpBrowser.__iconChanged</h4>
-<b>__iconChanged</b>(<i></i>)
-<p>
-        Private slot to handle the icon change.
-</p><a NAME="HelpBrowser.__levelForZoom" ID="HelpBrowser.__levelForZoom"></a>
+</dl><a NAME="HelpBrowser.__levelForZoom" ID="HelpBrowser.__levelForZoom"></a>
 <h4>HelpBrowser.__levelForZoom</h4>
 <b>__levelForZoom</b>(<i>zoom</i>)
 <p>

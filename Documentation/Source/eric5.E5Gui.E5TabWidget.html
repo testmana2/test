@@ -190,6 +190,9 @@ QTabWidget
 <td><a href="#E5TabWidget.selectTab">selectTab</a></td>
 <td>Public method to get the index of a tab given a position.</td>
 </tr><tr>
+<td><a href="#E5TabWidget.setCustomTabBar">setCustomTabBar</a></td>
+<td>Public method to set a custom tab bar.</td>
+</tr><tr>
 <td><a href="#E5TabWidget.setTabContextMenuPolicy">setTabContextMenuPolicy</a></td>
 <td>Public method to set the context menu policy of the tab.</td>
 </tr><tr>
@@ -199,7 +202,7 @@ QTabWidget
 </table>
 <a NAME="E5TabWidget.__init__" ID="E5TabWidget.__init__"></a>
 <h4>E5TabWidget (Constructor)</h4>
-<b>E5TabWidget</b>(<i>parent = None, dnd = False, tabBar = None</i>)
+<b>E5TabWidget</b>(<i>parent = None, dnd = False</i>)
 <p>
         Constructor
 </p><dl>
@@ -305,6 +308,19 @@ position determining the tab index (QPoint)
 <dt>Returns:</dt>
 <dd>
 index of the tab (integer)
+</dd>
+</dl><a NAME="E5TabWidget.setCustomTabBar" ID="E5TabWidget.setCustomTabBar"></a>
+<h4>E5TabWidget.setCustomTabBar</h4>
+<b>setCustomTabBar</b>(<i>dnd, tabBar</i>)
+<p>
+        Public method to set a custom tab bar.
+</p><dl>
+<dt><i>dnd</i></dt>
+<dd>
+flag indicating the support for Drag & Drop (boolean)
+</dd><dt><i>tabBar</i></dt>
+<dd>
+reference to the tab bar to set (QTabBar)
 </dd>
 </dl><a NAME="E5TabWidget.setTabContextMenuPolicy" ID="E5TabWidget.setTabContextMenuPolicy"></a>
 <h4>E5TabWidget.setTabContextMenuPolicy</h4>

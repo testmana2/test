@@ -275,6 +275,7 @@
             <section title="eric5.Helpviewer.HelpSearchWidget" ref="eric5.Helpviewer.HelpSearchWidget.html" />
             <section title="eric5.Helpviewer.HelpSnap" ref="eric5.Helpviewer.HelpSnap.html" />
             <section title="eric5.Helpviewer.HelpTabBar" ref="eric5.Helpviewer.HelpTabBar.html" />
+            <section title="eric5.Helpviewer.HelpTabWidget" ref="eric5.Helpviewer.HelpTabWidget.html" />
             <section title="eric5.Helpviewer.HelpTocWidget" ref="eric5.Helpviewer.HelpTocWidget.html" />
             <section title="eric5.Helpviewer.HelpTopicDialog" ref="eric5.Helpviewer.HelpTopicDialog.html" />
             <section title="eric5.Helpviewer.HelpWebSearchWidget" ref="eric5.Helpviewer.HelpWebSearchWidget.html" />
@@ -2554,7 +2555,6 @@
       <keyword name="HelpBrowser.__downloadImage" id="HelpBrowser.__downloadImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadImage" />
       <keyword name="HelpBrowser.__downloadLink" id="HelpBrowser.__downloadLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadLink" />
       <keyword name="HelpBrowser.__downloadRequested" id="HelpBrowser.__downloadRequested" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadRequested" />
-      <keyword name="HelpBrowser.__iconChanged" id="HelpBrowser.__iconChanged" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__iconChanged" />
       <keyword name="HelpBrowser.__levelForZoom" id="HelpBrowser.__levelForZoom" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__levelForZoom" />
       <keyword name="HelpBrowser.__linkHovered" id="HelpBrowser.__linkHovered" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__linkHovered" />
       <keyword name="HelpBrowser.__loadFinished" id="HelpBrowser.__loadFinished" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadFinished" />
@@ -2648,17 +2648,12 @@
       <keyword name="HelpWindow.__addBookmark" id="HelpWindow.__addBookmark" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__addBookmark" />
       <keyword name="HelpWindow.__addBookmarkFolder" id="HelpWindow.__addBookmarkFolder" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__addBookmarkFolder" />
       <keyword name="HelpWindow.__backward" id="HelpWindow.__backward" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__backward" />
-      <keyword name="HelpWindow.__bookmarkAll" id="HelpWindow.__bookmarkAll" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__bookmarkAll" />
       <keyword name="HelpWindow.__clearIconsDatabase" id="HelpWindow.__clearIconsDatabase" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__clearIconsDatabase" />
       <keyword name="HelpWindow.__clearPrivateData" id="HelpWindow.__clearPrivateData" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__clearPrivateData" />
-      <keyword name="HelpWindow.__close" id="HelpWindow.__close" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__close" />
-      <keyword name="HelpWindow.__closeAll" id="HelpWindow.__closeAll" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeAll" />
-      <keyword name="HelpWindow.__closeAt" id="HelpWindow.__closeAt" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeAt" />
       <keyword name="HelpWindow.__closeNetworkMonitor" id="HelpWindow.__closeNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeNetworkMonitor" />
       <keyword name="HelpWindow.__copy" id="HelpWindow.__copy" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__copy" />
       <keyword name="HelpWindow.__currentChanged" id="HelpWindow.__currentChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__currentChanged" />
       <keyword name="HelpWindow.__docsInstalled" id="HelpWindow.__docsInstalled" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__docsInstalled" />
-      <keyword name="HelpWindow.__elide" id="HelpWindow.__elide" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__elide" />
       <keyword name="HelpWindow.__filterQtHelpDocumentation" id="HelpWindow.__filterQtHelpDocumentation" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__filterQtHelpDocumentation" />
       <keyword name="HelpWindow.__find" id="HelpWindow.__find" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__find" />
       <keyword name="HelpWindow.__forward" id="HelpWindow.__forward" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__forward" />
@@ -2673,7 +2668,6 @@
       <keyword name="HelpWindow.__initActions" id="HelpWindow.__initActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__initActions" />
       <keyword name="HelpWindow.__initHelpDb" id="HelpWindow.__initHelpDb" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__initHelpDb" />
       <keyword name="HelpWindow.__initMenus" id="HelpWindow.__initMenus" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__initMenus" />
-      <keyword name="HelpWindow.__initTabContextMenu" id="HelpWindow.__initTabContextMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__initTabContextMenu" />
       <keyword name="HelpWindow.__initToolbars" id="HelpWindow.__initToolbars" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__initToolbars" />
       <keyword name="HelpWindow.__initWebSettings" id="HelpWindow.__initWebSettings" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__initWebSettings" />
       <keyword name="HelpWindow.__isFullScreen" id="HelpWindow.__isFullScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__isFullScreen" />
@@ -2683,7 +2677,6 @@
       <keyword name="HelpWindow.__manageQtHelpDocumentation" id="HelpWindow.__manageQtHelpDocumentation" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__manageQtHelpDocumentation" />
       <keyword name="HelpWindow.__manageQtHelpFilters" id="HelpWindow.__manageQtHelpFilters" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__manageQtHelpFilters" />
       <keyword name="HelpWindow.__navigationMenuActionTriggered" id="HelpWindow.__navigationMenuActionTriggered" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__navigationMenuActionTriggered" />
-      <keyword name="HelpWindow.__navigationMenuTriggered" id="HelpWindow.__navigationMenuTriggered" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__navigationMenuTriggered" />
       <keyword name="HelpWindow.__nextTab" id="HelpWindow.__nextTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__nextTab" />
       <keyword name="HelpWindow.__openFile" id="HelpWindow.__openFile" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__openFile" />
       <keyword name="HelpWindow.__openFileNewTab" id="HelpWindow.__openFileNewTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__openFileNewTab" />
@@ -2691,20 +2684,11 @@
       <keyword name="HelpWindow.__openUrlNewTab" id="HelpWindow.__openUrlNewTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__openUrlNewTab" />
       <keyword name="HelpWindow.__pathSelected" id="HelpWindow.__pathSelected" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__pathSelected" />
       <keyword name="HelpWindow.__prevTab" id="HelpWindow.__prevTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__prevTab" />
-      <keyword name="HelpWindow.__printFile" id="HelpWindow.__printFile" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printFile" />
-      <keyword name="HelpWindow.__printFilePdf" id="HelpWindow.__printFilePdf" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printFilePdf" />
-      <keyword name="HelpWindow.__printPdfRequested" id="HelpWindow.__printPdfRequested" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printPdfRequested" />
-      <keyword name="HelpWindow.__printPreview" id="HelpWindow.__printPreview" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printPreview" />
-      <keyword name="HelpWindow.__printPreviewFile" id="HelpWindow.__printPreviewFile" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printPreviewFile" />
-      <keyword name="HelpWindow.__printRequested" id="HelpWindow.__printRequested" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__printRequested" />
       <keyword name="HelpWindow.__privateBrowsing" id="HelpWindow.__privateBrowsing" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__privateBrowsing" />
       <keyword name="HelpWindow.__reload" id="HelpWindow.__reload" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__reload" />
       <keyword name="HelpWindow.__savePageAs" id="HelpWindow.__savePageAs" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__savePageAs" />
       <keyword name="HelpWindow.__searchForWord" id="HelpWindow.__searchForWord" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__searchForWord" />
-      <keyword name="HelpWindow.__setBackwardAvailable" id="HelpWindow.__setBackwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setBackwardAvailable" />
-      <keyword name="HelpWindow.__setForwardAvailable" id="HelpWindow.__setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setForwardAvailable" />
       <keyword name="HelpWindow.__setIconDatabasePath" id="HelpWindow.__setIconDatabasePath" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setIconDatabasePath" />
-      <keyword name="HelpWindow.__setLoadingActions" id="HelpWindow.__setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setLoadingActions" />
       <keyword name="HelpWindow.__setPathComboBackground" id="HelpWindow.__setPathComboBackground" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setPathComboBackground" />
       <keyword name="HelpWindow.__setTextEncoding" id="HelpWindow.__setTextEncoding" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setTextEncoding" />
       <keyword name="HelpWindow.__setupFilterCombo" id="HelpWindow.__setupFilterCombo" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setupFilterCombo" />
@@ -2712,14 +2696,12 @@
       <keyword name="HelpWindow.__showAdBlockDialog" id="HelpWindow.__showAdBlockDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showAdBlockDialog" />
       <keyword name="HelpWindow.__showBackMenu" id="HelpWindow.__showBackMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showBackMenu" />
       <keyword name="HelpWindow.__showBookmarksDialog" id="HelpWindow.__showBookmarksDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showBookmarksDialog" />
-      <keyword name="HelpWindow.__showContextMenu" id="HelpWindow.__showContextMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showContextMenu" />
       <keyword name="HelpWindow.__showCookiesConfiguration" id="HelpWindow.__showCookiesConfiguration" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showCookiesConfiguration" />
       <keyword name="HelpWindow.__showEnginesConfigurationDialog" id="HelpWindow.__showEnginesConfigurationDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showEnginesConfigurationDialog" />
       <keyword name="HelpWindow.__showForwardMenu" id="HelpWindow.__showForwardMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showForwardMenu" />
       <keyword name="HelpWindow.__showHistoryMenu" id="HelpWindow.__showHistoryMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showHistoryMenu" />
       <keyword name="HelpWindow.__showIndexWindow" id="HelpWindow.__showIndexWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showIndexWindow" />
       <keyword name="HelpWindow.__showInstallationError" id="HelpWindow.__showInstallationError" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showInstallationError" />
-      <keyword name="HelpWindow.__showNavigationMenu" id="HelpWindow.__showNavigationMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showNavigationMenu" />
       <keyword name="HelpWindow.__showNetworkMonitor" id="HelpWindow.__showNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showNetworkMonitor" />
       <keyword name="HelpWindow.__showOfflineStorageConfiguration" id="HelpWindow.__showOfflineStorageConfiguration" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showOfflineStorageConfiguration" />
       <keyword name="HelpWindow.__showPageSource" id="HelpWindow.__showPageSource" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPageSource" />
@@ -2731,24 +2713,16 @@
       <keyword name="HelpWindow.__stopLoading" id="HelpWindow.__stopLoading" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__stopLoading" />
       <keyword name="HelpWindow.__switchTab" id="HelpWindow.__switchTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__switchTab" />
       <keyword name="HelpWindow.__syncTOC" id="HelpWindow.__syncTOC" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__syncTOC" />
-      <keyword name="HelpWindow.__tabContextMenuClone" id="HelpWindow.__tabContextMenuClone" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuClone" />
-      <keyword name="HelpWindow.__tabContextMenuClose" id="HelpWindow.__tabContextMenuClose" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuClose" />
-      <keyword name="HelpWindow.__tabContextMenuCloseOthers" id="HelpWindow.__tabContextMenuCloseOthers" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuCloseOthers" />
-      <keyword name="HelpWindow.__tabContextMenuMoveLeft" id="HelpWindow.__tabContextMenuMoveLeft" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuMoveLeft" />
-      <keyword name="HelpWindow.__tabContextMenuMoveRight" id="HelpWindow.__tabContextMenuMoveRight" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuMoveRight" />
-      <keyword name="HelpWindow.__tabContextMenuPrint" id="HelpWindow.__tabContextMenuPrint" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuPrint" />
-      <keyword name="HelpWindow.__tabContextMenuPrintPdf" id="HelpWindow.__tabContextMenuPrintPdf" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuPrintPdf" />
-      <keyword name="HelpWindow.__tabContextMenuPrintPreview" id="HelpWindow.__tabContextMenuPrintPreview" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__tabContextMenuPrintPreview" />
       <keyword name="HelpWindow.__titleChanged" id="HelpWindow.__titleChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__titleChanged" />
       <keyword name="HelpWindow.__viewFullScreen" id="HelpWindow.__viewFullScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__viewFullScreen" />
       <keyword name="HelpWindow.__warning" id="HelpWindow.__warning" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__warning" />
       <keyword name="HelpWindow.__whatsThis" id="HelpWindow.__whatsThis" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__whatsThis" />
-      <keyword name="HelpWindow.__windowCloseRequested" id="HelpWindow.__windowCloseRequested" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__windowCloseRequested" />
       <keyword name="HelpWindow.__zoomIn" id="HelpWindow.__zoomIn" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomIn" />
       <keyword name="HelpWindow.__zoomOut" id="HelpWindow.__zoomOut" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomOut" />
       <keyword name="HelpWindow.__zoomReset" id="HelpWindow.__zoomReset" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomReset" />
       <keyword name="HelpWindow.__zoomTextOnly" id="HelpWindow.__zoomTextOnly" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomTextOnly" />
       <keyword name="HelpWindow.adblockManager" id="HelpWindow.adblockManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adblockManager" />
+      <keyword name="HelpWindow.bookmarkAll" id="HelpWindow.bookmarkAll" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarkAll" />
       <keyword name="HelpWindow.bookmarksManager" id="HelpWindow.bookmarksManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarksManager" />
       <keyword name="HelpWindow.browserAt" id="HelpWindow.browserAt" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.browserAt" />
       <keyword name="HelpWindow.browsers" id="HelpWindow.browsers" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.browsers" />
@@ -2762,17 +2736,17 @@
       <keyword name="HelpWindow.icon" id="HelpWindow.icon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.icon" />
       <keyword name="HelpWindow.iconChanged" id="HelpWindow.iconChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.iconChanged" />
       <keyword name="HelpWindow.networkAccessManager" id="HelpWindow.networkAccessManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.networkAccessManager" />
-      <keyword name="HelpWindow.newBrowser" id="HelpWindow.newBrowser" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newBrowser" />
       <keyword name="HelpWindow.newTab" id="HelpWindow.newTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newTab" />
       <keyword name="HelpWindow.newWindow" id="HelpWindow.newWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newWindow" />
       <keyword name="HelpWindow.openSearchManager" id="HelpWindow.openSearchManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openSearchManager" />
       <keyword name="HelpWindow.passwordManager" id="HelpWindow.passwordManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.passwordManager" />
       <keyword name="HelpWindow.preferencesChanged" id="HelpWindow.preferencesChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.preferencesChanged" />
       <keyword name="HelpWindow.progressBar" id="HelpWindow.progressBar" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.progressBar" />
-      <keyword name="HelpWindow.resetLoading" id="HelpWindow.resetLoading" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.resetLoading" />
       <keyword name="HelpWindow.search" id="HelpWindow.search" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.search" />
       <keyword name="HelpWindow.searchEnginesAction" id="HelpWindow.searchEnginesAction" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.searchEnginesAction" />
-      <keyword name="HelpWindow.setLoading" id="HelpWindow.setLoading" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoading" />
+      <keyword name="HelpWindow.setBackwardAvailable" id="HelpWindow.setBackwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setBackwardAvailable" />
+      <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
+      <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpClearPrivateDataDialog (Module)" id="HelpClearPrivateDataDialog (Module)" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html" />
       <keyword name="HelpClearPrivateDataDialog" id="HelpClearPrivateDataDialog" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html#HelpClearPrivateDataDialog" />
       <keyword name="HelpClearPrivateDataDialog (Constructor)" id="HelpClearPrivateDataDialog (Constructor)" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html#HelpClearPrivateDataDialog.__init__" />
@@ -2855,6 +2829,44 @@
       <keyword name="HelpLanguagesDialog.on_removeButton_clicked" id="HelpLanguagesDialog.on_removeButton_clicked" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.on_removeButton_clicked" />
       <keyword name="HelpLanguagesDialog.on_upButton_clicked" id="HelpLanguagesDialog.on_upButton_clicked" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.on_upButton_clicked" />
       <keyword name="HTMLResources (Module)" id="HTMLResources (Module)" ref="eric5.Helpviewer.HTMLResources.html" />
+      <keyword name="HelpTabWidget (Module)" id="HelpTabWidget (Module)" ref="eric5.Helpviewer.HelpTabWidget.html" />
+      <keyword name="HelpTabWidget" id="HelpTabWidget" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget" />
+      <keyword name="HelpTabWidget (Constructor)" id="HelpTabWidget (Constructor)" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__init__" />
+      <keyword name="HelpTabWidget.__elide" id="HelpTabWidget.__elide" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__elide" />
+      <keyword name="HelpTabWidget.__iconChanged" id="HelpTabWidget.__iconChanged" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__iconChanged" />
+      <keyword name="HelpTabWidget.__initTabContextMenu" id="HelpTabWidget.__initTabContextMenu" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__initTabContextMenu" />
+      <keyword name="HelpTabWidget.__loadFinished" id="HelpTabWidget.__loadFinished" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__loadFinished" />
+      <keyword name="HelpTabWidget.__loadStarted" id="HelpTabWidget.__loadStarted" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__loadStarted" />
+      <keyword name="HelpTabWidget.__navigationMenuTriggered" id="HelpTabWidget.__navigationMenuTriggered" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__navigationMenuTriggered" />
+      <keyword name="HelpTabWidget.__printPdfRequested" id="HelpTabWidget.__printPdfRequested" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__printPdfRequested" />
+      <keyword name="HelpTabWidget.__printPreview" id="HelpTabWidget.__printPreview" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__printPreview" />
+      <keyword name="HelpTabWidget.__printRequested" id="HelpTabWidget.__printRequested" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__printRequested" />
+      <keyword name="HelpTabWidget.__showContextMenu" id="HelpTabWidget.__showContextMenu" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__showContextMenu" />
+      <keyword name="HelpTabWidget.__showNavigationMenu" id="HelpTabWidget.__showNavigationMenu" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__showNavigationMenu" />
+      <keyword name="HelpTabWidget.__sourceChanged" id="HelpTabWidget.__sourceChanged" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__sourceChanged" />
+      <keyword name="HelpTabWidget.__tabContextMenuClone" id="HelpTabWidget.__tabContextMenuClone" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__tabContextMenuClone" />
+      <keyword name="HelpTabWidget.__tabContextMenuClose" id="HelpTabWidget.__tabContextMenuClose" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__tabContextMenuClose" />
+      <keyword name="HelpTabWidget.__tabContextMenuCloseOthers" id="HelpTabWidget.__tabContextMenuCloseOthers" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__tabContextMenuCloseOthers" />
+      <keyword name="HelpTabWidget.__tabContextMenuMoveLeft" id="HelpTabWidget.__tabContextMenuMoveLeft" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__tabContextMenuMoveLeft" />
+      <keyword name="HelpTabWidget.__tabContextMenuMoveRight" id="HelpTabWidget.__tabContextMenuMoveRight" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__tabContextMenuMoveRight" />
+      <keyword name="HelpTabWidget.__tabContextMenuPrint" id="HelpTabWidget.__tabContextMenuPrint" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__tabContextMenuPrint" />
+      <keyword name="HelpTabWidget.__tabContextMenuPrintPdf" id="HelpTabWidget.__tabContextMenuPrintPdf" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__tabContextMenuPrintPdf" />
+      <keyword name="HelpTabWidget.__tabContextMenuPrintPreview" id="HelpTabWidget.__tabContextMenuPrintPreview" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__tabContextMenuPrintPreview" />
+      <keyword name="HelpTabWidget.__titleChanged" id="HelpTabWidget.__titleChanged" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__titleChanged" />
+      <keyword name="HelpTabWidget.__windowCloseRequested" id="HelpTabWidget.__windowCloseRequested" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__windowCloseRequested" />
+      <keyword name="HelpTabWidget.browserAt" id="HelpTabWidget.browserAt" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.browserAt" />
+      <keyword name="HelpTabWidget.browsers" id="HelpTabWidget.browsers" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.browsers" />
+      <keyword name="HelpTabWidget.closeAllBrowsers" id="HelpTabWidget.closeAllBrowsers" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.closeAllBrowsers" />
+      <keyword name="HelpTabWidget.closeBrowser" id="HelpTabWidget.closeBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.closeBrowser" />
+      <keyword name="HelpTabWidget.closeBrowserAt" id="HelpTabWidget.closeBrowserAt" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.closeBrowserAt" />
+      <keyword name="HelpTabWidget.currentBrowser" id="HelpTabWidget.currentBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.currentBrowser" />
+      <keyword name="HelpTabWidget.getSourceFileList" id="HelpTabWidget.getSourceFileList" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.getSourceFileList" />
+      <keyword name="HelpTabWidget.newBrowser" id="HelpTabWidget.newBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.newBrowser" />
+      <keyword name="HelpTabWidget.preferencesChanged" id="HelpTabWidget.preferencesChanged" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.preferencesChanged" />
+      <keyword name="HelpTabWidget.printBrowser" id="HelpTabWidget.printBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.printBrowser" />
+      <keyword name="HelpTabWidget.printBrowserPdf" id="HelpTabWidget.printBrowserPdf" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.printBrowserPdf" />
+      <keyword name="HelpTabWidget.printPreviewBrowser" id="HelpTabWidget.printPreviewBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.printPreviewBrowser" />
+      <keyword name="HelpTabWidget.shallShutDown" id="HelpTabWidget.shallShutDown" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.shallShutDown" />
       <keyword name="Preferences (Package)" id="Preferences (Package)" ref="index-eric5.Preferences.html" />
       <keyword name="Prefs" id="Prefs" ref="eric5.Preferences.__init__.html#Prefs" />
       <keyword name="exportPreferences" id="exportPreferences" ref="eric5.Preferences.__init__.html#exportPreferences" />
@@ -4322,6 +4334,7 @@
       <keyword name="E5TabWidget.prevTab" id="E5TabWidget.prevTab" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.prevTab" />
       <keyword name="E5TabWidget.resetAnimation" id="E5TabWidget.resetAnimation" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.resetAnimation" />
       <keyword name="E5TabWidget.selectTab" id="E5TabWidget.selectTab" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.selectTab" />
+      <keyword name="E5TabWidget.setCustomTabBar" id="E5TabWidget.setCustomTabBar" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.setCustomTabBar" />
       <keyword name="E5TabWidget.setTabContextMenuPolicy" id="E5TabWidget.setTabContextMenuPolicy" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.setTabContextMenuPolicy" />
       <keyword name="E5TabWidget.switchTab" id="E5TabWidget.switchTab" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget.switchTab" />
       <keyword name="E5WheelTabBar (Constructor)" id="E5WheelTabBar (Constructor)" ref="eric5.E5Gui.E5TabWidget.html#E5WheelTabBar.__init__" />
@@ -9842,6 +9855,7 @@
       <file>eric5.Helpviewer.HelpSearchWidget.html</file>
       <file>eric5.Helpviewer.HelpSnap.html</file>
       <file>eric5.Helpviewer.HelpTabBar.html</file>
+      <file>eric5.Helpviewer.HelpTabWidget.html</file>
       <file>eric5.Helpviewer.HelpTocWidget.html</file>
       <file>eric5.Helpviewer.HelpTopicDialog.html</file>
       <file>eric5.Helpviewer.HelpWebSearchWidget.html</file>
