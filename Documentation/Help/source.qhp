@@ -118,6 +118,7 @@
             <section title="eric5.E5Gui.E5FileDialog" ref="eric5.E5Gui.E5FileDialog.html" />
             <section title="eric5.E5Gui.E5Led" ref="eric5.E5Gui.E5Led.html" />
             <section title="eric5.E5Gui.E5LineEdit" ref="eric5.E5Gui.E5LineEdit.html" />
+            <section title="eric5.E5Gui.E5LineEditButton" ref="eric5.E5Gui.E5LineEditButton.html" />
             <section title="eric5.E5Gui.E5ListView" ref="eric5.E5Gui.E5ListView.html" />
             <section title="eric5.E5Gui.E5MessageBox" ref="eric5.E5Gui.E5MessageBox.html" />
             <section title="eric5.E5Gui.E5ModelMenu" ref="eric5.E5Gui.E5ModelMenu.html" />
@@ -2624,6 +2625,7 @@
       <keyword name="HelpWebSearchWidget.__searchNow" id="HelpWebSearchWidget.__searchNow" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__searchNow" />
       <keyword name="HelpWebSearchWidget.__setupCompleterMenu" id="HelpWebSearchWidget.__setupCompleterMenu" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__setupCompleterMenu" />
       <keyword name="HelpWebSearchWidget.__showEnginesMenu" id="HelpWebSearchWidget.__showEnginesMenu" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__showEnginesMenu" />
+      <keyword name="HelpWebSearchWidget.__textChanged" id="HelpWebSearchWidget.__textChanged" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__textChanged" />
       <keyword name="HelpWebSearchWidget.__textEdited" id="HelpWebSearchWidget.__textEdited" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__textEdited" />
       <keyword name="HelpWebSearchWidget.clear" id="HelpWebSearchWidget.clear" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.clear" />
       <keyword name="HelpWebSearchWidget.openSearchManager" id="HelpWebSearchWidget.openSearchManager" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.openSearchManager" />
@@ -4099,10 +4101,22 @@
       <keyword name="E5SingleApplicationServer.handleCommand" id="E5SingleApplicationServer.handleCommand" ref="eric5.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.handleCommand" />
       <keyword name="E5LineEdit (Module)" id="E5LineEdit (Module)" ref="eric5.E5Gui.E5LineEdit.html" />
       <keyword name="E5LineEdit" id="E5LineEdit" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit" />
+      <keyword name="SideWidget" id="SideWidget" ref="eric5.E5Gui.E5LineEdit.html#SideWidget" />
       <keyword name="E5LineEdit (Constructor)" id="E5LineEdit (Constructor)" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.__init__" />
+      <keyword name="E5LineEdit.__updateSideWidgetLocations" id="E5LineEdit.__updateSideWidgetLocations" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.__updateSideWidgetLocations" />
+      <keyword name="E5LineEdit._updateTextMargins" id="E5LineEdit._updateTextMargins" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit._updateTextMargins" />
+      <keyword name="E5LineEdit.addWidget" id="E5LineEdit.addWidget" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.addWidget" />
+      <keyword name="E5LineEdit.event" id="E5LineEdit.event" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.event" />
       <keyword name="E5LineEdit.inactiveText" id="E5LineEdit.inactiveText" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.inactiveText" />
       <keyword name="E5LineEdit.paintEvent" id="E5LineEdit.paintEvent" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.paintEvent" />
+      <keyword name="E5LineEdit.removeWidget" id="E5LineEdit.removeWidget" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.removeWidget" />
+      <keyword name="E5LineEdit.resizeEvent" id="E5LineEdit.resizeEvent" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.resizeEvent" />
       <keyword name="E5LineEdit.setInactiveText" id="E5LineEdit.setInactiveText" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.setInactiveText" />
+      <keyword name="E5LineEdit.setWidgetSpacing" id="E5LineEdit.setWidgetSpacing" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.setWidgetSpacing" />
+      <keyword name="E5LineEdit.textMargin" id="E5LineEdit.textMargin" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.textMargin" />
+      <keyword name="E5LineEdit.widgetSpacing" id="E5LineEdit.widgetSpacing" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.widgetSpacing" />
+      <keyword name="SideWidget (Constructor)" id="SideWidget (Constructor)" ref="eric5.E5Gui.E5LineEdit.html#SideWidget.__init__" />
+      <keyword name="SideWidget.event" id="SideWidget.event" ref="eric5.E5Gui.E5LineEdit.html#SideWidget.event" />
       <keyword name="E5Led (Module)" id="E5Led (Module)" ref="eric5.E5Gui.E5Led.html" />
       <keyword name="E5Led" id="E5Led" ref="eric5.E5Gui.E5Led.html#E5Led" />
       <keyword name="E5Led (Constructor)" id="E5Led (Constructor)" ref="eric5.E5Gui.E5Led.html#E5Led.__init__" />
@@ -4384,6 +4398,14 @@
       <keyword name="E5ModelMenu.setSeparatorRole" id="E5ModelMenu.setSeparatorRole" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.setSeparatorRole" />
       <keyword name="E5ModelMenu.setStatusBarTextRole" id="E5ModelMenu.setStatusBarTextRole" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.setStatusBarTextRole" />
       <keyword name="E5ModelMenu.statusBarTextRole" id="E5ModelMenu.statusBarTextRole" ref="eric5.E5Gui.E5ModelMenu.html#E5ModelMenu.statusBarTextRole" />
+      <keyword name="E5LineEditButton (Module)" id="E5LineEditButton (Module)" ref="eric5.E5Gui.E5LineEditButton.html" />
+      <keyword name="E5LineEditButton" id="E5LineEditButton" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton" />
+      <keyword name="E5LineEditButton (Constructor)" id="E5LineEditButton (Constructor)" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton.__init__" />
+      <keyword name="E5LineEditButton.__clicked" id="E5LineEditButton.__clicked" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton.__clicked" />
+      <keyword name="E5LineEditButton.menu" id="E5LineEditButton.menu" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton.menu" />
+      <keyword name="E5LineEditButton.paintEvent" id="E5LineEditButton.paintEvent" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton.paintEvent" />
+      <keyword name="E5LineEditButton.setIcon" id="E5LineEditButton.setIcon" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton.setIcon" />
+      <keyword name="E5LineEditButton.setMenu" id="E5LineEditButton.setMenu" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton.setMenu" />
       <keyword name="E5TableView (Module)" id="E5TableView (Module)" ref="eric5.E5Gui.E5TableView.html" />
       <keyword name="E5TableView" id="E5TableView" ref="eric5.E5Gui.E5TableView.html#E5TableView" />
       <keyword name="E5TableView.keyPressEvent" id="E5TableView.keyPressEvent" ref="eric5.E5Gui.E5TableView.html#E5TableView.keyPressEvent" />
@@ -9762,6 +9784,7 @@
       <file>eric5.E5Gui.E5FileDialog.html</file>
       <file>eric5.E5Gui.E5Led.html</file>
       <file>eric5.E5Gui.E5LineEdit.html</file>
+      <file>eric5.E5Gui.E5LineEditButton.html</file>
       <file>eric5.E5Gui.E5ListView.html</file>
       <file>eric5.E5Gui.E5MessageBox.html</file>
       <file>eric5.E5Gui.E5ModelMenu.html</file>

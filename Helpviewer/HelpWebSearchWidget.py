@@ -16,6 +16,7 @@ import UI.PixmapCache
 import Preferences
 
 from E5Gui.E5LineEdit import E5LineEdit
+from E5Gui.E5LineEditButton import E5LineEditButton
 
 from .OpenSearch.OpenSearchManager import OpenSearchManager
 from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
@@ -50,21 +51,21 @@ class HelpWebSearchWidget(QWidget):
         
         self.__enginesMenu = QMenu(self)
         
-        self.__engineButton = QToolButton(self)
-        self.__engineButton.setPopupMode(QToolButton.InstantPopup)
-        self.__engineButton.setMenu(self.__enginesMenu)
-        self.__layout.addWidget(self.__engineButton)
-        
-        self.__searchButton = QToolButton(self)
-        self.__searchButton.setIcon(UI.PixmapCache.getIcon("webSearch.png"))
-        self.__layout.addWidget(self.__searchButton)
-        
         self.__searchEdit = E5LineEdit(parent = self)
         self.__layout.addWidget(self.__searchEdit)
         
-        self.__clearButton = QToolButton(self)
+        self.__engineButton = E5LineEditButton(self)
+        self.__engineButton.setMenu(self.__enginesMenu)
+        self.__searchEdit.addWidget(self.__engineButton, E5LineEdit.LeftSide)
+        
+        self.__searchButton = E5LineEditButton(self)
+        self.__searchButton.setIcon(UI.PixmapCache.getIcon("webSearch.png"))
+        self.__searchEdit.addWidget(self.__searchButton, E5LineEdit.LeftSide)
+        
+        self.__clearButton = E5LineEditButton(self)
         self.__clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
-        self.__layout.addWidget(self.__clearButton)
+        self.__searchEdit.addWidget(self.__clearButton, E5LineEdit.RightSide)
+        self.__clearButton.setVisible(False)
         
         self.__model = QStandardItemModel(self)
         self.__completer = QCompleter()
@@ -73,8 +74,9 @@ class HelpWebSearchWidget(QWidget):
         self.__completer.setWidget(self.__searchEdit)
         
         self.__searchButton.clicked[()].connect(self.__searchButtonClicked)
-        self.__searchEdit.textEdited.connect(self.__textEdited)
         self.__clearButton.clicked[()].connect(self.__searchEdit.clear)
+        self.__searchEdit.textEdited.connect(self.__textEdited)
+        self.__searchEdit.textChanged.connect(self.__textChanged)
         self.__searchEdit.returnPressed[()].connect(self.__searchNow)
         self.__completer.activated[QModelIndex].connect(self.__completerActivated)
         self.__completer.highlighted[QModelIndex].connect(self.__completerHighlighted)
@@ -206,6 +208,14 @@ class HelpWebSearchWidget(QWidget):
         else:
             self.__completer.setCompletionPrefix(txt)
             self.__completer.complete()
+    
+    def __textChanged(self, txt):
+        """
+        Private slot to handle changes of the search text.
+        
+        @param txt search text (string)
+        """
+        self.__clearButton.setVisible(txt != "")
     
     def __getSuggestions(self):
         """

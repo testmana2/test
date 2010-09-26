@@ -1146,10 +1146,28 @@ eric5.E5Gui.E5Led.E5Led.toggle?4()
 eric5.E5Gui.E5Led.E5Led?1(parent = None, color = None, shape = E5LedCircular, rectRatio = 1)
 eric5.E5Gui.E5Led.E5LedCircular?7
 eric5.E5Gui.E5Led.E5LedRectangular?7
+eric5.E5Gui.E5LineEdit.E5LineEdit.LeftSide?7
+eric5.E5Gui.E5LineEdit.E5LineEdit.RightSide?7
+eric5.E5Gui.E5LineEdit.E5LineEdit._updateTextMargins?5()
+eric5.E5Gui.E5LineEdit.E5LineEdit.addWidget?4(widget, position)
+eric5.E5Gui.E5LineEdit.E5LineEdit.event?4(evt)
 eric5.E5Gui.E5LineEdit.E5LineEdit.inactiveText?4()
 eric5.E5Gui.E5LineEdit.E5LineEdit.paintEvent?4(evt)
+eric5.E5Gui.E5LineEdit.E5LineEdit.removeWidget?4(widget)
+eric5.E5Gui.E5LineEdit.E5LineEdit.resizeEvent?4(evt)
 eric5.E5Gui.E5LineEdit.E5LineEdit.setInactiveText?4(inactiveText)
+eric5.E5Gui.E5LineEdit.E5LineEdit.setWidgetSpacing?4(spacing)
+eric5.E5Gui.E5LineEdit.E5LineEdit.textMargin?4(position)
+eric5.E5Gui.E5LineEdit.E5LineEdit.widgetSpacing?4()
 eric5.E5Gui.E5LineEdit.E5LineEdit?1(parent = None, inactiveText = "")
+eric5.E5Gui.E5LineEdit.SideWidget.event?4(evt)
+eric5.E5Gui.E5LineEdit.SideWidget.sizeHintChanged?7
+eric5.E5Gui.E5LineEdit.SideWidget?1(parent = None)
+eric5.E5Gui.E5LineEditButton.E5LineEditButton.menu?4()
+eric5.E5Gui.E5LineEditButton.E5LineEditButton.paintEvent?4(evt)
+eric5.E5Gui.E5LineEditButton.E5LineEditButton.setIcon?4(icon)
+eric5.E5Gui.E5LineEditButton.E5LineEditButton.setMenu?4(menu)
+eric5.E5Gui.E5LineEditButton.E5LineEditButton?1(parent = None)
 eric5.E5Gui.E5ListView.E5ListView.keyPressEvent?4(evt)
 eric5.E5Gui.E5ListView.E5ListView.removeAll?4()
 eric5.E5Gui.E5ListView.E5ListView.removeSelected?4()

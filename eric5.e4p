@@ -818,6 +818,7 @@
     <Source>Helpviewer/HelpTabBar.py</Source>
     <Source>Helpviewer/HelpSnap.py</Source>
     <Source>Helpviewer/HelpTabWidget.py</Source>
+    <Source>E5Gui/E5LineEditButton.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
