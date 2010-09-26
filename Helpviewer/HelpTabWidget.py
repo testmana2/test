@@ -82,7 +82,7 @@ class HelpTabWidget(E5TabWidget):
         self.setCornerWidget(self.__rightCornerWidget, Qt.TopRightCorner)
         
         self.__newTabButton = QToolButton(self)
-        self.__newTabButton.setIcon(UI.PixmapCache.getIcon("new.png"))
+        self.__newTabButton.setIcon(UI.PixmapCache.getIcon("tabNew.png"))
         self.__newTabButton.setToolTip(self.trUtf8("Open a new help window tab"))
         self.setCornerWidget(self.__newTabButton, Qt.TopLeftCorner)
         self.__newTabButton.clicked[bool].connect(self.newBrowser)
@@ -221,9 +221,23 @@ class HelpTabWidget(E5TabWidget):
         
         browser.sourceChanged.connect(self.__sourceChanged)
         browser.titleChanged.connect(self.__titleChanged)
+        browser.highlighted.connect(self.showMessage)
+        browser.backwardAvailable.connect(self.__mainWindow.setBackwardAvailable)
+        browser.forwardAvailable.connect(self.__mainWindow.setForwardAvailable)
+        browser.loadStarted.connect(self.__loadStarted)
+        browser.loadFinished.connect(self.__loadFinished)
+        browser.iconChanged.connect(self.__iconChanged)
+        browser.search.connect(self.newBrowser)
+        browser.page().windowCloseRequested.connect(self.__windowCloseRequested)
+        browser.page().printRequested.connect(self.__printRequested)
         
         index = self.addTab(browser, self.trUtf8("..."))
         self.setCurrentIndex(index)
+        
+        self.__mainWindow.closeAct.setEnabled(True)
+        self.__mainWindow.closeAllAct.setEnabled(True)
+        self.__closeButton and self.__closeButton.setEnabled(True)
+        self.__navigationButton.setEnabled(True)
         
         if not linkName and Preferences.getHelp("StartupBehavior") == 0:
             linkName = Preferences.getHelp("HomePage")
@@ -237,21 +251,6 @@ class HelpTabWidget(E5TabWidget):
                 self.setTabText(index, 
                     self.__elide(browser.documentTitle().replace("&", "&&")))
                 self.setTabToolTip(index, browser.documentTitle())
-        
-        browser.highlighted.connect(self.showMessage)
-        browser.backwardAvailable.connect(self.__mainWindow.setBackwardAvailable)
-        browser.forwardAvailable.connect(self.__mainWindow.setForwardAvailable)
-        browser.loadStarted.connect(self.__loadStarted)
-        browser.loadFinished.connect(self.__loadFinished)
-        browser.iconChanged.connect(self.__iconChanged)
-        browser.page().windowCloseRequested.connect(self.__windowCloseRequested)
-        browser.page().printRequested.connect(self.__printRequested)
-        browser.search.connect(self.newBrowser)
-        
-        self.__mainWindow.closeAct.setEnabled(True)
-        self.__mainWindow.closeAllAct.setEnabled(True)
-        self.__closeButton and self.__closeButton.setEnabled(True)
-        self.__navigationButton.setEnabled(True)
     
     def __showNavigationMenu(self):
         """

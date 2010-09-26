@@ -1066,8 +1066,6 @@ class HelpBrowser(QWebView):
         self.__progress = 0
         self.mw.progressBar().hide()
         
-##        self.__iconChanged()
-        
         if ok:
             self.mw.adblockManager().page().applyRulesToPage(self.page())
             self.mw.passwordManager().fill(self.page())

@@ -2132,6 +2132,8 @@ eric5.Helpviewer.Network.NetworkReply.NetworkReply.bytesAvailable?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.readData?4(maxlen)
 eric5.Helpviewer.Network.NetworkReply.NetworkReply?1(request, fileData, mimeType, parent = None)
 eric5.Helpviewer.Network.PyrcAccessHandler.PyrcAccessHandler.createRequest?4(op, request, outgoingData = None)
+eric5.Helpviewer.Network.QtHelpAccessHandler.ExtensionMap?7
+eric5.Helpviewer.Network.QtHelpAccessHandler.QtDocPath?7
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtHelpAccessHandler.createRequest?4(op, request, outgoingData = None)
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtHelpAccessHandler?1(engine, parent = None)
 eric5.Helpviewer.Network.SchemeAccessHandler.SchemeAccessHandler.createRequest?4(op, request, outgoingData = None)
