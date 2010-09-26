@@ -1065,6 +1065,7 @@
     <Translation>i18n/eric5_zh_CN.GB2312.qm</Translation>
     <Translation>i18n/eric5_zh_CN.GB2312.ts</Translation>
     <Translation>i18n/eric5_en.ts</Translation>
+    <Translation>i18n/eric5_en.qm</Translation>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
