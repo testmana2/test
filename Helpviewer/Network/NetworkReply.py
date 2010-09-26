@@ -51,6 +51,8 @@ class NetworkReply(QNetworkReply):
         
         @return bytes available (integer)
         """
+        if self.__data.length() == 0:
+            QTimer.singleShot(0, self, SIGNAL("finished()"))
         return self.__data.length() + QNetworkReply.bytesAvailable(self)
     
     def readData(self, maxlen):

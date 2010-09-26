@@ -7,9 +7,46 @@
 Module implementing a scheme access handler for QtHelp.
 """
 
+import mimetypes
+import os
+
 from .SchemeAccessHandler import SchemeAccessHandler
 
 from .NetworkReply import NetworkReply
+
+QtDocPath = "qthelp://com.trolltech."
+
+ExtensionMap = {
+    ".bmp"   : "image/bmp",
+    ".css"   : "text/css",
+    ".gif"   : "image/gif",
+    ".html"  : "text/html",
+    ".htm"   : "text/html",
+    ".ico"   : "image/x-icon",
+    ".jpeg"  : "image/jpeg",
+    ".jpg"   : "image/jpeg",
+    ".js"    : "application/x-javascript",
+    ".mng"   : "video/x-mng",
+    ".pbm"   : "image/x-portable-bitmap",
+    ".pgm"   : "image/x-portable-graymap",
+    ".pdf"   : "application/pdf",
+    ".png"   : "image/png",
+    ".ppm"   : "image/x-portable-pixmap",
+    ".rss"   : "application/rss+xml",
+    ".svg"   : "image/svg+xml",
+    ".svgz"  : "image/svg+xml",
+    ".text"  : "text/plain",
+    ".tif"   : "image/tiff",
+    ".tiff"  : "image/tiff",
+    ".txt"   : "text/plain",
+    ".xbm"   : "image/x-xbitmap",
+    ".xml"   : "text/xml",
+    ".xpm"   : "image/x-xpm",
+    ".xsl"   : "text/xsl",
+    ".xhtml" : "application/xhtml+xml",
+    ".wml"   : "text/vnd.wap.wml",
+    ".wmlc"  : "application/vnd.wap.wmlc",
+}
 
 class QtHelpAccessHandler(SchemeAccessHandler):
     """
@@ -26,6 +63,19 @@ class QtHelpAccessHandler(SchemeAccessHandler):
         
         self.__engine = engine
     
+    def __mimeFromUrl(self, url):
+        """
+        Private method to guess the mime type given an URL.
+        
+        @param url URL to guess the mime type from (QUrl)
+        """
+        path = url.path()
+        ext = os.path.splitext(path)[1].lower()
+        if ext in ExtensionMap:
+            return ExtensionMap[ext]
+        else:
+            return "application/octet-stream"
+    
     def createRequest(self, op, request, outgoingData = None):
         """
         Protected method to create a request.
@@ -39,12 +89,22 @@ class QtHelpAccessHandler(SchemeAccessHandler):
         url = request.url()
         strUrl = url.toString()
         
-        if strUrl.endswith(".svg") or strUrl.endswith(".svgz"):
-            mimeType = "image/svg+xml"
-        elif strUrl.endswith(".css"):
-            mimeType = "text/css"
-        elif strUrl.endswith(".js"):
-            mimeType = "text/javascript"
-        else:
-            mimeType = "text/html"
+        # For some reason the url to load is already wrong (passed from webkit)
+        # though the css file and the references inside should work that way. One 
+        # possible problem might be that the css is loaded at the same level as the
+        # html, thus a path inside the css like (../images/foo.png) might cd out of
+        # the virtual folder
+        if not self.__engine.findFile(url).isValid():
+            if strUrl.startswith(QtDocPath):
+                newUrl = request.url()
+                if not newUrl.path().startswith("/qdoc/"):
+                    newUrl.setPath("qdoc" + newUrl.path())
+                    url = newUrl
+                    strUrl = url.toString()
+        
+        mimeType = mimetypes.guess_type(strUrl)[0]
+        if mimeType is None:
+            # do our own (limited) guessing
+            mimeType = self.__mimeFromUrl(url)
+        
         return NetworkReply(request, self.__engine.fileData(url), mimeType, self.parent())

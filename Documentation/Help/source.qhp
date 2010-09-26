@@ -6945,6 +6945,7 @@
       <keyword name="QtHelpAccessHandler (Module)" id="QtHelpAccessHandler (Module)" ref="eric5.Helpviewer.Network.QtHelpAccessHandler.html" />
       <keyword name="QtHelpAccessHandler" id="QtHelpAccessHandler" ref="eric5.Helpviewer.Network.QtHelpAccessHandler.html#QtHelpAccessHandler" />
       <keyword name="QtHelpAccessHandler (Constructor)" id="QtHelpAccessHandler (Constructor)" ref="eric5.Helpviewer.Network.QtHelpAccessHandler.html#QtHelpAccessHandler.__init__" />
+      <keyword name="QtHelpAccessHandler.__mimeFromUrl" id="QtHelpAccessHandler.__mimeFromUrl" ref="eric5.Helpviewer.Network.QtHelpAccessHandler.html#QtHelpAccessHandler.__mimeFromUrl" />
       <keyword name="QtHelpAccessHandler.createRequest" id="QtHelpAccessHandler.createRequest" ref="eric5.Helpviewer.Network.QtHelpAccessHandler.html#QtHelpAccessHandler.createRequest" />
       <keyword name="AboutAccessHandler (Module)" id="AboutAccessHandler (Module)" ref="eric5.Helpviewer.Network.AboutAccessHandler.html" />
       <keyword name="AboutAccessHandler" id="AboutAccessHandler" ref="eric5.Helpviewer.Network.AboutAccessHandler.html#AboutAccessHandler" />

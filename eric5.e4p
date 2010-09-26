@@ -13,7 +13,7 @@
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
   <TranslationPattern>i18n/eric5_%language%.ts</TranslationPattern>
-  <Eol index="1" />
+  <Eol index="1"/>
   <Sources>
     <Source>__init__.py</Source>
     <Source>Preferences/__init__.py</Source>
@@ -1037,12 +1037,13 @@
     <Translation>i18n/eric5_it.ts</Translation>
     <Translation>i18n/eric5_ru.qm</Translation>
     <Translation>i18n/eric5_ru.ts</Translation>
+    <Translation>i18n/eric5_en.ts</Translation>
+    <Translation>i18n/eric5_en.qm</Translation>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
   </Resources>
-  <Interfaces>
-  </Interfaces>
+  <Interfaces/>
   <Others>
     <Other>icons</Other>
     <Other>CSSs</Other>
@@ -1116,103 +1117,90 @@
           <string>add</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>checkout</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>commit</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>diff</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>export</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>global</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>history</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>log</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>remove</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>status</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>tag</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
         <key>
           <string>update</string>
         </key>
         <value>
-          <list>
-          </list>
+          <list/>
         </value>
       </dict>
     </VcsOptions>
     <VcsOtherData>
-      <dict>
-      </dict>
+      <dict/>
     </VcsOtherData>
   </Vcs>
   <FiletypeAssociations>
-    <FiletypeAssociation pattern="*.rb" type="SOURCES" />
-    <FiletypeAssociation pattern="*.ui" type="FORMS" />
-    <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
-    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS" />
-    <FiletypeAssociation pattern="Ui_*.py" type="__IGNORE__" />
-    <FiletypeAssociation pattern="*.qrc" type="RESOURCES" />
-    <FiletypeAssociation pattern="*.pyw" type="SOURCES" />
-    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS" />
-    <FiletypeAssociation pattern="*.py" type="SOURCES" />
+    <FiletypeAssociation pattern="*.rb" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="Ui_*.py" type="__IGNORE__"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
   </FiletypeAssociations>
   <Documentation>
     <DocumentationParams>
