@@ -26,7 +26,7 @@ Module implementing the bookmarks manager.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>BOOKMARKBAR</td></tr><tr><td>BOOKMARKMENU</td></tr><tr><td>extract_js</td></tr>
+<tr><td>BOOKMARKBAR</td></tr><tr><td>BOOKMARKMENU</td></tr><tr><td>StartMenu</td></tr><tr><td>StartRoot</td></tr><tr><td>StartToolBar</td></tr><tr><td>extract_js</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -82,11 +82,23 @@ QObject
 <td><a href="#BookmarksManager.__convertFromOldBookmarks">__convertFromOldBookmarks</a></td>
 <td>Private method to convert the old bookmarks into the new ones.</td>
 </tr><tr>
+<td><a href="#BookmarksManager.__searchBookmark">__searchBookmark</a></td>
+<td>Private method get a bookmark node for a given URL.</td>
+</tr><tr>
+<td><a href="#BookmarksManager.__searchBookmarks">__searchBookmarks</a></td>
+<td>Private method get a list of bookmark nodes for a given URL.</td>
+</tr><tr>
 <td><a href="#BookmarksManager.addBookmark">addBookmark</a></td>
 <td>Public method to add a bookmark.</td>
 </tr><tr>
+<td><a href="#BookmarksManager.bookmarkForUrl">bookmarkForUrl</a></td>
+<td>Public method to get a bookmark node for a given URL.</td>
+</tr><tr>
 <td><a href="#BookmarksManager.bookmarks">bookmarks</a></td>
 <td>Public method to get a reference to the root bookmark node.</td>
+</tr><tr>
+<td><a href="#BookmarksManager.bookmarksForUrl">bookmarksForUrl</a></td>
+<td>Public method to get a list of bookmark nodes for a given URL.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.bookmarksModel">bookmarksModel</a></td>
 <td>Public method to get a reference to the bookmarks model.</td>
@@ -99,6 +111,9 @@ QObject
 </tr><tr>
 <td><a href="#BookmarksManager.exportBookmarks">exportBookmarks</a></td>
 <td>Public method to export the bookmarks.</td>
+</tr><tr>
+<td><a href="#BookmarksManager.iconChanged">iconChanged</a></td>
+<td>Public slot to update the icon image for an URL.</td>
 </tr><tr>
 <td><a href="#BookmarksManager.importBookmarks">importBookmarks</a></td>
 <td>Public method to import bookmarks.</td>
@@ -143,7 +158,43 @@ reference to the parent object (QObject)
 <b>__convertFromOldBookmarks</b>(<i></i>)
 <p>
         Private method to convert the old bookmarks into the new ones.
-</p><a NAME="BookmarksManager.addBookmark" ID="BookmarksManager.addBookmark"></a>
+</p><a NAME="BookmarksManager.__searchBookmark" ID="BookmarksManager.__searchBookmark"></a>
+<h4>BookmarksManager.__searchBookmark</h4>
+<b>__searchBookmark</b>(<i>url, startNode</i>)
+<p>
+        Private method get a bookmark node for a given URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL of the bookmark to search for (string)
+</dd><dt><i>startNode</i></dt>
+<dd>
+reference to the node to start searching (BookmarkNode)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+bookmark node for the given url (BookmarkNode)
+</dd>
+</dl><a NAME="BookmarksManager.__searchBookmarks" ID="BookmarksManager.__searchBookmarks"></a>
+<h4>BookmarksManager.__searchBookmarks</h4>
+<b>__searchBookmarks</b>(<i>url, startNode</i>)
+<p>
+        Private method get a list of bookmark nodes for a given URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL of the bookmarks to search for (string)
+</dd><dt><i>startNode</i></dt>
+<dd>
+reference to the node to start searching (BookmarkNode)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of bookmark nodes for the given url (list of BookmarkNode)
+</dd>
+</dl><a NAME="BookmarksManager.addBookmark" ID="BookmarksManager.addBookmark"></a>
 <h4>BookmarksManager.addBookmark</h4>
 <b>addBookmark</b>(<i>parent, node, row = -1</i>)
 <p>
@@ -159,6 +210,25 @@ reference to the node to add (BookmarkNode)
 <dd>
 row number (integer)
 </dd>
+</dl><a NAME="BookmarksManager.bookmarkForUrl" ID="BookmarksManager.bookmarkForUrl"></a>
+<h4>BookmarksManager.bookmarkForUrl</h4>
+<b>bookmarkForUrl</b>(<i>url, start = StartRoot</i>)
+<p>
+        Public method to get a bookmark node for a given URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL of the bookmark to search for (QUrl or string)
+</dd><dt><i>start=</i></dt>
+<dd>
+indicator for the start of the search
+            (StartRoot, StartMenu, StartToolBar)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+bookmark node for the given url (BookmarkNode)
+</dd>
 </dl><a NAME="BookmarksManager.bookmarks" ID="BookmarksManager.bookmarks"></a>
 <h4>BookmarksManager.bookmarks</h4>
 <b>bookmarks</b>(<i></i>)
@@ -168,6 +238,25 @@ row number (integer)
 <dt>Returns:</dt>
 <dd>
 reference to the root bookmark node (BookmarkNode)
+</dd>
+</dl><a NAME="BookmarksManager.bookmarksForUrl" ID="BookmarksManager.bookmarksForUrl"></a>
+<h4>BookmarksManager.bookmarksForUrl</h4>
+<b>bookmarksForUrl</b>(<i>url, start = StartRoot</i>)
+<p>
+        Public method to get a list of bookmark nodes for a given URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL of the bookmarks to search for (QUrl or string)
+</dd><dt><i>start=</i></dt>
+<dd>
+indicator for the start of the search
+            (StartRoot, StartMenu, StartToolBar)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of bookmark nodes for the given url (list of BookmarkNode)
 </dd>
 </dl><a NAME="BookmarksManager.bookmarksModel" ID="BookmarksManager.bookmarksModel"></a>
 <h4>BookmarksManager.bookmarksModel</h4>
@@ -194,7 +283,17 @@ reference to the bookmarks model (BookmarksModel)
 <b>exportBookmarks</b>(<i></i>)
 <p>
         Public method to export the bookmarks.
-</p><a NAME="BookmarksManager.importBookmarks" ID="BookmarksManager.importBookmarks"></a>
+</p><a NAME="BookmarksManager.iconChanged" ID="BookmarksManager.iconChanged"></a>
+<h4>BookmarksManager.iconChanged</h4>
+<b>iconChanged</b>(<i>url</i>)
+<p>
+        Public slot to update the icon image for an URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL of the icon to update (QUrl or string)
+</dd>
+</dl><a NAME="BookmarksManager.importBookmarks" ID="BookmarksManager.importBookmarks"></a>
 <h4>BookmarksManager.importBookmarks</h4>
 <b>importBookmarks</b>(<i></i>)
 <p>

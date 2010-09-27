@@ -1718,7 +1718,9 @@ eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog?1(parent = None, mana
 eric5.Helpviewer.Bookmarks.BookmarksManager.BOOKMARKBAR?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BOOKMARKMENU?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.addBookmark?4(parent, node, row = -1)
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarkForUrl?4(url, start = StartRoot)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarks?4()
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarksForUrl?4(url, start = StartRoot)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarksModel?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.changeExpanded?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.close?4()
@@ -1726,6 +1728,7 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryAdded?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryChanged?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryRemoved?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.exportBookmarks?4()
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.iconChanged?4(url)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.importBookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.load?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.menu?4()
@@ -1745,6 +1748,9 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.InsertBookmarksCommand?1(bookmarksMa
 eric5.Helpviewer.Bookmarks.BookmarksManager.RemoveBookmarksCommand.redo?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.RemoveBookmarksCommand.undo?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.RemoveBookmarksCommand?1(bookmarksManager, parent, row)
+eric5.Helpviewer.Bookmarks.BookmarksManager.StartMenu?7
+eric5.Helpviewer.Bookmarks.BookmarksManager.StartRoot?7
+eric5.Helpviewer.Bookmarks.BookmarksManager.StartToolBar?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.extract_js?7
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.createBaseMenu?4()
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.newUrl?7

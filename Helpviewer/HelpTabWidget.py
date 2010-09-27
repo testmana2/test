@@ -18,6 +18,7 @@ from E5Gui import E5MessageBox
 
 from .HelpTabBar import HelpTabBar
 from .HelpBrowserWV import HelpBrowser
+import Helpviewer
 
 import UI.PixmapCache
 
@@ -559,6 +560,7 @@ class HelpTabWidget(E5TabWidget):
         if browser is not None:
             self.__mainWindow.iconChanged(browser.icon())
             self.setTabIcon(self.indexOf(browser), browser.icon())
+            Helpviewer.HelpWindow.HelpWindow.bookmarksManager().iconChanged(browser.url())
     
     def getSourceFileList(self):
         """

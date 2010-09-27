@@ -28,6 +28,10 @@ import Preferences
 BOOKMARKBAR  = QT_TRANSLATE_NOOP("BookmarksManager", "Bookmarks Bar")
 BOOKMARKMENU = QT_TRANSLATE_NOOP("BookmarksManager", "Bookmarks Menu")
 
+StartRoot    = 0
+StartMenu    = 1
+StartToolBar = 2
+
 ##########################################################################################
 
 extract_js = r"""
@@ -421,6 +425,100 @@ class BookmarksManager(QObject):
                 self.addBookmark(self.menu(), convertedRootNode)
                 
                 Preferences.Prefs.settings.remove('Bookmarks')
+    
+    def iconChanged(self, url):
+        """
+        Public slot to update the icon image for an URL.
+        
+        @param url URL of the icon to update (QUrl or string)
+        """
+        if isinstance(url, QUrl):
+            url = url.toString()
+        nodes = self.bookmarksForUrl(url)
+        for node in nodes:
+            self.bookmarksModel().entryChanged(node)
+    
+    def bookmarkForUrl(self, url, start = StartRoot):
+        """
+        Public method to get a bookmark node for a given URL.
+        
+        @param url URL of the bookmark to search for (QUrl or string)
+        @keyparam start indicator for the start of the search 
+            (StartRoot, StartMenu, StartToolBar)
+        @return bookmark node for the given url (BookmarkNode)
+        """
+        if start == StartMenu:
+            startNode = self.__menu
+        elif start == StartToolBar:
+            startNode = self.__toolbar
+        else:
+            startNode = self.__bookmarkRootNode
+        if startNode is None:
+            return None
+        
+        if isinstance(url, QUrl):
+            url = url.toString()
+        
+        return self.__searchBookmark(url, startNode)
+    
+    def __searchBookmark(self, url, startNode):
+        """
+        Private method get a bookmark node for a given URL.
+        
+        @param url URL of the bookmark to search for (string)
+        @param startNode reference to the node to start searching (BookmarkNode)
+        @return bookmark node for the given url (BookmarkNode)
+        """
+        bm = None
+        for node in startNode.children():
+            if node.type() == BookmarkNode.Folder:
+                bm = self.__searchBookmark(url, node)
+            elif node.type() == BookmarkNode.Bookmark:
+                if node.url == url:
+                    bm = node
+            if bm is not None:
+                return bm
+        return None
+    
+    def bookmarksForUrl(self, url, start = StartRoot):
+        """
+        Public method to get a list of bookmark nodes for a given URL.
+        
+        @param url URL of the bookmarks to search for (QUrl or string)
+        @keyparam start indicator for the start of the search 
+            (StartRoot, StartMenu, StartToolBar)
+        @return list of bookmark nodes for the given url (list of BookmarkNode)
+        """
+        if start == StartMenu:
+            startNode = self.__menu
+        elif start == StartToolBar:
+            startNode = self.__toolbar
+        else:
+            startNode = self.__bookmarkRootNode
+        if startNode is None:
+            return None
+        
+        if isinstance(url, QUrl):
+            url = url.toString()
+        
+        return self.__searchBookmarks(url, startNode)
+    
+    def __searchBookmarks(self, url, startNode):
+        """
+        Private method get a list of bookmark nodes for a given URL.
+        
+        @param url URL of the bookmarks to search for (string)
+        @param startNode reference to the node to start searching (BookmarkNode)
+        @return list of bookmark nodes for the given url (list of BookmarkNode)
+        """
+        bm = []
+        for node in startNode.children():
+            if node.type() == BookmarkNode.Folder:
+                bm.extend(self.__searchBookmarks(url, node))
+            elif node.type() == BookmarkNode.Bookmark:
+                if node.url == url:
+                    bm.append(node)
+        return bm
 
 class RemoveBookmarksCommand(QUndoCommand):
     """
