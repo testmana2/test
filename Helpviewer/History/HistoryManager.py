@@ -370,6 +370,7 @@ class HistoryManager(QWebHistoryInterface):
             
             history.insert(0, itm)
             lastInsertedItem = itm
+        historyFile.close()
         
         if needToSort:
             history.sort()
