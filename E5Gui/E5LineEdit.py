@@ -113,6 +113,7 @@ class E5LineEdit(QLineEdit):
         @param evt reference to the paint event (QPaintEvent)
         """
         QLineEdit.paintEvent(self, evt)
+        
         if not self.text() and \
            self.__inactiveText and \
            not self.hasFocus():

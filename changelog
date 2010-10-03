@@ -5,6 +5,7 @@ Version 5.1-snapshot-2010mmdd:
 - added configuration options for the web browser cache policy
 - added tab previews to the web browser
 - added a line widget with embeddable buttons
+- changed the web browser to give it a more modern look
 
 Version 5.1-snapshot-20100918:
 - bug fixes

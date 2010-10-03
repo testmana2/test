@@ -35,7 +35,6 @@ from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
 from .Bookmarks.BookmarksDialog import BookmarksDialog
 from .History.HistoryManager import HistoryManager
 from .History.HistoryMenu import HistoryMenu
-from .History.HistoryCompleter import HistoryCompletionModel, HistoryCompleter
 from .Passwords.PasswordManager import PasswordManager
 from .Network.NetworkAccessManager import NetworkAccessManager
 from .AdBlock.AdBlockManager import AdBlockManager
@@ -67,6 +66,7 @@ class HelpWindow(QMainWindow):
     """
     zoomTextOnlyChanged = pyqtSignal(bool)
     helpClosed = pyqtSignal()
+    privacyChanged = pyqtSignal(bool)
     
     helpwindows = []
 
@@ -104,7 +104,6 @@ class HelpWindow(QMainWindow):
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
 
         self.mHistory = []
-        self.pathCombo = None
         
         if self.initShortcutsOnly:
             self.__initActions()
@@ -115,12 +114,8 @@ class HelpWindow(QMainWindow):
             self.__helpEngine.warning.connect(self.__warning)
             self.__helpInstaller = None
             
-            # Attributes for WebKit based browser
-            self.__progressBar = None
-            
             self.tabWidget = HelpTabWidget(self)
             self.tabWidget.currentChanged[int].connect(self.__currentChanged)
-            self.tabWidget.sourceChanged.connect(self.__sourceChanged)
             self.tabWidget.titleChanged.connect(self.__titleChanged)
             self.tabWidget.showMessage.connect(self.statusBar().showMessage)
             
@@ -1299,47 +1294,21 @@ class HelpWindow(QMainWindow):
         gotb.addAction(self.homeAct)
         gotb.addSeparator()
         
-        self.iconLabel = QLabel()
-        gotb.addWidget(self.iconLabel)
+        self.__navigationSplitter = QSplitter(gotb)
+        self.__navigationSplitter.addWidget(self.tabWidget.stackedUrlBar())
         
-        self.pathCombo = QComboBox()
-        self.pathCombo.setDuplicatesEnabled(False)
-        self.pathCombo.setInsertPolicy(QComboBox.InsertAtTop)
-        self.pathCombo.setEditable(1)
-        self.pathCombo.setAutoCompletion(True)
-        self.pathCombo.activated[str].connect(self.__pathSelected)
-        self.pathCombo.setWhatsThis(self.trUtf8(
-                """<p>Enter the help file to be displayed directly into this"""
-                """ edit field. Select a previously shown help file from the"""
-                """ drop down list.</p>"""
-        ))
-        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(6)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pathCombo.sizePolicy().hasHeightForWidth())
-        self.pathCombo.setSizePolicy(sizePolicy)
-        gotb.addWidget(self.pathCombo)
-        self.pathComboDefaultColor = \
-            self.pathCombo.lineEdit().palette().color(QPalette.Base)
-        self.__historyCompletionModel = HistoryCompletionModel(self)
-        self.__historyCompletionModel.setSourceModel(
-            self.historyManager().historyFilterModel())
-        self.__historyCompleter = HistoryCompleter(self.__historyCompletionModel, self)
-        self.__historyCompleter.activated[str].connect(self.__pathSelected)
-        self.pathCombo.setCompleter(self.__historyCompleter)
-        
-        self.privacyLabel = QLabel()
-        gotb.addWidget(self.privacyLabel)
-        
-        gotb.addSeparator()
         self.searchEdit = HelpWebSearchWidget(self)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(2)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.searchEdit.sizePolicy().hasHeightForWidth())
         self.searchEdit.setSizePolicy(sizePolicy)
         self.searchEdit.search.connect(self.__linkActivated)
-        gotb.addWidget(self.searchEdit)
+        self.__navigationSplitter.addWidget(self.searchEdit)
+        gotb.addWidget(self.__navigationSplitter)
+        
+        self.__navigationSplitter.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Maximum)
+        self.__navigationSplitter.setCollapsible(0, False)
         
         self.backMenu = QMenu(self)
         self.backMenu.aboutToShow.connect(self.__showBackMenu)
@@ -1416,69 +1385,6 @@ class HelpWindow(QMainWindow):
             idx += 1
             act.setIcon(HelpWindow.__getWebIcon(QUrl(hist)))
         
-    def __pathSelected(self, path):
-        """
-        Private slot called when a file is selected in the combobox.
-        
-        @param path path to be shown (string)
-        """
-        url = self.__guessUrlFromPath(path)
-        self.currentBrowser().setSource(url)
-        self.__setPathComboBackground()
-    
-    def __guessUrlFromPath(self, path):
-        """
-        Private method to guess an URL given a path string.
-        
-        @param path path string to guess an URL for (string)
-        @return guessed URL (QUrl)
-        """
-        manager = self.searchEdit.openSearchManager()
-        path = Utilities.fromNativeSeparators(path)
-        url = manager.convertKeywordSearchToUrl(path)
-        if url.isValid():
-            return url
-        
-        try:
-            return QUrl.fromUserInput(path)
-        except AttributeError:
-            return QUrl(path)
-    
-    def __setPathComboBackground(self):
-        """
-        Private slot to change the path combo background to indicate save URLs.
-        """
-        url = QUrl(self.pathCombo.currentText())
-        le = self.pathCombo.lineEdit()
-        p = le.palette()
-        if url.isEmpty() or url.scheme() != "https":
-            p.setBrush(QPalette.Base, self.pathComboDefaultColor)
-        else:
-            p.setBrush(QPalette.Base, QBrush(Preferences.getHelp("SaveUrlColor")))
-        le.setPalette(p)
-        le.update()
-    
-    def __sourceChanged(self, url):
-        """
-        Private slot called when the displayed text of the combobox is changed.
-        
-        @param url URL of the new site (QUrl)
-        """
-        selectedURL = url.toString()
-        if selectedURL != "" and self.pathCombo is not None:
-            i = self.pathCombo.findText(selectedURL)
-            if i == -1:
-                if not QWebSettings.globalSettings()\
-                       .testAttribute(QWebSettings.PrivateBrowsingEnabled):
-                    self.pathCombo.insertItem(0, selectedURL)
-                    self.pathCombo.setCurrentIndex(0)
-            else:
-                self.pathCombo.setCurrentIndex(i)
-            
-            self.__setPathComboBackground()
-        
-        self.iconChanged(self.currentBrowser().icon())
-    
     def __titleChanged(self, title):
         """
         Private slot called to handle a change of the current browsers title.
@@ -1823,16 +1729,24 @@ class HelpWindow(QMainWindow):
                               """ web pages you have opened.</p>""")
             res = E5MessageBox.yesNo(self, "", txt)
             if res:
-                settings.setAttribute(QWebSettings.PrivateBrowsingEnabled, True)
-                self.pathCombo.setInsertPolicy(QComboBox.NoInsert)
-                self.privacyLabel.setPixmap(
-                    UI.PixmapCache.getPixmap("privateBrowsing.png"))
-                self.__setIconDatabasePath(False)
+                self.setPrivateMode(True)
         else:
-            settings.setAttribute(QWebSettings.PrivateBrowsingEnabled, False)
-            self.pathCombo.setInsertPolicy(QComboBox.InsertAtTop)
-            self.privacyLabel.setPixmap(QPixmap())
+            self.setPrivateMode(False)
+    
+    def setPrivateMode(self, on):
+        """
+        Public method to set the privacy mode.
+        
+        @param on flag indicating the privacy state (boolean)
+        """
+        QWebSettings.globalSettings().setAttribute(
+            QWebSettings.PrivateBrowsingEnabled, on)
+        if on:
+            self.__setIconDatabasePath(False)
+        else:
             self.__setIconDatabasePath(True)
+        self.privateBrowsingAct.setChecked(on)
+        self.privacyChanged.emit(on)
     
     def currentBrowser(self):
         """
@@ -1871,17 +1785,6 @@ class HelpWindow(QMainWindow):
                 self.setForwardAvailable(cb.isForwardAvailable())
                 self.setBackwardAvailable(cb.isBackwardAvailable())
                 self.setLoadingActions(cb.isLoading())
-                
-                url = cb.source().toString()
-                index2 = self.pathCombo.findText(url)
-                if index2 > -1:
-                    self.pathCombo.setCurrentIndex(index2)
-                else:
-                    self.pathCombo.clearEditText()
-                
-                self.__setPathComboBackground()
-                
-                self.iconChanged(cb.icon())
     
     def __showPreferences(self):
         """
@@ -1904,8 +1807,6 @@ class HelpWindow(QMainWindow):
         """
         Public slot to handle a change of preferences.
         """
-        self.__setPathComboBackground()
-        
         self.__initWebSettings()
         
         self.networkAccessManager().preferencesChanged()
@@ -1940,26 +1841,6 @@ class HelpWindow(QMainWindow):
             dlg.storeData()
             self.__initWebSettings()
     
-    ############################################################################
-    ## Methods to support Webkit based browser below.
-    ############################################################################
-    
-    def progressBar(self):
-        """
-        Public method to get a reference to the load progress bar.
-        
-        @return reference to the load progress bar (QProgressBar)
-        """
-        if self.__progressBar is None:
-            self.__progressBar = QProgressBar()
-            self.statusBar().addPermanentWidget(self.__progressBar)
-            self.__progressBar.setMaximumWidth(100)
-            self.__progressBar.setFixedHeight(16)
-            self.__progressBar.setSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
-            self.__progressBar.hide()
-        
-        return self.__progressBar
-        
     @classmethod
     def helpEngine(cls):
         """
@@ -1996,14 +1877,6 @@ class HelpWindow(QMainWindow):
         @return reference to the cookie jar (CookieJar)
         """
         return cls.networkAccessManager().cookieJar()
-        
-    def iconChanged(self, icon):
-        """
-        Public slot to change the icon shown to the left of the URL entry.
-        
-        @param icon icon to be shown (QIcon)
-        """
-        self.iconLabel.setPixmap(icon.pixmap(16, 16))
         
     def __clearIconsDatabase(self):
         """

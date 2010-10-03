@@ -15,13 +15,20 @@ from PyQt4.QtGui import QWidget, QHBoxLayout, QMenu, QToolButton, QPrinter, \
 
 from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui import E5MessageBox
+from E5Gui.E5Application import e5App
 
 from .HelpTabBar import HelpTabBar
 from .HelpBrowserWV import HelpBrowser
 import Helpviewer
 
+from .History.HistoryCompleter import HistoryCompletionModel, HistoryCompleter
+
+from .UrlBar.StackedUrlBar import StackedUrlBar
+from .UrlBar.UrlBar import UrlBar
+
 import UI.PixmapCache
 
+import Utilities
 import Preferences
 
 from eric5config import getConfig
@@ -41,12 +48,16 @@ class HelpTabWidget(E5TabWidget):
         @param parent reference to the parent widget (QWidget)
         """
         E5TabWidget.__init__(self, parent, dnd = True)
-        self.setCustomTabBar(True, HelpTabBar(self))
+        self.__tabBar = HelpTabBar(self)
+        self.setCustomTabBar(True, self.__tabBar)
         
         self.__mainWindow = parent
         
+        self.__stackedUrlBar = StackedUrlBar(self)
+        self.__tabBar.tabMoved.connect(self.__stackedUrlBar.moveBar)
+        
         self.__tabContextMenuIndex = -1
-##        self.currentChanged[int].connect(self.__currentChanged)
+        self.currentChanged[int].connect(self.__currentChanged)
         self.setTabContextMenuPolicy(Qt.CustomContextMenu)
         self.customTabContextMenuRequested.connect(self.__showContextMenu)
         
@@ -89,10 +100,12 @@ class HelpTabWidget(E5TabWidget):
         self.__newTabButton.clicked[bool].connect(self.newBrowser)
         
         self.__initTabContextMenu()
+        
+        self.__historyCompleter = None
     
     def __initTabContextMenu(self):
         """
-        Private mezhod to create the tab context menu.
+        Private method to create the tab context menu.
         """
         self.__tabContextMenu = QMenu(self)
         self.tabContextNewAct = \
@@ -218,7 +231,20 @@ class HelpTabWidget(E5TabWidget):
         else:
             linkName = link
         
+        urlbar = UrlBar(self.__mainWindow, self)
+        if self.__historyCompleter is None:
+            self.__historyCompletionModel = HistoryCompletionModel(self)
+            self.__historyCompletionModel.setSourceModel(
+                Helpviewer.HelpWindow.HelpWindow.historyManager().historyFilterModel())
+            self.__historyCompleter = HistoryCompleter(
+                self.__historyCompletionModel, self)
+            self.__historyCompleter.activated[str].connect(self.__pathSelected)
+        urlbar.setCompleter(self.__historyCompleter)
+        urlbar.returnPressed.connect(self.__lineEditReturnPressed)
+        self.__stackedUrlBar.addWidget(urlbar)
+        
         browser = HelpBrowser(self.__mainWindow, self)
+        urlbar.setBrowser(browser)
         
         browser.sourceChanged.connect(self.__sourceChanged)
         browser.titleChanged.connect(self.__titleChanged)
@@ -307,9 +333,14 @@ class HelpTabWidget(E5TabWidget):
         
         @param index index of browser to close (integer)
         """
+        urlbar = self.__stackedUrlBar.widget(index)
+        self.__stackedUrlBar.removeWidget(urlbar)
+        del urlbar
+        
         browser = self.widget(index)
         self.removeTab(index)
         del browser
+        
         if self.count() == 0:
             self.newBrowser()
         else:
@@ -514,6 +545,9 @@ class HelpTabWidget(E5TabWidget):
         """
         for browser in self.browsers():
             browser.preferencesChanged()
+        
+        for urlbar in self.__stackedUrlBar.urlBars():
+            urlbar.preferencesChanged()
     
     def __loadStarted(self):
         """
@@ -558,7 +592,6 @@ class HelpTabWidget(E5TabWidget):
         browser = self.sender()
         
         if browser is not None:
-            self.__mainWindow.iconChanged(browser.icon())
             self.setTabIcon(self.indexOf(browser), browser.icon())
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager().iconChanged(browser.url())
     
@@ -609,3 +642,71 @@ class HelpTabWidget(E5TabWidget):
                 return False
         
         return True
+    
+    def stackedUrlBar(self):
+        """
+        Public method to get a reference to the stacked url bar.
+        
+        @return reference to the stacked url bar (StackedUrlBar)
+        """
+        return self.__stackedUrlBar
+    
+    def currentUrlBar(self):
+        """
+        Public method to get a reference to the current url bar.
+        
+        @return reference to the current url bar (UrlBar)
+        """
+        return self.__stackedUrlBar.currentWidget()
+    
+    def __lineEditReturnPressed(self):
+        """
+        Private slot to handle the entering of an URL.
+        """
+        edit = self.sender()
+        if e5App().keyboardModifiers() == Qt.AltModifier:
+            self.newBrowser(edit.text())
+        else:
+            self.currentBrowser().setSource(QUrl(edit.text()))
+            self.currentBrowser().setFocus()
+    
+    def __pathSelected(self, path):
+        """
+        Private slot called when a URL is selected from the completer.
+        
+        @param path path to be shown (string)
+        """
+        url = self.__guessUrlFromPath(path)
+        self.currentBrowser().setSource(url)
+    
+    def __guessUrlFromPath(self, path):
+        """
+        Private method to guess an URL given a path string.
+        
+        @param path path string to guess an URL for (string)
+        @return guessed URL (QUrl)
+        """
+        manager = self.__mainWindow.openSearchManager()
+        path = Utilities.fromNativeSeparators(path)
+        url = manager.convertKeywordSearchToUrl(path)
+        if url.isValid():
+            return url
+        
+        try:
+            return QUrl.fromUserInput(path)
+        except AttributeError:
+            return QUrl(path)
+    
+    def __currentChanged(self, index):
+        """
+        Private slot to handle an index change.
+        
+        @param index new index (integer)
+        """
+        self.__stackedUrlBar.setCurrentIndex(index)
+        
+        browser = self.browserAt(index)
+        if browser.url() == "" and browser.hasFocus():
+            self.__stackedUrlBar.currentWidget.setFocus()
+        elif browser.url() != "":
+            browser.setFocus()

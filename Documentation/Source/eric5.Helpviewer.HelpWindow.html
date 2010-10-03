@@ -59,7 +59,7 @@ emitted after the zoom text only setting was
 QMainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>helpClosed</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>zoomTextOnlyChanged</td></tr>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>helpClosed</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>privacyChanged</td></tr><tr><td>zoomTextOnlyChanged</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -120,9 +120,6 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__getWebIcon">__getWebIcon</a></td>
 <td>Private static method to fetch the icon for a URL.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__guessUrlFromPath">__guessUrlFromPath</a></td>
-<td>Private method to guess an URL given a path string.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__hideIndexWindow">__hideIndexWindow</a></td>
 <td>Private method to hide the index window.</td>
@@ -193,9 +190,6 @@ QMainWindow
 <td><a href="#HelpWindow.__openUrlNewTab">__openUrlNewTab</a></td>
 <td>Private slot to load a URL from the bookmarks menu or bookmarks toolbar in a new tab.</td>
 </tr><tr>
-<td><a href="#HelpWindow.__pathSelected">__pathSelected</a></td>
-<td>Private slot called when a file is selected in the combobox.</td>
-</tr><tr>
 <td><a href="#HelpWindow.__prevTab">__prevTab</a></td>
 <td>Private slot used to show the previous tab.</td>
 </tr><tr>
@@ -213,9 +207,6 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__setIconDatabasePath">__setIconDatabasePath</a></td>
 <td>Private method to set the favicons path.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__setPathComboBackground">__setPathComboBackground</a></td>
-<td>Private slot to change the path combo background to indicate save URLs.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__setTextEncoding">__setTextEncoding</a></td>
 <td>Private slot to set the selected text encoding as the default for this session.</td>
@@ -273,9 +264,6 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__showTocWindow">__showTocWindow</a></td>
 <td>Private method to show the table of contents window.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__sourceChanged">__sourceChanged</a></td>
-<td>Private slot called when the displayed text of the combobox is changed.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__stopLoading">__stopLoading</a></td>
 <td>Private slot called to handle loading of the current page.</td>
@@ -349,9 +337,6 @@ QMainWindow
 <td><a href="#HelpWindow.icon">icon</a></td>
 <td>Class method to get the icon for an URL.</td>
 </tr><tr>
-<td><a href="#HelpWindow.iconChanged">iconChanged</a></td>
-<td>Public slot to change the icon shown to the left of the URL entry.</td>
-</tr><tr>
 <td><a href="#HelpWindow.networkAccessManager">networkAccessManager</a></td>
 <td>Class method to get a reference to the network access manager.</td>
 </tr><tr>
@@ -370,9 +355,6 @@ QMainWindow
 <td><a href="#HelpWindow.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle a change of preferences.</td>
 </tr><tr>
-<td><a href="#HelpWindow.progressBar">progressBar</a></td>
-<td>Public method to get a reference to the load progress bar.</td>
-</tr><tr>
 <td><a href="#HelpWindow.search">search</a></td>
 <td>Public method to search for a word.</td>
 </tr><tr>
@@ -387,6 +369,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.setLoadingActions">setLoadingActions</a></td>
 <td>Public slot to set the loading dependent actions.</td>
+</tr><tr>
+<td><a href="#HelpWindow.setPrivateMode">setPrivateMode</a></td>
+<td>Public method to set the privacy mode.</td>
 </tr>
 </table>
 <a NAME="HelpWindow.__init__" ID="HelpWindow.__init__"></a>
@@ -540,21 +525,6 @@ URL to get icon for (QUrl)
 <dt>Returns:</dt>
 <dd>
 icon for the URL (QIcon)
-</dd>
-</dl><a NAME="HelpWindow.__guessUrlFromPath" ID="HelpWindow.__guessUrlFromPath"></a>
-<h4>HelpWindow.__guessUrlFromPath</h4>
-<b>__guessUrlFromPath</b>(<i>path</i>)
-<p>
-        Private method to guess an URL given a path string.
-</p><dl>
-<dt><i>path</i></dt>
-<dd>
-path string to guess an URL for (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-guessed URL (QUrl)
 </dd>
 </dl><a NAME="HelpWindow.__hideIndexWindow" ID="HelpWindow.__hideIndexWindow"></a>
 <h4>HelpWindow.__hideIndexWindow</h4>
@@ -714,16 +684,6 @@ url to be opened (QUrl)
 <dd>
 title of the bookmark (string)
 </dd>
-</dl><a NAME="HelpWindow.__pathSelected" ID="HelpWindow.__pathSelected"></a>
-<h4>HelpWindow.__pathSelected</h4>
-<b>__pathSelected</b>(<i>path</i>)
-<p>
-        Private slot called when a file is selected in the combobox.
-</p><dl>
-<dt><i>path</i></dt>
-<dd>
-path to be shown (string)
-</dd>
 </dl><a NAME="HelpWindow.__prevTab" ID="HelpWindow.__prevTab"></a>
 <h4>HelpWindow.__prevTab</h4>
 <b>__prevTab</b>(<i></i>)
@@ -759,12 +719,7 @@ path to be shown (string)
 <dd>
 flag indicating to enabled icon storage (boolean)
 </dd>
-</dl><a NAME="HelpWindow.__setPathComboBackground" ID="HelpWindow.__setPathComboBackground"></a>
-<h4>HelpWindow.__setPathComboBackground</h4>
-<b>__setPathComboBackground</b>(<i></i>)
-<p>
-        Private slot to change the path combo background to indicate save URLs.
-</p><a NAME="HelpWindow.__setTextEncoding" ID="HelpWindow.__setTextEncoding"></a>
+</dl><a NAME="HelpWindow.__setTextEncoding" ID="HelpWindow.__setTextEncoding"></a>
 <h4>HelpWindow.__setTextEncoding</h4>
 <b>__setTextEncoding</b>(<i>act</i>)
 <p>
@@ -870,17 +825,7 @@ message to be shown (string)
 <b>__showTocWindow</b>(<i></i>)
 <p>
         Private method to show the table of contents window.
-</p><a NAME="HelpWindow.__sourceChanged" ID="HelpWindow.__sourceChanged"></a>
-<h4>HelpWindow.__sourceChanged</h4>
-<b>__sourceChanged</b>(<i>url</i>)
-<p>
-        Private slot called when the displayed text of the combobox is changed.
-</p><dl>
-<dt><i>url</i></dt>
-<dd>
-URL of the new site (QUrl)
-</dd>
-</dl><a NAME="HelpWindow.__stopLoading" ID="HelpWindow.__stopLoading"></a>
+</p><a NAME="HelpWindow.__stopLoading" ID="HelpWindow.__stopLoading"></a>
 <h4>HelpWindow.__stopLoading</h4>
 <b>__stopLoading</b>(<i></i>)
 <p>
@@ -1087,16 +1032,6 @@ URL to get icon for (QUrl)
 <dd>
 icon for the URL (QIcon)
 </dd>
-</dl><a NAME="HelpWindow.iconChanged" ID="HelpWindow.iconChanged"></a>
-<h4>HelpWindow.iconChanged</h4>
-<b>iconChanged</b>(<i>icon</i>)
-<p>
-        Public slot to change the icon shown to the left of the URL entry.
-</p><dl>
-<dt><i>icon</i></dt>
-<dd>
-icon to be shown (QIcon)
-</dd>
 </dl><a NAME="HelpWindow.networkAccessManager" ID="HelpWindow.networkAccessManager"></a>
 <h4>HelpWindow.networkAccessManager</h4>
 <b>networkAccessManager</b>(<i></i>)
@@ -1152,17 +1087,7 @@ reference to the password manager (PasswordManager)
 <b>preferencesChanged</b>(<i></i>)
 <p>
         Public slot to handle a change of preferences.
-</p><a NAME="HelpWindow.progressBar" ID="HelpWindow.progressBar"></a>
-<h4>HelpWindow.progressBar</h4>
-<b>progressBar</b>(<i></i>)
-<p>
-        Public method to get a reference to the load progress bar.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the load progress bar (QProgressBar)
-</dd>
-</dl><a NAME="HelpWindow.search" ID="HelpWindow.search"></a>
+</p><a NAME="HelpWindow.search" ID="HelpWindow.search"></a>
 <h4>HelpWindow.search</h4>
 <b>search</b>(<i>word</i>)
 <p>
@@ -1211,6 +1136,16 @@ flag indicating the availability of the forwards action (boolean)
 <dt><i>b</i></dt>
 <dd>
 flag indicating the loading state to consider (boolean)
+</dd>
+</dl><a NAME="HelpWindow.setPrivateMode" ID="HelpWindow.setPrivateMode"></a>
+<h4>HelpWindow.setPrivateMode</h4>
+<b>setPrivateMode</b>(<i>on</i>)
+<p>
+        Public method to set the privacy mode.
+</p><dl>
+<dt><i>on</i></dt>
+<dd>
+flag indicating the privacy state (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

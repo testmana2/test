@@ -218,6 +218,10 @@ class HelpWebPage(QWebPage):
         try:
             if extension == QWebPage.ErrorPageExtension:
                 info = sip.cast(option, QWebPage.ErrorPageExtensionOption)
+                if info.error == 102:
+                    # this is something of a hack; hopefully it will work in the future
+                    return False
+                
                 errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
                 urlString = bytes(info.url.toEncoded()).decode()
                 html = notFoundPage_html
@@ -1045,7 +1049,6 @@ class HelpBrowser(QWebView):
         """
         self.__isLoading = True
         self.__progress = 0
-        self.mw.progressBar().show()
     
     def __loadProgress(self, progress):
         """
@@ -1054,7 +1057,6 @@ class HelpBrowser(QWebView):
         @param progress progress value (integer)
         """
         self.__progress = progress
-        self.mw.progressBar().setValue(progress)
     
     def __loadFinished(self, ok):
         """
@@ -1064,7 +1066,6 @@ class HelpBrowser(QWebView):
         """
         self.__isLoading = False
         self.__progress = 0
-        self.mw.progressBar().hide()
         
         if ok:
             self.mw.adblockManager().page().applyRulesToPage(self.page())
@@ -1128,7 +1129,7 @@ class HelpBrowser(QWebView):
                 dlg.done[()].connect(self.__downloadDone)
                 self.__downloadWindows.append(dlg)
                 dlg.show()
-            self.setUrl(self.url())
+##            self.setUrl(self.url())
         else:
             replyUrl = reply.url()
             if replyUrl.isEmpty():

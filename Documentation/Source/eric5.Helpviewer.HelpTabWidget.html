@@ -57,14 +57,23 @@ E5TabWidget
 <td><a href="#HelpTabWidget.__init__">HelpTabWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HelpTabWidget.__currentChanged">__currentChanged</a></td>
+<td>Private slot to handle an index change.</td>
+</tr><tr>
 <td><a href="#HelpTabWidget.__elide">__elide</a></td>
 <td>Private method to elide some text.</td>
+</tr><tr>
+<td><a href="#HelpTabWidget.__guessUrlFromPath">__guessUrlFromPath</a></td>
+<td>Private method to guess an URL given a path string.</td>
 </tr><tr>
 <td><a href="#HelpTabWidget.__iconChanged">__iconChanged</a></td>
 <td>Private slot to handle the icon change.</td>
 </tr><tr>
 <td><a href="#HelpTabWidget.__initTabContextMenu">__initTabContextMenu</a></td>
-<td>Private mezhod to create the tab context menu.</td>
+<td>Private method to create the tab context menu.</td>
+</tr><tr>
+<td><a href="#HelpTabWidget.__lineEditReturnPressed">__lineEditReturnPressed</a></td>
+<td>Private slot to handle the entering of an URL.</td>
 </tr><tr>
 <td><a href="#HelpTabWidget.__loadFinished">__loadFinished</a></td>
 <td>Private method to handle the loadFinished signal.</td>
@@ -74,6 +83,9 @@ E5TabWidget
 </tr><tr>
 <td><a href="#HelpTabWidget.__navigationMenuTriggered">__navigationMenuTriggered</a></td>
 <td>Private slot called to handle the navigation button menu selection.</td>
+</tr><tr>
+<td><a href="#HelpTabWidget.__pathSelected">__pathSelected</a></td>
+<td>Private slot called when a URL is selected from the completer.</td>
 </tr><tr>
 <td><a href="#HelpTabWidget.__printPdfRequested">__printPdfRequested</a></td>
 <td>Private slot to handle a print to PDF request.</td>
@@ -141,6 +153,9 @@ E5TabWidget
 <td><a href="#HelpTabWidget.currentBrowser">currentBrowser</a></td>
 <td>Public method to get a reference to the current browser.</td>
 </tr><tr>
+<td><a href="#HelpTabWidget.currentUrlBar">currentUrlBar</a></td>
+<td>Public method to get a reference to the current url bar.</td>
+</tr><tr>
 <td><a href="#HelpTabWidget.getSourceFileList">getSourceFileList</a></td>
 <td>Public method to get a list of all opened source files.</td>
 </tr><tr>
@@ -161,6 +176,9 @@ E5TabWidget
 </tr><tr>
 <td><a href="#HelpTabWidget.shallShutDown">shallShutDown</a></td>
 <td>Public method to check, if the application should be shut down.</td>
+</tr><tr>
+<td><a href="#HelpTabWidget.stackedUrlBar">stackedUrlBar</a></td>
+<td>Public method to get a reference to the stacked url bar.</td>
 </tr>
 </table>
 <a NAME="HelpTabWidget.__init__" ID="HelpTabWidget.__init__"></a>
@@ -172,6 +190,16 @@ E5TabWidget
 <dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="HelpTabWidget.__currentChanged" ID="HelpTabWidget.__currentChanged"></a>
+<h4>HelpTabWidget.__currentChanged</h4>
+<b>__currentChanged</b>(<i>index</i>)
+<p>
+        Private slot to handle an index change.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+new index (integer)
 </dd>
 </dl><a NAME="HelpTabWidget.__elide" ID="HelpTabWidget.__elide"></a>
 <h4>HelpTabWidget.__elide</h4>
@@ -194,6 +222,21 @@ amount of characters to be used (integer)
 <dd>
 the elided text (string)
 </dd>
+</dl><a NAME="HelpTabWidget.__guessUrlFromPath" ID="HelpTabWidget.__guessUrlFromPath"></a>
+<h4>HelpTabWidget.__guessUrlFromPath</h4>
+<b>__guessUrlFromPath</b>(<i>path</i>)
+<p>
+        Private method to guess an URL given a path string.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+path string to guess an URL for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+guessed URL (QUrl)
+</dd>
 </dl><a NAME="HelpTabWidget.__iconChanged" ID="HelpTabWidget.__iconChanged"></a>
 <h4>HelpTabWidget.__iconChanged</h4>
 <b>__iconChanged</b>(<i></i>)
@@ -203,7 +246,12 @@ the elided text (string)
 <h4>HelpTabWidget.__initTabContextMenu</h4>
 <b>__initTabContextMenu</b>(<i></i>)
 <p>
-        Private mezhod to create the tab context menu.
+        Private method to create the tab context menu.
+</p><a NAME="HelpTabWidget.__lineEditReturnPressed" ID="HelpTabWidget.__lineEditReturnPressed"></a>
+<h4>HelpTabWidget.__lineEditReturnPressed</h4>
+<b>__lineEditReturnPressed</b>(<i></i>)
+<p>
+        Private slot to handle the entering of an URL.
 </p><a NAME="HelpTabWidget.__loadFinished" ID="HelpTabWidget.__loadFinished"></a>
 <h4>HelpTabWidget.__loadFinished</h4>
 <b>__loadFinished</b>(<i>ok</i>)
@@ -228,6 +276,16 @@ flag indicating the result (boolean)
 <dt><i>act</i></dt>
 <dd>
 reference to the selected action (QAction)
+</dd>
+</dl><a NAME="HelpTabWidget.__pathSelected" ID="HelpTabWidget.__pathSelected"></a>
+<h4>HelpTabWidget.__pathSelected</h4>
+<b>__pathSelected</b>(<i>path</i>)
+<p>
+        Private slot called when a URL is selected from the completer.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+path to be shown (string)
 </dd>
 </dl><a NAME="HelpTabWidget.__printPdfRequested" ID="HelpTabWidget.__printPdfRequested"></a>
 <h4>HelpTabWidget.__printPdfRequested</h4>
@@ -397,6 +455,16 @@ index of browser to close (integer)
 <dd>
 reference to the current browser (HelpBrowser)
 </dd>
+</dl><a NAME="HelpTabWidget.currentUrlBar" ID="HelpTabWidget.currentUrlBar"></a>
+<h4>HelpTabWidget.currentUrlBar</h4>
+<b>currentUrlBar</b>(<i></i>)
+<p>
+        Public method to get a reference to the current url bar.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the current url bar (UrlBar)
+</dd>
 </dl><a NAME="HelpTabWidget.getSourceFileList" ID="HelpTabWidget.getSourceFileList"></a>
 <h4>HelpTabWidget.getSourceFileList</h4>
 <b>getSourceFileList</b>(<i></i>)
@@ -461,6 +529,16 @@ reference to the browser to be printed (HelpBrowserWV)
 <dt>Returns:</dt>
 <dd>
 flag indicating a shut down (boolean)
+</dd>
+</dl><a NAME="HelpTabWidget.stackedUrlBar" ID="HelpTabWidget.stackedUrlBar"></a>
+<h4>HelpTabWidget.stackedUrlBar</h4>
+<b>stackedUrlBar</b>(<i></i>)
+<p>
+        Public method to get a reference to the stacked url bar.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the stacked url bar (StackedUrlBar)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
