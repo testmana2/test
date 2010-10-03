@@ -123,7 +123,7 @@ class DebugServer(QTcpServer):
         self.debugging = False
         self.clientProcess = None
         self.clientType = \
-            Preferences.Prefs.settings.value('DebugClient/Type', 'Python')
+            Preferences.Prefs.settings.value('DebugClient/Type', 'Python3')
         self.lastClientType = ''
         self.__autoClearShell = False
         
