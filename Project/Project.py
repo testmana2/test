@@ -14,7 +14,6 @@ import glob
 import fnmatch
 import copy
 import zipfile
-import io
 import re
 
 from PyQt4.QtCore import *
@@ -1810,6 +1809,15 @@ class Project(QObject):
                     f = open(fn, "w", encoding = "utf-8")
                     f.close()
                     self.appendFile(fn, True)
+                # create an empty main script file, if a name was given
+                if len(self.pdata["MAINSCRIPT"]) and self.pdata["MAINSCRIPT"][0]:
+                    if not os.path.isabs(self.pdata["MAINSCRIPT"][0]):
+                        ms = os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0])
+                    else:
+                        ms = self.pdata["MAINSCRIPT"][0]
+                    f = open(ms, "w")
+                    f.close()
+                    self.appendFile(ms, True)
                 tpd = os.path.join(self.ppath, self.translationsRoot)
                 if not self.translationsRoot.endswith(os.sep):
                     tpd = os.path.dirname(tpd)
@@ -1834,8 +1842,10 @@ class Project(QObject):
                 
                 try:
                     ms = os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0])
-                    if os.path.exists(ms):
-                        self.appendFile(ms)
+                    if not os.path.exists(ms):
+                        f = open(ms, "w")
+                        f.close()
+                    self.appendFile(ms)
                 except IndexError:
                     ms = ""
                 
