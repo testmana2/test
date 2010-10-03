@@ -210,6 +210,10 @@ class HelpWebPage(QWebPage):
         try:
             if extension == QWebPage.ErrorPageExtension:
                 info = sip.cast(option, QWebPage.ErrorPageExtensionOption)
+                if info.error == 102:
+                    # this is something of a hack; hopefully it will work in the future
+                    return False
+                
                 errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
                 urlString = bytes(info.url.toEncoded()).decode()
                 html = notFoundPage_html
@@ -938,7 +942,6 @@ class HelpBrowser(QWebView):
                 self.connect(dlg, SIGNAL("done()"), self.__downloadDone)
                 self.__downloadWindows.append(dlg)
                 dlg.show()
-            self.setUrl(self.url())
         else:
             replyUrl = reply.url()
             if replyUrl.isEmpty():

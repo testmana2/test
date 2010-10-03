@@ -67,6 +67,7 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         self.__bytesReceived = 0
         self.__downloadTime = QTime()
         self.__output = QFile()
+        self.__initialized = False
     
     def initialize(self):
         """
@@ -81,6 +82,9 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         self.__downloadFinished = False
         
         self.__url = self.__reply.url()
+        if not self.__getFileName():
+            return False
+        
         self.__reply.setParent(self)
         self.connect(self.__reply, SIGNAL("readyRead()"), self.__readyRead)
         self.connect(self.__reply, SIGNAL("error(QNetworkReply::NetworkError)"), 
@@ -94,11 +98,11 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         # reset info
         self.infoLabel.clear()
         self.progressBar.setValue(0)
-        if not self.__getFileName():
-            return False
         
         # start timer for the download estimation
         self.__downloadTime.start()
+        
+        self.__initialized = True
         
         if self.__reply.error() != QNetworkReply.NoError:
             self.__networkError()
@@ -423,17 +427,18 @@ class DownloadDialog(QWidget, Ui_DownloadDialog):
         """
         Protected method called when the dialog is closed.
         """
-        self.__output.close()
-        
-        self.disconnect(self.__reply, SIGNAL("readyRead()"), self.__readyRead)
-        self.disconnect(self.__reply, SIGNAL("error(QNetworkReply::NetworkError)"), 
-                        self.__networkError)
-        self.disconnect(self.__reply, SIGNAL("downloadProgress(qint64, qint64)"), 
-                        self.__downloadProgress)
-        self.disconnect(self.__reply, SIGNAL("metaDataChanged()"), 
-                        self.__metaDataChanged)
-        self.disconnect(self.__reply, SIGNAL("finished()"), self.__finished)
-        self.__reply.close()
-        self.__reply.deleteLater()
-        
-        self.done.emit()
+        if self.__initialized:
+            self.__output.close()
+            
+            self.disconnect(self.__reply, SIGNAL("readyRead()"), self.__readyRead)
+            self.disconnect(self.__reply, SIGNAL("error(QNetworkReply::NetworkError)"), 
+                            self.__networkError)
+            self.disconnect(self.__reply, SIGNAL("downloadProgress(qint64, qint64)"), 
+                            self.__downloadProgress)
+            self.disconnect(self.__reply, SIGNAL("metaDataChanged()"), 
+                            self.__metaDataChanged)
+            self.disconnect(self.__reply, SIGNAL("finished()"), self.__finished)
+            self.__reply.close()
+            self.__reply.deleteLater()
+            
+            self.done.emit()
