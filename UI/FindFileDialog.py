@@ -571,7 +571,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         lines[line - 1] = rline
                 
                 # write the file
-                txt = Utilities.linesep().join(lines)
+                txt = Utilities.linesep().join(lines) + Utilities.linesep()
                 try:
                     Utilities.writeEncodedFile(fn, txt, encoding)
                 except (IOError, Utilities.CodingError, UnicodeError) as err:
