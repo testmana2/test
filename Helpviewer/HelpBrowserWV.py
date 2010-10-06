@@ -159,6 +159,9 @@ class HelpWebPage(QWebPage):
         self.__proxy.setPrimaryNetworkAccessManager(
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
         self.setNetworkAccessManager(self.__proxy)
+        
+        self.__sslInfo = None
+        self.__proxy.finished[QNetworkReply].connect(self.__managerFinished)
     
     def acceptNavigationRequest(self, frame, request, type_):
         """
@@ -287,6 +290,51 @@ class HelpWebPage(QWebPage):
         if agent == "":
             agent = QWebPage.userAgentForUrl(self, url)
         return agent
+    
+    def __managerFinished(self, reply):
+        """
+        Private slot to handle a finished reply.
+        
+        This slot is used to get SSL related information for a reply.
+        
+        @param reply reference to the finished reply (QNetworkReply)
+        """
+        try:
+            frame = reply.request().originatingObject()
+        except AttributeError:
+            frame = None
+        
+        mainFrameRequest = frame == self.mainFrame()
+        
+        if mainFrameRequest and \
+           self.__sslInfo is not None and \
+           not self.__domainSchemeMatch(reply.url(), self.__sslInfo.url):
+            self.__sslInfo = None
+        
+        if reply.error() == QNetworkReply.NoError and \
+           mainFrameRequest and \
+           self.__sslInfo is None and \
+           reply.url().scheme().lower() == "https":
+            self.__sslInfo = reply.sslConfiguration().peerCertificate()
+            self.__sslInfo.url = QUrl(reply.url())
+    
+    def __domainSchemeMatch(self, url1, url2):
+        """
+        Private method to check, if to URLs belong to the same domain.
+        
+        @param url1 first URL (QUrl)
+        @param url2 second URL (QUrl)
+        @return flag indicating a match (boolean)
+        """
+        if url1.scheme() != url2.scheme():
+            return False
+        
+        url1L = url1.host().lower().split(".")
+        url2L = url2.host().lower().split(".")
+        if min(len(url1L), len(url2L)) < 2:
+            return False
+        
+        return url1L[-2:] == url2L[-2:]
 
 ##########################################################################################
 
