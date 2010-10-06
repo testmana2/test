@@ -308,33 +308,24 @@ class HelpWebPage(QWebPage):
         
         if mainFrameRequest and \
            self.__sslInfo is not None and \
-           not self.__domainSchemeMatch(reply.url(), self.__sslInfo.url):
+           reply.url() == self.mainFrame().url():
             self.__sslInfo = None
         
         if reply.error() == QNetworkReply.NoError and \
            mainFrameRequest and \
            self.__sslInfo is None and \
-           reply.url().scheme().lower() == "https":
+           reply.url().scheme().lower() == "https" and \
+           reply.url() == self.mainFrame().url():
             self.__sslInfo = reply.sslConfiguration().peerCertificate()
             self.__sslInfo.url = QUrl(reply.url())
     
-    def __domainSchemeMatch(self, url1, url2):
+    def getSslInfo(self):
         """
-        Private method to check, if to URLs belong to the same domain.
+        Public method to get a reference to the SSL info object.
         
-        @param url1 first URL (QUrl)
-        @param url2 second URL (QUrl)
-        @return flag indicating a match (boolean)
+        @return reference to the SSL info (QSslCertificate)
         """
-        if url1.scheme() != url2.scheme():
-            return False
-        
-        url1L = url1.host().lower().split(".")
-        url2L = url2.host().lower().split(".")
-        if min(len(url1L), len(url2L)) < 2:
-            return False
-        
-        return url1L[-2:] == url2L[-2:]
+        return self.__sslInfo
 
 ##########################################################################################
 

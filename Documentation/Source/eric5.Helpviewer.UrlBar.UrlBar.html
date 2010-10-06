@@ -60,6 +60,12 @@ E5LineEdit
 <td><a href="#UrlBar.__browserUrlChanged">__browserUrlChanged</a></td>
 <td>Private slot to handle a URL change of the associated browser.</td>
 </tr><tr>
+<td><a href="#UrlBar.__loadFinished">__loadFinished</a></td>
+<td>Private slot to set some data after the page was loaded.</td>
+</tr><tr>
+<td><a href="#UrlBar.__loadStarted">__loadStarted</a></td>
+<td>Private slot to perform actions before the page is loaded.</td>
+</tr><tr>
 <td><a href="#UrlBar.__privacyClicked">__privacyClicked</a></td>
 <td>Private slot to handle the click of the private mode button.</td>
 </tr><tr>
@@ -120,7 +126,22 @@ reference to the parent widget (HelpBrowser)
 <dd>
 new URL of the browser (QUrl)
 </dd>
-</dl><a NAME="UrlBar.__privacyClicked" ID="UrlBar.__privacyClicked"></a>
+</dl><a NAME="UrlBar.__loadFinished" ID="UrlBar.__loadFinished"></a>
+<h4>UrlBar.__loadFinished</h4>
+<b>__loadFinished</b>(<i>ok</i>)
+<p>
+        Private slot to set some data after the page was loaded.
+</p><dl>
+<dt><i>ok</i></dt>
+<dd>
+flag indicating a successful load (boolean)
+</dd>
+</dl><a NAME="UrlBar.__loadStarted" ID="UrlBar.__loadStarted"></a>
+<h4>UrlBar.__loadStarted</h4>
+<b>__loadStarted</b>(<i></i>)
+<p>
+        Private slot to perform actions before the page is loaded.
+</p><a NAME="UrlBar.__privacyClicked" ID="UrlBar.__privacyClicked"></a>
 <h4>UrlBar.__privacyClicked</h4>
 <b>__privacyClicked</b>(<i></i>)
 <p>

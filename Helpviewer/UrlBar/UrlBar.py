@@ -8,7 +8,8 @@ Module implementing the URL bar widget.
 """
 
 from PyQt4.QtCore import Qt, QPointF, QUrl
-from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient
+from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient, QLabel
+from PyQt4.QtNetwork import QSslCertificate
 from PyQt4.QtWebKit import QWebSettings
 
 from E5Gui.E5LineEdit import E5LineEdit
@@ -41,6 +42,12 @@ class UrlBar(E5LineEdit):
         self.__favicon = FavIconLabel(self)
         self.addWidget(self.__favicon, E5LineEdit.LeftSide)
         
+        self.__sslLabel = QLabel(self)
+        self.__sslLabel.setStyleSheet(
+            "QLabel { color : white; background-color : green; }")
+        self.addWidget(self.__sslLabel, E5LineEdit.LeftSide)
+        self.__sslLabel.setVisible(False)
+        
         self.__privacyButton = E5LineEditButton(self)
         self.__privacyButton.setIcon(UI.PixmapCache.getIcon("privateBrowsing.png"))
         self.addWidget(self.__privacyButton, E5LineEdit.RightSide)
@@ -67,6 +74,8 @@ class UrlBar(E5LineEdit):
         
         self.__browser.urlChanged.connect(self.__browserUrlChanged)
         self.__browser.loadProgress.connect(self.update)
+        self.__browser.loadFinished.connect(self.__loadFinished)
+        self.__browser.loadStarted.connect(self.__loadStarted)
     
     def browser(self):
         """
@@ -82,6 +91,34 @@ class UrlBar(E5LineEdit):
         """
         self.setText(str(url.toEncoded(), encoding = "utf-8"))
         self.setCursorPosition(0)
+    
+    def __loadStarted(self):
+        """
+        Private slot to perform actions before the page is loaded.
+        """
+        self.__sslLabel.setVisible(False)
+    
+    def __loadFinished(self, ok):
+        """
+        Private slot to set some data after the page was loaded.
+        
+        @param ok flag indicating a successful load (boolean)
+        """
+        if ok and self.__browser.url().scheme() == "https":
+            sslInfo = self.__browser.page().getSslInfo()
+            if sslInfo is not None:
+                org = sslInfo.subjectInfo(QSslCertificate.Organization)
+                if org == "":
+                    cn = sslInfo.subjectInfo(QSslCertificate.CommonName)
+                    if cn != "":
+                        org = cn.split(".", 1)[1]
+                    if org == "":
+                        org = self.trUtf8("Unknown")
+                self.__sslLabel.setText(" {0} ".format(org))
+                self.__sslLabel.setVisible(True)
+                return
+        
+        self.__sslLabel.setVisible(False)
     
     def setPrivateMode(self, on):
         """

@@ -2599,8 +2599,10 @@
       <keyword name="HelpBrowser.zoomOut" id="HelpBrowser.zoomOut" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.zoomOut" />
       <keyword name="HelpBrowser.zoomReset" id="HelpBrowser.zoomReset" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.zoomReset" />
       <keyword name="HelpWebPage (Constructor)" id="HelpWebPage (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.__init__" />
+      <keyword name="HelpWebPage.__managerFinished" id="HelpWebPage.__managerFinished" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.__managerFinished" />
       <keyword name="HelpWebPage.acceptNavigationRequest" id="HelpWebPage.acceptNavigationRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.acceptNavigationRequest" />
       <keyword name="HelpWebPage.extension" id="HelpWebPage.extension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.extension" />
+      <keyword name="HelpWebPage.getSslInfo" id="HelpWebPage.getSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslInfo" />
       <keyword name="HelpWebPage.pageAttributeId" id="HelpWebPage.pageAttributeId" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.pageAttributeId" />
       <keyword name="HelpWebPage.populateNetworkRequest" id="HelpWebPage.populateNetworkRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.populateNetworkRequest" />
       <keyword name="HelpWebPage.setUserAgent" id="HelpWebPage.setUserAgent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.setUserAgent" />
@@ -7347,6 +7349,8 @@
       <keyword name="UrlBar" id="UrlBar" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar" />
       <keyword name="UrlBar (Constructor)" id="UrlBar (Constructor)" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__init__" />
       <keyword name="UrlBar.__browserUrlChanged" id="UrlBar.__browserUrlChanged" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__browserUrlChanged" />
+      <keyword name="UrlBar.__loadFinished" id="UrlBar.__loadFinished" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__loadFinished" />
+      <keyword name="UrlBar.__loadStarted" id="UrlBar.__loadStarted" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__loadStarted" />
       <keyword name="UrlBar.__privacyClicked" id="UrlBar.__privacyClicked" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__privacyClicked" />
       <keyword name="UrlBar.__textChanged" id="UrlBar.__textChanged" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__textChanged" />
       <keyword name="UrlBar.browser" id="UrlBar.browser" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.browser" />

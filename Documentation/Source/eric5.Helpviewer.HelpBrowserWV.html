@@ -731,11 +731,17 @@ QWebPage
 <td><a href="#HelpWebPage.__init__">HelpWebPage</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HelpWebPage.__managerFinished">__managerFinished</a></td>
+<td>Private slot to handle a finished reply.</td>
+</tr><tr>
 <td><a href="#HelpWebPage.acceptNavigationRequest">acceptNavigationRequest</a></td>
 <td>Protected method to determine, if a request may be accepted.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.extension">extension</a></td>
 <td>Public method to implement a specific extension.</td>
+</tr><tr>
+<td><a href="#HelpWebPage.getSslInfo">getSslInfo</a></td>
+<td>Public method to get a reference to the SSL info object.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.pageAttributeId">pageAttributeId</a></td>
 <td>Public method to get the attribute id of the page attribute.</td>
@@ -765,6 +771,18 @@ QWebPage
 <dt><i>parent</i></dt>
 <dd>
 parent widget of this window (QWidget)
+</dd>
+</dl><a NAME="HelpWebPage.__managerFinished" ID="HelpWebPage.__managerFinished"></a>
+<h4>HelpWebPage.__managerFinished</h4>
+<b>__managerFinished</b>(<i>reply</i>)
+<p>
+        Private slot to handle a finished reply.
+</p><p>
+        This slot is used to get SSL related information for a reply.
+</p><dl>
+<dt><i>reply</i></dt>
+<dd>
+reference to the finished reply (QNetworkReply)
 </dd>
 </dl><a NAME="HelpWebPage.acceptNavigationRequest" ID="HelpWebPage.acceptNavigationRequest"></a>
 <h4>HelpWebPage.acceptNavigationRequest</h4>
@@ -807,6 +825,16 @@ stores the output results (QWebPage.ExtensionReturn)
 <dt>Returns:</dt>
 <dd>
 flag indicating a successful call of the extension (boolean)
+</dd>
+</dl><a NAME="HelpWebPage.getSslInfo" ID="HelpWebPage.getSslInfo"></a>
+<h4>HelpWebPage.getSslInfo</h4>
+<b>getSslInfo</b>(<i></i>)
+<p>
+        Public method to get a reference to the SSL info object.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the SSL info (QSslCertificate)
 </dd>
 </dl><a NAME="HelpWebPage.pageAttributeId" ID="HelpWebPage.pageAttributeId"></a>
 <h4>HelpWebPage.pageAttributeId</h4>
