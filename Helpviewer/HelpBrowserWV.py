@@ -27,6 +27,7 @@ from .DownloadDialog import DownloadDialog
 from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
 from .JavaScriptResources import fetchLinks_js
 from .HTMLResources import notFoundPage_html
+from .SslInfoDialog import SslInfoDialog
 import Helpviewer.HelpWindow
 
 from .Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
@@ -331,7 +332,9 @@ class HelpWebPage(QWebPage):
         """
         Public slot to show some SSL information for the loaded page.
         """
-        # TODO: add code to show SSL data
+        if self.__sslInfo is not None and self.__sslInfo.isValid():
+            dlg = SslInfoDialog(self.__sslInfo, self.view())
+            dlg.exec_()
 
 ##########################################################################################
 

@@ -264,6 +264,7 @@
             </section>
             <section title="eric5.Helpviewer.UrlBar" ref="index-eric5.Helpviewer.UrlBar.html">
               <section title="eric5.Helpviewer.UrlBar.FavIconLabel" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html" />
+              <section title="eric5.Helpviewer.UrlBar.SslLabel" ref="eric5.Helpviewer.UrlBar.SslLabel.html" />
               <section title="eric5.Helpviewer.UrlBar.StackedUrlBar" ref="eric5.Helpviewer.UrlBar.StackedUrlBar.html" />
               <section title="eric5.Helpviewer.UrlBar.UrlBar" ref="eric5.Helpviewer.UrlBar.UrlBar.html" />
             </section>
@@ -290,6 +291,7 @@
             <section title="eric5.Helpviewer.QtHelpDocumentationDialog" ref="eric5.Helpviewer.QtHelpDocumentationDialog.html" />
             <section title="eric5.Helpviewer.QtHelpFiltersDialog" ref="eric5.Helpviewer.QtHelpFiltersDialog.html" />
             <section title="eric5.Helpviewer.SearchWidget" ref="eric5.Helpviewer.SearchWidget.html" />
+            <section title="eric5.Helpviewer.SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html" />
           </section>
           <section title="eric5.IconEditor" ref="index-eric5.IconEditor.html">
             <section title="eric5.IconEditor.cursors" ref="index-eric5.IconEditor.cursors.html">
@@ -2534,6 +2536,12 @@
       <keyword name="HelpTabBar.mouseMoveEvent" id="HelpTabBar.mouseMoveEvent" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.mouseMoveEvent" />
       <keyword name="HelpTabBar.mousePressEvent" id="HelpTabBar.mousePressEvent" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.mousePressEvent" />
       <keyword name="HelpTabBar.tabRemoved" id="HelpTabBar.tabRemoved" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.tabRemoved" />
+      <keyword name="SslInfoDialog (Module)" id="SslInfoDialog (Module)" ref="eric5.Helpviewer.SslInfoDialog.html" />
+      <keyword name="SslInfoDialog" id="SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog" />
+      <keyword name="SslInfoDialog (Constructor)" id="SslInfoDialog (Constructor)" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__init__" />
+      <keyword name="SslInfoDialog.__certificateString" id="SslInfoDialog.__certificateString" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__certificateString" />
+      <keyword name="SslInfoDialog.__formatHexString" id="SslInfoDialog.__formatHexString" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__formatHexString" />
+      <keyword name="SslInfoDialog.__serialNumber" id="SslInfoDialog.__serialNumber" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__serialNumber" />
       <keyword name="HelpTopicDialog (Module)" id="HelpTopicDialog (Module)" ref="eric5.Helpviewer.HelpTopicDialog.html" />
       <keyword name="HelpTopicDialog" id="HelpTopicDialog" ref="eric5.Helpviewer.HelpTopicDialog.html#HelpTopicDialog" />
       <keyword name="HelpTopicDialog (Constructor)" id="HelpTopicDialog (Constructor)" ref="eric5.Helpviewer.HelpTopicDialog.html#HelpTopicDialog.__init__" />
@@ -2606,6 +2614,7 @@
       <keyword name="HelpWebPage.pageAttributeId" id="HelpWebPage.pageAttributeId" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.pageAttributeId" />
       <keyword name="HelpWebPage.populateNetworkRequest" id="HelpWebPage.populateNetworkRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.populateNetworkRequest" />
       <keyword name="HelpWebPage.setUserAgent" id="HelpWebPage.setUserAgent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.setUserAgent" />
+      <keyword name="HelpWebPage.showSslInfo" id="HelpWebPage.showSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.showSslInfo" />
       <keyword name="HelpWebPage.supportsExtension" id="HelpWebPage.supportsExtension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.supportsExtension" />
       <keyword name="HelpWebPage.userAgent" id="HelpWebPage.userAgent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.userAgent" />
       <keyword name="HelpWebPage.userAgentForUrl" id="HelpWebPage.userAgentForUrl" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.userAgentForUrl" />
@@ -7345,6 +7354,11 @@
       <keyword name="AdBlockAccessHandler" id="AdBlockAccessHandler" ref="eric5.Helpviewer.AdBlock.AdBlockAccessHandler.html#AdBlockAccessHandler" />
       <keyword name="AdBlockAccessHandler.createRequest" id="AdBlockAccessHandler.createRequest" ref="eric5.Helpviewer.AdBlock.AdBlockAccessHandler.html#AdBlockAccessHandler.createRequest" />
       <keyword name="UrlBar (Package)" id="UrlBar (Package)" ref="index-eric5.Helpviewer.UrlBar.html" />
+      <keyword name="SslLabel (Module)" id="SslLabel (Module)" ref="eric5.Helpviewer.UrlBar.SslLabel.html" />
+      <keyword name="SslLabel" id="SslLabel" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel" />
+      <keyword name="SslLabel (Constructor)" id="SslLabel (Constructor)" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel.__init__" />
+      <keyword name="SslLabel.mouseDoubleClickEvent" id="SslLabel.mouseDoubleClickEvent" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel.mouseDoubleClickEvent" />
+      <keyword name="SslLabel.mouseReleaseEvent" id="SslLabel.mouseReleaseEvent" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel.mouseReleaseEvent" />
       <keyword name="UrlBar (Module)" id="UrlBar (Module)" ref="eric5.Helpviewer.UrlBar.UrlBar.html" />
       <keyword name="UrlBar" id="UrlBar" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar" />
       <keyword name="UrlBar (Constructor)" id="UrlBar (Constructor)" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__init__" />
@@ -9967,7 +9981,9 @@
       <file>eric5.Helpviewer.QtHelpDocumentationDialog.html</file>
       <file>eric5.Helpviewer.QtHelpFiltersDialog.html</file>
       <file>eric5.Helpviewer.SearchWidget.html</file>
+      <file>eric5.Helpviewer.SslInfoDialog.html</file>
       <file>eric5.Helpviewer.UrlBar.FavIconLabel.html</file>
+      <file>eric5.Helpviewer.UrlBar.SslLabel.html</file>
       <file>eric5.Helpviewer.UrlBar.StackedUrlBar.html</file>
       <file>eric5.Helpviewer.UrlBar.UrlBar.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentDefaults.html</file>
