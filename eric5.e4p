@@ -823,6 +823,7 @@
     <Source>Helpviewer/UrlBar/UrlBar.py</Source>
     <Source>Helpviewer/UrlBar/FavIconLabel.py</Source>
     <Source>Helpviewer/UrlBar/StackedUrlBar.py</Source>
+    <Source>Helpviewer/UrlBar/SslLabel.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

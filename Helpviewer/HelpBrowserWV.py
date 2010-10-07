@@ -326,6 +326,12 @@ class HelpWebPage(QWebPage):
         @return reference to the SSL info (QSslCertificate)
         """
         return self.__sslInfo
+    
+    def showSslInfo(self):
+        """
+        Public slot to show some SSL information for the loaded page.
+        """
+        # TODO: add code to show SSL data
 
 ##########################################################################################
 

@@ -8,7 +8,7 @@ Module implementing the URL bar widget.
 """
 
 from PyQt4.QtCore import Qt, QPointF, QUrl
-from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient, QLabel
+from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient
 from PyQt4.QtNetwork import QSslCertificate
 from PyQt4.QtWebKit import QWebSettings
 
@@ -16,6 +16,7 @@ from E5Gui.E5LineEdit import E5LineEdit
 from E5Gui.E5LineEditButton import E5LineEditButton
 
 from .FavIconLabel import FavIconLabel
+from .SslLabel import SslLabel
 
 import UI.PixmapCache
 import Preferences
@@ -42,7 +43,7 @@ class UrlBar(E5LineEdit):
         self.__favicon = FavIconLabel(self)
         self.addWidget(self.__favicon, E5LineEdit.LeftSide)
         
-        self.__sslLabel = QLabel(self)
+        self.__sslLabel = SslLabel(self)
         self.__sslLabel.setStyleSheet(
             "QLabel { color : white; background-color : green; }")
         self.addWidget(self.__sslLabel, E5LineEdit.LeftSide)
@@ -76,6 +77,8 @@ class UrlBar(E5LineEdit):
         self.__browser.loadProgress.connect(self.update)
         self.__browser.loadFinished.connect(self.__loadFinished)
         self.__browser.loadStarted.connect(self.__loadStarted)
+        
+        self.__sslLabel.clicked[()].connect(self.__browser.page().showSslInfo)
     
     def browser(self):
         """
