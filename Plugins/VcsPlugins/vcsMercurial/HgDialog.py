@@ -73,7 +73,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         if self.__updateCommand and self.normal:
             # check, if we had additions or deletions
             lastLine = self.resultbox.toPlainText().splitlines()[-1]
-            if lastLine:
+            if lastLine and lastLine.strip()[0] in "0123456789":
                 adds, merges, deletes, conflicts = \
                     [int(a.split()[0]) for a in lastLine.split(",")]
                 self.__hasAddOrDelete = adds > 0 or deletes > 0
@@ -113,7 +113,9 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.intercept = False
         
         self.__hasAddOrDelete = False
-        self.__updateCommand = args[0] == "update"
+        if args[0] == "update" or \
+           (args[0] == "pull" and "--update" in args[1:]):
+            self.__updateCommand = True
         
         self.proc = QProcess()
         

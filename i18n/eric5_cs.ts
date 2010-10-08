@@ -14247,112 +14247,112 @@ You have %n tab(s) open.</source>
         <translation>Vyberte počet položek, které se mají zobrazit.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1316"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1318"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation>Stažení (pull) z Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1344"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1347"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation>Odeslání (push) do Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1453"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1456"/>
         <source>Resolving files/directories</source>
         <translation>Vyřešení souborů/složek</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1475"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1478"/>
         <source>Create Branch</source>
         <translation>Vytvořit větev</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1475"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1478"/>
         <source>Enter branch name</source>
         <translation>Zadejte název větve</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1486"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1489"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation>Vytvoření větve v Mercurial repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1557"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1560"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Ověřit integritu Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1581"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1584"/>
         <source>Showing the combined configuration settings</source>
         <translation>Zobrazení nastavení kombinovaných konfigurací</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1604"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1607"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Zobrazení aliasů pro vzdálené úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1627"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1630"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Obnovení z přerušené transakce</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1846"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1849"/>
         <source>Shall the working directory be updated?</source>
         <translation>Má být pracovní adresář aktualizován?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1509"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1512"/>
         <source>Showing current branch</source>
         <translation>Zobrazení aktuální větve</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1758"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1761"/>
         <source>Create changegroup</source>
         <translation>Vytvořit skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1857"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1860"/>
         <source>Apply changegroups</source>
         <translation>Použít skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1871"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1874"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Neplatný bisect podpříkaz ({0}).</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1898"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1901"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1810"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1813"/>
         <source>Preview changegroup</source>
         <translation>Náhled skupiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1650"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1653"/>
         <source>Identifying project directory</source>
         <translation>Rozpoznat složku projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1675"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1678"/>
         <source>Create .hgignore file</source>
         <translation>Vytvořit soubor .hgignore</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1675"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1678"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1930"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1933"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Odebrat soubory jen z Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1719"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1722"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Soubory Mercurial skupiny změn (*.hg)</translation>
     </message>
@@ -14362,27 +14362,27 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">&lt;p&gt;Soubor Mercurial skupiny změn&lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1840"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1843"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Soubory Mercurial skupiny změn (*.hg);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1820"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1823"/>
         <source>Identifying changegroup file</source>
         <translation>Rozpoznat soubor skupiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1979"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1982"/>
         <source>Backing out changeset</source>
         <translation>Zálohovat skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1959"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1962"/>
         <source>No revision given. Aborting...</source>
         <translation>Nebyla dána žádná revize. Ruším...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1736"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1739"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14918,12 +14918,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="137"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="137"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -15775,959 +15775,969 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HgProjectHelper</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="50"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="51"/>
         <source>New from repository</source>
         <translation>Nový z repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="50"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="51"/>
         <source>&amp;New from repository...</source>
         <translation>&amp;Nový z repozitáře...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="53"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="54"/>
         <source>Create (clone) a new project from a Mercurial repository</source>
         <translation>Naklonovat projekt z Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="56"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="57"/>
         <source>&lt;b&gt;New from repository&lt;/b&gt;&lt;p&gt;This creates (clones) a new local project from a Mercurial repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nový z repozitáře&lt;/b&gt;&lt;p&gt;Vytvoří nový lokální projekt z Mercurial repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="64"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="65"/>
         <source>Show incoming log</source>
         <translation>Zobrazit příchozí logy</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="68"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="69"/>
         <source>Show the log of incoming changes</source>
         <translation>Zobrazit log přichozích změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="71"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="72"/>
         <source>&lt;b&gt;Show incoming log&lt;/b&gt;&lt;p&gt;This shows the log of changes coming into the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit příchozí log&lt;/b&gt;&lt;p&gt;Toto zobrazí log se změnami přicházejícími z repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="78"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="79"/>
         <source>Pull changes</source>
         <translation>Stáhnout změny</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="82"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="83"/>
         <source>Pull changes from a remote repository</source>
         <translation>Stáhnout změny (pull) ze vzdáleného repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="85"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="86"/>
         <source>&lt;b&gt;Pull changes&lt;/b&gt;&lt;p&gt;This pulls changes from a remote repository into the local repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stáhnoput změny&lt;/b&gt;&lt;p&gt;Přikaz pull stáhne změny ze vzdáleného repozitáře a začlení je do lokálního repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="93"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="94"/>
         <source>Update from repository</source>
         <translation>Obnovit z repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="93"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="94"/>
         <source>&amp;Update from repository</source>
         <translation>&amp;Update: obnovit z repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="97"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="98"/>
         <source>Update the local project from the Mercurial repository</source>
         <translation>Obnovit lokální projekt z Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="100"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="101"/>
         <source>&lt;b&gt;Update from repository&lt;/b&gt;&lt;p&gt;This updates the local project from the Mercurial repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Obnovit z repozitáře&lt;/b&gt;&lt;p&gt;Obnoví lokální projekt z Mercurial repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="108"/>
         <source>Commit changes to repository</source>
         <translation>Zapsat změny do repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="108"/>
         <source>&amp;Commit changes to repository...</source>
         <translation>&amp;Zapsat změny do repozitáře...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="111"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="112"/>
         <source>Commit changes to the local project to the Mercurial repository</source>
         <translation>Zápis změn (commit) do lokálního Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="114"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="115"/>
         <source>&lt;b&gt;Commit changes to repository&lt;/b&gt;&lt;p&gt;This commits changes to the local project to the Mercurial repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zápis změn do repozitáře (commit)&lt;/b&gt;&lt;p&gt;Uloží změny v projektu do lokálního Mercurial repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="122"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="123"/>
         <source>Show outgoing log</source>
         <translation>Zobrazit odchozí logy</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="126"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="127"/>
         <source>Show the log of outgoing changes</source>
         <translation>Zobrazit log odchozích změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="129"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="130"/>
         <source>&lt;b&gt;Show outgoing log&lt;/b&gt;&lt;p&gt;This shows the log of changes outgoing out of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit odchozí log&lt;/b&gt;&lt;p&gt;Toto zobrazí log se změnami odcházejícími z repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="136"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="137"/>
         <source>Push changes</source>
         <translation>Předat změny</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="140"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="141"/>
         <source>Push changes to a remote repository</source>
         <translation>Předat změny do vzdáleného repozitáře (push)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="143"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="144"/>
         <source>&lt;b&gt;Push changes&lt;/b&gt;&lt;p&gt;This pushes changes from the local repository to a remote repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předat změny (push)&lt;/b&gt;&lt;p&gt;Přikaz push předá změny z lokálního repozitáře do vzdáleného repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="166"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="167"/>
         <source>Export from repository</source>
         <translation>Exportovat z repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="166"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="167"/>
         <source>&amp;Export from repository...</source>
         <translation>&amp;Exportovat z repozitáře...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="170"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="171"/>
         <source>Export a project from the repository</source>
         <translation>Export projekt z repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="173"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="174"/>
         <source>&lt;b&gt;Export from repository&lt;/b&gt;&lt;p&gt;This exports a project from the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Exportovat z repozitáře&lt;/b&gt;&lt;p&gt;Exportuje projekt z repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="180"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="181"/>
         <source>Add to repository</source>
         <translation>Přidat do repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="180"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="181"/>
         <source>&amp;Add to repository...</source>
         <translation>Přid&amp;at do repozitáře...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="183"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="184"/>
         <source>Add the local project to the repository</source>
         <translation>Přidat lokální projekt do repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="186"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="187"/>
         <source>&lt;b&gt;Add to repository&lt;/b&gt;&lt;p&gt;This adds (imports) the local project to the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat do repozitáře&lt;/b&gt;&lt;p&gt;Přidá (importuje) lokální projekt do repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="193"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="194"/>
         <source>Remove from repository (and disk)</source>
         <translation>Odebrat z repozitáře (a z disku)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="193"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="194"/>
         <source>&amp;Remove from repository (and disk)</source>
         <translation>Odeb&amp;rat z repozitáře (a z disku)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="197"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="198"/>
         <source>Remove the local project from the repository (and  disk)</source>
         <translation>Odebrat lokální projekt z repozitáře (a z disku)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="200"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="201"/>
         <source>&lt;b&gt;Remove from repository&lt;/b&gt;&lt;p&gt;This removes the local project from the repository (and disk).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Odebrat z repozitáře&lt;/b&gt;&lt;p&gt;Lokální projekt se odebere z repozitáře (a z disku).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="208"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="209"/>
         <source>Show log</source>
         <translation>Zobrazit log</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="208"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="209"/>
         <source>Show &amp;log</source>
         <translation>Zobrazit &amp;log</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="212"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="213"/>
         <source>Show the log of the local project</source>
         <translation>Zobrazit log lokálního projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="215"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="216"/>
         <source>&lt;b&gt;Show log&lt;/b&gt;&lt;p&gt;This shows the log of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit log&lt;/b&gt;&lt;p&gt;Zobrazí log lokálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="222"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="223"/>
         <source>Show limited log</source>
         <translation>Zobrazit limitovaný log</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="226"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="227"/>
         <source>Show a limited log of the local project</source>
         <translation>Zobrazit limitovaný log lokálního projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="229"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="230"/>
         <source>&lt;b&gt;Show limited log&lt;/b&gt;&lt;p&gt;This shows the log of the local project limited to a selectable number of entries.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit limitovaný log&lt;/b&gt;&lt;p&gt;Zobrazuje log lokálního projektu jen do určitého počtu záznamů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="237"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="238"/>
         <source>Show log browser</source>
         <translation>Zobrazit log prohlížeč</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="241"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="242"/>
         <source>Show a dialog to browse the log of the local project</source>
         <translation>Zobrazit dialog pro procházení logů lokálního projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="244"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="245"/>
         <source>&lt;b&gt;Show log browser&lt;/b&gt;&lt;p&gt;This shows a dialog to browse the log of the local project. A limited number of entries is shown first. More can be retrieved later on.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit log prohlížeč&lt;/b&gt;&lt;p&gt;Zobrazí se dialogové okno pro procházení logů lokálního projektu. Jako první je zobrazen limit maximálního přenosu. Více záznamů může být zobrazeno později.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="253"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="254"/>
         <source>Show difference</source>
         <translation>Zobrazit odlišnosti</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="253"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="254"/>
         <source>Show &amp;difference</source>
         <translation>Zobrazit o&amp;dlišnosti</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="257"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="258"/>
         <source>Show the difference of the local project to the repository</source>
         <translation>Zobrazí odlišnosti mezi lokálním projektem a repozitářem</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="260"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="261"/>
         <source>&lt;b&gt;Show difference&lt;/b&gt;&lt;p&gt;This shows the difference of the local project to the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit odlišnosti&lt;/b&gt;&lt;p&gt;Zobrazí odlišnosti mezi lokálním projektem a repozitářem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="267"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="268"/>
         <source>Show difference (extended)</source>
         <translation>Zobrazit odlišnosti (rozšířeně)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="271"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="272"/>
         <source>Show the difference of revisions of the project to the repository</source>
         <translation>Zobrazí odlišnosti mezi revizemi projektu v repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="274"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="275"/>
         <source>&lt;b&gt;Show difference (extended)&lt;/b&gt;&lt;p&gt;This shows the difference of selectable revisions of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit odlišnosti (rozšířeně)&lt;/b&gt;&lt;p&gt;Zobrazují se odlišnosti vybraných revizí vůči projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="281"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="282"/>
         <source>Show status</source>
         <translation>Zobrazit status</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="281"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="282"/>
         <source>Show &amp;status</source>
         <translation>Zobrazit &amp;status</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="285"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="286"/>
         <source>Show the status of the local project</source>
         <translation>Zobrazit status lokálního projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="288"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="289"/>
         <source>&lt;b&gt;Show status&lt;/b&gt;&lt;p&gt;This shows the status of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit status&lt;/b&gt;&lt;p&gt;Zobrazí status lokálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="295"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="296"/>
         <source>Show heads</source>
         <translation>Zobrazit hlavy</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="298"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="299"/>
         <source>Show the heads of the repository</source>
         <translation>Zobrazit ukazatele hlav repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="301"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="302"/>
         <source>&lt;b&gt;Show heads&lt;/b&gt;&lt;p&gt;This shows the heads of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit ukazatele hlav&lt;/b&gt;&lt;p&gt;Zobrazí ukazatele hlav repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="308"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="309"/>
         <source>Show parents</source>
         <translation>Zobrazit předky</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="311"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="312"/>
         <source>Show the parents of the repository</source>
         <translation>Zobrazit předky repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="314"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="315"/>
         <source>&lt;b&gt;Show parents&lt;/b&gt;&lt;p&gt;This shows the parents of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit předky&lt;/b&gt;&lt;p&gt;Zobrazí předky repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="321"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="322"/>
         <source>Show tip</source>
         <translation>Zobrazit ukazatel tip</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="324"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="325"/>
         <source>Show the tip of the repository</source>
         <translation>Zobrazí ukazatel tip repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="327"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="328"/>
         <source>&lt;b&gt;Show tip&lt;/b&gt;&lt;p&gt;This shows the tip of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit ukazatele tip&lt;/b&gt;&lt;p&gt;Zobrazí ukazatele tip repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="334"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="335"/>
         <source>Revert changes</source>
         <translation>Vrátit změny</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="334"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="335"/>
         <source>Re&amp;vert changes</source>
         <translation>&amp;Vrátit změny</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="338"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="339"/>
         <source>Revert all changes made to the local project</source>
         <translation>Vrátit všechny změny, které byly provedeny v lokálním projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="341"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="342"/>
         <source>&lt;b&gt;Revert changes&lt;/b&gt;&lt;p&gt;This reverts all changes made to the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vrátit změny&lt;/b&gt;&lt;p&gt;Vrátí se všechny změny, které byly provedeny v lokálním projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="348"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="349"/>
         <source>Merge</source>
         <translation>Sloučit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="348"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="349"/>
         <source>Mer&amp;ge changes...</source>
         <translation>&amp;Sloučit změny...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="352"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="353"/>
         <source>Merge changes of a revision into the local project</source>
         <translation>Sloučí změny revize do lokálního projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="355"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="356"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a revision into the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sloučit&lt;/b&gt;&lt;p&gt;Sloučí se změny revize do lokálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="362"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="363"/>
         <source>Resolve conflicts</source>
         <translation>Vyřešit konflikty</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="362"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="363"/>
         <source>Resolve con&amp;flicts</source>
         <translation>Vyřešit kon&amp;flikty</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="365"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="366"/>
         <source>Resolve all conflicts of the local project</source>
         <translation>Vyřešit všechny konflikty v lokálním projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="368"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="369"/>
         <source>&lt;b&gt;Resolve conflicts&lt;/b&gt;&lt;p&gt;This resolves all conflicts of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyřešit konflikty&lt;/b&gt;&lt;p&gt;Vyřeší se všechny konflikty v lokálním projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="375"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="376"/>
         <source>Tag in repository</source>
         <translation>Vytvořit tag v repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="375"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="376"/>
         <source>&amp;Tag in repository...</source>
         <translation>Vytvořit &amp;tag v repozitáři...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="379"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="380"/>
         <source>Tag the local project in the repository</source>
         <translation>Vytvořit Tag - značku z lokálního projektu do repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="382"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="383"/>
         <source>&lt;b&gt;Tag in repository&lt;/b&gt;&lt;p&gt;This tags the local project in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit tag v repozitáři&lt;/b&gt;&lt;p&gt;Z lokálního projektu vytvoří značku - tag v repozitáři.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="389"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="390"/>
         <source>List tags</source>
         <translation>Seznam tagů</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="389"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="390"/>
         <source>List tags...</source>
         <translation>Seznam tagů...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="392"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="393"/>
         <source>List tags of the project</source>
         <translation>Seznam tagů projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="395"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="396"/>
         <source>&lt;b&gt;List tags&lt;/b&gt;&lt;p&gt;This lists the tags of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seznam tagů&lt;/b&gt;&lt;p&gt;Zobrazí seznam tagů projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="402"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="403"/>
         <source>List branches</source>
         <translation>Seznam větví</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="402"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="403"/>
         <source>List branches...</source>
         <translation>Seznam větví...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="405"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="406"/>
         <source>List branches of the project</source>
         <translation>Seznam větví projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="408"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="409"/>
         <source>&lt;b&gt;List branches&lt;/b&gt;&lt;p&gt;This lists the branches of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seznam větví&lt;/b&gt;&lt;p&gt;Zobrazí seznam větví projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="415"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="416"/>
         <source>Create branch</source>
         <translation>Vytvořit větev</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="415"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="416"/>
         <source>Create &amp;branch...</source>
         <translation>Narou&amp;bovat větev...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="419"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="420"/>
         <source>Create a new branch for the local project in the repository</source>
         <translation>Vytvořit v repoziáři novou větev pro lokální projekt</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="422"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="423"/>
         <source>&lt;b&gt;Create branch&lt;/b&gt;&lt;p&gt;This creates a new branch for the local project in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit větev&lt;/b&gt;&lt;p&gt;V repozitáři se vytvoří nová větev v lokálním projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="430"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="431"/>
         <source>Close branch</source>
         <translation>Zavřít větev</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="433"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="434"/>
         <source>Close the current branch of the local project</source>
         <translation>Zavře aktuální větev v lokálním projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="436"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="437"/>
         <source>&lt;b&gt;Close branch&lt;/b&gt;&lt;p&gt;This closes the current branch of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít větev&lt;/b&gt;&lt;p&gt;Zavře aktuální větev v lokálním projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="456"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="457"/>
         <source>Switch</source>
         <translation>Přepnout</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="456"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="457"/>
         <source>S&amp;witch...</source>
         <translation>&amp;Přepnout...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="460"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="461"/>
         <source>Switch the working directory to another revision</source>
         <translation>Přepnout pracovní adresář do jiné revize</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="463"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="464"/>
         <source>&lt;b&gt;Switch&lt;/b&gt;&lt;p&gt;This switches the working directory to another revision.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout&lt;/b&gt;&lt;p&gt;Přepne pracovní adresář do jiné revize.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="470"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="471"/>
         <source>Cleanup</source>
         <translation>Vyčistit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="470"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="471"/>
         <source>Cleanu&amp;p</source>
         <translation>Vy&amp;prat</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="473"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="474"/>
         <source>Cleanup the local project</source>
         <translation>Vyčistit lokální projekt</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="476"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="477"/>
         <source>&lt;b&gt;Cleanup&lt;/b&gt;&lt;p&gt;This performs a cleanup of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit&lt;/b&gt;&lt;p&gt;Provede úklid lokálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="483"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="484"/>
         <source>Execute command</source>
         <translation>Provést příkaz</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="483"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="484"/>
         <source>E&amp;xecute command...</source>
         <translation>P&amp;rovést příkaz...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="486"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="487"/>
         <source>Execute an arbitrary Mercurial command</source>
         <translation>Spustit libovolný Mercurial příkaz</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="489"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="490"/>
         <source>&lt;b&gt;Execute command&lt;/b&gt;&lt;p&gt;This opens a dialog to enter an arbitrary Mercurial command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Provést příkaz&lt;/b&gt;&lt;p&gt;Otevře se dialogové okno pro zadání libovolného Mercurial příkazu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="496"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="497"/>
         <source>Command options</source>
         <translation>Parametry příkazu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="496"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="497"/>
         <source>Command &amp;options...</source>
         <translation>&amp;Parametry příkazu...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="499"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="500"/>
         <source>Show the Mercurial command options</source>
         <translation>Zobrazit parametry Mercurial příkazu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="500"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="501"/>
         <source>&lt;b&gt;Command options...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the Mercurial command options.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Parametry příkazu...&lt;/b&gt;&lt;p&gt;Zobrazí se dialog s editací parametrů Mercurial příkazu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="507"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="508"/>
         <source>Configure</source>
         <translation>Konfigurovat</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="507"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="508"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="510"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="511"/>
         <source>Show the configuration dialog with the Mercurial page selected</source>
         <translation>Zobrazit konfigurační dialog s vybranou Mercurial stranou</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="513"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="514"/>
         <source>&lt;b&gt;Configure&lt;/b&gt;&lt;p&gt;Show the configuration dialog with the Mercurial page selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konfigurovat&lt;/b&gt;&lt;p&gt;Zobrazit konfigurační dialog s vybranou Mercurial stranou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="520"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="521"/>
         <source>Edit repository config</source>
         <translation>Editovat konfiguraci repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="520"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="521"/>
         <source>Edit repository config...</source>
         <translation>Editovat konfiguraci repozitáře...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="523"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="524"/>
         <source>Show an editor to edit the repository config file</source>
         <translation>Zobrazit editor pro editaci konfiguračního souboru repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="526"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="527"/>
         <source>&lt;b&gt;Edit repository config&lt;/b&gt;&lt;p&gt;Show an editor to edit the repository config file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit konfiguraci repozitáře&lt;/b&gt;&lt;p&gt;Zobrazí editor pro editaci konfiguračního souboru repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="533"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="534"/>
         <source>Show combined config settings</source>
         <translation>Zobrazit kombinovaná nastavení konfigurace</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="533"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="534"/>
         <source>Show combined config settings...</source>
         <translation>Zobrazit kombinovaná nastavení konfigurace...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="536"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="537"/>
         <source>Show the combined config settings from all config files</source>
         <translation>Zobrazit kombinovaná nastavení ze všech konfigurací</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="539"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="540"/>
         <source>&lt;b&gt;Show combined config settings&lt;/b&gt;&lt;p&gt;This shows the combined config settings from all config files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit kombinovaná nastavení konfigurace&lt;/b&gt;&lt;p&gt;Toto zobrazí kombinovaná nastavení ze všech konfigurací.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="546"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="547"/>
         <source>Show paths</source>
         <translation>Zobrazit cesty</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="546"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="547"/>
         <source>Show paths...</source>
         <translation>Zobrazit cesty...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="549"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="550"/>
         <source>Show the aliases for remote repositories</source>
         <translation>Zobrazit aliasy pro vzádelené repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="552"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="553"/>
         <source>&lt;b&gt;Show paths&lt;/b&gt;&lt;p&gt;This shows the aliases for remote repositories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit cesty&lt;/b&gt;&lt;p&gt;Zobrazí aliasy vzdálených repozitářů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="559"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="560"/>
         <source>Verify repository</source>
         <translation>Ověřit repozitář</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="559"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="560"/>
         <source>Verify repository...</source>
         <translation>Ověřit repozitář...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="562"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="563"/>
         <source>Verify the integrity of the repository</source>
         <translation>Ověřit integritu repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="565"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="566"/>
         <source>&lt;b&gt;Verify repository&lt;/b&gt;&lt;p&gt;This verifies the integrity of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ověřit integritu repozitáře&lt;/b&gt;&lt;p&gt;Ověří integritu repozitáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="572"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="573"/>
         <source>Recover</source>
         <translation>Zotavit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="572"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="573"/>
         <source>Recover...</source>
         <translation>Zotavit...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="575"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="576"/>
         <source>Recover from an interrupted transaction</source>
         <translation>Zotavit z přerušené transakce</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="578"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="579"/>
         <source>&lt;b&gt;Recover&lt;/b&gt;&lt;p&gt;This recovers from an interrupted transaction.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zotavit&lt;/b&gt;&lt;p&gt;Obnoví integritu repozitáře narušenou přerušenou transakcí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="753"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="754"/>
         <source>Repository Administration</source>
         <translation>Administrace repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="598"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="599"/>
         <source>Create .hgignore</source>
         <translation>Vytvořit .hgignore</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="601"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="602"/>
         <source>Create a .hgignore file with default values</source>
         <translation>Vytvořit soubor .hgignore s výchozími hodnotami</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="604"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="605"/>
         <source>&lt;b&gt;Create .hgignore&lt;/b&gt;&lt;p&gt;This creates a .hgignore file with default values.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vytvořit .hgignore&lt;br&gt;Vytvoří soubor .hgignore s výchozími hodnotami.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="611"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="612"/>
         <source>Create changegroup</source>
         <translation>Vytvořit skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="611"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="612"/>
         <source>Create changegroup...</source>
         <translation>Vytvořit skupinu změn...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="614"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="615"/>
         <source>Create changegroup file collecting changesets</source>
         <translation>Vytvořit soubor s skupinou změn obsahující množinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="653"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="654"/>
         <source>Apply changegroups</source>
         <translation>Použít skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="653"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="654"/>
         <source>Apply changegroups...</source>
         <translation>Použít skupinu změn...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="656"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="657"/>
         <source>Apply one or several changegroup files</source>
         <translation>Použít soubory s jednou nebo více skupinami změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="778"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="779"/>
         <source>Changegroup Management</source>
         <translation>Správa skupin změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="617"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="618"/>
         <source>&lt;b&gt;Create changegroup&lt;/b&gt;&lt;p&gt;This creates a changegroup file collecting selected changesets (hg bundle).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit skupin změn&lt;/b&gt;&lt;p&gt;Vytvoří soubor se skupinou změn obsahující vybrané množiny změn (hg bundle).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="659"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="660"/>
         <source>&lt;b&gt;Apply changegroups&lt;/b&gt;&lt;p&gt;This applies one or several changegroup files generated by the &apos;Create changegroup&apos; action (hg unbundle).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Použít skupinu změn&lt;/b&gt;&lt;p&gt;Použije se soubor vygenerovaný příkazem &apos;Vytvořit skupinu změn&apos;, s jednou nebo více skupinami změn (hg unbundle)&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="443"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="444"/>
         <source>Show current branch</source>
         <translation>Zobrazit aktuální větev</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="446"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="447"/>
         <source>Show the current branch of the project</source>
         <translation>Zobrazit aktuální větev projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="449"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="450"/>
         <source>&lt;b&gt;Show current branch&lt;/b&gt;&lt;p&gt;This shows the current branch of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zobrazit aktuální větev&lt;/b&gt;&lt;p&gt;Zobrazí se aktuální větev projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="667"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="668"/>
         <source>Mark as &quot;good&quot;</source>
         <translation>Označit jako &quot;v pořádku&quot;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="670"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="671"/>
         <source>Mark a selectable changeset as good</source>
         <translation>Označit volitelnou množinu změn, že je v pořádku</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="673"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="674"/>
         <source>&lt;b&gt;Mark as good&lt;/b&gt;&lt;p&gt;This marks a selectable changeset as good.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Označit jako &quot;v pořádku&quot;&lt;/b&gt;&lt;p&gt;Označí se volitelná množina změn, že je v pořádku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="680"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="681"/>
         <source>Mark as &quot;bad&quot;</source>
         <translation>Označit jako &quot;špatná&quot;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="684"/>
         <source>Mark a selectable changeset as bad</source>
         <translation>Označit volitelnou množinu změn jako špatnou</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="686"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="687"/>
         <source>&lt;b&gt;Mark as bad&lt;/b&gt;&lt;p&gt;This marks a selectable changeset as bad.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Označit jako &quot;špatná&quot;&lt;/b&gt;&lt;p&gt;Označí se volitelná množina změn, že je špatná.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="693"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="694"/>
         <source>Skip</source>
         <translation>Přeskočit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="696"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="697"/>
         <source>Skip the current changeset</source>
         <translation>Přeskočit aktuální množinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="699"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="700"/>
         <source>&lt;b&gt;Skip&lt;/b&gt;&lt;p&gt;This skips the current changeset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přeskočit&lt;/b&gt;&lt;p&gt;Aktuální množina změn se přeskočí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="706"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="707"/>
         <source>Reset</source>
         <translation>Reset</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="709"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="710"/>
         <source>Reset the bisect search data</source>
         <translation>Reset vyhledávání bisect</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="712"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="713"/>
         <source>&lt;b&gt;Reset&lt;/b&gt;&lt;p&gt;This resets the bisect search data.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reset&lt;/b&gt;&lt;p&gt;Zresetuje bisect vyhledávání v datech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="784"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="785"/>
         <source>Bisect</source>
         <translation>Bisect</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="667"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="668"/>
         <source>Mark as &quot;good&quot;...</source>
         <translation>Označit jako &quot;v pořádku&quot;...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="680"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="681"/>
         <source>Mark as &quot;bad&quot;...</source>
         <translation>Označit jako &quot;špatná&quot;...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="625"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="626"/>
         <source>Preview changegroup</source>
         <translation>Náhled skupiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="625"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="626"/>
         <source>Preview changegroup...</source>
         <translation>Náhled skupiny změn...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="585"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="586"/>
         <source>Identify</source>
         <translation>Identifikovat</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="585"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="586"/>
         <source>Identify...</source>
         <translation>Identifikovat...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="588"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="589"/>
         <source>Identify the project directory</source>
         <translation>Identifikovat adresář projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="591"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="592"/>
         <source>&lt;b&gt;Identify&lt;/b&gt;&lt;p&gt;This identifies the project directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Identifikovat&lt;/b&gt;&lt;p&gt;Identifikuje se adresář projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="628"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="629"/>
         <source>Preview a changegroup file containing a collection of changesets</source>
         <translation>Náhled souboru skupiny změn obsahující množiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="631"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="632"/>
         <source>&lt;b&gt;Preview changegroup&lt;/b&gt;&lt;p&gt;This previews a changegroup file containing a collection of changesets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Náhled skupiny změn&lt;/b&gt;&lt;p&gt;Zobrazí náhled souboru skupiny změn obsahující množiny změn.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="639"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="640"/>
         <source>Identify changegroup</source>
         <translation>Identifikovat skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="639"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="640"/>
         <source>Identify changegroup...</source>
         <translation>Identifikovat skupinu změn...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="642"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="643"/>
         <source>Identify a changegroup file containing a collection of changesets</source>
         <translation>Identifikuje soubor se skupinou změn obsahující množinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="645"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="646"/>
         <source>&lt;b&gt;Identify changegroup&lt;/b&gt;&lt;p&gt;This identifies a changegroup file containing a collection of changesets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Identifikovat skupinu změn&lt;/b&gt;&lt;p&gt;Identifikuje soubor se skupinou změn obsahující množinu změn.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="719"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="720"/>
         <source>Back out changeset</source>
         <translation>Vycouvat z množiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="722"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="723"/>
         <source>Back out changes of an earlier changeset</source>
         <translation>Vrátit změny z předchozí množiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="725"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="726"/>
         <source>&lt;b&gt;Back out changeset&lt;/b&gt;&lt;p&gt;This backs out changes of an earlier changeset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vycouvat z množiny změn&lt;/b&gt;&lt;p&gt;Vrátit změny z předchozí množiny změn.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="151"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="152"/>
         <source>Push changes (force)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="155"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="156"/>
         <source>Push changes to a remote repository with force option</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="158"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="159"/>
         <source>&lt;b&gt;Push changes (force)&lt;/b&gt;&lt;p&gt;This pushes changes from the local repository to a remote repository using the &apos;force&apos; option.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="732"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="733"/>
         <source>Serve project repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="732"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="733"/>
         <source>Serve project repository...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="735"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="736"/>
         <source>Serve the project repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="738"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="739"/>
         <source>&lt;b&gt;Serve project repository&lt;/b&gt;&lt;p&gt;This serves the project repository.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="773"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="774"/>
         <source>Specials</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="886"/>
+        <source>Pull</source>
+        <translation type="unfinished">Stáhnout</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="886"/>
+        <source>The project should be reread. Do this now?</source>
+        <translation type="unfinished">Projekt bude znovu načten. Má se provést?</translation>
     </message>
 </context>
 <context>
@@ -43667,12 +43677,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Rodič #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Množina změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1406"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1409"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tagy&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1410"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1413"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Větve&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
@@ -43695,23 +43705,23 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Informace o repozitáře&lt;/h3&gt;&lt;p&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;{2}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1400"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1403"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1402"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1405"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Množina změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1414"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1417"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Rodiče&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1417"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1420"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;

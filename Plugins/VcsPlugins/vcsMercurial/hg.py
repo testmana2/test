@@ -1298,6 +1298,8 @@ class Hg(VersionControl):
         Public method used to pull changes from a remote Mercurial repository.
         
         @param name directory name of the project to be pulled to (string)
+        @return flag indicating, that the update contained an add
+            or delete (boolean)
         """
         args = []
         args.append('pull')
@@ -1319,6 +1321,7 @@ class Hg(VersionControl):
             dia.exec_()
             res = dia.hasAddOrDelete()
         self.checkVCSStatus()
+        return res
     
     def hgPush(self, name, force = False):
         """

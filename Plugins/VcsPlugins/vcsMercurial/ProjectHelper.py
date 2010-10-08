@@ -11,6 +11,7 @@ import os
 
 from PyQt4.QtGui import QMenu
 
+from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
 
 from VCS.ProjectHelper import VcsProjectHelper
@@ -880,7 +881,14 @@ class HgProjectHelper(VcsProjectHelper):
         """
         Private slot used to pull changes from a remote repository.
         """
-        self.vcs.hgPull(self.project.ppath)
+        shouldReopen = self.vcs.hgPull(self.project.ppath)
+        if shouldReopen:
+            res = E5MessageBox.yesNo(self.parent(),
+                self.trUtf8("Pull"),
+                self.trUtf8("""The project should be reread. Do this now?"""),
+                yesDefault = True)
+            if res:
+                self.project.reopenProject()
     
     def __hgPush(self):
         """
