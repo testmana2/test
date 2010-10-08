@@ -790,7 +790,7 @@ class HelpBrowser(QWebView):
         menu.addSeparator()
         menu.addAction(self.mw.saveAsAct)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Bookmark this Page"), self.__addBookmark)
+        menu.addAction(self.trUtf8("Bookmark this Page"), self.addBookmark)
         menu.addSeparator()
         menu.addAction(self.mw.backAct)
         menu.addAction(self.mw.forwardAct)
@@ -1016,9 +1016,9 @@ class HelpBrowser(QWebView):
         """
         self.triggerPageAction(QWebPage.InspectElement)
     
-    def __addBookmark(self):
+    def addBookmark(self):
         """
-        Private slot to bookmark the current link.
+        Public slot to bookmark the current page.
         """
         dlg = AddBookmarkDialog()
         dlg.setUrl(bytes(self.url().toEncoded()).decode())

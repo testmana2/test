@@ -1864,6 +1864,7 @@ eric5.Helpviewer.DownloadDialog.DownloadDialog.on_buttonBox_clicked?4(button)
 eric5.Helpviewer.DownloadDialog.DownloadDialog?1(reply = None, requestFilename = False, webPage = None, download = False, parent = None)
 eric5.Helpviewer.HTMLResources.notFoundPage_html?7
 eric5.Helpviewer.HTMLResources.startPage_html?7
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.addBookmark?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backward?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backwardAvailable?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.clearHistory?4()
@@ -2314,6 +2315,9 @@ eric5.Helpviewer.SearchWidget.SearchWidget.on_highlightAllCheckBox_toggled?4(che
 eric5.Helpviewer.SearchWidget.SearchWidget.showFind?4()
 eric5.Helpviewer.SearchWidget.SearchWidget?1(mainWindow, parent = None)
 eric5.Helpviewer.SslInfoDialog.SslInfoDialog?1(certificate, parent = None)
+eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.accept?4()
+eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.on_removeButton_clicked?4()
+eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog?1(bookmark, parent = None)
 eric5.Helpviewer.UrlBar.FavIconLabel.FavIconLabel.mouseMoveEvent?4(evt)
 eric5.Helpviewer.UrlBar.FavIconLabel.FavIconLabel.mousePressEvent?4(evt)
 eric5.Helpviewer.UrlBar.FavIconLabel.FavIconLabel.setBrowser?4(browser)

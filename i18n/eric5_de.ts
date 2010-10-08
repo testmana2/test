@@ -1206,6 +1206,34 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
+    <name>BookmarkInfoDialog</name>
+    <message>
+        <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="14"/>
+        <source>Edit Bookmark</source>
+        <translation>Lesezeichen bearbeiten</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="43"/>
+        <source>Edit this Bookmark</source>
+        <translation>Dieses Lesezeichen bearbeiten</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="59"/>
+        <source>Press to remove this bookmark</source>
+        <translation>Drücken, um dieses Lesezeichen zu löschen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="62"/>
+        <source>Remove this Bookmark</source>
+        <translation>Dieses Lesezeichen löschen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="73"/>
+        <source>Title:</source>
+        <translation>Titel:</translation>
+    </message>
+</context>
+<context>
     <name>BookmarkedFilesDialog</name>
     <message>
         <location filename="ViewManager/BookmarkedFilesDialog.ui" line="13"/>
@@ -14844,12 +14872,12 @@ Mercurial Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="137"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="139"/>
         <source>Process Generation Error</source>
         <translation>Fehler beim Prozessstart</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="137"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="139"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Der Prozess {0} konnte nicht gestartet werden. Stellen Sie sicher, dass er sich im Suchpfad befindet.</translation>
     </message>
@@ -37566,12 +37594,12 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
 <context>
     <name>UrlBar</name>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="36"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="39"/>
         <source>Enter the location here.</source>
         <translation>Geben sie den Pfad hier ein.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="119"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="148"/>
         <source>Unknown</source>
         <translation>Unbekannt</translation>
     </message>

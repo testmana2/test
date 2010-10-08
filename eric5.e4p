@@ -825,6 +825,7 @@
     <Source>Helpviewer/UrlBar/StackedUrlBar.py</Source>
     <Source>Helpviewer/UrlBar/SslLabel.py</Source>
     <Source>Helpviewer/SslInfoDialog.py</Source>
+    <Source>Helpviewer/UrlBar/BookmarkInfoDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1054,6 +1055,7 @@
     <Form>UI/NumbersWidget.ui</Form>
     <Form>Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui</Form>
     <Form>Helpviewer/SslInfoDialog.ui</Form>
+    <Form>Helpviewer/UrlBar/BookmarkInfoDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

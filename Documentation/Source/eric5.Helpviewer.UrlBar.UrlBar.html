@@ -57,6 +57,9 @@ E5LineEdit
 <td><a href="#UrlBar.__init__">UrlBar</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#UrlBar.__bookmarkChanged">__bookmarkChanged</a></td>
+<td>Private slot to handle bookmark changes.</td>
+</tr><tr>
 <td><a href="#UrlBar.__browserUrlChanged">__browserUrlChanged</a></td>
 <td>Private slot to handle a URL change of the associated browser.</td>
 </tr><tr>
@@ -68,6 +71,9 @@ E5LineEdit
 </tr><tr>
 <td><a href="#UrlBar.__privacyClicked">__privacyClicked</a></td>
 <td>Private slot to handle the click of the private mode button.</td>
+</tr><tr>
+<td><a href="#UrlBar.__showBookmarkInfo">__showBookmarkInfo</a></td>
+<td>Private slot to show a dialog with some bookmark info.</td>
 </tr><tr>
 <td><a href="#UrlBar.__textChanged">__textChanged</a></td>
 <td>Private slot to handle changes of the text.</td>
@@ -116,7 +122,12 @@ reference to the main window (HelpWindow)
 <dd>
 reference to the parent widget (HelpBrowser)
 </dd>
-</dl><a NAME="UrlBar.__browserUrlChanged" ID="UrlBar.__browserUrlChanged"></a>
+</dl><a NAME="UrlBar.__bookmarkChanged" ID="UrlBar.__bookmarkChanged"></a>
+<h4>UrlBar.__bookmarkChanged</h4>
+<b>__bookmarkChanged</b>(<i></i>)
+<p>
+        Private slot to handle bookmark changes.
+</p><a NAME="UrlBar.__browserUrlChanged" ID="UrlBar.__browserUrlChanged"></a>
 <h4>UrlBar.__browserUrlChanged</h4>
 <b>__browserUrlChanged</b>(<i>url</i>)
 <p>
@@ -146,6 +157,11 @@ flag indicating a successful load (boolean)
 <b>__privacyClicked</b>(<i></i>)
 <p>
         Private slot to handle the click of the private mode button.
+</p><a NAME="UrlBar.__showBookmarkInfo" ID="UrlBar.__showBookmarkInfo"></a>
+<h4>UrlBar.__showBookmarkInfo</h4>
+<b>__showBookmarkInfo</b>(<i></i>)
+<p>
+        Private slot to show a dialog with some bookmark info.
 </p><a NAME="UrlBar.__textChanged" ID="UrlBar.__textChanged"></a>
 <h4>UrlBar.__textChanged</h4>
 <b>__textChanged</b>(<i>txt</i>)

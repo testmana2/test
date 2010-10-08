@@ -90,9 +90,6 @@ QWebView
 <td><a href="#HelpBrowser.__init__">HelpBrowser</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#HelpBrowser.__addBookmark">__addBookmark</a></td>
-<td>Private slot to bookmark the current link.</td>
-</tr><tr>
 <td><a href="#HelpBrowser.__addExternalBinding">__addExternalBinding</a></td>
 <td>Private slot to add javascript bindings for adding search providers.</td>
 </tr><tr>
@@ -170,6 +167,9 @@ QWebView
 </tr><tr>
 <td><a href="#HelpBrowser.__webInspector">__webInspector</a></td>
 <td>Private slot to show the web inspector window.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.addBookmark">addBookmark</a></td>
+<td>Public slot to bookmark the current page.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.backward">backward</a></td>
 <td>Public slot to move backwards in history.</td>
@@ -266,12 +266,7 @@ parent widget of this window (QWidget)
 <dd>
 name of this window (string)
 </dd>
-</dl><a NAME="HelpBrowser.__addBookmark" ID="HelpBrowser.__addBookmark"></a>
-<h4>HelpBrowser.__addBookmark</h4>
-<b>__addBookmark</b>(<i></i>)
-<p>
-        Private slot to bookmark the current link.
-</p><a NAME="HelpBrowser.__addExternalBinding" ID="HelpBrowser.__addExternalBinding"></a>
+</dl><a NAME="HelpBrowser.__addExternalBinding" ID="HelpBrowser.__addExternalBinding"></a>
 <h4>HelpBrowser.__addExternalBinding</h4>
 <b>__addExternalBinding</b>(<i>frame = None</i>)
 <p>
@@ -488,6 +483,11 @@ the new url (QUrl)
 <b>__webInspector</b>(<i></i>)
 <p>
         Private slot to show the web inspector window.
+</p><a NAME="HelpBrowser.addBookmark" ID="HelpBrowser.addBookmark"></a>
+<h4>HelpBrowser.addBookmark</h4>
+<b>addBookmark</b>(<i></i>)
+<p>
+        Public slot to bookmark the current page.
 </p><a NAME="HelpBrowser.backward" ID="HelpBrowser.backward"></a>
 <h4>HelpBrowser.backward</h4>
 <b>backward</b>(<i></i>)

@@ -116,6 +116,8 @@ class HgDialog(QDialog, Ui_HgDialog):
         if args[0] == "update" or \
            (args[0] == "pull" and "--update" in args[1:]):
             self.__updateCommand = True
+        else:
+            self.__updateCommand = False
         
         self.proc = QProcess()
         

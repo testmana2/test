@@ -7,16 +7,19 @@
 Module implementing the URL bar widget.
 """
 
-from PyQt4.QtCore import Qt, QPointF, QUrl
-from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient
+from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl
+from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient, QIcon
 from PyQt4.QtNetwork import QSslCertificate
 from PyQt4.QtWebKit import QWebSettings
 
 from E5Gui.E5LineEdit import E5LineEdit
 from E5Gui.E5LineEditButton import E5LineEditButton
 
+import Helpviewer.HelpWindow
+
 from .FavIconLabel import FavIconLabel
 from .SslLabel import SslLabel
+from .BookmarkInfoDialog import BookmarkInfoDialog
 
 import UI.PixmapCache
 import Preferences
@@ -40,6 +43,9 @@ class UrlBar(E5LineEdit):
         self.__privateMode = QWebSettings.globalSettings().testAttribute(
             QWebSettings.PrivateBrowsingEnabled)
         
+        self.__bmActiveIcon = UI.PixmapCache.getIcon("bookmark.png")
+        self.__bmInactiveIcon = QIcon(self.__bmActiveIcon.pixmap(16, 16, QIcon.Disabled))
+        
         self.__favicon = FavIconLabel(self)
         self.addWidget(self.__favicon, E5LineEdit.LeftSide)
         
@@ -54,15 +60,27 @@ class UrlBar(E5LineEdit):
         self.addWidget(self.__privacyButton, E5LineEdit.RightSide)
         self.__privacyButton.setVisible(self.__privateMode)
         
+        self.__bookmarkButton = E5LineEditButton(self)
+        self.addWidget(self.__bookmarkButton, E5LineEdit.RightSide)
+        self.__bookmarkButton.setVisible(False)
+        
         self.__clearButton = E5LineEditButton(self)
         self.__clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.addWidget(self.__clearButton, E5LineEdit.RightSide)
         self.__clearButton.setVisible(False)
         
+        self.__bookmarkButton.clicked[()].connect(self.__showBookmarkInfo)
         self.__privacyButton.clicked[()].connect(self.__privacyClicked)
         self.__clearButton.clicked[()].connect(self.clear)
         self.__mw.privacyChanged.connect(self.__privacyButton.setVisible)
         self.textChanged.connect(self.__textChanged)
+        
+        Helpviewer.HelpWindow.HelpWindow.bookmarksManager().entryChanged.connect(
+            self.__bookmarkChanged)
+        Helpviewer.HelpWindow.HelpWindow.bookmarksManager().entryAdded.connect(
+            self.__bookmarkChanged)
+        Helpviewer.HelpWindow.HelpWindow.bookmarksManager().entryRemoved.connect(
+            self.__bookmarkChanged)
     
     def setBrowser(self, browser):
         """
@@ -100,6 +118,7 @@ class UrlBar(E5LineEdit):
         Private slot to perform actions before the page is loaded.
         """
         self.__sslLabel.setVisible(False)
+        self.__bookmarkButton.setVisible(False)
     
     def __loadFinished(self, ok):
         """
@@ -107,6 +126,16 @@ class UrlBar(E5LineEdit):
         
         @param ok flag indicating a successful load (boolean)
         """
+        if self.__browser.url().scheme() in ["pyrc", "about"]:
+            self.__bookmarkButton.setVisible(False)
+        else:
+            if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+               .bookmarkForUrl(self.__browser.url()) is None:
+                self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
+            else:
+                self.__bookmarkButton.setIcon(self.__bmActiveIcon)
+            self.__bookmarkButton.setVisible(True)
+        
         if ok and self.__browser.url().scheme() == "https":
             sslInfo = self.__browser.page().getSslInfo()
             if sslInfo is not None:
@@ -151,6 +180,29 @@ class UrlBar(E5LineEdit):
         Public slot to handle a change of preferences.
         """
         self.update()
+    
+    def __showBookmarkInfo(self):
+        """
+        Private slot to show a dialog with some bookmark info.
+        """
+        bookmark = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+           .bookmarkForUrl(self.__browser.url())
+        if bookmark is None:
+            self.__browser.addBookmark()
+        else:
+            dlg = BookmarkInfoDialog(bookmark, self.__browser)
+            dlg.exec_()
+    
+    @pyqtSlot()
+    def __bookmarkChanged(self):
+        """
+        Private slot to handle bookmark changes.
+        """
+        if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+           .bookmarkForUrl(self.__browser.url()) is None:
+            self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
+        else:
+            self.__bookmarkButton.setIcon(self.__bmActiveIcon)
     
     def paintEvent(self, evt):
         """
