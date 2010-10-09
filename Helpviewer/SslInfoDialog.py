@@ -67,6 +67,9 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
         @return formated serial number (string)
         """
         serial = cert.serialNumber()
+        if serial == "":
+            return self.trUtf8("<not part of the certificate>")
+        
         if ':' in serial:
             return str(serial, encoding = "ascii").upper()
         else:

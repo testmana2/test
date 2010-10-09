@@ -335,6 +335,10 @@ class HelpWebPage(QWebPage):
         if self.__sslInfo is not None and self.__sslInfo.isValid():
             dlg = SslInfoDialog(self.__sslInfo, self.view())
             dlg.exec_()
+        else:
+            E5MessageBox.warning(self.view(), 
+                self.trUtf8("SSL Certificate Info"), 
+                self.trUtf8("""There is no SSL Certificate Info available."""))
 
 ##########################################################################################
 

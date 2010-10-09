@@ -13,7 +13,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:
-    from PyQt4.QtNetwork import QSsl, QSslCertificate, QSslConfiguration, QSslSocket
+    from PyQt4.QtNetwork import QSsl, QSslCertificate, QSslConfiguration, QSslSocket, \
+        QSslError
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
@@ -197,6 +198,8 @@ class NetworkAccessManager(QNetworkAccessManager):
         
         errorStrings = []
         for err in errors:
+            if err.error() == QSslError.NoError:
+                continue
             if err.certificate() in caMerge:
                 continue
             errorStrings.append(err.errorString())
