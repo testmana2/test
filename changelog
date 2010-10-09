@@ -1,5 +1,8 @@
 Change Log
 ----------
+Version 5.0.3:
+- bug fixes
+
 Version 5.0.2:
 - bug fixes
 - added code to cope with Linux distributor's usage of KDE wrapper dialogs
