@@ -59,7 +59,7 @@ emitted after the zoom text only setting was
 QMainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>helpClosed</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>privacyChanged</td></tr><tr><td>zoomTextOnlyChanged</td></tr>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>helpClosed</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>privacyChanged</td></tr><tr><td>zoomTextOnlyChanged</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -229,6 +229,9 @@ QMainWindow
 <td><a href="#HelpWindow.__showCookiesConfiguration">__showCookiesConfiguration</a></td>
 <td>Private slot to configure the cookies handling.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__showDownloadsWindow">__showDownloadsWindow</a></td>
+<td>Private slot to show the downloads dialog.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__showEnginesConfigurationDialog">__showEnginesConfigurationDialog</a></td>
 <td>Private slot to show the search engines configuration dialog.</td>
 </tr><tr>
@@ -321,6 +324,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.currentBrowser">currentBrowser</a></td>
 <td>Public method to get a reference to the current help browser.</td>
+</tr><tr>
+<td><a href="#HelpWindow.downloadManager">downloadManager</a></td>
+<td>Class method to get a reference to the download manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.getActions">getActions</a></td>
 <td>Public method to get a list of all actions.</td>
@@ -760,6 +766,11 @@ reference to the selected action (QAction)
 <b>__showCookiesConfiguration</b>(<i></i>)
 <p>
         Private slot to configure the cookies handling.
+</p><a NAME="HelpWindow.__showDownloadsWindow" ID="HelpWindow.__showDownloadsWindow"></a>
+<h4>HelpWindow.__showDownloadsWindow</h4>
+<b>__showDownloadsWindow</b>(<i></i>)
+<p>
+        Private slot to show the downloads dialog.
 </p><a NAME="HelpWindow.__showEnginesConfigurationDialog" ID="HelpWindow.__showEnginesConfigurationDialog"></a>
 <h4>HelpWindow.__showEnginesConfigurationDialog</h4>
 <b>__showEnginesConfigurationDialog</b>(<i></i>)
@@ -976,6 +987,16 @@ reference to the cookie jar (CookieJar)
 <dt>Returns:</dt>
 <dd>
 reference to the current help browser (HelpBrowser)
+</dd>
+</dl><a NAME="HelpWindow.downloadManager" ID="HelpWindow.downloadManager"></a>
+<h4>HelpWindow.downloadManager</h4>
+<b>downloadManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the download manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the password manager (DownloadManager)
 </dd>
 </dl><a NAME="HelpWindow.getActions" ID="HelpWindow.getActions"></a>
 <h4>HelpWindow.getActions</h4>

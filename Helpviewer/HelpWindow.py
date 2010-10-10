@@ -41,6 +41,7 @@ from .AdBlock.AdBlockManager import AdBlockManager
 from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
 from .UserAgent.UserAgentMenu import UserAgentMenu
 from .HelpTabWidget import HelpTabWidget
+from .Download.DownloadManager import DownloadManager
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
@@ -79,6 +80,7 @@ class HelpWindow(QMainWindow):
     _historyManager = None
     _passwordManager = None
     _adblockManager = None
+    _downloadManager = None
     
     def __init__(self, home, path, parent, name, fromEric = False, 
                  initShortcutsOnly = False, searchWord = None):
@@ -1075,6 +1077,19 @@ class HelpWindow(QMainWindow):
             self.toolsMonitorAct.triggered[()].connect(self.__showNetworkMonitor)
         self.__actions.append(self.toolsMonitorAct)
         
+        self.showDownloadManagerAct = E5Action(self.trUtf8('Downloads'), 
+            self.trUtf8('Downloads'), 
+            0, 0, self, 'help_show_downloads')
+        self.showDownloadManagerAct.setStatusTip(self.trUtf8(
+                'Shows the downloads window'))
+        self.showDownloadManagerAct.setWhatsThis(self.trUtf8(
+                """<b>Downloads</b>"""
+                """<p>Shows the downloads window.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.showDownloadManagerAct.triggered[()].connect(self.__showDownloadsWindow)
+        self.__actions.append(self.showDownloadManagerAct)
+        
         self.backAct.setEnabled(False)
         self.forwardAct.setEnabled(False)
         
@@ -1203,6 +1218,8 @@ class HelpWindow(QMainWindow):
         
         menu = mb.addMenu(self.trUtf8("&Window"))
         menu.setTearOffEnabled(True)
+        menu.addAction(self.showDownloadManagerAct)
+        menu.addSeparator()
         menu.addAction(self.showTocAct)
         menu.addAction(self.showIndexAct)
         menu.addAction(self.showSearchAct)
@@ -1582,6 +1599,12 @@ class HelpWindow(QMainWindow):
         if not self.tabWidget.shallShutDown():
             e.ignore()
             return
+        
+        if not self.downloadManager().allowQuit():
+            e.ignore()
+            return
+        
+        self.downloadManager().shutdown()
         
         self.__closeNetworkMonitor()
         
@@ -2188,14 +2211,18 @@ class HelpWindow(QMainWindow):
         """
         dlg = HelpClearPrivateDataDialog(self)
         if dlg.exec_() == QDialog.Accepted:
-            history, searches, favicons, cache, cookies, passwords, databases = \
-                dlg.getData()
             # browsing history, search history, favicons, disk cache, cookies, 
-            # passwords, web databases
+            # passwords, web databases, downloads
+            history, searches, favicons, cache, cookies, 
+            passwords, databases, downloads = \
+                dlg.getData()
             if history:
                 self.historyManager().clear()
             if searches:
                 self.searchEdit.clear()
+            if downloads:
+                self.downloadManager().cleanup()
+                self.downloadManager().hide()
             if favicons:
                 self.__clearIconsDatabase()
             if cache:
@@ -2253,6 +2280,12 @@ class HelpWindow(QMainWindow):
         """
         monitor = E5NetworkMonitor.instance(self.networkAccessManager())
         monitor.show()
+        
+    def __showDownloadsWindow(self):
+        """
+        Private slot to show the downloads dialog.
+        """
+        self.downloadManager().show()
         
     def __closeNetworkMonitor(self):
         """
@@ -2375,6 +2408,18 @@ class HelpWindow(QMainWindow):
         
         return cls._adblockManager
     
+    @classmethod
+    def downloadManager(cls):
+        """
+        Class method to get a reference to the download manager.
+        
+        @return reference to the password manager (DownloadManager)
+        """
+        if cls._downloadManager is None:
+            cls._downloadManager = DownloadManager()
+        
+        return cls._downloadManager
+        
     def openSearchManager(self):
         """
         Public method to get a reference to the opensearch manager object.

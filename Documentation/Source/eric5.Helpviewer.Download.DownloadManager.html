@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Helpviewer.Download.DownloadManager</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Helpviewer.Download.DownloadManager</h1>
+<p>
+Module implementing the download manager class.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#DownloadManager">DownloadManager</a></td>
+<td>Class implementing the download manager</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="DownloadManager" ID="DownloadManager"></a>
+<h2>DownloadManager</h2>
+<p>
+    Class implementing the download manager
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_DownloadManager
+<h3>Class Attributes</h3>
+<table>
+<tr><td>RemoveExit</td></tr><tr><td>RemoveNever</td></tr><tr><td>RemoveSuccessFullDownload</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#DownloadManager.__init__">DownloadManager</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#DownloadManager.__addItem">__addItem</a></td>
+<td>Private method to add a download to the list of downloads.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__load">__load</a></td>
+<td>Public method to load the download settings.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__updateItemCount">__updateItemCount</a></td>
+<td>Private method to update the count label.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__updateRow">__updateRow</a></td>
+<td>Private slot to update a download item.</td>
+</tr><tr>
+<td><a href="#DownloadManager.activeDownloads">activeDownloads</a></td>
+<td>Public method to get the number of active downloads.</td>
+</tr><tr>
+<td><a href="#DownloadManager.allowQuit">allowQuit</a></td>
+<td>Public method to check, if it is ok to quit.</td>
+</tr><tr>
+<td><a href="#DownloadManager.changeOccurred">changeOccurred</a></td>
+<td>Public method to signal a change.</td>
+</tr><tr>
+<td><a href="#DownloadManager.cleanup">cleanup</a></td>
+<td>Public slot to cleanup the downloads.</td>
+</tr><tr>
+<td><a href="#DownloadManager.count">count</a></td>
+<td>Public method to get the number of downloads.</td>
+</tr><tr>
+<td><a href="#DownloadManager.download">download</a></td>
+<td>Public method to download a file.</td>
+</tr><tr>
+<td><a href="#DownloadManager.downloadDirectory">downloadDirectory</a></td>
+<td>Public method to get the current download directory.</td>
+</tr><tr>
+<td><a href="#DownloadManager.downloads">downloads</a></td>
+<td>Public method to get a reference to the downloads.</td>
+</tr><tr>
+<td><a href="#DownloadManager.handleUnsupportedContent">handleUnsupportedContent</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#DownloadManager.on_cleanupButton_clicked">on_cleanupButton_clicked</a></td>
+<td>Private slot cleanup the downloads.</td>
+</tr><tr>
+<td><a href="#DownloadManager.removePolicy">removePolicy</a></td>
+<td>Public method to get the remove policy.</td>
+</tr><tr>
+<td><a href="#DownloadManager.save">save</a></td>
+<td>Public method to save the download settings.</td>
+</tr><tr>
+<td><a href="#DownloadManager.setDownloadDirectory">setDownloadDirectory</a></td>
+<td>Public method to set the current download directory.</td>
+</tr><tr>
+<td><a href="#DownloadManager.setRemovePolicy">setRemovePolicy</a></td>
+<td>Public method to set the remove policy.</td>
+</tr><tr>
+<td><a href="#DownloadManager.shutdown">shutdown</a></td>
+<td>Public method to stop the download manager.</td>
+</tr>
+</table>
+<a NAME="DownloadManager.__init__" ID="DownloadManager.__init__"></a>
+<h4>DownloadManager (Constructor)</h4>
+<b>DownloadManager</b>(<i>parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="DownloadManager.__addItem" ID="DownloadManager.__addItem"></a>
+<h4>DownloadManager.__addItem</h4>
+<b>__addItem</b>(<i>itm</i>)
+<p>
+        Private method to add a download to the list of downloads.
+</p><dl>
+<dt><i>itm</i></dt>
+<dd>
+reference to the download item (DownloadItem)
+</dd>
+</dl><a NAME="DownloadManager.__load" ID="DownloadManager.__load"></a>
+<h4>DownloadManager.__load</h4>
+<b>__load</b>(<i></i>)
+<p>
+        Public method to load the download settings.
+</p><a NAME="DownloadManager.__updateItemCount" ID="DownloadManager.__updateItemCount"></a>
+<h4>DownloadManager.__updateItemCount</h4>
+<b>__updateItemCount</b>(<i></i>)
+<p>
+        Private method to update the count label.
+</p><a NAME="DownloadManager.__updateRow" ID="DownloadManager.__updateRow"></a>
+<h4>DownloadManager.__updateRow</h4>
+<b>__updateRow</b>(<i>itm = None</i>)
+<p>
+        Private slot to update a download item.
+</p><dl>
+<dt><i>itm</i></dt>
+<dd>
+reference to the download item (DownloadItem)
+</dd>
+</dl><a NAME="DownloadManager.activeDownloads" ID="DownloadManager.activeDownloads"></a>
+<h4>DownloadManager.activeDownloads</h4>
+<b>activeDownloads</b>(<i></i>)
+<p>
+        Public method to get the number of active downloads.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+number of active downloads (integer)
+</dd>
+</dl><a NAME="DownloadManager.allowQuit" ID="DownloadManager.allowQuit"></a>
+<h4>DownloadManager.allowQuit</h4>
+<b>allowQuit</b>(<i></i>)
+<p>
+        Public method to check, if it is ok to quit.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating allowance to quit (boolean)
+</dd>
+</dl><a NAME="DownloadManager.changeOccurred" ID="DownloadManager.changeOccurred"></a>
+<h4>DownloadManager.changeOccurred</h4>
+<b>changeOccurred</b>(<i></i>)
+<p>
+        Public method to signal a change.
+</p><a NAME="DownloadManager.cleanup" ID="DownloadManager.cleanup"></a>
+<h4>DownloadManager.cleanup</h4>
+<b>cleanup</b>(<i></i>)
+<p>
+        Public slot to cleanup the downloads.
+</p><a NAME="DownloadManager.count" ID="DownloadManager.count"></a>
+<h4>DownloadManager.count</h4>
+<b>count</b>(<i></i>)
+<p>
+        Public method to get the number of downloads.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+number of downloads (integer)
+</dd>
+</dl><a NAME="DownloadManager.download" ID="DownloadManager.download"></a>
+<h4>DownloadManager.download</h4>
+<b>download</b>(<i>requestOrUrl, requestFileName = False</i>)
+<p>
+        Public method to download a file.
+</p><dl>
+<dt><i>requestOrUrl</i></dt>
+<dd>
+reference to a request object (QNetworkRequest)
+            or a URL to be downloaded (QUrl)
+</dd><dt><i>requestFileName=</i></dt>
+<dd>
+flag indicating to ask for the
+            download file name (boolean)
+</dd>
+</dl><a NAME="DownloadManager.downloadDirectory" ID="DownloadManager.downloadDirectory"></a>
+<h4>DownloadManager.downloadDirectory</h4>
+<b>downloadDirectory</b>(<i></i>)
+<p>
+        Public method to get the current download directory.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+current download directory (string)
+</dd>
+</dl><a NAME="DownloadManager.downloads" ID="DownloadManager.downloads"></a>
+<h4>DownloadManager.downloads</h4>
+<b>downloads</b>(<i></i>)
+<p>
+        Public method to get a reference to the downloads.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the downloads (list of DownloadItem)
+</dd>
+</dl><a NAME="DownloadManager.handleUnsupportedContent" ID="DownloadManager.handleUnsupportedContent"></a>
+<h4>DownloadManager.handleUnsupportedContent</h4>
+<b>handleUnsupportedContent</b>(<i>reply, requestFileName = False, webPage = None, download = False</i>)
+<a NAME="DownloadManager.on_cleanupButton_clicked" ID="DownloadManager.on_cleanupButton_clicked"></a>
+<h4>DownloadManager.on_cleanupButton_clicked</h4>
+<b>on_cleanupButton_clicked</b>(<i></i>)
+<p>
+        Private slot cleanup the downloads.
+</p><a NAME="DownloadManager.removePolicy" ID="DownloadManager.removePolicy"></a>
+<h4>DownloadManager.removePolicy</h4>
+<b>removePolicy</b>(<i></i>)
+<p>
+        Public method to get the remove policy.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+remove policy (integer)
+</dd>
+</dl><a NAME="DownloadManager.save" ID="DownloadManager.save"></a>
+<h4>DownloadManager.save</h4>
+<b>save</b>(<i></i>)
+<p>
+        Public method to save the download settings.
+</p><a NAME="DownloadManager.setDownloadDirectory" ID="DownloadManager.setDownloadDirectory"></a>
+<h4>DownloadManager.setDownloadDirectory</h4>
+<b>setDownloadDirectory</b>(<i>directory</i>)
+<p>
+        Public method to set the current download directory.
+</p><dl>
+<dt><i>directory</i></dt>
+<dd>
+current download directory (string)
+</dd>
+</dl><a NAME="DownloadManager.setRemovePolicy" ID="DownloadManager.setRemovePolicy"></a>
+<h4>DownloadManager.setRemovePolicy</h4>
+<b>setRemovePolicy</b>(<i>policy</i>)
+<p>
+        Public method to set the remove policy.
+</p><dl>
+<dt><i>policy</i></dt>
+<dd>
+policy to be set
+            (DownloadManager.RemoveExit, DownloadManager.RemoveNever, 
+             DownloadManager.RemoveSuccessFullDownload)
+</dd>
+</dl><a NAME="DownloadManager.shutdown" ID="DownloadManager.shutdown"></a>
+<h4>DownloadManager.shutdown</h4>
+<b>shutdown</b>(<i></i>)
+<p>
+        Public method to stop the download manager.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

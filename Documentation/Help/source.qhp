@@ -219,6 +219,12 @@
               <section title="eric5.Helpviewer.CookieJar.CookiesDialog" ref="eric5.Helpviewer.CookieJar.CookiesDialog.html" />
               <section title="eric5.Helpviewer.CookieJar.CookiesExceptionsDialog" ref="eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.html" />
             </section>
+            <section title="eric5.Helpviewer.Download" ref="index-eric5.Helpviewer.Download.html">
+              <section title="eric5.Helpviewer.Download.DownloadItem" ref="eric5.Helpviewer.Download.DownloadItem.html" />
+              <section title="eric5.Helpviewer.Download.DownloadManager" ref="eric5.Helpviewer.Download.DownloadManager.html" />
+              <section title="eric5.Helpviewer.Download.DownloadModel" ref="eric5.Helpviewer.Download.DownloadModel.html" />
+              <section title="eric5.Helpviewer.Download.DownloadUtilities" ref="eric5.Helpviewer.Download.DownloadUtilities.html" />
+            </section>
             <section title="eric5.Helpviewer.History" ref="index-eric5.Helpviewer.History.html">
               <section title="eric5.Helpviewer.History.HistoryCompleter" ref="eric5.Helpviewer.History.HistoryCompleter.html" />
               <section title="eric5.Helpviewer.History.HistoryDialog" ref="eric5.Helpviewer.History.HistoryDialog.html" />
@@ -273,7 +279,6 @@
               <section title="eric5.Helpviewer.UserAgent.UserAgentDefaults" ref="eric5.Helpviewer.UserAgent.UserAgentDefaults.html" />
               <section title="eric5.Helpviewer.UserAgent.UserAgentMenu" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html" />
             </section>
-            <section title="eric5.Helpviewer.DownloadDialog" ref="eric5.Helpviewer.DownloadDialog.html" />
             <section title="eric5.Helpviewer.HTMLResources" ref="eric5.Helpviewer.HTMLResources.html" />
             <section title="eric5.Helpviewer.HelpBrowserWV" ref="eric5.Helpviewer.HelpBrowserWV.html" />
             <section title="eric5.Helpviewer.HelpClearPrivateDataDialog" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html" />
@@ -2565,7 +2570,6 @@
       <keyword name="HelpBrowser.__currentEngineChanged" id="HelpBrowser.__currentEngineChanged" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__currentEngineChanged" />
       <keyword name="HelpBrowser.__dataString" id="HelpBrowser.__dataString" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__dataString" />
       <keyword name="HelpBrowser.__databaseQuotaExceeded" id="HelpBrowser.__databaseQuotaExceeded" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__databaseQuotaExceeded" />
-      <keyword name="HelpBrowser.__downloadDone" id="HelpBrowser.__downloadDone" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadDone" />
       <keyword name="HelpBrowser.__downloadImage" id="HelpBrowser.__downloadImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadImage" />
       <keyword name="HelpBrowser.__downloadLink" id="HelpBrowser.__downloadLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadLink" />
       <keyword name="HelpBrowser.__downloadRequested" id="HelpBrowser.__downloadRequested" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadRequested" />
@@ -2713,6 +2717,7 @@
       <keyword name="HelpWindow.__showBackMenu" id="HelpWindow.__showBackMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showBackMenu" />
       <keyword name="HelpWindow.__showBookmarksDialog" id="HelpWindow.__showBookmarksDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showBookmarksDialog" />
       <keyword name="HelpWindow.__showCookiesConfiguration" id="HelpWindow.__showCookiesConfiguration" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showCookiesConfiguration" />
+      <keyword name="HelpWindow.__showDownloadsWindow" id="HelpWindow.__showDownloadsWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showDownloadsWindow" />
       <keyword name="HelpWindow.__showEnginesConfigurationDialog" id="HelpWindow.__showEnginesConfigurationDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showEnginesConfigurationDialog" />
       <keyword name="HelpWindow.__showForwardMenu" id="HelpWindow.__showForwardMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showForwardMenu" />
       <keyword name="HelpWindow.__showHistoryMenu" id="HelpWindow.__showHistoryMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showHistoryMenu" />
@@ -2744,6 +2749,7 @@
       <keyword name="HelpWindow.closeEvent" id="HelpWindow.closeEvent" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.closeEvent" />
       <keyword name="HelpWindow.cookieJar" id="HelpWindow.cookieJar" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.cookieJar" />
       <keyword name="HelpWindow.currentBrowser" id="HelpWindow.currentBrowser" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.currentBrowser" />
+      <keyword name="HelpWindow.downloadManager" id="HelpWindow.downloadManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.downloadManager" />
       <keyword name="HelpWindow.getActions" id="HelpWindow.getActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.getActions" />
       <keyword name="HelpWindow.getSourceFileList" id="HelpWindow.getSourceFileList" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.getSourceFileList" />
       <keyword name="HelpWindow.helpEngine" id="HelpWindow.helpEngine" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.helpEngine" />
@@ -2793,25 +2799,6 @@
       <keyword name="QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged" id="QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged" ref="eric5.Helpviewer.QtHelpDocumentationDialog.html#QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged" />
       <keyword name="QtHelpDocumentationDialog.on_removeButton_clicked" id="QtHelpDocumentationDialog.on_removeButton_clicked" ref="eric5.Helpviewer.QtHelpDocumentationDialog.html#QtHelpDocumentationDialog.on_removeButton_clicked" />
       <keyword name="JavaScriptResources (Module)" id="JavaScriptResources (Module)" ref="eric5.Helpviewer.JavaScriptResources.html" />
-      <keyword name="DownloadDialog (Module)" id="DownloadDialog (Module)" ref="eric5.Helpviewer.DownloadDialog.html" />
-      <keyword name="DownloadDialog" id="DownloadDialog" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog" />
-      <keyword name="DownloadDialog (Constructor)" id="DownloadDialog (Constructor)" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__init__" />
-      <keyword name="DownloadDialog.__dataString" id="DownloadDialog.__dataString" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__dataString" />
-      <keyword name="DownloadDialog.__downloadProgress" id="DownloadDialog.__downloadProgress" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__downloadProgress" />
-      <keyword name="DownloadDialog.__downloading" id="DownloadDialog.__downloading" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__downloading" />
-      <keyword name="DownloadDialog.__finished" id="DownloadDialog.__finished" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__finished" />
-      <keyword name="DownloadDialog.__getFileName" id="DownloadDialog.__getFileName" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__getFileName" />
-      <keyword name="DownloadDialog.__metaDataChanged" id="DownloadDialog.__metaDataChanged" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__metaDataChanged" />
-      <keyword name="DownloadDialog.__networkError" id="DownloadDialog.__networkError" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__networkError" />
-      <keyword name="DownloadDialog.__open" id="DownloadDialog.__open" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__open" />
-      <keyword name="DownloadDialog.__readyRead" id="DownloadDialog.__readyRead" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__readyRead" />
-      <keyword name="DownloadDialog.__saveFileName" id="DownloadDialog.__saveFileName" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__saveFileName" />
-      <keyword name="DownloadDialog.__stop" id="DownloadDialog.__stop" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__stop" />
-      <keyword name="DownloadDialog.__tryAgain" id="DownloadDialog.__tryAgain" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__tryAgain" />
-      <keyword name="DownloadDialog.__updateInfoLabel" id="DownloadDialog.__updateInfoLabel" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.__updateInfoLabel" />
-      <keyword name="DownloadDialog.closeEvent" id="DownloadDialog.closeEvent" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.closeEvent" />
-      <keyword name="DownloadDialog.initialize" id="DownloadDialog.initialize" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.initialize" />
-      <keyword name="DownloadDialog.on_buttonBox_clicked" id="DownloadDialog.on_buttonBox_clicked" ref="eric5.Helpviewer.DownloadDialog.html#DownloadDialog.on_buttonBox_clicked" />
       <keyword name="HelpSearchWidget (Module)" id="HelpSearchWidget (Module)" ref="eric5.Helpviewer.HelpSearchWidget.html" />
       <keyword name="HelpSearchWidget" id="HelpSearchWidget" ref="eric5.Helpviewer.HelpSearchWidget.html#HelpSearchWidget" />
       <keyword name="HelpSearchWidget (Constructor)" id="HelpSearchWidget (Constructor)" ref="eric5.Helpviewer.HelpSearchWidget.html#HelpSearchWidget.__init__" />
@@ -7399,6 +7386,68 @@
       <keyword name="BookmarkInfoDialog (Constructor)" id="BookmarkInfoDialog (Constructor)" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html#BookmarkInfoDialog.__init__" />
       <keyword name="BookmarkInfoDialog.accept" id="BookmarkInfoDialog.accept" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html#BookmarkInfoDialog.accept" />
       <keyword name="BookmarkInfoDialog.on_removeButton_clicked" id="BookmarkInfoDialog.on_removeButton_clicked" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html#BookmarkInfoDialog.on_removeButton_clicked" />
+      <keyword name="Download (Package)" id="Download (Package)" ref="index-eric5.Helpviewer.Download.html" />
+      <keyword name="DownloadManager (Module)" id="DownloadManager (Module)" ref="eric5.Helpviewer.Download.DownloadManager.html" />
+      <keyword name="DownloadManager" id="DownloadManager" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager" />
+      <keyword name="DownloadManager (Constructor)" id="DownloadManager (Constructor)" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__init__" />
+      <keyword name="DownloadManager.__addItem" id="DownloadManager.__addItem" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__addItem" />
+      <keyword name="DownloadManager.__load" id="DownloadManager.__load" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__load" />
+      <keyword name="DownloadManager.__updateItemCount" id="DownloadManager.__updateItemCount" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__updateItemCount" />
+      <keyword name="DownloadManager.__updateRow" id="DownloadManager.__updateRow" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__updateRow" />
+      <keyword name="DownloadManager.activeDownloads" id="DownloadManager.activeDownloads" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.activeDownloads" />
+      <keyword name="DownloadManager.allowQuit" id="DownloadManager.allowQuit" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.allowQuit" />
+      <keyword name="DownloadManager.changeOccurred" id="DownloadManager.changeOccurred" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.changeOccurred" />
+      <keyword name="DownloadManager.cleanup" id="DownloadManager.cleanup" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.cleanup" />
+      <keyword name="DownloadManager.count" id="DownloadManager.count" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.count" />
+      <keyword name="DownloadManager.download" id="DownloadManager.download" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.download" />
+      <keyword name="DownloadManager.downloadDirectory" id="DownloadManager.downloadDirectory" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.downloadDirectory" />
+      <keyword name="DownloadManager.downloads" id="DownloadManager.downloads" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.downloads" />
+      <keyword name="DownloadManager.handleUnsupportedContent" id="DownloadManager.handleUnsupportedContent" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.handleUnsupportedContent" />
+      <keyword name="DownloadManager.on_cleanupButton_clicked" id="DownloadManager.on_cleanupButton_clicked" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.on_cleanupButton_clicked" />
+      <keyword name="DownloadManager.removePolicy" id="DownloadManager.removePolicy" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.removePolicy" />
+      <keyword name="DownloadManager.save" id="DownloadManager.save" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.save" />
+      <keyword name="DownloadManager.setDownloadDirectory" id="DownloadManager.setDownloadDirectory" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.setDownloadDirectory" />
+      <keyword name="DownloadManager.setRemovePolicy" id="DownloadManager.setRemovePolicy" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.setRemovePolicy" />
+      <keyword name="DownloadManager.shutdown" id="DownloadManager.shutdown" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.shutdown" />
+      <keyword name="DownloadUtilities (Module)" id="DownloadUtilities (Module)" ref="eric5.Helpviewer.Download.DownloadUtilities.html" />
+      <keyword name="dataString" id="dataString" ref="eric5.Helpviewer.Download.DownloadUtilities.html#dataString" />
+      <keyword name="timeString" id="timeString" ref="eric5.Helpviewer.Download.DownloadUtilities.html#timeString" />
+      <keyword name="DownloadItem (Module)" id="DownloadItem (Module)" ref="eric5.Helpviewer.Download.DownloadItem.html" />
+      <keyword name="DownloadItem" id="DownloadItem" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem" />
+      <keyword name="DownloadItem (Constructor)" id="DownloadItem (Constructor)" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__init__" />
+      <keyword name="DownloadItem.__downloadProgress" id="DownloadItem.__downloadProgress" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__downloadProgress" />
+      <keyword name="DownloadItem.__finished" id="DownloadItem.__finished" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__finished" />
+      <keyword name="DownloadItem.__getFileName" id="DownloadItem.__getFileName" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__getFileName" />
+      <keyword name="DownloadItem.__initialize" id="DownloadItem.__initialize" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__initialize" />
+      <keyword name="DownloadItem.__metaDataChanged" id="DownloadItem.__metaDataChanged" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__metaDataChanged" />
+      <keyword name="DownloadItem.__networkError" id="DownloadItem.__networkError" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__networkError" />
+      <keyword name="DownloadItem.__readyRead" id="DownloadItem.__readyRead" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__readyRead" />
+      <keyword name="DownloadItem.__saveFileName" id="DownloadItem.__saveFileName" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__saveFileName" />
+      <keyword name="DownloadItem.__updateInfoLabel" id="DownloadItem.__updateInfoLabel" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__updateInfoLabel" />
+      <keyword name="DownloadItem.absoluteFilePath" id="DownloadItem.absoluteFilePath" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.absoluteFilePath" />
+      <keyword name="DownloadItem.bytesReceived" id="DownloadItem.bytesReceived" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.bytesReceived" />
+      <keyword name="DownloadItem.bytesTotal" id="DownloadItem.bytesTotal" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.bytesTotal" />
+      <keyword name="DownloadItem.canceledFileSelect" id="DownloadItem.canceledFileSelect" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.canceledFileSelect" />
+      <keyword name="DownloadItem.currentSpeed" id="DownloadItem.currentSpeed" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.currentSpeed" />
+      <keyword name="DownloadItem.downloadedSuccessfully" id="DownloadItem.downloadedSuccessfully" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.downloadedSuccessfully" />
+      <keyword name="DownloadItem.downloading" id="DownloadItem.downloading" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.downloading" />
+      <keyword name="DownloadItem.fileName" id="DownloadItem.fileName" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.fileName" />
+      <keyword name="DownloadItem.getData" id="DownloadItem.getData" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.getData" />
+      <keyword name="DownloadItem.getInfoData" id="DownloadItem.getInfoData" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.getInfoData" />
+      <keyword name="DownloadItem.on_openButton_clicked" id="DownloadItem.on_openButton_clicked" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.on_openButton_clicked" />
+      <keyword name="DownloadItem.on_stopButton_clicked" id="DownloadItem.on_stopButton_clicked" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.on_stopButton_clicked" />
+      <keyword name="DownloadItem.on_tryAgainButton_clicked" id="DownloadItem.on_tryAgainButton_clicked" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.on_tryAgainButton_clicked" />
+      <keyword name="DownloadItem.remainingTime" id="DownloadItem.remainingTime" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.remainingTime" />
+      <keyword name="DownloadItem.setData" id="DownloadItem.setData" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.setData" />
+      <keyword name="DownloadItem.setIcon" id="DownloadItem.setIcon" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.setIcon" />
+      <keyword name="DownloadModel (Module)" id="DownloadModel (Module)" ref="eric5.Helpviewer.Download.DownloadModel.html" />
+      <keyword name="DownloadModel" id="DownloadModel" ref="eric5.Helpviewer.Download.DownloadModel.html#DownloadModel" />
+      <keyword name="DownloadModel (Constructor)" id="DownloadModel (Constructor)" ref="eric5.Helpviewer.Download.DownloadModel.html#DownloadModel.__init__" />
+      <keyword name="DownloadModel.data" id="DownloadModel.data" ref="eric5.Helpviewer.Download.DownloadModel.html#DownloadModel.data" />
+      <keyword name="DownloadModel.flags" id="DownloadModel.flags" ref="eric5.Helpviewer.Download.DownloadModel.html#DownloadModel.flags" />
+      <keyword name="DownloadModel.mimeData" id="DownloadModel.mimeData" ref="eric5.Helpviewer.Download.DownloadModel.html#DownloadModel.mimeData" />
+      <keyword name="DownloadModel.removeRows" id="DownloadModel.removeRows" ref="eric5.Helpviewer.Download.DownloadModel.html#DownloadModel.removeRows" />
+      <keyword name="DownloadModel.rowCount" id="DownloadModel.rowCount" ref="eric5.Helpviewer.Download.DownloadModel.html#DownloadModel.rowCount" />
       <keyword name="OpenSearch (Package)" id="OpenSearch (Package)" ref="index-eric5.Helpviewer.OpenSearch.html" />
       <keyword name="OpenSearchReader (Module)" id="OpenSearchReader (Module)" ref="eric5.Helpviewer.OpenSearch.OpenSearchReader.html" />
       <keyword name="OpenSearchReader" id="OpenSearchReader" ref="eric5.Helpviewer.OpenSearch.OpenSearchReader.html#OpenSearchReader" />
@@ -9937,7 +9986,10 @@
       <file>eric5.Helpviewer.CookieJar.CookiesConfigurationDialog.html</file>
       <file>eric5.Helpviewer.CookieJar.CookiesDialog.html</file>
       <file>eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.html</file>
-      <file>eric5.Helpviewer.DownloadDialog.html</file>
+      <file>eric5.Helpviewer.Download.DownloadItem.html</file>
+      <file>eric5.Helpviewer.Download.DownloadManager.html</file>
+      <file>eric5.Helpviewer.Download.DownloadModel.html</file>
+      <file>eric5.Helpviewer.Download.DownloadUtilities.html</file>
       <file>eric5.Helpviewer.HTMLResources.html</file>
       <file>eric5.Helpviewer.HelpBrowserWV.html</file>
       <file>eric5.Helpviewer.HelpClearPrivateDataDialog.html</file>
@@ -10384,6 +10436,7 @@
       <file>index-eric5.Helpviewer.AdBlock.html</file>
       <file>index-eric5.Helpviewer.Bookmarks.html</file>
       <file>index-eric5.Helpviewer.CookieJar.html</file>
+      <file>index-eric5.Helpviewer.Download.html</file>
       <file>index-eric5.Helpviewer.History.html</file>
       <file>index-eric5.Helpviewer.Network.html</file>
       <file>index-eric5.Helpviewer.OfflineStorage.html</file>

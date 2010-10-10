@@ -409,7 +409,6 @@
     <Source>Preferences/ConfigurationPages/EditorSearchPage.py</Source>
     <Source>Plugins/VcsPlugins/vcsSubversion/SvnRelocateDialog.py</Source>
     <Source>Helpviewer/HelpBrowserWV.py</Source>
-    <Source>Helpviewer/DownloadDialog.py</Source>
     <Source>UI/AuthenticationDialog.py</Source>
     <Source>QScintilla/ShellHistoryDialog.py</Source>
     <Source>Preferences/ConfigurationPages/HelpAppearancePage.py</Source>
@@ -826,6 +825,11 @@
     <Source>Helpviewer/UrlBar/SslLabel.py</Source>
     <Source>Helpviewer/SslInfoDialog.py</Source>
     <Source>Helpviewer/UrlBar/BookmarkInfoDialog.py</Source>
+    <Source>Helpviewer/Download/__init__.py</Source>
+    <Source>Helpviewer/Download/DownloadItem.py</Source>
+    <Source>Helpviewer/Download/DownloadUtilities.py</Source>
+    <Source>Helpviewer/Download/DownloadManager.py</Source>
+    <Source>Helpviewer/Download/DownloadModel.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1056,6 +1060,8 @@
     <Form>Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui</Form>
     <Form>Helpviewer/SslInfoDialog.ui</Form>
     <Form>Helpviewer/UrlBar/BookmarkInfoDialog.ui</Form>
+    <Form>Helpviewer/Download/DownloadItem.ui</Form>
+    <Form>Helpviewer/Download/DownloadManager.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

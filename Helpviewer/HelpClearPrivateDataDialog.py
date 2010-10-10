@@ -30,7 +30,7 @@ class HelpClearPrivateDataDialog(QDialog, Ui_HelpClearPrivateDataDialog):
         
         @return tuple of flags indicating which data to clear (browsing history,
             search history, favicons, disk cache, cookies, passwords, web 
-            databases) (list of boolean)
+            databases, downloads) (list of boolean)
         """
         return (self.historyCheckBox.isChecked(), 
                 self.searchCheckBox.isChecked(), 
@@ -38,4 +38,5 @@ class HelpClearPrivateDataDialog(QDialog, Ui_HelpClearPrivateDataDialog):
                 self.cacheCheckBox.isChecked(), 
                 self.cookiesCheckBox.isChecked(), 
                 self.passwordsCheckBox.isChecked(), 
-                self.databasesCheckBox.isChecked())
+                self.databasesCheckBox.isChecked(), 
+                self.downloadsCheckBox.isChecked())

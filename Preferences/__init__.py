@@ -584,6 +584,9 @@ class Prefs(object):
         "OfflineStorageDatabaseQuota" : 50,     # 50 MB
         "UserAgent" : "", 
         "ShowPreview" : True, 
+        "DownloadManagerRemovePolicy" : 0,      # never delete downloads
+        "DownloadManagerSize" : QtCore.QSize(400, 300), 
+        "DownloadManagerDownloads" : [], 
     }
     
     websettings = QWebSettings.globalSettings()
@@ -865,7 +868,6 @@ def syncPreferences(prefClass = Prefs):
     """
     prefClass.settings.setValue("General/Configured", True)
     prefClass.settings.sync()
-##    initPreferences()
     
 def exportPreferences(prefClass = Prefs):
     """
@@ -1770,7 +1772,7 @@ def getHelp(key, prefClass = Prefs):
     elif key in ["WebSearchKeywords"]:
         # return a list of tuples of (keyword, engine name)
         keywords = []
-        size = prefClass.settings.beginReadArray("Help/" + key);
+        size = prefClass.settings.beginReadArray("Help/" + key)
         for index in range(size):
             prefClass.settings.setArrayIndex(index)
             keyword = prefClass.settings.value("Keyword")
@@ -1778,10 +1780,22 @@ def getHelp(key, prefClass = Prefs):
             keywords.append((keyword, engineName))
         prefClass.settings.endArray()
         return keywords
+    elif key in ["DownloadManagerDownloads"]:
+        # return a list of tuples of (URL, save location, done flag)
+        downloads = []
+        length = prefClass.settings.beginReadArray("Help/" + key)
+        for index in range(length):
+            prefClass.settings.setArrayIndex(index)
+            url = prefClass.settings.value("URL")
+            location = prefClass.settings.value("Location")
+            done = toBool(prefClass.settings.value("Done"))
+            downloads.append((url, location, done))
+        prefClass.settings.endArray()
+        return downloads
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies", 
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit", 
                  "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota", 
-                 "CachePolicy"]:
+                 "CachePolicy", "DownloadManagerRemovePolicy"]:
         return int(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions", 
@@ -1796,6 +1810,8 @@ def getHelp(key, prefClass = Prefs):
     elif key in ["AdBlockSubscriptions"]:
         return toList(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))
+    elif key in ["DownloadManagerSize"]:
+        return prefClass.settings.value("Help/" + key, prefClass.helpDefaults[key])
     else:
         return prefClass.settings.value("Help/" + key, prefClass.helpDefaults[key])
     
@@ -1819,6 +1835,17 @@ def setHelp(key, value, prefClass = Prefs):
             prefClass.settings.setArrayIndex(index)
             prefClass.settings.setValue("Keyword", v[0])
             prefClass.settings.setValue("Engine", v[1])
+            index += 1
+        prefClass.settings.endArray()
+    elif key == "DownloadManagerDownloads":
+        # value is list of tuples of (URL, save location, done flag)
+        prefClass.settings.beginWriteArray("Help/" + key, len(value))
+        index = 0
+        for v in value:
+            prefClass.settings.setArrayIndex(index)
+            prefClass.settings.setValue("URL", v[0])
+            prefClass.settings.setValue("Location", v[1])
+            prefClass.settings.setValue("Done", v[2])
             index += 1
         prefClass.settings.endArray()
     else:

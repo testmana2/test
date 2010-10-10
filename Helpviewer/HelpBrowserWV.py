@@ -23,7 +23,6 @@ from E5Gui import E5MessageBox
 
 import Preferences
 
-from .DownloadDialog import DownloadDialog
 from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
 from .JavaScriptResources import fetchLinks_js
 from .HTMLResources import notFoundPage_html
@@ -173,6 +172,7 @@ class HelpWebPage(QWebPage):
         @param type_ type of the navigation request (QWebPage.NavigationType)
         @return flag indicating acceptance (boolean)
         """
+        # TODO: extend with more functionality
         self.__lastRequest = request
         self.__lastRequestType = type_
         
@@ -381,7 +381,6 @@ class HelpBrowser(QWebView):
         
         self.mw = mainWindow
         self.ctrlPressed = False
-        self.__downloadWindows = []
         self.__isLoading = False
         self.__progress = 0
         
@@ -1145,9 +1144,7 @@ class HelpBrowser(QWebView):
         if url.isEmpty():
             return
         
-        req = QNetworkRequest(url)
-        reply = self.mw.networkAccessManager().get(req)
-        self.__unsupportedContent(reply, True, True)
+        self.mw.downloadManager().download(url, True)
     
     def __unsupportedContent(self, reply, requestFilename = None, download = False):
         """
@@ -1168,20 +1165,10 @@ class HelpBrowser(QWebView):
             return
         
         if reply.error() == QNetworkReply.NoError:
-            if reply.url().isEmpty():
+            if reply.header(QNetworkRequest.ContentTypeHeader):
+                self.mw.downloadManager().handleUnsupportedContent(
+                    reply, webPage = self.page())
                 return
-            size = reply.header(QNetworkRequest.ContentLengthHeader)
-            if size == 0:
-                return
-            
-            if requestFilename is None:
-                requestFilename = Preferences.getUI("RequestDownloadFilename")
-            dlg = DownloadDialog(reply, requestFilename, self.page(), download)
-            if dlg.initialize():
-                dlg.done[()].connect(self.__downloadDone)
-                self.__downloadWindows.append(dlg)
-                dlg.show()
-##            self.setUrl(self.url())
         else:
             replyUrl = reply.url()
             if replyUrl.isEmpty():
@@ -1216,24 +1203,13 @@ class HelpBrowser(QWebView):
             self.mw.historyManager().removeHistoryEntry(replyUrl, self.title())
             self.loadFinished.emit(False)
     
-    def __downloadDone(self):
-        """
-        Private slot to handle the done signal of the download dialogs.
-        """
-        dlg = self.sender()
-        if dlg in self.__downloadWindows:
-            dlg.done[()].disconnect(self.__downloadDone)
-    
     def __downloadRequested(self, request):
         """
         Private slot to handle a download request.
         
         @param request reference to the request object (QNetworkRequest)
         """
-        if request.url().isEmpty():
-            return
-        mgr = self.page().networkAccessManager()
-        self.__unsupportedContent(mgr.get(request), download = True)
+        self.mw.downloadManager().download(request)
     
     def __databaseQuotaExceeded(self, frame, databaseName):
         """

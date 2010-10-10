@@ -1857,11 +1857,52 @@ eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.on_bl
 eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.on_domainEdit_textChanged?4(txt)
 eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.setDomainName?4(domain)
 eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog?1(cookieJar, parent = None)
-eric5.Helpviewer.DownloadDialog.DownloadDialog.closeEvent?4(evt)
-eric5.Helpviewer.DownloadDialog.DownloadDialog.done?7
-eric5.Helpviewer.DownloadDialog.DownloadDialog.initialize?4()
-eric5.Helpviewer.DownloadDialog.DownloadDialog.on_buttonBox_clicked?4(button)
-eric5.Helpviewer.DownloadDialog.DownloadDialog?1(reply = None, requestFilename = False, webPage = None, download = False, parent = None)
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.absoluteFilePath?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.bytesReceived?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.bytesTotal?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.canceledFileSelect?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.currentSpeed?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.downloadedSuccessfully?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.downloading?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.fileName?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.getData?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.getInfoData?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.on_openButton_clicked?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.on_stopButton_clicked?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.on_tryAgainButton_clicked?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.progress?7
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.remainingTime?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.setData?4(data)
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.setIcon?4(icon)
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.statusChanged?7
+eric5.Helpviewer.Download.DownloadItem.DownloadItem?1(reply = None, requestFilename = False, webPage = None, download = False, parent = None)
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.RemoveExit?7
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.RemoveNever?7
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.RemoveSuccessFullDownload?7
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.activeDownloads?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.allowQuit?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.changeOccurred?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.cleanup?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.count?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.download?4(requestOrUrl, requestFileName = False)
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.downloadDirectory?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.downloads?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.handleUnsupportedContent?4(reply, requestFileName = False, webPage = None, download = False)
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.on_cleanupButton_clicked?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.removePolicy?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.save?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.setDownloadDirectory?4(directory)
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.setRemovePolicy?4(policy)
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.shutdown?4()
+eric5.Helpviewer.Download.DownloadManager.DownloadManager?1(parent = None)
+eric5.Helpviewer.Download.DownloadModel.DownloadModel.data?4(index, role)
+eric5.Helpviewer.Download.DownloadModel.DownloadModel.flags?4(index)
+eric5.Helpviewer.Download.DownloadModel.DownloadModel.mimeData?4(indexes)
+eric5.Helpviewer.Download.DownloadModel.DownloadModel.removeRows?4(row, count, parent = QModelIndex())
+eric5.Helpviewer.Download.DownloadModel.DownloadModel.rowCount?4(parent = QModelIndex())
+eric5.Helpviewer.Download.DownloadModel.DownloadModel?1(manager, parent = None)
+eric5.Helpviewer.Download.DownloadUtilities.dataString?4(size)
+eric5.Helpviewer.Download.DownloadUtilities.timeString?4(timeRemaining)
 eric5.Helpviewer.HTMLResources.notFoundPage_html?7
 eric5.Helpviewer.HTMLResources.startPage_html?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.addBookmark?4()
@@ -1991,6 +2032,7 @@ eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget?1(parent = None)
 eric5.Helpviewer.HelpWindow.HelpWindow._adblockManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._bookmarksManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._cookieJar?8
+eric5.Helpviewer.HelpWindow.HelpWindow._downloadManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._helpEngine?8
 eric5.Helpviewer.HelpWindow.HelpWindow._historyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._networkAccessManager?8
@@ -2003,6 +2045,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.browsers?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.closeEvent?4(e)
 eric5.Helpviewer.HelpWindow.HelpWindow.cookieJar?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.currentBrowser?4()
+eric5.Helpviewer.HelpWindow.HelpWindow.downloadManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.getActions?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.getSourceFileList?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.helpClosed?7

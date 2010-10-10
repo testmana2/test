@@ -119,7 +119,7 @@ class CookieExceptionsModel(QAbstractTableModel):
         Public method to get the number of rows of the model.
         
         @param parent parent index (QModelIndex)
-        @return number of columns (integer)
+        @return number of rows (integer)
         """
         if parent.isValid() or self.__cookieJar is None:
             return 0

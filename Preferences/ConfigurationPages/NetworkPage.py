@@ -17,6 +17,8 @@ from E5Gui.E5Completers import E5DirCompleter
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_NetworkPage import Ui_NetworkPage
 
+from Helpviewer.Download.DownloadManager import DownloadManager
+
 import Preferences
 import Utilities
 
@@ -38,6 +40,13 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.downloadDirEdit.setText(Preferences.getUI("DownloadPath"))
         self.requestFilenameCheckBox.setChecked(
             Preferences.getUI("RequestDownloadFilename"))
+        policy = Preferences.getHelp("DownloadManagerRemovePolicy")
+        if policy == DownloadManager.RemoveNever:
+            self.cleanupNeverButton.setChecked(True)
+        elif policy == DownloadManager.RemoveExit:
+            self.cleanupExitButton.setChecked(True)
+        else:
+            self.cleanupSuccessfulButton.setChecked(True)
         
         self.proxyGroup.setChecked(
             Preferences.getUI("UseProxy"))
@@ -68,6 +77,13 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.downloadDirEdit.text())
         Preferences.setUI("RequestDownloadFilename", 
             self.requestFilenameCheckBox.isChecked())
+        if self.cleanupNeverButton.isChecked():
+            policy = DownloadManager.RemoveNever
+        elif self.cleanupExitButton.isChecked():
+            policy = DownloadManager.RemoveExit
+        else:
+            policy = DownloadManager.RemoveSuccessFullDownload
+        Preferences.setHelp("DownloadManagerRemovePolicy", policy)
         
         Preferences.setUI("UseProxy",
             self.proxyGroup.isChecked())

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>305</width>
-    <height>200</height>
+    <height>221</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,6 +37,19 @@
      </property>
      <property name="text">
       <string>&amp;Search History</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="downloadsCheckBox">
+     <property name="toolTip">
+      <string>Select to clear the download history</string>
+     </property>
+     <property name="text">
+      <string>Download History</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -120,6 +133,7 @@
  <tabstops>
   <tabstop>historyCheckBox</tabstop>
   <tabstop>searchCheckBox</tabstop>
+  <tabstop>downloadsCheckBox</tabstop>
   <tabstop>cookiesCheckBox</tabstop>
   <tabstop>cacheCheckBox</tabstop>
   <tabstop>iconsCheckBox</tabstop>
