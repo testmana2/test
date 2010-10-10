@@ -114,7 +114,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         scheme = request.url().scheme()
         if scheme == "https" and (not SSL_AVAILABLE or not QSslSocket.supportsSsl()):
-            return NetworkProtocolUnknownErrorReply(scheme)
+            return NetworkProtocolUnknownErrorReply(scheme, self)
         
         if op == QNetworkAccessManager.PostOperation and outgoingData is not None:
             outgoingDataByteArray = outgoingData.peek(1024 * 1024)
@@ -145,6 +145,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                     Helpviewer.HelpWindow.HelpWindow.adblockManager().network()
             reply = self.__adblockNetwork.block(req)
             if reply is not None:
+                reply.setParent(self)
                 return reply
         
         reply = QNetworkAccessManager.createRequest(self, op, req, outgoingData)
