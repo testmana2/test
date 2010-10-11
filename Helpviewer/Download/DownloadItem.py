@@ -10,7 +10,7 @@ Module implementing a widget controlling a download.
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, QUrl, \
     QIODevice
 from PyQt4.QtGui import QWidget, QPalette, QStyle, QDesktopServices, QFileDialog
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
+from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
 from E5Gui import E5MessageBox
 
@@ -69,6 +69,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__bytesReceived = 0
         self.__downloadTime = QTime()
         self.__output = QFile()
+        self.__fileName = ""
         self.__startedSaving = False
         self.__finishedDownloading = False
         self.__gettingFileName = False
@@ -95,6 +96,9 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.openButton.setEnabled(False)
         self.openButton.setVisible(False)
         
+        # start timer for the download estimation
+        self.__downloadTime.start()
+        
         # attach to the reply object
         self.__url = self.__reply.url()
         self.__reply.setParent(self)
@@ -108,9 +112,6 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.infoLabel.clear()
         self.progressBar.setValue(0)
         self.__getFileName()
-        
-        # start timer for the download estimation
-        self.__downloadTime.start()
         
         if self.__reply.error() != QNetworkReply.NoError:
             self.__networkError()
@@ -128,8 +129,14 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         downloadDirectory = Helpviewer.HelpWindow.HelpWindow\
             .downloadManager().downloadDirectory()
         
-        defaultFileName = self.__saveFileName(downloadDirectory)
-        fileName = defaultFileName
+        if self.__fileName:
+            fileName = self.__fileName
+            self.__toDownload = True
+            ask = False
+        else:
+            defaultFileName = self.__saveFileName(downloadDirectory)
+            fileName = defaultFileName
+            ask = True
         self.__autoOpen = False
         if not self.__toDownload:
             res = E5MessageBox.question(self,
@@ -153,7 +160,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             fileName = QDesktopServices.storageLocation(QDesktopServices.TempLocation) + \
                         '/' + QFileInfo(fileName).completeBaseName()
         
-        if not self.__autoOpen and self.__requestFilename:
+        if ask and not self.__autoOpen and self.__requestFilename:
             self.__gettingFileName = True
             fileName = QFileDialog.getSaveFileName(
                 None,
@@ -169,15 +176,17 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                     .format(QFileInfo(defaultFileName).fileName()))
                 self.__canceledFileSelect = True
                 return
-            fileInfo = QFileInfo(fileName)
-            Helpviewer.HelpWindow.HelpWindow.downloadManager().setDownloadDirectory(
-                fileInfo.absoluteDir().absolutePath())
-            self.filenameLabel.setText(fileInfo.fileName())
+        
+        fileInfo = QFileInfo(fileName)
+        Helpviewer.HelpWindow.HelpWindow.downloadManager().setDownloadDirectory(
+            fileInfo.absoluteDir().absolutePath())
+        self.filenameLabel.setText(fileInfo.fileName())
         
         self.__output.setFileName(fileName)
+        self.__fileName = fileName
         
         # check file path for saving
-        saveDirPath = QFileInfo(self.__output.fileName()).dir()
+        saveDirPath = QFileInfo(self.__fileName).dir()
         if not saveDirPath.exists():
             if not saveDirPath.mkpath(saveDirPath.absolutePath()):
                 self.progressBar.setVisible(False)
@@ -187,7 +196,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                     .format(saveDirPath.absolutePath()))
                 return
         
-        self.filenameLabel.setText(QFileInfo(self.__output.fileName()).fileName())
+        self.filenameLabel.setText(QFileInfo(self.__fileName).fileName())
         if self.__requestFilename:
             self.__readyRead()
     
@@ -252,6 +261,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         reply = nam.get(QNetworkRequest(self.__url))
         if self.__output.exists():
             self.__output.remove()
+        self.__output = QFile()
         self.__reply = reply
         self.__initialize(tryAgain = True)
         self.statusChanged.emit()
@@ -449,8 +459,6 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         """
         Private slot to handle the download finished.
         """
-        self.__readyRead()
-        
         self.__finishedDownloading = True
         if not self.__startedSaving:
             return
@@ -483,7 +491,6 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         @param icon reference to the icon to be set (QIcon)
         """
-        # TODO: adjust the size
         self.fileIcon.setPixmap(icon.pixmap(48, 48))
     
     def fileName(self):
@@ -492,7 +499,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         @return name of the output file (string)
         """
-        return self.__output.fileName()
+        return self.__fileName
     
     def absoluteFilePath(self):
         """
@@ -500,7 +507,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         @return absolute path of the output file (string)
         """
-        return QFileInfo(self.__output).absoluteFilePath()
+        return QFileInfo(self.__fileName).absoluteFilePath()
     
     def getData(self):
         """
@@ -509,7 +516,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @return tuple of URL, save location and done flag
             (QUrl, string, boolean)
         """
-        return (self.__url, QFileInfo(self.__output).filePath(), 
+        return (self.__url, QFileInfo(self.__fileName).filePath(), 
                 self.downloadedSuccessfully())
     
     def setData(self, data):
@@ -520,9 +527,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             (QUrl, string, boolean)
         """
         self.__url = data[0]
-        self.__output.setFileName(data[1])
+        self.__fileName = data[1]
         
-        self.filenameLabel.setText(QFileInfo(self.__output.fileName()).fileName())
+        self.filenameLabel.setText(QFileInfo(self.__fileName).fileName())
+        self.infoLabel.setText(self.__fileName)
         
         self.stopButton.setEnabled(False)
         self.stopButton.setVisible(False)
