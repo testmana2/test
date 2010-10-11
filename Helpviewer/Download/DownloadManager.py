@@ -234,6 +234,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         
         Preferences.setHelp("DownloadManagerRemovePolicy", self.__removePolicy)
         Preferences.setHelp("DownloadManagerSize", self.size())
+        Preferences.setHelp("DownloadManagerPosition", self.pos())
         if self.__removePolicy == DownloadManager.RemoveExit:
             return
         
@@ -253,6 +254,9 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         size = Preferences.getHelp("DownloadManagerSize")
         if size.isValid():
             self.resize(size)
+        pos = Preferences.getHelp("DownloadManagerPosition")
+        self.move(pos)
+        
         downloads = Preferences.getHelp("DownloadManagerDownloads")
         for download in downloads:
             if not download[0].isEmpty() and \

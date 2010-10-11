@@ -586,6 +586,7 @@ class Prefs(object):
         "ShowPreview" : True, 
         "DownloadManagerRemovePolicy" : 0,      # never delete downloads
         "DownloadManagerSize" : QtCore.QSize(400, 300), 
+        "DownloadManagerPosition" : QtCore.QPoint(), 
         "DownloadManagerDownloads" : [], 
     }
     
@@ -1810,8 +1811,6 @@ def getHelp(key, prefClass = Prefs):
     elif key in ["AdBlockSubscriptions"]:
         return toList(prefClass.settings.value("Help/" + key, 
             prefClass.helpDefaults[key]))
-    elif key in ["DownloadManagerSize"]:
-        return prefClass.settings.value("Help/" + key, prefClass.helpDefaults[key])
     else:
         return prefClass.settings.value("Help/" + key, prefClass.helpDefaults[key])
     
