@@ -106,7 +106,12 @@ def initGlobals():
     
     try:
         from PyQt4 import pyqtconfig
-        qtDataDir = pyqtconfig._pkg_config["qt_data_dir"]
+        pyqtDataDir = pyqtconfig._pkg_config["pyqt_mod_dir"]
+        if os.path.exists(os.path.join(pyqtDataDir, "qsci")):
+            # it's the installer
+            qtDataDir = pyqtDataDir
+        else:
+            qtDataDir = pyqtconfig._pkg_config["qt_data_dir"]
     except (AttributeError, ImportError):
         qtDataDir = None
     if qtDataDir:
