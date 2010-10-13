@@ -44,7 +44,6 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         self.__manager = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
         
         self.__iconProvider = None
-        self.__removePolicy = DownloadManager.RemoveNever
         self.__downloads = []
         self.__downloadDirectory = ""
         self.__loaded = False
@@ -196,6 +195,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         
         if remove:
             self.__model.removeRow(row)
+            self.__updateItemCount()
         
         self.cleanupButton.setEnabled(
             (len(self.__downloads) - self.activeDownloads()) > 0)
@@ -206,7 +206,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         
         @return remove policy (integer)
         """
-        return self.__removePolicy
+        return Preferences.getHelp("DownloadManagerRemovePolicy")
     
     def setRemovePolicy(self, policy):
         """
@@ -219,11 +219,10 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         assert policy in (DownloadManager.RemoveExit, DownloadManager.RemoveNever, 
                           DownloadManager.RemoveSuccessFullDownload)
         
-        if policy == self.__removePolicy:
+        if policy == self.removePolicy():
             return
         
-        self.__removePolicy = policy
-        self.__saveTimer.changeOccurred()
+        Preferences.setHelp("DownloadManagerRemovePolicy", self.policy)
     
     def save(self):
         """
@@ -232,10 +231,9 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         if not self.__loaded:
             return
         
-        Preferences.setHelp("DownloadManagerRemovePolicy", self.__removePolicy)
         Preferences.setHelp("DownloadManagerSize", self.size())
         Preferences.setHelp("DownloadManagerPosition", self.pos())
-        if self.__removePolicy == DownloadManager.RemoveExit:
+        if self.removePolicy() == DownloadManager.RemoveExit:
             return
         
         downloads = []
@@ -250,7 +248,6 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         if self.__loaded:
             return
         
-        self.__removePolicy = Preferences.getHelp("DownloadManagerRemovePolicy")
         size = Preferences.getHelp("DownloadManagerSize")
         if size.isValid():
             self.resize(size)

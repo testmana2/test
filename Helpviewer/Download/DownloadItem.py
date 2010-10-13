@@ -316,7 +316,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             self.on_stopButton_clicked()
         else:
             self.__startedSaving = True
-            if self.__finishedDownloading:
+            if (self.bytesTotal() == 0 and self.__reply.atEnd()) or \
+               self.__finishedDownloading:
                 self.__finished()
     
     def __networkError(self):
@@ -364,7 +365,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         @return total number of bytes (integer)
         """
-        return self.__reply.header(QNetworkRequest.ContentLengthHeader)
+        total = self.__reply.header(QNetworkRequest.ContentLengthHeader)
+        if total is None:
+            total = 0
+        return total
     
     def bytesReceived(self):
         """
@@ -381,6 +385,9 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @return estimation for the remaining time (float)
         """
         if not self.downloading():
+            return -1.0
+        
+        if self.bytesTotal() == 0:
             return -1.0
         
         timeRemaining = (self.bytesTotal() - self.bytesReceived()) / self.currentSpeed()
@@ -409,7 +416,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if self.__reply.error() != QNetworkReply.NoError:
             return
         
-        bytesTotal = self.__reply.header(QNetworkRequest.ContentLengthHeader)
+        bytesTotal = self.bytesTotal()
         running = not self.downloadedSuccessfully()
         
         speed = self.currentSpeed()
@@ -430,7 +437,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                     dataString(int(speed)), 
                     remaining)
         else:
-            if self.__bytesReceived == bytesTotal:
+            if self.__bytesReceived == bytesTotal or bytesTotal == 0:
                 info = self.trUtf8("{0} downloaded")\
                     .format(dataString(self.__output.size()))
             else:
