@@ -176,6 +176,18 @@ class HelpWebPage(QWebPage):
         self.__lastRequest = request
         self.__lastRequestType = type_
         
+        if type_ == QWebPage.NavigationTypeFormResubmitted:
+            res = E5MessageBox.yesNo(self.view(),
+                self.trUtf8("Resending POST request"),
+                self.trUtf8("""In order to display the site, the request along with"""
+                            """ all the data must be sent once again, which may lead"""
+                            """ to some unexpected behaviour of the site e.g. the"""
+                            """ same action might be performed once again. Do you want"""
+                            """ to continue anyway?"""),
+                icon = E5MessageBox.Warning)
+            if not res:
+                return False
+        
         return QWebPage.acceptNavigationRequest(self, frame, request, type_)
     
     def populateNetworkRequest(self, request):
@@ -842,10 +854,9 @@ class HelpBrowser(QWebView):
         if url.isEmpty():
             return
         
-        oldCtrlPressed = self.ctrlPressed
         self.ctrlPressed = True
         self.setSource(url)
-        self.ctrlPressed = oldCtrlPressed
+        self.ctrlPressed = False
     
     def __bookmarkLink(self):
         """
