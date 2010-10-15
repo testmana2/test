@@ -172,7 +172,6 @@ class HelpWebPage(QWebPage):
         @param type_ type of the navigation request (QWebPage.NavigationType)
         @return flag indicating acceptance (boolean)
         """
-        # TODO: extend with more functionality
         self.__lastRequest = request
         self.__lastRequestType = type_
         
@@ -1180,39 +1179,49 @@ class HelpBrowser(QWebView):
                 self.mw.downloadManager().handleUnsupportedContent(
                     reply, webPage = self.page())
                 return
-        else:
-            replyUrl = reply.url()
-            if replyUrl.isEmpty():
+        
+        replyUrl = reply.url()
+        if replyUrl.isEmpty():
+            return
+        
+        notFoundFrame = self.page().mainFrame()
+        if notFoundFrame is None:
+            return
+        
+        if reply.header(QNetworkRequest.ContentTypeHeader):
+            data = reply.readAll()
+            if contentSniff(data):
+                notFoundFrame.setHtml(str(data, encoding = "utf-8"), replyUrl)
                 return
-            
-            html = notFoundPage_html
-            urlString = bytes(replyUrl.toEncoded()).decode()
-            title = self.trUtf8("Error loading page: {0}").format(urlString)
-            pixmap = qApp.style()\
-                     .standardIcon(QStyle.SP_MessageBoxWarning, None, self)\
-                     .pixmap(32, 32)
-            imageBuffer = QBuffer()
-            imageBuffer.open(QIODevice.ReadWrite)
-            if pixmap.save(imageBuffer, "PNG"):
-                html = html.replace("IMAGE_BINARY_DATA_HERE", 
-                             str(imageBuffer.buffer().toBase64(), encoding="ascii"))
-            html = html.format(
-                title, 
-                reply.errorString(), 
-                self.trUtf8("When connecting to: {0}.").format(urlString), 
-                self.trUtf8("Check the address for errors such as <b>ww</b>.example.org "
-                            "instead of <b>www</b>.example.org"), 
-                self.trUtf8("If the address is correct, try checking the network "
-                            "connection."), 
-                self.trUtf8("If your computer or network is protected by a firewall or "
-                            "proxy, make sure that the browser is permitted to access "
-                            "the network."), 
-                self.trUtf8("If your cache policy is set to offline browsing,"
-                            "only pages in the local cache are available.")
-            )
-            self.setHtml(html, replyUrl)
-            self.mw.historyManager().removeHistoryEntry(replyUrl, self.title())
-            self.loadFinished.emit(False)
+        
+        html = notFoundPage_html
+        urlString = bytes(replyUrl.toEncoded()).decode()
+        title = self.trUtf8("Error loading page: {0}").format(urlString)
+        pixmap = qApp.style()\
+                 .standardIcon(QStyle.SP_MessageBoxWarning, None, self)\
+                 .pixmap(32, 32)
+        imageBuffer = QBuffer()
+        imageBuffer.open(QIODevice.ReadWrite)
+        if pixmap.save(imageBuffer, "PNG"):
+            html = html.replace("IMAGE_BINARY_DATA_HERE", 
+                         str(imageBuffer.buffer().toBase64(), encoding="ascii"))
+        html = html.format(
+            title, 
+            reply.errorString(), 
+            self.trUtf8("When connecting to: {0}.").format(urlString), 
+            self.trUtf8("Check the address for errors such as <b>ww</b>.example.org "
+                        "instead of <b>www</b>.example.org"), 
+            self.trUtf8("If the address is correct, try checking the network "
+                        "connection."), 
+            self.trUtf8("If your computer or network is protected by a firewall or "
+                        "proxy, make sure that the browser is permitted to access "
+                        "the network."), 
+            self.trUtf8("If your cache policy is set to offline browsing,"
+                        "only pages in the local cache are available.")
+        )
+        notFoundFrame.setHtml(html, replyUrl)
+        self.mw.historyManager().removeHistoryEntry(replyUrl, self.title())
+        self.loadFinished.emit(False)
     
     def __downloadRequested(self, request):
         """
@@ -1291,3 +1300,30 @@ class HelpBrowser(QWebView):
         Public method to indicate a change of the settings.
         """
         self.reload()
+
+def contentSniff(data):
+    """
+    Module function to do some content sniffing to check, if the data is HTML.
+    
+    @return flag indicating HTML content (boolean)
+    """
+    if data.contains("<!doctype") or \
+       data.contains("<script") or \
+       data.contains("<html") or \
+       data.contains("<!--") or \
+       data.contains("<head") or \
+       data.contains("<iframe") or \
+       data.contains("<h1") or \
+       data.contains("<div") or \
+       data.contains("<font") or \
+       data.contains("<table") or \
+       data.contains("<a") or \
+       data.contains("<style") or \
+       data.contains("<title") or \
+       data.contains("<b") or \
+       data.contains("<body") or \
+       data.contains("<br") or \
+       data.contains("<p"):
+        return True
+    
+    return False

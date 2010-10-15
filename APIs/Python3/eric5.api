@@ -1957,6 +1957,7 @@ eric5.Helpviewer.HelpBrowserWV.JavaScriptEricObject?1(mw, parent = None)
 eric5.Helpviewer.HelpBrowserWV.JavaScriptExternalObject.AddSearchProvider?4(url)
 eric5.Helpviewer.HelpBrowserWV.JavaScriptExternalObject?1(mw, parent = None)
 eric5.Helpviewer.HelpBrowserWV.LinkedResource?1()
+eric5.Helpviewer.HelpBrowserWV.contentSniff?4(data)
 eric5.Helpviewer.HelpClearPrivateDataDialog.HelpClearPrivateDataDialog.getData?4()
 eric5.Helpviewer.HelpClearPrivateDataDialog.HelpClearPrivateDataDialog?1(parent = None)
 eric5.Helpviewer.HelpDocsInstaller.HelpDocsInstaller.docsInstalled?7
