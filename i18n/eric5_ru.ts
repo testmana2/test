@@ -5337,72 +5337,72 @@ Not connected
         <translation>Стоп</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="145"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="149"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="156"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="160"/>
         <source>Download canceled: {0}</source>
         <translation>Скачивание прервано: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="269"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="273"/>
         <source>Error opening save file: {0}</source>
         <translation>Ошибка сохранения файла: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="276"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="280"/>
         <source>Error saving: {0}</source>
         <translation>Ошибка при сохранении: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="293"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="297"/>
         <source>Network Error: {0}</source>
         <translation>Сетевая ошибка: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="358"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="362"/>
         <source>{0} of {1} ({2}/sec) {3}</source>
         <translation>{0} из {1} ({2}/сек) {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="363"/>
         <source>?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="367"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="371"/>
         <source>{0} downloaded</source>
         <translation>{0} скачано</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="370"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="374"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} из {1} - остановлено</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="384"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="388"/>
         <source>bytes</source>
         <translation>байты</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="387"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="391"/>
         <source>kB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="390"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="394"/>
         <source>MB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="131"/>
         <source>Downloading</source>
         <translation>Скачивание</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="131"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Начинается загрузка файла &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Что Вы хотите с ним сделать?&lt;/p&gt;</translation>
     </message>
@@ -5412,12 +5412,12 @@ Not connected
         <translation>Скачивание Eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="349"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="353"/>
         <source>- {0}:{1:02} minutes remaining</source>
         <translation>осталось {0}:{1:02} минут</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="356"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="360"/>
         <source>- {0} seconds remaining</source>
         <translation>осталось {0} секунд</translation>
     </message>
@@ -8466,147 +8466,147 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EditorStylesPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="202"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="212"/>
         <source>Folding style:</source>
         <translation>Стиль сворачивания:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="215"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="225"/>
         <source>Select the folding style to be used in the folding margin</source>
         <translation>Какой стиль сворачивания будет использован</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="232"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="242"/>
         <source>Plain</source>
         <translation>Обычный</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="237"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
         <source>Circled</source>
         <translation>Окружности</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="242"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="252"/>
         <source>Boxed</source>
         <translation>Квадраты</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="257"/>
         <source>Circled Tree</source>
         <translation>Дерево с окружностями</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="252"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="262"/>
         <source>Boxed Tree</source>
         <translation>Дерево с квадратами</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="43"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="53"/>
         <source>Select, whether the monospaced font should be used as default</source>
         <translation>Следует ли использовать по умолчанию моноширинный шрифт</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="46"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
         <source>Use monospaced as default</source>
         <translation>Использовать моноширинный шрифт по умолчанию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="79"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="89"/>
         <source>Press to select the font to be used as the monospaced font</source>
         <translation>Задайте шрифт, который будет использован как моноширинный</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="92"/>
         <source>Monospaced Font</source>
         <translation>Моноширинный шрифт</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="337"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="347"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>Нажмите для выбора шрифта для номеров строк в редакторе</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="340"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="350"/>
         <source>Line Numbers Font</source>
         <translation>Шрифт для номеров строк</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="489"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="499"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Будет ли подсвечиваться текущая строка</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="492"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="502"/>
         <source>Caretline visible</source>
         <translation>Подсветка текущей строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>Будет ли лексический анализатор подсвечивать выделенный текст другим цветом.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
         <source>Colourize selected text</source>
         <translation>Изменять цвет выделенного текста</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="501"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="511"/>
         <source>Caret width:</source>
         <translation>Ширина каретки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="508"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="518"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Задайте ширину каретки (1, 2 или 3 пикселя)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="788"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="798"/>
         <source>Edge Mode</source>
         <translation>Правая граница</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Задайте цвет для отображения правой границы.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="852"/>
         <source>Background colour:</source>
         <translation>Цвет фона:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="855"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="865"/>
         <source>Move to set the edge column.</source>
         <translation>Задайте положение правой границы.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="883"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="893"/>
         <source>Displays the selected tab width.</source>
         <translation>Выбранная ширина табуляции.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="899"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="909"/>
         <source>Column number:</source>
         <translation>Колонка:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="906"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="916"/>
         <source>Mode:</source>
         <translation>Режим:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
         <source>Disabled</source>
         <translation>Отключено</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="925"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="935"/>
         <source>Draw Line</source>
         <translation>Рисовать линию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="940"/>
         <source>Change Background Colour</source>
         <translation>Изменить цвет фона</translation>
     </message>
@@ -8616,113 +8616,113 @@ whole selection.&lt;/li&gt;
         <translation>&lt;b&gt;Настроить стили редактора&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="356"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="366"/>
         <source>2345</source>
         <translation>2345</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="92"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="102"/>
         <source>Monospaced Text</source>
         <translation>Моноширинный текст</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="72"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
         <source>Default Text Font</source>
         <translation>Шрифт по-умолчанию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="66"/>
         <source>Default Text</source>
         <translation>Обычный текст</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="69"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="79"/>
         <source>Press to select the default font for the editor&apos;s text</source>
         <translation>Задать шрифт по-умолчанию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="395"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="405"/>
         <source>Select to use custom selection colours</source>
         <translation>Использовать собственные цвета выделения</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="398"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Собственные цвета выделения&lt;/b&gt;
 &lt;p&gt;Выберите эту пометку, чтобы использовать собственные цвета для выделения в окнах редактора и оболочки. Цвета выделения устанавливаются на странице настройки цветов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="401"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
         <source>Use custom selection colours</source>
         <translation>Использовать собственные цвета для выделения</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="47"/>
         <source>Fonts</source>
         <translation>Шрифты</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="387"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="397"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="428"/>
         <source>Select to extend selection to end of line</source>
         <translation>Раздвинуть выделение до конца строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="431"/>
         <source>Extend selection to end of line</source>
         <translation>Раздвинуть выделение до конца строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="483"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="493"/>
         <source>Caret</source>
         <translation>Каретка</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="108"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="118"/>
         <source>Margins</source>
         <translation>Границы</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="116"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="126"/>
         <source>Select whether line numbers margin should be shown.</source>
         <translation>Будут ли показываться номера строк.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="119"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="129"/>
         <source>Show Line Numbers Margin</source>
         <translation>Показывать номера строк</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="126"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="136"/>
         <source>Select whether the fold margin should be shown.</source>
         <translation>Надо ли показывать полосу свёртки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="129"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="139"/>
         <source>Show Fold Margin</source>
         <translation>Показать полосу свёртки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="150"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="160"/>
         <source>Linenumbers width:</source>
         <translation>Ширина номера строки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="160"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="170"/>
         <source>Move to set the width of the linenumbers margin.</source>
         <translation>Задайте ширину поля для номеров строк.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="182"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="192"/>
         <source>Displays the selected width of the linenumbers margin.</source>
         <translation>Выбранная ширина края номеров линий.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="218"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="228"/>
         <source>&lt;b&gt;Folding style&lt;/b&gt;
 &lt;p&gt;Select the desired folding style to be used in the folding margin.&lt;/p&gt;
 &lt;p&gt;The available styles are:
@@ -8747,234 +8747,239 @@ whole selection.&lt;/li&gt;
 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="432"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="442"/>
         <source>Selection foreground:</source>
         <translation>Цвет выделения:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="445"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>Задайте цвет выделения.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="465"/>
         <source>Selection background:</source>
         <translation>Фон выделения:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="468"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="478"/>
         <source>Select the background colour for the selection.</source>
         <translation>Задайте фон для выделенного текста.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="541"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="551"/>
         <source>Caret foreground:</source>
         <translation>Цвет каретки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="554"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
         <source>Select the colour for the caret.</source>
         <translation>Задайте цвет курсора.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="574"/>
         <source>Caretline background:</source>
         <translation>Фон каретки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="577"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="587"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Задайте фон для текущей строки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="598"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="608"/>
         <source>Current line marker:</source>
         <translation>Отметка текущей строки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="611"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Выберите цвет для пометки текущей строки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="631"/>
         <source>Error line marker:</source>
         <translation>Отметка ошибочной строки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="634"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="644"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Выберите цвет для пометки ошибочной строки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="647"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="657"/>
         <source>Braces</source>
         <translation>Фигурные скобки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="653"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Будут ли подсвечиваться парные и неверно расставленные скобки.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="656"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="666"/>
         <source>Highlight braces</source>
         <translation>Подсвечивать скобки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="673"/>
         <source>Matched braces:</source>
         <translation>Парные скобки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="676"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Выберите цвет для выделения парных скобок.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="696"/>
         <source>Matched braces background:</source>
         <translation>Цвет фона для закрытой скобки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="699"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="709"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Задайте цвет фона для подсветки закрытых скобок.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="715"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="725"/>
         <source>Unmatched brace:</source>
         <translation>Непарная скобка:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="722"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="732"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Выберите цвет для выделения непарных скобок.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="738"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="748"/>
         <source>Unmatched brace background:</source>
         <translation>Цвет фона для незакрытой скобки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="745"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="755"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Задайте цвет фона для подсветки незакрытых скобок.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="758"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="768"/>
         <source>End of Line</source>
         <translation>Конц строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="766"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Надо ли показывать концы строк</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="769"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
         <source>Show End of Line</source>
         <translation>Показать концы строк</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="786"/>
         <source>Select, whether long lines should be wrapped</source>
         <translation>Следует ли переносить длинные строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="789"/>
         <source>Wrap long lines</source>
         <translation>Переносить длинные строки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1001"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1011"/>
         <source>Various</source>
         <translation>Разное</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1007"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Будут ли показываться провельные символы</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1010"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
         <source>Show Whitespace</source>
         <translation>Показывать пробелы</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1027"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Показать минималистичное контекстное меню</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1030"/>
         <source>Show minimal context menu</source>
         <translation>Показать минималистичное контекстное меню</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="264"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="274"/>
         <source>Margins foreground:</source>
         <translation>Цвет границ:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="277"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
         <source>Select the foreground colour for the margins</source>
         <translation>Цвет границ</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="297"/>
         <source>Margins background:</source>
         <translation>Фоновый цвет границ:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="300"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
         <source>Select the background colour for the margins</source>
         <translation>Фоновый цвет границ</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="320"/>
         <source>Foldmargin background:</source>
         <translation>Фоновый цвет границ свертки:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="323"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="333"/>
         <source>Select the background colour for the foldmargin</source>
         <translation>Фоновый цвет границ свертки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="136"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="146"/>
         <source>Select to show unified margins (like eric4 &lt; 4.3.0)</source>
         <translation>Показывать объединенные границы (как в eric4 &lt; 4.3.0)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="139"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="149"/>
         <source>Show unified margins</source>
         <translation>Показывать объединенные границы</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="602"/>
         <source>Debugging Line Markers</source>
         <translation>Отметка текущей строки отладчика</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="944"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="954"/>
         <source>Zoom</source>
         <translation>Масштаб</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="950"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
         <source>Initial zoom factor:</source>
         <translation>Начальный масштаб:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="970"/>
         <source>Move to set the initial zoom factor</source>
         <translation>Установить начальный масштаб</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="982"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="992"/>
         <source>Displays the selected initial zoom factor</source>
         <translation>Показать начальный масштаб</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; Fonts and colors of the syntax highlighters have to be configured on the syntax highlighter styles page.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11118,112 +11123,112 @@ whole selection.&lt;/li&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="452"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="456"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик для файла &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="630"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="634"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Открыть ссылку в новой закладке<byte value="x9"/>Shift+Левая кнопка мыши</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="412"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="416"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; не существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="268"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="272"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Окно помощи&lt;/b&gt;&lt;p&gt;В этом окне отображается имеющаяся помощь.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="689"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="693"/>
         <source>Web Inspector...</source>
         <translation>WEB проводник...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="949"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="952"/>
         <source>Error loading page: {0}</source>
         <translation>Ошибка при загрузке страницы: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>When connecting to: {0}.</source>
         <translation>При соединении с {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Проверьте адрес на ошибки типа &lt;b&gt;ww&lt;/b&gt;.example.org вместо &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Если адрес правильный, проверьте сетевое соединение.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Если ваш компьютер или локальная сеть находятся за firewall или proxy, убедитесь что браузеру разрешено подсоединяться к сети.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="434"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="438"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить приложение для URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="663"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="667"/>
         <source>Bookmark this Page</source>
         <translation>Создать закладку для этой страницы</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="634"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="638"/>
         <source>Save Lin&amp;k</source>
         <translation>Сохранить &amp;ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="635"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="639"/>
         <source>Bookmark this Link</source>
         <translation>Сохранить ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="638"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="642"/>
         <source>Copy Link to Clipboard</source>
         <translation>Скопировать ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="643"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="647"/>
         <source>Open Image in New Tab</source>
         <translation>Открыть изображение в новой закладке</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="647"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="651"/>
         <source>Save Image</source>
         <translation>Сохранить изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="648"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="652"/>
         <source>Copy Image to Clipboard</source>
         <translation>Скопировать изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="649"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="653"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Скопировать адрес изображения</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="452"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="456"/>
         <source>Web Browser</source>
         <translation>Просмотрщик Web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="653"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="657"/>
         <source>Block Image</source>
         <translation>Заблокировать изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="677"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="681"/>
         <source>Search with...</source>
         <translation>Искать с...</translation>
     </message>
@@ -11881,27 +11886,27 @@ whole selection.&lt;/li&gt;
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="216"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="220"/>
         <source>Error loading page: {0}</source>
         <translation>Ошибка при загрузке страницы: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="229"/>
         <source>When connecting to: {0}.</source>
         <translation>При соединении с {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="229"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Проверьте адрес на ошибки типа &lt;b&gt;ww&lt;/b&gt;.example.org вместо &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="229"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Если адрес правильный, проверьте сетевое соединение.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="229"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Если ваш компьютер или локальная сеть находятся за firewall или proxy, убедитесь что браузеру разрешено подсоединяться к сети.</translation>
     </message>
@@ -16514,22 +16519,22 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Загрузка истории</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="439"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="440"/>
         <source>Saving History</source>
         <translation>Сохранение истории</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="413"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="414"/>
         <source>&lt;p&gt;Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно открыть файл истории &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="433"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="434"/>
         <source>&lt;p&gt;Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>Ошибка при удалении файла историии &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Причина: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="439"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="440"/>
         <source>&lt;p&gt;Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>Ошибка перезаписи файла истории (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Причина: {1}</translation>
     </message>
@@ -20713,52 +20718,52 @@ Do you want to save your changes?</source>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="159"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="160"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="162"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="163"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;; realm &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="189"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="190"/>
         <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
         <translation>&lt;b&gt;Подключиться к прокси &apos;{0}&apos; используя:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="226"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="227"/>
         <source>SSL Errors</source>
         <translation>Ошибки SSL</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="226"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="227"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Ошибки SSL для &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Игнорировать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="242"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="243"/>
         <source>Certificates</source>
         <translation>Сертификаты</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="242"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="243"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Сертификаты:&lt;br/&gt;{0}&lt;br/&gt;Принять?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="281"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="282"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Эмитент: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="284"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="285"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Не действительны ранее: {0}&lt;br/&gt;Действительны до: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="291"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="292"/>
         <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>&lt;br/&gt;Альтернативные имеа::&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
@@ -22340,187 +22345,187 @@ Select Update.</source>
         <translation>Создать каталог проекта</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3359"/>
+        <location filename="Project/Project.py" line="3370"/>
         <source>Open project</source>
         <translation>Открыть проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3393"/>
+        <location filename="Project/Project.py" line="3404"/>
         <source>Save project as</source>
         <translation>Сохранить проект как</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2894"/>
+        <location filename="Project/Project.py" line="2905"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2934"/>
+        <location filename="Project/Project.py" line="2945"/>
         <source>Close Project</source>
         <translation>Закрыть проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2934"/>
+        <location filename="Project/Project.py" line="2945"/>
         <source>The current project has unsaved changes.</source>
         <translation>Изменения в текущем проекте не сохранены.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3538"/>
+        <location filename="Project/Project.py" line="3549"/>
         <source>&amp;Save</source>
         <translation>&amp;Сохранить</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3346"/>
+        <location filename="Project/Project.py" line="3357"/>
         <source>New project</source>
         <translation>Новый проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3346"/>
+        <location filename="Project/Project.py" line="3357"/>
         <source>&amp;New...</source>
         <translation>&amp;Новый...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3350"/>
+        <location filename="Project/Project.py" line="3361"/>
         <source>Generate a new project</source>
         <translation>Создать новый проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3351"/>
+        <location filename="Project/Project.py" line="3362"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Новый...&lt;/b&gt;&lt;p&gt;Открыть диалог для ввода информации о новом проекте.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3359"/>
+        <location filename="Project/Project.py" line="3370"/>
         <source>&amp;Open...</source>
         <translation>&amp;Открыть...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3363"/>
+        <location filename="Project/Project.py" line="3374"/>
         <source>Open an existing project</source>
         <translation>Открыть существующий проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3364"/>
+        <location filename="Project/Project.py" line="3375"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Открыть...&lt;/b&gt;&lt;p&gt;Открыть существующий проект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3371"/>
+        <location filename="Project/Project.py" line="3382"/>
         <source>Close project</source>
         <translation>Закрыть проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3371"/>
+        <location filename="Project/Project.py" line="3382"/>
         <source>&amp;Close</source>
         <translation>&amp;Закрыть</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3374"/>
+        <location filename="Project/Project.py" line="3385"/>
         <source>Close the current project</source>
         <translation>Закрыть текущий проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3375"/>
+        <location filename="Project/Project.py" line="3386"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Закрыть&lt;/b&gt;&lt;p&gt;Закрыть текущий проект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3382"/>
+        <location filename="Project/Project.py" line="3393"/>
         <source>Save project</source>
         <translation>Сохранить проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3385"/>
+        <location filename="Project/Project.py" line="3396"/>
         <source>Save the current project</source>
         <translation>Сохранить текущий проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3386"/>
+        <location filename="Project/Project.py" line="3397"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сохранить&lt;/b&gt;&lt;p&gt;Сохранить текущий проект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3393"/>
+        <location filename="Project/Project.py" line="3404"/>
         <source>Save &amp;as...</source>
         <translation>Сохранить &amp;как...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3396"/>
+        <location filename="Project/Project.py" line="3407"/>
         <source>Save the current project to a new file</source>
         <translation>Сохранить текущий проект в новый файл</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3397"/>
+        <location filename="Project/Project.py" line="3408"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сохранить как&lt;/b&gt;&lt;p&gt; Сохранить текущий проект в новый файл.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3434"/>
+        <location filename="Project/Project.py" line="3445"/>
         <source>Add translation to project</source>
         <translation>Добавить перевод в проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3434"/>
+        <location filename="Project/Project.py" line="3445"/>
         <source>Add &amp;translation...</source>
         <translation>Добавить &amp;перевод...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3438"/>
+        <location filename="Project/Project.py" line="3449"/>
         <source>Add a translation to the current project</source>
         <translation>Добавить перевод в текущий проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3440"/>
+        <location filename="Project/Project.py" line="3451"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Добавить перевод...&lt;/b&gt;&lt;p&gt;Открыть диалог для добавления перевода в текущий проект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3448"/>
+        <location filename="Project/Project.py" line="3459"/>
         <source>Search new files</source>
         <translation>Поиск новых файлов</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3448"/>
+        <location filename="Project/Project.py" line="3459"/>
         <source>Searc&amp;h new files...</source>
         <translation>Поис&amp;к новых файлов...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3451"/>
+        <location filename="Project/Project.py" line="3462"/>
         <source>Search new files in the project directory.</source>
         <translation>Поиск новых файлов в каталоге проекта.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3460"/>
+        <location filename="Project/Project.py" line="3471"/>
         <source>Project properties</source>
         <translation>Свойства проекта</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3460"/>
+        <location filename="Project/Project.py" line="3471"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Свойства...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3463"/>
+        <location filename="Project/Project.py" line="3474"/>
         <source>Show the project properties</source>
         <translation>Показать свойства проекта</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3464"/>
+        <location filename="Project/Project.py" line="3475"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Свойства...&lt;/b&gt;&lt;p&gt;Показать диалог для редактирования свойств проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3574"/>
+        <location filename="Project/Project.py" line="3585"/>
         <source>Load session</source>
         <translation>Загрузить сессию</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3577"/>
+        <location filename="Project/Project.py" line="3588"/>
         <source>Load the projects session file.</source>
         <translation>Загрузить файл с сессией проекта.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3578"/>
+        <location filename="Project/Project.py" line="3589"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Загрузить сессию&lt;/b&gt;
 &lt;p&gt;Загрузить файл с сессией проекта. Сессия содержит следующие данные:&lt;br&gt;
@@ -22532,17 +22537,17 @@ Select Update.</source>
 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3591"/>
+        <location filename="Project/Project.py" line="3602"/>
         <source>Save session</source>
         <translation>Сохранить сессию</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3594"/>
+        <location filename="Project/Project.py" line="3605"/>
         <source>Save the projects session file.</source>
         <translation>Сохранить файл с сессией проекта.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3595"/>
+        <location filename="Project/Project.py" line="3606"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сохранить сессию&lt;/b&gt;
 &lt;p&gt;Сохранить файл с сессией проекта. Сессия содержит следующие данные:&lt;br&gt;
@@ -22554,137 +22559,137 @@ Select Update.</source>
 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3621"/>
+        <location filename="Project/Project.py" line="3632"/>
         <source>Code Metrics</source>
         <translation>Статистика кода</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3621"/>
+        <location filename="Project/Project.py" line="3632"/>
         <source>&amp;Code Metrics...</source>
         <translation>&amp;Статистика кода...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3624"/>
+        <location filename="Project/Project.py" line="3635"/>
         <source>Show some code metrics for the project.</source>
         <translation>Отображает статистику кода для проекта.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3626"/>
+        <location filename="Project/Project.py" line="3637"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Статистика кода...&lt;/b&gt;&lt;p&gt;Отображает статистику кода для проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3633"/>
+        <location filename="Project/Project.py" line="3644"/>
         <source>Python Code Coverage</source>
         <translation>Охват кода Python</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3633"/>
+        <location filename="Project/Project.py" line="3644"/>
         <source>Code Co&amp;verage...</source>
         <translation>&amp;Заключения по коду...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3636"/>
+        <location filename="Project/Project.py" line="3647"/>
         <source>Show code coverage information for the project.</source>
         <translation>Показать заключение охвата по коду проекта.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3638"/>
+        <location filename="Project/Project.py" line="3649"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Заключение охвата по коду...&lt;/b&gt;&lt;p&gt;Показать заключение охвата по коду всех файлов проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4328"/>
+        <location filename="Project/Project.py" line="4339"/>
         <source>Profile Data</source>
         <translation>Данные профайлера</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3646"/>
+        <location filename="Project/Project.py" line="3657"/>
         <source>&amp;Profile Data...</source>
         <translation>&amp;Данные профайлера...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3649"/>
+        <location filename="Project/Project.py" line="3660"/>
         <source>Show profiling data for the project.</source>
         <translation>Отображает результаты профилирования проекта.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3651"/>
+        <location filename="Project/Project.py" line="3662"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Данные профайлера...&lt;/b&gt;&lt;p&gt;Отображает результаты профилирования проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3740"/>
+        <location filename="Project/Project.py" line="3751"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Открыть &amp;недавние проекты</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3744"/>
+        <location filename="Project/Project.py" line="3755"/>
         <source>Chec&amp;k</source>
         <translation>&amp;Проверки</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3746"/>
+        <location filename="Project/Project.py" line="3757"/>
         <source>Sho&amp;w</source>
         <translation>По&amp;казать</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3749"/>
+        <location filename="Project/Project.py" line="3760"/>
         <source>Source &amp;Documentation</source>
         <translation>&amp;Документация исходников</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4031"/>
+        <location filename="Project/Project.py" line="4042"/>
         <source>Search New Files</source>
         <translation>Поиск новых файлов</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4031"/>
+        <location filename="Project/Project.py" line="4042"/>
         <source>There were no new files found to be added.</source>
         <translation>Не найдено файлов для добавления.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4169"/>
+        <location filename="Project/Project.py" line="4180"/>
         <source>Version Control System</source>
         <translation>Система контроля версий</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4307"/>
+        <location filename="Project/Project.py" line="4318"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Для текущего проекта не определён главный сценарий. Отмена</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3741"/>
+        <location filename="Project/Project.py" line="3752"/>
         <source>&amp;Version Control</source>
         <translation>Контроль &amp;версий</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4261"/>
+        <location filename="Project/Project.py" line="4272"/>
         <source>Coverage Data</source>
         <translation>Данные охвата</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4381"/>
+        <location filename="Project/Project.py" line="4392"/>
         <source>Application Diagram</source>
         <translation>Диаграмма приложения</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3658"/>
+        <location filename="Project/Project.py" line="3669"/>
         <source>&amp;Application Diagram...</source>
         <translation>&amp;Диаграмма приложения...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3661"/>
+        <location filename="Project/Project.py" line="3672"/>
         <source>Show a diagram of the project.</source>
         <translation>Показать диаграмму проекта.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3663"/>
+        <location filename="Project/Project.py" line="3674"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Диаграмма приложения...&lt;/b&gt;&lt;p&gt;Отображает диаграмму проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3747"/>
+        <location filename="Project/Project.py" line="3758"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Диаграммы</translation>
     </message>
@@ -22704,37 +22709,37 @@ Select Update.</source>
         <translation>Сохранить файл проекта</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4282"/>
+        <location filename="Project/Project.py" line="4293"/>
         <source>Code Coverage</source>
         <translation>Заключения охвата по коду</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4282"/>
+        <location filename="Project/Project.py" line="4293"/>
         <source>Please select a coverage file</source>
         <translation>Пожалуйста, выберите файл для информации охвата</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4328"/>
+        <location filename="Project/Project.py" line="4339"/>
         <source>Please select a profile file</source>
         <translation>Пожалуйста, выберите файл профиля</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3420"/>
+        <location filename="Project/Project.py" line="3431"/>
         <source>Add directory to project</source>
         <translation>Добавить каталог в проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3420"/>
+        <location filename="Project/Project.py" line="3431"/>
         <source>Add directory...</source>
         <translation>Добавить каталог...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3424"/>
+        <location filename="Project/Project.py" line="3435"/>
         <source>Add a directory to the current project</source>
         <translation>Добавить каталог в текущий проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3426"/>
+        <location filename="Project/Project.py" line="3437"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Добавить каталог...&lt;/b&gt;
 &lt;p&gt;Открыть диалог для добавления каталога в текущий проект.&lt;/p&gt;</translation>
@@ -22750,27 +22755,27 @@ Select Update.</source>
         <translation>Переименовать файл</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2407"/>
+        <location filename="Project/Project.py" line="2418"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>Добавить файл проекта в репозиторий?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2757"/>
+        <location filename="Project/Project.py" line="2768"/>
         <source>New Project</source>
         <translation>Новый проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2343"/>
+        <location filename="Project/Project.py" line="2354"/>
         <source>Add existing files to the project?</source>
         <translation>Добавить существующие файлы в проект?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2457"/>
+        <location filename="Project/Project.py" line="2468"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation>Желаете ли вы редактировать опции команд VCS?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2431"/>
+        <location filename="Project/Project.py" line="2442"/>
         <source>Select version control system for the project</source>
         <translation>Выберите систему контроля версий (VCS) для проекта</translation>
     </message>
@@ -22820,7 +22825,7 @@ Select Update.</source>
         <translation>&lt;p&gt;Невозможно удалить выбранный файл с переводом: &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2894"/>
+        <location filename="Project/Project.py" line="2905"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
@@ -22850,17 +22855,17 @@ Select Update.</source>
         <translation>&lt;p&gt;Невозможно удалить выбранный файл с сессией: &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3608"/>
+        <location filename="Project/Project.py" line="3619"/>
         <source>Delete session</source>
         <translation>Удалить сессию</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3611"/>
+        <location filename="Project/Project.py" line="3622"/>
         <source>Delete the projects session file.</source>
         <translation>Удалить файл с сессией проекта.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3612"/>
+        <location filename="Project/Project.py" line="3623"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Удалить сессию&lt;/b&gt;&lt;p&gt;Удалить файл с сессией проекта&lt;/p&gt;</translation>
     </message>
@@ -22870,7 +22875,7 @@ Select Update.</source>
         <translation>Исходники на Ruby (*.rb);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3452"/>
+        <location filename="Project/Project.py" line="3463"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Искать новые файлы...&lt;/b&gt;&lt;p&gt;Поиск новых файлов (исходников, *.ui, *.idl) в каталоге проекта и зарегистрированных подкаталогах.&lt;/p&gt;</translation>
     </message>
@@ -22885,7 +22890,7 @@ Select Update.</source>
         <translation>Другое</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4381"/>
+        <location filename="Project/Project.py" line="4392"/>
         <source>Include module names?</source>
         <translation>Включать имена модулей?</translation>
     </message>
@@ -22970,155 +22975,155 @@ Select Update.</source>
         <translation>&lt;p&gt;Невозможно удалить файл свойств отладчика &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3516"/>
+        <location filename="Project/Project.py" line="3527"/>
         <source>Debugger Properties</source>
         <translation>Свойства отладчика</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3516"/>
+        <location filename="Project/Project.py" line="3527"/>
         <source>Debugger &amp;Properties...</source>
         <translation>&amp;Свойства отладчика...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3519"/>
+        <location filename="Project/Project.py" line="3530"/>
         <source>Show the debugger properties</source>
         <translation>Показать свойства отладчика</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3520"/>
+        <location filename="Project/Project.py" line="3531"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Свойства отладчика...&lt;/b&gt;
 &lt;p&gt;Показать диалог для редактирования свойств отладчика, специфичных для данного проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3527"/>
+        <location filename="Project/Project.py" line="3538"/>
         <source>Load</source>
         <translation>Загрузить</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3527"/>
+        <location filename="Project/Project.py" line="3538"/>
         <source>&amp;Load</source>
         <translation>&amp;Загрузить</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3530"/>
+        <location filename="Project/Project.py" line="3541"/>
         <source>Load the debugger properties</source>
         <translation>Загрузить свойства отладчика</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3538"/>
+        <location filename="Project/Project.py" line="3549"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3541"/>
+        <location filename="Project/Project.py" line="3552"/>
         <source>Save the debugger properties</source>
         <translation>Сохранить свойства отладчика</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3549"/>
+        <location filename="Project/Project.py" line="3560"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3549"/>
+        <location filename="Project/Project.py" line="3560"/>
         <source>&amp;Delete</source>
         <translation>&amp;Удалить</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3552"/>
+        <location filename="Project/Project.py" line="3563"/>
         <source>Delete the debugger properties</source>
         <translation>Удалить свойства отладчика</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3561"/>
+        <location filename="Project/Project.py" line="3572"/>
         <source>Reset</source>
         <translation>Сбросить</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3561"/>
+        <location filename="Project/Project.py" line="3572"/>
         <source>&amp;Reset</source>
         <translation>&amp;Сбросить</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3564"/>
+        <location filename="Project/Project.py" line="3575"/>
         <source>Reset the debugger properties</source>
         <translation>Сбросить свойства отладчика</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3751"/>
+        <location filename="Project/Project.py" line="3762"/>
         <source>Debugger</source>
         <translation>Отладчик</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3748"/>
+        <location filename="Project/Project.py" line="3759"/>
         <source>Session</source>
         <translation>Сессия</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3531"/>
+        <location filename="Project/Project.py" line="3542"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Загрузить свойства отладчика&lt;/b&gt;
 &lt;p&gt;Загрузить свойства отладчика, специфичные для данного проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3542"/>
+        <location filename="Project/Project.py" line="3553"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сохранить свойства отладчика&lt;/b&gt;&lt;p&gt;Сохранить свойства отладчика, специфичные для данного проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3553"/>
+        <location filename="Project/Project.py" line="3564"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Удалить свойства отладчика&lt;/b&gt;&lt;p&gt;Удалить свойства отладчика, специфичные для данного проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3565"/>
+        <location filename="Project/Project.py" line="3576"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сбросить свойства отладчика&lt;/b&gt;&lt;p&gt;Сбросить свойства отладчика, специфичные для данного проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3483"/>
+        <location filename="Project/Project.py" line="3494"/>
         <source>Filetype Associations</source>
         <translation>Ассоциации для типа файла</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3483"/>
+        <location filename="Project/Project.py" line="3494"/>
         <source>Filetype Associations...</source>
         <translation>Ассоциации для типа файла...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3486"/>
+        <location filename="Project/Project.py" line="3497"/>
         <source>Show the project filetype associations</source>
         <translation>Показать ассоциации типов файлов для проекта</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3488"/>
+        <location filename="Project/Project.py" line="3499"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ассоциации типов файлов...&lt;/b&gt;
 &lt;p&gt;Показать диалог для редактирования ассоциаций типов файлов для проекта. Эти ассоциации связывают тип файла (исходник, форма, интерфейс и т.д.) с шаблоном имени. Они используются при добавлении файлов в проект и при поиске новых файлов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3752"/>
+        <location filename="Project/Project.py" line="3763"/>
         <source>Pac&amp;kagers</source>
         <translation>У&amp;паковщики</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3406"/>
+        <location filename="Project/Project.py" line="3417"/>
         <source>Add files to project</source>
         <translation>Добавить файлы в проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3406"/>
+        <location filename="Project/Project.py" line="3417"/>
         <source>Add &amp;files...</source>
         <translation>Добавить &amp;файлы...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3410"/>
+        <location filename="Project/Project.py" line="3421"/>
         <source>Add files to the current project</source>
         <translation>Добавить файлы в текущий проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3411"/>
+        <location filename="Project/Project.py" line="3422"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Добавить файлы&lt;/b&gt;
 &lt;p&gt;Открывает диалог для добавления файлов в текущий проект. Место добавления определяется расширением файла.&lt;/p&gt;</translation>
@@ -23139,32 +23144,32 @@ Select Update.</source>
         <translation>&lt;p&gt;Невозможно переименовать файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2875"/>
+        <location filename="Project/Project.py" line="2886"/>
         <source>Compressed Project Files (*.e4pz)</source>
         <translation>Сжатые файлы проектов (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2877"/>
+        <location filename="Project/Project.py" line="2888"/>
         <source>Project Files (*.e4p)</source>
         <translation>Файлы проектов (*.e4p)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2878"/>
+        <location filename="Project/Project.py" line="2889"/>
         <source>Project Files (*.e4p);;Compressed Project Files (*.e4pz)</source>
         <translation>Файлы проектов (*.e4p);;Сжатые файлы проектов (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3739"/>
+        <location filename="Project/Project.py" line="3750"/>
         <source>&amp;Project</source>
         <translation>&amp;Проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3860"/>
+        <location filename="Project/Project.py" line="3871"/>
         <source>Project</source>
         <translation>Проект</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3921"/>
+        <location filename="Project/Project.py" line="3932"/>
         <source>&amp;Clear</source>
         <translation>&amp;Очистить</translation>
     </message>
@@ -23194,33 +23199,33 @@ Select Update.</source>
         <translation>&lt;p&gt;Невозможно записать файл пользовательских настроек &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3471"/>
+        <location filename="Project/Project.py" line="3482"/>
         <source>User project properties</source>
         <translation>Пользовательские настройки проекта</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3471"/>
+        <location filename="Project/Project.py" line="3482"/>
         <source>&amp;User Properties...</source>
         <translation>&amp;Пользовательские свойства...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3474"/>
+        <location filename="Project/Project.py" line="3485"/>
         <source>Show the user specific project properties</source>
         <translation>Показать пользовательские свойства проекта</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3476"/>
+        <location filename="Project/Project.py" line="3487"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Пользовательские свойства...&lt;/b&gt;
 &lt;p&gt;Отображает диалог для редактирования пользовательских свойств проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3075"/>
+        <location filename="Project/Project.py" line="3086"/>
         <source>Syntax errors detected</source>
         <translation>Найдены синтаксисические ошибки</translation>
     </message>
     <message numerus="yes">
-        <location filename="Project/Project.py" line="3075"/>
+        <location filename="Project/Project.py" line="3086"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation>
             <numerusform>Проект содержит %n файл с синтаксическими ошибками.</numerusform>
@@ -23229,47 +23234,47 @@ Select Update.</source>
         </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4518"/>
+        <location filename="Project/Project.py" line="4529"/>
         <source>Create Package List</source>
         <translation>Создать список пакетов</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3673"/>
+        <location filename="Project/Project.py" line="3684"/>
         <source>Create &amp;Package List</source>
         <translation>&amp;Создать список пакетов</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4697"/>
+        <location filename="Project/Project.py" line="4708"/>
         <source>Create Plugin Archive</source>
         <translation>Создать архив подключаемого модуля</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3688"/>
+        <location filename="Project/Project.py" line="3699"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Создать &amp;архив плагина</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4488"/>
+        <location filename="Project/Project.py" line="4499"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;PKGLIST&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4518"/>
+        <location filename="Project/Project.py" line="4529"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно создать файл &lt;b&gt;PKGLIST&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4537"/>
+        <location filename="Project/Project.py" line="4548"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;PKGLIST&lt;/b&gt; не существует. Отмена...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4547"/>
+        <location filename="Project/Project.py" line="4558"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>Для текущего проекта не определён главный сценарий. Отмена...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4561"/>
+        <location filename="Project/Project.py" line="4572"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл &lt;b&gt;PKGLIST&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {0}&lt;/p&gt;</translation>
     </message>
@@ -23279,12 +23284,12 @@ Select Update.</source>
         <translation>&lt;p&gt;Каталог не содержит ни одного файла, принадлежащего к заданной категории.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2757"/>
+        <location filename="Project/Project.py" line="2768"/>
         <source>Select Version Control System</source>
         <translation>Выберите систему контроля версий (VCS)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2437"/>
+        <location filename="Project/Project.py" line="2448"/>
         <source>None</source>
         <translation>Нет</translation>
     </message>
@@ -23299,22 +23304,22 @@ Select Update.</source>
         <translation>&lt;p&gt;Тип проекта &lt;b&gt;{0}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4599"/>
+        <location filename="Project/Project.py" line="4610"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить в архив файл &lt;b&gt;{0}&lt;/b&gt;. Игнорируем его.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3704"/>
+        <location filename="Project/Project.py" line="3715"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Создать архив плагинов (снимок)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3704"/>
+        <location filename="Project/Project.py" line="3715"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Создать архив плагинов (&amp;снимок)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4697"/>
+        <location filename="Project/Project.py" line="4708"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл плагина &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
@@ -23324,42 +23329,42 @@ Select Update.</source>
         <translation>Необходимо задать образец перевода.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2529"/>
+        <location filename="Project/Project.py" line="2540"/>
         <source>Translation Pattern</source>
         <translation>Образец перевода</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2529"/>
+        <location filename="Project/Project.py" line="2540"/>
         <source>Enter the path pattern for translation files (use &apos;%language%&apos; in place of the language code):</source>
         <translation>Введите образец имени файла для переводов (используйте &apos;%language%&apos; вместо кода языка):</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4160"/>
+        <location filename="Project/Project.py" line="4171"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выбранная VCS &lt;b&gt;{0}&lt;/b&gt; не найдена.&lt;br/&gt;Отмена.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4169"/>
+        <location filename="Project/Project.py" line="4180"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выбранная VCS &lt;b&gt;{0}&lt;/b&gt; не найдена.&lt;br/&gt;Контроль версий не используется.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3499"/>
+        <location filename="Project/Project.py" line="3510"/>
         <source>Lexer Associations</source>
         <translation>Ассоциации для лексеров</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3499"/>
+        <location filename="Project/Project.py" line="3510"/>
         <source>Lexer Associations...</source>
         <translation>Ассоциации для лексеров...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3502"/>
+        <location filename="Project/Project.py" line="3513"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Показать ассоциации для лексеров</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3504"/>
+        <location filename="Project/Project.py" line="3515"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ассоциации для лексеров...&lt;/b&gt;&lt;p&gt;Показать ассоциации лексеров для проекта. Лексеры используются для подсвечивания текста в редакторе.&lt;/p&gt;</translation>
     </message>
@@ -23389,47 +23394,47 @@ Select Update.</source>
         <translation>Подключаемый модуль Eric</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2712"/>
+        <location filename="Project/Project.py" line="2723"/>
         <source>Project Files (*.e4p *.e4pz)</source>
         <translation>Файлы проектов (*.e4p, *.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3677"/>
+        <location filename="Project/Project.py" line="3688"/>
         <source>Create an initial PKGLIST file for an eric5 plugin.</source>
         <translation>Создать начальный файл PKGLIST для подключаемого модуля eric5.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3679"/>
+        <location filename="Project/Project.py" line="3690"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Создать список пакетов&lt;/b&gt;&lt;p&gt;Создаёт начальный список файлов для включения в архив подключаемого модуля eric5. Список создаётся из файла проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3692"/>
+        <location filename="Project/Project.py" line="3703"/>
         <source>Create an eric5 plugin archive file.</source>
         <translation>Создать архив подключаемого модуля eric5.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3694"/>
+        <location filename="Project/Project.py" line="3705"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Создать архив подключаемого модуля&lt;/b&gt;&lt;p&gt;Создаёт файл арива подключаемого модуля eric5, используя список файлов, данный в файле PKGLIST. Имя архива берётся из имени главного сценария.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3708"/>
+        <location filename="Project/Project.py" line="3719"/>
         <source>Create an eric5 plugin archive file (snapshot release).</source>
         <translation>Создать файл архива плагинов eric5 (снимок выпуска).</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3710"/>
+        <location filename="Project/Project.py" line="3721"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Создать файл архива плагинов (снимок выпуска)&lt;/b&gt;&lt;p&gt;Создаёт файл архива плагинов eric5, используя список файлов, указанный в файле PKGLIST. Имя архива строится из имени главного сценария. Версия главного сценария меняется, чтобы соответствовать версии выпуска снимка.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4577"/>
+        <location filename="Project/Project.py" line="4588"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно создать подключаемый модуль eric5 &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4613"/>
+        <location filename="Project/Project.py" line="4624"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Подключаемый модуль &lt;b&gt;{0}&lt;/b&gt; был успешно создан.&lt;/p&gt;</translation>
     </message>

@@ -5293,32 +5293,32 @@ Nepřipojen
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="145"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="149"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="363"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="384"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="388"/>
         <source>bytes</source>
         <translation>bajtů</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="387"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="391"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="390"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="394"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="131"/>
         <source>Downloading</source>
         <translation>Stahování</translation>
     </message>
@@ -5328,52 +5328,52 @@ Nepřipojen
         <translation>Eric5 Download</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="127"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="131"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Chystáte se stáhnout soubor &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Co chcete udělat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="156"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="160"/>
         <source>Download canceled: {0}</source>
         <translation>Download zrušen: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="269"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="273"/>
         <source>Error opening save file: {0}</source>
         <translation>Chyba při otvírání uloženého souboru: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="276"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="280"/>
         <source>Error saving: {0}</source>
         <translation>Chyba při ukládání: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="293"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="297"/>
         <source>Network Error: {0}</source>
         <translation>Chyba sítě: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="349"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="353"/>
         <source>- {0}:{1:02} minutes remaining</source>
         <translation>- {0}:{1:02} zbývá minut</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="356"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="360"/>
         <source>- {0} seconds remaining</source>
         <translation>- {0} zbývá vteřin</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="358"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="362"/>
         <source>{0} of {1} ({2}/sec) {3}</source>
         <translation>{0} of {1} ({2}/sek) {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="367"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="371"/>
         <source>{0} downloaded</source>
         <translation>{0} staženo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="370"/>
+        <location filename="Helpviewer/DownloadDialog.py" line="374"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} z {1} - zastaveno</translation>
     </message>
@@ -8425,117 +8425,117 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>&lt;b&gt;Konfigurace editoru stylů&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="47"/>
         <source>Fonts</source>
         <translation>Fonty</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="43"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="53"/>
         <source>Select, whether the monospaced font should be used as default</source>
         <translation>Vybrat, má-li být jako default použit neproporcioální font</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="46"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
         <source>Use monospaced as default</source>
         <translation>Neproporcionální font jako default</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="66"/>
         <source>Default Text</source>
         <translation>Defaultní text</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="69"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="79"/>
         <source>Press to select the default font for the editor&apos;s text</source>
         <translation>Stisknout pro výběr defaultního fontu pro text editoru</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="72"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
         <source>Default Text Font</source>
         <translation>Font defaultního textu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="79"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="89"/>
         <source>Press to select the font to be used as the monospaced font</source>
         <translation>Stisknout pro výběr fontu, který bude použit pro neproporcionální písmo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="92"/>
         <source>Monospaced Font</source>
         <translation>Neproporcionální font</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="337"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="347"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>Stisknout pro výběr fontu pro na čísla řádků v editoru</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="340"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="350"/>
         <source>Line Numbers Font</source>
         <translation>Font čísel řádek</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="92"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="102"/>
         <source>Monospaced Text</source>
         <translation>Neproporcionální text</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="356"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="366"/>
         <source>2345</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="108"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="118"/>
         <source>Margins</source>
         <translation>Okraje</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="116"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="126"/>
         <source>Select whether line numbers margin should be shown.</source>
         <translation>Vybrat má-li se zobrazovat sloupec s čísly řádků.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="119"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="129"/>
         <source>Show Line Numbers Margin</source>
         <translation>Zobrazit sloupec s čísly řádků</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="126"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="136"/>
         <source>Select whether the fold margin should be shown.</source>
         <translation>Vybrat, jestliže se mají zobrazovat značky skládání.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="129"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="139"/>
         <source>Show Fold Margin</source>
         <translation>Zobrazovat značky skládání</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="150"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="160"/>
         <source>Linenumbers width:</source>
         <translation>Šířka sloupce s čísly řádků:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="160"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="170"/>
         <source>Move to set the width of the linenumbers margin.</source>
         <translation>Posunout pro nastavení šířky sloupce s čísly řádků.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="182"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="192"/>
         <source>Displays the selected width of the linenumbers margin.</source>
         <translation>Zobrazuje vybranou šířku sloupce s čísly řádků.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="202"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="212"/>
         <source>Folding style:</source>
         <translation>Styl skládání:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="215"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="225"/>
         <source>Select the folding style to be used in the folding margin</source>
         <translation>Výběr stylu skládání, který bude použit ve sloupci se značkami skládání</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="218"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="228"/>
         <source>&lt;b&gt;Folding style&lt;/b&gt;
 &lt;p&gt;Select the desired folding style to be used in the folding margin.&lt;/p&gt;
 &lt;p&gt;The available styles are:
@@ -8550,374 +8550,379 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>&lt;b&gt;Styl skládání&lt;/b&gt;&lt;p&gt;Vyberte požadovaný styl skládání, který bude použit ve sloupci se značkami skládání.&lt;/p&gt;&lt;p&gt;Dostupné styly jsou:&lt;li&gt;&lt;ul&gt;Jednoduché - jen symboly plus a mínus&lt;/ul&gt;&lt;ul&gt;Kolečka - symboly plus a mínus v kruhu&lt;/ul&gt;&lt;ul&gt;Čtverce - symboly plus a mínus ve čtvercích&lt;/ul&gt;&lt;ul&gt;Propojená kolečka - symboly plus a mínus v propojených kolečkách&lt;/ul&lt;ul&gt;Propojené čtverce - symboly plus a mínus v propojených čtvercích&lt;/ul&gt;&lt;/li&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="232"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="242"/>
         <source>Plain</source>
         <translation>Jednoduché</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="237"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
         <source>Circled</source>
         <translation>Kolečka</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="242"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="252"/>
         <source>Boxed</source>
         <translation>Čtverce</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="257"/>
         <source>Circled Tree</source>
         <translation>Propojená kolečka</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="252"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="262"/>
         <source>Boxed Tree</source>
         <translation>Propojené čtverce</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="387"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="397"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="395"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="405"/>
         <source>Select to use custom selection colours</source>
         <translation>Vybrat použití obvyklého výběru barev</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="398"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Použít obvyklý výběr barev&lt;/b&gt;&lt;p&gt;Vyberte tento přepínač pokud v okně editoru a shellu chcete použít obvyklý typ barev. Barvy popředí a pozadí budou definovány barvami strany.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="401"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
         <source>Use custom selection colours</source>
         <translation>Použít obvyklé barvy</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="408"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>Vybrat, jestliže má být vybraný text obarven lexerem.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="411"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
         <source>Colourize selected text</source>
         <translation>Obarvit vybraný text</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="418"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="428"/>
         <source>Select to extend selection to end of line</source>
         <translation>Aktivovat výběr rozšířený o konec řádku</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="421"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="431"/>
         <source>Extend selection to end of line</source>
         <translation>Rozšířený výběr na konec řádku</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="432"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="442"/>
         <source>Selection foreground:</source>
         <translation>Výběr popředí:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="445"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>Vybrat barvu popředí pro výběr.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="455"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="465"/>
         <source>Selection background:</source>
         <translation>Výběr pozadí:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="468"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="478"/>
         <source>Select the background colour for the selection.</source>
         <translation>Vybrat barvu pozadí pro výběr.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="483"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="493"/>
         <source>Caret</source>
         <translation>Karet (textový kurzor)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="489"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="499"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Vybrat, má-li být linka karetu zvýrazněna</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="492"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="502"/>
         <source>Caretline visible</source>
         <translation>Zobrazení textového kurzoru</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="501"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="511"/>
         <source>Caret width:</source>
         <translation>Šířka text.kurzoru:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="508"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="518"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Výběr délky karetu (1, 2 nebo 3 pixelu)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="541"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="551"/>
         <source>Caret foreground:</source>
         <translation>Barva karetu:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="554"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
         <source>Select the colour for the caret.</source>
         <translation>Výběr barvy karetu.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="574"/>
         <source>Caretline background:</source>
         <translation>Pozadí karetu:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="577"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="587"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Vybrat barvu pozadí pro řádku obsahující karet.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="598"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="608"/>
         <source>Current line marker:</source>
         <translation>Značka aktuální řádky:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="611"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Vybrat barvu pro značku aktuální řádky.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="621"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="631"/>
         <source>Error line marker:</source>
         <translation>Značka chybné řádky:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="634"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="644"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Vybrat barvu pro značku chybné řádky.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="647"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="657"/>
         <source>Braces</source>
         <translation>Závorky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="653"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Vybrat, jestliže se má zkontrolovat párovost závorek a neplatné se mají zvýraznit.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="656"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="666"/>
         <source>Highlight braces</source>
         <translation>Zvýraznit závorky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="663"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="673"/>
         <source>Matched braces:</source>
         <translation>Párové závorky:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="676"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Výběr barvy pro zvýraznění párových závorek.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="686"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="696"/>
         <source>Matched braces background:</source>
         <translation>Pozadí párových závorek:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="699"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="709"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Výběr barvy pozadí pro zvýraznění párových závorek.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="715"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="725"/>
         <source>Unmatched brace:</source>
         <translation>Nepárová závorka:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="722"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="732"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Výběr barvy pro zvýraznění nepárových závorek.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="738"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="748"/>
         <source>Unmatched brace background:</source>
         <translation>Pozadí nepárové závorky:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="745"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="755"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Vybrat barvu pozadí pro zvýraznění nepárových závorek.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="758"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="768"/>
         <source>End of Line</source>
         <translation>Konec řádku</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="766"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Vybrat, mají-li se zobrazovat symboly konce řádků</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="769"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
         <source>Show End of Line</source>
         <translation>Zobrazovat konce řádků</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="776"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="786"/>
         <source>Select, whether long lines should be wrapped</source>
         <translation>Vybrat, mají-li se dlouhé řádky zalamovat</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="779"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="789"/>
         <source>Wrap long lines</source>
         <translation>Zalamovat dlouhé řádky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="788"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="798"/>
         <source>Edge Mode</source>
         <translation>Mód okraje</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Vybrat barvu pro značku okraje.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="852"/>
         <source>Background colour:</source>
         <translation>Barva pozadí:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="855"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="865"/>
         <source>Move to set the edge column.</source>
         <translation>Posunout pro nastavení sloupce okraje.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="883"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="893"/>
         <source>Displays the selected tab width.</source>
         <translation>Zobrazuje vybranou šířku tabulátoru.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="899"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="909"/>
         <source>Column number:</source>
         <translation>Číslo sloupce:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="906"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="916"/>
         <source>Mode:</source>
         <translation>Mód:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
         <source>Disabled</source>
         <translation>Vypnuto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="925"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="935"/>
         <source>Draw Line</source>
         <translation>Zobrazit linku</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="930"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="940"/>
         <source>Change Background Colour</source>
         <translation>Změnit barvu pozadí</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1001"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1011"/>
         <source>Various</source>
         <translation>Různé</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1007"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Vybrat, mají-li se zobrazovat prázdné znaky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1010"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
         <source>Show Whitespace</source>
         <translation>Zobrazit prázdné znaky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1027"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Vybrat pro zobrazení minimalistického kontextového menu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1020"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1030"/>
         <source>Show minimal context menu</source>
         <translation>Zobrazit minimální kontextové menu</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="264"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="274"/>
         <source>Margins foreground:</source>
         <translation>Barva textu okrajů:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="277"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
         <source>Select the foreground colour for the margins</source>
         <translation>Vybrat barvu textu okrajů</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="297"/>
         <source>Margins background:</source>
         <translation>Barva pozadí okrajů:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="300"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
         <source>Select the background colour for the margins</source>
         <translation>Vybrat barvu pozadí okrajů</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="320"/>
         <source>Foldmargin background:</source>
         <translation>Barava pozadí okraje skládání:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="323"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="333"/>
         <source>Select the background colour for the foldmargin</source>
         <translation>Vybrat barvu pozadí pro okraj se značkami skládání</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="136"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="146"/>
         <source>Select to show unified margins (like eric4 &lt; 4.3.0)</source>
         <translation>Vybrat zobrazení jednotných okrajů (jako eric4 &lt; 4.3.0)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="139"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="149"/>
         <source>Show unified margins</source>
         <translation>Zobrazit jednotné okraje</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="602"/>
         <source>Debugging Line Markers</source>
         <translation>Značky debugované řádky</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="944"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="954"/>
         <source>Zoom</source>
         <translation>Lupa</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="950"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
         <source>Initial zoom factor:</source>
         <translation>Úvodní nastavení lupy:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="960"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="970"/>
         <source>Move to set the initial zoom factor</source>
         <translation>Posunout pro nastavení velikosti lupy</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="982"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="992"/>
         <source>Displays the selected initial zoom factor</source>
         <translation>Zobrazuje vybranou velikost lupy</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; Fonts and colors of the syntax highlighters have to be configured on the syntax highlighter styles page.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11051,112 +11056,112 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="630"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="634"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Otevřít odkaz v novém tab okně<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="268"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="272"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okno nápovědy&lt;/b&gt;&lt;p&gt;Toto okno zobrazí vybranou informaci nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="689"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="693"/>
         <source>Web Inspector...</source>
         <translation>Web inspektor...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Zkontrolujte adresu na chyby jako je &lt;b&gt;ww&lt;/b&gt;.example.org místo &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Je-li adresa vpořádku, prověřte síťové spojení.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Je-li vaše šíť chráněna firewallem nebo proxy, ujistěte se, že váš prohlížeč má na tuto síť povolen přístup.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="663"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="667"/>
         <source>Bookmark this Page</source>
         <translation>Záložka na tuto stranu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="634"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="638"/>
         <source>Save Lin&amp;k</source>
         <translation>Uložit lin&amp;k</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="635"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="639"/>
         <source>Bookmark this Link</source>
         <translation>Záložka na tento link</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="638"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="642"/>
         <source>Copy Link to Clipboard</source>
         <translation>Kopírovat link do schránky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="643"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="647"/>
         <source>Open Image in New Tab</source>
         <translation>Otevřít obrázek v novém tabu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="647"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="651"/>
         <source>Save Image</source>
         <translation>Uložit obrázek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="648"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="652"/>
         <source>Copy Image to Clipboard</source>
         <translation>Kopíroavt obrázek do schránky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="649"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="653"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Kopírovat cestu obrázku do schránky</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="452"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="456"/>
         <source>Web Browser</source>
         <translation>Web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="653"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="657"/>
         <source>Block Image</source>
         <translation>Blokovat obrázek</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="677"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="681"/>
         <source>Search with...</source>
         <translation>Hledat s...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="412"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="416"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{}&lt;/b&gt; neexistuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="452"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="456"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit prohlížeč se souborem &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="434"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="438"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit aplikaci pro URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="949"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="952"/>
         <source>Error loading page: {0}</source>
         <translation>Chyba při načítání strany: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>When connecting to: {0}.</source>
         <translation>Při připojení na: {0}.</translation>
     </message>
@@ -11814,27 +11819,27 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="216"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="220"/>
         <source>Error loading page: {0}</source>
         <translation>Chyba při načítání strany: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="229"/>
         <source>When connecting to: {0}.</source>
         <translation>Při připojení na: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="229"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Zkontrolujte adresu na chyby jako je &lt;b&gt;ww&lt;/b&gt;.example.org místo &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="229"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Je-li adresa v pořádku, prověřte síťové spojení.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="225"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="229"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Je-li vaše šíť chráněna firewallem nebo proxy, ujistěte se, že váš prohlížeč má na tuto síť povolen přístup.</translation>
     </message>
@@ -16415,22 +16420,22 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Načíst historii</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="439"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="440"/>
         <source>Saving History</source>
         <translation>Uložit historii</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="413"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="414"/>
         <source>&lt;p&gt;Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze otevřít soubor s historií &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="433"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="434"/>
         <source>&lt;p&gt;Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Chyba při odebírání starého souboru historie &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="439"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="440"/>
         <source>&lt;p&gt;Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Chyba při přesouvání nového souboru historie z původního (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -20595,52 +20600,52 @@ Do you want to save your changes?</source>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="226"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="227"/>
         <source>SSL Errors</source>
         <translation>SSL chyby</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="242"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="243"/>
         <source>Certificates</source>
         <translation>Certifikáty</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="159"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="160"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Zadejte uživatelské jméno a heslo pro &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="162"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="163"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Zadejte uživatelské jméno a heslo pro {0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="189"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="190"/>
         <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
         <translation>&lt;b&gt;Připojit k proxy &apos;{0}&apos; za použití:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="226"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="227"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;SSL chyby pro &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Chcete tyto chyby ignorovat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="242"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="243"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Certifikáty:&lt;br/&gt;{0}&lt;br/&gt;Chcete akceptovat všechny certifikáty?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="281"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="282"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Vydatavel: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="284"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="285"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Neplatný před: {0}&lt;br/&gt;Platný do: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="291"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="292"/>
         <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>&lt;br/&gt;Alternativní jména:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
@@ -22322,82 +22327,82 @@ Vyberte Obnovit.</translation>
         <translation>Vytvořit adresář projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2757"/>
+        <location filename="Project/Project.py" line="2768"/>
         <source>New Project</source>
         <translation>Nový projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2343"/>
+        <location filename="Project/Project.py" line="2354"/>
         <source>Add existing files to the project?</source>
         <translation>Přidat existující soubory do projektu?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2457"/>
+        <location filename="Project/Project.py" line="2468"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation>Chcete editovat parametry VCS příkazu?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3346"/>
+        <location filename="Project/Project.py" line="3357"/>
         <source>New project</source>
         <translation>Nový projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2407"/>
+        <location filename="Project/Project.py" line="2418"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>Má být projekt přidán do repozitáře?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2431"/>
+        <location filename="Project/Project.py" line="2442"/>
         <source>Select version control system for the project</source>
         <translation>Výběr verzovacího systému projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3359"/>
+        <location filename="Project/Project.py" line="3370"/>
         <source>Open project</source>
         <translation>Otevřít projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2875"/>
+        <location filename="Project/Project.py" line="2886"/>
         <source>Compressed Project Files (*.e4pz)</source>
         <translation>Komprimované soubory projektu (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2877"/>
+        <location filename="Project/Project.py" line="2888"/>
         <source>Project Files (*.e4p)</source>
         <translation>Soubory projektu (*.e4p)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3393"/>
+        <location filename="Project/Project.py" line="3404"/>
         <source>Save project as</source>
         <translation>Uložit projekt jako</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2878"/>
+        <location filename="Project/Project.py" line="2889"/>
         <source>Project Files (*.e4p);;Compressed Project Files (*.e4pz)</source>
         <translation>Soubory projektu (*.e4p);;Komprimované soubory projektu (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2894"/>
+        <location filename="Project/Project.py" line="2905"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2934"/>
+        <location filename="Project/Project.py" line="2945"/>
         <source>Close Project</source>
         <translation>Zavřít projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2934"/>
+        <location filename="Project/Project.py" line="2945"/>
         <source>The current project has unsaved changes.</source>
         <translation>Aktuální projekt obsahuje neuložené změny.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3075"/>
+        <location filename="Project/Project.py" line="3086"/>
         <source>Syntax errors detected</source>
         <translation>Zjištěny syntaktické chyby</translation>
     </message>
     <message numerus="yes">
-        <location filename="Project/Project.py" line="3075"/>
+        <location filename="Project/Project.py" line="3086"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation>
             <numerusform>Projekt obsahuje %n soubor se syntaktickými chybami.</numerusform>
@@ -22406,587 +22411,587 @@ Vyberte Obnovit.</translation>
         </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3346"/>
+        <location filename="Project/Project.py" line="3357"/>
         <source>&amp;New...</source>
         <translation>&amp;Nový...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3350"/>
+        <location filename="Project/Project.py" line="3361"/>
         <source>Generate a new project</source>
         <translation>Vygenerovat nový projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3351"/>
+        <location filename="Project/Project.py" line="3362"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nový...&lt;/b&gt;&lt;p&gt;Otevře se dialogové okno pro zadání informací o novém projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3359"/>
+        <location filename="Project/Project.py" line="3370"/>
         <source>&amp;Open...</source>
         <translation>&amp;Otevřít...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3363"/>
+        <location filename="Project/Project.py" line="3374"/>
         <source>Open an existing project</source>
         <translation>Otevřít existující projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3364"/>
+        <location filename="Project/Project.py" line="3375"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít....&lt;/b&gt;&lt;p&gt;Otevře existující projekt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3371"/>
+        <location filename="Project/Project.py" line="3382"/>
         <source>Close project</source>
         <translation>Zavřít projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3371"/>
+        <location filename="Project/Project.py" line="3382"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3374"/>
+        <location filename="Project/Project.py" line="3385"/>
         <source>Close the current project</source>
         <translation>Uzavře aktuální projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3375"/>
+        <location filename="Project/Project.py" line="3386"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít&lt;/b&gt;&lt;p&gt;Aktuální projekt se uzavře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3382"/>
+        <location filename="Project/Project.py" line="3393"/>
         <source>Save project</source>
         <translation>Uložit projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3538"/>
+        <location filename="Project/Project.py" line="3549"/>
         <source>&amp;Save</source>
         <translation>&amp;Uložit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3385"/>
+        <location filename="Project/Project.py" line="3396"/>
         <source>Save the current project</source>
         <translation>Uložit aktuální projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3386"/>
+        <location filename="Project/Project.py" line="3397"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit&lt;/b&gt;&lt;p&gt;Aktuální projekt se uloží.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3393"/>
+        <location filename="Project/Project.py" line="3404"/>
         <source>Save &amp;as...</source>
         <translation>Uložit j&amp;ako...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3396"/>
+        <location filename="Project/Project.py" line="3407"/>
         <source>Save the current project to a new file</source>
         <translation>Uloží aktuální projekt do nového souboru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3397"/>
+        <location filename="Project/Project.py" line="3408"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit jako&lt;/b&gt;&lt;p&gt;Uloží aktuální projekt do nového souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3406"/>
+        <location filename="Project/Project.py" line="3417"/>
         <source>Add files to project</source>
         <translation>Přidat soubory do projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3406"/>
+        <location filename="Project/Project.py" line="3417"/>
         <source>Add &amp;files...</source>
         <translation>&amp;Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3410"/>
+        <location filename="Project/Project.py" line="3421"/>
         <source>Add files to the current project</source>
         <translation>Přidat soubory do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3411"/>
+        <location filename="Project/Project.py" line="3422"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat soubory...&lt;/b&gt;&lt;p&gt;Otevře dialog pri přidání souborů do aktuálního projektu. Místo pro přidání je definováno extenzí souborů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3420"/>
+        <location filename="Project/Project.py" line="3431"/>
         <source>Add directory to project</source>
         <translation>Přidat adresář do projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3420"/>
+        <location filename="Project/Project.py" line="3431"/>
         <source>Add directory...</source>
         <translation>Přidat adresář...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3424"/>
+        <location filename="Project/Project.py" line="3435"/>
         <source>Add a directory to the current project</source>
         <translation>Přidat adresář do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3426"/>
+        <location filename="Project/Project.py" line="3437"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat adresář...&lt;/b&gt;&lt;p&gt;Otevře dialog pro přičtení adresáře do aktuálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3434"/>
+        <location filename="Project/Project.py" line="3445"/>
         <source>Add translation to project</source>
         <translation>Přidat překlad do projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3434"/>
+        <location filename="Project/Project.py" line="3445"/>
         <source>Add &amp;translation...</source>
         <translation>Přida&amp;t překlad...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3438"/>
+        <location filename="Project/Project.py" line="3449"/>
         <source>Add a translation to the current project</source>
         <translation>Přidat překlad do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3440"/>
+        <location filename="Project/Project.py" line="3451"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat překlad&lt;/b&gt;&lt;p&gt;Otevře dialog pro přidání překladu do aktuálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3448"/>
+        <location filename="Project/Project.py" line="3459"/>
         <source>Search new files</source>
         <translation>Hledat nové soubory</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3448"/>
+        <location filename="Project/Project.py" line="3459"/>
         <source>Searc&amp;h new files...</source>
         <translation>&amp;Hledat nové soubory...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3451"/>
+        <location filename="Project/Project.py" line="3462"/>
         <source>Search new files in the project directory.</source>
         <translation>Hledat nové soubory v adresáři projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3452"/>
+        <location filename="Project/Project.py" line="3463"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat nové soubory...&lt;/b&gt;&lt;p&gt;Hledají se nové soubory (zdrojové, *.ui, *.idl) v adresáři projektu a v registrovaných podadresářích.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3460"/>
+        <location filename="Project/Project.py" line="3471"/>
         <source>Project properties</source>
         <translation>Nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3460"/>
+        <location filename="Project/Project.py" line="3471"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Natavení...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3463"/>
+        <location filename="Project/Project.py" line="3474"/>
         <source>Show the project properties</source>
         <translation>Zobrazit nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3464"/>
+        <location filename="Project/Project.py" line="3475"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nastavení...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací nastavení projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3471"/>
+        <location filename="Project/Project.py" line="3482"/>
         <source>User project properties</source>
         <translation>Uživatelská nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3471"/>
+        <location filename="Project/Project.py" line="3482"/>
         <source>&amp;User Properties...</source>
         <translation>Uživat&amp;elská nastavení...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3474"/>
+        <location filename="Project/Project.py" line="3485"/>
         <source>Show the user specific project properties</source>
         <translation>Zobrazit uživatelem definovaná nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3476"/>
+        <location filename="Project/Project.py" line="3487"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uživatelská nastavení...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací uživatelských nastavení projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3483"/>
+        <location filename="Project/Project.py" line="3494"/>
         <source>Filetype Associations</source>
         <translation>Asociace typů souborů</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3483"/>
+        <location filename="Project/Project.py" line="3494"/>
         <source>Filetype Associations...</source>
         <translation>Asociace typů souborů...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3486"/>
+        <location filename="Project/Project.py" line="3497"/>
         <source>Show the project filetype associations</source>
         <translation>Zobrazit asociace typů souborů</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3488"/>
+        <location filename="Project/Project.py" line="3499"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociace typů souborů...&lt;/b&gt;&lt;p&gt;Zobrazí se dialog s editací asociace typů souborů v projektu. Na základě vzorku souborového jména tyto asociace určují typ souboru (zdrojový kód, formulář, interface nebo jiné). Tyto asociace jsou použity při přidávání souborů do projektu a při vyhledávání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3516"/>
+        <location filename="Project/Project.py" line="3527"/>
         <source>Debugger Properties</source>
         <translation>Nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3516"/>
+        <location filename="Project/Project.py" line="3527"/>
         <source>Debugger &amp;Properties...</source>
         <translation>Nastavení &amp;debuggeru...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3519"/>
+        <location filename="Project/Project.py" line="3530"/>
         <source>Show the debugger properties</source>
         <translation>Zobrazit nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3520"/>
+        <location filename="Project/Project.py" line="3531"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nastavení debugeru...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací nastavení debugeru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3527"/>
+        <location filename="Project/Project.py" line="3538"/>
         <source>Load</source>
         <translation>Načíst</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3527"/>
+        <location filename="Project/Project.py" line="3538"/>
         <source>&amp;Load</source>
         <translation>&amp;Načíst</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3530"/>
+        <location filename="Project/Project.py" line="3541"/>
         <source>Load the debugger properties</source>
         <translation>Načíst nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3531"/>
+        <location filename="Project/Project.py" line="3542"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Načíst nastavení debugeru&lt;/b&gt;&lt;p&gt;Načtou se nastavení debugeru do projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3538"/>
+        <location filename="Project/Project.py" line="3549"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3541"/>
+        <location filename="Project/Project.py" line="3552"/>
         <source>Save the debugger properties</source>
         <translation>Uložit nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3542"/>
+        <location filename="Project/Project.py" line="3553"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit nastavení debugeru&lt;/b&gt;&lt;p&gt;Uloží nastavení debugeru definovaná v projektu..&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3549"/>
+        <location filename="Project/Project.py" line="3560"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3549"/>
+        <location filename="Project/Project.py" line="3560"/>
         <source>&amp;Delete</source>
         <translation>Sma&amp;zat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3552"/>
+        <location filename="Project/Project.py" line="3563"/>
         <source>Delete the debugger properties</source>
         <translation>Smazat nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3553"/>
+        <location filename="Project/Project.py" line="3564"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat nastavení debugeru&lt;/b&gt;&lt;p&gt;Smaže se soubor obsahující nastavení debugeru v daném projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3561"/>
+        <location filename="Project/Project.py" line="3572"/>
         <source>Reset</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3561"/>
+        <location filename="Project/Project.py" line="3572"/>
         <source>&amp;Reset</source>
         <translation>&amp;Reset</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3564"/>
+        <location filename="Project/Project.py" line="3575"/>
         <source>Reset the debugger properties</source>
         <translation>Reset nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3565"/>
+        <location filename="Project/Project.py" line="3576"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reset nastavení debugeru&lt;/b&gt;&lt;p&gt;Zresetuje nastavení debugeru v projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3574"/>
+        <location filename="Project/Project.py" line="3585"/>
         <source>Load session</source>
         <translation>Načíst relaci</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3577"/>
+        <location filename="Project/Project.py" line="3588"/>
         <source>Load the projects session file.</source>
         <translation>Načíst soubor s relací projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3578"/>
+        <location filename="Project/Project.py" line="3589"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Načíst relaci&lt;/b&gt;&lt;p&gt;Načte soubor s relací projektu. Relace obsahuje následující údaje:&lt;br&gt;- všechny otevřené zdrojové soubory&lt;br&gt;- všechny breakpointy&lt;br&gt;- argumenty příkazové řádky &lt;br&gt;- pracovní adresář&lt;br&gt;- příznak výjimky&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3591"/>
+        <location filename="Project/Project.py" line="3602"/>
         <source>Save session</source>
         <translation>Uložit relaci</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3594"/>
+        <location filename="Project/Project.py" line="3605"/>
         <source>Save the projects session file.</source>
         <translation>Uložit soubor s relací projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3595"/>
+        <location filename="Project/Project.py" line="3606"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit relaci&lt;/b&gt;&lt;p&gt;Uloží soubor s relací projektu. Relace obsahuje následující údaje:&lt;br&gt;- všechny otevřené zdrojové soubory&lt;br&gt;- všechny breakpointy&lt;br&gt;- argumenty příkazové řádky &lt;br&gt;- pracovní adresář&lt;br&gt;- příznak výjimky&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3608"/>
+        <location filename="Project/Project.py" line="3619"/>
         <source>Delete session</source>
         <translation>Smazat relaci</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3611"/>
+        <location filename="Project/Project.py" line="3622"/>
         <source>Delete the projects session file.</source>
         <translation>Smaže soubor s relací projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3612"/>
+        <location filename="Project/Project.py" line="3623"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat relaci&lt;/b&gt;&lt;p&gt;Smaže soubor s relací projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3621"/>
+        <location filename="Project/Project.py" line="3632"/>
         <source>Code Metrics</source>
         <translation>Metriky kódu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3621"/>
+        <location filename="Project/Project.py" line="3632"/>
         <source>&amp;Code Metrics...</source>
         <translation>Metriky &amp;kódu...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3624"/>
+        <location filename="Project/Project.py" line="3635"/>
         <source>Show some code metrics for the project.</source>
         <translation>Zobrazit metriky kódu projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3626"/>
+        <location filename="Project/Project.py" line="3637"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Metriky kódu...&lt;/b&gt;&lt;p&gt;Zobrazí se metriky kódu všech python souborů v projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3633"/>
+        <location filename="Project/Project.py" line="3644"/>
         <source>Python Code Coverage</source>
         <translation>Pokrytí python kódu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3633"/>
+        <location filename="Project/Project.py" line="3644"/>
         <source>Code Co&amp;verage...</source>
         <translation>Pokr&amp;ytí kódu...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3636"/>
+        <location filename="Project/Project.py" line="3647"/>
         <source>Show code coverage information for the project.</source>
         <translation>Zobrazit informace pokrytí kódu projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3638"/>
+        <location filename="Project/Project.py" line="3649"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pokrytí kódu...&lt;/b&gt;&lt;p&gt;Zobrazí informace o pokrytí kódu ve všech python souborech projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4328"/>
+        <location filename="Project/Project.py" line="4339"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3646"/>
+        <location filename="Project/Project.py" line="3657"/>
         <source>&amp;Profile Data...</source>
         <translation>&amp;Profilovat data...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3649"/>
+        <location filename="Project/Project.py" line="3660"/>
         <source>Show profiling data for the project.</source>
         <translation>Zobrazit profilování dat projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3651"/>
+        <location filename="Project/Project.py" line="3662"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profilovat data&lt;/b&gt;&lt;p&gt;Zobrazí se profilování dat projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4381"/>
+        <location filename="Project/Project.py" line="4392"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3658"/>
+        <location filename="Project/Project.py" line="3669"/>
         <source>&amp;Application Diagram...</source>
         <translation>Diagram &amp;aplikace...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3661"/>
+        <location filename="Project/Project.py" line="3672"/>
         <source>Show a diagram of the project.</source>
         <translation>Zobrazit diagram projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3663"/>
+        <location filename="Project/Project.py" line="3674"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diagram aplikace...&lt;/b&gt;&lt;p&gt;Zobrazí diagram projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3739"/>
+        <location filename="Project/Project.py" line="3750"/>
         <source>&amp;Project</source>
         <translation>&amp;Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3740"/>
+        <location filename="Project/Project.py" line="3751"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Otevřít poslední p&amp;rojekty</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3741"/>
+        <location filename="Project/Project.py" line="3752"/>
         <source>&amp;Version Control</source>
         <translation>Kontrola &amp;verzí</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3744"/>
+        <location filename="Project/Project.py" line="3755"/>
         <source>Chec&amp;k</source>
         <translation>Zkontro&amp;lovat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3746"/>
+        <location filename="Project/Project.py" line="3757"/>
         <source>Sho&amp;w</source>
         <translation>Zo&amp;brazit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3747"/>
+        <location filename="Project/Project.py" line="3758"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagramy</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3748"/>
+        <location filename="Project/Project.py" line="3759"/>
         <source>Session</source>
         <translation>Relace</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3749"/>
+        <location filename="Project/Project.py" line="3760"/>
         <source>Source &amp;Documentation</source>
         <translation>Zd&amp;rojová dokumentace</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3751"/>
+        <location filename="Project/Project.py" line="3762"/>
         <source>Debugger</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3752"/>
+        <location filename="Project/Project.py" line="3763"/>
         <source>Pac&amp;kagers</source>
         <translation>Balíč&amp;ky</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3860"/>
+        <location filename="Project/Project.py" line="3871"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3921"/>
+        <location filename="Project/Project.py" line="3932"/>
         <source>&amp;Clear</source>
         <translation>&amp;Vyčistit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4031"/>
+        <location filename="Project/Project.py" line="4042"/>
         <source>Search New Files</source>
         <translation>Hledat nové soubory</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4031"/>
+        <location filename="Project/Project.py" line="4042"/>
         <source>There were no new files found to be added.</source>
         <translation>Nebyly nalezeny žádné soubory, které je možné přidat.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4169"/>
+        <location filename="Project/Project.py" line="4180"/>
         <source>Version Control System</source>
         <translation>Version Control System</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4261"/>
+        <location filename="Project/Project.py" line="4272"/>
         <source>Coverage Data</source>
         <translation>Datové pokrytí</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4307"/>
+        <location filename="Project/Project.py" line="4318"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>V aktuálním projektu nebyl určen hlavní skript. Zrušeno</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4282"/>
+        <location filename="Project/Project.py" line="4293"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4282"/>
+        <location filename="Project/Project.py" line="4293"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor pokrytí</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4328"/>
+        <location filename="Project/Project.py" line="4339"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4381"/>
+        <location filename="Project/Project.py" line="4392"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4518"/>
+        <location filename="Project/Project.py" line="4529"/>
         <source>Create Package List</source>
         <translation>Vytvořit seznam balíčků</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3673"/>
+        <location filename="Project/Project.py" line="3684"/>
         <source>Create &amp;Package List</source>
         <translation>Vytvořit seznam &amp;balíčků</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4697"/>
+        <location filename="Project/Project.py" line="4708"/>
         <source>Create Plugin Archive</source>
         <translation>Vytvořit Plugin archiv</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3688"/>
+        <location filename="Project/Project.py" line="3699"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Vytvořit Plugin &amp;archiv</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4488"/>
+        <location filename="Project/Project.py" line="4499"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Přepsat jej?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4537"/>
+        <location filename="Project/Project.py" line="4548"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; neexistuje. Zrušeno...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4547"/>
+        <location filename="Project/Project.py" line="4558"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>Projekt nemá definován hlavní skript. Zrušeno...</translation>
     </message>
@@ -22996,12 +23001,12 @@ Vyberte Obnovit.</translation>
         <translation>&lt;p&gt;Zdrojový adresář neobsahuje žádné soubory související s danou kategorií.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2757"/>
+        <location filename="Project/Project.py" line="2768"/>
         <source>Select Version Control System</source>
         <translation>Vybrat Version Control System</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2437"/>
+        <location filename="Project/Project.py" line="2448"/>
         <source>None</source>
         <translation>None</translation>
     </message>
@@ -23011,12 +23016,12 @@ Vyberte Obnovit.</translation>
         <translation>Zaregistrovat typ projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3704"/>
+        <location filename="Project/Project.py" line="3715"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Vytvořit archiv pluginů (snímek)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3704"/>
+        <location filename="Project/Project.py" line="3715"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Vytvořit archiv pluginů (&amp;snímek)</translation>
     </message>
@@ -23026,32 +23031,32 @@ Vyberte Obnovit.</translation>
         <translation>Nejdříve musíte specifikovat vzor překladu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2529"/>
+        <location filename="Project/Project.py" line="2540"/>
         <source>Translation Pattern</source>
         <translation>Vzor překladu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2529"/>
+        <location filename="Project/Project.py" line="2540"/>
         <source>Enter the path pattern for translation files (use &apos;%language%&apos; in place of the language code):</source>
         <translation>Zadejte vzor cesty pro soubory s překlady (použijte  &apos;%language%&apos; na místě s kódem jazyka):</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3499"/>
+        <location filename="Project/Project.py" line="3510"/>
         <source>Lexer Associations</source>
         <translation>Spojení lexeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3499"/>
+        <location filename="Project/Project.py" line="3510"/>
         <source>Lexer Associations...</source>
         <translation>Spojení lexeru...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3502"/>
+        <location filename="Project/Project.py" line="3513"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Zobrazit spojení lexeru projektu (přepíše výchozí)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3504"/>
+        <location filename="Project/Project.py" line="3515"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spojení lexeru...&lt;/b&gt;&lt;p&gt;Zobrazuje dialog s editací spojení lexeru projektu. Tato spojení přepisují globální lexer spojení. Lexer je použit pro zvýraznění textu v editoru.&lt;/p&gt;</translation>
     </message>
@@ -23211,82 +23216,82 @@ Vyberte Obnovit.</translation>
         <translation>&lt;p&gt;Adresář projektu &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2712"/>
+        <location filename="Project/Project.py" line="2723"/>
         <source>Project Files (*.e4p *.e4pz)</source>
         <translation>Soubory projektu (*.e4p *.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2894"/>
+        <location filename="Project/Project.py" line="2905"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3677"/>
+        <location filename="Project/Project.py" line="3688"/>
         <source>Create an initial PKGLIST file for an eric5 plugin.</source>
         <translation>Vytvořit počáteční soubor PKGLIST pro eric5 plugin.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3679"/>
+        <location filename="Project/Project.py" line="3690"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit seznam balíčků&lt;/b&gt;&lt;p&gt;Vytvoří počáteční seznam souborů pro vložení do eric5 plugin archivu. Seznam je vytvořen ze souboru projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3692"/>
+        <location filename="Project/Project.py" line="3703"/>
         <source>Create an eric5 plugin archive file.</source>
         <translation>Vytvořit soubor eric5 plugin archivu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3694"/>
+        <location filename="Project/Project.py" line="3705"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit Plugin archiv&lt;/b&gt;&lt;p&gt;Vytvoří soubor s eric5 plugin archivem za použití seznamu souborů daných v PKGLIST souboru. Jméno archivu je odvozeno ze jména hlavního skriptu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3708"/>
+        <location filename="Project/Project.py" line="3719"/>
         <source>Create an eric5 plugin archive file (snapshot release).</source>
         <translation>Vytvoří se soubor eric5 plugin archívu (snímek vydání).</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3710"/>
+        <location filename="Project/Project.py" line="3721"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit Plugin archiv (Snímek)&lt;/b&gt;&lt;p&gt;Vytvoří soubor s eric5 plugin archivem za použití seznamu souborů daných v PKGLIST souboru. Údaj o verzi hlavního skriptu je změněn v souladu se snímkem vydání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4160"/>
+        <location filename="Project/Project.py" line="4171"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybrané VCS &lt;b&gt;{0}&lt;/b&gt; nebylo nalezeno.&lt;br/&gt;Navrácení do původního stavu.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4169"/>
+        <location filename="Project/Project.py" line="4180"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybrané VCS &lt;b&gt;{0}&lt;/b&gt; nebylo nalezeno.&lt;br/&gt;Kontrola verzí vypnuta.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4518"/>
+        <location filename="Project/Project.py" line="4529"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; nelze vytvořit.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4561"/>
+        <location filename="Project/Project.py" line="4572"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; nelze načíst.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4577"/>
+        <location filename="Project/Project.py" line="4588"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s eric5 plugin archivem &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit. Zrušeno...&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4599"/>
+        <location filename="Project/Project.py" line="4610"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit do archivu. Ingorováno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4613"/>
+        <location filename="Project/Project.py" line="4624"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s eric5 plugin archivem &lt;b&gt;{0}&lt;/b&gt; byl úspěšně vytvořen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4697"/>
+        <location filename="Project/Project.py" line="4708"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Plugin soubor &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
