@@ -548,8 +548,6 @@ class IconEditorGrid(QWidget):
                 painter.setPen(self.penColor())
                 painter.setCompositionMode(self.__compositingMode)
                 painter.drawPoint(i, j)
-##            if opaque:
-##                self.__image.setPixel(i, j, self.penColor().rgba())
             else:
                 self.__image.setPixel(i, j, qRgba(0, 0, 0, 0))
             self.__lastPos = (i, j)
