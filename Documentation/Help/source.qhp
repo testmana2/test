@@ -2372,6 +2372,7 @@
       <keyword name="pwDecode" id="pwDecode" ref="eric5.Utilities.__init__.html#pwDecode" />
       <keyword name="pwEncode" id="pwEncode" ref="eric5.Utilities.__init__.html#pwEncode" />
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.Utilities.__init__.html#readEncodedFile" />
+      <keyword name="readEncodedFileWithHash" id="readEncodedFileWithHash" ref="eric5.Utilities.__init__.html#readEncodedFileWithHash" />
       <keyword name="relpath" id="relpath" ref="eric5.Utilities.__init__.html#relpath" />
       <keyword name="samepath" id="samepath" ref="eric5.Utilities.__init__.html#samepath" />
       <keyword name="setConfigDir" id="setConfigDir" ref="eric5.Utilities.__init__.html#setConfigDir" />

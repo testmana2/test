@@ -62,7 +62,7 @@ emitted to open a source file at a line
 QDialog, Ui_FindFileDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>designerFile</td></tr><tr><td>endRole</td></tr><tr><td>lineRole</td></tr><tr><td>replaceRole</td></tr><tr><td>sourceFile</td></tr><tr><td>startRole</td></tr>
+<tr><td>designerFile</td></tr><tr><td>endRole</td></tr><tr><td>lineRole</td></tr><tr><td>md5Role</td></tr><tr><td>replaceRole</td></tr><tr><td>sourceFile</td></tr><tr><td>startRole</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -164,7 +164,7 @@ position the context menu shall be shown (QPoint)
         Private method to copy the path of an entry to the clipboard.
 </p><a NAME="FindFileDialog.__createItem" ID="FindFileDialog.__createItem"></a>
 <h4>FindFileDialog.__createItem</h4>
-<b>__createItem</b>(<i>file, line, text, start, end, replTxt = ""</i>)
+<b>__createItem</b>(<i>file, line, text, start, end, replTxt = "", md5 = ""</i>)
 <p>
         Private method to create an entry in the file list.
 </p><dl>
@@ -185,7 +185,10 @@ start position of match (integer)
 end position of match (integer)
 </dd><dt><i>replTxt</i></dt>
 <dd>
-text with replacements applied (string
+text with replacements applied (string)
+</dd><dt><i>md5=</i></dt>
+<dd>
+MD5 hash of the file (string)
 </dd>
 </dl><a NAME="FindFileDialog.__doSearch" ID="FindFileDialog.__doSearch"></a>
 <h4>FindFileDialog.__doSearch</h4>

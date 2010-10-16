@@ -39,8 +39,8 @@ warnings.showwarning = __showwarning
 
 from codecs import BOM_UTF8, BOM_UTF16, BOM_UTF32
 
-from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, \
-    qVersion, PYQT_VERSION_STR, QCoreApplication
+from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, QByteArray, \
+    qVersion, PYQT_VERSION_STR, QCoreApplication, QCryptographicHash
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 from Globals import isWindowsPlatform   # import this method into the Utilities namespace
@@ -151,6 +151,21 @@ def readEncodedFile(filename):
     text = f.read()
     f.close()
     return decode(text)
+
+def readEncodedFileWithHash(filename):
+    """
+    Function to read a file, calculate a hash value and decode it's contents
+    into proper text.
+    
+    @param filename name of the file to read (string)
+    @return tuple of decoded text, encoding and hash value (string, string, string)
+    """
+    f = open(filename, "rb")
+    text = f.read()
+    f.close()
+    hash = str(QCryptographicHash.hash(QByteArray(text), QCryptographicHash.Md5).toHex(), 
+               encoding = "ASCII")
+    return decode(text) + (hash, )
 
 def decode(text):
     """

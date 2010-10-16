@@ -185,6 +185,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#readEncodedFile">readEncodedFile</a></td>
 <td>Function to read a file and decode it's contents into proper text.</td>
 </tr><tr>
+<td><a href="#readEncodedFileWithHash">readEncodedFileWithHash</a></td>
+<td>Function to read a file, calculate a hash value and decode it's contents into proper text.</td>
+</tr><tr>
 <td><a href="#relpath">relpath</a></td>
 <td>Return a relative version of a path.</td>
 </tr><tr>
@@ -1188,6 +1191,25 @@ name of the file to read (string)
 <dt>Returns:</dt>
 <dd>
 tuple of decoded text and encoding (string, string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="readEncodedFileWithHash" ID="readEncodedFileWithHash"></a>
+<h2>readEncodedFileWithHash</h2>
+<b>readEncodedFileWithHash</b>(<i>filename</i>)
+<p>
+    Function to read a file, calculate a hash value and decode it's contents
+    into proper text.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file to read (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of decoded text, encoding and hash value (string, string, string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

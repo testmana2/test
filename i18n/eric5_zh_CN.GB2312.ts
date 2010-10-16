@@ -9817,112 +9817,112 @@ whole selection.&lt;/li&gt;
         <translation>&lt;b&gt;配置编辑器风格&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="47"/>
         <source>Fonts</source>
         <translation>字体</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="43"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="53"/>
         <source>Select, whether the monospaced font should be used as default</source>
         <translation>选择是否将等宽字体作为默认字体</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="46"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
         <source>Use monospaced as default</source>
         <translation>默认使用等宽字体</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="66"/>
         <source>Default Text</source>
         <translation>默认文本 Default Text</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="69"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="79"/>
         <source>Press to select the default font for the editor&apos;s text</source>
         <translation>点击为编辑器文本选择默认字体</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="72"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
         <source>Default Text Font</source>
         <translation>默认文本字体</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="79"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="89"/>
         <source>Press to select the font to be used as the monospaced font</source>
         <translation>点击选择被用作等宽字体的字体</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="92"/>
         <source>Monospaced Font</source>
         <translation>等宽字体</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="92"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="102"/>
         <source>Monospaced Text</source>
         <translation>等宽文本 Monospaced Text</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="108"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="118"/>
         <source>Margins</source>
         <translation>页边空白</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="116"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="126"/>
         <source>Select whether line numbers margin should be shown.</source>
         <translation>选择是否显示行号。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="119"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="129"/>
         <source>Show Line Numbers Margin</source>
         <translation>显示行号</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="126"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="136"/>
         <source>Select whether the fold margin should be shown.</source>
         <translation>选择是否显示折叠符号</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="129"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="139"/>
         <source>Show Fold Margin</source>
         <translation>显示折叠符号</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="136"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="146"/>
         <source>Select to show unified margins (like eric4 &lt; 4.3.0)</source>
         <translation>选择显示统一的页边空白（与 eric4 低于 4.3.0 的版本相同）</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="139"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="149"/>
         <source>Show unified margins</source>
         <translation>显示统一页边空白</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="150"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="160"/>
         <source>Linenumbers width:</source>
         <translation>行号宽度：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="160"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="170"/>
         <source>Move to set the width of the linenumbers margin.</source>
         <translation>移动可设定行号区域的宽度。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="182"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="192"/>
         <source>Displays the selected width of the linenumbers margin.</source>
         <translation>显示已选择的行号区域宽度。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="202"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="212"/>
         <source>Folding style:</source>
         <translation>折叠风格：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="215"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="225"/>
         <source>Select the folding style to be used in the folding margin</source>
         <translation>选择在折叠符号区域中使用的折叠符风格</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="218"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="228"/>
         <source>&lt;b&gt;Folding style&lt;/b&gt;
 &lt;p&gt;Select the desired folding style to be used in the folding margin.&lt;/p&gt;
 &lt;p&gt;The available styles are:
@@ -9947,408 +9947,413 @@ whole selection.&lt;/li&gt;
 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="232"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="242"/>
         <source>Plain</source>
         <translation>简单</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="237"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
         <source>Circled</source>
         <translation>圆形</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="242"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="252"/>
         <source>Boxed</source>
         <translation>方形</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="257"/>
         <source>Circled Tree</source>
         <translation>圆形树</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="252"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="262"/>
         <source>Boxed Tree</source>
         <translation>方形树</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="274"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="284"/>
         <source>Margins foreground:</source>
         <translation>页边空白前景色：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="297"/>
         <source>Select the foreground colour for the margins</source>
         <translation>为页边空白选择前景色</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="297"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="307"/>
         <source>Margins background:</source>
         <translation>页边空白背景色：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="310"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="320"/>
         <source>Select the background colour for the margins</source>
         <translation>为页边空白选择背景色</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="320"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="330"/>
         <source>Foldmargin background:</source>
         <translation>折叠符区域背景色：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="333"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="343"/>
         <source>Select the background colour for the foldmargin</source>
         <translation>为折叠符区域选择背景色</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="393"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="403"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>点击为编辑器行号选择字体</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="396"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="406"/>
         <source>Line Numbers Font</source>
         <translation>行号字体</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="412"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="422"/>
         <source>2345</source>
         <translation>2345</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="443"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="453"/>
         <source>Selection</source>
         <translation>选区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="451"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="461"/>
         <source>Select to use custom selection colours</source>
         <translation>选择可使用自定义选区颜色</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="454"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="464"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;使用自定义选区颜色&lt;/b&gt;&lt;p&gt;选择该条目可在编辑器和命令行窗口中使用自定义选区颜色。选区的前景色和背景色在颜色页面中定义。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="457"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="467"/>
         <source>Use custom selection colours</source>
         <translation>使用自定义选区颜色</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="464"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="474"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>选择所选文本是否由词法分析器着色</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="467"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="477"/>
         <source>Colourize selected text</source>
         <translation>为所选文本着色</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="474"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="484"/>
         <source>Select to extend selection to end of line</source>
         <translation>选择将选区扩展到行尾</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="477"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="487"/>
         <source>Extend selection to end of line</source>
         <translation>选区扩展到行尾</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="488"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="498"/>
         <source>Selection foreground:</source>
         <translation>选区前景色：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="501"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="511"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>为选区选择前景色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="511"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="521"/>
         <source>Selection background:</source>
         <translation>选区背景色：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="524"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="534"/>
         <source>Select the background colour for the selection.</source>
         <translation>为选区选择背景色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="539"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="549"/>
         <source>Caret</source>
         <translation>插入符</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="545"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="555"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>选择是否高亮显示插入行</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="548"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="558"/>
         <source>Caretline visible</source>
         <translation>插入行可见</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="557"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="567"/>
         <source>Caret width:</source>
         <translation>插入符宽度：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="574"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>选择插入符宽度（1、2 或 3 像素）</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="597"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="607"/>
         <source>Caret foreground:</source>
         <translation>插入符前景：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="610"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="620"/>
         <source>Select the colour for the caret.</source>
         <translation>为插入符选择颜色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="620"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="630"/>
         <source>Caretline background:</source>
         <translation>插入行背景：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="633"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="643"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>为包含插入符的行选择背景色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="648"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="658"/>
         <source>Debugging Line Markers</source>
         <translation>调试行标记</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="654"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="664"/>
         <source>Current line marker:</source>
         <translation>当前行标记：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="667"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="677"/>
         <source>Select the colour for the current line marker.</source>
         <translation>为当前行标记选择颜色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="677"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="687"/>
         <source>Error line marker:</source>
         <translation>错误行标记：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="690"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="700"/>
         <source>Select the colour for the error line marker.</source>
         <translation>为错误行标记选择颜色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="703"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="713"/>
         <source>Braces</source>
         <translation>括号</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="709"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="719"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>选择是否对配对和不配对的括号进行高亮显示。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="712"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="722"/>
         <source>Highlight braces</source>
         <translation>高亮显示括号</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="719"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="729"/>
         <source>Matched braces:</source>
         <translation>已配对的括号：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="732"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="742"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>为高亮显示的配对括号选择颜色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="742"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="752"/>
         <source>Matched braces background:</source>
         <translation>已配对括号背景色：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="755"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="765"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>为高亮显示的配对括号选择背景色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="771"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="781"/>
         <source>Unmatched brace:</source>
         <translation>未配对的括号：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="778"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="788"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>为高亮显示的未配对括号选择颜色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="794"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="804"/>
         <source>Unmatched brace background:</source>
         <translation>未配对括号背景色：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="801"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="811"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>为高亮显示的未配对括号选择背景色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="814"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="824"/>
         <source>End of Line</source>
         <translation>行尾</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="822"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
         <source>Select whether end of line shall be shown</source>
         <translation>选择是否显示行尾符</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="825"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="835"/>
         <source>Show End of Line</source>
         <translation>显示行尾</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
         <source>Select, whether long lines should be wrapped</source>
         <translation>选择比较长的行是否转行显示</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="835"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="845"/>
         <source>Wrap long lines</source>
         <translation>长行转行显示</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="844"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="854"/>
         <source>Edge Mode</source>
         <translation>边界模式</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="888"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="898"/>
         <source>Select the colour for the edge marker.</source>
         <translation>为边界标记选择颜色。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="898"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="908"/>
         <source>Background colour:</source>
         <translation>背景色：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="911"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="921"/>
         <source>Move to set the edge column.</source>
         <translation>移动可设定边界列。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="939"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="949"/>
         <source>Displays the selected tab width.</source>
         <translation>显示已选择的制表符宽度</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="955"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="965"/>
         <source>Column number:</source>
         <translation>列数：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="962"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="972"/>
         <source>Mode:</source>
         <translation>模式：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="976"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="986"/>
         <source>Disabled</source>
         <translation>已禁用</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="981"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="991"/>
         <source>Draw Line</source>
         <translation>显示边界线</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="986"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="996"/>
         <source>Change Background Colour</source>
         <translation>改变背景颜色</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1057"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1067"/>
         <source>Various</source>
         <translation>其它</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1063"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1073"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>选择是否显示空格符号</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1066"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1076"/>
         <source>Show Whitespace</source>
         <translation>显示空格</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1073"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1083"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>选择显示简化的上下文菜单</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1076"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1086"/>
         <source>Show minimal context menu</source>
         <translation>显示最简上下文菜单</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1000"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1010"/>
         <source>Zoom</source>
         <translation type="unfinished">缩放</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1006"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1016"/>
         <source>Initial zoom factor:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1016"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1026"/>
         <source>Move to set the initial zoom factor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1038"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1048"/>
         <source>Displays the selected initial zoom factor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="257"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="267"/>
         <source>Arrow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="262"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="272"/>
         <source>Arrow Tree</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="343"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="353"/>
         <source>Foldmarkers foreground:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="356"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="366"/>
         <source>Select the foreground colour of the foldmarkers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="366"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="376"/>
         <source>Foldmarkers background:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="379"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="389"/>
         <source>Select the background colour of the foldmarkers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; Fonts and colors of the syntax highlighters have to be configured on the syntax highlighter styles page.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -12301,22 +12306,22 @@ whole selection.&lt;/li&gt;
         <translation>替换</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="57"/>
+        <location filename="UI/FindFileDialog.py" line="58"/>
         <source>Stop</source>
         <translation>中止</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="61"/>
+        <location filename="UI/FindFileDialog.py" line="62"/>
         <source>Find</source>
         <translation>查找</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="581"/>
+        <location filename="UI/FindFileDialog.py" line="599"/>
         <source>Replace in Files</source>
         <translation>在文件中替换</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="497"/>
+        <location filename="UI/FindFileDialog.py" line="500"/>
         <source>Select directory</source>
         <translation>选择文件夹</translation>
     </message>
@@ -12341,33 +12346,38 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="606"/>
+        <location filename="UI/FindFileDialog.py" line="624"/>
         <source>Open</source>
         <translation type="unfinished">打开</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="607"/>
+        <location filename="UI/FindFileDialog.py" line="625"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="336"/>
+        <location filename="UI/FindFileDialog.py" line="339"/>
         <source>Invalid search expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="336"/>
+        <location filename="UI/FindFileDialog.py" line="339"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="558"/>
+        <location filename="UI/FindFileDialog.py" line="562"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="581"/>
+        <location filename="UI/FindFileDialog.py" line="599"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/FindFileDialog.py" line="575"/>
+        <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -44010,7 +44020,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="849"/>
+        <location filename="Utilities/__init__.py" line="864"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;可以在字符串中使用“%-代码”作为占位符。支持的代码有：&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;当前编辑器的光标所在列&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;当前编辑器的文件夹&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;当前编辑器的文件名&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;当前用户的根目录&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;当前编辑器的光标所在行&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;当前项目的路径&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;当前编辑器中选择的文本&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;当前用户的用户名&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;百分比符号&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>

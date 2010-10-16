@@ -39,6 +39,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
     startRole   = Qt.UserRole + 2
     endRole     = Qt.UserRole + 3
     replaceRole = Qt.UserRole + 4
+    md5Role     = Qt.UserRole + 5
     
     def __init__(self, project, replaceMode = False, parent=None):
         """
@@ -115,7 +116,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__contextMenuRequested)
         
-    def __createItem(self, file, line, text, start, end, replTxt = ""):
+    def __createItem(self, file, line, text, start, end, replTxt = "", md5 = ""):
         """
         Private method to create an entry in the file list.
         
@@ -124,7 +125,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         @param text text found (string)
         @param start start position of match (integer)
         @param end end position of match (integer)
-        @param replTxt text with replacements applied (string
+        @param replTxt text with replacements applied (string)
+        @keyparam md5 MD5 hash of the file (string)
         """
         if self.__lastFileItem is None:
             # It's a new file
@@ -136,6 +138,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                     Qt.ItemFlags(Qt.ItemIsUserCheckable | Qt.ItemIsTristate))
                 # Qt bug: 
                 # item is not user checkable if setFirstColumnSpanned is True (< 4.5.0)
+            self.__lastFileItem.setData(0, self.md5Role, md5)
         
         itm = QTreeWidgetItem(self.__lastFileItem, [' {0:5d} '.format(line), text])
         itm.setTextAlignment(0,  Qt.AlignRight)
@@ -395,7 +398,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 fn = file
             # read the file and split it into textlines
             try:
-                text, encoding = Utilities.readEncodedFile(fn)
+                text, encoding, hash = Utilities.readEncodedFileWithHash(fn)
                 lines = text.splitlines()
             except (UnicodeError, IOError):
                 progress += 1
@@ -423,7 +426,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         if len(rline) > 1024:
                             rline = "{0} ...".format(line[:1024])
                         line = "- {0}\n+ {1}".format(line, rline)
-                    self.__createItem(file, count, line, start, end, rline)
+                    self.__createItem(file, count, line, start, end, rline, hash)
                     
                     if self.feelLikeCheckBox.isChecked():
                         fn = os.path.join(self.project.ppath, file)
@@ -542,6 +545,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             itm = self.findList.topLevelItem(index)
             if itm.checkState(0) in [Qt.PartiallyChecked, Qt.Checked]:
                 file = itm.text(0)
+                origHash = itm.data(0, self.md5Role)
                 
                 self.findProgressLabel.setPath(file)
                 
@@ -552,7 +556,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 
                 # read the file and split it into textlines
                 try:
-                    text, encoding = Utilities.readEncodedFile(fn)
+                    text, encoding, hash = Utilities.readEncodedFileWithHash(fn)
                     lines = text.splitlines()
                 except (UnicodeError, IOError):
                     E5MessageBox.critical(self,
@@ -560,6 +564,20 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         self.trUtf8("""<p>Could not read the file <b>{0}</b>."""
                                     """ Skipping it.</p><p>Reason: {1}</p>""")\
                             .format(fn, str(err))
+                    )
+                    progress += 1
+                    self.findProgress.setValue(progress)
+                    continue
+                
+                # Check the original and the current hash. Skip the file,
+                # if hashes are different.
+                if origHash != hash:
+                    E5MessageBox.critical(self,
+                        self.trUtf8("Replace in Files"),
+                        self.trUtf8("""<p>The current and the original hash of the"""
+                                    """ file <b>{0}</b> are different. Skipping it."""
+                                    """</p><p>Hash 1: {1}</p><p>Hash 2: {2}</p>""")\
+                            .format(fn, origHash, hash)
                     )
                     progress += 1
                     self.findProgress.setValue(progress)

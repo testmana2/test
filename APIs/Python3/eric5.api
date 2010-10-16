@@ -5771,6 +5771,7 @@ eric5.UI.EmailDialog._encode_base64?5(msg)
 eric5.UI.FindFileDialog.FindFileDialog.designerFile?7
 eric5.UI.FindFileDialog.FindFileDialog.endRole?7
 eric5.UI.FindFileDialog.FindFileDialog.lineRole?7
+eric5.UI.FindFileDialog.FindFileDialog.md5Role?7
 eric5.UI.FindFileDialog.FindFileDialog.on_buttonBox_clicked?4(button)
 eric5.UI.FindFileDialog.FindFileDialog.on_dirButton_clicked?4()
 eric5.UI.FindFileDialog.FindFileDialog.on_dirCombo_editTextChanged?4(text)
@@ -6201,6 +6202,7 @@ eric5.Utilities.py3flakes.messages.UnusedImport?1(filename, lineno, name)
 eric5.Utilities.py3flakes.messages.UnusedVariable.message?7
 eric5.Utilities.py3flakes.messages.UnusedVariable?1(filename, lineno, name)
 eric5.Utilities.readEncodedFile?4(filename)
+eric5.Utilities.readEncodedFileWithHash?4(filename)
 eric5.Utilities.relpath?4(path, start = os.path.curdir)
 eric5.Utilities.samepath?4(f1, f2)
 eric5.Utilities.setConfigDir?4(d)

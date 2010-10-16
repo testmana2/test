@@ -8,6 +8,9 @@ Version 5.1-snapshot-2010mmdd:
 - changed the web browser to give it a more modern look
 - added code to show certificate info for https URLs
 - added a download manager to the web browser
+- added a check to the find and replace dialog to make sure,
+  that no external changes were done between the find run and
+  the replace run
 
 Version 5.1-snapshot-20100918:
 - bug fixes
