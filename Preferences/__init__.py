@@ -1790,7 +1790,10 @@ def getHelp(key, prefClass = Prefs):
             url = prefClass.settings.value("URL")
             location = prefClass.settings.value("Location")
             done = toBool(prefClass.settings.value("Done"))
-            downloads.append((url, location, done))
+            pageUrl = prefClass.settings.value("PageURL")
+            if pageUrl is None:
+                pageUrl = QtCore.QUrl()
+            downloads.append((url, location, done, pageUrl))
         prefClass.settings.endArray()
         return downloads
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies", 
@@ -1845,6 +1848,7 @@ def setHelp(key, value, prefClass = Prefs):
             prefClass.settings.setValue("URL", v[0])
             prefClass.settings.setValue("Location", v[1])
             prefClass.settings.setValue("Done", v[2])
+            prefClass.settings.setValue("PageURL", v[3])
             index += 1
         prefClass.settings.endArray()
     else:

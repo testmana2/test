@@ -65,8 +65,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__reply = reply
         self.__requestFilename = requestFilename
         self.__page = webPage
+        self.__pageUrl = webPage and webPage.mainFrame().url() or QUrl()
         self.__toDownload = download
         self.__bytesReceived = 0
+        self.__bytesTotal = -1
         self.__downloadTime = QTime()
         self.__output = QFile()
         self.__fileName = ""
@@ -92,6 +94,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         self.__startedSaving = False
         self.__finishedDownloading = False
+        self.__bytesReceived = 0
+        self.__bytesTotal = -1
         
         self.openButton.setEnabled(False)
         self.openButton.setVisible(False)
@@ -243,6 +247,12 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         """
         Private slot to retry the download.
         """
+        self.retry()
+    
+    def retry(self):
+        """
+        Public slot to retry the download.
+        """
         if not self.tryAgainButton.isEnabled():
             return
         
@@ -271,6 +281,12 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         """
         Private slot to stop the download.
         """
+        self.cancelDownload()
+    
+    def cancelDownload(self):
+        """
+        Public slot to stop the download.
+        """
         self.setUpdatesEnabled(False)
         self.stopButton.setEnabled(False)
         self.stopButton.setVisible(False)
@@ -286,8 +302,22 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         """
         Private slot to open the downloaded file.
         """
-        info = QFileInfo(self.__output)
+        self.openFile()
+    
+    def openFile(self):
+        """
+        Public slot to open the downloaded file.
+        """
+        info = QFileInfo(self.__fileName)
         url = QUrl.fromLocalFile(info.absoluteFilePath())
+        QDesktopServices.openUrl(url)
+    
+    def openFolder(self):
+        """
+        Public slot to open the folder containing the downloaded file.
+        """
+        info = QFileInfo(self.__fileName)
+        url = QUrl.fromLocalFile(info.absolutePath())
         QDesktopServices.openUrl(url)
     
     def __readyRead(self):
@@ -316,8 +346,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             self.on_stopButton_clicked()
         else:
             self.__startedSaving = True
-            if (self.bytesTotal() == 0 and self.__reply.atEnd()) or \
-               self.__finishedDownloading:
+            if self.__finishedDownloading:
                 self.__finished()
     
     def __networkError(self):
@@ -348,6 +377,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @param bytesTotal number of total bytes (integer)
         """
         self.__bytesReceived = bytesReceived
+        self.__bytesTotal = bytesTotal
         currentValue = 0
         totalValue = 0
         if bytesTotal > 0:
@@ -365,10 +395,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         @return total number of bytes (integer)
         """
-        total = self.__reply.header(QNetworkRequest.ContentLengthHeader)
-        if total is None:
-            total = 0
-        return total
+        if self.__bytesTotal == -1:
+            self.__bytesTotal = self.__reply.header(QNetworkRequest.ContentLengthHeader)
+            if self.__bytesTotal is None:
+                self.__bytesTotal = -1
+        return self.__bytesTotal
     
     def bytesReceived(self):
         """
@@ -387,7 +418,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if not self.downloading():
             return -1.0
         
-        if self.bytesTotal() == 0:
+        if self.bytesTotal() == -1:
             return -1.0
         
         timeRemaining = (self.bytesTotal() - self.bytesReceived()) / self.currentSpeed()
@@ -426,18 +457,18 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if running:
             remaining = ""
             
-            if bytesTotal != 0:
+            if bytesTotal > 0:
                 remaining = timeString(timeRemaining)
             
             info = self.trUtf8("{0} of {1} ({2}/sec) - {3}")\
                 .format(
                     dataString(self.__bytesReceived), 
-                    bytesTotal == 0 and self.trUtf8("?") \
+                    bytesTotal == -1 and self.trUtf8("?") \
                                      or dataString(bytesTotal), 
                     dataString(int(speed)), 
                     remaining)
         else:
-            if self.__bytesReceived == bytesTotal or bytesTotal == 0:
+            if self.__bytesReceived == bytesTotal or bytesTotal == -1:
                 info = self.trUtf8("{0} downloaded")\
                     .format(dataString(self.__output.size()))
             else:
@@ -461,6 +492,14 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @return flag indicating a successful download (boolean)
         """
         return self.stopButton.isHidden() and self.tryAgainButton.isHidden()
+    
+    def downloadCanceled(self):
+        """
+        Public method to check, if the download was cancelled.
+        
+        @return flag indicating a canceled download (boolean)
+        """
+        return self.tryAgainButton.isEnabled()
     
     def __finished(self):
         """
@@ -520,21 +559,22 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         """
         Public method to get the relevant download data.
         
-        @return tuple of URL, save location and done flag
-            (QUrl, string, boolean)
+        @return tuple of URL, save location, flag and the
+            URL of the related web page (QUrl, string, boolean,QUrl)
         """
         return (self.__url, QFileInfo(self.__fileName).filePath(), 
-                self.downloadedSuccessfully())
+                self.downloadedSuccessfully(), self.__pageUrl)
     
     def setData(self, data):
         """
         Public method to set the relevant download data.
         
-        @param data tuple of URL, save location and done flag
-            (QUrl, string, boolean)
+        @param data tuple of URL, save location, flag and the
+            URL of the related web page (QUrl, string, boolean, QUrl)
         """
         self.__url = data[0]
         self.__fileName = data[1]
+        self.__pageUrl = data[3]
         
         self.filenameLabel.setText(QFileInfo(self.__fileName).fileName())
         self.infoLabel.setText(self.__fileName)
@@ -554,3 +594,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @return text of the info label (string)
         """
         return self.infoLabel.text()
+    
+    def getPageUrl(self):
+        """
+        Public method to get the URL of the download page.
+        
+        @return URL of the download page (QUrl)
+        """
+        return self.__pageUrl

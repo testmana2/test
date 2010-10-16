@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="1.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1578,8 +1577,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
@@ -1629,7 +1628,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -5366,87 +5365,87 @@ Nicht verbunden
         <translation>Dateiname</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="57"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="60"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="72"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="75"/>
         <source>Press to repeat the download</source>
         <translation>Drücken, um den Download zu wiederholen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="95"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="98"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="82"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="85"/>
         <source>Press to cancel the download</source>
         <translation>Drücken, um den Download abzubrechen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="92"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="95"/>
         <source>Press to open the downloaded file</source>
         <translation>Drücken, um die geladenen Datei zu öffnen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="142"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="146"/>
         <source>Downloading</source>
         <translation>Download</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="142"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="146"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sie sind dabei, die Datei &lt;b&gt;{0}&lt;/b&gt; herunterzuladen.&lt;/p&gt;&lt;p&gt;Was wollen sie tun?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="175"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="179"/>
         <source>Download canceled: {0}</source>
         <translation>Download abgebrochen: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="165"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="169"/>
         <source>Save File</source>
         <translation>Datei speichern</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="194"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="198"/>
         <source>Download directory ({0}) couldn&apos;t be created.</source>
         <translation>Das Downloadverzeichnis ({0}) konnte nicht erzeugt werden.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="305"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="335"/>
         <source>Error opening save file: {0}</source>
         <translation>Fehler beim Öffnen der zu speichernden Datei: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="314"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="344"/>
         <source>Error saving: {0}</source>
         <translation>Fehler beim Speichern: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="327"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="356"/>
         <source>Network Error: {0}</source>
         <translation>Netzwerkfehler: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="432"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="463"/>
         <source>{0} of {1} ({2}/sec) - {3}</source>
         <translation>{0} von {1} ({2}/s) - {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="433"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="464"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="441"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="472"/>
         <source>{0} downloaded</source>
         <translation>{0} heruntergeladen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="444"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="475"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} von {1} - Angehalten</translation>
     </message>
@@ -5464,17 +5463,12 @@ Nicht verbunden
         <translation>Drücken, um die Liste der Downloads zu löschen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadManager.ui" line="34"/>
-        <source>Clean up</source>
-        <translation>Aufräumen</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Download/DownloadManager.ui" line="56"/>
         <source>0 Items</source>
         <translation>0 Einträge</translation>
     </message>
     <message numerus="yes">
-        <location filename="Helpviewer/Download/DownloadManager.py" line="296"/>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="345"/>
         <source>%n Download(s)</source>
         <translation>
             <numerusform>1 Download</numerusform>
@@ -5482,7 +5476,7 @@ Nicht verbunden
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Helpviewer/Download/DownloadManager.py" line="90"/>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="138"/>
         <source>There are %n downloads in progress.
 Do you want to quit anyway?</source>
         <translation>
@@ -5491,6 +5485,51 @@ Wollen sie trotzdem abbrechen?</numerusform>
             <numerusform>Es laufen %n Downloads.
 Wollen sie trotzdem abbrechen?</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadManager.ui" line="34"/>
+        <source>Clear List</source>
+        <translation>Liste löschen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="80"/>
+        <source>Retry</source>
+        <translation>Wiederholen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="84"/>
+        <source>Open</source>
+        <translation>Öffnen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="87"/>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="90"/>
+        <source>Open Containing Folder</source>
+        <translation>Übergeordnetes Verzeichnis öffnen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="93"/>
+        <source>Go to Download Page</source>
+        <translation>Zur Downloadseite gehen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="95"/>
+        <source>Copy Download Link</source>
+        <translation>Downloadlink kopieren</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="98"/>
+        <source>Select All</source>
+        <translation>Alles auswählen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadManager.py" line="105"/>
+        <source>Remove From List</source>
+        <translation>Aus der Liste löschen</translation>
     </message>
 </context>
 <context>
@@ -11671,187 +11710,187 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="591"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="590"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Es konnte kein Betrachter für die Datei &lt;b&gt;{0}&lt;/b&gt; gestartet werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="775"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="774"/>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="553"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="552"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert nicht.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="386"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="385"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hilfe Fenster&lt;/b&gt;&lt;p&gt;Dieses Fenster zeigt die ausgewählte Hilfe an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="844"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="843"/>
         <source>Web Inspector...</source>
         <translation>Web Inspektor...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1200"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
         <source>Error loading page: {0}</source>
         <translation>Fehler beim Laden von: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1209"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1208"/>
         <source>When connecting to: {0}.</source>
         <translation>Beim Verbinden zu: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1209"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1208"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Überprüfen Sie die Adresse auf Fehler wie &lt;b&gt;ww&lt;/b&gt;.example.org statt &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1209"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1208"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Falls die Adresse stimmt, versuchen Sie, die Netzwerkverbindung zu überprüfen.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1209"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1208"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Wenn Ihr Computer oder Ihr Netzwerk durch eine Firewall oder einen Proxy geschützt ist, stellen Sie sicher, dass der Browser auf das Netzwerk zugreifen darf.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="573"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="572"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Es konnte keine Anwendung für die URL &lt;b&gt;{0}&lt;/b&gt; gestartet werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="808"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="807"/>
         <source>Bookmark this Page</source>
         <translation>Lesezeichen für diese Seite hinzufügen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="779"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
         <source>Save Lin&amp;k</source>
         <translation>Lin&amp;k speichern</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="780"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="779"/>
         <source>Bookmark this Link</source>
         <translation>Lesezeichen für diesen Link hinzufügen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="783"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="782"/>
         <source>Copy Link to Clipboard</source>
         <translation>Link in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="788"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="787"/>
         <source>Open Image in New Tab</source>
         <translation>Bild in neuem Register öffnen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="792"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="791"/>
         <source>Save Image</source>
         <translation>Bild speichern</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="793"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="792"/>
         <source>Copy Image to Clipboard</source>
         <translation>Bild in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="794"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="793"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Bildadresse in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="591"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="590"/>
         <source>Web Browser</source>
         <translation>Web-Browser</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="798"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="797"/>
         <source>Block Image</source>
         <translation>Bild blockieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="822"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="821"/>
         <source>Search with...</source>
         <translation>Suchen mit...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1249"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1248"/>
         <source>Web Database Quota</source>
         <translation>Webdatenbankquota</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1249"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1248"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Datenbankquota von &lt;strong&gt;{0}&lt;/strong&gt; wurde beim Zugriff auf die Datenbank &lt;strong&gt;{1}&lt;/strong&gt; überschritten.&lt;/p&gt;&lt;p&gt;Soll es geändert werden?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1256"/>
         <source>New Web Database Quota</source>
         <translation>Neues Datenbankquota</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1277"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1276"/>
         <source>bytes</source>
         <translation>Bytes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1280"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1279"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1283"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1282"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1256"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Gib das neue Quota in MB ein (aktuell = {0}, verbraucht = {1}; Schrittweite = 5 MB):</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="839"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="838"/>
         <source>Add to web search toolbar</source>
         <translation>Zur Websuchleiste hinzufügen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="951"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="950"/>
         <source>Method not supported</source>
         <translation>Methode nicht unterstützt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="951"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="950"/>
         <source>{0} method is not supported.</source>
         <translation>{0} Methode wird nicht unterstützt.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="993"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="992"/>
         <source>Search engine</source>
         <translation>Suchmaschine</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="993"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="992"/>
         <source>Choose the desired search engine</source>
         <translation>Wähle die gewünschte Suchmaschine aus</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1010"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1009"/>
         <source>Engine name</source>
         <translation>Suchmaschinenname</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1010"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1009"/>
         <source>Enter a name for the engine</source>
         <translation>Gib einen Namen für die Suchmaschine ein</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1209"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1208"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Wenn die Zwischenspeicher-Regelung auf Offline-Browsing steht, sind nur Seiten im lokalen Zwischenspeicher verfügbar.</translation>
     </message>
@@ -12723,52 +12762,52 @@ Es sind %n Unterfenster offen.</numerusform>
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="244"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="243"/>
         <source>Error loading page: {0}</source>
         <translation>Fehler beim Laden von: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="253"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="252"/>
         <source>When connecting to: {0}.</source>
         <translation>Beim Verbinden zu: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="253"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="252"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Überprüfen Sie die Adresse auf Fehler wie &lt;b&gt;ww&lt;/b&gt;.example.org statt &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="253"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="252"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Falls die Adresse stimmt, versuchen Sie, die Netzwerkverbindung zu überprüfen.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="253"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="252"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Wenn Ihr Computer oder Ihr Netzwerk durch eine Firewall oder einen Proxy geschützt ist, stellen Sie sicher, dass der Browser auf das Netzwerk zugreifen darf.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="253"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="252"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Wenn die Zwischenspeicher-Regelung auf Offline-Browsing steht, sind nur Seiten im lokalen Zwischenspeicher verfügbar.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="351"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="350"/>
         <source>SSL Certificate Info</source>
         <translation>SSL Zertifikat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="351"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="350"/>
         <source>There is no SSL Certificate Info available.</source>
         <translation>Es sind keine Informationen für das SSL Zertifikat verfügbar.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="180"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="179"/>
         <source>Resending POST request</source>
         <translation>Erneutes Senden einer POST Anfrage</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="180"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="179"/>
         <source>In order to display the site, the request along with all the data must be sent once again, which may lead to some unexpected behaviour of the site e.g. the same action might be performed once again. Do you want to continue anyway?</source>
         <translation>Um diese Seite anzeigen können, muss die Anfrage mit allen Daten erneut gesendet werden, was zu unerwartetem Verhalten der Seite führen kann, so könnte z.B. die selbe Aktion erneut ausgeführt werden. Möchten Sie trotzdem fortfahren?</translation>
     </message>
@@ -14176,37 +14215,37 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>User Agent</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2449"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2461"/>
         <source>ISO</source>
         <translation>ISO</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2450"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2462"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2451"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2463"/>
         <source>ISCII</source>
         <translation>ISCII</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2452"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2464"/>
         <source>Unicode</source>
         <translation>Unicode</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2453"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2465"/>
         <source>Other</source>
         <translation>Sonstige</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2454"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2466"/>
         <source>IBM</source>
         <translation>IBM</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2476"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2488"/>
         <source>Default Encoding</source>
         <translation>Standardkodierung</translation>
     </message>
@@ -17657,52 +17696,52 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Bereich füllen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="811"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="809"/>
         <source>Cut Selection</source>
         <translation>Auswahl ausschneiden</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="863"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="861"/>
         <source>Paste</source>
         <translation>Einfügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="863"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="861"/>
         <source>&lt;p&gt;The clipboard image is larger than the current image.&lt;br/&gt;Paste as new image?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Bild der zwischenablage ist größer als das aktuelle Bild.&lt;br/&gt;Als neues Bild einfügen?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="874"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="872"/>
         <source>Paste Clipboard</source>
         <translation>Zwischenablage einfügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="888"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="886"/>
         <source>Pasting Image</source>
         <translation>Einfügen des Bildes</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="888"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="886"/>
         <source>Invalid image data in clipboard.</source>
         <translation>Die Zwischenablage enthält ungültige Bilddaten.</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="898"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="896"/>
         <source>Paste Clipboard as New Image</source>
         <translation>Zwischenablage als neues Bild einfügen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="926"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="924"/>
         <source>Clear Image</source>
         <translation>Bild löschen</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="942"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="940"/>
         <source>Resize Image</source>
         <translation>Bildgröße ändern</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorGrid.py" line="966"/>
+        <location filename="IconEditor/IconEditorGrid.py" line="964"/>
         <source>Convert to Grayscale</source>
         <translation>In Grauwerte umwandeln</translation>
     </message>
@@ -34676,7 +34715,7 @@ Zeile.&lt;/p&gt;</translation>
         <translation>Drücken, um alle Dateien mit Problemen anzuzeigen</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="212"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="211"/>
         <source>No issues found.</source>
         <translation>Keine Probleme gefunden.</translation>
     </message>

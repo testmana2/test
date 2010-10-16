@@ -1171,15 +1171,15 @@ class HelpWindow(QMainWindow):
         self.historyMenu = HistoryMenu(self)
         self.historyMenu.setTearOffEnabled(True)
         self.historyMenu.setTitle(self.trUtf8('H&istory'))
-        self.historyMenu.openUrl.connect(self.__openUrl)
-        self.historyMenu.newUrl.connect(self.__openUrlNewTab)
+        self.historyMenu.openUrl.connect(self.openUrl)
+        self.historyMenu.newUrl.connect(self.openUrlNewTab)
         mb.addMenu(self.historyMenu)
         
         self.bookmarksMenu = BookmarksMenuBarMenu(self)
         self.bookmarksMenu.setTearOffEnabled(True)
         self.bookmarksMenu.setTitle(self.trUtf8('&Bookmarks'))
-        self.bookmarksMenu.openUrl.connect(self.__openUrl)
-        self.bookmarksMenu.newUrl.connect(self.__openUrlNewTab)
+        self.bookmarksMenu.openUrl.connect(self.openUrl)
+        self.bookmarksMenu.newUrl.connect(self.openUrlNewTab)
         mb.addMenu(self.bookmarksMenu)
         
         bookmarksActions = []
@@ -1345,8 +1345,8 @@ class HelpWindow(QMainWindow):
         self.bookmarksToolBar = BookmarksToolBar(bookmarksModel)
         self.bookmarksToolBar.setObjectName("BookmarksToolBar")
         self.bookmarksToolBar.setIconSize(UI.Config.ToolBarIconSize)
-        self.bookmarksToolBar.openUrl.connect(self.__openUrl)
-        self.bookmarksToolBar.newUrl.connect(self.__openUrlNewTab)
+        self.bookmarksToolBar.openUrl.connect(self.openUrl)
+        self.bookmarksToolBar.newUrl.connect(self.openUrlNewTab)
         self.addToolBarBreak()
         self.addToolBar(self.bookmarksToolBar)
         
@@ -1555,8 +1555,8 @@ class HelpWindow(QMainWindow):
         """
         self.__bookmarksDialog = BookmarksDialog(self)
         self.__bookmarksDialog.setAttribute(Qt.WA_DeleteOnClose)
-        self.__bookmarksDialog.openUrl.connect(self.__openUrl)
-        self.__bookmarksDialog.newUrl.connect(self.__openUrlNewTab)
+        self.__bookmarksDialog.openUrl.connect(self.openUrl)
+        self.__bookmarksDialog.newUrl.connect(self.openUrlNewTab)
         self.__bookmarksDialog.show()
         
     def bookmarkAll(self):
@@ -2352,9 +2352,9 @@ class HelpWindow(QMainWindow):
         
         return cls._bookmarksManager
         
-    def __openUrl(self, url, title):
+    def openUrl(self, url, title):
         """
-        Private slot to load a URL from the bookmarks menu or bookmarks toolbar
+        Public slot to load a URL from the bookmarks menu or bookmarks toolbar
         in the current tab.
         
         @param url url to be opened (QUrl)
@@ -2362,9 +2362,9 @@ class HelpWindow(QMainWindow):
         """
         self.__linkActivated(url)
         
-    def __openUrlNewTab(self, url, title):
+    def openUrlNewTab(self, url, title):
         """
-        Private slot to load a URL from the bookmarks menu or bookmarks toolbar 
+        Public slot to load a URL from the bookmarks menu or bookmarks toolbar 
         in a new tab.
         
         @param url url to be opened (QUrl)
@@ -2419,6 +2419,18 @@ class HelpWindow(QMainWindow):
             cls._downloadManager = DownloadManager()
         
         return cls._downloadManager
+        
+    @classmethod
+    def mainWindow(cls):
+        """
+        Class method to get a reference to the main window.
+        
+        @return reference to the main window (HelpWindow)
+        """
+        if cls.helpwindows:
+            return cls.helpwindows[0]
+        else:
+            return None
         
     def openSearchManager(self):
         """

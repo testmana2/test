@@ -31,7 +31,7 @@
         <string>Press to clean up the list of downloads</string>
        </property>
        <property name="text">
-        <string>Clean up</string>
+        <string>Clear List</string>
        </property>
       </widget>
      </item>

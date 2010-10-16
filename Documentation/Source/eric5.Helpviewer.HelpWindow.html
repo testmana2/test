@@ -184,12 +184,6 @@ QMainWindow
 <td><a href="#HelpWindow.__openFileNewTab">__openFileNewTab</a></td>
 <td>Private slot called to open a file in a new tab.</td>
 </tr><tr>
-<td><a href="#HelpWindow.__openUrl">__openUrl</a></td>
-<td>Private slot to load a URL from the bookmarks menu or bookmarks toolbar in the current tab.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__openUrlNewTab">__openUrlNewTab</a></td>
-<td>Private slot to load a URL from the bookmarks menu or bookmarks toolbar in a new tab.</td>
-</tr><tr>
 <td><a href="#HelpWindow.__prevTab">__prevTab</a></td>
 <td>Private slot used to show the previous tab.</td>
 </tr><tr>
@@ -343,6 +337,9 @@ QMainWindow
 <td><a href="#HelpWindow.icon">icon</a></td>
 <td>Class method to get the icon for an URL.</td>
 </tr><tr>
+<td><a href="#HelpWindow.mainWindow">mainWindow</a></td>
+<td>Class method to get a reference to the main window.</td>
+</tr><tr>
 <td><a href="#HelpWindow.networkAccessManager">networkAccessManager</a></td>
 <td>Class method to get a reference to the network access manager.</td>
 </tr><tr>
@@ -354,6 +351,12 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.openSearchManager">openSearchManager</a></td>
 <td>Public method to get a reference to the opensearch manager object.</td>
+</tr><tr>
+<td><a href="#HelpWindow.openUrl">openUrl</a></td>
+<td>Public slot to load a URL from the bookmarks menu or bookmarks toolbar in the current tab.</td>
+</tr><tr>
+<td><a href="#HelpWindow.openUrlNewTab">openUrlNewTab</a></td>
+<td>Public slot to load a URL from the bookmarks menu or bookmarks toolbar in a new tab.</td>
 </tr><tr>
 <td><a href="#HelpWindow.passwordManager">passwordManager</a></td>
 <td>Class method to get a reference to the password manager.</td>
@@ -662,35 +665,7 @@ reference to the action selected in the navigation menu (QAction)
 <b>__openFileNewTab</b>(<i></i>)
 <p>
         Private slot called to open a file in a new tab.
-</p><a NAME="HelpWindow.__openUrl" ID="HelpWindow.__openUrl"></a>
-<h4>HelpWindow.__openUrl</h4>
-<b>__openUrl</b>(<i>url, title</i>)
-<p>
-        Private slot to load a URL from the bookmarks menu or bookmarks toolbar
-        in the current tab.
-</p><dl>
-<dt><i>url</i></dt>
-<dd>
-url to be opened (QUrl)
-</dd><dt><i>title</i></dt>
-<dd>
-title of the bookmark (string)
-</dd>
-</dl><a NAME="HelpWindow.__openUrlNewTab" ID="HelpWindow.__openUrlNewTab"></a>
-<h4>HelpWindow.__openUrlNewTab</h4>
-<b>__openUrlNewTab</b>(<i>url, title</i>)
-<p>
-        Private slot to load a URL from the bookmarks menu or bookmarks toolbar 
-        in a new tab.
-</p><dl>
-<dt><i>url</i></dt>
-<dd>
-url to be opened (QUrl)
-</dd><dt><i>title</i></dt>
-<dd>
-title of the bookmark (string)
-</dd>
-</dl><a NAME="HelpWindow.__prevTab" ID="HelpWindow.__prevTab"></a>
+</p><a NAME="HelpWindow.__prevTab" ID="HelpWindow.__prevTab"></a>
 <h4>HelpWindow.__prevTab</h4>
 <b>__prevTab</b>(<i></i>)
 <p>
@@ -1053,6 +1028,16 @@ URL to get icon for (QUrl)
 <dd>
 icon for the URL (QIcon)
 </dd>
+</dl><a NAME="HelpWindow.mainWindow" ID="HelpWindow.mainWindow"></a>
+<h4>HelpWindow.mainWindow</h4>
+<b>mainWindow</b>(<i></i>)
+<p>
+        Class method to get a reference to the main window.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the main window (HelpWindow)
+</dd>
 </dl><a NAME="HelpWindow.networkAccessManager" ID="HelpWindow.networkAccessManager"></a>
 <h4>HelpWindow.networkAccessManager</h4>
 <b>networkAccessManager</b>(<i></i>)
@@ -1092,6 +1077,34 @@ file to be displayed in the new window (string or QUrl)
 <dt>Returns:</dt>
 <dd>
 reference to the opensearch manager object (OpenSearchManager)
+</dd>
+</dl><a NAME="HelpWindow.openUrl" ID="HelpWindow.openUrl"></a>
+<h4>HelpWindow.openUrl</h4>
+<b>openUrl</b>(<i>url, title</i>)
+<p>
+        Public slot to load a URL from the bookmarks menu or bookmarks toolbar
+        in the current tab.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+url to be opened (QUrl)
+</dd><dt><i>title</i></dt>
+<dd>
+title of the bookmark (string)
+</dd>
+</dl><a NAME="HelpWindow.openUrlNewTab" ID="HelpWindow.openUrlNewTab"></a>
+<h4>HelpWindow.openUrlNewTab</h4>
+<b>openUrlNewTab</b>(<i>url, title</i>)
+<p>
+        Public slot to load a URL from the bookmarks menu or bookmarks toolbar 
+        in a new tab.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+url to be opened (QUrl)
+</dd><dt><i>title</i></dt>
+<dd>
+title of the bookmark (string)
 </dd>
 </dl><a NAME="HelpWindow.passwordManager" ID="HelpWindow.passwordManager"></a>
 <h4>HelpWindow.passwordManager</h4>

@@ -93,11 +93,17 @@ QWidget, Ui_DownloadItem
 <td><a href="#DownloadItem.bytesTotal">bytesTotal</a></td>
 <td>Public method to get the total number of bytes of the download.</td>
 </tr><tr>
+<td><a href="#DownloadItem.cancelDownload">cancelDownload</a></td>
+<td>Public slot to stop the download.</td>
+</tr><tr>
 <td><a href="#DownloadItem.canceledFileSelect">canceledFileSelect</a></td>
 <td>Public method to check, if the user canceled the file selection.</td>
 </tr><tr>
 <td><a href="#DownloadItem.currentSpeed">currentSpeed</a></td>
 <td>Public method to get an estimation for the download speed.</td>
+</tr><tr>
+<td><a href="#DownloadItem.downloadCanceled">downloadCanceled</a></td>
+<td>Public method to check, if the download was cancelled.</td>
 </tr><tr>
 <td><a href="#DownloadItem.downloadedSuccessfully">downloadedSuccessfully</a></td>
 <td>Public method to check for a successful download.</td>
@@ -114,6 +120,9 @@ QWidget, Ui_DownloadItem
 <td><a href="#DownloadItem.getInfoData">getInfoData</a></td>
 <td>Public method to get the text of the info label.</td>
 </tr><tr>
+<td><a href="#DownloadItem.getPageUrl">getPageUrl</a></td>
+<td>Public method to get the URL of the download page.</td>
+</tr><tr>
 <td><a href="#DownloadItem.on_openButton_clicked">on_openButton_clicked</a></td>
 <td>Private slot to open the downloaded file.</td>
 </tr><tr>
@@ -123,8 +132,17 @@ QWidget, Ui_DownloadItem
 <td><a href="#DownloadItem.on_tryAgainButton_clicked">on_tryAgainButton_clicked</a></td>
 <td>Private slot to retry the download.</td>
 </tr><tr>
+<td><a href="#DownloadItem.openFile">openFile</a></td>
+<td>Public slot to open the downloaded file.</td>
+</tr><tr>
+<td><a href="#DownloadItem.openFolder">openFolder</a></td>
+<td>Public slot to open the folder containing the downloaded file.</td>
+</tr><tr>
 <td><a href="#DownloadItem.remainingTime">remainingTime</a></td>
 <td>Public method to get an estimation for the remaining time.</td>
+</tr><tr>
+<td><a href="#DownloadItem.retry">retry</a></td>
+<td>Public slot to retry the download.</td>
 </tr><tr>
 <td><a href="#DownloadItem.setData">setData</a></td>
 <td>Public method to set the relevant download data.</td>
@@ -259,7 +277,12 @@ number of bytes received (integer)
 <dd>
 total number of bytes (integer)
 </dd>
-</dl><a NAME="DownloadItem.canceledFileSelect" ID="DownloadItem.canceledFileSelect"></a>
+</dl><a NAME="DownloadItem.cancelDownload" ID="DownloadItem.cancelDownload"></a>
+<h4>DownloadItem.cancelDownload</h4>
+<b>cancelDownload</b>(<i></i>)
+<p>
+        Public slot to stop the download.
+</p><a NAME="DownloadItem.canceledFileSelect" ID="DownloadItem.canceledFileSelect"></a>
 <h4>DownloadItem.canceledFileSelect</h4>
 <b>canceledFileSelect</b>(<i></i>)
 <p>
@@ -278,6 +301,16 @@ flag indicating cancellation (boolean)
 <dt>Returns:</dt>
 <dd>
 estimation for the download speed (float)
+</dd>
+</dl><a NAME="DownloadItem.downloadCanceled" ID="DownloadItem.downloadCanceled"></a>
+<h4>DownloadItem.downloadCanceled</h4>
+<b>downloadCanceled</b>(<i></i>)
+<p>
+        Public method to check, if the download was cancelled.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a canceled download (boolean)
 </dd>
 </dl><a NAME="DownloadItem.downloadedSuccessfully" ID="DownloadItem.downloadedSuccessfully"></a>
 <h4>DownloadItem.downloadedSuccessfully</h4>
@@ -317,8 +350,8 @@ name of the output file (string)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-tuple of URL, save location and done flag
-            (QUrl, string, boolean)
+tuple of URL, save location, flag and the
+            URL of the related web page (QUrl, string, boolean,QUrl)
 </dd>
 </dl><a NAME="DownloadItem.getInfoData" ID="DownloadItem.getInfoData"></a>
 <h4>DownloadItem.getInfoData</h4>
@@ -329,6 +362,16 @@ tuple of URL, save location and done flag
 <dt>Returns:</dt>
 <dd>
 text of the info label (string)
+</dd>
+</dl><a NAME="DownloadItem.getPageUrl" ID="DownloadItem.getPageUrl"></a>
+<h4>DownloadItem.getPageUrl</h4>
+<b>getPageUrl</b>(<i></i>)
+<p>
+        Public method to get the URL of the download page.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+URL of the download page (QUrl)
 </dd>
 </dl><a NAME="DownloadItem.on_openButton_clicked" ID="DownloadItem.on_openButton_clicked"></a>
 <h4>DownloadItem.on_openButton_clicked</h4>
@@ -345,6 +388,16 @@ text of the info label (string)
 <b>on_tryAgainButton_clicked</b>(<i></i>)
 <p>
         Private slot to retry the download.
+</p><a NAME="DownloadItem.openFile" ID="DownloadItem.openFile"></a>
+<h4>DownloadItem.openFile</h4>
+<b>openFile</b>(<i></i>)
+<p>
+        Public slot to open the downloaded file.
+</p><a NAME="DownloadItem.openFolder" ID="DownloadItem.openFolder"></a>
+<h4>DownloadItem.openFolder</h4>
+<b>openFolder</b>(<i></i>)
+<p>
+        Public slot to open the folder containing the downloaded file.
 </p><a NAME="DownloadItem.remainingTime" ID="DownloadItem.remainingTime"></a>
 <h4>DownloadItem.remainingTime</h4>
 <b>remainingTime</b>(<i></i>)
@@ -355,7 +408,12 @@ text of the info label (string)
 <dd>
 estimation for the remaining time (float)
 </dd>
-</dl><a NAME="DownloadItem.setData" ID="DownloadItem.setData"></a>
+</dl><a NAME="DownloadItem.retry" ID="DownloadItem.retry"></a>
+<h4>DownloadItem.retry</h4>
+<b>retry</b>(<i></i>)
+<p>
+        Public slot to retry the download.
+</p><a NAME="DownloadItem.setData" ID="DownloadItem.setData"></a>
 <h4>DownloadItem.setData</h4>
 <b>setData</b>(<i>data</i>)
 <p>
@@ -363,8 +421,8 @@ estimation for the remaining time (float)
 </p><dl>
 <dt><i>data</i></dt>
 <dd>
-tuple of URL, save location and done flag
-            (QUrl, string, boolean)
+tuple of URL, save location, flag and the
+            URL of the related web page (QUrl, string, boolean, QUrl)
 </dd>
 </dl><a NAME="DownloadItem.setIcon" ID="DownloadItem.setIcon"></a>
 <h4>DownloadItem.setIcon</h4>

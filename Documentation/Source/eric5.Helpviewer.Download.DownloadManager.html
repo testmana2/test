@@ -60,6 +60,36 @@ QDialog, Ui_DownloadManager
 <td><a href="#DownloadManager.__addItem">__addItem</a></td>
 <td>Private method to add a download to the list of downloads.</td>
 </tr><tr>
+<td><a href="#DownloadManager.__contextMenuCancel">__contextMenuCancel</a></td>
+<td>Private method to cancel the current download.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__contextMenuCopyLink">__contextMenuCopyLink</a></td>
+<td>Private method to copy the download link to the clipboard.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__contextMenuGotoPage">__contextMenuGotoPage</a></td>
+<td>Private method to open the download page.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__contextMenuOpen">__contextMenuOpen</a></td>
+<td>Private method to open the downloaded file.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__contextMenuOpenFolder">__contextMenuOpenFolder</a></td>
+<td>Private method to open the folder containing the downloaded file.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__contextMenuRemoveSelected">__contextMenuRemoveSelected</a></td>
+<td>Private method to remove the selected downloads from the list.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__contextMenuRetry">__contextMenuRetry</a></td>
+<td>Private method to retry of the download.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__contextMenuSelectAll">__contextMenuSelectAll</a></td>
+<td>Private method to select all downloads.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__currentItem">__currentItem</a></td>
+<td>Private method to get a reference to the current item.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__customContextMenuRequested">__customContextMenuRequested</a></td>
+<td>Private slot to handle the context menu request for the bookmarks tree.</td>
+</tr><tr>
 <td><a href="#DownloadManager.__load">__load</a></td>
 <td>Public method to load the download settings.</td>
 </tr><tr>
@@ -134,6 +164,66 @@ reference to the parent widget (QWidget)
 <dt><i>itm</i></dt>
 <dd>
 reference to the download item (DownloadItem)
+</dd>
+</dl><a NAME="DownloadManager.__contextMenuCancel" ID="DownloadManager.__contextMenuCancel"></a>
+<h4>DownloadManager.__contextMenuCancel</h4>
+<b>__contextMenuCancel</b>(<i></i>)
+<p>
+        Private method to cancel the current download.
+</p><a NAME="DownloadManager.__contextMenuCopyLink" ID="DownloadManager.__contextMenuCopyLink"></a>
+<h4>DownloadManager.__contextMenuCopyLink</h4>
+<b>__contextMenuCopyLink</b>(<i></i>)
+<p>
+        Private method to copy the download link to the clipboard.
+</p><a NAME="DownloadManager.__contextMenuGotoPage" ID="DownloadManager.__contextMenuGotoPage"></a>
+<h4>DownloadManager.__contextMenuGotoPage</h4>
+<b>__contextMenuGotoPage</b>(<i></i>)
+<p>
+        Private method to open the download page.
+</p><a NAME="DownloadManager.__contextMenuOpen" ID="DownloadManager.__contextMenuOpen"></a>
+<h4>DownloadManager.__contextMenuOpen</h4>
+<b>__contextMenuOpen</b>(<i></i>)
+<p>
+        Private method to open the downloaded file.
+</p><a NAME="DownloadManager.__contextMenuOpenFolder" ID="DownloadManager.__contextMenuOpenFolder"></a>
+<h4>DownloadManager.__contextMenuOpenFolder</h4>
+<b>__contextMenuOpenFolder</b>(<i></i>)
+<p>
+        Private method to open the folder containing the downloaded file.
+</p><a NAME="DownloadManager.__contextMenuRemoveSelected" ID="DownloadManager.__contextMenuRemoveSelected"></a>
+<h4>DownloadManager.__contextMenuRemoveSelected</h4>
+<b>__contextMenuRemoveSelected</b>(<i></i>)
+<p>
+        Private method to remove the selected downloads from the list.
+</p><a NAME="DownloadManager.__contextMenuRetry" ID="DownloadManager.__contextMenuRetry"></a>
+<h4>DownloadManager.__contextMenuRetry</h4>
+<b>__contextMenuRetry</b>(<i></i>)
+<p>
+        Private method to retry of the download.
+</p><a NAME="DownloadManager.__contextMenuSelectAll" ID="DownloadManager.__contextMenuSelectAll"></a>
+<h4>DownloadManager.__contextMenuSelectAll</h4>
+<b>__contextMenuSelectAll</b>(<i></i>)
+<p>
+        Private method to select all downloads.
+</p><a NAME="DownloadManager.__currentItem" ID="DownloadManager.__currentItem"></a>
+<h4>DownloadManager.__currentItem</h4>
+<b>__currentItem</b>(<i></i>)
+<p>
+        Private method to get a reference to the current item.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the current item (DownloadItem)
+</dd>
+</dl><a NAME="DownloadManager.__customContextMenuRequested" ID="DownloadManager.__customContextMenuRequested"></a>
+<h4>DownloadManager.__customContextMenuRequested</h4>
+<b>__customContextMenuRequested</b>(<i>pos</i>)
+<p>
+        Private slot to handle the context menu request for the bookmarks tree.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+position the context menu was requested (QPoint)
 </dd>
 </dl><a NAME="DownloadManager.__load" ID="DownloadManager.__load"></a>
 <h4>DownloadManager.__load</h4>
