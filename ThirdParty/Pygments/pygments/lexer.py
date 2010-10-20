@@ -5,25 +5,21 @@
 
     Base lexer classes.
 
-    :copyright: Copyright 2006-2009 by the Pygments team, see AUTHORS.
+    :copyright: Copyright 2006-2010 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
 import re
-
-try:
-    set
-except NameError:
-    from sets import Set as set
 
 from pygments.filter import apply_filters, Filter
 from pygments.filters import get_filter_by_name
 from pygments.token import Error, Text, Other, _TokenType
 from pygments.util import get_bool_opt, get_int_opt, get_list_opt, \
      make_analysator
+import collections
 
 
 __all__ = ['Lexer', 'RegexLexer', 'ExtendedRegexLexer', 'DelegatingLexer',
-           'LexerContext', 'include', 'flags', 'bygroups', 'using', 'this']
+           'LexerContext', 'include', 'bygroups', 'using', 'this']
 
 
 _default_analyse = staticmethod(lambda x: 0.0)
@@ -51,6 +47,10 @@ class Lexer(object, metaclass=LexerMeta):
     ``stripall``
         Strip all leading and trailing whitespace from the input
         (default: False).
+    ``ensurenl``
+        Make sure that the input ends with a newline (default: True).  This
+        is required for some lexers that consume input linewise.
+        *New in Pygments 1.3.*
     ``tabsize``
         If given and greater than 0, expand tabs in the input (default: 0).
     ``encoding``
@@ -80,6 +80,7 @@ class Lexer(object, metaclass=LexerMeta):
         self.options = options
         self.stripnl = get_bool_opt(options, 'stripnl', True)
         self.stripall = get_bool_opt(options, 'stripall', False)
+        self.ensurenl = get_bool_opt(options, 'ensurenl', True)
         self.tabsize = get_int_opt(options, 'tabsize', 0)
         self.encoding = options.get('encoding', 'latin1')
         # self.encoding = options.get('inencoding', None) or self.encoding
@@ -153,7 +154,7 @@ class Lexer(object, metaclass=LexerMeta):
             text = text.strip('\n')
         if self.tabsize > 0:
             text = text.expandtabs(self.tabsize)
-        if not text.endswith('\n'):
+        if self.ensurenl and not text.endswith('\n'):
             text += '\n'
 
         def streamer():
@@ -369,7 +370,7 @@ class RegexLexerMeta(LexerMeta):
                 raise ValueError("uncompilable regex %r in state %r of %r: %s" %
                                  (tdef[0], state, cls, err))
 
-            assert type(tdef[1]) is _TokenType or hasattr(tdef[1], '__call__'), \
+            assert type(tdef[1]) is _TokenType or isinstance(tdef[1], collections.Callable), \
                    'token type must be simple type or callable, not %r' % (tdef[1],)
 
             if len(tdef) == 2:
@@ -414,7 +415,7 @@ class RegexLexerMeta(LexerMeta):
     def process_tokendef(cls, name, tokendefs=None):
         processed = cls._all_tokens[name] = {}
         tokendefs = tokendefs or cls.tokens[name]
-        for state in list(tokendefs.keys()):
+        for state in list(list(tokendefs.keys())):
             cls._process_state(tokendefs, processed, state)
         return processed
 
@@ -643,9 +644,15 @@ def do_insertions(insertions, tokens):
         realpos += len(v) - oldi
 
     # leftover tokens
-    if insleft:
+    while insleft:
         # no normal tokens, set realpos to zero
         realpos = realpos or 0
         for p, t, v in itokens:
             yield realpos, t, v
             realpos += len(v)
+        try:
+            index, itokens = next(insertions)
+        except StopIteration:
+            insleft = False
+            break  # not strictly necessary
+

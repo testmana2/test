@@ -830,6 +830,8 @@
     <Source>Helpviewer/Download/DownloadUtilities.py</Source>
     <Source>Helpviewer/Download/DownloadManager.py</Source>
     <Source>Helpviewer/Download/DownloadModel.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_asybuiltins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
