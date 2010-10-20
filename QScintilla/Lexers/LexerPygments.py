@@ -376,7 +376,7 @@ class LexerPygments(LexerContainer):
             for token, txt in self.__lexer.get_tokens(text):
                 style = TOKEN_MAP.get(token, PYGMENTS_DEFAULT)
                 
-                tlen = len(txt)
+                tlen = len(txt.encode('utf-8'))
                 if eolLen > 1:
                     tlen += txt.count('\n')
                 if tlen:
