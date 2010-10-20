@@ -284,7 +284,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         if not ext:
             ex = selectedFilter.split("(*")[1].split(")")[0]
             if ex:
-                fileName += ex
+                fname += ex
         if QFileInfo(fname).exists():
             res = E5MessageBox.yesNo(self,
                 self.trUtf8("Save Diff"),
