@@ -318,11 +318,12 @@ class Checker(object):
         if not isinstance(self.scope, ClassScope):
             for scope in self.scopeStack[::-1]:
                 existing = scope.get(value.name)
-                if (isinstance(existing, Importation)
-                        and not existing.used
-                        and (not isinstance(value, Importation) or value.fullName == existing.fullName)
-                        and reportRedef):
-
+                if isinstance(existing, Importation) and \
+                   not existing.used and \
+                   not isinstance(value, UnBinding) and \
+                   (not isinstance(value, Importation) or \
+                    value.fullName == existing.fullName) and \
+                   reportRedef:
                     self.report(messages.RedefinedWhileUnused,
                                 lineno, value.name, scope[value.name].source.lineno)
 
