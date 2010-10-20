@@ -23874,22 +23874,22 @@ Vyberte Obnovit.</translation>
         <translation>CORBA IDL kompilátor</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="231"/>
+        <location filename="Preferences/ProgramsDialog.py" line="247"/>
         <source>(not configured)</source>
         <translation>(nezkonfigurováno)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="266"/>
+        <location filename="Preferences/ProgramsDialog.py" line="282"/>
         <source>(not executable)</source>
         <translation>(nevykonavatelný)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="293"/>
+        <location filename="Preferences/ProgramsDialog.py" line="309"/>
         <source>(not found)</source>
         <translation>(nenalezeno)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="264"/>
+        <location filename="Preferences/ProgramsDialog.py" line="280"/>
         <source>(unknown)</source>
         <translation>(neznámý)</translation>
     </message>
@@ -23922,6 +23922,11 @@ Vyberte Obnovit.</translation>
         <location filename="Preferences/ProgramsDialog.py" line="147"/>
         <source>Eric5 Forms Previewer</source>
         <translation>Eric5 prohlížeč formulářů</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="191"/>
+        <source>Source Highlighter - Pygments</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

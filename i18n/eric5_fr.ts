@@ -25748,22 +25748,22 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation>Compilateur CORBA IDL</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="231"/>
+        <location filename="Preferences/ProgramsDialog.py" line="247"/>
         <source>(not configured)</source>
         <translation>(non configuré)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="266"/>
+        <location filename="Preferences/ProgramsDialog.py" line="282"/>
         <source>(not executable)</source>
         <translation>(non executable)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="293"/>
+        <location filename="Preferences/ProgramsDialog.py" line="309"/>
         <source>(not found)</source>
         <translation>(non trouvé)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="264"/>
+        <location filename="Preferences/ProgramsDialog.py" line="280"/>
         <source>(unknown)</source>
         <translation>(inconnu)</translation>
     </message>
@@ -25796,6 +25796,11 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <location filename="Preferences/ProgramsDialog.py" line="147"/>
         <source>Eric5 Forms Previewer</source>
         <translation type="unfinished">Visionneur de feuilles Eric4 {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="191"/>
+        <source>Source Highlighter - Pygments</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

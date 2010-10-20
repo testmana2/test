@@ -25584,7 +25584,7 @@ Select Update.</source>
         <translation>CORBA IDL Derleyicisi</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="264"/>
+        <location filename="Preferences/ProgramsDialog.py" line="280"/>
         <source>(unknown)</source>
         <translation>(bilinmeyen)</translation>
     </message>
@@ -25594,17 +25594,17 @@ Select Update.</source>
         <translation>YAzım Denetimi - PyEnchant</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="231"/>
+        <location filename="Preferences/ProgramsDialog.py" line="247"/>
         <source>(not configured)</source>
         <translation>(ayarlanmadı)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="266"/>
+        <location filename="Preferences/ProgramsDialog.py" line="282"/>
         <source>(not executable)</source>
         <translation>(yürütülemez)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="293"/>
+        <location filename="Preferences/ProgramsDialog.py" line="309"/>
         <source>(not found)</source>
         <translation>(bulunamadı)</translation>
     </message>
@@ -25632,6 +25632,11 @@ Select Update.</source>
         <location filename="Preferences/ProgramsDialog.py" line="147"/>
         <source>Eric5 Forms Previewer</source>
         <translation type="unfinished">Eric4 formları Önizleme {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="191"/>
+        <source>Source Highlighter - Pygments</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

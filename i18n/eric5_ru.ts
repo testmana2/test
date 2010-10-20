@@ -23993,17 +23993,17 @@ Select Update.</source>
         <translation>Компилятор CORBA IDL</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="231"/>
+        <location filename="Preferences/ProgramsDialog.py" line="247"/>
         <source>(not configured)</source>
         <translation>(не настроено)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="266"/>
+        <location filename="Preferences/ProgramsDialog.py" line="282"/>
         <source>(not executable)</source>
         <translation>(не исполняемый)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="293"/>
+        <location filename="Preferences/ProgramsDialog.py" line="309"/>
         <source>(not found)</source>
         <translation>(не найдено)</translation>
     </message>
@@ -24013,7 +24013,7 @@ Select Update.</source>
         <translation>Внешние программы</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="264"/>
+        <location filename="Preferences/ProgramsDialog.py" line="280"/>
         <source>(unknown)</source>
         <translation>(неизвестный)</translation>
     </message>
@@ -24046,6 +24046,11 @@ Select Update.</source>
         <location filename="Preferences/ProgramsDialog.py" line="147"/>
         <source>Eric5 Forms Previewer</source>
         <translation>Предпросмотрщик форм Eric5</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="191"/>
+        <source>Source Highlighter - Pygments</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

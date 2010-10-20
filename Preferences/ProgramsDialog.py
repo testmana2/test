@@ -174,6 +174,22 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             version = ""
         self.__createEntry(self.trUtf8("Spell Checker - PyEnchant"), text, version)
         
+        # 8. do the pygments entry
+        try:
+            import pygments
+            try:
+                text = os.path.dirname(pygments.__file__)
+            except AttributeError:
+                text = "pygments"
+            try:
+                version = pygments.__version__
+            except AttributeError:
+                version = self.trUtf8("(unknown)")
+        except (ImportError, AttributeError, OSError):
+            text = "pygments"
+            version = ""
+        self.__createEntry(self.trUtf8("Source Highlighter - Pygments"), text, version)
+        
         # do the plugin related programs
         pm = e5App().getObject("PluginManager")
         for info in pm.getPluginExeDisplayData():

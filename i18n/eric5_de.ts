@@ -23576,17 +23576,17 @@ Bitte Aktualisieren.</translation>
         <translation>CORBA IDL Compiler</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="231"/>
+        <location filename="Preferences/ProgramsDialog.py" line="247"/>
         <source>(not configured)</source>
         <translation>(nicht konfiguriert)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="266"/>
+        <location filename="Preferences/ProgramsDialog.py" line="282"/>
         <source>(not executable)</source>
         <translation>(nicht ausführbar)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="293"/>
+        <location filename="Preferences/ProgramsDialog.py" line="309"/>
         <source>(not found)</source>
         <translation>(nicht gefunden)</translation>
     </message>
@@ -23596,7 +23596,7 @@ Bitte Aktualisieren.</translation>
         <translation>Externe Programme</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="264"/>
+        <location filename="Preferences/ProgramsDialog.py" line="280"/>
         <source>(unknown)</source>
         <translation>(unbekannt)</translation>
     </message>
@@ -23629,6 +23629,11 @@ Bitte Aktualisieren.</translation>
         <location filename="Preferences/ProgramsDialog.py" line="147"/>
         <source>Eric5 Forms Previewer</source>
         <translation>Eric5 Formularbetrachter</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="191"/>
+        <source>Source Highlighter - Pygments</source>
+        <translation>Quelltextfärber - Pygments</translation>
     </message>
 </context>
 <context>
