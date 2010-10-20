@@ -89,7 +89,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
                 index = self.editorLexerList.indexOfTopLevelItem(itmList[0])
                 itm = self.editorLexerList.takeTopLevelItem(index)
                 del itm
-            itm = QTreeWidgetItem(self.editorLexerList, [ext, lexer])
+            QTreeWidgetItem(self.editorLexerList, [ext, lexer])
             self.editorFileExtEdit.clear()
             self.editorLexerCombo.setCurrentIndex(0)
             self.pygmentsLexerCombo.setCurrentIndex(0)
