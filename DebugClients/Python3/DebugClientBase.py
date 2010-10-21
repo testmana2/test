@@ -338,7 +338,7 @@ class DebugClientBase(object):
         @param mode kind of code to be generated (string, exec or eval)
         @return compiled code object (None in case of errors)
         """
-        with open(filename) as fp:
+        with open(filename, encoding = self.__coding) as fp:
             statement = fp.read()
         
         try:
@@ -520,7 +520,8 @@ class DebugClientBase(object):
                 
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
                 sys.modules['__main__'] = self.debugMod
-                exec(open(sys.argv[0]).read(), self.debugMod.__dict__)
+                exec(open(sys.argv[0], encoding = self.__coding).read(), 
+                     self.debugMod.__dict__)
                 self.writestream.flush()
                 return
 
@@ -549,7 +550,7 @@ class DebugClientBase(object):
                     self.prof.erase()
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
                 sys.modules['__main__'] = self.debugMod
-                fp = open(sys.argv[0])
+                fp = open(sys.argv[0], encoding = self.__coding)
                 try:
                     script = fp.read()
                 finally:
@@ -587,7 +588,8 @@ class DebugClientBase(object):
                 sys.modules['__main__'] = self.debugMod
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
                 self.cover.start()
-                exec(open(sys.argv[0]).read(), self.debugMod.__dict__)
+                exec(open(sys.argv[0], encoding = self.__coding).read(), 
+                     self.debugMod.__dict__)
                 self.cover.stop()
                 self.cover.save()
                 self.writestream.flush()
