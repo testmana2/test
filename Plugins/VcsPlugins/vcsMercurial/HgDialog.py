@@ -67,14 +67,6 @@ class HgDialog(QDialog, Ui_HgDialog):
            self.normal and \
            self.errors.toPlainText() == "":
             self.accept()
-        
-        if self.__updateCommand and self.normal:
-            # check, if we had additions or deletions
-            lastLine = self.resultbox.toPlainText().splitlines()[-1]
-            if lastLine:
-                adds, merges, deletes, conflicts = \
-                    [int(a.split()[0]) for a in lastLine.split(",")]
-                self.__hasAddOrDelete = adds > 0 or deletes > 0
     
     def on_buttonBox_clicked(self, button):
         """
@@ -174,6 +166,13 @@ class HgDialog(QDialog, Ui_HgDialog):
                     'replace')
             self.resultbox.insertPlainText(s)
             self.resultbox.ensureCursorVisible()
+            
+            # check for a changed project file
+            if self.__updateCommand:
+                for line in s.splitlines():
+                    if '.e4p' in line:
+                        self.__hasAddOrDelete = True
+                        break
     
     def __readStderr(self):
         """
