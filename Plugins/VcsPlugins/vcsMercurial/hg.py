@@ -406,6 +406,8 @@ class Hg(VersionControl):
         args.append('update')
         self.addArguments(args, self.options['global'])
         self.addArguments(args, self.options['update'])
+        if "-v" not in args and "--verbose" not in args:
+            args.append("-v")
         if revision is not None:
             args.append("-r")
             args.append(revision)
