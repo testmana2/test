@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="en">
+<!DOCTYPE TS>
+<TS version="2.0" language="en">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1549,7 +1550,7 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1585,7 +1586,7 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5421,7 +5422,6 @@ Not connected
         <source>%n Download(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -5429,7 +5429,6 @@ Not connected
         <source>There are %n downloads in progress.
 Do you want to quit anyway?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -5486,7 +5485,6 @@ Do you want to quit anyway?</source>
         <source>%n seconds remaining</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -5513,7 +5511,6 @@ Do you want to quit anyway?</source>
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="18"/>
         <source>%n:{0:02} minutes remaining</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -11666,7 +11663,7 @@ whole selection.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="774"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -19406,7 +19403,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="223"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
-        <translation type="unfinished"></translation>
+        <translation>English</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="250"/>
