@@ -18266,7 +18266,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="219"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
-        <translation type="unfinished"></translation>
+        <translation>English</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="246"/>
