@@ -194,6 +194,16 @@ def main():
     else:
         splash = SplashScreen()
 
+    # modify the executable search path for the PyQt4 installer
+    try:
+        from PyQt4 import pyqtconfig
+        pyqtDataDir = pyqtconfig._pkg_config["pyqt_mod_dir"]
+        if os.path.exists(os.path.join(pyqtDataDir, "bin")):
+            path = os.path.join(pyqtDataDir, "bin") + os.pathsep + os.environ["PATH"]
+            os.environ["PATH"] = path
+    except (AttributeError, ImportError):
+        pass
+    
     pluginFile = None
     noopen = False
     if "--noopen" in sys.argv and sys.argv.index("--noopen") < ddindex:
