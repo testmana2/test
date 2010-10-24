@@ -3864,12 +3864,18 @@ eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizar
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizardRepeatDialog.on_lowerSpin_valueChanged?4(value)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizardRepeatDialog.on_upperSpin_valueChanged?4(value)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizardRepeatDialog?1(parent = None)
+eric5.Preferences.ConfigurationDialog.ConfigurationDialog.DefaultMode?7
+eric5.Preferences.ConfigurationDialog.ConfigurationDialog.HelpBrowserMode?7
+eric5.Preferences.ConfigurationDialog.ConfigurationDialog.TrayStarterMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.preferencesChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.setPreferences?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.showConfigurationPageByName?4(pageName)
-eric5.Preferences.ConfigurationDialog.ConfigurationDialog?1(parent = None, name = None, modal = False, fromEric = True, helpBrowserMode = False)
+eric5.Preferences.ConfigurationDialog.ConfigurationDialog?1(parent = None, name = None, modal = False, fromEric = True, displayMode = ConfigurationWidget.DefaultMode)
 eric5.Preferences.ConfigurationDialog.ConfigurationPageItem.getPageName?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationPageItem?1(parent, text, pageName, iconFile)
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.DefaultMode?7
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.HelpBrowserMode?7
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.TrayStarterMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.calledFromEric?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getLexers?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getPage?4(pageName)
@@ -3879,7 +3885,7 @@ eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_resetButton_clicked
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.preferencesChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.setPreferences?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.showConfigurationPageByName?4(pageName)
-eric5.Preferences.ConfigurationDialog.ConfigurationWidget?1(parent = None, fromEric = True, helpBrowserMode = False)
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget?1(parent = None, fromEric = True, displayMode = DefaultMode)
 eric5.Preferences.ConfigurationDialog.ConfigurationWindow.accept?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWindow.showConfigurationPageByName?4(pageName)
 eric5.Preferences.ConfigurationDialog.ConfigurationWindow?1(parent = None)
@@ -4150,6 +4156,9 @@ eric5.Preferences.ConfigurationPages.TerminalPage.TerminalPage.polishPage?4()
 eric5.Preferences.ConfigurationPages.TerminalPage.TerminalPage.save?4()
 eric5.Preferences.ConfigurationPages.TerminalPage.TerminalPage?1()
 eric5.Preferences.ConfigurationPages.TerminalPage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.TrayStarterPage.TrayStarterPage.save?4()
+eric5.Preferences.ConfigurationPages.TrayStarterPage.TrayStarterPage?1(parent = None)
+eric5.Preferences.ConfigurationPages.TrayStarterPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.VcsPage.VcsPage.on_pbVcsAddedButton_clicked?4()
 eric5.Preferences.ConfigurationPages.VcsPage.VcsPage.on_pbVcsConflictButton_clicked?4()
 eric5.Preferences.ConfigurationPages.VcsPage.VcsPage.on_pbVcsModifiedButton_clicked?4()
@@ -4209,6 +4218,7 @@ eric5.Preferences.Prefs.sysDefaults?7
 eric5.Preferences.Prefs.tasksDefaults?7
 eric5.Preferences.Prefs.templatesDefaults?7
 eric5.Preferences.Prefs.terminalDefaults?7
+eric5.Preferences.Prefs.trayStarterDefaults?7
 eric5.Preferences.Prefs.uiDefaults?7
 eric5.Preferences.Prefs.userDefaults?7
 eric5.Preferences.Prefs.varDefaults?7
@@ -4306,6 +4316,7 @@ eric5.Preferences.getSystem?4(key, prefClass = Prefs)
 eric5.Preferences.getTasks?4(key, prefClass = Prefs)
 eric5.Preferences.getTemplates?4(key, prefClass = Prefs)
 eric5.Preferences.getTerminal?4(key, prefClass = Prefs)
+eric5.Preferences.getTrayStarter?4(key, prefClass = Prefs)
 eric5.Preferences.getUI?4(key, prefClass = Prefs)
 eric5.Preferences.getUILanguage?4(prefClass = Prefs)
 eric5.Preferences.getUILayout?4(prefClass = Prefs)
@@ -4353,6 +4364,7 @@ eric5.Preferences.setSystem?4(key, value, prefClass = Prefs)
 eric5.Preferences.setTasks?4(key, value, prefClass = Prefs)
 eric5.Preferences.setTemplates?4(key, value, prefClass = Prefs)
 eric5.Preferences.setTerminal?4(key, value, prefClass = Prefs)
+eric5.Preferences.setTrayStarter?4(key, value, prefClass = Prefs)
 eric5.Preferences.setUI?4(key, value, prefClass = Prefs)
 eric5.Preferences.setUILanguage?4(lang, prefClass = Prefs)
 eric5.Preferences.setUILayout?4(layout, prefClass = Prefs)
@@ -5582,6 +5594,7 @@ eric5.Tools.TRSingleApplication.TRSingleApplicationServer.handleCommand?4(cmd, p
 eric5.Tools.TRSingleApplication.TRSingleApplicationServer.loadForm?7
 eric5.Tools.TRSingleApplication.TRSingleApplicationServer.loadTranslation?7
 eric5.Tools.TRSingleApplication.TRSingleApplicationServer?1(parent)
+eric5.Tools.TrayStarter.TrayStarter.preferencesChanged?4()
 eric5.Tools.TrayStarter.TrayStarter?1()
 eric5.Tools.UIPreviewer.UIPreviewer.eventFilter?4(obj, ev)
 eric5.Tools.UIPreviewer.UIPreviewer.show?4()

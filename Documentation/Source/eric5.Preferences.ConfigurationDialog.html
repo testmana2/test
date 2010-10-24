@@ -64,7 +64,7 @@ emitted after settings have been changed
 QDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>preferencesChanged</td></tr>
+<tr><td>DefaultMode</td></tr><tr><td>HelpBrowserMode</td></tr><tr><td>TrayStarterMode</td></tr><tr><td>preferencesChanged</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -84,7 +84,7 @@ QDialog
 </table>
 <a NAME="ConfigurationDialog.__init__" ID="ConfigurationDialog.__init__"></a>
 <h4>ConfigurationDialog (Constructor)</h4>
-<b>ConfigurationDialog</b>(<i>parent = None, name = None, modal = False, fromEric = True, helpBrowserMode = False</i>)
+<b>ConfigurationDialog</b>(<i>parent = None, name = None, modal = False, fromEric = True, displayMode = ConfigurationWidget.DefaultMode</i>)
 <p>
         Constructor
 </p><dl>
@@ -101,10 +101,10 @@ Flag indicating a modal dialog. (boolean)
 <dd>
 flag indicating a dialog generation from within the
             eric5 ide (boolean)
-</dd><dt><i>helpBrowserMode=</i></dt>
+</dd><dt><i>displayMode=</i></dt>
 <dd>
-flag indicating to show only help pages
-            for entries related to the help browser (boolean)
+mode of the configuration dialog
+            (DefaultMode, HelpBrowserMode, TrayStarterMode)
 </dd>
 </dl><a NAME="ConfigurationDialog.__preferencesChanged" ID="ConfigurationDialog.__preferencesChanged"></a>
 <h4>ConfigurationDialog.__preferencesChanged</h4>
@@ -197,7 +197,7 @@ emitted after settings have been changed
 QWidget
 <h3>Class Attributes</h3>
 <table>
-<tr><td>preferencesChanged</td></tr>
+<tr><td>DefaultMode</td></tr><tr><td>HelpBrowserMode</td></tr><tr><td>TrayStarterMode</td></tr><tr><td>preferencesChanged</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -247,7 +247,7 @@ QWidget
 </table>
 <a NAME="ConfigurationWidget.__init__" ID="ConfigurationWidget.__init__"></a>
 <h4>ConfigurationWidget (Constructor)</h4>
-<b>ConfigurationWidget</b>(<i>parent = None, fromEric = True, helpBrowserMode = False</i>)
+<b>ConfigurationWidget</b>(<i>parent = None, fromEric = True, displayMode = DefaultMode</i>)
 <p>
         Constructor
 </p><dl>
@@ -258,10 +258,10 @@ The parent widget of this dialog. (QWidget)
 <dd>
 flag indicating a dialog generation from within the
             eric5 ide (boolean)
-</dd><dt><i>helpBrowserMode=</i></dt>
+</dd><dt><i>displayMode=</i></dt>
 <dd>
-flag indicating to show only help pages
-            for entries related to the help browser (boolean)
+mode of the configuration dialog
+            (DefaultMode, HelpBrowserMode, TrayStarterMode)
 </dd>
 </dl><a NAME="ConfigurationWidget.__importConfigurationPage" ID="ConfigurationWidget.__importConfigurationPage"></a>
 <h4>ConfigurationWidget.__importConfigurationPage</h4>

@@ -744,6 +744,12 @@ class Prefs(object):
         "IgnoreStarImportWarnings" : True, 
     }
     
+    # defaults for tray starter
+    trayStarterDefaults = {
+        "TrayStarterIcon" : "erict.png",
+        # valid values are: erict.png, erict-hc.png, erict-bw.png, erict-bwi.png
+    }
+    
     # defaults for geometry
     geometryDefaults = {
         "HelpViewerGeometry" : QtCore.QByteArray(),
@@ -2164,6 +2170,27 @@ def setFlakes(key, value, prefClass = Prefs):
     @param prefClass preferences class used as the storage area
     """
     prefClass.settings.setValue("Py3Flakes/" + key, value)
+
+def getTrayStarter(key, prefClass = Prefs):
+    """
+    Module function to retrieve the tray starter related settings.
+    
+    @param key the key of the value to get
+    @param prefClass preferences class used as the storage area
+    @return the requested user setting
+    """
+    return prefClass.settings.value("TrayStarter/" + key,
+            prefClass.trayStarterDefaults[key])
+    
+def setTrayStarter(key, value, prefClass = Prefs):
+    """
+    Module function to store the tray starter related settings.
+    
+    @param key the key of the setting to be set
+    @param value the value to be set
+    @param prefClass preferences class used as the storage area
+    """
+    prefClass.settings.setValue("TrayStarter/" + key, value)
     
 def getGeometry(key, prefClass = Prefs):
     """

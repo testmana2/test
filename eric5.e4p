@@ -832,6 +832,7 @@
     <Source>Helpviewer/Download/DownloadModel.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/_asybuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
+    <Source>Preferences/ConfigurationPages/TrayStarterPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1064,6 +1065,7 @@
     <Form>Helpviewer/UrlBar/BookmarkInfoDialog.ui</Form>
     <Form>Helpviewer/Download/DownloadItem.ui</Form>
     <Form>Helpviewer/Download/DownloadManager.ui</Form>
+    <Form>Preferences/ConfigurationPages/TrayStarterPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

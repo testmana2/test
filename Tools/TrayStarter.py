@@ -11,7 +11,7 @@ import sys
 import os
 
 from PyQt4.QtCore import QProcess, QSettings, QFileInfo
-from PyQt4.QtGui  import QSystemTrayIcon, QMenu, qApp, QCursor
+from PyQt4.QtGui  import QSystemTrayIcon, QMenu, qApp, QCursor, QApplication, QDialog
 
 from E5Gui import E5MessageBox
 
@@ -19,6 +19,7 @@ import Globals
 import UI.PixmapCache
 
 import Utilities
+import Preferences
 
 from eric5config import getConfig
 
@@ -30,7 +31,8 @@ class TrayStarter(QSystemTrayIcon):
         """
         Constructor
         """
-        QSystemTrayIcon.__init__(self, UI.PixmapCache.getIcon("erict.png"))
+        QSystemTrayIcon.__init__(self, 
+            UI.PixmapCache.getIcon(Preferences.getTrayStarter("TrayStarterIcon")))
         
         self.maxMenuFilePathLen = 75
         
@@ -64,7 +66,8 @@ class TrayStarter(QSystemTrayIcon):
         self.recentFilesMenu.aboutToShow.connect(self.__showRecentFilesMenu)
         self.recentFilesMenu.triggered.connect(self.__openRecent)
         
-        act = self.__menu.addAction(self.trUtf8("Eric5 tray starter"))
+        act = self.__menu.addAction(
+            self.trUtf8("Eric5 tray starter"), self.__about)
         font = act.font()
         font.setBold(True)
         act.setFont(font)
@@ -108,6 +111,10 @@ class TrayStarter(QSystemTrayIcon):
             self.trUtf8("eric5 IDE"), self.__startEric)
         self.__menu.addAction(UI.PixmapCache.getIcon("editor.png"), 
             self.trUtf8("eric5 Mini Editor"), self.__startMiniEditor)
+        self.__menu.addSeparator()
+        
+        self.__menu.addAction(UI.PixmapCache.getIcon("configure.png"),
+            self.trUtf8('Preferences (tray starter)'), self.__showPreferences)
         self.__menu.addSeparator()
         
         # recent files
@@ -384,3 +391,36 @@ class TrayStarter(QSystemTrayIcon):
         filename = act.data()
         if filename:
             self.__startProc("eric5.py", filename)
+    
+    def __showPreferences(self):
+        """
+        Private slot to set the preferences.
+        """
+        from Preferences.ConfigurationDialog import ConfigurationDialog
+        dlg = ConfigurationDialog(None, 'Configuration', True, 
+                                  fromEric = True, 
+                                  displayMode = ConfigurationDialog.TrayStarterMode)
+        dlg.preferencesChanged.connect(self.preferencesChanged)
+        dlg.show()
+        dlg.showConfigurationPageByName("trayStarterPage")
+        dlg.exec_()
+        QApplication.processEvents()
+        if dlg.result() == QDialog.Accepted:
+            dlg.setPreferences()
+            Preferences.syncPreferences()
+            self.preferencesChanged()
+    
+    def preferencesChanged(self):
+        """
+        Public slot to handle a change of preferences.
+        """
+        self.setIcon(
+            UI.PixmapCache.getIcon(Preferences.getTrayStarter("TrayStarterIcon")))
+
+    def __about(self):
+        """
+        Private slot to handle the About dialog.
+        """
+        from Plugins.AboutPlugin.AboutDialog import AboutDialog
+        dlg = AboutDialog()
+        dlg.exec_()

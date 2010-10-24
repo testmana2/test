@@ -557,6 +557,7 @@
               <section title="eric5.Preferences.ConfigurationPages.TasksPage" ref="eric5.Preferences.ConfigurationPages.TasksPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.TemplatesPage" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.TerminalPage" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html" />
+              <section title="eric5.Preferences.ConfigurationPages.TrayStarterPage" ref="eric5.Preferences.ConfigurationPages.TrayStarterPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.VcsPage" ref="eric5.Preferences.ConfigurationPages.VcsPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ViewmanagerPage" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html" />
             </section>
@@ -2913,6 +2914,7 @@
       <keyword name="getTasks" id="getTasks" ref="eric5.Preferences.__init__.html#getTasks" />
       <keyword name="getTemplates" id="getTemplates" ref="eric5.Preferences.__init__.html#getTemplates" />
       <keyword name="getTerminal" id="getTerminal" ref="eric5.Preferences.__init__.html#getTerminal" />
+      <keyword name="getTrayStarter" id="getTrayStarter" ref="eric5.Preferences.__init__.html#getTrayStarter" />
       <keyword name="getUI" id="getUI" ref="eric5.Preferences.__init__.html#getUI" />
       <keyword name="getUILanguage" id="getUILanguage" ref="eric5.Preferences.__init__.html#getUILanguage" />
       <keyword name="getUILayout" id="getUILayout" ref="eric5.Preferences.__init__.html#getUILayout" />
@@ -2960,6 +2962,7 @@
       <keyword name="setTasks" id="setTasks" ref="eric5.Preferences.__init__.html#setTasks" />
       <keyword name="setTemplates" id="setTemplates" ref="eric5.Preferences.__init__.html#setTemplates" />
       <keyword name="setTerminal" id="setTerminal" ref="eric5.Preferences.__init__.html#setTerminal" />
+      <keyword name="setTrayStarter" id="setTrayStarter" ref="eric5.Preferences.__init__.html#setTrayStarter" />
       <keyword name="setUI" id="setUI" ref="eric5.Preferences.__init__.html#setUI" />
       <keyword name="setUILanguage" id="setUILanguage" ref="eric5.Preferences.__init__.html#setUILanguage" />
       <keyword name="setUILayout" id="setUILayout" ref="eric5.Preferences.__init__.html#setUILayout" />
@@ -5251,12 +5254,14 @@
       <keyword name="TrayStarter (Module)" id="TrayStarter (Module)" ref="eric5.Tools.TrayStarter.html" />
       <keyword name="TrayStarter" id="TrayStarter" ref="eric5.Tools.TrayStarter.html#TrayStarter" />
       <keyword name="TrayStarter (Constructor)" id="TrayStarter (Constructor)" ref="eric5.Tools.TrayStarter.html#TrayStarter.__init__" />
+      <keyword name="TrayStarter.__about" id="TrayStarter.__about" ref="eric5.Tools.TrayStarter.html#TrayStarter.__about" />
       <keyword name="TrayStarter.__activated" id="TrayStarter.__activated" ref="eric5.Tools.TrayStarter.html#TrayStarter.__activated" />
       <keyword name="TrayStarter.__loadRecentFiles" id="TrayStarter.__loadRecentFiles" ref="eric5.Tools.TrayStarter.html#TrayStarter.__loadRecentFiles" />
       <keyword name="TrayStarter.__loadRecentMultiProjects" id="TrayStarter.__loadRecentMultiProjects" ref="eric5.Tools.TrayStarter.html#TrayStarter.__loadRecentMultiProjects" />
       <keyword name="TrayStarter.__loadRecentProjects" id="TrayStarter.__loadRecentProjects" ref="eric5.Tools.TrayStarter.html#TrayStarter.__loadRecentProjects" />
       <keyword name="TrayStarter.__openRecent" id="TrayStarter.__openRecent" ref="eric5.Tools.TrayStarter.html#TrayStarter.__openRecent" />
       <keyword name="TrayStarter.__showContextMenu" id="TrayStarter.__showContextMenu" ref="eric5.Tools.TrayStarter.html#TrayStarter.__showContextMenu" />
+      <keyword name="TrayStarter.__showPreferences" id="TrayStarter.__showPreferences" ref="eric5.Tools.TrayStarter.html#TrayStarter.__showPreferences" />
       <keyword name="TrayStarter.__showRecentFilesMenu" id="TrayStarter.__showRecentFilesMenu" ref="eric5.Tools.TrayStarter.html#TrayStarter.__showRecentFilesMenu" />
       <keyword name="TrayStarter.__showRecentMultiProjectsMenu" id="TrayStarter.__showRecentMultiProjectsMenu" ref="eric5.Tools.TrayStarter.html#TrayStarter.__showRecentMultiProjectsMenu" />
       <keyword name="TrayStarter.__showRecentProjectsMenu" id="TrayStarter.__showRecentProjectsMenu" ref="eric5.Tools.TrayStarter.html#TrayStarter.__showRecentProjectsMenu" />
@@ -5276,6 +5281,7 @@
       <keyword name="TrayStarter.__startTRPreviewer" id="TrayStarter.__startTRPreviewer" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startTRPreviewer" />
       <keyword name="TrayStarter.__startUIPreviewer" id="TrayStarter.__startUIPreviewer" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startUIPreviewer" />
       <keyword name="TrayStarter.__startUnittest" id="TrayStarter.__startUnittest" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startUnittest" />
+      <keyword name="TrayStarter.preferencesChanged" id="TrayStarter.preferencesChanged" ref="eric5.Tools.TrayStarter.html#TrayStarter.preferencesChanged" />
       <keyword name="Tasks (Package)" id="Tasks (Package)" ref="index-eric5.Tasks.html" />
       <keyword name="TaskViewer (Module)" id="TaskViewer (Module)" ref="eric5.Tasks.TaskViewer.html" />
       <keyword name="Task" id="Task" ref="eric5.Tasks.TaskViewer.html#Task" />
@@ -7673,6 +7679,11 @@
       <keyword name="EditorKeywordsPage.on_languageCombo_activated" id="EditorKeywordsPage.on_languageCombo_activated" ref="eric5.Preferences.ConfigurationPages.EditorKeywordsPage.html#EditorKeywordsPage.on_languageCombo_activated" />
       <keyword name="EditorKeywordsPage.on_setSpinBox_valueChanged" id="EditorKeywordsPage.on_setSpinBox_valueChanged" ref="eric5.Preferences.ConfigurationPages.EditorKeywordsPage.html#EditorKeywordsPage.on_setSpinBox_valueChanged" />
       <keyword name="EditorKeywordsPage.save" id="EditorKeywordsPage.save" ref="eric5.Preferences.ConfigurationPages.EditorKeywordsPage.html#EditorKeywordsPage.save" />
+      <keyword name="TrayStarterPage (Module)" id="TrayStarterPage (Module)" ref="eric5.Preferences.ConfigurationPages.TrayStarterPage.html" />
+      <keyword name="TrayStarterPage" id="TrayStarterPage" ref="eric5.Preferences.ConfigurationPages.TrayStarterPage.html#TrayStarterPage" />
+      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.TrayStarterPage.html#create" />
+      <keyword name="TrayStarterPage (Constructor)" id="TrayStarterPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.TrayStarterPage.html#TrayStarterPage.__init__" />
+      <keyword name="TrayStarterPage.save" id="TrayStarterPage.save" ref="eric5.Preferences.ConfigurationPages.TrayStarterPage.html#TrayStarterPage.save" />
       <keyword name="PythonPage (Module)" id="PythonPage (Module)" ref="eric5.Preferences.ConfigurationPages.PythonPage.html" />
       <keyword name="PythonPage" id="PythonPage" ref="eric5.Preferences.ConfigurationPages.PythonPage.html#PythonPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.PythonPage.html#create" />
@@ -10238,6 +10249,7 @@
       <file>eric5.Preferences.ConfigurationPages.TasksPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.TemplatesPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.TerminalPage.html</file>
+      <file>eric5.Preferences.ConfigurationPages.TrayStarterPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.VcsPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ViewmanagerPage.html</file>
       <file>eric5.Preferences.PreferencesLexer.html</file>

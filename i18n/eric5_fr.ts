@@ -2859,172 +2859,172 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
 <context>
     <name>ConfigurationWidget</name>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="97"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="107"/>
         <source>Application</source>
         <translation>Application</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="103"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="113"/>
         <source>CORBA</source>
         <translation>CORBA</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="106"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="116"/>
         <source>Email</source>
         <translation>Email</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="109"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="119"/>
         <source>Graphics</source>
         <translation>Graphiques</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="112"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="122"/>
         <source>Icons</source>
         <translation>Icônes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="118"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="128"/>
         <source>Plugin Manager</source>
         <translation>Gestionnaire de plugins</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="121"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="131"/>
         <source>Printer</source>
         <translation>Impression</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="278"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="291"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="130"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="140"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="133"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="143"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="136"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="146"/>
         <source>Tasks</source>
         <translation>Tâches</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="139"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="149"/>
         <source>Templates</source>
         <translation>Gabarits</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="145"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="158"/>
         <source>Version Control Systems</source>
         <translation>Contrôle de versions</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="149"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="162"/>
         <source>Debugger</source>
         <translation>Débogueur</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="161"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="174"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="165"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="178"/>
         <source>Editor</source>
         <translation>Éditeur</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="168"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="181"/>
         <source>APIs</source>
         <translation>APIs</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="171"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="184"/>
         <source>Autocompletion</source>
         <translation>Autocomplétion</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="178"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="191"/>
         <source>Calltips</source>
         <translation>Calltips</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="184"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="197"/>
         <source>General</source>
         <translation>Général</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="199"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="212"/>
         <source>Typing</source>
         <translation>Autoformat</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="202"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="215"/>
         <source>Exporters</source>
         <translation>Exportation</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="206"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
         <source>Highlighters</source>
         <translation>Analyseurs syntaxiques</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="209"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="222"/>
         <source>Filetype Associations</source>
         <translation>Types de fichiers</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="213"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="226"/>
         <source>Styles</source>
         <translation>Styles</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="282"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="295"/>
         <source>Help</source>
         <translation>Aide</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="288"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="301"/>
         <source>Help Documentation</source>
         <translation>Sources de documentation</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="292"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="305"/>
         <source>Help Viewers</source>
         <translation>Visionneurs d&apos;aide</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="247"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="260"/>
         <source>Project</source>
         <translation>Projet</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="244"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="257"/>
         <source>Project Viewer</source>
         <translation>Gestionnaire de projet</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="250"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="263"/>
         <source>Multiproject</source>
         <translation>Multi-projet</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="257"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="270"/>
         <source>Interface</source>
         <translation>Interface</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="260"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="273"/>
         <source>Viewmanager</source>
         <translation>Gestionnaire d&apos;affichage</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="425"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="453"/>
         <source>Configuration Page Error</source>
         <translation>Erreur de la page de configuration</translation>
     </message>
@@ -3034,90 +3034,95 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation type="obsolete">&lt;p&gt;Impossible de charger la page de configuration &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="187"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="200"/>
         <source>Filehandling</source>
         <translation>Gestion des fichiers</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="190"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="203"/>
         <source>Searching</source>
         <translation>Recherche</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="285"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="298"/>
         <source>Appearance</source>
         <translation>Apparence</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="181"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="194"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="196"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="209"/>
         <source>Style</source>
         <translation>Style</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="220"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="233"/>
         <source>Properties</source>
         <translation>Propriétés</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="386"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="414"/>
         <source>Preferences</source>
         <translation>Préférences</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="391"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="419"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>Choisir une entrée dans la liste
 pour afficher la page de configuration.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="142"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="152"/>
         <source>Terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="275"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="288"/>
         <source>Network</source>
         <translation>Réseau</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="193"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="206"/>
         <source>Spell checking</source>
         <translation>Correction orthographique</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="158"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="171"/>
         <source>Python3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="295"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="308"/>
         <source>Eric Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="425"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="453"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="124"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="134"/>
         <source>Py3Flakes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="217"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="230"/>
         <source>Keywords</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="100"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="110"/>
         <source>Cooperation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationDialog.py" line="320"/>
+        <source>Tray Starter</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -15730,192 +15735,192 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="429"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="431"/>
         <source>Synchronizing with the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="477"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="479"/>
         <source>Adding files/directories to the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="537"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="539"/>
         <source>Removing files/directories from the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="595"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="597"/>
         <source>Renaming {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="703"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="705"/>
         <source>Taging in the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="733"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="735"/>
         <source>Reverting changes</source>
         <translation type="unfinished">Revenir avant les modifications</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="774"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="776"/>
         <source>Merging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="977"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="979"/>
         <source>Mercurial command</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1150"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1152"/>
         <source>Copying {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1243"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1245"/>
         <source>Mercurial Log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1243"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1245"/>
         <source>Select number of entries to show.</source>
         <translation type="unfinished">Sélectionner plusieurs entrées à afficher.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1318"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1320"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1347"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1349"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1456"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1458"/>
         <source>Resolving files/directories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1478"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1480"/>
         <source>Create Branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1478"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1480"/>
         <source>Enter branch name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1489"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1491"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1560"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1562"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1584"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1586"/>
         <source>Showing the combined configuration settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1607"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1609"/>
         <source>Showing aliases for remote repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1630"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1632"/>
         <source>Recovering from interrupted transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1849"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1851"/>
         <source>Shall the working directory be updated?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1512"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1514"/>
         <source>Showing current branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1761"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1763"/>
         <source>Create changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1860"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1862"/>
         <source>Apply changegroups</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1874"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1876"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1901"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1903"/>
         <source>Mercurial Bisect ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1813"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1815"/>
         <source>Preview changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1653"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1655"/>
         <source>Identifying project directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1678"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1680"/>
         <source>Create .hgignore file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1678"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1680"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1933"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1935"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1722"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1724"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1843"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1845"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1823"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1825"/>
         <source>Identifying changegroup file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1982"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1984"/>
         <source>Backing out changeset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1962"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1964"/>
         <source>No revision given. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1739"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1741"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16453,12 +16458,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="139"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="131"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Erreur du processus</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="139"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="131"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25496,12 +25501,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="879"/>
+        <location filename="Preferences/__init__.py" line="885"/>
         <source>Export Preferences</source>
         <translation>Export des préférences</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="898"/>
+        <location filename="Preferences/__init__.py" line="904"/>
         <source>Import Preferences</source>
         <translation>Import des préférences</translation>
     </message>
@@ -40776,37 +40781,37 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">Lanceur eric4</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="53"/>
+        <location filename="Tools/TrayStarter.py" line="55"/>
         <source>Recent Projects</source>
         <translation>Projets récents</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="63"/>
+        <location filename="Tools/TrayStarter.py" line="65"/>
         <source>Recent Files</source>
         <translation>Fichiers récents</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="73"/>
+        <location filename="Tools/TrayStarter.py" line="76"/>
         <source>QRegExp editor</source>
         <translation>Éditeur QRegExp</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="74"/>
+        <location filename="Tools/TrayStarter.py" line="77"/>
         <source>Python re editor</source>
         <translation>Éditeur python &apos;re&apos;</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="77"/>
+        <location filename="Tools/TrayStarter.py" line="80"/>
         <source>UI Previewer</source>
         <translation>Visionneur d&apos;UI</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="79"/>
+        <location filename="Tools/TrayStarter.py" line="82"/>
         <source>Translations Previewer</source>
         <translation>Apercu des traductions</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="81"/>
+        <location filename="Tools/TrayStarter.py" line="84"/>
         <source>Unittest</source>
         <translation>Tests unitaires</translation>
     </message>
@@ -40816,17 +40821,17 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">Visionneur d&apos;aide</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="87"/>
+        <location filename="Tools/TrayStarter.py" line="90"/>
         <source>Compare Files</source>
         <translation>Comparaison de fichiers</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="89"/>
+        <location filename="Tools/TrayStarter.py" line="92"/>
         <source>Compare Files side by side</source>
         <translation>Comparaison de fichiers côte à côte</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="105"/>
+        <location filename="Tools/TrayStarter.py" line="108"/>
         <source>Preferences</source>
         <translation>Préférences</translation>
     </message>
@@ -40836,12 +40841,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">IDE eric4</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="122"/>
+        <location filename="Tools/TrayStarter.py" line="129"/>
         <source>Quit</source>
         <translation>Quitter</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="198"/>
+        <location filename="Tools/TrayStarter.py" line="205"/>
         <source>Process Generation Error</source>
         <translation>Erreur du processus</translation>
     </message>
@@ -40851,22 +40856,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Impossible de démarrer la version.&lt;br&gt;Assurez-vous qu&apos;il est bien disponible  &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="198"/>
+        <location filename="Tools/TrayStarter.py" line="205"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="97"/>
+        <location filename="Tools/TrayStarter.py" line="100"/>
         <source>Install Plugin</source>
         <translation>Installer un plugin</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="99"/>
+        <location filename="Tools/TrayStarter.py" line="102"/>
         <source>Uninstall Plugin</source>
         <translation>Désinstaller un plugin</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="101"/>
+        <location filename="Tools/TrayStarter.py" line="104"/>
         <source>Plugin Repository</source>
         <translation>Référentiel de plugins</translation>
     </message>
@@ -40876,38 +40881,96 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">Mini-éditeur eric4</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="58"/>
+        <location filename="Tools/TrayStarter.py" line="60"/>
         <source>Recent Multiprojects</source>
         <translation>Multi-projets récents</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="93"/>
+        <location filename="Tools/TrayStarter.py" line="96"/>
         <source>SQL Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="83"/>
+        <location filename="Tools/TrayStarter.py" line="86"/>
         <source>Web Browser</source>
         <translation type="unfinished">Navigateur Web</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="67"/>
+        <location filename="Tools/TrayStarter.py" line="69"/>
         <source>Eric5 tray starter</source>
         <translation type="unfinished">Lanceur eric4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="107"/>
+        <location filename="Tools/TrayStarter.py" line="110"/>
         <source>eric5 IDE</source>
         <translation type="unfinished">IDE eric4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="109"/>
+        <location filename="Tools/TrayStarter.py" line="112"/>
         <source>eric5 Mini Editor</source>
         <translation type="unfinished">Mini-éditeur eric4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="198"/>
+        <location filename="Tools/TrayStarter.py" line="205"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="116"/>
+        <source>Preferences (tray starter)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TrayStarterPage</name>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="17"/>
+        <source>&lt;b&gt;Configure Tray Starter&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="37"/>
+        <source>Icon</source>
+        <translation type="unfinished">Icône</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="43"/>
+        <source>Select to use the standard icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="46"/>
+        <source>Standard Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="53"/>
+        <source>Select to use the high contrast icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="56"/>
+        <source>High Contrast Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="63"/>
+        <source>Select to use a black and white icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="66"/>
+        <source>Black and White Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="73"/>
+        <source>Select to use an inverse black and white icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="76"/>
+        <source>Inverse Black and White Icon</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -48154,12 +48217,12 @@ police de l&apos;éditeur.&lt;/p&gt;</translation>
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="226"/>
+        <location filename="eric5.py" line="236"/>
         <source>Importing packages...</source>
         <translation type="unfinished">Importation des packages...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="231"/>
+        <location filename="eric5.py" line="241"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">Création de la fenêtre principale...</translation>
     </message>
@@ -48167,30 +48230,30 @@ police de l&apos;éditeur.&lt;/p&gt;</translation>
 <context>
     <name>mercurial</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1030"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1032"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1409"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1411"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1413"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1415"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1042"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1044"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1066"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1068"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;
 &lt;p&gt;&lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
@@ -48201,23 +48264,23 @@ police de l&apos;éditeur.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1403"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1405"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1405"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1407"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1417"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1419"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1420"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1422"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;

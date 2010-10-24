@@ -232,7 +232,8 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True,
     )
     
     w = mwFactory(argv)
-    app.lastWindowClosed.connect(app.quit)
+    if quitOnLastWindowClosed:
+        app.lastWindowClosed.connect(app.quit)
     w.show()
     
     return app.exec_()

@@ -1815,7 +1815,7 @@ class HelpWindow(QMainWindow):
         """
         dlg = ConfigurationDialog(self, 'Configuration', True, 
                                   fromEric = self.fromEric, 
-                                  helpBrowserMode = True)
+                                  displayMode = ConfigurationDialog.HelpBrowserMode)
         dlg.preferencesChanged.connect(self.preferencesChanged)
         dlg.show()
         dlg.showConfigurationPageByName("empty")

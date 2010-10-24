@@ -59,19 +59,29 @@ class ConfigurationWidget(QWidget):
     """
     preferencesChanged = pyqtSignal()
     
-    def __init__(self, parent = None, fromEric = True, helpBrowserMode = False):
+    DefaultMode     = 0
+    HelpBrowserMode = 1
+    TrayStarterMode = 2
+    
+    def __init__(self, parent = None, fromEric = True, displayMode = DefaultMode):
         """
         Constructor
         
         @param parent The parent widget of this dialog. (QWidget)
         @keyparam fromEric flag indicating a dialog generation from within the 
             eric5 ide (boolean)
-        @keyparam helpBrowserMode flag indicating to show only help pages
-            for entries related to the help browser (boolean)
+        @keyparam displayMode mode of the configuration dialog 
+            (DefaultMode, HelpBrowserMode, TrayStarterMode)
         """
+        assert displayMode in (
+            ConfigurationWidget.DefaultMode, 
+            ConfigurationWidget.HelpBrowserMode, 
+            ConfigurationWidget.TrayStarterMode
+        )
+        
         QWidget.__init__(self, parent)
         self.fromEric = fromEric
-        self.helpBrowserMode = helpBrowserMode
+        self.displayMode = displayMode
         
         self.__setupUi()
         
@@ -85,7 +95,7 @@ class ConfigurationWidget(QWidget):
                 self.pluginManager = PluginManager(self)
                 e5App().registerObject("PluginManager", self.pluginManager)
         
-        if not helpBrowserMode:
+        if displayMode == ConfigurationWidget.DefaultMode:
             self.configItems = {
                 # key : [display string, pixmap name, dialog module name or 
                 #        page creation function, parent key,
@@ -141,6 +151,9 @@ class ConfigurationWidget(QWidget):
                 "terminalPage" : \
                     [self.trUtf8("Terminal"), "terminal.png",
                     "TerminalPage", None, None],
+                "trayStarterPage" : \
+                    [self.trUtf8("Tray Starter"), "erict.png",
+                    "TrayStarterPage", None, None],
                 "vcsPage" : \
                     [self.trUtf8("Version Control Systems"), "preferences-vcs.png",
                     "VcsPage", None, None],
@@ -263,7 +276,7 @@ class ConfigurationWidget(QWidget):
             
             self.configItems.update(
                 e5App().getObject("PluginManager").getPluginConfigData())
-        else:
+        elif displayMode == ConfigurationWidget.HelpBrowserMode:
             self.configItems = {
                 # key : [display string, pixmap name, dialog module name or 
                 #        page creation function, parent key,
@@ -295,6 +308,20 @@ class ConfigurationWidget(QWidget):
                     [self.trUtf8("Eric Web Browser"), "ericWeb.png",
                     "HelpWebBrowserPage", "0helpPage", None],
             }
+        elif displayMode == ConfigurationWidget.TrayStarterMode:
+            self.configItems = {
+                # key : [display string, pixmap name, dialog module name or 
+                #        page creation function, parent key,
+                #        reference to configuration page (must always be last)]
+                # The dialog module must have the module function create to create
+                # the configuration page. This must have the method save to save 
+                # the settings.
+                "trayStarterPage" : \
+                    [self.trUtf8("Tray Starter"), "erict.png",
+                    "TrayStarterPage", None, None],
+            }
+        else:
+            raise RuntimeError("Illegal mode value: {0}".format(displayMode))
         
         # generate the list entries
         for key in sorted(self.configItems.keys()):
@@ -313,7 +340,8 @@ class ConfigurationWidget(QWidget):
         self.configList.itemActivated.connect(self.__showConfigurationPage)
         self.configList.itemClicked.connect(self.__showConfigurationPage)
         
-        self.__initLexers()
+        if displayMode != ConfigurationWidget.TrayStarterMode:
+            self.__initLexers()
         
     def __setupUi(self):
         """
@@ -377,7 +405,7 @@ class ConfigurationWidget(QWidget):
             QDialogButtonBox.Apply | QDialogButtonBox.Cancel | \
             QDialogButtonBox.Ok | QDialogButtonBox.Reset)
         self.buttonBox.setObjectName("buttonBox")
-        if not self.fromEric and not self.helpBrowserMode:
+        if not self.fromEric and self.displayMode == ConfigurationWidget.DefaultMode:
             self.buttonBox.button(QDialogButtonBox.Apply).hide()
         self.buttonBox.button(QDialogButtonBox.Apply).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Reset).setEnabled(False)
@@ -586,8 +614,12 @@ class ConfigurationDialog(QDialog):
     """
     preferencesChanged = pyqtSignal()
     
+    DefaultMode     = ConfigurationWidget.DefaultMode
+    HelpBrowserMode = ConfigurationWidget.HelpBrowserMode
+    TrayStarterMode = ConfigurationWidget.TrayStarterMode
+    
     def __init__(self, parent = None, name = None, modal = False, 
-                 fromEric = True, helpBrowserMode = False):
+                 fromEric = True, displayMode = ConfigurationWidget.DefaultMode):
         """
         Constructor
         
@@ -596,8 +628,8 @@ class ConfigurationDialog(QDialog):
         @param modal Flag indicating a modal dialog. (boolean)
         @keyparam fromEric flag indicating a dialog generation from within the 
             eric5 ide (boolean)
-        @keyparam helpBrowserMode flag indicating to show only help pages
-            for entries related to the help browser (boolean)
+        @keyparam displayMode mode of the configuration dialog 
+            (DefaultMode, HelpBrowserMode, TrayStarterMode)
         """
         QDialog.__init__(self, parent)
         if name:
@@ -608,7 +640,7 @@ class ConfigurationDialog(QDialog):
         self.layout.setSpacing(0)
         
         self.cw = ConfigurationWidget(self, fromEric = fromEric, 
-                                      helpBrowserMode = helpBrowserMode)
+                                      displayMode = displayMode)
         size = self.cw.size()
         self.layout.addWidget(self.cw)
         self.resize(size)
