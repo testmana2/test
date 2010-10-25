@@ -136,37 +136,37 @@ class UMLGraphicsView(E5GraphicsView):
         self.relayoutAct.triggered[()].connect(self.__relayout)
         
         self.alignLeftAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignLeft"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignLeft.png"), 
                     self.trUtf8("Align Left"), self)
         self.alignMapper.setMapping(self.alignLeftAct, Qt.AlignLeft)
         self.alignLeftAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignHCenterAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignHCenter"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignHCenter.png"), 
                     self.trUtf8("Align Center Horizontal"), self)
         self.alignMapper.setMapping(self.alignHCenterAct, Qt.AlignHCenter)
         self.alignHCenterAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignRightAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignRight"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignRight.png"), 
                     self.trUtf8("Align Right"), self)
         self.alignMapper.setMapping(self.alignRightAct, Qt.AlignRight)
         self.alignRightAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignTopAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignTop"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignTop.png"), 
                     self.trUtf8("Align Top"), self)
         self.alignMapper.setMapping(self.alignTopAct, Qt.AlignTop)
         self.alignTopAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignVCenterAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignVCenter"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignVCenter.png"), 
                     self.trUtf8("Align Center Vertical"), self)
         self.alignMapper.setMapping(self.alignVCenterAct, Qt.AlignVCenter)
         self.alignVCenterAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignBottomAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignBottom"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignBottom.png"), 
                     self.trUtf8("Align Bottom"), self)
         self.alignMapper.setMapping(self.alignBottomAct, Qt.AlignBottom)
         self.alignBottomAct.triggered[()].connect(self.alignMapper.map)
