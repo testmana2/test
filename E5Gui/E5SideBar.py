@@ -515,9 +515,9 @@ class E5SideBar(QWidget):
         """
         self.__autoHide = not checked
         if self.__autoHide:
-            self.__autoHideButton.setIcon(UI.PixmapCache.getIcon("autoHideOn"))
+            self.__autoHideButton.setIcon(UI.PixmapCache.getIcon("autoHideOn.png"))
         else:
-            self.__autoHideButton.setIcon(UI.PixmapCache.getIcon("autoHideOff"))
+            self.__autoHideButton.setIcon(UI.PixmapCache.getIcon("autoHideOff.png"))
     
     def __appFocusChanged(self, old, now):
         """
