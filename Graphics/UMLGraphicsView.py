@@ -130,37 +130,37 @@ class UMLGraphicsView(E5GraphicsView):
         self.connect(self.relayoutAct, SIGNAL("triggered()"), self.__relayout)
         
         self.alignLeftAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignLeft"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignLeft.png"), 
                     self.trUtf8("Align Left"), self)
         self.connect(self.alignLeftAct, SIGNAL("triggered()"), 
             lambda align=Qt.AlignLeft: self.__alignShapes(align))
         
         self.alignHCenterAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignHCenter"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignHCenter.png"), 
                     self.trUtf8("Align Center Horizontal"), self)
         self.connect(self.alignHCenterAct, SIGNAL("triggered()"), 
             lambda align=Qt.AlignHCenter: self.__alignShapes(align))
         
         self.alignRightAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignRight"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignRight.png"), 
                     self.trUtf8("Align Right"), self)
         self.connect(self.alignRightAct, SIGNAL("triggered()"), 
             lambda align=Qt.AlignRight: self.__alignShapes(align))
         
         self.alignTopAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignTop"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignTop.png"), 
                     self.trUtf8("Align Top"), self)
         self.connect(self.alignTopAct, SIGNAL("triggered()"), 
             lambda align=Qt.AlignTop: self.__alignShapes(align))
         
         self.alignVCenterAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignVCenter"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignVCenter.png"), 
                     self.trUtf8("Align Center Vertical"), self)
         self.connect(self.alignVCenterAct, SIGNAL("triggered()"), 
             lambda align=Qt.AlignVCenter: self.__alignShapes(align))
         
         self.alignBottomAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignBottom"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignBottom.png"), 
                     self.trUtf8("Align Bottom"), self)
         self.connect(self.alignBottomAct, SIGNAL("triggered()"), 
             lambda align=Qt.AlignBottom: self.__alignShapes(align))
