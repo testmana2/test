@@ -8299,7 +8299,7 @@ gesamte Auswahl.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="79"/>
         <source>Select the default language</source>
-        <translation>Wähle die Standartsprache</translation>
+        <translation>Wähle die Standardsprache</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="176"/>
@@ -27823,7 +27823,7 @@ nicht verbunden</translation>
     <message>
         <location filename="Project/SpellingPropertiesDialog.py" line="45"/>
         <source>&lt;default&gt;</source>
-        <translation>&lt;Standart&gt;</translation>
+        <translation>&lt;Standard&gt;</translation>
     </message>
     <message>
         <location filename="Project/SpellingPropertiesDialog.py" line="74"/>
