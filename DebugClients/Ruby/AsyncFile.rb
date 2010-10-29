@@ -238,7 +238,14 @@ Public method to read all lines from this file.
         return lines
     end
     
-    def seek(offset, whence=IO::SEEK_SET)
+    def gets()
+=begin edoc
+ Public method to read a line from this file.
+=end
+        readline()
+    end
+
+   def seek(offset, whence=IO::SEEK_SET)
 =begin edoc
 Public method to move the filepointer.
 
