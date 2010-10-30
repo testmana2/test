@@ -9,6 +9,7 @@ Module implementing the Python debugger interface for the debug server.
 
 import sys
 import os
+import re
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QInputDialog, QMessageBox
@@ -71,6 +72,8 @@ class DebuggerInterfacePython(QObject):
         self.clientCapabilities = ClientDefaultCapabilities
         
         self.codec = QTextCodec.codecForName(Preferences.getSystem("StringEncoding"))
+        
+        self.__unicodeRe = re.compile(r"""\bu(["'])""")
         
         if passive:
             # set translation function
@@ -759,9 +762,10 @@ class DebuggerInterfacePython(QObject):
                 
             if boc >= 0 and eoc > boc:
                 resp = line[boc:eoc]
+                evalArg = self.__unicodeRe.sub(r"\1", line[eoc:-1])
                 
                 if resp == ResponseLine or resp == ResponseStack:
-                    stack = eval(line[eoc:-1])
+                    stack = eval(evalArg)
                     for s in stack:
                         s[0] = self.translate(s[0], True)
                     cf = stack[0]
@@ -775,7 +779,7 @@ class DebuggerInterfacePython(QObject):
                     continue
                 
                 if resp == ResponseThreadList:
-                    currentId, threadList = eval(line[eoc:-1])
+                    currentId, threadList = eval(evalArg)
                     self.debugServer.clientThreadList(currentId, threadList)
                     continue
                 
@@ -784,7 +788,7 @@ class DebuggerInterfacePython(QObject):
                     continue
                 
                 if resp == ResponseVariables:
-                    vlist = eval(line[eoc:-1])
+                    vlist = eval(evalArg)
                     scope = vlist[0]
                     try:
                         variables = vlist[1:]
@@ -794,7 +798,7 @@ class DebuggerInterfacePython(QObject):
                     continue
                 
                 if resp == ResponseVariable:
-                    vlist = eval(line[eoc:-1])
+                    vlist = eval(evalArg)
                     scope = vlist[0]
                     try:
                         variables = vlist[1:]
@@ -812,8 +816,7 @@ class DebuggerInterfacePython(QObject):
                     continue
                 
                 if resp == ResponseException:
-                    exc = line[eoc:-1]
-                    exc = self.translate(exc, True)
+                    exc = self.translate(evalArg, True)
                     try:
                         exclist = eval(exc)
                         exctype = exclist[0]
@@ -827,8 +830,7 @@ class DebuggerInterfacePython(QObject):
                     continue
                 
                 if resp == ResponseSyntax:
-                    exc = line[eoc:-1]
-                    exc = self.translate(exc, True)
+                    exc = self.translate(evalArg, True)
                     try:
                         message, (fn, ln, cn) = eval(exc)
                         if fn is None:
@@ -844,69 +846,67 @@ class DebuggerInterfacePython(QObject):
                     continue
                 
                 if resp == ResponseExit:
-                    self.debugServer.clientExit(line[eoc:-1])
+                    self.debugServer.clientExit(evalArg)
                     continue
                 
                 if resp == ResponseClearBreak:
-                    fn, lineno = line[eoc:-1].split(',')
+                    fn, lineno = evalArg.split(',')
                     lineno = int(lineno)
                     fn = self.translate(fn, True)
                     self.debugServer.clientClearBreak(fn, lineno)
                     continue
                 
                 if resp == ResponseBPConditionError:
-                    fn, lineno = line[eoc:-1].split(',')
+                    fn, lineno = evalArg.split(',')
                     lineno = int(lineno)
                     fn = self.translate(fn, True)
                     self.debugServer.clientBreakConditionError(fn, lineno)
                     continue
                 
                 if resp == ResponseClearWatch:
-                    cond = line[eoc:-1]
-                    self.debugServer.clientClearWatch(cond)
+                    self.debugServer.clientClearWatch(evalArg)
                     continue
                 
                 if resp == ResponseWPConditionError:
-                    cond = line[eoc:-1]
-                    self.debugServer.clientWatchConditionError(cond)
+                    self.debugServer.clientWatchConditionError(evalArg)
                     continue
                 
                 if resp == ResponseRaw:
-                    prompt, echo = eval(line[eoc:-1])
+                    prompt, echo = eval(evalArg)
                     self.debugServer.clientRawInput(prompt, echo)
                     continue
                 
                 if resp == ResponseBanner:
-                    version, platform, dbgclient = eval(line[eoc:-1])
+                    version, platform, dbgclient = eval(evalArg)
                     self.debugServer.clientBanner(version, platform, dbgclient)
                     continue
                 
                 if resp == ResponseCapabilities:
-                    cap, clType = eval(line[eoc:-1])
+                    cap, clType = eval(evalArg)
                     self.clientCapabilities = cap
                     self.debugServer.clientCapabilities(cap, clType)
                     continue
                 
                 if resp == ResponseCompletion:
-                    clstring, text = line[eoc:-1].split('||')
+                    clstring, text = evalArg.split('||')
                     cl = eval(clstring)
                     self.debugServer.clientCompletionList(cl, text)
                     continue
                 
                 if resp == PassiveStartup:
-                    fn, exc = line[eoc:-1].split('|')
+                    fn, exc = evalArg.split('|')
                     exc = bool(exc)
                     fn = self.translate(fn, True)
                     self.debugServer.passiveStartUp(fn, exc)
                     continue
                 
                 if resp == ResponseUTPrepared:
-                    res, exc_type, exc_value = eval(line[eoc:-1])
+                    res, exc_type, exc_value = eval(evalArg)
                     self.debugServer.clientUtPrepared(res, exc_type, exc_value)
                     continue
                 
                 if resp == ResponseUTStartTest:
-                    testname, doc = eval(line[eoc:-1])
+                    testname, doc = eval(evalArg)
                     self.debugServer.clientUtStartTest(testname, doc)
                     continue
                 
@@ -915,12 +915,12 @@ class DebuggerInterfacePython(QObject):
                     continue
                 
                 if resp == ResponseUTTestFailed:
-                    testname, traceback = eval(line[eoc:-1])
+                    testname, traceback = eval(evalArg)
                     self.debugServer.clientUtTestFailed(testname, traceback)
                     continue
                 
                 if resp == ResponseUTTestErrored:
-                    testname, traceback = eval(line[eoc:-1])
+                    testname, traceback = eval(evalArg)
                     self.debugServer.clientUtTestErrored(testname, traceback)
                     continue
                 
