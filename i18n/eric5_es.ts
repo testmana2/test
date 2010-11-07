@@ -957,11 +957,6 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Es el proyecto &amp;maestro</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.py" line="60"/>
-        <source>Project Files (*.e4p *.e4pz)</source>
-        <translation type="obsolete">Archivos de proyecto (*.e4p *.e4pz)</translation>
-    </message>
-    <message>
         <location filename="MultiProject/AddProjectDialog.ui" line="68"/>
         <source>&amp;Description:</source>
         <translation>&amp;Descripción:</translation>
@@ -1211,27 +1206,27 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="14"/>
         <source>Edit Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Marcador</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="43"/>
         <source>Edit this Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar este Marcador</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="59"/>
         <source>Press to remove this bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para eliminar este marcador</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="62"/>
         <source>Remove this Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar este Marcador</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkInfoDialog.ui" line="73"/>
         <source>Title:</source>
-        <translation type="unfinished">Título:</translation>
+        <translation>Título:</translation>
     </message>
 </context>
 <context>
@@ -1995,11 +1990,6 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <location filename="Cooperation/ChatWidget.py" line="532"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
-    </message>
-    <message>
-        <location filename="Cooperation/ChatWidget.py" line="546"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Cooperation/ChatWidget.py" line="560"/>
@@ -2896,7 +2886,7 @@ para visualizar la página de configuración.</translation>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="320"/>
         <source>Tray Starter</source>
-        <translation type="unfinished"></translation>
+        <translation>Lanzador de bandeja de sistema</translation>
     </message>
 </context>
 <context>
@@ -4614,37 +4604,37 @@ Not connected
 <context>
     <name>DebuggerInterfacePython</name>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="332"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="335"/>
         <source>Start Debugger</source>
         <translation>Comenzar Depuración</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="332"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="335"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No ha sido posible lanzar el extremo del depurador.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="723"/>
         <source>Parent Process</source>
         <translation>Proceso Padre</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="723"/>
         <source>Child process</source>
         <translation>Proceso hijo</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="724"/>
         <source>Client forking</source>
         <translation>Fork del cliente</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="724"/>
         <source>Select the fork branch to follow.</source>
         <translation>Seleccionar la rama de fork para continuar.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="148"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="151"/>
         <source>&lt;p&gt;No Python2 interpreter configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha encontrado un intérprete de Python2 configurado.&lt;/p&gt;</translation>
     </message>
@@ -5133,11 +5123,6 @@ Not connected
         <translation>Seleccionar Cliente de Depuración</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.py" line="97"/>
-        <source>Python Files (*.py)</source>
-        <translation type="obsolete">Archivos Python (*.py)</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="129"/>
         <source>Source association</source>
         <translation>Asociación de fuentes</translation>
@@ -5322,11 +5307,6 @@ Not connected
         <translation>Seleccione el archivo a comparar</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="288"/>
-        <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="UI/DiffDialog.py" line="307"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
@@ -5370,104 +5350,9 @@ Not connected
         <translation>Mantener abierto al terminar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="50"/>
-        <source>Try Again</source>
-        <translation type="obsolete">Intentar de nuevo</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="53"/>
-        <source>Stop</source>
-        <translation type="obsolete">Parar</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="148"/>
-        <source>Save File</source>
-        <translation type="obsolete">Guardar archivo</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="362"/>
-        <source>?</source>
-        <translation type="obsolete">?</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="387"/>
-        <source>bytes</source>
-        <translation type="obsolete">bytes</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="390"/>
-        <source>kB</source>
-        <translation type="obsolete">kB</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="393"/>
-        <source>MB</source>
-        <translation type="obsolete">MB</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="130"/>
-        <source>Downloading</source>
-        <translation type="obsolete">Descargando</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/DownloadDialog.ui" line="14"/>
         <source>Eric5 Download</source>
         <translation>Descarga de Eric5</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="130"/>
-        <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Está a punto de descargar el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;¿Qué desea hacer?&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="159"/>
-        <source>Download canceled: {0}</source>
-        <translation type="obsolete">Descarga cancelada: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="272"/>
-        <source>Error opening save file: {0}</source>
-        <translation type="obsolete">Error al abrir el fichero a guardar: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="279"/>
-        <source>Error saving: {0}</source>
-        <translation type="obsolete">Error al guardar: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="296"/>
-        <source>Network Error: {0}</source>
-        <translation type="obsolete">Error de Red: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="352"/>
-        <source>- {0}:{1:02} minutes remaining</source>
-        <translation type="obsolete">-{0}:{1:02} minutos restantes</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
-        <source>- {0} seconds remaining</source>
-        <translation type="obsolete">- {0} seconds restantes</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="361"/>
-        <source>{0} of {1} ({2}/sec) {3}</source>
-        <translation type="obsolete">{0} de {1} ({2}/segundo) {3}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="370"/>
-        <source>{0} downloaded</source>
-        <translation type="obsolete">{0} descargado</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="373"/>
-        <source>{0} of {1} - Stopped</source>
-        <translation type="obsolete">{0} de {1} - Parado</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="46"/>
-        <source>Eric5 Download {0}</source>
-        <translation type="obsolete">Descarga de Eric5</translation>
     </message>
 </context>
 <context>
@@ -5475,97 +5360,97 @@ Not connected
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="23"/>
         <source>Icon</source>
-        <translation type="unfinished">Icono</translation>
+        <translation>Icono</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="38"/>
         <source>Filename</source>
-        <translation type="unfinished">Nombre de archivo</translation>
+        <translation>Nombre de archivo</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="60"/>
         <source>Info</source>
-        <translation type="unfinished">Información</translation>
+        <translation>Información</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="75"/>
         <source>Press to repeat the download</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para repetir la descarga</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="98"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="85"/>
         <source>Press to cancel the download</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para cancelar la descarga</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="95"/>
         <source>Press to open the downloaded file</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para abrir el archivo descargado</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="146"/>
         <source>Downloading</source>
-        <translation type="unfinished">Descargando</translation>
+        <translation>Descargando</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="146"/>
         <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Está a punto de descargar el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;¿Qué desea hacer?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Está a punto de descargar el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;¿Qué desea hacer?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="179"/>
         <source>Download canceled: {0}</source>
-        <translation type="unfinished">Descarga cancelada: {0}</translation>
+        <translation>Descarga cancelada: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="169"/>
         <source>Save File</source>
-        <translation type="unfinished">Guardar archivo</translation>
+        <translation>Guardar archivo</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="198"/>
         <source>Download directory ({0}) couldn&apos;t be created.</source>
-        <translation type="unfinished"></translation>
+        <translation>El directorio de descargas ({0}) no ha podido ser creado.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="335"/>
         <source>Error opening save file: {0}</source>
-        <translation type="unfinished">Error al abrir el fichero a guardar: {0}</translation>
+        <translation>Error al abrir el fichero a guardar: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="344"/>
         <source>Error saving: {0}</source>
-        <translation type="unfinished">Error al guardar: {0}</translation>
+        <translation>Error al guardar: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="356"/>
         <source>Network Error: {0}</source>
-        <translation type="unfinished">Error de Red: {0}</translation>
+        <translation>Error de Red: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="463"/>
         <source>{0} of {1} ({2}/sec) - {3}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} de {1} ({2}/sec) - {3}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="464"/>
         <source>?</source>
-        <translation type="unfinished">?</translation>
+        <translation>?</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="472"/>
         <source>{0} downloaded</source>
-        <translation type="unfinished">{0} descargado</translation>
+        <translation>{0} descargado</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="475"/>
         <source>{0} of {1} - Stopped</source>
-        <translation type="unfinished">{0} de {1} - Parado</translation>
+        <translation>{0} de {1} - Parado</translation>
     </message>
 </context>
 <context>
@@ -5573,79 +5458,81 @@ Not connected
     <message>
         <location filename="Helpviewer/Download/DownloadManager.ui" line="14"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Descargas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.ui" line="31"/>
         <source>Press to clean up the list of downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para limpiar la lista de descargas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.ui" line="56"/>
         <source>0 Items</source>
-        <translation type="unfinished"></translation>
+        <translation>0 Elementos</translation>
     </message>
     <message numerus="yes">
         <location filename="Helpviewer/Download/DownloadManager.py" line="345"/>
         <source>%n Download(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Descarga</numerusform>
+            <numerusform>%n Descargas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Helpviewer/Download/DownloadManager.py" line="138"/>
         <source>There are %n downloads in progress.
 Do you want to quit anyway?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Hay %n descarga en progreso.
+¿Desea salir de todos modos?</numerusform>
+            <numerusform>Hay %n descargas en progreso.
+¿Desea salir de todos modos?</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.ui" line="34"/>
         <source>Clear List</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar Lista</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.py" line="80"/>
         <source>Retry</source>
-        <translation type="unfinished">Reintentar</translation>
+        <translation>Reintentar</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.py" line="84"/>
         <source>Open</source>
-        <translation type="unfinished">Abrir</translation>
+        <translation>Abrir</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.py" line="87"/>
         <source>Cancel</source>
-        <translation type="unfinished">Cancelar</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.py" line="90"/>
         <source>Open Containing Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir Carpeta Contenedora</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.py" line="93"/>
         <source>Go to Download Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Ir a la Página de Descargas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.py" line="95"/>
         <source>Copy Download Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar Enlace de Descarga</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.py" line="98"/>
         <source>Select All</source>
-        <translation type="unfinished">Seleccionar todo</translation>
+        <translation>Seleccionar todo</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadManager.py" line="105"/>
         <source>Remove From List</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitar de la Lista</translation>
     </message>
 </context>
 <context>
@@ -5653,37 +5540,37 @@ Do you want to quit anyway?</source>
     <message numerus="yes">
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="23"/>
         <source>%n seconds remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n segundo restante</numerusform>
+            <numerusform>%n segundos restantes</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="37"/>
         <source>Bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>Bytes</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="40"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="43"/>
         <source>MiB</source>
-        <translation type="unfinished"></translation>
+        <translation>MiB</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="46"/>
         <source>GiB</source>
-        <translation type="unfinished"></translation>
+        <translation>GiB</translation>
     </message>
     <message numerus="yes">
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="18"/>
         <source>%n:{0:02} minutes remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n:{0:02} minuto restante</numerusform>
+            <numerusform>%n:{0:02} minutos restantes</numerusform>
         </translation>
     </message>
 </context>
@@ -7255,11 +7142,6 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2381"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Editor.py" line="4591"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;</translation>
@@ -7268,11 +7150,6 @@ selección completa.&lt;/li&gt;
         <location filename="QScintilla/Editor.py" line="4598"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; está dañado&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="QScintilla/Editor.py" line="4653"/>
-        <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="QScintilla/Editor.py" line="4649"/>
@@ -8462,11 +8339,6 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;Los estilos de resaltado no se han podido leer del archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="461"/>
-        <source>&lt;p&gt;The highlighting styles file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de estilos de resaltado &lt;b&gt;{0}&lt;/b&gt; tiene contenidos no válidos.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="61"/>
         <source>Family and Size only</source>
         <translation>Familia y Tamaño solamente</translation>
@@ -9654,7 +9526,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Fonts and colors of the syntax highlighters have to be configured on the syntax highlighter styles page.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nota:&lt;/b&gt; Las fuentes y colores de los resaltadores de sintaxis deben ser configurados en la página de estilos de resaltado de sintaxis.</translation>
     </message>
 </context>
 <context>
@@ -10819,11 +10691,6 @@ selección completa.&lt;/li&gt;
         <translation>Exportar origen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Exporters/ExporterBase.py" line="54"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Exporters/ExporterBase.py" line="56"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
@@ -11501,7 +11368,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="UI/FindFileDialog.py" line="575"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Los hash actual y original del archivos &lt;b&gt;{0}&lt;/b&gt; son distintos. Abandonando.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -12040,7 +11907,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1208"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si la política de caché está establecida a navegación offline, solamente estarán disponibles las páginas en caché local.</translation>
     </message>
 </context>
 <context>
@@ -12123,12 +11990,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="49"/>
         <source>Select to clear the download history</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para limpiar el historial de descarga</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="52"/>
         <source>Download History</source>
-        <translation type="unfinished"></translation>
+        <translation>Historial de Descarga</translation>
     </message>
 </context>
 <context>
@@ -12331,131 +12198,132 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="75"/>
         <source>Show a navigation menu</source>
-        <translation type="unfinished">Mostrar un menú de navegación</translation>
+        <translation>Mostrar un menú de navegación</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="85"/>
         <source>Close the current help window</source>
-        <translation type="unfinished">Cierra la ventana actual</translation>
+        <translation>Cierra la ventana actual</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="98"/>
         <source>Open a new help window tab</source>
-        <translation type="unfinished">Abre una nueva pestaña con la ventana de ayuda</translation>
+        <translation>Abre una nueva pestaña con la ventana de ayuda</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="112"/>
         <source>New Tab</source>
-        <translation type="unfinished">Nueva pestaña</translation>
+        <translation>Nueva pestaña</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="116"/>
         <source>Move Left</source>
-        <translation type="unfinished">Mover a la Izquierda</translation>
+        <translation>Mover a la Izquierda</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="119"/>
         <source>Move Right</source>
-        <translation type="unfinished">Mover a la Derecha</translation>
+        <translation>Mover a la Derecha</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="123"/>
         <source>Duplicate Page</source>
-        <translation type="unfinished">Duplicar Página</translation>
+        <translation>Duplicar Página</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="127"/>
         <source>Close</source>
-        <translation type="unfinished">Cerrar</translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="130"/>
         <source>Close Others</source>
-        <translation type="unfinished">Cerrar Otras</translation>
+        <translation>Cerrar Otras</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="132"/>
         <source>Close All</source>
-        <translation type="unfinished">Cerrar todo</translation>
+        <translation>Cerrar todo</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="135"/>
         <source>Print Preview</source>
-        <translation type="unfinished">Presentación preliminar</translation>
+        <translation>Presentación Preliminar</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="137"/>
         <source>Print</source>
-        <translation type="unfinished">Imprimir</translation>
+        <translation>Imprimir</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="139"/>
         <source>Print as PDF</source>
-        <translation type="unfinished">Imprimir como PDF</translation>
+        <translation>Imprimir como PDF</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="142"/>
         <source>Bookmark All Tabs</source>
-        <translation type="unfinished">Todas las Pestañas a Marcadores</translation>
+        <translation>Todas las Pestañas a Marcadores</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="261"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="493"/>
         <source>Eric Web Browser</source>
-        <translation type="unfinished">Navegador Web de Eric</translation>
+        <translation>Navegador Web de Eric</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="493"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="565"/>
         <source>Loading...</source>
-        <translation type="unfinished">Cargando...</translation>
+        <translation>Cargando...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="582"/>
         <source>Finished loading</source>
-        <translation type="unfinished">Carga terminada</translation>
+        <translation>Carga terminada</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="584"/>
         <source>Failed to load</source>
-        <translation type="unfinished">Ha fallado la carga</translation>
+        <translation>Ha fallado la carga</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="620"/>
         <source>Are you sure you want to close the window?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Realmente desea cerrar la ventana?</translation>
     </message>
     <message numerus="yes">
         <location filename="Helpviewer/HelpTabWidget.py" line="620"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>¿Desea realmente cerrar la ventana?
+Tiene %n pestaña(s) abiertas.</numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="627"/>
         <source>&amp;Close</source>
-        <translation type="unfinished">&amp;Cerrar</translation>
+        <translation>&amp;Cerrar</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="630"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished">&amp;Salir</translation>
+        <translation>&amp;Salir</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="632"/>
         <source>C&amp;lose Current Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerrar Pestaña Actual</translation>
     </message>
 </context>
 <context>
@@ -12862,47 +12730,47 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="361"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Política</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="367"/>
         <source>Select to prefer the network</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para preferir la red</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="370"/>
         <source>Keep cache in sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Mantener la caché sincronizada</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="377"/>
         <source>Select to prefer cached data</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para preferir datos de caché</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="380"/>
         <source>Use cache whenever possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar datos de caché siempre que sea posible</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="387"/>
         <source>Select to use cached data only</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar datos en caché solamente</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="390"/>
         <source>Offline browsing mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de navegación offline</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="69"/>
         <source>Select to show a page preview when the mouse hovers over the tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para mostrar una presentación preliminar cuando el cursor del ratón se mueve sobre la pestaña</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="72"/>
         <source>Show preview when hovering tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar presentación preliminar al pasar sobre la pestaña</translation>
     </message>
 </context>
 <context>
@@ -12935,27 +12803,27 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="252"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si la política de caché está establecida a navegación offline, solamente estarán disponibles las páginas en caché local.</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="350"/>
         <source>SSL Certificate Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Información del Certificado SSL</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="350"/>
         <source>There is no SSL Certificate Info available.</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay información disponible para el Certificado SSL</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="179"/>
         <source>Resending POST request</source>
-        <translation type="unfinished"></translation>
+        <translation>Reenviando solicitud POST</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="179"/>
         <source>In order to display the site, the request along with all the data must be sent once again, which may lead to some unexpected behaviour of the site e.g. the same action might be performed once again. Do you want to continue anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Para poder mostrar el sitio, la solicitud con todos los datos debe ser enviada de nuevo, lo cual puede conducir a algún tipo de comportamiento inesperado del sitio, por ejemplo la misma acción podría ser repetida. ¿Desea continuar de todos modos?</translation>
     </message>
 </context>
 <context>
@@ -13529,16 +13397,6 @@ You have %n tab(s) open.</source>
         <translation>A&amp;yuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1220"/>
-        <source>Move Left</source>
-        <translation type="obsolete">Mover a la Izquierda</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1223"/>
-        <source>Move Right</source>
-        <translation type="obsolete">Mover a la Derecha</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="1240"/>
         <source>File</source>
         <translation>Archivo</translation>
@@ -13569,19 +13427,9 @@ You have %n tab(s) open.</source>
         <translation>Ir a</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1311"/>
-        <source>&lt;p&gt;Enter the help file to be displayed directly into this edit field. Select a previously shown help file from the drop down list.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Introduzca directamente en este campo de edición el archivo de ayuda que se debe mostrar. Seleccione de la lista desplegable un archivo de ayuda que ha sido mostrado previamente.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="1461"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Archivos de Ayuda (*.html *.htm);;Archivos PDF (*.pdf);;Archivos CHM (*.chm);;Todos los Archivos (*)</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2108"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="619"/>
@@ -13617,11 +13465,6 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpWindow.py" line="444"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Presentación Preliminar&lt;/b&gt;&lt;p&gt;Presentación preliminar del texto de ayuda mostrado.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1735"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="826"/>
@@ -13844,11 +13687,6 @@ You have %n tab(s) open.</source>
         <translation>Motor de Ayuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="181"/>
-        <source>Show a navigation menu</source>
-        <translation type="obsolete">Mostrar un menú de navegación</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="482"/>
         <source>Private Browsing</source>
         <translation>Navegación Privada</translation>
@@ -13862,16 +13700,6 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpWindow.py" line="483"/>
         <source>&lt;b&gt;Private Browsing&lt;/b&gt;&lt;p&gt;Enables private browsing. In this mode no history is recorded anymore.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Navegación Privada&lt;/b&gt;&lt;p&gt;Habilita navegación privada. En este modo, el historial no queda registrado.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2310"/>
-        <source>Loading...</source>
-        <translation type="obsolete">Cargando...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2325"/>
-        <source>Finished loading</source>
-        <translation type="obsolete">Carga terminada</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="816"/>
@@ -14202,11 +14030,6 @@ You have %n tab(s) open.</source>
         <translation>Pestañas Guardadas</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1234"/>
-        <source>Close Others</source>
-        <translation type="obsolete">Cerrar Otras</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="556"/>
         <source>F5</source>
         <comment>Go|Reload</comment>
@@ -14243,11 +14066,6 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpWindow.py" line="578"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stops loading of the current tab.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Detener&lt;/b&gt;&lt;p&gt;Detiene la carga de la pestaña actual.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1227"/>
-        <source>Duplicate Page</source>
-        <translation type="obsolete">Duplicar Página</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="367"/>
@@ -14356,11 +14174,6 @@ You have %n tab(s) open.</source>
         <translation>Navegador Web de eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2327"/>
-        <source>Failed to load</source>
-        <translation type="obsolete">Ha fallado la carga</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="425"/>
         <source>Print as PDF</source>
         <translation>Imprimir como PDF</translation>
@@ -14411,11 +14224,6 @@ You have %n tab(s) open.</source>
         <translation>Codificación de Texto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2947"/>
-        <source>Default</source>
-        <translation type="obsolete">Por defecto</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="1205"/>
         <source>User Agent</source>
         <translation>Agente de Usuario</translation>
@@ -14423,52 +14231,52 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2461"/>
         <source>ISO</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2462"/>
         <source>Windows</source>
-        <translation type="unfinished">Windows</translation>
+        <translation>Windows</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2463"/>
         <source>ISCII</source>
-        <translation type="unfinished"></translation>
+        <translation>ISCII</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2464"/>
         <source>Unicode</source>
-        <translation type="unfinished">Unicode</translation>
+        <translation>Unicode</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2465"/>
         <source>Other</source>
-        <translation type="unfinished">Otro</translation>
+        <translation>Otro</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2466"/>
         <source>IBM</source>
-        <translation type="unfinished"></translation>
+        <translation>IBM</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2488"/>
         <source>Default Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Codificación por Defecto</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1080"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Descargas</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1083"/>
         <source>Shows the downloads window</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra la ventana de descargas</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1085"/>
         <source>&lt;b&gt;Downloads&lt;/b&gt;&lt;p&gt;Shows the downloads window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Descargas&lt;/b&gt;&lt;p&gt;Muestra la ventana de descargas.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -14682,11 +14490,6 @@ You have %n tab(s) open.</source>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1724"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Archivos Changegroup de Mercurial (*.hg)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1738"/>
-        <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo changegroup de Mercurial &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1845"/>
@@ -15347,11 +15150,6 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="263"/>
         <source>Patch Files (*.diff)</source>
         <translation>Archivos de Parche (*.diff)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="278"/>
-        <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="294"/>
@@ -17079,12 +16877,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="886"/>
         <source>Pull</source>
-        <translation type="unfinished">Hacer Pull</translation>
+        <translation>Hacer Pull</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="886"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished">El proyecto debería ser cargado de nuevo. ¿Desea hacerlo ahora?</translation>
+        <translation>El proyecto debería ser cargado de nuevo. ¿Desea hacerlo ahora?</translation>
     </message>
 </context>
 <context>
@@ -19006,13 +18804,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Editor de Iconos</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1122"/>
-        <source>The icon image has been modified.
-Do you want to save your changes?</source>
-        <translation type="obsolete">La imagen del icono ha sido modificada.
-¿Desea guardar los cambios?</translation>
-    </message>
-    <message>
         <location filename="IconEditor/IconEditorWindow.py" line="111"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation>Archivo de Multiple-Image Network Graphics (*.mng)</translation>
@@ -19041,11 +18832,6 @@ Do you want to save your changes?</source>
         <location filename="IconEditor/IconEditorWindow.py" line="119"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation>Archivo de Targa Graphic (*.tga)</translation>
-    </message>
-    <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1004"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="1121"/>
@@ -20948,11 +20734,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Acerca de Qt</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
-        <source>Caption</source>
-        <translation type="obsolete">Leyenda</translation>
-    </message>
-    <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
         <source>Enter the caption for the QMessageBox</source>
         <translation>Introduzca la leyenda para el QMessageBox</translation>
@@ -20968,94 +20749,9 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Introduzca el mensaje que debe mostrar el QMessageBox</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="144"/>
-        <source>Buttons</source>
-        <translation type="obsolete">Botones</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="155"/>
-        <source>Enter the text of button 1</source>
-        <translation type="obsolete">Introduzca el texto del boton 1</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="277"/>
-        <source>&amp;OK</source>
-        <translation type="obsolete">&amp;OK</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="282"/>
-        <source>&amp;Cancel</source>
-        <translation type="obsolete">&amp;Cancelar</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="287"/>
-        <source>&amp;Yes</source>
-        <translation type="obsolete">&amp;Si</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
-        <source>&amp;No</source>
-        <translation type="obsolete">&amp;No</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="297"/>
-        <source>&amp;Abort</source>
-        <translation type="obsolete">A&amp;bortar</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="302"/>
-        <source>&amp;Retry</source>
-        <translation type="obsolete">&amp;Reintentar</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="307"/>
-        <source>&amp;Ignore</source>
-        <translation type="obsolete">&amp;Ignorar</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="205"/>
-        <source>Enter the text of button 0</source>
-        <translation type="obsolete">Introduzca el texto del boton 0</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="255"/>
-        <source>Button 2</source>
-        <translation type="obsolete">Botón 2</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="265"/>
-        <source>Enter the text of button 2</source>
-        <translation type="obsolete">Introduzca el texto del boton 2</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="315"/>
-        <source>Button 1</source>
-        <translation type="obsolete">Botón 1</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="322"/>
-        <source>Button 0</source>
-        <translation type="obsolete">Botón 0</translation>
-    </message>
-    <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="335"/>
         <source>Default Button:</source>
         <translation>Botón de acción por Defecto:</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="340"/>
-        <source>Enter the index of the default button</source>
-        <translation type="obsolete">Introduzca el índice del botón con acción por defecto</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="350"/>
-        <source>Escape Button:</source>
-        <translation type="obsolete">Botón de Escape:</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="357"/>
-        <source>Enter the index of the button to be activated upon pressing Esc or -1 to ignore</source>
-        <translation type="obsolete">Introduzca el índice d el boton que será activado al pulsar Esc o -1 para ignorar este parámetro</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="197"/>
@@ -21647,13 +21343,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Listo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1478"/>
-        <source>The document has been modified.
-Do you want to save your changes?</source>
-        <translation type="obsolete">El documento ha sido modificado.
-¿Desea guardar los cambios?</translation>
-    </message>
-    <message>
         <location filename="QScintilla/MiniEditor.py" line="1518"/>
         <source>File loaded</source>
         <translation>Archivo cargado</translation>
@@ -21903,11 +21592,6 @@ Do you want to save your changes?</source>
         <translation>Leer archivo de multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="363"/>
-        <source>Compressed multiproject files not supported. The compression library is missing.</source>
-        <translation type="obsolete">Los archivos comprimidos de multiproyecto no están soportados. No se encuentra la biblioteca de compresión.</translation>
-    </message>
-    <message>
         <location filename="MultiProject/MultiProject.py" line="248"/>
         <source>Save multiproject file</source>
         <translation>Guardar archivo de multiproyecto</translation>
@@ -21918,16 +21602,6 @@ Do you want to save your changes?</source>
         <translation>Abrir Multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="406"/>
-        <source>Multiproject Files (*.e4m *.e4mz)</source>
-        <translation type="obsolete">Archivos de multiproyecto (*.e4m *.e4mz)</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="460"/>
-        <source>Compressed Multiproject Files (*.e4mz)</source>
-        <translation type="obsolete">Archivos de multiproyecto comprimidos (*.e4mz)</translation>
-    </message>
-    <message>
         <location filename="MultiProject/MultiProject.py" line="460"/>
         <source>Multiproject Files (*.e4m)</source>
         <translation>Archivos de multiproyecto (*.e4m)</translation>
@@ -21936,11 +21610,6 @@ Do you want to save your changes?</source>
         <location filename="MultiProject/MultiProject.py" line="599"/>
         <source>Save multiproject as</source>
         <translation>Guardar multiproyecto como</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="463"/>
-        <source>Multiproject Files (*.e4m);;Compressed Multiproject Files (*.e4mz)</source>
-        <translation type="obsolete">Archivos de Multiproyecto (*.e4m);;Archivos de Multiproyecto Comprimidos (*.e4mz)</translation>
     </message>
     <message>
         <location filename="MultiProject/MultiProject.py" line="499"/>
@@ -22053,24 +21722,9 @@ Do you want to save your changes?</source>
         <translation>&lt;p&gt;El archivo de multiproyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="238"/>
-        <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de multiproyecto &lt;b&gt;{0}&lt;/b&gt; tiene un formato no soportado.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="312"/>
-        <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de multiproyecto &lt;b&gt;{0}&lt;/b&gt; tiene contenidos no válidos.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="MultiProject/MultiProject.py" line="248"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de multiproyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido ser guardado.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="602"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="MultiProject/MultiProject.py" line="475"/>
@@ -22342,42 +21996,42 @@ Do you want to save your changes?</source>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="37"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Descargas</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="81"/>
         <source>Download Manager Cleanup Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Política de Limpieza del Gestor de Descargas</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="87"/>
         <source>Select to never cleanup automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para no limpiar automaticamente nunca</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="90"/>
         <source>Never</source>
-        <translation type="unfinished">Nunca</translation>
+        <translation>Nunca</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="97"/>
         <source>Select to cleanup upon exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para hacer limpieza al salir</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="100"/>
         <source>When exiting the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Al salir de la aplicación</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="107"/>
         <source>Select to cleanup after a successful download</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para limpiar despues de una descarga con éxito</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="110"/>
         <source>When download finished successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Al terminar una descarga con éxito</translation>
     </message>
 </context>
 <context>
@@ -23636,11 +23290,6 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El archivo de repositorio de plugins &lt;b&gt;{0}&lt;/b&gt; no se ha podido leer. Seleccione Actualizar&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="314"/>
-        <source>&lt;p&gt;The plugins repository file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de repositorio de plugins &lt;b&gt;{0}&lt;/b&gt; tiene un formato no soportado.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="PluginManager/PluginRepositoryDialog.py" line="321"/>
         <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo descargar el archivo solicitado desde {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
@@ -23987,7 +23636,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="Preferences/ProgramsDialog.py" line="191"/>
         <source>Source Highlighter - Pygments</source>
-        <translation type="unfinished"></translation>
+        <translation>Resaltador de Código Fuente - Pygments</translation>
     </message>
 </context>
 <context>
@@ -24023,11 +23672,6 @@ Seleccione Actualizar.</translation>
         <translation>Leer archivo de proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="792"/>
-        <source>Compressed project files not supported. The compression library is missing.</source>
-        <translation type="obsolete">Los archivos comprimidos de proyecto no están soportados. No se encuentra la biblioteca de compresión.</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="667"/>
         <source>Save project file</source>
         <translation>Guardar proyecto</translation>
@@ -24053,11 +23697,6 @@ Seleccione Actualizar.</translation>
         <translation>Por favor guarde primero el proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1039"/>
-        <source>Compressed project session files not supported. The compression library is missing.</source>
-        <translation type="obsolete">Los archivos comprimidos de sesión de proyecto no están soportados. No se encuentra la biblioteca de compresión.</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="785"/>
         <source>Save project session</source>
         <translation>Guardar sesion de proyecto</translation>
@@ -24073,11 +23712,6 @@ Seleccione Actualizar.</translation>
         <translation>Leer tareas</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1227"/>
-        <source>Compressed tasks files not supported. The compression library is missing.</source>
-        <translation type="obsolete">Los archivos comprimidos de tareas no están soportados. No se encuentra la biblioteca de compresión.</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="851"/>
         <source>Save tasks</source>
         <translation>Guardar Tareas</translation>
@@ -24091,11 +23725,6 @@ Seleccione Actualizar.</translation>
         <location filename="Project/Project.py" line="913"/>
         <source>Save debugger properties</source>
         <translation>Guardar propiedades del depurador</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="1162"/>
-        <source>Compressed project debugger properties files not supported. The compression library is missing.</source>
-        <translation type="obsolete">Los archivos comprimidos de propiedades de depurador del proyecto no están soportados. No se encuentra la biblioteca de compresión.</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="937"/>
@@ -24208,11 +23837,6 @@ Seleccione Actualizar.</translation>
         <translation>Abrir proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2623"/>
-        <source>Compressed Project Files (*.e4pz)</source>
-        <translation type="obsolete">Archivos de proyecto comprimido (*.e4pz)</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="2362"/>
         <source>Project Files (*.e4p)</source>
         <translation>Archivos de proyecto (*.e4p)</translation>
@@ -24221,11 +23845,6 @@ Seleccione Actualizar.</translation>
         <location filename="Project/Project.py" line="2861"/>
         <source>Save project as</source>
         <translation>Guardar proyecto como</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="2626"/>
-        <source>Project Files (*.e4p);;Compressed Project Files (*.e4pz)</source>
-        <translation type="obsolete">Archivos de proyecto (*.e4p);;Archivos de proyecto comprimido (*.e4pz)</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="2377"/>
@@ -24926,16 +24545,6 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El archivo de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="616"/>
-        <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de proyecto &lt;b&gt;{0}&lt;/b&gt; tiene un formato no soportado.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="728"/>
-        <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de proyecto &lt;b&gt;{0}&lt;/b&gt; tiene contenidos no válidos.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="667"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido ser guardado.&lt;/p&gt;</translation>
@@ -24949,16 +24558,6 @@ Seleccione Actualizar.</translation>
         <location filename="Project/Project.py" line="724"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de propiedades de proyecto específicas del usuario &lt;b&gt;{0}&lt;/b&gt; no ha podido ser guardado.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="984"/>
-        <source>&lt;p&gt;The project session &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;La sesión de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido leerse.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="938"/>
-        <source>&lt;p&gt;The project session &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de sesión de proyecto &lt;b&gt;{0}&lt;/b&gt; tiene un formato no soportado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="755"/>
@@ -24981,11 +24580,6 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no puede leerse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1150"/>
-        <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; tiene un formato no soportado.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="851"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
@@ -24994,11 +24588,6 @@ Seleccione Actualizar.</translation>
         <location filename="Project/Project.py" line="884"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de propiedades del depurador del proyecto  &lt;b&gt;{0}&lt;/b&gt; no ha podido leerse.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="1067"/>
-        <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de propiedades del depurador del proyecto &lt;b&gt;{0}&lt;/b&gt; tiene un formato no soportado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="913"/>
@@ -25044,16 +24633,6 @@ Seleccione Actualizar.</translation>
         <location filename="Project/Project.py" line="1798"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El directorio de proyecto &lt;b&gt;{0}&lt;/b&gt; no pudo ser creado.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="2462"/>
-        <source>Project Files (*.e4p *.e4pz)</source>
-        <translation type="obsolete">Archivos de proyecto (*.e4p *.e4pz)</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="2910"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="3142"/>
@@ -25778,21 +25357,6 @@ Seleccione Actualizar.</translation>
         <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="17"/>
         <source>&lt;b&gt;Configure project settings&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configurar ajustes del projecto&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="36"/>
-        <source>Compression</source>
-        <translation type="obsolete">Compresión</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="42"/>
-        <source>Select, if the project file of a new project should be compressed</source>
-        <translation type="obsolete">Seleccionar si le archivo de proyecto o nuevo proyecto debe ser comprimido</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="45"/>
-        <source>Compress project file upon creation</source>
-        <translation type="obsolete">Comprimir archivo de proyecto al ser creado</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="56"/>
@@ -27812,11 +27376,6 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <translation>ASCII</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="312"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="349"/>
         <source>&lt;p&gt;The regular expression could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La expresión regular no se ha podido guardar &lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
@@ -28484,11 +28043,6 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
         <translation>Se deben proporcionar una expresión regular y un texto.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="226"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="263"/>
         <source>&lt;p&gt;The regular expression could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La expresión regular no se ha podido guardar &lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
@@ -28519,7 +28073,7 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
     <message>
         <location filename="Helpviewer/Network/QtHelpAccessHandler.py" line="115"/>
         <source>&lt;title&gt;Error 404...&lt;/title&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;h1&gt;The page could not be found&lt;/h1&gt;&lt;br&gt;&lt;h3&gt;&apos;{0}&apos;&lt;/h3&gt;&lt;/div&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;title&gt;Error 404...&lt;/title&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;h1&gt;No se ha encontrado la página&lt;/h1&gt;&lt;br&gt;&lt;h3&gt;&apos;{0}&apos;&lt;/h3&gt;&lt;/div&gt;</translation>
     </message>
 </context>
 <context>
@@ -28558,11 +28112,6 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
         <location filename="Helpviewer/QtHelpDocumentationDialog.py" line="106"/>
         <source>Remove Documentation</source>
         <translation>Eliminar Documentación</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/QtHelpDocumentationDialog.py" line="108"/>
-        <source>Some documents currently opened reference the documentation you are attempting to remove. Removing the documentation will close those documents.</source>
-        <translation type="obsolete">Algunos documentos actualmente abiertos hacen referencia a la documentación que está tratando de eliminar. La eliminación de la documentación cerrará estos documentos.</translation>
     </message>
     <message>
         <location filename="Helpviewer/QtHelpDocumentationDialog.ui" line="38"/>
@@ -29283,11 +28832,6 @@ Not connected</source>
         <translation>Exportar Atajos de Teclado</translation>
     </message>
     <message>
-        <location filename="Preferences/Shortcuts.py" line="275"/>
-        <source>Compressed keyboard shortcut files not supported. The compression library is missing.</source>
-        <translation type="obsolete">Los archivos comprimidos de atajos de teclado no estan soportados. No se encuentra la librería de compresión.</translation>
-    </message>
-    <message>
         <location filename="Preferences/Shortcuts.py" line="224"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Importar Atajos de Teclado</translation>
@@ -29296,11 +28840,6 @@ Not connected</source>
         <location filename="Preferences/Shortcuts.py" line="224"/>
         <source>&lt;p&gt;The keyboard shortcuts could not be read from file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los atajos de teclado no se han podido leer del archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Preferences/Shortcuts.py" line="304"/>
-        <source>&lt;p&gt;The keyboard shortcuts file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de atajos de teclado &lt;b&gt;{0}&lt;/b&gt; tiene contenidos no válidos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/Shortcuts.py" line="197"/>
@@ -29962,72 +29501,72 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="14"/>
         <source>SSL Certificate Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Información del Certificado SSL</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="28"/>
         <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Emitido para&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="122"/>
         <source>Common Name (CN)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre Común (CN)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="142"/>
         <source>Organization (O)</source>
-        <translation type="unfinished"></translation>
+        <translation>Organización (O)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="162"/>
         <source>Organizational Unit (OU)</source>
-        <translation type="unfinished"></translation>
+        <translation>Unidad Organizacional (OU)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="95"/>
         <source>Serialnumber</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de serie</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="115"/>
         <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Emitido por&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="182"/>
         <source>&lt;b&gt;Validity&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Validez&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="189"/>
         <source>Issued on</source>
-        <translation type="unfinished"></translation>
+        <translation>Emitido a</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="209"/>
         <source>Expires on</source>
-        <translation type="unfinished"></translation>
+        <translation>Expira en</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="229"/>
         <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="236"/>
         <source>SHA1-Fingerprint</source>
-        <translation type="unfinished"></translation>
+        <translation>SHA1-Fingerprint</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="256"/>
         <source>MD5-Fingerprint</source>
-        <translation type="unfinished"></translation>
+        <translation>MD5-Fingerprint</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.py" line="71"/>
         <source>&lt;not part of the certificate&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;not part of the certificate&gt;</translation>
     </message>
 </context>
 <context>
@@ -31826,11 +31365,6 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="165"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="332"/>
-        <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="347"/>
@@ -36375,11 +35909,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plantillas &lt;b&gt;{0}&lt;/b&gt; no pudo ser leído.&lt;/p&gt;</translation>
     </message>
-    <message>
-        <location filename="Templates/TemplateViewer.py" line="930"/>
-        <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de plantillas &lt;b&gt;{0}&lt;/b&gt; tiene un formato no soportado.&lt;/p&gt;</translation>
-    </message>
 </context>
 <context>
     <name>TemplatesPage</name>
@@ -37524,7 +37053,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Tools/TrayStarter.py" line="116"/>
         <source>Preferences (tray starter)</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferencias (lanzador de bandeja de sistema)</translation>
     </message>
 </context>
 <context>
@@ -37532,52 +37061,52 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Tray Starter&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar Lanzador de Bandeja de sistema&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="37"/>
         <source>Icon</source>
-        <translation type="unfinished">Icono</translation>
+        <translation>Icono</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="43"/>
         <source>Select to use the standard icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar el icono estándar</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="46"/>
         <source>Standard Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Icono Estándar</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="53"/>
         <source>Select to use the high contrast icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar el icono de alto contraste</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="56"/>
         <source>High Contrast Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Icono de Alto Contraste</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="63"/>
         <source>Select to use a black and white icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar un icono en blanco y negro</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="66"/>
         <source>Black and White Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Icono en Blanco y Negro</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="73"/>
         <source>Select to use an inverse black and white icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar un icono en blanco y negro invertido</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="76"/>
         <source>Inverse Black and White Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Icono en Blanco y Negro Invertido</translation>
     </message>
 </context>
 <context>
@@ -38002,11 +37531,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Decrementar altura por {0} puntos</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="338"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Graphics/UMLGraphicsView.py" line="350"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
@@ -38310,12 +37834,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Helpviewer/UrlBar/UrlBar.py" line="39"/>
         <source>Enter the location here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir aquí la ubicación.</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/UrlBar.py" line="148"/>
         <source>Unknown</source>
-        <translation type="unfinished">Desconocido</translation>
+        <translation>Desconocido</translation>
     </message>
 </context>
 <context>
@@ -40068,21 +39592,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;P&gt;El punto de entrada de documentación &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; no ha podido encontrarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4884"/>
-        <source>Keyboard shortcut file (*.e4k);;Compressed keyboard shortcut file (*.e4kz)</source>
-        <translation type="obsolete">archivo de atajos de teclado (*.e4k);;Archivo comprimido de atajos de teclado (*.e4kz)</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="4908"/>
-        <source>&lt;p&gt;The keyboard shortcuts could not be written to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Los atajos de teclado no se han podido escribir en el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="4908"/>
-        <source>Keyboard shortcut file (*.e4k *.e4kz)</source>
-        <translation type="obsolete">Archivo de atajos de teclado (*.e4k *.e4kz)</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="5026"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
@@ -40093,11 +39602,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no puede leerse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5098"/>
-        <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; tiene un formato no soportado.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="5063"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión &lt;b&gt;{0}&lt;/b&gt; no ha podido guardarse.&lt;/p&gt;</translation>
@@ -40106,11 +39610,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="UI/UserInterface.py" line="5086"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión &lt;b&gt;&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="5177"/>
-        <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de sesión &lt;b&gt;{0}&lt;/b&gt; tiene un formato no soportado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="5204"/>
@@ -40907,11 +40406,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="VCS/ProjectHelper.py" line="171"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El directorio de proyecto &lt;b&gt;{0}&lt;/b&gt; no pudo ser creado.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="VCS/ProjectHelper.py" line="211"/>
-        <source>The project retrieved from the repository does not contain an eric project file (*.e4p *.e4pz). Create it?</source>
-        <translation type="obsolete">El proyecto recuperado del repositorio no contiene un archivo de proyecto de eric (*.e4p *.e4pz). ¿Desea crearlo?</translation>
     </message>
     <message>
         <location filename="VCS/ProjectHelper.py" line="211"/>
@@ -44043,47 +43537,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="Tools/TRPreviewer.py" line="685"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser cargado.&lt;/p&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>WidgetWorkspace</name>
-    <message>
-        <location filename="Tools/TRPreviewer.py" line="733"/>
-        <source>Load UI File</source>
-        <translation type="obsolete">Cargar archivo UI </translation>
-    </message>
-    <message>
-        <location filename="Tools/TRPreviewer.py" line="733"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser cargado.&lt;/p&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>XMLMessageDialog</name>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.ui" line="13"/>
-        <source>XML Parse Messages</source>
-        <translation type="obsolete">Mensajes de análisis de XML</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="34"/>
-        <source>Fatal Error</source>
-        <translation type="obsolete">Error Fatal</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="37"/>
-        <source>Error</source>
-        <translation type="obsolete">Error</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="40"/>
-        <source>Warning</source>
-        <translation type="obsolete">Advertencia</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="43"/>
-        <source>Line: {0}, Column: {1}</source>
-        <translation type="obsolete">Línea: {0}, Columna: {1}</translation>
     </message>
 </context>
 <context>
