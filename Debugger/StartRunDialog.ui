@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>488</width>
-    <height>242</height>
+    <height>253</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,6 +48,9 @@
      <property name="insertPolicy">
       <enum>QComboBox::InsertAtTop</enum>
      </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
+     </property>
      <property name="autoCompletion">
       <bool>true</bool>
      </property>
@@ -86,6 +89,9 @@
      </property>
      <property name="insertPolicy">
       <enum>QComboBox::InsertAtTop</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
      </property>
      <property name="autoCompletion">
       <bool>true</bool>
@@ -140,6 +146,9 @@
      </property>
      <property name="insertPolicy">
       <enum>QComboBox::InsertAtTop</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
      </property>
      <property name="autoCompletion">
       <bool>true</bool>
