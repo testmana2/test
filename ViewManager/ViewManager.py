@@ -2179,6 +2179,8 @@ class ViewManager(QObject):
         # just because of autocompletion enabled
         self.quickFindtextCombo.setAutoCompletion(False)
         self.quickFindtextCombo.setMinimumWidth(250)
+        self.quickFindtextCombo.setSizeAdjustPolicy(
+            QComboBox.AdjustToMinimumContentsLengthWithIcon)
         self.quickFindtextCombo.addItem("")
         self.quickFindtextCombo.setWhatsThis(QApplication.translate('ViewManager', 
                 """<p>Enter the searchtext directly into this field."""
