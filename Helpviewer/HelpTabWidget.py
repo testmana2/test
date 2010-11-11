@@ -706,7 +706,8 @@ class HelpTabWidget(E5TabWidget):
         self.__stackedUrlBar.setCurrentIndex(index)
         
         browser = self.browserAt(index)
-        if browser.url() == "" and browser.hasFocus():
-            self.__stackedUrlBar.currentWidget.setFocus()
-        elif browser.url() != "":
-            browser.setFocus()
+        if browser is not None:
+            if browser.url() == "" and browser.hasFocus():
+                self.__stackedUrlBar.currentWidget.setFocus()
+            elif browser.url() != "":
+                browser.setFocus()
