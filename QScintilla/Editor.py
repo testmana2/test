@@ -2356,6 +2356,9 @@ class Editor(QsciScintillaCompat):
                 QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
             
             if fn:
+                if fn.endswith("."):
+                    fn = fn[:-1]
+                
                 ext = QFileInfo(fn).suffix()
                 if not ext:
                     ex = selectedFilter.split("(*")[1].split(")")[0]
