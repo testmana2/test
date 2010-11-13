@@ -6643,45 +6643,20 @@
       <keyword name="Binding.__repr__" id="Binding.__repr__" ref="eric5.Utilities.py3flakes.checker.html#Binding.__repr__" />
       <keyword name="Binding.__str__" id="Binding.__str__" ref="eric5.Utilities.py3flakes.checker.html#Binding.__str__" />
       <keyword name="Checker (Constructor)" id="Checker (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Checker.__init__" />
-      <keyword name="Checker.ASSERT" id="Checker.ASSERT" ref="eric5.Utilities.py3flakes.checker.html#Checker.ASSERT" />
       <keyword name="Checker.ASSIGN" id="Checker.ASSIGN" ref="eric5.Utilities.py3flakes.checker.html#Checker.ASSIGN" />
-      <keyword name="Checker.ATTRIBUTE" id="Checker.ATTRIBUTE" ref="eric5.Utilities.py3flakes.checker.html#Checker.ATTRIBUTE" />
       <keyword name="Checker.AUGASSIGN" id="Checker.AUGASSIGN" ref="eric5.Utilities.py3flakes.checker.html#Checker.AUGASSIGN" />
-      <keyword name="Checker.BINOP" id="Checker.BINOP" ref="eric5.Utilities.py3flakes.checker.html#Checker.BINOP" />
-      <keyword name="Checker.BOOLOP" id="Checker.BOOLOP" ref="eric5.Utilities.py3flakes.checker.html#Checker.BOOLOP" />
-      <keyword name="Checker.CALL" id="Checker.CALL" ref="eric5.Utilities.py3flakes.checker.html#Checker.CALL" />
       <keyword name="Checker.CLASSDEF" id="Checker.CLASSDEF" ref="eric5.Utilities.py3flakes.checker.html#Checker.CLASSDEF" />
-      <keyword name="Checker.COMPARE" id="Checker.COMPARE" ref="eric5.Utilities.py3flakes.checker.html#Checker.COMPARE" />
-      <keyword name="Checker.COMPREHENSION" id="Checker.COMPREHENSION" ref="eric5.Utilities.py3flakes.checker.html#Checker.COMPREHENSION" />
-      <keyword name="Checker.DELETE" id="Checker.DELETE" ref="eric5.Utilities.py3flakes.checker.html#Checker.DELETE" />
-      <keyword name="Checker.DICT" id="Checker.DICT" ref="eric5.Utilities.py3flakes.checker.html#Checker.DICT" />
       <keyword name="Checker.DICTCOMP" id="Checker.DICTCOMP" ref="eric5.Utilities.py3flakes.checker.html#Checker.DICTCOMP" />
       <keyword name="Checker.EXCEPTHANDLER" id="Checker.EXCEPTHANDLER" ref="eric5.Utilities.py3flakes.checker.html#Checker.EXCEPTHANDLER" />
-      <keyword name="Checker.EXPR" id="Checker.EXPR" ref="eric5.Utilities.py3flakes.checker.html#Checker.EXPR" />
-      <keyword name="Checker.EXTSLICE" id="Checker.EXTSLICE" ref="eric5.Utilities.py3flakes.checker.html#Checker.EXTSLICE" />
       <keyword name="Checker.FOR" id="Checker.FOR" ref="eric5.Utilities.py3flakes.checker.html#Checker.FOR" />
       <keyword name="Checker.FUNCTIONDEF" id="Checker.FUNCTIONDEF" ref="eric5.Utilities.py3flakes.checker.html#Checker.FUNCTIONDEF" />
       <keyword name="Checker.GLOBAL" id="Checker.GLOBAL" ref="eric5.Utilities.py3flakes.checker.html#Checker.GLOBAL" />
-      <keyword name="Checker.IF" id="Checker.IF" ref="eric5.Utilities.py3flakes.checker.html#Checker.IF" />
-      <keyword name="Checker.IFEXP" id="Checker.IFEXP" ref="eric5.Utilities.py3flakes.checker.html#Checker.IFEXP" />
       <keyword name="Checker.IMPORT" id="Checker.IMPORT" ref="eric5.Utilities.py3flakes.checker.html#Checker.IMPORT" />
       <keyword name="Checker.IMPORTFROM" id="Checker.IMPORTFROM" ref="eric5.Utilities.py3flakes.checker.html#Checker.IMPORTFROM" />
-      <keyword name="Checker.INDEX" id="Checker.INDEX" ref="eric5.Utilities.py3flakes.checker.html#Checker.INDEX" />
-      <keyword name="Checker.KEYWORD" id="Checker.KEYWORD" ref="eric5.Utilities.py3flakes.checker.html#Checker.KEYWORD" />
       <keyword name="Checker.LAMBDA" id="Checker.LAMBDA" ref="eric5.Utilities.py3flakes.checker.html#Checker.LAMBDA" />
-      <keyword name="Checker.LIST" id="Checker.LIST" ref="eric5.Utilities.py3flakes.checker.html#Checker.LIST" />
       <keyword name="Checker.LISTCOMP" id="Checker.LISTCOMP" ref="eric5.Utilities.py3flakes.checker.html#Checker.LISTCOMP" />
       <keyword name="Checker.NAME" id="Checker.NAME" ref="eric5.Utilities.py3flakes.checker.html#Checker.NAME" />
-      <keyword name="Checker.RAISE" id="Checker.RAISE" ref="eric5.Utilities.py3flakes.checker.html#Checker.RAISE" />
-      <keyword name="Checker.RETURN" id="Checker.RETURN" ref="eric5.Utilities.py3flakes.checker.html#Checker.RETURN" />
-      <keyword name="Checker.SLICE" id="Checker.SLICE" ref="eric5.Utilities.py3flakes.checker.html#Checker.SLICE" />
       <keyword name="Checker.STARRED" id="Checker.STARRED" ref="eric5.Utilities.py3flakes.checker.html#Checker.STARRED" />
-      <keyword name="Checker.SUBSCRIPT" id="Checker.SUBSCRIPT" ref="eric5.Utilities.py3flakes.checker.html#Checker.SUBSCRIPT" />
-      <keyword name="Checker.TRYEXCEPT" id="Checker.TRYEXCEPT" ref="eric5.Utilities.py3flakes.checker.html#Checker.TRYEXCEPT" />
-      <keyword name="Checker.TRYFINALLY" id="Checker.TRYFINALLY" ref="eric5.Utilities.py3flakes.checker.html#Checker.TRYFINALLY" />
-      <keyword name="Checker.UNARYOP" id="Checker.UNARYOP" ref="eric5.Utilities.py3flakes.checker.html#Checker.UNARYOP" />
-      <keyword name="Checker.WITH" id="Checker.WITH" ref="eric5.Utilities.py3flakes.checker.html#Checker.WITH" />
-      <keyword name="Checker.YIELD" id="Checker.YIELD" ref="eric5.Utilities.py3flakes.checker.html#Checker.YIELD" />
       <keyword name="Checker._runDeferred" id="Checker._runDeferred" ref="eric5.Utilities.py3flakes.checker.html#Checker._runDeferred" />
       <keyword name="Checker.addArgs" id="Checker.addArgs" ref="eric5.Utilities.py3flakes.checker.html#Checker.addArgs" />
       <keyword name="Checker.addBinding" id="Checker.addBinding" ref="eric5.Utilities.py3flakes.checker.html#Checker.addBinding" />
@@ -6692,8 +6667,10 @@
       <keyword name="Checker.deferFunction" id="Checker.deferFunction" ref="eric5.Utilities.py3flakes.checker.html#Checker.deferFunction" />
       <keyword name="Checker.handleAssignName" id="Checker.handleAssignName" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleAssignName" />
       <keyword name="Checker.handleBody" id="Checker.handleBody" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleBody" />
+      <keyword name="Checker.handleChildren" id="Checker.handleChildren" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleChildren" />
       <keyword name="Checker.handleNode" id="Checker.handleNode" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleNode" />
       <keyword name="Checker.ignore" id="Checker.ignore" ref="eric5.Utilities.py3flakes.checker.html#Checker.ignore" />
+      <keyword name="Checker.isDocstring" id="Checker.isDocstring" ref="eric5.Utilities.py3flakes.checker.html#Checker.isDocstring" />
       <keyword name="Checker.popScope" id="Checker.popScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.popScope" />
       <keyword name="Checker.pushClassScope" id="Checker.pushClassScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.pushClassScope" />
       <keyword name="Checker.pushFunctionScope" id="Checker.pushFunctionScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.pushFunctionScope" />
